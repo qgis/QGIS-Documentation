@@ -1,6 +1,7 @@
 Numeric calculations in the modeler
 ============================================================
 
+.. warning:: Beware, this chapter is not well tested, please report any issue; images are missing
 
 .. note:: In this lesson we will see how to use numeric outputs in the modeler
 

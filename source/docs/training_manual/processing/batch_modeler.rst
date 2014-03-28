@@ -1,6 +1,8 @@
 Models in the batch processing interface
 =========================================
 
+.. warning:: Beware, this chapter is not well tested, please report any issue; images are missing
+
 .. note:: This lesson shows another example of the batch processing interface, but this time using a model instead of a built-in algorithm
 
 Model are just like any other algorithm, and they can be used in the batch processing interface. To demonstrate that, here is a brief example that we can do using our already well-known hydrological model.

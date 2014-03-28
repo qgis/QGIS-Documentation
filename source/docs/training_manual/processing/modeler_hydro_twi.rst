@@ -1,6 +1,7 @@
 A model within a model
 ======================
 
+.. warning:: Beware, this chapter is not well tested, please report any issue; images are missing
 
 .. note:: In this lesson we will see how to use a model within a bigger model
 
