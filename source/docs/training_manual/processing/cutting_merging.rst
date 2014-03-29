@@ -56,9 +56,7 @@ With that, we get the final DEM we want.
 
 Now it is time to compute the slope layer.
 
-A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm, but the DEM obtained in the last step is not suitable as input, since elevation values are in meters but cellsize is not expressed in meters (the layer uses a CRS with geographic coordinates). A reprojection is needed. To reproject a raster layer, the *Reproject raster layer* algorithm can be used. We reproject into a CRS with meters as units, so we can then correctly calculate the slope.
-
-.. image:: img/cutting_merging/warp.png
+A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm, but the DEM obtained in the last step is not suitable as input, since elevation values are in meters but cellsize is not expressed in meters (the layer uses a CRS with geographic coordinates). A reprojection is needed. To reproject a raster layer, the *Warp (reproject)* algorithm can be used again. We reproject into a CRS with meters as units, so we can then correctly calculate the slope.
 
 Here is the reprojected DEM.
 
@@ -66,13 +64,11 @@ Here is the reprojected DEM.
 
 With the new DEM, slope can now be computed.
 
-
 .. image:: img/cutting_merging/slope.png
 
 And here is the resulting slope layer.
 
 .. image:: img/cutting_merging/slopereproj.png
-
 
 The slope produced by the *Slope, Aspect, Curvature* algorithm is expressed in radians, but degrees are a more practical and common unit. The *Metric conversions* algorithm will help us to do the conversion (but in case you didn't know that algorithm existed, you could use the raster calculator that we have already used).
 
