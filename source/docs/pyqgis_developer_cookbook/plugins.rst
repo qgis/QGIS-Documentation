@@ -81,7 +81,7 @@ What is the meaning of the files:
 * :file:`form.py` = The translation of the form.ui described above to Python.
 * :file:`metadata.txt` = Required for QGIS >= 1.8.0. Containts general info, version,
   name and some other metadata used by plugins website and plugin infrastructure.
-  Since QGIS 2.0 the metadata from :file:`__init__.py` is not accepted anymore and the :file:`metadata.txt`
+  Since QGIS 2.0 the metadata from :file:`__init__.py` are not accepted anymore and the :file:`metadata.txt`
   is required.
 
 `Here <http://www.dimitrisk.gr/qgis/creator/>`_
@@ -126,7 +126,8 @@ Metadata name          Required  Notes
 name                   True      a short string  containing the name of the plugin
 qgisMinimumVersion     True      dotted notation of minimum QGIS version
 qgisMaximumVersion     False     dotted notation of maximum QGIS version
-description            True      longer text which describes the plugin, no HTML allowed
+description            True      short text which describes the plugin, no HTML allowed
+about                  False     longer text which describes the plugin in details, no HTML allowed
 version                True      short string with the version dotted notation
 author                 True      author name
 email                  True      email of the author, will *not* be shown on the web site
@@ -169,30 +170,37 @@ An example for this metadata.txt::
   email=me@example.com
   author=Just Me
   qgisMinimumVersion=2.0
-  description=This is a plugin for greeting the
-      (going multiline) world
+  description=This is an example plugin for greeting the world.
+      Multiline is allowed:
+      lines starting with spaces belong to the same 
+      field, in this case to the "description" field.
+      HTML formatting is not allowed.
+  about=This paragraph can contain a detailed description
+      of the plugin. Multiline is allowed, HTML is not.
   version=version 1.2
   ; end of mandatory metadata
 
   ; start of optional metadata
   category=Raster
-  changelog=this is a very
-      very
-      very
-      very
-      very
-      very long multiline changelog
+  changelog=The changelog lists the plugin versions
+      and their changes as in the example below:
+      1.0 - First stable release
+      0.9 - All features implemented
+      0.8 - First testing release
 
-  ; tags are in comma separated value format, spaces are allowed
+  ; Tags are in comma separated value format, spaces are allowed within the 
+  ; tag name.
+  ; Tags should be in english language. Please also check for existing tags and
+  ; synoninms before creating a new one.
   tags=wkt,raster,hello world
 
-  ; these metadata can be empty
+  ; these metadata can be empty, they will eventually become mandatory.
   homepage=http://www.itopen.it
   tracker=http://bugs.itopen.it
   repository=http://www.itopen.it/repo
   icon=icon.png
 
-  ; experimental flag
+  ; experimental flag (applies to the single version)
   experimental=True
 
   ; deprecated flag (applies to the whole plugin and not only to the uploaded version)
