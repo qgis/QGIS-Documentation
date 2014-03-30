@@ -83,7 +83,7 @@ options. These include:
 * The :guilabel:`Macros` menu is used to edit Python macros for project. Currently
   only three macros are available: ``openProject()``, ``saveProject()`` and
   ``closeProject()``.
-* The :guilabel:`Relations` menu ...
+* The :guilabel:`Relations` menu is used to create and manage 1:n relations between layers
 
 .. _figure_macro_menu:
 
