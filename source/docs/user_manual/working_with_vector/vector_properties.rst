@@ -168,7 +168,7 @@ A new feature in |qg| 2.2. is the 'Gradient Fill' :guilabel:`Symbol layer type` 
 feature you can select between a |radionbuttonon| :guilabel:`Two color` and |radiobuttonoff| :guilabel:`Color ramp`
 setting. Among other settings you can use the |checkbox| :guilabel:`Feature centroid` as :guilabel:`Reference point`.
 The 'Gradient Fill` :guilabel:`Symbol layer type` is also available through the :guilabel:`Symbol` menu
-of the Categorized and Graduated Renderer and through the :guilabel:`Rule properties` of the 
+of the Categorized and Graduated Renderer and through the :guilabel:`Rule properties` menu of the 
 Rule based renderer.
 
 Note that once you have set the size in the lower levels of the :guilabel:`Symbol layers` diaolog 
