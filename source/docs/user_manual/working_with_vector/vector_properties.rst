@@ -164,8 +164,15 @@ The following settings are possible:
  * :guilabel:`Offset X,Y`
  * :guilabel:`Data defined properties ...`
 
-Note that once you have set the size in the lower levels the size of the whole symbol
-can be changed with the :guilabel:`Size` menu in the first level again. The size of
+A new feature in |qg| 2.2. is the 'Gradient Fill' :guilabel:`Symbol layer type` for polygon layers. Using this
+feature you can select between a |radionbuttonon| :guilabel:`Two color` and |radiobuttonoff| :guilabel:`Color ramp`
+setting. Among other settings you can use the |checkbox| :guilabel:`Feature centroid` as :guilabel:`Reference point`.
+The 'Gradient Fill` :guilabel:`Symbol layer type` is also available through the :guilabel:`Symbol` menu
+of the Categorized and Graduated Renderer and through the :guilabel:`Rule properties` of the 
+Rule based renderer.
+
+Note that once you have set the size in the lower levels of the :guilabel:`Symbol layers` diaolog 
+the size of the whole symbol can be changed with the :guilabel:`Size` menu in the first level again. The size of
 the lower levels changes accordingly while the size ratio is maintained.
 After having done any needed changes, the symbol can be added to the list of
 current style symbols (using the **[Symbol]** |selectstring| :guilabel:`Save in symbol library`)
