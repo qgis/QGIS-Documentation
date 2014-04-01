@@ -165,7 +165,7 @@ The following settings are possible:
  * :guilabel:`Data defined properties ...`
 
 A new feature in |qg| 2.2. is the 'Gradient Fill' :guilabel:`Symbol layer type` for polygon layers. Using this
-feature you can select between a |radionbuttonon| :guilabel:`Two color` and |radiobuttonoff| :guilabel:`Color ramp`
+feature you can select between a |radiobuttonon| :guilabel:`Two color` and |radiobuttonoff| :guilabel:`Color ramp`
 setting. Among other settings you can use the |checkbox| :guilabel:`Feature centroid` as :guilabel:`Reference point`.
 The 'Gradient Fill` :guilabel:`Symbol layer type` is also available through the :guilabel:`Symbol` menu
 of the Categorized and Graduated Renderer and through the :guilabel:`Rule properties` menu of the 
