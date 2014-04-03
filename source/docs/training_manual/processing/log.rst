@@ -33,6 +33,8 @@ The history is also interactive, and you can re--run any previous algorithm just
 For instance, try the following. Open the data corresponding to the first chapter of this manual and run the algorithm explained there. Now go to the log dialog and locate the last algorithm in the list, which corresponds to the algorithm you have just run. Double--click on it an a new result should be produced, just like when you run it using the normal dialog and calling it from the toolbox.
 
 
+|hard| Advanced
+---------------------
 
-
+You can also modify the algorithm. Just copy it, open the :menuselection:`Plugins --> Python console`, click on :menuselection:`Import class --> Import Processing class`, then paste it to re-run the analysis; change the text at will. To display the resulting file, type :kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', 'ogr')`.
 
