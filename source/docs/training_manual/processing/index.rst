@@ -42,5 +42,5 @@ Contents:
    modeler_depend_on_algorithm   
    first_script_twi
    second_script_vector
-
+   more_backends
 
