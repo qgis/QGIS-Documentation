@@ -132,6 +132,21 @@ pdf: html
 		texi2pdf --quiet PyQGISDeveloperCookbook.tex; \
 	fi
 	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf
+	# training manual
+	@-if [ $(LANG) = "ja" ]; then \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		nkf -W -e --overwrite QGISTrainingManual.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISTrainingManual.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISTrainingManual.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISTrainingManual.tex; \
+		dvipdfmx QGISTrainingManual.dvi; \
+	else \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		texi2pdf --quiet QGISTrainingManual.tex; \
+		texi2pdf --quiet QGISTrainingManual.tex; \
+		texi2pdf --quiet QGISTrainingManual.tex; \
+	fi
+	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf
 
 world: all
 
