@@ -1053,6 +1053,11 @@ to define the resolution (print quality) and paper size:
 * The |mActionSaveAsSVG| :sup:`Export as SVG` icon saves the print composer canvas
   as a SVG (Scalable Vector Graphic).
 
+If you need to export your layout as a **georeferenced image** (i.e. to load back
+inside QGIS) you need to enable this feature under the Composition tab. Check 
+|checkbox| :guilabel:`World file on` and choose the map item to use. With this option the 
+Export as image action will create also a world file.
+
 .. note::
 
    Currently the SVG output is very basic. This is not a |qg| problem, but a
