@@ -750,7 +750,8 @@ and customize their appearance in the :guilabel:`Item Properties` tab.
 
 The :guilabel:`Shape` Item properties tab allows to draw an ellipse, rectangle, or triangle
 in the print composer canvas. You can define its outline and fill color, the
-outline width and a clockwise rotation.
+outline width and a clockwise rotation. For the rectangle shape you can change the value 
+of corner radius.
 
 .. _figure_composer_21:
 
