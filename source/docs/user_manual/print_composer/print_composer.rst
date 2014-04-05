@@ -52,7 +52,7 @@ See a list of tools in table_composer_1_:
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionAddHtml|         | Add a HTML Frame                      |                            |                                          |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionSelectPan|       | Select/Move item in print composition | |mActionMoveItemContent|   | Move content within an item              |
+| |mActionSelect|       | Select/Move item in print composition | |mActionMoveItemContent|   | Move content within an item              |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionGroupItems|      | Group items of print composition      | |mActionUngroupItems|      | Ungroup items of print composition       |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
@@ -118,7 +118,7 @@ The print composer provides four tabs:
   all elements will be rastered before printing or saving as Postscript or PDF.
   In this tab you can also customize settings for Grid and Smart Guides.
 * The :guilabel:`Item Properties` tab displays the properties for the selected
-  item element. Click the |mActionSelectPan| :sup:`Select/Move item` icon to select
+  item element. Click the |mActionSelect| :sup:`Select/Move item` icon to select
   an element (e.g. legend, scalebar or label) on the canvas. Then click the
   :guilabel:`Item Properties` tab and customize the settings for the selected
   element.
@@ -164,8 +164,7 @@ used as default during the work.
 
 * :guilabel:`Compositions defaults` let you specify the default font to use.
 * With :guilabel:`Grid appearence` you can set the grid style and its color.
-* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. There are three types of grid: **Dots**, 
-**Solid** lines and **Crosses**.
+* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
 * :guilabel:`Guide defaults` defines the tolerance for the guides.
 
 Composition tab --- General composition setup
@@ -181,7 +180,7 @@ In the :guilabel:`Composition` tab, you can define the global settings of your c
 * :guilabel:`Grid` let you customize grid settings like :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`tolerance` to your need.
 * In :guilabel:`Snap to alignements` you can change the :guilabel:`Tolerance` which is the maximum distance below which an item is snapped to Smart Guides.
 
-Snap to Grid and/or to Guides can be enabled from the :menuselection:`View` menu. In this menu you can also hide or show Grid/Guides.
+Snap to Grid and/or to Smart Guides can be enabled from the :menuselection:`View` menu. In this menu you can also hide or show Grid/Smart Guides.
 
 Composer items general options
 ------------------------------
@@ -279,7 +278,7 @@ tab:
 
 **Cache** is default preview mode for newly added print composer maps.
 
-You can resize the map element by clicking on the |mActionSelectPan|
+You can resize the map element by clicking on the |mActionSelect|
 :sup:`Select/Move item` button, selecting the element, and dragging one of the
 blue handles in the corner of the map. With the map selected, you can now adapt
 more properties in the map :guilabel:`Item Properties` tab.
@@ -898,17 +897,16 @@ Size and position
 -----------------
 
 Each item inside the composer can be moved/resized to create a perfect layout.
-The first step is to select the item using the |mActionSelectPan| :sup:`Select/Move item` button; 
+The first step is to select the item using the |mActionSelect| :sup:`Select/Move item` button; 
 once selected the item can be moved or resized using the squares on the boundary. 
 For a better precision, you can move an item using the :kbd:`Arrows keys` on the keyboard; 
-if the movement are too slow, you can speed up it holding :kbd:`Shift`.
+if the movement is too slow, you can speed up it holding :kbd:`Shift`.
+While resizing, holding :kbd:`Shift` will maintain the aspect ratio instead :kbd:`Ctrl` will resize from the item center.
 
-While resizing, holding :kbd:`Shift` will maintain the aspect ratio, :kbd:`Ctrl` resizes from the item center.
+The correct position for an item can be obteined using snapping to Grid or Smart guides. If you need to 
+disable the snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
 
-The correct position can be obteined using snapping to Grid or Smart guides. If you need to 
-disable snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
-
-You can choose multiple items with the |mActionSelectPan| :sup:`Select/Move item` button, 
+You can choose multiple items with the |mActionSelect| :sup:`Select/Move item` button, 
 just hold the :kbd:`Shift` button and click on all the items you need. You can then resize/move
 this group just like a single item.
 
@@ -982,7 +980,6 @@ will be generated where the content of some canvas maps will be moved to
 highlight the current geometry. Fields associated to this geometry can be used
 within text labels.
 
-There can only be one atlas map by print composer but this one can contain multiple pages.
 Every pages will be generated  with each feature. To enable the generation
 of an atlas and access generation parameters, refer to the `Atlas generation`
 tab. This tab contains the following widgets (see Figure_composer_29_):
@@ -1000,28 +997,14 @@ tab. This tab contains the following widgets (see Figure_composer_29_):
    Atlas generation tab |nix|
 
 * A |checkbox| :guilabel:`Generate an atlas` enables or disables the atlas generation.
-* A combobox :guilabel:`Composer map` |selectstring| that allows to choose
-  which map item will be used as the atlas map, i.e. on which map geometries from
-  the coverage layer will be iterated over and displayed.
 * A combobox :guilabel:`Coverage layer` |selectstring| that allows to choose the
   (vector) layer containing the geometries on which to iterate over.
 * An optional |checkbox| :guilabel:`Hidden coverage layer`, that if checked, will
   hide the coverage layer (but not the other ones) during the generation.
-* An optional |checkbox| :guilabel:`Features sorting` that, if checked, allows to
-  sort features of the coverage layer. The associated combobox allows to choose
-  which column will be used as the sorting key. Sort order (either ascending or
-  descending) is set by a two-state button that displays an up or a down arrow.
-* An optional :guilabel:`Feature filtering` text area that allows to specify an
+* An optional :guilabel:`Filter with` text area that allows to specify an
   expression for filtering features from the coverage layer. If the expression
   is not empty, only features that evaluate to ``True`` will be selected. The
   button on the right allows to display the expression builder.
-* An input box :guilabel:`Scaling` that allows to select the amount
-  of space added around each geometry within the allocated map. Its value is
-  meaningful only when using the autoscaling mode.
-* A |checkbox| :guilabel:`Fixed scale` that allows to toggle between auto-scale
-  and fixed-scale mode. In fixed scale mode, the map will only be translated for
-  each geometry to be centered. In auto-scale mode, the map's extents are computed
-  in such a way that each geometry will appear in its whole.
 * An :guilabel:`Output filename expression` textbox that is used to generate a
   filename for each geometry if needed. It is based on expressions. This field is
   meaningful only for rendering to multiple files.
@@ -1029,6 +1012,26 @@ tab. This tab contains the following widgets (see Figure_composer_29_):
   the generation of a single file if this is possible by the chosen output format
   (PDF for instance). If this field is checked, the value of the
   :guilabel:`Output filename expression` field is meaningless.
+* An optional |checkbox| :guilabel:`Sort by` that, if checked, allows to
+  sort features of the coverage layer. The associated combobox allows to choose
+  which column will be used as the sorting key. Sort order (either ascending or
+  descending) is set by a two-state button that displays an up or a down arrow.
+
+
+You can use multiple map items with the Atlas generation; each map will be rendered according
+to the coverage features. To enable Atlas generation for a specific map item you need to
+|checkbox|:guilabel:`Controlled by Atlas` under the Item properties of the map item. Once checked, you can set:
+
+* An input box :guilabel:`Margin aroung feature` that allows to select the amount
+  of space added around each geometry within the allocated map. Its value is
+  meaningful only when using the autoscaling mode.
+* A |checkbox| :guilabel:`Fixed scale` that allows to toggle between auto-scale
+  and fixed-scale mode. In fixed scale mode, the map will only be translated for
+  each geometry to be centered. In auto-scale mode, the map's extents are computed
+  in such a way that each geometry will appear in its whole.
+
+Labels
+------
 
 In order to adapt labels to the feature the atlas plugin iterates over, use a label with this special notation
 `[%expression using field_name%]`.
@@ -1040,10 +1043,19 @@ And that would result in the generated atlas as
 
 "`The area of PARIS,75001 is 1.94 km2`".
 
+
+Preview
+-------
+
+Once the Atlas Settings have been configured and map items selected, you can create a preview of all the pages
+clicking on the :menuselection:`Atlas --> Preview Atlas` and using the arrows, in the same menu, to navigate
+through all the features.
+
 Generation
 ----------
 
-The atlas generation is done when the user asks for a print or an export. The behaviour of these functions will be slightly changed if an atlas map has been selected. For instance, when the user asks for an export to PDF, if an atlas map is defined, the user will be asked for a directory where to save all the generated PDF files (except if the |checkbox| :guilabel:`Single file export when possible` has been selected).
+The atlas generation can be done in different ways. For example, with :menuselection:`Atlas --> Print Atlas` you can directly print it. You can also create a PDF using :menuselection:`Atlas --> Export Atlas as PDF`: the user will be asked for a directory where to save all the generated PDF files (except if the |checkbox| :guilabel:`Single file export when possible` has been selected).
+If you need to print just a page of the atlas, simple start the preview function, select the page you need and click on :menuselection:`Composer --> Print` (or create a PDF).
 
 .. index::
    single:Printing; Export_Map
