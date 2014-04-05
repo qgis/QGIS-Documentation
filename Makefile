@@ -4,6 +4,7 @@
 # You can set these variables from the command line
 #LANGUAGES     = en `ls i18n`
 LANGUAGES     = en ca da de es fa fi fr id it ja ko_KR nl pl pt_PT ro ru zh_CN zh_TW
+LANGUAGES     = en
 # as long as this branch is testing, we only build for english:
 # LANGUAGES     = en
 LANG          = en
@@ -157,7 +158,7 @@ all:
 	@echo Starting with pulling all translations from transifex
 	# --minimum-perc=1 so only files which have at least 1% translation are pulled
 	# -f to force, --skip to not stop with errors
-	tx pull --minimum-perc=1 --skip -f
+#	tx pull --minimum-perc=1 --skip -f
 	mkdir -p live/html/pdf
 	# after build quickly rename old live dir, mv output to live dir and then remove old dir
 	@for LANG in $(LANGUAGES) ; do \
@@ -167,6 +168,7 @@ all:
 		mv $(BUILDDIR)/html/$$LANG live/html/; \
 		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-UserGuide.pdf live/html/pdf/QGIS-$(VERSION)-UserGuide-$$LANG.pdf;  \
 		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf live/html/pdf/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$$LANG.pdf;  \
+		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-QGISTrainingManual.pdf live/html/pdf/QGIS-$(VERSION)-QGISTrainingManual-$$LANG.pdf;  \
 		rm -rf live/html/$$LANG.old; \
 	done
 
