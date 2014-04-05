@@ -204,6 +204,7 @@ Background, Item ID and Rendering (See figure_composer_2_)
 
 * The :guilabel:`Position and size` dialog lets you define size and position of the frame that contains the item. You can also choose
   which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
+* The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the label.
   Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
 * the |checkbox| :guilabel:`Background` enables or disables a background color.
