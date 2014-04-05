@@ -95,9 +95,8 @@ Using Print Composer
 
 Opening the print composer provides you with a blank canvas to which you can add
 the current |qg| map canvas, text labels, images, legends, scalebars, basic
-shapes, arrows, attribute tables and HTML frames. Figure_composer_1_ shows the initial view of the print composer with an
-activated |checkbox| :guilabel:`Snap to grid` mode but before any elements are
-added.
+shapes, arrows, attribute tables and HTML frames. Figure_composer_1_ shows the 
+initial view of the print composer  before any elements are added.
 
 .. _Figure_composer_1:
 
@@ -113,13 +112,11 @@ added.
 
 The print composer provides four tabs:
 
-* The :guilabel:`Composition` tab allows you to set paper size, orientation, the
-  print quality for the output file in dpi and to activate snapping to a grid of
-  a defined resolution. You can also choose the :guilabel:`Number of pages` your composition will have.
-  Please note, the |checkbox| :guilabel:`Snap to grid`
-  feature only works, if you define a grid resolution > 0. Furthermore you can
-  also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means
+* The :guilabel:`Composition` tab allows you to set paper size, orientation, the page
+  background, number of pages and print quality for the output file in dpi. Furthermore you 
+  can also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means
   all elements will be rastered before printing or saving as Postscript or PDF.
+  In this tab you can also customize settings for Grid and Smart Guides.
 * The :guilabel:`Item Properties` tab displays the properties for the selected
   item element. Click the |mActionSelectPan| :sup:`Select/Move item` icon to select
   an element (e.g. legend, scalebar or label) on the canvas. Then click the
@@ -167,7 +164,8 @@ used as default during the work.
 
 * :guilabel:`Compositions defaults` let you specify the default font to use.
 * With :guilabel:`Grid appearence` you can set the grid style and its color.
-* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid.
+* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. There are three types of grid: **Dots**, 
+**Solid** lines and **Crosses**.
 * :guilabel:`Guide defaults` defines the tolerance for the guides.
 
 Composition tab --- General composition setup
@@ -178,14 +176,12 @@ In the :guilabel:`Composition` tab, you can define the global settings of your c
 * You can choose one of the :guilabel:`Presets` for your papersheet, or enter your custom :guilabel:`width` and :guilabel:`height`.
 * Composition can now be parted on several pages. For instance, a first page can show a map canvas and a second
   page will show the attribute table associated to a layer while a third ons shows a HTML frame linking to your organization website.
-  Set the :guilabel:`Number of pages` to the desired value.
-* Choose the page :guilabel:`Orientation` and its :guilabel:`Exported resolution`
-* When checked, the |checkbox| :guilabel:`print as raster` means all elements will be rasterized before printing or saving as Postscript or
+  Set the :guilabel:`Number of pages` to the desired value. You can choose the page :guilabel:`Orientation` and its :guilabel:`Exported resolution`. When checked, the |checkbox| :guilabel:`print as raster` means all elements will be rasterized before printing or saving as Postscript or
   PDF.
-* :guilabel:`Snap to grid` and :guilabel:`Snap to alignements` tools make accomplishing some tasks much easier. There's three types of grid:
-  **Dots**, **Solid** lines and **Crosses**. You can adjust :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`color` to your need.
-* :guilabel:`Selection tolerance` defines the maximum distance below which an item is snapped to the grid.
-* :guilabel:`Snap to alignements` shows helping lines when the borders or axis of two items are aligned.
+* :guilabel:`Grid` let you customize grid settings like :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`tolerance` to your need.
+* In :guilabel:`Snap to alignements` you can change the :guilabel:`Tolerance` which is the maximum distance below which an item is snapped to Smart Guides.
+
+Snap to Grid and/or to Guides can be enabled from the :menuselection:`View` menu. In this menu you can also hide or show Grid/Guides.
 
 Composer items general options
 ------------------------------
