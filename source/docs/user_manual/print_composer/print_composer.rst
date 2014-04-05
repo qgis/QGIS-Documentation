@@ -891,8 +891,35 @@ provides following functionalities (see figure_composer_26_):
 
 .. index:: Elements_Alignment
 
-Item alignment
-==============
+Manage items
+============
+
+Size and position
+-----------------
+
+Each item inside the composer can be moved/resized to create a perfect layout.
+The first step is to select the item using the |mActionSelectPan| :sup:`Select/Move item` button; 
+once selected the item can be moved or resized using the squares on the boundary. 
+For a better precision, you can move an item using the :kbd:`Arrows keys` on the keyboard; 
+if the movement are too slow, you can speed up it holding :kbd:`Shift`.
+
+While resizing, holding :kbd:`Shift` will maintain the aspect ratio, :kbd:`Ctrl` resizes from the item center.
+
+The correct position can be obteined using snapping to Grid or Smart guides. If you need to 
+disable snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
+
+You can choose multiple items with the |mActionSelectPan| :sup:`Select/Move item` button, 
+just hold the :kbd:`Shift` button and click on all the items you need. You can then resize/move
+this group just like a single item.
+
+Once you have found the correct position for an item, you can lock it clicking with the
+right mouse button; press the same button another time to unlock it. You can also lock/unlock
+items using the icons on the toolbar.
+
+To unselect an item just click on it holding the :kbd:`Shift` button.
+
+Alignment
+--------------
 
 Raise or lower functionalities for elements are inside the |mActionRaiseItems|
 :sup:`Raise selected items` pulldown menu. Choose an element on the print composer
@@ -921,7 +948,7 @@ When moving items on the composer canvas, alignment helper lines appear when bor
 .. index:: Revert_Layout_Actions
 
 Revert and Restore tools
-------------------------
+========================
 
 During the layout process it is possible to revert and restore changes. This can
 be done with the revert and restore tools:
