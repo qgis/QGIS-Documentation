@@ -143,13 +143,22 @@ can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 Navigation tools
 ^^^^^^^^^^^^^^^^
 
-To navigate in the canvas layout, the print composer provides 4 general tools:
+To navigate in the canvas layout, the print composer provides some general tools:
 
 * |mActionZoomIn| :sup:`Zoom in`
 * |mActionZoomOut| :sup:`Zoom out`
-* |mActionZoomFullExtent| :sup:`Zoom to full extend`
+* |mActionZoomFullExtent| :sup:`Zoom to full extent`
+* |mActionZoomActual| :sup:`Zoom to 100%`
 * |mActionDraw| :sup:`Refresh the view` (if you find the view in an inconsistent
   state)
+* |mActionPan| :sup:`Pan composer`
+* |mActionZoomToSelected| :sup:`Marquee zoom mode` (zoom to a specific region of the composer)
+
+You can change the zoom level also using the mouse wheel or the combobox in the status
+bar. If you need to switch to pan mode while working in the composer area, you can
+hold the :kbd:`Spacebar` or the the mouse wheel.
+With :kbd:`Ctrl+Spacebar` you can temporally switch to marquee zoom mode and with 
+:kbd:`Ctrl+Shift+Spacebar` to zoom out mode.
 
 Print Composer Options
 --------------------
