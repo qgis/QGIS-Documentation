@@ -151,6 +151,16 @@ To navigate in the canvas layout, the print composer provides 4 general tools:
 * |mActionDraw| :sup:`Refresh the view` (if you find the view in an inconsistent
   state)
 
+Print Composer Options
+--------------------
+From :menuselection:`Settings --> Composer Options` you can set some options that will be
+used as default during the work.
+
+* :guilabel:`Compositions defaults` let you specify the default font to use.
+* With :guilabel:`Grid appearence` you can set the grid style and its color.
+* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid.
+* :guilabel:`Guide defaults` defines the tolerance for the guides.
+
 Composition tab --- General composition setup
 ---------------------------------------------
 
