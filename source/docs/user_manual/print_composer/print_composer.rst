@@ -131,6 +131,9 @@ The print composer provides four tabs:
 * The :guilabel:`Atlas generation` tab allows to enable the generation of an
   atlas for the current composer and gives access to its parameters.
 
+In the bottom part of the print composer window, you can find a status bar with 
+mouse position, current page number and a combobox to set the zoom level.
+
 You can add multiple elements to the composer. It is also possible to have more
 than one map view or legend or scalebar in the print composer canvas, on one or
 several pages. Each element has its own properties and in the case of the map,
