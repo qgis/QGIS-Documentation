@@ -61,7 +61,7 @@ See a list of tools in table_composer_1_:
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionGroupItems|      | Group items of print composition      | |mActionUngroupItems|      | Ungroup items of print composition       |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |locked|                 | Lock Selected Items                   | |unlocked|                 | Unlock All items                         |
+|                          | Lock Selected Items                   |                            | Unlock All items                         |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionRaiseItems|      | Raise selected items                  | |mActionLowerItems|        | Lower selected items                     |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
