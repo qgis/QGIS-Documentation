@@ -62,3 +62,31 @@ on the official repository:
 #. :file:`metadata.txt` is required
 #. all required metadata listed in :ref:`metadata table<plugin_metadata_table>` must be present
 #. the `version` metadata field must be unique
+
+Plugin structure
+................
+
+Following the validation rules the compressed (.zip) package of your plugin must have a specific structure
+to validate as a functional plugin.
+As the plugin will be unzipped inside the users plugins folder it must have it's own directory inside the .zip file to not interfere with other plugins.
+Mandatory files are: netadata.txt and __init__.py
+But it would be nice to have a README.py and of course an icon to represent the plugin (resources.qrc).
+Following is an example of how a plugin.zip should look like.
+::
+
+  plugin.zip
+    pluginfolder/
+    |-- i18n
+    |   |-- translation_file_de.ts
+    |-- img
+    |   |-- icon.png
+    |   `-- iconsource.svg
+    |-- __init__.py
+    |-- Makefile
+    |-- metadata.txt
+    |-- more_code.py
+    |-- main_code.py
+    |-- README.md
+    |-- resources.qrc
+    |-- resources_rc.py
+    `-- ui_Qt_user_interface_file.ui
