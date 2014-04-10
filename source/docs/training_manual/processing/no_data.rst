@@ -15,11 +15,10 @@ Now open the toolbox and open the dialog corresponding to the raster calculator.
 
 .. image:: img/no_data/calculator_dialog.png
 
-The dialog contains 3 parameters.
+The dialog contains 2 parameters.
 
 - The layers to use for the analysis. This is a multiple input, that meaning that you can select as many layers as you want. Click on the button on the right--hand side and then select the layers that you want to use in the dialog that will appear.
 - The formula to apply. The formula uses the layers selected in the above parameter, which are named using alphabet letters (``a, b, c...``) or ``g1, g2, g3...`` as variable names. That is, the formula ``a + 2 * b`` is the same as ``g1 + 2 * g2`` and will compute the sum of the value in the first layer plus two times the value in the second layer. The ordering of the layers is the some ordering that you see in the selection dialog.
-- Whether to use or not no--data values. A no--data value indicates that, for a given cell in the raster layer, no value has been recorded. The value for that cell is not an actual valid value, but some kind of placeholder instead. If this field is set to true, those values will be used as normal values, ignoring that they actually mean that there is no valid value for that cell. If it is false, the value will be ignored, and the result for that cell will be the no-data value (since there is one variable in the formula that has no value, there is no way of computing the result for that cell, and that is indicated by setting the no--data value for the resulting layer)
 
 .. warning:: the calculator is case sensitive
 
@@ -88,12 +87,8 @@ The result has a value of 1 inside the range we want to work with, and no-data i
 
 .. image:: img/no_data/elevation_mask.png
 
-The no-data value comes from the 0/0 expresion. Since that is an undetermined value, SAGA will add a NaN (Not a Number) value, which is actually handled as a no-data value. With this little trick you can set a no-data value without needing to know what the no--data value of the cell is.
+The no-data value comes from the 0/0 expression. Since that is an undetermined value, SAGA will add a NaN (Not a Number) value, which is actually handled as a no-data value. With this little trick you can set a no-data value without needing to know what the no--data value of the cell is.
 
 Now you just have to multiply it by the slope layer included in the project, and you will get the desired result.
 
 All that can be done in a single operation with the calculator. We leave that as an exercise for the reader.
-
-
-
-
