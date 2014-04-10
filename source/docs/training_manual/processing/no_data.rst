@@ -21,6 +21,7 @@ The dialog contains 3 parameters.
 - The formula to apply. The formula uses the layers selected in the above parameter, which are named using alphabet letters (``a, b, c...``) or ``g1, g2, g3...`` as variable names. That is, the formula ``a + 2 * b`` is the same as ``g1 + 2 * g2`` and will compute the sum of the value in the first layer plus two times the value in the second layer. The ordering of the layers is the some ordering that you see in the selection dialog.
 - Whether to use or not no--data values. A no--data value indicates that, for a given cell in the raster layer, no value has been recorded. The value for that cell is not an actual valid value, but some kind of placeholder instead. If this field is set to true, those values will be used as normal values, ignoring that they actually mean that there is no valid value for that cell. If it is false, the value will be ignored, and the result for that cell will be the no-data value (since there is one variable in the formula that has no value, there is no way of computing the result for that cell, and that is indicated by setting the no--data value for the resulting layer)
 
+.. warning:: the calculator is case sensitive
 
 To start with, we will change the units of the DEM from meters to feet. The formula we need is the following one:
 
@@ -29,6 +30,8 @@ To start with, we will change the units of the DEM from meters to feet. The form
 	h' = h * 3.28084
 
 Select the DEM in the layers field and type ``a * 3.28084`` in the formula field.
+
+.. warning:: for non English users: use always ".", not ","
 
 Click *Run* to run the algorithm. You will get a layer that has the same appearance of the input layer, but with different values. The input layer that we used has valid values in all its cells, so the last parameter has no effect at all.
 
