@@ -109,6 +109,9 @@ Sponsors
 Data
 ----
 
+.. note:: The sample data used throughout the manual can be downloaded here:
+  http://qgis.org/downloads/data/training_manual_exercise_data.zip
+
 The sample data that accompanies this resource is freely available and comes
 from the following sources:
 
