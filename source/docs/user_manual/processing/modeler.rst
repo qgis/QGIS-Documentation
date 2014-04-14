@@ -181,18 +181,6 @@ algorithm will be added to the canvas. It will be linked to all the other elemen
 in the canvas, whether algorithms or inputs, which provide objects that are used
 as inputs for that algorithm.
 
-.. _figure_model_parameter_5:
-
-.. only:: html
-
-   **Figure Processing 21:**
-
-.. figure:: /static/user_manual/processing/models_parameters5.png
-   :align: center
-   :width: 30em
-
-   Model Parameters |win|
-
 Elements can be dragged to a different position within the canvas, to change the
 way the module structure is displayed and make it more clear and intuitive. Links
 between elements are update automatically.

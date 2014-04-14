@@ -6,35 +6,30 @@
 Features
 ********
 
-|qg| offers many common GIS functionalities provided by core features and
-plugins. As a short summary they are presented in six categories to gain a
-first insight.
+|qg| offers many common GIS functionalities provided by core features and plugins. A short summary of six general categories of features and plugins is presented below, followed by first insights into the integrated Python console.
 
-View data
+View data 
 ---------
 
-You can view and overlay vector and raster data in different formats and
-projections without conversion to an internal or common format. Supported
-formats include:
+You can view and overlay vector and raster data in different formats and projections without conversion to an internal or common format. Supported formats include:
 
 *  Spatially-enabled tables and views using PostGIS, SpatiaLite and MS SQL
    Spatial, Oracle Spatial, vector formats supported by the installed OGR
-   library, including ESRI shapefiles, MapInfo, SDTS, GML and many more, see
-   section :ref:`label_workingvector`.
+   library, including ESRI shapefiles, MapInfo, SDTS, GML and many more.
+   See section :ref:`label_workingvector`.
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
-   Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii
-   Grid, JPEG, PNG and many more, see section :ref:`working_with_raster`.
-*  GRASS raster and vector data from GRASS databases (location/mapset),
-   see section :ref:`sec_grass`.
-*  Online spatial data served as OGC Web Services, such as WMS, WMTS, WCS,
-   WFS, WFS-T... (see section :ref:`sec_ogc`).
-*  OpenStreetMap data, see section :ref:`plugins_osm`.
+   Data Abstraction Library) library, such as GeoTIFF, ERDAS IMG, ArcInfo
+   ASCII GRID, JPEG, PNG and many more. See section :ref:`working_with_raster`.
+*  GRASS raster and vector data from GRASS databases (location/mapset).
+   See section :ref:`sec_grass`.
+*  Online spatial data served as OGC Web Services, including WMS, WMTS, WCS,
+   WFS, and WFS-T. See section :ref:`sec_ogc`.
+*  OpenStreetMap data. See section :ref:`plugins_osm`.
 
-Explore data and compose maps
+Explore data and compose maps 
 -----------------------------
 
-You can compose maps and interactively explore spatial data with a friendly
-GUI. The many helpful tools available in the GUI include e.g.:
+You can compose maps and interactively explore spatial data with a friendly GUI. The many helpful tools available in the GUI include:
 
 *  |qg| browser
 *  On-the-fly reprojection
@@ -45,146 +40,108 @@ GUI. The many helpful tools available in the GUI include e.g.:
 *  Annotation tools
 *  Identify/select features
 *  Edit/view/search attributes
-*  Feature labeling also data defined
-*  Change vector and raster symbology also data defined
-*  Add a graticule layers to create an atlas map composition
-*  Decorate your map with a north arrow scale bar and copyright label
-*  Save and restore projects
+*  Data-defined feature labeling
+*  Data-defined vector and raster symbology tools
+*  Atlas map composition with graticule layers
+*  North arrow scale bar and copyright label for maps
+*  Support for saving and restoring projects
 
-Create, edit, manage and export data
+Create, edit, manage and export data 
 ------------------------------------
 
-You can create, edit, manage and export vector and raster layers in several
-formats. |qg| offers e.g. the following:
+You can create, edit, manage and export vector and raster layers in several formats. |qg| offers the following:
 
-*  Digitizing tools for OGR supported formats and GRASS vector layer
-*  Create and edit shapefiles and GRASS vector layers
-*  Geocode images with the Georeferencer plugin
+*  Digitizing tools for OGR-supported formats and GRASS vector layers
+*  Ability to create and edit shapefiles and GRASS vector layers
+*  Georeferencer plugin to geocode images
 *  GPS tools to import and export GPX format, and convert other GPS
-   formats to GPX or down/upload directly to a GPS unit (on Linux, usb: has been
-   addedto list of GPS devices)
-*  Visualize and edit OpenStreetMap data
-*  Create spatial database tables from shapefiles with DB Manager plugin
+   formats to GPX or down/upload directly to a GPS unit (On Linux,
+   usb: has been added to list of GPS devices.)
+*  Support for visualizing and editing OpenStreetMap data
+*  Ability to create spatial database tables from shapefiles with
+   DB Manager plugin
 *  Improved handling of spatial database tables
-*  Manage vector attribute tables
-*  Save screenshots as georeferenced images
+*  Tools for managing vector attribute tables
+*  Option to save screenshots as georeferenced images
 
-Analyse data
+Analyse data 
 ------------
 
-You can perform spatial data analysis on spatial databases and other OGR
-supported formats. |qg| currently offers vector analysis, sampling,
-geoprocessing, geometry and database management tools. You can also use the
-integrated GRASS tools, which include the complete GRASS functionality of more
-than 400 modules (See Section :ref:`sec_grass`). Or you work with the
-Processing Plugin, which provides powerful geospatial analysis framework to
-call native and third party algorithms from |qg|, such as GDAL, SAGA, GRASS,
-fTools and more (see section :ref:`sec_processing_intro`).
+You can perform spatial data analysis on spatial databases and other OGR- supported formats. |qg| currently offers vector analysis, sampling, geoprocessing, geometry and database management tools. You can also use the integrated GRASS tools, which include the complete GRASS functionality of more than 400 modules. (See Section :ref:`sec_grass`.) Or, you can work with the Processing Plugin, which provides a powerful geospatial analysis framework to call native and third-party algorithms from |qg|, such as GDAL, SAGA, GRASS, fTools and more. (See section :ref:`sec_processing_intro`.)
 
-Publish maps on the Internet
+Publish maps on the Internet 
 ----------------------------
 
-|qg| can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as WMS or
-WFS server (see section :ref:`sec_ogc`). Additionally you can publish your data
-the Internet using a webserver with UMN MapServer or GeoServer installed.
+|qg| can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as a WMS or WFS server. (See section :ref:`sec_ogc`.) Additionally, you can publish your data on the Internet using a webserver with UMN MapServer or GeoServer installed.
 
-Extend |qg| functionality through plugins
+Extend |qg| functionality through plugins 
 -----------------------------------------
 
-|qg| can be adapted to your special needs with the extensible plugin
-architecture. |qg| provides libraries that can be used to create plugins. You
-can even create new applications with C++ or Python!
+|qg| can be adapted to your special needs with the extensible plugin architecture and libraries that can be used to create plugins. You can even create new applications with C++ or Python!
 
 Core Plugins
 ............
 
-#.  Coordinate Capture (Capture mouse coordinates in different CRS)
+Core plugins include:
+
+#.  Coordinate Capture (Capture mouse coordinates in different CRSs)
 #.  DB Manager (Exchange, edit and view layers and tables; execute SQL queries)
-#.  Diagram Overlay (Placing diagrams on vector layer)
-#.  Dxf2Shp Converter (Convert DXF to Shape)
-#.  eVIS (Event Visualization Tool)
-#.  fTools (Tools for vector data analysis and management)
+#.  Diagram Overlay (Place diagrams on vector layers)
+#.  Dxf2Shp Converter (Convert DXF files to shapefiles)
+#.  eVIS (Visualize events)
+#.  fTools (Analyze and manage vector data)
 #.  GDALTools (Integrate GDAL Tools into |qg|)
-#.  Georeferencer GDAL (Adding projection information to raster using GDAL)
-#.  GPS Tools (Loading and importing GPS data)
-#.  GRASS (GRASS GIS integration)
-#.  Heatmap (Generating raster heatmaps from point data)
-#.  Interpolation plugin (interpolate based on vertices of a vector layer)
-#.  Offline Editing (Allow offline editing and synchronizing with database)
+#.  Georeferencer GDAL (Add projection information to rasters using GDAL)
+#.  GPS Tools (Load and import GPS data)
+#.  GRASS (Integrate GRASS GIS)
+#.  Heatmap (Generate raster heatmaps from point data)
+#.  Interpolation Plugin (Interpolate based on vertices of a vector layer)
+#.  Offline Editing (Allow offline editing and synchronizing with databases)
 #.  Oracle Spatial GeoRaster
 #.  Processing (formerly SEXTANTE)
-#.  Raster terrain analysis (Raster based terrain analysis)
-#.  Road graph plugin (Shortest Path network analysis)
+#.  Raster Terrain Analysis (Analyze raster-based terrain)
+#.  Road Graph Plugin (Analyze a shortest-path network)
 #.  Spatial Query Plugin
-#.  SPIT (Import Shapefile to PostgreSQL/PostGIS)
+#.  SPIT (Import shapefiles to PostgreSQL/PostGIS)
 #.  SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database)
-#.  Topology Checker (Finding topological errors in vector layers)
-#.  Zonal statistics plugin (Calculate count, sum, mean of raster for each
+#.  Topology Checker (Find topological errors in vector layers)
+#.  Zonal Statistics Plugin (Calculate count, sum, and mean of a raster for each
     polygon of a vector layer)
 
 
 External Python Plugins
 .......................
 
-|qg| offers a growing number of external python plugins that are provided by
-the community. These plugins reside in the official plugins repository, and
-can be easily installed using the Python Plugin Installer (see Section
-:ref:`load_external_plugin`).
+|qg| offers a growing number of external Python plugins that are provided by the community. These plugins reside in the official Plugins Repository and can be easily installed using the Python Plugin Installer. See Section :ref:`load_external_plugin`.
 
-Python Console
+Python Console 
 --------------
 
-For scripting, it is possible to take advantage of an integrated Python console.
-It can be opened from menu: :menuselection:`Plugins --> Python Console`. The
-console opens as a non-modal utility window. For interaction with the |qg|
-environment, there is the :data:`qgis.utils.iface` variable, which is an
-instance of :class:`QgsInterface`. This interface allows access to the map
-canvas, menus, toolbars and other parts of the |qg| application.
+For scripting, it is possible to take advantage of an integrated Python console, which can be opened from menu: :menuselection:`Plugins --> Python Console`. The console opens as a non-modal utility window. For interaction with the |qg| environment, there is the :data:`qgis.utils.iface` variable, which is an instance of :class:`QgsInterface`. This interface allows access to the map canvas, menus, toolbars and other parts of the |qg| application.
 
-For further information about working with the Python console and programming
-|qg| plugins and applications, please refer to
-http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
+For further information about working with the Python console and programming |qg| plugins and applications, please refer to http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
 
-Known Issues
+Known Issues 
 ------------
 
 Number of open files limitation
 ...............................
 
-If you are opening a large QGIS project, and you are sure that are valid layers
-but there are some layers flagged as bad layers, probably you are faced with
-this issue. Linux (and other OSes, likewise) has a limit of opened files by
-process. Resource limits are per-process, and inherited. The ``ulimit`` command
-(which is a shell built-in) changes the limits only for the current shell
-process; the new limit will be inherited by any child processes.
+If you are opening a large QGIS project and you are sure that all layers are valid, but some layers are flagged as bad, you are probably faced with this issue. Linux (and other OSs, likewise) has a limit of opened files by process. Resource limits are per-process and inherited. The ``ulimit`` command, which is a shell built-in, changes the limits only for the current shell process; the new limit will be inherited by any child processes.
 
-You can see all current ulimit info typing
-::
+You can see all current ulimit info by typing ::
 
     user@host:~$ ulimit -aS
 
-You can see the current allowed number of opened files per proccess with the
-following command on a console
-::
+You can see the current allowed number of opened files per proccess with the following command on a console ::
 
     user@host:~$ ulimit -Sn
 
-To change the limits for an **existing session**, you may be able to use
-something like
-::
+To change the limits for an **existing session**, you may be able to use something like ::
 
-    user@host:~$ ulimit -Sn #number_of_allowed_open_files
-    user@host:~$ ulimit -Sn
-    user@host:~$ qgis
+    user@host:~$ ulimit -Sn #number_of_allowed_open_files user@host:~$ ulimit -Sn user@host:~$ qgis
 
-**To fix it forever**
-
-On most Linux systems, resource limits are set on login by the ``pam_limits``
-module according to the settings contained in :file:`/etc/security/limits.conf`
-or :file:`/etc/security/limits.d/*.conf`.
-
-You should be able to edit those files if you have root privilege (also via
-sudo), but you will need to log in again before any changes take effect.
+**To fix it forever**, on most Linux systems, resource limits are set on login by the ``pam_limits`` module according to the settings contained in :file:`/etc/security/limits.conf` or :file:`/etc/security/limits.d/*.conf`. You should be able to edit those files if you have root privilege (also via sudo), but you will need to log in again before any changes take effect.
 
 More info:
 

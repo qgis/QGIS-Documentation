@@ -16,6 +16,9 @@ more complex data sources which may or may not be available for your region.
   Default data sets are provided with the Training Manual, but you may follow
   these instructions if you wish to replace the default data sets.
 
+.. note:: The sample data used throughout the manual can be downloaded here:
+   http://qgis.org/downloads/data/training_manual_exercise_data.zip
+
 
 |hard| |TY|
 --------------------------------------------------------------------------------
