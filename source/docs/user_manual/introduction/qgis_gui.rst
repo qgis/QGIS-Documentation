@@ -9,9 +9,9 @@
 .. index::
    single:main window
 
-When |qg| starts, you are presented with the GUI as shown below (the numbers 1
-through 5 in yellow circles refer to the five major areas of the interface as
-discussed below):
+When |qg| starts, you are presented with the GUI as shown in the figure (the numbers 1
+through 5 in yellow circles are
+discussed below).
 
 .. _fig_startup:
 
@@ -50,17 +50,17 @@ Menu Bar
 
 The menu bar provides access to various |qg| features using a standard
 hierarchical menu. The top-level menus and a summary of some of the menu
-options are listed below, together with the icons of the corresponding tools as
-they appear on the toolbar, as well as keyboard shortcuts. Keyboard shortcuts
-can also be configured manually (shortcuts presented in this section are the
-defaults), using the :guilabel:`Configure shortcuts` dialog, opend from
+options are listed below, together with the associated icons as
+they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in this section are the
+defaults; however, keyboard shortcuts
+can also be configured manually using the :guilabel:`Configure shortcuts` dialog, opened from
 :menuselection:`Settings --> Configure Shortcuts...`.
 
 Although most menu options have a corresponding tool and vice-versa, the menus
-are not organized quiet like the toolbars. The toolbar containing the tool is
+are not organized exactly like the toolbars. The toolbar containing the tool is
 listed after each menu option as a checkbox entry. Some menu options only
 appear if the corresponding plugin is loaded. For more information about tools
-and toolbars, see Section :ref:`label_toolbars`.
+and toolbars, see section :ref:`label_toolbars`.
 
 Project
 ........
@@ -298,8 +298,8 @@ Menu Option                                                     Shortcut        
 |mActionHelpSponsors| :guilabel:`|qg| Sponsors`                 \                     \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
-Please note that for Linux |nix| the menu bar items listed above are the
-default ones in KDE window manager. In GNOME, :menuselection:`Settings` menu
+Please note that for Linux |nix|, the menu bar items listed above are the
+default ones in the KDE window manager. In GNOME, the :menuselection:`Settings` menu
 has different content and its items have to be found here:
 
 +-----------------------------------------------------------------------+------------------------+
@@ -336,12 +336,12 @@ Toolbar
    single:toolbar
 
 The toolbar provides access to most of the same functions as the menus, plus
-additional tools for interacting with the map. Each toolbar item has popup help
+additional tools for interacting with the map. Each toolbar item has pop-up help
 available. Hold your mouse over the item and a short description of the tool's
 purpose will be displayed.
 
-Every menubar can be moved around according to your needs. Additionally every
-menubar can be switched off using your right mouse button context menu holding
+Every menu bar can be moved around according to your needs. Additionally, every
+menu bar can be switched off using your right mouse button context menu, holding
 the mouse over the toolbars (read also :ref:`sec_panels_and_toolbars`).
 
 .. index::
@@ -376,10 +376,10 @@ A layer can be selected and dragged up or down in the legend to change the
 Z-ordering. Z-ordering means that layers listed nearer the top of the legend
 are drawn over layers listed lower down in the legend.
 
-.. note:: This behaviours can be overridden by 'Layer order' panel.
+.. note:: This behaviour can be overridden by the 'Layer order' panel.
 
 Layers in the legend window can be organised into groups. There are two ways to
-do so:
+do this:
 
 #. Right click in the legend window and choose :guilabel:`Add Group`. Type in a
    name for the group and press :kbd:`Enter`. Now click on an existing layer
@@ -388,15 +388,15 @@ do so:
    :guilabel:`Group Selected`. The selected layers will automatically be placed
    in a new group.
 
-To bring a layer out of a group you can drag it out, or right click on it and
-choose :guilabel:`Make to toplevel item`. Groups can be nested inside other
+To bring a layer out of a group, you can drag it out, or right click on it and
+choose :guilabel:`Make to toplevel item`. Groups can also be nested inside other
 groups.
 
 The checkbox for a group will show or hide all the layers in the group
 with one click.
 
 The content of the right mouse button context menu depends on whether the
-selected legend item is a raster or a vector layer. For GRASS vector layers
+selected legend item is a raster or a vector layer. For GRASS vector layers,
 |mActionToggleEditing| :sup:`Toggle editing` is not available. See section
 :ref:`grass_digitizing` for information on editing GRASS vector layers.
 
@@ -475,18 +475,17 @@ It is possible to select more than one layer or group at the same time by
 holding down the :kbd:`Ctrl` key while selecting the layers with the left mouse
 button. You can then move all selected layers to a new group at the same time.
 
-You are also able to delete more than one Layer or Group at once by selecting
+You may also delete more than one layer or group at once by selecting
 several layers with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
-This way all selected Layers or groups will be removed from the layer's list.
+This way, all selected layers or groups will be removed from the layers list.
 
 Working with the Legend independent layer order
 ...............................................
 
-There is a panel that allows to define a legend independent drawing order.
+There is a panel that allows you to define an independent drawing order for the map legend.
 You can activate it in the menu :menuselection:`Settings --> Panels --> Layer
-order`. Determine the drawing order of the layers in the map view here. Doing
-so makes it possible to order your layers in order of importance, for example,
-but to still display them in the correct order (see figure_layer_order_).
+order`. This feature allows you to, for instance, order your layers in order of importance,
+but still display them in the correct order (see figure_layer_order_).
 Checking the |checkbox| :guilabel:`Control rendering order` box underneath the
 list of layers will cause a revert to default behavior.
 
@@ -512,8 +511,8 @@ Map View
 This is the "business end" of |qg| --- maps are displayed in this area! The
 map displayed in this window will depend on the vector and raster layers you
 have chosen to load (see sections that follow for more information on how to
-load layers). The map view can be panned (shifting the focus of the map display
-to another region) and zoomed in and out. Various other operations can be
+load layers). The map view can be panned, shifting the focus of the map display
+to another region, and it can be zoomed in and out. Various other operations can be
 performed on the map as described in the toolbar description above. The map
 view and the legend are tightly bound to each other --- the maps in view reflect
 changes you make in the legend area.
@@ -526,8 +525,8 @@ changes you make in the legend area.
 
    You can use the mouse wheel to zoom in and out on the map. Place the mouse
    cursor inside the map area and roll the wheel forward (away from you) to
-   zoom in and backwards (towards you) to zoom out. The mouse cursor position
-   is the center where the zoom occurs. You can customize the behavior of the
+   zoom in and backwards (towards you) to zoom out. The zoom is centered on the
+   mouse cursor position. You can customize the behavior of the
    mouse wheel zoom using the :guilabel:`Map tools` tab under the
    :menuselection:`Settings --> Options` menu.
 
@@ -537,9 +536,9 @@ changes you make in the legend area.
    .. index::
       single:pan arrow keys
 
-   You can use the arrow keys to pan in the map. Place the mouse cursor inside
-   the map area and click on the right arrow key to pan East, left arrow key to
-   pan West, up arrow key to pan North and down arrow key to pan South. You can
+   You can use the arrow keys to pan the map. Place the mouse cursor inside
+   the map area and click on the right arrow key to pan east, left arrow key to
+   pan west, up arrow key to pan north and down arrow key to pan south. You can
    also pan the map using the space bar or the click on mouse wheel: just move
    the mouse while holding down space bar or click on mouse wheel.
 
@@ -551,45 +550,45 @@ changes you make in the legend area.
 Status Bar
 ----------
 
-The status bar shows you your current position in map coordinates (e.g.
+The status bar shows you your current position in map coordinates (e.g.,
 meters or decimal degrees) as the mouse pointer is moved across the map view.
 To the left of the coordinate display in the status bar is a small button that
 will toggle between showing coordinate position or the view extents of the
 map view as you pan and zoom in and out.
 
-Next to the coordinate display you find the scale display. It shows the scale of
-the map view. If you zoom in or out |qg| shows you the current scale. There is
-a scale selector which allows you to choose between predefined scales from
-1:500 until 1:1000000.
+Next to the coordinate display you will find the scale display. It shows the scale of
+the map view. If you zoom in or out, |qg| shows you the current scale. There is
+a scale selector, which allows you to choose between predefined scales from
+1:500 to 1:1000000.
 
-A progress bar in the status bar shows progress of rendering as each layer is
+A progress bar in the status bar shows the progress of rendering as each layer is
 drawn to the map view. In some cases, such as the gathering of statistics in
 raster layers, the progress bar will be used to show the status of lengthy
 operations.
 
 If a new plugin or a plugin update is available, you will see a message at the
-far left of the status bar. On the right side of the status bar there is a small
+far left of the status bar. On the right side of the status bar, there is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
-map view (see Section :ref:`redraw_events` below). The icon |mIconStopRendering|
+map view (see section :ref:`redraw_events` below). The icon |mIconStopRendering|
 immediately stops the current map rendering process.
 
-To the right of the render functions you find the EPSG code of the current
+To the right of the render functions, you find the EPSG code of the current
 project CRS and a projector icon. Clicking on this opens the projection
 properties for the current project.
 
 
 .. tip::
-   **Calculating the correct Scale of your Map Canvas**
+   **Calculating the Correct Scale of Your Map Canvas**
 
    .. index::
       single:scale calculate
 
-   When you start |qg|, degrees is the default unit, and it tells |qg| that any
-   coordinate in your layer is in degrees. To get correct scale values, you can
-   either change this to meter manually in the :guilabel:`General` tab
-   under :menuselection:`Settings --> Project Properties` or you can select a
-   project Coordinate Reference System (CRS) clicking on the
+   When you start |qg|, the default units are degrees, and this means that |qg| will interpret any
+   coordinate in your layer as specified in degrees. To get correct scale values, you can
+   either change this setting to meters manually in the :guilabel:`General` tab
+   under :menuselection:`Settings --> Project Properties`, or you can select a
+   project CRS clicking on the
    |mIconProjectionDisabled| :sup:`CRS status` icon in the lower right-hand
-   corner of the statusbar. In the last case, the units are set to what the
-   project projection specifies, e.g. '+units=m'.
+   corner of the status bar. In the last case, the units are set to what the
+   project projection specifies (e.g., '+units=m').
 
