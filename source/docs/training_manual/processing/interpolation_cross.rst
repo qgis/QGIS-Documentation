@@ -17,7 +17,7 @@ That will select 90% of the points in the layer to rasterize
 
 The selection is random, so your selection might differ from the selection shown in the above image.
 
-Now run the *Shapes to grid* to get the first raster layer, and then run the *Close gaps* algorithm to fill the no--data cells
+Now run the *Shapes to grid* to get the first raster layer, and then run the *Close gaps* algorithm to fill the no--data cells [Cell resolution: 100 m].
 
 .. image:: img/interpolation_cross/filled.png
 

@@ -9,7 +9,7 @@ Some algorithms require an extent to define the area to be covered by the analys
 
 When an extent is required, it can be defined manually but entering the four values that define it (min X, min Y, max X, max Y), but there are other more practical and more interesting ways of doing it as well. We will see all of them in this lesson.
 
-First, let's open an algorithm that requires an extent to be defined. Open the *Rasterize vector layer* algorithm, which creates a raster layer from a vector layer.
+First, let's open an algorithm that requires an extent to be defined. Open the *Shapes to grid* algorithm, which creates a raster layer from a vector layer.
 
 .. image:: img/extents/rasterize.png
 
