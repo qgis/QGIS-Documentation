@@ -43,4 +43,5 @@ Contents:
    first_script_twi
    second_script_vector
    more_backends
+   interp_contour
 
