@@ -21,6 +21,7 @@ See a list of tools in table_composer_1_:
    single: print_composer;tools
 
 .. _table_composer_1:
+ 
 
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | Icon                     | Purpose                               | Icon                       | Purpose                                  |
@@ -32,15 +33,21 @@ See a list of tools in table_composer_1_:
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionFileOpen|        | Load from template                    | |mActionFileSaveAs|        | Save as template                         |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionSaveMapAsImage|  | Export to an image format             | |mActionSaveAsPDF|         | Export as PDF                            |
+| |mActionFilePrint|       | Print or export as Postscript         | |mActionSaveMapAsImage|    | Export to an image format                |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionSaveAsSVG|       | Export print composition to SVG       | |mActionFilePrint|         | Print or export as Postscript            |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionZoomFullExtent|  | Zoom to full extent                   | |mActionZoomIn|            | Zoom in                                  |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionZoomOut|         | Zoom out                              | |mActionDraw|              | Refresh view                             |
+| |mActionSaveAsSVG|       | Export print composition to SVG       | |mActionSaveAsPDF|         | Export as PDF                            |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionUndo|            | Revert last change                    | |mActionRedo|              | Restore last change                      |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+| |mActionZoomFullExtent|  | Zoom to full extent                   | |mActionZoomActual|        | Zoom to 100%                             |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+| |mActionZoomIn|          | Zoom in                               | |mActionZoomIn|            | Zoom out                                 |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+| |mActionDraw|            | Refresh View                          |                            |                                          |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+| |mActionPan|             | Pan                                   | |mActionZoomToSelected|    | Zoom to specific region                  |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+| |mActionSelect|          | Select/Move item in print composition | |mActionMoveItemContent|   | Move content within an item              |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionAddMap|          | Add new map from |qg| map canvas      | |mActionAddImage|          | Add image to print composition           |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
@@ -52,9 +59,9 @@ See a list of tools in table_composer_1_:
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionAddHtml|         | Add a HTML Frame                      |                            |                                          |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionSelectPan|       | Select/Move item in print composition | |mActionMoveItemContent|   | Move content within an item              |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionGroupItems|      | Group items of print composition      | |mActionUngroupItems|      | Ungroup items of print composition       |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+|                          | Lock Selected Items                   |                            | Unlock All items                         |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionRaiseItems|      | Raise selected items                  | |mActionLowerItems|        | Lower selected items                     |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
@@ -65,6 +72,14 @@ See a list of tools in table_composer_1_:
 | |mActionAlignHCenter|    | Align selected items center           | |mActionAlignVCenter|      | Align selected items center vertical     |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionAlignTop|        | Align selected items top              | |mActionAlignBottom|       | Align selected items bottom              |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+|                          | Preview Atlas                         |                            | First Feature                            |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+|                          | Previous Feature                      |                            | Next Feature                             |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+|                          | Last feature                          |                            | Print Atlas                              |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+|                          | Export Atlas as Image                 |                            | Atlas Settings                           |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 
 Table Composer 1: Print Composer Tools
@@ -95,9 +110,8 @@ Using Print Composer
 
 Opening the print composer provides you with a blank canvas to which you can add
 the current |qg| map canvas, text labels, images, legends, scalebars, basic
-shapes, arrows, attribute tables and HTML frames. Figure_composer_1_ shows the initial view of the print composer with an
-activated |checkbox| :guilabel:`Snap to grid` mode but before any elements are
-added.
+shapes, arrows, attribute tables and HTML frames. Figure_composer_1_ shows the 
+initial view of the print composer  before any elements are added.
 
 .. _Figure_composer_1:
 
@@ -113,15 +127,13 @@ added.
 
 The print composer provides four tabs:
 
-* The :guilabel:`Composition` tab allows you to set paper size, orientation, the
-  print quality for the output file in dpi and to activate snapping to a grid of
-  a defined resolution. You can also choose the :guilabel:`Number of pages` your composition will have.
-  Please note, the |checkbox| :guilabel:`Snap to grid`
-  feature only works, if you define a grid resolution > 0. Furthermore you can
-  also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means
+* The :guilabel:`Composition` tab allows you to set paper size, orientation, the page
+  background, number of pages and print quality for the output file in dpi. Furthermore you 
+  can also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means
   all elements will be rastered before printing or saving as Postscript or PDF.
+  In this tab you can also customize settings for Grid and Smart Guides.
 * The :guilabel:`Item Properties` tab displays the properties for the selected
-  item element. Click the |mActionSelectPan| :sup:`Select/Move item` icon to select
+  item element. Click the |mActionSelect| :sup:`Select/Move item` icon to select
   an element (e.g. legend, scalebar or label) on the canvas. Then click the
   :guilabel:`Item Properties` tab and customize the settings for the selected
   element.
@@ -130,6 +142,9 @@ The print composer provides four tabs:
   redo layout steps back and forth to a certain status.
 * The :guilabel:`Atlas generation` tab allows to enable the generation of an
   atlas for the current composer and gives access to its parameters.
+
+In the bottom part of the print composer window, you can find a status bar with 
+mouse position, current page number and a combobox to set the zoom level.
 
 You can add multiple elements to the composer. It is also possible to have more
 than one map view or legend or scalebar in the print composer canvas, on one or
@@ -140,13 +155,32 @@ can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 Navigation tools
 ^^^^^^^^^^^^^^^^
 
-To navigate in the canvas layout, the print composer provides 4 general tools:
+To navigate in the canvas layout, the print composer provides some general tools:
 
 * |mActionZoomIn| :sup:`Zoom in`
 * |mActionZoomOut| :sup:`Zoom out`
-* |mActionZoomFullExtent| :sup:`Zoom to full extend`
+* |mActionZoomFullExtent| :sup:`Zoom to full extent`
+* |mActionZoomActual| :sup:`Zoom to 100%`
 * |mActionDraw| :sup:`Refresh the view` (if you find the view in an inconsistent
   state)
+* |mActionPan| :sup:`Pan composer`
+* |mActionZoomToSelected| :sup:`Marquee zoom mode` (zoom to a specific region of the composer)
+
+You can change the zoom level also using the mouse wheel or the combobox in the status
+bar. If you need to switch to pan mode while working in the composer area, you can
+hold the :kbd:`Spacebar` or the the mouse wheel.
+With :kbd:`Ctrl+Spacebar` you can temporally switch to marquee zoom mode and with 
+:kbd:`Ctrl+Shift+Spacebar` to zoom out mode.
+
+Print Composer Options
+--------------------
+From :menuselection:`Settings --> Composer Options` you can set some options that will be
+used as default during the work.
+
+* :guilabel:`Compositions defaults` let you specify the default font to use.
+* With :guilabel:`Grid appearence` you can set the grid style and its color.
+* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
+* :guilabel:`Guide defaults` defines the tolerance for the guides.
 
 Composition tab --- General composition setup
 ---------------------------------------------
@@ -156,14 +190,12 @@ In the :guilabel:`Composition` tab, you can define the global settings of your c
 * You can choose one of the :guilabel:`Presets` for your papersheet, or enter your custom :guilabel:`width` and :guilabel:`height`.
 * Composition can now be parted on several pages. For instance, a first page can show a map canvas and a second
   page will show the attribute table associated to a layer while a third ons shows a HTML frame linking to your organization website.
-  Set the :guilabel:`Number of pages` to the desired value.
-* Choose the page :guilabel:`Orientation` and its :guilabel:`Exported resolution`
-* When checked, the |checkbox| :guilabel:`print as raster` means all elements will be rasterized before printing or saving as Postscript or
+  Set the :guilabel:`Number of pages` to the desired value. You can choose the page :guilabel:`Orientation` and its :guilabel:`Exported resolution`. When checked, the |checkbox| :guilabel:`print as raster` means all elements will be rasterized before printing or saving as Postscript or
   PDF.
-* :guilabel:`Snap to grid` and :guilabel:`Snap to alignements` tools make accomplishing some tasks much easier. There's three types of grid:
-  **Dots**, **Solid** lines and **Crosses**. You can adjust :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`color` to your need.
-* :guilabel:`Selection tolerance` defines the maximum distance below which an item is snapped to the grid.
-* :guilabel:`Snap to alignements` shows helping lines when the borders or axis of two items are aligned.
+* :guilabel:`Grid` let you customize grid settings like :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`tolerance` to your need.
+* In :guilabel:`Snap to alignements` you can change the :guilabel:`Tolerance` which is the maximum distance below which an item is snapped to Smart Guides.
+
+Snap to Grid and/or to Smart Guides can be enabled from the :menuselection:`View` menu. In this menu you can also hide or show Grid/Smart Guides.
 
 Composer items general options
 ------------------------------
@@ -187,6 +219,7 @@ Background, Item ID and Rendering (See figure_composer_2_)
 
 * The :guilabel:`Position and size` dialog lets you define size and position of the frame that contains the item. You can also choose
   which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
+* The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the label.
   Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
 * the |checkbox| :guilabel:`Background` enables or disables a background color.
@@ -261,7 +294,7 @@ tab:
 
 **Cache** is default preview mode for newly added print composer maps.
 
-You can resize the map element by clicking on the |mActionSelectPan|
+You can resize the map element by clicking on the |mActionSelect|
 :sup:`Select/Move item` button, selecting the element, and dragging one of the
 blue handles in the corner of the map. With the map selected, you can now adapt
 more properties in the map :guilabel:`Item Properties` tab.
@@ -728,7 +761,8 @@ and customize their appearance in the :guilabel:`Item Properties` tab.
 
 The :guilabel:`Shape` Item properties tab allows to draw an ellipse, rectangle, or triangle
 in the print composer canvas. You can define its outline and fill color, the
-outline width and a clockwise rotation.
+outline width and a clockwise rotation. For the rectangle shape you can change the value 
+of corner radius.
 
 .. _figure_composer_21:
 
@@ -872,8 +906,34 @@ provides following functionalities (see figure_composer_26_):
 
 .. index:: Elements_Alignment
 
-Item alignment
-==============
+Manage items
+============
+
+Size and position
+-----------------
+
+Each item inside the composer can be moved/resized to create a perfect layout.
+The first step is to select the item using the |mActionSelect| :sup:`Select/Move item` button; 
+once selected the item can be moved or resized using the squares on the boundary. 
+For a better precision, you can move an item using the :kbd:`Arrows keys` on the keyboard; 
+if the movement is too slow, you can speed up it holding :kbd:`Shift`.
+While resizing, holding :kbd:`Shift` will maintain the aspect ratio instead :kbd:`Ctrl` will resize from the item center.
+
+The correct position for an item can be obteined using snapping to Grid or Smart guides. If you need to 
+disable the snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
+
+You can choose multiple items with the |mActionSelect| :sup:`Select/Move item` button, 
+just hold the :kbd:`Shift` button and click on all the items you need. You can then resize/move
+this group just like a single item.
+
+Once you have found the correct position for an item, you can lock it clicking with the
+right mouse button; press the same button another time to unlock it. You can also lock/unlock
+items using the icons on the toolbar.
+
+To unselect an item just click on it holding the :kbd:`Shift` button.
+
+Alignment
+--------------
 
 Raise or lower functionalities for elements are inside the |mActionRaiseItems|
 :sup:`Raise selected items` pulldown menu. Choose an element on the print composer
@@ -902,7 +962,7 @@ When moving items on the composer canvas, alignment helper lines appear when bor
 .. index:: Revert_Layout_Actions
 
 Revert and Restore tools
-------------------------
+========================
 
 During the layout process it is possible to revert and restore changes. This can
 be done with the revert and restore tools:
@@ -936,7 +996,6 @@ will be generated where the content of some canvas maps will be moved to
 highlight the current geometry. Fields associated to this geometry can be used
 within text labels.
 
-There can only be one atlas map by print composer but this one can contain multiple pages.
 Every pages will be generated  with each feature. To enable the generation
 of an atlas and access generation parameters, refer to the `Atlas generation`
 tab. This tab contains the following widgets (see Figure_composer_29_):
@@ -954,28 +1013,14 @@ tab. This tab contains the following widgets (see Figure_composer_29_):
    Atlas generation tab |nix|
 
 * A |checkbox| :guilabel:`Generate an atlas` enables or disables the atlas generation.
-* A combobox :guilabel:`Composer map` |selectstring| that allows to choose
-  which map item will be used as the atlas map, i.e. on which map geometries from
-  the coverage layer will be iterated over and displayed.
 * A combobox :guilabel:`Coverage layer` |selectstring| that allows to choose the
   (vector) layer containing the geometries on which to iterate over.
 * An optional |checkbox| :guilabel:`Hidden coverage layer`, that if checked, will
   hide the coverage layer (but not the other ones) during the generation.
-* An optional |checkbox| :guilabel:`Features sorting` that, if checked, allows to
-  sort features of the coverage layer. The associated combobox allows to choose
-  which column will be used as the sorting key. Sort order (either ascending or
-  descending) is set by a two-state button that displays an up or a down arrow.
-* An optional :guilabel:`Feature filtering` text area that allows to specify an
+* An optional :guilabel:`Filter with` text area that allows to specify an
   expression for filtering features from the coverage layer. If the expression
   is not empty, only features that evaluate to ``True`` will be selected. The
   button on the right allows to display the expression builder.
-* An input box :guilabel:`Scaling` that allows to select the amount
-  of space added around each geometry within the allocated map. Its value is
-  meaningful only when using the autoscaling mode.
-* A |checkbox| :guilabel:`Fixed scale` that allows to toggle between auto-scale
-  and fixed-scale mode. In fixed scale mode, the map will only be translated for
-  each geometry to be centered. In auto-scale mode, the map's extents are computed
-  in such a way that each geometry will appear in its whole.
 * An :guilabel:`Output filename expression` textbox that is used to generate a
   filename for each geometry if needed. It is based on expressions. This field is
   meaningful only for rendering to multiple files.
@@ -983,6 +1028,26 @@ tab. This tab contains the following widgets (see Figure_composer_29_):
   the generation of a single file if this is possible by the chosen output format
   (PDF for instance). If this field is checked, the value of the
   :guilabel:`Output filename expression` field is meaningless.
+* An optional |checkbox| :guilabel:`Sort by` that, if checked, allows to
+  sort features of the coverage layer. The associated combobox allows to choose
+  which column will be used as the sorting key. Sort order (either ascending or
+  descending) is set by a two-state button that displays an up or a down arrow.
+
+
+You can use multiple map items with the Atlas generation; each map will be rendered according
+to the coverage features. To enable Atlas generation for a specific map item you need to
+|checkbox|:guilabel:`Controlled by Atlas` under the Item properties of the map item. Once checked, you can set:
+
+* An input box :guilabel:`Margin aroung feature` that allows to select the amount
+  of space added around each geometry within the allocated map. Its value is
+  meaningful only when using the autoscaling mode.
+* A |checkbox| :guilabel:`Fixed scale` that allows to toggle between auto-scale
+  and fixed-scale mode. In fixed scale mode, the map will only be translated for
+  each geometry to be centered. In auto-scale mode, the map's extents are computed
+  in such a way that each geometry will appear in its whole.
+
+Labels
+------
 
 In order to adapt labels to the feature the atlas plugin iterates over, use a label with this special notation
 `[%expression using field_name%]`.
@@ -994,10 +1059,19 @@ And that would result in the generated atlas as
 
 "`The area of PARIS,75001 is 1.94 km2`".
 
+
+Preview
+-------
+
+Once the Atlas Settings have been configured and map items selected, you can create a preview of all the pages
+clicking on the :menuselection:`Atlas --> Preview Atlas` and using the arrows, in the same menu, to navigate
+through all the features.
+
 Generation
 ----------
 
-The atlas generation is done when the user asks for a print or an export. The behaviour of these functions will be slightly changed if an atlas map has been selected. For instance, when the user asks for an export to PDF, if an atlas map is defined, the user will be asked for a directory where to save all the generated PDF files (except if the |checkbox| :guilabel:`Single file export when possible` has been selected).
+The atlas generation can be done in different ways. For example, with :menuselection:`Atlas --> Print Atlas` you can directly print it. You can also create a PDF using :menuselection:`Atlas --> Export Atlas as PDF`: the user will be asked for a directory where to save all the generated PDF files (except if the |checkbox| :guilabel:`Single file export when possible` has been selected).
+If you need to print just a page of the atlas, simple start the preview function, select the page you need and click on :menuselection:`Composer --> Print` (or create a PDF).
 
 .. index::
    single:Printing; Export_Map
@@ -1033,6 +1107,11 @@ to define the resolution (print quality) and paper size:
   canvas directly as a PDF.
 * The |mActionSaveAsSVG| :sup:`Export as SVG` icon saves the print composer canvas
   as a SVG (Scalable Vector Graphic).
+
+If you need to export your layout as a **georeferenced image** (i.e. to load back
+inside QGIS) you need to enable this feature under the Composition tab. Check 
+|checkbox| :guilabel:`World file on` and choose the map item to use. With this option the 
+Export as image action will create also a world file.
 
 .. note::
 
