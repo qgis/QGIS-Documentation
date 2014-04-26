@@ -161,9 +161,8 @@ five important components, as shown in Figure_projection_2_ and described below:
 .. tip:: **Project Properties Dialog**
 
    If you open the :guilabel:`Project Properties` dialog from the
-   :menuselection:`Project` (Gnome, OS X, Windows) or :menuselection:`Settings`
-   (KDE) menu, you must click on the :guilabel:`CRS` tab to view the
-   CRS settings.
+   :menuselection:`Project` menu, you must click on the :guilabel:`CRS` 
+   tab to view the CRS settings.
 
    Opening the dialog from the |geographic| :sup:`CRS status` icon will
    automatically bring the :guilabel:`CRS` tab to the front.
