@@ -164,12 +164,18 @@ The following settings are possible:
  * :guilabel:`Offset X,Y`
  * :guilabel:`Data defined properties ...`
 
-A new feature in |qg| 2.2. is the 'Gradient Fill' :guilabel:`Symbol layer type` for polygon layers. Using this
-feature, you can select between a |radiobuttonon| :guilabel:`Two color` and |radiobuttonoff| :guilabel:`Color ramp`
-setting. Among other settings, you can use the |checkbox| :guilabel:`Feature centroid` as :guilabel:`Reference point`.
-The 'Gradient Fill` :guilabel:`Symbol layer type` is also available through the :guilabel:`Symbol` menu
-of the Categorized and Graduated Renderer and through the :guilabel:`Rule properties` menu of the 
-Rule-based renderer.
+'Gradient Fill' :guilabel:`Symbol layer type` allows you to select
+between a |radiobuttonon| :guilabel:`Two color` 
+and |radiobuttonoff| :guilabel:`Color ramp` setting. You can use the
+|checkbox| :guilabel:`Feature centroid` as :guilabel:`Referencepoint`.
+All fills 'Gradient Fill` :guilabel:`Symbol layer type` is also
+available through the :guilabel:`Symbol` menu of the Categorized and
+Graduated Renderer and through the :guilabel:`Rule properties` menu of
+the Rule-based renderer.
+
+It is possible to only draw polygon borders inside the polygon. Using
+'Outline: Simple line' select |checkbox| :guilabel:`Draw line
+only inside polygon`.
 
 Note that once you have set the size in the lower levels of the :guilabel:`Symbol layers` dialog, 
 the size of the whole symbol can be changed with the :guilabel:`Size` menu in the first level again. The size of
