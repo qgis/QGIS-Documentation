@@ -302,8 +302,9 @@ Map tools Menu
 * The :guilabel:`Mode` setting determines which layers will be shown by the
   Identify tool. By switching to 'Top down' or 'Top down, stop at first'
   instead of 'Current layer', attributes for all identifiable layers will be
-  shown with the Identify tool (see the "Project properties" section under
-  :ref:`sec_projects` to set which layers are identifiable).
+  shown with the Identify tool. In |qgis| 2.2. you can now use a 'Layer selection' option
+  so that you can choose with the right-mouse menu which layer you want to identify
+  (see the "Project properties" section under :ref:`sec_projects` to set which layers are identifiable).
 * |checkbox| :guilabel:`Open feature form, if a single feature is identified`
 * Define :guilabel:`Search radius for identifying and displaying map tips as a
   percentage of the map width`

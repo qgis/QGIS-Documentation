@@ -137,7 +137,8 @@ All calculations can also be made for the |radiobuttonoff| :guilabel:`Current` e
 This is the standard render option for singleband files that already include a color table,
 where each pixel value is assigned to a certain color. In that case, the palette is
 rendered automatically. If you want to change colors assigned to certain values, just double-click
-on the color and the :guilabel:`Select color` dialog appears.
+on the color and the :guilabel:`Select color` dialog appears. Also, in |qg| 2.2. it's now possible
+to assign a label to the color values. The label appears in the legend of the raster layer then.
 
 .. _figure_raster_3:
 

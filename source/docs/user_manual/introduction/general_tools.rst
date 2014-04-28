@@ -363,6 +363,7 @@ example, from the context menu you can:
 * Clear highlights: Remove features highlighted on the map
 * Highlight all
 * Highlight layer
+* Activate layer: Choose a layer to be activated
 * Layer properties: Open layer properties window
 * Expand all
 * Collapse all
