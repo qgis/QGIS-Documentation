@@ -486,13 +486,13 @@ Advanced digitizing
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
 | |mActionAddRing|                 | Add Ring                              | |mActionAddPart|            | Add Part                |
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
-| ||                               | Fill Ring                             | |mActionDeleteRing|         | Delete Ring             |
+| |mActionFillRing|                | Fill Ring                             | |mActionDeleteRing|         | Delete Ring             |
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+ 
 | |mActionDeletePart|              | Delete Part                           | |mActionReshape|            | Reshape Features        | 
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
 | |mActionOffsetCurve|             | Offset Curve                          | |mActionSplitFeatures|      | Split Features          |
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+               
-| ||                               | Split Parts                           | |mActionMergeFeatures|      | Merge Selected Features |
+| |mActionSplitParts|              | Split Parts                           | |mActionMergeFeatures|      | Merge Selected Features |
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
 | |mActionMergeFeatureAttributes|  | Merge Attributes of Selected Features | |mActionRotatePointSymbols| | Rotate Point Symbols    |  
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
@@ -577,6 +577,14 @@ You can |mActionAddPart| :sup:`add part` polygons to a selected
 :index:`multipolygon`. The new part polygon must be digitized outside
 the selected multi-polygon.
 
+Fill Ring
+.........
+
+You can use the |mActionFillRing| :sup:`Fill Ring` function to add a ring to
+a polygon and add a new feature to the layer at the same time. Thus you need not
+first use the |mActionAddRing| :sup:`Add Ring` icon and then the 
+|mActionCapturePolygon| :sup:`Add feature` function anymore. 
+
 Delete Ring
 ...........
 
@@ -645,6 +653,13 @@ You can split features using the |mActionSplitFeatures| :sup:`Split Features`
 icon on the toolbar. Just draw a line across the feature you want to split.
 
 .. index:: Merge_Selected_Features
+
+Split parts
+...........
+
+In |qg| 2.0 it is now possible to split the parts of a multi part feature so that the
+number of parts is increased. Just draw a line across the part you want to split using
+the || :sup:`Split Parts` icon.
 
 Merge selected features
 .......................

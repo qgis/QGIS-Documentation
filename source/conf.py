@@ -705,6 +705,10 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
+.. |mActionFillRing| image:: /static/common/mActionFillRing.png
+   :width: 1.5em
+.. |mActionSplitParts| image:: /static/common/mActionSplitParts.png
+   :width: 1.5em
 .. |mActionIdentifyExpand| image:: /static/common/mActionExpandTree.png
    :width: 1.5em
 .. |mActionIdentifyCollapse| image:: /static/common/mActionCollapseTree.png
