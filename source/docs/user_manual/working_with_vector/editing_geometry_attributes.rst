@@ -1085,17 +1085,17 @@ under actions.
 As you can see, the airports assigned to this particular region are all shown in a 
 table. And there are also some buttons available. Let's review them shortly
 
-* The **pencil button** is for toggling the edit mode. Be aware that it toggles the edit mode of the maintenances layer although we are in the feature form of a feature from the reaches layer. But the table is representing features of the maintenances layer.
-* The **plus button** will add a new feature to the maintenances layer. And it will assign the new maintenance to the current reach by default.
-* The **X** button will delete the selected maintenance. Permamently. You have been warned.
-* The **Chain** symbol will open a new dialog where you can select any existing maintenance which will then be assigned to the current reach. This may be handy if you created the maintenance on the wrong reach by accident.
-* The **Split chain** symbol will unlink the selected maintenances from the current reach, leaving them unassigned (the foreign key is set to NULL) effectively.
-* The two buttons to the right switch between table view and form view where the later let's you view all the maintenances in their respective form.
+* The **pencil button** is for toggling the edit mode. Be aware that it toggles the edit mode of the airport layer, although we are in the feature form of a feature from the region layer. But the table is representing features of the airport layer.
+* The **plus button** will add a new feature to the airport layer. And it will assign the new airport to the current region by default.
+* The **X** button will delete the selected airport permanently.
+* The **Chain** symbol will open a new dialog where you can select any existing airport which will then be assigned to the current region. This may be handy if you created the airport on the wrong region by accident.
+* The **Split chain** symbol will unlink the selected airport from the current region, leaving them unassigned (the foreign key is set to NULL) effectively.
+* The two buttons to the right switch between table view and form view where the later let's you view all the airports in their respective form.
 
 If you work on the airport table, a new widget type is available which lets you 
 embed the feature form of the referenced region on the feature form of the airports. 
 It can be used when you open the layer properties of the airports table, switch to 
-the Fields menu and change the widget type of the foreign key field 'fk_region' to 
+the :menuselection:`Fields` menu and change the widget type of the foreign key field 'fk_region' to 
 Relation Reference.
 
 If you look at the feature dialog now, you will see, that the form of the region 
