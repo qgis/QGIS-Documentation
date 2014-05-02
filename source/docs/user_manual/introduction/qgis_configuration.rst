@@ -83,7 +83,6 @@ options. These include:
 * The :guilabel:`Macros` menu is used to edit Python macros for projects. Currently,
   only three macros are available: ``openProject()``, ``saveProject()`` and
   ``closeProject()``.
-* The :guilabel:`Relations` menu is used to create and manage 1:n relations between layers.
 
 .. _figure_macro_menu:
 
@@ -96,6 +95,9 @@ options. These include:
    :width: 30em
 
    Macro settings in |qg|
+
+
+* The :guilabel:`Relations` menu is used to define 1:n relations. The relations are defined in the project properties dialog. Once relations exist for a layer, a new user interface element in the form view (e.g. when identifying a feature and opening its form) will list the related entities. This provides a powerful way to express e.g. the inspection history on a length of pipeline or road segment. You can find out more about 1:n relations support in Section :ref:`vector_relations`.
 
 .. _gui_options:
 
