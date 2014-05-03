@@ -83,7 +83,6 @@ options. These include:
 * The :guilabel:`Macros` menu is used to edit Python macros for projects. Currently,
   only three macros are available: ``openProject()``, ``saveProject()`` and
   ``closeProject()``.
-* The :guilabel:`Relations` menu is used to create and manage 1:n relations between layers.
 
 .. _figure_macro_menu:
 
@@ -96,6 +95,9 @@ options. These include:
    :width: 30em
 
    Macro settings in |qg|
+
+
+* The :guilabel:`Relations` menu is used to define 1:n relations. The relations are defined in the project properties dialog. Once relations exist for a layer, a new user interface element in the form view (e.g. when identifying a feature and opening its form) will list the related entities. This provides a powerful way to express e.g. the inspection history on a length of pipeline or road segment. You can find out more about 1:n relations support in Section :ref:`vector_relations`.
 
 .. _gui_options:
 
@@ -302,8 +304,9 @@ Map tools Menu
 * The :guilabel:`Mode` setting determines which layers will be shown by the
   Identify tool. By switching to 'Top down' or 'Top down, stop at first'
   instead of 'Current layer', attributes for all identifiable layers will be
-  shown with the Identify tool (see the "Project properties" section under
-  :ref:`sec_projects` to set which layers are identifiable).
+  shown with the Identify tool. In |qg| 2.2. you can now use a 'Layer selection' option
+  so that you can choose with the left-mouse menu which layer you want to identify
+  (see the "Project properties" section under :ref:`sec_projects` to set which layers are identifiable).
 * |checkbox| :guilabel:`Open feature form, if a single feature is identified`
 * Define :guilabel:`Search radius for identifying and displaying map tips as a
   percentage of the map width`

@@ -332,6 +332,8 @@ select:
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
   version of QGIS`
 
+Whenever you save a project in |qg| 2.2 now a backup of the project file is made. 
+
 .. _`sec_output`:
 
 Output

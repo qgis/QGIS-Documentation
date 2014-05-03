@@ -7,7 +7,7 @@ Editing
 SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
 
 .. note::
-   The procedure for editing GRASS layers is different - see Section
+   The procedure for editing GRASS layers is different - see section
    :ref:`grass_digitizing` for details.
 
 .. _tip_concurrent_edits:
@@ -15,7 +15,7 @@ SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
 .. tip:: **Concurrent Edits**
 
    This version of |qg| does not track if somebody else is editing a feature
-   at the same time as you. The last person to save their edits wins.
+   at the same time as you are. The last person to save their edits wins.
 
 .. index:: Snapping, Snapping_Tolerance
 
@@ -32,36 +32,36 @@ Snapping tolerance
 ..................
 
 Snapping tolerance is the distance |qg| uses to ``search`` for the closest
-vertex and/or segment you are trying to connect when you set a new vertex or
+vertex and/or segment you are trying to connect to when you set a new vertex or
 move an existing vertex. If you aren't within the snapping tolerance, |qg|
 will leave the vertex where you release the mouse button, instead of snapping
 it to an existing vertex and/or segment.
-The snapping tolerance setting affects all tools which work with tolerance.
+The snapping tolerance setting affects all tools that work with tolerance.
 
-#. A general, project wide snapping tolerance can be defined choosing
+#. A general, project-wide snapping tolerance can be defined by choosing
    :menuselection:`Settings -->` |mActionOptions| :menuselection:`Options`.
-   On Mac: go to :menuselection:`QIS -->` |mActionOptions|
-   :menuselection:`Preferences...`, on Linux: :menuselection:`Edit -->`
+   On Mac, go to :menuselection:`QIS -->` |mActionOptions|
+   :menuselection:`Preferences...`. On Linux: :menuselection:`Edit -->`
    |mActionOptions| :menuselection:`Options`. In the :guilabel:`Digitizing`
-   tab you can select between to vertex, to segment or to vertex and segment
+   tab, you can select between 'to vertex', 'to segment' or 'to vertex and segment'
    as default snap mode. You can also define a default snapping tolerance and
    a search radius for vertex edits. The tolerance can be set either in map
-   units or in pixels. The advantage of choosing pixels, is that the snapping
+   units or in pixels. The advantage of choosing pixels is that the snapping
    tolerance doesn't have to be changed after zoom operations. In our small
    digitizing project (working with the Alaska dataset), we define the
    snapping units in feet. Your results may vary, but something on the order
-   of 300ft should be fine at a scale of 1:10 000 should be a reasonable
+   of 300 ft at a scale of 1:10000 should be a reasonable
    setting.
-#. A layer based snapping tolerance can be defined by choosing
+#. A layer-based snapping tolerance can be defined by choosing
    :menuselection:`Settings -->` (or :menuselection:`File -->`)
    :menuselection:`Snapping options...` to enable and adjust snapping mode
    and tolerance on a layer basis (see figure_edit_1_ ).
 
-Note that this layer based snapping overrides the global snapping option
-set in the Digitizing tab. So if you need to edit one layer, and snap its
+Note that this layer-based snapping overrides the global snapping option
+set in the Digitizing tab. So, if you need to edit one layer and snap its
 vertices to another layer, then enable snapping only on the ``snap to``
 layer, then decrease the global snapping tolerance to a smaller value.
-Furthermore, snapping will never occur to a layer which is not checked in
+Furthermore, snapping will never occur to a layer that is not checked in
 the snapping options dialog, regardless of the global snapping tolerance.
 So be sure to mark the checkbox for those layers that you need to snap to.
 
@@ -84,17 +84,17 @@ Search radius
 
 Search radius is the distance |qg| uses to ``search`` for the closest vertex
 you are trying to move when you click on the map. If you aren't within the
-search radius, |qg| won't find and select any vertex for editing and it will
+search radius, |qg| won't find and select any vertex for editing, and it will
 pop up an annoying warning to that effect.
 Snap tolerance and search radius are set in map units or pixels, so you may
 find you need to experiment to get them set right. If you specify too big of
 a tolerance, |qg| may snap to the wrong vertex, especially if you are dealing
 with a large number of vertices in close proximity. Set search radius too
-small and it won't find anything to move.
+small, and it won't find anything to move.
 
 The search radius for vertex edits in layer units can be defined in the
 :guilabel:`Digitizing` tab under :menuselection:`Settings -->` |mActionOptions|
-:menuselection:`Options`. The same place where you define the general, project
+:menuselection:`Options`. This is the same place where you define the general, project-
 wide snapping tolerance.
 
 .. index:: Zoom_In Zoom_Out, Pan, Map_Navigation
@@ -114,9 +114,9 @@ and the arrow keys.
 Zooming and panning with the mouse wheel
 ........................................
 
-While digitizing you can press the mouse wheel to pan inside of the main
-window and you can roll the mouse wheel to zoom in and out on the map.
-For zooming place the mouse cursor inside the map area and roll it forward
+While digitizing, you can press the mouse wheel to pan inside of the main
+window, and you can roll the mouse wheel to zoom in and out on the map.
+For zooming, place the mouse cursor inside the map area and roll it forward
 (away from you) to zoom in and backwards (towards you) to zoom out. The mouse
 cursor position will be the center of the zoomed area of interest. You can
 customize the behavior of the mouse wheel zoom using the :guilabel:`Map tools`
@@ -127,12 +127,12 @@ Panning with the arrow keys
 ...........................
 
 Panning the map during digitizing is possible with the arrow keys.
-Place the mouse cursor inside the map area and click on the right arrow key
-to pan east, left arrow key to pan west, up arrow key to pan north and down
+Place the mouse cursor inside the map area, and click on the right arrow key
+to pan east, left arrow key to pan west, up arrow key to pan north, and down
 arrow key to pan south.
 
-You can also use the spacebar to temporarily cause mouse movements to pan
-then map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause
+You can also use the space bar to temporarily cause mouse movements to pan
+the map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause
 the map display to zoom in or out without interrupting your digitizing session.
 
 .. Index:: Topological_Editing
@@ -140,12 +140,12 @@ the map display to zoom in or out without interrupting your digitizing session.
 Topological editing
 -------------------
 
-Besides layer based snapping options you can also define some topological
+Besides layer-based snapping options, you can also define topological
 functionalities in the :guilabel:`Snapping options...` dialog in the
-:menuselection:`Settings` (or :menuselection:`File`) menu. Here you can
-define |checkbox| :guilabel:`Enable topological editing` and/or for
-polygon layers you can activate the column |checkbox|
-:guilabel:`Avoid Int.` which avoids intersection of new polygons.
+:menuselection:`Settings` (or :menuselection:`File`) menu. Here, you can
+define |checkbox| :guilabel:`Enable topological editing`, and/or for
+polygon layers, you can activate the column |checkbox|
+:guilabel:`Avoid Int.`, which avoids intersection of new polygons.
 
 .. index:: Shared_Polygon_Boundaries
 
@@ -154,8 +154,8 @@ Enable topological editing
 
 The option |checkbox| :guilabel:`Enable topological editing` is for editing
 and maintaining common boundaries in polygon mosaics. |qg| 'detects' a
-shared boundary in a polygon mosaic and you only have to move the vertex
-once and |qg| will take care about updating the other boundary.
+shared boundary in a polygon mosaic, so you only have to move the vertex
+once, and |qg| will take care of updating the other boundary.
 
 .. Index:: Avoid_Intersections_Of_Polygons
 
@@ -163,19 +163,20 @@ Avoid intersections of new polygons
 ...................................
 
 The second topological option in the |checkbox| :guilabel:`Avoid Int.`
-column, called :guilabel:`Avoid intersections of new polygons` avoids
+column, called :guilabel:`Avoid intersections of new polygons`, avoids
 overlaps in polygon mosaics. It is for quicker digitizing of adjacent
 polygons. If you already have one polygon, it is possible with this option
-to digitize the second one such that both intersect and |qg| then cuts the
-second polygon to the common boundary. The advantage is that users don't
+to digitize the second one such that both intersect, and |qg| then cuts the
+second polygon to the common boundary. The advantage is that you don't
 have to digitize all vertices of the common boundary.
 
 .. Index:: Snapping_On_Intersections
 
 Enable snapping on intersections
 .................................
+
 Another option is to use |checkbox| :guilabel:`Enable snapping on intersection`.
-It allows to snap on an intersection of background layers, even if there's no vertex on
+It allows you to snap on an intersection of background layers, even if there's no vertex on
 the intersection.
 
 
@@ -186,16 +187,16 @@ the intersection.
 Digitizing an existing layer
 ----------------------------
 
-By default, |qg| loads layers read-only: This is a safeguard to avoid
+By default, |qg| loads layers read-only. This is a safeguard to avoid
 accidentally editing a layer if there is a slip of the mouse.
 However, you can choose to edit any layer as long as the data provider
-supports it, and the underlying data source is writable (i.e. its files are
+supports it, and the underlying data source is writable (i.e., its files are
 not read-only).
 
-In general, editing vector layers is divided into a digitizing and an advanced
-digitizing toolbar, described in Section :ref:`sec_advanced_edit`. You can
+In general, tools for editing vector layers are divided into a digitizing and an advanced
+digitizing toolbar, described in section :ref:`sec_advanced_edit`. You can
 select and unselect both under :menuselection:`Settings --> Toolbars -->`.
-Using the basic digitizing tools you can perform the following functions:
+Using the basic digitizing tools, you can perform the following functions:
 
 .. _table_editing:
 
@@ -220,9 +221,9 @@ Table Editing: Vector layer basic editing toolbar
 
 All editing sessions start by choosing the |mActionToggleEditing|
 :sup:`Toggle editing` option. This can be found in the context menu
-after right clicking on the legend entry for that layer.
+after right clicking on the legend entry for a given layer.
 
-Alternately, you can use the :index:`Toggle Editing` |mActionToggleEditing|
+Alternatively, you can use the :index:`Toggle Editing` |mActionToggleEditing|
 :sup:`Toggle editing` button from the digitizing toolbar to start or stop the
 editing mode. Once the layer is in edit mode, markers will appear at the
 vertices, and additional tool buttons on the editing toolbar will become
@@ -256,7 +257,7 @@ The attribute window will appear, allowing you to enter the information for
 the new feature. Figure_edit_2_ shows setting attributes for a fictitious new
 river in Alaska. In the :guilabel:`Digitizing` menu under the
 :menuselection:`Settings --> Options` menu, you can also activate |checkbox|
-:guilabel:`Suppress attributes pop-up windows after each created feature`
+:guilabel:`Suppress attributes pop-up windows after each created feature` and
 |checkbox| :guilabel:`Reuse last entered attribute values`.
 
 .. _figure_edit_2:
@@ -272,16 +273,16 @@ river in Alaska. In the :guilabel:`Digitizing` menu under the
    Enter Attribute Values Dialog after digitizing a new vector
    feature |nix|
 
-With the |mActionMoveFeature| :sup:`Move Feature(s)` icon on the toolbar you can
+With the |mActionMoveFeature| :sup:`Move Feature(s)` icon on the toolbar, you can
 move existing features.
 
 .. _tip_attributes_types:
 
 .. tip:: **Attribute Value Types**
 
-   For editing the attribute types are validated during
-   the entry. Because of this, it is not possible to enter a number into
-   the text-column in the dialog :guilabel:`Enter Attribute Values` or vice
+   For editing, the attribute types are validated during
+   entry. Because of this, it is not possible to enter a number into
+   a text column in the dialog :guilabel:`Enter Attribute Values` or vice
    versa. If you need to do so, you should edit the attributes in a second
    step within the :guilabel:`Attribute table` dialog.
 
@@ -293,41 +294,41 @@ Current Edits
 This new feature allows the digitization of multiple layers. Choose
 |mActionFileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you
 made in multiple layers. You also have the opportunity to
-|mActionRollbackEdits| :guilabel:`Rollback for Selected Layers` so that the
-digitization is then withdrawn for all selected layers.
-If you want to stop editing the selected layers the |mActionCancelEdits| :guilabel:`Cancel for Selected Layer(s)`
+|mActionRollbackEdits| :guilabel:`Rollback for Selected Layers`, so that the
+digitization may be withdrawn for all selected layers.
+If you want to stop editing the selected layers, |mActionCancelEdits| :guilabel:`Cancel for Selected Layer(s)`
 is an easy way.
 
-The same functions for editing all layers of the project are available.
+The same functions are available for editing all layers of the project.
 
 .. index:: Node_Tool
 
 Node Tool
 .........
 
-For shapefile-based layers as well as SpatialLite,PostgreSQL/PostGIS, MSSQL Spatial and Oracle Spatial tables the
-|mActionNodeTool| :sup:`Node Tool` provides manipulation capabilites of
+For shapefile-based layers as well as SpatialLite, PostgreSQL/PostGIS, MSSQL Spatial, and Oracle Spatial tables, the
+|mActionNodeTool| :sup:`Node Tool` provides manipulation capabilities of
 feature vertices similar to CAD programs. It is possible to simply select
-multiple vertices at once and to move, add or delete them alltogether.
-The node tool also works with 'on the fly' projection turned on and supports
+multiple vertices at once and to move, add or delete them altogether.
+The node tool also works with 'on the fly' projection turned on, and it supports
 the topological editing feature. This tool is, unlike other tools in
 |qg|, persistent, so when some operation is done, selection stays
-active for this feature and tool. If the node tool couldn't find any
+active for this feature and tool. If the node tool is unable to find any
 features, a warning will be displayed.
 
-Important is to set the property :menuselection:`Settings -->` |mActionOptions|
+It is important to set the property :menuselection:`Settings -->` |mActionOptions|
 :menuselection:`Options --> Digitizing -->` :guilabel:`Search Radius:`
-|selectnumber| to a number greater than zero (i.e. 10). Otherwise |qg| will
+|selectnumber| to a number greater than zero (i.e., 10). Otherwise, |qg| will
 not be able to tell which vertex is being edited.
 
 .. _tip_vertex_markers:
 
 .. tip:: **Vertex Markers**
 
-   The current version of |qg| supports three kinds of vertex-markers:
-   Semi transparent circle, Cross and None. To change the marker style,
+   The current version of |qg| supports three kinds of vertex markers:
+   'Semi-transparent circle', 'Cross' and 'None'. To change the marker style,
    choose |mActionOptions| :menuselection:`Options` from the
-   :menuselection:`Settings` menu and click on the :guilabel:`Digitizing`
+   :menuselection:`Settings` menu, click on the :guilabel:`Digitizing`
    tab and select the appropriate entry.
 
 Basic operations
@@ -348,15 +349,15 @@ feature by clicking on it. Red boxes will appear at each vertex of this feature.
 * **Selecting vertices**: You can select vertices by clicking on them one
   at a time, by clicking on an edge to select the vertices at both ends, or
   by clicking and dragging a rectangle around some vertices. When a vertex
-  is selected its color changes to blue. To add more vertices to the current
+  is selected, its color changes to blue. To add more vertices to the current
   selection, hold down the :kbd:`Ctrl` key while clicking. Hold down
   :kbd:`Ctrl` or :kbd:`Shift` when clicking to toggle the selection state of
   vertices (vertices that are currently unselected will be selected as usual,
   but also vertices that are already selected will become unselected).
-* **Adding vertices**: To add a vertex simply double click near an edge and
+* **Adding vertices**: To add a vertex, simply double click near an edge and
   a new vertex will appear on the edge near to the cursor. Note that the
-  vertex will appear on the edge, not at the cursor position, therefore it
-  has to be moved if necessary.
+  vertex will appear on the edge, not at the cursor position; therefore, it
+  should be moved if necessary.
 * **Deleting vertices**: After selecting vertices for deletion, click the
   :kbd:`Delete` key. Note that you cannot use the |mActionNodeTool|
   :sup:`Node Tool` to delete a complete feature; |qg| will ensure it retains
@@ -369,8 +370,8 @@ feature by clicking on it. Red boxes will appear at each vertex of this feature.
   selection can jump to the nearest vertex or line.
 
 Each change made with the node tool is stored as a separate entry in the
-undo dialog. Remember that all operations support topological editing when
-this is turned on. On the fly projection is also supported, and the node
+Undo dialog. Remember that all operations support topological editing when
+this is turned on. On-the-fly projection is also supported, and the node
 tool provides tooltips to identify a vertex by hovering the pointer over it.
 
 Cutting, Copying and Pasting Features
@@ -382,11 +383,11 @@ Selected features can be cut, copied and pasted between layers in the same
 
 .. index:: CSV, WKT
 
-Features can also be pasted to external applications as text: That is, the
-features are represented in CSV format with the geometry data appearing in
+Features can also be pasted to external applications as text. That is, the
+features are represented in CSV format, with the geometry data appearing in
 the OGC Well-Known Text (WKT) format.
 
-However in this version of |qg|, text features from outside |qg| cannot be
+However, in this version of |qg|, text features from outside |qg| cannot be
 pasted to a layer within |qg|. When would the copy and paste function come
 in handy? Well, it turns out that you can edit more than one layer at a time
 and copy/paste features between layers. Why would we want to do this? Say
@@ -394,7 +395,7 @@ we need to do some work on a new layer but only need one or two lakes, not
 the 5,000 on our ``big_lakes`` layer. We can create a new layer and use
 copy/paste to plop the needed lakes into it.
 
-As an example we are copying some lakes to a new layer:
+As an example, we will copy some lakes to a new layer:
 
 #. Load the layer you want to copy from (source layer)
 #. Load or create the layer you want to copy to (target layer)
@@ -411,7 +412,7 @@ What happens if the source and target layers have different schemas (field
 names and types are not the same)? |qg| populates what matches and ignores
 the rest. If you don't care about the attributes being copied to the target
 layer, it doesn't matter how you design the fields and data types. If you
-want to make sure everything - feature and its attributes - gets copied,
+want to make sure everything - the feature and its attributes - gets copied,
 make sure the schemas match.
 
 .. _tip_projections_and_pasting:
@@ -419,8 +420,8 @@ make sure the schemas match.
 .. tip:: **Congruency of Pasted Features**
 
    If your source and destination layers use the same projection, then the
-   pasted features will have geometry identical to the source layer. However
-   if the destination layer is a different projection then |qg| cannot
+   pasted features will have geometry identical to the source layer. However,
+   if the destination layer is a different projection, then |qg| cannot
    guarantee the geometry is identical. This is simply because there are
    small rounding-off errors involved when converting between projections.
 
@@ -435,7 +436,7 @@ features.
 
 The |mActionEditCut| :sup:`Cut Features` tool on the digitizing toolbar can
 also be used to delete features. This effectively deletes the feature but
-also places it on a "spatial clipboard". So we cut the feature to delete.
+also places it on a "spatial clipboard". So, we cut the feature to delete.
 We could then use the |mActionEditPaste| :sup:`Paste Features` tool to put it back,
 giving us a one-level undo capability. Cut, copy, and paste work on the
 currently selected features, meaning we can operate on more than one at a time.
@@ -444,14 +445,14 @@ Saving Edited Layers
 ....................
 
 When a layer is in editing mode, any changes remain in the memory of |qg|.
-Therefore they are not committed/saved immediately to the data source or disk.
+Therefore, they are not committed/saved immediately to the data source or disk.
 If you want to save edits to the current layer but want to continue editing
 without leaving the editing mode, you can click the |mActionSaveEdits|
-:sup:`Save Layer Edits` button. When you turn editing mode off with the
+:sup:`Save Layer Edits` button. When you turn editing mode off with
 |mActionToggleEditing| :sup:`Toggle editing` (or quit |qg| for that matter),
 you are also asked if you want to save your changes or discard them.
 
-If the changes cannot be saved (e.g. disk full, or the attributes have values
+If the changes cannot be saved (e.g., disk full, or the attributes have values
 that are out of range), the |qg| in-memory state is preserved. This allows
 you to adjust your edits and try again.
 
@@ -476,23 +477,25 @@ Advanced digitizing
 
 .. _table_advanced_editing:
 
-+-----------------------------+----------------------+---------------------------------+---------------------------------------+
-| Icon                        | Purpose              | Icon                            | Purpose                               |
-+=============================+======================+=================================+=======================================+
-| |mActionUndo|               | Undo                 | |mActionRedo|                   | Redo                                  |
-+-----------------------------+----------------------+---------------------------------+---------------------------------------+
-| |mActionRotateFeature|      | Rotate Feature(s)    | |mActionSimplify|               | Simplify Feature                      |
-+-----------------------------+----------------------+---------------------------------+---------------------------------------+
-| |mActionAddRing|            | Add Ring             | |mActionAddPart|                | Add Part                              |
-+-----------------------------+----------------------+---------------------------------+---------------------------------------+
-| |mActionDeleteRing|         | Delete Ring          | |mActionDeletePart|             | Delete Part                           |
-+-----------------------------+----------------------+---------------------------------+---------------------------------------+
-| |mActionReshape|            | Reshape Features     | |mActionOffsetCurve|            | Offset Curve                          |
-+-----------------------------+----------------------+---------------------------------+---------------------------------------+
-| |mActionSplitFeatures|      | Split Features       | |mActionMergeFeatures|          | Merge Selected Features               |
-+-----------------------------+----------------------+---------------------------------+---------------------------------------+
-| |mActionRotatePointSymbols| | Rotate Point Symbols | |mActionMergeFeatureAttributes| | Merge Attributes of Selected Features |
-+-----------------------------+----------------------+---------------------------------+---------------------------------------+
++----------------------------------+---------------------------------------+-----------------------------+-------------------------+
+| Icon                             | Purpose                               | Icon                        | Purpose                 |
++==================================+=======================================+=============================+=========================+
+| |mActionUndo|                    | Undo                                  | |mActionRedo|               | Redo                    |
++----------------------------------+---------------------------------------+-----------------------------+-------------------------+
+| |mActionRotateFeature|           | Rotate Feature(s)                     | |mActionSimplify|           | Simplify Feature        |
++----------------------------------+---------------------------------------+-----------------------------+-------------------------+
+| |mActionAddRing|                 | Add Ring                              | |mActionAddPart|            | Add Part                |
++----------------------------------+---------------------------------------+-----------------------------+-------------------------+
+| |mActionFillRing|                | Fill Ring                             | |mActionDeleteRing|         | Delete Ring             |
++----------------------------------+---------------------------------------+-----------------------------+-------------------------+ 
+| |mActionDeletePart|              | Delete Part                           | |mActionReshape|            | Reshape Features        | 
++----------------------------------+---------------------------------------+-----------------------------+-------------------------+
+| |mActionOffsetCurve|             | Offset Curve                          | |mActionSplitFeatures|      | Split Features          |
++----------------------------------+---------------------------------------+-----------------------------+-------------------------+               
+| |mActionSplitParts|              | Split Parts                           | |mActionMergeFeatures|      | Merge Selected Features |
++----------------------------------+---------------------------------------+-----------------------------+-------------------------+
+| |mActionMergeFeatureAttributes|  | Merge Attributes of Selected Features | |mActionRotatePointSymbols| | Rotate Point Symbols    |  
++----------------------------------+---------------------------------------+-----------------------------+-------------------------+
 
 Table Advanced Editing: Vector layer advanced editing toolbar
 
@@ -500,12 +503,12 @@ Table Advanced Editing: Vector layer advanced editing toolbar
 Undo and Redo
 .............
 
-The |mActionUndo| :sup:`Undo` and |mActionRedo| :sup:`Redo` tools allow the
-user to undo or redo vector editing operations. There is also a dockable
+The |mActionUndo| :sup:`Undo` and |mActionRedo| :sup:`Redo` tools allows you
+to undo or redo vector editing operations. There is also a dockable
 widget, which shows all operations in the undo/redo history (see
 Figure_edit_3_). This widget is not displayed by default; it can be
 displayed by right clicking on the toolbar and activating the Undo/Redo
-check box. Undo/Redo is however active, even if the widget is not displayed.
+checkbox. Undo/Redo is however active, even if the widget is not displayed.
 
 .. _figure_edit_3:
 
@@ -521,63 +524,71 @@ check box. Undo/Redo is however active, even if the widget is not displayed.
 
 When Undo is hit, the state of all features and attributes are reverted to
 the state before the reverted operation happened. Changes other than normal
-vector editing operations (for example changes done by a plugin), may or may
+vector editing operations (for example, changes done by a plugin), may or may
 not be reverted, depending on how the changes were performed.
 
-To use the undo/redo history widget simply click to select an operation in
-the history list; all features will be reverted to the state they were in
+To use the undo/redo history widget, simply click to select an operation in
+the history list. All features will be reverted to the state they were in
 after the selected operation.
 
 Rotate Feature(s)
 .................
 
-Use the |mActionRotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple
+Use |mActionRotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple
 selected features in the map canvas. You first need to select the features
-and then press the |mActionRotateFeature|:sup:`Rotate Feature(s)` Icon. Then the
-centroid of the feature appears and will be the rotation anchor point. If you selected
-multiple features the rotation anchor point will be the common center of the features.
+and then press the |mActionRotateFeature|:sup:`Rotate Feature(s)` icon. The
+centroid of the feature(s) appears and will be the rotation anchor point. If you selected
+multiple features, the rotation anchor point will be the common center of the features.
 Press and drag the left mouse button in the desired direction to rotate the
 selected features.
 
 
-It's also possible to create a user-defined rotation anchor point by which the selected feature will rotate.
-Select the features to rotate and activate the |mActionRotateFeature|:sup:`Rotate Feature(s)` Tool.
+It's also possible to create a user-defined rotation anchor point around which the selected feature will rotate.
+Select the features to rotate and activate the |mActionRotateFeature|:sup:`Rotate Feature(s)` tool.
 Press and hold the :kbd:`Ctrl` button and move the mouse pointer (without pressing the mouse button)
 to the place where you want the rotation anchor to be moved. Release the :kbd:`Ctrl` button
-when the desired rotation anchor point is reached. Now press and drag the left mouse button
+when the desired rotation anchor point is reached. Now, press and drag the left mouse button
 in the desired direction to rotate the selected feature(s).
 
 Simplify Feature
 ................
 
-The |mActionSimplify| :sup:`Simplify Feature` tool allows to reduce the
+The |mActionSimplify| :sup:`Simplify Feature` tool allows you to reduce the
 number of vertices of a feature, as long as the geometry doesn't change.
-You need to select a feature, it will be highlighted by a red rubber band
-and a slider appears. Moving the slider, the red rubber band is changing
-its shape to show how the feature is being simplified. Clicking **[OK]**
-the new, simplified geometry will be stored. If a feature cannot be simplified
-(e.g. MultiPolygons), a message shows up.
+First, select a feature. It will be highlighted by a red rubber band
+and a slider will appear. Moving the slider, the red rubber band will change
+its shape to show how the feature is being simplified. Click **[OK]** to store
+the new, simplified geometry. If a feature cannot be simplified
+(e.g. multi-polygons), a message will appear.
 
 Add Ring
 ........
 
 You can create :index:`ring polygons` using the |mActionAddRing|
-:sup:`Add Ring` icon in the toolbar. This means inside an existing area it
-is possible to digitize further polygons, that will occur as a 'hole', so
-only the area in between the boundaries of the outer and inner polygons remain
+:sup:`Add Ring` icon in the toolbar. This means that inside an existing area, it
+is possible to digitize further polygons that will occur as a 'hole', so
+only the area between the boundaries of the outer and inner polygons remains
 as a ring polygon.
 
 Add Part
 ........
 
 You can |mActionAddPart| :sup:`add part` polygons to a selected
-:index:`multipolygon`. The new part polygon has to be digitized outside
-the selected multipolygon.
+:index:`multipolygon`. The new part polygon must be digitized outside
+the selected multi-polygon.
+
+Fill Ring
+.........
+
+You can use the |mActionFillRing| :sup:`Fill Ring` function to add a ring to
+a polygon and add a new feature to the layer at the same time. Thus you need not
+first use the |mActionAddRing| :sup:`Add Ring` icon and then the 
+|mActionCapturePolygon| :sup:`Add feature` function anymore. 
 
 Delete Ring
 ...........
 
-The |mActionDeleteRing| :sup:`Delete Ring` tool allows to delete ring polygons
+The |mActionDeleteRing| :sup:`Delete Ring` tool allows you to delete ring polygons
 inside an existing area. This tool only works with polygon layers. It doesn't
 change anything when it is used on the outer ring of the polygon. This tool
 can be used on polygon and multi-polygon features. Before you select the
@@ -586,10 +597,10 @@ vertices of a ring, adjust the vertex edit tolerance.
 Delete Part
 ...........
 
-The |mActionDeletePart| :sup:`Delete Part` tool allows to delete parts from
-multifeatures (e.g. to delete polygons from a multipolygon feature). It won't
-delete the last part of the feature, this last part will stay untouched. This
-tool works with all multi-part geometries point, line and polygon. Before you
+The |mActionDeletePart| :sup:`Delete Part` tool allows you to delete parts from
+multifeatures (e.g., to delete polygons from a multi-polygon feature). It won't
+delete the last part of the feature; this last part will stay untouched. This
+tool works with all multi-part geometries: point, line and polygon. Before you
 select the vertices of a part, adjust the vertex edit tolerance.
 
 Reshape Features
@@ -598,9 +609,9 @@ Reshape Features
 You can reshape line and polygon features using the |mActionReshape|
 :sup:`Reshape Features` icon on the toolbar. It replaces the line or polygon
 part from the first to the last intersection with the original line. With
-polygons this can sometimes lead to unintended results. It is mainly useful
-to replace smaller parts of a polygon, not major overhauls and the reshape
-line is not allowed to cross several polygon rings as this would generate an
+polygons, this can sometimes lead to unintended results. It is mainly useful
+to replace smaller parts of a polygon, not for major overhauls, and the reshape
+line is not allowed to cross several polygon rings, as this would generate an
 invalid polygon.
 
 For example, you can edit the boundary of a polygon with this tool. First,
@@ -614,7 +625,7 @@ the polygon with a right click.
 
 .. note::
    The reshape tool may alter the starting position of a polygon ring or a
-   closed line. So the point that is represented 'twice' will not be the same
+   closed line. So, the point that is represented 'twice' will not be the same
    any more. This may not be a problem for most applications, but it is
    something to consider.
 
@@ -624,12 +635,12 @@ Offset Curves
 
 The |mActionOffsetCurve| :sup:`Offset Curve` tool creates parallel shifts of line layers.
 The tool can be applied to the edited layer (the geometries are modified)
-or also to background layers (creates copies of the lines / rings and adds it to the the edited layer).
+or also to background layers (in which case it creates copies of the lines / rings and adds them to the the edited layer).
 It is thus ideally suited for the creation of distance line layers. The displacement is
 shown at the bottom left of the taskbar.
-To create a shift of a line layer you have to go into editing mode and then
+To create a shift of a line layer, you must first go into editing mode and then
 select the feature. You can make the |mActionOffsetCurve| :sup:`Offset Curve` tool active and drag
-the cross to the desired distance. Your changes then can be saved with the
+the cross to the desired distance. Your changes may then be saved with the
 |mActionSaveEdits|:sup:`Save Layer Edits` tool.
 
 
@@ -643,10 +654,17 @@ icon on the toolbar. Just draw a line across the feature you want to split.
 
 .. index:: Merge_Selected_Features
 
+Split parts
+...........
+
+In |qg| 2.0 it is now possible to split the parts of a multi part feature so that the
+number of parts is increased. Just draw a line across the part you want to split using
+the || :sup:`Split Parts` icon.
+
 Merge selected features
 .......................
 
-The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows to merge
+The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows you to merge
 features that have common boundaries and the same attributes.
 
 .. index:: Merge_Attributes_of_Selected_Features
@@ -655,12 +673,12 @@ Merge attributes of selected features
 .....................................
 
 The |mActionMergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` tool
-allows to :index:`merge attributes of features` with common boundaries and
+allows you to :index:`merge attributes of features` with common boundaries and
 attributes without merging their boundaries.
-You can merge the attributes when selecting several features at once. Then
+First, select several features at once. Then
 press the |mActionMergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` button.
-Now |qg| offers you which attributes are to be applied to all selected objects.
-As a result, all objects have the same attribute entries.
+Now |qg| asks you which attributes are to be applied to all selected objects.
+As a result, all selected objects have the same attribute entries.
 
 .. index:: Rotate_Point_symbols
 
@@ -669,13 +687,13 @@ Rotate Point Symbols
 
 .. % FIXME change, if support in new symbology is available, too
 
-The |mActionRotatePointSymbols| :sup:`Rotate Point Symbols` allows to change the rotation
-of point symbols in the map canvas. You have to define a rotation column
+|mActionRotatePointSymbols| :sup:`Rotate Point Symbols` allows you to change the rotation
+of point symbols in the map canvas. You must first define a rotation column
 from the attribute table of the point layer in the :guilabel:`Advanced` menu of the
-:guilabel:`Style` menu of the :guilabel:`Layer Properties`. Also you have to
+:guilabel:`Style` menu of the :guilabel:`Layer Properties`. Also, you will need to
 go into the 'SVG marker' and choose :guilabel:`Data defined properties ...`.
 Activate |checkbox| :guilabel:`Angle` and choose 'rotation' as field.
-Without these settings the tool is inactive.
+Without these settings, the tool is inactive.
 
 .. _figure_edit_4:
 
@@ -690,7 +708,7 @@ Without these settings the tool is inactive.
    Rotate Point Symbols |nix|
 
 To change the rotation, select a point feature in the map canvas and rotate
-it holding the left mouse button pressed. A red arrow with the rotation value
+it, holding the left mouse button pressed. A red arrow with the rotation value
 will be visualized (see Figure_edit_4_). When you release the left mouse
 button again, the value will be updated in the attribute table.
 
@@ -705,21 +723,21 @@ button again, the value will be updated in the attribute table.
 Creating new Vector layers
 --------------------------
 
-|qg| allows to create new Shapefile layers, new SpatiaLite layers, and new
-GPX Layers. Creation of a new GRASS layer is supported within the GRASS-plugin.
+|qg| allows you to create new shapefile layers, new SpatiaLite layers, and new
+GPX layers. Creation of a new GRASS layer is supported within the GRASS plugin.
 Please refer to section :ref:`creating_new_grass_vectors` for more information
 on creating GRASS vector layers.
 
 Creating a new Shapefile layer
 ..............................
 
-To create a new Shape layer for editing, choose :menuselection:`New -->`
+To create a new shape layer for editing, choose :menuselection:`New -->`
 |mActionNewVectorLayer| :menuselection:`New Shapefile Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New Vector Layer` dialog will be
 displayed as shown in Figure_edit_5_. Choose the type of layer (point, line or
-polygon) and the CRS (Coordinate Reference System).
+polygon) and the CRS (coordinate reference system).
 
-Note that |qg| does not yet support creation of 2.5D features (i.e. features
+Note that |qg| does not yet support creation of 2.5D features (i.e., features
 with X,Y,Z coordinates).
 
 .. _figure_edit_5:
@@ -734,17 +752,17 @@ with X,Y,Z coordinates).
 
    Creating a new Shapefile layer Dialog |nix|
 
-To complete the creation of the new Shapefile layer, add the desired attributes
+To complete the creation of the new shapefile layer, add the desired attributes
 by clicking on the **[Add to attributes list]** button and specifying a name and type for the
 attribute. A first 'id' column is added as default but can be removed, if not
 wanted. Only :guilabel:`Type: real` |selectstring|, :guilabel:`Type: integer`
 |selectstring|, :guilabel:`Type: string` |selectstring| and :guilabel:`Type:date` |selectstring|
-attributes are supported. Additionally and according to the attribute type you can also define
+attributes are supported. Additionally and according to the attribute type, you can also define
 the width and precision of the new attribute column. Once you are happy with
 the attributes, click **[OK]** and provide a name for the shapefile. |qg| will
 automatically add a :file:`.shp` extension to the name you specify. Once the
-layer has been created, it will be added to the map and you can edit it in the
-same way as described in Section :ref:`sec_edit_existing_layer` above.
+layer has been created, it will be added to the map, and you can edit it in the
+same way as described in section :ref:`sec_edit_existing_layer` above.
 
 .. index:: New_Spatialite_Layer
 
@@ -770,20 +788,20 @@ be displayed as shown in Figure_edit_6_.
 
    Creating a New SpatiaLite layer Dialog |nix|
 
-First step is to select an existing SpatiaLite database or to create a new
+The first step is to select an existing SpatiaLite database or to create a new
 SpatiaLite database. This can be done with the browse button |browsebutton| to
-the right of the database field. Then add a name for the new layer and define
-the layer type and specify the Coordinate Reference System with **[Specify CRS]**.
-If desired you can select to |checkbox| :guilabel:`Create an autoincrementing primary key`.
+the right of the database field. Then, add a name for the new layer, define
+the layer type, and specify the coordinate reference system with **[Specify CRS]**.
+If desired, you can select |checkbox| :guilabel:`Create an autoincrementing primary key`.
 
 To define an attribute table for the new SpatiaLite layer, add the names of
-the attribute columns you want to create with the according column type and
+the attribute columns you want to create with the corresponding column type, and
 click on the **[Add to attribute list]** button. Once you are happy with the
 attributes, click **[OK]**. |qg| will automatically add the new layer to the
-legend and you can edit it in the same way as described in Section
+legend, and you can edit it in the same way as described in section
 :ref:`sec_edit_existing_layer` above.
 
-Further management of SpatiaLite-Layers can be done with the DB Manager see
+Further management of SpatiaLite layers can be done with the DB Manager. See
 :ref:`dbmanager`.
 
 .. index:: New_GPX_Layer
@@ -792,13 +810,13 @@ Further management of SpatiaLite-Layers can be done with the DB Manager see
 Creating a new GPX layer
 .........................
 
-To create a new GPX file you need to load the GPS plugin first. :menuselection:`Plugins -->`
+To create a new GPX file, you need to load the GPS plugin first. :menuselection:`Plugins -->`
 |mActionShowPluginManager| :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
 Activate the |checkbox| :guilabel:`GPS Tools` checkbox.
 
-When this plugin is loaded choose :menuselection:`New -->` |icon_newgpx|
-:menuselection:`Create new GPX Layer...` from the :menuselection:`Layer`.
-In the :guilabel:`Save new GPX file as` dialog you can choose where to save the
+When this plugin is loaded, choose :menuselection:`New -->` |icon_newgpx|
+:menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` menu.
+In the :guilabel:`Save new GPX file as` dialog, you can choose where to save the
 new GPX layer.
 
 .. index:: Work_with_Attribute_Table
@@ -808,19 +826,19 @@ Working with the Attribute Table
 --------------------------------
 
 The :index:`attribute table` displays features of a selected layer. Each row
-in the table represents one map feature and each column contains a particular
+in the table represents one map feature, and each column contains a particular
 piece of information about the feature. Features in the table can be searched,
 selected, moved or even edited.
 
 To open the attribute table for a vector layer, make the layer active by
-clicking on it in the map legend area. Then from the main menu
-:menuselection:`Layer` choose |mActionOpenTable| :menuselection:`Open Attribute
-Table`. It is also possible to rightclick on the layer and choose
-|mActionOpenTable| :menuselection:`Open Attribute Table` from the dropdown menu
+clicking on it in the map legend area. Then, from the main
+:menuselection:`Layer` menu, choose |mActionOpenTable| :menuselection:`Open Attribute
+Table`. It is also possible to right click on the layer and choose
+|mActionOpenTable| :menuselection:`Open Attribute Table` from the drop-down menu,
 and to click on the |mActionOpenTable| :guilabel:`Open Attribute Table` button
 in the Attributes toolbar.
 
-This will open a new window which displays the feature attributes in the
+This will open a new window that displays the feature attributes for the
 layer (figure_attributes_1_). The number of features and the number of
 selected features are shown in the attribute table title.
 
@@ -861,61 +879,61 @@ small arrow indicates the sort order (downward pointing means descending
 values from the top row down, upward pointing means ascending values from
 the top row down).
 
-For a **simple search by attributes** on only one column choose the
+For a **simple search by attributes** on only one column, choose the
 :menuselection:`Column filter -->` from the menu in the bottom left corner.
-Select the field (column) from which the search should be
-performed from the dropdown menu and hit the **[Apply]** button. Then only
-the matching features are shown in the Attribute table.
+Select the field (column) on which the search should be
+performed from the drop-down menu, and hit the **[Apply]** button. Then, only
+the matching features are shown in the attribute table.
 
-To make a selection you have to use the |mIconExpressionSelect| :sup:`Select features using an Expression`
-icon on top of the Attribute table.
-The |mIconExpressionSelect| :sup:`Select features using an Expression` allows you
+To make a selection, you have to use the |mIconExpressionSelect| :sup:`Select features using an Expression`
+icon on top of the attribute table.
+|mIconExpressionSelect| :sup:`Select features using an Expression` allows you
 to define a subset of a table using a :guilabel:`Function List` like in the
 |mActionCalculateField| :sup:`Field Calculator` (see :ref:`vector_field_calculator`).
-The query result then can be saved as a new vector layer.
-For example if you want to find regions that are boroughs from the regions.shp
-of the |qg| sample data you have to open the :guilabel:`>Fields and Values` menu
-and choose the field that you want to query. Double-klick the field 'TYPE_2' and also
-**[Load all unique values]** . From list choose and double-klick 'Borough'.
-In the :guilabel:`Expression` field the following query appears:
+The query result can then be saved as a new vector layer.
+For example, if you want to find regions that are boroughs from :file:`regions.shp`
+of the |qg| sample data, you have to open the :guilabel:`Fields and Values` menu
+and choose the field that you want to query. Double-click the field 'TYPE_2' and also
+**[Load all unique values]** . From the list, choose and double-click 'Borough'.
+In the :guilabel:`Expression` field, the following query appears:
 
 ::
 
  "TYPE_2"  =  'Borough'
 
-The matching rows will be selected and the total number of matching rows will
-appear in the title bar of the attribute table, and in the status bar of
-the main window. For searches that display only selected features on the map
-use the Query Builder described in Section :ref:`vector_query_builder`.
+The matching rows will be selected, and the total number of matching rows will
+appear in the title bar of the attribute table, as well as in the status bar of
+the main window. For searches that display only selected features on the map,
+use the Query Builder described in section :ref:`vector_query_builder`.
 
 To show selected records only, use :guilabel:`Show Selected Features` from the menu
 at the bottom left.
 
-The other buttons at the top of the attribute table window provide
+The other buttons at the top of the attribute table window provide the
 following functionality:
 
 * |mActionToggleEditing| :sup:`Toggle editing mode` to edit single values
-  and to enable functionalities described below also with :kbd:`Ctrl+E`
-* |mActionSaveEdits| :sup:`Save Edits` also with :kbd:`Ctrl+S`
-* |mActionUnselectAttributes| :sup:`Unselect all` also with :kbd:`Ctrl+U`
-* |mActionSelectedToTop| :sup:`Move selected to top` also with :kbd:`Ctrl+T`
-* |mActionInvertSelection| :sup:`Invert selection` also with :kbd:`Ctrl+R`
-* |mActionCopySelected| :sup:`Copy selected rows to clipboard` also with
-  :kbd:`Ctrl+C`
-* |mActionZoomToSelected| :sup:`Zoom map to the selected rows` also with
-  :kbd:`Ctrl+J`
-* |PanToSelected| :sup:`Pan map to the selected rows` also with :kbd:`Ctrl+P`
-* |mActionDeleteSelected| :sup:`Delete selected features` also with
-  :kbd:`Ctrl+D`
+  and to enable functionalities described below (also with :kbd:`Ctrl+E`)
+* |mActionSaveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+S`)
+* |mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+U`)
+* |mActionSelectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+T`)
+* |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+R`)
+* |mActionCopySelected| :sup:`Copy selected rows to clipboard` (also with
+  :kbd:`Ctrl+C`)
+* |mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with
+  :kbd:`Ctrl+J`)
+* |PanToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+P`)
+* |mActionDeleteSelected| :sup:`Delete selected features` (also with
+  :kbd:`Ctrl+D`)
 * |mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR
-  layers with GDAL version >= 1.6 also with :kbd:`Ctrl+W`
+  layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+W`)
 * |mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR
-  layers with GDAL version >= 1.9 also with :kbd:`Ctrl+L`
-* |mActionCalculateField| :sup:`Open field calculator` also with :kbd:`Ctrl+I`
+  layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+L`)
+* |mActionCalculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+I`)
 
 .. tip:: **Skip WKT geometry**
 
-   If you want to use attribute data in external programs (such as Excel) use the
+   If you want to use attribute data in external programs (such as Excel), use the
    |mActionCopySelected| :sup:`Copy selected rows to clipboard` button.
    You can copy the information without vector geometries if you deactivate
    :menuselection:`Settings --> Options -->` Data sources menu |checkbox|
@@ -924,10 +942,10 @@ following functionality:
 Save selected features as new layer
 ...................................
 
-The selected features can be saved as any OGR supported vector format and
-also transformed into another Coordinate Reference System (CRS). Just open
+The selected features can be saved as any OGR-supported vector format and
+also transformed into another coordinate reference system (CRS). Just open
 the right mouse menu of the layer and click on :menuselection:`Save selection
-as -->` to define the name of the output file, its format and CRS (see Section
+as -->` to define the name of the output file, its format and CRS (see section
 :ref:`label_legend`). It is also possible to specify OGR creation options
 within the dialog.
 
@@ -935,28 +953,166 @@ Paste into new layer
 ....................
 
 Features that are on the clipboard may be pasted into a new
-layer.  Make a layer editible.  Select some features, copy them to the
-clipboard and then paste into new a new layer using
-:menuselection:`Edit --> Paste Features as` and choose
+layer.  To do this, first make a layer editable.  Select some features, copy them to the
+clipboard, and then paste them into a new layer using
+:menuselection:`Edit --> Paste Features as` and choosing
 :menuselection:`New vector layer` or :menuselection:`New memory
 layer`.
 
 This applies to features selected and copied within |qg| and
-also features from another source defined using Well Known Text (WKT).
+also to features from another source defined using well-known text (WKT).
 
 .. index:: Non_Spatial_Attribute_Tables
 
 Working with non spatial attribute tables
 .........................................
 
-|qg| allows also to load non spatial tables. This includes currently tables
-supported by OGR, delimited text as well as the PostgreSQL, MSSQL and Oracle provider.
+|qg| allows you also to load non-spatial tables. This currently includes tables
+supported by OGR and delimited text, as well as the PostgreSQL, MSSQL and Oracle provider.
 The tables can be used for field lookups or just generally browsed and edited using the table
-view. When you load the table you will see it in the legend field. It can be
-opened e.g. with the |mActionOpenTable| :sup:`Open Attribute Table` tool and
+view. When you load the table, you will see it in the legend field. It can be
+opened with the |mActionOpenTable| :sup:`Open Attribute Table` tool and
 is then editable like any other layer attribute table.
 
-As an example you can use columns of the non spatial table to define attribute
-values or a range of values that are allowed to be added to a specific vector
+As an example, you can use columns of the non-spatial table to define attribute
+values, or a range of values that are allowed, to be added to a specific vector
 layer during digitizing. Have a closer look at the edit widget in section
 :ref:`vector_attributes_menu` to find out more.
+
+.. index:: Relations
+.. _vector_relations:
+
+Creating one to many relations
+-------------------------------
+
+Relations are a technique often used in databases. The concept is, that 
+features (rows) of different layers (tables) can belong to each other. 
+
+As an example you have a layer with all regions of alaska (polygon) 
+which provides some attributes about its name and region type and a 
+unique id (which acts as primary key).
+
+Foreign keys
+............
+
+Then you get another point layer or table with information about airports 
+that are located in the regions and you also want to keep track of these. If 
+you want to add them to the region layer, you need to create a one to many 
+relation using foreign keys, because there are several airports in most regions. 
+
+.. _figure_relations_1:
+
+.. only:: html
+
+   **Figure Relations 1:**
+
+.. figure:: /static/user_manual/working_with_vector/relations1.png
+   :width: 30em
+   :align: center
+
+   Alaska region with airports |nix|
+
+I addition to the already existing attributes in the airports attribute table 
+another field fk_region which acts as a foreign key (if you have a database, you will 
+probably want to define a constraint on it).
+
+This field fk_region will always contain an id of a region. It can be seen 
+like a pointer to the region it belongs to. And you can design a custom edit 
+form for the editing and QGIS takes care about the setup. It works with different 
+providers (so you can also use it with shape and csv files) and all you have 
+to do is to tell QGIS the relations between your tables.
+
+Layers
+......
+
+QGIS makes no difference between a table and a vector layer. Basically, a vector 
+layer is a table with a geometry. So can add your table as a vector layer. To 
+demostrate you can load the 'region' shapefile (with geometries) and the 'airport' 
+csv table (without geometries) and a foreign key (fk_region) to the layer 
+region. This means, that each airport belongs to exactly one region while each 
+region can have any number of airports (a typical one to many relation).
+
+
+Definition (Relation Manager)
+.............................
+
+The first thing we are going to do is to let QGIS know about the relations between the layer. 
+This is done in :menuselection:`Settings -->` :menuselection:`Project Properties`. 
+Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
+
+* **name** is going to be used as a title. It should be a human readable string, describing, what the relation is used for. We will just call say "Maintenances" in this case.
+* **referencing layer** is the one with the foreign key field on it. In our case this is the maintenances layer
+* **referencing field** will say, which field points to the other layer so this is fk_reach in this case
+* **referenced layer** is the one with the primary key, pointed to, so here it is the reach layer
+* **referenced field** is the primary key of the referenced layer so it is id
+* **id** will be used for internal purposes and has to be unique. You may need it to build custom forms once this is supported. If you leave it empty, one will be generated for you but you can assign one yourself to get one that is easier to handle.
+
+.. _figure_relations_2:
+
+.. only:: html
+
+   **Figure Relations 2:**
+
+.. figure:: /static/user_manual/working_with_vector/relations2.png
+   :width: 30em
+   :align: center
+
+   Relation Manager |nix|
+
+
+Forms
+.....
+
+Now that QGIS knows about the relation, it will be used to improve the 
+forms it generates. As we did not change the default form method (autogenerated) 
+it will just add a new widget in our form. So let's select the layer region in 
+the legend and use the identify tool. Depending on your settings, the form might 
+open directly or you will have to choose to open it in the identification dialog 
+under actions.
+
+.. _figure_relations_3:
+
+.. only:: html
+
+   **Figure Relations 3:**
+
+.. figure:: /static/user_manual/working_with_vector/relations3.png
+   :width: 30em
+   :align: center
+
+   Identification dialog regions with relation to airports |nix|
+
+As you can see, the airports assigned to this particular region are all shown in a 
+table. And there are also some buttons available. Let's review them shortly
+
+* The **pencil button** is for toggling the edit mode. Be aware that it toggles the edit mode of the airport layer, although we are in the feature form of a feature from the region layer. But the table is representing features of the airport layer.
+* The **plus button** will add a new feature to the airport layer. And it will assign the new airport to the current region by default.
+* The **X** button will delete the selected airport permanently.
+* The **Chain** symbol will open a new dialog where you can select any existing airport which will then be assigned to the current region. This may be handy if you created the airport on the wrong region by accident.
+* The **Split chain** symbol will unlink the selected airport from the current region, leaving them unassigned (the foreign key is set to NULL) effectively.
+* The two buttons to the right switch between table view and form view where the later let's you view all the airports in their respective form.
+
+If you work on the airport table, a new widget type is available which lets you 
+embed the feature form of the referenced region on the feature form of the airports. 
+It can be used when you open the layer properties of the airports table, switch to 
+the :menuselection:`Fields` menu and change the widget type of the foreign key field 'fk_region' to 
+Relation Reference.
+
+If you look at the feature dialog now, you will see, that the form of the region 
+is embedded inside the airports form and will even have a combobox, which allows you 
+to assign the current airport to another region.
+
+.. _figure_relations_4:
+
+.. only:: html
+
+   **Figure Relations 4:**
+
+.. figure:: /static/user_manual/working_with_vector/relations4.png
+   :width: 30em
+   :align: center
+
+   Identification dialog airport with relation to regions |nix|
+
+
+
