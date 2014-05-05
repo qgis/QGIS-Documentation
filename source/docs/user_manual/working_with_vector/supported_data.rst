@@ -206,7 +206,7 @@ contains the column names. A common type of delimited text file is a CSV
 Such data files can also contain positional information in two main forms:
 
 * As point coordinates in separate columns
-* As Well-Known Text (WKT) representation of geometry
+* As well-known text (WKT) representation of geometry
 
 |qg| allows you to load a delimited text file as a layer or ordinal table. But
 first check that the file meets the following requirements:

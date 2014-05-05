@@ -5,34 +5,34 @@
 Live GPS tracking
 ==================
 
-To activate Live GPS tracking in |qg| you need to select :menuselection:`Settings --> Panels`
+To activate live GPS tracking in |qg|, you need to select :menuselection:`Settings --> Panels`
 |checkbox| :guilabel:`GPS information`. You will get a new docked window on the
 left side of the canvas.
 
-There are 4 possible screens in this GPS tracking window:
+There are four possible screens in this GPS tracking window:
 
-* |mActionToggleEditing| GPS position coordinates and for manually entering
-  Vertices and Features.
-* |gpstrack_barchart| GPS signal strength of satellite connections.
+* |mActionToggleEditing| GPS position coordinates and an interface for manually entering
+  vertices and features
+* |gpstrack_barchart| GPS signal strength of satellite connections
 * |gpstrack_polarchart| GPS polar screen showing number and polar position of
-  satellites.
-* |mActionOptions| GPS options screen (see figure_gps_options_).
+  satellites
+* |mActionOptions| GPS options screen (see figure_gps_options_)
 
-With a plugged in GPS receiver (has to be supported by your operating system)
+With a plugged-in GPS receiver (has to be supported by your operating system),
 a simple click on **[Connect]** connects the GPS to |qg|. A second click (now
-on **[Disconnect]**) disconnects the GPS-receiver from your computer. For GNU/Linux
-gpsd support is integrated to support connection to most GPS receivers. Therefore
+on **[Disconnect]**) disconnects the GPS receiver from your computer. For GNU/Linux,
+gpsd support is integrated to support connection to most GPS receivers. Therefore,
 you first have to configure gpsd properly to connect |qg| to it.
 
 .. warning::
-   If you want to record your position to the canvas you have to create a new
+   If you want to record your position to the canvas, you have to create a new
    vector layer first and switch it to editable status to be able to record your
    track.
 
 Position and additional attributes
 ----------------------------------
 
-|mActionToggleEditing| If the GPS is receiving signals from satellites you will
+|mActionToggleEditing| If the GPS is receiving signals from satellites, you will
 see your position in latitude, longitude and altitude together with additional
 attributes.
 
@@ -51,7 +51,7 @@ attributes.
 GPS signal strength
 -------------------
 
-|gpstrack_barchart| Here you can see the signal strenght of the satellites you
+|gpstrack_barchart| Here, you can see the signal strength of the satellites you
 are receiving signals from.
 
 .. _figure_gps_strength:
@@ -89,12 +89,12 @@ ID numbers of the satellites you are receiving signals from.
 GPS options
 -----------
 
-|mActionOptions| In case of connection problems you can switch between:
+|mActionOptions| In case of connection problems, you can switch between:
 
 * |radiobuttonon| :guilabel:`Autodetect`
 * |radiobuttonoff| :guilabel:`Internal`
 * |radiobuttonoff| :guilabel:`Serial device`
-* |radiobuttonoff| :guilabel:`gpsd` (selecting Host, Port and Device your
+* |radiobuttonoff| :guilabel:`gpsd` (selecting the Host, Port and Device your
   GPS is connected to)
 
 A click on **[Connect]** again initiates the connection to the GPS receiver.
@@ -112,20 +112,20 @@ A click on **[Connect]** again initiates the connection to the GPS receiver.
    GPS tracking options window |nix|
 
 You can activate |checkbox| :menuselection:`Automatically save added features`
-when you are in editing mode. Or you can can activate |checkbox|
+when you are in editing mode. Or you can activate |checkbox|
 :guilabel:`Automatically add points` to the map canvas with a certain width
 and color.
 
-Activating |checkbox| :guilabel:`Cursor` you can use a slider |slider| to shrink
+Activating |checkbox| :guilabel:`Cursor`, you can use a slider |slider| to shrink
 and grow the position cursor on the canvas.
 
-Activating |radiobuttonon| :guilabel:`Map centering` allows to decide in which
-way the canvas will be updated. This includes 'always', 'when leaving' if your
-recorded coordinates start either to move out of canvas or 'never' to keep map
+Activating |radiobuttonon| :guilabel:`Map centering` allows you to decide in which
+way the canvas will be updated. This includes 'always', 'when leaving', if your
+recorded coordinates start to move out of the canvas, or 'never', to keep map
 extent.
 
-Finally you can activate |checkbox| :guilabel:`Log file` and define a path
-and a file where log messages about the gps tracking a logged.
+Finally, you can activate |checkbox| :guilabel:`Log file` and define a path
+and a file where log messages about the GPS tracking are logged.
 
-If you want to set a feature manually you have to go back to |mActionToggleEditing|
+If you want to set a feature manually, you have to go back to |mActionToggleEditing|
 :sup:`Position` and click on **[Add Point]** or **[Add track point]**.
