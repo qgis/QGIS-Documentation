@@ -901,6 +901,10 @@ In the :guilabel:`Expression` field, the following query appears:
 
  "TYPE_2"  =  'Borough'
 
+Here you can also use the :menuselection:`Function list --> Recent (Selection)` to
+make a selection that you used before. The expression builder remembers the last 20
+used expressions. 
+
 The matching rows will be selected, and the total number of matching rows will
 appear in the title bar of the attribute table, as well as in the status bar of
 the main window. For searches that display only selected features on the map,
@@ -1012,7 +1016,7 @@ relation using foreign keys, because there are several airports in most regions.
 
    Alaska region with airports |nix|
 
-I addition to the already existing attributes in the airports attribute table 
+In addition to the already existing attributes in the airports attribute table 
 another field fk_region which acts as a foreign key (if you have a database, you will 
 probably want to define a constraint on it).
 
