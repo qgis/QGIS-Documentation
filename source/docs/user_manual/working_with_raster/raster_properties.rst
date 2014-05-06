@@ -283,6 +283,19 @@ The :guilabel:`Resampling` option makes its appearance when you zoom in and out 
 image. Resampling modes can optimize the appearance of the map. They calculate a new gray value
 matrix through a geometric transformation.
 
+.. _figure_raster_6:
+
+.. only:: html
+
+   **Figure Raster 6:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterRenderAndRessampling.png
+   :align: center
+   :width: 30em
+
+   Raster Rendering - Resampling |nix|
+
+
 When applying the 'Nearest neighbour' method, the map can have a pixelated structure
 when zooming in. This appearance can be improved by using the 'Bilinear' or 'Cubic' method, which cause sharp features
 to be blurred. The effect is a smoother image. This method can be applied, for instance, to digital
@@ -356,6 +369,18 @@ If you choose 'Internal (if possible)' from the :guilabel:`Overview format` menu
 |qg| tries to build pyramids internally. You can also choose 'External' and
 'External (Erdas Imagine)'.
 
+.. _figure_raster_7:
+
+.. only:: html
+
+   **Figure Raster 7:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterPyramids.png
+   :align: center
+   :width: 30em
+
+   The Pyramids Menu |nix|
+
 Please note that building pyramids may alter the original data file, and once
 created they cannot be removed. If you wish to preserve a 'non-pyramided'
 version of your raster, make a backup copy prior to building pyramids.
@@ -379,6 +404,18 @@ to min/max' and to 'Update style to min/max'.
 With the :guilabel:`Actions` option, you can 'Reset' and 'Recompute histogram' after
 you have chosen the :guilabel:`Min/max options`.
 
+.. _figure_raster_8:
+
+.. only:: html
+
+   **Figure Raster 8:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterHistogram.png
+   :align: center
+   :width: 30em
+
+   Raster Histogram |nix|
+
 .. index:: Metadata
 
 Metadata Menu
@@ -389,3 +426,15 @@ including statistics about each band in the current raster layer. From this menu
 made for the :guilabel:`Description`, :guilabel:`Attribution`, :guilabel:`MetadataUrl` and
 :guilabel:`Properties`. In :guilabel:`Properties`, statistics are gathered on a 'need to know'
 basis, so it may well be that a given layer's statistics have not yet been collected.
+
+.. _figure_raster_9:
+
+.. only:: html
+
+   **Figure Raster 9:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterMetadata.png
+   :align: center
+   :width: 30em
+
+   Raster Metadata |nix|
