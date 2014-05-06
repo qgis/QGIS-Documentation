@@ -13,7 +13,7 @@ This release includes hundreds of bug fixes and many new features and enhancemen
 Application and Project Options 
 -------------------------------
 
-* **Support for measurement in nautical miles**: You can now measure distances using nautical miles. To enable this, use the :menuselection:`Settings` --> :menuselection:`Options` --> :guilabel:`Map Tools` option panel.
+* **Support for measurement in nautical miles**: You can now measure distances using nautical miles. To enable this, use the :menuselection:`Settings --> Options --> Map Tools` option panel.
 
 Data Providers 
 --------------
@@ -22,7 +22,7 @@ Data Providers
 
 * **DXF Export tool**: A new tool for exporting DXFs has been added to the :menuselection:`Project` menu.
 
-* **Paste as new vector layer**: It is a common activity in a GIS to create a sub-selection and then to create a new layer from the selection. In QGIS you can already do Save Selection As to save a layer from your selection; now, functionality is offered that allows you to create a new file or memory layer from whatever is in your clipboard. Simply select some features, copy them to your clipboard and then do Edit -> Paste Features As and choose either New Vector Layer or New Memory Layer from the submenu. The best part of this new feature is that if you have some Well Known Text (WKT) features in your clipboard from another app, you can simply paste them into QGIS as a new layer now.
+* **Paste as new vector layer**: It is a common activity in a GIS to create a sub-selection and then to create a new layer from the selection. In QGIS you can already do Save Selection As to save a layer from your selection; now, functionality is offered that allows you to create a new file or memory layer from whatever is in your clipboard. Simply select some features, copy them to your clipboard and then do :menuselection:`Edit --> Paste Features As` and choose either 'New Vector Layer' or 'New Memory Layer' from the submenu. The best part of this new feature is that if you have some Well Known Text (WKT) features in your clipboard from another app, you can simply paste them into QGIS as a new layer now.
 
 * **WMS legend graphic in table of contents and composer**: Prior to QGIS 2.2 the WMS data provider was not able to display a legend in the table of contents' layer list. Similarly no legend could be displayed in the map composer. QGIS 2.2 addresses both of these issues.
 
@@ -36,7 +36,7 @@ General
 
 * **Recent expressions saved**: The expression builder will now remember the last 20 used expressions.
 
-* **Paste WKT from clipboard**: QGIS can now paste and create a new feature based on WKT that is found in the clipboard. Simply copy some WKT and paste into an editable layer. You can also create a new layer by selecting :menuselection:`Edit` --> :menuselection:`Paste As` --> :guilabel:`New Memory Layer`.
+* **Paste WKT from clipboard**: QGIS can now paste and create a new feature based on WKT that is found in the clipboard. Simply copy some WKT and paste into an editable layer. You can also create a new layer by selecting :menuselection:`Edit --> Paste As --> New Memory Layer`.
 
 Map Composer 
 ------------
@@ -47,7 +47,7 @@ Map Composer
 
 * **Composer scale added and ruler improvements**: The appearance of rulers has been improved by adjusting the scale logic and by adding smaller ruler divisions, and by making vertical rulers use rotated text. There is also a new composer action for hiding/showing rulers. You can now quickly zoom to 100% page scale using the new Zoom to 100% tool on the toolbar. The composer window now lets you quickly switch the page scaling via a new scale combobox in the status bar. In addition, a new indicator has been added to show you the precise pixel position of your cursor. The **\[Close\]** and **\[Help\]** buttons have been removed from the bottom of the composer window to give you the maximum amount of screen space for working with your compositions.
 
-* **World file generation**: In the composer, you can now create georefenced maps! Simply ensure that you choose the correct map element in the Composition tab and then export your map as a PNG file. An accompanying world file will be written, allowing you to load your exported composition in QGIS as a raster layer.
+* **World file generation**: In the composer, you can now create georeferenced maps! Simply ensure that you choose the correct map element in the Composition tab and then export your map as a PNG file. An accompanying world file will be written, allowing you to load your exported composition in QGIS as a raster layer.
 
 * **Working with multiple items**: Support has been added for moving and resizing multiple items simultaneously. You can now hold :kbd:`Shift` while resizing to maintain an item's ratio while resizing, or hold :kbd:`Ctrl` to resize from the item's centre. These shortcut keys also apply to moving items, so holding :kbd:`Shift` while moving an item constrains the movement to horizontal or vertical movement, and holding :kbd:`Ctrl` temporarily disables item snapping. You can also hold :kbd:`Shift` while pressing a cursor key to shift all selected items by a larger amount.
 
@@ -57,7 +57,7 @@ Map Composer
 
 * **Better navigation of compositions**: QGIS 2.2 includes many improvements to help you navigate your compositions. You can now zoom in or out from a composition by using the mouse scroll wheel. A dedicated pan tool has been added, which allows you to drag the composition around, and you can also switch immediately to pan mode by holding the space bar or by holding the mouse scroll wheel. There's also a new zoom tool, which allows you to precisely zoom to a specific area of your composition. You can also switch to zoom mode at any time by pressing and holding Ctrl-Space and drawing a zoom region on the composition.
 
-* **Improved styling of pages and shapes **: You can now control the style of the composition background using the full range of QGIS' symbology options. It's now possible to export compositions with a transparent (or semi-transparent) background. Shape items (rectangles, triangles and ellipses) can also be styled using the same options as polygon map layers. You can even style the page background or shapes by using data-defined settings based on the current atlas feature! There's also a new option for rounding the corners of rectangle shapes.
+* **Improved styling of pages and shapes**: You can now control the style of the composition background using the full range of QGIS' symbology options. It's now possible to export compositions with a transparent (or semi-transparent) background. Shape items (rectangles, triangles and ellipses) can also be styled using the same options as polygon map layers. You can even style the page background or shapes by using data-defined settings based on the current atlas feature! There's also a new option for rounding the corners of rectangle shapes.
 
 QGIS Server 
 -----------

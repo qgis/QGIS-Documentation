@@ -12,11 +12,11 @@ allows you to perform calculations on the basis of existing
 raster pixel values (see figure_raster_2_).
 The results are written to a new raster layer with a GDAL-supported format.
 
-.. _figure_raster_2:
+.. _figure_raster_10:
 
 .. only:: html
 
-   **Figure Raster 2:**
+   **Figure Raster 10:**
 
 .. figure:: /static/user_manual/working_with_raster/raster_calculator.png
    :align: center

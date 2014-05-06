@@ -72,7 +72,7 @@ You can perform spatial data analysis on spatial databases and other OGR- suppor
 Publish maps on the Internet 
 ----------------------------
 
-|qg| can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as a WMS or WFS server. (See section :ref:`sec_ogc`.) Additionally, you can publish your data on the Internet using a webserver with UMN MapServer or GeoServer installed.
+|qg| can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as a WMS, WCS or WFS server. (See section :ref:`sec_ogc`.) Additionally, you can publish your data on the Internet using a webserver with UMN MapServer or GeoServer installed.
 
 Extend |qg| functionality through plugins 
 -----------------------------------------
@@ -112,7 +112,7 @@ Core plugins include:
 External Python Plugins
 .......................
 
-|qg| offers a growing number of external Python plugins that are provided by the community. These plugins reside in the official Plugins Repository and can be easily installed using the Python Plugin Installer. See Section :ref:`load_external_plugin`.
+|qg| offers a growing number of external Python plugins that are provided by the community. These plugins reside in the official Plugins Repository and can be easily installed using the Python Plugin Installer. See Section :ref:`managing_plugins`.
 
 Python Console 
 --------------
