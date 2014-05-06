@@ -39,7 +39,7 @@ This document contains internal and external links. Clicking on an internal link
 +--------------------+---------------------+----------------------+----------------------+----------------------+
 
 
-Copyright (c) 2004 - 2013 |qg| Development Team
+Copyright (c) 2004 - 2014 |qg| Development Team
 
 **Internet:** http://www.qgis.org
 
