@@ -659,7 +659,7 @@ Split parts
 
 In |qg| 2.0 it is now possible to split the parts of a multi part feature so that the
 number of parts is increased. Just draw a line across the part you want to split using
-the || :sup:`Split Parts` icon.
+the |mActionSplitParts| :sup:`Split Parts` icon.
 
 Merge selected features
 .......................
