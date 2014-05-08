@@ -592,6 +592,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionRemoveLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
+.. |mActionDuplicateLayer| image:: /static/common/mActionDuplicateLayer.png
+   :width: 1.5em
 .. |mActionLabeling| image:: /static/common/mActionLabeling.png
    :width: 1.5em
 .. |mActionInOverview| image:: /static/common/mActionInOverview.png
@@ -1025,6 +1027,16 @@ rst_epilog = """
 .. |plugin_installed| image:: /static/common/plugin-installed.png
    :width: 1.5em
 .. |plugin_upgrade| image:: /static/common/plugin-upgrade.png
+   :width: 1.5em
+.. |analysis| image:: /static/common/analysis.png
+   :width: 1.5em
+.. |geometry| image:: /static/common/geometry.png
+   :width: 1.5em
+.. |geoprocessing| image:: /static/common/geoprocessing.png
+   :width: 1.5em
+.. |management| image:: /static/common/management.png
+   :width: 1.5em
+.. |sampling| image:: /static/common/sampling.png
    :width: 1.5em
 
 .. |basic| image:: /static/training_manual/global/basic.png

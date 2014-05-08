@@ -78,8 +78,8 @@ Scale Dependent Rendering
 Scale-dependent rendering allows you to specify the minimum and maximum scales
 at which a layer will be visible. To set scale-dependent rendering, open the
 :guilabel:`Properties` dialog by double-clicking on the layer in the legend. On
-the :guilabel:`General` tab, click on the |checkbox| :guilabel:`Use scale
-dependent rendering` checkbox to activate the feature, then set the minimum and
+the :guilabel:`General` tab, click on the |checkbox| :guilabel:`Scale
+dependent visibility` checkbox to activate the feature, then set the minimum and
 maximum scale values.
 
 You can determine the scale values by first zooming to the level you want to

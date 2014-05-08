@@ -2,7 +2,7 @@
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
-.. _`label_plugingdaltools`:
+.. _label_plugingdaltools:
 
 GDAL Tools Plugin
 =================
@@ -212,6 +212,11 @@ Miscellaneous
 |                                                        | filename, and a polygon geometry outlining the raster.|
 |                                                        | See also http://www.gdal.org/gdaltindex.html .        |
 +--------------------------------------------------------+-------------------------------------------------------+
+
+Gdal Tools Settings
+...................
+
+Use this dialog to embed your GDAL variables.
 
 .. maybe simpler rewording of the description is necessary
 

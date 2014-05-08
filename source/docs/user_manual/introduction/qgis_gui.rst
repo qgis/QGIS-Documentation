@@ -183,6 +183,7 @@ Menu Option                                                          Shortcut   
 :menuselection:`Save as...`                                          \                     \                                           \
 :menuselection:`Save selection as vector file...`                    \                     See :ref:`sec_attribute_table`              \
 |mActionRemoveLayer| :guilabel:`Remove Layer(s)`                     :kbd:`Ctrl+D`         \                                           \
+|mActionDuplicateLayer| :guilabel:`Duplicate Layers (s)`             \                     \                                           \
 :menuselection:`Set CRS of Layer(s)`                                 :kbd:`Ctrl+Shift+C`   \                                           \
 :menuselection:`Set project CRS from Layer`                          \                     \                                           \
 :menuselection:`Properties`                                          \                     \                                           \
@@ -203,7 +204,7 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 :menuselection:`Panels -->`                                     \                     see :ref:`sec_panels_and_toolbars`          \
 :menuselection:`Toolbars -->`                                   \                     see :ref:`sec_panels_and_toolbars`          \
-:menuselection:`Toggle Full Screen Mode`                        :kbd:`Ctrl-F`         \                                           \
+:menuselection:`Toggle Full Screen Mode`                        :kbd:`F 11`         \                                           \
 |mActionProjectProperties| :guilabel:`Project Properties ...`   :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \
 |mActionCustomProjection| :guilabel:`Custom CRS ...`            \                     see :ref:`sec_custom_projections`           \
 :guilabel:`Style Manager...`                                    \                     see :ref:`vector_style_manager`             \
@@ -221,7 +222,6 @@ Menu Option                                                        Shortcut     
 =================================================================  ====================  ==========================================  ===============================
 |mActionShowPluginManager| :guilabel:`Manage and Install Plugins`  \                     see :ref:`managing_plugins`                 \
 :menuselection:`Python Console`                                    \                     \                                           \
-:menuselection:`GRASS -->`                                         \                     see :ref:`sec_grass`                        :guilabel:`GRASS`
 =================================================================  ====================  ==========================================  ===============================
 
 When starting |qg| for the first time not all core plugins are loaded.
@@ -232,12 +232,12 @@ Vector
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:menuselection:`Coordinate Capture -->`                         \                     see :ref:`coordcapt`                        :guilabel:`Vector`
-:menuselection:`Dxf2Shp -->`                                    \                     see :ref:`dxf2shape`                        :guilabel:`Vector`
-:menuselection:`GPS -->`                                        \                     see :ref:`plugin_gps`                       :guilabel:`Vector`
 :menuselection:`Open Street Map -->`                            \                     see :ref:`open_street_map`                  \
-:menuselection:`Road Graph -->`                                 \                     see :ref:`roadgraph`                        \
-:menuselection:`Spatial Query -->`                              \                     see :ref:`spatial_query`                    :guilabel:`Vector`
+|analysis| :menuselection:`Analysis Tools -->`                  \                     see :ref:`ftools`                           \
+|sampling| :menuselection:`Research Tools -->`                  \                     see :ref:`ftools`                           \
+|geoprocessing| :menuselection:`Geoprocessing Tools -->`        \                     see :ref:`ftools`                           \
+|geometry| :menuselection:`Geometry Tools -->`                  \                     see :ref:`ftools`                           \
+|management| :menuselection:`Data Management Tools -->`         \                     see :ref:`ftools`                           \
 ==============================================================  ====================  ==========================================  ===============================
 
 When starting |qg| for the first time not all core plugins are loaded.
@@ -248,23 +248,7 @@ Raster
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:menuselection:`Raster calculator`                              \                     see  :ref:`sec_raster_calc`                 \
-:menuselection:`Georeferencer -->`                              \                     see :ref:`georef`                           :guilabel:`Raster`
-:menuselection:`Heatmap -->`                                    \                     see :ref:`heatmap_plugin`                   :guilabel:`Raster`
-:menuselection:`Interpolation -->`                              \                     see :ref:`interpol`                         :guilabel:`Raster`
-:menuselection:`Zonal Statistics -->`                           \                     see :ref:`zonal_statistics`                 :guilabel:`Raster`
-==============================================================  ====================  ==========================================  ===============================
-
-When starting |qg| for the first time not all core plugins are loaded.
-
-Database
-........
-
-==============================================================  ====================  ==========================================  ===============================
-Menu Option                                                     Shortcut              Reference                                   Toolbar
-==============================================================  ====================  ==========================================  ===============================
-:menuselection:`eVis -->`                                       \                     see :ref:`evis`                             :guilabel:`Database`
-:menuselection:`Spit -->`                                       \                     see :ref:`label_spit`                       :guilabel:`Database`
+:menuselection:`Raster calculator ...`                          \                     see :ref:`sec_raster_calc`                  \
 ==============================================================  ====================  ==========================================  ===============================
 
 When starting |qg| for the first time not all core plugins are loaded.
@@ -275,9 +259,9 @@ Processing
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-|proc_toolbox| :guilabel:`Toolbox`                              \                     see :ref:`processing.toolbox`               :guilabel:`Toolbox`
+|proc_toolbox| :guilabel:`Toolbox`                              \                     see :ref:`processing.toolbox`               \
 |proc_model| :guilabel:`Graphical Modeler`                      \                     see :ref:`processing.modeler`               \
-|proc_history| :guilabel:`History and Logs`                     \                     see :ref:`processing.history`               \
+|proc_history| :guilabel:`History and log`                      \                     see :ref:`processing.history`               \
 |proc_option| :guilabel:`Options and configuration`             \                     see :ref:`processing.options`               \
 |proc_result| :guilabel:`Results viewer`                        \                     see :ref:`processing.results`               \
 |proc_commander| :guilabel:`Commander`                          :kbd:`Ctrl+Alt+M`     see :ref:`processing.commander`             \
@@ -294,11 +278,11 @@ Menu Option                                                     Shortcut        
 |mActionHelpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                                           :guilabel:`Help`
 |mActionWhatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
 :menuselection:`API Documentation`                              \                     \                                           \
-:menuselection:`Need support?`                                  \                     \                                           \
-|mActionQgisHomePage| :guilabel:`|qg| Home Page`                :kbd:`Ctrl+H`         \                                           \
-|mActionCheckQgisVersion| :guilabel:`Check |qg| Version`        \                     \                                           \
+:menuselection:`Need commercial support?`                       \                     \                                           \
+|mActionQgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`         \                                           \
+|mActionCheckQgisVersion| :guilabel:`Check QGIS Version`        \                     \                                           \
 |mActionHelpAbout| :guilabel:`About`                            \                     \                                           \
-|mActionHelpSponsors| :guilabel:`|qg| Sponsors`                 \                     \                                           \
+|mActionHelpSponsors| :guilabel:`QGIS Sponsors`                 \                     \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
 Please note that for Linux |nix|, the menu bar items listed above are the
@@ -384,7 +368,7 @@ are drawn over layers listed lower down in the legend.
 Layers in the legend window can be organised into groups. There are two ways to
 do this:
 
-#. Right click in the legend window and choose :guilabel:`Add Group`. Type in a
+#. Right click in the legend window and choose :guilabel:`Add New Group`. Type in a
    name for the group and press :kbd:`Enter`. Now click on an existing layer
    and drag it onto the group.
 #. Select some layers, right click in the legend window and choose
