@@ -69,11 +69,11 @@ Symbology
 
 * **Gradient fill support**: The new gradient fill feature lets you create better cartography than ever before. The feature has numerous options providing for great flexibility in how you apply gradients to your features. These include:
 
-* Two-colour or ramp-based fills
-* Canvas- or object-based origin for your gradients
-* Gradients originating from the centroid of a feature
-* Conical, linear and radial gradient types
-* Data-defined options (i.e., to use an expression or a table column)
+  * Two-colour or ramp-based fills
+  * Canvas- or object-based origin for your gradients
+  * Gradients originating from the centroid of a feature
+  * Conical, linear and radial gradient types
+  * Data-defined options (i.e., to use an expression or a table column)
   for all gradient properties
 
 * **Label support for palleted rasters**: Rasters that use a fixed colour pallette (for instance, a land cover map) can now have category labels assigned which will be shown in the map legend and in the composer legend.
@@ -108,11 +108,11 @@ User Interface
 
 * **New keybindings**: We have updated the keyboard shortcuts in QGIS to make it more efficient to carry out repetitive tasks.
 
-* :kbd:`Ctrl-d`: Remove selected layers in table of contents
-* :kbd:`>`: Select next vertex when using the node tool
-* :kbd:`<`: Select previous vertex when using the node tool
-* :kbd:`Delete` or :kbd:`Backspace`: Delete the selected features
-  (you can undo these actions), or nodes when using the node tool
-* :kbd:`F5`: Update the canvas (instead of Ctrl-r)
+  * :kbd:`Ctrl-d`: Remove selected layers in table of contents
+  * :kbd:`>`: Select next vertex when using the node tool
+  * :kbd:`<`: Select previous vertex when using the node tool
+  * :kbd:`Delete` or :kbd:`Backspace`: Delete the selected features
+    (you can undo these actions), or nodes when using the node tool
+  * :kbd:`F5`: Update the canvas (instead of Ctrl-r)
 
 
