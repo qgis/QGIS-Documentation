@@ -1044,11 +1044,11 @@ The first thing we are going to do is to let QGIS know about the relations betwe
 This is done in :menuselection:`Settings -->` :menuselection:`Project Properties`. 
 Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
 
-* **name** is going to be used as a title. It should be a human readable string, describing, what the relation is used for. We will just call say "Maintenances" in this case.
-* **referencing layer** is the one with the foreign key field on it. In our case this is the maintenances layer
-* **referencing field** will say, which field points to the other layer so this is fk_reach in this case
-* **referenced layer** is the one with the primary key, pointed to, so here it is the reach layer
-* **referenced field** is the primary key of the referenced layer so it is id
+* **name** is going to be used as a title. It should be a human readable string, describing, what the relation is used for. We will just call say "Airports" in this case.
+* **referencing layer** is the one with the foreign key field on it. In our case this is the airports layer
+* **referencing field** will say, which field points to the other layer so this is fk_region in this case
+* **referenced layer** is the one with the primary key, pointed to, so here it is the regions layer
+* **referenced field** is the primary key of the referenced layer so it is ID
 * **id** will be used for internal purposes and has to be unique. You may need it to build custom forms once this is supported. If you leave it empty, one will be generated for you but you can assign one yourself to get one that is easier to handle.
 
 .. _figure_relations_2:
