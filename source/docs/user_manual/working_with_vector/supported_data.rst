@@ -66,7 +66,6 @@ This will bring up a new window (see figure_vector_1_).
 
 .. figure:: /static/user_manual/working_with_vector/addvectorlayerdialog.png
    :align: center
-   :width: 25em
 
    Add Vector Layer Dialog |nix|
 
@@ -86,7 +85,6 @@ You can also select the encoding for the shapefile if desired.
 
 .. figure:: /static/user_manual/working_with_vector/shapefileopendialog.png
    :align: center
-   :width: 25em
 
    Open an OGR Supported Vector Layer Dialog |nix|
 
@@ -101,7 +99,6 @@ Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file.
 
 .. figure:: /static/user_manual/working_with_vector/shapefileloaded.png
    :align: center
-   :width: 30em
 
    |qg| with Shapefile of Alaska loaded |nix|
 
@@ -643,7 +640,6 @@ version of the data to be plotted in a 180 |degrees|-centric map.
    **Figure Vector 5:**
 
 .. figure:: /static/user_manual/working_with_vector/vectorWrapping.png
-   :width: 25em
    :align: center
 
    Crossing 180 |degrees| longitude applying the **ST_Shift_Longitude**
