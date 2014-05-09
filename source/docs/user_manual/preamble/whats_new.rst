@@ -8,7 +8,7 @@ What's new in |qg| |CURRENT|
 
 Please note that this is a release in our 'cutting edge' release series. As such, it contains new features and extends the programmatic interface over |qg| 2.0.  We recommend that you use this version over previous releases.
 
-This release includes hundreds of bug fixes and many new features and enhancements that will be described in this manual. You may also review the visual changelog at http://changelog.linfiniti.com/qgis/version/240/.
+This release includes hundreds of bug fixes and many new features and enhancements that will be described in this manual. You may also review the visual changelog at http://changelog.linfiniti.com/qgis/version/21/.
 
 Application and Project Options 
 -------------------------------
