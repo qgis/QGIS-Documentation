@@ -191,3 +191,111 @@ http://www.gpsbabel.org.
 
 Once you have created a new device type, it will appear in the device lists for
 the download and upload tools.
+
+Download of points/tracks from GPS units
+----------------------------------------
+
+As described in previous sections QGIS uses GPSBabel to download points/tracks
+directly in the project. QGIS comes out of the box with a pre-defined profile
+to download from Garmin devices. Unfortunately there is a `bug
+<http://hub.qgis.org/issues/6318>`_ that does not allow create other profiles,
+so downloading directly in QGIS using the GPS Tools is at the moment limited to
+Garmin USB units.
+
+Garmin GPSMAP 60cs
+..................
+
+**MS Windows**
+
+Install the Garmin USB drivers ​from
+http://www8.garmin.com/support/download_details.jsp?id=591
+
+Connect the unit. Open GPS Tools and use ``type=garmin serial`` and ``port=usb:``
+Fill the fields :guilabel:`Layer name` and :guilabel:`Output file`. Sometimes
+it seems to have problems saving in a certain folder, using something like
+``c:\temp`` usually works.
+
+**Ubuntu/Mint GNU/Linux**
+
+It is first needed an issue about the permissions of the device, as described
+at https://wiki.openstreetmap.org/wiki/USB_Garmin_on_GNU/Linux. You can try to
+create a file :file:`/etc/udev/rules.d/51-garmin.rules` containing this rule
+
+::
+
+  ATTRS{idVendor}=="091e", ATTRS{idProduct}=="0003", MODE="666"
+
+After that is necessary to be sure that the ``garmin_gps`` kernel module is not
+loaded
+
+::
+
+  rmmod garmin_gps
+
+and then you can use the GPS Tools. Unfortunately there seems to be a `bug
+<http://hub.qgis.org/issues/7182>`_ and usually QGIS freezes several times
+before the operation work fine.
+
+BTGP-38KM datalogger (only Bluetooth)
+.....................................
+
+**MS Windows**
+
+The already referred bug does not allow to download the data from within QGIS,
+so it is needed to use GPSBabel from the command line or using its interface.
+The working command is
+
+::
+
+  gpsbabel -t -i skytraq,baud=9600,initbaud=9600 -f COM9 -o gpx -F C:/GPX/aaa.gpx
+
+**Ubuntu/Mint GNU/Linux**
+
+Use same command (or settings if you use GPSBabel GUI) as in Windows. On Linux
+it maybe somehow common to get a message like
+
+::
+
+  skytraq: Too many read errors on serial port
+
+it is just a matter to turn off and on the datalogger and try again.
+
+BlueMax GPS-4044 datalogger (both BT and USB)
+.............................................
+
+**MS Windows**
+
+.. note::
+
+   It needs to install its drivers before using it on Windows 7. See in the
+   manufacturer site for the proper download.
+
+Downloading with GPSBabel, both with USB and BT returns always an error like
+
+::
+
+  gpsbabel -t -i mtk -f COM12 -o gpx -F C:/temp/test.gpx
+  mtk_logger: Can't create temporary file data.bin
+  Error running gpsbabel: Process exited unsucessfully with code 1
+
+**Ubuntu/Mint GNU/Linux**
+
+**With USB**
+
+After having connected the cable use the ``dmesg`` command to understand what
+port is being used, for example ``/dev/ttyACM3``. Then as usual use GPSBabel
+from the CLI or GUI
+
+::
+
+  gpsbabel -t -i mtk -f /dev/ttyACM3 -o gpx -F /home/user/bluemax.gpx
+
+**With Bluetooth**
+
+Use Blueman Device Manager to pair the device and make it available through a
+system port, then run GPSBabel
+
+::
+
+  gpsbabel -t -i mtk -f /dev/rfcomm0 -o gpx -F /home/user/bluemax_bt.gpx
+
