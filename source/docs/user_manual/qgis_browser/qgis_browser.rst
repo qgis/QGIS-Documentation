@@ -71,7 +71,7 @@ won't be displayed.
 
 It's also possible to run the |qg| Browser as a stand-alone application.
 
-**Start the |qg| browser**
+**Start the QGIS browser**
 
 * |nix| Type in "qbrowser" at a command prompt.
 * |win| Start the |qg| Browser using the Start menu or desktop shortcut.

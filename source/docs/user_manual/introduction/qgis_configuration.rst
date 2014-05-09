@@ -143,7 +143,7 @@ General Menu
 * |checkbox| :guilabel:`Prompt to save project and data source changes when
   required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
-  version of |qg|`
+  version of QGIS`
 * :guilabel:`Enable macros` |selectstring|. This option was created to handle
   macros that are written to perform an action on project events. You can
   choose between 'Never', 'Ask', 'For this session only' and

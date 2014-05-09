@@ -260,8 +260,8 @@ First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
 by clicking on the **[Browse]** button. Once the file is selected, |qg|
 attempts to parse the file with the most recently used delimiter. To enable |qg| to properly parse the
 file, it is important to select the correct delimiter. You can specify a
-delimiter by activating |radiobutton| :guilabel:`Custom delimiters`, or by activating
-|radiobutton| :guilabel:`Regular expression delimiter` and entering
+delimiter by activating |radiobuttonon| :guilabel:`Custom delimiters`, or by activating
+|radiobuttonon| :guilabel:`Regular expression delimiter` and entering
 text into the :guilabel:`Expression` field. For example, to
 change the delimiter to tab, use ``\t`` (this is a regular expression for the
 tab character).
