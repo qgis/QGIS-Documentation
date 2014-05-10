@@ -1048,7 +1048,6 @@ identify a lake. In the result box you'll now see that our action is visible:
 
 .. figure:: /static/user_manual/working_with_vector/action_identifyaction.png
    :align: center
-   :width: 20em
 
    Select feature and choose action |nix|
 

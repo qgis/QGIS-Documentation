@@ -267,7 +267,6 @@ river in Alaska. In the :guilabel:`Digitizing` menu under the
    **Figure Edit 2:**
 
 .. figure:: /static/user_manual/working_with_vector/editDigitizing.png
-   :width: 20em
    :align: center
 
    Enter Attribute Values Dialog after digitizing a new vector
@@ -1011,7 +1010,6 @@ relation using foreign keys, because there are several airports in most regions.
    **Figure Relations 1:**
 
 .. figure:: /static/user_manual/working_with_vector/relations1.png
-   :width: 30em
    :align: center
 
    Alaska region with airports |nix|
@@ -1058,7 +1056,6 @@ Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
    **Figure Relations 2:**
 
 .. figure:: /static/user_manual/working_with_vector/relations2.png
-   :width: 30em
    :align: center
 
    Relation Manager |nix|
@@ -1081,7 +1078,6 @@ under actions.
    **Figure Relations 3:**
 
 .. figure:: /static/user_manual/working_with_vector/relations3.png
-   :width: 30em
    :align: center
 
    Identification dialog regions with relation to airports |nix|
@@ -1113,7 +1109,6 @@ to assign the current airport to another region.
    **Figure Relations 4:**
 
 .. figure:: /static/user_manual/working_with_vector/relations4.png
-   :width: 30em
    :align: center
 
    Identification dialog airport with relation to regions |nix|
