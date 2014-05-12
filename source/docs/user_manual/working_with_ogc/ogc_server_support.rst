@@ -5,8 +5,8 @@
 |qg| as OGC Data Server
 =======================
 
-|qg| Server is an open source WMS 1.3 and WFS 1.0.0 implementation that, in addition,
-implements advanced cartographic features for thematic mapping. The |qg| Server
+|qg| Server is an open source WMS 1.3, WFS 1.0.0 and WCS 1 1.1.1 implementation that, 
+in addition, implements advanced cartographic features for thematic mapping. The |qg| Server
 is a FastCGI/CGI (Common Gateway Interface) application written in C++ that works
 together with a web server (e.g., Apache, Lighttpd). It is funded by the EU projects
 Orchestra, Sany and the city of Uster in Switzerland.
@@ -28,8 +28,8 @@ for |qg| Server (containing cartographic visualization rules expressed in SLD).
 
 As |qg| desktop and |qg| Server use the same visualization libraries, the maps
 that are published on the web look the same as in desktop GIS. The 'Publish to Web'
-plugin currently supports basic symbolization, with the option to introduce more complex cartographic
-visualization rules manually. As the configuration is performed with
+plugin currently supports basic symbolization, with the option to introduce more complex 
+cartographic visualization rules manually. As the configuration is performed with
 the `SLD standard <http://www.opengeospatial.org/standards/sld>`_ and its
 documented extensions, there is only one standardised language to learn, which
 greatly simplifies the complexity of creating maps for the Web.
@@ -78,12 +78,12 @@ the state boundaries of Alaska. Add the WMS with the URL
 
 .. _`Creating a WMS from a QGIS project`:
 
-Creating a WMS/WFS from a |qg| project
---------------------------------------
+Creating a WMS/WFS/WCS from a |qg| project
+------------------------------------------
 
-To provide a new |qg| Server WMS or WFS, we have to create a |qg| project file with
-some data. Here, we use the 'Alaska' shapefile from the |qg| sample dataset.
-Define the colors and styles of the layers in |qg| and the project CRS,
+To provide a new |qg| Server WMS, WFS or WCS, we have to create a |qg| project 
+file with some data. Here, we use the 'Alaska' shapefile from the |qg| sample 
+dataset. Define the colors and styles of the layers in |qg| and the project CRS,
 if not already defined.
 
 .. _figure_server_2:
@@ -96,16 +96,18 @@ if not already defined.
    :align: center
    :width: 20 em
 
-   Definitions for a |qg| Server WMS/WFS project (KDE)
+   Definitions for a |qg| Server WMS/WFS/WCS project (KDE)
 
 Then, go to the :guilabel:`OWS Server` menu of the
 :menuselection:`Project --> Project Properties` dialog and provide
 some information about the OWS in the fields under
 :guilabel:`Service Capabilities`.
-This will appear in the GetCapabilities response of the WMS or WFS.
+This will appear in the GetCapabilities response of the WMS, WFS or WCS.
 If you don't check |checkbox| :guilabel:`Service capabilities`,
 |qg| Server will use the information given in the :file:`wms_metadata.xml` file
 located in the :file:`cgi-bin` folder.
+
+**WMS capabilities**
 
 In the :guilabel:`WMS capabilities` section, you can define
 the extent advertised in the WMS GetCapabilities response by entering
@@ -137,36 +139,42 @@ This opens the :guilabel:`Select restricted layers and groups` dialog, which
 allows you to choose the layers and groups that you don't want to be published.
 Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries at once.
 
-.. FIXME QGIS 2.1: From |qg| 2.1 you can requested GetFeatureInfo in different outputformat: plain text, XML and GML.
-.. FIXME QGIS 2.1: guilabel has been changed to `Add geometry to feature response`
-.. FIXME QGIS 2.1: text or GML format depending the outpurformat choosen for the GetFeatureInfo request.
+You can receive requested GetFeatureInfo as plain text, XML and GML. Default is XML, 
+text or GML format depends the output format choosen for the GetFeatureInfo request.
 
-If you wish, you can check |checkbox| :guilabel:`Add WKT geometry to feature
-info response`.
-This will include in the GetFeatureInfo response the geometries of the features
-in a text format.
-If you want |qg| Server to advertise specific request URLs in the WMS
-GetCapabilities response, enter the corresponding URL in the
+If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`. 
+This will include in the GetFeatureInfo response the geometries of the 
+features in a text format. If you want |qg| Server to advertise specific request URLs 
+in the WMS GetCapabilities response, enter the corresponding URL in the
 :guilabel:`Advertised URL` field.
 Furthermore, you can restrict the maximum size of the maps returned by the
 GetMap request by entering the maximum width and height into the respective
 fields under :guilabel:`Maximums for GetMap request`.
 
+**WFS capabilities**
+
 In the :guilabel:`WFS capabilities` area, you can select the layers that you
-want to provide as WFS, and specify if they will allow the update, insert and
+want to publish as WFS, and specify if they will allow the update, insert and
 delete operations.
 If you enter a URL in the :guilabel:`Advertised URL` field of the
 :guilabel:`WFS capabilities` section, |qg| Server will advertise this specific
 URL in the WFS GetCapabilities response.
 
-Now, save the
-session in a project file :file:`alaska.qgs`. To provide the project as a WMS/WFS,
-we create a new folder ``/usr/lib/cgi-bin/project`` with admin privileges and
-add the project file :file:`alaska.qgs` and a copy of the :file:`qgis_mapserv.fcgi`
+**WCS capabilities**
+
+In the :guilabel:`WCS capabilities` area, you can select the layers that you
+want to publish as WCS. If you enter a URL in the :guilabel:`Advertised URL` field of the
+:guilabel:`WCS capabilities` section, |qg| Server will advertise this specific
+URL in the WCS GetCapabilities response.
+
+Now, save the session in a project file :file:`alaska.qgs`. To provide the project 
+as a WMS/WFS, we create a new folder ``/usr/lib/cgi-bin/project`` with admin privileges 
+and add the project file :file:`alaska.qgs` and a copy of the :file:`qgis_mapserv.fcgi`
 file - that's all.
 
-Now we test our project WMS and WFS. Add the WMS and WFS as described in
-:ref:`ogc-wms-layers` and :ref:`ogc-wfs` to |qg| and load the WMS. The URL is:
+Now we test our project WMS, WFS and WCS. Add the WMS, WFS and WCS as described in
+:ref:`ogc-wms-layers`, :ref:`ogc-wfs` and :ref:`ogc-wcs` to |qg| and load the data. 
+The URL is:
 
 ::
 
