@@ -405,8 +405,8 @@ Labels Menu
 The |mActionLabeling| :sup:`Labels` core application provides smart
 labeling for vector point, line and polygon layers, and it only requires a
 few parameters. This new application also supports on-the-fly transformed layers.
-The core functions of the application have been redesigned. In |qg| 2.0,
-there are now a number of other features that improve the labeling. The following menus
+The core functions of the application have been redesigned. In |qg|, there are a 
+number of other features that improve the labeling. The following menus
 have been created for labeling the vector layers:
 
 * Text
@@ -428,7 +428,7 @@ Start |qg| and load a vector point layer. Activate the layer in the legend and c
 
 The first step is to activate the |checkbox| :guilabel:`Label this layer with` checkbox
 and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
-want to define labels based on expressions.
+want to define labels based on expressions - See :ref:`labeling_with_expressions`.
 
 The following steps describe a simple labeling without using the :guilabel:`Data defined override` functions,
 which are situated next to the drop-down menus.
@@ -516,7 +516,7 @@ whether the number of features to be labeled is limited and to |checkbox| :guila
 The first step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
 in the :guilabel:`Label settings` tab and select an attribute column to use for
 labeling. Click |mActionmIconExpressionEditorOpen| if you
-want to define labels based on expressions.
+want to define labels based on expressions - See :ref:`labeling_with_expressions`.
 
 After that, you can define the text style in the :guilabel:`Text` menu. Here, you can use the
 same settings as for point layers.
@@ -561,7 +561,7 @@ The :guilabel:`Rendering` menu has nearly the same entries as for point layers. 
 
 The first step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
 and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
-want to define labels based on expressions.
+want to define labels based on expressions - See :ref:`labeling_with_expressions`.
 
 In the :guilabel:`Text` menu, define the text style. The entries are the same as for point
 and line layers.
@@ -610,6 +610,71 @@ The entries in the :guilabel:`Rendering` menu are the same as for line layers. Y
 
    Smart labeling of vector polygon layers |nix|
 
+
+.. _labeling_with_expressions:
+
+**Define labels based on expressions**
+
+QGIS allows to use expressions to label features. Just click the 
+|mActionmIconExpressionEditorOpen| icon in the |mActionLabeling| :sup:`Labels` 
+menu of the properties dialog. In figure_labels_4_ you see a sample expression 
+to label the alaska regions with name and area size, based on the field 'NAME_2', 
+some descriptive text and the function '$area()' in combination with 
+'format_number()' to make it look nicer.
+
+.. features act as obstacles for labels or not .
+
+.. _figure_labels_4:
+
+.. only:: html
+
+   **Figure Labels 4:**
+
+.. figure:: /static/user_manual/working_with_vector/label_expression.png
+   :align: center
+   :width: 30em
+
+   Using expressions for labeling |nix|
+
+Expression based labeling is easy to work with. All you have to take care of 
+is, that you need to combine all elements (strings, fields and functions) with a 
+string concatenation sign '||' and that fields a written in "double quotes" 
+and strings in 'single quotes'. Let's have a look at some examples:
+
+::
+
+   # label based on two fields 'name' and 'place' with a  
+   "name" || ', ' || "place"
+
+   -> John Smith, Paris 
+
+   # label based on two fields 'name' and 'place' with a descriptive text
+   'My name is ' || "name" || 'and I live in ' || "place"
+
+   -> My name is John Smith and I live in Paris
+
+   # label based on two fields 'name' and 'place' with a descriptive text 
+   # and a line break
+   'My name is ' || "name" || '\nI live in ' || "place"
+
+   -> My name is John Smith
+      I live in Paris
+
+   # create a multi-line label based on a field and the $area function
+   # to show the place name and it's area size based on unit meter.
+   'The area of ' || "place" || 'has a size of ' || $area || 'm²'
+
+   -> The area of Paris has a size of 105000000 m²
+
+   # create a CASE ELSE condition. If the population value in field 
+   # population is <= 50000 it is a town, otherwise a city.  
+   'This place is a ' || CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END
+
+  -> This place is a town
+
+As you can see in the expression builder, you have hundreds if functions available to 
+create simple and very complex expressions to label your data in QGIS.
+
 **Using data-defined override for labeling**
 
 With the data-defined override functions, the settings for the labeling
@@ -618,7 +683,7 @@ You can activate and deactivate the function with the right-mouse button.
 Hover over the symbol and you see the information about the data-defined override,
 including the current definition field.
 We now describe an example using the data-defined override function for the
-|mActionMoveLabel|:sup:`Move label` function (see figure_labels_4_ ).
+|mActionMoveLabel|:sup:`Move label` function (see figure_labels_5_ ).
 
 #. Import :file:`lakes.shp` from the |qg| sample dataset.
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
@@ -628,14 +693,14 @@ We now describe an example using the data-defined override function for the
    for Y. The icons are now highlighted in yellow.
 #. Zoom into a lake.
 #. Go to the Label toolbar and click the |mActionMoveLabel| icon. Now you can shift the label
-   manually to another position (see figure_labels_5_ ). The new position of the label is saved in the 'xlabel' and 'ylabel' columns of the
+   manually to another position (see figure_labels_6_ ). The new position of the label is saved in the 'xlabel' and 'ylabel' columns of the
    attribute table.
 
-.. _figure_labels_4:
+.. _figure_labels_5:
 
 .. only:: html
 
-   **Figure Labels 4:**
+   **Figure Labels 5:**
 
 .. figure:: /static/user_manual/working_with_vector/label_data_defined.png
    :align: center
@@ -644,11 +709,11 @@ We now describe an example using the data-defined override function for the
    Labeling of vector polygon layers with data-defined override |nix|
 
 
-.. _figure_labels_5:
+.. _figure_labels_6:
 
 .. only:: html
 
-   **Figure Labels 5:**
+   **Figure Labels 6:**
 
 .. figure:: /static/user_manual/working_with_vector/move_label.png
    :width: 20em
