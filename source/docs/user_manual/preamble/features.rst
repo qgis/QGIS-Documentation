@@ -78,7 +78,7 @@ You can perform spatial data analysis on spatial databases and other
 OGR- supported formats. |qg| currently offers vector analysis,
 sampling, geoprocessing, geometry and database management tools. You
 can also use the integrated GRASS tools, which include the complete
-GRASS functionality of more than 400 modules. (See Section
+GRASS functionality of more than 400 modules. (See section
 :ref:`sec_grass`.) Or, you can work with the Processing Plugin, which
 provides a powerful geospatial analysis framework to call native and
 third-party algorithms from |qg|, such as GDAL, SAGA, GRASS, fTools
@@ -182,12 +182,14 @@ use something like ::
     user@host:~$ ulimit -Sn
     user@host:~$ qgis
 
-**To fix it forever**, on most Linux systems, resource limits are set
-*on login by the ``pam_limits`` module according to the settings
-*contained in :file:`/etc/security/limits.conf` or
-*:file:`/etc/security/limits.d/*.conf`. You should be able to edit
-*those files if you have root privilege (also via sudo), but you will
-*need to log in again before any changes take effect.
+**To fix it forever**
+
+On most Linux systems, resource limits are set
+on login by the ``pam_limits`` module according to the settings
+contained in :file:`/etc/security/limits.conf` or
+:file:`/etc/security/limits.d/*.conf`. You should be able to edit
+those files if you have root privilege (also via sudo), but you will
+need to log in again before any changes take effect.
 
 More info:
 
