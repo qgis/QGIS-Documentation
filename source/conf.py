@@ -1038,6 +1038,12 @@ rst_epilog = """
    :width: 1.5em
 .. |sampling| image:: /static/common/sampling.png
    :width: 1.5em
+.. |mActionRemove| image:: /static/common/mActionRemove.png
+   :width: 1.5em
+.. |mActionLink| image:: /static/common/mActionLink.png
+   :width: 1.5em
+.. |mActionUnlink| image:: /static/common/mActionUnlink.png
+   :width: 1.5em
 
 .. |basic| image:: /static/training_manual/global/basic.png
 .. |moderate| image:: /static/training_manual/global/moderate.png

@@ -428,7 +428,7 @@ Start |qg| and load a vector point layer. Activate the layer in the legend and c
 
 The first step is to activate the |checkbox| :guilabel:`Label this layer with` checkbox
 and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
-want to define labels based on expressions - See :ref:`labeling_with_expressions`.
+want to define labels based on expressions - See labeling_with_expressions_.
 
 The following steps describe a simple labeling without using the :guilabel:`Data defined override` functions,
 which are situated next to the drop-down menus.
@@ -516,7 +516,7 @@ whether the number of features to be labeled is limited and to |checkbox| :guila
 The first step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
 in the :guilabel:`Label settings` tab and select an attribute column to use for
 labeling. Click |mActionmIconExpressionEditorOpen| if you
-want to define labels based on expressions - See :ref:`labeling_with_expressions`.
+want to define labels based on expressions - See labeling_with_expressions_.
 
 After that, you can define the text style in the :guilabel:`Text` menu. Here, you can use the
 same settings as for point layers.
@@ -561,7 +561,7 @@ The :guilabel:`Rendering` menu has nearly the same entries as for point layers. 
 
 The first step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
 and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
-want to define labels based on expressions - See :ref:`labeling_with_expressions`.
+want to define labels based on expressions - See labeling_with_expressions_.
 
 In the :guilabel:`Text` menu, define the text style. The entries are the same as for point
 and line layers.
@@ -792,6 +792,8 @@ widgets. These widgets are:
 * **Webview**: Field contains a URL. The width and height of the field is variable.
 * **Color**: A field that allows you to enter color codes. During data entry, the color is visible through a color bar
   included in the field.
+* **Relation Reference**: This widged lets you embed the feature form of the referenced layer on the feature form 
+  of the actual layer. See :ref:`vector_relations`.
 
 With the **Attribute editor layout**, you can now define built-in forms for data entry jobs (see figure_fields_2_).
 Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| icon to create
@@ -901,7 +903,7 @@ These may include slivers between polygons and inaccurate rendering when using o
 Display Menu
 ------------
 
-|mActionMapTips| Starting with |qg| 2.0, there is now a menu specifically for Map Tips. It includes a new feature:
+|mActionMapTips| This menu is specifically created for Map Tips. It includes a new feature:
 Map Tip display text in HTML. While you can still choose a |radiobuttonoff| :guilabel:`Field`
 to be displayed when hovering over a feature on the map, it is now possible to insert HTML code that creates a complex
 display when hovering over a feature. To activate Map Tips, select the menu option :menuselection:`View --> MapTips`. Figure Display 1 shows an example of HTML code.
