@@ -479,6 +479,30 @@ definitions:
   - **Available in style** --- The image styles that this layer can be rendered
     in by the WMS server.
 
+.. _`ogc-wms-legend`:
+
+Show WMS legend graphic in table of contents and composer
+---------------------------------------------------------
+
+The |qg| WMS data provider is able to display a legend graphic in the table of 
+contents' layer list and in the map composer. The WMS legend will be shown only 
+if the WMS server has GetLegendGraphic capability and the layer has 
+getCapability url specified, so you additionally have to select a styling for the 
+layer.
+
+If a legendGraphic is available, it is shown below the layer. It is little and 
+you have to click on it to open it in real dimension (due to QgsLegendInterface 
+architectural limitation). Clicking on the layer's legend will open a frame with 
+the legend at full resolution. 
+
+In the print composer, the legend will be integrated at it's original (dowloaded) 
+dimension. Resolution of the legend graphic can be set in the item properties 
+under Legend -> WMS LegendGraphic to match your printing requirements
+
+The legend will display contextual information based on your current scale. The 
+WMS legend will be shown only if the WMS server has GetLegendGraphic capability 
+and the layer has getCapability url specified, so you have to select a styling.
+
 .. _`ogc-wms-limits`:
 
 WMS Client Limitations

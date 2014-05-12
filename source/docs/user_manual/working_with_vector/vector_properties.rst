@@ -654,14 +654,14 @@ and strings in 'single quotes'. Let's have a look at some examples:
    -> My name is John Smith and I live in Paris
 
    # label based on two fields 'name' and 'place' with a descriptive text 
-   # and a line break
+   # and a line break (\n)
    'My name is ' || "name" || '\nI live in ' || "place"
 
    -> My name is John Smith
       I live in Paris
 
    # create a multi-line label based on a field and the $area function
-   # to show the place name and it's area size based on unit meter.
+   # to show the place name and its area size based on unit meter.
    'The area of ' || "place" || 'has a size of ' || $area || 'm²'
 
    -> The area of Paris has a size of 105000000 m²
