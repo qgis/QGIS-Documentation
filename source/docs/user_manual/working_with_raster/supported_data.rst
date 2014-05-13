@@ -74,8 +74,9 @@ open a dialog to set raster properties for the layer.
 
 **Right mouse button menu for raster layers**
 
-* :menuselection:`Zoom to layer extent`
+* :menuselection:`Zoom to Layer Extent`
 * :menuselection:`Zoom to Best Scale (100\%)`
+* :menuselection:`Stretch Using Current Extend`
 * :menuselection:`Show in Overview`
 * :menuselection:`Remove`
 * :menuselection:`Duplicate`

@@ -269,7 +269,7 @@ Color rendering
 For every :guilabel:`Band rendering`, a :guilabel:`Color rendering` is possible.
 
 You can also achieve special rendering effects for your raster file(s) using one
-of the blending modes (see :ref:`blend_modes`).
+of the blending modes (see :ref:`vector_properties_dialog`).
 
 Further settings can be made in modifiying the :guilabel:`Brightness`, the
 :guilabel:`Saturation` and the :guilabel:`Contrast`. You can also use a :guilabel:`Grayscale`

@@ -157,29 +157,29 @@ the parameters to connect to your desired WMS server, as listed in table_OGC_1_:
 
 .. _table_OGC_1:
 
-+--------------------------------------+----------------------------------------------------------------+
-| Name                                 | A name for this connection.  This name will be used in the     |
-|                                      | Server Connections drop-down box so that you can distinguish   |
-|                                      | it from other WMS servers.                                     |
-+--------------------------------------+----------------------------------------------------------------+
-| URL                                  | URL of the server providing the data. This must be a resolvable|
++--------------------------------------+------------------------------------------------------------------+
+| Name                                 | A name for this connection.  This name will be used in the       |
+|                                      | Server Connections drop-down box so that you can distinguish     |
+|                                      | it from other WMS servers.                                       |
++--------------------------------------+------------------------------------------------------------------+
+| URL                                  | URL of the server providing the data. This must be a resolvable  |
 |                                      | host name -- the same format as you would use to open a telnet   |
-|                                      | connection or ping a host.                                     |
-+--------------------------------------+----------------------------------------------------------------+
-| Username                             | Username to access a secured WMS server.  This parameter is    |
-|                                      | optional.                                                      |
-+--------------------------------------+----------------------------------------------------------------+
-| Password                             | Password for a basic authenticated WMS server. This parameter  |
-|                                      | is optional.                                                   |
-+--------------------------------------+----------------------------------------------------------------+
-| Ignore GetMap URI                    | |checkbox|                                                     |
-|                                      | :guilabel:`Ignore GetMap URI reported in capabilities`. Use    |
-|                                      | given URI from URL field above.                                |
-+--------------------------------------+----------------------------------------------------------------+
-| Ignore GetFeatureInfo URI            | |checkbox|                                                     |
-|                                      | :guilabel:`Ignore GetFeatureInfo URI reported in capabilities` |
-|                                      |. Use given URI from URL field above.                           |
-+--------------------------------------+----------------------------------------------------------------+
+|                                      | connection or ping a host.                                       |
++--------------------------------------+------------------------------------------------------------------+
+| Username                             | Username to access a secured WMS server.  This parameter is      |
+|                                      | optional.                                                        |
++--------------------------------------+------------------------------------------------------------------+
+| Password                             | Password for a basic authenticated WMS server. This parameter    |
+|                                      | is optional.                                                     |
++--------------------------------------+------------------------------------------------------------------+
+| Ignore GetMap URI                    | |checkbox|                                                       |
+|                                      | :guilabel:`Ignore GetMap URI reported in capabilities`. Use      |
+|                                      | given URI from URL field above.                                  |
++--------------------------------------+------------------------------------------------------------------+
+| Ignore GetFeatureInfo URI            | |checkbox|                                                       |
+|                                      | :guilabel:`Ignore GetFeatureInfo URI reported in capabilities`   |
+|                                      |. Use given URI from URL field above.                             |
++--------------------------------------+------------------------------------------------------------------+
 
 Table OGC 1: WMS Connection Parameters
 
@@ -535,7 +535,7 @@ details.
 
 .. index:: QGIS_mapserver, WMS_1.3.0
 
-.. tip:: **|qg| WMS Mapserver**
+.. tip:: **QGIS WMS Mapserver**
 
    Since Version 1.7.0, |qg| has its own implementation of a WMS 1.3.0 Mapserver.
    Read more about this in chapter :ref:`label_qgisserver`.
