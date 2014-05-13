@@ -570,7 +570,8 @@ Additionally, you can also create your own annotation forms. The
 attributes of a vector layer in a customized Qt Designer form (see
 figure_custom_annotation_). This is similar to the designer forms for the
 :guilabel:`Identify features` tool, but displayed in an annotation item.
-Also see the |qg| blog http://blog.qgis.org/node/143 for more information.
+Also see this video https://www.youtube.com/watch?v=0pDBuSbQ02o from 
+Tim Sutton for more information.
 
 .. _figure_custom_annotation:
 
