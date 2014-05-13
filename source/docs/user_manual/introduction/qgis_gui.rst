@@ -204,7 +204,7 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 :menuselection:`Panels -->`                                     \                     see :ref:`sec_panels_and_toolbars`          \
 :menuselection:`Toolbars -->`                                   \                     see :ref:`sec_panels_and_toolbars`          \
-:menuselection:`Toggle Full Screen Mode`                        :kbd:`F 11`         \                                           \
+:menuselection:`Toggle Full Screen Mode`                        :kbd:`F 11`           \                                           \
 |mActionProjectProperties| :guilabel:`Project Properties ...`   :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \
 |mActionCustomProjection| :guilabel:`Custom CRS ...`            \                     see :ref:`sec_custom_projections`           \
 :guilabel:`Style Manager...`                                    \                     see :ref:`vector_style_manager`             \

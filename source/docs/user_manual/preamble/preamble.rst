@@ -44,19 +44,19 @@ form, the browser displays and handles both identically.
 **User, Installation and Coding Guide Authors and Editors:**
 
 +--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Tara Athan | Radim Blazek | Godofredo Contreras | Otto Dassau | Martin Dobias | 
+| Tara Athan         | Radim Blazek        | Godofredo Contreras  | Otto Dassau          | Martin Dobias        | 
 +--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Peter Ersts | Anne Ghisla | Stephan Holl | N\. Horning | Magnus Homann | 
+| Peter Ersts        | Anne Ghisla         | Stephan Holl         | N\. Horning          | Magnus Homann        | 
 +--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Werner Macho | Carson J.Q. Farmer | Tyler Mitchell | K\. Koy | Lars Luthman | 
+| Werner Macho       | Carson J.Q. Farmer  | Tyler Mitchell       | K\. Koy              | Lars Luthman         | 
 +--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Claudia A. Engel | Brendan Morely | David Willis | Jürgen E. Fischer | Marco Hugentobler | 
+| Claudia A. Engel   | Brendan Morely      | David Willis         | Jürgen E. Fischer   | Marco Hugentobler    | 
 +--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Larissa Junek | Diethard Jansen | Paolo Corti | Gavin Macaulay | Gary E. Sherman | 
+| Larissa Junek      | Diethard Jansen     | Paolo Corti          | Gavin Macaulay       | Gary E. Sherman      | 
 +--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Tim Sutton | Alex Bruy | Raymond Nijssen | Richard Duivenvoorde | Andreas Neumann | 
+| Tim Sutton         | Alex Bruy           | Raymond Nijssen      | Richard Duivenvoorde | Andreas Neumann      | 
 +--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Astrid Emde | Yves Jacolin | Alexandre Neto | Andy Schmid | Hien Tran-Quang | 
+| Astrid Emde        | Yves Jacolin        | Alexandre Neto       | Andy Schmid          | Hien Tran-Quang      | 
 +--------------------+---------------------+----------------------+----------------------+----------------------+
 
 

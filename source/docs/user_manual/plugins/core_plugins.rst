@@ -26,14 +26,14 @@ Icon                    Plugin                    Description                   
 |gps_importer|          GPS Tools                 Tools for loading and importing GPS data                :ref:`plugin_gps`
 |grass|                 GRASS                     GRASS functionality                                     :ref:`sec_grass`
 |raster-info|           GDAL Tools                GDAL raster functionality                               :ref:`label_plugingdaltools`
-|mGeorefRun|            Georeferencer GDAL        Georeference Raster with GDAL                           :ref:`georef`
-|heatmap|               Heatmap                   Create heatmap raster from input vector points          :ref:`heatmap_plugin`
+|mGeorefRun|            Georeferencer GDAL        Georeference rasters with GDAL                          :ref:`georef`
+|heatmap|               Heatmap                   Create heatmap rasters from input vector points         :ref:`heatmap_plugin`
 |interpolation|         Interpolation plugin      Interpolation on base of vertices of a vector layer     :ref:`interpol`
 |offline_editing_copy|  Offline Editing           Offline editing and synchronizing with database         :ref:`offlinedit`
 |oracle_raster|         Oracle Spatial Georaster  Access Oracle Spatial GeoRasters                        :ref:`oracle_raster`
 |plugin_installer|      Plugin Manager            Manage core and external plugins                        :ref:`managing_plugins`
 |raster_terrain|        Raster Terrain Analysis   Compute geomorphological features from DEMs             :ref:`rasterrain`
-|roadgraph|             Road Graph Plugin         Shortest path analysis                                  :ref:`roadgraph`
+|roadgraph|             Road Graph plugin         Shortest path analysis                                  :ref:`roadgraph`
 |icon_sqlanywhere|      SQL Anywhere plugin       Access SQL anywhere DB                                  :ref:`sqlanywhere`
 |spatialquery|          Spatial Query             Spatial queries on vectors                              :ref:`spatial_query`
 |raster-stats|          Zonal Statistics          Calculate raster statistics for vector polygons         :ref:`zonal_statistics`

@@ -163,7 +163,7 @@ the parameters to connect to your desired WMS server, as listed in table_OGC_1_:
 |                                      | it from other WMS servers.                                     |
 +--------------------------------------+----------------------------------------------------------------+
 | URL                                  | URL of the server providing the data. This must be a resolvable|
-|                                      | host name -- the same format as you would use to open a telnet   |
+|                                      | host name -- the same format as you would use to open a telnet |
 |                                      | connection or ping a host.                                     |
 +--------------------------------------+----------------------------------------------------------------+
 | Username                             | Username to access a secured WMS server.  This parameter is    |
@@ -177,8 +177,8 @@ the parameters to connect to your desired WMS server, as listed in table_OGC_1_:
 |                                      | given URI from URL field above.                                |
 +--------------------------------------+----------------------------------------------------------------+
 | Ignore GetFeatureInfo URI            | |checkbox|                                                     |
-|                                      | :guilabel:`Ignore GetFeatureInfo URI reported in capabilities` |
-|                                      |. Use given URI from URL field above.                           |
+|                                      | :guilabel:`Ignore GetFeatureInfo URI reported in capabilities`.|
+|                                      | Use given URI from URL field above.                            |
 +--------------------------------------+----------------------------------------------------------------+
 
 Table OGC 1: WMS Connection Parameters
