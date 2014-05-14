@@ -670,7 +670,6 @@ small example:
 
 .. figure:: /static/user_manual/introduction/embed_dialog.png
    :align: center
-   :width: 20em
 
    Select layers and groups to embed |nix|
 
