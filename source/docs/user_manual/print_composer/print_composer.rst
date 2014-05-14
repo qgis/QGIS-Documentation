@@ -914,11 +914,17 @@ Size and position
 -----------------
 
 Each item inside the Composer can be moved/resized to create a perfect layout.
-The first step is to select the item using the |mActionSelect| :sup:`Select/Move item` button; 
-once selected the item can be moved or resized using the squares on the boundary. 
-For better precision, you can move an item using the :kbd:`Arrow keys` on the keyboard; 
-if the movement is too slow, you can speed up it holding :kbd:`Shift`.
-While resizing, holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Ctrl` will resize from the item center.
+For both operations the first step is to activate the |mActionSelect| :sup:`Select/Move item` 
+tool and to click on the item; you can then move it using the mouse while holding the left button. 
+If you need to constrain the movements to the horizontal or the vertical axis, just hold 
+the :kbd:`Shift` while moving the mouse.
+If you need a better precision, you can move a selected item using the :kbd:`Arrow keys` on the keyboard; 
+if the movement is too slow, you can speed up it by holding :kbd:`Shift`.
+
+A selected item will show squares on its boundaries; moving one of them with the mouse, will resize the item
+in the corresponding direction.
+While resizing, holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Ctrl` will resize from 
+the item center.
 
 The correct position for an item can be obtained using snapping to grid or smart guides. If you need to 
 disable the snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
