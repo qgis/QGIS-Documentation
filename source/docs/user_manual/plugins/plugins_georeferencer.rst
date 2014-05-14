@@ -20,28 +20,30 @@ you can accurately determine coordinates.
 
 .. _table_georeferencer_1:
 
-+---------------------------+----------------------------+----------------------------+----------------------------+
-| Icon                      | Purpose                    | Icon                       | Purpose                    |
-+===========================+============================+============================+============================+
-+---------------------------+----------------------------+----------------------------+----------------------------+
-| |mActionOpenRaster|       | Open raster                | |mActionStartGeoref|       | Start georeferencing       |
-+---------------------------+----------------------------+----------------------------+----------------------------+
-| |mActionGDALScript|       | Generate GDAL Script       | |mActionloadGCPpoints|     | Load GCP Points            |
-+---------------------------+----------------------------+----------------------------+----------------------------+
-| |mActionSaveGCPpointsAs|  | Save GCP Points As         | |mActionTransformSettings| | Transformation settings    |
-+---------------------------+----------------------------+----------------------------+----------------------------+
-| |mActionAddGCPPoint|      | Add Point                  | |mActionDeleteGCPPoint|    | Delete Point               |
-+---------------------------+----------------------------+----------------------------+----------------------------+
-| |mActionMoveGCPPoint|     | Move GCP Point             | |mActionPan|               | Pan                        |
-+---------------------------+----------------------------+----------------------------+----------------------------+
-| |mActionZoomIn|           | Zoom In                    | |mActionZoomOut|           | Zoom Out                   |
-+---------------------------+----------------------------+----------------------------+----------------------------+
-| |mActionZoomToLayer|      | Zoom To Layer              | |mActionZoomLast|          | Zoom Last                  |
-+---------------------------+----------------------------+----------------------------+----------------------------+
-| |mActionZoomNext|         | Zoom Next                  | |mActionLinkGeorefToQGis|  | Link Georeferencer to |qg| |
-+---------------------------+----------------------------+----------------------------+----------------------------+
-| |mActionLinkQGisToGeoref| | Link |qg| to Georeferencer |                            |                            |
-+---------------------------+----------------------------+----------------------------+----------------------------+
++--------------------------------+----------------------------+-------------------------------+----------------------------+
+| Icon                           | Purpose                    | Icon                          | Purpose                    |
++================================+============================+===============================+============================+
++--------------------------------+----------------------------+-------------------------------+----------------------------+
+| |mActionOpenRaster|            | Open raster                | |mActionStartGeoref|          | Start georeferencing       |
++--------------------------------+----------------------------+-------------------------------+----------------------------+
+| |mActionGDALScript|            | Generate GDAL Script       | |mActionloadGCPpoints|        | Load GCP Points            |
++--------------------------------+----------------------------+-------------------------------+----------------------------+
+| |mActionSaveGCPpointsAs|       | Save GCP Points As         | |mActionTransformSettings|    | Transformation settings    |
++--------------------------------+----------------------------+-------------------------------+----------------------------+
+| |mActionAddGCPPoint|           | Add Point                  | |mActionDeleteGCPPoint|       | Delete Point               |
++--------------------------------+----------------------------+-------------------------------+----------------------------+
+| |mActionMoveGCPPoint|          | Move GCP Point             | |mActionPan|                  | Pan                        |
++--------------------------------+----------------------------+-------------------------------+----------------------------+
+| |mActionZoomIn|                | Zoom In                    | |mActionZoomOut|              | Zoom Out                   |
++--------------------------------+----------------------------+-------------------------------+----------------------------+
+| |mActionZoomToLayer|           | Zoom To Layer              | |mActionZoomLast|             | Zoom Last                  |
++--------------------------------+----------------------------+-------------------------------+----------------------------+
+| |mActionZoomNext|              | Zoom Next                  | |mActionLinkGeorefToQGis|     | Link Georeferencer to |qg| |
++--------------------------------+----------------------------+-------------------------------+----------------------------+
+| |mActionLinkQGisToGeoref|      | Link |qg| to Georeferencer | |mActionFullHistogramStretch| | Full histogram stretch     |
++--------------------------------+----------------------------+-------------------------------+----------------------------+
+| |mActionLocalHistogramStretch| | Local histogram stretch    |                               |                            |
++--------------------------------+----------------------------+-------------------------------+----------------------------+
 
 Table Georeferencer 1: Georeferencer Tools
 
@@ -67,8 +69,8 @@ compute the world file parameters. The more coordinates you provide, the better
 the result will be.
 
 The first step is to start |qg|, load the Georeferencer Plugin (see
-:ref:`load_core_plugin`) and click on the |mGeorefRun| :sup:`Georeferencer`
-icon, which appears in the |qg| toolbar menu. The Georeferencer Plugin dialog
+:ref:`managing_plugins`) and click on :menuselection:`Raster --> Georeferencer`
+, which appears in the |qg| menu bar. The Georeferencer Plugin dialog
 appears as shown in figure_georeferencer_1_.
 
 For this example, we are using a topo sheet of South Dakota from SDGS. It can

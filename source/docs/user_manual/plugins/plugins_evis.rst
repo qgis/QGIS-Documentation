@@ -46,8 +46,7 @@ into |qg| before running the Event Browser.
 Launch the Event Browser module
 ...............................
 
-To launch the Event Browser module, either click on the |event_browser|
-:sup:`eVis Event Browser` icon or click on :menuselection:`Database --> eVis -->
+To launch the Event Browser module, click on :menuselection:`Database --> eVis -->
 eVis Event Browser`. This will open the :guilabel:`Generic Event Browser` window.
 
 The :guilabel:`Event Browser` window has three tabs displayed at the top

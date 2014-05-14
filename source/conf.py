@@ -1056,6 +1056,14 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionUnlink| image:: /static/common/mActionUnlink.png
    :width: 1.5em
+.. |create_gpx| image:: /static/common/create_gpx.png
+   :width: 1.5em
+.. |import_gpx| image:: /static/common/import_gpx.png
+   :width: 1.5em
+.. |mActionFullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png
+   :width: 1.5em
+.. |mActionLocalHistogramStretch| image:: /static/common/mActionLocalHistogramStretch.png
+   :width: 1.5em
 
 .. |basic| image:: /static/training_manual/global/basic.png
 .. |moderate| image:: /static/training_manual/global/moderate.png

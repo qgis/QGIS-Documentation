@@ -14,7 +14,7 @@ management and analysis functions that are both fast and functional.
 
 fTools is now automatically installed and enabled in new versions of |qg|, and
 as with all plugins, it can be disabled and enabled using the Plugin Manager
-(see :ref:`load_core_plugin`). When enabled, the fTools plugin adds a
+(see :ref:`managing_plugins`). When enabled, the fTools plugin adds a
 :menuselection:`Vector` menu to |qg|, providing functions ranging from Analysis
 and Research Tools to Geometry and Geoprocessing Tools, as well as several useful
 Data Management Tools.

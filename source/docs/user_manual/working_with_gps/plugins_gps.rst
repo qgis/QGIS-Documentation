@@ -37,15 +37,15 @@ Activate the |checkbox| :guilabel:`GPS Tools` checkbox. When this plugin
 is loaded, two buttons with a small handheld GPS device will show up in the
 toolbar:
 
-* |gps_importer| :sup:`Create new GPX Layer`
-* |gps_importer| :sup:`GPS Tools`
+* |create_gpx| :sup:`Create new GPX Layer`
+* |import_gpx| :sup:`GPS Tools`
 
 For working with GPS data, we provide an example GPX file available in the |qg|
 sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See section
 :ref:`label_sampledata` for more information about the sample data.
 
 #. Select :menuselection:`Vector --> GPS --> GPS Tools` or click the
-   |gps_importer| :sup:`GPS Tools` icon in the toolbar and open the
+   |import_gpx| :sup:`GPS Tools` icon in the toolbar and open the
    :guilabel:`Load GPX file` tab (see figure_GPS_1_).
 #. Browse to the folder :file:`qgis_sample_data/gps/`, select the GPX file
    :file:`national_monuments.gpx` and click **[Open]**.

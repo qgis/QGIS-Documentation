@@ -15,7 +15,7 @@ editing vector attributes, creating new vector layers and analysing GRASS 2-D an
 In this section, we'll introduce the plugin functionalities and give some examples
 of managing and working with GRASS data. The following main features are provided
 with the toolbar menu when you start the GRASS plugin, as described in section
-:ref:`sec_starting_grass`:
+sec_starting_grass_:
 
 * |grass_open_mapset| :sup:`Open mapset`
 * |grass_new_mapset| :sup:`New mapset`
@@ -39,7 +39,7 @@ Therefore, go to the menu :menuselection:`Plugins -->` |mActionShowPluginManager
 **[OK]**.
 
 You can now start loading raster and vector layers from an existing GRASS
-:file:`LOCATION` (see section :ref:`sec_load_grassdata`). Or, you can create a new
+:file:`LOCATION` (see section sec_load_grassdata_). Or, you can create a new
 GRASS :file:`LOCATION` with |qg| (see section :ref:`sec_create_loc`) and import
 some raster and vector data (see section :ref:`sec_import_loc_data`) for further
 analysis with the GRASS Toolbox (see section :ref:`subsec_grass_toolbox`).

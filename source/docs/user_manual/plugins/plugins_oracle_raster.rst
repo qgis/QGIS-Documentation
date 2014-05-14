@@ -2,8 +2,8 @@
 
 .. _oracle_raster:
 
-Oracle GeoRaster Plugin
-=======================
+Oracle Spatial GeoRaster Plugin
+===============================
 
 In Oracle databases, raster data can be stored in SDO_GEORASTER objects available
 with the Oracle Spatial extension. In |qg|, the |oracle_raster|

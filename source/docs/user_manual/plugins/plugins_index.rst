@@ -25,6 +25,7 @@ Plugins
    plugins_heatmap
    plugins_road_graph
    plugins_spatial_query
+   plugins_spit
    plugins_sql_anywhere
    plugins_topology_checker
    plugins_zonal_statistics
