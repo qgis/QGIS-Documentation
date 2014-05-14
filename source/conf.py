@@ -479,6 +479,18 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAlignBottom|  image:: /static/common/mActionAlignBottom.png
    :width: 1.5em
+.. |mIconAtlas|  image:: /static/common/mIconAtlas.png
+   :width: 1.5e
+.. |mActionAtlasFirst|  image:: /static/common/mActionAtlasFirst.png
+   :width: 1.5e
+.. |mActionAtlasLast|  image:: /static/common/mActionAtlasLast.png
+   :width: 1.5e
+.. |mActionAtlasNext|  image:: /static/common/mActionAtlasNext.png
+   :width: 1.5e
+.. |mActionAtlasPrev|  image:: /static/common/mActionAtlasPrev.png
+   :width: 1.5e
+.. |mActionAtlasSettings|  image:: /static/common/mActionAtlasSettings.png
+   :width: 1.5e
 .. |mIconLock|  image:: /static/common/mIconLock.png
    :width: 1.5em
 .. |mActionFileExit| image:: /static/common/mActionFileExit.png

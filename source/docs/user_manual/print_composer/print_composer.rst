@@ -73,13 +73,13 @@ See a list of tools in table_composer_1_:
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionAlignTop|        | Align selected items top              | |mActionAlignBottom|       | Align selected items bottom              |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-|                          | Preview Atlas                         |                            | First Feature                            |
+| |mIconAtlas|             | Preview Atlas                         | |mActionAtlasFirst|        | First Feature                            |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-|                          | Previous Feature                      |                            | Next Feature                             |
+| |mActionAtlasPrev|       | Previous Feature                      |  |mActionAtlasNext|        | Next Feature                             |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-|                          | Last feature                          |                            | Print Atlas                              |
+| |mActionAtlasLast|       | Last feature                          |  |mActionFilePrint|        | Print Atlas                              |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-|                          | Export Atlas as Image                 |                            | Atlas Settings                           |
+| |mActionSaveMapAsImage|  | Export Atlas as Image                 |  |mActionAtlasSettings|    | Atlas Settings                           |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 
 Table Composer 1: Print Composer Tools
