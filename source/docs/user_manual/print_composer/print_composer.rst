@@ -971,6 +971,13 @@ When moving items on the Composer canvas, alignment helper lines appear when bor
 
 .. index:: Revert_Layout_Actions
 
+Copy/Cut and Paste items
+------------------------
+The print composer includes actions to use the common Copy/Cut/Paste functionality for the items
+in the layout. As usual first you need to select the items using one of the options seen above;
+at this point the actions can be found in the :menuselection:`Edit` menu. When using the Paste action, the elements
+will be pasted according to the current mouse position.
+
 Revert and Restore tools
 ========================
 
