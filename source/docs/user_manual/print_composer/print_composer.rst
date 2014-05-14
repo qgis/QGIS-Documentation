@@ -53,11 +53,11 @@ See a list of tools in table_composer_1_:
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionLabel|           | Add label to print composition        | |mActionAddLegend|         | Add new legend to print composition      |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionScaleBar|        | Add new scale bar to print composition | |mActionAddBasicShape|     | Add basic shape to print composition     |
+| |mActionScaleBar|        | Add scale bar to print composition    | |mActionAddBasicShape|     | Add basic shape to print composition     |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionAddArrow|        | Add arrow to print composition        | |mActionOpenTable|         | Add attribute table to print composition |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionAddHtml|         | Add an HTML frame                      |                            |                                          |
+| |mActionAddHtml|         | Add an HTML frame                     |                            |                                          |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionGroupItems|      | Group items of print composition      | |mActionUngroupItems|      | Ungroup items of print composition       |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+

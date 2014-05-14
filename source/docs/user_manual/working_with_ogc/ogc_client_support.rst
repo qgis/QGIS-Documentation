@@ -177,8 +177,8 @@ the parameters to connect to your desired WMS server, as listed in table_OGC_1_:
 |                                      | given URI from URL field above.                                  |
 +--------------------------------------+------------------------------------------------------------------+
 | Ignore GetFeatureInfo URI            | |checkbox|                                                       |
-|                                      | :guilabel:`Ignore GetFeatureInfo URI reported in capabilities`   |
-|                                      |. Use given URI from URL field above.                             |
+|                                      | :guilabel:`Ignore GetFeatureInfo URI reported in capabilities`.  |
+|                                      | Use given URI from URL field above.                              |
 +--------------------------------------+------------------------------------------------------------------+
 
 Table OGC 1: WMS Connection Parameters

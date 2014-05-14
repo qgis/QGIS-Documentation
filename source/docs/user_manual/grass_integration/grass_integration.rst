@@ -413,7 +413,7 @@ functionalities.
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
 | |grass_move_line|      | Move element    | Move selected boundary, line, point or centroid and click on new position                         |
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_split_line|     | Split line      | Split an existing line into two parts                                                                 |
+| |grass_split_line|     | Split line      | Split an existing line into two parts                                                             |
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
 | |grass_delete_line|    | Delete element  | Delete existing boundary, line, point or centroid (confirm selected element by another click)     |
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+

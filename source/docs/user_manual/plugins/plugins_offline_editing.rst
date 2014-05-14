@@ -7,7 +7,7 @@ Offline Editing Plugin
 
 For data collection, it is a common situation to work with a laptop or a cell
 phone offline in the field. Upon returning to the network, the changes need to
-be synchronized with the master data source, e.g. a PostGIS database. If several
+be synchronized with the master datasource (e.g., a PostGIS database). If several
 persons are working simultaneously on the same datasets, it is difficult to
 merge the edits by hand, even if people don’t change the same features.
 
@@ -20,8 +20,8 @@ offline edits to the master dataset.
 Using the plugin
 ----------------
 
-* Open some vector layers, e.g. from a PostGIS or WFS-T datasource
-* Save it as a project
+* Open some vector layers (e.g., from a PostGIS or WFS-T datasource).
+* Save it as a project.
 * Press the |offline_editing_copy|:sup:`Convert to offline project` icon and
   select the layers to save. The content of the layers is saved to SpatiaLite
   tables.
