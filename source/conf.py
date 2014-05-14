@@ -480,17 +480,17 @@ rst_epilog = """
 .. |mActionAlignBottom|  image:: /static/common/mActionAlignBottom.png
    :width: 1.5em
 .. |mIconAtlas|  image:: /static/common/mIconAtlas.png
-   :width: 1.5e
+   :width: 1.5em
 .. |mActionAtlasFirst|  image:: /static/common/mActionAtlasFirst.png
-   :width: 1.5e
+   :width: 1.5em
 .. |mActionAtlasLast|  image:: /static/common/mActionAtlasLast.png
-   :width: 1.5e
+   :width: 1.5em
 .. |mActionAtlasNext|  image:: /static/common/mActionAtlasNext.png
-   :width: 1.5e
+   :width: 1.5em
 .. |mActionAtlasPrev|  image:: /static/common/mActionAtlasPrev.png
-   :width: 1.5e
+   :width: 1.5em
 .. |mActionAtlasSettings|  image:: /static/common/mActionAtlasSettings.png
-   :width: 1.5e
+   :width: 1.5em
 .. |mIconLock|  image:: /static/common/mIconLock.png
    :width: 1.5em
 .. |mActionFileExit| image:: /static/common/mActionFileExit.png
