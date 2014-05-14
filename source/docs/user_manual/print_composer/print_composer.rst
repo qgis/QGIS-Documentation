@@ -939,6 +939,9 @@ items using the icons on the toolbar.
 
 To unselect an item, just click on it holding the :kbd:`Shift` button.
 
+Inside the :menuselection:`Edit` menu, you can find actions to select all the items, to clear all selections or 
+to invert the current selection.
+
 Alignment
 --------------
 
