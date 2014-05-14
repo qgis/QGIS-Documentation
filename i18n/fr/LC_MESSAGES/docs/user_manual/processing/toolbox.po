@@ -6,13 +6,14 @@
 # DelazJ <delazj@gmail.com>, 2013
 # MarieSilvestre <marie.silvestre@gmail.com>, 2013-2014
 # Cartoboy <cartographie@hotmail.fr>, 2013
+# DelazJ <delazj@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-01-08 13:09+0000\n"
-"Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
+"PO-Revision-Date: 2014-05-02 17:19+0000\n"
+"Last-Translator: DelazJ <delazj@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -388,7 +389,7 @@ msgid ""
 ":file:`.shp` for vector ones) will be appended to the filepath and the file "
 "format corresponding to that extension will be used to save the layer or "
 "table."
-msgstr "Le format de sortie est défini par l'extension de nom de fichier. Les formats pris en charge dépendent de ceux pris en charge par l'algorithme lui-même. Pour sélectionner un format, il suffit de sélectionner l'extension du fichier correspondant (ou l'ajouter si vous tapez directement le chemin du fichier à la place). Si l'extension du chemin du fichier que vous avez saisi ne correspond pas à l'un de ceux pris en charge, une extension par défaut (généralement DBF pour les tables et TIF pour les couches raster, SHP pour ceux vectoriels) seront ajoutées à la chemin du fichier et le format de fichier correspondant à cette extension sera utilisé pour sauver la couche ou la table."
+msgstr "Le format de sortie est défini par l'extension du nom de fichier. Les formats pris en charge dépendent de ceux pris en charge par l'algorithme lui-même. Pour sélectionner un format, il suffit de sélectionner l'extension du fichier correspondant (ou l'ajouter si vous tapez directement le chemin du fichier à la place). Si l'extension du chemin du fichier que vous avez saisi ne correspond pas à l'un de ceux pris en charge, une extension par défaut (généralement :file:`.dbf`` pour les tables, :file:`.tif` pour les couches raster et :file:`.shp` pour ceux vectoriels) sera ajoutée à la fin du chemin du fichier et le format de fichier correspondant à cette extension sera utilisé pour sauver la couche ou la table."
 
 # 534e86cba2ae443ebe7478a2b899d9ab
 #: ../../source/docs/user_manual/processing/toolbox.rst:345
@@ -409,7 +410,7 @@ msgid ""
 "are named using the base name and appending a number representing the index "
 "of the iteration. The file extension (and format) is used for all those "
 "generated files."
-msgstr ""
+msgstr "Lorsque vous lancez un algorithme qui utilise une couche vectorielle en mode itératif, le chemin de fichier entré est pris comme chemin de base pour tous les fichiers de sortie, dont le nom correspondra au nom du fichier de base suivi du numéro d'index d'itération. L'extension du fichier (et le format) sera la même pour tous les fichiers générés."
 
 # 56d6af9d77904d9a8681b7e4a5fa27b9
 #: ../../source/docs/user_manual/processing/toolbox.rst:370
@@ -459,7 +460,7 @@ msgstr "Sélectionnez le fichier de style (:file:`.qml`) que vous souhaitez appl
 msgid ""
 "Other configuration parameters in the :guilabel:`General` group are the "
 "following ones:"
-msgstr "Les autres paramètres de configuration du groupe :guilabel:`Général`sont les suivants :"
+msgstr "Les autres paramètres de configuration du groupe :guilabel:`Général` sont les suivants :"
 
 # 00905f4fd7214c8f9df683d28d4eb10f
 #: ../../source/docs/user_manual/processing/toolbox.rst:421
@@ -473,7 +474,7 @@ msgid ""
 "output filename instead. Notice, that, if the output is saved to a temporary"
 " file, the filename of this temporary file is usually long and meaningless "
 "one intended to avoid collision with other already existing filenames."
-msgstr ""
+msgstr ":guilabel:`Utiliser le nom de fichier comme nom de couche`. Le nom de chaque couche créée par un algorithme est défini par l'algorithme lui-même. Dans certains cas, un nom fixe peut être utilisé, ce qui signifie que le même nom sera utilisé, quelle que soit la couche utilisée en entrée. Dans d'autres cas, le nom peut dépendre du nom de la couche d'entrée ou de certains des paramètres utilisés pour exécuter l'algorithme. Si cette case est cochée, le nom sera plutôt issu de celui du fichier de sortie. Notez, que, si la sortie est enregistrée dans un fichier temporaire, le nom de ce fichier temporaire est généralement long et créé de manière à éviter les collisions avec d'autres noms de fichiers déjà existants."
 
 # ca5bf2c668f246bdada99f913f9ed7bd
 #: ../../source/docs/user_manual/processing/toolbox.rst:430
@@ -482,7 +483,7 @@ msgid ""
 " a vector layer is used as input for an algorithm, only its selected "
 "features will be used. If the layer has no selected features, all of them "
 "will be used."
-msgstr ""
+msgstr ":guilabel:`N'utiliser que les entités sélectionnées`. Si cette option est sélectionnée, chaque fois qu'une couche vecteur est utilisée comme entrée pour un algorithme, seules ses entités sélectionnées seront utilisées. Si aucune entité de la couche n'est sélectionnée, toutes seront utilisées."
 
 # 488266282f4046e7892605a267c9d66b
 #: ../../source/docs/user_manual/processing/toolbox.rst:433
@@ -491,7 +492,7 @@ msgid ""
 "file`. This parameters refer to scripts written using the processing "
 "scripting functionality, and are explained in the section covering scripting"
 " and the console."
-msgstr ""
+msgstr ":guilabel:`Script Pré-exécution` et :guilabel:`Script Post-exécution`. Ces paramètres font référence à des scripts écrits à l'aide des fonctions du menu Traitements et sont expliqués dans la section abordant les algorithmes et la console."
 
 # d33db8b8b6cf4ff6b0adadf8ef0f7990
 #: ../../source/docs/user_manual/processing/toolbox.rst:438
@@ -506,7 +507,7 @@ msgstr "Vous trouverez également un bloc :guilabel:`Général` pour chaque four
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:148
 msgid "Vector iterator button |win|"
-msgstr ""
+msgstr "Bouton d'itération sur les couches vecteur |win|"
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:150
 msgid ""
@@ -516,7 +517,7 @@ msgid ""
 "of just once for the whole layer, producing as many outputs as times the "
 "algorithm is executed. This allows for automating the process when all "
 "features in a layer have to be processed separately."
-msgstr ""
+msgstr "Si l'algorithme propose plusieurs boutons d'itération, vous ne pourrez en activer qu'un seul. Si un bouton correspondant à une couche vecteur est activé, l'algorithme s'exécutera successivement sur chacune des entités de la couche plutôt que sur la couche en entier, produisant alors autant de sorties que de nombre d'exécution de l'algorithme. Cela permet d'automatiser un traitement qui doit être réalisé sur chaque entité d'une couche séparément."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:316
 msgid ""
@@ -627,7 +628,7 @@ msgid ""
 " algorithm during the current session, and can be shown at any time by "
 "selecting the :menuselection:`Processing --> Results viewer` from |qg| main "
 "menu."
-msgstr ""
+msgstr "En plus des couches raster et vecteur, les algorithmes génèrent des graphiques et des textes sous forme de fichiers HTML. Ces sorties sont montrées à la fin de l'exécution de chaque algorithme dans une nouvelle fenêtre. Cette fenêtre conserve les résultats produits par tous les algorithmes lancés pendant la session en cours et peut être affichée à tout moment via le menu :menuselection:`Traitements--> Affichage des résultats` du menu principal de |qg|."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:362
 msgid ""

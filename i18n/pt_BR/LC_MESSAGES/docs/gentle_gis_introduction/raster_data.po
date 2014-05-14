@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
+# Narcélio de Sá <narceliosapereira@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-10-25 12:44+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-05-12 18:02+0000\n"
+"Last-Translator: Narcélio de Sá <narceliosapereira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,37 +21,37 @@ msgstr ""
 # e87a9da03c1d46008b631432594290a8
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:8
 msgid "Raster Data"
-msgstr ""
+msgstr "Dados Raster"
 
 # 116602b76771441384ca7ddbb1ab5e90
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:11
 msgid "|gentlelogo|"
-msgstr ""
+msgstr "|gentlelogo|"
 
 # f7548650bdac483f929f8b1d6079e620
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:11
 msgid "Objectives:"
-msgstr ""
+msgstr "Objetivos"
 
 # 13e11ec3a3fb49339d6085f857a6254b
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:11
 msgid "Understand what raster data is and how it can be used in a GIS."
-msgstr ""
+msgstr "Entender o que são dados raster e como eles podem ser utilizados em um SIG"
 
 # 3ee70e1e29774819986668dc908ee10f
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:13
 msgid "Keywords:"
-msgstr ""
+msgstr "Palavras chave:"
 
 # 9a47adcb8bdd40d49d8c7a3805252d3b
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:13
 msgid "Raster, Pixel, Remote Sensing, Satellite, Image, Georeference"
-msgstr ""
+msgstr "Raster, Pixel, Sensoriamento Remoto, Satélite, Imagem, Georreferenciamento"
 
 # 5edca81b11e2484fabc0ea1e2f2197ff
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:17
 msgid "Overview"
-msgstr ""
+msgstr "Visão Geral"
 
 # a69e4a0a1531457eaa50c831d84e1ddf
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:19
@@ -62,7 +63,7 @@ msgid ""
 "represents the conditions for the area covered by that cell (see "
 "figure_raster_). In this topic we are going to take a closer look at raster "
 "data, when it is useful and when it makes more sense to use vector data."
-msgstr ""
+msgstr "Nos tópicos anteriores demos uma olhada nos dados vetoriais. Enquanto as feições vetoriais utilizam geometria (pontos, polilinhas e polígonos) para representar o mundo real, os dados rasters tem uma abordagem diferente. Dados rasters são formados por uma matriz de pixels (também chamados de células) , cada uma contem um valor que representa uma condição da área coberta por essa célula (veja a figura_raster_). Nesse tópico nós vamos dar uma olhada nos dados raster, entender o quando eles são úteis e quando faz mais sentido utilizar dados vetoriais. "
 
 # bb272f264fea422fbbecc1056a0089cc
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:37
@@ -71,12 +72,12 @@ msgid ""
 "down) of pixels (also know as cells). Each pixel represents a geographical "
 "region, and the value in that pixel represents some characteristic of that "
 "region."
-msgstr ""
+msgstr "Os dados raster são compostos por linhas (horizontais) e colunas (verticais) de pixels (também conhecidas como células). Cada pixel representa uma região geográfica, e o valor do pixel representa uma característica dessa região."
 
 # c5429dbbba0d4a22ad113c527a2fafb1
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:43
 msgid "Raster data in detail"
-msgstr ""
+msgstr "Dados Raster em detalhe"
 
 # cf850d2f08aa4083acb50d6b8c6f01de
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:45
@@ -98,7 +99,7 @@ msgid ""
 "variation of grass colour and cover as a separate polygon. The problem with "
 "that approach is that it will take a huge amount of work in order to create "
 "a good vector dataset."
-msgstr ""
+msgstr "Dados Raster são usado em um aplicativo GIS quando queremos exibir informações continuas em uma determinada área e que não pode ser facilmente dividido em funções vetoriais. Quando apresentamos os dados vetoriais, nós mostramos a imagem figura_paisagem_. Pontos, linhas e poligonos funcionam bem para representar algumas caracteristicas dessa paisagem, como árvores,estradas e contruções. Outras caracterisiticas da paisagem podem ser mais difíceis de se representar utilizando vetores. Por exemplo, os campos mostrados têm muitas variações de cor e densidade de cobertura. Seria muito fácil fazer um único polígono ao redor de cada área de pastagem, mas um monte de informações sobre o gramado seria perdido no processo de simplificação dos recursos para um único polígono. Isso ocorre poque você está dando um único valor de atributo para esse vetor, aplicando-o para toda área, dessa forma os vetores não são muito bons para representar áreas que apresenta características que não são homogêneas (inteiramente o mesmo) para toa área. Outra abordagem que você pode tomar é a de digitalizar cada pequena variação de grama cor e cobrir como um polígono separado. O problema com essa abordagem é que ela vai demandar uma enorme quantidade de trabalho, a fim de criar um bom conjunto de dados de vetor."
 
 # ab7de235011b40bba914746ea34b47e2
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:72
@@ -109,7 +110,7 @@ msgid ""
 "the variations in colour you can see in the grass? When you are trying to "
 "represent large areas with continuously changing values, raster data can be "
 "a better choice."
-msgstr ""
+msgstr "Algumas características em uma paisagem são fáceis de representar como pontos, polilinhas e polígonos (por exemplo, árvores, estradas, casas). Em outros casos, pode ser difícil. Por exemplo, como você representaria as pastagens? Como polígonos? E as variações na cor que você pode ver na grama? Quando você está tentando representar grandes áreas com a mudança de valores contínuas, dados raster pode ser sua melhor escolha."
 
 # ec39a0214be14e0882955ac349edba8c
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:79
@@ -125,7 +126,7 @@ msgid ""
 "depict the fire risk on a landscape. In these kinds of applications, each "
 "cell in the raster represents a different value e.g. risk of fire on a scale"
 " of one to ten."
-msgstr ""
+msgstr "Usar dados raster é uma solução para estes problemas. Muitas pessoas usam dados raster como um **pano de fundo** para ser usado por trás de camadas vetoriais, a fim de dar mais significado às informações vetoriais. O olho humano é muito bom em interpretar imagens, assim, usando uma imagem por trás de camadas vetoriais, pode resultar em mapas mais significativos. Dados Raster não são bons apenas para imagens que retratam a superfície do mundo real (por exemplo, imagens de satélite e fotografias aéreas), eles também são bons também para representar idéias mais abstratas. Por exemplo, rasters pode ser usado para mostrar tendências de precipitação sobre uma área, ou para representar o risco de incêndio em uma paisagem. Nestes tipos de aplicações, cada célula no raster representa um valor diferente, por exemplo, risco de incêndio em uma escala de um a dez."
 
 # 549e5ed3dcf1457c84455b586b36e317
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:90
@@ -133,7 +134,7 @@ msgid ""
 "An example that shows the difference between an image obtained from a "
 "satellite and one that shows calculated values can be seen in "
 "figure_raster_types_."
-msgstr ""
+msgstr "Um exemplo que mostra a diferença entre a imagem obtida a partir de um satélite e uma que mostra os valores calculados pode ser visto na figura_tipos_de_raster_."
 
 # 303f26c050c14986bdc19724f7a56bd1
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:103
@@ -143,12 +144,12 @@ msgid ""
 "the raster image. Raster data can also be non-photographic data such as the "
 "raster layer shown on the right which shows the calculated average minimum "
 "temperature in the Western Cape for the month of March."
-msgstr ""
+msgstr "Imagens raster com cores verdadeiras (esquerda) são úteis quando elas fornecem uma grande quantidade de detalhes que são difíceis de expressar como vetores, sendo mais fácil de observar quando olhamos uma imagem raster. Dados raster também podem ser dados não fotográficos, como a imagem da direita, que mostra a temperatura mínima média calculada na província do Cabo Ocidental para o mês de março."
 
 # 14d7b34b348b4748b2af370ca901c42e
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:110
 msgid "Georeferencing"
-msgstr ""
+msgstr "Georreferenciamento"
 
 # bf6a75255d42406ebb9e7d9c01520107
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:112
@@ -165,12 +166,12 @@ msgid ""
 "raster data are displayed in the correct place. The georeferencing "
 "information for a raster is often provided in a small text file accompanying"
 " the raster."
-msgstr ""
+msgstr "Georreferenciamento é o processo onde definimos exatamente o lugar na superfície da terra a qual uma imagem ou um conjunto de dados raster foi criado. Esta informação posicional é armazenada na versão digital da fotografia aérea. Quando um aplicativo GIS abre essa fotografia, ele usa essas informações posicionais para garantir que a imagem apareça no lugar correto no mapa. Normalmente esta informação posicional consiste numa coordenada para o pixel superior esquerdo da imagem, o tamanho de cada pixel na direção de X, a dimensão de cada pixel na direção Y, e o valor (se existirem), do ângulo de inclinação da imagem."
 
 # ad4a25d71c084b43810f1f07c2b5c9ec
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:125
 msgid "Sources of raster data"
-msgstr ""
+msgstr "Fontes de dados Raster"
 
 # bc24676b97044c1baf7797ffc3e4779f
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:127
@@ -185,7 +186,7 @@ msgid ""
 "using radio signals to special receiving stations such as the one shown in "
 "figure_csir_station_. The process of capturing raster data from an aeroplane"
 " or satellite is called **remote sensing**."
-msgstr ""
+msgstr "Dados matriciais pode ser obtida num número de maneiras. Duas das formas mais comuns são a fotografia aérea e imagens de satélite. Na fotografia aérea, uma aeronave sobrevoa uma área com uma câmera montada debaixo dela. As fotografias são então importadas para um computador e georreferenciadas. As imagens de satélite são criadas quando os satélites que orbitam um ponto na superfície da terra com câmeras digitais especiais apontadas para a superfície, essas câmeras obtêm uma imagem da área na Terra em eles estão passando por cima. Depois que a imagem foi obtida ela é enviada de volta à Terra através de sinais de rádio para estações especiais de recepção, como a mostrado na figura_csir_station_. O processo de captura de dados raster de um avião ou satélite é chamado de **sensoriamento remoto.**"
 
 # e96e82f4fbb44eed9d972f566db4cf21
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:147
@@ -193,7 +194,7 @@ msgid ""
 "The CSIR Satellite Applications Center at Hartebeeshoek near Johannesburg. "
 "Special antennae track satellites as they pass overhead and download images "
 "using radio waves."
-msgstr ""
+msgstr "O Centro de Aplicações  Satelitais em Hartebeeshoek nas proximidades de Joanesburgo.  Essas antenas especiais monitoram os satélites que passam sobre essa região e fazem o download de imagens usando ondas de rádio."
 
 # d18bd006ed374c9fab7369fea2ddb2c8
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:151
@@ -207,7 +208,7 @@ msgid ""
 "figure_csir_station_). In these cases, they will often use raster analysis "
 "techniques such as interpolation (which we describe in Topic "
 ":ref:`spatial_analysys`)."
-msgstr ""
+msgstr "Em outros casos, os dados raster pode ser computado. Por exemplo: uma companhia de seguros pode obter os dados dos ocorrência de crimes policiais e criar, através desses dados, uma mapa raster de todo um pais mostrando as áreas onde existe uma maior probabilidades de incidência de crimes. Os Meteorologistas (profissionais que estudam os padrões climáticos) pode gerar um mapa raster a nível estadual mostrando a temperatura média, precipitação e velocidade do vento usando dados coletados nas estações climáticas (veja a figura_csir_station_) Nesses casos, eles vão usar técnicas de análise de dados raster como a interpolação (procedimento que descrevemos no tópico :ref:`spatial_analysys`)"
 
 # b17ce38b307b47c09ef713b52b5756b0
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:160
@@ -221,12 +222,12 @@ msgid ""
 "symbology. If the user needs to look at the attribute table for the data, "
 "providing it in raster format could be a bad choice because raster layers do"
 " not usually have any attribute data associated with them."
-msgstr ""
+msgstr "Às vezes, os dados raster são criados a partir de dados vetoriais, porque os proprietários de dados deseja compartilhar os dados em um formato fácil de usar. Por exemplo, uma companhia que gerencia estradas ou transporte ferroviário, cadastra suas linhas  em dados vetoriais mas pode optar por gerar um arquivo raster com esses dados para que os funcionário possa visualizar os dados em um navegador web. Isso normalmente só é útil se os atributos, que os usuários precisam estar cientes, possam ser representados no mapa com rótulos ou simbologia. Se os usuário necessitam observar os dados da tabela de atributos, fornecer os dados em formato raster pode não ser a melhor escolha, isso porque os dados raster , geralmente, não têm qualquer tabela de atributos associados a ele. "
 
 # 915d966680ed4206a010732f840fdbfe
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:171
 msgid "Spatial Resolution"
-msgstr ""
+msgstr "Resolução Espacial"
 
 # e12d8ca354df40fbafbd84701ce89242
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:173
@@ -235,19 +236,19 @@ msgid ""
 "determine its spatial resolution. This becomes apparent when you look at an "
 "image at a small scale (see figure_raster_small_scale_) and then zoom in to "
 "a large scale (see figure_raster_large_scale_)."
-msgstr ""
+msgstr "Cada camada raste em um SIG contém pixels (células) de tamanhos fixos que determinam sua resolução espacial. Isso se torna bem vi´sivel quando você olha uma imagem em uma escala pequena (veja a figura_raster_small_scale_) e ,usando o zoom, em uma escala grande (veja a figura_raster_large_scale_)."
 
 # 336473c503b643d38752780b6f453bbd
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:188
 msgid "This satellite image looks good when using a small scale..."
-msgstr ""
+msgstr "Essa imagens de satélite parece ser muito boa quando utilizada em uma pequena escala..."
 
 # 1b7ce07deb494243982646e7f0ad497d
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:200
 msgid ""
 "...but when viewed at a large scale you can see the individual pixels that "
 "the image is composed of."
-msgstr ""
+msgstr "... mas se visualizada em uma escala grande você poderá visualizar os pixeis individualmente na composição da imagem."
 
 # c1003555a8ab4151ad4aa5e0375455fb
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:203
@@ -262,7 +263,7 @@ msgid ""
 "to make out a high degree of detail in the image. Images with a pixel size "
 "covering a large area are called '**low resolution**' images because the "
 "amount of detail the images show is low."
-msgstr ""
+msgstr "Vários fatores podem determinar a resolução espacial de uma imagem. Em se tratando de imagens de Sensoriamento Remoto a resolução espacial geralmente é determinada pela capacidade do sensor utilizado para capturar as imagens. Por exemplo, o satélite SPOT5 consegue obter imagens de 10 x 10 m para cada pixel. Outro satélite, o MODIS, por sua vez, obtêm uma imagem com 500 x 500 m por pixel. Em imagens aéreas imagens com pixel de 50cm x 50cm são bastante comuns. Imagens onde a área de cobertura dos pixel é pequena são chamada de **imagens de alta resolução** pois possuem um alto grau de detalhamento da superfície. Já as imagens onde a área de cobertura dos pixels é grande são chamadas de **imagens de baixa resolução** pois o grau de detalhamento é bem menor."
 
 # 08f74b0ac9344288beb5cd03a988f7f1
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:213
@@ -272,7 +273,7 @@ msgid ""
 " the raster will usually determine the spatial resolution. For example if "
 "you want to create a high resolution average rainfall map, you would ideally"
 " need many weather stations in close proximity to each other."
-msgstr ""
+msgstr "Em dados raster oriundos de calculos baseados em analises espaciais ( como os mapas de precipitação que mencionamos anteriormente), a densidade espacial das informações utilizadas para criar o raster é que vai , normalmente, determinar a resolução espacial. POr exemplo se você precisa criar um mapa de precipitação em alta resolução , você com certeza irá precisar de dados muitas estações meteorológicas que estejam próximas uma da outra. "
 
 # 0c8a8b15bfb44feeab1b36067d61a72d
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:219
@@ -287,7 +288,7 @@ msgid ""
 "store over a million numbers on its hard disk in order to hold all of the "
 "information. Making the pixel size smaller would greatly increase the amount"
 " of storage needed."
-msgstr ""
+msgstr "Uma das principais coisas a se pensar ao obter rasters em alta resolução espacial é requisitos de armazenamento. Pense em um raster que tem uma grade de 3 x 3 pixels, cada um deles contém um número que representa a precipitação média. Para armazenar todas as informações contidas no raster, você vai precisar armazenar 9 números na memória do computador. Agora imagine que você quer ter uma camada raster para toda a África do Sul com pixels de 1 km x 1 km. A área da África do Sul é de cerca de 1219090 km: sup: `2`. O que significa que seu computador precisa para armazenar mais de um milhão de números em seu disco rígido, a fim de manter toda a informação. Reduzir o tamanho do pixel aumentaria a quantidade necessária de armazenamento."
 
 # 6a7c868664ca4db9b7af8f675597f428
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:229
@@ -298,7 +299,7 @@ msgid ""
 "this –-- it's useful to see the clouds across the whole country. Zooming in "
 "to one particular cloud in high resolution will not tell you very much about"
 " the upcoming weather!"
-msgstr ""
+msgstr "As vezes utilizar imagens de baixa resolução espacial é util quando você quer trabalhar com uma grande área é não está interessando em observar uma área em grande detalhe. Os mapas de nebulosidade que observamos nas notícias do tempo são um exemplo disso –-- eles são uteis para observar a nebulosidade em todo o país. Aproximar uma área especifica desse mapa em alta resolução não irá contribuir muito para a previsão do tempo!"
 
 # 2192974a412f429cadd36809b487c2bd
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:235
@@ -306,12 +307,12 @@ msgid ""
 "On the other hand, using low resolution raster data can be problematic if "
 "you are interested in a small region because you probably won't be able to "
 "make out any individual features from the image."
-msgstr ""
+msgstr "Po outro lado, utilizar raster de baixa resolução pode ser um problema se você está interessado em uma região pequena. Isso porque provavelmente você não conseguirá determinar as feições individuais na imagem. "
 
 # 41bc083c8a9e49ee9f1ba6068dbff06f
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:240
 msgid "Spectral resolution"
-msgstr ""
+msgstr "Resolução Espectral"
 
 # f2f26b935dc74bc18024aea2662abbca
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:242
@@ -322,7 +323,7 @@ msgid ""
 "green and blue (RGB) information is combined to show you an image that your "
 "eyes can interpret. While the information is still in digital format though,"
 " this RGB information is stored in separate colour **bands**."
-msgstr ""
+msgstr "Quando você tirar uma foto colorida com uma câmera digital ou usando a câmera de um telefone celular, a câmera usa sensores eletrônicos para detectar a luz vermelha, verde e azul. Quando a imagem é exibida em uma tela ou impressa, a informações do vermelho, verde e azul (RGB) são combinadas para lhe mostrar uma imagem que seus olhos podem interpretar. Enquanto essa informação estiver em formato digital, as informações do seu RGB continuam armazenadas em **bandas** de cores separadas."
 
 # 9c3b116414354c6c8ad19d4901040396
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:249
@@ -336,7 +337,7 @@ msgid ""
 "multi-spectral images. In GIS recording the non-visible parts of the "
 "spectrum can be very useful. For example, measuring infra-red light can be "
 "useful in identifying water bodies."
-msgstr ""
+msgstr "Embora seu olhos consigam ver apenas o especto RGB, os sensores eletrônicos em câmeras podem detectar espectros que seus olhos não conseguem. É claro que em uma câmera de mão, provavelmente, não faria sentido registrar informações de partes **não visíveis** do espectro já que a maioria das pessoas aparentemente só querem ver fotos dos seus gatos, pratos de comida ou de si mesmo. "
 
 # 2d4d595e44c646acbc721b2b3166ebe4
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:258
@@ -347,7 +348,7 @@ msgid ""
 "show them as red, green and blue so that the human eye can see them. The "
 "number of bands in a raster image is referred to as its **spectral "
 "resolution**."
-msgstr ""
+msgstr "Como ter imagens contendo múltiplas bandas do espectro é muito útil em SIG, os dados raster muitas vezes são fornecidos como imagens multibandas. Cada banda na imagem é como uma camada separada. No SIG combinamos três dessas bandas mostrando o vermelho, verde e azul de forma que nossos olhos possam ver. A quantidade de bandas numa imagem raster é conhecida como sia **resolução espectral**"
 
 # 2303e49c2d224d7b9a510956d48a051a
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:264
@@ -356,12 +357,12 @@ msgid ""
 "image. With grayscale images, you can apply false colouring to make the "
 "differences in values in the pixels more obvious. Images with false "
 "colouring applied are often referred to as **pseudocolour images**."
-msgstr ""
+msgstr "Se uma imagem tiver apenas uma banda, ela é muitas vezes chamada de uma imagem em **tons de cinza**. Com imagens em tons de cinza, você pode aplicar falsas cores para tornar mais evidente as diferenças de valores nos pixels.  Imagens com falsa coloração são muitas vezes referidas como **imagens pseudocores**."
 
 # 5e87c28b4e9945e29c04e52dcbe631b8
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:270
 msgid "Raster to vector conversion"
-msgstr ""
+msgstr "Conversão Raster para Vetor"
 
 # 95844329caa74c6d81473b83dea8423e
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:272
@@ -369,7 +370,7 @@ msgid ""
 "In our discussion of vector data, we explained that often raster data are "
 "used as a backdrop layer, which is then used as a base from which vector "
 "features can be digitised."
-msgstr ""
+msgstr "Em nossa discussão de dados vetoriais, explicamos que muitas vezes dados raster são usados ​​como uma camada de pano de fundo, que é usado como uma base a partir do qual as feições vetoriais podem ser digitalizadas"
 
 # 2ed2bf2631f04a7b90cc85bb5849c667
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:276
@@ -380,12 +381,12 @@ msgid ""
 "program looks for such colour changes and creates vector features as a "
 "result. This kind of functionality is normally only available in very "
 "specialised (and often expensive) GIS software."
-msgstr ""
+msgstr "Outra possibilidade é a utilização de Softwares avançados  para extrair automaticamente as feições vetoriais das imagens. Algumas feições, como as estradas, são bem destacadas das áreas ao seu redor, dada a súbita mudança na cor dos pixels. O Software procura por essas mudanças abruptas na coloração dos pixels e cria o arquivo vetorial como resultado. Esse tipo de funcionalidade é, normalmente , encontrado apenas em softwares SIG muitos especializados ( e que , em sua maioria, são bastante caros) "
 
 # 0928c694416e48c197fc1f1c40a825e1
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:284
 msgid "Vector to raster conversion"
-msgstr ""
+msgstr "Conversão Vetor para Raster"
 
 # 40564271f63649ff8ef1060a7b6c3666
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:286
@@ -397,12 +398,12 @@ msgid ""
 " to give GIS data to non GIS users. With the simpler raster formats, the "
 "person you give the raster image to can simply view it as an image on their "
 "computer without needing any special GIS software."
-msgstr ""
+msgstr "Às vezes é útil converter dados vetoriais em dados raster. Um efeito colateral disso é que os dados de atributos (ou seja atributos associados com os dados vetoriais originais) serão perdidos durante a conversão. Ter esses valores convertidos para o formato raster pode ser útil tanto para compartilhar dados para usuários de SIG quanto para não usuários de SIG. Com os formatos raster mais simples, a pessoa a qual você compartilhou a imagem raster pode simplesmente vê-la como uma imagem em seu computador, sem a necessidade de nenhum software especial SIG."
 
 # 2361864b515548ccaf6ee86ae8ff60c0
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:295
 msgid "Raster analysis"
-msgstr ""
+msgstr "Análise de dados Raster "
 
 # d05425ae7b524abba8119b1d144be036
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:297
@@ -411,7 +412,7 @@ msgid ""
 " cannot be used with vector data. For example, rasters can be used to model "
 "water flow over the land surface. This information can be used to calculate "
 "where watersheds and stream networks exist, based on the terrain."
-msgstr ""
+msgstr "Há um grande número de ferramentas de análise que podem ser executados em dados raster que não pode ser usado com dados vetoriais. Por exemplo, raster pode ser utilizado para modelar o fluxo de água sobre a superfície da terra. Esta informação pode ser usada para calcular onde existem bacias e redes de drenágens, com base no terreno."
 
 # 5d9762b9dd514bb0a78eb3a1867ce9b3
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:302
@@ -421,7 +422,7 @@ msgid ""
 "identify areas where the plants are growing poorly and then use that "
 "information to apply more fertilizer on the affected areas only. Foresters "
 "use raster data to estimate how much timber can be harvested from an area."
-msgstr ""
+msgstr "Dados raster também são frequentemente utilizados na agricultura e silvicultura para gerenciar a produção de culturas. Por exemplo, com uma imagem de satélite de terras de um fazendeiro, você pode identificar as áreas onde as plantas estão crescendo pouco e então usar essas informações para aplicar mais fertilizante apenas nas áreas afetadas. Silvicultores usam dados raster para estimar o quanto de madeira pode ser colhidas em cada área."
 
 # 8fda906126df42f3a603cb420a06b64b
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:308
@@ -431,97 +432,97 @@ msgid ""
 "height above sea level) can then be used to identify areas that are likely "
 "to be flooded. This can then be used to target rescue and relief efforts to "
 "areas where it is needed the most."
-msgstr ""
+msgstr "Dados Raster também são muito importante para a gestão de desastres. Análise de Modelos Digitais de Elevação (um tipo de raster onde cada pixel contém a altura acima do nível do mar) podem ser usados para identificar áreas que possam vir a ser inundada. Isto pode então ser utilizado para direcionar esforços de salvamento e socorro a áreas onde são mais necessárias."
 
 # cdf9875eb8774fe29590b343d90820e4
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:315
 msgid "Common problems / things to be aware of"
-msgstr ""
+msgstr "Problemas comuns / coisas que devemos estar cientes"
 
 # 23799c2790324820ab19399b53ff6965
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:317
 msgid ""
 "As we have already mentioned, high resolution raster data can require large "
 "amounts of computer storage."
-msgstr ""
+msgstr "Como já foi mencionada, dados Raster de alta resolução podem exigir grandes quantidades de armazenamento do computador"
 
 # fb7ffcf7830a452d9db1b94517ed6d74
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:321
 msgid "What have we learned?"
-msgstr ""
+msgstr "O que aprendemos?"
 
 # 504e786446274ecc9f27eba967cb69b0
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:323
 msgid "Let's wrap up what we covered in this worksheet:"
-msgstr ""
+msgstr "Para encerar vamos ver o que abordamos na lista abaixo:"
 
 # 7937e21307884025867aac1f19f8dbfb
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:325
 msgid "Raster data are a grid of regularly sized **pixels.**"
-msgstr ""
+msgstr "Dados raster são uma grad, ou grid em inglês, de tamanho regular. Essa grade é formada pelos **pixels**"
 
 # 04006f4f7cfa483bb81dcc70fe517b10
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:326
 msgid "Raster data are good for showing **continually varying information.**"
-msgstr ""
+msgstr "Dados raster são bons para mostrar ** informações que  variam continuamente.**"
 
 # 6a54e558c8a74f43b9070010be214eaa
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:327
 msgid "The size of pixels in a raster determines its **spatial resolution.**"
-msgstr ""
+msgstr "O tamanho dos pixels no raster determina sua  **resolução espacial**"
 
 # 7cf9ff46749545acace7cf93223ed338
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:328
 msgid ""
 "Raster images can contain one or more **bands**, each covering the same "
 "spatial area, but containing different information."
-msgstr ""
+msgstr "Imagens raster podem conter uma ou mais **bandas**, elas cobrem a mesma área espacial, mas contém diferentes informações. "
 
 # 6bfe282110af49c3acb271f66aa4db57
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:330
 msgid ""
 "When raster data contains bands from different parts of the electromagnetic "
 "spectrum, they are called **multi-spectral images**."
-msgstr ""
+msgstr "Quando os dados raster contêm bandas de diferentes partes do espectro eletromagnético, elas são chamadas **imagens multi-espectrais**"
 
 # 9065a21c52614dac96e7343a12e09f46
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:332
 msgid ""
 "Three of the bands of a multi-spectral image can be shown in the colours "
 "Red, Green and Blue so that we can see them."
-msgstr ""
+msgstr "Três das bandas de uma imagem multi-espectral pode ser mostrado nas cores vermelho, verde e azul, para que possamos vê-los."
 
 # 798916877fb5465b9e015367752e198e
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:334
 msgid "Images with a single band are called grayscale images."
-msgstr ""
+msgstr "Imagens de uma banda simples são chamadas de imagens em tons de cinza. "
 
 # 8386d964cfa0455d853a28e652e5d2f2
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:335
 msgid "Single band, grayscale images can be shown in pseudocolour by the GIS."
-msgstr ""
+msgstr "Uma banda única, uma imagem em tons de cinza pode ser visualizadas em pseudocores pelos SIG."
 
 # 74759241a26847d9aea2eebb29c53938
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:336
 msgid "Raster images can consume a large amount of storage space."
-msgstr ""
+msgstr "Imagens raster podem consumir uma grande quantidade de espaço de armazenamento."
 
 # 90de7c20095e45eb9b583ab109fa8b39
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:339
 msgid "Now you try!"
-msgstr ""
+msgstr "Agora é sua vez de tentar!"
 
 # fcb486e06155440b9a15b178a189a2b9
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:341
 msgid "Here are some ideas for you to try with your learners:"
-msgstr ""
+msgstr "Aqui estão algumas idéias para você experimentar com os seus alunos:"
 
 # 1432e1417200468f93dfeda4d74abac6
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:343
 msgid ""
 "Discuss with your learners in which situations you would use raster data and"
 " in which you would use vector data."
-msgstr ""
+msgstr "Discuta com seus alunos em que situações você usaria dados raster e em quais você usaria dados vetoriais."
 
 # 745c938a6e8d4bb0984de3903fe90294
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:345
@@ -535,12 +536,12 @@ msgid ""
 "it makes a good raster map representation of your school. Which types of "
 "features worked well when represented as rasters? How did your choice in "
 "cell size affect your ability to represent different feature types?"
-msgstr ""
+msgstr "Peça os seus alunos para criar um mapa raster de sua escola usando folhas de transparência A4 com as linhas de grade desenhadas sobre eles. Sobreponha as transparências em uma carta topográfica ou fotografia aérea de sua escola. Agora peça para cada aluno ou grupo de alunos para colorir as células que representam um certo tipo de recurso, por exemplo construção, playground, quadra de esportes, árvores, caminhos, etc. Quando todos tiverem terminado, sobreponha todas as folhas em conjunto e veja se elas fazem um bom mapa raster de representação de sua escola. Quais tipos de recursos funcionou bem quando representado como rasters? Como a sua escolha do tamanho das células afetou sua capacidade de representar diferentes tipos de recurso?"
 
 # 74f54ce4ed6048fca273cbaca80d9fd8
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:356
 msgid "Something to think about"
-msgstr ""
+msgstr "Algo para se pensar"
 
 # ee89cd380ebe4a5a8c70e9e7eef34713
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:358
@@ -555,48 +556,48 @@ msgid ""
 " dark green. Value 1 should get coloured light green, and value 0 coloured "
 "in brown. When you finish, you should have a raster map of your soccer "
 "field!"
-msgstr ""
+msgstr "Se você não tiver um computador disponível, você pode entender os dados raster usando papel e caneta. Desenhe uma grade de quadrados em uma folha de papel para representar o seu campo de futebol. Preencha a grade com números que representam valores para cobertura de grama em seu campo de futebol. Se uma parte do campo está sem grama dê a sua célula o valor 0. Se uma uma parte é misturado com cal e grama, dar-lhe um valor de 1. Se uma área é completamente coberto com grama, dar-lhe um valor de 2. Agora use lápis de cor lápis de colorir as células com base em seus valores. Células cor com valor 2 verde escuro. Valor 1 deve ficar de cor verde clara, e o valor 0 colorido na cor marrom. Quando você terminar, você deve ter um mapa raster de seu campo de futebol!"
 
 # 6fe2fd8ef7dc4e4dbab405c08a56424a
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:369
 msgid "Further reading"
-msgstr ""
+msgstr "Leitura complementar"
 
 # bc9f52f479fd49a5970af5f5ebf86fb1
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:371
 msgid "**Book**:"
-msgstr ""
+msgstr "**Livro**:"
 
 # fc1720f9cd634abfaa53c7e4b13123e5
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:373
 msgid ""
 "Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
 "3rd Edition. McGraw Hill. ISBN: 0070658986"
-msgstr ""
+msgstr "Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. 3rd Edition. McGraw Hill. ISBN: 0070658986"
 
 # ce5f950c144543debba1d4c5a606f91a
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:375
 msgid ""
 "DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
 "3rd Edition. Wiley. ISBN: 9814126195"
-msgstr ""
+msgstr "DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. 3rd Edition. Wiley. ISBN: 9814126195"
 
 # eb6a350605e04ad3b57401335ab4da12
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:378
 msgid "**Website:** http://en.wikipedia.org/wiki/GIS#Raster"
-msgstr ""
+msgstr "**Website:** http://en.wikipedia.org/wiki/GIS#Raster"
 
 # 2ba4d78e0bd246c4a66f98b510b47349
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:380
 msgid ""
 "The QGIS User Guide also has more detailed information on working with "
 "raster data in QGIS."
-msgstr ""
+msgstr "O Guia do Usuário QGIS também tem informações mais detalhadas sobre como trabalhar com dados raster no QGIS."
 
 # fe68349ec6864c2a91e76bd1da405cf4
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:384
 msgid "What's next?"
-msgstr ""
+msgstr "Qual é o próximo?"
 
 # f778602decd34c22a02659b0de9d4a81
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:386
@@ -604,4 +605,4 @@ msgid ""
 "In the section that follows we will take a closer look at **topology** to "
 "see how the relationship between vector features can be used to ensure the "
 "best data quality."
-msgstr ""
+msgstr "Na seção que se segue, vamos dar uma olhada em **topologia** para ver como a relação entre as características do vetor pode ser usado para garantir a melhor qualidade dos dados."

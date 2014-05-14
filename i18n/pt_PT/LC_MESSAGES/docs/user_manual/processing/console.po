@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-03-24 21:59+0000\n"
+"PO-Revision-Date: 2014-05-07 21:29+0000\n"
 "Last-Translator: João Gaspar <joao.f.r.gaspar@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -115,7 +115,7 @@ msgid ""
 "algorithms require and the outputs that it will generate. To do it, you can "
 "use the ``alghelp(name_of_the_algorithm)`` method. Use the command-line name"
 " of the algorithm, not the full descriptive name."
-msgstr ""
+msgstr "Uma vez conhecida no nome da linha de comandos do algoritmo, a próxima coisa a fazer é conhecer a sintaxe correcta para executá-lo. Isto significa saber quais os parâmetros necessários e a ordem que devem passar quando chamado pelo método ``runalg()``. Existe um método para descrever um algoritmo em detalhe, que pode ser usado para obter uma lista de parâmetros que os algoritmos necessitam e os ficheiros de saída que irão gerar. Para fazer isso, pode usar o método ``alghelp(name_of_the_algorithm)``. Use o nome do algoritmo na linha de comando, não o nome descritivo completo."
 
 # 0c7c77fdd2754027b3d8151928bac65a
 #: ../../source/docs/user_manual/processing/console.rst:107
@@ -403,7 +403,7 @@ msgid ""
 " the algorithm, and also the variable name to use in the script code. The "
 "value entered by the user for that parameter will be assigned to a variable "
 "with that name."
-msgstr ""
+msgstr "O nome do parâmetro é o nome que será exibido ao utilizador quando executa o algoritmo, e também o nome da variável a usar no código do script. O valor introduzido pelo utilizador para esse parâmetro será atibuído à variável com esse nome."
 
 # cd2637191f9342c1af2dc98d39ff4b34
 #: ../../source/docs/user_manual/processing/console.rst:298
@@ -412,7 +412,7 @@ msgid ""
 "it to improve its appearance, replacing low hyphens with spaces. So, for "
 "instance, if you want the user to see a parameter named ``A numerical "
 "value``, you can use the variable name ``A_numerical_value``."
-msgstr ""
+msgstr "Quando é exibido o nome do parâmetro ao utilizador, o nome irá ser editado para melhorar a aparência, substituindo o hífen inferior com espaços. Portanto, por exemplo, se quer que o utilizador veja o parâmetro chamado ``Um valor numérico``, pode usar o nome da variável ``A_numerical_value``."
 
 # b3f5083bc8ae4468adb452562346d4e4
 #: ../../source/docs/user_manual/processing/console.rst:308
@@ -524,7 +524,7 @@ msgid ""
 "dialog you will find a **[Edit script help]** button. Click on it and it "
 "will take you to the help editing dialog. Check the chapter about the "
 "graphical modeler to know more about this dialog and how to use it."
-msgstr ""
+msgstr "Como no caso dos modelos, você pode criar documentação adicional para o seu script, para explicar o que fazem e como são usados. No diálogo de edição do script irá encontrar um botão **[Editar ajuda do script]**. Clique nele e irá levá-lo para o diálogo de edição da ajuda. Verifique o capítulo sobre o modelador gráfico para saber mais sobre este diálogo e como usá-lo."
 
 # 5b5b5e5b5f0b4b0c95b8e93b1edc60e5
 #: ../../source/docs/user_manual/processing/console.rst:370
@@ -535,7 +535,7 @@ msgid ""
 "script editing dialog without saving the script (i.e. you discard it), the "
 "help content you wrote will be lost. If your script was already saved and is"
 " associated to a filename, saving is done automatically."
-msgstr ""
+msgstr "Os ficheiros da ajuda são guardados na mesma pasta como o próprio script, adicionando a extensão :file:`.help` ao nome do ficheiro. Note que, você pode editar a ajuda do seu script antes de guardá-lo pela primeira vez. Se fechar mais tarde o diálogo de ajuda do script sem guardar o script (ex.: rejeitá-lo) o conteúdo da ajuda que escreveu será perdido. Se o seu script estiver já guardado e associado ao nome do ficheiro, será guardado automaticamente."
 
 # 6ec4cfaa48444d46bdbc7b8fc70f651b
 #: ../../source/docs/user_manual/processing/console.rst:378
@@ -565,7 +565,7 @@ msgid ""
 "find two entries named :guilabel:`Pre-execution script file` and :guilabel"
 ":`Post-execution script file` where the filename of the scripts to be run in"
 " each case can be entered."
-msgstr ""
+msgstr "No grupo  :guilabel:`Geral` do diálogo de configuração do processamento irá encontrar duas entradas denominados de :guilabel:`Pré-execução do ficheiro script`  e :guilabel:`Pós-execução do ficheiro script` onde os nomes do ficheiro dos scripts serão executados no caso de serem introduzidos."
 
 #: ../../source/docs/user_manual/processing/console.rst:16
 msgid ""
@@ -574,7 +574,7 @@ msgid ""
 " can incorporate those command to your console work and connect processing "
 "algorithms to all the other features (including methods from the |qg| API) "
 "available from there."
-msgstr ""
+msgstr "Não existe uma consola de processamento no |qg|, mas em vez disso todos os comandos do processamento estão disponível a partir da consola Python embutida. Isso significa que pode incorporar esse comando na seu trabalho da consola e ligar os algoritmos do processamento a todos os outros elementos (incluindo os métodos provenientes da API do |qg|) disponíveis."
 
 #: ../../source/docs/user_manual/processing/console.rst:27
 msgid ""
@@ -591,7 +591,7 @@ msgid ""
 "|qg| object representing the layer, you can also pass it as parameter. If "
 "the input is optional and you do not want to use any data object, use "
 "``None``."
-msgstr ""
+msgstr "Camada Raster, camada Vectorial ou Tabela. Simplesmente usa uma cadeia de texto com nome que identifica o objecto de dados a usar ( o nome está na Tabela de Conteúdos do |qg|) ou o nome do ficheiro (se a camada correspondente não for aberta, mas não adicionada no enquadramento do mapa). Se tiver uma instância do objecto |qg| representado na camada, pode também passá-lo como um parâmetro. Se o ficheiro de entrada é opcional e não quer usá-lo como qualquer tipo de objecto de dados, use ``Nenhum``."
 
 #: ../../source/docs/user_manual/processing/console.rst:188
 msgid ""
@@ -600,7 +600,7 @@ msgid ""
 "Console. If you want to add an output to it, you have to do it yourself "
 "after running the algorithm. To do so, you can use |qg| API commands, or, "
 "even easier, use one of the handy methods provided for such task."
-msgstr ""
+msgstr "Contrariamente, quando o algoritmo é executado a partir da caixa de ferramentas,os ficheiros de saída não são adicionados ao enquadramento do mapa se executar o mesmo algoritmo a partir da Consola Python. Se quiser adicionar um ficheiro de saída, você tem de adicioná-lo depois de correr o algoritmo, Para o fazer, pode usar os comandos do API |qg|, ou, mais fácil, use um dos métodos úteis para esta tarefa."
 
 #: ../../source/docs/user_manual/processing/console.rst:202
 msgid ""
@@ -611,7 +611,7 @@ msgid ""
 "usually with a less complex syntax. These functions should be used when "
 "developing new algorithms, as they make it easier to operate with input "
 "data."
-msgstr ""
+msgstr "Além das funções usadas para chamar os algoritmos, importar o pacote ``processamento`` irá também importar algumas funções adicionais que facilitará o trabalho dos dados, particularmente os dados vectoriais. Estas funções de conveniência que envolvem alguma funcionalidade a partir da API do |qg|, usualmente com uma sintaxe menos complexa. Estas funções devem ser usadas quando são programados novos algoritmos, para tornar mais fácil a operação com o os dados de entrada."
 
 #: ../../source/docs/user_manual/processing/console.rst:209
 msgid ""
@@ -634,7 +634,7 @@ msgid ""
 "``processing.getObjectFromUri()`` function. Multiple inputs also have a "
 "string value, which contains the filepaths to all selected object, separated"
 " by semicolons (``;``)."
-msgstr ""
+msgstr "Os valores das camadas e tabelas são cadeias de texto que contêm caminhos de ficheiro para o objecto correspondente. Para torná-los em objectos |qg|, pode usar a função ``processing.getObjectFromUri()``. Os múltiplos dados de entrada também têm um valor de cadeia de texto, que contêm caminhos de ficheiros para todos os objectos seleccionados, separado por ponto e vírgulas (``;``)."
 
 #: ../../source/docs/user_manual/processing/console.rst:322
 msgid ""
@@ -643,7 +643,7 @@ msgid ""
 "not load the layers it produces, the final TWI layer will be loaded, since "
 "it is saved to the file entered by the user, which is the value of the "
 "corresponding output."
-msgstr ""
+msgstr "Quando declara um ficheiro de saída, o algoritmo irá tentar adicioná-lo no |qg| uma vez finalizado. Isto é a razão porque, embora o método ``runalg()`` não carrega camadas quando as produz, a camada TWI final será carregadas, uma vez guardada no ficheiro introduzida pelo utilizador, que é o valor do ficheiro de saída correspondente."
 
 #~ msgid ""
 #~ "There is not a proccesing console in QGIS, but all processing commands are "

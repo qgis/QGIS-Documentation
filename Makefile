@@ -148,27 +148,48 @@ pdf: html
 	fi
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf
 
+full:  
+	@-if [ $(LANG) != "en" ]; then \
+		echo; \
+		echo Pulling $$LANG from transifex; \
+		# --minimum-perc=1 so only files which have at least 1% translation are pulled \
+		# -f to force, --skip to not stop with errors \
+		# -l lang \
+		tx pull --minimum-perc=1 --skip -f -l $$LANG; \
+        fi
+	make pdf
+	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf
+	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf
+	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual-$(LANG).pdf
+
 world: all
 
 all:
 	@echo
 	@echo Building html for the following languages: $(LANGUAGES)
-	@echo
-	@echo Starting with pulling all translations from transifex
-	# --minimum-perc=1 so only files which have at least 1% translation are pulled
-	# -f to force, --skip to not stop with errors
-	tx pull --minimum-perc=1 --skip -f
-	mkdir -p live/html/pdf
-	# after build quickly rename old live dir, mv output to live dir and then remove old dir
+	mkdir -p live/html/pdf  # TODO remove this
 	@for LANG in $(LANGUAGES) ; do \
+		echo \
+		echo Pulling $$LANG from transifex \
+		# --minimum-perc=1 so only files which have at least 1% translation are pulled \
+		# -f to force, --skip to not stop with errors \
+		# -l lang \
+		tx pull --minimum-perc=1 --skip -f -l $$LANG \
 		make LANG=$$LANG pdf; \
-		mkdir -p live/html/$$LANG; \
-		mv live/html/$$LANG live/html/$$LANG.old; \
-		mv $(BUILDDIR)/html/$$LANG live/html/; \
-		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-UserGuide.pdf live/html/pdf/QGIS-$(VERSION)-UserGuide-$$LANG.pdf;  \
-		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf live/html/pdf/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$$LANG.pdf;  \
-		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-QGISTrainingManual.pdf live/html/pdf/QGIS-$(VERSION)-QGISTrainingManual-$$LANG.pdf;  \
-		rm -rf live/html/$$LANG.old; \
+		mv $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-UserGuide.pdf $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-UserGuide-$$LANG.pdf;  \
+		mv $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$$LANG.pdf;  \
+		mv $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-QGISTrainingManual.pdf $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-QGISTrainingManual-$$LANG.pdf;  \
+		echo rsync -hvrz -e ssh --progress $(BUILDDIR)/pdf/$$LANG qgis.osgeo.osuosl.org:/var/www/documentation/github/QGIS-Documentation-2.0/live/html/pdf; \
+		echo rsync -hvrz -e ssh --progress $(BUILDDIR)/html/$$LANG qgis.osgeo.osuosl.org:/var/www/documentation/github/QGIS-Documentation-2.0/live/html; \
+		# OLD STUFF \
+		# after build quickly rename old live dir, mv output to live dir and then remove old dir \
+		#mkdir -p live/html/$$LANG; \
+		#mv live/html/$$LANG live/html/$$LANG.old; \
+		#mv $(BUILDDIR)/html/$$LANG live/html/; \
+		#cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-UserGuide.pdf live/html/pdf/QGIS-$(VERSION)-UserGuide-$$LANG.pdf;  \
+		#cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf live/html/pdf/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$$LANG.pdf;  \
+		#cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-QGISTrainingManual.pdf live/html/pdf/QGIS-$(VERSION)-QGISTrainingManual-$$LANG.pdf;  \
+		#rm -rf live/html/$$LANG.old; \
 	done
 
 createlang: springclean

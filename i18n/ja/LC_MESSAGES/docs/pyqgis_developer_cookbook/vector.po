@@ -1,13 +1,14 @@
 # 
 # Translators:
 # nuimura <nuimura@nagoya-u.jp>, 2013
+# Kosuke Asahi <waigania13@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2014-03-25 17:04+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-04-06 14:03+0000\n"
+"Last-Translator: Kosuke Asahi <waigania13@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +27,7 @@ msgstr "このセクションではベクタレイヤに対して行える様々
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:18
 msgid "Iterating over Vector Layer"
-msgstr "ベクターレイヤの重ねあわせ"
+msgstr "ベクターレイヤの反復処理"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:20
 msgid ""
@@ -34,45 +35,45 @@ msgid ""
 "tasks. Below is an example of the simple basic code to perform this task and"
 " showing some information about each feature. the ``layer`` variable is "
 "assumed to have a QgsVectorLayer object"
-msgstr ""
+msgstr "ベクターレイヤのフィーチャへの反復処理はもっとも頻繁に行う処理の一つです。次の例はこの処理を行う基本的なコードで、各フィーチャのいくつかの情報を表示します。 ``layer`` はQGSVectorLayerオブジェクトとしています。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:64
 msgid "Iterating over selected features"
-msgstr ""
+msgstr "選択されたフィーチャへの反復処理"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:67
 msgid "Convenience methods"
-msgstr ""
+msgstr "便利な方法"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:69
 msgid ""
 "For the above cases, and in case you need to consider selection in a vector "
 "layer in case it exist, you can use the :func:`getfeatures` method from the "
 "buil-in processing plugin, as follows:"
-msgstr ""
+msgstr "上記の例や、ベクターレイヤ内でフィーチャの選択がありそれを考慮する必要がある場合にも、 下記のようにprocessingプラグインに組み込まれている :func:`getfeatures`  メソッドを使うことが出来ます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:78
 msgid ""
 "This will iterate over all the features in the layer, in case there is no "
 "selection, or over the selected features otherwise."
-msgstr ""
+msgstr "このメソッドは、フィーチャの選択がない場合はレイヤー中のすべてのフィーチャを、フィーチャの選択がある場合は選択されているフィーチャを反復処理します。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:81
 msgid "Iterating over a subset of features"
-msgstr ""
+msgstr "一部のフィーチャへの反復処理"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:83
 msgid ""
 "If you want to iterate over a given subset of features in a layer, such as "
 "those within a given area, you have to add a :obj:`QgsFeatureRequest` object"
 " to the :func:`getFeatures()` call. Here's an example"
-msgstr ""
+msgstr "もし所定の範囲内に含まれフィーチャのように、レイヤ中の所定のフィーチャにのみ処理を行いたい場合、:obj:`QgsFeatureRequest` オブジェクトを :func:`getFeatures()` に加えます。下記が例になります。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:92
 msgid ""
 "The request can be used to define the data retrieved for each feature, so "
 "the iterator returns all features, but return partial data for each of them."
-msgstr ""
+msgstr "このリクエストは各フィーチャからどの情報を取得するかを定義するために使用することも出来ます。反復処理はすべてのフィーチャを返しますが、各フィーチャの特定の情報のみ返します。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:106
 msgid "Modifying Vector Layers"
@@ -204,7 +205,7 @@ msgid ""
 "distances. This can be a very time consuming task, specilly if it needs to "
 "be repeated fro several locations. If a spatial index exists for the layer, "
 "the operation is much more effective."
-msgstr ""
+msgstr "空間インデックスは、もしあなたが頻繁にベクターレイヤーに問い合わせをする必要がある場合、あなたのコードのパフォーマンスを劇的に改善することが出来ます。例えば、あなたが、補完値の計算に使用するために、与えられた場所に近接する10点をポイントレイヤーから求める必要がある、補完アルゴリズムを書いた場合を想像してください。空間インデックスが無い場合、QGISがこれらの10点を求めるためのただ一つの方法は、すべての点から指定の場所への距離を計算し、それらの距離を比較することです。これは、特に、いくつかの場所を求めるために繰り返す必要がある場合に、非常に時間のかかるタスクとなります。もし空間インデックスがレイヤに作成されている場合、処理はもっと効率的になります。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:251
 msgid ""
@@ -212,13 +213,13 @@ msgid ""
 "telephone number are not orderer or indexed. The only way to find the "
 "telephone number of a given person is to read from the beginning until you "
 "find it."
-msgstr ""
+msgstr "空間インデックスの無いレイヤは、電話番号が順番に並んでいない、もしくはインデックスの無い電話帳と思ってください。所定の人の電話番号を見つける唯一の方法は、巻頭からその番号を見つけるまで読むだけです。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:253
 msgid ""
 "Spatial indexes are not created by default for a QGIS vector layer, but you "
 "can create them easily. This is what you have to do."
-msgstr ""
+msgstr "空間インデックスは、QGISのベクトルレイヤにはデフォルトでは作成されていません、しかし作成するのは簡単です。以下が必要な手順です。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:255
 msgid "create spatial index --- the following code creates an empty index::"
@@ -264,7 +265,7 @@ msgid ""
 "specify destination CRS --- if a valid instance of "
 ":class:`QgsCoordinateReferenceSystem` is passed, the layer is transformed to"
 " that CRS."
-msgstr ""
+msgstr "3番目のパラメータは出力の際の文字エンコーディングを指定します。いくつかのドライバーでは、正しい動作のために指定が必要なります - shapeファイルはそのうちの一つです --- しかしながら、あなたが様々な国の文字列を扱わない場合、エンコーディングには多くの注意を必要としません。 ``None`` としてある4番目のパラメータには、出力の空間参照系を指定する事が出来ます --- もし有効な :class:`QgsCoordinateReferenceSystem` インスタンスを与えられた場合、 レイヤーはその空間参照系に投影されます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:305
 msgid ""
@@ -273,11 +274,11 @@ msgid ""
 "Optionally you can set whether to export only selected features, pass "
 "further driver-specific options for creation or tell the writer not to "
 "create attributes --- look into the documentation for full syntax."
-msgstr ""
+msgstr "有効なドライバー名は、  `supported formats by OGR`_  を調べて下さい ---  \"Code\" カラムの表記をドライバー名として渡します。　選択されたフィーチャのみの出力や、作成のためのドライバ特有のオプション、属性を作成しないようにクラスに指示するといった指定をすることも出来ます --- すべての構文についてはドキュメントを見てください。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:314
 msgid "directly from features::"
-msgstr "フィーチャをディレクトリで選択::"
+msgstr "フィーチャから直接::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:347
 msgid "Memory Provider"
@@ -320,11 +321,11 @@ msgstr "コンストラクタはレイヤーのジオメトリの種類に指定
 msgid ""
 "The URI can also specify the coordinate reference system, fields, and "
 "indexing of the memory provider in the URI. The syntax is:"
-msgstr ""
+msgstr "URIではメモリープロバイダーの座標参照系、属性フィールド、インデックスを指定することが出来ます。構文は、"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:373
 msgid "crs=definition"
-msgstr ""
+msgstr "crs=definition"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:372
 msgid ""
@@ -334,7 +335,7 @@ msgstr "座標参照系を指定し、この定義は :func:`QgsCoordinateRefere
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:376
 msgid "index=yes"
-msgstr ""
+msgstr "index=yes"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:376
 msgid "Specifies that the provider will use a spatial index"
@@ -342,7 +343,7 @@ msgstr "プロバイダーが空間インデックスを使うことを指定し
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:381
 msgid "field=name:type(length,precision)"
-msgstr ""
+msgstr "field=name:type(length,precision)"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:379
 msgid ""
@@ -379,11 +380,11 @@ msgstr "ベクタレイヤーがレンダリングされるとき、データの
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:432
 msgid "The renderer for a given layer can obtained as shown below:"
-msgstr ""
+msgstr "指定したレイヤのレンダラーは下記のように得ることが出来ます"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:438
 msgid "And with that reference, let us explore it a bit::"
-msgstr ""
+msgstr "この参照を利用して、少しだけ探索してみましょう::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:442
 msgid "There are several known renderer types available in QGIS core library:"
@@ -758,7 +759,7 @@ msgstr "アイコンはあとからメタデータクラスの :func:`setIcon` �
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:900
 msgid "**TODO:**"
-msgstr ""
+msgstr "**TODO:**"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:896
 msgid "creating/modifying symbols"
@@ -785,35 +786,35 @@ msgstr "シンボルレイヤーとレンダラのレジストリを調べる方
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:274
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:422
 msgid "vector layers"
-msgstr ""
+msgstr "ベクターレイヤー"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:14
 msgid "iterating"
-msgstr ""
+msgstr "反復処理"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:14
 msgid "features"
-msgstr ""
+msgstr "フィーチャー"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:101
 msgid "editing"
-msgstr ""
+msgstr "編集"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:244
 msgid "spatial index"
-msgstr ""
+msgstr "空間インデックス"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:244
 msgid "using"
-msgstr ""
+msgstr "使用する"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:274
 msgid "writing"
-msgstr ""
+msgstr "書き込み"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:344
 msgid "memory provider"
-msgstr ""
+msgstr "メモリープロバイダー"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:422
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:461
@@ -826,20 +827,20 @@ msgstr ""
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:461
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:461
 msgid "single symbol renderer"
-msgstr ""
+msgstr "single symbol renderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:470
 msgid "categorized symbology renderer"
-msgstr ""
+msgstr "categorized symbology renderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:470
 msgid "categorized symbol renderer"
-msgstr ""
+msgstr "categorized symbol renderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:490
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:490
 msgid "graduated symbol renderer"
-msgstr ""
+msgstr "graduated symbol renderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:568
 msgid "symbols"

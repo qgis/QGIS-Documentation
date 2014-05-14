@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-03-22 06:18+0000\n"
+"PO-Revision-Date: 2014-04-28 09:13+0000\n"
 "Last-Translator: yoichi <yoichi.kayama@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -230,7 +230,7 @@ msgid ""
 "You can select and unselect both under :menuselection:`Settings --> Toolbars"
 " -->`. Using the basic digitizing tools you can perform the following "
 "functions:"
-msgstr ""
+msgstr "一般にベクタレイヤの編集機能はデジタイジングとセクション :ref:`sec_advanced_edit`　で解説されている高度なデジタイジングツールバーに分けられています. 両方について :menuselection:`設定 --> ツールバー -->` で選択、非選択を行えます. 基本的なデジタイジングツールでは以下の機能が使えます:"
 
 # 296e3dc3534148e6857466d8febed982
 # 48c8d811ec594899a9a9e4173e5b17a4
@@ -377,7 +377,7 @@ msgid ""
 "the editing mode. Once the layer is in edit mode, markers will appear at the"
 " vertices, and additional tool buttons on the editing toolbar will become "
 "available."
-msgstr ""
+msgstr "編集モードを開始,終了する別の方法としてデジタイジングツールバーの :index:`Toggle Editing` |mActionToggleEditing| :sup:`Toggle editing` ボタンを使うことができます. レイヤが編集モードになると頂点にマーカーが表示され,編集ツールバーのツールボタンが有効になります."
 
 # 71a49ea4c689449995cb4f8df98fb48e
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:237
@@ -450,7 +450,7 @@ msgid ""
 ":guilabel:`Search Radius:` |selectnumber| to a number greater than zero "
 "(i.e. 10). Otherwise |qg| will not be able to tell which vertex is being "
 "edited."
-msgstr ""
+msgstr " :menuselection:`設定 -->` |mActionOptions| :menuselection:`オプション --> デジタイジング -->` :guilabel:`検索半径:` |selectnumber| に0より大きい (例. 10) 値を設定することは重要です. そうでなければ |qg| は殿頂点を編集するのか判断できません."
 
 # 0a22a23e3e164d069e208d8a729fd549
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:329
@@ -1587,7 +1587,7 @@ msgstr "Current_Edits"
 msgid ""
 "|qg| supports various capabilities for :index:`editing` OGR, SpatiaLite, "
 "PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables."
-msgstr ""
+msgstr "|qg| は OGR, SpatiaLite, PostGIS, MSSQL SpatialやOracle Spatial vector とテーブルに対する様々な :index:`編集` 機能をサポートしています."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:159
 msgid ""
@@ -1595,7 +1595,7 @@ msgid ""
 "and maintaining common boundaries in polygon mosaics. |qg| 'detects' a "
 "shared boundary in a polygon mosaic and you only have to move the vertex "
 "once and |qg| will take care about updating the other boundary."
-msgstr ""
+msgstr " |checkbox| :guilabel:`トポロジ編集を有効にする` オプションは共通の境界線を持つポリゴンモザイクの編集と維持に利用します. |qg| はポリゴンモザイクの共通境界線を '検出' するので、ある頂点を一度移動するだけで |qg| がもう一方の境界線も更新します."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:169
 msgid ""
@@ -1606,7 +1606,7 @@ msgid ""
 "to digitize the second one such that both intersect and |qg| then cuts the "
 "second polygon to the common boundary. The advantage is that users don't "
 "have to digitize all vertices of the common boundary."
-msgstr ""
+msgstr "２つ目のカラムにあるトポロジカルオプションは |checkbox| :guilabel:`交差禁止.` で, called :guilabel:`新規ポリゴンの重なり禁止` と呼ばれポリゴンモザイクでの重なりを禁止するものです. これにより隣接ポリゴンの迅速なデジタイズができます. もしあるポリゴンが存在しているところでこのオプションを使って隣接ポリゴンを重なる形でデジタイズすると |qg| は２つめのポリゴンを共通境界線で自動的にカットします.これによってユーザが共通境界線の頂点をデジタイズしなくていい利点ができます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:193
 msgid ""

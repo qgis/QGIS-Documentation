@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-03-26 21:32+0000\n"
+"PO-Revision-Date: 2014-05-09 21:20+0000\n"
 "Last-Translator: João Gaspar <joao.f.r.gaspar@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -317,14 +317,14 @@ msgid ""
 "same CRS to be used as input layers. If you do not want to see this "
 "additional information, you can disable this functionality in the processing"
 " config dialog, unchecking the :guilabel:`Show CRS` option."
-msgstr ""
+msgstr "Por defeito, o diálogo de parâmetros irá mostrar a descrição dos SRC de cada camada com o seu respectivo nome, tornando mais fácil seleccionar as camadas que partilham o mesmo SRC para serem usados como camadas de entrada. Se não quiser ver esta informação adicional, pode desactivar esta funcionalidade no diálogo de configuração do processamento, desactivando a opção :guilabel:`Mostrar o SRC`"
 
 # 713e44e76bc444ceaaf27cbcbedfd3dd
 #: ../../source/docs/user_manual/processing/toolbox.rst:300
 msgid ""
 "If you try to execute an algorithm using as input two or more layers with "
 "unmatching CRS's, a warning dialog will be shown."
-msgstr ""
+msgstr "Se tentar executar um algoritmo usando como ficheiro de entrada duas ou mais camadas com diferentes SRC, será exibido um diálogo de aviso."
 
 # 95bab4f51f054e8f8a3b7a5dd779e738
 #: ../../source/docs/user_manual/processing/toolbox.rst:303
@@ -332,7 +332,7 @@ msgid ""
 "You still can execute the algorithm, but be aware that in most cases that "
 "will produce wrong results, such as empty layers due to input layers not "
 "overlapping."
-msgstr ""
+msgstr "Pode continuar a executar o algoritmo, mas tenha atenção que na maioria dos casos irá produzir resultados errados, tais como, camadas vazias devido à falta de sobreposição das camadas usadas como ficheiros de entrada."
 
 # 35624cf8c451457d870e7aee2be7eb98
 #: ../../source/docs/user_manual/processing/toolbox.rst:307
@@ -386,7 +386,7 @@ msgid ""
 ":file:`.shp` for vector ones) will be appended to the filepath and the file "
 "format corresponding to that extension will be used to save the layer or "
 "table."
-msgstr ""
+msgstr "O formato do ficheiro de saída é definido pela extensão do nome do ficheiro. Os formatos suportados dependem dos formatos que o próprio algoritmo suporta. Para seleccionar um formato, seleccione apenas a extensão de ficheiro correspondente (ou adicione se está a escrever directamente o caminho do ficheiro). Se a extensão do caminho do ficheiro que introduziu não coincide com nenhum dos suportados, será anexada uma formato suportado por defeito (usualmente :file:`.dbf`` para tabelas, :file:`.tif` para camadas raster e :file:`.shp` para vectoriais) ao caminho do ficheiro e o formato de ficheiro correspondente a essa extensão para guardar a camada ou tabela. "
 
 # 534e86cba2ae443ebe7478a2b899d9ab
 #: ../../source/docs/user_manual/processing/toolbox.rst:345
@@ -471,7 +471,7 @@ msgid ""
 "output filename instead. Notice, that, if the output is saved to a temporary"
 " file, the filename of this temporary file is usually long and meaningless "
 "one intended to avoid collision with other already existing filenames."
-msgstr ""
+msgstr ":guilabel:`Usar nome do ficheiro como nome da camada`. O nome de cada camada resultante criada por um algoritmo é definida pelo próprio algoritmo. Em alguns casos, um nome fixo pode ser usado, o que significa que esse mesmo nome irá ser usado, não importando a camada de entrada usada. Em outros casos, o nome pode depender no nome camada de entrada ou algum dos parâmetros usados na execução do algoritmo. Se a caixa de verificação estiver activa, o nome irá ser obtido do nome do ficheiro de saída. Tenha em atenção, que, se o ficheiro de saída é guardado para um ficheiro temporário, o nome do ficheiros desse ficheiro temporário é normalmente longo e sem sentido de forma a evitar colisões com outros nomes de ficheiros existentes."
 
 # ca5bf2c668f246bdada99f913f9ed7bd
 #: ../../source/docs/user_manual/processing/toolbox.rst:430
@@ -489,7 +489,7 @@ msgid ""
 "file`. This parameters refer to scripts written using the processing "
 "scripting functionality, and are explained in the section covering scripting"
 " and the console."
-msgstr ""
+msgstr ":guilabel:`Pré-execução do ficheiro script` e :guilabel:`Pós-execução do ficheiro script`. Estes parâmetros referem-se aos scripts escritos que usam a funcionalidade de scripting, e são explicados na secção que cobre o scripting e a linha de comandos."
 
 # d33db8b8b6cf4ff6b0adadf8ef0f7990
 #: ../../source/docs/user_manual/processing/toolbox.rst:438
@@ -500,7 +500,7 @@ msgid ""
 "in the toolbox. Also, some algorithm providers have their own configuration "
 "items, that we will explain later when covering particular algorithm "
 "providers."
-msgstr ""
+msgstr "Além do bloco do :guilabel:`Geral` no diálogo de configurações, irá também encontrar um para cada fornecedor de algoritmo. Eles contêm um item de :guilabel:`Activar` que pode usar para exibir ou não na caixa de ferramentas. Alguns fornecedores de algoritmos têm os seus próprios itens de configuração, que iremos explicar mais tarde quando abrangermos em particular os fornecedores de algoritmos."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:148
 msgid "Vector iterator button |win|"
@@ -514,7 +514,7 @@ msgid ""
 "of just once for the whole layer, producing as many outputs as times the "
 "algorithm is executed. This allows for automating the process when all "
 "features in a layer have to be processed separately."
-msgstr ""
+msgstr "Se o algoritmo conter muitos deles, poderá alternar apenas um deles. Se o botão correspondente ao ficheiro de entrada vectorial é alternado, o algoritmo irá ser executado iterativamente em cada um dos elementos em vez de apenas uma vez para a camada toda, produzindo tantos ficheiros de saída como as vezes que o algoritmo é executado. Isto permite automatizar o processo quando todos os elementos numa camada tiverem de ser processados separadamente."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:316
 msgid ""
@@ -528,7 +528,7 @@ msgid ""
 "these are not yet implemented, the processing framework is prepared to "
 "handle them, and we expect to add new kinds of output channels in a near "
 "feature."
-msgstr ""
+msgstr "Eles serão todos guardados no disco, e a tabela de parâmetros irão conter uma caixa de texto correspondente para cada um destes ficheiros de saída, onde pode introduzir o canal de saída a usar para guardá-lo. Um canal de saída contem a informação necessária para guardar o objecto resultante em qualquer lugar. Em casos normais, irá guardá-lo num ficheiro, mas a arquitectura permite outras formas de guardá-lo. Por exemplo, uma camada vectorial pode ser armazenada numa base de dados ou mesmo actualizada num servidor remoto usando o serviço WFS-T. Embora as soluções como esta não estarem ainda implementadas, a infraestrutura do processamento está preparada para suportá-la, e nós esperamos adicionar novas formas de canais de saída num futuro próximo."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:71
 msgid ""
@@ -536,11 +536,11 @@ msgid ""
 "such as LiDAR tools or scripts based on the R statistical computing "
 "software, among others. Independent |qg| plugins that add new algorithms to "
 "the toolbox will only be shown in the advanced view."
-msgstr ""
+msgstr "Alem disso, alguns algoritmos adicionais estão disponíveis na vista avançada, assim como as ferramentas LiDAR ou scripts baseados no software de computação estatística R, entre outros. Módulos independentes |qg|, que adicionam novos algoritmos à caixa de ferramentas irão ser apenas exibidos na vista avançada."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:81
 msgid "Native |qg| algorithms"
-msgstr ""
+msgstr "Algoritmos nativos |qg|"
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:83
 msgid ""
@@ -549,7 +549,7 @@ msgid ""
 " requiring any additional installation. Also running them requires no prior "
 "knowledge of the external applications they use, making them more accesible "
 "for first-time users."
-msgstr ""
+msgstr "Para o caso particular de execução do |qg| no Windows, estes algoritmos são completamente funcionais logo após a instalação  do |qg| e podem ser corridos sem requerem instalação adicional. Para corre-los não necessitará de conhecimento de aplicações externas, tornando mais acessivel a novos utilizadores."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:126
 msgid ""
@@ -557,7 +557,7 @@ msgid ""
 "opened) in |qg|. The selector contains as well a button on its right-hand "
 "side, to let you select filenames that represent layers currently not loaded"
 " in |qg|."
-msgstr ""
+msgstr "Camada raster, para selecionar a partir de uma lista de todos os disponíveis (actualmente aberta) no |qg|. O seleccionador contem também um botão no lado direito, que permite-o seleccionar o nome do ficheiro que representa as camadas que não estão actualmente carregadas no |qg|."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:129
 msgid ""
@@ -567,7 +567,7 @@ msgid ""
 "from the attributes table of the layer. In that case, only opened layers can"
 " be selected, since they need to be open so as to retrieve the list of field"
 " names available."
-msgstr ""
+msgstr "Uma camada vectorial, para seleccionar a partir da lista de todos os que estão disponíveis no |qg|. As camadas que não estiverem carregadas no |qg| também podem ser seleccionadas, como no caso das camadas raster, mas apenas se o algoritmo não requerer um campo da tabela seleccionado a partir de uma tabela de atributos de uma camada. Nesse cado, apenas as camadas abertas podem ser seleccionadas, uma vez que, eles necessitam de ser abertos para devolverem a lista dos nomes disponíveis dos campos."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:152
 msgid ""
@@ -577,7 +577,7 @@ msgid ""
 "that you will see when executing an algorithm that needs one of them is "
 "restricted to tables coming from files in DBase (:file:`.dbf`) or Comma-"
 "Separated Values (:file:`.csv`) formats."
-msgstr ""
+msgstr "Uma tabela, para seleccionar a partir de uma lista disponível no |qg|. Tabelas não espaciais são carregadas para o |qg| como camadas vectoriais, e de facto, são tratadas como tal no programa. Actualmente, a lista de tabelas disponíveis que irá ver quando executa um algoritmo é restrita a tabelas que provêem de ficheiros com o formato DBase (:file:`.dbf`) ou ficheiros separados por vírgulas (:file:`.csv`)."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:159
 msgid ""
@@ -588,7 +588,7 @@ msgid ""
 "expression, so you can select a value derived from any of this variables "
 "such as the cellsize of a layer or the northern most coordinate of another "
 "one."
-msgstr ""
+msgstr "O valor numérico, para ser introduzido na caixa de texto. Irá encontrar um botão ao lado. Clicando nele irá ver um diálogo que permite a introdução de uma expressão matemática, para que possa usá-lo com uma calculadora prática, Algumas variáveis úteis relacionados com os dados carregados no |qg| pode ser adicionados à sua expressão, portanto pode seleccionar um valor derivado de qualquer uma destas variáveis, tais como, o tamanho da célula da cama ou a coordenada mais a norte de outra."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:234
 msgid ""
@@ -596,7 +596,7 @@ msgid ""
 " from the list of the ones available in |qg|. To make the selection, click "
 "on the small button on the left side of the corresponding row to see a "
 "dialog like the following one."
-msgstr ""
+msgstr "Uma lista de elementos (sejam eles, camadas raster, vectorial ou tabelas), para seleccionar a partir da lista de disponíveis no |qg|. Para efectuar a selecção, clique no botão pequeno do lado esquerdo da linha correspondente para ver o diálogo como o que se apresenta a seguir."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:287
 msgid ""
@@ -607,7 +607,7 @@ msgid ""
 "the resulting files as input to the algorithm. Also note that the "
 "reprojection process can be performed with the algorithms that are available"
 " in the processing framework itself."
-msgstr ""
+msgstr "Note que, devido ás capacidades de reprojecção on-the-fly do qg|, embora duas camadas possam estar sobrepostas e coincidam, poderá não ser verdade se as suas coordenadas originais são usadas sem a sua reprojecção para um sistema de coordenadas comum. Essa reprojecção deverá ser feita manualmente e depois use os ficheiros resultantes como ficheiro de entrada do algoritmo. Tenha também em atenção que o processo de reprojecção pode ser executado com algoritmos que estão disponíveis na infraestrutura do processamento."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:340
 msgid ""
@@ -615,7 +615,7 @@ msgid ""
 "file and in the corresponding default file format, and will be deleted once "
 "you exit |qg| (take care with that in case you save your project and it "
 "contains temporary layers)."
-msgstr ""
+msgstr "Se não introduzir nenhum nome de ficheiro, o resultado irá ser guardado como ficheiro temporário e no formato do ficheiro padrão, e será apagado uma vez que saia do |qg| (tenha cuidado que neste caso você guarda o projecto e contém camadas temporárias)."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:356
 msgid ""
@@ -625,7 +625,7 @@ msgid ""
 " algorithm during the current session, and can be shown at any time by "
 "selecting the :menuselection:`Processing --> Results viewer` from |qg| main "
 "menu."
-msgstr ""
+msgstr "Para além das camadas raster e tabelas, os algoritmos também geram gráficos e textos como ficheiros HTML. Esses resultados são exibidos no fim de cada execução do algoritmo num novo diálogo. Esse diálogo irá manter os resultados produzidos por qualquer algoritmo durante a sessão actual, e pode ser exibido a qualquer altura, seleccionando o :menuselection:`Processing --> Visualizador de Resultados` a partir do menu principal do |qg|."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:362
 msgid ""
@@ -636,7 +636,7 @@ msgid ""
 "formats or elements not supported by |qg|. This is, for instance, the case "
 "with LAS files used for LiDAR data. The files get created, but you won't see"
 " anything new in your |qg| working session."
-msgstr ""
+msgstr "Algumas aplicações externas podem ter ficheiros (sem restrições particulares de extensão) como ficheiro de saída, mas não pertencerem a qualquer tipo de categoria referido em cima. esses ficheiros de saída não irão ser processados pelo |qg| (abertos ou incluídos no projecto actual do |qg|), umas vez que na maioria das vezes correspondem a formatos de ficheiros ou elementos que não são suportados pelo |qg|. Isto é, por exemplo, o caso dos ficheiros LAS usados pelos dados LiDAR. Os ficheiros são criados, mas não irá ver nada novo na sua sessão de trabalho do |qg|."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:374
 msgid ""
@@ -645,7 +645,7 @@ msgid ""
 "output, which virtually makes it behave like an optional output (although "
 "the layer is created anyway, but if you leave the text box empty, it will be"
 " saved to a temporary file and deleted once you exit |qg|)"
-msgstr ""
+msgstr "Não são suportados ficheiros de saída opcionais, portanto todos os ficheiros de saída são criados, mas pode desactivar a caixa de verificação correspondente se não estiver interessado num dado ficheiro de saída, que virtualmente toma um comportamento de um ficheiro de saída opcional (a camada será criada, mas se deixar a caixa de texto vazia, irá ser guardado num ficheiro temporário e apagado quando sair do |qg|)"
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:390
 msgid ""
@@ -656,7 +656,7 @@ msgid ""
 "you want using |qg|, save it to a file, and then enter the path to that file"
 " in the settings so the algorithms can use it. Whenever a layer is loaded by"
 " SEXTANTE and added to the |qg| canvas, it will be rendered with that style."
-msgstr ""
+msgstr "Juntamente com o que já foi mencionada da entrada :guilabel:`Pasta de saída`, o bloco :guilabel:`Geral` contem parâmetros para configuração de estilos de renderização padrão para camadas de saída (ou seja, camadas geradas pela utilização de algoritmo de qualquer componente da infraestrutura do GUI). Basta criar um estilo que quer usar no |qg|, guarda-lo num ficheiro, e de seguida introduzir um caminho para o ficheiro nas configurações para que sejam usado pelos algoritmos.  Cada vez que a camada for carregada pelo SEXTANTE e adicionada ao enquadramento do |qg|, esta será renderizada com esse estilo."
 
 #~ msgid ""
 #~ "Also, some additional algorithms are available only in the advanced view, "

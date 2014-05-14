@@ -1,12 +1,13 @@
 # 
 # Translators:
+# DelazJ <delazj@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2013-10-06 14:10+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-05-13 16:51+0000\n"
+"Last-Translator: DelazJ <delazj@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,24 +17,24 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:9
 msgid "Loading Layers"
-msgstr ""
+msgstr "Chargement de couches"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:11
 msgid ""
 "Let's open some layers with data. QGIS recognizes vector and raster layers. "
 "Additionally, custom layer types are available, but we are not going to "
 "discuss them here."
-msgstr ""
+msgstr "Ouvrons donc quelques couches de données. QGIS reconnaît les couches vectorielles et raster. En plus, des types de couches personnalisés sont disponibles mais nous ne les aborderons pas ici."
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:19
 msgid "Vector Layers"
-msgstr ""
+msgstr "Couches vectorielles"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:21
 msgid ""
 "To load a vector layer, specify layer's data source identifier, name for the"
 " layer and provider's name::"
-msgstr ""
+msgstr "Pour charger une couche vectorielle, spécifiez l'identifiant de la source de données de la couche, un nom pour la couche et le nom du fournisseur::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:28
 msgid ""
@@ -41,19 +42,19 @@ msgid ""
 "data provider. Layer's name is used in the layer list widget. It is "
 "important to check whether the layer has been loaded successfully. If it was"
 " not, an invalid layer instance is returned."
-msgstr ""
+msgstr "L'identifiant de source de données est une chaîne de texte, spécifique à chaque type de fournisseur de données vectorielles. Le nom de la couche est utilisée dans le widget liste de couches. Il est important de vérifier si la couche a été chargée ou pas. Si ce n'était pas le cas, une instance de couche non valide est retournée."
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:33
 msgid ""
 "The following list shows how to access various data sources using vector "
 "data providers:"
-msgstr ""
+msgstr "La liste suivante montre comment accéder à différentes sources de données provenant de différents fournisseurs de données vectorielles:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:39
 msgid ""
 "OGR library (shapefiles and many other file formats) --- data source is the "
 "path to the file ::"
-msgstr ""
+msgstr "La bibliothèque OGR (shapefiles et beaucoup d'autres formats) --- la source de données est le chemin du fichier::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:49
 msgid ""
@@ -61,14 +62,14 @@ msgid ""
 "create a connection to PostgreSQL database. :class:`QgsDataSourceURI` class "
 "can generate this string for you. Note that QGIS has to be compiled with "
 "Postgres support, otherwise this provider isn't available. ::"
-msgstr ""
+msgstr "PostGIS database --- la source de donnée est une chaîne de texte contenant toutes les informations nécessaires à la création d'une connection à la base de données PostgreSQL. La classe :class:`QgsDataSourceURI` peut générer ce texte pour vous. Notez que QGIS doit être compilé avec le support Postgres afin que ce fournisseur soit disponible.::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:67
 msgid ""
 "CSV or other delimited text files --- to open a file with a semicolon as a "
 "delimiter, with field \"x\" for x-coordinate and field \"y\" with "
 "y-coordinate you would use something like this ::"
-msgstr ""
+msgstr "CSV ou autres fichiers de texte délimité --- pour ouvrir un fichier délimité par le point-virgule, ayant des champs \"x\" et \"y\" respectivement pour coordonnées x et y, vous devriez utiliser quelque chose comme ceci::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:75
 msgid ""
@@ -76,7 +77,7 @@ msgid ""
 "the path must be prefixed with *file://*. Also it allows WKT (well known "
 "text) formatted geomtries as an alternative to \"x\" and \"y\" fields, and "
 "allows the coordinate reference system to be specified. For example ::"
-msgstr ""
+msgstr "Note: Depusi QGIS 1.7, le fournisseur est structuré comme une URL. Le chemin doit donc être précédé de *file://*. De même, il autorise les descriptions de géométries au format WKT (well known text) en alternative aux champs \"x\" et \"y\", et permet de spécifier le système de coordonnées de référence. Par exemple::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:87
 msgid ""
@@ -90,7 +91,7 @@ msgid ""
 "SpatiaLite database --- supported from QGIS v1.1. Similarly to PostGIS "
 "databases, :class:`QgsDataSourceURI` can be used for generation of data "
 "source identifier ::"
-msgstr ""
+msgstr "Base de données Spatialite --- supporté depuis la version 1.1 de QGIS. Tout comme avec les bases de données PostGIS, la classe :class:`QgsDataSourceURI` peut être utilisée pour générer l'identifiant de la source de données::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:116
 msgid ""
@@ -110,11 +111,11 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:148
 msgid "And you can also use the"
-msgstr ""
+msgstr "Et vous pouvez aussi utiliser"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:153
 msgid "Raster Layers"
-msgstr ""
+msgstr "Couches raster"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:155
 msgid ""
@@ -127,7 +128,7 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:171
 msgid "Raster layers can also be created from a WCS service."
-msgstr ""
+msgstr "Les couches raster peuvent également être créées à partir d'un service WCS."
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:182
 msgid ""
@@ -157,11 +158,11 @@ msgstr ""
 msgid ""
 "Layers are destroyed automatically on exit, however if you want to delete "
 "the layer explicitly, use::"
-msgstr ""
+msgstr "Les couches sont automatiquement supprimées lorsque vous quittez, mais si vous souhaitez explicitement supprimer la couche, utilisez::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:217
 msgid "**TODO:**"
-msgstr ""
+msgstr "**A FAIRE :**"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:216
 msgid "More about map layer registry?"
@@ -169,7 +170,7 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:15
 msgid "vector layers"
-msgstr ""
+msgstr "couches vectorielles"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:15
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:36
@@ -181,39 +182,39 @@ msgstr ""
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:124
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:168
 msgid "loading"
-msgstr ""
+msgstr "chargement"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:36
 msgid "OGR layers"
-msgstr ""
+msgstr "couches OGR"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:46
 msgid "PostGIS layers"
-msgstr ""
+msgstr "couches PostGIS"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:64
 msgid "delimited text layers"
-msgstr ""
+msgstr "couches de texte délimité"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:84
 msgid "GPX files"
-msgstr ""
+msgstr "fichiers GPX"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:95
 msgid "SpatiaLite layers"
-msgstr ""
+msgstr "couches SpatiaLite"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:113
 msgid "MySQL geometries"
-msgstr ""
+msgstr "géométries MySQL"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:124
 msgid "raster layers"
-msgstr ""
+msgstr "couches raster"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:168
 msgid "WMS raster"
-msgstr ""
+msgstr "raster WMS"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:193
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:203
@@ -222,4 +223,4 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:203
 msgid "adding a layer"
-msgstr ""
+msgstr "ajout d'une couche"

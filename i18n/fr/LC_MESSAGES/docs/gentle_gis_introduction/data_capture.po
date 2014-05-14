@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-03-26 14:58+0000\n"
-"Last-Translator: yjacolin <yjacolin@free.fr>\n"
+"PO-Revision-Date: 2014-05-13 16:14+0000\n"
+"Last-Translator: DelazJ <delazj@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -195,7 +195,7 @@ msgid ""
 "polyline or polygon), and you need to know what the attributes of that layer"
 " will be. Let's look at a few examples and it will become clearer how to go "
 "about doing this."
-msgstr ""
+msgstr "Avant de créer une nouvelle couche vecteur (qui sera stocké dans un shapefile), vous devez connaître la géométrie de la couche (point, polyligne ou polygone) ainsi que savoir quels attributs seront contenu dans cette couche. Regardons quelques exemples et cela deviendra plus claire sur la manière de faire ceci."
 
 # 6c87d8288c7940759d0c4798bf3a4c5a
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:95
@@ -216,7 +216,7 @@ msgid ""
 "to use polylines. If we have whole areas that are of tourism interest, such "
 "as a nature reserve or a cultural village, polygons might make a good "
 "choice."
-msgstr ""
+msgstr "Imaginez que vous souhaitez créer une jolie carte touristique sur votre zone locale. Votre vision de la carte finale est une page topo au 1:50 000 avec des marqueurs par dessus pour les sites d'intérêt pour les touristes. D'abord, réfléchissons sur les géométries. Nous savons que nous pouvons représenter une couche vecteur sous forme d'entité ponctuelle, linéaire ou polygonale. Laquelle est la plus pertinente pour notre carte touristique ? Nous pouvons utiliser des points si nous souhaitons indiquer un point précis tel que des points de vue, mémorial, champs de bataille etc. Si nous souhaitons que les touristes suivent une route, comme une route panoramique dans une vallée montagneuse, il peut être pertinent d'utiliser des polylignes. Si vous nous avons de larges surfaces qui sont d'intérêt touristique, comme les réserves naturelles ou un village culturel, les polygones peuvent être un bon choix. "
 
 # 41d5ba8bd1a94d508b5aa417de85fca8
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:108
@@ -230,7 +230,7 @@ msgid ""
 "they use river polylines to represent narrow stretches of river. In "
 "figure_tourism_ we can see how our tourism layers might look on a map if we "
 "used all three geometry types."
-msgstr ""
+msgstr "Comme vous pouvez voir il est souvent peu aisé de savoir de quel type de géométrie vous aurez besoin. Une approche générale de ce problème est de faire une couche pour chaque type de géométrie nécessaire. Par exemple, si vous regardez les données numériques fournies par le Chief Directorate : Surveys and Mapping, South Africa, ils fournissent une couche de surface de rivière (polygonales) et une couche linéaire des rivières. ils utilisent la surface des rivières (polygones) pour représenter les tronçons de rivière qui sont larges et les polylignes pour représenter les tronçons qui sont étroits. La figure_tourism_ nous montre à quoi pourraient ressembler nos couches de tourisme sur une carte si nous utilisions les trois types de géométries."
 
 # 9f5a178436994adc91712b8045f63b0b
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:127
@@ -238,12 +238,12 @@ msgid ""
 "A map with tourism layers. We have used three different geometry types for "
 "tourism data so that we can properly represent the different kinds of "
 "features needed for our visitors, giving them all the information they need."
-msgstr ""
+msgstr "Une carte avec des couches touristiques. Nous avons utilisé trois types de différents de géométrie pour les données de tourisme nous pouvons donc représenter proprement les différentes sortes d'entités nécessaire pour nos visiteurs et leur donner toutes les informations nécessaires."
 
 # 7766cd2727fd45309d4477b3d2e00776
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:132
 msgid "Example 2: Creating a map of pollution levels along a river"
-msgstr ""
+msgstr "Exemple 2 : Création d'une carte de niveau de pollution le long d'une rivière"
 
 # bc2ccb41bb4f434199ecc4ab6523cc74
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:134
@@ -254,7 +254,7 @@ msgid ""
 "Dissolved Oxygen (DO) levels, Coliform Bacteria (CB) counts, Turbidity "
 "levels and pH. You would also need to make a map reading of your position or"
 " obtain your position using a GPS receiver."
-msgstr ""
+msgstr "Si vous désirez mesurer les niveaux de pollution le long d'une rivière vous vous déplacerez le long de cette rivière dans un bateau ou en marchant sur les rives. À intervalle régulier vous vous arrêterez et prendrez différentes mesures comme les niveaux d'oxygène dissout (DO), le nombre de bactérie Coliforme (BC), les niveaux de turbidité et le pH. Vous aurez besoin de faire une carte en fonction de votre position ou l'obtenir d'un récepteur GPS."
 
 # 2b018f3be62447c8a908a30910fa58f6
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:141
@@ -263,7 +263,7 @@ msgid ""
 " you would probably create a GIS layer with a point geometry. Using point "
 "geometry makes sense here because each sample taken represents the "
 "conditions at a very specific place."
-msgstr ""
+msgstr "Pour stocker des données collectées lors d'un exercice comme celui-ci dans une application SIG, vous créerez une couche SIG avec une géométrie point. Utiliser une géométrie ponctuelle est pertinent ici parce que chaque échantillon réalisé représente les conditions d'un endroit spécifique."
 
 # 02e1b835951a4bab81a9e50187956cd3
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:146
@@ -271,42 +271,42 @@ msgid ""
 "For the attributes we would want a **field** for each thing that describes "
 "the sample site. So we may end up with an attribute table that looks "
 "something like table_river_attributes_."
-msgstr ""
+msgstr "Pour les attributs nous voulons un **champ** pour chaque chose qui décrit le site de l'échantillon. Nous pouvons donc vouloir avoir une table attributaire qui ressemble à "
 
 # de41e331de1d49e79b97bddf4e243b23
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:153
 msgid "SampleNo"
-msgstr ""
+msgstr "SampleNo"
 
 # c1659e38f4d34307833100d308e4930b
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:153
 msgid "pH"
-msgstr ""
+msgstr "pH"
 
 # 6dd9c535fb8d49ba8530f75be251520f
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:153
 msgid "DO"
-msgstr ""
+msgstr "DO"
 
 # e691cc817261400aaa325b5335dad634
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:153
 msgid "CB"
-msgstr ""
+msgstr "CB"
 
 # 02da4b3e9c814e87af7f1f957dbc8919
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:153
 msgid "Turbidity"
-msgstr ""
+msgstr "Turbidité"
 
 # da1a09f8c1474a4da954618d8e59b409
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:153
 msgid "Collector"
-msgstr ""
+msgstr "Collecteur"
 
 # ca72805c446b43ba8342955d081b9e8a
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:153
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 # f31c9f8c81f343838e24e68853b10c82
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:155
@@ -333,12 +333,12 @@ msgstr "N"
 # 8ad981898c594a299e504e70cfde3cfd
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:155
 msgid "Low"
-msgstr ""
+msgstr "Faible"
 
 # ac131a4587b8493a9fa12cbc0bfe7e9f
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:155
 msgid "Patience"
-msgstr ""
+msgstr "Patience"
 
 # 570807b35ae1436bb0c2ef3eeccf552f
 # 0e4a9dbd2272492299cf03708a7aa31f
@@ -374,12 +374,12 @@ msgstr "Y"
 # 2e38d3f0cf01422c83b7f4d37c4a7cac
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:157
 msgid "Medium"
-msgstr ""
+msgstr "Moyen"
 
 # 2f456665b466457695a42fdb1afc57d1
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:157
 msgid "Thabo"
-msgstr ""
+msgstr "Thabo"
 
 # 6080384da2b8436182cb9a2ca51c3a72
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:159
@@ -394,12 +394,12 @@ msgstr "6.9"
 # 37479bb0d44341c8b9d22abd51adda7c
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:159
 msgid "High"
-msgstr ""
+msgstr "Élevée"
 
 # 62e82ac9a01f432c9152fbff64943cba
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:159
 msgid "Victor"
-msgstr ""
+msgstr "Victor"
 
 # 123d8e17fbf448f699132ed7390844d6
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:162
@@ -408,7 +408,7 @@ msgid ""
 "vector layer will let you decide what attribute fields (columns) you will "
 "need. Note that the geometry (positions where samples were taken) is not "
 "shown in the attribute table --– the GIS Application stores it separately!"
-msgstr ""
+msgstr "Table des attributs de River 1 : Dessiner une table comme celle-la avant de créer une couche vecteur vous permettra de décider quels champs attributaires (les colonnes) vous aurez besoin. Notez que la géométrie (les positions où sont les échantillons ont été récupérés) n'est pas visible dans la table attributaire -- L'application SIG le stocke ailleurs !"
 
 # e4ac2cd1ddd845028ed969eb252939e8
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:168
@@ -421,7 +421,7 @@ msgid ""
 "Once you have planned what features you want to capture into the GIS, and "
 "the geometry type and attributes that each feature should have, you can move"
 " on to the next step of creating an empty shapefile."
-msgstr ""
+msgstr "Une fois que vous avez plannifié quelles entités vous souhaitez capturer dans votre SIG et le type de géométrie et d'attributs que chaque entité doit posséder, vous pouvez passer à l'étape suivante de création d'un shapefile vide."
 
 # 4c9debb56c5b4de5bf714505bbf21c74
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:174
@@ -430,7 +430,7 @@ msgid ""
 "your GIS Application and then selecting a geometry type (see "
 "figure_new_shapefile_). As we covered in an earlier topic, this means "
 "choosing either point, polyline or polygon for the geometry."
-msgstr ""
+msgstr "Le processus démarre habituellement en choisissant l'option 'nouvelle couche vecteur' dans votre application SIG puis en sélectionnant un type de géométrie (voir figure_new_shapefile_). Comme vu dans un chapitre précédent, cela signifie de choisir soit le point, la polyligne ou polygone pour la géométrie."
 
 # d15e104c298d4a12ae2ffaf40798e8c0
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:189
@@ -438,7 +438,7 @@ msgid ""
 "Creating a new vector layer is as simple as filling in a few details in a "
 "form. First you choose the geometry type, and then you add the attribute "
 "fields."
-msgstr ""
+msgstr "Créer une nouvelle couche vectorielle est aussi simple que remplir quelques informations dans le formulaire. D'abord vous choisissez le type de géométrie puis vous ajoutez les champs attributaires."
 
 # d04fccc2e8b9427196fcf3b8335e8f47
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:192
@@ -449,7 +449,7 @@ msgid ""
 "'RoofColour', 'RoadType' and so on. As well as choosing a name for each "
 "field, you need to indicate how the information should be stored in that "
 "field –-- i.e. is it a number, a word or a sentence, or a date?"
-msgstr ""
+msgstr "Puis vous devez ajouter des champs à la table attributaire. Normalement nous donnons les noms des champs qui doivent être court, sans espace et indiquer quel type d'information est stocké dans ce champ. 'pH', 'Couleur', 'TypeRoute', etc. En parallèle du choix du nom pour chaque champ, vous devez indiquer comment l'information doit être stockées dans ce champ -- i.e. est ce un nombre, un mot ou une phrase, une date ?"
 
 # f179a46b50c842b2b30ff22abd74258c
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:199
@@ -457,7 +457,7 @@ msgid ""
 "Computer programs usually call information that is made up of words or "
 "sentences '**strings**', so if you need to store something like a street "
 "name or the name of a river, you should use 'String' for the field type."
-msgstr ""
+msgstr "Les programmes appellent habituellement des informations faits de chaînes (string en anglais) de mots ou de phrases, si vous désirez quelque chose comme des noms de rues ou le nom d'une rivière, vous devez utiliser 'String' pour le type de champ."
 
 # 35132cab0e7c4472b9d9020801058d53
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:203
@@ -466,7 +466,7 @@ msgid ""
 "either a whole number (**integer**) or a decimal number (**floating point**)"
 " –-- so you need to think before hand whether the numeric data you are going"
 " to capture will have decimal places or not."
-msgstr ""
+msgstr "Le format shapefile vous permet de stocker l'information du champ numérique soit comme un entier (**integer**) ou un nombre à décimal (**floating point**) -- vous devez donc penser en amont si les données numériques que vous allez récupérer auront des décimales ou pas."
 
 # 90a905a6f3884f13b8b8466828289d22
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:208
@@ -475,7 +475,7 @@ msgid ""
 " is to give it a name and a place on the computer hard disk where it should "
 "be created. Once again it is a good idea to give the shapefile a short and "
 "meaningful name. Good examples are 'rivers', 'watersamples' and so on."
-msgstr ""
+msgstr "L'étape finale (comme indiquée dans figure_save_shapefile_) pour la création d'une shapefile est de donner un nom et un endroit sur l'ordinateur où stocker le fichier. Une fois encore c'est une bonne idée de donner un nom court, sans accent et pertinent au shapefile. Un bon exemple est 'rivieres', 'echantillons' etc."
 
 # 045e5c54970c458a895d15eaff2759c7
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:223
@@ -483,7 +483,7 @@ msgid ""
 "After defining our new layer’s geometry and attributes, we need to save it "
 "to disk. It is important to give a short but meaningful name to your "
 "shapefile."
-msgstr ""
+msgstr "Après la définition des attributs et de la géométrie de notre couche, nous devons la sauver sur le disque. Il est important de donner un nom court mais expressif à votre shapefile."
 
 # 753d1db97a1f4a16a32697f99b6ecb5c
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:226
@@ -492,12 +492,12 @@ msgid ""
 "what kind of geometry it will hold, then you create one or more fields for "
 "the attribute table, and then you save the shapefile to the hard disk using "
 "an easy to recognise name. Easy as 1-2-3!"
-msgstr ""
+msgstr "Récapitulons rapidement le processus encore. Pour créer un shapefile vous devez d'abord indiquer quelle géométrie il contiendra puis vous créez un ou plusieurs champs pour la table attributaire puis vous le sauvez en tant que shapefile sur le disque dur en utilisant un nom reconnaissable. Aussi facile que de comptez jusqu'à 3 !"
 
 # c254083b8930495193b1da2f7b64e0e6
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:232
 msgid "Adding data to your shapefile"
-msgstr ""
+msgstr "Ajouter des données à votre shapefile"
 
 # 37eb5090c4c7423dab2b63ed5f20aab2
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:234
@@ -508,24 +508,24 @@ msgid ""
 "default to prevent accidentally changing or deleting the data they contain. "
 "Next we need to start adding data. There are two steps we need to complete "
 "for each record we add to the shapefile:"
-msgstr ""
+msgstr "Jusqu'à présent, nous avons seulement créé un shapefile vide. Nous devons maintenant rendre éditable la couche avec l'option de menu 'Basculer en mode édition' ou via l'icône de la barre d'outils. Les shapefiles ne sont pas par défaut activées pour l'édition afin d'empêcher toute modification ou suppression accidentelle des données qu'elles contiennent. Ensuite, nous pouvons commencer à ajouter les données. Il y a deux conditions que nous devons remplir pour chaque enregistrement que nous ajoutons au shapefile :"
 
 # 808d5c63244e45968680439a61e39edc
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:241
 msgid "Capturing geometry"
-msgstr ""
+msgstr "Numérisation de la géométrie"
 
 # 1e026d6533124619b5dc8a6add23e89d
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:242
 msgid "Entering attributes"
-msgstr ""
+msgstr "Saisie d'attributs"
 
 # 1d6a4b03878448b1b0c472f0ad4bfbe9
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:244
 msgid ""
 "The process of capturing geometry is different for points, polylines and "
 "polygons."
-msgstr ""
+msgstr "Le processus de numérisation des géométries est différent entre les points, les lignes et les polygones."
 
 # a1fdff2349da4f8fb2dea585719a498d
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:246
@@ -677,7 +677,7 @@ msgstr ""
 # d99c00123a03454bbdb0f9d92b24dcc1
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:374
 msgid "Common problems / things to be aware of"
-msgstr "Problème courant / les choses à savoir"
+msgstr "Problèmes courants / Choses à savoir"
 
 # cc18d36ba7744cf5b8a3d1b63d2b4e72
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:376
@@ -719,7 +719,7 @@ msgstr "Qu'avons-nous appris?"
 # a71c5e203b7e4510a6a19c8e007ec2f9
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:409
 msgid "Let's wrap up what we covered in this worksheet:"
-msgstr ""
+msgstr "Faisons le point sur ce que nous avons abordé dans cette partie:"
 
 # 7e5524a9cc3e4d83a737fcdb8994ca71
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:411
@@ -732,33 +732,33 @@ msgstr ""
 # 272d6d4d11c64a50a0624c2856f4a5f7
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:413
 msgid "GIS Data can be stored in a **database** or as **files**."
-msgstr ""
+msgstr "Les données SIG peuvent être stockées dans une **base de données** ou comme **fichiers**."
 
 # 585f2eb03b924224aa5b9f118d43a063
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:414
 msgid ""
 "One commonly used file format is the **shapefile** which is actually a group"
 " of three or more files (:file:`.shp`, :file:`.dbf` and :file:`.shx`)."
-msgstr ""
+msgstr "Un format de fichier couramment utilisé est le **shapefile** qui est en réalité un groupe d'au moins trois fichiers (:file:`.shp`, :file:`.dbf` et :file:`.shx`)."
 
 # 785d8d9cfd994a27b5f190e256e51c86
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:416
 msgid ""
 "Before you create a new vector layer you need to plan both what **geometry**"
 " type and **attribute** fields it will contain."
-msgstr ""
+msgstr "Avant de créer une couche vecteur, vous devez déterminer à la fois quel type de **géométrie** et quels champs d'**attributs** elle contiendra."
 
 # 423db3bc83be41fc8af3e60767c5f4b7
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:418
 msgid "Geometry can be point, polyline or polygon."
-msgstr ""
+msgstr "La géométrie peut être point, polyligne ou polygone."
 
 # 049a5715f8f84325af58233c84a5d07b
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:419
 msgid ""
 "Attributes can be **integers** (whole numbers), **floating points** (decimal"
 " numbers), **strings** (words) or **dates**."
-msgstr ""
+msgstr "Les attributs peuvent être des **entiers** ( nombres entiers), **à virgule flottante** (nombres décimaux), **caractères** (mots) ou des **dates**."
 
 # a2912415665c465bb67915b78328c191
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:421
@@ -789,7 +789,7 @@ msgstr "Maintenant, essayez !"
 # 4505ea1b4df04abbb3c73ba77ef80e25
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:431
 msgid "Here are some ideas for you to try with your learners:"
-msgstr ""
+msgstr "Voici quelques pistes d'actions à essayer avec vos élèves:"
 
 # 11359610478a412c962e167697a0cccb
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:433
@@ -844,7 +844,7 @@ msgid ""
 "**Website** "
 "http://www.k12science.org/curriculum/waterproj/S00project/miami2000/miamiriverfinal.html"
 " --- A school project to assess water quality in their local river."
-msgstr ""
+msgstr "**Site Web** http://www.k12science.org/curriculum/waterproj/S00project/miami2000/miamiriverfinal.html --- Un projet d'école pour évaluer la qualité de l'eau dans leur rivière locale."
 
 # fe4e7c781e624fca9fb5b81176d17b23
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:465
@@ -863,4 +863,4 @@ msgstr "Et après ?"
 msgid ""
 "In the section that follows we will take a closer look at **raster data** to"
 " learn all about how image data can be used in a GIS."
-msgstr ""
+msgstr "Dans la section suivante, nous aborderons les **données raster** afin de mieux cerner comment les données image peuvent être utilisées dans QGIS."
