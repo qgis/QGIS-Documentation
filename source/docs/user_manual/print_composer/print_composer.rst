@@ -914,11 +914,17 @@ Size and position
 -----------------
 
 Each item inside the Composer can be moved/resized to create a perfect layout.
-The first step is to select the item using the |mActionSelect| :sup:`Select/Move item` button; 
-once selected the item can be moved or resized using the squares on the boundary. 
-For better precision, you can move an item using the :kbd:`Arrow keys` on the keyboard; 
-if the movement is too slow, you can speed up it holding :kbd:`Shift`.
-While resizing, holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Ctrl` will resize from the item center.
+For both operations the first step is to activate the |mActionSelect| :sup:`Select/Move item` 
+tool and to click on the item; you can then move it using the mouse while holding the left button. 
+If you need to constrain the movements to the horizontal or the vertical axis, just hold 
+the :kbd:`Shift` while moving the mouse.
+If you need a better precision, you can move a selected item using the :kbd:`Arrow keys` on the keyboard; 
+if the movement is too slow, you can speed up it by holding :kbd:`Shift`.
+
+A selected item will show squares on its boundaries; moving one of them with the mouse, will resize the item
+in the corresponding direction.
+While resizing, holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Ctrl` will resize from 
+the item center.
 
 The correct position for an item can be obtained using snapping to grid or smart guides. If you need to 
 disable the snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
@@ -932,6 +938,9 @@ right mouse button. Press the same button another time to unlock it. You can als
 items using the icons on the toolbar.
 
 To unselect an item, just click on it holding the :kbd:`Shift` button.
+
+Inside the :menuselection:`Edit` menu, you can find actions to select all the items, to clear all selections or 
+to invert the current selection.
 
 Alignment
 --------------
@@ -961,6 +970,13 @@ bounding box.
 When moving items on the Composer canvas, alignment helper lines appear when borders, centers or corners are aligned.
 
 .. index:: Revert_Layout_Actions
+
+Copy/Cut and Paste items
+------------------------
+The print composer includes actions to use the common Copy/Cut/Paste functionality for the items
+in the layout. As usual first you need to select the items using one of the options seen above;
+at this point the actions can be found in the :menuselection:`Edit` menu. When using the Paste action, the elements
+will be pasted according to the current mouse position.
 
 Revert and Restore tools
 ========================
