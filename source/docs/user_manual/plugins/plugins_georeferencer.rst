@@ -24,7 +24,7 @@ you can accurately determine coordinates.
 | Icon                           | Purpose                    | Icon                          | Purpose                    |
 +================================+============================+===============================+============================+
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
-| |mActionOpenRaster|            | Open raster                | |mActionStartGeoref|          | Start georeferencing       |
+| |mActionAddRasterLayer|        | Open raster                | |mActionStartGeoref|          | Start georeferencing       |
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
 | |mActionGDALScript|            | Generate GDAL Script       | |mActionloadGCPpoints|        | Load GCP Points            |
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
@@ -97,7 +97,7 @@ Entering ground control points (GCPs)
 ......................................
 
 #. To start georeferencing an unreferenced raster, we must load it using the
-   |mActionOpenRaster| button. The raster will show up in the main working
+   |mActionAddRasterLayer| button. The raster will show up in the main working
    area of the dialog. Once the raster is loaded, we can start to enter reference
    points.
 #. Using the |mActionAddGCPPoint| :sup:`Add Point` button, add points to the
@@ -107,7 +107,7 @@ Entering ground control points (GCPs)
    - Click on a point in the raster image and enter the X and Y coordinates
      manually.
    - Click on a point in the raster image and choose the |pencil|
-     :sup:`from map canvas` button to add the X and Y coordinates with the help of a
+     :sup:`From map canvas` button to add the X and Y coordinates with the help of a
      georeferenced map already loaded in the |qg| map canvas.
    - With the |mActionMoveGCPPoint| button, you can move the GCPs in both windows,
      if they are at the wrong place.
@@ -228,7 +228,7 @@ raster.
 * The |checkbox| :guilabel:`Use 0 for transparency when needed` can be activated,
   if pixels with the value 0 shall be visualized transparent. In our example
   toposheet, all white areas would be transparent.
-* Finally, |checkbox| :guilabel:`Load in |qg| when done` loads the output raster
+* Finally, |checkbox| :guilabel:`Load in QGIS when done` loads the output raster
   automatically into the |qg| map canvas when the transformation is done.
 
 Show and adapt raster properties
@@ -244,7 +244,7 @@ Configure the georeferencer
 * As residual units, pixels and map units can be chosen.
 * For the PDF report, a left and right margin can be defined and you can also
   set the paper size for the PDF map.
-* Finally, you can activate to |checkbox| :guilabel:`show georeferencer window docked`.
+* Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window docked`.
 
 .. _`georeferencer_running`:
 

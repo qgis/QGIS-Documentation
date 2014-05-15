@@ -11,7 +11,7 @@ SPIT Plugin
 be used to load multiple shapefiles at one time and includes support for schemas.
 To use SPIT, open the Plugin Manager from the :menuselection:`Plugins` menu,
 in the |plugin| :guilabel:`Installed` menu check the box next to the |checkbox| :guilabel:`SPIT`
-and click **[OK]**. The SPIT icon will be added to the plugin toolbar.
+and click **[OK]**.
 
 To import a shapefile, use :menuselection:`Database --> Spit --> Import Shapefiles to PostgreSQL` 
 from the menu bar to open the :guilabel:`SPIT - Shapefile to PostGIS Import Tool` dialog. Select

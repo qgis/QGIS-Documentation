@@ -5,7 +5,7 @@
 Spatial Query Plugin
 ====================
 
-The |spatialquery| :sup:`Spatial Query` plugin allows you to make a spatial query
+The |spatialquery| :sup:`Spatial Query Plugin` allows you to make a spatial query
 (i.e., select features) in a target layer with reference to another layer. The
 functionality is based on the GEOS library and depends on the selected source
 feature layer.
@@ -30,7 +30,7 @@ The following steps are necessary:
 #. Start |qg| and load the vector layers :file:`regions.shp` and
    :file:`airports.shp`.
 #. Load the Spatial Query plugin in the Plugin Manager (see
-   :ref:`load_core_plugin`) and click on the |spatialquery|
+   :ref:`managing_plugins`) and click on the |spatialquery|
    :sup:`Spatial Query` icon, which appears in the |qg| toolbar menu. The plugin
    dialog appears.
 #. Select the layer ``regions`` as the source layer and ``airports`` as the reference feature

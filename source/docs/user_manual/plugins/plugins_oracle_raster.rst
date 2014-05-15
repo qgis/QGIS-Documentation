@@ -7,7 +7,7 @@ Oracle Spatial GeoRaster Plugin
 
 In Oracle databases, raster data can be stored in SDO_GEORASTER objects available
 with the Oracle Spatial extension. In |qg|, the |oracle_raster|
-:sup:`OracleGeoRasterPlugin` is supported by GDAL and depends on Oracle's
+:sup:`Oracle Spatial GeoRaster` plugin is supported by GDAL and depends on Oracle's
 database product being installed and working on your machine. While Oracle is
 proprietary software, they provide their software free for development and testing
 purposes. Here is one simple example of how to load raster images to GeoRaster:
@@ -24,9 +24,9 @@ Managing connections
 --------------------
 
 Firstly, the Oracle GeoRaster Plugin must be enabled using the Plugin Manager
-(see :ref:`load_core_plugin`). The first time you load a GeoRaster in
+(see :ref:`managing_plugins`). The first time you load a GeoRaster in
 |qg|, you must create a connection to the Oracle database that contains the data.
-To do this, begin by clicking on the |oracle_raster| :sup:`Select GeoRaster`
+To do this, begin by clicking on the |oracle_raster| :sup:`Add Oracle GeoRaster Layer`
 toolbar button -- this will open the :guilabel:`Select Oracle Spatial GeoRaster`
 dialog window. Click on **[New]** to open the dialog window, and specify
 the connection parameters (See Figure_oracle_raster_1_):

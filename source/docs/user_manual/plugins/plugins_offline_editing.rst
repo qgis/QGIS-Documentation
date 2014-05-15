@@ -22,12 +22,12 @@ Using the plugin
 
 * Open some vector layers (e.g., from a PostGIS or WFS-T datasource).
 * Save it as a project.
-* Press the |offline_editing_copy|:sup:`Convert to offline project` icon and
-  select the layers to save. The content of the layers is saved to SpatiaLite
+* Go to :menuselection:`Database --> Offline Editing -->` |offline_editing_copy|:guilabel:`Convert to offline project`
+  and select the layers to save. The content of the layers is saved to SpatiaLite
   tables.
 * Edit the layers offline.
-* After being connected again, upload the changes with the |offline_editing_sync|
-  :sup:`Synchronize` button.
+* After being connected again, upload the changes using :menuselection:`Database --> Offline Editing -->` |offline_editing_sync|
+  :guilabel:`Synchronize`.
 
 .. _figure_offline_editing_1:
 

@@ -45,7 +45,7 @@ Using the plugin
 #. Start |qg| and load the :file:`gtopo30` raster layer from the GRASS sample
    location.
 #. Load the Raster Terrain Analysis plugin in the Plugin Manager (see
-   :ref:`load_core_plugin`).
+   :ref:`managing_plugins`).
 #. Select an analysis method from the menu (e.g., :menuselection:`Raster --> Terrain Analysis -->
    Slope`). The :guilabel:`Slope` dialog appears as shown in Figure_raster_terrain_1_.
 #. Specify an output file path, and an output file type.

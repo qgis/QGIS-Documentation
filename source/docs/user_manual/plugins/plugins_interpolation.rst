@@ -45,8 +45,8 @@ Using the plugin
 
 #. Start |qg| and load a point vector layer (e.g., :file:`elevp.csv`).
 #. Load the Interpolation plugin in the Plugin Manager (see
-   :ref:`load_core_plugin`) and click on the |raster-interpolate| :sup:`Interpolation`
-   icon, which appears in the |qg| toolbar menu. The Interpolation plugin dialog
+   :ref:`managing_plugins`) and click on the :menuselection:`Raster --> Interpolation -->` |raster-interpolate| :guilabel:`Interpolation`
+   , which appears in the |qg| menu bar. The Interpolation plugin dialog
    appears as shown in Figure_interpolation_1_.
 #. Select an input layer (e.g., :guilabel:`elevp` |selectstring|) and column
    (e.g., ``ELEV``) for interpolation.
