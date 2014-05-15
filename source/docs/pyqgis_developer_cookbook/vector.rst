@@ -896,12 +896,12 @@ can be loaded from a `Qt resource <http://qt.nokia.com/doc/4.5/resources.html>`_
 
 Further Topics
 ..............
-
+re
 **TODO:**
  * creating/modifying symbols
  * working with style (:class:`QgsStyleV2`)
  * working with color ramps (:class:`QgsVectorColorRampV2`)
- * rule-based renderer
+ * rule-based renderer (see .. _this blogpost: http://snorf.net/blog/2014/03/04/symbology-of-vector-layers-in-qgis-python-plugins)
  * exploring symbol layer and renderer registries
 
 .. index:: symbology; old
