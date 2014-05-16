@@ -420,7 +420,6 @@ have been created for labeling the vector layers:
 Let us see how the new menus can be used for various vector layers.
 
 .. _labeling_point_layers:
-
 **Labeling point layers**
 
 Start |qg| and load a vector point layer. Activate the layer in the legend and click on the
@@ -612,6 +611,7 @@ The entries in the :guilabel:`Rendering` menu are the same as for line layers. Y
 
 
 .. _labeling_with_expressions:
+
 
 **Define labels based on expressions**
 

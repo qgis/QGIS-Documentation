@@ -238,7 +238,7 @@ Symbology
   that level match. Else rules can be nested just like any other
   rules. An example might be:
 
-::
+  ::
 
 	type = 'water' (style grey) ELSE (style red)
 	
