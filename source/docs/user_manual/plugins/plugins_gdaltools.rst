@@ -41,7 +41,6 @@ List of GDAL tools
 
 .. figure:: /static/user_manual/plugins/raster_menu.png
    :align: center
-   :width: 30em
 
    The *GDALTools* menu list
 

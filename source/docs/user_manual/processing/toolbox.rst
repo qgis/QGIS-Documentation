@@ -19,7 +19,6 @@ of the same algorithm on different sets of inputs.
 
 .. figure:: /static/user_manual/processing/toolbox.png
    :align: center
-   :width: 15em
 
    Processing Toolbox |win|
 
@@ -48,7 +47,6 @@ you change to the advanced mode, the toolbox will look like this:
 
 .. figure:: /static/user_manual/processing/toolbox_advanced.png
    :align: center
-   :width: 15em
 
    Processing Toolbox (advanced mode) |win|
 
@@ -103,7 +101,6 @@ the SAGA 'Convergence index' algorithm).
 
 .. figure:: /static/user_manual/processing/parameters_dialog.png
    :align: center
-   :width: 30em
 
    Parameters Dialog |win|
 
@@ -139,7 +136,6 @@ table can be of one of the following types.
 
 .. figure:: /static/user_manual/processing/vector_iterator.png
    :align: center
-   :width: 25em
 
    Vector iterator button |win|
 
@@ -167,7 +163,6 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
 .. figure:: /static/user_manual/processing/number_selector.png
    :align: center
-   :width: 30em
 
    Number Selector |win|
 
@@ -192,8 +187,7 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
   .. figure:: /static/user_manual/processing/extent.png
      :align: center
-     :width: 20em
-
+     
      Extent selector |win|
 
   If you select the first option, you will see a window like the next one.
@@ -206,7 +200,6 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
   .. figure:: /static/user_manual/processing/extent_list.png
      :align: center
-     :width: 20em
 
      Extent List |win|
 
@@ -223,7 +216,6 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
   .. figure:: /static/user_manual/processing/extent_drag.png
      :align: center
-     :width: 20em
 
      Extent Drag |win|
 
@@ -240,7 +232,6 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
   .. figure:: /static/user_manual/processing/multiple_selection.png
      :align: center
-     :width: 20em
 
      Multiple Selection |win|
 
@@ -257,7 +248,6 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
   .. figure:: /static/user_manual/processing/fixed_table.png
      :align: center
-     :width: 20em
 
      Fixed Table |win|
 
@@ -404,7 +394,6 @@ next.
 
 .. figure:: /static/user_manual/processing/rendering_styles.png
    :align: center
-   :width: 30em
 
    Rendering Styles |win|
 

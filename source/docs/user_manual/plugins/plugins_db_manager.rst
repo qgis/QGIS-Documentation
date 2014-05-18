@@ -23,7 +23,6 @@ results to |qg| as a query layer.
 
 .. figure:: /static/user_manual/plugins/db_manager.png
    :align: center
-   :width: 30 em
 
    DB Manager dialog |nix|
 

@@ -26,7 +26,6 @@ be added or update an existing field.
    **Figure Attributes 3:**
 
 .. figure:: /static/user_manual/working_with_vector/fieldcalculator.png
-   :width: 30em
    :align: center
 
    Field Calculator |nix|

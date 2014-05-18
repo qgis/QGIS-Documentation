@@ -26,7 +26,6 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
 
 .. figure:: /static/user_manual/introduction/panels_and_toolbars.png
    :align: center
-   :width: 20em
 
    The Panels and Toolbars menu |nix|
 
@@ -92,7 +91,6 @@ options. These include:
 
 .. figure:: /static/user_manual/introduction/macro.png
    :align: center
-   :width: 30em
 
    Macro settings in |qg|
 
@@ -178,7 +176,6 @@ source code.
 
 .. figure:: /static/user_manual/introduction/sys-env-options.png
    :align: center
-   :width: 30em
 
    System environment variables in |qg|
 
@@ -458,7 +455,6 @@ Network Menu
 
 .. figure:: /static/user_manual/introduction/proxy-settings.png
    :align: center
-   :width: 30em
 
    Proxy-settings in |qg|
 
@@ -518,7 +514,6 @@ installed that you never use and that are filling your screen.
 
 .. figure:: /static/user_manual/introduction/customization.png
    :align: center
-   :width: 25em
 
    The Customization dialog |nix|
 

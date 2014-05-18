@@ -18,7 +18,6 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
 
 .. figure:: /static/user_manual/plugins/coordinate_capture_dialog.png
    :align: center
-   :width: 20em
 
    Coordinate Capture Plugin |nix|
 

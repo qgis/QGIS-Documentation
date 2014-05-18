@@ -28,7 +28,6 @@ be used to add new elements to the model.
 
 .. figure:: /static/user_manual/processing/modeler_canvas.png
    :align: center
-   :width: 30em
 
    Modeler |win|
 
@@ -74,7 +73,6 @@ default value and a range of valid values.
 
 .. figure:: /static/user_manual/processing/models_parameters.png
    :align: center
-   :width: 20em
 
    Model Parameters |win|
 
@@ -88,7 +86,6 @@ For each added input, a new element is added to the modeler canvas.
 
 .. figure:: /static/user_manual/processing/models_parameters2.png
    :align: center
-   :width: 20em
 
    Model Parameters |win|
 
@@ -107,7 +104,6 @@ in the same way as they are in the toolbox.
 
 .. figure:: /static/user_manual/processing/models_parameters3.png
    :align: center
-   :width: 30em
 
    Model Parameters |win|
 
@@ -130,7 +126,6 @@ section dedicated to the toolbox.
 
 .. figure:: /static/user_manual/processing/models_parameters4.png
    :align: center
-   :width: 30em
 
    Model Parameters |win|
 
@@ -240,7 +235,6 @@ see a context menu like the one shown next:
 
 .. figure:: /static/user_manual/processing/modeler_right_click.png
    :align: center
-   :width: 20em
 
    Modeler Right Click |win|
 
@@ -258,7 +252,6 @@ a warning message like the one you can see below will be shown:
 
 .. figure:: /static/user_manual/processing/cannot_delete_alg.png
    :align: center
-   :width: 15em
 
    Cannot Delete Algorithm |win|
 
@@ -292,7 +285,6 @@ represented now with a red label under its name indicating that it is not active
 
 .. figure:: /static/user_manual/processing/deactivated.png
    :align: center
-   :width: 15em
 
    Deactivate |win|
 
@@ -316,7 +308,6 @@ button and a dialog like the one shown next will appear.
 
 .. figure:: /static/user_manual/processing/help_edition.png
    :align: center
-   :width: 30em
 
    Help Edition |win|
 

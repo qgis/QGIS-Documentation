@@ -121,7 +121,6 @@ initial view of the Print Composer before any elements are added.
 
 .. figure:: /static/user_manual/print_composer/print_composer_blank.png
    :align: center
-   :width: 30em
 
    Print Composer |nix|
 
@@ -211,7 +210,6 @@ Background, Item ID and Rendering (See figure_composer_2_).
 
 .. figure:: /static/user_manual/print_composer/print_composer_common_properties.png
    :align: center
-   :width: 20em
 
    Common Item properties Dialogs |nix|
 
@@ -247,7 +245,6 @@ Rendering mode
 
 .. figure:: /static/user_manual/print_composer/rendering_mode.png
    :align: center
-   :width: 20 em
 
    Rendering mode |nix|
 
@@ -323,8 +320,7 @@ following functionalities (see figure_composer_4_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_map1.png
    :align: center
-   :width: 20em
-
+   
    Map Item properties Tab |nix|
 
 * The **Preview** area allows you to define the preview modes 'Rectangle', 'Cache'
@@ -354,7 +350,6 @@ functionalities (see figure_composer_5_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_map2.png
    :align: center
-   :width: 20em
 
    Map Extents Dialog |nix|
 
@@ -383,7 +378,6 @@ following functionalities (see Figure_composer_6_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_map3.png
    :align: center
-   :width: 20em
 
    Map Grid Dialog |nix|
 
@@ -414,7 +408,6 @@ following functionalities (see Figure_composer_7_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_map4.png
    :align: center
-   :width: 20em
 
    Map Overview Dialog |nix|
 
@@ -444,7 +437,6 @@ The :guilabel:`Item Properties` tab of a label item provides the following funct
 
 .. figure:: /static/user_manual/print_composer/print_composer_label1.png
    :align: center
-   :width: 20em
 
    Label Item properties Tab |nix|
 
@@ -462,7 +454,6 @@ following functionalities (see Figure_composer_9_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_label2.png
    :align: center
-   :width: 20em
 
    Label Main properties Dialog |nix|
 
@@ -490,7 +481,6 @@ following functionalities (see Figure_composer_10_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_label3.png
    :align: center
-   :width: 20em
 
    Label Alignment and Display Dialogs |nix|
 
@@ -519,7 +509,6 @@ The image :guilabel:`Item Properties` tab provides the following functionalities
 
 .. figure:: /static/user_manual/print_composer/print_composer_image1.png
    :align: center
-   :width: 15em
 
    Image Item properties Tab |nix|
 
@@ -537,7 +526,6 @@ following functionalities (see Figure_composer_12_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_image2.png
    :align: center
-   :width: 20em
 
    Image Main properties, Search directories and Rotation Dialogs |nix|
 
@@ -573,7 +561,6 @@ functionalities (see figure_composer_14_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend1.png
    :align: center
-   :width: 20em
 
    Legend Item properties Tab |nix|
 
@@ -591,7 +578,6 @@ provides the following functionalities (see figure_composer_14_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend2.png
    :align: center
-   :width: 20em
 
    Legend Main properties Dialog |nix|
 
@@ -613,7 +599,6 @@ provides the following functionalities (see figure_composer_15_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend3.png
    :align: center
-   :width: 20em
 
    Legend Legend Items Dialog |nix|
 
@@ -640,7 +625,6 @@ provide the following functionalities (see figure_composer_16_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend4.png
    :align: center
-   :width: 20em
 
    Legend Fonts, Columns, Symbol and Spacing Dialogs |nix|
 
@@ -674,7 +658,6 @@ functionalities (see figure_composer_17_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar1.png
    :align: center
-   :width: 20em
 
    Scale Bar Item properties Tab |nix|
 
@@ -692,7 +675,6 @@ provides the following functionalities (see figure_composer_18_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar2.png
    :align: center
-   :width: 20em
 
    Scale Bar Main properties Dialog |nix|
 
@@ -717,7 +699,6 @@ provide the following functionalities (see figure_composer_19_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar3.png
    :align: center
-   :width: 20em
 
    Scale Bar Units and Segments Dialogs |nix|
 
@@ -743,7 +724,6 @@ The :guilabel:`Display` and :guilabel:`Fonts and colors` dialogs of the scale ba
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar4.png
    :align: center
-   :width: 20em
 
    Scale Bar Display, Fonts and colors Dialogs |nix|
 
@@ -773,7 +753,6 @@ of the corner radius.
 
 .. figure:: /static/user_manual/print_composer/print_composer_shape.png
    :align: center
-   :width: 20em
 
    Shape Item properties Tab |nix|
 
@@ -790,7 +769,6 @@ add an SVG start and end marker from a directory on your computer.
 
 .. figure:: /static/user_manual/print_composer/print_composer_arrow.png
    :align: center
-   :width: 20em
 
    Arrow Item properties Tab |nix|
 
@@ -827,7 +805,6 @@ functionalities (see figure_composer_23_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_attribute1.png
    :align: center
-   :width: 20em
 
    Scale Bar Item properties Tab |nix|
 
@@ -845,7 +822,6 @@ provide the following functionalities (see figure_composer_24_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_attribute2.png
    :align: center
-   :width: 20em
 
    Attribute table Main properties, Show grid and Fonts Dialog |nix|
 
@@ -857,7 +833,6 @@ provide the following functionalities (see figure_composer_24_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_attribute3.png
    :align: center
-   :width: 15em
 
    Attribute table Select attributes Dialog |nix|
 
@@ -891,7 +866,6 @@ provides the following functionalities (see figure_composer_26_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_html.png
    :align: center
-   :width: 20em
 
    HTML frame Item properties Tab |nix|
 
@@ -958,7 +932,6 @@ element compared to the other elements (see table_composer_1_).
 
 .. figure:: /static/user_manual/print_composer/alignment_lines.png
    :align: center
-   :width: 30 em
 
    Alignment helper lines in the Print Composer |nix|
 
@@ -997,7 +970,6 @@ This can also be done by mouse click within the :guilabel:`Command history` tab 
 
 .. figure:: /static/user_manual/print_composer/command_hist.png
    :align: center
-   :width: 20 em
 
    Command history in the Print Composer |nix|
 
@@ -1025,7 +997,6 @@ tab. This tab contains the following widgets (see Figure_composer_29_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_atlas.png
    :align: center
-   :width: 15em
 
    Atlas generation tab |nix|
 
@@ -1107,7 +1078,6 @@ including each type of map element described in the sections above.
 
 .. figure:: /static/user_manual/print_composer/print_composer_complete.png
    :align: center
-   :width: 35 em
 
    Print Composer with map view, legend, image, scale bar, coordinates, text and HTML frame added |nix|
 
@@ -1160,7 +1130,6 @@ already existing templates.
 
 .. figure:: /static/user_manual/print_composer/print_composer_manager.png
    :align: center
-   :width: 20 em
 
    The Print Composer Manager |nix|
 

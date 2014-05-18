@@ -72,7 +72,6 @@ So be sure to mark the checkbox for those layers that you need to snap to.
    **Figure Edit 1:**
 
 .. figure:: /static/user_manual/working_with_vector/editProjectSnapping.png
-   :width: 30em
    :align: center
 
    Edit snapping options on a layer basis |nix|
@@ -516,7 +515,6 @@ checkbox. Undo/Redo is however active, even if the widget is not displayed.
    **Figure Edit 3:**
 
 .. figure:: /static/user_manual/working_with_vector/redo_undo.png
-   :width: 15em
    :align: center
 
    Redo and Undo digitizing steps |nix|
@@ -701,7 +699,6 @@ Without these settings, the tool is inactive.
    **Figure Edit 4:**
 
 .. figure:: /static/user_manual/working_with_vector/rotatepointsymbol.png
-   :width: 15em
    :align: center
 
    Rotate Point Symbols |nix|
@@ -746,7 +743,6 @@ with X,Y,Z coordinates).
    **Figure Edit 5:**
 
 .. figure:: /static/user_manual/working_with_vector/editNewVector.png
-   :width: 20em
    :align: center
 
    Creating a new Shapefile layer Dialog |nix|
@@ -782,7 +778,6 @@ be displayed as shown in Figure_edit_6_.
    **Figure Edit 6:**
 
 .. figure:: /static/user_manual/working_with_vector/editNewSpatialite.png
-   :width: 20em
    :align: center
 
    Creating a New SpatiaLite layer Dialog |nix|
@@ -848,7 +843,6 @@ selected features are shown in the attribute table title.
    **Figure Attributes 1:**
 
 .. figure:: /static/user_manual/working_with_vector/vectorAttributeTable.png
-   :width: 30em
    :align: center
 
    Attribute Table for regions layer |nix|

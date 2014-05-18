@@ -27,7 +27,6 @@ executed at any particular moment.
 
 .. figure:: /static/user_manual/processing/history.png
    :align: center
-   :width: 25em
 
    History |win|
 

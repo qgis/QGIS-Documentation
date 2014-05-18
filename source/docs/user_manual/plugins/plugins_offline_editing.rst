@@ -38,6 +38,5 @@ Using the plugin
 
 .. figure:: /static/user_manual/plugins/create_offline_project.png
    :align: center
-   :width: 30em
 
    Create an offline project from PostGIS or WFS layers
