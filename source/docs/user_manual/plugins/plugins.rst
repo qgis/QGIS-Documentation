@@ -39,7 +39,6 @@ if a plugin is installed. If a plugin is installed, it can be de/activated using
 
 .. figure:: /static/user_manual/plugins/plugins_all.png
    :align: center
-   :width: 30em
 
    The |mActionShowPluginManager| :guilabel:`All` menu |nix|
 
@@ -57,7 +56,6 @@ using the **[Uninstall plugin]** and **[Reinstall plugin]** buttons. You can **[
 
 .. figure:: /static/user_manual/plugins/plugins_installed.png
    :align: center
-   :width: 30em
 
    The |plugin_installed| :guilabel:`Installed` menu |nix|
 
@@ -75,7 +73,6 @@ to implement a plugin into |qg|.
 
 .. figure:: /static/user_manual/plugins/plugins_not_installed.png
    :align: center
-   :width: 30em
 
    The |plugin| :guilabel:`Not installed` menu |nix|
 
@@ -95,7 +92,6 @@ to look for more recent plugin versions. This can be done with the **[Upgrade pl
 
 .. figure:: /static/user_manual/plugins/plugins_upgradeable.png
    :align: center
-   :width: 30em
 
    The |plugin_upgrade| :guilabel:`Upgradeable` menu |nix|
 
@@ -125,7 +121,6 @@ via the **[Edit...]** button, or completely removed with the **[Delete]** button
 
 .. figure:: /static/user_manual/plugins/plugins_settings.png
    :align: center
-   :width: 30em
 
    The |mActionTransformSettings| :guilabel:`Settings` menu |nix|
 

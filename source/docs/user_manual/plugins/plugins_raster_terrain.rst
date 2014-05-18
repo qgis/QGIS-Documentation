@@ -33,7 +33,6 @@ Description of the analysis:
 
 .. figure:: /static/user_manual/plugins/raster_terrain_dialog.png
    :align: center
-   :width: 15em
 
    Raster Terrain Modelling Plugin (slope calculation)
 

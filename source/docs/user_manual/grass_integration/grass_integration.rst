@@ -118,7 +118,6 @@ GRASS, this functionality will not be described here.)
 
 .. figure:: /static/user_manual/grass_integration/grass_location.png
    :align: center
-   :width: 40em
 
    GRASS data in the alaska LOCATION
 
@@ -774,7 +773,7 @@ causing it to load even more slowly.
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_vgeneralize.png
    :align: center
-   :width: 30em
+   :width: 35em
 
    GRASS module v.generalize to smooth a vector map |nix|
 
@@ -860,7 +859,7 @@ effect is even more pronounced.
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shadedrelief.png
    :align: center
-   :width: 30em
+   :width: 35em
 
    Displaying shaded relief created with the GRASS module r.shaded.relief |nix|
 

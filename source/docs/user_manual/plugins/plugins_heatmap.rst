@@ -103,7 +103,6 @@ In Figure_Heatmap_1_, the airports of Alaska are shown.
    **Figure Heatmap 1:**
 
 .. figure:: /static/user_manual/plugins/heatmap_start.png
-   :width: 30em
    :align: center
 
    Airports of Alaska |nix|
@@ -127,7 +126,6 @@ In Figure_Heatmap_1_, the airports of Alaska are shown.
    **Figure Heatmap 2:**
 
 .. figure:: /static/user_manual/plugins/heatmap_dialog.png
-   :width: 20em
    :align: center
 
    The Heatmap Dialog |nix|
@@ -143,7 +141,6 @@ can now be styled in |qg| to improve its appearance.
    **Figure Heatmap 3:**
 
 .. figure:: /static/user_manual/plugins/heatmap_loaded_grey.png
-   :width: 30em
    :align: center
 
    The heatmap after loading looks like a grey surface |nix|
@@ -168,7 +165,6 @@ The final result is shown in Figure_Heatmap_4_.
    **Figure Heatmap 4:**
 
 .. figure:: /static/user_manual/plugins/heatmap_loaded_colour.png
-   :width: 30em
    :align: center
 
    Styled heatmap of airports of Alaska |nix|

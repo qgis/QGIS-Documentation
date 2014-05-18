@@ -45,7 +45,6 @@ the connection parameters (See Figure_oracle_raster_1_):
 
 .. figure:: /static/user_manual/plugins/oracle_create_dialog.png
    :align: center
-   :width: 20em
 
    Create Oracle connection dialog
 
@@ -84,7 +83,6 @@ GeoRaster or to go back to the beginning and select another table name.
 
 .. figure:: /static/user_manual/plugins/oracle_select_dialog.png
    :align: center
-   :width: 20em
 
    Select Oracle GeoRaster dialog
 

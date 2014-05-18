@@ -32,7 +32,6 @@ this chapter.)
 
 .. figure:: /static/user_manual/processing/toolbox.png
    :align: center
-   :width: 15em
 
    Processing Toolbox |win|
 
@@ -48,7 +47,6 @@ this chapter.)
 
 .. figure:: /static/user_manual/processing/models.png
    :align: center
-   :width: 30em
 
    Processing Modeler |win|
 
@@ -64,7 +62,6 @@ this chapter.)
 
 .. figure:: /static/user_manual/processing/history.png
    :align: center
-   :width: 30em
 
    Processing History |win|
 
@@ -81,7 +78,6 @@ this chapter.)
 
 .. figure:: /static/user_manual/processing/batch_processing.png
    :align: center
-   :width: 30em
 
    Batch Processing interface |win|
 

@@ -20,7 +20,6 @@ box with autocompletion where you type the command you want to run.
 
 .. figure:: /static/user_manual/processing/commander.png
    :align: center
-   :width: 25em
 
    The SEXTANTE Commander |win|
 

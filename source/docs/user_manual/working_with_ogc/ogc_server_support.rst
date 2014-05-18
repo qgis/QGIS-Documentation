@@ -71,7 +71,6 @@ the state boundaries of Alaska. Add the WMS with the URL
 
 .. figure:: /static/user_manual/working_with_ogc/standard_wms_usa.png
    :align: center
-   :width: 25 em
 
    Standard WMS with USA boundaries included in the |qg| Server (KDE) |nix|
 
@@ -94,7 +93,6 @@ if not already defined.
 
 .. figure:: /static/user_manual/working_with_ogc/ows_server_definition.png
    :align: center
-   :width: 20 em
 
    Definitions for a |qg| Server WMS/WFS/WCS project (KDE)
 

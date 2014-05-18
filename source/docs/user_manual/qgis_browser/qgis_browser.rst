@@ -22,7 +22,6 @@ or MS SQL Spatial) and WMS/WFS connections. You can also view your GRASS data
 
 .. figure:: /static/user_manual/qgis_browser/browser_standalone_metadata.png
    :align: center
-   :width: 30em
 
    |qg| browser as a stand alone application |nix|
 

@@ -17,7 +17,6 @@ and built-in functions to export to KML, GML and SVG formats.
 
 .. figure:: /static/user_manual/plugins/sql_anywhere.png
    :align: center
-   :width: 25 em
 
    SQL Anywhere dialog (KDE) |nix|
 

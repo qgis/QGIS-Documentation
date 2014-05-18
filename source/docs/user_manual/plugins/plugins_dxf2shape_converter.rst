@@ -19,7 +19,6 @@ running:
 
 .. figure:: /static/user_manual/plugins/dxf2shape_dialog.png
    :align: center
-   :width: 20em
 
    Dxf2Shape Converter Plugin
 

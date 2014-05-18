@@ -21,6 +21,7 @@ discussed below).
 
 .. figure:: /static/user_manual/introduction/startup.png
    :align: center
+   :width: 35em
 
    |qg| GUI with Alaska sample data |nix|
 

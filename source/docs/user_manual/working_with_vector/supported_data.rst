@@ -641,6 +641,7 @@ version of the data to be plotted in a 180 |degrees|-centric map.
 
 .. figure:: /static/user_manual/working_with_vector/vectorWrapping.png
    :align: center
+   :width: 25em
 
    Crossing 180 |degrees| longitude applying the **ST_Shift_Longitude**
    function
