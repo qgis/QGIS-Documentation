@@ -1136,8 +1136,8 @@ do the trick:
   imagerelpath = "images_test/test_image.jpg";
   layer = qgis.utils.iface.activeLayer();
   import os.path;
-  layerpath = layer.source() if layer.providerType() == 'ogr' \
-    else (qgis.core.QgsDataSourceURI(layer.source()).database() \
+  layerpath = layer.source() if layer.providerType() == 'ogr'
+    else (qgis.core.QgsDataSourceURI(layer.source()).database()
     if layer.providerType() == 'spatialite' else None);
   path = os.path.dirname(str(layerpath));
   image = os.path.join(path,imagerelpath);
@@ -1169,7 +1169,7 @@ the action was created):
 ::
 
 
-  qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp','[% "layername" %]',\
+  qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp','[% "layername" %]',
     'ogr')
 
 
@@ -1178,7 +1178,8 @@ To add a raster (a TIF image in this example), it becomes:
 ::
 
 
-  qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif','[% "layername" %]')
+  qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif','[% "layername" %]
+  ')
 
 .. _`sec_joins`:
 

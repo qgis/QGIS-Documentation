@@ -533,7 +533,7 @@ in PostGIS: **ogr2ogr**. This is part of your GDAL installation.
 To import a shapefile into PostGIS, do the following:
 ::
 
-  ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres \
+  ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres 
   password=topsecret" alaska.shp
 
 This will import the shapefile :file:`alaska.shp` into the PostGIS database

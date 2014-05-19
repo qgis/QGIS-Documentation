@@ -111,7 +111,8 @@ The following is an example using ``gdaladdo``:
 
 ::
 
-   gdaladdo georaster:scott/tiger@orcl,georaster\_table,georaster,georid=6 -r nearest 2 4 6 8 16 32
+   gdaladdo georaster:scott/tiger@orcl,georaster\_table,georaster,georid=6 -r
+   nearest 2 4 6 8 16 32
 
 
 This is an example using PL/SQL:
