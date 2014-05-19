@@ -36,5 +36,6 @@ Icon                    Plugin                    Description                   
 |roadgraph|             Road Graph plugin         Shortest path analysis                                  :ref:`roadgraph`
 |icon_sqlanywhere|      SQL Anywhere plugin       Access SQL anywhere DB                                  :ref:`sqlanywhere`
 |spatialquery|          Spatial Query             Spatial queries on vectors                              :ref:`spatial_query`
+|spiticon|		SPIT                      Shapefile to PostgreSQL/PostGIS Import Tool             :ref:`label_spit`
 |raster-stats|          Zonal Statistics          Calculate raster statistics for vector polygons         :ref:`zonal_statistics`
 ======================  ========================  ======================================================  ===============================
