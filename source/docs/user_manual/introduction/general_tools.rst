@@ -29,7 +29,6 @@ keyboard shortcuts and to add new keyboard shortcuts to |qg| features.
 
 .. figure:: /static/user_manual/introduction/shortcuts.png
    :align: center
-   :width: 20em
 
    Define shortcut options |nix| (Gnome)
 
@@ -241,7 +240,6 @@ the measure window. To stop measuring, click your right mouse button.
 
 .. figure:: /static/user_manual/introduction/measure_line.png
    :align: center
-   :width: 20em
 
    Measure Distance |nix| (Gnome)
 
@@ -261,7 +259,6 @@ tools, each mouse click (within the tolerance setting) will snap to that layer.
 
 .. figure:: /static/user_manual/introduction/measure_area.png
    :align: center
-   :width: 20em
 
    Measure Area |nix| (Gnome)
 
@@ -278,7 +275,6 @@ is displayed in a pop-up dialog.
 
 .. figure:: /static/user_manual/introduction/measure_angle.png
    :align: center
-   :width: 15em
 
    Measure Angle |nix| (Gnome)
 
@@ -339,7 +335,6 @@ display three kinds of information:
 
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
-   :width: 15em
 
    Identify feaures dialog |nix| (Gnome)
 
@@ -391,7 +386,6 @@ annotations to the map canvas.
 
 .. figure:: /static/user_manual/introduction/grid_dialog.png
    :align: center
-   :width: 30em
 
    The Grid Dialog |nix|
 
@@ -418,7 +412,6 @@ you prefer to the map.
 
 .. figure:: /static/user_manual/introduction/copyright.png
    :align: center
-   :width: 15em
 
    The Copyright Dialog |nix|
 
@@ -454,7 +447,6 @@ the four corners of the map canvas.
 
 .. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
-   :width: 20em
 
    The North Arrow Dialog |nix|
 
@@ -473,7 +465,6 @@ can control the style and placement, as well as the labeling of the bar.
 
 .. figure:: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
-   :width: 20em
 
    The Scale Bar Dialog |nix|
 
@@ -528,7 +519,6 @@ map canvas.
 
 .. figure:: /static/user_manual/introduction/annotation.png
    :align: center
-   :width: 30em
 
    Annotation text dialog |nix|
 
@@ -581,7 +571,6 @@ Tim Sutton for more information.
 
 .. figure:: /static/user_manual/introduction/custom_annotation.png
    :align: center
-   :width: 30em
 
    Customized qt designer annotation form |nix|
 

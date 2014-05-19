@@ -30,7 +30,6 @@ query.
    **Figure Attributes 2:**
 
 .. figure:: /static/user_manual/working_with_vector/queryBuilder.png
-   :width: 30em
    :align: center
 
    Query Builder |nix|

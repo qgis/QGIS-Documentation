@@ -16,7 +16,6 @@ between two points on any polyline layer and plots this path over the road netwo
 
 .. figure:: /static/user_manual/plugins/roadgraph_sample.png
    :align: center
-   :width: 30 em
 
    Road Graph Plugin |nix|
 
@@ -60,7 +59,6 @@ plugin settings` dialog in the :menuselection:`Vector --> Road Graph` menu
 
 .. figure:: /static/user_manual/plugins/roadgraph_plugin_settings.png
    :align: center
-   :width: 20 em
 
    Road graph plugin settings |nix|
 

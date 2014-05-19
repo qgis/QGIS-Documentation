@@ -25,7 +25,6 @@ There are several menus in the dialog:
 
 .. figure:: /static/user_manual/working_with_raster/rasterPropertiesDialog.png
    :align: center
-   :width: 30em
 
    Raster Layers Properties Dialog |nix|
 
@@ -97,7 +96,6 @@ choose several :guilabel:`Contrast enhancement` methods: 'No enhancement', 'Stre
 
 .. figure:: /static/user_manual/working_with_raster/rasterMultibandColor.png
    :align: center
-   :width: 30em
 
    Raster Renderer - Multiband color |nix|
 
@@ -148,7 +146,6 @@ to assign a label to the color values. The label appears in the legend of the ra
 
 .. figure:: /static/user_manual/working_with_raster/rasterPaletted.png
    :align: center
-   :width: 30em
 
    Raster Renderer - Paletted |nix|
 
@@ -179,7 +176,6 @@ then pressing **[Load]**.  |qg| can |radiobuttonon| :guilabel:`Estimate (faster)
 
 .. figure:: /static/user_manual/working_with_raster/rasterSingleBandGray.png
    :align: center
-   :width: 30em
 
    Raster Renderer - Singleband gray |nix|
 
@@ -210,7 +206,6 @@ You can also create individual color maps for the single bands here.
 
 .. figure:: /static/user_manual/working_with_raster/rasterSingleBandPseudocolor.png
    :align: center
-   :width: 30em
 
    Raster Renderer - Singleband pseudocolor |nix|
 
@@ -291,7 +286,6 @@ matrix through a geometric transformation.
 
 .. figure:: /static/user_manual/working_with_raster/rasterRenderAndRessampling.png
    :align: center
-   :width: 30em
 
    Raster Rendering - Resampling |nix|
 
@@ -377,7 +371,6 @@ If you choose 'Internal (if possible)' from the :guilabel:`Overview format` menu
 
 .. figure:: /static/user_manual/working_with_raster/rasterPyramids.png
    :align: center
-   :width: 30em
 
    The Pyramids Menu |nix|
 
@@ -412,7 +405,6 @@ you have chosen the :guilabel:`Min/max options`.
 
 .. figure:: /static/user_manual/working_with_raster/rasterHistogram.png
    :align: center
-   :width: 30em
 
    Raster Histogram |nix|
 
@@ -435,6 +427,5 @@ basis, so it may well be that a given layer's statistics have not yet been colle
 
 .. figure:: /static/user_manual/working_with_raster/rasterMetadata.png
    :align: center
-   :width: 30em
 
    Raster Metadata |nix|

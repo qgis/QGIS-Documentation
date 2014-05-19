@@ -94,7 +94,6 @@ This diagram illustrates the concept of tile sets:
 
 .. figure:: /static/user_manual/working_with_ogc/concept_wmts.png
    :align: center
-   :width: 15em
 
    Concept of WMTS tile sets
 
@@ -226,7 +225,6 @@ provided by the DM Solutions Group WMS server.
 
 .. figure:: /static/user_manual/working_with_ogc/connection_wms.png
    :align: center
-   :width: 30em
 
    Dialog for adding a WMS server, showing its available layers |nix|
 
@@ -327,7 +325,6 @@ Within |qg|, you can search for WMS servers. Figure_OGC_2_ shows the
 
 .. figure:: /static/user_manual/working_with_ogc/wms_server_search.png
    :align: center
-   :width: 30em
 
    Dialog for searching WMS servers after some keywords |nix|
 
@@ -604,7 +601,6 @@ Note that any proxy settings you may have set in your preferences are also recog
 
 .. figure:: /static/user_manual/working_with_ogc/connection_wfs.png
    :align: center
-   :width: 20 em
 
    Adding a WFS layer |nix|
 

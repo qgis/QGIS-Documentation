@@ -13,7 +13,6 @@ Topology Checker Plugin
 
 .. figure:: /static/user_manual/plugins/topology_checker.png
    :align: center
-   :width: 30em
 
    The Topology Checker Plugin
 
