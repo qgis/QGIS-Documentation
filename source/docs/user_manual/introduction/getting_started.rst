@@ -193,7 +193,7 @@ statement for QGIS is:
 ::
 
   qgis --help
-  QGIS - 2.0.1-Dufour 'Dufour' (exported)
+  QGIS - 2.2.0-Valmiera 'Valmiera' (exported)
   QGIS is a user friendly Open Source Geographic Information System.
   Usage: qgis [OPTION] [FILE]
   options:
@@ -206,6 +206,7 @@ statement for QGIS is:
    [--nologo]                      hide splash screen
    [--noplugins]                   don't restore plugins on startup
    [--nocustomization]             don't apply GUI customization
+   [--customizationfile]           use the given ini file as GUI customization
    [--optionspath path]            use the given QSettings path
    [--configpath path]             use the given path for all user configuration
    [--code path]                   run the given python file on load
