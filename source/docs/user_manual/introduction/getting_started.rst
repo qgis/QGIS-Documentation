@@ -272,6 +272,11 @@ This command line argument hides the splash screen when you start |qg|.
 If you have trouble at start-up with plugins, you can avoid loading them at
 start-up with this option. They will still be available from the Plugins Manager afterwards.
 
+**Command line option** ``--customizationfile``
+
+Using this command line argument, you can define a GUI customization file, that will 
+be used at startup.
+
 **Command line option** ``--nocustomization``
 
 Using this command line argument, existing GUI customization will not be applied
