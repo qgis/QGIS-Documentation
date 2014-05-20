@@ -1,0 +1,223 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-20 16:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:6
+msgid "|LS| Queries"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:8
+msgid ""
+"When you write a :kbd:`SELECT ...` command it is commonly known as a query -"
+" you are interrogating the database for information."
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:11
+msgid ""
+"**The goal of this lesson:** To learn how to create queries that will return"
+" useful information."
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:14
+msgid ""
+"If you did not do so in the previous lesson, add the following people "
+"objects to your :kbd:`people` table. If you receive any errors related to "
+"foreign key constraints, you will need to add the 'Main Road' object to your"
+" streets table first"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:32
+msgid "Ordering Results"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:34
+msgid "Let's retrieve a list of people ordered by their house numbers::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:38
+#: ../../source/docs/training_manual/database_concepts/queries.rst:52
+#: ../../source/docs/training_manual/database_concepts/queries.rst:172
+#: ../../source/docs/training_manual/database_concepts/queries.rst:193
+#: ../../source/docs/training_manual/database_concepts/queries.rst:214
+#: ../../source/docs/training_manual/database_concepts/queries.rst:227
+msgid "Result::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:48
+msgid "You can sort the results by the values of more than one column::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:64
+msgid "Filtering"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:66
+msgid ""
+"Often you won't want to see every single record in the database - especially"
+" if there are thousands of records and you are only interested in seeing one"
+" or two."
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:70
+msgid ""
+"Here is an example of a numerical filter which only returns objects whose "
+":kbd:`house_no` is less than 50::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:81
+msgid ""
+"You can combine filters (defined using the :kbd:`WHERE` clause) with sorting"
+" (defined using the :kbd:`ORDER BY`)::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:92
+msgid "You can also filter based on text data::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:102
+msgid ""
+"Here we used the :kbd:`LIKE` clause to find all names with an :kbd:`s` in "
+"them. You'll notice that this query is case-sensitive, so the :kbd:`Sally "
+"Norman` entry has not been returned."
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:106
+msgid ""
+"If you want to search for a string of letters regardless of case, you can do"
+" a case in-sensitive search using the :kbd:`ILIKE` clause::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:117
+msgid ""
+"That query returned every `people` object with an :kbd:`r` or :kbd:`R` in "
+"their name."
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:121
+msgid "Joins"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:123
+msgid ""
+"What if you want to see the person's details and their street's name instead"
+" of the ID? In order to do that, you need to join the two tables together in"
+" a single query. Lets look at an example::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:131
+msgid ""
+"With joins, you will always state the two tables the information is coming "
+"from, in this case people and streets.  You also need to specify which two "
+"keys must match (foreign key & primary key). If you don't specify that, you "
+"will get a list of all possible combinations of people and streets, but no "
+"way to know who actually lives on which street!"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:137
+msgid "Here is what the correct output will look like::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:147
+msgid ""
+"We will revisit joins as we create more complex queries later. Just remember"
+" they provide a simple way to combine the information from two or more "
+"tables."
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:151
+msgid "Sub-Select"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:153
+msgid ""
+"Sub-selections allow you to select objects from one table based on the data "
+"from another table which is linked via a foreign key relationship. In our "
+"case, we want to find people who live on a specific street."
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:157
+msgid "First, let's do a little tweaking of our data::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:165
+msgid ""
+"Let's take a quick look at our data after those changes: we can reuse our "
+"query from the previous section::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:182
+msgid ""
+"Now let's show you a sub-selection on this data. We want to show only people"
+" who live in :kbd:`street_id` number :kbd:`1`::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:201
+msgid ""
+"Although this is a very simple example and unnecessary with our small data-"
+"sets, it illustrates how useful and important sub-selections can be when "
+"querying large and complex data-sets."
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:206
+msgid "Aggregate Queries"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:208
+msgid ""
+"One of the powerful features of a database is its ability to summarise the "
+"data in its tables. These summaries are called aggregate queries. Here is a "
+"typical example which tells us how many people objects are in our people "
+"table::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:221
+msgid "If we want the counts to be summarised by street name we can do this::"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:236
+msgid ""
+"Because we have not used an :kbd:`ORDER BY` clause, the order of your "
+"results may not match what is shown here."
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:240
+msgid "|TY| |moderate|"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:242
+msgid ""
+"Summarise the people by street name and show the actual street names instead"
+" of the street_ids."
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:245
+msgid ":ref:`Check your results <database-concepts-8>`"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:250
+msgid "|IC|"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:252
+msgid ""
+"You've seen how to use queries to return the data in your database in a way "
+"that allows you to extract useful information from it."
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:256
+msgid "|WN|"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/queries.rst:258
+msgid ""
+"Next you'll see how to create views from the queries that you've written."
+msgstr ""
