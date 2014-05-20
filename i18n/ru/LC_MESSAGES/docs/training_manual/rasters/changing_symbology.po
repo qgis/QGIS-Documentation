@@ -1,0 +1,283 @@
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-25 16:51+0100\n"
+"PO-Revision-Date: 2014-03-25 17:02+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/qgis-documentation/language/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:6
+msgid "|LS| Changing Raster Symbology"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:8
+msgid ""
+"Not all raster data consists of aerial photographs. There are many other "
+"forms of raster data, and in many of those cases, it's essential to "
+"symbolize the data properly so that it becomes properly visible and useful."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:12
+msgid ""
+"**The goal for this lesson:** To change the symbology for a raster layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:15
+msgid "|basic| |TY|"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:17
+msgid ""
+"Start with the current map from the previous exercise :kbd:`analysis.qgs`."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:18
+msgid ""
+"Use the :guilabel:`Add Raster Layer` button to load the new raster dataset."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:19
+msgid ""
+"Load the dataset :kbd:`srtm_41_19.tif`, found under the directory "
+":kbd:`exercise_data/raster/SRTM/`."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:21
+msgid ""
+"Once it appears in the :guilabel:`Layers list`, rename it to :kbd:`DEM`."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:22
+msgid ""
+"Zoom to the extent of this layer by right-clicking on it in the Layer List "
+"and selecting :guilabel:`Zoom to Layer Extent`."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:25
+msgid ""
+"This dataset is a *Digital Elevation Model (DEM)*. It's a map of the "
+"elevation (altitude) of the terrain, allowing us to see where the mountains "
+"and valleys are, for example."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:29
+msgid ""
+"Once it's loaded, you'll notice that it's a basic stretched grayscale "
+"representation of the DEM. It's seen here with the vector layers on top:"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:35
+msgid ""
+"QGIS has automatically applied a stretch to the image for visualization "
+"purposes, and we will learn more about how this works as we continue."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:39
+msgid "|basic| |FA| Changing Raster Layer Symbology"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:41
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog for the :guilabel:`SRTM` layer "
+"by right-clicking on the layer in the Layer tree and selecting "
+":guilabel:`Properties` option."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:44
+msgid "Switch to the :guilabel:`Style` tab."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:49
+msgid ""
+"These are the current settings that QGIS applied for us by default. Its just"
+" one way to look at a DEM, so lets explore some others."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:52
+msgid ""
+"Change the :guilabel:`Render type` to :guilabel:`Singleband pseudocolor`, "
+"and use the default options presented."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:54
+msgid ""
+"Click the :guilabel:`Classify` button to generate a new color "
+"classification, and click :guilabel:`OK` to apply this classification to the"
+" DEM."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:60
+msgid "You'll see the raster looking like this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:65
+msgid ""
+"This is an interesting way of looking at the DEM, but maybe we don't want to"
+" symbolize it using these colors."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:68
+msgid "Open :guilabel:`Layer Properties` dialog again."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:69
+msgid ""
+"Switch the :guilabel:`Render Type` back to :guilabel:`Singleband gray`."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:70
+msgid "Click :guilabel:`OK` to apply this setting to the raster."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:72
+msgid ""
+"You will now see a totally gray rectangle that isn't very useful at all."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:77
+msgid ""
+"This is because we have lost the default settings which \"stretch\" the "
+"color values to show them contrast."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:80
+msgid ""
+"Let's tell QGIS to again \"stretch\" the color values based on the range of "
+"data in the DEM. This will make QGIS use  all of the available colors (in "
+":guilabel:`Grayscale`, this is black, white and all shades of gray in "
+"between)."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:84
+msgid "Specify the :guilabel:`Min` and :guilabel:`Max` values as shown below."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:85
+msgid ""
+"Set the value :guilabel:`Contrast enhancement` to :guilabel:`Stretch To "
+"MinMax`:"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:91
+msgid ""
+"But what are the minimum and maximum values that should be used for the "
+"stretch? The ones that are currently under :guilabel:`Min` and "
+":guilabel:`Max` values are the same values that just gave us a gray "
+"rectangle before. Instead, we should be using the minimum and maximum values"
+" that are actually in the image, right? Fortunately, you can determine those"
+" values easily by loading the minimum and maximum values of the raster."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:98
+msgid ""
+"Under :guilabel:`Load min / max values`, select :guilabel:`Min / Max` "
+"option."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:99
+msgid "Click the :guilabel:`Load` button:"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:101
+msgid ""
+"Notice how the :guilabel:`Custom min / max values` have changed to reflect "
+"the actual values in our DEM:"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:107
+msgid "Click :guilabel:`OK` to apply these settings to the image."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:109
+msgid ""
+"You'll now see that the values of the raster are again properly displayed, "
+"with the darker colors representing valleys and the lighter ones, mountains:"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:116
+msgid "But isn't there a better or easier way?"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:118
+msgid ""
+"Yes, there is. Now that you understand what needs to be done, you'll be glad"
+" to know that there's a tool for doing all of this easily."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:121
+msgid "Remove the current DEM from the :guilabel:`Layers list`."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:122
+msgid ""
+"Load the raster in again, renaming it to :kbd:`DEM` as before. It's a gray "
+"rectangle again..."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:124
+msgid ""
+"Enable the tool you'll need by enabling :menuselection:`View --> Toolbars "
+"--> Raster`. These icons will appear in the interface:"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:130
+msgid ""
+"The third button from the left :guilabel:`Local Histogram Stretch` will "
+"automatically stretch the minimum and  maximum values to give you the best "
+"contrast in the local area that you're  zoomed into. It's useful for large "
+"datasets. The button on the left :guilabel:`Local Cumulative Cut Stretch "
+"...` will stretch the minimum and maximum values  to constant values across "
+"the whole image."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:137
+msgid ""
+"Click the fourth button from the left (:guilabel:`Stretch Histogram to Full "
+"Dataset`). You'll see the data is now correctly represented as before."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:140
+msgid ""
+"You can try the other buttons in this toolbar and see how they alter the "
+"stretch of the image when zoomed in to local areas or when fully zoomed out."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:144
+msgid "|IC|"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:146
+msgid ""
+"These are only the basic functions to get you started with raster symbology."
+" QGIS also allows you many other options, such as symbolizing a layer using "
+"standard deviations, or representing different bands with different colors "
+"in a multispectral image."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:152
+msgid "Reference"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:154
+msgid ""
+"The SRTM dataset was obtained from `http://srtm.csi.cgiar.org/ "
+"<http://srtm.csi.cgiar.org/>`_"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:158
+msgid "|WN|"
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:160
+msgid ""
+"Now that we can see our data displayed properly, let's investigate how we "
+"can analyze it further."
+msgstr ""

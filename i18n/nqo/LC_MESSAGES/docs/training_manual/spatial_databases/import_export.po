@@ -1,0 +1,142 @@
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-25 16:51+0100\n"
+"PO-Revision-Date: 2014-03-25 17:00+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"Language-Team: N'ko (http://www.transifex.com/projects/p/qgis-documentation/language/nqo/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nqo\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:6
+msgid "|LS| Import and Export"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:8
+msgid ""
+"Of course, a database with no easy way to migrate data into it and out of it"
+" would not be of much use. Fortunately, there are a number of tools that "
+"will let you easily move data into and out of PostGIS."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:13
+msgid "shp2pgsql"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:15
+msgid ""
+"shp2pgsql is a commandline tool to import ESRI shapefiles to the database. "
+"Under Unix, you can use the following command for importing a new PostGIS "
+"table::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:22
+msgid "Under Windows, you have to perform the import process in two steps::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:27
+msgid "You may encounter this error::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:32
+msgid ""
+"This is a known issue regarding the creation *in situ* of a spatial index "
+"for the data you're importing. To avoid the error, exclude the :kbd:`-I` "
+"parameter. This will mean that no spatial index is being created directly, "
+"and you'll need to create it in the database after the data have been "
+"imported. (The creation of a spatial index will be covered in the next "
+"lesson.)"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:39
+msgid "pgsql2shp"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:41
+msgid ""
+"pgsql2shp is a commandline tool to export PostGIS Tables, Views or SQL "
+"select queries. To do this under Unix::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:47
+msgid "To export the data using a query::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:53
+msgid "ogr2ogr"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:55
+msgid ""
+"ogr2ogr is a very powerful tool to convert data into and from postgis to "
+"many data formats. ogr2ogr is part of the GDAL/OGR Software and has to be "
+"installed separately. To export a table from PostGIS to GML, you can use "
+"this command::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:63
+msgid "SPIT"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:65
+msgid ""
+"SPIT is a QGIS plugin which is delivered with QGIS. You can use SPIT for "
+"uploading ESRI shapefiles to PostGIS."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:68
+msgid ""
+"Once you've added the SPIT plugin via the :guilabel:`Plugin Manager`, look "
+"for this button:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:74
+msgid ""
+"Clicking on it or selecting :guilabel:`Database --> Spit --> Import "
+"Shapefiles to PostgreSQL` from the menu will give you the SPIT dialog:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:80
+msgid ""
+"You can add shapefiles to the database by clicking the :guilabel:`Add` "
+"button, which will give you a file browser window."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:84
+msgid "DB Manager"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:86
+msgid ""
+"You may have noticed another option in the :guilabel:`Database` menu labeled"
+" :guilabel:`DB Manager`. This is a new tool in QGIS 2.0 that provides a "
+"unified interface for interacting with spatial databases including PostGIS. "
+"It also allows you to import and export from databases to other formats. "
+"Since the next module is largely devoted to using this tool, we will only "
+"briefly mention it here."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:95
+msgid "|IC|"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:97
+msgid ""
+"Importing and exporting data to and from the database can be done in many "
+"various ways. Especially when using disparate data sources, you will "
+"probably use these functions (or others like them) on a regular basis."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:102
+msgid "|WN|"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:104
+msgid "Next we'll look at how to query the data we've created before."
+msgstr ""

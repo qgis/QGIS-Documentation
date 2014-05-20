@@ -1,0 +1,438 @@
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-25 16:51+0100\n"
+"PO-Revision-Date: 2014-03-25 17:02+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:6
+msgid "|LS| Forms"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:8
+msgid ""
+"When you add new data via digitizing, you're presented with a dialog that "
+"lets you fill in the attributes for that feature. However, this dialog is "
+"not, by default, very nice to look at. This can cause a usability problem, "
+"especially if you have large datasets to create, or if you want other people"
+" to help you digitize and they find the default forms to be confusing."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:14
+msgid ""
+"Fortunately, QGIS lets you create your own custom dialogs for a layer. This "
+"lesson shows you how."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:17
+msgid "**The goal for this lesson:** To create a form for a layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:20
+msgid "|basic| |FA| Using QGIS' Form Design Functionality"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:22
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:41
+msgid "Select the :guilabel:`roads` layer in the :guilabel:`Layers list`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:23
+msgid "Enter :guilabel:`Edit Mode` as before."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:24
+msgid "Open its :guilabel:`Attribute Table`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:25
+msgid ""
+"Right-click on any cell in the table. A short menu will appear, with the "
+"only entry being :guilabel:`Open form`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:27
+msgid "Click on it to see the form that QGIS generates for this layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:29
+msgid ""
+"Obviously it would be nice to be able to do this while looking at the map, "
+"rather than needing to search for a specific street in the "
+":guilabel:`Attribute Table` all the time."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:33
+msgid "Go to the :menuselection:`Settings --> Options` menu."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:34
+msgid "In the dialog that appears, select the :guilabel:`Map Tools` tab."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:35
+msgid "Check the :guilabel:`Open feature form ...` checkbox:"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:40
+msgid "Click :guilabel:`Ok`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:42
+msgid "Using the :guilabel:`Identify` tool, click on any street in the map."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:44
+msgid "|mActionIdentify|"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:46
+msgid ""
+"Instead of the normal :guilabel:`Identify` dialog, you'll see the now-"
+"familiar form instead:"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:53
+msgid "|basic| |TY| Using the Form to Edit Values"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:55
+msgid ""
+"If you are in edit mode, you can use this form to edit a feature's "
+"attributes."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:57
+msgid "Activate edit mode (if it isn't already activated)."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:58
+msgid ""
+"Using the :guilabel:`Identify` tool, click on the main street running "
+"through |majorUrbanName|:"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:64
+msgid "Edit its :guilabel:`highway` value to be :kbd:`secondary`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:65
+msgid "Save your edits."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:66
+msgid "Exit edit mode."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:67
+msgid ""
+"Open the :guilabel:`Attribute Table` and note that the value has been "
+"updated in the attributes table and therefore in the source data."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:70
+msgid ""
+"If you're using the default dataset, you'll find that there is more than one"
+" road on this map called :kbd:`Voortrek Street`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:74
+msgid "|moderate| |FA| Setting Form Field Types"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:76
+msgid ""
+"It's nice to edit things using a form, but you still have to enter "
+"everything by hand. Fortunately, forms have different kinds of so-called "
+"*widgets* that allow you to edit data in various different ways."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:80
+msgid "Open the :guilabel:`roads` layer's :guilabel:`Layer Properties`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:81
+msgid "Switch to the :guilabel:`Fields` tab. You'll see this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:86
+msgid ""
+"Click on the :guilabel:`Line edit` button in the same row as "
+":guilabel:`man_made` and you'll be given a new dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:88
+msgid "Select :guilabel:`Checkbox` in the list of options:"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:93
+msgid "Click :guilabel:`OK`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:94
+msgid ""
+"Enter edit mode (if the :guilabel:`roads` layer is not already in edit mode."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:95
+msgid "Click on the :guilabel:`Identify` tool."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:96
+msgid "Click on the same main road you chose earlier."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:98
+msgid ""
+"You'll now see that the :guilabel:`man_made` attribute has a checkbox next "
+"to it denoting :kbd:`True` (checked) or :kbd:`False` (unchecked)."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:104
+msgid "|hard| |TY|"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:106
+msgid "Set a more appropriate form widget for the :guilabel:`highway` field."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:108
+msgid ":ref:`Check your results <create-vector-forms-1>`"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:111
+msgid "|hard| |TY| Creating Test Data"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:113
+msgid "You can also design your own custom form completely from scratch."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:115
+msgid ""
+"Create a simple point layer named :kbd:`test-data` with two attributes:"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:117
+msgid "Name (text)"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:118
+msgid "Age (text)"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:123
+msgid ""
+"Capture a few points on your new layer using the digitizing tools so that "
+"you have a little data to play with. You should be presented with the "
+"default QGIS generated attribute capture form each time you capture a new "
+"point."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:128
+msgid "You may need to disable Snapping if still enabled from earlier tasks."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:134
+msgid "|hard| |FA| Creating a New Form"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:136
+msgid ""
+"Now we want to create our own custom form for the attribute data capture "
+"phase. To do this, you need to have *Qt4 Designer* installed (only needed "
+"for the person who creates the forms). It should be provided as part of your"
+" course materials, if you're using Windows. You may need to look for it if "
+"you're using another OS. In Ubuntu, do the following in the terminal:"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:142
+msgid ""
+"At the time of writing, Qt5 is the latest version available. However, this "
+"process specifically requires Qt4 and is not necessarily compatible with "
+"Qt5."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:146
+msgid ":kbd:`sudo apt-get install qt4-designer`"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:148
+msgid ""
+"... and it should install automatically. Otherwise, look for it in the "
+"*Software Center*."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:151
+msgid ""
+"Start *Designer* by opening its *Start Menu* entry in Windows (or whatever "
+"approach is appropriate in your OS)."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:153
+msgid "In the dialog that appears, create a new dialog:"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:158
+msgid ""
+"Look for the :guilabel:`Widget Box` along the left of your screen (default)."
+" It contains an item called :guilabel:`Line Edit`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:160
+msgid ""
+"Click and drag this item into your form. This creates a new :guilabel:`Line "
+"Edit` in the form."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:162
+msgid ""
+"With the new line edit element selected, you'll see its *properties* along "
+"the side of your screen (on the right by default):"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:168
+msgid "Set its name to :kbd:`Name`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:169
+msgid ""
+"Using the same approach, create a new spinbox and set its name to "
+":kbd:`Age`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:170
+msgid ""
+"Add a :guilabel:`Label` with the text :kbd:`Add a New Person` in a bold font"
+" (look in the object *properties* to find out how to set this). "
+"Alternatively, you may want to set the title of the dialog itself (rather "
+"than adding a label)."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:174
+msgid "Click anywhere in your dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:175
+msgid ""
+"Find the :guilabel:`Lay Out Vertically` button (in a toolbar along the top "
+"edge of the screen, by default). This lays out your dialog automatically."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:177
+msgid ""
+"Set the dialog's maximum size (in its properties) to :kbd:`200` (width) by "
+":kbd:`100` (height)."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:179
+msgid "Save your new form as :kbd:`exercise_data/forms/add_people.ui`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:180
+msgid "When it's done saving, you can close the *Qt4 Designer* program."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:183
+msgid "|hard| |FA| Associating the Form with Your Layer"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:185
+msgid "Go back to QGIS."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:186
+msgid ""
+"Double click the :guilabel:`test-data` layer in the legend to access its "
+"properties."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:187
+msgid ""
+"Click on the :guilabel:`Fields` tab in the :guilabel:`Layer Properties` "
+"dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:189
+msgid ""
+"In the :guilabel:`Attribute editor layout` dropdown, select "
+":guilabel:`Provide ui-file`."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:191
+msgid ""
+"Click the ellipsis button and choose the :kbd:`add_people.ui` file you just "
+"created:"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:197
+msgid "Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:198
+msgid "Enter edit mode and capture a new point."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:199
+msgid ""
+"When you do so, you will be presented with your custom dialog (instead of "
+"the generic one that QGIS usually creates)."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:201
+msgid ""
+"If you click on one of your points using the :guilabel:`Identify` tool, you "
+"can now bring up the form by right clicking in the identify results window "
+"and choosing :guilabel:`View Feature Form` from the context menu."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:204
+msgid ""
+"If you are in edit mode for this layer, that context menu will show "
+":guilabel:`Edit Feature Form` instead, and you can then adjust the "
+"attributes in the new form even after initial capture."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:209
+msgid "|IC|"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:211
+msgid ""
+"Using forms, you can make life easier for yourself when editing or creating "
+"data. By editing widget types or creating an entirely new form from scratch,"
+" you can control the experience of someone who digitizes new data for that "
+"layer, thereby minimizing misunderstandings and unnecessary errors."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:217
+msgid "|FR|"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:219
+msgid ""
+"If you completed the advanced section above and have knowledge of Python, "
+"you may want to check out `this blog entry <http://tinyurl.com/6tr42rb>`_ "
+"about creating custom feature forms with Python logic, which allows advanced"
+" functions including data validation, autocompletion, etc."
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:225
+msgid "|WN|"
+msgstr ""
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:227
+msgid ""
+"Opening a form on identifying a feature is one of the standard actions that "
+"QGIS can perform. However, you can also direct it to perform custom actions "
+"that you define. This is the subject of the next lesson."
+msgstr ""

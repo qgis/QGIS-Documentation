@@ -1,0 +1,890 @@
+# 
+# Translators:
+# eglatorre <eg@gismood.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-25 16:51+0100\n"
+"PO-Revision-Date: 2014-04-23 16:29+0000\n"
+"Last-Translator: eglatorre <eg@gismood.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/qgis-documentation/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:6
+msgid "|LS| Spatial Statistics"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:8
+msgid ""
+"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:11
+msgid ""
+"Spatial statistics allow you to analyze and understand what is going on in a"
+" given vector dataset. QGIS includes several standard tools for statistical "
+"analysis which prove useful in this regard."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:15
+msgid ""
+"**The goal for this lesson:** To know how to use QGIS' spatial statistics "
+"tools."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:19
+msgid "|basic| |FA| Create a Test Dataset"
+msgstr "|basic| |FA| Crear un Conjunto de Datos de Prueba"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:21
+msgid ""
+"In order to get a point dataset to work with, we'll create a random set of "
+"points."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:24
+msgid ""
+"To do so, you'll need a polygon dataset defining the extents of the area you"
+" want to create the points in."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:27
+msgid "We'll use the area covered by streets."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:29
+msgid "Create a new empty map."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:30
+msgid ""
+"Add the :kbd:`roads_33S` layer from the :kbd:`exercise_data/projected_data` "
+"directory, as well as the :kbd:`srtm_41_19.tif` raster (elevation data) "
+"found in :kbd:`exercise_data/raster/SRTM/`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:33
+msgid ""
+"Use the :guilabel:`Convex hull(s)` tool (available under "
+":menuselection:`Vector --> Geoprocessing Tools`) to generate an area "
+"enclosing all the roads:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:40
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`roads_hull.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:42
+msgid "Add it to the TOC (:guilabel:`Layers list`) when prompted."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:45
+msgid "Creating random points"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:47
+msgid ""
+"Create random points in this area using the tool at :menuselection:`Vector "
+"--> Research Tools --> Random points`:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:53
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`random_points.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:55
+msgid "Add it to the TOC (:guilabel:`Layers list`) when prompted:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:61
+msgid "Sampling the data"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:63
+msgid ""
+"To create a sample dataset from the raster, you'll need to use the "
+":guilabel:`Point sampling tool` plugin."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:65
+msgid "Refer ahead to the module on plugins if necessary."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:66
+msgid ""
+"Search for the phrase :kbd:`point sampling` in the :guilabel:`Plugin --> "
+"Manage and Install Plugins...` and you will find the plugin."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:68
+msgid ""
+"As soon as it has been activated with the :guilabel:`Plugin Manager`, you "
+"will find the tool under :menuselection:`Plugins --> Analyses --> Point "
+"sampling tool`:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:75
+msgid ""
+"Select :guilabel:`random_points` as the layer containing sampling points, "
+"and the SRTM raster as the band to get values from."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:77
+msgid "Make sure that \"Add created layer to the TOC\" is checked."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:78
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`random_samples.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:81
+msgid ""
+"Now you can check the sampled data from the raster file in the attributes "
+"table of the :guilabel:`random_samples` layer, they will be in a column "
+":kbd:`named srtm_41_19`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:85
+msgid "A possible sample layer is shown here:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:90
+msgid ""
+"The sample points are classified by their value such that darker points are "
+"at a lower altitude."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:93
+msgid ""
+"You'll be using this sample layer for the rest of the statistical exercises."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:96
+msgid "|basic| |FA| Basic Statistics"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:98
+msgid "Now get the basic statistics for this layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:100
+msgid ""
+"Click on the :menuselection:`Vector --> Analysis Tools --> Basic statistics`"
+" menu entry."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:102
+msgid ""
+"In the dialog that appears, specify the :guilabel:`random_samples` layer as "
+"the source."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:104
+msgid ""
+"Make sure that the :menuselection:`Target field` is set to "
+":guilabel:`srtm_41_19` which is the field you will calculate statistics for."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:106
+msgid "Click :guilabel:`OK`. You'll get results like this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:111
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:200
+msgid ""
+"You can copy and paste the results into a spreadsheet. The data uses a "
+"(colon :kbd:`:`) separator."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:117
+msgid "Close the plugin dialog when done."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:119
+msgid "To understand the statistics above, refer to this definition list:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:123
+msgid "Mean"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:122
+msgid ""
+"The mean (average) value is simply the sum of the values divided by the "
+"amount of values."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:128
+msgid "StdDev"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:126
+msgid ""
+"The standard deviation. Gives an indication of how closely the values are "
+"clustered around the mean. The smaller the standard deviation, the closer "
+"values tend to be to the mean."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "Sum"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "All the values added together."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "Min"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "The minimum value."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:137
+msgid "Max"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:137
+msgid "The maximum value."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:140
+msgid "N"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:140
+msgid "The amount of samples/values."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:144
+msgid "CV"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:143
+msgid ""
+"The `spatial <http://en.wikipedia.org/wiki/Spatial_covariance>`_ `covariance"
+" <http://en.wikipedia.org/wiki/Covariance>`_ of the dataset."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:149
+msgid "Number of unique values"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:147
+msgid ""
+"The number of values that are unique across this dataset. If there are 90 "
+"unique values in a dataset with N=100, then the 10 remaining values are the "
+"same as one or more of each other."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:152
+msgid "Range"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:152
+msgid "The difference between the minimum and maximum values."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:157
+msgid "Median"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:155
+msgid ""
+"If you arrange all the values from least to greatest, the middle value (or "
+"the average of the two middle values, if N is an even number) is the median "
+"of the values."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:160
+msgid "|basic| |FA| Compute a Distance Matrix"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid ""
+"Create a new point layer in the same projection as the other datasets "
+"(:kbd:`WGS 84 / UTM 33S`)."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:164
+msgid ""
+"Enter edit mode and digitize three point somewhere among the other points."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid ""
+"Alternatively, use the same random point generation method as before, but "
+"specify only three points."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:167
+msgid "Save your new layer as :kbd:`distance_points.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:169
+msgid "To generate a distance matrix using these points:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:171
+msgid ""
+"Open the tool :menuselection:`Vector --> Analysis Tools --> Distance "
+"matrix`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:172
+msgid ""
+"Select the :guilabel:`distance_points` layer as the input layer, and the "
+":guilabel:`random_samples` layer as the target layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:174
+msgid "Set it up like this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:179
+msgid "Save the result as :kbd:`distance_matrix.csv`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:180
+msgid "Click :guilabel:`OK` to generate the distance matrix."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:181
+msgid ""
+"Open it in a spreadsheet program to see the results. Here is an example:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:187
+msgid "|basic| |FA| Nearest Neighbor Analysis"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:189
+msgid "To do a nearest neighbor analysis:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:191
+msgid ""
+"Click on the menu item :menuselection:`Vector --> Analysis Tools --> Nearest"
+" neighbor analysis`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:193
+msgid ""
+"In the dialog that appears, select the :guilabel:`random_samples` layer and "
+"click :guilabel:`OK`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:195
+msgid "The results will appear in the dialog's text window, for example:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:204
+msgid "|basic| |FA| Mean Coordinates"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:206
+msgid "To get the mean coordinates of a dataset:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:208
+msgid ""
+"Click on the :menuselection:`Vector --> Analysis Tools --> Mean "
+"coordinate(s)` menu item."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:210
+msgid ""
+"In the dialog that appears, specify :guilabel:`random_samples` as the input "
+"layer, but leave the optional choices unchanged."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:212
+msgid "Specify the output layer as :kbd:`mean_coords.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:213
+msgid "Click :guilabel:`OK`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:214
+msgid "Add the layer to the :guilabel:`Layers list` when prompted."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:216
+msgid ""
+"Let's compare this to the central coordinate of the polygon that was used to"
+" create the random sample."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:219
+msgid ""
+"Click on the :menuselection:`Vector --> Geometry Tools --> Polygon "
+"centroids` menu item."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:221
+msgid ""
+"In the dialog that appears, select :guilabel:`roads_hull` as the input "
+"layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:222
+msgid "Save the result as :kbd:`center_point`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:223
+msgid "Add it to the :guilabel:`Layers list` when prompted."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:225
+msgid ""
+"As you can see from the example below, the mean coordinates and the center "
+"of the study area (in orange) don't necessarily coincide:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:232
+msgid "|basic| |FA| Image Histograms"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:234
+msgid ""
+"The histogram of a dataset shows the distribution of its values. The "
+"simplest way to demonstrate this in QGIS is via the image histogram, "
+"available in the :guilabel:`Layer Properties` dialog of any image layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:238
+msgid "In your :guilabel:`Layers list`, right-click on the SRTM DEM layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:239
+msgid "Select :menuselection:`Properties`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:240
+msgid ""
+"Choose the tab :guilabel:`Histogram`. You may need to click on the "
+":guilabel:`Compute Histogram` button to generate the graphic. You will see a"
+" graph describing the frequency of values in the image."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:243
+msgid "You can export it as an image:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:248
+msgid ""
+"Select the :guilabel:`Metadata` tab, you can see more detailed information "
+"inside the :guilabel:`Properties` box."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:251
+msgid ""
+"The mean value is :kbd:`332.8`, and the maximum value is :kbd:`1699`! But "
+"those values don't show up on the histogram. Why not? It's because there are"
+" so few of them, compared to the abundance of pixels with values below the "
+"mean. That's also why the histogram extends so far to the right, even though"
+" there is no visible red line marking the frequency of values higher than "
+"about :kbd:`250`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:257
+msgid ""
+"Therefore, keep in mind that a histogram shows you the distribution of "
+"values, and not all values are necessarily visible on the graph."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:260
+msgid "(You may now close :guilabel:`Layer Properties`.)"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:263
+msgid "|basic| |FA| Spatial Interpolation"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:265
+msgid ""
+"Let's say you have a collection of sample points from which you would like "
+"to extrapolate data. For example, you might have access to the "
+":guilabel:`random_samples` dataset we created earlier, and would like to "
+"have some idea of what the terrain looks like."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:270
+msgid ""
+"To start, launch the :guilabel:`Grid (Interpolation)` tool by clicking on "
+"the :menuselection:`Raster --> Analysis --> Grid (Interpolation)` menu item."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:273
+msgid "In the :guilabel:`Input file` field, select :kbd:`random_samples`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:274
+msgid ""
+"Check the :guilabel:`Z Field` box, and select the field :kbd:`srtm_41_19`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:275
+msgid ""
+"Set the :guilabel:`Output file` location to "
+":kbd:`exercise_data/spatial_statistics/interpolation.tif`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:277
+msgid ""
+"Check the :guilabel:`Algorithm` box and select :guilabel:`Inverse distance "
+"to a power`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:279
+msgid ""
+"Set the :guilabel:`Power` to :kbd:`5.0` and the :guilabel:`Smoothing` to "
+":kbd:`2.0`. Leave the other values as-is."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:281
+msgid ""
+"Check the :guilabel:`Load into canvas when finished` box and click "
+":guilabel:`OK`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:283
+msgid ""
+"When it's done, click :guilabel:`OK` on the dialog that says :kbd:`Process "
+"completed`, click :guilabel:`OK` on the dialog showing feedback information "
+"(if it has appeared), and click :guilabel:`Close` on the :guilabel:`Grid "
+"(Interpolation)` dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:288
+msgid ""
+"Here's a comparison of the original dataset (left) to the one constructed "
+"from our sample points (right). Yours may look different due to the random "
+"nature of the location of the sample points."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:295
+msgid ""
+"As you can see, 100 sample points aren't really enough to get a detailed "
+"impression of the terrain. It gives a very general idea, but it can be "
+"misleading as well. For example, in the image above, it is not clear that "
+"there is a high, unbroken mountain running from east to west; rather, the "
+"image seems to show a valley, with high peaks to the west. Just using visual"
+" inspection, we can see that the sample dataset is not representative of the"
+" terrain."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:303
+msgid "|moderate| |TY|"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:305
+msgid ""
+"Use the processes shown above to create a new set of :kbd:`1000` random "
+"points."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:306
+msgid "Use these points to sample the original DEM."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:307
+msgid ""
+"Use the :guilabel:`Grid (Interpolation)` tool on this new dataset as above."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:308
+msgid ""
+"Set the output filename to :kbd:`interpolation_1000.tif`, with "
+":guilabel:`Power` and :guilabel:`Smoothing` set to :kbd:`5.0` and "
+":kbd:`2.0`, respectively."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:312
+msgid ""
+"The results (depending on the positioning of your random points) will look "
+"more or less like this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:318
+msgid ""
+"The border shows the :guilabel:`roads_hull` layer (which represents the "
+"boundary of the random sample points) to explain the sudden lack of detail "
+"beyond its edges. This is a much better representation of the terrain, due "
+"to the much greater density of sample points."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:323
+msgid ""
+"Here is an example of what it looks like with :kbd:`10 000` sample points:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:328
+msgid ""
+"It's not recommended that you try doing this with 10 000 sample points if "
+"you are not working on a fast computer, as the size of the sample dataset "
+"requires a lot of processing time."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:333
+msgid "|moderate| |FA| Additional Spatial Analysis Tools"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:335
+msgid ""
+"Originally a separate project and then accessible as a plugin, the SEXTANTE "
+"software has been added to QGIS as a core function from version 2.0. You can"
+" find it as a new QGIS menu with its new name :menuselection:`Processing` "
+"from where you can access a rich toolbox of spatial analysis tools allows "
+"you to access various plugin tools from within a single interface."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:341
+msgid ""
+"Activate this set of tools by enabling the :menuselection:`Processing --> "
+"Toolbox`"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:342
+msgid "menu entry. The toolbox looks like this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:347
+msgid ""
+"You will probably see it docked in QGIS to the right of the map. Note that "
+"the tools listed here are links to the actual tools. Some of them are "
+"SEXTANTE's own algorithms and others are links to tools that are accessed "
+"from external applications such as GRASS, SAGA or the Orfeo Toolbox. This "
+"external applications are installed with QGIS so you are already able to "
+"make use of them. In case you need to change the configuration of the "
+"Processing tools or, for example, you need to update to a new version of one"
+" of the external applications, you can access its setting from "
+":menuselection:`Processing --> Options and configurations`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:359
+msgid "|moderate| |FA| Spatial Point Pattern Analysis"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:361
+msgid ""
+"For a simple indication of the spatial distribution of points in the "
+":guilabel:`random_samples` dataset, we can make use of SAGA's "
+":guilabel:`Spatial Point Pattern Analysis` tool via the "
+":guilabel:`Processing Toolbox` you just opened."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:366
+msgid ""
+"In the :guilabel:`Processing Toolbox`, search for this tool  "
+":guilabel:`Spatial Point Pattern Analysis`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:368
+msgid "Double-click on it to open its dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:371
+msgid "Installing SAGA"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:373
+msgid ""
+"If SAGA is not installed on your system, the plugin's dialog will inform you"
+" that the dependency is missing. If this is not the case, you can skip these"
+" steps."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:378
+msgid "On Windows"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:380
+msgid ""
+"Included in your course materials you will find the SAGA installer for "
+"Windows."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:382
+msgid ""
+"Start the program and follow its instructions to install SAGA on your "
+"Windows system. Take note of the path you are installing it under!"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:385
+msgid ""
+"Once you have installed SAGA, you'll need to configure SEXTANTE to find the "
+"path it was installed under."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:388
+msgid ""
+"Click on the menu entry :menuselection:`Analysis --> SAGA options and "
+"configuration`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:390
+msgid ""
+"In the dialog that appears, expand the :guilabel:`SAGA` item and look for "
+":guilabel:`SAGA folder`. Its value will be blank."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:392
+msgid "In this space, insert the path where you installed SAGA."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:395
+msgid "On Ubuntu"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:397
+msgid ""
+"Search for :guilabel:`SAGA GIS` in the :guilabel:`Software Center`, or enter"
+" the phrase :kbd:`sudo apt-get install saga-gis` in your terminal. (You may "
+"first need to add a SAGA repository to your sources.)"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:400
+msgid ""
+"QGIS will find SAGA automatically, although you may need to restart QGIS if "
+"it doesn't work straight away."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:404
+msgid "On Mac"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:406
+msgid "Homebrew users can install SAGA with this command:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:408
+msgid "brew install saga-core"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:410
+msgid "If you do not use Homebrew, please follow the instructions here:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:412
+msgid ""
+"http://sourceforge.net/apps/trac/saga-"
+"gis/wiki/Compiling%20SAGA%20on%20Mac%20OS%20X"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:415
+msgid "After installing"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:417
+msgid ""
+"Now that you have installed and configured SAGA, its functions will become "
+"accessible to you."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:421
+msgid "Using SAGA"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:423
+msgid "Open the SAGA dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:424
+msgid "SAGA produces three outputs, and so will require three output paths."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:425
+msgid ""
+"Save these three outputs under :kbd:`exercise_data/spatial_statistics/`, "
+"using whatever file names you find appropriate."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:431
+msgid ""
+"The output will look like this (the symbology was changed for this example):"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:436
+msgid ""
+"The red dot is the mean center; the large circle is the standard distance, "
+"which gives an indication of how closely the points are distributed around "
+"the mean center; and the rectangle is the bounding box, describing the "
+"smallest possible rectangle which will still enclose all the points."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:442
+msgid "|moderate| |FA| Minimum Distance Analysis"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:444
+msgid ""
+"Often, the output of an algorithm will not be a shapefile, but rather a "
+"table summarizing the statistical properties of a dataset. One of these is "
+"the :guilabel:`Minimum Distance Analysis` tool."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:448
+msgid ""
+"Find this tool in the :guilabel:`Processing Toolbox` as :guilabel:`Minimum"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:449
+msgid "Distance Analysis`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:451
+msgid ""
+"It does not require any other input besides specifying the vector point "
+"dataset to be analyzed."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:454
+msgid "Choose the :guilabel:`random_points` dataset."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:455
+msgid ""
+"Click :guilabel:`OK`. On completion, a DBF table will appear in the "
+":guilabel:`Layers list`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:457
+msgid ""
+"Select it, then open its attribute table. Although the figures may vary, "
+"your results will be in this format:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:464
+msgid "|IC|"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:466
+msgid ""
+"QGIS allows many possibilities for analyzing the spatial statistical "
+"properties of datasets."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:470
+msgid "|WN|"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:472
+msgid ""
+"Now that we've covered vector analysis, why not see what can be done with "
+"rasters? That's what we'll do in the next module!"
+msgstr ""
