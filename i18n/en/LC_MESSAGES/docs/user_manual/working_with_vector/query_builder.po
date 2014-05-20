@@ -22,19 +22,68 @@ msgstr ""
 msgid "Query Builder"
 msgstr ""
 
+# 3a6701363b584bb181ab054796d58b81
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:14
+msgid ""
+"The Query Builder allows you to define a subset of a table using a SQL-like "
+"WHERE clause and display the result in the main window. The query result "
+"then can be saved as a new vector layer."
+msgstr ""
+
 # afb64070e6a142fea2866aab499a0653
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:19
 msgid "Query"
 msgstr ""
 
 # 4be845827e8c4d659787754e28c9a232
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:39
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:40
 msgid "Query Builder |nix|"
 msgstr ""
 
+# aba682980b1e4dfdbee43804e0344e3c
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:42
+msgid ""
+"The **Fields list** contains all attribute columns of the attribute table to"
+" be searched. To add an attribute column to the SQL where clause field, "
+"double click its name in the Fields list. Generally you can use the various "
+"fields, values and operators to construct the query or you can just type it "
+"into the SQL box."
+msgstr ""
+
+# 3a2e3411349d46198139fd1cf5e4ea22
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:47
+msgid ""
+"The **Values list** lists the values of an attribute table. To list all "
+"possible values of an attribute, select the attribute in the Fields list and"
+" click the **[all]** button. To list the first 25 unique values of an "
+"attribute column, select the attribute column in the Fields list and click "
+"the **[Sample]** button. To add a value to the SQL where clause field, "
+"double click its name in the Values list."
+msgstr ""
+
+# 740de509f84a482bbae9d98ac4651a1a
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:54
+msgid ""
+"The **Operators section** contains all usable operators. To add an operator "
+"to the SQL where clause field, click the appropriate button. Relational "
+"operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), "
+"logical operators (``AND``, ``OR``, ...) are available."
+msgstr ""
+
 # 2f9d6b5ad019431f94237b796f81dd72
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:71
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:72
 msgid "Save selected features as new layer"
+msgstr ""
+
+# 3ac26dabd8cf4581aefed03cb3f6c7d7
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:74
+msgid ""
+"The selected features can be saved as any OGR supported vector format and "
+"also transformed into another Coordinate Reference System (CRS). Just open "
+"the right mouse menu of the layer and click on :menuselection:`Save "
+"selection as -->` to define the name of the output file, its format and CRS "
+"(see Section :ref:`label_legend`). It is also possible to specify OGR "
+"creation options within the dialog."
 msgstr ""
 
 # 0cc8d9d1b7d2479eb71cf16c87866daa
@@ -43,139 +92,34 @@ msgid "Query_Builder"
 msgstr ""
 
 # a47d1251f82e43e79bd5595ca52bbebe
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:65
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:66
 msgid "Select_using_Query"
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:5
-msgid "|updatedisclaimer|"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:14
-msgid ""
-"The Query Builder allows you to define a subset of a table using a SQL-like "
-"WHERE clause and to display the result in the main window. The query result "
-"can then be saved as a new vector layer."
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:21
-msgid ""
-"Open the **Query Builder** by opening the Layer Properties and going to the "
-":guilabel:`General` menu. Under :guilabel:`Feature subset`, click on the "
-"**[Query Builder]** button to open the :guilabel:`Query builder`. For "
-"example, if you have a ``regions`` layer with a ``TYPE_2`` field, you could "
-"select only regions that are ``borough`` in the :guilabel:`Provider specific"
-" filter expression` box of the Query Builder. Figure_attributes_2_ shows an "
-"example of the Query Builder populated with the :file:`regions.shp` layer "
-"from the |qg| sample data. The Fields, Values and Operators sections help "
-"you to construct the SQL-like query."
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:41
-msgid ""
-"The **Fields list** contains all attribute columns of the attribute table to"
-" be searched. To add an attribute column to the SQL WHERE clause field, "
-"double click its name in the Fields list. Generally, you can use the various"
-" fields, values and operators to construct the query, or you can just type "
-"it into the SQL box."
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:46
-msgid ""
-"The **Values list** lists the values of an attribute table. To list all "
-"possible values of an attribute, select the attribute in the Fields list and"
-" click the **[all]** button. To list the first 25 unique values of an "
-"attribute column, select the attribute column in the Fields list and click "
-"the **[Sample]** button. To add a value to the SQL WHERE clause field, "
-"double click its name in the Values list."
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:53
-msgid ""
-"The **Operators section** contains all usable operators. To add an operator "
-"to the SQL WHERE clause field, click the appropriate button. Relational "
-"operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), and"
-" logical operators (``AND``, ``OR``, ...) are available."
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:58
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:59
 msgid ""
 "The **[Test]** button shows a message box with the number of features "
-"satisfying the current query, which is useful in the process of query "
-"construction. The **[Clear]** button clears the text in the SQL WHERE clause"
+"satisfying the current query, which is usable in the process of query "
+"construction. The **[Clear]** button clears the text in the SQL where clause"
 " text field. The **[OK]** button closes the window and selects the features "
 "satisfying the query. The **[Cancel]** button closes the window without "
 "changing the current selection."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:73
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:21
 msgid ""
-"The selected features can be saved as any OGR-supported vector format and "
-"also transformed into another coordinate reference system (CRS). Just open "
-"the right mouse menu of the layer and click on :menuselection:`Save "
-"selection as -->` to define the name of the output file, its format and CRS "
-"(see section :ref:`label_legend`). It is also possible to specify OGR "
-"creation options within the dialog."
+"Open the **Query Builder** by opening the Layer Properties and go to the "
+":guilabel:`General` menu. Under :guilabel:`Feature subset` click on the "
+"**[Query Builder]** button to open the :guilabel:`Query builder`. For "
+"example, if you have a ``regions`` layer with a ``TYPE_2`` field you could "
+"select only regions that are ``borough`` in the :guilabel:`Provider specific"
+" filter expression` box of the Query builder. Figure_attributes_2_ shows an "
+"example of the Query builder populated with the regions.shp layer from the "
+"|qg| sample data. The Fields, Values and Operators sections help the user to"
+" construct the SQL-like query."
 msgstr ""
 
-#~ msgid ""
-#~ "The Query Builder allows you to define a subset of a table using a SQL-like "
-#~ "WHERE clause and display the result in the main window. The query result "
-#~ "then can be saved as a new vector layer."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The **Fields list** contains all attribute columns of the attribute table to"
-#~ " be searched. To add an attribute column to the SQL where clause field, "
-#~ "double click its name in the Fields list. Generally you can use the various "
-#~ "fields, values and operators to construct the query or you can just type it "
-#~ "into the SQL box."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The **Values list** lists the values of an attribute table. To list all "
-#~ "possible values of an attribute, select the attribute in the Fields list and"
-#~ " click the **[all]** button. To list the first 25 unique values of an "
-#~ "attribute column, select the attribute column in the Fields list and click "
-#~ "the **[Sample]** button. To add a value to the SQL where clause field, "
-#~ "double click its name in the Values list."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The **Operators section** contains all usable operators. To add an operator "
-#~ "to the SQL where clause field, click the appropriate button. Relational "
-#~ "operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), "
-#~ "logical operators (``AND``, ``OR``, ...) are available."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The selected features can be saved as any OGR supported vector format and "
-#~ "also transformed into another Coordinate Reference System (CRS). Just open "
-#~ "the right mouse menu of the layer and click on :menuselection:`Save "
-#~ "selection as -->` to define the name of the output file, its format and CRS "
-#~ "(see Section :ref:`label_legend`). It is also possible to specify OGR "
-#~ "creation options within the dialog."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The **[Test]** button shows a message box with the number of features "
-#~ "satisfying the current query, which is usable in the process of query "
-#~ "construction. The **[Clear]** button clears the text in the SQL where clause"
-#~ " text field. The **[OK]** button closes the window and selects the features "
-#~ "satisfying the query. The **[Cancel]** button closes the window without "
-#~ "changing the current selection."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Open the **Query Builder** by opening the Layer Properties and go to the "
-#~ ":guilabel:`General` menu. Under :guilabel:`Feature subset` click on the "
-#~ "**[Query Builder]** button to open the :guilabel:`Query builder`. For "
-#~ "example, if you have a ``regions`` layer with a ``TYPE_2`` field you could "
-#~ "select only regions that are ``borough`` in the :guilabel:`Provider specific"
-#~ " filter expression` box of the Query builder. Figure_attributes_2_ shows an "
-#~ "example of the Query builder populated with the regions.shp layer from the "
-#~ "|qg| sample data. The Fields, Values and Operators sections help the user to"
-#~ " construct the SQL-like query."
+#~ msgid "|updatedisclaimer|"
 #~ msgstr ""
 
 #~ msgid ""
