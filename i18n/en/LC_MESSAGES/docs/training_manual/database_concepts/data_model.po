@@ -1,36 +1,39 @@
 # 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation Project 2.0\n"
+"Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-25 16:51+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2014-03-25 17:01+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"Language-Team: English (http://www.transifex.com/projects/p/qgis-documentation/language/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:6
 msgid "|LS| Implementing the Data Model"
-msgstr ""
+msgstr "|LS| Implementing the Data Model"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:8
 msgid ""
 "Now that we've covered all the theory, let's create a new database. This "
 "database will be used for our exercises for the lessons that will follow "
 "afterwards."
-msgstr ""
+msgstr "Now that we've covered all the theory, let's create a new database. This database will be used for our exercises for the lessons that will follow afterwards."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:12
 msgid ""
 "**The goal for this lesson:** To install the required software and use it to"
 " implement our example database."
-msgstr ""
+msgstr "**The goal for this lesson:** To install the required software and use it to implement our example database."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:16
 msgid "Install PostgreSQL"
-msgstr ""
+msgstr "Install PostgreSQL"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:18
 msgid ""
@@ -39,51 +42,51 @@ msgid ""
 "postgresql-9-on-os-x>`_. Windows users can use the graphical installer "
 "located here: `<http://www.postgresql.org/download/windows/>`_. Please note "
 "that the documentation will assume users are running QGIS under Ubuntu."
-msgstr ""
+msgstr "Although outside the scope of this document, Mac users can install PostgreSQL using `Homebrew <http://russbrooks.com/2010/11/25/install-postgresql-9-on-os-x>`_. Windows users can use the graphical installer located here: `<http://www.postgresql.org/download/windows/>`_. Please note that the documentation will assume users are running QGIS under Ubuntu."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:26
 msgid "Under Ubuntu::"
-msgstr ""
+msgstr "Under Ubuntu::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:30
 msgid "You should get a message like this::"
-msgstr ""
+msgstr "You should get a message like this::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:47
 msgid ""
 "Press :kbd:`Y` and :kbd:`Enter` and wait for the download and installation "
 "to finish."
-msgstr ""
+msgstr "Press :kbd:`Y` and :kbd:`Enter` and wait for the download and installation to finish."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:51
 msgid "Help"
-msgstr ""
+msgstr "Help"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:53
 msgid ""
 "PostgreSQL has very good `online "
 "<http://www.postgresql.org/docs/9.1/static/index.html>`_ documentation."
-msgstr ""
+msgstr "PostgreSQL has very good `online <http://www.postgresql.org/docs/9.1/static/index.html>`_ documentation."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:57
 msgid "Create a database user"
-msgstr ""
+msgstr "Create a database user"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:59
 msgid "Under Ubuntu:"
-msgstr ""
+msgstr "Under Ubuntu:"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:61
 msgid ""
 "After the installation is complete, run this command to become the postgres "
 "user and then create a new database user::"
-msgstr ""
+msgstr "After the installation is complete, run this command to become the postgres user and then create a new database user::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:66
 msgid ""
 "Type in your normal log in password when prompted (you need to have sudo "
 "rights)."
-msgstr ""
+msgstr "Type in your normal log in password when prompted (you need to have sudo rights)."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:68
 msgid ""
@@ -91,79 +94,79 @@ msgid ""
 " the user name matches your unix login name: it will make your life much "
 "easier, as postgres will automatically authenticate you when you are logged "
 "in as that user::"
-msgstr ""
+msgstr "Now, at the postgres user's bash prompt, create the database user. Make sure the user name matches your unix login name: it will make your life much easier, as postgres will automatically authenticate you when you are logged in as that user::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:75
 msgid ""
 "Enter a password when prompted. You should use a different password to your "
 "login password."
-msgstr ""
+msgstr "Enter a password when prompted. You should use a different password to your login password."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:78
 msgid "What do those options mean?"
-msgstr ""
+msgstr "What do those options mean?"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:90
 msgid ""
 "Now you should should leave the postgres user's bash shell environment by "
 "typing::"
-msgstr ""
+msgstr "Now you should should leave the postgres user's bash shell environment by typing::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:96
 msgid "Verify the new account"
-msgstr ""
+msgstr "Verify the new account"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:102
 msgid "Should return something like this::"
-msgstr ""
+msgstr "Should return something like this::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:112
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:136
 msgid "Type :kbd:`q` to exit."
-msgstr ""
+msgstr "Type :kbd:`q` to exit."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:115
 msgid "Create a database"
-msgstr ""
+msgstr "Create a database"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:117
 msgid ""
 "The :kbd:`createdb` command is used to create a new database. It should be "
 "run from the bash shell prompt::"
-msgstr ""
+msgstr "The :kbd:`createdb` command is used to create a new database. It should be run from the bash shell prompt::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:122
 msgid ""
 "You can verify the existence of your new database by using this command::"
-msgstr ""
+msgstr "You can verify the existence of your new database by using this command::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:126
 msgid "Which should return something like this::"
-msgstr ""
+msgstr "Which should return something like this::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:139
 msgid "Starting a database shell session"
-msgstr ""
+msgstr "Starting a database shell session"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:141
 msgid "You can connect to your database easily like this::"
-msgstr ""
+msgstr "You can connect to your database easily like this::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:145
 msgid "To exit out of the psql database shell, type::"
-msgstr ""
+msgstr "To exit out of the psql database shell, type::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:149
 msgid "For help in using the shell, type::"
-msgstr ""
+msgstr "For help in using the shell, type::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:153
 msgid "For help in using sql commands, type::"
-msgstr ""
+msgstr "For help in using sql commands, type::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:157
 msgid "To get help on a specific command, type (for example)::"
-msgstr ""
+msgstr "To get help on a specific command, type (for example)::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:161
 msgid ""
@@ -171,21 +174,21 @@ msgid ""
 "</static/training_manual/postgres/psql_cheatsheet.pdf>`_ - available online "
 "`here "
 "<http://www.postgresonline.com/special_feature.php?sf_name=postgresql83_psql_cheatsheet&outputformat=html>`_."
-msgstr ""
+msgstr "See also the `Psql cheat sheet </static/training_manual/postgres/psql_cheatsheet.pdf>`_ - available online `here <http://www.postgresonline.com/special_feature.php?sf_name=postgresql83_psql_cheatsheet&outputformat=html>`_."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:166
 msgid "Make Tables in SQL"
-msgstr ""
+msgstr "Make Tables in SQL"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:168
 msgid ""
 "Let's start making some tables! We will use our ER Diagram as a guide. "
 "First, connect to the address db::"
-msgstr ""
+msgstr "Let's start making some tables! We will use our ER Diagram as a guide. First, connect to the address db::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:173
 msgid "Then create a :kbd:`streets` table::"
-msgstr ""
+msgstr "Then create a :kbd:`streets` table::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:177
 msgid ""
@@ -193,67 +196,67 @@ msgid ""
 "PostgreSQL to start an integer sequence (auto-number) to populate the "
 ":kbd:`id` automatically for every new record. :kbd:`varchar(50)` tells "
 "PostgreSQL to create a character field of 50 characters in length."
-msgstr ""
+msgstr ":kbd:`serial` and :kbd:`varchar` are **data types**. :kbd:`serial` tells PostgreSQL to start an integer sequence (auto-number) to populate the :kbd:`id` automatically for every new record. :kbd:`varchar(50)` tells PostgreSQL to create a character field of 50 characters in length."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:182
 msgid ""
 "You will notice that the command ends with a :kbd:`;` - all SQL commands "
 "should be terminated this way. When you press enter, psql will report "
 "something like this::"
-msgstr ""
+msgstr "You will notice that the command ends with a :kbd:`;` - all SQL commands should be terminated this way. When you press enter, psql will report something like this::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:192
 msgid ""
 "That means your table was created successfully, with a primary key "
 ":kbd:`streets_pkey` using :kbd:`streets.id`."
-msgstr ""
+msgstr "That means your table was created successfully, with a primary key :kbd:`streets_pkey` using :kbd:`streets.id`."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:195
 msgid ""
 "Note: If you hit return without entering a :kbd:`;`, then you will get a "
 "prompt like this: :kbd:`address-#`. This is because PG is expecting you to "
 "enter more. Enter :kbd:`;` to run your command."
-msgstr ""
+msgstr "Note: If you hit return without entering a :kbd:`;`, then you will get a prompt like this: :kbd:`address-#`. This is because PG is expecting you to enter more. Enter :kbd:`;` to run your command."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:199
 msgid "To view your table schema, you can do this::"
-msgstr ""
+msgstr "To view your table schema, you can do this::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:203
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:218
 msgid "Which should show something like this::"
-msgstr ""
+msgstr "Which should show something like this::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:214
 msgid "To view your table contents, you can do this::"
-msgstr ""
+msgstr "To view your table contents, you can do this::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:224
 msgid "As you can see, our table is currently empty."
-msgstr ""
+msgstr "As you can see, our table is currently empty."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:227
 msgid "|TY| |moderate|"
-msgstr ""
+msgstr "|TY| |moderate|"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:229
 msgid "Use the approach shown above to make a table called people:"
-msgstr ""
+msgstr "Use the approach shown above to make a table called people:"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:231
 msgid ""
 "Add fields such as phone number, home address, name, etc. (these aren't all "
 "valid names: change them to make them valid). Make sure you give the table "
 "an ID column with the same data-types as above."
-msgstr ""
+msgstr "Add fields such as phone number, home address, name, etc. (these aren't all valid names: change them to make them valid). Make sure you give the table an ID column with the same data-types as above."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:235
 msgid ":ref:`Check your results <database-concepts-4>`"
-msgstr ""
+msgstr ":ref:`Check your results <database-concepts-4>`"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:240
 msgid "Create Keys in SQL"
-msgstr ""
+msgstr "Create Keys in SQL"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:242
 msgid ""
@@ -261,85 +264,85 @@ msgid ""
 "people and streets have a logical relationship. To express this "
 "relationship, we have to define a foreign key that points to the primary key"
 " of the streets table."
-msgstr ""
+msgstr "The problem with our solution above is that the database doesn't know that people and streets have a logical relationship. To express this relationship, we have to define a foreign key that points to the primary key of the streets table."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:250
 msgid "There are two ways to do this:"
-msgstr ""
+msgstr "There are two ways to do this:"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:252
 msgid "Add the key after the table has been created"
-msgstr ""
+msgstr "Add the key after the table has been created"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:253
 msgid "Define the key at time of table creation"
-msgstr ""
+msgstr "Define the key at time of table creation"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:255
 msgid "Our table has already been created, so let's do it the first way::"
-msgstr ""
+msgstr "Our table has already been created, so let's do it the first way::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:261
 msgid ""
 "That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
 "match a valid street :kbd:`id` from the :kbd:`streets` table."
-msgstr ""
+msgstr "That tells the :kbd:`people` table that its :kbd:`street_id` fields must match a valid street :kbd:`id` from the :kbd:`streets` table."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:264
 msgid ""
 "The more usual way to create a constraint is to do it when you create the "
 "table::"
-msgstr ""
+msgstr "The more usual way to create a constraint is to do it when you create the table::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:274
 msgid "After adding the constraint, our table schema looks like this now::"
-msgstr ""
+msgstr "After adding the constraint, our table schema looks like this now::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:292
 msgid "Create Indexes in SQL"
-msgstr ""
+msgstr "Create Indexes in SQL"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:294
 msgid ""
 "We want lightning fast searches on peoples names. To provide for this, we "
 "can create an index on the name column of our people table::"
-msgstr ""
+msgstr "We want lightning fast searches on peoples names. To provide for this, we can create an index on the name column of our people table::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:301
 msgid "Which results in::"
-msgstr ""
+msgstr "Which results in::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:320
 msgid "Dropping Tables in SQL"
-msgstr ""
+msgstr "Dropping Tables in SQL"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:322
 msgid ""
 "If you want to get rid of a table you can use the :kbd:`drop` command::"
-msgstr ""
+msgstr "If you want to get rid of a table you can use the :kbd:`drop` command::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:327
 msgid ""
 "In our current example, the above command would not work. Why not? :ref:`See"
 " why <database-concepts-5>`"
-msgstr ""
+msgstr "In our current example, the above command would not work. Why not? :ref:`See why <database-concepts-5>`"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:332
 msgid ""
 "If you used the same :kbd:`drop table` command on the `people` table, it "
 "would be successful::"
-msgstr ""
+msgstr "If you used the same :kbd:`drop table` command on the `people` table, it would be successful::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:338
 msgid ""
 "If you actually did enter that command and dropped the :kbd:`people` table, "
 "now would be a good time to rebuild it, as you will need it in the next "
 "exercises."
-msgstr ""
+msgstr "If you actually did enter that command and dropped the :kbd:`people` table, now would be a good time to rebuild it, as you will need it in the next exercises."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:343
 msgid "A word on pgAdmin III"
-msgstr ""
+msgstr "A word on pgAdmin III"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:345
 msgid ""
@@ -348,30 +351,30 @@ msgid ""
 "easier ways to do a lot of what we are showing you. Install pgAdminIII and "
 "you can create, drop, alter etc tables using 'point and click' operations in"
 " a GUI."
-msgstr ""
+msgstr "We are showing you the SQL commands from the `psql` prompt because it's a very useful way to learn about databases. However, there are quicker and easier ways to do a lot of what we are showing you. Install pgAdminIII and you can create, drop, alter etc tables using 'point and click' operations in a GUI."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:350
 msgid "Under Ubuntu, you can install it like this::"
-msgstr ""
+msgstr "Under Ubuntu, you can install it like this::"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:354
 msgid "pgAdmin III will be covered in more detail in another module."
-msgstr ""
+msgstr "pgAdmin III will be covered in more detail in another module."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:357
 msgid "|IC|"
-msgstr ""
+msgstr "|IC|"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:359
 msgid ""
 "You have now seen how to create a brand new database, starting completely "
 "from scratch."
-msgstr ""
+msgstr "You have now seen how to create a brand new database, starting completely from scratch."
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:363
 msgid "|WN|"
-msgstr ""
+msgstr "|WN|"
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:365
 msgid "Next you'll learn how to use the DBMS to add new data."
-msgstr ""
+msgstr "Next you'll learn how to use the DBMS to add new data."

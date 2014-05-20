@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-11 12:27+0000\n"
+"PO-Revision-Date: 2014-05-18 17:00+0000\n"
 "Last-Translator: João Gaspar <joao.f.r.gaspar@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgid ""
 "some other command-line applications that provide spatial data analysis "
 "functionalities. Algorithms relying on an external application are managed "
 "by their own algorithm provider."
-msgstr ""
+msgstr "A infraestrutura do processamento pode ser estendida usando aplicações adicionais. Actualmente os softwares suportados são, o SAGA, GRASS, OTB (Caixa de Ferramentas Orfeo) e R, juntamente com outras aplicações da linha de comandos que fornecem funcionalidades de análise de dados espaciais. Os algoritmos que dependem de uma aplicação externa são geridos pelo seu próprio fornecedor de algoritmo."
 
 # 8fa196113ffb41c9a8e5d84676267bcd
 #: ../../source/docs/user_manual/processing/3rdParty.rst:18
@@ -42,7 +42,7 @@ msgid ""
 "the system, you will be able to execute external algorithms from any "
 "component like the toolbox or the graphical modeler, just like you do with "
 "any other geoalgorithm."
-msgstr ""
+msgstr "Este capítulo irá mostrar como configurar a infraestrutura do processamento para incluir estas aplicações adicionais, e irá explicar algumas características particulares baseado nos algoritmos. Uma vez feita a correcta configuração do sistema, terá possibilidade de executar algoritmos externos a partir de qualquer componente como a caixa de ferramentas ou o modelador gráfico, assim como faz para outro geoalgoritmo qualquer."
 
 # c04c7d7f360549f59ab0a18c3ebbb7d1
 #: ../../source/docs/user_manual/processing/3rdParty.rst:39
@@ -94,7 +94,7 @@ msgid ""
 "In case you are running linux, SAGA binaries are not included with SEXTANTE,"
 " so you have to download and install the software yourself. Please check the"
 " SAGA website for more information. SAGA 2.1 is needed."
-msgstr ""
+msgstr "No caso de estar a correr o linux, os binários SAGA não estão incluídos no SEXTANTE, portanto precisa de transferir e instalar o software. Por favor verifique o sítio na internet do SAGA para mais informação. É necessário o SAGA 2.1."
 
 # 748125663c214819a8cdb0834a8005b2
 #: ../../source/docs/user_manual/processing/3rdParty.rst:126
@@ -104,7 +104,7 @@ msgid ""
 " folder is added to the PATH environment variable. Just open a console and "
 "type ``saga_cmd`` to check that the system can find where SAGA binaries are "
 "located."
-msgstr ""
+msgstr "Neste caso não necessita de configurá-lo, e não irá ver estas pastas. Em vez disso, tem de de garantir que o SAGA está instalado correctamente e a sua pasta adicionada à variável de ambiente PATH. Apenas abra a consola e introduza ``saga_cmd`` para verificar se o sistema encontra onde os binários SAGA estão localizados."
 
 # fcc4c015a4264fef99aa60ff19f715a6
 #: ../../source/docs/user_manual/processing/3rdParty.rst:133
@@ -117,7 +117,7 @@ msgid ""
 "The definition of that common grid system is controlled by the user, and you"
 " will find several parameters in the SAGA group of the setting window to do "
 "so. There are two ways of setting the target grid system:"
-msgstr ""
+msgstr "A definição de o sistema de grelha comum é controlada pelo utilizador, e irá encontrar vários parâmetros no grupo SAGA da janela de configuração  para o fazer. Existe duas formas de configurar o sistema de grelha que quer:"
 
 # cda71f4a59454d60874c5a792b269b68
 #: ../../source/docs/user_manual/processing/3rdParty.rst:147
@@ -159,7 +159,7 @@ msgid ""
 "All the other settings will be ignored and the minimum extent that covers "
 "all the input layers will be used. The cellsize of the target layer is the "
 "maximum of all cellsizes of the input layers."
-msgstr ""
+msgstr "Configurando automaticamente a partir das camadas de entrada. Para seleccionar esta opção, verifique a opção :guilabel:`Usar sistema de grelha de cobertura min para a reamostragem`. Todas as outras configurações irão ser ignoradas e a extensão mínima que cobre todas as camadas de entrada serão usadas. O tamanho de célula da camada de destino é o máximo de tamanho de célula de todas as camadas de entrada. "
 
 # 0c3cd72f27e34d6ca6d700b164e7faa1
 #: ../../source/docs/user_manual/processing/3rdParty.rst:164
@@ -167,7 +167,7 @@ msgid ""
 "For algorithms that do not use multiple raster layers, or for those that do "
 "not need a unique input grid system, no resampling is performed before "
 "calling SAGA, and those parameters are not used."
-msgstr ""
+msgstr "Para algoritmos que não usam camadas raster múltiplas, ou para aquelas que não necessitam de um único sistema de grelha de entrada, não será feito uma reamostragem antes de chamar o SAGA, e esses parãmetros não serão usados."
 
 # 02ca9cb55caf42e29f5e78074762159a
 #: ../../source/docs/user_manual/processing/3rdParty.rst:169
@@ -187,12 +187,12 @@ msgid ""
 " vertical cellsizes, you might get unexcepted results. In this case, a "
 "warning will be added to the processing log, indicating that an input layer "
 "might not be suitable to be processed by SAGA."
-msgstr ""
+msgstr "SAGA assume que as camadas raster têm o mesmo tamanho de célula no eixo X e Y. Se estiver a trabalhar com uma camada com diferentes valores para o tamanho de célula horizontal e vertical, deverá obter resultados inesperados. Nesse caso, um aviso será adicionado ao registo do processamento, indicando que a camada de entrada não se adapta de forma a ser processado pelo SAGA. "
 
 # 8c6696f90fa448e8a5de482837c99b71
 #: ../../source/docs/user_manual/processing/3rdParty.rst:187
 msgid "Logging"
-msgstr ""
+msgstr "Registando"
 
 # 8e22b7548d9c4109877c7d3f585d0889
 #: ../../source/docs/user_manual/processing/3rdParty.rst:202
@@ -200,7 +200,7 @@ msgid ""
 "Most other providers that use an external application and call it through "
 "the command-line have similar options, so you will find them as well in "
 "other places in the processing settings list."
-msgstr ""
+msgstr "A maioria dos outros fornecedores que usam uma aplicação externa e chamam a partir da linha de comandos têm opções semelhantes, portanto irá encontrar noutros sítios da lista de configurações do processamento."
 
 # 08982522f292447f99ce70bf5d9d3ba2
 #: ../../source/docs/user_manual/processing/3rdParty.rst:207
@@ -213,7 +213,7 @@ msgid ""
 "Once again, this is different in Linux, and you just have to make sure that "
 "the R folder is included in the PATH environment variable. If you can start "
 "R just typing ``R`` in a console, then you are ready to go."
-msgstr ""
+msgstr "Uma vez mais, isto é diferente no Linux, e só tem de ter certeza que a pasta do R está incluída na variável de ambiente PATH. Se conseguir iniciar o R, apenas introduza ``R`` na consola, e estará pronto a começar."
 
 # 59a6fffc52174570a97c541e3f021fc6
 #: ../../source/docs/user_manual/processing/3rdParty.rst:230
@@ -223,7 +223,7 @@ msgid ""
 "should be stored in the R-scripts folder. You can set this folder in the "
 ":guilabel:`R` settings group (available from the processing settings "
 "dialog), just like you do with the folder for regular processing scripts."
-msgstr ""
+msgstr "Os ficheiros script têm a extensão :file:`.rsx` e é fácil criá-los se tiver o conhecimento básico da sintaxe do R e do código R. Eles devem ficar armazenados na pasta R-scripts. Pode definir esta pasta no grupo de configurações :guilabel:`R`  (disponível a partir do diálogo de configurações do processamento), como faz com a pasta para scripts normais do processamento,"
 
 # fb04a7dc3b744690a5d9c179a990139b
 #: ../../source/docs/user_manual/processing/3rdParty.rst:275
@@ -231,21 +231,21 @@ msgid ""
 "Tables are opened using the ``read.csv()`` command. If a table entered by "
 "the user is not in CSV format, it will be converted prior to importing it in"
 " R."
-msgstr ""
+msgstr "As tabelas são abertas usando o comando ``read.csv()``. Se a tabela introduzida pelo utilizador não for do formato CSV, este será convertido antes de ser importado para o R."
 
 # cc3c6acfa92c4ed587bbbaa8c24e8dfb
 #: ../../source/docs/user_manual/processing/3rdParty.rst:278
 msgid ""
 "Additionally, raster files can be read using the ``readGDAL()`` command "
 "instead of ``brick()``, by using the ``##usereadgdal``."
-msgstr ""
+msgstr "Adicionalmente, os ficheiros raster pode ser lidos usando o comando ``readGDAL()`` em vez de ``brick()``,  usando o ``##usereadgdal``."
 
 # eb8e5c1439e8493aae30112e7027d4d7
 #: ../../source/docs/user_manual/processing/3rdParty.rst:286
 msgid ""
 "With the above information, we can now understand the first line of our "
 "first example script (the first line not starting with a Python comment)."
-msgstr ""
+msgstr "Com a informação em cima, podemos agora perceber a primeira linha do nosso primeiro script exemplo (a primeira linha que não começa com o comentário Python)."
 
 # 2cefecc674d946fd8cb9441069447938
 #: ../../source/docs/user_manual/processing/3rdParty.rst:293
@@ -254,7 +254,7 @@ msgid ""
 "object, so it can be used to call the ``spsample`` method, just like the "
 "``numpoints`` one, which indicates the number of points to add to the "
 "created sample grid."
-msgstr ""
+msgstr "A variável ``polygon`` já contém o objecto ``SpatialPolygonsDataFrame``, portanto pode ser usado para chamar o método ``spsample``, tal como o ``numpoints``, que indica o número de pontos a ser adicionados à grelha de amostra criada."
 
 # 04eaea12cc5446078133184669d842e0
 #: ../../source/docs/user_manual/processing/3rdParty.rst:297
@@ -282,7 +282,7 @@ msgid ""
 "If you have used the ``#passfilename`` option, outputs are generated using "
 "the ``raster`` package (with ``writeRaster()``), even though it is not used "
 "for the inputs."
-msgstr ""
+msgstr "Se usou a opção ``#passfilename``, os ficheiros de sáida são gerados usando o pacote ``raster`` (com ``writeRaster()``), mesmo que não seja usado nos ficheiros de entrada."
 
 # ee21c849980d442a81d2257c277a868f
 #: ../../source/docs/user_manual/processing/3rdParty.rst:316
@@ -331,7 +331,7 @@ msgid ""
 "Windows. Additionaly, a shell interpreter (usually :file:`msys.exe`, which "
 "can be found in most GRASS for Windows distributions) has to be defined and "
 "its path set up as well."
-msgstr ""
+msgstr "Configurar o GRASS não é muito diferente de configurar o SAGA. Primeiro, o caminho para a pasta GRASS tem de ser definida, mas apenas se estiver a correr o Windows. Adicionalmente, um interpretador shell, (normalmente o :file:`msys.exe`, que pode ser encontrado na maioria das distribuições do GRASS para o Windows) tem de ser definido e o seu caminho configurado."
 
 # 8b1e60e6d1df4a0d86f1f3ffc9c2880e
 #: ../../source/docs/user_manual/processing/3rdParty.rst:380
@@ -384,7 +384,7 @@ msgstr ""
 msgid ""
 "Then configure the path to the folder where OTB command--line tools and "
 "libraries are installed:"
-msgstr ""
+msgstr "De seguida configure o caminho para a pasta onde estão as ferramentas da linha de comandos OTB e as bibliotecas estão instaladas:"
 
 # 422919cfdc394c35b9e602d1e4f72ef4
 #: ../../source/docs/user_manual/processing/3rdParty.rst:422
@@ -392,7 +392,7 @@ msgid ""
 "|nix| usually :guilabel:`OTB applications folder` point to "
 "``/usr/lib/otb/applications`` and :guilabel:`OTB command line tools folder` "
 "is ``/usr/bin``"
-msgstr ""
+msgstr "|nix| normalmente :guilabel:`pasta de aplicações OTB` encaminha para ``/usr/lib/otb/applications`` e :guilabel:`pasta das ferramentas da linha de comandos OTB ` é ``/usr/bin``"
 
 # 6f6f0448c3ca4c3e9faf844038e2274b
 #: ../../source/docs/user_manual/processing/3rdParty.rst:424
@@ -428,7 +428,7 @@ msgid ""
 "installation instructions and precompiled binaries for 32bit and 64bit "
 "systems. **IMPORTANT**: you need TauDEM 5.0.6 executables, version 5.2 is "
 "currently not supported."
-msgstr ""
+msgstr "Por favor visite o `sítio na internet do TauDEM` <http://hydrology.usu.edu/taudem/taudem5.0/downloads.html>`_ para as instruções de instalação e os binários dos sistemas para 32bit e 64bit precompilados. **IMPORTANTE**: necessita os executáveis do TauDEM 5.0.6, a versão 5.2 não é suportada actualmente."
 
 # 94a26bc8dca54cdc85bf7c5c2c5d8795
 #: ../../source/docs/user_manual/processing/3rdParty.rst:444
@@ -442,7 +442,7 @@ msgid ""
 "TauDEM by yourself. As TauDEM uses MPICH2, first install it using your "
 "favorite package manager. Also TauDEM works fine with OpenMPI, so you can "
 "use it instead of MPICH2."
-msgstr ""
+msgstr "Não existe pacotes para a maioria das distribuições do Linux, portanto deverá compilar o TauDEM sozinho. Como o TauDEM usa MPICH2, primeiro instale-o usando o seu gestor de pacotes favorito, O TauDEM também trabalha bem com o OpenMPI, portanto pode usá-lo em vez do MPICH2."
 
 # b472785d97ec491c91fa7e0a9005edd8
 #: ../../source/docs/user_manual/processing/3rdParty.rst:450
@@ -450,7 +450,7 @@ msgid ""
 "Download TauDEM 5.0.6 `source code "
 "<http://hydrology.usu.edu/taudem/taudem5.0/TauDEM5PCsrc_506.zip>`_ and "
 "extract files in some folder."
-msgstr ""
+msgstr "Transfira o `código fonte do TauDEM 5.0.6 `<http://hydrology.usu.edu/taudem/taudem5.0/TauDEM5PCsrc_506.zip>`_ e extrai-a os ficheiros numa pasta."
 
 # 58d7a8db0cfa4d38b1432647f9ef8064
 #: ../../source/docs/user_manual/processing/3rdParty.rst:453
@@ -594,7 +594,7 @@ msgid ""
 "In case of running Windows, the standalone installer or the OSGeo4W "
 "installer, both install SAGA along with |qg|, and the path is automatically "
 "configured, so there is no need to do anything else."
-msgstr ""
+msgstr "No caso de estar a correr no Windows, o instaladores standalone ou o instalador OSGeo4W, ambos instalam o SAGA juntamente com o |qg|, e o caminho é automaticamente configurado, portanto não é necessário fazer mais nada."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:114
 msgid ""
@@ -622,7 +622,7 @@ msgstr ""
 msgid ""
 "Notice that |qg| will resample input layers to that extent, even if they do "
 "not overlap with it."
-msgstr ""
+msgstr "Tenha em atenção que o |qg| irá reamostrar as camadas de entrada para essa extensão, mesmo que não se sobreponham."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:171
 msgid ""
@@ -750,7 +750,7 @@ msgid ""
 "The output ot the last line is printed, but the output of the first is not "
 "(and neither are the outputs from other command lines added automatically by"
 " |qg|)."
-msgstr ""
+msgstr "O ficheiro de saída da última linha é imprimido, mas o ficheiro de saída da primeiro não (e nem são as saídas de outras linhas de comando adicionadas automaticamente pelo |qg|)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:342
 msgid ""

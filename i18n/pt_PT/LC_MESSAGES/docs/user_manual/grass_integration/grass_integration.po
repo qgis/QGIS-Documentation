@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-11 11:24+0000\n"
+"PO-Revision-Date: 2014-05-19 22:52+0000\n"
 "Last-Translator: João Gaspar <joao.f.r.gaspar@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -188,7 +188,7 @@ msgid ""
 "will be overlayed on top of the :file:`gtopo30` map. You can now adapt the "
 "layer properties as described in chapter :ref:`vector_properties_dialog`, "
 "e.g. change opacity, fill and outline color."
-msgstr ""
+msgstr "Clique em |grass_add_vector| :sup:`Adicionar camada vectorial GRASS`, escolha o nome do mapa :file:`alaska` e clique **[OK]**. A camada vectorial dos limites do Alaska serão sobrepostos no topo do mapa :file:`gtopo30`. Pode agora adaptar as propriedades da camada como está descrito no :ref:`vector_properties_dialog`, ex.: mudar a opacidade, preenchimento, e a cor do limite."
 
 # 47aa5f57ed634b5bb0760db76c448c2e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:83
@@ -452,7 +452,7 @@ msgid ""
 "Therefore we use a landcover raster map :file:`landcover.img` and a vector "
 "GML file :file:`lakes.gml` from the QGIS 'Alaska' dataset "
 ":ref:`label_sampledata`."
-msgstr ""
+msgstr "Esta Secção fornece um exemplo de como importar dados raster e vectorial para a :file:`LOCALIZAÇÃO`  'alaska' do GRASS fornecida pelo conjunto de dados |qg| 'Alaska'. Portanto nós usamos o mapa raster da ocupação do solo :file:`landcover.img` e o ficheiro vectorial GML :file:`lakes.gml`  a partir do conjunto de dados |qg| 'Alaska' :ref:`label_sampledata`."
 
 # d452ad5637e8453a9722fff055e0d15f
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:241
@@ -483,7 +483,7 @@ msgid ""
 ":file:`r.in.gdal` in the :guilabel:`Modules Tree` tab. This GRASS module "
 "allows to import GDAL supported raster files into a GRASS :file:`LOCATION`. "
 "The module dialog for :file:`r.in.gdal` appears."
-msgstr ""
+msgstr "Para importar o mapa raster :file:`landcover.img`, clique no módulo :file:`r.in.gdal` no separador :guilabel:`Árvore de Módulos`. Este módulo GRASS permite que importa raster suportado pelo GDAL para a  :file:`LOCALIZAÇÃO` GRASS. Aparecerá o diálogo do módulo :file:`r.in.gdal`."
 
 # 0955fe103c1142099d2c36d299e5d731
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:252
@@ -498,7 +498,7 @@ msgid ""
 "As raster output name define :file:`landcover_grass` and click **[Run]**. In"
 " the :guilabel:`Output` tab you see the currently running GRASS command "
 "``r.in.gdal -o input=/path/to/landcover.img output=landcover_grass``."
-msgstr ""
+msgstr "Para o ficheiro de saída raster defina o nome :file:`landcover_grass` e clique **[Executar]**. No separador :guilabel:`Saída` vê o comando actual do GRASS a ser executado ``r.in.gdal -o input=/path/to/landcover.img output=landcover_grass``."
 
 # c7659e2294564ad49aa93c7ee909353c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:258
@@ -515,7 +515,7 @@ msgid ""
 ":file:`v.in.ogr` in the :guilabel:`Modules Tree` tab. This GRASS module "
 "allows to import OGR supported vector files into a GRASS :file:`LOCATION`. "
 "The module dialog for :file:`v.in.ogr` appears."
-msgstr ""
+msgstr "Para importar um ficheiro vectorial GML :file:`lakes.gml`,  clique no módulo :file:`v.in.ogr` no separador :guilabel:`Árvore de Módulos`. Este módulo GRASS permite importar ficheiros vectoriais suportados OGR para a :file:`LOCALIZAÇÃO` GRASS. Aparecerá o diálogo do módulo :file:`v.in.ogr`."
 
 # 3691593c8b6141739562ce54003fe3b4
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:265
@@ -566,7 +566,7 @@ msgid ""
 "once, and it is shared by both areas. Boundaries must be connected and "
 "closed without gaps. An area is identified (and labeled) by the **centroid**"
 " of the area."
-msgstr ""
+msgstr "Isto significa que as áreas não estão representadas como polígonos fechados, mas por um ou mais limites. Um limite entre duas áreas adjacentes é digitalizada apenas uma vez, e é partilhada por ambas as áreas. Os limites devem estar ligados e fechados sem buracos. Uma área é identificada (e rotulada) pelo **centróide** da área."
 
 # b816cf75a8ce447f91a0dc992dcdda36
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:289
@@ -600,7 +600,7 @@ msgid ""
 "dataset, e.g. if the geometry is forest or lake. For now, it can be only a "
 "number, in the future GRASS will also support names as fields in the user "
 "interface."
-msgstr ""
+msgstr "A 'camada' do elemento é definido pela 'camada' dentro do GRASS,  A 'Camada' é o número que define se existe mais de uma camada dentro do conjunto de dados, ex.: se a geometria é floresta ou lago. Por agora, pode ser apenas um número, no futuro GRASS irá também suportar nomes como campos na interface de utilizador."
 
 # 3996b664c4fa4c8792ca11c4a1ca2a2c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:309
@@ -608,7 +608,7 @@ msgid ""
 "Attributes can be stored inside the GRASS :file:`LOCATION` as DBase or "
 "SQLITE3 or in external database tables, for example PostgreSQL, MySQL, "
 "Oracle, etc."
-msgstr ""
+msgstr "Os atributos podem ser armazenados dento da :file:`LOCALIZAÇÃO` GRASS como DBase ou SQLITE3 ou numa tabela externa de base de dados, por exemplo PostgreSQL, MySQL, Oracle, etc."
 
 # 040c5db379d44e8e83fc92af1a6fadd4
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:315
@@ -873,7 +873,7 @@ msgstr "Apagar elemento"
 msgid ""
 "Delete existing boundary, line, point or centroid (confirm selected element "
 "by another click)"
-msgstr ""
+msgstr "Apagar um limite existente, linha, ponto ou centróide (confirme o elemento seleccionado com outro clique)"
 
 # 956677cf189449fea852ef527e6e5044
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:424
@@ -939,7 +939,7 @@ msgstr "**Modo**: que valor de categoria deverá ser aplicado aos novos elemento
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:454
 msgid ""
 "Next not used - apply next not yet used category value to geometry element."
-msgstr ""
+msgstr "Seguinte não usado - aplique seguinte não usando o valor de categoria para o elemento de geometria."
 
 # c12a69fd33be4b13a89137eeea8a98a6
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:455
@@ -1019,7 +1019,7 @@ msgstr ""
 # a80bee22c0da4f0999ddfe6312952b1c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:516
 msgid "GRASS Digitizing Symbolog Tab"
-msgstr ""
+msgstr "Separador de Simbologia de Digitalização GASS"
 
 # ea646ba60fd74e8dae1193e89d2a041b
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:519
@@ -1038,7 +1038,7 @@ msgstr ""
 # 97efd301a8a14d2caa1f2a7e8f415c11
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:539
 msgid "GRASS Digitizing Table Tab"
-msgstr ""
+msgstr "Separador de Digitalização da Tabela"
 
 # b7b42b5a378a4c3c84d834eb1847948f
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:541
@@ -1103,7 +1103,7 @@ msgstr ""
 # cca0873a48934a6b9c7bea529b4f7698
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:587
 msgid "The GRASS toolbox"
-msgstr ""
+msgstr "A caixa de ferramentas GRASS"
 
 # 63bf5c234cba4141918e660de5d7f9c3
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:591
@@ -1159,7 +1159,7 @@ msgstr ""
 msgid ""
 "It is also possible to customize the GRASS Toolbox content. This procedure "
 "is described in Section :ref:`sec_toolbox-customizing`."
-msgstr ""
+msgstr "É também possível personalizar o conteúdo da Caixa de Ferramentas GRASS. Este procedimento é descrito na Secção :ref:`sec_toolbox-customizing`."
 
 # 45624e8764624b86bc27bf000d9e0ab5
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:631
@@ -1477,20 +1477,20 @@ msgstr "De seguida clique em **r.shaded.relief** para abrir o módulo."
 # b0458c495192419e901fe19eecce40cb
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:823
 msgid "Change the :guilabel:`azimuth angle` |selectnumber| 270 to 315."
-msgstr ""
+msgstr "Altere o :guilabel:`ângulo do azimute` |selectnumber| 270 para 315."
 
 # f0ef5c0c6d3345bd8b4e3ba744bbe7db
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:824
 msgid ""
 "Enter ``gtopo30_shade`` for the new hillshade raster, and click **[Run**]."
-msgstr ""
+msgstr "Introduza ``gtopo30_shade``  para o novo raster de ensombramento, e clique **[Executar]**."
 
 # dd4f18bd08b142f99bd6468b2c722e58
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:825
 msgid ""
 "When the process completes, add the hillshade raster to the map. You should "
 "see it displayed in grayscale."
-msgstr ""
+msgstr "Quando o processo concluir, adicione o raster de ensombramento ao mapa, Deverá vê-lo numa escala de cinzentos."
 
 # 28d36c1ca50e4ba4bb42cc30af640330
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:827
@@ -1576,7 +1576,7 @@ msgstr ""
 # bb9c83621fdf49499c46f5e9c355bc71
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:889
 msgid "Raster statistics in a vector map"
-msgstr ""
+msgstr "Estatísticas Raster num mapa vectorial"
 
 # eeec514272244cb2b684e77818e76d24
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:891
@@ -1605,14 +1605,14 @@ msgstr ""
 msgid ""
 "From the toolbox choose :menuselection:`Vector --> Manage features`, and "
 "open the module **v.centroids**."
-msgstr ""
+msgstr "A partir da caixa de ferramentas escolha  :menuselection:`Vector --> Gerir elementos`,  e abra o módulo **v.centroids**."
 
 # 5e1c102e6cc546b2a55dc10e253a9453
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:901
 msgid ""
 "Enter as the :guilabel:`output vector map` 'forest_areas' and run the "
 "module."
-msgstr ""
+msgstr "Introduza como :guilabel:`mapa vectorial de saída` 'forest_areas' e execute o módulo."
 
 # f21b8d7d17cc4f9b8aa85656b73a6dbb
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:902
@@ -1630,14 +1630,14 @@ msgstr ""
 msgid ""
 "Next reopen the GRASS toolbox and open :menuselection:`Vector --> Vector "
 "update` by other maps."
-msgstr ""
+msgstr "De seguida re-abra a caixa de ferramentas GRASS e abra :menuselection:`Vector --> Actualizar Vector` para outros mapas."
 
 # 82a33d52194e4aa8ad7cd5e2cafd5d60
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:910
 msgid ""
 "Click on the **v.rast.stats** module. Enter ``gtopo30``, and "
 "``forest_areas``."
-msgstr ""
+msgstr "Clique no módulo **v.rast.stats**. Introduza `gtopo30``, e ``forest_areas``."
 
 # 033fe52311f84b4982b2de3a7a950761
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:911
@@ -1658,7 +1658,7 @@ msgstr ""
 # 00816172d22f48c4a481f53474ad1da0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:919
 msgid "Working with the GRASS LOCATION browser"
-msgstr ""
+msgstr "Trabalhando com a pesquisa da LOCALIZAÇÃO GRASS"
 
 # 296413cd30324b4cb630fe4ee1aef6e1
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:923
@@ -1681,44 +1681,44 @@ msgstr ""
 # 9e93d27757b04d1298be9519e21269c0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:942
 msgid "GRASS LOCATION browser |nix|"
-msgstr ""
+msgstr "Pesquisa na LOCALIZAÇÃO GRASS |nix|"
 
 # 0c7aaff3595146288433184ff3879e20
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:944
 msgid ""
 "The toolbar inside the :guilabel:`Browser` tab offers following tools to "
 "manage the selected :file:`LOCATION`:"
-msgstr ""
+msgstr "A barra de ferramenta dentro do separador :guilabel:`Pesquisa` oferece as seguintes ferramentas para gerir a :file:`LOCALIZAÇÃO` seleccionada:"
 
 # 6f3b0d711b244bd4bd074ed14eccaabc
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:947
 msgid "|grass_add_map| :guilabel:`Add selected map to canvas`"
-msgstr ""
+msgstr "|grass_add_map| :guilabel:`Adicionar mapa seleccionado ao enquadramento`"
 
 # be1934b08a0247419b0c928a84a6f752
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:948
 msgid "|grass_copy_map| :guilabel:`Copy selected map`"
-msgstr ""
+msgstr "|grass_copy_map| :guilabel:`Copiar mapa seleccionado`"
 
 # ba121307145c4829a3d0e0bc3864a3f9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:949
 msgid "|grass_rename_map| :guilabel:`Rename selected map`"
-msgstr ""
+msgstr "|grass_rename_map| :guilabel:`Renomear mapa seleccionado`"
 
 # 86a991bdf1ee4aed97d66f17bcb76460
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:950
 msgid "|grass_delete_map| :guilabel:`Delete selected map`"
-msgstr ""
+msgstr "|grass_delete_map| :guilabel:`Apagar mapa seleccionado`"
 
 # 279ed48276df42e797b77ed399fa6719
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:951
 msgid "|grass_set_region| :guilabel:`Set current region to selected map`"
-msgstr ""
+msgstr "|grass_set_region| :guilabel:`Definir a região actual do mapa seleccionado`"
 
 # 8f154366c80246f6b6999cd8eeaebc19
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:952
 msgid "|grass_refresh| :guilabel:`Refresh browser window`"
-msgstr ""
+msgstr "|grass_refresh| :guilabel:`Actualizar a janela de pesquisa`"
 
 # 47bede3a61ec4bd686b6bb9b32673f2c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:954
@@ -1732,7 +1732,7 @@ msgstr ""
 # bd2c2bf52c054074896384d1764caf95
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:962
 msgid "Customizing the GRASS Toolbox"
-msgstr ""
+msgstr "Personalizar a Caixa de Ferramentas GRASS"
 
 # c31d5e3229e44f78a2204d8c617bd29e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:966
@@ -1788,62 +1788,62 @@ msgstr ""
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:760
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:800
 msgid "GRASS"
-msgstr ""
+msgstr "GRASS"
 
 # a01ef1e20bcb4fac942df38a058e956f
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:312
 msgid "attribute storage"
-msgstr ""
+msgstr "armazenamento de atributos"
 
 # 6fc546404903423c83946e93687d312a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:318
 msgid "attribute linkage"
-msgstr ""
+msgstr "ligação de atributos"
 
 # 15c4be60b7f949e0870ed7d7c1e5bb58
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:331
 msgid "Creating new vectors;editing;creating a new layer"
-msgstr ""
+msgstr "Criando novos vectores;editando;criando uma nova camafa"
 
 # fc133928b04a43a6b6783182ec7e3a8a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:361
 msgid "digitizing tools"
-msgstr ""
+msgstr "ferramentas de digitalização"
 
 # d1437755caf84df7805f4ea57c0833b2
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:434
 msgid "category settings"
-msgstr ""
+msgstr "configurações da categoria"
 
 # c4cabb9986644371a8e6844b266d8246
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:477
 msgid "snapping tolerance"
-msgstr ""
+msgstr "tolerância de atracção"
 
 # 4833ce9c08b943feb23bce2c8e0c6b88
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:499
 msgid "symbology settings"
-msgstr ""
+msgstr "configurações de simbologia"
 
 # 1f8d98be054e42dd9a81ae096527e8a4
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:521
 msgid "table editing"
-msgstr ""
+msgstr "edição de tabela"
 
 # 47b5df171f8c476baed5a8914d9355d4
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:552
 msgid "region"
-msgstr ""
+msgstr "região"
 
 # 6187ca4ee9b149c78971ffe40a97b053
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:566
 msgid "region display"
-msgstr ""
+msgstr "exibir região"
 
 # c17bf7566bbf468d8f271427305af9ac
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:577
 msgid "region editing"
-msgstr ""
+msgstr "edição da região"
 
 # 547fb8f79d274c219f8cab06133696bf
 # 7acbf2569ba5459398cca9ff3ddcea73
@@ -1852,29 +1852,29 @@ msgstr ""
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:920
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:963
 msgid "GRASS toolbox"
-msgstr ""
+msgstr "caixa de ferramentas GRASS"
 
 # db548a04732041cc9cb8c18aaac78bfa
 # fa1b1d44d6984bd689eb617dc8aa227e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:709
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:760
 msgid "display results"
-msgstr ""
+msgstr "exibir resultados"
 
 # 7670a3897f1e4e849883bb944fd2bd3e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:800
 msgid "toolbox"
-msgstr ""
+msgstr "caixa de ferramentas"
 
 # 7acbf2569ba5459398cca9ff3ddcea73
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:920
 msgid "Browser"
-msgstr ""
+msgstr "Pesquisar"
 
 # cae0123e33a6450ab48600cbe60445ce
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:963
 msgid "customize"
-msgstr ""
+msgstr "personalizar"
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:13
 msgid ""

@@ -1,0 +1,757 @@
+# 
+# Translators:
+# BelenMP <Beln1@hotmail.com>, 2014
+# cesar.ametller <cesar.ametller@gmail.com>, 2014
+# eglatorre <eg@gismood.com>, 2014
+# villa74 <villarreal.bio@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-25 16:51+0100\n"
+"PO-Revision-Date: 2014-05-17 13:08+0000\n"
+"Last-Translator: Leonidas Descovi Filho <leonidasfilho2000@yahoo.com.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:6
+msgid "|LS| Vector Analysis"
+msgstr "|LS| Análisis Vectorial"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:8
+msgid ""
+"Vector data can also be analyzed to reveal how different features interact "
+"with each other in space. There are many different analysis-related "
+"functions in GIS, so we won't go through them all. Rather, we'll pose a "
+"question and try to solve it using the tools that QGIS provides."
+msgstr "También se puede proceder al análisis de datos vectoriales para saber cómo los distintos elementos interactúan entre sí en el espacio. Hay muchas funciones relacionadas con el análisis en SIG, así que no nos detendremos en todas ellas. En su lugar, plantearemos una pregunta e intentaremos resolverla utilizando las herramientas proporcionadas por QGIS. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:13
+msgid ""
+"**The goal for this lesson:** To ask a question and solve it using analysis "
+"tools."
+msgstr "**El objetivo de esta lección:** Plantear una pregunta y contestarla utilizando las herramientas de análisis. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:18
+msgid "|basic| The GIS Process"
+msgstr "|basic| El proceso SIG"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:20
+msgid ""
+"Before we start, it would be useful to give a brief overview of a process "
+"that can be used to solve any GIS problem. The way to go about it is:"
+msgstr "Antes de comenzar, sería de utilidad conocer de manera general los pasos que podemos seguir para resolver cualquier problema SIG. Lo que debemos hacer es lo siguiente:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:23
+msgid "State the Problem"
+msgstr "Plantear el problema"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:24
+msgid "Get the Data"
+msgstr "Obtener los datos"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:25
+msgid "Analyze the Problem"
+msgstr "Analizar el problema"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:26
+msgid "Present the Results"
+msgstr "Presentar los resultados"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:29
+msgid "|basic| The problem"
+msgstr "El problema"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:31
+msgid ""
+"Let's start off the process by deciding on a problem to solve. For example, "
+"you are an estate agent and you are looking for a residential property in "
+"|majorUrbanName| for clients who have the following criteria:"
+msgstr "Comencemos este procedimiento eligiendo un problema que se deba resolver. Por ejemplo, imaginemos que eres un agente inmobiliario que está buscando un inmueble en |majorUrbanName| para clientes con el siguiente perfil: "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:35
+msgid "It needs to be in |majorUrbanName|."
+msgstr "Es necesario que esté en |majorUrbanName|."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:36
+msgid "It must be within reasonable driving distance of a school (say 1km)."
+msgstr "Debe haber un colegio al que se pueda acceder en coche en un tiempo razonable (digamos una distancia de 1 km)."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:37
+msgid "It must be more than 100m squared in size."
+msgstr "Debe tener un tamaño superior a los 100m  cuadrados. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:38
+msgid "Closer than 50m to a main road."
+msgstr "Debe haber duna carretera principal a una distancia inferior de 50m."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:39
+msgid "Closer than 500m to a restaurant."
+msgstr "Debe haber un restaurante a una distancia inferior de 500m."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:42
+msgid "|basic| The data"
+msgstr "|basic| Los datos"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:44
+msgid "To answer these questions, we're going to need the following data:"
+msgstr "Para resolver todas estas preguntas, vamos a necesitar los siguientes datos:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:46
+msgid "The residential properties (buildings) in the area."
+msgstr "Los inmuebles destinados a residencia (edificios) localizados en la zona. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:47
+msgid "The roads in and around the town."
+msgstr "Las carreteras dentro y alrededor del pueblo."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:48
+msgid "The location of schools and restaurants."
+msgstr "La ubicación de los colegios y restaurantes."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:49
+msgid "The size of buildings."
+msgstr "El tamaño de los edificios."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:51
+msgid ""
+"All of this data is available through OSM and you should find that the "
+"dataset you have been using throughout this manual can also be used for this"
+" lesson. However, in order to ensure we have the complete data, we will re-"
+"download the data from OSM using QGIS' built-in OSM download tool."
+msgstr "Todos estos datos están disponibles en OSM y debe tener en cuenta que el conjunto de datos que ha estado utilizando a través de este manual también se pueden utilizar para esta lección. Sin embargo, para asegurarnos de que tenemos todos los datos completos, descargaremos de nuevo los datos desde OSM utilizando QGIS instalados en la herramienta de descarga de OSM."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:56
+msgid ""
+"Although OSM downloads have consistent data fields, the coverage and detail "
+"does vary. If you find that your chosen region does not contain information "
+"on restaurants, for example, you may need to chose a different region."
+msgstr "Aunque hay coherencia en los campos de datos que encontramos en las descargas de OSM, pueden variar en su cobertura y detalle. Si ves, por ejemplo, que la región que has elegido no contiene información sobre restaurantes, quizás necesitas elegir otra región. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:62
+msgid "|basic| |FA| Start a Project"
+msgstr "|basic| |FA| Comienzar un projecto"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:64
+msgid "Start a new QGIS project."
+msgstr "Comienza un nuevo proyecto QGIS."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:65
+msgid ""
+"Use the OpenStreetMap data download tool found in the :guilabel:`Vector` -> "
+":guilabel:`OpenStreeMap` menu to download the data for your chosen region."
+msgstr "Utiliza la herramienta de descarga para los datos de OpenStreetMap que se encuentra en el menú :guilabel:`Vectorial` -> :guilabel:`OpenStreeMap` para la descarga de datos de la región has elegido."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:67
+msgid ""
+"Save the data as :kbd:`osm_data.osm` in your :kbd:`exercise_data` folder."
+msgstr "Guarda los datos como :kbd:`osm_data.osm` en tu carpeta :kbd:`exercise_data`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:69
+msgid ""
+"Note that the :guilabel:`osm` format is a type of vector data. Add this data"
+" as a vector layer as usually :guilabel:`Layer` -> :guilabel:`Add vector "
+"layer...`, browse to the new :kbd:`osm_data.osm` file you just downloaded. "
+"You may need to"
+msgstr "Ten en cuenta que el formato :guilabel:`osm` es un formato de datos vectoriales. Añade estos datos como una capa vectorial como lo harías normalmente :guilabel:`Capa` -> :guilabel:`Añadir capas vectorial...`, busca el nuevo archivo :kbd:`osm_data.osm` que acabas de descargar. Quizás necesitas realizar las siguientes acciones: "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:72
+msgid "select :guilabel:`Show All Files` as the file format."
+msgstr "Selecciona :guilabel:`Todos los archivos (*)` como el formato archivo. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:73
+msgid "Select :kbd:`osm_data.osm` and click :guilabel:`Open`"
+msgstr "Selecciona :kbd:`osm_data.osm` y haz clic en :guilabel:`Abrir`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:74
+msgid ""
+"In the dialog which opens, select all the layers, *except* the "
+":kbd:`other_relations` and :kbd:`multilinestrings` layer:"
+msgstr "En el cuadro de diálogo que aparece, selecciona todas las capas, *excepto* las capas :kbd:`other_relations` y :kbd:`multilinestrings`:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:80
+msgid "This will import the OSM data as separate layers into your map."
+msgstr "Esto hará que los datos OSM se importen en su mapa como capas separadas. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:82
+msgid ""
+"The data you just downloaded from OSM is in a geographic coordinate system, "
+"WGS84, which uses latitude and longitude coordinates, as you know from the "
+"previous lesson. You also learnt that to calculate distances in meters, we "
+"need to work with a projected coordinate system. Start by setting your "
+"project's coordinate system to a suitable :guilabel:`CRS` for your data, in "
+"the case of |majorUrbanName|, :guilabel:`WGS 84 / UTM zone 34S`:"
+msgstr "Los datos que acabas de descargar desde OSM se encuentran en un sistema de coordenadas, WGS84, que utiliza coordenadas de latitud y longitud, como ya vimos en la lección anterior. Asimismo, también aprendiste que para calcular distancias en metros, necesitamos trabajar con un sistema de coordenadas proyectado. Comienza por establecer el sistema de coordenadas de tu proyecto en un :guilabel:`SRC` adecuado para tus datos, en el caso de |majorUrbanName|, :guilabel:`WGS 84 / UTM zone 34S`:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:89
+msgid ""
+"Open the :kbd:`Project Properties` dialog, select :guilabel:`CRS` and filter"
+" the list to find :guilabel:`WGS 84 / UTM zone 34S`."
+msgstr "Abre el cuadro de diálogo :kbd:`Propiedades del Proyecto`, selecciona :guilabel:`SRC` y filtre la lista para encontrar :guilabel:`WGS 84 / UTM zone 34S`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:91
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:351
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:387
+msgid "Click :guilabel:`OK`."
+msgstr "Haz clic en :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:93
+msgid ""
+"We now need to extract the information we need from the OSM dataset. We need"
+" to end up with layers representing all the houses, schools, restaurants and"
+" roads in the region. That information is inside the "
+":guilabel:`multipolygons` layer and can be extracted using the information "
+"in its :guilabel:`Attribute Table`. We'll start with the :kbd:`schools` "
+"layer:"
+msgstr "Ahora necesitamos extraer la información que necesitamos del conjunto de datos OSM. Es necesario finalizar con capas representando todas las casas, colegios, restaurantes y carreteras de la región. Esta información se encuentra dentro de la capa :guilabel:`multipolygons` y se puede extraer utilizando la información en su :guilabel:`Tabla de Atributos`. Empezaremos con la capa :kbd:`schools`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:98
+msgid ""
+"Right-click on the :guilabel:`multipolygons` layer in the :guilabel:`Layers "
+"list` and open the :guilabel:`Layer Properties`."
+msgstr "Haga clic con el botón derecho del ratón en la capa :guilabel:`multipolygons` en la :guilabel:`Lista de Capas` y abre la :guilabel:`Propiedades de la Capa`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:100
+msgid "Go to the :guilabel:`General` menu."
+msgstr "Ve al menú :guilabel:`General`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:101
+msgid ""
+"Under :guilabel:`Feature subset` click on the **[Query Builder]** button to "
+"open the :guilabel:`Query builder` dialog."
+msgstr "Bajo :guilabel:`Subconjunto de objetos espaciales` haz clic en el  botón \n**[Constructor de consultas]** para abrir el cuadro de diálogo :guilabel:`Constructor de consultas`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:103
+msgid ""
+"In the :guilabel:`Fields` list on the left of this dialog until you see the "
+"field :kbd:`amenity`."
+msgstr "Mira en la lista de :guilabel:`Campos` de la izquierda de este cuadro de diálogo hasta que veas el campo :kbd:`amenity`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:105
+msgid "Click on it once."
+msgstr "Haz clic sobre él una vez."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:106
+msgid ""
+"Click the :guilabel:`All` button underneath the :guilabel:`Values` list:"
+msgstr "Haz clic en el botón :guilabel:`Todos` que se encuentra bajo la lista :guilabel:`Valores`:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:108
+msgid ""
+"Now we need to tell QGIS to only show us the polygons where the value of "
+":kbd:`amenity` is equal to :kbd:`school`."
+msgstr "Ahora necesitamos comunicar a QGIS que solamente nos muestre aquellos polígonos donde el valor de :kbd:`amenity` es igual a :kbd:`school`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:111
+msgid "Double-click the word :kbd:`amenity` in the :guilabel:`Fields` list."
+msgstr "Haga doble clic sobre la palabra :kbd:`servicios` en la lista de :guilabel:`Campos`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:112
+msgid ""
+"Watch what happens in the :guilabel:`Provider specific filter expression`"
+msgstr "Fíjate en lo que ocurre en el cuadro :guilabel:`Expresión de filtrado específica del proveedor`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:113
+msgid "field below:"
+msgstr "a continuación:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:118
+msgid "The word :kbd:`\"amenity\"` has appeared. To build the rest of the query:"
+msgstr "La palabra  :kbd:`\"amenity\"` ha aparecido. Para crear el resto de la consulta:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:120
+msgid "Click the :guilabel:`=` button (under :guilabel:`Operators`)."
+msgstr "Haz clic en el botón :guilabel:`=` (bajo :guilabel:`Operadores`)."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:121
+msgid "Double-click the value :kbd:`school` in the :guilabel:`Values` list."
+msgstr "Haz doble clic en el valor :kbd:`school` en la lista de :guilabel:`Valores`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:122
+msgid "Click :kbd:`OK` twice."
+msgstr "Haz clic en :kbd:`Aceptar` dos veces."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:124
+msgid ""
+"This will filter OSM's :kbd:`multipolygon` layer to only show the schools in"
+" your region. You can now either:"
+msgstr "Esto filtrará la capa  :kbd:`multipolygon` de OSM para mostrar únicamente los colegios en tu región. Ahora, puedes o bien: "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:127
+msgid ""
+"Rename the filtered OSM layer to :kbd:`schools` and re-import the "
+":kbd:`multipolygons` layer from :kbd:`osm_data.osm`, OR"
+msgstr "Cambiar el nombre de la capa filtrada de OSM al de :kbd:`schools` e importar de nuevo la capa :kbd:`multipolygons` desde  :kbd:`osm_data.osm`, o"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:129
+msgid ""
+"Duplicate the filtered layer, rename the copy, clear the :kbd:`Query "
+"Builder` and create your new query in the :guilabel:`Query Builder`."
+msgstr "Duplicar la capa filtrada, renombrar la copia, borrar la :kbd:`Query Builder` y crea tu nueva consulta en e l:guilabel:`Constructor de consultas`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:135
+msgid "|moderate| |TY| Extract Required Layers from OSM"
+msgstr "|moderate| |TY| Extraer de Capas Requeridas de OSM"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:136
+msgid ""
+"Using the above technique, use the :kbd:`Query Builder` tool to extract the "
+"remaining data from OSM to create the following layers:"
+msgstr "Usando la técnica anterior, utiliza la herramienta :guilabel:`Constructor de consultas` para extraer los datos que quedan de OSM para crear las siguientes capas: "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:139
+msgid ":kbd:`roads` (from OSM's :kbd:`lines` layer)"
+msgstr ":kbd:`carreteras` ( de la capa de OSM :kbd:`lines`)"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:140
+msgid ":kbd:`restaurants` (from OSM's :kbd:`multipolygons` layer)"
+msgstr ":kbd:`restaurantes` (desde la capa  :kbd:`multipolygons` de OSM)"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:141
+msgid ":kbd:`houses` (from OSM's :kbd:`multipolygons` layer)"
+msgstr ":kbd:`casas` (desde la capa  :kbd:`multipolygons` de OSM)"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:143
+msgid ""
+"You may wish to re-use the :kbd:`roads.shp` layer you created in earlier "
+"lessons."
+msgstr "Puede que quieras utilizar de nuevo la capa  :kbd:`roads.shp` que creaste en lecciones anteriores. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:145
+msgid ":ref:`Check your results <vector-analysis-basic-1>`"
+msgstr ":ref:`Comprueba tus resultados <vector-analysis-basic-1>`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:147
+msgid "Save your map under :guilabel:`exercise_data`, as :kbd:`analysis.qgs`."
+msgstr "Guarda tu mapa bajo :guilabel:`exercise_data`, como  :kbd:`analisis.qgs`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:148
+msgid ""
+"In your operating system's file manager, create a new folder under "
+":guilabel:`exercise_data` and call it :kbd:`residential_development`. This "
+"is where you'll save the datasets that will be the results of the analysis "
+"functions."
+msgstr "En el administrador de archivos de tu sistema operativo, crea una nueva carpeta en :guilabel:`exercise_data` y llamalá  :kbd:`desarrollo_urbano`. Aquí es donde guardarás los conjuntos de datos que resultarán de las funciones de análisis. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:156
+msgid "|basic| |TY| Find important roads"
+msgstr "|basic| |TY| Encontrar carreteras importantes."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:158
+msgid ""
+"Some of the roads in OSM's dataset are listed as :kbd:`unclassified`, "
+":kbd:`tracks`, :kbd:`path` and :kbd:`footway`. We want to exclude these from"
+" our roads dataset."
+msgstr "Algunas de las carreteras en los datos de OSM están listadas como :kbd:`unclassified`, :kbd:`tracks`, :kbd:`path` y :kbd:`footway`. Queremos eliminarlas de nuestro conjunto de datos de carreteras. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:162
+msgid ""
+"Open the :kbd:`Query Builder` for the :kbd:`roads` layer, click "
+":guilabel:`Clear` and build the following query:"
+msgstr "Abre el :kbd:`Constructor de Consultas` para la capa :kbd:`roads`,  haz clic en :guilabel:`Limpiear` y crea la siguiente consulta: "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:165
+msgid ""
+":kbd:`\"highway\"  != 'NULL' AND \"highway\" != 'unclassified' AND "
+"\"highway\" != 'track' AND \"highway\" != 'path' AND \"highway\" != "
+"'footway'`"
+msgstr ":kbd:`\"highway\" != 'NULL' AND \"highway\" != 'unclassified' AND \"highway\" != 'track' AND \"highway\" != 'path' AND \"highway\" != 'footway'`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:167
+msgid ""
+"You can either use the approach above, where you double-clicked values and "
+"clicked buttons, or you can copy and paste the command above."
+msgstr "Puedes, o bien utilizar la estrategia utilizada anteriormente, haciendo doble clic en los valores y clic en los botones, o bien puedes copiar y pegar el comando que aparece arriba. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:170
+msgid "This should immediately reduce the number of roads on your map:"
+msgstr "Esto debería reducir inmediatamente el número de carreteras en tu mapa:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:176
+msgid "|basic| |TY| Convert Layers' CRS"
+msgstr "|basic| |TY| Convertir el SRC de una Capa"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:178
+msgid ""
+"Because we are going to be measuring distances within our layers, we need to"
+" change the layers' CRS. To do this, we need to select each layer in turn, "
+"save the layer to a new shapefile with our new projection, then import that "
+"new layer into our map."
+msgstr "Como vamos a estar midiendo distancias entre nuestras capas, necesitamos cambiar el SRC de las capas. Para ello, necesitamos seleccionar las capas una por una, guardar la capa a un nuevo shapefile con nuestra nueva proyección y entonces añadir la nueva capa a nuestro mapa."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:183
+msgid ""
+"In this example, we are using the :guilabel:`WGS 84 / UTM zone 34S` CRS, but"
+" you may use a UTM CRS which is more appropriate for your region."
+msgstr "En este ejemplo, vamos a usar el SRC :guilabel:`WGS 84 / UTM zone 34S`, pero puedes utilizar un SRC UTM que sea más apropiado para tu región."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:187
+msgid "Right click the :kbd:`roads` layer in the :kbd:`Layers` panel."
+msgstr "Haz clic derecho sobre la capa :kbd:`carreteras` en el panel :kbd:`Capas`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:188
+msgid "Click :kbd:`Save as...`"
+msgstr "Haz clic en :kbd:`Guardar como...`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:189
+msgid ""
+"In the :kbd:`Save Vector As` dialog, choose the following settings and click"
+" :guilabel:`Ok` (making sure you select :kbd:`Add saved file to map`):"
+msgstr "En el diálogo :kbd:`Guardar capa vectorial como...`, elige las siguientes opciones y haz clic en :guilabel:`Aceptar` (asegurate de que seleccionas :kbd:`Añadir archivo guardado al mapa`):"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:195
+msgid ""
+"The new shapefile will be created and the resulting layer added to your map."
+msgstr "El nuevo shapefile se creará y la capa resultante es añadida a tu mapa."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:197
+msgid ""
+"If you don't have activated :guilabel:`Enable 'on the fly' CRS "
+"transformation` or the :guilabel:`Automatically enable 'on the fly' "
+"reprojection if layers have different CRS` settings (see previous lesson), "
+"you might no be able to see the new layers you just added to the map. In "
+"this case, you can focus the map on any of the layers by right click on any "
+"layer and click :guilabel:`Zoom to layer extent`, or just enable any of the "
+"mentioned 'on the fly' options."
+msgstr "Si no tienes activada la opción :guilabel:`Activar transformación de SRC al vuelo` o :guilabel:`Habilitar automáticamente la reproyección al vuelo si las capas tienen SRC diferente` (revisa la lección anterior), es posible que no veas las capas que acabas de añadir al mapa. En este caso, puedes enfocar el mapa a cualquiera de las capas haciendo clic derecho sobre cualquiera de las capas y haciendo clic en :guilabel:`Zum a la extensión de la capa`, o simplemente activa cualquiera de las opciones 'al vuelo' mencionadas."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:204
+msgid "Remove the old :kbd:`roads` layer."
+msgstr "Elimina la capa :kbd:`carreteras` vieja."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:206
+msgid ""
+"Repeat this process for each layer, creating a new shapefile and layer with "
+"\"_34S\" appended to the original name and removing each of the old layers."
+msgstr "Repite este proceso para cada capa, creando un nuevo shapefile y una nueva capa añadiendo el apendice \"_34S\" al nombre original y eliminando cada una de las capas viejas."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:209
+msgid ""
+"Once you have completed the process for each layer, right click on any layer"
+" and click :guilabel:`Zoom to layer extent` to focus the map to the area of "
+"interest."
+msgstr "Una vez que hayas completado el proceso para cada capa, haz clic derecho sobre cualquiera de las capas y clic en :guilabel:`Zum a la extensión de la capa` para enfocar el mapa a la zona de interés."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:212
+msgid ""
+"Now that we have converted OSM's data to a UTM projection, we can begin our "
+"calculations."
+msgstr "Ahora que hemos convertido los datos OSM a una proyección UTM, podemos empezar nuestros cálculos."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:216
+msgid "|basic| |FA| Analyzing the Problem: Distances From Schools and Roads"
+msgstr "|basic| |FA| Analizando el Problema: Distancias Desde Colegios y Carreteras."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:218
+msgid "QGIS allows you to calculate distances from any vector object."
+msgstr "QGIS te permite calcular distancias desde cualquier objeto vectorial."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:220
+msgid ""
+"Make sure that only the :guilabel:`roads_34S` and :guilabel:`houses_34S` "
+"layers are visible, to simplify the map while you're working."
+msgstr "Asegurate de que solamente las capas :guilabel:`carreteras_34S` y :guilabel:`casas_34S` son visibles, para simplificar el mapa mientras trabajas."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:223
+msgid ""
+"Click on the :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` "
+"tool:"
+msgstr "Haz clic en la herramienta :menuselection:`Vectorial --> Herramientas de geoproceso --> Buffer(s)`:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:226
+msgid "This gives you a new dialog."
+msgstr "Esto te da un nuevo cuadro de diálogo."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:228
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:326
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:380
+msgid "Set it up like this:"
+msgstr "Configúralo así:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:233
+msgid ""
+"The :guilabel:`Buffer distance` is in meters because our input dataset is in"
+" a Projected Coordinate System that uses meter as its basic measurement "
+"unit. This is why we needed to use projected data."
+msgstr "La :guilabel:`Distancia de buffer` es en metros porque nuestros datos de entradas están en un Sistema Proyectado de Coordenadas que usa metros como su unidad básica de medida. Esta es la razón por la que necesitabamos utilizar datos proyectados."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:237
+msgid ""
+"Save the resulting layer under :kbd:`exercise_data/residential_development/`"
+" as :kbd:`roads_buffer_50m.shp`."
+msgstr "Guarda la capa resultante en :kbd:`exercise_data/desarrollo_inmobiliario/` as :kbd:`carreteras_buffer_50m.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:239
+msgid "Click :guilabel:`OK` and it will create the buffer."
+msgstr "Clic :guilabel:`OK` y el buffer se creará."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:240
+msgid ""
+"When it asks you if it should \"add the new layer to the TOC\", click "
+":guilabel:`Yes`. (\"TOC\" stands for \"Table of Contents\", by which it "
+"means the :guilabel:`Layers list`)."
+msgstr "Cuando te pregunte si debe \"añadir resultado al TDC\", clic :guilabel:`Aceptar`. (\"TDC\" significa \"Tabla de Contenidos\", que es lo mismo que la :guilabel:`Lista de capas`)."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:243
+msgid "Close the :guilabel:`Buffer(s)` dialog."
+msgstr "Cierra el cuadro de diálogo :guilabel:`Buffer(s)` ."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:245
+msgid "Now your map will look something like this:"
+msgstr "Ahora tu mapa se parece un poco a esto:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:250
+msgid ""
+"If your new layer is at the top of the :kbd:`Layers` list, it will probably "
+"obscure much of your map, but this gives us all the areas in your region "
+"which are within 50m of a road."
+msgstr "Si tu nueva capa es la primera en la lista :kbd:`Capas`, probablemente ocultará una gran parte de tu mapa, pero nos da todas las áreas que están a dentro de una distancia de 50m de una carretera en tu región."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:254
+msgid ""
+"However, you'll notice that there are distinct areas within our buffer, "
+"which correspond to all the individual roads. To get rid of this problem, "
+"remove the layer and re-create the buffer using the settings shown here:"
+msgstr "Sin embargo, verás que hay zonas distintas dentro de nuestro buffer, correspondiendo a cada una de las carreteras. Para resolver este problema, elimina la capa y crea el buffer de nuevo utilizando las opciones mostradas aquí:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:261
+msgid ""
+"Note that we're now checking the :guilabel:`Dissolve buffer results` box."
+msgstr "Toma nota de que ahora está activada la caja :guilabel:`Disolver resultados de buffer`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:262
+msgid ""
+"Save the output under the same name as before (click :guilabel:`Yes` when it"
+" asks your permission to overwrite the old one)."
+msgstr "Guarda el resultado con el mismo nombre que utilizaste antes (clic :guilabel:`Si` cuando te pida permiso para reemplazar el antiguo)."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:264
+msgid "Click :guilabel:`OK` and close the :guilabel:`Buffer(s)` dialog again."
+msgstr "Haz clic en :guilabel:`Aceptar` y cierra el cuadro de diálogo :guilabel:`Buffer(s)` de nuevo."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:266
+msgid ""
+"Once you've added the layer to the :guilabel:`Layers list`, it will look "
+"like this:"
+msgstr "Una vez que le añadas la capa a :guilabel:`Layers list`, se verá esto: "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:272
+msgid "Now there are no unnecessary subdivisions."
+msgstr "Ahora no hay subdivisiones innecesarias."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:277
+msgid "|basic| |TY| Distance from schools"
+msgstr "|basic| |TY| Distancia desde colegios."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:279
+msgid "Use the same approach as above and create a buffer for your schools."
+msgstr "Usa el mismo enfoque que anteriormente y crea un buffer para tus colegios. "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:281
+msgid ""
+"It needs to be :kbd:`1 km` in radius, and saved under the usual directory as"
+" :kbd:`schools_buffer_1km.shp`."
+msgstr "Es necesario que sea :kbd:`1 km` en radios, y guardarlo en el directorio habitual como :kbd:`schools_buffer_1km.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:284
+msgid ":ref:`Check your results <vector-analysis-basic-2>`"
+msgstr ":ref:` Comprueba tus resultados  <vector-analysis-basic-2>`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:287
+msgid "|basic| |FA| Overlapping Areas"
+msgstr "|basic| |FA| Areas que se solapan."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:289
+msgid ""
+"Now we have areas where the road is 50 meters away and there's a school "
+"within 1 km (direct line, not by road). But obviously, we only want the "
+"areas where both of these criteria are satisfied. To do that, we'll need to "
+"use the :guilabel:`Intersect` tool. Find it under :menuselection:`Vector -->"
+" Geoprocessing Tools --> Intersect`. Set it up like this:"
+msgstr "Ahora tenemos áreas donde la carretera está a 50 metros y en la que hay un colegio en un espacio de 1 km ( en línea recta, no por la carretera). Pero obviamente, sólo queremos aquellas áreas donde coincidan estos dos criterios Para lo cual, necesitaremos utilizar la herramienta :guilabel:`Intersect` tool. La puedes encontrar en :menuselection:`Vector --> Geoprocessing Tools --> Intersect`.  Instalela de la siguiente manera: "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:299
+msgid ""
+"The two input layers are the two buffers; the save location is as usual; and"
+" the file name is :kbd:`road_school_buffers_intersect.shp`. Once it's set up"
+" like this, click :guilabel:`OK` and add the layer to the :guilabel:`Layers "
+"list` when prompted."
+msgstr "Las dos capas de entrada son los dos buffers; la ruta de guardado es la usual y el nombre del archivo es :kbd:`road_school_buffers_intersect.shp`. Una vez hecho esto, haga clic en :guilabel:`OK` y añada la capa a :guilabel:`Layers list` cuando se le pida."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:304
+msgid ""
+"In the image below, the blue areas show us where both distance criteria are "
+"satisfied at once!"
+msgstr "En la imagen inferior, las áreas en azul muestran donde ambos criterios de distancia coinciden"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:310
+msgid ""
+"You may remove the two buffer layers and only keep the one that shows where "
+"they overlap, since that's what we really wanted to know in the first place:"
+msgstr "Usted puede borrar las dos capas buffer y solo mantener la que muestra la superposición, dado que eso era lo que queriamos conocer en primer lugar:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:319
+msgid "|basic| |FA| Select the Buildings"
+msgstr "|basic| |FA| Seleccione las Construcciones"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:321
+msgid ""
+"Now you've got the area that the buildings must overlap. Next, you want to "
+"select the buildings in that area."
+msgstr "Ahora que usted conoce el área en que las construcciones se superponen. El proximo paso es seleccionar las construcciones en dicha área."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:324
+msgid ""
+"Click on the menu entry :menuselection:`Vector --> Research Tools --> Select"
+" by location`. A dialog will appear."
+msgstr "Seleccione en el menu :menuselection:`Vector --> Research Tools --> Select by location`. Un dialogo aparecerá."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:331
+msgid "Click :guilabel:`OK`, then :guilabel:`Close`."
+msgstr "Seleccione :guilabel:`OK`, luego :guilabel:`Close`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:332
+msgid ""
+"You'll probably find that not much seems to have changed. If so, move the "
+":kbd:`school_roads_intersect` layer to the bottom of the layers list, then "
+"zoom in:"
+msgstr "Probablemente encontrará que no mucho ha cambiado. De ser así, mueva la capa :kbd:`school_roads_intersect` a la parte más baja de la lista de capas y luego haga un zoom in:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:339
+msgid ""
+"The buildings highlighted in yellow are those which match our criteria and "
+"are selected, while the buildings in green are those which do not. We can "
+"now save the selected buildings as a new layer."
+msgstr "Los edificios destacados en amarillo son aquellos que cumplen nuestros criterios y están seleccionados, mientras que los edificios en verde son los que no. Podemos ahora guardar los edificios seleccionados como una nueva capa."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:343
+msgid ""
+"Right-click on the :guilabel:`houses_34S` layer in the :guilabel:`Layers "
+"list`."
+msgstr "Haz clic derecho en la capa :guilabel:`houses_34S` de la :guilabel:`Layers list`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:344
+msgid "Select :guilabel:`Save Selection As...`."
+msgstr "Selecciona :guilabel:`Guadar Selección como...`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:345
+msgid "Set the dialog up like this:"
+msgstr "Configura el diálogo emergente así:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:350
+msgid "The file name is :kbd:`well_located_houses.shp`."
+msgstr "El nombre del archivo es :kbd:`well_located_houses.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:353
+msgid ""
+"Now you have the selection as a separate layer and can remove the "
+":kbd:`houses_34S` layer."
+msgstr "Ahora tienes la selección como una capa separada y puedes quitar la capa :kbd:`houses_34S`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:359
+msgid "|moderate| |TY| Further Filter our Buildings"
+msgstr "|moderate| |TY| Filtrado adicional de nuestros Edificios"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:361
+msgid ""
+"We now have a layer which shows us all the buildings within 1km of a school "
+"and within 50m of a road. We now need to reduce that selection to only show "
+"buildings which are within 500m of a restaurant."
+msgstr "Ahora tenemos una capa que nos muestra los edificios en un radio de 1km de una escuela y a menos de 50m de una carretera. Ahora tenemos que reducir la selección para que sólo nos muestre los edificios que están a menos de 500 metros de un restaurante."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:365
+msgid ""
+"Using the processes described above, create a new layer called "
+":kbd:`houses_restaurants_500m` which further filters your "
+":kbd:`well_located_houses` layer to show only those which are within 500m of"
+" a restaurant."
+msgstr "Usando los procesos descritos anteriormente, crear una capa llamada :kbd:`houses_restaurants_500m` aplicando filtros adicionales a la capa :kbd:`well_located_houses` para mostrar sólo aquellos que están a menos de 500 metros de un restaurante."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:370
+msgid ":ref:`Check your results <vector-analysis-basic-3>`"
+msgstr ":ref:` Comprueba tus resultados  <vector-analysis-basic-3>`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:373
+msgid "|basic| |FA| Select Buildings of the Right Size"
+msgstr "|basic| |FA| Seleccione las Construcciones de Tamaño Adecuado"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:375
+msgid ""
+"To see which buildings are the correct size (more than 100 square metres), "
+"we first need to calculate their size."
+msgstr "Para ver que construcciones son del tamaño correcto (más de 100 metros cuadrados), necesitamos primero calcular su tamaño."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:378
+msgid ""
+"Open the attribute table for the :guilabel:`houses_restaurants_500m` layer."
+msgstr "Abre la tabla de atributos de la capa :guilabel:`houses_restaurants_500m`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:379
+msgid "Enter edit mode and open the field calculator."
+msgstr "Entra en el modo de edición y abre la calculadora de campos."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:385
+msgid ""
+"If you can't find :guilabel:`AREA` in the list, try creating a new field as "
+"you did in the previous lesson of this module."
+msgstr "Si no puedes encontrar :guilabel:`AREA` en la lista, intenta crear un nuevo campo como hiciste en la lección previa de este módulo."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:388
+msgid ""
+"Scroll to the right of the attribute table; your :kbd:`AREA` field now has "
+"areas in metres for all the buildings in your "
+":guilabel:`houses_restaurants_500m` layer."
+msgstr "Desplázate a la derecha de la tabla de atributos; tu campo :kbd:`AREA` contiene ahora el área en metros cuadrados de todos los edificios de la capa :guilabel:`houses_restaurants_500m`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:391
+msgid ""
+"Click the edit mode button again to finish editing, and save your edits when"
+" prompted."
+msgstr "Haga clic en el botón del modo de edición de nuevo para finalizar la edición y guarde los cambios cuando se le pida."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:393
+msgid "Build a query as earlier in this lesson:"
+msgstr "Construya una consulta como hizo anteriormente en esta lección."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:398
+msgid ""
+"Click :guilabel:`OK`. Your map should now only show you those buildings "
+"which match our starting criteria and which are more than 100m squared in "
+"size."
+msgstr "Haga clic en :guilabel:`Aceptar`. Tu mapa debería mostrar aquellos edificios que cumplen los criterios iniciales y aquellos de tamaño superior a 100 metros cuadrados."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:403
+msgid "|basic| |TY|"
+msgstr "|basic| |TY|"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:405
+msgid ""
+"Save your solution as a new layer, using the approach you learned above for "
+"doing so. The file should be saved under the usual directory, with the name "
+":kbd:`solution.shp`."
+msgstr "Guarda la solución como una nueva capa usando la estrategia que aprendiste anteriormente. El archivo debería ser guardado en el directorio usual con el nombre :kbd:`solution.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:410
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:412
+msgid ""
+"Using the GIS problem-solving approach together with QGIS vector analysis "
+"tools, you were able to solve a problem with multiple criteria quickly and "
+"easily."
+msgstr "Usando la estrategia de resolución de problemas SIG junto con las herramientas de análisis vectorial de QGIS, has sido capaz de resolver un problema con múltiples criterios rápida y fácilmente."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:417
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:419
+msgid ""
+"In the next lesson, we'll look at how to calculate the shortest distance "
+"along the road from one point to another."
+msgstr "En la siguiente lección veremos como calcular la distancia mas corta de un punto a otro de una carretera."

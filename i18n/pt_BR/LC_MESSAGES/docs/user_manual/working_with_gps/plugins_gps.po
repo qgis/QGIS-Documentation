@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-16 02:35+0000\n"
+"PO-Revision-Date: 2014-05-18 03:23+0000\n"
 "Last-Translator: joaohr <jhrusp@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -196,7 +196,7 @@ msgid ""
 "routes and tracks are the three basic feature types in GPS data. |qg| "
 "displays waypoints in point layers while routes and tracks are displayed in "
 "linestring layers."
-msgstr ""
+msgstr "O Sistema de Posicionamento Global - GPS, é um sistema baseado em satélites que permite a qualquer pessoa com um aparelho receptor de sinais de GPS encontrar sua posição exata em qualquer lugar do mundo. Ele é usado para auxiliar na navegação, por exemplo, em aviões, barcos e pedestres. O receptor GPS usa os sinais dos satélites para calcular a sua latitude, longitude e (por vezes) a altitude. A maioria dos receptores também tem a capacidade de armazenar locais (conhecidos como **waypoints** ou pontos de interesse), sequências de locais que compõem a **rota** planejada e uma **trilha** do movimento do GPS ao longo do tempo. Waypoints, rotas e trilhas são os três tipos de recursos básicos em dados de GPS. |qg| apresenta waypoints em camadas de pontos enquanto rotas e trilhas são exibidos em camadas de linha."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:32
 msgid ""
@@ -204,7 +204,7 @@ msgid ""
 "that |qg| uses is called GPX (GPS eXchange format), which is a standard "
 "interchange format that can contain any number of waypoints, routes and "
 "tracks in the same file."
-msgstr ""
+msgstr "Existem dezenas de diferentes formatos de arquivo para armazenar dados de GPS. O formato que |qg| usa é chamado GPX (GPS eXchange format), que é um formato padrão de intercâmbio que pode conter qualquer número de waypoints, rotas e trilhas no mesmo arquivo."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:47
 msgid ""
@@ -212,7 +212,7 @@ msgid ""
 "|qg| sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. "
 "See Section :ref:`label_sampledata` for more information about the sample "
 "data."
-msgstr ""
+msgstr "Para trabalhar com dados GPS, como exemplo, nós fornecemos um arquivo GPX disponível no |qg| conjunto de dados amostrais: :file:`qgis_sample_data/gps/national_monuments.gpx`. Consulte a Seção :ref:`label_sampledata` para mais informações sobre os dados de exemplo."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:75
 msgid ""
@@ -221,7 +221,7 @@ msgid ""
 "it in |qg|, be sure that the data stored in the GPX file uses WGS84 "
 "(latitude/longitude). |qg| expects this and it is the official GPX "
 "specification. See http://www.topografix.com/GPX/1/1/"
-msgstr ""
+msgstr "Aparelhos de GPS permitem armazenar dados em diferentes sistemas de coordenadas. Ao baixar um arquivo GPX (a partir de seu aparelho de GPS ou um site) e, em seguida, carregá-lo no |qg|, certifique-se de que os dados armazenados no arquivo GPX usam WGS84 (latitude/longitude). |qg| espera esse sistema de coordenadas por ser essa a especificação oficial GPX. Mais informações em http://www.topografix.com/GPX/1/1/"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:84
 msgid ""
@@ -233,7 +233,7 @@ msgid ""
 "you just want to load GPS data from GPX files you will not need it. Version "
 "1.2.3 of GPSBabel is known to work with |qg|, but you should be able to use "
 "later versions without any problems."
-msgstr ""
+msgstr "Como |qg| usa arquivos GPX por padrão, você precisa encontrar uma maneira de converter outros formatos de arquivo de GPS para GPX. Isso pode ser feito para muitos formatos, utilizando o programa gratuito GPSBabel, que está disponível em http://www.gpsbabel.org. Este programa também pode transferir dados GPS entre o computador e um aparelho GPS. |qg| usa GPSBabel para fazer essas coisas, por isso é recomendado que você instale-o. No entanto, se você quiser apenas para carregar os dados de GPS a partir de arquivos GPX você não vai precisar dele. A versão 1.2.3 do GPSBabel é conhecida por trabalhar com |qg|, mas é possível usar versões posteriores sem qualquer problema."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:107
 msgid ""
@@ -243,13 +243,13 @@ msgid ""
 "device, the port that it is connected to (or usb if your GPS supports this),"
 " the feature type that you want to download, the GPX file where the data "
 "should be stored, and the name of the new layer."
-msgstr ""
+msgstr "|qg| pode usar GPSBabel para baixar os dados de um aparelho de GPS diretamente como novas camadas vetoriais. Para isso, use a guia :guilabel:`Descarregar do GPS` na caixa de diálogo Ferramentas GPS (ver Figure_GPS_2_). Aqui, selecionamos o tipo de dispositivo GPS, a porta que ele está conectado (ou usb se o seu GPS suporta isso), o tipo de recurso que você deseja descarregar, o arquivo GPX onde os dados devem ser armazenados e o nome da nova camada."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:137
 msgid ""
 "When you click **[OK]** the data will be downloaded from the device and "
 "appear as a layer in |qg|."
-msgstr ""
+msgstr "Ao clicar ** [OK] ** os dados serão transferidos a partir do dispositivo e aparecerão como uma camada no |qg|."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:143
 msgid ""
@@ -259,14 +259,14 @@ msgid ""
 " GPX layer), your GPS device type, and the port (or usb) that it is "
 "connected to. Just as with the download tool you can specify new device "
 "types if your device isn't in the list."
-msgstr ""
+msgstr "Você também pode enviar dados diretamente a partir de uma camada vetorial no |qg| a um dispositivo de GPS usando a guia :guilabel:`Carregar no GPS`  na caixa de diálogo Ferramentas GPS. Para fazer isso, basta selecionar a camada que você deseja carregar (que deve ser uma camada GPX), o seu tipo de dispositivo GPS, e a porta (ou usb) que ele está conectado. Assim como descarregar do GPS, você pode especificar novos tipos de dispositivos se o dispositivo não estiver na lista."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:150
 msgid ""
 "This tool is very useful in combination with the vector editing capabilities"
 " of |qg|. It allows you to load a map, create waypoints and routes, and then"
 " upload them and use them on your GPS device."
-msgstr ""
+msgstr "Esta ferramenta é muito útil em combinação com os recursos de edição de vetores do |qg|. Ela permite a você carregar um mapa, criar waypoints e rotas e, em seguida, enviá-los e usá-los no seu aparelho de GPS."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:159
 msgid ""
@@ -276,7 +276,7 @@ msgid ""
 ":guilabel:`Upload to GPS` tools you can define your own device type for it. "
 "You do this by using the GPS device editor, which you start by clicking the "
 "**[Edit devices]** button in the download or the upload tabs."
-msgstr ""
+msgstr "Há muitos diferentes tipos de dispositivos GPS. Os desenvolvedores do |qg| não podem testar todos eles, por isso, se você tem um que não funciona com qualquer um dos tipos de dispositivos listados na guia de ferramentas :guilabel:`Descarregar do GPS` e :guilabel:`Carregar no GPS`, você pode definir seu próprio tipo de dispositivo para ele. Você pode fazer isso usando o editor de dispositivo GPS, clicando em **[Editar dispositivos]** nas guias Descarregar ou Carregar."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:166
 msgid ""
@@ -288,7 +288,7 @@ msgid ""
 "GPX file. This will probably be a GPSBabel command, but you can use any "
 "other command line program that can create a GPX file. |qg| will replace the"
 " keywords ``%type``, ``%in``, and ``%out`` when it runs the command."
-msgstr ""
+msgstr "Para definir um novo dispositivo basta clicar em **[Novo]**, digitar um nome, um comando de descarregar e outro de carregar para seu o dispositivo, e clicar em **[Atualizar]**. O nome será listado no menu de dispositivos nas janelas de Carregar e Descarregar, e pode ser qualquer linha. O comando de descarregar é o comando que é usado para baixar os dados do dispositivo para um arquivo GPX. Este será, provavelmente, um comando GPSBabel, mas você pode usar qualquer outro programa de linha de comando que pode criar um arquivo GPX. O |qg| substituirá as palavras-chave `%type``, ``%in``, e ``%out` quando ele executar o comando."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:179
 msgid ""
@@ -300,7 +300,7 @@ msgid ""
 "'Garmin serial') and then use it to download waypoints from port "
 "``/dev/ttyS0`` to the file ``output.gpx``, |qg| will replace the keywords "
 "and run the command ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``."
-msgstr ""
+msgstr "Assim, ``%in`` será substituído pelo nome da porta que você escolher, na janela de descarregar e ``%out`` será substituído pelo nome que você escolher para o local onde o arquivo GPX baixado deverá ser armazenado. Então se você criar um tipo de dispositivo com o comando descarregar ``gpsbabel %type -i garmin -o gpx %in %out`` (atualmente este é o comando de download para o tipo de dispositivo pré-definido 'Garmin serial') e, em seguida, usá-lo para baixar waypoints da porta ``/dev/ttyS0`` para o arquivo ``output.gpx``, o |qg| substituirá as palavras-chave e executará o comando ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``.."
 
 #~ msgid ""
 #~ "There are dozens of different file formats for storing GPS data. The format "
