@@ -68,3 +68,15 @@ and apply the result to a raster in one step.
 
 In other words, for every cell greater than or equal to 0, set its value to 1. Otherwise set
 it to 0. This creates the mask on the fly.
+
+
+If you want to classify a raster -- say, for instance into two elevation classes, you can 
+use the following expression to create a raster with two values 1 and 2 in one step.
+
+::
+
+  ("elevation@1" < 50) * 1 + ("eleevation@1" >= 50) * 2
+
+In other words, for every cell less than 50 set its value to 1. For every cell greater than or 
+equal 50 set its value to 2.
+
