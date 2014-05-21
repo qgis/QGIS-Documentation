@@ -632,12 +632,12 @@ and strings in 'single quotes'. Let's have a look at some examples:
 
 ::
 
-   # label based on two fields 'name' and 'place' with a  
+   # label based on two fields 'name' and 'place' with a comma as separater 
    "name" || ', ' || "place"
 
    -> John Smith, Paris 
 
-   # label based on two fields 'name' and 'place' with a descriptive text
+   # label based on two fields 'name' and 'place' separated by comma
    'My name is ' || "name" || 'and I live in ' || "place"
 
    -> My name is John Smith and I live in Paris
