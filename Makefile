@@ -225,4 +225,5 @@ gettext:
 transifex_push:
 	make springclean
 	make pretranslate
+	#
 	tx push -f -s --no-interactive

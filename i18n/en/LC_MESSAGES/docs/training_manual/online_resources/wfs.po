@@ -1,0 +1,241 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-22 21:32+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:6
+msgid "|LS| Web Feature Services"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:8
+msgid ""
+"A Web Feature Service (WFS) provides its users with GIS data in formats that"
+" can be loaded directly in QGIS. Unlike a WMS, which provides you only with "
+"a map which you can't edit, a WFS gives you access to the features "
+"themselves."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:12
+msgid ""
+"**The goal for this lesson:** To use a WFS and understand how it differs "
+"from a WMS."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:16
+msgid "|basic| |FA| Loading a WFS Layer"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:18
+msgid "Start a new map. This is for demo purposes and won't be saved."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:19
+msgid "Ensure that \"on the fly\" re-projection is switched off."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:20
+msgid "Click the :guilabel:`Add WFS Layer` button:"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:22
+msgid "|wfs|"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:24
+msgid "Click the :guilabel:`New` button."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:25
+msgid ""
+"In the dialog that appears, enter the :guilabel:`Name` as :kbd:`nsidc.org` "
+"and the :guilabel:`URL` as :kbd:`http://nsidc.org/cgi-"
+"bin/atlas_south?version=1.1.0`."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:32
+msgid ""
+"Click :guilabel:`OK`, and the new connection will appear in your "
+":guilabel:`Server connections`."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:34
+msgid ""
+"Click the :guilabel:`Connect`. A list of the available layers will appear:"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:39
+msgid "Find the layer :guilabel:`south_poles_wfs`."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:40
+msgid "Click on the layer to select it:"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:45
+msgid "Click :guilabel:`Add`."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:47
+msgid ""
+"It may take a while to load the layer. When it has loaded, it will appear in"
+" the map. Here it is over the outlines of Antarctica (available on the same "
+"server, and by the name of :guilabel:`antarctica_country_border`):"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:54
+msgid ""
+"How is this different from having a WMS layer? That will become obvious when"
+" you see the layers' attributes."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:57
+msgid ""
+"Open the :guilabel:`south_poles_wfs` layer's attribute table. You should see"
+" this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:63
+msgid ""
+"Since the points have attributes, we are able to label them, as well as "
+"change their symbology. Here's an example:"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:69
+msgid ""
+"Add labels to your layer to take advantage of the attribute data in this "
+"layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:73
+msgid "Differences from WMS layers"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:75
+msgid ""
+"A Web Feature Service returns the layer itself, not just a map rendered from"
+" it. This gives you direct access to the data, meaning that you can change "
+"ts symbology and run analysis functions on it. However, this is at the cost "
+"of much more data being transmitted. This will be especially obvious if the "
+"layers you're loading have complicated shapes, a lot of attributes, or many "
+"features; or even if you're just loading a lot of layers. WFS layers "
+"typically take a very long time to load because of this."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:84
+msgid "|moderate| |FA| Querying a WFS Layer"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:86
+msgid ""
+"Although it is of possible to query a WFS layer after having loaded it, it's"
+" often more efficient to query it before you load it. That way, you're only "
+"requesting the features you want, meaning that you use far less bandwidth."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:90
+msgid ""
+"For example, on the WFS server we're currently using, there is a layer "
+"called :guilabel:`countries (excluding Antarctica)`. Let's say that we want "
+"to know where South Africa is relative to the :guilabel:`south_poles_wfs` "
+"layer (and perhaps also the :guilabel:`antarctica_country_border` layer) "
+"that's already been loaded."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:96
+msgid ""
+"There are two ways to do this. You can load the whole :guilabel:`countries "
+"...` layer, and then build a query as usual once it's loaded. However, "
+"transmitting the data for all the countries in the world and then only using"
+" the data for South Africa seems a bit wasteful of bandwidth. Depending on "
+"your connection, this dataset can take several minutes to load."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:102
+msgid ""
+"The alternative is to build the query as a filter before even loading the "
+"layer from the server."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:105
+msgid ""
+"In the :guilabel:`Add WFS Layer ...` dialog, connect to the server we used "
+"before and you should see the list of available layers."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:107
+msgid ""
+"Double-click next to the :guilabel:`countries ...` layer in the "
+":guilabel:`Filter` field, or click :guilabel:`Build query`:"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:113
+msgid ""
+"In the dialog that appears, build the query :kbd:`\"Countryeng\" = 'South "
+"Africa'`:"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:119
+msgid "It will appear as the :guilabel:`Filter` value:"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:124
+msgid ""
+"Click :guilabel:`Add` with the :guilabel:`countries` layer selected as "
+"above. Only the country with the :kbd:`Countryeng` value of :kbd:`South "
+"Africa` will load from that layer:"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:131
+msgid ""
+"You don't have to, but if you tried both methods, you'll notice that this is"
+" a lot faster than loading all the countries before filtering them!"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:135
+msgid "Notes on WFS availability"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:137
+msgid ""
+"It is rare to find a WFS hosting features you need, if your needs are very "
+"specific. The reason why Web Feature Services are relatively rare is because"
+" of the large amounts of data that must be transmitted to describe a whole "
+"feature. It is therefore not very cost-effective to host a WFS rather than a"
+" WMS, which sends only images."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:143
+msgid ""
+"The most common type of WFS you'll encounter will therefore probably be on a"
+" local network or even on your own computer, rather than on the Internet."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:147
+msgid "|IC|"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:149
+msgid ""
+"WFS layers are preferable over WMS layers if you need direct access to the "
+"attributes and geometries of the layers. However, considering the amount of "
+"data that needs to be downloaded (which leads to speed problems and also a "
+"lack of easily available public WFS servers) it's not always possible to use"
+" a WFS instead of a WMS."
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:156
+msgid "|WN|"
+msgstr ""
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:158
+msgid ""
+"Next, you'll see how to use QGIS as a frontend for the famous GRASS GIS."
+msgstr ""
