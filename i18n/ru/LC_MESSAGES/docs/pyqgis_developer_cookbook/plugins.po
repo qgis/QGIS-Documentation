@@ -1,0 +1,701 @@
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2014-05-20 18:41+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/qgis-documentation/language/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:11
+msgid "Developing Python Plugins"
+msgstr "Разработка  расширений на Python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:13
+msgid ""
+"It is possible to create plugins in Python programming language. In "
+"comparison with classical plugins written in C++ these should be easier to "
+"write, understand, maintain and distribute due the dynamic nature of the "
+"Python language."
+msgstr "Для разработки расширений можно использовать язык программирования Python. По сравнению с классическими расширениями, написанными на C++, их легче разрабатывать, понимать, поддерживать и распространять в силу динамической природы самого Python."
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:18
+msgid ""
+"Python plugins are listed together with C++ plugins in QGIS plugin manager. "
+"They're being searched for in these paths:"
+msgstr "Расширения на Python перечисляются в Менеджере модулей QGIS наравне с расширениями на C++. Поиск расширений выполняется в следующих каталогах:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:21
+msgid ""
+"UNIX/Mac: :file:`~/.qgis/python/plugins` and "
+":file:`(qgis_prefix)/share/qgis/python/plugins`"
+msgstr "UNIX/Mac: :file:`~/.qgis/python/plugins` и :file:`(qgis_prefix)/share/qgis/python/plugins`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:22
+msgid ""
+"Windows: :file:`~/.qgis/python/plugins` and "
+":file:`(qgis_prefix)/python/plugins`"
+msgstr "Windows: :file:`~/.qgis/python/plugins` и :file:`(qgis_prefix)/python/plugins`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:27
+msgid "Steps:"
+msgstr "Шаги:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:29
+msgid ""
+"*Idea*: Have an idea about what you want to do with your new QGIS plugin. "
+"Why do you do it? What problem do you want to solve? Is there already "
+"another plugin for that problem?"
+msgstr "*Идея*: Прежде всего нужна идея для нового расширения QGIS. Зачем это нужно? Какую задачу необходимо решить? Может, есть готовое расширения для решения этой задачи?"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:42
+msgid ""
+"*Test*: Close and re-open QGIS and import your plugin again. Check if "
+"everything is OK."
+msgstr "*Тестирование*: Закройте и снова откройте QGIS, загрузите своё расширение. Проверьте, что всё работает как надо."
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:45
+msgid ""
+"*Publish*: Publish your plugin in QGIS repository or make your own "
+"repository as an \"arsenal\" of personal \"GIS weapons\""
+msgstr "*Публикация*: опубликуйте своё расширение в репозитории QGIS или настройте свой собственный репозиторий в качестве \"арсенала\" личного \"ГИС вооружения\""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:51
+msgid "Writing a plugin"
+msgstr "Разработка расширения"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:53
+msgid ""
+"Since the introduction of python plugins in QGIS, a number of plugins have "
+"appeared - on `Plugin Repositories wiki page "
+"<http://www.qgis.org/wiki/Python_Plugin_Repositories>`_ you can find some of"
+" them, you can use their source to learn more about programming with PyQGIS "
+"or find out whether you are not duplicating development effort. QGIS team "
+"also maintains an :ref:`official_pyqgis_repository`. Ready to create a "
+"plugin but no idea what to do? `Python Plugin Ideas wiki page "
+"<http://www.qgis.org/wiki/Python_Plugin_Ideas>`_ lists wishes from the "
+"community!"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:62
+msgid "Plugin files"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:64
+msgid "Here's the directory structure of our example plugin::"
+msgstr "Ниже показано содержимое каталога нашего демонстрационного расширения::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:76
+msgid "What is the meaning of the files:"
+msgstr "Для чего используются файлы:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:81
+msgid ""
+":file:`resources.qrc` = The .xml document created by QT-Designer. Contains "
+"relative paths to resources of the forms."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:83
+msgid ""
+":file:`resources.py` = The translation of the .qrc file described above to "
+"Python."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:84
+msgid ":file:`form.ui` = The GUI created by QT-Designer."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:85
+msgid ""
+":file:`form.py` = The translation of the form.ui described above to Python."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:99
+msgid ""
+"If you plan to upload the plugin to the :ref:`official_pyqgis_repository` "
+"you must check that your plugin follows some additional rules, required for "
+"plugin  :ref:`official_pyqgis_repository_validation`"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:106
+msgid "Plugin content"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:108
+msgid ""
+"Here you can find information and examples about what to add in each of the "
+"files in the file structure described above."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:115
+msgid "Plugin metadata"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:123
+msgid "All metadata must be in UTF-8 encoding."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:128
+msgid "Metadata name"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:128
+msgid "Required"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:128
+msgid "Notes"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:130
+msgid "name"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:130
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:131
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:133
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:135
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:136
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:137
+msgid "True"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:130
+msgid "a short string  containing the name of the plugin"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:131
+msgid "qgisMinimumVersion"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:131
+msgid "dotted notation of minimum QGIS version"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:132
+msgid "qgisMaximumVersion"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:132
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:134
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:138
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:139
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:140
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:141
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:142
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:143
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:144
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:145
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:146
+msgid "False"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:132
+msgid "dotted notation of maximum QGIS version"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:133
+msgid "description"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:135
+msgid "version"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:135
+msgid "short string with the version dotted notation"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:136
+msgid "author"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:136
+msgid "author name"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:137
+msgid "email"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:137
+msgid "email of the author, will *not* be shown on the web site"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:138
+msgid "changelog"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:138
+msgid "string, can be multiline, no HTML allowed"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:139
+msgid "experimental"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:139
+msgid "boolean flag, `True` or `False`"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:140
+msgid "deprecated"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:140
+msgid ""
+"boolean flag, `True` or `False`, applies to the whole plugin and not just to"
+" the uploaded version"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:141
+msgid "tags"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:141
+msgid "comma separated list, spaces are allowe inside individual tags"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:142
+msgid "homepage"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:142
+msgid "a valid URL pointing to the homepage of your plugin"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:143
+msgid "repository"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:143
+msgid "a valid URL for the source code repository"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:144
+msgid "tracker"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:144
+msgid "a valid URL for tickets and bug reports"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:145
+msgid "icon"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:145
+msgid ""
+"a file name or a relative path (relative to the base folder of the plugin's "
+"compressed package)"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:146
+msgid "category"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:146
+msgid "one of `Raster`, `Vector`, `Database` and `Web`"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:165
+msgid ""
+"If `qgisMaximumVersion` is empty, it will be automatically set to the major "
+"version plus `.99` when uploaded to the :ref:`official_pyqgis_repository`."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:168
+msgid "An example for this metadata.txt::"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:297
+msgid ":func:`addPluginToRasterMenu()`"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:298
+msgid ":func:`addPluginToVectorMenu()`"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:299
+msgid ":func:`addPluginToDatabaseMenu()`"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:300
+msgid ":func:`addPluginToWebMenu()`"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:302
+msgid ""
+"All of them have the same syntax as the :func:`addPluginToMenu` method."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:304
+msgid ""
+"Adding your plugin menu to one of those predefined method is recommended to "
+"keep consistency in how plugin entries are organized. However, you can add "
+"your custom menu group directly to the menu bar, as the next example "
+"demonstrates:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:333
+msgid "Resource File"
+msgstr "Файл ресурсов"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:335
+msgid ""
+"You can see that in ``initGui()`` we've used an icon from the resource file "
+"(called :file:`resources.qrc` in our case)::"
+msgstr "Как видно в примере выше, в ``initGui()`` мы использовали иконку из файла ресурсов (в нашем случае он называется :file:`resources.qrc`)::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:344
+msgid ""
+"It is good to use a prefix that will not collide with other plugins or any "
+"parts of QGIS, otherwise you might get resources you did not want. Now you "
+"just need to generate a Python file that will contain the resources. It's "
+"done with :command:`pyrcc4` command::"
+msgstr "Хорошим тоном считается использование префикса, это позволит избежать конфликтов с другими расширениями или с частями QGIS. Если префикс не задан, можно получить не те ресурсы, которые нужны. Теперь сгенерируем файл ресурсов на Python. Это делается командой :command:`pyrcc4`::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:351
+msgid ""
+"And that's all... nothing complicated :) If you've done everything correctly"
+" you should be able to find and load your plugin in the plugin manager and "
+"see a message in console when toolbar icon or appropriate menu item is "
+"selected."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:356
+msgid ""
+"When working on a real plugin it's wise to write the plugin in another "
+"(working) directory and create a makefile which will generate UI + resource "
+"files and install the plugin to your QGIS installation."
+msgstr "При работе над реальным расширением удобно вести разработку в другом (рабочем) каталоге и создать makefile, который будет генерировать файлы интерфейса и ресурсов, а также выполнять копирование расширения в каталог QGIS."
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:363
+msgid "Documentation"
+msgstr "Документация"
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:365
+msgid ""
+"The documentation for the plugin can be written as HTML help files. The "
+":mod:`qgis.utils` module provides a function, :func:`showPluginHelp` which "
+"will open the help file browser, in the same way as other QGIS help."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:369
+msgid ""
+"The :func:`showPluginHelp`` function looks for help files in the same "
+"directory as the calling module. It will look for, in turn, :file:`index-"
+"ll_cc.html`, :file:`index-ll.html`, :file:`index-en.html`, :file:`index-"
+"en_us.html` and :file:`index.html`, displaying whichever it finds first. "
+"Here ``ll_cc`` is the QGIS locale. This allows multiple translations of the "
+"documentation to be included with the plugin."
+msgstr "Функция :func:`showPluginHelp`` ищет файлы справки в том же каталоге, где находится вызвавший её модуль. Она по очереди будет искать файлы :file:`index-ll_cc.html`, :file:`index-ll.html`, :file:`index-en.html`, :file:`index-en_us.html` и :file:`index.html`, и отобразит первый найденный. Здесь ``ll_cc`` --- язык интерфейса QGIS. Это позволяет включать в состав\nрасширения документацию на разных языках."
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:376
+msgid ""
+"The :func:`showPluginHelp` function can also take parameters packageName, "
+"which identifies a specific plugin for which the help will be displayed, "
+"filename, which can replace \"index\" in the names of files being searched, "
+"and section, which is the name of an html anchor tag in the document on "
+"which the browser will be positioned."
+msgstr "Кроме того, функция :func:`showPluginHelp` может принимать параметр packageName, идентифицирующий расширение, справку которого нужно отобразить; filename, который используется для переопределения имени файла с документацией;\nи section, для передачи имени якоря (закладки) в документе, на который браузер должен перейти."
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:48
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:103
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:110
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:217
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:330
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:360
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:360
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:382
+msgid "plugins"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:5
+msgid "developing"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:5
+msgid "Python"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:5
+msgid "developing plugins"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:48
+msgid "writing"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:103
+msgid "writing code"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:110
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:217
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:217
+msgid "metadata.txt"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:217
+msgid "metadata"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:330
+msgid "resource file"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:330
+msgid "resources.qrc"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:360
+msgid "documentation"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:360
+msgid "implementing help"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:382
+msgid "code snippets"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:24
+msgid ""
+"Home directory (denoted by above :file:`~`) on Windows is usually something "
+"like :file:`C:\\\\Documents and Settings\\\\(user)` (on Windows XP or "
+"earlier) or :file:`C:\\\\Users\\\\(user)`. Since Quantum GIS is using Python"
+" 2.7, subdirectories of these paths have to contain an __init__.py fily to "
+"be considered Python packages that can be imported as plugins."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:34
+msgid ""
+"*Create files*: Create the files described next. A starting point "
+"(:file:`__init.py__`). Fill in the :ref:`plugin_metadata` "
+"(:file:`metadata.txt`) A main python plugin body (:file:`mainplugin.py`). A "
+"form in QT-Designer (:file:`form.ui`), with its :file:`resources.qrc`."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:40
+msgid "*Write code*: Write the code inside the :file:`mainplugin.py`"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:78
+msgid ""
+":file:`__init__.py` = The starting point of the plugin. It has to have the "
+"classFactory method and may have any other initialisation code."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:79
+msgid ""
+":file:`mainPlugin.py` = The main working code of the plugin. Contains all "
+"the information about the actions of the plugin and the main code."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:86
+msgid ""
+":file:`metadata.txt` = Required for QGIS >= 1.8.0. Containts general info, "
+"version, name and some other metadata used by plugins website and plugin "
+"infrastructure. Since QGIS 2.0 the metadata from :file:`__init__.py` are not"
+" accepted anymore and the :file:`metadata.txt` is required."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:91
+msgid ""
+"`Here <http://www.dimitrisk.gr/qgis/creator/>`_ is an online automated way "
+"of creating the basic files (skeleton) of a typical QGIS Python plugin."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:95
+msgid ""
+"Also there is a QGIS plugin called `Plugin Builder "
+"<http://geoapt.net/pluginbuilder/>`_ that creates plugin template from QGIS "
+"and doesn't require internet connection. This is the recommended option, as "
+"it produces 2.0 compatible sources."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:117
+msgid ""
+"First, plugin manager needs to retrieve some basic information about the "
+"plugin such as its name, description etc. File :file:`metadata.txt` is the "
+"right place to put this information."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:133
+msgid "short text which describes the plugin, no HTML allowed"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:134
+msgid "about"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:134
+msgid "longer text which describes the plugin in details, no HTML allowed"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:150
+msgid ""
+"By default, plugins are placed in the `Plugins` menu (we will see in the "
+"next section how to add a menu entry for your plugin) but they can also be "
+"placed the into `Raster`, `Vector`, `Database` and `Web` menus."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:154
+msgid ""
+"A corresponding \"category\" metadata entry exists to specify that, so the "
+"plugin can be classified accordingly. This metadata entry is used as tip for"
+" users and tells them where (in which menu) the plugin can be found. Allowed"
+" values for \"category\" are: Vector, Raster, Database or Web. For example, "
+"if your plugin will be available from `Raster` menu, add this to "
+":file:`metadata.txt`::"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:221
+msgid "__init__.py"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:222
+msgid ""
+"This file is required by Python's import system. Also, Quantum GIS requires "
+"that this file contains a ``classFactory()`` function, which is called when "
+"the plugin gets loaded to QGIS. It receives reference to instance of "
+":class:`QgisInterface` and must return instance of your plugin's class from "
+"the mainplugin.py - in our case it's called ``TestPlugin`` (see below). This"
+" is how __init__.py should look like::"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:235
+msgid "mainPlugin.py"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:237
+msgid ""
+"This is where the magic happens and this is how magic looks like: (e.g. "
+":file:`mainPlugin.py`)::"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:290
+msgid ""
+"The only plugin functions that must exist in the main plugin source file "
+"(e.g. mainPlugin.py) are:: - ``__init__``    --> which gives access to "
+"Quantum GIS' interface - ``initGui()``   --> called when the plugin is "
+"loaded - ``unload()``    --> called when the plugin is unloaded"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:295
+msgid ""
+"You can see that in the above example, the "
+"``:func:`addPluginToMenu`<http://qgis.org/api/classQgisInterface.html#ad1af604ed4736be2bf537df58d1399c3>`_"
+" is used. This will add the corresponding menu action to the *Plugins* menu."
+" Alternative methods exist to add the action to a different menu. Here is a "
+"list of those methods:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:327
+msgid ""
+"Don't forget to set QAction and QMenu objectName to a name specific to your "
+"plugin so that it can be customized."
+msgstr ""
+
+#~ msgid ""
+#~ "Home directory (denoted by above :file:`~`) on Windows is usually something "
+#~ "like :file:`C:\\\\Documents and Settings\\\\(user)`. Subdirectories of these"
+#~ " paths are considered as Python packages that can be imported to QGIS as "
+#~ "plugins."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*Create files*: Create the files described next. A starting point "
+#~ "(:file:`__init.py__`). Fill in the :ref:`plugin_metadata` "
+#~ "(:file:`metadata.txt`) A main python plugin body (:file:`plugin.py`). A form"
+#~ " in QT-Designer (:file:`form.ui`), with its :file:`resources.qrc`."
+#~ msgstr ""
+
+#~ msgid "*Write code*: Write the code inside the :file:`plugin.py`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":file:`__init__.py` = The starting point of the plugin. It is normally "
+#~ "empty."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":file:`plugin.py` = The main working code of the plugin. Contains all the "
+#~ "information about the actions of the plugin and the main code."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":file:`metadata.txt` = Required for QGIS >= 1.8.0. Containts general info, "
+#~ "version, name and some other metadata used by plugins website and plugin "
+#~ "infrastructure. Metadata in :file:`metadata.txt` is preferred to the methods"
+#~ " in :file:`__init__.py`. If the text file is present, it is used to fetch "
+#~ "the values. From QGIS 2.0 the metadata from :file:`__init__.py` will not be "
+#~ "accepted and the :file:`metadata.txt` file will be required."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Here <http://pyqgis.org/builder/plugin_builder.py>`_ and `there "
+#~ "<http://www.dimitrisk.gr/qgis/creator/>`_ are two automated ways of creating"
+#~ " the basic files (skeleton) of a typical QGIS Python plugin."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Also there is a QGIS plugin called `Plugin Builder` that creates plugin "
+#~ "template from QGIS and doesn't require internet connection. This is the "
+#~ "recommended option, as it produces 2.0 compatible sources."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First, plugin manager needs to retrieve some basic information about the "
+#~ "plugin such as its name, description etc. File :file:`metadata.txt` is the "
+#~ "right place where to put this information."
+#~ msgstr ""
+
+#~ msgid "longer text which describes the plugin, no HTML allowed"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default, plugins are placed in the `Plugins` menu (we will see in the "
+#~ "next section how to add a menu entry for your plugin) but they can also be "
+#~ "placed the into `Raster`, `Vector`, `Database` and `Web` menus. A "
+#~ "corresponding \"category\" metadata entry exists to specify that, so the "
+#~ "plugin can be classified accordingly. This metadata entry is used as tip for"
+#~ " users and tells them where (in which menu) the plugin can be found. Allowed"
+#~ " values for \"category\" are: Vector, Raster, Database, Web and Layers. For "
+#~ "example, if your plugin will be available from `Raster` menu, add this to "
+#~ ":file:`metadata.txt`::"
+#~ msgstr ""
+
+#~ msgid "plugin.py"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "One thing worth mentioning is ``classFactory()`` function which is called "
+#~ "when the plugin gets loaded to QGIS. It receives reference to instance of "
+#~ ":class:`QgisInterface` and must return instance of your plugin - in our case"
+#~ " it's called ``TestPlugin``. This is how should this class look like (e.g. "
+#~ ":file:`testplugin.py`)::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The only plugin functions that must exist are ``initGui()`` and "
+#~ "``unload()``. These functions are called when the plugin is loaded and "
+#~ "unloaded."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can see that in the above example, the :func:`addPluginMenu` is used. "
+#~ "This will add the corresponding menu action to the *Plugins* menu. "
+#~ "Alternative methods exist to add the action to a different menu. Here is a "
+#~ "list of those methods:"
+#~ msgstr ""

@@ -1,0 +1,200 @@
+# 
+# Translators:
+# Shu Higashi <higa432@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2013-11-23 08:05+0000\n"
+"Last-Translator: Shu Higashi <higa432@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:11
+msgid "Expressions, Filtering and Calculating Values"
+msgstr "表現、フィルタリング及び値の算出"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:13
+msgid ""
+"QGIS has some support for parsing of SQL-like expressions. Only a small "
+"subset of SQL syntax is supported. The expressions can be evaluated either "
+"as boolean predicates (returning True or False) or as functions (returning a"
+" scalar value)."
+msgstr "QGISはSQLライクな表現のパースをいくつかサポートしています。SQLの小さなサブセットだけをサポートしています。表現はブーリアン記述(真偽値を返す)またはファンクション(スカラー値を返す)として評価することができます。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:17
+msgid "Three basic types are supported:"
+msgstr "3つの基本的な種別がサポートされています:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:19
+msgid ""
+"number --- both whole numbers and decimal numbers, e.g. ``123``, ``3.14``"
+msgstr "数値 --- 実数及び10進数。例. ``123``, ``3.14``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:20
+msgid ""
+"string --- they have to be enclosed in single quotes: ``'hello world'``"
+msgstr "文字列 --- シングルクオートで囲む必要があります: ``'hello world'``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:21
+msgid ""
+"column reference --- when evaluating, the reference is substituted with the "
+"actual value of the field. The names are not escaped."
+msgstr "カラム参照 --- 評価する際に、参照は項目の実際の値で置き換えられます。名前はエスケープされません。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:24
+msgid "The following operations are available:"
+msgstr "次の演算子が利用可能です:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:26
+msgid "arithmetic operators: ``+``, ``-``, ``*``, ``/``, ``^``"
+msgstr "算術演算子: ``+``, ``-``, ``*``, ``/``, ``^``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:27
+msgid "parentheses: for enforcing the operator precedence: ``(1 + 1) * 3``"
+msgstr "丸括弧: 演算を優先します: ``(1 + 1) * 3``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:28
+msgid "unary plus and minus: ``-12``, ``+5``"
+msgstr "単項のプラスとマイナス: ``-12``, ``+5``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:29
+msgid ""
+"mathematical functions: ``sqrt``, ``sin``, ``cos``, ``tan``, ``asin``, "
+"``acos``, ``atan``"
+msgstr "数学的ファンクション: ``sqrt``, ``sin``, ``cos``, ``tan``, ``asin``, ``acos``, ``atan``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:31
+msgid "geometry functions: ``$area``, ``$length``"
+msgstr "ジオメトリファンクション: ``$area``, ``$length``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:32
+msgid "conversion functions: ``to int``, ``to real``, ``to string``"
+msgstr "変換ファンクション: ``to int``, ``to real``, ``to string``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:34
+msgid "And the following predicates are supported:"
+msgstr "以下の記述がサポートされています:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:36
+msgid "comparison: ``=``, ``!=``, ``>``, ``>=``, ``<``, ``<=``"
+msgstr "比較: ``=``, ``!=``, ``>``, ``>=``, ``<``, ``<=``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:37
+msgid ""
+"pattern matching: ``LIKE`` (using % and _), ``~`` (regular expressions)"
+msgstr "パターンマッチング: ``LIKE`` (% と _ を使用), ``~`` (正規表現)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:38
+msgid "logical predicates: ``AND``, ``OR``, ``NOT``"
+msgstr "論理記述: ``AND``, ``OR``, ``NOT``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:39
+msgid "NULL value checking: ``IS NULL``, ``IS NOT NULL``"
+msgstr "NULL 値チェック: ``IS NULL``, ``IS NOT NULL``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:42
+msgid "Examples of predicates:"
+msgstr "記法例:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:44
+msgid "``1 + 2 = 3``"
+msgstr "``1 + 2 = 3``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:45
+msgid "``sin(angle) > 0``"
+msgstr "``sin(angle) > 0``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:46
+msgid "``'Hello' LIKE 'He%'``"
+msgstr "``'Hello' LIKE 'He%'``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:47
+msgid "``(x > 10 AND y > 10) OR z = 0``"
+msgstr "``(x > 10 AND y > 10) OR z = 0``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:49
+msgid "Examples of scalar expressions:"
+msgstr "スカラー表現の例:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:51
+msgid "``2 ^ 10``"
+msgstr "``2 ^ 10``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:52
+msgid "``sqrt(val)``"
+msgstr "``sqrt(val)``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:53
+msgid "``$length + 1``"
+msgstr "``$length + 1``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:58
+msgid "Parsing Expressions"
+msgstr "パース表現"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:74
+msgid "Evaluating Expressions"
+msgstr "評価表現"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:77
+msgid "Basic Expressions"
+msgstr "基本表現"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:87
+msgid "Expressions with features"
+msgstr "地物に関わる表現"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:89
+msgid ""
+"The following example will evaluate the given expression against a feature."
+"  \"Column\" is the name of the field in the layer."
+msgstr "次の例は地物に対して与えられた表現を評価しています。\"Column\" はレイヤ内の項目名です。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:98
+msgid ""
+"You can also use :func:`QgsExpression.prepare()` if you need check more than"
+" one feature.  Using :func:`QgsExpression.prepare()` will increase the speed"
+" that evaluate takes to run."
+msgstr "複数の地物をチェックする必要がある場合は、 :func:`QgsExpression.prepare()` も使うことができます。 :func:`QgsExpression.prepare()` を使うと、実行の評価速度を向上できます。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:110
+msgid "Handling errors"
+msgstr "エラー処理"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:125
+msgid "Examples"
+msgstr "例"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:127
+msgid ""
+"The following example can be used to filter a layer and return any feature "
+"that matches a predicate."
+msgstr "次の例はレイヤをフィルタリングして記法にマッチする任意の地物を返却します。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:55
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:71
+msgid "expressions"
+msgstr "表現"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:5
+msgid "filtering"
+msgstr "フィルタリング"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:5
+msgid "calculating values"
+msgstr "値の計算"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:55
+msgid "parsing"
+msgstr "パース"
+
+#: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:71
+msgid "evaluating"
+msgstr "評価"

@@ -1,0 +1,1022 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# 
+# Translators:
+# choro <u.ko.kubot@gmail.com>, 2013
+# nuimura <nuimura@nagoya-u.jp>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2013-11-19 22:22+0000\n"
+"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# bbbffbf7bfa84892b59f8b6f56236f33
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:9
+msgid "Vector Attribute Data"
+msgstr "ベクタ属性データ"
+
+# ca39a47b3c214e968efac79b8929baa2
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:12
+msgid "|gentlelogo|"
+msgstr "|gentlelogo|"
+
+# 4cb8bb4146b9419a98e1ac448dc2fd5c
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:12
+msgid "Objectives:"
+msgstr "目的："
+
+# 986a3f6720dd4993b5126905472b7b73
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:12
+msgid ""
+"In this topic we describe how attribute data are associated with vector "
+"features and can be used to symbolise data."
+msgstr "ここでは属性データをどのようにベクタデータと結びつけ, シンボルを変更するかについて扱います."
+
+# c72a8f771c874f808638c1f52b440280
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:14
+msgid "Keywords:"
+msgstr "キーワード："
+
+# c88d77abc4a645feaa54d7810c658222
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:14
+msgid "Attribute, database, fields, data, vector, symbology"
+msgstr "属性, データベース, フィールド, データ, ベクタ, シンボロジー"
+
+# ef0345cc3de244e4aab840b9098374a3
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:18
+msgid "Overview"
+msgstr "概要"
+
+# 4a4844567aa64656b79e54c74edb1fdf
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:20
+msgid ""
+"If every line on a map was the same colour, width, thickness, and had the "
+"same label, it would be very hard to make out what was going on. The map "
+"would also give us very little information. Take a look at "
+"figure_map_attributes_ for example."
+msgstr "もし地図上の全てのラインの色, 幅, 厚み, そしてラベルも同じだとしたら, 非常にわかりづらいでしょう.そのような地図からは少しの情報しか読み取ることができません.例として,  figure_map_attributes_ を見てみましょう."
+
+# d140a39577c64706bd3f889b75bafc81
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:34
+msgid ""
+"Maps come to life when colour and different symbols are used to help you to "
+"tell one type of feature from the next. Can you tell the difference between "
+"rivers, roads and contours using the map on the left? Using the map on the "
+"right it is much easier to see the different features."
+msgstr "地図を使う際, 異なる色やシンボルが使われていると区別するのが簡単になります.左の地図で河川, 道路, 等高線の区別はできるでしょうか？右の地図の場合はそれが簡単にできます."
+
+# bfe8dc1ba3fa4d6fb6592b05751058ed
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:39
+msgid ""
+"In this topic we will look at how attribute data can help us to make "
+"interesting and informative maps. In the previous topic on vector data, we "
+"briefly explained that **attribute data** are used to **describe vector "
+"features**. Take a look at the house pictures in figure_house_."
+msgstr "ここではどのように属性データによって面白くて役に立つ地図を作ることができるのかを見ていきましょう.前のベクタデータの項目では**ベクタデータの記述** に使われる **属性データ** について簡単に説明をしました.figure_house_ の家の写真を見てみましょう."
+
+# c8fc96e393714277a286076b5a4eb528
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:54
+msgid ""
+"Every feature has characteristics that we can describe. These can be visible"
+" things, or things we know about the feature (e.g. year built)."
+msgstr "全ての地物は記述可能な特徴を持っています.それらは目に見える特徴だったり知ることのできる情報 (例. 建築年)"
+
+# e9d257e5518f44dfa0c5da9b00c9c95f
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:57
+msgid ""
+"The geometry of these house features is a polygon (based on the floor plan "
+"of the house), the attributes we have recorded are roof colour, whether "
+"there is a balcony, and the year the house was built. Note that attributes "
+"don't have to be visible things --– they can describe things we know about "
+"the feature such as the year it was built. In a GIS Application, we can "
+"represent this feature type in a houses polygon layer, and the attributes in"
+" an attribute table (see figure_house_gis_)."
+msgstr "これらの家のジオメトリはポリゴン (家の見取り図) で, 記録済みの属性情報は屋根の色, バルコニーの有無と建築年です.属性情報は目に見えるものとは限らず -- 建築年のような情報も含むことができます.GISアプリケーションでは家の地物タイプと属性テーブルに含まれる属性情報を表現することができます ( figure_house_gis_ 参照) ."
+
+# 208648629a0542419d9f2e1d435a05f4
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:74
+msgid ""
+"A houses layer. House features have attributes that describe the houses’ "
+"roof colour and other properties. The attribute table (lower image) lists "
+"the attributes for the house areas shown on the map. When a feature is "
+"highlighted in the table, it will appear as a yellow polygon on the map."
+msgstr ""
+
+# e8c8b4eb12614d94af97a6d652c315fb
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:79
+msgid ""
+"The fact that features have attributes as well geometry in a GIS Application"
+" opens up many possibilities. For example we can use the attribute values to"
+" tell the GIS what colours and style to use when drawing features (see "
+"figure_style_by_attribute_). The process of setting colours and drawing "
+"styles is often referred to as setting feature **symbology**."
+msgstr ""
+
+# 0a27f69cf60549a8b95e5b98812eb9cb
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:95
+msgid ""
+"In a GIS Application, we can draw features differently depending on their "
+"attributes. On the left we have drawn house polygons with the same colour as"
+" the roof attribute. On the right we colour coded houses according to "
+"whether they have a balcony or not."
+msgstr ""
+
+# 8ee524b3dca44e7ca1c1a44d318b18dc
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:100
+msgid ""
+"Attribute data can also be useful when creating **map labels**. Most GIS "
+"Applications will have a facility to select an attribute that should be used"
+" to label each feature."
+msgstr "属性データはまた ** マップラベル**を作成する場合にも役立ちます。ほとんどのGISアプリケーションは各地物にラベルを付けるために使用されるべき属性を選択する機能を持つでしょう。"
+
+# 8d3c4901ce0446d0affd35c8af85d412
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:104
+msgid ""
+"If you have ever **searched a map** for a place name or a specific feature, "
+"you will know how time consuming it can be. Having attribute data can make "
+"searching for a specific feature quick and easy. In "
+"figure_search_by_attribute_ you can see an example of an attribute search in"
+" a GIS."
+msgstr ""
+
+# ca897a52c18a4ea8ae59fe1f8e30ebbb
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:119
+msgid ""
+"In a GIS Application, we can also search for features based on their "
+"attributes. Here we see a search for houses with black roofs. Results are "
+"shown in yellow in the map, turquoise on the table."
+msgstr ""
+
+# d4e2ff5942414fb98407fa8f68ce0f46
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:123
+msgid ""
+"Finally, attribute data can be very useful in carrying out **spatial "
+"analysis**. Spatial analysis combines the spatial information stored in the "
+"geometry of features with their attribute information. This allows us to "
+"study features and how they relate to each other. There are many types of "
+"spatial analysis that can be carried out, for example, you could use GIS to "
+"find out how many red roofed houses occur in a particular area. If you have "
+"tree features, you could use GIS to try to find out which species might be "
+"affected if a piece of land is developed. We can use the attributes stored "
+"for water samples along a river course to understand where pollution is "
+"entering into the stream. The possibilities are endless! In a later topic we"
+" will be exploring spatial analysis in more detail."
+msgstr ""
+
+# f6807179121347aeb20744e94357603a
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:134
+msgid ""
+"Before we move on to attribute data in more detail, let's take a quick "
+"recap."
+msgstr "属性データの詳細に移る前に、簡単にまとめてみましょう。"
+
+# 568f093cd983433d997524de46e284bd
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:136
+msgid ""
+"Features are real world things such as roads, property boundaries, "
+"electrical substation sites and so on. A **feature** has a **geometry** "
+"(which determines if it is a **point**, **polyline** or **polygon**) and "
+"**attributes** (which describe the feature). This is shown in "
+"figure_features_at_glance_."
+msgstr ""
+
+# fc2af06b49a44e3c870329f12a12363a
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:151
+msgid "Vector features at a glance."
+msgstr "ベクタの特徴とは"
+
+# eee1fd321e14458e9f576201f438361b
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:154
+msgid "Attributes in detail"
+msgstr "属性の詳細"
+
+# 1a460ba6143240b88e55271b9d4e22ec
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:156
+msgid ""
+"Attributes for a vector feature are stored in a **table**. A table is like a"
+" spreadsheet. Each column in the table is called a **field**. Each row in "
+"the table is a **record**. Table table_house_attributes_ shows a simple "
+"example of how an attribute table looks in a GIS. The records in the "
+"attribute table in a GIS each correspond to one feature. Usually the "
+"information in the attribute table is stored in some kind of database. The "
+"GIS application links the attribute records with the feature geometry so "
+"that you can find records in the table by selecting features on the map, and"
+" find features on the map by selecting features in the table."
+msgstr ""
+
+# 4075f993d77a478a8ecfb4051387d2b8
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:169
+msgid "Attribute Table"
+msgstr "属性テーブル"
+
+# 3db1c5adf54f4ab7a2e694c4a6f77206
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:169
+msgid "Field 1 : YearBuilt"
+msgstr "フィールド1 : YearBuilt"
+
+# d8a5855ff1a5424aa91d3d4af5af060b
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:169
+msgid "Field 2: RoofColour"
+msgstr "フィールド2: RoofColour"
+
+# d76338473852463994192ebda2001df9
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:169
+msgid "Field 3: Balcony"
+msgstr "フィールド3: Balcony"
+
+# 85ea98c64ebe422b98268344121df77e
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:171
+msgid "Record 1"
+msgstr "レコード1"
+
+# 1865d07140cf4101b4204c202c21ba96
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:171
+msgid "1998"
+msgstr "1998"
+
+# 9af06ed83abd4c64a8192a14fef7e67c
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:171
+msgid "Red"
+msgstr "赤"
+
+# c3a6919c98ac4a11ab9ef18a1a4e5d15
+# 18ca45180343470bae3f3086e08c48cc
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:171
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:175
+msgid "Yes"
+msgstr "はい"
+
+# 85f23db17cd140b6b776f53f7553eadb
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:173
+msgid "Record 2"
+msgstr "レコード2"
+
+# 191b64fe0d03414a919a843e275eeb7b
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:173
+msgid "2000"
+msgstr "2000"
+
+# b12490181a8841e7b47f569950644f74
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:173
+msgid "Black"
+msgstr "黒"
+
+# 319857f0338a40149dc2f630fe6c4fbb
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:173
+msgid "No"
+msgstr "いいえ"
+
+# 5a23dc6c7e4840388298cc0f6aed6d11
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:175
+msgid "Record 3"
+msgstr "レコード3"
+
+# c424a66612894f328a6c9bbb019f5b15
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:175
+msgid "2001"
+msgstr "2001"
+
+# 8b2a862be6b0478fa81b62e718ebdd57
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:175
+msgid "Silver"
+msgstr "銀色"
+
+# 65167bc41c574cac834ce13a1970c7df
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:178
+msgid ""
+"Table House Attributes 1: An attribute table has fields (columns) and "
+"records (in rows)."
+msgstr "家の属性表1: 属性テーブルはフィールド (列) とレコード (行) を持っています."
+
+# 2f5869b87f4b45a98b16d89fe4409619
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:181
+msgid ""
+"Each field in the attribute table contains contains a specific type of data "
+"–-- text, numeric or date. Deciding what attributes to use for a feature "
+"requires some thought and planning. In our house example earlier on in this "
+"topic, we chose roof colour, presence of a balcony and month of construction"
+" as attributes of interest. We could just as easily have chosen other "
+"aspects of a house such as:"
+msgstr ""
+
+# 1850a03d30624ea7b466cc18a87a1062
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:187
+msgid "number of levels"
+msgstr "階数"
+
+# 82a01097a5084965b03ece7fc26d6262
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:188
+msgid "number of rooms"
+msgstr "部屋数"
+
+# e9bd0e08aa9b4a9bafaac186f8223536
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:189
+msgid "number of occupants"
+msgstr "居住者数"
+
+# 8ee5ccb813364336ae83d1bee5a3f1b4
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:190
+msgid "type of dwelling (RDP House, block of flats, shack, brick house, etc)"
+msgstr "住居の種類（RDPハウス、アパートのブロック、小屋、れんが造りの家など）"
+
+# 82ed7a9fe6a849c888db8b9b1772ced1
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:191
+msgid "year the house was built"
+msgstr "家が建てられた年"
+
+# 2255761c8c444246823bf19c5169c288
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:192
+msgid "area of floor space in the house"
+msgstr "家の床面積"
+
+# 5b0b74f8bf944fc9ab1a52db030e88ae
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:193
+msgid "and so on...."
+msgstr "他には...."
+
+# cff19c2e905b478bb360ce7a896b1b4d
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:195
+msgid ""
+"With so many options, how do we make a good choice as to what attributes are"
+" needed for a feature? It usually boils down to what you plan to do with the"
+" data. If you want to produce a colour coded map showing houses by age, it "
+"will make sense to have a 'Year Built' attribute for your feature. If you "
+"know for sure you will never use this type of map, it is better to not store"
+" the information. Collecting and storing unneeded information is a bad idea "
+"because of the cost and time required to research and capture the "
+"information. Very often we obtain vector data from companies, friends or the"
+" government. In these cases it is usually not possible to request specific "
+"attributes and we have to make do with what we get."
+msgstr ""
+
+# 303305eb58ab47d68c8138f4889d948f
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:207
+msgid "Single Symbols"
+msgstr "単一シンボル"
+
+# 3b4a7b6244f94c38870e2ed5a7e54451
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:209
+msgid ""
+"If a feature is symbolised without using any attribute table data, it can "
+"only be drawn in a simple way. For example with point features you can set "
+"the colour and **marker** (circle, square, star etc.) but that is all. You "
+"cannot tell the GIS to draw the features based on one of its properties in "
+"the attribute table. In order to do that, you need to use either a "
+"**graduated**, **continuous** or **unique value** symbol. These are "
+"described in detail in the sections that follow."
+msgstr ""
+
+# 6884a5df2f064334a375597da398198d
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:217
+msgid ""
+"A GIS application will normally allow you to set the symbology of a layer "
+"using a **dialog box** such as the one shown in in figure_single_symbol_1_. "
+"In this dialog box you can choose colours and symbol styles. Depending on "
+"the geometry type of a layer, different options may be shown. For example "
+"with point layers you can choose a **marker style**. With line and polygon "
+"layers there is no marker style option, but instead you can select a **line "
+"style** and **colour** such as dashed orange for gravel roads, solid orange "
+"for minor roads, and so on (as shown in figure_single_symbol_2_). With "
+"polygon layers you also have the option of setting a **fill style** and "
+"color."
+msgstr ""
+
+# 3803fb8efad74346a52dd2beb0694e0b
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:237
+msgid ""
+"When using simple symbols, the feature is drawn without using an attribute "
+"to control how it looks. This is the dialog for point features."
+msgstr ""
+
+# a3ddb6a1d91945adac7d69b334def31e
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:250
+msgid ""
+"There are different options when defining simple symbols for polyline and "
+"polygon features."
+msgstr ""
+
+# dee13b89d8494312868983ee03f17b08
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:254
+msgid "Graduated Symbols"
+msgstr "階調シンボル"
+
+# ce061cf599ab4e6eb24e2d404918c9de
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:256
+msgid ""
+"Sometimes vector features represent things with a changing numerical value. "
+"Contour lines are a good example of this. Each contour usually has an "
+"attribute value called 'height' that contains information about what height "
+"that contour represents. In  earlier in this topic we showed contours all "
+"drawn with the same colour. Adding colour to the contours can help us to "
+"interpret the meanings of contours. For example we can draw low lying areas "
+"with one colour, mid-altitude areas with another and high-altitude areas "
+"with a third."
+msgstr ""
+
+# 870ccdb9ccd84ad0b1d000e725670970
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:274
+msgid ""
+"The height attribute of contours can be used to separate the contours into 3"
+" classes. Contours between 980 m and 1120 m will be drawn in brown, those "
+"between 1120 m and 1240 m in green and those between 1240 m and 1500 m in "
+"purple."
+msgstr ""
+
+# 79415e7d9b984e76a82c8801a05a7e8d
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:289
+msgid "Our map after setting graduated colours for our contours."
+msgstr "コンターにグラデーションカラーを設定したあとのマップ。"
+
+# c496d1b472d24b5a9de0b723d2b25d27
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:291
+msgid ""
+"Setting colours based on discrete groups of attribute values is called "
+"Graduated Symbology in QGIS. The process is shown in Illustrations "
+"figure_graduated_symbol_1_ and figure_graduated_symbol_2_. **Graduated "
+"symbols** are most useful when you want to show clear differences between "
+"features with attribute values in different value ranges. The GIS "
+"Application will analyse the attribute data (e.g. height) and, based on the "
+"number of classes you request, create groupings for you. This process is "
+"illustrated in table_graduated_1_."
+msgstr ""
+
+# 1497852b439c43a69bdde847a99b5e84
+# c2c07070cd4e4be7b95574e81f542b19
+# 8d831136de4a41968985fdd8880328ad
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:302
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:339
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:419
+msgid "Attribute Value"
+msgstr "属性値"
+
+# 7b0c4b4cf6174a82b8bb6e3735d5123b
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:302
+msgid "Class and Colour"
+msgstr "クラスと色"
+
+# eb04067aed814ba78e220bd3a048e535
+# 698d6e956cc04158bb9c78a4a62dde9b
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:304
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:341
+msgid "1"
+msgstr "1"
+
+# ef0c6e89799a45018dfadefeeda78d03
+# 22e1de71a4b14ed9b5565a80dd904cc7
+# 1ffeceec6a4a44fb93bb9de49bdee56c
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:304
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:306
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:308
+msgid "Class 1"
+msgstr "クラス1"
+
+# 61b6ef5785cd4a46a2da47229ebc1437
+# b1a7650ed09f415aa248ad80314aec0e
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:306
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:343
+msgid "2"
+msgstr "2"
+
+# f1e6a53578b04f05ac8cc47c86a56c77
+# 61b6e85777b3407dba4cb94262481dd3
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:308
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:345
+msgid "3"
+msgstr "3"
+
+# 2957082caf4048c89bb311ab102a05e4
+# ed3deb07f5f244b8a574241d2f752ece
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:310
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:347
+msgid "4"
+msgstr "4"
+
+# a1418aa5ca714edc9b8b46dfc9eaeedb
+# d6fe4fda4b2943cc8bc35d38bdc76854
+# c943d9eda244440ea19f7654bbb78bca
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:310
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:312
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:314
+msgid "Class 2"
+msgstr "クラス2"
+
+# 372aa4976e4f4eff8e9e3a97e26de087
+# f468b0fbcaf9482e81444232718e538d
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:312
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:349
+msgid "5"
+msgstr "5"
+
+# 5215ddc56038429ba23a904ac4abe6db
+# 4b922871790a44faaba242089c93b127
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:314
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:351
+msgid "6"
+msgstr "6"
+
+# f2327830c69d4f678f100932bf059083
+# 5ab2a9f90d494698befd7a6060fad0d9
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:316
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:353
+msgid "7"
+msgstr "7"
+
+# e5dff2d344994df2acb2177cfe19332f
+# e9a5ff4ff560457eba0c041b991f779c
+# 81a9316841bd46d29411134f39ce8922
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:316
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:318
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:320
+msgid "Class 3"
+msgstr "クラス3"
+
+# 549d8d0a78d6411e9261ac40a63c9608
+# 4b17b77e7ae9470ea86b5aab14301f48
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:318
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:355
+msgid "8"
+msgstr "8"
+
+# 6e2b9194ed5d4d61aa864596f954b9c6
+# a77d73027f95447e834b8603e9b09621
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:320
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:357
+msgid "9"
+msgstr "9"
+
+# e46901bd923c4eb48e9ce9422f69b5b0
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:323
+msgid ""
+"Table Graduaded 1: Graduated colour breaks up the attribute value ranges "
+"into the number of classes you select. Each class is represented by a "
+"different colour."
+msgstr ""
+
+# 084dd8ea62e74b7b94dd11f1adf5df2c
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:327
+msgid "Continuous Colour Symbols"
+msgstr "連続カラーシンボル"
+
+# 81ca0fbf5e204048aae73dd2265d3098
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:329
+msgid ""
+"In the previous section on Graduated Colour symbols we saw that we can draw "
+"features in discrete groups or classes. Sometimes it is useful to draw "
+"features in a **colour range** from one colour to another. The GIS "
+"Application will use a numerical attribute value from a feature (e.g. "
+"contour heights or pollution levels in a stream) to decide which colour to "
+"use. Table table_continuous_1_ shows how the attribute value is used to "
+"define a continuous range of colours."
+msgstr ""
+
+# c7faea94154b46ffaea43000a6d97806
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:339
+msgid "Colour (no classes or grouping)"
+msgstr "カラー（無階級またはグルーピング）"
+
+# e4b42e16b1ba477baf7e709e0f38d166
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:360
+msgid ""
+"Table Continuous 1: Continuous colour symbology uses a start colour (e.g. "
+"light orange shown here) and an end colour (e.g. dark brown shown here) and "
+"creates a series of shades between those colours."
+msgstr ""
+
+# 541738568c3a43969b03d52d90c1e61f
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:364
+msgid ""
+"Using the same contours example we used in the previous section, let's see "
+"how a map with continuous colour symbology is defined and looks. The process"
+" starts by setting the layers properties to continuous colour using a dialog"
+" like the one shown in figure_continuos_symbol_1_."
+msgstr ""
+
+# 3eb1361fd4b144c18b070c9844a45d43
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:379
+msgid ""
+"Setting up continuous colour symbology. The contour height attribute is used"
+" to determine colour values. Colours are defined for the minimum and maximum"
+" values. The GIS Application will then create a gradient of colours for "
+"drawing the features based on their heights."
+msgstr ""
+
+# 72c959febe2c46419de3f651380e5b00
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:384
+msgid ""
+"After defining the minimum and maximum colours in the colour range, the "
+"colour features are drawn in will depend on where the attribute lies in the "
+"range between minimum and maximum. For example if you have contour features "
+"with values starting at 1000 m and ending at 1400 m, the value range is 1000"
+" to 1400. If the colour set for the minimum value is set to orange and the "
+"colour for the maximum value is black, contours with a value of close to "
+"1400 m will be drawn close to black. On the other hand contours with a value"
+" near to 1000 m will be drawn close to orange (see "
+"figure_continuous_symbol_2_)."
+msgstr ""
+
+# a99b8e538df64b159c130fe77d4d12f7
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:403
+msgid "A contour map drawn using continuous colour symbology"
+msgstr "連続カラーシンボルを用いた等高線地図"
+
+# 990befb11aed4d01baf86d8be9f67694
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:406
+msgid "Unique Value Symbols"
+msgstr "単一シンボル"
+
+# bad2148fc0a14a80ae041004ad2573c5
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:408
+msgid ""
+"Sometimes the attributes of features are not numeric, but instead "
+"**strings** are used. 'String' is a computer term meaning a group of "
+"letters, numbers and other writing symbols. Strings attributes are often "
+"used to classify things by name. We can tell the GIS Application to give "
+"each unique string or number its own colour and symbol. Road features may "
+"have different classes (e.g. 'street', 'secondary road', 'main road' etc.), "
+"each drawn in the map view of the GIS with different colours or symbols. "
+"This is illustrated in table_unique_1_."
+msgstr ""
+
+# e39e1fb0982549a1b9d113772c9e9753
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:419
+msgid "Colour class and symbol"
+msgstr "色クラスとシンボル"
+
+# a9a91e27059a4afa85477ce8f6dced73
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:421
+msgid "Arterial route"
+msgstr "幹線道路"
+
+# 7941769983414909a51246f20ba79429
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:423
+msgid "Main road"
+msgstr "本道"
+
+# e0a577bfce9745b3b12dcda2aacca8fe
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:425
+msgid "Secondary road"
+msgstr "周辺道路"
+
+# 1070334092874af6906e0747552ec459
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:427
+msgid "Street"
+msgstr "通り"
+
+# ef605370bf7c4544a889cc9be01ec519
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:430
+msgid ""
+"Table Unique 1: Unique attribute values for a feature type (e.g. roads) can "
+"each have their own symbol."
+msgstr ""
+
+# 55ff60acf1514dac87420deab5e40475
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:433
+msgid ""
+"Within the GIS Application we can open/choose to use Unique Value symbology "
+"for a layer. The GIS will scan through all the different string values in "
+"the attribute field and build a list of unique strings or numbers. Each "
+"unique value can then be assigned a colour and style. This is shown in "
+"figure_unique_symbol_1_."
+msgstr ""
+
+# a98a72cec3e1417f86f9b537d595d4a5
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:448
+msgid "Defining unique value symbology for roads based on the road type."
+msgstr "道路の種類に基づいて、道路に対して一意のシンボルを定義します。"
+
+# f3ad40501ca94d738b25ea8ed6981b3c
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:450
+msgid ""
+"When the GIS draws the layer, it will look at the attributes of each feature"
+" before drawing it to the screen. Based on the value in the chosen field in "
+"the attribute table, the road line will be drawn with suitable colour and "
+"line style (and fill style if its a polygon feature). This is shown in "
+"figure_unique_symbol_2_."
+msgstr ""
+
+# 5aaeec13b5ea4ff69ed15006ae07bc0a
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:465
+msgid "A roads vector layer symbolised using a unique value per road type."
+msgstr "道路ベクタレイヤは道路の種別ごとに一意の値を用いてシンボライズされます。"
+
+# ed447666a8d24676b5f7d85732953a99
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:468
+msgid "Things to be aware of"
+msgstr "注意すべき点"
+
+# 460bd23b7be14ae29e0a60c9ed35e072
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:470
+msgid ""
+"Deciding which attributes and symbology to use requires some planning. "
+"Before you start collecting any **GeoSpatial** data, you should ensure you "
+"know what attributes are needed and how it will be symbolised. It is very "
+"difficult to go back and re-collect data if you plan poorly the first time "
+"around. Remember also that the goal of collecting attribute data is to allow"
+" you to analyse and interpret spatial information. How you do this depends "
+"on the questions you are trying to answer. Symbology is a visual language "
+"that allows people to see and understand your attribute data based on the "
+"colours and symbols you use. Because of this you should put a lot of thought"
+" into how you symbolise your maps in order to make them easy to understand."
+msgstr ""
+
+# 699aed45890a46d5bfe8d38b3f43c114
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:482
+msgid "What have we learned?"
+msgstr "わかりましたか?"
+
+# e5e0b58cfddc438f909fd1e64e5503d2
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:484
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "ここでは以下のことを学びました:"
+
+# 608ad22c7e274902bd74db2baed8e6de
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:486
+msgid "Vector features have **attributes**"
+msgstr "ベクタデータは **attributes** を持っています"
+
+# eb1c39ad6ad44f0a9ba7cf326c628431
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:487
+msgid "Attributes **describe** the **properties** of the feature"
+msgstr "地物の **情報** を **記述** する属性"
+
+# 30d795d96fec47be8a699eab971f736d
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:488
+msgid "The attributes are stored in a **table**"
+msgstr "属性は **テーブル** に格納されます"
+
+# 7b318661eb6148e181b24d8d550e1d77
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:489
+msgid "Rows in the table are called **records**"
+msgstr "テーブルの行は **レコード** と呼ばれます"
+
+# 2fb5de41bbf34c1d86d81587873ea49d
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:490
+msgid "There is **one record per feature** in the vector layer"
+msgstr "ベクタレイヤでは **それぞれの地物ごとにレコード** があります"
+
+# eaaa41d84d2546b7b42d053b4dcbbc74
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:491
+msgid "Columns in the table are called **fields**"
+msgstr "テーブルの列は **フィールド** と呼ばれます"
+
+# 919f5e1cf41249f182ad952d7f845ebe
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:492
+msgid ""
+"Fields represent **properties** of the feature e.g. height, roof colour etc."
+msgstr "フィールドは地物の持つ **情報** (例. 高さ, 屋根の色)を表します"
+
+# 50c276114f81488f8f9fe2ece0fa0ffc
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:493
+msgid ""
+"Fields can contain **numerical**, **string** (any text) and **date** "
+"information"
+msgstr "フィールドは,  **数値**, **(任意の) 文字列**, **日付** などの情報を含むことができます"
+
+# 9bf5a21b66f642be8761e1f0862023bd
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:494
+msgid ""
+"The attribute data for a feature can be used to determine how it is "
+"**symbolised**"
+msgstr "地物の属性データはシンボルの設定に使用することができます"
+
+# 84695881c7ab48059c3e722f3b5e393a
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:495
+msgid "**Graduated colour** symbology groups the data into discrete classes"
+msgstr "**階調カラー** シンボルはデータをいくつかのクラスにまとめることができます"
+
+# 19e9c7d0d7894519bb01dd4e43726f5b
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:496
+msgid ""
+"**Continuous colour** symbology assigns colours from a colour range to the "
+"features based on their attributes"
+msgstr "**連続カラー** シンボルは, 地物の属性情報に基づいてカラーレンジの色を割り当てることができます"
+
+# 9a5fb9a2f15248e3ab1bb402fbd3bd45
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:498
+msgid ""
+"**Unique value** symbology associates each different value in the chosen "
+"attribute column with a different symbol (colour and style)"
+msgstr "**個別値** シンボルは指定した属性フィールドの中の個別値にそれぞれ異なるシンボル (色やスタイル) を設定することができます"
+
+# 52307b069b9447cfa14af7d12906cd88
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:500
+msgid ""
+"If the attribute of a vector layer is not used to determine its symbology, "
+"it is drawn using a **single symbol** only"
+msgstr "ベクトルレイヤの属性が定義されたシンボロジーを使用していない場合、**単一のシンボル**を使用して描画されます。"
+
+# 828fbf9453ba4ecd87a3476fe17c2a24
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:504
+msgid "Now you try!"
+msgstr "やってみよう"
+
+# 094d449d31964c3991366293c0843d83
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:506
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "ここでは人に教える際のアイデアいくつか述べていきます:"
+
+# beb763c3084943b58f6e6f3c14db0add
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:508
+msgid ""
+"Using the table that you created in the last topic, add a new column for the"
+" symbology type you would use for each feature type and have the learners "
+"identify which symbology type they would use (see table_example_symbols_1_ "
+"for an example)."
+msgstr ""
+
+# 0ff5d9641e6f4d1396e74de64ff01a8f
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:512
+msgid ""
+"Try to identify which symbology types you would use for the following types "
+"of vector features:"
+msgstr "ベクタの地物は、次のタイプで使用しているシンボロジーの種類を特定するようにしてください："
+
+# d2c60485c586403db4b1f830eef35e96
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:515
+msgid "points showing pH level of soil samples taken around your school"
+msgstr "あなたの学校のまわりで採集された土壌サンプルのpHレベルを示す点"
+
+# 8f0f4472467a4566a16ac6863a42adb3
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:516
+msgid "lines showing a road network in a city"
+msgstr "都市の道路網を示すライン"
+
+# 02a52cb7dfef41da8eda7dd3eab0d9cd
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:517
+msgid ""
+"polygons for houses with an attribute that shows whether it is made of "
+"brick, wood or 'other' material."
+msgstr "レンガ、木材や'他の'材料で作られているかどうかを示す属性をもつ住宅ポリゴン。"
+
+# 877ac20342774d3e9193ff8538908cfc
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:523
+msgid "Real world feature"
+msgstr "実際の地物"
+
+# 875d8c32bc6e44d784d4b56294b88f51
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:523
+msgid "Geometry Type"
+msgstr "ジオメトリタイプ"
+
+# c15031742c5e46ed9b709eafd500b6e2
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:523
+msgid "Symbology Type"
+msgstr "シンボルタイプ"
+
+# 4052a07f84574f0d9dfc9b568d64b8c0
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:525
+msgid "The school flagpole"
+msgstr "学校の旗のポール"
+
+# c39ae55cf42f41f2a936418cd82675d1
+# 8ce99b7b310748ff932cd9d18b299768
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:525
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:531
+msgid "Point"
+msgstr "点"
+
+# b9db5c22c0004bb99aadf6468be2ee73
+# 2ecc97d4822945bc93e82c7a69dfa770
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:525
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:527
+msgid "Single Symbol"
+msgstr "単一シンボル"
+
+# a815b64eac22414bb32e60ae34f3ca93
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:527
+msgid "The soccer field"
+msgstr "サッカー場"
+
+# 2c8243645e9e458aac9a0c1f201409b4
+# 9a9a400e9acf410382475c459c4c0bc6
+# 61d6a9109a9d41429dee16d5642e6067
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:527
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:533
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:537
+msgid "Polygon"
+msgstr "ポリゴン"
+
+# 52ba4109132045a6bf346cd7cc11e408
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:529
+msgid "The footpaths in and around the school"
+msgstr "学校および周辺の歩道"
+
+# ad87c412da8e4d51b78cd1c582f2d765
+# 1a34fd2f4e01443a80cbd0abb26bd87a
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:529
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:535
+msgid "Polyline"
+msgstr "ポリライン"
+
+# 07b311a4b8c5424f821f21996640c67a
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:529
+msgid ""
+"Have your learners count the number of learners using each footpath in the "
+"hour before school and then use **graduated symbols** to show the popularity"
+" of each footpath"
+msgstr ""
+
+# f1e0c01578d546d7a1c7313c29ab9af8
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:531
+msgid "Places where taps are located"
+msgstr "タップが置かれている場所"
+
+# 717193532d8a4a62b33b25fa5876c027
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:531
+msgid "Single symbol"
+msgstr "単一シンボル"
+
+# 5f1f1b1cd7714c2ca0a228a4252f38b4
+# 63d2eb8b7664411fa165ebd2030be8f8
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:533
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:537
+msgid "Classrooms"
+msgstr "教室"
+
+# e80c630098d9481e8e6ae9fbb4466897
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:533
+msgid "**Unique value** based on the grade of the learners in the classroom"
+msgstr ""
+
+# ba1bec183bea45698502837f6aaa1d5a
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:535
+msgid "Fence"
+msgstr "フェンス"
+
+# d198ec00eaa946e7be6474b34270eb84
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:535
+msgid ""
+"Have your learners rate the condition of the fence around your school by "
+"separating it into sections and grading each section on a scale of 1\\-9 "
+"based on its condition. Use **graduated symbols** to classify the condition "
+"attribute."
+msgstr ""
+
+# 7fbd5f9030174cafb2f9260aea528975
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:537
+msgid ""
+"Count the number of learners in each classroom and use a **continuous colour"
+" symbol** to define a range of colours from red to blue."
+msgstr ""
+
+# 3036267149ea4ec5a8e782f2f3b3e220
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:540
+msgid ""
+"Table Example Symbols 1: An example of a table that defines the feature "
+"types and the kind of symbology you would use for each."
+msgstr ""
+
+# 64c7fa1ecf894c3e85aaffe0715deb1f
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:544
+msgid "Something to think about"
+msgstr "考えてみよう"
+
+# e28bf5ef49094650acdc5e9f92f76d58
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:546
+msgid ""
+"If you don't have a computer available, you can use transparency sheets and "
+"a 1:50 000 map sheet to experiment with different symbology types. For "
+"example place a transparency sheet over the map and using different coloured"
+" koki pens, draw in red all contour lines below 900 m (or similar) and in "
+"green all lines above or equal to 900 m. Can you think of how to reproduce "
+"other symbology types using the same technique?"
+msgstr ""
+
+# 229183a2394d48cb872cd7c214dae9fb
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:554
+msgid "Further reading"
+msgstr "より詳しく知りたい場合は"
+
+# 87deb74cb120490787f3f6054f8d6f60
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:556
+msgid "**Website:** http://en.wikipedia.org/wiki/Cartography#Map_symbology"
+msgstr "**Webサイト** http://en.wikipedia.org/wiki/Cartography#Map_symbology"
+
+# a44dbd7aea2643459aa77be60b5ac8f3
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:558
+msgid ""
+"The QGIS User Guide also has more detailed information on working with "
+"attribute data and symbology in QGIS."
+msgstr "QGISユーザーガイドでは, QGISにおける属性データとシンボロジーについてより詳細な情報が含まれています."
+
+# 5768b5e11ea2482982a2811396b3d419
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:562
+msgid "What's next?"
+msgstr "次は?"
+
+# b5fb983889544f0698ecea3a8c26cdcb
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:564
+msgid ""
+"In the section that follows we will take a closer look at **data capture.** "
+"We will put the things we have learned about vector data and attributes into"
+" practice by creating new data."
+msgstr ""

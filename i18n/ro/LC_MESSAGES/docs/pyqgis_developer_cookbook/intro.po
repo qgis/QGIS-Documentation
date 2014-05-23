@@ -1,0 +1,312 @@
+# 
+# Translators:
+# csorin <scalinica@gmail.com>, 2013-2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2014-01-10 18:33+0000\n"
+"Last-Translator: csorin <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:9
+msgid "Introduction"
+msgstr "Introducere"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:11
+msgid ""
+"This document is intended to work both as a tutorial and a reference guide. "
+"While it does not list all possible use cases, it should give a good "
+"overview of the principal functionality."
+msgstr "Acest document are rolul de tutorial dar și de ghid de referință. Chiar dacă nu prezintă toate cazurile de utilizare posibile, ar trebui să ofere o bună imagine de ansamblu a funcționalității principale."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:15
+msgid ""
+"Starting from 0.9 release, QGIS has optional scripting support using Python "
+"language. We've decided for Python as it's one of the most favourite "
+"languages for scripting. PyQGIS bindings depend on SIP and PyQt4. The reason"
+" for using SIP instead of more widely used SWIG is that the whole QGIS code "
+"depends on Qt libraries. Python bindings for Qt (PyQt) are done also using "
+"SIP and this allows seamless integration of PyQGIS with PyQt."
+msgstr "Începând cu versiunea 0.9, QGIS are suport de scriptare opțional, cu ajutorul limbajului Python. Ne-am decis pentru Python deoarece este unul dintre limbajele preferate în scriptare. PyQGIS depinde de SIP și PyQt4. S-a preferat utilizarea SIP în loc de SWIG deoarece întregul cod QGIS depinde de bibliotecile Qt. Legarea Python cu Qt (PyQt) se face, de asemenea, cu ajutorul SIP, acest lucru permițând integrarea perfectă a PyQGIS cu PyQt."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:25
+msgid "**TODO:**"
+msgstr "**DE EFECTUAT:**"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:24
+msgid "Getting PyQGIS to work (Manual compilation, Troubleshooting)"
+msgstr "Noțiuni de bază PyQGIS (Compilare manuală, Depanare)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:27
+msgid ""
+"There are several ways how to use QGIS python bindings, they are covered in "
+"detail in the following sections:"
+msgstr "Există mai multe modalități de a crea legături între QGIS și Python, acestea fiind detaliate în următoarele secțiuni:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:30
+msgid "issue commands in Python console within QGIS"
+msgstr "scrierea comenzilor în consola Python din QGIS"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:31
+msgid "create and use plugins in Python"
+msgstr "crearea în Python a plugin-urilor"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:32
+msgid "create custom applications based on QGIS API"
+msgstr "crearea aplicațiilor personalizate bazate pe QGIS API"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:36
+msgid ""
+"There is a `complete QGIS API <http://qgis.org/api/>`_ reference that "
+"documents the classes from the QGIS libraries. Pythonic QGIS API is nearly "
+"identical to the API in C++."
+msgstr "Există o referință `API QGIS completă <http://qgis.org/api/>`_ care documentează clasele din bibliotecile QGIS. API-ul QGIS pentru python  este aproape identic cu cel pentru C++."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:40
+msgid ""
+"There are some resources about programming with PyQGIS on `QGIS blog "
+"<http://blog.qgis.org/>`_. See `QGIS tutorial ported to Python "
+"<http://blog.qgis.org/?q=node/59>`_ for some examples of simple 3rd party "
+"apps. A good resource when dealing with plugins is to download some plugins "
+"from `plugin repository <http://plugins.qgis.org/>`_ and examine their code."
+" Also, the ``python/plugins/`` folder in your QGIS installation contains "
+"some plugin that you can use to learn how to develop such plugin and how to "
+"perform some of the most common tasks"
+msgstr "Există unele resurse despre programarea PyQGIS pe blog-ul `QGIS <http //blog.qgis.org/>`_. A se vedea `tutorialul QGIS portat în Python <http://blog.qgis.org/?q=node/59>`_  pentru câteva exemple de aplicații simple produse de t3rțe părți. O metodă bună de învățare, atunci când lucrați cu plugin-uri, este de a descărca câteva din `depozitul de plugin-uri <http://plugins.qgis.org/>`_ și să le examinați codul. De asemenea, folderul ``python/plugins/``  din instalarea QGIS conține unele plugin-uri pe care le puteți modifica, pentru a efectua unele dintre cele mai comune sarcini"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:52
+msgid "Python Console"
+msgstr "Consola Python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:54
+msgid ""
+"For scripting, it is possible to take advantage of integrated Python "
+"console. It can be opened from menu: :menuselection:`Plugins --> Python "
+"Console`. The console opens as a non-modal utility window:"
+msgstr "Pentru scripting, se poate utiliza consola Python integrată. Aceasta poate fi deschisă din meniul: :menuselection:`Plugins --> Consola Python`. Consola se deschide ca o fereastră de utilități non-modală:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:62
+msgid "QGIS Python console"
+msgstr "Consola Python din QGIS "
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:64
+msgid ""
+"The screenshot above illustrates how to get the layer currently selected in "
+"the layer list, show its ID and optionally, if it is a vector layer, show "
+"the feature count. For interaction with QGIS environment, there is a "
+":data:`iface` variable, which is an instance of :class:`QgsInterface`. This "
+"interface allows access to the map canvas, menus, toolbars and other parts "
+"of the QGIS application."
+msgstr "Captura de ecran de mai sus ilustrează cum să obțineți accesul la stratul curent selectat în lista straturilor, să-i afișați ID-ul și, opțional, în cazul în care acesta este un strat vectorial, să calculați numărul total de entități spațiale. Pentru interacțiunea cu mediul QGIS, există o variabilă de :date: `iface`, care este o instanță a :clasei: `QgsInterface`. Această interfață permite accesul la suprafața hărții, meniuri, barele de instrumente și la alte părți ale aplicației QGIS."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:71
+msgid ""
+"For convenience of the user, the following statements are executed when the "
+"console is started (in future it will be possible to set further initial "
+"commands)::"
+msgstr "Pentru confortul utilizatorului, următoarele afirmații sunt executate atunci când consola este pornită (în viitor, va fi posibil să stabiliți comenzi inițiale suplimentare)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:78
+msgid ""
+"For those which use the console often, it may be useful to set a shortcut "
+"for triggering the console (within menu :menuselection:`Settings --> "
+"Configure shortcuts...`)"
+msgstr "Pentru cei care folosesc des consola, ar putea fi util să stabilească o comandă rapidă pentru declanșarea consolei (în meniul :menuselection: `Settings -> Configurare comenzi rapide ...`)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:85
+msgid "Python Plugins"
+msgstr "Plugin-uri Python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:87
+msgid ""
+"QGIS allows enhancement of its functionality using plugins. This was "
+"originally possible only with C++ language. With the addition of Python "
+"support to QGIS, it is also possible to use plugins written in Python. The "
+"main advantage over C++ plugins is its simplicity of distribution (no "
+"compiling for each platform needed) and easier development."
+msgstr "QGIS permite îmbunătățirea funcționalității sale, folosind plugin-uri. Acest lucru a fost inițial posibil numai cu ajutorul limbajului C. Odată cu adăugarea în QGIS a suportului pentru Python, este posibilă și folosirea de plugin-uri scrise în Python. Principalul avantaj față de plugin-urile în C este simplitatea distribuției (nu este necesară compilarea pentru fiecare platformă) iar dezvoltarea este mai ușoară."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:93
+msgid ""
+"Many plugins covering various functionality have been written since the "
+"introduction of Python support. The plugin installer allows users to easily "
+"fetch, upgrade and remove Python plugins. See the `Python Plugin "
+"Repositories <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_ page "
+"for various sources of plugins."
+msgstr "Multe plugin-uri care acoperă diverse funcționalități au fost scrise de la introducerea suportului pentru Python. Instalatorul de plugin-uri permite utilizatorilor aducerea cu ușurință, actualizarea și eliminarea plugin-uri Python. A se vedea pagina `Depozitele de Plugin-uri Python <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_  pentru diferitele surse de plugin-uri."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:99
+msgid ""
+"Creating plugins in Python is simple, see :ref:`developing_plugins` for "
+"detailed instructions."
+msgstr "Crearea de plugin-uri în Python este simplă, a se vedea :ref: `developing_plugins` pentru instrucțiuni detaliate."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:106
+msgid "Python Applications"
+msgstr "Aplicații "
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:108
+msgid ""
+"Often when processing some GIS data, it is handy to create some scripts for "
+"automating the process instead of doing the same task again and again. With "
+"PyQGIS, this is perfectly possible --- import the :mod:`qgis.core` module, "
+"initialize it and you are ready for the processing."
+msgstr "Adesea, atunci când are loc procesarea unor date GIS, este recomandabilă crearea unor script-uri pentru automatizarea procesului în loc de a face iarăși și iarăși aceeași sarcină. Cu PyQGIS, acest lucru este perfect posibil --- importați :modul: `qgis.core`, îl inițializați și sunteți gata pentru prelucrare."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:113
+msgid ""
+"Or you may want to create an interactive application that uses some GIS "
+"functionality --- measure some data, export a map in PDF or any other "
+"functionality. The :mod:`qgis.gui` module additionally brings various GUI "
+"components, most notably the map canvas widget that can be very easily "
+"incorporated into the application with support for zooming, panning and/or "
+"any further custom map tools."
+msgstr "Sau poate doriți să creați o aplicație interactivă care utilizează unele funcționalități GIS --- măsurarea anumitor date, exportarea unei hărți în format PDF sau orice alte funcționalități. Modulul :mod:`qgis.gui` aduce în plus diverse componente GUI, mai ales widget-ul ariei hărții, care poate fi foarte ușor încorporat în aplicațiile cu suport pentru zoom, panning și/sau orice alte instrumente personalizabile."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:122
+msgid "Using PyQGIS in custom application"
+msgstr "Utilizarea PyQGIS în aplicații personalizate"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:124
+msgid ""
+"Note: do *not* use :file:`qgis.py` as a name for your test script --- Python"
+" will not be able to import the bindings as the script's name will shadow "
+"them."
+msgstr "Notă: *nu* utilizați :file:`qgis.py` ca nume pentru script-ul de test --- datorită acestui nume, Python nu va fi capabil să importe legăturile."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:127
+msgid ""
+"First of all you have to import qgis module, set QGIS path where to search "
+"for resources --- database of projections, providers etc. When you set "
+"prefix path with second argument set as :const:`True`, QGIS will initialize "
+"all paths with standard dir under the prefix directory. Calling "
+":func:`initQgis` function is important to let QGIS search for the available "
+"providers."
+msgstr "Mai întâi de toate, trebuie să importați modul qgis, să setați calea către resurse --- baza de date a proiecțiilor, furnizorii etc. Când setați prefixul căii având ca al doilea argument :const: `True`, QGIS va inițializa toate căile cu standardul dir în directorul prefixului. La apelarea funcției :func:`initQgis` este important să permiteți aplicației QGIS să căute furnizorii disponibili."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:143
+msgid ""
+"Now you can work with QGIS API --- load layers and do some processing or "
+"fire up a GUI with a map canvas. The possibilities are endless :-)"
+msgstr "Acum puteți lucra cu API QGIS --- încărcați straturile și faceți unele prelucrări sau startați un GUI cu o zonă pentru o hartă. Posibilitățile sunt nelimitate :-)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:146
+msgid ""
+"When you are done with using QGIS library, call :func:`exitQgis` to make "
+"sure that everything is cleaned up (e.g. clear map layer registry and delete"
+" layers)::"
+msgstr "Când ați terminat cu utilizarea bibliotecii QGIS, apelați funcția :func:`exitQgis` pentru a vă asigura că totul este curat (de exemplu, curățați registrul stratului hărții și ștergeți straturile)::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:156
+msgid "Running Custom Applications"
+msgstr "Rularea aplicațiilor personalizate"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:158
+msgid ""
+"You will need to tell your system where to search for QGIS libraries and "
+"appropriate Python modules if they are not in a well-known location --- "
+"otherwise Python will complain::"
+msgstr "Trebuie să indicați sistemului dvs. unde să căute bibliotecile QGIS și modulele Python corespunzătoare, dacă acestea nu sunt într-o locație standard --- altfel Python va semnaliza:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:165
+msgid ""
+"This can be fixed by setting the ``PYTHONPATH`` environment variable. In the"
+" following commands, ``qgispath`` should be replaced with your actual QGIS "
+"installation path:"
+msgstr "Aceasta se poate repara prin setarea variabilei de mediu ``PYTHONPATH``. În următoarele comenzi, ``qgispath`` ar trebui să fie înlocuit de către calea de instalare actuală a QGIS:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:169
+msgid "on Linux: :command:`export PYTHONPATH=/qgispath/share/qgis/python`"
+msgstr "în Linux: :command:`export PYTHONPATH=/qgispath/share/qgis/python`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:170
+msgid "on Windows: :command:`set PYTHONPATH=c:\\\\qgispath\\\\python`"
+msgstr "în Windows: :command:`set PYTHONPATH=c:\\\\qgispath\\\\python`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:172
+msgid ""
+"The path to the PyQGIS modules is now known, however they depend on "
+"``qgis_core`` and ``qgis_gui`` libraries (the Python modules serve only as "
+"wrappers). Path to these libraries is typically unknown for the operating "
+"system, so you get an import error again (the message might vary depending "
+"on the system)::"
+msgstr "Calea către modulele PyQGIS este acum cunoscută, totuși, acestea depind de bibliotecile ``qgis_core`` și ``qgis_gui`` (modulele Python servesc numai pentru ambalare). Calea către aceste biblioteci este de obicei necunoscută sistemului de operare, astfel încât veți obține iarăși o eroare de import  (mesajul poate varia în funcție de sistem)::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:180
+msgid ""
+"Fix this by adding the directories where the QGIS libraries reside to search"
+" path of the dynamic linker:"
+msgstr "Remediați acest lucru prin adăugarea directoarelor în care rezidă bibliotecile QGIS la calea de căutare a linker-ului dinamic:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:183
+msgid "on Linux: :command:`export LD_LIBRARY_PATH=/qgispath/lib`"
+msgstr "în Linux: :command:`export LD_LIBRARY_PATH=/qgispath/lib`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:184
+msgid "on Windows: :command:`set PATH=C:\\\\qgispath;%PATH%`"
+msgstr "în Windows: :command:`set PATH=C:\\\\qgispath;%PATH%`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:186
+msgid ""
+"These commands can be put into a bootstrap script that will take care of the"
+" startup. When deploying custom applications using PyQGIS, there are usually"
+" two possibilities:"
+msgstr "Aceste comenzi pot fi puse într-un script bootstrap, care va avea grijă de pornire. Când livrați aplicații personalizate folosind PyQGIS, există, de obicei, două posibilități:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:190
+msgid ""
+"require user to install QGIS on his platform prior to installing your "
+"application. The application installer should look for default locations of "
+"QGIS libraries and allow user to set the path if not found. This approach "
+"has the advantage of being simpler, however it requires user to do more "
+"steps."
+msgstr "să cereți utilizatorului să instaleze QGIS pe platforma sa înainte de a instala aplicația. Instalatorul aplicației ar trebui să caute locațiile implicite ale bibliotecilor QGIS și să permită utilizatorului setarea căii, în cazul în care nu poate fi găsită. Această abordare are avantajul de a fi mai simplă, cu toate acestea este nevoie ca utilizatorul să parcurgă mai multe etape."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:196
+msgid ""
+"package QGIS together with your application. Releasing the application may "
+"be more challenging and the package will be larger, but the user will be "
+"saved from the burden of downloading and installing additional pieces of "
+"software."
+msgstr "să împacheteze QGIS împreună cu aplicația dumneavoastră. Livrarea aplicației poate fi mai dificilă, iar pachetul va fi mai mare, dar utilizatorul va fi salvat de povara de a descărca și instala software suplimentar."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:201
+msgid ""
+"The two deployment models can be mixed - deploy standalone application on "
+"Windows and Mac OS X, for Linux leave the installation of QGIS up to user "
+"and his package manager."
+msgstr "Cele două modele pot fi combinate - puțeți distribuiți aplicații independente pe Windows și Mac OS X, lăsând la îndemâna utilizatorului și a managerul de pachete instalarea QGIS pe Linux."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:34
+msgid "API"
+msgstr "API"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:48
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:82
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:102
+msgid "Python"
+msgstr "Python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:48
+msgid "console"
+msgstr "consolă"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:82
+msgid "plugins"
+msgstr "plugin-uri"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:102
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:152
+msgid "custom applications"
+msgstr "aplicații personalizate"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:152
+msgid "running"
+msgstr "în execuție"

@@ -1,0 +1,111 @@
+# 
+# Translators:
+# Shu Higashi <higa432@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2013-11-22 23:38+0000\n"
+"Last-Translator: Shu Higashi <higa432@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:9
+msgid "Projections Support"
+msgstr "投影法サポート"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:14
+msgid "Coordinate reference systems"
+msgstr "空間参照系"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:16
+msgid ""
+"Coordinate reference systems (CRS) are encapsulated by "
+":class:`QgsCoordinateReferenceSystem` class. Instances of this class can be "
+"created by several different ways:"
+msgstr "空間参照系(CRS)は :class:`QgsCoordinateReferenceSystem` クラスによってカプセル化されています。このクラスのインスタンスの作成方法はいくつかあります:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:20
+msgid "specify CRS by its ID::"
+msgstr "CRS をID で指定::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:26
+msgid "QGIS uses three different IDs for every reference system:"
+msgstr "QGISは参照系ごとにに3種類のIDを使います。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:28
+msgid ":const:`PostgisCrsId` - IDs used within PostGIS databases."
+msgstr ":const:`PostgisCrsId` - PostGIS データベース内で使用されるID。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:29
+msgid ":const:`InternalCrsId` - IDs internally used in QGIS database."
+msgstr ":const:`InternalCrsId` - QGIS データベース内部で使用されるID。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:30
+msgid ":const:`EpsgCrsId` - IDs assigned by the EPSG organization"
+msgstr ":const:`EpsgCrsId` - EPSG 組織が割り当てたID"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:32
+msgid ""
+"If not specified otherwise in second parameter, PostGIS SRID is used by "
+"default."
+msgstr "2番目のパラメータが指定されなければ、PostGIS SRID がデフォルトで使用されます。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:34
+msgid "specify CRS by its well-known text (WKT)::"
+msgstr "よく知られたテキスト(WKT) でCRS を指定してください::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:42
+msgid ""
+"create invalid CRS and then use one of the :func:`create*` functions to "
+"initialize it. In following example we use Proj4 string to initialize the "
+"projection::"
+msgstr "不適切なCRS を作成し、次に :func:`create*` 機能のひとつを使用して初期化します。以下の例ではProj4 文字列を使用して投影法を初期化します::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:49
+msgid ""
+"It's wise to check whether creation (i.e. lookup in the database) of the CRS"
+" has been successful: :func:`isValid` must return :const:`True`."
+msgstr "CRSの作成(例:データベース内のルックアップ)が成功したかどうかをチェックするのは賢明です: :func:`isValid` は :const:`True` を返さなければなりません。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:52
+msgid ""
+"Note that for initialization of spatial reference systems QGIS needs to "
+"lookup appropriate values in its internal database :file:`srs.db`. Thus in "
+"case you create an independent application you need to set paths correctly "
+"with :func:`QgsApplication.setPrefixPath` otherwise it will fail to find the"
+" database. If you are running the commands from QGIS python console or "
+"developing a plugin you do not care: everything is already set up for you."
+msgstr "空間参照系を初期化するにはQGIS はその内部データベース :file:`srs.db` で適切な値を探し出す必要がある点に注意してください。このため、独立したアプリケーションを作成するには、 :func:`QgsApplication.setPrefixPath` でパスを正しくセットする必要があります。さもなければデータベース検索に失敗します。コマンドをQGIS python コンソールで実行していたり、あるいはプラグインを開発している場合には気にする必要はありません: 全てセットアップ済です。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:59
+msgid "Accessing spatial reference system information::"
+msgstr "空間参照系情報にアクセス::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:76
+msgid "Projections"
+msgstr "投影法"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:78
+msgid ""
+"You can do transformation between different spatial reference systems by "
+"using :class:`QgsCoordinateTransform` class. The easiest way to use it is to"
+" create source and destination CRS and construct "
+":class:`QgsCoordinateTransform` instance with them. Then just repeatedly "
+"call :func:`transform` function to do the transformation. By default it does"
+" forward transformation, but it is capable to do also inverse "
+"transformation::"
+msgstr "異なる空間参照系の間での変換は :class:`QgsCoordinateTransform`クラスを使って実行できます。いちばん簡単な使い方は、それを使ってソース、目的のCRS、そして construct :class:`QgsCoordinateTransform` インスタンスを作成することです。そうすれば、変換の実行は単に :func:`transform` 機能を繰り返し呼び出すだけです。デフォルトでは前方変換を行いますが、反転変換を行うこともできます::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:11
+msgid "coordinate reference systems"
+msgstr "空間参照系"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:73
+msgid "projections"
+msgstr "投影法"
