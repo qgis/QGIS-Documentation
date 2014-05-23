@@ -1,0 +1,172 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-22 21:32+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:6
+msgid "More algorithms and data types"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:9
+msgid ""
+"In this lesson we will run three more algorithms, learn how to use other "
+"input types, and configure outputs to be saved to a given folder "
+"automatically."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:11
+msgid ""
+"For this lessons we will need a table and a polygons layer. We are going to "
+"create a points layer based on coordinates in the table, and then count the "
+"number of points in each polygon. If you open the QGIS project corresponding"
+" to this lesson, you will find a table with X and Y coordinates, but you "
+"will find no polygons layer. Don't worry, we will create it using a "
+"processing geoalgorithm."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:13
+msgid ""
+"The first thing we are going to do is to create a points layer from the "
+"coordinates in the table, using the *Convert table to points* algorithm. You"
+" now know how to use the search box, so it should not be hard for you to "
+"find it. Double--click on it to run it and get to its following dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:15
+msgid ""
+"This algorithm, like the one from the previous lesson, just generates a "
+"single output, and it has three inputs:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:17
+msgid ""
+"Table: the table with the coordinates. You should select here the table from"
+" the lesson data."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:18
+msgid ""
+"X an Y fields: these two parameters are linked to the first one. The "
+"corresponding selector will show the name of those fields that are available"
+" in the selected table. Select the *XCOORD* field for the *X* parameter, and"
+" the *YYCOORD* field for the *Y* parameter."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:19
+msgid ""
+"CRS: Since this algorithm takes no input layers, it cannot assign a CRS to "
+"the output layer based on them. Instead, it asks you to manually select the "
+"CRS that the coordinates in the table use. Click on the button on the left--"
+"hand side to open the QGIS CRS selector, and select EPSG:4326 as the output "
+"CRS. We are using this CRS because the coordinates in the table are in that "
+"CRS."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:21
+msgid "Your dialog should look like this."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:25
+msgid "Now press the *Run* button to get the following layer:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:29
+msgid ""
+"The next thing we need is the polygon layer. We are going to create a "
+"regular grid of polygons using the *Create grid* algorithm, which has the "
+"following parameters dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:33
+msgid ""
+"The inputs required to create the grid are all numbers. When you have to "
+"enter a numerical value, you have two options: typing it directly on the "
+"corresponding box or clicking the button on the right--hand side to get to a"
+" dialog like the one shown next."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:37
+msgid ""
+"The dialog contains a simple calculator, so you can type expressions such as"
+" ``11 * 34.7 + 4.6``, and the result will be computed and put in the "
+"corresponding text box in the parameters dialog. Also, it contains constants"
+" that you can use, and values from other layers available."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:39
+msgid ""
+"In this case, we want to create a grid that covers the extent of the inut "
+"points layer, so we should use its coordinates to calculate the center "
+"coordinate of the grid and its width and height, since those are the "
+"parameters that the algorithm takes to create the grid. With a little bit of"
+" math, try to do that yourself using the calculator dialog and the constants"
+" from the input points layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:41
+msgid "Select *Rectangles (polygons)* in the *Type* field."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:43
+msgid ""
+"As in the case of the last algorithm, we have to enter the CRS here as well."
+" Select EPSG:4326 as the target CRS, as we did before."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:45
+msgid "In the end, you should have a parameters dialog like this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:49
+msgid "Press *Run* and you will get the graticule layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:53
+msgid ""
+"The last step is to count the points in each on of the rectangles of that "
+"graticule. We will use the *Count points in polygons* algorithm."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:57
+msgid "Now we have the result we were looking for."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:59
+msgid ""
+"Before finishing this lesson, here is a quick tip to make your life easier "
+"in case you want to persistently save your data. If you want all your output"
+" files to be saved in a given folder, you do not have to type the folder "
+"name each time. Instead, go to the processing menu and select the *Options "
+"and configuration* item. It will open the configuration dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:63
+msgid ""
+"In the *Output folder* entry that you will find in the *General* group, type"
+" the path to your destination folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:67
+msgid ""
+"Now when you run an algorithm, just use the filename instead of the full "
+"path. For instance, with the configuration shown above, if you enter "
+"``graticule.shp`` as the output path for the algorithm that we have just "
+"used, the result will be saved in ``D:\\processing_output\\graticule.shp``. "
+"You can still enter a full path in case you want a result to be saved in a "
+"different folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:70
+msgid ""
+"Try yourself the *Create grid* algorithm with different grid sizes, and also"
+" with different types of grids. We will use the hexagonal one in a later "
+"chapter."
+msgstr ""
