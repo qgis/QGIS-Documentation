@@ -493,7 +493,7 @@ http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum.
 You can modify the options according to your needs. Some of the changes may
 require a restart of |qg| before they will be effective.
 
-* |nix| Settings are saved in a text file: :file:`$HOME/.config/QGIS/qgis.conf`
+* |nix| Settings are saved in a text file: :file:`$HOME/.config/QGIS/QGIS2.conf`
 * |osx| You can find your settings in: :file:`$HOME/Library/Preferences/org.qgis.qgis.plist`
 * |win| Settings are stored in the registry under: ``HKEY\CURRENT_USER\Software\QGIS\qgis``
 

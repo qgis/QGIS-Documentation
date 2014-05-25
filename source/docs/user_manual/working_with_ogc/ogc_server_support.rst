@@ -241,3 +241,16 @@ OCG WMS 1.3.0 specification:
     http://localhost/cgi-bin/qgis_mapserv.fcgi?\
       REQUEST=GetMap&LAYERS=mylayer1,mylayer2&OPACITIES=125,200&...
 
+
+Environment variables
+.....................
+
+* **QGIS_OPTIONS_PATH**: The variable specifies path to directory with settings. 
+  It works the same ways as QGIS application --optionspath option. It is looking 
+  for settings file in <QGIS_OPTIONS_PATH>/QGIS/QGIS2.ini. For exaple, to set 
+  QGIS server on Apache to use /path/to/config/QGIS/QGIS2.ini settings file, 
+  add to Apache config:
+
+  ::
+
+    SetEnv QGIS_OPTIONS_PATH "/path/to/config/"

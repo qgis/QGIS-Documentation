@@ -288,7 +288,13 @@ You can have multiple configurations and decide which one to use when starting
 |qg| with this option. See :ref:`gui_options` to confirm where the
 operating system saves the settings files. Presently, there is no way to specify
 a file to write settings to; therefore, you can create a copy of
-the original settings file and rename it.
+the original settings file and rename it. The option specifies path to directory 
+with settings. For example, to use /path/to/config/QGIS/QGIS2.ini settings file, 
+use option:
+
+::
+
+    --optionspath /path/to/config/
 
 **Command line option** ``--configpath``
 
