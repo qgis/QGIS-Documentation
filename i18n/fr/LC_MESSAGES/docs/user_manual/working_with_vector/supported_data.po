@@ -5,14 +5,15 @@
 # Translators:
 # DelazJ <delazj@gmail.com>, 2013
 # yjacolin <yjacolin@free.fr>, 2013
-# MarieSilvestre <marie.silvestre@gmail.com>, 2013
+# MarieSilvestre <marie.silvestre@gmail.com>, 2013-2014
+# Ptigrouick <nmoyroud@free.fr>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-20 18:40+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-05-23 19:51+0000\n"
+"Last-Translator: Ptigrouick <nmoyroud@free.fr>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -506,7 +507,7 @@ msgstr "|qg| gère les vues SpatiaLite éditables."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:10
 msgid ""
@@ -519,7 +520,7 @@ msgid ""
 "are supported by the OGR library (see OGR-SOFTWARE-SUITE in "
 ":ref:`literature_and_web`). The complete list is available at "
 "http://www.gdal.org/ogr/ogr_formats.html."
-msgstr ""
+msgstr "|qg| utilise la bibliothèque OGR pour lire et écrire des données vectorielles incluant les formats  ESRI shapefiles, MapInfo et MicroStation ; les bases de données AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial et MS SQL Spatial et de nombreux autres formats. Les données vectorielles GRASS et PostgreSQL sont gérées par des extensions natives de |qg|. Les données vectorielles peuvent également être lues depuis des archives zip ou gzip. A ce jour, 69 formats de données vectorielles sont gérés par la bibliothèque OGR (voir OGR-SOFTWARE-SUITE dans :ref:`literature_and_web`). La liste complète est disponible sur http://www.gdal.org/ogr/ogr_formats.html."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:20
 msgid ""
@@ -529,7 +530,7 @@ msgid ""
 "want to use. Only those formats that have been well tested will appear in "
 "the list of file types when loading a vector into |qg|. Other untested "
 "formats can be loaded by selecting ``*.*``."
-msgstr ""
+msgstr "Tous les formats listés ne fonctionnent par dans |qg|, pour différentes raisons. Par exemple, certain requiert des bibliothèques externes payantes ou l'installation de QDAL/OGR n'a pas été effectuée correctement sur votre système pour le format demandé. Seuls les formats qui ont été testés apparaissent dans la liste des types de fichiers proposés au moment de charger un vecteur dans |qg|. Les autres formats peuvent être chargés en sélectionnant ``*.*``."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:29
 msgid ""
@@ -538,26 +539,26 @@ msgid ""
 "Comma Separated data (CSV). Many of the features available in |qg| work the "
 "same, regardless of the vector data source. This is by design, and it "
 "includes the identify, select, labeling and attributes functions."
-msgstr ""
+msgstr "Cette section décrit comment travailler avec les formats les plus communs : les shapefiles ESRI, les couches PostGIS, SpatiaLite et les données au format texte CSV. Beaucoup des fonctionnalités de |qg| marchent, de par sa conception, de la même manière quel que soit le format vecteur des données sources. Il s'agit des fonctionnalités d'identification, de sélection, d'étiquetage et de gestion des attributs."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:41
 msgid ""
 "The standard vector file format used in |qg| is the ESRI shapefile. Support "
 "is provided by the :index:`OGR Simple Feature Library` "
 "(http://www.gdal.org/ogr/)."
-msgstr ""
+msgstr "Le format de fichier vecteur standard utilisé par QGIS est le shapefile ESRI. Il est géré à travers la bibliothèque :index:`OGR Simple Feature Library` (http://www.gdal.org/ogr/)."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:47
 msgid ":file:`.shp` file containing the feature geometries"
-msgstr ""
+msgstr ":file:`.shp` fichier contenant la géométrie des entités."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:48
 msgid ":file:`.dbf` file containing the attributes in dBase format"
-msgstr ""
+msgstr ":file:`.dbf` fichier contenant les attributs au format dBase."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:49
 msgid ":file:`.shx` index file"
-msgstr ""
+msgstr ":file:`.shx` fichier d'index."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:51
 msgid ""
@@ -566,7 +567,7 @@ msgid ""
 "projection file, it is not mandatory. A shapefile dataset can contain "
 "additional files. For further details, see the ESRI technical specification "
 "at http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
-msgstr ""
+msgstr "Un shapefile inclu également un fichier ayant l'extension :file:`.prj` qui contient les informations sur le système de coordonnées. Bien que ces informations soient très utiles elles ne sont pas obligatoires. Il peut y avoir encore d'autres fichiers associés aux données shapefile. Si vous souhaitez avoir plus de détails, nous vous recommandons de vous reporter aux spécifications techniques du format shapefile, qui se trouve notamment sur http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:61
 msgid ""
@@ -574,7 +575,7 @@ msgid ""
 "|mActionAddOgrLayer| :sup:`Add Vector Layer` toolbar button, or simply press"
 " :kbd:`Ctrl+Shift+V`. This will bring up a new window (see "
 "figure_vector_1_)."
-msgstr ""
+msgstr "Pour :index:`charger un shapefile`, lancez |qg| et cliquez sur le bouton |mActionAddOgrLayer| :sup:`Ajouter une couche vecteur` ou pressez les touches :kbd:`Ctrl+Shift+V`. Une nouvelle fenêtre apparaîtra (voir figure_vector_1_)."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:76
 msgid ""
@@ -584,11 +585,11 @@ msgid ""
 "shapefile or other supported data source. The selection box "
 ":guilabel:`Filter` |selectstring| allows you to preselect some OGR-supported"
 " file formats."
-msgstr ""
+msgstr "Cliquez sur |radiobuttonon| :guilabel:`Fichier` puis sur le bouton **[Parcourir]**. L'outil ouvre alors une fenêtre de dialogue standard (voir figure_vector_2_) qui vous permet de naviguer dans les répertoires et les fichiers et charger le shapefile ou tout autre format géré. La boîte de sélection :guilabel:`Fichiers de type` |selectstring| vous permet de présélectionner un format de fichier géré par OGR."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:82
 msgid "You can also select the encoding for the shapefile if desired."
-msgstr ""
+msgstr "Si vous le souhaitez, vous pouvez également sélectionner le type de codage du shapefile."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:114
 msgid ""
@@ -598,7 +599,7 @@ msgid ""
 "name in the legend and choosing :menuselection:`Properties` from the context"
 " menu. See section :ref:`vector_style_menu` for more information on setting "
 "symbology of vector layers."
-msgstr ""
+msgstr "Une fois le shapefile chargé, vous pouvez zoomer dessus en utilisant les outils de navigation sur la carte. Pour changer la symbologie d'une couche, ouvrez la fenêtre :guilabel:`Propriétés de la Couche` en double-cliquant sur le nom de la couche ou en faisant un clic droit sur son nom dans la légende et en choisissant :menuselection:`Propriétés` dans le menu qui apparait. Pour plus de détails sur les paramètres de la symbologie des couches vectorielles, référez-vous à la section :ref:`vector_style_menu`."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:125
 msgid ""
@@ -613,19 +614,19 @@ msgstr ""
 msgid ""
 "Load a shapefile by clicking on the |mActionAddOgrLayer| :sup:`Add Vector "
 "Layer` toolbar button or pressing :kbd:`Ctrl+Shift+V`."
-msgstr ""
+msgstr "Chargez un shapefile en cliquant sur le bouton |mActionAddOgrLayer| :sup:`Ajouter une couche vecteur` de la barre d'outils ou en pressant les touches :kbd:`Ctrl+Shift+V`."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:143
 msgid ""
 "Open the :guilabel:`Layer Properties` dialog by double-clicking on the "
 "shapefile name in the legend or by right-clicking and choosing "
 ":menuselection:`Properties` from the context menu."
-msgstr ""
+msgstr "Ouvrez la fenêtre :guilabel:`Propriétés de la Couche` en double-cliquant sur le nom de la couche dans la légende ou en faisant un clic droit et en choisissant :menuselection:`Propriétés` dans le menu qui apparait."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:146
 msgid ""
 "In the :guilabel:`General` tab, click the **[Create Spatial Index]** button."
-msgstr ""
+msgstr "Dans l'onglet :guilabel:`Général`, cliquez sur le bouton **[Créer un index spatial]**."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:151
 msgid ""
@@ -636,7 +637,7 @@ msgid ""
 "**[Specify...]**  button. This is due to the fact that :file:`.prj` files "
 "often do not provide the complete projection parameters as used in |qg| and "
 "listed in the :guilabel:`CRS` dialog."
-msgstr ""
+msgstr "Si vous ouvrez un shapefile disposant d'un fichier :file:`.prj` et que |qg| ne parvient pas à lire le système de coordonnées de référence, vous allez devoir le définir manuellement via l'onglet :guilabel:`Général` de la fenêtre de :guilabel:`Propriétés de la Couche` en cliquant sur les bouton **[Specifier...]**. Cela est dû au fait que ce fichier :file:`.prj` ne fournit pas les paramètres complets de la projection requis par |qg| et listés dans la fenêtre :guilabel:`SCR`."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:159
 msgid ""
@@ -645,7 +646,7 @@ msgid ""
 "parameters, compatible with ESRI software, and a :file:`.qpj` file, "
 "providing the complete parameters of the used CRS. Whenever |qg| finds a "
 ":file:`.qpj` file, it will be used instead of the :file:`.prj`."
-msgstr ""
+msgstr "C'est pour la même raison que lorsque vous créez un nouveau shapefile avec |qg|, deux fichiers de projection différents sont créés. Un fichier :file:`.prj` contenant un nombre limité de paramètres, compatible avec les logiciels ESRI et un fichier :file:`.qpj`, fournissant la totalité des paramètres du SCR utilisé. Chaque fois que |qg| trouve un fichier :file:`.qpj`, il l'utilisera à la place du fichier :file:`.prj`."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:171
 msgid ""
@@ -671,11 +672,11 @@ msgstr ""
 msgid ""
 "Similarly, you can load directory-based vector files in the UK National "
 "Transfer Format, as well as the raw TIGER Format of the US Census Bureau."
-msgstr ""
+msgstr "De manière similaire vous pouvez directement charger les fichiers vecteurs au format UK National Transfer ainsi que le format TIGER brut de l'US Census Bureau."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:198
 msgid "Delimited Text Files"
-msgstr ""
+msgstr "Fichiers de Texte Délimité"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:200
 msgid ""
@@ -691,89 +692,89 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:207
 msgid ""
 "Such data files can also contain positional information in two main forms:"
-msgstr ""
+msgstr "De tels fichiers de données peuvent aussi contenir des informations de positionnement dans deux formes différentes :"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:209
 msgid "As point coordinates in separate columns"
-msgstr ""
+msgstr "Avec des coordonnées de points en colonnes séparées"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:210
 msgid "As well-known text (WKT) representation of geometry"
-msgstr ""
+msgstr "Avec une représentation ``well-known text`` (WKT) de la géométrie"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:212
 msgid ""
 "|qg| allows you to load a delimited text file as a layer or ordinal table. "
 "But first check that the file meets the following requirements:"
-msgstr ""
+msgstr "|qg| vous permet de charger un fichier texte délimité en tant que couche ou simple table. Mais il faut d'abord vérifier les points suivants :"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:215
 msgid ""
 "The file must have a delimited header row of field names. This must be the "
 "first line in the text file."
-msgstr ""
+msgstr "Le fichier doit avoir une ligne d'entête délimitée avec les noms des champs. Il doit s'agir de la première ligne du fichier."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:217
 msgid ""
 "The header row must contain field(s) with geometry definition. These "
 "field(s) can have any name."
-msgstr ""
+msgstr "La ligne d'entête doit contenir un ou plusieurs champs stockant la géométrie. Ils peuvent porter n'importe quel nom."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:219
 msgid ""
 "The X and Y coordinates (if geometry is defined by coordinates) must be "
 "specified as numbers. The coordinate system is not important."
-msgstr ""
+msgstr "Les coordonnées X et Y doivent être de type numérique (si la géométrie est définie par des coordonnées). Le système de coordonnées n'est pas important."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:222
 msgid ""
 "As an example of a valid text file, we import the elevation point data file "
 ":file:`elevp.csv` that comes with the |qg| sample dataset (see section "
 ":ref:`label_sampledata`):"
-msgstr ""
+msgstr "Comme exemple de fichier texte valide, nous pouvons importer le fichier point d'élévation :file:`elevp.csv` fourni avec le jeu de données échantillon de |qg| (voir section :ref:`label_sampledata`) :"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:234
 msgid "Some items to note about the text file:"
-msgstr ""
+msgstr "Notons les points suivants à propos du fichier texte :"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:236
 msgid ""
 "The example text file uses ``;`` (semicolon) as delimiter. Any character can"
 " be used to delimit the fields."
-msgstr ""
+msgstr "Le fichier texte d'exemple utilise le ``;`` comme délimiteur. N'importe quel caractère peut être utilisé comme délimiteur de champ."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:238
 msgid ""
 "The first row is the header row. It contains the fields ``X``, ``Y`` and "
 "``ELEV``."
-msgstr ""
+msgstr "La première ligne est la ligne d'entête. Elle contient les champs ``X``, ``Y`` et ``ELEV``."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:240
 msgid "No quotes (``\"``) are used to delimit text fields."
-msgstr ""
+msgstr "Aucun guillemet (``\"``) n'est utilisé pour délimiter les champs textes."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:241
 msgid "The X coordinates are contained in the ``X`` field."
-msgstr ""
+msgstr "Les coordonnées X sont stockées dans le champ ``X``."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:242
 msgid "The Y coordinates are contained in the ``Y`` field."
-msgstr ""
+msgstr "Les coordonnées Y sont stockées dans le champ ``Y``."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:246
 msgid "Loading a delimited text file"
-msgstr ""
+msgstr "Charger un fichier texte délimité"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:248
 msgid ""
 "Click the toolbar icon |delimited_text| :sup:`Add Delimited Text Layer` in "
 "the :guilabel:`Manage layers` toolbar to open the :guilabel:`Create a Layer "
 "from a Delimited Text File` dialog, as shown in figure_delimited_text_1_."
-msgstr ""
+msgstr "Appuyez sur l'icône |delimited_text| :sup:`Ajouter une couche de texte délimité` de la barre d'outils :guilabel:`Contrôle des couches` pour ouvrir la boîte de dialogue :guilabel:`Créer une couche depuis un fichier à texte délimité` comme montré dans la figure figure_delimited_text_1_."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:261
 msgid "Delimited Text Dialog |nix|"
-msgstr ""
+msgstr "La fenêtre d'import de texte délimité |nix|"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:263
 msgid ""
@@ -786,7 +787,7 @@ msgid ""
 "|radiobuttonon| :guilabel:`Regular expression delimiter` and entering text "
 "into the :guilabel:`Expression` field. For example, to change the delimiter "
 "to tab, use ``\\t`` (this is a regular expression for the tab character)."
-msgstr ""
+msgstr "Sélectionnez d'abord le fichier à importer (par exemple, :file:`qgis_sample_data/csv/elevp.csv`) en appuyant sur le bouton **[Parcourir...]**. Une fois le fichier sélectionné, |qg| tente d'analyser le fichier en utilisant le dernier délimiteur utilisé. Afin que  |qg| puisse analyser correctement le fichier, il est important de sélectionner le bon délimiteur. Vous pouvez spécifier un délimiteur en cochant |radiobuttonon| :guilabel:`délimiteurs personnalisés`, ou en cochant |radiobuttonon| :guilabel:`expression régulière` et en saisissant un texte dans le champ :guilabel:`Expression`. Par exemple, pour changer et utiliser le délimiteur tabulation, utilisez ``\\t`` (c'est l'expression en vigueur pour indiquer le caractère tabulation)."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:273
 msgid ""
@@ -824,7 +825,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:295
 msgid "Additionaly, you can enable:"
-msgstr ""
+msgstr "En complément, vous pouvez activer :"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:297
 msgid ""
@@ -844,7 +845,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:308
 msgid "OpenStreetMap data"
-msgstr ""
+msgstr "Données OpenStreetMap"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:310
 msgid ""
@@ -853,11 +854,11 @@ msgid ""
 "objective of the OSM project is to create a free editable map of the world "
 "from GPS data, aerial photography or local knowledge. To support this "
 "objective, |qg| provides suppport for OSM data."
-msgstr ""
+msgstr "Ces dernières années, le projet OpenStreetMap (OSM) a gagné en popularité, car dans beaucoup de pays, aucune donnée géographique sous licence libre telle que par exemple le réseau routier n'est disponible. L'objectif du projet OSM est de créer une base de données géographiques libres sur le monde entier et qui est éditable par tous à partir de données GPS, de photographies aériennes ou tout simplement des connaissances locales du terrain. Pour soutenir ce projet, QGIS fournit une extension qui permet aux utilisateurs de travailler avec les données OSM."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:321
 msgid "|qg| integrates OpenStreetMap import as a core functionality."
-msgstr ""
+msgstr "|qg| intègre nativement des fonctions d'import de données OpenStreetMap."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:323
 msgid ""
@@ -865,14 +866,14 @@ msgid ""
 ":menuselection:`Vector --> Openstreetmap --> Load data`. You can skip this "
 "step if you already obtained an :file:`.osm` XML file using JOSM, Overpass "
 "API or any other source."
-msgstr ""
+msgstr "Pour vous connecter au serveur OSM et télécharger des données, ouvrez le menu :menuselection:`Vecteur --> OpenStreetMap --> Télécharger des données`. Vous pouvez ignorer cette étape si vous avez déjà obtenu un fichier XML .osm à l'aide du logiciel JOSM, de l'Overpass API ou de toute autre source. "
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:327
 msgid ""
 "The menu :menuselection:`Vector --> Openstreetmap --> Import topology from "
 "an XML file` will convert your :file:`.osm` file into a SpatiaLite database "
 "and create a corresponding database connection."
-msgstr ""
+msgstr "Le menu :menuselection:`Vecteur --> OpenStreetMap --> Importer la topologie depuis un XML` convertira votre fichier .osm en une base de données Spatialite, et créera la connexion à la base. "
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:330
 msgid ""
@@ -884,7 +885,7 @@ msgid ""
 "toolbar button or by selecting the |mActionAddSpatiaLiteLayer| "
 ":menuselection:`Add SpatiaLite Layer...` option from the "
 ":menuselection:`Layer` menu (see section :ref:`label_spatialite`)."
-msgstr ""
+msgstr "Le menu  :menuselection:`Vecteur --> OpenStreetMap --> Exporter la topologie en Spatialite` vous permet ensuite de vous connecter à la base de données, sélectionner le type de données que vous souhaitez (points, lignes, polygones) et choisir les tags OSM à importer. Ceci crée une couche géométrique Spatialite que vous pouvez par la suite ajouter à votre projet en cliquant sur le bouton |mActionAddSpatiaLiteLayer| :sup:`Ajouter une couche Spatialite`de la barre d'outils ou en sélectionnant l'option |mActionAddSpatiaLiteLayer| :menuselection:`Ajouter une couche Spatialite...` du menu :menuselection:`Couche` (voir la Section :ref:`label_spatialite`)."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:345
 msgid ""
@@ -892,7 +893,7 @@ msgid ""
 "PostGIS are the spatial indexing, filtering and query capabilities it "
 "provides. Using PostGIS, vector functions such as select and identify work "
 "more accurately than they do with OGR layers in |qg|."
-msgstr ""
+msgstr "Les couches PostGIS sont stockées dans une base de données PostgreSQL. Les avantages de PostGIS sont les possibilités d'indexation spatiale, de filtre et de requête qu'il fournit. En utilisant PostGIS, les fonctions vecteur telles que la sélection ou l'identification fonctionnent avec plus de précision qu'avec les couches OGR dans |qg|."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:355
 msgid ""
@@ -937,7 +938,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:379
 msgid "Disable: Only try an unencrypted SSL connection."
-msgstr ""
+msgstr "Désactiver : Essayer uniquement une connexion SSL non cryptée."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:380
 msgid "Allow: Try a non-SSL connection. If that fails, try an SSL connection."
@@ -983,7 +984,7 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:806
 msgid ""
 "Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`."
-msgstr ""
+msgstr "Cochez ou décochez selon votre besoin |checkbox| :guilabel:`Lister aussi les tables sans géométrie`"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:430
 msgid ""

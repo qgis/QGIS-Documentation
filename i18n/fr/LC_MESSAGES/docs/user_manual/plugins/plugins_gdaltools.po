@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
+# MarieSilvestre <marie.silvestre@gmail.com>, 2014
 # RobinP <robin@georezo.net>, 2013
 # DelazJ <delazj@gmail.com>, 2014
 msgid ""
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-20 18:38+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-05-22 14:50+0000\n"
+"Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -187,11 +188,11 @@ msgstr "|gdal_vrt| :guilabel:`Construire un Raster Virtuel (Catalogue VRT)`"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:18
 msgid "What is GDAL Tools?"
-msgstr ""
+msgstr "Qu'est-ce que GDALTools ?"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:20
 msgid ""
@@ -202,7 +203,7 @@ msgid ""
 "layer, or a shaded relief from a raster DEM, and to make a VRT (Virtual "
 "Raster Tile in XML format) from a collection of one or more raster files. "
 "These tools are available when the plugin is installed and activated."
-msgstr ""
+msgstr "Les outils GDALTools offrent une interface graphique aux outils de la bibliothèque Geospatial Data Abstraction Library, (http://gdal.osgeo.org). Ce sont des outils de gestion de raster qui permettent d'interroger, de reprojeter et de manipuler une large palette de formats. Il y a également des outils pour créer des contours vectoriels ou un relief ombré à partir d'un MNT, pour produire un VRT (Virtual Raster Tile au format XML) depuis un ensemble de rasters. Tous ces outils sont disponibles lorsque l'extension GDALTools est activée."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:55
 msgid ""
@@ -211,7 +212,7 @@ msgid ""
 "stored with the image if the image is \"raw\" with control information. For "
 "more information, you can read on the GDAL website "
 "http://www.gdal.org/gdalwarp.html."
-msgstr ""
+msgstr "Cet outil permet de déformer et de reprojeter des images. Le programme peut reprojeter dans n’importe quelles projections supportées, et appliquer les points d’amer stockés avec l’image si l’image est fournie « brute ». Pour plus d'informations, se reporter au site web GDAL http://www.gdal.org/gdalwarp.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:62
 msgid ""
@@ -220,14 +221,14 @@ msgid ""
 "possible to alter existing projection definitions. Both single file and "
 "batch mode are supported. For more information, please visit the utility "
 "page at the GDAL site, http://www.gdal.org/gdalwarp.html."
-msgstr ""
+msgstr "Cet utilitaire vous permet de définir la projection d'un raster qui aurait déjà été géoréférencé mais dont il manque les informations de projection. Il permet également de modifier la projection définie. Le traitement peut s'effectue sur un ou plusieurs fichiers simultanément. Pour plus d'informations, se reporter au site web GDAL http://www.gdal.org/gdalwarp.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:70
 msgid ""
 "This utility helps you to extract projection information from an input file."
 " If you want to extract projection information from a whole directory, you "
 "can use the batch mode. It creates both :file:`.prj` and :file:`.wld` files."
-msgstr ""
+msgstr "Cet utilitaire permet d'extraire les informations de projection d'un fichier en entrée. Il peut être utilisé en mode par lot pour extraire les projections des fichiers de tout un répertoire. Il crée des fichiers :file:`.prj` et :file:`.wld`."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:82
 msgid ""
@@ -236,7 +237,7 @@ msgid ""
 " formats. Note that the vector data must in the same coordinate system as "
 "the raster data; on the fly reprojection is not provided. For more "
 "information see http://www.gdal.org/gdal_rasterize.html."
-msgstr ""
+msgstr "Ce programme marque des géométries vecteur (points, lignes et polygones) dans une ou plusieurs bandes raster d'une image. Les vecteurs utilisés sont dans des formats utilisés par OGR. Notez que les données vecteur doivent être dans le même système de coordonnées; la projection à la volée n'est pas possible. Pour plus d'informations voir http://www.gdal.org/gdal_rasterize.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:90
 msgid ""
@@ -246,7 +247,7 @@ msgid ""
 "create the output vector datasource if it does not already exist, defaulting"
 " to ESRI shapefile format. See also "
 "http://www.gdal.org/gdal_polygonize.html."
-msgstr ""
+msgstr "Cet utilitaire crée des polygones vectoriels à partir des zones de pixels connectés partageant la même valeur de cellule. Chaque polygone est créé avec un attribut indiquant la valeur du pixel sous-jacent. Il créera la couche de données vectorielles en sortie si elle n'existe pas encore, le format par défaut étant le ESRI shapefile. Pour plus d'informations, se reporter à http://www.gdal.org/gdal_polygonize.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:99
 msgid ""
@@ -254,7 +255,7 @@ msgid ""
 "potentially performing some operations like subsetting, resampling, and "
 "rescaling pixels in the process. For more information you can read on "
 "http://www.gdal.org/gdal_translate.html."
-msgstr ""
+msgstr "L'utilitaire de conversion permet de traduire un raster dans un autre format raster, ainsi que d'appliquer d'autres opérations telles que le rééchantillonnage, le changement de taille des pixels ou l'extraction d'un sous-secteur. Pour plus d'informations, se reporter à http://www.gdal.org/gdal_translate.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:105
 msgid ""
@@ -264,28 +265,28 @@ msgid ""
 "conversion utilizes Floyd-Steinberg dithering (error diffusion) to maximize "
 "output image visual quality. The utility is also described at "
 "http://www.gdal.org/rgb2pct.html."
-msgstr ""
+msgstr "Ce programme va calculer une table de pseudo-couleurs (PCT) optimale à partir d'une image RVB en utilisant un algorithme médian sur un histogramme RVB réduit. L'image sera convertie en une image dotée de pseudo-couleurs tirées de la table de couleurs créée. Cette conversion utilise la correction Floyd-Steinberg afin d'améliorer la qualité visuelle. Pour plus d'informations, se reporter à http://www.gdal.org/rgb2pct.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:114
 msgid ""
 "This utility will convert a pseudocolor band on the input file into an "
 "output RGB file of the desired format. For more information, see "
 "http://www.gdal.org/pct2rgb.html."
-msgstr ""
+msgstr "Ce programme convertit une bande de couleurs indexées en RVB. Pour plus d'informations, se reporter à http://www.gdal.org/pct2rgb.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:125
 msgid ""
 "This program generates a vector contour file from the input raster elevation"
 " model (DEM). On http://www.gdal.org/gdal_contour.html, you can find more "
 "information."
-msgstr ""
+msgstr "Ce programme génère un fichier de contours vectoriels à partir d'un raster d'élévation (DEM/MNE/MNT). Pour plus d'informations, se reporter à http://www.gdal.org/gdal_contour.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:130
 msgid ""
 "This utility allows you to clip (extract subset) rasters using selected "
 "extent or based on mask layer bounds. More information can be found at "
 "http://www.gdal.org/gdal_translate.html."
-msgstr ""
+msgstr "Cet utilitaire vous permet d'extraire une zone d'une ou plusieurs images selon une emprise de coordonnées ou selon une couche de masquage. Pour plus d'informations, se reporter à http://www.gdal.org/gdal_translate.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:141
 msgid ""
@@ -294,7 +295,7 @@ msgid ""
 "polygon. The result can be written back to the existing raster band, or "
 "copied into a new file. For more information, see "
 "http://www.gdal.org/gdal_sieve.html."
-msgstr ""
+msgstr "Cet utilitaire efface les surfaces rasters plus petites que la taille donnée (en pixel) et les remplace par la valeur de la surface voisine la plus importante. Le résultat peut être appliqué à la bande raster existante ou être sauvegardé dans un nouveau fichier. Pour plus d'informations, se reporter à http://www.gdal.org/gdal_sieve.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:149
 msgid ""
@@ -303,14 +304,14 @@ msgid ""
 " often used to \"fix up\" lossy compressed aerial photos so that color "
 "pixels can be treated as transparent when mosaicing. See also "
 "http://www.gdal.org/nearblack.html."
-msgstr ""
+msgstr "Cet utilitaire scanne une image et essaye de convertir les pixels qui sont dans une couleur presque noire (ou presque blanche) dans une couleur noire totale (ou blanche). Cela permet de corriger des images compressés afin de pouvoir spécifier une couleur comme transparente. Pour plus d'informations, se reporter à http://www.gdal.org/nearblack.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:157
 msgid ""
 "This utility fills selected raster regions (usually nodata areas) by "
 "interpolation from valid pixels around the edges of the areas. On "
 "http://www.gdal.org/gdal_fillnodata.html, you can find more information."
-msgstr ""
+msgstr "Cet utilitaire remplit des zones sélectionnées d'un raster (le plus souvent des pixels 'no-data') en interpolant les valeurs des pixels valides en bordure de zone. Pour plus d'informations, se reporter à http://www.gdal.org/gdal_fillnodata.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:163
 msgid ""
@@ -319,7 +320,7 @@ msgid ""
 "target pixel. Target pixels are those in the source raster for which the "
 "raster pixel value is in the set of target pixel values. For more "
 "information see http://www.gdal.org/gdal_proximity.html."
-msgstr ""
+msgstr "Cet utilitaire génère une carte raster de proximité qui indique la distance entre le centre de chaque pixel et le centre du pixel le plus proche qui est désigné comme un pixel cible. Les cibles sont les pixels qui correspondent à une valeur de pixel précise. Pour plus d'informations, se reporter à http://www.gdal.org/gdal_proximity.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:171
 msgid ""
@@ -328,7 +329,7 @@ msgid ""
 "with values, and you can choose from various interpolation methods. The "
 "utility is also described on the GDAL website, "
 "http://www.gdal.org/gdal_grid.html."
-msgstr ""
+msgstr "Ce programme créé une grille régulière (raster) depuis les données sources. Les données sources peuvent être interpolées afin de remplir les nœuds de la grille avec des valeurs et vous pouvez choisir parmi plusieurs méthodes d'interpolation. Pour plus d'informations, se reporter à http://www.gdal.org/gdal_grid.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:178
 msgid ""
@@ -336,13 +337,13 @@ msgid ""
 " an aspect, a color relief, a Terrain Ruggedness Index, a Topographic "
 "Position Index and a roughness map from any GDAL-supported elevation raster."
 " For more information, see http://www.gdal.org/gdaldem.html."
-msgstr ""
+msgstr "Outils pour l'analyse et la visualisation de MNT. Il est possible de créer un raster d'ombrage, de pente, d'aspect, de relief coloré, d'Indice de Rugosité du terrain (TRI), d'Indice de Position Topographique (TPI) et de rugosité depuis tous les types de format raster supportés par GDAL. Pour plus d'informations, voir http://www.gdal.org/gdaldem.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:191
 msgid ""
 "This program builds a VRT (Virtual Dataset) that is a mosaic of the list of "
 "input GDAL datasets. See also http://www.gdal.org/gdalbuildvrt.html."
-msgstr ""
+msgstr "Ce programme construit un VRT (un fichier virtuel) qui affiche en mosaïque une liste de rasters GDAL. Pour plus d'informations, se reporter à http://www.gdal.org/gdalbuildvrt.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:195
 msgid ""
@@ -351,36 +352,36 @@ msgid ""
 "they may be overlapping, and at different resolutions. In areas of overlap, "
 "the last image will be copied over earlier ones. The utility is also "
 "described at http://www.gdal.org/gdal_merge.html."
-msgstr ""
+msgstr "Ce programme fusionnera automatiquement une série d'images. Toutes les images doivent avoir le même système de coordonnées et posséder le même nombre de bandes, elles peuvent se superposer ou être de résolutions différentes. Dans les zones de superposition, la dernière image de la liste sera copiée sur les autres. Pour plus d'informations, se reporter à http://www.gdal.org/gdal_merge.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:203
 msgid ""
 "This utility lists various information about a GDAL-supported raster "
 "dataset. On http://www.gdal.org/gdalinfo.html, you can find more "
 "information."
-msgstr ""
+msgstr "Ce programme liste les diverses informations d'un raster supporté par GDAL. Pour plus d'informations, se reporter à http://www.gdal.org/gdalinfo.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:208
 msgid ""
 "The gdaladdo utility can be used to build or rebuild overview images for "
 "most supported file formats with one of several downsampling algorithms. For"
 " more information, see http://www.gdal.org/gdaladdo.html."
-msgstr ""
+msgstr "Ce programme permet de construire ou de reconstruire des aperçus (pyramides) pour une image selon plusieurs algorithmes. Pour plus d'informations, se reporter à http://www.gdal.org/gdaladdo.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:213
 msgid ""
 "This utility builds a shapefile with a record for each input raster file, an"
 " attribute containing the filename, and a polygon geometry outlining the "
 "raster. See also http://www.gdal.org/gdaltindex.html."
-msgstr ""
+msgstr "Ce programme construit un shapefile où chaque entité correspond à un fichier raster, avec un champ attribut contenant le nom du fichier et une géométrie de type polygone correspondant à l'emprise du raster. Pour plus d'informations, se reporter à http://www.gdal.org/gdaltindex.html."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:220
 msgid "GDAL Tools Settings"
-msgstr ""
+msgstr "Paramètres de GDALTools"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:222
 msgid "Use this dialog to embed your GDAL variables."
-msgstr ""
+msgstr "Cette fenêtre permet de définir vos propres variables GDAL."
 
 #~ msgid "What is GDALTools?"
 #~ msgstr ""
