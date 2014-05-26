@@ -85,6 +85,14 @@ localizeresources: clean
 	fi
 
 html: localizeresources
+	@-if [ $(LANG) != "en" ]; then \
+		echo; \
+		echo Pulling $$LANG from transifex; \
+		# --minimum-perc=1 so only files which have at least 1% translation are pulled \
+		# -f to force, --skip to not stop with errors \
+		# -l lang \
+		tx pull --minimum-perc=1 --skip -f -l $$LANG; \
+        fi
 	$(SPHINXINTL) build -l $(LANG) -c $(SOURCEDIR)/conf.py
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG)
 	@echo
@@ -149,15 +157,7 @@ pdf: html
 	fi
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf
 
-full:  
-	@-if [ $(LANG) != "en" ]; then \
-		echo; \
-		echo Pulling $$LANG from transifex; \
-		# --minimum-perc=1 so only files which have at least 1% translation are pulled \
-		# -f to force, --skip to not stop with errors \
-		# -l lang \
-		tx pull --minimum-perc=1 --skip -f -l $$LANG; \
-        fi
+full:
 	make pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf
