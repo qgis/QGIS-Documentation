@@ -12,15 +12,14 @@ allows you to perform calculations on the basis of existing
 raster pixel values (see figure_raster_2_).
 The results are written to a new raster layer with a GDAL-supported format.
 
-.. _figure_raster_2:
+.. _figure_raster_10:
 
 .. only:: html
 
-   **Figure Raster 2:**
+   **Figure Raster 10:**
 
 .. figure:: /static/user_manual/working_with_raster/raster_calculator.png
    :align: center
-   :width: 30em
 
    Raster Calculator |nix|
 
@@ -55,7 +54,7 @@ conversion factor for meters to feet: 3.28. The expression is:
 
 ::
 
- elevation@1 * 3.28
+ "elevation@1" * 3.28
 
 **Using a mask**
 
@@ -65,7 +64,19 @@ and apply the result to a raster in one step.
 
 ::
 
-  (elevation@1 >= 0) * elevation@1
+  ("elevation@1" >= 0) * "elevation@1"
 
 In other words, for every cell greater than or equal to 0, set its value to 1. Otherwise set
 it to 0. This creates the mask on the fly.
+
+
+If you want to classify a raster -- say, for instance into two elevation classes, you can 
+use the following expression to create a raster with two values 1 and 2 in one step.
+
+::
+
+  ("elevation@1" < 50) * 1 + ("eleevation@1" >= 50) * 2
+
+In other words, for every cell less than 50 set its value to 1. For every cell greater than or 
+equal 50 set its value to 2.
+

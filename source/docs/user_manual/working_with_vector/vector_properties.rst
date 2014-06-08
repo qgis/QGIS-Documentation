@@ -25,7 +25,6 @@ double-click on a layer in the legend or right-click on the layer and select
 
 .. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
    :align: center
-   :width: 30em
 
    Vector Layer Properties Dialog |nix|
 
@@ -121,7 +120,6 @@ and :guilabel:`Rotation`. Here, the layers are joined together.
 
 .. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png
    :align: center
-   :width: 30em
 
    Single symbol line properties |nix|
 
@@ -232,7 +230,6 @@ for the rivers layer of the |qg| sample dataset.
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
    :align: center
-   :width: 30em
 
    Categorized Symbolizing options |nix|
 
@@ -253,7 +250,6 @@ example of custom color ramp and figure_symbology_3a_ for the cpt-city dialog.
 
 .. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
    :align: center
-   :width: 20em
 
    Example of custom gradient color ramp with multiple stops |nix|
 
@@ -267,7 +263,6 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
 
 .. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
    :align: center
-   :width: 30em
 
    cpt-city dialog with hundreds of color ramps |nix|
 
@@ -288,7 +283,6 @@ selected feature's attribute to a class.
    **Figure Symbology 4:**
 
 .. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
-   :width: 30em
    :align: center
 
    Graduated Symbolizing options |nix|
@@ -363,7 +357,6 @@ rules on that level match.
    **Figure Symbology 5:**
 
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
-   :width: 30em
    :align: center
 
    Rule-based Symbolizing options |nix|
@@ -384,7 +377,6 @@ placed on a displacement circle around a center symbol.
    **Figure Symbology 6:**
 
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
-   :width: 30em
    :align: center
 
    Point displacement dialog |nix|
@@ -405,8 +397,8 @@ Labels Menu
 The |mActionLabeling| :sup:`Labels` core application provides smart
 labeling for vector point, line and polygon layers, and it only requires a
 few parameters. This new application also supports on-the-fly transformed layers.
-The core functions of the application have been redesigned. In |qg| 2.0,
-there are now a number of other features that improve the labeling. The following menus
+The core functions of the application have been redesigned. In |qg|, there are a 
+number of other features that improve the labeling. The following menus
 have been created for labeling the vector layers:
 
 * Text
@@ -420,7 +412,6 @@ have been created for labeling the vector layers:
 Let us see how the new menus can be used for various vector layers.
 
 .. _labeling_point_layers:
-
 **Labeling point layers**
 
 Start |qg| and load a vector point layer. Activate the layer in the legend and click on the
@@ -428,7 +419,7 @@ Start |qg| and load a vector point layer. Activate the layer in the legend and c
 
 The first step is to activate the |checkbox| :guilabel:`Label this layer with` checkbox
 and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
-want to define labels based on expressions.
+want to define labels based on expressions - See labeling_with_expressions_.
 
 The following steps describe a simple labeling without using the :guilabel:`Data defined override` functions,
 which are situated next to the drop-down menus.
@@ -507,7 +498,6 @@ whether the number of features to be labeled is limited and to |checkbox| :guila
 
 .. figure:: /static/user_manual/working_with_vector/label_points.png
    :align: center
-   :width: 30em
 
    Smart labeling of vector point layers |nix|
 
@@ -516,7 +506,7 @@ whether the number of features to be labeled is limited and to |checkbox| :guila
 The first step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
 in the :guilabel:`Label settings` tab and select an attribute column to use for
 labeling. Click |mActionmIconExpressionEditorOpen| if you
-want to define labels based on expressions.
+want to define labels based on expressions - See labeling_with_expressions_.
 
 After that, you can define the text style in the :guilabel:`Text` menu. Here, you can use the
 same settings as for point layers.
@@ -552,7 +542,6 @@ The :guilabel:`Rendering` menu has nearly the same entries as for point layers. 
 
 .. figure:: /static/user_manual/working_with_vector/label_line.png
    :align: center
-   :width: 30em
 
    Smart labeling of vector line layers |nix|
 
@@ -561,7 +550,7 @@ The :guilabel:`Rendering` menu has nearly the same entries as for point layers. 
 
 The first step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
 and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
-want to define labels based on expressions.
+want to define labels based on expressions - See labeling_with_expressions_.
 
 In the :guilabel:`Text` menu, define the text style. The entries are the same as for point
 and line layers.
@@ -606,9 +595,74 @@ The entries in the :guilabel:`Rendering` menu are the same as for line layers. Y
 
 .. figure:: /static/user_manual/working_with_vector/label_area.png
    :align: center
-   :width: 30em
 
    Smart labeling of vector polygon layers |nix|
+
+
+.. _labeling_with_expressions:
+
+
+**Define labels based on expressions**
+
+QGIS allows to use expressions to label features. Just click the 
+|mActionmIconExpressionEditorOpen| icon in the |mActionLabeling| :sup:`Labels` 
+menu of the properties dialog. In figure_labels_4_ you see a sample expression 
+to label the alaska regions with name and area size, based on the field 'NAME_2', 
+some descriptive text and the function '$area()' in combination with 
+'format_number()' to make it look nicer.
+
+.. features act as obstacles for labels or not .
+
+.. _figure_labels_4:
+
+.. only:: html
+
+   **Figure Labels 4:**
+
+.. figure:: /static/user_manual/working_with_vector/label_expression.png
+   :align: center
+   :width: 30em
+
+   Using expressions for labeling |nix|
+
+Expression based labeling is easy to work with. All you have to take care of 
+is, that you need to combine all elements (strings, fields and functions) with a 
+string concatenation sign '||' and that fields a written in "double quotes" 
+and strings in 'single quotes'. Let's have a look at some examples:
+
+::
+
+   # label based on two fields 'name' and 'place' with a comma as separater 
+   "name" || ', ' || "place"
+
+   -> John Smith, Paris 
+
+   # label based on two fields 'name' and 'place' separated by comma
+   'My name is ' || "name" || 'and I live in ' || "place"
+
+   -> My name is John Smith and I live in Paris
+
+   # label based on two fields 'name' and 'place' with a descriptive text 
+   # and a line break (\n)
+   'My name is ' || "name" || '\nI live in ' || "place"
+
+   -> My name is John Smith
+      I live in Paris
+
+   # create a multi-line label based on a field and the $area function
+   # to show the place name and its area size based on unit meter.
+   'The area of ' || "place" || 'has a size of ' || $area || 'm²'
+
+   -> The area of Paris has a size of 105000000 m²
+
+   # create a CASE ELSE condition. If the population value in field 
+   # population is <= 50000 it is a town, otherwise a city.  
+   'This place is a ' || CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END
+
+  -> This place is a town
+
+As you can see in the expression builder, you have hundreds if functions available to 
+create simple and very complex expressions to label your data in QGIS.
 
 **Using data-defined override for labeling**
 
@@ -618,7 +672,7 @@ You can activate and deactivate the function with the right-mouse button.
 Hover over the symbol and you see the information about the data-defined override,
 including the current definition field.
 We now describe an example using the data-defined override function for the
-|mActionMoveLabel|:sup:`Move label` function (see figure_labels_4_ ).
+|mActionMoveLabel|:sup:`Move label` function (see figure_labels_5_ ).
 
 #. Import :file:`lakes.shp` from the |qg| sample dataset.
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
@@ -628,21 +682,8 @@ We now describe an example using the data-defined override function for the
    for Y. The icons are now highlighted in yellow.
 #. Zoom into a lake.
 #. Go to the Label toolbar and click the |mActionMoveLabel| icon. Now you can shift the label
-   manually to another position (see figure_labels_5_ ). The new position of the label is saved in the 'xlabel' and 'ylabel' columns of the
+   manually to another position (see figure_labels_6_ ). The new position of the label is saved in the 'xlabel' and 'ylabel' columns of the
    attribute table.
-
-.. _figure_labels_4:
-
-.. only:: html
-
-   **Figure Labels 4:**
-
-.. figure:: /static/user_manual/working_with_vector/label_data_defined.png
-   :align: center
-   :width: 30em
-
-   Labeling of vector polygon layers with data-defined override |nix|
-
 
 .. _figure_labels_5:
 
@@ -650,8 +691,19 @@ We now describe an example using the data-defined override function for the
 
    **Figure Labels 5:**
 
+.. figure:: /static/user_manual/working_with_vector/label_data_defined.png
+   :align: center
+
+   Labeling of vector polygon layers with data-defined override |nix|
+
+
+.. _figure_labels_6:
+
+.. only:: html
+
+   **Figure Labels 6:**
+
 .. figure:: /static/user_manual/working_with_vector/move_label.png
-   :width: 20em
    :align: center
 
    Move labels |nix|
@@ -683,7 +735,6 @@ can be used when the dataset is in |mActionToggleEditing| :sup:`Editing mode`.
 
 .. figure:: /static/user_manual/working_with_vector/editwidgetsdialog.png
    :align: center
-   :width: 30em
 
    Dialog to select an edit widget for an attribute column |nix|
 
@@ -727,6 +778,8 @@ widgets. These widgets are:
 * **Webview**: Field contains a URL. The width and height of the field is variable.
 * **Color**: A field that allows you to enter color codes. During data entry, the color is visible through a color bar
   included in the field.
+* **Relation Reference**: This widged lets you embed the feature form of the referenced layer on the feature form 
+  of the actual layer. See :ref:`vector_relations`.
 
 With the **Attribute editor layout**, you can now define built-in forms for data entry jobs (see figure_fields_2_).
 Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| icon to create
@@ -760,7 +813,6 @@ MyForms.py must live on PYTHONPATH, in .qgis2/python, or inside the project fold
    **Figure Fields 2:**
 
 .. figure:: /static/user_manual/working_with_vector/attribute_editor_layout.png
-   :width: 30 em
    :align: center
 
    Dialog to create categories with the **Attribute editor layout**
@@ -772,7 +824,6 @@ MyForms.py must live on PYTHONPATH, in .qgis2/python, or inside the project fold
    **Figure Fields 3:**
 
 .. figure:: /static/user_manual/working_with_vector/resulting_feature_form.png
-   :width: 15 em
    :align: center
 
    Resulting built-in form in a data entry session
@@ -818,7 +869,6 @@ Feature subset
    **Figure General 1:**
 
 .. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
-   :width: 30 em
    :align: center
 
    General menu in vector layers properties dialog |nix|
@@ -836,7 +886,7 @@ These may include slivers between polygons and inaccurate rendering when using o
 Display Menu
 ------------
 
-|mActionMapTips| Starting with |qg| 2.0, there is now a menu specifically for Map Tips. It includes a new feature:
+|mActionMapTips| This menu is specifically created for Map Tips. It includes a new feature:
 Map Tip display text in HTML. While you can still choose a |radiobuttonoff| :guilabel:`Field`
 to be displayed when hovering over a feature on the map, it is now possible to insert HTML code that creates a complex
 display when hovering over a feature. To activate Map Tips, select the menu option :menuselection:`View --> MapTips`. Figure Display 1 shows an example of HTML code.
@@ -848,7 +898,6 @@ display when hovering over a feature. To activate Map Tips, select the menu opti
    **Figure Display 1:**
 
 .. figure:: /static/user_manual/working_with_vector/display_html.png
-   :width: 30 em
    :align: center
 
    HTML code for map tip |nix|
@@ -861,7 +910,6 @@ display when hovering over a feature. To activate Map Tips, select the menu opti
    **Figure Display 2:**
 
 .. figure:: /static/user_manual/working_with_vector/map_tip.png
-   :width: 20 em
    :align: center
 
    Map tip made with HTML code |nix|
@@ -882,7 +930,6 @@ passing parameters to a web reporting tool.
    **Figure Actions 1:**
 
 .. figure:: /static/user_manual/working_with_vector/action_dialog.png
-   :width: 30 em
    :align: center
 
    Overview action dialog with some sample actions |nix|
@@ -1048,7 +1095,6 @@ identify a lake. In the result box you'll now see that our action is visible:
 
 .. figure:: /static/user_manual/working_with_vector/action_identifyaction.png
    :align: center
-   :width: 20em
 
    Select feature and choose action |nix|
 
@@ -1090,8 +1136,8 @@ do the trick:
   imagerelpath = "images_test/test_image.jpg";
   layer = qgis.utils.iface.activeLayer();
   import os.path;
-  layerpath = layer.source() if layer.providerType() == 'ogr' \
-    else (qgis.core.QgsDataSourceURI(layer.source()).database() \
+  layerpath = layer.source() if layer.providerType() == 'ogr'
+    else (qgis.core.QgsDataSourceURI(layer.source()).database()
     if layer.providerType() == 'spatialite' else None);
   path = os.path.dirname(str(layerpath));
   image = os.path.join(path,imagerelpath);
@@ -1123,7 +1169,7 @@ the action was created):
 ::
 
 
-  qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp','[% "layername" %]',\
+  qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp','[% "layername" %]',
     'ogr')
 
 
@@ -1132,7 +1178,8 @@ To add a raster (a TIF image in this example), it becomes:
 ::
 
 
-  qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif','[% "layername" %]')
+  qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif','[% "layername" %]
+  ')
 
 .. _`sec_joins`:
 
@@ -1155,7 +1202,6 @@ As key columns, you have to define a :index:`join layer` you want to connect wit
    **Figure Joins 1:**
 
 .. figure:: /static/user_manual/working_with_vector/join_attributes.png
-   :width: 30em
    :align: center
 
    Join an attribute table to an existing vector layer |nix|
@@ -1190,7 +1236,6 @@ chart positions can be fixed manually.
    **Figure Diagrams 1:**
 
 .. figure:: /static/user_manual/working_with_vector/diagram_tab.png
-   :width: 30em
    :align: center
 
    Vector properties dialog with diagram menu |nix|
@@ -1229,8 +1274,8 @@ Both vector layers are part of the |qg| sample dataset (see section
    **Figure Diagrams 2:**
 
 .. figure:: /static/user_manual/working_with_vector/climate_diagram.png
-   :width: 25em
    :align: center
+   :width: 25em
 
    Diagram from temperature data overlayed on a map |nix|
 
@@ -1271,7 +1316,6 @@ and will be used for |qg| server.
    **Figure Metadata 1:**
 
 .. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
-   :width: 30 em
    :align: center
 
    Metadata menu in vector layers properties dialog |nix|

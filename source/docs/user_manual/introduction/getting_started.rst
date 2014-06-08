@@ -72,26 +72,27 @@ The projection for the |qg| sample dataset is Alaska Albers Equal Area with
 units feet. The EPSG code is 2964.
 
 ::
-    PROJCS["Albers Equal Area",
-        GEOGCS["NAD27",
-            DATUM["North_American_Datum_1927",
-                SPHEROID["Clarke 1866",6378206.4,294.978698213898,
-                    AUTHORITY["EPSG","7008"]],
-                TOWGS84[-3,142,183,0,0,0,0],
-                AUTHORITY["EPSG","6267"]],
-            PRIMEM["Greenwich",0,
-                AUTHORITY["EPSG","8901"]],
-            UNIT["degree",0.0174532925199433,
-                AUTHORITY["EPSG","9108"]],
-            AUTHORITY["EPSG","4267"]],
-        PROJECTION["Albers_Conic_Equal_Area"],
-        PARAMETER["standard_parallel_1",55],
-        PARAMETER["standard_parallel_2",65],
-        PARAMETER["latitude_of_center",50],
-        PARAMETER["longitude_of_center",-154],
-        PARAMETER["false_easting",0],
-        PARAMETER["false_northing",0],
-        UNIT["us_survey_feet",0.3048006096012192]]
+
+  PROJCS["Albers Equal Area",
+  GEOGCS["NAD27",
+  DATUM["North_American_Datum_1927",
+  SPHEROID["Clarke 1866",6378206.4,294.978698213898,
+  AUTHORITY["EPSG","7008"]],
+  TOWGS84[-3,142,183,0,0,0,0],
+  AUTHORITY["EPSG","6267"]],
+  PRIMEM["Greenwich",0,
+  AUTHORITY["EPSG","8901"]],
+  UNIT["degree",0.0174532925199433,
+  AUTHORITY["EPSG","9108"]],
+  AUTHORITY["EPSG","4267"]],
+  PROJECTION["Albers_Conic_Equal_Area"],
+  PARAMETER["standard_parallel_1",55],
+  PARAMETER["standard_parallel_2",65],
+  PARAMETER["latitude_of_center",50],
+  PARAMETER["longitude_of_center",-154],
+  PARAMETER["false_easting",0],
+  PARAMETER["false_northing",0],
+  UNIT["us_survey_feet",0.3048006096012192]]
 
 If you intend to use |qg| as a graphical front end for GRASS, you can find a
 selection of sample locations (e.g., Spearfish or South Dakota) at the
@@ -137,9 +138,8 @@ Load raster and vector layers from the sample dataset
 #. |radiobuttonon| :guilabel:`File` should be selected as :guilabel:`Source Type`
    in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to
    select the vector layer.
-#. Browse to the folder :file:`qgis_sample_data/gml/`, select "Geography Markup
-   Language [GML] [OGR] (*.gml *.GML)" from the :guilabel:`Files of type`
-   |selectstring| combo box, then select the GML file :file:`lakes.gml` and
+#. Browse to the folder :file:`qgis_sample_data/gml/`, select 'Geography Markup
+   Language [GML] [OGR] (.gml,.GML)' from the :guilabel:`Files of type` |selectstring| combo box, then select the GML file :file:`lakes.gml` and
    click **[Open]**. In the :guilabel:`Add vector layer` dialog, click **[OK]**.
 #. Zoom in a bit to your favorite area with some lakes.
 #. Double click the :file:`lakes` layer in the map legend to open the
@@ -192,33 +192,34 @@ statement for QGIS is:
 
 ::
 
-        qgis --help
-        QGIS - 2.0.1-Dufour 'Dufour' (exported)
-    QGIS is a user friendly Open Source Geographic Information System.
-        Usage: qgis [OPTION] [FILE]
-          options:
-            [--snapshot filename]           emit snapshot of loaded datasets to given file
-            [--width width]                 width of snapshot to emit
-            [--height height]               height of snapshot to emit
-            [--lang language]               use language for interface text
-            [--project projectfile]         load the given QGIS project
-            [--extent xmin,ymin,xmax,ymax]  set initial map extent
-            [--nologo]                      hide splash screen
-            [--noplugins]                   don't restore plugins on startup
-            [--nocustomization]             don't apply GUI customization
-            [--optionspath path]            use the given QSettings path
-            [--configpath path]             use the given path for all user configuration
-            [--code path]           run the given python file on load
-            [--help]                        this text
+  qgis --help
+  QGIS - 2.2.0-Valmiera 'Valmiera' (exported)
+  QGIS is a user friendly Open Source Geographic Information System.
+  Usage: qgis [OPTION] [FILE]
+  options:
+   [--snapshot filename]           emit snapshot of loaded datasets to given file
+   [--width width]                 width of snapshot to emit
+   [--height height]               height of snapshot to emit
+   [--lang language]               use language for interface text
+   [--project projectfile]         load the given QGIS project
+   [--extent xmin,ymin,xmax,ymax]  set initial map extent
+   [--nologo]                      hide splash screen
+   [--noplugins]                   don't restore plugins on startup
+   [--nocustomization]             don't apply GUI customization
+   [--customizationfile]           use the given ini file as GUI customization
+   [--optionspath path]            use the given QSettings path
+   [--configpath path]             use the given path for all user configuration
+   [--code path]                   run the given python file on load
+   [--help]                        this text
 
-          FILES:
-            Files specified on the command line can include rasters,
-            vectors, and QGIS project files (.qgs):
-            1. Rasters - Supported formats include GeoTiff, DEM
-               and others supported by GDAL
-            2. Vectors - Supported formats include ESRI Shapefiles
-               and others supported by OGR and PostgreSQL layers using
-               the PostGIS extension
+   FILES:
+         Files specified on the command line can include rasters,
+         vectors, and QGIS project files (.qgs):
+         1. Rasters - Supported formats include GeoTiff, DEM
+            and others supported by GDAL
+         2. Vectors - Supported formats include ESRI Shapefiles
+            and others supported by OGR and PostgreSQL layers using
+            the PostGIS extension
 
 .. tip::
         **Example Using command line arguments**
@@ -271,6 +272,11 @@ This command line argument hides the splash screen when you start |qg|.
 If you have trouble at start-up with plugins, you can avoid loading them at
 start-up with this option. They will still be available from the Plugins Manager afterwards.
 
+**Command line option** ``--customizationfile``
+
+Using this command line argument, you can define a GUI customization file, that will 
+be used at startup.
+
 **Command line option** ``--nocustomization``
 
 Using this command line argument, existing GUI customization will not be applied
@@ -282,7 +288,13 @@ You can have multiple configurations and decide which one to use when starting
 |qg| with this option. See :ref:`gui_options` to confirm where the
 operating system saves the settings files. Presently, there is no way to specify
 a file to write settings to; therefore, you can create a copy of
-the original settings file and rename it.
+the original settings file and rename it. The option specifies path to directory 
+with settings. For example, to use /path/to/config/QGIS/QGIS2.ini settings file, 
+use option:
+
+::
+
+    --optionspath /path/to/config/
 
 **Command line option** ``--configpath``
 

@@ -8,7 +8,7 @@ Coordinate Capture Plugin
 =========================
 
 The coordinate capture plugin is easy to use and provides the ability to display
-coordinates on the map canvas for two selected Coordinate Reference Systems (CRS).
+coordinates on the map canvas for two selected coordinate reference systems (CRS).
 
 .. _figure_coordinate_capture_1:
 
@@ -18,15 +18,14 @@ coordinates on the map canvas for two selected Coordinate Reference Systems (CRS
 
 .. figure:: /static/user_manual/plugins/coordinate_capture_dialog.png
    :align: center
-   :width: 20em
 
    Coordinate Capture Plugin |nix|
 
 #. Start |qg|, select |mActionOptions| :guilabel:`Project Properties` from the
    :guilabel:`Settings` (KDE, Windows) or :guilabel:`File` (Gnome, OSX) menu
-   and click on the :guilabel:`Projection` tab. As an alternative you can also
+   and click on the :guilabel:`Projection` tab. As an alternative, you can also
    click on the |mIconProjectionEnabled| :sup:`CRS status` icon in the lower
-   right-hand corner of the statusbar.
+   right-hand corner of the status bar.
 #. Click on the |checkbox| `Enable on the fly projection` checkbox and select
    a projected coordinate system of your choice (see also :ref:`label_projections`).
 #. Load the coordinate capture plugin in the Plugin Manager (see
@@ -42,6 +41,6 @@ coordinates on the map canvas for two selected Coordinate Reference Systems (CRS
 #. To start capturing coordinates, click on **[Start capture]**. You can now
    click anywhere on the map canvas and the plugin will show the coordinates for
    both of your selected CRS.
-#. To enable mouse coordinate tracking click the |tracking| :sup:`mouse tracking`
+#. To enable mouse coordinate tracking, click the |tracking| :sup:`mouse tracking`
    icon.
 #. You can also copy selected coordinates to the clipboard.

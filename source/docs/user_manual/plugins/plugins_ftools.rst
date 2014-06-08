@@ -7,14 +7,14 @@
 fTools Plugin
 =============
 
-The goal of the fTools python plugin is to provide a one-stop resource for many
+The goal of the fTools Python plugin is to provide a one-stop resource for many
 common vector-based GIS tasks, without the need for additional software,
-libraries, or complex workarounds. It provides a growing suite of spatial data
+libraries, or complex work-arounds. It provides a growing suite of spatial data
 management and analysis functions that are both fast and functional.
 
 fTools is now automatically installed and enabled in new versions of |qg|, and
 as with all plugins, it can be disabled and enabled using the Plugin Manager
-(See Section :ref:`load_core_plugin`). When enabled, the fTools plugin adds a
+(see :ref:`managing_plugins`). When enabled, the fTools plugin adds a
 :menuselection:`Vector` menu to |qg|, providing functions ranging from Analysis
 and Research Tools to Geometry and Geoprocessing Tools, as well as several useful
 Data Management Tools.
@@ -31,7 +31,7 @@ Analysis tools
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
-| |matrix|            | Distance Matrix | Measure distances between two point  |
+| |matrix|            | Distance matrix | Measure distances between two point  |
 |                     |                 | layers, and output results as a)     |
 |                     |                 | Square distance matrix, b) Linear    |
 |                     |                 | distance matrix, or c) Summary of    |
@@ -47,14 +47,14 @@ Analysis tools
 |                     |                 | vector layer.                        |
 +---------------------+-----------------+--------------------------------------+
 | |unique|            | List unique     | List all unique values in an input   |
-|                     | values          | vector layer field                   |
+|                     | values          | vector layer field.                  |
 +---------------------+-----------------+--------------------------------------+
-| |basic_statistics|  | Basic statistic | Compute basic statistics (mean, std  |
+| |basic_statistics|  | Basic statistics| Compute basic statistics (mean, std  |
 |                     |                 | dev, N, sum, CV) on an input field.  |
 +---------------------+-----------------+--------------------------------------+
 | |neighbor|          | Nearest         | Compute nearest neighbor statistics  |
-|                     | Neighbor        | assess the level of clustering in a  |
-|                     | analysis        | point vector layer                   |
+|                     | neighbor        | to assess the level of clustering in |
+|                     | analysis        | a point vector layer.                |
 +---------------------+-----------------+--------------------------------------+
 | |mean|              | Mean            | Compute either the normal or         |
 |                     | coordinate(s)   | weighted mean center of an entire    |
@@ -79,8 +79,8 @@ Research tools
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
-| |random_selection|  | Random selection| Randomly select n number of          |
-|                     |                 | features, or n percentage of features|
+| |random_selection|  | Random selection| Randomly select n number of features,|
+|                     |                 | or n percentage of features.         |
 +---------------------+-----------------+--------------------------------------+
 | |sub_selection|     | Random selection| Randomly select features within      |
 |                     | within subsets  | subsets based on a unique ID field.  |
@@ -93,7 +93,7 @@ Research tools
 |                     |                 | them as a point shapefile.           |
 +---------------------+-----------------+--------------------------------------+
 | |vector_grid|       | Vector grid     | Generate a line or polygon grid      |
-|                     |                 | based on user specified grid spacing.|
+|                     |                 | based on user-specified grid spacing.|
 +---------------------+-----------------+--------------------------------------+
 | |select_location|   | Select by       | Select features based on their       |
 |                     | location        | location relative to another layer   |
@@ -158,7 +158,7 @@ Geometry tools
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
 | |check_geometry|    | Check geometry  | Check polygons for intersections,    |
-|                     | validity        | closed-holes, and fix node ordering. |
+|                     | validity        | closed holes, and fix node ordering. |
 +---------------------+-----------------+--------------------------------------+
 | |export_geometry|   | Export/Add      | Add vector layer geometry info to    |
 |                     | geometry columns| point (XCOORD, YCOORD), line         |
@@ -170,17 +170,17 @@ Geometry tools
 |                     |                 | layer.                               |
 +---------------------+-----------------+--------------------------------------+
 | |delaunay|          | Delaunay        | Calculate and output (as polygons)   |
-|                     | triangulation   | the delaunay triangulation of an     |
+|                     | triangulation   | the Delaunay triangulation of an     |
 |                     |                 | input point vector layer.            |
 +---------------------+-----------------+--------------------------------------+
-|                     | Voronoi Polygons| Calculate voronoi polygons of an     |
+|                     | Voronoi polygons| Calculate Voronoi polygons of an     |
 |                     |                 | input point vector layer.            |
 +---------------------+-----------------+--------------------------------------+
 | |simplify|          | Simplify        | Generalize lines or polygons with a  |
 |                     | geometry        | modified Douglas-Peucker algorithm.  |
 +---------------------+-----------------+--------------------------------------+
 |                     | Densify         | Densify lines or polygons by adding  |
-|                     | geometry        | vertices                             |
+|                     | geometry        | vertices.                            |
 +---------------------+-----------------+--------------------------------------+
 | |multi_to_single|   | Multipart to    | Convert multipart features to        |
 |                     | singleparts     | multiple singlepart features.        |
@@ -207,7 +207,7 @@ Table Ftools 4: fTools Geometry tools
 .. note::
 
    The *Simplify geometry* tool can be used to remove duplicate nodes in line and
-   polygon geometries, just set the *Simplify tolerance* parameter to 0 and this
+   polygon geometries. Just set the *Simplify tolerance* parameter to 0 and this
    will do the trick.
 
 .. _table_ftools_5:
@@ -234,7 +234,7 @@ Data management tools
 |                     | to one          | folder into a new shapefile based on |
 |                     |                 | the layer type (point, line, area).  |
 +---------------------+-----------------+--------------------------------------+
-|                     | Create spatial  | Create a spatial index for OGR       |
+|                     | Create spatial  | Create a spatial index for OGR-      |
 |                     | index           | supported formats.                   |
 +---------------------+-----------------+--------------------------------------+
 

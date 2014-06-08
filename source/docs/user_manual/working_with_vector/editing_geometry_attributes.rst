@@ -72,7 +72,6 @@ So be sure to mark the checkbox for those layers that you need to snap to.
    **Figure Edit 1:**
 
 .. figure:: /static/user_manual/working_with_vector/editProjectSnapping.png
-   :width: 30em
    :align: center
 
    Edit snapping options on a layer basis |nix|
@@ -143,8 +142,8 @@ Topological editing
 Besides layer-based snapping options, you can also define topological
 functionalities in the :guilabel:`Snapping options...` dialog in the
 :menuselection:`Settings` (or :menuselection:`File`) menu. Here, you can
-define |checkbox| :guilabel:`Enable topological editing`, and/or for
-polygon layers, you can activate the column |checkbox|
+define |checkbox| :guilabel:`Enable topological editing`,
+and/or for polygon layers, you can activate the column |checkbox|
 :guilabel:`Avoid Int.`, which avoids intersection of new polygons.
 
 .. index:: Shared_Polygon_Boundaries
@@ -267,7 +266,6 @@ river in Alaska. In the :guilabel:`Digitizing` menu under the
    **Figure Edit 2:**
 
 .. figure:: /static/user_manual/working_with_vector/editDigitizing.png
-   :width: 20em
    :align: center
 
    Enter Attribute Values Dialog after digitizing a new vector
@@ -517,7 +515,6 @@ checkbox. Undo/Redo is however active, even if the widget is not displayed.
    **Figure Edit 3:**
 
 .. figure:: /static/user_manual/working_with_vector/redo_undo.png
-   :width: 15em
    :align: center
 
    Redo and Undo digitizing steps |nix|
@@ -659,7 +656,7 @@ Split parts
 
 In |qg| 2.0 it is now possible to split the parts of a multi part feature so that the
 number of parts is increased. Just draw a line across the part you want to split using
-the || :sup:`Split Parts` icon.
+the |mActionSplitParts| :sup:`Split Parts` icon.
 
 Merge selected features
 .......................
@@ -702,7 +699,6 @@ Without these settings, the tool is inactive.
    **Figure Edit 4:**
 
 .. figure:: /static/user_manual/working_with_vector/rotatepointsymbol.png
-   :width: 15em
    :align: center
 
    Rotate Point Symbols |nix|
@@ -747,7 +743,6 @@ with X,Y,Z coordinates).
    **Figure Edit 5:**
 
 .. figure:: /static/user_manual/working_with_vector/editNewVector.png
-   :width: 20em
    :align: center
 
    Creating a new Shapefile layer Dialog |nix|
@@ -783,7 +778,6 @@ be displayed as shown in Figure_edit_6_.
    **Figure Edit 6:**
 
 .. figure:: /static/user_manual/working_with_vector/editNewSpatialite.png
-   :width: 20em
    :align: center
 
    Creating a New SpatiaLite layer Dialog |nix|
@@ -849,7 +843,6 @@ selected features are shown in the attribute table title.
    **Figure Attributes 1:**
 
 .. figure:: /static/user_manual/working_with_vector/vectorAttributeTable.png
-   :width: 30em
    :align: center
 
    Attribute Table for regions layer |nix|
@@ -900,6 +893,10 @@ In the :guilabel:`Expression` field, the following query appears:
 ::
 
  "TYPE_2"  =  'Borough'
+
+Here you can also use the :menuselection:`Function list --> Recent (Selection)` to
+make a selection that you used before. The expression builder remembers the last 20
+used expressions. 
 
 The matching rows will be selected, and the total number of matching rows will
 appear in the title bar of the attribute table, as well as in the status bar of
@@ -1007,12 +1004,11 @@ relation using foreign keys, because there are several airports in most regions.
    **Figure Relations 1:**
 
 .. figure:: /static/user_manual/working_with_vector/relations1.png
-   :width: 30em
    :align: center
 
    Alaska region with airports |nix|
 
-I addition to the already existing attributes in the airports attribute table 
+In addition to the already existing attributes in the airports attribute table 
 another field fk_region which acts as a foreign key (if you have a database, you will 
 probably want to define a constraint on it).
 
@@ -1040,11 +1036,11 @@ The first thing we are going to do is to let QGIS know about the relations betwe
 This is done in :menuselection:`Settings -->` :menuselection:`Project Properties`. 
 Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
 
-* **name** is going to be used as a title. It should be a human readable string, describing, what the relation is used for. We will just call say "Maintenances" in this case.
-* **referencing layer** is the one with the foreign key field on it. In our case this is the maintenances layer
-* **referencing field** will say, which field points to the other layer so this is fk_reach in this case
-* **referenced layer** is the one with the primary key, pointed to, so here it is the reach layer
-* **referenced field** is the primary key of the referenced layer so it is id
+* **name** is going to be used as a title. It should be a human readable string, describing, what the relation is used for. We will just call say "Airports" in this case.
+* **referencing layer** is the one with the foreign key field on it. In our case this is the airports layer
+* **referencing field** will say, which field points to the other layer so this is fk_region in this case
+* **referenced layer** is the one with the primary key, pointed to, so here it is the regions layer
+* **referenced field** is the primary key of the referenced layer so it is ID
 * **id** will be used for internal purposes and has to be unique. You may need it to build custom forms once this is supported. If you leave it empty, one will be generated for you but you can assign one yourself to get one that is easier to handle.
 
 .. _figure_relations_2:
@@ -1054,7 +1050,6 @@ Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
    **Figure Relations 2:**
 
 .. figure:: /static/user_manual/working_with_vector/relations2.png
-   :width: 30em
    :align: center
 
    Relation Manager |nix|
@@ -1077,7 +1072,6 @@ under actions.
    **Figure Relations 3:**
 
 .. figure:: /static/user_manual/working_with_vector/relations3.png
-   :width: 30em
    :align: center
 
    Identification dialog regions with relation to airports |nix|
@@ -1085,11 +1079,11 @@ under actions.
 As you can see, the airports assigned to this particular region are all shown in a 
 table. And there are also some buttons available. Let's review them shortly
 
-* The **pencil button** is for toggling the edit mode. Be aware that it toggles the edit mode of the airport layer, although we are in the feature form of a feature from the region layer. But the table is representing features of the airport layer.
-* The **plus button** will add a new feature to the airport layer. And it will assign the new airport to the current region by default.
-* The **X** button will delete the selected airport permanently.
-* The **Chain** symbol will open a new dialog where you can select any existing airport which will then be assigned to the current region. This may be handy if you created the airport on the wrong region by accident.
-* The **Split chain** symbol will unlink the selected airport from the current region, leaving them unassigned (the foreign key is set to NULL) effectively.
+* The |mActionToggleEditing| button is for toggling the edit mode. Be aware that it toggles the edit mode of the airport layer, although we are in the feature form of a feature from the region layer. But the table is representing features of the airport layer.
+* The |mActionSignPlus| button will add a new feature to the airport layer. And it will assign the new airport to the current region by default.
+* The |mActionRemove| button will delete the selected airport permanently.
+* The |mActionLink| symbol will open a new dialog where you can select any existing airport which will then be assigned to the current region. This may be handy if you created the airport on the wrong region by accident.
+* The |mActionUnlink| symbol will unlink the selected airport from the current region, leaving them unassigned (the foreign key is set to NULL) effectively.
 * The two buttons to the right switch between table view and form view where the later let's you view all the airports in their respective form.
 
 If you work on the airport table, a new widget type is available which lets you 
@@ -1109,7 +1103,6 @@ to assign the current airport to another region.
    **Figure Relations 4:**
 
 .. figure:: /static/user_manual/working_with_vector/relations4.png
-   :width: 30em
    :align: center
 
    Identification dialog airport with relation to regions |nix|

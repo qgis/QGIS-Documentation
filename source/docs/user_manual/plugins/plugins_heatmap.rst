@@ -17,7 +17,7 @@ Activate the Heatmap plugin
 ---------------------------
 
 First this core plugin needs to be activated using the Plugin Manager (see
-Section :ref:`load_core_plugin`). After activation the heatmap icon |heatmap|
+:ref:`load_core_plugin`). After activation, the heatmap icon |heatmap|
 can be found in the Raster Toolbar, and under the :menuselection:`Raster --> Heatmap`
 menu.
 
@@ -27,33 +27,33 @@ Raster Toolbar if it is not visible.
 Using the Heatmap plugin
 ------------------------
 
-Clicking the |heatmap| `Heatmap` toolbutton opens the Heatmap plugin dialog
+Clicking the |heatmap| `Heatmap` tool button opens the Heatmap plugin dialog
 (see figure_heatmap_2_).
 
 The dialog has the following options:
 
-* **Input point layer**: lists all the vector point layers in the current project
+* **Input point layer**: Lists all the vector point layers in the current project
   and is used to select the layer to be analysed.
-* **Output raster**: use the |browsebutton| button to select the folder and
-  file name for the output raster the Heatmap plugin generates. A file extension
+* **Output raster**: Allows you to use the |browsebutton| button to select the folder and
+  filename for the output raster the Heatmap plugin generates. A file extension
   is not required.
-* **Output format**: selects the output format. Although all formats supported
+* **Output format**: Selects the output format. Although all formats supported
   by GDAL can be choosen, in most cases GeoTIFF is the best format to choose.
-* **Radius**: used to specify the heatmap search radius (or kernel bandwidth) in meters
+* **Radius**: Is used to specify the heatmap search radius (or kernel bandwidth) in meters
   or map units. The radius specifies the distance around a point at which the influence
   of the point will be felt. Larger values result in greater smoothing, but smaller
   values may show finer details and variation in point density.
 
-When the |checkbox| :guilabel:`Advanced` checkbox is checked additional options
+When the |checkbox| :guilabel:`Advanced` checkbox is checked, additional options
 will be available:
 
-* **Rows** and **Columns**: used to change the dimensions of the output raster.
+* **Rows** and **Columns**: Used to change the dimensions of the output raster.
   These values are also linked to the **Cell size X** and **Cell size Y** values.
-  Increasing the number of rows or colums will decrease the cell size and increase the
+  Increasing the number of rows or columns will decrease the cell size and increase the
   file size of the output file. The values in Rows and Columns are also linked, so doubling
   the number of rows will automatically double the number of columns and the cell sizes will
   also be halved. The geographical area of the output raster will remain the same!
-* **Cell size X** and **Cell size Y**: control the geographic size of each pixel in the output
+* **Cell size X** and **Cell size Y**: Control the geographic size of each pixel in the output
   raster. Changing these values will also change the number of Rows and Columns in the output
   raster.
 
@@ -64,23 +64,23 @@ will be available:
   hotspots, and Epanechnikov results in "smoother" hotspots. A number of standard kernel functions
   are available in |qg|, which are described and illustrated on Wikipedia_.
 
-* **Decay ratio**: can be used with Triangular kernels to futher control how heat from
+* **Decay ratio**: Can be used with Triangular kernels to further control how heat from
   a feature decreases with distance from the feature.
 
   - A value of 0 (=minimum) indicates that the heat will be concentrated in the centre of the
-    given radius and be completely extinguished at the edge.
+    given radius and completely extinguished at the edge.
   - A value of 0.5 indicates that pixels at the edge of the radius will be given half the heat
     as pixels at the centre of the search radius.
   - A value of 1 means the heat is spread evenly over the whole search radius circle. (This
     is equivalent to the 'Uniform' kernel.)
   - A value greater than 1 indicates that the heat is higher towards the edge of the search radius
-    then at the centre.
+    than at the centre.
 
 The input point layer may also have attribute fields which can affect how they influence
 the heatmap:
 
-* **Use radius from field**: sets the search radius for each feature from an attribute field in the input layer.
-* **Use weight from field**: allows input features to be weighted by an attribute field. This can be used to
+* **Use radius from field**: Sets the search radius for each feature from an attribute field in the input layer.
+* **Use weight from field**: Allows input features to be weighted by an attribute field. This can be used to
   increase the influence certain features have on the resultant heatmap.
 
 When an output raster file name is specified, the **[OK]** button can be used to create the
@@ -89,12 +89,12 @@ heatmap.
 Tutorial: Creating a Heatmap
 ----------------------------
 
-For the following example we will use the ``airports`` vector point layer from
+For the following example, we will use the ``airports`` vector point layer from
 the |qg| sample dataset (see :ref:`label_sampledata`). Another exellent |qg|
 tutorial on making heatmaps can be found at `http://qgis.spatialthoughts.com
 <http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_.
 
-In Figure_Heatmap_1_ the airports of Alaska are shown.
+In Figure_Heatmap_1_, the airports of Alaska are shown.
 
 .. _figure_heatmap_1:
 
@@ -103,18 +103,17 @@ In Figure_Heatmap_1_ the airports of Alaska are shown.
    **Figure Heatmap 1:**
 
 .. figure:: /static/user_manual/plugins/heatmap_start.png
-   :width: 30em
    :align: center
 
    Airports of Alaska |nix|
 
 
-#. Select the |heatmap| `Heatmap` toolbutton to open the Heatmap dialog
+#. Select the |heatmap| `Heatmap` tool button to open the Heatmap dialog
    (see Figure_Heatmap_2_).
-#. In the :guilabel:`Input point layer` |selectstring| field select ``airports``
-   from the list of point layers loaded in current project.
-#. Specify an output file name by clicking the |browsebutton| button next to the
-   :guilabel:`Output raster` field. Enter the file name ``heatmap_airports`` (no
+#. In the :guilabel:`Input point layer` |selectstring| field, select ``airports``
+   from the list of point layers loaded in the current project.
+#. Specify an output filename by clicking the |browsebutton| button next to the
+   :guilabel:`Output raster` field. Enter the filename ``heatmap_airports`` (no
    file extension is necessary).
 #. Leave the :guilabel:`Output format` as the default format, ``GeoTIFF``.
 #. Change the :guilabel:`Radius` to ``1000000`` meters.
@@ -127,7 +126,6 @@ In Figure_Heatmap_1_ the airports of Alaska are shown.
    **Figure Heatmap 2:**
 
 .. figure:: /static/user_manual/plugins/heatmap_dialog.png
-   :width: 20em
    :align: center
 
    The Heatmap Dialog |nix|
@@ -143,7 +141,6 @@ can now be styled in |qg| to improve its appearance.
    **Figure Heatmap 3:**
 
 .. figure:: /static/user_manual/plugins/heatmap_loaded_grey.png
-   :width: 30em
    :align: center
 
    The heatmap after loading looks like a grey surface |nix|
@@ -168,7 +165,6 @@ The final result is shown in Figure_Heatmap_4_.
    **Figure Heatmap 4:**
 
 .. figure:: /static/user_manual/plugins/heatmap_loaded_colour.png
-   :width: 30em
    :align: center
 
    Styled heatmap of airports of Alaska |nix|

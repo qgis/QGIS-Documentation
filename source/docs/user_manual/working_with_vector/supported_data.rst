@@ -66,7 +66,6 @@ This will bring up a new window (see figure_vector_1_).
 
 .. figure:: /static/user_manual/working_with_vector/addvectorlayerdialog.png
    :align: center
-   :width: 25em
 
    Add Vector Layer Dialog |nix|
 
@@ -86,7 +85,6 @@ You can also select the encoding for the shapefile if desired.
 
 .. figure:: /static/user_manual/working_with_vector/shapefileopendialog.png
    :align: center
-   :width: 25em
 
    Open an OGR Supported Vector Layer Dialog |nix|
 
@@ -101,7 +99,6 @@ Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file.
 
 .. figure:: /static/user_manual/working_with_vector/shapefileloaded.png
    :align: center
-   :width: 30em
 
    |qg| with Shapefile of Alaska loaded |nix|
 
@@ -206,7 +203,7 @@ contains the column names. A common type of delimited text file is a CSV
 Such data files can also contain positional information in two main forms:
 
 * As point coordinates in separate columns
-* As Well-Known Text (WKT) representation of geometry
+* As well-known text (WKT) representation of geometry
 
 |qg| allows you to load a delimited text file as a layer or ordinal table. But
 first check that the file meets the following requirements:
@@ -263,8 +260,8 @@ First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
 by clicking on the **[Browse]** button. Once the file is selected, |qg|
 attempts to parse the file with the most recently used delimiter. To enable |qg| to properly parse the
 file, it is important to select the correct delimiter. You can specify a
-delimiter by activating |radiobutton| :guilabel:`Custom delimiters`, or by activating
-|radiobutton| :guilabel:`Regular expression delimiter` and entering
+delimiter by activating |radiobuttonon| :guilabel:`Custom delimiters`, or by activating
+|radiobuttonon| :guilabel:`Regular expression delimiter` and entering
 text into the :guilabel:`Expression` field. For example, to
 change the delimiter to tab, use ``\t`` (this is a regular expression for the
 tab character).
@@ -536,7 +533,7 @@ in PostGIS: **ogr2ogr**. This is part of your GDAL installation.
 To import a shapefile into PostGIS, do the following:
 ::
 
-  ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres \
+  ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres 
   password=topsecret" alaska.shp
 
 This will import the shapefile :file:`alaska.shp` into the PostGIS database
@@ -643,8 +640,8 @@ version of the data to be plotted in a 180 |degrees|-centric map.
    **Figure Vector 5:**
 
 .. figure:: /static/user_manual/working_with_vector/vectorWrapping.png
-   :width: 25em
    :align: center
+   :width: 25em
 
    Crossing 180 |degrees| longitude applying the **ST_Shift_Longitude**
    function

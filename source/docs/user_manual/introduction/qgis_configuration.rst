@@ -26,7 +26,6 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
 
 .. figure:: /static/user_manual/introduction/panels_and_toolbars.png
    :align: center
-   :width: 20em
 
    The Panels and Toolbars menu |nix|
 
@@ -92,7 +91,6 @@ options. These include:
 
 .. figure:: /static/user_manual/introduction/macro.png
    :align: center
-   :width: 30em
 
    Macro settings in |qg|
 
@@ -143,7 +141,7 @@ General Menu
 * |checkbox| :guilabel:`Prompt to save project and data source changes when
   required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
-  version of |qg|`
+  version of QGIS`
 * :guilabel:`Enable macros` |selectstring|. This option was created to handle
   macros that are written to perform an action on project events. You can
   choose between 'Never', 'Ask', 'For this session only' and
@@ -178,7 +176,6 @@ source code.
 
 .. figure:: /static/user_manual/introduction/sys-env-options.png
    :align: center
-   :width: 30em
 
    System environment variables in |qg|
 
@@ -458,7 +455,6 @@ Network Menu
 
 .. figure:: /static/user_manual/introduction/proxy-settings.png
    :align: center
-   :width: 30em
 
    Proxy-settings in |qg|
 
@@ -497,7 +493,7 @@ http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum.
 You can modify the options according to your needs. Some of the changes may
 require a restart of |qg| before they will be effective.
 
-* |nix| Settings are saved in a text file: :file:`$HOME/.config/QGIS/qgis.conf`
+* |nix| Settings are saved in a text file: :file:`$HOME/.config/QGIS/QGIS2.conf`
 * |osx| You can find your settings in: :file:`$HOME/Library/Preferences/org.qgis.qgis.plist`
 * |win| Settings are stored in the registry under: ``HKEY\CURRENT_USER\Software\QGIS\qgis``
 
@@ -518,7 +514,6 @@ installed that you never use and that are filling your screen.
 
 .. figure:: /static/user_manual/introduction/customization.png
    :align: center
-   :width: 25em
 
    The Customization dialog |nix|
 

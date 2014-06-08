@@ -7,7 +7,7 @@ Introduction
 ------------
 
 All algorithms (including models) can be executed as a batch process. That
-is, they can be executed using not a single set of inputs, but several of them,
+is, they can be executed using not just a single set of inputs, but several of them,
 executing the algorithm as many times as needed. This is useful when processing
 large amounts of data, since it is not necessary to launch the algorithm many
 times from the toolbox.
@@ -24,7 +24,6 @@ that will appear.
 
 .. figure:: /static/user_manual/processing/batch_processing_right_click.png
    :align: center
-   :width: 20em
 
    Batch Processing Right Click |win|
 
@@ -45,7 +44,6 @@ one shown next.
 
 .. figure:: /static/user_manual/processing/batch_processing.png
    :align: center
-   :width: 30em
 
    Batch Processing |win|
 
@@ -63,14 +61,14 @@ values.
 Filling the parameters table
 ----------------------------
 
-For most parameters, setting its value is trivial. Just type the value or select
+For most parameters, setting the value is trivial. Just type the value or select
 it from the list of available options, depending on the parameter type.
 
 The main differences are found for parameters representing layers or tables, and
-for output filepaths. Regarding input layers and tables, when an algorithm is
-executed as part of a batch process those input data objects are taken directly
+for output file paths. Regarding input layers and tables, when an algorithm is
+executed as part of a batch process, those input data objects are taken directly
 from files, and not from the set of them already opened in |qg|. For this reason,
-any algorithm can be executed as a batch process even if no data objects at all
+any algorithm can be executed as a batch process, even if no data objects at all
 are opened and the algorithm cannot be run from the toolbox.
 
 Filenames for input data objects are introduced directly typing or, more
@@ -78,11 +76,11 @@ conveniently, clicking on the |browsebutton| button on the right hand of the cel
 which shows a typical file chooser dialog. Multiple files can be selected at once.
 If the input parameter represents a single data object and several files are
 selected, each one of them will be put in a separate row, adding new ones if
-needed. If it represents a multiple input, all the selected files will be added
+needed. If the parameter represents a multiple input, all the selected files will be added
 to a single cell, separated by semicolons (``;``).
 
 Output data objects are always saved to a file and, unlike when executing an
-algorithm from the toolbox, saving to a temporary one is not permitted. You can
+algorithm from the toolbox, saving to a temporary file is not permitted. You can
 type the name directly or use the file chooser dialog that appears when clicking
 on the accompanying button.
 
@@ -97,7 +95,6 @@ other cells in the same column (same parameter).
 
 .. figure:: /static/user_manual/processing/batch_processing_save.png
    :align: center
-   :width: 20em
 
    Batch Processing Save
 
@@ -107,9 +104,9 @@ the other options is selected, all the cells below the selected one will be
 automatically filled based on a defined criteria. This way, it is much easier to
 fill the table, and the batch process can be defined with less effort.
 
-Automatic filling can be done simply adding correlative numbers to the selected
-filepath, or appending the value of another field at the same row. This is
-particularly useful for naming output data object according to input ones.
+Automatic filling can be done by simply adding correlative numbers to the selected
+file path, or by appending the value of another field at the same row. This is
+particularly useful for naming output data objects according to input ones.
 
 .. _figure_processing_4:
 
@@ -119,7 +116,6 @@ particularly useful for naming output data object according to input ones.
 
 .. figure:: /static/user_manual/processing/batch_processing_filepath.png
    :align: center
-   :width: 20em
 
    Batch Processing File Path |win|
 

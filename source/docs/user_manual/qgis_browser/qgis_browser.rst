@@ -22,7 +22,6 @@ or MS SQL Spatial) and WMS/WFS connections. You can also view your GRASS data
 
 .. figure:: /static/user_manual/qgis_browser/browser_standalone_metadata.png
    :align: center
-   :width: 30em
 
    |qg| browser as a stand alone application |nix|
 
@@ -71,7 +70,7 @@ won't be displayed.
 
 It's also possible to run the |qg| Browser as a stand-alone application.
 
-**Start the |qg| browser**
+**Start the QGIS browser**
 
 * |nix| Type in "qbrowser" at a command prompt.
 * |win| Start the |qg| Browser using the Start menu or desktop shortcut.

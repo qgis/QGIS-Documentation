@@ -1,11 +1,7 @@
 # Makefile for Sphinx documentation
 #
 
-# You can set these variables from the command line
-#LANGUAGES     = en `ls i18n`
-#LANGUAGES     = en ca_ES  da_DK  de  es  fa fi  fr id  it  ja  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
 # as long as this branch is testing, we only build for english:
-LANGUAGES     = en 
 LANG          = en
 SPHINXBUILD   = sphinx-build
 SPHINXINTL    = sphinx-intl
@@ -148,29 +144,23 @@ pdf: html
 	fi
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf
 
+full:  
+#	@-if [ $(LANG) != "en" ]; then \
+#		echo; \
+#		echo Pulling $$LANG from transifex; \
+#		# --minimum-perc=1 so only files which have at least 1% translation are pulled \
+#		# -f to force, --skip to not stop with errors \
+#		# -l lang \
+#		echo tx pull --minimum-perc=1 --skip -f -l $$LANG; \
+#        fi
+	make pdf
+	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf
+	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf
+	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual-$(LANG).pdf
+
 world: all
 
-all:
-	@echo
-	@echo Building html for the following languages: $(LANGUAGES)
-	@echo
-	@echo Starting with pulling all translations from transifex
-	# --minimum-perc=1 so only files which have at least 1% translation are pulled
-	# -f to force, --skip to not stop with errors
-	#tx pull --minimum-perc=1 --skip -f
-	# ^^^ SHOULD NOT BE DONE ON TESTING/MASTER BRANCH! ONLY ON STABLE==TRANSLATING BRANCH
-	mkdir -p live/html/pdf
-	# after build quickly rename old live dir, mv output to live dir and then remove old dir
-	@for LANG in $(LANGUAGES) ; do \
-		make LANG=$$LANG pdf; \
-		mkdir -p live/html/$$LANG; \
-		mv live/html/$$LANG live/html/$$LANG.old; \
-		mv $(BUILDDIR)/html/$$LANG live/html/; \
-		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-UserGuide.pdf live/html/pdf/QGIS-$(VERSION)-UserGuide-$$LANG.pdf;  \
-		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf live/html/pdf/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$$LANG.pdf;  \
-		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-QGISTrainingManual.pdf live/html/pdf/QGIS-$(VERSION)-QGISTrainingManual-$$LANG.pdf;  \
-		rm -rf live/html/$$LANG.old; \
-	done
+all: full
 
 createlang: springclean
 	@echo Creating a new Language: $(LANG)

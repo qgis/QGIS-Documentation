@@ -5,11 +5,13 @@
 eVis Plugin
 ===========
 
-The Biodiversity Informatics Facility at the American Museum of Natural History's
-(AMNH) Center for Biodiversity and Conservation (CBC) (this section is derived
+(This section is derived
 from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) User's Guide. American
 Museum of Natural History, Center for Biodiversity and Conservation. Available
 from http://biodiversityinformatics.amnh.org/, and released under the GNU FDL.)
+
+The Biodiversity Informatics Facility at the American Museum of Natural History's
+(AMNH) Center for Biodiversity and Conservation (CBC) 
 has developed the Event Visualization Tool (eVis), another software tool to add
 to the suite of conservation monitoring and decision support tools for guiding
 protected area and landscape planning. This plugin enables users to easily link
@@ -18,7 +20,7 @@ photographs, and other supporting documents, to vector data in |qg|.
 
 eVis is now automatically installed and enabled in new versions of |qg|, and as
 with all plugins, it can be disabled and enabled using the Plugin Manager
-(See :ref:`managing_plugins`).
+(see :ref:`managing_plugins`).
 
 The eVis plugin is made up of three modules: the 'Database Connection tool',
 'Event ID tool', and the 'Event Browser'. These work together to allow viewing of
@@ -44,8 +46,7 @@ into |qg| before running the Event Browser.
 Launch the Event Browser module
 ...............................
 
-To launch the Event browser module either click on the |event_browser|
-:sup:`eVis Event Browser` icon or click on :menuselection:`Database --> eVis -->
+To launch the Event Browser module, click on :menuselection:`Database --> eVis -->
 eVis Event Browser`. This will open the :guilabel:`Generic Event Browser` window.
 
 The :guilabel:`Event Browser` window has three tabs displayed at the top
@@ -61,7 +62,7 @@ documents other than images.
 Understanding the Display window
 ................................
 
-To see the :guilabel:`Display` window click on the :guilabel:`Display` tab in the
+To see the :guilabel:`Display` window, click on the :guilabel:`Display` tab in the
 :guilabel:`Event Browser` window. The :guilabel:`Display` window is used
 to view geocoded photographs and their associated attribute data.
 
@@ -73,7 +74,6 @@ to view geocoded photographs and their associated attribute data.
 
 .. figure:: /static/user_manual/plugins/evisdisplay.png
    :align: center
-   :width: 25em
 
    The *eVis* display window
 
@@ -86,10 +86,10 @@ D. **Zoom to full extent** button: Displays the full extent of the photograph.
 E. **Attribute information window**: All of the attribute information for the
    point associated with the photograph being viewed is displayed here. If the
    file type being referenced in the displayed record is not an image but is of
-   a file type defined in the :guilabel:`Configure External Applications` tab
+   a file type defined in the :guilabel:`Configure External Applications` tab,
    then when you double-click on the value of the field containing the path to
-   the file the application to open the file will be launched to view or hear
-   the contents of the file. If the file extension is recognized the attribute
+   the file, the application to open the file will be launched to view or hear
+   the contents of the file. If the file extension is recognized, the attribute
    data will be displayed in green.
 F. **Navigation buttons**: Use the Previous and Next buttons to load the previous
    or next feature when more than one feature is selected.
@@ -107,37 +107,36 @@ Understanding the Options window
 
 .. figure:: /static/user_manual/plugins/evisoptions.png
    :align: center
-   :width: 25em
 
    The *eVis* Options window
 
-A. **File path**: A dropdown list to specify the attribute field that contains
+A. **File path**: A drop-down list to specify the attribute field that contains
    the directory path or URL for the photographs or other documents being
-   displayed. If the location is a relative path then the checkbox must be
+   displayed. If the location is a relative path, then the checkbox must be
    clicked. The base path for a relative path can be entered in the :guilabel:`Base
    Path` text box below. Information about the different options for specifying
    the file location are noted in the section :ref:`evis_specifying` below.
-B. **Compass bearing**: A dropdown list to specify the attribute
+B. **Compass bearing**: A drop-down list to specify the attribute
    field that contains the compass bearing associated with the photograph being
-   displayed. If compass bearing information is available it is necessary to
-   click the checkbox below the dropdown menu title.
+   displayed. If compass bearing information is available, it is necessary to
+   click the checkbox below the drop-down menu title.
 C. **Compass offset**: Compass offsets can be used to compensate for
-   declination (adjust bearings collected using magnetic bearings to true north
-   bearings). Click the |radiobuttonon| :guilabel:`Manual` radiobutton to enter
+   declination (to adjust bearings collected using magnetic bearings to true north
+   bearings). Click the |radiobuttonon| :guilabel:`Manual` radio button to enter
    the offset in the text box or click the |radiobuttonon|
-   :guilabel:`From Attribute` radiobutton to select the attribute field
-   containing the offsets. For both of these options east declinations should
-   be entered using positive values and west declinations should use negative
+   :guilabel:`From Attribute` radio button to select the attribute field
+   containing the offsets. For both of these options, east declinations should
+   be entered using positive values, and west declinations should use negative
    values.
 D. **Directory base path**: The base path onto which the relative path defined
    in Figure_eVis_2_ (A) will be appended.
-E. **Replace path**: If this checkbox is checked, only the file name from the A
-   will be appended to the Base Path.
+E. **Replace path**: If this checkbox is checked, only the file name from A
+   will be appended to the base path.
 F. **Apply rule to all documents**: If checked, the same path rules that are
    defined for photographs will be used for non-image documents such as movies,
-   text documents, and sound files. If not checked the path rules will only
-   apply to photographs and other documents will ignore the Base Path parameter.
-G. **Remember settings**: If the checkbox is checked the values for the associated
+   text documents, and sound files. If not checked, the path rules will only
+   apply to photographs, and other documents will ignore the base path parameter.
+G. **Remember settings**: If the checkbox is checked, the values for the associated
    parameters will be saved for the next session when the window is closed or
    when the **[Save]** button below is pressed.
 H. **Reset values**: Resets the values on this line to the default setting.
@@ -159,7 +158,6 @@ Understanding the Configure External Applications window
 
 .. figure:: /static/user_manual/plugins/evisexternal.png
    :align: center
-   :width: 25em
 
    The *eVis* External Applications window
 
@@ -180,7 +178,7 @@ Specifying the location and name of a photograph
 ------------------------------------------------
 
 The location and name of the photograph can be stored using an absolute or
-relative path or a URL if the photograph is available on a web server. Examples
+relative path, or a URL if the photograph is available on a web server. Examples
 of the different approaches are listed in Table `evis_examples`_.
 
 .. _`evis_examples`:
@@ -202,7 +200,7 @@ Specifying the location and name of other supporting documents
 --------------------------------------------------------------
 
 Supporting documents such as text documents, videos, and sound clips can also
-be displayed or played by eVis. To do this it is necessary to add an entry in
+be displayed or played by eVis. To do this, it is necessary to add an entry in
 the file reference table that can be accessed from the :guilabel:`Configure External
 Applications` window in the :guilabel:`Generic Event Browser` that matches the
 file extension to an application that can be used to open the file. It is also
@@ -210,8 +208,8 @@ necessary to have the path or URL to the file in the attribute table for the
 vector layer. One additional rule that can be used for URLs that don't contain
 a file extension for the document you want to open is to specify the file
 extension before the URL. The format is --- ``file extension:URL``. The URL is
-preceded by the file extension and a colon, and is particularly useful for
-accessing documents from Wikis and other web sites that use a database to
+preceded by the file extension and a colon; this is particularly useful for
+accessing documents from wikis and other web sites that use a database to
 manage the web pages (see Table `evis_examples`_).
 
 .. _`evis_using_browser`:
@@ -219,33 +217,33 @@ manage the web pages (see Table `evis_examples`_).
 Using the Event Browser
 -----------------------
 
-When the :guilabel:`Event Browser` window opens a photograph will appear in the
+When the :guilabel:`Event Browser` window opens, a photograph will appear in the
 display window if the document referenced in the vector file attribute table is
 an image and if the file location information in the :guilabel:`Options` window
-is properly set. If a photograph is expected and it does not appear it will be
+is properly set. If a photograph is expected and it does not appear, it will be
 necessary to adjust the parameters in the :guilabel:`Options` window.
 
 If a supporting document (or an image that does not have a file extension
-recognized by eVis) is referenced in the attribute table the field containing
+recognized by eVis) is referenced in the attribute table, the field containing
 the file path will be highlighted in green in the attribute information window
 if that file extension is defined in the file reference table located in the
-:guilabel:`Configure External Applications` window. To open the document
+:guilabel:`Configure External Applications` window. To open the document,
 double-click on the green-highlighted line in the attribute information window.
 If a supporting document is referenced in the attribute information window and
-the file path is not highlighted in green then it will be necessary to add an
+the file path is not highlighted in green, then it will be necessary to add an
 entry for the file's filename extension in the :guilabel:`Configure External
 Applications` window. If the file path is highlighted in green but does not open
-when double-clicked it will be necessary to adjust the parameters in the
+when double-clicked, it will be necessary to adjust the parameters in the
 :guilabel:`Options` window so the file can be located by eVis.
 
-If no compass bearing is provided in the :guilabel:`Options` window a red asterisk
+If no compass bearing is provided in the :guilabel:`Options` window, a red asterisk
 will be displayed on top of the vector feature that is associated with the
-photograph being displayed. If a compass bearing is provided then an arrow will
+photograph being displayed. If a compass bearing is provided, then an arrow will
 appear pointing in the direction indicated by the value in the compass bearing
 display field in the :guilabel:`Event Browser` window. The arrow will be
 centered over the point that is associated with the photograph or other document.
 
-To close the :guilabel:`Event Browser` window click on the **[Close]**
+To close the :guilabel:`Event Browser` window, click on the **[Close]**
 button from the :guilabel:`Display` window.
 
 .. _`evis_id_tool`:
@@ -256,7 +254,7 @@ Event ID Tool
 The 'Event ID' module allows you to display a photograph by clicking on a feature
 displayed in the |qg| map window. The vector feature must have attribute
 information associated with it to describe the location and name of the file
-containing the photograph and optionally the compass direction the camera was
+containing the photograph and, optionally, the compass direction the camera was
 pointed when the image was acquired. This layer must be loaded into |qg| before
 running the 'Event ID' tool.
 
@@ -265,7 +263,7 @@ running the 'Event ID' tool.
 Launch the Event ID module
 ..........................
 
-To launch the 'Event ID' module either click on the |event_id| :sup:`Event ID`
+To launch the 'Event ID' module, either click on the |event_id| :sup:`Event ID`
 icon or click on :menuselection:`Database --> eVis --> Event ID Tool`. This will
 cause the cursor to change to an arrow with an 'i' on top of it signifying that
 the ID tool is active.
@@ -287,9 +285,9 @@ Database connection
 The 'Database Connection' module provides tools to connect to and query a
 database or other ODBC resource, such as a spreadsheet.
 
-eVis can directly connect to four types of databases:PostgreSQL, MySQL, SQLite,
-and can also read from ODBC connections (e.g.MS Access). When reading from an
-ODBC database (such as an Excel spreadsheet) it is necessary to configure your
+eVis can directly connect to the following types of databases: PostgreSQL, MySQL, and SQLite;
+it can also read from ODBC connections (e.g., MS Access). When reading from an
+ODBC database (such as an Excel spreadsheet), it is necessary to configure your
 ODBC driver for the operating system you are using.
 
 .. _`evis_launch_database`:
@@ -297,7 +295,7 @@ ODBC driver for the operating system you are using.
 Launch the Database Connection module
 .....................................
 
-To launch the 'Database Connection' module either click on the appropriate icon
+To launch the 'Database Connection' module, either click on the appropriate icon
 |evis_connect| :sup:`eVis Database Connection` or click on :menuselection:`Database -->
 eVis --> Database Connection`. This will launch the :guilabel:`Database Connection`
 window. The window has three tabs: :guilabel:`Predefined Queries`,
@@ -312,13 +310,13 @@ Connect to a database
 
 Click on the :guilabel:`Database Connection` tab to open the database
 connection interface. Next, use the :menuselection:`Database Type` |selectstring|
-combobox to select the type of database that you want to connect to. If a
+combo box to select the type of database that you want to connect to. If a
 password or username is required, that information can be entered in the
 :guilabel:`Username` and :guilabel:`Password` textboxes.
 
 Enter the database host in the :guilabel:`Database Host` textbox. This option is
 not available if you selected 'MS Access' as the database type. If the database
-resides on your desktop you should enter "localhost".
+resides on your desktop, you should enter "localhost".
 
 Enter the name of the database in the :guilabel:`Database Name` textbox. If you
 selected 'ODBC' as the database type, you need to enter the data source name.
@@ -326,7 +324,7 @@ selected 'ODBC' as the database type, you need to enter the data source name.
 When all of the parameters are filled in, click on the **[Connect]** button.
 If the connection is successful, a message will be written in the :guilabel:`Output
 Console` window stating that the connection was established. If a connection was
-not established you will need to check that the correct parameters were entered
+not established, you will need to check that the correct parameters were entered
 above.
 
 .. _figure_eVis_4:
@@ -337,27 +335,26 @@ above.
 
 .. figure:: /static/user_manual/plugins/evisdatabase.png
    :align: center
-   :width: 25em
 
    The *eVis* Database connection window
 
 
-A. **Database Type**: A dropdown list to specify the type of database that will
+A. **Database Type**: A drop-down list to specify the type of database that will
    be used.
 B. **Database Host**: The name of the database host.
-C. **Port** The port number if a MySQL or PostgreSQL database type is selected.
-D. **Database Name** The name of the database.
-E. **Connect** A button to connect to the database using the parameters defined
+C. **Port**: The port number if a MySQL or PostgreSQL database type is selected.
+D. **Database Name**: The name of the database.
+E. **Connect**: A button to connect to the database using the parameters defined
    above.
-F. **Output Console** The console window where messages related to processing
+F. **Output Console**: The console window where messages related to processing
    are displayed.
 G. **Username**: Username for use when a database is password protected.
 H. **Password**: Password for use when a database is password protected.
 I. **Predefined Queries**: Tab to open the "Predefined Queries" window.
 J. **Database Connection**: Tab to open the "Database Connection" window.
 K. **SQL Query**: Tab to open the "SQL Query" window.
-L. **Help**: Displays the on line help.
-M. **OK**: Close the main "Database Connection" window.
+L. **Help**: Displays the online help.
+M. **OK**: Closes the main "Database Connection" window.
 
 
 .. _`evis_running_sql`:
@@ -366,7 +363,7 @@ Running SQL queries
 ...................
 
 SQL queries are used to extract information from a database or ODBC resource.
-In eVis the output from these queries is a vector layer added to the |qg| map
+In eVis, the output from these queries is a vector layer added to the |qg| map
 window. Click on the :guilabel:`SQL Query` tab to display the SQL query
 interface. SQL commands can be entered in this text window. A helpful tutorial
 on SQL commands is available at http://www.w3schools.com/sql. For example, to
@@ -374,8 +371,8 @@ extract all of the data from a worksheet in an Excel file, ``select * from [shee
 where ``sheet1`` is the name of the worksheet.
 
 Click on the **[Run Query]** button to execute the command. If the query
-is successful a :guilabel:`Database File Selection` window will be displayed. If
-the query is not successful an error message will appear in the :guilabel:`Output
+is successful, a :guilabel:`Database File Selection` window will be displayed. If
+the query is not successful, an error message will appear in the :guilabel:`Output
 Console` window.
 
 In the :guilabel:`Database File Selection` window, enter the name of the layer
@@ -390,7 +387,6 @@ Layer` textbox.
 
 .. figure:: /static/user_manual/plugins/evissql_query.png
    :align: center
-   :width: 25em
 
    The eVis SQL query tab
 
@@ -399,29 +395,29 @@ B. **Run Query**: Button to execute the query entered in the :guilabel:`SQL Quer
    Window`.
 C. **Console Window**: The console window where messages related to processing
    are displayed.
-D. **Help**: Displays the on line help.
+D. **Help**: Displays the online help.
 E. **OK**: Closes the main :guilabel:`Database Connection` window.
 
 Use the :guilabel:`X Coordinate` |selectstring| and :guilabel:`Y Coordinate`
-|selectstring| comboboxes to select the field from the database that store the
+|selectstring| combo boxes to select the fields from the database that stores the
 ``X`` (or longitude) and ``Y`` (or latitude) coordinates. Clicking on the **[OK]**
 button causes the vector layer created from the SQL query to be displayed in the
 |qg| map window.
 
 To save this vector file for future use, you can use the |qg| 'Save as...'
-command that is accessed by right clicking on the layer name in the |qg| map
+command that is accessed by right-clicking on the layer name in the |qg| map
 legend and then selecting 'Save as...'
 
 .. tip:: **Creating a vector layer from a Microsoft Excel Worksheet**
 
-   When creating a vector layer from a Microsoft Excel Worksheet you might see
+   When creating a vector layer from a Microsoft Excel Worksheet, you might see
    that unwanted zeros ("0") have been inserted in the attribute table rows
-   beneath valid data.This can be caused by deleting the values for these cells
-   in Excel using the :kbd:`Backspace` key. To correct this problem you need to
-   open the Excel file (you'll need to close |qg| if there if you are connected
-   to the file to allow you to edit the file) and then use
+   beneath valid data. This can be caused by deleting the values for these cells
+   in Excel using the :kbd:`Backspace` key. To correct this problem, you need to
+   open the Excel file (you'll need to close |qg| if you are connected
+   to the file, to allow you to edit the file) and then use
    :menuselection:`Edit --> Delete` to remove the blank rows from the file. To
-   avoid this problem you can simply delete several rows in the Excel Worksheet
+   avoid this problem, you can simply delete several rows in the Excel Worksheet
    using :menuselection:`Edit --> Delete` before saving the file.
 
 
@@ -430,26 +426,26 @@ legend and then selecting 'Save as...'
 Running predefined queries
 ..........................
 
-With predefined queries you can select previously written queries stored in XML
+With predefined queries, you can select previously written queries stored in XML
 format in a file. This is particularly helpful if you are not familiar with SQL
 commands. Click on the :guilabel:`Predefined Queries` tab to display the
 predefined query interface.
 
-To load a set of predefined queries click on the |evis_file| :sup:`Open File`
-icon. This opens the :guilabel:`Open File` window which is used to locate the file
-containing the SQL queries. When the queries are loaded their titles, as
-defined in the XML file, will appear in the dropdown menu located just below
-the |evis_file| :sup:`Open File` icon, the full description of the query is
-displayed in the text window under the dropdown menu.
+To load a set of predefined queries, click on the |evis_file| :sup:`Open File`
+icon. This opens the :guilabel:`Open File` window, which is used to locate the file
+containing the SQL queries. When the queries are loaded, their titles as
+defined in the XML file will appear in the drop-down menu located just below
+the |evis_file| :sup:`Open File` icon. The full description of the query is
+displayed in the text window under the drop-down menu.
 
-Select the query you want to run from the dropdown menu and then click on the
+Select the query you want to run from the drop-down menu and then click on the
 :guilabel:`SQL Query` tab to see that the query has been loaded into the query
 window. If it is the first time you are running a predefined query or are
 switching databases, you need to be sure to connect to the database.
 
 Click on the **[Run Query]** button in the :guilabel:`SQL Query` tab to execute
-the command. If the query is successful a :guilabel:`Database File Selection`
-window will be displayed. If the query is not successful an error message will
+the command. If the query is successful, a :guilabel:`Database File Selection`
+window will be displayed. If the query is not successful, an error message will
 appear in the :guilabel:`Output Console` window.
 
 .. _figure_eVis_6:
@@ -460,19 +456,18 @@ appear in the :guilabel:`Output Console` window.
 
 .. figure:: /static/user_manual/plugins/evispredefined.png
    :align: center
-   :width: 25em
 
-   The *eVis* Predefined queries tab
+   The *eVis* Predefined Queries tab
 
 A. **Open File**: Launches the "Open File" file browser to search for
    the XML file holding the predefined queries.
-B. **Predefined Queries**: A dropdown list with all of the queries defined by
+B. **Predefined Queries**: A drop-down list with all of the queries defined by
    the predefined queries XML file.
 C. **Query description**: A short description of the query. This description
    is from the predefined queries XML file.
 D. **Console Window**: The console window where messages related to processing
    are displayed.
-E. **Help**: Displays the on line help.
+E. **Help**: Displays the online help.
 F. **OK**: Closes the main "Database Connection" window.
 
 .. _`evis_xml_tags`:
@@ -489,24 +484,24 @@ The XML tags read by eVis
 +==================+================================================================================================+
 | query            | Defines the beginning and end of a query statement.                                            |
 +------------------+------------------------------------------------------------------------------------------------+
-| shortdescription | A short description of the query that appears in the eVis dropdown menu.                       |
+| shortdescription | A short description of the query that appears in the eVis drop-down menu.                      |
 +------------------+------------------------------------------------------------------------------------------------+
 | description      | A more detailed description of the query displayed in the Predefined Query text window.        |
 +------------------+------------------------------------------------------------------------------------------------+
-| databasetype     | The database type as defined in the Database Type dropdown menu in the Database Connection tab.|
+| databasetype     | The database type, defined in the Database Type drop-down menu in the Database Connection tab. |
 +------------------+------------------------------------------------------------------------------------------------+
-| databaseport     | The port as defined in the Port textbox in the Database Connection tab.                        |
+| databaseport     | The port as defined in the Port text box in the Database Connection tab.                       |
 +------------------+------------------------------------------------------------------------------------------------+
-| databasename     | The database name as defined in the Database Name textbox in the Database Connection tab.      |
+| databasename     | The database name as defined in the Database Name text box in the Database Connection tab.     |
 +------------------+------------------------------------------------------------------------------------------------+
-| databaseusername | The database username as defined in the Username textbox in the Database Connection tab.       |
+| databaseusername | The database username as defined in the Username text box in the Database Connection tab.      |
 +------------------+------------------------------------------------------------------------------------------------+
-| databasepassword | The database password as defined in the Password textbox in the Database Connection tab.       |
+| databasepassword | The database password as defined in the Password text box in the Database Connection tab.      |
 +------------------+------------------------------------------------------------------------------------------------+
 | sqlstatement     | The SQL command.                                                                               |
 +------------------+------------------------------------------------------------------------------------------------+
 | autoconnect      | A flag ("true"" or "false") to specify if the above tags should be used to automatically       |
-|                  | connect to database without running the database connection routine in the Database            |
+|                  | connect to the database without running the database connection routine in the Database        |
 |                  | Connection tab.                                                                                |
 +------------------+------------------------------------------------------------------------------------------------+
 

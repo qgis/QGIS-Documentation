@@ -2,7 +2,7 @@
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
-.. `general_tools`:
+.. _general_tools:
 
 *************
 General Tools
@@ -29,7 +29,6 @@ keyboard shortcuts and to add new keyboard shortcuts to |qg| features.
 
 .. figure:: /static/user_manual/introduction/shortcuts.png
    :align: center
-   :width: 20em
 
    Define shortcut options |nix| (Gnome)
 
@@ -78,8 +77,8 @@ Scale Dependent Rendering
 Scale-dependent rendering allows you to specify the minimum and maximum scales
 at which a layer will be visible. To set scale-dependent rendering, open the
 :guilabel:`Properties` dialog by double-clicking on the layer in the legend. On
-the :guilabel:`General` tab, click on the |checkbox| :guilabel:`Use scale
-dependent rendering` checkbox to activate the feature, then set the minimum and
+the :guilabel:`General` tab, click on the |checkbox| :guilabel:`Scale
+dependent visibility` checkbox to activate the feature, then set the minimum and
 maximum scale values.
 
 You can determine the scale values by first zooming to the level you want to
@@ -241,7 +240,6 @@ the measure window. To stop measuring, click your right mouse button.
 
 .. figure:: /static/user_manual/introduction/measure_line.png
    :align: center
-   :width: 20em
 
    Measure Distance |nix| (Gnome)
 
@@ -261,7 +259,6 @@ tools, each mouse click (within the tolerance setting) will snap to that layer.
 
 .. figure:: /static/user_manual/introduction/measure_area.png
    :align: center
-   :width: 20em
 
    Measure Area |nix| (Gnome)
 
@@ -278,7 +275,6 @@ is displayed in a pop-up dialog.
 
 .. figure:: /static/user_manual/introduction/measure_angle.png
    :align: center
-   :width: 15em
 
    Measure Angle |nix| (Gnome)
 
@@ -339,7 +335,6 @@ display three kinds of information:
 
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
-   :width: 15em
 
    Identify feaures dialog |nix| (Gnome)
 
@@ -391,7 +386,6 @@ annotations to the map canvas.
 
 .. figure:: /static/user_manual/introduction/grid_dialog.png
    :align: center
-   :width: 30em
 
    The Grid Dialog |nix|
 
@@ -418,7 +412,6 @@ you prefer to the map.
 
 .. figure:: /static/user_manual/introduction/copyright.png
    :align: center
-   :width: 15em
 
    The Copyright Dialog |nix|
 
@@ -454,7 +447,6 @@ the four corners of the map canvas.
 
 .. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
-   :width: 20em
 
    The North Arrow Dialog |nix|
 
@@ -473,7 +465,6 @@ can control the style and placement, as well as the labeling of the bar.
 
 .. figure:: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
-   :width: 20em
 
    The Scale Bar Dialog |nix|
 
@@ -528,7 +519,6 @@ map canvas.
 
 .. figure:: /static/user_manual/introduction/annotation.png
    :align: center
-   :width: 30em
 
    Annotation text dialog |nix|
 
@@ -570,7 +560,8 @@ Additionally, you can also create your own annotation forms. The
 attributes of a vector layer in a customized Qt Designer form (see
 figure_custom_annotation_). This is similar to the designer forms for the
 :guilabel:`Identify features` tool, but displayed in an annotation item.
-Also see the |qg| blog http://blog.qgis.org/node/143 for more information.
+Also see this video https://www.youtube.com/watch?v=0pDBuSbQ02o from 
+Tim Sutton for more information.
 
 .. _figure_custom_annotation:
 
@@ -580,7 +571,6 @@ Also see the |qg| blog http://blog.qgis.org/node/143 for more information.
 
 .. figure:: /static/user_manual/introduction/custom_annotation.png
    :align: center
-   :width: 30em
 
    Customized qt designer annotation form |nix|
 
@@ -669,7 +659,6 @@ small example:
 
 .. figure:: /static/user_manual/introduction/embed_dialog.png
    :align: center
-   :width: 20em
 
    Select layers and groups to embed |nix|
 

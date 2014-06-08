@@ -45,7 +45,6 @@ ShareAlike 2.0 license.
 
 .. figure:: /static/user_manual/osm/osmweb.png
    :align:  center
-   :width:  40em
 
    OpenStreetMap data in the web
 
@@ -145,7 +144,6 @@ dock windows as shown in figure_OpenStreetMap_2_.
 
 .. figure:: /static/user_manual/osm/osm_widgets.png
    :align: center
-   :width: 40em
 
    OSM plugin user interface
 
@@ -212,7 +210,6 @@ Toolbars --> OpenStreetMap`.
 
 .. figure:: /static/user_manual/osm/osmloaddialog.png
    :align: center
-   :width: 30em
 
    Load OSM data dialog
 
@@ -296,7 +293,6 @@ widget. Don't forget to identify feature first.
 
 .. figure:: /static/user_manual/osm/osm_changefeaturetag.png
    :align: center
-   :width: 40em
 
    Changing an OSM feature tag
 
@@ -329,7 +325,6 @@ case the OSM plugin will show following message:
 
 .. figure:: /static/user_manual/osm/osm_pointcreation.png
    :align: center
-   :width: 30 em
 
    OSM point creation message
 
@@ -493,7 +488,6 @@ button a dialog appears and provides following functionalities:
 
 .. figure:: /static/user_manual/osm/osm_downloaddialog.png
    :align: center
-   :width: 30em
 
    OSM download dialog
 
@@ -555,7 +549,6 @@ QGIS installation is disabled. You can enable it again in
 
 .. figure:: /static/user_manual/osm/osm_uploaddialog.png
    :align: center
-   :width: 25em
 
    OSM upload dialog
 
@@ -588,7 +581,6 @@ button a new dialog appears.
 
 .. figure:: /static/user_manual/osm/osm_savedialog.png
   :align: center
-  :width: 25em
 
   OSM saving dialog
 
@@ -624,7 +616,6 @@ After clicking on the button following message may show up:
 
 .. figure:: /static/user_manual/osm/osm_importdialog.png
    :align: center
-   :width: 25em
 
    OSM import message dialog
 
@@ -641,7 +632,6 @@ data. After a layer is opened, your second try should give you a better result
 
 .. figure:: /static/user_manual/osm/osm_importtoosmdialog.png
    :align: center
-   :width: 25em
 
    Import data to OSM dialog
 

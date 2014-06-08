@@ -25,7 +25,6 @@ There are several menus in the dialog:
 
 .. figure:: /static/user_manual/working_with_raster/rasterPropertiesDialog.png
    :align: center
-   :width: 30em
 
    Raster Layers Properties Dialog |nix|
 
@@ -97,7 +96,6 @@ choose several :guilabel:`Contrast enhancement` methods: 'No enhancement', 'Stre
 
 .. figure:: /static/user_manual/working_with_raster/rasterMultibandColor.png
    :align: center
-   :width: 30em
 
    Raster Renderer - Multiband color |nix|
 
@@ -148,7 +146,6 @@ to assign a label to the color values. The label appears in the legend of the ra
 
 .. figure:: /static/user_manual/working_with_raster/rasterPaletted.png
    :align: center
-   :width: 30em
 
    Raster Renderer - Paletted |nix|
 
@@ -179,7 +176,6 @@ then pressing **[Load]**.  |qg| can |radiobuttonon| :guilabel:`Estimate (faster)
 
 .. figure:: /static/user_manual/working_with_raster/rasterSingleBandGray.png
    :align: center
-   :width: 30em
 
    Raster Renderer - Singleband gray |nix|
 
@@ -210,7 +206,6 @@ You can also create individual color maps for the single bands here.
 
 .. figure:: /static/user_manual/working_with_raster/rasterSingleBandPseudocolor.png
    :align: center
-   :width: 30em
 
    Raster Renderer - Singleband pseudocolor |nix|
 
@@ -269,7 +264,7 @@ Color rendering
 For every :guilabel:`Band rendering`, a :guilabel:`Color rendering` is possible.
 
 You can also achieve special rendering effects for your raster file(s) using one
-of the blending modes (see :ref:`blend_modes`).
+of the blending modes (see :ref:`vector_properties_dialog`).
 
 Further settings can be made in modifiying the :guilabel:`Brightness`, the
 :guilabel:`Saturation` and the :guilabel:`Contrast`. You can also use a :guilabel:`Grayscale`
@@ -282,6 +277,18 @@ Resampling
 The :guilabel:`Resampling` option makes its appearance when you zoom in and out of an
 image. Resampling modes can optimize the appearance of the map. They calculate a new gray value
 matrix through a geometric transformation.
+
+.. _figure_raster_6:
+
+.. only:: html
+
+   **Figure Raster 6:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterRenderAndRessampling.png
+   :align: center
+
+   Raster Rendering - Resampling |nix|
+
 
 When applying the 'Nearest neighbour' method, the map can have a pixelated structure
 when zooming in. This appearance can be improved by using the 'Bilinear' or 'Cubic' method, which cause sharp features
@@ -356,6 +363,17 @@ If you choose 'Internal (if possible)' from the :guilabel:`Overview format` menu
 |qg| tries to build pyramids internally. You can also choose 'External' and
 'External (Erdas Imagine)'.
 
+.. _figure_raster_7:
+
+.. only:: html
+
+   **Figure Raster 7:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterPyramids.png
+   :align: center
+
+   The Pyramids Menu |nix|
+
 Please note that building pyramids may alter the original data file, and once
 created they cannot be removed. If you wish to preserve a 'non-pyramided'
 version of your raster, make a backup copy prior to building pyramids.
@@ -379,6 +397,17 @@ to min/max' and to 'Update style to min/max'.
 With the :guilabel:`Actions` option, you can 'Reset' and 'Recompute histogram' after
 you have chosen the :guilabel:`Min/max options`.
 
+.. _figure_raster_8:
+
+.. only:: html
+
+   **Figure Raster 8:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterHistogram.png
+   :align: center
+
+   Raster Histogram |nix|
+
 .. index:: Metadata
 
 Metadata Menu
@@ -389,3 +418,14 @@ including statistics about each band in the current raster layer. From this menu
 made for the :guilabel:`Description`, :guilabel:`Attribution`, :guilabel:`MetadataUrl` and
 :guilabel:`Properties`. In :guilabel:`Properties`, statistics are gathered on a 'need to know'
 basis, so it may well be that a given layer's statistics have not yet been collected.
+
+.. _figure_raster_9:
+
+.. only:: html
+
+   **Figure Raster 9:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterMetadata.png
+   :align: center
+
+   Raster Metadata |nix|
