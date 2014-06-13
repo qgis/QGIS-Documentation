@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# João Gaspar <joao.f.r.gaspar@gmail.com>, 2014
+# Duarte Carreira <dncarreira@gmail.com>, 2014
+# João Filipe Rodrigues Gaspar <joao.f.r.gaspar@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-22 08:13+0000\n"
-"Last-Translator: João Gaspar <joao.f.r.gaspar@gmail.com>\n"
+"PO-Revision-Date: 2014-05-29 15:29+0000\n"
+"Last-Translator: Duarte Carreira <dncarreira@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +37,7 @@ msgstr "Objectivos:"
 # 13e11ec3a3fb49339d6085f857a6254b
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:11
 msgid "Understand what raster data is and how it can be used in a GIS."
-msgstr ""
+msgstr "Compreender o que são dados raster (matriciais) e como podem ser usados num SIG."
 
 # 3ee70e1e29774819986668dc908ee10f
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:13
@@ -46,12 +47,12 @@ msgstr "Palavras-chave:"
 # 9a47adcb8bdd40d49d8c7a3805252d3b
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:13
 msgid "Raster, Pixel, Remote Sensing, Satellite, Image, Georeference"
-msgstr ""
+msgstr "Raster, Pixel, Detecção Remota, Satélite, Imagem, Georreferenciação"
 
 # 5edca81b11e2484fabc0ea1e2f2197ff
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:17
 msgid "Overview"
-msgstr "Visão Global"
+msgstr "Resumo"
 
 # a69e4a0a1531457eaa50c831d84e1ddf
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:19
@@ -63,7 +64,7 @@ msgid ""
 "represents the conditions for the area covered by that cell (see "
 "figure_raster_). In this topic we are going to take a closer look at raster "
 "data, when it is useful and when it makes more sense to use vector data."
-msgstr ""
+msgstr "Nos tópicos anteriores abordámos com mais detalhe os dados vectoriais. Enquanto elementos vectoriais usam geometria (pontos, linhas e polígonos) para representar o mundo real, a informação matricial toma uma abordagem diferente. Rasters são constituídos por uma matriz de pixeis (também chamados células), cada contendo um valor que representa as condições para a área coberta por essa célula (ver figure_raster_). Neste tópico vamos abordar em detalhe os dados matriciais, quando são úteis e quando fazem mais sentido do que usar dados vectoriais."
 
 # bb272f264fea422fbbecc1056a0089cc
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:37
@@ -72,12 +73,12 @@ msgid ""
 "down) of pixels (also know as cells). Each pixel represents a geographical "
 "region, and the value in that pixel represents some characteristic of that "
 "region."
-msgstr ""
+msgstr "Um conjunto de dados matricial é composto por linhas (dispostas na horizontal) e por colunas (dispostas na vertical) de pixeis (também designados por células). Cada pixel representa uma região geográfica, e o valor nesse pixel representa uma dada característica dessa região."
 
 # c5429dbbba0d4a22ad113c527a2fafb1
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:43
 msgid "Raster data in detail"
-msgstr ""
+msgstr "Dados raster em detalhe"
 
 # cf850d2f08aa4083acb50d6b8c6f01de
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:45
@@ -99,7 +100,7 @@ msgid ""
 "variation of grass colour and cover as a separate polygon. The problem with "
 "that approach is that it will take a huge amount of work in order to create "
 "a good vector dataset."
-msgstr ""
+msgstr "Dados raster são usados numa aplicação SIG quando queremos visualizar informação que é contínua através de uma área e não pode ser facilmente dividida em elementos vectoriais. Quando fizemos a introdução aos dados vectoriais mostrámos a imagem na figure_landscape_. Elementos do tipo ponto, linha e polígono funcionam bem para representar algumas características da paisagem, tais como árvore, estradas e delimitações de edifícios. Outras características numa paisagem podem ser mais difíceis de representar usando vectores. Por exemplo, as áreas verdes mostradas podem ter muitas variações em cor e densidade de cobertura. Seria bastante fácil criar um único polígono rodeando cada área verde, mas muita da informação sobre a área verde seria perdida no processo de simplificar essas características num único polígono. Isto sucede porque quando se atribuem  valores de atributos a um elemento vectorial, estes aplicam-se a todo o elemento vectorial, por isso vectores não se adequam bem à representação de características que não são homogéneas (totalmente iguais) em toda a sua extensão. Outra abordagem que se pode tomar é digitalizar todas as pequenas variações de cor e de cobertura como um polígono individual. O problema com esta abordagem é que exigirá uma enorme quantidade de trabalho para criar uma boa cobertura vectorial."
 
 # ab7de235011b40bba914746ea34b47e2
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:72
@@ -110,7 +111,7 @@ msgid ""
 "the variations in colour you can see in the grass? When you are trying to "
 "represent large areas with continuously changing values, raster data can be "
 "a better choice."
-msgstr ""
+msgstr "Algumas características numa paisagem são facilmente representadas como pontos, linhas e polígonos (e.g. árvores, estradas, casas). Noutros casos pode ser difícil. Por exemplo, como representaria uma área de pastagens? Como polígonos? O que fazer às variações de cor que consegue ver nas pastagens? Quando está a tentar representar grandes áreas com valores que mudam continuamente, os dados raster podem ser uma melhor escolha."
 
 # ec39a0214be14e0882955ac349edba8c
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:79
@@ -126,7 +127,7 @@ msgid ""
 "depict the fire risk on a landscape. In these kinds of applications, each "
 "cell in the raster represents a different value e.g. risk of fire on a scale"
 " of one to ten."
-msgstr ""
+msgstr "Usar dados matriciais é a solução para estes problemas. Muitos utilizadores usam dados raster como um fundo a usar por detrás de camadas vectoriais, de forma a fornecer mais significado à informação vectorial. O olho humano é muito bom a interpretar imagens e por isso usar uma imagem por detrás de camadas vectoriais resulta em mapas com muito mais significado. Dados matriciais são não só bons para imagens que ilustram a superfície do mundo real (e.g. imagens de satélite e fotografias aéreas), como também são bons a representar ideias mais abstractas. Por exemplo, rasters podem ser usados para mostrar tendências de precipitação através de uma área, ou para ilustrar o risco de incêncio numa paisagem. Neste tipo de aplicações, cada célula na matriz representa um valor diferente, e.g. risco de incêndio numa escala de 1 a dez."
 
 # 549e5ed3dcf1457c84455b586b36e317
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:90
@@ -134,7 +135,7 @@ msgid ""
 "An example that shows the difference between an image obtained from a "
 "satellite and one that shows calculated values can be seen in "
 "figure_raster_types_."
-msgstr ""
+msgstr "Um exemplo que mostra as diferenças entre uma imagem obtido de um satélite ou uma que mostra valores calculados pode ser visto na figure_raster_types_."
 
 # 303f26c050c14986bdc19724f7a56bd1
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:103
@@ -144,12 +145,12 @@ msgid ""
 "the raster image. Raster data can also be non-photographic data such as the "
 "raster layer shown on the right which shows the calculated average minimum "
 "temperature in the Western Cape for the month of March."
-msgstr ""
+msgstr "Imagens raster de cor verdadeira (esquerda) são úteis porque fornecem muito detalhe que é difícil de capturar em vectores mas são fáceis de ver quando se olha para a imagem raster. Dados matriciais podem ser também dados não-fotográficos, tais como a camada matricial mostrada à direita e que representa a temperatura mínima média calculada para a província Western Cape para o mês de Março."
 
 # 14d7b34b348b4748b2af370ca901c42e
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:110
 msgid "Georeferencing"
-msgstr ""
+msgstr "Georreferenciação"
 
 # bf6a75255d42406ebb9e7d9c01520107
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:112
@@ -166,7 +167,7 @@ msgid ""
 "raster data are displayed in the correct place. The georeferencing "
 "information for a raster is often provided in a small text file accompanying"
 " the raster."
-msgstr ""
+msgstr "Georreferenciação é o processo de definir exactamente onde na superfície da terra foi criada uma imagem ou conjunto de dados matriciais. Este informação posicional é armazenada com a versão digital da fotografia aérea. Quando a aplicação SIG abre a foto, utiliza a informação posicional para assegurar que a foto surge no local correcto no mapa. Normalmente, esta informação posicional consiste de uma coordenada para o pixel no topo superior esquerdo da imagem, o tamanho de cada pixel na direcção X, o tamanho de cada pixel na direcção Y, e o valor (se existir) da rotação da imagem. Com estes valores, a aplicação SIG pode assegurar que a informação raster é visualizada no local correcto. A informação de georreferenciação de um raster é muitas vezes fornecida num pequeno ficheiro de texto que acompanha o raster."
 
 # ad4a25d71c084b43810f1f07c2b5c9ec
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:125
@@ -186,7 +187,7 @@ msgid ""
 "using radio signals to special receiving stations such as the one shown in "
 "figure_csir_station_. The process of capturing raster data from an aeroplane"
 " or satellite is called **remote sensing**."
-msgstr ""
+msgstr "Dados matriciais podem ser obtidos de várias formas. Duas das mais comuns são fotografia aérea e imagens de satélite. Na fotografia aérea, uma aeronave voa sobre uma área transportando uma câmara. As fotografias são depois importadas para um computador e georreferenciadas. A imagem de satélite é criada quando satélites que orbitam a terra direccionam câmaras digitais especiais para a terra e obtém uma imagem da área da terra sobre a qual passam. Uma vez obtida a imagem, esta é enviada para a terra usando sinais de rádio para estações de recepção especiais tais como as mostradas na figure_csir_station_. O processo de captura de dados matriciais a partir uma aeronave ou satélite é denominado por **detecção remota**."
 
 # e96e82f4fbb44eed9d972f566db4cf21
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:147

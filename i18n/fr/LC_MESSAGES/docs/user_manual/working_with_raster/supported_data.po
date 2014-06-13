@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# MarieSilvestre <marie.silvestre@gmail.com>, 2013
-# RobinP <robin@georezo.net>, 2013
+# MarieSilvestre <marie.silvestre@gmail.com>, 2013-2014
+# Robin PREST <robin@georezo.net>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-20 18:38+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-05-27 09:17+0000\n"
+"Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -138,7 +138,7 @@ msgstr "Charger des données raster dans |qg|"
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:20
 msgid ""
@@ -148,14 +148,14 @@ msgid ""
 "and many more. GRASS raster support is supplied by a native |qg| data "
 "provider plugin. The raster data can also be loaded in read mode from zip "
 "and gzip archives into |qg|."
-msgstr ""
+msgstr "Cette section explique comment visualiser et définir les propriétés d'une couche raster. |qg| utilise la bibliothèque :index:`GDAL` pour lire et écrire des raster de multiples formats dont ArcInfo Binary Grid, ArcInfo ASCII Grid, GeoTIFF, ERDAS IMAGINE et bien d'autres. La gestion des raster GRASS se fait de manière native via une extension spécifique. Des raster peuvent également être lus par |qg| depuis des archives zip et gzip."
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:27
 msgid ""
 "As of the date of this document, more than 100 raster formats are supported "
 "by the GDAL library (see GDAL-SOFTWARE-SUITE in :ref:`literature_and_web`). "
 "A complete list is available at http://www.gdal.org/formats_list.html."
-msgstr ""
+msgstr "A ce jour, plus de 100 formats raster sont gérés par la bibliothèque GDAL (voir GDAL-SOFTWARE-SUITE dans :ref:`literature_and_web`). La liste complète est disponible sur cette page : http://www.gdal.org/formats_list.html."
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:32
 msgid ""
@@ -165,12 +165,12 @@ msgid ""
 "want to use. Only those formats that have been well tested will appear in "
 "the list of file types when loading a raster into |qg|. Other untested "
 "formats can be loaded by selecting the ``[GDAL] All files (*)`` filter."
-msgstr ""
+msgstr "Certains des formats listés peuvent ne pas fonctionner dans |qg| pour diverses raisons. Par exemple, certains formats requièrent une bibliothèque commerciale externe ou la bibliothèque GDAL n'a peut-être pas été compilée sur votre système d'exploitation pour gérer le format souhaité. Seuls les formats ayant été testés correctement apparaissent dans la liste des types de fichiers proposés au moment de l'ajout de données raster dans |qg|. Les autres formats peuvent être chargés en sélectionnant ``[GDAL] Tous les fichiers (*)``."
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:39
 msgid ""
 "Working with GRASS raster data is described in section :ref:`sec_grass`."
-msgstr ""
+msgstr "La gestion des données raster GRASS est décrite dans la section :ref:`sec_grass`."
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:45
 msgid ""
@@ -180,7 +180,7 @@ msgid ""
 "rectangular). Typical raster datasets include remote sensing data, such as "
 "aerial photography, or satellite imagery and modelled data, such as an "
 "elevation matrix."
-msgstr ""
+msgstr "Les données raster dans les SIG sont des matrices de cellules discrètes qui représentent des objets, au-dessus ou en dessous de la surface de la Terre. Les cellules de la grille raster sont de la même taille et généralement rectangulaires (dans |qg|, elles seront toujours rectangulaires). Les jeux de données raster les plus classiques sont des données de télédétection telles que des photographies aériennes ou des images satellitaires et des données issues de modèles telles que les matrices d'élévation."
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:52
 msgid ""
@@ -188,14 +188,14 @@ msgid ""
 " record for each cell. They are geocoded by pixel resolution and the x/y "
 "coordinate of a corner pixel of the raster layer. This allows |qg| to "
 "position the data correctly in the map canvas."
-msgstr ""
+msgstr "Contrairement aux données vectorielles, les données raster n'ont pas de base de données associée. Elles sont géoréférencées grâce à la résolution des pixels et les coordonnées x/y du pixel d'un des coins de la couche raster. Cela permet à |qg| de  positionner les données correctement dans la zone de la carte."
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:57
 msgid ""
 "|qg| makes use of georeference information inside the raster layer (e.g., "
 ":index:`GeoTiff`) or in an appropriate world file to properly display the "
 "data."
-msgstr ""
+msgstr "Pour afficher correctement les données, |qg| utilise les informations de géoréférencement intégrées aux couches raster (par exemple :index:`GeoTiff`) ou présentes dans un fichier world."
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:67
 msgid ""
@@ -205,22 +205,22 @@ msgid ""
 "one layer can be loaded at the same time by holding down the :kbd:`Ctrl` or "
 ":kbd:`Shift` key and clicking on multiple items in the :guilabel:`Open a "
 "GDAL Supported Raster Data Source` dialog."
-msgstr ""
+msgstr "Les données raster sont chargées soit en cliquant sur l'icone |mActionAddRasterLayer| :sup:`Ajouter une couche raster` ou en sélectionnant dans le menu :menuselection:`Couche -->` |mActionAddRasterLayer| :guilabel:`Ajouter une couche raster...`. Plus d'une couche peut être chargée en conservant la touche :kbd:`Ctrl` ou :kbd:`Shift` du clavier appuyée et en cliquant sur les fichiers dans la fenêtre :guilabel:`Ouvrir des données raster gérées par GDAL`."
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:75
 msgid ""
 "Once a raster layer is loaded in the map legend, you can click on the layer "
 "name with the right mouse button to select and activate layer-specific "
 "features or to open a dialog to set raster properties for the layer."
-msgstr ""
+msgstr "Une fois la couche raster chargée vous pouvez faire un clic-droit sur son nom dans la légende de la carte pour sélectionner et activer des paramètres spécifiques à la couche ou pour ouvrir la fenêtre de propriétés de la couche."
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:81
 msgid ":menuselection:`Zoom to Layer Extent`"
-msgstr ""
+msgstr ":menuselection:`Zoomer sur l'emprise de la couche`"
 
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:83
 msgid ":menuselection:`Stretch Using Current Extend`"
-msgstr ""
+msgstr ":menuselection:`Étirer sur l'emprise actuelle`"
 
 #~ msgid ""
 #~ "At the date of this document, more than 100 raster formats are supported by "

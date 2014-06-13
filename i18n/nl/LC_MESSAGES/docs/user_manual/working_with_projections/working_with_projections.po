@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
+# Diethard Jansen <diethard.jansen@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-20 18:38+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-05-30 19:29+0000\n"
+"Last-Translator: Diethard Jansen <diethard.jansen@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -157,7 +158,7 @@ msgstr "Deze handleiding beschrijft het gebruik van ``proj.4`` en de daarbijhore
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:15
 msgid ""
@@ -167,7 +168,7 @@ msgid ""
 "(OTF) projection of vector and raster layers. All of these features allow "
 "the user to display layers with different CRSs and have them overlay "
 "properly."
-msgstr ""
+msgstr "|qg| geeft gebruikers de mogelijkheid om een globale en projectbrede CRS (Coördinaten Referentie Systeem) toe te voegen aan lagen die zelf geen CRS bevatten. Het is ook mogelijk om zelf een custom coördinaten referentie systeem te maken en het ondersteund gelijktijdige CRS transformaties van vector- en rasterkaartlagen. Dit geeft de gebruiker de mogelijkheid om lagen die verschillende CRS bevatten over elkaar heen te projecteren."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:26
 msgid ""
@@ -177,7 +178,7 @@ msgid ""
 "cause projection support to fail. Custom CRSs are stored in a user database."
 " See section :ref:`sec_custom_projections` for information on managing your "
 "custom coordinate reference systems."
-msgstr ""
+msgstr "|qg| ondersteund ongeveer 2700 bekende CRS. De definities van al deze Coördinaat Referentie Systemen zijn opgeslagen in een SQLite database die onderdeel is van een |qg| installatie. Normaal gesproken hoeven deze beschrijvingen niet te worden aangepast. Dit kan er zelfs voor zorgen dat hierdoor de ondersteuning van projecties faalt. Zelf gedefinieerde (aangepaste/Custom) CRS worden opgeslagen in een gebruikers database. Zie het onderdeel :ref:`sec_custom_projections` voor informatie over het beheren van custom coördinaten referentie systemen."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:32
 msgid ""
@@ -186,7 +187,7 @@ msgid ""
 "France (IGNF) and are largely abstracted from the spatial reference tables "
 "used in GDAL. EPSG identifiers are present in the database and can be used "
 "to specify a CRS in |qg|."
-msgstr ""
+msgstr "De beschikbare CRS in |qg| zijn gebaseerd op definities die zijn gepubliceerd door de European Petroleum Search Group (EPSG) en het Institut Geographique National de France (IGNF) die grotendeels zijn opgenomen in de spatiale referentie tabellen die gebruikt worden in GDAL. De EPSG ID zijn aanwezig in de database en kunnen gebruikt worden om een CRS te selecteren in |qg|."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:38
 msgid ""
@@ -200,7 +201,7 @@ msgid ""
 " file has the same base name as the shapefile and a :file:`.prj` extension. "
 "For example, a shapefile named :file:`alaska.shp` would have a corresponding"
 " projection file named :file:`alaska.prj`."
-msgstr ""
+msgstr "Om de gelijktijdige CRS transformatie te gebruiken, dienen er voor alle kaartlagen een coördinaat referentie systeem zijn gedefinieerd of moet er een globale of een projectbrede CRS gedefinieerd te zijn (gebruikt voor alle kaartlagen zonder CRS). Voor PostGIS lagen gebruikt |qg| de spatiale referentie die gebruikt is tijdens het aanmaken van de laag. Voor kaartgegevens die ondersteund worden door OGR, gaat |qg| uit van de aanwezigheid van onderdelen die de CRS definitie bevatten. Voor Shapefiles betekent dit dat er een bestand aanwezig moet zijn die de Well Known Text (:index:`WKT`) beschrijving van een CRS bevat. Dit projectiebestand heeft dezelfde basis naam als de shapefile en wordt gevolgd door de bestandsextensie '.prj'. Voorbeeld, naast een shapefile met de naam :file:`alaska.shp` dient ook een bijbehorend projectbestand met de naam :file:`alaska.prj` te bestaan."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:49
 msgid ""
@@ -208,7 +209,7 @@ msgid ""
 " in the :guilabel:`General` tab of the |mActionOptions| :guilabel:`Project "
 "Properties` dialog under the :guilabel:`Project` (Gnome, OS X) or "
 ":guilabel:`Settings` (KDE, Windows) menu."
-msgstr ""
+msgstr "Wanneer je een nieuw CRS selecteert, zal de gebruikte lengte-eenheid mee veranderen in het tabblad :guilabel:`Algemeen` van de |mActionOptions| :guilabel:`Projectinstellingen` dialoog onder het menu :guilabel:`Project` (Gnome, OSX) of :guilabel:`Extra` (KDE, Windows) menu."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:59
 msgid ""
@@ -219,7 +220,7 @@ msgid ""
 " the default coordinate reference system for new projects, as shown in "
 "figure_projection_1_. This choice will be saved for use in subsequent |qg| "
 "sessions."
-msgstr ""
+msgstr "|qg| gebruikt voor elk nieuw project de globale standaard projectie. De standaard globale CRS na installatie van |qg| is EPSG:4326 - WGS 84 (``proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs``). Deze globale CRS kan worden gewijzigd gebruik makende van de knop **[Selecteren...]** in het eerste deel waarmee de Standaard Coördinaten Referentie Systeem te gebruiken voor nieuwe projecten (bijvoorbeeld het Nederlandse RD systeem) zoals getoond in figure_projection_1_. Deze keuze zal opgeslagen worden voor gebruik in volgende |qg| sessies."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:78
 msgid ""
@@ -227,15 +228,15 @@ msgid ""
 "responds to these layers. This can be done globally or project-wide in the "
 ":guilabel:`CRS` tab under :menuselection:`Settings -->` |mActionOptions| "
 ":guilabel:`Options`."
-msgstr ""
+msgstr "Wanneer je kaartlagen gebruikt die geen CRS bevatten, dan zul je moeten definiëren welke CRS |qg| moet gebruiken voor deze lagen. Dit kan met een globale of een project CRS in het `CRS` tabblad onder :menuselection:`Extra -->` |mActionOptions| :guilabel:`Opties`."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:85
 msgid "|radiobuttonon| :guilabel:`Prompt for CRS`"
-msgstr ""
+msgstr "|radiobuttonoff| :guilabel:`Vraag om CRS`"
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:87
 msgid "|radiobuttonoff| :guilabel:`Use default CRS displayed below`"
-msgstr ""
+msgstr "|radiobuttonoff| :guilabel:`Gebruik het standaard CRS zoals hieronder getoond`"
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:89
 msgid ""
@@ -245,7 +246,7 @@ msgid ""
 " rasters and :ref:`vectorgeneralmenu` for vectors). If your layer already "
 "has a CRS defined, it will be displayed as shown in "
 ":ref:`figure_vector_properties_1`."
-msgstr ""
+msgstr "Wanneer je de coördinaten referentie systeem voor een bepaalde laag zonder CRS informatie wilt definiëren, dan kun je dat doen in het tabblad :guilabel:`Algemeen` van de dialoog Eigenschappen van de raster (zie :ref:`label_generaltab`) en vectorlaag (zie :ref:`vectorgeneraltab`). Wanneer je laag al een CRS heeft, zal dit getoond worden als in figuur :ref:`figure_vector_properties_1` ."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:96
 msgid ""
@@ -254,7 +255,7 @@ msgid ""
 "the Coordinate Reference System Selector dialog (see figure_projection_2_). "
 ":guilabel:`Set project CRS from Layer` redefines the project CRS using the "
 "layer's CRS."
-msgstr ""
+msgstr "Met de rechtermuis op een laag klikken in de Kaartlegenda (zie :ref:`label_legend`) geeft twee CRS snelkoppelingen :guilabel:`Instellen laag CRS` zal direct de Ruimtelijk Referentie Systeem Keuze openen (zie figure_projection_2_). :guilabel:`Project CRS van laag overnemen` zal de project CRS instellen en gelijk maken aan de CRS van geselecteerde laag"
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:105
 msgid ""
@@ -263,17 +264,17 @@ msgid ""
 "|checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox in the "
 ":guilabel:`CRS` tab of the |mActionProjectProperties| "
 ":menuselection:`Project Properties` dialog."
-msgstr ""
+msgstr "|qg| ondersteund gelijktijdige CRS transformatie voor zowel raster- als vectorkaartgegevens, deze is echter niet standaard geactiveerd. Vink het aanvinkvakje |checkbox| :guilabel:`Gelijktijdige CRS transformatie gebruiken` aan in het tabblad :guilabel:`CRS` van de |mActionProjectProperties| :menuselection:`Projectinstellingen` dialoog."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:111
 msgid "**There are three ways to do this:**"
-msgstr ""
+msgstr "**Er zijn drie manieren om dit te doen:**"
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:116
 msgid ""
 "Click on the |geographic| :sup:`CRS status` icon in the lower right-hand "
 "corner of the status bar."
-msgstr ""
+msgstr "Klik op de |geographic| :sup:`CRS status` icoon in de linkeronderhoek van de statusbalk."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:118
 msgid ""
@@ -281,7 +282,7 @@ msgid ""
 " dialog by selecting |checkbox| :guilabel:`Enable 'on the fly' reprojection "
 "by default` or :guilabel:`Automatically enable 'on the fly' reprojection if "
 "layers have different CRS`."
-msgstr ""
+msgstr "Zet Gelijktijdige CRS transformatie standaard aan, door in het tabblad :guilabel:`CRS` van de :guilabel:`Opties` dialoog en de checkbox| :guilabel:`Gelijktijdige CRS transformatie gebruiken` aan te vinken of :guilabel:`Gelijktijdige CRS transformatie inschakelen indien kaartlagen verschillende CRS hebben`."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:122
 msgid ""
@@ -291,14 +292,14 @@ msgid ""
 "|checkbox| :guilabel:`Enable 'on the fly' CRS transformation` checkbox. The "
 "|geographic| :sup:`CRS status` icon will no longer be greyed out, and all "
 "layers will be OTF projected to the CRS shown next to the icon."
-msgstr ""
+msgstr "Wanneer je al een laag geladen hebt, en je wilt gelijktijdige CRS transformatie gebruiken, dan kun je het beste het tabblad :guilabel:`CRS` van de :guilabel:`Projectinstellingen` dialog openen, een CRS selecteren en daarna de optie |checkbox| :guilabel:`Gelijktijdige CRS transformatie gebruiken` aanvinken. Het |geographic| :sup:`CRS status` icoon zal niet langer uitgegrijsd zijn en alle lagen zullen geprojecteerd worden naar de CRS die getoond wordt naast het icoon."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:142
 msgid ""
 "The :guilabel:`CRS` tab of the :guilabel:`Project Properties` dialog "
 "contains five important components, as shown in Figure_projection_2_ and "
 "described below:"
-msgstr ""
+msgstr "Het tabblad :guilabel:`CRS` van de :guilabel:`Projectinstellingen` dialoog bevat vijf belangrijke onderdelen zoals getoond in Figure_projection_2_ die hieronder worden beschreven:"
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:145
 msgid ""
@@ -307,21 +308,21 @@ msgid ""
 "coordinates as read from the data source, and the components described below"
 " are inactive. When on, the coordinates in each layer are projected to the "
 "coordinate reference system defined for the map canvas."
-msgstr ""
+msgstr "**Gelijktijdige CRS-Transformatie gebruiken** - dit aanvinkvakje wordt gebruikt om de gelijktijdige CRS transformatie te (de)activeren. Wanneer uit, zal elke laag getekent worden gebruik maken van de de coördinaten zoals gelezen van de gegevensbron en de onderstaande beschreven componenten zijn daarbij uitgeschakeld. Wanneer aan, zullen de coördinaten van elke laag worden geprojecteerd naar het coördinaten referentie systeem zoals ingesteld voor het kaartbeeld."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:150
 msgid ""
 "**Filter** --- If you know the EPSG code, the identifier, or the name for a "
 "coordinate reference system, you can use the search feature to find it. "
 "Enter the EPSG code, the identifier or the name."
-msgstr ""
+msgstr "**Filter** --- wanneer de EPSG code bekend is, of de identifier of de naam ven een Coördinaten Referentie Systeem, kun je gebruik maken van een zoekterm om deze te vinden. Geef de EPSG code, de identifier of de naam als zoekterm."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:153
 msgid ""
 "**Recently used coordinate reference systems** --- If you have certain CRSs "
 "that you frequently use in your everyday GIS work, these will be displayed "
 "in this list. Click on one of these items to select the associated CRS."
-msgstr ""
+msgstr "**Recent gebruikte coördinaten referentie systemen** --- wanneer je bepaalde CRS vaker gebruikt, dan zullen deze getoond worden onder in de tabel van de Projectie Dialoog. Klik op een van deze knoppen om de daarbijhorende CRS te selecteren."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:156
 msgid ""
@@ -329,26 +330,26 @@ msgid ""
 " supported by |qg|, including Geographic, Projected and Custom coordinate "
 "reference systems. To define a CRS, select it from the list by expanding the"
 " appropriate node and selecting the CRS. The active CRS is preselected."
-msgstr ""
+msgstr "**Coördinaten Referentie Systeem** --- Dit is een lijst van alle CRS die ondersteund worden door |qg|, inclusief geografische, geprojecteerde en zelf gedefiniëerde coördinaten referentie systemen. Om een CRS in te stellen, selecteer deze uit de lijst door de bijbehorende lijst uit te klappen en de CRS te selecteren. De actieve CRS is voorgeselecteerd."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:160
 msgid ""
 "**PROJ.4 text** --- This is the CRS string used by the PROJ.4 projection "
 "engine. This text is read-only and provided for informational purposes."
-msgstr ""
+msgstr "**Proj4 text** --- Dit is de CRS tekst gebruikt door de PROJ.4 projectie engine. Deze tekst is alleen-lezen en wordt gegeven ter informatie."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:165
 msgid ""
 "If you open the :guilabel:`Project Properties` dialog from the "
 ":menuselection:`Project` menu, you must click on the :guilabel:`CRS` tab to "
 "view the CRS settings."
-msgstr ""
+msgstr "Wanneer je de :guilabel:`Projectinstellingen` dialoog opent via het menu  :menuselection:`Project`, dan moet je vervolgens het tabblad :guilabel:`CRS` selecteren om de CRS instellingen te bekijken."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:169
 msgid ""
 "Opening the dialog from the |geographic| :sup:`CRS status` icon will "
 "automatically bring the :guilabel:`CRS` tab to the front."
-msgstr ""
+msgstr "Het openen van de dialoog vanuit het icoon |geographic| :guilabel:`CRS status` zal direct het tabblad :guilabel:`CRS` openen."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:179
 msgid ""
@@ -357,7 +358,7 @@ msgid ""
 ":guilabel:`Custom CRS...` from the :menuselection:`Settings` menu. Custom "
 "CRSs are stored in your |qg| user database. In addition to your custom CRSs,"
 " this database also contains your spatial bookmarks and other custom data."
-msgstr ""
+msgstr "Indien |qg| niet het coördinaten referentie systeem levert die je nodig hebt, kun je zelf een CRS maken. Om een CRS te maken kies |mctionCustomProjection| :guilabel:`Aangepaste CRS` via het menu :menuselection:`Extra`. Zelf gemaakte CRS worden opgeslagen in een |qg| gebruikers database. Deze database bevat ook de Favoriete Plaatsen (spatial bookmarks) en andere eigen instellingen."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:198
 msgid ""
@@ -366,27 +367,27 @@ msgid ""
 "for the UNIX Environment - A User's Manual\" by Gerald I. Evenden, U.S. "
 "Geological Survey Open-File Report 90-284, 1990 (available at "
 "ftp://ftp.remotesensing.org/proj/OF90-284.pdf)."
-msgstr ""
+msgstr "Om zelf een CRS in |qg| te maken, vereist dat je wel de PROJ.4 projectie functie bibliotheek moet begrijpen. Om te beginnen, verwijzen we naar Cartographic Projection Procedures for the UNIX Environment - A User's Manual by Gerald I. Evenden, U.S. Geological Survey Open-File Report 90-284, 1990 (beschikbaar via ftp://ftp.remotesensing.org/proj/OF90-284.pdf )."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:211
 msgid "A descriptive name"
-msgstr ""
+msgstr "een beschrijvende naam"
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:212
 msgid "The cartographic parameters in PROJ.4 format"
-msgstr ""
+msgstr "De cartographische parameters in PROJ.4 formaat"
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:214
 msgid ""
 "To create a new CRS, click the |mIconNew| :sup:`Add new CRS` button and "
 "enter a descriptive name and the CRS parameters."
-msgstr ""
+msgstr "Om een nieuwe CRS te maken, klik op de knop |mIconNew| :sup:`Nieuwe CRS toevoegen` en geef een beschrijvende naam en de CRS parameters. "
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:217
 msgid ""
 "Note that the :guilabel:`Parameters` must begin with a ``+proj=`` block, to "
 "represent the new coordinate reference system."
-msgstr ""
+msgstr "Let daarbij op dat :guilabel:`Parameters` moet beginnen met ``+proj=`` om een nieuw coördinaten referentie systeem te maken."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:220
 msgid ""
@@ -395,11 +396,11 @@ msgid ""
 "and :guilabel:`East` fields, respectively. Click on **[Calculate]**, and "
 "compare the results with the known values in your coordinate reference "
 "system."
-msgstr ""
+msgstr "Je kunt de gegeven CRS parameters testen om te zien of deze goede resultaten geeft. Om dit te doen, geef bekende coördinaten in WGS84 lat/long waarden in de velden :guilabel:`Noord` en :guilabel:`Oost`. Klik op **[Bereken]** en vergelijk de resultaten met de bekende waarden in jou coördinaten referentie systeem."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:226
 msgid "Default datum transformations"
-msgstr ""
+msgstr "Standaard datumtransformaties"
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:230
 msgid ""

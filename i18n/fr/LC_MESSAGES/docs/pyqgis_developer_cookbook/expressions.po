@@ -1,14 +1,14 @@
 # 
 # Translators:
-# DelazJ <delazj@gmail.com>, 2014
-# Xapitoun <xapitoun@gmail.com>, 2014
+# Sant-anna <delazj@gmail.com>, 2014
+# Xavier Tardieu <xapitoun@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2014-05-10 01:34+0000\n"
-"Last-Translator: Xapitoun <xapitoun@gmail.com>\n"
+"PO-Revision-Date: 2014-06-07 09:29+0000\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:11
 msgid "Expressions, Filtering and Calculating Values"
-msgstr ""
+msgstr "Expressions, Filtrage et Calcul de valeurs"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:13
 msgid ""
@@ -26,7 +26,7 @@ msgid ""
 "subset of SQL syntax is supported. The expressions can be evaluated either "
 "as boolean predicates (returning True or False) or as functions (returning a"
 " scalar value)."
-msgstr ""
+msgstr "QGIS propose quelques fonctionnalités pour faire de l'analyse syntaxique d'expressions semblable au SQL. Seulement un petit sous-ensemble des syntaxes SQL est géré. Les expressions peuvent être évaluées comme des prédicats booléens (retournant Vrai ou Faux) ou comme des fonctions (retournant une valeur scalaire)."
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:17
 msgid "Three basic types are supported:"
@@ -35,18 +35,18 @@ msgstr "Trois types basiques sont supportés :"
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:19
 msgid ""
 "number --- both whole numbers and decimal numbers, e.g. ``123``, ``3.14``"
-msgstr ""
+msgstr "nombre --- aussi bien les nombres entiers que décimaux, par exemple ``123``, ``3.14``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:20
 msgid ""
 "string --- they have to be enclosed in single quotes: ``'hello world'``"
-msgstr ""
+msgstr "texte --- ils doivent être entre guillemets simples: ``'hello world'``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:21
 msgid ""
 "column reference --- when evaluating, the reference is substituted with the "
 "actual value of the field. The names are not escaped."
-msgstr ""
+msgstr "référence de colonne --- lors de l'évaluation, la référence est remplacée par la valeur réelle du champ. Les noms ne sont pas échappés."
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:24
 msgid "The following operations are available:"
@@ -58,11 +58,11 @@ msgstr "opérateurs arithmétiques: ``+``, ``-``, ``*``, ``/``, ``^``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:27
 msgid "parentheses: for enforcing the operator precedence: ``(1 + 1) * 3``"
-msgstr ""
+msgstr "parenthèses: pour faire respecter la précédence des opérateurs: ``(1 + 1) * 3``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:28
 msgid "unary plus and minus: ``-12``, ``+5``"
-msgstr ""
+msgstr "les unaires plus et moins: ``-12``, ``+5``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:29
 msgid ""
@@ -89,7 +89,7 @@ msgstr "comparaison: ``=``, ``!=``, ``>``, ``>=``, ``<``, ``<=``"
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:37
 msgid ""
 "pattern matching: ``LIKE`` (using % and _), ``~`` (regular expressions)"
-msgstr ""
+msgstr "comparaison partielle: ``LIKE`` (avec % ou _), ``~`` (expressions régulières)"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:38
 msgid "logical predicates: ``AND``, ``OR``, ``NOT``"
@@ -97,7 +97,7 @@ msgstr "prédicats logiques: ``AND``, ``OR``, ``NOT``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:39
 msgid "NULL value checking: ``IS NULL``, ``IS NOT NULL``"
-msgstr ""
+msgstr "Vérification de la valeur NULL: ``IS NULL``, ``IS NOT NULL``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:42
 msgid "Examples of predicates:"
@@ -137,7 +137,7 @@ msgstr "``$length + 1``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:58
 msgid "Parsing Expressions"
-msgstr ""
+msgstr "Analyse syntaxique d'expressions"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:74
 msgid "Evaluating Expressions"
@@ -149,7 +149,7 @@ msgstr "Expressions basiques"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:87
 msgid "Expressions with features"
-msgstr ""
+msgstr "Expressions avec entités"
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:89
 msgid ""
@@ -162,7 +162,7 @@ msgid ""
 "You can also use :func:`QgsExpression.prepare()` if you need check more than"
 " one feature.  Using :func:`QgsExpression.prepare()` will increase the speed"
 " that evaluate takes to run."
-msgstr ""
+msgstr "Vous pouvez aussi utiliser :func:`QgsExpression.prepare()` si vous avez besoin de vérifier plus d'une entité. Utiliser :func:`QgsExpression.prepare()` accélérera le temps d'évaluation."
 
 #: ../../source/docs/pyqgis_developer_cookbook/expressions.rst:110
 msgid "Handling errors"

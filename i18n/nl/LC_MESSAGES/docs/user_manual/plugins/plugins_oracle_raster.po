@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# diethard.jansen <diethard.jansen@gmail.com>, 2013
+# Diethard Jansen <diethard.jansen@gmail.com>, 2013-2014
 # robkole <rkole@wxs.nl>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-20 18:38+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-06-10 19:09+0000\n"
+"Last-Translator: Diethard Jansen <diethard.jansen@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -79,11 +79,11 @@ msgstr "Dit is een voorbeeld met gebruikmaking  van PL/SQL:"
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:10
 msgid "Oracle Spatial GeoRaster Plugin"
-msgstr ""
+msgstr "Oracle Spatial GeoRaster-plugin"
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:12
 msgid ""
@@ -94,7 +94,7 @@ msgid ""
 " Oracle is proprietary software, they provide their software free for "
 "development and testing purposes. Here is one simple example of how to load "
 "raster images to GeoRaster:"
-msgstr ""
+msgstr "In Oracle databases kan raster data worden opgeslagen in SDO_GEORASTER objecten die beschikbaar zijn in de Oracle Spatial uitbreiding. In |qg|, de |oracle_raster| :sup:`OracleGeoRasterPlugin` wordt ondersteund door GDAL en is afhankelijk van het Oracle database product dat geïnstalleerd en werkend is op uw computer. Hoewel Oracle software beschermd is, wordt het voor ontwikkelings- en testdoeleinden gratis ter beschikking gesteld.\n Hier is een eenvoudig voorbeeld van hoe een raster-afbeelding in GeoRaster kan worden geladen:"
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:30
 msgid ""
@@ -106,36 +106,36 @@ msgid ""
 ":guilabel:`Select Oracle Spatial GeoRaster` dialog window. Click on "
 "**[New]** to open the dialog window, and specify the connection parameters "
 "(See Figure_oracle_raster_1_):"
-msgstr ""
+msgstr "Om te beginnen moet de Oracle GeoRaster plugin worden geactiveerd met behulp van de Plugin Manager (zie Sectie :ref:`managing_plugins`). Wanneer men een GeoRaster in |qg| wilt geladen, moet eerst een verbinding tot stand gebracht worden met de Oracle database die de gegevens bevat. Klik daarvoor op de knop |oracle_raster| :sup:`Oracle GeoRaster toevoegen`, waardoor het :guilabel:`Selecteer het Oracle Spatial GeoRaster` invoerscherm zal worden geopend. Klik dan op **[Nieuw]** om het invoerscherm Nieuwe Oracle-verbinding aanmaken te openen en waarin men de benodigde parameters kan invullen (Zie Figure_oracle_raster_1_): "
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:38
 msgid "**Name**: Enter a name for the database connection."
-msgstr ""
+msgstr "**Name**: Geef een naam voor de verbinding met de database."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:39
 msgid ""
 "**Database instance**: Enter the name of the database that you will connect "
 "to."
-msgstr ""
+msgstr "**Database instance**: Geef de naam van de database waarmee verbinding  moet worden gemaakt."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:40
 msgid ""
 "**Username**: Specify your own username that you will use to access the "
 "database."
-msgstr ""
+msgstr "**Gebruikersnaam**: Geef de gebruikersnaam op die gebruikt zal worden om toegang te krijgen tot de database."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:41
 msgid ""
 "**Password**: Provide the password associated with your username that is "
 "required to access the database."
-msgstr ""
+msgstr "**Wachtwoord**: Geeft het wachtwoord die samen met gegeven gebruikersnaam toegang geeft tot de database."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:65
 msgid ""
 "Once a connection has been established, the subdatasets window will show the"
 " names of all the tables that contain GeoRaster columns in that database in "
 "the format of a GDAL subdataset name."
-msgstr ""
+msgstr "Wanneer de verbinding is opgezet, zal een scherm met subdatasets een overzicht geven van alle tabellen die GeoRasters bevatten in het formaat van een GDAL subdataset naam ."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:74
 msgid ""
@@ -143,14 +143,14 @@ msgid ""
 "choose one of the table/column combinations. The dialog will now show all "
 "the rows that contain GeoRaster objects. Note that the subdataset list will "
 "now show the Raster Data Table and Raster Id pairs."
-msgstr ""
+msgstr "Klik op één van de getoonde subdatasets en klik vervolgens op **[Selecteren]** om één van de  tabel/kolom-combinaties te kiezen. De dialoog zal nu alle rijen tonen die GeoRaster objecten bevatten. De subdataset-lijst toont nu de Raster Data Tabel en de Raster Id's."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:79
 msgid ""
 "At any time, the selection entry can be edited in order to go directly to a "
 "known GeoRaster or to go back to the beginning and select another table "
 "name."
-msgstr ""
+msgstr "De keuze kan op elk moment worden gewijzigd om direct naar een bekend GeoRaster te gaan of om terug te gaan naar het begin om een andere tabelnaam te selecteren."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:94
 msgid ""
@@ -158,13 +158,13 @@ msgid ""
 " end of the identification string (e.g., "
 "``geor:scott/tiger@orcl,gdal_import,raster,geoid=``). See "
 "http://www.gdal.org/frmt_georaster.html for more information."
-msgstr ""
+msgstr "In het invoervak Selecteren kan ook een ``WHERE`` zoekvraag worden ingevoerd aan het eind van de identificatie-regel, bijvoorbeeld ``geor:scott/tiger@orcl,gdal_import,raster,geoid=``. Zie http://www.gdal.org/frmt_georaster.html voor meer informatie."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:101
 msgid ""
 "Finally, by selecting a GeoRaster from the list of Raster Data Tables and "
 "Raster Ids, the raster image will be loaded into |qg|."
-msgstr ""
+msgstr "Ten slotte zal de rasterafbeeling worden geladen in |qg| door het GeoRaster uit de lijst van de Raster Data Tabellen en Raster Id's te selecteren."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:104
 msgid ""
@@ -172,17 +172,17 @@ msgid ""
 " the next time it opens, it will keep the same connection and will show the "
 "same previous list of subdatasets, making it very easy to open up another "
 "image from the same context."
-msgstr ""
+msgstr "Het venster :guilabel:`Selecteer het Oracle Spatial GeoRaster` kan nu worden gesloten. Wanneer het later opnieuw geopend wordt zal het dezelfde verbinding gebruiken en het zal dezelfde voorgaande lijst van subdatasets tonen. Dit maakt het eenvoudig om nog een raster uit diezelfde database te laden."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:111
 msgid ""
 "GeoRasters that contain pyramids will display much faster, but the pyramids "
 "need to be generated outside of |qg| using Oracle PL/SQL or gdaladdo."
-msgstr ""
+msgstr "GeoRasters die piramiden bevatten zullen veel sneller worden getoond maar de piramiden moeten vooraf buiten |qg| worden gegenereerd met behulp van Oracle PL/SQL of gdaladdo."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:114
 msgid "The following is an example using ``gdaladdo``:"
-msgstr ""
+msgstr "Hier volgt een voorbeeld hoe ``gdaladdo`` kan worden gebruikt:"
 
 #~ msgid "Oracle GeoRaster Plugin"
 #~ msgstr ""

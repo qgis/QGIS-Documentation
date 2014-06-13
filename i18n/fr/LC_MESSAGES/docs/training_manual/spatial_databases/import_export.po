@@ -1,13 +1,13 @@
 # 
 # Translators:
-# DelazJ <delazj@gmail.com>, 2014
+# Sant-anna <delazj@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-22 21:32+0200\n"
-"PO-Revision-Date: 2014-04-29 22:32+0000\n"
-"Last-Translator: DelazJ <delazj@gmail.com>\n"
+"PO-Revision-Date: 2014-06-07 16:07+0000\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,33 +17,33 @@ msgstr ""
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:6
 msgid "|LS| Import and Export"
-msgstr ""
+msgstr "|LS| Importer et Exporter"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:8
 msgid ""
 "Of course, a database with no easy way to migrate data into it and out of it"
 " would not be of much use. Fortunately, there are a number of tools that "
 "will let you easily move data into and out of PostGIS."
-msgstr ""
+msgstr "Bien évidemment, une base de données sans un moyen facile de migrer des données dans et hors d'elle serait sans grand intérêt. Heureusement, il existe de nombreux outils permettant de facilement déplacer les données vers et hors de PostGIS."
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:13
 msgid "shp2pgsql"
-msgstr ""
+msgstr "shp2pgsql"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:15
 msgid ""
 "shp2pgsql is a commandline tool to import ESRI shapefiles to the database. "
 "Under Unix, you can use the following command for importing a new PostGIS "
 "table::"
-msgstr ""
+msgstr "shp2pgsl est un outil en ligne de commande pour importer les shapefiles ESRI vers la base de données; Sous Unix, vous pouvez utiliser la commande suivante pour importer une nouvelle table dans PostGIS::"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:22
 msgid "Under Windows, you have to perform the import process in two steps::"
-msgstr ""
+msgstr "Sous Windows, vous devez réaliser le processus d'importation en deux étapes::"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:27
 msgid "You may encounter this error::"
-msgstr ""
+msgstr "Vous pouvez rencontrer cette erreur::"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:32
 msgid ""
@@ -53,25 +53,25 @@ msgid ""
 "and you'll need to create it in the database after the data have been "
 "imported. (The creation of a spatial index will be covered in the next "
 "lesson.)"
-msgstr ""
+msgstr "C'est un problème connu lié à la création *in situ* d'un index spatial sur la couche en cours d'importation. Pour éviter l'erreur, excluez le paramètre :kbd:`-I`. Cela signifie qu'aucun index spatial ne sera directement créé sur la table, et que vous aurez besoin de le créer une fois la donnée importée dans la base de données. (La création d'un index spatial sera abordée dans la prochaine leçon.)"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:39
 msgid "pgsql2shp"
-msgstr ""
+msgstr "pgsql2shp"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:41
 msgid ""
 "pgsql2shp is a commandline tool to export PostGIS Tables, Views or SQL "
 "select queries. To do this under Unix::"
-msgstr ""
+msgstr "pgsql2shp est un outil en ligne de commande pour exporter des tables, vues et requêtes de sélection SQL. Pour l'utiliser sous Unix::"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:47
 msgid "To export the data using a query::"
-msgstr ""
+msgstr "Pour exporter des données à l'aide d'une requête::"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:53
 msgid "ogr2ogr"
-msgstr ""
+msgstr "ogr2ogr"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:55
 msgid ""
@@ -79,39 +79,39 @@ msgid ""
 "many data formats. ogr2ogr is part of the GDAL/OGR Software and has to be "
 "installed separately. To export a table from PostGIS to GML, you can use "
 "this command::"
-msgstr ""
+msgstr "ogr2ogr est un très puissant outil pour convertir les données entre PostGIS et beaucoup de formats de données. ogr2ogr fait partie du logiciel GDAL/OGR et doit être installé séparément. Pour exporter une table PostGIS en GML, vous pouvez utiliser cette commande::"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:63
 msgid "SPIT"
-msgstr ""
+msgstr "SPIT"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:65
 msgid ""
 "SPIT is a QGIS plugin which is delivered with QGIS. You can use SPIT for "
 "uploading ESRI shapefiles to PostGIS."
-msgstr ""
+msgstr "SPIT est une extension fournie avec |qg|. Vous pouvez l'utiliser pour charger des couches ESRI shapefile vers PostGIS."
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:68
 msgid ""
 "Once you've added the SPIT plugin via the :guilabel:`Plugin Manager`, look "
 "for this button:"
-msgstr ""
+msgstr "Une fois que vous avez ajouté l'extension SPIT via le :guilabel:`Gestionnaire d'extensions`, recherchez ce bouton:"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:74
 msgid ""
 "Clicking on it or selecting :guilabel:`Database --> Spit --> Import "
 "Shapefiles to PostgreSQL` from the menu will give you the SPIT dialog:"
-msgstr ""
+msgstr "Cliquer dessus ou sélectionner dans le menu :guilabel:`Base de données --> Spit --> Importer des shapes dans PostgreSQL` vous ouvrira la fenêtre SPIT:"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:80
 msgid ""
 "You can add shapefiles to the database by clicking the :guilabel:`Add` "
 "button, which will give you a file browser window."
-msgstr ""
+msgstr "Vous pouvez ajouter des shapefiles à la base de données en cliquant sur le bouton :guilabel:`Ajouter`, qui ouvrira une fenêtre de navigation."
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:84
 msgid "DB Manager"
-msgstr ""
+msgstr "DB Manager"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:86
 msgid ""
@@ -121,7 +121,7 @@ msgid ""
 "It also allows you to import and export from databases to other formats. "
 "Since the next module is largely devoted to using this tool, we will only "
 "briefly mention it here."
-msgstr ""
+msgstr "Vous avez dû remarquer une autre option dans le menu :guilabel:`Base de données` intitulée :guilabel:`DB Manager`. Il s'agit d'un nouvel outil de |qg| 2.0 qui offre une interface unifiée pour interagir avec les bases de données spatiales, y compris PostGIS. Il vous permet également d'importer et exporter depuis les bases de données vers d'autres formats. Étant donné que le prochain module est largement dévolu à l'utilisation de cet outil, nous ne ferons que le mentionner ici."
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:95
 msgid "|IC|"
@@ -132,7 +132,7 @@ msgid ""
 "Importing and exporting data to and from the database can be done in many "
 "various ways. Especially when using disparate data sources, you will "
 "probably use these functions (or others like them) on a regular basis."
-msgstr ""
+msgstr "Importer et exporter vers et depuis une base de données peut être fait de diverses manières. Vous utiliserez probablement ces fonctions (ou des similaires) si vous utilisez des données de sources disparates."
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:102
 msgid "|WN|"
@@ -140,4 +140,4 @@ msgstr "|WN|"
 
 #: ../../source/docs/training_manual/spatial_databases/import_export.rst:104
 msgid "Next we'll look at how to query the data we've created before."
-msgstr ""
+msgstr "Prochainement, nous verrons comment interroger les données que nous avons créées auparavant."

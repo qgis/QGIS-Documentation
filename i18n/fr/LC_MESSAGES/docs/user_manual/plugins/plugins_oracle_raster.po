@@ -3,16 +3,18 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# Tae <etienne.damerose@gmail.com>, 2013
-# yjacolin <yjacolin@free.fr>, 2013
-# MarieSilvestre <marie.silvestre@gmail.com>, 2013
+# Etienne Damerose <etienne.damerose@gmail.com>, 2013
+# Jacolin <yjacolin@free.fr>, 2013
+# Marie-Claude Démoulin <marie-claude.demoulin@orange.fr>, 2014
+# MarieSilvestre <marie.silvestre@gmail.com>, 2013-2014
+# Akia35 <philippe.boulinguiez@inrap.fr>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-20 18:38+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-06-03 17:04+0000\n"
+"Last-Translator: Akia35 <philippe.boulinguiez@inrap.fr>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +48,7 @@ msgid ""
 "may also **[Edit]** the connection by opening the previous dialog and making"
 " changes to the connection information, or use the **[Delete]** button to "
 "remove the connection from the drop-down list."
-msgstr "Dans la fenêtre principale :guilabel:`GeoRaster Oracle Spatial`, utilisez la boîte déroulante pour choisir une connection, et cliquez sur **[Connecter]** pour accéder à la base de données. Vous pouvez également éditer les paramètres de la connection en cliquant sur **[Editer]**, ou supprimer la connection en choisissant **[Supprimer]**."
+msgstr "Dans la fenêtre principale :guilabel:`GeoRaster Oracle Spatial` (voir Figure_oracle_raster_2_), utilisez la liste déroulante pour choisir une connexion, et cliquez sur **[Connecter]** pour accéder à la base de données. Vous pouvez également éditer les paramètres de connexion en cliquant sur **[Éditer]**, ou supprimer la connexion en choisissant **[Supprimer]**."
 
 # ccc188e0f0f748d1949c9d6a561e9c66
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:63
@@ -80,11 +82,11 @@ msgstr "Cet exemple utilise PL/SQL:"
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:10
 msgid "Oracle Spatial GeoRaster Plugin"
-msgstr ""
+msgstr "Extension GeoRaster Oracle Spatial"
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:12
 msgid ""
@@ -95,7 +97,7 @@ msgid ""
 " Oracle is proprietary software, they provide their software free for "
 "development and testing purposes. Here is one simple example of how to load "
 "raster images to GeoRaster:"
-msgstr ""
+msgstr "Dans les bases de données Oracle, les données raster peuvent être stockés dans des objets SDO_GEORASTER, disponibles dans l'extension Oracle Spatial. Dans |qg|,  l'extension |oracle_raster| :sup:`GeoRasterOracle Spatial` est supporté par GDAL et dépend de la version d'Oracle installée sur votre machine. Bien que ce soit un outil propriétaire, Oracle fournit un logiciel gratuit à des fins de tests ou de développement. Voici un exemple simple de comment charger des images raster dans Georaster : "
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:30
 msgid ""
@@ -107,36 +109,36 @@ msgid ""
 ":guilabel:`Select Oracle Spatial GeoRaster` dialog window. Click on "
 "**[New]** to open the dialog window, and specify the connection parameters "
 "(See Figure_oracle_raster_1_):"
-msgstr ""
+msgstr "Tout d'abord, l'extension GeoRaster Oracle doit être activé dans le gestionnaire d'extensions (voir :ref:`managing_plugins`). La première fois que vous chargez un GeoRaster dans |qg|, vous devez créer une connexion à la base de données Oracle contenant la donnée. Pour ce faire, commencez par cliquer sur le bouton |oracle_raster| :sup:`Ajouter une couche GeoRaster Oracle` de la barre d'outils -- ceci va ouvrir la boîte de dialogue :guilabel:`Sélectionnez un GeoRaster Oracle Spatial`. Cliquez sur **[Nouveau]** pour ouvrir la boîte de dialogue et indiquez les paramètres de connexion  (voir Figure_oracle_raster_1_) :"
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:38
 msgid "**Name**: Enter a name for the database connection."
-msgstr ""
+msgstr "**Nom** : Entrez un nom pour la connexion."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:39
 msgid ""
 "**Database instance**: Enter the name of the database that you will connect "
 "to."
-msgstr ""
+msgstr "**Instance de base de données** : Entrez le nom de la base de données à laquelle vous voulez vous connecter."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:40
 msgid ""
 "**Username**: Specify your own username that you will use to access the "
 "database."
-msgstr ""
+msgstr "**Nom d'utilisateur** : Indiquez le nom d'utilisateur permettant de se connecter à la base de données."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:41
 msgid ""
 "**Password**: Provide the password associated with your username that is "
 "required to access the database."
-msgstr ""
+msgstr "**Mot de passe** : Saisissez le mot de passe associé au nom d'utilisateur."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:65
 msgid ""
 "Once a connection has been established, the subdatasets window will show the"
 " names of all the tables that contain GeoRaster columns in that database in "
 "the format of a GDAL subdataset name."
-msgstr ""
+msgstr "Une fois connecté, les noms des tables de la base contenant des colonnes GeoRaster compatibles au format GDAL vont s'afficher dans la fenêtre des sous-jeux de données."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:74
 msgid ""
@@ -179,11 +181,11 @@ msgstr ""
 msgid ""
 "GeoRasters that contain pyramids will display much faster, but the pyramids "
 "need to be generated outside of |qg| using Oracle PL/SQL or gdaladdo."
-msgstr ""
+msgstr "Les GeoRasters qui contiennent des tuiles/pyramides s'afficheront plus rapidement mais elles devront être générées hors de |qg| en utilisant Oracle PL/SQL ou gdaladdo."
 
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:114
 msgid "The following is an example using ``gdaladdo``:"
-msgstr ""
+msgstr "L'exemple suivant utilise ``gdaladdo``:"
 
 #~ msgid "Oracle GeoRaster Plugin"
 #~ msgstr ""

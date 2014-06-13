@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# diethard.jansen <diethard.jansen@gmail.com>, 2013
+# Diethard Jansen <diethard.jansen@gmail.com>, 2013-2014
 # robkole <rkole@wxs.nl>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-20 18:38+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-06-10 19:53+0000\n"
+"Last-Translator: Diethard Jansen <diethard.jansen@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,32 +45,32 @@ msgstr "Road graph plugin instellingen |nix|"
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
 msgid ""
 "The Road Graph Plugin is a C++ plugin for |qg| that calculates the shortest "
 "path between two points on any polyline layer and plots this path over the "
 "road network."
-msgstr ""
+msgstr "De Road graph plugin is een C++ plugin voor |qg| die de kortste route tussen twee punten berekent over een lijnen kaartlaag en vervolgens deze route over het netwerk heen tekent."
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:28
 msgid "Calculates path, as well as length and travel time."
-msgstr ""
+msgstr "Berekend de lengte van het pad en de reistijd."
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:29
 msgid "Optimizes by length or by travel time."
-msgstr ""
+msgstr "De route kan worden geoptimaliseerd op basis van lengte of reistijd."
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:30
 msgid "Exports path to a vector layer."
-msgstr ""
+msgstr "Exporteert het pad naar een vectorlaag."
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:31
 msgid ""
 "Highlights roads directions (this is slow and used mainly for debug purposes"
 " and for the settings testing)."
-msgstr ""
+msgstr "Markeert de richtingen van de wegen (dit is traag en wordt voornamelijk gebruikt om fouten op te sporen en om te testen)"
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:34
 msgid ""
@@ -80,29 +80,29 @@ msgid ""
 " editing a roads layer. This is due to the fact that recalculation of the "
 "coordinates between different CRSs introduces some errors that can result in"
 " discontinuities, even when 'snapping' is used."
-msgstr ""
+msgstr "Als laag voor het transportnet kan elk door |qg| ondersteunde type lijnenlaag worden gebruikt. Twee lijnen met een gemeenschappelijk punt worden verondersteld onderling verbonden te zijn. Hou er tijdens het bewerken van het transportnet er rekening mee dat het CRS van de laag gelijk is aan het CRS van het project. Dit omdat bij een verschillend CRS er bij het uitvoeren van de herberekening van coördinatien fouten kunnen ontstaan zodat het netwerk niet meer goed verbonden is, zelfs wanneer 'snapping' wordt gebruikt."
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:41
 msgid "In the layer attribute table, the following fields can be used:"
-msgstr ""
+msgstr "In de attributentabel van de laag kunnen de volgende velden worden gebruikt:"
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:43
 msgid "Speed on road section (numeric field)."
-msgstr ""
+msgstr "Snelheidsveld in de transportlaag (numeriek veld)."
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:44
 msgid ""
 "Direction (any type that can be cast to string). Forward and reverse "
 "directions correspond to a one-way road, both directions indicate a two-way "
 "road."
-msgstr ""
+msgstr "Richtingsveld (elk type dat omgezet kan worden naar tekst waarmee je de richting aan kunt geven). Je kunt waarden instellen die overeenkomen met een voorwaardse en achterwaartse (omgekeerde) richting voor  eenrichtingswegen, of een waarde voor beide richtingen om wegen aan te geven waar tweerichtingsverkeer mogelijk is."
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:47
 msgid ""
 "If some fields don't have any value or do not exist, default values are "
 "used. You can change defaults and some plugin settings in the plugin "
 "settings dialog."
-msgstr ""
+msgstr "Wanneer in sommige velden geen waarde is ingevuld of niet bestaan, zullen standaardwaarden worden gebruikt. Men kan de standaardwaarden en enkele plugin-instellingen wijzigen via de dialoog Instellingen voor Roadgraph."
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:53
 msgid ""
@@ -110,7 +110,7 @@ msgid ""
 "of the main |qg| window. Now, enter some parameters into the :guilabel:`Road"
 " graph plugin settings` dialog in the :menuselection:`Vector --> Road Graph`"
 " menu (see figure_road_graph_2_)."
-msgstr ""
+msgstr "Na het opstarten van de plugin verschijnt een nieuw paneel aan de linkerkant van het |qg|-venster. Vul daarna de gegevens in door middel van de dialoog :guilabel:`Instellingen voor 'Road graph'` in het menu :menuselection:`Vector --> Road Graph` (zie figure_road_graph_2_)."
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:69
 msgid ""
@@ -120,13 +120,13 @@ msgid ""
 ":guilabel:`Direction field` and :guilabel:`Speed field`. In the "
 ":guilabel:`Default settings` tab, you can set the :guilabel:`Direction` for "
 "the calculation."
-msgstr ""
+msgstr "Na het invullen van de :guilabel: 'Tijdseenheid', :guilabel: 'Afstandseenheid' en :guilabel: 'Topologie tolerantie' kan men de te gebruiken vectorlaag kiezen in het tabblad :guilabel: 'Transport laag'. Daar kan men ook het :guilabel:`Richtingsveld` en het :guilabel:`Snelheidsveld` kiezen. In het tabblad :guilabel:`Standaardinstellingen` kan de standaard :guilabel:`Richting` worden gegeven voor de berekening."
 
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:76
 msgid ""
 "Finally, in the :guilabel:`Shortest Path` panel, select a Start and a Stop "
 "point in the road network layer and click on **[Calculate]**."
-msgstr ""
+msgstr "Tenslotte kan via het paneel :guilabel:`Kortste pad` het startpunt en het stoppunt worden ingevoerd in de laag met de paden. Klik vervolgens op **[Bereken]**."
 
 #~ msgid "calculate path, it's length and travel time"
 #~ msgstr ""

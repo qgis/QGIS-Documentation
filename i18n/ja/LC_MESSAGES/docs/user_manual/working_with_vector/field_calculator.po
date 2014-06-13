@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# choro <u.ko.kubot@gmail.com>, 2013
-# choro <u.ko.kubot@gmail.com>, 2013
-# yoichi <yoichi.kayama@gmail.com>, 2013-2014
-# yoichi <yoichi.kayama@gmail.com>, 2013
+# Choro <u.ko.kubot@gmail.com>, 2013
+# Choro <u.ko.kubot@gmail.com>, 2013
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2013-2014
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-22 05:33+0000\n"
-"Last-Translator: yoichi <yoichi.kayama@gmail.com>\n"
+"PO-Revision-Date: 2014-06-06 03:49+0000\n"
+"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -155,7 +155,7 @@ msgid ""
 "values or defined functions, for instance, to calculate length or area of "
 "geometry features. The results can be written to a new attribute column, or "
 "they can be used to update values in an existing column."
-msgstr ""
+msgstr "属性テーブル内の |mActionCalculateField| :sup:`フィールド計算機` ボタンを使用すると,既存の属性値または定義された関数にもとづいて計算を実行することができます.例えば地物のジオメトリの長さや面積を計算することができます。計算結果は新しい属性カラムに書き込まれるか既存のカラムの値を上書きします."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:20
 msgid ""
@@ -164,7 +164,7 @@ msgid ""
 "figure_attributes_3_). In the dialog, you first must select whether you want"
 " to only update selected features, create a new attribute field where the "
 "results of the calculation will be added or update an existing field."
-msgstr ""
+msgstr "フィールド計算機アイコンをクリックしてダイアログを開く前にベクタレイヤを編集モードにする必要があります(figure_attributes_3_ を参照). このダイアログでは最初に選択した地物のみを更新するかどうか,計算結果を新しい属性フィールドとして作成するか既存フィールドの更新にするかを選択しなければいけません."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:37
 msgid ""
@@ -173,7 +173,7 @@ msgid ""
 "precision (see figure_attributes_3_). For example, if you choose a field "
 "width of 10 and a field precision of 3, it means you have 6 digits before "
 "the dot, then the dot and another 3 digits for the precision."
-msgstr ""
+msgstr "新規フィールドの追加を選択した場合フィールド名,フィールドタイプ(integer, real または string),トータルのフィールドの長さとフィールドの精度 (figure_attributes_3_ 参照)　を指定する必要があります.例えば長さが10でフィールドの精度が3を選択するとドットの前に6文字ドットの後に3文字を精度として利用できることを意味します."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:43
 msgid ""
@@ -181,7 +181,7 @@ msgid ""
 "the help function in the **Selected Function Help**. In **Expression** you "
 "see the calculation expressions you create with the **Function List**. For "
 "the most commonly used operators, see **Operators**."
-msgstr ""
+msgstr " **関数リスト** にはフィールドや値のリストと同じように関数が含まれます. **Selected Function Help** で関数のヘルプを見ることができます.  **Expression**  **関数リスト** をつかって作った式が表示されます. よく共通で使われる演算子については **Operators** で確認して下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:48
 msgid ""
@@ -196,7 +196,7 @@ msgid ""
 "side, the **Field Values** list opens with the unique values. To add a value"
 " to the Field calculator **Expression** box, double click its name in the "
 "**Field Values** list."
-msgstr ""
+msgstr "**関数リスト** 内で :guilabel:`Fields and Values` をクリックすると検索された属性テーブルのすべての属性を見ることができます. フィールド計算機の **Expression** フィールドに属性を追加するためには :guilabel:`Fields and Values` リストの名前をダブルクリックして下さい. 一般に多彩なフィールド,値や関数を使って計算式を構成することができ,またボックスに直接タイプすることもできます. フィールドの値を表示するためには適切なフィールドを右ボタンクリックして下さい.  :guilabel:`Load top 10 unique values` か  :guilabel:`Load all unique values` を選択できます. 右側に **Field Values**  リストがユニーク値とともに開きます. フィールド計算機の **Expression**  ボックスに値を追加したい場合は **Field Values**  の名前をダブルクリックして下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:59
 msgid ""
@@ -210,31 +210,31 @@ msgid ""
 "objects. With :guilabel:`Record` group functions, you can add a numeration "
 "to your data set. To add a function to the Field calculator **Expression** "
 "box, click on the > and then double click the function."
-msgstr ""
+msgstr " :guilabel:`Operators`, :guilabel:`Math`, :guilabel:`Conversions`, :guilabel:`String`, :guilabel:`Geometry` と :guilabel:`Record` グループは多くの機能を提供しています.  :guilabel:`Operators` には算術演算子があります. :guilabel:`Math` には算術関数があります.  :guilabel:`Conversions` グループにはデータタイプをべつのタイプに変換する関数があります.  :guilabel:`String` グループは文字列型用の関数を提供しています.  :guilabel:`Geometry` グループではジオメトリオブジェクト用関数があります.  :guilabel:`Record` グループではデータセットの件数を使った操作ができます.  フィールド計算機の **Expression** ボックスに関数を追加するためには > をクリックした後に関数をダブルクリックして下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:72
 msgid ""
 "Load the shapefile :file:`railroads.shp` in |qg| and press "
 "|mActionOpenTable| :sup:`Open Attribute Table`."
-msgstr ""
+msgstr " |qg| にShapefile :file:`railroads.shp` をロードして |mActionOpenTable| :sup:`Open Attribute Table` を押して下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:76
 msgid ""
 "Select the |checkbox| :guilabel:`Create a new field` checkbox to save the "
 "calculations into a new field."
-msgstr ""
+msgstr ":guilabel:`新しいフィールドを作る` のチェックを選択し,新しいフィールドに計算結果を保存します."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:78
 msgid ""
 "Add ``length`` as Output field name and ``real`` as Output field type, and "
 "define Output field width to be 10 and Precision, 3."
-msgstr ""
+msgstr "出力フィールド名として ``length`` を追加し,出力フィールドタイプを ``real``, フィールド長を 10,精度を 3に指定します."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:80
 msgid ""
 "Now double click on function ``$length`` in the :guilabel:`Geometry` group "
 "to add it into the Field calculator expression box."
-msgstr ""
+msgstr " :guilabel:`Geometry` グループの ``$length`` 関数をダブルクリックしてフィールド計算機の式ボックスに追加して下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:87
 msgid ""
@@ -243,7 +243,7 @@ msgid ""
 "based rendering in the Style menu of the Layer properties, and the "
 "expression-based labeling |browsebutton| in the |mActionLabeling| "
 ":sup:`Labeling` core application."
-msgstr ""
+msgstr "フィールド計算機の **関数リスト**  にある **選択された関数ヘルプ** 、**演算子** と **式** メニューもまたレイヤプロパティのスタイルタブでのルールに基づいたレンダリングとコアアプリケーション |mActionLabeling| :sup:`ラベリング` において |browsebutton| 式に基づくラベリングで利用可能です.。"
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:99
 msgid "This group contains operators (e.g., +, -, *)."
@@ -251,31 +251,31 @@ msgstr "このグループには演算子 (例 + - * ) が含まれます"
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:153
 msgid "This group contains math functions (e.g., square root, sin and cos)."
-msgstr ""
+msgstr "このグループには算術関数が含まれます (たとえば平方根,sin,cos)."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:191
 msgid ""
 "This group contains functions to convert one data type to another (e.g., "
 "string to integer, integer to string)."
-msgstr ""
+msgstr "このグループにはデータ型を他の型に変換する関数が含まれます (たとえば文字列から整数、整数から文字列の変換)"
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:227
 msgid ""
 "This group contains functions that operate on strings (e.g., that replace, "
 "convert to upper case)."
-msgstr ""
+msgstr "このグループには文字列を扱う関数が含まれます (たとえば置き換えや文字列の大文字化です)."
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:281
 msgid ""
 "This group contains functions that operate on geometry objects (e.g., "
 "length, area)."
-msgstr ""
+msgstr "このグループにはジオメトリオブジェクトを扱う関数が含まれます (たとえば長さや面積の算出です)"
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:344
 msgid ""
 "Select the field name from the list, then right-click to access a context "
 "menu with options to load sample values from the selected field."
-msgstr ""
+msgstr "リストからフィールド名を選択して右ボタンクリックでコンテキストメニューを開き選択フィールドからサンプル値をロードして下さい."
 
 #~ msgid ""
 #~ "The |mActionCalculateField| :sup:`Field Calculator` button in the attribute "

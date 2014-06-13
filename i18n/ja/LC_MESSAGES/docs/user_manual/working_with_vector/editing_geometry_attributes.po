@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# choro <u.ko.kubot@gmail.com>, 2013
-# choro <u.ko.kubot@gmail.com>, 2013-2014
-# yoichi <yoichi.kayama@gmail.com>, 2013-2014
-# yoichi <yoichi.kayama@gmail.com>, 2013
+# Choro <u.ko.kubot@gmail.com>, 2013
+# Choro <u.ko.kubot@gmail.com>, 2013-2014
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2013-2014
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-22 10:07+0000\n"
-"Last-Translator: yoichi <yoichi.kayama@gmail.com>\n"
+"PO-Revision-Date: 2014-06-13 05:27+0000\n"
+"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -302,7 +302,7 @@ msgid ""
 "Start by activating the |mActionNodeTool| :sup:`Node Tool` and selecting a "
 "feature by clicking on it. Red boxes will appear at each vertex of this "
 "feature."
-msgstr ""
+msgstr " |mActionNodeTool| :sup:`Node Tool` をアクティブにして地物を繰りいくして選択して下さい. 地物の各頂点に赤い十字が表示されます."
 
 # 85c8e9ea245d4902a60faaf50aa4dbd9
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:363
@@ -313,7 +313,7 @@ msgid ""
 " number of vertices for the feature type you are working on. To delete a "
 "complete feature use the |mActionDeleteSelected| :sup:`Delete Selected` "
 "tool."
-msgstr ""
+msgstr "**頂点の削除**: 削除する頂点を選択した後 :kbd:`Delete` キーをクリックして下さい. 注意 |mActionNodeTool| :sup:`Node Tool` は地物全部を削除することはできません; |qg| は作業している地物の大部で最低必要な数の頂点は確保します. 地物そのものを削除する場合は |mActionDeleteSelected| :sup:`Delete Selected` ツールを使って下さい."
 
 # 1a785d4e8508494893114058de33100a
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:369
@@ -322,7 +322,7 @@ msgid ""
 "selected vertex or edge and drag in the direction you wish to move. All the "
 "selected vertices will move together. If snapping is enabled, the whole "
 "selection can jump to the nearest vertex or line."
-msgstr ""
+msgstr "**頂点の移動**: 移動したい頂点を選択して下さい. 選択した頂点またはエッジをクリックして移動したい方向にドラッグして下さい. すべての選択した頂点は一緒に移動します. もしスナッピングが有効ならばすべての選択物はもっとも近い頂点かラインにジャンプすることもできます."
 
 # 6d8388de6ef64d24b485fefbb418cb4e
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:380
@@ -402,7 +402,7 @@ msgid ""
 "tool. You can select multiple features for deletion. Once you have the "
 "selection set, use the |mActionDeleteSelected| :sup:`Delete Selected` tool "
 "to delete the features."
-msgstr ""
+msgstr "ポリゴン全体を削除したい場合最初に通常の |mActionSelect| :sup:`Select Single Feature`  ツールでポリゴンを選択して下さい.削除のために複数の地物を選択することも可能です.選択を行うと |mActionDeleteSelected| :sup:`Delete Selected` ツールを使って地物を削除することができます."
 
 # e3e3be0989b6402eb22bcfdabfaf72c9
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:447
@@ -896,7 +896,7 @@ msgid ""
 "-->` |mActionNewSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` "
 "from the :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` "
 "dialog will be displayed as shown in Figure_edit_6_."
-msgstr ""
+msgstr "編集用に新しい SpatiaLite レイヤを作成するために :menuselection:`Layer`　メニューで :menuselection:`New -->` |mActionNewSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` を選択して下さい.  :guilabel:`New SpatiaLite Layer` ダイアログが Figure_edit_6_ のように表示されます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:852
 msgid "Attribute Table for regions layer |nix|"
@@ -953,7 +953,7 @@ msgstr "GRASSレイヤを編集する手順は異なります-　詳細は  :ref
 msgid ""
 "This version of |qg| does not track if somebody else is editing a feature at"
 " the same time as you are. The last person to save their edits wins."
-msgstr ""
+msgstr "|qg| のバージョンは誰があなたと一緒に地物の同時編集を行なっているかは追跡しません.最後に保存した人の編集結果が残ります."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:38
 msgid ""
@@ -963,7 +963,7 @@ msgid ""
 "|qg| will leave the vertex where you release the mouse button, instead of "
 "snapping it to an existing vertex and/or segment. The snapping tolerance "
 "setting affects all tools that work with tolerance."
-msgstr ""
+msgstr "スナッピングの許容値とは接続や新規頂点入力や既存頂点移動を行いたいときに |qg| が最も近い頂点やセグメントを ``検索`` する場合の許容距離です. もしあなたの入力場所のスナッピング許容値内に頂点やセグメントが無い場合, |qg| は既存の頂点やセグメントにスナップさせる代わりにマウスボタンを離した場所に頂点を作成します. スナッピング許容値の設定はすべての許容値を利用するツールに影響をあたえます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:45
 msgid ""
@@ -988,7 +988,7 @@ msgid ""
 ":menuselection:`Settings -->` (or :menuselection:`File -->`) "
 ":menuselection:`Snapping options...` to enable and adjust snapping mode and "
 "tolerance on a layer basis (see figure_edit_1_ )."
-msgstr ""
+msgstr "レイヤ別スナッピング許容値はメニュー :menuselection:`Settings -->` (または :menuselection:`File -->`) :menuselection:`Snapping options...` で指定できます.ここでレイヤ単位でスナッピングモードを有効にして許容値を調整できます (figure_edit_1_  参照)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:64
 msgid ""
@@ -999,7 +999,7 @@ msgid ""
 "Furthermore, snapping will never occur to a layer that is not checked in the"
 " snapping options dialog, regardless of the global snapping tolerance. So be"
 " sure to mark the checkbox for those layers that you need to snap to."
-msgstr ""
+msgstr "注 このレイヤ別スナッピング定義はデジタイジングタブで設定できるグローバルスナッピングオプションを上書きします.ですからあなたがあるレイヤを編集する時に他のレイヤの頂点にスナップしたい場合レイヤに対する ``スナップする`` を有効にしてグローバルスナップ許容値をそれより小さい値にする必要があります.さらにグローバルスナッピング許容値に関係なくスナッピングオプションダイアログでチェックしていないレイヤに対してはスナップできません.ですからスナップしたいレイヤについてはチェックボックスのマークに注意して下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:88
 msgid ""
@@ -1012,7 +1012,7 @@ msgid ""
 "|qg| may snap to the wrong vertex, especially if you are dealing with a "
 "large number of vertices in close proximity. Set search radius too small, "
 "and it won't find anything to move."
-msgstr ""
+msgstr "検索半径とはあなたが地図をクリックした時に |qg| が最も近い頂点を ``検索`` するために使う距離です. 検索半径内に無い場合, |qg| は編集用頂点を見つけられず編集用頂点を選択できず警告がポップアップされます. スナップ許容値と検索半径は地図上の単位かピクセルで設定できます.そこで必要に応じて正しい値を設定することができます. もし大きな値を許容値に設定すると, |qg| は誤った頂点にスナップするでしょう, とりわけ多くの頂点を使うとそうなるでしょう. 検索半径を小さい値にすると何も見つからないはずでしょう."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:98
 msgid ""
@@ -1020,7 +1020,7 @@ msgid ""
 ":guilabel:`Digitizing` tab under :menuselection:`Settings -->` "
 "|mActionOptions| :menuselection:`Options`. This is the same place where you "
 "define the general, project- wide snapping tolerance."
-msgstr ""
+msgstr "レイヤにおける頂点編集のための検索半径の単位は :menuselection:`Settings -->` |mActionOptions| :menuselection:`Options` にある :guilabel:`Digitizing` タブで定義できます.同じ場所でプロジェクト全体のスナッピング許容値を定義することもできます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:120
 msgid ""
@@ -1040,7 +1040,7 @@ msgid ""
 " mouse cursor inside the map area, and click on the right arrow key to pan "
 "east, left arrow key to pan west, up arrow key to pan north, and down arrow "
 "key to pan south."
-msgstr ""
+msgstr "デジタイズ作業時に矢印キーを使ってパンを行うことができます. マウスカーソルを地図エリアにおきクリックした後右矢印キーを押すと東にパンします,左矢印キーを押すと西にパンします,上矢印キーを押すと北にパンします.下矢印キーを押すと南にパンします."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:137
 msgid ""
@@ -1048,7 +1048,7 @@ msgid ""
 "the map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause "
 "the map display to zoom in or out without interrupting your digitizing "
 "session."
-msgstr ""
+msgstr "スペースバーを地図のパン作業の中断に利用できます.キーボードの :kbd:`PgUp` と :kbd:`PgDown` キーを使うとデジタイジング作業を中断することなく地図の拡大、縮小を行うことができます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:146
 msgid ""
@@ -1058,7 +1058,7 @@ msgid ""
 "define |checkbox| :guilabel:`Enable topological editing`, and/or for polygon"
 " layers, you can activate the column |checkbox| :guilabel:`Avoid Int.`, "
 "which avoids intersection of new polygons."
-msgstr ""
+msgstr "レイヤベースのスナッピングオプション定義のそばでメニュー :menuselection:`設定` (または :menuselection:`ファイル`) の :guilabel:`スナップオプション...` ダイアログでいくつかのトポロジカル機能の指定ができます. ここではHere you can define |checkbox| :guilabel:`トポロジ編集を有効にする` の指定ができ,またポリゴンレイヤに対して |checkbox| :guilabel:`交差禁止.` の指定をすると新しいポリゴンの重なり部分が除去されます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:158
 msgid ""
@@ -1084,7 +1084,7 @@ msgid ""
 "Another option is to use |checkbox| :guilabel:`Enable snapping on "
 "intersection`. It allows you to snap on an intersection of background "
 "layers, even if there's no vertex on the intersection."
-msgstr ""
+msgstr " |checkbox| :guilabel:`交差部でスナップを有効にする` という別のオプションがあります. これを利用すると背景図レイヤとの交差にスナップすることができます,その場合交差部に頂点がなくてもスナップ可能です."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:193
 msgid ""
@@ -1101,14 +1101,14 @@ msgid ""
 ":ref:`sec_advanced_edit`. You can select and unselect both under "
 ":menuselection:`Settings --> Toolbars -->`. Using the basic digitizing "
 "tools, you can perform the following functions:"
-msgstr ""
+msgstr "一般にベクタレイヤの編集機能はデジタイジングとセクション :ref:`sec_advanced_edit`　で解説されている高度なデジタイジングツールバーに分けられています. 両方について :menuselection:`設定 --> ツールバー -->` で選択、非選択を行えます. 基本的なデジタイジングツールでは以下の機能が使えます:"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:225
 msgid ""
 "All editing sessions start by choosing the |mActionToggleEditing| "
 ":sup:`Toggle editing` option. This can be found in the context menu after "
 "right clicking on the legend entry for a given layer."
-msgstr ""
+msgstr "すべての編集セッションは |mActionToggleEditing| :sup:`編集モード切替` オプションを選択することで開始できます. これはそのレイヤの凡例エントリでマウス右ボタンで表示されるコンテキストメニューにあります."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:229
 msgid ""
@@ -1117,7 +1117,7 @@ msgid ""
 "toolbar to start or stop the editing mode. Once the layer is in edit mode, "
 "markers will appear at the vertices, and additional tool buttons on the "
 "editing toolbar will become available."
-msgstr ""
+msgstr "編集モードを開始,終了する別の方法としてデジタイジングツールバーの :index:`Toggle Editing` |mActionToggleEditing| :sup:`Toggle editing` ボタンを使うことができます. レイヤが編集モードになると頂点にマーカーが表示され,編集ツールバーのツールボタンが有効になります."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:259
 msgid ""
@@ -1133,7 +1133,7 @@ msgstr ""
 msgid ""
 "With the |mActionMoveFeature| :sup:`Move Feature(s)` icon on the toolbar, "
 "you can move existing features."
-msgstr ""
+msgstr " ツールバーの |mActionMoveFeature| :sup:`Move Feature(s)` アイコンを使うと既存の地物を移動できます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:285
 msgid ""
@@ -1158,7 +1158,7 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:304
 msgid ""
 "The same functions are available for editing all layers of the project."
-msgstr ""
+msgstr "同じ機能がプロジェクトの全レイヤの編集で可能です."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:311
 msgid ""
@@ -1180,7 +1180,7 @@ msgid ""
 ":guilabel:`Search Radius:` |selectnumber| to a number greater than zero "
 "(i.e., 10). Otherwise, |qg| will not be able to tell which vertex is being "
 "edited."
-msgstr ""
+msgstr " :menuselection:`設定 -->` |mActionOptions| :menuselection:`オプション --> デジタイジング -->` :guilabel:`検索半径:` |selectnumber| に0より大きい (例. 10) 値を設定することは重要です. そうでなければ |qg| は殿頂点を編集するのか判断できません."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:330
 msgid ""
@@ -1224,7 +1224,7 @@ msgid ""
 "Features can also be pasted to external applications as text. That is, the "
 "features are represented in CSV format, with the geometry data appearing in "
 "the OGC Well-Known Text (WKT) format."
-msgstr ""
+msgstr "地物は、テキストなどの外部アプリケーションに貼り付けることができます。つまり、地物は、ジオメトリデータをOGC well-known Text（WKT）形式としてCSV形式で表現されます。"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:392
 msgid ""
@@ -1239,7 +1239,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:400
 msgid "As an example, we will copy some lakes to a new layer:"
-msgstr ""
+msgstr "例として新しいレイヤにいくつかの湖沼をコピーします:"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:413
 msgid ""
@@ -1249,7 +1249,7 @@ msgid ""
 "layer, it doesn't matter how you design the fields and data types. If you "
 "want to make sure everything - the feature and its attributes - gets copied,"
 " make sure the schemas match."
-msgstr ""
+msgstr "ソースとターゲットレイヤのスキーマ(フィールド名と型が異なる場合)が異なる場合どうなるでしょうか?  |qg|  はマッチできる項目以外を無視します.もしあなたがターゲットレイヤにコピーする属性の内容にこだわらない場合はフィールドとデータタイプの設計は重要ではありません.すべてを - 地物とその属性 - 正しくコピーしたい場合はスキーマを一致させなければなりません."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
 msgid ""
@@ -1292,20 +1292,20 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:491
 msgid "|mActionFillRing|"
-msgstr ""
+msgstr "|mActionFillRing|"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:491
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:582
 msgid "Fill Ring"
-msgstr ""
+msgstr "リングの塗りつぶし"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:497
 msgid "|mActionSplitParts|"
-msgstr ""
+msgstr "|mActionSplitParts|"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:497
 msgid "Split Parts"
-msgstr ""
+msgstr "部分の分割"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:508
 msgid ""
@@ -1315,7 +1315,7 @@ msgid ""
 "This widget is not displayed by default; it can be displayed by right "
 "clicking on the toolbar and activating the Undo/Redo checkbox. Undo/Redo is "
 "however active, even if the widget is not displayed."
-msgstr ""
+msgstr "|mActionUndo| :sup:`取り消し` と |mActionRedo| :sup:`再実行` ツールを使うとベクタ編集操作の取り消しや再実行を行うことができます.取り消し/再実行操作の全履歴を表示できる結合表示可能なウィジェットもあります ( Figure_edit_3_ 参照). このウィジェットはデフォルトでは表示されていません; このウィジェットはツールバー上でマウス右ボタンをクリックして取り消し/再実行チェックボックスをアクティブにすることで表示できます. ウィジェットが表示されていなくても取り消し/再実行機能は有効です."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:526
 msgid ""
@@ -1330,7 +1330,7 @@ msgid ""
 "To use the undo/redo history widget, simply click to select an operation in "
 "the history list. All features will be reverted to the state they were in "
 "after the selected operation."
-msgstr ""
+msgstr "undo/redo ヒストリウィジェットを利用する場合単純に操作のヒストリリストをクリックして下さい. すべての操作は選択操作のあとであった状態に戻されます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:538
 msgid ""
@@ -1444,7 +1444,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:659
 msgid "Split parts"
-msgstr ""
+msgstr "部分の分割"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:661
 msgid ""
@@ -1457,7 +1457,7 @@ msgstr ""
 msgid ""
 "The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows you to"
 " merge features that have common boundaries and the same attributes."
-msgstr ""
+msgstr " |mActionMergeFeatures| :sup:`Merge Selected Features` ツールを使うと共通の境界線と同一の属性を持つ地物をマージできます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:676
 msgid ""
@@ -1497,7 +1497,7 @@ msgid ""
 "new GPX layers. Creation of a new GRASS layer is supported within the GRASS "
 "plugin. Please refer to section :ref:`creating_new_grass_vectors` for more "
 "information on creating GRASS vector layers."
-msgstr ""
+msgstr "|qg| では新規の Shapefile レイヤを作ることができます, 新規 SpatiaLite レイヤと新規GPX レイヤを作ることができます. 新規 GRASSレイヤの作成はGRASS-pluginででサポートされています.  GRASS ベクタレイヤ作成の詳しい情報はセクション :ref:`creating_new_grass_vectors` を参照して下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:734
 msgid ""
@@ -1512,7 +1512,7 @@ msgstr ""
 msgid ""
 "Note that |qg| does not yet support creation of 2.5D features (i.e., "
 "features with X,Y,Z coordinates)."
-msgstr ""
+msgstr "注  |qg| はまだ 2.5D 地物の作成をサポートしていません (例.  X,Y,Z座標を持つ地物)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:754
 msgid ""
@@ -1555,7 +1555,7 @@ msgstr ""
 msgid ""
 "Further management of SpatiaLite layers can be done with the DB Manager. See"
 " :ref:`dbmanager`."
-msgstr ""
+msgstr "SpatiaLiteレイヤ の高度な管理はDB マネージャを使うと実行できます :ref:`dbmanager` 参照."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:811
 msgid ""
@@ -1563,7 +1563,7 @@ msgid ""
 ":menuselection:`Plugins -->` |mActionShowPluginManager| "
 ":menuselection:`Plugin Manager...` opens the Plugin Manager Dialog. Activate"
 " the |checkbox| :guilabel:`GPS Tools` checkbox."
-msgstr ""
+msgstr "新しい GPXファイルを作成するためには  GPS プラグインを最初にロードする必要があります. :menuselection:`Plugins -->` |mActionShowPluginManager| :menuselection:`Plugin Manager...` で Plugin Manager ダイアログを開いてください. |checkbox| :guilabel:`GPS Tools` チェックボックスをアクティブにして下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:815
 msgid ""
@@ -1571,7 +1571,7 @@ msgid ""
 ":menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` "
 "menu. In the :guilabel:`Save new GPX file as` dialog, you can choose where "
 "to save the new GPX layer."
-msgstr ""
+msgstr "このプラグインがロードされると:menuselection:`Layer`メニューで :menuselection:`New -->` |icon_newgpx| :menuselection:`Create new GPX Layer...` を選択できます.  :guilabel:`Save new GPX file as` ダイアログで新しい GPX レイヤを保存する場所を選べます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:826
 msgid ""
@@ -1644,74 +1644,74 @@ msgstr ""
 msgid ""
 "The other buttons at the top of the attribute table window provide the "
 "following functionality:"
-msgstr ""
+msgstr "属性テーブルの上部にあるその他のボタンは以下のような機能を提供しています:"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:916
 msgid ""
 "|mActionToggleEditing| :sup:`Toggle editing mode` to edit single values and "
 "to enable functionalities described below (also with :kbd:`Ctrl+E`)"
-msgstr ""
+msgstr "|mActionToggleEditing| :sup:`編集モードの切替` 単一の値を編集して以下の機能を利用可能にします( :kbd:`Ctrl+E` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:918
 msgid "|mActionSaveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+S`)"
-msgstr ""
+msgstr "|mActionSaveEdits| :sup:`編集の保存` ( :kbd:`Ctrl+S` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:919
 msgid ""
 "|mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+U`)"
-msgstr ""
+msgstr "|mActionUnselectAttributes| :sup:`全選択解除` ( :kbd:`Ctrl+U` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:920
 msgid ""
 "|mActionSelectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+T`)"
-msgstr ""
+msgstr "|mActionSelectedToTop| :sup:`選択を先頭に移動` ( :kbd:`Ctrl+T` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:921
 msgid ""
 "|mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+R`)"
-msgstr ""
+msgstr "|mActionInvertSelection| :sup:`選択部分の反転` ( :kbd:`Ctrl+R` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:922
 msgid ""
 "|mActionCopySelected| :sup:`Copy selected rows to clipboard` (also with "
 ":kbd:`Ctrl+C`)"
-msgstr ""
+msgstr "|mActionCopySelected| :sup:`選択している行をクリップボードにコピー` ( :kbd:`Ctrl+C` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:924
 msgid ""
 "|mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with "
 ":kbd:`Ctrl+J`)"
-msgstr ""
+msgstr "|mActionZoomToSelected| :sup:`選択行の地物に地図をズームする` ( :kbd:`Ctrl+J` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:926
 msgid ""
 "|PanToSelected| :sup:`Pan map to the selected rows` (also with "
 ":kbd:`Ctrl+P`)"
-msgstr ""
+msgstr "|PanToSelected| :sup:`選択行の地物に地図をパンする` ( :kbd:`Ctrl+P` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:927
 msgid ""
 "|mActionDeleteSelected| :sup:`Delete selected features` (also with "
 ":kbd:`Ctrl+D`)"
-msgstr ""
+msgstr "|mActionDeleteSelected| :sup:`選択地物の削除` ( :kbd:`Ctrl+D` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:929
 msgid ""
 "|mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR "
 "layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+W`)"
-msgstr ""
+msgstr "|mActionNewAttribute| :sup:`新規カラム`  PostGIS レイヤまたはGDAL version >= 1.6の場合の OGRレイヤ用 ( :kbd:`Ctrl+W` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:931
 msgid ""
 "|mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR"
 " layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+L`)"
-msgstr ""
+msgstr "|mActionDeleteAttribute| :sup:`カラムの削除`  PostGIS レイヤまたはGDAL version >= 1.9の場合のOGR レイヤ用 ( :kbd:`Ctrl+L` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:933
 msgid ""
 "|mActionCalculateField| :sup:`Open field calculator` (also with "
 ":kbd:`Ctrl+I`)"
-msgstr ""
+msgstr "|mActionCalculateField| :sup:`フィールド計算機を開く` (  :kbd:`Ctrl+I` でも実行可能 )"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:937
 msgid ""
@@ -1720,7 +1720,7 @@ msgid ""
 " can copy the information without vector geometries if you deactivate "
 ":menuselection:`Settings --> Options -->` Data sources menu |checkbox| "
 ":guilabel:`Copy geometry in WKT representation from attribute table`."
-msgstr ""
+msgstr "もし属性データを外部プログラム(たとえばExcel)で利用したい場合 |mActionCopySelected| :sup:`Copy selected rows to clipboard` ボタンを利用して下さい. :menuselection:`Settings --> Options -->` Data sources menu |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table` を無効にしている場合に,このボタンを利用するとベクタジオメトリ抜きで情報をコピーできます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:946
 msgid ""
@@ -1730,11 +1730,11 @@ msgid ""
 "selection as -->` to define the name of the output file, its format and CRS "
 "(see section :ref:`label_legend`). It is also possible to specify OGR "
 "creation options within the dialog."
-msgstr ""
+msgstr "選択した地物は任意のOGRがサポートしたベクタフォーマットとして保存され、別の座標参照系（CRS）に変換することができます。レイヤのコンテキストメニューを開き :menuselection:`選択を名前をつけて保存 -->` をクリック後、出力ファイルの名称、フォーマット、CRSを定義します。（ :ref:`label_legend`のセクションを参照）。ダイアログ内でOGR作成オプションを指定することも可能です。"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:954
 msgid "Paste into new layer"
-msgstr ""
+msgstr "新しいレイヤへのペースト"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:956
 msgid ""
@@ -1749,7 +1749,7 @@ msgstr ""
 msgid ""
 "This applies to features selected and copied within |qg| and also to "
 "features from another source defined using well-known text (WKT)."
-msgstr ""
+msgstr "これは|qg| で選択しコピーされた地物に対し、またはwell-known text (WKT)を使って定義された他のソース由来の地物に対して適用されます。"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:971
 msgid ""
@@ -1760,7 +1760,7 @@ msgid ""
 "you will see it in the legend field. It can be opened with the "
 "|mActionOpenTable| :sup:`Open Attribute Table` tool and is then editable "
 "like any other layer attribute table."
-msgstr ""
+msgstr "|qg| では空間情報が無いテーブルをロードすることができます. この機能は OGRでサポートされているテーブルや, デリミテッドテキストと同じように PostgreSQL, MSSQL とOracle プロバイダで利用できます. テーブルに対してフィールドのルックアップや一般的な閲覧,編集をテーブルビューで行うことができます. テーブルをロードすると凡例フィールドに表示されます. これはたとえば |mActionOpenTable| :sup:`Open Attribute Table` ツールで開くことができ他の属性テーブルと同じように編集できます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:978
 msgid ""
@@ -1772,13 +1772,13 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:987
 msgid "Creating one to many relations"
-msgstr ""
+msgstr "１対多リレーションの作成"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:989
 msgid ""
 "Relations are a technique often used in databases. The concept is, that "
 "features (rows) of different layers (tables) can belong to each other."
-msgstr ""
+msgstr "リレーションは、多くの場合、データベースで使用される技術である。概念は、異なるレイヤ（テーブル）の地物（行）は、相互に属することができるということです。"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:992
 msgid ""
@@ -1789,7 +1789,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:997
 msgid "Foreign keys"
-msgstr ""
+msgstr "外部キー"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:999
 msgid ""
@@ -1802,7 +1802,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1013
 msgid "Alaska region with airports |nix|"
-msgstr ""
+msgstr "Alaska 領域の空港 |nix|"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1015
 msgid ""
@@ -1822,7 +1822,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1026
 msgid "Layers"
-msgstr ""
+msgstr "レイヤ"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1028
 msgid ""
@@ -1837,7 +1837,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1037
 msgid "Definition (Relation Manager)"
-msgstr ""
+msgstr "定義（リレーションマネージャー）"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1039
 msgid ""
@@ -1887,11 +1887,11 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1059
 msgid "Relation Manager |nix|"
-msgstr ""
+msgstr "リレーションマネージャ |nix|"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1063
 msgid "Forms"
-msgstr ""
+msgstr "フォーム"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1065
 msgid ""
@@ -1931,7 +1931,7 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1088
 msgid ""
 "The |mActionRemove| button will delete the selected airport permanently."
-msgstr ""
+msgstr " |mActionRemove| ボタンは、選択した空港を永久に削除します。"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1089
 msgid ""
@@ -1975,7 +1975,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:983
 msgid "Relations"
-msgstr ""
+msgstr "リレーション"
 
 #~ msgid ""
 #~ "The procedure for editing GRASS layers is different - see Section "

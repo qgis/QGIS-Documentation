@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# choro <u.ko.kubot@gmail.com>, 2013
-# choro <u.ko.kubot@gmail.com>, 2013
-# yoichi <yoichi.kayama@gmail.com>, 2013-2014
+# Choro <u.ko.kubot@gmail.com>, 2013
+# Choro <u.ko.kubot@gmail.com>, 2013
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-20 18:38+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-06-07 08:17+0000\n"
+"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -188,11 +188,11 @@ msgstr "|gdal_vrt| :guilabel:`バーチャルラスタの構築(カタログ)`"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:18
 msgid "What is GDAL Tools?"
-msgstr ""
+msgstr "GDALツールとは何?"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:20
 msgid ""
@@ -203,7 +203,7 @@ msgid ""
 "layer, or a shaded relief from a raster DEM, and to make a VRT (Virtual "
 "Raster Tile in XML format) from a collection of one or more raster files. "
 "These tools are available when the plugin is installed and activated."
-msgstr ""
+msgstr " GDAL ツールズプラグインは the Geospatial Data Abstraction Library　http://gdal.osgeo.org  に対するGUIツールを提供しています.ここにはクエリ、再投影,ワープ、結合等を多彩なラスタ形式に対して行えるラスタ管理ツールがあります. さらに等高線 (ベクタ) を作成したりDEMを使って陰影図を作ったり多数のラスタファイルを使ってｖｒｔ (XML形式による仮想ラスタタイル) を作成するツールが含まれます. これらのツールはプラグインがインストールされアクティベートされると利用可能になります."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:55
 msgid ""
@@ -212,7 +212,7 @@ msgid ""
 "stored with the image if the image is \"raw\" with control information. For "
 "more information, you can read on the GDAL website "
 "http://www.gdal.org/gdalwarp.html."
-msgstr ""
+msgstr "このユーティリティはイメージモザイキング,再投影とラッピングを行います. このプログラムを利用するとサポートされている任意の方法で再投影を行うことができ,イメージが ”raw\" でコントロール情報がある場合GCPポイントを格納することができます. さらに詳しい情報はGDALウェッブサイトhttp://www.gdal.org/gdalwarp.html を参照して下さい"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:62
 msgid ""
@@ -221,14 +221,14 @@ msgid ""
 "possible to alter existing projection definitions. Both single file and "
 "batch mode are supported. For more information, please visit the utility "
 "page at the GDAL site, http://www.gdal.org/gdalwarp.html."
-msgstr ""
+msgstr "このツールを使うとジオリファレンスされているけど投影法が無いラスタに投影法を割り当てることができます. またこれを使うと存在する投影法定義と異なる定義をすることもできます. 単一ファイルに対する作業とバッチモードの両方が可能です. さらに詳しい情報はGDALサイト http://www.gdal.org/gdalwarp.html を参照して下さい"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:70
 msgid ""
 "This utility helps you to extract projection information from an input file."
 " If you want to extract projection information from a whole directory, you "
 "can use the batch mode. It creates both :file:`.prj` and :file:`.wld` files."
-msgstr ""
+msgstr "このユーティリティを使うと入力ファイルから投影法情報を抽出する手助けになります. もし全ディレクトリから投影情報を抽出したい場合はバッチモードを使えます. これにより :file:`.prj` と :file:`.wld` の両方のファイルが作られます."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:82
 msgid ""
@@ -237,7 +237,7 @@ msgid ""
 " formats. Note that the vector data must in the same coordinate system as "
 "the raster data; on the fly reprojection is not provided. For more "
 "information see http://www.gdal.org/gdal_rasterize.html."
-msgstr ""
+msgstr "このプログラムはベクタジオメトリ (ポイント,ラインやポリゴン)  をラスタイメージのラスタバンドに書き込みます. ベクタはOGRがサポートする形式から読み込まれます. 注意 ベクタデータはラスタデータと同じ座標系でなければいけません; オンザフライ利プロジェクションは提供されていません. さらに詳しい情報は http://www.gdal.org/gdal_rasterize.html を参照して下さい"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:90
 msgid ""
@@ -247,7 +247,7 @@ msgid ""
 "create the output vector datasource if it does not already exist, defaulting"
 " to ESRI shapefile format. See also "
 "http://www.gdal.org/gdal_polygonize.html."
-msgstr ""
+msgstr "このユーティリティを使うとラスタで同じピクセル値の連続領域からベクタポリゴンを生成できます. それぞれのポリゴンはそのピクセル値を属性値として保持しています.  出力データソースが存在しない場合このユーティリティが作成します, デフォルトはESRI shapefile 形式です.  http://www.gdal.org/gdal_polygonize.html も参照して下さい"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:99
 msgid ""
@@ -255,7 +255,7 @@ msgid ""
 "potentially performing some operations like subsetting, resampling, and "
 "rescaling pixels in the process. For more information you can read on "
 "http://www.gdal.org/gdal_translate.html."
-msgstr ""
+msgstr "このユーティリティはラスタデータの異なる形式間での変換を行えます,またプロセス中でサブセッティング,リサンプリング,ピクセルのリコーリング等のいくつかの操作ができます. 詳しい情報は http://www.gdal.org/gdal_translate.html を参照して下さい."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:105
 msgid ""
@@ -265,28 +265,28 @@ msgid ""
 "conversion utilizes Floyd-Steinberg dithering (error diffusion) to maximize "
 "output image visual quality. The utility is also described at "
 "http://www.gdal.org/rgb2pct.html."
-msgstr ""
+msgstr "このユーティリティは与えられたRGBイメージに最適な擬似カラーテーブルを作成します。そのときダウンサンプリングされたRGBヒストグラムを使ってメディアンカットアルゴリズムが利用されます.それか作成されたカラーテーブルを使って擬似カラーイメージに変換を行います.この変換はフロイド-スタインバーグデザリング(誤差拡散)を使って出力イメージの質を最良化します.このユーティリティについては http://www.gdal.org/rgb2pct.html にも記述されています"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:114
 msgid ""
 "This utility will convert a pseudocolor band on the input file into an "
 "output RGB file of the desired format. For more information, see "
 "http://www.gdal.org/pct2rgb.html."
-msgstr ""
+msgstr "このユーティリティは入力ファイルの擬似カラーバンドを指定形式のRGB形式出力に変換します. 詳細情報は http://www.gdal.org/pct2rgb.html を参照して下さい"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:125
 msgid ""
 "This program generates a vector contour file from the input raster elevation"
 " model (DEM). On http://www.gdal.org/gdal_contour.html, you can find more "
 "information."
-msgstr ""
+msgstr "このプログラムはラスタ標高モデル(DEM)からベクタ等高線ファイルを作成します. 詳細情報はhttp://www.gdal.org/gdal_contour.html を参照して下さい."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:130
 msgid ""
 "This utility allows you to clip (extract subset) rasters using selected "
 "extent or based on mask layer bounds. More information can be found at "
 "http://www.gdal.org/gdal_translate.html."
-msgstr ""
+msgstr "このユーティリティはラスターのクリップ(サブセットの抽出)を行えます,そのとき領域の指定かマスクレイヤの範囲で領域が指定されます. 詳しい情報は http://www.gdal.org/gdal_translate.html を参照して下さい."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:141
 msgid ""
@@ -295,7 +295,7 @@ msgid ""
 "polygon. The result can be written back to the existing raster band, or "
 "copied into a new file. For more information, see "
 "http://www.gdal.org/gdal_sieve.html."
-msgstr ""
+msgstr "このユーティリティは指定された閾値(ピクセル)より小さいラスタポリゴンを除去して,それらを直近の最大のポリゴンの値で置き換えます. 結果は既存の背景ラスタバンドに書き込まれるか新しいファイルに書き込まれます. 詳細な情報は http://www.gdal.org/gdal_sieve.html  を参照して下さい."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:149
 msgid ""
@@ -304,14 +304,14 @@ msgid ""
 " often used to \"fix up\" lossy compressed aerial photos so that color "
 "pixels can be treated as transparent when mosaicing. See also "
 "http://www.gdal.org/nearblack.html."
-msgstr ""
+msgstr "このユーティリティはイメージをスキャンして正確な黒(または白)の縁の周りのすべてのピクセルをほとんど黒(またはほとんど白)にセットします.これはしばしば航空写真の圧縮による損失の\"修正”に利用され,モザイク時にカラーピクセルが透過として扱われます.詳細は http://www.gdal.org/nearblack.html を参照して下さい."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:157
 msgid ""
 "This utility fills selected raster regions (usually nodata areas) by "
 "interpolation from valid pixels around the edges of the areas. On "
 "http://www.gdal.org/gdal_fillnodata.html, you can find more information."
-msgstr ""
+msgstr "このユーティリティは選択されたラスタの領域 ( 通常はnodataの領域 ) を領域の周りの有効なピクセルのから補間を行います.  http://www.gdal.org/gdal_fillnodata.html に詳しい情報があります."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:163
 msgid ""
@@ -320,7 +320,7 @@ msgid ""
 "target pixel. Target pixels are those in the source raster for which the "
 "raster pixel value is in the set of target pixel values. For more "
 "information see http://www.gdal.org/gdal_proximity.html."
-msgstr ""
+msgstr "このユーティリティはラスタ近接マップを作れます.それはそれぞれのピクセルの中心からターゲットとされるピクセルまでのもっとも近い距離を表します. ターゲットピクセルはソースラスタ中のターゲットピクセル値のセットの値を持つピクセルです. さらに詳しい情報は http://www.gdal.org/gdal_proximity.html  を参照して下さい."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:171
 msgid ""
@@ -329,7 +329,7 @@ msgid ""
 "with values, and you can choose from various interpolation methods. The "
 "utility is also described on the GDAL website, "
 "http://www.gdal.org/gdal_grid.html."
-msgstr ""
+msgstr "このユーティリティはOGRデータソースの散在するデータを読んで規則的なグリッド (ラスタ) を作成します. 入力データはグリッドノードに補間されます,この時様々な補間方法から方法を選択できます. このユーティリティについてはGDAL ウェッブサイト http://www.gdal.org/gdal_grid.html に記述があります."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:178
 msgid ""
@@ -337,13 +337,13 @@ msgid ""
 " an aspect, a color relief, a Terrain Ruggedness Index, a Topographic "
 "Position Index and a roughness map from any GDAL-supported elevation raster."
 " For more information, see http://www.gdal.org/gdaldem.html."
-msgstr ""
+msgstr "DEMの解析や可視化を行うツールです. これを使うと陰影図や傾斜,アスペクト,カラーレリーフ,Terrain Ruggedness Index, Topographic Position Index とroughness mapを GDALがサポートする標高ラスタから作成します. さらに詳しい情報は http://www.gdal.org/gdaldem.html を参照して下さい"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:191
 msgid ""
 "This program builds a VRT (Virtual Dataset) that is a mosaic of the list of "
 "input GDAL datasets. See also http://www.gdal.org/gdalbuildvrt.html."
-msgstr ""
+msgstr "このプログラムはVRT (バーチャルデータセット) を作ります.これは入力GDALlデータセットのモザイクです. http://www.gdal.org/gdalbuildvrt.html も参照して下さい ."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:195
 msgid ""
@@ -352,36 +352,36 @@ msgid ""
 "they may be overlapping, and at different resolutions. In areas of overlap, "
 "the last image will be copied over earlier ones. The utility is also "
 "described at http://www.gdal.org/gdal_merge.html."
-msgstr ""
+msgstr "このユーティリティを使うとイメージの自動モザイクを行うことができます. すべてのイメージは同じ座標系で同じバンド数でなければいけませんが,オーバーラップしていたり解像度が異なってもかまいません. オーバーラップしている領域は後のイメージがさきのイメージを上書きします. このユーティリティについては http://www.gdal.org/gdal_merge.html  にも記述されています."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:203
 msgid ""
 "This utility lists various information about a GDAL-supported raster "
 "dataset. On http://www.gdal.org/gdalinfo.html, you can find more "
 "information."
-msgstr ""
+msgstr "このユーティリティを使うとGDALがサポートするラスタデータセットの様々な情報をリストすることができます. http://www.gdal.org/gdalinfo.html に詳しい情報があります."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:208
 msgid ""
 "The gdaladdo utility can be used to build or rebuild overview images for "
 "most supported file formats with one of several downsampling algorithms. For"
 " more information, see http://www.gdal.org/gdaladdo.html."
-msgstr ""
+msgstr "gdaladdo ユーティリティは多彩なダウンサンプリングアルゴリズムのうち１つを利用して多くサポートされている形式で画像のオーバービューを再作成できます. 詳しい情報は http://www.gdal.org/gdaladdo.html  を参照して下さい."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:213
 msgid ""
 "This utility builds a shapefile with a record for each input raster file, an"
 " attribute containing the filename, and a polygon geometry outlining the "
 "raster. See also http://www.gdal.org/gdaltindex.html."
-msgstr ""
+msgstr "このユーティリティを使うと入力ラスタファイル用のレコードを持つshapefileを作れます.その属性にはファイル名とラスタのアウトラインジオメトリが含まれます. http://www.gdal.org/gdaltindex.html  も参照して下さい."
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:220
 msgid "GDAL Tools Settings"
-msgstr ""
+msgstr "GDAL ツールズの設定"
 
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:222
 msgid "Use this dialog to embed your GDAL variables."
-msgstr ""
+msgstr "このダイアログをあなたのGDAL変数に組み込めます"
 
 #~ msgid "What is GDALTools?"
 #~ msgstr ""

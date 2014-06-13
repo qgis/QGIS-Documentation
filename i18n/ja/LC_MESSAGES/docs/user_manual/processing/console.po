@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2014
 # Shu Higashi <higa432@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-20 18:40+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-06-07 13:17+0000\n"
+"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -283,7 +284,7 @@ msgstr "``getobject(obj)``: 渡されたオブジェクトから|qg| オブジ�
 
 #: ../../source/docs/user_manual/processing/console.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/processing/console.rst:10
 msgid ""
@@ -293,7 +294,7 @@ msgid ""
 "can be defined using the command-line interface, and additional operations "
 "such as loops and conditional sentences can be added to create more flexible"
 " and powerful workflows."
-msgstr ""
+msgstr "処理フレームワークの他のGUIエレメントを使用しては実現できない上級ユーザ向けの生産性向上を可能にします。複数のアルゴリズムを含むモデルは、コマンドラインインタフェースを使って定義できます。また、ループや条件分岐のような付加的な演算子を追加して、より柔軟でパワフルなワークフローを作成することができます。"
 
 #: ../../source/docs/user_manual/processing/console.rst:16
 msgid ""
@@ -302,13 +303,13 @@ msgid ""
 " can incorporate those commands into your console work and connect "
 "processing algorithms to all the other features (including methods from the "
 "|qg| API) available from there."
-msgstr ""
+msgstr "|qg| 内には処理コンソールはありませんが、|qg|  ビルトインPython コンソールで代わりにすべての処理コマンドが使えます.これは,自分のコンソール作業に対してそれらのコマンドを組み合わせて,そこから利用できるあらゆる他の地物( |qg| APIからのメソッドも含め)に対する処理アルゴリズムにつなぐことができるということを意味しています."
 
 #: ../../source/docs/user_manual/processing/console.rst:27
 msgid ""
 "In this section, we will see how to use processing algorithms from the |qg| "
 "Python console, and also how to write algorithms using Python."
-msgstr ""
+msgstr "この章では|qg| Python コンソールから,処理アルゴルズムの使い方と,同時にPython を使った自分のアルゴリズムを書く方法を見て行きます."
 
 #: ../../source/docs/user_manual/processing/console.rst:40
 msgid ""
@@ -321,7 +322,7 @@ msgid ""
 "toolbox, but rather a unique command–line name. To find the right name for "
 "your algorithm, you can use the ``algslist()`` method. Type the following "
 "line in your console:"
-msgstr ""
+msgstr "今や、コンソールからこれを使ってできるのは基本的にひとつの(興味深い)ことだけ: つまりアルゴリズムの実行です。``runalg()`` メソッドを使いますが、これはその第一パラメータとしてアルゴリズムの名前を使って、次にアルゴリズムの要件に応じた付加的なパラメータの可変な数値、を使って実行されます。このため、最初に知っておくべきことは、実行するアルゴリズムの名前です。ツールボックスで見える名前ではなく、むしろユニークなコマンドラインの名前です。自分のアルゴリズム用に正しい名前を探す場合は、``algslist()`` メソッドを使うことができます。コンソールで次の行をタイプしてください:"
 
 #: ../../source/docs/user_manual/processing/console.rst:79
 msgid ""
@@ -329,7 +330,7 @@ msgid ""
 "the full list of algorithms, it will only display those that include that "
 "string. If, for instance, you are looking for an algorithm to calculate "
 "slope from a DEM, type ``alglist(\"slope\")`` to get the following result:"
-msgstr ""
+msgstr "このメソッドでは、パラメ－タとして文字列を使えます。アルゴリズムの全文を返却する代わりに、その文字列を含むものだけを表示します。もし、例えば、DEMからスロープを計算するアルゴリズムを探している場合、``alglist(\"slope\")`` とタイプすると次のような結果が得られます:"
 
 #: ../../source/docs/user_manual/processing/console.rst:99
 msgid ""
@@ -341,20 +342,20 @@ msgid ""
 "algorithm requires and the outputs that it will generate. To get this "
 "information, you can use the ``alghelp(name_of_the_algorithm)`` method. Use "
 "the command-line name of the algorithm, not the full descriptive name."
-msgstr ""
+msgstr "いったんアルゴリズムのコマンドライン名が分かれば、次にやるのはそれを実行する構文を知ることです。それはすなわち、必要なパラメータと ``runalg()`` メソッドを呼び出す際に引き渡す順序を知ることです。アルゴリズムを詳細に説明するメソッドがあり、アルゴリズムが必要とするパラメータと、生成されるアウトプットの一覧を取得することができます。その目的のために、``alghelp(name_of_the_algorithm)`` メソッドを使うことができます。説明用の長い名前ではなく、コマンドライン名を使用してください。"
 
 #: ../../source/docs/user_manual/processing/console.rst:107
 msgid ""
 "Calling the method with ``saga:slopeaspectcurvature`` as parameter, you get "
 "the following description:"
-msgstr ""
+msgstr "``saga:slopeaspectcurvature`` をパラメータとしてこのメソッドを呼び出すと,次の説明が得られるでしょう."
 
 #: ../../source/docs/user_manual/processing/console.rst:135
 msgid ""
 "Depending on the type of parameter, values are introduced differently. The "
 "next list gives a quick review of how to introduce values for each type of "
 "input parameter:"
-msgstr ""
+msgstr "パラメータの種別により,値は様々に説明されます.次は各種別の入力パラメータ値の説明方法についてのクイックレビューです:"
 
 #: ../../source/docs/user_manual/processing/console.rst:138
 msgid ""
@@ -365,20 +366,20 @@ msgid ""
 "|qg| object representing the layer, you can also pass it as parameter. If "
 "the input is optional and you do not want to use any data object, use "
 "``None``."
-msgstr ""
+msgstr "ラスターレイヤ,ベクターレイヤあるいは表.使用対象のデータオブジェクト( |qg| の目次内にある名前)や,ファイル名(対応するレイヤがお開かれていない場合は開かれますが,マップキャンバスには追加されません)を識別する名前の文字列を単に使ってください.レイヤを表す |qg|  オブジェクトのインスタンスを持っている場合,それをパラメータとして渡すこともできます.入力がオプンションで,データオブジェクトを使いたくない場合は``None``を使ってください."
 
 #: ../../source/docs/user_manual/processing/console.rst:161
 msgid ""
 "In this case, the algorithm has one such parameter, with seven options. "
 "Notice that ordering is zero-based."
-msgstr ""
+msgstr "この場合,アルゴリズムには、そのようなパラメータのひとつが,7つのオプション付きであります.順序はゼロから始まることに注意してください."
 
 #: ../../source/docs/user_manual/processing/console.rst:163
 msgid ""
 "Multiple input. The value is a string with input descriptors separated by "
 "semicolons (``;``). As in the case of single layers or tables, each input "
 "descriptor can be the data object name, or its file path."
-msgstr ""
+msgstr "複数のインプット.値はセミコロン (``;``)で区切られたインプット記述子付きの文字列です.単一のレイヤやテーブルの場合と同様,各インプット記述子にはデータオブジェクト名やファイルパスが使えます."
 
 #: ../../source/docs/user_manual/processing/console.rst:168
 msgid ""
@@ -386,14 +387,14 @@ msgid ""
 "and enclosed between quotes (``\"``). Values start on the upper row and go "
 "from left to right. You can also use a 2-D array of values representing the "
 "table."
-msgstr ""
+msgstr "固定テーブル.カンマ (``,``) で区切られ,引用符 (``\"``)で閉じられた全てのテーブル値の一覧をタイプします.値は上部の列から始まり,左から右に進みます.テーブルを表す2次元の配列も使えます."
 
 #: ../../source/docs/user_manual/processing/console.rst:178
 msgid ""
 "Input parameters such as strings, booleans, or numerical values have default"
 " values. To use them, specify ``None`` for the corresponding parameter "
 "entry."
-msgstr ""
+msgstr "文字列,ブーリアン,数値といった入力パラメータにはデフォルト値があります.それを使う場合は,対応するパラメータエントリーに``None`` を使ってください."
 
 #: ../../source/docs/user_manual/processing/console.rst:181
 msgid ""
@@ -403,7 +404,7 @@ msgid ""
 " you enter a file extension not supported by the algorithm, the default file"
 " format for that output type will be used, and its corresponding extension "
 "appended to the given file path."
-msgstr ""
+msgstr "アウトプットデータオブジェクト用には,ツールボックスでそうするように,保存時は使用するファイルパスをタイプしてください.結果を一時ファイルに保存したい場合は,``None``を使用してください.ファイルの拡張子でファイル形式が決まります.アルゴリズムがサポートしていない拡張子を入力した場合は,その出力種別用のデフォルトのファイル形式が使用され,与えられたファイルパスに対応する拡張子が追加されます."
 
 #: ../../source/docs/user_manual/processing/console.rst:188
 msgid ""
@@ -413,7 +414,7 @@ msgid ""
 "yourself after running the algorithm. To do so, you can use |qg| API "
 "commands, or, even easier, use one of the handy methods provided for such "
 "tasks."
-msgstr ""
+msgstr "アルゴリズムがツールボックスから実行される時とは異なり,Python コンソールから同じアルゴリズムを実行しても出力はマップキャンバスに追加されません.出力を追加したい場合は,アルゴリズムを実行した後に自分でやらなければなりません.それを行うには |qg| APIコマンドを使うことができ,あるいはより簡単に,このようなタスク用に提供されているハンディなメソッドのひとつを使うこともできます."
 
 #: ../../source/docs/user_manual/processing/console.rst:194
 msgid ""
@@ -421,14 +422,14 @@ msgid ""
 "shown in the algorithm description) as keys and the file paths of those "
 "outputs as values. You can load those layers by passing the corresponding "
 "file paths to the ``load()`` method."
-msgstr ""
+msgstr "``runalg`` メソッドは出力名(アルゴリズムの説明に書かれているもの)付きの辞書をキーとして、出力のファイルパスを値として返します。そのファイルパスを``load()`` メソッドに渡すことでこれらのレイヤをロードすることができます."
 
 #: ../../source/docs/user_manual/processing/console.rst:209
 msgid ""
 "Below is a list of some of these commands. More information can be found in "
 "the classes under the ``processing/tools`` package, and also in the example "
 "scripts provided with |qg|."
-msgstr ""
+msgstr "下記はこのコマンドのいくつかの一覧です.より詳細な情報は``processing/tools`` パッケージ配下のクラス内と, |qg| とともに提供されたサンプルスクリプト内にもあります."
 
 #: ../../source/docs/user_manual/processing/console.rst:216
 msgid ""
@@ -436,14 +437,14 @@ msgid ""
 "vector layer, for the passed fields. Fields can be passed as field names or "
 "as zero-based field indices. Returns a dict of lists, with the passed field "
 "identifiers as keys. It considers the existing selection."
-msgstr ""
+msgstr "``values(layer, fields)``: 渡された項目に,ベクターレイヤの属性テーブル内の値を返します.項目は項目名またはゼロから始まる項目インデックスで渡すことができます.渡された項目の識別子をキーとして,一覧の辞書を返します。既存の選択を考慮します."
 
 #: ../../source/docs/user_manual/processing/console.rst:222
 msgid ""
 "``uniquelabels(layer, field)``: Returns a list of unique values for a given "
 "attribute.  Attributes can be passed as a field name or a zero-based field "
 "index. It considers the existing selection."
-msgstr ""
+msgstr "``uniquelabels(layer, field)``: 保有している属性のユニークな値の一覧を返却します。属性は項目名またはゼロから始まる項目のインデックスとして渡すことができます.既存の選択を考慮します."
 
 #: ../../source/docs/user_manual/processing/console.rst:229
 msgid ""
@@ -456,13 +457,13 @@ msgid ""
 "from there in the :file:`scripts` folder (the default folder when you open "
 "the save file dialog) with :file:`.py` extension will automatically create "
 "the corresponding algorithm."
-msgstr ""
+msgstr "対応するPythonのコードを書いたり,アルゴリズムのセマンティクスを定義するのに必要な付加情報をいくつか追加することで,自分自身のアルゴリズムを作成することができます.ツールボックスの :guilabel:`Script`  アルゴリズムブロック内の:guilabel:`Tools` グループの下にある :guilabel:`Create new script` メニューが見つかると思います.それをダブルクリックしてスクリプト編集ダイアログを開いて下さい.これがコードを打ち込む場所です. ここで入力したスクリプトを :file:`scripts` フォルダ (ファイル保存ダイアログを開くときのデフォルトのひとつ)に :file:`.py` という拡張子で保存すると, それに対応するアルゴリズムが自動的に作られます."
 
 #: ../../source/docs/user_manual/processing/console.rst:241
 msgid ""
 "Let's have a look at the following code, which calculates the Topographic "
 "Wetness Index (TWI) directly from a DEM."
-msgstr ""
+msgstr "次のコードを取り上げましょう。これは地表流水指標(TWI)をDEMから直接計算します"
 
 #: ../../source/docs/user_manual/processing/console.rst:255
 msgid ""
@@ -471,37 +472,37 @@ msgid ""
 "layer and a flow accumulation layer. We do not have these layers, but since "
 "we have the DEM, we can calculate them by calling the corresponding SAGA "
 "algorithms."
-msgstr ""
+msgstr "見て頂いたとおり,これは3つのアルゴルズムを含んでおり,それらは全てSAGAから来ています.最後のものはTWIを計算しますが,斜面のレイヤと流量蓄積のレイヤが必要です.これらのものはありませんが,DEMがあるので,対応するSAGAアルゴリズムを呼び出して計算することができるのです."
 
 #: ../../source/docs/user_manual/processing/console.rst:266
 msgid ""
 "These lines start with a double Python comment symbol (``##``) and have the "
 "following structure:"
-msgstr ""
+msgstr "これらの行はダブルPython コメントシンボル (``##``) で始まり、次のような構造を持っています"
 
 #: ../../source/docs/user_manual/processing/console.rst:273
 msgid ""
 "Here is a list of all the parameter types that are supported in processing "
 "scripts, their syntax and some examples."
-msgstr ""
+msgstr "これは,処理スクリプト中でサポートされる全パラメータ種別の一覧,文法,そしていくつかの例です."
 
 #: ../../source/docs/user_manual/processing/console.rst:276
 msgid "``raster``. A raster layer."
-msgstr ""
+msgstr "``raster``. A ラスターレイヤ"
 
 #: ../../source/docs/user_manual/processing/console.rst:277
 msgid "``vector``. A vector layer."
-msgstr ""
+msgstr "``vector``. A ベクターレイヤ"
 
 #: ../../source/docs/user_manual/processing/console.rst:278
 msgid "``table``. A table."
-msgstr ""
+msgstr "``table``. A テーブル"
 
 #: ../../source/docs/user_manual/processing/console.rst:279
 msgid ""
 "``number``. A numerical value. A default value must be provided. For "
 "instance, ``depth=number 2.4``."
-msgstr ""
+msgstr "``number``.A 数値.A デフォルト値が必要です.たとえば、``depth=number 2.4``"
 
 #: ../../source/docs/user_manual/processing/console.rst:281
 msgid ""

@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# João Gaspar <joao.f.r.gaspar@gmail.com>, 2013-2014
+# João Filipe Rodrigues Gaspar <joao.f.r.gaspar@gmail.com>, 2013-2014
+# Luís Ferreira, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-01-09 18:33+0000\n"
-"Last-Translator: João Gaspar <joao.f.r.gaspar@gmail.com>\n"
+"PO-Revision-Date: 2014-06-02 17:04+0000\n"
+"Last-Translator: Luís Ferreira\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -620,7 +621,7 @@ msgid ""
 "use this layer as a reference map, or even trace the features off the raster"
 " layer into your vector layer if they are visible. This process is known as "
 "'heads-up digitising' and is shown in figure_headsup_digitizing_."
-msgstr ""
+msgstr "Como provavelmente já terá descoberto ao seguir os passos acima, é difícil desenhar as entidades de modo a ficarem **espacialmente correctas** se não houver outras entidades que possam ser usadas como referência. Uma solução usual para este problema é usar uma camada de dados matricial (tal como uma fotografia aérea ou imagem de satélite) como uma camada de fundo. Pode usar esta camada como um mapa de referência, ou até mesmo tracejar as entidades da camada matricial de modo a inseri-las na camada vectorial, se estas forem visíveis. Este processo é conhecido como 'digitalização no ecrã' (\"on-screen\") e é mostrado em figure_headsup_digitizing_. \""
 
 # 11ecb40865f7449484e14e25375d336e
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:336
@@ -646,14 +647,14 @@ msgid ""
 "are drawn accurately. The puck is connected to a computer and each feature "
 "that is captured using the puck gets stored in the computer's memory. You "
 "can see what a digitising puck looks like in figure_digitizing_table_."
-msgstr ""
+msgstr "Outro método de criação de dados vectoriais requer o uso de uma mesa de digitalização. Esta aproximação é de uso menos comum excepto por profissionais SIG, e requer equipamento caro. No processo de usar uma mesa de digitalização  coloca-se um mapa em papel na mesa. O mapa em papel é mantido no lugar mediante o uso de pinças. Depois é usado uma \"mira\" para tracejar entidades de um mapa. Uma \"cruz\" pequena é usada para desenhar linhas e pontos com precisão. A mira está ligada a um computador e cada entidade que é capturada fica armazenada na memória do computador. Pode ver uma mira de digitalização em figure_digitizing_table_."
 
 # 651c59fb8c264d5ab7623bd9baf5e3ee
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:362
 msgid ""
 "A digitising table and puck are used by GIS professionals when they want to "
 "digitise features from existing maps."
-msgstr ""
+msgstr "Uma mesa de digitalização e mira são usadas por profissionais SIG quando têm que digitalizar elementos a partir de mapas existentes."
 
 # 79da9eb18b734ba98a21eee73b22e96a
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:366
@@ -683,7 +684,7 @@ msgid ""
 "the correct position in the map view based on the GIS Application's internal"
 " model of the Earth. We can see the effect of a poorly georeferenced image "
 "in figure_georeference_issue_."
-msgstr ""
+msgstr "Se estiver a digitalizar usando uma camada matricial de fundo como uma fotografia aérea ou imagem de satélite, é muito importante que a camada matricial esteja devidamente georeferenciada. Uma camada que esteja devidamente georeferenciada é representada na sua posição correcta na vista de mapa, baseada no modelo interno da Terra, da Aplicação SIG. Podemos ver o efeito de uma imagem mal georeferenciada em figure_georeference_issue_."
 
 # e05f2209ae2c4b7aa31e97c20cf8a4de
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:393
@@ -694,7 +695,7 @@ msgid ""
 "georeferenced (as shown on the right) the features will not be well aligned."
 " Worse still, if the image on the right is used as a reference when "
 "capturing new features, the newly captured data will be inaccurate!"
-msgstr ""
+msgstr "A importância de usar imagens matriciais adequadamente bem georeferenciadas para digitalização no ecrã. Na esquerda podemos ver que a imagem está adequadamente bem registada e que os elementos da estrada (em laranja) sobrepõem-se perfeitamente. Se uma imagem estiver fracamente georeferenciada (como é mostrado na direita) os elementos não serão bem alinhados. Mais grave ainda, se a imagem da direita for usada como referência aquando da captura de novos elementos, os novos dados capturados serão inexactos!"
 
 # 90b27c96be884031ab098abbbbbb8151
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:400
@@ -767,7 +768,7 @@ msgstr "O processo de digitalização consiste no **desenhar** de uma geometria 
 msgid ""
 "**Heads-up digitising** is often used to provide orientation during "
 "digitising by using a raster image in the background."
-msgstr ""
+msgstr "A **digitalização no ecrâ** é frequentemente usada para providenciar orientação durante a digitalização recorrendo a uma imagem matricial como fundo."
 
 # 92ab4504376845d3b0e06cb32997994f
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:425
@@ -796,7 +797,7 @@ msgid ""
 "assign each group a few features to capture. Have them symbolise their "
 "layers so that they are more meaningful to look at. Combine the layers from "
 "all the groups to create a nice map of your school and its surroundings!"
-msgstr ""
+msgstr "Desenhe uma lista de elementos dentro e ao redor da sua escola que ache interessante capturar. Por exemplo: o limite da escola, a posição de pontos do sistema de alarme de incêndio, a disposição de cada sala de aula, e etc. Tente usar uma mistura de diferentes tipos de geometria. A seguir divida os alunos em grupos e atribua a cada grupo alguns elementos para capturar. Faça-os simbolizar as camadas de modo a que sejam expressivas à observação. Combine as camadas de todos os grupos de modo a criar um mapa da escola e arredores!"
 
 # d45469e67a934014beabf18462b1f058
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:440
@@ -807,7 +808,7 @@ msgid ""
 "etc. Capture the data using the GIS application and make maps that show the "
 "samples with a suitable symbology. Could you identify any areas of concern? "
 "Was the GIS Application able to help you to identify these areas?"
-msgstr ""
+msgstr "Encontre um rio local e retire amostras de água ao longo do seu curso. Faça uma nota da posição de cada amostra usando um GPS ou marcando a posição num mapa topográfico. Para cada amostra realize medidas tais como pH, oxigénio dissolvido, etc. Capture os dados usando uma aplicação SIG e crie mapas que apresentem as amostras com uma simbologia apropriada. Consegue identificar algumas áreas com problemas? A aplicação SIG foi capaz de ajudá-lo a identificar essas áreas?"
 
 # a386f7d4d94d419abd6d71b44840dbf3
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:448
@@ -826,7 +827,7 @@ msgid ""
 "so that it can be identified. Now write the same number in the first column "
 "in your table in your notebook, and then fill in all the additional "
 "information you want to record."
-msgstr ""
+msgstr "Se não tiver um computador disponível, poderá seguir o mesmo processo usando folhas transparentes e um computador portátil. Use uma impressão de fotografia aérea, imagem ortorectificada ou imagem de satélite como camada de fundo. Desenhe colunas e escreva cabeçalhos nas colunas, para cada campo de atributos que queira armazenar informação. A seguir trace a geometria de elementos na folha transparente, escrevendo um número identificador para cada elemento de modo a ser identificado. A seguir escreva o mesmo número na primeira coluna da sua tabela no computador portátil, e preencha toda a restante informação que queira gravar."
 
 # 6279f71f445d4a84a5e39d056c562696
 #: ../../source/docs/gentle_gis_introduction/data_capture.rst:460
