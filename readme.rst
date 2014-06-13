@@ -19,11 +19,7 @@ PDF versions of the manual are available here: http://docs.qgis.org/2.2/pdf/
 http://docs.qgis.org/2.0/pdf/, http://docs.qgis.org/1.8/pdf/ and http://docs.qgis.org/testing/pdf
 
 
-
-Building the QGIS Documentation
-*******************************
-
-Website is a static generated website using Sphinx (http://sphinx-doc.org/), 
+Documentation is static generated website using Sphinx (http://sphinx-doc.org/), 
 based on restructured text sources (rst: http://docutils.sourceforge.net/rst.html)
 and html (jinja2) templates.
 
@@ -34,7 +30,7 @@ The Website version is the canonical one.
 
 
 Building the documentation using Make
--------------------------------
+-------------------------------------
 
 Building is only tested on Linux systems using make, on windows we now started a Paver setup (see below)
 
