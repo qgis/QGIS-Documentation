@@ -11,6 +11,6 @@
 for l in $langs
   do
     /bin/bash ./docker-run.sh full LANG=$l
-    rsync -hvrz -e ssh --progress output/pdf/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.2/live/html/pdf
-    rsync -hvrz -e ssh --progress output/html/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.2/live/html
+    rsync -hvrz -e ssh --progress output/pdf/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.2/live/html/pdf
+    rsync -hvrz -e ssh --progress output/html/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.2/live/html
   done
