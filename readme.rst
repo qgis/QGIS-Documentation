@@ -93,8 +93,8 @@ To add a new language (the scripts will need some directory structure):
 See the website in action: http://www.qgis.org
 
 
-Building the website using Paver
---------------------------------
+Building the documentation using Paver
+--------------------------------------
 
 Paver is a python based Make-like tool (http://paver.github.io/paver/)
 
@@ -107,7 +107,9 @@ There are two scripts available:
 
 General use:
 
-    # first let bootstrap.py install all stuff    
+First let bootstrap.py install all stuff. Open a command shell and go to the QGIS-Documentation folder where
+the bootstrap.py file is located and run:
+ 
     python bootstrap.py
     
     # if the script is complaining about easysetup missing:
@@ -115,24 +117,23 @@ General use:
     # and install that first:
     python ez_setup.py
 
-    # after succesfull running of bootstrap.py you have all wheels on place to
-    # 1) create a virtual environment with all Sphinx related python machinery
-    # 2) run the actual script to build the website
+After successfully running of bootstrap.py you have all wheels on place, the script has created a virtual
+environment (called "virtualenv") with all Sphinx related python machinery. Now you just need to: # 1) activate the virtual environment and
+# 2) run the actual script to build the documentation. To activate the virtual environment:
     
-    # to go into the virtual environment:
-    # on Windows:
-    virtualenv\Scripts\activate
-    # on Linux:
-    source virtualenv/bin/activate
+    # on Windows:    virtualenv\\Scripts\\activate
     
-    # now build (only website, no included Documentation yet):
-    # eg english only:
+    # on Linux:    source virtualenv/bin/activate
+    
+    
+now to build the documentation, make sure that you are in the QGIS-Documentation root folder again
+and run the build command, eg english only:
+    
     paver html
-    # or the dutch version:
-    paver html -l nl
-    # german:
-    paver html -l de
     
+    # or the dutch version:    paver html -l nl    # german:    paver html -l de (how to get the language source files?)
+    
+The built documentation can be found in: QGIS-Documentation/build/html/en/docs
 
 
 Translating the english QGIS Documentation
