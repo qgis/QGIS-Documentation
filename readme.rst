@@ -93,8 +93,8 @@ To add a new language (the scripts will need some directory structure):
 See the website in action: http://www.qgis.org
 
 
-Building the website using Paver
---------------------------------
+Building the Documentation using Paver
+--------------------------------------
 
 Paver is a python based Make-like tool (http://paver.github.io/paver/)
 
@@ -105,7 +105,7 @@ There are two scripts available:
 - bootstrap.py (for setting up the python related stuff)
 - pavement.py (the config file for Paver)
 
-General use:
+General use::
 
     # first let bootstrap.py install all stuff    
     python bootstrap.py
@@ -125,13 +125,9 @@ General use:
     # on Linux:
     source virtualenv/bin/activate
     
-    # now build (only website, no included Documentation yet):
-    # eg english only:
+    # now build):
+    # eg english only (for testing, only QGIS stable is being translated)
     paver html
-    # or the dutch version:
-    paver html -l nl
-    # german:
-    paver html -l de
     
 
 
