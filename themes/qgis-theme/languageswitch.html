@@ -1,0 +1,74 @@
+<select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="{{ _('English') }}">English</option>
+<!--  <option value="ca_ES" title="{{ _('Catalan') }}">Catalan</option>
+  <option value="da_DK" title="{{ _('Danish') }}">Dansk</option>
+  <option value="de" title="{{ _('German') }}">Deutsch</option>
+  <option value="es" title="{{ _('Spanish') }}">Español</option>
+  <option value="fa" title="{{ _('Persian') }}">فارسی</option>
+  <option value="fi" title="{{ _('Finnish') }}">Suomalainen</option>
+  <option value="fr" title="{{ _('French') }}">Français</option>
+  <option value="id" title="{{ _('Indonesian') }}">Bahasa Indonesia</option>
+  <option value="it" title="{{ _('Italian') }}">Italiano</option>
+  <option value="ja" title="{{ _('Japanese') }}">日本語</option>
+  <option value="ko_KR" title="{{ _('Korean') }}">한국어</option>
+  <option value="nl" title="{{ _('Dutch') }}">Nederlands</option>
+  <option value="pt_PT" title="{{ _('Portuguese') }}">Português</option>
+  <option value="ro" title="{{ _('Romanian') }}">Română</option>
+  <option value="ru" title="{{ _('Russian') }}">Русский</option>
+  <option value="zh_CN" title="{{ _('Chinese (China)') }}">中文</option>
+  <option value="zh_TW" title="{{ _('Chinese (Taiwan)') }}">{{ _('Chinese (Taiwan)') }}</option> -->
+</select>
+
+<script>
+    var currentPage = '{{current_page_name}}.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // put some style around the current locale flag, we have to remove the '/' here
+        // this is for the flags:
+        //$('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
+        // set language select to current lang
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+    });
+
+    // load current page in a different language
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+</script>

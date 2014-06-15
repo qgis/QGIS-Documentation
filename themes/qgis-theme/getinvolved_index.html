@@ -1,0 +1,148 @@
+
+<div class="getinvolved" id="color-identifier"></div>
+
+<section class="sub-landing-page" id="top">
+    <div class="container-fluid banner">
+        <div class="row-fluid">
+            <div class="offset1 span5">
+                <h2>{{ _('Get involved with the QGIS community') }}</h2>
+                <p>{{ _('QGIS is developed by a team of dedicated
+                    volunteers and organisations.') }}</p>
+                <p><strong>{{ _('You can get involved!') }}</strong></p>
+
+            </div>
+            <div class="span1"></div>
+            <div class="span4">
+                <img src='../../_static/images/get-involved-top.png' class="text-center background-mask non-mobile-image overflow-img" alt="get involved garden icon" width="100%" />
+            </div>
+            <div class="span1"></div>
+        </div>
+    </div>
+</section>
+<section class="sub-landing-page menu">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <nav class="subnav">
+                    <header>
+                        <h3>{{ _('GET INVOLVED') }}</h3>
+                    </header>
+
+                    <ul id="subnav">
+                        <li>
+                            <a href="#participate">{{ _('Participate in Support') }}</a>
+                        </li>
+                        <li>
+                            <a href="#translate">{{ _('Translate') }}</a>
+                        </li>
+                        <li>
+                            <a href="#plugin">{{ _('Develop a Plugin') }}</a>
+                        </li>
+                        <li>
+                            <a href="#core">{{ _('QGIS Core Development') }}</a>
+                        </li>
+                        <li>
+                            <a href="#donate">{{ _('Donate to QGIS') }}</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sub-landing-page main" id="participate">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="offset1 span5">
+                <h3>{{ _('Participate in Support Channels') }}</h3>
+                <p>{{ _('There are several QGIS mailing lists, IRC channels, forums and user groups you can use to get help from fellow users and developers, or to keep up with current project events. You are welcome to subscribe to any of the lists. Please remember to contribute to the list by answering questions and sharing your experiences. We also provide a website to search the mailing list archives.') }}</p>
+                <h4 class="subsection-link"><a href="{{ pathto('site/forusers/support') }}">{{ _('List of QGIS Support Channels') }}</a></h4>
+            </div>
+            <div class="span1"></div>
+            <div class="span4">
+                <img src='../../_static/images/get-involved-participate.png' class="text-center background-mask non-mobile-image wd" alt="participate icon" />
+            </div>
+            <div class="span1"></div>
+        </div>
+        <hr>
+        <div class="row-fluid" id="translate">
+            <div class="offset1 span4">
+                <img src='../../_static/images/get-involved-translate.png' class="text-center background-mask non-mobile-image wd" alt="translate bubbles icon" />
+            </div>
+            <div class="span1"></div>
+            <div class="span5">
+                <h3>{{ _('Translate QGIS') }}</h3>
+                <p>{{ _('The QGIS project provides a gentle GIS introduction, a User Guide, a Coding and Compilation Guide and a API Documentation in english and in some cases also translated into several foreign languages. If you are interested in getting involved with the documentation effort, e.g. translating the english manual into another language, learn how to get started here:') }}</p>
+                <h4 class="subsection-link">
+                    <a href="{{ pathto('site/getinvolved/translate') }}">{{ _('Translate QGIS into your Language') }}</a>
+                </h4>
+            </div>
+            <div class="span1"></div>
+        </div>
+        <hr>
+        <div class="row-fluid" id="plugin">
+            <div class="offset1 span5">
+                <h3>{{ _('QGIS Plugins') }}</h3>
+                <p>{{ _('A wide range of great plugins exist for QGIS via the ') }} <a href="http://plugins.qgis.org" target="_blank">{{ _('QGIS Plugin web portal') }}</a>.
+                <!--{{ _('If you would like to develop your own, you can get started here:') }}</p>
+                <h4 class="subsection-link">
+                    <a href="{{ pathto('site/getinvolved/plugindev') }}">{{ _('Develop your own QGIS Plugin') }}</a>
+                </h4>-->
+            </div>
+            <div class="span1"></div>
+            <div class="span4">
+                <img src='../../_static/images/get-involved-plugin.png' class="text-center background-mask non-mobile-image wd" alt="plugins puzzle icon" />
+            </div>
+            <div class="span1"></div>
+        </div>
+        <hr>
+        <div class="row-fluid" id="core">
+            <div class="offset1 span4">
+                <img src='../../_static/images/get-involved-core.png' class="text-center background-mask non-mobile-image wd" alt="core gears icon" />
+            </div>
+            <div class="span1"></div>
+            <div class="span5">
+                <h3>{{ _('QGIS Core') }}</h3>
+                <p>{{ _('QGIS Core consists on the one hand of the libraries enabling you to build custom tailored application by  providing a powerful API. On the other hand it consists of a desktop and server application which expose the possibilities offered by the libraries, offering a user friendly interface.') }}</p>
+                <h4 class="subsection-link">
+                    <a href="{{ pathto('site/getinvolved/development/index') }}">{{ _('Get Set Up for QGIS Core Development') }}</a>
+                </h4>
+            </div>
+            <div class="span1"></div>
+        </div>
+        <hr>
+        <div class="row-fluid" id="donate">
+            <div class="offset1 span5">
+                <h3>{{ _('Donate to QGIS') }}</h3>
+                <p>{{ _('There are two kinds of financial contributions, we accept:') }}</p>
+                <p><strong>{{ _('sponsorships:') }}</strong> {{ _('a sponsorship is an annual commitment of funds to the project.') }}</p>
+                <p><strong>{{ _('donations:') }}</strong> {{ _('a donation is a one-time financial contribution to the QGIS project.') }}</p>
+                <h4 class="subsection-link">
+                    <a href="{{ pathto('site/about/sponsorship') }}">{{ _('Help Support the Project Financially') }}</a>
+                </h4>
+                <h4 class="subsection-link">
+                    <a href="{{ pathto('site/getinvolved/donations') }}">{{ _('New donations page') }}</a>
+                </h4>
+            </div>
+            <div class="span1"></div>
+            <div class="span4">
+                <img src='../../_static/images/get-involved-donate.png' class="text-center background-mask non-mobile-image wd" alt="donate icon" />
+            </div>
+            <div class="span1"></div>
+        </div>
+    </div>
+</section>
+<section class="sub-landing-page">
+    <div class="container-fluid banner">
+        <div class="row-fluid">
+            <div class="offset5 span2">
+                <h5 class="text-center">
+                    <a href="#top"> <i class="icon-arrow-up"></i>
+                        {{ _('Back to Top') }}
+                    </a>
+                </h5>
+            </div>
+            <div class="span5"></div>
+        </div>
+    </div>
+</section>

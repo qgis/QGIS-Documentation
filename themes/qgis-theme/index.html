@@ -1,0 +1,210 @@
+<section class="info">
+    <div class="container">
+        <h1>{{ _('QGIS') }}</h1>
+
+        <h3>
+            {{ _('A Free and Open Source Geographic Information System') }}
+        </h3>
+    </div>
+</section>
+<section class="slideshow">
+    <div class="container" id="carouselBox">
+
+        <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="{{pathto('_static/images/qgis20_headers_cartography.jpg', 1)}}" alt="">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h5 class="caption-headline">{{ _('QGIS 2.0') }}</h5>
+                            <p class="caption-text">
+                                {{ _('QGIS 2 has a fresh new look ...') }}  <a class="caption-link" href="about/screenshots.html" target="_blank">{{ _('check out some screenshots') }}</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="item">
+                    <img src="{{pathto('_static/images/qgis20_header1-indexed.jpg', 1)}}" alt="">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h5 class="caption-headline">{{ _('QGIS 2.0 Released') }}</h5>
+                            <p class="caption-text">
+                                {{ _('Version 2.0 Dufour is named after...') }}  <a class="caption-link" href="./getinvolved/faq/index.html#why-is-qgis-2-0-named-dufour" target="_blank">{{ _('more') }}</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="item">
+                    <img src="{{pathto('_static/images/qgis20_headers_editing.jpg', 1)}}" alt="">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h5 class="caption-headline">{{ _('Edit') }}</h5>
+                            <p class="caption-text">
+                                {{ _('QGIS 2 has rich vector editing features ...') }} <a class="caption-link" href="../docs/user_manual/working_with_vector/editing_geometry_attributes.html?highlight=editing" target="_blank">{{ _('check out our manual') }}</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{{pathto('_static/images/qgis20_headers_composer.jpg', 1)}}" alt="">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h5 class="caption-headline">{{ _('Print') }}</h5>
+                            <p class="caption-text">
+                                {{ _('QGIS 2 Print Composer has received a major face-lift ...') }} <a class="caption-link" href="../docs/user_manual/preamble/whats_new.html#map-composer" target="_blank">{{ _('check out the new features') }}</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+    </div>
+</section>
+
+<section class="info">
+    <div class="container">
+        <h5>
+            {{ _('Create, edit, visualise, analyse and publish geospatial
+            information on Windows, Mac, Linux, BSD (Android coming soon)') }}
+        </h5>
+        <h5 class="muted">
+            {{ _('For your desktop, server, in your web browser and as
+            developer libraries')
+            }}
+        </h5>
+    </div>
+    <div class="container">
+        <div class="span6">
+            <p><a href="{{ pathto('site/forusers/download') }}" class="btn btn-large btn-success btn-flat">{{ _('Download Now') }}</a></p>
+            <p class="muted">{{ _('Version 2.0 Dufour') }}</p>
+        </div>
+        <div class="span5">
+            <p><a href="{{ pathto('site/getinvolved/donations') }}" class="btn btn-large btn-success btn-flat">{{ _('Support QGIS') }}</a></p>
+            <p class="muted">{{ _('Donate now!') }}</p>        
+        </div>
+    </div>
+</section>
+
+
+<section class="highlights">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <a href="{{ pathto('site/forusers/download') }}">
+                    <div class="info-box">
+                        <h4>{{ _('Get Started') }}</h4>
+                        <div class="box-content">
+                            <div class="highlights-icon" id="get-started"></div>
+                            <p>
+                                {{ _('Download and Install QGIS then follow the Quickstart.') }}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="span4">
+                <a href="{{ pathto('site/getinvolved/index') }}">
+                    <div class="info-box">
+                        <h4>{{ _('Get Involved') }}</h4>
+                        <div class="box-content">
+                            <div class="highlights-icon" id="get-involved"></div>
+                            <p>{{ _('Shape the future of QGIS with your contributions.') }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="span4">
+                <a href="{{ pathto('site/about/index') }}">
+                    <div class="info-box">
+                        <h4>{{ _('Learn More') }}</h4>
+                        <div class="box-content">
+                            <div class="highlights-icon" id="learn-more"></div>
+                            <p>
+                                {{ _('Find training materials and reference documentation.') }}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="latest-news">
+    <div class="container">
+        <header>
+            <h3>{{ _('Latest News') }}</h3>
+        </header>
+        <p class="intro">
+            {{ _('Find out what is going on with the QGIS project and its Community.') }}<br />
+            {{ _('Blog Posts, Case Studies, Tutorials, User Meetings and more...') }}
+        </p>
+        <div class="row">
+            <div class="span6">
+                <a href="{{ pathto('site/about/screenshots') }}">
+                    <div class="info-box">
+                        <img src="../_static/images/qgis-gallery.png" alt="{{ _('Gallery') }}">
+                        <h4>{{ _('Gallery') }}</h4>
+                        <p>
+                            {{ _('Check out images and videos of interesting maps and projects from the Global QGIS Community.') }}
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="span6">
+                <a href="http://planet.qgis.org" target="_blank">
+                    <div class="info-box">
+                        <img src="../_static/images/planet-qgis.png" alt="{{ _('Planet QGIS') }}">
+                        <h4>{{ _('Planet QGIS') }}</h4>
+                        <p>
+                            {{ _('Read the latest blog posts about QGIS and its users from around the web.') }}
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sponsors">
+    <div class="container">
+        <header>
+            <h3>{{ _('Sponsors') }}</h3>
+        </header>
+        <div class="row">
+            <a href="{{ pathto('site/about/sponsorship') }}">
+               <!--<div class="span6">
+                    <div class="sponsor">
+                        <img src="{{pathto('_images/gold.png', 1)}}" width="90px" alt="">
+                        <h5>{{ _('Gold Sponsor') }}</h5>
+                    </div>
+                </div>
+                <div class="span6">
+                    <div class="sponsor">
+                        <img src="{{pathto('_images/silver.png', 1)}}" width="90px" alt="">
+                        <h5>{{ _('Silver Sponsors') }}</h5>
+                    </div>
+                </div>-->
+                <div class="span12">
+                    <div class="sponsor">
+                        <img src="{{pathto('_static/images/sponsors2013.png', 1)}}" width="900px" alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<script type="text/javascript">
+    $(function(){
+        $('.carousel').carousel();
+    });
+</script>

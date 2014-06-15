@@ -1,7 +1,5 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
 Appendix
 ========
 
@@ -271,7 +269,7 @@ NO WARRANTY
     A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH
     HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
-**Quantum GIS Qt exception for GPL**
+**QGIS Qt exception for GPL**
 
 
  In addition, as a special exception, the QGIS Development Team gives

@@ -313,8 +313,9 @@ Here are some hints to create new, nice looking screenshots. For the user guide 
 * same environment for all the screen caps (same OS, same decoration, same font size)
 * reduce the window to the minimal space needed to show the feature (taking the all screen for a small modal window > overkill)
 * the less clutter, the better (no need to activate all the toolbars)
-* don't resize them in an image editor, the size will be set into the rst files (downscaling the dimensions without properly upping the resolution > ugly)
+* don't resize them in an image editor, the size will be set into the rst files if necessary (downscaling the dimensions without properly upping the resolution > ugly)
 * cut the background
+* Set print size resolution to 135 dpi (this way, if no size is set in the rst files, images will be at original size in html and at a good print resolution in the PDF)
 * save them in png (no jpeg artifacts)
 * the screenshot should show the content according to what is described in the text
 

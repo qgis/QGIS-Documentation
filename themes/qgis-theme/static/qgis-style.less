@@ -1,0 +1,894 @@
+/******************************************************************************
+
+!!!!!!! PLEASE DO NOT EDIT THE CSS FILE BY HAND !!!!!!!!
+
+Instead, make edits in less file, compile to css and do a pull request.
+See: https://github.com/qgis/QGIS-Website/blob/master/README.md#styling-the-website
+
+As this is the main qgis css theme, to be managed, reviewed and seen by
+a lot of people, please comment liberally/extensively.
+
+******************************************************************************/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Monotype font for code */
+@font-face {
+  font-family: "Inconsolata";
+  src: url("fonts/inconsolata-regular-webfont.eot");
+  src: url("fonts/inconsolata-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/inconsolata-regular-webfont.woff") format("woff"), url("fonts/inconsolata-regular-webfont.ttf") format("truetype"), url("fonts/inconsolata-regular-webfont.svg#Inconsolata") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("fonts/inconsolata-bold-webfont.eot");
+  src: url("fonts/inconsolata-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/inconsolata-bold-webfont.woff") format("woff"), url("fonts/inconsolata-bold-webfont.ttf") format("truetype"), url("fonts/inconsolata-bold-webfont.svg#Inconsolata") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+/* Open Sans font for everything else */
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-Regular-webfont.eot");
+  src: url("fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Regular-webfont.woff") format("woff"), url("fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("fonts/OpenSans-Regular-webfont.svg#OpenSans") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-Italic-webfont.eot");
+  src: url("fonts/OpenSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Italic-webfont.woff") format("woff"), url("fonts/OpenSans-Italic-webfont.ttf") format("truetype"), url("fonts/OpenSans-Italic-webfont.svg#OpenSans") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-Bold-webfont.eot");
+  src: url("fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Bold-webfont.woff") format("woff"), url("fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("fonts/OpenSans-Bold-webfont.svg#OpenSans") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-BoldItalic-webfont.eot");
+  src: url("fonts/OpenSans-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-BoldItalic-webfont.woff") format("woff"), url("fonts/OpenSans-BoldItalic-webfont.ttf") format("truetype"), url("fonts/OpenSans-BoldItalic-webfont.svg#OpenSans") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-Light-webfont.eot");
+  src: url("fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Light-webfont.woff") format("woff"), url("fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("fonts/OpenSans-Light-webfont.svg#OpenSans") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-LightItalic-webfont.eot");
+  src: url("fonts/OpenSans-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-LightItalic-webfont.woff") format("woff"), url("fonts/OpenSans-LightItalic-webfont.ttf") format("truetype"), url("fonts/OpenSans-LightItalic-webfont.svg#OpenSans") format("svg");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-Semibold-webfont.eot");
+  src: url("fonts/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Semibold-webfont.woff") format("woff"), url("fonts/OpenSans-Semibold-webfont.ttf") format("truetype"), url("fonts/OpenSans-Semibold-webfont.svg#OpenSans") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-SemiboldItalic-webfont.eot");
+  src: url("fonts/OpenSans-SemiboldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-SemiboldItalic-webfont.woff") format("woff"), url("fonts/OpenSans-SemiboldItalic-webfont.ttf") format("truetype"), url("fonts/OpenSans-SemiboldItalic-webfont.svg#OpenSans") format("svg");
+  font-weight: 600;
+  font-style: italic;
+}
+body {
+  padding-top: 60px !important;
+  font: 62.5%/1.5 "Open Sans", "Helvetica Neue", Ubuntu, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+}
+p,
+li,
+table,
+.button {
+  font-size: .9rem;
+  line-height: 1.4rem;
+}
+pre,
+code {
+  font-family: "Andale Mono", "Ubuntu Mono", "Courier New", Courier, monospace;
+  line-height: 1.2rem;
+}
+@media (max-width: 983px) {
+  .navbar-fixed-top {
+    margin-bottom: 0 !important;
+  }
+}
+.navbar-inverse .navbar-inner {
+  background: #1c2028;
+}
+.navbar-inverse .btn-navbar {
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding-left: 20px;
+  padding-right: 0;
+}
+.navbar-inverse .btn-navbar:hover {
+  background: none;
+}
+.navbar-inverse .btn-navbar .icon-bar {
+  width: 34px;
+  height: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin-bottom: 5px;
+}
+.main-menu {
+  margin: 16px 0 0 20px !important;
+  float: left;
+}
+.main-menu > li {
+  float: left;
+}
+.main-menu > li a {
+  text-shadow: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 9px 15px;
+  font-size: 13px;
+}
+.main-menu > li a:hover {
+  text-decoration: none;
+  background: #3c4455;
+}
+.navbar-search {
+  margin: 16px 0 0 20px;
+  padding: 0 !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  float: right !important;
+}
+.navbar-search input {
+  background: #f1f1f1 !important;
+  border-color: #111419 !important;
+  border-top-color: #07080a !important;
+  text-shadow: none !important;
+  width: 120px;
+}
+.navbar-inverse .navbar-search .search-query:-ms-input-placeholder {
+  color: #999 !important;
+}
+.navbar-inverse .navbar-search .search-query::-webkit-input-placeholder {
+  color: #999 !important;
+}
+.navbar-inner > select body,
+.navbar-inner > select html {
+  background: #444;
+  text-align: center;
+  padding: 50px 0;
+}
+.navbar-inner {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+.nav-collapse {
+  height: auto;
+  background-color: #63676f;
+  margin: 0px -20px -10px;
+}
+.nav-collapse .nav {
+  margin-top: 0px !important;
+}
+.nav-collapse .nav li {
+  float: left !important;
+}
+.nav-collapse .nav li a {
+  text-shadow: none !important;
+  text-transform: uppercase;
+  color: #ccc !important;
+  font-weight: bold !important;
+  padding: 20px 15px 20px !important;
+}
+.nav-collapse .nav li a:hover {
+  text-decoration: none;
+  color: white;
+  background: #3c4455;
+}
+.nav-collapse .nav li .navbar-search {
+  margin: 16px 0 20px 16px !important;
+}
+select#languages {
+  float: right;
+  margin: 16px 1px 0 4px;
+  width: 120px;
+  background: #1c2028 url('images/down-arrow.png') no-repeat 95% 50%;
+  line-height: 20px;
+  color: white;
+  outline: none;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+select#languages a {
+  outline: 0;
+}
+select#languages option {
+  outline: 0;
+  padding: 4px;
+}
+.navbar .brand {
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  padding: 0 !important;
+  margin-left: .1%;
+  background: transparent url("logo.png") no-repeat 0 0 !important;
+}
+#main-body {
+  position: absolute;
+  top: 75px;
+  right: 25px;
+  margin-bottom: 55px;
+}
+.footer {
+  background: #1c2028;
+  color: white;
+  padding: 40px 0 !important;
+  text-align: center;
+  border: 0 !important;
+}
+.footer .credit {
+  font-size: 0.7rem;
+}
+.footer #social > li > a > div {
+  margin-right: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  outline: none;
+}
+.footer #twitter {
+  background: transparent url("images/footer-twitter.png") no-repeat 0 0;
+}
+.footer #facebook {
+  background: transparent url("images/footer-facebook.png") no-repeat 0 0;
+}
+.footer #gplus {
+  background: transparent url("images/footer-gplus.png") no-repeat 0 0;
+}
+.footer #github {
+  background: transparent url("images/footer-github.png") no-repeat 0 0;
+}
+.footer #aboutcontact {
+  background: transparent url("images/footer-contact.png") no-repeat 0 50%;
+}
+/* this is the item in the TOC in sidebar which is currently active */
+.current.reference.internal {
+  background-color: lightgray;
+}
+/* external link icon for external links */
+.reference.external {
+  padding-right: 15px;
+  background: url(images/link-icon_external.png) center right no-repeat;
+}
+section {
+  margin: 0;
+}
+div.related {
+    display:none;
+}
+/*
+our sphinx :refs: become anchors. But linking to an anchor in top of the page
+makes it hide it beneath our header/menu.
+To jump a little lower (below header/menu), we use a negative margin hack, see
+http://nicolasgallagher.com/jump-links-and-viewport-positioning/
+and
+http://coding.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/
+*/
+div.section:before {
+  content: "";
+  display: block;
+  height: 60px;
+  margin: -60px 0 0 0;
+  /*this is working for non frontpages*/
+
+}
+/* span achors are a little more difficult,
+these are for internal refs, eg: en/docs/user_manual/working_with_vector/editing_geometry_attributes.html#sec-advanced-edit
+hopefully this is unique enough for the :ref: spans we use */
+/* RD: no, this makes normal spans 60px high, so a lot of whitespace in 
+normal pages. So while working for som internal refs, disable it now till
+somebody comes up with a better idea */
+/*div.section > span:before {
+  content: "";
+  display: block;
+  height: 60px;
+  margin: 0 0 0 0;
+}*/
+/*** LANDING ***/
+#carouselBox {
+  margin-top: 20px;
+}
+.carousel {
+  margin-bottom: 0px;
+}
+.carousel-caption {
+  padding: 0 20px 10px 20px;
+  text-align: left;
+}
+.carousel-caption .caption-headline {
+  font-weight: bold;
+  line-height: 18px;
+  color: white;
+}
+.carousel-caption .caption-text {
+  color: #ccc;
+}
+.carousel-caption .caption-link {
+  margin-left: 10px;
+}
+.carousel-caption .caption-link:hover {
+  text-decoration: none;
+  color: #eff391;
+}
+section.slideshow {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+section.info {
+  text-align: center;
+  margin: 35px auto 25px auto;
+}
+section.info h1 {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+}
+section.info h5 {
+  margin-top: 20px;
+}
+section.info p {
+  margin: 25px 0;
+}
+section.info span {
+  display: block;
+  margin: 20px 0;
+  color: #465064;
+}
+section.info .btn {
+  font-size: 1.4em;
+}
+section.info .btn:hover {
+  background: #108300;
+}
+section.highlights {
+  background: #404040;
+  padding: 30px 0;
+  border-top: 1px solid #e7e8ea;
+  border-bottom: 1px solid #e7e8ea;
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+}
+section.highlights a {
+  text-decoration: none;
+}
+section.highlights .info-box {
+  margin: 0 10px 30px;
+  text-align: center;
+  background-color: #404040;
+}
+section.highlights .info-box h4 {
+  color: white;
+  font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+}
+section.highlights .info-box .box-content {
+  background-color: transparent;
+}
+section.highlights .info-box .box-content img {
+  margin-bottom: 10px;
+  width: 100%;
+}
+section.highlights .info-box .box-content p {
+  padding: 20px 10px 0 10px;
+  font-size: 1.4em;
+  color: white;
+}
+section.highlights .info-box .highlights-icon {
+  width: 200px;
+  height: 142px;
+  margin: 0 auto;
+}
+section.highlights .info-box #get-started {
+  background: #cccccc url('images/get-started.png') no-repeat center center;
+}
+section.highlights .info-box #get-involved {
+  background: #cccccc url('images/get-involved.png') no-repeat center center;
+}
+section.highlights .info-box #learn-more {
+  background: #cccccc url('images/learn-more.png') no-repeat center center;
+}
+section.highlights .info-box:hover h4,
+section.highlights .info-box:active h4,
+section.highlights .info-box:hover p,
+section.highlights .info-box:active p {
+  color: white;
+}
+section.highlights .info-box:hover h4,
+section.highlights .info-box:active h4 {
+  font-weight: 600;
+}
+section.highlights .info-box:hover #get-started,
+section.highlights .info-box:active #get-started,
+section.highlights .info-box:hover #get-involved,
+section.highlights .info-box:active #get-involved,
+section.highlights .info-box:hover #learn-more,
+section.highlights .info-box:active #learn-more {
+  background-color: #fff;
+}
+section.latest-news {
+  text-align: center;
+  padding: 30px 0;
+}
+section.latest-news a:hover,
+section.latest-news a:active {
+  text-decoration: none !important;
+}
+section.latest-news a:hover .info-box,
+section.latest-news a:active .info-box {
+  background: #ECECEC;
+}
+section.latest-news header {
+  height: 30px;
+  overflow: visible;
+  border-bottom: 1px solid #8d8d8d;
+  margin-bottom: 40px;
+}
+section.latest-news h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  display: inline-block;
+  background: white;
+  padding: 0 40px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+}
+section.latest-news .info-box {
+  margin: 0 10px 0px;
+  background: #fff;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+}
+section.latest-news .info-box h4 {
+  color: #1c2028;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+section.latest-news .info-box p {
+  padding: 0 10px 10px 10px;
+  font-size: 15px;
+  color: #333;
+}
+section.latest-news .info-box img {
+  width: 100%;
+}
+section.latest-news p.intro {
+  font-size: 16px;
+  margin: 0 40px 30px;
+}
+
+#qgisflickrmapsatom .span2 p,
+#qgisflickrmapsatom .span2 h4 {
+    color: white;
+    text-align: center;
+}
+
+section.sponsors {
+  padding: 30px 0;
+  text-align: center;
+  background: #333333 url('images/paper-texture.png') repeat;
+}
+section.sponsors header {
+  height: 30px;
+  overflow: visible;
+  margin-bottom: 40px;
+}
+section.sponsors h3 {
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 400;
+  padding: 0 40px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+}
+section.sponsors .sponsor {
+  text-align: center;
+}
+/*** DOWNLOAD ***/
+section.intro {
+  margin-top: -20px;
+  padding: 30px 0 60px;
+  border-bottom: 1px solid #ddd;
+  background: #f3f2f0;
+}
+section.intro h2 {
+  font-weight: 400;
+}
+section.intro p.main {
+  font-size: 14px;
+  line-height: 20px;
+}
+section.content {
+  padding: 30px 0;
+  margin-top: -68px !important;
+}
+section.content .nav-tabs {
+  border-bottom: none;
+}
+section.content .nav-tabs > li > a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+section.content h4 {
+  font-weight: 400;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+.bs-sidenav {
+  padding-top: 0 !important;
+}
+.bs-sidenav.well {
+  background: none;
+  border: none;
+  border-right: 1px solid #ddd;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.bs-sidenav h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 16px;
+}
+@media (min-width: 980px) {
+  .navbar .container {
+    width: 100% !important;
+  }
+  .bs-sidenav {
+    width: 300px !important;
+    margin: 0 !important;
+  }
+}
+@media (max-width: 980px) {
+  body {
+    padding-top: 0 !important;
+  }
+}
+#core-contributors a.reference.internal,
+#contributors a.reference.internal,
+#others a.reference.internal {
+  float: left;
+  padding-right: 1em;
+}
+#core-contributors > p,
+#contributors > p,
+#others > p {
+  min-height: 90px;
+}
+/********* Downloads by OS *********/
+#downloads {
+  margin-top: 30px;
+}
+#downloads .accordion-group {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border: 1px solid #bbb;
+  margin-bottom: 20px;
+  background-color: #efefef;
+}
+#downloads .accordion-heading:hover {
+  background-color: #ededed;
+}
+#downloads .accordion-heading a {
+  font-weight: bold;
+  color: #1c2028;
+}
+#downloads .accordion-heading a:hover {
+  color: #91bef3;
+  text-decoration: none;
+}
+#downloads .accordion-heading h4 {
+  border: 0;
+  font-weight: bold;
+}
+#downloads .accordion-inner {
+  background-color: #eee;
+  line-height: 40px;
+  margin-left: 20px;
+}
+#downloads .accordion-inner a {
+  text-decoration: none;
+  display: block;
+  margin-right: 10%;
+}
+#downloads .accordion-inner .icon-large {
+  font-size: 18px;
+}
+#downloads .accordion-inner .download-row {
+  margin-left: 30px;
+  display: inline-block;
+}
+#downloads .accordion-inner .qgis-download,
+#downloads .accordion-inner .osgeo-download {
+  width: 60px;
+  height: 60px;
+  margin-bottom: -20px;
+}
+#downloads .accordion-inner .qgis-download {
+  background: url('images/qgis-logo.png') no-repeat left;
+}
+#downloads .accordion-inner .osgeo-download {
+  background: url('images/osgeo-logo.png') no-repeat left;
+}
+#downloads .accordion-inner .download-text {
+  margin-left: 10px;
+  font-weight: bold;
+}
+#downloads .accordion-inner button {
+  margin-left: 5px;
+}
+/********* Secondary Landing Pages *********/
+#color-identifier {
+  height: 10px;
+  position: fixed;
+  z-index: 1030;
+  right: 0;
+  left: 0;
+  overflow: visible;
+}
+@media (max-width: 979px) {
+  #color-identifier {
+    position: absolute;
+  }
+}
+#color-identifier.about {
+  background-color: #eff391;
+}
+#color-identifier.forusers {
+  background-color: #0088cc;
+}
+#color-identifier.getinvolved {
+  background-color: #129700;
+}
+section.sub-landing-page {
+  font-size: 14px;
+  line-height: 20px;
+  color: #4d4e50;
+}
+section.sub-landing-page .container {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+  padding-top: 40px;
+  width: 940px;
+  position: relative;
+}
+section.sub-landing-page .container:after {
+  clear: both;
+}
+section.sub-landing-page h2 {
+  line-height: 150%s;
+}
+section.sub-landing-page hr {
+  margin: 70px 0;
+}
+section.sub-landing-page h4.subsection-link {
+  margin-top: 20px;
+}
+div.banner {
+  padding-top: 40px;
+}
+section.menu nav.subnav {
+  padding: 30px 0;
+  background: white;
+  color: #1c2028;
+  text-align: center;
+}
+section.menu nav.subnav header {
+  height: 30px;
+  overflow: visible;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 40px;
+}
+section.menu nav.subnav h3 {
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 400;
+  background: white;
+  padding: 0 40px;
+}
+section.menu nav.subnav ul {
+  margin-top: 40px;
+}
+section.menu nav.subnav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+section.menu nav.subnav ul li a {
+  font-weight: bold;
+  color: #1c2028;
+}
+section.menu nav.subnav ul li a:hover {
+  text-decoration: none;
+  color: #0088cc;
+}
+#myModal .modal-img {
+  width: 100%;
+}
+#myModal .modal-body p {
+  margin: 15px;
+}
+.background-mask {
+  background-color: #ccc;
+}
+@media (max-width: 983px) {
+  img.overflow-img,
+  #processing {
+    min-width: 100% !important;
+  }
+}
+@media (min-width: 984px) {
+  img.overflow-img,
+  #processing {
+    max-width: none !important;
+  }
+}
+/********* QGIS-Documentation Pages *********/
+/* fixing the toc higher levels. Bootstraps makes the active lx tocs blue */
+.nav-list > .active > a,
+.nav-list > .active > a:hover,
+.nav-list > .active > a:focus {
+  background-color: #fff !important;
+  color: #0088CC !important;
+  text-shadow: none !important;
+}
+.toctree-l2.current,
+.toctree-l3.current,
+.toctree-l4.current {
+  font-style: italic;
+}
+.toctree-l4 {
+  font-size: 90%;
+}
+/* color for qgis version disclaimer (used when files need to be revised) */
+.disclaimer {
+  display: block;
+  color: black;
+  margin-top: 17px;
+  padding: 9px 30px 14px 50px;
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #dfdfdf;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-top: 1px solid #f5f5f5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #CCCCCC;
+}
+/* (Sphinx) admonition changes, as used in documentation */
+.admonition-title {
+  font-size: larger;
+  display: block;
+  border-bottom: 1px #ddd solid;
+  margin-left: 44px !important;
+}
+/* theming of warning boxes class=".admonition .warning" */
+.warning, .disclaimer {
+  background-image: url("images/warning.png");
+  background-position: 15px 8px;
+  background-repeat: no-repeat;
+}
+/* theming of warning boxes class=".admonition .note" */
+.note {
+  background-image: url("images/note.png");
+  background-position: 15px 8px;
+  background-repeat: no-repeat;
+}
+/* theming of warning boxes class=".admonition .tip" */
+.tip {
+  background-image: url("images/tip.png");
+  background-position: 15px 8px;
+  background-repeat: no-repeat;
+}
+.admonition,
+.bordered-block {
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #dfdfdf;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-top: 1px solid #f5f5f5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #CCCCCC;
+}
+.admonition p img,
+.bordered-block p img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+.guilabel {
+  font-weight: bold;
+  border: 1px solid #ddd;
+  background: #eee;
+  color: #08C;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.menuselection {
+  font-weight: bold;
+  border: 1px dashed #ddd;
+  background: #eee;
+  color: #217AEC;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.kbd {
+  font-weight: bold;
+  border: 1px solid #ddd;
+  background: #eee;
+  color: #E22;
+  padding-left: 3px;
+  padding-right: 3px;
+}
