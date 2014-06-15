@@ -233,9 +233,7 @@ Manual and Application Translations
     * Contributor : Zara Teixeira < zarafani[at]gmail.com >
 
   * Russian Team Lead: Alex Bruy < alexander.bruy[at]gmail.com >
-  * Spanish Team Lead : Mario Pisa < mario.pisa[at]gmail.com >
-
-    * Contributor : Carlos Dávila < cdavilam[at]jemila.jazztel.es >
+  * Spanish Team Lead : Carlos Dávila < cdavilam[at]orangecorreo.es >
 
 
 QGIS Website and Website Translation
