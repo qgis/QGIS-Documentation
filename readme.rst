@@ -5,38 +5,36 @@ QGIS Testing Documentation is build from corresponding branche and NOT translate
 
 Only the current stable branch is translated.
 
-Stable documentation is on http://docs.qgis.org/2.0
+Stable documentation is on http://docs.qgis.org/2.2
 
 Testing is http://docs.qgis.org/testing
 
-And QGIS 1.8 docs http://docs.qgis.org/1.8
+QGIS 2.0 docs http://docs.qgis.org/2.0
+QGIS 1.8 docs http://docs.qgis.org/1.8
 
 Translations are also available via the docs.qgis.org language path:
-for example for the German language: http://docs.qgis.org/2.0/de
+for example for the German language: http://docs.qgis.org/2.2/de
 
-PDF versions of the manual are available here: http://docs.qgis.org/2.0/pdf/ 
-http://docs.qgis.org/1.8/pdf/ and http://docs.qgis.org/testing/pdf
+PDF versions of the manual are available here: http://docs.qgis.org/2.2/pdf/ 
+http://docs.qgis.org/2.0/pdf/, http://docs.qgis.org/1.8/pdf/ and http://docs.qgis.org/testing/pdf
 
 
-
-Building the QGIS Documentation
-*******************************
-
-Website is a static generated website using Sphinx (http://sphinx-doc.org/), 
+Documentation is static generated website using Sphinx (http://sphinx-doc.org/), 
 based on restructured text sources (rst: http://docutils.sourceforge.net/rst.html)
 and html (jinja2) templates.
 
-Most sources are in source/site. Only frontpage and landingpages are in theme/qgis-theme
+Most sources are in source/docs. Only frontpage and landingpages are in theme/qgis-theme
 
 Styling is in theme/qgis-theme. This theme is used for website and documentation builds. 
 The Website version is the canonical one.
 
-Building is only tested on Linux systems using make.
 
-Build Tools
------------
+Building the documentation using Make
+-------------------------------------
 
-To be able to run localisation targets you will need Sphinx 1.2b3 which comes with pip. 
+Building is only tested on Linux systems using make, on windows we now started a Paver setup (see below)
+
+To be able to run localisation targets you will need Sphinx 1.2 which comes with pip. 
 Sphinx coming with most distro's is just 1.1.3. You will get an gettext error with those.
 
 Best to run the make file in a virtual env ( http://www.virtualenv.org/ ):
@@ -56,34 +54,85 @@ Now always activate your environment before building. To deactivate, you can do:
 
     deactivate
 
-If your linux is package based and doesn't have current versions of
-the tools, it is best to install them in the virtual env too.
-
-You can install all tools in one go via the REQUIREMENTS.txt here in the root of this repo:
+You can install all tools in on go via the REQUIREMENTS.txt here in root of this repo:
 
     pip install -r REQUIREMENTS.txt
 
 Alternatively do it one by one:
 
-    pip install sphinx==1.2b3
+Install sphinx 1.2 now in your virtual env:
+
+    pip install sphinx==1.2
+
+Sphinx intl extention ( https://pypi.python.org/pypi/sphinx-intl ):
 
     pip install sphinx-intl
 
 Then build:
 
     make html (to build the english language)
+    make LANG=nl html (to build the dutch version)
+
+If you want add the QGIS-Documentation docs into the build, you either need to manually copy the sources, resources 
+and po files into the website project. Or use the fullhtml target of make (which will checkout the 2.0 branch):
+
+    # to build english:
+    make fullhtml
+    # to build eg dutch:
+    make LANG=nl fullhtml
+
+To gather new strings in a pot (.po) file for your language, and merge them with 
+excisting translations in the po files (normally to be ran by your language maintainer):
+
+    make pretranslate LANG=xx  # where xx is your language code
+
+To add a new language (the scripts will need some directory structure):
+
+    make createlang LANG=xx
+
+See the website in action: http://www.qgis.org
+
+
+Building the website using Paver
+--------------------------------
+
+Paver is a python based Make-like tool (http://paver.github.io/paver/)
+
+Paver can be used on Linux and Windows (somebody can test on OSX?)
+
+There are two scripts available:
+
+- bootstrap.py (for setting up the python related stuff)
+- pavement.py (the config file for Paver)
+
+General use:
+
+    # first let bootstrap.py install all stuff    
+    python bootstrap.py
     
-Or a translation
+    # if the script is complaining about easysetup missing:
+    # download: https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
+    # and install that first:
+    python ez_setup.py
 
-First pull all translations from transifex for your language
-
-    tx pull -l nl -f --skip
-
-Then build your language
-
-    make html LANG=nl 
+    # after succesfull running of bootstrap.py you have all wheels on place to
+    # 1) create a virtual environment with all Sphinx related python machinery
+    # 2) run the actual script to build the website
     
-to build the dutch version. Currently available languages are: ca_ES  da_DK  de  en  es  fa  fi  fr  hi  id  it  ja  km_KH  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
+    # to go into the virtual environment:
+    # on Windows:
+    virtualenv\Scripts\activate
+    # on Linux:
+    source virtualenv/bin/activate
+    
+    # now build (only website, no included Documentation yet):
+    # eg english only:
+    paver html
+    # or the dutch version:
+    paver html -l nl
+    # german:
+    paver html -l de
+    
 
 
 Translating the english QGIS Documentation
