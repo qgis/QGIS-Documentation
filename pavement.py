@@ -8,9 +8,9 @@ import shutil
 import distutils.core
 
 setup(
-    name="QGIS-Documentation",
+    name="QGIS-Documentation-2.2",
     version="1.0",
-    url="http://docs.qgis.org/testing",
+    url="http://docs.qgis.org/2.2",
     author="Richard Duivenvoorde",
     author_email="richard@duif.net"
 )
@@ -105,41 +105,6 @@ def clean(options):
     if os.path.exists(potdir):
         shutil.rmtree(potdir)
 
-
-# rm -rf i18n/*/LC_MESSAGES/docs/*/
-# rm -rf output/html/en/*
-# rm -f source/docs_conf.py*
-# rm -rf source/docs/*/
-# # all .mo files
-# find i18n/*/LC_MESSAGES/ -type f -name '*.mo' -delete
-
-# remove all resources from source/static directory
-# copy english resources from resources/en to source/static directory
-# IF we have a localized build (LANG != en) then
-# overwrite with potentially available LANG resources  by
-# copy LANG resources from resources/LANG to source/static directory
-# TODO: check if LANG != en, for now: unnessecary copy for english
-#   localizeresources: clean
-#   	@echo
-#   	@echo "Removing all static content from $(SOURCEDIR)/static."
-#   	rm -rf $(SOURCEDIR)/static
-#   	@echo "Copy 'en' (base) static content to $(SOURCEDIR)/static."
-#   	mkdir $(SOURCEDIR)/static
-#   	# historically the images for the docs sub project are not in a separate docs folder
-#   	# that is why we copy site (to site) and docs/* into root in separate steps
-#   	cp -r $(RESOURCEDIR)/en/site $(SOURCEDIR)/static
-#   	@if [ -d "$(RESOURCEDIR)/en/docs" ]; then \
-#   		cp -r $(RESOURCEDIR)/en/docs/* $(SOURCEDIR)/static; \
-#   	fi
-#   	@echo "Copy localized '$(LANG)' static content to $(SOURCEDIR)/static."
-#   	@if [ -d "$(RESOURCEDIR)/$(LANG)/site" ]; then \
-#   		cp -r $(RESOURCEDIR)/$(LANG)/site $(SOURCEDIR)/static; \
-#   	fi
-#   	@if [ -d "$(RESOURCEDIR)/$(LANG)/docs" ]; then \
-#   		cp -r $(RESOURCEDIR)/$(LANG)/docs/* $(SOURCEDIR)/static; \
-#   	fi
-
-
 @task
 @cmdopts([
     ('lang=', 'l', 'Language param (iso code, like "nl"), defaults to "en"')
@@ -202,7 +167,7 @@ def sphinxintl(options):
         print 'Building "%s", pulling fresh .po files from transifex'
         # tx pull --minimum-perc=1 --skip -f -l $$LANG;
         sh ('%s pull --minimum-perc=1 --skip -f -l %s' % (options.sphinxintl.transifexclientbin, options.setup.lang) )
-    #sh('%s build -l %s -c %s' % (options.sphinxintl.sphinxintlbin, options.setup.lang, options.sphinx.conf))
+    sh('%s build -l %s -c %s' % (options.sphinxintl.sphinxintlbin, options.setup.lang, options.sphinx.conf))
 
 
 @task
