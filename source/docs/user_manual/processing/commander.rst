@@ -2,30 +2,27 @@
 
 .. _`processing.commander`:
 
-The SEXTANTE Commander
+The QGIS Commander
 ======================
 
-SEXTANTE includes a practical tool that allows you to run algorithms without
+Processing includes a practical tool that allows you to run algorithms without
 having to use the toolbox, but just by typing the name of the algorithm you want to
 run.
 
-This tool is known as the *SEXTANTE Commander*, and it is just a simple text
+This tool is known as the *QGIS commander*, and it is just a simple text
 box with autocompletion where you type the command you want to run.
 
 .. _figure_commander_1:
 
-.. only:: html
-
-   **Figure SEXTANTE 28:**
 
 .. figure:: /static/user_manual/processing/commander.png
    :align: center
 
-   The SEXTANTE Commander |win|
+   The QGIS Commander |win|
 
 The Commander is started from the *Analysis* menu or, more practically, by pressing
 :kbd:`Shift + Ctrl + M` (you can change that default keyboard shortcut in the
-|qg| configuration, if you prefer a different one). Apart from executing SEXTANTE
+|qg| configuration if you prefer a different one). Apart from executing Processing
 algorithms, the Commander gives you access to most of the functionality in |qg|,
 which means that it gives you a practical and efficient way of running |qg|
 tasks and allows you to control |qg| with reduced usage of buttons and menus.
@@ -39,7 +36,7 @@ Available commands
 
 The commands available in the Commander fall in the following categories:
 
-* SEXTANTE algorithms. These are shown as ``SEXTANTE algorithm: <name of the algorithm>``.
+* Processing algorithms. These are shown as ``Processing algorithm: <name of the algorithm>``.
 * Menu items. These are shown as ``Menu item: <menu entry text>``. All menus items
   available from the |qg| interface are available, even if they are included in
   a submenu.
@@ -94,10 +91,10 @@ the filename of the layer to load.
 
 ::
 
-  import sextante
+  import processing
 
   def load(*args):
-    sextante.load(args[0])
+    processing.load(args[0])
 
 If you want to load the layer in ``/home/myuser/points.shp``, type
 ``load /home/myuser/points.shp`` in the Commander text box.

@@ -172,7 +172,7 @@ Boolean, file, string and numerical parameters do not need any additional
 explanations.
 
 Input parameters such as strings, booleans, or numerical values have default values.
-To use them, specify ``None`` for the corresponding parameter entry.
+To use them, specify ``None`` in the corresponding parameter entry.
 
 For output data objects, type the file path to be used to save it, just as it is
 done from the toolbox. If you want to save the result to a temporary file, use
@@ -206,16 +206,16 @@ Below is a list of some of these commands. More information can be found in the
 classes under the ``processing/tools`` package, and also in the example scripts
 provided with |qg|.
 
-* ``getobject(obj)``: Returns a |qg| object (a layer or table) from the passed
+* ``getObject(obj)``: Returns a |qg| object (a layer or table) from the passed
   object, which can be a filename or the name of the object in the |qg| Table of
   Contents.
 * ``values(layer, fields)``: Returns the values in the attributes table of a
   vector layer, for the passed fields. Fields can be passed as field names or as
   zero-based field indices. Returns a dict of lists, with the passed field
   identifiers as keys. It considers the existing selection.
-* ``getfeatures(layer)``: Returns an iterator over the features of a vector
+* ``features(layer)``: Returns an iterator over the features of a vector
   layer, considering the existing selection.
-* ``uniquelabels(layer, field)``: Returns a list of unique values for a given
+* ``uniqueValues(layer, field)``: Returns a list of unique values for a given
   attribute.  Attributes can be passed as a field name or a zero-based field
   index. It considers the existing selection.
 

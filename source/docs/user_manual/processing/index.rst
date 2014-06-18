@@ -15,6 +15,7 @@
     batch
     console
     history
+    scripts
     3rdParty
     commander
 
