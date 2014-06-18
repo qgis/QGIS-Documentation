@@ -87,7 +87,13 @@ html: localizeresources
 
 # pdf will also make html
 pdf: html
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$(LANG)
+	@-if [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
+		cp -f $(SOURCEDIR)/conf.py $(SOURCEDIR)/i18n/$(LANG)/; \
+		cat $(SOURCEDIR)/i18n/$(LANG)/conf.py.diff >> $(SOURCEDIR)/i18n/$(LANG)/conf.py; \
+		$(SPHINXBUILD) -b latex -c $(SOURCEDIR)/i18n/$(LANG) $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$(LANG); \
+	else \
+		$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$(LANG); \
+	fi
 	# Compile the pdf docs for that locale
 	# we use texi2pdf since latexpdf target is not available via
 	# sphinx-build which we need to use since we need to pass language flag
@@ -106,6 +112,12 @@ pdf: html
 		platex -interaction=batchmode -kanji=euc -shell-escape QGISUserGuide.tex; \
 		platex -interaction=batchmode -kanji=euc -shell-escape QGISUserGuide.tex; \
 		dvipdfmx QGISUserGuide.dvi; \
+	elif [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISUserGuide.tex; \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISUserGuide.tex; \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISUserGuide.tex; \
+		xdvipdfmx QGISUserGuide.xdv; \
 	else \
 		cd $(BUILDDIR)/latex/$(LANG); \
 		texi2pdf --quiet QGISUserGuide.tex; \
@@ -121,6 +133,12 @@ pdf: html
 		platex -interaction=batchmode -kanji=euc -shell-escape PyQGISDeveloperCookbook.tex; \
 		platex -interaction=batchmode -kanji=euc -shell-escape PyQGISDeveloperCookbook.tex; \
 		dvipdfmx PyQGISDeveloperCookbook.dvi; \
+	elif [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		xelatex -interaction=batchmode --no-pdf -shell-escape PyQGISDeveloperCookbook.tex; \
+		xelatex -interaction=batchmode --no-pdf -shell-escape PyQGISDeveloperCookbook.tex; \
+		xelatex -interaction=batchmode --no-pdf -shell-escape PyQGISDeveloperCookbook.tex; \
+		xdvipdfmx PyQGISDeveloperCookbook.xdv; \
 	else \
 		cd $(BUILDDIR)/latex/$(LANG); \
 		texi2pdf --quiet PyQGISDeveloperCookbook.tex; \
@@ -136,6 +154,12 @@ pdf: html
 		platex -interaction=batchmode -kanji=euc -shell-escape QGISTrainingManual.tex; \
 		platex -interaction=batchmode -kanji=euc -shell-escape QGISTrainingManual.tex; \
 		dvipdfmx QGISTrainingManual.dvi; \
+	elif [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISTrainingManual.tex; \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISTrainingManual.tex; \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISTrainingManual.tex; \
+		xdvipdfmx QGISTrainingManual.xdv; \
 	else \
 		cd $(BUILDDIR)/latex/$(LANG); \
 		texi2pdf --quiet QGISTrainingManual.tex; \
