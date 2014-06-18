@@ -10,7 +10,8 @@ data properly so that it becomes properly visible and useful.
 |basic| |TY|
 -------------------------------------------------------------------------------
 
-* Start with the current map from the previous exercise :kbd:`analysis.qgs`.
+* Start with the current map which you should have created during
+  the previous exercise: :kbd:`analysis.qgs`.
 * Use the :guilabel:`Add Raster Layer` button to load the new raster dataset.
 * Load the dataset |srtmFileName|, found under the directory
   :kbd:`exercise_data/raster/SRTM/`.
