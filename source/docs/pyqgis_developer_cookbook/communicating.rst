@@ -7,7 +7,7 @@ This section shows some methods and elements that should be used to communicate 
 Showing messages. The QgsMessageBar class.
 ==========================================
 
-Using mesages boxes can be a bad idea from a user experience point of view. For showing a small info line or a warning/error messages, the QGIS message bar is usually a better option
+Using message boxes can be a bad idea from a user experience point of view. For showing a small info line or a warning/error messages, the QGIS message bar is usually a better option
 
 
 Using the reference to the QGIS interface object, you can show a message in the message bar with the following code.
@@ -39,7 +39,7 @@ You can set a duration to show it for a limited time.
    QGIS Message bar with timer
 
 
-The examples above show an error bar, but the ``level`` parameter can be used to creating warning messages or info messages, using the ``QgsMessageBar.WARNING`` and ``QgsMessageBar.INFO`` constants repectively.
+The examples above show an error bar, but the ``level`` parameter can be used to creating warning messages or info messages, using the ``QgsMessageBar.WARNING`` and ``QgsMessageBar.INFO`` constants respectively.
 
 .. figure:: /static/pyqgis_developer_cookbook/warningbar.png
    :align: center

@@ -50,7 +50,7 @@ Index   Constant: QgsRasterLater.X     Comment
   2     SingleBandPseudoColor          Single band image drawn using a pseudocolor algorithm
   3     PalettedColor                  "Palette" image drawn using color table
   4     PalettedSingleBandGray         "Palette" layer drawn in gray scale
-  5     PalettedSingleBandPseudoColor  "Palette" layerdrawn using a pseudocolor algorithm
+  5     PalettedSingleBandPseudoColor  "Palette" layer drawn using a pseudocolor algorithm
   7     MultiBandSingleBandGray        Layer containing 2 or more bands, but a single band drawn as a range of gray colors
   8     MultiBandSingleBandPseudoColor Layer containing 2 or more bands, but a single band drawn using a pseudocolor algorithm
   9     MultiBandColor                 Layer containing 2 or more bands, mapped to RGB color space.
@@ -85,7 +85,7 @@ pseudocolor:
   >>> rlayer.setDrawingStyle(QgsRasterLayer.SingleBandPseudoColor)
   >>> rlayer.setColorShadingAlgorithm(QgsRasterLayer.PseudoColorShader)
 
-The ``PseudoColorShader`` is a basic shader that highlighs low values in blue
+The ``PseudoColorShader`` is a basic shader that highlights low values in blue
 and high values in red. Another, ``FreakOutShader`` uses more fancy colors and
 according to the documentation, it will frighten your granny and make your dogs
 howl.
@@ -160,7 +160,7 @@ The second call emits signal that will force any map canvas containing the
 layer to issue a refresh.
 
 With WMS raster layers, these commands do not work. In this case, you have
-to do it explicitily::
+to do it explicitly::
 
   layer.dataProvider().reloadData()
   layer.triggerRepaint()
@@ -185,7 +185,7 @@ To do a query on value of bands of raster layer at some specified point::
   if ident.isValid():
     print ident.results()
 
-The ``results`` method in this case returs a dictionary, with band indices as keys, and band values as values.
+The ``results`` method in this case returns a dictionary, with band indices as keys, and band values as values.
 
 ::
 

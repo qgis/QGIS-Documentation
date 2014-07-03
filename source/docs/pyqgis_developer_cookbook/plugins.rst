@@ -12,13 +12,13 @@ understand, maintain and distribute due the dynamic nature of the Python
 language.
 
 Python plugins are listed together with C++ plugins in QGIS plugin manager.
-They're being searched for in these paths:
+They are searched for in these paths:
 
     * UNIX/Mac: :file:`~/.qgis/python/plugins` and :file:`(qgis_prefix)/share/qgis/python/plugins`
     * Windows: :file:`~/.qgis/python/plugins` and :file:`(qgis_prefix)/python/plugins`
 
 Home directory (denoted by above :file:`~`) on Windows is usually something like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier) or :file:`C:\\Users\\(user)`. Since Quantum GIS is using Python 2.7, subdirectories of these
-paths have to contain an __init__.py fily to be considered Python packages that can be imported as plugins.
+paths have to contain an __init__.py file to be considered Python packages that can be imported as plugins.
 
 Steps:
 
@@ -28,7 +28,7 @@ Steps:
    Is there already another plugin for that problem?
 
 2. *Create files*: Create the files described next.
-   A starting point (:file:`__init.py__`).
+   A starting point (:file:`__init__.py`).
    Fill in the :ref:`plugin_metadata` (:file:`metadata.txt`)
    A main python plugin body (:file:`mainplugin.py`).
    A form in QT-Designer (:file:`form.ui`), with its :file:`resources.qrc`.
@@ -39,18 +39,18 @@ Steps:
    everything is OK.
 
 5. *Publish*: Publish your plugin in QGIS repository or make your own
-   repository as an "arsenal" of personal "GIS weapons"
+   repository as an "arsenal" of personal "GIS weapons".
 
 .. index:: plugins; writing
 
 Writing a plugin
 ================
 
-Since the introduction of python plugins in QGIS, a number of plugins have
+Since the introduction of Python plugins in QGIS, a number of plugins have
 appeared - on `Plugin Repositories wiki page <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_
 you can find some of them, you can use their source to learn more about
 programming with PyQGIS or find out whether you are not duplicating development
-effort. QGIS team also maintains an :ref:`official_pyqgis_repository`.
+effort. The QGIS team also maintains an :ref:`official_pyqgis_repository`.
 Ready to create a plugin but no idea what to do? `Python Plugin Ideas wiki page <http://www.qgis.org/wiki/Python_Plugin_Ideas>`_ lists wishes from the community!
 
 
@@ -134,7 +134,7 @@ email                  True      email of the author, will *not* be shown on the
 changelog              False     string, can be multiline, no HTML allowed
 experimental           False     boolean flag, `True` or `False`
 deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin and not just to the uploaded version
-tags                   False     comma separated list, spaces are allowe inside individual tags
+tags                   False     comma separated list, spaces are allowed inside individual tags
 homepage               False     a valid URL pointing to the homepage of your plugin
 repository             False     a valid URL for the source code repository
 tracker                False     a valid URL for tickets and bug reports
@@ -190,8 +190,8 @@ An example for this metadata.txt::
 
   ; Tags are in comma separated value format, spaces are allowed within the 
   ; tag name.
-  ; Tags should be in english language. Please also check for existing tags and
-  ; synoninms before creating a new one.
+  ; Tags should be in English language. Please also check for existing tags and
+  ; synonyms before creating a new one.
   tags=wkt,raster,hello world
 
   ; these metadata can be empty, they will eventually become mandatory.
@@ -237,7 +237,7 @@ This is where the magic happens and this is how magic looks like:
   from PyQt4.QtGui import *
   from qgis.core import *
 
-  # initialize Qt resources from file resouces.py
+  # initialize Qt resources from file resources.py
   import resources
 
   class TestPlugin:
@@ -376,12 +376,4 @@ and section, which is the name of an html anchor tag in the document
 on which the browser will be positioned.
 
 .. index:: plugins; code snippets
-
-
-
-
-
-
-
-
 
