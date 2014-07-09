@@ -93,8 +93,8 @@ To add a new language (the scripts will need some directory structure):
 See the website in action: http://www.qgis.org
 
 
-Building the website using Paver
---------------------------------
+Building the Documentation using Paver
+--------------------------------------
 
 Paver is a python based Make-like tool (http://paver.github.io/paver/)
 
@@ -115,9 +115,10 @@ General use::
     # and install that first:
     python ez_setup.py
 
-    # after succesfull running of bootstrap.py you have all wheels on place to
-    # 1) create a virtual environment with all Sphinx related python machinery
-    # 2) run the actual script to build the website
+    # after succesfull running of bootstrap.py you have all wheels on place, the script has created a virtual
+    environment (called "virtualenv") with all Sphinx related python machinery. Now you just need to:
+    # 1) activate the virtual environment with all Sphinx related python machinery
+    # 2) run the actual script to build the documentation
     
     # to go into the virtual environment:
     # on Windows:
@@ -125,8 +126,8 @@ General use::
     # on Linux:
     source virtualenv/bin/activate
     
-    # now build):
-    # eg english only
+    # now build :) (make sure that you are in the QGIS-Documentation root folder)
+    # eg english only (for testing, only QGIS stable is being translated)
     paver html
 	
 To be able to build localized versions of the Documentation with paver the
@@ -233,6 +234,7 @@ Manual and Application Translations
     * Contributor : Zara Teixeira < zarafani[at]gmail.com >
 
   * Russian Team Lead: Alex Bruy < alexander.bruy[at]gmail.com >
+  
   * Spanish Team Lead : Carlos Dávila < cdavilam[at]orangecorreo.es >
 
 
