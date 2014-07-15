@@ -19,7 +19,7 @@ Iterating over the features in a vector layer is one of the most common tasks. B
 
   iter = layer.getFeatures()
   for feature in iter:
-    # retreive every feature with its geometry and attributes
+    # retrieve every feature with its geometry and attributes
       # fetch geometry
       geom = feature.geometry()
       print "Feature ID %d: " % feature.id()
@@ -47,7 +47,7 @@ Iterating over the features in a vector layer is one of the most common tasks. B
       print attrs
 
 
-Attributes can be refered by index.
+Attributes can be referred by index.
 
 ::
 
@@ -62,7 +62,7 @@ Iterating over selected features
 Convenience methods
 --------------------
 
-For the above cases, and in case you need to consider selection in a vector layer in case it exist, you can use the :func:`features` method from the buil-in processing plugin, as follows:
+For the above cases, and in case you need to consider selection in a vector layer in case it exist, you can use the :func:`features` method from the built-in processing plugin, as follows:
 
 ::
 
@@ -163,7 +163,7 @@ then it changes the feature's geometry::
 Adding and Removing Fields
 --------------------------
 
-To add fields (attributes), you need to specify a list of field defnitions.
+To add fields (attributes), you need to specify a list of field definitions.
 For deletion of fields just provide a list of field indexes.
 ::
 
@@ -251,9 +251,9 @@ by the user.
 Using Spatial Index
 ===================
 
-Spatial indexes can dramatically improve the performance of your code if you need to do frequent queries to a vector layer. Imagin, for instance, that you are writing an interpolation algorithm, and that for a given location you need to know the 10 closest point from a points layer,, in order to use those point for calculating the interpolated value. Without a spatial index, the only way for QGIS to find those 10 points is to compute the distance from each and every point to the specified location and then compare those distances. This can be a very time consuming task, specilly if it needs to be repeated fro several locations. If a spatial index exists for the layer, the operation is much more effective.
+Spatial indexes can dramatically improve the performance of your code if you need to do frequent queries to a vector layer. Imagine, for instance, that you are writing an interpolation algorithm, and that for a given location you need to know the 10 closest points from a points layer, in order to use those point for calculating the interpolated value. Without a spatial index, the only way for QGIS to find those 10 points is to compute the distance from each and every point to the specified location and then compare those distances. This can be a very time consuming task, especially if it needs to be repeated fro several locations. If a spatial index exists for the layer, the operation is much more effective.
 
-Think of a layer withou a spatial index as a telephone book in which telephone number are not orderer or indexed. The only way to find the telephone number of a given person is to read from the beginning until you find it.
+Think of a layer without a spatial index as a telephone book in which telephone numbers are not ordered or indexed. The only way to find the telephone number of a given person is to read from the beginning until you find it.
 
 Spatial indexes are not created by default for a QGIS vector layer, but you can create them easily. This is what you have to do.
 

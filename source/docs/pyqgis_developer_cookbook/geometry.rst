@@ -101,7 +101,7 @@ QGIS uses GEOS library for advanced geometry operations such as geometry
 predicates (:func:`contains`, :func:`intersects`, ...) and set operations
 (:func:`union`, :func:`difference`, ...). It can also compute geometric properties of geometries, such as area (in the case of polygons) or lengths (for polygons and lines)
 
-Here you have a small example that combines iterating over the features in a given layer and perfoming some geometric computations based on their geometries.
+Here you have a small example that combines iterating over the features in a given layer and performing some geometric computations based on their geometries.
 
 ::
 

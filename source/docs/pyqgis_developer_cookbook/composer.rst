@@ -66,7 +66,7 @@ then exported to PDF, raster images or directly printed on a printer.
 
 The composer consists of a bunch of classes. They all belong to the core
 library. QGIS application has a convenient GUI for placement of the elements,
-though it is not available in the gui library. If you are not familiar with
+though it is not available in the GUI library. If you are not familiar with
 `Qt Graphics View framework <http://doc.qt.nokia.com/stable/graphicsview.html>`_,
 then you are encouraged to check the documentation now, because the composer
 is based on it.

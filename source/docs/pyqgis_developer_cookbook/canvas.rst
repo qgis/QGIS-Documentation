@@ -244,11 +244,11 @@ applies as for the rubber bands.
 Writing Custom Map Tools
 ========================
 
-You can write your custom tools, to implement a custom behaviour to actions perfored by users on the canvas.
+You can write your custom tools, to implement a custom behaviour to actions performed by users on the canvas.
 
 Map tools should inherit from the :class:`QgsMapTool` class or any derived class, and selected as active tools in the canvas using the :func:`setMapTool` method as we have already seen.
 
-Here is an example of a map tool that allows to define a rectangular extent by clicking and draggin on the canvas. When the rectangle is defined, it prints its boundary coordinates in the console. It uses the rubber band elements described before to show the selected rectangle as it is being defined.
+Here is an example of a map tool that allows to define a rectangular extent by clicking and dragging on the canvas. When the rectangle is defined, it prints its boundary coordinates in the console. It uses the rubber band elements described before to show the selected rectangle as it is being defined.
 
 ::
 

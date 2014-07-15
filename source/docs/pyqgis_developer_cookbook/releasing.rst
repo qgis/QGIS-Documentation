@@ -69,7 +69,7 @@ Plugin structure
 Following the validation rules the compressed (.zip) package of your plugin must have a specific structure
 to validate as a functional plugin.
 As the plugin will be unzipped inside the users plugins folder it must have it's own directory inside the .zip file to not interfere with other plugins.
-Mandatory files are: netadata.txt and __init__.py
+Mandatory files are: metadata.txt and __init__.py
 But it would be nice to have a README.py and of course an icon to represent the plugin (resources.qrc).
 Following is an example of how a plugin.zip should look like.
 ::
