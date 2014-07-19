@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-22 14:33+0000\n"
+"PO-Revision-Date: 2014-06-27 12:16+0000\n"
 "Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -268,7 +268,7 @@ msgid ""
 "available algorithms grouped in different blocks, and it is the access point"
 " to run them, whether as a single process or as a batch process involving "
 "several executions of the same algorithm on different sets of inputs."
-msgstr ""
+msgstr "La *Boîte à outils* est l'élément principal du module de Traitements et probablement celui que vous utiliserez le plus au quotidien. Elle montre la liste des algorithmes disponibles, regroupés en plusieurs catégories. C'est aussi par son intermédiaire qu'il est possible d'exécuter un algorithme sur un jeu de données en entrée, ponctuellement ou par lot."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:32
 msgid ""
@@ -276,7 +276,7 @@ msgid ""
 "These include user-created algorithms, and they allow you to define your own"
 " workflows and processing tasks. We will devote a full section to them a bit"
 " later."
-msgstr ""
+msgstr "De plus, on trouve deux autres entrées : *Modèles* et *Scripts*. Elles contiennent les algorithmes utilisateurs et vous permettent de définir vos chaînes de traitement. Une section complète est consacrée plus loin à ce sujet."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:36
 msgid ""
@@ -285,14 +285,14 @@ msgid ""
 " you need, you can enter any word or phrase on the text box. Notice that, as"
 " you type, the number of algorithms in the toolbox is reduced to just those "
 "that contain the text you have entered in their names."
-msgstr ""
+msgstr "Dans la partie haute de la boîte à outils se trouve un champ texte. Pour réduire le nombre d'algorithmes affichés dans la boîte à outils et vous permettre de trouver celui qui vous convient, il vous suffit d'entrer un mot-clé ou une phrase dnas ce champ. La liste des algorithmes contenant ce texte est filtrée au fur et à mesure de la saisie."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:42
 msgid ""
 "In the lower part, you will find a box that allows you to switch between the"
 " simplified algorithm list (the one explained above) and the advanced list. "
 "If you change to the advanced mode, the toolbox will look like this:"
-msgstr ""
+msgstr "Dans la partie inférieure, vous trouverez une liste de choix qui vous permet de basculer entre la liste simplifiée des algorithmes (expliquée ci-dessus) et une liste dite 'expert'. Si vous passez en mode expert, voici ce que vous verrez :"
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:57
 msgid ""
@@ -302,14 +302,14 @@ msgid ""
 "Some of these groups represent algorithms from third-party applications like"
 " SAGA, GRASS or R, while others contain algorithms directly coded as part of"
 " the processing plugin, not relying on any additional software."
-msgstr ""
+msgstr "Dans le mode expert, chaque catégorie correspond à un 'fournisseur d'algorithmes', c'est-à-dire un ensemble d'algorithmes provenant de la même source, par exemple une application de géotraitement tierce (comme SAGA, GRASS ou R). D'autres algorithmes sont fournis directement par le module de Traitements et ne dépendent donc pas d'autres applications."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:65
 msgid ""
 "This view is recommended to those users who have a certain knowledge of the "
 "applications that are backing the algorithms, since they will be shown with "
 "their original names and groups."
-msgstr ""
+msgstr "Ce mode est recommandé pour les utilisateurs connaissant les noms des applications fournissant ces algorithmes car ils seront regroupés sous le nom de l'application d'origine."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:69
 msgid ""
@@ -317,7 +317,7 @@ msgid ""
 "such as LiDAR tools and scripts based on the R statistical computing "
 "software, among others. Independent |qg| plugins that add new algorithms to "
 "the toolbox will only be shown in the advanced view."
-msgstr ""
+msgstr "Par ailleurs, des algorithmes supplémentaires sont disponibles en mode expert, tels que les outils LiDAR ou les scripts basés sur le logiciel de statistiques R. Les extensions de |qg| externes qui ajoutent de nouveaux algorithmes à la boîte à outils ne seront visibles qu'en mode expert."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:81
 msgid ""
@@ -326,21 +326,21 @@ msgid ""
 "requiring any additional installation. Also, running them requires no prior "
 "knowledge of the external applications they use, making them more accesible "
 "for first-time users."
-msgstr ""
+msgstr "Dans le cas d'une installation de |qg| sous Windows, ces algorithmes sont pleinement fonctionnels et ne nécessitent pas l'installation de logiciels supplémentaires. Les utiliser ne nécessite pas non plus de connaissances approfondies sur les applications externes dont ils sont issus, ce qui les rend plus accessibles aux utilisateurs novices."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:87
 msgid ""
 "If you want to use an algorithm not provided by any of the above providers, "
 "switch to the advanced mode by selecting the corresponding option at the "
 "bottom of the toolbox."
-msgstr ""
+msgstr "Si vous souhaitez utiliser un algorithme issu d'une autre source que celles précitées, passez en mode expert en sélectionnant l'option correspondante dans la liste située en bas de la boîte à outils."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:96
 msgid ""
 "Once you double-click on the name of the algorithm that you want to execute,"
 " a dialog similar to that in the figure below is shown (in this case, the "
 "dialog corresponds to the SAGA 'Convergence index' algorithm)."
-msgstr ""
+msgstr "Une fois que vous avez double-cliqué sur le nom de l'algorithme à exécuter, une fenêtre semblable à la suivante sera affichée (ici, il s'agit de la fenêtre de l'algorithme de SAGA 'Index de convergence')."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:112
 msgid ""
@@ -350,14 +350,14 @@ msgid ""
 "requirements of the algorithm to be executed, and is created automatically "
 "based on those requirements. On the left side, the name of the parameter is "
 "shown. On the right side, the value of the parameter can be set."
-msgstr ""
+msgstr "Cette fenêtre permet de définir les données d'entrée à l'algorithme. Elle présente ici une table des données d'entrée et des paramètres à fournir. Cette fenêtre différera selon les paramètres nécessaires à l'exécution de l'algorithme et sera créée automatiquement. Sur la partie gauche, le nom du paramètre est affiché. Sur la droite, indiquez la valeur nécessaire."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:119
 msgid ""
 "Although the number and type of parameters depend on the characteristics of "
 "the algorithm, the structure is similar for all of them. The parameters "
 "found in the table can be of one of the following types."
-msgstr ""
+msgstr "Les algorithmes différeront par le nombre et le type de paramètres, mais la structure sera la même pour tous. Les paramètres présents dans la table pourront être un des types suivants."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:123
 msgid ""
@@ -365,7 +365,7 @@ msgid ""
 "(currently opened) in |qg|. The selector contains as well a button on its "
 "right-hand side, to let you select filenames that represent layers currently"
 " not loaded in |qg|."
-msgstr ""
+msgstr "Une couche raster, à sélectionner dans la liste de ce type de couches disponibles (ouvertes) dans |qg|. Le sélecteur contient également un bouton sur sa partie droite, pour choisir un fichier correspondant à une couche non ouverte dans |qg|."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:126
 msgid ""
@@ -375,7 +375,7 @@ msgid ""
 "selected from the attributes table of the layer. In that case, only opened "
 "layers can be selected, since they need to be open so as to retrieve the "
 "list of field names available."
-msgstr ""
+msgstr "Une couche vectorielle, à sélectionner dans la liste des couches disponibles dans |qg|. Tout comme pour les couches raster, vous pouvez sélectionner une couche par son nom de fichier, mais à la condition que l'algorithme ne nécessite pas un champ de cette couche vectorielle. Dans ce dernier cas, il est nécessaire de charger au préalable la couche vectorielle, afin de pouvoir accéder à la liste des champs."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:146
 msgid ""
@@ -385,7 +385,7 @@ msgid ""
 "of just once for the whole layer, producing as many outputs as times the "
 "algorithm is executed. This allows for automating the process when all "
 "features in a layer have to be processed separately."
-msgstr ""
+msgstr "Si l'algorithme propose plusieurs boutons d'itération, vous ne pourrez en activer qu'un seul. Si un bouton correspondant à une couche vecteur est activé, l'algorithme s'exécutera successivement sur chacune des entités de la couche plutôt que sur la couche en entier, produisant alors autant de sorties que de nombre d'exécution de l'algorithme. Cela permet d'automatiser un traitement qui doit être réalisé sur chaque entité d'une couche séparément."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:148
 msgid ""

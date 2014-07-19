@@ -5,6 +5,7 @@
 # Translators:
 # André Filipe Mendes Duarte <a_topas@hotmail.com>, 2014
 # André Filipe Mendes Duarte <a_topas@hotmail.com>, 2014
+# Paulo Messias Oliveira Guerreiro, 2014
 # pedromonteiro <pedromachadomonteiro@gmail.com>, 2014
 # slopes <sandramnlopes@gmail.com>, 2014
 msgid ""
@@ -12,8 +13,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-06-06 17:25+0000\n"
-"Last-Translator: pedromonteiro <pedromachadomonteiro@gmail.com>\n"
+"PO-Revision-Date: 2014-06-30 21:26+0000\n"
+"Last-Translator: Paulo Messias Oliveira Guerreiro\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -137,7 +138,7 @@ msgid ""
 " get will be incorrect. You will not know the correct area for any "
 "municipality and you will not be able to define exactly, where the borders "
 "between the municipalities are."
-msgstr ""
+msgstr "Os erros topológicos quebram a relação entre elementos. Esses erros precisam de ser corrigidos para assim parmitir analisar os dados vetoriais com procedimentos como a análise de redes (ex. encontrar o melhor trajeto numa rede viária) ou medida (ex. encontrar o comprimento de um rio). Para além de a topologia ser útil para a análise de redes e medidas, há outros motivos importantes e úteis para criar e ter dados vetoriais com a topologia correta. Imagine que digitaliza um mapa com os limites municipais para a sua regição e os polígonos sobrepõem-se ou têm falhas. Se houver erros destes, pode ser possível utilizar ferramentas de medição, mas os resultados estarão incorretos. Pode não conhecer a área correta de um município e não vai ser possível definir com exatigão onde se localizam os limites dos municípios."
 
 # 0cefd9fd35084ecfba5ade2a1ad61549
 #: ../../source/docs/gentle_gis_introduction/topology.rst:90
@@ -213,7 +214,7 @@ msgid ""
 "'detects' a shared boundary in a polygon map so you only have to move the "
 "edge vertex of one polygon boundary and QGIS will ensure the updating of the"
 " other polygon boundaries as shown in figure_topological_tools_ (1)."
-msgstr ""
+msgstr "Várias aplicações de SIG fornecem ferramentas para edição topológica. Por exemplo, no QGIS pode **ativar a edição topológica** para melhorar a edição e manter os limites comuns em camadas de polígonos. Um SIG como o QGIS 'deteta' um limite partilhado num mapa de polígonos para que tenha apenas de mover o limite do vértice de um limite de polígonos e o QGIS assegurar-se-á da atualização dos limites do outro polígono, como em figure_topological_tools_ (1)."
 
 # 93a1b59530454b2f8ce5607cea207d7f
 #: ../../source/docs/gentle_gis_introduction/topology.rst:123
@@ -223,7 +224,7 @@ msgid ""
 "polygon, it is possible with this option to digitise a second adjacent "
 "polygon so that both polygons overlap and QGIS then clips the second polygon"
 " to the common boundary."
-msgstr ""
+msgstr "Outra opção topológica permite evitar **sobreposição de polígonos** enquanto digitaliza (ver figure_topological_tools_ (2)). Se já tem um polígono, com esta opção é possível digitalizar um segundo polígono sobreposto ao adjacente, e o QGIS corta o segundo polígono pelo limite comum."
 
 # 795033bff9044d669f6fc615400a8c42
 #: ../../source/docs/gentle_gis_introduction/topology.rst:139
@@ -232,12 +233,12 @@ msgid ""
 "When moving a vertex, all features that share that vertex are updated. (2) "
 "To avoid polygon overlaps, when a new polygon is digitised (shown in red) it"
 " is clipped to avoid overlapping neighbouring areas."
-msgstr ""
+msgstr "(1) A edição topológica deteta os limites partilhados, quando se movem vértices. Quanto mover um vértice, todos os elementos que partilham esse vértice são atualizadas. (2) Para evitar a sobreposição de polígonos, quando um novo polígono é digitalizado (a vermelho) é cortado para evitar a sobreposição de áreas adjacentes."
 
 # d3fe2b210ce64c0395a76e34b643c2b8
 #: ../../source/docs/gentle_gis_introduction/topology.rst:145
 msgid "Snapping distance"
-msgstr ""
+msgstr "Tolerância de Atracção"
 
 # 8e234ced4e3746d19a63f57319f4ad65
 #: ../../source/docs/gentle_gis_introduction/topology.rst:147
@@ -249,14 +250,14 @@ msgid ""
 " QGIS will leave the vertex where you release the mouse button, instead of "
 "snapping it to an existing vertex and / or segment (see "
 "figure_snapping_distance_)."
-msgstr ""
+msgstr "A tolerância de atração é a distância que um SIG usa para procurar o vértice mais próximo e/ou segmentou que está a tentar conectar quando digitaliza. Um **segmento** é uma linha reta formada entre dois vértices numa geometria de polígono ou linha. Se não está na distância de atração, um SIG como o QGIS deixará o vértice onde deixar com o botão do rado, em vez de atrair para um vértice e/ou segmento existente (ver  figure_snapping_distance_)."
 
 # c918eef2530941959c75ea2496bc46d7
 #: ../../source/docs/gentle_gis_introduction/topology.rst:164
 msgid ""
 "The snapping distance (black circle) is defined in map units (e.g. decimal "
 "degrees) for snapping to either vertices or segments."
-msgstr ""
+msgstr "A distância de tolerância (círculo preto) é definida nas unidades do mapa (ex. em graus decimais) para a atração de vértices ou segmentos."
 
 # 3ca192a5bd184c9b96d7037dbf4b2699
 #: ../../source/docs/gentle_gis_introduction/topology.rst:168
@@ -271,7 +272,7 @@ msgid ""
 "search radius, the GIS won't find and select any vertex of a feature for "
 "editing. In principle, it is quite similar to the snapping distance "
 "functionality."
-msgstr ""
+msgstr "O raio de pesquisa é a distância que um SIG utiliza para detetar o vértice mais próximo que está a tentar mover quando clica no mapa. Se não está está no raio de pesquisa, o SIG não vai encontrar e selecionar qualquer vértice de um elemento para edição. Por princípio, é relativamente semelhante á função de distância de tolerância."
 
 # a3abc2f3a4934c96bff25f7a97e6deea
 #: ../../source/docs/gentle_gis_introduction/topology.rst:175
@@ -282,7 +283,7 @@ msgid ""
 " are dealing with a large number of vertices close together. If you specify "
 "the search radius too small the GIS application won't find any feature or "
 "vertex to move or edit."
-msgstr ""
+msgstr "Tanto a distância de tolerância como o raio de pesquisa são definidos nas unidades do mapa, pelo que pode ter que experimentar para definir o valor correto. Se especificar um valor que é demasiado grande, o SIG pode detetar o vértice errado, especialmente quando se está a trabalhar com um grande número de vértices próximos entre si. Se especificar um valor demasiado baixo, a aplicação SIG não vai encontrar elementos ou vértices para mover ou editar."
 
 # ad1612fc70874fcab3c7e06caa735f46
 #: ../../source/docs/gentle_gis_introduction/topology.rst:182
@@ -296,7 +297,7 @@ msgid ""
 "analysis that require topology (such as finding routes across a network). "
 "Many GIS applications are able to show topological and simple feature data "
 "together and some can also create, edit and analyse both."
-msgstr ""
+msgstr "Especialmente especificado para simplificar ou para renderizar rapidamente, mas não para análise de dados que requer topologia (tal como encontrar rotas numa rede). Estão disponíveis várias aplicações SIG para mostrar elementos topológicos e simples em conjunto e alguns também para criar, editar e analisar ambos."
 
 # ef31773d66a443af9f3d17447e229d45
 #: ../../source/docs/gentle_gis_introduction/topology.rst:190
@@ -335,14 +336,14 @@ msgstr "Para algumas ferramentas, tais como **analise de redes** a topologia é 
 msgid ""
 "**Snapping distance** and **search radius** help us to digitise "
 "topologically correct vector data."
-msgstr ""
+msgstr "A **distância de tolerância** e a **distância de pesquisa** ajudam-nos a digilitalizar dados vetoriais corretamente."
 
 # 4ffb603f66484c30bd56ae00eb92ee27
 #: ../../source/docs/gentle_gis_introduction/topology.rst:200
 msgid ""
 "**Simple feature** data is not a true topological data format but it is "
 "commonly used by GIS applications."
-msgstr ""
+msgstr "Os dados de **elementos simples** não são um formato de dados topológicos verdadeiro, mas são frequentemente utilizados em aplicações SIG."
 
 # 405dc33baa5f435b894ffcd094027341
 #: ../../source/docs/gentle_gis_introduction/topology.rst:204

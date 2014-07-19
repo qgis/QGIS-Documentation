@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-22 20:53+0000\n"
+"PO-Revision-Date: 2014-06-18 19:31+0000\n"
 "Last-Translator: Radoslaw Pasiok <rpasiok@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/qgis-documentation/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -538,7 +538,7 @@ msgstr "Opis SVG"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:23
 msgid ""
@@ -592,22 +592,22 @@ msgid ""
 ":guilabel:`Render` checkbox is not checked, |qg| does not redraw the canvas "
 "in response to any of the events described in section :ref:`redraw_events`. "
 "Examples of when you might want to suspend rendering include:"
-msgstr ""
+msgstr "Aby zawiesić renderowanie kliknij pole wyboru |checkbox| :guilabel:`Renderuj` po prawej stronie paska statusu. Gdy pole wyboru |checkbox| :guilabel:`Renderuj` nie jest zaznaczone, |qg| nie przerysowuje obszaru mapy po żadnym ze zdarzeń opisanych w rozdziale :ref:`redraw_events`. Przykłady sytuacji, kiedy można zawiesić renderowanie obejmują:"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:114
 msgid "Adding many layers and symbolizing them prior to drawing"
-msgstr ""
+msgstr "Dodanie wielu warstw i nadanie im stylu przed ich wyświetleniem"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:115
 msgid ""
 "Adding one or more large layers and setting scale dependency before drawing"
-msgstr ""
+msgstr "Dodanie jednej lub więcej dużych warstw i ustawienie wyświetlania zależnego od skali przed ich wyświetleniem"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:116
 msgid ""
 "Adding one or more large layers and zooming to a specific view before "
 "drawing"
-msgstr ""
+msgstr "Dodanie jednej lub więcej większych warstw i przybliżenie się do pewnego widoku przed ich wyświetleniem"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:130
 msgid ""
@@ -618,13 +618,13 @@ msgid ""
 ":guilabel:`Rendering` tab. Uncheck the |checkbox| :guilabel:`By default new "
 "layers added to the map should be displayed` checkbox. Any layer "
 "subsequently added to the map will be off (invisible) by default."
-msgstr ""
+msgstr "Można ustawić opcję ładowania warstw bez ich renderowania. Oznacza to, że warstwa zostanie załadowana do mapy, ale jej pole wyboru widoczności bedzie domyślnie odznaczone. Aby ustawić tę opcję wybierz polecenie menu :menuselection:`Ustawienia --> Opcje` i kliknij zakładkę :guilabel:`Renderowanie`. Odznacz pole wyboru |checkbox| :guilabel:`Domyślnie nowo dodawane warstwy są wyświetlane`. Teraz każda nowo dodana do mapy warstwa będzie domyślnie wyłączona (niewidoczna)."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:151
 msgid ""
 "It is currently not possible to stop rendering --- this was disabled in the "
 "Qt4 port because of User Interface (UI) problems and crashes."
-msgstr ""
+msgstr "W chwili obecnej nie można zatrzymać renderowania --- ze względu na problemy interfejsu użytkownika (UI) zostało to zablokowane w porcie Qt4."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:162
 msgid ""
@@ -638,25 +638,25 @@ msgid ""
 " low will result in poor performance, as the map canvas is continually "
 "updated during the reading of the features. A suggested value to start with "
 "is 500."
-msgstr ""
+msgstr "Można wybrać opcję odświeżania mapy w miarę rysowania obiektów. Domyślnie |qg| nie wyświetla żadnych obiektów aż cała warstwa zostanie zrenderowana. W celu odświeżania ekranu w czasie czytania danych ze źródła wybierz polecenie menu :menuselection:`Ustawienia --> Opcje`, kliknij zakładkę :guilabel:`Renderowanie`. Ustaw wybraną ilość obiektów, po narysowaniu których ma nastąpić odświeżenie ekranu. Ustawienie wartości 0 wyłącza odświeżanie w czasie rysowania (to jest domyślne zachowanie). Ustawienie zbyt małej ilości spowoduje spadek wydajności, ponieważ obszar mapy będzie ciągle odświeżany w czasie czytania danych obiektów. Proponuje się, aby wartość ta nie była mniejsza niż 500."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:180
 msgid ""
 "To influence the rendering quality of the map, you have two options. Choose "
 "menu option :menuselection:`Settings --> Options`, click on the "
 ":guilabel:`Rendering` tab and select or deselect following checkboxes:"
-msgstr ""
+msgstr "Aby zmienić jakość renderowania mapy mamy dwie opcje. Wybierz polecenie menu :menuselection:`Ustawienia --> Opcje`, kliknij na zakładkę :guilabel:`Renderowanie`, a następnie zaznacz lub odznacz następujące pola wyboru."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:189
 msgid "Speed-up rendering"
-msgstr ""
+msgstr "Przyspieszenie renderowania"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:191
 msgid ""
 "There are two settings that allow you to improve rendering speed. Open the "
 "|qg| options dialog using :menuselection:`Settings --> Options`, go to the "
 ":guilabel:`Rendering` tab and select or deselect the following checkboxes:"
-msgstr ""
+msgstr "Dwa ustawienia pozwalają poprawić szybkość renderowania. Otwórz okno opcji |qg| używając menu :menuselection:`Ustawienia --> Opcje`, przejdź do zakładki :guilabel:`Renderowanie` i zaznacz lub odznacz następujące pola wyboru:"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:195
 msgid ""
@@ -665,12 +665,12 @@ msgid ""
 "incrementally draw features. If it is unchecked, you can set the "
 ":guilabel:`Number of features to draw before updating the display`, "
 "otherwise this option is inactive."
-msgstr ""
+msgstr "|checkbox| :guilabel:`Szybsze wyświetlanie`. Powoduje ona szybsze wyświetlanie grafiki kosztem braku możliwości zatrzymania renderowania i stopniowego rysowania obiektów. Jeśli ta opcja jest odznaczona, można podać w polu 'Liczbę obiektów koniecznych do narysowania przed odświeżeniem widoku', w przeciwnym wypadku pole liczby obiektów jest nieaktywne."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:200
 msgid ""
 "|checkbox| :guilabel:`Use render caching where possible to speed up redraws`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Użyj pamięci podręcznej aby przyspieszyć odświeżanie`."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:209
 msgid ""
@@ -681,13 +681,13 @@ msgid ""
 "system (see section :ref:`label_projections`). All measuring modules also "
 "use the snapping settings from the digitizing module. This is useful, if you"
 " want to measure along lines or areas in vector layers."
-msgstr ""
+msgstr "Mierzenie działa zarówno w odwzorowanych układach współrzędnych (np. UTM) jak i dla danych nieodwzorowanych. Jeśli mierzenie odbywa się w układzie współrzędnych geograficznych (długość/szerokość), wówczas wyniki pomiaru długości i powierzchni będą nieprawidłowe. aby temu zaradzić, należy zdefiniować odpowiedni układ współrzędnych mapy (zob. rozdział :ref:`label_projections`). Wszystkie narzędzia pomiarowe korzystają z ustawień przyciągania modułu digitalizacji. Jest to przydatne, gdy chcemy mierzyć wzdłuż linii lub powierzchni warstwy wektorowej."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:217
 msgid ""
 "To select a measuring tool, click on |mActionMeasure| and select the tool "
 "you want to use."
-msgstr ""
+msgstr "Aby wybrać narzędzie pomiaru kliknij na ikonce  |mActionMeasure| i wskaż narzędzie, którego chcesz użyć."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:230
 msgid ""
@@ -700,7 +700,7 @@ msgid ""
 "allows you to click points on the map. Each segment length, as well as the "
 "total, shows up in the measure window. To stop measuring, click your right "
 "mouse button."
-msgstr ""
+msgstr "|mActionMeasure| :sup:`Pomiar odległości`: |qg| potrafi zmierzyć rzeczywistą odległość pomiędzy danymi punktami wykorzystując dane elipsoidy bieżącego układu odniesienia. Aby ją zdefiniować, wybierz polecenie :menuselection:`Ustawienia --> Opcje`, Kliknij na zakładkę :guilabel:`Narzędzia mapy`. tutaj możesz zdefiniować kolor linijki oraz jednostki pomiaru odległości (metry lub stopy) i kątów (stopnie, radiany lub grady). Narzędzie pozwala na klikanie kolejnych punktów na mapie. W okienku pomiaru zobaczysz długości kolejnych segmentów i całkowitą długość linii. aby zakończyć pomiary kliknij na prawym przycisku myszy."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:250
 msgid ""
@@ -712,7 +712,7 @@ msgid ""
 "feature, or around a polygon feature, first set its snapping tolerance, then"
 " select the layer. Now, when using the measuring tools, each mouse click "
 "(within the tolerance setting) will snap to that layer."
-msgstr ""
+msgstr "|mActionMeasureArea| :sup:`Pomiar powierzchni`: można mierzyć także powierzchnie. W okienku pomiaru pokazana jest zmierzona w danej chwili powierzchnia. Dodatkowo, jeśli bieżąca warstwa ma ustawioną tolerancję przyciągania, narzędzie pomiaru będzie przyciągane do tej warstwy. (Zobacz rozdział :ref:`snapping_tolerance`). Zatem jeśli chciałbyś mierzyć wzdłuż obiektu liniowego lub wokół jakiegoś poligonu, najpierw ustaw jego tolerancję przyciągania, a następnie zaznacz odpowiednią warstwę. Wówczas podczas pomiaru każde kliknięcie będzie przyciągane do tej warstwy w granicach tolerancji przyciągania."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:269
 msgid ""
@@ -720,14 +720,14 @@ msgid ""
 " cursor becomes cross-shaped. Click to draw the first segment of the angle "
 "you wish to measure, then move the cursor to draw the desired angle. The "
 "measure is displayed in a pop-up dialog."
-msgstr ""
+msgstr "|mActionMeasureAngle| :sup:`Pomiar kąta`: Można mierzyć równierz kąty. Kursor przechodzi w krzyż. Kliknij wskazując pierwsze ramię kąta, który chcesz zmierzyć, a następnie przesuń kursor tak, aby narysować mierzony kąt. Wynik pomiaru wyświetlany jest w osobnym okienku."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:290
 msgid ""
 "The |qg| toolbar provides several tools to select features in the map "
 "canvas. To select one or several features, just click on |mActionSelect| and"
 " select your tool:"
-msgstr ""
+msgstr "Pasek narzędziowy |qg| zawiera kilka narzędzi do zaznaczania obiektów na mapie. Aby wybrać jeden lub kilka obiektów kliknij na |mActionSelect| i wybierz odpowiednie narzędzie:"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:311
 msgid ""
@@ -736,7 +736,7 @@ msgid ""
 ":menuselection:`View --> Identify features` or press :kbd:`Ctrl + Shift + "
 "I`, or click on the |mActionIdentify| :sup:`Identify features` icon in the "
 "toolbar."
-msgstr ""
+msgstr "Narzędzie informacji o obiekcie umożliwia interakcję z obszarem mapy i otrzymanie wartości atrybutów w oknie. Aby wyświetlić informację o obiektach skorzystaj z polecenia :menuselection:`Widok --> Informacje o obiekcie`, wciśnij kombinację klawiszy :kbd:`Ctrl+Shift+I`, lub kliknij ikonkę |mActionIdentify| :sup:`Informacje o obiekcie`, znajdującą się na pasku narzędziowym."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:316
 msgid ""
@@ -745,20 +745,20 @@ msgid ""
 " number of the feature in the list of results, followed by the layer name. "
 "Then, its first child will be the name of a field with its value. Finally, "
 "all information about the feature is displayed."
-msgstr ""
+msgstr "Jeśli klikniesz na kilku obiektach, w oknie :guilabel:`Wynik identyfikacji` pokazane zostaną dane atrybutów wszystkich klikniętych obiektów. Pierwsza pozycja to numer obiektu na liście z nazwą warstwy. Następnym elementem potomnym będzie nazwa i wartość jego pierwszego atrybutu. W dalszej kolejności wyświetlone są wszystkie informacje o obiekcie. "
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:322
 msgid ""
 "This window can be customized to display custom fields, but by default it "
 "will display three kinds of information:"
-msgstr ""
+msgstr "Zawartość tego okna można dostosować tak, aby wyświetlały się wybrane pola, ale domyślnie pokazuje ono trzy typy informacji:"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:325
 msgid ""
 "Actions: Actions can be added to the identify feature windows. When clicking"
 " on the action label, action will be run. By default, only one action is "
 "added, to view feature form for editing."
-msgstr ""
+msgstr "Akcje: do okna informacji o obiekcie mogą zostać dodane akcje. Kliknięcie nazwy akcji powoduje jej uruchomienie. Domyślnie dodana jest tylko jedna akcja wyświetlająca formularz edycji obiektu."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:328
 msgid ""
@@ -766,110 +766,110 @@ msgid ""
 "You can find clicked coordinate, X and Y coordinates, area in map units and "
 "perimeter in map units for polygons, length in map units for lines and "
 "feature ids."
-msgstr ""
+msgstr "Pochodne: te informacje obliczane są lub określane na bazie innych informacji. Znajdziesz tu współrzędne kliknięcia, współrzędne X i Y, pole powierzchni i obwód w jednostkach mapy dla poligonów, długość w jednostkach mapy dla obiektów liniowych oraz id obiektów."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:332
 msgid "Data attributes: This is the list of attribute fields from the data."
-msgstr ""
+msgstr "Dane atrybutów: lista atrybutów danych."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:345
 msgid "At the bottom of the window, you have five icons:"
-msgstr ""
+msgstr "U dołu okna znajduje się 5 ikonek:"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:353
 msgid ""
 "Other functions can be found in the context menu of the identified item. For"
 " example, from the context menu you can:"
-msgstr ""
+msgstr "Inne funkcje można znaleźć w menu kontekstowym rozpoznawanego obiektu. Można, na przykład, wykonać następujące zadania:"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:356
 msgid "View the feature form"
-msgstr ""
+msgstr "Wyświetl formularz obiektu"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:358
 msgid "Copy feature: Copy all feature geometry and attributes"
-msgstr ""
+msgstr "Kopiuj obiekt: skopiuj cały obiekt, tj. jego geometrię i atrybuty;"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:359
 msgid ""
 "Copy attribute value: Copy only the value of the attribute that you click on"
-msgstr ""
+msgstr "Kopiuj wartość atrybutu: kopiuje wartość klikniętego atrybutu"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:360
 msgid "Copy feature attributes: Copy only attributes"
-msgstr ""
+msgstr "Kopiuj atrybuty obiektu: kopiuje tylko atrybuty"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:361
 msgid "Clear result: Remove results in the window"
-msgstr ""
+msgstr "Wyczyść wyniki: usuwa wyniki z okna"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:362
 msgid "Clear highlights: Remove features highlighted on the map"
-msgstr ""
+msgstr "Wyczyść zaznaczenie: usuwane jest zaznaczenie obiektów na mapie"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:365
 msgid "Activate layer: Choose a layer to be activated"
-msgstr ""
+msgstr "Aktywuj warstwę: warstwa obiektu jest aktywowana"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:366
 msgid "Layer properties: Open layer properties window"
-msgstr ""
+msgstr "Właściwości warstwy: otwiera okno właściwości warstwy"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:375
 msgid ""
 "The Decorations of |qg| include the Grid, the Copyright Label, the North "
 "Arrow and the Scale Bar. They are used to 'decorate' the map by adding "
 "cartographic elements."
-msgstr ""
+msgstr "Dekoracje |qg| stanowią siatki, informacje o prawach autorskich, strzałka północy i podziałka. Służą one do uzupełnienia mapy poprzez dodanie elementów kartograficznych."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:382
 msgid ""
 "|transformed| :sup:`Grid` allows you to add a coordinate grid and coordinate"
 " annotations to the map canvas."
-msgstr ""
+msgstr "|transformed| :sup:`Siatka` pozwala na dodanie do obszaru mapy siatki współrzędnych i jej opisu."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:402
 msgid "Click **[Apply]** to verify that it looks as expected."
-msgstr ""
+msgstr "Kliknij **[Zastosuj]** żeby sprawdzić, czy efekt będzie zadowalający."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:408
 msgid ""
 "|copyright_label| :sup:`Copyright label` adds a copyright label using the "
 "text you prefer to the map."
-msgstr ""
+msgstr "|copyright_label| :sup:`Informacja o prawach autorskich` dodaje do mapy etykietę z podanym tekstem."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:420
 msgid "The Copyright Dialog |nix|"
-msgstr ""
+msgstr "Okno dialogowe praw autorskich |nix|"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:425
 msgid ""
 "Enter the text you want to place on the map. You can use HTML as shown in "
 "the example."
-msgstr ""
+msgstr "Wprowadź tekst, który chcesz zamieścić na mapie. Możesz wykorzystać HTML, jak to pokazano w przykładzie."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:427
 msgid ""
 "Choose the placement of the label from the :guilabel:`Placement` "
 "|selectstring| combo box."
-msgstr ""
+msgstr "Określ położenie etykiety z listy rozwijalnej :guilabel:`Położenie` |selectstring|."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:429
 msgid ""
 "Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is "
 "checked."
-msgstr ""
+msgstr "Upewnij się, czy pole wyboru |checkbox| :guilabel:`Włącz etykietę` jest zaznaczone."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:431
 #: ../../source/docs/user_manual/introduction/general_tools.rst:494
 msgid "Click **[OK]**."
-msgstr ""
+msgstr "Kliknij **[OK]**."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:433
 msgid ""
 "In the example above, which is the default, |qg| places a copyright symbol "
 "followed by the date in the lower right-hand corner of the map canvas."
-msgstr ""
+msgstr "W powyższym przykładzie, |qg| umieści symbol copyright z datą w dolnym prawym rogu obszaru mapy, co jest domyślnym położeniem informacji o prawach autorskich."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:439
 msgid ""
@@ -879,13 +879,13 @@ msgid ""
 "choose to let |qg| determine the direction, it makes its best guess as to "
 "how the arrow should be oriented. For placement of the arrow, you have four "
 "options, corresponding to the four corners of the map canvas."
-msgstr ""
+msgstr "|north_arrow| :sup:`Strzałka północy` dodaje do obszaru mapy prostą strzałkę północy. Obecnie dostępny jest tylko jeden styl strzałki. Można dopasować kąt strzałki samodzielnie lub pozostawić to |qg| do automatycznego określenia. Jeśli pozostawisz wybór |qg| spróbuje on znaleźć właściwy kierunek strzałki. Strzałkę możesz umieścić w dowolnym rogu mapy."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:461
 msgid ""
 "|scale_bar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You "
 "can control the style and placement, as well as the labeling of the bar."
-msgstr ""
+msgstr "|scale_bar| :sup:`Podziałka` dodaje do obszaru mapy prostą podziałkę. Położenie, styl i etykiety podziałki zależą od Ciebie."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:476
 msgid ""
@@ -893,55 +893,55 @@ msgid ""
 " So if the units of your layers are in meters, you can't create a scale bar "
 "in feet. Likewise, if you are using decimal degrees, you can't create a "
 "scale bar to display distance in meters."
-msgstr ""
+msgstr "|qg| można wyświetlić skalę jedynie w jednostkach ramki mapy. Zatem jeśli twoje warstwy są w metrach, nie możesz stworzyć podziałki w stopach. Podobnie, jeśli używasz stopni dziesiętnych, nie możesz stworzyć podziałki w metrach."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:483
 msgid ""
 "Select from menu :menuselection:`View --> Decorations --> Scale Bar`. The "
 "dialog starts (see figure_decorations_4_)."
-msgstr ""
+msgstr "Wybierz polecenie :menuselection:`Widok --> Dekoracje --> Podziałka`. Pokaże się okno (zob. figure_decorations_4_)."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:485
 msgid ""
 "Choose the placement from the :guilabel:`Placement` |selectstring| combo "
 "box."
-msgstr ""
+msgstr "Określ położenie z listy rozwijalnej :guilabel:`Położenie`  |selectstring|."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:486
 msgid ""
 "Choose the style from the :guilabel:`Scale bar style` |selectstring| combo "
 "box."
-msgstr ""
+msgstr "Z listy rozwijalnej :guilabel:`Styl podziałki` |selectstring| wybierz styl."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:488
 msgid ""
 "Select the color for the bar :guilabel:`Color of bar` |selectcolor| or use "
 "the default black color."
-msgstr ""
+msgstr "Wybierz kolor podziałki z :guilabel:`Kolor` |selectcolor| lub pozostaw domyślny czarny."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:490
 msgid ""
 "Set the size of the bar and its label :guilabel:`Size of bar` "
 "|selectnumber|."
-msgstr ""
+msgstr "Ustaw rozmiar podziałki i jej etykietę :guilabel:`Długość` |selectnumber|."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:491
 msgid ""
 "Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked."
-msgstr ""
+msgstr "Upewnij się, czy zaznaczone jest pole wyboru |checkbox| :guilabel:`Włącz`"
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:492
 msgid ""
 "Optionally, check |checkbox| :guilabel:`Automatically snap to round number "
 "on resize`."
-msgstr ""
+msgstr "Opcjonalnie, zaznaczając pole wyboru |checkbox| :guilabel:`Automatycznie dostosuj rozmiar`, sprawisz, że rozmiar skali automatycznie się zmieniał przy przybliżaniu widoku."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:501
 msgid ""
 "When you save a :file:`.qgs` project, any changes you have made to Grid, "
 "North Arrow, Scale Bar and Copyright will be saved in the project and "
 "restored the next time you load the project."
-msgstr ""
+msgstr "W czasie zapisu projektu :file:`.qgs` zapisywane są wszystkie zmiany, jakich dokonałeś w siatce, strzałce północy, podziałce i prawach autorskich i będą one użyte, gdy otworzysz ten projekt następnym razem."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:513
 msgid ""
@@ -949,7 +949,7 @@ msgid ""
 "toolbar provides the possibility to place formatted text in a balloon on the"
 " |qg| map canvas. Use the :guilabel:`Text Annotation` tool and click into "
 "the map canvas."
-msgstr ""
+msgstr "Narzędzie |mActionTextAnnotation| :sup:`Opis tekstowy` z paska narzędziowego atrybutów umożliwia umieszczenie w obszarze mapy chmurki ze sformatowanym tekstem. Wybierz narzędzie :guilabel:`Opis tekstowy` i kliknij w obszarze mapy."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:529
 msgid ""
@@ -960,13 +960,13 @@ msgid ""
 " related to the map). The item can be moved by map position (by dragging the"
 " map marker) or by moving only the balloon. The icons are part of the GIS "
 "theme, and they are used by default in the other themes, too."
-msgstr ""
+msgstr "Dwuklik na wybranym opisie spowoduje otwarcie okna dialogowego z różnymi opcjami. Mamy tu pole edytora tekstowego do wprowadzenia sformatowanego tekstu i inne ustawienia. Jest np. możliwość umiejscowienia opisu w określonej pozycji mapy (wyświetlany jako znacznik) lub utrzymania pozycji opisu na ekranie (niezależnie od mapy). Opis może być przesuwany przez zmianę jego pozycji na mapie (przeciągnij znacznik) lub poprzez przesunięcie samej chmurki. Ikonki są częścią szablonu GIS i są domyślnie używane również w innych szablonach."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:537
 msgid ""
 "The |mActionAnnotation| :sup:`Move Annotation` tool allows you to move the "
 "annotation on the map canvas."
-msgstr ""
+msgstr "Narzędzie |mActionAnnotation| :sup:`Przesuń opis` umożliwia przesuwanie opisu po obszarze mapy."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:543
 msgid ""
@@ -974,7 +974,7 @@ msgid ""
 "toolbar provides the possibility to place the content of an html file in a "
 "balloon on the |qg| map canvas. Using the :guilabel:`Html Annotation` tool, "
 "click into the map canvas and add the path to the html file into the dialog."
-msgstr ""
+msgstr "Narzędzie |mActionFormAnnotation| :sup:`Opis HTML` z paska narzędziowego atrybutów umożliwia umieszczenie w obszarze mapy |qg| chmurki z zawartością opisaną kodem HTML. Wybierz narzędzie :guilabel:`Opis HTML`, kliknij na obszarze mapy i wskaż w oknie ścieżkę do pliku HTML."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:551
 msgid ""
@@ -982,7 +982,7 @@ msgid ""
 "provides the possibility to place an SVG symbol in a balloon on the |qg| map"
 " canvas. Using the :guilabel:`SVG Annotation` tool, click into the map "
 "canvas and add the path to the SVG file into the dialog."
-msgstr ""
+msgstr "Narzędzie |mActionSaveAsSVG| :sup:`Opisy SVG` z paska narzędziowego atrybutów umożliwia umieszczenie w obszarze mapy |qg| symbolu SVG. Wybierz narzędzie :guilabel:`Opisy SVG`, kliknij w obszarze mapy i wskaż w oknie ścieżkę do pliku SVG."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:562
 msgid ""
@@ -993,7 +993,7 @@ msgid ""
 ":guilabel:`Identify features` tool, but displayed in an annotation item. "
 "Also see this video https://www.youtube.com/watch?v=0pDBuSbQ02o from Tim "
 "Sutton for more information."
-msgstr ""
+msgstr "Możesz również stworzyć własne formularze opisu. Narzędzie |mActionFormAnnotation| :sup:`Opis w formularzu` przydaje się, gdy chcemy wyświetlić atrybuty warstwy wektorowej w dostosowanym formularzu Qt Designera (zob. figure_custom_annotation_). Jest to podobne do formularzy Designera dla narzędzia :guilabel:`Informacje o obiekcie`, ale wyświetlane jest w postaci opisu. Aby dowiedzieć sie więcej, obejrzyj to wideo Tima Suttona https://www.youtube.com/watch?v=0pDBuSbQ02o "
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:616
 msgid ""
@@ -1001,49 +1001,49 @@ msgid ""
 "Show Bookmarks`. The :guilabel:`Geospatial Bookmarks` dialog allows you to "
 "zoom to or delete a bookmark. You cannot edit the bookmark name or "
 "coordinates."
-msgstr ""
+msgstr "Aby użyć lub zmienić zakładki wybierz polecenie menu :menuselection:`Widok --> Pokaż zakładki`. Okno dialogowe :guilabel:`Zakładki` umożliwia przejście do widoku zakładki lub jej usunięcie. Nie ma możliwości zmiany nazwy zakładki ani jej współrzędnych."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:631
 msgid ""
 "To delete a bookmark from the :guilabel:`Geospatial Bookmarks` dialog, click"
 " on it, then click **[Delete]**. Confirm your choice by clicking **[Yes]**, "
 "or cancel the delete by clicking **[No]**."
-msgstr ""
+msgstr "W celu usunięcia zakładki w oknie dialogowym :guilabel:`Zakładki`kliknij na niej i naciśnij przycisk **[Usuń]**. Potwierdź swój wybór naciskając następnie **[Tak]** lub zrezygnuj z usuwanie przyciskiem **[Nie]**."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:642
 msgid ""
 "If you want to embed content from other project files into your project, you"
 " can choose :menuselection:`Layer --> Embed Layers and Groups`."
-msgstr ""
+msgstr "Jeśli w bieżącym projekcie chcesz wykorzystać zawartość innych projektów, możesz wykorzystać polecenie :menuselection:`Warstwa --> Osadź inny projekt`."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:648
 msgid ""
 "The following dialog allows you to embed layers from other projects. Here is"
 " a small example:"
-msgstr ""
+msgstr "Poniższe okno dialogowe umożliwia osadzenie warstw z innego projektu."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:652
 msgid ""
 "Select the project file :file:`grassland`. You can see the content of the "
 "project (see figure_embed_dialog_)."
-msgstr ""
+msgstr "Wybierz plik projektu :file:`grassland`. Zobaczysz zawartość projektu (zob. figure_embed_dialog_)."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:654
 msgid ""
 "Press :kbd:`Ctrl` and click on the layers :file:`grassland` and "
 ":file:`regions`. Press **[OK]**. The selected layers are embedded in the map"
 " legend and the map view now."
-msgstr ""
+msgstr "Przytrzymaj klawisz :kbd:`Ctrl` i kliknij na warstwach :file:`grassland` i :file:`regions`. Przyciśniej **[OK]**. Wybrane warstwy zostaną osadzone w legendzie i widoku mapy."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:669
 msgid ""
 "While the embedded layers are editable, you can't change their properties "
 "like style and labeling."
-msgstr ""
+msgstr "Chociaż osadzone warstwy są edytowalne, nie można zmienić ich właściwości stylu i etykietowania."
 
 #: ../../source/docs/user_manual/introduction/general_tools.rst:673
 msgid "Removing embedded layers"
-msgstr ""
+msgstr "Usuwanie osadzonych warstw"
 
 #~ msgid ""
 #~ "When you need help on a specific topic, you can access context help via the "

@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2014-05-22 11:57+0000\n"
+"PO-Revision-Date: 2014-06-28 11:27+0000\n"
 "Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/qgis-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid ""
 ":class:`QgsGeometry` class. All possible geometry types are nicely shown in "
 "`JTS discussion page "
 "<http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_."
-msgstr ""
+msgstr "Punctele, liniile și poligoanele, care reprezintă entități spațiale sunt frecvent menționate ca geometrii. În QGIS acestea sunt reprezentate de clasa :class:`QgsGeometry`. Toate tipurile de geometrie posibile sunt frumos prezentate în `pagina de discuții JTS <http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:18
 msgid ""
@@ -35,30 +35,30 @@ msgid ""
 "just one type of simple geometry, we call it multi-point, multi-linestring "
 "or multi-polygon. For example, a country consisting of multiple islands can "
 "be represented as a multi-polygon."
-msgstr ""
+msgstr "Uneori, o geometrie poate fi de fapt o colecție de simple geometrii (simple-părți). O astfel de geometrie poartă denumirea de geometrie multi-parte. În cazul în care conține doar un singur tip de geometrie simplă, o denumim multi-punct, multi-linie sau multi-poligon. De exemplu, o țară formată din mai multe insule poate fi reprezentată ca un multi-poligon."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:24
 msgid ""
 "The coordinates of geometries can be in any coordinate reference system "
 "(CRS). When fetching features from a layer, associated geometries will have "
 "coordinates in CRS of the layer."
-msgstr ""
+msgstr "Coordonatele geometriilor pot fi în orice sistem de coordonate de referință (CRS). Când extragem entitățile dintr-un strat, geometriile asociate vor avea coordonatele în CRS-ul stratului."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:31
 msgid "Geometry Construction"
-msgstr ""
+msgstr "Construirea geometriei"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:33
 msgid "There are several options for creating a geometry:"
-msgstr ""
+msgstr "Există mai multe opțiuni pentru a crea o geometrie:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:35
 msgid "from coordinates::"
-msgstr ""
+msgstr "din coordonate::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:42
 msgid "Coordinates are given using :class:`QgsPoint` class."
-msgstr ""
+msgstr "Coordonatele sunt obținute folosind clasa :class:`QgsPoint`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:44
 msgid ""
@@ -66,61 +66,61 @@ msgid ""
 "represented by a list of linear rings (i.e. closed linestrings). First ring "
 "is outer ring (boundary), optional subsequent rings are holes in the "
 "polygon."
-msgstr ""
+msgstr "O polilinie (linie) este reprezentată de o listă de puncte. Poligonul este reprezentat de o listă de inele liniare (de exemplu, linii închise). Primul inel este cel exterior (limita), inele ulterioare opționale reprezentând găurile din poligon."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:48
 msgid ""
 "Multi-part geometries go one level further: multi-point is a list of points,"
 " multi-linestring is a list of linestrings and multi-polygon is a list of "
 "polygons."
-msgstr ""
+msgstr "Geometriile multi-parte merg cu un nivel mai departe: multi-punctele sunt o listă de puncte, multi-liniile o listă de linii iar multi-poligoanele sunt o listă de poligoane."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:52
 msgid "from well-known text (WKT)::"
-msgstr ""
+msgstr "din textul bine-cunoscut (WKT)::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:56
 msgid "from well-known binary (WKB)::"
-msgstr ""
+msgstr "din binarul bine-cunoscut (WKB)::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:65
 msgid "Access to Geometry"
-msgstr ""
+msgstr "Accesarea geometriei"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:67
 msgid ""
 "First, you should find out geometry type, :func:`wkbType` method is the one "
 "to use --- it returns a value from QGis.WkbType enumeration::"
-msgstr ""
+msgstr "În primul rând, ar trebui să găsiți tipul geometriei, metoda :func:`wkbType` fiind cea pe care o puteți utiliza --- ea returnând valoarea primită de la enumerarea QGis.WkbType::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:79
 msgid ""
 "As an alternative, one can use :func:`type` method which returns a value "
 "from QGis.GeometryType enumeration. There is also a helper function "
 ":func:`isMultipart` to find out whether a geometry is multipart or not."
-msgstr ""
+msgstr "Ca alternativă, se poate folosi metoda :func:`type` care returnează o valoarea enumerării QGis.GeometryType. Există, de asemenea, o funcție de ajutor :func:`isMultipart` pentru a afla dacă o geometrie este multiparte sau nu."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:83
 msgid ""
 "To extract information from geometry there are accessor functions for every "
 "vector type. How to use accessors::"
-msgstr ""
+msgstr "Pentru a extrage informații din geometrie există funcțiile accessor pentru fiecare tip de vector. Iată cum la puteți utiliza::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:93
 msgid ""
 "Note: the tuples (x,y) are not real tuples, they are :class:`QgsPoint` "
 "objects, the values are accessible with :func:`x` and :func:`y` methods."
-msgstr ""
+msgstr "Notă: tuplurile (x, y) nu reprezintă tupluri reale, ele sunt obiecte :​​class:`QgsPoint`, valorile fiind accesibile cu ajutorul metodelor :func:`x` și :func:`y` ."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:96
 msgid ""
 "For multipart geometries there are similar accessor functions: "
 ":func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`."
-msgstr ""
+msgstr "Pentru geometriile multiparte există funcții accessor similare: :func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon ()`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:102
 msgid "Geometry Predicates and Operations"
-msgstr ""
+msgstr "Predicate și operațiuni geometrice "
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:104
 msgid ""
@@ -129,14 +129,14 @@ msgid ""
 "(:func:`union`, :func:`difference`, ...). It can also compute geometric "
 "properties of geometries, such as area (in the case of polygons) or lengths "
 "(for polygons and lines)"
-msgstr ""
+msgstr "QGIS folosește biblioteca GEOS pentru operațiuni geometrice avansate, cum ar fi predicatele geometrice (:func:`contains`, :func:`intersects`, ...) și operațiunile de setare (:func:`union`, :func:`difference`, ...). Se pot calcula, de asemenea, proprietățile geometrice, cum ar fi suprafața (în cazul poligoanelor) sau lungimea (pentru poligoane și linii)"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:108
 msgid ""
 "Here you have a small example that combines iterating over the features in a"
 " given layer and perfoming some geometric computations based on their "
 "geometries."
-msgstr ""
+msgstr "Iată un mic exemplu care combină iterarea entităților dintr-un strat dat și efectuarea unor calcule bazate pe geometriile lor."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:120
 msgid ""
@@ -146,55 +146,55 @@ msgid ""
 "projections are turned off, calculations will be planar, otherwise they'll "
 "be done on the ellipsoid. When an ellipsoid is not set explicitly, WGS84 "
 "parameters are used for calculations."
-msgstr ""
+msgstr "Ariile și perimetrele nu iau în considerare CRS-ul atunci când sunt calculate folosind metodele clasei :class:`QgsGeometry`. Pentru un calcul mult mai puternic al ariei și al distanței se poate utiliza clasa :class:`QgsDistanceArea`. În cazul în care proiecțiile sunt dezactivate, calculele vor fi planare, în caz contrar acestea vor fi efectuate pe un elipsoid. Când elipsoidul nu este setat în mod explicit, parametrii WGS84 vor fi utilizați pentru calcule."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:129
 msgid ""
 "You can find many example of algorithms that are included in QGIS and use "
 "these methods to analyze and transform vector data. Here are some links to "
 "the code of a few of them."
-msgstr ""
+msgstr "Puteți căuta mai multe exemple de algoritmi care sunt incluși în QGIS și să folosiți aceste metode pentru a analiza și a transforma datele vectoriale. Mai jos sunt prezente câteva trimiteri spre codul unora dintre ele."
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:131
 msgid ""
 "Geometry transformation: `Reproject algorithm <https://raw.github.com/qgis"
 "/Quantum-GIS/release-"
 "2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
-msgstr ""
+msgstr "Transformări geometrice: `Reproiectarea algoritmilor <https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:132
 msgid ""
 "Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix"
 " algorithm <https://raw.github.com/qgis/Quantum-GIS/release-"
 "2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
-msgstr ""
+msgstr "Aflarea distanței și a ariei folosind clasa :class:`QgsDistanceArea`: `Algoritmul matricei distanțelor <https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:133
 msgid ""
 "`Multi-part to single-part algorithm <https://raw.github.com/qgis/Quantum-"
 "GIS/release-"
 "2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
-msgstr ""
+msgstr "`Algoritmul de transformare din multi-parte în singură-parte <https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:5
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:28
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:62
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:99
 msgid "geometry"
-msgstr ""
+msgstr "geometrie"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:5
 msgid "handling"
-msgstr ""
+msgstr "manipulare"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:28
 msgid "construction"
-msgstr ""
+msgstr "construire"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:62
 msgid "access to"
-msgstr ""
+msgstr "accesare"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:99
 msgid "predicates and operations"
-msgstr ""
+msgstr "predicate și operațiuni"

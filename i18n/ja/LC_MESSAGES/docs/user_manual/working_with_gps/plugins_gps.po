@@ -4,16 +4,18 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2013
+# Choro <u.ko.kubot@gmail.com>, 2014
 # HiroM <mukuo@mri.co.jp>, 2013
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2014
+# OKANO Takayoshi <kano@na.rim.or.jp>, 2014
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-06-06 12:34+0000\n"
-"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>\n"
+"PO-Revision-Date: 2014-06-26 13:57+0000\n"
+"Last-Translator: Choro <u.ko.kubot@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -130,11 +132,11 @@ msgid ""
 ":menuselection:`Plugin Manager...` opens the Plugin Manager Dialog. Activate"
 " the |checkbox| :guilabel:`GPS Tools` checkbox. When this plugin is loaded, "
 "two buttons with a small handheld GPS device will show up in the toolbar:"
-msgstr ""
+msgstr "GPXファイルをロードするために最初に必要なことはプラグインのロードです. :menuselection:`Plugins -->` |mActionShowPluginManager| :menuselection:`Plugin Manager...`  でプラグインマネージャダイアログを開けます. |checkbox| :guilabel:`GPS Tools`　チェックボックスを有効にして下さい.このプラグインがロードされると toolbar: に小さなハンドヘルドGPSデバイスが表示されたボタンが表示されます.　"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:44
 msgid "|create_gpx| :sup:`Create new GPX Layer`"
-msgstr "|gps_importer| :sup:`新規GPXレイヤの作成`"
+msgstr "|create_gpx| :sup:`新規GPXレイヤの作成`"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:45
 msgid "|import_gpx| :sup:`GPS Tools`"
@@ -153,7 +155,7 @@ msgid ""
 "Select :menuselection:`Vector --> GPS --> GPS Tools` or click the "
 "|import_gpx| :sup:`GPS Tools` icon in the toolbar and open the "
 ":guilabel:`Load GPX file` tab (see figure_GPS_1_)."
-msgstr " :menuselection:`Vector --> GPS --> GPS Tools` を選択するか |gps_importer| :sup:`GPSツール` をクリックし、 :guilabel:`GPX ファイルをロード` タブを開いて下さい ( figure_GPS_1_ 参照)"
+msgstr " :menuselection:`Vector --> GPS --> GPS Tools` を選択するか |import_gpx| :sup:`GPSツール` をクリックし、 :guilabel:`GPX ファイルをロード` タブを開いて下さい ( figure_GPS_1_ 参照)"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:74
 msgid ""
@@ -162,7 +164,7 @@ msgid ""
 "it in |qg|, be sure that the data stored in the GPX file uses WGS 84 "
 "(latitude/longitude). |qg| expects this, and it is the official GPX "
 "specification. See http://www.topografix.com/GPX/1/1/."
-msgstr ""
+msgstr "GPSユニットは異なる座標系でデータを保存することが可能です.GPXファイルを(あなたのGPSユニットかWEBサイトから) ダウンロードして |qg| にロードする時にGPXファイルがWGS84(緯度/経度)で格納されているかどうか注意して下さい. |qg| はこの座標系でデータを取得することを前提としています,これはGPXの公式仕様でもあります. 　http://www.topografix.com/GPX/1/1/　参照"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:83
 msgid ""
@@ -185,7 +187,7 @@ msgid ""
 "what the name of the new layer should be. Note that not all GPS data formats"
 " will support all three feature types, so for many formats you will only be "
 "able to choose between one or two types."
-msgstr "GPXファイルではないファイルからGPSデータをインポートする場合 GPSツールダイアログの  :guilabel:`Import other file`  ツールを使ってください.ここでインポートしたいファイル(とファイルタイプ)を選択できます.ここではインポートしたい地物タイプと変換して格納するGPXファイルと新しいレイヤの名前を指定できます.すべてびGPSデータが3種類すべての型をサポートしているわけではありません,多くの場合1種類か二種類の形式を選択することになるでしょう."
+msgstr "GPXファイルではないファイルからGPSデータをインポートする場合 GPSツールダイアログの  :guilabel:`Import other file`  ツールを使ってください.ここでインポートしたいファイル(とファイルタイプ)を選択できます.ここではインポートしたい地物タイプと変換して格納するGPXファイルと新しいレイヤの名前を指定できます.すべてのGPSデータ形式が3種類すべての型をサポートしているわけではありません,多くの場合1種類か二種類の形式を選択することになるでしょう."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:106
 msgid ""
@@ -211,7 +213,7 @@ msgid ""
 "uses as a reference to the physical port in your computer that the GPS "
 "device is connected to. It may also be simply USB, for USB-enabled GPS "
 "units."
-msgstr "ポートはファイル名,もしくはオペレーティングシステムがGPSデバイスと接続するコンピュータの物理ポートへの参照として使用する他の名前かもしれません.またはusb対応GPSユニットのために,単純なusbである場合もあります."
+msgstr "ポートはファイル名,もしくはオペレーティングシステムがGPSデバイスと接続するコンピュータの物理ポートへの参照として使用する他の名前かもしれません.また, USB対応GPSユニットでは,単に「USB」となる場合もあります."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:132
 msgid ""
@@ -311,7 +313,7 @@ msgid ""
 "`bug <http://hub.qgis.org/issues/6318>`_ that does not allow create other "
 "profiles, so downloading directly in QGIS using the GPS Tools is at the "
 "moment limited to Garmin USB units."
-msgstr ""
+msgstr "前のセクションに記述されているようにAs described in previous sections QGIS はポイント/トラックをプロジェクトに直接ダウンロードする場合 GPSBabel を使います. QGIS はガーミンデバイスから事前定義されたプロファイルをダウンロードできるようになりました. 不運なことに他のプロファイルを作れないという `バグ <http://hub.qgis.org/issues/6318>`_ が存在します, ですから GPSツールを使ったQGIS への直接ダウンロードは現状ではガーミンユニットでのみ利用できます."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:208
 msgid "Garmin GPSMAP 60cs"
@@ -327,7 +329,7 @@ msgstr "**MS Windows**"
 msgid ""
 "Install the Garmin USB drivers ​from "
 "http://www8.garmin.com/support/download_details.jsp?id=591"
-msgstr ""
+msgstr " USB ドライバを http://www8.garmin.com/support/download_details.jsp?id=591 からインストールして下さい"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:215
 msgid ""
@@ -366,7 +368,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:242
 msgid "BTGP-38KM datalogger (only Bluetooth)"
-msgstr ""
+msgstr "BTGP-38KM データロガー (Bluetoothのみ)"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:246
 msgid ""
@@ -383,11 +385,11 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:263
 msgid "it is just a matter to turn off and on the datalogger and try again."
-msgstr ""
+msgstr "dataloggerをオン／オフして、再び試すことは、問題なだけです。"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:266
 msgid "BlueMax GPS-4044 datalogger (both BT and USB)"
-msgstr ""
+msgstr "BlueMax GPS-4044 データロガー (BT とUSB両方)"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:272
 msgid ""
@@ -398,7 +400,7 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:275
 msgid ""
 "Downloading with GPSBabel, both with USB and BT returns always an error like"
-msgstr ""
+msgstr "GPSBabelでダウンロードして、USBとBTの両者とも、常にエラーその他を返します。"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:285
 msgid "**With USB**"

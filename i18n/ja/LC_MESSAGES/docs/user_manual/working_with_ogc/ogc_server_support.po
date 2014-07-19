@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-06-13 12:25+0000\n"
+"PO-Revision-Date: 2014-07-03 03:49+0000\n"
 "Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -148,7 +148,7 @@ msgid ""
 "Interface) application written in C++ that works together with a web server "
 "(e.g., Apache, Lighttpd). It is funded by the EU projects Orchestra, Sany "
 "and the city of Uster in Switzerland."
-msgstr ""
+msgstr "|qg| Serverは、オープンソースWMS1.3とWFS1.0.0の実装だけでなく,それに加え,主題マッピングのための高度な地図作成機能を実装しています. |qg| サーバはwebサーバ（例. Apache, Lighttpd）と一緒に動作するC++で書かれたFastCGI/CGI（Common Gateway Interface）アプリケーションです.これはEUのプロジェクトオーケストラ,Sanyとスイスウスター市が資金提供しています."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:21
 msgid ""
@@ -157,7 +157,7 @@ msgid ""
 "independent C++ programming. In contrast to other WMS software, the |qg| "
 "Server uses cartographic rules as a configuration language, both for the "
 "server configuration and for the user-defined cartographic rules."
-msgstr ""
+msgstr "|qg| サーバは |qg| をGISロジックと地図レンダリングのバックエンドとして利用しています. さらに Qt ライブラリがグラフィックスとプラットフォームから独立したC++プログラミングに利用されています.  他のWMS ソフトウェアと対比して |qg| サーバはカルトグラフィックルールを構成言語として利用しています, それはサーバ構成とユーザ定義のカルトグラフィックルールの両方です."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:29
 msgid ""
@@ -165,7 +165,7 @@ msgid ""
 "plugin for |qg| desktop that exports the current layers and symbology as a "
 "web project for |qg| Server (containing cartographic visualization rules "
 "expressed in SLD)."
-msgstr ""
+msgstr "また |qg|  Serverプロジェクトは,現在のレイヤとシンボロジーを |qg| サーバのwebプロジェクト（SLDで表現された地図作成表現ツールを含む）として出力する |qg| デスクトップのためのプラグインである 'Publish to Web' プラグインを提供しています."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:33
 msgid ""
@@ -177,21 +177,21 @@ msgid ""
 "<http://www.opengeospatial.org/standards/sld>`_ and its documented "
 "extensions, there is only one standardised language to learn, which greatly "
 "simplifies the complexity of creating maps for the Web."
-msgstr ""
+msgstr " |qg| デスクトップと |qg| サーバは同じ可視化ライブラリを利用しているので, webに公開されている地図はデスクトップGISと同じに見えます.  'Publish to Web' プラグインは現在基本的なシンボライゼーションをサポートして,さらに複雑なカルトグラフィックビジュアライゼーションはオプションで手動で導入できます. 構成は `SLD standard <http://www.opengeospatial.org/standards/sld>`_ と文書化されている拡張で実行されています ,それらは標準化された言語として学習でき,Webに複雑な地図を発行する作業を簡単にしています."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:41
 msgid ""
 "In one of the following manuals, we will provide a sample configuration to "
 "set up a |qg| Server. For now, we recommend to read one of the following "
 "URLs to get more information:"
-msgstr ""
+msgstr "次のマニュアルの１つでは, |qg| サーバをセットアップするための設定のサンプルを提供します.しかし、我々は,詳細を得るために次のURLの１つを読むことをお勧めします："
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:54
 msgid ""
 "At this point, we will give a short and simple sample installation how-to "
 "for Debian Squeeze. Many other OSs provide packages for |qg| Server, too. If"
 " you have to build it all from source, please refer to the URLs above."
-msgstr ""
+msgstr "この時点で,Debian SqueezeのためのHowToとなる短くて簡単なサンプル設定を提供します.他の多くのOSが |qg| サーバのためにパッケージを提供しています.もしソースからすべてを構築する必要がある場合は,上記ののURLを参照してください."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:58
 msgid ""
@@ -211,7 +211,7 @@ msgid ""
 "WMS that shows the state boundaries of Alaska. Add the WMS with the URL "
 "``http://localhost/cgi-bin/qgis_mapserv.fcgi`` as described in :ref:`ogc-"
 "wms-servers`."
-msgstr ""
+msgstr "ここで |qg| サーバインストレーションのテストをしましょう.  :file:`qgis_mapserv.fcgi` が ``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` で使えるはずです,そして標準WMS でAlaskaの州境界線が表示されるはずです.  :ref:`ogc-wms-servers` に記述されているように URL ``http://localhost/cgi-bin/qgis_mapserv.fcgi`` をWMSとして追加して下さい."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:85
 msgid "Creating a WMS/WFS/WCS from a |qg| project"
@@ -223,11 +223,11 @@ msgid ""
 "project file with some data. Here, we use the 'Alaska' shapefile from the "
 "|qg| sample dataset. Define the colors and styles of the layers in |qg| and "
 "the project CRS, if not already defined."
-msgstr ""
+msgstr "新しい |qg| サーバから WMS, WFS または WCSを配信するためには, なんらかのデータを使って |qg| プロジェクトファイルを作らなければいけません.  ここでは |qg| サンプルデータセットの 'Alaska' shapefileを使いましょう. 指定が無い場合は |qg|で色とスタイルとプロジェクトのCRSを指定して下さい."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:101
 msgid "Definitions for a |qg| Server WMS/WFS/WCS project (KDE)"
-msgstr ""
+msgstr " |qg| サーバ WMS/WFS/WCS プロジェクトの定義 (KDE)"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:103
 msgid ""
@@ -242,7 +242,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:112
 msgid "**WMS capabilities**"
-msgstr ""
+msgstr "**WMS capabilities**"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:114
 msgid ""

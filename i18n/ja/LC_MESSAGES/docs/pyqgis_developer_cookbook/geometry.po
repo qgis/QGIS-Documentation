@@ -1,13 +1,14 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2013-2014
+# OKANO Takayoshi <kano@na.rim.or.jp>, 2014
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2014-06-09 22:38+0000\n"
+"PO-Revision-Date: 2014-06-25 12:43+0000\n"
 "Last-Translator: Choro <u.ko.kubot@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +44,7 @@ msgid ""
 "The coordinates of geometries can be in any coordinate reference system "
 "(CRS). When fetching features from a layer, associated geometries will have "
 "coordinates in CRS of the layer."
-msgstr "ジオメトリの座標値はどの座標参照系(CSR)も利用できます。レイヤーからフィーチャを持ってきたときに、ジオメトリの座標値はレイヤーのCSRのものを持つでしょう。"
+msgstr "ジオメトリの座標値はどの座標参照系(CRS)も利用できます。レイヤーからフィーチャを持ってきたときに、ジオメトリの座標値はレイヤーのCRSのものを持つでしょう。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:31
 msgid "Geometry Construction"
@@ -130,14 +131,14 @@ msgid ""
 "(:func:`union`, :func:`difference`, ...). It can also compute geometric "
 "properties of geometries, such as area (in the case of polygons) or lengths "
 "(for polygons and lines)"
-msgstr ""
+msgstr "QGISはジオメトリ述部(:func:`contains`, :func:`intersects`, ...) や操作設定(:func:`union`, :func:`difference`, ...)のような上級のジオメトリ操作でGEOS ライブラリを使います。また、（ポリゴンの）面積や（ポリゴンや線などの）長さのようなジオメトリの幾何学的なプロパティを計算できます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:108
 msgid ""
 "Here you have a small example that combines iterating over the features in a"
 " given layer and perfoming some geometric computations based on their "
 "geometries."
-msgstr "ここでは、与えられたレイヤ内の地物をを繰り返し処理し、そのジオメトリに基づいていくつかの幾何学的な計算を組み合わせた簡単な例があります。"
+msgstr "ここでは、与えられたレイヤ内の地物を繰り返し処理し、そのジオメトリに基づいていくつかの幾何学的な計算を組み合わせた簡単な例があります。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:120
 msgid ""
@@ -147,7 +148,7 @@ msgid ""
 "projections are turned off, calculations will be planar, otherwise they'll "
 "be done on the ellipsoid. When an ellipsoid is not set explicitly, WGS84 "
 "parameters are used for calculations."
-msgstr ""
+msgstr ":class:`QgsGeometry` クラスのこれらのメソッドを使って計算するとき、面積と周長はCRSを考慮しません。より強力な面積と距離計算のために、:class:`QgsDistanceArea` クラスが使うことができます。投影法が切り替わったら計算は平面的に行われます。そうでないと楕円体上で計算されます。楕円体がはっきりとセットされないとき、WGS84パラメータが計算のために使われます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:129
 msgid ""

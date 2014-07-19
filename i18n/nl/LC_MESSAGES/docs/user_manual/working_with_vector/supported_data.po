@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
 # Diethard Jansen <diethard.jansen@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-06-09 13:15+0000\n"
-"Last-Translator: Diethard Jansen <diethard.jansen@gmail.com>\n"
+"PO-Revision-Date: 2014-07-05 14:57+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -517,7 +518,7 @@ msgid ""
 "are supported by the OGR library (see OGR-SOFTWARE-SUITE in "
 ":ref:`literature_and_web`). The complete list is available at "
 "http://www.gdal.org/ogr/ogr_formats.html."
-msgstr ""
+msgstr "|qg| gebruikt de bibliotheek OGR om vectorgegevens te kunnen lezen van en te schrijven naar ESRI Shapefiles, MapInfo en Microstation bestandsformaten; PostGIS, SpatiaLite, MSSQL Spatial en Oracle Spatial databases en vele andere formaten. Ondersteuning voor GRASS vector en PostgreSQL wordt verschaft door eigen |qg| plug-ins voor gegevensverschaffing. De vectorgegevens kunnen ook in leesmodus geladen worden  in |qg| vanuit gecomprimeerde zip en gzip-archiefbestanden. Op het moment van schrijven van dit document worden, 69 vector formaten ondersteund door de bibliotheek OGR (zie OGR-SOFTWARE-SUITE :ref:`literature_and_web`). De volledige lijst is beschikbaar op http://www.gdal.org/ogr_formats.html."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:20
 msgid ""
@@ -684,44 +685,44 @@ msgid ""
 " first row usually contains the column names. A common type of delimited "
 "text file is a CSV (Comma Separated Values), with each column separated by a"
 " comma."
-msgstr ""
+msgstr "Tabulaire gegevens zijn een veel en breed gebruikte indeling vanwege zijn eenvoud een leesbaarheid -- gegevens kunnen zelfs in een tekstbewerkingsprogramma worden gelezen en bewerkt. Een gescheiden tekstbestand is een tabel met attributen waarin elke kolom is gescheiden door een gedefinieerd teken en elke regel door een wordt gescheiden door een regeleinde. De eerste regel bevat gewoonlijk de namen van de kolommen. Een veelgebruikt type gescheiden tekstbestand is een CSV (Comma Separated Values= komma gescheiden waarden), wwaarin elke kolom wordt gescheiden door een komma."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:207
 msgid ""
 "Such data files can also contain positional information in two main forms:"
-msgstr ""
+msgstr "Zulke gegevensbestanden kunnen ook positionele informatie bevatten in twee belangrijke vormen:"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:209
 msgid "As point coordinates in separate columns"
-msgstr ""
+msgstr "Als puntcoördinaten in afzonderlijke kolommen"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:210
 msgid "As well-known text (WKT) representation of geometry"
-msgstr ""
+msgstr "Als welbekende tekst (WKT) weergave van geometrie"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:212
 msgid ""
 "|qg| allows you to load a delimited text file as a layer or ordinal table. "
 "But first check that the file meets the following requirements:"
-msgstr ""
+msgstr "|qg| stelt u in staat een gescheiden tekstbestand te laden als een laag of ordinale tabel. Controleer echter eerst of het bestand voldoet aan de volgende vereisten:"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:215
 msgid ""
 "The file must have a delimited header row of field names. This must be the "
 "first line in the text file."
-msgstr ""
+msgstr "Het bestand moet een gescheiden koprij met veldnamen hebben. Dit moet de eerste regel in het tekstbestand zijn."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:217
 msgid ""
 "The header row must contain field(s) with geometry definition. These "
 "field(s) can have any name."
-msgstr ""
+msgstr "De koprij moet veld(en) bevatten met een definitie voor geometrie. Dit/Deze veld(en) mogen elke naam hebben."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:219
 msgid ""
 "The X and Y coordinates (if geometry is defined by coordinates) must be "
 "specified as numbers. The coordinate system is not important."
-msgstr ""
+msgstr "De X- en Y-coördinaten (als de geometrie wordt gedefinieerd door coördinaten) moeten zijn gespecificeerd als getallen. Het coördinatensysteem is niet belangrijk."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:222
 msgid ""
@@ -818,31 +819,31 @@ msgid ""
 "definition for point, line or polygon objects. If the file contains non-"
 "spatial data, activate |radiobuttonon| :guilabel:`No geometry (attribute "
 "only table)` and it will be loaded as an ordinal table."
-msgstr ""
+msgstr "Indien ruimtelijke informatie wordt weergegeven als WKT, activeer dan de optie |radiobuttonon| :guilabel:`Well Known Text` en selecteer het veld met de definitie voor WKT voor punt-, lijn- of polygoonobjecten. Als het bestand geen ruimtelijke gegevens bevat, activeer dan |radiobuttonon| :guilabel:`Geen geometrieën (alleen attributentabel)` en het zal worden geladen als een ordinale tabel."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:295
 msgid "Additionaly, you can enable:"
-msgstr ""
+msgstr "Aanvullend kunt u inschakelen:"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:297
 msgid ""
 "|checkbox| :guilabel:`Use spatial index` to improve the performance of "
 "displaying and spatially selecting features."
-msgstr ""
+msgstr "|checkbox| :guilabel:`Ruimtelijke index gebruiken` om de uitvoering van de weergave te verbeteren en objecten ruimtelijk te selecteren."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:299
 msgid "|checkbox| :guilabel:`Use subset index`."
-msgstr ""
+msgstr "|checkbox| :guilabel:`gebruik een subset index`."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:300
 msgid ""
 "|checkbox| :guilabel:`Watch file` to watch for changes to the file by other "
 "applications while |qg| is running."
-msgstr ""
+msgstr "|checkbox| :guilabel:`Bestand in de gaten houden` om de wijzigingen aan het bestand door andere toepassingen terwijl |qg| wordt uitgevoerd bij te houden."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:308
 msgid "OpenStreetMap data"
-msgstr ""
+msgstr "Gegevens van OpenStreetMap"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:310
 msgid ""
@@ -851,7 +852,7 @@ msgid ""
 "objective of the OSM project is to create a free editable map of the world "
 "from GPS data, aerial photography or local knowledge. To support this "
 "objective, |qg| provides suppport for OSM data."
-msgstr ""
+msgstr "In recente jaren is het project OpenStreetMap enorm aan populariteit gewonnen omdat in vele landen geen gratis geo-gegevens zoals digitale wegenkaarten beschikbaar zijn. het doel van het project OSM is om een gratis bewerkbare kaart van de wereld te maken vanuit GPS-gegevens, lucht-/satellietfotografie of lokale kennis. |qg| verschaft ondersteuning voor gegevens van OSM om dat doel te ondersteunen."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:321
 msgid "|qg| integrates OpenStreetMap import as a core functionality."
@@ -905,7 +906,7 @@ msgid ""
 "manager, click on the **[New]** button to display the :guilabel:`Create a "
 "New PostGIS Connection` dialog. The parameters required for a connection "
 "are:"
-msgstr ""
+msgstr "|mActionAddPostgisLayer| De eerste keer dat u een gegevensbron voor PostGIS gebruikt, dient u een verbinding te maken naar de database van PostgreSQLdie de gegevens bevat. Begin met het klikken op de knop op de werkbalk |mActionAddPostgisLayer| :sup:`Add PostGIS Layer`, selecteer de optie |mActionAddPostgisLayer| :menuselection:`Add PostGIS Layer...` uit het menu :menuselection:`Layer`, of typ :kbd:`Ctrl+Shift+D`. U kunt ook het dialoogvenster :guilabel:`Add Vector Layer` openen en selecteren |radiobuttonon| :guilabel:`Database`. Het dialoogvenster :guilabel:`Add PostGIS Table(s)` zal worden weergegeven. Klik op de knop **[Nieuw]** om het dialoogvenster :guilabel:`Nieuwe PostGIS-verbinding aanmaken` weer te geven om toegang te krijgen tot beheren van de verbindingen. De voor de verbinding vereist parameters zijn:"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:366
 msgid ""
@@ -1213,7 +1214,7 @@ msgid ""
 "The spatial features in Oracle Spatial aid users in managing geographic and "
 "location data in a native type within an Oracle database. |qg| now has "
 "support for such layers."
-msgstr ""
+msgstr "De ruimtelijke objecten in Oracle Spatial helpen gebruikers bij het beheren van geografische en locatie-gegevens in een eigen type binnen een database van Oracle. |qg| heeft nu ondersteuning voor dergelijke lagen."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:732
 msgid ""

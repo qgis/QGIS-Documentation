@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-06-13 05:27+0000\n"
+"PO-Revision-Date: 2014-07-02 03:29+0000\n"
 "Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -335,7 +335,7 @@ msgid ""
 "Selected features can be cut, copied and pasted between layers in the same "
 "|qg| project, as long as destination layers are set to "
 "|mActionToggleEditing| :sup:`Toggle editing` beforehand."
-msgstr ""
+msgstr "  |mActionToggleEditing| :sup:`編集モード切替` が行われる前にあらかじめ貼り付け対象レイヤが設定されている場合,同一の |qg| プロジェクト内で選択された地物は切り取りかコピーをしてレイヤをまたいで貼り付けをすることができます,."
 
 # 03d2bcfefa9545de9363a2825d2128a1
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:402
@@ -420,7 +420,7 @@ msgid ""
 "It is always a good idea to back up your data source before you start "
 "editing. While the authors of |qg| have made every effort to preserve the "
 "integrity of your data, we offer no warranty in this regard."
-msgstr ""
+msgstr "編集作業を開始する前にデータソースをバックアップしておくことは良いアイデアです. |qg| の作者たちはデータの整合性を保つために努力しています,しかしそれらについて保証はしていません "
 
 # ac8cce5d70d3484298b4b201b0580d7e
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:472
@@ -597,7 +597,7 @@ msgid ""
 "also possible to remove part of the area from the polygon, starting the new "
 "line outside the polygon, adding vertices inside, and ending the line "
 "outside the polygon with a right click."
-msgstr ""
+msgstr "たとえばポリゴンの境界線をこのツールで編集できます. 最初にポリゴンの内側をクリックした後に新しく頂点を追加したい位置に点を入力してください. それから境界線をまたいでポリゴンの外側に頂点を追加してください. このツールは境界線と新しい線の交点に自動的にノードを追加します. これはポリゴンの一部を削除する場合にも利用できます, ポリゴンの外側から新しいラインを開始して内側に新しい頂点を追加します,そしてポリゴンの外側に最終点を右ボタンクリックで作成してください."
 
 # 97b0c132ee164e4bb77c4bb7079fc910
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:635
@@ -1032,7 +1032,7 @@ msgid ""
 " can customize the behavior of the mouse wheel zoom using the :guilabel:`Map"
 " tools` tab under the :menuselection:`Settings -->` |mActionOptions| "
 ":menuselection:`Options` menu."
-msgstr ""
+msgstr "デジタイズを行っている間メインウィンドウでマウスホィールを使ってパンを行うことができます,そしてマウスホィールを転がすことで地図の拡大,縮小を行うことができます. 拡大を行う場合マウスカーソルを地図エリアで向こう側に（あなたと逆方向に）動かしてください,マウスカーソルを手前に（あなたのほうに）動かすと縮小します. マウスカーソルの位置はズームしたい位置の中心にあります. マウスホィールのズームの動作は |mActionOptions| :menuselection:`Options` メニューの :menuselection:`Settings -->` にある :guilabel:`Map tools` タブでカスタマイズできます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:132
 msgid ""
@@ -1066,7 +1066,7 @@ msgid ""
 "and maintaining common boundaries in polygon mosaics. |qg| 'detects' a "
 "shared boundary in a polygon mosaic, so you only have to move the vertex "
 "once, and |qg| will take care of updating the other boundary."
-msgstr ""
+msgstr " |checkbox| :guilabel:`トポロジ編集を有効にする` オプションは共通の境界線を持つポリゴンモザイクの編集と維持に利用します. |qg| はポリゴンモザイクの共通境界線を '検出' するのである頂点を一度移動するだけで |qg| がもう一方の境界線も更新します."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:168
 msgid ""
@@ -1077,7 +1077,7 @@ msgid ""
 "to digitize the second one such that both intersect, and |qg| then cuts the "
 "second polygon to the common boundary. The advantage is that you don't have "
 "to digitize all vertices of the common boundary."
-msgstr ""
+msgstr "２つ目のトポロジカルオプションは |checkbox| :guilabel:`交差禁止.` で, called :guilabel:`新規ポリゴンの重なり禁止` と呼ばれポリゴンモザイクでの重なりを禁止するものです. これにより隣接ポリゴンの迅速なデジタイズができます. もしあるポリゴンが存在しているところでこのオプションを使って隣接ポリゴンを重なる形でデジタイズすると |qg| は２つめのポリゴンを共通境界線で自動的にカットします.これによってユーザが共通境界線の頂点をデジタイズしなくていい利点ができます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:181
 msgid ""
@@ -1092,7 +1092,7 @@ msgid ""
 "accidentally editing a layer if there is a slip of the mouse. However, you "
 "can choose to edit any layer as long as the data provider supports it, and "
 "the underlying data source is writable (i.e., its files are not read-only)."
-msgstr ""
+msgstr "デフォルトで |qg| はレイヤをリードオンリイでロードします. これはたとえばマウスがすべってまちがってレイヤを編集するようなアクシデントにそなえるためです. しかしながらデータプロバイダが許可してデータソースが書き込み可能なら(たとえば　ファイルがリードオンリイではない)レイヤはすべて編集のため選択できます ."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:199
 msgid ""
@@ -1579,7 +1579,7 @@ msgid ""
 " in the table represents one map feature, and each column contains a "
 "particular piece of information about the feature. Features in the table can"
 " be searched, selected, moved or even edited."
-msgstr ""
+msgstr ":index:`属性テーブル` では選択されたレイヤの地物を表示します. テーブルの各行は地図の1個の地物を表します, そしてそれぞれのカラムは地物の情報を保持しています. テーブルの地物は検索,選択,移動,編集さえもできます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:831
 msgid ""
@@ -1597,7 +1597,7 @@ msgid ""
 "This will open a new window that displays the feature attributes for the "
 "layer (figure_attributes_1_). The number of features and the number of "
 "selected features are shown in the attribute table title."
-msgstr ""
+msgstr "これによってレイヤの地物の属性を表示する新しいウィンドウが開きます (figure_attributes_1_). 属性テーブルのタイトルに地物の数と選択されている地物の数が表示されます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:879
 msgid ""
@@ -1785,7 +1785,7 @@ msgid ""
 "As an example you have a layer with all regions of alaska (polygon) which "
 "provides some attributes about its name and region type and a unique id "
 "(which acts as primary key)."
-msgstr ""
+msgstr "例としてアラスカ全域(ポリゴン)データで名前と領域タイプとユニークid(プライマリキーとして動作します)を属性として持つものがあります."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:997
 msgid "Foreign keys"
@@ -1845,37 +1845,37 @@ msgid ""
 "between the layer. This is done in :menuselection:`Settings -->` "
 ":menuselection:`Project Properties`. Open the :guilabel:`Relations` menu and"
 " click on :guilabel:`Add`."
-msgstr ""
+msgstr "最初に行うべきことは QGIS にレイヤ間のリレーションを教えることです. それは :menuselection:`設定 -->` :menuselection:`プロジェクトプロパティ` でできます. :guilabel:`リレーション`  メニューを開いて:guilabel:`追加` をクリックして下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1043
 msgid ""
 "**name** is going to be used as a title. It should be a human readable "
 "string, describing, what the relation is used for. We will just call say "
 "\"Airports\" in this case."
-msgstr ""
+msgstr "**名称** はタイトルとして使われます. これは人間が読んでわかり文字列にするべきです, そしてこのリレーションがどういう意味なのかわかるような文字にするべきです. 今回のサンプルでは \"Airports\" とします."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1044
 msgid ""
 "**referencing layer** is the one with the foreign key field on it. In our "
 "case this is the airports layer"
-msgstr ""
+msgstr "**参照レイヤ** とは外部キーフィールドを持つレイヤです. 私たちの例では airports レイヤです"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1045
 msgid ""
 "**referencing field** will say, which field points to the other layer so "
 "this is fk_region in this case"
-msgstr ""
+msgstr "**参照フィールド** とは他のレイヤとリンクするフィールドです 私たちの例では　fk_region です"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1046
 msgid ""
 "**referenced layer** is the one with the primary key, pointed to, so here it"
 " is the regions layer"
-msgstr ""
+msgstr "**参照先レイヤ** とはプライマリキーでリンクするレイヤです,私たちの例ではregions レイヤになります"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1047
 msgid ""
 "**referenced field** is the primary key of the referenced layer so it is ID"
-msgstr ""
+msgstr "**参照先フィールド** は参照先レイヤのプライマリキーです,今回の例では ID です"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1048
 msgid ""
@@ -1883,7 +1883,7 @@ msgid ""
 " it to build custom forms once this is supported. If you leave it empty, one"
 " will be generated for you but you can assign one yourself to get one that "
 "is easier to handle."
-msgstr ""
+msgstr "**id** は内部の用途で使われます,この値はユニークでなければいけません. これがサポートされる場合カスタムフォームをサポートする必要があります. もしここを空白にしていた場合自動的に生成されますが,扱いやすいものがある場合自分で設定することもできます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1059
 msgid "Relation Manager |nix|"
@@ -1905,7 +1905,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1081
 msgid "Identification dialog regions with relation to airports |nix|"
-msgstr ""
+msgstr "airports のリレーションを表示した地物特定ダイアログ |nix|"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1083
 msgid ""
@@ -1920,13 +1920,13 @@ msgid ""
 "that it toggles the edit mode of the airport layer, although we are in the "
 "feature form of a feature from the region layer. But the table is "
 "representing features of the airport layer."
-msgstr ""
+msgstr " |mActionToggleEditing| ボタンを使うと編集モード切替を行えます. 領域レイヤの地物の地物編集フォームを開いている時もairportレイヤの編集モードを切り替えることには注意してください. しかしテーブルにはairportレイヤの地物が表示されています."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1087
 msgid ""
 "The |mActionSignPlus| button will add a new feature to the airport layer. "
 "And it will assign the new airport to the current region by default."
-msgstr ""
+msgstr " |mActionSignPlus| ボタンを使うと新しい地物を空港レイヤに追加します. そしてこれはデフォルトでカレント領域に新しい空港を割り当てます."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1088
 msgid ""

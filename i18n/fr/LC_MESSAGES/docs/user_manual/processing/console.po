@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# MarieSilvestre <marie.silvestre@gmail.com>, 2013
+# MarieSilvestre <marie.silvestre@gmail.com>, 2013-2014
 # Sant-anna <delazj@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-06-07 08:31+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>\n"
+"PO-Revision-Date: 2014-06-27 12:08+0000\n"
+"Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -294,7 +294,7 @@ msgid ""
 "can be defined using the command-line interface, and additional operations "
 "such as loops and conditional sentences can be added to create more flexible"
 " and powerful workflows."
-msgstr ""
+msgstr "La console permet aux utilisateurs confirmés d'accroître leur productivité en réalisant des opérations complexes qui ne pourraient par être réalisées à partir de l'interface graphique du module de Traitements. Les modèles impliquant plusieurs algorithmes peuvent être définis à partir de l'interface en lignes de commandes et des opérations additionnelles comme les boucles ou les branchements conditionnels permettent de créer des flux de traitements plus puissants et plus flexibles."
 
 #: ../../source/docs/user_manual/processing/console.rst:16
 msgid ""
@@ -309,7 +309,7 @@ msgstr ""
 msgid ""
 "In this section, we will see how to use processing algorithms from the |qg| "
 "Python console, and also how to write algorithms using Python."
-msgstr ""
+msgstr "Dans cette section, nous allons voir comme utiliser des algorithme issus du module de Traitements à partir de la console Python de |qg| et également comment écrire des algorithmes en Python."
 
 #: ../../source/docs/user_manual/processing/console.rst:40
 msgid ""
@@ -322,7 +322,7 @@ msgid ""
 "toolbox, but rather a unique command–line name. To find the right name for "
 "your algorithm, you can use the ``algslist()`` method. Type the following "
 "line in your console:"
-msgstr ""
+msgstr "A présent, la seule instruction (intéressante) à faire est d'exécuter un algorithme. Cela est effectué en utilisant la méthode ``runalg()``, qui prend en premier paramètre le nom de l'algorithme à lancer, puis tous les paramètres nécessaires à son exécution. Vous devez donc connaître le nom de commande de l'algorithme, qui peut être différent de celui affiché dans la boîte à outils. Pour le trouver, utilisez ``alglist()`` dans la console et tapez :"
 
 #: ../../source/docs/user_manual/processing/console.rst:79
 msgid ""
@@ -330,7 +330,7 @@ msgid ""
 "the full list of algorithms, it will only display those that include that "
 "string. If, for instance, you are looking for an algorithm to calculate "
 "slope from a DEM, type ``alglist(\"slope\")`` to get the following result:"
-msgstr ""
+msgstr "Vous pouvez également passer une chaine de caractères en paramètre de cette méthode. Au lieu de retourner la liste complète des algorithmes, elle filtrera les résultats selon la chaîne fournies. Par exemple, si vous recherchez un algorithme permettant de calculer la pente d'un MNT, l'instruction ``alglist(\"slope\")`` donnera le résultat suivant :"
 
 #: ../../source/docs/user_manual/processing/console.rst:99
 msgid ""
@@ -348,14 +348,14 @@ msgstr ""
 msgid ""
 "Calling the method with ``saga:slopeaspectcurvature`` as parameter, you get "
 "the following description:"
-msgstr ""
+msgstr "L'appel à la méthode avec le paramètre ``saga:slopeaspectcurvature`` donnera la description suivante :"
 
 #: ../../source/docs/user_manual/processing/console.rst:135
 msgid ""
 "Depending on the type of parameter, values are introduced differently. The "
 "next list gives a quick review of how to introduce values for each type of "
 "input parameter:"
-msgstr ""
+msgstr "Selon le type de paramètre, les valeurs peuvent être fournies selon plusieurs manières. Une rapide description de ces possibilités est donnée pour chaque type de paramètre d'entrée :"
 
 #: ../../source/docs/user_manual/processing/console.rst:138
 msgid ""
@@ -366,20 +366,20 @@ msgid ""
 "|qg| object representing the layer, you can also pass it as parameter. If "
 "the input is optional and you do not want to use any data object, use "
 "``None``."
-msgstr ""
+msgstr "Les couches raster, vectorielles ou les tables. Indiquez simplement le nom identifiant la donnée (le nom dans la liste de couches de |qg|) ou un nom de fichier (si la couche n'a pas encore été ouverte, elle sera chargée mais pas ajoutée au canevas). Si vous avez une instance d'un objet |qg| représentant une couche, vous pouvez également la transmettre en paramètre. Si l'entrée est optionnelle et que vous ne souhaitez pas fournir de données particulières, utilisez la valeur ``None``."
 
 #: ../../source/docs/user_manual/processing/console.rst:161
 msgid ""
 "In this case, the algorithm has one such parameter, with seven options. "
 "Notice that ordering is zero-based."
-msgstr ""
+msgstr "Dans l'exemple, l'algorithme présente ces types de paramètres, avec sept options. Notez que le premier élément a pour numéro 0."
 
 #: ../../source/docs/user_manual/processing/console.rst:163
 msgid ""
 "Multiple input. The value is a string with input descriptors separated by "
 "semicolons (``;``). As in the case of single layers or tables, each input "
 "descriptor can be the data object name, or its file path."
-msgstr ""
+msgstr "Entrées multiples. La valeur est une chaîne de caractères, avec les entrées séparées par des points-virgules  (``;``). Comme pour les couches simples et les tables, chaque élément d'entrée peut être le nom d'une variable objet ou un nom de fichier."
 
 #: ../../source/docs/user_manual/processing/console.rst:168
 msgid ""
@@ -387,14 +387,14 @@ msgid ""
 "and enclosed between quotes (``\"``). Values start on the upper row and go "
 "from left to right. You can also use a 2-D array of values representing the "
 "table."
-msgstr ""
+msgstr "Table fixée. Entrez la liste de toutes les valeurs, séparées par des virgules (``,``) et entre guillemets (``\"``). Les valeurs commencent par la première ligne et se lisent de gauche à droite. Vous pouvez aussi utiliser un tableau à deux dimensions pour représenter la table."
 
 #: ../../source/docs/user_manual/processing/console.rst:178
 msgid ""
 "Input parameters such as strings, booleans, or numerical values have default"
 " values. To use them, specify ``None`` for the corresponding parameter "
 "entry."
-msgstr ""
+msgstr "Pour spécifier les valeurs par défaut des paramètres tels que chaînes de caractères, booléens ou valeurs numériques, entrez ``None`` dans l'entrée correspondante."
 
 #: ../../source/docs/user_manual/processing/console.rst:181
 msgid ""
@@ -404,7 +404,7 @@ msgid ""
 " you enter a file extension not supported by the algorithm, the default file"
 " format for that output type will be used, and its corresponding extension "
 "appended to the given file path."
-msgstr ""
+msgstr "Pour les données en sortie, entrez le chemin à utiliser, comme dans la boîte à outils. Si vous préférez sauvegarder le résultat dans un fichier temporaire, indiquez ``None``. L'extension du fichier déterminera le format de fichier utilisé. Si elle n'est pas reconnue par l'algorithme, le format de fichier par défaut sera utilisé et l'extension sera ajouté à la fin du nom de fichier."
 
 #: ../../source/docs/user_manual/processing/console.rst:188
 msgid ""
@@ -422,7 +422,7 @@ msgid ""
 "shown in the algorithm description) as keys and the file paths of those "
 "outputs as values. You can load those layers by passing the corresponding "
 "file paths to the ``load()`` method."
-msgstr ""
+msgstr "La méthode ``runalg`` renvoie un dictionnaire Python avec pour clés les noms des sorties (correspondant à la description des éléments de l'algorithme) et pour valeurs les chemins des résultats. Vous pouvez charger ces couches de résultat en passant les chemins correspondants à la méthode ``load()``."
 
 #: ../../source/docs/user_manual/processing/console.rst:209
 msgid ""
@@ -463,7 +463,7 @@ msgstr ""
 msgid ""
 "Let's have a look at the following code, which calculates the Topographic "
 "Wetness Index (TWI) directly from a DEM."
-msgstr ""
+msgstr "Voici par exemple le code permettant de calculer l'Indice d'Humidité Topographique (Topographic Wetness Index, TWI) directement à partir d'un MNT."
 
 #: ../../source/docs/user_manual/processing/console.rst:255
 msgid ""
@@ -472,57 +472,57 @@ msgid ""
 "layer and a flow accumulation layer. We do not have these layers, but since "
 "we have the DEM, we can calculate them by calling the corresponding SAGA "
 "algorithms."
-msgstr ""
+msgstr "Comme vous pouvez le voir, le calcul utilise trois algorithmes, provenant de SAGA. Le dernier calcule le TWI, mais nécessite de une couche représentant la pente et une autre d'accumulation des flux. Dans la mesure où ces deux couches n'existent pas mais que nous disposons d'un MNT, nous allons les calculer en faisant appel aux algorithmes SAGA adéquats."
 
 #: ../../source/docs/user_manual/processing/console.rst:266
 msgid ""
 "These lines start with a double Python comment symbol (``##``) and have the "
 "following structure:"
-msgstr ""
+msgstr "Ces lignes débutent par deux symboles de commentaire Python (``##``) et présentent la structure suivante :"
 
 #: ../../source/docs/user_manual/processing/console.rst:273
 msgid ""
 "Here is a list of all the parameter types that are supported in processing "
 "scripts, their syntax and some examples."
-msgstr ""
+msgstr "Voici la liste des types de paramètres gérés par les scripts de traitement, leur syntaxe ainsi que quelques exemples."
 
 #: ../../source/docs/user_manual/processing/console.rst:276
 msgid "``raster``. A raster layer."
-msgstr ""
+msgstr "``raster``. Une couche raster."
 
 #: ../../source/docs/user_manual/processing/console.rst:277
 msgid "``vector``. A vector layer."
-msgstr ""
+msgstr "``vector``. Une couche vectorielle."
 
 #: ../../source/docs/user_manual/processing/console.rst:278
 msgid "``table``. A table."
-msgstr ""
+msgstr "``table``. Une table."
 
 #: ../../source/docs/user_manual/processing/console.rst:279
 msgid ""
 "``number``. A numerical value. A default value must be provided. For "
 "instance, ``depth=number 2.4``."
-msgstr ""
+msgstr "``number``. Une valeur numérique. Une valeur par défaut doit être définie. Par exemple, ``depth=number 2.4``."
 
 #: ../../source/docs/user_manual/processing/console.rst:281
 msgid ""
 "``string``. A text string. As in the case of numerical values, a default "
 "value must be added. For instance, ``name=string Victor``."
-msgstr ""
+msgstr "``string``. Une chaîne de caractère. Comme pour les valeurs numériques, une valeur par défaut doit être définie. Par exemple, ``name=string Victor``."
 
 #: ../../source/docs/user_manual/processing/console.rst:283
 msgid ""
 "``boolean``. A boolean value. Add ``True`` or ``False`` after it to set the "
 "default value. For example, ``verbose=boolean True``."
-msgstr ""
+msgstr "``boolean``. Une valeur booléenne. Ajoutez ``True`` (Vrai) ou ``False`` (Faux) pour définir la valeur par défaut. Par exemple, ``verbose=boolean True`` pour plus un rendu plus parlant."
 
 #: ../../source/docs/user_manual/processing/console.rst:291
 msgid "``folder``. A folder."
-msgstr ""
+msgstr "``folder``. Un répertoire."
 
 #: ../../source/docs/user_manual/processing/console.rst:292
 msgid "``file``. A filename."
-msgstr ""
+msgstr "``file``. Un nom de fichier."
 
 #: ../../source/docs/user_manual/processing/console.rst:298
 msgid ""
@@ -530,7 +530,7 @@ msgid ""
 "to improve its appearance, replacing low hyphens with spaces. So, for "
 "instance, if you want the user to see a parameter named ``A numerical "
 "value``, you can use the variable name ``A_numerical_value``."
-msgstr ""
+msgstr "A l'affichage du nom de paramètre, les underscores ('_') sont convertis en espaces pour améliorer la lisibilité. Ainsi, par exemple, si vous souhaitez que l'utilisateur saisisse une valeur appelée 'Valeur numérique', vous devez utiliser une variable nommée ``Valeur_numérique``."
 
 #: ../../source/docs/user_manual/processing/console.rst:303
 msgid ""
@@ -546,7 +546,7 @@ msgid ""
 "The value assigned to the output variables is always a string with a file "
 "path. It will correspond to a temporary file path in case the user has not "
 "entered any output filename."
-msgstr ""
+msgstr "La valeur attribuée à une variable de sortie est toujours une chaîne de caractères contenant le chemin de l'objet. Si le nom est vide, un fichier temporaire sera créé."
 
 #: ../../source/docs/user_manual/processing/console.rst:322
 msgid ""
@@ -555,7 +555,7 @@ msgid ""
 "the layers it produces, the final TWI layer will be loaded (using the case "
 "of our previous example), since it is saved to the file entered by the user,"
 " which is the value of the corresponding output."
-msgstr ""
+msgstr "Si un résultat est défini, l'algorithme tentera de l'ajouter à |qg| à l'issue de son exécution. C'est la raison pour laquelle la couche résultat TWI, nommée explicitement par l'utilisateur, sera chargée, même si la méthode ``runalg()`` ne le fait pas."
 
 #: ../../source/docs/user_manual/processing/console.rst:327
 msgid ""
@@ -564,7 +564,7 @@ msgid ""
 "algorithm, it should be declared as such. Otherwise, you will not be able to"
 " properly use the algorithm in the modeler, since its syntax (as defined by "
 "the tags explained above) will not match what the algorithm really creates."
-msgstr ""
+msgstr "N'utilisez donc pas la méthode ``load()`` dans vos scripts, mais uniquement à partir de la console. Si un algorithme définit une couche en sortie, celle-ci doit être déclarée ainsi. Dans le cas contraire, vous ne pourriez pas l'utiliser dans le modeleur parce que sa syntaxe (comme définie par ses étiquettes, exposées précédemment) ne correspond pas à ce que l'algorithme crée effectivement."
 
 #: ../../source/docs/user_manual/processing/console.rst:333
 msgid ""
@@ -572,7 +572,7 @@ msgid ""
 "to assign a value to them. To do so, just set the value of a variable with "
 "the name you used to declare that output. For instance, if you have used "
 "this declaration,"
-msgstr ""
+msgstr "Les sorties masquées (nombres ou chaînes) n'ont pas de valeur. C'est à vous de leur assigner une valeur. Pour cela, affecter une valeur à la variable pour la déclarer en sortie. Par exemple, vous pourriez utiliser la déclaration suivante,"
 
 #: ../../source/docs/user_manual/processing/console.rst:351
 msgid ""
@@ -580,7 +580,7 @@ msgid ""
 "the user. You have a global named ``progress`` available, with two possible "
 "methods: ``setText(text)`` and ``setPercentage(percent)`` to modify the "
 "progress text and the progress bar."
-msgstr ""
+msgstr "Si votre algorithme est long, il est conseillé d'informer l'utilisateur de l'avancée du traitement de l'algorithme. Vous disposez de la variable globale ``progress``, avec deux méthodes, ``setText(text)`` et ``setPercentage(percent)`` pour modifier le message et la barre de progression."
 
 #: ../../source/docs/user_manual/processing/console.rst:356
 msgid ""
@@ -588,7 +588,7 @@ msgid ""
 " to create algorithms using the processing framework classes. You can right-"
 "click on any script algorithm and select :guilabel:`Edit script` to edit its"
 " code or just to see it."
-msgstr ""
+msgstr "Plusieurs exemples sont fournis. Veuillez vous y reporter pour servir d'exemples. Cliquez avec le bouton droit sur un script et choisissez ``Éditer le script`` pour voir et éditer le code correspondant."
 
 #: ../../source/docs/user_manual/processing/console.rst:364
 msgid ""
@@ -597,7 +597,7 @@ msgid ""
 "dialog, you will find an **[Edit script help]** button. Click on it and it "
 "will take you to the help editing dialog. Check the section about the "
 "graphical modeler to know more about this dialog and how to use it."
-msgstr ""
+msgstr "Comme pour les modèles, vous pouvez ajouter des commentaires à vos scripts, pour expliciter le traitement effectué et son utilisation. Dans la fenêtre d'édition du script se situe un bouton **[Editer l'aide]**, qui vous amènera à la fenêtre d'édition de l'aide. Veuillez vous reporter à la section Modeleur graphique pour plus d'information sur cette fenêtre."
 
 #: ../../source/docs/user_manual/processing/console.rst:370
 msgid ""
@@ -608,7 +608,7 @@ msgid ""
 " it), the help content you wrote will be lost. If your script was already "
 "saved and is associated to a filename, saving the help content is done "
 "automatically."
-msgstr ""
+msgstr "Les fichiers d'aide sont sauvegardés dans le même répertoire que les scripts, avec l’extension :file:`.help`. Veuillez noter qu'à la première édition de l'aide, la fermeture de la fenêtre ne sauvegarde pas vos modifications. Par contre, si le fichier a déjà été sauvegardé une fois préalablement, les modifications seront conservées."
 
 #: ../../source/docs/user_manual/processing/console.rst:388
 msgid ""

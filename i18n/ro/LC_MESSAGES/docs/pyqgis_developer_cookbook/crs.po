@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2014-06-13 17:30+0000\n"
+"PO-Revision-Date: 2014-06-14 03:05+0000\n"
 "Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/qgis-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -71,7 +71,7 @@ msgstr "creați un CRS nevalid iar apoi utilizați una din funcțiile :func:`cre
 msgid ""
 "It's wise to check whether creation (i.e. lookup in the database) of the CRS"
 " has been successful: :func:`isValid` must return :const:`True`."
-msgstr ""
+msgstr "Este înțelept să verificăm dacă a avut loc crearea cu succes a CRS-ului (de exemplu, efectuând o căutare în baza de date): :func:`isValid` trebuie să întoarcă :const:`True`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/crs.rst:52
 msgid ""
@@ -81,7 +81,7 @@ msgid ""
 "with :func:`QgsApplication.setPrefixPath` otherwise it will fail to find the"
 " database. If you are running the commands from QGIS python console or "
 "developing a plugin you do not care: everything is already set up for you."
-msgstr ""
+msgstr "Rețineți că pentru inițializarea sistemelor de referință spațiale QGIS trebuie să căutați valorile corespunzătoare în baza de date internă :file:`srs.db`. Astfel, în cazul în care creați o aplicație independentă va trebui să stabiliți corect căile, cu ajutorul :func:`QgsApplication.setPrefixPath`, în caz contrar baza de date nu va fi găsită. Dacă executați comenzile din consola QGIS python sau dezvoltați vreun plugin, atunci totul este în regulă: totul este deja configurat pentru dvs."
 
 #: ../../source/docs/pyqgis_developer_cookbook/crs.rst:59
 msgid "Accessing spatial reference system information::"
@@ -100,7 +100,7 @@ msgid ""
 "call :func:`transform` function to do the transformation. By default it does"
 " forward transformation, but it is capable to do also inverse "
 "transformation::"
-msgstr ""
+msgstr "Puteți face transformarea între diferitele sisteme de referință spațiale, cu ajutorul clasei :class: `QgsCoordinateTransform`. Cel mai simplu mod de a o folosi este de a crea CRS-urile sursă și destinație și să construiți o instanță a :class:`QgsCoordinateTransform` cu ele. Apoi, doar repetați apelul guncției :func:`transform` pentru a face transformarea. În mod implicit, aceasta face transformarea în ordinea deja precizată dar este capabilă de a face și transformarea inversă::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/crs.rst:11
 msgid "coordinate reference systems"

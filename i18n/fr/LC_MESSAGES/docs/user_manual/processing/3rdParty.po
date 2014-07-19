@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# MarieSilvestre <marie.silvestre@gmail.com>, 2013
+# MarieSilvestre <marie.silvestre@gmail.com>, 2013-2014
 # Sant-anna <delazj@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-06-07 08:26+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>\n"
+"PO-Revision-Date: 2014-06-27 10:18+0000\n"
+"Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -419,7 +419,7 @@ msgid ""
 "SAGA algorithm, |qg| resamples them to a common grid system and then passes "
 "them to SAGA (unless the SAGA algorithm can operate with layers from "
 "different grid systems)."
-msgstr ""
+msgstr "La plupart des algorithmes SAGA nécessitent habituellement des couches Raster en entrée sur la même emprise et la même grille, couvrant la même emprise et ayant la même résolution. A l'appel d'un algorithme SAGA depuis |qg|, vous pouvez cependant utiliser n'importe quelle couche, quelles que soient leur emprise et leur résolution. Quand plusieurs couches raster son indiquées en entré d'un algorithme SAGA, |qg| les rééchantillonne sur une grille commune avant de les transmettre à SAGA (à moins que l'algorithme SAGA manipule directement des couches dans des grilles différentes)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:143
 msgid ""
@@ -455,7 +455,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:178
 msgid "Limitations in cell size"
-msgstr ""
+msgstr "Limitations dans la résolution"
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:180
 msgid ""
@@ -522,7 +522,7 @@ msgid ""
 "Since almost all the algorithms that you might like to incorporate into |qg|"
 " will use or generate spatial data, knowledge of spatial packages like "
 "``maptools`` and, especially, ``sp``, is mandatory."
-msgstr ""
+msgstr "Voyons un simple script, qui appelle la méthode ``spsample`` de R, pour créer une grille aléatoire à l'intérieur de l'emprise d'un ensemble de polygones d'une couche donnée. Cette fonction appartient au paquet ``maptools``. Comme la plupart des algorithmes que vous aurez à intégrer dans |qg| utilisent ou génèrent des données spatiales, la connaissance des paquets spatiaux comme ``maptools`` et surtout ``sp`` est un prérequis."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:252
 msgid ""
@@ -540,7 +540,7 @@ msgid ""
 "things: creating the user interface to ask the user for the value of that "
 "parameter and creating a corresponding R variable that can later be used as "
 "input for R commands."
-msgstr ""
+msgstr "Quand vous déclarez un paramètre d'entrée, |qg| utilise cette information pour deux choses : créer le formulaire pour demander à l'utilisateur la valeur de ce paramètre et créer la variable R correspondante qui sera ensuite utilisée dans les commandes R."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:263
 msgid ""
@@ -572,7 +572,7 @@ msgstr "Les tables sont ouvertes par la commande ``read.csv()``. Si la table à 
 msgid ""
 "Additionally, raster files can be read using the ``readGDAL()`` command "
 "instead of ``brick()`` by using the ``##usereadgdal``."
-msgstr ""
+msgstr "De plus, les couches raster peuvent être lues avec la commande ``readGDAL()`` au lieu de ``brick()``, en utilisant ``##usereadgdal``."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:297
 msgid ""
@@ -657,7 +657,7 @@ msgid ""
 " used to execute the algorithm each time. If the latter approach is the "
 "behaviour you prefer, just check the :guilabel:`Use min covering region` "
 "option in the GRASS configuration parameters."
-msgstr ""
+msgstr "Les algorithmes GRASS nécessitent la définition d'une région. Cette région peut être définie manuellement, en fournissant les valeurs, comme pour la configuration de SAGA, ou de manière automatique, correspondant à l'emprise minimale des données d'entrée à l'exécution de l'algorithme. Si vous préférez ce dernier réglage, cochez l'option :guilabel:`Utiliser l'emprise minimale` dans les paramètres de configuration de GRASS."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:390
 msgid ""
@@ -665,7 +665,7 @@ msgid ""
 "mapset is needed to run GRASS, and the processing framework creates a "
 "temporary one for each execution. You have to specify if the data you are "
 "working with uses geographical (lat/lon) coordinates or projected ones."
-msgstr ""
+msgstr "Le dernier paramètre à configurer est le jeu de données. Un jeu de données est nécessaire pour exécuter GRASS et le module de traitement crée un jeu temporaire à chaque exécution. Vous devez indiquer si le système de coordonnées est géographique (lat/lon) ou projeté."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:398
 msgid ""

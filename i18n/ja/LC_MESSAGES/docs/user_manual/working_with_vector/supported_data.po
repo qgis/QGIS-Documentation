@@ -4,16 +4,17 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2013
-# Choro <u.ko.kubot@gmail.com>, 2013
+# Choro <u.ko.kubot@gmail.com>, 2013-2014
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2013-2014
+# OKANO Takayoshi <kano@na.rim.or.jp>, 2014
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-06-13 12:52+0000\n"
-"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>\n"
+"PO-Revision-Date: 2014-06-22 20:12+0000\n"
+"Last-Translator: OKANO Takayoshi <kano@na.rim.or.jp>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -196,7 +197,7 @@ msgid ""
 "Depending on your computing environment, storing passwords in your |qg| "
 "settings may be a security risk. Your customized settings for |qg| are "
 "stored based on the operating system:"
-msgstr "あなたのコンピュータの環境によっては |qg| の設定でパスワードを保存することはセキュリティリスクになります. あなたがカスタマイズした |qg| の設定はオペレ－ティングシステム別の方法で保存されます:"
+msgstr "あなたのコンピュータの環境によっては |qg| の設定でパスワードを保存することはセキュリティリスクになります. あなたがカスタマイズした |qg| の設定はオペレーティングシステム別の方法で保存されます:"
 
 # 9eaaf502472642cc8df181ac4734e5ae
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:415
@@ -575,7 +576,7 @@ msgid ""
 "|mActionAddOgrLayer| :sup:`Add Vector Layer` toolbar button, or simply press"
 " :kbd:`Ctrl+Shift+V`. This will bring up a new window (see "
 "figure_vector_1_)."
-msgstr " :index:`shapefileをロードする` ためには,  |qg| を起動してツールバーボタンで and click on the |mActionAddOgrLayer| :sup:`ベクタレイヤの追加` をクリックするか単純に :kbd:`Ctrl+Shift+V` とタイプして下さい. これを行うと新しいウィンドウが表示されます ( figure_vector_1_ 参照)."
+msgstr " :index:`shapefileをロードする` ためには,  |qg| を起動してツールバーボタンで |mActionAddOgrLayer| :sup:`ベクタレイヤの追加` をクリックするか単純に :kbd:`Ctrl+Shift+V` とタイプして下さい. これを行うと新しいウィンドウが表示されます ( figure_vector_1_ 参照)."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:76
 msgid ""
@@ -687,7 +688,7 @@ msgid ""
 " first row usually contains the column names. A common type of delimited "
 "text file is a CSV (Comma Separated Values), with each column separated by a"
 " comma."
-msgstr ""
+msgstr "表形式のデータは読みやすくシンプルなので広く共通に利用される形式です -- データはプレインテキストエディタで閲覧や編集もできます. デリミテッドテキストファイルはそれぞれのカラムが指定された文字で区切られ各行がラインブレークで構成されている属性テーブルです. 通常最初の行にはカラム名が格納されます. 一般的なデリミテッドテキストファイルはそれぞれのカラムがコンマで区切られたCSVです (Comma Separated Values)."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:207
 msgid ""
@@ -712,7 +713,7 @@ msgstr "|qg| ではデリミテッドテキストファイルをレイヤまた�
 msgid ""
 "The file must have a delimited header row of field names. This must be the "
 "first line in the text file."
-msgstr "ファイルは区切り文字で区切られたフィール名が記述されたヘッダ行が必要です. これはテキストファイルの先頭の行になければいけません."
+msgstr "ファイルは区切り文字で区切られたフィールド名が記述されたヘッダ行が必要です. これはテキストファイルの先頭の行になければいけません."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:217
 msgid ""
@@ -812,7 +813,7 @@ msgid ""
 "possible to |checkbox| :guilabel:`Discard empty fields`. If necessary, you "
 "can force a comma to be the decimal separator by activating |checkbox| "
 ":guilabel:`Decimal separator is comma`."
-msgstr ""
+msgstr "フィールドの前と後の空白を除去するヘルパーオプションがあります --- |checkbox| :guilabel:`前後の空白削除`. またこのオプションも使えますAlso |checkbox| :guilabel:`空フィールドを削除`. 必要ならばコンマを数字の桁区切り文字にすることができます |checkbox| :guilabel:`コンマを小数点区切りに利用`."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:289
 msgid ""
@@ -821,7 +822,7 @@ msgid ""
 "definition for point, line or polygon objects. If the file contains non-"
 "spatial data, activate |radiobuttonon| :guilabel:`No geometry (attribute "
 "only table)` and it will be loaded as an ordinal table."
-msgstr ""
+msgstr "もし空間情報がWKTで記述されている場合 |radiobuttonon| :guilabel:`Well Known Text` オプションを有効にして点、線またはポリゴンオブジェクトを定義しているWKTが格納されているフィールドを選択して下さい. もしファイルが空間情報を持っていない場合は |radiobuttonon| :guilabel:`No geometry (attribute only table)` を有効にして下さい,このデータは通常のテーブルとしてロードされます."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:295
 msgid "Additionaly, you can enable:"
@@ -858,7 +859,7 @@ msgstr "近年, オープンストリートマップ（OpenStreetMap: OSM）プ�
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:321
 msgid "|qg| integrates OpenStreetMap import as a core functionality."
-msgstr "|qg| ではOpenstreetmapデータのインポート機能をコア機能として統合しています."
+msgstr "|qg| ではOpenStreetMapデータのインポート機能をコア機能として統合しています."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:323
 msgid ""
@@ -1205,7 +1206,7 @@ msgid ""
 "selecting the |mActionAddMssqlLayer| :menuselection:`Add MSSQL Spatial "
 "Layer...` option from the :menuselection:`Layer` menu, or by typing "
 ":kbd:`Ctrl+Shift+M`."
-msgstr ""
+msgstr "|mActionAddMssqlLayer| |qg| はネイティブでMS SQL 2008 をサポートしています. 初めて MSSQL 空間データをロードする時は ツールバーの |mActionAddMssqlLayer| :sup:`Add MSSQL Spatial Layer` ボタンをクリックするか  :menuselection:`Layer` メニューの |mActionAddMssqlLayer| :menuselection:`Add MSSQL Spatial Layer...` オプションを選択するかキーボードで :kbd:`Ctrl+Shift+M` とタイプしてください."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:723
 msgid "Oracle Spatial Layers"
@@ -1216,7 +1217,7 @@ msgid ""
 "The spatial features in Oracle Spatial aid users in managing geographic and "
 "location data in a native type within an Oracle database. |qg| now has "
 "support for such layers."
-msgstr ""
+msgstr "Oracle Spatial の空間機能はユーザがOracleデータベースのネイティブ型を使って地理情報や位置情報を管理することを助けます. |qg| は現在そのようなレイヤをサポートします."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:732
 msgid ""
@@ -1305,14 +1306,14 @@ msgid ""
 "If the :guilabel:`Add Oracle Spatial layers` dialog is not already open, "
 "click on the |mActionAddOracleLayer| :sup:`Add Oracle Spatial Layer` toolbar"
 " button."
-msgstr ""
+msgstr " :guilabel:`ORACLE Spatial レイヤの追加` ダイアログが開いていない場合、ツールバーボタンの |mActionAddOracleLayer| :sup:`ORACLE Spatial レイヤの追加` をクリックして下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:807
 msgid ""
 "Optionally, use some |checkbox| :guilabel:`Search Options` to define which "
 "features to load from the layer or use the **[Build query]** button to start"
 " the :guilabel:`Query builder` dialog."
-msgstr ""
+msgstr "オプションで |checkbox| :guilabel:`Search Options` 使うとレイヤからどの地物をロードするか定義できます,また **[Build query]** ボタンを使うと  :guilabel:`Query builder` ダイアログを開始できます."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:811
 msgid ""
@@ -1320,7 +1321,7 @@ msgid ""
 "the :kbd:`Shift` key while clicking. See section :ref:`vector_query_builder`"
 " for information on using the Oracle Query Builder to further define the "
 "layer."
-msgstr ""
+msgstr "クリックするとそれを選択できます.  :kbd:`Shift` キーを押しながらクリックすると複数のレイヤを選択することができます. PostgreSQLクエリビルダを使ってレイヤを高度に利用する方法についてはセクション :ref:`vector_query_builder` を参照して下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:819
 msgid "**Oracle Spatial Layers**"
@@ -1330,7 +1331,7 @@ msgstr "**Oracle Spatial レイヤ**"
 msgid ""
 "Normally, an Oracle Spatial layer is defined by an entry in the "
 "**USER_SDO_METADATA** table."
-msgstr ""
+msgstr "通常 ORACLE Spatial レイヤは **USER_SDO_METADATA** テーブルのエントリで定義されています."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:194
 msgid "CSV"
