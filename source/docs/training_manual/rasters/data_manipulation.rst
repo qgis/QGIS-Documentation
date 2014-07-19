@@ -17,7 +17,8 @@ environment.
 |basic| |FA| Loading Raster Data
 -------------------------------------------------------------------------------
 
-* Open your :kbd:`analysis.qgs` map.
+* Open your :kbd:`analysis.qgs` map (which you should have created and saved
+  during the previous module).
 * Deactivate all the layers except the :guilabel:`solution` and
   :guilabel:`important_roads` layers.
 * Click on the :guilabel:`Load Raster Layer` button:

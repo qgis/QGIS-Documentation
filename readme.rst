@@ -129,7 +129,42 @@ General use::
     # now build :) (make sure that you are in the QGIS-Documentation root folder)
     # eg english only (for testing, only QGIS stable is being translated)
     paver html
+	
+To be able to build localized versions of the Documentation with paver the
+'Transifex-client (tx)' is needed.
+
+On linux, install with::
+
+	# note that we use a slightly older version of tx
+	pip install transifex-client==0.9
+	
+On Windows, you should download it from: http://files.transifex.com/transifex-client/0.10/tx.exe
+see http://support.transifex.com/customer/portal/articles/998120-client-on-windows	
+
+To make tx.exe usable in the paver script, either put it IN this directory next to the pavement.py file, OR add it to your PATH
+
+IMPORTANT: to be able to pull from transifex.com, you will need a credentials file. 
+This file should be named: ``.transifexrc`` and easiest it to put it in you home dir c:/user/you. 
+Another option is to put it in the root of this project, but be carefull to not put your credentials in Github :-)
+
+The file should contain this::
+
+	[https://www.transifex.com]
+	hostname = https://www.transifex.com
+	password = yourtransifexpassword
+	token = 
+	username = yourtransifexusername
+
+With a working tx and a .transifexrc, you should be able to build for example the german version of docs via::	
+
+    # german:
+    paver html -l de
     
+During the build you will see this command::
+
+	tx pull --minimum-perc=1 --skip -f -l de
+	
+This will pull all german po files from transifex (based on the .tx/config file in the root of this project)
 
 
 Translating the english QGIS Documentation
@@ -199,9 +234,8 @@ Manual and Application Translations
     * Contributor : Zara Teixeira < zarafani[at]gmail.com >
 
   * Russian Team Lead: Alex Bruy < alexander.bruy[at]gmail.com >
-  * Spanish Team Lead : Mario Pisa < mario.pisa[at]gmail.com >
-
-    * Contributor : Carlos Dávila < cdavilam[at]jemila.jazztel.es >
+  
+  * Spanish Team Lead : Carlos Dávila < cdavilam[at]orangecorreo.es >
 
 
 QGIS Website and Website Translation

@@ -51,7 +51,7 @@ providers:
     uri = QgsDataSourceURI()
     # set host name, port, database name, username and password
     uri.setConnection("localhost", "5432", "dbname", "johny", "xxx")
-    # set database schema, table name, geometry column and optionaly 
+    # set database schema, table name, geometry column and optionally
     # subset (WHERE clause)
     uri.setDataSource("public", "roads", "the_geom", "cityid = 2643")
 
@@ -70,7 +70,7 @@ providers:
 
   Note: from QGIS version 1.7 the provider string is structured as a URL, so 
   the path must be prefixed with *file://*. Also it allows WKT (well known
-  text) formatted geomtries as an alternative to "x" and "y" fields, and allows
+  text) formatted geometries as an alternative to "x" and "y" fields, and allows
   the coordinate reference system to be specified. For example
   ::
 
@@ -101,7 +101,7 @@ providers:
     schema = ''
     table = 'Towns'
     geom_column = 'Geometry'
-    uri.setDataSource(schema, table, geom_colum)
+    uri.setDataSource(schema, table, geom_column)
     
     display_name = 'Towns'
     vlayer = QgsVectorLayer(uri.uri(), display_name, 'spatialite')

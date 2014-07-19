@@ -140,7 +140,8 @@ You may wish to re-use the :kbd:`roads.shp` layer you created in earlier lessons
 
 :ref:`Check your results <vector-analysis-basic-1>`
 
-* Save your map under :guilabel:`exercise_data`, as :kbd:`analysis.qgs`.
+* Save your map under :guilabel:`exercise_data`, as :kbd:`analysis.qgs` (this
+  map will be used in future modules).
 * In your operating system's file manager, create a new folder under
   :guilabel:`exercise_data` and call it :kbd:`residential_development`. This is
   where you'll save the datasets that will be the results of the analysis

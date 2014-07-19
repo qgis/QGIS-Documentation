@@ -45,7 +45,7 @@ created by several different ways:
 It's wise to check whether creation (i.e. lookup in the database) of the CRS
 has been successful: :func:`isValid` must return :const:`True`.
 
-Note that for initialization of spatial reference systems QGIS needs to lookup
+Note that for initialization of spatial reference systems QGIS needs to look up
 appropriate values in its internal database :file:`srs.db`. Thus in case you
 create an independent application you need to set paths correctly with
 :func:`QgsApplication.setPrefixPath` otherwise it will fail to find the database.

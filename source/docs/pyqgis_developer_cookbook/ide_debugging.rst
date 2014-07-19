@@ -2,7 +2,7 @@
 IDE settings for writing and debugging plugins
 ***********************************************
 
-Although each programmer has his prefered IDE/Text editor, here are some recommendations for setting up popular IDE's for writing and debugging QGIS Python plugins.
+Although each programmer has his preferred IDE/Text editor, here are some recommendations for setting up popular IDE's for writing and debugging QGIS Python plugins.
 
 
 
@@ -17,14 +17,14 @@ way to do this, is to modify the startup batch file of QGIS.
 If you used the OSGeo4W Installer, you can find this under the bin folder
 of your OSGoeW install. Look for something like :file:`C:\\OSGeo4W\\bin\\qgis-unstable.bat`.
 
-For using `Pyscripter IDE <http://code.google.com/p/pyscripter>`_, here's what ou have to do:
+For using `Pyscripter IDE <http://code.google.com/p/pyscripter>`_, here's what you have to do:
 
 * Make a copy of qgis-unstable.bat and rename it pyscripter.bat.
-* Open it in an editor. And remove the last line, the one that starts qgis.
-* Add a line that points to the your pyscripter executable and add the
-  commandline argument that sets the version of python to be used (2.7 in the case of QGIs 2.0)
-* Also add the argument that points to the folder where pyscripter can
-  find the python dll used by qgis, you can find this under the bin folder
+* Open it in an editor. And remove the last line, the one that starts QGIS.
+* Add a line that points to the your Pyscripter executable and add the
+  commandline argument that sets the version of Python to be used (2.7 in the case of QGIS 2.0)
+* Also add the argument that points to the folder where Pyscripter can
+  find the Python dll used by QGIS, you can find this under the bin folder
   of your OSGeoW install::
 
     @echo off
@@ -35,15 +35,15 @@ For using `Pyscripter IDE <http://code.google.com/p/pyscripter>`_, here's what o
     path %PATH%;%GISBASE%\bin
     Start C:\pyscripter\pyscripter.exe --python25 --pythondllpath=C:\OSGeo4W\bin
 
-Now when you double click this batch file it will start pyscripter, with the correct path.
+Now when you double click this batch file it will start Pyscripter, with the correct path.
 
-More popular that Pyscripter, Eclipse is a common choice among developers. In the following sections, we will be explaining how to configure it for depelopping and testing plugins. To prepare your environment for using Eclipse in windows, you should also create a batch file and use it to start Eclipse. 
+More popular that Pyscripter, Eclipse is a common choice among developers. In the following sections, we will be explaining how to configure it for developing and testing plugins. To prepare your environment for using Eclipse in windows, you should also create a batch file and use it to start Eclipse.
 
 To create that batch file, follow these steps.
 
-- Locate the folder where ``qgis_core.dll`` resides in. Normally this is ``C:\OSGeo4W\apps\qgis\bin`` , but if you compiled your own qgis application this is in your build folder in ``output/bin/RelWithDebInfo``
+- Locate the folder where ``qgis_core.dll`` resides in. Normally this is ``C:\OSGeo4W\apps\qgis\bin``, but if you compiled your own QGIS application this is in your build folder in ``output/bin/RelWithDebInfo``
 - Locate your eclipse.exe executable. 
-- Create the following script and use this to start eclipse when developping QGIS plugins.
+- Create the following script and use this to start eclipse when developing QGIS plugins.
 
 ::
 
@@ -74,7 +74,7 @@ There is some preparation to be done on QGIS itself. Two plugins are of interest
 
 Setting up Eclipse
 -------------------
-In Eclipse, create a new project. You can select *General Project* and link your real sources later on, so it does not really mather where you place this project.
+In Eclipse, create a new project. You can select *General Project* and link your real sources later on, so it does not really matter where you place this project.
 
 .. figure:: /static/pyqgis_developer_cookbook/eclipsenewproject.png
    :align: center
@@ -115,7 +115,7 @@ Open the Console view (*Window => Show view*). It will show the Debug Server con
 
 You have now an interactive console which let's you test any commands from within the current context. You can manipulate variables or make API calls or whatever you like.
 
-A little bit annoying is, that everytime you enter a command, the console switches back to the Debug Server. To stop this behavior, you can click the *Pin Console* button when on the Debug Server page and it should remember this decision at least for the current debug session.
+A little bit annoying is, that every time you enter a command, the console switches back to the Debug Server. To stop this behavior, you can click the *Pin Console* button when on the Debug Server page and it should remember this decision at least for the current debug session.
 
 Making eclipse understand the API
 -----------------------------------
@@ -133,24 +133,24 @@ You will see your configured python interpreter in the upper part of the window 
 
    PyDev Debug Console
 
-First open the Libraries tab. Add a New Folder and choose the python folder of your QGIS installation. If you do not know where this folder is (it's not the plugins folder) open QGIS, start a python console and simply enter ``qgis`` and press enter. It will show you which qgis module it uses and its path. Strip the trailing ``/qgis/__init__.pyc`` from this path and you've got the path you are looking for.
+First open the Libraries tab. Add a New Folder and choose the python folder of your QGIS installation. If you do not know where this folder is (it's not the plugins folder) open QGIS, start a python console and simply enter ``qgis`` and press enter. It will show you which QGIS module it uses and its path. Strip the trailing ``/qgis/__init__.pyc`` from this path and you've got the path you are looking for.
 
-You should also add your plugins folder here (on linux its ~/.qgis/python/plugins ).
+You should also add your plugins folder here (on Linux it is ~/.qgis/python/plugins ).
 
-Next jump to the *Forced Builtins* tab, click on *New...* and enter ``qgis``. This will make eclipse parse the QGIS API. You probably also want eclipse to know about the PyQt4 API. Therefore also add PyQt4 as forced builtin. That should probably already be present in your libraries tab 
+Next jump to the *Forced Builtins* tab, click on *New...* and enter ``qgis``. This will make eclipse parse the QGIS API. You probably also want eclipse to know about the PyQt4 API. Therefore also add PyQt4 as forced builtin. That should probably already be present in your libraries tab.
 
 Click *OK* and you're done.
 
-Note: everytime the QGIS API changes (e.g. if you're compiling QGIS master and the sip file changed), you should go back to this page and simply click *Apply*. This will let Eclipse parse all the libraries again.
+Note: every time the QGIS API changes (e.g. if you're compiling QGIS master and the sip file changed), you should go back to this page and simply click *Apply*. This will let Eclipse parse all the libraries again.
 
 
 For another possible setting of Eclipse to work with QGIS Python plugins, check `this link <http://linfiniti.com/2011/12/remote-debugging-qgis-python-plugins-with-pydev>`_
 
 
 Debugging using PDB
-=================================
+===================
 
-If you do not use an IDE such as Eclipse, you can debug using PDB, following this steps.
+If you do not use an IDE such as Eclipse, you can debug using PDB, following these steps.
 
 First add this code in the spot where you would like to debug::
 
@@ -175,6 +175,6 @@ And when the application hits your breakpoint you can type in the console!
 .. index:: plugins; testing
 
 .. todo::
-    Add testing informations
+    Add testing information
 
 .. index:: plugins; releasing
