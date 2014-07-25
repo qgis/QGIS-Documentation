@@ -15,9 +15,9 @@ Managing LiDAR data within QGIS is possible using the Processing framework and t
 
 You can obtain a digital elevation model (DEM) from a LiDAR point cloud and then create a hillshade raster that is visually more intuitive for presentation purposes. First you will have to set up the :guilabel:`Processing`framework settings to properly work with LAStools:
 
-* If you have already started QGIS, close it.
-* Go to the folder :kbd:`C:\\Program Files\\QGIS Valmiera\\apps\\qgis\\python\\plugins\\processing\\`.
-* If there is a folder named :kbd:`lidar`, delete or rename it.
+* Close QGIS, if you have already started it.
+* An old lidar plugin might be installed by default in your system in the folder :file`C:/Program Files/QGIS Valmiera/apps/qgis/python/plugins/processing/`.
+* If you have a folder named :kbd:`lidar`, delete it. This is valid for some installations of QGIS 2.2 and 2.4.
 
 .. image:: /static/training_manual/forestry/remove_lidar_folder.png
    :align: center
@@ -27,7 +27,7 @@ You can obtain a digital elevation model (DEM) from a LiDAR point cloud and then
 
 Now you need to install the LAStools to your computer. Get the newest :kbd:`lastools` version `here <http://lastools.org/download/lastools.zip>`_  and extract the content of the :kbd:`lastools.zip` file into a folder in your system, for example, :kbd:`c:\\lastools\\`. The path to the :kbd:`lastools` folder cannot have spaces or special characters.
 
-.. note:: Read the :kbd:`LICENSE.txt` file inside the :kbd:`lastools` folder. Some of the LAStools are open source and other are closed source and require licensing for most commercial and gubernamental use.  For education and evaluation purposes you can use and test LAStools as much as you need to.
+.. note:: Read the :kbd:`LICENSE.txt` file inside the :kbd:`lastools` folder. Some of the LAStools are open source and other are closed source and require licensing for most commercial and governmental use.  For education and evaluation purposes you can use and test LAStools as much as you need to.
   
 The plugin and the actual algorithms are now installed in your computer and almost ready to use, you just need to set up the Processing framework to start using them:
 
@@ -48,7 +48,7 @@ To setup the LAStools in QGIS:
 |basic| |FA| Calculating a DEM with LAStools
 -------------------------------------------------------------------------------
 
-You have already used the :menuselection:`Processing` toolbox in Module 7 to run some SAGA algorithms. Now you are going to use it to run LAStools programs:
+You have already used the :menuselection:`Processing` toolbox in :dod:`../vector_analysis/spatial_statistics` to run some SAGA algorithms. Now you are going to use it to run LAStools programs:
 
 * Open :menuselection:`Processing --> Toolbox`.
 * In the dropdown menu at the bottom, select :guilabel:`Advanced interface`.
@@ -59,7 +59,7 @@ You have already used the :menuselection:`Processing` toolbox in Module 7 to run
 
 * Expand it to see the tools available, and expand also the :guilabel:`LAStools` category (the number of algorithms may vary).
 * Scroll down until you find the :guilabel:`lasview` algorithm, double click it to open.
-* As :guilabel:`Input LAS/LAZ file`, browse to :kbd:`exercise_data\\forestry\\lidar\\` and select the :kbd:`rautjarvi_lidar.laz` file.
+* At :guilabel:`Input LAS/LAZ file`, browse to :kbd:`exercise_data\\forestry\\lidar\\` and select the :kbd:`rautjarvi_lidar.laz` file.
 
 .. image:: /static/training_manual/forestry/lasview_dialog.png
    :align: center
@@ -102,7 +102,7 @@ The brown points are the points classified as ground and the gray ones are the r
 .. image:: /static/training_manual/forestry/las2dem_dialog.png
    :align: center
 
-The result DEM is added to your map with the generic name :kbd:`Output raster file`, rename the layer name to :kbd:`rautjarvi_dem`.
+The result DEM is added to your map with the generic name :kbd:`Output raster file`.
 
 .. note:: The :guilabel:`lasground` and :guilabel:`las2dem` tools require licensing. You can use the unlicensed tool as indicated in the license file, but you get the diagonals you can appreciate in the image results.
 
@@ -112,8 +112,7 @@ The result DEM is added to your map with the generic name :kbd:`Output raster fi
 For visualization purposes, a hillshade generated from a DEM gives a better visualization of the terrain:
 
 * Open :menuselection:`Raster --> Terrain analysis --> Hillshade`.
-* As :guilabel:`Elevation layer` use the :kbd:`rautjarvi_dem` layer (or :kbd:`Output raster file` if you forgot to rename it).
-* As the :guilabel:`Output layer`, browse to :kbd:`exercise_data\\forestry\\lidar\\` and name the file :kbd:`rautjarvi_hillshade.tif`.
+* As the :guilabel:`Output layer`, browse to :kbd:`exercise_data\\forestry\\lidar\\` and name the file :kbd:`hillshade.tif`.
 * Leave the rest of parameters with the default settings.
 
 .. image:: /static/training_manual/forestry/dem_hillshade.png
@@ -135,4 +134,4 @@ Using LiDAR data to get a DEM, specially in forested areas, gives good results w
 |WN|
 -------------------------------------------------------------------------------
 
-In the next, and final in this module, lesson you will use the hillshade raster and the forest inventory results to create a map presentation of the results.
+In the next, and final step in this module, lesson you will use the hillshade raster and the forest inventory results to create a map presentation of the results.

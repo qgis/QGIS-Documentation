@@ -1,4 +1,4 @@
-|LS| Creating Detail Maps with the Atlas Tool
+|LS| Creating Detailed Maps with the Atlas Tool
 ===============================================================================
 
 The systematic sampling design is ready and the field teams have loaded the GPS coordinates in their navigation devices. They also have a field data form where they will collect the information measured at every sample plot. To easier find their way to every sample plot, they have requested a number of detail maps where some ground information can be clearly seen along with a smaller subset of sample plots and some information about the map area. You can use the Atlas tool to automatically generate a number of maps with a common format.
@@ -100,7 +100,7 @@ You have been working in module 3 with symbology and in module 4 with labeling. 
 .. image:: /static/training_manual/forestry/plots_zoom2_symbology.png
    :align: center
 
-You will use later the green styling of the :kbd:`forest_stands_2012` layer. In order to keep it, and have a visualization of it that shows only the stand borders:
+You will use later the the green styling of the :kbd:`forest_stands_2012` layer. In order to keep it, and have a visualization of it that shows only the stand borders:
 
 * Right click on :kbd:`forest_stands_2012` and select :guilabel:`Duplicate`
 * you get a new layer named :kbd:`forest_stands_2012 copy` that you can use to define a different style, for example with no filling and red borders.
@@ -119,20 +119,10 @@ Once you have a symbology your happy with, you are ready to add some more inform
 
 * Title.
 * A scale bar.
-
-You have created a similar composition already in module 5. Go back to that module as you need. 
-
-Add also:
-
-* A grid and its frame for your map.
+* Grid frame for your map.
 * Coordinates on the sides of the grid.
 
-Read about the `map grid frame and coordinates <http://docs.qgis.org/2.2/en/docs/user_manual/print_composer/print_composer.html#grid>`_ in the user guide. You can see these options in the :guilabel:`Item properties` tab of the map element. See some example values in these images:
-
-.. image:: /static/training_manual/forestry/map_grid.png
-   :align: center
-
-For the final result, you can look at this example image for reference:
+You have created a similar composition already in module 5. Go back to that module as you need. You can look at this example image for reference:
 
 .. image:: /static/training_manual/forestry/map_template1.png
    :align: center
@@ -208,7 +198,6 @@ The Atlas coverage is just a vector layer that will be used to generate the deta
 The coverage could be any existing layer, but usually it makes more sense to create one for the specific purpose. Let's create a grid of polygons covering the forest area:
 
 * In the QGIS map view, open :menuselection:`Vector --> Research Tools --> Vector grid`.
-* Use the :guilabel:`` to set the extents from the :kbd:`forest_stands_2012` layer.
 * Set the tool as shown in this image:
 
 .. image:: /static/training_manual/forestry/coverage_polygons.png
@@ -315,7 +304,7 @@ Lets print the maps as a single PDF that you can send to the field office for pr
 
 * Go to the :guilabel:`Atlas generation` tab on the right panel.
 * Under the :guilabel:`Output` check the :guilabel:`Single file export when possible`. This will put all the maps together into a PDF file, if this option is not checked you will get one file for every map.
-* Open :menuselection:`Atlas --> Export Atlas as PDF...`. 
+* Open :menuselection:`Composer --> Export as PDF...`. 
 * Save the PDF file as :kbd:`inventory_2012_maps.pdf` in your :kbd:`exercise_data\\forestry\\samplig\\map_creation\\` folder.
 
 Open the PDF file to check that everything went as expected.
