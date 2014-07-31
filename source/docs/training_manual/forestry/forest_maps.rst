@@ -95,7 +95,7 @@ Obviously this is not good enough, you want to make the plot numbers as clearly 
 |basic| |TY| Changing the Symbology of the Layers
 -------------------------------------------------------------------------------
 
-You have been working in module 3 with symbology and in module 4 with labeling. Go back to those modules if you need to refresh about some of the available options and tools. Your goal is to get the plots locations and their name to be as clearly visible as possible but always allowing to see the background map elements. You can take some guidance from this image:
+You have been working in :doc:`../training_manual/basic_map/index` with symbology and in :doc:`../vector_classification/index` with labeling. Go back to those modules if you need to refresh about some of the available options and tools. Your goal is to get the plots locations and their name to be as clearly visible as possible but always allowing to see the background map elements. You can take some guidance from this image:
 
 .. image:: /static/training_manual/forestry/plots_zoom2_symbology.png
    :align: center
@@ -122,7 +122,7 @@ Once you have a symbology your happy with, you are ready to add some more inform
 * Grid frame for your map.
 * Coordinates on the sides of the grid.
 
-You have created a similar composition already in module 5. Go back to that module as you need. You can look at this example image for reference:
+You have created a similar composition already in :doc:`../map_composer/index`. Go back to that module as you need. You can look at this example image for reference:
 
 .. image:: /static/training_manual/forestry/map_template1.png
    :align: center

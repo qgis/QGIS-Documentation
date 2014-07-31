@@ -16,7 +16,7 @@ Managing LiDAR data within QGIS is possible using the Processing framework and t
 You can obtain a digital elevation model (DEM) from a LiDAR point cloud and then create a hillshade raster that is visually more intuitive for presentation purposes. First you will have to set up the :guilabel:`Processing`framework settings to properly work with LAStools:
 
 * Close QGIS, if you have already started it.
-* An old lidar plugin might be installed by default in your system in the folder :file`C:/Program Files/QGIS Valmiera/apps/qgis/python/plugins/processing/`.
+* An old lidar plugin might be installed by default in your system in the folder :file:`C:/Program Files/QGIS Valmiera/apps/qgis/python/plugins/processing/`.
 * If you have a folder named :kbd:`lidar`, delete it. This is valid for some installations of QGIS 2.2 and 2.4.
 
 .. image:: /static/training_manual/forestry/remove_lidar_folder.png
@@ -48,7 +48,7 @@ To setup the LAStools in QGIS:
 |basic| |FA| Calculating a DEM with LAStools
 -------------------------------------------------------------------------------
 
-You have already used the :menuselection:`Processing` toolbox in :dod:`../vector_analysis/spatial_statistics` to run some SAGA algorithms. Now you are going to use it to run LAStools programs:
+You have already used the :menuselection:`Processing` toolbox in :doc:`../vector_analysis/spatial_statistics` to run some SAGA algorithms. Now you are going to use it to run LAStools programs:
 
 * Open :menuselection:`Processing --> Toolbox`.
 * In the dropdown menu at the bottom, select :guilabel:`Advanced interface`.

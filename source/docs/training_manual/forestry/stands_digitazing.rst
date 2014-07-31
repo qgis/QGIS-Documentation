@@ -1,7 +1,7 @@
 |LS| Digitizing Forest Stands
 ===============================================================================
 
-Unless you are going to use your georeferenced map as a simple background image, the next natural step is to digitize elements from it. You have already done so in the exercises about creating vector data in Module 6, when you digitized the school fields. In this lesson, you are going to digitize the forest stands' borders that appear in the map as green lines but instead of doing it using an aerial image, you will use your georeferenced map.
+Unless you are going to use your georeferenced map as a simple background image, the next natural step is to digitize elements from it. You have already done so in the exercises about creating vector data in :doc:`..create_vector_data/create_new_vector` , when you digitized the school fields. In this lesson, you are going to digitize the forest stands' borders that appear in the map as green lines but instead of doing it using an aerial image, you will use your georeferenced map.
 
 **The goal for this lesson:** Learn a technique to help the digitizing task, digitizing forest stands and finally adding the inventory data to them.
 
@@ -69,7 +69,7 @@ Check that the new raster is fitting nicely with the original map.
 
 Having in mind the digitizing tools in QGIS, you might already be thinking that it would be helpful to snap to those green pixels while digitizing. That is precisely what you are going to do next create points from those pixels to use them later to help you follow the the forest stands' borders when digitizing, by using the snapping tools available in QGIS.
 
-* Use the :menuselection:`Raster --> Conversion --> Polygonize (Raster to Vector)` tool to vectorize your green lines to polygons. If you don't remember how, you can review it in module 9.1.1.
+* Use the :menuselection:`Raster --> Conversion --> Polygonize (Raster to Vector)` tool to vectorize your green lines to polygons. If you don't remember how, you can review it in :doc:`../complete_analysis/raster_to_vector`.
 * Save as :kbd:`rautjarvi_green_polygon.shp` inside the :kbd:`digitizing` folder.
 
 Zoom in and see what the polygons look like. You will get something like this:
@@ -185,7 +185,7 @@ Now you have two forest stands ready. And a good idea on how to proceed. Continu
 
 It might look like a lot of work, but you will soon get used to digitizing the forest stands. It should take you about 15 minutes.
 
-During the digitizing you might need to edit or delete nodes, split or merge polygons. You learned about the necessary tools in :kbd:`Module 6`, now is probably a good moment to go read about them again.
+During the digitizing you might need to edit or delete nodes, split or merge polygons. You learned about the necessary tools in :doc:`..create_vector_data/topo_editing`, now is probably a good moment to go read about them again.
 
 Remember that having :guilabel:`Enable topological editing` activated, allows you to move nodes common to two polygons so that the common border is edited at the same time for both polygons.
 
@@ -237,7 +237,7 @@ Open your new :kbd:`forest_stands_1994.shp` in your map if you did not added yet
 * Select :guilabel:`Yes` to keep the layer style.
 * Close the :guilabel:`Table Manager` dialogue.
 
-To finish gathering the information related to these forest stands, you might calculate the area and the perimeter of the stands. You calculated areas for polygons in :kbd:`Module 9.4.24.` Go back to that lesson if you need to and calculate the areas for the forest stands, name the new attribute :kbd:`Area` and make sure that the values calculated are in hectares.
+To finish gathering the information related to these forest stands, you might calculate the area and the perimeter of the stands. You calculated areas for polygons in :doc:`../complete_analysis/analysis_exercise`. Go back to that lesson if you need to and calculate the areas for the forest stands, name the new attribute :kbd:`Area` and make sure that the values calculated are in hectares.
 
 Now your :kbd:`forest_stands_1994.shp` layer is ready and packed with all the available information.
 
