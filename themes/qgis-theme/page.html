@@ -60,7 +60,7 @@ we then can use this language to build language dependent switches #}
 {%- block content %}
 {# calling our own navbar macro !#}
     {{ qgis_navBar() }}
-
+    {{ relbar() }}
     <div style="display:none;" class="container" id="nextprev" >
     {% if prev %}
     <a accesskey="p" href="{{ prev.link|e }}">&lt;&lt; prev</a>
