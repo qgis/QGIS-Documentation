@@ -321,7 +321,10 @@ section {
   margin: 0;
 }
 div.related {
-  display: none;
+  /*display:none;*/
+  /* NOTE: for website: NO related bar, for docs: YES related bar! */
+
+  padding-top: 10px;
 }
 /*
 our sphinx :refs: become anchors. But linking to an anchor in top of the page
@@ -335,7 +338,9 @@ div.section:before {
   content: "";
   display: block;
   height: 60px;
-  margin: -60px 0 0 0;
+  /*margin: -60px 0 0 0;*/
+  /*nice hack, but this breaks responsiveness for related bar*/
+
   /*this is working for non frontpages*/
 
 }
@@ -525,6 +530,13 @@ section.latest-news p.intro {
 #qgisflickrmapsatom .span2 h4 {
   color: white;
   text-align: center;
+}
+#qgis-screenshots,
+#qgis-created-maps {
+  clear: both;
+}
+.span3 img.flickrimg {
+  width: 230px;
 }
 section.sponsors {
   padding: 30px 0;
@@ -810,7 +822,9 @@ section.menu nav.subnav ul li a:hover {
 }
 /* color for qgis version disclaimer (used when files need to be revised) */
 .disclaimer {
-  display: none; /* only to be make visible in testing */
+  display: none;
+  /* only to be make visible in testing */
+
   color: black;
   margin-top: 17px;
   padding: 9px 30px 14px 50px;
