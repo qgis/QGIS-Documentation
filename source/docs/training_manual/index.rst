@@ -23,6 +23,7 @@ QGIS Training Manual
    online_resources/index
    grass/index
    assessment/index
+   forestry/index
    database_concepts/index
    spatial_databases/index
    processing/index
