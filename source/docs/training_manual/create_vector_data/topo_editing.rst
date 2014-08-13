@@ -143,7 +143,7 @@ would be fine if the area you wished to exclude linked to the polygon's
 boundaries.
 
 * Disable snapping for the landuse layer via the dialog you used earlier.
-* Now try using the :guilabel:`Add Ring` tool tool to create a gap in the
+* Now try using the :guilabel:`Add Ring` tool to create a gap in the
   middle of the |largeLandUseArea|.
 * Delete your new feature by using the :guilabel:`Delete Ring` tool:
 

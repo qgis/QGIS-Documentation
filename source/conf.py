@@ -1080,7 +1080,7 @@ rst_epilog = """
 
 .. |majorUrbanName| replace:: Swellendam
 .. |schoolAreaType1| replace:: athletics field
-.. |largeLandUseArea| replace:: Bontebok National Part
+.. |largeLandUseArea| replace:: Bontebok National Park
 .. |srtmFileName| replace:: :kbd:`srtm_41_19.tif`
 .. |localCRS| replace:: :kbd:`WGS 84 / UTM 34S`
 """
