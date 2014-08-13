@@ -125,7 +125,8 @@ have a size field, so we'll have to make one.
 
 * Enter edit mode by clicking this button:
 
-   |edit|
+.. image:: /static/common/edit.png
+   :width: 1.5em
    :align: center
 
 * Add a new column with this button:
@@ -148,8 +149,9 @@ To solve this problem, we'll need to calculate the areas.
 
 * Open the field calculator:
 
-|mActionCalculateField|
-    :align: center
+.. image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
+   :align: center
 
 You'll get this dialog:
 
