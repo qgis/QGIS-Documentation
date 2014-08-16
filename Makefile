@@ -4,7 +4,7 @@
 # You can set these variables from the command line
 #LANGUAGES     = en `ls i18n`
 # only building for languages which actually have translation at transifex.com
-LANGUAGES     = en de es fr gl hi id ja it ko nl nqo pl pt_BR pt_PT ro ru
+LANGUAGES     = en de es fi fr gl hi id ja it ko nl nqo pl pt_BR pt_PT ro ru
 # as long as this branch is testing, we only build for english:
 # LANGUAGES     = en
 LANG          = en

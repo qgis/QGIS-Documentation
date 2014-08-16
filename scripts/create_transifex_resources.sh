@@ -12,7 +12,7 @@
 #
 
 #LOCALES=`ls i18n`
-LOCALES='de es fr gl hi id ja it ko nl nqo pl pt_BR pt_PT ro ru'
+LOCALES='de es fi fr gl hi id ja it ko nl nqo pl pt_BR pt_PT ro ru'
 
 # to be sure there are not pot files left
 make clean

@@ -1,6 +1,6 @@
 
 # only languages which have translations in transifex
-: ${langs:=en de es fr gl hi id it ja ko nl pl pt_BR pt_PT ro ru}
+: ${langs:=en de es fi fr gl hi id it ja ko nl pl pt_BR pt_PT ro ru}
 
 # if you only want to build one language, do:
 # $ langs=de ./docker-world.sh
