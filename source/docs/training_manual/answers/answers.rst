@@ -585,7 +585,7 @@ Your results:
 
 When viewed over the original raster, the areas should overlap perfectly:
 
-.. image:: /static/training_manual/complete_analysis/002.png
+.. image:: /static/training_manual/complete_analysis/new_solution_example.png
    :align: center
 
 * You can save this layer by right-clicking on the :guilabel:`all_terrain`
