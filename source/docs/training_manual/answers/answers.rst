@@ -333,7 +333,7 @@ of your feature, like this one:
 
 * Now add your new part:
 
-.. image:: /static/training_manual/create_vector_data/new_part.png
+.. image:: /static/training_manual/create_vector_data/new_park_area.png
    :align: center
 
 * Undo your edit before continuing with the exercise for the next tool.
