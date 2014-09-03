@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-06-04 13:12+0000\n"
+"PO-Revision-Date: 2014-07-30 12:47+0000\n"
 "Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -688,12 +688,12 @@ msgstr "Ajouter une table d'attributs au composeur de cartes"
 # 07c2687d75cb412395565b3ad83ba531
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:816
 msgid "Main properties, Show grid and Fonts"
-msgstr "Propriétés principales, Graticule et Polices de caractère"
+msgstr "Propriétés principales, Bordures et Polices de caractère"
 
 # b248e295c108423298b09e76c91839b1
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:830
 msgid "Attribute table Main properties, Show grid and Fonts Dialog |nix|"
-msgstr "Paramètres des Propriétés principales, du Graticule et des Polices de caractère |nix|"
+msgstr "Paramètres des Propriétés principales, des Bordures et des Polices de caractère |nix|"
 
 # 7a478c3f43994dafb01a58b71b5018ad
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:841
@@ -708,7 +708,7 @@ msgstr "Onglet Propriétés d'un cadre HTML |nix|"
 # e9f69acce4f3427daef4e286e85ed48e
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:940
 msgid "Alignment helper lines in the Print Composer |nix|"
-msgstr ""
+msgstr "Aides pour l’alignement dans le Composeur de cartes |nix|"
 
 # 31a1d1f61a56485badfb2ae72a71f66b
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:959
@@ -746,14 +746,14 @@ msgid ""
 "An :guilabel:`Output filename expression` textbox that is used to generate a"
 " filename for each geometry if needed. It is based on expressions. This "
 "field is meaningful only for rendering to multiple files."
-msgstr ""
+msgstr "Le :guilabel:`Nom du fichier en sortie` est utilisé pour générer un nom de fichier pour chaque planche. Il est basé sur une expression. Il n'est utile que lorsque plusieurs fichiers sont produits."
 
 # 2f60aae0171f41139a6af2a4414c54d6
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1048
 msgid ""
 "\"`[% 'The area of ' || upper(CITY_NAME) || ',' || ZIPCODE || ' is ' "
 "format_number($area/1000000,2) || ' km2' %]`\""
-msgstr "\"`[% 'La superficie de  ' || upper(CITY_NAME) || ',' || ZIPCODE || ' est de ' format_number($area/1000000,2) || ' km2' %]`\""
+msgstr "\"`[% 'La superficie de  ' || upper(NOM_VILLE) || ',' || CODE_INSEE || ' est de ' format_number($area/1000000,2) || ' km2' %]`\""
 
 # 2039c9286cc74e60a24df41ad5f4c57c
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1052
@@ -1106,7 +1106,7 @@ msgid ""
 "as raster` checkbox. This means all elements will be rastered before "
 "printing or saving as PostScript or PDF. In this tab, you can also customize"
 " settings for grid and smart guides."
-msgstr ""
+msgstr "L'onglet :guilabel:`Composition` vous permet de définir la taille du papier, l'orientation, l'arrière plan, le nombre de pages et la qualité d'impression pour le fichier de sortie en dpi/ppp. De plus vous  pouvez activer l'|checkbox| :guilabel:`Impression raster` qui permet de rastériser tous les éléments avant impression ou export en Postscript ou PDF. Vous pouvez également personnaliser les paramètres pour la grille et les guides."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:138
 msgid ""
@@ -1136,7 +1136,7 @@ msgid ""
 "In the bottom part of the Print Composer window, you can find a status bar "
 "with mouse position, current page number and a combo box to set the zoom "
 "level."
-msgstr ""
+msgstr "En bas de la fenêtre de Composeur, vous trouverez la barre d'état avec la position du curseur de la souris, le numéro de page et une liste de déroulante permettant de choisir un niveau de zoom."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:152
 msgid ""
@@ -1170,7 +1170,7 @@ msgstr "|mActionPan| :sup:`Se déplacer dans le composeur`"
 msgid ""
 "|mActionZoomToSelected| :sup:`Marquee zoom mode` (zoom to a specific region "
 "of the Composer)"
-msgstr ""
+msgstr "|mActionZoomToSelected| :sup:`Zoom` (zoom sur une zone spécifique du Composeur)"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:172
 msgid ""
@@ -1179,7 +1179,7 @@ msgid ""
 "Composer area, you can hold the :kbd:`Spacebar` or the the mouse wheel. With"
 " :kbd:`Ctrl+Spacebar`, you can temporarily switch to marquee zoom mode, and "
 "with :kbd:`Ctrl+Shift+Spacebar`, to zoom out mode."
-msgstr ""
+msgstr "Vous pouvez changer le niveau de zoom avec la molette de la souris ou la liste déroulante de la barre d'état. Si vous avez besoin de vous déplacer au sein du Composeur, vous pouvez maintenir la :kbd:`barre espace` ou la molette de la souris enfoncée. Avec :kbd:`Ctrl + barre espace`, vous passez temporairement en mode zoom + et avec :kbd:`Ctrl + Shift + barre espace`, en mode zoom -."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:179
 msgid "Print Composer Options"
@@ -1189,27 +1189,27 @@ msgstr "Options du Composeur de Carte"
 msgid ""
 "From :menuselection:`Settings --> Composer Options` you can set some options"
 " that will be used as default during your work."
-msgstr ""
+msgstr "Via le menu :menuselection:`Paramètres --> Options du composeur`, vous pouvez définir les paramètres qui seront utilisés par défaut pendant votre travail."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:183
 msgid ""
 ":guilabel:`Compositions defaults` let you specify the default font to use."
-msgstr ""
+msgstr ":guilabel:`Valeurs par défaut pour les compositions` permet de spécifier la police de caractère par défaut."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:184
 msgid ""
 "With :guilabel:`Grid appearance`, you can set the grid style and its color."
-msgstr ""
+msgstr "Dans :guilabel:`Apparence de la grille`, vous définissez le style et la couleur de la grille. Il y a trois styles proposés : **Pointillés**, **Continue** et **Croix**."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:185
 msgid ""
 ":guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid."
 " There are three types of grid: **Dots**, **Solid** lines and **Crosses**."
-msgstr ""
+msgstr ":guilabel:`Grille par défaut` définit l'espacement, le décalage et la tolérance d'accrochage à la grille."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:186
 msgid ":guilabel:`Guide defaults` defines the tolerance for the guides."
-msgstr ""
+msgstr ":guilabel:`Guides par défauts` définit la tolérance d'accrochage aux guides."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:193
 msgid ""
@@ -1227,27 +1227,27 @@ msgid ""
 ":guilabel:`Exported resolution`. When checked, |checkbox| :guilabel:`print "
 "as raster` means all elements will be rasterized before printing or saving "
 "as PostScript or PDF."
-msgstr ""
+msgstr "Une composition peut maintenant se répartir sur plusieurs pages. Par exemple, une première page montrant la carte, une deuxième la table d'attributs d'une des couches et une troisième un cadre HTML en lien avec le site internet de votre organisme. Choisissez le :guilabel:`Nombre de pages` à votre convenance. Vous pouvez choisir l':guilabel:`Orientation` et la :guilabel:`Résolution de l'export`. Lorsque la case |checkbox| :guilabel:`Impression raster` est cochée, tous les éléments seront rasterisés avant l'impression ou la sauvegarde en PostScript ou PDF."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:198
 msgid ""
 ":guilabel:`Grid` lets you customize grid settings like :guilabel:`spacings`,"
 " :guilabel:`offsets` and :guilabel:`tolerance` to your need."
-msgstr ""
+msgstr ":guilabel:`Grille` vous permet de personnaliser les paramètres d':guilabel:`Espacement`, de :guilabel:`Décalage de la grille` et de :guilabel:`Tolérance d'accrochage`."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:199
 msgid ""
 "In :guilabel:`Snap to alignments`, you can change the :guilabel:`Tolerance`,"
 " which is the maximum distance below which an item is snapped to smart "
 "guides."
-msgstr ""
+msgstr "Dans :guilabel:`Accrocher aux alignements` vous pouvez modifier la :guilabel:`Tolérance` qui correspond à la distance maximale en deçà de laquelle un objet est aimanté par la grille."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:201
 msgid ""
 "Snap to grid and/or to smart guides can be enabled from the "
 ":menuselection:`View` menu. In this menu, you can also hide or show the grid"
 " and smart guides."
-msgstr ""
+msgstr "L'accrochage à la grille et/ou aux guides peut s'activer depuis le menu :menuselection:`Vue`. Vous pouvez également y choisir de cacher ou afficher la grille et les guides."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:206
 msgid ""
@@ -1259,7 +1259,7 @@ msgstr "Les éléments du composeur disposent d'un ensemble de propriétés gén
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:224
 msgid ""
 "The :guilabel:`Rotation` sets the rotation of the element (in degrees)."
-msgstr ""
+msgstr ":guilabel:`Rotation` permet de définir un angle de rotation (en degrés) pour l'élément."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:227
 msgid ""
@@ -1277,7 +1277,7 @@ msgid ""
 "send data to set a property (e.g., label text) for that specific item. The "
 "GetProjectSettings command will list what items and which IDs are available "
 "in a layout."
-msgstr ""
+msgstr "Utilisez l':guilabel:`Identifiant de l'objet` pour créer une lien avec d'autres éléments du Composeur. Ceci est utilisé par |qg| Serveur et tout client web potentiel. Vous pouvez donner un ID à un élément (par ex. une carte, une zone de texte), puis le client web peut envoyer des informations pour spécifier les propriétés de cet objets. La commande GetProjectSettings listera les éléments disponibles dans la mise en page avec leurs ID."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:233
 msgid ""
@@ -1402,19 +1402,19 @@ msgid ""
 "**Cache** renders the map in the current screen resolution. If you zoom the "
 "Composer window in or out, the map is not rendered again but the image will "
 "be scaled."
-msgstr ""
+msgstr "**Cache** affiche la carte dans sa résolution d'écran actuelle. Si vous zoomez sur le Composeur, la carte ne sera pas actualisée, mais l'image sera mise à l'échelle."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:293
 msgid ""
 "**Render** means that if you zoom the Composer window in or out, the map "
 "will be rendered again, but for space reasons, only up to a maximum "
 "resolution."
-msgstr ""
+msgstr "**Rendu** signifie que, si vous faites un zoom sur le Composeur, la carte sera actualisée, mais pour des raisons de performances, une résolution maximale a été prédéfinie."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:296
 msgid ""
 "**Cache** is the default preview mode for newly added Print Composer maps."
-msgstr ""
+msgstr "**Cache** est le mode d'aperçu par défaut pour un Composeur nouvellement créé."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:298
 msgid ""
@@ -1435,7 +1435,7 @@ msgid ""
 " to unlock the element. You can also lock the map element by activating the "
 "|checkbox| :guilabel:`Lock layers for map item` checkbox in the "
 ":guilabel:`Map` dialog of the :guilabel:`Item Properties` tab."
-msgstr ""
+msgstr "Pour déplacer l'emprise dans l'élément carte, sélectionnez-le puis cliquez sur l'icône |mActionMoveItemContent| :sup:`Déplacer le contenu de l'objet` et déplacez les couches dans le cadre de l'élément 'carte' avec le bouton gauche de la souris. Après avoir trouvé le bon emplacement, vous pouvez figer la position de cet élément au sein du Composeur. Sélectionnez l'élément, faites un clic droit pour |mIconLock| :sup:`verrouiller`. Vous pouvez également verrouiller la position de l'élément en activant la case |checkbox| :guilabel:`Verrouiller les couches de cette carte` dans le panneau Objet."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:316
 msgid ""
@@ -1450,14 +1450,14 @@ msgid ""
 " map canvas by changing vector or raster properties, you can update the "
 "Print Composer view by selecting the map element in the Print Composer and "
 "clicking the **[Update preview]** button."
-msgstr ""
+msgstr "Les options d'**Aperçu** vous permettent de choisir parmi les modes 'Cache', 'Rendu' ou 'Rectangle' comme décris ci-dessus. Si vous changez la vue dans la fenêtre principale de |qg| en modifiant des couches vecteurs ou raster, vous pouvez mettre à jour le Composeur en sélectionnant l'élément carte puis en cliquant sur le bouton **[Mise à jour de l'aperçu]**."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:335
 msgid ""
 "The field :guilabel:`Rotation` |selectnumber| allows you to rotate the map "
 "element content clockwise in degrees. Note that a coordinate frame can only "
 "be added with the default value 0."
-msgstr ""
+msgstr "Le champ :guilabel:`Rotation` |selectnumber| vous permet d'indiquer un angle de rotation dans le sens horaire en degrés. Par défaut la valeur est de 0."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:338
 msgid ""
@@ -1472,19 +1472,19 @@ msgid ""
 "would be displayed or hidden in the main |qg| window won't appear or be "
 "hidden in the map item of the Composer. But style and labels of a locked "
 "layer are still refreshed according to the main |qg| interface."
-msgstr ""
+msgstr "Vous pouvez choisir de verrouiller les couches affichées sur la carte du composeur en cochant la case |checkbox| :guilabel:`Verrouiller les couches pour cette carte`. Ensuite, toutes couches qui seraient ajoutées ou enlevées de la carte dans la fenêtre principale de |qg|, n'apparaitraient ou ne disparaitraient pas de la carte du Composeur. Par contre, le style et l'étiquetage des couches verrouillées sont toujours mis à jour par rapport à la fenêtre principale de |qg|."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:346
 msgid ""
 "The :guilabel:`Extents` dialog of the map item tab provides the following "
 "functionalities (see figure_composer_5_):"
-msgstr ""
+msgstr "La zone :guilabel:`Aperçu` de l'onglet :guilabel:`Propriétés de l'objet` de la carte propose les fonctionnalités suivantes (voir figure_composer_5_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:360
 msgid ""
 "The **Map extent** area allows you to specify the map extent using Y and X "
 "min/max values or by clicking the **[Set to map canvas extent]** button."
-msgstr ""
+msgstr "La zone **Emprise de la carte** permet de spécifier l'étendue de la représentation cartographique en utilisant les valeurs X/Y minimales et maximales ou en cliquant sur le bouton **[Fixer sur l'emprise courante de la carte]**."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:363
 msgid ""
@@ -1492,13 +1492,13 @@ msgid ""
 "properties, you can update the Print Composer view by selecting the map "
 "element in the Print Composer and clicking the **[Update preview]** button "
 "in the map :guilabel:`Item Properties` tab (see figure_composer_2_)."
-msgstr ""
+msgstr " Si vous changez la vue dans la fenêtre principale de |qg| en modifiant des couches vecteurs ou rater, vous pouvez mettre à jour le Composeur d'impression en sélectionnant l'élément carte puis en cliquant sur le bouton **[Mise à jour de l'aperçu]** dans l'onglet :guilabel:`Propriétés de l'objet` (voir figure_composer_2_)."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:374
 msgid ""
 "The :guilabel:`Grid` dialog of the map :guilabel:`Item Properties` tab "
 "provides the following functionalities (see Figure_composer_6_):"
-msgstr ""
+msgstr "La zone :guilabel:`Afficher le graticule` de l'onglet :guilabel:`Propriétés de l'objet` de la carte propose les fonctionnalités suivantes (voir Figure_composer_6_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:388
 msgid ""
@@ -1507,14 +1507,14 @@ msgid ""
 "cross. Symbology of the grid can be chosen. See section Rendering_Mode_. "
 "Furthermore, you can define an interval in the X and Y directions, an X and "
 "Y offset, and the width used for the cross or line grid type."
-msgstr ""
+msgstr "La case |checkbox| :guilabel:`Afficher le graticule` vous permet de superposer un carroyage à la carte. Vous pouvez ajouter un graticule sous la forme de lignes ou de croix et modifier leur style. Voir section Rendering_Mode_. De plus vous pouvez choisir l'intervalle d'affichage en X et en Y, le décalage en X et en Y et l'épaisseur des lignes ou des croix."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:393
 msgid ""
 "You can choose to paint the frame with a zebra style. If not selected, the "
 "general frame option is used (see section Frame_dialog_). Advanced rendering"
 " mode is also available for grids (see section Rendering_mode_)."
-msgstr ""
+msgstr "Vous pouvez choisir de représenter le cadre par des zébrures. Si non, les options générales du cadre de l'objet carte sont utilisées (voir section Frame_dialog_). Les modes de fusions avancés sont également disponibles pour le graticule (voir section Rendering_mode_)."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:395
 msgid ""
@@ -1525,13 +1525,13 @@ msgid ""
 "individually. Units can be in meters or in degrees. Finally, you can define "
 "the grid color, the annotation font, the annotation distance from the map "
 "frame and the precision of the drawn coordinates."
-msgstr ""
+msgstr "La case |checkbox| :guilabel:`Afficher les coordonnées` permet d'ajouter les valeurs de coordonnées au cadre de la carte. Ces annotations peuvent s'afficher à l'intérieur ou à l'extérieur du cadre. L'orientation se définie pour chaque côté individuellement et peut être horizontale ou verticale. Les unités peuvent être en mètres ou en degrés. Enfin, vous pouvez définir la couleur, la police, la distance depuis le cadre de la carte et la précision des coordonnées."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:404
 msgid ""
 "The :guilabel:`Overview` dialog of the map :guilabel:`Item Properties` tab "
 "provides the following functionalities (see Figure_composer_7_):"
-msgstr ""
+msgstr "La zone :guilabel:`Aperçu` de l'onglet :guilabel:`Propriétés de l'objet` de la carte propose les fonctionnalités suivantes (see Figure_composer_7_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:418
 msgid ""
@@ -1539,65 +1539,65 @@ msgid ""
 "show the extents of a second map. The :guilabel:`Overview` dialog of the map"
 " :guilabel:`Item Properties` tab allows you to customize the appearance of "
 "that feature."
-msgstr ""
+msgstr "Si le Composeur affiche plus d'une carte, vous pouvez utiliser l'une d'entre elle pour montrer l'emprise d'une autre. La zone :guilabel:`Aperçu` de l'onglet :guilabel:`Propriétés de l'objet` de la carte vous permet de personnaliser l'apparence de l'emprise."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:421
 msgid ""
 "The :guilabel:`Overview frame` combo list references the map item whose "
 "extents will be drawn on the present map item."
-msgstr ""
+msgstr "La liste :guilabel:`Cadre de l'aperçu` permet de choisir la zone de carte dont l'emprise sera représentée sur la zone de carte active."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:422
 msgid ""
 "The :guilabel:`Overview Style` allows you to change the frame color. See "
 "section vector_style_manager ."
-msgstr ""
+msgstr "Le :guilabel:`Style de l'aperçu` vous permet de changer la couleur et l'épaisseur du cadre. Voir section vector_style_manager_."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:423
 msgid ""
 "The :guilabel:`Overview Blend mode` allows you to set different transparency"
 " blend modes, to enhance visibility of the frame. See Rendering_Mode_."
-msgstr ""
+msgstr "Le :guilabel:`Mode de fusion de l'aperçu` vous permet de choisir le style de transparence à appliquer pour améliorer la visibilité du cadre. Voir Rendering_Mode_."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:424
 msgid ""
 "If checked, |checkbox| :guilabel:`Invert overview` creates a mask around the"
 " extents: the referenced map extents are shown clearly, whereas everything "
 "else is blended with the frame color."
-msgstr ""
+msgstr "Si la case |checkbox| :guilabel:`Inverser l'aperçu` est cochée, un masque est créé : l'emprise de l'autre zone de carte apparaît clairement alors que le reste est mis en transparence en utilisant le mode de fusion choisi."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:430
 msgid ""
 "To add a label, click the |mActionLabel| :sup:`Add label` icon, place the "
 "element with the left mouse button on the Print Composer canvas and position"
 " and customize its appearance in the label :guilabel:`Item Properties` tab."
-msgstr ""
+msgstr "Pour ajouter une zone de texte, cliquez sur le bouton |mActionLabel| :sup:`Ajouter une nouvelle étiquette`, placez l'élément sur la page par un clic-gauche et personnalisez son apparence grâce aux :guilabel:`Propriétés de l'objet`. "
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:434
 msgid ""
 "The :guilabel:`Item Properties` tab of a label item provides the following "
 "functionalities:"
-msgstr ""
+msgstr "La zone :guilabel:`Propriétés principales` d'une Étiquette propose les fonctionnalités suivantes :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:450
 msgid ""
 "The :guilabel:`Main properties` dialog of the label :guilabel:`Item "
 "Properties` tab provides the following functionalities (see "
 "Figure_composer_9_):"
-msgstr ""
+msgstr "La zone :guilabel:`Propriétés principales` de l'onglet :guilabel:`Propriétés de l'objet` de la carte propose les fonctionnalités suivantes (voir Figure_composer_9_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:464
 msgid ""
 "The main properties dialog is where the text (HTML or not) or the expression"
 " needed to fill the label is added to the Composer canvas."
-msgstr ""
+msgstr "C'est l'endroit où le texte (HTMLou pas) ou l'expression sont à insérer pour être affichés dans le Composeur."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:466
 msgid ""
 "Labels can be interpreted as HTML code: check |checkbox| :guilabel:`Render "
 "as HTML`. You can now insert a URL, a clickable image that links to a web "
 "page or something more complex."
-msgstr ""
+msgstr "Le texte saisi peut être interprété comme du code HTML si vous cochez la case |checkbox| :guilabel:`Afficher en HTML`. Vous pouvez ainsi insérer une URL, une image cliquable qui renvoie à une page web ou tout autre code plus complexe."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:468
 msgid ""
@@ -1608,26 +1608,26 @@ msgid ""
 "displayed. Two special categories can be useful, particularly associated "
 "with the atlas functionality: geometry functions and records functions. At "
 "the bottom, a preview of the expression is shown."
-msgstr ""
+msgstr "Vous pouvez également insérer une expression. Cliquez sur **[Insérer une expression]** pour ouvrir une nouvelle fenêtre. Construisez une expression en choisissant parmi les fonctions disponibles dans la partie gauche de cette fenêtre. Sur la partie droite s'affiche l'aide de la fonction sélectionnée. Deux catégories de fonctions sont très utiles, notamment lorsque l'on utilise la génération d'atlas : les fonctions de géométrie et d'enregistrement. En bas de la fenêtre, un aperçu du résultat s'affiche."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:472
 msgid ""
 "Define font and font color by clicking on the **[Font]** and **[Font "
 "color...]** buttons."
-msgstr ""
+msgstr "Définissez la police et sa couleur en cliquant sur les boutons **[Police]** et **[Couleur de police...]**."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:477
 msgid ""
 "The :guilabel:`Alignment` and :guilabel:`Display` dialogs of the label "
 ":guilabel:`Item Properties` tab provide the following functionalities (see "
 "Figure_composer_10_):"
-msgstr ""
+msgstr "Les zones :guilabel:`Alignement` et :guilabel:`Affichage` de l'onglet :guilabel:`Propriétés de l'objet` proposent les fonctionnalités suivantes (voir Figure_composer_10_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:491
 msgid ""
 "You can define the horizontal and vertical alignment in the "
 ":guilabel:`Alignment` zone."
-msgstr ""
+msgstr "Vous pouvez définir un alignement horizontal et vertical dans la zone :guilabel:`Alignement`."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:497
 msgid ""
@@ -1635,38 +1635,38 @@ msgid ""
 "the element with the left mouse button on the Print Composer canvas and "
 "position and customize its appearance in the image :guilabel:`Item "
 "Properties` tab."
-msgstr ""
+msgstr "Pour ajouter une image, cliquez sur l'icône  |mActionAddImage| :sup:`Ajouter une image` et placez l'élément sur le Composeur avec le bouton gauche de votre souris. Vous pouvez modifier la position et l'apparence avec l'onglet :guilabel:`Propriétés de l'objet` après avoir sélectionné l'élément."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:506
 msgid ""
 "The image :guilabel:`Item Properties` tab provides the following "
 "functionalities (see figure_composer_11_):"
-msgstr ""
+msgstr "L'onglet des :guilabel:`Propriétés principales` d'une image proposent les fonctionnalités suivantes (voir figure_composer_11_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:522
 msgid ""
 "The :guilabel:`Main properties` and :guilabel:`Search directories` dialogs "
 "of the image :guilabel:`Item Properties` tab provide the following "
 "functionalities (see Figure_composer_12_):"
-msgstr ""
+msgstr "Les zones :guilabel:`Propriétés principales` et :guilabel:`Rechercher dans les répertoires` de l'onglet :guilabel:`Propriétés de l'objet` d'une image proposent les fonctionnalités suivantes (voir Figure_composer_12_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:539
 msgid ""
 "The **Search directories** area allows you to add and remove directories "
 "with images in SVG format to the picture database."
-msgstr ""
+msgstr "La zone **Rechercher dans les répertoires** vous permet d'ajouter ou de retirer des répertoires contenant des images au format SVG à la liste des images disponibles."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:541
 msgid ""
 "Images can be rotated with the :guilabel:`Rotation` |selectnumber| field."
-msgstr ""
+msgstr "Une :guilabel:`Rotation` |selectnumber| peut être définie pour une image grâce au champ du même nom."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:542
 msgid ""
 "Activating the |checkbox| :guilabel:`Sync with map` checkbox synchronizes "
 "the rotation of a picture in the |qg| map canvas (i.e., a rotated north "
 "arrow) with the appropriate Print Composer image."
-msgstr ""
+msgstr "Cocher la case |checkbox| :guilabel:`Synchroniser avec la carte` permet de synchroniser la rotation de l'image avec celle de l'élément carte (rotation liée à la direction du nord par exemple)."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:552
 msgid ""
@@ -1674,43 +1674,43 @@ msgid ""
 "icon, place the element with the left mouse button on the Print Composer "
 "canvas and position and customize the appearance in the legend "
 ":guilabel:`Item Properties` tab."
-msgstr ""
+msgstr "Pour ajouter une légende, cliquez sur l'icône  |mActionAddLegend| :sup:`Ajouter une légende` et placez l'élément sur le Composeur avec le bouton gauche de votre souris. Vous pouvez modifier la position et l'apparence avec l'onglet :guilabel:`Propriétés de l'objet` après avoir sélectionné l'élément."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:557
 msgid ""
 "The :guilabel:`Item properties` of a legend item tab provides the following "
 "functionalities (see figure_composer_14_):"
-msgstr ""
+msgstr "Les :guilabel:`Propriétés principales` d'une légende proposent les fonctionnalités suivantes (voir figure_composer_14_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:574
 msgid ""
 "The :guilabel:`Main properties` dialog of the legend :guilabel:`Item "
 "Properties` tab provides the following functionalities (see "
 "figure_composer_14_):"
-msgstr ""
+msgstr "La zone :guilabel:`Propriétés principales` de l'onglet :guilabel:`Propriétés de l'objet` de la légende propose les fonctionnalités suivantes (voir figure_composer_14_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:588
 msgid "Here, you can adapt the legend title."
-msgstr ""
+msgstr "Ici, vous pouvez modifier le titre de la légende."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:589
 msgid ""
 "You can also choose which :guilabel:`Map` item the current legend will refer"
 " to in the select list."
-msgstr ""
+msgstr "Vous pouvez également choisir à quelle zone de :guilabel:`Carte` doit correspondre la légende."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:590
 msgid ""
 "Since |qg| 1.8, you can wrap the text of the legend title on a given "
 "character."
-msgstr ""
+msgstr "Depuis |qg| 1.8, vous pouvez choisir un caractère qui permet d'insérer des retours à la ligne."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:595
 msgid ""
 "The :guilabel:`Legend items` dialog of the legend :guilabel:`Item "
 "Properties` tab provides the following functionalities (see "
 "figure_composer_15_):"
-msgstr ""
+msgstr "La zone :guilabel:`Objets de légende` de l'onglet :guilabel:`Propriétés de l'objet` de la légende propose les fonctionnalités suivantes (voir figure_composer_15_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:609
 msgid ""
@@ -1720,53 +1720,53 @@ msgid ""
 "on **[Update]** to adapt the changes in the legend element of the Print "
 "Composer. The item order can be changed using the **[Up]** and **[Down]** "
 "buttons or with 'drag-and-drop' functionality."
-msgstr ""
+msgstr "La liste des objets de légende présente tous les éléments de légende et vous permet de modifier leur ordre, les grouper, les supprimer, changer leur nom ou réinitialiser la liste. Après avoir fait des modifications de style dans la fenêtre principale de |qg|, cliquez sur le bouton **[Mettre à jour l'objet]** pour faire apparaitre les changements dans le Composeur. L'ordre des éléments se modifie en utilisant les flèches **[Haut]** et **[Bas]** ou en faisant un 'glisser-déposer' avec la souris."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:615
 msgid ""
 "The feature count for each vector layer can be shown by enabling the "
 "**[Sigma]** button."
-msgstr ""
+msgstr "Le nombre d'entités de chaque couche vectorielle s'affiche en cliquant sur le bouton **[Sigma]**."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:616
 msgid ""
 "The legend will be updated automatically if |checkbox| :guilabel:`Auto-"
 "update` is checked."
-msgstr ""
+msgstr "La légende se met à jour automatiquement si la case |checkbox| :guilabel:`Mise à jour auto` est cochée."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:621
 msgid ""
 "The :guilabel:`Fonts`, :guilabel:`Columns`, :guilabel:`Symbol` and "
 ":guilabel:`Spacing` dialogs of the legend :guilabel:`Item Properties` tab "
 "provide the following functionalities (see figure_composer_16_):"
-msgstr ""
+msgstr "Les zones :guilabel:`Polices` et :guilabel:`Colonnes`, :guilabel:`Symbole` et :guilabel:`Espacement` de l'onglet :guilabel:`Propriétés de l'objet` de la légende proposent les fonctionnalités suivantes (voir figure_composer_16_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:637
 msgid "All these items will get the same **Color**."
-msgstr ""
+msgstr "Tous ces éléments auront la même **Couleur**."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:639
 msgid ""
 "|checkbox| :guilabel:`Equal column widths` sets how legend columns should be"
 " adjusted."
-msgstr ""
+msgstr "La case |checkbox| :guilabel:`Égaliser la largeur des colonnes` permet d'ajuster la taille des colonnes de la légende."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:640
 msgid ""
 "The |checkbox| :guilabel:`Split layers` option allows a categorized or a "
 "graduated layer legend to be divided between columns."
-msgstr ""
+msgstr "L'option |checkbox| :guilabel:`Séparer les couches` permet de présenter sur plusieurs colonnes les éléments de légende d'une couche ayant un style catégorisé ou gradué."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:641
 msgid ""
 "You can change the width and height of the legend symbol in this dialog."
-msgstr ""
+msgstr "Vous pouvez changer la largeur et la hauteur du symbole de légende ici."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:642
 msgid ""
 "Spacing aroung title, group, subgroup, symbol, icon label, box space or "
 "column space can be customized through this dialog."
-msgstr ""
+msgstr "L'espacement autour du titre, des groupes, sous-groupes, symboles, libellés de légende, colonnes peut se personnaliser ici."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:648
 msgid "Adding a Scale Bar item to the Print Composer"
@@ -1778,104 +1778,104 @@ msgid ""
 "icon, place the element with the left mouse button on the Print Composer "
 "canvas and position and customize the appearance in the scale bar "
 ":guilabel:`Item Properties` tab."
-msgstr ""
+msgstr "Pour ajouter une barre d'échelle, cliquez sur l'icône |mActionScaleBar| :sup:`Ajouter une nouvelle échelle graphique`, placez l'élément sur le Composeur avec le bouton gauche de votre souris. Vous pouvez modifier la position et son apparence avec le panneau de :guilabel:`Propriétés de l'objet` après avoir sélectionné l'élément."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:654
 msgid ""
 "The :guilabel:`Item properties` of a scale bar item tab provides the "
 "following functionalities (see figure_composer_17_):"
-msgstr ""
+msgstr "Les :guilabel:`Propriétés principales` d'une barre d'échelle proposent les fonctionnalités suivantes (voir figure_composer_17_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:666
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:813
 msgid "Scale Bar Item properties Tab |nix|"
-msgstr ""
+msgstr "Onglet Propriétés d'une barre d'échelle |nix|"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:671
 msgid ""
 "The :guilabel:`Main properties` dialog of the scale bar :guilabel:`Item "
 "Properties` tab provides the following functionalities (see "
 "figure_composer_18_):"
-msgstr ""
+msgstr "La zone :guilabel:`Propriétés principales` de l'onglet :guilabel:`Propriétés de l'objet` de la Barre d'échelle propose les fonctionnalités suivantes (voir figure_composer_18_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:683
 msgid "Scale Bar Main properties Dialog |nix|"
-msgstr ""
+msgstr "Propriétés principales d'une barre d'échelle |nix|"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:685
 msgid "First, choose the map the scale bar will be attached to."
-msgstr ""
+msgstr "Choisissez tout d'abord à quelle carte la barre d'échelle sera associée."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:686
 msgid "Then, choose the style of the scale bar. Six styles are available:"
-msgstr ""
+msgstr "Ensuite, choisissez le style de la barre d’échelle. Six sont disponibles :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:688
 msgid ""
 "**Single box** and **Double box** styles, which contain one or two lines of "
 "boxes alternating colors."
-msgstr ""
+msgstr "les styles **Boîte unique** ou **Boîte double** correspondent à une ou deux lignes de boîtes de couleurs alternées."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:689
 msgid "**Middle**, **Up** or **Down** line ticks."
-msgstr ""
+msgstr "repères **au milieu**, **en-dessous** ou **au-dessus** de la ligne,"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:690
 msgid "**Numeric**, where the scale ratio is printed (i.e., 1:50000)."
-msgstr ""
+msgstr "**Numérique** : le ratio d'échelle est affiché (par exemple, 1:50000)."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:695
 msgid ""
 "The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar "
 ":guilabel:`Item Properties` tab provide the following functionalities (see "
 "figure_composer_19_):"
-msgstr ""
+msgstr "Les zones :guilabel:`Unités` et :guilabel:`Segments` de l'onglet :guilabel:`Propriétés de l'objet` de la Barre d'échelle proposent les fonctionnalités suivantes (voir figure_composer_19_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:707
 msgid "Scale Bar Units and Segments Dialogs |nix|"
-msgstr ""
+msgstr "Choix des unités et du nombre de segments pour la barre d'échelle |nix|"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:709
 msgid ""
 "In these two dialogs, you can set how the scale bar will be represented."
-msgstr ""
+msgstr "Avec ces deux séries de paramètres, vous pouvez choisir la manière dont la barre d'échelle sera représentée."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:711
 msgid ""
 "Select the map units used. There are three possible choices: **Map Units** "
 "is the automated unit selection; **Meters** or **Feet** force unit "
 "conversions."
-msgstr ""
+msgstr "Sélectionnez les unités à utilisées. Trois choix sont possibles : **Unités de la carte** est choisi par défaut, **Mètres** et **Pieds** forcent la conversion des unités."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:713
 msgid ""
 "The :guilabel:`Label` field defines the text used to describe the units of "
 "the scale bar."
-msgstr ""
+msgstr "Le champ :guilabel:`Étiquette` permet de rentrer le texte à afficher concernant les unités de la barre d'échelle."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:714
 msgid ""
 "The :guilabel:`Map units per bar unit` allows you to fix the ratio between a"
 " map unit and its representation in the scale bar."
-msgstr ""
+msgstr ":guilabel:`Unités de carte par unité de l'échelle graphique` vous permet de préciser un ratio entre l'unité de la carte et les unités utilisées pour la barre d'échelle."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:715
 msgid ""
 "You can define how many :guilabel:`Segments` will be drawn on the left and "
 "on the right side of the scale bar, and how long each segment will be "
 "(:guilabel:`Size` field). :guilabel:`Height` can also be defined."
-msgstr ""
+msgstr "Vous pouvez définir combien de :guilabel:`Segments` seront dessinés à gauche et / ou à droite de la barre d'échelle ainsi que leur longueur (champ :guilabel:`Taille`) et leur hauteur (champ :guilabel:`Hauteur`)."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:721
 msgid ""
 "The :guilabel:`Display` and :guilabel:`Fonts and colors` dialogs of the "
 "scale bar :guilabel:`Item Properties` tab provide the following "
 "functionalities (see figure_composer_20_):"
-msgstr ""
+msgstr "Les zones :guilabel:`Affichage` et :guilabel:`Polices et couleurs` de l'onglet :guilabel:`Propriétés de l'objet` de la Barre d'échelle proposent les fonctionnalités suivantes (voir figure_composer_20_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:732
 msgid "Scale Bar Display, Fonts and colors Dialogs |nix|"
-msgstr ""
+msgstr "Paramètres d'affichage, de polices et de couleurs de la barre d'échelle |nix|"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:734
 msgid ""
@@ -1883,14 +1883,14 @@ msgid ""
 ":guilabel:`Box margin` between text and frame borders, :guilabel:`Labels "
 "margin` between text and scale bar drawing and the :guilabel:`Line width` of"
 " the scale bar drawing."
-msgstr ""
+msgstr "Vous pouvez définir comment la barre d'échelle sera affichée dans son cadre. Ajustez la :guilabel:`Marge de la boîte` entre le texte et le cadre, la :guilabel:`Marge des étiquettes` entre le texte et la barre d'échelle et la :guilabel:`Largeur de la ligne` des boîtes."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:736
 msgid ""
 "The :guilabel:`Alignment` in the :guilabel:`Display` dialog only applies to "
 ":guilabel:`Numeric` styled scale bars and puts text on the left, middle or "
 "right side of the frame."
-msgstr ""
+msgstr "La propriété :guilabel:`Alignement` dans les paramètres d':guilabel:`Affichage` ne s'applique qu'aux barres d'échelle de style :guilabel:`Numerique` et place le texte à gauche, au centre ou à droite du cadre."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:742
 msgid ""
@@ -1899,7 +1899,7 @@ msgid ""
 "basic shape` icon or the |mActionAddArrow| :sup:`Add Arrow` icon, place the "
 "element with the left mouse button on the Print Composer canvas and position"
 " and customize the appearance in the :guilabel:`Item Properties` tab."
-msgstr ""
+msgstr "Il est possible d'ajouter des formes simples (ellipse, rectangle, triangle) et des flèches au Composeur : cliquez sur le bouton |mActionAddBasicShape| :sup:`Ajouter une forme` ou |mActionAddArrow| :sup:`Ajouter une flèche`, dessinez l'élément sur le Composeur avec un clic-gauche puis personnalisez son apparence via l'onglet des :guilabel:`Propriétés de l'objet`."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:747
 msgid ""
@@ -1907,7 +1907,7 @@ msgid ""
 "rectangle, or triangle in the Print Composer canvas. You can define its "
 "outline and fill color, the outline width and a clockwise rotation. For the "
 "rectangle shape, you can change the value of the corner radius."
-msgstr ""
+msgstr "Les paramètres de :guilabel:`Forme` permettent de choisir entre une ellipse, un rectangle ou un triangle. Vous pouvez définir la couleur du contour et du remplissage, l'épaisseur du contour et l'angle de rotation. Pour les rectangle, vous pouvez modifier l'arrondi des angles."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:763
 msgid ""
@@ -1916,19 +1916,19 @@ msgid ""
 "it is possible to use a default marker, no marker, or an SVG marker. For the"
 " SVG marker, you can additionally add an SVG start and end marker from a "
 "directory on your computer."
-msgstr ""
+msgstr "Les paramètres de :guilabel:`Flèche` permettent de définir une flèche dans le Composeur. Vous pouvez choisir la couleur, la largeur de la ligne et de la tête de la flèche. Vous pouvez utiliser soit le symbole de flèche par défaut soit aucun soit un symbole SVG. Pour le symbole SVG, vous pouvez l'ajouter au début ou à la fin de la flèche et choisir un fichier depuis votre ordinateur."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:782
 msgid ""
 "For basic shapes, this dialog allows you to choose an **Ellipse**, "
 "**Rectangle** or **Triangle** shape and its rotation."
-msgstr ""
+msgstr "Pour les formes simples, ces paramètres permettent de choisir entre une **Ellipse**, un **Rectangle** ou un **Triangle** et son angle de rotation."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:785
 msgid ""
 "For arrows, you can define here the line style: :guilabel:`Color`, "
 ":guilabel:`Line width` and :guilabel:`Arrow head width`."
-msgstr ""
+msgstr "Pour les flèches, vous pouvez définir ici le style : :guilabel:`Couleur`, :guilabel:`Largeur de ligne` et :guilabel:`Largeur de la tête`."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:786
 msgid ""
@@ -1936,13 +1936,13 @@ msgid ""
 ":guilabel:`Start marker` and/or :guilabel:`End marker`, browse to your SVG "
 "file by clicking on the **[...]** button after selecting the :guilabel:`SVG`"
 " radio button."
-msgstr ""
+msgstr "Le :guilabel:`Symbole de flèche` peut être modifié. Si vous souhaitez utiliser un symbole SVG pour le :guilabel:`Marquer de début` et/ou le :guilabel:`Marqueur de fin`, parcourez votre ordinateur en cliquant sur le bouton **[...]** après avoir sélectionnez le bouton radio :guilabel:`SVG`."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:790
 msgid ""
 "Unlike other items, the background color for a basic shape is the shape "
 "background and not the frame background."
-msgstr ""
+msgstr "A la différence des autres objets du composeur, la couleur du fond des formes simples correspond à la couleur de la forme et non celle du fond."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:797
 msgid ""
@@ -1951,20 +1951,20 @@ msgid ""
 "icon, place the element with the left mouse button on the Print Composer "
 "canvas, and position and customize the appearance in the :guilabel:`Item "
 "Properties` tab."
-msgstr ""
+msgstr "Il est possible d'ajouter des tables attributaires de couches vecteur au Composeur : cliquez sur le bouton |mActionOpenTable| :sup:`Ajouter une table d'attributs`, placez l'élément sur le Composeur avec un clic-gauche puis personnalisez son apparence via l'onglet des :guilabel:`Propriétés de l'objet`."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:801
 msgid ""
 "The :guilabel:`Item properties` of an attribute table item tab provides the "
 "following functionalities (see figure_composer_23_):"
-msgstr ""
+msgstr "Les :guilabel:`Propriétés principales` d'une table attributaire proposent les fonctionnalités suivantes (voir figure_composer_23_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:818
 msgid ""
 "The :guilabel:`Main properties`, :guilabel:`Show grid` and :guilabel:`Fonts`"
 " dialogs of the attribute table :guilabel:`Item Properties` tab provide the "
 "following functionalities (see figure_composer_24_):"
-msgstr ""
+msgstr "Les zones :guilabel:`Propriétés principales` et :guilabel:`Afficher les bordures` et :guilabel:`Polices` de l'onglet :guilabel:`Propriétés de l'objet` d'une table d'attribut proposent les fonctionnalités suivantes (voir figure_composer_24_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:843
 msgid ""
@@ -1972,27 +1972,27 @@ msgid ""
 "columns of the attribute table. Attribute columns can be sorted, and you can"
 " specify whether to show values in ascending or descending order (see "
 "figure_composer_25_)."
-msgstr ""
+msgstr "Les paramètres :guilabel:`Table des attributs` vous permettent de choisir la couche et les champs à afficher de sa table d'attributs. Les valeurs des champs peuvent être triées par ordre croissant ou décroissant (voir figure_composer_25_)."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:845
 msgid ""
 "You can choose to display the attributes of only features visible on a map. "
 "Check |checkbox| :guilabel:`Show only visible features` and select the "
 "corresponding :guilabel:`Composer map` to filter."
-msgstr ""
+msgstr "Vous pouvez choisir de n'afficher que les attributs des entités visibles sur la carte du composeur. Cochez |checkbox| :guilabel:`Afficher uniquement les entités visibles` et sélectionner le :guilabel:`Composeur de carte` sur lequel appliquer ce filtre."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:847
 msgid ""
 "You can define the :guilabel:`Maximum number of rows` to be displayed and "
 "the :guilabel:`margin` around text."
-msgstr ""
+msgstr "Vous pouvez définir un nombre de :guilabel:`Lignes maximales` à afficher et les :guilabel:`Marges` autours du texte."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:848
 msgid ""
 "Additionally, you can define the grid characteristics of the table "
 "(:guilabel:`Stroke width` and :guilabel:`Color` of the grid) and the header "
 "and content font."
-msgstr ""
+msgstr "De plus, vous pouvez personnaliser le style des bordures de la table (:guilabel:`Épaisseur` et :guilabel:`Couleur` des traits) et les polices de caractère des en-têtes et du contenu."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:854
 msgid "Add an HTML frame to the Print Composer"
@@ -2004,31 +2004,31 @@ msgid ""
 "|mActionAddHtml| :sup:`Add HTML frame` icon, place the element with the left"
 " mouse button on the Print Composer canvas and position and customize the "
 "appearance in the :guilabel:`Item Properties` tab."
-msgstr ""
+msgstr "il est possible d'ajouter un cadre lié à une URL : cliquez sur le bouton |mActionAddHtml| :sup:`Ajouter du HTML`, placez l'élément sur la page par un clic-gauche et personnalisez son apparence grâce aux :guilabel:`Propriétés de l'objet`. "
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:862
 msgid ""
 "The :guilabel:`Main properties` dialog of the HTML frame :guilabel:`Item "
 "Properties` tab provides the following functionalities (see "
 "figure_composer_26_):"
-msgstr ""
+msgstr "La zone :guilabel:`Propriétés principales` de l'onglet :guilabel:`Propriétés de l'objet` d'un cadre HTML propose les fonctionnalités suivantes (voir figure_composer_26_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:876
 msgid ""
 "Point the :guilabel:`URL` field to the URL or the HTML file you want to "
 "insert in the Composer."
-msgstr ""
+msgstr "Pointez vers l':guilabel:`URL` ou le fichier HTML que vous souhaitez insérer dans le Composeur."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:877
 msgid ""
 "You can adjust the rendering of the page with the :guilabel:`Resize mode`."
-msgstr ""
+msgstr "Vous pouvez ajuster le rendu de la page avec le :guilabel:`Mode de redimensionnement`."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:878
 msgid ""
 "**Use existing frames** constrains the page inside its first frame or in the"
 " frame created with the next settings."
-msgstr ""
+msgstr "**Utiliser les cadres existants** contraint la page à l'intérieur de son cadre d'origine ou des cadres créés par les modes de redimensionnement suivants."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:879
 msgid ""
@@ -2037,27 +2037,27 @@ msgid ""
 "around on the layout. If you resize a frame, the webpage will be divided up "
 "between the other frames. The last frame will be trimmed to fit the web "
 "page."
-msgstr ""
+msgstr "**Étendre à la page suivante** créera autant de cadres (et de pages) que nécessaire pour afficher la page en entier. Chaque cadre peut être déplacé sur la mise en page. Si vous redimensionnez un cadre, la page web sera à nouveau répartie dans les cadres. Le dernier cadre sera rogné pour s'ajuster à la page web."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:882
 msgid ""
 "**Repeat on every page** will repeat the upper left of the web page on every"
 " page in frames of the same size."
-msgstr ""
+msgstr "**Répéter sur chaque page** répètera la partie supérieure gauche de la page web sur chaque pages du composeur dans des cadres de taille identique."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:883
 msgid ""
 "**Repeat until finished** will also create as many frames as the **Extend to"
 " next page** option, except all frames will have the same size."
-msgstr ""
+msgstr "**Répéter jusqu'à la fin** créera autant de cadre que pour l'option **Étendre à la page suivante** sauf que tous les cadres auront la même taille."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:889
 msgid "Manage items"
-msgstr ""
+msgstr "Gestion des éléments"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:892
 msgid "Size and position"
-msgstr ""
+msgstr "Taille et position"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:894
 msgid ""
@@ -2069,7 +2069,7 @@ msgid ""
 " the :kbd:`Shift` while moving the mouse. If you need a better precision, "
 "you can move a selected item using the :kbd:`Arrow keys` on the keyboard; if"
 " the movement is too slow, you can speed up it by holding :kbd:`Shift`."
-msgstr ""
+msgstr "Chaque élément du Composeur peut être déplacé / redimensionné pour créer une mise en page parfaite. Pour chacune de ces opérations, la première étape est d'activer l'outil |mActionSelect| :sup:`Sélectionner/Déplacer un objet` et de cliquer sur l'élément. Vous pouvez ensuite le déplacer avec la souris en maintenant le clic gauche. Si vous souhaiter limiter les mouvements sur les axes horizontaux ou verticaux, pressez la touche :kbd:`Shift` du clavier pendant le déplacement de la souris. Si vous avez besoin de plus de précision, vous pouvez déplacer l'élément sélectionné en utilisant les :kbd:`flèches` du clavier et si les mouvements sont trop lents, utilisez en même temps la touche :kbd:`Shift`."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:902
 msgid ""
@@ -2077,38 +2077,38 @@ msgid ""
 " the mouse, will resize the item in the corresponding direction. While "
 "resizing, holding :kbd:`Shift` will maintain the aspect ratio. Holding "
 ":kbd:`Ctrl` will resize from the item center."
-msgstr ""
+msgstr "Un élément sélectionné apparait avec des carrés à chaque coin du rectangle englobant. Déplacer un de ces carrés avec la souris redimensionnera l'élément dans la direction correspondante. Pendant le redimensionnement, presser la touche :kbd:`Shift` permettra de maintenir les proportions. Presser la touche  :kbd:`Ctrl` redimensionnera depuis le centre de l'élément."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:907
 msgid ""
 "The correct position for an item can be obtained using snapping to grid or "
 "smart guides. If you need to disable the snap on the fly just hold "
 ":kbd:`Ctrl` while moving the mouse."
-msgstr ""
+msgstr "Une position précise d'un élément peut s'obtenir en utilisant l'accrochage à la grille ou aux guides. Si vous souhaitez désactiver l'accrochage momentanément, pressez la touche  :kbd:`Ctrl` pendant le déplacement de la souris."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:910
 msgid ""
 "You can choose multiple items with the |mActionSelect| :sup:`Select/Move "
 "item` button. Just hold the :kbd:`Shift` button and click on all the items "
 "you need. You can then resize/move this group just like a single item."
-msgstr ""
+msgstr "Vous pouvez sélectionner plusieurs éléments en même temps avec le bouton |mActionSelect| :sup:`Sélectionner/Déplacer un objet`. Pressez simplement la touche :kbd:`Shift` et cliquez sur tous les éléments souhaités. Vous pouvez ensuite les redimensionner ou les déplacer tous en même temps."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:914
 msgid ""
 "Once you have found the correct position for an item, you can lock it by "
 "clicking with the right mouse button. Press the same button another time to "
 "unlock it. You can also lock/unlock items using the icons on the toolbar."
-msgstr ""
+msgstr "Une fois la taille et la position correcte trouvée pour un élément, vous pouvez le verrouiller en cliquant dessus avec le bouton droit de la souris. Cliquez à nouveau sur le bouton droit pour le déverrouiller. Vous pouvez également utilisez un des des boutons de la barre d'outils."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:918
 msgid "To unselect an item, just click on it holding the :kbd:`Shift` button."
-msgstr ""
+msgstr "Pour désélectionner un objet, cliquez dessus en maintenant la touche :kbd:`Shift` appuyée."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:920
 msgid ""
 "Inside the :menuselection:`Edit` menu, you can find actions to select all "
 "the items, to clear all selections or to invert the current selection."
-msgstr ""
+msgstr "Dans le menu :menuselection:`Éditer`, vous trouverez les actions permettant de sélectionner ou déselectionner tous les éléments ou d'inverser la sélection."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:924
 msgid "Alignment"
@@ -2121,7 +2121,7 @@ msgid ""
 "element on the Print Composer canvas and select the matching functionality "
 "to raise or lower the selected element compared to the other elements (see "
 "table_composer_1_)."
-msgstr ""
+msgstr "Les fonctionnalités pour monter ou descendre des éléments sont présentes dans le menu déroulant |mActionRaiseItems| :sup:`Relever les objets sélectionnés`. Prenez un élément dans le Composeur de carte et sélectionnez la fonction correspondante pour le monter ou le descendre par rapport aux autres éléments (voir figure table_composer_1_)."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:942
 msgid ""
@@ -2132,11 +2132,11 @@ msgid ""
 "elements will then be aligned within to their common bounding box. When "
 "moving items on the Composer canvas, alignment helper lines appear when "
 "borders, centers or corners are aligned."
-msgstr ""
+msgstr "Plusieurs options d'alignement sont disponibles via le menu déroulant |mActionAlignLeft| :sup:`Aligner les objets sélectionnés` (voir table_composer_1_). Pour en utiliser une, sélectionner d'abord les éléments puis cliquez sur l'outil d'alignement désiré. Tous les éléments sélectionnés seront alors alignés au sein de leur rectangle englobant commun. Lors du déplacement d'éléments dans le Composeur, des guides apparaissent lorsque les bords, les centres ou les coins sont alignés."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:952
 msgid "Copy/Cut and Paste items"
-msgstr ""
+msgstr "Copier / Coller des éléments"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:953
 msgid ""
@@ -2145,19 +2145,19 @@ msgid ""
 " the items using one of the options seen above; at this point the actions "
 "can be found in the :menuselection:`Edit` menu. When using the Paste action,"
 " the elements will be pasted according to the current mouse position."
-msgstr ""
+msgstr "Le Composeur propose des outils permettant de copier/couper/coller des éléments. Comme toujours vous devez d'abord sélectionner les éléments puis utiliser une des options. Vous les trouverez via le menu :menuselection:`Éditer`. Lorsque vous collez des éléments, ils seront positionnés au niveau du curseur de la souris."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:961
 msgid ""
 "During the layout process, it is possible to revert and restore changes. "
 "This can be done with the revert and restore tools:"
-msgstr ""
+msgstr "Pendant la mise en page de la carte, il est possible d'annuler et refaire des modifications. Cela peut être réaliser à l'aide des outils Annuler et Refaire :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:967
 msgid ""
 "This can also be done by mouse click within the :guilabel:`Command history` "
 "tab (see figure_composer_28_)."
-msgstr ""
+msgstr "Il est également possible de le faire via l':guilabel:`Historique des commandes` (voir figure_composer_28_)."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:985
 msgid ""
@@ -2167,33 +2167,33 @@ msgid ""
 "new output will be generated where the content of some canvas maps will be "
 "moved to highlight the current geometry. Fields associated with this "
 "geometry can be used within text labels."
-msgstr ""
+msgstr "Le Composeur de cartes fournit des outils vous permettant de générer automatiquement un ensemble de cartes. L'idée est d'utiliser la géométrie et les attributs d'une couche vectorielle. Pour chaque entité de la couche, une nouvelle carte est générée et dont l'emprise correspond à la géométrie de l'entité. Les attributs de la couche peuvent être utilisés dans des zones de texte."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:992
 msgid ""
 "Every page will be generated with each feature. To enable the generation of "
 "an atlas and access generation parameters, refer to the `Atlas generation` "
 "tab. This tab contains the following widgets (see Figure_composer_29_):"
-msgstr ""
+msgstr "Un page est générée par entité de la couche. Pour générer un altas et le paramétrer, allez sur l'onglet `Génération d'atlas`. Cet onglet propose les éléments suivants (voir Figure_composer_29_) :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1007
 msgid ""
 "|checkbox| :guilabel:`Generate an atlas`, which enables or disables the "
 "atlas generation."
-msgstr ""
+msgstr "|checkbox| :guilabel:`Générer un atlas`, qui permet d'activer ou de désactiver la génération d'atlas."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1008
 msgid ""
 "A :guilabel:`Coverage layer` |selectstring| combo box that allows you to "
 "choose the (vector) layer containing the geometries on which to iterate "
 "over."
-msgstr ""
+msgstr "La liste déroulante :guilabel:`Couche de couverture` |selectstring| permet de choisir la couche (vecteur) contenant les géométries à partir desquelles générer chaque planche."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1010
 msgid ""
 "An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked, "
 "will hide the coverage layer (but not the other ones) during the generation."
-msgstr ""
+msgstr "La case optionnelle |checkbox| :guilabel:`Cacher la couche de couverture` permet de cacher la couche de couverture sur les planches en sortie."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1012
 msgid ""
@@ -2201,7 +2201,7 @@ msgid ""
 "expression for filtering features from the coverage layer. If the expression"
 " is not empty, only features that evaluate to ``True`` will be selected. The"
 " button on the right allows you to display the expression builder."
-msgstr ""
+msgstr "La possibilité de :guilabel:`Filtrer avec` une expression les entités de la couche de couverture. Si une expression est rentrée, seules les entités satisfaisant la condition seront utilisées. Le bouton à droite permet d'ouvrir un constructeur de requête."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1019
 msgid ""
@@ -2209,7 +2209,7 @@ msgid ""
 " force the generation of a single file if this is possible with the chosen "
 "output format (PDF, for instance). If this field is checked, the value of "
 "the :guilabel:`Output filename expression` field is meaningless."
-msgstr ""
+msgstr "L'|checkbox| :guilabel:`Export d'un seul fichier (si possible)` vous permet de forcer la création d'un unique fichier quand le format de sortie choisi le permet (par exemple le PDF). Si cette case est cochée, le :guilabel:`Nom du fichier en sortie` n'est pas pris en compte."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1023
 msgid ""
@@ -2218,7 +2218,7 @@ msgid ""
 "choose which column will be used as the sorting key. Sort order (either "
 "ascending or descending) is set by a two-state button that displays an up or"
 " a down arrow."
-msgstr ""
+msgstr "La case optionnelle |checkbox| :guilabel:`Trier par` vous permet de trier les entités de la couche de couverture. La liste déroulante associée permet de choisir un champ à utiliser pour le tri. L'ordre de tri (ascendant ou descendant) est spécifié par le bouton à droite représenté par une flèche ascendante ou descendante."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1029
 msgid ""
@@ -2226,14 +2226,14 @@ msgid ""
 "rendered according to the coverage features. To enable atlas generation for "
 "a specific map item, you need to check |checkbox|:guilabel:`Controlled by "
 "Atlas` under the item properties of the map item. Once checked, you can set:"
-msgstr ""
+msgstr "Vous pouvez utiliser plusieurs objets carte dans la génération d'atlas, chacun sera rendu en fonction de la couche de couverture. Pour activer la génération d'atlas pour un objet carte, vous devez cocher la case |checkbox|:guilabel:`Paramètres contrôlés par l'Atlas` dans les propriétés de l'objet carte. Une fois cochée, vous pouvez définir :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1033
 msgid ""
 "An input box :guilabel:`Margin around feature` that allows you to select the"
 " amount of space added around each geometry within the allocated map. Its "
 "value is meaningful only when using the auto-scaling mode."
-msgstr ""
+msgstr "Une :guilabel:`Marge autour des entités` qui permet de préciser un recul par rapport à l'emprise de chaque entité de la couche de couverture. Sa valeur n'a d'intérêt que lorsque le mode 'Marge' est choisi."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1036
 msgid ""
@@ -2242,7 +2242,7 @@ msgid ""
 "translated for each geometry to be centered. In auto-scale mode, the map's "
 "extents are computed in such a way that each geometry will appear in its "
 "entirety."
-msgstr ""
+msgstr "Une :guilabel:`Échelle prédéfinie (meilleur ajustement)` qui permet de passer du mode 'Marge' au mode 'Échelle fixe'. En échelle fixe, la carte est simplement translatée et centrée sur chaque entité. En mode 'Marge', l'emprise de la carte est calculée de telle sorte que l'entité de la couche de couverture apparaisse entièrement."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1042
 msgid "Labels"
@@ -2254,15 +2254,15 @@ msgid ""
 "a label with this special notation `[%expression using field_name%]`. For "
 "example, for a city layer with fields CITY_NAME and ZIPCODE, you could "
 "insert this:"
-msgstr ""
+msgstr "Pour adapter les zones de texte (étiquettes) aux entités à partir desquelles l'atlas génère les planches, utilisez cette notation spéciale `[%expression utilisant un nom_de_champ%]`. Par exemple, pour une couche de ville ayant les champs NOM_VILLE et CODE_INSEE, vous pouvez insérer ceci :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1050
 msgid "That would result in the generated atlas as"
-msgstr ""
+msgstr "Une fois l'atlas généré, voila ce qui sera affiché :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1056
 msgid "Preview"
-msgstr ""
+msgstr "Aperçu"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1058
 msgid ""
@@ -2270,7 +2270,7 @@ msgid ""
 " create a preview of all the pages by clicking on :menuselection:`Atlas --> "
 "Preview Atlas` and using the arrows, in the same menu, to navigate through "
 "all the features."
-msgstr ""
+msgstr "Une fois les paramètres de l'atlas configurés et les objets carte sélectionnés, vous pouvez créer un aperçu de toutes les pages en cliquant sur :menuselection:`Atlas --> Aperçu de l'Atlas` puis utiliser les flèches, depuis ce même menu, pour parcourir les planches."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1065
 msgid ""
@@ -2282,50 +2282,50 @@ msgid ""
 "been selected). If you need to print just a page of the atlas, simply start "
 "the preview function, select the page you need and click on "
 ":menuselection:`Composer --> Print` (or create a PDF)."
-msgstr ""
+msgstr "La génération de l'atlas peut se faire de différentes façons. Par exemple via :menuselection:`Atlas --> Impression de l'Atlas`, vous pouvez directement l'imprimer. Vous pouvez également créer un PDF via :menuselection:`Atlas --> Exporter l'Atlas au format PDF` et l'utilisateur devra donner un répertoire pour sauvegarder tous les fichiers (sauf si la case |checkbox| :guilabel:`Export d'un seul fichier (si possible)` est cochée). Si vous souhaitez n'imprimer qu'une seule page de l'atlas, lancez l'aperçu, sélectionnez la page puis cliquez sur :menuselection:`Composeur --> Imprimer ` (ou créez un PDF)."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1074
 msgid ""
 "Figure_composer_30_ shows the Print Composer with an example print layout, "
 "including each type of map element described in the sections above."
-msgstr ""
+msgstr "Figure_composer_30_ montre une mise en page incluant un exemple de chaque type d'élément décrit dans les paragraphes précédents."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1086
 msgid ""
 "Print Composer with map view, legend, image, scale bar, coordinates, text "
 "and HTML frame added |nix|"
-msgstr ""
+msgstr "Composeur d'impression avec une carte, une légende, une image, une barre d'échelle, des coordonnées, du texte et un cadre HTML |nix|"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1090
 msgid ""
 "The Print Composer allows you to create several output formats, and it is "
 "possible to define the resolution (print quality) and paper size:"
-msgstr ""
+msgstr "Le Composeur de cartes vous permet de choisir plusieurs formats de sortie et il est possible de définir la résolution (qualité d'impression) et le format du papier :"
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1093
 msgid ""
 "The |mActionFilePrint| :sup:`Print` icon allows you to print the layout to a"
 " connected printer or a PostScript file, depending on installed printer "
 "drivers."
-msgstr ""
+msgstr "Le bouton |mActionFilePrint| :sup:`Imprimer` vous permet d'imprimer la mise en page sur une imprimante ou dans un fichier PostScript en fonction des pilotes d'imprimante installés."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1095
 msgid ""
 "The |mActionSaveMapAsImage| :sup:`Export as image` icon exports the Composer"
 " canvas in several image formats, such as PNG, BPM, TIF, JPG,..."
-msgstr ""
+msgstr "Le bouton |mActionSaveMapAsImage| :sup:`Exporter dans une image` exporte le Composeur dans plusieurs formats d'image tels que PNG, BPM, TIF, JPG..."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1097
 msgid ""
 "|mActionSaveAsPDF| :sup:`Export as PDF` saves the defined Print Composer "
 "canvas directly as a PDF."
-msgstr ""
+msgstr "|mActionSaveAsPDF| :sup:`Exporter au format PDF` enregistre le contenu du Composeur directement dans un fichier PDF."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1099
 msgid ""
 "The |mActionSaveAsSVG| :sup:`Export as SVG` icon saves the Print Composer "
 "canvas as an SVG (Scalable Vector Graphic)."
-msgstr ""
+msgstr "Le bouton |mActionSaveAsSVG| :sup:`Exporter au format SVG` sauve le contenu du Composeur en SVG (Scalable Vector Graphic)."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1102
 msgid ""
@@ -2334,7 +2334,7 @@ msgid ""
 "Composition tab. Check |checkbox| :guilabel:`World file on` and choose the "
 "map item to use. With this option, the 'Export as image' action will create "
 "also a world file."
-msgstr ""
+msgstr "Si vous devez exporter votre mise en page en tant qu'**image géoréférencée** (pour la charger ensuite dans |qg|), vous devez activer cette fonctionnalité dans l'onglet Composition. Cochez |checkbox| :guilabel:`Générer fichier World file` et choisissez l'objet carte concerné. Avec cette option, 'Exporter comme image' créera également un world file."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1109
 msgid ""
@@ -2343,7 +2343,7 @@ msgid ""
 " future versions. Exporting big rasters can sometimes fail, even if there "
 "seems to be enough memory. This is also a problem with the underlying Qt "
 "management of rasters."
-msgstr ""
+msgstr "Actuellement le rendu SVG est très basique. Il ne s'agit pas d'un problème lié à |qg| mais à la bibliothèque Qt utilisée. Nous pouvons espérer que cela soit corrigé dans les versions futures. L'export de gros raster échoue parfois, même s'il semble qu'il y ait assez de ressource mémoire. Il s'agit également d'un problème lié à la gestion des raster par Qt."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1120
 msgid ""
@@ -2351,7 +2351,7 @@ msgid ""
 ":sup:`Load from template` icons, you can save the current state of a Print "
 "Composer session as a  :file:`.qpt` template and load the template again in "
 "another session."
-msgstr ""
+msgstr "Avec les boutons |mActionFileSaveAs| :sup:`Sauvegarder en tant que modèle` et |mActionFileOpen| :sup:`Charger depuis un modèle`, vous pouvez enregistrer l'état actuel d'une session du Composeur dans un modèle :file:`.qpt` et le charger dans une autre session."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1124
 msgid ""
@@ -2359,13 +2359,13 @@ msgid ""
 "toolbar and in :menuselection:`Composer --> Composer Manager` allows you to "
 "add a new Composer template, create a new composition based on a previously "
 "saved template or to manage already existing templates."
-msgstr ""
+msgstr "Le bouton |mActionComposerManager| :sup:`Gestionnaire de compositions` accessible via la barre d'outils |qg| et le menu  :menuselection:`Composeur --> Gestionnaire de compositions` vous permet d'ajouter un nouveau modèle de Composeur, créer une nouvelle composition sur la base des modèles existants ou de gérer ceux-ci."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1140
 msgid ""
 "By default, the Composer manager searches for user templates in "
 "~/.qgis2/composer_template."
-msgstr ""
+msgstr "Par défaut, le Gestionnaire de composition recherche les modèles dans le répertoire ~/.qgis2/composer_template."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1142
 msgid ""
@@ -2374,14 +2374,14 @@ msgid ""
 ":menuselection:`Composer --> New Composer` and :menuselection:`Composer --> "
 "Duplicate Composer` allow you to open a new Composer dialog, or to duplicate"
 " an existing composition from a previously created one."
-msgstr ""
+msgstr "Les boutons|mActionNewComposer|:sup:`Nouveau composeur` et |mActionDupComposer| :sup:`Dupliquer la composition` de la |qg| barre d'outils, et, qui se trouvent aussi dans :menuselection:`Composeur --> Nouveau composeur` et :menuselection:`Composeur--> Dupliquer la composition` vous permettent d'ouvrir un nouveau Composeur ou de dupliquer une composition existante à partir d'un existant."
 
 #: ../../source/docs/user_manual/print_composer/print_composer.rst:1147
 msgid ""
 "Finally, you can save your print composition with the |mActionFileSave| "
 ":sup:`Save Project` button. This is the same feature as in the |qg| main "
 "window. All changes will be saved in a |qg| project file."
-msgstr ""
+msgstr "Enfin, vous pouvez enregistrer votre mise en page avec le bouton |mActionFileSave|: sup:`Enregistrer le projet`. C'est la même option que dans la fenêtre principale de |qg|. Toutes les modifications seront sauvegardées dans un fichier de projet |qg|."
 
 #~ msgid "Print or export as Postscript"
 #~ msgstr ""

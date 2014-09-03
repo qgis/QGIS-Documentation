@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-06-27 12:16+0000\n"
+"PO-Revision-Date: 2014-07-29 14:52+0000\n"
 "Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -395,7 +395,7 @@ msgid ""
 "see when executing an algorithm that needs one of them is restricted to "
 "tables coming from files in dBase (:file:`.dbf`) or Comma-Separated Values "
 "(:file:`.csv`) formats."
-msgstr ""
+msgstr "Une table, à sélectionner dans la liste des tables disponibles dans |qg|. Des tables non spatiales peuvent être chargées dans |qg| comme les couches vectorielles et sont en fait traitées de la même manière. Actuellement, les seules tables utilisables par les algorithmes proviennent de fichiers dBase (:file:`.dbf`) ou CSV (:file:`.csv`)."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:155
 msgid ""
@@ -406,14 +406,14 @@ msgid ""
 "expression, so you can select a value derived from any of these variables, "
 "such as the cell size of a layer or the northernmost coordinate of another "
 "one."
-msgstr ""
+msgstr "Une valeur numérique, à entrer dans le champ. Sur le côté se situe un bouton, vous permettant d'entrer une expression mathématique ou une valeur calculée. Des formules basées sur les données chargées dans |qg| peuvent être ajoutées à l'expression, par exemple la taille du carroyage d'une couche ou le point le plus au nord."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:177
 msgid ""
 "A coordinate reference system. You can type the EPSG code directly in the "
 "text box, or select it from the CRS selection dialog that appears when you "
 "click on the button on the right-hand side."
-msgstr ""
+msgstr "Un système de coordonnées de référence. Vous pouvez saisir le code EPSG directement dans la zone de texte ou le sélectionner depuis la fenêtre de sélection du SCR qui apparaît lorsque vous cliquez sur le bouton à droite"
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:180
 msgid ""
@@ -422,7 +422,7 @@ msgid ""
 "hand side of the value selector, a pop-up menu will appear, giving you two "
 "options: to select the value from a layer or the current canvas extent, or "
 "to define it by dragging directly onto the map canvas."
-msgstr ""
+msgstr "Une emprise, à entrer sous la forme des quatre limites ``xmin``, ``xmax``, ``ymin``, ``ymax``. En cliquant sur le bouton situé à droite du sélecteur, un menu apparaîtra, vous permettant de choisir l'emprise courante du canevas ou de le sélectionner avec la souris sur le canevas."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:226
 msgid ""
@@ -430,13 +430,13 @@ msgid ""
 "select from the list of such layers available in |qg|. To make the "
 "selection, click on the small button on the left side of the corresponding "
 "row to see a dialog like the following one."
-msgstr ""
+msgstr "Une liste d'éléments (parmi les couches raster, vectorielles ou les tables), à choisir dans la liste des éléments disponibles dans |qg|. Pour sélectionner un élément, cliquez sur le petit bouton situé à sa gauche  pour faire apparaître une fenêtre comme celle-ci."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:258
 msgid ""
 "Depending on the algorithm, the number of rows can be modified or not by "
 "using the buttons on the right side of the window."
-msgstr ""
+msgstr "Selon l'algorithme, les lignes sont modifiables ou non, en utilisant les boutons situés à droite de la fenêtre."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:261
 msgid ""
@@ -445,7 +445,7 @@ msgid ""
 "algorithm and detailed descriptions of what each parameter does. "
 "Unfortunately, most algorithms lack good documentation, but if you feel like"
 " contributing to the project, this would be a good place to start."
-msgstr ""
+msgstr "Vous trouverez un onglet **[Aide]** dans la fenêtre de paramétrage. Si un fichier d'aide est disponible, il s'ouvrira, vous offrant de plus amples informations sur l'algorithme et des descriptions détaillées sur l'utilisation de chaque paramètre. Malheureusement, la plupart des algorithmes manque de bonne documentation donc si vous vous sentez de contribuer au projet, ce pourrait être un bon début pour commencer."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:270
 msgid ""
@@ -456,7 +456,7 @@ msgid ""
 " use more than one layer as input to an algorithm, whether vector or raster,"
 " it is up to you to make sure that they are all in the same coordinate "
 "system."
-msgstr ""
+msgstr "Les algorithmes lancés depuis le module de traitement - ainsi que la plupart des applications tierces utilisables à partir du module - n'effectuent pas de reprojection des couches en entrée et supposent que toutes les données sont déjà dans un système de coordonnées identique pour être analysées. Si plusieurs couches, aussi bien raster que vecteurs, sont utilisées par un algorithme, c'est à vous de vérifier qu'ils sont dans le même système de coordonnées."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:277
 msgid ""
@@ -467,7 +467,7 @@ msgid ""
 "resulting files should be used as input to the algorithm. Also, note that "
 "the reprojection process can be performed with the algorithms that are "
 "available in the processing framework itself."
-msgstr ""
+msgstr "Notez que, du fait des possibilités de projection à la  volée de |qg|, bien que deux couches puissent sembler se chevaucher et correspondre, ceci pourrait ne pas être vrai si leurs coordonnées originales sont indiquées dans des systèmes de projection différents. La reprojection dans un système identique doit être effectuée manuellement et les fichiers qui en résultent, utilisés comme couches d'entrée pour l'algorithme. Notez que le processus de reprojection peut aussi être réalisé avec les algorithmes déjà disponibles dans le cadre de traitement."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:284
 msgid ""
@@ -476,13 +476,13 @@ msgid ""
 "same CRS to be used as input layers. If you do not want to see this "
 "additional information, you can disable this functionality in the processing"
 " configuration dialog, unchecking the :guilabel:`Show CRS` option."
-msgstr ""
+msgstr "Par défaut, la fenêtre de paramétrage affichera une description du SCR de chaque couche à côté de son nom, rendant facile la sélection des couches ayant un SCR identique comme couches en entrée. Si vous ne souhaitez pas avoir cette information complémentaire, vous pouvez désactiver cette fonctionnalité dans la fenêtre de configuration des traitements en décochant l'option :guilabel:`Afficher SCR`."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:290
 msgid ""
 "If you try to execute an algorithm using as input two or more layers with "
 "unmatching CRSs, a warning dialog will be shown."
-msgstr ""
+msgstr "Si vous essayez d'exécuter un algorithme avec deux ou plusieurs couches en entrée avec des SCR non identiques, une fenêtre d'alerte s'affichera."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:306
 msgid ""
@@ -496,7 +496,7 @@ msgid ""
 "solutions like these are not yet implemented, the processing framework is "
 "prepared to handle them, and we expect to add new kinds of output channels "
 "in a near feature."
-msgstr ""
+msgstr "Ils sont tous sauvegardés sur disque, et la table des paramètres contient une zone de texte correspondant à chaque résultat, où vous pouvez saisir le chemin de sauvegarde de la sortie. Un chemin de sortie contient les informations nécessaires à la sauvegarde des objets résultats. Dans la plupart des cas, vous les sauvegarderez dans un fichier, mais l'architecture de  la boîte à outils  vous permet d'autres possibilités de stockage. Par exemple, une couche vectorielle peut être sauvegardée dans une base de données ou téléchargée vers un serveur distant à l'aide d'un service WFS-T. Bien que de telles fonctionnalités ne soient pas toutes implémentées, la boîte à outils Traitements pourra les gérer et nous espérons pouvoir ajouter de nouveaux types de canaux de sortie dans un futur proche."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:316
 msgid ""
@@ -504,7 +504,7 @@ msgid ""
 "the text box. That will open a save file dialog, where you can select the "
 "desired file path. Supported file extensions are shown in the file format "
 "selector of the dialog, depending on the kind of output and the algorithm."
-msgstr ""
+msgstr "Pour sélectionner un canal de sortie, il suffit de cliquer sur le bouton sur le côté droit de la zone de texte. Cela ouvrira une boîte de dialogue de fichier de sauvegarde, où vous pouvez sélectionner le chemin du fichier désiré. Extensions de fichiers supportés sont présentés dans le sélecteur de format de fichier de la boîte de dialogue, selon le type de sortie et l'algorithme."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:321
 msgid ""
@@ -517,7 +517,7 @@ msgid ""
 ":file:`.shp` for vector layers) will be appended to the file path, and the "
 "file format corresponding to that extension will be used to save the layer "
 "or table."
-msgstr ""
+msgstr "Le format de sortie est défini par l'extension de nom de fichier. Les formats pris en charge dépendent de ceux pris en charge par l'algorithme lui-même. Pour sélectionner un format, il suffit de sélectionner l'extension du fichier correspondant (ou l'ajouter si vous tapez directement le chemin du fichier à la place). Si l'extension du chemin du fichier que vous avez saisi ne correspond pas à l'un de ceux pris en charge, une extension par défaut (généralement DBF pour les tables et TIF pour les couches raster, SHP pour ceux vectoriels) seront ajoutées à la chemin du fichier et le format de fichier correspondant à cette extension sera utilisé pour sauver la couche ou la table."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:330
 msgid ""
@@ -525,7 +525,7 @@ msgid ""
 "file in the corresponding default file format, and it will be deleted once "
 "you exit |qg| (take care with that, in case you save your project and it "
 "contains temporary layers)."
-msgstr ""
+msgstr "Si vous ne spécifiez pas de nom de fichier, le résultat sera sauvegardé dans un fichier temporaire, dans le format par défaut et qui sera supprimé en quittant |qg| (précaution à prendre si vous sauvegardez votre projet qui contiendrait des couches temporaires)."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:335
 msgid ""
@@ -535,7 +535,7 @@ msgid ""
 " :guilabel:`Output folder`. This output folder is used as the default path "
 "in case you type just a filename with no path (i.e., :file:`myfile.shp`) "
 "when executing an algorithm."
-msgstr ""
+msgstr "Vous pouvez définir une répertoire par défaut pour la sortie des données. Allez dans la fenêtre de configuration (par le menu :menuselection:`Traitements`) et dans le groupe :guilabel:`Général`, vous trouverez un paramètre :guilabel:`Dossier de sortie`. Il constituera le dossier par défaut si vous entrez un nom de fichier sans chemin (par exemple :file:`monfichier.shp`) dans un algorithme."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:341
 msgid ""
@@ -544,7 +544,7 @@ msgid ""
 "are named using the base name and appending a number representing the index "
 "of the iteration. The file extension (and format) is used for all such "
 "generated files."
-msgstr ""
+msgstr "Lorsque vous lancez un algorithme qui utilise une couche vectorielle en mode itératif, le chemin de fichier entré est pris comme chemin de base pour tous les fichiers de sortie, dont le nom correspondra au nom du fichier de base suivi du numéro d'index d'itération. L'extension du fichier (et le format) sera la même pour tous les fichiers générés."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:346
 msgid ""
@@ -554,7 +554,7 @@ msgid ""
 " algorithm during the current session, and can be shown at any time by "
 "selecting :menuselection:`Processing --> Results viewer` from the |qg| main "
 "menu."
-msgstr ""
+msgstr "En plus des couches raster et vecteur, les algorithmes génèrent des graphiques et des textes sous forme de fichiers HTML. Ces sorties sont montrées à la fin de l'exécution de chaque algorithme dans une nouvelle fenêtre. Cette fenêtre conserve les résultats produits par tous les algorithmes lancés pendant la session en cours et peut être affichée à tout moment via le menu :menuselection:`Traitements--> Affichage des résultats` du menu principal de |qg|."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:352
 msgid ""
@@ -565,14 +565,14 @@ msgid ""
 "file formats or elements not supported by |qg|. This is, for instance, the "
 "case with LAS files used for LiDAR data. The files get created, but you "
 "won't see anything new in your |qg| working session."
-msgstr ""
+msgstr "Certaines applications tierces peuvent créer des fichiers d'un type différent à ceux précédemment exposés. Ces fichiers résultats ne seront pas gérés par |qg| (ouverts ou intégrés dans le projet courant) dans la mesure où le format de fichier n'est pas reconnu par |qg|. C'est par exemple le cas de fichier LAS produits par LiDAR. Ces fichiers sont créés, mais vous ne verrez rien de plus dans la session de travail |qg|."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:360
 msgid ""
 "For all the other types of output, you will find a checkbox that you can use"
 " to tell the algorithm whether to load the file once it is generated by the "
 "algorithm or not. By default, all files are opened."
-msgstr ""
+msgstr "Pour les autres types de résultat, vous pourrez choisir de les charger ou non à l'issue de l'exécution de l'algorithme en cochant la case. Par défaut, tous les fichiers sont chargés."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:364
 msgid ""
@@ -582,7 +582,7 @@ msgid ""
 "optional output (in other words, the layer is created anyway, but if you "
 "leave the text box empty, it will be saved to a temporary file and deleted "
 "once you exit |qg|)."
-msgstr ""
+msgstr "Le Module de Traitements ne prend pas en charge de sorties optionnelles. Tous les résultats sont créés. Cependant vous pouvez choisir de désactiver les sorties qui ne vous intéressent pas (ces fichiers seront créés dans des fichiers temporaires qui seront supprimés en quittant |qg|)."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:375
 msgid ""
@@ -590,13 +590,13 @@ msgid ""
 "where you can configure how algorithms work. Configuration parameters are "
 "structured in separate blocks that you can select on the left-hand side of "
 "the dialog."
-msgstr ""
+msgstr "Comme mentionné précédemment, le menu de configuration permet d'accéder à une nouvelle fenêtre dans laquelle vous pouvez paramétrer le fonctionnement des algorithmes. Les paramètres sont regroupés en blocs sélectionnables sur la partie gauche."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:407
 msgid ""
 "Other configuration parameters in the :guilabel:`General` group are listed "
 "below:"
-msgstr ""
+msgstr "Les autres paramètres de configuration du groupe :guilabel:`Général` sont les suivants :"
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:409
 msgid ""
@@ -609,7 +609,7 @@ msgid ""
 "output filename instead. Notice that, if the output is saved to a temporary "
 "file, the filename of this temporary file is usually a long and meaningless "
 "one intended to avoid collision with other already existing filenames."
-msgstr ""
+msgstr ":guilabel:`Utiliser le nom de fichier comme nom de couche`. Le nom de chaque couche créée par un algorithme est défini par l'algorithme lui-même. Dans certains cas, un nom fixe peut être utilisé, ce qui signifie que le même nom sera utilisé, quelle que soit la couche utilisée en entrée. Dans d'autres cas, le nom peut dépendre du nom de la couche d'entrée ou de certains des paramètres utilisés pour exécuter l'algorithme. Si cette case est cochée, le nom sera plutôt issu de celui du fichier de sortie. Notez, que, si la sortie est enregistrée dans un fichier temporaire, le nom de ce fichier temporaire est généralement long et créé de manière à éviter les collisions avec d'autres noms de fichiers déjà existants."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:418
 msgid ""
@@ -617,7 +617,7 @@ msgid ""
 " a vector layer is used as input for an algorithm, only its selected "
 "features will be used. If the layer has no selected features, all features "
 "will be used."
-msgstr ""
+msgstr ":guilabel:`N'utiliser que les entités sélectionnées`. Si cette option est sélectionnée, chaque fois qu'une couche vecteur est utilisée comme entrée pour un algorithme, seules ses entités sélectionnées seront utilisées. Si aucune entité de la couche n'est sélectionnée, toutes seront utilisées."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:421
 msgid ""
@@ -625,7 +625,7 @@ msgid ""
 "file`. These parameters refer to scripts written using the processing "
 "scripting functionality, and are explained in the section covering scripting"
 " and the console."
-msgstr ""
+msgstr ":guilabel:`Script Pré-exécution` et :guilabel:`Script Post-exécution`. Ces paramètres font référence à des scripts écrits à l'aide des fonctions du menu Traitements et sont expliqués dans la section abordant les algorithmes et la console."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:426
 msgid ""
@@ -635,7 +635,7 @@ msgid ""
 "not in the toolbox. Also, some algorithm providers have their own "
 "configuration items, which we will explain later when covering particular "
 "algorithm providers."
-msgstr ""
+msgstr "Vous trouverez également un bloc :guilabel:`Général` pour chaque fournisseur d'algorithmes. Chaque bloc contient une rubrique :guilabel:`Activé` pour le faire apparaître dans la boîte à outils. De plus, certains fournisseurs ont leurs propres options de configuration. Cela sera détaillé dans la description de chaque fournisseur."
 
 #~ msgid ""
 #~ "The *Toolbox* is the main element of the processing GUI, and the one that "

@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# matteo ghetta <matteo.ghetta@gmail.com>, 2013
+# matteo ghetta <matteo.ghetta@gmail.com>, 2013-2014
 # Mattia De Agostino <mattia.deagostino@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-20 18:40+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-07-28 13:50+0000\n"
+"Last-Translator: matteo ghetta <matteo.ghetta@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/qgis-documentation/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,14 +51,14 @@ msgstr "Seleziona usando un'espressione"
 
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:14
 msgid ""
 "The Query Builder allows you to define a subset of a table using a SQL-like "
 "WHERE clause and to display the result in the main window. The query result "
 "can then be saved as a new vector layer."
-msgstr ""
+msgstr "Il costruttore di interrogazioni ti permette di creare un sottoinsieme di elementi di una tabella, usando la clausola SQL ’WHERE’. Potrai visualizzare i risultati direttamente sulla mappa oppure li potrai salvare come nuovo vettore."
 
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:21
 msgid ""
@@ -71,7 +71,7 @@ msgid ""
 "example of the Query Builder populated with the :file:`regions.shp` layer "
 "from the |qg| sample data. The Fields, Values and Operators sections help "
 "you to construct the SQL-like query."
-msgstr ""
+msgstr "Clicca sul pulsante **[Costruttore di interrogazioni]** dal sottomenu :guilabel:`Sottoinsieme di geometrie` presente nel menu :guilabel:`Generale` delle proprietà del vettore. Se hai caricato un vettore ``regions`` con un campo ``TYPE_2`` puoi selezionare solamente le regioni appartenenti a un preciso ``distretto``  inserendo una specifica clausola nello spazio :guilabel:`Espressioni filtro specifiche del gestore` della finestra del costruttore delle interrogazioni. La figura Figure_attributes_2_ mostra un esempio di interrogazione del vettore :file:`regions.shp` dell'insieme di dati campione di |qg|. Le sezioni dei Campi, Valori e Operatori ti aiutano ad inserire una corretta interrogazione in linguaggio SQL."
 
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:41
 msgid ""
@@ -80,7 +80,7 @@ msgid ""
 "double click its name in the Fields list. Generally, you can use the various"
 " fields, values and operators to construct the query, or you can just type "
 "it into the SQL box."
-msgstr ""
+msgstr "La sezione **Campi** elenca tutti gli attributi del vettore. Se vuoi aggiungere un attributo nella casella delle clausole SQL WHERE, fai doppio click sul nome dell'attributo, quindi usa le altre sezioni (Valori e Operatori) per completare la clausola. In alternativa puoi scrivere direttamente l'interrogazione nella sezione 'Espressioni filtro specifiche del gestore'."
 
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:46
 msgid ""
@@ -90,7 +90,7 @@ msgid ""
 "attribute column, select the attribute column in the Fields list and click "
 "the **[Sample]** button. To add a value to the SQL WHERE clause field, "
 "double click its name in the Values list."
-msgstr ""
+msgstr "La sezione **Valori** elenca tutti i valori di un attributo. Clicca il pulsante **[Tutto]** se vuoi visualizzare tutti i valori di un attributo altrimenti clicca sul pulsante **[Campione]** per caricare 25 valori univoci e casuali dell'attributo. Se vuoi aggiungere un valore nella casella delle clausole SQL WHERE fai doppio click sul suo nome nella sezione Valori."
 
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:53
 msgid ""
@@ -98,7 +98,7 @@ msgid ""
 "to the SQL WHERE clause field, click the appropriate button. Relational "
 "operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), and"
 " logical operators (``AND``, ``OR``, ...) are available."
-msgstr ""
+msgstr "La sezione **Operatori** elenca tutti gli operatori che puoi usare. Per aggiungere un operatore nella casella delle clausole SQL WHERE, clicca sull'operatore che vuoi usare. Sono disponibili operatori relazionali (``=``, ``>``, ...), operatori per confrontare stringhe di testo (``LIKE``) ed operatori logici (``AND``, ``OR``, ...)."
 
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:58
 msgid ""
@@ -108,7 +108,7 @@ msgid ""
 " text field. The **[OK]** button closes the window and selects the features "
 "satisfying the query. The **[Cancel]** button closes the window without "
 "changing the current selection."
-msgstr ""
+msgstr "Puoi usare il pulsante **[Test]** durante il processo di interrogazione, per visualizzare una finestra con il numero di elementi che soddisfano l'interrogazione effettuata. Il pulsante **[Pulisci]** cancella il testo nella finestra di interrogazione SQL WHERE. Il tasto **[OK]** chiude la finestra dell'interrogazione e seleziona gli elementi che soddisfano la ricerca. Il tasto **[Cancel]** chiude la finestra del costruttore di interrogazioni senza cambiare lo stato attuale della selezione."
 
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:73
 msgid ""
@@ -118,7 +118,7 @@ msgid ""
 "selection as -->` to define the name of the output file, its format and CRS "
 "(see section :ref:`label_legend`). It is also possible to specify OGR "
 "creation options within the dialog."
-msgstr ""
+msgstr "Puoi salvare gli elementi selezionati in uno dei formati vettoriali supportati da OGR, anche con sistema di riferimento (SR) diverso da quello del vettore di origine. Clicca con il tasto destro del mouse sul vettore e seleziona :menuselection:`Salva selezione con nome -->` dal menu contestuale: quindi scegli il nome, il formato ed il sistema di riferimento del file di output (sezione  :ref:`label_legend`). Puoi anche specificare le opzioni di creazione OGR."
 
 #~ msgid ""
 #~ "The Query Builder allows you to define a subset of a table using a SQL-like "

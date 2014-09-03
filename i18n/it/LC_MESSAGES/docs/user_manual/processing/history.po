@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Fabrizio Murè <fabriziomure@gmail.com>, 2013
+# matteo ghetta <matteo.ghetta@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-05-20 18:40+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-08-26 07:28+0000\n"
+"Last-Translator: matteo ghetta <matteo.ghetta@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/qgis-documentation/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,12 +22,12 @@ msgstr ""
 # 02b3944a2c66472987012e7baf3cd6c3
 #: ../../source/docs/user_manual/processing/history.rst:10
 msgid "The history manager"
-msgstr "Il gestore della cronologia di SEXTANTE"
+msgstr "Il gestore della cronologia di Processing"
 
 # 41d20576ac484c2481faf54539cc8833
 #: ../../source/docs/user_manual/processing/history.rst:13
 msgid "The processing history"
-msgstr ""
+msgstr "La cronologia di Processing"
 
 # 739c3d84315d4565a8eeb2853ea81048
 #: ../../source/docs/user_manual/processing/history.rst:15
@@ -34,12 +35,12 @@ msgid ""
 "Every time you execute an algorithm, information about the process is stored"
 " in the history manager. Along with the parameters used, the date and time "
 "of the execution are also saved."
-msgstr ""
+msgstr "Ogni volta che esegui un algoritmo, le informazioni sul processo sono salvate dal gestore della cronologia. Vengono salvati anche i parametri usati, la data ed il tempo di esecuzione."
 
 # bf4aaa7764a54b9f8d66c66703d4a30f
 #: ../../source/docs/user_manual/processing/history.rst:35
 msgid "History |win|"
-msgstr ""
+msgstr "Cronologia |win|"
 
 # 23f057e07f7c4925991f2a2da5bc396a
 #: ../../source/docs/user_manual/processing/history.rst:37
@@ -49,30 +50,30 @@ msgid ""
 " learning how to use the command-line interface, since they can call an "
 "algorithm using the toolbox and then check the history manager to see how "
 "that same algorithm could be called from the command line."
-msgstr "L'informazione sul processo è conservata come una espressione a linea di comando, anche se l'algoritmo è stato avviato dalla cassetta degli attrezzi. Questo lo rende utile anche per coloro che stanno imparando come usare l'interfaccia a linea di comando, in quanto possono richiamare un algoritmo usando la cassetta degli attrezzi e poi controllare il gestore cronologico per vedere come lo stesso algoritmo dovrebbe essere invocato dalla linea di comando."
+msgstr "L'informazione sul processo è conservata come una espressione a riga di comando, anche se l'algoritmo è stato avviato tramite Strumenti. Questo è molto utile se stai imparando ad usare la riga di comando perché puoi vedere il comando di un algoritmo eseguito tramite Strumenti."
 
 #: ../../source/docs/user_manual/processing/history.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 #: ../../source/docs/user_manual/processing/history.rst:19
 msgid ""
 "This way, it is easy to track and control all the work that has been "
 "developed using the processing framework, and easily reproduce it."
-msgstr ""
+msgstr "In questo modo puoi tenere traccia e controllare tutto il lavoro eseguito tramite Processing e riprodurlo in tutta facilità."
 
 #: ../../source/docs/user_manual/processing/history.rst:22
 msgid ""
 "The history manager is a set of registry entries grouped according to their "
 "date of execution, making it easier to find information about an algorithm "
 "executed at any particular moment."
-msgstr ""
+msgstr "Il gestore della cronologia è un insieme di registri raggruppati per data di esecuzione: in questo modo è molto facile trovare l'informazione su uno specifico algoritmo eseguito in un particolare momento."
 
 #: ../../source/docs/user_manual/processing/history.rst:43
 msgid ""
 "Apart from browsing the entries in the registry, you can also re-execute "
 "processes by simply double-clicking on the corresponding entry."
-msgstr ""
+msgstr "Oltre a poter scorrere l'elenco del registro, puoi rieseguire i processi semplicemente facendo doppio click sul loro nome."
 
 #: ../../source/docs/user_manual/processing/history.rst:46
 msgid ""
@@ -83,7 +84,7 @@ msgid ""
 ":guilabel:`Errors` might help you to see what is happening. If you get in "
 "contact with a developer to report a bug or error, the information in that "
 "group will be very useful for her or him to find out what is going wrong."
-msgstr ""
+msgstr "Durante l'esecuzione degli algoritmi, Processing comunica altre informazioni che puoi visualizzare nel registro: :guilabel:`Error`, :guilabel:`Warnings` e :guilabel:`Information`. Nel caso qualcosa non funzioni correttamente, dando un'occhiata a :guilabel:`Error` potresti capire cosa è successo. Queste informazioni sono molto utili agli sviluppatori nel momento in cui vuoi segnalare un problema o un errore."
 
 #: ../../source/docs/user_manual/processing/history.rst:53
 msgid ""
@@ -94,7 +95,7 @@ msgid ""
 " for instance, you are having problems executing a SAGA algorithm, look for "
 "an entry named 'SAGA execution console output' to check all the messages "
 "generated by SAGA and try to find out where the problem is."
-msgstr ""
+msgstr "Gli algoritmi di terze parti vengono eseguiti richiamando la loro interfaccia di riga di comando e che viene normalmente visualizzata. Anche se la console non è visualizzata, una copia completa è salvata nel gruppo :guilabel:`Informazioni` ogni volta che esegui quell'algoritmo. Se per esempio, hai dei problemi eseguendo un algoritmo di SAGA, cerca nella voce 'SAGA execution console output' per controllare tutti i messaggi generati da SAGA e cercare di capire dov'è il problema."
 
 #: ../../source/docs/user_manual/processing/history.rst:61
 msgid ""
@@ -103,7 +104,7 @@ msgid ""
 ":guilabel:`Warning` block if they detect potential problems with the data, "
 "in order to warn you. Make sure you check those messages if you are having "
 "unexpected results."
-msgstr ""
+msgstr "Alcuni algoritmi, anche se vengono correttamente eseguiti e forniscono un risultato, possono aggiungere delle informazioni nel gruppo :guilabel:`Warning` se rilevano potenziali problemi con i dati. Guarda i messaggi se vedi che il risultato non è quello atteso."
 
 #~ msgid ""
 #~ "This way, it is easy to track the and control all the work that has been "

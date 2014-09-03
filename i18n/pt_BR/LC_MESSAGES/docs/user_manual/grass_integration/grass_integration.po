@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
+# CarolKieser <carolinekieser@hotmail.com>, 2014
 # Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2014
 # Narcélio de Sá <narceliosapereira@gmail.com>, 2014
 msgid ""
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-07-05 01:41+0000\n"
-"Last-Translator: Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>\n"
+"PO-Revision-Date: 2014-08-26 19:07+0000\n"
+"Last-Translator: CarolKieser <carolinekieser@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -998,7 +999,7 @@ msgstr "A melhor maneira de aprender os modelos de vetores GRASS, e as suas capa
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:5
 msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
+msgstr "Atualizações"
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:13
 msgid ""
@@ -1063,13 +1064,13 @@ msgid ""
 "clicking on :menuselection:`Plugins -->` |mActionShowPluginManager| "
 ":menuselection:`Manage Plugins` and activate |checkbox| :guilabel:`GRASS`. "
 "The GRASS toolbar appears in the |qg| main window."
-msgstr ""
+msgstr "Se ainda não tiver feito em uma seção anterior |qg|, carrege o complemento GRASS clicando no :menuselection:`Complementos -->` |mActionShowPluginManager| :menuselection:`Gerenciador de Complementos` e ativar |caixa| :guilabel:`GRASS`. A barra de ferramentas do GRASS aparecerá na janela principal |qg|."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:70
 msgid ""
 "For :file:`Gisdbase`, browse and select or enter the path to the newly "
 "created folder :file:`grassdata`."
-msgstr ""
+msgstr "Pelo :file:`Gisdbase`, procure e selecione ou digite o caminho para a pasta recém-criada :file:`grassdata`."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:78
 msgid ""
@@ -1078,13 +1079,13 @@ msgid ""
 "will be overlayed on top of the :file:`gtopo30` map. You can now adapt the "
 "layer properties as described in chapter :ref:`vector_properties_dialog` "
 "(e.g., change opacity, fill and outline color)."
-msgstr ""
+msgstr "Clique em |grass_add_vector| :sup:`Adicionar camada vetorial GRASS`, escolher nome do mapa :file:`alaska` e clique **[OK]**. Os limites da camada vetor Alaska será coberto na parte superior do mapa :file:`gtopo30`. Voce poderá adaptar as propriedades da camada descrita no capítulo :ref:`vector_properties_dialog` (e.x., mudar opacidade, cor de contorno e preenchimento)."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:83
 msgid ""
 "Also load the other two vector layers, :file:`rivers` and :file:`airports`, "
 "and adapt their properties."
-msgstr ""
+msgstr "Também carregar as outras duas camadas vetoriais, :file:`rios` e :file:`aeroportos`, e adaptar suas propriedades."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:86
 msgid ""
@@ -1092,14 +1093,14 @@ msgid ""
 "|qg|. See the following sections for editing GRASS data and creating a new "
 ":file:`LOCATION`. More sample GRASS :file:`LOCATIONs` are available at the "
 "GRASS website at http://grass.osgeo.org/download/sample-data/."
-msgstr ""
+msgstr "Como você vê, é muito simples carregar camadas raster e vetor GRASS no |qg|. Consulte as seguintes seções para a edição de dados GRASS e criar uma nova :file:`LOCALIZAÇÃO`. Mais amostra GRASS :file:`locais` estão disponíveis no site do GRASS em http://grass.osgeo.org/download/sample-data/."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:93
 msgid ""
 "If you have problems loading data or |qg| terminates abnormally, check to "
 "make sure you have loaded the GRASS plugin properly as described in section "
 ":ref:`sec_starting_grass`."
-msgstr ""
+msgstr "Se você tiver problemas ao carregar dados ou o |qg| termina de forma anormal, certifique-se de ter carregado o complemento GRASS corretamente conforme descrito na seção :ref:`sec_starting_grass`."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:102
 msgid ""
@@ -1119,7 +1120,7 @@ msgid ""
 "supported datasets without importing them. But because this is not the usual"
 " way for beginners to work with GRASS, this functionality will not be "
 "described here.)"
-msgstr ""
+msgstr "Dados do GRASS são armazenados em um diretório chamado de GISDBASE. Este diretório, muitas vezes chamado :file:`grassdata`, deve ser criado antes de começar a trabalhar com o complemento GRASS no |qg|. Dentro deste diretório, os dados SIG GRASS são organizados por projetos armazenados em subdiretórios chamados :file:`LOCATIONs`. Cada :file:`location` é definido por seu sistema de coordenadas, projeção de mapa e fronteiras geográficas. Cada :file:`location` pode ter vários :file:`MAPSETs` (subdiretórios do :file:`location`) que são usados para subdividir o projeto em diferentes tópicos ou sub-regiões, ou como espaços de trabalho para os membros da equipe (ver Neteler & Mitasova de 2008, em :ref:`literature_and_web`). A fim de analisar as camadas vetoriais e raster com módulos do GRASS, você deve importá-los para um GRASS :file:`location`. (Isto não é estritamente verdadeiro - com os módulos Grass :file:`r.external` e :file:`v.external` você pode criar somente leitura links para GDAL externo / conjuntos de dados OGR suportados, sem importar-lhes Mas porque esta não é a maneira usual para iniciantes para trabalhar com GRASS, esta funcionalidade não será descrita aqui.)"
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:134
 msgid ""
@@ -1129,7 +1130,7 @@ msgid ""
 "used for all examples and exercises in the following GRASS-related sections."
 " It is useful to download and install the dataset on your computer (see "
 ":ref:`label_sampledata`)."
-msgstr ""
+msgstr "Como exemplo, aqui está a amostra GRASS :file:`LOCALIZAÇÃO alaska`, que é projetada na projeção Albers Equal Area com unidade pés foi criada para o conjunto de dados de amostra |qg|. Esta amostra GRASS :file:`alaska` local será usado para todos os exemplos e exercícios nas seções seguintes, relacionadas com GRASS. Elas são úteis para baixar e instalar o conjunto de dados em seu computador (veja :ref:`label_sampledata`)."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:140
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:212
@@ -1142,20 +1143,20 @@ msgid ""
 "Visualize the :file:`alaska.shp` shapefile (see section "
 ":ref:`vector_load_shapefile`) from the |qg| Alaska dataset (see "
 ":ref:`label_sampledata`)."
-msgstr ""
+msgstr "Visualize o :file:`shapefile alaska.shp` (ver seção: ref:` vector_load_shapefile`) do conjunto de dados Alaska do |qg| (veja: ref: `label_sampledata`)."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:145
 msgid ""
 "Select an existing GRASS database (GISDBASE) folder :file:`grassdata`, or "
 "create one for the new :file:`LOCATION` using a file manager on your "
 "computer. Then click **[Next]**."
-msgstr ""
+msgstr "Selecione uma pasta existente do banco de dados GRASS (GISDBASE) :arquivo:`grassdata`, ou criar uma para o novo :arquivo:`local` usando um gerenciador de arquivos em seu computador. Em seguida, clique **[Próximo]**."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:152
 msgid ""
 "Enter a name for the :file:`LOCATION` -- we used 'alaska' -- and click "
 "**[Next]**."
-msgstr ""
+msgstr "Digite um nome para o :arquivo`local` -- que usa 'alaska' - e clique **[Próximo]**."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:155
 msgid ""
@@ -1165,7 +1166,7 @@ msgid ""
 "and projection and haven't memorized the EPSG ID, click on the "
 "|mIconProjectionEnabled| :sup:`CRS Status` icon in the lower right-hand "
 "corner of the status bar (see section :ref:`label_projections`))."
-msgstr ""
+msgstr "Nós estamos usando (pés) projeção Albers Equal Area Alaska. Desde que descobri que ela é representada pelo ID EPSG 2964, entramos ele na caixa de pesquisa. (Nota: Se você quiser repetir esse processo para outro :file:`location` e projeção e não memorizei o ID EPSG, clique no |mIconProjectionEnabled| :sup:` ícone status SRC` no canto inferior direito da barra de status (veja a seção :ref: `label_projections`))."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:161
 msgid "In :guilabel:`Filter`, insert 2964 to select the projection."
@@ -1177,7 +1178,7 @@ msgid ""
 "in the north, south, east, and west directions. Here, we simply click on the"
 " button **[Set current |qg| extent]**, to apply the extent of the loaded "
 "layer :file:`alaska.shp` as the GRASS default region extent."
-msgstr ""
+msgstr "Para definir a região padrão, temos que entrar no arquivo: limites 'LOCALIZAÇÃO' norte, sul, leste, oeste e direções. Aqui, basta clicar no botão ** [Conjunto| QG | medida] **, para aplicar a extensão da camada carregado: arquivo: `alaska.shp` com a extensão padrão GRASS. "
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:168
 msgid ""
@@ -1187,14 +1188,14 @@ msgid ""
 ":file:`MAPSET` called :file:`PERMANENT`, designed to store the core data for"
 " the project, its default spatial extent and coordinate system definitions "
 "(see Neteler & Mitasova 2008 in :ref:`literature_and_web`)."
-msgstr ""
+msgstr "Também precisamos definir um: arquivo: 'CONJUNTO DE MAPAS' dentro do novo: arquivo: `local` (isto é necessário quando criar um novo: arquivo: LOCAL). Você pode nomeá-lo o que quiser - foi utilizado 'demonstração'. GRASS cria automaticamente um arquivo: `CONJUNTO DE MAPAS` chamado: arquivo 'PERMANENTE', projetado para armazenar os dados básicos para o projeto, a sua extensão padrão e coordenar as definições do sistema (ver Neteler & Mitasova 2008 em: ref:` literature_and_web`)."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:175
 msgid ""
 "The new :file:`LOCATION`, 'alaska', and two :file:`MAPSETs`, 'demo' and "
 "'PERMANENT', are created. The currently opened working set is 'demo', as you"
 " defined."
-msgstr ""
+msgstr "O novo: arquivo 'LOCALIZAÇÃO': 'Alaska', e dois: arquivos: `CONJUNTO DE MAPAS`, demonstração e\" permanente \", são criados. O conjunto de trabalho aberto no momento é 'demonstração', como você definiu. "
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:192
 msgid ""
@@ -1204,7 +1205,7 @@ msgid ""
 "also use the already-existing vector and raster data in the sample GRASS "
 ":file:`LOCATION` 'alaska', included in the |qg| 'Alaska' dataset "
 ":ref:`label_sampledata`, and move on to section :ref:`label_vectmodel`."
-msgstr ""
+msgstr "Se isso parecia uma série de etapas, não é realmente tão ruim assim é uma maneira muito rápida de criar um: arquivo: `local`. O arquivo: `local` 'Alaska' está pronto para importação de dados (ver seção: ref:` sec_import_loc_data`). Você também pode usar os dados já existentes vetoriais e  amostra quadricular no: arquivo: `local` 'Alaska', incluídas no | QG | base de ados 'Alaska': ref: dados, e ir para a seção: ref: `modelo vetorial' "
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:204
 msgid ""
@@ -1212,7 +1213,7 @@ msgid ""
 "This means that besides access to your own :file:`MAPSET`, you can read maps"
 " in other users' :file:`MAPSETs` (and they can read yours), but you can "
 "modify or remove only the maps in your own :file:`MAPSET`."
-msgstr ""
+msgstr "Um usuário tem acesso apenas ao GRASS: arquivo: 'CONJUNTO DE MAPAS' que criou. Isso significa que, além do acesso ao seu próprio: arquivo: 'CONJUNTO DE MAPAS', você pode ler mapas de outros usuários de arquivo 'CONJUNTO DE MAPAS', mas você pode modificar ou remover apenas os mapas em seu próprio: arquivo 'CONJUNTO DE MAPAS'."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:208
 msgid ""
@@ -1220,20 +1221,20 @@ msgid ""
 "boundary coordinate values and the currently selected raster resolution (see"
 " Neteler & Mitasova 2008 in :ref:`literature_and_web`, and section "
 ":ref:`sec_grass_region`)."
-msgstr ""
+msgstr "Todos: arquivos: 'CONJUNTO DE MAPAS' inclui um arquivo 'WIND' que armazena as coordenadas dos valores e a resolução selecionada (ver Neteler & Mitasova de 2008, em: ref:` literatura web` e seção: ref: `sec_regiao_grass`) ."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:215
 msgid ""
 "Select the GRASS database (GISDBASE) folder :file:`grassdata` with the "
 ":file:`LOCATION` 'alaska', where we want to add a further :file:`MAPSET` "
 "called 'test'."
-msgstr ""
+msgstr "Selecione a pasta do banco de dados GRASS (GISDBASE): arquivo `grassdata` com o arquivo:` local` 'Alaska', onde queremos adicionar mais um: arquivo: `CONJUNTO DE MAPAS` chamado 'teste'."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:223
 msgid ""
 "Enter the name :file:`text` for the new :file:`MAPSET`. Below in the wizard,"
 " you see a list of existing :file:`MAPSETs` and corresponding owners."
-msgstr ""
+msgstr "Digite o nome: arquivo: `texte` para o novo: arquivo:` CONJUNTO DE MAPAS`. Abaixo no assistente, você verá uma lista existente arquivo: `CONJUNTO DE MAPAS` e seus proprietários "
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:233
 msgid ""
@@ -1249,7 +1250,7 @@ msgid ""
 "Select as GRASS database the folder :file:`grassdata` in the |qg| Alaska "
 "dataset, as :file:`LOCATION` 'alaska', as :file:`MAPSET` 'demo' and click "
 "**[OK]**."
-msgstr ""
+msgstr "Escolha como banco de dados GRASS a pasta:arquivo: grassdata no | QG | base de dados Alasca, como: arquivo: `local` 'Alaska', como: arquivo:` CONJUNTO DE MAPAS` 'demonstração' e clique ** [OK] **."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:246
 msgid ""
@@ -1257,27 +1258,27 @@ msgid ""
 ":file:`r.in.gdal` in the :guilabel:`Modules Tree` tab. This GRASS module "
 "allows you to import GDAL-supported raster files into a GRASS "
 ":file:`LOCATION`. The module dialog for :file:`r.in.gdal` appears."
-msgstr ""
+msgstr "Para importar o mapa raster: arquivo: `landcover.img`, clique no módulo: arquivo:` r.in.gdal` no: guilabel: guia módulos em árvore. Este módulo GRASS permite importar arquivos raster GDAL que suporta GRASS: arquivo: 'local'. O módulo para: arquivo: `aparece r.in.gdal`. "
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:250
 msgid ""
 "Browse to the folder :file:`raster` in the |qg| 'Alaska' dataset and select "
 "the file :file:`landcover.img`."
-msgstr ""
+msgstr "Navegue até a pasta: arquivo: `raster` no | QG | base de dados 'Alaska' e selecione o arquivo: ` landcover.img`."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:252
 msgid ""
 "As raster output name, define :file:`landcover_grass` and click **[Run]**. "
 "In the :guilabel:`Output` tab, you see the currently running GRASS command "
 "``r.in.gdal -o input=/path/to/landcover.img output=landcover_grass``."
-msgstr ""
+msgstr "Como nome de saída raster, definir: arquivo: `landcover_grass` e clique ** [Ir] **. Na: guilabel: `guia Saída`, você vê o comando GRASS atualmente em execução` `input -o r.in.gdal = / path / to / saída landcover.img = landcover_grass"
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:256
 msgid ""
 "When it says **Succesfully finished**, click **[View output]**. The "
 ":file:`landcover_grass` raster layer is now imported into GRASS and will be "
 "visualized in the |qg| canvas."
-msgstr ""
+msgstr "Quando se diz ** Com sucesso**, clique ** [saída] **. O arquivo: camada landcover_grass é agora importada para a GRASS e vai ser visualizado no | QG |. "
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:259
 msgid ""
@@ -1285,13 +1286,13 @@ msgid ""
 ":file:`v.in.ogr` in the :guilabel:`Modules Tree` tab. This GRASS module "
 "allows you to import OGR-supported vector files into a GRASS "
 ":file:`LOCATION`. The module dialog for :file:`v.in.ogr` appears."
-msgstr ""
+msgstr "Para importar o arquivo vetorial GML: arquivo `lakes.gml`, clique no módulo: arquivo:` v.in.ogr` no: guilabel: `módulos em árvores`. Este módulo GRASS permite importar arquivos vetoriais OGR apoiados na GRASS: arquivo: `local`. A caixa de diálogo para o arquivo `aparece v.in.ogr`."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:263
 msgid ""
 "Browse to the folder :file:`gml` in the |qg| 'Alaska' dataset and select the"
 " file :file:`lakes.gml` as OGR file."
-msgstr ""
+msgstr "Navegue até a pasta: arquivo: `gml` no | QG | base de dados 'Alaska' e selecione o arquivo:` lakes.gml` como arquivo OGR."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:265
 msgid ""
@@ -1299,14 +1300,14 @@ msgid ""
 "don't have to care about the other options in this example. In the "
 ":guilabel:`Output` tab you see the currently running GRASS command "
 "``v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\\_grass``."
-msgstr ""
+msgstr "Como o nome de saída do vetor, defina: arquivo: `lakes_grass` e clique ** [Ir] **. Você não tem de se preocupar com as outras opções neste exemplo. No: guilabel: `saídat` você vê o comando GRASS atualmente em execução` `v.in.ogr -o dsn = / path / to / lakes.gml output = lagos \\ _grass``."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:269
 msgid ""
 "When it says **Succesfully finished**, click **[View output]**. The "
 ":file:`lakes_grass` vector layer is now imported into GRASS and will be "
 "visualized in the |qg| canvas."
-msgstr ""
+msgstr "Quando se diz **com sucesso** , clique ** [saída] **. O arquivo: `vetorial lakes_grass` agora é importado para o GRASS e será visualizado no | QG |."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:287
 msgid ""
@@ -1318,7 +1319,7 @@ msgid ""
 "to mix geometry elements, it is unusual and, even in GRASS, only used in "
 "special cases such as vector network analysis. Normally, you should prefer "
 "to store different geometry elements in different layers.)"
-msgstr ""
+msgstr "Além de limites e centróides, um mapa vetor também pode conter pontos e linhas. Todos estes elementos de geometria podem ser misturados em um vetor e será representado em diferentes  'camadas' dentro de um GRASS vetor. Então, no GRASS, uma camada não é um vetor ou raster, mas um nível dentro de uma camada vetorial. Isso é importante para distinguir cuidadosamente. (Embora seja possível misturar elementos de geometria, é incomum e, mesmo no GRASS, utilizado somente em casos especiais, tais como rede de análise vetorial. Normalmente, você deve preferir armazenar diferentes elementos geométricos em diferentes camadas.)"
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:296
 msgid ""

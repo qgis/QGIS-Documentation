@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-07-08 10:17+0000\n"
+"PO-Revision-Date: 2014-07-11 09:59+0000\n"
 "Last-Translator: junek <junek@gbd-consult.de>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/qgis-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1338,7 +1338,7 @@ msgid ""
 " you selected multiple features, the rotation anchor point will be the "
 "common center of the features. Press and drag the left mouse button in the "
 "desired direction to rotate the selected features."
-msgstr ""
+msgstr "Verwenden Sie |mActionRotateFeature|:sup:`Objekt(e) drehen` um ein oder mehrere ausgewählte Objekte in der Kartenansicht zu drehen. Sie müssen erst die Objekte auswählen und dann das |mActionRotateFeature|:sup:`Objekt(e) drehen` Icon drücken. Der Zentroid des/der Objekte(s) erscheint und wird zum Drehungsankerpunkt. Wenn Sie mehrere Objekte auswählen liegt der Drehungsankerpunkt im gemeinsamen Zentrum der Objekte. Drücken und ziehen Sie den linke Maustaste in die gewünschte Richtung um die ausgewählten Objekte zu drehen. "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:547
 msgid ""
@@ -1350,7 +1350,7 @@ msgid ""
 "Release the :kbd:`Ctrl` button when the desired rotation anchor point is "
 "reached. Now, press and drag the left mouse button in the desired direction "
 "to rotate the selected feature(s)."
-msgstr ""
+msgstr "Es ist auch möglich einen benutzerdefinierten Drehungsankerpunkt, um den dann die ausgewählten Objekte rotieren, zu erstellen. Wählen Sie die Objekte, die gedreht werden sollen und aktivieren Sie das |mActionRotateFeature|:sup:`Objekt(e) drehen` Werkzeug. Drücken und halten Sie den :kbd:`Strg` Knopf und bewegen Sie den Mauszeiger (ohne die Maustaste zu drücken) zu der Stelle wohin Sie den Rotationsanker verschieben wollen. Lassen Sie den :kbd:`Strg` Knopf los wenn der gewünschte Rotationsankerpunkt erreicht ist. Jetzt können Sie die Linke Maustaste in die gewünschte Richtung drücken und ziehen um das/die ausgewählte(n) Objekt(e) zu drehen."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:557
 msgid ""
@@ -1361,7 +1361,7 @@ msgid ""
 "shape to show how the feature is being simplified. Click **[OK]** to store "
 "the new, simplified geometry. If a feature cannot be simplified (e.g. multi-"
 "polygons), a message will appear."
-msgstr ""
+msgstr "Das Werkzeug |mActionSimplify| :sup:`Objekt vereinfachen` ermöglicht es, die Anzahl der Stützpunkte eines Objektes zu veringern, solange sich die Geometrie nicht verändert. Sie müssen dazu eines oder mehrere Objekte auswählen. Dadurch werden diese von einem roten Gummiband umrandet und ein Schieber erscheint. Wenn Sie die Stellung des Schiebers verändern, können Sie sehen, wie das Objekt vereinfacht wird. Durch einen Klick auf **[OK]** wird die neue Geometrie abgespeichert. Wenn ein Objekt nicht vereinfacht werden kann (z.B. bei MultiPolygonen), erscheint ein Fenster mit einer entsprechenden Meldung.  "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:568
 msgid ""
@@ -1370,14 +1370,14 @@ msgid ""
 "possible to digitize further polygons that will occur as a 'hole', so only "
 "the area between the boundaries of the outer and inner polygons remains as a"
 " ring polygon."
-msgstr ""
+msgstr "Sie können :index:`Ring-Polygone` mit dem Werkzeug |mActionAddRing| :sup:`Ring hinzufügen` erstellen. Das bedeutet, dass Sie innerhalb eines bestehenden Polygons weitere Polygone digitalisieren können. Diese erscheinen dann als 'Loch', so dass nur der Zwischenraum des inneren und des äußeren Polygons als Ring-Polygon übrig bleibt."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:577
 msgid ""
 "You can |mActionAddPart| :sup:`add part` polygons to a selected "
 ":index:`multipolygon`. The new part polygon must be digitized outside the "
 "selected multi-polygon."
-msgstr ""
+msgstr "Sie können mit |mActionAddPart| :sup:`Teil hinzufügen` einem ausgewählten :index:`multipolygon` Polygone hinzufügen. Das neue Teilpolygon muss außerhalb des ausgewählten Multipolygons digitalisiert werden."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:584
 msgid ""
@@ -1385,7 +1385,7 @@ msgid ""
 " a polygon and add a new feature to the layer at the same time. Thus you "
 "need not first use the |mActionAddRing| :sup:`Add Ring` icon and then the "
 "|mActionCapturePolygon| :sup:`Add feature` function anymore."
-msgstr ""
+msgstr "Sie können die |mActionFillRing| :sup:`Ring füllen` Funktion verwenden um gleichzeitig einen Ring in ein Polygon einzufügen und dem Layer ein neues Objekt zuzufügen. So brauchen Sie nicht erst das |mActionAddRing| :sup:`Ring hinzufügen` Icon und dann die  |mActionCapturePolygon| :sup:`Objekt hinzufügen` Funktion benutzen."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:592
 msgid ""
@@ -1394,7 +1394,7 @@ msgid ""
 "It doesn't change anything when it is used on the outer ring of the polygon."
 " This tool can be used on polygon and multi-polygon features. Before you "
 "select the vertices of a ring, adjust the vertex edit tolerance."
-msgstr ""
+msgstr "Das Werkzeug |mActionDeleteRing| :sup:`Ring löschen` ermöglicht es, Ringpolygone innerhalb eines existierenden Fläche zu löschen. Das Werkzeug funktioniert nur mit Polygonlayern und kann für Polygon- und Multipolygon-Objekte benutzt werden. Es findet keine Veränderung statt, wenn es auf den äußeren Ring eines Polygons angewendet wird. Bevor Sie die Stützpunkte des Ringes selektieren, stellen Sie bitte die Fangtoleranz entsprechend ein.    "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:601
 msgid ""
@@ -1404,7 +1404,7 @@ msgid ""
 "untouched. This tool works with all multi-part geometries: point, line and "
 "polygon. Before you select the vertices of a part, adjust the vertex edit "
 "tolerance."
-msgstr ""
+msgstr "Mit dem |mActionDeletePart| :sup:`Teil löschen` Werkzeug können Teile eines Multi-Feature Objektes gelöscht werden (z.B. ein Polygon von einem Multipolygon Objekt löschen). Dabei wird der letzte Teil des Multi-Feature Objektes nicht gelöscht. Das Werkzeug funktioniert mit allen Multi-Feature Geometrien Punkte, Linien und Polygone. Bevor Sie die Stützpunkte des Teils selektieren, stellen Sie bitte die Fangtoleranz entsprechend ein."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:610
 msgid ""
@@ -1415,7 +1415,7 @@ msgid ""
 " to replace smaller parts of a polygon, not for major overhauls, and the "
 "reshape line is not allowed to cross several polygon rings, as this would "
 "generate an invalid polygon."
-msgstr ""
+msgstr "Die Geometrien von Linien und Polygonen können mit dem Werkzeug |mActionReshape| :sup:`Objekt überarbeiten` verändert werden. Dabei ersetzt die gezogene Linie die originale Linie oder Flächenlinie eines Objektes von der ersten bis zur zweiten Überschneidung. Für Polygone kann dies manchmal zu unerwünschten Resultaten führen und ist vorwiegend sinnvoll, wenn man nur kleinere Teile einer Fläche ersetzen möchte und nicht für eine vollständige Überarbeitung. Dabei ist es für die Vereinfachungslinie auch nicht erlaubt, mehrere Polygongrenzen zu überschneiden."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:628
 msgid ""
@@ -1423,7 +1423,7 @@ msgid ""
 "closed line. So, the point that is represented 'twice' will not be the same "
 "any more. This may not be a problem for most applications, but it is "
 "something to consider."
-msgstr ""
+msgstr "Das Objekte überarbeiten Werkzeug kann die Startposition eines Polygonringes oder einer geschlossenen Linie verändern. Der Punkt, der zweimal abgebildet ist wird also nicht mehr der gleiche sein. Dies mag kein Problem für die meisten Anwendungen sein, sollte aber beachtet werden. "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:637
 msgid ""
@@ -1437,24 +1437,24 @@ msgid ""
 "make the |mActionOffsetCurve| :sup:`Offset Curve` tool active and drag the "
 "cross to the desired distance. Your changes may then be saved with the "
 "|mActionSaveEdits|:sup:`Save Layer Edits` tool."
-msgstr ""
+msgstr "Das |mActionOffsetCurve| :sup:`Linie versetzen` Werkzeug erstellt parallele Linien von Linienlayern. Das Werkzeug kann auf den bearbeiteten Layer (die Geometrien werden verändert) und auch auf Hintergrundlayer (in diesem Fall erstellt es Kopien von Linien/ Ringen und fügt Sie dem bearbeiteten Layer hinzu) angewendet werden. Es ist auf diese Weise ideal geeignet Abstandslinienlayer zu erstellen. Der Versatz wird unten links in der Taskleiste angezeigt. Um einen Versatz eines Linienlayers zu erstellen müssen Sie erst in den Bearbeitungsmodus gehen und dann das Objekt auswählen. Sie können das |mActionOffsetCurve| :sup:`Linie versetzen` Werkzeug aktiv machen und das Kreuz in den gewünschten Abstand ziehen. Ihre Änderungen können dann mit dem |mActionSaveEdits|:sup:`Layeränderungen speichern` Werkzeug gespeichert werden."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:659
 msgid "Split parts"
-msgstr ""
+msgstr "Teile zerlegen"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:661
 msgid ""
 "In |qg| 2.0 it is now possible to split the parts of a multi part feature so"
 " that the number of parts is increased. Just draw a line across the part you"
 " want to split using the |mActionSplitParts| :sup:`Split Parts` icon."
-msgstr ""
+msgstr "In |qg| 2.0 ist es jetzt möglich die Teile eines Multi-Part Features zu zerlegen so dass die Anzahl der Teile sich erhöht. Zeichnen Sie einfach eine Linie über den Teil den Sie zerlegen wollen indem Sie dafür das |mActionSplitParts| :sup:`Teile zerlegen` Icon verwenden."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:668
 msgid ""
 "The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows you to"
 " merge features that have common boundaries and the same attributes."
-msgstr ""
+msgstr "Mit dem |mActionMergeFeatures| :sup:`Gewählte Objekte verschmelzen` Werkzeug können Sie Objekte verschmelzen die gemeinsame Grenzen und die gleichen Attribute haben. "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:676
 msgid ""
@@ -1466,7 +1466,7 @@ msgid ""
 " button. Now |qg| asks you which attributes are to be applied to all "
 "selected objects. As a result, all selected objects have the same attribute "
 "entries."
-msgstr ""
+msgstr "Mit dem |mActionMergeFeatureAttributes| :sup:`Attribute gewählter Objekte vereinen` Werkzeug können Sie :index:`Attribute von Objekten vereinen` die gemeinsame Grenzen und Attribute haben ohne Ihre Grenzen zu vereinen. Wählen Sie zuerst mehrere Objekte auf einmal aus. Drücken Sie dann den |mActionMergeFeatureAttributes| :sup:`Attribute gewählter Objekte` Knopf. Jetzt fragt Sie |qg| welche Attribute auf alle ausgewählten Objekte angewendet werden sollen. Im Ergebnis haben alle ausgewählten Objekte die gleichen Attributeinträge."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:691
 msgid ""
@@ -1478,7 +1478,7 @@ msgid ""
 "marker' and choose :guilabel:`Data defined properties ...`. Activate "
 "|checkbox| :guilabel:`Angle` and choose 'rotation' as field. Without these "
 "settings, the tool is inactive."
-msgstr ""
+msgstr "Mit |mActionRotatePointSymbols| :sup:`Punktsymbole drehen` können Sie die Rotation von Punktsymbolen in der Kartenansicht verändern. Sie müssen erst ein Drehungsfeld in der Attributtabelle des Punktlayers im :guilabel:`Erweitert` Menü des :guilabel:`Stil` Menü der :guilabel:`Layereigenschaften` definieren. Sie werden auch nach 'SVG Markierung' gehen müssen und :guilabel:`Datendefinierte Eigenschaften ...` wählen. Aktivieren Sie |checkbox| :guilabel:`Winkel` und wählen Sie 'Drehung' als Feld. Ohne diese Einstellungen ist das Werkzeug inaktiv."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:710
 msgid ""
@@ -1486,7 +1486,7 @@ msgid ""
 "it, holding the left mouse button pressed. A red arrow with the rotation "
 "value will be visualized (see Figure_edit_4_). When you release the left "
 "mouse button again, the value will be updated in the attribute table."
-msgstr ""
+msgstr "Um die Drehung zu ändern, wählen Sie einen Punkt im Kartenfenster aus und drehen diesen, indem Sie die linke Maustaste gedrückt halten. Ein roter Pfeil mit dem Drehwinkel wird dann angezeigt (siehe Figure_edit_4_). Wenn Sie die linke Maustaste wieder loslassen, wird der neue Wert in der Attributtabelle aktualisiert."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:726
 msgid ""
@@ -1494,7 +1494,7 @@ msgid ""
 "new GPX layers. Creation of a new GRASS layer is supported within the GRASS "
 "plugin. Please refer to section :ref:`creating_new_grass_vectors` for more "
 "information on creating GRASS vector layers."
-msgstr ""
+msgstr "Mit |qg| können Sie neue Shapedateilayer, neue SpatiaLite Layer und neue GPX Layer erstellen. Die Erstellung eines neuen GRASS Layers wird durch das GRASS Plugin unterstützt. Bitte gehen Sie zu Abschnitt :ref:`creating_new_grass_vectors` für mehr Informationen über das Erstellen von GRASS Vektorlayern."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:734
 msgid ""
@@ -1503,13 +1503,13 @@ msgid ""
 ":menuselection:`Layer` menu. The :guilabel:`New Vector Layer` dialog will be"
 " displayed as shown in Figure_edit_5_. Choose the type of layer (point, line"
 " or polygon) and the CRS (coordinate reference system)."
-msgstr ""
+msgstr "Um einen neuen Shapelayer zum Bearbeiten zu erstellen wählen Sie :menuselection:`Neu -->` |mActionNewVectorLayer| :menuselection:`Neuer Shapedateilayer ...` aus dem :menuselection:`Layer` Menü. Der :guilabel:`Neuer Vektorlayer` Dialog wird dargestellt wie in Figure_edit_5_ gezeigt. Wählen Sie den Layertyp (Punkt, Linie oder Polygon) und das KBS (Koordinatenbezugssystem)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:740
 msgid ""
 "Note that |qg| does not yet support creation of 2.5D features (i.e., "
 "features with X,Y,Z coordinates)."
-msgstr ""
+msgstr "Beachten Sie dass |qg| noch nicht die Erstellung von 2.5D Objekten unterstützt (d.h. Objekte mit X,Y,Z Koordinaten)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:754
 msgid ""
@@ -1526,7 +1526,7 @@ msgid ""
 "you specify. Once the layer has been created, it will be added to the map, "
 "and you can edit it in the same way as described in section "
 ":ref:`sec_edit_existing_layer` above."
-msgstr ""
+msgstr "Um die Erstellung des neuen Shapedateilayer zu vervollständigen fügen Sie die gewünschten Attribute ein indem Sie den **[Der Attributliste hinzufügen]** Knopf drücken und einen Namen und einen Typ für das Attribut festlegen. Eine erste 'id' Spalte wird standardmäßig hinzugefügt, kann aber, falls nicht gewünscht, wieder gelöscht werden. Es werden nur :guilabel:`Typ:Text` |selectstring|, :guilabel:`Typ: Ganzzahl`, :guilabel:`Typ: Dezimalzahl` und :guilabel:`Typ: Datum` Attribute unterstützt. Zusätzlich und gemäß des Attributtyps können Sie auch die Breite und Präzision der neuen Attributspalte definieren. Sind Sie einmal zufrieden mit den Attributen, klicken Sie **[OK]** und vergeben Sie einen Namen für die Shapedatei. |qg| wird dem Namen automatisch eine :file:`.shp` Erweiterung hinzufügen. Ist der Layer einmal erstellt wird dieser der Karte hinzugefügt und Sie können Ihn auf die gleiche Weise wie in Abschnitt :ref:`sec_edit_existing_layer` bearbeiten."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:789
 msgid ""
@@ -1536,7 +1536,7 @@ msgid ""
 "new layer, define the layer type, and specify the coordinate reference "
 "system with **[Specify CRS]**. If desired, you can select |checkbox| "
 ":guilabel:`Create an autoincrementing primary key`."
-msgstr ""
+msgstr "Der erste Schritt ist eine bestehende SpatiaLite Datenbank auszuwählen oder eine neue SpatiaLite Datenbank zu erstellen. Dies kann mit dem Suchen Knopf |browsebutton| auf der rechten Seite des Datenbankfeldes durchgeführt werden. Fügen Sie dann einen Namen für den neuen Layer ein, definieren Sie den Layertyp und legen Sie das Koordinatenbezugssystem mit **[KBS angeben]** fest. Falls gewünscht können Sie einen |checkbox| :guilabel:`automatisch inkrementierenden Primärschlüssel erzeugen`."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:795
 msgid ""
@@ -1546,13 +1546,13 @@ msgid ""
 "with the attributes, click **[OK]**. |qg| will automatically add the new "
 "layer to the legend, and you can edit it in the same way as described in "
 "section :ref:`sec_edit_existing_layer` above."
-msgstr ""
+msgstr "Um eine Attributtabelle für den neuen SpatiaLite Layer zu definieren fügen Sie die Namen der Attributspalten, die Sie mit dem entsprechenden Spaltentyp erstellen wollen, ein und klicken Sie den **[Der Attributliste hinzufügen]** Knopf. Sind Sie mit den Attributen zufrieden klicken Sie **[OK]**. |qg| wird automatisch den neuen Layer in die Legende einfügen und Sie können diesen dann auf die gleiche Art und Weise bearbeiten wie in Abschnitt :ref:`sec_edit_existing_layer`."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:802
 msgid ""
 "Further management of SpatiaLite layers can be done with the DB Manager. See"
 " :ref:`dbmanager`."
-msgstr ""
+msgstr "Mit dem DB Manager können Sie SpatiaLite Layer ausführlicher managen. Siehe :ref:`dbmanager`."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:811
 msgid ""
@@ -1560,7 +1560,7 @@ msgid ""
 ":menuselection:`Plugins -->` |mActionShowPluginManager| "
 ":menuselection:`Plugin Manager...` opens the Plugin Manager Dialog. Activate"
 " the |checkbox| :guilabel:`GPS Tools` checkbox."
-msgstr ""
+msgstr "Um eine GPX-Datei zu laden, müssen Sie das GPS Plugin laden. Das Menü :menuselection:`Erweiterungen` |mActionShowPluginManager| :menuselection:`Erweiterungen verwalten und installieren ...` öffnet den Erweiterungen Dialog . Aktivieren Sie das |checkbox| :guilabel:`GPS Werkzeuge` Kontrollkästchen."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:815
 msgid ""
@@ -1568,7 +1568,7 @@ msgid ""
 ":menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` "
 "menu. In the :guilabel:`Save new GPX file as` dialog, you can choose where "
 "to save the new GPX layer."
-msgstr ""
+msgstr "Wenn dieses Plugin geladen ist wählen Sie :menuselection:`Neu -->` |icon_newgpx| :menuselection:`Erstelle neuen GPX Layer` im :menuselection:`Layer` Menü. Im :guilabel:`Neue GPX-Datei speichern als ...` Dialog können Sie auswählen wo der neue GPX Layer gespeichert werden soll. "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:826
 msgid ""
@@ -1576,7 +1576,7 @@ msgid ""
 " in the table represents one map feature, and each column contains a "
 "particular piece of information about the feature. Features in the table can"
 " be searched, selected, moved or even edited."
-msgstr ""
+msgstr "Die :index:`Attributtabelle` stellt die Objekte eines ausgewählten Layers dar. Jede Zeile in der Tabelle repräsentiert ein Kartenobjekt und jede Spalte enthält bestimmte Informationen über das Objekt. Objekte in der Tabelle können gesucht, ausgewählt, verschoben oder sogar bearbeitet werden."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:831
 msgid ""
@@ -1587,14 +1587,14 @@ msgid ""
 " |mActionOpenTable| :menuselection:`Open Attribute Table` from the drop-down"
 " menu, and to click on the |mActionOpenTable| :guilabel:`Open Attribute "
 "Table` button in the Attributes toolbar."
-msgstr ""
+msgstr "Um die Attributtabelle eines Vektorlayers zu öffnen machen Sie Ihn aktiv indem Sie auf ihn in der Legende klicken. Dann wählen Sie aus dem :menuselection:`Layer` Menü |mActionOpenTable| :menuselection:`Attributtabelle öffnen`. Es ist auch möglich einen Rechtsklick auf einen Layer zu machen und |mActionOpenTable| :menuselection:`Attributtabelle öffnen` aus dem Drop-Down Menü auszuwählen und auf den |mActionOpenTable| :guilabel:`Attributtabelle öffnen` Knopf in der Attribute Werkzeugleiste zu klicken."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:839
 msgid ""
 "This will open a new window that displays the feature attributes for the "
 "layer (figure_attributes_1_). The number of features and the number of "
 "selected features are shown in the attribute table title."
-msgstr ""
+msgstr "Dies wird ein neues Fenster öffnen das die Attribute des Layers zeigt (figure_attributes_1_). Die Anzahl der Objekte und die Anzahl der gewählten Objekte werden im Attributtabellentitel gezeigt."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:879
 msgid ""
@@ -1603,7 +1603,7 @@ msgid ""
 "Select the field (column) on which the search should be performed from the "
 "drop-down menu, and hit the **[Apply]** button. Then, only the matching "
 "features are shown in the attribute table."
-msgstr ""
+msgstr " Für eine **einfache Suche anhand von Attributen** in nur einer Spalte wählen Sie :menuselection:`Spaltenfilter -->` aus dem Menü in der linken unteren Ecke. Wählen Sie das Feld (die Spalte) auf dem die Suche aus dem Drop-Down Menü ausgeführt werden soll und betätigen Sie den **[Anwenden]** Knopf.  Dann werden nur die zutreffenden Objekte in der Attributtabelle gezeigt."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:885
 msgid ""
@@ -1619,14 +1619,14 @@ msgid ""
 "query. Double-click the field 'TYPE_2' and also **[Load all unique values]**"
 " . From the list, choose and double-click 'Borough'. In the "
 ":guilabel:`Expression` field, the following query appears:"
-msgstr ""
+msgstr "Um eine Auswahl zu treffen müssen Sie das |mIconExpressionSelect| :sup:`Objekte mit einem Ausdruck wählen` Icon oberhalb der Atributtabelle verwenden. Mit |mIconExpressionSelect| :sup:`Objekte mit einem Ausdruck wählen` können Sie eine Untermenge einer Tabelle anhand einer :guilabel:`Funktionsliste`, wie Sie im |mActionCalculateField| :sup:`Feldrechner` vorhanden ist, definieren (siehe :ref:`vector_field_calculator`). Das Abfrageergebnis kann dann als neuer Vektorlayer gespeichert werden. Wenn Sie zum Beispiel Regionen vom Typ borough aus der Datei :file:`regions.shp` der |qg| Beispieldaten finden wollen, müssen Sie das :guilabel:`Felder und Werte` Menü öffnen und das Feld, das Sie abfragen wollen, auswählen. Doppelklicken Sie das Feld 'TYPE_2' und auch **[Alle eindeutigen]**. Wählen und doppelklicken Sie 'Borough' in der Liste. Im Feld :guilabel:`Ausdruck` erscheint die folgende Abfrage:"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:901
 msgid ""
 "Here you can also use the :menuselection:`Function list --> Recent "
 "(Selection)` to make a selection that you used before. The expression "
 "builder remembers the last 20 used expressions."
-msgstr ""
+msgstr "Hier können Sie auch :menuselection:`Funktionsliste --> Letztes (Selection)` verwenden um eine Auswahl zu treffen die Sie schon einmal verwendet haben. Der Ausdruckseditor speichert die letzten 20 verwendeten Ausdrücke ab."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:905
 msgid ""
@@ -1635,80 +1635,80 @@ msgid ""
 "status bar of the main window. For searches that display only selected "
 "features on the map, use the Query Builder described in section "
 ":ref:`vector_query_builder`."
-msgstr ""
+msgstr "Die zutreffenden Zeilen werden ausgewählt und die volle Anzahl zutreffender Zeilen erscheint dann in der Titelleiste der Attributtabelle sowie in der Statusleiste des Hauptfensters. Wollen Sie eine Suche durchführen, die dann nur die gewählten Objekte auf der Karte darstellt, verwenden Sie die Abfrageerstellung die in Kapitel :ref:`vector_query_builder` beschrieben wird."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:913
 msgid ""
 "The other buttons at the top of the attribute table window provide the "
 "following functionality:"
-msgstr ""
+msgstr "Die anderen Knöpfe im Kopf der Attributtabelle stellen die folgenden Funktionalitäten zur Verfügung:"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:916
 msgid ""
 "|mActionToggleEditing| :sup:`Toggle editing mode` to edit single values and "
 "to enable functionalities described below (also with :kbd:`Ctrl+E`)"
-msgstr ""
+msgstr "|mActionToggleEditing| :sup:`Bearbeitungsmodus umschalten` um einen einzelnen Wert zu bearbeiten und um die unten beschriebenen Funktionalitäten zu ermöglichen (auch mit :kbd:`Strg+E`)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:918
 msgid "|mActionSaveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+S`)"
-msgstr ""
+msgstr "|mActionSaveEdits| :sup:`Änderungen speichern` (auch mit :kbd:`Strg+S`)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:919
 msgid ""
 "|mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+U`)"
-msgstr ""
+msgstr "|mActionUnselectAttributes| :sup:`Alles abwählen` (auch mit :kbd:`Strg+U)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:920
 msgid ""
 "|mActionSelectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+T`)"
-msgstr ""
+msgstr "|mActionSelectedToTop| :sup:`Auswahl nach Oben` (auch mit :kbd:`Strg+T`)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:921
 msgid ""
 "|mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+R`)"
-msgstr ""
+msgstr "|mActionInvertSelection| :sup:`Auswahl umkehren` (auch mit :kbd:`Strg+R`)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:922
 msgid ""
 "|mActionCopySelected| :sup:`Copy selected rows to clipboard` (also with "
 ":kbd:`Ctrl+C`)"
-msgstr ""
+msgstr "|mActionCopySelected| :sup:`Ausgewählte Zeilen in die Zwischenablage kopieren` (auch mit :kbd:`Strg+C`)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:924
 msgid ""
 "|mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with "
 ":kbd:`Ctrl+J`)"
-msgstr ""
+msgstr "|mActionZoomToSelected| :sup:`Zu den gewählten Zeilen zoomen` (auch mit :kbd:`Strg+J`)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:926
 msgid ""
 "|PanToSelected| :sup:`Pan map to the selected rows` (also with "
 ":kbd:`Ctrl+P`)"
-msgstr ""
+msgstr "|PanToSelected| :sup:`Zu den gewählten Zeilen verschieben` (auch mit :kbd:`Strg+P`)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:927
 msgid ""
 "|mActionDeleteSelected| :sup:`Delete selected features` (also with "
 ":kbd:`Ctrl+D`)"
-msgstr ""
+msgstr "|mActionDeleteSelected| :sup:`Gewählte Objekte löschen` (auch mit :kbd:`Strg+D`)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:929
 msgid ""
 "|mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR "
 "layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+W`)"
-msgstr ""
+msgstr "|mActionNewAttribute| :sup:`Neue Spalte` für PostGIS Layer und für OGR Layer mit GDAL Version >=1.6 (auch mit :kbd:`Strg+W`)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:931
 msgid ""
 "|mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR"
 " layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+L`)"
-msgstr ""
+msgstr "|mActionDeleteAttribute| :sup:`Spalte löschen` für PostGIS Layer und für OGR Layer mit GDAL Version >=1.9 (auch mit :kbd:`Strg+L`)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:933
 msgid ""
 "|mActionCalculateField| :sup:`Open field calculator` (also with "
 ":kbd:`Ctrl+I`)"
-msgstr ""
+msgstr "|mActionCalculateField| :sup:`Feldrechner öffnen` (auch mit :kbd:`Strg+I`)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:937
 msgid ""
@@ -1717,7 +1717,7 @@ msgid ""
 " can copy the information without vector geometries if you deactivate "
 ":menuselection:`Settings --> Options -->` Data sources menu |checkbox| "
 ":guilabel:`Copy geometry in WKT representation from attribute table`."
-msgstr ""
+msgstr "Wenn Sie Attributdaten in externen Programmen (wie Excel) nutzen wollen verwenden Sie den |mActionCopySelected| :sup:`Ausgewählte Zeilen in die Zwischenablage kopieren` Knopf. Sie können die Informationen ohne Vektorgeometrien kopieren wenn Sie :menuselection:`Einstellungen --> Optionen -->` Datenquellen Menü |checkbox| :guilabel:`Geometrie in WKT aus Attributtabelle kopieren` deaktiveren."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:946
 msgid ""
@@ -1727,11 +1727,11 @@ msgid ""
 "selection as -->` to define the name of the output file, its format and CRS "
 "(see section :ref:`label_legend`). It is also possible to specify OGR "
 "creation options within the dialog."
-msgstr ""
+msgstr "Ausgewählte Objekte können in jedem von OGR unterstützten Vektor-Format gespeichert werden und auch in ein anderes Koordinatensystem Bezugssystem (KBS) transformiert werden. Öffnen Sie einfach das rechte Maustaste-Menü des Layers und klicken Sie auf :menuselection:`Auswahl speichern als -->`. Dann definieren Sie den Namen der Ausgabedatei, das Format und KBS (siehe Abschnitt :ref:`label_legend`). Sie können zusätzlich auch OGR-Erzeugungsoptionen angeben."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:954
 msgid "Paste into new layer"
-msgstr ""
+msgstr "In neuen Layer einfügen"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:956
 msgid ""
@@ -1740,13 +1740,13 @@ msgid ""
 "clipboard, and then paste them into a new layer using :menuselection:`Edit "
 "--> Paste Features as` and choosing :menuselection:`New vector layer` or "
 ":menuselection:`New memory layer`."
-msgstr ""
+msgstr "Objekte, die sich in der Zwischenablage befinden, können in einen neuen Layer eingefügt werden. Versetzen Sie den Layer zuerst in den Bearbeitungsmodus. Wählen Sie einige Objekte aus, kopieren Sie sie in die Zwischenablage und fügen Sie sie unter Zuhilfenahme von  :menuselection:`Bearbeiten --> Objekte einfügen als` und :menuselection:`Neuer Vektorlayer` oder :menuselection:`Neuer Memory-Vektorlayer` ein."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:963
 msgid ""
 "This applies to features selected and copied within |qg| and also to "
 "features from another source defined using well-known text (WKT)."
-msgstr ""
+msgstr "Dieses gilt für Objekte, die innerhalb von |qg| ausgewählt und kopiert wurden und auch für Objekte einer anderen Quelle die als Well-Known Text (WKT) definiert wurden."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:971
 msgid ""
@@ -1757,7 +1757,7 @@ msgid ""
 "you will see it in the legend field. It can be opened with the "
 "|mActionOpenTable| :sup:`Open Attribute Table` tool and is then editable "
 "like any other layer attribute table."
-msgstr ""
+msgstr "Mit |qg| können Sie auch nicht-räumliche Tabellen laden. Dies beinhaltet derzeit Tabellen die von OGR und Delimited Text, sowie vom PostgreSQL, MSSQL and Oracle Provider unterstützt werden. Die Tabellen können zum Nachschlagen benutzt werden oder nur um allgemein zu suchen und zu bearbeiten anhand der Tabellenansicht. Wenn Sie die Tabelle laden sehen Sie dies in der Legende. Sie kann mit dem |mActionOpenTable| :sup:`Attributtabelle öffnen` Werkzeug geöffnet werden und ist dann editierbar wie jeder andere Attributtabelle. "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:978
 msgid ""
@@ -1765,28 +1765,28 @@ msgid ""
 "attribute values, or a range of values that are allowed, to be added to a "
 "specific vector layer during digitizing. Have a closer look at the edit "
 "widget in section :ref:`vector_attributes_menu` to find out more."
-msgstr ""
+msgstr "Sie können zum Beispiel Spalten von nicht-räumlichen Tabellen verwenden um Attributwerte oder eine Spanne von Werten, die erlaubt ist, in einen bestimmten Vektorlayer während der Bearbeitung hinzugefügt zu werden definieren. Sehen Sie sich das Bearbeitungselement genauer im Abschnitt :ref:`vector_attributes_menu` an, um mehr zu erfahren. "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:987
 msgid "Creating one to many relations"
-msgstr ""
+msgstr "Ein-Zu-Mehrere-Beziehungen erstellen"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:989
 msgid ""
 "Relations are a technique often used in databases. The concept is, that "
 "features (rows) of different layers (tables) can belong to each other."
-msgstr ""
+msgstr "Beziehungen sind eine Technik, die oft in Datenbanken zum Einsatz kommen. Das Konzept ist dass Objekte (Zeilen) verschiedener Layer (Tabellen) zueinander gehören können."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:992
 msgid ""
 "As an example you have a layer with all regions of alaska (polygon) which "
 "provides some attributes about its name and region type and a unique id "
 "(which acts as primary key)."
-msgstr ""
+msgstr "Als Beispiel nehmen wir einen Layer mit allen Regionen von Alaska (Polygon) in dem einige Attribute über den Namen und den Regionstyp sowie eine eindeutige ID (die als Primärschlüssel eingesetzt wird) vorhanden sind. "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:997
 msgid "Foreign keys"
-msgstr ""
+msgstr "Fremdschlüssel"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:999
 msgid ""
@@ -1795,18 +1795,18 @@ msgid ""
 " you want to add them to the region layer, you need to create a one to many "
 "relation using foreign keys, because there are several airports in most "
 "regions."
-msgstr ""
+msgstr "Dann erhalten Sie einen anderen Punktlayer oder Tabelle mit Informationen über Flughäfen die in den Regionen liegen und wollen diese ebenfalls im Auge behalten. Wenn Sie diese dem Regionen Layer hinzufügen wollen müssen Sie eine Eine-Zu-Mehrere-Beziehung anhand von Fremdschlüsseln erstellen weil es in den meisten Regionen mehrere Flughäfen gibt."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1013
 msgid "Alaska region with airports |nix|"
-msgstr ""
+msgstr "Die Region Alaska mit Flughäfen |nix|"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1015
 msgid ""
 "In addition to the already existing attributes in the airports attribute "
 "table another field fk_region which acts as a foreign key (if you have a "
 "database, you will probably want to define a constraint on it)."
-msgstr ""
+msgstr "Zusätzlich zu den bereits bestehenden Attributen in der Airport Attributtabelle wird ein anderes Feld fk_region das als Fremdschlüssel verwendet werden soll, eingefügt (wenn Sie eine Datenbank verwenden würden Sie wahrscheinlich dafür einen Constraint definieren)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1019
 msgid ""
@@ -1815,11 +1815,11 @@ msgid ""
 " form for the editing and QGIS takes care about the setup. It works with "
 "different providers (so you can also use it with shape and csv files) and "
 "all you have to do is to tell QGIS the relations between your tables."
-msgstr ""
+msgstr "Dieses Feld fk_region enthält immer eine ID einer Region. Man kann es als Zeiger zu der Region, zu der es gehört, betrachten. Und sie können eine benutzerdefinierte Eingabemaske erstellen wobei |qg| sich um das Einrichten kümmert. Es funktioniert mit verschiedenen Anbietern (so dass sie es mit Shape- und CSV-Dateien benutzen können) und alles was Sie tun müssen ist |qg| die Beziehung zwischen Ihren Tabellen mitzuteilen."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1026
 msgid "Layers"
-msgstr ""
+msgstr "Layer"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1028
 msgid ""
@@ -1830,11 +1830,11 @@ msgid ""
 "(fk_region) to the layer region. This means, that each airport belongs to "
 "exactly one region while each region can have any number of airports (a "
 "typical one to many relation)."
-msgstr ""
+msgstr "|qg| unterscheidet nicht zwischen einer Tabelle und einem Vektorlayer. Grundsätzlich gesehen ist ein Vektorlayer eine Tabelle mit einer Geometrie. Sie können Ihre Tabelle also als Vektorlayer einfügen. Zu Demonstrationszwecken können Sie die 'region' Shapedatei (mit Geometrien) und die 'airport' CSV-Tabelle (ohne Geometrien) und einen Fremdschlüssel (fk_region) zu dem Layer 'region' laden (eine typische Ein-Zu-Mehrere Beziehung)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1037
 msgid "Definition (Relation Manager)"
-msgstr ""
+msgstr "Definition (Relation Manager)"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1039
 msgid ""
@@ -1842,37 +1842,37 @@ msgid ""
 "between the layer. This is done in :menuselection:`Settings -->` "
 ":menuselection:`Project Properties`. Open the :guilabel:`Relations` menu and"
 " click on :guilabel:`Add`."
-msgstr ""
+msgstr "Das erste was wir machen müssen ist |qg| über die Beziehungen zwischen den Layern wissen lassen. Dies wird in :menuselection:`Einstellungen -->` :menuselection:`Projekteigenschaften` gemacht. Öffnen Sie das :guilabel:`Beziehungen` Menü und klicken Sie auf :guilabel:`Beziehung hinzufügen`."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1043
 msgid ""
 "**name** is going to be used as a title. It should be a human readable "
 "string, describing, what the relation is used for. We will just call say "
 "\"Airports\" in this case."
-msgstr ""
+msgstr "**Name** wird als Titel verwendet. Es sollte eine lesbare Zeichenfolge sein, die beschreibt, wofür die Beziehung verwendet werden soll. Wir werden ihn in diesem Fall einfach 'Airports' nennen."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1044
 msgid ""
 "**referencing layer** is the one with the foreign key field on it. In our "
 "case this is the airports layer"
-msgstr ""
+msgstr "**Referenzierender Layer** ist der in dem der Fremdschlüssel steht. In diesem Fall ist dies der 'airports' Layer."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1045
 msgid ""
 "**referencing field** will say, which field points to the other layer so "
 "this is fk_region in this case"
-msgstr ""
+msgstr "**Referenzierendes Feld** zeigt an welches Feld auf den anderen Layer zeigt, also ist dies in diesem Fall fk_region"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1046
 msgid ""
 "**referenced layer** is the one with the primary key, pointed to, so here it"
 " is the regions layer"
-msgstr ""
+msgstr "**Referenzierter Layer** ist der mit dem Primärschlüssel, auf den gezeigt wird, also ist dies in diesem Fall der 'regions' Layer"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1047
 msgid ""
 "**referenced field** is the primary key of the referenced layer so it is ID"
-msgstr ""
+msgstr "**Referenziertes Feld** ist der Primärschlüssel des referenzierten Layers, also die ID."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1048
 msgid ""
@@ -1880,15 +1880,15 @@ msgid ""
 " it to build custom forms once this is supported. If you leave it empty, one"
 " will be generated for you but you can assign one yourself to get one that "
 "is easier to handle."
-msgstr ""
+msgstr "**ID** wird für interne Zwecke benutzt und muss eindeutig sein. Sie brauchen es vielleicht um benutzerdefinierte Eingabemasken zu erstellen sobald dies unterstützt wird. Wenn Sie es leer lassen wird eines für Sie erstellt aber Sie können auch selber eine zuweisen die einfacher zu handhaben ist."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1059
 msgid "Relation Manager |nix|"
-msgstr ""
+msgstr "Relation Manager |nix|"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1063
 msgid "Forms"
-msgstr ""
+msgstr "Formulare"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1065
 msgid ""
@@ -1898,18 +1898,18 @@ msgid ""
 "in the legend and use the identify tool. Depending on your settings, the "
 "form might open directly or you will have to choose to open it in the "
 "identification dialog under actions."
-msgstr ""
+msgstr "Jetzt wo |qg| von der Beziehung weiss wird es dazu benutzt das Formular das es erstellt zu verbessern. Da wir die Standard Formular Methode (autogenerated) nicht verändert haben, wird es Ihrem Formular einfach ein neues Bearbeitungselement hinzufügen. Also lassen Sie uns einen Layer 'region' in der Legende auswählen und das Objekte abfragen Werkzeug benutzen. Abhängig von Ihren Einstellungen öffnet sich das Formular entweder direkt oder Sie müssen den Identifizieren Dialog unter Aktionen öffnen."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1081
 msgid "Identification dialog regions with relation to airports |nix|"
-msgstr ""
+msgstr "identifikationsergebnis Dialog von regions mit Beziehung zu airports |nix|"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1083
 msgid ""
 "As you can see, the airports assigned to this particular region are all "
 "shown in a table. And there are also some buttons available. Let's review "
 "them shortly"
-msgstr ""
+msgstr "Wie Sie sehen können werden die dieser bestimmten region zugeordneten airports alle in einer Tabelle gezeigt. Und es ikönnen außerdem einige Knöpfe benutzt werden. Lassen Sie uns einen kurzen Blick daruf werfen"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1086
 msgid ""
@@ -1917,38 +1917,38 @@ msgid ""
 "that it toggles the edit mode of the airport layer, although we are in the "
 "feature form of a feature from the region layer. But the table is "
 "representing features of the airport layer."
-msgstr ""
+msgstr "Der |mActionToggleEditing| Knopf ist zum Umschalten des Bearbeitungsmodus da. Seien Sie sich dessen bewusst dass es den Bearbeitungsmodus des 'airport' Layers umschaltet, trotzdessen wir uns im Objektformular eines Objektes aus dem 'region' Layer befinden. Die Tabelle jedoch stellt Objekte des 'aiport' Layer dar. "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1087
 msgid ""
 "The |mActionSignPlus| button will add a new feature to the airport layer. "
 "And it will assign the new airport to the current region by default."
-msgstr ""
+msgstr "Der |mActionSignPlus| Knopf wird dem 'airport' Layer ein neues Objekt hinzufügen. Und es wird den neuen airport der aktuellen region standardmäßig zuordnen."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1088
 msgid ""
 "The |mActionRemove| button will delete the selected airport permanently."
-msgstr ""
+msgstr "Der |mActionRemove| Knopf löscht den ausgewählten airport dauerhaft."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1089
 msgid ""
 "The |mActionLink| symbol will open a new dialog where you can select any "
 "existing airport which will then be assigned to the current region. This may"
 " be handy if you created the airport on the wrong region by accident."
-msgstr ""
+msgstr "Das |mActionLink| Symbol öffnet einen neuen Dialog in dem Sie jeden vorhandenen 'airport' auswählen können was dann der aktuellen 'region' zugewiesen wird. Dies kann nützlich sein wenn Sie den 'airport' aus Versehen in der falschen 'region' erstellt haben."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1090
 msgid ""
 "The |mActionUnlink| symbol will unlink the selected airport from the current"
 " region, leaving them unassigned (the foreign key is set to NULL) "
 "effectively."
-msgstr ""
+msgstr "Das |mActionUnlink| Symbol hebt die Verbindung zwischen dem ausgewählten 'airport' und der aktuellen 'region' wieder auf so dass dieser auf wirksame Art und Weise nicht mehr zugewiesen ist (der Fremdschlüssel wird auf NULL gesetzt)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1091
 msgid ""
 "The two buttons to the right switch between table view and form view where "
 "the later let's you view all the airports in their respective form."
-msgstr ""
+msgstr "Die zwei Knöpfe rechts wechseln zwischen Tabellenansicht und Formularansicht wobei Sie bei der letzten Einstellung alle 'airports' in ihrer jeweiligen Form sehen können."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1093
 msgid ""
@@ -1957,22 +1957,22 @@ msgid ""
 "the airports. It can be used when you open the layer properties of the "
 "airports table, switch to the :menuselection:`Fields` menu and change the "
 "widget type of the foreign key field 'fk_region' to Relation Reference."
-msgstr ""
+msgstr "Wenn Sie an der 'airport' Tabelle arbeiten steht ein neuer Typ von Bearbeitungselement zur Verfügung, mit dem Sie das Objektformular der referenzierten 'region' in das Objektformular der 'airports' einbetten können. Es kann verwendet werden wenn Sie die Layereigenschaften der 'airports' Tabelle öffnen, zum :guilabel:`Felder` Menü wechseln und den Typ des Bearbeitungselements des Fremdschlüssels 'fk_region' auf Beziehungsreferenz ändern. "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1099
 msgid ""
 "If you look at the feature dialog now, you will see, that the form of the "
 "region is embedded inside the airports form and will even have a combobox, "
 "which allows you to assign the current airport to another region."
-msgstr ""
+msgstr "Wenn Sie jetzt einen Blick auf den Objektdialog werfen werden Sie sehen dass das Formular der 'region' in das 'airports' Formular eingebettet ist und sogar eine Kombobox vorhanden ist mit dem der aktuelle 'airport' zu einer anderen 'region' zugeordnet werden kann. "
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1112
 msgid "Identification dialog airport with relation to regions |nix|"
-msgstr ""
+msgstr "Objekte abfragen Dialog von 'airport' mit Beziehung zu 'regions' |nix|"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:983
 msgid "Relations"
-msgstr ""
+msgstr "Beziehungen"
 
 #~ msgid ""
 #~ "The procedure for editing GRASS layers is different - see Section "
