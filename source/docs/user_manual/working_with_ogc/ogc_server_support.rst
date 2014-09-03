@@ -246,9 +246,11 @@ OCG WMS 1.3.0 specification:
 To log requests send to server, set the following environment variables:
 * **QGIS_SERVER_LOG_FILE **: Specify path and filename. Make sure that server
   has proper permissions for writing to file. File should be created automatically, just send 
-  some requests to server. If it's not, check permissions.
-* **QGIS_SERVER_LOG_LEVEL **: Specify desired log level (all requests, errors,...). 
-  Set this to 0 write all information.
+  some requests to server. If it's not there, check permissions.
+* **QGIS_SERVER_LOG_LEVEL **: Specify desired log level. Available values are:
+  0 INFO (log all requests),
+  1 WARNING,
+  2 CRITICAL (log just critical errors, suitable for production purposes)  
 
   Example::
 
