@@ -243,14 +243,17 @@ OCG WMS 1.3.0 specification:
 
 |qg| Server logging
 ...................
+
 To log requests send to server, set the following environment variables:
-* **QGIS_SERVER_LOG_FILE **: Specify path and filename. Make sure that server
-  has proper permissions for writing to file. File should be created automatically, just send 
+
+* **QGIS_SERVER_LOG_FILE**: Specify path and filename. Make sure that server
+  has proper permissions for writing to file. File should be created automatically, just send
   some requests to server. If it's not there, check permissions.
-* **QGIS_SERVER_LOG_LEVEL **: Specify desired log level. Available values are:
-  0 INFO (log all requests),
-  1 WARNING,
-  2 CRITICAL (log just critical errors, suitable for production purposes)  
+* **QGIS_SERVER_LOG_LEVEL**: Specify desired log level. Available values are:
+
+  *0 INFO (log all requests),
+  *1 WARNING,
+  *2 CRITICAL (log just critical errors, suitable for production purposes).
 
   Example::
 
@@ -259,7 +262,7 @@ To log requests send to server, set the following environment variables:
 
 **Note**
 When using Fcgid module use FcgidInitialEnv instead of SetEnv!
-	
+
 Environment variables
 .....................
 
