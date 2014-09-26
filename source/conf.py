@@ -1042,7 +1042,7 @@ rst_epilog = """
    :width: 1.5em
 .. |analysis| image:: /static/common/analysis.png
    :width: 1.5em
-.. |geRasterometry| image:: /static/common/geometry.png
+.. |geometry| image:: /static/common/geometry.png
    :width: 1.5em
 .. |geoprocessing| image:: /static/common/geoprocessing.png
    :width: 1.5em
