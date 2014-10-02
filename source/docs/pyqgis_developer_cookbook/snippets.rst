@@ -27,22 +27,16 @@ The method that is called when F7 is pressed::
 
 .. index:: plugins; toggle layers
 
-How to toggle Layers (work around)
-----------------------------------
+How to toggle Layers
+--------------------
 
-As there is currently no method to directly access the layers in the legend,
-here is a workaround how to toggle the layers using layer transparency::
+Since QGIS 2.4 there is new layer tree API that allows direct access to the layer tree
+in the legend. Here is an example how to toggle visibility of the active layer::
 
-  def toggleLayer(self, lyrNr):
-    lyr = self.iface.mapCanvas().layer(lyrNr)
-    if lyr:
-      cTran = lyr.getTransparency()
-      lyr.setTransparency(0 if cTran > 100 else 255)
-      self.iface.mapCanvas().refresh()
-
-The method requires the layer number (0 being the top most) and can be called by::
-
-  self.toggleLayer(3)
+  root = QgsProject.instance().layerTreeRoot()
+  node = root.findLayer(iface.activeLayer().id())
+  new_state = Qt.Checked if node.isVisible()==Qt.Unchecked else Qt.Unchecked
+  node.setVisible(new_state)
 
 .. index:: plugins; access attributes of selected features
 
