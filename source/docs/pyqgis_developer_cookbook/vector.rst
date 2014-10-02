@@ -233,7 +233,7 @@ have the changes stored immediately, then you will have easier work by
 
   layer.endEditCommand()
 
-The :func:`beginEndCommand` will create an internal "active" command and will
+The :func:`beginEditCommand` will create an internal "active" command and will
 record subsequent changes in vector layer. With the call to :func:`endEditCommand`
 the command is pushed onto the undo stack and the user will be able to undo/redo
 it from GUI. In case something went wrong while doing the changes, the
