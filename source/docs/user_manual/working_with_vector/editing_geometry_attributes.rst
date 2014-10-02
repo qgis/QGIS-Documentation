@@ -936,6 +936,16 @@ following functionality:
    :menuselection:`Settings --> Options -->` Data sources menu |checkbox|
    :guilabel:`Copy geometry in WKT representation from attribute table`.
 
+Virtual Column
+...............
+
+User can create virtual column with the |mActionNewAttribute| :sup:`New Column` 
+button. The new dialog shows two radio button to let you choose the kind of 
+column you want: **Provider Field** or **Virtual Field**. The first one let 
+you create standard attribut field, the second one let you create virtual 
+field using an expression (ie cloning an existing field for instance or 
+calculating area).
+
 Save selected features as new layer
 ...................................
 
