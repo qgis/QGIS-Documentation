@@ -355,12 +355,21 @@ placed on a displacement circle around a center symbol.
 
 .. tip:: **Export vector symbology**
 
-   You have the option to export vector symbology from |qg| into Google *.kml, *.dxf
-   and MapInfo *.tab files. Just open the right mouse menu of the layer and click on :menuselection:`Save selection
+   You have the option to export vector symbology from |qg| into Google \*.kml, \*.dxf
+   and MapInfo \*.tab files. Just open the right mouse menu of the layer and click on :menuselection:`Save selection
    as -->` to specify the name of the output file and its format.
    In the dialog, use the :guilabel:`Symbology export` menu to save the symbology either as
    :menuselection:`Feature symbology -->` or as :menuselection:`Symbol layer symbology -->`.
    If you have used symbol layers, it is recommended to use the second setting.
+
+.. index:: Inverted_Polygon_Renderer
+
+**Inverted Polygon**
+
+Inverted polygon renderer allows user to define a symbol to fill in outside of the layer's 
+polygons. As before you can select a subrenderers. These subrenderers are the 
+same as for the main renderers.
+
 
 Layer rendering
 ...............
