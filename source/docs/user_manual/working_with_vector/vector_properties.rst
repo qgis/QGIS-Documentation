@@ -528,6 +528,13 @@ also use the line orientation for the position of the label.
 Additionally, you can define a :guilabel:`Maximum angle between curved characters` when
 selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
 
+You can set up a minimum distance for repeating labels. Distance can be in mm or in map units.
+
+Some Placement setup will display more options, for example, :guilabel:`Curved` and :guilabel:`Parallel` 
+Placements will allow the user to set up the position of the label (above, belw or on the line), 
+:guilabel:`distance` from the line and for :guilabel:`Curved`, the user can also setup inside/outside 
+max angle between curved label.
+
 The :guilabel:`Rendering` menu has nearly the same entries as for point layers. In the
 :guilabel:`Feature options`, you can now :guilabel:`Suppress labeling of features smaller than`.
 
@@ -580,6 +587,9 @@ or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
 With the |radiobuttonoff| :guilabel:`Using perimeter` settings, you can define a position and
 a distance for the label. For the position, |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
 |checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependent position` are possible.
+
+Related to the choose of Label Placement, several options will appear. As for Point Placement you can 
+choose the distance for the polygon outline, repeat the label around the polygon perimeter.
 
 The entries in the :guilabel:`Rendering` menu are the same as for line layers. You can also use
 :guilabel:`Suppress labeling of features smaller than` in the :guilabel:`Feature options`.
