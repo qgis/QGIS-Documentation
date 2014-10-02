@@ -272,6 +272,16 @@ Rendering Menu
 
 * |checkbox| :guilabel:`Map canvas refresh`
 
+Colors Menu
+------------
+
+This menu allows you to add some custom color that you can find in each color dialog 
+window of the renderes. You will see a set of predefined colors in the tab: you can 
+delete or edit all of them. Moreover you can add the color you want and perform some copy 
+and paste operation. Finally you can export the color set as a :file:`gpl` file or import
+them.
+
+
 Canvas and Legend Menu
 ----------------------
 
