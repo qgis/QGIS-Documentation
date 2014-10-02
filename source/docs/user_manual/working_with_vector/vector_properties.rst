@@ -744,42 +744,39 @@ to be added to the specific attribute table column. If you click on the
 **[edit widget]** button, a dialog opens, where you can define different
 widgets. These widgets are:
 
-* **Line edit**: An edit field that allows you to enter simple text
-  (or restrict to numbers for numeric attributes).
+* **Checkbox**: Displays a checkbox, and you can define what attribute is
+  added to the column when the checkbox is activated or not.
 * **Classification**: Displays a combo box with the values used for
   classification, if you have chosen 'unique value' as legend type in
   the :guilabel:`Style` menu of the properties dialog.
+* **Color**: Displays a color button allowing user to choose a color from the 
+  color dialog window.
+* **Date/Time**: Displays a line fields which can opens a calendar widget to enter a 
+  date, a time or both. Column type must be text. You can select a custom format, pop-up 
+  a calendar, etc.
+* **Enumeration**: Opens a combo box with values that can be used within
+  the columns type. This is currently only supported by the PostgreSQL provider.
+* **File name**: Simplifies the selection by adding a file chooser dialog.
+* **Hidden**: A hidden attribute column is invisible. The user is not able
+  to see its contents.
+* **Photo**: Field contains a filename for a picture. The width and height of the field can be defined.
 * **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
+* **Relation Reference**: This widged lets you embed the feature form of the referenced layer on the feature form 
+  of the actual layer. See :ref:`vector_relations`.
+* **Text edit** (default): This opens a text edit field that allows simple text or multiple lines to
+  be used. If you choose multiple lines you can also choose html content.
 * **Unique values**: You can select one of the values already used in
   the attribute table. If 'Editable' is activated, a line edit is shown with
   autocompletion support, otherwise a combo box is used.
-* **File name**: Simplifies the selection by adding a file chooser dialog.
+* **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers)
+  field, if empty.
 * **Value map**: A combo box with predefined items. The value is stored in
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
-* **Enumeration**: Opens a combo box with values that can be used within
-  the columns type. This is currently only supported by the PostgreSQL provider.
-* **Immutable**: The immutable attribute column is read-only. The user is not
-  able to modify the content.
-* **Hidden**: A hidden attribute column is invisible. The user is not able
-  to see its contents.
-* **Checkbox**: Displays a checkbox, and you can define what attribute is
-  added to the column when the checkbox is activated or not.
-* **Text edit**: This opens a text edit field that allows multiple lines to
-  be used.
-* **Calendar**: Opens a calendar widget to enter a date. Column type must be
-  text.
 * **Value Relation**: Offers values from a related table in a combobox. You can
   select layer, key column and value column.
-* **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers)
-  field, if empty.
-* **Photo**: Field contains a filename for a picture. The width and height of the field can be defined.
 * **Webview**: Field contains a URL. The width and height of the field is variable.
-* **Color**: A field that allows you to enter color codes. During data entry, the color is visible through a color bar
-  included in the field.
-* **Relation Reference**: This widged lets you embed the feature form of the referenced layer on the feature form 
-  of the actual layer. See :ref:`vector_relations`.
 
 With the **Attribute editor layout**, you can now define built-in forms for data entry jobs (see figure_fields_2_).
 Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| icon to create
