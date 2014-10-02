@@ -145,7 +145,11 @@ All fills 'Gradient Fill` :guilabel:`Symbol layer type` is also
 available through the :guilabel:`Symbol` menu of the Categorized and
 Graduated Renderer and through the :guilabel:`Rule properties` menu of
 the Rule-based renderer. Other possibility is to choose a 'shapeburst 
-fill' similar to 'gradient fill' with some other options for configuration.
+fill' which is a buffered gradient fill, where a gradient is drawn from 
+the boundary of a polygon towards the polygon's centre. Configurable 
+parameters include distance from the boundary to shade, use of color ramps or 
+simple two color gradients, optional blurring of the fill and offsets.
+
 
 It is possible to only draw polygon borders inside the polygon. Using
 'Outline: Simple line' select |checkbox| :guilabel:`Draw line
