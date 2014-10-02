@@ -228,6 +228,9 @@ Background, Item ID and Rendering (See figure_composer_2_).
   (e.g., label text) for that specific item. The GetProjectSettings command will list what items and which IDs are available in a layout.
 * :guilabel:`Rendering` mode can be selected in the option field. See Rendering_Mode_.
 
+.. note:: If you checked |checkbox| :guilabel:`Use live-updating color chooser dialogs` in the QGIS general options, the color button will 
+    update as soon as you choose a new color from **Color Dialog** windows. If not, you need to close the **Color Dialog**.
+
 .. _Rendering_Mode:
 
 .. index:: Rendering_Mode
