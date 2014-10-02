@@ -38,36 +38,6 @@ vector data. You can use :menuselection:`Layer rendering -->` tools that are com
 all vector data, as well as special symbolizing tools that were designed for the different kinds
 of vector data.
 
-Layer rendering
-...............
-
-* :guilabel:`Layer transparency` |slider|: You can make the underlying layer in the map canvas
-  visible with this tool. Use the slider to adapt the visibility of your vector layer to your needs.
-  You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
-
-.. _blend_modes:
-
-* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can achieve special rendering effects with these tools that you may
-  previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
-  through the settings described below.
-
-  * Normal: This is the standard blend mode, which uses the alpha channel of the top pixel to blend with the pixel beneath it. The colors aren't mixed.
-  * Lighten: This selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged and harsh.
-  * Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is most useful for mixing the texture of one layer with another layer (e.g., you can use a hillshade to texture another layer).
-  * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So, brighter top pixels cause the saturation and brightness of the underlying pixels to increase. This works best if the top pixels aren't too bright; otherwise the effect is too extreme.
-  * Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above one (in the case of RGB), white is displayed. This mode is suitable for highlighting features.
-  * Darken: This creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
-  * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the corresponding pixels for the bottom layer. The results are darker pictures.
-  * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be used to tweak and colorise underlying layers.
-  * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, light parts become lighter and dark parts become darker.
-  * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
-  * Hard light: Hard light is also very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
-  * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way around, to always get a positive value. Blending with black produces no change, as the difference with all colors is zero.
-  * Subtract: This blend mode simply subtracts pixel values of one layer from the other. In case of negative values, black is displayed.
-
-.. index:: Symbology
-
-
 Renderers
 .........
 
@@ -173,7 +143,9 @@ the Rule-based renderer.
 
 It is possible to only draw polygon borders inside the polygon. Using
 'Outline: Simple line' select |checkbox| :guilabel:`Draw line
-only inside polygon`.
+only inside polygon`. In the same way you can add a gradient fill or 
+a shapeburst fill inside the polygon. Both will display specific 
+options to setup the gradient/shapeburst fill.
 
 Note that once you have set the size in the lower levels of the :guilabel:`Symbol layers` dialog, 
 the size of the whole symbol can be changed with the :guilabel:`Size` menu in the first level again. The size of
@@ -389,6 +361,37 @@ placed on a displacement circle around a center symbol.
    In the dialog, use the :guilabel:`Symbology export` menu to save the symbology either as
    :menuselection:`Feature symbology -->` or as :menuselection:`Symbol layer symbology -->`.
    If you have used symbol layers, it is recommended to use the second setting.
+
+Layer rendering
+...............
+
+* :guilabel:`Layer transparency` |slider|: You can make the underlying layer in the map canvas
+  visible with this tool. Use the slider to adapt the visibility of your vector layer to your needs.
+  You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
+
+.. _blend_modes:
+
+* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can achieve special rendering effects with these tools that you may
+  previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
+  through the settings described below.
+
+  * Normal: This is the standard blend mode, which uses the alpha channel of the top pixel to blend with the pixel beneath it. The colors aren't mixed.
+  * Lighten: This selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged and harsh.
+  * Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is most useful for mixing the texture of one layer with another layer (e.g., you can use a hillshade to texture another layer).
+  * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So, brighter top pixels cause the saturation and brightness of the underlying pixels to increase. This works best if the top pixels aren't too bright; otherwise the effect is too extreme.
+  * Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above one (in the case of RGB), white is displayed. This mode is suitable for highlighting features.
+  * Darken: This creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
+  * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the corresponding pixels for the bottom layer. The results are darker pictures.
+  * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be used to tweak and colorise underlying layers.
+  * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, light parts become lighter and dark parts become darker.
+  * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
+  * Hard light: Hard light is also very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
+  * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way around, to always get a positive value. Blending with black produces no change, as the difference with all colors is zero.
+  * Subtract: This blend mode simply subtracts pixel values of one layer from the other. In case of negative values, black is displayed.
+
+.. index:: Symbology
+
+
 
 .. _vector_labels_tab:
 
