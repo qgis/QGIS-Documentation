@@ -165,6 +165,14 @@ If you want to preserve those renderers, you have to stick to the QML format.
 On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
 
+If the datasource of the layer is a database (PostGIS or Spatialite for example), 
+you can save your layer style inside a table of the database. Just clic on 
+:guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in 
+the dialog to define a style name, add a description, an ui file and if the style 
+is a default style. When loading a layer from the database, if a style alredy 
+exists for this layer, |qgis| will load the layer and its style. You can add 
+several style in the database. Only one will be the default style anyway.
+
 .. _vector_style_manager:
 
 With the :guilabel:`Style manager` from the **[Symbol]** |selectstring| menu you can administer your
