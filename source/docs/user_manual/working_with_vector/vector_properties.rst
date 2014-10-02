@@ -99,6 +99,7 @@ combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
 The following settings are possible:
 
 * Point layers:
+
  * :guilabel:`Symbol layer type`: You have the option to use Ellipse markers, Font markers,
    Simple markers, SVG markers and Vector Field markers.
  * :guilabel:`Colors`
@@ -111,6 +112,7 @@ The following settings are possible:
  * :guilabel:`Data defined properties ...`
 
 * Line layers:
+
  * :guilabel:`Symbol layer type`: Here you can use Simple Lines and Marker Lines.
  * :guilabel:`Color`
  * :guilabel:`Pen width`
@@ -128,6 +130,7 @@ choose different location vertex, interval or central point. Maker line can have
 the line or offset line. Finally, :guilabel:`rotation` allows you to change the orientation of the symbol.
 
 * Polygon Layers:
+
  * :guilabel:`Symbol layer type`: It's possible to use Centroid Fill, Gradient Fill, Line Pattern Fill,
    Point Pattern Fill, SVG Fill, Simple Fill and two Outlines (Marker line and Simple line).
  * :guilabel:`Colors`

@@ -787,7 +787,7 @@ clicking on the **[Test Connect]** button.
    * |win| The settings are stored in the registry.
 
 Loading an Oracle Spatial Layer
-..............................
+................................
 
 |mActionAddOracleLayer| Once you have one or more connections defined, you can
 load layers from the Oracle database. Of course, this requires having data in

@@ -172,7 +172,7 @@ With :kbd:`Ctrl+Spacebar`, you can temporarily switch to marquee zoom mode, and 
 :kbd:`Ctrl+Shift+Spacebar`, to zoom out mode.
 
 Print Composer Options
---------------------
+------------------------
 From :menuselection:`Settings --> Composer Options` you can set some options that will be
 used as default during your work.
 
@@ -644,7 +644,7 @@ provide the following functionalities (see figure_composer_16_):
    single: Scalebar; Map_Scalebar
 
 Adding a Scale Bar item to the Print Composer
---------------------------------------------
+----------------------------------------------
 
 To add a scale bar, click the |mActionScaleBar| :sup:`Add new scalebar` icon, place
 the element with the left mouse button on the Print Composer canvas and position
@@ -850,7 +850,7 @@ provide the following functionalities (see figure_composer_24_):
 .. index:: HTML_Frame
 
 Add an HTML frame to the Print Composer
---------------------------------------
+----------------------------------------
 
 It is possible to add a clickable frame linked to a URL: Click the |mActionAddHtml| :sup:`Add HTML frame` icon, place the element with
 the left mouse button on the Print Composer canvas and position and customize the appearance in the :guilabel:`Item Properties` tab.
