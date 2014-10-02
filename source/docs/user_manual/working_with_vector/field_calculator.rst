@@ -14,8 +14,14 @@ results can be written to a new attribute column, or they can be used to update
 values in an existing column.
 
 You will need to bring the vector layer into editing mode, before you can click on
-the field calculator icon to open the dialog (see figure_attributes_3_). In
-the dialog, you first must select whether you want to only update selected
+the field calculator icon to open the dialog (see figure_attributes_3_) or use the 
+quick field calculation bar in top of the attribute table. 
+
+In quick field calculation bar, you first select the existing column name then open the 
+expression dialog to create your expression or write it directly in the field then click 
+on **Update All** button.
+
+In the field calculator dialog, you first must select whether you want to only update selected
 features, create a new attribute field where the results of the calculation will
 be added or update an existing field.
 
@@ -82,8 +88,9 @@ The available functions are listed below.
 
 The field calculator **Function list** with the **Selected Function Help** ,
 **Operators** and **Expression** menu are also available through the rule-based
-rendering in the Style menu of the Layer properties, and the expression-based
-labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core application.
+rendering in the Style menu of the Layer properties, the expression-based
+labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core application and 
+in diagram tab of the layer properties.
 
 
 .. index:: Field_Calculator_Functions
