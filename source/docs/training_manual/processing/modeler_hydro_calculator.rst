@@ -40,7 +40,7 @@ Adding this new algorithm will add a new numeric value. If you go again to the *
 
 Click on *OK* and your model should look like this.
 
-.. image:: img/modeler_hydro_calculator/final_model.png
+.. image:: img/modeler_hydro_calculator/calculator_output.png
 
 We are not using the numeric input that we added to the model, so it can be removed. Right--click on it and select *Remove*
 
