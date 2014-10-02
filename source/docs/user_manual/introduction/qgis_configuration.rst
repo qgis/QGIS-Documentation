@@ -77,6 +77,9 @@ options. These include:
   drawn when they do not have an existing :file:`.qml` style defined. You can
   also set the default transparency level for new layers and whether symbols
   should have random colours assigned to them.
+  There is also an additional section where you can define specific colors for the 
+  running project. You can find the added colors in the drop down menu of the color dialog
+  window present in each renderer.
 * The tab :guilabel:`OWS Server` allows you to define information about the |qg|
   Server WMS and WFS capabilities, extent and CRS restrictions.
 * The :guilabel:`Macros` menu is used to edit Python macros for projects. Currently,
