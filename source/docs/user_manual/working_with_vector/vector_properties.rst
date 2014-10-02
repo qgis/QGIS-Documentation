@@ -122,6 +122,11 @@ The following settings are possible:
  * :guilabel:`Dash pattern unit`
  * :guilabel:`Data defined properties ...`
 
+Line Layers have two symbols layer type: simple line (default) and maker line. The first one  
+draws a simple line whereas the other display a marker point regularly on the line. You can 
+choose different location vertex, interval or central point. Maker line can have offset along 
+the line or offset line. Finally, :guilabel:`rotation` allows you to change the orientation of the symbol.
+
 * Polygon Layers:
  * :guilabel:`Symbol layer type`: It's possible to use Centroid Fill, Gradient Fill, Line Pattern Fill,
    Point Pattern Fill, SVG Fill, Simple Fill and two Outlines (Marker line and Simple line).
@@ -139,13 +144,12 @@ and |radiobuttonoff| :guilabel:`Color ramp` setting. You can use the
 All fills 'Gradient Fill` :guilabel:`Symbol layer type` is also
 available through the :guilabel:`Symbol` menu of the Categorized and
 Graduated Renderer and through the :guilabel:`Rule properties` menu of
-the Rule-based renderer.
+the Rule-based renderer. Other possibility is to choose a 'shapeburst 
+fill' similar to 'gradient fill' with some other options for configuration.
 
 It is possible to only draw polygon borders inside the polygon. Using
 'Outline: Simple line' select |checkbox| :guilabel:`Draw line
-only inside polygon`. In the same way you can add a gradient fill or 
-a shapeburst fill inside the polygon. Both will display specific 
-options to setup the gradient/shapeburst fill.
+only inside polygon`.
 
 Note that once you have set the size in the lower levels of the :guilabel:`Symbol layers` dialog, 
 the size of the whole symbol can be changed with the :guilabel:`Size` menu in the first level again. The size of
