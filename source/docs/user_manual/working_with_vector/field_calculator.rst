@@ -99,7 +99,7 @@ in diagram tab of the layer properties.
 
 **Operators**
 
-This group contains operators (e.g., +, -, *).
+This group contains operators (e.g., +, -, \*).
 
 ::
 
@@ -236,6 +236,7 @@ This group contains functions that operate on strings (e.g., that replace, conve
  title         converts all words of a string to title case (all words lower case
                with leading capital letter)
  trim          removes all leading and trailing white space (spaces, tabs, etc.) from a string
+ wordwrap      returns a string wrapped to a maximum/minimum number of characters
  length        length of string a
  replace       returns a string with the supplied string replaced
  regexp_replace(a,this,that)  returns a string with the supplied regular expression replaced
@@ -285,15 +286,25 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 
 ::
 
- xat              retrieves an x coordinate of the current feature
- yat              retrieves a y coordinate of the current feature
+ $geometry        returns the geometry of the current feature (can be used
+                  for processing with other functions)
  $area            returns the area size of the current feature
  $length          returns the length size of the current feature
  $perimeter       returns the perimeter length of the current feature
  $x               returns the x coordinate of the current feature
  $y               returns the y coordinate of the current feature
- $geometry        returns the geometry of the current feature (can be used
-                  for processing with other functions)
+ xat              retrieves the nth x coordinate of the current feature.
+                  n given as a parameter of the function
+ yat              retrieves the nth y coordinate of the current feature. 
+                  n given as a parameter of the function
+ xmin             returns the minimum x coordinate of a geometry. Calculations 
+                  are in the Spatial Reference System of this Geometry
+ xmax             returns the maximum x coordinate of a geometry. Calculations 
+                  are in the Spatial Reference System of this Geometry
+ ymin             returns the minimum y coordinate of a geometry. Calculations 
+                  are in the Spatial Reference System of this Geometry 
+ ymax             returns the maximum y coordinate of a geometry. Calculations 
+                  are in the Spatial Reference System of this Geometry
  geomFromWKT      returns a geometry created from a well-known text (WKT) representation
  geomFromGML      returns a geometry from a GML representation of geometry
  bbox
@@ -312,6 +323,13 @@ This group contains functions that operate on geometry objects (e.g., length, ar
  buffer           returns a geometry that represents all points whose distance
                   from this geometry is less than or equal to distance
  centroid         returns the geometric center of a geometry
+ bounds           returns a geometry which represents the bounding box of an 
+                  input geometry. Calculations are in the Spatial Reference 
+                  System of this Geometry. 
+ bounds_width     returns the width of the bounding box of a geometry. Calculations 
+                  are in the Spatial Reference System of this Geometry.
+ bounds_height    returns the height of the bounding box of a geometry. Calculations 
+                  are in the Spatial Reference System of this Geometry.
  convexHull       returns the convex hull of a geometry (this represents the
                   minimum convex geometry that encloses all geometries within the set)
  difference       returns a geometry that represents that part of geometry a that
@@ -337,7 +355,20 @@ This group contains functions that operate on record identifiers.
 
  $rownum                      returns the number of the current row
  $id                          returns the feature id of the current row
+ $currentfeature              returns the current feature being evaluated. 
+                              This can be used with the 'attribute' function 
+                              to evaluate attribute values from the current 
+                              feature. 
  $scale                       returns the current scale of the map canvas
+ $uuid                        generates a Universally Unique Identifier (UUID) 
+                              for each row. Each UUID is 38 characters long.
+ getFeature                   returns the first feature of a layer matching a 
+                              given attribute value.
+ attribute                    returns the value of a specified attribute from 
+                              a feature.
+ $map                         returns the id of the current map item if the map 
+                              is being drawn in a composition, or "canvas" if 
+                              the map is being drawn within the main QGIS window.
 
 
 **Fields and Values**
