@@ -234,6 +234,8 @@ rst_epilog = """
    :width: 1.5em
 .. |dateedit|  image:: /static/common/dateedit.png
    :width: 1.5em
+.. |geometry| image:: /static/common/geometry.png
+   :width: 1.5em
 .. |datetimeedit|  image:: /static/common/datetimeedit.png
    :width: 1.5em
 .. |dial| image:: /static/common/dial.png
