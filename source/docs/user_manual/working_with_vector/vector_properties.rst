@@ -199,7 +199,8 @@ a single user-defined symbol whose color reflects the value of a selected
 feature's attribute. The :guilabel:`Style` menu allows you to select:
 
 
-* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| :guilabel:`Set column expression` function)
+* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| 
+  :guilabel:`Set column expression` function, see :ref:`vector_expressions`)
 * The symbol (using the Symbol dialog)
 * The colors (using the Color Ramp listbox)
 
@@ -291,7 +292,8 @@ Also, analogous to the Categorized Renderer, the :guilabel:`Style` tab allows yo
 select:
 
 
-* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| :guilabel:`Set column expression` function)
+* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| 
+  :guilabel:`Set column expression` function, see :ref:`vector_expressions` chapter)
 * The symbol (using the Symbol Properties button)
 * The colors (using the Color Ramp list)
 
@@ -347,7 +349,7 @@ the **Function List**, click on :guilabel:`Fields and Values` to view all attrib
 the attribute table to be searched. To add an attribute to the field calculator **Expression** field,
 double click its name in the :guilabel:`Fields and Values` list. Generally, you
 can use the various fields, values and functions to construct the calculation
-expression, or you can just type it into the box (see :ref:`vector_field_calculator`).
+expression, or you can just type it into the box (see :ref:`vector_expressions`).
 Since |qg| 2.2, you can create a new rule by copying and pasting an existing rule with the right mouse button.
 Also since |qg| 2.2, you can use the 'ELSE' rule that will be run if none of the other
 rules on that level match.
@@ -716,7 +718,8 @@ and strings in 'single quotes'. Let's have a look at some examples:
   -> This place is a town
 
 As you can see in the expression builder, you have hundreds if functions available to
-create simple and very complex expressions to label your data in QGIS.
+create simple and very complex expressions to label your data in QGIS. See 
+:ref:`vector_expressions` chapter for more information and example on expressions.
 
 **Using data-defined override for labeling**
 
@@ -1335,7 +1338,7 @@ of the diagrams is possible. Here, you can use attributes to define the position
 You can also set a scale-dependent visibility in the :guilabel:`Appearance` tab.
 
 The size and the attributes can also be an expression. Use the |mActionmIconExpressionEditorOpen| button
-to add an expression.
+to add an expression. See :ref:`vector_expressions` chapter for more information and example.
 
 .. _vectormetadatamenu:
 

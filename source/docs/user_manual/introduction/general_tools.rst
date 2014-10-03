@@ -296,6 +296,10 @@ tool:
 To deselect all selected features click on |mActionDeselectAll| :sup:`Deselect
 features from all layers`.
 
+|mActionSelectExpression| :sup:`Select feature using an expression` allow user 
+to select feature using expression dialog. See :ref:`vector_expressions` 
+chapter for some example.
+
 .. _`identify`:
 
 Identify features
