@@ -58,6 +58,6 @@ calculate the length in km of the ``railroads`` layer from the |qg| sample datas
 #. Complete the expression by typing ''/ 1000'' in the Field calculator expression box and click **[Ok]**.
 #. You can now find a new column ``length`` in the attribute table.
 
-The available functions are listed in vector_expression_ chapter.
+The available functions are listed in :ref:`vector_expressions` chapter.
 
 
