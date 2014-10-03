@@ -133,12 +133,19 @@ the line or offset line. Finally, :guilabel:`rotation` allows you to change the 
 
  * :guilabel:`Symbol layer type`: It's possible to use Centroid Fill, Gradient Fill, Line Pattern Fill,
    Point Pattern Fill, SVG Fill, Simple Fill and two Outlines (Marker line and Simple line).
- * :guilabel:`Colors`
+ * :guilabel:`Colors` for the border and the fill.
  * :guilabel:`Fill style`
  * :guilabel:`Border style`
  * :guilabel:`Border width`
  * :guilabel:`Offset X,Y`
  * :guilabel:`Data defined properties ...`
+
+Using the color combo box, you can drag and drop color for one color button 
+to another button, copy-paste color, pick color from somewhere, choose a color 
+from the palette or from  recent or standard color. The combo box allow you to 
+fill in the feature with transparency. You can also just clic on the button to open the 
+palettte dialog. Note that you can import color from some external software 
+like GIMP.
 
 'Gradient Fill' :guilabel:`Symbol layer type` allows you to select
 between a |radiobuttonon| :guilabel:`Two color`
