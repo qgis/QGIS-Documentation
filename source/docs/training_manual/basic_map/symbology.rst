@@ -145,7 +145,7 @@ to create more complex symbology. QGIS allows you to do this using symbol
 layers.
 
 * Go back to the :guilabel:`landuse` layer's symbol properties panel (by clicking
-:guilabel:`Simple fill` in the :guilabel:`Symbol layers` panel).
+  :guilabel:`Simple fill` in the :guilabel:`Symbol layers` panel).
 
 
 In this example, the current symbol has no outline (i.e., it uses the
@@ -321,16 +321,16 @@ types. First we will look at the types available for points.
 
 Point Symbol Layer Types
 ...............................................................................
-* Open your :guilabel:`basic_map` project.
 
+* Open your :guilabel:`basic_map` project.
 * Change the symbol properties for the :guilabel:`places` layer:
 
 .. image:: /static/training_manual/symbology/places_layer_properties.png
-   :align: center
+     :align: center
 
 * You can access the various symbol layer types by selecting the
-:guilabel:`Simple marker` layer in the :guilabel:`Symbol layers` panel, then
-click the :guilabel:`Symbol layer type` dropdown:
+  :guilabel:`Simple marker` layer in the :guilabel:`Symbol layers` panel, then
+  click the :guilabel:`Symbol layer type` dropdown:
 
 
 .. image:: /static/training_manual/symbology/marker_type_dropdown.png
@@ -372,8 +372,8 @@ To see the various options available for line data:
 
 
 * Ensure that the symbol levels are correct (via the
-:guilabel:`Advanced -> Symbol levels` dialog we used earlier) before applying
-the style.
+  :guilabel:`Advanced -> Symbol levels` dialog we used earlier) before applying
+  the style.
 
 
 Once you have applied the style, take a look at its results on the map. As you

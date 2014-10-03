@@ -55,18 +55,18 @@ Lets start with the naming of the sample plots. If you check the :guilabel:`Attr
 
 * Open the :guilabel:`Layer Properties --> Labels` for your :kbd:`systematic_plots_clip`.
 * Check :guilabel:`Label this layer with` and select the field :kbd:`ID`.
-* Go to the :guilabel:`Buffer` options and check the :guilabel:``Draw text buffer`, set the :guilabel:`Size` to :kbd:`1`.
+* Go to the :guilabel:`Buffer` options and check the :guilabel:`Draw text buffer`, set the :guilabel:`Size` to :kbd:`1`.
 * Click :guilabel:`OK`.
 
 Now look at the labels on your map. You can see that the points have been created and numbered first West to East and then North to South. If you look at the attribute table again, you will notice that the order in the table is following also that pattern. Unless you would have a reason to name the sample plots in a different way, naming them in a West-East/North-South fashion follows a logical order and is a good option. 
 
-..note:: If you would like to order or name them in a different way, you could use a spreadsheet to be able to order and combine rows and columns in any different way.
+.. note:: If you would like to order or name them in a different way, you could use a spreadsheet to be able to order and combine rows and columns in any different way.
 
 Nevertheless, the number values in the :kbd:`id` field are not so good. It would be better if the naming would be something like :kbd:`p_1, p_2...`. You can create a new column for the :kbd:`systematic_plots_clip` layer:
 
 * Go to the :guilabel:`Attribute table` for :kbd:`systematic_plots_clip`.
 * Enable the edit mode.
-* Open the :guilabel:`Field calculator` and name the new column :kbd:`Plot_id´.
+* Open the :guilabel:`Field calculator` and name the new column :kbd:`Plot_id`.
 * Set the :guilabel:`Output field type`to :kbd:`Text (string)`.
 * In the :guilabel:`Expression` field, write, copy or construct this formula :kbd:`concat('P_', $rownum )`. Remember that you can also double click on the elements inside the :guilabel:`Function list`. The :kbd:`concat` function can be found under :guilabel:`String` and the :kbd:`$rownum` parameter can be found under :guilabel:`Record`.
 * Click :guilabel:`OK`.

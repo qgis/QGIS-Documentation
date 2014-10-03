@@ -38,36 +38,6 @@ vector data. You can use :menuselection:`Layer rendering -->` tools that are com
 all vector data, as well as special symbolizing tools that were designed for the different kinds
 of vector data.
 
-Layer rendering
-...............
-
-* :guilabel:`Layer transparency` |slider|: You can make the underlying layer in the map canvas
-  visible with this tool. Use the slider to adapt the visibility of your vector layer to your needs.
-  You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
-
-.. _blend_modes:
-
-* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can achieve special rendering effects with these tools that you may
-  previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
-  through the settings described below.
-
-  * Normal: This is the standard blend mode, which uses the alpha channel of the top pixel to blend with the pixel beneath it. The colors aren't mixed.
-  * Lighten: This selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged and harsh.
-  * Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is most useful for mixing the texture of one layer with another layer (e.g., you can use a hillshade to texture another layer).
-  * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So, brighter top pixels cause the saturation and brightness of the underlying pixels to increase. This works best if the top pixels aren't too bright; otherwise the effect is too extreme.
-  * Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above one (in the case of RGB), white is displayed. This mode is suitable for highlighting features.
-  * Darken: This creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
-  * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the corresponding pixels for the bottom layer. The results are darker pictures.
-  * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be used to tweak and colorise underlying layers.
-  * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, light parts become lighter and dark parts become darker.
-  * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
-  * Hard light: Hard light is also very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
-  * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way around, to always get a positive value. Blending with black produces no change, as the difference with all colors is zero.
-  * Subtract: This blend mode simply subtracts pixel values of one layer from the other. In case of negative values, black is displayed.
-
-.. index:: Symbology
-
-
 Renderers
 .........
 
@@ -129,6 +99,7 @@ combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
 The following settings are possible:
 
 * Point layers:
+
  * :guilabel:`Symbol layer type`: You have the option to use Ellipse markers, Font markers,
    Simple markers, SVG markers and Vector Field markers.
  * :guilabel:`Colors`
@@ -141,6 +112,7 @@ The following settings are possible:
  * :guilabel:`Data defined properties ...`
 
 * Line layers:
+
  * :guilabel:`Symbol layer type`: Here you can use Simple Lines and Marker Lines.
  * :guilabel:`Color`
  * :guilabel:`Pen width`
@@ -152,7 +124,13 @@ The following settings are possible:
  * :guilabel:`Dash pattern unit`
  * :guilabel:`Data defined properties ...`
 
+Line Layers have two symbols layer type: simple line (default) and maker line. The first one  
+draws a simple line whereas the other display a marker point regularly on the line. You can 
+choose different location vertex, interval or central point. Maker line can have offset along 
+the line or offset line. Finally, :guilabel:`rotation` allows you to change the orientation of the symbol.
+
 * Polygon Layers:
+
  * :guilabel:`Symbol layer type`: It's possible to use Centroid Fill, Gradient Fill, Line Pattern Fill,
    Point Pattern Fill, SVG Fill, Simple Fill and two Outlines (Marker line and Simple line).
  * :guilabel:`Colors`
@@ -169,7 +147,12 @@ and |radiobuttonoff| :guilabel:`Color ramp` setting. You can use the
 All fills 'Gradient Fill` :guilabel:`Symbol layer type` is also
 available through the :guilabel:`Symbol` menu of the Categorized and
 Graduated Renderer and through the :guilabel:`Rule properties` menu of
-the Rule-based renderer.
+the Rule-based renderer. Other possibility is to choose a 'shapeburst 
+fill' which is a buffered gradient fill, where a gradient is drawn from 
+the boundary of a polygon towards the polygon's centre. Configurable 
+parameters include distance from the boundary to shade, use of color ramps or 
+simple two color gradients, optional blurring of the fill and offsets.
+
 
 It is possible to only draw polygon borders inside the polygon. Using
 'Outline: Simple line' select |checkbox| :guilabel:`Draw line
@@ -188,6 +171,14 @@ That means that categorized or graduated styles are converted to rule-based.
 If you want to preserve those renderers, you have to stick to the QML format.
 On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
+
+If the datasource of the layer is a database (PostGIS or Spatialite for example), 
+you can save your layer style inside a table of the database. Just clic on 
+:guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in 
+the dialog to define a style name, add a description, an ui file and if the style 
+is a default style. When loading a layer from the database, if a style alredy 
+exists for this layer, |qg| will load the layer and its style. You can add 
+several style in the database. Only one will be the default style anyway.
 
 .. _vector_style_manager:
 
@@ -383,12 +374,52 @@ placed on a displacement circle around a center symbol.
 
 .. tip:: **Export vector symbology**
 
-   You have the option to export vector symbology from |qg| into Google *.kml, *.dxf
-   and MapInfo *.tab files. Just open the right mouse menu of the layer and click on :menuselection:`Save selection
+   You have the option to export vector symbology from |qg| into Google \*.kml, \*.dxf
+   and MapInfo \*.tab files. Just open the right mouse menu of the layer and click on :menuselection:`Save selection
    as -->` to specify the name of the output file and its format.
    In the dialog, use the :guilabel:`Symbology export` menu to save the symbology either as
    :menuselection:`Feature symbology -->` or as :menuselection:`Symbol layer symbology -->`.
    If you have used symbol layers, it is recommended to use the second setting.
+
+.. index:: Inverted_Polygon_Renderer
+
+**Inverted Polygon**
+
+Inverted polygon renderer allows user to define a symbol to fill in outside of the layer's 
+polygons. As before you can select a subrenderers. These subrenderers are the 
+same as for the main renderers.
+
+
+Layer rendering
+...............
+
+* :guilabel:`Layer transparency` |slider|: You can make the underlying layer in the map canvas
+  visible with this tool. Use the slider to adapt the visibility of your vector layer to your needs.
+  You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
+
+.. _blend_modes:
+
+* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can achieve special rendering effects with these tools that you may
+  previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
+  through the settings described below.
+
+  * Normal: This is the standard blend mode, which uses the alpha channel of the top pixel to blend with the pixel beneath it. The colors aren't mixed.
+  * Lighten: This selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged and harsh.
+  * Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is most useful for mixing the texture of one layer with another layer (e.g., you can use a hillshade to texture another layer).
+  * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So, brighter top pixels cause the saturation and brightness of the underlying pixels to increase. This works best if the top pixels aren't too bright; otherwise the effect is too extreme.
+  * Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above one (in the case of RGB), white is displayed. This mode is suitable for highlighting features.
+  * Darken: This creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
+  * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the corresponding pixels for the bottom layer. The results are darker pictures.
+  * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be used to tweak and colorise underlying layers.
+  * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, light parts become lighter and dark parts become darker.
+  * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
+  * Hard light: Hard light is also very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
+  * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way around, to always get a positive value. Blending with black produces no change, as the difference with all colors is zero.
+  * Subtract: This blend mode simply subtracts pixel values of one layer from the other. In case of negative values, black is displayed.
+
+.. index:: Symbology
+
+
 
 .. _vector_labels_tab:
 
@@ -412,6 +443,7 @@ have been created for labeling the vector layers:
 Let us see how the new menus can be used for various vector layers.
 
 .. _labeling_point_layers:
+
 **Labeling point layers**
 
 Start |qg| and load a vector point layer. Activate the layer in the legend and click on the
@@ -528,6 +560,13 @@ also use the line orientation for the position of the label.
 Additionally, you can define a :guilabel:`Maximum angle between curved characters` when
 selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
 
+You can set up a minimum distance for repeating labels. Distance can be in mm or in map units.
+
+Some Placement setup will display more options, for example, :guilabel:`Curved` and :guilabel:`Parallel` 
+Placements will allow the user to set up the position of the label (above, belw or on the line), 
+:guilabel:`distance` from the line and for :guilabel:`Curved`, the user can also setup inside/outside 
+max angle between curved label.
+
 The :guilabel:`Rendering` menu has nearly the same entries as for point layers. In the
 :guilabel:`Feature options`, you can now :guilabel:`Suppress labeling of features smaller than`.
 
@@ -580,6 +619,9 @@ or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
 With the |radiobuttonoff| :guilabel:`Using perimeter` settings, you can define a position and
 a distance for the label. For the position, |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
 |checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependent position` are possible.
+
+Related to the choose of Label Placement, several options will appear. As for Point Placement you can 
+choose the distance for the polygon outline, repeat the label around the polygon perimeter.
 
 The entries in the :guilabel:`Rendering` menu are the same as for line layers. You can also use
 :guilabel:`Suppress labeling of features smaller than` in the :guilabel:`Feature options`.
@@ -744,42 +786,39 @@ to be added to the specific attribute table column. If you click on the
 **[edit widget]** button, a dialog opens, where you can define different
 widgets. These widgets are:
 
-* **Line edit**: An edit field that allows you to enter simple text
-  (or restrict to numbers for numeric attributes).
+* **Checkbox**: Displays a checkbox, and you can define what attribute is
+  added to the column when the checkbox is activated or not.
 * **Classification**: Displays a combo box with the values used for
   classification, if you have chosen 'unique value' as legend type in
   the :guilabel:`Style` menu of the properties dialog.
+* **Color**: Displays a color button allowing user to choose a color from the 
+  color dialog window.
+* **Date/Time**: Displays a line fields which can opens a calendar widget to enter a 
+  date, a time or both. Column type must be text. You can select a custom format, pop-up 
+  a calendar, etc.
+* **Enumeration**: Opens a combo box with values that can be used within
+  the columns type. This is currently only supported by the PostgreSQL provider.
+* **File name**: Simplifies the selection by adding a file chooser dialog.
+* **Hidden**: A hidden attribute column is invisible. The user is not able
+  to see its contents.
+* **Photo**: Field contains a filename for a picture. The width and height of the field can be defined.
 * **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
+* **Relation Reference**: This widged lets you embed the feature form of the referenced layer on the feature form 
+  of the actual layer. See :ref:`vector_relations`.
+* **Text edit** (default): This opens a text edit field that allows simple text or multiple lines to
+  be used. If you choose multiple lines you can also choose html content.
 * **Unique values**: You can select one of the values already used in
   the attribute table. If 'Editable' is activated, a line edit is shown with
   autocompletion support, otherwise a combo box is used.
-* **File name**: Simplifies the selection by adding a file chooser dialog.
+* **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers)
+  field, if empty.
 * **Value map**: A combo box with predefined items. The value is stored in
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
-* **Enumeration**: Opens a combo box with values that can be used within
-  the columns type. This is currently only supported by the PostgreSQL provider.
-* **Immutable**: The immutable attribute column is read-only. The user is not
-  able to modify the content.
-* **Hidden**: A hidden attribute column is invisible. The user is not able
-  to see its contents.
-* **Checkbox**: Displays a checkbox, and you can define what attribute is
-  added to the column when the checkbox is activated or not.
-* **Text edit**: This opens a text edit field that allows multiple lines to
-  be used.
-* **Calendar**: Opens a calendar widget to enter a date. Column type must be
-  text.
 * **Value Relation**: Offers values from a related table in a combobox. You can
   select layer, key column and value column.
-* **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers)
-  field, if empty.
-* **Photo**: Field contains a filename for a picture. The width and height of the field can be defined.
 * **Webview**: Field contains a URL. The width and height of the field is variable.
-* **Color**: A field that allows you to enter color codes. During data entry, the color is visible through a color bar
-  included in the field.
-* **Relation Reference**: This widged lets you embed the feature form of the referenced layer on the feature form 
-  of the actual layer. See :ref:`vector_relations`.
 
 With the **Attribute editor layout**, you can now define built-in forms for data entry jobs (see figure_fields_2_).
 Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| icon to create

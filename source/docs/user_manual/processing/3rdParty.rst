@@ -171,7 +171,7 @@ RGB image' algorithm (which creates three images from an RGB image) or the 'SAGA
 algorithm (to extract a single band).
 
 Limitations in cell size
-.......................
+.........................
 
 SAGA assumes that raster layers have the same cell size in the X and Y axis. If
 you are working with a layer with different values for horizontal and vertical

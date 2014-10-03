@@ -50,7 +50,7 @@ form, the browser displays and handles both identically.
 +--------------------+---------------------+----------------------+----------------------+----------------------+ 
 | Werner Macho       | Carson J.Q. Farmer  | Tyler Mitchell       | K\. Koy              | Lars Luthman         | 
 +--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Claudia A. Engel   | Brendan Morely      | David Willis         | Jürgen E. Fischer   | Marco Hugentobler    | 
+| Claudia A. Engel   | Brendan Morely      | David Willis         | Jürgen E. Fischer    | Marco Hugentobler    | 
 +--------------------+---------------------+----------------------+----------------------+----------------------+ 
 | Larissa Junek      | Diethard Jansen     | Paolo Corti          | Gavin Macaulay       | Gary E. Sherman      | 
 +--------------------+---------------------+----------------------+----------------------+----------------------+ 

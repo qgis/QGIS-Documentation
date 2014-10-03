@@ -14,7 +14,7 @@ previous releases.
 This release includes hundreds of bug fixes and many new features and
 enhancements that will be described in this manual. You may also
 review the visual changelog at
-http://changelog.linfiniti.com/qgis/version/21/.
+http://changelog.linfiniti.com/qgis/version/2.6.0/.
 
 Application and Project Options 
 -------------------------------
@@ -185,7 +185,7 @@ Symbology
   * Gradients originating from the centroid of a feature
   * Conical, linear and radial gradient types
   * Data-defined options (i.e., to use an expression or a table
-  column) for all gradient properties
+    column) for all gradient properties
 
 * **Label support for palleted rasters**: Rasters that use a fixed
   colour pallette (for instance, a land cover map) can now have

@@ -77,6 +77,9 @@ options. These include:
   drawn when they do not have an existing :file:`.qml` style defined. You can
   also set the default transparency level for new layers and whether symbols
   should have random colours assigned to them.
+  There is also an additional section where you can define specific colors for the 
+  running project. You can find the added colors in the drop down menu of the color dialog
+  window present in each renderer.
 * The tab :guilabel:`OWS Server` allows you to define information about the |qg|
   Server WMS and WFS capabilities, extent and CRS restrictions.
 * The :guilabel:`Macros` menu is used to edit Python macros for projects. Currently,
@@ -108,7 +111,7 @@ Options
 options are described below.
 
 General Menu
------------
+-------------
 
 **Application**
 
@@ -240,8 +243,8 @@ Rendering Menu
 * |checkbox| :guilabel:`By default new layers added to the map should be displayed`
 * |checkbox| :guilabel:`Enable back buffer`
 * |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
- * |checkbox| :guilabel:`Enable feature simplication by default for newly added layers`
- * |checkbox| :guilabel:`Simplify on provider side if possible`
+* |checkbox| :guilabel:`Enable feature simplication by default for newly added layers`
+* |checkbox| :guilabel:`Simplify on provider side if possible`
 
 **Rendering quality**
 
@@ -271,6 +274,16 @@ Rendering Menu
 **Debugging**
 
 * |checkbox| :guilabel:`Map canvas refresh`
+
+Colors Menu
+------------
+
+This menu allows you to add some custom color that you can find in each color dialog 
+window of the renderes. You will see a set of predefined colors in the tab: you can 
+delete or edit all of them. Moreover you can add the color you want and perform some copy 
+and paste operation. Finally you can export the color set as a :file:`gpl` file or import
+them.
+
 
 Canvas and Legend Menu
 ----------------------

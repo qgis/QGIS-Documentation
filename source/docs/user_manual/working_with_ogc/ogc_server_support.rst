@@ -240,9 +240,9 @@ To log requests send to server, set the following environment variables:
   some requests to server. If it's not there, check permissions.
 * **QGIS_SERVER_LOG_LEVEL**: Specify desired log level. Available values are:
 
-  *0 INFO (log all requests),
-  *1 WARNING,
-  *2 CRITICAL (log just critical errors, suitable for production purposes).
+  * 0 INFO (log all requests),
+  * 1 WARNING,
+  * 2 CRITICAL (log just critical errors, suitable for production purposes).
 
   Example::
 

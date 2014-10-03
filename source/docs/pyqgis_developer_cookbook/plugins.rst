@@ -228,7 +228,7 @@ case it's called ``TestPlugin`` (see below). This is how __init__.py should look
 
 
 mainPlugin.py
----------
+-------------
 
 This is where the magic happens and this is how magic looks like:
 (e.g. :file:`mainPlugin.py`)::

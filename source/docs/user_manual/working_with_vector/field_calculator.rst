@@ -14,8 +14,14 @@ results can be written to a new attribute column, or they can be used to update
 values in an existing column.
 
 You will need to bring the vector layer into editing mode, before you can click on
-the field calculator icon to open the dialog (see figure_attributes_3_). In
-the dialog, you first must select whether you want to only update selected
+the field calculator icon to open the dialog (see figure_attributes_3_) or use the 
+quick field calculation bar in top of the attribute table. 
+
+In quick field calculation bar, you first select the existing column name then open the 
+expression dialog to create your expression or write it directly in the field then click 
+on **Update All** button.
+
+In the field calculator dialog, you first must select whether you want to only update selected
 features, create a new attribute field where the results of the calculation will
 be added or update an existing field.
 
@@ -82,8 +88,9 @@ The available functions are listed below.
 
 The field calculator **Function list** with the **Selected Function Help** ,
 **Operators** and **Expression** menu are also available through the rule-based
-rendering in the Style menu of the Layer properties, and the expression-based
-labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core application.
+rendering in the Style menu of the Layer properties, the expression-based
+labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core application and 
+in diagram tab of the layer properties.
 
 
 .. index:: Field_Calculator_Functions
@@ -92,7 +99,7 @@ labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core applicatio
 
 **Operators**
 
-This group contains operators (e.g., +, -, *).
+This group contains operators (e.g., +, -, \*).
 
 ::
 
@@ -100,7 +107,8 @@ This group contains operators (e.g., +, -, *).
  a - b      a minus b
  a * b      a multiplied by b
  a / b      a divided by b
- a % b      a modulo b (for example, 7 % 2 = 1, or 2 fits into 7 three times with remainder 1)
+ a % b      a modulo b (for example, 7 % 2 = 1, or 2 fits into 7 three 
+            times with remainder 1)
  a ^ b      a power b (for example, 2^2=4 or 2^3=8)
  a = b      a and b are equal
  a > b      a is larger than b
@@ -115,7 +123,8 @@ This group contains operators (e.g., +, -, *).
  ||         joins two values together into a string 'Hello' || ' world'
  LIKE       returns 1 if the string matches the supplied pattern
  ILIKE      returns 1 if the string matches case-insensitive the supplied
-            pattern (ILIKE can be used instead of LIKE to make the match case-insensitive)
+            pattern (ILIKE can be used instead of LIKE to make the match 
+            case-insensitive)
  IS         returns 1 if a is the same as b
  OR         returns 1 when condition a or b is true
  AND        returns 1 when condition a and b are true
@@ -136,9 +145,12 @@ This group contains functions to handle conditional checks in expressions.
 
 ::
 
- CASE                          evaluates multiple expressions and returns a result
- CASE ELSE                     evaluates multiple expressions and returns a result
- coalesce                      returns the first non-NULL value from the expression list
+ CASE                          evaluates multiple expressions and returns a 
+                               result
+ CASE ELSE                     evaluates multiple expressions and returns a 
+                               result
+ coalesce                      returns the first non-NULL value from the 
+                               expression list
  regexp_match                  returns true if any part of a string matches
                                the supplied regular expression
 
@@ -158,23 +170,32 @@ This group contains math functions (e.g., square root, sin and cos).
  asin(a)                       arcsin of a
  acos(a)                       arccos of a
  atan(a)                       arctan of a
- atan2(y,x)                    arctan of y/x using the signs of the two arguments
-                               to determine the quadrant of the result
+ atan2(y,x)                    arctan of y/x using the signs of the two 
+                               arguments to determine the quadrant of the 
+                               result
  exp                           exponential of a value
- ln                            value of the natural logarithm of the passed expression
- log10                         value of the base 10 logarithm of the passed expression
- log                           value of the logarithm of the passed value and base
+ ln                            value of the natural logarithm of the passed 
+                               expression
+ log10                         value of the base 10 logarithm of the passed 
+                               expression
+ log                           value of the logarithm of the passed value 
+                               and base
  round                         round to number of decimal places
- rand                          random integer within the range specified by the minimum
+ rand                          random integer within the range specified by 
+                               the minimum
                                and maximum argument (inclusive)
- randf                         random float within the range specified by the minimum
+ randf                         random float within the range specified by 
+                               the minimum
                                and maximum argument (inclusive)
  max                           largest value in a set of values
  min                           smallest value in a set of values
- clamp                         restricts an input value to a specified range
- scale_linear                  transforms a given value from an input domain to an output
+ clamp                         restricts an input value to a specified 
+                               range
+ scale_linear                  transforms a given value from an input 
+                               domain to an output
                                range using linear interpolation
- scale_exp                     transforms a given value from an input domain to an output
+ scale_exp                     transforms a given value from an input 
+                               domain to an output
                                range using an exponential curve
  floor                         rounds a number downwards
  ceil                          rounds a number upwards
@@ -194,8 +215,9 @@ This group contains functions to convert one data type to another (e.g., string 
  todatetime                   converts a string into Qt data time type
  todate                       converts a string into Qt data type
  totime                       converts a string into Qt time type
- tointerval                   converts a string to an interval type (can be used to take days,
-                              hours, months, etc. off a date)
+ tointerval                   converts a string to an interval type (can be 
+                              used to take days, hours, months, etc. off a 
+                              date)
 
 
 **Date and Time Functions**
@@ -206,10 +228,14 @@ This group contains functions for handling date and time data.
 
  $now       current date and time
  age        difference between two dates
- year       extract the year part from a date, or the number of years from an interval
- month      extract the month part from a date, or the number of months from an interval
- week       extract the week number from a date, or the number of weeks from an interval
- day        extract the day from a date, or the number of days from an interval
+ year       extract the year part from a date, or the number of years from 
+            an interval
+ month      extract the month part from a date, or the number of months 
+            from an interval
+ week       extract the week number from a date, or the number of weeks 
+            from an interval
+ day        extract the day from a date, or the number of days from an 
+            interval
  hour       extract the hour from a datetime or time, or the number
             of hours from an interval
  minute     extract the minute from a datetime or time, or the number
@@ -224,26 +250,40 @@ This group contains functions that operate on strings (e.g., that replace, conve
 
 ::
 
- lower         convert string a to lower case
- upper         convert string a to upper case
- title         converts all words of a string to title case (all words lower case
-               with leading capital letter)
- trim          removes all leading and trailing white space (spaces, tabs, etc.) from a string
- length        length of string a
- replace       returns a string with the supplied string replaced
- regexp_replace(a,this,that)  returns a string with the supplied regular expression replaced
- regexp_substr    returns the portion of a string which matches a supplied regular expression
+ lower                        convert string a to lower case
+ upper                        convert string a to upper case
+ title                        converts all words of a string to title 
+                              case (all words lower case with leading 
+                              capital letter)
+ trim                         removes all leading and trailing white 
+                              space (spaces, tabs, etc.) from a string
+ wordwrap                     returns a string wrapped to a maximum/
+                              minimum number of characters
+ length                       length of string a
+ replace                      returns a string with the supplied string 
+                              replaced
+ regexp_replace(a,this,that)  returns a string with the supplied regular 
+                              expression replaced
+ regexp_substr                returns the portion of a string which matches 
+                              a supplied regular expression
  substr(*a*,from,len)         returns a part of a string
- concat        concatenates several strings to one
- strpos        returns the index of a regular expression in a string
- left          returns a substring that contains the n leftmost characters of the string
- right         returns a substring that contains the n rightmost characters of the string
- rpad          returns a string with supplied width padded using the fill character
- lpad          returns a string with supplied width padded using the fill character
- format        formats a string using supplied arguments
- format_number   returns a number formatted with the locale separator for thousands
-                 (also truncates the number to the number of supplied places)
- format_date   formats a date type or string into a custom string format
+ concat                       concatenates several strings to one
+ strpos                       returns the index of a regular expression 
+                              in a string
+ left                         returns a substring that contains the n 
+                              leftmost characters of the string
+ right                        returns a substring that contains the n 
+                              rightmost characters of the string
+ rpad                         returns a string with supplied width padded 
+                              using the fill character
+ lpad                         returns a string with supplied width padded 
+                              using the fill character
+ format                       formats a string using supplied arguments
+ format_number                returns a number formatted with the locale 
+                              separator for thousands (also truncates the 
+                              number to the number of supplied places)
+ format_date                  formats a date type or string into a custom 
+                              string format
 
 
 
@@ -253,23 +293,25 @@ This group contains functions for manipulating colors.
 
 ::
 
- color_rgb       returns a string representation of a color based on its red, green,
-                 and blue components
- color_rgba      returns a string representation of a color based on its red, green,
-                 blue, and alpha (transparency) components
+ color_rgb       returns a string representation of a color based on its 
+                 red, green, and blue components
+ color_rgba      returns a string representation of a color based on its 
+                 red, green, blue, and alpha (transparency) components
  ramp_color      returns a string representing a color from a color ramp
- color_hsl       returns a string representation of a color based on its hue,
-                 saturation, and lightness attributes
- color_hsla      returns a string representation of a color based on its hue, saturation,
-                 lightness and alpha (transparency) attributes
- color_hsv       returns a string representation of a color based on its hue,
-                 saturation, and value attributes
- color_hsva      returns a string representation of a color based on its hue, saturation,
-                 value and alpha (transparency) attributes
- color_cmyk      returns a string representation of a color based on its cyan, magenta,
-                 yellow and black components
- color_cmyka     returns a string representation of a color based on its cyan, magenta,
-                 yellow, black and alpha (transparency) components
+ color_hsl       returns a string representation of a color based on its 
+                 hue, saturation, and lightness attributes
+ color_hsla      returns a string representation of a color based on its 
+                 hue, saturation, lightness and alpha (transparency) 
+                 attributes
+ color_hsv       returns a string representation of a color based on its 
+                 hue, saturation, and value attributes
+ color_hsva      returns a string representation of a color based on its 
+                 hue, saturation, value and alpha (transparency) attributes
+ color_cmyk      returns a string representation of a color based on its 
+                 cyan, magenta, yellow and black components
+ color_cmyka     returns a string representation of a color based on its 
+                 cyan, magenta, yellow, black and alpha (transparency) 
+                 components
 
 
 **Geometry Functions**
@@ -278,45 +320,75 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 
 ::
 
- xat              retrieves an x coordinate of the current feature
- yat              retrieves a y coordinate of the current feature
+ $geometry        returns the geometry of the current feature (can be used
+                  for processing with other functions)
  $area            returns the area size of the current feature
  $length          returns the length size of the current feature
  $perimeter       returns the perimeter length of the current feature
  $x               returns the x coordinate of the current feature
  $y               returns the y coordinate of the current feature
- $geometry        returns the geometry of the current feature (can be used
-                  for processing with other functions)
- geomFromWKT      returns a geometry created from a well-known text (WKT) representation
+ xat              retrieves the nth x coordinate of the current feature.
+                  n given as a parameter of the function
+ yat              retrieves the nth y coordinate of the current feature. 
+                  n given as a parameter of the function
+ xmin             returns the minimum x coordinate of a geometry. 
+                  Calculations are in the Spatial Reference System of this 
+                  Geometry
+ xmax             returns the maximum x coordinate of a geometry. 
+                  Calculations are in the Spatial Reference System of this 
+                  Geometry
+ ymin             returns the minimum y coordinate of a geometry. 
+                  Calculations are in the Spatial Reference System of this 
+                  Geometry 
+ ymax             returns the maximum y coordinate of a geometry. 
+                  Calculations are in the Spatial Reference System of this 
+                  Geometry
+ geomFromWKT      returns a geometry created from a well-known text (WKT) 
+                  representation
  geomFromGML      returns a geometry from a GML representation of geometry
  bbox
- disjoint         returns 1 if the geometries do not share any space together
+ disjoint         returns 1 if the geometries do not share any space 
+                  together
  intersects       returns 1 if the geometries spatially intersect
                   (share any portion of space) and 0 if they don't
- touches          returns 1 if the geometries have at least one point in common,
-                  but their interiors do not intersect
- crosses          returns 1 if the supplied geometries have some, but not all,
-                  interior points in common
- contains         returns true if and only if no points of b lie in the exterior of a,
-                  and at least one point of the interior of b lies in the interior of a
- overlaps         returns 1 if the geometries share space, are of the same dimension,
-                  but are not completely contained by each other
+ touches          returns 1 if the geometries have at least one point in 
+                  common, but their interiors do not intersect
+ crosses          returns 1 if the supplied geometries have some, but not 
+                  all, interior points in common
+ contains         returns true if and only if no points of b lie in the 
+                  exterior of a, and at least one point of the interior 
+                  of b lies in the interior of a
+ overlaps         returns 1 if the geometries share space, are of the 
+                  same dimension, but are not completely contained by 
+                  each other
  within           returns 1 if geometry a is completely inside geometry b
- buffer           returns a geometry that represents all points whose distance
-                  from this geometry is less than or equal to distance
+ buffer           returns a geometry that represents all points whose 
+                  distance from this geometry is less than or equal to 
+                  distance
  centroid         returns the geometric center of a geometry
- convexHull       returns the convex hull of a geometry (this represents the
-                  minimum convex geometry that encloses all geometries within the set)
- difference       returns a geometry that represents that part of geometry a that
-                  does not intersect with geometry b
- distance         returns the minimum distance (based on spatial ref) between
-                  two geometries in projected units
+ bounds           returns a geometry which represents the bounding box of 
+                  an input geometry. Calculations are in the Spatial 
+                  Reference System of this Geometry. 
+ bounds_width     returns the width of the bounding box of a geometry. 
+                  Calculations are in the Spatial Reference System of 
+                  this Geometry.
+ bounds_height    returns the height of the bounding box of a geometry. 
+                  Calculations are in the Spatial Reference System of 
+                  this Geometry.
+ convexHull       returns the convex hull of a geometry (this represents 
+                  the minimum convex geometry that encloses all geometries 
+                  within the set)
+ difference       returns a geometry that represents that part of geometry 
+                  a that does not intersect with geometry b
+ distance         returns the minimum distance (based on spatial ref) 
+                  between two geometries in projected units
  intersection     returns a geometry that represents the shared portion
                   of geometry a and geometry b
- symDifference    returns a geometry that represents the portions of a and b
-                  that do not intersect
+ symDifference    returns a geometry that represents the portions of a and 
+                  b that do not intersect
  combine          returns the combination of geometry a and geometry b
- union            returns a geometry that represents the point set union of the geometries
+ union            returns a geometry that represents the point set union of 
+                  the geometries
  geomToWKT        returns the well-known text (WKT) representation of the
                   geometry without SRID metadata
 
@@ -328,9 +400,23 @@ This group contains functions that operate on record identifiers.
 
 ::
 
- $rownum                      returns the number of the current row
- $id                          returns the feature id of the current row
- $scale                       returns the current scale of the map canvas
+ $rownum                  returns the number of the current row
+ $id                      returns the feature id of the current row
+ $currentfeature          returns the current feature being evaluated. 
+                          This can be used with the 'attribute' function 
+                          to evaluate attribute values from the current 
+                          feature. 
+ $scale                   returns the current scale of the map canvas
+ $uuid                    generates a Universally Unique Identifier (UUID) 
+                          for each row. Each UUID is 38 characters long.
+ getFeature               returns the first feature of a layer matching a 
+                          given attribute value.
+ attribute                returns the value of a specified attribute from 
+                          a feature.
+ $map                     returns the id of the current map item if the map 
+                          is being drawn in a composition, or "canvas" if 
+                          the map is being drawn within the main QGIS 
+                          window.
 
 
 **Fields and Values**

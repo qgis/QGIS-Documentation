@@ -172,7 +172,7 @@ With :kbd:`Ctrl+Spacebar`, you can temporarily switch to marquee zoom mode, and 
 :kbd:`Ctrl+Shift+Spacebar`, to zoom out mode.
 
 Print Composer Options
---------------------
+------------------------
 From :menuselection:`Settings --> Composer Options` you can set some options that will be
 used as default during your work.
 
@@ -227,6 +227,9 @@ Background, Item ID and Rendering (See figure_composer_2_).
   client. You can set an ID on an item (e.g., a map and a label), and then the web client can send data to set a property 
   (e.g., label text) for that specific item. The GetProjectSettings command will list what items and which IDs are available in a layout.
 * :guilabel:`Rendering` mode can be selected in the option field. See Rendering_Mode_.
+
+.. note:: If you checked |checkbox| :guilabel:`Use live-updating color chooser dialogs` in the QGIS general options, the color button will 
+    update as soon as you choose a new color from **Color Dialog** windows. If not, you need to close the **Color Dialog**.
 
 .. _Rendering_Mode:
 
@@ -641,7 +644,7 @@ provide the following functionalities (see figure_composer_16_):
    single: Scalebar; Map_Scalebar
 
 Adding a Scale Bar item to the Print Composer
---------------------------------------------
+----------------------------------------------
 
 To add a scale bar, click the |mActionScaleBar| :sup:`Add new scalebar` icon, place
 the element with the left mouse button on the Print Composer canvas and position
@@ -847,7 +850,7 @@ provide the following functionalities (see figure_composer_24_):
 .. index:: HTML_Frame
 
 Add an HTML frame to the Print Composer
---------------------------------------
+----------------------------------------
 
 It is possible to add a clickable frame linked to a URL: Click the |mActionAddHtml| :sup:`Add HTML frame` icon, place the element with
 the left mouse button on the Print Composer canvas and position and customize the appearance in the :guilabel:`Item Properties` tab.

@@ -13,7 +13,7 @@ You will use LAStools to extract a DEM from a LiDAR dataset and then create a hi
 
 Managing LiDAR data within QGIS is possible using the Processing framework and the algorithms provided by `LAStools <http://rapidlasso.com/2013/09/29//how-to-install-lastools-toolbox-in-qgis>`_.
 
-You can obtain a digital elevation model (DEM) from a LiDAR point cloud and then create a hillshade raster that is visually more intuitive for presentation purposes. First you will have to set up the :guilabel:`Processing`framework settings to properly work with LAStools:
+You can obtain a digital elevation model (DEM) from a LiDAR point cloud and then create a hillshade raster that is visually more intuitive for presentation purposes. First you will have to set up the :guilabel:`Processing` framework settings to properly work with LAStools:
 
 * Close QGIS, if you have already started it.
 * An old lidar plugin might be installed by default in your system in the folder :file:`C:/Program Files/QGIS Valmiera/apps/qgis/python/plugins/processing/`.

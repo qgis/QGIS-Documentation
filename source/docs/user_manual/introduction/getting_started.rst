@@ -133,7 +133,7 @@ Load raster and vector layers from the sample dataset
    the ERDAS IMG file :file:`landcover.img` and click **[Open]**.
 #. If the file is not listed, check if the :guilabel:`Files of type`
    |selectstring| combo box at the bottom of the dialog is set on the right
-   type, in this case "Erdas Imagine Images (*.img, *.IMG)".
+   type, in this case "Erdas Imagine Images (\*.img, \*.IMG)".
 #. Now click on the |mActionAddOgrLayer| :sup:`Load Vector` icon.
 #. |radiobuttonon| :guilabel:`File` should be selected as :guilabel:`Source Type`
    in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to

@@ -34,7 +34,7 @@ the classes from the QGIS libraries. Pythonic QGIS API is nearly identical
 to the API in C++.
 
 There are some resources about programming with PyQGIS on `QGIS blog <http://blog.qgis.org/>`_.
-See `QGIS tutorial ported to Python <http://blog.qgis.org/?q=node/59>`_
+See `QGIS tutorial ported to Python <http://blog.qgis.org/node/59.html>`_
 for some examples of simple 3rd party apps. A good resource when dealing
 with plugins is to download some plugins from `plugin repository <http://plugins.qgis.org/>`_
 and examine their code. Also, the ``python/plugins/`` folder in your QGIS installation contains

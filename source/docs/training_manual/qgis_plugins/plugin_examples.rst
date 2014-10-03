@@ -78,7 +78,7 @@ it creates this effect using only one layer.
 Before using it, make sure that both your map and the plugin are configured
 properly:
 
-* Open the plugin's settings by clicking on :menuselection:`Plugins --> 
+* Open the plugin's settings by clicking on :menuselection:`Web --> 
   OpenLayers plugin --> OpenLayers Overview`.
 * Use the panel to choose a map type you want. In this example, we'll use the
   "Hybrid" type map, but you can choose any others if you want.
