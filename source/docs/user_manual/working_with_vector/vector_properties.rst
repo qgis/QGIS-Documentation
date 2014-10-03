@@ -203,6 +203,12 @@ feature's attribute. The :guilabel:`Style` menu allows you to select:
 * The symbol (using the Symbol dialog)
 * The colors (using the Color Ramp listbox)
 
+Then click on **Classify** button to create classes from the distinct value of 
+the attribute column. Each classes can be disabled unchecking the checkbox at 
+the left of the class name.
+
+You can change symbol, value and/or label of the clic, just double clicking 
+on the item you want to change.
 
 The **[Advanced]** button in the lower-right corner of the dialog allows you to
 set the fields containing rotation and size scale information.
@@ -302,6 +308,12 @@ modes are:
 
 The listbox in the center part of the :guilabel:`Style` menu lists the classes
 together with their ranges, labels and symbols that will be rendered.
+
+Click on **Classify** button to create classes using the choosen mode. Each 
+classes can be disabled unchecking the checkbox at the left of the class name.
+
+You can change symbol, value and/or label of the clic, just double clicking 
+on the item you want to change.
 
 The example in figure_symbology_4_ shows the graduated rendering dialog for
 the rivers layer of the |qg| sample dataset.
