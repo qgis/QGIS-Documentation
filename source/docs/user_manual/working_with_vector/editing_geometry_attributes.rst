@@ -551,12 +551,12 @@ Simplify Feature
 ................
 
 The |mActionSimplify| :sup:`Simplify Feature` tool allows you to reduce the
-number of vertices of a feature, as long as the geometry doesn't change.
-First, select a feature. It will be highlighted by a red rubber band
-and a slider will appear. Moving the slider, the red rubber band will change
-its shape to show how the feature is being simplified. Click **[OK]** to store
-the new, simplified geometry. If a feature cannot be simplified
-(e.g. multi-polygons), a message will appear.
+number of vertices of a feature, as long as the geometry doesn't change and 
+geometry type is not a multi geometry. First, select a feature. It will be 
+highlighted by a red rubber band and a slider will appear. Moving the slider, 
+the red rubber band will change its shape to show how the feature is being 
+simplified. Click **[OK]** to store the new, simplified geometry. If a feature 
+cannot be simplified (e.g. multi-polygons), a message will appear.
 
 Add Ring
 ........
