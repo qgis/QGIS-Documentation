@@ -1,4 +1,14 @@
 
+
+# cd to script dir
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
+# throw away building artefacts
+git stash
+git stash drop
+# get latest version
+git pull
+
 # only languages which have translations in transifex
 : ${langs:=en de es fi fr gl hi id it ja ko nl pl pt_BR pt_PT ro ru}
 
