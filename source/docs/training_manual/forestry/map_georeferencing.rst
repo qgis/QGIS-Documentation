@@ -31,7 +31,7 @@ You will use the georeferencing plugin from QGIS, the plugin is already installe
 To georeference the map:
 
 * Open the georeference tool, :menuselection:`Raster --> Georeferencer --> Georeferencer`.
-* Add the the map image file, :kdb:`rautjarvi_map.tif`, as the image to georeferenciate, :menuselection:`File --> Open raster`.
+* Add the the map image file, :kbd:`rautjarvi_map.tif`, as the image to georeferenciate, :menuselection:`File --> Open raster`.
 * When prompted find and select the :kbd:`KKJ / Finland zone 2` CRS, it is the CRS that was used in Finland back in 1994 when this map was created.
 * Click :guilabel:`OK`.
 
@@ -67,7 +67,7 @@ With already three digitized ground control points you will be able to see the g
 Once you are happy with your control points save your ground control points, in case that you will need them later, and you will:
 
 * :menuselection:`File --> Save GCP points as...`.
-* In the folder :kbd:`exercise_data\forestry\digitizing`, name the file :kdb:`rautjarvi_map.tif.points`.
+* In the folder :kbd:`exercise_data\forestry\digitizing`, name the file :kbd:`rautjarvi_map.tif.points`.
 
 Finally, georeference you map:
 

@@ -32,7 +32,7 @@ Python will respond by running your command::
 
 Congratulations, you just wrote your first python application!
 
-.. note:: You can escape from the python prompt by pressing :keyboard:`ctrl-D`
+.. note:: You can escape from the python prompt by pressing :kbd:`ctrl-D`
    or by typing :samp:`quit()` and then pressing :keyboard:`enter`.
 
 

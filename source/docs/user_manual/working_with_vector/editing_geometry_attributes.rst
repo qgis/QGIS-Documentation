@@ -641,7 +641,7 @@ select the feature. You can make the |mActionOffsetCurve| :sup:`Offset Curve` to
 the cross to the desired distance. Your changes may then be saved with the
 |mActionSaveEdits|:sup:`Save Layer Edits` tool.
 
-|qgs| options dialog (Digitizing tab then **Curve offset tools** section) allows 
+|qg| options dialog (Digitizing tab then **Curve offset tools** section) allows 
 you to configure some parameters like **Join style**, **Quadrant segments**, 
 **Miter limit**.
 

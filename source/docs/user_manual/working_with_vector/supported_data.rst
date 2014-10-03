@@ -167,7 +167,7 @@ Loading a MapInfo Layer
 |mActionAddOgrLayer| To load a MapInfo layer, click on the |mActionAddOgrLayer|
 :sup:`Add Vector Layer` toolbar button; or type :kbd:`Ctrl+Shift+V`, change the
 file type filter :guilabel:`Files of type` |selectstring|: to
-'Mapinfo File [OGR] (*.mif *.tab *.MIF *.TAB)' and select the MapInfo layer you
+'Mapinfo File [OGR] (\*.mif \*.tab \*.MIF \*.TAB)' and select the MapInfo layer you
 want to load.
 
 .. index:: ArcInfo_Binary_Coverage, Tiger_Format, UK_National_Transfer_Format, US_Census_Bureau

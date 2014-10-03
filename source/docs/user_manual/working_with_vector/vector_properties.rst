@@ -177,7 +177,7 @@ you can save your layer style inside a table of the database. Just clic on
 :guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in 
 the dialog to define a style name, add a description, an ui file and if the style 
 is a default style. When loading a layer from the database, if a style alredy 
-exists for this layer, |qgis| will load the layer and its style. You can add 
+exists for this layer, |qg| will load the layer and its style. You can add 
 several style in the database. Only one will be the default style anyway.
 
 .. _vector_style_manager:
@@ -443,6 +443,7 @@ have been created for labeling the vector layers:
 Let us see how the new menus can be used for various vector layers.
 
 .. _labeling_point_layers:
+
 **Labeling point layers**
 
 Start |qg| and load a vector point layer. Activate the layer in the legend and click on the

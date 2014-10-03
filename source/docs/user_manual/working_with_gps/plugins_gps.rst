@@ -22,6 +22,7 @@ types in GPS data. |qg| displays waypoints in point layers, while routes and
 tracks are displayed in linestring layers.
 
 .. _`label_loadgps`:
+
 Loading GPS data from a file
 ----------------------------
 

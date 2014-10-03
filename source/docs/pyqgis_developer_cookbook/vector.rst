@@ -896,8 +896,9 @@ can be loaded from a `Qt resource <http://qt.nokia.com/doc/4.5/resources.html>`_
 
 Further Topics
 ..............
-re
+
 **TODO:**
+
  * creating/modifying symbols
  * working with style (:class:`QgsStyleV2`)
  * working with color ramps (:class:`QgsVectorColorRampV2`)

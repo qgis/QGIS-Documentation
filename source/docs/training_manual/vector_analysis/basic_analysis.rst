@@ -65,7 +65,7 @@ data from OSM using QGIS' built-in OSM download tool.
 * Note that the :guilabel:`osm` format is a type of vector data. Add this data as a vector
   layer as usually :guilabel:`Layer` -> :guilabel:`Add vector layer...`,
   browse to the new :kbd:`osm_data.osm` file you just downloaded. You may need to
- select :guilabel:`Show All Files` as the file format.
+  select :guilabel:`Show All Files` as the file format.
 * Select :kbd:`osm_data.osm` and click :guilabel:`Open`
 * In the dialog which opens, select all the layers, *except* the
   :kbd:`other_relations` and :kbd:`multilinestrings` layer:
@@ -106,10 +106,10 @@ Now we need to tell QGIS to only show us the polygons where the value of
 
 * Double-click the word :kbd:`amenity` in the :guilabel:`Fields` list.
 * Watch what happens in the :guilabel:`Provider specific filter expression`
-field below:
+  field below:
 
 .. image:: /static/training_manual/vector_analysis/schools_query.png
-     :align: center
+   :align: center
 
 The word :kbd:`"amenity"` has appeared. To build the rest of the query:
 

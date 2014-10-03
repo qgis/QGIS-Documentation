@@ -185,7 +185,7 @@ Symbology
   * Gradients originating from the centroid of a feature
   * Conical, linear and radial gradient types
   * Data-defined options (i.e., to use an expression or a table
-  column) for all gradient properties
+    column) for all gradient properties
 
 * **Label support for palleted rasters**: Rasters that use a fixed
   colour pallette (for instance, a land cover map) can now have

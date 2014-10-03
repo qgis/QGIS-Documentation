@@ -29,6 +29,7 @@ sec_starting_grass_:
 * |grass_region_edit| :sup:`Edit current GRASS region`
 
 .. _sec_starting_grass:
+
 Starting the GRASS plugin
 =========================
 
@@ -45,6 +46,7 @@ some raster and vector data (see section :ref:`sec_import_loc_data`) for further
 analysis with the GRASS Toolbox (see section :ref:`subsec_grass_toolbox`).
 
 .. _sec_load_grassdata:
+
 Loading GRASS raster and vector layers
 ======================================
 
@@ -786,7 +788,7 @@ causing it to load even more slowly.
    will be used to create a vector map of isohyetal (constant rainfall) lines.
 
 Creating a Hillshade 3-D effect
-..............................
+.................................
 
 Several methods are used to display elevation layers and give a 3-D effect to maps.
 The use of contour lines, as shown above, is one popular method often chosen to

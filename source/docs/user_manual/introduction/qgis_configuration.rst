@@ -111,7 +111,7 @@ Options
 options are described below.
 
 General Menu
------------
+-------------
 
 **Application**
 
@@ -243,8 +243,8 @@ Rendering Menu
 * |checkbox| :guilabel:`By default new layers added to the map should be displayed`
 * |checkbox| :guilabel:`Enable back buffer`
 * |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
- * |checkbox| :guilabel:`Enable feature simplication by default for newly added layers`
- * |checkbox| :guilabel:`Simplify on provider side if possible`
+* |checkbox| :guilabel:`Enable feature simplication by default for newly added layers`
+* |checkbox| :guilabel:`Simplify on provider side if possible`
 
 **Rendering quality**
 
