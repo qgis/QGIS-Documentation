@@ -635,11 +635,15 @@ The tool can be applied to the edited layer (the geometries are modified)
 or also to background layers (in which case it creates copies of the lines / rings and adds them to the the edited layer).
 It is thus ideally suited for the creation of distance line layers. The displacement is
 shown at the bottom left of the taskbar.
+
 To create a shift of a line layer, you must first go into editing mode and then
 select the feature. You can make the |mActionOffsetCurve| :sup:`Offset Curve` tool active and drag
 the cross to the desired distance. Your changes may then be saved with the
 |mActionSaveEdits|:sup:`Save Layer Edits` tool.
 
+|qgs| options dialog (Digitizing tab then **Curve offset tools** section) allows 
+you to configure some parameters like **Join style**, **Quadrant segments**, 
+**Miter limit**.
 
 .. index:: Split_Features
 
