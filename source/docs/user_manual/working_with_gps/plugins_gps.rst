@@ -196,7 +196,7 @@ Download of points/tracks from GPS units
 
 As described in previous sections QGIS uses GPSBabel to download points/tracks
 directly in the project. QGIS comes out of the box with a pre-defined profile
-to download from Garmin devices. Unfortunately there is a `bug
+to download from Garmin devices. Unfortunately there is a `bug #6318
 <http://hub.qgis.org/issues/6318>`_ that does not allow create other profiles,
 so downloading directly in QGIS using the GPS Tools is at the moment limited to
 Garmin USB units.
@@ -231,7 +231,7 @@ loaded
 
   rmmod garmin_gps
 
-and then you can use the GPS Tools. Unfortunately there seems to be a `bug
+and then you can use the GPS Tools. Unfortunately there seems to be a `bug #7182
 <http://hub.qgis.org/issues/7182>`_ and usually QGIS freezes several times
 before the operation work fine.
 

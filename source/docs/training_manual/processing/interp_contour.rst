@@ -1,7 +1,7 @@
 Interpolation and contouring
 =============================
 
-Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_ 
+Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_
 
 .. note:: This chapter shows how to use different backends to calculate different interpolations.
 
@@ -19,7 +19,8 @@ Let's use different methods for interpolation, all based on vector ``points.shp`
 - :menuselection:`GDAL --> Grid (Inverse Distance to a power)` [Power:4]
 - :menuselection:`GDAL --> Grid (Moving average)` [Radius1&2: 50000]
 
-.. todo:: measure concordance between methods, and correlate it with distance to points (areas far from points will have less accurate interpolation)
+**TODO:**
+   measure concordance between methods, and correlate it with distance to points (areas far from points will have less accurate interpolation)
 
 Contour
 ---------

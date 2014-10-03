@@ -37,18 +37,22 @@ How to toggle Layers
 --------------------
 
 Since QGIS 2.4 there is new layer tree API that allows direct access to the layer tree
-in the legend. Here is an example how to toggle visibility of the active layer::
+in the legend. Here is an example how to toggle visibility of the active layer
+
+::
 
   root = QgsProject.instance().layerTreeRoot()
   node = root.findLayer(iface.activeLayer().id())
   new_state = Qt.Checked if node.isVisible()==Qt.Unchecked else Qt.Unchecked
   node.setVisible(new_state)
+
 The method requires the layer number (0 being the top most) and can be
 called by
 
 ::
-  
+
   self.toggleLayer(3)
+
 
 .. index:: plugins; access attributes of selected features
 

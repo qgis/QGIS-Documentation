@@ -1046,6 +1046,8 @@ rst_epilog = """
    :width: 1.5em
 .. |geoprocessing| image:: /static/common/geoprocessing.png
    :width: 1.5em
+.. |geometry| image:: /static/common/geometry.png
+   :width: 1.5em
 .. |management| image:: /static/common/management.png
    :width: 1.5em
 .. |sampling| image:: /static/common/sampling.png

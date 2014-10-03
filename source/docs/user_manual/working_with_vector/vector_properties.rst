@@ -47,7 +47,7 @@ There is no continuous color renderer, because it is in fact only a special case
 of the graduated renderer. The categorized and graduated renderers can be created
 by specifying a symbol and a color ramp - they will set the colors for symbols
 appropriately. For point layers, there is a point displacement renderer available.
-For each data type (points, lines and polygons), vector symbol layer types are available. 
+For each data type (points, lines and polygons), vector symbol layer types are available.
 Depending on the chosen renderer, the :guilabel:`Style` menu provides different
 additional sections. On the bottom right of the symbology dialog, there is a **[Symbol]** button, which gives access
 to the Style Manager (see section vector_style_manager_). The Style Manager allows you to edit and remove
@@ -105,7 +105,7 @@ The following settings are possible:
  * :guilabel:`Colors`
  * :guilabel:`Size`
  * :guilabel:`Outline style`
- * :guilabel:`Outline width` 
+ * :guilabel:`Outline width`
  * :guilabel:`Angle`
  * :guilabel:`Offset X,Y`: You can shift the symbol in the x- or y-direction.
  * :guilabel:`Anchor point`
@@ -124,9 +124,9 @@ The following settings are possible:
  * :guilabel:`Dash pattern unit`
  * :guilabel:`Data defined properties ...`
 
-Line Layers have two symbols layer type: simple line (default) and maker line. The first one  
-draws a simple line whereas the other display a marker point regularly on the line. You can 
-choose different location vertex, interval or central point. Maker line can have offset along 
+Line Layers have two symbols layer type: simple line (default) and maker line. The first one
+draws a simple line whereas the other display a marker point regularly on the line. You can
+choose different location vertex, interval or central point. Maker line can have offset along
 the line or offset line. Finally, :guilabel:`rotation` allows you to change the orientation of the symbol.
 
 * Polygon Layers:
@@ -141,16 +141,16 @@ the line or offset line. Finally, :guilabel:`rotation` allows you to change the 
  * :guilabel:`Data defined properties ...`
 
 'Gradient Fill' :guilabel:`Symbol layer type` allows you to select
-between a |radiobuttonon| :guilabel:`Two color` 
+between a |radiobuttonon| :guilabel:`Two color`
 and |radiobuttonoff| :guilabel:`Color ramp` setting. You can use the
 |checkbox| :guilabel:`Feature centroid` as :guilabel:`Referencepoint`.
 All fills 'Gradient Fill` :guilabel:`Symbol layer type` is also
 available through the :guilabel:`Symbol` menu of the Categorized and
 Graduated Renderer and through the :guilabel:`Rule properties` menu of
-the Rule-based renderer. Other possibility is to choose a 'shapeburst 
-fill' which is a buffered gradient fill, where a gradient is drawn from 
-the boundary of a polygon towards the polygon's centre. Configurable 
-parameters include distance from the boundary to shade, use of color ramps or 
+the Rule-based renderer. Other possibility is to choose a 'shapeburst
+fill' which is a buffered gradient fill, where a gradient is drawn from
+the boundary of a polygon towards the polygon's centre. Configurable
+parameters include distance from the boundary to shade, use of color ramps or
 simple two color gradients, optional blurring of the fill and offsets.
 
 
@@ -158,7 +158,7 @@ It is possible to only draw polygon borders inside the polygon. Using
 'Outline: Simple line' select |checkbox| :guilabel:`Draw line
 only inside polygon`.
 
-Note that once you have set the size in the lower levels of the :guilabel:`Symbol layers` dialog, 
+Note that once you have set the size in the lower levels of the :guilabel:`Symbol layers` dialog,
 the size of the whole symbol can be changed with the :guilabel:`Size` menu in the first level again. The size of
 the lower levels changes accordingly, while the size ratio is maintained.
 After having made any needed changes, the symbol can be added to the list of
@@ -172,12 +172,12 @@ If you want to preserve those renderers, you have to stick to the QML format.
 On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
 
-If the datasource of the layer is a database (PostGIS or Spatialite for example), 
-you can save your layer style inside a table of the database. Just clic on 
-:guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in 
-the dialog to define a style name, add a description, an ui file and if the style 
-is a default style. When loading a layer from the database, if a style alredy 
-exists for this layer, |qg| will load the layer and its style. You can add 
+If the datasource of the layer is a database (PostGIS or Spatialite for example),
+you can save your layer style inside a table of the database. Just clic on
+:guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in
+the dialog to define a style name, add a description, an ui file and if the style
+is a default style. When loading a layer from the database, if a style alredy
+exists for this layer, |qg| will load the layer and its style. You can add
 several style in the database. Only one will be the default style anyway.
 
 .. _vector_style_manager:
@@ -203,11 +203,11 @@ feature's attribute. The :guilabel:`Style` menu allows you to select:
 * The symbol (using the Symbol dialog)
 * The colors (using the Color Ramp listbox)
 
-Then click on **Classify** button to create classes from the distinct value of 
-the attribute column. Each classes can be disabled unchecking the checkbox at 
+Then click on **Classify** button to create classes from the distinct value of
+the attribute column. Each classes can be disabled unchecking the checkbox at
 the left of the class name.
 
-You can change symbol, value and/or label of the clic, just double clicking 
+You can change symbol, value and/or label of the clic, just double clicking
 on the item you want to change.
 
 The **[Advanced]** button in the lower-right corner of the dialog allows you to
@@ -309,10 +309,10 @@ modes are:
 The listbox in the center part of the :guilabel:`Style` menu lists the classes
 together with their ranges, labels and symbols that will be rendered.
 
-Click on **Classify** button to create classes using the choosen mode. Each 
+Click on **Classify** button to create classes using the choosen mode. Each
 classes can be disabled unchecking the checkbox at the left of the class name.
 
-You can change symbol, value and/or label of the clic, just double clicking 
+You can change symbol, value and/or label of the clic, just double clicking
 on the item you want to change.
 
 The example in figure_symbology_4_ shows the graduated rendering dialog for
@@ -320,8 +320,8 @@ the rivers layer of the |qg| sample dataset.
 
 .. tip:: **Thematic maps using an expression**
 
-   Categorized and graduated thematic maps can now be created using the result of an expression. 
-   In the properties dialog for vector layers, the attribute chooser has been augmented with a 
+   Categorized and graduated thematic maps can now be created using the result of an expression.
+   In the properties dialog for vector layers, the attribute chooser has been augmented with a
    |mActionmIconExpressionEditorOpen| :guilabel:`Set column expression` function. So now you no longer
    need to write the classification attribute to a new column in your attribute table if you want the
    classification attribute to be a composite of multiple fields, or a formula of some sort.
@@ -348,8 +348,8 @@ the attribute table to be searched. To add an attribute to the field calculator 
 double click its name in the :guilabel:`Fields and Values` list. Generally, you
 can use the various fields, values and functions to construct the calculation
 expression, or you can just type it into the box (see :ref:`vector_field_calculator`).
-Since |qg| 2.2, you can create a new rule by copying and pasting an existing rule with the right mouse button. 
-Also since |qg| 2.2, you can use the 'ELSE' rule that will be run if none of the other 
+Since |qg| 2.2, you can create a new rule by copying and pasting an existing rule with the right mouse button.
+Also since |qg| 2.2, you can use the 'ELSE' rule that will be run if none of the other
 rules on that level match.
 
 
@@ -397,8 +397,8 @@ placed on a displacement circle around a center symbol.
 
 **Inverted Polygon**
 
-Inverted polygon renderer allows user to define a symbol to fill in outside of the layer's 
-polygons. As before you can select a subrenderers. These subrenderers are the 
+Inverted polygon renderer allows user to define a symbol to fill in outside of the layer's
+polygons. As before you can select a subrenderers. These subrenderers are the
 same as for the main renderers.
 
 
@@ -440,7 +440,7 @@ Labels Menu
 The |mActionLabeling| :sup:`Labels` core application provides smart
 labeling for vector point, line and polygon layers, and it only requires a
 few parameters. This new application also supports on-the-fly transformed layers.
-The core functions of the application have been redesigned. In |qg|, there are a 
+The core functions of the application have been redesigned. In |qg|, there are a
 number of other features that improve the labeling. The following menus
 have been created for labeling the vector layers:
 
@@ -574,9 +574,9 @@ selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ )
 
 You can set up a minimum distance for repeating labels. Distance can be in mm or in map units.
 
-Some Placement setup will display more options, for example, :guilabel:`Curved` and :guilabel:`Parallel` 
-Placements will allow the user to set up the position of the label (above, belw or on the line), 
-:guilabel:`distance` from the line and for :guilabel:`Curved`, the user can also setup inside/outside 
+Some Placement setup will display more options, for example, :guilabel:`Curved` and :guilabel:`Parallel`
+Placements will allow the user to set up the position of the label (above, belw or on the line),
+:guilabel:`distance` from the line and for :guilabel:`Curved`, the user can also setup inside/outside
 max angle between curved label.
 
 The :guilabel:`Rendering` menu has nearly the same entries as for point layers. In the
@@ -632,7 +632,7 @@ With the |radiobuttonoff| :guilabel:`Using perimeter` settings, you can define a
 a distance for the label. For the position, |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
 |checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependent position` are possible.
 
-Related to the choose of Label Placement, several options will appear. As for Point Placement you can 
+Related to the choose of Label Placement, several options will appear. As for Point Placement you can
 choose the distance for the polygon outline, repeat the label around the polygon perimeter.
 
 The entries in the :guilabel:`Rendering` menu are the same as for line layers. You can also use
@@ -658,11 +658,11 @@ The entries in the :guilabel:`Rendering` menu are the same as for line layers. Y
 
 **Define labels based on expressions**
 
-QGIS allows to use expressions to label features. Just click the 
-|mActionmIconExpressionEditorOpen| icon in the |mActionLabeling| :sup:`Labels` 
-menu of the properties dialog. In figure_labels_4_ you see a sample expression 
-to label the alaska regions with name and area size, based on the field 'NAME_2', 
-some descriptive text and the function '$area()' in combination with 
+QGIS allows to use expressions to label features. Just click the
+|mActionmIconExpressionEditorOpen| icon in the |mActionLabeling| :sup:`Labels`
+menu of the properties dialog. In figure_labels_4_ you see a sample expression
+to label the alaska regions with name and area size, based on the field 'NAME_2',
+some descriptive text and the function '$area()' in combination with
 'format_number()' to make it look nicer.
 
 .. features act as obstacles for labels or not .
@@ -679,24 +679,24 @@ some descriptive text and the function '$area()' in combination with
 
    Using expressions for labeling |nix|
 
-Expression based labeling is easy to work with. All you have to take care of 
-is, that you need to combine all elements (strings, fields and functions) with a 
-string concatenation sign '||' and that fields a written in "double quotes" 
+Expression based labeling is easy to work with. All you have to take care of
+is, that you need to combine all elements (strings, fields and functions) with a
+string concatenation sign '||' and that fields a written in "double quotes"
 and strings in 'single quotes'. Let's have a look at some examples:
 
 ::
 
-   # label based on two fields 'name' and 'place' with a comma as separater 
+   # label based on two fields 'name' and 'place' with a comma as separater
    "name" || ', ' || "place"
 
-   -> John Smith, Paris 
+   -> John Smith, Paris
 
    # label based on two fields 'name' and 'place' separated by comma
    'My name is ' || "name" || 'and I live in ' || "place"
 
    -> My name is John Smith and I live in Paris
 
-   # label based on two fields 'name' and 'place' with a descriptive text 
+   # label based on two fields 'name' and 'place' with a descriptive text
    # and a line break (\n)
    'My name is ' || "name" || '\nI live in ' || "place"
 
@@ -709,13 +709,13 @@ and strings in 'single quotes'. Let's have a look at some examples:
 
    -> The area of Paris has a size of 105000000 m²
 
-   # create a CASE ELSE condition. If the population value in field 
-   # population is <= 50000 it is a town, otherwise a city.  
+   # create a CASE ELSE condition. If the population value in field
+   # population is <= 50000 it is a town, otherwise a city.
    'This place is a ' || CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END
 
   -> This place is a town
 
-As you can see in the expression builder, you have hundreds if functions available to 
+As you can see in the expression builder, you have hundreds if functions available to
 create simple and very complex expressions to label your data in QGIS.
 
 **Using data-defined override for labeling**
@@ -803,10 +803,10 @@ widgets. These widgets are:
 * **Classification**: Displays a combo box with the values used for
   classification, if you have chosen 'unique value' as legend type in
   the :guilabel:`Style` menu of the properties dialog.
-* **Color**: Displays a color button allowing user to choose a color from the 
+* **Color**: Displays a color button allowing user to choose a color from the
   color dialog window.
-* **Date/Time**: Displays a line fields which can opens a calendar widget to enter a 
-  date, a time or both. Column type must be text. You can select a custom format, pop-up 
+* **Date/Time**: Displays a line fields which can opens a calendar widget to enter a
+  date, a time or both. Column type must be text. You can select a custom format, pop-up
   a calendar, etc.
 * **Enumeration**: Opens a combo box with values that can be used within
   the columns type. This is currently only supported by the PostgreSQL provider.
@@ -816,7 +816,7 @@ widgets. These widgets are:
 * **Photo**: Field contains a filename for a picture. The width and height of the field can be defined.
 * **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
-* **Relation Reference**: This widged lets you embed the feature form of the referenced layer on the feature form 
+* **Relation Reference**: This widged lets you embed the feature form of the referenced layer on the feature form
   of the actual layer. See :ref:`vector_relations`.
 * **Text edit** (default): This opens a text edit field that allows simple text or multiple lines to
   be used. If you choose multiple lines you can also choose html content.
