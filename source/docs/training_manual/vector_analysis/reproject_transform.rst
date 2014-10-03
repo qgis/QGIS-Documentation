@@ -16,7 +16,7 @@ representing data. But there's a problem, as we will see.
 * Save your current map.
 * Then open the map of the world which you'll find under
   :kbd:`exercise_data/world/world.qgs`.
-* Zoom in to South Africa by using the :guilabel:`Zoom In` tool. 
+* Zoom in to South Africa by using the :guilabel:`Zoom In` tool.
 * Try setting a scale in the :guilabel:`Scale` field, which is in the
   :guilabel:`Status Bar` along the bottom of the screen. While over South
   Africa, set this value to :kbd:`1:5000000` (one to five million).
@@ -58,7 +58,7 @@ of your choice.
    :align: center
 
 * In the dialog that appears, check the box next to :guilabel:`Enable 'on the
-  fly' CRS transformation`. 
+  fly' CRS transformation`.
 * Type the word :kbd:`global` into the :guilabel:`Filter` field. One CRS
   (:guilabel:`NSIDC EASE-Grid Global`) should appear in the list below.
 * Click on the :guilabel:`NSIDC EASE-Grid Global` to select it, then click :kbd:`OK`.
@@ -77,18 +77,20 @@ different CRSs.
   * Click on the :guilabel:`CRS Status` button again.
   * Un-check the :guilabel:`Enable 'on the fly' CRS transformation` box.
   * Clicking :guilabel:`OK`.
-  
+
 * In QGIS 2.0, the 'on the fly' reprojection is automatically activated when
-layers with different CRSs are loaded in the map. To understand what
-'on the fly' reprojection does, deactivate this automatic setting:
+  layers with different CRSs are loaded in the map. To understand what
+  'on the fly' reprojection does, deactivate this automatic setting:
+
   * Go to :menuselection:`Settings --> Options...`
   * On the left panel of the dialog, select :guilabel:`CRS`.
   * Un-check :guilabel:`Automatically enable 'on the fly' reprojection if layers
-  have different CRS`.
+    have different CRS`.
   * Click :guilabel:`OK`.
+
 * Add another vector layer to your map which has the data for South Africa
   only.  You'll find it as :kbd:`exercise_data/world/RSA.shp`.
- 
+
 What do you notice?
 
 The layer isn't visible! But that's easy to fix, right?
@@ -121,7 +123,7 @@ north to south, then that is what QGIS will draw.
 To correct this:
 
 * Click on the :guilabel:`CRS Status` button again and switch
-:guilabel:`Enable 'on the fly' CRS transformation` on again as before.
+  :guilabel:`Enable 'on the fly' CRS transformation` on again as before.
 * Zoom to the extents of the :guilabel:`RSA` dataset.
 
 Now, because they're made to project in the same CRS, the two datasets fit
@@ -136,12 +138,13 @@ display them together.
 
 Before you go on, you probably want to have the 'on the fly' reprojection to be
 automatically activated whenever you open datasets having different CRS:
-  * Open again :menuselection:`Settings --> Options...` and select :guilabel:`CRS`.
-  * Activate
-    :guilabel:`Automatically enable 'on the fly' reprojection if layers have different CRS`.
+
+* Open again :menuselection:`Settings --> Options...` and select :guilabel:`CRS`.
+* Activate :guilabel:`Automatically enable 'on the fly' reprojection if
+  layers have different CRS`.
 
 |moderate| |FA| Saving a Dataset to Another CRS
--------------------------------------------------------------------------------
+-----------------------------------------------
 
 Remember when you calculated areas for the buildings in the
 :guilabel:`Classification` lesson? You did it so that you could classify the
@@ -175,7 +178,7 @@ a new file using a new projection.
 * In its :guilabel:`Filter` field, search for :kbd:`34S`.
 * Choose :guilabel:`WGS 84 / UTM zone 34S` from the list.
 * Leave the :guilabel:`Symbology export` unchanged.
-  
+
 The :guilabel:`Save vector layer as...` dialog now looks like this:
 
 .. image:: /static/training_manual/vector_analysis/save_vector_dialog.png
@@ -228,7 +231,7 @@ An interesting projection to use is called :kbd:`Van der Grinten I`.
 * Enter its name in the :guilabel:`Name` field.
 
 This projection represents the Earth on a circular field instead of a
-rectangular one, as most other projections do. 
+rectangular one, as most other projections do.
 
 * For its parameters, use the following string:
 

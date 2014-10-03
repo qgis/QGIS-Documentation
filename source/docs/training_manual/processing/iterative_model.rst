@@ -33,5 +33,6 @@ We can make this example more complex by extending the model and computing some 
 
 If you now run the model, apart from the tables you will get a set of pages with statistics. These pages will be available in the results dialog
 
-.. todo:: img/iterative_model/result2.png
+**TODO:**
+   img/iterative_model/result2.png
 

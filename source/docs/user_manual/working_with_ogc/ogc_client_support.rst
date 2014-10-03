@@ -111,7 +111,7 @@ and add the following string to the URL of the WMTS tile service:
 An example of this type of address is
 
 ::
- 
+
    http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?\
      service=WMTS&request=GetCapabilities
 
@@ -481,23 +481,23 @@ definitions:
 Show WMS legend graphic in table of contents and composer
 ---------------------------------------------------------
 
-The |qg| WMS data provider is able to display a legend graphic in the table of 
-contents' layer list and in the map composer. The WMS legend will be shown only 
-if the WMS server has GetLegendGraphic capability and the layer has 
-getCapability url specified, so you additionally have to select a styling for the 
+The |qg| WMS data provider is able to display a legend graphic in the table of
+contents' layer list and in the map composer. The WMS legend will be shown only
+if the WMS server has GetLegendGraphic capability and the layer has
+getCapability url specified, so you additionally have to select a styling for the
 layer.
 
-If a legendGraphic is available, it is shown below the layer. It is little and 
-you have to click on it to open it in real dimension (due to QgsLegendInterface 
-architectural limitation). Clicking on the layer's legend will open a frame with 
-the legend at full resolution. 
+If a legendGraphic is available, it is shown below the layer. It is little and
+you have to click on it to open it in real dimension (due to QgsLegendInterface
+architectural limitation). Clicking on the layer's legend will open a frame with
+the legend at full resolution.
 
-In the print composer, the legend will be integrated at it's original (dowloaded) 
-dimension. Resolution of the legend graphic can be set in the item properties 
+In the print composer, the legend will be integrated at it's original (dowloaded)
+dimension. Resolution of the legend graphic can be set in the item properties
 under Legend -> WMS LegendGraphic to match your printing requirements
 
-The legend will display contextual information based on your current scale. The 
-WMS legend will be shown only if the WMS server has GetLegendGraphic capability 
+The legend will display contextual information based on your current scale. The
+WMS legend will be shown only if the WMS server has GetLegendGraphic capability
 and the layer has getCapability url specified, so you have to select a styling.
 
 .. _`ogc-wms-limits`:
@@ -618,7 +618,7 @@ Note that any proxy settings you may have set in your preferences are also recog
 .. useful when you only want to request **some** features from a huge
 .. WFS-dataset.
 
-You'll notice the download progress is visualized in the lower left of the |qg|
+You'll notice the download progress is visualized in the lower left of the |QG|
 main window. Once the layer is loaded, you can identify and select a province or
 two and view the attribute table.
 

@@ -11,7 +11,7 @@ GDAL Tools Plugin
 .. _`whatsgdal`:
 
 What is GDAL Tools?
-------------------
+--------------------
 
 The GDAL Tools plugin offers a GUI to the collection of tools in the Geospatial
 Data Abstraction Library, http://gdal.osgeo.org . These are raster management

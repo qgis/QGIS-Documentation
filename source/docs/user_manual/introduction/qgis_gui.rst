@@ -320,7 +320,6 @@ Toolbar
 -------
 
 .. index::
-
    single:toolbar
 
 The toolbar provides access to most of the same functions as the menus, plus

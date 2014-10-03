@@ -103,7 +103,7 @@ reasonable distance:
 * Open the attribute table for the :guilabel:`roads_34S` layer and enter
   edit mode.
 * Add a new column with the name :kbd:`SPEED`, and give it the type
- :guilabel:`Whole number (integer)` with a width of :kbd:`3`.
+  :guilabel:`Whole number (integer)` with a width of :kbd:`3`.
 * In the main window, activate the :guilabel:`Select Features by Rectangle`
   tool:
 

@@ -551,12 +551,12 @@ Simplify Feature
 ................
 
 The |mActionSimplify| :sup:`Simplify Feature` tool allows you to reduce the
-number of vertices of a feature, as long as the geometry doesn't change.
-First, select a feature. It will be highlighted by a red rubber band
-and a slider will appear. Moving the slider, the red rubber band will change
-its shape to show how the feature is being simplified. Click **[OK]** to store
-the new, simplified geometry. If a feature cannot be simplified
-(e.g. multi-polygons), a message will appear.
+number of vertices of a feature, as long as the geometry doesn't change and 
+geometry type is not a multi geometry. First, select a feature. It will be 
+highlighted by a red rubber band and a slider will appear. Moving the slider, 
+the red rubber band will change its shape to show how the feature is being 
+simplified. Click **[OK]** to store the new, simplified geometry. If a feature 
+cannot be simplified (e.g. multi-polygons), a message will appear.
 
 Add Ring
 ........
@@ -635,11 +635,15 @@ The tool can be applied to the edited layer (the geometries are modified)
 or also to background layers (in which case it creates copies of the lines / rings and adds them to the the edited layer).
 It is thus ideally suited for the creation of distance line layers. The displacement is
 shown at the bottom left of the taskbar.
+
 To create a shift of a line layer, you must first go into editing mode and then
 select the feature. You can make the |mActionOffsetCurve| :sup:`Offset Curve` tool active and drag
 the cross to the desired distance. Your changes may then be saved with the
 |mActionSaveEdits|:sup:`Save Layer Edits` tool.
 
+|qg| options dialog (Digitizing tab then **Curve offset tools** section) allows 
+you to configure some parameters like **Join style**, **Quadrant segments**, 
+**Miter limit**.
 
 .. index:: Split_Features
 
@@ -662,7 +666,9 @@ Merge selected features
 .......................
 
 The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows you to merge
-features that have common boundaries and the same attributes.
+features that have common boundaries. A new dialog will allow you to choose which 
+value to choose between each selected features or select a fonction (Minimum, Maximum, 
+Median, Sum, Skip Attribute) to use for each column.
 
 .. index:: Merge_Attributes_of_Selected_Features
 

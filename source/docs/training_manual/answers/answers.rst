@@ -915,7 +915,7 @@ database will be able to associate that with the :kbd:`street_id` value of
 :kbd:`2`.
 
 .. note:: If you have already added a new :kbd:`street` object, you might find
-that the new :kbd:`Main Road` has an ID of :kbd:`3` not :kbd:`2`.
+   that the new :kbd:`Main Road` has an ID of :kbd:`3` not :kbd:`2`.
 
 :ref:`Back to text <backlink-database-concepts-7>`
 
@@ -942,7 +942,7 @@ Result::
      (3 rows)
 
 .. note::  You will notice that we have prefixed field names with table names
-(e.g. people.name and streets.name). This needs to be done whenever the
+   (e.g. people.name and streets.name). This needs to be done whenever the
    field name is ambiguous (i.e. not unique across all tables in the database).
 
 :ref:`Back to text <backlink-database-concepts-8>`

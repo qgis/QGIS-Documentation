@@ -20,7 +20,7 @@ are numerous different landuse areas on the map.
 * Open the :guilabel:`Layer Properties` dialog for the :guilabel:`landuse` layer.
 * Go to the :guilabel:`Style` tab.
 * Click on the dropdown that says :guilabel:`Single Symbol` and change it to
-:guilabel:`Categorized`:
+  :guilabel:`Categorized`:
 
 .. image:: /static/training_manual/classification/categorised_styles.png
    :align: center

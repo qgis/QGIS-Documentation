@@ -25,7 +25,9 @@ We can make difference between several types of settings:
   settings in system's "native" way of storing settings, that is --- registry
   (on Windows), .plist file (on Mac OS X) or .ini file (on Unix). The
   `QSettings documentation <http://doc.qt.nokia.com/stable/qsettings.html>`_
-  is comprehensive, so we will provide just a simple example::
+  is comprehensive, so we will provide just a simple example
+
+  ::
 
     def store():
       s = QSettings()
@@ -38,17 +40,21 @@ We can make difference between several types of settings:
       mytext = s.value("myplugin/mytext", "default text")
       myint  = s.value("myplugin/myint", 123)
       myreal = s.value("myplugin/myreal", 2.71)
-  
 
-The second parameter of the :func:`value()` method is optional and specifies the default value if there is no previous value set for the passed setting name.
-  
+
+  The second parameter of the :func:`value()` method is optional and specifies
+  the default value if there is no previous value set for the passed setting
+  name.
+
 .. index:: settings; project
 
 * **project settings** --- vary between different projects and therefore they
   are connected with a project file. Map canvas background color or destination
   coordinate reference system (CRS) are examples --- white background and WGS84
   might be suitable for one project, while yellow background and UTM projection
-  are better for another one. An example of usage follows::
+  are better for another one. An example of usage follows
+
+  ::
 
     proj = QgsProject.instance()
 
@@ -62,7 +68,9 @@ The second parameter of the :func:`value()` method is optional and specifies the
     mytext = proj.readEntry("myplugin", "mytext", "default text")[0]
     myint = proj.readNumEntry("myplugin", "myint", 123)[0]
 
-As you can see, the :func:`writeEntry` method is used for all data types, but several methods exist for reading the setting value back, and the corresponding one has to be selected for each data type.
+  As you can see, the :func:`writeEntry` method is used for all data types, but
+  several methods exist for reading the setting value back, and the
+  corresponding one has to be selected for each data type.
 
 .. index:: settings; map layer
 
@@ -72,11 +80,12 @@ As you can see, the :func:`writeEntry` method is used for all data types, but se
   of one shapefile, they will not share the settings. The settings are stored
   in project file, so if the user opens the project again, the layer-related
   settings will be there again. This functionality has been added in QGIS v1.4.
-  The API is similar to QSettings --- it takes and returns QVariant instances::
+  The API is similar to QSettings --- it takes and returns QVariant instances
+
+  ::
 
    # save a value
    layer.setCustomProperty("mytext", "hello world")
 
    # read the value again
    mytext = layer.customProperty("mytext", "default text")
-

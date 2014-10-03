@@ -12,12 +12,12 @@ for code formatting.
 
 Install python from `python.org <http://python.org>`_ then open a terminal or
 command window and start the python prompt::
-  
+
   timlinux@ultrabook:~/dev/cpp/QGIS-Training-Manual/python$ python
 
 When it starts you will see a message like this::
 
-  Python 2.7.3 (default, Aug  1 2012, 05:14:39) 
+  Python 2.7.3 (default, Aug  1 2012, 05:14:39)
   [GCC 4.6.3] on linux2
   Type "help", "copyright", "credits" or "license" for more information.
 
@@ -28,12 +28,12 @@ Now type :samp:`print 'Hello World'` at the command prompt as shown below::
 Python will respond by running your command::
 
   Hello World
-  >>> 
+  >>>
 
 Congratulations, you just wrote your first python application!
 
-.. note:: You can escape from the python prompt by pressing :keyboard:`ctrl-D`
-   or by typing :samp:`quit()` and then pressing :keyboard:`enter`.
+.. note:: You can escape from the python prompt by pressing :kbd:`ctrl-D`
+   or by typing :samp:`quit()` and then pressing :kbd:`Enter`.
 
 
 |moderate| |FA| Running commands from a file
@@ -41,9 +41,9 @@ Congratulations, you just wrote your first python application!
 
 Naturally it would be of limited use to only ever be able to type your python
 commands interactively, so it is common practice to save your python commands
-in a :file:`.py` file and then run the file. For example, save this line in 
+in a :file:`.py` file and then run the file. For example, save this line in
 a text file called :file:`hello_world.py`::
-  
+
   print 'Hello World'
 
 .. note:: By convention, avoid saving your python code with file names
@@ -63,7 +63,7 @@ this on Linux and Mac OSX by adding an interpreter annotation to the top of the
 file::
 
    #!/usr/bin/python
-   
+
    print 'Hello World'
 
 You will also need to make the file executable like this::
