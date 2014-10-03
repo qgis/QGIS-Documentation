@@ -15,9 +15,11 @@ output by composing the map with :class:`QgsComposition` class and friends.
 Simple Rendering
 ================
 
-Render some layers using :class:`QgsMapRenderer` - create destination paint
+Render some layers using :class:`QgsMapRenderer` --- create destination paint
 device (``QImage``, ``QPainter`` etc.), set up layer set, extent, output size
-and do the rendering::
+and do the rendering
+
+::
 
   # create image
   img = QImage(QSize(800,600), QImage.Format_ARGB32_Premultiplied)
@@ -72,7 +74,9 @@ then you are encouraged to check the documentation now, because the composer
 is based on it.
 
 The central class of the composer is :class:`QgsComposition` which is derived
-from :class:`QGraphicsScene`. Let us create one::
+from :class:`QGraphicsScene`. Let us create one
+
+::
 
   mapRenderer = iface.mapCanvas().mapRenderer()
   c = QgsComposition(mapRenderer)
@@ -91,15 +95,17 @@ these elements have to be descendants of :class:`QgsComposerItem` class.
 Currently supported items are:
 
 * map --- this item tells the libraries where to put the map itself. Here we
-  create a map and stretch it over the whole paper size::
-  
+  create a map and stretch it over the whole paper size
+  ::
+
     x, y = 0, 0
     w, h = c.paperWidth(), c.paperHeight()
     composerMap = QgsComposerMap(c, x,y,w,h)
     c.addItem(composerMap)
 
 * label --- allows displaying labels. It is possible to modify its font, color,
-  alignment and margin::
+  alignment and margin
+  ::
 
     composerLabel = QgsComposerLabel(c)
     composerLabel.setText("Hello world")
@@ -129,17 +135,20 @@ Currently supported items are:
 
 By default the newly created composer items have zero position (top left corner
 of the page) and zero size. The position and size are always measured in
-millimeters::
+millimeters
+
+::
 
   # set label 1cm from the top and 2cm from the left of the page
   composerLabel.setItemPosition(20,10)
   # set both label's position and size (width 10cm, height 3cm)
   composerLabel.setItemPosition(20,10, 100, 30)
 
-A frame is drawn around each item by default. How to remove the frame::
+A frame is drawn around each item by default. How to remove the frame
+
+::
 
   composerLabel.setFrame(False)
-
 
 Besides creating the composer items by hand, QGIS has support for composer
 templates which are essentially compositions with all their items saved to a
@@ -151,7 +160,9 @@ to the composition), we can proceed to produce a raster and/or vector output.
 
 The default output settings for composition are page size A4 and resolution 300
 DPI. You can change them if necessary. The paper size is specified in
-millimeters::
+millimeters
+
+::
 
   c.setPaperSize(width, height)
   c.setPrintResolution(dpi)
@@ -161,7 +172,9 @@ millimeters::
 Output to a raster image
 ------------------------
 
-The following code fragment shows how to render a composition to a raster image::
+The following code fragment shows how to render a composition to a raster image
+
+::
 
   dpi = c.printResolution()
   dpmm = dpi / 25.4
@@ -188,7 +201,9 @@ The following code fragment shows how to render a composition to a raster image:
 Output to PDF
 -------------
 
-The following code fragment renders a composition to a PDF file::
+The following code fragment renders a composition to a PDF file
+
+::
 
   printer = QPrinter()
   printer.setOutputFormat(QPrinter.PdfFormat)
@@ -197,7 +212,7 @@ The following code fragment renders a composition to a PDF file::
   printer.setFullPage(True)
   printer.setColorMode(QPrinter.Color)
   printer.setResolution(c.printResolution())
-  
+
   pdfPainter = QPainter(printer)
   paperRectMM = printer.pageRect(QPrinter.Millimeter)
   paperRectPixel = printer.pageRect(QPrinter.DevicePixel)

@@ -1,12 +1,12 @@
-*****************************
+***************************
 Communicating with the user
-*****************************
+***************************
 
 This section shows some methods and elements that should be used to communicate
 with the user, in order to keep consistency in the User Interface.
 
-Showing messages. The QgsMessageBar class.
-==========================================
+Showing messages. The :class:`QgsMessageBar` class
+==================================================
 
 Using message boxes can be a bad idea from a user experience point of view. For
 showing a small info line or a warning/error messages, the QGIS message bar is
@@ -17,8 +17,7 @@ message bar with the following code
 
 ::
 
-    iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't \
-      do that", level=QgsMessageBar.CRITICAL)
+  iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=QgsMessageBar.CRITICAL)
 
 
 .. figure:: /static/pyqgis_developer_cookbook/errorbar.png
@@ -31,8 +30,7 @@ You can set a duration to show it for a limited time
 
 ::
 
-    iface.messageBar().pushMessage("Error", ""Ooops, the plugin is not working as \
-          it should", level=QgsMessageBar.CRITICAL, duration=3)
+    iface.messageBar().pushMessage("Error", ""Ooops, the plugin is not working as it should", level=QgsMessageBar.CRITICAL, duration=3)
 
 
 .. figure:: /static/pyqgis_developer_cookbook/errorbar-timed.png
@@ -41,23 +39,16 @@ You can set a duration to show it for a limited time
 
    QGIS Message bar with timer
 
-
 The examples above show an error bar, but the ``level`` parameter can be used
 to creating warning messages or info messages, using the
 ``QgsMessageBar.WARNING`` and ``QgsMessageBar.INFO`` constants respectively.
 
-.. figure:: /static/pyqgis_developer_cookbook/warningbar.png
-   :align: center
-   :width: 40em
-
-   QGIS Message bar (warning)
 
 .. figure:: /static/pyqgis_developer_cookbook/infobar.png
    :align: center
    :width: 40em
 
    QGIS Message bar (info)
-
 
 Widgets can be added to the message bar, like for instance a button to show
 more info
@@ -74,7 +65,8 @@ more info
     widget.layout().addWidget(button)
     iface.messageBar().pushWidget(widget, QgsMessageBar.WARNING)
 
-.. figure:: /static/pyqgis_developer_cookbook/button-bar.png
+
+.. figure:: /static/pyqgis_developer_cookbook/bar-button.png
    :align: center
    :width: 40em
 
@@ -107,9 +99,8 @@ message box, or if it doesn't make sense to show it in the main QGIS window
    QGIS Message bar in custom dialog
 
 
-
 Showing progress
-=================
+================
 
 Progress bars can also be put in the QGIS message bar, since, as we have seen,
 it accepts widgets. Here is an example that you can try in the console.
@@ -130,8 +121,6 @@ it accepts widgets. Here is an example that you can try in the console.
         progress.setValue(i + 1)
     iface.messageBar().clearWidgets()
 
-
-
 Also, you can use the built-in status bar to report progress, as in the next
 example
 
@@ -146,16 +135,13 @@ example
     iface.mainWindow().statusBar().clearMessage()
 
 Logging
-========
+=======
 
 You can use the QGIS logging system to log all the information that you want to
 save about the execution of your code.
 
 ::
 
-    QgsMessageLog.logMessage("Your plugin code has been executed correctly", \
-          QgsMessageLog.INFO)
-    QgsMessageLog.logMessage("Your plugin code might have some problems", \
-          QgsMessageLog.WARNING)
-    QgsMessageLog.logMessage("Your plugin code has crashed!", \
-          QgsMessageLog.CRITICAL)
+    QgsMessageLog.logMessage("Your plugin code has been executed correctly", QgsMessageLog.INFO)
+    QgsMessageLog.logMessage("Your plugin code might have some problems", QgsMessageLog.WARNING)
+    QgsMessageLog.logMessage("Your plugin code has crashed!", QgsMessageLog.CRITICAL)

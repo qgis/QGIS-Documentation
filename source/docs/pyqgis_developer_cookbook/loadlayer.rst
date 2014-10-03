@@ -8,7 +8,7 @@ Let's open some layers with data. QGIS recognizes vector and raster layers.
 Additionally, custom layer types are available, but we are not going to discuss
 them here.
 
-.. index:: 
+.. index::
   pair: vector layers; loading
 
 Vector Layers
@@ -29,17 +29,16 @@ layer instance is returned.
 The following list shows how to access various data sources using vector data
 providers:
 
-.. index:: 
+.. index::
   pair: loading; OGR layers
 
 * OGR library (shapefiles and many other file formats) --- data source is the
   path to the file
   ::
 
-    vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", \
-      "layer_name_you_like", "ogr")
+    vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
 
-.. index:: 
+.. index::
   pair: loading; PostGIS layers
 
 * PostGIS database --- data source is a string with all information needed to
@@ -57,7 +56,7 @@ providers:
 
     vlayer = QgsVectorLayer(uri.uri(), "layer_name_you_like", "postgres")
 
-.. index:: 
+.. index::
   pair: loading; delimited text layers
 
 * CSV or other delimited text files --- to open a file with a semicolon as a
@@ -68,14 +67,13 @@ providers:
     uri = "/some/path/file.csv?delimiter=%s&xField=%s&yField=%s" % (";", "x", "y")
     vlayer = QgsVectorLayer(uri, "layer_name_you_like", "delimitedtext")
 
-  Note: from QGIS version 1.7 the provider string is structured as a URL, so 
+  Note: from QGIS version 1.7 the provider string is structured as a URL, so
   the path must be prefixed with *file://*. Also it allows WKT (well known
   text) formatted geometries as an alternative to "x" and "y" fields, and allows
   the coordinate reference system to be specified. For example
   ::
 
-    uri = "file:///some/path/file.csv?delimiter=%s&crs=epsg:4723&wktField=%s" \
-      % (";", "shape")
+    uri = "file:///some/path/file.csv?delimiter=%s&crs=epsg:4723&wktField=%s" % (";", "shape")
 
 .. index::
   pair: loading; GPX files
@@ -102,7 +100,7 @@ providers:
     table = 'Towns'
     geom_column = 'Geometry'
     uri.setDataSource(schema, table, geom_column)
-    
+
     display_name = 'Towns'
     vlayer = QgsVectorLayer(uri.uri(), display_name, 'spatialite')
 
@@ -112,19 +110,18 @@ providers:
 * MySQL WKB-based geometries, through OGR --- data source is the connection
   string to the table
   ::
-    
+
     uri = "MySQL:dbname,host=localhost,port=3306,user=root,password=xxx|\
       layername=my_table"
     vlayer = QgsVectorLayer( uri, "my_table", "ogr" )
 
-.. index:: 
+.. index::
   pair: raster layers; loading
 
 * WFS connection:. the connection is defined with a URI and using the ``WFS`` provider
   ::
 
-    uri = "http://localhost:8080/geoserver/wfs?srsname=EPSG:23030&typename=\
-      union&version=1.0.0&request=GetFeature&service=WFS",
+    uri = "http://localhost:8080/geoserver/wfs?srsname=EPSG:23030&typename=union&version=1.0.0&request=GetFeature&service=WFS",
     vlayer = QgsVectorLayer("my_wfs_layer", "WFS")
 
   The uri can be created using the standard ``urllib`` library.
@@ -137,14 +134,11 @@ providers:
         'request': 'GetFeature',
         'typename': 'union',
         'srsname': "EPSG:23030"
-    }                        
-    uri = 'http://localhost:8080/geoserver/wfs?' + \
-      urllib.unquote(urllib.urlencode(params))
+    }
+    uri = 'http://localhost:8080/geoserver/wfs?' + urllib.unquote(urllib.urlencode(params))
 
-  And you can also use the 
+  And you can also use the
 
-
-  
 Raster Layers
 =============
 
@@ -169,10 +163,10 @@ Raster layers can also be created from a WCS service.
 ::
 
     layer_name = 'elevation'
-    uri = QgsDataSourceURI()                    
-    uri.setParam ('url', 'http://localhost:8080/geoserver/wcs')    
+    uri = QgsDataSourceURI()
+    uri.setParam ('url', 'http://localhost:8080/geoserver/wcs')
     uri.setParam ( "identifier", layer_name)
-    rlayer = QgsRasterLayer(uri, 'my_wcs_layer', 'wcs')     
+    rlayer = QgsRasterLayer(uri, 'my_wcs_layer', 'wcs')
 
 
 Alternatively you can load a raster layer from WMS server. However currently
@@ -180,8 +174,7 @@ it's not possible to access GetCapabilities response from API --- you have to
 know what layers you want
 ::
 
-    urlWithParams = 'url=http://wms.jpl.nasa.gov/wms.cgi&layers=global_mosaic&\
-      styles=pseudo&format=image/jpeg&crs=EPSG:4326'
+    urlWithParams = 'url=http://wms.jpl.nasa.gov/wms.cgi&layers=global_mosaic&styles=pseudo&format=image/jpeg&crs=EPSG:4326'
     rlayer = QgsRasterLayer(urlWithParams, 'some layer name', 'wms')
     if not rlayer.isValid():
       print "Layer failed to load!"

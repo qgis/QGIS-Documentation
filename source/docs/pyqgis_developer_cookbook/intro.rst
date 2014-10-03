@@ -66,7 +66,9 @@ parts of the QGIS application.
 
 For convenience of the user, the following statements are executed when
 the console is started (in future it will be possible to set further initial
-commands)::
+commands)
+
+::
 
   from qgis.core import *
   import qgis.utils

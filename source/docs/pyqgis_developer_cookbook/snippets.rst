@@ -1,6 +1,6 @@
-******************
+*************
 Code Snippets
-******************
+*************
 
 This section features code snippets to facilitate plugin development.
 
@@ -9,18 +9,24 @@ This section features code snippets to facilitate plugin development.
 How to call a method by a key shortcut
 --------------------------------------
 
-In the plug-in add to the ``initGui()``::
+In the plug-in add to the :func:`initGui()`
+
+::
 
   self.keyAction = QAction("Test Plugin", self.iface.mainWindow())
   self.iface.registerMainWindowAction(self.keyAction, "F7") # action1 triggered by F7 key
   self.iface.addPluginToMenu("&Test plugins", self.keyAction)
   QObject.connect(self.keyAction, SIGNAL("triggered()"),self.keyActionF7)
 
-To ``unload()`` add::
+To :func:`unload()` add
+
+::
 
   self.iface.unregisterMainWindowAction(self.keyAction)
 
-The method that is called when F7 is pressed::
+The method that is called when F7 is pressed
+
+::
 
   def keyActionF7(self):
     QMessageBox.information(self.iface.mainWindow(),"Ok", "You pressed F7")
@@ -37,6 +43,12 @@ in the legend. Here is an example how to toggle visibility of the active layer::
   node = root.findLayer(iface.activeLayer().id())
   new_state = Qt.Checked if node.isVisible()==Qt.Unchecked else Qt.Unchecked
   node.setVisible(new_state)
+The method requires the layer number (0 being the top most) and can be
+called by
+
+::
+  
+  self.toggleLayer(3)
 
 .. index:: plugins; access attributes of selected features
 
@@ -60,14 +72,14 @@ How to access attribute table of selected features
         layer.changeAttributeValue(int(ob[0]),1,b) # 1 being the second column
       layer.commitChanges()
       else:
-        QMessageBox.critical(self.iface.mainWindow(),"Error", "Please select at \
-          least one feature from current layer")
+        QMessageBox.critical(self.iface.mainWindow(),"Error", "Please select at least one feature from current layer")
     else:
       QMessageBox.critical(self.iface.mainWindow(),"Error","Please select a layer")
 
 
 The method requires one parameter (the new value for the attribute
-field of the selected feature(s)) and can be called by::
+field of the selected feature(s)) and can be called by
+
+::
 
   self.changeValue(50)
-
