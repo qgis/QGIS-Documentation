@@ -7,6 +7,8 @@ Print Composer
 **************
 .. index:: Create_Maps, Layout_Maps, Compose_Maps
 
+With the Print Composer you can create nice maps and atlasses that can be printed or saved as PDF-file, an image or an SVG-file. This is a powerfull way to share geographical information produced with |qg| that can be included in reports or published.
+
 The Print Composer provides growing layout and printing capabilities. It allows
 you to add elements such as the |qg| map canvas, text labels, images, legends, scale bars, basic
 shapes, arrows, attribute tables and HTML frames. You can size, group, align and position each
@@ -103,15 +105,14 @@ and vector layers in the |qg| map canvas and adapt their properties to suit your
 own convenience. After everything is rendered and symbolized to your liking,
 click the |mActionNewComposer| :sup:`New Print Composer` icon in the toolbar or
 choose :menuselection:`File --> New Print Composer`. You will be prompted to
-choose a title for the new Composer.
+choose a title for the new Composer. For the first session give it the name 'Sample session'.
 
-Using Print Composer
+Overview of the Print Composer
 --------------------
 
-Opening the Print Composer provides you with a blank canvas to which you can add
-the current |qg| map canvas, text labels, images, legends, scale bars, basic
-shapes, arrows, attribute tables and HTML frames. Figure_composer_1_ shows the 
-initial view of the Print Composer before any elements are added.
+Opening the Print Composer provides you with a blank canvas that represents the paper surface when print. Initially you can find on the buttons on the left beside the panel to add map composer items; the current |qg| map canvas, text labels, images, legends, scale bars, basic shapes, arrows, attribute tables and HTML frames. In this toolbar you also find the toolbar buttons to navigate, zoomin on a part of the canvas and pan the view on the composer, the button to select the map composer item and the button the move the contents of the map item.  
+
+Figure_composer_1_ shows the initial view of the Print Composer before any elements are added.
 
 .. _Figure_composer_1:
 
@@ -124,8 +125,13 @@ initial view of the Print Composer before any elements are added.
 
    Print Composer |nix|
 
-The Print Composer provides four tabs:
+On the right beside the canvas you find two panels.
+The upper panel holds the tabs :guilabel:`Items` and :guilabel:`Command History` and the lower panel holds the tabs :guilabel:`Composition`,  :guilabel:`Item properties` and :guilabel:`Atlas generation`. 
 
+* The :guilabel:`Items` tab provides a list of all map composer items added to the canvas.
+* The :guilabel:`Command history` tab displays a history of all changes applied
+  to the Print Composer layout. With a mouse click, it is possible to undo and
+  redo layout steps back and forth to a certain status.
 * The :guilabel:`Composition` tab allows you to set paper size, orientation, the page
   background, number of pages and print quality for the output file in dpi. Furthermore, you 
   can also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means
@@ -136,11 +142,9 @@ The Print Composer provides four tabs:
   an element (e.g., legend, scale bar or label) on the canvas. Then click the
   :guilabel:`Item Properties` tab and customize the settings for the selected
   element.
-* The :guilabel:`Command history` tab (hidden by default) displays a history of all changes applied
-  to the Print Composer layout. With a mouse click, it is possible to undo and
-  redo layout steps back and forth to a certain status.
 * The :guilabel:`Atlas generation` tab allows you to enable the generation of an
   atlas for the current Composer and gives access to its parameters.
+* Finally, you can save your print composition with the |mActionFileSave| :sup:`Save Project` button. 
 
 In the bottom part of the Print Composer window, you can find a status bar with 
 mouse position, current page number and a combo box to set the zoom level.
@@ -171,8 +175,23 @@ hold the :kbd:`Spacebar` or the the mouse wheel.
 With :kbd:`Ctrl+Spacebar`, you can temporarily switch to marquee zoom mode, and with 
 :kbd:`Ctrl+Shift+Spacebar`, to zoom out mode.
 
+Sample Session
+--------------
+
+To demonstrate how to create a map please follow the next instructions.
+
+* On the left site, select the |mActionAddMap| :sup:`Add new map` toolbar button and draw a rectangle on the canvas holding down the left mouse button. Inside de drawn rectangle the |qg| map view to the canvas.
+* Select the |mActionScaleBar| :sup:`Add new scalebar` toolbar button and place the map item with the left mouse button on the Print Composer canvas. A scalebar will be added to the canvas.
+* Select the |mActionAddLegend| :sup:`Add new legend` toolbar button and draw a rectangle on the canvas holding down the left mouse button. Inside the drawn rectangle the legend will be drawn.
+* Select the |mActionSelect| :sup:`Select/Move item` icon to select the map on the canvas and move it a bit.
+* While the map item is still selected you can also change the size of the map item. Click while holding down the left mouse button, in a white little rectangle in one of the corners of the map item and draw it to a new location to change it's size. 
+*  click the :guilabel:`Item Properties` tab on the left lower panel and find the setting for the orientation. Change it the value of the setting :guilabel:`Map orientation` to '15.00\ |degrees| '. You should see the orientation of the map item change.
+* Finally, you can save your print composition with the |mActionFileSave| :sup:`Save Project` button. 
+ 
+
 Print Composer Options
-------------------------
+----------------------
+
 From :menuselection:`Settings --> Composer Options` you can set some options that will be
 used as default during your work.
 
@@ -180,6 +199,8 @@ used as default during your work.
 * With :guilabel:`Grid appearance`, you can set the grid style and its color.
 * :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
 * :guilabel:`Guide defaults` defines the tolerance for the guides.
+
+
 
 Composition tab --- General composition setup
 ---------------------------------------------
