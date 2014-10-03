@@ -241,23 +241,26 @@ Rendering Menu
 **Rendering behaviour**
 
 * |checkbox| :guilabel:`By default new layers added to the map should be displayed`
-* |checkbox| :guilabel:`Enable back buffer`
 * |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
+* |checkbox| :guilabel:`Render layers in parallel using many CPU cores`
+* |checkbox| :guilabel:`Max cores to use`
+* :guilabel:`Map update interval (default to 250 ms)`
 * |checkbox| :guilabel:`Enable feature simplication by default for newly added layers`
+* :guilabel:`Simplification threshold`
 * |checkbox| :guilabel:`Simplify on provider side if possible`
+* :guilabel:`Maximum scale at which the layer should be simplified`
 
 **Rendering quality**
 
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some
   drawing performance`
-* |checkbox| :guilabel:`Fix problems with incorrectly filled polygons`
 
 **Rasters**
 
 * With :guilabel:`RGB band selection`, you can define the number for the Red,
   Green and Blue band.
 
-**Contrast enhancement**
+*Contrast enhancement*
 
 * :guilabel:`Single band gray` |selectstring|. A single band gray can have
   'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and also
