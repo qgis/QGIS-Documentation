@@ -50,8 +50,27 @@ appropriately. For point layers, there is a point displacement renderer availabl
 For each data type (points, lines and polygons), vector symbol layer types are available.
 Depending on the chosen renderer, the :guilabel:`Style` menu provides different
 additional sections. On the bottom right of the symbology dialog, there is a **[Symbol]** button, which gives access
-to the Style Manager (see section vector_style_manager_). The Style Manager allows you to edit and remove
+to the Style Manager (see :ref:`vector_style_manager`). The Style Manager allows you to edit and remove
 existing symbols and add new ones.
+
+After having made any needed changes, the symbol can be added to the list of
+current style symbols (using **[Symbol]** |selectstring| :guilabel:`Save in symbol library`),
+and then it can easily be used in the future. Furthermore, you can use the **[Save Style]** |selectstring| button to
+save the symbol as a |qg| layer style file (.qml) or SLD file (.sld). SLDs can be exported from any type of renderer -- single symbol,
+categorized, graduated or rule-based -- but when importing an SLD, either a
+single symbol or rule-based renderer is created.
+That means that categorized or graduated styles are converted to rule-based.
+If you want to preserve those renderers, you have to stick to the QML format.
+On the other hand, it can be very handy sometimes to have this easy way of
+converting styles to rule-based.
+
+If the datasource of the layer is a database (PostGIS or Spatialite for example),
+you can save your layer style inside a table of the database. Just clic on
+:guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in
+the dialog to define a style name, add a description, an ui file and if the style
+is a default style. When loading a layer from the database, if a style alredy
+exists for this layer, |qg| will load the layer and its style. You can add
+several style in the database. Only one will be the default style anyway.
 
 
 .. _tip_change_multiple_symbols:
@@ -93,107 +112,6 @@ and :guilabel:`Rotation`. Here, the layers are joined together.
 
    Single symbol line properties |nix|
 
-More detailed settings can be made when clicking on the second level in the
-:guilabel:`Symbol layers` dialog. You can define :guilabel:`Symbol layers` that are
-combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
-The following settings are possible:
-
-* Point layers:
-
- * :guilabel:`Symbol layer type`: You have the option to use Ellipse markers, Font markers,
-   Simple markers, SVG markers and Vector Field markers.
- * :guilabel:`colours`
- * :guilabel:`Size`
- * :guilabel:`Outline style`
- * :guilabel:`Outline width`
- * :guilabel:`Angle`
- * :guilabel:`Offset X,Y`: You can shift the symbol in the x- or y-direction.
- * :guilabel:`Anchor point`
- * :guilabel:`Data defined properties ...`
-
-* Line layers:
-
- * :guilabel:`Symbol layer type`: Here you can use Simple Lines and Marker Lines.
- * :guilabel:`colour`
- * :guilabel:`Pen width`
- * :guilabel:`Offset`
- * :guilabel:`Pen style`
- * :guilabel:`Join style`
- * :guilabel:`Cap style`
- * |checkbox| :guilabel:`Use custom dash pattern`
- * :guilabel:`Dash pattern unit`
- * :guilabel:`Data defined properties ...`
-
-Line Layers have two symbols layer type: simple line (default) and maker line. The first one
-draws a simple line whereas the other display a marker point regularly on the line. You can
-choose different location vertex, interval or central point. Maker line can have offset along
-the line or offset line. Finally, :guilabel:`rotation` allows you to change the orientation of the symbol.
-
-* Polygon Layers:
-
- * :guilabel:`Symbol layer type`: It's possible to use Centroid Fill, Gradient Fill, Line Pattern Fill,
-   Point Pattern Fill, SVG Fill, Simple Fill and two Outlines (Marker line and Simple line).
- * :guilabel:`Colors` for the border and the fill.
- * :guilabel:`Fill style`
- * :guilabel:`Border style`
- * :guilabel:`Border width`
- * :guilabel:`Offset X,Y`
- * :guilabel:`Data defined properties ...`
-
-Using the color combo box, you can drag and drop color for one color button 
-to another button, copy-paste color, pick color from somewhere, choose a color 
-from the palette or from  recent or standard color. The combo box allow you to 
-fill in the feature with transparency. You can also just clic on the button to open the 
-palettte dialog. Note that you can import color from some external software 
-like GIMP.
-
-'Gradient Fill' :guilabel:`Symbol layer type` allows you to select
-between a |radiobuttonon| :guilabel:`Two color`
-and |radiobuttonoff| :guilabel:`Color ramp` setting. You can use the
-|checkbox| :guilabel:`Feature centroid` as :guilabel:`Referencepoint`.
-All fills 'Gradient Fill` :guilabel:`Symbol layer type` is also
-available through the :guilabel:`Symbol` menu of the Categorized and
-Graduated Renderer and through the :guilabel:`Rule properties` menu of
-the Rule-based renderer. Other possibility is to choose a 'shapeburst
-fill' which is a buffered gradient fill, where a gradient is drawn from
-the boundary of a polygon towards the polygon's centre. Configurable
-parameters include distance from the boundary to shade, use of color ramps or
-simple two color gradients, optional blurring of the fill and offsets.
-
-
-It is possible to only draw polygon borders inside the polygon. Using
-'Outline: Simple line' select |checkbox| :guilabel:`Draw line
-only inside polygon`.
-
-Note that once you have set the size in the lower levels of the :guilabel:`Symbol layers` dialog,
-the size of the whole symbol can be changed with the :guilabel:`Size` menu in the first level again. The size of
-the lower levels changes accordingly, while the size ratio is maintained.
-After having made any needed changes, the symbol can be added to the list of
-current style symbols (using **[Symbol]** |selectstring| :guilabel:`Save in symbol library`),
-and then it can easily be used in the future. Furthermore, you can use the **[Save Style]** |selectstring| button to
-save the symbol as a |qg| layer style file (.qml) or SLD file (.sld). SLDs can be exported from any type of renderer -- single symbol,
-categorized, graduated or rule-based -- but when importing an SLD, either a
-single symbol or rule-based renderer is created.
-That means that categorized or graduated styles are converted to rule-based.
-If you want to preserve those renderers, you have to stick to the QML format.
-On the other hand, it can be very handy sometimes to have this easy way of
-converting styles to rule-based.
-
-If the datasource of the layer is a database (PostGIS or Spatialite for example),
-you can save your layer style inside a table of the database. Just clic on
-:guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in
-the dialog to define a style name, add a description, an ui file and if the style
-is a default style. When loading a layer from the database, if a style alredy
-exists for this layer, |qg| will load the layer and its style. You can add
-several style in the database. Only one will be the default style anyway.
-
-.. _vector_style_manager:
-
-With the :guilabel:`Style manager` from the **[Symbol]** |selectstring| menu you can administer your
-symbols. You can |mActionSignPlus| :sup:`add item`, |edit|:sup:`edit item`, |mActionSignMinus| :sup:`remove item`
-an	d |user| :sup:`share item`. 'Marker' symbols, 'Line' symbols, 'Fill' patterns and 'colour ramps'
-can be used to create the symbols (see defining_symbols_). The symbols are then assigned to 'All Symbols',
-'Groups' or 'Smart groups'.
 
 
 .. index:: Categorized_Renderer, Renderer_Categorized
@@ -240,39 +158,6 @@ for the rivers layer of the |qg| sample dataset.
    :align: center
 
    Categorized Symbolizing options |nix|
-
-.. index:: colour_Ramp, Gradient_colour_Ramp, colourBrewer, Custom_colour_Ramp
-
-You can create a custom colour ramp choosing :menuselection:`New colour ramp...`
-from the :guilabel:`colour ramp` drop-down menu. A dialog will prompt for the ramp type:
-Gradient, Random, colourBrewer, or cpt-city. The first three have options for number of steps
-and/or multiple stops in the colour ramp. You can use the |checkbox| :guilabel:`Invert` option while classifying
-the data with a colour ramp. See figure_symbology_3_ for an
-example of custom colour ramp and figure_symbology_3a_ for the cpt-city dialog.
-
-.. _figure_symbology_3:
-
-.. only:: html
-
-   **Figure Symbology 3:**
-
-.. figure:: /static/user_manual/working_with_vector/customcolourRampGradient.png
-   :align: center
-
-   Example of custom gradient colour ramp with multiple stops |nix|
-
-The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.
-
-.. _figure_symbology_3a:
-
-.. only:: html
-
-   **Figure Symbology 3a:**
-
-.. figure:: /static/user_manual/working_with_vector/cpt-citycolourRamps.png
-   :align: center
-
-   cpt-city dialog with hundreds of colour ramps |nix|
 
 .. index:: Graduated_Renderer, Renderer_Graduated
 .. index:: Natural_Breaks_(Jenks), Pretty_Breaks, Equal_Interval, Quantile
