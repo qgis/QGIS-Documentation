@@ -218,6 +218,9 @@ the left of the class name.
 You can change symbol, value and/or label of the clic, just double clicking
 on the item you want to change.
 
+Right-clic shows a contextual menu to **Copy/Paste**, **Change color**, **Change 
+transparency**, **Change output unit**, **Change symbol width**.
+
 The **[Advanced]** button in the lower-right corner of the dialog allows you to
 set the fields containing rotation and size scale information.
 For convenience, the center of the menu lists the values of
@@ -280,7 +283,6 @@ The Graduated Renderer is used to render all the features from a layer, using
 a single user-defined symbol whose colour reflects the assignment of a
 selected feature's attribute to a class.
 
-
 .. _figure_symbology_4:
 
 .. only:: html
@@ -323,6 +325,9 @@ classes can be disabled unchecking the checkbox at the left of the class name.
 
 You can change symbol, value and/or label of the clic, just double clicking
 on the item you want to change.
+
+Right-clic shows a contextual menu to **Copy/Paste**, **Change color**, **Change 
+transparency**, **Change output unit**, **Change symbol width**.
 
 The example in figure_symbology_4_ shows the graduated rendering dialog for
 the rivers layer of the |qg| sample dataset.
