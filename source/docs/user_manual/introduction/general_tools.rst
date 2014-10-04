@@ -300,6 +300,9 @@ features from all layers`.
 to select feature using expression dialog. See :ref:`vector_expressions` 
 chapter for some example.
 
+Users can save features selection into a **New Memory Vector Layer** or a **New Vector Layer** using 
+:menulabel:`Edit > Paste Feature as ...` and choose the mode you want.
+
 .. _`identify`:
 
 Identify features
