@@ -313,17 +313,17 @@ Map tools Menu
 
 **Identify**
 
-* |checkbox| :guilabel:`Open identify results in a dock window (QGIS restart required)`
-* The :guilabel:`Mode` setting determines which layers will be shown by the
-  Identify tool. By switching to 'Top down' or 'Top down, stop at first'
-  instead of 'Current layer', attributes for all identifiable layers will be
-  shown with the Identify tool. In |qg| 2.2. you can now use a 'Layer selection' option
-  so that you can choose with the left-mouse menu which layer you want to identify
-  (see the "Project properties" section under :ref:`sec_projects` to set which layers are identifiable).
-* |checkbox| :guilabel:`Open feature form, if a single feature is identified`
-* Define :guilabel:`Search radius for identifying and displaying map tips as a
-  percentage of the map width`
-
+This menu offers some options regarding the behaviour of the :guilabel:`Identify tool`.
+* :guilabel:`Search radius for identifying and displaying map tips` is a tolerance factor
+  expressed as a percentage of the map width. This means the identify tool will depict results
+  as long as you click within this tolerance.
+* :guilabel:`Highlight color` allows you to choose with which color should features being
+  identified are to be highlighted.
+* :guilabel:`Buffer` expressed as a percentage of the map width, determines a buffer distance
+  to be rendered from the outline of the identify highlight. 
+* :guilabel:`Minimum widht` expressed as a percentage of the map width, determines how thick should
+  the outline of a highlighted object be. 
+  
 **Measure tool**
 
 * Define :guilabel:`Rubberband color` for measure tools
