@@ -220,7 +220,7 @@ Snap to grid and/or to smart guides can be enabled from the :menuselection:`View
 Composer items general options
 ------------------------------
 
-Composer items have a set of common properties you will find on the bottom of the :guilabel:`Item Properties` tab: Position and size, Frame,
+Composer items have a set of common properties you will find on the bottom of the :guilabel:`Item Properties` tab: Position and size, Rotation, Frame,
 Background, Item ID and Rendering (See figure_composer_2_).
 
 .. _Figure_composer_2:
@@ -275,6 +275,7 @@ Rendering mode
 * :guilabel:`Transparency` |slider|: You can make the underlying item in the Composer
   visible with this tool. Use the slider to adapt the visibility of your item to your needs.
   You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
+* |checkbox| :guilabel:`Exclude item from exports`: You can decide to make an item not visible in all exports. After activating this checkbox, the item will not be included in PDF's, prints etc.. 
 * :guilabel:`Blending mode`: You can achieve special rendering effects with these tools that you
   previously only may know from graphics programs. The pixels of your overlaying and underlaying items are mixed
   through the settings described below.
