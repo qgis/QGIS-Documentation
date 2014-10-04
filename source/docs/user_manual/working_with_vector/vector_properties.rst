@@ -43,9 +43,9 @@ Renderers
 
 The renderer is responsible for drawing a feature together with the correct
 symbol. There are four types of renderers: single symbol, categorized, graduated and rule-based.
-There is no continuous colour renderer, because it is in fact only a special case
+There is no continuous color renderer, because it is in fact only a special case
 of the graduated renderer. The categorized and graduated renderers can be created
-by specifying a symbol and a colour ramp - they will set the colours for symbols
+by specifying a symbol and a color ramp - they will set the colors for symbols
 appropriately. For point layers, there is a point displacement renderer available.
 For each data type (points, lines and polygons), vector symbol layer types are available.
 Depending on the chosen renderer, the :guilabel:`Style` menu provides different
@@ -59,7 +59,7 @@ existing symbols and add new ones.
 .. tip:: **Select and change multiple symbols**
 
    The Symbology allows you to select multiple symbols and right
-   click to change colour, transparency, size, or width of selected
+   click to change color, transparency, size, or width of selected
    entries.
 
 .. index:: Single_Symbol_Renderer, Renderer_Single_Symbol
@@ -78,7 +78,7 @@ the menu on the right side.
 .. _defining_symbols:
 
 If you click on the first level in the :guilabel:`Symbol layers` dialog on the left
-side, it's possible to define basic parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`colour`
+side, it's possible to define basic parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`color`
 and :guilabel:`Rotation`. Here, the layers are joined together.
 
 
@@ -102,7 +102,7 @@ The following settings are possible:
 
  * :guilabel:`Symbol layer type`: You have the option to use Ellipse markers, Font markers,
    Simple markers, SVG markers and Vector Field markers.
- * :guilabel:`colours`
+ * :guilabel:`colors`
  * :guilabel:`Size`
  * :guilabel:`Outline style`
  * :guilabel:`Outline width`
@@ -114,7 +114,7 @@ The following settings are possible:
 * Line layers:
 
  * :guilabel:`Symbol layer type`: Here you can use Simple Lines and Marker Lines.
- * :guilabel:`colour`
+ * :guilabel:`color`
  * :guilabel:`Pen width`
  * :guilabel:`Offset`
  * :guilabel:`Pen style`
@@ -191,7 +191,7 @@ several style in the database. Only one will be the default style anyway.
 
 With the :guilabel:`Style manager` from the **[Symbol]** |selectstring| menu you can administer your
 symbols. You can |mActionSignPlus| :sup:`add item`, |edit|:sup:`edit item`, |mActionSignMinus| :sup:`remove item`
-an	d |user| :sup:`share item`. 'Marker' symbols, 'Line' symbols, 'Fill' patterns and 'colour ramps'
+an	d |user| :sup:`share item`. 'Marker' symbols, 'Line' symbols, 'Fill' patterns and 'color ramps'
 can be used to create the symbols (see defining_symbols_). The symbols are then assigned to 'All Symbols',
 'Groups' or 'Smart groups'.
 
@@ -202,14 +202,14 @@ can be used to create the symbols (see defining_symbols_). The symbols are then 
 
 
 The Categorized Renderer is used to render all features from a layer, using
-a single user-defined symbol whose colour reflects the value of a selected
+a single user-defined symbol whose color reflects the value of a selected
 feature's attribute. The :guilabel:`Style` menu allows you to select:
 
 
 * The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| 
   :guilabel:`Set column expression` function, see :ref:`vector_expressions`)
 * The symbol (using the Symbol dialog)
-* The colours (using the colour Ramp listbox)
+* The colors (using the color Ramp listbox)
 
 Then click on **Classify** button to create classes from the distinct value of
 the attribute column. Each classes can be disabled unchecking the checkbox at
@@ -241,14 +241,14 @@ for the rivers layer of the |qg| sample dataset.
 
    Categorized Symbolizing options |nix|
 
-.. index:: colour_Ramp, Gradient_colour_Ramp, colourBrewer, Custom_colour_Ramp
+.. index:: color_Ramp, Gradient_color_Ramp, colorBrewer, Custom_color_Ramp
 
-You can create a custom colour ramp choosing :menuselection:`New colour ramp...`
-from the :guilabel:`colour ramp` drop-down menu. A dialog will prompt for the ramp type:
-Gradient, Random, colourBrewer, or cpt-city. The first three have options for number of steps
-and/or multiple stops in the colour ramp. You can use the |checkbox| :guilabel:`Invert` option while classifying
-the data with a colour ramp. See figure_symbology_3_ for an
-example of custom colour ramp and figure_symbology_3a_ for the cpt-city dialog.
+You can create a custom color ramp choosing :menuselection:`New color ramp...`
+from the :guilabel:`color ramp` drop-down menu. A dialog will prompt for the ramp type:
+Gradient, Random, colorBrewer, or cpt-city. The first three have options for number of steps
+and/or multiple stops in the color ramp. You can use the |checkbox| :guilabel:`Invert` option while classifying
+the data with a color ramp. See figure_symbology_3_ for an
+example of custom color ramp and figure_symbology_3a_ for the cpt-city dialog.
 
 .. _figure_symbology_3:
 
@@ -256,10 +256,10 @@ example of custom colour ramp and figure_symbology_3a_ for the cpt-city dialog.
 
    **Figure Symbology 3:**
 
-.. figure:: /static/user_manual/working_with_vector/customcolourRampGradient.png
+.. figure:: /static/user_manual/working_with_vector/customcolorRampGradient.png
    :align: center
 
-   Example of custom gradient colour ramp with multiple stops |nix|
+   Example of custom gradient color ramp with multiple stops |nix|
 
 The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.
 
@@ -269,10 +269,10 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
 
    **Figure Symbology 3a:**
 
-.. figure:: /static/user_manual/working_with_vector/cpt-citycolourRamps.png
+.. figure:: /static/user_manual/working_with_vector/cpt-citycolorRamps.png
    :align: center
 
-   cpt-city dialog with hundreds of colour ramps |nix|
+   cpt-city dialog with hundreds of color ramps |nix|
 
 .. index:: Graduated_Renderer, Renderer_Graduated
 .. index:: Natural_Breaks_(Jenks), Pretty_Breaks, Equal_Interval, Quantile
@@ -280,7 +280,7 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
 **Graduated Renderer**
 
 The Graduated Renderer is used to render all the features from a layer, using
-a single user-defined symbol whose colour reflects the assignment of a
+a single user-defined symbol whose color reflects the assignment of a
 selected feature's attribute to a class.
 
 .. _figure_symbology_4:
@@ -304,7 +304,7 @@ select:
 * The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| 
   :guilabel:`Set column expression` function, see :ref:`vector_expressions` chapter)
 * The symbol (using the Symbol Properties button)
-* The colours (using the colour Ramp list)
+* The colors (using the color Ramp list)
 
 Additionally, you can specify the number of classes and also the mode for
 classifying features within the classes (using the Mode list). The available
@@ -346,7 +346,7 @@ the rivers layer of the |qg| sample dataset.
 **Rule-based rendering**
 
 The Rule-based Renderer is used to render all the features from a layer, using
-rule based symbols whose colour reflects the assignment of a selected
+rule based symbols whose color reflects the assignment of a selected
 feature's attribute to a class. The rules are based on SQL statements. The dialog
 allows rule grouping by filter or scale, and you can decide if you want to enable
 symbol levels or use only the first-matched rule.
@@ -415,37 +415,37 @@ Inverted polygon renderer allows user to define a symbol to fill in outside of t
 polygons. As before you can select a subrenderers. These subrenderers are the
 same as for the main renderers.
 
-colour Picker
+color Picker
 ...............
 
-Regardless the type of style to be used, the :guilabel:`select colour` dialog will show when you click to choose a 
-colour - either border or fill colour. This dialog has four different tabs which allow you to select colours by |colouramp| :sup:`colour ramp`, 
-|colourwheel| :sup:`colour wheel`, |colourswatcher| :sup:`colour swatches` or |colourpicker| :sup:`colour picker`.
+Regardless the type of style to be used, the :guilabel:`select color` dialog will show when you click to choose a 
+color - either border or fill color. This dialog has four different tabs which allow you to select colors by |mIconColorBox| :sup:`color ramp`, 
+|mIColorWheel| :sup:`color wheel`, |mIColorSwatches| :sup:`color swatches` or |mIColorPicker| :sup:`color picker`.
 
-Whatever method you use, the selected colour is always described through colour sliders for HSV  (Hue, Saturation, Value)
+Whatever method you use, the selected color is always described through color sliders for HSV  (Hue, Saturation, Value)
 and RGB (Red, Green, Blue) values. There is also an :guilabel:`opacity` slider to set transparency level. On the lower left part 
-of the dialog you can see a comparison between the :guilabel:`current` and the :guilabel:`new` colour you are presently 
-selecting and on the lower right part you have the option to add the colour you just tweaked into a colour slot button by pressing |addcolour|. 
+of the dialog you can see a comparison between the :guilabel:`current` and the :guilabel:`new` color you are presently 
+selecting and on the lower right part you have the option to add the color you just tweaked into a color slot button by pressing |addcolor|. 
 
- **Figure colour picker 1:**
+ **Figure color picker 1:**
 
-With |colouramp| :sup:`colour ramp` or with |colourwheel| :sup:`colour wheel`, you can browse to all possible colour combinations. 
-There are other possibilites though. By using `colour swatches` |colourswatcher| you can choose from a preselected list. This selected list is
-populated with one of three methods: :guilabel:`Recent colours`, :guilabel:`Standard colours` or :guilabel:`Project colours`
+With |mIconColorBox| :sup:`color ramp` or with |mIColorWheel| :sup:`color wheel`, you can browse to all possible color combinations. 
+There are other possibilites though. By using `color swatches` |colorswatcher| you can choose from a preselected list. This selected list is
+populated with one of three methods: :guilabel:`Recent colors`, :guilabel:`Standard colors` or :guilabel:`Project colors`
 
- **Figure colour picker 2:**
+ **Figure color picker 2:**
 
-Another option is to use the :guilabel:`colour picker` |colourpicker| which allows you to sample a colour from under your mouse pointer at any part of 
-QGIS or even from another application by pressing the space bar. Please note that the colour picker is OS dependent and is currently not supported by OSX.
+Another option is to use the |mIColorPicker| :sup:`color picker` which allows you to sample a color from under your mouse pointer at any part of 
+QGIS or even from another application by pressing the space bar. Please note that the color picker is OS dependent and is currently not supported by OSX.
  
- .. _tip_quick_colour_picker_+_copy/paste_colours:
+ .. _tip_quick_color_picker_+_copy/paste_colors:
 
-.. tip:: **quick colour picker + copy/paste colours**
+.. tip:: **quick color picker + copy/paste colors**
 
-   You can quickly choose from :guilabel:`Recent colours`, from :guilabel:`Standard colours` or simply :guilabel:`copy` or :guilabel:`paste` a colour by clicking 
-   the drop-down arrow that follows a current colour box.
+   You can quickly choose from :guilabel:`Recent colors`, from :guilabel:`Standard colors` or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking 
+   the drop-down arrow that follows a current color box.
    
-   **Figure colour picker 3:**
+   **Figure color picker 3:**
 
 Layer rendering
 ...............
@@ -460,18 +460,18 @@ Layer rendering
   previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
   through the settings described below.
 
-  * Normal: This is the standard blend mode, which uses the alpha channel of the top pixel to blend with the pixel beneath it. The colours aren't mixed.
+  * Normal: This is the standard blend mode, which uses the alpha channel of the top pixel to blend with the pixel beneath it. The colors aren't mixed.
   * Lighten: This selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged and harsh.
   * Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is most useful for mixing the texture of one layer with another layer (e.g., you can use a hillshade to texture another layer).
   * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So, brighter top pixels cause the saturation and brightness of the underlying pixels to increase. This works best if the top pixels aren't too bright; otherwise the effect is too extreme.
   * Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above one (in the case of RGB), white is displayed. This mode is suitable for highlighting features.
   * Darken: This creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
   * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the corresponding pixels for the bottom layer. The results are darker pictures.
-  * Burn: Darker colours in the top layer cause the underlying layers to darken. Burn can be used to tweak and colourise underlying layers.
+  * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be used to tweak and colorise underlying layers.
   * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, light parts become lighter and dark parts become darker.
-  * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses colour burn/dodge. This is supposed to emulate shining a soft light onto an image.
+  * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
   * Hard light: Hard light is also very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
-  * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way around, to always get a positive value. Blending with black produces no change, as the difference with all colours is zero.
+  * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way around, to always get a positive value. Blending with black produces no change, as the difference with all colors is zero.
   * Subtract: This blend mode simply subtracts pixel values of one layer from the other. In case of negative values, black is displayed.
 
 .. index:: Symbology
@@ -523,10 +523,10 @@ Use the |checkbox| :guilabel:`Formatted numbers` option to format the numbers in
 decimal places may be inserted. If you enable this option, three decimal places are initially set by default.
 
 To create a buffer, just activate the |checkbox| :guilabel:`Draw text buffer` checkbox in the :guilabel:`Buffer` menu.
-The buffer colour is variable. Here, you can also use blend modes (see blend_modes_).
+The buffer color is variable. Here, you can also use blend modes (see blend_modes_).
 
-If the |checkbox| :guilabel:`colour buffer's fill` checkbox is activated, it will interact with partially transparent
-text and give mixed colour transparency results. Turning off the buffer fill fixes that issue (except where the interior
+If the |checkbox| :guilabel:`color buffer's fill` checkbox is activated, it will interact with partially transparent
+text and give mixed color transparency results. Turning off the buffer fill fixes that issue (except where the interior
 aspect of the buffer's stroke intersects with the text's fill) and also allows you to make outlined text.
 
 In the :guilabel:`Background` menu, you can define with :guilabel:`Size X` and :guilabel:`Size Y` the shape of your background.
@@ -552,14 +552,14 @@ with the :guilabel:`Blur radius`. The higher the number, the softer the shadows.
 .. pixels that have a partial alpha component beyond the base opaque pixels of
 .. the component being blurred. For example, if you set the shadow of some
 .. text to be gray and turn on that option, it should still show a duplication
-.. of the text, coloured as per the shadow colour option, but with any blurred
+.. of the text, colored as per the shadow color option, but with any blurred
 .. shadow that extends beyond its text. With the option off, in this example,
 .. it will blur all pixels of the duplicated text.
 .. This is useful for creating a shadow that increases legibility at smaller
 .. output sizes, e.g. like duplicating text and offsetting it a bit in
 .. illustration programs, while still showing a bit of shadow at larger sizes.
 .. Apparently, there is an error with re-painting the opaque pixels back over
-.. top of the shadow (depending upon the shadow's colour), when that setting is
+.. top of the shadow (depending upon the shadow's color), when that setting is
 .. used.
 
 
@@ -1349,7 +1349,7 @@ Both vector layers are part of the |qg| sample dataset (see section
    :guilabel:`Layer Properties` dialog.
 #. Click on the :guilabel:`Diagrams` menu, activate |checkbox|:guilabel:`Display diagrams`,
    and from the :guilabel:`Diagram type` |selectstring| combo box, select 'Text diagram'.
-#. In the :guilabel:`Appearance` tab, we choose a light blue as background colour, and
+#. In the :guilabel:`Appearance` tab, we choose a light blue as background color, and
    in the :guilabel:`Size` tab, we set a fixed size to 18 mm.
 #. In the :guilabel:`Position` tab, placement could be set to 'Around Point'.
 #. In the diagram, we want to display the values of the three columns
@@ -1361,7 +1361,7 @@ Both vector layers are part of the |qg| sample dataset (see section
    the size of the diagrams on the basis of an attribute with the **[Find maximum value]** button and the
    :guilabel:`Size` menu. If the diagrams appear too small on the screen, you can activate the |checkbox| :guilabel:`Increase
    size of small diagrams` checkbox and define the minimum size of the diagrams.
-#. Change the attribute colours by double clicking on the colour values in the :guilabel:`Assigned attributes` field.   Figure_diagrams_2_ gives an idea of the result.
+#. Change the attribute colors by double clicking on the color values in the :guilabel:`Assigned attributes` field.   Figure_diagrams_2_ gives an idea of the result.
 #. Finally, click **[Ok]**.
 
 .. _figure_diagrams_2:
