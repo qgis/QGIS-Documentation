@@ -51,7 +51,6 @@ Words and symbols
 Icon        Substitution
 ==========  ================
 |QG|        ``|QG|``
-|wedge|	    ``|wedge|``
 |degrees|   ``|degrees|``
 ==========  ================
 
@@ -173,6 +172,16 @@ Icon                            Substitution                        Icon        
 |mActionHelpContents|		``|mActionHelpContents|``           |mActionQgisHomePage|           ``|mActionQgisHomePage|``
 |mActionCheckQgisVersion|	``|mActionCheckQgisVersion|``	    |mActionHelpAbout|              ``|mActionHelpAbout|``
 |mActionHelpSponsors|		``|mActionHelpSponsors|``           |mActionContextHelp|            ``|mActionContextHelp|``
+==============================  ==================================  ==============================  ==================================
+
+Colors
+....
+
+==============================  ==================================  ==============================  ==================================
+Icon                            Substitution                        Icon                            Substitution
+==============================  ==================================  ==============================  ==================================
+|mIconColorBox|		        ``|mIconColorBox|``                 |mIconColorPicker|              ``|mIconColorPicker|``
+|mIconColorSwatches|	        ``|mIconColorSwatches|``	    |mIconColorWheel|               ``|mIconColorWheel|``
 ==============================  ==================================  ==============================  ==================================
 
 

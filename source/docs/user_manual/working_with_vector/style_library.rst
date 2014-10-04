@@ -149,11 +149,11 @@ only inside polygon`.
 Color ramp
 **********
 
-.. index:: colour_Ramp, Gradient_colour_Ramp, colourBrewer, Custom_colour_Ramp
+.. index:: color_Ramp, Gradient_color_Ramp, colorBrewer, Custom_color_Ramp
 
 You can create a custom color ramp choosing :menuselection:`New color ramp...`
-from the :guilabel:`colour ramp` drop-down menu. A dialog will prompt for the ramp type:
-Gradient, Random, colourBrewer, or cpt-city. The first three have options for number of steps
+from the :guilabel:`color ramp` drop-down menu. A dialog will prompt for the ramp type:
+Gradient, Random, colorBrewer, or cpt-city. The first three have options for number of steps
 and/or multiple stops in the color ramp. You can use the |checkbox| :guilabel:`Invert` option while classifying
 the data with a color ramp. See figure_symbology_3_ for an
 example of custom color ramp and figure_symbology_3a_ for the cpt-city dialog.
@@ -164,10 +164,10 @@ example of custom color ramp and figure_symbology_3a_ for the cpt-city dialog.
 
    **Figure Symbology 3:**
 
-.. figure:: /static/user_manual/working_with_vector/customcolourRampGradient.png
+.. figure:: /static/user_manual/working_with_vector/customcolorRampGradient.png
    :align: center
 
-   Example of custom gradient colour ramp with multiple stops |nix|
+   Example of custom gradient color ramp with multiple stops |nix|
 
 The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.
 
@@ -177,9 +177,9 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
 
    **Figure Symbology 3a:**
 
-.. figure:: /static/user_manual/working_with_vector/cpt-citycolourRamps.png
+.. figure:: /static/user_manual/working_with_vector/cpt-citycolorRamps.png
    :align: center
 
-   cpt-city dialog with hundreds of colour ramps |nix|
+   cpt-city dialog with hundreds of color ramps |nix|
 
 

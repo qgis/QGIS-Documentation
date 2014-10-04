@@ -224,7 +224,15 @@ rst_epilog = """
    :width: 1.5em
 .. |color|  image:: /static/common/color.png
    :width: 1.5em
-.. |colormap|  image:: /static/common/colormap.png
+.. |colormap| image:: /static/common/colormap.png
+   :width: 1.5em
+.. |mIconColorBox| image:: /static/common/mIconColorBox.png
+   :width: 1.5em
+.. |mIconColorPicker| image:: /static/common/mIconColorPicker.png
+   :width: 1.5em
+.. |mIconColorSwatches| image:: /static/common/mIconColorSwatches.png
+   :width: 1.5em
+.. |mIconColorWheel| image:: /static/common/mIconColorWheel.png
    :width: 1.5em
 .. |columnview|  image:: /static/common/columnview.png
    :width: 1.5em
