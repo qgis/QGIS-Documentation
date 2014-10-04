@@ -54,6 +54,21 @@ symbols, 'Fill' patterns and 'colour ramps' can be used to create the symbols
 (see defining_symbols_). The symbols are then assigned to 'All Symbols', 'Groups' 
 or 'Smart groups'.
 
+For each kind of symbols, you will find always the same dialog structure:
+* at the top left side a symbol representation 
+* under the symbol representation the symbol tree show the symbol layers
+* at the right you can setup some parameter (unit,transparency, color, size 
+  and rotation)
+* under these parameteres you find some symbol from the symbol library
+
+The symbol tree allow adding, removing or protect new simple symbol. You 
+can move up or down the symbol layer.
+
+More detailed settings can be made when clicking on the second level in the
+:guilabel:`Symbol layers` dialog. You can define :guilabel:`Symbol layers` that are
+combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
+Settings will be shonw later in this chapter.
+
 .. tip:: Note that once you have set the size in the lower levels of the 
    :guilabel:`Symbol layers` dialog, the size of the whole symbol can be changed 
    with the :guilabel:`Size` menu in the first level again. The size of the lower 
@@ -64,14 +79,15 @@ or 'Smart groups'.
 Marker Symbols
 ***************
 
-.. todo:
+Marker symbols have several symbol layer types:
 
-More detailed settings can be made when clicking on the second level in the
-:guilabel:`Symbol layers` dialog. You can define :guilabel:`Symbol layers` that are
-combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
+* Ellispe maker
+* Font marker
+* Simple marker (default)
+* SVG marker
+* Vector Field marker
+
 The following settings are possible:
-
-* Point layers:
 
  * :guilabel:`Symbol layer type`: You have the option to use Ellipse markers, Font markers,
    Simple markers, SVG markers and Vector Field markers.
@@ -87,9 +103,19 @@ The following settings are possible:
 
 Line Symbols
 ************
-* Line layers:
+Line marker symbols have only two symbol layer types:
 
- * :guilabel:`Symbol layer type`: Here you can use Simple Lines and Marker Lines.
+* Marker line
+* Simple line (default)
+
+The default symbol layer type draws a simple line whereas the other display a 
+marker point regularly on the line. You can choose different location vertex, 
+interval or central point. Maker line can have offset along the line or offset 
+line. Finally, :guilabel:`rotation` allows you to change the orientation of the 
+symbol.
+
+The following settings are possible:
+
  * :guilabel:`colour`
  * :guilabel:`Pen width`
  * :guilabel:`Offset`
@@ -100,20 +126,24 @@ Line Symbols
  * :guilabel:`Dash pattern unit`
  * :guilabel:`Data defined properties ...`
 
-Line Layers have two symbols layer type: simple line (default) and maker line. The first one
-draws a simple line whereas the other display a marker point regularly on the line. You can
-choose different location vertex, interval or central point. Maker line can have offset along
-the line or offset line. Finally, :guilabel:`rotation` allows you to change the orientation of the symbol.
-
-
 
 Polygon Symbols
 ****************
 
-* Polygon Layers:
+Polygon marker symbols have also several symbol layer types:
 
- * :guilabel:`Symbol layer type`: It's possible to use Centroid Fill, Gradient Fill, Line Pattern Fill,
-   Point Pattern Fill, SVG Fill, Simple Fill and two Outlines (Marker line and Simple line).
+* Centroid fill
+* Gradient fill
+* Line pattern fill
+* Point pattern fill
+* SVG fill
+* Shapeburst fille
+* Simple fill (default)
+* Outline: Marker line (same as line marker)
+* Outline: simple line (same as line marker)
+
+The following settings are possible:
+
  * :guilabel:`Colors` for the border and the fill.
  * :guilabel:`Fill style`
  * :guilabel:`Border style`
