@@ -414,24 +414,24 @@ colour Picker
 ...............
 
 Regardless the type of style to be used, the :guilabel:`select colour` dialog will show when you click to choose a 
-colour - either border or fill colour. This dialog has four different tabs which allow you to select colours by :guilabel:`colour ramp` |colouramp|, 
-:guilabel:`colour wheel` |colourwheel|, :guilabel:`colour swatches` |colourswatcher| or :guilabel:`colour picker` |colourpicker|.
+colour - either border or fill colour. This dialog has four different tabs which allow you to select colours by |colouramp| :sup:`colour ramp`, 
+|colourwheel| :sup:`colour wheel`, |colourswatcher| :sup:`colour swatches` or |colourpicker| :sup:`colour picker`.
 
 Whatever method you use, the selected colour is always described through colour sliders for HSV  (Hue, Saturation, Value)
- and RGB (Red, Green, Blue) values. There is also an :guilabel:`opacity` slider to set transparency level. On the lower left part 
- of the dialog you can see a comparison between the :guilabel:`current` and the :guilabel:`new` colour you are presently  
- selecting and on the lower right part you have the option to add the colour you just tweaked into a colour slot button by pressing |addcolour|. 
+and RGB (Red, Green, Blue) values. There is also an :guilabel:`opacity` slider to set transparency level. On the lower left part 
+of the dialog you can see a comparison between the :guilabel:`current` and the :guilabel:`new` colour you are presently 
+selecting and on the lower right part you have the option to add the colour you just tweaked into a colour slot button by pressing |addcolour|. 
 
  **Figure colour picker 1:**
 
-With :guilabel:`colour ramp` |colouramp| or with :guilabel:`colour wheel` |colourwheel|, you can browse to all possible colour combinations. 
+With |colouramp| :sup:`colour ramp` or with |colourwheel| :sup:`colour wheel`, you can browse to all possible colour combinations. 
 There are other possibilites though. By using `colour swatches` |colourswatcher| you can choose from a preselected list. This selected list is
 populated with one of three methods: :guilabel:`Recent colours`, :guilabel:`Standard colours` or :guilabel:`Project colours`
 
  **Figure colour picker 2:**
 
- Another option is to use the :guilabel:`colour picker` |colourpicker| which allows you to sample a colour from under your mouse pointer at any part of
- QGIS or even from another application by pressing the space bar. Please note that the colour picker is OS dependent and is currently not supported by OSX.
+Another option is to use the :guilabel:`colour picker` |colourpicker| which allows you to sample a colour from under your mouse pointer at any part of 
+QGIS or even from another application by pressing the space bar. Please note that the colour picker is OS dependent and is currently not supported by OSX.
  
  .. _tip_quick_colour_picker_+_copy/paste_colours:
 
