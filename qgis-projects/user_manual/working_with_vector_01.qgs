@@ -11,10 +11,10 @@
     <mapcanvas>
         <units>feet</units>
         <extent>
-            <xmin>-5602669.8045652974396944</xmin>
-            <ymin>698739.60797607805579901</ymin>
-            <xmax>8837932.69376213662326336</xmax>
-            <ymax>8059046.69853632152080536</ymax>
+            <xmin>-3289917.06069254549220204</xmin>
+            <ymin>2900987.74131800094619393</ymin>
+            <xmax>3930384.18847117340192199</xmax>
+            <ymax>7853663.12941623851656914</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -67,7 +67,7 @@
                 </spatialrefsys>
             </srs>
             <provider encoding="System">ogr</provider>
-            <previewExpression></previewExpression>
+            <previewExpression>COALESCE( "NAME", '&lt;NULL>' )</previewExpression>
             <vectorjoins/>
             <expressionfields/>
             <edittypes>
@@ -294,6 +294,7 @@
     <properties>
         <WMSContactPerson type="QString"></WMSContactPerson>
         <WMSOnlineResource type="QString"></WMSOnlineResource>
+        <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
         <WMSContactOrganization type="QString">QGIS project</WMSContactOrganization>
         <WMSExtent type="QStringList">
             <value>-15512975.76062264107167721</value>
@@ -318,13 +319,15 @@
             <Automatic type="bool">true</Automatic>
             <DegreeFormat type="QString">D</DegreeFormat>
         </PositionPrecision>
-        <WMSContactPhone type="QString"></WMSContactPhone>
+        <WCSUrl type="QString"></WCSUrl>
         <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
+        <WMSContactPhone type="QString"></WMSContactPhone>
         <WMSServiceAbstract type="QString">This Layer shows the boundary of Alaska from the qgis_sample_dataset</WMSServiceAbstract>
         <WMSAddWktGeometry type="bool">true</WMSAddWktGeometry>
         <Measure>
             <Ellipsoid type="QString">NONE</Ellipsoid>
         </Measure>
+        <WMSPrecision type="QString">8</WMSPrecision>
         <WMSCrsList type="QStringList">
             <value>EPSG:2964</value>
         </WMSCrsList>
@@ -342,6 +345,9 @@
             <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
             <CanvasColorBluePart type="int">255</CanvasColorBluePart>
         </Gui>
+        <WFSLayersPrecision>
+            <alaska20131027003237883 type="int">8</alaska20131027003237883>
+        </WFSLayersPrecision>
         <Identify>
             <disabledLayers type="QStringList"/>
         </Identify>
@@ -354,12 +360,13 @@
             <WorkingMapset type="QString">demo</WorkingMapset>
         </GRASS>
         <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+        <WCSLayers type="QStringList"/>
         <Legend>
             <filterByMap type="bool">false</filterByMap>
         </Legend>
         <SpatialRefSys>
-            <ProjectCRSProj4String type="QString">+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=clrk66 +datum=NAD27 +units=us-ft +no_defs</ProjectCRSProj4String>
-            <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
+            <ProjectCRSProj4String type="QString">+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD27 +units=us-ft +no_defs</ProjectCRSProj4String>
+            <ProjectCrs type="QString">EPSG:2964</ProjectCrs>
             <ProjectCRSID type="int">932</ProjectCRSID>
             <ProjectionsEnabled type="int">0</ProjectionsEnabled>
         </SpatialRefSys>
@@ -372,6 +379,7 @@
             <ColorRamp type="QString"></ColorRamp>
         </DefaultStyles>
         <WMSFees type="QString"></WMSFees>
+        <WMSImageQuality type="int">90</WMSImageQuality>
         <WMSUrl type="QString"></WMSUrl>
     </properties>
 </qgis>
