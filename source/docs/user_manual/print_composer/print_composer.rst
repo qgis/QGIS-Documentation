@@ -198,7 +198,8 @@ used as default during your work.
 
 * :guilabel:`Compositions defaults` let you specify the default font to use.
 * With :guilabel:`Grid appearance`, you can set the grid style and its color.
-* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
+* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. 
+  There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
 * :guilabel:`Guide defaults` defines the tolerance for the guides.
 
 
@@ -392,37 +393,80 @@ the map element in the Print Composer and clicking the **[Update preview]** butt
 in the map :guilabel:`Item Properties` tab (see figure_composer_2_).
 
 .. index::
-   single: Grid;Map_Grid
+   single: Grid;Grids;Map_Grid
 
-Grid
+Grids
 ^^^^
 
-The :guilabel:`Grid` dialog of the map :guilabel:`Item Properties` tab provides the
-following functionalities (see Figure_composer_6_):
+The :guilabel:`Grids` dialog of the map :guilabel:`Item Properties` tab provides the
+the possibility to add several grids to a map item.
 
-.. _Figure_composer_6:
+* With the plus and minus button you can add or remove a selected grid.
+* With the up and down button you can move a grid and set the drawing order.
+
+When you double click on the added grid you can give it another name.
+
+.. _Figure_composer_grid_1:
 
 .. only:: html
 
-   **Figure Composer 6:**
+   **Figure Composer grid 1:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_map3.png
+.. figure:: /static/user_manual/print_composer/map_grids.png
    :align: center
 
-   Map Grid Dialog |nix|
+   Map Grids Dialog |nix|
 
-* The |checkbox| :guilabel:`Show grid` checkbox allows you to overlay a grid onto the
-  map element. As grid type, you can specify to use a solid line or cross. Symbology of
-  the grid can be chosen. See section Rendering_Mode_.
-  Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
-  and the width used for the cross or line grid type.
+After you have added a grid, you can active the checkbox |checkbox| :guilabel:`Show grid` to overlay a grid onto the
+map element. Expand this option to provides a lot of configuration options, see Figure_composer_grid_2_.
+
+.. _Figure_composer_grid_2:
+
+.. only:: html
+
+   **Figure Composer grid 2:**
+
+.. figure:: /static/user_manual/print_composer/draw_grid.png
+   :align: center
+
+   Draw Grid Dialog |nix|
+
+As grid type, you can specify to use a solid line or cross. Symbology of
+the grid can be chosen. See section Rendering_Mode_.
+Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
+and the width used for the cross or line grid type.
+
+.. _Figure_composer_grid_3:
+
+.. only:: html
+
+   **Figure Composer grid 3:**
+
+.. figure:: /static/user_manual/print_composer/grid_frame.png
+   :align: center
+
+   Grid Frame Dialog |nix|
+
 * You can choose to paint the frame with a zebra style. If not selected, the general frame option is used (see section Frame_dialog_).
   Advanced rendering mode is also available for grids (see section Rendering_mode_).
+
 * The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add coordinates
   to the map frame. The annotation can be drawn inside or outside the map frame.
   The annotation direction can be defined as horizontal, vertical, horizontal and
   vertical, or boundary direction, for each border individually. Units can be in meters or in degrees. Finally, you can define the grid
   color, the annotation font, the annotation distance from the map frame and the precision of the drawn coordinates.
+
+.. _Figure_composer_grid_4:
+
+.. only:: html
+
+   **Figure Composer grid 4:**
+
+.. figure:: /static/user_manual/print_composer/grid_draw_coordinates.png
+   :align: center
+
+   Grid Draw Coordinates dialog |nix|
+
 
 Overview
 ^^^^^^^^
