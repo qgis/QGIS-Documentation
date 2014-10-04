@@ -356,6 +356,7 @@ example, from the context menu you can:
 * View the feature form
 * Zoom to feature
 * Copy feature: Copy all feature geometry and attributes
+* Toggle feature selection: adds identified feature to selection
 * Copy attribute value: Copy only the value of the attribute that you click on
 * Copy feature attributes: Copy only attributes
 * Clear result: Remove results in the window
