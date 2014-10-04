@@ -354,7 +354,22 @@ Map Legend
    single:legend
 
 The map legend area lists all the layers in the project. The checkbox in each
-legend entry can be used to show or hide the layer.
+legend entry can be used to show or hide the layer. The Legend toolbar in the 
+map legend are list allow you to **Add group**, **Manage Layer Visibility** of 
+all layers or manage preset layers combination, **Filter Legend by Map 
+Content**, **Expand All** or **Collapse All** and **Remove Layer or Group**.
+
+.. _figure_layer_toolbar:
+
+.. only:: html
+
+   **Figure Layer tools Bar:**
+
+   .. figure:: /static/user_manual/introduction/layer_toobar.png
+       :align: center
+
+        Layer Tool Bar in Map Legend |nix|
+
 
 .. index::
    single:layer visibility
@@ -390,21 +405,19 @@ selected legend item is a raster or a vector layer. For GRASS vector layers,
 **Right mouse button menu for raster layers**
 
 * :menuselection:`Zoom to layer extent`
+* :menuselection:`Show in overview`
 * :menuselection:`Zoom to Best Scale (100%)`
 * :menuselection:`Stretch Using Current Extent`
-* :menuselection:`Show in overview`
 * :menuselection:`Remove`
 * :menuselection:`Duplicate`
+* :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
 * :menuselection:`Save as ...`
+* :menuselection:`Save As Layer Definition Style`
 * :menuselection:`Properties`
 * :menuselection:`Rename`
 * :menuselection:`Copy Style`
-* :menuselection:`Add New Group`
-* :menuselection:`Expand all`
-* :menuselection:`Collapse all`
-* :menuselection:`Update Drawing Order`
 
 Additionally, according to layer position and selection
 
@@ -419,21 +432,18 @@ Additionally, according to layer position and selection
 * :menuselection:`Show in Overview`
 * :menuselection:`Remove`
 * :menuselection:`Duplicate`
+* :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
 * :menuselection:`Open Attribute Table`
 * :menuselection:`Toggle Editing` (not available for GRASS layers)
 * :menuselection:`Save As ...`
-* :menuselection:`Save Selection As`
+* :menuselection:`Save As Layer Definition Style`
 * :menuselection:`Filter`
 * :menuselection:`Show Feature Count`
 * :menuselection:`Properties`
 * :menuselection:`Rename`
 * :menuselection:`Copy Style`
-* :menuselection:`Add New Group`
-* :menuselection:`Expand all`
-* :menuselection:`Collapse all`
-* :menuselection:`Update Drawing Order`
 
 Additionally, according to layer position and selection
 
@@ -448,10 +458,7 @@ Additionally, according to layer position and selection
 * :menuselection:`Remove`
 * :menuselection:`Set Group CRS`
 * :menuselection:`Rename`
-* :menuselection:`Add New Group`
-* :menuselection:`Expand all`
-* :menuselection:`Collapse all`
-* :menuselection:`Update Drawing Order`
+* :menuselection:`Add Group`
 
 ..   Additionally, according to position
 
