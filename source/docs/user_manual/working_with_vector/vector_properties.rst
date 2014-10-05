@@ -256,7 +256,7 @@ example of custom color ramp and figure_symbology_3a_ for the cpt-city dialog.
 
    **Figure Symbology 3:**
 
-.. figure:: /static/user_manual/working_with_vector/customcolorRampGradient.png
+.. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
    :align: center
 
    Example of custom gradient color ramp with multiple stops |nix|
@@ -269,7 +269,7 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
 
    **Figure Symbology 3a:**
 
-.. figure:: /static/user_manual/working_with_vector/cpt-citycolorRamps.png
+.. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
    :align: center
 
    cpt-city dialog with hundreds of color ramps |nix|
