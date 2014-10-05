@@ -160,6 +160,12 @@ Map Composer
   background or shapes by using data-defined settings based on the
   current atlas feature! There's also a new option for rounding the
   corners of rectangle shapes.
+  
+* **Update map canvas extent from map composer extent **:  On the Item 
+   properties of a Map element there are now two extra buttons which allow you
+   to (1) set the Map canvas extent according with the extent of your Map element
+   and (2) view in Map canvas the extent currently set on your Map element.
+   
 
 QGIS Server 
 -----------
