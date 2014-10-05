@@ -6,9 +6,8 @@
 What's new in |qg| |CURRENT|
 ****************************
 
-Please note that this is a release in our 'cutting edge' release
-series. As such, it contains new features and extends the programmatic
-interface over |qg| 2.0.  We recommend that you use this version over
+This release contains new features and extends the programmatic
+interface over previous versions. We recommend that you use this version over
 previous releases.
 
 This release includes hundreds of bug fixes and many new features and
