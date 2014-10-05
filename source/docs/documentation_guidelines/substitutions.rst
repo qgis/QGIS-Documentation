@@ -86,7 +86,7 @@ Icon                            Substitution                        Icon        
 |mActionInOverview|		``|mActionInOverview|``  	    |mActionAddAllToOverview|	    ``|mActionAddAllToOverview|``
 |mActionRemoveAllFromOverview|	``|mActionRemoveAllFromOverview|``  |RemoveAllOVerview|             ``|RemoveAllOVerview|``
 |mActionShowAllLayers|		``|mActionShowAllLayers|``          |mActionHideAllLayers|	    ``|mActionHideAllLayers|``
-|mIconZip|  			``|mIconZip|`` 			    \ 		                    \ 
+|mActionShowPresets|            ``|mActionShowPresets|``            |mIconZip|                      ``|mIconZip|``
 ==============================  ==================================  ==============================  ==================================
 
 

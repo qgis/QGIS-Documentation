@@ -630,6 +630,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionHideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
+.. |mActionShowPresets| image:: /static/common/mActionShowPresets.png
+   :width: 2.5em
 .. |mActionProjectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
 .. |mActionCustomProjection| image:: /static/common/mActionCustomProjection.png
