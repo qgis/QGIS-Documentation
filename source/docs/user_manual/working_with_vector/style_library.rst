@@ -10,14 +10,14 @@ The Symbol Library
 Presentation
 *************
 
-The Symbol Library is where user can create generic symbol to be used in several 
-QGIS projects. It allows user to export and import symbols, groups symbols and 
+The Symbol Library is the place where users can create generic symbols to be used in several 
+QGIS projects. It allows users to export and import symbols, groups symbols and 
 add, edit and remove symbols.
 
 Share and import symbols
 -------------------------
 
-User can export and import symbols in two main formats: qml (QGIS format) and SLD 
+Users can export and import symbols in two main formats: qml (QGIS format) and SLD 
 (OGC standard). Note that SLD format is not fully supported by |qg|.
 
 |user| :sup:`share item` displays a drop down list to let the user import or 
@@ -26,18 +26,18 @@ export symbols.
 Groups and smart groups
 ------------------------
 
-Groups are caterogies of Symbols and smart groups are dynamic groups.
+Groups are categories of Symbols and smart groups are dynamic groups.
 
-To create a group, right-clic on an existing group or on the main **Groups** 
-directory in the left of the library. You can also select a group and clic 
+To create a group, right-click on an existing group or on the main **Groups** 
+directory in the left of the library. You can also select a group and click 
 on the |mActionSignPlus| :sup:`add item` button.
 
-To add a symbol into a group, you can either right clic on a symbol then choose 
+To add a symbol into a group, you can either right click on a symbol then choose 
 :menulabel:`Apply group` and then the group name added before. There is a second 
-way to add several symbols into group: just select a group and clic 
+way to add several symbols into group: just select a group and click 
 |mActionOnGroup| and choose **Group Symbols**. All symbols display a checkbox 
 allow you to add the symbol into the selected groups. When finished, you can 
-clic on the same button, and choose **Finish Grouping**.
+click on the same button, and choose **Finish Grouping**.
 
 Create **Smart Symbols** is similar to creating group, but instead select 
 **Smart Groups**. The dialog box allow user to choose the expression to 
@@ -67,7 +67,7 @@ can move up or down the symbol layer.
 More detailed settings can be made when clicking on the second level in the
 :guilabel:`Symbol layers` dialog. You can define :guilabel:`Symbol layers` that are
 combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
-Settings will be shonw later in this chapter.
+Settings will be shown later in this chapter.
 
 .. tip:: Note that once you have set the size in the lower levels of the 
    :guilabel:`Symbol layers` dialog, the size of the whole symbol can be changed 
@@ -110,7 +110,7 @@ Line marker symbols have only two symbol layer types:
 
 The default symbol layer type draws a simple line whereas the other display a 
 marker point regularly on the line. You can choose different location vertex, 
-interval or central point. Maker line can have offset along the line or offset 
+interval or central point. Marker line can have offset along the line or offset 
 line. Finally, :guilabel:`rotation` allows you to change the orientation of the 
 symbol.
 
