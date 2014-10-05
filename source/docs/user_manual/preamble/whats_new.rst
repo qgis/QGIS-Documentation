@@ -168,8 +168,11 @@ Map Composer
    
 * **Multiple grid support **: It is now possible to have more than 
   one grid in your Map element. Each grid is fully customizable and  
-  can be assigned to different CRS. This means, for example, you 
+  can be assigned to a different CRS. This means, for example, you 
   can now have a map layout with both geographic and projected grids.
+  
+* **Selective export **: To every item of your map composer layout, under
+  Rendering options, you may exclude that object from map exports.
    
 
 QGIS Server 
