@@ -333,6 +333,8 @@ the map element by activating the |checkbox| :guilabel:`Lock layers for map
 item` checkbox in the :guilabel:`Map` dialog of the :guilabel:`Item Properties`
 tab.
 
+.. _`composer_main_properties`:
+
 Main properties
 ^^^^^^^^^^^^^^^
 
@@ -362,6 +364,7 @@ following functionalities (see figure_composer_4_):
 * You can choose to lock the layers shown on a map item. Check |checkbox| :guilabel:`Lock layers for map item`. After this is checked, any layer that would be
   displayed or hidden in the main |qg| window won't appear or be hidden in the map item of the Composer. But style and
   labels of a locked layer are still refreshed according to the main |qg| interface.
+  The |mActionShowPresets| button allows you to add quickly all the presets views you have prepared in QGIS. Clicking on the |mActionShowPresets| button you will see the list of all the preset views: just select the preset you want to display. The map canvas will automatically lock the preset layers by enabling the |checkbox| :guilabel:`Lock layers for map item`: if you want to unselect the preset, just uncheck the |checkbox| and press on the |mActionDraw| button. See :ref:`label_legend` to find out how to create presets views.
 
 Extents
 ^^^^^^^
