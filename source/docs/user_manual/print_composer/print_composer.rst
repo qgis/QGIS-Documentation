@@ -447,8 +447,10 @@ and the width used for the cross or line grid type.
 
    Grid Frame Dialog |nix|
 
-* You can choose to paint the frame with a zebra style. If not selected, the general frame option is used (see section Frame_dialog_).
-  Advanced rendering mode is also available for grids (see section Rendering_mode_).
+* There are different options to style the frame that holds the map. Following options are 
+  available: No Frame, Zebra, Interior ticks, Exterior ticks, Interior and Exterior ticks and Lineborder.
+
+* Advanced rendering mode is also available for grids (see section Rendering_mode_).
 
 * The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add coordinates
   to the map frame. The annotation can be drawn inside or outside the map frame.
