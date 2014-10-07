@@ -361,10 +361,14 @@ following functionalities (see figure_composer_4_):
   rotate the map element content clockwise in degrees. Note that a coordinate frame
   can only be added with the default value 0.
 * |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed on the map canvas in the main |qg| window.
-* You can choose to lock the layers shown on a map item. Check |checkbox| :guilabel:`Lock layers for map item`. After this is checked, any layer that would be
-  displayed or hidden in the main |qg| window won't appear or be hidden in the map item of the Composer. But style and
-  labels of a locked layer are still refreshed according to the main |qg| interface.
-  The |mActionShowPresets| button allows you to add quickly all the presets views you have prepared in QGIS. Clicking on the |mActionShowPresets| button you will see the list of all the preset views: just select the preset you want to display. The map canvas will automatically lock the preset layers by enabling the |checkbox| :guilabel:`Lock layers for map item`: if you want to unselect the preset, just uncheck the |checkbox| and press on the |mActionDraw| button. See :ref:`label_legend` to find out how to create presets views.
+* You can choose to lock the layers shown on a map item. Check |checkbox| :guilabel:`Lock layers for map item`. 
+  After this is checked, any layer that would be displayed or hidden in the main |qg| window won't appear or be hidden in the map item 
+  of the Composer. But style and labels of a locked layer are still refreshed according to the main |qg| interface.
+* The |mActionShowPresets| button allows you to add quickly all the presets views you have prepared in QGIS. 
+  Clicking on the |mActionShowPresets| button you will see the list of all the preset views: just select the preset you want to display. 
+  The map canvas will automatically lock the preset layers by enabling the |checkbox| :guilabel:`Lock layers for map item`: if you want 
+  to unselect the preset, just uncheck the |checkbox| and press on the |mActionDraw| button. See :ref:`label_legend` to find out how to 
+  create presets views.
 
 Extents
 ^^^^^^^
@@ -386,7 +390,7 @@ functionalities (see figure_composer_5_):
 * The **Map extents** area allows you to specify the map extent using X and Y min/max
   values and by clicking the **[Set to map canvas extent]** button. This button sets 
   the map extent of the composer map item to the extent of the current map view in the 
-  main QGIS application. The button **[View extent in map canvas]** does exactly the 
+  main |qg| application. The button **[View extent in map canvas]** does exactly the 
   opposite, it updates the extent of the map view in the QGIS application to the extent
   of the composer map item. 
 
