@@ -117,7 +117,7 @@ The word :kbd:`"amenity"` has appeared. To build the rest of the query:
 * Double-click the value :kbd:`school` in the :guilabel:`Values` list.
 * Click :kbd:`OK` twice.
 
-This will filter OSM's :kbd:`multipolygon` layer to only show the schools in
+This will filter OSM's :kbd:`multipolygons` layer to only show the schools in
 your region. You can now either:
 
 * Rename the filtered OSM layer to :kbd:`schools` and re-import the
