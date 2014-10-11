@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Andrea Gimmel <tentarei@gmail.com>, 2014
+# CarolKieser <carolinekieser@hotmail.com>, 2014
 # Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2014
 # Paulo Guerreiro, 2014
 msgid ""
@@ -11,8 +12,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-06-29 21:33+0000\n"
-"Last-Translator: Andrea Gimmel <tentarei@gmail.com>\n"
+"PO-Revision-Date: 2014-09-26 20:03+0000\n"
+"Last-Translator: CarolKieser <carolinekieser@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1011,7 +1012,7 @@ msgid ""
 "|qg| may snap to the wrong vertex, especially if you are dealing with a "
 "large number of vertices in close proximity. Set search radius too small, "
 "and it won't find anything to move."
-msgstr ""
+msgstr "Pesquisa raio é a distância que p |qg| usa para ``buscar`` para o vértice mais próximo que você está tentando mover quando você clicar no mapa. Se você não estiver dentro do raio de busca, o |qg| não vai encontrar e selecionar nenhum vértice para edição, e vai aparecer um aviso irritante para o efeito. Acerte a tolerância e o raio de busca é definido em unidades do mapa ou pixels, para que você possa encontrar o que você precisa experimente definir direito para obtê-los. Se você especificar uma tolerância muito grande, |qg| pode agarrar o vértice errado, especialmente se você está lidando com um grande número de vértices nas proximidades. Defina o raio de busca muito pequeno, e não vai encontrar outro para confundir."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:98
 msgid ""
@@ -1019,7 +1020,7 @@ msgid ""
 ":guilabel:`Digitizing` tab under :menuselection:`Settings -->` "
 "|mActionOptions| :menuselection:`Options`. This is the same place where you "
 "define the general, project- wide snapping tolerance."
-msgstr ""
+msgstr "O raio de busca de edições de vértices em unidades da camada pode ser definido no :guilabel:`guia Digitizando` em :menuselection: 'Configurações ->`|mActionOptions| :menuselection: `opções`. Este é o mesmo lugar onde você define o geral, projeto- atração tolerância."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:120
 msgid ""
@@ -1031,7 +1032,7 @@ msgid ""
 " can customize the behavior of the mouse wheel zoom using the :guilabel:`Map"
 " tools` tab under the :menuselection:`Settings -->` |mActionOptions| "
 ":menuselection:`Options` menu."
-msgstr ""
+msgstr "Enquanto a digitalização, você pode pressionar a roda do mouse para se deslocar dentro da janela principal, e você pode rolar a roda do mouse para ampliar e reduzir o mapa. Para zoom, coloque o cursor do mouse dentro da área do mapa e rodá-lo para a frente (longe de você) para aumentar o zoom; e para trás (na sua direção) para diminuir o zoom. A posição do cursor do mouse será o centro da área ampliada de interesse. Você pode personalizar o comportamento do zoom da roda do mouse usando o :guilabel: aba `Ferramentas do Mapa`  sob o :menuselection: 'Configurações ->` |mActionOptions| :menuselection: `menu de opções`."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:132
 msgid ""
@@ -1047,7 +1048,7 @@ msgid ""
 "the map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause "
 "the map display to zoom in or out without interrupting your digitizing "
 "session."
-msgstr ""
+msgstr "Você também pode usar a barra de espaço para fazer com que temporariamente os movimentos do mouse para percorrer o mapa. A: kbd: `PgUp` e: kbd:` chaves PgDown` do seu teclado fará a apresentação do mapa para ampliar ou reduzir, sem interromper a sessão de digitalização."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:146
 msgid ""
@@ -1057,7 +1058,7 @@ msgid ""
 "define |checkbox| :guilabel:`Enable topological editing`, and/or for polygon"
 " layers, you can activate the column |checkbox| :guilabel:`Avoid Int.`, "
 "which avoids intersection of new polygons."
-msgstr ""
+msgstr "Além de opções de ajuste com base em camadas, você também pode definir funcionalidades topológicas no :guilabel: menu de opções `Tirando ...` diálogo no :menuselection: `Configurações` (`Arquivo` ou:: menuselection). Aqui, você pode definir |caixa| :guilabel: 'Ativar edição` topológica, e / ou para as camadas de polígonos, você pode ativar a coluna |caixa| :guilabel: `Evite Int.`, o que evita intersecção de novos polígonos."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:158
 msgid ""
@@ -1065,7 +1066,7 @@ msgid ""
 "and maintaining common boundaries in polygon mosaics. |qg| 'detects' a "
 "shared boundary in a polygon mosaic, so you only have to move the vertex "
 "once, and |qg| will take care of updating the other boundary."
-msgstr ""
+msgstr "A opção |caixa| :guilabel: 'Ativar edição` topológica é para edição e manutenção de limites comuns em mosaicos poligonais. O |qg| 'detecta' uma fronteira compartilhada em um mosaico de polígonos, assim você só tem que mover o vértice uma vez, e o |qg| cuidará de atualizar o outro limite."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:168
 msgid ""
@@ -1076,14 +1077,14 @@ msgid ""
 "to digitize the second one such that both intersect, and |qg| then cuts the "
 "second polygon to the common boundary. The advantage is that you don't have "
 "to digitize all vertices of the common boundary."
-msgstr ""
+msgstr "A segunda opção topológica na |caixa| :guilabel: `Evite coluna Int.`, chamado :guilabel:` Evite interseções de novo polígonos`, evita sobreposições em mosaicos poligonais. É por digitalização mais rápida de polígonos adjacentes. Se você já tem um polígono, é possível com esta opção para digitalizar o segundo de tal forma que ambos se cruzam, e o |qg| corta então o segundo polígono da fronteira comum. A vantagem é que você não tem que digitalizar todos os vértices da fronteira comum."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:181
 msgid ""
 "Another option is to use |checkbox| :guilabel:`Enable snapping on "
 "intersection`. It allows you to snap on an intersection of background "
 "layers, even if there's no vertex on the intersection."
-msgstr ""
+msgstr "Outra opção é usar |caixa| :guilabel: `Habilitar encaixe em intersecção`. Ele permite que você encaixe em uma intersecção de camadas de fundo, mesmo se não há nenhum vértice na interseção."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:193
 msgid ""
@@ -1091,7 +1092,7 @@ msgid ""
 "accidentally editing a layer if there is a slip of the mouse. However, you "
 "can choose to edit any layer as long as the data provider supports it, and "
 "the underlying data source is writable (i.e., its files are not read-only)."
-msgstr ""
+msgstr "Por padrão, |qg| carrega camadas de leitura. Esta é uma salvaguarda para evitar que acidentalmente a edição de uma camada se houver um deslize do mouse. No entanto, você pode optar por editar qualquer camada, enquanto o provedor de dados suporta, e a fonte de dados subjacente é gravável (ou seja, seus arquivos não são somente leitura)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:199
 msgid ""
@@ -1100,14 +1101,14 @@ msgid ""
 ":ref:`sec_advanced_edit`. You can select and unselect both under "
 ":menuselection:`Settings --> Toolbars -->`. Using the basic digitizing "
 "tools, you can perform the following functions:"
-msgstr ""
+msgstr "Em geral, as ferramentas de edição vetorial camadas são divididas em um digitalizador e uma barra de ferramentas de digitalização avançada, descrito na seção: ref: `sec_advanced_edit`. Você pode selecionar e desmarcar tanto em :menuselection: `Configurações --> Barras de ferramentas -->`. Usando as ferramentas básicas de digitalização, você pode realizar as seguintes funções:"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:225
 msgid ""
 "All editing sessions start by choosing the |mActionToggleEditing| "
 ":sup:`Toggle editing` option. This can be found in the context menu after "
 "right clicking on the legend entry for a given layer."
-msgstr ""
+msgstr "Todas as sessões de edição começa escolhendo o |mActionToggleEditing| :sup: `opção edição` alternância. Isto pode ser encontrado no menu de contexto depois botão direito sobre a entrada de legenda para uma determinada camada."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:229
 msgid ""
@@ -1116,7 +1117,7 @@ msgid ""
 "toolbar to start or stop the editing mode. Once the layer is in edit mode, "
 "markers will appear at the vertices, and additional tool buttons on the "
 "editing toolbar will become available."
-msgstr ""
+msgstr "Alternativamente, você pode usar a opção :index: `Alternar Edição` | mActionToggleEditing |: sup:` botão edição` alternância na barra de ferramentas de digitalização para iniciar ou parar o modo de edição. Uma vez que a camada está em modo de edição, marcadores aparecerá nos vértices, e botões de ferramentas adicionais na barra de ferramentas de edição ficará disponível."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:259
 msgid ""
@@ -1126,13 +1127,13 @@ msgid ""
 ":menuselection:`Settings --> Options` menu, you can also activate |checkbox|"
 " :guilabel:`Suppress attributes pop-up windows after each created feature` "
 "and |checkbox| :guilabel:`Reuse last entered attribute values`."
-msgstr ""
+msgstr "A janela de atributo aparecerá, permitindo que você insira as informações para a nova feição. Figure_edit_2_ mostra definir atributos para um novo rio fictício no Alasca. No :guilabel: `menu de Digitalização` sob o :menuselection: 'Configurações -> opções` menu, você também pode ativar | caixa |: guilabel:` Repressão atributos janelas pop-up após cada feição` criado e | caixa |: guilabel: `Reuse último entrou atributo Valor-."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:278
 msgid ""
 "With the |mActionMoveFeature| :sup:`Move Feature(s)` icon on the toolbar, "
 "you can move existing features."
-msgstr ""
+msgstr "Com o ícone |mActionMoveFeature| :sup: `Mover Feição (ões)`  na barra de ferramentas, você pode mover as feições existentes."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:285
 msgid ""
@@ -1141,7 +1142,7 @@ msgid ""
 ":guilabel:`Enter Attribute Values` or vice versa. If you need to do so, you "
 "should edit the attributes in a second step within the :guilabel:`Attribute "
 "table` dialog."
-msgstr ""
+msgstr "Para a edição, os tipos de atributos são validados durante a entrada. Devido a isso, não é possível inserir um número em uma coluna de texto na caixa de diálogo: guilabel: `Digite Atributo Valor-ou vice-versa. Se você precisar fazer isso, você deve editar os atributos em uma segunda etapa dentro de: guilabel: `diálogo table` atributo."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:296
 msgid ""
@@ -1152,7 +1153,7 @@ msgid ""
 " digitization may be withdrawn for all selected layers. If you want to stop "
 "editing the selected layers, |mActionCancelEdits| :guilabel:`Cancel for "
 "Selected Layer(s)` is an easy way."
-msgstr ""
+msgstr "Esta nova funcionalidade permite a digitalização de múltiplas camadas. Escolha |mActionFileSaveAs| :guilabel: 'Salve para Camada Selecionada` para salvar todas as alterações feitas em várias camadas. Você também tem a oportunidade de |mActionRollbackEdits| :guilabel: `Reversão para camada selecionada`, de forma que a digitalização pode ser retirada para todas as camadas selecionadas. Se você quiser parar de editar as camadas selecionadas, |mActionCancelEdits| :guilabel: `Cancelar para camada selecionada (s)` é uma maneira fácil."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:304
 msgid ""
@@ -1170,7 +1171,7 @@ msgid ""
 "This tool is, unlike other tools in |qg|, persistent, so when some operation"
 " is done, selection stays active for this feature and tool. If the node tool"
 " is unable to find any features, a warning will be displayed."
-msgstr ""
+msgstr "Para camadas baseadas em shapefile, bem como tabelas SpatialLite, PostgreSQL / PostGIS, MSSQL Spatial e Oracle Spatial, o |mActionNodeTool| :sup: `Ferramenta de Nós` fornece capacidades de manipulação de vértices de feições semelhantes aos programas de CAD. É possível simplesmente selecionar vários vértices de uma vez e para se mover, adicionar ou excluí-los por completo. A ferramenta nó também trabalha com 'on the fly' projeção ligado, e ele suporta a edição topológica de feições. Esta ferramenta é, ao contrário de outras ferramentas no |qg|, persistente, por isso, quando alguma operação for feito, a seleção permanece ativo por essa ferramenta de feição. Se a ferramenta de nós não é capaz de encontrar todas as feições, um aviso será exibido."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:321
 msgid ""
@@ -1179,7 +1180,7 @@ msgid ""
 ":guilabel:`Search Radius:` |selectnumber| to a number greater than zero "
 "(i.e., 10). Otherwise, |qg| will not be able to tell which vertex is being "
 "edited."
-msgstr ""
+msgstr "É importante definir a propriedade: menuselection: 'Configurações --> `|mActionOptions|: menuselection:`Opções --> Digitalização -->` :guilabel:` Pesquisa Raio: `|selectnumber| para um número maior que zero (isto é, 10). Caso contrário, |qg| não será capaz de dizer qual vértice está sendo editado."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:330
 msgid ""
@@ -1188,7 +1189,7 @@ msgid ""
 "|mActionOptions| :menuselection:`Options` from the :menuselection:`Settings`"
 " menu, click on the :guilabel:`Digitizing` tab and select the appropriate "
 "entry."
-msgstr ""
+msgstr "A versão atual do |qg| suporta três tipos de marcadores de vértice: 'círculo semi-transparente', 'Cruz' e 'Nenhum'. Para alterar o estilo de marcador, escolha |mActionOptions| :menuselection: `opções` do menu de :menuselection: `Configurações`, clique na guia :guilabel: `Digitalização` e selecione a entrada apropriada."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:351
 msgid ""
@@ -1200,7 +1201,7 @@ msgid ""
 ":kbd:`Ctrl` or :kbd:`Shift` when clicking to toggle the selection state of "
 "vertices (vertices that are currently unselected will be selected as usual, "
 "but also vertices that are already selected will become unselected)."
-msgstr ""
+msgstr "**Selecionando vértices**: Você pode selecionar vértices, clicando sobre eles um de cada vez, clicando em uma borda para selecionar os vértices em ambas as extremidades, ou clicando e arrastando um retângulo em torno de alguns vértices. Quando um vértice é selecionado, sua cor muda para azul. Para adicionar mais vértices para a seleção atual, mantenha pressionada a :kbd: `tecla Ctrl` enquanto clica. Mantenha pressionado :kbd: `Ctrl` ou :kbd:`Shift` ao clicar para alternar o estado de seleção de vértices (vértices que estão atualmente desmarcada serão selecionados como de costume, mas também vértices que já estão selecionados será desmarcada)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:359
 msgid ""
@@ -1234,7 +1235,7 @@ msgid ""
 "we need to do some work on a new layer but only need one or two lakes, not "
 "the 5,000 on our ``big_lakes`` layer. We can create a new layer and use "
 "copy/paste to plop the needed lakes into it."
-msgstr ""
+msgstr "No entanto, nesta versão do |qg|, feições de texto de fora do |qg| não pode ser colado a uma camada dentro de |qg|. Em que a função copiar e colar vir a calhar? Bem, acontece que você pode editar mais de uma camada de cada vez e funcionalidades copiar / colar entre as camadas. Por que iríamos querer fazer isso? Diga o que precisamos fazer algum trabalho em uma nova camada, mas só precisa de um ou dois lagos, e não a 5000 em nosso `camada` big_lakes``. Podemos criar uma nova camada e use copiar / colar para plop os lagos necessários para ele."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:400
 msgid "As an example, we will copy some lakes to a new layer:"
@@ -1248,7 +1249,7 @@ msgid ""
 "layer, it doesn't matter how you design the fields and data types. If you "
 "want to make sure everything - the feature and its attributes - gets copied,"
 " make sure the schemas match."
-msgstr ""
+msgstr "O que acontece se as camadas de origem e de destino têm esquemas diferentes (nomes de campo e tipos não são a mesma coisa)? |qg| preenche o que corresponde e ignora o resto. Se você não se importa com os atributos que está sendo copiado para a camada de destino, não importa como você projeta os campos e tipos de dados. Se você quer ter certeza de tudo - a feição e seus atributos - é copiada, verifique se o jogo esquemas."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
 msgid ""
@@ -1257,7 +1258,7 @@ msgid ""
 "if the destination layer is a different projection, then |qg| cannot "
 "guarantee the geometry is identical. This is simply because there are small "
 "rounding-off errors involved when converting between projections."
-msgstr ""
+msgstr "Se as camadas de fonte e de destino usar a mesma projecção, em seguida, as feições coladas terão geometria idêntica à da camada de fonte. No entanto, se a camada de destino é uma projeção diferente, então |qg| não pode garantir a geometria é idêntica. Isto é simplesmente porque existem erros pequenos arredondamentos envolvidos na conversão entre projeções."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:439
 msgid ""
@@ -1268,7 +1269,7 @@ msgid ""
 "it back, giving us a one-level undo capability. Cut, copy, and paste work on"
 " the currently selected features, meaning we can operate on more than one at"
 " a time."
-msgstr ""
+msgstr "A ferramenta |mActionEditCut| :sup: `Cortar feições` na barra de ferramentas de digitalização também pode ser usado para excluir recursos. Isso exclui efetivamente a feição, mas também coloca-lo em uma \"área de transferência espacial\". Então, cortamos a feição para excluir. Poderíamos, então, usar a ferramenta |mActionEditPaste| :sup: `Colar Feições` para colocá-lo de volta, dando-nos a capacidade de desfazer de um nível. Recortar, copiar e colar o trabalho sobre as feições selecionadas no momento, o que significa que pode operar em mais de um de cada vez."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:449
 msgid ""
@@ -1280,14 +1281,14 @@ msgid ""
 "mode off with |mActionToggleEditing| :sup:`Toggle editing` (or quit |qg| for"
 " that matter), you are also asked if you want to save your changes or "
 "discard them."
-msgstr ""
+msgstr "Quando uma camada está no modo de edição, as alterações permanecem na memória de |qg|. Portanto, eles não estão comprometidos / salvos imediatamente à fonte de dados ou disco. Se você quiser salvar as edições da camada atual, mas quero continuar editando sem sair do modo de edição, você pode clicar no botão |mActionSaveEdits| :sup: `Salvar Camadas Editadas`. Quando você ativar o modo de edição off com |mActionToggleEditing| :sup: `editando` Alternar (ou sair |qg| para que o assunto), você também perguntado se você deseja salvar as alterações ou descartá-las."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:457
 msgid ""
 "If the changes cannot be saved (e.g., disk full, or the attributes have "
 "values that are out of range), the |qg| in-memory state is preserved. This "
 "allows you to adjust your edits and try again."
-msgstr ""
+msgstr "Se as alterações não podem ser salvas (por exemplo, disco cheio, ou os atributos têm valores que estão fora de alcance), o estado em memória do |qg| é preservado. Isso permite que você ajuste as suas edições e tente novamente."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:491
 msgid "|mActionFillRing|"
@@ -1314,7 +1315,7 @@ msgid ""
 "This widget is not displayed by default; it can be displayed by right "
 "clicking on the toolbar and activating the Undo/Redo checkbox. Undo/Redo is "
 "however active, even if the widget is not displayed."
-msgstr ""
+msgstr "As ferramentas |mActionUndo| :sup: `Desfazer` e |mActionRedo| :sup:`Refazer` permitem desfazer ou refazer operações de edição de vetores. Há também uma tela acoplável, que mostra toda o histórico de todas operações desfazer / refazer (veja Figure_edit_3_). Este elemento não é exibido por padrão; ele pode ser exibido com um clique direito na barra de ferramentas e ativando a opção Desfazer / Refazer. Desfazer / Refazer é no entanto ativo, mesmo que a tela não esteja sendo exibida."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:526
 msgid ""
@@ -1322,14 +1323,14 @@ msgid ""
 "the state before the reverted operation happened. Changes other than normal "
 "vector editing operations (for example, changes done by a plugin), may or "
 "may not be reverted, depending on how the changes were performed."
-msgstr ""
+msgstr "Quando Desfzer é atingido, o estado de todas as feições e atributos são revertidos para o estado antes da reversão da operação acontecer. Outras mudanças para além das operações normais de edição vetorial (por exemplo, alterações feitas por um complemento), podem ou não podem serem revertidas, dependendo de como as mudanças foram realizadas."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:531
 msgid ""
 "To use the undo/redo history widget, simply click to select an operation in "
 "the history list. All features will be reverted to the state they were in "
 "after the selected operation."
-msgstr ""
+msgstr "Para usar a tela histórico de desfazer / refazer, basta clicar para selecionar uma operação na lista de histórico. Todas as feições serão revertidas para o estado em que estavam depois da operação selecionada."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:538
 msgid ""
@@ -1340,7 +1341,7 @@ msgid ""
 " you selected multiple features, the rotation anchor point will be the "
 "common center of the features. Press and drag the left mouse button in the "
 "desired direction to rotate the selected features."
-msgstr ""
+msgstr "Use |mActionRotateFeature| :sup:`Rotação de feição(s)` para rodar uma ou várias feições selecionadas na tela do mapa. Você primeiro precisa selecionar as feições e, em seguida, pressione o ícone |mActionRotateFeature| :sup:`Rotação de feição(s)`. O centro de gravidade da feição(s) aparece e será o ponto de ancoragem da rotação. Se você tiver selecionado várias feições, o ponto de ancoragem da rotação será o centro comum das feições. Pressione e arraste o botão esquerdo do mouse na direção desejada para girar as feições selecionadas."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:547
 msgid ""
@@ -1352,7 +1353,7 @@ msgid ""
 "Release the :kbd:`Ctrl` button when the desired rotation anchor point is "
 "reached. Now, press and drag the left mouse button in the desired direction "
 "to rotate the selected feature(s)."
-msgstr ""
+msgstr "Também é possível criar um ponto de ancoragem de rotação definido pelo usuário em torno do qual a feição selecionada irá rodar. Selecione as feições para girar e ativar a ferramenta |mActionRotateFeature| :sup: `Rotação de feição(s)`. Pressione e segure o botão :kbd: `Ctrl` e mova o ponteiro do mouse (sem pressionar o botão do mouse) para o local onde deseja que a âncora de rotação seja movida. Solte o botão :kbd:`Ctrl` no ponto de ancoragem de rotação desejada. Agora, pressione e arraste o botão esquerdo do mouse na direção desejada para girar a função selecionada (s)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:557
 msgid ""
@@ -1363,7 +1364,7 @@ msgid ""
 "shape to show how the feature is being simplified. Click **[OK]** to store "
 "the new, simplified geometry. If a feature cannot be simplified (e.g. multi-"
 "polygons), a message will appear."
-msgstr ""
+msgstr "A ferramenta |mActionSimplify| :sup:`Simplificar feição` permite reduzir o número de vértices de uma feição, desde que a geometria não mude. Primeiro, selecione uma feição. Ela será realçada por um elástico vermelho e uma barra aparecerá. Movendo o controle deslizante, a banda de borracha vermelha vai mudar a sua forma de mostrar como a feição está sendo simplificada. Clique **[OK]**, para armazenar a nova geometria simplificada. Se uma feição não pode ser simplificada (por exemplo, multi-polígonos), uma mensagem aparecerá."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:568
 msgid ""
@@ -1372,14 +1373,14 @@ msgid ""
 "possible to digitize further polygons that will occur as a 'hole', so only "
 "the area between the boundaries of the outer and inner polygons remains as a"
 " ring polygon."
-msgstr ""
+msgstr "Você pode criar :índice:`polígonos anéis` usando o ícone |mActionAddRing| :sup:`Adicionar Anel` na barra de ferramentas. Isto significa que no interior de uma área existente, é possível digitalizar outros polígonos que ocorrem como um \"orifício\", de modo que apenas a zona entre as fronteiras dos polígonos exterior e interior continua sendo um anel poligonal."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:577
 msgid ""
 "You can |mActionAddPart| :sup:`add part` polygons to a selected "
 ":index:`multipolygon`. The new part polygon must be digitized outside the "
 "selected multi-polygon."
-msgstr ""
+msgstr "Você pode |mActionAddPart| :sup:`adicionar parte` no polígonos selecionado :índice:`multipolígono`. A nova parte do polígono deve ser digitadas fora do multi-polígono selecionado."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:584
 msgid ""
@@ -1387,7 +1388,7 @@ msgid ""
 " a polygon and add a new feature to the layer at the same time. Thus you "
 "need not first use the |mActionAddRing| :sup:`Add Ring` icon and then the "
 "|mActionCapturePolygon| :sup:`Add feature` function anymore."
-msgstr ""
+msgstr "Você pode usar a função |mActionFillRing| :sup:`Preenchimento Anel` para adicionar um toque a um polígono e adicionar uma nova feição para a camada ao mesmo tempo. Assim, você não precisa usar primeiro o ícone |mActionAddRing| :sup:`Adicionar Anel` e então a função a mais |mActionCapturePolygon| :sup:`Adicionar feição`."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:592
 msgid ""
@@ -1396,7 +1397,7 @@ msgid ""
 "It doesn't change anything when it is used on the outer ring of the polygon."
 " This tool can be used on polygon and multi-polygon features. Before you "
 "select the vertices of a ring, adjust the vertex edit tolerance."
-msgstr ""
+msgstr "A ferramenta | mActionDeleteRing |: sup: `Excluir Anel` permite excluir polígonos anel dentro de uma área existente. Esta ferramenta só funciona com camadas de polígonos. Isso não muda nada quando ele é usado no anel externo do polígono. Esta ferramenta pode ser utilizada em polígonos e multi-funções poligonais. Antes de selecionar os vértices de um anel, ajuste a tolerância na edição do vértice."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:601
 msgid ""
@@ -1406,7 +1407,7 @@ msgid ""
 "untouched. This tool works with all multi-part geometries: point, line and "
 "polygon. Before you select the vertices of a part, adjust the vertex edit "
 "tolerance."
-msgstr ""
+msgstr "A ferramenta | mActionDeletePart |: sup: `Excluir Parte` permite apagar partes de multifeições (por exemplo, para excluir os polígonos de uma feição de multi-polígono). Não vai apagar a última parte da feição; esta última parte vai ficar intocada. Esta ferramenta funciona com todas as geometrias multi-parte: ponto, linha e polígono. Antes de selecionar os vértices de um papel, ajustar a tolerância de edição do vértice."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:610
 msgid ""
@@ -1417,7 +1418,7 @@ msgid ""
 " to replace smaller parts of a polygon, not for major overhauls, and the "
 "reshape line is not allowed to cross several polygon rings, as this would "
 "generate an invalid polygon."
-msgstr ""
+msgstr "Você pode alterar feições de linha e polígono usando o ícone | mActionReshape |: sup: `Remodelar Feições` na barra de ferramentas. Ele substitui a linha ou polígono parte da primeira para a última intersecção com a linha original. Com polígonos, às vezes isso pode levar a resultados indesejados. É útil principalmente para substituir partes menores de um polígono, não para grandes reparações, e a linha de remodelar não é permitido atravessar vários anéis de polígonos, pois isso geraria um polígono inválido."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:628
 msgid ""
@@ -1425,7 +1426,7 @@ msgid ""
 "closed line. So, the point that is represented 'twice' will not be the same "
 "any more. This may not be a problem for most applications, but it is "
 "something to consider."
-msgstr ""
+msgstr "A ferramenta de mudança de forma pode alterar a posição inicial de um anel ou de uma linha poligonal fechada. Assim, o ponto que está representada 'duas vezes' não será o mesmo mais. Isto pode não ser um problema para a maioria das aplicações, mas é algo a considerar."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:637
 msgid ""
@@ -1439,7 +1440,7 @@ msgid ""
 "make the |mActionOffsetCurve| :sup:`Offset Curve` tool active and drag the "
 "cross to the desired distance. Your changes may then be saved with the "
 "|mActionSaveEdits|:sup:`Save Layer Edits` tool."
-msgstr ""
+msgstr "A ferramenta | mActionOffsetCurve |: sup: `Curva de delocamento` cria mudanças paralelas de camadas de linha. O instrumento pode ser aplicado à camada editado (as geometrias são modificados) ou também para as camadas de fundo (no caso em que se cria cópias das linhas / anéis e adiciona-los para a camada do editada). É, assim, ideal para a criação de camadas de linha de distância. O deslocamento é mostrado no canto inferior esquerdo da barra de tarefas. Para criar uma mudança de uma camada de linha, você deve primeiro entrar em modo de edição e, em seguida, selecione a função. Você pode usar a ferramenta | mActionOffsetCurve |: sup: ` Curva de deslocamento`  ativa e arraste a cruz para a distância desejada. As alterações podem ser salvas com a ferramenta | mActionSaveEdits |: sup: `Salvar Edições da Camada`."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:659
 msgid "Split parts"
@@ -1450,13 +1451,13 @@ msgid ""
 "In |qg| 2.0 it is now possible to split the parts of a multi part feature so"
 " that the number of parts is increased. Just draw a line across the part you"
 " want to split using the |mActionSplitParts| :sup:`Split Parts` icon."
-msgstr ""
+msgstr "No |qg| 2.0, é possível dividir as partes de uma feição de multi parte de modo a que o número de peças é aumentado. Basta desenhar uma linha em toda a parte que você quer dividir com o ícone |mActionSplitParts| :sup:`Dividir Partes`."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:668
 msgid ""
 "The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows you to"
 " merge features that have common boundaries and the same attributes."
-msgstr ""
+msgstr "A  ferramenta | mActionMergeFeatures |: sup: `Fusão de feições selecionadas` permite mesclar características que têm fronteiras comuns e os mesmos atributos."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:676
 msgid ""
@@ -1468,7 +1469,7 @@ msgid ""
 " button. Now |qg| asks you which attributes are to be applied to all "
 "selected objects. As a result, all selected objects have the same attribute "
 "entries."
-msgstr ""
+msgstr "A ferramenta |mActionMergeFeatureAttributes|  :sup: `Mesclar Atributos das Feições` escolhidas permite :índice:`mesclar atributos de feições` com fronteiras comuns fundir e atributos sem a fusão de suas fronteiras. Primeiro, selecione várias feições ao mesmo tempo. Em seguida, pressione o botão mActionMergeFeatureAttributes | |: sup: `Mesclar Atributos de feições selecionadas`. Agora |qg| pede-lhe os atributos que devem ser aplicados a todos os objetos selecionados. Como resultado, todos os objetos selecionados têm as mesmas entradas de atributos."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:691
 msgid ""
@@ -1480,7 +1481,7 @@ msgid ""
 "marker' and choose :guilabel:`Data defined properties ...`. Activate "
 "|checkbox| :guilabel:`Angle` and choose 'rotation' as field. Without these "
 "settings, the tool is inactive."
-msgstr ""
+msgstr "| mActionRotatePointSymbols |: sup: Rodar Ponto Símbolos permite alterar a rotação dos símbolos de pontos na tela do mapa. Você deve primeiro definir uma coluna de rotação da tabela de atributos da camada de ponto no: guilabel: 'menu Avançado' do: guilabel: 'menu Estilo' do: guilabel: 'Propriedades da Camada '. Além disso, você terá que ir para o 'SVG marcador' e escolha: guilabel: Dados das propriedades definidas ... `. Ative | caixa |: guilabel: Ângulo e escolha a opção 'rotação' como campo. Sem essas definições, a ferramenta está inativa."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:710
 msgid ""
@@ -1488,7 +1489,7 @@ msgid ""
 "it, holding the left mouse button pressed. A red arrow with the rotation "
 "value will be visualized (see Figure_edit_4_). When you release the left "
 "mouse button again, the value will be updated in the attribute table."
-msgstr ""
+msgstr "Para alterar a rotação, selecione um recurso ponto na tela do mapa e gire-o, segurando o botão esquerdo do mouse pressionado. A seta vermelha com o valor de rotação será visualizado (ver Figura_editada_4_). Quando você soltar o botão esquerdo do mouse novamente, o valor será atualizado na tabela de atributos."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:726
 msgid ""
@@ -1496,7 +1497,7 @@ msgid ""
 "new GPX layers. Creation of a new GRASS layer is supported within the GRASS "
 "plugin. Please refer to section :ref:`creating_new_grass_vectors` for more "
 "information on creating GRASS vector layers."
-msgstr ""
+msgstr "| QG | permite que você crie novas camadas de arquivo, novas camadas SpatiaLite e novas camadas GPX. Criação de uma nova camada de GRASS é suportado dentro do plugin GRASS. Consulte a seção: ref: 'criação_novo_vetor_GRASS' para mais informações sobre como criar camadas vetoriais GRASS."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:734
 msgid ""
@@ -1505,7 +1506,7 @@ msgid ""
 ":menuselection:`Layer` menu. The :guilabel:`New Vector Layer` dialog will be"
 " displayed as shown in Figure_edit_5_. Choose the type of layer (point, line"
 " or polygon) and the CRS (coordinate reference system)."
-msgstr ""
+msgstr "Para criar uma nova camada de forma para edição, escolha: seleção de menu: `Novo ->` | mActionNewVectorLayer |: seleção de menu `Novo Shapefile Camada ...` do: menu de seleção: `menu de Camada`. A: guilabel: `diálogo Novo Vetor de Camada` será exibido como mostrado na Figure_editada_5_. Escolha o tipo de camada (ponto, linha ou polígono) e CRS (sistema de coordenadas de referência)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:740
 msgid ""
@@ -1528,7 +1529,7 @@ msgid ""
 "you specify. Once the layer has been created, it will be added to the map, "
 "and you can edit it in the same way as described in section "
 ":ref:`sec_edit_existing_layer` above."
-msgstr ""
+msgstr "Para concluir a criação da nova camada arquivo shape, adicione os atributos desejados clicando no botão ** [Adicionar à lista de atributos] **  e especificar um nome e tipo para o atributo. A primeira coluna 'código' é adicionado como padrão, mas pode ser removido, se não quiser. Apenas: guilabel: `Tipo: real` | String |,: guilabel:` Tipo: inteiro' | String |,: guilabel: `Tipo: string` | String | e: guilabel:` Tipo: data` | String | atributos são suportados. Além disso e de acordo com o tipo de atributo, você também pode definir a largura e a precisão da nova coluna de atributo. Quando estiver satisfeito com os atributos, clique ** [OK] ** e forneça um nome para o arquivo shape. | QG | irá adicionar automaticamente um: arquivo: `.shp` extensão para o nome que você especificar. Uma vez que a camada foi criado, ele será adicionado ao mapa, e você pode editá-lo da mesma forma como descrito na seção: ref: `sec_edit_existing_layer` acima."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:789
 msgid ""
@@ -1538,7 +1539,7 @@ msgid ""
 "new layer, define the layer type, and specify the coordinate reference "
 "system with **[Specify CRS]**. If desired, you can select |checkbox| "
 ":guilabel:`Create an autoincrementing primary key`."
-msgstr ""
+msgstr "A primeira etapa consiste em selecionar um banco de dados SpatiaLite existente ou criar uma nova base de dados SpatiaLite. Isso pode ser feito com o botão de navegação | browsebutton | à direita do campo de banco de dados. Em seguida, adicione um nome para a nova camada, definir o tipo de camada, e especificar o sistema de referência de coordenadas com ** [Especificar CRS] **. Se desejar, você pode selecionar | caixa |: guilabel: 'Criar uma chave` primária auto incrementol."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:795
 msgid ""
@@ -1548,7 +1549,7 @@ msgid ""
 "with the attributes, click **[OK]**. |qg| will automatically add the new "
 "layer to the legend, and you can edit it in the same way as described in "
 "section :ref:`sec_edit_existing_layer` above."
-msgstr ""
+msgstr "Para definir uma tabela de atributos para a nova camada SpatiaLite, adicione os nomes das colunas de atributos que você deseja criar com o tipo de coluna correspondente e clique no botão ** [Adicionar à lista de atributos] **. Quando estiver satisfeito com os atributos, clique ** [OK] **. | QG | adiciona automaticamente a nova camada com a legenda, e você pode editá-lo da mesma forma como descrito na seção: ref: `sec_edit_existing_layer` acima."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:802
 msgid ""
@@ -1562,7 +1563,7 @@ msgid ""
 ":menuselection:`Plugins -->` |mActionShowPluginManager| "
 ":menuselection:`Plugin Manager...` opens the Plugin Manager Dialog. Activate"
 " the |checkbox| :guilabel:`GPS Tools` checkbox."
-msgstr ""
+msgstr "Para criar um novo arquivo GPX, você precisa carregar o plugin GPS em primeiro lugar. : menu de seleção: `Plugins ->` | mActionShowPluginManager |: menu de seleção: 'Gerenciador de Plugin ...` abre o Gerenciador de diálogo de Plugin. Ative a | caixa |: guilabel: 'Ferramentas GPS'."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:815
 msgid ""
@@ -1570,7 +1571,7 @@ msgid ""
 ":menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` "
 "menu. In the :guilabel:`Save new GPX file as` dialog, you can choose where "
 "to save the new GPX layer."
-msgstr ""
+msgstr "Quando este plugin é carregado, escolha: menu de seleção: `Novo ->` | icon_newgpx |: menu de seleção: 'Criar nova camada GPX ... `do: menu de seleção:` menu de Camada`. No: guilabel: 'Salvar como novo arquivo GPX`, você pode escolher onde deseja salvar a nova camada GPX."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:826
 msgid ""
@@ -1578,7 +1579,7 @@ msgid ""
 " in the table represents one map feature, and each column contains a "
 "particular piece of information about the feature. Features in the table can"
 " be searched, selected, moved or even edited."
-msgstr ""
+msgstr "O: índice: `atributo da tabela` exibe características de uma camada selecionada. Cada linha na tabela representa um recurso de mapa, e cada coluna contém uma determinada parte das informações sobre o recurso. Recursos na tabela pode ser pesquisado, selecionado, movido ou mesmo editadas."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:831
 msgid ""
@@ -1589,14 +1590,14 @@ msgid ""
 " |mActionOpenTable| :menuselection:`Open Attribute Table` from the drop-down"
 " menu, and to click on the |mActionOpenTable| :guilabel:`Open Attribute "
 "Table` button in the Attributes toolbar."
-msgstr ""
+msgstr "Para abrir a tabela de atributos de uma camada do vetor, fazer a camada ativa, clicando sobre ela na área do mapa legenda. Então, a partir do principal: menu de seleção: `menu de Camada`, escolha | mActionOpenTable |: menu de seleção: 'Abrir Tabela de Atributos`. Também é possível fazer um clique direto sobre a camada e escolha | mActionOpenTable |: menu de seleção: 'Abrir Tabela de Atributos` a partir do menu suspenso, e clique no | mActionOpenTable |: guilabel: `botão Abrir Tabela de Atributos` na barra de ferramentas."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:839
 msgid ""
 "This will open a new window that displays the feature attributes for the "
 "layer (figure_attributes_1_). The number of features and the number of "
 "selected features are shown in the attribute table title."
-msgstr ""
+msgstr "Isto irá abrir uma nova janela que exibe os atributos do recurso para a camada (figura_atributos_1_). O número de recursos e o número de recursos selecionados são mostrados no título da tabela de atributos."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:879
 msgid ""
@@ -1605,7 +1606,7 @@ msgid ""
 "Select the field (column) on which the search should be performed from the "
 "drop-down menu, and hit the **[Apply]** button. Then, only the matching "
 "features are shown in the attribute table."
-msgstr ""
+msgstr "Para uma **simples busca por atributos** em apenas uma coluna, escolha o: menu de seleção: `filtrar Coluna ->` a partir do menu no canto inferior esquerdo. Selecione o campo (coluna) em que a pesquisa deve ser realizada a partir do menu suspenso, e acertar o botão **[Aplicar]** . Então, apenas os recursos relacionados são mostrados na tabela de atributos."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:885
 msgid ""
@@ -1621,14 +1622,14 @@ msgid ""
 "query. Double-click the field 'TYPE_2' and also **[Load all unique values]**"
 " . From the list, choose and double-click 'Borough'. In the "
 ":guilabel:`Expression` field, the following query appears:"
-msgstr ""
+msgstr "Para fazer uma seleção, você tem que usar o | mIconExpressionSelect |: sup: SELECIONAR recursos usando o ícone Expressão` no topo da tabela de atributos. | mIconExpressionSelect |: sup: SELECIONAR recursos usando uma Expressão` permite definir um subconjunto de uma tabela usando um: guilabel: `Lista de Funções` como no | mActionCalculateField |: sup:` Campo Calculadora` (veja: ref: `vetor_campo_calculadora`). Os resultados da consulta podem ser salvos como uma nova camada vetorial. Por exemplo, se você quiser encontrar regiões que são bairros de: arquivo: `regiões.shp` do | QG | dados de exemplo, você tem que abrir o: guilabel:` Campos e Valor-menu e escolher o campo que você deseja consultar. Clique duas vezes no campo 'TIPO_2' e também ** [Carregar todos os valores únicos] **. A partir da lista, selecione e clique duas vezes em Cidade. No: guilabel: `campo Expressão`, a consulta a seguir será exibida"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:901
 msgid ""
 "Here you can also use the :menuselection:`Function list --> Recent "
 "(Selection)` to make a selection that you used before. The expression "
 "builder remembers the last 20 used expressions."
-msgstr ""
+msgstr "Aqui você também pode usar o: menu de seleção: `lista de Funções -> recente (Seleção)` para fazer uma seleção que você usou antes. O construtor de expressão se lembra dos últimos 20 expressões usadas."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:905
 msgid ""
@@ -1637,7 +1638,7 @@ msgid ""
 "status bar of the main window. For searches that display only selected "
 "features on the map, use the Query Builder described in section "
 ":ref:`vector_query_builder`."
-msgstr ""
+msgstr "As linhas correspondentes serão selecionados, e o número total de linhas correspondentes será exibida na barra de título da tabela de atributos, bem como na barra de status da janela principal. Para pesquisas que apresentam características só selecionadas no mapa, use o Construtor de Consultas descrito na seção: ref: `vetor_consultas_construtor`."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:913
 msgid ""
@@ -1719,7 +1720,7 @@ msgid ""
 " can copy the information without vector geometries if you deactivate "
 ":menuselection:`Settings --> Options -->` Data sources menu |checkbox| "
 ":guilabel:`Copy geometry in WKT representation from attribute table`."
-msgstr ""
+msgstr "Se você quiser usar dados de atributos em programas externos (como Excel), use o | mActionCopySelected |: sup: `Copiar as linhas selecionadas para o botão clipe. Você pode copiar as informações sem geometrias vetoriais se você desativar: menu de seleção: `Configurações -> Opções ->` Fontes de dados do menu | caixa |: guilabel: `Copiar geometria na representação WKT de atributo tabela`."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:946
 msgid ""
@@ -1729,7 +1730,7 @@ msgid ""
 "selection as -->` to define the name of the output file, its format and CRS "
 "(see section :ref:`label_legend`). It is also possible to specify OGR "
 "creation options within the dialog."
-msgstr ""
+msgstr "Os recursos selecionados podem ser salvos como qualquer formato vetorial OGR e também transformado em outro sistema de referência de coordenadas (CRS). Basta abrir o menu com o  botão direito do mouse e clique em: menu de seleção: 'Salvar seleção como -> `para definir o nome do arquivo de saída, seu formato e CRS (ver secção: ref:` rótulo_legenda`). Também é possível especificar opções de criação de OGR no diálogo."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:954
 msgid "Paste into new layer"
@@ -1742,13 +1743,13 @@ msgid ""
 "clipboard, and then paste them into a new layer using :menuselection:`Edit "
 "--> Paste Features as` and choosing :menuselection:`New vector layer` or "
 ":menuselection:`New memory layer`."
-msgstr ""
+msgstr "Recursos que estão na área de transferência pode ser colado em uma nova camada. Para fazer isso, primeiro faça uma camada editável. Selecione algumas características, copiá-los para a área de transferência e colá-los em uma nova camada usando: menu de seleção: `Editar -> Colar Características` e escolher: menu de seleção:` Nova Camada` no vetor ou: menu de seleção: `Nova Camada` na memória ."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:963
 msgid ""
 "This applies to features selected and copied within |qg| and also to "
 "features from another source defined using well-known text (WKT)."
-msgstr ""
+msgstr "Isso se aplica a recursos selecionados e copiados dentro | QG | e também para recursos de outra fonte definida de acordo com o texto conhecido (WKT)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:971
 msgid ""
@@ -1759,7 +1760,7 @@ msgid ""
 "you will see it in the legend field. It can be opened with the "
 "|mActionOpenTable| :sup:`Open Attribute Table` tool and is then editable "
 "like any other layer attribute table."
-msgstr ""
+msgstr "| QG | permite também carregar tabelas não-espaciais. Isso inclui atualmente tabelas suportadas pelo OGR e texto delimitado, bem como o PostgreSQL, MYSQL e provedor Oracle. As tabelas podem ser usadas para pesquisas de campo ou apenas geralmente visualizado e editado usando a exibição de tabela. Quando você carregar a tabela, você vai vê-lo no campo legenda. Pode ser aberto com o | mActionOpenTable |: sup: `Abra Tabela de Atributos nas ferramentas` e é então editável como qualquer outra tabela de atributos da camada."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:978
 msgid ""
@@ -1767,7 +1768,7 @@ msgid ""
 "attribute values, or a range of values that are allowed, to be added to a "
 "specific vector layer during digitizing. Have a closer look at the edit "
 "widget in section :ref:`vector_attributes_menu` to find out more."
-msgstr ""
+msgstr "Como exemplo, você pode usar colunas da tabelas não espaciais para definir valores de atributos, ou um intervalo de valores que são permitidos, para ser adicionado a uma camada de vetor específico durante a digitalização. Dê uma olhada mais de perto o widget de edição na seção: ref: `vetor_atributos_menu` para saber mais."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:987
 msgid "Creating one to many relations"
@@ -1777,14 +1778,14 @@ msgstr "Criando uma ou mais relações"
 msgid ""
 "Relations are a technique often used in databases. The concept is, that "
 "features (rows) of different layers (tables) can belong to each other."
-msgstr ""
+msgstr "As relações são uma técnica frequentemente utilizada em bancos de dados. O conceito é, que as características (linhas) de diferentes camadas (tabelas) podem pertencer a um ao outro."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:992
 msgid ""
 "As an example you have a layer with all regions of alaska (polygon) which "
 "provides some attributes about its name and region type and a unique id "
 "(which acts as primary key)."
-msgstr ""
+msgstr "Como um exemplo, você tem uma camada com todas as regiões do Alasca (polígono), que fornece alguns atributos sobre o seu nome e tipo de região e um código único (que atua como chave primária)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:997
 msgid "Foreign keys"
@@ -1797,11 +1798,11 @@ msgid ""
 " you want to add them to the region layer, you need to create a one to many "
 "relation using foreign keys, because there are several airports in most "
 "regions."
-msgstr ""
+msgstr "Então você começa uma outra camada de ponto ou tabela com informações sobre aeroportos que estão localizados nas regiões e também querem manter o controle deles. Se você deseja adicioná-los à camada região, você precisa criar uma relação de um para muitos usando chaves estrangeiras, porque existem vários aeroportos na maioria das regiões."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1013
 msgid "Alaska region with airports |nix|"
-msgstr "Região Alaska com airports |nix|"
+msgstr "Região Alaska com aeroportos |nix|"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1015
 msgid ""
@@ -1817,7 +1818,7 @@ msgid ""
 " form for the editing and QGIS takes care about the setup. It works with "
 "different providers (so you can also use it with shape and csv files) and "
 "all you have to do is to tell QGIS the relations between your tables."
-msgstr ""
+msgstr "Este campo fk_região sempre conterá um codigo de uma região. Pode ser visto como um indicador para a região a que pertence. E você pode criar um formulário de edição personalizada para a edição e QGIS se preocupa com a configuração. Ele trabalha com diversos fornecedores (para que você também pode usá-lo com os arquivos de vários formatos e csv) e tudo o que você tem a fazer é as relações entre as tabelas QGIS."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1026
 msgid "Layers"
@@ -1832,7 +1833,7 @@ msgid ""
 "(fk_region) to the layer region. This means, that each airport belongs to "
 "exactly one region while each region can have any number of airports (a "
 "typical one to many relation)."
-msgstr ""
+msgstr "QGIS não faz diferença entre uma tabela e uma camada vetorial. Basicamente, uma camada de vetor é uma tabela com uma geometria. Então, pode adicionar sua tabela como uma camada vetorial. Para demostrar você pode carregar o arquivo shape \"região\" (com geometrias) e a tabela 'aeroporto' csv (sem geometrias) e uma chave estrangeira (fk_região) para a região da camada. Isto significa que cada aeroporto pertence a exatamente uma região, enquanto cada região pode ter qualquer número de aeroportos (a típica relação de um para muitos)."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1037
 msgid "Definition (Relation Manager)"
@@ -1844,7 +1845,7 @@ msgid ""
 "between the layer. This is done in :menuselection:`Settings -->` "
 ":menuselection:`Project Properties`. Open the :guilabel:`Relations` menu and"
 " click on :guilabel:`Add`."
-msgstr ""
+msgstr "A primeira coisa que vamos fazer é deixar QGIS saber sobre as relações entre a camada. Isso é feito em: menu de seleção: 'Configurações -> `: menu de seleção:` Projeto Propriedades`. Abra o: guilabel: `menu de Relações` e clique em: guilabel:` Adicionar`."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1043
 msgid ""
@@ -1882,7 +1883,7 @@ msgid ""
 " it to build custom forms once this is supported. If you leave it empty, one"
 " will be generated for you but you can assign one yourself to get one that "
 "is easier to handle."
-msgstr ""
+msgstr "**código ** será usado para fins internos e tem de ser único. Você pode precisar dele para criar formulários personalizados uma vez que este é suportado. Se você deixá-lo vazio, será gerada para você, mas você pode atribuir um para obter que é mais fácil de manusear."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1059
 msgid "Relation Manager |nix|"
@@ -1900,7 +1901,7 @@ msgid ""
 "in the legend and use the identify tool. Depending on your settings, the "
 "form might open directly or you will have to choose to open it in the "
 "identification dialog under actions."
-msgstr ""
+msgstr "Agora que QGIS conhece a relação, ele vai ser usado para melhorar as formas que são gerados. Como nós não alteramos o método de formulário padrão (gerada automaticamente) ele vai apenas adicionar um novo widget em nosso formulário. Então, vamos selecionar a região de camada na legenda e use a ferramenta para identificar. Dependendo das configurações, o formulário pode ser aberto diretamente ou você terá que optar por abri-lo na janela de identificação no âmbito de ações."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1081
 msgid "Identification dialog regions with relation to airports |nix|"
@@ -1919,38 +1920,38 @@ msgid ""
 "that it toggles the edit mode of the airport layer, although we are in the "
 "feature form of a feature from the region layer. But the table is "
 "representing features of the airport layer."
-msgstr ""
+msgstr "O botão | mActionToggleEditing |  serve para alternar o modo de edição. Esteja ciente de que ele alterna o modo de edição da camada de aeroporto, apesar de estarmos na forma de uma característica da camada região. Mas o quadro está representando características da camada aeroporto."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1087
 msgid ""
 "The |mActionSignPlus| button will add a new feature to the airport layer. "
 "And it will assign the new airport to the current region by default."
-msgstr ""
+msgstr "O botão | mActionSignPlus |  irá adicionar um novo recurso para a camada de aeroporto. E vai atribuir um novo aeroporto para a região atual por padrão."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1088
 msgid ""
 "The |mActionRemove| button will delete the selected airport permanently."
-msgstr "O botão |mActionRemove| apagará o airport selecionado permanentemente."
+msgstr "O botão |mActionRemove| apagará o aeroporto selecionado permanentemente."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1089
 msgid ""
 "The |mActionLink| symbol will open a new dialog where you can select any "
 "existing airport which will then be assigned to the current region. This may"
 " be handy if you created the airport on the wrong region by accident."
-msgstr ""
+msgstr "O  símbolo | mActionLink | irá abrir uma nova janela onde você pode selecionar qualquer aeroporto existente, que será, então, atribuído à região atual. Isto pode ser útil se você criou o aeroporto na região errada por acidente."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1090
 msgid ""
 "The |mActionUnlink| symbol will unlink the selected airport from the current"
 " region, leaving them unassigned (the foreign key is set to NULL) "
 "effectively."
-msgstr ""
+msgstr "O símbolo | mActionUnlink |  desvincula o aeroporto selecionado da região atual, deixando-os não atribuído (a chave estrangeira é definida como NULO) de forma eficaz."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1091
 msgid ""
 "The two buttons to the right switch between table view and form view where "
 "the later let's you view all the airports in their respective form."
-msgstr ""
+msgstr "Os dois botões para a chave de visualização da tabela e formulário, onde o deixou-nos mais tarde, você vê todos os aeroportos no seu respectivo formulário."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1093
 msgid ""
@@ -1959,18 +1960,18 @@ msgid ""
 "the airports. It can be used when you open the layer properties of the "
 "airports table, switch to the :menuselection:`Fields` menu and change the "
 "widget type of the foreign key field 'fk_region' to Relation Reference."
-msgstr ""
+msgstr "Se você trabalha na tabela aeroporto, um novo tipo de widget está disponível que permite que você incorpore a forma característica da região referenciada na forma característica dos aeroportos. Ele pode ser usado quando você abre as propriedades da camada da tabela de aeroportos, mude para o: menu de seleção: `menu de campos` e mudar o tipo de widget do campo de chave estrangeira 'fk_região' a relação de referência."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1099
 msgid ""
 "If you look at the feature dialog now, you will see, that the form of the "
 "region is embedded inside the airports form and will even have a combobox, "
 "which allows you to assign the current airport to another region."
-msgstr ""
+msgstr "Se você olhar para a caixa de diálogo agora, você vai ver, que a forma de a região estar inserida dentro do formulário aeroportos e até mesmo ter um caixa de combinações, que permite atribuir o atual aeroporto para outra região."
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1112
 msgid "Identification dialog airport with relation to regions |nix|"
-msgstr "Diálogo identificação airport com relação a regions |nix|"
+msgstr "Diálogo identificação aeroportos com relação a regiões |nix|"
 
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:983
 msgid "Relations"
