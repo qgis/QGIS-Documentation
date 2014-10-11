@@ -193,7 +193,7 @@ The new shapefile will be created and the resulting layer added to your map.
 
 .. note:: If you don't have activated :guilabel:`Enable 'on the fly' CRS transformation`
     or the :guilabel:`Automatically enable 'on the fly' reprojection if layers have different CRS`
-    settings (see previous lesson), you might no be able to see the new layers you just added
+    settings (see previous lesson), you might not be able to see the new layers you just added
     to the map. In this case, you can focus the map on any of the layers by right
     click on any layer and click :guilabel:`Zoom to layer extent`, or just enable
     any of the mentioned 'on the fly' options.
