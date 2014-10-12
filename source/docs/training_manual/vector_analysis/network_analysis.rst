@@ -27,7 +27,7 @@ To activate the :guilabel:`Road Graph` plugin:
 
 * Click :guilabel:`Close` on the :guilabel:`Plugin Manager` dialog.
 
-.. note:: If you do not see the the plugin in your interface, go to
+.. note:: If you do not see the plugin in your interface, go to
    :menuselection:`View --> Panels` and ensure that :guilabel:`Shortest path`
    has a check mark next to it.
 
