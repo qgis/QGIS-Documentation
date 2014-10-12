@@ -37,7 +37,7 @@ To add a symbol into a group, you can either right click on a symbol then choose
 :menulabel:`Apply group` and then the group name added before. There is a second 
 way to add several symbols into group: just select a group and click 
 |mActionOnGroup| and choose **Group Symbols**. All symbols display a checkbox 
-allow you to add the symbol into the selected groups. When finished, you can 
+that allow you to add the symbol into the selected groups. When finished, you can 
 click on the same button, and choose **Finish Grouping**.
 
 Create **Smart Symbols** is similar to creating group, but instead select 
@@ -82,7 +82,7 @@ Marker Symbols
 
 Marker symbols have several symbol layer types:
 
-* Ellispe maker
+* Ellipse marker
 * Font marker
 * Simple marker (default)
 * SVG marker
@@ -92,7 +92,7 @@ The following settings are possible:
 
  * :guilabel:`Symbol layer type`: You have the option to use Ellipse markers, Font markers,
    Simple markers, SVG markers and Vector Field markers.
- * :guilabel:`colours`
+ * :guilabel:`colors`
  * :guilabel:`Size`
  * :guilabel:`Outline style`
  * :guilabel:`Outline width`
