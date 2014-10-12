@@ -369,7 +369,7 @@ of a restaurant.
 |basic| |FA| Select Buildings of the Right Size
 -------------------------------------------------------------------------------
 
-To see which buildings are the correct size (more than 100 square metres), we
+To see which buildings are the correct size (more than 100 square meters), we
 first need to calculate their size.
 
 * Open the attribute table for the :guilabel:`houses_restaurants_500m` layer.
