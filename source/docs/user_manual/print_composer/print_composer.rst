@@ -198,7 +198,8 @@ used as default during your work.
 
 * :guilabel:`Compositions defaults` let you specify the default font to use.
 * With :guilabel:`Grid appearance`, you can set the grid style and its color.
-* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
+* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. 
+  There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
 * :guilabel:`Guide defaults` defines the tolerance for the guides.
 
 
@@ -332,6 +333,8 @@ the map element by activating the |checkbox| :guilabel:`Lock layers for map
 item` checkbox in the :guilabel:`Map` dialog of the :guilabel:`Item Properties`
 tab.
 
+.. _`composer_main_properties`:
+
 Main properties
 ^^^^^^^^^^^^^^^
 
@@ -358,9 +361,14 @@ following functionalities (see figure_composer_4_):
   rotate the map element content clockwise in degrees. Note that a coordinate frame
   can only be added with the default value 0.
 * |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed on the map canvas in the main |qg| window.
-* You can choose to lock the layers shown on a map item. Check |checkbox| :guilabel:`Lock layers for map item`. After this is checked, any layer that would be
-  displayed or hidden in the main |qg| window won't appear or be hidden in the map item of the Composer. But style and
-  labels of a locked layer are still refreshed according to the main |qg| interface.
+* You can choose to lock the layers shown on a map item. Check |checkbox| :guilabel:`Lock layers for map item`. 
+  After this is checked, any layer that would be displayed or hidden in the main |qg| window won't appear or be hidden in the map item 
+  of the Composer. But style and labels of a locked layer are still refreshed according to the main |qg| interface.
+* The |mActionShowPresets| button allows you to add quickly all the presets views you have prepared in QGIS. 
+  Clicking on the |mActionShowPresets| button you will see the list of all the preset views: just select the preset you want to display. 
+  The map canvas will automatically lock the preset layers by enabling the |checkbox| :guilabel:`Lock layers for map item`: if you want 
+  to unselect the preset, just uncheck the |checkbox| and press on the |mActionDraw| button. See :ref:`label_legend` to find out how to 
+  create presets views.
 
 Extents
 ^^^^^^^
@@ -382,7 +390,7 @@ functionalities (see figure_composer_5_):
 * The **Map extents** area allows you to specify the map extent using X and Y min/max
   values and by clicking the **[Set to map canvas extent]** button. This button sets 
   the map extent of the composer map item to the extent of the current map view in the 
-  main QGIS application. The button **[View extent in map canvas]** does exactly the 
+  main |qg| application. The button **[View extent in map canvas]** does exactly the 
   opposite, it updates the extent of the map view in the QGIS application to the extent
   of the composer map item. 
 
@@ -392,37 +400,82 @@ the map element in the Print Composer and clicking the **[Update preview]** butt
 in the map :guilabel:`Item Properties` tab (see figure_composer_2_).
 
 .. index::
-   single: Grid;Map_Grid
+   single: Grid;Grids;Map_Grid
 
-Grid
+Grids
 ^^^^
 
-The :guilabel:`Grid` dialog of the map :guilabel:`Item Properties` tab provides the
-following functionalities (see Figure_composer_6_):
+The :guilabel:`Grids` dialog of the map :guilabel:`Item Properties` tab provides the
+the possibility to add several grids to a map item.
 
-.. _Figure_composer_6:
+* With the plus and minus button you can add or remove a selected grid.
+* With the up and down button you can move a grid and set the drawing order.
+
+When you double click on the added grid you can give it another name.
+
+.. _Figure_composer_grid_1:
 
 .. only:: html
 
-   **Figure Composer 6:**
+   **Figure Composer grid 1:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_map3.png
+.. figure:: /static/user_manual/print_composer/map_grids.png
    :align: center
 
-   Map Grid Dialog |nix|
+   Map Grids Dialog |nix|
 
-* The |checkbox| :guilabel:`Show grid` checkbox allows you to overlay a grid onto the
-  map element. As grid type, you can specify to use a solid line or cross. Symbology of
-  the grid can be chosen. See section Rendering_Mode_.
-  Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
-  and the width used for the cross or line grid type.
-* You can choose to paint the frame with a zebra style. If not selected, the general frame option is used (see section Frame_dialog_).
-  Advanced rendering mode is also available for grids (see section Rendering_mode_).
+After you have added a grid, you can active the checkbox |checkbox| :guilabel:`Show grid` to overlay a grid onto the
+map element. Expand this option to provides a lot of configuration options, see Figure_composer_grid_2_.
+
+.. _Figure_composer_grid_2:
+
+.. only:: html
+
+   **Figure Composer grid 2:**
+
+.. figure:: /static/user_manual/print_composer/draw_grid.png
+   :align: center
+
+   Draw Grid Dialog |nix|
+
+As grid type, you can specify to use a solid line or cross. Symbology of
+the grid can be chosen. See section Rendering_Mode_.
+Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
+and the width used for the cross or line grid type.
+
+.. _Figure_composer_grid_3:
+
+.. only:: html
+
+   **Figure Composer grid 3:**
+
+.. figure:: /static/user_manual/print_composer/grid_frame.png
+   :align: center
+
+   Grid Frame Dialog |nix|
+
+* There are different options to style the frame that holds the map. Following options are 
+  available: No Frame, Zebra, Interior ticks, Exterior ticks, Interior and Exterior ticks and Lineborder.
+
+* Advanced rendering mode is also available for grids (see section Rendering_mode_).
+
 * The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add coordinates
   to the map frame. The annotation can be drawn inside or outside the map frame.
   The annotation direction can be defined as horizontal, vertical, horizontal and
   vertical, or boundary direction, for each border individually. Units can be in meters or in degrees. Finally, you can define the grid
   color, the annotation font, the annotation distance from the map frame and the precision of the drawn coordinates.
+
+.. _Figure_composer_grid_4:
+
+.. only:: html
+
+   **Figure Composer grid 4:**
+
+.. figure:: /static/user_manual/print_composer/grid_draw_coordinates.png
+   :align: center
+
+   Grid Draw Coordinates dialog |nix|
+
 
 Overview
 ^^^^^^^^

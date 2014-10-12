@@ -206,7 +206,7 @@ in square meters
    :align: center
 
 Look at the new values in your attribute table. This is much more useful, as
-people actually quote building size in metres, not in degrees. This is why it's
+people actually quote building size in meters, not in degrees. This is why it's
 a good idea to reproject your data, if necessary, before calculating areas,
 distances, and other values that are dependent on the spatial properties of the
 layer.

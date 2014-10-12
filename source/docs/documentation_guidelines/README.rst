@@ -308,7 +308,7 @@ If the term does not have to be translated, please use this syntax:
 Add new Screenshots
 ===================
 
-Here are some hints to create new, nice looking screenshots. For the user guide they go into ./resources/en/user_manual/
+Here are some hints to create new, nice looking screenshots. For the user guide they go into :file:`./resources/en/user_manual/`
 
 * same environment for all the screen caps (same OS, same decoration, same font size)
 * reduce the window to the minimal space needed to show the feature (taking the all screen for a small modal window > overkill)
@@ -318,14 +318,26 @@ Here are some hints to create new, nice looking screenshots. For the user guide 
 * Set print size resolution to 135 dpi (this way, if no size is set in the rst files, images will be at original size in html and at a good print resolution in the PDF)
 * save them in png (no jpeg artifacts)
 * the screenshot should show the content according to what is described in the text
+* you can find some prepared |qg| -projects that were used before to create screenshots in :file:`./qgis-projects`.
+  This makes it easier to reproduce screenshots for the next version of |qg|. 
+  These projects use the |qg| sample dataset which should be placed in the same folder as the QGIS-Documentation Repository.
+* Use the following command to remove the global menu function in Ubuntu to create smaller application screens with menu's.
+
+
+::
+
+   sudo apt-get autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
 
 
 Translate Screenshots
 =====================
 
-Here are some hints to create screenshots for your translated user guide. They will go into ./resources/<your language>/user_manual/
+Here are some hints to create screenshots for your translated user guide. They will go into :file:`./resources/<your language>/user_manual/`
 
 * same environment for all the screen caps (same OS, same decoration, same font size)
+* use the |qg| -projects included in QGIS-Documentation repository (in :file:`./qgis_projects` ).
+  These were used to produce the 'original' screenshots in the manual.
+  The |qg| Sample dataset should be placed in the same folder as the QGIS-Documentation Repository.
 * same size as the english 'original' screenshots, otherwise they will be stretched and look ugly. If you need to have a different size due to longuer ui strings, don't forget to change the dimension in the rst code of your language.
 * reduce the window to the minimal space needed to show the feature (taking the all screen for a small modal window > overkill)
 * the less clutter, the better (no need to activate all the toolbars)

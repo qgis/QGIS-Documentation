@@ -308,12 +308,12 @@ color - either border or fill color. This dialog has four different tabs which a
 Whatever method you use, the selected color is always described through color sliders for HSV  (Hue, Saturation, Value)
 and RGB (Red, Green, Blue) values. There is also an :guilabel:`opacity` slider to set transparency level. On the lower left part 
 of the dialog you can see a comparison between the :guilabel:`current` and the :guilabel:`new` color you are presently 
-selecting and on the lower right part you have the option to add the color you just tweaked into a color slot button by pressing |addcolor|. 
+selecting and on the lower right part you have the option to add the color you just tweaked into a color slot button. 
 
  **Figure color picker 1:**
 
 With |mIconColorBox| :sup:`color ramp` or with |mIColorWheel| :sup:`color wheel`, you can browse to all possible color combinations. 
-There are other possibilites though. By using `color swatches` |colorswatcher| you can choose from a preselected list. This selected list is
+There are other possibilities though. By using `color swatches` |colorswatcher| you can choose from a preselected list. This selected list is
 populated with one of three methods: :guilabel:`Recent colors`, :guilabel:`Standard colors` or :guilabel:`Project colors`
 
  **Figure color picker 2:**
