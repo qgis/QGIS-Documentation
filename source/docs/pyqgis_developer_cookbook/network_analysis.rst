@@ -47,17 +47,17 @@ of an edge.
 
 Converting from a vector layer to the graph is done using the `Builder <http://en.wikipedia.org/wiki/Builder_pattern>`_
 programming pattern. A graph is constructed using a so-called Director.
-There is only one Director for now: `QgsLineVectorLayerDirector <http://qgis.org/api/api/classQgsLineVectorLayerDirector.html>`_.
+There is only one Director for now: `QgsLineVectorLayerDirector <http://qgis.org/api/classQgsLineVectorLayerDirector.html>`_.
 The director sets the basic settings that will be used to construct a graph
 from a line vector layer, used by the builder to create the graph. Currently, as
-in the case with the director, only one builder exists: `QgsGraphBuilder <http://qgis.org/api/api/classQgsGraphBuilder.html>`_,
-that creates `QgsGraph <http://qgis.org/api/api/classQgsGraph.html>`_ objects.
+in the case with the director, only one builder exists: `QgsGraphBuilder <http://qgis.org/api/classQgsGraphBuilder.html>`_,
+that creates `QgsGraph <http://qgis.org/api/classQgsGraph.html>`_ objects.
 You may want to implement your own builders that will build a graphs compatible
 with such libraries as `BGL <http://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_
 or `NetworkX <http://networkx.lanl.gov/>`_.
 
 To calculate edge properties the programming pattern `strategy <http://en.wikipedia.org/wiki/Strategy_pattern>`_
-is used. For now only `QgsDistanceArcProperter <http://qgis.org/api/api/classQgsDistanceArcProperter.html>`_
+is used. For now only `QgsDistanceArcProperter <http://qgis.org/api/classQgsDistanceArcProperter.html>`_
 strategy is available, that takes into account the length of the route. You
 can implement your own strategy that will use all necessary parameters.
 For example, RoadGraph plugin uses a strategy that computes travel time
@@ -194,7 +194,7 @@ with the following properties:
   single available path and it is optimal (shortest) on this graph
 
 To get the shortest path tree use the methods :func:`shortestTree` and
-:func:`dijkstra` of `QgsGraphAnalyzer <http://qgis.org/api/api/classQgsGraphAnalyzer.html>`_
+:func:`dijkstra` of `QgsGraphAnalyzer <http://qgis.org/api/classQgsGraphAnalyzer.html>`_
 class. It is recommended to use method :func:`dijkstra` because it works
 faster and uses memory more efficiently.
 
@@ -223,7 +223,7 @@ from the root.
 Here is some very simple code to display the shortest path tree using the graph
 created with the :func:`shortestTree` method (select linestring layer in TOC
 and replace coordinates with your own). **Warning**: use this code only as an
-example, it creates a lots of `QgsRubberBand <http://qgis.org/api/api/classQgsRubberBand.html>`_
+example, it creates a lots of `QgsRubberBand <http://qgis.org/api/classQgsRubberBand.html>`_
 objects and may be slow on large data-sets.
 
 ::
