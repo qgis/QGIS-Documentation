@@ -18,6 +18,8 @@ Your dialog should look like this.
 
 .. image:: img/second_alg/points_from_table.png
 
+(Horizontal spacing: 0.0001, Vertical spacing: 0.0001, Width: 0.000904, Height: 0.000551, Center X: -5.695674, Center Y: 40.2477955)
+
 Now press the *Run* button to get the following layer:
 
 .. image:: img/second_alg/points.png
