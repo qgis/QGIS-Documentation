@@ -56,7 +56,7 @@ With that, we get the final DEM we want.
 
 Now it is time to compute the slope layer.
 
-A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm, but the DEM obtained in the last step is not suitable as input, since elevation values are in meters but cellsize is not expressed in meters (the layer uses a CRS with geographic coordinates). A reprojection is needed. To reproject a raster layer, the *Warp (reproject)* algorithm can be used again. We reproject into a CRS with meters as units, so we can then correctly calculate the slope.
+A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm, but the DEM obtained in the last step is not suitable as input, since elevation values are in meters but cellsize is not expressed in meters (the layer uses a CRS with geographic coordinates). A reprojection is needed. To reproject a raster layer, the *Warp (reproject)* algorithm can be used again. We reproject into a CRS with meters as units (e.g. 3857), so we can then correctly calculate the slope, with either SAGA or GDAL.
 
 Here is the reprojected DEM.
 
@@ -74,20 +74,10 @@ The slope produced by the *Slope, Aspect, Curvature* algorithm is expressed in r
 
 .. image:: img/cutting_merging/metricconversions.png
 
-
 Reprojecting the converted slope layer back with the *Reproject raster layer*, we get the final layer we wanted.
+
+.. warning:: image missing
 
 .. image:: img/cutting_merging/reproject_back.png
 
 The reprojection processes have caused the final layer to contain data outside the bounding box that we calculated in one of the first steps. This can be solved by clipping it again, as we did to obtain the base DEM.
-
-
-
-
-
-
-
-
-
-
-
