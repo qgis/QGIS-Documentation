@@ -30,25 +30,23 @@ Enter the following formula
 
 ::
 
-	float(MALES) / FEMALES 
+	1.0 *  "MALES"  /  "FEMALES" 
 
 This time the parameters window should look like this before pressing the *OK* button. 
 
 .. image:: img/vector_calculator/ratio.png
 
 
-Both fields are of type integer, and the result would be truncate to an integer. That's why we have added the ``float()`` function, to indicate that we want floating point number a result. You can use other Python functions as needed, since the calculator supports python commands (the raster calculator, however, doesn't).
+Both fields are of type integer, and the result would be truncate to an integer. That's why we have multiplied by 1.0, to indicate that we want floating point number a result.
 
-Since the formula field accepts Python syntax, we can have a new field with ``male`` or ``female`` text strings instead of those ratio value, using the following formula instead.
+We can use conditional functions to have a new field with ``male`` or ``female`` text strings instead of those ratio value, using the following formula::
 
-::
-
-	'male' if MALES > FEMALES else 'female'
+	CASE WHEN  "MALES" > "FEMALES"  THEN 'male' ELSE 'female' END
 
 The parameters windows should look like this.
 
 .. image:: img/vector_calculator/predominance.png
 
-A more powerful python field calculator is available in the "Advanced Python field calculator", which will not be detailed here
+A python field calculator is available in the "Advanced Python field calculator", which will not be detailed here
 
 .. image:: img/vector_calculator/advanced.png

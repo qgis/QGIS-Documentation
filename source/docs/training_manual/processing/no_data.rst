@@ -42,12 +42,9 @@ Here is the layer that you will get.
 
 .. image:: img/no_data/log.png
 
-
-If you select the *Identify* tool to know the value of a layer at agiven point, select the layer that we have just created, and click on a point outside of the basin, you will see that it contains a no--data value.
+If you select the *Identify* tool to know the value of a layer at a given point, select the layer that we have just created, and click on a point outside of the basin, you will see that it contains a no--data value.
 
 .. image:: img/no_data/identify.png
-
-
 
 For the next exercise we are going to use two layers instead of one, and we are going to get a DEM with valid elevation values only within the basin defined in the second layer. Open the calculator dialog and select both layers of the project in the input layers field. Enter the following formula in the corresponding field:
 
