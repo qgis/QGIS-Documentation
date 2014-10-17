@@ -18,8 +18,6 @@ Your dialog should look like this.
 
 .. image:: img/second_alg/points_from_table.png
 
-(Horizontal spacing: 0.0001, Vertical spacing: 0.0001, Width: 0.000904, Height: 0.000551, Center X: -5.695674, Center Y: 40.2477955)
-
 Now press the *Run* button to get the following layer:
 
 .. image:: img/second_alg/points.png
@@ -34,7 +32,7 @@ The inputs required to create the grid are all numbers. When you have to enter a
 
 The dialog contains a simple calculator, so you can type expressions such as ``11 * 34.7 + 4.6``, and the result will be computed and put in the corresponding text box in the parameters dialog. Also, it contains constants that you can use, and values from other layers available.
 
-In this case, we want to create a grid that covers the extent of the inut points layer, so we should use its coordinates to calculate the center coordinate of the grid and its width and height, since those are the parameters that the algorithm takes to create the grid. With a little bit of math, try to do that yourself using the calculator dialog and the constants from the input points layer. 
+In this case, we want to create a grid that covers the extent of the input points layer, so we should use its coordinates to calculate the center coordinate of the grid and its width and height, since those are the parameters that the algorithm takes to create the grid. With a little bit of math, try to do that yourself using the calculator dialog and the constants from the input points layer. 
 
 Select *Rectangles (polygons)* in the *Type* field.
 
@@ -43,6 +41,9 @@ As in the case of the last algorithm, we have to enter the CRS here as well. Sel
 In the end, you should have a parameters dialog like this:
 
 .. image:: img/second_alg/graticule_parameters.png
+
+(Better add one spacing on the width and height: Horizontal spacing: 0.0001, Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: -5.695674, Center Y: 40.2477955)
+The case of X center is a bit tricky, see: -5.696126+(( -5.695222+ 5.696126)/2)
 
 Press *Run* and you will get the graticule layer.
 
