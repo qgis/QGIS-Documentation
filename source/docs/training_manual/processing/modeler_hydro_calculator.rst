@@ -28,7 +28,7 @@ The parameters dialog of the calculator algorithm looks like this:
 
 .. image:: img/modeler_hydro_calculator/calculator.png
 
-As you can see, the dialgo is different to the other ones we have ssen, but you have in there the same variables that were available in the *Threshold* field in the *Channel network* algorithm. Enter the above formula and click on *OK* to add the algorithm. 
+As you can see, the dialog is different to the other ones we have seen, but you have in there the same variables that were available in the *Threshold* field in the *Channel network* algorithm. Enter the above formula and click on *OK* to add the algorithm. 
 
 .. image:: img/modeler_hydro_calculator/calculator_dependencies.png
 

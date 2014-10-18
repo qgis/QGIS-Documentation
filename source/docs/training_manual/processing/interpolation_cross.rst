@@ -31,7 +31,7 @@ The points contain the original values, but not the interpolated ones. To add th
 
 .. image:: img/interpolation_cross/addgridvalues.png
 
-The raster layer to select (the algorithm supports multiple raster, but we just need one) is the resulting one from the interpolation. WE have renamed it to *interpolate* and that layer name is the one that will be used for the name of the field to add.
+The raster layer to select (the algorithm supports multiple raster, but we just need one) is the resulting one from the interpolation. We have renamed it to *interpolate* and that layer name is the one that will be used for the name of the field to add.
 
 Now we have a vector layer that contains both values, with points that were not used for the interpolation.
 

@@ -5,7 +5,7 @@ A model within a model
 
 .. note:: In this lesson we will see how to use a model within a bigger model
 
-We have already created a few models, and in this lesson we are going to see how we can combine them on a single bigger one. A model behaves like any other algorithm, which means that you can add a model that you have already craeted as part of another one that you create after that.
+We have already created a few models, and in this lesson we are going to see how we can combine them on a single bigger one. A model behaves like any other algorithm, which means that you can add a model that you have already created as part of another one that you create after that.
 
 In this case, we are going to expand our hydrological model, by adding the mean TWI value in each of the basins that it generates as result. To do that, we need to calculate the TWI, and the to compute statistics. Since we have already created a model to calculate TWI from a DEM, it is a good idea to reuse that model instead of adding the algorithms it contains individually.
 
@@ -13,7 +13,7 @@ Let's start with the model we used as starting point for the last lesson.
 
 .. image::
 
-First, we will add the TWI model. for it to be available, it should have been saved on the models folder, since otherwise it will not be shown in the toolbox or the algorithms list in the modeler. Make sure you have it available.
+First, we will add the TWI model. For it to be available, it should have been saved on the models folder, since otherwise it will not be shown in the toolbox or the algorithms list in the modeler. Make sure you have it available.
 
 Add it to the current model and use the input DEM as its input. The output is a temporary one, since we just want the TWI layer to compute the statistics. The only output of this model we are creating will still be the vector layer with the watersheds.
 

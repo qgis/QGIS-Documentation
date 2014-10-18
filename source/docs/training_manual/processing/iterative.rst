@@ -46,4 +46,3 @@ Here's the result that you will get if you run the clipping algorithm as explain
 For each layer, the black and white color palette, (or whatever palette you are using), is adjusted differently, from its minimum to its maximum values. That's the reason why you can see the different pieces and the colors do not seem to match in the border between layers. Values, however, do match.
 
 If you enter an output filename, resulting files will be named using that filename and a number corresponding to each iteration as suffix.
-
