@@ -19,8 +19,14 @@ Let's use different methods for interpolation, all based on vector ``points.shp`
 - :menuselection:`GDAL --> Grid (Inverse Distance to a power)` [Power:4]
 - :menuselection:`GDAL --> Grid (Moving average)` [Radius1&2: 50000]
 
-**TODO:**
-   measure concordance between methods, and correlate it with distance to points (areas far from points will have less accurate interpolation)
+Then measure variation among methods and correlate it with distance to points:
+
+- :menuselection:`GRASS --> r.series` [Unselect Propagate NULLs, Aggregate operation: stddev]
+- :menuselection:`GRASS --> v.to.rast.value` on *points*
+- :menuselection:`GDAL --> Proximity`
+- :menuselection:`GRASS --> r.covar` to show the correlation matrix (**NB:** results are in the log only); check the significance of the correlation e.g. with http://vassarstats.net/rsig.html.
+ 
+Thus, areas far from points will have less accurate interpolation.
 
 Contour
 ---------
@@ -28,5 +34,5 @@ Contour
 Various methods to draw contour lines [always step= 10]:
 
 - :menuselection:`GRASS --> r.contour.step`
-- :menuselection:`SAGA --> Contour Lines from Grid`
+- :menuselection:`SAGA --> Contour lines from grid` [**NB:** output shp is not valid, known bug]
 - :menuselection:`GDAL --> Contour`
