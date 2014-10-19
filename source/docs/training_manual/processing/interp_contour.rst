@@ -31,7 +31,7 @@ Thus, areas far from points will have less accurate interpolation.
 Contour
 ---------
 
-Various methods to draw contour lines [always step= 10]:
+Various methods to draw contour lines [always step= 10] on the *stddev* raster:
 
 - :menuselection:`GRASS --> r.contour.step`
 - :menuselection:`SAGA --> Contour lines from grid` [**NB:** output shp is not valid, known bug]
