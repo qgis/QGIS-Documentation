@@ -298,7 +298,7 @@ Inverted polygon renderer allows user to define a symbol to fill in outside of t
 polygons. As before you can select a subrenderers. These subrenderers are the
 same as for the main renderers.
 
-color Picker
+Color Picker
 ...............
 
 Regardless the type of style to be used, the :guilabel:`select color` dialog will show when you click to choose a 
@@ -310,25 +310,54 @@ and RGB (Red, Green, Blue) values. There is also an :guilabel:`opacity` slider t
 of the dialog you can see a comparison between the :guilabel:`current` and the :guilabel:`new` color you are presently 
 selecting and on the lower right part you have the option to add the color you just tweaked into a color slot button. 
 
- **Figure color picker 1:**
+.. _figure_color_picker_1:
+
+.. only:: html
+
+   **Figure color picker 1:**
+
+.. figure:: /static/user_manual/working_with_vector/color_picker_ramp.png
+   :align: center
+
+   Color picker ramp tab |nix|
+
+ 
 
 With |mIconColorBox| :sup:`color ramp` or with |mIColorWheel| :sup:`color wheel`, you can browse to all possible color combinations. 
 There are other possibilities though. By using `color swatches` |colorswatcher| you can choose from a preselected list. This selected list is
 populated with one of three methods: :guilabel:`Recent colors`, :guilabel:`Standard colors` or :guilabel:`Project colors`
 
- **Figure color picker 2:**
+.. _figure_color_picker_2:
 
+.. only:: html
+
+   **Figure color picker 2:**
+
+.. figure:: /static/user_manual/working_with_vector/color_picker_recent_colors.png
+   :align: center
+
+   Color picker swatcher tab |nix|
+ 
 Another option is to use the |mIColorPicker| :sup:`color picker` which allows you to sample a color from under your mouse pointer at any part of 
 QGIS or even from another application by pressing the space bar. Please note that the color picker is OS dependent and is currently not supported by OSX.
  
- .. _tip_quick_color_picker_+_copy/paste_colors:
+.. _tip_quick_color_picker_+_copy/paste_colors:
 
 .. tip:: **quick color picker + copy/paste colors**
 
    You can quickly choose from :guilabel:`Recent colors`, from :guilabel:`Standard colors` or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking 
    the drop-down arrow that follows a current color box.
-   
+
+.. _figure_color_picker_3:
+
+.. only:: html
+
    **Figure color picker 3:**
+
+.. figure:: /static/user_manual/working_with_vector/quick_color_picker.png
+   :align: center
+
+   Quick color picker menu |nix|
 
 Layer rendering
 ...............
