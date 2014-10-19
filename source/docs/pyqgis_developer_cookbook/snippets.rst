@@ -46,14 +46,6 @@ in the legend. Here is an example how to toggle visibility of the active layer
   new_state = Qt.Checked if node.isVisible()==Qt.Unchecked else Qt.Unchecked
   node.setVisible(new_state)
 
-The method requires the layer number (0 being the top most) and can be
-called by
-
-::
-
-  self.toggleLayer(3)
-
-
 .. index:: plugins; access attributes of selected features
 
 How to access attribute table of selected features
