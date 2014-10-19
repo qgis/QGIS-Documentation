@@ -21,6 +21,8 @@ It has to be installed separately, together with a few necessary libraries (**LI
 
 The beauty of Processing implementation is that you can add your own scripts, simplex or complex ones, and they may then be used as any other module, piped into more complex workflows, etc.
 
+Test some of the preinstalled examples, if you have R_ already installed (remember to activate R modules from the General configuration of Processing).
+
 OTB
 ----
 
