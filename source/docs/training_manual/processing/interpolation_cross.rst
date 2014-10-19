@@ -37,7 +37,6 @@ Now we have a vector layer that contains both values, with points that were not 
 
 .. image:: img/interpolation_cross/extended_layer.png
 
-
 Now, we will use the fields calculator for this task. Open the *Field calculator* algorithm and run it with the following parameters.
 
 .. image:: img/interpolation_cross/fields_calculator.png
@@ -51,5 +50,7 @@ Representing that layer according to that value will give us a first idea of whe
 Interpolating that layer will get you a raster layer with the estimated error in all points of the interpolated area.
 
 .. image:: img/interpolation_cross/raster_diffs.png
+
+You can also get the same information (difference between original point values and interpolated ones) directly with :menuselection:`GRASS --> v.sample`.
 
 Your results might differ from these ones, since there is a random component introduced when running the random selection, at the beginning of this lesson.

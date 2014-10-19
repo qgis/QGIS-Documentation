@@ -11,6 +11,8 @@ In this case, we are going to expand our hydrological model, by adding the mean 
 
 Let's start with the model we used as starting point for the last lesson.
 
+.. todo:: image missing
+
 .. image::
 
 First, we will add the TWI model. For it to be available, it should have been saved on the models folder, since otherwise it will not be shown in the toolbox or the algorithms list in the modeler. Make sure you have it available.
@@ -19,20 +21,27 @@ Add it to the current model and use the input DEM as its input. The output is a 
 
 Here is the corresponding parameters dialog:
 
+.. todo:: image missing
+
 .. image::
 
 Now we have a TWI layer that we can use along with the watersheds vector layer, to generate a new one which contains the values of the TWI corresponding to each watershed.
 
 This calculation is done using the *Grid statistics in polygons* algorithm. Use the layers mentioned above as input, to create the final result.
 
-.. image:
+.. todo:: image missing
 
+.. image::
 
 The output of the *Vectorize grid classes* algorithm was originally our final output, but now we just want it as an intermediate result. To change that, we have to edit the algorithm. Just double--click on it to see its parameters dialog, and delete the name of the output. That will make it a temporary output, as it is by default.
+
+.. todo:: image missing
 
 .. image::
 
 This is how the final model should look like:
+
+.. todo:: image missing
 
 .. image::
 
