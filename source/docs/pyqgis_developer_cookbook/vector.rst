@@ -22,7 +22,7 @@ a :class:`QgsVectorLayer` object
 
   iter = layer.getFeatures()
   for feature in iter:
-    # retrieve every feature with its geometry and attributes
+      # retrieve every feature with its geometry and attributes
       # fetch geometry
       geom = feature.geometry()
       print "Feature ID %d: " % feature.id()
@@ -62,8 +62,7 @@ Attributes can be referred by index.
 Iterating over selected features
 ---------------------------------
 
-Convenience methods
-.
+Convenience methods.
 
 For the above cases, and in case you need to consider selection in a vector
 layer in case it exist, you can use the :func:`features` method from the
@@ -74,7 +73,7 @@ built-in Processing plugin, as follows:
   import processing
   features = processing.features(layer)
   for feature in features:
-    # do whatever you need with the feature
+      # do whatever you need with the feature
 
 This will iterate over all the features in the layer, in case there is no
 selection, or over the selected features otherwise.
@@ -87,7 +86,7 @@ method from vector layer:
   selection = layer.selectedFeatures()
   print len(selection)
   for feature in selection:
-    #Do whatever you need with the feature
+      # do whatever you need with the feature
 
 Iterating over a subset of features
 -----------------------------------
@@ -100,7 +99,7 @@ to the :func:`getFeatures()` call. Here's an example
 
   request=QgsFeatureRequest()
   request.setFilterRect(areaOfInterest)
-    for f in layer.getFeatures(request):
+  for f in layer.getFeatures(request):
       ...
 
 The request can be used to define the data retrieved for each feature, so the
@@ -108,9 +107,12 @@ iterator returns all features, but return partial data for each of them.
 
 ::
 
-  request.setSubsetOfFields([0,2])                  # Only return selected fields
-  request.setSubsetOfFields(['name','id'],layer.fields())  # More user friendly version
-  request.setFlags(QgsFeatureRequest.NoGeometry)  # Don't return geometry objects
+  # Only return selected fields
+  request.setSubsetOfFields([0,2])
+  # More user friendly version
+  request.setSubsetOfFields(['name','id'],layer.fields())
+  # Don't return geometry objects
+  request.setFlags(QgsFeatureRequest.NoGeometry)
 
 
 .. index:: vector layers; editing
@@ -144,8 +146,8 @@ list of added features (their ID is set by the data store)
 
   if caps & QgsVectorDataProvider.AddFeatures:
     feat = QgsFeature()
-    feat.addAttribute(0,"hello")
-    feat.setGeometry(QgsGeometry.fromPoint(QgsPoint(123,456)))
+    feat.addAttribute(0, 'hello')
+    feat.setGeometry(QgsGeometry.fromPoint(QgsPoint(123, 456)))
     (res, outFeats) = layer.dataProvider().addFeatures([feat])
 
 
@@ -959,7 +961,7 @@ Further Topics
    creating/modifying symbols
    working with style (:class:`QgsStyleV2`)
    working with color ramps (:class:`QgsVectorColorRampV2`)
-   rule-based renderer (see .. _this blogpost: http://snorf.net/blog/2014/03/04/symbology-of-vector-layers-in-qgis-python-plugins)
+   rule-based renderer (see `this blogpost <http://snorf.net/blog/2014/03/04/symbology-of-vector-layers-in-qgis-python-plugins>`_)
    exploring symbol layer and renderer registries
 
 .. index:: symbology; old

@@ -137,7 +137,6 @@ providers:
     }
     uri = 'http://localhost:8080/geoserver/wfs?' + urllib.unquote(urllib.urlencode(params))
 
-  And you can also use the
 
 Raster Layers
 =============
