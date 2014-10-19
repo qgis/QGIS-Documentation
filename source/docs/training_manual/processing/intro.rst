@@ -11,7 +11,7 @@ This guide is comprised of a set of small exercises of progressive complexity. I
 
 For a more systematic description of all the framework components and their usage, it is recommended to check the corresponding chapter in the QGIS manual. Use it as a support text along with this guide.
 
-All the exercises in this guide use free data set that can be downloaded `here <http://qgis.org/downloads/data/>`_. The zip file to download contains several folders corresponding to each one of the lessons in this guide. In each of them you will find a QGIS project file. Just open it and you will be ready to start the lesson.
+All the exercises in this guide use free data set that can be downloaded from the `QGIS website <http://qgis.org/downloads/data/>`_. The zip file to download contains several folders corresponding to each one of the lessons in this guide. In each of them you will find a QGIS project file. Just open it and you will be ready to start the lesson.
 
 Enjoy!
 

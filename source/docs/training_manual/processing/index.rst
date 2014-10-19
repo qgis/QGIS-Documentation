@@ -39,9 +39,7 @@ Contents:
    iterative_model
    batch_conversion
    batch_modeler
-   modeler_depend_on_algorithm   
-   first_script_twi
-   second_script_vector
    more_backends
    interp_contour
+
 
