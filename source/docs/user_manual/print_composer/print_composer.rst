@@ -531,48 +531,23 @@ Main properties
 ^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialog of the label :guilabel:`Item Properties` tab provides the
-following functionalities (see Figure_composer_9_):
-
-.. _Figure_composer_9:
-
-.. only:: html
-
-   **Figure Composer 9:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_label2.png
-   :align: center
-
-   Label Main properties Dialog |nix|
+following functionalities (see Figure_composer_8_):
 
 * The main properties dialog is where the text (HTML or not) or the expression needed to fill the label is added to the Composer
   canvas.
 * Labels can be interpreted as HTML code: check |checkbox| :guilabel:`Render as HTML`. You can now insert a URL, a clickable
   image that links to a web page or something more complex.
-* You can also insert an expression. Click on **[Insert an expression]** to open a new dialog. Build an expression by clicking the
-  functions available in the left side of the panel. On the right side of the `Insert an expression` dialog, the help file
-  associated with the function selected is displayed. Two special categories can be useful, particularly associated with the atlas functionality:
-  geometry functions and records functions. At the bottom, a preview of the expression is shown.
-* Define font and font color by clicking on the **[Font]** and **[Font color...]** buttons.
+* You can also insert an expression. Click on **[Insert an expression]** to open a new dialog. Build an expression by clicking the functions available in the left side of the panel. Two special categories can be useful, particularly associated with the atlas functionality: geometry functions and records functions. At the bottom, a preview of the expression is shown.
+* Define :guilabel:`Font` by clicking on the **[Font...]** button or a :guilabel:`Font color` selecting a color using the color selection tool.
 
 Alignment and Display
 ^^^^^^^^^^^^^^^^^^^^^
 
 The :guilabel:`Alignment` and :guilabel:`Display` dialogs of the label :guilabel:`Item Properties` tab provide the
-following functionalities (see Figure_composer_10_):
-
-.. _Figure_composer_10:
-
-.. only:: html
-
-   **Figure Composer 10:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_label3.png
-   :align: center
-
-   Label Alignment and Display Dialogs |nix|
+following functionalities (see Figure_composer_8_):
 
 * You can define the horizontal and vertical alignment in the :guilabel:`Alignment` zone.
-* In the **Display** tag, you can define a margin in mm and/or a rotation angle in degrees for the text.
+* In the **Display** tag, you can define a margin in mm. This is the margin from the edge of the composer item.
 
 Adding an Image item to the Print Composer
 ------------------------------------------
