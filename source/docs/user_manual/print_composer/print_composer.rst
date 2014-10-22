@@ -477,11 +477,11 @@ and the width used for the cross or line grid type.
    Grid Draw Coordinates dialog |nix|
 
 
-Overview
-^^^^^^^^
+Overviews
+^^^^^^^^^
 
-The :guilabel:`Overview` dialog of the map :guilabel:`Item Properties` tab provides the
-following functionalities (see Figure_composer_7_):
+The :guilabel:`Overviews` dialog of the map :guilabel:`Item Properties` tab provides the
+following functionalities:
 
 .. _Figure_composer_7:
 
@@ -492,16 +492,20 @@ following functionalities (see Figure_composer_7_):
 .. figure:: /static/user_manual/print_composer/print_composer_map4.png
    :align: center
 
-   Map Overview Dialog |nix|
+   Map Overviews Dialog |nix|
 
-If the Composer has more than one map, you can choose to use a first map to show the extents of a second map.
-The :guilabel:`Overview` dialog of the map :guilabel:`Item Properties` tab allows you to customize the appearance of that feature.
+You can choose to create an overview map, which shows the extents of the other map(s) that are presented in the composer. First you need to create the map(s) you want to present in the overview map. Next you create the map you want to use as the overview map, just like a normal map. Now open :guilabel:`Overviews` and press the icon-button with the green '+' sign to add an overview. Initially this overview is named 'Overview 1' (see Figure_composer_7_). You can change the name when you double-click on the overview item in the list named 'Overview 1' and change it to another name. 
 
-* The :guilabel:`Overview frame` combo list references the map item whose extents will be drawn on the present map item.
-* The :guilabel:`Overview Style` allows you to change the frame color. See section vector_style_manager .
-* The :guilabel:`Overview Blend mode` allows you to set different transparency blend modes, to enhance visibility of the frame. See Rendering_Mode_.
-* If checked, |checkbox| :guilabel:`Invert overview` creates a mask around the extents: the referenced map extents are shown clearly,
-  whereas everything else is blended with the frame color.
+When you select the overview item in the list you can customize it.
+* The |checkbox| :guilabel:`Draw "<name_overview>" overview` needs to be activated to draw the extent of selected map frame.
+* The :guilabel:`Map frame` combo list can be used to select the map item whose extents will be drawn on the present map item.
+* The :guilabel:`Frame Style` allows you to change the style of the overview frame.
+* The :guilabel:`Blending mode` allows you to set different transparency blend modes. See Rendering_Mode_.
+* The |checkbox| :guilabel:`Invert overview` creates a mask around the extents when activated: the referenced map extents are shown clearly, whereas everything else is blended with the frame color.
+* The |checkbox| :guilabel:`Center on overview` puts the extent of the overview frame in the center of the overview map. You can only activate one overview item to center, when you have added several overviews.
+
+When an overview item is selected, you can remove it using the icon-button with the red '-' sign from the list of overviews. Using the blue up- and down-arrow you can move the overview frame item up or down the list of overviews to change the drawing priority of overviews.
+
 
 Adding a Label item to the Print Composer
 -----------------------------------------
@@ -527,48 +531,23 @@ Main properties
 ^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialog of the label :guilabel:`Item Properties` tab provides the
-following functionalities (see Figure_composer_9_):
-
-.. _Figure_composer_9:
-
-.. only:: html
-
-   **Figure Composer 9:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_label2.png
-   :align: center
-
-   Label Main properties Dialog |nix|
+following functionalities (see Figure_composer_8_):
 
 * The main properties dialog is where the text (HTML or not) or the expression needed to fill the label is added to the Composer
   canvas.
 * Labels can be interpreted as HTML code: check |checkbox| :guilabel:`Render as HTML`. You can now insert a URL, a clickable
   image that links to a web page or something more complex.
-* You can also insert an expression. Click on **[Insert an expression]** to open a new dialog. Build an expression by clicking the
-  functions available in the left side of the panel. On the right side of the `Insert an expression` dialog, the help file
-  associated with the function selected is displayed. Two special categories can be useful, particularly associated with the atlas functionality:
-  geometry functions and records functions. At the bottom, a preview of the expression is shown.
-* Define font and font color by clicking on the **[Font]** and **[Font color...]** buttons.
+* You can also insert an expression. Click on **[Insert an expression]** to open a new dialog. Build an expression by clicking the functions available in the left side of the panel. Two special categories can be useful, particularly associated with the atlas functionality: geometry functions and records functions. At the bottom, a preview of the expression is shown.
+* Define :guilabel:`Font` by clicking on the **[Font...]** button or a :guilabel:`Font color` selecting a color using the color selection tool.
 
 Alignment and Display
 ^^^^^^^^^^^^^^^^^^^^^
 
 The :guilabel:`Alignment` and :guilabel:`Display` dialogs of the label :guilabel:`Item Properties` tab provide the
-following functionalities (see Figure_composer_10_):
-
-.. _Figure_composer_10:
-
-.. only:: html
-
-   **Figure Composer 10:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_label3.png
-   :align: center
-
-   Label Alignment and Display Dialogs |nix|
+following functionalities (see Figure_composer_8_):
 
 * You can define the horizontal and vertical alignment in the :guilabel:`Alignment` zone.
-* In the **Display** tag, you can define a margin in mm and/or a rotation angle in degrees for the text.
+* In the **Display** tag, you can define a margin in mm. This is the margin from the edge of the composer item.
 
 Adding an Image item to the Print Composer
 ------------------------------------------
