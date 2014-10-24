@@ -743,7 +743,7 @@ provides the following functionalities (see figure_composer_legend_3_):
    Legend Legend Items Dialog |nix|
 
 * The legend will be updated automatically if |checkbox| :guilabel:`Auto-update` is checked.
-  When :guilabel:`Auto-update` is unchecked will give you more control over the legend items.
+  When :guilabel:`Auto-update` is unchecked this will give you more control over the legend items.
   The icons below the legend items list will be activated.
 * The legend items window lists all legend items and allows you to change item order,
   group layers, remove and restore items in the list, edit layer names and add a filter.
@@ -766,8 +766,8 @@ provides the following functionalities (see figure_composer_legend_3_):
 Fonts, Columns, Symbol
 ^^^^^^^^^^^^^^^^^^^^^^
 
-The :guilabel:`Fonts`, :guilabel:`Columns`, :guilabel:`Symbol` and :guilabel:`Spacing` dialogs of the legend :guilabel:`Item Properties` tab
-provide the following functionalities (see figure_composer_legend_4_):
+The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the legend 
+:guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_legend_4_):
 
 .. _Figure_composer_legend_4:
 
@@ -780,26 +780,26 @@ provide the following functionalities (see figure_composer_legend_4_):
 
    Legend Fonts, Columns, Symbol and Spacing Dialogs |nix|
 
-* You can change the font of the legend title, group, subgroup and item (layer) in the legend item. Click on a category button to open a
-  **Select font** dialog.
-* All these items will get the same **Color**.
-* Legend items can be arranged in several columns. Select the correct value in the :guilabel:`Count` |selectnumber| field.
-* |checkbox| :guilabel:`Equal column widths` sets how legend columns should be adjusted.
-* The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer legend to be divided between columns.
+* You can change the font of the legend title, group, subgroup and item (layer) in the legend item. 
+  Click on a category button to open a **Select font** dialog.
+* You provide the labels with a **Color** using the advanced color picker, however the selected 
+  color will be given to all font items in the legen..
+* Legend items can be arranged over several columns. Set the number of columns in 
+  the :guilabel:`Count` |selectnumber| field.
+
+  * |checkbox| :guilabel:`Equal column widths` sets how legend columns should be adjusted.
+  * The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer 
+    legend to be divided between columns.
+
 * You can change the width and height of the legend symbol in this dialog.
 
 
 WMS legendGraphic and Spacing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When you have added a WMS layer and you insert a legend composer item, a request will be send to the 
-WMS server to provide a WMS legend, This Legend will only be shown if the WMS server provides the 
-GetLegendGraphic capability. The WMS legend content will be provided as a raster image.
-
-The option WMS legendGraphic is used to set the legend width and the legend hight correctly.
-
-Spacing around title, group, subgroup, symbol, icon label, box space or column space can be customized 
-through this dialog.
+The :guilabel:`WMS legendGraphic` and :guilabel:`Spacing` dialogs of the legend 
+:guilabel:`Item Properties` tab provide the following functionalities (see 
+figure_composer_legend_5_):
 
 .. _Figure_composer_legend_5:
 
@@ -812,6 +812,15 @@ through this dialog.
 
    WMS legendGraphic Dialogs |nix|
 
+When you have added a WMS layer and you insert a legend composer item, a request will be send to the 
+WMS server to provide a WMS legend, This Legend will only be shown if the WMS server provides the 
+GetLegendGraphic capability. The WMS legend content will be provided as a raster image.
+
+:guilabel:`WMS legendGraphic` is used to be able to adjust the :guilabel:`Legend width` and 
+the :guilabel:`legend hight` of the WMS legend raster image.
+
+Spacing around title, group, subgroup, symbol, icon label, box space or column space can be customized 
+through this dialog.
 
 
 .. index::
