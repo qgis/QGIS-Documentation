@@ -282,19 +282,37 @@ Rendering mode
   previously only may know from graphics programs. The pixels of your overlaying and underlaying items are mixed
   through the settings described below.
 
-    * Normal: This is the standard blend mode, which uses the alpha channel of the top pixel to blend with the pixel beneath it; the colors aren't mixed.
-    * Lighten: This selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged and harsh.
-    * Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is most useful for mixing the texture of one layer with another layer (e.g., you can use a hillshade to texture another layer).
-    * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So, brighter top pixels cause the saturation and brightness of the underlying pixels to increase. This works best if the top pixels aren't too bright; otherwise the effect is too extreme.
-    * Addition: This blend mode simply adds pixel values of one layer with pixel values of the other. In case of values above 1 (as in the case of RGB), white is displayed. This mode is suitable for highlighting features.
-    * Darken: This creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
-    * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the numbers for the corresponding pixel of the bottom layer. The results are darker pictures.
-    * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be used to tweak and colorise underlying layers.
-    * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, light parts become lighter and dark parts become darker.
-    * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This mode is supposed to emulate shining a soft light onto an image.
-    * Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
-    * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way around, to always get a positive value. Blending with black produces no change, as the difference with all colors is zero.
-    * Subtract: This blend mode simply subtracts pixel values of one layer with pixel values of the other. In case of negative values, black is displayed.
+    * Normal: This is the standard blend mode, which uses the alpha channel of the 
+      top pixel to blend with the pixel beneath it; the colors aren't mixed.
+    * Lighten: This selects the maximum of each component from the foreground and 
+      background pixels. Be aware that the results tend to be jagged and harsh.
+    * Screen: Light pixels from the source are painted over the destination, while 
+      dark pixels are not. This mode is most useful for mixing the texture of one layer 
+      with another layer (e.g., you can use a hillshade to texture another layer).
+    * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness 
+      of the top pixel. So, brighter top pixels cause the saturation and brightness of the 
+      underlying pixels to increase. This works best if the top pixels aren't too bright; 
+      otherwise the effect is too extreme.
+    * Addition: This blend mode simply adds pixel values of one layer with pixel values of 
+      the other. In case of values above 1 (as in the case of RGB), white is displayed. This 
+      mode is suitable for highlighting features.
+    * Darken: This creates a resultant pixel that retains the smallest components of the 
+      foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
+    * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the numbers 
+      for the corresponding pixel of the bottom layer. The results are darker pictures.
+    * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be 
+      used to tweak and colorise underlying layers.
+    * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, 
+      light parts become lighter and dark parts become darker.
+    * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses 
+      color burn/dodge. This mode is supposed to emulate shining a soft light onto an image.
+    * Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting 
+      a very intense light onto an image.
+    * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way 
+      around, to always get a positive value. Blending with black produces no change, as the 
+      difference with all colors is zero.
+    * Subtract: This blend mode simply subtracts pixel values of one layer with pixel values of 
+      the other. In case of negative values, black is displayed.
 
 Composer Items
 ==============
@@ -360,14 +378,20 @@ following functionalities (see figure_composer_4_):
 * The field :guilabel:`Rotation` |selectnumber| allows you to
   rotate the map element content clockwise in degrees. Note that a coordinate frame
   can only be added with the default value 0.
-* |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed on the map canvas in the main |qg| window.
-* You can choose to lock the layers shown on a map item. Check |checkbox| :guilabel:`Lock layers for map item`. 
-  After this is checked, any layer that would be displayed or hidden in the main |qg| window won't appear or be hidden in the map item 
-  of the Composer. But style and labels of a locked layer are still refreshed according to the main |qg| interface.
-* The |mActionShowPresets| button allows you to add quickly all the presets views you have prepared in QGIS. 
-  Clicking on the |mActionShowPresets| button you will see the list of all the preset views: just select the preset you want to display. 
-  The map canvas will automatically lock the preset layers by enabling the |checkbox| :guilabel:`Lock layers for map item`: if you want 
-  to unselect the preset, just uncheck the |checkbox| and press on the |mActionDraw| button. See :ref:`label_legend` to find out how to 
+* |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed 
+  on the map canvas in the main |qg| window.
+* You can choose to lock the layers shown on a map item. Check |checkbox| 
+  :guilabel:`Lock layers for map item`. 
+  After this is checked, any layer that would be displayed or hidden in the main |qg| window 
+  will not appear or be hidden in the map item of the Composer. But style and labels of a 
+  locked layer are still refreshed according to the main |qg| interface.
+* The |mActionShowPresets| button allows you to add quickly all the presets views you 
+  have prepared in QGIS. 
+  Clicking on the |mActionShowPresets| button you will see the list of all the preset views: 
+  just select the preset you want to display. 
+  The map canvas will automatically lock the preset layers by enabling the |checkbox| 
+  :guilabel:`Lock layers for map item`: if you want to unselect the preset, just uncheck the 
+  |checkbox| and press on the |mActionDraw| button. See :ref:`label_legend` to find out how to 
   create presets views.
 
 Extents
@@ -409,7 +433,7 @@ The :guilabel:`Grids` dialog of the map :guilabel:`Item Properties` tab provides
 the possibility to add several grids to a map item.
 
 * With the plus and minus button you can add or remove a selected grid.
-* With the up and down button you can move a grid and set the drawing order.
+* With the up and down button you can move a grid in the list and set the drawing priority.
 
 When you double click on the added grid you can give it another name.
 
@@ -494,17 +518,35 @@ following functionalities:
 
    Map Overviews Dialog |nix|
 
-You can choose to create an overview map, which shows the extents of the other map(s) that are presented in the composer. First you need to create the map(s) you want to present in the overview map. Next you create the map you want to use as the overview map, just like a normal map. Now open :guilabel:`Overviews` and press the icon-button with the green '+' sign to add an overview. Initially this overview is named 'Overview 1' (see Figure_composer_7_). You can change the name when you double-click on the overview item in the list named 'Overview 1' and change it to another name. 
+You can choose to create an overview map, which shows the extents of the other map(s) 
+that are available in the composer. First you need to create the map(s) you want to 
+include in the overview map. Next you create the map you want to use as the overview 
+map, just like a normal map. 
+
+* With the plus and minus button you can add or remove an overview.
+* With the up and down button you can move an overview in the list and set the drawing priority.
+
+Open :guilabel:`Overviews` and press the green plus icon-button to add an overview. 
+Initially this overview is named 'Overview 1' (see Figure_composer_7_). 
+You can change the name when you double-click on the overview item in the list 
+named 'Overview 1' and change it to another name. 
 
 When you select the overview item in the list you can customize it.
-* The |checkbox| :guilabel:`Draw "<name_overview>" overview` needs to be activated to draw the extent of selected map frame.
-* The :guilabel:`Map frame` combo list can be used to select the map item whose extents will be drawn on the present map item.
-* The :guilabel:`Frame Style` allows you to change the style of the overview frame.
-* The :guilabel:`Blending mode` allows you to set different transparency blend modes. See Rendering_Mode_.
-* The |checkbox| :guilabel:`Invert overview` creates a mask around the extents when activated: the referenced map extents are shown clearly, whereas everything else is blended with the frame color.
-* The |checkbox| :guilabel:`Center on overview` puts the extent of the overview frame in the center of the overview map. You can only activate one overview item to center, when you have added several overviews.
 
-When an overview item is selected, you can remove it using the icon-button with the red '-' sign from the list of overviews. Using the blue up- and down-arrow you can move the overview frame item up or down the list of overviews to change the drawing priority of overviews.
+* The |checkbox| :guilabel:`Draw "<name_overview>" overview` needs to be activated to 
+  draw the extent of selected map frame.
+* The :guilabel:`Map frame` combo list can be used to select the map item whose extents 
+  will be drawn on the present map item.
+* The :guilabel:`Frame Style` allows you to change the style of the overview frame.
+* The :guilabel:`Blending mode` allows you to set different transparency blend modes. 
+  See Rendering_Mode_.
+* The |checkbox| :guilabel:`Invert overview` creates a mask around the extents when 
+  activated: the referenced map extents are shown clearly, whereas everything else 
+  is blended with the frame color.
+* The |checkbox| :guilabel:`Center on overview` puts the extent of the overview frame in 
+  the center of the overview map. You can only activate one overview item to center, when 
+  you have added several overviews.
+
 
 
 Adding a Label item to the Print Composer
@@ -514,7 +556,8 @@ To add a label, click the |mActionLabel| :sup:`Add label` icon, place the elemen
 with the left mouse button on the Print Composer canvas and position and customize
 its appearance in the label :guilabel:`Item Properties` tab.
 
-The :guilabel:`Item Properties` tab of a label item provides the following functionalities:
+The :guilabel:`Item Properties` tab of a label item provides the following functionality 
+for the label item (see Figure_composer_8_):
 
 .. _Figure_composer_8:
 
@@ -530,21 +573,19 @@ The :guilabel:`Item Properties` tab of a label item provides the following funct
 Main properties
 ^^^^^^^^^^^^^^^
 
-The :guilabel:`Main properties` dialog of the label :guilabel:`Item Properties` tab provides the
-following functionalities (see Figure_composer_8_):
-
-* The main properties dialog is where the text (HTML or not) or the expression needed to fill the label is added to the Composer
-  canvas.
-* Labels can be interpreted as HTML code: check |checkbox| :guilabel:`Render as HTML`. You can now insert a URL, a clickable
-  image that links to a web page or something more complex.
-* You can also insert an expression. Click on **[Insert an expression]** to open a new dialog. Build an expression by clicking the functions available in the left side of the panel. Two special categories can be useful, particularly associated with the atlas functionality: geometry functions and records functions. At the bottom, a preview of the expression is shown.
-* Define :guilabel:`Font` by clicking on the **[Font...]** button or a :guilabel:`Font color` selecting a color using the color selection tool.
+* The main properties dialog is where the text (HTML or not) or the expression 
+  needed to fill the label is added to the Composer canvas.
+* Labels can be interpreted as HTML code: check |checkbox| :guilabel:`Render as HTML`. 
+  You can now insert a URL, a clickable image that links to a web page or something more complex.
+* You can also insert an expression. Click on **[Insert an expression]** to open a new dialog. 
+  Build an expression by clicking the functions available in the left side of the panel. 
+  Two special categories can be useful, particularly associated with the atlas functionality: 
+  geometry functions and records functions. At the bottom, a preview of the expression is shown.
+* Define :guilabel:`Font` by clicking on the **[Font...]** button or a :guilabel:`Font color` 
+  selecting a color using the color selection tool.
 
 Alignment and Display
 ^^^^^^^^^^^^^^^^^^^^^
-
-The :guilabel:`Alignment` and :guilabel:`Display` dialogs of the label :guilabel:`Item Properties` tab provide the
-following functionalities (see Figure_composer_8_):
 
 * You can define the horizontal and vertical alignment in the :guilabel:`Alignment` zone.
 * In the **Display** tag, you can define a margin in mm. This is the margin from the edge of the composer item.
@@ -577,31 +618,32 @@ The image :guilabel:`Item Properties` tab provides the following functionalities
 Main properties, Search directories and Rotation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The :guilabel:`Main properties` and :guilabel:`Search directories` dialogs of the image :guilabel:`Item Properties` tab provide the
-following functionalities (see Figure_composer_12_):
 
-.. _Figure_composer_12:
+* In the **Main properties** area you can provide the :guilabel:`image source` to display in the image item.
+  Click on the browse button |browsebutton| to select a file on your computer using the browse dialog. 
+  From the **Search directories** area you can also select an image from :guilabel:`loading preview..` to 
+  set the image source.
+* With :guilabel:`Resize mode` you can select one of the following modes:
 
-.. only:: html
+  * Zoom: Enlarges the image to the frame while maintaining aspect ratio of picture.
+  * Stretch: Stretches image to fit inside the frame, ignores aspect ratio. 
+  * Clip: Stretches image to fit frame, ignores aspect ratio. 
+  * Zoom and resize frame: Enlarges image to fit frame, then resizes frame to fit resultant image.
+  * Resize frame to image size: Sets size of frame to match original size of image without scaling. 
 
-   **Figure Composer 12:**
+  Selected resize mode can disable the item options 'Placement' and 'Image rotation'. 
+  The :guilabel:`Image rotation` is only active for the resize mode 'Zoom'.
+* With :guilabel:`Placement` you can select the position of the image inside it's frame.  
+* The **Search directories** area allows you to add and remove directories with images in SVG format 
+  to the picture database.
+* :guilabel:`loading preview...` shows a preview of the pictures stored in the selected directories.
+* Images can be rotated with the :guilabel:`Image rotation` field.
+* Activating the |checkbox| :guilabel:`Sync with map` checkbox synchronizes the rotation of a picture 
+  in the |qg| map canvas (i.e., a rotated north arrow) with the appropriate Print Composer image.
 
-.. figure:: /static/user_manual/print_composer/print_composer_image2.png
-   :align: center
-
-   Image Main properties, Search directories and Rotation Dialogs |nix|
-
-* The **Main properties** dialog shows the current image that is displayed in the image item.
-  Click on the **[...]** button to select a file on your computer.
-* This dialog shows all pictures stored in the selected directories.
-* The **Search directories** area allows you to add and remove directories with
-  images in SVG format to the picture database.
-* Images can be rotated with the :guilabel:`Rotation` |selectnumber| field.
-* Activating the |checkbox| :guilabel:`Sync with
-  map` checkbox synchronizes the rotation of a picture in the |qg| map canvas
-  (i.e., a rotated north arrow) with the appropriate Print Composer image.
-
-It is also possible to select an north arrow directly. First get the image search path to the svg library from the property :guilabel:`Search directories`, :guilabel:`Image Search Path`. Extend this path with :file:`arrows/` like for example :file:`/usr/share/qgis/svg/arrows/`. Enter this value in the textfield for property :guilabel:`Image source` and use the browse button |browsebutton|. You can now choose any north arrow in a list as shown in figure_composer_13_. 
+It is also possible to select a north arrow directly. If you first select a north arrow from 
+:guilabel:`loading preview` and then use the browse button |browsebutton| of :guilabel:`Image source`, 
+you can now select one of the north arrow from the list as displayed in figure_composer_13_. 
 
 .. note:: 
 
@@ -616,7 +658,7 @@ It is also possible to select an north arrow directly. First get the image searc
 .. figure:: /static/user_manual/print_composer/north_arrows.png
    :align: center
 
-   North arrows available for selection in SVG library
+   North arrows available for selection in provided SVG library
 
 
 .. index::
