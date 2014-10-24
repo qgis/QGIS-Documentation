@@ -42,6 +42,7 @@ Icon                     Substitution               Icon                   Subst
 |radiobuttonon|          ``|radiobuttonon|``   	    |radiobuttonoff|       ``|radiobuttonoff|``
 |selectnumber|           ``|selectnumber|``         |selectstring|         ``|selectstring|``
 |browsebutton|           ``|browsebutton|``	    |slider|               ``|slider|``
+|mIconDataDefine|        ``|mIconDataDefine|``      \                      \ 
 =======================  =========================  =====================  =========================
 
 Words and symbols

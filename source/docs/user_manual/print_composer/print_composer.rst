@@ -615,39 +615,52 @@ The image :guilabel:`Item Properties` tab provides the following functionalities
 
    Image Item properties Tab |nix|
 
-Main properties, Search directories and Rotation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+You first have to select the image you want to display. 
+There are several ways to set the :guilabel:`image source` in the **Main properties** area. 
 
-* In the **Main properties** area you can provide the :guilabel:`image source` to display in the image item.
-  Click on the browse button |browsebutton| to select a file on your computer using the browse dialog. 
-  From the **Search directories** area you can also select an image from :guilabel:`loading preview..` to 
-  set the image source.
-* With :guilabel:`Resize mode` you can select one of the following modes:
+#. Use the browse button |browsebutton| of :guilabel:`image source` to select a file on your 
+   computer using the browse dialog. The browser will start in the SVG-libraries provided with |qg|.
+   Besides :file:`SVG`, you can also select other image formats like :file:`.png` or :file:`.jpg`.
+#. You can enter the source directly in the :guilabel:`image source` text field. You can even provide
+   a remote URL-address to an image.   
+#. From the **Search directories** area you can also select an image from :guilabel:`loading preview..` 
+   to set the image source.
+#. Use the data defined button |mIconDataDefine| to set the image source from a record or using a 
+   regular expression.  
+  
+With the :guilabel:`Resize mode` option, you can set how the image is displayed when the frame 
+is changed, or choose to resize the frame of the image item so it matches the original size of 
+the image.
 
-  * Zoom: Enlarges the image to the frame while maintaining aspect ratio of picture.
-  * Stretch: Stretches image to fit inside the frame, ignores aspect ratio. 
-  * Clip: Stretches image to fit frame, ignores aspect ratio. 
-  * Zoom and resize frame: Enlarges image to fit frame, then resizes frame to fit resultant image.
-  * Resize frame to image size: Sets size of frame to match original size of image without scaling. 
+You can select one of the following modes:
 
-  Selected resize mode can disable the item options 'Placement' and 'Image rotation'. 
-  The :guilabel:`Image rotation` is only active for the resize mode 'Zoom'.
-* With :guilabel:`Placement` you can select the position of the image inside it's frame.  
-* The **Search directories** area allows you to add and remove directories with images in SVG format 
-  to the picture database.
-* :guilabel:`loading preview...` shows a preview of the pictures stored in the selected directories.
-* Images can be rotated with the :guilabel:`Image rotation` field.
-* Activating the |checkbox| :guilabel:`Sync with map` checkbox synchronizes the rotation of a picture 
-  in the |qg| map canvas (i.e., a rotated north arrow) with the appropriate Print Composer image.
+* Zoom: Enlarges the image to the frame while maintaining aspect ratio of picture.
+* Stretch: Stretches image to fit inside the frame, ignores aspect ratio. 
+* Clip: Stretches image to fit frame, ignores aspect ratio. 
+* Zoom and resize frame: Enlarges image to fit frame, then resizes frame to fit resultant image.
+* Resize frame to image size: Sets size of frame to match original size of image without scaling. 
 
-It is also possible to select a north arrow directly. If you first select a north arrow from 
-:guilabel:`loading preview` and then use the browse button |browsebutton| of :guilabel:`Image source`, 
+Selected resize mode can disable the item options 'Placement' and 'Image rotation'. 
+The :guilabel:`Image rotation` is only active for the resize mode 'Zoom'.
+
+With :guilabel:`Placement` you can select the position of the image inside it's frame.  
+The **Search directories** area allows you to add and remove directories with images in SVG format 
+to the picture database. A preview of the pictures found in the selected directories is shown in a
+pane and can be used to select and set the image source.
+
+Images can be rotated with the :guilabel:`Image rotation` field.
+Activating the |checkbox| :guilabel:`Sync with map` checkbox synchronizes the rotation of a picture 
+in the |qg| map canvas (i.e., a rotated north arrow) with the appropriate Print Composer image.
+
+It is also possible to select a north arrow directly. If you first select a north arrow image from 
+**Search directories**  and then use the browse button |browsebutton| of the field :guilabel:`Image source`, 
 you can now select one of the north arrow from the list as displayed in figure_composer_13_. 
 
 .. note:: 
 
-   Many of the north arrows do not have an 'N' added in the north arrow, this is done on purpose for languages that do not use an 'N' for North, so they can use another letter.
+   Many of the north arrows do not have an 'N' added in the north arrow, this is done on 
+   purpose for languages that do not use an 'N' for North, so they can use another letter.
 
 .. _Figure_composer_13:
 
