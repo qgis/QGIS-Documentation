@@ -686,13 +686,13 @@ position and customize the appearance in the legend :guilabel:`Item Properties`
 tab.
 
 The :guilabel:`Item properties` of a legend item tab provides the following
-functionalities (see figure_composer_14_):
+functionalities (see figure_composer_legend_1_):
 
-.. _Figure_composer_14:
+.. _Figure_composer_legend_1:
 
 .. only:: html
 
-   **Figure Composer 14:**
+   **Figure Composer Legend 1:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend1.png
    :align: center
@@ -703,60 +703,77 @@ Main properties
 ^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialog of the legend :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_15_):
+provides the following functionalities (see figure_composer_legend_2_):
 
-.. _Figure_composer_15:
+.. _Figure_composer_legend_2:
 
 .. only:: html
 
-   **Figure Composer 15:**
+   **Figure Composer Legend 2:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend2.png
    :align: center
 
    Legend Main properties Dialog |nix|
 
-* Here, you can adapt the legend title.
-* You can also choose which :guilabel:`Map` item the current legend will refer to in the select list.
-* Since |qg| 1.8, you can wrap the text of the legend title on a given character.
+In Main properties you can:
+
+* Change the title of the legend.
+* Set the title alignment to Left, Center or Right.
+* You can choose which :guilabel:`Map` item the current legend will refer to 
+  in the select list.
+* You can wrap the text of the legend title on a given character.
+
 
 Legend items
 ^^^^^^^^^^^^
 
 The :guilabel:`Legend items` dialog of the legend :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_16_):
+provides the following functionalities (see figure_composer_legend_3_):
 
-.. _Figure_composer_16:
+.. _Figure_composer_legend_3:
 
 .. only:: html
 
-   **Figure Composer 16:**
+   **Figure Composer Legend 3:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend3.png
    :align: center
 
    Legend Legend Items Dialog |nix|
 
-* The legend items window lists all legend items and allows you to change item order,
-  group layers, remove and restore items in the list, and edit layer names. After changing the
-  symbology in the |qg| main window, you can click on **[Update]** to adapt the
-  changes in the legend element of the Print Composer. The item order can be
-  changed using the **[Up]** and **[Down]** buttons or with 'drag-and-drop'
-  functionality.
-* The feature count for each vector layer can be shown by enabling the **[Sigma]** button.
 * The legend will be updated automatically if |checkbox| :guilabel:`Auto-update` is checked.
+  When :guilabel:`Auto-update` is unchecked will give you more control over the legend items.
+  The icons below the legend items list will be activated.
+* The legend items window lists all legend items and allows you to change item order,
+  group layers, remove and restore items in the list, edit layer names and add a filter.
+  
+  * The item order can be changed using the **[Up]** and **[Down]** buttons or with 'drag-and-drop'
+    functionality. The order can not be changed for WMS legend graphics.
+  * Use the **[Add group]** button to add a legend group.
+  * Use the **[plus]** and **[minus]** button to add or remove layers.
+  * The **[Edit]** button is used to edit the layer-, groupname or title, first you need to 
+    select the legend item.
+  * The **[Sigma]** button adds a feature count for each vector layer.
+  * Use the **[filter]** button the filter the legend by map content, only the legend items visible 
+    in the map will be listed in the legend.
 
-Fonts, Columns, Symbol and Spacing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  After changing the symbology in the |qg| main window, you can click on **[Update]** to 
+  adapt the changes in the legend element of the Print Composer. 
+
+
+
+Fonts, Columns, Symbol
+^^^^^^^^^^^^^^^^^^^^^^
 
 The :guilabel:`Fonts`, :guilabel:`Columns`, :guilabel:`Symbol` and :guilabel:`Spacing` dialogs of the legend :guilabel:`Item Properties` tab
-provide the following functionalities (see figure_composer_17_):
+provide the following functionalities (see figure_composer_legend_4_):
 
-.. _Figure_composer_17:
+.. _Figure_composer_legend_4:
 
 .. only:: html
 
-   **Figure Composer 17:**
+   **Figure Composer Legend 4:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend4.png
    :align: center
@@ -770,7 +787,32 @@ provide the following functionalities (see figure_composer_17_):
 * |checkbox| :guilabel:`Equal column widths` sets how legend columns should be adjusted.
 * The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer legend to be divided between columns.
 * You can change the width and height of the legend symbol in this dialog.
-* Spacing aroung title, group, subgroup, symbol, icon label, box space or column space can be customized through this dialog.
+
+
+WMS legendGraphic and Spacing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When you have added a WMS layer and you insert a legend composer item, a request will be send to the 
+WMS server to provide a WMS legend, This Legend will only be shown if the WMS server provides the 
+GetLegendGraphic capability. The WMS legend content will be provided as a raster image.
+
+The option WMS legendGraphic is used to set the legend width and the legend hight correctly.
+
+Spacing around title, group, subgroup, symbol, icon label, box space or column space can be customized 
+through this dialog.
+
+.. _Figure_composer_legend_5:
+
+.. only:: html
+
+   **Figure Composer Legend 5:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_legend5.png
+   :align: center
+
+   WMS legendGraphic Dialogs |nix|
+
+
 
 .. index::
    single: Scalebar; Map_Scalebar
