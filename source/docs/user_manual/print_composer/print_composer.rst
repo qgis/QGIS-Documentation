@@ -891,7 +891,7 @@ provide the following functionalities (see figure_composer_scalebar3_):
 In these two dialogs, you can set how the scale bar will be represented.
 
 * Select the map units used. There are three possible choices: **Map Units** is the automated unit
-  selection; **Meters** or **Feet** force unit conversions.
+  selection; **Meters**, **Feet** or **Nautical Miles** force unit conversions.
 * The :guilabel:`Label` field defines the text used to describe the units of the scale bar.
 * The :guilabel:`Map units per bar unit` allows you to fix the ratio between a map unit and its representation in the scale bar.
 * You can define how many :guilabel:`Segments` will be drawn on the left and on the right side of the scale bar,
@@ -913,15 +913,23 @@ The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties` tab 
 
    Scale Bar Display |nix|
 
-* You can define how the scale bar will be displayed in its frame. Adjust the :guilabel:`Box margin` between text and frame borders,
-  :guilabel:`Labels margin` between text and scale bar drawing and the :guilabel:`Line width` of the scale bar drawing.
-* The :guilabel:`Alignment` in the :guilabel:`Display` dialog only applies to :guilabel:`Numeric` styled scale bars and puts text on the
-  left, middle or right side of the frame.
+You can define how the scale bar will be displayed in its frame. 
+
+* :guilabel:`Box margin`: space between text and frame borders
+* :guilabel:`Labels margin`:  space between text and scale bar drawing
+* :guilabel:`Line width`: line widht of the scale bar drawing
+* :guilabel:`Join style`: Corners at the end of scalebar in style Bevel, Rounded or Square 
+  (only available for Scale bar style Single Box & Double Box)  
+* :guilabel:`Cap style`: End of all lines in style Square, Round or Flat
+  (only available for Scale bar style Line Ticks Up, Down and Middle)  
+* :guilabel:`Alignment`: Puts text on the left, middle or right side of the frame
+  Works only for Scale bar style Numeric 
 
 Fonts and colors
 ^^^^^^^^^^^^^^^^
 
-The :guilabel:`Fonts and colors` dialog of the scale bar :guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_scalebar_5_):
+The :guilabel:`Fonts and colors` dialog of the scale bar :guilabel:`Item Properties` tab 
+provide the following functionalities (see figure_composer_scalebar_5_):
 
 .. _Figure_composer_scalebar_5:
 
@@ -933,6 +941,19 @@ The :guilabel:`Fonts and colors` dialog of the scale bar :guilabel:`Item Propert
    :align: center
 
    Scale Bar Fonts and colors Dialogs |nix|
+
+You can define the fonts and colors used for the scale bar.
+
+* Use the **[Font]** button the set the font
+* :guilabel:`Font color`: set the font color
+* :guilabel:`Fill color`: set the first fill color 
+* :guilabel:`Secondary fill color`: set the second fill color 
+* :guilabel:`Stroke color`: set the corol of the lines of the Scale Bare
+
+Fill colors are only used for scale box styles Single Box and Double Box. 
+To select a color you can use the list option using the dropdown arrow to open 
+a simple color selection option or the more advanced color selection option, that is 
+started when you click in the colored box in the dialog. 
 
 
 Adding a Basic shape or Arrow item to the Print Composer
