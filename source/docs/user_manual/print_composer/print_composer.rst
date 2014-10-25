@@ -834,13 +834,13 @@ the element with the left mouse button on the Print Composer canvas and position
 and customize the appearance in the scale bar :guilabel:`Item Properties` tab.
 
 The :guilabel:`Item properties` of a scale bar item tab provides the following
-functionalities (see figure_composer_18_):
+functionalities (see figure_composer_scalebar1_):
 
-.. _Figure_composer_18:
+.. _Figure_composer_scalebar1:
 
 .. only:: html
 
-   **Figure Composer 18:**
+   **Figure Composer Scalebar 1:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar1.png
    :align: center
@@ -851,13 +851,13 @@ Main properties
 ^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialog of the scale bar :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_19_):
+provides the following functionalities (see figure_composer_scalebar_2_):
 
-.. _Figure_composer_19:
+.. _Figure_composer_scalebar2:
 
 .. only:: html
 
-   **Figure Composer 19:**
+   **Figure Composer Scalebar 2:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar2.png
    :align: center
@@ -875,13 +875,13 @@ Units and Segments
 ^^^^^^^^^^^^^^^^^^
 
 The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar :guilabel:`Item Properties` tab
-provide the following functionalities (see figure_composer_20_):
+provide the following functionalities (see figure_composer_scalebar3_):
 
-.. _Figure_composer_20:
+.. _Figure_composer_scalebar3:
 
 .. only:: html
 
-   **Figure Composer 20:**
+   **Figure Composer scalebar 3:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar3.png
    :align: center
@@ -897,26 +897,43 @@ In these two dialogs, you can set how the scale bar will be represented.
 * You can define how many :guilabel:`Segments` will be drawn on the left and on the right side of the scale bar,
   and how long each segment will be (:guilabel:`Size` field). :guilabel:`Height` can also be defined.
 
-Display, Fonts and colors
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Display
+^^^^^^^
 
-The :guilabel:`Display` and :guilabel:`Fonts and colors` dialogs of the scale bar :guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_21_):
+The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_scalebar_4_):
 
-.. _Figure_composer_21:
+.. _Figure_composer_scalebar_4:
 
 .. only:: html
 
-   **Figure Composer 21:**
+   **Figure Composer Scalebar 4:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar4.png
    :align: center
 
-   Scale Bar Display, Fonts and colors Dialogs |nix|
+   Scale Bar Display |nix|
 
 * You can define how the scale bar will be displayed in its frame. Adjust the :guilabel:`Box margin` between text and frame borders,
   :guilabel:`Labels margin` between text and scale bar drawing and the :guilabel:`Line width` of the scale bar drawing.
 * The :guilabel:`Alignment` in the :guilabel:`Display` dialog only applies to :guilabel:`Numeric` styled scale bars and puts text on the
   left, middle or right side of the frame.
+
+Fonts and colors
+^^^^^^^^^^^^^^^^
+
+The :guilabel:`Fonts and colors` dialog of the scale bar :guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_scalebar_5_):
+
+.. _Figure_composer_scalebar_5:
+
+.. only:: html
+
+   **Figure Composer Scalebar 5:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_scalebar5.png
+   :align: center
+
+   Scale Bar Fonts and colors Dialogs |nix|
+
 
 Adding a Basic shape or Arrow item to the Print Composer
 --------------------------------------------------------
