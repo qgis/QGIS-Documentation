@@ -317,8 +317,8 @@ Rendering mode
 Composer Items
 ==============
 
-Adding a current |qg| map canvas to the Print Composer
-------------------------------------------------------
+The Map item
+------------
 
 Click on the |mActionAddMap| :sup:`Add new map` toolbar button in the Print
 Composer toolbar to add the |qg| map canvas. Now, drag a rectangle onto the Composer
@@ -549,8 +549,8 @@ When you select the overview item in the list you can customize it.
 
 
 
-Adding a Label item to the Print Composer
------------------------------------------
+The Label item
+--------------
 
 To add a label, click the |mActionLabel| :sup:`Add label` icon, place the element
 with the left mouse button on the Print Composer canvas and position and customize
@@ -590,8 +590,11 @@ Alignment and Display
 * You can define the horizontal and vertical alignment in the :guilabel:`Alignment` zone.
 * In the **Display** tag, you can define a margin in mm. This is the margin from the edge of the composer item.
 
-Adding an Image item to the Print Composer
-------------------------------------------
+
+.. _the_image_item:
+
+The Image item
+--------------
 
 To add an image, click the |mActionAddImage| :sup:`Add image` icon, place the element
 with the left mouse button on the Print Composer canvas and position and customize
@@ -677,8 +680,8 @@ you can now select one of the north arrow from the list as displayed in figure_c
 .. index::
    single:Map_Legend
 
-Adding a Legend item to the Print Composer
-------------------------------------------
+The Legend item
+---------------
 
 To add a map legend, click the |mActionAddLegend| :sup:`Add new legend` icon,
 place the element with the left mouse button on the Print Composer canvas and
@@ -826,8 +829,9 @@ through this dialog.
 .. index::
    single: Scalebar; Map_Scalebar
 
-Adding a Scale Bar item to the Print Composer
-----------------------------------------------
+
+The Scale Bar item
+------------------
 
 To add a scale bar, click the |mActionScaleBar| :sup:`Add new scalebar` icon, place
 the element with the left mouse button on the Print Composer canvas and position
@@ -890,7 +894,7 @@ provide the following functionalities (see figure_composer_scalebar3_):
 
 In these two dialogs, you can set how the scale bar will be represented.
 
-* Select the map units used. There are three possible choices: **Map Units** is the automated unit
+* Select the map units used. There are four possible choices: **Map Units** is the automated unit
   selection; **Meters**, **Feet** or **Nautical Miles** force unit conversions.
 * The :guilabel:`Label` field defines the text used to describe the units of the scale bar.
 * The :guilabel:`Map units per bar unit` allows you to fix the ratio between a map unit and its representation in the scale bar.
@@ -915,15 +919,15 @@ The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties` tab 
 
 You can define how the scale bar will be displayed in its frame. 
 
-* :guilabel:`Box margin`: space between text and frame borders
-* :guilabel:`Labels margin`:  space between text and scale bar drawing
-* :guilabel:`Line width`: line widht of the scale bar drawing
-* :guilabel:`Join style`: Corners at the end of scalebar in style Bevel, Rounded or Square 
+* :guilabel:`Box margin` : space between text and frame borders
+* :guilabel:`Labels margin` :  space between text and scale bar drawing
+* :guilabel:`Line width` : line widht of the scale bar drawing
+* :guilabel:`Join style` : Corners at the end of scalebar in style Bevel, Rounded or Square 
   (only available for Scale bar style Single Box & Double Box)  
-* :guilabel:`Cap style`: End of all lines in style Square, Round or Flat
+* :guilabel:`Cap style` : End of all lines in style Square, Round or Flat
   (only available for Scale bar style Line Ticks Up, Down and Middle)  
-* :guilabel:`Alignment`: Puts text on the left, middle or right side of the frame
-  Works only for Scale bar style Numeric 
+* :guilabel:`Alignment` : Puts text on the left, middle or right side of the frame
+  (works only for Scale bar style Numeric) 
 
 Fonts and colors
 ^^^^^^^^^^^^^^^^
@@ -956,18 +960,15 @@ a simple color selection option or the more advanced color selection option, tha
 started when you click in the colored box in the dialog. 
 
 
-Adding a Basic shape or Arrow item to the Print Composer
---------------------------------------------------------
+The Basic Shape Items
+---------------------
 
-It is possible to add basic shapes (ellipse, rectangle, triangle) and arrows
-to the Print Composer canvas: Click the |mActionAddBasicShape| :sup:`Add basic shape` icon or the
-|mActionAddArrow| :sup:`Add Arrow` icon, place the element with the left mouse button on the Print Composer canvas and position
-and customize the appearance in the :guilabel:`Item Properties` tab.
+To add a basic shape (ellipse, rectangle, triangle), click the |mActionAddBasicShape| :sup:`Add basic shape` icon 
+or the |mActionAddArrow| :sup:`Add Arrow` icon, place the element holding down the left mouse. Customize the 
+appearance in the :guilabel:`Item Properties` tab. 
 
-The :guilabel:`Shape` item properties tab allows you to draw an ellipse, rectangle, or triangle
-in the Print Composer canvas. You can define its outline and fill color, the
-outline width and a clockwise rotation. For the rectangle shape, you can change the value 
-of the corner radius.
+When you also hold down the :kbd:`Shift` key while placing the basic shape you can create a perfect square, 
+circle or triangle. 
 
 .. _figure_composer_22:
 
@@ -980,39 +981,78 @@ of the corner radius.
 
    Shape Item properties Tab |nix|
 
-The :guilabel:`Arrow` item properties tab allows you to draw an arrow in the Print Composer canvas.
-You can define color, outline and arrow width, and it is possible to use a default
-marker, no marker, or an SVG marker. For the SVG marker, you can additionally
-add an SVG start and end marker from a directory on your computer.
+The :guilabel:`Shape` item properties tab allows you to select if you want to draw an ellipse, 
+rectangle or triangle inside the given frame. 
 
-.. _figure_composer_23:
+You can set the style of the shape using the advanced symbol style dialog with which you can 
+define its outline and fill color, fill pattern, use markers etcetera.
+
+For the rectangle shape, you can set the value of the corner radius to round of the corners.
+
+.. note::
+   Unlike other items, you can not style the frame or the background color of the frame.
+
+
+The Arrow item
+--------------
+
+To add an arrow, click the |mActionAddArrow| :sup:`Add Arrow` icon, place the element holding 
+down the left mouse button and drag a line to draw the arrow on the Print Composer canvas and 
+position and customize the appearance in the scale bar :guilabel:`Item Properties` tab.
+
+When you also hold down the :kbd:`Shift` key while placing the arrow, it is placed in an angle 
+of exactly 45\ |degrees| .
+
+The arrow item can be used to add a line or a simple arrow that can be used, for example, to 
+show the relation between other print composer items. To create a north arrow, the image item should 
+be considered first. |qg| has a set of North arrows in SVG format. Furthermore you can connect 
+an image item with a map so it can rotate automatically with the map (see the_image_item_).
+
+.. _figure_composer_arrow:
 
 .. only:: html
 
-   **Figure Composer 23:**
+   **Figure Composer Arrow:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_arrow.png
    :align: center
 
    Arrow Item properties Tab |nix|
 
-Main properties
+Item Properties
 ^^^^^^^^^^^^^^^
 
-* For basic shapes, this dialog allows you to choose an **Ellipse**, **Rectangle** or **Triangle** shape and its rotation.
-* Unlike the other items, line style, line color and background color of a basic shape are adjusted with the Frame and Background dialog.
-  No frame is drawn.
-* For arrows, you can define here the line style: :guilabel:`Color`, :guilabel:`Line width` and :guilabel:`Arrow head width`.
-* :guilabel:`Arrows markers` can be adjusted. If you want to set an SVG :guilabel:`Start marker` and/or :guilabel:`End marker`, browse to
-  your SVG file by clicking on the **[...]** button after selecting the :guilabel:`SVG` radio button.
+The :guilabel:`Arrow` item properties tab allows you to configure an arrow item.
 
-.. note::
-   Unlike other items, the background color for a basic shape is the shape background and not the frame background.
+The  **[Line style ...]** button can be used to set the line style using the line style symbol editor.
+
+In :guilabel:`Arrows markers` you can select one of three radio buttons.
+ 
+* :guilabel:`Default` : To draw a regular arrow, gives you options to style the arrow head 
+* :guilabel:`None` : To draw a line without arrow head
+* :guilabel:`SVG Marker` : To draw a line with an SVG :guilabel:`Start marker` and/or :guilabel:`End marker`
+
+For :guilabel:`Default` Arrow marker you can use following options to style the arrow head.
+
+* :guilabel:`Arrow outline color` : Set the outline color of the arrow head
+* :guilabel:`Arrow fill color` : Set the fill color of the arrow head
+* :guilabel:`Arrow outline width` : Set the outline width of the arrow head
+* :guilabel:`Arrow head width`: Set the size of the arrow head
+  
+For :guilabel:`SVG Marker` you can use following options. 
+
+* :guilabel:`Start marker` : Choose an SVG image to draw at the beginning of the line
+* :guilabel:`End marker` : Choose an SVG image to draw at the end of the line
+* :guilabel:`Arrow head width`: Sets the size of Start and/or headmarker
+
+SVG images are automatically rotated with the line. The color of the SVG image can not be changed.
+
 
 .. index:: Attribute_Table
 
-Add attribute table values to the Print Composer
-------------------------------------------------
+
+The Attribute Table item
+------------------------
 
 It is possible to add parts of a vector attribute table to the Print Composer
 canvas: Click the |mActionOpenTable| :sup:`Add attribute table` icon, place the element with the left mouse button on the Print Composer
@@ -1070,8 +1110,8 @@ provide the following functionalities (see figure_composer_25_):
 
 .. index:: HTML_Frame
 
-Add an HTML frame to the Print Composer
-----------------------------------------
+The HTML frame item
+-------------------
 
 It is possible to add a clickable frame linked to a URL: Click the |mActionAddHtml| :sup:`Add HTML frame` icon, place the element with
 the left mouse button on the Print Composer canvas and position and customize the appearance in the :guilabel:`Item Properties` tab.
