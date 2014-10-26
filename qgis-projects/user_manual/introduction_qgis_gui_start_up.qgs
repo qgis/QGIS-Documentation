@@ -1,0 +1,193 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="" version="2.5.0-Master">
+    <title></title>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+        <customproperties/>
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="landcover20130516233229406" name="landcover">
+            <customproperties/>
+        </layer-tree-layer>
+    </layer-tree-group>
+    <relations/>
+    <mapcanvas>
+        <units>feet</units>
+        <extent>
+            <xmin>-4214705.62539820931851864</xmin>
+            <ymin>1777022.43934830604121089</ymin>
+            <xmax>2469322.152379569131881</xmax>
+            <ymax>7099939.10601498186588287</ymax>
+        </extent>
+        <projections>1</projections>
+        <destinationsrs>
+            <spatialrefsys>
+                <proj4>+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD27 +units=us-ft +no_defs</proj4>
+                <srsid>932</srsid>
+                <srid>2964</srid>
+                <authid>EPSG:2964</authid>
+                <description>NAD27 / Alaska Albers</description>
+                <projectionacronym>aea</projectionacronym>
+                <ellipsoidacronym>clrk66</ellipsoidacronym>
+                <geographicflag>false</geographicflag>
+            </spatialrefsys>
+        </destinationsrs>
+        <layer_coordinate_transform_info>
+            <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="landcover20130516233229406"/>
+            <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:3763" srcDatumTransform="-1" destDatumTransform="-1" layerid="contour100_2_Plataforma_continental20140508235403851"/>
+            <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="15978" layerid="Portugal_Polygons20140508235517911"/>
+        </layer_coordinate_transform_info>
+    </mapcanvas>
+    <visibility-presets/>
+    <layer-tree-canvas>
+        <custom-order enabled="0">
+            <item>landcover20130516233229406</item>
+        </custom-order>
+    </layer-tree-canvas>
+    <legend updateDrawingOrder="true">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="landcover" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="landcover20130516233229406" visible="1"/>
+            </filegroup>
+        </legendlayer>
+    </legend>
+    <projectlayers layercount="1">
+        <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+            <id>landcover20130516233229406</id>
+            <datasource>../../../qgis_sample_data/raster/landcover.img</datasource>
+            <title></title>
+            <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
+            <layername>landcover</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD27 +units=us-ft +no_defs</proj4>
+                    <srsid>932</srsid>
+                    <srid>2964</srid>
+                    <authid>EPSG:2964</authid>
+                    <description>NAD27 / Alaska Albers</description>
+                    <projectionacronym>aea</projectionacronym>
+                    <ellipsoidacronym>clrk66</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <customproperties>
+                <property key="identify/format" value="Value"/>
+            </customproperties>
+            <provider>gdal</provider>
+            <noData>
+                <noDataList bandNo="1" useSrcNoData="0"/>
+            </noData>
+            <pipe>
+                <rasterrenderer opacity="1" alphaBand="-1" band="1" type="paletted">
+                    <rasterTransparency>
+                        <singleValuePixelList>
+                            <pixelListEntry min="0" max="0" percentTransparent="20"/>
+                        </singleValuePixelList>
+                    </rasterTransparency>
+                    <colorPalette>
+                        <paletteEntry value="0" color="#4ba0d7" label="Water"/>
+                        <paletteEntry value="1" color="#016400" label="Evergreen Neddleleaf Forest"/>
+                        <paletteEntry value="2" color="#018200" label="Evergreen Broadleaf Forest"/>
+                        <paletteEntry value="3" color="#97bf47" label="Deciduous Needleleaf Forest"/>
+                        <paletteEntry value="4" color="#02dc00" label="Deciduous Broadleaf Forest"/>
+                        <paletteEntry value="5" color="#00ff00" label="Mixed Forest"/>
+                        <paletteEntry value="6" color="#92ae2f" label="Woodland"/>
+                        <paletteEntry value="7" color="#dcce00" label="Wooded Grassland"/>
+                        <paletteEntry value="8" color="#ffad00" label="Closed Shrubland"/>
+                        <paletteEntry value="9" color="#fffbc3" label="Open Shrubland"/>
+                        <paletteEntry value="10" color="#8c4809" label="Grassland"/>
+                        <paletteEntry value="11" color="#f7a5ff" label="Cropland"/>
+                        <paletteEntry value="12" color="#ffc7ae" label="Bare Ground"/>
+                        <paletteEntry value="13" color="#00ffff" label="Urban and Built"/>
+                    </colorPalette>
+                </rasterrenderer>
+                <brightnesscontrast brightness="0" contrast="0"/>
+                <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+                <rasterresampler maxOversampling="2"/>
+            </pipe>
+            <blendMode>0</blendMode>
+        </maplayer>
+    </projectlayers>
+    <properties>
+        <WMSContactPerson type="QString"></WMSContactPerson>
+        <WMSOnlineResource type="QString"></WMSOnlineResource>
+        <WMSContactOrganization type="QString"></WMSContactOrganization>
+        <WMSKeywordList type="QStringList">
+            <value></value>
+        </WMSKeywordList>
+        <WFSUrl type="QString"></WFSUrl>
+        <Paths>
+            <Absolute type="bool">false</Absolute>
+        </Paths>
+        <WMSServiceTitle type="QString"></WMSServiceTitle>
+        <WFSLayers type="QStringList"/>
+        <WMSContactMail type="QString"></WMSContactMail>
+        <PositionPrecision>
+            <DecimalPlaces type="int">2</DecimalPlaces>
+            <Automatic type="bool">true</Automatic>
+            <DegreeFormat type="QString">D</DegreeFormat>
+        </PositionPrecision>
+        <WCSUrl type="QString"></WCSUrl>
+        <WMSContactPhone type="QString"></WMSContactPhone>
+        <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+        <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+        <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+        <Measure>
+            <Ellipsoid type="QString">clrk66</Ellipsoid>
+        </Measure>
+        <WFSTLayers>
+            <Insert type="QStringList"/>
+            <Update type="QStringList"/>
+            <Delete type="QStringList"/>
+        </WFSTLayers>
+        <Gui>
+            <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+            <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+            <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+            <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+            <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+            <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+            <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+        </Gui>
+        <Digitizing>
+            <LayerSnappingList type="QStringList"/>
+            <LayerSnappingEnabledList type="QStringList"/>
+            <AvoidIntersectionsList type="QStringList"/>
+            <LayerSnappingToleranceUnitList type="QStringList"/>
+            <LayerSnapToList type="QStringList"/>
+            <LayerSnappingToleranceList type="QStringList"/>
+        </Digitizing>
+        <Identify>
+            <disabledLayers type="QStringList"/>
+        </Identify>
+        <Macros>
+            <pythonCode type="QString"></pythonCode>
+        </Macros>
+        <GRASS>
+            <WorkingLocation type="QString">alaska</WorkingLocation>
+            <WorkingGisdbase type="QString">/data/Dropbox/Trabalho/QGIS/qgis_sample_data/grassdata</WorkingGisdbase>
+            <WorkingMapset type="QString">demo</WorkingMapset>
+        </GRASS>
+        <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+        <WCSLayers type="QStringList"/>
+        <Legend>
+            <filterByMap type="bool">false</filterByMap>
+        </Legend>
+        <SpatialRefSys>
+            <ProjectCRSProj4String type="QString">+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=clrk66 +datum=NAD27 +units=us-ft +no_defs</ProjectCRSProj4String>
+            <ProjectCrs type="QString">EPSG:2964</ProjectCrs>
+            <ProjectCRSID type="int">932</ProjectCRSID>
+            <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+        </SpatialRefSys>
+        <DefaultStyles>
+            <Fill type="QString"></Fill>
+            <Line type="QString"></Line>
+            <Marker type="QString"></Marker>
+            <RandomColors type="bool">true</RandomColors>
+            <AlphaInt type="int">255</AlphaInt>
+            <ColorRamp type="QString"></ColorRamp>
+        </DefaultStyles>
+        <WMSFees type="QString"></WMSFees>
+        <WMSUrl type="QString"></WMSUrl>
+    </properties>
+</qgis>
