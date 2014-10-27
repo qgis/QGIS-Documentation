@@ -1055,58 +1055,158 @@ The Attribute Table item
 ------------------------
 
 It is possible to add parts of a vector attribute table to the Print Composer
-canvas: Click the |mActionOpenTable| :sup:`Add attribute table` icon, place the element with the left mouse button on the Print Composer
-canvas, and position and customize the appearance in the :guilabel:`Item Properties` tab.
+canvas: Click the |mActionOpenTable| :sup:`Add attribute table` icon, place the 
+element with the left mouse button on the Print Composer canvas, and position and 
+customize the appearance in the :guilabel:`Item Properties` tab.
 
 The :guilabel:`Item properties` of an attribute table item tab provides the following
-functionalities (see figure_composer_24_):
+functionalities (see figure_composer_table_1_):
 
-.. _Figure_composer_24:
+.. _Figure_composer_table_1:
 
 .. only:: html
 
-   **Figure Composer 24:**
+   **Figure Composer Attribute Table 1:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_attribute1.png
    :align: center
 
-   Scale Bar Item properties Tab |nix|
+   Attribute table Item properties Tab |nix|
 
-Main properties, Show grid and Fonts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The :guilabel:`Main properties`, :guilabel:`Show grid` and :guilabel:`Fonts` dialogs of the attribute table :guilabel:`Item Properties` tab
-provide the following functionalities (see figure_composer_25_):
+Main properties
+^^^^^^^^^^^^^^^
 
-.. _Figure_composer_25:
+The :guilabel:`Main properties` dialogs of the attribute table :guilabel:`Item Properties` 
+tab provide the following functionalities  (see figure_composer_table_2_):
+
+.. _Figure_composer_table_2:
 
 .. only:: html
 
-   **Figure Composer 25:**
+   **Figure Composer Attribute Table 2:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_attribute2.png
    :align: center
 
-   Attribute table Main properties, Show grid and Fonts Dialog |nix|
+   Attribute table Main properties Dialog |nix|
 
-   .. _Figure_composer_26:
+The :guilabel:`Table` dialog allows you to select the vector layer and columns of the attribute table. 
+Attribute columns can be sorted, and you can specify whether to show values in ascending or descending 
+order (see figure_composer_table_3_).
+
+.. _Figure_composer_table_3:
 
 .. only:: html
 
-   **Figure Composer 26:**
+   **Figure Composer Attribute Table 3:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_attribute3.png
    :align: center
 
    Attribute table Select attributes Dialog |nix|
 
-* The :guilabel:`Table` dialog allows you to select the vector layer and columns of the attribute table. Attribute columns can be sorted, and you
-  can specify whether to show values in ascending or descending order (see figure_composer_26_).
-* You can choose to display the attributes of only features visible on a map. Check |checkbox| :guilabel:`Show only visible features` and
-  select the corresponding :guilabel:`Composer map` to filter.
-* You can define the :guilabel:`Maximum number of rows` to be displayed and the :guilabel:`margin` around text.
-* Additionally, you can define the grid characteristics of the table (:guilabel:`Stroke width` and :guilabel:`Color` of the grid) and the
-  header and content font.
+
+Feature filtering
+^^^^^^^^^^^^^^^^^
+
+The :guilabel:`Feature filtering` dialogs of the attribute table :guilabel:`Item Properties` 
+tab provide the following functionalities  (see figure_composer_table_4_):
+
+.. _Figure_composer_table_4:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 4:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute4.png
+   :align: center
+
+   Attribute table Feature filtering Dialog |nix|
+
+You can define the :guilabel:`Maximum number of rows` to be displayed.
+
+You can choose to display the attributes of only features visible on a map. Check |checkbox| 
+:guilabel:`Show only visible features` and select the corresponding :guilabel:`Composer map` to filter.
+
+
+Appearance
+^^^^^^^^^^
+
+The :guilabel:`Appearance` dialogs of the attribute table :guilabel:`Item Properties` 
+tab provide the following functionalities  (see figure_composer_table_5_):
+
+.. _Figure_composer_table_5:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 5:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute5.png
+   :align: center
+
+   Attribute table appearance Dialog |nix|
+
+You can define the :guilabel:`margin` around text.
+
+
+Show grid
+^^^^^^^^^
+
+The :guilabel:`Show grid` dialog of the attribute table :guilabel:`Item Properties` tab
+provide the following functionalities (see figure_composer_table_6_):
+
+   .. _Figure_composer_table_6:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 6:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute6.png
+   :align: center
+
+   Attribute table Show grid Dialog |nix|
+
+You can define the grid characteristics of the table (:guilabel:`Stroke width` and :guilabel:`Color` of the grid) 
+
+
+Fonts and text styling
+^^^^^^^^^^^^^^^^^^^^^^
+
+The :guilabel:`Fonts and text styling` dialog of the attribute table :guilabel:`Item Properties` tab
+provide the following functionalities (see figure_composer_table_7_):
+
+   .. _Figure_composer_table_7:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 7:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute7.png
+   :align: center
+
+   Attribute table Fonts and text styling Dialog |nix|
+
+You can define the header and content font.
+
+
+Frames
+^^^^^^
+
+The :guilabel:`Frames` dialog of the attribute table :guilabel:`Item Properties` tab
+provide the following functionalities (see figure_composer_table_8_):
+
+   .. _Figure_composer_table_8:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 8:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute8.png
+   :align: center
+
+   Attribute table Frames Dialog |nix|
+
 
 .. index:: HTML_Frame
 
