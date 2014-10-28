@@ -370,12 +370,9 @@ Content**, **Expand All** or **Collapse All** and **Remove Layer or Group**.
 
         Layer Tool Bar in Map Legend |nix|
 
-The new button |mActionShowPresets| allows you to add **Presets** views in the legend. It means
-that you can choose to display some layer with specific categorization and add this
-view to the **Presets** list. To add a preset view just click on |mActionShowPresets|, choose *Add Preset...* from the drop down menu and give a name to the preset. After that you will see a list with all the presets that you can 
-recall pressing on the |mActionShowPresets| button. 
-All the added presets are also present in the map composer in order to allow you to
-create a map layout based on your specific views (see :ref:`composer_main_properties`).
+The button |mActionShowPresets| allows you to add **Presets** views in the legend. It means that you can choose to display some layer with specific categorization and add this view to the **Presets** list. To add a preset view just click on |mActionShowPresets|, choose *Add Preset...* from the drop down menu and give a name to the preset. After that you will see a list with all the presets that you can recall pressing on the |mActionShowPresets| button. 
+
+All the added presets are also present in the map composer in order to allow you to create a map layout based on your specific views (see :ref:`composer_main_properties`).
 
 
 
@@ -391,9 +388,9 @@ are drawn over layers listed lower down in the legend.
 Layers in the legend window can be organised into groups. There are two ways to
 do this:
 
-#. Right click in the legend window and choose :guilabel:`Add New Group`. Type in a
-   name for the group and press :kbd:`Enter`. Now click on an existing layer
-   and drag it onto the group.
+#. Press the |mActionFolder| icon to add a new group. Type in a name for 
+   the group and press :kbd:`Enter`. Now click on an existing layer and 
+   drag it onto the group.
 #. Select some layers, right click in the legend window and choose
    :guilabel:`Group Selected`. The selected layers will automatically be placed
    in a new group.
