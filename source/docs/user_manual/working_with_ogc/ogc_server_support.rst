@@ -20,19 +20,8 @@ contrast to other WMS software, the |qg| Server uses cartographic rules as a
 configuration language, both for the server configuration and for the user-defined
 cartographic rules.
 
-.. index:: Publish_to_Web_plugin
-
-Moreover, the |qg| Server project provides the 'Publish to Web' plugin, a plugin
-for |qg| desktop that exports the current layers and symbology as a web project
-for |qg| Server (containing cartographic visualization rules expressed in SLD).
-
 As |qg| desktop and |qg| Server use the same visualization libraries, the maps
-that are published on the web look the same as in desktop GIS. The 'Publish to Web'
-plugin currently supports basic symbolization, with the option to introduce more complex 
-cartographic visualization rules manually. As the configuration is performed with
-the `SLD standard <http://www.opengeospatial.org/standards/sld>`_ and its
-documented extensions, there is only one standardised language to learn, which
-greatly simplifies the complexity of creating maps for the Web.
+that are published on the web look the same as in desktop GIS.
 
 In one of the following manuals, we will provide a sample configuration to set up
 a |qg| Server. For now, we recommend to read one of the following URLs to get
@@ -251,9 +240,9 @@ To log requests send to server, set the following environment variables:
   some requests to server. If it's not there, check permissions.
 * **QGIS_SERVER_LOG_LEVEL**: Specify desired log level. Available values are:
 
-  *0 INFO (log all requests),
-  *1 WARNING,
-  *2 CRITICAL (log just critical errors, suitable for production purposes).
+  * 0 INFO (log all requests),
+  * 1 WARNING,
+  * 2 CRITICAL (log just critical errors, suitable for production purposes).
 
   Example::
 

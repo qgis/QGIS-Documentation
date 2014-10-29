@@ -13,7 +13,7 @@ The data correspond to crop yield data, as produced by a modern harvester, and w
 
 The first thing to do is to clean--up the layer, since it contains redundant points. These are caused by the movement of the harvester, in places where it has to do a turn or it changes its speed for some reason. The *Point filter* algorithm will be useful for this. We will use it twice, to remove points that can be considered outliers both in the upper and lower part of the distribution.
 
-For the first execution, use the following parameter values. [**Note**: this does not work, resulting file empty]
+For the first execution, use the following parameter values.
 
 .. image:: img/interpolation/filter.png
 
@@ -43,7 +43,7 @@ The layer without no--data values looks like this.
 
 .. image:: img/interpolation/filled.png
 
-To restrict the area covered by the data to just the region where crop yield was measured, we can clip the raster layer with the provided limits layer
+To restrict the area covered by the data to just the region where crop yield was measured, we can clip the raster layer with the provided limits layer.
 
 .. image:: img/interpolation/clip.png
 

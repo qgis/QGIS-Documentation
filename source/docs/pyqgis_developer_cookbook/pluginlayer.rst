@@ -25,8 +25,7 @@ excerpt of the `Watermark example plugin <http://github.com/sourcepole/qgis-wate
     LAYER_TYPE="watermark"
 
     def __init__(self):
-      QgsPluginLayer.__init__(self, WatermarkPluginLayer.LAYER_TYPE, \
-        "Watermark plugin layer")
+      QgsPluginLayer.__init__(self, WatermarkPluginLayer.LAYER_TYPE, "Watermark plugin layer")
       self.setValid(True)
 
     def draw(self, rendererContext):
@@ -38,14 +37,20 @@ excerpt of the `Watermark example plugin <http://github.com/sourcepole/qgis-wate
       return True
 
 Methods for reading and writing specific information to the project file can
-also be added::
+also be added
+
+::
 
     def readXml(self, node):
+      pass
 
     def writeXml(self, node, doc):
+      pass
 
 
-When loading a project containing such a layer, a factory class is needed::
+When loading a project containing such a layer, a factory class is needed
+
+::
 
   class WatermarkPluginLayerType(QgsPluginLayerType):
 
@@ -55,6 +60,10 @@ When loading a project containing such a layer, a factory class is needed::
     def createLayer(self):
       return WatermarkPluginLayer()
 
-You can also add code for displaying custom information in the layer properties::
+You can also add code for displaying custom information in the layer properties
+
+::
 
     def showLayerProperties(self, layer):
+      pass
+

@@ -7,6 +7,8 @@ Print Composer
 **************
 .. index:: Create_Maps, Layout_Maps, Compose_Maps
 
+With the Print Composer you can create nice maps and atlasses that can be printed or saved as PDF-file, an image or an SVG-file. This is a powerfull way to share geographical information produced with |qg| that can be included in reports or published.
+
 The Print Composer provides growing layout and printing capabilities. It allows
 you to add elements such as the |qg| map canvas, text labels, images, legends, scale bars, basic
 shapes, arrows, attribute tables and HTML frames. You can size, group, align and position each
@@ -103,15 +105,14 @@ and vector layers in the |qg| map canvas and adapt their properties to suit your
 own convenience. After everything is rendered and symbolized to your liking,
 click the |mActionNewComposer| :sup:`New Print Composer` icon in the toolbar or
 choose :menuselection:`File --> New Print Composer`. You will be prompted to
-choose a title for the new Composer.
+choose a title for the new Composer. For the first session give it the name 'Sample session'.
 
-Using Print Composer
+Overview of the Print Composer
 --------------------
 
-Opening the Print Composer provides you with a blank canvas to which you can add
-the current |qg| map canvas, text labels, images, legends, scale bars, basic
-shapes, arrows, attribute tables and HTML frames. Figure_composer_1_ shows the 
-initial view of the Print Composer before any elements are added.
+Opening the Print Composer provides you with a blank canvas that represents the paper surface when print. Initially you can find on the buttons on the left beside the panel to add map composer items; the current |qg| map canvas, text labels, images, legends, scale bars, basic shapes, arrows, attribute tables and HTML frames. In this toolbar you also find the toolbar buttons to navigate, zoomin on a part of the canvas and pan the view on the composer, the button to select the map composer item and the button the move the contents of the map item.  
+
+Figure_composer_1_ shows the initial view of the Print Composer before any elements are added.
 
 .. _Figure_composer_1:
 
@@ -124,8 +125,13 @@ initial view of the Print Composer before any elements are added.
 
    Print Composer |nix|
 
-The Print Composer provides four tabs:
+On the right beside the canvas you find two panels.
+The upper panel holds the tabs :guilabel:`Items` and :guilabel:`Command History` and the lower panel holds the tabs :guilabel:`Composition`,  :guilabel:`Item properties` and :guilabel:`Atlas generation`. 
 
+* The :guilabel:`Items` tab provides a list of all map composer items added to the canvas.
+* The :guilabel:`Command history` tab displays a history of all changes applied
+  to the Print Composer layout. With a mouse click, it is possible to undo and
+  redo layout steps back and forth to a certain status.
 * The :guilabel:`Composition` tab allows you to set paper size, orientation, the page
   background, number of pages and print quality for the output file in dpi. Furthermore, you 
   can also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means
@@ -136,11 +142,9 @@ The Print Composer provides four tabs:
   an element (e.g., legend, scale bar or label) on the canvas. Then click the
   :guilabel:`Item Properties` tab and customize the settings for the selected
   element.
-* The :guilabel:`Command history` tab (hidden by default) displays a history of all changes applied
-  to the Print Composer layout. With a mouse click, it is possible to undo and
-  redo layout steps back and forth to a certain status.
 * The :guilabel:`Atlas generation` tab allows you to enable the generation of an
   atlas for the current Composer and gives access to its parameters.
+* Finally, you can save your print composition with the |mActionFileSave| :sup:`Save Project` button. 
 
 In the bottom part of the Print Composer window, you can find a status bar with 
 mouse position, current page number and a combo box to set the zoom level.
@@ -171,15 +175,34 @@ hold the :kbd:`Spacebar` or the the mouse wheel.
 With :kbd:`Ctrl+Spacebar`, you can temporarily switch to marquee zoom mode, and with 
 :kbd:`Ctrl+Shift+Spacebar`, to zoom out mode.
 
+Sample Session
+--------------
+
+
+To demonstrate how to create a map please follow the next instructions.
+
+#. On the left site, select the |mActionAddMap| :sup:`Add new map` toolbar button and draw a rectangle on the canvas holding down the left mouse button. Inside de drawn rectangle the |qg| map view to the canvas.
+#. Select the |mActionScaleBar| :sup:`Add new scalebar` toolbar button and place the map item with the left mouse button on the Print Composer canvas. A scalebar will be added to the canvas.
+#. Select the |mActionAddLegend| :sup:`Add new legend` toolbar button and draw a rectangle on the canvas holding down the left mouse button. Inside the drawn rectangle the legend will be drawn.
+#. Select the |mActionSelect| :sup:`Select/Move item` icon to select the map on the canvas and move it a bit.
+#. While the map item is still selected you can also change the size of the map item. Click while holding down the left mouse button, in a white little rectangle in one of the corners of the map item and draw it to a new location to change it's size. 
+#. Click the :guilabel:`Item Properties` tab on the left lower panel and find the setting for the orientation. Change it the value of the setting :guilabel:`Map orientation` to '15.00\ |degrees| '. You should see the orientation of the map item change.
+#. Finally, you can save your print composition with the |mActionFileSave| :sup:`Save Project` button. 
+ 
+
 Print Composer Options
---------------------
+----------------------
+
 From :menuselection:`Settings --> Composer Options` you can set some options that will be
 used as default during your work.
 
 * :guilabel:`Compositions defaults` let you specify the default font to use.
 * With :guilabel:`Grid appearance`, you can set the grid style and its color.
-* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
+* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. 
+  There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
 * :guilabel:`Guide defaults` defines the tolerance for the guides.
+
+
 
 Composition tab --- General composition setup
 ---------------------------------------------
@@ -199,7 +222,7 @@ Snap to grid and/or to smart guides can be enabled from the :menuselection:`View
 Composer items general options
 ------------------------------
 
-Composer items have a set of common properties you will find on the bottom of the :guilabel:`Item Properties` tab: Position and size, Frame,
+Composer items have a set of common properties you will find on the bottom of the :guilabel:`Item Properties` tab: Position and size, Rotation, Frame,
 Background, Item ID and Rendering (See figure_composer_2_).
 
 .. _Figure_composer_2:
@@ -228,6 +251,9 @@ Background, Item ID and Rendering (See figure_composer_2_).
   (e.g., label text) for that specific item. The GetProjectSettings command will list what items and which IDs are available in a layout.
 * :guilabel:`Rendering` mode can be selected in the option field. See Rendering_Mode_.
 
+.. note:: If you checked |checkbox| :guilabel:`Use live-updating color chooser dialogs` in the QGIS general options, the color button will 
+    update as soon as you choose a new color from **Color Dialog** windows. If not, you need to close the **Color Dialog**.
+
 .. _Rendering_Mode:
 
 .. index:: Rendering_Mode
@@ -251,29 +277,48 @@ Rendering mode
 * :guilabel:`Transparency` |slider|: You can make the underlying item in the Composer
   visible with this tool. Use the slider to adapt the visibility of your item to your needs.
   You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
+* |checkbox| :guilabel:`Exclude item from exports`: You can decide to make an item not visible in all exports. After activating this checkbox, the item will not be included in PDF's, prints etc.. 
 * :guilabel:`Blending mode`: You can achieve special rendering effects with these tools that you
   previously only may know from graphics programs. The pixels of your overlaying and underlaying items are mixed
   through the settings described below.
 
-    * Normal: This is the standard blend mode, which uses the alpha channel of the top pixel to blend with the pixel beneath it; the colors aren't mixed.
-    * Lighten: This selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged and harsh.
-    * Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is most useful for mixing the texture of one layer with another layer (e.g., you can use a hillshade to texture another layer).
-    * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So, brighter top pixels cause the saturation and brightness of the underlying pixels to increase. This works best if the top pixels aren't too bright; otherwise the effect is too extreme.
-    * Addition: This blend mode simply adds pixel values of one layer with pixel values of the other. In case of values above 1 (as in the case of RGB), white is displayed. This mode is suitable for highlighting features.
-    * Darken: This creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
-    * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the numbers for the corresponding pixel of the bottom layer. The results are darker pictures.
-    * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be used to tweak and colorise underlying layers.
-    * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, light parts become lighter and dark parts become darker.
-    * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This mode is supposed to emulate shining a soft light onto an image.
-    * Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
-    * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way around, to always get a positive value. Blending with black produces no change, as the difference with all colors is zero.
-    * Subtract: This blend mode simply subtracts pixel values of one layer with pixel values of the other. In case of negative values, black is displayed.
+    * Normal: This is the standard blend mode, which uses the alpha channel of the 
+      top pixel to blend with the pixel beneath it; the colors aren't mixed.
+    * Lighten: This selects the maximum of each component from the foreground and 
+      background pixels. Be aware that the results tend to be jagged and harsh.
+    * Screen: Light pixels from the source are painted over the destination, while 
+      dark pixels are not. This mode is most useful for mixing the texture of one layer 
+      with another layer (e.g., you can use a hillshade to texture another layer).
+    * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness 
+      of the top pixel. So, brighter top pixels cause the saturation and brightness of the 
+      underlying pixels to increase. This works best if the top pixels aren't too bright; 
+      otherwise the effect is too extreme.
+    * Addition: This blend mode simply adds pixel values of one layer with pixel values of 
+      the other. In case of values above 1 (as in the case of RGB), white is displayed. This 
+      mode is suitable for highlighting features.
+    * Darken: This creates a resultant pixel that retains the smallest components of the 
+      foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
+    * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the numbers 
+      for the corresponding pixel of the bottom layer. The results are darker pictures.
+    * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be 
+      used to tweak and colorise underlying layers.
+    * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, 
+      light parts become lighter and dark parts become darker.
+    * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses 
+      color burn/dodge. This mode is supposed to emulate shining a soft light onto an image.
+    * Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting 
+      a very intense light onto an image.
+    * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way 
+      around, to always get a positive value. Blending with black produces no change, as the 
+      difference with all colors is zero.
+    * Subtract: This blend mode simply subtracts pixel values of one layer with pixel values of 
+      the other. In case of negative values, black is displayed.
 
 Composer Items
 ==============
 
-Adding a current |qg| map canvas to the Print Composer
-------------------------------------------------------
+The Map item
+------------
 
 Click on the |mActionAddMap| :sup:`Add new map` toolbar button in the Print
 Composer toolbar to add the |qg| map canvas. Now, drag a rectangle onto the Composer
@@ -306,6 +351,8 @@ the map element by activating the |checkbox| :guilabel:`Lock layers for map
 item` checkbox in the :guilabel:`Map` dialog of the :guilabel:`Item Properties`
 tab.
 
+.. _`composer_main_properties`:
+
 Main properties
 ^^^^^^^^^^^^^^^
 
@@ -331,10 +378,21 @@ following functionalities (see figure_composer_4_):
 * The field :guilabel:`Rotation` |selectnumber| allows you to
   rotate the map element content clockwise in degrees. Note that a coordinate frame
   can only be added with the default value 0.
-* |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed on the map canvas in the main |qg| window.
-* You can choose to lock the layers shown on a map item. Check |checkbox| :guilabel:`Lock layers for map item`. After this is checked, any layer that would be
-  displayed or hidden in the main |qg| window won't appear or be hidden in the map item of the Composer. But style and
-  labels of a locked layer are still refreshed according to the main |qg| interface.
+* |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed 
+  on the map canvas in the main |qg| window.
+* You can choose to lock the layers shown on a map item. Check |checkbox| 
+  :guilabel:`Lock layers for map item`. 
+  After this is checked, any layer that would be displayed or hidden in the main |qg| window 
+  will not appear or be hidden in the map item of the Composer. But style and labels of a 
+  locked layer are still refreshed according to the main |qg| interface.
+* The |mActionShowPresets| button allows you to add quickly all the presets views you 
+  have prepared in QGIS. 
+  Clicking on the |mActionShowPresets| button you will see the list of all the preset views: 
+  just select the preset you want to display. 
+  The map canvas will automatically lock the preset layers by enabling the |checkbox| 
+  :guilabel:`Lock layers for map item`: if you want to unselect the preset, just uncheck the 
+  |checkbox| and press on the |mActionDraw| button. See :ref:`label_legend` to find out how to 
+  create presets views.
 
 Extents
 ^^^^^^^
@@ -353,8 +411,12 @@ functionalities (see figure_composer_5_):
 
    Map Extents Dialog |nix|
 
-* The **Map extent** area allows you to specify the map extent using Y and X min/max
-  values or by clicking the **[Set to map canvas extent]** button.
+* The **Map extents** area allows you to specify the map extent using X and Y min/max
+  values and by clicking the **[Set to map canvas extent]** button. This button sets 
+  the map extent of the composer map item to the extent of the current map view in the 
+  main |qg| application. The button **[View extent in map canvas]** does exactly the 
+  opposite, it updates the extent of the map view in the QGIS application to the extent
+  of the composer map item. 
 
 If you change the view on the |qg| map canvas by changing
 vector or raster properties, you can update the Print Composer view by selecting
@@ -362,43 +424,88 @@ the map element in the Print Composer and clicking the **[Update preview]** butt
 in the map :guilabel:`Item Properties` tab (see figure_composer_2_).
 
 .. index::
-   single: Grid;Map_Grid
+   single: Grid;Grids;Map_Grid
 
-Grid
+Grids
 ^^^^
 
-The :guilabel:`Grid` dialog of the map :guilabel:`Item Properties` tab provides the
-following functionalities (see Figure_composer_6_):
+The :guilabel:`Grids` dialog of the map :guilabel:`Item Properties` tab provides the
+the possibility to add several grids to a map item.
 
-.. _Figure_composer_6:
+* With the plus and minus button you can add or remove a selected grid.
+* With the up and down button you can move a grid in the list and set the drawing priority.
+
+When you double click on the added grid you can give it another name.
+
+.. _Figure_composer_grid_1:
 
 .. only:: html
 
-   **Figure Composer 6:**
+   **Figure Composer grid 1:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_map3.png
+.. figure:: /static/user_manual/print_composer/map_grids.png
    :align: center
 
-   Map Grid Dialog |nix|
+   Map Grids Dialog |nix|
 
-* The |checkbox| :guilabel:`Show grid` checkbox allows you to overlay a grid onto the
-  map element. As grid type, you can specify to use a solid line or cross. Symbology of
-  the grid can be chosen. See section Rendering_Mode_.
-  Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
-  and the width used for the cross or line grid type.
-* You can choose to paint the frame with a zebra style. If not selected, the general frame option is used (see section Frame_dialog_).
-  Advanced rendering mode is also available for grids (see section Rendering_mode_).
+After you have added a grid, you can active the checkbox |checkbox| :guilabel:`Show grid` to overlay a grid onto the
+map element. Expand this option to provides a lot of configuration options, see Figure_composer_grid_2_.
+
+.. _Figure_composer_grid_2:
+
+.. only:: html
+
+   **Figure Composer grid 2:**
+
+.. figure:: /static/user_manual/print_composer/draw_grid.png
+   :align: center
+
+   Draw Grid Dialog |nix|
+
+As grid type, you can specify to use a solid line or cross. Symbology of
+the grid can be chosen. See section Rendering_Mode_.
+Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
+and the width used for the cross or line grid type.
+
+.. _Figure_composer_grid_3:
+
+.. only:: html
+
+   **Figure Composer grid 3:**
+
+.. figure:: /static/user_manual/print_composer/grid_frame.png
+   :align: center
+
+   Grid Frame Dialog |nix|
+
+* There are different options to style the frame that holds the map. Following options are 
+  available: No Frame, Zebra, Interior ticks, Exterior ticks, Interior and Exterior ticks and Lineborder.
+
+* Advanced rendering mode is also available for grids (see section Rendering_mode_).
+
 * The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add coordinates
   to the map frame. The annotation can be drawn inside or outside the map frame.
   The annotation direction can be defined as horizontal, vertical, horizontal and
   vertical, or boundary direction, for each border individually. Units can be in meters or in degrees. Finally, you can define the grid
   color, the annotation font, the annotation distance from the map frame and the precision of the drawn coordinates.
 
-Overview
-^^^^^^^^
+.. _Figure_composer_grid_4:
 
-The :guilabel:`Overview` dialog of the map :guilabel:`Item Properties` tab provides the
-following functionalities (see Figure_composer_7_):
+.. only:: html
+
+   **Figure Composer grid 4:**
+
+.. figure:: /static/user_manual/print_composer/grid_draw_coordinates.png
+   :align: center
+
+   Grid Draw Coordinates dialog |nix|
+
+
+Overviews
+^^^^^^^^^
+
+The :guilabel:`Overviews` dialog of the map :guilabel:`Item Properties` tab provides the
+following functionalities:
 
 .. _Figure_composer_7:
 
@@ -409,25 +516,48 @@ following functionalities (see Figure_composer_7_):
 .. figure:: /static/user_manual/print_composer/print_composer_map4.png
    :align: center
 
-   Map Overview Dialog |nix|
+   Map Overviews Dialog |nix|
 
-If the Composer has more than one map, you can choose to use a first map to show the extents of a second map.
-The :guilabel:`Overview` dialog of the map :guilabel:`Item Properties` tab allows you to customize the appearance of that feature.
+You can choose to create an overview map, which shows the extents of the other map(s) 
+that are available in the composer. First you need to create the map(s) you want to 
+include in the overview map. Next you create the map you want to use as the overview 
+map, just like a normal map. 
 
-* The :guilabel:`Overview frame` combo list references the map item whose extents will be drawn on the present map item.
-* The :guilabel:`Overview Style` allows you to change the frame color. See section vector_style_manager .
-* The :guilabel:`Overview Blend mode` allows you to set different transparency blend modes, to enhance visibility of the frame. See Rendering_Mode_.
-* If checked, |checkbox| :guilabel:`Invert overview` creates a mask around the extents: the referenced map extents are shown clearly,
-  whereas everything else is blended with the frame color.
+* With the plus and minus button you can add or remove an overview.
+* With the up and down button you can move an overview in the list and set the drawing priority.
 
-Adding a Label item to the Print Composer
------------------------------------------
+Open :guilabel:`Overviews` and press the green plus icon-button to add an overview. 
+Initially this overview is named 'Overview 1' (see Figure_composer_7_). 
+You can change the name when you double-click on the overview item in the list 
+named 'Overview 1' and change it to another name. 
+
+When you select the overview item in the list you can customize it.
+
+* The |checkbox| :guilabel:`Draw "<name_overview>" overview` needs to be activated to 
+  draw the extent of selected map frame.
+* The :guilabel:`Map frame` combo list can be used to select the map item whose extents 
+  will be drawn on the present map item.
+* The :guilabel:`Frame Style` allows you to change the style of the overview frame.
+* The :guilabel:`Blending mode` allows you to set different transparency blend modes. 
+  See Rendering_Mode_.
+* The |checkbox| :guilabel:`Invert overview` creates a mask around the extents when 
+  activated: the referenced map extents are shown clearly, whereas everything else 
+  is blended with the frame color.
+* The |checkbox| :guilabel:`Center on overview` puts the extent of the overview frame in 
+  the center of the overview map. You can only activate one overview item to center, when 
+  you have added several overviews.
+
+
+
+The Label item
+--------------
 
 To add a label, click the |mActionLabel| :sup:`Add label` icon, place the element
 with the left mouse button on the Print Composer canvas and position and customize
 its appearance in the label :guilabel:`Item Properties` tab.
 
-The :guilabel:`Item Properties` tab of a label item provides the following functionalities:
+The :guilabel:`Item Properties` tab of a label item provides the following functionality 
+for the label item (see Figure_composer_8_):
 
 .. _Figure_composer_8:
 
@@ -443,52 +573,28 @@ The :guilabel:`Item Properties` tab of a label item provides the following funct
 Main properties
 ^^^^^^^^^^^^^^^
 
-The :guilabel:`Main properties` dialog of the label :guilabel:`Item Properties` tab provides the
-following functionalities (see Figure_composer_9_):
-
-.. _Figure_composer_9:
-
-.. only:: html
-
-   **Figure Composer 9:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_label2.png
-   :align: center
-
-   Label Main properties Dialog |nix|
-
-* The main properties dialog is where the text (HTML or not) or the expression needed to fill the label is added to the Composer
-  canvas.
-* Labels can be interpreted as HTML code: check |checkbox| :guilabel:`Render as HTML`. You can now insert a URL, a clickable
-  image that links to a web page or something more complex.
-* You can also insert an expression. Click on **[Insert an expression]** to open a new dialog. Build an expression by clicking the
-  functions available in the left side of the panel. On the right side of the `Insert an expression` dialog, the help file
-  associated with the function selected is displayed. Two special categories can be useful, particularly associated with the atlas functionality:
+* The main properties dialog is where the text (HTML or not) or the expression 
+  needed to fill the label is added to the Composer canvas.
+* Labels can be interpreted as HTML code: check |checkbox| :guilabel:`Render as HTML`. 
+  You can now insert a URL, a clickable image that links to a web page or something more complex.
+* You can also insert an expression. Click on **[Insert an expression]** to open a new dialog. 
+  Build an expression by clicking the functions available in the left side of the panel. 
+  Two special categories can be useful, particularly associated with the atlas functionality: 
   geometry functions and records functions. At the bottom, a preview of the expression is shown.
-* Define font and font color by clicking on the **[Font]** and **[Font color...]** buttons.
+* Define :guilabel:`Font` by clicking on the **[Font...]** button or a :guilabel:`Font color` 
+  selecting a color using the color selection tool.
 
 Alignment and Display
 ^^^^^^^^^^^^^^^^^^^^^
 
-The :guilabel:`Alignment` and :guilabel:`Display` dialogs of the label :guilabel:`Item Properties` tab provide the
-following functionalities (see Figure_composer_10_):
-
-.. _Figure_composer_10:
-
-.. only:: html
-
-   **Figure Composer 10:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_label3.png
-   :align: center
-
-   Label Alignment and Display Dialogs |nix|
-
 * You can define the horizontal and vertical alignment in the :guilabel:`Alignment` zone.
-* In the **Display** tag, you can define a margin in mm and/or a rotation angle in degrees for the text.
+* In the **Display** tag, you can define a margin in mm. This is the margin from the edge of the composer item.
 
-Adding an Image item to the Print Composer
-------------------------------------------
+
+.. _the_image_item:
+
+The Image item
+--------------
 
 To add an image, click the |mActionAddImage| :sup:`Add image` icon, place the element
 with the left mouse button on the Print Composer canvas and position and customize
@@ -512,38 +618,70 @@ The image :guilabel:`Item Properties` tab provides the following functionalities
 
    Image Item properties Tab |nix|
 
-Main properties, Search directories and Rotation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The :guilabel:`Main properties` and :guilabel:`Search directories` dialogs of the image :guilabel:`Item Properties` tab provide the
-following functionalities (see Figure_composer_12_):
+You first have to select the image you want to display. 
+There are several ways to set the :guilabel:`image source` in the **Main properties** area. 
 
-.. _Figure_composer_12:
+#. Use the browse button |browsebutton| of :guilabel:`image source` to select a file on your 
+   computer using the browse dialog. The browser will start in the SVG-libraries provided with |qg|.
+   Besides :file:`SVG`, you can also select other image formats like :file:`.png` or :file:`.jpg`.
+#. You can enter the source directly in the :guilabel:`image source` text field. You can even provide
+   a remote URL-address to an image.   
+#. From the **Search directories** area you can also select an image from :guilabel:`loading preview..` 
+   to set the image source.
+#. Use the data defined button |mIconDataDefine| to set the image source from a record or using a 
+   regular expression.  
+  
+With the :guilabel:`Resize mode` option, you can set how the image is displayed when the frame 
+is changed, or choose to resize the frame of the image item so it matches the original size of 
+the image.
+
+You can select one of the following modes:
+
+* Zoom: Enlarges the image to the frame while maintaining aspect ratio of picture.
+* Stretch: Stretches image to fit inside the frame, ignores aspect ratio. 
+* Clip: Stretches image to fit frame, ignores aspect ratio. 
+* Zoom and resize frame: Enlarges image to fit frame, then resizes frame to fit resultant image.
+* Resize frame to image size: Sets size of frame to match original size of image without scaling. 
+
+Selected resize mode can disable the item options 'Placement' and 'Image rotation'. 
+The :guilabel:`Image rotation` is only active for the resize mode 'Zoom'.
+
+With :guilabel:`Placement` you can select the position of the image inside it's frame.  
+The **Search directories** area allows you to add and remove directories with images in SVG format 
+to the picture database. A preview of the pictures found in the selected directories is shown in a
+pane and can be used to select and set the image source.
+
+Images can be rotated with the :guilabel:`Image rotation` field.
+Activating the |checkbox| :guilabel:`Sync with map` checkbox synchronizes the rotation of a picture 
+in the |qg| map canvas (i.e., a rotated north arrow) with the appropriate Print Composer image.
+
+It is also possible to select a north arrow directly. If you first select a north arrow image from 
+**Search directories**  and then use the browse button |browsebutton| of the field :guilabel:`Image source`, 
+you can now select one of the north arrow from the list as displayed in figure_composer_13_. 
+
+.. note:: 
+
+   Many of the north arrows do not have an 'N' added in the north arrow, this is done on 
+   purpose for languages that do not use an 'N' for North, so they can use another letter.
+
+.. _Figure_composer_13:
 
 .. only:: html
 
-   **Figure Composer 12:**
+   **Figure Composer 13:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_image2.png
+.. figure:: /static/user_manual/print_composer/north_arrows.png
    :align: center
 
-   Image Main properties, Search directories and Rotation Dialogs |nix|
+   North arrows available for selection in provided SVG library
 
-* The **Main properties** dialog shows the current image that is displayed in the image item.
-  Click on the **[...]** button to select a file on your computer.
-* This dialog shows all pictures stored in the selected directories.
-* The **Search directories** area allows you to add and remove directories with
-  images in SVG format to the picture database.
-* Images can be rotated with the :guilabel:`Rotation` |selectnumber| field.
-* Activating the |checkbox| :guilabel:`Sync with
-  map` checkbox synchronizes the rotation of a picture in the |qg| map canvas
-  (i.e., a rotated north arrow) with the appropriate Print Composer image.
 
 .. index::
    single:Map_Legend
 
-Adding a Legend item to the Print Composer
-------------------------------------------
+The Legend item
+---------------
 
 To add a map legend, click the |mActionAddLegend| :sup:`Add new legend` icon,
 place the element with the left mouse button on the Print Composer canvas and
@@ -551,13 +689,13 @@ position and customize the appearance in the legend :guilabel:`Item Properties`
 tab.
 
 The :guilabel:`Item properties` of a legend item tab provides the following
-functionalities (see figure_composer_14_):
+functionalities (see figure_composer_legend_1_):
 
-.. _Figure_composer_13:
+.. _Figure_composer_legend_1:
 
 .. only:: html
 
-   **Figure Composer 13:**
+   **Figure Composer Legend 1:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend1.png
    :align: center
@@ -568,93 +706,145 @@ Main properties
 ^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialog of the legend :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_14_):
+provides the following functionalities (see figure_composer_legend_2_):
 
-.. _Figure_composer_14:
+.. _Figure_composer_legend_2:
 
 .. only:: html
 
-   **Figure Composer 14:**
+   **Figure Composer Legend 2:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend2.png
    :align: center
 
    Legend Main properties Dialog |nix|
 
-* Here, you can adapt the legend title.
-* You can also choose which :guilabel:`Map` item the current legend will refer to in the select list.
-* Since |qg| 1.8, you can wrap the text of the legend title on a given character.
+In Main properties you can:
+
+* Change the title of the legend.
+* Set the title alignment to Left, Center or Right.
+* You can choose which :guilabel:`Map` item the current legend will refer to 
+  in the select list.
+* You can wrap the text of the legend title on a given character.
+
 
 Legend items
 ^^^^^^^^^^^^
 
 The :guilabel:`Legend items` dialog of the legend :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_15_):
+provides the following functionalities (see figure_composer_legend_3_):
 
-.. _Figure_composer_15:
+.. _Figure_composer_legend_3:
 
 .. only:: html
 
-   **Figure Composer 15:**
+   **Figure Composer Legend 3:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend3.png
    :align: center
 
    Legend Legend Items Dialog |nix|
 
-* The legend items window lists all legend items and allows you to change item order,
-  group layers, remove and restore items in the list, and edit layer names. After changing the
-  symbology in the |qg| main window, you can click on **[Update]** to adapt the
-  changes in the legend element of the Print Composer. The item order can be
-  changed using the **[Up]** and **[Down]** buttons or with 'drag-and-drop'
-  functionality.
-* The feature count for each vector layer can be shown by enabling the **[Sigma]** button.
 * The legend will be updated automatically if |checkbox| :guilabel:`Auto-update` is checked.
+  When :guilabel:`Auto-update` is unchecked this will give you more control over the legend items.
+  The icons below the legend items list will be activated.
+* The legend items window lists all legend items and allows you to change item order,
+  group layers, remove and restore items in the list, edit layer names and add a filter.
+  
+  * The item order can be changed using the **[Up]** and **[Down]** buttons or with 'drag-and-drop'
+    functionality. The order can not be changed for WMS legend graphics.
+  * Use the **[Add group]** button to add a legend group.
+  * Use the **[plus]** and **[minus]** button to add or remove layers.
+  * The **[Edit]** button is used to edit the layer-, groupname or title, first you need to 
+    select the legend item.
+  * The **[Sigma]** button adds a feature count for each vector layer.
+  * Use the **[filter]** button the filter the legend by map content, only the legend items visible 
+    in the map will be listed in the legend.
 
-Fonts, Columns, Symbol and Spacing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  After changing the symbology in the |qg| main window, you can click on **[Update]** to 
+  adapt the changes in the legend element of the Print Composer. 
 
-The :guilabel:`Fonts`, :guilabel:`Columns`, :guilabel:`Symbol` and :guilabel:`Spacing` dialogs of the legend :guilabel:`Item Properties` tab
-provide the following functionalities (see figure_composer_16_):
 
-.. _Figure_composer_16:
+
+Fonts, Columns, Symbol
+^^^^^^^^^^^^^^^^^^^^^^
+
+The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the legend 
+:guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_legend_4_):
+
+.. _Figure_composer_legend_4:
 
 .. only:: html
 
-   **Figure Composer 16:**
+   **Figure Composer Legend 4:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend4.png
    :align: center
 
    Legend Fonts, Columns, Symbol and Spacing Dialogs |nix|
 
-* You can change the font of the legend title, group, subgroup and item (layer) in the legend item. Click on a category button to open a
-  **Select font** dialog.
-* All these items will get the same **Color**.
-* Legend items can be arranged in several columns. Select the correct value in the :guilabel:`Count` |selectnumber| field.
-* |checkbox| :guilabel:`Equal column widths` sets how legend columns should be adjusted.
-* The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer legend to be divided between columns.
+* You can change the font of the legend title, group, subgroup and item (layer) in the legend item. 
+  Click on a category button to open a **Select font** dialog.
+* You provide the labels with a **Color** using the advanced color picker, however the selected 
+  color will be given to all font items in the legen..
+* Legend items can be arranged over several columns. Set the number of columns in 
+  the :guilabel:`Count` |selectnumber| field.
+
+  * |checkbox| :guilabel:`Equal column widths` sets how legend columns should be adjusted.
+  * The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer 
+    legend to be divided between columns.
+
 * You can change the width and height of the legend symbol in this dialog.
-* Spacing aroung title, group, subgroup, symbol, icon label, box space or column space can be customized through this dialog.
+
+
+WMS legendGraphic and Spacing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The :guilabel:`WMS legendGraphic` and :guilabel:`Spacing` dialogs of the legend 
+:guilabel:`Item Properties` tab provide the following functionalities (see 
+figure_composer_legend_5_):
+
+.. _Figure_composer_legend_5:
+
+.. only:: html
+
+   **Figure Composer Legend 5:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_legend5.png
+   :align: center
+
+   WMS legendGraphic Dialogs |nix|
+
+When you have added a WMS layer and you insert a legend composer item, a request will be send to the 
+WMS server to provide a WMS legend, This Legend will only be shown if the WMS server provides the 
+GetLegendGraphic capability. The WMS legend content will be provided as a raster image.
+
+:guilabel:`WMS legendGraphic` is used to be able to adjust the :guilabel:`Legend width` and 
+the :guilabel:`legend hight` of the WMS legend raster image.
+
+Spacing around title, group, subgroup, symbol, icon label, box space or column space can be customized 
+through this dialog.
+
 
 .. index::
    single: Scalebar; Map_Scalebar
 
-Adding a Scale Bar item to the Print Composer
---------------------------------------------
+
+The Scale Bar item
+------------------
 
 To add a scale bar, click the |mActionScaleBar| :sup:`Add new scalebar` icon, place
 the element with the left mouse button on the Print Composer canvas and position
 and customize the appearance in the scale bar :guilabel:`Item Properties` tab.
 
 The :guilabel:`Item properties` of a scale bar item tab provides the following
-functionalities (see figure_composer_17_):
+functionalities (see figure_composer_scalebar1_):
 
-.. _Figure_composer_17:
+.. _Figure_composer_scalebar1:
 
 .. only:: html
 
-   **Figure Composer 17:**
+   **Figure Composer Scalebar 1:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar1.png
    :align: center
@@ -665,13 +855,13 @@ Main properties
 ^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialog of the scale bar :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_18_):
+provides the following functionalities (see figure_composer_scalebar_2_):
 
-.. _Figure_composer_18:
+.. _Figure_composer_scalebar2:
 
 .. only:: html
 
-   **Figure Composer 18:**
+   **Figure Composer Scalebar 2:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar2.png
    :align: center
@@ -689,13 +879,13 @@ Units and Segments
 ^^^^^^^^^^^^^^^^^^
 
 The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar :guilabel:`Item Properties` tab
-provide the following functionalities (see figure_composer_19_):
+provide the following functionalities (see figure_composer_scalebar3_):
 
-.. _Figure_composer_19:
+.. _Figure_composer_scalebar3:
 
 .. only:: html
 
-   **Figure Composer 19:**
+   **Figure Composer scalebar 3:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar3.png
    :align: center
@@ -704,62 +894,81 @@ provide the following functionalities (see figure_composer_19_):
 
 In these two dialogs, you can set how the scale bar will be represented.
 
-* Select the map units used. There are three possible choices: **Map Units** is the automated unit
-  selection; **Meters** or **Feet** force unit conversions.
+* Select the map units used. There are four possible choices: **Map Units** is the automated unit
+  selection; **Meters**, **Feet** or **Nautical Miles** force unit conversions.
 * The :guilabel:`Label` field defines the text used to describe the units of the scale bar.
 * The :guilabel:`Map units per bar unit` allows you to fix the ratio between a map unit and its representation in the scale bar.
 * You can define how many :guilabel:`Segments` will be drawn on the left and on the right side of the scale bar,
   and how long each segment will be (:guilabel:`Size` field). :guilabel:`Height` can also be defined.
 
-Display, Fonts and colors
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Display
+^^^^^^^
 
-The :guilabel:`Display` and :guilabel:`Fonts and colors` dialogs of the scale bar :guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_20_):
+The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_scalebar_4_):
 
-.. _Figure_composer_20:
+.. _Figure_composer_scalebar_4:
 
 .. only:: html
 
-   **Figure Composer 20:**
+   **Figure Composer Scalebar 4:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_scalebar4.png
    :align: center
 
-   Scale Bar Display, Fonts and colors Dialogs |nix|
+   Scale Bar Display |nix|
 
-* You can define how the scale bar will be displayed in its frame. Adjust the :guilabel:`Box margin` between text and frame borders,
-  :guilabel:`Labels margin` between text and scale bar drawing and the :guilabel:`Line width` of the scale bar drawing.
-* The :guilabel:`Alignment` in the :guilabel:`Display` dialog only applies to :guilabel:`Numeric` styled scale bars and puts text on the
-  left, middle or right side of the frame.
+You can define how the scale bar will be displayed in its frame. 
 
-Adding a Basic shape or Arrow item to the Print Composer
---------------------------------------------------------
+* :guilabel:`Box margin` : space between text and frame borders
+* :guilabel:`Labels margin` :  space between text and scale bar drawing
+* :guilabel:`Line width` : line widht of the scale bar drawing
+* :guilabel:`Join style` : Corners at the end of scalebar in style Bevel, Rounded or Square 
+  (only available for Scale bar style Single Box & Double Box)  
+* :guilabel:`Cap style` : End of all lines in style Square, Round or Flat
+  (only available for Scale bar style Line Ticks Up, Down and Middle)  
+* :guilabel:`Alignment` : Puts text on the left, middle or right side of the frame
+  (works only for Scale bar style Numeric) 
 
-It is possible to add basic shapes (ellipse, rectangle, triangle) and arrows
-to the Print Composer canvas: Click the |mActionAddBasicShape| :sup:`Add basic shape` icon or the
-|mActionAddArrow| :sup:`Add Arrow` icon, place the element with the left mouse button on the Print Composer canvas and position
-and customize the appearance in the :guilabel:`Item Properties` tab.
+Fonts and colors
+^^^^^^^^^^^^^^^^
 
-The :guilabel:`Shape` item properties tab allows you to draw an ellipse, rectangle, or triangle
-in the Print Composer canvas. You can define its outline and fill color, the
-outline width and a clockwise rotation. For the rectangle shape, you can change the value 
-of the corner radius.
+The :guilabel:`Fonts and colors` dialog of the scale bar :guilabel:`Item Properties` tab 
+provide the following functionalities (see figure_composer_scalebar_5_):
 
-.. _figure_composer_21:
+.. _Figure_composer_scalebar_5:
 
 .. only:: html
 
-   **Figure Composer 21:**
+   **Figure Composer Scalebar 5:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_shape.png
+.. figure:: /static/user_manual/print_composer/print_composer_scalebar5.png
    :align: center
 
-   Shape Item properties Tab |nix|
+   Scale Bar Fonts and colors Dialogs |nix|
 
-The :guilabel:`Arrow` item properties tab allows you to draw an arrow in the Print Composer canvas.
-You can define color, outline and arrow width, and it is possible to use a default
-marker, no marker, or an SVG marker. For the SVG marker, you can additionally
-add an SVG start and end marker from a directory on your computer.
+You can define the fonts and colors used for the scale bar.
+
+* Use the **[Font]** button the set the font
+* :guilabel:`Font color`: set the font color
+* :guilabel:`Fill color`: set the first fill color 
+* :guilabel:`Secondary fill color`: set the second fill color 
+* :guilabel:`Stroke color`: set the corol of the lines of the Scale Bare
+
+Fill colors are only used for scale box styles Single Box and Double Box. 
+To select a color you can use the list option using the dropdown arrow to open 
+a simple color selection option or the more advanced color selection option, that is 
+started when you click in the colored box in the dialog. 
+
+
+The Basic Shape Items
+---------------------
+
+To add a basic shape (ellipse, rectangle, triangle), click the |mActionAddBasicShape| :sup:`Add basic shape` icon 
+or the |mActionAddArrow| :sup:`Add Arrow` icon, place the element holding down the left mouse. Customize the 
+appearance in the :guilabel:`Item Properties` tab. 
+
+When you also hold down the :kbd:`Shift` key while placing the basic shape you can create a perfect square, 
+circle or triangle. 
 
 .. _figure_composer_22:
 
@@ -767,87 +976,242 @@ add an SVG start and end marker from a directory on your computer.
 
    **Figure Composer 22:**
 
+.. figure:: /static/user_manual/print_composer/print_composer_shape.png
+   :align: center
+
+   Shape Item properties Tab |nix|
+
+The :guilabel:`Shape` item properties tab allows you to select if you want to draw an ellipse, 
+rectangle or triangle inside the given frame. 
+
+You can set the style of the shape using the advanced symbol style dialog with which you can 
+define its outline and fill color, fill pattern, use markers etcetera.
+
+For the rectangle shape, you can set the value of the corner radius to round of the corners.
+
+.. note::
+   Unlike other items, you can not style the frame or the background color of the frame.
+
+
+The Arrow item
+--------------
+
+To add an arrow, click the |mActionAddArrow| :sup:`Add Arrow` icon, place the element holding 
+down the left mouse button and drag a line to draw the arrow on the Print Composer canvas and 
+position and customize the appearance in the scale bar :guilabel:`Item Properties` tab.
+
+When you also hold down the :kbd:`Shift` key while placing the arrow, it is placed in an angle 
+of exactly 45\ |degrees| .
+
+The arrow item can be used to add a line or a simple arrow that can be used, for example, to 
+show the relation between other print composer items. To create a north arrow, the image item should 
+be considered first. |qg| has a set of North arrows in SVG format. Furthermore you can connect 
+an image item with a map so it can rotate automatically with the map (see the_image_item_).
+
+.. _figure_composer_arrow:
+
+.. only:: html
+
+   **Figure Composer Arrow:**
+
 .. figure:: /static/user_manual/print_composer/print_composer_arrow.png
    :align: center
 
    Arrow Item properties Tab |nix|
 
-Main properties
+Item Properties
 ^^^^^^^^^^^^^^^
 
-* For basic shapes, this dialog allows you to choose an **Ellipse**, **Rectangle** or **Triangle** shape and its rotation.
-* Unlike the other items, line style, line color and background color of a basic shape are adjusted with the Frame and Background dialog.
-  No frame is drawn.
-* For arrows, you can define here the line style: :guilabel:`Color`, :guilabel:`Line width` and :guilabel:`Arrow head width`.
-* :guilabel:`Arrows markers` can be adjusted. If you want to set an SVG :guilabel:`Start marker` and/or :guilabel:`End marker`, browse to
-  your SVG file by clicking on the **[...]** button after selecting the :guilabel:`SVG` radio button.
+The :guilabel:`Arrow` item properties tab allows you to configure an arrow item.
 
-.. note::
-   Unlike other items, the background color for a basic shape is the shape background and not the frame background.
+The  **[Line style ...]** button can be used to set the line style using the line style symbol editor.
+
+In :guilabel:`Arrows markers` you can select one of three radio buttons.
+ 
+* :guilabel:`Default` : To draw a regular arrow, gives you options to style the arrow head 
+* :guilabel:`None` : To draw a line without arrow head
+* :guilabel:`SVG Marker` : To draw a line with an SVG :guilabel:`Start marker` and/or :guilabel:`End marker`
+
+For :guilabel:`Default` Arrow marker you can use following options to style the arrow head.
+
+* :guilabel:`Arrow outline color` : Set the outline color of the arrow head
+* :guilabel:`Arrow fill color` : Set the fill color of the arrow head
+* :guilabel:`Arrow outline width` : Set the outline width of the arrow head
+* :guilabel:`Arrow head width`: Set the size of the arrow head
+  
+For :guilabel:`SVG Marker` you can use following options. 
+
+* :guilabel:`Start marker` : Choose an SVG image to draw at the beginning of the line
+* :guilabel:`End marker` : Choose an SVG image to draw at the end of the line
+* :guilabel:`Arrow head width`: Sets the size of Start and/or headmarker
+
+SVG images are automatically rotated with the line. The color of the SVG image can not be changed.
+
 
 .. index:: Attribute_Table
 
-Add attribute table values to the Print Composer
-------------------------------------------------
+
+The Attribute Table item
+------------------------
 
 It is possible to add parts of a vector attribute table to the Print Composer
-canvas: Click the |mActionOpenTable| :sup:`Add attribute table` icon, place the element with the left mouse button on the Print Composer
-canvas, and position and customize the appearance in the :guilabel:`Item Properties` tab.
+canvas: Click the |mActionOpenTable| :sup:`Add attribute table` icon, place the 
+element with the left mouse button on the Print Composer canvas, and position and 
+customize the appearance in the :guilabel:`Item Properties` tab.
 
 The :guilabel:`Item properties` of an attribute table item tab provides the following
-functionalities (see figure_composer_23_):
+functionalities (see figure_composer_table_1_):
 
-.. _Figure_composer_23:
+.. _Figure_composer_table_1:
 
 .. only:: html
 
-   **Figure Composer 23:**
+   **Figure Composer Attribute Table 1:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_attribute1.png
    :align: center
 
-   Scale Bar Item properties Tab |nix|
+   Attribute table Item properties Tab |nix|
 
-Main properties, Show grid and Fonts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The :guilabel:`Main properties`, :guilabel:`Show grid` and :guilabel:`Fonts` dialogs of the attribute table :guilabel:`Item Properties` tab
-provide the following functionalities (see figure_composer_24_):
+Main properties
+^^^^^^^^^^^^^^^
 
-.. _Figure_composer_24:
+The :guilabel:`Main properties` dialogs of the attribute table :guilabel:`Item Properties` 
+tab provide the following functionalities  (see figure_composer_table_2_):
+
+.. _Figure_composer_table_2:
 
 .. only:: html
 
-   **Figure Composer 24:**
+   **Figure Composer Attribute Table 2:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_attribute2.png
    :align: center
 
-   Attribute table Main properties, Show grid and Fonts Dialog |nix|
+   Attribute table Main properties Dialog |nix|
 
-   .. _Figure_composer_25:
+The :guilabel:`Table` dialog allows you to select the vector layer and columns of the attribute table. 
+Attribute columns can be sorted, and you can specify whether to show values in ascending or descending 
+order (see figure_composer_table_3_).
+
+.. _Figure_composer_table_3:
 
 .. only:: html
 
-   **Figure Composer 25:**
+   **Figure Composer Attribute Table 3:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_attribute3.png
    :align: center
 
    Attribute table Select attributes Dialog |nix|
 
-* The :guilabel:`Table` dialog allows you to select the vector layer and columns of the attribute table. Attribute columns can be sorted, and you
-  can specify whether to show values in ascending or descending order (see figure_composer_25_).
-* You can choose to display the attributes of only features visible on a map. Check |checkbox| :guilabel:`Show only visible features` and
-  select the corresponding :guilabel:`Composer map` to filter.
-* You can define the :guilabel:`Maximum number of rows` to be displayed and the :guilabel:`margin` around text.
-* Additionally, you can define the grid characteristics of the table (:guilabel:`Stroke width` and :guilabel:`Color` of the grid) and the
-  header and content font.
+
+Feature filtering
+^^^^^^^^^^^^^^^^^
+
+The :guilabel:`Feature filtering` dialogs of the attribute table :guilabel:`Item Properties` 
+tab provide the following functionalities  (see figure_composer_table_4_):
+
+.. _Figure_composer_table_4:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 4:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute4.png
+   :align: center
+
+   Attribute table Feature filtering Dialog |nix|
+
+You can define the :guilabel:`Maximum number of rows` to be displayed.
+
+You can choose to display the attributes of only features visible on a map. Check |checkbox| 
+:guilabel:`Show only visible features` and select the corresponding :guilabel:`Composer map` to filter.
+
+
+Appearance
+^^^^^^^^^^
+
+The :guilabel:`Appearance` dialogs of the attribute table :guilabel:`Item Properties` 
+tab provide the following functionalities  (see figure_composer_table_5_):
+
+.. _Figure_composer_table_5:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 5:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute5.png
+   :align: center
+
+   Attribute table appearance Dialog |nix|
+
+You can define the :guilabel:`margin` around text.
+
+
+Show grid
+^^^^^^^^^
+
+The :guilabel:`Show grid` dialog of the attribute table :guilabel:`Item Properties` tab
+provide the following functionalities (see figure_composer_table_6_):
+
+   .. _Figure_composer_table_6:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 6:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute6.png
+   :align: center
+
+   Attribute table Show grid Dialog |nix|
+
+You can define the grid characteristics of the table (:guilabel:`Stroke width` and :guilabel:`Color` of the grid) 
+
+
+Fonts and text styling
+^^^^^^^^^^^^^^^^^^^^^^
+
+The :guilabel:`Fonts and text styling` dialog of the attribute table :guilabel:`Item Properties` tab
+provide the following functionalities (see figure_composer_table_7_):
+
+   .. _Figure_composer_table_7:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 7:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute7.png
+   :align: center
+
+   Attribute table Fonts and text styling Dialog |nix|
+
+You can define the header and content font.
+
+
+Frames
+^^^^^^
+
+The :guilabel:`Frames` dialog of the attribute table :guilabel:`Item Properties` tab
+provide the following functionalities (see figure_composer_table_8_):
+
+   .. _Figure_composer_table_8:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 8:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute8.png
+   :align: center
+
+   Attribute table Frames Dialog |nix|
+
 
 .. index:: HTML_Frame
 
-Add an HTML frame to the Print Composer
---------------------------------------
+The HTML frame item
+-------------------
 
 It is possible to add a clickable frame linked to a URL: Click the |mActionAddHtml| :sup:`Add HTML frame` icon, place the element with
 the left mouse button on the Print Composer canvas and position and customize the appearance in the :guilabel:`Item Properties` tab.
@@ -856,13 +1220,13 @@ Main properties
 ^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialog of the HTML frame :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_26_):
+provides the following functionalities (see figure_composer_27_):
 
-.. _Figure_composer_26:
+.. _Figure_composer_27:
 
 .. only:: html
 
-   **Figure Composer 26:**
+   **Figure Composer 27:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_html.png
    :align: center
@@ -924,11 +1288,11 @@ Raising or lowering functionalities for elements are inside the |mActionRaiseIte
 canvas and select the matching functionality to raise or lower the selected
 element compared to the other elements (see table_composer_1_).
 
-.. _figure_composer_27:
+.. _figure_composer_28:
 
 .. only:: html
 
-   **Figure Composer 27:**
+   **Figure Composer 28:**
 
 .. figure:: /static/user_manual/print_composer/alignment_lines.png
    :align: center
@@ -960,13 +1324,13 @@ be done with the revert and restore tools:
 * |mActionUndo| :sup:`Revert last changes`
 * |mActionRedo| :sup:`Restore last changes`
 
-This can also be done by mouse click within the :guilabel:`Command history` tab (see figure_composer_28_).
+This can also be done by mouse click within the :guilabel:`Command history` tab (see figure_composer_29_).
 
-.. _figure_composer_28:
+.. _figure_composer_29:
 
 .. only:: html
 
-   **Figure Composer 28:**
+   **Figure Composer 29:**
 
 .. figure:: /static/user_manual/print_composer/command_hist.png
    :align: center
@@ -987,13 +1351,13 @@ within text labels.
 
 Every page will be generated with each feature. To enable the generation
 of an atlas and access generation parameters, refer to the `Atlas generation`
-tab. This tab contains the following widgets (see Figure_composer_29_):
+tab. This tab contains the following widgets (see Figure_composer_30_):
 
-.. _figure_composer_29:
+.. _figure_composer_30:
 
 .. only:: html
 
-   **Figure Composer 29:**
+   **Figure Composer 30:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_atlas.png
    :align: center
@@ -1067,14 +1431,14 @@ If you need to print just a page of the atlas, simply start the preview function
 Creating Output
 ===============
 
-Figure_composer_30_ shows the Print Composer with an example print layout,
+Figure_composer_31_ shows the Print Composer with an example print layout,
 including each type of map element described in the sections above.
 
-.. _figure_composer_30:
+.. _figure_composer_31:
 
 .. only:: html
 
-   **Figure Composer 30:**
+   **Figure Composer 31:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_complete.png
    :align: center
@@ -1122,11 +1486,11 @@ and in :menuselection:`Composer --> Composer Manager` allows you to add a new Co
 template, create a new composition based on a previously saved template or to manage 
 already existing templates.
 
-.. _figure_composer_31:
+.. _figure_composer_32:
 
 .. only:: html
 
-   **Figure Composer 31:**
+   **Figure Composer 32:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_manager.png
    :align: center

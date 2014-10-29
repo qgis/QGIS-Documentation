@@ -38,36 +38,6 @@ vector data. You can use :menuselection:`Layer rendering -->` tools that are com
 all vector data, as well as special symbolizing tools that were designed for the different kinds
 of vector data.
 
-Layer rendering
-...............
-
-* :guilabel:`Layer transparency` |slider|: You can make the underlying layer in the map canvas
-  visible with this tool. Use the slider to adapt the visibility of your vector layer to your needs.
-  You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
-
-.. _blend_modes:
-
-* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can achieve special rendering effects with these tools that you may
-  previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
-  through the settings described below.
-
-  * Normal: This is the standard blend mode, which uses the alpha channel of the top pixel to blend with the pixel beneath it. The colors aren't mixed.
-  * Lighten: This selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged and harsh.
-  * Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is most useful for mixing the texture of one layer with another layer (e.g., you can use a hillshade to texture another layer).
-  * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So, brighter top pixels cause the saturation and brightness of the underlying pixels to increase. This works best if the top pixels aren't too bright; otherwise the effect is too extreme.
-  * Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above one (in the case of RGB), white is displayed. This mode is suitable for highlighting features.
-  * Darken: This creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
-  * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the corresponding pixels for the bottom layer. The results are darker pictures.
-  * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be used to tweak and colorise underlying layers.
-  * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, light parts become lighter and dark parts become darker.
-  * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
-  * Hard light: Hard light is also very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
-  * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way around, to always get a positive value. Blending with black produces no change, as the difference with all colors is zero.
-  * Subtract: This blend mode simply subtracts pixel values of one layer from the other. In case of negative values, black is displayed.
-
-.. index:: Symbology
-
-
 Renderers
 .........
 
@@ -77,11 +47,30 @@ There is no continuous color renderer, because it is in fact only a special case
 of the graduated renderer. The categorized and graduated renderers can be created
 by specifying a symbol and a color ramp - they will set the colors for symbols
 appropriately. For point layers, there is a point displacement renderer available.
-For each data type (points, lines and polygons), vector symbol layer types are available. 
+For each data type (points, lines and polygons), vector symbol layer types are available.
 Depending on the chosen renderer, the :guilabel:`Style` menu provides different
 additional sections. On the bottom right of the symbology dialog, there is a **[Symbol]** button, which gives access
-to the Style Manager (see section vector_style_manager_). The Style Manager allows you to edit and remove
+to the Style Manager (see :ref:`vector_style_manager`). The Style Manager allows you to edit and remove
 existing symbols and add new ones.
+
+After having made any needed changes, the symbol can be added to the list of
+current style symbols (using **[Symbol]** |selectstring| :guilabel:`Save in symbol library`),
+and then it can easily be used in the future. Furthermore, you can use the **[Save Style]** |selectstring| button to
+save the symbol as a |qg| layer style file (.qml) or SLD file (.sld). SLDs can be exported from any type of renderer -- single symbol,
+categorized, graduated or rule-based -- but when importing an SLD, either a
+single symbol or rule-based renderer is created.
+That means that categorized or graduated styles are converted to rule-based.
+If you want to preserve those renderers, you have to stick to the QML format.
+On the other hand, it can be very handy sometimes to have this easy way of
+converting styles to rule-based.
+
+If the datasource of the layer is a database (PostGIS or Spatialite for example),
+you can save your layer style inside a table of the database. Just clic on
+:guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in
+the dialog to define a style name, add a description, an ui file and if the style
+is a default style. When loading a layer from the database, if a style alredy
+exists for this layer, |qg| will load the layer and its style. You can add
+several style in the database. Only one will be the default style anyway.
 
 
 .. _tip_change_multiple_symbols:
@@ -108,7 +97,7 @@ the menu on the right side.
 .. _defining_symbols:
 
 If you click on the first level in the :guilabel:`Symbol layers` dialog on the left
-side, it's possible to define basic parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`Color`
+side, it's possible to define basic parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`color`
 and :guilabel:`Rotation`. Here, the layers are joined together.
 
 
@@ -123,81 +112,6 @@ and :guilabel:`Rotation`. Here, the layers are joined together.
 
    Single symbol line properties |nix|
 
-More detailed settings can be made when clicking on the second level in the
-:guilabel:`Symbol layers` dialog. You can define :guilabel:`Symbol layers` that are
-combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
-The following settings are possible:
-
-* Point layers:
- * :guilabel:`Symbol layer type`: You have the option to use Ellipse markers, Font markers,
-   Simple markers, SVG markers and Vector Field markers.
- * :guilabel:`Colors`
- * :guilabel:`Size`
- * :guilabel:`Outline style`
- * :guilabel:`Outline width` 
- * :guilabel:`Angle`
- * :guilabel:`Offset X,Y`: You can shift the symbol in the x- or y-direction.
- * :guilabel:`Anchor point`
- * :guilabel:`Data defined properties ...`
-
-* Line layers:
- * :guilabel:`Symbol layer type`: Here you can use Simple Lines and Marker Lines.
- * :guilabel:`Color`
- * :guilabel:`Pen width`
- * :guilabel:`Offset`
- * :guilabel:`Pen style`
- * :guilabel:`Join style`
- * :guilabel:`Cap style`
- * |checkbox| :guilabel:`Use custom dash pattern`
- * :guilabel:`Dash pattern unit`
- * :guilabel:`Data defined properties ...`
-
-* Polygon Layers:
- * :guilabel:`Symbol layer type`: It's possible to use Centroid Fill, Gradient Fill, Line Pattern Fill,
-   Point Pattern Fill, SVG Fill, Simple Fill and two Outlines (Marker line and Simple line).
- * :guilabel:`Colors`
- * :guilabel:`Fill style`
- * :guilabel:`Border style`
- * :guilabel:`Border width`
- * :guilabel:`Offset X,Y`
- * :guilabel:`Data defined properties ...`
-
-'Gradient Fill' :guilabel:`Symbol layer type` allows you to select
-between a |radiobuttonon| :guilabel:`Two color` 
-and |radiobuttonoff| :guilabel:`Color ramp` setting. You can use the
-|checkbox| :guilabel:`Feature centroid` as :guilabel:`Referencepoint`.
-All fills 'Gradient Fill` :guilabel:`Symbol layer type` is also
-available through the :guilabel:`Symbol` menu of the Categorized and
-Graduated Renderer and through the :guilabel:`Rule properties` menu of
-the Rule-based renderer.
-
-It is possible to only draw polygon borders inside the polygon. Using
-'Outline: Simple line' select |checkbox| :guilabel:`Draw line
-only inside polygon`.
-
-Note that once you have set the size in the lower levels of the :guilabel:`Symbol layers` dialog, 
-the size of the whole symbol can be changed with the :guilabel:`Size` menu in the first level again. The size of
-the lower levels changes accordingly, while the size ratio is maintained.
-After having made any needed changes, the symbol can be added to the list of
-current style symbols (using **[Symbol]** |selectstring| :guilabel:`Save in symbol library`),
-and then it can easily be used in the future. Furthermore, you can use the **[Save Style]** |selectstring| button to
-save the symbol as a |qg| layer style file (.qml) or SLD file (.sld). SLDs can be exported from any type of renderer -- single symbol,
-categorized, graduated or rule-based -- but when importing an SLD, either a
-single symbol or rule-based renderer is created.
-That means that categorized or graduated styles are converted to rule-based.
-If you want to preserve those renderers, you have to stick to the QML format.
-On the other hand, it can be very handy sometimes to have this easy way of
-converting styles to rule-based.
-
-.. _vector_style_manager:
-
-With the :guilabel:`Style manager` from the **[Symbol]** |selectstring| menu you can administer your
-symbols. You can |mActionSignPlus| :sup:`add item`, |edit|:sup:`edit item`, |mActionSignMinus| :sup:`remove item`
-and |user| :sup:`share item`. 'Marker' symbols, 'Line' symbols, 'Fill' patterns and 'Color ramps'
-can be used to create the symbols (see defining_symbols_). The symbols are then assigned to 'All Symbols',
-'Groups' or 'Smart groups'.
-
-
 .. index:: Categorized_Renderer, Renderer_Categorized
 
 **Categorized Renderer**
@@ -208,10 +122,20 @@ a single user-defined symbol whose color reflects the value of a selected
 feature's attribute. The :guilabel:`Style` menu allows you to select:
 
 
-* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| :guilabel:`Set column expression` function)
+* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| 
+  :guilabel:`Set column expression` function, see :ref:`vector_expressions`)
 * The symbol (using the Symbol dialog)
-* The colors (using the Color Ramp listbox)
+* The colors (using the color Ramp listbox)
 
+Then click on **Classify** button to create classes from the distinct value of
+the attribute column. Each classes can be disabled unchecking the checkbox at
+the left of the class name.
+
+You can change symbol, value and/or label of the clic, just double clicking
+on the item you want to change.
+
+Right-clic shows a contextual menu to **Copy/Paste**, **Change color**, **Change 
+transparency**, **Change output unit**, **Change symbol width**.
 
 The **[Advanced]** button in the lower-right corner of the dialog allows you to
 set the fields containing rotation and size scale information.
@@ -233,39 +157,6 @@ for the rivers layer of the |qg| sample dataset.
 
    Categorized Symbolizing options |nix|
 
-.. index:: Color_Ramp, Gradient_Color_Ramp, ColorBrewer, Custom_Color_Ramp
-
-You can create a custom color ramp choosing :menuselection:`New color ramp...`
-from the :guilabel:`Color ramp` drop-down menu. A dialog will prompt for the ramp type:
-Gradient, Random, ColorBrewer, or cpt-city. The first three have options for number of steps
-and/or multiple stops in the color ramp. You can use the |checkbox| :guilabel:`Invert` option while classifying
-the data with a color ramp. See figure_symbology_3_ for an
-example of custom color ramp and figure_symbology_3a_ for the cpt-city dialog.
-
-.. _figure_symbology_3:
-
-.. only:: html
-
-   **Figure Symbology 3:**
-
-.. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
-   :align: center
-
-   Example of custom gradient color ramp with multiple stops |nix|
-
-The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.
-
-.. _figure_symbology_3a:
-
-.. only:: html
-
-   **Figure Symbology 3a:**
-
-.. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
-   :align: center
-
-   cpt-city dialog with hundreds of color ramps |nix|
-
 .. index:: Graduated_Renderer, Renderer_Graduated
 .. index:: Natural_Breaks_(Jenks), Pretty_Breaks, Equal_Interval, Quantile
 
@@ -274,7 +165,6 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
 The Graduated Renderer is used to render all the features from a layer, using
 a single user-defined symbol whose color reflects the assignment of a
 selected feature's attribute to a class.
-
 
 .. _figure_symbology_4:
 
@@ -294,9 +184,10 @@ Also, analogous to the Categorized Renderer, the :guilabel:`Style` tab allows yo
 select:
 
 
-* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| :guilabel:`Set column expression` function)
+* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| 
+  :guilabel:`Set column expression` function, see :ref:`vector_expressions` chapter)
 * The symbol (using the Symbol Properties button)
-* The colors (using the Color Ramp list)
+* The colors (using the color Ramp list)
 
 Additionally, you can specify the number of classes and also the mode for
 classifying features within the classes (using the Mode list). The available
@@ -312,13 +203,22 @@ modes are:
 The listbox in the center part of the :guilabel:`Style` menu lists the classes
 together with their ranges, labels and symbols that will be rendered.
 
+Click on **Classify** button to create classes using the choosen mode. Each
+classes can be disabled unchecking the checkbox at the left of the class name.
+
+You can change symbol, value and/or label of the clic, just double clicking
+on the item you want to change.
+
+Right-clic shows a contextual menu to **Copy/Paste**, **Change color**, **Change 
+transparency**, **Change output unit**, **Change symbol width**.
+
 The example in figure_symbology_4_ shows the graduated rendering dialog for
 the rivers layer of the |qg| sample dataset.
 
 .. tip:: **Thematic maps using an expression**
 
-   Categorized and graduated thematic maps can now be created using the result of an expression. 
-   In the properties dialog for vector layers, the attribute chooser has been augmented with a 
+   Categorized and graduated thematic maps can now be created using the result of an expression.
+   In the properties dialog for vector layers, the attribute chooser has been augmented with a
    |mActionmIconExpressionEditorOpen| :guilabel:`Set column expression` function. So now you no longer
    need to write the classification attribute to a new column in your attribute table if you want the
    classification attribute to be a composite of multiple fields, or a formula of some sort.
@@ -344,9 +244,9 @@ the **Function List**, click on :guilabel:`Fields and Values` to view all attrib
 the attribute table to be searched. To add an attribute to the field calculator **Expression** field,
 double click its name in the :guilabel:`Fields and Values` list. Generally, you
 can use the various fields, values and functions to construct the calculation
-expression, or you can just type it into the box (see :ref:`vector_field_calculator`).
-Since |qg| 2.2, you can create a new rule by copying and pasting an existing rule with the right mouse button. 
-Also since |qg| 2.2, you can use the 'ELSE' rule that will be run if none of the other 
+expression, or you can just type it into the box (see :ref:`vector_expressions`).
+Since |qg| 2.2, you can create a new rule by copying and pasting an existing rule with the right mouse button.
+Also since |qg| 2.2, you can use the 'ELSE' rule that will be run if none of the other
 rules on that level match.
 
 
@@ -383,12 +283,112 @@ placed on a displacement circle around a center symbol.
 
 .. tip:: **Export vector symbology**
 
-   You have the option to export vector symbology from |qg| into Google *.kml, *.dxf
-   and MapInfo *.tab files. Just open the right mouse menu of the layer and click on :menuselection:`Save selection
+   You have the option to export vector symbology from |qg| into Google \*.kml, \*.dxf
+   and MapInfo \*.tab files. Just open the right mouse menu of the layer and click on :menuselection:`Save selection
    as -->` to specify the name of the output file and its format.
    In the dialog, use the :guilabel:`Symbology export` menu to save the symbology either as
    :menuselection:`Feature symbology -->` or as :menuselection:`Symbol layer symbology -->`.
    If you have used symbol layers, it is recommended to use the second setting.
+
+.. index:: Inverted_Polygon_Renderer
+
+**Inverted Polygon**
+
+Inverted polygon renderer allows user to define a symbol to fill in outside of the layer's
+polygons. As before you can select a subrenderers. These subrenderers are the
+same as for the main renderers.
+
+Color Picker
+...............
+
+Regardless the type of style to be used, the :guilabel:`select color` dialog will show when you click to choose a 
+color - either border or fill color. This dialog has four different tabs which allow you to select colors by |mIconColorBox| :sup:`color ramp`, 
+|mIColorWheel| :sup:`color wheel`, |mIColorSwatches| :sup:`color swatches` or |mIColorPicker| :sup:`color picker`.
+
+Whatever method you use, the selected color is always described through color sliders for HSV  (Hue, Saturation, Value)
+and RGB (Red, Green, Blue) values. There is also an :guilabel:`opacity` slider to set transparency level. On the lower left part 
+of the dialog you can see a comparison between the :guilabel:`current` and the :guilabel:`new` color you are presently 
+selecting and on the lower right part you have the option to add the color you just tweaked into a color slot button. 
+
+.. _figure_color_picker_1:
+
+.. only:: html
+
+   **Figure color picker 1:**
+
+.. figure:: /static/user_manual/working_with_vector/color_picker_ramp.png
+   :align: center
+
+   Color picker ramp tab |nix|
+
+ 
+
+With |mIconColorBox| :sup:`color ramp` or with |mIColorWheel| :sup:`color wheel`, you can browse to all possible color combinations. 
+There are other possibilities though. By using `color swatches` |colorswatcher| you can choose from a preselected list. This selected list is
+populated with one of three methods: :guilabel:`Recent colors`, :guilabel:`Standard colors` or :guilabel:`Project colors`
+
+.. _figure_color_picker_2:
+
+.. only:: html
+
+   **Figure color picker 2:**
+
+.. figure:: /static/user_manual/working_with_vector/color_picker_recent_colors.png
+   :align: center
+
+   Color picker swatcher tab |nix|
+ 
+Another option is to use the |mIColorPicker| :sup:`color picker` which allows you to sample a color from under your mouse pointer at any part of 
+QGIS or even from another application by pressing the space bar. Please note that the color picker is OS dependent and is currently not supported by OSX.
+ 
+.. _tip_quick_color_picker_+_copy/paste_colors:
+
+.. tip:: **quick color picker + copy/paste colors**
+
+   You can quickly choose from :guilabel:`Recent colors`, from :guilabel:`Standard colors` or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking 
+   the drop-down arrow that follows a current color box.
+
+.. _figure_color_picker_3:
+
+.. only:: html
+
+   **Figure color picker 3:**
+
+.. figure:: /static/user_manual/working_with_vector/quick_color_picker.png
+   :align: center
+
+   Quick color picker menu |nix|
+
+Layer rendering
+...............
+
+* :guilabel:`Layer transparency` |slider|: You can make the underlying layer in the map canvas
+  visible with this tool. Use the slider to adapt the visibility of your vector layer to your needs.
+  You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
+
+.. _blend_modes:
+
+* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can achieve special rendering effects with these tools that you may
+  previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
+  through the settings described below.
+
+  * Normal: This is the standard blend mode, which uses the alpha channel of the top pixel to blend with the pixel beneath it. The colors aren't mixed.
+  * Lighten: This selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged and harsh.
+  * Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is most useful for mixing the texture of one layer with another layer (e.g., you can use a hillshade to texture another layer).
+  * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So, brighter top pixels cause the saturation and brightness of the underlying pixels to increase. This works best if the top pixels aren't too bright; otherwise the effect is too extreme.
+  * Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above one (in the case of RGB), white is displayed. This mode is suitable for highlighting features.
+  * Darken: This creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
+  * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the corresponding pixels for the bottom layer. The results are darker pictures.
+  * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be used to tweak and colorise underlying layers.
+  * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, light parts become lighter and dark parts become darker.
+  * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
+  * Hard light: Hard light is also very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
+  * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way around, to always get a positive value. Blending with black produces no change, as the difference with all colors is zero.
+  * Subtract: This blend mode simply subtracts pixel values of one layer from the other. In case of negative values, black is displayed.
+
+.. index:: Symbology
+
+
 
 .. _vector_labels_tab:
 
@@ -397,7 +397,7 @@ Labels Menu
 The |mActionLabeling| :sup:`Labels` core application provides smart
 labeling for vector point, line and polygon layers, and it only requires a
 few parameters. This new application also supports on-the-fly transformed layers.
-The core functions of the application have been redesigned. In |qg|, there are a 
+The core functions of the application have been redesigned. In |qg|, there are a
 number of other features that improve the labeling. The following menus
 have been created for labeling the vector layers:
 
@@ -412,6 +412,7 @@ have been created for labeling the vector layers:
 Let us see how the new menus can be used for various vector layers.
 
 .. _labeling_point_layers:
+
 **Labeling point layers**
 
 Start |qg| and load a vector point layer. Activate the layer in the legend and click on the
@@ -436,7 +437,7 @@ decimal places may be inserted. If you enable this option, three decimal places 
 To create a buffer, just activate the |checkbox| :guilabel:`Draw text buffer` checkbox in the :guilabel:`Buffer` menu.
 The buffer color is variable. Here, you can also use blend modes (see blend_modes_).
 
-If the |checkbox| :guilabel:`Color buffer's fill` checkbox is activated, it will interact with partially transparent
+If the |checkbox| :guilabel:`color buffer's fill` checkbox is activated, it will interact with partially transparent
 text and give mixed color transparency results. Turning off the buffer fill fixes that issue (except where the interior
 aspect of the buffer's stroke intersects with the text's fill) and also allows you to make outlined text.
 
@@ -528,6 +529,13 @@ also use the line orientation for the position of the label.
 Additionally, you can define a :guilabel:`Maximum angle between curved characters` when
 selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
 
+You can set up a minimum distance for repeating labels. Distance can be in mm or in map units.
+
+Some Placement setup will display more options, for example, :guilabel:`Curved` and :guilabel:`Parallel`
+Placements will allow the user to set up the position of the label (above, belw or on the line),
+:guilabel:`distance` from the line and for :guilabel:`Curved`, the user can also setup inside/outside
+max angle between curved label.
+
 The :guilabel:`Rendering` menu has nearly the same entries as for point layers. In the
 :guilabel:`Feature options`, you can now :guilabel:`Suppress labeling of features smaller than`.
 
@@ -581,6 +589,9 @@ With the |radiobuttonoff| :guilabel:`Using perimeter` settings, you can define a
 a distance for the label. For the position, |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
 |checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependent position` are possible.
 
+Related to the choose of Label Placement, several options will appear. As for Point Placement you can
+choose the distance for the polygon outline, repeat the label around the polygon perimeter.
+
 The entries in the :guilabel:`Rendering` menu are the same as for line layers. You can also use
 :guilabel:`Suppress labeling of features smaller than` in the :guilabel:`Feature options`.
 
@@ -604,11 +615,11 @@ The entries in the :guilabel:`Rendering` menu are the same as for line layers. Y
 
 **Define labels based on expressions**
 
-QGIS allows to use expressions to label features. Just click the 
-|mActionmIconExpressionEditorOpen| icon in the |mActionLabeling| :sup:`Labels` 
-menu of the properties dialog. In figure_labels_4_ you see a sample expression 
-to label the alaska regions with name and area size, based on the field 'NAME_2', 
-some descriptive text and the function '$area()' in combination with 
+QGIS allows to use expressions to label features. Just click the
+|mActionmIconExpressionEditorOpen| icon in the |mActionLabeling| :sup:`Labels`
+menu of the properties dialog. In figure_labels_4_ you see a sample expression
+to label the alaska regions with name and area size, based on the field 'NAME_2',
+some descriptive text and the function '$area()' in combination with
 'format_number()' to make it look nicer.
 
 .. features act as obstacles for labels or not .
@@ -625,24 +636,24 @@ some descriptive text and the function '$area()' in combination with
 
    Using expressions for labeling |nix|
 
-Expression based labeling is easy to work with. All you have to take care of 
-is, that you need to combine all elements (strings, fields and functions) with a 
-string concatenation sign '||' and that fields a written in "double quotes" 
+Expression based labeling is easy to work with. All you have to take care of
+is, that you need to combine all elements (strings, fields and functions) with a
+string concatenation sign '||' and that fields a written in "double quotes"
 and strings in 'single quotes'. Let's have a look at some examples:
 
 ::
 
-   # label based on two fields 'name' and 'place' with a comma as separater 
+   # label based on two fields 'name' and 'place' with a comma as separater
    "name" || ', ' || "place"
 
-   -> John Smith, Paris 
+   -> John Smith, Paris
 
    # label based on two fields 'name' and 'place' separated by comma
    'My name is ' || "name" || 'and I live in ' || "place"
 
    -> My name is John Smith and I live in Paris
 
-   # label based on two fields 'name' and 'place' with a descriptive text 
+   # label based on two fields 'name' and 'place' with a descriptive text
    # and a line break (\n)
    'My name is ' || "name" || '\nI live in ' || "place"
 
@@ -655,14 +666,15 @@ and strings in 'single quotes'. Let's have a look at some examples:
 
    -> The area of Paris has a size of 105000000 m²
 
-   # create a CASE ELSE condition. If the population value in field 
-   # population is <= 50000 it is a town, otherwise a city.  
+   # create a CASE ELSE condition. If the population value in field
+   # population is <= 50000 it is a town, otherwise a city.
    'This place is a ' || CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END
 
   -> This place is a town
 
-As you can see in the expression builder, you have hundreds if functions available to 
-create simple and very complex expressions to label your data in QGIS.
+As you can see in the expression builder, you have hundreds if functions available to
+create simple and very complex expressions to label your data in QGIS. See 
+:ref:`vector_expressions` chapter for more information and example on expressions.
 
 **Using data-defined override for labeling**
 
@@ -744,42 +756,39 @@ to be added to the specific attribute table column. If you click on the
 **[edit widget]** button, a dialog opens, where you can define different
 widgets. These widgets are:
 
-* **Line edit**: An edit field that allows you to enter simple text
-  (or restrict to numbers for numeric attributes).
+* **Checkbox**: Displays a checkbox, and you can define what attribute is
+  added to the column when the checkbox is activated or not.
 * **Classification**: Displays a combo box with the values used for
   classification, if you have chosen 'unique value' as legend type in
   the :guilabel:`Style` menu of the properties dialog.
+* **Color**: Displays a color button allowing user to choose a color from the
+  color dialog window.
+* **Date/Time**: Displays a line fields which can opens a calendar widget to enter a
+  date, a time or both. Column type must be text. You can select a custom format, pop-up
+  a calendar, etc.
+* **Enumeration**: Opens a combo box with values that can be used within
+  the columns type. This is currently only supported by the PostgreSQL provider.
+* **File name**: Simplifies the selection by adding a file chooser dialog.
+* **Hidden**: A hidden attribute column is invisible. The user is not able
+  to see its contents.
+* **Photo**: Field contains a filename for a picture. The width and height of the field can be defined.
 * **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
+* **Relation Reference**: This widged lets you embed the feature form of the referenced layer on the feature form
+  of the actual layer. See :ref:`vector_relations`.
+* **Text edit** (default): This opens a text edit field that allows simple text or multiple lines to
+  be used. If you choose multiple lines you can also choose html content.
 * **Unique values**: You can select one of the values already used in
   the attribute table. If 'Editable' is activated, a line edit is shown with
   autocompletion support, otherwise a combo box is used.
-* **File name**: Simplifies the selection by adding a file chooser dialog.
+* **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers)
+  field, if empty.
 * **Value map**: A combo box with predefined items. The value is stored in
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
-* **Enumeration**: Opens a combo box with values that can be used within
-  the columns type. This is currently only supported by the PostgreSQL provider.
-* **Immutable**: The immutable attribute column is read-only. The user is not
-  able to modify the content.
-* **Hidden**: A hidden attribute column is invisible. The user is not able
-  to see its contents.
-* **Checkbox**: Displays a checkbox, and you can define what attribute is
-  added to the column when the checkbox is activated or not.
-* **Text edit**: This opens a text edit field that allows multiple lines to
-  be used.
-* **Calendar**: Opens a calendar widget to enter a date. Column type must be
-  text.
 * **Value Relation**: Offers values from a related table in a combobox. You can
   select layer, key column and value column.
-* **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers)
-  field, if empty.
-* **Photo**: Field contains a filename for a picture. The width and height of the field can be defined.
 * **Webview**: Field contains a URL. The width and height of the field is variable.
-* **Color**: A field that allows you to enter color codes. During data entry, the color is visible through a color bar
-  included in the field.
-* **Relation Reference**: This widged lets you embed the feature form of the referenced layer on the feature form 
-  of the actual layer. See :ref:`vector_relations`.
 
 With the **Attribute editor layout**, you can now define built-in forms for data entry jobs (see figure_fields_2_).
 Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| icon to create
@@ -1284,7 +1293,7 @@ of the diagrams is possible. Here, you can use attributes to define the position
 You can also set a scale-dependent visibility in the :guilabel:`Appearance` tab.
 
 The size and the attributes can also be an expression. Use the |mActionmIconExpressionEditorOpen| button
-to add an expression.
+to add an expression. See :ref:`vector_expressions` chapter for more information and example.
 
 .. _vectormetadatamenu:
 

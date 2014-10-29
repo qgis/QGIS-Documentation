@@ -55,7 +55,7 @@ are too far away from their point markers.
 
 * Open the :guilabel:`Label tool` again by clicking on its button as before.
 * Make sure :guilabel:`Text` is selected in the left-hand options list, then
-update the text formatting options to match those shown here:
+  update the text formatting options to match those shown here:
 
 
 .. image:: /static/training_manual/labels/label_formatting_options.png
@@ -68,7 +68,7 @@ overlapping the points, but before we do that, let's take a look at the
 * Open the :guilabel:`Label tool` dialog.
 * Select :guilabel:`Buffer` from the left-hand options list.
 * Select the checkbox next to :guilabel:`Draw text buffer`, then choose options
-to match those shown here:
+  to match those shown here:
 
 
 .. image:: /static/training_manual/labels/buffer_options.png
@@ -88,7 +88,7 @@ markers.
 
 * In the :guilabel:`Label tool` dialog, go to the :guilabel:`Placement` tab.
 * Change the value of :guilabel:`Distance` to :kbd:`2mm` and make sure that
-:guilabel:`Around point` is selected:
+  :guilabel:`Around point` is selected:
 
 
 .. image:: /static/training_manual/labels/offset_placement_settings.png

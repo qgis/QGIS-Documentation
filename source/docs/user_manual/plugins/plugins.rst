@@ -13,16 +13,33 @@
 features and functions to be easily added to the application. Many of the features
 in |qg| are actually implemented as plugins.
 
+You can manage your plugins in the plugin dialog which can be opened with 
+:guilabel:`Plugins > Manage and install pluginsi ...`.
+
+When a plugin needs to be updated, and if plugins settings have been set up 
+accordingly, QGIS main interface could display a blue link in the status bar 
+to tell you that there are some plugins updating waiting to be applied.
+
 .. :index::
     single:plugins;managing
 
 .. _managing_plugins:
 
-The Plugins Menus
-=================
+The Plugins Dialog 
+===================
 
 The menus in the Plugins dialog allow the user to install, uninstall and upgrade plugins in
-different ways.
+different ways. Each plugin have some metadatas displayed in the right panel:
+
+* information if the plugin is experimental
+* description
+* rating vote(s) (you can vote for your prefered plugin!)
+* tags
+* some useful links as the home page, tracker and code repository
+* author(s)
+* version available
+
+You can use the filter to find a specific plugin.
 
 |mActionShowPluginManager| :guilabel:`All`
 

@@ -23,11 +23,11 @@ the geometry_columns table.
 -------------------------------------------------------------------------------
 
 * Modify the :kbd:`streets` table so that it has a geometry column of type
-ST_LineString.
+  ST_LineString.
 * Don't forget to do the accompanying update to the geometry columns
-table!
+  table!
 * Also add a constraint to prevent any geometries being added that are
-not LINESTRINGS or null.
+  not LINESTRINGS or null.
 * Create a spatial index on the new geometry column
 
 :ref:`Check your results <geometry-1>`

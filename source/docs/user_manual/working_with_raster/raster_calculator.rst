@@ -9,7 +9,7 @@ Raster Calculator
 
 The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu
 allows you to perform calculations on the basis of existing
-raster pixel values (see figure_raster_2_).
+raster pixel values (see figure_raster_10_).
 The results are written to a new raster layer with a GDAL-supported format.
 
 .. _figure_raster_10:

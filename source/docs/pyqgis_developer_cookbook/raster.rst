@@ -72,7 +72,8 @@ The following sections explain how to query and modify the layer drawing style.
 After doing the changes, you might want to force update of map canvas, see
 :ref:`refresh-layer`.
 
-**TODO:** contrast enhancements, transparency (no data), user defined min/max, band statistics
+**TODO:**
+   contrast enhancements, transparency (no data), user defined min/max, band statistics
 
 .. index:: rasters; single band
 
@@ -136,7 +137,7 @@ section::
   >>> rlayer.setColorShadingAlgorithm(QgsRasterLayer.PseudoColorShader)
   >>> # now set the shader
 
-.. index:: 
+.. index::
   pair: raster layers; refreshing
 
 .. _refresh-layer:
@@ -147,7 +148,8 @@ Refreshing Layers
 If you do change layer symbology and would like ensure that the changes are
 immediately visible to the user, call these methods::
 
-   if hasattr(layer, "setCacheImage"): layer.setCacheImage(None)
+   if hasattr(layer, "setCacheImage"):
+     layer.setCacheImage(None)
    layer.triggerRepaint()
 
 The first call will ensure that the cached image of rendered layer is erased
@@ -185,9 +187,9 @@ To do a query on value of bands of raster layer at some specified point::
   if ident.isValid():
     print ident.results()
 
-The ``results`` method in this case returns a dictionary, with band indices as keys, and band values as values.
+The ``results`` method in this case returns a dictionary, with band indices as
+keys, and band values as values.
 
 ::
 
   {1: 17, 2: 220}
-

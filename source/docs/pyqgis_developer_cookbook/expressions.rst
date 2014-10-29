@@ -34,7 +34,6 @@ And the following predicates are supported:
 * logical predicates: ``AND``, ``OR``, ``NOT``
 * NULL value checking: ``IS NULL``, ``IS NOT NULL``
 
-
 Examples of predicates:
 
 * ``1 + 2 = 3``
@@ -82,7 +81,8 @@ Basic Expressions
 Expressions with features
 --------------------------
 
-The following example will evaluate the given expression against a feature.  "Column" is the name of the field in the layer. 
+The following example will evaluate the given expression against a feature.
+"Column" is the name of the field in the layer.
 
 ::
 
@@ -91,7 +91,9 @@ The following example will evaluate the given expression against a feature.  "Co
   >>> bool(value)
   True
 
-You can also use :func:`QgsExpression.prepare()` if you need check more than one feature.  Using :func:`QgsExpression.prepare()` will increase the speed that evaluate takes to run.
+You can also use :func:`QgsExpression.prepare()` if you need check more than
+one feature.  Using :func:`QgsExpression.prepare()` will increase the speed
+that evaluate takes to run.
 
 ::
 
@@ -100,7 +102,7 @@ You can also use :func:`QgsExpression.prepare()` if you need check more than one
   >>> value = exp.evaluate(feature)
   >>> bool(value)
   True
- 
+
 
 Handling errors
 ---------------
@@ -112,7 +114,7 @@ Handling errors
     raise Expection(exp.parserErrorString())
 
   value = exp.evaluate()
-  if exp.hasEvalError(): 
+  if exp.hasEvalError():
     raise ValueError(exp.evalErrorString())
 
   print value
@@ -120,7 +122,8 @@ Handling errors
 Examples
 ========
 
-The following example can be used to filter a layer and return any feature that matches a predicate.
+The following example can be used to filter a layer and return any feature that
+matches a predicate.
 
 ::
 
@@ -132,7 +135,7 @@ The following example can be used to filter a layer and return any feature that 
     exp.prepare(layer.pendingFields())
     for feature in layer.getFeatures():
       value = exp.evaluate(feature)
-      if exp.hasEvalError(): 
+      if exp.hasEvalError():
         raise ValueError(exp.evalErrorString())
       if bool(value):
         yield feature
@@ -140,9 +143,3 @@ The following example can be used to filter a layer and return any feature that 
   layer = qgis.utils.iface.activeLayer()
   for f in where(layer, 'Test > 1.0'):
     print f + " Matches expression"
-
-
-
-
-
-

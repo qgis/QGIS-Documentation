@@ -340,7 +340,7 @@ access a rich toolbox of spatial analysis tools allows you to access various plu
 tools from within a single interface.
 
 * Activate this set of tools by enabling the :menuselection:`Processing --> Toolbox`
-menu entry. The toolbox looks like this:
+  menu entry. The toolbox looks like this:
 
 .. image:: /static/training_manual/vector_analysis/sextante_toolbox.png
    :align: center
@@ -447,7 +447,7 @@ summarizing the statistical properties of a dataset. One of these is the
 :guilabel:`Minimum Distance Analysis` tool.
 
 * Find this tool in the :guilabel:`Processing Toolbox` as :guilabel:`Minimum
-Distance Analysis`.
+  Distance Analysis`.
 
 It does not require any other input besides specifying the vector point dataset
 to be analyzed.

@@ -41,11 +41,9 @@ The result looks like this:
 
 Although the number of lines is larger in the case of the central pump, do not forget that this does not represent the number of deaths, but the number of locations where cholera cases were found. It is a representative parameter, but it is not considering that some locations might have more cases than other.
 
-A density layer will also give us a very clear view of what is happening. We can create it with the *Kernel density* algorithm. Using the *Cholera_deaths* layer and its *COUNT* field as weight field, and with a radius of 100, we get something like this.
+A density layer will also give us a very clear view of what is happening. We can create it with the *Kernel density* algorithm. Using the *Cholera_deaths* layer, its *COUNT* field as weight field, with a radius of 100, the extent and cellsize of the streets raster layer, we get something like this.
 
 .. image:: img/john_snow/density.png
-
-The resulting layer has the extent and cellsize of the streets raster layer. 
 
 Remember that, to get the output extent, you do not have to type it. Click on the button on the right-hand side and select *Use layer/canvas extent*.
 

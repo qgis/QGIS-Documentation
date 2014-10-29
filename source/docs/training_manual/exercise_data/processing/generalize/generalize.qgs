@@ -1,14 +1,20 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.2.0-Valmiera">
+<qgis projectname="" version="2.5.0-Master">
     <title></title>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+        <customproperties/>
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="watersheds20140417183808889" name="Watersheds">
+            <customproperties/>
+        </layer-tree-layer>
+    </layer-tree-group>
     <relations/>
     <mapcanvas>
         <units>meters</units>
         <extent>
             <xmin>238831.81841186404926702</xmin>
-            <ymin>4553658.32129220198839903</ymin>
+            <ymin>4554011.46132722031325102</ymin>
             <xmax>256201.40703340951586142</xmax>
-            <ymax>4567420.37996927183121443</ymax>
+            <ymax>4567067.23993425350636244</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -31,8 +37,14 @@
             <layer_coordinate_transform destAuthId="EPSG:3003" srcAuthId="EPSG:102091" srcDatumTransform="-1" destDatumTransform="-1" layerid="Output_vector_layer20140417182814426"/>
         </layer_coordinate_transform_info>
     </mapcanvas>
-    <legend updateDrawingOrder="true" activeLayer="watersheds20140417183808889">
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="watersheds" showFeatureCount="0">
+    <visibility-presets/>
+    <layer-tree-canvas>
+        <custom-order enabled="0">
+            <item>watersheds20140417183808889</item>
+        </custom-order>
+    </layer-tree-canvas>
+    <legend updateDrawingOrder="true">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Watersheds" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="watersheds20140417183808889" visible="1"/>
             </filegroup>
@@ -63,18 +75,39 @@
             <provider encoding="UTF-8">ogr</provider>
             <previewExpression></previewExpression>
             <vectorjoins/>
+            <expressionfields/>
+            <edittypes>
+                <edittype widgetv2type="TextEdit" name="C_UsersVol">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="ID">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="NAME">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="area">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="perimeter">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+            </edittypes>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
                     <symbol alpha="1" type="fill" name="0">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="border_width_unit" v="MM"/>
+                            <prop k="border_width_map_unit_scale" v="0,0"/>
                             <prop k="color" v="255,85,0,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0,0"/>
+                            <prop k="offset_map_unit_scale" v="0,0"/>
                             <prop k="offset_unit" v="MM"/>
+                            <prop k="outline_color" v="0,0,0,255"/>
+                            <prop k="outline_style" v="solid"/>
+                            <prop k="outline_width" v="0.26"/>
+                            <prop k="outline_width_unit" v="MM"/>
                             <prop k="style" v="solid"/>
-                            <prop k="style_border" v="solid"/>
-                            <prop k="width_border" v="0.26"/>
                         </layer>
                     </symbol>
                 </symbols>
@@ -224,24 +257,40 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <edittypes>
-                <edittype labelontop="0" editable="1" type="0" name="C_UsersVol"/>
-                <edittype labelontop="0" editable="1" type="0" name="ID"/>
-                <edittype labelontop="0" editable="1" type="0" name="NAME"/>
-                <edittype labelontop="0" editable="1" type="0" name="area"/>
-                <edittype labelontop="0" editable="1" type="0" name="perimeter"/>
-            </edittypes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform></annotationform>
+            <annotationform>.</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
             <attributeactions/>
+            <edittypes>
+                <edittype widgetv2type="TextEdit" name="C_UsersVol">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="ID">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="NAME">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="area">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="perimeter">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+            </edittypes>
         </maplayer>
     </projectlayers>
     <properties>
+        <SemiAutomaticClassificationPlugin>
+            <bandSetPresent type="QString">No</bandSetPresent>
+            <bndSetWvLn type="QString">[]</bndSetWvLn>
+            <bndSetUnit type="QString">band number</bndSetUnit>
+            <bandSet type="QString">[]</bandSet>
+        </SemiAutomaticClassificationPlugin>
         <SpatialRefSys>
             <ProjectCRSProj4String type="QString">+proj=longlat +datum=WGS84 +no_defs</ProjectCRSProj4String>
             <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
@@ -264,5 +313,8 @@
             <DecimalPlaces type="int">2</DecimalPlaces>
             <Automatic type="bool">true</Automatic>
         </PositionPrecision>
+        <Legend>
+            <filterByMap type="bool">false</filterByMap>
+        </Legend>
     </properties>
 </qgis>

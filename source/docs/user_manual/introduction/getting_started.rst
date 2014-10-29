@@ -133,7 +133,7 @@ Load raster and vector layers from the sample dataset
    the ERDAS IMG file :file:`landcover.img` and click **[Open]**.
 #. If the file is not listed, check if the :guilabel:`Files of type`
    |selectstring| combo box at the bottom of the dialog is set on the right
-   type, in this case "Erdas Imagine Images (*.img, *.IMG)".
+   type, in this case "Erdas Imagine Images (\*.img, \*.IMG)".
 #. Now click on the |mActionAddOgrLayer| :sup:`Load Vector` icon.
 #. |radiobuttonon| :guilabel:`File` should be selected as :guilabel:`Source Type`
    in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to
@@ -141,6 +141,7 @@ Load raster and vector layers from the sample dataset
 #. Browse to the folder :file:`qgis_sample_data/gml/`, select 'Geography Markup
    Language [GML] [OGR] (.gml,.GML)' from the :guilabel:`Files of type` |selectstring| combo box, then select the GML file :file:`lakes.gml` and
    click **[Open]**. In the :guilabel:`Add vector layer` dialog, click **[OK]**.
+   The :guilabel:`Coordinate Reference System Selector` dialog opens with :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**. 
 #. Zoom in a bit to your favorite area with some lakes.
 #. Double click the :file:`lakes` layer in the map legend to open the
    :guilabel:`Properties` dialog.
@@ -302,6 +303,24 @@ This option is similar to the one above, but furthermore overrides the default
 path for user configuration (:file:`~/.qgis2`) and forces **QSettings** to use
 this directory, too. This allows users to, for instance, carry a |qg| installation on a
 flash drive together with all plugins and settings.
+
+**Command line option** ``--code``
+
+This option can be used to run a given python file directly after |qg| has started.
+
+For example, when you have a python file named :file:`load_alaska.py` with following content:
+
+::
+
+  from qgis.utils import iface
+  raster_file = "/home/gisadmin/Documents/qgis_sample_data/raster/landcover.img"
+  layer_name = "Alaska"
+  iface.addRasterLayer(raster_file, layer_name)
+
+Assuming you are in the directory where the file :file:`load_alaska.py` is located, you 
+can start |qg|, load the raster file :file:`landcover.img` and give the layer the name 
+'Alaska' using the following command: 
+``qgis --code load_alaska.py`` 
 
 .. _sec_projects:
 

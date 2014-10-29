@@ -1,14 +1,26 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.2.0-Valmiera">
+<qgis projectname="" version="2.5.0-Master">
     <title></title>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+        <customproperties/>
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="Pumps20130804123454093" name="Pumps">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="Cholera_Deaths20130804123454077" name="Cholera_Deaths">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="0" checked="Qt::Checked" id="osmgrey20130804123500101" name="Osmgrey">
+            <customproperties/>
+        </layer-tree-layer>
+    </layer-tree-group>
     <relations/>
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>528178.58217286772560328</xmin>
-            <ymin>180277.6193622785503976</ymin>
-            <xmax>530269.79180519410874695</xmax>
-            <ymax>181823.96336563187651336</ymax>
+            <xmin>528735.77500000002328306</xmin>
+            <ymin>180439.67500003584427759</ymin>
+            <xmax>529963.22499999997671694</xmax>
+            <ymax>181545.32499999908031896</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -23,9 +35,21 @@
                 <geographicflag>false</geographicflag>
             </spatialrefsys>
         </destinationsrs>
-        <layer_coordinate_transform_info/>
+        <layer_coordinate_transform_info>
+            <layer_coordinate_transform destAuthId="USER:100003" srcAuthId="USER:100003" srcDatumTransform="-1" destDatumTransform="-1" layerid="Pumps20130804123454093"/>
+            <layer_coordinate_transform destAuthId="USER:100003" srcAuthId="USER:100003" srcDatumTransform="-1" destDatumTransform="-1" layerid="Cholera_Deaths20130804123454077"/>
+            <layer_coordinate_transform destAuthId="USER:100003" srcAuthId="USER:100003" srcDatumTransform="-1" destDatumTransform="-1" layerid="osmgrey20130804123500101"/>
+        </layer_coordinate_transform_info>
     </mapcanvas>
-    <legend updateDrawingOrder="true" activeLayer="osmgrey20130804123500101">
+    <visibility-presets/>
+    <layer-tree-canvas>
+        <custom-order enabled="0">
+            <item>Pumps20130804123454093</item>
+            <item>Cholera_Deaths20130804123454077</item>
+            <item>osmgrey20130804123500101</item>
+        </custom-order>
+    </layer-tree-canvas>
+    <legend updateDrawingOrder="true">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Pumps" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="Pumps20130804123454093" visible="1"/>
@@ -36,7 +60,7 @@
                 <legendlayerfile isInOverview="0" layerid="Cholera_Deaths20130804123454077" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="osmgrey" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Osmgrey" showFeatureCount="0">
             <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="osmgrey20130804123500101" visible="1"/>
             </filegroup>
@@ -67,22 +91,34 @@
             <provider encoding="System">ogr</provider>
             <previewExpression></previewExpression>
             <vectorjoins/>
+            <expressionfields/>
+            <edittypes>
+                <edittype widgetv2type="TextEdit" name="ID">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="COUNT">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+            </edittypes>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
                     <symbol alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
                             <prop k="color" v="255,0,0,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
                             <prop k="horizontal_anchor_point" v="1"/>
                             <prop k="name" v="circle"/>
                             <prop k="offset" v="0,0"/>
+                            <prop k="offset_map_unit_scale" v="0,0"/>
                             <prop k="offset_unit" v="MM"/>
+                            <prop k="outline_color" v="0,0,0,255"/>
                             <prop k="outline_style" v="solid"/>
                             <prop k="outline_width" v="0"/>
+                            <prop k="outline_width_map_unit_scale" v="0,0"/>
                             <prop k="outline_width_unit" v="MM"/>
                             <prop k="scale_method" v="area"/>
                             <prop k="size" v="2"/>
+                            <prop k="size_map_unit_scale" v="0,0"/>
                             <prop k="size_unit" v="MM"/>
                             <prop k="vertical_anchor_point" v="1"/>
                         </layer>
@@ -234,10 +270,6 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <edittypes>
-                <edittype labelontop="0" editable="1" type="0" name="COUNT"/>
-                <edittype labelontop="0" editable="1" type="0" name="ID"/>
-            </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
@@ -246,6 +278,14 @@
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
             <attributeactions/>
+            <edittypes>
+                <edittype widgetv2type="TextEdit" name="ID">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="COUNT">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+            </edittypes>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>Pumps20130804123454093</id>
@@ -271,22 +311,31 @@
             <provider encoding="System">ogr</provider>
             <previewExpression></previewExpression>
             <vectorjoins/>
+            <expressionfields/>
+            <edittypes>
+                <edittype widgetv2type="TextEdit" name="Id">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+            </edittypes>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
                     <symbol alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
                             <prop k="color" v="101,44,142,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
                             <prop k="horizontal_anchor_point" v="1"/>
                             <prop k="name" v="circle"/>
                             <prop k="offset" v="0,0"/>
+                            <prop k="offset_map_unit_scale" v="0,0"/>
                             <prop k="offset_unit" v="MM"/>
+                            <prop k="outline_color" v="0,0,0,255"/>
                             <prop k="outline_style" v="solid"/>
                             <prop k="outline_width" v="0"/>
+                            <prop k="outline_width_map_unit_scale" v="0,0"/>
                             <prop k="outline_width_unit" v="MM"/>
                             <prop k="scale_method" v="area"/>
                             <prop k="size" v="2"/>
+                            <prop k="size_map_unit_scale" v="0,0"/>
                             <prop k="size_unit" v="MM"/>
                             <prop k="vertical_anchor_point" v="1"/>
                         </layer>
@@ -329,6 +378,11 @@
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
             <attributeactions/>
+            <edittypes>
+                <edittype widgetv2type="TextEdit" name="Id">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+            </edittypes>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
             <id>osmgrey20130804123500101</id>
@@ -355,6 +409,9 @@
                 <property key="identify/format" value="Value"/>
             </customproperties>
             <provider>gdal</provider>
+            <noData>
+                <noDataList bandNo="1" useSrcNoData="1"/>
+            </noData>
             <pipe>
                 <rasterrenderer opacity="1" alphaBand="-1" band="1" type="paletted">
                     <rasterTransparency/>
@@ -626,6 +683,12 @@
     </projectlayers>
     <properties>
         <WMSContactPerson type="QString"></WMSContactPerson>
+        <SemiAutomaticClassificationPlugin>
+            <bandSetPresent type="QString">No</bandSetPresent>
+            <bndSetWvLn type="QString">[]</bndSetWvLn>
+            <bndSetUnit type="QString">band number</bndSetUnit>
+            <bandSet type="QString">[]</bandSet>
+        </SemiAutomaticClassificationPlugin>
         <WMSOnlineResource type="QString"></WMSOnlineResource>
         <WMSContactOrganization type="QString"></WMSContactOrganization>
         <WMSKeywordList type="QStringList">
@@ -671,6 +734,9 @@
             <pythonCode type="QString"></pythonCode>
         </Macros>
         <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+        <Legend>
+            <filterByMap type="bool">false</filterByMap>
+        </Legend>
         <SpatialRefSys>
             <ProjectCRSProj4String type="QString">+proj=utm +zone=30 +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
             <ProjectCrs type="QString">EPSG:4326</ProjectCrs>

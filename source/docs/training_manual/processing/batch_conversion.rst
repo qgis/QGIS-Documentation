@@ -5,7 +5,7 @@ The batch processing interface
 
 Sometimes a given algorithm has to be executed repeteadly with different inputs. This is, for instance, the case when a set of input files have to be converted from one format to another, or when several layers in a given projection must be converted into another projection.
 
-In that case, calling the algorithm repeatedly on the toolbox is not the best option. Instead, the batch processing interface should be used, which greatly simplifies performing a multiple execution of a given algorithm. To run an algorithm as a batch process, find it in the toolbox, and instead of double--clicking on it, right--click on it and select *Run as batch process*
+In that case, calling the algorithm repeatedly on the toolbox is not the best option. Instead, the batch processing interface should be used, which greatly simplifies performing a multiple execution of a given algorithm. To run an algorithm as a batch process, find it in the toolbox, and instead of double--clicking on it, right--click on it and select *Run as batch process*.
 
 .. image:: img/batch_conversion/batch_menu.png
 
@@ -13,7 +13,7 @@ For this example, we will use the *Reproject algorithm*, so find it and do as de
 
 .. image:: img/batch_conversion/batch_dialog.png
 
-If you have a look at the data fo this lesson, you will see that it contains a set of three shapefiles, but no QGIS project file. This is because, when an algorithm is run as a batch process, laye inputs are not selected from the current QGIS project, but from files instead. that makes it easier to process large amounts of layers, such as, for instance, all the layers in a given folder.
+If you have a look at the data fo this lesson, you will see that it contains a set of three shapefiles, but no QGIS project file. This is because, when an algorithm is run as a batch process, layer inputs can be selected either from the current QGIS project or from files. That makes it easier to process large amounts of layers, such as, for instance, all the layers in a given folder.
 
 Each row in the table of the batch processing dialog represents a single execution of the algorithm. Cells in a row correspond to the parameter needed by the algorithm, which are not arranged one above the other, as in the normal single--execution dialog, but horizontally in that row.
 

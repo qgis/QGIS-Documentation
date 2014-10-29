@@ -31,12 +31,11 @@ The points contain the original values, but not the interpolated ones. To add th
 
 .. image:: img/interpolation_cross/addgridvalues.png
 
-The raster layer to select (the algorithm supports multiple raster, but we just need one) is the resulting one from the interpolation. WE have renamed it to *interpolate* and that layer name is the one that will be used for the name of the field to add.
+The raster layer to select (the algorithm supports multiple raster, but we just need one) is the resulting one from the interpolation. We have renamed it to *interpolate* and that layer name is the one that will be used for the name of the field to add.
 
 Now we have a vector layer that contains both values, with points that were not used for the interpolation.
 
 .. image:: img/interpolation_cross/extended_layer.png
-
 
 Now, we will use the fields calculator for this task. Open the *Field calculator* algorithm and run it with the following parameters.
 
@@ -51,5 +50,7 @@ Representing that layer according to that value will give us a first idea of whe
 Interpolating that layer will get you a raster layer with the estimated error in all points of the interpolated area.
 
 .. image:: img/interpolation_cross/raster_diffs.png
+
+You can also get the same information (difference between original point values and interpolated ones) directly with :menuselection:`GRASS --> v.sample`.
 
 Your results might differ from these ones, since there is a random component introduced when running the random selection, at the beginning of this lesson.

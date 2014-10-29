@@ -1,14 +1,20 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.2.0-Valmiera">
+<qgis projectname="" version="2.5.0-Master">
     <title></title>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+        <customproperties/>
+        <layer-tree-layer expanded="0" checked="Qt::Checked" id="dem20140417180359628" name="Dem">
+            <customproperties/>
+        </layer-tree-layer>
+    </layer-tree-group>
     <relations/>
     <mapcanvas>
         <units>meters</units>
         <extent>
             <xmin>1649394.76664840918965638</xmin>
-            <ymin>4784729.64842517860233784</ymin>
+            <ymin>4802575.72087644506245852</ymin>
             <xmax>1690374.33121410082094371</xmax>
-            <ymax>4853548.59109256230294704</ymax>
+            <ymax>4835702.51864129584282637</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -25,10 +31,17 @@
         </destinationsrs>
         <layer_coordinate_transform_info>
             <layer_coordinate_transform destAuthId="EPSG:3003" srcAuthId="EPSG:102091" srcDatumTransform="-1" destDatumTransform="-1" layerid="Output_vector_layer20140417182814426"/>
+            <layer_coordinate_transform destAuthId="EPSG:3003" srcAuthId="EPSG:3003" srcDatumTransform="-1" destDatumTransform="-1" layerid="dem20140417180359628"/>
         </layer_coordinate_transform_info>
     </mapcanvas>
-    <legend updateDrawingOrder="true" activeLayer="dem20140417180359628">
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="dem" showFeatureCount="0">
+    <visibility-presets/>
+    <layer-tree-canvas>
+        <custom-order enabled="0">
+            <item>dem20140417180359628</item>
+        </custom-order>
+    </layer-tree-canvas>
+    <legend updateDrawingOrder="true">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Dem" showFeatureCount="0">
             <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="dem20140417180359628" visible="1"/>
             </filegroup>
@@ -60,6 +73,9 @@
                 <property key="identify/format" value="Value"/>
             </customproperties>
             <provider>gdal</provider>
+            <noData>
+                <noDataList bandNo="1" useSrcNoData="0"/>
+            </noData>
             <pipe>
                 <rasterrenderer opacity="1" alphaBand="0" classificationMax="624" classificationMinMaxOrigin="MinMaxFullExtentEstimated" band="1" classificationMin="27" type="singlebandpseudocolor">
                     <rasterTransparency/>
@@ -124,6 +140,12 @@
         </maplayer>
     </projectlayers>
     <properties>
+        <SemiAutomaticClassificationPlugin>
+            <bandSetPresent type="QString">No</bandSetPresent>
+            <bndSetWvLn type="QString">[]</bndSetWvLn>
+            <bndSetUnit type="QString">band number</bndSetUnit>
+            <bandSet type="QString">[]</bandSet>
+        </SemiAutomaticClassificationPlugin>
         <SpatialRefSys>
             <ProjectCRSProj4String type="QString">+proj=longlat +datum=WGS84 +no_defs</ProjectCRSProj4String>
             <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
@@ -146,5 +168,8 @@
             <DecimalPlaces type="int">2</DecimalPlaces>
             <Automatic type="bool">true</Automatic>
         </PositionPrecision>
+        <Legend>
+            <filterByMap type="bool">false</filterByMap>
+        </Legend>
     </properties>
 </qgis>

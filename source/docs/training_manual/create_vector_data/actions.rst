@@ -101,7 +101,7 @@ MacOS
 ...............................................................................
 
 * Click on the :guilabel:`Type` dropdown and choose :guilabel:`Mac`.
-* Under :guilabel:`Action`, write :kbd:`open `. Remember to put a space after
+* Under :guilabel:`Action`, write :kbd:`open`. Remember to put a space after
   the command!
 
 
@@ -268,6 +268,7 @@ To create the layer action:
 * Open the :guilabel:`Layer Properties` dialog and head over to the
   :guilabel:`Actions` tab.
 * Set up a new action using the following properties for the action:
+
   * :guilabel:`Type`: :kbd:`Python`
   * :guilabel:`Name`: :kbd:`Wikipedia`
   * :guilabel:`Action` (all on one line):

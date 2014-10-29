@@ -320,7 +320,6 @@ Toolbar
 -------
 
 .. index::
-
    single:toolbar
 
 The toolbar provides access to most of the same functions as the menus, plus
@@ -355,7 +354,27 @@ Map Legend
    single:legend
 
 The map legend area lists all the layers in the project. The checkbox in each
-legend entry can be used to show or hide the layer.
+legend entry can be used to show or hide the layer. The Legend toolbar in the 
+map legend are list allow you to **Add group**, **Manage Layer Visibility** of 
+all layers or manage preset layers combination, **Filter Legend by Map 
+Content**, **Expand All** or **Collapse All** and **Remove Layer or Group**.
+
+.. _figure_layer_toolbar:
+
+.. only:: html
+
+   **Figure Layer tools Bar:**
+
+   .. figure:: /static/user_manual/introduction/layer_toobar.png
+       :align: center
+
+        Layer Tool Bar in Map Legend |nix|
+
+The button |mActionShowPresets| allows you to add **Presets** views in the legend. It means that you can choose to display some layer with specific categorization and add this view to the **Presets** list. To add a preset view just click on |mActionShowPresets|, choose *Add Preset...* from the drop down menu and give a name to the preset. After that you will see a list with all the presets that you can recall pressing on the |mActionShowPresets| button. 
+
+All the added presets are also present in the map composer in order to allow you to create a map layout based on your specific views (see :ref:`composer_main_properties`).
+
+
 
 .. index::
    single:layer visibility
@@ -369,9 +388,9 @@ are drawn over layers listed lower down in the legend.
 Layers in the legend window can be organised into groups. There are two ways to
 do this:
 
-#. Right click in the legend window and choose :guilabel:`Add New Group`. Type in a
-   name for the group and press :kbd:`Enter`. Now click on an existing layer
-   and drag it onto the group.
+#. Press the |mActionFolder| icon to add a new group. Type in a name for 
+   the group and press :kbd:`Enter`. Now click on an existing layer and 
+   drag it onto the group.
 #. Select some layers, right click in the legend window and choose
    :guilabel:`Group Selected`. The selected layers will automatically be placed
    in a new group.
@@ -391,21 +410,19 @@ selected legend item is a raster or a vector layer. For GRASS vector layers,
 **Right mouse button menu for raster layers**
 
 * :menuselection:`Zoom to layer extent`
+* :menuselection:`Show in overview`
 * :menuselection:`Zoom to Best Scale (100%)`
 * :menuselection:`Stretch Using Current Extent`
-* :menuselection:`Show in overview`
 * :menuselection:`Remove`
 * :menuselection:`Duplicate`
+* :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
 * :menuselection:`Save as ...`
+* :menuselection:`Save As Layer Definition Style`
 * :menuselection:`Properties`
 * :menuselection:`Rename`
 * :menuselection:`Copy Style`
-* :menuselection:`Add New Group`
-* :menuselection:`Expand all`
-* :menuselection:`Collapse all`
-* :menuselection:`Update Drawing Order`
 
 Additionally, according to layer position and selection
 
@@ -420,21 +437,18 @@ Additionally, according to layer position and selection
 * :menuselection:`Show in Overview`
 * :menuselection:`Remove`
 * :menuselection:`Duplicate`
+* :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
 * :menuselection:`Open Attribute Table`
 * :menuselection:`Toggle Editing` (not available for GRASS layers)
 * :menuselection:`Save As ...`
-* :menuselection:`Save Selection As`
+* :menuselection:`Save As Layer Definition Style`
 * :menuselection:`Filter`
 * :menuselection:`Show Feature Count`
 * :menuselection:`Properties`
 * :menuselection:`Rename`
 * :menuselection:`Copy Style`
-* :menuselection:`Add New Group`
-* :menuselection:`Expand all`
-* :menuselection:`Collapse all`
-* :menuselection:`Update Drawing Order`
 
 Additionally, according to layer position and selection
 
@@ -449,10 +463,7 @@ Additionally, according to layer position and selection
 * :menuselection:`Remove`
 * :menuselection:`Set Group CRS`
 * :menuselection:`Rename`
-* :menuselection:`Add New Group`
-* :menuselection:`Expand all`
-* :menuselection:`Collapse all`
-* :menuselection:`Update Drawing Order`
+* :menuselection:`Add Group`
 
 ..   Additionally, according to position
 

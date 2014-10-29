@@ -27,7 +27,7 @@ To activate the :guilabel:`Road Graph` plugin:
 
 * Click :guilabel:`Close` on the :guilabel:`Plugin Manager` dialog.
 
-.. note:: If you do not see the the plugin in your interface, go to
+.. note:: If you do not see the plugin in your interface, go to
    :menuselection:`View --> Panels` and ensure that :guilabel:`Shortest path`
    has a check mark next to it.
 
@@ -103,7 +103,7 @@ reasonable distance:
 * Open the attribute table for the :guilabel:`roads_34S` layer and enter
   edit mode.
 * Add a new column with the name :kbd:`SPEED`, and give it the type
- :guilabel:`Whole number (integer)` with a width of :kbd:`3`.
+  :guilabel:`Whole number (integer)` with a width of :kbd:`3`.
 * In the main window, activate the :guilabel:`Select Features by Rectangle`
   tool:
 

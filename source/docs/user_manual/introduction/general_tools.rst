@@ -296,6 +296,13 @@ tool:
 To deselect all selected features click on |mActionDeselectAll| :sup:`Deselect
 features from all layers`.
 
+|mActionSelectExpression| :sup:`Select feature using an expression` allow user 
+to select feature using expression dialog. See :ref:`vector_expressions` 
+chapter for some example.
+
+Users can save features selection into a **New Memory Vector Layer** or a **New Vector Layer** using 
+:menulabel:`Edit > Paste Feature as ...` and choose the mode you want.
+
 .. _`identify`:
 
 Identify features
@@ -352,6 +359,7 @@ example, from the context menu you can:
 * View the feature form
 * Zoom to feature
 * Copy feature: Copy all feature geometry and attributes
+* Toggle feature selection: adds identified feature to selection
 * Copy attribute value: Copy only the value of the attribute that you click on
 * Copy feature attributes: Copy only attributes
 * Clear result: Remove results in the window

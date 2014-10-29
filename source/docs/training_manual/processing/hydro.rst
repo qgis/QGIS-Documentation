@@ -13,14 +13,13 @@ The first thing is to load the project with the lesson data, which just contains
 .. image:: img/hydro/dem.png
 
 
-The first module to execute is *Catchment area (Parallel)*. You can use anyone of  the others named *Catchment area*. They have different algorithms underneath, but the results are basically the same.
+The first module to execute is *Catchment area*. You can use anyone of  the others named *Catchment area*. They have different algorithms underneath, but the results are basically the same.
 
 Select the DEM in the *Elevation* field, and leave the default values for the rest of parameters.
 
 .. image:: img/hydro/catchmentarea.png
 
-This algorithm calculates many layers, but the *Catchment Area* one is the only one we will be using.
-
+Some algorithm calculates many layers, but the *Catchment Area* one is the only one we will be using.
 
 You can get rid of the other ones if you want.
 
@@ -32,8 +31,7 @@ To know why, you can have a look at the histogram and you will see that values a
 
 .. image:: img/hydro/catchmentlayerlog.png
 
-
-The catchment area (also known as flow accumulation), can be used to set a threshold for channel initiation. This can be done using the *Channel network* algorithm. Here is how you have to set it up.
+The catchment area (also known as flow accumulation), can be used to set a threshold for channel initiation. This can be done using the *Channel network* algorithm. Here is how you have to set it up (note the *Initiation threshold* *Greater than* 10.000.000).
 
 .. image:: img/hydro/channelnetwork.png 
 

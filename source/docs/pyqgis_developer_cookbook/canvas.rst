@@ -14,14 +14,13 @@ there are tools for panning, zooming, identifying layers, measuring, vector
 editing and others. Similar to other graphics programs, there is always one
 tool active and the user can switch between the available tools.
 
-
 Map canvas is implemented as :class:`QgsMapCanvas` class in :mod:`qgis.gui`
 module.  The implementation is based on the Qt Graphics View framework.
 This framework generally provides a surface and a view where custom graphics
 items are placed and user can interact with them.  We will assume that you are
 familiar enough with Qt to understand the concepts of the graphics scene, view
 and items. If not, please make sure to read the `overview of the framework
-<http://doc.qt.nokia.com/graphicsview.html>`_.
+<http://qt-project.org/doc/qt-4.8/graphicsview.html>`_.
 
 Whenever the map has been panned, zoomed in/out (or some other action triggers
 a refresh), the map is rendered again within the current extent. The layers are
@@ -51,7 +50,9 @@ Embedding Map Canvas
 ====================
 
 Map canvas is a widget like any other Qt widget, so using it is as simple as
-creating and showing it::
+creating and showing it
+
+::
 
   canvas = QgsMapCanvas()
   canvas.show()
@@ -65,7 +66,9 @@ other possibility is to manually write the code to construct map canvas and
 other widgets (as children of a main window or dialog) and create a layout.
 
 By default, map canvas has black background and does not use anti-aliasing. To
-set white background and enable anti-aliasing for smooth rendering::
+set white background and enable anti-aliasing for smooth rendering
+
+::
 
   canvas.setCanvasColor(Qt.white)
   canvas.enableAntiAliasing(True)
@@ -75,7 +78,9 @@ set white background and enable anti-aliasing for smooth rendering::
 
 Now it is time to add some map layers. We will first open a layer and add it to
 the map layer registry.  Then we will set the canvas extent and set the list of
-layers for canvas::
+layers for canvas
+
+::
 
   layer = QgsVectorLayer(path, name, provider)
   if not layer.isValid():
@@ -90,7 +95,8 @@ layers for canvas::
   # set the map canvas layer set
   canvas.setLayerSet( [ QgsMapCanvasLayer(layer) ] )
 
-After executing these commands, the canvas should show the layer you have loaded.
+After executing these commands, the canvas should show the layer you have
+loaded.
 
 .. index:: map canvas; map tools
 
@@ -108,7 +114,6 @@ are activated using :func:`setMapTool` method.
 
 ::
 
-
   from qgis.gui import *
   from PyQt4.QtGui import QAction, QMainWindow
   from PyQt4.QtCore import SIGNAL, Qt, QString
@@ -124,15 +129,15 @@ are activated using :func:`setMapTool` method.
       self.canvas.setLayerSet( [ QgsMapCanvasLayer(layer) ] )
 
       self.setCentralWidget(self.canvas)
-      
+
       actionZoomIn = QAction(QString("Zoom in"), self)
       actionZoomOut = QAction(QString("Zoom out"), self)
       actionPan = QAction(QString("Pan"), self)
-      
+
       actionZoomIn.setCheckable(True)
       actionZoomOut.setCheckable(True)
       actionPan.setCheckable(True)
-      
+
       self.connect(actionZoomIn, SIGNAL("triggered()"), self.zoomIn)
       self.connect(actionZoomOut, SIGNAL("triggered()"), self.zoomOut)
       self.connect(actionPan, SIGNAL("triggered()"), self.pan)
@@ -149,7 +154,7 @@ are activated using :func:`setMapTool` method.
       self.toolZoomIn.setAction(actionZoomIn)
       self.toolZoomOut = QgsMapToolZoom(self.canvas, True) # true = out
       self.toolZoomOut.setAction(actionZoomOut)
-      
+
       self.pan()
 
     def zoomIn(self):
@@ -164,7 +169,9 @@ are activated using :func:`setMapTool` method.
 
 You can put the above code to a file, e.g. ``mywnd.py`` and try it out in
 Python console within QGIS.  This code will put the currently selected layer
-into newly created canvas::
+into newly created canvas
+
+::
 
   import mywnd
   w = mywnd.MyWnd(qgis.utils.iface.activeLayer())
@@ -188,13 +195,17 @@ there are two useful canvas item classes for convenience:
 coordinates, so the shape is moved/scaled automatically when the canvas is
 being panned or zoomed.
 
-To show a polyline::
+To show a polyline
+
+::
 
   r = QgsRubberBand(canvas, False)  # False = not a polygon
   points = [ QgsPoint(-1,-1), QgsPoint(0,1), QgsPoint(1,-1) ]
   r.setToGeometry(QgsGeometry.fromPolyline(points), None)
 
-To show a polygon::
+To show a polygon
+
+::
 
   r = QgsRubberBand(canvas, True)  # True = a polygon
   points = [ [ QgsPoint(-1,-1), QgsPoint(0,1), QgsPoint(1,-1) ] ]
@@ -205,14 +216,18 @@ rings containing linear rings of the polygon: first ring is the outer border,
 further (optional) rings correspond to holes in the polygon.
 
 Rubber bands allow some customization, namely to change their color and line
-width::
+width
+
+::
 
   r.setColor(QColor(0,0,255))
   r.setWidth(3)
 
 The canvas items are bound to the canvas scene. To temporarily hide them (and
 show again, use the :func:`hide` and :func:`show` combo. To completely remove
-the item, you have to remove it from the scene of the canvas::
+the item, you have to remove it from the scene of the canvas
+
+::
 
   canvas.scene().removeItem(r)
 
@@ -223,13 +238,17 @@ by the canvas)
 Rubber band can be also used for drawing points, however
 :class:`QgsVertexMarker` class is better suited for this
 (:class:`QgsRubberBand` would only draw a rectangle around the desired point).
-How to use the vertex marker::
+How to use the vertex marker
+
+::
 
   m = QgsVertexMarker(canvas)
   m.setCenter(QgsPoint(0,0))
 
 This will draw a red cross on position [0,0]. It is possible to customize the
-icon type, size, color and pen width::
+icon type, size, color and pen width
+
+::
 
   m.setColor(QColor(0,255,0))
   m.setIconSize(5)
@@ -244,11 +263,17 @@ applies as for the rubber bands.
 Writing Custom Map Tools
 ========================
 
-You can write your custom tools, to implement a custom behaviour to actions performed by users on the canvas.
+You can write your custom tools, to implement a custom behaviour to actions
+performed by users on the canvas.
 
-Map tools should inherit from the :class:`QgsMapTool` class or any derived class, and selected as active tools in the canvas using the :func:`setMapTool` method as we have already seen.
+Map tools should inherit from the :class:`QgsMapTool` class or any derived
+class, and selected as active tools in the canvas using the :func:`setMapTool`
+method as we have already seen.
 
-Here is an example of a map tool that allows to define a rectangular extent by clicking and dragging on the canvas. When the rectangle is defined, it prints its boundary coordinates in the console. It uses the rubber band elements described before to show the selected rectangle as it is being defined.
+Here is an example of a map tool that allows to define a rectangular extent by
+clicking and dragging on the canvas. When the rectangle is defined, it prints
+its boundary coordinates in the console. It uses the rubber band elements
+described before to show the selected rectangle as it is being defined.
 
 ::
 
@@ -277,7 +302,7 @@ Here is an example of a map tool that allows to define a rectangular extent by c
         r = self.rectangle()
         if r is not None:
           print "Rectangle:", r.xMin(), r.yMin(), r.xMax(), r.yMax()
-          
+
     def canvasMoveEvent(self, e):
         if not self.isEmittingPoint:
           return
@@ -295,17 +320,16 @@ Here is an example of a map tool that allows to define a rectangular extent by c
         point3 = QgsPoint(endPoint.x(), endPoint.y())
         point4 = QgsPoint(endPoint.x(), startPoint.y())
 
-        self.rubberBand.addPoint( point1, False )
-        self.rubberBand.addPoint( point2, False )
-        self.rubberBand.addPoint( point3, False )
-        self.rubberBand.addPoint( point4, True )    # true to update canvas
+        self.rubberBand.addPoint(point1, False)
+        self.rubberBand.addPoint(point2, False)
+        self.rubberBand.addPoint(point3, False)
+        self.rubberBand.addPoint(point4, True)    # true to update canvas
         self.rubberBand.show()
 
     def rectangle(self):
         if self.startPoint is None or self.endPoint is None:
           return None
-        elif self.startPoint.x() == self.endPoint.x() or self.startPoint.y() == \
-          self.endPoint.y():
+        elif self.startPoint.x() == self.endPoint.x() or self.startPoint.y() == self.endPoint.y():
           return None
 
         return QgsRectangle(self.startPoint, self.endPoint)
@@ -319,7 +343,8 @@ Here is an example of a map tool that allows to define a rectangular extent by c
 Writing Custom Map Canvas Items
 ===============================
 
-**TODO:** how to create a map canvas item
+**TODO:**
+   how to create a map canvas item
 
 
 

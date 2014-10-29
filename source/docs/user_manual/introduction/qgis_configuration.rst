@@ -77,6 +77,9 @@ options. These include:
   drawn when they do not have an existing :file:`.qml` style defined. You can
   also set the default transparency level for new layers and whether symbols
   should have random colours assigned to them.
+  There is also an additional section where you can define specific colors for the 
+  running project. You can find the added colors in the drop down menu of the color dialog
+  window present in each renderer.
 * The tab :guilabel:`OWS Server` allows you to define information about the |qg|
   Server WMS and WFS capabilities, extent and CRS restrictions.
 * The :guilabel:`Macros` menu is used to edit Python macros for projects. Currently,
@@ -108,7 +111,7 @@ Options
 options are described below.
 
 General Menu
------------
+-------------
 
 **Application**
 
@@ -238,23 +241,26 @@ Rendering Menu
 **Rendering behaviour**
 
 * |checkbox| :guilabel:`By default new layers added to the map should be displayed`
-* |checkbox| :guilabel:`Enable back buffer`
 * |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
- * |checkbox| :guilabel:`Enable feature simplication by default for newly added layers`
- * |checkbox| :guilabel:`Simplify on provider side if possible`
+* |checkbox| :guilabel:`Render layers in parallel using many CPU cores`
+* |checkbox| :guilabel:`Max cores to use`
+* :guilabel:`Map update interval (default to 250 ms)`
+* |checkbox| :guilabel:`Enable feature simplication by default for newly added layers`
+* :guilabel:`Simplification threshold`
+* |checkbox| :guilabel:`Simplify on provider side if possible`
+* :guilabel:`Maximum scale at which the layer should be simplified`
 
 **Rendering quality**
 
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some
   drawing performance`
-* |checkbox| :guilabel:`Fix problems with incorrectly filled polygons`
 
 **Rasters**
 
 * With :guilabel:`RGB band selection`, you can define the number for the Red,
   Green and Blue band.
 
-**Contrast enhancement**
+*Contrast enhancement*
 
 * :guilabel:`Single band gray` |selectstring|. A single band gray can have
   'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and also
@@ -271,6 +277,16 @@ Rendering Menu
 **Debugging**
 
 * |checkbox| :guilabel:`Map canvas refresh`
+
+Colors Menu
+------------
+
+This menu allows you to add some custom color that you can find in each color dialog 
+window of the renderes. You will see a set of predefined colors in the tab: you can 
+delete or edit all of them. Moreover you can add the color you want and perform some copy 
+and paste operation. Finally you can export the color set as a :file:`gpl` file or import
+them.
+
 
 Canvas and Legend Menu
 ----------------------
@@ -295,18 +311,16 @@ Canvas and Legend Menu
 Map tools Menu
 --------------
 
-**Identify**
-
-* |checkbox| :guilabel:`Open identify results in a dock window (QGIS restart required)`
-* The :guilabel:`Mode` setting determines which layers will be shown by the
-  Identify tool. By switching to 'Top down' or 'Top down, stop at first'
-  instead of 'Current layer', attributes for all identifiable layers will be
-  shown with the Identify tool. In |qg| 2.2. you can now use a 'Layer selection' option
-  so that you can choose with the left-mouse menu which layer you want to identify
-  (see the "Project properties" section under :ref:`sec_projects` to set which layers are identifiable).
-* |checkbox| :guilabel:`Open feature form, if a single feature is identified`
-* Define :guilabel:`Search radius for identifying and displaying map tips as a
-  percentage of the map width`
+This menu offers some options regarding the behaviour of the :guilabel:`Identify tool`.
+* :guilabel:`Search radius for identifying and displaying map tips` is a tolerance factor
+  expressed as a percentage of the map width. This means the identify tool will depict results
+  as long as you click within this tolerance.
+* :guilabel:`Highlight color` allows you to choose with which color should features being
+  identified are to be highlighted.
+* :guilabel:`Buffer` expressed as a percentage of the map width, determines a buffer distance
+  to be rendered from the outline of the identify highlight. 
+* :guilabel:`Minimum width` expressed as a percentage of the map width, determines how thick should
+  the outline of a highlighted object be.
 
 **Measure tool**
 

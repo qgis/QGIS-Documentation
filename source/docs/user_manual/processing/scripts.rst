@@ -57,7 +57,7 @@ their syntax and some examples.
 * ``string``. A text string. As in the case of numerical values, a default value
   must be added. For instance, ``name=string Victor``
 * ``longstring``. Same as string, but a larger text box will be shown, so it is 
-better suited for long strings, such as for a script expecting a small code snippet.
+  better suited for long strings, such as for a script expecting a small code snippet.
 * ``boolean``. A boolean value. Add ``True`` or ``False`` after it to set the
   default value. For example, ``verbose=boolean True``.
 * ``multiple raster``. A set of input raster layers.

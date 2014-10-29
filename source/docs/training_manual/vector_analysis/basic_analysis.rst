@@ -59,13 +59,13 @@ data from OSM using QGIS' built-in OSM download tool.
 
 * Start a new QGIS project.
 * Use the OpenStreetMap data download tool found in the :guilabel:`Vector` ->
-  :guilabel:`OpenStreeMap` menu to download the data for your chosen region.
+  :guilabel:`OpenStreetMap` menu to download the data for your chosen region.
 * Save the data as :kbd:`osm_data.osm` in your :kbd:`exercise_data` folder.
 
 * Note that the :guilabel:`osm` format is a type of vector data. Add this data as a vector
   layer as usually :guilabel:`Layer` -> :guilabel:`Add vector layer...`,
   browse to the new :kbd:`osm_data.osm` file you just downloaded. You may need to
- select :guilabel:`Show All Files` as the file format.
+  select :guilabel:`Show All Files` as the file format.
 * Select :kbd:`osm_data.osm` and click :guilabel:`Open`
 * In the dialog which opens, select all the layers, *except* the
   :kbd:`other_relations` and :kbd:`multilinestrings` layer:
@@ -106,10 +106,10 @@ Now we need to tell QGIS to only show us the polygons where the value of
 
 * Double-click the word :kbd:`amenity` in the :guilabel:`Fields` list.
 * Watch what happens in the :guilabel:`Provider specific filter expression`
-field below:
+  field below:
 
 .. image:: /static/training_manual/vector_analysis/schools_query.png
-     :align: center
+   :align: center
 
 The word :kbd:`"amenity"` has appeared. To build the rest of the query:
 
@@ -117,7 +117,7 @@ The word :kbd:`"amenity"` has appeared. To build the rest of the query:
 * Double-click the value :kbd:`school` in the :guilabel:`Values` list.
 * Click :kbd:`OK` twice.
 
-This will filter OSM's :kbd:`multipolygon` layer to only show the schools in
+This will filter OSM's :kbd:`multipolygons` layer to only show the schools in
 your region. You can now either:
 
 * Rename the filtered OSM layer to :kbd:`schools` and re-import the
@@ -193,7 +193,7 @@ The new shapefile will be created and the resulting layer added to your map.
 
 .. note:: If you don't have activated :guilabel:`Enable 'on the fly' CRS transformation`
     or the :guilabel:`Automatically enable 'on the fly' reprojection if layers have different CRS`
-    settings (see previous lesson), you might no be able to see the new layers you just added
+    settings (see previous lesson), you might not be able to see the new layers you just added
     to the map. In this case, you can focus the map on any of the layers by right
     click on any layer and click :guilabel:`Zoom to layer extent`, or just enable
     any of the mentioned 'on the fly' options.
@@ -369,7 +369,7 @@ of a restaurant.
 |basic| |FA| Select Buildings of the Right Size
 -------------------------------------------------------------------------------
 
-To see which buildings are the correct size (more than 100 square metres), we
+To see which buildings are the correct size (more than 100 square meters), we
 first need to calculate their size.
 
 * Open the attribute table for the :guilabel:`houses_restaurants_500m` layer.

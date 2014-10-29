@@ -1,14 +1,20 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.2.0-Valmiera">
+<qgis projectname="" version="2.5.0-Master">
     <title></title>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+        <customproperties/>
+        <layer-tree-layer expanded="0" checked="Qt::Checked" id="dem2520130804190835549" name="Dem25">
+            <customproperties/>
+        </layer-tree-layer>
+    </layer-tree-group>
     <relations/>
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>258082.86348005442414433</xmin>
-            <ymin>4450084.13536403328180313</ymin>
-            <xmax>282606.67654023034265265</xmax>
-            <ymax>4468218.25768192484974861</ymax>
+            <xmin>262470.90072500001406297</xmin>
+            <ymin>4453768.75</ymin>
+            <xmax>278247.15072500001406297</xmax>
+            <ymax>4464531.25</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -23,10 +29,18 @@
                 <geographicflag>false</geographicflag>
             </spatialrefsys>
         </destinationsrs>
-        <layer_coordinate_transform_info/>
+        <layer_coordinate_transform_info>
+            <layer_coordinate_transform destAuthId="EPSG:23030" srcAuthId="EPSG:23030" srcDatumTransform="-1" destDatumTransform="-1" layerid="dem2520130804190835549"/>
+        </layer_coordinate_transform_info>
     </mapcanvas>
-    <legend updateDrawingOrder="true" activeLayer="dem2520130804190835549">
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="dem25" showFeatureCount="0">
+    <visibility-presets/>
+    <layer-tree-canvas>
+        <custom-order enabled="0">
+            <item>dem2520130804190835549</item>
+        </custom-order>
+    </layer-tree-canvas>
+    <legend updateDrawingOrder="true">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Dem25" showFeatureCount="0">
             <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="dem2520130804190835549" visible="1"/>
             </filegroup>
@@ -58,6 +72,9 @@
                 <property key="identify/format" value="Value"/>
             </customproperties>
             <provider>gdal</provider>
+            <noData>
+                <noDataList bandNo="1" useSrcNoData="1"/>
+            </noData>
             <pipe>
                 <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
                     <rasterTransparency/>
@@ -76,6 +93,12 @@
     </projectlayers>
     <properties>
         <WMSContactPerson type="QString"></WMSContactPerson>
+        <SemiAutomaticClassificationPlugin>
+            <bandSetPresent type="QString">No</bandSetPresent>
+            <bndSetWvLn type="QString">[]</bndSetWvLn>
+            <bndSetUnit type="QString">band number</bndSetUnit>
+            <bandSet type="QString">[]</bandSet>
+        </SemiAutomaticClassificationPlugin>
         <WMSOnlineResource type="QString"></WMSOnlineResource>
         <WMSContactOrganization type="QString"></WMSContactOrganization>
         <WMSKeywordList type="QStringList">
@@ -121,6 +144,9 @@
             <pythonCode type="QString"></pythonCode>
         </Macros>
         <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+        <Legend>
+            <filterByMap type="bool">false</filterByMap>
+        </Legend>
         <SpatialRefSys>
             <ProjectCRSProj4String type="QString">+proj=utm +zone=30 +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
             <ProjectCrs type="QString">EPSG:4326</ProjectCrs>

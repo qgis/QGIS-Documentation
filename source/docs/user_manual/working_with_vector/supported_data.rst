@@ -4,21 +4,22 @@ Supported Data Formats
 ======================
 
 |qg| uses the OGR library to read and write vector data formats,
-including ESRI shapefiles, MapInfo and MicroStation file formats, AutoCAD DXF, PostGIS,
-SpatiaLite, Oracle Spatial and MSSQL Spatial databases, and many more. GRASS vector
-and PostgreSQL support is supplied by native |qg| data provider plugins. Vector data can also be loaded in read mode from zip and gzip archives into
-|qg|. As of the date of this document, 69 vector formats are supported by the OGR
-library (see OGR-SOFTWARE-SUITE in :ref:`literature_and_web`). The complete list
-is available at http://www.gdal.org/ogr/ogr_formats.html.
+including ESRI shapefiles, MapInfo and MicroStation file formats, AutoCAD DXF,
+PostGIS, SpatiaLite, Oracle Spatial and MSSQL Spatial databases, and many more.
+GRASS vector and PostgreSQL support is supplied by native |qg| data provider
+plugins. Vector data can also be loaded in read mode from zip and gzip archives
+into |qg|. As of the date of this document, 69 vector formats are supported by
+the OGR library (see OGR-SOFTWARE-SUITE in :ref:`literature_and_web`). The
+complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
 
 .. note::
 
    Not all of the listed formats may work in |qg| for various reasons. For
    example, some require external commercial libraries, or the GDAL/OGR
-   installation of your OS may not have been built to support the format you want to use.
-   Only those formats that have been well tested will appear in the list of
-   file types when loading a vector into |qg|. Other untested formats can be
-   loaded by selecting ``*.*``.
+   installation of your OS may not have been built to support the format you
+   want to use. Only those formats that have been well tested will appear in
+   the list of file types when loading a vector into |qg|. Other untested
+   formats can be loaded by selecting ``*.*``.
 
 Working with GRASS vector data is described in Section :ref:`sec_grass`.
 
@@ -51,6 +52,7 @@ further details, see the ESRI technical specification at
 http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 
 .. _vector_load_shapefile:
+
 Loading a Shapefile
 ...................
 
@@ -167,7 +169,7 @@ Loading a MapInfo Layer
 |mActionAddOgrLayer| To load a MapInfo layer, click on the |mActionAddOgrLayer|
 :sup:`Add Vector Layer` toolbar button; or type :kbd:`Ctrl+Shift+V`, change the
 file type filter :guilabel:`Files of type` |selectstring|: to
-'Mapinfo File [OGR] (*.mif *.tab *.MIF *.TAB)' and select the MapInfo layer you
+'Mapinfo File [OGR] (\*.mif \*.tab \*.MIF \*.TAB)' and select the MapInfo layer you
 want to load.
 
 .. index:: ArcInfo_Binary_Coverage, Tiger_Format, UK_National_Transfer_Format, US_Census_Bureau
@@ -238,6 +240,7 @@ Some items to note about the text file:
 #. The Y coordinates are contained in the ``Y`` field.
 
 .. _vector_loading_csv:
+
 Loading a delimited text file
 .............................
 
@@ -394,17 +397,6 @@ Optionally, you can activate the following checkboxes:
 Once all parameters and options are set, you can test the connection
 by clicking on the **[Test Connect]** button.
 
-.. _tip_settings_security:
-
-.. tip:: **QGIS User Settings and Security**
-
-   Depending on your computing environment, storing passwords in your |qg|
-   settings may be a security risk. Your customized settings for |qg| are
-   stored based on the operating system:
-
-   * |nix| The settings are stored in your home directory in :file:`~/.qgis2`.
-   * |win| The settings are stored in the registry.
-
 .. _vector_loading_postgis:
 
 Loading a PostGIS Layer
@@ -533,7 +525,7 @@ in PostGIS: **ogr2ogr**. This is part of your GDAL installation.
 To import a shapefile into PostGIS, do the following:
 ::
 
-  ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres 
+  ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres
   password=topsecret" alaska.shp
 
 This will import the shapefile :file:`alaska.shp` into the PostGIS database
@@ -782,12 +774,12 @@ clicking on the **[Test Connect]** button.
    system configuration and in the project files!
    Your customized settings for |qg| are stored based on the operating system:
 
-   * |nix| The settings are stored in your home directory in
-     :file:`.config/QGIS/QGIS2.conf`.
+   * |nix| The settings are stored in your home directory in :file:`~/.qgis2`.
    * |win| The settings are stored in the registry.
 
+
 Loading an Oracle Spatial Layer
-..............................
+................................
 
 |mActionAddOracleLayer| Once you have one or more connections defined, you can
 load layers from the Oracle database. Of course, this requires having data in

@@ -224,7 +224,15 @@ rst_epilog = """
    :width: 1.5em
 .. |color|  image:: /static/common/color.png
    :width: 1.5em
-.. |colormap|  image:: /static/common/colormap.png
+.. |colormap| image:: /static/common/colormap.png
+   :width: 1.5em
+.. |mIconColorBox| image:: /static/common/mIconColorBox.png
+   :width: 1.5em
+.. |mIconColorPicker| image:: /static/common/mIconColorPicker.png
+   :width: 1.5em
+.. |mIconColorSwatches| image:: /static/common/mIconColorSwatches.png
+   :width: 1.5em
+.. |mIconColorWheel| image:: /static/common/mIconColorWheel.png
    :width: 1.5em
 .. |columnview|  image:: /static/common/columnview.png
    :width: 1.5em
@@ -233,6 +241,8 @@ rst_epilog = """
 .. |commandlinkbutton|  image:: /static/common/commandlinkbutton.png
    :width: 1.5em
 .. |dateedit|  image:: /static/common/dateedit.png
+   :width: 1.5em
+.. |geometry| image:: /static/common/geometry.png
    :width: 1.5em
 .. |datetimeedit|  image:: /static/common/datetimeedit.png
    :width: 1.5em
@@ -620,6 +630,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionHideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
+.. |mActionShowPresets| image:: /static/common/mActionShowPresets.png
+   :width: 2.5em
 .. |mActionProjectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
 .. |mActionCustomProjection| image:: /static/common/mActionCustomProjection.png
@@ -1045,6 +1057,8 @@ rst_epilog = """
 .. |geRasterometry| image:: /static/common/geometry.png
    :width: 1.5em
 .. |geoprocessing| image:: /static/common/geoprocessing.png
+   :width: 1.5em
+.. |geometry| image:: /static/common/geometry.png
    :width: 1.5em
 .. |management| image:: /static/common/management.png
    :width: 1.5em

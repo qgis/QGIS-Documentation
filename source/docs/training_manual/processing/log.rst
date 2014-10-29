@@ -16,7 +16,7 @@ It contains four blocks of information: *Info*, *Error*, *Warnings* and *Algorit
 
 .. image:: img/log/log-saga.png
 
-This is helpful to understand what is going on. Advanced users will be able to analyze that output to find out why the algorithm failed. IF you are not an advanced user, this will be useful for others to help you diagnose the problem you are having, which might be a problem in the installation of the external software or an issue with the data you provided.
+This is helpful to understand what is going on. Advanced users will be able to analyze that output to find out why the algorithm failed. If you are not an advanced user, this will be useful for others to help you diagnose the problem you are having, which might be a problem in the installation of the external software or an issue with the data you provided.
 
 - *Warnings*. Even if the algorithm could be executed, some algorithms might leave warnings in case the result might not be right. For instance, when executing an interpolation algorithm with a very small amount of points. The algorithm can run and will produce a result, but it is likely that it will not be correct, since more points should be used. It's a good idea to regularly check for this type of warnings if you are not sure about some aspect of a given algorithm.
 

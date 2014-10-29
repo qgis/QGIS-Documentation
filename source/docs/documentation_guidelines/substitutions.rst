@@ -42,6 +42,7 @@ Icon                     Substitution               Icon                   Subst
 |radiobuttonon|          ``|radiobuttonon|``   	    |radiobuttonoff|       ``|radiobuttonoff|``
 |selectnumber|           ``|selectnumber|``         |selectstring|         ``|selectstring|``
 |browsebutton|           ``|browsebutton|``	    |slider|               ``|slider|``
+|mIconDataDefine|        ``|mIconDataDefine|``      \                      \ 
 =======================  =========================  =====================  =========================
 
 Words and symbols
@@ -51,7 +52,6 @@ Words and symbols
 Icon        Substitution
 ==========  ================
 |QG|        ``|QG|``
-|wedge|	    ``|wedge|``
 |degrees|   ``|degrees|``
 ==========  ================
 
@@ -87,7 +87,7 @@ Icon                            Substitution                        Icon        
 |mActionInOverview|		``|mActionInOverview|``  	    |mActionAddAllToOverview|	    ``|mActionAddAllToOverview|``
 |mActionRemoveAllFromOverview|	``|mActionRemoveAllFromOverview|``  |RemoveAllOVerview|             ``|RemoveAllOVerview|``
 |mActionShowAllLayers|		``|mActionShowAllLayers|``          |mActionHideAllLayers|	    ``|mActionHideAllLayers|``
-|mIconZip|  			``|mIconZip|`` 			    \ 		                    \ 
+|mActionShowPresets|            ``|mActionShowPresets|``            |mIconZip|                      ``|mIconZip|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -173,6 +173,16 @@ Icon                            Substitution                        Icon        
 |mActionHelpContents|		``|mActionHelpContents|``           |mActionQgisHomePage|           ``|mActionQgisHomePage|``
 |mActionCheckQgisVersion|	``|mActionCheckQgisVersion|``	    |mActionHelpAbout|              ``|mActionHelpAbout|``
 |mActionHelpSponsors|		``|mActionHelpSponsors|``           |mActionContextHelp|            ``|mActionContextHelp|``
+==============================  ==================================  ==============================  ==================================
+
+Colors
+....
+
+==============================  ==================================  ==============================  ==================================
+Icon                            Substitution                        Icon                            Substitution
+==============================  ==================================  ==============================  ==================================
+|mIconColorBox|		        ``|mIconColorBox|``                 |mIconColorPicker|              ``|mIconColorPicker|``
+|mIconColorSwatches|	        ``|mIconColorSwatches|``	    |mIconColorWheel|               ``|mIconColorWheel|``
 ==============================  ==================================  ==============================  ==================================
 
 

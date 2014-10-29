@@ -36,10 +36,10 @@ A note for Windows users
 
 If you are not an advanced user and you are running |qg| on Windows, you might
 not be interested in reading the rest of this chapter. Make sure you install
-|qg| in your system using the OSGeo4W application. That will automatically
+|qg| in your system using the standalone installer. That will automatically
 install SAGA, GRASS and OTB in your system and configure them so they can be
 run from |qg|. All the algorithms in the simplified view of the toolbox will
-be ready to be run without needing any further configuration.
+be ready to be run without needing any further configuration. If installing through OSGeo4W application, make sure you select for insttallation SAGA and OTB as well.
 
 If you want to know more about how these providers work, or if you want to use some
 algorithms not included in the simplified toolbox (such as R scripts), keep on
@@ -171,7 +171,7 @@ RGB image' algorithm (which creates three images from an RGB image) or the 'SAGA
 algorithm (to extract a single band).
 
 Limitations in cell size
-.......................
+.........................
 
 SAGA assumes that raster layers have the same cell size in the X and Y axis. If
 you are working with a layer with different values for horizontal and vertical
