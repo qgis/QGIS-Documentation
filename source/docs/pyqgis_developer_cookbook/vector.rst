@@ -108,9 +108,9 @@ iterator returns all features, but return partial data for each of them.
 ::
 
   # Only return selected fields
-  request.setSubsetOfFields([0,2])
+  request.setSubsetOfAttributes([0,2])
   # More user friendly version
-  request.setSubsetOfFields(['name','id'],layer.fields())
+  request.setSubsetOfAttributes(['name','id'],layer.pendingFields())
   # Don't return geometry objects
   request.setFlags(QgsFeatureRequest.NoGeometry)
 
