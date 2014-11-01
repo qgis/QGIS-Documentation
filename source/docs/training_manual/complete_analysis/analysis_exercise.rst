@@ -658,7 +658,7 @@ Calculating the area for each polygon
 * Under the :guilabel:`New field` heading in the dialog that appears, enter the
   field name :kbd:`area`. The output field type should be an integer, and the
   field width should be :kbd:`10`.
-* In :guilabel:`Field calculator expresion`, type:
+* In :guilabel:`Field calculator expression`, type:
 
   ::
   
@@ -670,7 +670,7 @@ Calculating the area for each polygon
 
 * Click :guilabel:`OK`.
 * Do the same thing for another new field called :guilabel:`id`. In
-  :guilabel:`Field calculator expresion`, type:
+  :guilabel:`Field calculator expression`, type:
 
   ::
   
