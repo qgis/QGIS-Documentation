@@ -79,7 +79,7 @@ to choose from.
 
 * Click the :guilabel:`Change` button. You will see a standard
   :guilabel:`Coordinate Reference System Selector` dialog.
-* We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Psuedo
+* We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo
   Mercator`.
 
   .. image:: /static/training_manual/online_resources/pseudo_mercator_selected.png
