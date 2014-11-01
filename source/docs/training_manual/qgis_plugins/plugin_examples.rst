@@ -67,7 +67,7 @@ it creates this effect using only one layer.
 * Zoom in over the |majorUrbanName| area.
 * Using the :guilabel:`Plugin Manager`, find a new plugin by entering the word
   :kbd:`OpenLayers` in the :guilabel:`Filter` field.
-* Select the OpenLayers Layers plugin from the filtered list:
+* Select the OpenLayers plugin from the filtered list:
 
   .. image:: /static/training_manual/qgis_plugins/select_openlayers.png
      :align: center
