@@ -31,7 +31,7 @@ set to the whole extent of South Africa, as you set it up before.
 
   |grass_region_edit|
 
-When this tool is activated, your cursor will turn into a cross whe over the
+When this tool is activated, your cursor will turn into a cross when over the
 QGIS map canvas.
 
 * Using this tool, click and drag a rectangle around the edges of the GRASS
