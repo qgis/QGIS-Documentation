@@ -69,7 +69,7 @@ Differences from WMS layers
 ...............................................................................
 
 A Web Feature Service returns the layer itself, not just a map rendered from
-it. This gives you direct access to the data, meaning that you can change ts
+it. This gives you direct access to the data, meaning that you can change its
 symbology and run analysis functions on it. However, this is at the cost of
 much more data being transmitted. This will be especially obvious if the layers
 you're loading have complicated shapes, a lot of attributes, or many features;
