@@ -122,7 +122,7 @@ Create the raster backdrop
 Finalize the base map
 -------------------------------------------------------------------------------
 
-* Using the resources you above, create a base map using some or all of the
+* Using the resources above, create a base map using some or all of the
   layers. This map should include all the basic information needed to orient
   the user, as well as being visually unified / "simple".
 
@@ -150,6 +150,6 @@ Final Map
 * Use the :guilabel:`Map Composer` to create a final map, which incorporates
   your analysis results.
 * Include this map in a document along with your documented criteria. If the
-  map has become too vsually busy due to the added layer(s), deselect the
+  map has become too visually busy due to the added layer(s), deselect the
   layers which you feel are the least necessary.
 * Your map must include a title and a legend.
