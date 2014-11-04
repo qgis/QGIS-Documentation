@@ -1,44 +1,44 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.5.0-Master">
+<qgis projectname="" version="2.6.0-Brighton">
     <title></title>
     <layer-tree-group expanded="1" checked="Qt::Checked" name="">
         <customproperties/>
-        <layer-tree-layer expanded="0" checked="Qt::Checked" id="accflow20130721085906002" name="Accflow">
+        <layer-tree-layer expanded="0" checked="Qt::Checked" id="accflow20130721085906002" name="accflow">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="0" checked="Qt::Checked" id="dem2520130721085906257" name="Dem25">
+        <layer-tree-layer expanded="0" checked="Qt::Checked" id="dem2520130721085906257" name="dem25">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="0" checked="Qt::Checked" id="slope_tif20130721085950674" name="Slope.tif">
+        <layer-tree-layer expanded="0" checked="Qt::Checked" id="slope_tif20130721085950674" name="slope.tif">
             <customproperties/>
         </layer-tree-layer>
     </layer-tree-group>
     <relations/>
     <mapcanvas>
-        <units>degrees</units>
+        <units>meters</units>
         <extent>
-            <xmin>-5.80808237965260865</xmin>
-            <ymin>40.17036699999999882</ymin>
-            <xmax>-5.59429362034739164</xmax>
-            <ymax>40.32845300000000321</ymax>
+            <xmin>262470.90072500001406297</xmin>
+            <ymin>4453768.75</ymin>
+            <xmax>278247.15072500001406297</xmax>
+            <ymax>4464531.25</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
             <spatialrefsys>
-                <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-                <srsid>3452</srsid>
-                <srid>4326</srid>
-                <authid>EPSG:4326</authid>
-                <description>WGS 84</description>
-                <projectionacronym>longlat</projectionacronym>
-                <ellipsoidacronym>WGS84</ellipsoidacronym>
-                <geographicflag>true</geographicflag>
+                <proj4>+proj=utm +zone=30 +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +units=m +no_defs</proj4>
+                <srsid>1976</srsid>
+                <srid>23030</srid>
+                <authid>EPSG:23030</authid>
+                <description>ED50 / UTM zone 30N</description>
+                <projectionacronym>utm</projectionacronym>
+                <ellipsoidacronym>intl</ellipsoidacronym>
+                <geographicflag>false</geographicflag>
             </spatialrefsys>
         </destinationsrs>
         <layer_coordinate_transform_info>
-            <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:23030" srcDatumTransform="-1" destDatumTransform="-1" layerid="dem2520130721085906257"/>
-            <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:23030" srcDatumTransform="-1" destDatumTransform="-1" layerid="accflow20130721085906002"/>
-            <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:23030" srcDatumTransform="-1" destDatumTransform="-1" layerid="slope_tif20130721085950674"/>
+            <layer_coordinate_transform destAuthId="EPSG:23030" srcAuthId="EPSG:23030" srcDatumTransform="-1" destDatumTransform="-1" layerid="dem2520130721085906257"/>
+            <layer_coordinate_transform destAuthId="EPSG:23030" srcAuthId="EPSG:23030" srcDatumTransform="-1" destDatumTransform="-1" layerid="accflow20130721085906002"/>
+            <layer_coordinate_transform destAuthId="EPSG:23030" srcAuthId="EPSG:23030" srcDatumTransform="-1" destDatumTransform="-1" layerid="slope_tif20130721085950674"/>
         </layer_coordinate_transform_info>
     </mapcanvas>
     <visibility-presets/>
@@ -50,17 +50,17 @@
         </custom-order>
     </layer-tree-canvas>
     <legend updateDrawingOrder="true">
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Accflow" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="accflow" showFeatureCount="0">
             <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="accflow20130721085906002" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Dem25" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="dem25" showFeatureCount="0">
             <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="dem2520130721085906257" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Slope.tif" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="slope.tif" showFeatureCount="0">
             <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="slope_tif20130721085950674" visible="1"/>
             </filegroup>
@@ -204,13 +204,39 @@
             <bndSetUnit type="QString">band number</bndSetUnit>
             <bandSet type="QString">[]</bandSet>
         </SemiAutomaticClassificationPlugin>
-        <SpatialRefSys>
-            <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
-            <ProjectCRSID type="int">3452</ProjectCRSID>
-        </SpatialRefSys>
+        <WMSContactPerson type="QString"></WMSContactPerson>
+        <WMSOnlineResource type="QString"></WMSOnlineResource>
+        <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
+        <WMSContactOrganization type="QString"></WMSContactOrganization>
+        <WMSKeywordList type="QStringList">
+            <value></value>
+        </WMSKeywordList>
+        <WFSUrl type="QString"></WFSUrl>
         <Paths>
             <Absolute type="bool">false</Absolute>
         </Paths>
+        <WMSServiceTitle type="QString"></WMSServiceTitle>
+        <WFSLayers type="QStringList"/>
+        <WMSContactMail type="QString"></WMSContactMail>
+        <PositionPrecision>
+            <DecimalPlaces type="int">2</DecimalPlaces>
+            <Automatic type="bool">true</Automatic>
+            <DegreeFormat type="QString">D</DegreeFormat>
+        </PositionPrecision>
+        <WCSUrl type="QString"></WCSUrl>
+        <WMSContactPhone type="QString"></WMSContactPhone>
+        <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+        <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+        <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+        <Measure>
+            <Ellipsoid type="QString">intl</Ellipsoid>
+        </Measure>
+        <WMSPrecision type="QString">8</WMSPrecision>
+        <WFSTLayers>
+            <Insert type="QStringList"/>
+            <Update type="QStringList"/>
+            <Delete type="QStringList"/>
+        </WFSTLayers>
         <Gui>
             <SelectionColorBluePart type="int">0</SelectionColorBluePart>
             <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
@@ -220,12 +246,32 @@
             <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
             <CanvasColorBluePart type="int">255</CanvasColorBluePart>
         </Gui>
-        <PositionPrecision>
-            <DecimalPlaces type="int">2</DecimalPlaces>
-            <Automatic type="bool">true</Automatic>
-        </PositionPrecision>
+        <Identify>
+            <disabledLayers type="QStringList"/>
+        </Identify>
+        <Macros>
+            <pythonCode type="QString"></pythonCode>
+        </Macros>
+        <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+        <WCSLayers type="QStringList"/>
         <Legend>
             <filterByMap type="bool">false</filterByMap>
         </Legend>
+        <SpatialRefSys>
+            <ProjectCRSProj4String type="QString">+proj=utm +zone=30 +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
+            <ProjectCrs type="QString">EPSG:23030</ProjectCrs>
+            <ProjectCRSID type="int">1976</ProjectCRSID>
+        </SpatialRefSys>
+        <DefaultStyles>
+            <Fill type="QString"></Fill>
+            <Line type="QString"></Line>
+            <Marker type="QString"></Marker>
+            <RandomColors type="bool">true</RandomColors>
+            <AlphaInt type="int">255</AlphaInt>
+            <ColorRamp type="QString"></ColorRamp>
+        </DefaultStyles>
+        <WMSFees type="QString"></WMSFees>
+        <WMSImageQuality type="int">90</WMSImageQuality>
+        <WMSUrl type="QString"></WMSUrl>
     </properties>
 </qgis>

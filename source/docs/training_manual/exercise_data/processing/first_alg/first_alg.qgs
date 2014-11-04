@@ -1,14 +1,20 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.2.0-Valmiera">
+<qgis projectname="" version="2.6.0-Brighton">
     <title></title>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+        <customproperties/>
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="polygons20130714191657431" name="polygons">
+            <customproperties/>
+        </layer-tree-layer>
+    </layer-tree-group>
     <relations/>
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>270713.73913756984984502</xmin>
-            <ymin>4458872.89317180216312408</ymin>
-            <xmax>270916.54501143016386777</xmax>
-            <ymax>4459022.85788219794631004</ymax>
+            <xmin>270757.08364415192045271</xmin>
+            <ymin>4458899.9912616079673171</ymin>
+            <xmax>270873.20050473557785153</xmax>
+            <ymax>4458995.75979178491979837</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -25,7 +31,13 @@
         </destinationsrs>
         <layer_coordinate_transform_info/>
     </mapcanvas>
-    <legend updateDrawingOrder="true" activeLayer="polygons20130714191657431">
+    <visibility-presets/>
+    <layer-tree-canvas>
+        <custom-order enabled="0">
+            <item>polygons20130714191657431</item>
+        </custom-order>
+    </layer-tree-canvas>
+    <legend updateDrawingOrder="true">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="polygons" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="polygons20130714191657431" visible="1"/>
@@ -57,18 +69,33 @@
             <provider encoding="System">ogr</provider>
             <previewExpression></previewExpression>
             <vectorjoins/>
+            <expressionfields/>
+            <edittypes>
+                <edittype widgetv2type="TextEdit" name="ID">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="POLY_NUM_A">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="POLY_ST_A">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+            </edittypes>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
                     <symbol alpha="1" type="fill" name="0">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="border_width_unit" v="MM"/>
+                            <prop k="border_width_map_unit_scale" v="0,0"/>
                             <prop k="color" v="147,188,33,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0,0"/>
+                            <prop k="offset_map_unit_scale" v="0,0"/>
                             <prop k="offset_unit" v="MM"/>
+                            <prop k="outline_color" v="0,0,0,255"/>
+                            <prop k="outline_style" v="solid"/>
+                            <prop k="outline_width" v="0.26"/>
+                            <prop k="outline_width_unit" v="MM"/>
                             <prop k="style" v="solid"/>
-                            <prop k="style_border" v="solid"/>
-                            <prop k="width_border" v="0.26"/>
                         </layer>
                     </symbol>
                 </symbols>
@@ -109,9 +136,26 @@
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
             <attributeactions/>
+            <edittypes>
+                <edittype widgetv2type="TextEdit" name="ID">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="POLY_NUM_A">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype widgetv2type="TextEdit" name="POLY_ST_A">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+            </edittypes>
         </maplayer>
     </projectlayers>
     <properties>
+        <SemiAutomaticClassificationPlugin>
+            <bandSetPresent type="QString">No</bandSetPresent>
+            <bndSetWvLn type="QString">[]</bndSetWvLn>
+            <bndSetUnit type="QString">band number</bndSetUnit>
+            <bandSet type="QString">[]</bandSet>
+        </SemiAutomaticClassificationPlugin>
         <SpatialRefSys>
             <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
             <ProjectCRSID type="int">1976</ProjectCRSID>
@@ -133,5 +177,8 @@
             <DecimalPlaces type="int">2</DecimalPlaces>
             <Automatic type="bool">true</Automatic>
         </PositionPrecision>
+        <Legend>
+            <filterByMap type="bool">false</filterByMap>
+        </Legend>
     </properties>
 </qgis>

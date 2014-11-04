@@ -1,9 +1,9 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.5.0-Master">
+<qgis projectname="" version="2.6.0-Brighton">
     <title></title>
     <layer-tree-group expanded="1" checked="Qt::Checked" name="">
         <customproperties/>
-        <layer-tree-layer expanded="0" checked="Qt::Checked" id="dem20140417180359628" name="Dem">
+        <layer-tree-layer expanded="0" checked="Qt::Checked" id="dem20140417180359628" name="dem">
             <customproperties/>
         </layer-tree-layer>
     </layer-tree-group>
@@ -41,7 +41,7 @@
         </custom-order>
     </layer-tree-canvas>
     <legend updateDrawingOrder="true">
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Dem" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="dem" showFeatureCount="0">
             <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="dem20140417180359628" visible="1"/>
             </filegroup>
@@ -78,7 +78,11 @@
             </noData>
             <pipe>
                 <rasterrenderer opacity="1" alphaBand="0" classificationMax="624" classificationMinMaxOrigin="MinMaxFullExtentEstimated" band="1" classificationMin="27" type="singlebandpseudocolor">
-                    <rasterTransparency/>
+                    <rasterTransparency>
+                        <singleValuePixelList>
+                            <pixelListEntry min="0" max="27" percentTransparent="100"/>
+                        </singleValuePixelList>
+                    </rasterTransparency>
                     <rastershader>
                         <colorrampshader colorRampType="INTERPOLATED" clip="0">
                             <item alpha="255" value="27" label="27.000000" color="#54e597"/>
