@@ -640,12 +640,14 @@ You can select one of the following modes:
 
 * Zoom: Enlarges the image to the frame while maintaining aspect ratio of picture.
 * Stretch: Stretches image to fit inside the frame, ignores aspect ratio. 
-* Clip: Stretches image to fit frame, ignores aspect ratio. 
+* Clip: Use this mode for raster images only, it sets the size of the image to original image size 
+  without scaling and the frame is used to clip the image, so only the part of the image inside the
+  frame is visible. 
 * Zoom and resize frame: Enlarges image to fit frame, then resizes frame to fit resultant image.
 * Resize frame to image size: Sets size of frame to match original size of image without scaling. 
 
 Selected resize mode can disable the item options 'Placement' and 'Image rotation'. 
-The :guilabel:`Image rotation` is only active for the resize mode 'Zoom'.
+The :guilabel:`Image rotation` is active for the resize mode 'Zoom' and 'Clip'.
 
 With :guilabel:`Placement` you can select the position of the image inside it's frame.  
 The **Search directories** area allows you to add and remove directories with images in SVG format 
@@ -1091,9 +1093,35 @@ tab provide the following functionalities  (see figure_composer_table_2_):
 
    Attribute table Main properties Dialog |nix|
 
-The :guilabel:`Table` dialog allows you to select the vector layer and columns of the attribute table. 
-Attribute columns can be sorted, and you can specify whether to show values in ascending or descending 
-order (see figure_composer_table_3_).
+* For :guilabel:`Source` you can normally select only 'Layer features'. 
+* With :guilabel:`Layer` you can choose from the vector layers loaded in the project.
+* The button **[Refresh table data]** can be used to refresh the table when the actual 
+  contents of the table has changed.
+* The button **[Attributes...]** starts the :guilabel:`Select attributes` menu, see 
+  figure_composer_table_3_, that can be used to change the visible contents of the table.
+  After making changes use the **[OK]** button to apply changes to the table.
+
+  In the :guilabel:`Columns` section you can:
+  
+  * Remove an attribute, just select an attribute row by clicking anywhere in a row and press
+    the minus button to remove the selected attribute. 
+  * Add a new attribute use the plus button. At the end a new empty row appears and you can 
+    select empty cell of the column :guilabel:`Attribute`. You can select a field attribute from 
+    the list or you can select to build a new attribute using a regular expression.
+  * Use the up and down arrows to change the order of the attributes in the table.
+  * Select a cel in the Headings column to change the Heading, just type a new name.
+  * Select a cel in the Alignment column and you can choose between Left, Center or Right alignment.
+  * Select a cel in the Width column and you can change it from Automatic to a width in mm, just 
+    type a number. When you want to change it back to Automatic, use the cross.
+  * The **[Reset]** button can allways be used to restore it to the original attribute settings.
+
+  In the :guilabel:`Sorting` section you can:
+
+  * Add an attribute to sort the table with. Select an attribute and set the sorting order to 'Ascending' 
+    or 'Descending' and press the plus button. A new line is added to the sort order list.
+  * select a row in the list and use the up and down button to change the sort priority on attribute level.
+  * use the minus button to remove an attribute from the sort order list.
+
 
 .. _Figure_composer_table_3:
 
@@ -1124,10 +1152,13 @@ tab provide the following functionalities  (see figure_composer_table_4_):
 
    Attribute table Feature filtering Dialog |nix|
 
-You can define the :guilabel:`Maximum number of rows` to be displayed.
+You can: 
 
-You can choose to display the attributes of only features visible on a map. Check |checkbox| 
-:guilabel:`Show only visible features` and select the corresponding :guilabel:`Composer map` to filter.
+* define the :guilabel:`Maximum rows` to be displayed.
+* Check |checkbox| :guilabel:`Remove duplicate rows from table` to show unique records only 
+* Check |checkbox| :guilabel:`Show only visible features within a map` and select the 
+  corresponding :guilabel:`Composer map` to display the attributes of features only visible 
+  on selected map. 
 
 
 Appearance
