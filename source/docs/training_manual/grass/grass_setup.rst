@@ -114,7 +114,7 @@ vectors already loaded into QGIS.
 * When it's done, click the :guilabel:`View output` button to see the newly
   imported GRASS layer in the map.
 * Close first the import tool (click the :guilabel:`Close` button to the
-  immediate right of :guilabel:`View output`), then close the :guilabel:`GDAL
+  immediate right of :guilabel:`View output`), then close the :guilabel:`GRASS
   Tools` window.
 * Remove the original :guilabel:`roads` layer.
 
