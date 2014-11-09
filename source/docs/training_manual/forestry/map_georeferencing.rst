@@ -31,7 +31,7 @@ You will use the georeferencing plugin from QGIS, the plugin is already installe
 To georeference the map:
 
 * Open the georeference tool, :menuselection:`Raster --> Georeferencer --> Georeferencer`.
-* Add the the map image file, :kbd:`rautjarvi_map.tif`, as the image to georeferenciate, :menuselection:`File --> Open raster`.
+* Add the map image file, :kbd:`rautjarvi_map.tif`, as the image to georeferenciate, :menuselection:`File --> Open raster`.
 * When prompted find and select the :kbd:`KKJ / Finland zone 2` CRS, it is the CRS that was used in Finland back in 1994 when this map was created.
 * Click :guilabel:`OK`.
 
@@ -48,7 +48,7 @@ Next you should define the transformation settings for georeferencing the map:
    
 The map contains several cross-hairs marking the coordinates in the map, we will use those to georeferenciate this image. You can use the zooming and panning tools as you usually do in QGIS to inspect the image in the Georeferencer's window.
 
-* Zoom in to the left lower corner of the map and note that there is a cross-hair with a coordinate pair, x and y, that as mentioned before are in :kbd:`KKJ / Finland zone 2` CRS.You will use this point as the first ground control point for the georeferencing your map.
+* Zoom in to the left lower corner of the map and note that there is a cross-hair with a coordinate pair, x and y, that as mentioned before are in :kbd:`KKJ / Finland zone 2` CRS. You will use this point as the first ground control point for the georeferencing your map.
 * Select the :guilabel:`Add point` tool and click in the intersection of the cross-hairs (pan and zoom as needed).
 * In the :guilabel:`Enter map coordinates` dialogue write the coordinates that appear in the map (X: 2557000 and Y: 6786000).
 * Click :guilabel:`OK`.
@@ -57,7 +57,7 @@ The first coordinate for the georeferencing is now ready.
 
 Look for other cross-hairs in the black lines image, they are separated 1000 meters from each other both in North and East direction. You should be able to calculate the coordinates of those points in relation to the first one.
 
-Zoom out in the image and move to the right until you find other cross-hair, and estimate how many kilometres you have moved. Try to get ground control points as far from each other as possible. Digitize at least three more ground control points in the same way you did the first one. You should en up with something similar to this:
+Zoom out in the image and move to the right until you find other cross-hair, and estimate how many kilometres you have moved. Try to get ground control points as far from each other as possible. Digitize at least three more ground control points in the same way you did the first one. You should end up with something similar to this:
 
 .. image:: /static/training_manual/forestry/Clipboard09.png
    :align: center
@@ -67,7 +67,7 @@ With already three digitized ground control points you will be able to see the g
 Once you are happy with your control points save your ground control points, in case that you will need them later, and you will:
 
 * :menuselection:`File --> Save GCP points as...`.
-* In the folder :kbd:`exercise_data\forestry\digitizing`, name the file :kbd:`rautjarvi_map.tif.points`.
+* In the folder :kbd:`exercise_data\\forestry\\digitizing`, name the file :kbd:`rautjarvi_map.tif.points`.
 
 Finally, georeference you map:
 
@@ -76,7 +76,7 @@ Finally, georeference you map:
 
 Now you can see the map in QGIS project as a georeferenced raster. Note that the raster seems to be slightly rotated, but that is simply because the data is :kbd:`KKJ / Finland zone 2` and your project is in :kbd:`ETRS89 / ETRS-TM35FIN`.
 
-To check that your data is properly georeferenced you can open the aerial image in the :kbd:`exercise_data\forestry` folder, named :kbd:`rautjarvi_aerial.tif`. Your map and this image should match quite well. Set the map transparency to 50% and compare it to the aerial image.
+To check that your data is properly georeferenced you can open the aerial image in the :kbd:`exercise_data\\forestry` folder, named :kbd:`rautjarvi_aerial.tif`. Your map and this image should match quite well. Set the map transparency to 50% and compare it to the aerial image.
 
 .. image:: /static/training_manual/forestry/Clipboard14.png
    :align: center
