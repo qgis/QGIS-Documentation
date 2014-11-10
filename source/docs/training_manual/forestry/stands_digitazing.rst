@@ -22,7 +22,7 @@ The first step will be to use GIMP to obtain an image that contains only the for
 .. image:: /static/training_manual/forestry/gimp_map.png
    :align: center
 
-Now you can select the pixels in the image that are making up the forest stands' borders(the greenish pixels):
+Now you can select the pixels in the image that are making up the forest stands' borders (the greenish pixels):
 
 * Open the tool :menuselection:`Select --> By color`.
 * With the tool active, zoom into the image (:guilabel:`Ctrl + mouse wheel`) so that a forest stand line is close enough to differentiate the pixels forming the line. See the left image below.
@@ -30,7 +30,7 @@ Now you can select the pixels in the image that are making up the forest stands'
 * Release the mouse click and wait a few seconds. The pixels matching the colors collected by the tool will be selected through the whole image.
 * Zoom out to see how the greenish pixels have been selected throughout the image.
 * If you are not happy with the result, repeat the click and drag operation.
-* You pixel selection should look something like the right image below.
+* Your pixel selection should look something like the right image below.
 
 .. image:: /static/training_manual/forestry/green_px_selected.png
    :align: center
@@ -58,7 +58,7 @@ Note that you don't need to digitize the ground control points any more because 
 
 * This image is also, of course, in :kbd:`KKJ / Finland zone 2` CRS.
 * You should use the ground control points you saved, :menuselection:`File --> Load GCP points`.
-* Temember to review the :guilabel:`Transformation settings`.
+* Remember to review the :guilabel:`Transformation settings`.
 * Name the output raster as :kbd:`rautjarvi_green_georef.tif` in the :kbd:`digitizing` folder.
 
 Check that the new raster is fitting nicely with the original map.
@@ -67,7 +67,7 @@ Check that the new raster is fitting nicely with the original map.
 |basic| |FA| Creating Supporting Points for Digitizing
 -------------------------------------------------------------------------------
 
-Having in mind the digitizing tools in QGIS, you might already be thinking that it would be helpful to snap to those green pixels while digitizing. That is precisely what you are going to do next create points from those pixels to use them later to help you follow the the forest stands' borders when digitizing, by using the snapping tools available in QGIS.
+Having in mind the digitizing tools in QGIS, you might already be thinking that it would be helpful to snap to those green pixels while digitizing. That is precisely what you are going to do next create points from those pixels to use them later to help you follow the forest stands' borders when digitizing, by using the snapping tools available in QGIS.
 
 * Use the :menuselection:`Raster --> Conversion --> Polygonize (Raster to Vector)` tool to vectorize your green lines to polygons. If you don't remember how, you can review it in :doc:`../complete_analysis/raster_to_vector`.
 * Save as :kbd:`rautjarvi_green_polygon.shp` inside the :kbd:`digitizing` folder.
@@ -80,7 +80,7 @@ Zoom in and see what the polygons look like. You will get something like this:
 Next one option to get points out of those polygons is to get their centroids:
 
 * Open :menuselection:`Vector --> Geometry tools --> Polygon centroids`.
-* Set your the polygon layer you just got as the input file for the tool.
+* Set the polygon layer you just got as the input file for the tool.
 * Name the output as :kbd:`green_centroids.shp` inside the :kbd:`digitizing` folder.
 * Check :menuselection:`Add result to canvas`.
 * Run the tool to calculate the centroids for the polygons.
@@ -163,11 +163,11 @@ Your digitized polygon will look like this:
 .. image:: /static/training_manual/forestry/dgitizing_357_3.png
    :align: center
 
-Now for the second polygon, pick up the stand number 358. Make sure that the :guilabel:`Avoid int.` is checked for the :kbd:`forest_stands` layer. This option does not allow intersecting polygons at digitizing, so that if you digitize  over an existing polygon, the new polygon will be trimmed to meet the border of the already existing polygon/s. You can use this characteristic to automatically obtain a common border.
+Now for the second polygon, pick up the stand number 358. Make sure that the :guilabel:`Avoid int.` is checked for the :kbd:`forest_stands` layer. This option does not allow intersecting polygons at digitizing, so that if you digitize  over an existing polygon, the new polygon will be trimmed to meet the border of the already existing polygons. You can use this characteristic to automatically obtain a common border.
 
 * Begin digitizing the stand 358 at one of the common corners with the stand 357. 
 * Then continue normally until you get to the other common corner for both stands.
-* Finally, digitize a few points inside polygon 358 making sure that the common border is not intersected. See left image below.
+* Finally, digitize a few points inside polygon 357 making sure that the common border is not intersected. See left image below.
 * Right click to finish editing the forest stand 358.
 * Enter the :kbd:`id` as 358.
 * Click :guilabel:`OK`, your new polygon should show a common border with the stand 357 as you can seen in the image on the right.
@@ -199,7 +199,7 @@ Your result will look like this:
 
 It is possible that the forest inventory data you have for you map is also written in paper. In that case, you would have to first write that data to a text file or a spreadsheet. For this exercise, the information from the inventory for 1994 (the same inventory as the map) is ready as a comma separated text (csv) file.
 
-Open the :kbd:`rautjarvi_1994.csv` file from the :kbd:`exercise_data\\forestry` in a text editor and note that the inventory data file has an attribute called :kbd:`ID` that has the numbers of the forest stands. Those numbers are the same as the forest stands ids you have entered for your polygons and can be used to link the data from the text file to your vector file. You can see the metadata for this inventory data in the file :kbd:`rautjarvi_1994_legend.txt` in the same folder.
+Open the :kbd:`rautjarvi_1994.csv` file from the :kbd:`exercise_data\\forestry` directory in a text editor and note that the inventory data file has an attribute called :kbd:`ID` that has the numbers of the forest stands. Those numbers are the same as the forest stands ids you have entered for your polygons and can be used to link the data from the text file to your vector file. You can see the metadata for this inventory data in the file :kbd:`rautjarvi_1994_legend.txt` in the same folder.
 
 * Open the :kbd:`.csv` in QGIS with the :menuselection:`Layer --> Add Delimited Text Layer...` tool. In the dialog, set it as follows:
 
@@ -227,7 +227,7 @@ Open your new :kbd:`forest_stands_1994.shp` in your map if you did not added yet
 * Add the plugin :guilabel:`Table Manager` as you have done with other plugins before.
 * Make sure the plugin is activated.
 * In the TOC select the layer :kbd:`forest_stands_1994.shp`.
-* Then, go to :menuselection:`Vector --> Table Manger --> Table manager`.
+* Then, go to :menuselection:`Vector --> Table Manager --> Table manager`.
 * Use the dialogue box to edit the names of the columns to match the ones in the :kbd:`.csv` file.
 
 .. image:: /static/training_manual/forestry/forestry_table_manager.png
