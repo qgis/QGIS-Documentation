@@ -64,6 +64,11 @@ If you want to preserve those renderers, you have to stick to the QML format.
 On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
 
+If you change the renderer type when setting the style of a vector layer the settings
+you made for the symbol will be maintained. Be aware that this procedure only works 
+for one change. If you repeat changing the renderer type the settings for the symbol 
+will get lost.
+
 If the datasource of the layer is a database (PostGIS or Spatialite for example),
 you can save your layer style inside a table of the database. Just clic on
 :guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in
