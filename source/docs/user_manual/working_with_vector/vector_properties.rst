@@ -1203,7 +1203,7 @@ Joins Menu
 
 |join| The :guilabel:`Joins` menu allows you to :index:`join` a loaded attribute table
 to a loaded vector layer. After clicking |mActionSignPlus|, the :guilabel:`Add vector join` dialog appears.
-As key columns, you have to define a :index:`join layer` you want to connect with the target vector layer. Then, you have to specify the join field that is common to both the join layer and the target layer. Now you can also specify a subset of fields from the joined layer based on checkboxes. As a result of the join, all information from the join layer and the target layer are displayed in the attribute table of the target layer as joined information. If you specified a subset of fields only these fields are displayed in the attribute table of the target layer.
+As key columns, you have to define a :index:`join layer` you want to connect with the target vector layer. Then, you have to specify the join field that is common to both the join layer and the target layer. Now you can also specify a subset of fields from the joined layer based on the checkbox |checkbox| :guilabel:`Choose which fields are joined`. As a result of the join, all information from the join layer and the target layer are displayed in the attribute table of the target layer as joined information. If you specified a subset of fields only these fields are displayed in the attribute table of the target layer.
 
 .. FIXME: are table joins also possible with MSSQL and ORACLE tables?
 
