@@ -250,10 +250,12 @@ the attribute table to be searched. To add an attribute to the field calculator 
 double click its name in the :guilabel:`Fields and Values` list. Generally, you
 can use the various fields, values and functions to construct the calculation
 expression, or you can just type it into the box (see :ref:`vector_expressions`).
-Since |qg| 2.2, you can create a new rule by copying and pasting an existing rule with the right mouse button.
-Also since |qg| 2.2, you can use the 'ELSE' rule that will be run if none of the other
+You can create a new rule by copying and pasting an existing rule with the right mouse button.
+You can also use the 'ELSE' rule that will be run if none of the other
 rules on that level match.
-
+Since QGIS 2.6 the label for the rules appears in a pseudotree in the map legend. Just double-klick
+the rules in the map legend and the Style menu of the layer properties appears showing the rule that
+is the background for the symbol in the pseudotree.
 
 .. _figure_symbology_5:
 
