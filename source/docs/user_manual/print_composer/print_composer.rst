@@ -1251,18 +1251,51 @@ Main properties
 ^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialog of the HTML frame :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_27_):
+provides the following functionalities (see figure_composer_html_1_):
 
-.. _Figure_composer_27:
+.. _Figure_composer_html_1:
 
 .. only:: html
 
-   **Figure Composer 27:**
+   **Figure Composer HTML 1:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_html.png
+.. figure:: /static/user_manual/print_composer/print_composer_html1.png
    :align: center
 
    HTML frame Item properties Tab |nix|
+
+.. _Figure_composer_html_2:
+
+.. only:: html
+
+   **Figure Composer HTML 2:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_html2.png
+   :align: center
+
+   HTML Source properties |nix|
+
+.. _Figure_composer_html_3:
+
+.. only:: html
+
+   **Figure Composer HTML 3:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_html3.png
+   :align: center
+
+   HTML Frames properties |nix|
+
+.. _Figure_composer_html_4:
+
+.. only:: html
+
+   **Figure Composer HTML 4:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_html4.png
+   :align: center
+
+   HTML Use smart page breaks and User stylesheet properties |nix|
 
 * Point the :guilabel:`URL` field to the URL or the HTML file you want to insert in the Composer.
 * You can adjust the rendering of the page with the :guilabel:`Resize mode`.
