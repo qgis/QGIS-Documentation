@@ -73,10 +73,20 @@ If the datasource of the layer is a database (PostGIS or Spatialite for example)
 you can save your layer style inside a table of the database. Just clic on
 :guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in
 the dialog to define a style name, add a description, an ui file and if the style
-is a default style. When loading a layer from the database, if a style alredy
+is a default style. When loading a layer from the database, if a style already
 exists for this layer, |qg| will load the layer and its style. You can add
 several style in the database. Only one will be the default style anyway.
 
+.. only:: html
+
+   **Figure Vector Properties 2:**
+
+.. _figure_vector_properties_2:
+
+.. figure:: /static/user_manual/working_with_vector/save_style_database.png
+   :align: center
+
+   Save Style in database Dialog |nix|
 
 .. _tip_change_multiple_symbols:
 
@@ -304,6 +314,18 @@ placed on a displacement circle around a center symbol.
 Inverted polygon renderer allows user to define a symbol to fill in outside of the layer's
 polygons. As before you can select a subrenderers. These subrenderers are the
 same as for the main renderers.
+
+.. _figure_symbology_7:
+
+.. only:: html
+
+   **Figure Symbology 7:**
+
+.. figure:: /static/user_manual/working_with_vector/inverted_polygon_symbol.png
+   :align: center
+
+   Inverted Polygon dialog |nix|
+
 
 Color Picker
 ...............
