@@ -12,8 +12,8 @@ Presentation
 
 The Symbol Library is the place where users can create generic symbols to be used in several 
 QGIS projects. It allows users to export and import symbols, groups symbols and 
-add, edit and remove symbols. You can open it with the :menulabel:`Settings > Style Library` 
-or from the **Style** tab in the vector layer's :menulabel:`Properties`.
+add, edit and remove symbols. You can open it with the :menuselection:`Settings --> Style Library` 
+or from the **Style** tab in the vector layer's :menuselection:`Properties`.
 
 Share and import symbols
 -------------------------
