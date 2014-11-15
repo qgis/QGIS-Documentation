@@ -108,7 +108,7 @@ choose :menuselection:`File --> New Print Composer`. You will be prompted to
 choose a title for the new Composer. For the first session give it the name 'Sample session'.
 
 Overview of the Print Composer
---------------------
+------------------------------
 
 Opening the Print Composer provides you with a blank canvas that represents the paper surface when print. Initially you can find on the buttons on the left beside the panel to add map composer items; the current |qg| map canvas, text labels, images, legends, scale bars, basic shapes, arrows, attribute tables and HTML frames. In this toolbar you also find the toolbar buttons to navigate, zoomin on a part of the canvas and pan the view on the composer, the button to select the map composer item and the button the move the contents of the map item.  
 
@@ -427,7 +427,7 @@ in the map :guilabel:`Item Properties` tab (see figure_composer_2_).
    single: Grid;Grids;Map_Grid
 
 Grids
-^^^^
+^^^^^
 
 The :guilabel:`Grids` dialog of the map :guilabel:`Item Properties` tab provides the
 the possibility to add several grids to a map item.
@@ -840,9 +840,9 @@ the element with the left mouse button on the Print Composer canvas and position
 and customize the appearance in the scale bar :guilabel:`Item Properties` tab.
 
 The :guilabel:`Item properties` of a scale bar item tab provides the following
-functionalities (see figure_composer_scalebar1_):
+functionalities (see figure_composer_scalebar_1_):
 
-.. _Figure_composer_scalebar1:
+.. _Figure_composer_scalebar_1:
 
 .. only:: html
 
@@ -859,7 +859,7 @@ Main properties
 The :guilabel:`Main properties` dialog of the scale bar :guilabel:`Item Properties` tab
 provides the following functionalities (see figure_composer_scalebar_2_):
 
-.. _Figure_composer_scalebar2:
+.. _Figure_composer_scalebar_2:
 
 .. only:: html
 
@@ -1372,8 +1372,8 @@ the HTML frame :guilabel:`Item Properties` tab provides the following functional
   .. 
 
      p {
-        font-size: 20px;
-       }
+        font-size: 20px
+     }
 
 * Use the **[Update HTML]** button to see the result of the stylesheet settings.
 
