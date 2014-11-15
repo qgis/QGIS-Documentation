@@ -54,7 +54,7 @@ Data Providers
   displayed in the map composer. QGIS 2.2 addresses both of these
   issues.
 
-Digitising 
+Digitizing 
 ----------
 
 * **Fill ring digitizing tool**: This new tool is used to cut holes in
