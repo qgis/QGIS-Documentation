@@ -332,7 +332,7 @@ Color Picker
 
 Regardless the type of style to be used, the :guilabel:`select color` dialog will show when you click to choose a 
 color - either border or fill color. This dialog has four different tabs which allow you to select colors by |mIconColorBox| :sup:`color ramp`, 
-|mIColorWheel| :sup:`color wheel`, |mIColorSwatches| :sup:`color swatches` or |mIColorPicker| :sup:`color picker`.
+|mIconColorWheel| :sup:`color wheel`, |mIconColorSwatches| :sup:`color swatches` or |mIconColorPicker| :sup:`color picker`.
 
 Whatever method you use, the selected color is always described through color sliders for HSV  (Hue, Saturation, Value)
 and RGB (Red, Green, Blue) values. There is also an :guilabel:`opacity` slider to set transparency level. On the lower left part 
@@ -352,8 +352,8 @@ selecting and on the lower right part you have the option to add the color you j
 
  
 
-With |mIconColorBox| :sup:`color ramp` or with |mIColorWheel| :sup:`color wheel`, you can browse to all possible color combinations. 
-There are other possibilities though. By using `color swatches` |colorswatcher| you can choose from a preselected list. This selected list is
+With |mIconColorBox| :sup:`color ramp` or with |mIconColorWheel| :sup:`color wheel`, you can browse to all possible color combinations. 
+There are other possibilities though. By using `color swatches` |mIconColorSwatches| you can choose from a preselected list. This selected list is
 populated with one of three methods: :guilabel:`Recent colors`, :guilabel:`Standard colors` or :guilabel:`Project colors`
 
 .. _figure_color_picker_2:
@@ -367,7 +367,7 @@ populated with one of three methods: :guilabel:`Recent colors`, :guilabel:`Stand
 
    Color picker swatcher tab |nix|
  
-Another option is to use the |mIColorPicker| :sup:`color picker` which allows you to sample a color from under your mouse pointer at any part of 
+Another option is to use the |mIconColorPicker| :sup:`color picker` which allows you to sample a color from under your mouse pointer at any part of 
 QGIS or even from another application by pressing the space bar. Please note that the color picker is OS dependent and is currently not supported by OSX.
  
 .. _tip_quick_color_picker_+_copy/paste_colors:

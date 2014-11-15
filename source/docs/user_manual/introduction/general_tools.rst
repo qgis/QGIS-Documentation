@@ -296,12 +296,12 @@ tool:
 To deselect all selected features click on |mActionDeselectAll| :sup:`Deselect
 features from all layers`.
 
-|mActionSelectExpression| :sup:`Select feature using an expression` allow user 
+|mIconExpressionSelect| :sup:`Select feature using an expression` allow user 
 to select feature using expression dialog. See :ref:`vector_expressions` 
 chapter for some example.
 
 Users can save features selection into a **New Memory Vector Layer** or a **New Vector Layer** using 
-:menulabel:`Edit > Paste Feature as ...` and choose the mode you want.
+:menuselection:`Edit --> Paste Feature as ...` and choose the mode you want.
 
 .. _`identify`:
 
