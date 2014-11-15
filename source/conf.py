@@ -198,7 +198,7 @@ rst_epilog = """
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
-.. |CURRENT| replace:: 2.2
+.. |CURRENT| replace:: 2.6
 .. |degrees| unicode:: 0x00B0
    :ltrim:
 .. |geographic| image:: /static/common/geographic.png
@@ -241,6 +241,8 @@ rst_epilog = """
 .. |commandlinkbutton|  image:: /static/common/commandlinkbutton.png
    :width: 1.5em
 .. |dateedit|  image:: /static/common/dateedit.png
+   :width: 1.5em
+.. |geometry| image:: /static/common/geometry.png
    :width: 1.5em
 .. |datetimeedit|  image:: /static/common/datetimeedit.png
    :width: 1.5em
