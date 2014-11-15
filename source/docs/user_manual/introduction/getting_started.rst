@@ -194,33 +194,34 @@ statement for QGIS is:
 ::
 
   qgis --help
-  QGIS - 2.2.0-Valmiera 'Valmiera' (exported)
+  QGIS - 2.6.0-Brighton 'Brighton' (exported)
   QGIS is a user friendly Open Source Geographic Information System.
-  Usage: qgis [OPTION] [FILE]
-  options:
-   [--snapshot filename]           emit snapshot of loaded datasets to given file
-   [--width width]                 width of snapshot to emit
-   [--height height]               height of snapshot to emit
-   [--lang language]               use language for interface text
-   [--project projectfile]         load the given QGIS project
-   [--extent xmin,ymin,xmax,ymax]  set initial map extent
-   [--nologo]                      hide splash screen
-   [--noplugins]                   don't restore plugins on startup
-   [--nocustomization]             don't apply GUI customization
-   [--customizationfile]           use the given ini file as GUI customization
-   [--optionspath path]            use the given QSettings path
-   [--configpath path]             use the given path for all user configuration
-   [--code path]                   run the given python file on load
-   [--help]                        this text
+  Usage: /usr/bin/qgis.bin [OPTION] [FILE]
+  OPTION:
+	[--snapshot filename]	emit snapshot of loaded datasets to given file
+	[--width width]	width of snapshot to emit
+	[--height height]	height of snapshot to emit
+	[--lang language]	use language for interface text
+	[--project projectfile]	load the given QGIS project
+	[--extent xmin,ymin,xmax,ymax]	set initial map extent
+	[--nologo]	hide splash screen
+	[--noplugins]	don't restore plugins on startup
+	[--nocustomization]	don't apply GUI customization
+	[--customizationfile]	use the given ini file as GUI customization
+	[--optionspath path]	use the given QSettings path
+	[--configpath path]	use the given path for all user configuration
+	[--code path]	run the given python file on load
+	[--defaultui]	start by resetting user ui settings to default
+	[--help]		this text
 
-   FILES:
-         Files specified on the command line can include rasters,
-         vectors, and QGIS project files (.qgs):
-         1. Rasters - Supported formats include GeoTiff, DEM
-            and others supported by GDAL
-         2. Vectors - Supported formats include ESRI Shapefiles
-            and others supported by OGR and PostgreSQL layers using
-            the PostGIS extension
+  FILE:
+    Files specified on the command line can include rasters,
+    vectors, and QGIS project files (.qgs): 
+     1. Rasters - supported formats include GeoTiff, DEM 
+        and others supported by GDAL
+     2. Vectors - supported formats include ESRI Shapefiles
+        and others supported by OGR and PostgreSQL layers using
+        the PostGIS extension
 
 .. tip::
         **Example Using command line arguments**
