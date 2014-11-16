@@ -34,9 +34,9 @@ directory in the left of the library. You can also select a group and click
 on the |mActionSignPlus| :sup:`add item` button.
 
 To add a symbol into a group, you can either right click on a symbol then choose 
-:menulabel:`Apply group` and then the group name added before. There is a second 
+:menuselection:`Apply group` and then the group name added before. There is a second 
 way to add several symbols into group: just select a group and click 
-|mActionOnGroup| and choose **Group Symbols**. All symbols display a checkbox 
+|mActionChangeLabelProperties| and choose **Group Symbols**. All symbols display a checkbox 
 that allow you to add the symbol into the selected groups. When finished, you can 
 click on the same button, and choose **Finish Grouping**.
 
