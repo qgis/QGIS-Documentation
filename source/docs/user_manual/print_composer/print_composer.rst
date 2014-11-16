@@ -1154,12 +1154,28 @@ tab provide the following functionalities  (see figure_composer_table_4_):
 
 You can: 
 
-* define the :guilabel:`Maximum rows` to be displayed.
-* Check |checkbox| :guilabel:`Remove duplicate rows from table` to show unique records only 
-* Check |checkbox| :guilabel:`Show only visible features within a map` and select the 
+* Define the :guilabel:`Maximum rows` to be displayed.
+* Activate |checkbox| :guilabel:`Remove duplicate rows from table` to show unique records only. 
+* Activate |checkbox| :guilabel:`Show only visible features within a map` and select the 
   corresponding :guilabel:`Composer map` to display the attributes of features only visible 
   on selected map. 
+* Activate |checkbox| :guilabel:`Show only features intersecting Atlas feature` is only 
+  available when |checkbox| :guilabel:`Generate an atlas` is activated. When activated it will
+  show a table with only the features shown on the map of that particular page of the atlas.
+* Activate |checkbox| :guilabel:`Filter with` and provide a filter by typing in the input 
+  line or insert a regular expressing use the given expression button. A few examples of 
+  filtering statements you can use when you have loaded the airports layer from the Sample 
+  dataset:
 
+  ..
+
+     ELEV > 500
+     NAME = 'ANIAK' 
+     NAME NOT LIKE 'AN% 
+     regexp_match( attribute( $currentfeature, 'USE' )  , '[i]')
+
+  The last regular expression will include only the arpoirts that have a letter 'i' 
+  in the attribute field 'USE'. 
 
 Appearance
 ^^^^^^^^^^
@@ -1178,8 +1194,28 @@ tab provide the following functionalities  (see figure_composer_table_5_):
 
    Attribute table appearance Dialog |nix|
 
-You can define the :guilabel:`margin` around text.
+* With :guilabel:`Cell margins` you can define the margin around text in each cell 
+  of the table.
+* With :guilabel:`Display header` you can select from a list one of 'On first frame', 
+  'On all frames' default option, or 'No header'.
+* The option :guilabel:`Empty table` controls what will be displayed when the result
+  selection is empty.
 
+  * **Draw headers only**, will only draw the header except if you have choosen 'No header' 
+    for :guilabel:`Display header`.
+  * **Hide entire table**, will only draw the background of the table. You can activate 
+    |checkbox| :guilabel:`Don't draw background if frame is empty` in :guilabel:`Frames` 
+    to completely hide the table.
+  * **Draw empty cells**, will fill the attribute table with empty cells, this option can
+    also be used to provide additional empty cells when you have a result to show!
+  * **Show set message**, will draw the header and adds a cell spanning all columns and 
+    display a message like 'No result' that can be provided in the option 
+    :guilabel:`Message to display`  
+
+* The option :guilabel:`Message to display` is only activated when you have selected 
+  **Show set message** for :guilabel:`Empty table`. The message provided will be shown 
+  in the table in the first row, when the result is an empty table.
+* With :guilabel:`Background color` you can set the background color of the table.
 
 Show grid
 ^^^^^^^^^
@@ -1198,14 +1234,18 @@ provide the following functionalities (see figure_composer_table_6_):
 
    Attribute table Show grid Dialog |nix|
 
-You can define the grid characteristics of the table (:guilabel:`Stroke width` and :guilabel:`Color` of the grid) 
+* Activate |checkbox| :guilabel:`Show grid` when you want to display the grid, the outlines 
+  of the table cells. 
+* With :guilabel:`Stroke width` you can set the thickness of the lines used in the grid.
+* The :guilabel:`Color` of the grid can be set using the color selection dialog. 
 
 
 Fonts and text styling
 ^^^^^^^^^^^^^^^^^^^^^^
 
-The :guilabel:`Fonts and text styling` dialog of the attribute table :guilabel:`Item Properties` tab
-provide the following functionalities (see figure_composer_table_7_):
+The :guilabel:`Fonts and text styling` dialog of the attribute table 
+:guilabel:`Item Properties` tab provide the following functionalities (see 
+figure_composer_table_7_):
 
    .. _Figure_composer_table_7:
 
@@ -1218,7 +1258,11 @@ provide the following functionalities (see figure_composer_table_7_):
 
    Attribute table Fonts and text styling Dialog |nix|
 
-You can define the header and content font.
+* You can define :guilabel:`Font` and :guilabel:`Color` for :guilabel:`Table header` 
+  and :guilabel:`Table contents`.
+* For :guilabel:`Table header` you can additionally set the :guilabel:`Alignment` and
+  choose from `Follow column alignment`, `Left`, `Center` or `Right`. The column
+  alignment is set using the :guilabel:`Select Attributes` dialog (see Figure_composer_table_3_ ).  
 
 
 Frames
@@ -1237,6 +1281,24 @@ provide the following functionalities (see figure_composer_table_8_):
    :align: center
 
    Attribute table Frames Dialog |nix|
+
+* With :guilabel:`Resize mode` you can select how to render the attribute table contents:
+
+  * **Use existing frames** displays the result in the first frame and added frames only.
+  * **Extent to next page** will create as many frames (and corresponding pages) as 
+    necessary to display the full selection of attribute table. Each frame can be moved 
+    around on the layout. If you resize a frame, the resulting table will be divided up 
+    between the other frames. The last frame will be trimmed to fit the table.
+    **Extend to next page** option, except all frames will have the same size.
+
+* Use the **[Add Frame]** button to add another frame with the same size as selected 
+  frame. The result of the table that will not fit in the first frame will continue 
+  in the next frame when you use the Resize mode **Use existing frames**. 
+* Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents the page 
+  to be exported when the table frame has no contents. This means all other composer items, 
+  maps, scalebars, legends etc. will not be visible in the result.  
+* Activate |checkbox| :guilabel:`Don't draw background if frame is empty` prevents the 
+  background to be drawn when the table frame has no contents.
 
 
 .. index:: HTML_Frame
@@ -1320,19 +1382,19 @@ provides the following functionalities (see figure_composer_html_3_):
 
 * With :guilabel:`Resize mode` you can select how to render the HTML contents:
 
-  * **Use existing frames** displays the result in the first frame and added frames only.
-  * **Extent to next page** will create as many frames (and corresponding pages) as 
+  * `Use existing frames` displays the result in the first frame and added frames only.
+  * `Extent to next page` will create as many frames (and corresponding pages) as 
     necessary to render the height of the web page. Each frame can be moved around on 
     the layout. If you resize a frame, the webpage will be divided up between the 
     other frames. The last frame will be trimmed to fit the web page.
-  * **Repeat on every page** will repeat the upper left of the web page on every page 
+  * `Repeat on every page` will repeat the upper left of the web page on every page 
     in frames of the same size.
-  * **Repeat until finished** will also create as many frames as the 
-    **Extend to next page** option, except all frames will have the same size.
+  * `Repeat until finished` will also create as many frames as the 
+    `Extend to next page` option, except all frames will have the same size.
 
 * Use the **[Add Frame]** button to add another frame with the same size as selected 
   frame. The result of the HTML page that will not fit in the first frame will continue 
-  in the next frame when you use the Resize mode **Use existing frames**. 
+  in the next frame when you use the Resize mode `Use existing frames`. 
 * Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents the page 
   to be exported when the frame has no HTML contents. This means all other composer items, 
   maps, scalebars, legends etc. will not be visible in the result.  
@@ -1366,7 +1428,7 @@ the HTML frame :guilabel:`Item Properties` tab provides the following functional
   will result in better choice of page break location, but more wasted space at the bottom 
   of frames. This is only used when :guilabel:`Use smart page breaks` is activated.
 * Activate |checkbox| :guilabel:`User stylesheet` to apply HTML styles that often is provided 
-  in cascading style sheet. An example of style code is provide below to set the fontsize 
+  in cascading style sheets. An example of style code is provide below to set the fontsize 
   of text included in paragraph tags ``<p>`` to 20 pixels.
 
   .. 
