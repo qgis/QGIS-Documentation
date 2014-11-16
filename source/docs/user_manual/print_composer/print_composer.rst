@@ -1167,12 +1167,10 @@ You can:
   filtering statements you can use when you have loaded the airports layer from the Sample 
   dataset:
 
-  ..
-
-     ELEV > 500
-     NAME = 'ANIAK' 
-     NAME NOT LIKE 'AN% 
-     regexp_match( attribute( $currentfeature, 'USE' )  , '[i]')
+  * ``ELEV > 500``
+  * ``NAME = 'ANIAK'`` 
+  * ``NAME NOT LIKE 'AN%`` 
+  * ``regexp_match( attribute( $currentfeature, 'USE' )  , '[i]')``
 
   The last regular expression will include only the arpoirts that have a letter 'i' 
   in the attribute field 'USE'. 
@@ -1284,16 +1282,17 @@ provide the following functionalities (see figure_composer_table_8_):
 
 * With :guilabel:`Resize mode` you can select how to render the attribute table contents:
 
-  * **Use existing frames** displays the result in the first frame and added frames only.
-  * **Extent to next page** will create as many frames (and corresponding pages) as 
+  * `Use existing frames` displays the result in the first frame and added frames only.
+  * `Extent to next page` will create as many frames (and corresponding pages) as 
     necessary to display the full selection of attribute table. Each frame can be moved 
     around on the layout. If you resize a frame, the resulting table will be divided up 
     between the other frames. The last frame will be trimmed to fit the table.
-    **Extend to next page** option, except all frames will have the same size.
+  * `Repeat until finished` will also create as many frames as the 
+    `Extend to next page` option, except all frames will have the same size.
 
 * Use the **[Add Frame]** button to add another frame with the same size as selected 
   frame. The result of the table that will not fit in the first frame will continue 
-  in the next frame when you use the Resize mode **Use existing frames**. 
+  in the next frame when you use the Resize mode `Use existing frames`. 
 * Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents the page 
   to be exported when the table frame has no contents. This means all other composer items, 
   maps, scalebars, legends etc. will not be visible in the result.  
