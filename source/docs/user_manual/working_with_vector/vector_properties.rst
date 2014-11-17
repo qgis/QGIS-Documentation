@@ -208,17 +208,15 @@ Additionally, you can specify the number of classes and also the mode for
 classifying features within the classes (using the Mode list). The available
 modes are:
 
-* Equal Interval: each class has the same size (e.g. values from 0 to 16 and 4 classes, 
-each class has a size of 4)
+* Equal Interval: each class has the same size (e.g. values from 0 to 16 and 4 classes, each class has a size of 4);
 
-* Quantile: each class will have the same number of element inside (the idea of a boxplot)
+* Quantile: each class will have the same number of element inside (the idea of a boxplot);
 
-* Natural Breaks (Jenks): the variance within each class is minimal while the
-variance between classes is maximal
+* Natural Breaks (Jenks): the variance within each class is minimal while the variance between classes is maximal;
 
-* Standard Deviation: classes are built depending on the standard deviation of the values
+* Standard Deviation: classes are built depending on the standard deviation of the values;
 
-* Pretty Breaks: the same of natural breaks but the extremes number of each class are integers
+* Pretty Breaks: the same of natural breaks but the extremes number of each class are integers.
 
 
 The listbox in the center part of the :guilabel:`Style` menu lists the classes
