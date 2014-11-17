@@ -1455,21 +1455,27 @@ the :kbd:`Shift` while moving the mouse.
 If you need a better precision, you can move a selected item using the :kbd:`Arrow keys` on the keyboard; 
 if the movement is too slow, you can speed up it by holding :kbd:`Shift`.
 
-A selected item will show squares on its boundaries; moving one of them with the mouse, will resize the item
-in the corresponding direction.
-While resizing, holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Ctrl` will resize from 
-the item center.
+A selected item will show squares on its boundaries; moving one of them with the mouse, will resize the item in the corresponding direction. While resizing, 
+holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Alt` will 
+resize from the item center.
 
-The correct position for an item can be obtained using snapping to grid or smart guides. If you need to 
-disable the snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
+The correct position for an item can be obtained using snapping to grid or 
+smart guides. Guides are set by clicking and dragging in the rulers. Guide are 
+moved by clicking in the ruler, level with the guide and dragging to a new 
+place. To delete a guide move it off the canvas. If you need to disable the 
+snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
 
 You can choose multiple items with the |mActionSelect| :sup:`Select/Move item` button. 
 Just hold the :kbd:`Shift` button and click on all the items you need. You can then resize/move
 this group just like a single item.
 
-Once you have found the correct position for an item, you can lock it by clicking with the
-right mouse button. Press the same button another time to unlock it. You can also lock/unlock
-items using the icons on the toolbar.
+Once you have found the correct position for an item, you can lock it by using 
+the items on the toolbar or ticking the box next to the item in the 
+:menuselection:`Items` tab. Locked items are not selectable on the canvas. 
+
+Locked items can be unlocked by selecting the item in the 
+:menuselection:`Items` tab and unchecking the tickbox or you can use the icons 
+on the toolbar.
 
 To unselect an item, just click on it holding the :kbd:`Shift` button.
 
@@ -1482,7 +1488,10 @@ Alignment
 Raising or lowering functionalities for elements are inside the |mActionRaiseItems|
 :sup:`Raise selected items` pull-down menu. Choose an element on the Print Composer
 canvas and select the matching functionality to raise or lower the selected
-element compared to the other elements (see table_composer_1_).
+element compared to the other elements (see table_composer_1_). This order is 
+shown in the :menuselection:`Items` tab. You can also raise or lower objects 
+in the :menuselection:`Items` tab by clicking and dragging an object's label 
+in this list.
 
 .. _figure_composer_28:
 
