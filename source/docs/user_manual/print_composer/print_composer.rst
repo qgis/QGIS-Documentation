@@ -112,13 +112,13 @@ Overview of the Print Composer
 
 Opening the Print Composer provides you with a blank canvas that represents the paper surface when print. Initially you can find on the buttons on the left beside the panel to add map composer items; the current |qg| map canvas, text labels, images, legends, scale bars, basic shapes, arrows, attribute tables and HTML frames. In this toolbar you also find the toolbar buttons to navigate, zoomin on a part of the canvas and pan the view on the composer, the button to select the map composer item and the button the move the contents of the map item.  
 
-Figure_composer_1_ shows the initial view of the Print Composer before any elements are added.
+Figure_composer_overview_ shows the initial view of the Print Composer before any elements are added.
 
-.. _Figure_composer_1:
+.. _Figure_composer_overview:
 
 .. only:: html
 
-   **Figure Composer 1:**
+   **Figure Composer Overview:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_blank.png
    :align: center
@@ -181,7 +181,7 @@ Sample Session
 
 To demonstrate how to create a map please follow the next instructions.
 
-#. On the left site, select the |mActionAddMap| :sup:`Add new map` toolbar button and draw a rectangle on the canvas holding down the left mouse button. Inside de drawn rectangle the |qg| map view to the canvas.
+#. On the left site, select the |mActionAddMap| :sup:`Add new map` toolbar button and draw a rectangle on the canvas holding down the left mouse button. Inside the drawn rectangle the |qg| map view to the canvas.
 #. Select the |mActionScaleBar| :sup:`Add new scalebar` toolbar button and place the map item with the left mouse button on the Print Composer canvas. A scalebar will be added to the canvas.
 #. Select the |mActionAddLegend| :sup:`Add new legend` toolbar button and draw a rectangle on the canvas holding down the left mouse button. Inside the drawn rectangle the legend will be drawn.
 #. Select the |mActionSelect| :sup:`Select/Move item` icon to select the map on the canvas and move it a bit.
@@ -219,17 +219,17 @@ In the :guilabel:`Composition` tab, you can define the global settings of your c
 
 Snap to grid and/or to smart guides can be enabled from the :menuselection:`View` menu. In this menu, you can also hide or show the grid and smart guides.
 
-Composer items general options
+Composer items common options
 ------------------------------
 
 Composer items have a set of common properties you will find on the bottom of the :guilabel:`Item Properties` tab: Position and size, Rotation, Frame,
-Background, Item ID and Rendering (See figure_composer_2_).
+Background, Item ID and Rendering (See figure_composer_common_1_).
 
-.. _Figure_composer_2:
+.. _Figure_composer_common_1:
 
 .. only:: html
 
-   **Figure Composer 2:**
+   **Figure Composer Common 1:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_common_properties.png
    :align: center
@@ -263,11 +263,11 @@ Rendering mode
 
 |qg| now allows advanced rendering for Composer items just like vector and raster layers.
 
-.. _figure_composer_3:
+.. _figure_composer_common_2:
 
 .. only:: html
 
-   **Figure Composer 3:**
+   **Figure Composer common 2:**
 
 .. figure:: /static/user_manual/print_composer/rendering_mode.png
    :align: center
@@ -356,14 +356,14 @@ tab.
 Main properties
 ^^^^^^^^^^^^^^^
 
-The :guilabel:`Main properties` dialog of the map :guilabel:`Item Properies` tab provides the
-following functionalities (see figure_composer_4_):
+The :guilabel:`Main properties` dialog of the map :guilabel:`Item Properties` tab provides the
+following functionalities (see figure_composer_map_1_):
 
-.. _Figure_composer_4:
+.. _Figure_composer_map_1:
 
 .. only:: html
 
-   **Figure Composer 4:**
+   **Figure Composer Map 1:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_map1.png
    :align: center
@@ -398,13 +398,13 @@ Extents
 ^^^^^^^
 
 The :guilabel:`Extents` dialog of the map item tab provides the following
-functionalities (see figure_composer_5_):
+functionalities (see figure_composer_map_2_):
 
-.. _Figure_composer_5:
+.. _Figure_composer_map_2:
 
 .. only:: html
 
-   **Figure Composer 5:**
+   **Figure Composer Map 2:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_map2.png
    :align: center
@@ -421,7 +421,7 @@ functionalities (see figure_composer_5_):
 If you change the view on the |qg| map canvas by changing
 vector or raster properties, you can update the Print Composer view by selecting
 the map element in the Print Composer and clicking the **[Update preview]** button
-in the map :guilabel:`Item Properties` tab (see figure_composer_2_).
+in the map :guilabel:`Item Properties` tab (see figure_composer_map_1_).
 
 .. index::
    single: Grid;Grids;Map_Grid
@@ -437,11 +437,11 @@ the possibility to add several grids to a map item.
 
 When you double click on the added grid you can give it another name.
 
-.. _Figure_composer_grid_1:
+.. _Figure_composer_map_3:
 
 .. only:: html
 
-   **Figure Composer grid 1:**
+   **Figure Composer Map 3:**
 
 .. figure:: /static/user_manual/print_composer/map_grids.png
    :align: center
@@ -449,13 +449,13 @@ When you double click on the added grid you can give it another name.
    Map Grids Dialog |nix|
 
 After you have added a grid, you can active the checkbox |checkbox| :guilabel:`Show grid` to overlay a grid onto the
-map element. Expand this option to provides a lot of configuration options, see Figure_composer_grid_2_.
+map element. Expand this option to provides a lot of configuration options, see Figure_composer_map_4_.
 
-.. _Figure_composer_grid_2:
+.. _Figure_composer_map_4:
 
 .. only:: html
 
-   **Figure Composer grid 2:**
+   **Figure Composer Map 4:**
 
 .. figure:: /static/user_manual/print_composer/draw_grid.png
    :align: center
@@ -467,11 +467,11 @@ the grid can be chosen. See section Rendering_Mode_.
 Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
 and the width used for the cross or line grid type.
 
-.. _Figure_composer_grid_3:
+.. _Figure_composer_map_5:
 
 .. only:: html
 
-   **Figure Composer grid 3:**
+   **Figure Composer Map 5:**
 
 .. figure:: /static/user_manual/print_composer/grid_frame.png
    :align: center
@@ -489,11 +489,11 @@ and the width used for the cross or line grid type.
   vertical, or boundary direction, for each border individually. Units can be in meters or in degrees. Finally, you can define the grid
   color, the annotation font, the annotation distance from the map frame and the precision of the drawn coordinates.
 
-.. _Figure_composer_grid_4:
+.. _Figure_composer_map_6:
 
 .. only:: html
 
-   **Figure Composer grid 4:**
+   **Figure Composer map 6:**
 
 .. figure:: /static/user_manual/print_composer/grid_draw_coordinates.png
    :align: center
@@ -507,11 +507,11 @@ Overviews
 The :guilabel:`Overviews` dialog of the map :guilabel:`Item Properties` tab provides the
 following functionalities:
 
-.. _Figure_composer_7:
+.. _Figure_composer_map_7:
 
 .. only:: html
 
-   **Figure Composer 7:**
+   **Figure Composer Map 7:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_map4.png
    :align: center
@@ -557,9 +557,9 @@ with the left mouse button on the Print Composer canvas and position and customi
 its appearance in the label :guilabel:`Item Properties` tab.
 
 The :guilabel:`Item Properties` tab of a label item provides the following functionality 
-for the label item (see Figure_composer_8_):
+for the label item (see Figure_composer_label_):
 
-.. _Figure_composer_8:
+.. _Figure_composer_label:
 
 .. only:: html
 
@@ -605,13 +605,13 @@ its appearance in the image :guilabel:`Item Properties` tab.
 .. index::
    single:Rotated_North_Arrow
 
-The image :guilabel:`Item Properties` tab provides the following functionalities (see figure_composer_11_):
+The image :guilabel:`Item Properties` tab provides the following functionalities (see figure_composer_image_1_):
 
-.. _Figure_composer_11:
+.. _Figure_composer_image_1:
 
 .. only:: html
 
-   **Figure Composer 11:**
+   **Figure Composer image 1:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_image1.png
    :align: center
@@ -667,11 +667,11 @@ you can now select one of the north arrow from the list as displayed in figure_c
    Many of the north arrows do not have an 'N' added in the north arrow, this is done on 
    purpose for languages that do not use an 'N' for North, so they can use another letter.
 
-.. _Figure_composer_13:
+.. _Figure_composer_image_2:
 
 .. only:: html
 
-   **Figure Composer 13:**
+   **Figure Composer Image 2:**
 
 .. figure:: /static/user_manual/print_composer/north_arrows.png
    :align: center
@@ -881,9 +881,9 @@ Units and Segments
 ^^^^^^^^^^^^^^^^^^
 
 The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar :guilabel:`Item Properties` tab
-provide the following functionalities (see figure_composer_scalebar3_):
+provide the following functionalities (see figure_composer_scalebar_3_):
 
-.. _Figure_composer_scalebar3:
+.. _Figure_composer_scalebar_3:
 
 .. only:: html
 
@@ -972,11 +972,11 @@ appearance in the :guilabel:`Item Properties` tab.
 When you also hold down the :kbd:`Shift` key while placing the basic shape you can create a perfect square, 
 circle or triangle. 
 
-.. _figure_composer_22:
+.. _figure_composer_basic_shape:
 
 .. only:: html
 
-   **Figure Composer 22:**
+   **Figure Composer Basic Shape:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_shape.png
    :align: center
