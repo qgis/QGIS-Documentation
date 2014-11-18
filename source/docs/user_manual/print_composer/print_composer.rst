@@ -251,8 +251,15 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
   (e.g., label text) for that specific item. The GetProjectSettings command will list what items and which IDs are available in a layout.
 * :guilabel:`Rendering` mode can be selected in the option field. See Rendering_Mode_.
 
-.. note:: If you checked |checkbox| :guilabel:`Use live-updating color chooser dialogs` in the QGIS general options, the color button will 
-    update as soon as you choose a new color from **Color Dialog** windows. If not, you need to close the **Color Dialog**.
+.. note:: 
+
+   * If you checked |checkbox| :guilabel:`Use live-updating color chooser dialogs`
+     in the QGIS general options, the color button will update as soon as you 
+     choose a new color from **Color Dialog** windows. If not, you need to 
+     close the **Color Dialog**.
+   * The |mIconDataDefine| :sup:`Data defined override` icon next to a field 
+     means that you can associate the field with data in the map item.
+
 
 .. _Rendering_Mode:
 
@@ -1392,13 +1399,15 @@ provides the following functionalities (see figure_composer_html_3_):
     `Extend to next page` option, except all frames will have the same size.
 
 * Use the **[Add Frame]** button to add another frame with the same size as selected 
-  frame. The result of the HTML page that will not fit in the first frame will continue 
-  in the next frame when you use the Resize mode `Use existing frames`. 
-* Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents the page 
-  to be exported when the frame has no HTML contents. This means all other composer items, 
+  frame. If the HTML page that will not fit in the first frame it will continue 
+  in the next frame when you use :guilabel:`Resize mode` or :guilabel:`Use 
+  existing frames`. 
+* Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents 
+  the map layout from being exported when the frame has no HTML contents. This 
+  means all other composer items, 
   maps, scalebars, legends etc. will not be visible in the result.  
-* Activate |checkbox| :guilabel:`Don't draw background if frame is empty` prevents the 
-  background to be drawn when the frame has no HTML contents.
+* Activate |checkbox| :guilabel:`Don't draw background if frame is empty` 
+  prevents the HTML frame being drawn if the frame is empty.
 
 
 Use smart page breaks and User style sheet
@@ -1455,21 +1464,27 @@ the :kbd:`Shift` while moving the mouse.
 If you need a better precision, you can move a selected item using the :kbd:`Arrow keys` on the keyboard; 
 if the movement is too slow, you can speed up it by holding :kbd:`Shift`.
 
-A selected item will show squares on its boundaries; moving one of them with the mouse, will resize the item
-in the corresponding direction.
-While resizing, holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Ctrl` will resize from 
-the item center.
+A selected item will show squares on its boundaries; moving one of them with the mouse, will resize the item in the corresponding direction. While resizing, 
+holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Alt` will 
+resize from the item center.
 
-The correct position for an item can be obtained using snapping to grid or smart guides. If you need to 
-disable the snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
+The correct position for an item can be obtained using snapping to grid or 
+smart guides. Guides are set by clicking and dragging in the rulers. Guide are 
+moved by clicking in the ruler, level with the guide and dragging to a new 
+place. To delete a guide move it off the canvas. If you need to disable the 
+snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
 
 You can choose multiple items with the |mActionSelect| :sup:`Select/Move item` button. 
 Just hold the :kbd:`Shift` button and click on all the items you need. You can then resize/move
 this group just like a single item.
 
-Once you have found the correct position for an item, you can lock it by clicking with the
-right mouse button. Press the same button another time to unlock it. You can also lock/unlock
-items using the icons on the toolbar.
+Once you have found the correct position for an item, you can lock it by using 
+the items on the toolbar or ticking the box next to the item in the 
+:menuselection:`Items` tab. Locked items are **not** selectable on the canvas. 
+
+Locked items can be unlocked by selecting the item in the 
+:menuselection:`Items` tab and unchecking the tickbox or you can use the icons 
+on the toolbar.
 
 To unselect an item, just click on it holding the :kbd:`Shift` button.
 
@@ -1482,7 +1497,10 @@ Alignment
 Raising or lowering functionalities for elements are inside the |mActionRaiseItems|
 :sup:`Raise selected items` pull-down menu. Choose an element on the Print Composer
 canvas and select the matching functionality to raise or lower the selected
-element compared to the other elements (see table_composer_1_).
+element compared to the other elements (see table_composer_1_). This order is 
+shown in the :menuselection:`Items` tab. You can also raise or lower objects 
+in the :menuselection:`Items` tab by clicking and dragging an object's label 
+in this list.
 
 .. _figure_composer_28:
 
@@ -1510,6 +1528,9 @@ The print composer includes actions to use the common Copy/Cut/Paste functionali
 in the layout. As usual first you need to select the items using one of the options seen above;
 at this point the actions can be found in the :menuselection:`Edit` menu. When using the Paste action, the elements
 will be pasted according to the current mouse position.
+
+.. note::
+   HTML items can not be copied in this way. As a workaround, use the **[Add Frame]** button in the :menuselection:`Item Properties` tab.
 
 Revert and Restore tools
 ========================
@@ -1658,15 +1679,16 @@ to define the resolution (print quality) and paper size:
 If you need to export your layout as a **georeferenced image** (i.e., to load back
 inside |qg|), you need to enable this feature under the Composition tab. Check 
 |checkbox| :guilabel:`World file on` and choose the map item to use. With this option, the
-'Export as image' action will create also a world file.
+'Export as image' action will also create a world file.
 
 .. note::
 
-   Currently, the SVG output is very basic. This is not a |qg| problem, but a
-   problem with the underlying Qt library. This will hopefully be sorted out in
-   future versions.
-   Exporting big rasters can sometimes fail, even if there seems to be enough memory.
-   This is also a problem with the underlying Qt management of rasters.
+   * Currently, the SVG output is very basic. This is not a |qg| problem, but a
+     problem with the underlying Qt library. This will hopefully be sorted out 
+     in future versions.
+   * Exporting big rasters can sometimes fail, even if there seems to be 
+     enough memory. This is also a problem with the underlying Qt management 
+     of rasters.
 
 .. index:: Composer_Manager
 
@@ -1674,7 +1696,7 @@ Manage the Composer
 ===================
 
 With the |mActionFileSaveAs| :sup:`Save as template` and |mActionFileOpen|
-:sup:`Load from template` icons, you can save the current state of a Print Composer
+:sup:`Add items from template` icons, you can save the current state of a Print Composer
 session as a  :file:`.qpt` template and load the template again in another session.
 
 The  |mActionComposerManager| :sup:`Composer Manager` button in the |qg| toolbar
