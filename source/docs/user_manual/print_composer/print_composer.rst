@@ -10,9 +10,9 @@ Print Composer
 With the Print Composer you can create nice maps and atlasses that can be printed or saved as PDF-file, an image or an SVG-file. This is a powerfull way to share geographical information produced with |qg| that can be included in reports or published.
 
 The Print Composer provides growing layout and printing capabilities. It allows
-you to add elements such as the |qg| map canvas, text labels, images, legends, scale bars, basic
+you to add items such as the |qg| map canvas, text labels, images, legends, scale bars, basic
 shapes, arrows, attribute tables and HTML frames. You can size, group, align and position each
-element and adjust the properties to create your layout. The layout can be printed
+item and adjust the properties to create your layout. The layout can be printed
 or exported to image formats, PostScript, PDF or to SVG (export to SVG is not
 working properly with some recent Qt4 versions; you should try and check
 individually on your system). You can save the layout as a template and load it again
@@ -112,7 +112,7 @@ Overview of the Print Composer
 
 Opening the Print Composer provides you with a blank canvas that represents the paper surface when print. Initially you can find on the buttons on the left beside the panel to add map composer items; the current |qg| map canvas, text labels, images, legends, scale bars, basic shapes, arrows, attribute tables and HTML frames. In this toolbar you also find the toolbar buttons to navigate, zoomin on a part of the canvas and pan the view on the composer, the button to select the map composer item and the button the move the contents of the map item.  
 
-Figure_composer_overview_ shows the initial view of the Print Composer before any elements are added.
+Figure_composer_overview_ shows the initial view of the Print Composer before any items are added.
 
 .. _Figure_composer_overview:
 
@@ -135,13 +135,13 @@ The upper panel holds the tabs :guilabel:`Items` and :guilabel:`Command History`
 * The :guilabel:`Composition` tab allows you to set paper size, orientation, the page
   background, number of pages and print quality for the output file in dpi. Furthermore, you 
   can also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means
-  all elements will be rastered before printing or saving as PostScript or PDF.
+  all items will be rastered before printing or saving as PostScript or PDF.
   In this tab, you can also customize settings for grid and smart guides.
 * The :guilabel:`Item Properties` tab displays the properties for the selected
-  item element. Click the |mActionSelect| :sup:`Select/Move item` icon to select
-  an element (e.g., legend, scale bar or label) on the canvas. Then click the
+  item item. Click the |mActionSelect| :sup:`Select/Move item` icon to select
+  an item (e.g., legend, scale bar or label) on the canvas. Then click the
   :guilabel:`Item Properties` tab and customize the settings for the selected
-  element.
+  item.
 * The :guilabel:`Atlas generation` tab allows you to enable the generation of an
   atlas for the current Composer and gives access to its parameters.
 * Finally, you can save your print composition with the |mActionFileSave| :sup:`Save Project` button. 
@@ -149,10 +149,10 @@ The upper panel holds the tabs :guilabel:`Items` and :guilabel:`Command History`
 In the bottom part of the Print Composer window, you can find a status bar with 
 mouse position, current page number and a combo box to set the zoom level.
 
-You can add multiple elements to the Composer. It is also possible to have more
+You can add multiple items to the Composer. It is also possible to have more
 than one map view or legend or scale bar in the Print Composer canvas, on one or
-several pages. Each element has its own properties and, in the case of the map,
-its own extent. If you want to remove any elements from the Composer canvas you
+several pages. Each item has its own properties and, in the case of the map,
+its own extent. If you want to remove any items from the Composer canvas you
 can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 
 Navigation tools
@@ -212,7 +212,7 @@ In the :guilabel:`Composition` tab, you can define the global settings of your c
 * You can choose one of the :guilabel:`Presets` for your paper sheet, or enter your custom :guilabel:`width` and :guilabel:`height`.
 * Composition can now be divided into several pages. For instance, a first page can show a map canvas, and a second
   page can show the attribute table associated with a layer, while a third one shows an HTML frame linking to your organization website.
-  Set the :guilabel:`Number of pages` to the desired value. You can choose the page :guilabel:`Orientation` and its :guilabel:`Exported resolution`. When checked, |checkbox| :guilabel:`print as raster` means all elements will be rasterized before printing or saving as PostScript or
+  Set the :guilabel:`Number of pages` to the desired value. You can choose the page :guilabel:`Orientation` and its :guilabel:`Exported resolution`. When checked, |checkbox| :guilabel:`print as raster` means all items will be rasterized before printing or saving as PostScript or
   PDF.
 * :guilabel:`Grid` lets you customize grid settings like :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`tolerance` to your need.
 * In :guilabel:`Snap to alignments`, you can change the :guilabel:`Tolerance`, which is the maximum distance below which an item is snapped to smart guides.
@@ -240,7 +240,7 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
 
 * The :guilabel:`Position and size` dialog lets you define size and position of the frame that contains the item. You can also choose
   which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
-* The :guilabel:`Rotation` sets the rotation of the element (in degrees).
+* The :guilabel:`Rotation` sets the rotation of the item (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the label.
   Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
 * The |checkbox| :guilabel:`Background` enables or disables a background color.
@@ -343,18 +343,18 @@ tab:
 
 **Cache** is the default preview mode for newly added Print Composer maps.
 
-You can resize the map element by clicking on the |mActionSelect|
-:sup:`Select/Move item` button, selecting the element, and dragging one of the
+You can resize the map item by clicking on the |mActionSelect|
+:sup:`Select/Move item` button, selecting the item, and dragging one of the
 blue handles in the corner of the map. With the map selected, you can now adapt
 more properties in the map :guilabel:`Item Properties` tab.
 
-To move layers within the map element, select the map element, click the
+To move layers within the map item, select the map item, click the
 |mActionMoveItemContent| :sup:`Move item content` icon and move the layers within
-the map element frame with the left mouse button. After you have found the right place
-for an element, you can lock the element position within the Print Composer
-canvas. Select the map element and use the toolbar |lock| 
+the map item frame with the left mouse button. After you have found the right place
+for an item, you can lock the item position within the Print Composer
+canvas. Select the map item and use the toolbar |lock| 
 :sup:`Lock Selected Layer` or the :menuselection:`Items` tab to Lock the 
-element. The element can only be unlocked using the :menuselection:`Items` 
+item. The item can only be unlocked using the :menuselection:`Items` 
 tab.
 
 .. _`composer_main_properties`:
@@ -379,10 +379,10 @@ following functionalities (see figure_composer_map_1_):
 * The **Preview** area allows you to define the preview modes 'Rectangle', 'Cache'
   and 'Render', as described above. If you change the view on the |qg| map canvas by changing
   vector or raster properties, you can update the Print Composer view by selecting the
-  map element in the Print Composer and clicking the **[Update preview]** button.
+  map item in the Print Composer and clicking the **[Update preview]** button.
 * The field :guilabel:`Scale` |selectnumber| sets a manual scale.
 * The field :guilabel:`Rotation` |selectnumber| allows you to
-  rotate the map element content clockwise in degrees. Note that a coordinate frame
+  rotate the map item content clockwise in degrees. Note that a coordinate frame
   can only be added with the default value 0.
 * |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed 
   on the map canvas in the main |qg| window.
@@ -426,7 +426,7 @@ functionalities (see figure_composer_map_2_):
 
 If you change the view on the |qg| map canvas by changing
 vector or raster properties, you can update the Print Composer view by selecting
-the map element in the Print Composer and clicking the **[Update preview]** button
+the map item in the Print Composer and clicking the **[Update preview]** button
 in the map :guilabel:`Item Properties` tab (see figure_composer_map_1_).
 
 .. index::
@@ -455,7 +455,7 @@ When you double click on the added grid you can give it another name.
    Map Grids Dialog |nix|
 
 After you have added a grid, you can active the checkbox |checkbox| :guilabel:`Show grid` to overlay a grid onto the
-map element. Expand this option to provides a lot of configuration options, see Figure_composer_map_4_.
+map item. Expand this option to provides a lot of configuration options, see Figure_composer_map_4_.
 
 .. _Figure_composer_map_4:
 
@@ -558,7 +558,7 @@ When you select the overview item in the list you can customize it.
 The Label item
 --------------
 
-To add a label, click the |mActionLabel| :sup:`Add label` icon, place the element
+To add a label, click the |mActionLabel| :sup:`Add label` icon, place the item
 with the left mouse button on the Print Composer canvas and position and customize
 its appearance in the label :guilabel:`Item Properties` tab.
 
@@ -602,7 +602,7 @@ Alignment and Display
 The Image item
 --------------
 
-To add an image, click the |mActionAddImage| :sup:`Add image` icon, place the element
+To add an image, click the |mActionAddImage| :sup:`Add image` icon, place the item
 with the left mouse button on the Print Composer canvas and position and customize
 its appearance in the image :guilabel:`Item Properties` tab.
 
@@ -692,7 +692,7 @@ The Legend item
 ---------------
 
 To add a map legend, click the |mActionAddLegend| :sup:`Add new legend` icon,
-place the element with the left mouse button on the Print Composer canvas and
+place the item with the left mouse button on the Print Composer canvas and
 position and customize the appearance in the legend :guilabel:`Item Properties`
 tab.
 
@@ -770,7 +770,7 @@ provides the following functionalities (see figure_composer_legend_3_):
     in the map will be listed in the legend.
 
   After changing the symbology in the |qg| main window, you can click on **[Update]** to 
-  adapt the changes in the legend element of the Print Composer. 
+  adapt the changes in the legend item of the Print Composer. 
 
 
 
@@ -842,7 +842,7 @@ The Scale Bar item
 ------------------
 
 To add a scale bar, click the |mActionScaleBar| :sup:`Add new scalebar` icon, place
-the element with the left mouse button on the Print Composer canvas and position
+the item with the left mouse button on the Print Composer canvas and position
 and customize the appearance in the scale bar :guilabel:`Item Properties` tab.
 
 The :guilabel:`Item properties` of a scale bar item tab provides the following
@@ -972,7 +972,7 @@ The Basic Shape Items
 ---------------------
 
 To add a basic shape (ellipse, rectangle, triangle), click the |mActionAddBasicShape| :sup:`Add basic shape` icon 
-or the |mActionAddArrow| :sup:`Add Arrow` icon, place the element holding down the left mouse. Customize the 
+or the |mActionAddArrow| :sup:`Add Arrow` icon, place the item holding down the left mouse. Customize the 
 appearance in the :guilabel:`Item Properties` tab. 
 
 When you also hold down the :kbd:`Shift` key while placing the basic shape you can create a perfect square, 
@@ -1004,7 +1004,7 @@ For the rectangle shape, you can set the value of the corner radius to round of 
 The Arrow item
 --------------
 
-To add an arrow, click the |mActionAddArrow| :sup:`Add Arrow` icon, place the element holding 
+To add an arrow, click the |mActionAddArrow| :sup:`Add Arrow` icon, place the item holding 
 down the left mouse button and drag a line to draw the arrow on the Print Composer canvas and 
 position and customize the appearance in the scale bar :guilabel:`Item Properties` tab.
 
@@ -1064,7 +1064,7 @@ The Attribute Table item
 
 It is possible to add parts of a vector attribute table to the Print Composer
 canvas: Click the |mActionOpenTable| :sup:`Add attribute table` icon, place the 
-element with the left mouse button on the Print Composer canvas, and position and 
+item with the left mouse button on the Print Composer canvas, and position and 
 customize the appearance in the :guilabel:`Item Properties` tab.
 
 The :guilabel:`Item properties` of an attribute table item tab provides the following
@@ -1314,7 +1314,7 @@ The HTML frame item
 It is possible to add a frame that displays the contents of a website or even create and style
 your own HTML page and display it!
  
-Click the |mActionAddHtml| :sup:`Add HTML frame` icon, place the element by dragging a 
+Click the |mActionAddHtml| :sup:`Add HTML frame` icon, place the item by dragging a 
 rectangle holding down the left mouse button on the Print Composer canvas and position 
 and customize the appearance in the :guilabel:`Item Properties` tab 
 (see figure_composer_html_1_).
@@ -1447,7 +1447,7 @@ the HTML frame :guilabel:`Item Properties` tab provides the following functional
 * Use the **[Update HTML]** button to see the result of the stylesheet settings.
 
 
-.. index:: Elements_Alignment
+.. index:: Items_Alignment
 
 Manage items
 ============
@@ -1493,10 +1493,10 @@ to invert the current selection.
 Alignment
 --------------
 
-Raising or lowering functionalities for elements are inside the |mActionRaiseItems|
-:sup:`Raise selected items` pull-down menu. Choose an element on the Print Composer
+Raising or lowering functionalities for items are inside the |mActionRaiseItems|
+:sup:`Raise selected items` pull-down menu. Choose an item on the Print Composer
 canvas and select the matching functionality to raise or lower the selected
-element compared to the other elements (see table_composer_1_). This order is 
+item compared to the other items (see table_composer_1_). This order is 
 shown in the :menuselection:`Items` tab. You can also raise or lower objects 
 in the :menuselection:`Items` tab by clicking and dragging an object's label 
 in this list.
@@ -1514,8 +1514,8 @@ in this list.
 
 There are several alignment functionalities available within the |mActionAlignLeft|
 :sup:`Align selected items` pull-down menu (see table_composer_1_). To use an
-alignment functionality, you first select some elements and then click on the
-matching alignment icon. All selected elements will then be aligned within to their common
+alignment functionality, you first select some items and then click on the
+matching alignment icon. All selected items will then be aligned within to their common
 bounding box.
 When moving items on the Composer canvas, alignment helper lines appear when borders, centers or corners are aligned.
 
@@ -1525,7 +1525,7 @@ Copy/Cut and Paste items
 ------------------------
 The print composer includes actions to use the common Copy/Cut/Paste functionality for the items
 in the layout. As usual first you need to select the items using one of the options seen above;
-at this point the actions can be found in the :menuselection:`Edit` menu. When using the Paste action, the elements
+at this point the actions can be found in the :menuselection:`Edit` menu. When using the Paste action, the items
 will be pasted according to the current mouse position.
 
 .. note::
@@ -1648,7 +1648,7 @@ Creating Output
 ===============
 
 Figure_composer_31_ shows the Print Composer with an example print layout,
-including each type of map element described in the sections above.
+including each type of map item described in the sections above.
 
 .. _figure_composer_31:
 
