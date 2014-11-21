@@ -17,10 +17,10 @@ The National Land Survey of Finland has an open data policy that allows you down
 
 * Open QGIS and set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN` in :menuselection:`Project --> Project Properties --> CRS`.
 * Make sure that :guilabel:`Enable 'on the fly' CRS transformation` is checked.
-* From the :kbd:`exercise_data\\forestry\\` folder, add the CIR image :kbd:`rautjarvi_aerial.tif` and containing the digitized lakes.
+* From the :kbd:`exercise_data\\forestry\\` folder, add the CIR image :kbd:`rautjarvi_aerial.tif` that is containing the digitized lakes.
 * Then save the QGIS project as :kbd:`digitizing_2012.qgs`.
 
-The CIR images are from 2012. You can compare the stands that were created in 1994 with the situation almost 20 years ago.
+The CIR images are from 2012. You can compare the stands that were created in 1994 with the situation almost 20 years later.
 
 * Add your :kbd:`forest_stands_1994.shp` layer.
 * Set its styling so that you can see through your polygons.
@@ -55,7 +55,7 @@ Some ideas about what you could identify from the images:
 * When a forest stand age changes, by looking at the  sizes of the tree crowns that can be identified in the imagery.
 * The different forest stands' densities, for example forest stand were a thinning operation has recently been done would clearly show spaces between the tree crowns and should be easy to differentiate from other forest stands around it.
 * Blueish areas indicate barren terrain, roads and urban areas, crops that have not started to grow etc.
-* Don't use zooms too close to the image when trying to identify forest stands a scale between 1:3 000 and 1: 5 000 should be enough for this imagery. See the image below (1 : 4 000 scale):
+* Don't use zooms too close to the image when trying to identify forest stands. A scale between 1:3 000 and 1: 5 000 should be enough for this imagery. See the image below (1 : 4 000 scale):
 
 .. image:: /static/training_manual/forestry/zoom_to_CIR_1-4000.png
    :align: center
@@ -103,12 +103,12 @@ For the protection of the squirrels locations, you are going to add a new attrib
 
 To join the information about the squirrels to your forest stands, you can use the :guilabel:`Join attributes by location`:
 
-* Open menu:`Vector --> Data Management Tools --> Join attributes by location`.
-* Set the :kbd:`forest_stands_2012.shp` layer as the gui:`Target vector layer`.
-* As gui:`Join vector layer` select the :kbd:`squirrel.shp` point layer.
+* Open :menuselection:`Vector --> Data Management Tools --> Join attributes by location`.
+* Set the :kbd:`forest_stands_2012.shp` layer as the :guilabel:`Target vector layer`.
+* As :guilabel:`Join vector layer` select the :kbd:`squirrel.shp` point layer.
 * Name the output file as :kbd:`stands_squirrel.shp`.
-* In gui:`Output table` select gui:`Keep all records (including non-matching target records)`. So that you keep all the forest stands in the layer instead of only keeping those that are spatially related to the squirrel locations.
-* Click gui:`OK`.
+* In :guilabel:`Output table` select :guilabel:`Keep all records (including non-matching target records)`. So that you keep all the forest stands in the layer instead of only keeping those that are spatially related to the squirrel locations.
+* Click :guilabel:`OK`.
 * Select :guilabel:`Yes` when prompted to add the layer to the TOC.
 * Close the dialogue box.
 
@@ -117,7 +117,7 @@ To join the information about the squirrels to your forest stands, you can use t
    
 Now you have a new forest stands layer, :kbd:`stands_squirrel` where there are new attributes corresponding to the protection information related to the Siberian flying squirrel.
 
-Open the table of the new layer and order it so that the forest stands with information for the :guilabel:`Protection` attribute. You should have now two forest stands where the squirrel has been located:
+Open the table of the new layer and order it so that the forest stands with information for the :guilabel:`Protection` attribute are on top. You should have now two forest stands where the squirrel has been located:
 
 .. image:: /static/training_manual/forestry/joined_squirrel_point.png
    :align: center
