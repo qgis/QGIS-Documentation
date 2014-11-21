@@ -1706,7 +1706,7 @@ With the |mActionFileSaveAs| :sup:`Save as template` and |mActionFileOpen|
 session as a  :file:`.qpt` template and load the template again in another session.
 
 The  |mActionComposerManager| :sup:`Composer Manager` button in the |qg| toolbar
-and in :menusele
+and in :menuselection:`Composer --> Composer Manager` allows you to add a new Composer
 template, create a new composition based on a previously saved template or to manage 
 already existing templates.
 
