@@ -31,7 +31,7 @@ Schemas contained in your database.
 Schemas are a way of grouping data tables and other objects in a PostgreSQL 
 database and a container for permissions and other constraints. Managing 
 PostgreSQL schemas is beyond the scope of this manual, but you can find 
-more information about them in the `PostgreSQL  documentation 
+more information about them in the `PostgreSQL documentation on Schemas
 <http://www.postgresql.org/docs/9.1/static/ddl-schemas.html>`_.
 You can use the DB Manager to create new Schemas, but will need to use a tool
 like pgAdmin III or the command line interface to manage them effectively.
@@ -151,7 +151,7 @@ Thats it! PostgreSQL will perform the operation. Depending on how big your
 table is, this may take some time to complete.
 
 You can find more information about the VACUUM ANALYZE process in the
-`PostgreSQL Documentation 
+`PostgreSQL Documentation on VACUUM ANALYZE
 <http://www.postgresql.org/docs/9.1/static/sql-vacuum.html>`_ 
 
 |basic| |FA| Executing SQL Queries with DB Manager

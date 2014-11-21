@@ -268,7 +268,7 @@ this:
 
 Now there are no unnecessary subdivisions.
 
-.. _backlink-vector-analysis-basic-2:
+.. _backlink-vector-analysis-basic-3:
 
 |basic| |TY| Distance from schools
 -------------------------------------------------------------------------------
@@ -350,7 +350,7 @@ the selected buildings as a new layer.
 Now you have the selection as a separate layer and can remove the
 :kbd:`houses_34S` layer.
 
-.. _backlink-vector-analysis-basic-3:
+.. _backlink-vector-analysis-basic-4:
 
 |moderate| |TY| Further Filter our Buildings
 -------------------------------------------------------------------------------

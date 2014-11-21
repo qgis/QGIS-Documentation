@@ -55,7 +55,7 @@ Now you can run your program by typing this from your command prompt::
   python hello_world.py
 
 
-|advanced| |FA| Defining the interpreter in the file
+|hard| |FA| Defining the interpreter in the file
 ----------------------------------------------------
 
 It would be more convenient if we could just run the file directly. You can do

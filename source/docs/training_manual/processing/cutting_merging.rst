@@ -76,6 +76,6 @@ The slope produced by the *Slope, Aspect, Curvature* algorithm is expressed in r
 
 Reprojecting the converted slope layer back with the *Reproject raster layer*, we get the final layer we wanted.
 
-.. todo:: Add image
+.. warning:: todo: Add image
 
 The reprojection processes have caused the final layer to contain data outside the bounding box that we calculated in one of the first steps. This can be solved by clipping it again, as we did to obtain the base DEM.

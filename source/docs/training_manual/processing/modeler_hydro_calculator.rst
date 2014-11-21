@@ -44,7 +44,7 @@ Click on *OK* and your model should look like this.
 
 We are not using the numeric input that we added to the model, so it can be removed. Right--click on it and select *Remove*
 
-.. todo:: Add image
+.. warning:: todo: Add image
 
 Our new model is now finished.
 
