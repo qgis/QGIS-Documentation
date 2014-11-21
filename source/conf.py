@@ -1076,6 +1076,10 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionLocalHistogramStretch| image:: /static/common/mActionLocalHistogramStretch.png
    :width: 1.5em
+.. |locked| image:: /static/common/locked.png
+   :width: 1.5em
+.. |unlocked| image:: /static/common/unlocked.png
+   :width: 1.5em
 
 .. |basic| image:: /static/training_manual/global/basic.png
 .. |moderate| image:: /static/training_manual/global/moderate.png
