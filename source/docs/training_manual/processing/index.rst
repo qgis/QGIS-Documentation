@@ -41,5 +41,7 @@ Contents:
    batch_modeler
    more_backends
    interp_contour
+   generalize
+   solar
 
 
