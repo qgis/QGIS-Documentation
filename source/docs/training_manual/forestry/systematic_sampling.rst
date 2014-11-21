@@ -1,7 +1,7 @@
 |LS| Systematic Sampling Design
 ===============================================================================
 
-You have already digitized a set of polygons that represent the forest stands, but you don't have information about the forest just yet.  For that purpose you can design a survey to inventory the whole forest area and then estimate its parameters. In this lesson you will create a systematic set of sampling plots.
+You have already digitized a set of polygons that represent the forest stands, but you don't have information about the forest just yet. For that purpose you can design a survey to inventory the whole forest area and then estimate its parameters. In this lesson you will create a systematic set of sampling plots.
 
 When you start planning your forest inventory it is important to clearly define the objectives, the types of sample plots that will be used, and the data that will be collected to achieve the objectives. For each individual case, those will depend on the type of forest and the management purpose; and should be carefully planned by someone with forestry knowledge. In this lesson, you will implement a theoretical inventory based on a systematic sampling plot design.
 
@@ -86,7 +86,7 @@ The field teams will be probably using a GPS device to locate the sample plots y
 * In :guilabel:`Format` select :guilabel:`GPS eXchange Format [GPX]`.
 * Save the output as :kbd:`plots_wgs84.gpx`.
 * In :guilabel:`CRS` select :guilabel:`Selected CRS`.
-* Browse for as :kbd:`WGS 84 (EPSG:4326)`.
+* Browse for :kbd:`WGS 84 (EPSG:4326)`.
 
 ..note:: The :kbd:`GPX` format accepts only this CRS, if you select a different one, QGIS will give no error but you will get an empty file.
 
