@@ -312,6 +312,7 @@ Map tools Menu
 --------------
 
 This menu offers some options regarding the behaviour of the :guilabel:`Identify tool`.
+
 * :guilabel:`Search radius for identifying and displaying map tips` is a tolerance factor
   expressed as a percentage of the map width. This means the identify tool will depict results
   as long as you click within this tolerance.

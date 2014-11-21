@@ -17,7 +17,7 @@ Activate the Heatmap plugin
 ---------------------------
 
 First this core plugin needs to be activated using the Plugin Manager (see
-:ref:`load_core_plugin`). After activation, the heatmap icon |heatmap|
+:ref:`managing_plugins`). After activation, the heatmap icon |heatmap|
 can be found in the Raster Toolbar, and under the :menuselection:`Raster --> Heatmap`
 menu.
 

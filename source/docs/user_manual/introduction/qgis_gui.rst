@@ -174,7 +174,7 @@ Menu Option                                                          Shortcut   
 |mActionAddWmsLayer| :guilabel:`Add WMS/WMTS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
 |wcs| :guilabel:`Add WCS Layer`                                      \                     see :ref:`ogc-wcs`                          :guilabel:`Manage Layers`
 |wfs| :guilabel:`Add WFS Layer`                                      \                     see :ref:`ogc-wfs`                          :guilabel:`Manage Layers`
-|mActionAddDelimitedTextLayer| :guilabel:`Add Delimited Text Layer`  \                     see :ref:`label_dltext`                     :guilabel:`Manage Layers`
+|mActionAddDelimitedTextLayer| :guilabel:`Add Delimited Text Layer`  \                     see :ref:`vector_csv`                       :guilabel:`Manage Layers`
 |mActionEditCopy| :guilabel:`Copy style`                             \                     see :ref:`vector_style_menu`                \
 |mActionEditPaste| :guilabel:`Paste style`                           \                     see :ref:`vector_style_menu`                \
 |mActionOpenTable| :guilabel:`Open Attribute Table`                  \                     see :ref:`sec_attribute_table`              :guilabel:`Attributes`
