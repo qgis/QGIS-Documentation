@@ -105,12 +105,13 @@ and vector layers in the |qg| map canvas and adapt their properties to suit your
 own convenience. After everything is rendered and symbolized to your liking,
 click the |mActionNewComposer| :sup:`New Print Composer` icon in the toolbar or
 choose :menuselection:`File --> New Print Composer`. You will be prompted to
-choose a title for the new Composer. For the first session give it the name 'Sample session'.
+choose a title for the new Composer.
+
 
 Overview of the Print Composer
 ------------------------------
 
-Opening the Print Composer provides you with a blank canvas that represents the paper surface when print. Initially you can find on the buttons on the left beside the panel to add map composer items; the current |qg| map canvas, text labels, images, legends, scale bars, basic shapes, arrows, attribute tables and HTML frames. In this toolbar you also find the toolbar buttons to navigate, zoomin on a part of the canvas and pan the view on the composer, the button to select the map composer item and the button the move the contents of the map item.  
+Opening the Print Composer provides you with a blank canvas that represents the paper surface when using the print option. Initially you find buttons on the left beside the canvas to add map composer items; the current |qg| map canvas, text labels, images, legends, scale bars, basic shapes, arrows, attribute tables and HTML frames. In this toolbar you also find toolbar buttons to navigate, zoom in on an area and pan the view on the composer and toolbar buttons to select a map composer item and to move the contents of the map item.  
 
 Figure_composer_overview_ shows the initial view of the Print Composer before any elements are added.
 
@@ -135,16 +136,17 @@ The upper panel holds the tabs :guilabel:`Items` and :guilabel:`Command History`
 * The :guilabel:`Composition` tab allows you to set paper size, orientation, the page
   background, number of pages and print quality for the output file in dpi. Furthermore, you 
   can also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means
-  all elements will be rastered before printing or saving as PostScript or PDF.
+  all items will be converted to raster before printing or saving as PostScript or PDF.
   In this tab, you can also customize settings for grid and smart guides.
 * The :guilabel:`Item Properties` tab displays the properties for the selected
   item element. Click the |mActionSelect| :sup:`Select/Move item` icon to select
-  an element (e.g., legend, scale bar or label) on the canvas. Then click the
+  an item (e.g., legend, scale bar or label) on the canvas. Then click the
   :guilabel:`Item Properties` tab and customize the settings for the selected
-  element.
+  item.
 * The :guilabel:`Atlas generation` tab allows you to enable the generation of an
   atlas for the current Composer and gives access to its parameters.
-* Finally, you can save your print composition with the |mActionFileSave| :sup:`Save Project` button. 
+* Finally, you can save your print composition with the |mActionFileSave| 
+  :sup:`Save Project` button. 
 
 In the bottom part of the Print Composer window, you can find a status bar with 
 mouse position, current page number and a combo box to set the zoom level.
@@ -154,6 +156,7 @@ than one map view or legend or scale bar in the Print Composer canvas, on one or
 several pages. Each element has its own properties and, in the case of the map,
 its own extent. If you want to remove any elements from the Composer canvas you
 can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
+
 
 Navigation tools
 ^^^^^^^^^^^^^^^^
@@ -527,7 +530,7 @@ map, just like a normal map.
 * With the up and down button you can move an overview in the list and set the drawing priority.
 
 Open :guilabel:`Overviews` and press the green plus icon-button to add an overview. 
-Initially this overview is named 'Overview 1' (see Figure_composer_7_). 
+Initially this overview is named 'Overview 1' (see Figure_composer_map_7_). 
 You can change the name when you double-click on the overview item in the list 
 named 'Overview 1' and change it to another name. 
 
@@ -950,11 +953,11 @@ provide the following functionalities (see figure_composer_scalebar_5_):
 
 You can define the fonts and colors used for the scale bar.
 
-* Use the **[Font]** button the set the font
+* Use the **[Font]** button to set the font
 * :guilabel:`Font color`: set the font color
 * :guilabel:`Fill color`: set the first fill color 
 * :guilabel:`Secondary fill color`: set the second fill color 
-* :guilabel:`Stroke color`: set the corol of the lines of the Scale Bare
+* :guilabel:`Stroke color`: set the color of the lines of the Scale Bare
 
 Fill colors are only used for scale box styles Single Box and Double Box. 
 To select a color you can use the list option using the dropdown arrow to open 
@@ -1256,9 +1259,9 @@ figure_composer_table_7_):
 
    Attribute table Fonts and text styling Dialog |nix|
 
-* You can define :guilabel:`Font` and :guilabel:`Color` for :guilabel:`Table header` 
+* You can define :guilabel:`Font` and :guilabel:`Color` for :guilabel:`Table heading` 
   and :guilabel:`Table contents`.
-* For :guilabel:`Table header` you can additionally set the :guilabel:`Alignment` and
+* For :guilabel:`Table heading` you can additionally set the :guilabel:`Alignment` and
   choose from `Follow column alignment`, `Left`, `Center` or `Right`. The column
   alignment is set using the :guilabel:`Select Attributes` dialog (see Figure_composer_table_3_ ).  
 
@@ -1547,13 +1550,13 @@ within text labels.
 
 Every page will be generated with each feature. To enable the generation
 of an atlas and access generation parameters, refer to the `Atlas generation`
-tab. This tab contains the following widgets (see Figure_composer_30_):
+tab. This tab contains the following widgets (see Figure_composer_atlas_):
 
-.. _figure_composer_30:
+.. _figure_composer_atlas:
 
 .. only:: html
 
-   **Figure Composer 30:**
+   **Figure Composer Atlas:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_atlas.png
    :align: center
@@ -1627,14 +1630,14 @@ If you need to print just a page of the atlas, simply start the preview function
 Creating Output
 ===============
 
-Figure_composer_31_ shows the Print Composer with an example print layout,
+Figure_composer_output_ shows the Print Composer with an example print layout,
 including each type of map element described in the sections above.
 
-.. _figure_composer_31:
+.. _figure_composer_output:
 
 .. only:: html
 
-   **Figure Composer 31:**
+   **Figure Composer Output:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_complete.png
    :align: center
@@ -1682,11 +1685,11 @@ and in :menuselection:`Composer --> Composer Manager` allows you to add a new Co
 template, create a new composition based on a previously saved template or to manage 
 already existing templates.
 
-.. _figure_composer_32:
+.. _figure_composer_manager:
 
 .. only:: html
 
-   **Figure Composer 32:**
+   **Figure Composer Manager:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_manager.png
    :align: center
