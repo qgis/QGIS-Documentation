@@ -663,7 +663,7 @@ in the |qg| map canvas (i.e., a rotated north arrow) with the appropriate Print 
 
 It is also possible to select a north arrow directly. If you first select a north arrow image from 
 **Search directories**  and then use the browse button |browsebutton| of the field :guilabel:`Image source`, 
-you can now select one of the north arrow from the list as displayed in figure_composer_13_. 
+you can now select one of the north arrow from the list as displayed in figure_composer_image_2_. 
 
 .. note:: 
 
@@ -1430,13 +1430,16 @@ the HTML frame :guilabel:`Item Properties` tab provides the following functional
   will result in better choice of page break location, but more wasted space at the bottom 
   of frames. This is only used when :guilabel:`Use smart page breaks` is activated.
 * Activate |checkbox| :guilabel:`User stylesheet` to apply HTML styles that often is provided 
-  in cascading style sheets. An example of style code is provide below to set the fontsize 
-  of text included in paragraph tags ``<p>`` to 20 pixels.
+  in cascading style sheets. An example of style code is provide below to set the color of
+  ``<h1>`` header tag to green and set the font and fontsize of text included in paragraph 
+  tags ``<p>``.
 
-  .. 
+  .. code-block:: css 
 
-     p {
-        font-size: 20px
+     h1 {color: #00ff00;
+     }
+     p {font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
      }
 
 * Use the **[Update HTML]** button to see the result of the stylesheet settings.

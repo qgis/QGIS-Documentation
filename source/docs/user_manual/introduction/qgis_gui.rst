@@ -366,9 +366,9 @@ Content**, **Expand All** or **Collapse All** and **Remove Layer or Group**.
    **Figure Layer tools Bar:**
 
    .. figure:: /static/user_manual/introduction/layer_toobar.png
-       :align: center
+      :align: center
 
-        Layer Tool Bar in Map Legend |nix|
+      Layer Tool Bar in Map Legend |nix|
 
 The button |mActionShowPresets| allows you to add **Presets** views in the legend. It means that you can choose to display some layer with specific categorization and add this view to the **Presets** list. To add a preset view just click on |mActionShowPresets|, choose *Add Preset...* from the drop down menu and give a name to the preset. After that you will see a list with all the presets that you can recall pressing on the |mActionShowPresets| button. 
 
