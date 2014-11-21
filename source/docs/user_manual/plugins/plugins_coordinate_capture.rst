@@ -28,8 +28,8 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
    right-hand corner of the status bar.
 #. Click on the |checkbox| `Enable on the fly projection` checkbox and select
    a projected coordinate system of your choice (see also :ref:`label_projections`).
-#. Load the coordinate capture plugin in the Plugin Manager (see
-   :ref:`load_core_plugin`) and ensure that the dialog is visible by going to
+#. Activate the coordinate capture plugin in the Plugin Manager (see
+   :ref:`managing_plugins`) and ensure that the dialog is visible by going to
    :menuselection:`View --> Panels` and ensuring that |checkbox|
    :guilabel:`Coordinate Capture` is enabled. The coordinate capture dialog
    appears as shown in Figure figure_coordinate_capture_1_. Alternatively,

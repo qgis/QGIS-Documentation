@@ -490,22 +490,22 @@ always oriented to the north and doesn't depend on the orientation of the label.
 with the :guilabel:`Blur radius`. The higher the number, the softer the shadows. The appearance of the drop shadow can also be altered by choosing a blend mode (see blend_modes_).
 
 
-.. FIXME: at the moment there is an error in this setting
+.. comment FIXME: at the moment there is an error in this setting
 
-.. |checkbox| :guilabel:`Blur only alpha pixels`:
-.. It is supposed to show only those
-.. pixels that have a partial alpha component beyond the base opaque pixels of
-.. the component being blurred. For example, if you set the shadow of some
-.. text to be gray and turn on that option, it should still show a duplication
-.. of the text, colored as per the shadow color option, but with any blurred
-.. shadow that extends beyond its text. With the option off, in this example,
-.. it will blur all pixels of the duplicated text.
-.. This is useful for creating a shadow that increases legibility at smaller
-.. output sizes, e.g. like duplicating text and offsetting it a bit in
-.. illustration programs, while still showing a bit of shadow at larger sizes.
-.. Apparently, there is an error with re-painting the opaque pixels back over
-.. top of the shadow (depending upon the shadow's color), when that setting is
-.. used.
+   |checkbox| :guilabel:`Blur only alpha pixels`:
+   It is supposed to show only those
+   pixels that have a partial alpha component beyond the base opaque pixels of
+   the component being blurred. For example, if you set the shadow of some
+   text to be gray and turn on that option, it should still show a duplication
+   of the text, colored as per the shadow color option, but with any blurred
+   shadow that extends beyond its text. With the option off, in this example,
+   it will blur all pixels of the duplicated text.
+   This is useful for creating a shadow that increases legibility at smaller
+   output sizes, e.g. like duplicating text and offsetting it a bit in
+   illustration programs, while still showing a bit of shadow at larger sizes.
+   Apparently, there is an error with re-painting the opaque pixels back over
+   top of the shadow (depending upon the shadow's color), when that setting is
+   used.
 
 
 Choose the :guilabel:`Placement` menu for the label placement and the labeling priority. Using the
