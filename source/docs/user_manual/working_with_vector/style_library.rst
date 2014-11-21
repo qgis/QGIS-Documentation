@@ -48,14 +48,15 @@ member of a group, have a string in its name, etc.)
 Add, edit, remove symbol
 -------------------------
 
-With the :guilabel:`Style manager` from the **[Symbol]** |selectstring| menu you can administer your
-symbols. You can |mActionSignPlus| :sup:`add item`, |edit|:sup:`edit item`, |mActionSignMinus| 
-:sup:`remove item` and |user| :sup:`share item`. 'Marker' symbols, 'Line' 
-symbols, 'Fill' patterns and 'colour ramps' can be used to create the symbols 
-(see defining_symbols_). The symbols are then assigned to 'All Symbols', 'Groups' 
-or 'Smart groups'.
+With the :guilabel:`Style manager` from the **[Symbol]** |selectstring| menu you 
+can manage your symbols. You can |mActionSignPlus| :sup:`add item`, 
+|edit|:sup:`edit item`, |mActionSignMinus| :sup:`remove item` and 
+|user| :sup:`share item`. 'Marker' symbols, 'Line' symbols, 'Fill' patterns and 
+'colour ramps' can be used to create the symbols. 
+The symbols are then assigned to 'All Symbols', 'Groups' or 'Smart groups'.
 
 For each kind of symbols, you will find always the same dialog structure:
+
 * at the top left side a symbol representation 
 * under the symbol representation the symbol tree show the symbol layers
 * at the right you can setup some parameter (unit,transparency, color, size 
@@ -70,7 +71,9 @@ More detailed settings can be made when clicking on the second level in the
 combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
 Settings will be shown later in this chapter.
 
-.. tip:: Note that once you have set the size in the lower levels of the 
+.. tip:: 
+
+   Note that once you have set the size in the lower levels of the 
    :guilabel:`Symbol layers` dialog, the size of the whole symbol can be changed 
    with the :guilabel:`Size` menu in the first level again. The size of the lower 
    levels changes accordingly, while the size ratio is maintained.
