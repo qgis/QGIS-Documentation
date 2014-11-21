@@ -138,6 +138,10 @@ Furthermore, you can restrict the maximum size of the maps returned by the
 GetMap request by entering the maximum width and height into the respective
 fields under :guilabel:`Maximums for GetMap request`.
 
+If one of your layers uses the Map Tip display (i.e. to show text using expressions)
+this will be listed inside the GetFeatureInfo output. If the layer uses a Value Map for one
+of his attributes, also this information will be shown in the GetFeatureInfo output.
+
 **WFS capabilities**
 
 In the :guilabel:`WFS capabilities` area, you can select the layers that you
@@ -250,7 +254,10 @@ To log requests send to server, set the following environment variables:
     SetEnv QGIS_SERVER_LOG_LEVEL 0 
 
 **Note**
-When using Fcgid module use FcgidInitialEnv instead of SetEnv!
+
+* When using Fcgid module use FcgidInitialEnv instead of SetEnv!
+
+* Server logging is enabled also if executable is compiled in release mode.
 
 Environment variables
 .....................
