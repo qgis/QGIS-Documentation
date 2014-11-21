@@ -604,19 +604,20 @@ Note that any proxy settings you may have set in your preferences are also recog
 
    Adding a WFS layer |nix|
 
-.. in |qg| 1.8 the following checkbox seems to be missing, maybe the
+.. Commented out..
+   in |qg| 1.8 the following checkbox seems to be missing, maybe the
    loading of features is allready prevented by default when it is not
    the first layer loaded? This needs to be checked..
 
-.. Without using the checkbox |checkbox|
-.. :guilabel:`Only request features overlapping the current view extent`
-.. |qg| fetches all features from the WFS-server. If you
-.. only want to have a small selection based on your extent, zoom to the area
-.. of interest, request the WFS-layer again and make sure you have checked
-.. the checkbox mentioned above. Basically this adds the BBOX-parameter with
-.. the values from your current extent to the WFS-query. This is extremely
-.. useful when you only want to request **some** features from a huge
-.. WFS-dataset.
+   Without using the checkbox |checkbox|
+   :guilabel:`Only request features overlapping the current view extent`
+   QGIS fetches all features from the WFS-server. If you
+   only want to have a small selection based on your extent, zoom to the area
+   of interest, request the WFS-layer again and make sure you have checked
+   the checkbox mentioned above. Basically this adds the BBOX-parameter with
+   the values from your current extent to the WFS-query. This is extremely
+   useful when you only want to request **some** features from a huge
+   WFS-dataset.
 
 You'll notice the download progress is visualized in the lower left of the |QG|
 main window. Once the layer is loaded, you can identify and select a province or
