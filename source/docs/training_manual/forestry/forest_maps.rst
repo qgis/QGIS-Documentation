@@ -190,7 +190,7 @@ The basic map composer is ready, now you want to make use of the Atlas tool to g
 |basic| |FA| Creating an Atlas Coverage
 -------------------------------------------------------------------------------
 
-The Atlas coverage is just a vector layer that will be used to generate the detail maps, one map for every feature in the coverage. To get an idea of what you will do in the next , here is a full set of detail maps for the forest area:
+The Atlas coverage is just a vector layer that will be used to generate the detail maps, one map for every feature in the coverage. To get an idea of what you will do next, here is a full set of detail maps for the forest area:
 
 .. image:: /static/training_manual/forestry/preview_atlas_results.png
    :align: center
@@ -206,7 +206,7 @@ The coverage could be any existing layer, but usually it makes more sense to cre
 * Save the output as :kbd:`atlas_coverage.shp`.
 * Style the new :kbd:`atlas_coverage` layer so that the polygons have no filling.
 
-The new polygons are covering the whole forest area and you have already an they give you an idea of what each map (created from each polygon) will contain.
+The new polygons are covering the whole forest area and they give you an idea of what each map (created from each polygon) will contain.
 
 .. image:: /static/training_manual/forestry/atlas_coverage.png
    :align: center
@@ -284,7 +284,7 @@ Almost ready, now you have to tell the Atlas tool that you want some of the text
 * In  the :guilabel:`Item properties` tab, inside the :guilabel:`Main properties` click on :guilabel:`Insert an expression`.
 * In the :guilabel:`Function list` double click on the field :kbd:`Zone` under :guilabel:`Field and Values`.
 * Click :guilabel:`OK`.
-* The text inside the box in the :guilabel:`Item properties` should show :kbd:`Detail map inventory zone: [% "Zone" %]`. Note that the :kbd:`[% "Zone" %]` will be substituted by the value of the field :kbd:`Zone` for the corresponding feature from the :kbd:`atlas_coverage`.
+* The text inside the box in the :guilabel:`Item properties` should show :kbd:`Detail map inventory zone: [% "Zone" %]`. Note that the :kbd:`[% "Zone" %]` will be substituted by the value of the field :kbd:`Zone` for the corresponding feature from the layer :kbd:`atlas_coverage`.
 
 Test the contents of the label by looking at the different Atlas preview maps.
 
