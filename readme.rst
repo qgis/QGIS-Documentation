@@ -93,6 +93,31 @@ To add a new language (the scripts will need some directory structure):
 See the website in action: http://www.qgis.org
 
 
+Building the Documention using Docker
+-------------------------------------
+
+Docker is an open platform for distributed applications for developers and 
+sysadmins (https://www.docker.com/).
+
+Docker can be used on Linux, MacOS  and Windows.
+
+In order to use a docker instance to build the documentation, you need first 
+to create your local docker image.
+
+- install Docker (see https://docs.docker.com/installation/#installation)
+- clone the QGIS-sysadmin repository::
+
+   git clone git@github.com:qgis/QGIS-Sysadmin.git
+
+- build the docker image::
+   cd QGIS-Sysadmin/docker/sphinx
+   bash docker-build.sh
+
+- then you can go to your local QGIS-Documentation repository to build the doc::
+
+  cd QGIS-Documentation/
+  docker-run.sh LANG=fr html
+
 Building the Documentation using Paver
 --------------------------------------
 
