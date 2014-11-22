@@ -127,7 +127,7 @@ Installation
 ============
 
 The OpenStreetMap plugin is a core plugin inside QGIS. The 'OpenStreetMap' plugin
-can be selected in the Plugin Manager as described in section :ref:`load_core_plugin`.
+can be selected in the Plugin Manager as described in section :ref:`managing_plugins`.
 
 Basic user interface
 ====================

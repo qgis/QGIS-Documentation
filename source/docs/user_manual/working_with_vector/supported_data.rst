@@ -692,8 +692,8 @@ If you want to create a new SpatiaLite layer, please refer to section
    QSpatiaLite, SpatiaLite Manager or DB Manager (core plugin, recommended).
    If necessary, they can be downloaded and installed with the Plugin Installer.
 
-.. _label_mssql:
 .. index:: MSSQL Spatial
+.. _label_mssql:
 
 MSSQL Spatial Layers
 --------------------

@@ -248,8 +248,7 @@ especially, ``sp``, is mandatory.
 The first lines, which start with a double Python comment sign (``##``), tell
 |qg| the inputs of the algorithm described in the file and the outputs that
 it will generate. They work with exactly the same syntax as the SEXTANTE scripts
-that we have already seen, so they will not be described here again. Check the
-:ref:`processing_scripts` section for more information.
+that we have already seen, so they will not be described here again. 
 
 When you declare an input parameter, |qg| uses that information for two
 things: creating the user interface to ask the user for the value of that
