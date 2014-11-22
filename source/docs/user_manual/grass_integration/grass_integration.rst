@@ -885,7 +885,7 @@ of statistics for each polygon in a vector map.
   window, :guilabel:`Symbology` tab, choose from :guilabel:`Legend type`
   |selectstring| 'Unique value' and set the :guilabel:`Classification field`
   to 'VEGDESC'. (Refer to the explanation of the symbology tab in
-  :ref:`sec_symbology` of the vector section.)
+  :ref:`vector_style_menu` of the vector section.)
 * Next, reopen the GRASS Toolbox and open :menuselection:`Vector --> Vector update`
   by other maps.
 * Click on the **v.rast.stats** module. Enter ``gtopo30`` and ``forest_areas``.
