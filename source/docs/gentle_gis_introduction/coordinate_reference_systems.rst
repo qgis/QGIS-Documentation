@@ -432,7 +432,7 @@ rainfall provided in the geographic coordinate system WGS 84. In GIS these two
 vector layers are placed in totally different areas of the map window, because
 they have different projections.
 
-To solve this problem, many GIS include a functionality called **оn-the-fly**
+To solve this problem, many GIS include a functionality called **on-the-fly**
 projection. It means, that you can **define** a certain projection when you start
 the GIS and all layers that you then load, no matter what coordinate reference
 system they have, will be automatically displayed in the projection you defined.
