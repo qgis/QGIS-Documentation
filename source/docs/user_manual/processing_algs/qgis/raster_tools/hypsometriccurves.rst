@@ -4,24 +4,27 @@ Hypsometric curves
 Description
 -----------
 
-<put algortithm description here>
+Calculate hypsometric curves for features of polygon layer and save them as
+CSV file for further processing.
 
 Parameters
 ----------
 
 ``DEM to analyze`` [raster]
-  <put parameter description here>
+  DEM to use for calculating altitudes.
 
 ``Boundary layer`` [vector: polygon]
-  <put parameter description here>
+  Polygonal vector layer with boundaries of areas used to calculate hypsometric
+  curves.
 
 ``Step`` [number]
-  <put parameter description here>
+  Distanse between curves.
 
   Default: *100.0*
 
 ``Use % of area instead of absolute value`` [boolean]
-  <put parameter description here>
+  Write area percentage to "Area" field of the CSV file instead of absolute
+  area value.
 
   Default: *False*
 
@@ -29,7 +32,11 @@ Outputs
 -------
 
 ``Output directory`` [directory]
-  <put output description here>
+  Directory where output will be saved. For each feature from input vector
+  layer CSV file with area and altitude values will be created.
+
+  File name consists of prefix "hystogram_" followed by layer name and feature
+  ID.
 
 Console usage
 -------------
