@@ -58,17 +58,13 @@ clause text field. The **[OK]** button closes the window and selects
 the features satisfying the query. The **[Cancel]** button closes the
 window without changing the current selection.
 
+|qg| treats the resulting subset acts as if it where the entire layer. 
+For example if you applied the filter above for 'Borough', you can not 
+display, query, save or edit Ankorage, because that is a 'Manicpality' 
+and therefore not part of the subset.
+
+The only exception is that unless your layer is part of a database, using a subset will prevent you from editing the layer.
+
 .. index:: Select_using_Query
 
 .. _sec_selection_query:
-
-
-Save selected features as new layer
------------------------------------
-
-The selected features can be saved as any OGR-supported vector format and
-also transformed into another coordinate reference system (CRS). Just open
-the right mouse menu of the layer and click on
-:menuselection:`Save selection as -->` to define the name of the output file,
-its format and CRS (see section :ref:`label_legend`). It is also possible to
-specify OGR creation options within the dialog.
