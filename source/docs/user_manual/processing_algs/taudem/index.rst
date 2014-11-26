@@ -19,6 +19,9 @@ for a Windows and source code for compiling and use on other systems.
    you need to install TauDEM 5.0.6 by yourself and configure Processing
    properly.
 
+Documentation for TauDEM algorithms derived from official `TauDEM
+documentation <http://hydrology.usu.edu/taudem/taudem5/documentation.html>`_
+
 .. toctree::
      :maxdepth: 2
 

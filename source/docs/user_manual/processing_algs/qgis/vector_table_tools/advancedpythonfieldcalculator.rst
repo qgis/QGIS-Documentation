@@ -48,7 +48,7 @@ Parameters
 ``Formula`` [string]
   <put parameter description here>
 
-  Default: *value = *
+  Default: *value =\ *
 
 Outputs
 -------

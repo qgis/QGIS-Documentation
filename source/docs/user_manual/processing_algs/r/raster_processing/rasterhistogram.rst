@@ -9,7 +9,7 @@ Description
 Parameters
 ----------
 
-``Layer `` [raster]
+``Layer`` [raster]
   <put parameter description here>
 
 Outputs

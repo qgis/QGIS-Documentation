@@ -41,7 +41,7 @@ Parameters
 
   Default: *0*
 
-``Merge selection with the neighbouring polygon with the `` [selection]
+``Merge selection with the neighbouring polygon with the`` [selection]
   <put parameter description here>
 
   Options:

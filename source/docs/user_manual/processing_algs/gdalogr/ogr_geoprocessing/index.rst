@@ -6,5 +6,5 @@ OGR geoprocessing
 .. toctree::
      :maxdepth: 1
 
-    clipvectorsbyextent
-    clipvectorsbypolygon
+     clipvectorsbyextent
+     clipvectorsbypolygon

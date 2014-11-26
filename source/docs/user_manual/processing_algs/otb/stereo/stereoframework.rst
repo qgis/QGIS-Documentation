@@ -61,32 +61,32 @@ Parameters
 
   Default: *0*
 
-``Upper Left X `` [number]
+``Upper Left X`` [number]
   <put parameter description here>
 
   Default: *0.0*
 
-``Upper Left Y `` [number]
+``Upper Left Y`` [number]
   <put parameter description here>
 
   Default: *0.0*
 
-``Size X `` [number]
+``Size X`` [number]
   <put parameter description here>
 
   Default: *0*
 
-``Size Y `` [number]
+``Size Y`` [number]
   <put parameter description here>
 
   Default: *0*
 
-``Pixel Size X `` [number]
+``Pixel Size X`` [number]
   <put parameter description here>
 
   Default: *0.0*
 
-``Pixel Size Y `` [number]
+``Pixel Size Y`` [number]
   <put parameter description here>
 
   Default: *0.0*

@@ -21,7 +21,7 @@ Parameters
 
   Default: *0*
 
-``number of iterations `` [number]
+``number of iterations`` [number]
   <put parameter description here>
 
   Default: *20*
@@ -31,12 +31,12 @@ Parameters
 
   Default: *1*
 
-``Number of Components.`` [number]
+``Number of Components`` [number]
   <put parameter description here>
 
   Default: *0*
 
-``Normalize.`` [boolean]
+``Normalize`` [boolean]
   <put parameter description here>
 
   Default: *True*
