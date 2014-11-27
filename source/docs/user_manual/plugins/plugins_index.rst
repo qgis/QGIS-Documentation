@@ -23,6 +23,7 @@ Plugins
    plugins_oracle_raster
    plugins_raster_terrain
    plugins_heatmap
+   plugins_metasearch
    plugins_road_graph
    plugins_spatial_query
    plugins_spit
