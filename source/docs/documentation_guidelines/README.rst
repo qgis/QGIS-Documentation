@@ -352,15 +352,22 @@ Documenting Processing alorithms
 
 If you want to write documenation for Processing algorithm consider this guidelines:
 
-* Processing algorithm help files are part of QGIS User Guide, so use same formatting
-  as User Guide
+* don't overwrite existing help files by files from other sources (e.g. QGIS
+  source tree or Processing-Help repository), this files have different formats
+* Processing algorithm help files are part of QGIS User Guide, so use same
+  formatting as User Guide and other documentation
 * avoid use "This algoritm does this and that..." as first sentence in algorithm
   description. Try to use more general words like in TauDEM or GRASS algoritms
   help
-* add images if needed
-* if necessary add section "See also" for links to additional information
-  (e.g. publications or web-pages)
+* add images if needed. Use PNG format and follow general guidelines for documentation.
+* if necessary add links to additional information (e.g. publications or web-pages)
+  to the "See also" section
 * give clear explanation for algorithm parameters and outputs (again GRASS and
-  TauDEM if good examples), provide information about default values
-* don't edit parameter or output name. If you found typo or wrong spelling ---
+  TauDEM are good examples).
+* don't edit parameter or output names. If you found typo or wrong spelling ---
   report this in bugracker, so developers can fix this in Processing code too
+* don't list availbale options in algortihm description, options already listed
+  in parameter description.
+* don't add information vector geometry type in algorithm or parameter description
+  without compelling reason as this information already available in parameter
+  description
