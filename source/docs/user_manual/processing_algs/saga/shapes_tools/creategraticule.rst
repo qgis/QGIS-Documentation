@@ -4,7 +4,7 @@ Create graticule
 Description
 -----------
 
-<put algortithm description here>
+Creates a grid.
 
 Parameters
 ----------
@@ -12,25 +12,25 @@ Parameters
 ``Extent`` [vector: any]
   Optional.
 
-  <put parameter description here>
+  Grid will be created according to the selected layer.
 
 ``Output extent`` [extent]
-  <put parameter description here>
+  Extent of the grid.
 
   Default: *0,1,0,1*
 
 ``Division Width`` [number]
-  <put parameter description here>
+  X-axes spacing between the lines.
 
   Default: *1.0*
 
 ``Division Height`` [number]
-  <put parameter description here>
+  Y-axes spacing between the lines.
 
   Default: *1.0*
 
 ``Type`` [selection]
-  <put parameter description here>
+  Geometry type of the resulting grid.
 
   Options:
 
@@ -43,7 +43,7 @@ Outputs
 -------
 
 ``Graticule`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

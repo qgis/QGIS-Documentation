@@ -4,19 +4,19 @@ Convert polygon/line vertices to points
 Description
 -----------
 
-<put algortithm description here>
+Converts the line or polygon vertices into points.
 
 Parameters
 ----------
 
 ``Shapes`` [vector: any]
-  <put parameter description here>
+  Layer to process.
 
 Outputs
 -------
 
 ``Points`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

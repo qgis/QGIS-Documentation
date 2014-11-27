@@ -4,7 +4,7 @@ Inverse distance weighted
 Description
 -----------
 
-<put algortithm description here>
+Inverse distance grid interpolation from irregular distributed points.
 
 Parameters
 ----------

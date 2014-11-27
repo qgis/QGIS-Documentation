@@ -4,21 +4,21 @@ Grid normalisation
 Description
 -----------
 
-<put algortithm description here>
+Normalises the grid values according to minimum and maximum values chosen.
 
 Parameters
 ----------
 
 ``Grid`` [raster]
-  <put parameter description here>
+  Grid to normalize.
 
 ``Target Range (min)`` [number]
-  <put parameter description here>
+  Minimum value.
 
   Default: *0*
 
 ``Target Range (max)`` [number]
-  <put parameter description here>
+  Maximum value.
 
   Default: *1*
 
@@ -26,7 +26,7 @@ Outputs
 -------
 
 ``Normalised Grid`` [raster]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

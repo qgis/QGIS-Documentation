@@ -4,16 +4,16 @@ Split shapes layer randomly
 Description
 -----------
 
-<put algortithm description here>
+Splits the input layer randomly in two parts.
 
 Parameters
 ----------
 
 ``Shapes`` [vector: any]
-  <put parameter description here>
+  Layer to split.
 
 ``Split ratio (%)`` [number]
-  <put parameter description here>
+  Split ratio between the resulting layers.
 
   Default: *50*
 
@@ -21,10 +21,10 @@ Outputs
 -------
 
 ``Group A`` [vector]
-  <put output description here>
+  First resulting layer.
 
 ``Group B`` [vector]
-  <put output description here>
+  Second resulting layer.
 
 Console usage
 -------------

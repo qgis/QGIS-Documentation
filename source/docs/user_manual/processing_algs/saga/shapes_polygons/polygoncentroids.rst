@@ -4,16 +4,17 @@ Polygon centroids
 Description
 -----------
 
-<put algortithm description here>
+Calculates the centroids of polygons.
 
 Parameters
 ----------
 
 ``Polygons`` [vector: polygon]
-  <put parameter description here>
+  Input layer.
 
 ``Centroids for each part`` [boolean]
-  <put parameter description here>
+  Determites whether centroids should be calculated for each part of multipart
+  polygon or not.
 
   Default: *True*
 
@@ -21,7 +22,7 @@ Outputs
 -------
 
 ``Centroids`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

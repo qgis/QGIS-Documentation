@@ -4,22 +4,23 @@ Grid division
 Description
 -----------
 
-<put algortithm description here>
+Creates a new grid layer as the result of the division between two other grid
+layers.
 
 Parameters
 ----------
 
 ``Dividend`` [raster]
-  <put parameter description here>
+  First layer.
 
 ``Divisor`` [raster]
-  <put parameter description here>
+  Second layer.
 
 Outputs
 -------
 
 ``Quotient`` [raster]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

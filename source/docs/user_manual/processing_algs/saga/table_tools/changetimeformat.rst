@@ -4,19 +4,19 @@ Change time format
 Description
 -----------
 
-<put algortithm description here>
+Converts the time format of the input layer.
 
 Parameters
 ----------
 
 ``Table`` [table]
-  <put parameter description here>
+  Input table.
 
 ``Time Field`` [tablefield: any]
-  <put parameter description here>
+  Attribute with time.
 
 ``Input Format`` [selection]
-  <put parameter description here>
+  Input time format.
 
   Options:
 
@@ -30,7 +30,7 @@ Parameters
   Default: *0*
 
 ``Output Format`` [selection]
-  <put parameter description here>
+  Output time format.
 
   Options:
 
@@ -47,7 +47,7 @@ Outputs
 -------
 
 ``Output`` [table]
-  <put output description here>
+  The resulting table.
 
 Console usage
 -------------

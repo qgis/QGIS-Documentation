@@ -4,24 +4,31 @@ Merge shapes layers
 Description
 -----------
 
-<put algortithm description here>
+Merges two or more input layer into a unique resulting layer. You can merge
+together only layer of the same type (polygons with polygons, lines with lines,
+points with points).
+
+The attribute table of the resulting layer will include only the attributes of
+the first input layer. Two additional columns will be added: one corresponding
+to the ID of every merged layer and the other one corresponding to the original
+name of the merged layer.
 
 Parameters
 ----------
 
 ``Main Layer`` [vector: any]
-  <put parameter description here>
+  Initial layer.
 
 ``Additional Layers`` [multipleinput: any vectors]
   Optional.
 
-  <put parameter description here>
+  Layer(s) to merge with.
 
 Outputs
 -------
 
 ``Merged Layer`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

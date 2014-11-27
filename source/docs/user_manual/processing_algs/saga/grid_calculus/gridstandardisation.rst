@@ -4,16 +4,16 @@ Grid standardisation
 Description
 -----------
 
-<put algortithm description here>
+Standardises the grid layer values.
 
 Parameters
 ----------
 
 ``Grid`` [raster]
-  <put parameter description here>
+  Grid to process.
 
 ``Stretch Factor`` [number]
-  <put parameter description here>
+  stretching factor.
 
   Default: *1.0*
 
@@ -21,7 +21,7 @@ Outputs
 -------
 
 ``Standardised Grid`` [raster]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

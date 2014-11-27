@@ -4,25 +4,27 @@ Add polygon attributes to points
 Description
 -----------
 
-<put algortithm description here>
+Adds the specified field of the polygons layer to the attribute table of the
+points layer. The new attributes added for each point depend on the value of
+the background polygon layer.
 
 Parameters
 ----------
 
 ``Points`` [vector: point]
-  <put parameter description here>
+  Points layer.
 
 ``Polygons`` [vector: polygon]
-  <put parameter description here>
+  Background polygons layer.
 
 ``Attribute`` [tablefield: any]
-  <put parameter description here>
+  Attribute of the polygons layer that will be added to the points layer.
 
 Outputs
 -------
 
 ``Result`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

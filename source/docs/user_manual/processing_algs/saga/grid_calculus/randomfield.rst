@@ -4,38 +4,38 @@ Random field
 Description
 -----------
 
-<put algortithm description here>
+Generates a random grid layer.
 
 Parameters
 ----------
 
 ``Width (Cells)`` [number]
-  <put parameter description here>
+  Width of the layer in cells.
 
   Default: *100*
 
 ``Height (Cells)`` [number]
-  <put parameter description here>
+  Height of the layer in cells.
 
   Default: *100*
 
 ``Cellsize`` [number]
-  <put parameter description here>
+  Cell size to use.
 
   Default: *100.0*
 
 ``West`` [number]
-  <put parameter description here>
+  West coordinate of the bottom-left corner of the grid.
 
   Default: *0.0*
 
 ``South`` [number]
-  <put parameter description here>
+  South coordinate of the bottom-left corner of the grid.
 
   Default: *0.0*
 
 ``Method`` [selection]
-  <put parameter description here>
+  Statistical method used for the calculation.
 
   Options:
 
@@ -45,22 +45,22 @@ Parameters
   Default: *0*
 
 ``Range Min`` [number]
-  <put parameter description here>
+  Minimum cell value to use.
 
   Default: *0.0*
 
 ``Range Max`` [number]
-  <put parameter description here>
+  Maximum cell value to use.
 
   Default: *1.0*
 
 ``Arithmetic Mean`` [number]
-  <put parameter description here>
+  Mean of all the cell values to use.
 
   Default: *0.0*
 
 ``Standard Deviation`` [number]
-  <put parameter description here>
+  Standard deviation of all the cell values to use.
 
   Default: *1.0*
 
@@ -68,7 +68,7 @@ Outputs
 -------
 
 ``Random Field`` [raster]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

@@ -4,19 +4,25 @@ Minimum distance analysis
 Description
 -----------
 
-<put algortithm description here>
+Performs a complete distance analysis of a point layer:
+
+* minimum distance of points
+* maximum distance of points
+* average distance of all the points
+* standard deviation of the distance
+* duplicated points
 
 Parameters
 ----------
 
 ``Points`` [vector: point]
-  <put parameter description here>
+  Layer to analyze.
 
 Outputs
 -------
 
 ``Minimum Distance Analysis`` [table]
-  <put output description here>
+  The resulting table.
 
 Console usage
 -------------

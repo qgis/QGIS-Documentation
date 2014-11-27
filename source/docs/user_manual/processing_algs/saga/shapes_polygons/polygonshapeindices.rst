@@ -4,19 +4,28 @@ Polygon shape indices
 Description
 -----------
 
-<put algortithm description here>
+Calculates spatial statistics for polygons. This includes:
+
+* area
+* perimeter
+* perimeter / area
+* perimeter / square root of the area
+* maximum distance
+* maximum distance / area
+* maximum distance / square root of the area
+* shape index
 
 Parameters
 ----------
 
 ``Shapes`` [vector: polygon]
-  <put parameter description here>
+  Layer to analyze.
 
 Outputs
 -------
 
 ``Shape Index`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

@@ -4,25 +4,25 @@ Convert points to line(s)
 Description
 -----------
 
-<put algortithm description here>
+Converts points to lines.
 
 Parameters
 ----------
 
 ``Points`` [vector: point]
-  <put parameter description here>
+  Points to convert.
 
 ``Order by...`` [tablefield: any]
-  <put parameter description here>
+  Lines will be ordered following this field.
 
 ``Separate by...`` [tablefield: any]
-  <put parameter description here>
+  Lines will be grouped according to this field.
 
 Outputs
 -------
 
 ``Lines`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

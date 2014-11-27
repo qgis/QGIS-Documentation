@@ -4,19 +4,21 @@ Distance matrix
 Description
 -----------
 
-<put algortithm description here>
+Generates a distance matrix between each point of the input layer. A unique ID
+will be created in the first row of the resulting matrix (symmetric matrix),
+while every other cell reflects the distance between the points.
 
 Parameters
 ----------
 
 ``Points`` [vector: point]
-  <put parameter description here>
+  Input layer.
 
 Outputs
 -------
 
 ``Distance Matrix Table`` [table]
-  <put output description here>
+  The resulting table.
 
 Console usage
 -------------

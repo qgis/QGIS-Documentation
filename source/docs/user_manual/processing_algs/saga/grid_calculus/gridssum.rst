@@ -4,19 +4,19 @@ Grids sum
 Description
 -----------
 
-<put algortithm description here>
+Creates a new grid layer as the result of the sum of two or more grid layers.
 
 Parameters
 ----------
 
 ``Grids`` [multipleinput: rasters]
-  <put parameter description here>
+  Grid layers to sum
 
 Outputs
 -------
 
 ``Sum`` [raster]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

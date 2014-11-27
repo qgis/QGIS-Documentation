@@ -4,23 +4,23 @@ Geometric figures
 Description
 -----------
 
-<put algortithm description here>
+Draws simple geometric figures.
 
 Parameters
 ----------
 
 ``Cell Count`` [number]
-  <put parameter description here>
+  Number of cells to use.
 
   Default: *0*
 
 ``Cell Size`` [number]
-  <put parameter description here>
+  Size of the single cell.
 
   Default: *0*
 
 ``Figure`` [selection]
-  <put parameter description here>
+  Type of the figure.
 
   Options:
 
@@ -31,7 +31,7 @@ Parameters
   Default: *0*
 
 ``Direction of Plane [Degree]`` [number]
-  <put parameter description here>
+  Rotation factor in degrees.
 
   Default: *0*
 
@@ -39,7 +39,7 @@ Outputs
 -------
 
 ``Result`` [raster]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

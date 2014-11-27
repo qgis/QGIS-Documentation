@@ -4,16 +4,17 @@ Get shapes extents
 Description
 -----------
 
-<put algortithm description here>
+Creates polygons according to the extent of the input layer features.
 
 Parameters
 ----------
 
 ``Shapes`` [vector: any]
-  <put parameter description here>
+  Input layer.
 
 ``Parts`` [boolean]
-  <put parameter description here>
+  Determines whether create polygon for each feature (``True``) or just create
+  single polygon for whole layer (``False``).
 
   Default: *True*
 
@@ -21,7 +22,7 @@ Outputs
 -------
 
 ``Extents`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

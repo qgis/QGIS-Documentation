@@ -4,19 +4,19 @@ Convert polygons to lines
 Description
 -----------
 
-<put algortithm description here>
+Creates lines from polygons.
 
 Parameters
 ----------
 
 ``Polygons`` [vector: polygon]
-  <put parameter description here>
+  Layer to process.
 
 Outputs
 -------
 
 ``Lines`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

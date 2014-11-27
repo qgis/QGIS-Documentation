@@ -4,19 +4,22 @@ Add grid values to points
 Description
 -----------
 
-<put algortithm description here>
+Creates a new vector layer as a result of the union of a points layer with the
+interpolated value of one or more base background grid layer(s). This way, the
+new layer created will have a new column in the attribute table that reflects
+the interpolated value of the background grid.
 
 Parameters
 ----------
 
 ``Points`` [vector: point]
-  <put parameter description here>
+  Input layer.
 
 ``Grids`` [multipleinput: rasters]
-  <put parameter description here>
+  Background grid layer(s)
 
 ``Interpolation`` [selection]
-  <put parameter description here>
+  interpolation method to use.
 
   Options:
 
@@ -32,7 +35,7 @@ Outputs
 -------
 
 ``Result`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

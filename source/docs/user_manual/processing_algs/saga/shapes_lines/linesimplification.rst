@@ -4,16 +4,16 @@ Line simplification
 Description
 -----------
 
-<put algortithm description here>
+Simplyfies the geometry of a lines layer.
 
 Parameters
 ----------
 
 ``Lines`` [vector: line]
-  <put parameter description here>
+  Layer to process.
 
 ``Tolerance`` [number]
-  <put parameter description here>
+  Simplification tolerance.
 
   Default: *1.0*
 
@@ -21,7 +21,7 @@ Outputs
 -------
 
 ``Simplified Lines`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

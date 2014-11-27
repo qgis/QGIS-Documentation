@@ -4,19 +4,19 @@ Add coordinates to points
 Description
 -----------
 
-<put algortithm description here>
+Adds the X and Y coordinates of feature in the attribute table of input layer.
 
 Parameters
 ----------
 
 ``Points`` [vector: point]
-  <put parameter description here>
+  Input layer.
 
 Outputs
 -------
 
 ``Output`` [vector]
-  <put output description here>
+  Resulting layer with the updated attribute table.
 
 Console usage
 -------------

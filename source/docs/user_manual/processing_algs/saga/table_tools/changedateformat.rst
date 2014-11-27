@@ -4,19 +4,19 @@ Change date format
 Description
 -----------
 
-<put algortithm description here>
+Converts the date format of the input layer.
 
 Parameters
 ----------
 
 ``Table`` [table]
-  <put parameter description here>
+  Input table.
 
 ``Date Field`` [tablefield: any]
-  <put parameter description here>
+  Attribute the date.
 
 ``Input Format`` [selection]
-  <put parameter description here>
+  Input date format.
 
   Options:
 
@@ -33,7 +33,7 @@ Parameters
   Default: *0*
 
 ``Output Format`` [selection]
-  <put parameter description here>
+  Output date format.
 
   Options:
 
@@ -53,7 +53,7 @@ Outputs
 -------
 
 ``Output`` [table]
-  <put output description here>
+  The resulting table.
 
 Console usage
 -------------

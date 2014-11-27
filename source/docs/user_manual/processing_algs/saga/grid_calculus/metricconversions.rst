@@ -4,16 +4,16 @@ Metric conversions
 Description
 -----------
 
-<put algortithm description here>
+Performs numerical conversions of the grid values.
 
 Parameters
 ----------
 
 ``Grid`` [raster]
-  <put parameter description here>
+  Grid to process.
 
 ``Conversion`` [selection]
-  <put parameter description here>
+  Conversion type.
 
   Options:
 
@@ -28,7 +28,7 @@ Outputs
 -------
 
 ``Converted Grid`` [raster]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

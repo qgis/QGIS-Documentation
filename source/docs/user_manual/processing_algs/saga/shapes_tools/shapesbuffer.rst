@@ -4,16 +4,16 @@ Shapes buffer
 Description
 -----------
 
-<put algortithm description here>
+Creates buffer around features based on fixed distance or distance field.
 
 Parameters
 ----------
 
 ``Shapes`` [vector: any]
-  <put parameter description here>
+  Input layer.
 
 ``Buffer Distance`` [selection]
-  <put parameter description here>
+  Buffering method.
 
   Options:
 
@@ -23,12 +23,12 @@ Parameters
   Default: *0*
 
 ``Buffer Distance (Fixed)`` [number]
-  <put parameter description here>
+  Buffer distance for "fixed value" method.
 
   Default: *100.0*
 
 ``Buffer Distance (Attribute)`` [tablefield: any]
-  <put parameter description here>
+  Name of the distance field for "attribute field" method.
 
 ``Scaling Factor for Attribute Value`` [number]
   <put parameter description here>
@@ -36,17 +36,17 @@ Parameters
   Default: *1.0*
 
 ``Number of Buffer Zones`` [number]
-  <put parameter description here>
+  Number of buffer(s) to generate.
 
   Default: *1.0*
 
 ``Circle Point Distance [Degree]`` [number]
-  <put parameter description here>
+  Smoothness of the buffer borders: great numbers means rough borders.
 
   Default: *5.0*
 
 ``Dissolve Buffers`` [boolean]
-  <put parameter description here>
+  Determines whether to dissolve results or not.
 
   Default: *True*
 
@@ -54,7 +54,7 @@ Outputs
 -------
 
 ``Buffer`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

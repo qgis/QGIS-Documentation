@@ -4,26 +4,26 @@ Line properties
 Description
 -----------
 
-<put algortithm description here>
+Calculates some information on each line of the layer.
 
 Parameters
 ----------
 
 ``Lines`` [vector: line]
-  <put parameter description here>
+  Layer to analyze.
 
 ``Number of Parts`` [boolean]
-  <put parameter description here>
+  Determites whether to calculate number of segments in line.
 
   Default: *True*
 
 ``Number of Vertices`` [boolean]
-  <put parameter description here>
+  Determites whether to calculate number of vertices in line.
 
   Default: *True*
 
 ``Length`` [boolean]
-  <put parameter description here>
+  Determites whether to calculate total line lenght.
 
   Default: *True*
 
@@ -31,7 +31,7 @@ Outputs
 -------
 
 ``Lines with Property Attributes`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

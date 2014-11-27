@@ -4,22 +4,22 @@ Polygons to edges and nodes
 Description
 -----------
 
-<put algortithm description here>
+Extracts boundaries and nodes of polygons in separate files.
 
 Parameters
 ----------
 
 ``Polygons`` [vector: polygon]
-  <put parameter description here>
+  Input layer.
 
 Outputs
 -------
 
 ``Edges`` [vector]
-  <put output description here>
+  Resulting line layer with polygons boundaries.
 
 ``Nodes`` [vector]
-  <put output description here>
+  Resulting line layer with polygons nodes.
 
 Console usage
 -------------
