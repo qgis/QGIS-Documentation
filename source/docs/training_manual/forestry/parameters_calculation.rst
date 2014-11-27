@@ -80,7 +80,7 @@ Lets calculate now the same averages for the whole forest as you did before, onl
 
 You need to first calculate the areas for the stands and then calculate total volumes and stem numbers for each of them:
 
-* In the :guilabel:`Atributes table` enable editing.
+* In the :guilabel:`Attribute table` enable editing.
 * Open the :guilabel:`Field calculator`.
 * Create a new field called :kbd:`area`.
 * Leave the :guilabel:`Output field type` to :kbd:`Decimal number (real)`.
@@ -98,7 +98,7 @@ Now calculate a field with the total volumes and number of stems estimated for e
 
 In the previous situation, the areas represented by every sample plot were the same, so it was enough to calculate the average of the sample plots. Now to calculate the estimates, you need to divide the sum of the stands volumes or number of stems by the sum of the areas of the stands containing information.
 
-* In the guilabel:`Atributes table` for the :kbd:`forest_stands_2012_results` layer, select all the stands containing information.
+* In the :guilabel:`Attribute table` for the :kbd:`forest_stands_2012_results` layer, select all the stands containing information.
 * Open :menuselection:`Vector --> Analysis Tools --> Basic statistics`.
 * Select the :kbd:`forest_stands_2012_results` as the :guilabel:`Input Vector Layer`.
 * Select :kbd:`area` as :guilabel:`Target field`.
