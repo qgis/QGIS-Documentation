@@ -5,7 +5,7 @@
 MetaSearch Catalogue Client
 ===========================
 
-.. image:: /static/user_manual/plugins/qgis.png
+.. image:: /static/common/qgislogo.png
   :scale: 100%
   :alt: QGIS
   :align: left
