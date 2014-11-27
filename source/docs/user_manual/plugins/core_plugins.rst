@@ -38,4 +38,5 @@ Icon                    Plugin                    Description                   
 |spatialquery|          Spatial Query             Spatial queries on vectors                              :ref:`spatial_query`
 |spiticon|		SPIT                      Shapefile to PostgreSQL/PostGIS Import Tool             :ref:`label_spit`
 |raster-stats|          Zonal Statistics          Calculate raster statistics for vector polygons         :ref:`zonal_statistics`
+|MetaSearch|            MetaSearch                Interact with metadata catalogue services (CSW)         :ref:`metasearch`
 ======================  ========================  ======================================================  ===============================
