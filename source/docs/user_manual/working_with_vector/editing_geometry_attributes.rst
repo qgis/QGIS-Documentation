@@ -40,7 +40,7 @@ The snapping tolerance setting affects all tools that work with tolerance.
 
 #. A general, project-wide snapping tolerance can be defined by choosing
    :menuselection:`Settings -->` |mActionOptions| :menuselection:`Options`.
-   On Mac, go to :menuselection:`QIS -->` |mActionOptions|
+   On Mac, go to :menuselection:`QGIS -->` |mActionOptions|
    :menuselection:`Preferences...`. On Linux: :menuselection:`Edit -->`
    |mActionOptions| :menuselection:`Options`. In the :guilabel:`Digitizing`
    tab, you can select between 'to vertex', 'to segment' or 'to vertex and segment'
@@ -194,7 +194,7 @@ not read-only).
 
 In general, tools for editing vector layers are divided into a digitizing and an advanced
 digitizing toolbar, described in section :ref:`sec_advanced_edit`. You can
-select and unselect both under :menuselection:`Settings --> Toolbars -->`.
+select and unselect both under :menuselection:`View --> Toolbars -->`.
 Using the basic digitizing tools, you can perform the following functions:
 
 .. _table_editing:
@@ -289,7 +289,7 @@ move existing features.
 Current Edits
 .............
 
-This new feature allows the digitization of multiple layers. Choose
+This feature allows the digitization of multiple layers. Choose
 |mActionFileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you
 made in multiple layers. You also have the opportunity to
 |mActionRollbackEdits| :guilabel:`Rollback for Selected Layers`, so that the
@@ -934,6 +934,11 @@ following functionality:
   layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+L`)
 * |mActionCalculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+I`)
 
+Below these buttons is the Field Calculator bar, which allows calculations 
+to be quickly applied attributes visible in the table. This bar uses the 
+same expressions as the |mActionCalculateField| :sup:`Field Calculator` 
+(see :ref:`vector_field_calculator`).
+
 .. tip:: **Skip WKT geometry**
 
    If you want to use attribute data in external programs (such as Excel), use the
@@ -957,10 +962,11 @@ Save selected features as new layer
 
 The selected features can be saved as any OGR-supported vector format and
 also transformed into another coordinate reference system (CRS). Just open
-the right mouse menu of the layer and click on :menuselection:`Save selection
-as -->` to define the name of the output file, its format and CRS (see section
-:ref:`label_legend`). It is also possible to specify OGR creation options
-within the dialog.
+the right mouse menu of the layer and click on :menuselection:`Save
+as` to define the name of the output file, its format and CRS (see section
+:ref:`label_legend`). To save the selection ensure that the |checkbox| 
+:menuselection:`Save only selected features` is selected.
+It is also possible to specify OGR creation options within the dialog.
 
 Paste into new layer
 ....................
