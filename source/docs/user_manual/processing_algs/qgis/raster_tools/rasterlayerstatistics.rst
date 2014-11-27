@@ -4,40 +4,40 @@ Raster layer statistics
 Description
 -----------
 
-<put algortithm description here>
+Calculates basic statistics of the raster layer.
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Raster to analyze.
 
 Outputs
 -------
 
 ``Statistics`` [html]
-  <put output description here>
+  Analysis results in HTML format.
 
 ``Minimum value`` [number]
-  <put output description here>
+  Minimum cell value.
 
 ``Maximum value`` [number]
-  <put output description here>
+  Maximum cell value.
 
 ``Sum`` [number]
-  <put output description here>
+  Sum of all cells values.
 
 ``Mean value`` [number]
-  <put output description here>
+  Mean cell value.
 
 ``valid cells count`` [number]
-  <put output description here>
+  Number of cell with data.
 
 ``No-data cells count`` [number]
-  <put output description here>
+  Number of NODATA cells.
 
 ``Standard deviation`` [number]
-  <put output description here>
+  Standard deviation of cells values.
 
 Console usage
 -------------

@@ -4,13 +4,13 @@ Create grid
 Description
 -----------
 
-<put algortithm description here>
+Creates a grid.
 
 Parameters
 ----------
 
 ``Grid type`` [selection]
-  <put parameter description here>
+  Grid type.
 
   Options:
 
@@ -22,37 +22,37 @@ Parameters
   Default: *0*
 
 ``Width`` [number]
-  <put parameter description here>
+  Horizontal extent of the grid.
 
   Default: *360.0*
 
 ``Height`` [number]
-  <put parameter description here>
+  Vertical extent of the grid.
 
   Default: *180.0*
 
 ``Horizontal spacing`` [number]
-  <put parameter description here>
+  X-axes spacing between the lines.
 
   Default: *10.0*
 
 ``Vertical spacing`` [number]
-  <put parameter description here>
+  Y-axes spacing between the lines.
 
   Default: *10.0*
 
 ``Center X`` [number]
-  <put parameter description here>
+  X-coordinate of the grid center.
 
   Default: *0.0*
 
 ``Center Y`` [number]
-  <put parameter description here>
+  Y-coordinate of the grid center.
 
   Default: *0.0*
 
 ``Output CRS`` [crs]
-  <put parameter description here>
+  Coordinate reference system for grid.
 
   Default: *EPSG:4326*
 
@@ -60,7 +60,7 @@ Outputs
 -------
 
 ``Output`` [vector]
-  <put output description here>
+  The resulting grid layer (lines or polygons).
 
 Console usage
 -------------

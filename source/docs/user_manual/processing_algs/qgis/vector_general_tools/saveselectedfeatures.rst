@@ -4,19 +4,19 @@ Save selected features
 Description
 -----------
 
-<put algortithm description here>
+Saves the selected features as a new layer.
 
 Parameters
 ----------
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Layer to process.
 
 Outputs
 -------
 
 ``Output layer with selected features`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

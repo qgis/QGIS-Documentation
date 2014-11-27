@@ -4,29 +4,44 @@ Zonal Statistics
 Description
 -----------
 
-<put algortithm description here>
+Calculates some statistics values for pixels of input raster inside certain
+zones, defined as polygon layer.
+
+Following values calculated for each zone:
+
+* minimum
+* maximum
+* sum
+* count
+* mean
+* standard deviation
+* number of unique values
+* range
+* variance
 
 Parameters
 ----------
 
 ``Raster layer`` [raster]
-  <put parameter description here>
+  Raster to analyze.
 
 ``Raster band`` [number]
-  <put parameter description here>
+  Number of raster band to analyze.
 
   Default: *1*
 
 ``Vector layer containing zones`` [vector: polygon]
-  <put parameter description here>
+  Layer with zones boundaries.
 
 ``Output column prefix`` [string]
-  <put parameter description here>
+  Prefix for output fields.
 
   Default: *_*
 
 ``Load whole raster in memory`` [boolean]
-  <put parameter description here>
+  Determines if raster band will be loaded in memory (``True``) or readed by
+  chunks (``False``). Useful only when disk IO or raster scanning inefficiencies
+  are your limiting factor.
 
   Default: *True*
 
@@ -34,7 +49,8 @@ Outputs
 -------
 
 ``Output layer`` [vector]
-  <put output description here>
+  The resulting layer. Basically this is same layer as zones layer with new
+  columns containing statistics added.
 
 Console usage
 -------------

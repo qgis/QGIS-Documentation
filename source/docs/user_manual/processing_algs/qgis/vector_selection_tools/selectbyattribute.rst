@@ -4,19 +4,22 @@ Select by attribute
 Description
 -----------
 
-<put algortithm description here>
+Selects and saves as new layer all features from input layer that satisfy
+condition.
+
+*NOTE*: algorithm is case-sensitive ("qgis" is different from "Qgis" and "QGIS")
 
 Parameters
 ----------
 
 ``Input Layer`` [vector: any]
-  <put parameter description here>
+  Layer to process.
 
 ``Selection attribute`` [tablefield: any]
-  <put parameter description here>
+  Field on which perform the selection.
 
 ``Operator`` [selection]
-  <put parameter description here>
+  Comparison operator.
 
   Options:
 
@@ -32,7 +35,7 @@ Parameters
   Default: *0*
 
 ``Value`` [string]
-  <put parameter description here>
+  Value to compare.
 
   Default: *(not set)*
 
@@ -40,7 +43,7 @@ Outputs
 -------
 
 ``Output`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

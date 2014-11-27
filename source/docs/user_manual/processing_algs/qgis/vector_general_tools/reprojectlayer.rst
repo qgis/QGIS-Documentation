@@ -4,16 +4,16 @@ Reproject layer
 Description
 -----------
 
-<put algortithm description here>
+Reprojects a vector layer in a different CRS.
 
 Parameters
 ----------
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Layer to reproject.
 
 ``Target CRS`` [crs]
-  <put parameter description here>
+  Destination coordinate reference system.
 
   Default: *EPSG:4326*
 
@@ -21,7 +21,7 @@ Outputs
 -------
 
 ``Reprojected layer`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

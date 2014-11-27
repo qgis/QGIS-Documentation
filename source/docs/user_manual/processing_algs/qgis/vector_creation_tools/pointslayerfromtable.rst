@@ -4,22 +4,23 @@ Points layer from table
 Description
 -----------
 
-<put algortithm description here>
+Creates points layer from geometryless table with columns that contain point
+coordinates.
 
 Parameters
 ----------
 
 ``Input layer`` [table]
-  <put parameter description here>
+  Input table
 
 ``X field`` [tablefield: any]
-  <put parameter description here>
+  Table column containing the X coordinate.
 
 ``Y field`` [tablefield: any]
-  <put parameter description here>
+  Table column containing the Y coordinate.
 
 ``Target CRS`` [crs]
-  <put parameter description here>
+  Coordinate reference system to use for layer.
 
   Default: *EPSG:4326*
 
@@ -27,7 +28,7 @@ Outputs
 -------
 
 ``Output layer`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

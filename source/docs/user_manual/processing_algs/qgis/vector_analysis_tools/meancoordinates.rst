@@ -4,7 +4,8 @@ Mean coordinate(s)
 Description
 -----------
 
-<put algortithm description here>
+Calculates the mean of the coordinates of a layer starting from a field of the
+attribute table.
 
 Parameters
 ----------
@@ -15,18 +16,18 @@ Parameters
 ``Weight field`` [tablefield: numeric]
   Optional.
 
-  <put parameter description here>
+  Field to use if you want to perform a weighted mean.
 
 ``Unique ID field`` [tablefield: numeric]
   Optional.
 
-  <put parameter description here>
+  Unique field on which the calculation of the mean will be made.
 
 Outputs
 -------
 
 ``Result`` [vector]
-  <put output description here>
+  The resulting points layer.
 
 Console usage
 -------------

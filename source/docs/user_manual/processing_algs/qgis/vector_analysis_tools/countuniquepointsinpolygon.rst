@@ -4,22 +4,25 @@ Count unique points in polygon
 Description
 -----------
 
-<put algortithm description here>
+Counts the number of unique values of a points in a polygons layer. Creates
+a new polygons layer with an extra column in the attribute table containing
+the count of unique values for each feature.
 
 Parameters
 ----------
 
 ``Polygons`` [vector: polygon]
-  <put parameter description here>
+  Polygons layer.
 
 ``Points`` [vector: point]
-  <put parameter description here>
+  Points layer.
 
 ``Class field`` [tablefield: any]
-  <put parameter description here>
+  Points layer column name of the unique value chosen.
 
 ``Count field name`` [string]
-  <put parameter description here>
+  Column name containing the count of unique values in the resulting polygons
+  layer.
 
   Default: *NUMPOINTS*
 
@@ -27,7 +30,7 @@ Outputs
 -------
 
 ``Result`` [vector]
-  <put output description here>
+  The resulting polygons layer.
 
 Console usage
 -------------

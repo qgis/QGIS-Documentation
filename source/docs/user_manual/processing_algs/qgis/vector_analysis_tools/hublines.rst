@@ -4,7 +4,10 @@ Hub lines
 Description
 -----------
 
-<put algortithm description here>
+Creates hub and spoke diagrams with lines drawn from points on the ``Spoke Point``
+layer to matching points in the ``Hub Point`` layer. Determination of which
+hub goes with each point is based on a match between the ``Hub ID field``
+on the hub points and the ``Spoke ID field`` on the spoke points.
 
 Parameters
 ----------
@@ -25,7 +28,7 @@ Outputs
 -------
 
 ``Output`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

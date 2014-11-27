@@ -4,16 +4,16 @@ Convert geometry type
 Description
 -----------
 
-<put algortithm description here>
+Converts a geometry type to another one.
 
 Parameters
 ----------
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Layer in input.
 
 ``New geometry type`` [selection]
-  <put parameter description here>
+  Type of conversion to perform.
 
   Options:
 
@@ -29,7 +29,7 @@ Outputs
 -------
 
 ``Output`` [vector]
-  <put output description here>
+  The resulting layer.
 
 Console usage
 -------------

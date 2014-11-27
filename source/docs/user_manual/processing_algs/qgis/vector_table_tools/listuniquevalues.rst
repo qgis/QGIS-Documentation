@@ -4,28 +4,28 @@ List unique values
 Description
 -----------
 
-<put algortithm description here>
+Lists unique values of an attribute table field and counts their number.
 
 Parameters
 ----------
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Layer to analyze.
 
 ``Target field`` [tablefield: any]
-  <put parameter description here>
+  Field to analyze.
 
 Outputs
 -------
 
 ``Unique values`` [html]
-  <put output description here>
+  Analysis results in HTML format.
 
 ``Total unique values`` [number]
-  <put output description here>
+  Total number of unique values in given field.
 
 ``Unique values`` [string]
-  <put output description here>
+  List of all unique values in given field.
 
 Console usage
 -------------

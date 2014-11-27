@@ -1,25 +1,27 @@
-Count points in polygon(weighted)
-=================================
+Count points in polygon (weighted)
+==================================
 
 Description
 -----------
 
-<put algortithm description here>
+Counts the number of points in each feature of a polygon layer and calculates
+the mean of the selected field for each feature of the polygon layer. These
+values will be added to the attribute table of the resulting polygon layer.
 
 Parameters
 ----------
 
 ``Polygons`` [vector: polygon]
-  <put parameter description here>
+  Polygons layer.
 
 ``Points`` [vector: point]
-  <put parameter description here>
+  Points layer.
 
 ``Weight field`` [tablefield: any]
-  <put parameter description here>
+  Weight field of the points attribute table.
 
 ``Count field name`` [string]
-  <put parameter description here>
+  Name of the column for the new weighted field.
 
   Default: *NUMPOINTS*
 
@@ -27,7 +29,7 @@ Outputs
 -------
 
 ``Result`` [vector]
-  <put output description here>
+  The resulting polygons layer.
 
 Console usage
 -------------

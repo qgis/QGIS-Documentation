@@ -4,21 +4,25 @@ Points displacement
 Description
 -----------
 
-<put algortithm description here>
+Moves overlapped points at small distance, that they all become visible. The result
+is very similar to the output of the "Point displacement" renderer but it is permanent.
 
 Parameters
 ----------
 
 ``Input layer`` [vector: point]
-  <put parameter description here>
+  Layer with overlapped points.
 
 ``Displacement distance`` [number]
-  <put parameter description here>
+  Desired displacement distance **NOTE**: displacement distance should be in
+  same units as layer.
 
   Default: *0.00015*
 
 ``Horizontal distribution for two point case`` [boolean]
-  <put parameter description here>
+  Controls distrobution direction in case of two overlapped points. If *True*
+  points wwill be distributed horizontally, otherwise they will be distributed
+  vertically.
 
   Default: *True*
 
@@ -26,7 +30,7 @@ Outputs
 -------
 
 ``Output layer`` [vector]
-  <put output description here>
+  The resulting layer with shifted overlapped points.
 
 Console usage
 -------------

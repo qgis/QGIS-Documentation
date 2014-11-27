@@ -4,19 +4,19 @@ Count points in polygon
 Description
 -----------
 
-<put algortithm description here>
+Counts the number of points present in each feature of a polygon layer.
 
 Parameters
 ----------
 
 ``Polygons`` [vector: polygon]
-  <put parameter description here>
+  Polygons layer.
 
 ``Points`` [vector: point]
-  <put parameter description here>
+  Points layer.
 
 ``Count field name`` [string]
-  <put parameter description here>
+  The name of the attribute table column containing the points number.
 
   Default: *NUMPOINTS*
 
@@ -24,7 +24,8 @@ Outputs
 -------
 
 ``Result`` [vector]
-  <put output description here>
+  Resulting layer with the attribute table containing the new column of the
+  points count.
 
 Console usage
 -------------
