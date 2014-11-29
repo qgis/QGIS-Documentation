@@ -75,7 +75,7 @@ Here is an example of a numerical filter which only returns objects whose
     (2 rows)
 
 You can combine filters (defined using the :kbd:`WHERE` clause) with sorting
-(defined using the :kbd:`ORDER BY`)::
+(defined using the :kbd:`ORDER BY` clause)::
 
   select name, house_no from people where house_no < 50 order by house_no;
 
@@ -125,7 +125,7 @@ query. Lets look at an example::
   where people.street_id=streets.id;
 
 .. note::  With joins, you will always state the two tables the information is
-   coming from, in this case people and streets.  You also need to specify
+   coming from, in this case people and streets. You also need to specify
    which two keys must match (foreign key & primary key). If you don't specify
    that, you will get a list of all possible combinations of people and
    streets, but no way to know who actually lives on which street!
