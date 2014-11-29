@@ -226,7 +226,7 @@ Use the approach shown above to make a table called people:
 
 Add fields such as phone number, home address, name, etc. (these aren't all
 valid names: change them to make them valid). Make sure you give the table an
-ID column with the same data-types as above.
+ID column with the same data-type as above.
 
 :ref:`Check your results <database-concepts-4>`
 
@@ -340,7 +340,7 @@ A word on pgAdmin III
 
 We are showing you the SQL commands from the `psql` prompt because it's a very
 useful way to learn about databases. However, there are quicker and easier ways
-to do a lot of what we are showing you. Install pgAdminIII and you can create,
+to do a lot of what we are showing you. Install pgAdmin III and you can create,
 drop, alter etc tables using 'point and click' operations in a GUI.
 
 Under Ubuntu, you can install it like this::
