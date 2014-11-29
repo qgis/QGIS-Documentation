@@ -7,6 +7,11 @@
 |qg| is highly configurable through the :menuselection:`Settings` menu. Choose
 between Panels, Toolbars, Project Properties, Options and Customization.
 
+.. note:: |qg| follows desktop guidelines for the location of options and project 
+   properties item. Consequently related to the OS you are using, location of some 
+   of items described above could be located in the :menuselection`view` menu 
+   (Panels and Toolbars) or in :menuselection:`Project` for Options.
+
 ..  FIXME: please add more introduction here
 
 .. _sec_panels_and_toolbars:
@@ -56,9 +61,9 @@ Project Properties
 ==================
 
 In the properties window for the project under |nix|
-:menuselection:`Settings --> Project Properties` or |win|
-:menuselection:`Project --> Project Properties`, you can set project-specific
-options. These include:
+:menuselection:`Settings --> Project Properties` (kde) or |nix| |win|
+:menuselection:`Project --> Project Properties` (Gnome), you can set 
+project-specific options. These include:
 
 * In the :guilabel:`General` menu, the project title, selection and background
   color, layer units, precision, and the option to save relative paths to
