@@ -60,8 +60,8 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
 Project Properties
 ==================
 
-In the properties window for the project under |nix|
-:menuselection:`Settings --> Project Properties` (kde) or |nix| |win|
+In the properties window for the project under |nix| 
+:menuselection:`Settings --> Project Properties` (kde) or |nix| |win| 
 :menuselection:`Project --> Project Properties` (Gnome), you can set 
 project-specific options. These include:
 
