@@ -261,8 +261,9 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
      choose a new color from **Color Dialog** windows. If not, you need to 
      close the **Color Dialog**.
    * The |mIconDataDefine| :sup:`Data defined override` icon next to a field 
-     means that you can associate the field with data in the map item. These 
-     are particularly helpful for atlas plots.
+     means that you can associate the field with data in the map item or use 
+     expressions. These are particularly helpful with atlas generation 
+     (See atlas_data_defined_overrides_).
 
 
 .. _Rendering_Mode:
@@ -1624,16 +1625,75 @@ to the coverage features. To enable atlas generation for a specific map item, yo
 Labels
 ------
 
-In order to adapt labels to the feature the atlas plugin iterates over, use a label with this special notation
-`[%expression using field_name%]`.
+In order to adapt labels to the feature the atlas plugin iterates over, you can include expressions.
 For example, for a city layer with fields CITY_NAME and ZIPCODE, you could insert this:
 
-"`[% 'The area of ' || upper(CITY_NAME) || ',' || ZIPCODE || ' is ' format_number($area/1000000,2) || ' km2' %]`"
+.. code::
 
-That would result in the generated atlas as
+   The area of [% upper(CITY_NAME) || ',' || ZIPCODE || ' is ' format_number($area/1000000,2) %] km2
+ 
+The information `[% upper(CITY_NAME) || ',' || ZIPCODE || ' is ' format_number($area/1000000,2) %]` 
+is an expression used inside the label. That would result in the generated atlas as:
 
-"`The area of PARIS,75001 is 1.94 km2`".
+`The area of PARIS,75001 is 1.94 km2`
 
+.. _atlas_data_defined_overrides:
+
+
+Data Defined Override Buttons
+-----------------------------
+
+There are several places where you can use a |mIconDataDefine| :sup:`Data Defined Override` 
+button to override the selected setting. These options are particularly usefull with Atlas Generation.
+
+For the following examples the `Regions` layer of the |qg| sample dataset is used and selected
+for Atlas Generation.
+We also assume the paper format `A4 (210X297)` is selected in the :guilabel:`Composite` tab 
+for field :guilabel:`Presets`.
+
+With a `Data Defined Override` button you can dynamically set the paper orientation. 
+When the height (north-south) of the extents of a region is greater than it's width (east-west), you
+rather want to use `portrait` instead of `landscape` orientation to optimize the use of paper.
+ 
+In the :guilabel:`Composition` you can set the field :guilabel:`Orientation` and select `Landscape` 
+or `Portrait`. We want to set the orientation dynamically using an expression depending on the region geometry. 
+press the |mIconDataDefine| button of field :guilabel:`Orientation`, select :menuselection:`Edit ...` so
+the :guilabel:`Expression string builder` dialog opens. Give following expression:
+
+.. code::
+
+   CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry) THEN 'Landscape' ELSE 'Portrait' END
+
+Now the paper orients itself automatically for each Region you need to reposition the location 
+of the composer item as well. For the map item you can use the |mIconDataDefine| button of 
+field :guilabel:`Width` to set it dynamically using following expression: 
+
+.. code::
+
+   (CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry) THEN 297 ELSE 210 END) - 20
+
+Use the |mIconDataDefine| button of field :guilabel:`Heigth` to provide following expression: 
+
+.. code::
+
+   (CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry) THEN 210 ELSE 297 END) - 20
+
+When you want to give a title above map in the center of the page, insert a label item above the map.
+First use the item properties of the label item to set the horizontal alignment to |radiobuttonon| :guilabel:`Center`.
+Next activate from :guilabel:`Reference point` the upper middle checkbox.  
+You can provide following expression for field :guilabel:`X` :
+
+.. code::
+
+   (CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry) THEN 297 ELSE 210 END) / 2
+
+For all other composer items you can set the position in a similar way so they are correctly positioned 
+when page is automatically rotated in portrait or landscape.
+
+Information provided is derived from the excellent blog (in english and portugese) 
+on the Data Defined Override options Multiple_format_map_series_using_QGIS_2.6_ .
+
+This is just one example of how you can use Data Defined Overrides.
 
 Preview
 -------
@@ -1731,3 +1791,5 @@ duplicate an existing composition from a previously created one.
 Finally, you can save your print composition with the |mActionFileSave| :sup:`Save Project` button. 
 This is the same feature as in the |qg| main window. All changes will be saved in a |qg| project 
 file.  
+
+.. _Multiple_format_map_series_using_QGIS_2.6: http://sigsemgrilhetas.wordpress.com/2014/11/09/series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1
