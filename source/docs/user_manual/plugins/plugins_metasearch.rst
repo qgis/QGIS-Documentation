@@ -5,12 +5,6 @@
 MetaSearch Catalogue Client
 ===========================
 
-.. image:: /static/common/qgislogo.png
-  :scale: 100%
-  :alt: QGIS
-  :align: left
-  :target: http://qgis.org/en/site/
-
 .. image:: /static/user_manual/plugins/metasearch-splash.png
   :scale: 100%
   :alt: MetaSearch
@@ -84,7 +78,20 @@ MetaSearch allows for loading and saving connections to an XML file.  This is
 useful when you need to share settings between applications.  Below is an
 example of the XML file format.
 
-.. literalinclude:: ../plugin/MetaSearch/resources/connections-default.xml
+.. code-block:: xml
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <qgsCSWConnections version="1.0">
+      <csw name="Data.gov CSW" url="http://catalog.data.gov/csw-all"/>
+      <csw name="Geonorge - National CSW service for Norway" url="http://www.geonorge.no/geonetwork/srv/eng/csw"/>
+      <csw name="Geoportale Nazionale - Servizio di ricerca Italiano" url="http://www.pcn.minambiente.it/geoportal/csw"/>
+      <csw name="LINZ Data Service" url="http://data.linz.govt.nz/feeds/csw"/>
+      <csw name="Nationaal Georegister (Nederland)" url="http://www.nationaalgeoregister.nl/geonetwork/srv/eng/csw"/>
+      <csw name="RNDT - Repertorio Nazionale dei Dati Territoriali - Servizio di ricerca" url="http://www.rndt.gov.it/RNDT/CSW"/>
+      <csw name="UK Location Catalogue Publishing Service" url="http://csw.data.gov.uk/geonetwork/srv/en/csw"/>
+      <csw name="UNEP/GRID-Geneva Metadata Catalog" url="http://metadata.grid.unep.ch:8080/geonetwork/srv/eng/csw"/>
+  </qgsCSWConnections>
+
 
 To load a list of entries, click the 'Load' button.  A new window will appear;
 click the 'Browse' button and navigate to the XML file of entries you wish to
