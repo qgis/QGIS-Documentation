@@ -35,7 +35,7 @@ Outputs
   Directory where output will be saved. For each feature from input vector
   layer CSV file with area and altitude values will be created.
 
-  File name consists of prefix "hystogram_" followed by layer name and feature
+  File name consists of prefix :file:`hystogram_` followed by layer name and feature
   ID.
 
 Console usage

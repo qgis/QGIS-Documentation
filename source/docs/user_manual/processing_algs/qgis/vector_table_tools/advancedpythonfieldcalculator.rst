@@ -4,7 +4,7 @@ Advanced Python field calculator
 Description
 -----------
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ----------
@@ -48,7 +48,7 @@ Parameters
 ``Formula`` [string]
   <put parameter description here>
 
-  Default: *value =\ *
+  Default: *value =*
 
 Outputs
 -------

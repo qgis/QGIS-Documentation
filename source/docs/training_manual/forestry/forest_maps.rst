@@ -95,7 +95,7 @@ Obviously this is not good enough, you want to make the plot numbers as clearly 
 |basic| |TY| Changing the Symbology of the Layers
 -------------------------------------------------------------------------------
 
-You have been working in :doc:`../training_manual/basic_map/index` with symbology and in :doc:`../vector_classification/index` with labeling. Go back to those modules if you need to refresh about some of the available options and tools. Your goal is to get the plots locations and their name to be as clearly visible as possible but always allowing to see the background map elements. You can take some guidance from this image:
+You have been working in :doc:`../basic_map/index` with symbology and in :doc:`../vector_classification/index` with labeling. Go back to those modules if you need to refresh about some of the available options and tools. Your goal is to get the plots locations and their name to be as clearly visible as possible but always allowing to see the background map elements. You can take some guidance from this image:
 
 .. image:: /static/training_manual/forestry/plots_zoom2_symbology.png
    :align: center

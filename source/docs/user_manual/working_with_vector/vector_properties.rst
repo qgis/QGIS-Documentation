@@ -902,7 +902,7 @@ Coordinate Reference System
 Feature subset
 
 * With the **[Query Builder]** button, you can create a subset of the features in the layer
-  that will be visualized (also refer to section :ref:`sec_selection_query`).
+  that will be visualized (also refer to section :ref:`vector_query_builder`).
 
 .. _figure_general_vect:
 
