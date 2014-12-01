@@ -1,7 +1,7 @@
 |LS| Digitizing Forest Stands
 ===============================================================================
 
-Unless you are going to use your georeferenced map as a simple background image, the next natural step is to digitize elements from it. You have already done so in the exercises about creating vector data in :doc:`..create_vector_data/create_new_vector` , when you digitized the school fields. In this lesson, you are going to digitize the forest stands' borders that appear in the map as green lines but instead of doing it using an aerial image, you will use your georeferenced map.
+Unless you are going to use your georeferenced map as a simple background image, the next natural step is to digitize elements from it. You have already done so in the exercises about creating vector data in :doc:`../create_vector_data/create_new_vector` , when you digitized the school fields. In this lesson, you are going to digitize the forest stands' borders that appear in the map as green lines but instead of doing it using an aerial image, you will use your georeferenced map.
 
 **The goal for this lesson:** Learn a technique to help the digitizing task, digitizing forest stands and finally adding the inventory data to them.
 
@@ -185,7 +185,7 @@ Now you have two forest stands ready. And a good idea on how to proceed. Continu
 
 It might look like a lot of work, but you will soon get used to digitizing the forest stands. It should take you about 15 minutes.
 
-During the digitizing you might need to edit or delete nodes, split or merge polygons. You learned about the necessary tools in :doc:`..create_vector_data/topo_editing`, now is probably a good moment to go read about them again.
+During the digitizing you might need to edit or delete nodes, split or merge polygons. You learned about the necessary tools in :doc:`../create_vector_data/topo_editing`, now is probably a good moment to go read about them again.
 
 Remember that having :guilabel:`Enable topological editing` activated, allows you to move nodes common to two polygons so that the common border is edited at the same time for both polygons.
 

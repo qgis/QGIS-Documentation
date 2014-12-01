@@ -29,7 +29,7 @@ format. Supported formats include:
    See section :ref:`sec_grass`.
 *  Online spatial data served as OGC Web Services, including WMS, WMTS, WCS,
    WFS, and WFS-T. See section :ref:`sec_ogc`.
-*  OpenStreetMap data. See section :ref:`plugins_osm`.
+
 
 Explore data and compose maps 
 -----------------------------
