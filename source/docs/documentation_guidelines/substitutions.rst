@@ -288,7 +288,7 @@ Icon                            Substitution                        Icon        
 |spiticon|               	``|spiticon|``                      |delimited_text|		    ``|delimited_text|`` 
 |mActionGDALScript|		``|mActionGDALScript|``		    |dxf2shp_converter|		    ``|dxf2shp_converter|``
 |spatialquery|			``|spatialquery|``     		    |selectesubsetlayer|	    ``|selectesubsetlayer|``
-|selectcreatelayer|  	    	``|selectcreatelayer|``             \                     	    \ 
+|selectcreatelayer|  	    	``|selectcreatelayer|``             |metasearch|                    ``|metasearch|``
 ==============================  ==================================  ==============================  ==================================
 
 
