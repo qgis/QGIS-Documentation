@@ -954,6 +954,8 @@ rst_epilog = """
    :width: 2em
 .. |metadata| image:: /static/common/metadata.png
    :width: 2em
+.. |metasearch| image:: /static/common/MetaSearch.png
+   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |join| image:: /static/common/join.png
