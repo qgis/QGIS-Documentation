@@ -1,0 +1,131 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:6
+msgid "Peuker Douglas"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:9
+msgid "Description"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:11
+msgid ""
+"Creates an indicator grid (1, 0) of upward curved grid cells according to "
+"the Peuker and Douglas algorithm."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:14
+msgid ""
+"With this tool, the DEM is first smoothed by a kernel with weights at the "
+"center, sides, and diagonals. The Peuker and Douglas (1975) method (also "
+"explained in Band, 1986), is then used to identify upwardly curving grid "
+"cells. This technique flags the entire grid, then examines in a single pass "
+"each quadrant of 4 grid cells, and unflags the highest. The remaining "
+"flagged cells are deemed \"upwardly curved\", and when viewed, resemble a "
+"channel network. This proto-channel network generally lacks connectivity and"
+" requires thinning, issues that were discussed in detail by Band (1986)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:24
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:28
+msgid "``Elevation Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:27
+msgid ""
+"A grid of elevation values. This is usually the output of the **\"Pit "
+"Remove\"** tool, in which case it is elevations with pits removed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:34
+msgid "``Center Smoothing Weight`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:31
+msgid ""
+"The center weight parameter used by a kernel to smooth the DEM before the "
+"tool identifies upwardly curved grid cells."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:34
+msgid "Default: *0.4*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:40
+msgid "``Side Smoothing Weight`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:37
+msgid ""
+"The side weight parameter used by a kernel to smooth the DEM before the tool"
+" identifies upwardly curved grid cells."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:40
+msgid "Default: *0.1*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:46
+msgid "``Diagonal Smoothing Weight`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:43
+msgid ""
+"The diagonal weight parameter used by a kernel to smooth the DEM before the "
+"tool identifies upwardly curved grid cells."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:46
+msgid "Default: *0.05*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:49
+msgid "Outputs"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:55
+msgid "``Stream Source Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:52
+msgid ""
+"An indicator grid (1, 0) of upward curved grid cells according to the Peuker"
+" and Douglas algorithm, and if viewed, resembles a channel network. This "
+"proto-channel network generally lacks connectivity and requires thinning, "
+"issues that were discussed in detail by Band (1986)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:58
+msgid "Console usage"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:65
+msgid "See also"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:67
+msgid ""
+"Band, L. E., (1986), \"Topographic partition of watersheds with digital "
+"elevation models\", Water Resources Research, 22(1): 15-24."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/peukerdouglas.rst:69
+msgid ""
+"Peuker, T. K. and D. H. Douglas, (1975), \"Detection of surface-specific "
+"points by local parallel processing of discrete terrain elevation data\", "
+"Comput. Graphics Image Process., 4: 375-387."
+msgstr ""

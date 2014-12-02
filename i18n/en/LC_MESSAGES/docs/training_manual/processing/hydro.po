@@ -1,0 +1,170 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/training_manual/processing/hydro.rst:6
+msgid "Hydrological analysis"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:9
+msgid ""
+"In this lesson we will perform some hydrological analysis. This analysis "
+"will be used in some of the following lessons, as it constitutes a very good"
+" example of an analysis workflow, and we will use it to demonstrate some "
+"advanced features."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:12
+msgid ""
+"In this lesson, we are going to do some hydrological analysis. Starting with"
+" a DEM, we are going to extract a channel network, delineate watersheds and "
+"calculate some statistics."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:15
+msgid ""
+"The first thing is to load the project with the lesson data, which just "
+"contains a DEM."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:20
+msgid ""
+"The first module to execute is *Catchment area*. You can use anyone of  the "
+"others named *Catchment area*. They have different algorithms underneath, "
+"but the results are basically the same."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:22
+msgid ""
+"Select the DEM in the *Elevation* field, and leave the default values for "
+"the rest of parameters."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:26
+msgid ""
+"Some algorithm calculates many layers, but the *Catchment Area* one is the "
+"only one we will be using."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:28
+msgid "You can get rid of the other ones if you want."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:30
+msgid "The rendering of the layer is not very informative."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:34
+msgid ""
+"To know why, you can have a look at the histogram and you will see that "
+"values are not evenly distributed (there are a few cells with very high "
+"value, those corresponding to the channel network). Calculating the "
+"logarithm of the catchment area value yields a layer that conveys much more "
+"information (you can do it using the raster calculator)."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:38
+msgid ""
+"The catchment area (also known as flow accumulation), can be used to set a "
+"threshold for channel initiation. This can be done using the *Channel "
+"network* algorithm. Here is how you have to set it up (note the *Initiation "
+"threshold* *Greater than* 10.000.000)."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:43
+msgid ""
+"Use the original catchment area layer, not the logarithm one. That one was "
+"just for rendering purposes."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:45
+msgid ""
+"If you increase the *Initiation threshold* value, you will get a more sparse"
+" channel network. If you decrease it, you will get a denser one. With the "
+"proposed value, this is what you get."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:50
+msgid ""
+"The image above shows just the resulting vector layer and the DEM, but there"
+" should be also a raster one with the same channel network. That raster one "
+"will be, in fact, the one we will be using."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:52
+msgid ""
+"Now, we will use the *Watersheds basins* algorithm to delineate the "
+"subbasins corresponding to that channel network, using as outlet points all "
+"the junctions in it. Here is how you have to set the corresponding "
+"parameters dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:57
+msgid "And this is what you will get."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:61
+msgid ""
+"This is a raster result. You can vectorise it using the *Vectorise grid "
+"classes* algorithm."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:68
+msgid ""
+"Now, let's try to compute statistics about the elevation values in one of "
+"the subbasins. The idea is to have a layer that just represents the "
+"elevation within that subbasin and then pass it to the module that "
+"calculates those statistics."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:70
+msgid ""
+"First, let's clip the original DEM with the polygon representing a subbasin."
+" We will use the *Clip Grid with Polygon* algorithm. If we select a single "
+"subbasin polygon and then call the clipping algorithm, we can clip the DEM "
+"to the area covered by that polygon, since the algorithm is aware of the "
+"selection."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:72
+msgid "Select a polygon,"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:76
+msgid "and call the clipping algorithm with the following parameters:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:80
+msgid ""
+"The element selected in the input field is, or course, the DEM we want to "
+"clip."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:82
+msgid "You will get something like this."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:87
+msgid ""
+"This layer is ready to be used in the *Raster layer statistics* algorithm."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:91
+msgid "The resulting statistic are the following ones."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hydro.rst:95
+msgid ""
+"We will use both the basin calculations procedure and the statistics "
+"calculation in other lessons, to find out how other elements can help us "
+"automate both of them and work more effectively."
+msgstr ""

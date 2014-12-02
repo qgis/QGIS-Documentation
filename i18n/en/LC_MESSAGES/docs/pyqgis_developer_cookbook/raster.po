@@ -113,10 +113,6 @@ msgstr ""
 msgid "PalettedSingleBandPseudoColor"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:57
-msgid "\"Palette\" layerdrawn using a pseudocolor algorithm"
-msgstr ""
-
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:58
 msgid "7"
 msgstr ""
@@ -178,69 +174,55 @@ msgid ""
 "canvas, see :ref:`refresh-layer`."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:79
-msgid ""
-"**TODO:** contrast enhancements, transparency (no data), user defined "
-"min/max, band statistics"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:84
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:85
 msgid "Single Band Rasters"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:86
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:87
 msgid ""
 "They are rendered in gray colors by default. To change the drawing style to "
 "pseudocolor:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:92
-msgid ""
-"The ``PseudoColorShader`` is a basic shader that highlighs low values in "
-"blue and high values in red. Another, ``FreakOutShader`` uses more fancy "
-"colors and according to the documentation, it will frighten your granny and "
-"make your dogs howl."
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:97
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:98
 msgid ""
 "There is also ``ColorRampShader`` which maps the colors as specified by its "
 "color map. It has three modes of interpolation of values:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:100
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:101
 msgid ""
 "linear (``INTERPOLATED``): resulting color is linearly interpolated from the"
 " color map entries above and below the actual pixel value"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:102
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:103
 msgid ""
 "discrete (``DISCRETE``): color is used from the color map entry with equal "
 "or higher value"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:104
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:105
 msgid ""
 "exact (``EXACT``): color is not interpolated, only the pixels with value "
 "equal to color map entries are drawn"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:107
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:108
 msgid ""
 "To set an interpolated color ramp shader ranging from green to yellow color "
 "(for pixel values from 0 to 255)::"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:117
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:118
 msgid "To return back to default gray levels, use:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:124
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:125
 msgid "Multi Band Rasters"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:126
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:127
 msgid ""
 "By default, QGIS maps the first three bands to red, green and blue values to"
 " create a color image (this is the ``MultiBandColor`` drawing style. In some"
@@ -248,24 +230,24 @@ msgid ""
 "interchanges red band (1) and green band (2):"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:134
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:135
 msgid ""
 "In case only one band is necessary for visualization of the raster, single "
 "band drawing can be chosen --- either gray levels or pseudocolor, see "
 "previous section::"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:149
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:150
 msgid "Refreshing Layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:151
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:152
 msgid ""
 "If you do change layer symbology and would like ensure that the changes are "
 "immediately visible to the user, call these methods::"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:157
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:159
 msgid ""
 "The first call will ensure that the cached image of rendered layer is erased"
 " in case render caching is turned on. This functionality is available from "
@@ -274,19 +256,13 @@ msgid ""
 "method exists."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:163
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:165
 msgid ""
 "The second call emits signal that will force any map canvas containing the "
 "layer to issue a refresh."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:166
-msgid ""
-"With WMS raster layers, these commands do not work. In this case, you have "
-"to do it explicitily::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:172
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:174
 msgid ""
 "In case you have changed layer symbology (see sections about raster and "
 "vector layers on how to do that), you might want to force QGIS to update the"
@@ -294,26 +270,20 @@ msgid ""
 "follows (``iface`` is an instance of QgisInterface)::"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:183
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:185
 msgid "Query Values"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:185
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:187
 msgid ""
 "To do a query on value of bands of raster layer at some specified point::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:192
-msgid ""
-"The ``results`` method in this case returs a dictionary, with band indices "
-"as keys, and band values as values."
 msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:7
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:15
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:41
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:143
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:179
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:144
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:181
 msgid "raster layers"
 msgstr ""
 
@@ -329,23 +299,82 @@ msgstr ""
 msgid "drawing style"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:81
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:121
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:82
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:122
 msgid "rasters"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:81
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:82
 msgid "single band"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:121
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:122
 msgid "multi band"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:143
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:144
 msgid "refreshing"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:179
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:181
 msgid "querying"
 msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:57
+msgid "\"Palette\" layer drawn using a pseudocolor algorithm"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:80
+msgid "**TODO:**"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:80
+msgid ""
+"contrast enhancements, transparency (no data), user defined min/max, band "
+"statistics"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:93
+msgid ""
+"The ``PseudoColorShader`` is a basic shader that highlights low values in "
+"blue and high values in red. Another, ``FreakOutShader`` uses more fancy "
+"colors and according to the documentation, it will frighten your granny and "
+"make your dogs howl."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:168
+msgid ""
+"With WMS raster layers, these commands do not work. In this case, you have "
+"to do it explicitly::"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:194
+msgid ""
+"The ``results`` method in this case returns a dictionary, with band indices "
+"as keys, and band values as values."
+msgstr ""
+
+#~ msgid "\"Palette\" layerdrawn using a pseudocolor algorithm"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**TODO:** contrast enhancements, transparency (no data), user defined "
+#~ "min/max, band statistics"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ``PseudoColorShader`` is a basic shader that highlighs low values in "
+#~ "blue and high values in red. Another, ``FreakOutShader`` uses more fancy "
+#~ "colors and according to the documentation, it will frighten your granny and "
+#~ "make your dogs howl."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "With WMS raster layers, these commands do not work. In this case, you have "
+#~ "to do it explicitily::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ``results`` method in this case returs a dictionary, with band indices "
+#~ "as keys, and band values as values."
+#~ msgstr ""

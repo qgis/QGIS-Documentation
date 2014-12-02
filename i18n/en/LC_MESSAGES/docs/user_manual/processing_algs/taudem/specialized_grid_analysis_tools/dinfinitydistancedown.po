@@ -1,0 +1,210 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:6
+msgid "D-Infinity Distance Down"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:9
+msgid "Description"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:11
+msgid ""
+"Calculates the distance downslope to a stream using the D-infinity flow "
+"model. The D-infinity flow model is a multiple flow direction model, because"
+" the outflow from each grid cell is proportioned between up to 2 downslope "
+"grid cells. As such, the distance from any grid cell to a stream is not "
+"uniquely defined. Flow that originates at a particular grid cell may enter "
+"the stream at a number of different cells. The statistical method may be "
+"selected as the longest, shortest or weighted average of the flow path "
+"distance to the stream. Also one of several ways of measuring distance may "
+"be selected: the total straight line path (Pythagoras), the horizontal "
+"component of the straight line path, the vertical component of the straight "
+"line path, or the total surface flow path."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:23
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:28
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:26
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This can be created by the"
+" tool **\"D-Infinity Flow Directions\"**."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:36
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:31
+msgid ""
+"This input is a grid of elevation values. As a general rule, it is "
+"recommended that you use a grid of elevation values that have had the pits "
+"removed for this input. Pits are generally taken to be artifacts that "
+"interfere with the analysis of flow across them. This grid can be obtained "
+"as the output of the **\"Pit Remove\"** tool, in which case it contains "
+"elevation values where the pits have been filled to the point where they "
+"just drain."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:41
+msgid "``Stream Raster Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:39
+msgid ""
+"A grid indicating streams, by using a grid cell value of 1 on streams and 0 "
+"off streams. This is usually the output of one of the tools in the "
+"**\"Stream Network Analysis\"** toolset."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:51
+msgid "``Weight Path Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:44
+msgid "Optional."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:46
+msgid ""
+"A grid giving weights (loadings) to be used in the distance calculation. "
+"This might be used for example where only flow distance through a buffer is "
+"to be calculated. The weight is then 1 in the buffer and 0 outside it. "
+"Alternatively the weight may reflect some sort of cost function for travel "
+"over the surface, perhaps representing travel time or attenuation of a "
+"process. If this input file is not used, the loadings will assumed to be one"
+" for each grid cell."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:68
+msgid "``Statistical Method`` [selection]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:54
+msgid ""
+"Statistical method used to calculate the distance down to the stream. In the"
+" D-Infinity flow model, the outflow from each grid cell is proportioned "
+"between two downslope grid cells. Therefore, the distance from any grid cell"
+" to a stream is not uniquely defined. Flow that originates at a particular "
+"grid cell may enter the stream at a number of cells. The distance to the "
+"stream may be defined as the longest (maximum), shortest (minimum) or "
+"weighted average of the distance down to the stream."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:62
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:77
+msgid "Options:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:64
+msgid "0 --- Minimum"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:65
+msgid "1 --- Maximum"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:66
+msgid "2 --- Average"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:68
+msgid "Default: *2*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:84
+msgid "``Distance Method`` [selection]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:71
+msgid ""
+"Distance method used to calculate the distance down to the stream. One of "
+"several ways of measuring distance may be selected: the total straight line "
+"path (Pythagoras), the horizontal component of the straight line path "
+"(horizontal), the vertical component of the straight line path (vertical), "
+"or the total surface flow path (surface)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:79
+msgid "0 --- Pythagoras"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:80
+msgid "1 --- Horizontal"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:81
+msgid "2 --- Vertical"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:82
+msgid "3 --- Surface"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:84
+msgid "Default: *1*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:99
+msgid "``Check for edge contamination`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:87
+msgid ""
+"A flag that determines whether the tool should check for edge contamination."
+" This is defined as the possibility that a value may be underestimated due "
+"to grid cells outside of the domain not being counted. In the context of "
+"Distance Down this occurs when part of a flow path traced downslope from a "
+"grid cell leaves the domain without reaching a stream grid cell. With edge "
+"contamination checking selected, the algorithm recognizes this and reports "
+"no data for the result. This is the desired effect and indicates that values"
+" for these grid cells is unknown due to it being dependent on terrain "
+"outside of the domain of data available. Edge contamination checking may be "
+"overridden in cases where you know this is not an issue or want to evaluate "
+"the distance using only the fraction of flow paths that terminate at a "
+"stream."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:99
+msgid "Default: *True*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:102
+msgid "Outputs"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:106
+msgid "``D-Infinity Drop to Stream Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:105
+msgid ""
+"Grid containing the distance to stream calculated using the D-infinity flow "
+"model and the statistical and path methods chosen."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:109
+msgid "Console usage"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:116
+msgid "See also"
+msgstr ""

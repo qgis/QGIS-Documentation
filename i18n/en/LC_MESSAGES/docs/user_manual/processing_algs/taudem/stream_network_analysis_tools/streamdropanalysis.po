@@ -1,0 +1,263 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:6
+msgid "Stream Drop Analysis"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:9
+msgid "Description"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:11
+msgid ""
+"Applies a series of thresholds (determined from the input parameters) to the"
+" input accumulated stream source grid (:file:`*ssa`) grid and outputs the "
+"results in the :file:`*drp.txt` file the stream drop statistics table. This "
+"function is designed to aid in the determination of a geomorphologically "
+"objective threshold to be used to delineate streams. Drop Analysis attempts "
+"to select the right threshold automatically by evaluating a stream network "
+"for a range of thresholds and examining the constant drop property of the "
+"resulting Strahler streams. Basically it asks the question: Is the mean "
+"stream drop for first order streams statistically different from the mean "
+"stream drop for higher order streams, using a T-test. Stream drop is the "
+"difference in elevation from the beginning to the end of a stream defined as"
+" the sequence of links of the same stream order. If the T-test shows a "
+"significant difference then the stream network does not obey this \"law\" so"
+" a larger threshold needs to be chosen. The smallest threshold for which the"
+" T-test does not show a significant difference gives the highest resolution "
+"stream network that obeys the constant stream drop \"law\" from "
+"geomorphology, and is the threshold chosen for the \"objective\" or "
+"automatic mapping of streams from the DEM. This function can be used in the "
+"development of stream network rasters, where the exact watershed "
+"characteristic(s) that were accumulated in the accumulated stream source "
+"grid vary based on the method being used to determine the stream network "
+"raster."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:35
+msgid ""
+"The constant stream drop \"law\" was identified by Broscoe (1959). For the "
+"science behind using this to determine a stream delineation threshold, see "
+"Tarboton et al. (1991, 1992), Tarboton and Ames (2001)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:40
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:49
+msgid "``D8 Contributing Area Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:43
+msgid ""
+"A grid of contributing area values for each cell that were calculated using "
+"the D8 algorithm. The contributing area for a cell is the sum of its own "
+"contribution plus the contribution from all upslope neighbors that drain to "
+"it, measured as a number of cells or the sum of weight loadings. This grid "
+"can be obtained as the output of the **\"D8 Contributing Area\"** tool. This"
+" grid is used in the evaluation of drainage density reported in the stream "
+"drop table."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:55
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:52
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:59
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:58
+msgid ""
+"A grid of elevation values. This is usually the output of the **\"Pit "
+"Remove\"** tool, in which case it is elevations with pits removed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:68
+msgid "``Accumulated Stream Source Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:62
+msgid ""
+"This grid must be monotonically increasing along the downslope D8 flow "
+"directions. It it compared to a series of thresholds to determine the "
+"beginning of the streams. It is often generated by accumulating some "
+"characteristic or combination of characteristics of the watershed with the "
+"**\"D8 Contributing Area\"** tool, or using the maximum option of the **\"D8"
+" Flow Path Extreme\"** tool. The exact method varies depending on the "
+"algorithm being used."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:72
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:71
+msgid ""
+"A point shapefile defining the outlets upstream of which drop analysis is "
+"performed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:81
+msgid "``Minimum Threshold`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:75
+msgid ""
+"This parameter is the lowest end of the range searched for possible "
+"threshold values using drop analysis. This technique looks for the smallest "
+"threshold in the range where the absolute value of the t-statistic is less "
+"than 2. For the science behind the drop analysis see Tarboton et al. (1991, "
+"1992), Tarboton and Ames (2001)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:81
+msgid "Default: *5*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:90
+msgid "``Maximum Threshold`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:84
+msgid ""
+"This parameter is the highest end of the range searched for possible "
+"threshold values using drop analysis. This technique looks for the smallest "
+"threshold in the range where the absolute value of the t-statistic is less "
+"than 2. For the science behind the drop analysis see Tarboton et al. (1991, "
+"1992), Tarboton and Ames (2001)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:90
+msgid "Default: *500*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:99
+msgid "``Number of Threshold Values`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:93
+msgid ""
+"The parameter is the number of steps to divide the search range into when "
+"looking for possible threshold values using drop analysis. This technique "
+"looks for the smallest threshold in the range where the absolute value of "
+"the t-statistic is less than 2. For the science behind the drop analysis see"
+" Tarboton et al. (1991, 1992), Tarboton and Ames (2001)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:99
+msgid "Default: *10*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:110
+msgid "``Spacing for Threshold Values`` [selection]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:102
+msgid ""
+"This parameter indicates whether logarithmic or linear spacing should be "
+"used when looking for possible threshold values using drop ananlysis."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:105
+msgid "Options:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:107
+msgid "0 --- Logarithmic"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:108
+msgid "1 --- Linear"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:110
+msgid "Default: *0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:113
+msgid "Outputs"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:126
+msgid "``D-Infinity Drop to Stream Grid`` [file]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:116
+msgid "This is a comma delimited text file with the following header line:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:120
+msgid "::"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:120
+msgid ""
+"Threshold,DrainDen,NoFirstOrd,NoHighOrd,MeanDFirstOrd,MeanDHighOrd,StdDevFirstOrd,StdDevHighOrd,T"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:122
+msgid ""
+"The file then contains one line of data for each threshold value examined, "
+"and then a summary line that indicates the optimum threshold value. This "
+"technique looks for the smallest threshold in the range where the absolute "
+"value of the t-statistic is less than 2. For the science behind the drop "
+"analysis, see Tarboton et al. (1991, 1992), Tarboton and Ames (2001)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:129
+msgid "Console usage"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:136
+msgid "See also"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:138
+msgid ""
+"Broscoe, A. J., (1959), \"Quantitative analysis of longitudinal stream "
+"profiles of small watersheds\", Office of Naval Research, Project NR "
+"389-042, Technical Report No. 18, Department of Geology, Columbia "
+"University, New York."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:141
+msgid ""
+"Tarboton, D. G., R. L. Bras and I. Rodriguez-Iturbe, (1991), \"On the "
+"Extraction of Channel Networks from Digital Elevation Data\", Hydrologic "
+"Processes, 5(1): 81-100."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:144
+msgid ""
+"Tarboton, D. G., R. L. Bras and I. Rodriguez-Iturbe, (1992), \"A Physical "
+"Basis for Drainage Density\", Geomorphology, 5(1/2): 59-76."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:146
+msgid ""
+"Tarboton, D. G. and D. P. Ames, (2001), \"Advances in the mapping of flow "
+"networks from digital elevation data\", World Water and Environmental "
+"Resources Congress, Orlando, Florida, May 20-24, ASCE, "
+"http://www.engineering.usu.edu/dtarb/asce2001.pdf."
+msgstr ""

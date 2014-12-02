@@ -17,21 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
 
-# 0c051d61713e44459a33ddcd7317a302
-#: ../../source/docs/user_manual/plugins/plugins.rst:39
-msgid "Managing Plugins"
-msgstr ""
-
-# 985e8a741f6a42b892ad52fab2f38935
-#: ../../source/docs/user_manual/plugins/plugins.rst:66
-msgid "Plugin Manager |nix|"
-msgstr ""
-
-# 9dd67c97e751461bbc84e482fe5f396a
-#: ../../source/docs/user_manual/plugins/plugins.rst:111
-msgid "**Add more repositories**"
-msgstr ""
-
 # 906c6ec49c6b4eb58a5323cd7df58bb0
 # a1d5d8b5a1384d658c705a585bb50a31
 # 1652a74e00ce4dc5a0808bc09ed25a1d
@@ -39,166 +24,351 @@ msgstr ""
 # 1990bada9830481c9cd668bded0fee45
 # a46b776c6ca743398e44f2a6a34d4621
 #: ../../source/docs/user_manual/plugins/plugins.rst:7
-#: ../../source/docs/user_manual/plugins/plugins.rst:20
-#: ../../source/docs/user_manual/plugins/plugins.rst:53
 msgid "plugins"
-msgstr ""
-
-# a1d5d8b5a1384d658c705a585bb50a31
-#: ../../source/docs/user_manual/plugins/plugins.rst:20
-msgid "types"
-msgstr ""
-
-# 1652a74e00ce4dc5a0808bc09ed25a1d
-#: ../../source/docs/user_manual/plugins/plugins.rst:53
-msgid "manager"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:41
-msgid ""
-"Managing plugins in general means loading or unloading them using the "
-":guilabel:`Plugin Manager`. To deactivate and reactivate external plugins, "
-"the :guilabel:`Plugin Manager` is used again."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:68
-msgid ""
-"The |plugin| :guilabel:`Installed` menu of the :guilabel:`Plugin Manager` "
-"lists all the available plugins and their status (loaded or unloaded), "
-"including all core plugins and all external plugins that have been installed"
-" and automatically activated using the |mActionShowPluginManager| "
-":guilabel:`Get more` menu (see Section :ref:`load_external_plugin`). Those "
-"plugins that are already loaded have a check mark to the left of their name."
-" Figure_plugins_1_ shows the |plugin| :guilabel:`Installed` dialog."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:75
-msgid ""
-"To enable a particular core plugin, click on the checkbox to the left of the"
-" plugin name, and click **[OK]**. When you exit the application, a list of "
-"loaded plugins is retained, and the plugins are automatically loaded."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:89
-msgid ""
-"In the |plugin| :guilabel:`Installed` menu you can see the path if it is an "
-"external plugin. External plugins are only installed in your home directory "
-"while core plugins are stored in ``/usr`` ."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:113
-msgid ""
-"To add external author repositories, open the Plugin Installer "
-"|mActionShowPluginManager| :menuselection:`Manage and Install Plugins`, go "
-"to the menu |mActionTransformSettings| :guilabel:`Settings`, and click "
-"**[Add]** (see figure_plugins_2_). If you do not want one or more of the "
-"added repositories, they can be disabled via the **[Edit...]** button, or "
-"completely removed with the **[Delete]** button."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:119
-msgid ""
-"As such, we cannot take any responsibility for them. You can also manage the"
-" repository list manually, that is add, remove, and edit the entries. "
-"Temporarily disabling a particular repository is possible by clicking the "
-"**[Edit ...]** button."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:134
-msgid "Plugin Settings |nix|"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:136
-msgid "**Check for updates**"
 msgstr ""
 
 #: ../../source/docs/user_manual/plugins/plugins.rst:14
 msgid "|qg| Plugins"
 msgstr ""
 
+#: ../../source/docs/user_manual/plugins/plugins.rst:5
+msgid "|updatedisclaimer|"
+msgstr ""
+
 #: ../../source/docs/user_manual/plugins/plugins.rst:16
 msgid ""
 "|qg| has been designed with a plugin architecture. This allows many new "
-"features/functions to be easily added to the application. Many of the "
-"features in |qg| are actually implemented as either **core** or **external "
-"plugins**."
+"features and functions to be easily added to the application. Many of the "
+"features in |qg| are actually implemented as plugins."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:20
+msgid ""
+"You can manage your plugins in the plugin dialog which can be opened with "
+":guilabel:`Plugins > Manage and install pluginsi ...`."
 msgstr ""
 
 #: ../../source/docs/user_manual/plugins/plugins.rst:23
 msgid ""
-"**Core Plugins** are maintained by the |qg| Development Team and are "
-"automatically part of every |qg| distribution. They are written in one of "
-"two languages: C++ or Python. More information about core plugins are "
-"provided in Section :ref:`core_plugins`"
+"When a plugin needs to be updated, and if plugins settings have been set up "
+"accordingly, QGIS main interface could display a blue link in the status bar"
+" to tell you that there are some plugins updating waiting to be applied."
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:27
+#: ../../source/docs/user_manual/plugins/plugins.rst:33
+msgid "The Plugins Dialog"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:35
 msgid ""
-"**External Plugins** are currently all written in Python. They are stored in"
-" external repositories and maintained by the individual authors. They can be"
-" added to |qg| in the |mActionShowPluginManager| :guilabel:`Get more` "
-"section the of :guilabel:`Plugin Manager`. More information about external "
-"plugins is provided in Section :ref:`load_external_plugin`."
+"The menus in the Plugins dialog allow the user to install, uninstall and "
+"upgrade plugins in different ways. Each plugin have some metadatas displayed"
+" in the right panel:"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:38
+msgid "information if the plugin is experimental"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:39
+msgid "description"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:40
+msgid "rating vote(s) (you can vote for your prefered plugin!)"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:41
+msgid "tags"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:42
+msgid "some useful links as the home page, tracker and code repository"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:43
+msgid "author(s)"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:44
+msgid "version available"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:46
+msgid "You can use the filter to find a specific plugin."
 msgstr ""
 
 #: ../../source/docs/user_manual/plugins/plugins.rst:48
-msgid "Loading a |qg| Core Plugin"
+msgid "|mActionShowPluginManager| :guilabel:`All`"
 msgstr ""
 
 #: ../../source/docs/user_manual/plugins/plugins.rst:50
 msgid ""
-"Loading a |qg| Core Plugin is done from the main menu "
-":menuselection:`Plugins -->` |mActionShowPluginManager| "
-":menuselection:`Manage and Install Plugins`."
+"Here, all the available plugins are listed, including both core and external"
+" plugins. Use **[Upgrade all]** to look for new versions of the plugins. "
+"Furthermore, you can use **[Install plugin]**, if a plugin is listed but not"
+" installed, and **[Uninstall plugin]** as well as **[Reinstall plugin]**, if"
+" a plugin is installed. If a plugin is installed, it can be de/activated "
+"using the checkbox."
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:82
-msgid "Loading an external |qg| Plugin"
+#: ../../source/docs/user_manual/plugins/plugins.rst:64
+msgid "The |mActionShowPluginManager| :guilabel:`All` menu |nix|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:67
+msgid "|plugin_installed| :guilabel:`Installed`"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:69
+msgid ""
+"In this menu, you can find only the installed plugins. The external plugins "
+"can be uninstalled and reinstalled using the **[Uninstall plugin]** and "
+"**[Reinstall plugin]** buttons. You can **[Upgrade all]** here as well."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:81
+msgid "The |plugin_installed| :guilabel:`Installed` menu |nix|"
 msgstr ""
 
 #: ../../source/docs/user_manual/plugins/plugins.rst:84
-msgid ""
-"External |qg| plugins are written in Python. They are by default stored in "
-"either the 'Official' |qg| Repository, or in various other external "
-"repositories maintained by individual authors. You can find the external "
-"plugins in the |mActionShowPluginManager| :guilabel:`Get more` menu."
+msgid "|plugin| :guilabel:`Not installed`"
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:93
+#: ../../source/docs/user_manual/plugins/plugins.rst:86
 msgid ""
-"Detailed documentation about the usage, minimum |qg| version, homepage, "
+"This menu lists all plugins available that are not installed. You can use "
+"the **[Install plugin]** button to implement a plugin into |qg|."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:98
+msgid "The |plugin| :guilabel:`Not installed` menu |nix|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:101
+msgid "|plugin_upgrade| :guilabel:`Upgradeable`"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:103
+msgid ""
+"If you activated |checkbox| :guilabel:`Show also experimental plugins` in "
+"the |mActionTransformSettings| :guilabel:`Settings` menu, you can use this "
+"menu to look for more recent plugin versions. This can be done with the "
+"**[Upgrade plugin]** or **[Upgrade all]** buttons."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:117
+msgid "The |plugin_upgrade| :guilabel:`Upgradeable` menu |nix|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:120
+msgid "|mActionTransformSettings| :guilabel:`Settings`"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:122
+msgid "In this menu, you can use the following options:"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:124
+msgid ""
+"|checkbox| :guilabel:`Check for updates on startup`. Whenever a new plugin "
+"or a plugin update is available, |qg| will inform you 'every time QGIS "
+"starts', 'once a day', 'every 3 days', 'every week', 'every 2 weeks' or "
+"'every month'."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:127
+msgid ""
+"|checkbox| :guilabel:`Show also experimental plugins`. |qg| will show you "
+"plugins in early stages of development, which are generally unsuitable for "
+"production use."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:130
+msgid ""
+"|checkbox| :guilabel:`Show also deprecated plugins`. These plugins are "
+"deprecated and generally unsuitable for production use."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:133
+msgid ""
+"To add external author repositories, click **[Add...]** in the "
+":guilabel:`Plugin repositories` section. If you do not want one or more of "
+"the added repositories, they can be disabled via the **[Edit...]** button, "
+"or completely removed with the **[Delete]** button."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:146
+msgid "The |mActionTransformSettings| :guilabel:`Settings` menu |nix|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:148
+msgid ""
+"The :guilabel:`Search` function is available in nearly every menu (except "
+"|mActionTransformSettings| :guilabel:`Settings`). Here, you can look for "
+"specific plugins."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:151
+msgid "**Core and external plugins**"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:153
+msgid ""
+"|qg| plugins are implemented either as **Core Plugins** or **External "
+"Plugins**. **Core Plugins** are maintained by the |qg| Development Team and "
+"are automatically part of every |qg| distribution. They are written in one "
+"of two languages: C++ or Python. **External Plugins** are currently all "
+"written in Python. They are stored in external repositories and are "
+"maintained by the individual authors."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins.rst:160
+msgid ""
+"Detailed documentation about the usage, minimum |qg| version, home page, "
 "authors, and other important information are provided for the 'Official' "
 "|qg| Repository at http://plugins.qgis.org/plugins/. For other external "
-"repositories, they might be available with the external plugins themselves. "
-"In general it is not included in this manual."
+"repositories, documentation might be available with the external plugins "
+"themselves. In general, it is not included in this manual."
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:99
-msgid ""
-"Currently there are over 150 external plugins available from the 'Official' "
-"|qg| Repository. Some of these plugins offer functionality that will be "
-"required by many users (for example: providing the user with the ability to "
-"view and edit OpenStreetMap data, or to add GoogleMap layers) while others "
-"offer very specialized functions (for example: Calculate economic pipe "
-"diameters for water supply networks)."
-msgstr ""
+#~ msgid "Managing Plugins"
+#~ msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:106
-msgid ""
-"It is, however, quite straightforward to search through all the available "
-"external plugins by providing keywords, choosing a named repository and/or "
-"filtering on the status of plugins (currently installed or uninstalled in "
-"your system). Searching and filtering is done from the |qg| Python Plugin "
-"Installer"
-msgstr ""
+#~ msgid "Plugin Manager |nix|"
+#~ msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:138
-msgid ""
-"You can stay informed about plugins. Activate the checkbox |checkbox| "
-":guilabel:`Check for updates on startup` from the |mActionTransformSettings|"
-" :guilabel:`Settings` menu. |qg| will inform you whenever a plugin or plugin"
-" update is available."
-msgstr ""
+#~ msgid "**Add more repositories**"
+#~ msgstr ""
+
+#~ msgid "types"
+#~ msgstr ""
+
+#~ msgid "manager"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Managing plugins in general means loading or unloading them using the "
+#~ ":guilabel:`Plugin Manager`. To deactivate and reactivate external plugins, "
+#~ "the :guilabel:`Plugin Manager` is used again."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The |plugin| :guilabel:`Installed` menu of the :guilabel:`Plugin Manager` "
+#~ "lists all the available plugins and their status (loaded or unloaded), "
+#~ "including all core plugins and all external plugins that have been installed"
+#~ " and automatically activated using the |mActionShowPluginManager| "
+#~ ":guilabel:`Get more` menu (see Section :ref:`load_external_plugin`). Those "
+#~ "plugins that are already loaded have a check mark to the left of their name."
+#~ " Figure_plugins_1_ shows the |plugin| :guilabel:`Installed` dialog."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To enable a particular core plugin, click on the checkbox to the left of the"
+#~ " plugin name, and click **[OK]**. When you exit the application, a list of "
+#~ "loaded plugins is retained, and the plugins are automatically loaded."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the |plugin| :guilabel:`Installed` menu you can see the path if it is an "
+#~ "external plugin. External plugins are only installed in your home directory "
+#~ "while core plugins are stored in ``/usr`` ."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To add external author repositories, open the Plugin Installer "
+#~ "|mActionShowPluginManager| :menuselection:`Manage and Install Plugins`, go "
+#~ "to the menu |mActionTransformSettings| :guilabel:`Settings`, and click "
+#~ "**[Add]** (see figure_plugins_2_). If you do not want one or more of the "
+#~ "added repositories, they can be disabled via the **[Edit...]** button, or "
+#~ "completely removed with the **[Delete]** button."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As such, we cannot take any responsibility for them. You can also manage the"
+#~ " repository list manually, that is add, remove, and edit the entries. "
+#~ "Temporarily disabling a particular repository is possible by clicking the "
+#~ "**[Edit ...]** button."
+#~ msgstr ""
+
+#~ msgid "Plugin Settings |nix|"
+#~ msgstr ""
+
+#~ msgid "**Check for updates**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "|qg| has been designed with a plugin architecture. This allows many new "
+#~ "features/functions to be easily added to the application. Many of the "
+#~ "features in |qg| are actually implemented as either **core** or **external "
+#~ "plugins**."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Core Plugins** are maintained by the |qg| Development Team and are "
+#~ "automatically part of every |qg| distribution. They are written in one of "
+#~ "two languages: C++ or Python. More information about core plugins are "
+#~ "provided in Section :ref:`core_plugins`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**External Plugins** are currently all written in Python. They are stored in"
+#~ " external repositories and maintained by the individual authors. They can be"
+#~ " added to |qg| in the |mActionShowPluginManager| :guilabel:`Get more` "
+#~ "section the of :guilabel:`Plugin Manager`. More information about external "
+#~ "plugins is provided in Section :ref:`load_external_plugin`."
+#~ msgstr ""
+
+#~ msgid "Loading a |qg| Core Plugin"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Loading a |qg| Core Plugin is done from the main menu "
+#~ ":menuselection:`Plugins -->` |mActionShowPluginManager| "
+#~ ":menuselection:`Manage and Install Plugins`."
+#~ msgstr ""
+
+#~ msgid "Loading an external |qg| Plugin"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "External |qg| plugins are written in Python. They are by default stored in "
+#~ "either the 'Official' |qg| Repository, or in various other external "
+#~ "repositories maintained by individual authors. You can find the external "
+#~ "plugins in the |mActionShowPluginManager| :guilabel:`Get more` menu."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Detailed documentation about the usage, minimum |qg| version, homepage, "
+#~ "authors, and other important information are provided for the 'Official' "
+#~ "|qg| Repository at http://plugins.qgis.org/plugins/. For other external "
+#~ "repositories, they might be available with the external plugins themselves. "
+#~ "In general it is not included in this manual."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Currently there are over 150 external plugins available from the 'Official' "
+#~ "|qg| Repository. Some of these plugins offer functionality that will be "
+#~ "required by many users (for example: providing the user with the ability to "
+#~ "view and edit OpenStreetMap data, or to add GoogleMap layers) while others "
+#~ "offer very specialized functions (for example: Calculate economic pipe "
+#~ "diameters for water supply networks)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is, however, quite straightforward to search through all the available "
+#~ "external plugins by providing keywords, choosing a named repository and/or "
+#~ "filtering on the status of plugins (currently installed or uninstalled in "
+#~ "your system). Searching and filtering is done from the |qg| Python Plugin "
+#~ "Installer"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can stay informed about plugins. Activate the checkbox |checkbox| "
+#~ ":guilabel:`Check for updates on startup` from the |mActionTransformSettings|"
+#~ " :guilabel:`Settings` menu. |qg| will inform you whenever a plugin or plugin"
+#~ " update is available."
+#~ msgstr ""
 
 #~ msgid "QGIS Plugins"
 #~ msgstr ""
@@ -274,9 +444,6 @@ msgstr ""
 #~ ":guilabel:`Check for updates on startup` from the|mActionTransformSettings| "
 #~ ":guilabel:`Settings` menu. QGIS will inform you whenever a plugin or plugin "
 #~ "update is available."
-#~ msgstr ""
-
-#~ msgid "|updatedisclaimer|"
 #~ msgstr ""
 
 #~ msgid ""

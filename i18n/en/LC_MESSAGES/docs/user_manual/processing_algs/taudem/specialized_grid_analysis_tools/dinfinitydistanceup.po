@@ -1,0 +1,205 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:6
+msgid "D-Infinity Distance Up"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:9
+msgid "Description"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:11
+msgid ""
+"This tool calculates the distance from each grid cell up to the ridge cells "
+"along the reverse D-infinity flow directions. Ridge cells are defined to be "
+"grid cells that have no contribution from grid cells further upslope. Given "
+"the convergence of multiple flow paths at any grid cell, any given grid cell"
+" can have multiple upslope ridge cells. There are three statictical methods "
+"that this tool can use: maximum distance, minimum distance and waited flow "
+"average over these flow paths. A variant on the above is to consider only "
+"grid cells that contribute flow with a proportion greater than a user "
+"specified threshold (t) to be considered as upslope of any given grid cell. "
+"Setting t=0.5 would result in only one flow path from any grid cell and "
+"would give the result equivalent to a D8 flow model, rather than D-infinity "
+"flow model, where flow is proportioned between two downslope grid cells. "
+"Finally there are several different optional paths that can be measured: the"
+" total straight line path (Pythagoras), the horizontal component of the "
+"straight line path, the vertical component of the straight line path, or the"
+" total surface flow path."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:28
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:33
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:31
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This can be created by the"
+" tool **\"D-Infinity Flow Directions\"**."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:41
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:36
+msgid ""
+"This input is a grid of elevation values. As a general rule, it is "
+"recommended that you use a grid of elevation values that have had the pits "
+"removed for this input. Pits are generally taken to be artifacts that "
+"interfere with the analysis of flow across them. This grid can be obtained "
+"as the output of the **\"Pit Remove\"** tool, in which case it contains "
+"elevation values where the pits have been filled to the point where they "
+"just drain."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:46
+msgid "``Slope Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:44
+msgid ""
+"This input is a grid of slope values. This is measured as drop/distance and "
+"it is most often obtained as the output of the **\"D-Infinity Flow "
+"Directions\"** tool."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:63
+msgid "``Statistical Method`` [selection]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:49
+msgid ""
+"Statistical method used to calculate the distance down to the stream. In the"
+" D-Infinity flow model, the outflow from each grid cell is proportioned "
+"between two downslope grid cells. Therefore, the distance from any grid cell"
+" to a stream is not uniquely defined. Flow that originates at a particular "
+"grid cell may enter the stream at a number of cells. The distance to the "
+"stream may be defined as the longest (maximum), shortest (minimum) or "
+"weighted average of the distance down to the stream."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:57
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:72
+msgid "Options:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:59
+msgid "0 --- Minimum"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:60
+msgid "1 --- Maximum"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:61
+msgid "2 --- Average"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:63
+msgid "Default: *2*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:79
+msgid "``Distance Method`` [selection]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:66
+msgid ""
+"Distance method used to calculate the distance down to the stream. One of "
+"several ways of measuring distance may be selected: the total straight line "
+"path (Pythagoras), the horizontal component of the straight line path "
+"(horizontal), the vertical component of the straight line path (vertical), "
+"or the total surface flow path (surface)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:74
+msgid "0 --- Pythagoras"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:75
+msgid "1 --- Horizontal"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:76
+msgid "2 --- Vertical"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:77
+msgid "3 --- Surface"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:79
+msgid "Default: *1*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:89
+msgid "``Proportion Threshold`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:82
+msgid ""
+"The proportion threshold parameter where only grid cells that contribute "
+"flow with a proportion greater than this user specified threshold (``t``) is"
+" considered to be upslope of any given grid cell. Setting ``t=0.5`` would "
+"result in only one flow path from any grid cell and would give the result "
+"equivalent to a D8 flow model, rather than D-Infinity flow model, where flow"
+" is proportioned between two downslope grid cells."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:89
+msgid "Default: *0.5*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:96
+msgid "``Check for edge contamination`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:92
+msgid ""
+"A flag that determines whether the tool should check for edge contamination."
+" This is defined as the possibility that a value may be underestimated due "
+"to grid cells outside of the domain not being counted."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:96
+msgid "Default: *True*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:99
+msgid "Outputs"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:103
+msgid "``D-Infinity Distance Up`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:102
+msgid ""
+"Grid containing the distances up to the ridge calculated using the "
+"D-Infinity flow model and the statistical and path methods chosen."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:106
+msgid "Console usage"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistanceup.rst:113
+msgid "See also"
+msgstr ""
