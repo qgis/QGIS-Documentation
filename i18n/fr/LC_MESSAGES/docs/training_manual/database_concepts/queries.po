@@ -1,13 +1,15 @@
 # 
 # Translators:
+# Eric Fortin, 2014
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
 # Sant-anna <delazj@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-22 21:32+0200\n"
-"PO-Revision-Date: 2014-10-06 10:58+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>\n"
+"PO-Revision-Date: 2014-10-26 15:37+0000\n"
+"Last-Translator: Eric Fortin\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,13 +25,13 @@ msgstr "|LS| Requêtes"
 msgid ""
 "When you write a :kbd:`SELECT ...` command it is commonly known as a query -"
 " you are interrogating the database for information."
-msgstr ""
+msgstr "Lorsque vous écrivez une commande :kbd:`SELECT ...`, cela est communément connu comme une requête - vous interrogez la base de données pour une information."
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:11
 msgid ""
 "**The goal of this lesson:** To learn how to create queries that will return"
 " useful information."
-msgstr ""
+msgstr "**Objectif de cette leçon :** Apprendre comment créer des requêtes qui retourneront des informations utiles."
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:14
 msgid ""
@@ -37,15 +39,15 @@ msgid ""
 "objects to your :kbd:`people` table. If you receive any errors related to "
 "foreign key constraints, you will need to add the 'Main Road' object to your"
 " streets table first"
-msgstr ""
+msgstr "Si vous ne l'avez pas fait dans la leçon précédente, ajoutez les objets personnes suivants dans votre table :kbd:`people`. Si vous recevez des erreurs liées à des contraintes de clé étrangère, vous devez d'abord ajouter l'objet 'Main Road' à votre table des rues."
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:32
 msgid "Ordering Results"
-msgstr ""
+msgstr "Ordonner les résultats"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:34
 msgid "Let's retrieve a list of people ordered by their house numbers::"
-msgstr ""
+msgstr "Récupérons une liste de personnes ordonnées par leur numéro de maison ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:38
 #: ../../source/docs/training_manual/database_concepts/queries.rst:52
@@ -54,68 +56,68 @@ msgstr ""
 #: ../../source/docs/training_manual/database_concepts/queries.rst:214
 #: ../../source/docs/training_manual/database_concepts/queries.rst:227
 msgid "Result::"
-msgstr ""
+msgstr "Résultats ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:48
 msgid "You can sort the results by the values of more than one column::"
-msgstr ""
+msgstr "Vous pouvez trier les résultats par les valeurs de plus d'une colonne ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:64
 msgid "Filtering"
-msgstr ""
+msgstr "Filtrage"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:66
 msgid ""
 "Often you won't want to see every single record in the database - especially"
 " if there are thousands of records and you are only interested in seeing one"
 " or two."
-msgstr ""
+msgstr "Souvent, vous ne voudrez pas voir chaque enregistrement individuel dans la base de données - en particulier s'il y a des milliers d'enregistrements et que vous êtes seulement intéressés à en voir un ou deux."
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:70
 msgid ""
 "Here is an example of a numerical filter which only returns objects whose "
 ":kbd:`house_no` is less than 50::"
-msgstr ""
+msgstr "Voici un exemple d'un filtre numérique qui retourne seulement des objets pour lesquels :kbd:`house_no` est inférieur à 50 ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:81
 msgid ""
 "You can combine filters (defined using the :kbd:`WHERE` clause) with sorting"
 " (defined using the :kbd:`ORDER BY`)::"
-msgstr ""
+msgstr "Vous pouvez combiner des filtres (définis avec la clause :kbd:`WHERE`) avec tri (défini avec :kbd:`ORDER BY`) ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:92
 msgid "You can also filter based on text data::"
-msgstr ""
+msgstr "Vous pouvez aussi filtrer sur les données du texte ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:102
 msgid ""
 "Here we used the :kbd:`LIKE` clause to find all names with an :kbd:`s` in "
 "them. You'll notice that this query is case-sensitive, so the :kbd:`Sally "
 "Norman` entry has not been returned."
-msgstr ""
+msgstr "Ici nous utilisons la cause :kbd:`LIKE` pour trouver tous les noms qui contiennent un :kbd:`s`. Vous noterez que cette requête est sensible aux majuscules et minuscules, ainsi l'entrée :kbd:`Sally Norman` ne sera pas retournée."
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:106
 msgid ""
 "If you want to search for a string of letters regardless of case, you can do"
 " a case in-sensitive search using the :kbd:`ILIKE` clause::"
-msgstr ""
+msgstr "Si vous voulez chercher une chaîne de lettres indépendamment de la majuscule ou minuscule, vous pouvez faire une recherche insensible aux majuscules et minuscules en utilisant la cause :kbd:`ILIKE` ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:117
 msgid ""
 "That query returned every `people` object with an :kbd:`r` or :kbd:`R` in "
 "their name."
-msgstr ""
+msgstr "Cette requête retourne chaque objet `personne` avec un :kbd:`r` ou :kbd:`R` dans son nom."
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:121
 msgid "Joins"
-msgstr ""
+msgstr "Jointure"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:123
 msgid ""
 "What if you want to see the person's details and their street's name instead"
 " of the ID? In order to do that, you need to join the two tables together in"
 " a single query. Lets look at an example::"
-msgstr ""
+msgstr "Et si vous voulez voir les détails de la personne et son nom de rue plutôt que de l'ID ? Afin de faire cela, vous devez joindre le deux tables ensemble dans une seule requête. Regardons un exemple ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:131
 msgid ""
@@ -124,56 +126,56 @@ msgid ""
 "keys must match (foreign key & primary key). If you don't specify that, you "
 "will get a list of all possible combinations of people and streets, but no "
 "way to know who actually lives on which street!"
-msgstr ""
+msgstr "Avec les jointures, vous allez toujours faire un état des informations provenant de deux tables, dans notre cas personnes et rues. Vous devez également spécifier quelle clé sert à la correspondance (clé étrangère et clé primaire). Si vous ne spécifiez pas cela, vous allez obtenir une liste de toutes les combinaisons possibles de personnes et de rues, mais il ne sera pas possible de savoir qui habite dans quelle rue!"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:137
 msgid "Here is what the correct output will look like::"
-msgstr ""
+msgstr "Voici à quoi la bonne sortie devra ressembler ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:147
 msgid ""
 "We will revisit joins as we create more complex queries later. Just remember"
 " they provide a simple way to combine the information from two or more "
 "tables."
-msgstr ""
+msgstr "Nous reverrons des jointures plus tard lorsque nous créerons des requêtes plus complexes. Souvenez-vous juste qu'elles permettent de combiner d'une façon simple l'information de deux ou plusieurs tables."
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:151
 msgid "Sub-Select"
-msgstr ""
+msgstr "Sous-sélection"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:153
 msgid ""
 "Sub-selections allow you to select objects from one table based on the data "
 "from another table which is linked via a foreign key relationship. In our "
 "case, we want to find people who live on a specific street."
-msgstr ""
+msgstr "Des sous-sélections vous permettent de sélectionner des objets d'une table sur la base des données d'une autre table qui est liée via une relation de clé étrangère. Dans notre cas, nous voulons trouver des personnes qui vivent dans une rue spécifique."
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:157
 msgid "First, let's do a little tweaking of our data::"
-msgstr ""
+msgstr "Faisons tout d'abord un petit ajustement de nos données ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:165
 msgid ""
 "Let's take a quick look at our data after those changes: we can reuse our "
 "query from the previous section::"
-msgstr ""
+msgstr "Jetons rapidement un coup d'oeil à nos données après ces changements : nous pouvons réutiliser notre requête de la section précédente ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:182
 msgid ""
 "Now let's show you a sub-selection on this data. We want to show only people"
 " who live in :kbd:`street_id` number :kbd:`1`::"
-msgstr ""
+msgstr "Nous allons maintenant vous montrer une sous-sélection de ces données. Nous voulons montrer seulement les personnes qui vivent dans la :kbd:`street_id` numéro :kbd:`1` ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:201
 msgid ""
 "Although this is a very simple example and unnecessary with our small data-"
 "sets, it illustrates how useful and important sub-selections can be when "
 "querying large and complex data-sets."
-msgstr ""
+msgstr "Bien que ce soit un exemple très simple et inutile avec nos petits jeux de données, il illustre à quel point les sous-sélections peuvent être utiles et importantes lors de requêtes sur des jeux de données grands et complexes."
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:206
 msgid "Aggregate Queries"
-msgstr ""
+msgstr "Requêtes agrégées"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:208
 msgid ""
@@ -181,17 +183,17 @@ msgid ""
 "data in its tables. These summaries are called aggregate queries. Here is a "
 "typical example which tells us how many people objects are in our people "
 "table::"
-msgstr ""
+msgstr "Une des fonctionnalités puissantes d'une base de données est sa capacité à résumer les données dans ses tables. Ces résumés sont appelés requêtes agrégées. Voici un exemple typique qui nous dit comment plusieurs objets personne sont dans notre table personne ::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:221
 msgid "If we want the counts to be summarised by street name we can do this::"
-msgstr ""
+msgstr "Si nous voulons les totaux agrégés par nom de rue nous pouvons procéder ainsi::"
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:236
 msgid ""
 "Because we have not used an :kbd:`ORDER BY` clause, the order of your "
 "results may not match what is shown here."
-msgstr ""
+msgstr "Comment nous n'avons pas utilisé la clause :kbd:`ORDER BY`, l'ordre de vos résultats peut ne pas correspondre avec ce qui est montré ici."
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:240
 msgid "|TY| |moderate|"
@@ -201,7 +203,7 @@ msgstr "|TY| |moderate|"
 msgid ""
 "Summarise the people by street name and show the actual street names instead"
 " of the street_ids."
-msgstr ""
+msgstr "Résumez les personnes par nom de rue et montrez les noms de rue actuel à la place de street_ids."
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:245
 msgid ":ref:`Check your results <database-concepts-8>`"
@@ -215,7 +217,7 @@ msgstr "|IC|"
 msgid ""
 "You've seen how to use queries to return the data in your database in a way "
 "that allows you to extract useful information from it."
-msgstr ""
+msgstr "Vous avez vu comment utiliser des requêtes pour retourner les données dans votre base de données d'une façon qui vous permet d'y extraire de l'information utile. "
 
 #: ../../source/docs/training_manual/database_concepts/queries.rst:256
 msgid "|WN|"
@@ -224,4 +226,4 @@ msgstr "|WN|"
 #: ../../source/docs/training_manual/database_concepts/queries.rst:258
 msgid ""
 "Next you'll see how to create views from the queries that you've written."
-msgstr ""
+msgstr "Ensuite vous verrez comment créer des vues depuis les requêtes que vous avez écrites."

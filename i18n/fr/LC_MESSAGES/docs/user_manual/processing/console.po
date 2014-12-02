@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-08-01 11:43+0000\n"
+"PO-Revision-Date: 2014-10-30 12:51+0000\n"
 "Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -132,7 +132,7 @@ msgstr "Fonctions supplémentaires pour gérer des données"
 msgid ""
 "``getfeatures(layer)``: Returns an iterator over the features of a vector "
 "layer, considering the existing selection."
-msgstr ""
+msgstr "``getfeatures(couche)`` : Renvoie un itérateur sur les entités d'une couche vecteur, prenant en compte la sélection existante."
 
 # 00443acdb1984e37b1066169a576d1e9
 #: ../../source/docs/user_manual/processing/console.rst:227
@@ -273,14 +273,14 @@ msgid ""
 "usually with a less complex syntax. These functions should be used when "
 "developing new algorithms, as they make it easier to operate with input "
 "data."
-msgstr ""
+msgstr "En plus des fonctions utilisées pour appeler les algorithmes, importer le module ``processing`` permet d'importer des fonctions additionnelles qui facilitent le travail avec les données et plus particulièrement avec les données vecteur. Il s'agit juste de commodités qui font appel à des fonctions de l'API |qg|, en utilisant en général une syntaxe moins complexe. Il est conseillé d'utiliser ces fonctions lors du développement de nouveaux algorithmes car elle facilitent grandement la manipulation des données."
 
 #: ../../source/docs/user_manual/processing/console.rst:213
 msgid ""
 "``getobject(obj)``: Returns a |qg| object (a layer or table) from the passed"
 " object, which can be a filename or the name of the object in the |qg| Table"
 " of Contents."
-msgstr ""
+msgstr "``getobject(objet)`` : Renvoie un objet |qg| (une couche ou une table) issu de l'objet passé en paramètre, qui peut correspondre à un nom de fichier ou un nom d'objet dans le panneau Couches de |qg|."
 
 #: ../../source/docs/user_manual/processing/console.rst:5
 msgid "|updatedisclaimer|"
@@ -303,7 +303,7 @@ msgid ""
 " can incorporate those commands into your console work and connect "
 "processing algorithms to all the other features (including methods from the "
 "|qg| API) available from there."
-msgstr ""
+msgstr "Il n'y a pas de console spécifique au module de traitements de |qg| mais toutes les commandes du module sont disponibles via la console Python de |qg|. Cela signifie que vous pouvez intégrer ces commandes dans votre travail et les connecter aux autres fonctions accessibles depuis la console (dont les méthodes issues de l'API |qg|)."
 
 #: ../../source/docs/user_manual/processing/console.rst:27
 msgid ""
@@ -414,7 +414,7 @@ msgid ""
 "yourself after running the algorithm. To do so, you can use |qg| API "
 "commands, or, even easier, use one of the handy methods provided for such "
 "tasks."
-msgstr ""
+msgstr "À la différence des algorithmes exécutés depuis la boîte à outils, les sorties ne sont pas ajoutées automatiquement au canevas de la carte s'ils sont exécutés depuis la console Python. Si vous souhaitez ajouter une couche à la carte, vous devez le faire vous même après avoir exécuté l'algorithme. Pour ce faire, vous pouvez utiliser les commandes de l'API |qg| ou, encore plus simple, utiliser une des méthodes fournies pour ce genre de tache."
 
 #: ../../source/docs/user_manual/processing/console.rst:194
 msgid ""
@@ -429,7 +429,7 @@ msgid ""
 "Below is a list of some of these commands. More information can be found in "
 "the classes under the ``processing/tools`` package, and also in the example "
 "scripts provided with |qg|."
-msgstr ""
+msgstr "Voici, ci-dessous, certaines de ces commandes. Plus d'information peut être trouvée dans les classes du paquet ``processing/tools`` et dans les scripts d'exemples fournis avec |qg|."
 
 #: ../../source/docs/user_manual/processing/console.rst:216
 msgid ""
@@ -437,14 +437,14 @@ msgid ""
 "vector layer, for the passed fields. Fields can be passed as field names or "
 "as zero-based field indices. Returns a dict of lists, with the passed field "
 "identifiers as keys. It considers the existing selection."
-msgstr ""
+msgstr "``values(couche, champs)`` : Renvoie les valeurs de la table d'attributs de la couche vecteur pour le champ passé en paramètre. Les champs peuvent être passés en tant que noms de champ ou index du champ dans la table, en commençant par zero. Renvoie un dictionnaire de listes, dont les clés correspondent à la liste des champs passée en paramètre. La sélection existante est prise en compte."
 
 #: ../../source/docs/user_manual/processing/console.rst:222
 msgid ""
 "``uniquelabels(layer, field)``: Returns a list of unique values for a given "
 "attribute.  Attributes can be passed as a field name or a zero-based field "
 "index. It considers the existing selection."
-msgstr ""
+msgstr "``uniquelabels(couche, champ)`` : Renvoie la liste des valeurs uniques trouvées dans un champ. Le champ peut être passé en paramètre en tant que nom ou index dans la table, en commençant par zéro. La sélection existante est prise en compte."
 
 #: ../../source/docs/user_manual/processing/console.rst:229
 msgid ""
@@ -457,7 +457,7 @@ msgid ""
 "from there in the :file:`scripts` folder (the default folder when you open "
 "the save file dialog) with :file:`.py` extension will automatically create "
 "the corresponding algorithm."
-msgstr ""
+msgstr "Vous pouvez créer vos propres algorithmes en écrivant le code Python correspondant et en ajoutant quelques lignes fournissant les informations nécessaires pour le faire fonctionner. Vous trouverez le menu :guilabel:`Créer un nouveau script` dans le groupe :guilabel:`Outils` du bloc :guilabel:`Script` de la boîte à outils. Double-cliquez dessus pour ouvrir la fenêtre d'édition de script. C'est ici que vous pouvez écrire votre code. En sauvegardant d'ici votre script dans le répertoire des :file:`scripts` (le répertoire par défaut qui s'affiche quand vous ouvrez la fenêtre de sauvegarde) avec l'extension :file:`.py`, vous créez automatiquement l'algorithme correspondant."
 
 #: ../../source/docs/user_manual/processing/console.rst:241
 msgid ""

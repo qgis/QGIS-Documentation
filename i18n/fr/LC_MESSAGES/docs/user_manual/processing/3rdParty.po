@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-08-08 13:42+0000\n"
+"PO-Revision-Date: 2014-11-05 09:28+0000\n"
 "Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgstr "A propos des sélections sur les couches vectorielles"
 msgid ""
 "In other cases, exporting only selected features is needed, which causes "
 "execution times to be longer."
-msgstr ""
+msgstr "Dans les cas où l'export de la sélection est nécessaire cela rallonge les temps d’exécution."
 
 # b032f3d23b964687b2b8148dc8dc32e7
 #: ../../source/docs/user_manual/processing/3rdParty.rst:103
@@ -180,7 +180,7 @@ msgid ""
 "Windows. Additionaly, a shell interpreter (usually :file:`msys.exe`, which "
 "can be found in most GRASS for Windows distributions) has to be defined and "
 "its path set up as well."
-msgstr "Configurer GRASS est similaire à celle de SAGA. Tout d'abord,pour Windows, indiquez le répertoire d'installation de GRASS, ainsi que l'emplacement de l'interpréteur de shell (habituellement le fichier :file:`msys.exe` fourni avec GRASS)."
+msgstr "La configuration pour GRASS est similaire à celle de SAGA. Tout d'abord, pour Windows, indiquez le répertoire d'installation de GRASS ainsi que l'emplacement de l'interpréteur shell (habituellement le fichier :file:`msys.exe` fourni avec GRASS)."
 
 # 8b1e60e6d1df4a0d86f1f3ffc9c2880e
 #: ../../source/docs/user_manual/processing/3rdParty.rst:380
@@ -233,7 +233,7 @@ msgstr "Par défaut, tous les algorithmes qui reposent sur une application tierc
 msgid ""
 "Providers not using external applications can process any layer that you can"
 " open in |qg|, since they open it for analysis through |qg|."
-msgstr "Les algorithmes n'utilisant pas d'application tierce peuvent traiter toutes les couches qui peuvent s'ouvrir dans|qg| puisque qu'ils sont lancés depuis QGIS."
+msgstr "Les algorithmes n'utilisant pas d'application tierce peuvent traiter toutes les couches qui peuvent s'ouvrir dans |qg| puisque qu'ils sont lancés depuis |qg|."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:105
 msgid ""
@@ -264,7 +264,7 @@ msgid ""
 "that you prefer a string with the filename instead. In this case, it is up "
 "to you to open the file before performing any operation on the data it "
 "contains."
-msgstr ""
+msgstr "Si vous êtes un utilisateur expert et que vous ne voulez pas que |qg| crée l'objet correspondant à une couche, vous pouvez utiliser le paramètre ``##passfilename`` qui indique que vous préférez une chaîne de caractères contenant le nom du fichier à la place. Dans ce cas, c'est à vous d'ouvrir le fichier au préalable."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:303
 msgid ""
@@ -374,7 +374,7 @@ msgid ""
 "the external application. Only when no selection exists, or the *Use only "
 "selected features* option is not enabled in the processing general "
 "configuration, can a layer be directly passed to an external application."
-msgstr ""
+msgstr "Les applications tierces peuvent prendre en compte les sélections qui existent sur les couches vecteur dans |qg|. Cependant, cela nécessite de réécrire toutes les couches vecteur d'entrée, comme si elles étaient dans un format non géré par l'application tierce. Une couche peut être passée directement à une application tierce uniquement lorsqu'il n'y a pas de sélection ou que l'option *N'utiliser que les entités sélectionnées* n' pas activée dans les paramètres de configuration généraux du module de traitement."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:110
 msgid ""
@@ -483,7 +483,7 @@ msgid ""
 "find them useful to track in detail what is going on when |qg| runs a SAGA "
 "algorithm. You will find two settings, namely :guilabel:`Log console output`"
 " and :guilabel:`Log execution commands`, to activate that logging mechanism."
-msgstr ""
+msgstr "Les commandes envoyées par |qg| et les informations supplémentaires écrites par SAGA peuvent être consignées dans le log comme pour tous les algorithmes. Il peut être utile de suivre en détail ce qu'il se passe lorsque |qg| lance un algorithme SAGA. Vous avez deux options pour activer ce mécanisme : :guilabel:`Log console output` et :guilabel:`Log execution commands`"
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:209
 msgid ""
@@ -590,7 +590,7 @@ msgid ""
 "depend on whether or not you have used the ``#dontuserasterpackage`` option."
 " In you have used it, layers are saved using the ``writeGDAL()`` method. If "
 "not, the ``writeRaster()`` method from the ``raster`` package will be used."
-msgstr ""
+msgstr "Si votre algorithme génère des couches raster, la façon dont elles sont sauvegardées varie si vous avez utilisé l'option ``#dontuserasterpackage`` ou pas. If oui, les couches seront sauvegardées en utilisant la méthode ``writeGDAL()``. Si non, la méthode ``writeRaster()`` du paquet ``raster`` sera utilisée."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:316
 msgid ""
@@ -647,7 +647,7 @@ msgid ""
 "different GRASS installation, you can change that setting and point to the "
 "folder where the other version is installed. GRASS 6.4 is needed for "
 "algorithms to work correctly."
-msgstr ""
+msgstr "Par défaut, le module de traitement est configuré de telle sorte qu'il utilise la distribution de GRASS installée avec |qg|. Cela devrait fonctionner sans problème sur la plupart des systèmes mais, si vous rencontrez des difficultés, vous allez sans doute devoir configurer la connexion à GRASS manuellement. De même, si vous souhaitez utiliser une version différente de GRASS, vous pouvez modifier ce paramètre et pointer sur le répertoire qui contient la version souhaitée. La version 6.4 de GRASS est nécessaire pour que les algorithmes fonctionnent correctement."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:383
 msgid ""

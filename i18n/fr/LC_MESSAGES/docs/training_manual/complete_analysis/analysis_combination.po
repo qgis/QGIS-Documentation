@@ -1,13 +1,14 @@
 # 
 # Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
 # Sant-anna <delazj@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-22 21:32+0200\n"
-"PO-Revision-Date: 2014-10-06 11:05+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>\n"
+"PO-Revision-Date: 2014-10-21 09:50+0000\n"
+"Last-Translator: MarieAude <marie-aude.aeby@camptocamp.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,13 +24,13 @@ msgstr "|LS| Combiner les analyses"
 msgid ""
 "Using the vectorized results of the raster analysis will allow you to select"
 " only those buildings on suitable terrain."
-msgstr ""
+msgstr "Utiliser les résultats vectorisés de l'analyse raster vous permettra de sélectionner seulement ces bâtiments sur un terrain approprié."
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:11
 msgid ""
 "**The goal for this lesson:** To use the vectorized terrain results to "
 "select suitable plots."
-msgstr ""
+msgstr "**Objectif de cette leçon :** Utiliser les résultats de la vectorisation du terrain pour sélectionner des parcelles appropriées."
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:15
 msgid "|moderate| |TY|"
@@ -43,11 +44,11 @@ msgstr "Sauvegardez votre carte (sous :kbd:`raster_analysis.qgs`)."
 msgid ""
 "Open the map in which you did the vector analysis earlier "
 "(:kbd:`analysis.qgs`)."
-msgstr ""
+msgstr "Ouvrez la carte dans laquelle vous avez fait plus tôt l'analyse vectorielle (:kbd:`analysis.qgs`)."
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:20
 msgid "In the :guilabel:`Layers list`, enable these layers:"
-msgstr ""
+msgstr "Dans la :guilabel:`Légende de la carte`, activez ces couches :"
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:21
 msgid ":guilabel:`hillshade`,"
@@ -55,20 +56,20 @@ msgstr ":guilabel:`ombrage`,"
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:22
 msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
-msgstr ""
+msgstr ":guilabel:`solution` (ou :guilabel:`buildings_over_100`)"
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:23
 msgid ""
 "In addition to these layers, which should already be loaded in the map from "
 "when you worked on it before, also add the :kbd:`suitable_terrain.shp` "
 "dataset."
-msgstr ""
+msgstr "En plus de ces couches, qui devraient déjà être chargée dans la carte dans laquelle vous avez travaillé avant, ajoutez également le jeu de données :kbd:`suitable_terrain.shp`."
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:26
 msgid ""
 "If you are missing some layers, you should find them in "
 ":kbd:`exercise_data/residential_development/`"
-msgstr ""
+msgstr "S'il vous manque des couches, vous pouvez les trouver dans :kbd:`exercise_data/residential_development/`"
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:28
 msgid ""
@@ -76,13 +77,13 @@ msgid ""
 "Tools`) to create a new vector layer called :kbd:`new_solution.shp` which "
 "contains only those buildings which intersect the :kbd:`suitable_terrain` "
 "layer."
-msgstr ""
+msgstr "Utilisez l'outil :guilabel:`Intersection` (:guilabel:`Vecteur -> Outils de géotraitement`) pour créer une nouvelle couche vectorielle appelée :kbd:`new_solution.shp` qui contienne seulement ces bâtiments qui croisent la couche :kbd:`suitable_terrain`."
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:32
 msgid ""
 "You should now have a layer showing certain buildings as your solution, for "
 "example:"
-msgstr ""
+msgstr "Vous devriez maintenant avoir une couche qui montre certains bâtiments comme votre solution, par exemple :"
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:38
 msgid ""
@@ -92,7 +93,7 @@ msgid ""
 "layer by saving the layer as a new shapefile with the required CRS. In our "
 "example, the :kbd:`suitable_terrain` layer was reprojected to |localCRS| and"
 " named :kbd:`suitable_terrain_34S`."
-msgstr ""
+msgstr "Si vous trouvez que l'outil :guilabel:`Intersection` ne produit pas de résultat, vérifiez les paramètres du SCR pour chacune de vos couches. Le SCR doit être le même pour les deux couches que vous êtes en train de comparer. Vous pouvez devoir reprojeter une couche en sauvegardant la couche sous un nouveau shapefile avec le SCR requis. Dans notre exemple, la couche :kbd:`suitable_terrain` a été reprojetée en |localCRS| et nommée :kbd:`suitable_terrain_34S`."
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:49
 msgid "|moderate| |TY| Inspecting the Results"
@@ -106,7 +107,7 @@ msgid ""
 "only. What do you notice about some of the buildings? Are they all suitable "
 "just because they intersect with the :guilabel:`suitable_terrain` layer? Why"
 " or why not? Which ones would you deem to be unsuitable?"
-msgstr ""
+msgstr "Regardez chacun des bâtiments de votre couche :guilabel:`new_solution`. Comparez-les avec la couche :guilabel:`suitable_terrain` en changeant la symbologie pour la couche :guilabel:`new_solution` afin qu'elle n'ait que des bordures. Que remarquez-vous à propos de certains de ces bâtiments ? Sont-ils tous appropriés juste parce qu'ils croisent la couche :guilabel:`suitable_terrain` ? Pourquoi ou pourquoi pas ? Lesquels allez-vous estimer comme non appropriés ?"
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:58
 msgid ":ref:`Check your results <complete-analysis-2>`"
@@ -120,7 +121,7 @@ msgstr "|moderate| |TY| Affiner l'analyse"
 msgid ""
 "You can see from the results that some buildings which were included were "
 "not really suitable, so we can now refine the analysis."
-msgstr ""
+msgstr "Vous pouvez voir dans les résultats que certains bâtiments qui ont été inclus ne sont pas vraiment appropriés, nous pouvons donc affiner l'analyse."
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:69
 msgid ""
@@ -128,7 +129,7 @@ msgid ""
 "entirely within the :kbd:`suitable_terrain` layer. How would you achieve "
 "this? Use one or more Vector Analysis tools and remember that our buildings "
 "are all over 100m squared in size."
-msgstr ""
+msgstr "Nous voulons être sûr que notre analyse renvoie seulement les bâtiments qui tombent entièrement dans la couche :kbd:`suitable_terrain`. Comment pourriez-vous atteindre cet objectif ? Utilisez un ou plusieurs outils d'Analyse Vectorielle et souvenez-vous que nos bâtiments ont tous une taille de plus de 100m carré."
 
 #: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:74
 msgid ":ref:`Check your results <complete-analysis-3>`"
