@@ -1,18 +1,22 @@
 #!/bin/bash
 
-# This script is used to register InaSAFE translatable resources with Transifex
+# This script is used to register QGIS Docs translatable resources with Transifex
 # http://transifex.com
 #
 # Note that this script updates or creates entries in .tx/config file
 #
 # Tim Sutton, March 2013
+# Richard Duivenvoorde, 2014
 
-#
-# Sphinx documentation first
-#
+# first you run
+#   make gettext
+# so all english po files are up to date again
+# then remove the not used pot file dir
+#  rm -rf i18n/pot
+# then run this script
 
-#LOCALES=`ls i18n`
-LOCALES='de es fi fr gl hi id ja it ko nl nqo pl pt_BR pt_PT ro ru'
+# only for languages which have some translations
+LOCALES='ar de es fi fr gl hi id ja it ko nl nqo pl pt_BR pt_PT ro ru uk'
 
 # to be sure there are no pot files left
 make clean
