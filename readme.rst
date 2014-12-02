@@ -5,17 +5,18 @@ QGIS Testing Documentation is build from corresponding branche and NOT translate
 
 Only the current stable branch is translated.
 
-Stable documentation is on http://docs.qgis.org/2.2
+Latest stable documentation is on http://docs.qgis.org/2.6
 
 Testing is http://docs.qgis.org/testing
 
-QGIS 2.0 docs http://docs.qgis.org/2.0
-QGIS 1.8 docs http://docs.qgis.org/1.8
+- QGIS 2.0 docs http://docs.qgis.org/2.2
+- QGIS 2.0 docs http://docs.qgis.org/2.0
+- QGIS 1.8 docs http://docs.qgis.org/1.8
 
 Translations are also available via the docs.qgis.org language path:
-for example for the German language: http://docs.qgis.org/2.2/de
+for example for the German language: http://docs.qgis.org/2.6/de
 
-PDF versions of the manual are available here: http://docs.qgis.org/2.2/pdf/ 
+PDF versions of the manual are available here: http://docs.qgis.org/2.6/pdf/ http://docs.qgis.org/2.2/pdf/ 
 http://docs.qgis.org/2.0/pdf/, http://docs.qgis.org/1.8/pdf/ and http://docs.qgis.org/testing/pdf
 
 
