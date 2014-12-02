@@ -9,7 +9,7 @@ Latest stable documentation is on http://docs.qgis.org/2.6
 
 Testing is http://docs.qgis.org/testing
 
-- QGIS 2.0 docs http://docs.qgis.org/2.2
+- QGIS 2.2 docs http://docs.qgis.org/2.2
 - QGIS 2.0 docs http://docs.qgis.org/2.0
 - QGIS 1.8 docs http://docs.qgis.org/1.8
 
@@ -106,15 +106,17 @@ In order to use a docker instance to build the documentation, you need first
 to create your local docker image.
 
 - install Docker (see https://docs.docker.com/installation/#installation)
-- clone the QGIS-sysadmin repository::
+
+- clone the QGIS-sysadmin repository:
 
    git clone git@github.com:qgis/QGIS-Sysadmin.git
 
-- build the docker image::
+- build the docker image:
+
    cd QGIS-Sysadmin/docker/sphinx
    bash docker-build.sh
 
-- then you can go to your local QGIS-Documentation repository to build the doc::
+- then you can go to your local QGIS-Documentation repository to build the doc:
 
   cd QGIS-Documentation/
   docker-run.sh LANG=fr html
