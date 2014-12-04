@@ -28,6 +28,33 @@ Most sources are in source/docs. Only frontpage and landingpages are in theme/qg
 Styling is in theme/qgis-theme. This theme is used for website and documentation builds. 
 The Website version is the canonical one.
 
+Partial / faster building
+-------------------------
+
+Because of the size of the documentation, the building of the full docs can take up a long time. 
+
+You can decide to only build certain parts of the documentation by editing the source/conf.py file.
+
+Uncomment the lines for the modules that you NOT want to build in this part of source/conf.py::
+
+ # List of patterns, relative to source directory, that match files and           
+ # directories to ignore when looking for source files.                           
+ exclude_patterns = ['../output', "../i18n", "../resources", "../scripts"]        
+ # for faster builds, you can exclude certain parts from the build                
+ # uncomment one or more lines below, or construct such line yourself             
+ # uncomment to exclude the processing algs from build                            
+ #exclude_patterns += ['docs/user_manual/processing_algs/*']                      
+ # uncomment to exclude the user manual from build                                
+ #exclude_patterns += ['docs/user_manual/*']                                      
+ # uncomment to exclude training manual from build                                
+ #exclude_patterns += ['docs/training_manual/*']                                  
+ # uncomment to exclude doc guides from build                                     
+ #exclude_patterns += ['docs/documentation_guidelines/*']                         
+ # uncomment to exclude gentle intro  from build                                  
+ #exclude_patterns += ['docs/gentle_gis_introduction/*']                          
+ # uncomment to exclude pyqgis dev book from build                                
+ #exclude_patterns += ['docs/pyqgis_developer_cookbook/*'] 
+
 
 Building the documentation using Make
 -------------------------------------
