@@ -161,11 +161,21 @@ Raster layers can also be created from a WCS service.
 
 ::
 
-    layer_name = 'elevation'
+    layer_name = 'modis'
     uri = QgsDataSourceURI()
-    uri.setParam ('url', 'http://localhost:8080/geoserver/wcs')
+    uri.setParam ('url', 'http://demo.mapserver.org/cgi-bin/wcs')
     uri.setParam ( "identifier", layer_name)
-    rlayer = QgsRasterLayer(uri, 'my_wcs_layer', 'wcs')
+    rlayer = QgsRasterLayer(str(uri.encodedUri()),  'my_wcs_layer', 'wcs')
+
+detailed URI settings can be found in QGIS provider documentation:
+
+::
+
+    https://github.com/qgis/QGIS/blob/master/src/providers/wcs/URI
+
+
+
+
 
 
 Alternatively you can load a raster layer from WMS server. However currently
