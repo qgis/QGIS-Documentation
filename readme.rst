@@ -1,23 +1,23 @@
-QGIS Testing Documentation
-***************************
+QGIS 2.6 Documentation
+**********************
 
-QGIS Testing Documentation is build from corresponding branche and NOT translated.
-
+QGIS 2.6 Documentation is build from corresponding branche is currently the translated branch.
 Only the current stable branch is translated.
 
-Stable documentation is on http://docs.qgis.org/2.2
+Stable documentation is on http://docs.qgis.org/2.6
 
 Testing is http://docs.qgis.org/testing
 
+QGIS 2.6 docs http://docs.qgis.org/2.6
+QGIS 2.2 docs http://docs.qgis.org/2.2
 QGIS 2.0 docs http://docs.qgis.org/2.0
 QGIS 1.8 docs http://docs.qgis.org/1.8
 
 Translations are also available via the docs.qgis.org language path:
-for example for the German language: http://docs.qgis.org/2.2/de
+for example for the German language: http://docs.qgis.org/2.6/de
 
-PDF versions of the manual are available here: http://docs.qgis.org/2.2/pdf/ 
+PDF versions of the manual are available here: http://docs.qgis.org/2.6/pdf/ http://docs.qgis.org/2.2/pdf/ 
 http://docs.qgis.org/2.0/pdf/, http://docs.qgis.org/1.8/pdf/ and http://docs.qgis.org/testing/pdf
-
 
 Documentation is static generated website using Sphinx (http://sphinx-doc.org/), 
 based on restructured text sources (rst: http://docutils.sourceforge.net/rst.html)
