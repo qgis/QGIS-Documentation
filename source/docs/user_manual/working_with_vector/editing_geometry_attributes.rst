@@ -667,7 +667,7 @@ Merge selected features
 
 The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows you to merge
 features that have common boundaries. A new dialog will allow you to choose which 
-value to choose between each selected features or select a fonction (Minimum, Maximum, 
+value to choose between each selected features or select a function (Minimum, Maximum, 
 Median, Sum, Skip Attribute) to use for each column.
 
 .. index:: Merge_Attributes_of_Selected_Features
