@@ -70,7 +70,7 @@ for one change. If you repeat changing the renderer type the settings for the sy
 will get lost.
 
 If the datasource of the layer is a database (PostGIS or Spatialite for example),
-you can save your layer style inside a table of the database. Just clic on
+you can save your layer style inside a table of the database. Just click on
 :guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in
 the dialog to define a style name, add a description, an ui file and if the style
 is a default style. When loading a layer from the database, if a style already
@@ -146,10 +146,10 @@ Then click on **Classify** button to create classes from the distinct value of
 the attribute column. Each classes can be disabled unchecking the checkbox at
 the left of the class name.
 
-You can change symbol, value and/or label of the clic, just double clicking
+You can change symbol, value and/or label of the class, just double click
 on the item you want to change.
 
-Right-clic shows a contextual menu to **Copy/Paste**, **Change color**, **Change 
+Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Change 
 transparency**, **Change output unit**, **Change symbol width**.
 
 The **[Advanced]** button in the lower-right corner of the dialog allows you to
@@ -228,7 +228,7 @@ classes can be disabled unchecking the checkbox at the left of the class name.
 You can change symbol, value and/or label of the clic, just double clicking
 on the item you want to change.
 
-Right-clic shows a contextual menu to **Copy/Paste**, **Change color**, **Change 
+Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Change 
 transparency**, **Change output unit**, **Change symbol width**.
 
 The example in figure_symbology_4_ shows the graduated rendering dialog for
@@ -316,7 +316,7 @@ placed on a displacement circle around a center symbol.
 **Inverted Polygon**
 
 Inverted polygon renderer allows user to define a symbol to fill in outside of the layer's
-polygons. As before you can select a subrenderers. These subrenderers are the
+polygons. As before you can select subrenderers. These subrenderers are the
 same as for the main renderers.
 
 .. _figure_symbology_7:
@@ -565,7 +565,7 @@ selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ )
 You can set up a minimum distance for repeating labels. Distance can be in mm or in map units.
 
 Some Placement setup will display more options, for example, :guilabel:`Curved` and :guilabel:`Parallel`
-Placements will allow the user to set up the position of the label (above, belw or on the line),
+Placements will allow the user to set up the position of the label (above, below or on the line),
 :guilabel:`distance` from the line and for :guilabel:`Curved`, the user can also setup inside/outside
 max angle between curved label.
 
@@ -622,7 +622,7 @@ With the |radiobuttonoff| :guilabel:`Using perimeter` settings, you can define a
 a distance for the label. For the position, |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
 |checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependent position` are possible.
 
-Related to the choose of Label Placement, several options will appear. As for Point Placement you can
+Related to the choice of Label Placement, several options will appear. As for Point Placement you can
 choose the distance for the polygon outline, repeat the label around the polygon perimeter.
 
 The entries in the :guilabel:`Rendering` menu are the same as for line layers. You can also use
@@ -705,9 +705,9 @@ and strings in 'single quotes'. Let's have a look at some examples:
 
   -> This place is a town
 
-As you can see in the expression builder, you have hundreds if functions available to
+As you can see in the expression builder, you have hundreds of functions available to
 create simple and very complex expressions to label your data in QGIS. See 
-:ref:`vector_expressions` chapter for more information and example on expressions.
+:ref:`vector_expressions` chapter for more information and examples on expressions.
 
 **Using data-defined override for labeling**
 
@@ -796,7 +796,7 @@ widgets. These widgets are:
   the :guilabel:`Style` menu of the properties dialog.
 * **Color**: Displays a color button allowing user to choose a color from the
   color dialog window.
-* **Date/Time**: Displays a line fields which can opens a calendar widget to enter a
+* **Date/Time**: Displays a line field which can open a calendar widget to enter a
   date, a time or both. Column type must be text. You can select a custom format, pop-up
   a calendar, etc.
 * **Enumeration**: Opens a combo box with values that can be used within
