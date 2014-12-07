@@ -14,11 +14,11 @@ features and functions to be easily added to the application. Many of the featur
 in |qg| are actually implemented as plugins.
 
 You can manage your plugins in the plugin dialog which can be opened with 
-:guilabel:`Plugins > Manage and install pluginsi ...`.
+:guilabel:`Plugins > Manage and install plugins ...`.
 
 When a plugin needs to be updated, and if plugins settings have been set up 
 accordingly, QGIS main interface could display a blue link in the status bar 
-to tell you that there are some plugins updating waiting to be applied.
+to tell you that there are some updates for plugins waiting to be applied.
 
 .. :index::
     single:plugins;managing
