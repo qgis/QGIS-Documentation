@@ -347,10 +347,10 @@ Here are some hints to create screenshots for your translated user guide. They w
 * the screenshot should show the content according to what is described in the text
 
 
-Documenting Processing alorithms
-================================
+Documenting Processing algorithms
+=================================
 
-If you want to write documenation for Processing algorithm consider this guidelines:
+If you want to write documentation for Processing algorithms consider this guidelines:
 
 * don't overwrite existing help files by files from other sources (e.g. QGIS
   source tree or Processing-Help repository), this files have different formats
@@ -366,7 +366,7 @@ If you want to write documenation for Processing algorithm consider this guideli
   TauDEM are good examples).
 * don't edit parameter or output names. If you found typo or wrong spelling ---
   report this in bugracker, so developers can fix this in Processing code too
-* don't list availbale options in algortihm description, options already listed
+* don't list available options in algorithm description, options already listed
   in parameter description.
 * don't add information vector geometry type in algorithm or parameter description
   without compelling reason as this information already available in parameter
