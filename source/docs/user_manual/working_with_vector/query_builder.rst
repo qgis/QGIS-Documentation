@@ -60,7 +60,7 @@ window without changing the current selection.
 
 |qg| treats the resulting subset acts as if it where the entire layer. 
 For example if you applied the filter above for 'Borough', you can not 
-display, query, save or edit Ankorage, because that is a 'Manicpality' 
+display, query, save or edit Anchorage, because that is a 'Municipality' 
 and therefore not part of the subset.
 
 The only exception is that unless your layer is part of a database, using a subset will prevent you from editing the layer.
