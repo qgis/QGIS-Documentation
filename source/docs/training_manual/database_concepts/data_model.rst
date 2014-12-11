@@ -154,9 +154,9 @@ To get help on a specific command, type (for example)::
 
   \help create table
 
-See also the `Psql cheat sheet </static/training_manual/postgres/psql_cheatsheet.pdf>`_ -
+See also the `Psql cheat sheet <http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_ -
 available online `here
-<http://www.postgresonline.com/special_feature.php?sf_name=postgresql83_psql_cheatsheet&outputformat=html>`_.
+<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_.
 
 Make Tables in SQL
 -------------------------------------------------------------------------------
