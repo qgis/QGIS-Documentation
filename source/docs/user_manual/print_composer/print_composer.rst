@@ -188,8 +188,8 @@ To demonstrate how to create a map please follow the next instructions.
 #. Select the |mActionScaleBar| :sup:`Add new scalebar` toolbar button and place the map item with the left mouse button on the Print Composer canvas. A scalebar will be added to the canvas.
 #. Select the |mActionAddLegend| :sup:`Add new legend` toolbar button and draw a rectangle on the canvas holding down the left mouse button. Inside the drawn rectangle the legend will be drawn.
 #. Select the |mActionSelect| :sup:`Select/Move item` icon to select the map on the canvas and move it a bit.
-#. While the map item is still selected you can also change the size of the map item. Click while holding down the left mouse button, in a white little rectangle in one of the corners of the map item and draw it to a new location to change it's size. 
-#. Click the :guilabel:`Item Properties` tab on the left lower panel and find the setting for the orientation. Change it the value of the setting :guilabel:`Map orientation` to '15.00\ |degrees| '. You should see the orientation of the map item change.
+#. While the map item is still selected you can also change the size of the map item. Click while holding down the left mouse button, in a white little rectangle in one of the corners of the map item and drag it to a new location to change it's size. 
+#. Click the :guilabel:`Item Properties` tab on the left lower panel and find the setting for the orientation. Change the value of the setting :guilabel:`Map orientation` to '15.00\ |degrees| '. You should see the orientation of the map item change.
 #. Finally, you can save your print composition with the |mActionFileSave| :sup:`Save Project` button. 
  
 
@@ -459,8 +459,8 @@ When you double click on the added grid you can give it another name.
 
    Map Grids Dialog |nix|
 
-After you have added a grid, you can active the checkbox |checkbox| :guilabel:`Show grid` to overlay a grid onto the
-map element. Expand this option to provides a lot of configuration options, see Figure_composer_map_4_.
+After you have added a grid, you can activate the checkbox |checkbox| :guilabel:`Show grid` to overlay a grid onto the
+map element. Expand this option to provide a lot of configuration options, see Figure_composer_map_4_.
 
 .. _Figure_composer_map_4:
 
@@ -670,7 +670,7 @@ Activating the |checkbox| :guilabel:`Sync with map` checkbox synchronizes the ro
 in the |qg| map canvas (i.e., a rotated north arrow) with the appropriate Print Composer image.
 
 It is also possible to select a north arrow directly. If you first select a north arrow image from 
-**Search directories**  and then use the browse button |browsebutton| of the field :guilabel:`Image source`, 
+**Search directories** and then use the browse button |browsebutton| of the field :guilabel:`Image source`, 
 you can now select one of the north arrow from the list as displayed in figure_composer_image_2_. 
 
 .. note:: 
@@ -771,10 +771,10 @@ provides the following functionalities (see figure_composer_legend_3_):
   * The **[Edit]** button is used to edit the layer-, groupname or title, first you need to 
     select the legend item.
   * The **[Sigma]** button adds a feature count for each vector layer.
-  * Use the **[filter]** button the filter the legend by map content, only the legend items visible 
+  * Use the **[filter]** button to filter the legend by map content, only the legend items visible 
     in the map will be listed in the legend.
 
-  After changing the symbology in the |qg| main window, you can click on **[Update]** to 
+  After changing the symbology in the |qg| main window, you can click on **[Update All]** to 
   adapt the changes in the legend element of the Print Composer. 
 
 
@@ -799,7 +799,7 @@ The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
 * You can change the font of the legend title, group, subgroup and item (layer) in the legend item. 
   Click on a category button to open a **Select font** dialog.
 * You provide the labels with a **Color** using the advanced color picker, however the selected 
-  color will be given to all font items in the legen..
+  color will be given to all font items in the legend..
 * Legend items can be arranged over several columns. Set the number of columns in 
   the :guilabel:`Count` |selectnumber| field.
 
@@ -810,10 +810,10 @@ The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
 * You can change the width and height of the legend symbol in this dialog.
 
 
-WMS legendGraphic and Spacing
+WMS LegendGraphic and Spacing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The :guilabel:`WMS legendGraphic` and :guilabel:`Spacing` dialogs of the legend 
+The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` dialogs of the legend 
 :guilabel:`Item Properties` tab provide the following functionalities (see 
 figure_composer_legend_5_):
 
@@ -826,14 +826,14 @@ figure_composer_legend_5_):
 .. figure:: /static/user_manual/print_composer/print_composer_legend5.png
    :align: center
 
-   WMS legendGraphic Dialogs |nix|
+   WMS LegendGraphic Dialogs |nix|
 
 When you have added a WMS layer and you insert a legend composer item, a request will be send to the 
 WMS server to provide a WMS legend, This Legend will only be shown if the WMS server provides the 
 GetLegendGraphic capability. The WMS legend content will be provided as a raster image.
 
-:guilabel:`WMS legendGraphic` is used to be able to adjust the :guilabel:`Legend width` and 
-the :guilabel:`legend hight` of the WMS legend raster image.
+:guilabel:`WMS LegendGraphic` is used to be able to adjust the :guilabel:`Legend width` and 
+the :guilabel:`Legend hight` of the WMS legend raster image.
 
 Spacing around title, group, subgroup, symbol, icon label, box space or column space can be customized 
 through this dialog.
@@ -1056,7 +1056,7 @@ For :guilabel:`SVG Marker` you can use following options.
 
 * :guilabel:`Start marker` : Choose an SVG image to draw at the beginning of the line
 * :guilabel:`End marker` : Choose an SVG image to draw at the end of the line
-* :guilabel:`Arrow head width`: Sets the size of Start and/or headmarker
+* :guilabel:`Arrow head width`: Sets the size of Start and/or End marker
 
 SVG images are automatically rotated with the line. The color of the SVG image can not be changed.
 
@@ -1174,7 +1174,7 @@ You can:
   available when |checkbox| :guilabel:`Generate an atlas` is activated. When activated it will
   show a table with only the features shown on the map of that particular page of the atlas.
 * Activate |checkbox| :guilabel:`Filter with` and provide a filter by typing in the input 
-  line or insert a regular expressing use the given expression button. A few examples of 
+  line or insert a regular expression using the given expression button. A few examples of 
   filtering statements you can use when you have loaded the airports layer from the Sample 
   dataset:
 
@@ -1476,7 +1476,7 @@ holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Alt` will
 resize from the item center.
 
 The correct position for an item can be obtained using snapping to grid or 
-smart guides. Guides are set by clicking and dragging in the rulers. Guide are 
+smart guides. Guides are set by clicking and dragging in the rulers. Guides are 
 moved by clicking in the ruler, level with the guide and dragging to a new 
 place. To delete a guide move it off the canvas. If you need to disable the 
 snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
@@ -1648,7 +1648,7 @@ button to override the selected setting. These options are particularly usefull 
 
 For the following examples the `Regions` layer of the |qg| sample dataset is used and selected
 for Atlas Generation.
-We also assume the paper format `A4 (210X297)` is selected in the :guilabel:`Composite` tab 
+We also assume the paper format `A4 (210X297)` is selected in the :guilabel:`Composition` tab 
 for field :guilabel:`Presets`.
 
 With a `Data Defined Override` button you can dynamically set the paper orientation. 
