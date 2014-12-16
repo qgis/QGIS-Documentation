@@ -74,6 +74,7 @@ providers:
   the path must be prefixed with *file://*. Also it allows WKT (well known
   text) formatted geometries as an alternative to "x" and "y" fields, and allows
   the coordinate reference system to be specified. For example
+
   ::
 
     uri = "file:///some/path/file.csv?delimiter=%s&crs=epsg:4723&wktField=%s" % (";", "shape")
