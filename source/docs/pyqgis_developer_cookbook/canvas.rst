@@ -15,7 +15,7 @@ editing and others. Similar to other graphics programs, there is always one
 tool active and the user can switch between the available tools.
 
 Map canvas is implemented as :class:`QgsMapCanvas` class in :mod:`qgis.gui`
-module.  The implementation is based on the Qt Graphics View framework.
+module. The implementation is based on the Qt Graphics View framework.
 This framework generally provides a surface and a view where custom graphics
 items are placed and user can interact with them.  We will assume that you are
 familiar enough with Qt to understand the concepts of the graphics scene, view
@@ -77,7 +77,7 @@ set white background and enable anti-aliasing for smooth rendering
 ``Qt.white`` is one of the predefined ``QColor`` instances.)
 
 Now it is time to add some map layers. We will first open a layer and add it to
-the map layer registry.  Then we will set the canvas extent and set the list of
+the map layer registry. Then we will set the canvas extent and set the list of
 layers for canvas
 
 ::
@@ -93,7 +93,7 @@ layers for canvas
   canvas.setExtent(layer.extent())
 
   # set the map canvas layer set
-  canvas.setLayerSet( [ QgsMapCanvasLayer(layer) ] )
+  canvas.setLayerSet([QgsMapCanvasLayer(layer)])
 
 After executing these commands, the canvas should show the layer you have
 loaded.
@@ -104,7 +104,7 @@ Using Map Tools with Canvas
 ===========================
 
 The following example constructs a window that contains a map canvas and basic
-map tools for map panning and zooming.  Actions are created for activation of
+map tools for map panning and zooming. Actions are created for activation of
 each tool: panning is done with :class:`QgsMapToolPan`, zooming in/out with a
 pair of :class:`QgsMapToolZoom` instances. The actions are set as checkable and
 later assigned to the tools to allow automatic handling of checked/unchecked
@@ -126,7 +126,7 @@ are activated using :func:`setMapTool` method.
       self.canvas.setCanvasColor(Qt.white)
 
       self.canvas.setExtent(layer.extent())
-      self.canvas.setLayerSet( [ QgsMapCanvasLayer(layer) ] )
+      self.canvas.setLayerSet([QgsMapCanvasLayer(layer)])
 
       self.setCentralWidget(self.canvas)
 
@@ -167,8 +167,8 @@ are activated using :func:`setMapTool` method.
       self.canvas.setMapTool(self.toolPan)
 
 
-You can put the above code to a file, e.g. ``mywnd.py`` and try it out in
-Python console within QGIS.  This code will put the currently selected layer
+You can put the above code to a file, e.g. :file:`mywnd.py` and try it out in
+Python console within QGIS. This code will put the currently selected layer
 into newly created canvas
 
 ::
@@ -177,8 +177,8 @@ into newly created canvas
   w = mywnd.MyWnd(qgis.utils.iface.activeLayer())
   w.show()
 
-Just make sure that the ``mywnd.py`` file is located within Python search path
-(``sys.path``). If it isn't, you can simply add it: ``sys.path.insert(0,
+Just make sure that the :file:`mywnd.py` file is located within Python search
+path (``sys.path``). If it isn't, you can simply add it: ``sys.path.insert(0,
 '/my/path')`` --- otherwise the import statement will fail, not finding the
 module.
 
@@ -191,7 +191,7 @@ To show some additional data on top of the map in canvas, use map canvas items.
 It is possible to create custom canvas item classes (covered below), however
 there are two useful canvas item classes for convenience:
 :class:`QgsRubberBand` for drawing polylines or polygons, and
-:class:`QgsVertexMarker` for drawing points.  They both work with map
+:class:`QgsVertexMarker` for drawing points. They both work with map
 coordinates, so the shape is moved/scaled automatically when the canvas is
 being panned or zoomed.
 
@@ -200,7 +200,7 @@ To show a polyline
 ::
 
   r = QgsRubberBand(canvas, False)  # False = not a polygon
-  points = [ QgsPoint(-1,-1), QgsPoint(0,1), QgsPoint(1,-1) ]
+  points = [QgsPoint(-1, -1), QgsPoint(0, 1), QgsPoint(1, -1)]
   r.setToGeometry(QgsGeometry.fromPolyline(points), None)
 
 To show a polygon
@@ -208,7 +208,7 @@ To show a polygon
 ::
 
   r = QgsRubberBand(canvas, True)  # True = a polygon
-  points = [ [ QgsPoint(-1,-1), QgsPoint(0,1), QgsPoint(1,-1) ] ]
+  points = [[QgsPoint(-1, -1), QgsPoint(0, 1), QgsPoint(1, -1)]]
   r.setToGeometry(QgsGeometry.fromPolygon(points), None)
 
 Note that points for polygon is not a plain list: in fact, it is a list of
@@ -220,7 +220,7 @@ width
 
 ::
 
-  r.setColor(QColor(0,0,255))
+  r.setColor(QColor(0, 0, 255))
   r.setWidth(3)
 
 The canvas items are bound to the canvas scene. To temporarily hide them (and
@@ -243,14 +243,14 @@ How to use the vertex marker
 ::
 
   m = QgsVertexMarker(canvas)
-  m.setCenter(QgsPoint(0,0))
+  m.setCenter(QgsPoint(0, 0))
 
 This will draw a red cross on position [0,0]. It is possible to customize the
 icon type, size, color and pen width
 
 ::
 
-  m.setColor(QColor(0,255,0))
+  m.setColor(QColor(0, 255, 0))
   m.setIconSize(5)
   m.setIconType(QgsVertexMarker.ICON_BOX) # or ICON_CROSS, ICON_X
   m.setPenWidth(3)
@@ -307,7 +307,7 @@ described before to show the selected rectangle as it is being defined.
         if not self.isEmittingPoint:
           return
 
-        self.endPoint = self.toMapCoordinates( e.pos() )
+        self.endPoint = self.toMapCoordinates(e.pos())
         self.showRect(self.startPoint, self.endPoint)
 
     def showRect(self, startPoint, endPoint):
@@ -347,16 +347,20 @@ Writing Custom Map Canvas Items
    how to create a map canvas item
 
 
-
 .. TODO - custom application example?
+
+::
+
+  import sys
   from qgis.core import QgsApplication
   from qgis.gui import QgsMapCanvas
-  import sys
+
   def init():
     a = QgsApplication(sys.argv, True)
     QgsApplication.setPrefixPath('/home/martin/qgis/inst', True)
     QgsApplication.initQgis()
     return a
+
   def show_canvas(app):
     canvas = QgsMapCanvas()
     canvas.show()

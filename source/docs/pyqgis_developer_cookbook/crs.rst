@@ -14,6 +14,7 @@ Coordinate reference systems (CRS) are encapsulated by
 created by several different ways:
 
 * specify CRS by its ID
+
   ::
 
     # PostGIS SRID 4326 is allocated for WGS84
@@ -28,6 +29,7 @@ created by several different ways:
   If not specified otherwise in second parameter, PostGIS SRID is used by default.
 
 * specify CRS by its well-known text (WKT)
+
   ::
 
     wkt = 'GEOGCS["WGS84", DATUM["WGS84", SPHEROID["WGS84", 6378137.0, 298.257223563]],'
@@ -38,6 +40,7 @@ created by several different ways:
 * create invalid CRS and then use one of the :func:`create*` functions to
   initialize it. In following example we use Proj4 string to initialize the
   projection
+
   ::
 
     crs = QgsCoordinateReferenceSystem()

@@ -40,10 +40,10 @@ example for :guilabel:`Raster` menu
       # check if Raster menu available and remove our buttons from appropriate
       # menu and toolbar
       if hasattr(self.iface, "addPluginToRasterMenu"):
-        self.iface.removePluginRasterMenu("&Test plugins",self.action)
+        self.iface.removePluginRasterMenu("&Test plugins", self.action)
         self.iface.removeRasterToolBarIcon(self.action)
       else:
-        self.iface.removePluginMenu("&Test plugins",self.action)
+        self.iface.removePluginMenu("&Test plugins", self.action)
         self.iface.removeToolBarIcon(self.action)
 
       # disconnect from signal of the canvas

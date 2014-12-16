@@ -18,7 +18,9 @@ Subclassing QgsPluginLayer
 ==========================
 
 Below is an example of a minimal QgsPluginLayer implementation. It is an
-excerpt of the `Watermark example plugin <http://github.com/sourcepole/qgis-watermark-plugin>`_::
+excerpt of the `Watermark example plugin <http://github.com/sourcepole/qgis-watermark-plugin>`_
+
+::
 
   class WatermarkPluginLayer(QgsPluginLayer):
 

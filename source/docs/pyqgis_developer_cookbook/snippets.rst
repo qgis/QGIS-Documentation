@@ -36,14 +36,15 @@ The method that is called when F7 is pressed
 How to toggle Layers
 --------------------
 
-Since QGIS 2.4 there is new layer tree API that allows direct access to the layer tree
-in the legend. Here is an example how to toggle visibility of the active layer
+Since QGIS 2.4 there is new layer tree API that allows direct access to the
+layer tree in the legend. Here is an example how to toggle visibility of the
+active layer
 
 ::
 
   root = QgsProject.instance().layerTreeRoot()
   node = root.findLayer(iface.activeLayer().id())
-  new_state = Qt.Checked if node.isVisible()==Qt.Unchecked else Qt.Unchecked
+  new_state = Qt.Checked if node.isVisible() == Qt.Unchecked else Qt.Unchecked
   node.setVisible(new_state)
 
 .. index:: plugins; access attributes of selected features
@@ -58,19 +59,19 @@ How to access attribute table of selected features
     if(layer):
       nF = layer.selectedFeatureCount()
       if (nF > 0):
-      layer.startEditing()
+        layer.startEditing()
       ob = layer.selectedFeaturesIds()
       b = QVariant(value)
       if (nF > 1):
         for i in ob:
-        layer.changeAttributeValue(int(i),1,b) # 1 being the second column
+        layer.changeAttributeValue(int(i), 1, b) # 1 being the second column
       else:
-        layer.changeAttributeValue(int(ob[0]),1,b) # 1 being the second column
+        layer.changeAttributeValue(int(ob[0]), 1, b) # 1 being the second column
       layer.commitChanges()
       else:
-        QMessageBox.critical(self.iface.mainWindow(),"Error", "Please select at least one feature from current layer")
+        QMessageBox.critical(self.iface.mainWindow(), "Error", "Please select at least one feature from current layer")
     else:
-      QMessageBox.critical(self.iface.mainWindow(),"Error","Please select a layer")
+      QMessageBox.critical(self.iface.mainWindow(), "Error", "Please select a layer")
 
 
 The method requires one parameter (the new value for the attribute

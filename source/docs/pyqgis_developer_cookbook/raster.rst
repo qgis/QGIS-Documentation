@@ -13,7 +13,7 @@ This sections lists various operations you can do with raster layers.
 Layer Details
 =============
 
-A raster layer consists of one or more raster bands - it is referred to as
+A raster layer consists of one or more raster bands --- it is referred to as
 either single band or multi band raster. One band represents a matrix of
 values. Usual color image (e.g. aerial photo) is a raster consisting of red,
 blue and green band. Single band layers typically represent either continuous
@@ -102,11 +102,11 @@ color map. It has three modes of interpolation of values:
   equal to color map entries are drawn
 
 To set an interpolated color ramp shader ranging from green to yellow color
-(for pixel values from 0 to 255)::
+(for pixel values from 0 to 255)
 
   >>> rlayer.setColorShadingAlgorithm(QgsRasterLayer.ColorRampShader)
-  >>> lst = [ QgsColorRampShader.ColorRampItem(0, QColor(0,255,0)), \
-      QgsColorRampShader.ColorRampItem(255, QColor(255,255,0)) ]
+  >>> lst = [QgsColorRampShader.ColorRampItem(0, QColor(0, 255, 0)), \
+      QgsColorRampShader.ColorRampItem(255, QColor(255, 255 ,0))]
   >>> fcn = rlayer.rasterShader().rasterShaderFunction()
   >>> fcn.setColorRampType(QgsColorRampShader.INTERPOLATED)
   >>> fcn.setColorRampItemList(lst)
@@ -130,7 +130,7 @@ red band (1) and green band (2):
 
 In case only one band is necessary for visualization of the raster, single band
 drawing can be chosen --- either gray levels or pseudocolor, see previous
-section::
+section:
 
   >>> rlayer.setDrawingStyle(QgsRasterLayer.MultiBandSingleBandPseudoColor)
   >>> rlayer.setGrayBandName(rlayer.bandName(1))
@@ -146,7 +146,9 @@ Refreshing Layers
 =================
 
 If you do change layer symbology and would like ensure that the changes are
-immediately visible to the user, call these methods::
+immediately visible to the user, call these methods
+
+::
 
    if hasattr(layer, "setCacheImage"):
      layer.setCacheImage(None)
@@ -162,7 +164,9 @@ The second call emits signal that will force any map canvas containing the
 layer to issue a refresh.
 
 With WMS raster layers, these commands do not work. In this case, you have
-to do it explicitly::
+to do it explicitly
+
+::
 
   layer.dataProvider().reloadData()
   layer.triggerRepaint()
@@ -170,7 +174,9 @@ to do it explicitly::
 In case you have changed layer symbology (see sections about raster and vector
 layers on how to do that), you might want to force QGIS to update the layer
 symbology in the layer list (legend) widget. This can be done as follows
-(``iface`` is an instance of QgisInterface)::
+(``iface`` is an instance of :class:`QgisInterface`)
+
+::
 
    iface.legendInterface().refreshLayerSymbology(layer)
 
@@ -180,9 +186,11 @@ symbology in the layer list (legend) widget. This can be done as follows
 Query Values
 ============
 
-To do a query on value of bands of raster layer at some specified point::
+To do a query on value of bands of raster layer at some specified point
 
-  ident = rlayer.dataProvider().identify(QgsPoint(15.30,40.98), \
+::
+
+  ident = rlayer.dataProvider().identify(QgsPoint(15.30, 40.98), \
     QgsRaster.IdentifyFormatValue)
   if ident.isValid():
     print ident.results()

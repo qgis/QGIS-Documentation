@@ -153,7 +153,6 @@ debugger attached and are currently on a breakpoint.
 
    PyDev Debug Console
 
-
 You have now an interactive console which let's you test any commands from
 within the current context. You can manipulate variables or make API calls or
 whatever you like.

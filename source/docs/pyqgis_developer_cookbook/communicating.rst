@@ -43,7 +43,6 @@ The examples above show an error bar, but the ``level`` parameter can be used
 to creating warning messages or info messages, using the
 ``QgsMessageBar.WARNING`` and ``QgsMessageBar.INFO`` constants respectively.
 
-
 .. figure:: /static/pyqgis_developer_cookbook/infobar.png
    :align: center
    :width: 40em
@@ -83,11 +82,11 @@ message box, or if it doesn't make sense to show it in the main QGIS window
             self.bar = QgsMessageBar()
             self.bar.setSizePolicy( QSizePolicy.Minimum, QSizePolicy.Fixed )
             self.setLayout(QGridLayout())
-            self.layout().setContentsMargins(0,0,0,0)
+            self.layout().setContentsMargins(0, 0, 0, 0)
             self.buttonbox = QDialogButtonBox(QDialogButtonBox.Ok)
             self.buttonbox.accepted.connect(self.run)
-            self.layout().addWidget(self.buttonbox , 0,0,2,1)
-            self.layout().addWidget(self.bar, 0,0,1,1)
+            self.layout().addWidget(self.buttonbox, 0, 0, 2, 1)
+            self.layout().addWidget(self.bar, 0, 0, 1, 1)
 
         def run(self):
             self.bar.pushMessage("Hello", "World", level=QgsMessageBar.INFO)

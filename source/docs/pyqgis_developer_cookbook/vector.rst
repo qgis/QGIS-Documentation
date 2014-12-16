@@ -60,7 +60,7 @@ Attributes can be referred by index.
 
 
 Iterating over selected features
----------------------------------
+--------------------------------
 
 Convenience methods.
 
@@ -196,6 +196,7 @@ For deletion of fields just provide a list of field indexes.
 
 After adding or removing fields in the data provider the layer's fields need
 to be updated because the changes are not automatically propagated.
+
 ::
 
   layer.updateFields()
@@ -461,13 +462,13 @@ Finally, let's check whether everything went well
   print "fields:", len(pr.fields())
   print "features:", pr.featureCount()
   e = layer.extent()
-  print "extent:", e.xMin(),e.yMin(),e.xMax(),e.yMax()
+  print "extent:", e.xMin(), e.yMin(), e.xMax(), e.yMax()
 
   # iterate over features
   f = QgsFeature()
   features = vl.getFeatures()
   for f in features:
-    print "F:",f.id(), f.attributes(), f.geometry().asPoint()
+    print "F:", f.id(), f.attributes(), f.geometry().asPoint()
 
 .. index:: vector layers; symbology
 
@@ -719,7 +720,7 @@ radius
       pass
 
     def renderPoint(self, point, context):
-      # Rendering depends on whether the symbol is selected (Qgis >= 1.5)
+      # Rendering depends on whether the symbol is selected (QGIS >= 1.5)
       color = context.selectionColor() if context.selected() else self.color
       p = context.renderContext().painter()
       p.setPen(color)
@@ -943,7 +944,7 @@ function becomes
 
 ::
 
-     QgsRendererV2AbstractMetadata.__init__(self,
+  QgsRendererV2AbstractMetadata.__init__(self,
          "RandomRenderer",
          "Random renderer",
          QIcon(QPixmap("RandomRendererIcon.png", "png")))

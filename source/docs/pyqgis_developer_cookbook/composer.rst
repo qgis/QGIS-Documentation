@@ -22,10 +22,10 @@ and do the rendering
 ::
 
   # create image
-  img = QImage(QSize(800,600), QImage.Format_ARGB32_Premultiplied)
+  img = QImage(QSize(800, 600), QImage.Format_ARGB32_Premultiplied)
 
   # set image's background color
-  color = QColor(255,255,255)
+  color = QColor(255, 255, 255)
   img.fill(color.rgb())
 
   # create painter
@@ -36,7 +36,7 @@ and do the rendering
   render = QgsMapRenderer()
 
   # set layer set
-  lst = [ layer.getLayerID() ]  # add ID of every layer
+  lst = [layer.getLayerID()]  # add ID of every layer
   render.setLayerSet(lst)
 
   # set extent
@@ -96,15 +96,17 @@ Currently supported items are:
 
 * map --- this item tells the libraries where to put the map itself. Here we
   create a map and stretch it over the whole paper size
+
   ::
 
     x, y = 0, 0
     w, h = c.paperWidth(), c.paperHeight()
-    composerMap = QgsComposerMap(c, x,y,w,h)
+    composerMap = QgsComposerMap(c, x ,y, w, h)
     c.addItem(composerMap)
 
 * label --- allows displaying labels. It is possible to modify its font, color,
   alignment and margin
+
   ::
 
     composerLabel = QgsComposerLabel(c)
@@ -113,6 +115,7 @@ Currently supported items are:
     c.addItem(composerLabel)
 
 * legend
+
   ::
 
     legend = QgsComposerLegend(c)
@@ -120,6 +123,7 @@ Currently supported items are:
     c.addItem(legend)
 
 * scale bar
+
   ::
 
     item = QgsComposerScaleBar(c)
@@ -140,9 +144,9 @@ millimeters
 ::
 
   # set label 1cm from the top and 2cm from the left of the page
-  composerLabel.setItemPosition(20,10)
+  composerLabel.setItemPosition(20, 10)
   # set both label's position and size (width 10cm, height 3cm)
-  composerLabel.setItemPosition(20,10, 100, 30)
+  composerLabel.setItemPosition(20, 10, 100, 30)
 
 A frame is drawn around each item by default. How to remove the frame
 

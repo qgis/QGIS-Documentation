@@ -29,11 +29,12 @@ Geometry Construction
 There are several options for creating a geometry:
 
 * from coordinates
+
   ::
 
     gPnt = QgsGeometry.fromPoint(QgsPoint(1,1))
-    gLine = QgsGeometry.fromPolyline( [ QgsPoint(1,1), QgsPoint(2,2) ] )
-    gPolygon = QgsGeometry.fromPolygon( [ [ QgsPoint(1,1), QgsPoint(2,2), QgsPoint(2,1) ] ] )
+    gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])
+    gPolygon = QgsGeometry.fromPolygon([[QgsPoint(1, 1), QgsPoint(2, 2), QgsPoint(2, 1)]])
 
   Coordinates are given using :class:`QgsPoint` class.
 
@@ -46,11 +47,13 @@ There are several options for creating a geometry:
   polygons.
 
 * from well-known text (WKT)
+
   ::
 
-    gem = QgsGeometry.fromWkt("POINT (3 4)")
+    gem = QgsGeometry.fromWkt("POINT(3 4)")
 
 * from well-known binary (WKB)
+
   ::
 
     g = QgsGeometry()
@@ -63,7 +66,7 @@ Access to Geometry
 ==================
 
 First, you should find out geometry type, :func:`wkbType` method is the one to
-use --- it returns a value from QGis.WkbType enumeration
+use --- it returns a value from ``QGis.WkbType`` enumeration
 
 ::
 
@@ -77,7 +80,7 @@ use --- it returns a value from QGis.WkbType enumeration
   False
 
 As an alternative, one can use :func:`type` method which returns a value from
-QGis.GeometryType enumeration. There is also a helper function
+``QGis.GeometryType`` enumeration. There is also a helper function
 :func:`isMultipart` to find out whether a geometry is multipart or not.
 
 To extract information from geometry there are accessor functions for every
@@ -86,11 +89,11 @@ vector type. How to use accessors
 ::
 
   >>> gPnt.asPoint()
-  (1,1)
+  (1, 1)
   >>> gLine.asPolyline()
-  [(1,1), (2,2)]
+  [(1, 1), (2, 2)]
   >>> gPolygon.asPolygon()
-  [[(1,1), (2,2), (2,1), (1,1)]]
+  [[(1, 1), (2, 2), (2, 1), (1, 1)]]
 
 Note: the tuples (x,y) are not real tuples, they are :class:`QgsPoint` objects,
 the values are accessible with :func:`x` and :func:`y` methods.
@@ -114,7 +117,6 @@ given layer and performing some geometric computations based on their
 geometries.
 
 ::
-
 
   # we assume that 'layer' is a polygon layer
   features = layer.getFeatures()

@@ -25,23 +25,19 @@ considered Python packages that can be imported as plugins.
 
 Steps:
 
-1. *Idea*: Have an idea about what you want to do with your new QGIS plugin.
+#. *Idea*: Have an idea about what you want to do with your new QGIS plugin.
    Why do you do it?
    What problem do you want to solve?
    Is there already another plugin for that problem?
-
-2. *Create files*: Create the files described next.
+#. *Create files*: Create the files described next.
    A starting point (:file:`__init__.py`).
    Fill in the :ref:`plugin_metadata` (:file:`metadata.txt`)
    A main python plugin body (:file:`mainplugin.py`).
    A form in QT-Designer (:file:`form.ui`), with its :file:`resources.qrc`.
-
-3. *Write code*: Write the code inside the :file:`mainplugin.py`
-
-4. *Test*: Close and re-open QGIS and import your plugin again. Check if
+#. *Write code*: Write the code inside the :file:`mainplugin.py`
+#. *Test*: Close and re-open QGIS and import your plugin again. Check if
    everything is OK.
-
-5. *Publish*: Publish your plugin in QGIS repository or make your own
+#. *Publish*: Publish your plugin in QGIS repository or make your own
    repository as an "arsenal" of personal "GIS weapons".
 
 .. index:: plugins; writing
@@ -54,8 +50,9 @@ appeared - on `Plugin Repositories wiki page <http://www.qgis.org/wiki/Python_Pl
 you can find some of them, you can use their source to learn more about
 programming with PyQGIS or find out whether you are not duplicating development
 effort. The QGIS team also maintains an :ref:`official_pyqgis_repository`.
-Ready to create a plugin but no idea what to do? `Python Plugin Ideas wiki page <http://www.qgis.org/wiki/Python_Plugin_Ideas>`_ lists wishes from the community!
-
+Ready to create a plugin but no idea what to do? `Python Plugin Ideas wiki
+page <http://www.qgis.org/wiki/Python_Plugin_Ideas>`_ lists wishes from the
+community!
 
 Plugin files
 ------------
@@ -152,7 +149,6 @@ icon                   False     a file name or a relative path (relative to the
 category               False     one of `Raster`, `Vector`, `Database` and `Web`
 =====================  ========  =======================================
 
-
 By default, plugins are placed in the `Plugins` menu (we will see in the next
 section  how to add a menu entry for your plugin) but they can also be placed
 the  into :menuselection:`Raster`, :menuselection:`Vector`,
@@ -226,12 +222,11 @@ An example for this metadata.txt
 
 .. index:: plugins; metadata.txt, metadata, metadata.txt
 
-
 __init__.py
 -----------
-This file is required by Python's import system. Also, Quantum GIS requires
-that this file contains a :func:`classFactory()` function, which is called when
-the plugin gets loaded to QGIS. It receives reference to instance of
+This file is required by Python's import system. Also, QGIS requires that this
+file contains a :func:`classFactory()` function, which is called when the
+plugin gets loaded to QGIS. It receives reference to instance of
 :class:`QgisInterface` and must return instance of your plugin's class from the
 :file:`mainplugin.py` --- in our case it's called ``TestPlugin`` (see below).
 This is how :file:`__init__.py` should look like
@@ -284,7 +279,7 @@ This is where the magic happens and this is how magic looks like:
 
     def unload(self):
       # remove the plugin menu item and icon
-      self.iface.removePluginMenu("&Test plugins",self.action)
+      self.iface.removePluginMenu("&Test plugins", self.action)
       self.iface.removeToolBarIcon(self.action)
 
       # disconnect form signal of the canvas
@@ -342,8 +337,8 @@ custom menu group directly to the menu bar, as the next example demonstrates:
     def unload(self):
         self.menu.deleteLater()
 
-Don't forget to set QAction and QMenu objectName to a name specific to your
-plugin so that it can be customized.
+Don't forget to set :class:`QAction` and :class:`QMenu` ``objectName`` to a name
+specific to your plugin so that it can be customized.
 
 .. index:: plugins; resource file, resources.qrc
 

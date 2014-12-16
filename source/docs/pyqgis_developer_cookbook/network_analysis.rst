@@ -260,7 +260,9 @@ objects and may be slow on large data-sets.
     rb.addPoint (tree.vertex(tree.arc(i).outVertex()).point())
     i = i + 1
 
-Same thing but using :func:`dijkstra` method::
+Same thing but using :func:`dijkstra` method
+
+::
 
   from PyQt4.QtCore import *
   from PyQt4.QtGui import *
