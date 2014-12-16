@@ -19,7 +19,7 @@ They are searched for in these paths:
 
 Home directory (denoted by above :file:`~`) on Windows is usually something
 like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier) or
-:file:`C:\\Users\\(user)`. Since Quantum GIS is using Python 2.7,
+:file:`C:\\Users\\(user)`. Since QGIS is using Python 2.7,
 subdirectories of these paths have to contain an __init__.py file to be
 considered Python packages that can be imported as plugins.
 
@@ -297,7 +297,7 @@ This is where the magic happens and this is how magic looks like:
 The only plugin functions that must exist in the main plugin source file (e.g.
 :file:`mainPlugin.py`) are:
 
-* ``__init__``    --> which gives access to Quantum GIS' interface
+* ``__init__``    --> which gives access to QGIS interface
 * ``initGui()``   --> called when the plugin is loaded
 * ``unload()``    --> called when the plugin is unloaded
 

@@ -4,7 +4,7 @@
 Network analysis library
 ************************
 
-Starting from revision `ee19294562 <https://github.com/qgis/Quantum-GIS/commit/ee19294562b00c6ce957945f14c1727210cffdf7>`_
+Starting from revision `ee19294562 <https://github.com/qgis/QGIS/commit/ee19294562b00c6ce957945f14c1727210cffdf7>`_
 (QGIS >= 1.8) the new network analysis library was added to the QGIS core
 analysis library. The library:
 
