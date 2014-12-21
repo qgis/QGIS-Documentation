@@ -5,7 +5,7 @@ Running our first algorithm. The  toolbox
 .. note:: In this lesson we will run our first algorithm, and get our first result from it.
 
 
-As we have already mentioned, the processing framework can run algorithms from other applications, but it also contains native algorithm that need no external software to be run. To start exploring the processing framework, we are going to run one of those native algorithms. In particular, we are going to calculate the centroids of set of polygons.
+As we have already mentioned, the processing framework can run algorithms from other applications, but it also contains native algorithms that need no external software to be run. To start exploring the processing framework, we are going to run one of those native algorithms. In particular, we are going to calculate the centroids of set of polygons.
 
 First, open the QGIS project corresponding to this lesson. It contains just a single layer with two polygons
 
@@ -21,7 +21,7 @@ To execute an algorithm, you just have to double-click on its name in the toolbo
 
 .. image::  img/first_alg/centroids.png
 
-All algorithms have a similar interface, which basically contains input parameters that you have to fill, and outputs that you have to select where to store. In this case, the only inputs we have are a vector layer with polygons and a selector to select whether we want several centroids for a single feature in case it is a multipart features, or the algorithm should generate just one centroid for each feature.
+All algorithms have a similar interface, which basically contains input parameters that you have to fill, and outputs that you have to select where to store. In this case, the only inputs we have are a vector layer with polygons and a selector to select whether we want several centroids for a single feature in case it is a multipart feature, or the algorithm should generate just one centroid for each feature.
 
 Select the *Polygons* layer as input. The other field will have no effect at all, since the input layer has no multi-part features.
 
@@ -41,7 +41,7 @@ You will get the following output.
 
 .. image:: img/first_alg/canvas2.png
 
-The output has the same CRS as the input.  Geoalgorithms assumes all input layers share the in the same CRS and does not perform any reprojection. Except in the case of some special algorithms (for instance, reprojection ones), the outputs will also have that same CRS. We will see more about this soon.
+The output has the same CRS as the input. Geoalgorithms assumes all input layers share the same CRS and do not perform any reprojection. Except in the case of some special algorithms (for instance, reprojection ones), the outputs will also have that same CRS. We will see more about this soon.
 
 Try yourself saving it using different file formats (use, for instance, ``shp`` and ``geojson`` as extensions). Also, if you do not want the layer to be loaded in QGIS after it is generated, you can check off the check box that is found below the output path box.
 
