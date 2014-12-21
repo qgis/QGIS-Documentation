@@ -410,7 +410,7 @@ The :guilabel:`Query Builder` is found in the layer properties:
   .. image:: /static/training_manual/vector_analysis/query_builder.png
      :align: center
 
-Using the :guilabel:`Query Builder` against the :kbd:`multipolygon` layer,
+Using the :guilabel:`Query Builder` against the :kbd:`multipolygons` layer,
 create the following queries for the :kbd:`houses`, :kbd:`schools`,
 :kbd:`restaurants` and :kbd:`residential` layers:
 
@@ -425,7 +425,7 @@ create the following queries for the :kbd:`houses`, :kbd:`schools`,
 
 Once you have entered each query, click :guilabel:`OK`. You'll see that the map
 updates to show only the data you have selected. Since you need to use again
-the :kbd:`multipolygon` data from the OSM dataset, at this point, you can use one of
+the :kbd:`multipolygons` data from the OSM dataset, at this point, you can use one of
 the following methods:
 
 * Rename the filtered OSM layer and re-import the layer from :kbd:`osm_data.osm`, OR
@@ -468,7 +468,7 @@ You should end up with a map which looks similar to the following:
 
 * The :guilabel:`Segments to approximate` value is set to :kbd:`20`. This is
   optional, but it's recommended, because it makes the output buffers look
-  smoother.  Compare this:
+  smoother. Compare this:
 
   .. image:: /static/training_manual/vector_analysis/schools_buffer_5.png
      :align: center
@@ -847,7 +847,7 @@ The SQL required to create the correct people table is::
                        street_id int not null,
                        phone_no varchar null );
 
-The schema for the table (enter :kbd:`\d people`) looks like this::
+The schema for the table (enter :kbd:`\\d people`) looks like this::
 
   Table "public.people"
 
@@ -1032,7 +1032,7 @@ that you expect.
              32,
              1,
              '071 812 31 28',
-             1,
+             1,F
              'SRID=4326;POINT(32 -34)');
 
   insert into people (name,house_no, street_id, phone_no, city_id, the_geom)
