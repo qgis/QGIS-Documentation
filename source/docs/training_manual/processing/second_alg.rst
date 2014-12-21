@@ -11,7 +11,7 @@ The first thing we are going to do is to create a points layer from the coordina
 This algorithm, like the one from the previous lesson, just generates a single output, and it has three inputs:
 
 - Table: the table with the coordinates. You should select here the table from the lesson data.
-- X an Y fields: these two parameters are linked to the first one. The corresponding selector will show the name of those fields that are available in the selected table. Select the *XCOORD* field for the *X* parameter, and the *YYCOORD* field for the *Y* parameter.
+- X and Y fields: these two parameters are linked to the first one. The corresponding selector will show the name of those fields that are available in the selected table. Select the *XCOORD* field for the *X* parameter, and the *YYCOORD* field for the *Y* parameter.
 - CRS: Since this algorithm takes no input layers, it cannot assign a CRS to the output layer based on them. Instead, it asks you to manually select the CRS that the coordinates in the table use. Click on the button on the left--hand side to open the QGIS CRS selector, and select EPSG:4326 as the output CRS. We are using this CRS because the coordinates in the table are in that CRS.
 
 Your dialog should look like this.
@@ -49,7 +49,7 @@ Press *Run* and you will get the graticule layer.
 
 .. image:: img/second_alg/graticule.png
 
-The last step is to count the points in each on of the rectangles of that graticule. We will use the *Count points in polygons* algorithm.
+The last step is to count the points in each one of the rectangles of that graticule. We will use the *Count points in polygons* algorithm.
 
 .. image:: img/second_alg/count_points.png
 
