@@ -19,7 +19,7 @@ Select the DEM in the *Elevation* field, and leave the default values for the re
 
 .. image:: img/hydro/catchmentarea.png
 
-Some algorithm calculates many layers, but the *Catchment Area* one is the only one we will be using.
+Some algorithms calculate many layers, but the *Catchment Area* one is the only one we will be using.
 
 You can get rid of the other ones if you want.
 
@@ -84,7 +84,7 @@ This layer is ready to be used in the *Raster layer statistics* algorithm.
 
 .. image:: img/hydro/rasterstats.png 
 
-The resulting statistic are the following ones.
+The resulting statistics are the following ones.
 
 .. image:: img/hydro/stats.png 
 
