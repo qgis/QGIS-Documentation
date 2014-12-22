@@ -7,7 +7,7 @@ The first model that we created in the previous chapter was a very simple one, w
 
 This lesson does not contain instructions about how to create you model. You already know the necessary steps (we saw them in a previous lesson) and you have already seen the basic ideas about the modeler, so you should try it yourself. Spend a few minutes trying to create your model, and don't worry about making mistakes. Remember: first add the inputs and then add the algorithms that use them to create the workflow.
 
-In case you could not create the full model yourself and you need some extra help, the data folder corresponding to this lesson contains and 'almost' finished version of it. Open the modeler and then open the model file that you will find in the data folder. You should see something like this.
+In case you could not create the full model yourself and you need some extra help, the data folder corresponding to this lesson contains an 'almost' finished version of it. Open the modeler and then open the model file that you will find in the data folder. You should see something like this.
 
 .. image:: img/modeler_hydro/model.png
 
@@ -29,7 +29,7 @@ The dialog is filled with the current values used by the algorithm. You can see 
 
 .. image:: img/modeler_hydro/unfolded.png
 
-The input that we added is there and we can select it. Whenever an algorithm in a model requires a numerical value, you can hardcode it and directly type it, or you can use any of the available inputs and values (remember that some algorithms generate sinlge numerical values. We will see more about this soon). In the case of a string parameter, you will also see string inputs and you will be able to select on of them or type the desired fixed value.
+The input that we added is there and we can select it. Whenever an algorithm in a model requires a numerical value, you can hardcode it and directly type it, or you can use any of the available inputs and values (remember that some algorithms generate single numerical values. We will see more about this soon). In the case of a string parameter, you will also see string inputs and you will be able to select one of them or type the desired fixed value.
 
 Select the *Threshold* input in the *Threshold* parameter and click on *OK* to apply the changes to your model. Now the design of the model should look like this.
 
