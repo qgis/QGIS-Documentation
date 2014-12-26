@@ -52,7 +52,7 @@ have in the document.
 * Remember to keep the order of the modules logical, such that later modules
   build on the knowledge presented in earlier modules.
 * Open your new module's own index file (:kbd:`[module name]/index.rst`).
-* Along the top of the page, write a line of 80 asterisks (:kbd:`*`).  This
+* Along the top of the page, write a line of 80 asterisks (:kbd:`*`). This
   represents a module heading.
 * Follow this with a line containing the markup phrase :kbd:`|MOD|` (which
   stands for "module"), followed by the name of your module.
