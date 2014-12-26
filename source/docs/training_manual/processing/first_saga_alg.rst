@@ -4,7 +4,7 @@ Running an external algorithm
 
 .. note:: In this lesson we will see how to use algorithms that depend on a third-party application, particularly SAGA, which is one of the main algorithm providers.
 
-All the algorithms that we have run so far are part of processing framework. That is, they are *native* algorithms implemented in the plugin and run by QGIS just like the plugin itself is run. However, one of the greatest features of the processing framework is that it can use algorithms from external application and extend the possibilites of those applications. Such algorithms are wrapped and included in the toolbox, so you can easily use them from QGIS, and use QGIS data to run them.
+All the algorithms that we have run so far are part of processing framework. That is, they are *native* algorithms implemented in the plugin and run by QGIS just like the plugin itself is run. However, one of the greatest features of the processing framework is that it can use algorithms from external applications and extend the possibilites of those applications. Such algorithms are wrapped and included in the toolbox, so you can easily use them from QGIS, and use QGIS data to run them.
 
 Some of the algorithms that you see in the simplified view require third party applications to be installed in your system. One algorithm provider of special interest is SAGA (System for Automated Geospatial Analysis). At the end of this lesson we will run an algorithm called *Convergence index*, which is provided by SAGA and computes a morphometrical measurement from a DEM. But first, we need to configure everything so QGIS can correctly call SAGA. This is not difficult, but it's important to understand how it works. Each external application has its own configuration, and later in this same manual we will talk about some of the other ones, but SAGA is going to be our main backend, so we will discuss it here.
 
@@ -34,7 +34,7 @@ Use the points layer in the project corresponding to this lesson as input, and t
 
 .. image:: img/first_saga_alg/split_layer.png
 
-The input layer has been split in two layer, each one with the same number of points. This result has been computed by SAGA, and later taken by QGIS and added to the QGIS project.
+The input layer has been split in two layers, each one with the same number of points. This result has been computed by SAGA, and later taken by QGIS and added to the QGIS project.
 
 If all goes fine, you will not notice any difference between this SAGA--based algorithm and one of the others that we have previously run. However, SAGA might, for some reason, not be able to produce a result and not generate the file that QGIS is expecting. In that case, there will be problems adding the result to the QGIS project, and an error message like this will be shown.
 
