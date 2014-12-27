@@ -4,7 +4,7 @@ Vector calculator
 
 .. note:: In this lesson we will see how to add new attributes to a vector layer based on a mathematical expression, using the vector calculator
 
-We already know how to use the raster calculator to create new raster layers usig mathematical expressions. A similar algorithm is available for vector layer, and generates a new layer with the same attributes of the input layer, plus an additional on with the result of the expression entered. The algorithm is called *Field calculator* and has the following parameters dialog.
+We already know how to use the raster calculator to create new raster layers using mathematical expressions. A similar algorithm is available for vector layers, and generates a new layer with the same attributes of the input layer, plus an additional on with the result of the expression entered. The algorithm is called *Field calculator* and has the following parameters dialog.
 
 .. image:: img/vector_calculator/field_calculator.png
 
@@ -43,7 +43,7 @@ We can use conditional functions to have a new field with ``male`` or ``female``
 
 	CASE WHEN  "MALES" > "FEMALES"  THEN 'male' ELSE 'female' END
 
-The parameters windows should look like this.
+The parameters window should look like this.
 
 .. image:: img/vector_calculator/predominance.png
 
