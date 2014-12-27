@@ -7,7 +7,7 @@ Defining extents
 
 Some algorithms require an extent to define the area to be covered by the analysis they perform, and usually to define the extent of the resulting layer.
 
-When an extent is required, it can be defined manually but entering the four values that define it (min X, min Y, max X, max Y), but there are other more practical and more interesting ways of doing it as well. We will see all of them in this lesson.
+When an extent is required, it can be defined manually by entering the four values that define it (min X, min Y, max X, max Y), but there are other more practical and more interesting ways of doing it as well. We will see all of them in this lesson.
 
 First, let's open an algorithm that requires an extent to be defined. Open the *Shapes to grid* algorithm, which creates a raster layer from a vector layer.
 
@@ -39,7 +39,7 @@ Once you release the mouse button, the dialog will reappear and the text box wil
 
 The last option is *Use min covering extent from input layers*, which is the default option. This will compute the min covering extent of all layers used to run the algorithm, and there is no need to enter any value in the text box. In the case of a single input layer, as in the algorithm we are running, the same extent can be obtained by selecting that same input layer in the *Use layer/canvas extent* that we already saw. However, when there are several input layers, the min covering extent does not correspond to any of the input layer extent, since it is computed from all of them together.
 
-We will use this last method to execute our rasterization algorith.
+We will use this last method to execute our rasterization algorithm.
 
 Fill the parameters dialog as shown next, and press *OK*.
 
@@ -49,7 +49,7 @@ You will get a rasterized layer that covers exactly the area covered by the orig
 
 .. image:: img/extents/result.png
 
-In some cases, the last option, *Use min covering extent from input layers*, might not be avaialble. This will happen in those algorithm that do not have input layers, but just parameters of other types. In that case, you will have to enter the value manually or use any of the other options.
+In some cases, the last option, *Use min covering extent from input layers*, might not be available. This will happen in those algorithm that do not have input layers, but just parameters of other types. In that case, you will have to enter the value manually or use any of the other options.
 
 Notice that, when a selection exist, the extent of the layer is that of the whole set of features, and the selection is not used to compute the extent. In that case, you might want to actually create a new layer from the selection, and then use it as input.
 
