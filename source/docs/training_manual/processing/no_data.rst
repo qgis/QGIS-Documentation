@@ -18,7 +18,7 @@ Now open the toolbox and open the dialog corresponding to the raster calculator.
 The dialog contains 2 parameters.
 
 - The layers to use for the analysis. This is a multiple input, that meaning that you can select as many layers as you want. Click on the button on the right--hand side and then select the layers that you want to use in the dialog that will appear.
-- The formula to apply. The formula uses the layers selected in the above parameter, which are named using alphabet letters (``a, b, c...``) or ``g1, g2, g3...`` as variable names. That is, the formula ``a + 2 * b`` is the same as ``g1 + 2 * g2`` and will compute the sum of the value in the first layer plus two times the value in the second layer. The ordering of the layers is the some ordering that you see in the selection dialog.
+- The formula to apply. The formula uses the layers selected in the above parameter, which are named using alphabet letters (``a, b, c...``) or ``g1, g2, g3...`` as variable names. That is, the formula ``a + 2 * b`` is the same as ``g1 + 2 * g2`` and will compute the sum of the value in the first layer plus two times the value in the second layer. The ordering of the layers is the same ordering that you see in the selection dialog.
 
 .. warning:: the calculator is case sensitive
 
@@ -59,7 +59,7 @@ Here is the resulting layer.
 .. image:: img/no_data/masked.png
 
 
-This technique is used frequently to *mask* values ina raster layer, and is useful whenever you want to perform calculations for a region other that the arbitrary rectangular region that is used by raster layer. For instance, an elevation histogram of a raster layer doesn't have much meaning. If it is instead computed using only values corresponding to a basin (as in he case above), the result that we obtain is a meaningful one that actually gives information about the configuration of the basin.
+This technique is used frequently to *mask* values in a raster layer, and is useful whenever you want to perform calculations for a region other that the arbitrary rectangular region that is used by raster layer. For instance, an elevation histogram of a raster layer doesn't have much meaning. If it is instead computed using only values corresponding to a basin (as in he case above), the result that we obtain is a meaningful one that actually gives information about the configuration of the basin.
 
 There are other interesting things about this algorithm that we have just run apart from the no--data values and how they are handled. If you have a look at the extents of the layers that we have multiplied (you can do it double--clicking on their names of the layer in the table of contents and looking at their properties), you will see that they are not the same, since the extent covered by the flow accumulation layer is smaller that the extent of the full DEM.
 
