@@ -5,7 +5,7 @@ Starting with the graphical modeler
 .. note:: In this lesson we will use the graphical modeler, a powerful component that we can use to define a workflow and run a chain of algorithms.
 
 
-A normal session with the processign tools includes more than running a single algorithm. Usually several of them are run to obtain a result, and the outputs of some of those algorithms are used as input for some of the other ones.
+A normal session with the processing tools includes more than running a single algorithm. Usually several of them are run to obtain a result, and the outputs of some of those algorithms are used as input for some of the other ones.
 
 Using the graphical modeler, that workflow can be put into a model, which will run all the necessary algorithms in a single run, thus simplifying the whole process and automating it.
 
@@ -31,7 +31,7 @@ This is the result that you will obtain (the default singleband pseudocolor inve
 
 .. image:: img/modeler_twi/twi_layer.png
 
-What we will try to do now is to create an algorithm that calculates the TWI from a DEM in jut one single step. That will save us work in case we later have to compute a TWI layer from another DEM, since we will need just one single step to do it instead of the 3 ones above. All the processes that we need are found in the  toolbox, so what we have to do is to define the workflow to wrap them. This is where the graphical modeler comes in.
+What we will try to do now is to create an algorithm that calculates the TWI from a DEM in just one single step. That will save us work in case we later have to compute a TWI layer from another DEM, since we will need just one single step to do it instead of the 3 ones above. All the processes that we need are found in the  toolbox, so what we have to do is to define the workflow to wrap them. This is where the graphical modeler comes in.
 
 Open the modeler by selecting its menu entry in the processing menu.
 
@@ -45,7 +45,7 @@ Double click on the *Raster layer* input and you will see the following dialog.
 
 .. image:: img/modeler_twi/raster_input.png
 
-Here wil have to define the input we want. Since we expect this raster layer to be a DEM, we will call it *DEM*. That's the name that the user of the model will see when running it. Since we need that layer to work, we will define it as a mandatory layer.
+Here we will have to define the input we want. Since we expect this raster layer to be a DEM, we will call it *DEM*. That's the name that the user of the model will see when running it. Since we need that layer to work, we will define it as a mandatory layer.
 
 Here is how the dialog should be configured.
 
@@ -55,7 +55,7 @@ Click on *OK* and the input will appear in the modeler canvas.
 
 .. image:: img/modeler_twi/canvas_1.png
 
-Now let's move to the *Algorithms* tab. The first algorithm we have to run is the *Slope, aspect, curvatures* algorithm. Locate it in the algorithm list, double--click on it and you will see the dialog shown below.
+Now let's move to the *Algorithms* tab. The first algorithm we have to run is the *Slope, aspect, curvature* algorithm. Locate it in the algorithm list, double--click on it and you will see the dialog shown below.
 
 .. image:: img/modeler_twi/slope_modeler.png
 
@@ -93,7 +93,7 @@ Enter a name and a group name in the upper part of the model window, and then sa
 
 .. image:: img/modeler_twi/model_name.png
 
-You can save it anywhere you want an open it later, but if you save it in the models folder (which is the folder that you will see when the save file dialog appears), you model will also be available in the toolbox as well. So stay on that folder and save the model with the filename that you prefer.
+You can save it anywhere you want and open it later, but if you save it in the models folder (which is the folder that you will see when the save file dialog appears), you model will also be available in the toolbox as well. So stay on that folder and save the model with the filename that you prefer.
 
 Now close the modeler dialog and go to the toolbox. In the *Models* entry you will find you model.
 
