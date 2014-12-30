@@ -17,11 +17,11 @@ That will select 90% of the points in the layer to rasterize
 
 The selection is random, so your selection might differ from the selection shown in the above image.
 
-Now run the *Shapes to grid* to get the first raster layer, and then run the *Close gaps* algorithm to fill the no--data cells [Cell resolution: 100 m].
+Now run the *Shapes to grid* algorithm to get the first raster layer, and then run the *Close gaps* algorithm to fill the no--data cells [Cell resolution: 100 m].
 
 .. image:: img/interpolation_cross/filled.png
 
-To check the quality of the interpolation, we can now use the points that are not selected. At this points, we know the real elevation (the value in the points layer) and the interpolated elevation (the value in the interpolated raster layer). We can compare the by computing the differences between those values. 
+To check the quality of the interpolation, we can now use the points that are not selected. At this point, we know the real elevation (the value in the points layer) and the interpolated elevation (the value in the interpolated raster layer). We can compare the two by computing the differences between those values. 
 
 Since we are going to use the points that are not selected, first, let's invert the selection.
 
