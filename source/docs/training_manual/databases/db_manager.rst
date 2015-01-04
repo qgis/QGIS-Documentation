@@ -68,7 +68,7 @@ of a layer in the Layer Tree. You can browse the data by selecting the
 There is also a :guilabel:`Preview` tab which will show you the layer data in
 a map preview.
 
-Right Clicking on a layer in the tree and clicking :guilabel:`Add to Canvas`
+Right-clicking on a layer in the tree and clicking :guilabel:`Add to Canvas`
 will add this layer to your map.
 
 So far we have only been viewing the database its schemas and tables and their
@@ -138,7 +138,7 @@ database.
 Database tables can often become quite large and tables which are being
 modified frequently can end up leaving around remnants of records that are no 
 longer needed by PostgreSQL. The *VACUUM* command takes care of doing a kind of
-garbage collection to compact and optionall analyze your tables for better
+garbage collection to compact and optional analyze your tables for better
 performance.
 
 Lets take a look at how we can perform a *VACUUM ANALYZE* command from within
