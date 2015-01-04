@@ -29,7 +29,7 @@ We are going to convert all those layers to the EPSG:23029 CRS, so we have to se
 
 .. image:: img/batch_conversion/second_column_filled.png
 
-Finally, we have to select an output file for each execution, which will contain the corresponding reprojected layer. Once again, let's do it just for the first column. Click on the button in the upper cell and, in a folder where you want to put your output files, enter a filename (for instance, ``reprojected.shp``).
+Finally, we have to select an output file for each execution, which will contain the corresponding reprojected layer. Once again, let's do it just for the first row. Click on the button in the upper cell and, in a folder where you want to put your output files, enter a filename (for instance, ``reprojected.shp``).
 
 Now, when you click *OK* on the file selection dialog, the file does not automatically gets written to the cell, but an input box like the following one is shown instead.
 
