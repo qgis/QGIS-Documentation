@@ -3,7 +3,7 @@ Iterative execution of algorithms
 
 .. note:: This lesson shows a different way of executing algorithms that use vector layers, by running them repeatedly, iterating over the features in an input vector layer
 
-We already know the graphical modeler, which is one way of automating processing tasks. However, in some situations, the modeler might not be what we need to automate a given task. Let's see one of those situation and how to easily solve it using a different functionality: the iterative execution of algorithms.
+We already know the graphical modeler, which is one way of automating processing tasks. However, in some situations, the modeler might not be what we need to automate a given task. Let's see one of those situations and how to easily solve it using a different functionality: the iterative execution of algorithms.
 
 Open the data corresponding to this chapter. It should look like this.
 
@@ -17,7 +17,7 @@ The algorithm to use for clipping a raster layer with a polygon layer is called 
 
 .. image:: img/iterative/clip.png
 
-Yo can run it using the watersheds layer and the DEM as input, and you will get the following result.
+You can run it using the watersheds layer and the DEM as input, and you will get the following result.
 
 .. image:: img/iterative/full_clip.png
 
