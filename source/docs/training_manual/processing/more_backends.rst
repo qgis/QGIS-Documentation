@@ -10,7 +10,7 @@ GRASS
 
 GRASS_ is a free and open source GIS software suite for geospatial data management and analysis, image processing, graphics and maps production, spatial modeling, and visualization.
 
-It is installed by deafult on Windows through the OSGeo4W standalone installer (32 and 64 bit), and it is packaged for all major Linux distributions.
+It is installed by default on Windows through the OSGeo4W standalone installer (32 and 64 bit), and it is packaged for all major Linux distributions.
 
 R
 --
@@ -19,7 +19,7 @@ R_ is a free and open source software environment for statistical computing and 
 
 It has to be installed separately, together with a few necessary libraries (**LIST**).
 
-The beauty of Processing implementation is that you can add your own scripts, simplex or complex ones, and they may then be used as any other module, piped into more complex workflows, etc.
+The beauty of Processing implementation is that you can add your own scripts, simple or complex ones, and they may then be used as any other module, piped into more complex workflows, etc.
 
 Test some of the preinstalled examples, if you have R_ already installed (remember to activate R modules from the General configuration of Processing).
 
