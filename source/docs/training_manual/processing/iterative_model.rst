@@ -1,7 +1,7 @@
 More iterative execution of algorithms
 =======================================
 
-.. note:: This lessons shows how to combine the iterative execution of algorithm with the modeler to get more automation
+.. note:: This lesson shows how to combine the iterative execution of algorithms with the modeler to get more automation
 
 
 The iterative execution of algorithms is available not just for built-in algorithms, but also for the algorithms that you can create your self, such as models. We are going to see how to combine a model and the iterative execution of algorithms, so we can obtain more complex results with ease.
@@ -27,7 +27,7 @@ The algorithm will be run several times, and the corresponding tables will be cr
 
 .. image:: img/iterative_model/tables.png
 
-We can make this example more complex by extending the model and computing some slope statistics. Add the *Slope, aspect, curvatures* algorithm to the model, and then the *Raster statistics* algorithm, which should use the slope output as its only input.
+We can make this example more complex by extending the model and computing some slope statistics. Add the *Slope, aspect, curvature* algorithm to the model, and then the *Raster statistics* algorithm, which should use the slope output as its only input.
 
 .. image:: img/iterative_model/model2.png
 
