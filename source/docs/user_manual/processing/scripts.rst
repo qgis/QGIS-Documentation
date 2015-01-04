@@ -184,12 +184,12 @@ its code or just to see it.
 Best practices for writing script algorithms
 --------------------------------------------
 
-Here's a quick summary of ideas to consider when creating your script algorithms and, epsecially, if you want to share with other QGIS users. Following these simple rules will ensure consistency across the different Processing elements such as the toolbox, the modeler or the batch processing interface.
+Here's a quick summary of ideas to consider when creating your script algorithms and, especially, if you want to share with other QGIS users. Following these simple rules will ensure consistency across the different Processing elements such as the toolbox, the modeler or the batch processing interface.
 
 - Do not load resulting layers. Let Processing handle your results and load your layers if needed.
-- Always declare the outputs your algorithm creates. Avoid things such as decalring one output and then using the destination filename set for that output to create a collection of them. That will break the correct semantics of the algorithm and make it impossible to use it safely in the modeler. If you have to write an algorithm like that, make sure you add the ``##nomodeler`` tag.
+- Always declare the outputs your algorithm creates. Avoid things such as declaring one output and then using the destination filename set for that output to create a collection of them. That will break the correct semantics of the algorithm and make it impossible to use it safely in the modeler. If you have to write an algorithm like that, make sure you add the ``##nomodeler`` tag.
 - Do not show message boxes or use any GUI element from the script. If you want to communicate with the user, use the ``setInfo()`` method or throw an ``GeoAlgorithmExecutionException``
-- As a rule of thumb, do not forget that your agorithm might be executed in a context other than the Processing toolbox.
+- As a rule of thumb, do not forget that your algorithm might be executed in a context other than the Processing toolbox.
 
 
 Pre- and post-execution script hooks
