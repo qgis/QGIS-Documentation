@@ -61,7 +61,7 @@ For each kind of symbols, you will find always the same dialog structure:
 * under the symbol representation the symbol tree show the symbol layers
 * at the right you can setup some parameter (unit,transparency, color, size 
   and rotation)
-* under these parameteres you find some symbol from the symbol library
+* under these parameters you find some symbol from the symbols library
 
 The symbol tree allow adding, removing or protect new simple symbol. You 
 can move up or down the symbol layer.
@@ -141,7 +141,7 @@ Polygon marker symbols have also several symbol layer types:
 * Line pattern fill
 * Point pattern fill
 * SVG fill
-* Shapeburst fille
+* Shapeburst fill
 * Simple fill (default)
 * Outline: Marker line (same as line marker)
 * Outline: simple line (same as line marker)
