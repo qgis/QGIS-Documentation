@@ -1,6 +1,15 @@
+#!/bin/bash
 
 # QGIS testing/master ONLY in english
 # translation is done only in latest stable
+
+if [ -f running ]; then
+	echo "$0 still running"
+	exit 1
+fi
+
+touch running
+trap "rm $PWD/running" EXIT
 
 # cd to script dir
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
