@@ -16,7 +16,7 @@ the Style tab of the Layer properties ; through the expression-based labeling
 through the feature selection and through the diagram tab of the Layer 
 properties.
 
-There are powerful way to manipulate attribute value in order to dynamicly 
+They are a powerful way to manipulate attribute value in order to dynamicly 
 change the final value in order to change the geometry style, the content 
 of the label, the value for diagram, select some feature or create virtual 
 column.
@@ -99,14 +99,14 @@ This group contains operators (e.g., +, -, \*).
  a IN (value[,value])          a is below the values listed
  a NOT IN (value[,value])      a is not below the values listed
 
-**Some example:**
+**Some examples:**
 
 * Joins a string and a value from a column name::
 
     'My feature's id is: ' || "gid"
 
 * Test if the "description" attribute field starts with the 'Hello' string 
-  in the value (note the position of the % caracter)::
+  in the value (note the position of the % character)::
 
     "description" LIKE 'Hello%'
 
