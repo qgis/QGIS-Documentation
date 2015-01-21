@@ -1,6 +1,6 @@
 |updatedisclaimer|
 
-Feature extrcation
+Feature extraction
 ==================
 
 .. toctree::
