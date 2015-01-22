@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="Alaska" version="2.5.0-Master">
+<qgis projectname="Alaska" version="2.6.1-Brighton">
     <title>Alaska</title>
     <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
         <customproperties/>
@@ -44,10 +44,10 @@
     <mapcanvas>
         <units>feet</units>
         <extent>
-            <xmin>-2547227.42339134495705366</xmin>
-            <ymin>3496451.26407594932243228</ymin>
-            <xmax>-776394.09005801181774586</xmax>
-            <ymax>5076312.37518705986440182</ymax>
+            <xmin>-2538441.00740218441933393</xmin>
+            <ymin>3532232.09063421515747905</ymin>
+            <xmax>266225.32051109371241182</xmax>
+            <ymax>5112093.20174532569944859</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -160,7 +160,7 @@
     <projectlayers layercount="9">
         <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>airports20130517221648088</id>
-            <datasource>../../../qgis_sample_data/shapefiles/airports.shp</datasource>
+            <datasource>../../../schulungen/vorlagen/daten/qgis_sample_data/shapefiles/airports.shp</datasource>
             <title></title>
             <abstract></abstract>
             <keywordList>
@@ -208,7 +208,7 @@
                 <edittype widgetv2type="TextEdit" name="image">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
-                <edittype widgetv2type="TextEdit" name="point_type">
+                <edittype widgetv2type="TextEdit" name="fk_region">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
             </edittypes>
@@ -422,10 +422,10 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform>../../Layouts_Alex</editform>
+            <editform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform>../../Layouts_Alex</annotationform>
+            <annotationform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
@@ -455,14 +455,14 @@
                 <edittype widgetv2type="TextEdit" name="image">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
-                <edittype widgetv2type="TextEdit" name="point_type">
+                <edittype widgetv2type="TextEdit" name="fk_region">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
             </edittypes>
         </maplayer>
         <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>alaska20130517221648216</id>
-            <datasource>../../../qgis_sample_data/shapefiles/alaska.shp</datasource>
+            <datasource>../../../schulungen/vorlagen/daten/qgis_sample_data/shapefiles/alaska.shp</datasource>
             <title></title>
             <abstract></abstract>
             <keywordList>
@@ -484,7 +484,7 @@
             <provider encoding="System">ogr</provider>
             <previewExpression>cat</previewExpression>
             <vectorjoins>
-                <join joinFieldName="NAME_1" targetFieldName="NAME" memoryCache="1" joinLayerId="regions20130517221648766"/>
+                <join joinFieldName="NAME_1" targetFieldName="NAME" memoryCache="0" joinLayerId="regions20130517221648766"/>
             </vectorjoins>
             <expressionfields/>
             <edittypes>
@@ -496,27 +496,6 @@
                 </edittype>
                 <edittype widgetv2type="TextEdit" name="AREA_MI">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_ID">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_NAME_2">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_HASC_2">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_TYPE_2">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_lccount">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_lcsum">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_lcmean">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
                 </edittype>
             </edittypes>
             <renderer-v2 symbollevels="0" type="singleSymbol">
@@ -685,10 +664,10 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform>../../Layouts_Alex</editform>
+            <editform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform>../../Layouts_Alex</annotationform>
+            <annotationform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
@@ -703,32 +682,11 @@
                 <edittype widgetv2type="TextEdit" name="AREA_MI">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_ID">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_NAME_2">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_HASC_2">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_TYPE_2">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_lccount">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_lcsum">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="regions_lcmean">
-                    <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-                </edittype>
             </edittypes>
         </maplayer>
         <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>lakes20130517221648410</id>
-            <datasource>../../../qgis_sample_data/shapefiles/lakes.shp</datasource>
+            <datasource>../../../schulungen/vorlagen/daten/qgis_sample_data/shapefiles/lakes.shp</datasource>
             <title></title>
             <abstract></abstract>
             <keywordList>
@@ -967,10 +925,10 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform>../../Layouts_Alex</editform>
+            <editform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform>../../Layouts_Alex</annotationform>
+            <annotationform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
@@ -1021,7 +979,7 @@
         </maplayer>
         <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>majrivers_copy20141004123744134</id>
-            <datasource>../../../qgis_sample_data/shapefiles/majrivers.shp</datasource>
+            <datasource>../../../schulungen/vorlagen/daten/qgis_sample_data/shapefiles/majrivers.shp</datasource>
             <title></title>
             <abstract></abstract>
             <keywordList>
@@ -1250,10 +1208,10 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform>../../Layouts_Alex</editform>
+            <editform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform>../../Layouts_Alex</annotationform>
+            <annotationform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
@@ -1272,7 +1230,7 @@
         </maplayer>
         <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>popp20130517221648651</id>
-            <datasource>../../../qgis_sample_data/shapefiles/popp.shp</datasource>
+            <datasource>../../../schulungen/vorlagen/daten/qgis_sample_data/shapefiles/popp.shp</datasource>
             <title></title>
             <abstract></abstract>
             <keywordList>
@@ -1472,10 +1430,10 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform>../../Layouts_Alex</editform>
+            <editform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform>../../Layouts_Alex</annotationform>
+            <annotationform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
@@ -1497,7 +1455,7 @@
         </maplayer>
         <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>regions20130517221648766</id>
-            <datasource>../../../qgis_sample_data/shapefiles/regions.shp</datasource>
+            <datasource>../../../schulungen/vorlagen/daten/qgis_sample_data/shapefiles/regions.shp</datasource>
             <title></title>
             <abstract></abstract>
             <keywordList>
@@ -1521,9 +1479,6 @@
             <vectorjoins/>
             <expressionfields/>
             <edittypes>
-                <edittype widgetv2type="TextEdit" name="ID">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
                 <edittype widgetv2type="TextEdit" name="NAME_1">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
@@ -1536,13 +1491,7 @@
                 <edittype widgetv2type="TextEdit" name="TYPE_2">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
-                <edittype widgetv2type="TextEdit" name="lccount">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="lcsum">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="lcmean">
+                <edittype widgetv2type="TextEdit" name="ID">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
             </edittypes>
@@ -1743,18 +1692,15 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform>../../Layouts_Alex</editform>
+            <editform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform>../../Layouts_Alex</annotationform>
+            <annotationform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
             <attributeactions/>
             <edittypes>
-                <edittype widgetv2type="TextEdit" name="ID">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
                 <edittype widgetv2type="TextEdit" name="NAME_1">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
@@ -1767,20 +1713,14 @@
                 <edittype widgetv2type="TextEdit" name="TYPE_2">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
-                <edittype widgetv2type="TextEdit" name="lccount">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="lcsum">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="lcmean">
+                <edittype widgetv2type="TextEdit" name="ID">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
             </edittypes>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>rivers20130517221648798</id>
-            <datasource>../../../qgis_sample_data/shapefiles/rivers.shp</datasource>
+            <datasource>../../../schulungen/vorlagen/daten/qgis_sample_data/shapefiles/rivers.shp</datasource>
             <title></title>
             <abstract></abstract>
             <keywordList>
@@ -2010,10 +1950,10 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform>../../Layouts_Alex</editform>
+            <editform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform>../../Layouts_Alex</annotationform>
+            <annotationform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
@@ -2035,7 +1975,7 @@
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>storagep20130517221648873</id>
-            <datasource>../../../qgis_sample_data/shapefiles/storagep.shp</datasource>
+            <datasource>../../../schulungen/vorlagen/daten/qgis_sample_data/shapefiles/storagep.shp</datasource>
             <title></title>
             <abstract></abstract>
             <keywordList>
@@ -2125,10 +2065,10 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform>../../Layouts_Alex</editform>
+            <editform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform>../../Layouts_Alex</annotationform>
+            <annotationform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
@@ -2150,7 +2090,7 @@
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>swamp20130517232331437</id>
-            <datasource>../../../qgis_sample_data/shapefiles/swamp.shp</datasource>
+            <datasource>../../../schulungen/vorlagen/daten/qgis_sample_data/shapefiles/swamp.shp</datasource>
             <title></title>
             <abstract></abstract>
             <keywordList>
@@ -2234,10 +2174,10 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform>../../Layouts_Alex</editform>
+            <editform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform>../../Layouts_Alex</annotationform>
+            <annotationform>/home/junek/projekte/QGIS-Documentation26/Layouts_Alex</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
