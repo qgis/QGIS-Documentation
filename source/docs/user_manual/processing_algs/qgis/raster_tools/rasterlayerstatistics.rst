@@ -31,7 +31,7 @@ Outputs
   Mean cell value.
 
 ``valid cells count`` [number]
-  Number of cell with data.
+  Number of cells with data.
 
 ``No-data cells count`` [number]
   Number of NODATA cells.
