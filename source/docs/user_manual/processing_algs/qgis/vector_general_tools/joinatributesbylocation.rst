@@ -1,4 +1,4 @@
-Join atributes by location
+Join attributes by location
 ==========================
 
 Description
