@@ -18,7 +18,7 @@ Parameters
   curves.
 
 ``Step`` [number]
-  Distanse between curves.
+  Distance between curves.
 
   Default: *100.0*
 
