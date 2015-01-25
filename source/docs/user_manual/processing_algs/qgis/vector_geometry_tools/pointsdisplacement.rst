@@ -20,8 +20,8 @@ Parameters
   Default: *0.00015*
 
 ``Horizontal distribution for two point case`` [boolean]
-  Controls distrobution direction in case of two overlapped points. If *True*
-  points wwill be distributed horizontally, otherwise they will be distributed
+  Controls distribution direction in case of two overlapped points. If *True*
+  points will be distributed horizontally, otherwise they will be distributed
   vertically.
 
   Default: *True*
