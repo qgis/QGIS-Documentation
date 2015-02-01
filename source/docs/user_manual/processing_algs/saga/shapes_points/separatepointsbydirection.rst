@@ -25,7 +25,7 @@ Parameters
 Outputs
 -------
 
-``Ouput`` [vector]
+``Output`` [vector]
   <put output description here>
 
 Console usage
