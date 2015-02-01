@@ -13,17 +13,17 @@ Parameters
   Layer to analyze.
 
 ``Number of Parts`` [boolean]
-  Determites whether to calculate number of segments in line.
+  Determines whether to calculate number of segments in line.
 
   Default: *True*
 
 ``Number of Vertices`` [boolean]
-  Determites whether to calculate number of vertices in line.
+  Determines whether to calculate number of vertices in line.
 
   Default: *True*
 
 ``Length`` [boolean]
-  Determites whether to calculate total line lenght.
+  Determines whether to calculate total line lenght.
 
   Default: *True*
 
