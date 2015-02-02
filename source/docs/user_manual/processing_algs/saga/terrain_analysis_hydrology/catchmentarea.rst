@@ -22,7 +22,7 @@ Parameters
   * 2 --- [2] Braunschweiger Reliefmodell
   * 3 --- [3] Deterministic Infinity
   * 4 --- [4] Multiple Flow Direction
-  * 5 --- [5] Multiple Triangular Flow Directon
+  * 5 --- [5] Multiple Triangular Flow Direction
 
   Default: *0*
 
