@@ -1,6 +1,6 @@
 #!/bin/bash
 
-now =`date`
+now=`date`
 echo "Starting $now"
 
 if [ -f running ]; then
