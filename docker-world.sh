@@ -3,6 +3,9 @@
 # QGIS testing/master ONLY in english
 # translation is done only in latest stable
 
+now=`date`
+echo "Starting $now"
+
 if [ -f running ]; then
 	echo "$0 still running"
 	exit 1
@@ -22,7 +25,7 @@ git pull
 
 for LANG in en
   do
-    /bin/bash ./docker-run.sh full LANG=$LANG
-    rsync -hvrz -e ssh --progress output/pdf/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation/live/html/pdf
-    rsync -hvrz -e ssh --progress output/html/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation/live/html
+    time /bin/bash ./docker-run.sh full LANG=$LANG
+    time rsync -hvrzc -e ssh --progress output/pdf/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation/live/html/pdf
+    time rsync -hvrzc -e ssh --progress output/html/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation/live/html
   done
