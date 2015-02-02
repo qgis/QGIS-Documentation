@@ -30,6 +30,6 @@ git pull
 for l in $langs
   do
     time /bin/bash ./docker-run.sh full LANG=$l
-    time rsync -hvrz -e ssh --progress output/pdf/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.6/live/html/pdf
-    time rsync -hvrz -e ssh --progress output/html/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.6/live/html
+    time rsync -hvrzc -e ssh --progress output/pdf/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.6/live/html/pdf
+    time rsync -hvrzc -e ssh --progress output/html/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.6/live/html
   done
