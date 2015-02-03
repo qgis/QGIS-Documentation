@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# cd to script dir
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
+
 now=`date`
-echo "Starting $now"
+echo "Starting: $now"
 
 if [ -f running ]; then
 	echo "$0 still running"
@@ -11,9 +15,6 @@ fi
 touch running
 trap "rm $PWD/running" EXIT
 
-# cd to script dir
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-cd $DIR
 # throw away building artefacts
 git stash
 git stash drop
@@ -33,3 +34,6 @@ for l in $langs
     time rsync -hvrzc -e ssh --progress output/pdf/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.6/live/html/pdf
     time rsync -hvrzc -e ssh --progress output/html/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.6/live/html
   done
+
+now=`date`
+echo "Finished: $now"
