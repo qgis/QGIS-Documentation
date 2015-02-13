@@ -78,6 +78,12 @@ So be sure to mark the checkbox for those layers that you need to snap to.
 
 .. index:: Search_Radius
 
+The :guilabel:`Snapping options` enables you to make a general setting for all
+layers in the project so that the pointer snaps to all existing vertices and/or segments
+when using the 'All layers' snapping mode.
+In comparison to the project-wide setting in the |qg| |mActionOptions| :menuselection:`Options`
+here you can make settings about topological editing and snapping on intersections.
+
 Search radius
 .............
 
@@ -551,12 +557,16 @@ Simplify Feature
 ................
 
 The |mActionSimplify| :sup:`Simplify Feature` tool allows you to reduce the
-number of vertices of a feature, as long as the geometry doesn't change and 
-geometry type is not a multi geometry. First, select a feature. It will be 
-highlighted by a red rubber band and a slider will appear. Moving the slider, 
-the red rubber band will change its shape to show how the feature is being 
-simplified. Click **[OK]** to store the new, simplified geometry. If a feature 
-cannot be simplified (e.g. multi-polygons), a message will appear.
+number of vertices of a feature, as long as the geometry doesn't change. With the
+tool you can also simplify multi-part features.
+First, select a feature. It will be highlighted by a red rubber band and a dialog
+where you can define a tolerance in map units or pixels will appear. |qg| calculates
+the amount of vertices that can be deleted while maintaining the geometry using the
+given tolerance. The higher the tolerance is the more vertices can be deleted. After
+gaining the statistics about the simplification just klick the :guilabel:`OK` button.
+The tolerance you used will be saved in |qg| settings so that you can use it the next
+time you want to simplify a tolerance in your project.
+
 
 Add Ring
 ........
