@@ -13,7 +13,7 @@ Parameters
 ``D8 Flow Direction Grid`` [raster]
   This input is a grid of flow directions that are encoded using the D8 method
   where all flow from a cells goes to a single neighboring cell in the direction
-  of steepest descent.This grid can be obtained as the output of the
+  of steepest descent. This grid can be obtained as the output of the
   **"D8 Flow Directions"** tool.
 
 ``Pit Filled Elevation Grid`` [raster]
