@@ -60,7 +60,7 @@ Parameters
   Optional.
 
   This optional input is a point shapefile defining outlets of interest. If
-  this file is used, the tool will only evaluate ther area upslope of these
+  this file is used, the tool will only evaluate the area upslope of these
   outlets.
 
 ``Check for edge contamination`` [boolean]
