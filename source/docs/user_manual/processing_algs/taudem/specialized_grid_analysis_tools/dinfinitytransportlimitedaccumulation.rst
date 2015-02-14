@@ -74,7 +74,7 @@ Parameters
 
 ``Transport Capacity Grid`` [raster]
   A grid giving the transport capacity at each grid cell for the transport
-  limited accumulation function. In the application to erosion this grid woul
+  limited accumulation function. In the application to erosion this grid would
   give the transport capacity of the carrying flow.
 
 ``Outlets Shapefile`` [vector: point]
