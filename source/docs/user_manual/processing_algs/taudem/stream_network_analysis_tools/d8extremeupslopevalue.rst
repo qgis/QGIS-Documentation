@@ -58,7 +58,7 @@ Parameters
 Outputs
 -------
 
-``Extereme Upslope Values Grid`` [raster]
+``Extreme Upslope Values Grid`` [raster]
   A grid of the maximum/minimum upslope values.
 
 Console usage
