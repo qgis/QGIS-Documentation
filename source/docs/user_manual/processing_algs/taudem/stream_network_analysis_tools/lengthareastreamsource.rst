@@ -42,7 +42,7 @@ Parameters
 ``Exponent`` [number]
   The exponent (``y``) parameter which is used in the formula: ``A > (M)(Ly)``,
   to identify the beginning of streams. In branching systems, Hack's law
-  uggests that ``L = 1/M A(1/y)`` with ``1/y = 0.6`` (or 0.56) (``y`` about 1.7).
+  suggests that ``L = 1/M A(1/y)`` with ``1/y = 0.6`` (or 0.56) (``y`` about 1.7).
   In parallel flow systems ``L`` is proportional to ``A`` (``y`` about 1). This
   method tries to identify the transition between these two paradigms by using
   an exponent ``y`` somewhere in between (``y`` about 1.3).
