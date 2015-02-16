@@ -559,13 +559,13 @@ Simplify Feature
 The |mActionSimplify| :sup:`Simplify Feature` tool allows you to reduce the
 number of vertices of a feature, as long as the geometry doesn't change. With the
 tool you can also simplify multi-part features.
-First, select a feature. It will be highlighted by a red rubber band and a dialog
-where you can define a tolerance in map units or pixels will appear. |qg| calculates
-the amount of vertices that can be deleted while maintaining the geometry using the
-given tolerance. The higher the tolerance is the more vertices can be deleted. After
+First, select a feature. The vertices will be highlighted in red while the color of the
+feature will change and a dialog where you can define a tolerance in map units or pixels
+will appear. |qg| calculates the amount of vertices that can be deleted while maintaining the
+geometry using the given tolerance. The higher the tolerance is the more vertices can be deleted. After
 gaining the statistics about the simplification just klick the :guilabel:`OK` button.
 The tolerance you used will be saved in |qg| settings so that you can use it the next
-time you want to simplify a tolerance in your project.
+time you want to simplify a geometry in your project.
 
 
 Add Ring
