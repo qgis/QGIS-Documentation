@@ -71,7 +71,7 @@ will get lost.
 
 If the datasource of the layer is a database (PostGIS or Spatialite for example),
 you can save your layer style inside a table of the database. Just click on
-:guilabel:` Save Style` comboxbox and choose **Save in database** item then fill in
+:guilabel:`Save Style` comboxbox and choose **Save in database** item then fill in
 the dialog to define a style name, add a description, an ui file and if the style
 is a default style. When loading a layer from the database, if a style already
 exists for this layer, |qg| will load the layer and its style. You can add
@@ -127,6 +127,33 @@ and :guilabel:`Rotation`. Here, the layers are joined together.
 
    Single symbol line properties |nix|
 
+If you click on the second level in the :guilabel:`Symbol layers` dialog a 'Data-defined override'
+is possible. When using a data-defined color one may want to link the color to a
+field 'budged'. Here a comment functionality is inserted.
+::
+
+ /* This expression will return a color code depending on the field value.
+  * Negative value: red
+  * 0 value: yellow
+  * Positive value: green
+  */
+ CASE 
+   WHEN value < 0 THEN '#DC143C' -- Negative value: red
+   WHEN value = 0 THEN '#CCCC00' -- Value 0: yellow
+   ELSE '#228B22'                -- Positive value: green
+ END
+
+.. _figure_symbology_2:
+
+.. only:: html
+
+   **Figure Symbology 2:**
+
+.. figure:: /static/user_manual/working_with_vector/symbol_data_defined_edit.png
+   :align: center
+
+   Data-defined symbol with Edit... menu
+
 .. index:: Categorized_Renderer, Renderer_Categorized
 
 **Categorized Renderer**
@@ -161,11 +188,11 @@ be rendered.
 The example in figure_symbology_2_ shows the category rendering dialog used
 for the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology_2:
+.. _figure_symbology_3:
 
 .. only:: html
 
-   **Figure Symbology 2:**
+   **Figure Symbology 3:**
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
    :align: center
@@ -1252,6 +1279,8 @@ Additionally, the add vector join dialog allows you to:
 
 * |checkbox| :guilabel:`Cache join layer in virtual memory`
 * |checkbox| :guilabel:`Create attribute index on the join field`
+* |checkbox| :guilabel:`Choose which fields are joined`
+* Create a |checkbox| :guilabel:`Custom field name prefix`
 
 .. _`sec_diagram`:
 
