@@ -294,9 +294,9 @@ expression, or you can just type it into the box (see :ref:`vector_expressions`)
 You can create a new rule by copying and pasting an existing rule with the right mouse button.
 You can also use the 'ELSE' rule that will be run if none of the other
 rules on that level match.
-Since QGIS 2.6 the label for the rules appears in a pseudotree in the map legend. Just double-klick
+Since QGIS 2.8 the the rules appear in a tree hierachy in the map legend. Just double-klick
 the rules in the map legend and the Style menu of the layer properties appears showing the rule that
-is the background for the symbol in the pseudotree.
+is the background for the symbol in the tree.
 
 .. _figure_symbology_5:
 
@@ -356,6 +356,12 @@ same as for the main renderers.
    :align: center
 
    Inverted Polygon dialog |nix|
+
+.. tip:: **Switch quickly between styles**
+
+   Once you created one of the above mentioned styles you can right-klick on the layer and
+   choose :menuselection:`Styles --> Add` to save your style. Now you can easily switch between
+   styles you created using the :menuselection:`Styles -->` menu again.
 
 
 Color Picker
