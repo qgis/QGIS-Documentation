@@ -380,7 +380,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
  geomToWKT        returns the well-known text (WKT) representation of the
                   geometry without SRID metadata
  geometry         returns the feature's geometry
- transform        returns the geometry transformed from the source CRS to the dest CRS
+ transform        returns the geometry transformed from the source CRS to
+                  the dest CRS
 
 
 Record Functions

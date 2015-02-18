@@ -31,6 +31,8 @@ In quick field calculation bar, you first select the existing field name then op
 expression dialog to create your expression or write it directly in the field then click 
 on **Update All** button.
 
+Expression tab
+--------------
 In the field calculator dialog, you first must select whether you want to only update selected
 features, create a new attribute field where the results of the calculation will
 be added or update an existing field.
@@ -69,5 +71,21 @@ calculate the length in km of the ``railroads`` layer from the |qg| sample datas
 #. You can now find a new field ``length`` in the attribute table.
 
 The available functions are listed in :ref:`vector_expressions` chapter.
+
+Function Editor tab
+-------------------
+With the Function Editor you are able to define your own Python custom functions in a 
+comfortable way.
+The function editor will create new Python files in :file:`qgis2\python\expressions` and
+will auto load all functions defined when starting QGIS. Be aware that new functions are 
+only saved in the :file:`expressions` folder and not in the project file.
+If you have a project that uses one of your custom functions you will need to also share 
+the .py file in the expressions folder. 
+
+Here's a short example on how to create your own functions:
+::
+ ...
+
+With this function you ...
 
 

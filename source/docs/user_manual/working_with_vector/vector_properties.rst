@@ -127,6 +127,20 @@ and :guilabel:`Rotation`. Here, the layers are joined together.
 
    Single symbol line properties |nix|
 
+In any spinbox in this dialog you can enter expressions. E.g. you can calculate simple
+math like multiplying the existing size of a point by 3 without resorting to a calculator.
+
+.. _figure_symbology_2:
+
+.. only:: html
+
+   **Figure Symbology 2:**
+
+.. figure:: /static/user_manual/working_with_vector/expression_symbol_size_spinbox.png
+   :align: center
+
+   Expression in Size spinbox |nix|
+
 If you click on the second level in the :guilabel:`Symbol layers` dialog a 'Data-defined override'
 is possible. When using a data-defined color one may want to link the color to a
 field 'budged'. Here a comment functionality is inserted.
@@ -143,11 +157,11 @@ field 'budged'. Here a comment functionality is inserted.
    ELSE '#228B22'                -- Positive value: green
  END
 
-.. _figure_symbology_2:
+.. _figure_symbology_3:
 
 .. only:: html
 
-   **Figure Symbology 2:**
+   **Figure Symbology 3:**
 
 .. figure:: /static/user_manual/working_with_vector/symbol_data_defined_edit.png
    :align: center
@@ -188,11 +202,11 @@ be rendered.
 The example in figure_symbology_2_ shows the category rendering dialog used
 for the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology_3:
+.. _figure_symbology_4:
 
 .. only:: html
 
-   **Figure Symbology 3:**
+   **Figure Symbology 4:**
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
    :align: center
@@ -208,11 +222,11 @@ The Graduated Renderer is used to render all the features from a layer, using
 a single user-defined symbol whose color reflects the assignment of a
 selected feature's attribute to a class.
 
-.. _figure_symbology_4:
+.. _figure_symbology_5:
 
 .. only:: html
 
-   **Figure Symbology 4:**
+   **Figure Symbology 5:**
 
 .. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
    :align: center
@@ -294,15 +308,15 @@ expression, or you can just type it into the box (see :ref:`vector_expressions`)
 You can create a new rule by copying and pasting an existing rule with the right mouse button.
 You can also use the 'ELSE' rule that will be run if none of the other
 rules on that level match.
-Since QGIS 2.8 the the rules appear in a tree hierachy in the map legend. Just double-klick
+Since QGIS 2.8 the rules appear in a tree hierachy in the map legend. Just double-klick
 the rules in the map legend and the Style menu of the layer properties appears showing the rule that
 is the background for the symbol in the tree.
 
-.. _figure_symbology_5:
+.. _figure_symbology_6:
 
 .. only:: html
 
-   **Figure Symbology 5:**
+   **Figure Symbology 6:**
 
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
    :align: center
@@ -318,11 +332,11 @@ The Point Displacement Renderer works to visualize all features of a point layer
 even if they have the same location. To do this, the symbols of the points are
 placed on a displacement circle around a center symbol.
 
-.. _figure_symbology_6:
+.. _figure_symbology_7:
 
 .. only:: html
 
-   **Figure Symbology 6:**
+   **Figure Symbology 7:**
 
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
    :align: center
@@ -346,11 +360,11 @@ Inverted polygon renderer allows user to define a symbol to fill in outside of t
 polygons. As before you can select subrenderers. These subrenderers are the
 same as for the main renderers.
 
-.. _figure_symbology_7:
+.. _figure_symbology_8:
 
 .. only:: html
 
-   **Figure Symbology 7:**
+   **Figure Symbology 8:**
 
 .. figure:: /static/user_manual/working_with_vector/inverted_polygon_symbol.png
    :align: center
