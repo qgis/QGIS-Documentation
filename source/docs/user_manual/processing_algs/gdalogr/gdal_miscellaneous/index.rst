@@ -10,3 +10,4 @@ GDAL miscellaneous
      merge
      overviews
      rasterinfo
+     tileindex
