@@ -75,7 +75,7 @@ The available functions are listed in :ref:`vector_expressions` chapter.
 Function Editor tab
 -------------------
 With the Function Editor you are able to define your own Python custom functions in a 
-comfortable way.
+comfortable way. It makes full Python programming possible.
 The function editor will create new Python files in :file:`qgis2\python\expressions` and
 will auto load all functions defined when starting QGIS. Be aware that new functions are 
 only saved in the :file:`expressions` folder and not in the project file.
@@ -84,7 +84,7 @@ the .py file in the expressions folder.
 
 Here's a short example on how to create your own functions:
 ::
- ...
+ 
 
 With this function you ...
 

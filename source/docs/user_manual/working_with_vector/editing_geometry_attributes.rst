@@ -78,11 +78,20 @@ So be sure to mark the checkbox for those layers that you need to snap to.
 
 .. index:: Search_Radius
 
-The :guilabel:`Snapping options` enables you to make a general setting for all
-layers in the project so that the pointer snaps to all existing vertices and/or segments
-when using the 'All layers' snapping mode.
-In comparison to the project-wide setting in the |qg| |mActionOptions| :menuselection:`Options`
-here you can make settings about topological editing and snapping on intersections.
+The :guilabel:`Snapping options` enables you to make a quick and simple general setting
+for all layers in the project so that the pointer snaps to all existing vertices and/or
+segments when using the 'All layers' snapping mode. In most cases it is sufficient to use
+this snapping mode.
+
+It is important to consider that the per-layer tolerance in
+'map units' was actually in layer units. So if working with a layer in
+WGS84 reprojected to UTM, setting tolerance to 1 map unit (i.e. 1 meter)
+wouldn't work correctly because the units would be actually degrees. So now
+the 'map units' has been relabeled to 'layer units' and the new entry 'map
+units' operates with units of the map view. While working with 'on-the-fly' CRS transformation
+it is now possible to use a snapping tolerance that refers to either the units of the reprojected
+layer (setting 'layer units') or the units of the map view (setting 'map units'). 
+
 
 Search radius
 .............
