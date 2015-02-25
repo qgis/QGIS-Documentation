@@ -378,6 +378,14 @@ same as for the main renderers.
    choose :menuselection:`Styles --> Add` to save your style. Now you can easily switch between
    styles you created using the :menuselection:`Styles -->` menu again.
 
+.. index:: Heatmap Renderer
+
+**Heatmap**
+
+With the Heatmap renderer you can create live dynamic heatmaps for (multi)point layers. You can
+specify the heatmap radius in pixels, mm or map units, choose a color ramp for the heatmap style
+and use a slider for selecting a tradeoff between render speed and quality.
+When adding or removing a feature the heatmap renderer updates the heatmap style automatically.
 
 Color Picker
 ...............
