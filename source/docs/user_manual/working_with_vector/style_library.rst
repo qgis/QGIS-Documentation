@@ -140,6 +140,7 @@ Polygon marker symbols have also several symbol layer types:
 * Gradient fill
 * Line pattern fill
 * Point pattern fill
+* Raster image fill
 * SVG fill
 * Shapeburst fill
 * Simple fill (default)
@@ -158,9 +159,13 @@ The following settings are possible:
 Using the color combo box, you can drag and drop color for one color button 
 to another button, copy-paste color, pick color from somewhere, choose a color 
 from the palette or from  recent or standard color. The combo box allow you to 
-fill in the feature with transparency. You can also just clic on the button to open the 
+fill in the feature with transparency. You can also just click on the button to open the 
 palettte dialog. Note that you can import color from some external software 
 like GIMP.
+
+With the 'Raster image fill' you can fill polygons with a tiled raster image.
+Options include (data defined) file name, opacity, image size (in pixels, mm or map units),
+coordinate mode (feature or view) and rotation. 
 
 'Gradient Fill' :guilabel:`Symbol layer type` allows you to select
 between a |radiobuttonon| :guilabel:`Two color`

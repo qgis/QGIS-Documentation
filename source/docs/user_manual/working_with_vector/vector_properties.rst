@@ -116,11 +116,11 @@ side, it's possible to define basic parameters like :guilabel:`Size`, :guilabel:
 and :guilabel:`Rotation`. Here, the layers are joined together.
 
 
-.. _figure_symbology_1:
+.. _figure_symbology_3:
 
 .. only:: html
 
-   **Figure Symbology 1:**
+   **Figure Symbology 3:**
 
 .. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png
    :align: center
@@ -130,11 +130,11 @@ and :guilabel:`Rotation`. Here, the layers are joined together.
 In any spinbox in this dialog you can enter expressions. E.g. you can calculate simple
 math like multiplying the existing size of a point by 3 without resorting to a calculator.
 
-.. _figure_symbology_2:
+.. _figure_symbology_4:
 
 .. only:: html
 
-   **Figure Symbology 2:**
+   **Figure Symbology 4:**
 
 .. figure:: /static/user_manual/working_with_vector/expression_symbol_size_spinbox.png
    :align: center
@@ -157,33 +157,16 @@ field 'budged'. Here a comment functionality is inserted.
    ELSE '#228B22'                -- Positive value: green
  END
 
-.. _figure_symbology_3:
+.. _figure_symbology_5:
 
 .. only:: html
 
-   **Figure Symbology 3:**
+   **Figure Symbology 5:**
 
 .. figure:: /static/user_manual/working_with_vector/symbol_data_defined_edit.png
    :align: center
 
    Data-defined symbol with Edit... menu
-
-In the :guilabel:`Symbol layers` dialog several 'Symbol layer types' are possible. For example for polygon
-layers you can choose between 'Simple fill', 'Gradient fill', 'Line pattern fill', 'Point pattern fill', 
-'Raster image fill', 'SVG fill', 'Shapeburst fill', 'Outline: Marker line' and 'Outline:'Simple line'.
-figure_symbology_4 shows an example for the 'Raster image fill'. The options include (data defined) file name,
-opacity, image size (in pixels, mm or map units), coordinate mode (feature or view) and rotation. 
-
-.. _figure_symbology_4:
-
-.. only:: html
-
-   **Figure Symbology 4:**
-
-.. figure:: /static/user_manual/working_with_vector/symbol_raster_image_fill.png
-   :align: center
-
-   Symbol layer type 'Raster image fill' |nix|
 
 .. index:: Categorized_Renderer, Renderer_Categorized
 
@@ -217,14 +200,14 @@ For convenience, the center of the menu lists the values of
 all currently selected attributes together, including the symbols that will
 be rendered.
 
-The example in figure_symbology_5_ shows the category rendering dialog used
+The example in figure_symbology_6_ shows the category rendering dialog used
 for the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology_5:
+.. _figure_symbology_6:
 
 .. only:: html
 
-   **Figure Symbology 5:**
+   **Figure Symbology 6:**
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
    :align: center
@@ -240,11 +223,11 @@ The Graduated Renderer is used to render all the features from a layer, using
 a single user-defined symbol whose color reflects the assignment of a
 selected feature's attribute to a class.
 
-.. _figure_symbology_6:
+.. _figure_symbology_7:
 
 .. only:: html
 
-   **Figure Symbology 6:**
+   **Figure Symbology 7:**
 
 .. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
    :align: center
@@ -290,7 +273,7 @@ on the item you want to change.
 Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Change 
 transparency**, **Change output unit**, **Change symbol width**.
 
-The example in figure_symbology_6_ shows the graduated rendering dialog for
+The example in figure_symbology_7_ shows the graduated rendering dialog for
 the rivers layer of the |qg| sample dataset.
 
 .. tip:: **Thematic maps using an expression**
@@ -312,7 +295,7 @@ feature's attribute to a class. The rules are based on SQL statements. The dialo
 allows rule grouping by filter or scale, and you can decide if you want to enable
 symbol levels or use only the first-matched rule.
 
-The example in figure_symbology_7_ shows the rule-based rendering dialog
+The example in figure_symbology_8_ shows the rule-based rendering dialog
 for the rivers layer of the |qg| sample dataset.
 
 To create a rule, activate an existing row by double-clicking on it, or click on '+' and
@@ -330,11 +313,11 @@ Since QGIS 2.8 the rules appear in a tree hierachy in the map legend. Just doubl
 the rules in the map legend and the Style menu of the layer properties appears showing the rule that
 is the background for the symbol in the tree.
 
-.. _figure_symbology_7:
+.. _figure_symbology_8:
 
 .. only:: html
 
-   **Figure Symbology 7:**
+   **Figure Symbology 8:**
 
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
    :align: center
@@ -350,11 +333,11 @@ The Point Displacement Renderer works to visualize all features of a point layer
 even if they have the same location. To do this, the symbols of the points are
 placed on a displacement circle around a center symbol.
 
-.. _figure_symbology_8:
+.. _figure_symbology_9:
 
 .. only:: html
 
-   **Figure Symbology 8:**
+   **Figure Symbology 9:**
 
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
    :align: center
@@ -378,11 +361,11 @@ Inverted polygon renderer allows user to define a symbol to fill in outside of t
 polygons. As before you can select subrenderers. These subrenderers are the
 same as for the main renderers.
 
-.. _figure_symbology_9:
+.. _figure_symbology_10:
 
 .. only:: html
 
-   **Figure Symbology 9:**
+   **Figure Symbology 10:**
 
 .. figure:: /static/user_manual/working_with_vector/inverted_polygon_symbol.png
    :align: center
