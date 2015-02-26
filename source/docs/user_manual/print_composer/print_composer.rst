@@ -165,17 +165,17 @@ To navigate in the canvas layout, the Print Composer provides some general tools
 
 * |mActionZoomIn| :sup:`Zoom in`
 * |mActionZoomOut| :sup:`Zoom out`
-* |mActionZoomFullExtent| :sup:`Zoom to full extent`
+* |mActionZoomFullExtent| :sup:`Zoom full`
 * |mActionZoomActual| :sup:`Zoom to 100%`
-* |mActionDraw| :sup:`Refresh the view` (if you find the view in an inconsistent
+* |mActionDraw| :sup:`Refresh view` (if you find the view in an inconsistent
   state)
 * |mActionPan| :sup:`Pan composer`
-* |mActionZoomToSelected| :sup:`Marquee zoom mode` (zoom to a specific region of the Composer)
+* |mActionZoomToSelected| :sup:`Zoom` (zoom to a specific region of the Composer)
 
 You can change the zoom level also using the mouse wheel or the combo box in the status
 bar. If you need to switch to pan mode while working in the Composer area, you can
 hold the :kbd:`Spacebar` or the the mouse wheel.
-With :kbd:`Ctrl+Spacebar`, you can temporarily switch to marquee zoom mode, and with 
+With :kbd:`Ctrl+Spacebar`, you can temporarily switch to zoom mode, and with 
 :kbd:`Ctrl+Shift+Spacebar`, to zoom out mode.
 
 Sample Session
