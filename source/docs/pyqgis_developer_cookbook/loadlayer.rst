@@ -37,7 +37,14 @@ providers:
 
   ::
 
+    #shapefile
     vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
+
+
+    #dxf
+    uri = "/path/to/dxffile/file.dxf|layername=entities|geometrytype=Point"
+    vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
+
 
 .. index::
   pair: loading; PostGIS layers
