@@ -201,9 +201,10 @@ used as default during your work.
 
 * :guilabel:`Compositions defaults` let you specify the default font to use.
 * With :guilabel:`Grid appearance`, you can set the grid style and its color.
-* :guilabel:`Grid defaults` defines spacing, offset and tolerance of the grid. 
   There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
-* :guilabel:`Guide defaults` defines the tolerance for the guides.
+* :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance of the grid. 
+  
+
 
 
 
@@ -217,8 +218,9 @@ In the :guilabel:`Composition` tab, you can define the global settings of your c
   page can show the attribute table associated with a layer, while a third one shows an HTML frame linking to your organization website.
   Set the :guilabel:`Number of pages` to the desired value. You can choose the page :guilabel:`Orientation` and its :guilabel:`Exported resolution`. When checked, |checkbox| :guilabel:`print as raster` means all elements will be rasterized before printing or saving as PostScript or
   PDF.
-* :guilabel:`Grid` lets you customize grid settings like :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`tolerance` to your need.
-* In :guilabel:`Snap to alignments`, you can change the :guilabel:`Tolerance`, which is the maximum distance below which an item is snapped to smart guides.
+* :guilabel:`Grid and guides` lets you customize grid settings like :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`tolerance` to your need. The tolerance
+  is the maximum distance below which an item is snapped to smart guides.
+
 
 Snap to grid and/or to smart guides can be enabled from the :menuselection:`View` menu. In this menu, you can also hide or show the grid and smart guides.
 
@@ -245,7 +247,7 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
   which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the label.
-  Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
+  Use the :guilabel:`Frame color` and :guilabel:`Thickness` menus to adjust those properties.
 * The |checkbox| :guilabel:`Background` enables or disables a background color.
   Click on the **[Color...]** button to display a dialog where you can pick a color or choose from a custom setting.
   Transparency can also be adjusted throught the **alpha** field.
