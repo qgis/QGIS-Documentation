@@ -248,9 +248,8 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the label.
   Use the :guilabel:`Frame color` and :guilabel:`Thickness` menus to adjust those properties.
-* The |checkbox| :guilabel:`Background` enables or disables a background color.
-  Click on the **[Color...]** button to display a dialog where you can pick a color or choose from a custom setting.
-  Transparency can also be adjusted throught the **alpha** field.
+* Use the :guilabel:`Background color` menu for setting a background color.
+  With the dialog you can pick a color (see color_picker_ ).
 * Use the :guilabel:`Item ID` to create a relationship to other Print Composer items. This is used with |qg| server and any potential web 
   client. You can set an ID on an item (e.g., a map and a label), and then the web client can send data to set a property 
   (e.g., label text) for that specific item. The GetProjectSettings command will list what items and which IDs are available in a layout.
@@ -290,7 +289,7 @@ Rendering mode
 
 * :guilabel:`Transparency` |slider|: You can make the underlying item in the Composer
   visible with this tool. Use the slider to adapt the visibility of your item to your needs.
-  You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
+  You can also make a precise definition of the percentage of visibility in the menu beside the slider.
 * |checkbox| :guilabel:`Exclude item from exports`: You can decide to make an item not visible in all exports. After activating this checkbox, the item will not be included in PDF's, prints etc.. 
 * :guilabel:`Blending mode`: You can achieve special rendering effects with these tools that you
   previously only may know from graphics programs. The pixels of your overlaying and underlaying items are mixed
@@ -398,6 +397,7 @@ following functionalities (see figure_composer_map_1_):
   After this is checked, any layer that would be displayed or hidden in the main |qg| window 
   will not appear or be hidden in the map item of the Composer. But style and labels of a 
   locked layer are still refreshed according to the main |qg| interface.
+  You can prevent this by using :guilabel:`Lock layer styles for map item`.
 * The |mActionShowPresets| button allows you to add quickly all the presets views you 
   have prepared in QGIS. 
   Clicking on the |mActionShowPresets| button you will see the list of all the preset views: 
@@ -443,7 +443,7 @@ Grids
 ^^^^^
 
 The :guilabel:`Grids` dialog of the map :guilabel:`Item Properties` tab provides the
-the possibility to add several grids to a map item.
+possibility to add several grids to a map item.
 
 * With the plus and minus button you can add or remove a selected grid.
 * With the up and down button you can move a grid in the list and set the drawing priority.
@@ -594,15 +594,14 @@ Main properties
   Build an expression by clicking the functions available in the left side of the panel. 
   Two special categories can be useful, particularly associated with the atlas functionality: 
   geometry functions and records functions. At the bottom, a preview of the expression is shown.
+
+Appearance
+^^^^^^^^^^
+
 * Define :guilabel:`Font` by clicking on the **[Font...]** button or a :guilabel:`Font color` 
   selecting a color using the color selection tool.
-
-Alignment and Display
-^^^^^^^^^^^^^^^^^^^^^
-
-* You can define the horizontal and vertical alignment in the :guilabel:`Alignment` zone.
-* In the **Display** tag, you can define a margin in mm. This is the margin from the edge of the composer item.
-
+* You can define the horizontal and vertical margin in the :guilabel:`Alignment` zone. You can define a margin in mm.
+  This is the margin from the edge of the composer item.
 
 .. _the_image_item:
 

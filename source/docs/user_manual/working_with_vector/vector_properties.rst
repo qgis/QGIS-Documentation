@@ -387,6 +387,8 @@ specify the heatmap radius in pixels, mm or map units, choose a color ramp for t
 and use a slider for selecting a tradeoff between render speed and quality.
 When adding or removing a feature the heatmap renderer updates the heatmap style automatically.
 
+.. _color_picker:
+
 Color Picker
 ...............
 
