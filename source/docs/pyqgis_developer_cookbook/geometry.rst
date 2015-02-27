@@ -143,7 +143,7 @@ You can find many example of algorithms that are included in QGIS and use these
 methods to analyze and transform vector data. Here are some links to the code
 of a few of them.
 
-Additional information can be found in followinf sources:
+Additional information can be found in following sources:
 
 * Geometry transformation: `Reproject algorithm <https://raw.github.com/qgis/QGIS/release-2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_
 * Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix algorithm <https://raw.github.com/qgis/QGIS/release-2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_
