@@ -600,8 +600,11 @@ Appearance
 
 * Define :guilabel:`Font` by clicking on the **[Font...]** button or a :guilabel:`Font color` 
   selecting a color using the color selection tool.
-* You can define the horizontal and vertical margin in the :guilabel:`Alignment` zone. You can define a margin in mm.
+* You can define the horizontal and vertical margin in mm.
   This is the margin from the edge of the composer item.
+* Using the :guilabel:`Alignment` is another way to position your label. Note that when e.g. using
+  the :guilabel:`Horizontal alignment` in |radiobuttonon|:guilabel:`Center` Position the 
+  :guilabel:`Horizontal margin` feature is disabled.
 
 .. _the_image_item:
 
@@ -617,7 +620,7 @@ its appearance in the image :guilabel:`Item Properties` tab.
 .. index::
    single:Rotated_North_Arrow
 
-The image :guilabel:`Item Properties` tab provides the following functionalities (see figure_composer_image_1_):
+The picture :guilabel:`Item Properties` tab provides the following functionalities (see figure_composer_image_1_):
 
 .. _Figure_composer_image_1:
 
@@ -639,7 +642,7 @@ There are several ways to set the :guilabel:`image source` in the **Main propert
    Besides :file:`SVG`, you can also select other image formats like :file:`.png` or :file:`.jpg`.
 #. You can enter the source directly in the :guilabel:`image source` text field. You can even provide
    a remote URL-address to an image.   
-#. From the **Search directories** area you can also select an image from :guilabel:`loading preview..` 
+#. From the **Search directories** area you can also select an image from :guilabel:`loading previews ...` 
    to set the image source.
 #. Use the data defined button |mIconDataDefine| to set the image source from a record or using a 
    regular expression.  
@@ -830,11 +833,11 @@ figure_composer_legend_5_):
    WMS LegendGraphic Dialogs |nix|
 
 When you have added a WMS layer and you insert a legend composer item, a request will be send to the 
-WMS server to provide a WMS legend, This Legend will only be shown if the WMS server provides the 
+WMS server to provide a WMS legend. This Legend will only be shown if the WMS server provides the 
 GetLegendGraphic capability. The WMS legend content will be provided as a raster image.
 
 :guilabel:`WMS LegendGraphic` is used to be able to adjust the :guilabel:`Legend width` and 
-the :guilabel:`Legend hight` of the WMS legend raster image.
+the :guilabel:`Legend height` of the WMS legend raster image.
 
 Spacing around title, group, subgroup, symbol, icon label, box space or column space can be customized 
 through this dialog.
@@ -966,7 +969,7 @@ You can define the fonts and colors used for the scale bar.
 * :guilabel:`Font color`: set the font color
 * :guilabel:`Fill color`: set the first fill color 
 * :guilabel:`Secondary fill color`: set the second fill color 
-* :guilabel:`Stroke color`: set the color of the lines of the Scale Bare
+* :guilabel:`Stroke color`: set the color of the lines of the Scale Bar
 
 Fill colors are only used for scale box styles Single Box and Double Box. 
 To select a color you can use the list option using the dropdown arrow to open 
