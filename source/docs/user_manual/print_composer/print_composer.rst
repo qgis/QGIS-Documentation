@@ -1207,6 +1207,7 @@ tab provide the following functionalities  (see figure_composer_table_5_):
 
    Attribute table appearance Dialog |nix|
 
+* Klick |checkbox| :guilabel:`Show empty rows` to make empty entries in the attribute table visible. 
 * With :guilabel:`Cell margins` you can define the margin around text in each cell 
   of the table.
 * With :guilabel:`Display header` you can select from a list one of 'On first frame', 
