@@ -1550,8 +1550,8 @@ Revert and Restore tools
 During the layout process, it is possible to revert and restore changes. This can
 be done with the revert and restore tools:
 
-* |mActionUndo| :sup:`Revert last changes`
-* |mActionRedo| :sup:`Restore last changes`
+* |mActionUndo| :sup:`Revert last change`
+* |mActionRedo| :sup:`Restore last change`
 
 This can also be done by mouse click within the :guilabel:`Command history` tab (see figure_composer_29_).
 
@@ -1619,10 +1619,13 @@ You can use multiple map items with the atlas generation; each map will be rende
 to the coverage features. To enable atlas generation for a specific map item, you need to check
 |checkbox|:guilabel:`Controlled by Atlas` under the item properties of the map item. Once checked, you can set:
 
-* An input box :guilabel:`Margin around feature` that allows you to select the amount
+* A radiobutton |radiobuttonon| :guilabel:`Margin around feature` that allows you to select the amount
   of space added around each geometry within the allocated map. Its value is
   meaningful only when using the auto-scaling mode.
-* A |checkbox| :guilabel:`Fixed scale` that allows you to toggle between auto-scale
+* A |radiobuttonoff| :guilabel:`Predefined scale` (best fit). It will use the best fitting option from the list
+  of predefined scales in your project properties settings (see :guilabel:`Project --> Project Properties --> General --> Project Scales` 
+  to configure these predefined scales).
+* A |radiobuttonoff| :guilabel:`Fixed scale` that allows you to toggle between auto-scale
   and fixed-scale mode. In fixed-scale mode, the map will only be translated for
   each geometry to be centered. In auto-scale mode, the map's extents are computed
   in such a way that each geometry will appear in its entirety.
