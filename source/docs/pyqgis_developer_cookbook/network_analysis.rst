@@ -374,7 +374,7 @@ uses method :func:`shortestTree`
     for pnt in p:
       rb.addPoint(pnt)
 
-And here is the same sample but using :func:`dikstra` method
+And here is the same sample but using :func:`dijkstra` method
 
 ::
 
