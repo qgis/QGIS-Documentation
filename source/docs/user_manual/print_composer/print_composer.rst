@@ -475,8 +475,10 @@ map element. Expand this option to provide a lot of configuration options, see F
 
    Draw Grid Dialog |nix|
 
-As grid type, you can specify to use a solid line or cross. Symbology of
-the grid can be chosen. See section Rendering_Mode_.
+As grid type, you can specify to use a 'Solid', 'Cross', 'Markers' or 'Frame and annotations only'.
+'Frame and annotations only' is especially useful when working with rotated maps or reprojected
+grids.
+Symbology of the grid can be chosen. See section Rendering_Mode_.
 Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
 and the width used for the cross or line grid type.
 
