@@ -477,7 +477,7 @@ map element. Expand this option to provide a lot of configuration options, see F
 
 As grid type, you can specify to use a 'Solid', 'Cross', 'Markers' or 'Frame and annotations only'.
 'Frame and annotations only' is especially useful when working with rotated maps or reprojected
-grids.
+grids. In the devisions section of the Grid Frame Dialog mentioned below you then have a corresponding setting.
 Symbology of the grid can be chosen. See section Rendering_Mode_.
 Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
 and the width used for the cross or line grid type.
@@ -496,13 +496,17 @@ and the width used for the cross or line grid type.
 * There are different options to style the frame that holds the map. Following options are 
   available: No Frame, Zebra, Interior ticks, Exterior ticks, Interior and Exterior ticks and Lineborder.
 
+* With 'LatitudeY/ only' and 'Longitude/X only' setting in the devisions section you have the possibility
+  to prevent a mix of latitude/y and longitude/x coordinates showing on a side when working with
+  rotated maps or reprojected grids. 
+
 * Advanced rendering mode is also available for grids (see section Rendering_mode_).
 
 * The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add coordinates
   to the map frame. The annotation can be drawn inside or outside the map frame.
-  The annotation direction can be defined as horizontal, vertical, horizontal and
-  vertical, or boundary direction, for each border individually. Units can be in meters or in degrees. Finally, you can define the grid
-  color, the annotation font, the annotation distance from the map frame and the precision of the drawn coordinates.
+  The annotation direction can be defined as horizontal, vertical ascending or vertical descending.
+  Finally, you can define the annotation font, the annotation font color, the annotation distance from the map frame
+  and the precision of the drawn coordinates.
 
 .. _Figure_composer_map_6:
 
