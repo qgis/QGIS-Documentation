@@ -462,7 +462,7 @@ Finally, let's check whether everything went well
   print "fields:", len(pr.fields())
   print "features:", pr.featureCount()
   e = layer.extent()
-  print "extent:", e.xMin(), e.yMin(), e.xMax(), e.yMax()
+  print "extent:", e.xMiniminum(), e.yMinimum(), e.xMaximum(), e.yMaximum()
 
   # iterate over features
   f = QgsFeature()
