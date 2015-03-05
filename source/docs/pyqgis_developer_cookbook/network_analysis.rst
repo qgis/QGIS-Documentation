@@ -304,7 +304,7 @@ Both points (start A and end B) are "tied" to the graph when it is built. Then
 using the methods :func:`shortestTree` or :func:`dijkstra` we build the
 shortest path tree with root in the start point A. In the same tree we also
 find the end point B and start to walk through the tree from point B to point
-A. The Whole algorithm can be written as
+A. The whole algorithm can be written as
 
 ::
 
@@ -374,7 +374,7 @@ uses method :func:`shortestTree`
     for pnt in p:
       rb.addPoint(pnt)
 
-And here is the same sample but using :func:`dikstra` method
+And here is the same sample but using :func:`dijkstra` method
 
 ::
 

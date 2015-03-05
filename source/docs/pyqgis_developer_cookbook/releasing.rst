@@ -72,7 +72,7 @@ Here are some validation rules that you should aware of when you want to upload
 a plugin on the official repository:
 
 #. the name of the main folder containing your plugin must contain only
-   contains ASCII characters (A-Z and a-z), digits and the characters
+   ASCII characters (A-Z and a-z), digits and the characters
    underscore (_) and minus (-), also it cannot start with a digit
 #. :file:`metadata.txt` is required
 #. all required metadata listed in :ref:`metadata table<plugin_metadata_table>`
