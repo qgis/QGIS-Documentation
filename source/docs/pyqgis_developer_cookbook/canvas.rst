@@ -301,7 +301,7 @@ described before to show the selected rectangle as it is being defined.
         self.isEmittingPoint = False
         r = self.rectangle()
         if r is not None:
-          print "Rectangle:", r.xMin(), r.yMin(), r.xMax(), r.yMax()
+          print "Rectangle:", r.xMinimum(), r.yMinimum(), r.xMaximum(), r.yMaximum()
 
     def canvasMoveEvent(self, e):
         if not self.isEmittingPoint:
