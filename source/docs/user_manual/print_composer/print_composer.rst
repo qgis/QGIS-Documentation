@@ -1572,6 +1572,7 @@ This can also be done by mouse click within the :guilabel:`Command history` tab 
 
    Command history in the Print Composer |nix|
 
+
 .. index:: Atlas_Generation
 
 Atlas generation
@@ -1725,6 +1726,17 @@ If you need to print just a page of the atlas, simply start the preview function
 .. index::
    single:Printing; Export_Map
 
+Hide and show panels
+====================
+
+To maximise the space available to interact with a composition you can use :guilabel:`View -->`
+|checkbox| :guilabel:`Hide panels` or press :kbd:`F10`.
+
+:: note::
+
+   It's also possible to switch to a full screen mode to have more space to interact by pressing
+   :kbd:`F11` or using :guilabel:`View --> |checkbox| :guilabel:`Toggle full screen`.
+
 Creating Output
 ===============
 
@@ -1743,6 +1755,10 @@ including each type of map item described in the sections above.
    Print Composer with map view, legend, image, scale bar, coordinates, text and HTML frame added |nix|
 
 .. index:: Export_as_image, Export_as_PDF, Export_as_SVG
+
+Before printing a layout you have the possibility to view your composition without bounding
+boxes. This can be enabled by deactivating :guilabel:`View -->` |checkbox| :guilabel:`Show bounding boxes`
+or pressing the shortcut :kbd:`Ctrl+Shift+B`.
 
 The Print Composer allows you to create several output formats, and it is possible
 to define the resolution (print quality) and paper size:
