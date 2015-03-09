@@ -84,8 +84,16 @@ the .py file in the expressions folder.
 
 Here's a short example on how to create your own functions:
 ::
- 
+ @qgsfunction(args="auto", group='Custom')
+ def myfunc(value1, value2 feature, parent):
+    pass
 
-With this function you ...
+The short example creates a function with two arguments feature and parent.
 
+This function then can be used with the following expression:
+::
+  myfunc('test1', 'test2')
+
+Further information about creating Python code can be found on 
+http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
 
