@@ -231,6 +231,10 @@ also define a rubberband color and your preferred measurement units (meters or
 feet) and angle units (degrees, radians and gon). The tool then allows you to
 click points on the map. Each segment length, as well as the total, shows up in
 the measure window. To stop measuring, click your right mouse button.
+Note that you can interactively change the measurement units in the measurement
+dialog. It overrides the :guilabel:`Preferred measurement units` in the options.
+There is an info section in the dialog that shows which CRS settings are being used
+during measurement calculations.
 
 .. _figure_measure_length:
 
