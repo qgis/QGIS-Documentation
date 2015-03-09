@@ -264,6 +264,10 @@ by the mapserver appears. If the **[Change...]** button is active, you can click
 on it and change the default projection of the WMS to another CRS provided by
 the WMS server.
 
+Finally you can activate |checkbox| :guilabel:`Use contextual WMS-Legend` if the
+WMS Server supports this feature. Then only the relevant legend for your current map view extent
+will be shown and thus will not include legend items for things you can't see in the current map.
+
 **Layer Order**
 
 The :guilabel:`Layer Order` tab lists the selected layers available from the
