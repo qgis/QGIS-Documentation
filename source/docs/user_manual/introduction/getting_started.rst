@@ -246,9 +246,7 @@ be added after ``--snapshot``.
 
 Based on your locale, |qg| selects the correct localization. If you would like
 to change your language, you can specify a language code. For example,
-``--lang=it`` starts |qg| in italian localization. A list of currently supported
-languages with language code and status is provided at
-http://hub.qgis.org/wiki/quantum-gis/GUI_Translation_Progress.
+``--lang=it`` starts |qg| in italian localization.
 
 **Command line option** ``--project``
 
