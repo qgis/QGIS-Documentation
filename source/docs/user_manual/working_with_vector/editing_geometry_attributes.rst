@@ -743,8 +743,8 @@ button again, the value will be updated in the attribute table.
 Creating new Vector layers
 --------------------------
 
-|qg| allows you to create new shapefile layers, new SpatiaLite layers, and new
-GPX layers. Creation of a new GRASS layer is supported within the GRASS plugin.
+|qg| allows you to create new shapefile layers, new SpatiaLite layers, new
+GPX layers and New Temporary Scratch Layers. Creation of a new GRASS layer is supported within the GRASS plugin.
 Please refer to section :ref:`creating_new_grass_vectors` for more information
 on creating GRASS vector layers.
 
@@ -836,6 +836,19 @@ When this plugin is loaded, choose :menuselection:`New -->` |icon_newgpx|
 :menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` menu.
 In the :guilabel:`Save new GPX file as` dialog, you can choose where to save the
 new GPX layer.
+
+.. index:: New_Temporary_Scratch_Layer
+.. _vector_create_gpx:
+
+Creating a new Temporary Scratch Layer
+......................................
+
+Empty, editable memory layers can be defined using :menuselection:`Layer --> Create Layer --> New Temporary Scratch Layer`.
+Here you can even create |radiobuttonoff| :guilabel:`Multipoint`, |radiobuttonoff|:guilabel:`Multiline`
+and |radiobuttonoff|:guilabel:`Multipolygon` Layers beneath |radiobuttonon|:guilabel:`Point`,
+|radiobuttonoff|:guilabel:`Line` and |radiobuttonoff|:guilabel:`Polygon` Layers. 
+Temporary Scratch Layers are not saved and will be discarded when |qg| is closed.
+See also paste_into_layer_ .
 
 .. index:: Work_with_Attribute_Table
 .. _sec_attribute_table:
@@ -930,6 +943,14 @@ use the Query Builder described in section :ref:`vector_query_builder`.
 To show selected records only, use :guilabel:`Show Selected Features` from the menu
 at the bottom left.
 
+The field calculator bar allows you to make calculations on the selected rows only.
+For example, you can alter the number of the ID field of the file:`regions.shp` with
+the expression
+::
+  ID+5
+
+as shown in figure_attributes_1_ .
+
 The other buttons at the top of the attribute table window provide the
 following functionality:
 
@@ -975,6 +996,8 @@ as` to define the name of the output file, its format and CRS (see section
 :ref:`label_legend`). To save the selection ensure that the |checkbox| 
 :menuselection:`Save only selected features` is selected.
 It is also possible to specify OGR creation options within the dialog.
+
+.. _paste_into_layer:
 
 Paste into new layer
 ....................
