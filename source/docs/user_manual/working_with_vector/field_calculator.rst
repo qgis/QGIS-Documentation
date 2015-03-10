@@ -97,3 +97,6 @@ This function then can be used with the following expression:
 Further information about creating Python code can be found on 
 http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
 
+The function editor is not only limited to working with the field calculator, it can be found whenever
+you work with expressions. See also :ref:`vector_expressions`.
+

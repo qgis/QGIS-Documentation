@@ -14,9 +14,10 @@ properties ; through the graduaded, categorized and rule-based rendering in
 the Style tab of the Layer properties ; through the expression-based labeling 
 |browsebutton| in the |mActionLabeling| :sup:`Labeling` core application ; 
 through the feature selection and through the diagram tab of the Layer 
-properties.
+properties as well as the :guilabel:`Main properties` of the label item
+and the :guilabel:`Atlas generation` tab in the Print Composer.
 
-They are a powerful way to manipulate attribute value in order to dynamicly 
+They are a powerful way to manipulate attribute value in order to dynamically 
 change the final value in order to change the geometry style, the content 
 of the label, the value for diagram, select some feature or create virtual 
 column.
