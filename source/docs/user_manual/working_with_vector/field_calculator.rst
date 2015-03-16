@@ -24,7 +24,7 @@ figure_attributes_3_). If the layer is not in edit mode, a warning is
 displayed and using the field calculator will cause the layer to be put in 
 edit mode before the calculation is made.
 
-The quick field calculation bar in top of the attribute table is only 
+The quick field calculation bar on top of the attribute table is only 
 visible if the layer is editable. 
 
 In quick field calculation bar, you first select the existing field name then open the 
@@ -75,7 +75,7 @@ The available functions are listed in :ref:`vector_expressions` chapter.
 Function Editor tab
 -------------------
 With the Function Editor you are able to define your own Python custom functions in a 
-comfortable way. It makes full Python programming possible.
+comfortable way.
 The function editor will create new Python files in :file:`qgis2\python\expressions` and
 will auto load all functions defined when starting QGIS. Be aware that new functions are 
 only saved in the :file:`expressions` folder and not in the project file.

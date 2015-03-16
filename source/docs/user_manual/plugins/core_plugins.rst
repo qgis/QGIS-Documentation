@@ -18,6 +18,8 @@ Using |qg| Core Plugins
 ======================  ========================  ======================================================  ===============================
 Icon                    Plugin                    Description                                             Manual Reference
 ======================  ========================  ======================================================  ===============================
+| | 			Accuracy Assessment       Generate an error matrix				  :ref:`accuracy`
+| | 			CadTools		  Perform CAD-like functions in QGIS		          :ref:`cadtools`
 |coordinate_capture|    Coordinate Capture        Capture mouse coordinate in different CRS               :ref:`coordcapt`
 |icon_dbmanager|        DB Manager                Manage your databases within |qg|                       :ref:`dbmanager`
 |dxf2shp_converter|     DXF2Shape Converter       Converts from DXF to SHP file format                    :ref:`dxf2shape`
