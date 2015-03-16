@@ -74,7 +74,7 @@ So be sure to mark the checkbox for those layers that you need to snap to.
 .. figure:: /static/user_manual/working_with_vector/editProjectSnapping.png
    :align: center
 
-   Edit snapping options on a layer basis |nix|
+   Edit snapping options on a layer basis (Advanced mode) |nix|
 
 .. index:: Search_Radius
 
