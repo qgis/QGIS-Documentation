@@ -309,7 +309,7 @@ expression, or you can just type it into the box (see :ref:`vector_expressions`)
 You can create a new rule by copying and pasting an existing rule with the right mouse button.
 You can also use the 'ELSE' rule that will be run if none of the other
 rules on that level match.
-Since QGIS 2.8 the rules appear in a tree hierachy in the map legend. Just double-klick
+Since QGIS 2.8 the rules appear in a tree hierarchy in the map legend. Just double-klick
 the rules in the map legend and the Style menu of the layer properties appears showing the rule that
 is the background for the symbol in the tree.
 
