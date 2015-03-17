@@ -640,6 +640,12 @@ To delete a bookmark from the :guilabel:`Geospatial Bookmarks` dialog, click on
 it, then click **[Delete]**. Confirm your choice by clicking **[Yes]**, or cancel
 the delete by clicking **[No]**.
 
+Import or export a bookmark
+---------------------------
+
+To share or transfer your bookmarks between computers you can use the :guilabel:`Share` 
+pull down menu in the :guilabel:`Geospatial Bookmarks` dialog.
+
 .. _nesting_projects:
 
 Nesting Projects

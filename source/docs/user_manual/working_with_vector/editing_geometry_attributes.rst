@@ -736,6 +736,28 @@ button again, the value will be updated in the attribute table.
    If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15
    degree steps.
 
+The Advanced Digitizing panel
+-----------------------------
+
+When capturing new geometries or geometry parts you also have the possibility to use
+the Advanced Digitizing panel. You can digitize lines exactly parallel or at a specific angle
+or lock lines to specific angles. Furthermore you can enter coordinates directly so that you can
+make a precise definition for your new geomtry. 
+
+_figure_advanced_edit 1:
+
+.. only:: html
+
+   **Figure Advanced Edit 1:**
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing.png
+   :align: center
+
+   The Advanced Digitizing panel |nix|
+
+The tools are not enabled if the map view is in geographic coordinates.
+
+
 .. index:: Create_New_Layers, New_Shapefile_Layer, New_SpatiaLite_Layer, New_GPX_Layer
 
 .. _sec_create_vector:

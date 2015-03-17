@@ -11,8 +11,6 @@ Plugins
 
    plugins
    core_plugins
-   plugins_accuracy_assessment
-   plugins_cad_tools
    plugins_coordinate_capture
    plugins_db_manager
    plugins_dxf2shape_converter

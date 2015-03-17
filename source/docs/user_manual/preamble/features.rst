@@ -146,7 +146,9 @@ Python console, which can be opened from menu: :menuselection:`Plugins
 window. For interaction with the |qg| environment, there is the
 :data:`qgis.utils.iface` variable, which is an instance of
 :class:`QgsInterface`. This interface allows access to the map canvas,
-menus, toolbars and other parts of the |qg| application.
+menus, toolbars and other parts of the |qg| application. You can create
+a script, then drag and drop it into the |qg| window and it will be
+executed automatically.
 
 For further information about working with the Python console and
 programming |qg| plugins and applications, please refer to

@@ -88,11 +88,18 @@ Here's a short example on how to create your own functions:
  def myfunc(value1, value2 feature, parent):
     pass
 
-The short example creates a function with two arguments feature and parent.
+The short example creates a function 'myfunc' that will give you a function with two
+values.
+When using the args='auto' function argument the number of function
+arguments required will be calculated by the number of arguments the
+function has been defined with in Python (minus 2 - feature, and parent).
 
 This function then can be used with the following expression:
 ::
   myfunc('test1', 'test2')
+
+Your function will be implemented in the 'Custom' :guilabel:`Functions` of the :guilabel:`Expression` tab
+after using the :guilabel:`Run Script` button.
 
 Further information about creating Python code can be found on 
 http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
