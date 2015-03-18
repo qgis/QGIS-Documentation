@@ -731,7 +731,7 @@ The parameters required for a connection are:
 * **Host**: Name of the database host. This must be a resolvable host name
   such as would be used to open a telnet connection or ping the host. If the
   database is on the same computer as |qg|, simply enter *'localhost'* here.
-* **Port**: Port number the PostgreSQL database server listens on. The default
+* **Port**: Port number the Oracle database server listens on. The default
   port is 1521.
 * **Username**: Username used to login to the database.
 * **Password**: Password used with *Username* to connect to the database.
