@@ -11,10 +11,7 @@ database formats supported by |qg| in one user interface. The |icon_dbmanager|
 :sup:`DB Manager` Plugin provides several features. You can drag layers from the
 |qg| Browser into the DB Manager, and it will import your layer into your spatial
 database. You can drag and drop tables between spatial databases and they will
-get imported. You can also use the DB Manager to execute SQL queries against your
-spatial database and then view the spatial output for queries by adding the
-results to |qg| as a query layer.
-
+get imported.
 .. _figure_db_manager:
 
 .. only:: html
@@ -56,4 +53,26 @@ geometry, as well as about existing fields, constraints and indexes. It also
 allows you to run Vacuum Analyze and to create a spatial index on a selected table,
 if not already done. The :guilabel:`Table` tab shows all attributes, and the
 :guilabel:`Preview` tab renders the geometries as preview.
+
+Working with the SQL Window
+---------------------------
+
+You can also use the DB Manager to execute SQL queries against your
+spatial database and then view the spatial output for queries by adding the
+results to |qg| as a query layer. It is possible to highlight a portion of the SQL
+and only that portion will be executed when you press :kbd:`F5` or click the 
+:guilabel:`Execute (F5)` button.
+
+figure__db_manager_2:
+
+.. only:: html
+
+   **Figure DB Manager 2:**
+
+.. figure:: /static/user_manual/plugins/db_manager_sql.png
+   :align: center
+
+   Executing SQL queries in the DB Manager SQL window |nix|
+
+
 
