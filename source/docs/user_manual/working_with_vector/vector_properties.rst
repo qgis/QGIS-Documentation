@@ -142,7 +142,7 @@ math like multiplying the existing size of a point by 3 without resorting to a c
    Expression in Size spinbox |nix|
 
 If you click on the second level in the :guilabel:`Symbol layers` dialog a 'Data-defined override'
-is possible. When using a data-defined color one may want to link the color to a
+for nearly all settings is possible. When using a data-defined color one may want to link the color to a
 field 'budged'. Here a comment functionality is inserted.
 ::
 

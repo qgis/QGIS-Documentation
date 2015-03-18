@@ -384,7 +384,8 @@ Here is a sampling of other ways to produce output files:
   in the same folder georeferences the image.
 * Menu option :menuselection:`Project -->` :guilabel:`DXF Export ...` opens
   a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
-  vector layers you want to export to DXF.
+  vector layers you want to export to DXF. Through the 'Symbology mode' marker symbols
+  from the original QGIS Symbology can be exported with high fidelity.
 * Menu option :menuselection:`Project -->` |mActionNewComposer|
   :menuselection:`New Print Composer` opens a dialog where you can lay out and
   print the current map canvas (see section :ref:`label_printcomposer`).

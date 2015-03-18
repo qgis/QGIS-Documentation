@@ -8,8 +8,9 @@
 |qg| Server is an open source WMS 1.3, WFS 1.0.0 and WCS 1 1.1.1 implementation that, 
 in addition, implements advanced cartographic features for thematic mapping. The |qg| Server
 is a FastCGI/CGI (Common Gateway Interface) application written in C++ that works
-together with a web server (e.g., Apache, Lighttpd). It is funded by the EU projects
-Orchestra, Sany and the city of Uster in Switzerland.
+together with a web server (e.g., Apache, Lighttpd). It has Python plugin support
+allowing for fast and efficient development and deployment of new features. It is funded by the
+EU projects Orchestra, Sany and the city of Uster in Switzerland.
 
 .. index:: SLD, SLD/SE
 .. index:: QGIS_Server, FastCGI, CGI, Common_Gateway_Interface

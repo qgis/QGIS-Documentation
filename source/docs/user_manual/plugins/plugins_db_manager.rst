@@ -63,7 +63,7 @@ results to |qg| as a query layer. It is possible to highlight a portion of the S
 and only that portion will be executed when you press :kbd:`F5` or click the 
 :guilabel:`Execute (F5)` button.
 
-figure__db_manager_2:
+.. _figure_db_manager_2:
 
 .. only:: html
 
