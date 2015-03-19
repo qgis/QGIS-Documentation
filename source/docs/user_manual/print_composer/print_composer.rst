@@ -11,7 +11,7 @@ With the Print Composer you can create nice maps and atlasses that can be printe
 
 The Print Composer provides growing layout and printing capabilities. It allows
 you to add elements such as the |qg| map canvas, text labels, images, legends, scale bars, basic
-shapes, arrows, attribute tables and HTML frames. You can size, group, align and position each
+shapes, arrows, attribute tables and HTML frames. You can size, group, align, position and rotate each
 element and adjust the properties to create your layout. The layout can be printed
 or exported to image formats, PostScript, PDF or to SVG (export to SVG is not
 working properly with some recent Qt4 versions; you should try and check
@@ -387,9 +387,10 @@ following functionalities (see figure_composer_map_1_):
   vector or raster properties, you can update the Print Composer view by selecting the
   map element in the Print Composer and clicking the **[Update preview]** button.
 * The field :guilabel:`Scale` |selectnumber| sets a manual scale.
-* The field :guilabel:`Rotation` |selectnumber| allows you to
-  rotate the map element content clockwise in degrees. Note that a coordinate frame
-  can only be added with the default value 0.
+* The field :guilabel:`Map rotation` |selectnumber| allows you to
+  rotate the map element content clockwise in degrees. The rotation of the map view can be imitated
+  here. Note that a correct coordinate frame can only be added with the default value 0 and that 
+  once you defined a :guilabel:`Map rotation` it currently cannot be changed.
 * |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed 
   on the map canvas in the main |qg| window.
 * You can choose to lock the layers shown on a map item. Check |checkbox| 

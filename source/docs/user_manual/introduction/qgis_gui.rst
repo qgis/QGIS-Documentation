@@ -559,6 +559,9 @@ the map view. If you zoom in or out, |qg| shows you the current scale. There is
 a scale selector, which allows you to choose between predefined scales from
 1:500 to 1:1000000.
 
+To the right of the scale display you can define a current clockwise rotation for
+your map view in degrees.
+
 A progress bar in the status bar shows the progress of rendering as each layer is
 drawn to the map view. In some cases, such as the gathering of statistics in
 raster layers, the progress bar will be used to show the status of lengthy
