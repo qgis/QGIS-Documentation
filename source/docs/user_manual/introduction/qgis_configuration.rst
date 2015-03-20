@@ -9,7 +9,7 @@ between Panels, Toolbars, Project Properties, Options and Customization.
 
 .. note:: |qg| follows desktop guidelines for the location of options and project 
    properties item. Consequently related to the OS you are using, location of some 
-   of items described above could be located in the :menuselection`view` menu 
+   of items described above could be located in the :menuselection:`View` menu 
    (Panels and Toolbars) or in :menuselection:`Project` for Options.
 
 ..  FIXME: please add more introduction here
