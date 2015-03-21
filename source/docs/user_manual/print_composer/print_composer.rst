@@ -504,8 +504,12 @@ and the width used for the cross or line grid type.
 * Advanced rendering mode is also available for grids (see section Rendering_mode_).
 
 * The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add coordinates
-  to the map frame. The annotation can be drawn inside or outside the map frame.
-  The annotation direction can be defined as horizontal, vertical ascending or vertical descending.
+  to the map frame. You can choose the annotation numeric format, the options range from decimal 
+  to degrees, minute and seconds, with or without suffix, and aligned or not.
+  You can choose which annotation to show. The options are: show all, latitude only, longitude only,
+  or disable(none). This is useful when the map is rotated. The annotation can be drawn inside or
+  outside the map frame. The annotation direction can be defined as horizontal,
+  vertical ascending or vertical descending. In case of map rotation you can 
   Finally, you can define the annotation font, the annotation font color, the annotation distance from the map frame
   and the precision of the drawn coordinates.
 
@@ -1216,7 +1220,7 @@ tab provide the following functionalities  (see figure_composer_table_5_):
 
    Attribute table appearance Dialog |nix|
 
-* Klick |checkbox| :guilabel:`Show empty rows` to make empty entries in the attribute table visible. 
+* click |checkbox| :guilabel:`Show empty rows` to make empty entries in the attribute table visible. 
 * With :guilabel:`Cell margins` you can define the margin around text in each cell 
   of the table.
 * With :guilabel:`Display header` you can select from a list one of 'On first frame', 
