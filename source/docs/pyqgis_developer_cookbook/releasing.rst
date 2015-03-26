@@ -12,6 +12,26 @@ list the plugins and their metadata, for examples see other
 
 .. index:: plugins;
 
+Please take special care to the following suggestions:
+
+Metadata and names
+-------------------
+
+* avoid using a name too similar to existing plugins
+* if your plugin has a similar functionality to an existing plugin, please explain the differences in the About field, so the user will know which one to use without the need to install and test it
+* avoid repeating "plugin" in the name of the plugin itself
+* use the description field in metadata for a 1 line description, the About field for more detailed instructions
+* include a code repository, a bug tracker, and a home page; this will greatly enhance the possibility of collaboration, and can be done very easily with one of the available web infrastructures (GitHub, GitLab, Bitbucket, etc.)
+* choose tags with care: avoid the uninformative ones (e.g. vector) and prefer the ones already used by others (see the plugin website)
+* add a proper icon, do not leave the default one; see QGIS interface for a suggestion of the style to be used
+
+Code and help
+--------------
+
+* do not include generated file (ui_*.py, resources_rc.py, generated help files…) and useless stuff (e.g. .gitignore) in repository
+* add the plugin to the appropriate menu (Vector, Raster, Web, Database)
+* when appropriate (plugins performing analyses), consider adding the plugin as a subplugin of Processing framework: this will allow users to run it in batch, to integrate it in more complex workflows, and will free you from the burden of designing an interface
+* include at least minimal documentation and, if useful for testing and understanding, sample data.
 
 .. _official_pyqgis_repository:
 
