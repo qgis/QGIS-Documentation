@@ -703,6 +703,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mIconExpressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
+.. |mIconExpression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
 .. |mActionFilter| image:: /static/common/mActionFilter.png
    :width: 1.5em
 .. |mActionMoveLabel| image:: /static/common/mActionMoveLabel.png

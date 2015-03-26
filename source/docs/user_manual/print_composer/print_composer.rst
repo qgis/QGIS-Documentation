@@ -1135,13 +1135,14 @@ tab provide the following functionalities  (see figure_composer_table_2_):
     the minus button to remove the selected attribute. 
   * Add a new attribute use the plus button. At the end a new empty row appears and you can 
     select empty cell of the column :guilabel:`Attribute`. You can select a field attribute from 
-    the list or you can select to build a new attribute using a regular expression.
+    the list or you can select to build a new attribute using a regular expression (|mIconExpression| button). Of course
+    you can modify every already existing attribute by means of a regular expression.
   * Use the up and down arrows to change the order of the attributes in the table.
-  * Select a cel in the Headings column to change the Heading, just type a new name.
+  * Select a cel in the Headings column to change the Heading, just type in a new name.
   * Select a cel in the Alignment column and you can choose between Left, Center or Right alignment.
   * Select a cel in the Width column and you can change it from Automatic to a width in mm, just 
     type a number. When you want to change it back to Automatic, use the cross.
-  * The **[Reset]** button can allways be used to restore it to the original attribute settings.
+  * The **[Reset]** button can always be used to restore it to the original attribute settings.
 
   In the :guilabel:`Sorting` section you can:
 
@@ -1191,7 +1192,7 @@ You can:
   available when |checkbox| :guilabel:`Generate an atlas` is activated. When activated it will
   show a table with only the features shown on the map of that particular page of the atlas.
 * Activate |checkbox| :guilabel:`Filter with` and provide a filter by typing in the input 
-  line or insert a regular expression using the given expression button. A few examples of 
+  line or insert a regular expression using the given |mIconExpression| expression button. A few examples of 
   filtering statements you can use when you have loaded the airports layer from the Sample 
   dataset:
 
@@ -1220,7 +1221,7 @@ tab provide the following functionalities  (see figure_composer_table_5_):
 
    Attribute table appearance Dialog |nix|
 
-* click |checkbox| :guilabel:`Show empty rows` to make empty entries in the attribute table visible. 
+* Click |checkbox| :guilabel:`Show empty rows` to make empty entries in the attribute table visible. 
 * With :guilabel:`Cell margins` you can define the margin around text in each cell 
   of the table.
 * With :guilabel:`Display header` you can select from a list one of 'On first frame', 
