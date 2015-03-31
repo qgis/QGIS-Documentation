@@ -2,7 +2,7 @@ Defining extents
 ============================================================
 
 
-.. note:: In this lesson we will see how to define extents, which are needed by some algorithms, specially raster ones.
+.. note:: In this lesson we will see how to define extents, which are needed by some algorithms, especially raster ones.
 
 
 Some algorithms require an extent to define the area to be covered by the analysis they perform, and usually to define the extent of the resulting layer.
