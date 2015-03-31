@@ -215,7 +215,7 @@ the download progress is visualized in the lower left of the WMS dialog.
 .. following should be replaced in 1.8 with the response of de DM Solutions Group
 
 Your screen should now look a bit like figure_OGR_1_, which shows the response
-provided by the DM Solutions Group WMS server.
+provided by the European Soil Portal WMS server.
 
 .. _figure_OGR_1:
 
