@@ -1,520 +1,527 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.6.0-Brighton">
-    <title></title>
-    <layer-tree-group expanded="1" checked="Qt::Checked" name="">
-        <customproperties/>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="sorghum20130825115850126" name="sorghum">
-            <customproperties/>
-        </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="limits20130825115850104" name="limits">
-            <customproperties/>
-        </layer-tree-layer>
-    </layer-tree-group>
-    <relations/>
-    <mapcanvas>
-        <units>meters</units>
-        <extent>
-            <xmin>804021.80800840328447521</xmin>
-            <ymin>6768819.60006251931190491</ymin>
-            <xmax>805910.84726455505006015</xmax>
-            <ymax>6770423.59295600652694702</ymax>
-        </extent>
-        <projections>1</projections>
-        <destinationsrs>
-            <spatialrefsys>
-                <proj4>+proj=utm +zone=55 +south +datum=WGS84 +units=m +no_defs</proj4>
-                <srsid>3205</srsid>
-                <srid>32755</srid>
-                <authid>EPSG:32755</authid>
-                <description>WGS 84 / UTM zone 55S</description>
-                <projectionacronym>utm</projectionacronym>
-                <ellipsoidacronym>WGS84</ellipsoidacronym>
-                <geographicflag>false</geographicflag>
-            </spatialrefsys>
-        </destinationsrs>
-        <layer_coordinate_transform_info>
-            <layer_coordinate_transform destAuthId="EPSG:32755" srcAuthId="EPSG:32755" srcDatumTransform="-1" destDatumTransform="-1" layerid="limits20130825115850104"/>
-            <layer_coordinate_transform destAuthId="EPSG:32755" srcAuthId="EPSG:32755" srcDatumTransform="-1" destDatumTransform="-1" layerid="sorghum20130825115850126"/>
-        </layer_coordinate_transform_info>
-    </mapcanvas>
-    <visibility-presets/>
-    <layer-tree-canvas>
-        <custom-order enabled="1">
-            <item>sorghum20130825115850126</item>
-            <item>limits20130825115850104</item>
-        </custom-order>
-    </layer-tree-canvas>
-    <legend updateDrawingOrder="false">
-        <legendlayer drawingOrder="0" open="true" checked="Qt::Checked" name="sorghum" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="sorghum20130825115850126" visible="1"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="1" open="true" checked="Qt::Checked" name="limits" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="limits20130825115850104" visible="1"/>
-            </filegroup>
-        </legendlayer>
-    </legend>
-    <projectlayers layercount="2">
-        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-            <id>limits20130825115850104</id>
-            <datasource>./limits.shp</datasource>
-            <title></title>
-            <abstract></abstract>
-            <keywordList>
-                <value></value>
-            </keywordList>
-            <layername>limits</layername>
-            <srs>
-                <spatialrefsys>
-                    <proj4>+proj=utm +zone=55 +south +datum=WGS84 +units=m +no_defs</proj4>
-                    <srsid>3205</srsid>
-                    <srid>32755</srid>
-                    <authid>EPSG:32755</authid>
-                    <description>WGS 84 / UTM zone 55S</description>
-                    <projectionacronym>utm</projectionacronym>
-                    <ellipsoidacronym>WGS84</ellipsoidacronym>
-                    <geographicflag>false</geographicflag>
-                </spatialrefsys>
-            </srs>
-            <provider encoding="System">ogr</provider>
-            <previewExpression></previewExpression>
-            <vectorjoins/>
-            <expressionfields/>
-            <edittypes>
-                <edittype widgetv2type="TextEdit" name="Version">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Field_Name">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Start_Date">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Start_Time">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Field_Area">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Area_Units">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Perimeter">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="AB_Length">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Dist_Units">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Line_Type">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Prodv_Area">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Fname_area">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-            </edittypes>
-            <renderer-v2 symbollevels="0" type="singleSymbol">
-                <symbols>
-                    <symbol alpha="1" type="fill" name="0">
-                        <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="border_width_map_unit_scale" v="0,0"/>
-                            <prop k="color" v="162,114,178,255"/>
-                            <prop k="joinstyle" v="bevel"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="offset_map_unit_scale" v="0,0"/>
-                            <prop k="offset_unit" v="MM"/>
-                            <prop k="outline_color" v="0,0,0,255"/>
-                            <prop k="outline_style" v="solid"/>
-                            <prop k="outline_width" v="0.26"/>
-                            <prop k="outline_width_unit" v="MM"/>
-                            <prop k="style" v="solid"/>
-                        </layer>
-                    </symbol>
-                </symbols>
-                <rotation/>
-                <sizescale scalemethod="area"/>
-            </renderer-v2>
-            <customproperties/>
-            <blendMode>0</blendMode>
-            <featureBlendMode>0</featureBlendMode>
-            <layerTransparency>0</layerTransparency>
-            <displayfield>Field_Name</displayfield>
-            <label>0</label>
-            <labelattributes>
-                <label fieldname="" text="Label"/>
-                <family fieldname="" name="MS Shell Dlg 2"/>
-                <size fieldname="" units="pt" value="12"/>
-                <bold fieldname="" on="0"/>
-                <italic fieldname="" on="0"/>
-                <underline fieldname="" on="0"/>
-                <strikeout fieldname="" on="0"/>
-                <color fieldname="" red="0" blue="0" green="0"/>
-                <x fieldname=""/>
-                <y fieldname=""/>
-                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-                <angle fieldname="" value="0" auto="0"/>
-                <alignment fieldname="" value="center"/>
-                <buffercolor fieldname="" red="255" blue="255" green="255"/>
-                <buffersize fieldname="" units="pt" value="1"/>
-                <bufferenabled fieldname="" on=""/>
-                <multilineenabled fieldname="" on=""/>
-                <selectedonly on=""/>
-            </labelattributes>
-            <editform>.</editform>
-            <editforminit></editforminit>
-            <featformsuppress>0</featformsuppress>
-            <annotationform>.</annotationform>
-            <editorlayout>generatedlayout</editorlayout>
-            <excludeAttributesWMS/>
-            <excludeAttributesWFS/>
-            <attributeactions/>
-            <edittypes>
-                <edittype widgetv2type="TextEdit" name="Version">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Field_Name">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Start_Date">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Start_Time">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Field_Area">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Area_Units">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Perimeter">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="AB_Length">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Dist_Units">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Line_Type">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Prodv_Area">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Fname_area">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-            </edittypes>
-        </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-            <id>sorghum20130825115850126</id>
-            <datasource>./sorghum.shp</datasource>
-            <title></title>
-            <abstract></abstract>
-            <keywordList>
-                <value></value>
-            </keywordList>
-            <layername>sorghum</layername>
-            <srs>
-                <spatialrefsys>
-                    <proj4>+proj=utm +zone=55 +south +datum=WGS84 +units=m +no_defs</proj4>
-                    <srsid>3205</srsid>
-                    <srid>32755</srid>
-                    <authid>EPSG:32755</authid>
-                    <description>WGS 84 / UTM zone 55S</description>
-                    <projectionacronym>utm</projectionacronym>
-                    <ellipsoidacronym>WGS84</ellipsoidacronym>
-                    <geographicflag>false</geographicflag>
-                </spatialrefsys>
-            </srs>
-            <provider encoding="System">ogr</provider>
-            <previewExpression></previewExpression>
-            <vectorjoins/>
-            <expressionfields/>
-            <edittypes>
-                <edittype widgetv2type="TextEdit" name="Field">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Dataset">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Product">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Obj. Id">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Distance(m">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Track(deg)">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Duration(h">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Elevation(">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Time">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Area Count">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Swth Wdth(">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Diff Statu">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Crop Flow(">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Moisture(%">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Yld Mass(W">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Yld Vol(We">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Yld Mass(D">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Yld Vol(Dr">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Oil(%)">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Protein(%)">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Pass Num">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Speed(km/h">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Prod(ha/hr">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-            </edittypes>
-            <renderer-v2 symbollevels="0" type="singleSymbol">
-                <symbols>
-                    <symbol alpha="1" type="marker" name="0">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="166,139,49,255"/>
-                            <prop k="horizontal_anchor_point" v="1"/>
-                            <prop k="name" v="circle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="offset_map_unit_scale" v="0,0"/>
-                            <prop k="offset_unit" v="MM"/>
-                            <prop k="outline_color" v="0,0,0,255"/>
-                            <prop k="outline_style" v="solid"/>
-                            <prop k="outline_width" v="0"/>
-                            <prop k="outline_width_map_unit_scale" v="0,0"/>
-                            <prop k="outline_width_unit" v="MM"/>
-                            <prop k="scale_method" v="area"/>
-                            <prop k="size" v="2"/>
-                            <prop k="size_map_unit_scale" v="0,0"/>
-                            <prop k="size_unit" v="MM"/>
-                            <prop k="vertical_anchor_point" v="1"/>
-                        </layer>
-                    </symbol>
-                </symbols>
-                <rotation/>
-                <sizescale scalemethod="area"/>
-            </renderer-v2>
-            <customproperties/>
-            <blendMode>0</blendMode>
-            <featureBlendMode>0</featureBlendMode>
-            <layerTransparency>0</layerTransparency>
-            <displayfield>Obj. Id</displayfield>
-            <label>0</label>
-            <labelattributes>
-                <label fieldname="" text="Label"/>
-                <family fieldname="" name="MS Shell Dlg 2"/>
-                <size fieldname="" units="pt" value="12"/>
-                <bold fieldname="" on="0"/>
-                <italic fieldname="" on="0"/>
-                <underline fieldname="" on="0"/>
-                <strikeout fieldname="" on="0"/>
-                <color fieldname="" red="0" blue="0" green="0"/>
-                <x fieldname=""/>
-                <y fieldname=""/>
-                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-                <angle fieldname="" value="0" auto="0"/>
-                <alignment fieldname="" value="center"/>
-                <buffercolor fieldname="" red="255" blue="255" green="255"/>
-                <buffersize fieldname="" units="pt" value="1"/>
-                <bufferenabled fieldname="" on=""/>
-                <multilineenabled fieldname="" on=""/>
-                <selectedonly on=""/>
-            </labelattributes>
-            <editform>.</editform>
-            <editforminit></editforminit>
-            <featformsuppress>0</featformsuppress>
-            <annotationform>.</annotationform>
-            <editorlayout>generatedlayout</editorlayout>
-            <excludeAttributesWMS/>
-            <excludeAttributesWFS/>
-            <attributeactions/>
-            <edittypes>
-                <edittype widgetv2type="TextEdit" name="Field">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Dataset">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Product">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Obj. Id">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Distance(m">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Track(deg)">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Duration(h">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Elevation(">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Time">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Area Count">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Swth Wdth(">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Diff Statu">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Crop Flow(">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Moisture(%">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Yld Mass(W">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Yld Vol(We">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Yld Mass(D">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Yld Vol(Dr">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Oil(%)">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Protein(%)">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Pass Num">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Speed(km/h">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype widgetv2type="TextEdit" name="Prod(ha/hr">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-            </edittypes>
-        </maplayer>
-    </projectlayers>
-    <properties>
-        <SemiAutomaticClassificationPlugin>
-            <bandSetPresent type="QString">No</bandSetPresent>
-            <bndSetWvLn type="QString">[]</bndSetWvLn>
-            <bndSetUnit type="QString">band number</bndSetUnit>
-            <bandSet type="QString">[]</bandSet>
-        </SemiAutomaticClassificationPlugin>
-        <WMSContactPerson type="QString"></WMSContactPerson>
-        <WMSOnlineResource type="QString"></WMSOnlineResource>
-        <WMSContactOrganization type="QString"></WMSContactOrganization>
-        <WMSKeywordList type="QStringList">
-            <value></value>
-        </WMSKeywordList>
-        <WFSUrl type="QString"></WFSUrl>
-        <Paths>
-            <Absolute type="bool">false</Absolute>
-        </Paths>
-        <WMSServiceTitle type="QString"></WMSServiceTitle>
-        <WFSLayers type="QStringList"/>
-        <WMSContactMail type="QString"></WMSContactMail>
-        <PositionPrecision>
-            <DecimalPlaces type="int">2</DecimalPlaces>
-            <Automatic type="bool">true</Automatic>
-            <DegreeFormat type="QString">D</DegreeFormat>
-        </PositionPrecision>
-        <WMSContactPhone type="QString"></WMSContactPhone>
-        <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
-        <WMSServiceAbstract type="QString"></WMSServiceAbstract>
-        <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
-        <Measure>
-            <Ellipsoid type="QString">NONE</Ellipsoid>
-        </Measure>
-        <WFSTLayers>
-            <Insert type="QStringList"/>
-            <Update type="QStringList"/>
-            <Delete type="QStringList"/>
-        </WFSTLayers>
-        <Gui>
-            <SelectionColorBluePart type="int">0</SelectionColorBluePart>
-            <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
-            <CanvasColorRedPart type="int">255</CanvasColorRedPart>
-            <SelectionColorRedPart type="int">255</SelectionColorRedPart>
-            <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
-            <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
-            <CanvasColorBluePart type="int">255</CanvasColorBluePart>
-        </Gui>
-        <Identify>
-            <disabledLayers type="QStringList"/>
-        </Identify>
-        <Macros>
-            <pythonCode type="QString"></pythonCode>
-        </Macros>
-        <WMSAccessConstraints type="QString"></WMSAccessConstraints>
-        <Legend>
-            <filterByMap type="bool">false</filterByMap>
-        </Legend>
-        <SpatialRefSys>
-            <ProjectCRSProj4String type="QString">+proj=utm +zone=55 +south +datum=WGS84 +units=m +no_defs</ProjectCRSProj4String>
-            <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
-            <ProjectCRSID type="int">3205</ProjectCRSID>
-            <ProjectionsEnabled type="int">1</ProjectionsEnabled>
-        </SpatialRefSys>
-        <DefaultStyles>
-            <Fill type="QString"></Fill>
-            <Line type="QString"></Line>
-            <Marker type="QString"></Marker>
-            <RandomColors type="bool">true</RandomColors>
-            <AlphaInt type="int">255</AlphaInt>
-            <ColorRamp type="QString"></ColorRamp>
-        </DefaultStyles>
-        <WMSFees type="QString"></WMSFees>
-        <WMSUrl type="QString"></WMSUrl>
-    </properties>
+<qgis projectname="" version="2.8.1-Wien">
+  <title></title>
+  <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+    <customproperties/>
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="sorghum20130825115850126" name="sorghum">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="limits20130825115850104" name="limits">
+      <customproperties/>
+    </layer-tree-layer>
+  </layer-tree-group>
+  <relations/>
+  <mapcanvas>
+    <units>meters</units>
+    <extent>
+      <xmin>804021.80800840328447521</xmin>
+      <ymin>6768819.60006251931190491</ymin>
+      <xmax>805910.84726455505006015</xmax>
+      <ymax>6770423.59295600652694702</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <projections>1</projections>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=utm +zone=55 +south +datum=WGS84 +units=m +no_defs</proj4>
+        <srsid>3205</srsid>
+        <srid>32755</srid>
+        <authid>EPSG:32755</authid>
+        <description>WGS 84 / UTM zone 55S</description>
+        <projectionacronym>utm</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>false</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <layer_coordinate_transform_info>
+      <layer_coordinate_transform destAuthId="EPSG:32755" srcAuthId="EPSG:32755" srcDatumTransform="-1" destDatumTransform="-1" layerid="limits20130825115850104"/>
+      <layer_coordinate_transform destAuthId="EPSG:32755" srcAuthId="EPSG:32755" srcDatumTransform="-1" destDatumTransform="-1" layerid="sorghum20130825115850126"/>
+    </layer_coordinate_transform_info>
+  </mapcanvas>
+  <visibility-presets/>
+  <layer-tree-canvas>
+    <custom-order enabled="1">
+      <item>sorghum20130825115850126</item>
+      <item>limits20130825115850104</item>
+    </custom-order>
+  </layer-tree-canvas>
+  <legend updateDrawingOrder="false">
+    <legendlayer drawingOrder="0" open="true" checked="Qt::Checked" name="sorghum" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="sorghum20130825115850126" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="1" open="true" checked="Qt::Checked" name="limits" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="limits20130825115850104" visible="1"/>
+      </filegroup>
+    </legendlayer>
+  </legend>
+  <projectlayers layercount="2">
+    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>limits20130825115850104</id>
+      <datasource>./limits.shp</datasource>
+      <title></title>
+      <abstract></abstract>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>limits</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=55 +south +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>3205</srsid>
+          <srid>32755</srid>
+          <authid>EPSG:32755</authid>
+          <description>WGS 84 / UTM zone 55S</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="System">ogr</provider>
+      <previewExpression></previewExpression>
+      <vectorjoins/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="Version">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Field_Name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Start_Date">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Start_Time">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Field_Area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Area_Units">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Perimeter">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="AB_Length">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Dist_Units">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Line_Type">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Prodv_Area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Fname_area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 symbollevels="0" type="singleSymbol">
+        <symbols>
+          <symbol alpha="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="162,114,178,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="area"/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>Field_Name</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Label"/>
+        <family fieldname="" name="MS Shell Dlg 2"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <editform>.</editform>
+      <editforminit/>
+      <featformsuppress>0</featformsuppress>
+      <annotationform>.</annotationform>
+      <editorlayout>generatedlayout</editorlayout>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions/>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="Version">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Field_Name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Start_Date">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Start_Time">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Field_Area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Area_Units">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Perimeter">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="AB_Length">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Dist_Units">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Line_Type">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Prodv_Area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Fname_area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+      </edittypes>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>sorghum20130825115850126</id>
+      <datasource>./sorghum.shp</datasource>
+      <title></title>
+      <abstract></abstract>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>sorghum</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=55 +south +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>3205</srsid>
+          <srid>32755</srid>
+          <authid>EPSG:32755</authid>
+          <description>WGS 84 / UTM zone 55S</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="System">ogr</provider>
+      <previewExpression></previewExpression>
+      <vectorjoins/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="Field">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Dataset">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Product">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Obj. Id">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Distance(m">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Track(deg)">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Duration(h">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Elevation(">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Time">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Area Count">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Swth Wdth(">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Diff Statu">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Crop Flow(">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Moisture(%">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Yld Mass(W">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Yld Vol(We">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Yld Mass(D">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Yld Vol(Dr">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Oil(%)">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Protein(%)">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Pass Num">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Speed(km/h">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Prod(ha/hr">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 symbollevels="0" type="singleSymbol">
+        <symbols>
+          <symbol alpha="1" type="marker" name="0">
+            <layer pass="0" class="SimpleMarker" locked="0">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="166,139,49,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="area"/>
+              <prop k="size" v="2"/>
+              <prop k="size_map_unit_scale" v="0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="area"/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>Obj. Id</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Label"/>
+        <family fieldname="" name="MS Shell Dlg 2"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <editform>.</editform>
+      <editforminit/>
+      <featformsuppress>0</featformsuppress>
+      <annotationform>.</annotationform>
+      <editorlayout>generatedlayout</editorlayout>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions/>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="Field">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Dataset">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Product">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Obj. Id">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Distance(m">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Track(deg)">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Duration(h">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Elevation(">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Time">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Area Count">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Swth Wdth(">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Diff Statu">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Crop Flow(">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Moisture(%">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Yld Mass(W">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Yld Vol(We">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Yld Mass(D">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Yld Vol(Dr">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Oil(%)">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Protein(%)">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Pass Num">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Speed(km/h">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Prod(ha/hr">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+      </edittypes>
+    </maplayer>
+  </projectlayers>
+  <properties>
+    <SemiAutomaticClassificationPlugin>
+      <bandSetPresent type="QString">No</bandSetPresent>
+      <bndSetWvLn type="QString">[]</bndSetWvLn>
+      <bndSetUnit type="QString">band number</bndSetUnit>
+      <bandSet type="QString">[]</bandSet>
+    </SemiAutomaticClassificationPlugin>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <WFSUrl type="QString"></WFSUrl>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <WFSLayers type="QStringList"/>
+    <WMSContactMail type="QString"></WMSContactMail>
+    <PositionPrecision>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <Automatic type="bool">true</Automatic>
+      <DegreeFormat type="QString">D</DegreeFormat>
+    </PositionPrecision>
+    <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+    <Measure>
+      <Ellipsoid type="QString">NONE</Ellipsoid>
+    </Measure>
+    <WFSTLayers>
+      <Insert type="QStringList"/>
+      <Update type="QStringList"/>
+      <Delete type="QStringList"/>
+    </WFSTLayers>
+    <Gui>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+    </Gui>
+    <Identify>
+      <disabledLayers type="QStringList"/>
+    </Identify>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <SpatialRefSys>
+      <ProjectCRSProj4String type="QString">+proj=utm +zone=55 +south +datum=WGS84 +units=m +no_defs</ProjectCRSProj4String>
+      <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
+      <ProjectCRSID type="int">3205</ProjectCRSID>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+    </SpatialRefSys>
+    <DefaultStyles>
+      <Fill type="QString"></Fill>
+      <Line type="QString"></Line>
+      <Marker type="QString"></Marker>
+      <RandomColors type="bool">true</RandomColors>
+      <AlphaInt type="int">255</AlphaInt>
+      <ColorRamp type="QString"></ColorRamp>
+    </DefaultStyles>
+    <WMSFees type="QString"></WMSFees>
+    <WMSUrl type="QString"></WMSUrl>
+  </properties>
 </qgis>
