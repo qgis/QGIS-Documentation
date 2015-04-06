@@ -13,7 +13,7 @@ For this example, we will use the *Reproject algorithm*, so find it and do as de
 
 .. image:: img/batch_conversion/batch_dialog.png
 
-If you have a look at the data fo this lesson, you will see that it contains a set of three shapefiles, but no QGIS project file. This is because, when an algorithm is run as a batch process, layer inputs can be selected either from the current QGIS project or from files. That makes it easier to process large amounts of layers, such as, for instance, all the layers in a given folder.
+If you have a look at the data for this lesson, you will see that it contains a set of three shapefiles, but no QGIS project file. This is because, when an algorithm is run as a batch process, layer inputs can be selected either from the current QGIS project or from files. That makes it easier to process large amounts of layers, such as, for instance, all the layers in a given folder.
 
 Each row in the table of the batch processing dialog represents a single execution of the algorithm. Cells in a row correspond to the parameter needed by the algorithm, which are not arranged one above the other, as in the normal single--execution dialog, but horizontally in that row.
 
