@@ -79,9 +79,9 @@ Dissolve
 
 Dissolve features based on a common attribute:
 
-- :menuselection:`GRASS --> v.dissolve` municipalities.shp on PROVINCIA
-- :menuselection:`QGIS --> Dissolve` municipalities.shp on PROVINCIA
-- :menuselection:`SAGA --> Polygon Dissolve` municipalities.shp on PROVINCIA (**NB:** the same attribute has to be chosen 3 times)
+- :menuselection:`GRASS --> v.dissolve` ``municipalities.shp`` on PROVINCIA
+- :menuselection:`QGIS --> Dissolve` ``municipalities.shp`` on PROVINCIA
+- :menuselection:`SAGA --> Polygon Dissolve` ``municipalities.shp`` on PROVINCIA (**NB:** the same attribute has to be chosen 3 times)
 
 .. warning:: The last one is broken in SAGA <=2.10
 
