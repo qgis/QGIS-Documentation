@@ -6,13 +6,13 @@ More algorithms and data types
 
 For this lessons we will need a table and a polygons layer. We are going to create a points layer based on coordinates in the table, and then count the number of points in each polygon. If you open the QGIS project corresponding to this lesson, you will find a table with X and Y coordinates, but you will find no polygons layer. Don't worry, we will create it using a processing geoalgorithm.
 
-The first thing we are going to do is to create a points layer from the coordinates in the table, using the *Points layer to table* algorithm. You now know how to use the search box, so it should not be hard for you to find it. Double--click on it to run it and get to its following dialog.
+The first thing we are going to do is to create a points layer from the coordinates in the table, using the *Points layer from table* algorithm. You now know how to use the search box, so it should not be hard for you to find it. Double--click on it to run it and get to its following dialog.
 
 This algorithm, like the one from the previous lesson, just generates a single output, and it has three inputs:
 
-- Table: the table with the coordinates. You should select here the table from the lesson data.
-- X and Y fields: these two parameters are linked to the first one. The corresponding selector will show the name of those fields that are available in the selected table. Select the *XCOORD* field for the *X* parameter, and the *YYCOORD* field for the *Y* parameter.
-- CRS: Since this algorithm takes no input layers, it cannot assign a CRS to the output layer based on them. Instead, it asks you to manually select the CRS that the coordinates in the table use. Click on the button on the left--hand side to open the QGIS CRS selector, and select EPSG:4326 as the output CRS. We are using this CRS because the coordinates in the table are in that CRS.
+- *Table*: the table with the coordinates. You should select here the table from the lesson data.
+- *X and Y fields*: these two parameters are linked to the first one. The corresponding selector will show the name of those fields that are available in the selected table. Select the *XCOORD* field for the *X* parameter, and the *YYCOORD* field for the *Y* parameter.
+- *CRS*: Since this algorithm takes no input layers, it cannot assign a CRS to the output layer based on them. Instead, it asks you to manually select the CRS that the coordinates in the table use. Click on the button on the left--hand side to open the QGIS CRS selector, and select EPSG:4326 as the output CRS. We are using this CRS because the coordinates in the table are in that CRS.
 
 Your dialog should look like this.
 
@@ -45,6 +45,8 @@ In the end, you should have a parameters dialog like this:
 (Better add one spacing on the width and height: Horizontal spacing: 0.0001, Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: -5.695674, Center Y: 40.2477955)
 The case of X center is a bit tricky, see: -5.696126+(( -5.695222+ 5.696126)/2)
 
+.. warning:: The options are simpler in recent versions of QGIS; you just need to enter min and max for X and Y (suggested values: -5.696226,-5.695122,40.24742,40.248171)
+
 Press *Run* and you will get the graticule layer.
 
 .. image:: img/second_alg/graticule.png
@@ -66,4 +68,4 @@ In the *Output folder* entry that you will find in the *General* group, type the
 Now when you run an algorithm, just use the filename instead of the full path. For instance, with the configuration shown above, if you enter ``graticule.shp`` as the output path for the algorithm that we have just used, the result will be saved in ``D:\processing_output\graticule.shp``. You can still enter a full path in case you want a result to be saved in a different folder.
 
 
-Try yourself the *Create grid* algorithm with different grid sizes, and also with different types of grids. We will use the hexagonal one in a later chapter.
+Try yourself the *Create grid* algorithm with different grid sizes, and also with different types of grids.

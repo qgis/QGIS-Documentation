@@ -15,12 +15,14 @@ Now open the toolbox and open the dialog corresponding to the raster calculator.
 
 .. image:: img/no_data/calculator_dialog.png
 
+.. note:: The interface is different in recent versions.
+
 The dialog contains 2 parameters.
 
 - The layers to use for the analysis. This is a multiple input, that meaning that you can select as many layers as you want. Click on the button on the right--hand side and then select the layers that you want to use in the dialog that will appear.
 - The formula to apply. The formula uses the layers selected in the above parameter, which are named using alphabet letters (``a, b, c...``) or ``g1, g2, g3...`` as variable names. That is, the formula ``a + 2 * b`` is the same as ``g1 + 2 * g2`` and will compute the sum of the value in the first layer plus two times the value in the second layer. The ordering of the layers is the same ordering that you see in the selection dialog.
 
-.. warning:: the calculator is case sensitive
+.. warning:: The calculator is case sensitive.
 
 To start with, we will change the units of the DEM from meters to feet. The formula we need is the following one:
 
@@ -30,7 +32,7 @@ To start with, we will change the units of the DEM from meters to feet. The form
 
 Select the DEM in the layers field and type ``a * 3.28084`` in the formula field.
 
-.. warning:: for non English users: use always ".", not ","
+.. warning:: For non English users: use always ".", not ",".
 
 Click *Run* to run the algorithm. You will get a layer that has the same appearance of the input layer, but with different values. The input layer that we used has valid values in all its cells, so the last parameter has no effect at all.
 
@@ -61,9 +63,9 @@ Here is the resulting layer.
 
 This technique is used frequently to *mask* values in a raster layer, and is useful whenever you want to perform calculations for a region other that the arbitrary rectangular region that is used by raster layer. For instance, an elevation histogram of a raster layer doesn't have much meaning. If it is instead computed using only values corresponding to a basin (as in he case above), the result that we obtain is a meaningful one that actually gives information about the configuration of the basin.
 
-There are other interesting things about this algorithm that we have just run apart from the no--data values and how they are handled. If you have a look at the extents of the layers that we have multiplied (you can do it double--clicking on their names of the layer in the table of contents and looking at their properties), you will see that they are not the same, since the extent covered by the flow accumulation layer is smaller that the extent of the full DEM.
+There are other interesting things about this algorithm that we have just run, apart from the no--data values and how they are handled. If you have a look at the extents of the layers that we have multiplied (you can do it double--clicking on their names of the layer in the table of contents and looking at their properties), you will see that they are not the same, since the extent covered by the flow accumulation layer is smaller that the extent of the full DEM.
 
-That means that those layers do not match, and that they cannot be multiplied directly without homogenizing those sizes and extents by resampling one or both layers. However, we did not do anything. QGIS takes care of this situation and automatically resamples input layers when needed. The output extent is the minimum covering extent calculated from the imput layers, and the minimum cell size of their cellsizes. 
+That means that those layers do not match, and that they cannot be multiplied directly without homogenizing those sizes and extents by resampling one or both layers. However, we did not do anything. QGIS takes care of this situation and automatically resamples input layers when needed. The output extent is the minimum covering extent calculated from the input layers, and the minimum cell size of their cellsizes.
 
 In this case (and in most cases), this produces the desired results, but you should always be aware of the additional operations that are taking place, since they might affect the result. In cases when this behaviour might not be the desired, manual resampling should be applied in advance. In later chapters, we will see more about the behaviour of algorithms when using multiple raster layers.
 
