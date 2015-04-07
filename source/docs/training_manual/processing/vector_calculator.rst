@@ -2,13 +2,13 @@ Vector calculator
 ============================================================
 
 
-.. note:: In this lesson we will see how to add new attributes to a vector layer based on a mathematical expression, using the vector calculator
+.. note:: In this lesson we will see how to add new attributes to a vector layer based on a mathematical expression, using the vector calculator.
 
 We already know how to use the raster calculator to create new raster layers using mathematical expressions. A similar algorithm is available for vector layers, and generates a new layer with the same attributes of the input layer, plus an additional one with the result of the expression entered. The algorithm is called *Field calculator* and has the following parameters dialog.
 
 .. image:: img/vector_calculator/field_calculator.png
 
-.. note:: In newer versions of Processing the interface has changed considerably
+.. note:: In newer versions of Processing the interface has changed considerably, it's more powerful and easier to use.
 
 Here are a couple of examples of using that algorithm.
 
@@ -24,7 +24,7 @@ The parameters dialog should be filled as shown below.
 
 This will generate a new field named ``WHITE_DENS``
 
-Now let's calculate the ratio between the ``MALES`` and ``FEMALES`` fields to create a new one that indicates if male population is predominant over female population.
+Now let's calculate the ratio between the ``MALES`` and ``FEMALES`` fields to create a new one that indicates if male population is numerically predominant over female population.
 
 Enter the following formula
 
@@ -37,7 +37,7 @@ This time the parameters window should look like this before pressing the *OK* b
 .. image:: img/vector_calculator/ratio.png
 
 
-Both fields are of type integer, and the result would be truncate to an integer. That's why we have multiplied by 1.0, to indicate that we want floating point number a result.
+In earlier version, since both fields are of type integer, the result would be truncated to an integer. In this case the formula should be: ``1.0 *  "MALES"  /  "FEMALES"``, to indicate that we want floating point number a result.
 
 We can use conditional functions to have a new field with ``male`` or ``female`` text strings instead of those ratio value, using the following formula::
 
@@ -47,6 +47,6 @@ The parameters window should look like this.
 
 .. image:: img/vector_calculator/predominance.png
 
-A python field calculator is available in the "Advanced Python field calculator", which will not be detailed here
+A python field calculator is available in the *Advanced Python field calculator*, which will not be detailed here
 
 .. image:: img/vector_calculator/advanced.png
