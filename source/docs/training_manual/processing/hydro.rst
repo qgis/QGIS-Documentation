@@ -54,7 +54,7 @@ And this is what you will get.
 
 .. image:: img/hydro/watershedslayer.png 
 
-This is a raster result. You can vectorise it using the *Vectorise grid classes* algorithm.
+This is a raster result. You can vectorise it using the *Vectorising grid classes* algorithm.
 
 .. image:: img/hydro/vectorising.png 
 
@@ -63,7 +63,7 @@ This is a raster result. You can vectorise it using the *Vectorise grid classes*
 
 Now, let's try to compute statistics about the elevation values in one of the subbasins. The idea is to have a layer that just represents the elevation within that subbasin and then pass it to the module that calculates those statistics.
 
-First, let's clip the original DEM with the polygon representing a subbasin. We will use the *Clip Grid with Polygon* algorithm. If we select a single subbasin polygon and then call the clipping algorithm, we can clip the DEM to the area covered by that polygon, since the algorithm is aware of the selection.
+First, let's clip the original DEM with the polygon representing a subbasin. We will use the *Clip grid with polygon* algorithm. If we select a single subbasin polygon and then call the clipping algorithm, we can clip the DEM to the area covered by that polygon, since the algorithm is aware of the selection.
 
 Select a polygon,
 
