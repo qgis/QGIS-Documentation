@@ -9,7 +9,7 @@ A normal session with the processing tools includes more than running a single a
 
 Using the graphical modeler, that workflow can be put into a model, which will run all the necessary algorithms in a single run, thus simplifying the whole process and automating it.
 
-To start this lesson, we are going to calculate a parameter named Topographic Wetness Index. The algorithm that computes it is called *Topographic Wetness Index (TWI)*
+To start this lesson, we are going to calculate a parameter named Topographic Wetness Index. The algorithm that computes it is called *Topographic wetness index (twi)*
 
 .. image:: img/modeler_twi/twi.png
 
@@ -27,7 +27,7 @@ And this is how you have to set the parameters dialog of the TWI algorithm.
 
 .. image:: img/modeler_twi/twi_filled.png
 
-This is the result that you will obtain (the default singleband pseudocolor inverted palette has been used for rendering).
+This is the result that you will obtain (the default singleband pseudocolor inverted palette has been used for rendering). You can use the ``twi.qml`` style provided.
 
 .. image:: img/modeler_twi/twi_layer.png
 
