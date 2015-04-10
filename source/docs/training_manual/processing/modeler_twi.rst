@@ -9,7 +9,7 @@ A normal session with the processing tools includes more than running a single a
 
 Using the graphical modeler, that workflow can be put into a model, which will run all the necessary algorithms in a single run, thus simplifying the whole process and automating it.
 
-To start this lesson, we are going to calculate a parameter named Topographic Wetness Index. The algorithm that computes it is called *Topographic Wetness Index (TWI)*
+To start this lesson, we are going to calculate a parameter named Topographic Wetness Index. The algorithm that computes it is called *Topographic wetness index (twi)*
 
 .. image:: img/modeler_twi/twi.png
 
@@ -27,7 +27,7 @@ And this is how you have to set the parameters dialog of the TWI algorithm.
 
 .. image:: img/modeler_twi/twi_filled.png
 
-This is the result that you will obtain (the default singleband pseudocolor inverted palette has been used for rendering).
+This is the result that you will obtain (the default singleband pseudocolor inverted palette has been used for rendering). You can use the ``twi.qml`` style provided.
 
 .. image:: img/modeler_twi/twi_layer.png
 
@@ -77,11 +77,11 @@ Now your model should look like this.
 
 .. image:: img/modeler_twi/canvas_3.png
 
-The last step is to add the *Topographic Wetness Index* algorithm, with the following configuration.
+The last step is to add the *Topographic wetness index* algorithm, with the following configuration.
 
 .. image:: img/modeler_twi/twi_modeler.png
 
-In this case, we will not be using the DEM as input, but instead, we will use the slope and catchment area layers that are calcualted by the algorithms that we previously added. As you add new algorithms, the outputs they produce become available for other algorithms, and using them you link the algorithms, creating the workflow.
+In this case, we will not be using the DEM as input, but instead, we will use the slope and catchment area layers that are calculated by the algorithms that we previously added. As you add new algorithms, the outputs they produce become available for other algorithms, and using them you link the algorithms, creating the workflow.
 
 In this case, the output TWI layer is a final layer, so we have to indicate so. In the corresponding textbox, enter the name that you want to be shown for this output.
 

@@ -1,7 +1,7 @@
 More iterative execution of algorithms
 =======================================
 
-.. note:: This lesson shows how to combine the iterative execution of algorithms with the modeler to get more automation
+.. note:: This lesson shows how to combine the iterative execution of algorithms with the modeler to get more automation.
 
 
 The iterative execution of algorithms is available not just for built-in algorithms, but also for the algorithms that you can create yourself, such as models. We are going to see how to combine a model and the iterative execution of algorithms, so we can obtain more complex results with ease.

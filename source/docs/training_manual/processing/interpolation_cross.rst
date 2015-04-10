@@ -1,7 +1,7 @@
 More interpolation 
 ===================
 
-.. note:: This chapter shows another practical case where interpolation algorithms are used
+.. note:: This chapter shows another practical case where interpolation algorithms are used.
 
 Interpolation is a common technique, and it can be used to demonstrate several techniques that can be applied using the QGIS processing framework. This lesson uses some interpolation algorithms that were already introduced, but has a different approach. 
 
