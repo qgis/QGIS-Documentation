@@ -3,7 +3,7 @@ A model within a model
 
 .. warning:: Beware, this chapter is not well tested, please report any issue; images are missing
 
-.. note:: In this lesson we will see how to use a model within a bigger model
+.. note:: In this lesson we will see how to use a model within a bigger model.
 
 We have already created a few models, and in this lesson we are going to see how we can combine them on a single bigger one. A model behaves like any other algorithm, which means that you can add a model that you have already created as part of another one that you create after that.
 

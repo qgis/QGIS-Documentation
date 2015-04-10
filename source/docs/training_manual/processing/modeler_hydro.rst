@@ -11,7 +11,7 @@ In case you could not create the full model yourself and you need some extra hel
 
 .. image:: img/modeler_hydro/model.png
 
-This model contains all the steps needed to complete the calculation, but it just has one input: the DEM That means that the threshold for channel definition use a fixed value, which makes the model not as useful as it could be. That is not a problem, since we can edit the model, and that is exactly what we will do.
+This model contains all the steps needed to complete the calculation, but it just has one input: the DEM. That means that the threshold for channel definition use a fixed value, which makes the model not as useful as it could be. That is not a problem, since we can edit the model, and that is exactly what we will do.
 
 First, let's add a numerical input. That will ask the user for a numerical input that we can use when such a value is needed in any of the algorithms included in our model. Click on the *Number* entry in the inputs tree, and you will see the corresponding dialog. Fill it with the values shown next.
 
@@ -21,7 +21,7 @@ Now your model should look like this.
 
 .. image:: img/modeler_hydro/model_with_threshold.png
 
-The input that we have just added is not used, so the model hasn't actually changed. We have to link that input to the algorithm that uses it, in this case the *Channel network* one. To edit an algorithm that already exists in the modeler, just double click on its corresponding box in the canvas. If you click on the *Channel network* algorithm, you will see something like this.
+The input that we have just added is not used, so the model hasn't actually changed. We have to link that input to the algorithm that uses it, in this case the *Channel network* one. To edit an algorithm that already exists in the modeler, just click on the pen icon on the corresponding box in the canvas. If you click on the *Channel network* algorithm, you will see something like this.
 
 .. image:: img/modeler_hydro/channel_network.png
 

@@ -77,11 +77,11 @@ Now your model should look like this.
 
 .. image:: img/modeler_twi/canvas_3.png
 
-The last step is to add the *Topographic Wetness Index* algorithm, with the following configuration.
+The last step is to add the *Topographic wetness index* algorithm, with the following configuration.
 
 .. image:: img/modeler_twi/twi_modeler.png
 
-In this case, we will not be using the DEM as input, but instead, we will use the slope and catchment area layers that are calcualted by the algorithms that we previously added. As you add new algorithms, the outputs they produce become available for other algorithms, and using them you link the algorithms, creating the workflow.
+In this case, we will not be using the DEM as input, but instead, we will use the slope and catchment area layers that are calculated by the algorithms that we previously added. As you add new algorithms, the outputs they produce become available for other algorithms, and using them you link the algorithms, creating the workflow.
 
 In this case, the output TWI layer is a final layer, so we have to indicate so. In the corresponding textbox, enter the name that you want to be shown for this output.
 
