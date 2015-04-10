@@ -1108,7 +1108,7 @@ Main properties
 ^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialogs of the attribute table :guilabel:`Item Properties` 
-tab provide the following functionalities  (see figure_composer_table_2_):
+tab provide the following functionalities (see figure_composer_table_2_):
 
 .. _Figure_composer_table_2:
 
@@ -1125,6 +1125,38 @@ tab provide the following functionalities  (see figure_composer_table_2_):
 * With :guilabel:`Layer` you can choose from the vector layers loaded in the project.
 * The button **[Refresh table data]** can be used to refresh the table when the actual 
   contents of the table has changed.
+* In case you activated the |checkbox|:guilabel:`Generate an atlas` option in the 
+  :guilabel:`Atlas generation` tab there are two additiontal :guilabel:`Source` possible:
+  'Current atlas feature' (see figure_composer_table_2b_) and 'Relation children'
+  (see figure_composer_table_2c_). Choosing the 'Current atlas feature'
+  you won't see any option to choose the layer and choosing 'Relation children' an option with
+  the relation name will show up. The 'Relation children' option is used if you have defined 
+  a relation with your atlas feature as parent.
+
+.. Figure_composer_table_2b:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 2b:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute2b.png
+   :align: center
+  
+   Attribute table Main properties for 'Current atlas feature' |nix|
+
+
+.. Figure_composer_table_2c:
+
+.. only:: html
+
+   **Figure Composer Attribute Table 2c:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute2c.png
+   :align: center
+
+   Attribute table Main properties for 'Relation children' |nix|
+
+
 * The button **[Attributes...]** starts the :guilabel:`Select attributes` menu, see 
   figure_composer_table_3_, that can be used to change the visible contents of the table.
   After making changes use the **[OK]** button to apply changes to the table.
