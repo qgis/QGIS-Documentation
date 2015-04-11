@@ -62,23 +62,7 @@ Attributes can be referred by index.
 Iterating over selected features
 --------------------------------
 
-Convenience methods.
-
-For the above cases, and in case you need to consider selection in a vector
-layer in case it exist, you can use the :func:`features` method from the
-built-in Processing plugin, as follows:
-
-::
-
-  import processing
-  features = processing.features(layer)
-  for feature in features:
-      # do whatever you need with the feature
-
-This will iterate over all the features in the layer, in case there is no
-selection, or over the selected features otherwise.
-
-if you only need selected features, you can use the :func: `selectedFeatures`
+if you only need selected features, you can use the :func:`selectedFeatures`
 method from vector layer:
 
 ::
@@ -87,6 +71,21 @@ method from vector layer:
   print len(selection)
   for feature in selection:
       # do whatever you need with the feature
+
+
+Another option is the Processing :func:`features` method:
+
+::
+
+  import processing
+  features = processing.features(layer)
+  for feature in features:
+      # do whatever you need with the feature
+
+By default, this will iterate over all the features in the layer, in case there is no
+selection, or over the selected features otherwise. Note that this behavior can be changed
+in the Processing options to ignore selections.
+
 
 Iterating over a subset of features
 -----------------------------------
