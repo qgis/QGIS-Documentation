@@ -26,6 +26,12 @@ provider. Layer's name is used in the layer list widget. It is important to
 check whether the layer has been loaded successfully. If it was not, an invalid
 layer instance is returned.
 
+The quickest way to open and display a vector layer in QGIS is the addVectorLayer function of the :class:`QgisInterface`:
+  
+  ::
+  
+    iface.addVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
+
 The following list shows how to access various data sources using vector data
 providers:
 
@@ -165,6 +171,12 @@ by default). To load a raster from a file, specify its file name and base name
 .. index::
   pair: loading; WMS raster
 
+Similarly to vector layers, raster layers can be loaded using the addRasterLayer function of the :class:`QgisInterface`:
+  
+  ::
+  
+    iface.addRasterLayer("/path/to/raster/file.tif", "layer_name_you_like")
+
 Raster layers can also be created from a WCS service.
 
 ::
@@ -214,6 +226,11 @@ layer explicitly, use
 
   QgsMapLayerRegistry.instance().removeMapLayer(layer_id)
 
+For a list of loaded layers and layer ids, use
+
+::
+
+  QgsMapLayerRegistry.instance().mapLayers()
 
 **TODO:**
    More about map layer registry?
