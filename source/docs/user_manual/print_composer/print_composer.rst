@@ -1126,12 +1126,15 @@ tab provide the following functionalities (see figure_composer_table_2_):
 * The button **[Refresh table data]** can be used to refresh the table when the actual 
   contents of the table has changed.
 * In case you activated the |checkbox|:guilabel:`Generate an atlas` option in the 
-  :guilabel:`Atlas generation` tab there are two additional :guilabel:`Source` possible:
+  :guilabel:`Atlas generation` tab, there are two additional :guilabel:`Source` possible:
   'Current atlas feature' (see figure_composer_table_2b_) and 'Relation children'
   (see figure_composer_table_2c_). Choosing the 'Current atlas feature'
-  you won't see any option to choose the layer and choosing 'Relation children' an option with
-  the relation name will show up. The 'Relation children' option is used if you have defined 
-  a relation with your atlas feature as parent (for further information about the atlas generation
+  you won't see any option to choose the layer, and the table item will only 
+  show a row with the attributes from the current feature of the atlas coverage layer. 
+  Choosing 'Relation children', an option with the relation name will show up.
+  The 'Relation children' option can only be used if you have defined a relation using 
+  your atlas coverage layer as parent, and it will show the children rows of 
+  the atlas coverage layer's current feature (for further information about the atlas generation
   see atlasgeneration_).
 
 .. Figure_composer_table_2b:
