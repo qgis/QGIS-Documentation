@@ -24,6 +24,8 @@ stored in the palette.
   >>> rlayer.width(), rlayer.height()
   (812, 301)
   >>> rlayer.extent()
+  <qgis._core.QgsRectangle object at 0x000000000F8A2048>
+  >>> rlayer.extent().toString()
   u'12.095833,48.552777 : 18.863888,51.056944'
   >>> rlayer.rasterType()
   2  # 0 = GrayOrUndefined (single band), 1 = Palette (single band), 2 = Multiband
