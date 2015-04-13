@@ -101,8 +101,21 @@ to the :func:`getFeatures()` call. Here's an example
   for f in layer.getFeatures(request):
       ...
 
+
+If you need an attribute-based filter instead (or in addition) of a spatial one like shown in the example
+above, you can build an :obj:`QgsExpression` object and pass it to the
+:obj:`QgsFeatureRequest` constructor. Here's an examplee
+
+::
+
+  # The expression will filter the features where the field "location_name" contains
+  # the word "Lake" (case insensitive)
+  exp = QgsExpression('location_name ILIKE \'%Lake%\'')
+  request=QgsFeatureRequest(exp)
+
+
 The request can be used to define the data retrieved for each feature, so the
-iterator returns all features, but return partial data for each of them.
+iterator returns all features, but returns partial data for each of them.
 
 ::
 
