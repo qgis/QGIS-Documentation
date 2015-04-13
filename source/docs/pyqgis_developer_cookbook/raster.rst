@@ -192,10 +192,12 @@ To do a query on value of bands of raster layer at some specified point
 
 ::
 
-  ident = rlayer.dataProvider().identify(QgsPoint(15.30, 40.98), \
-    QgsRaster.IdentifyFormatValue)
+  ident = rlayer.dataProvider().identify(QgsPoint(15.30, 40.98), 1)
   if ident.isValid():
     print ident.results()
+
+The second parameter of ``identify`` is the `QgsRaster.IdentifyFormatValue 
+<http://qgis.org/api/group__core.html#ga17a81534803b9b5ee1e5cd91aab628c6>`_.
 
 The ``results`` method in this case returns a dictionary, with band indices as
 keys, and band values as values.
