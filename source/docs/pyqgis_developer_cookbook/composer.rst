@@ -55,6 +55,33 @@ and do the rendering
   # save image
   img.save("render.png","png")
 
+
+
+Rendering layers with different CRS
+====================================
+
+If you have more than one layer and they have a different CRS, the simple
+example above will probably not work: to get the right values from the
+extent calculations you have to explicitly set the destination CRS and enable
+OTF reprojection as in the example below (only the renderer configuration
+part is reported)
+
+
+::
+
+    ...
+    # set layer set
+    layers = QgsMapLayerRegistry.instance().mapLayers()
+    lst = layers.keys()
+    render.setLayerSet(lst)
+
+    # Set destination CRS to match the CRS of the first layer
+    render.setDestinationCrs(layers.values()[0].crs())
+    # Enable OTF reprojection
+    render.setProjectionsEnabled(True)
+    ...
+
+
 .. index:: output; using Map Composer
 
 Output using Map Composer
