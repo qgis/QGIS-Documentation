@@ -49,14 +49,22 @@ a :class:`QgsVectorLayer` object
       # attrs is a list. It contains all the attribute values of this feature
       print attrs
 
+Accessing attributes
+--------------------
 
-Attributes can be referred by index.
+Attributes can be referred to by their name.
 
 ::
 
-  idx = layer.fieldNameIndex('name')
-  print feature.attributes()[idx]
+  print feature['name']
 
+Alternatively, attributes can be referred to by index. 
+This is will be a bit faster than using the name. 
+For example, to get the first attribute:
+
+::
+
+  print feature[0]
 
 
 Iterating over selected features
