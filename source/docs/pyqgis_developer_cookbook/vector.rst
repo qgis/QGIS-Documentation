@@ -96,7 +96,7 @@ to the :func:`getFeatures()` call. Here's an example
 
 ::
 
-  request=QgsFeatureRequest()
+  request = QgsFeatureRequest()
   request.setFilterRect(areaOfInterest)
   for f in layer.getFeatures(request):
       ...
@@ -111,7 +111,7 @@ above, you can build an :obj:`QgsExpression` object and pass it to the
   # The expression will filter the features where the field "location_name" contains
   # the word "Lake" (case insensitive)
   exp = QgsExpression('location_name ILIKE \'%Lake%\'')
-  request=QgsFeatureRequest(exp)
+  request = QgsFeatureRequest(exp)
 
 
 The request can be used to define the data retrieved for each feature, so the
