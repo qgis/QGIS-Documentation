@@ -32,6 +32,8 @@ The quickest way to open and display a vector layer in QGIS is the addVectorLaye
   
     iface.addVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
 
+This creates a new layer and adds it to the map layer registry (making it appear in the layer list) in one step.
+
 The following list shows how to access various data sources using vector data
 providers:
 
@@ -176,6 +178,8 @@ Similarly to vector layers, raster layers can be loaded using the addRasterLayer
   ::
   
     iface.addRasterLayer("/path/to/raster/file.tif", "layer_name_you_like")
+
+This creates a new layer and adds it to the map layer registry (making it appear in the layer list) in one step.
 
 Raster layers can also be created from a WCS service.
 
