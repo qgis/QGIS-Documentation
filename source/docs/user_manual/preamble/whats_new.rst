@@ -13,43 +13,56 @@ previous releases.
 This release includes hundreds of bug fixes and many new features and
 enhancements that will be described in this manual. You may also
 review the visual changelog at
-http://changelog.linfiniti.com/qgis/version/2.6.0/.
+http://changelog.linfiniti.com/qgis/version/2.8/.
 
-Application and Project Options 
--------------------------------
 
-* **Project filename in properties**: You can now see the full path
-  for the QGIS project file in the project properties dialog.
+Application 
+-----------
+
+* **Map rotation**: A map rotation can be set in degrees from the status bar
+* **Bookmarks**: You can share and transfer your bookmarks 
+* **Expressions**:
+  * when editing attributes in the attribute table or forms, you can now enter expressions
+    directly into spin boxes
+  * the expression widget is extended to include a function editor where you are able to
+    create your own Python custom functions in a comfortable way
+  * in any spinbox of the style menu you can enter expressions and evaluate them immediately
+  * a get and transform geometry function was added for using expressions
+  * a comment functionality was inserted if for example you want to work with data defined labeling
+* **Joins**: You can specify a custom prefix for joins
+* **Layer Legend**: Show rule-based renderer's legend as a tree
 
 
 Data Providers 
 --------------
 
-* **DXF Export tool improvements**: 
+* **DXF Export tool improvements**: improved marker symbol export
+* **WMS Layers**: support for contextual WMS legend graphics
+* **Temporary Scratch Layers**: It is possible to create empty editable memory layers
 
-  * Tree view and attribute selection for layer assigment in dialog 
-  * support fill polygons/HATCH
-  * represent texts as MTEXT instead of TEXT (including font, slant and weight)
-  * support for RGB colors when there's no exact color match
-  * use AutoCAD 2000 DXF (R15) instead of R12 
+Digitizing
+----------
 
+* **Advanced Digitizing**:
+  * digitise lines exactly parallel or at right angles, lock lines
+    to specific angles and so on with the advanced digitizing panel (CAD-like features)
+  * simplify tool: specify with exact tolerance, simplify multiple features at once ...
+* **Snapping Options**: new snapping mode 'Snap to all layers'
 
 Map Composer 
 ------------
   
-* **Update map canvas extent from map composer extent**:  On the Item 
-   properties of a Map element there are now two extra buttons which allow you
-   to (1) set the Map canvas extent according with the extent of your Map element
-   and (2) view in Map canvas the extent currently set on your Map element.
+* **Composer GUI improvements**: hide bounding boxes, full screen mode for composer
+  toggle display of panels
+* **Grid improvements**: You now have finer control of frame and annotation display
+* **Label item margins**: You can now control both horizontal and vertical margins
+  for label items. You can now specify negative margins for label items.
+* **
    
-* **Multiple grid support**: It is now possible to have more than 
-  one grid in your Map element. Each grid is fully customizable and  
-  can be assigned to a different CRS. This means, for example, you 
-  can now have a map layout with both geographic and projected grids.
-  
-* **Selective export**: To every item of your map composer layout, under
-  Rendering options, you may exclude that object from map exports.
-   
+Plugins
+-------
+
+* **Python Console**: You can now drag and drop python scripts into the |qg| window
 
 QGIS Server 
 -----------
