@@ -14,7 +14,7 @@ Iterating over Vector Layer
 ===========================
 
 Iterating over the features in a vector layer is one of the most common tasks.
-Below is an example of the simple basic code to perform this task and showing
+Below is an example of the simple basic code to perform this task aend showing
 some information about each feature. the ``layer`` variable is assumed to have
 a :class:`QgsVectorLayer` object
 
@@ -112,7 +112,7 @@ to the :func:`getFeatures()` call. Here's an example
 
 If you need an attribute-based filter instead (or in addition) of a spatial one like shown in the example
 above, you can build an :obj:`QgsExpression` object and pass it to the
-:obj:`QgsFeatureRequest` constructor. Here's an examplee
+:obj:`QgsFeatureRequest` constructor. Here's an example
 
 ::
 
