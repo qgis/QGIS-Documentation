@@ -70,6 +70,8 @@ several formats. |qg| offers the following:
 *  Improved handling of spatial database tables
 *  Tools for managing vector attribute tables
 *  Option to save screenshots as georeferenced images
+*  DXF-Export tool with enhanced capabilities to export styles and plugins
+   to perform CAD-like functions
 
 Analyse data 
 ------------

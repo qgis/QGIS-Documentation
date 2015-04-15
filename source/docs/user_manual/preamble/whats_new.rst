@@ -60,6 +60,8 @@ Map Composer
 * **Label item margins**: You can now control both horizontal and vertical margins
   for label items. You can now specify negative margins for label items.
 * optionally store layer styles
+* **Attribute Table Item**: options 'Current atlas feature' and 'Relation children'
+  in Main properties 
 
    
 Plugins
