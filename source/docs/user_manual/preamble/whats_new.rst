@@ -31,13 +31,15 @@ Application
   * a comment functionality was inserted if for example you want to work with data defined labeling
 * **Joins**: You can specify a custom prefix for joins
 * **Layer Legend**: Show rule-based renderer's legend as a tree
-
+* **DB Manager**: Run only the selected part of a SQL query
+* **Attribute Table**: support for calculations on selected rows through a 'Update Selected' button
+* **Measure Tools**: change measurement units possible
 
 Data Providers 
 --------------
 
-* **DXF Export tool improvements**: improved marker symbol export
-* **WMS Layers**: support for contextual WMS legend graphics
+* **DXF Export tool improvements**: Improved marker symbol export
+* **WMS Layers**: Support for contextual WMS legend graphics
 * **Temporary Scratch Layers**: It is possible to create empty editable memory layers
 
 Digitizing
@@ -57,7 +59,8 @@ Map Composer
 * **Grid improvements**: You now have finer control of frame and annotation display
 * **Label item margins**: You can now control both horizontal and vertical margins
   for label items. You can now specify negative margins for label items.
-* **
+* optionally store layer styles
+
    
 Plugins
 -------
@@ -67,13 +70,22 @@ Plugins
 QGIS Server 
 -----------
 
+* Python plugin support
 
 Symbology 
 ---------
-
+ 
+* live heatmap renderer creates dynamic heatmaps from point layers
+* raster image symbol fill type
+* more data-defined symbology settings: the data-defined option was moved next to
+  each data definable property
+* support for multiple styles per map layer, optionally store layer styles
 
 User Interface 
 --------------
 
+* **Projection**: Improved/consistent projection selection. All dialogs now use a consistent
+  projection selection widget, which allows for quickly selecting from recently used and standard
+  project/|qg| projections
 
 
