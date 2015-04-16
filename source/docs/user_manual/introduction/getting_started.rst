@@ -128,18 +128,18 @@ Start QGIS
 Load raster and vector layers from the sample dataset
 .....................................................
 
-#. Click on the |mActionAddRasterLayer| :sup:`Load Raster` icon.
+#. Click on the |mActionAddRasterLayer| :sup:`Add Raster Layer` icon.
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select
    the ERDAS IMG file :file:`landcover.img` and click **[Open]**.
 #. If the file is not listed, check if the :guilabel:`Files of type`
    |selectstring| combo box at the bottom of the dialog is set on the right
    type, in this case "Erdas Imagine Images (\*.img, \*.IMG)".
-#. Now click on the |mActionAddOgrLayer| :sup:`Load Vector` icon.
+#. Now click on the |mActionAddOgrLayer| :sup:`Add Vector Layer` icon.
 #. |radiobuttonon| :guilabel:`File` should be selected as :guilabel:`Source Type`
    in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to
    select the vector layer.
 #. Browse to the folder :file:`qgis_sample_data/gml/`, select 'Geography Markup
-   Language [GML] [OGR] (.gml,.GML)' from the :guilabel:`Files of type` |selectstring| combo box, then select the GML file :file:`lakes.gml` and
+   Language [GML] [OGR] (.gml,.GML)' from the :guilabel:`Filter` |selectstring| combo box, then select the GML file :file:`lakes.gml` and
    click **[Open]**. In the :guilabel:`Add vector layer` dialog, click **[OK]**.
    The :guilabel:`Coordinate Reference System Selector` dialog opens with :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**. 
 #. Zoom in a bit to your favorite area with some lakes.
@@ -346,7 +346,7 @@ changes have been made since it was opened or last saved.
 The kinds of information saved in a project file include:
 
 * Layers added
-* Layer properties, including symbolization
+* Layer properties, including symbolization and styles
 * Projection for the map view
 * Last viewed extent
 
@@ -362,7 +362,7 @@ select:
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
   version of QGIS`
 
-Whenever you save a project in |qg| 2.2 now a backup of the project file is made. 
+Whenever you save a project in |qg| a backup of the project file is made with the extension ~. 
 
 .. _`sec_output`:
 
