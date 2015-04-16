@@ -108,7 +108,6 @@ Core plugins include:
 
 #.  Coordinate Capture (Capture mouse coordinates in different CRSs)
 #.  DB Manager (Exchange, edit and view layers and tables; execute SQL queries)
-#.  Diagram Overlay (Place diagrams on vector layers)
 #.  Dxf2Shp Converter (Convert DXF files to shapefiles)
 #.  eVIS (Visualize events)
 #.  fTools (Analyze and manage vector data)
@@ -118,6 +117,7 @@ Core plugins include:
 #.  GRASS (Integrate GRASS GIS)
 #.  Heatmap (Generate raster heatmaps from point data)
 #.  Interpolation Plugin (Interpolate based on vertices of a vector layer)
+#.  Metasearch Catalogue Client
 #.  Offline Editing (Allow offline editing and synchronizing with databases)
 #.  Oracle Spatial GeoRaster
 #.  Processing (formerly SEXTANTE)
@@ -125,7 +125,6 @@ Core plugins include:
 #.  Road Graph Plugin (Analyze a shortest-path network)
 #.  Spatial Query Plugin
 #.  SPIT (Import shapefiles to PostgreSQL/PostGIS)
-#.  SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database)
 #.  Topology Checker (Find topological errors in vector layers)
 #.  Zonal Statistics Plugin (Calculate count, sum, and mean of a raster for each
     polygon of a vector layer)

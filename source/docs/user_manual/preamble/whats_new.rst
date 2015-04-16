@@ -22,6 +22,7 @@ Application
 * **Map rotation**: A map rotation can be set in degrees from the status bar
 * **Bookmarks**: You can share and transfer your bookmarks 
 * **Expressions**:
+  
   * when editing attributes in the attribute table or forms, you can now enter expressions
     directly into spin boxes
   * the expression widget is extended to include a function editor where you are able to
@@ -46,6 +47,7 @@ Digitizing
 ----------
 
 * **Advanced Digitizing**:
+  
   * digitise lines exactly parallel or at right angles, lock lines
     to specific angles and so on with the advanced digitizing panel (CAD-like features)
   * simplify tool: specify with exact tolerance, simplify multiple features at once ...
