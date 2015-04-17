@@ -346,9 +346,21 @@ changes have been made since it was opened or last saved.
 The kinds of information saved in a project file include:
 
 * Layers added
+* Which layers can be queried
 * Layer properties, including symbolization and styles
 * Projection for the map view
 * Last viewed extent
+* Print Composers
+* Print Composer elements with settings
+* Print Composer atlas settings
+* Digitizing settings
+* Table Relations
+* Project Macros
+* Project default styles
+* Plugins settings
+* QGIS Server settings from the OWS settings tab in the Project properties
+* Queries stored in the DB Manager
+
 
 The project file is saved in XML format, so it is possible to edit the file
 outside |qg| if you know what you are doing. The file format has been updated several
@@ -380,12 +392,12 @@ Here is a sampling of other ways to produce output files:
 
 * Menu option :menuselection:`Project -->` |mActionSaveMapAsImage| :sup:`Save
   as Image` opens a file dialog where you select the name, path and type of
-  image (PNG or JPG format). A world file with extension PNGW or JPGW saved
+  image (PNG,JPG and many other formats). A world file with extension PNGW or JPGW saved
   in the same folder georeferences the image.
 * Menu option :menuselection:`Project -->` :guilabel:`DXF Export ...` opens
   a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
-  vector layers you want to export to DXF. Through the 'Symbology mode' marker symbols
+  vector layers you want to export to DXF. Through the 'Symbology mode' symbols
   from the original QGIS Symbology can be exported with high fidelity.
 * Menu option :menuselection:`Project -->` |mActionNewComposer|
-  :menuselection:`New Print Composer` opens a dialog where you can lay out and
+  :menuselection:`New Print Composer` opens a dialog where you can layout and
   print the current map canvas (see section :ref:`label_printcomposer`).

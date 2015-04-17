@@ -1,6 +1,6 @@
 |updatedisclaimer|
 
-.. _`metasearch`:
+.. _metasearch:
 
 MetaSearch Catalogue Client
 ===========================

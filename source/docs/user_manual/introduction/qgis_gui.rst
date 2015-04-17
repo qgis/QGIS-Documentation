@@ -106,7 +106,7 @@ Menu Option                                                     Shortcut        
 |mActionDeleteRing| :guilabel:`Delete Ring`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionDeletePart| :guilabel:`Delete Part`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionReshape| :guilabel:`Reshape Features`                   \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionOffsetCurve| :guilabel:`Offset Curves`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionOffsetCurve| :guilabel:`Offset Curve`                   \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionSplitFeatures| :guilabel:`Split Features`               \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionSplitParts| :guilabel:`Split Parts`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mergeFeats| :guilabel:`Merge Selected Features`                \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
@@ -150,10 +150,11 @@ Menu Option                                                     Shortcut        
 |mActionZoomNext| :guilabel:`Zoom Next`                         \                     \                                           :guilabel:`Map Navigation`
 |mActionZoomActual| :guilabel:`Zoom Actual Size`                \                     \                                           :guilabel:`Map Navigation`
 :menuselection:`Decorations -->`                                \                     see :ref:`decorations`                      \
+:menuselection:`Preview mode -->`                               \                     \                                           \
 |mActionMapTips| :guilabel:`Map Tips`                           \                     \                                           :guilabel:`Attributes`
 |mActionNewBookmark| :guilabel:`New Bookmark`                   :kbd:`Ctrl+B`         see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
 |mActionShowBookmarks| :guilabel:`Show Bookmarks`               :kbd:`Ctrl+Shift+B`   see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
-|mActionDraw| :guilabel:`Refresh`                               :kbd:`Ctrl+R`                                                     :guilabel:`Map Navigation`
+|mActionDraw| :guilabel:`Refresh`                               :kbd:`F5`                                                         :guilabel:`Map Navigation`
 ==============================================================  ====================  ==========================================  ===============================
 
 Layer
@@ -162,19 +163,10 @@ Layer
 ===================================================================  ====================  ==========================================  ===============================
 Menu Option                                                          Shortcut              Reference                                   Toolbar
 ===================================================================  ====================  ==========================================  ===============================
-:menuselection:`New -->`                                             \                     see :ref:`sec_create_vector`                :guilabel:`Manage Layers`
+:menuselection:`Create Layer -->`                                    \                     see :ref:`sec_create_vector`                :guilabel:`Manage Layers`
+:menuselection:`Add Layer -->`                                       \                     \                                           :guilabel:`Manage Layers`
 :guilabel:`Embed Layers and Groups ...`                              \                     see :ref:`nesting_projects`                 \
-|mActionAddOgrLayer| :guilabel:`Add Vector Layer`                    :kbd:`Ctrl+Shift+V`   see :ref:`label_workingvector`              :guilabel:`Manage Layers`
-|mActionAddRasterLayer| :guilabel:`Add Raster Layer`                 :kbd:`Ctrl+Shift+R`   see :ref:`load_raster`                      :guilabel:`Manage Layers`
-|mActionAddPostgisLayer| :guilabel:`Add PostGIS Layer`               :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
-|mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`         :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
-|mActionAddMssqlLayer| :guilabel:`Add MSSQL Spatial Layer`           :kbd:`Ctrl+Shift+M`   see :ref:`label_mssql`                      :guilabel:`Manage Layers`
-|oracle_raster| :guilabel:`Add Oracle GeoRaster Layer`               \                     see :ref:`oracle_raster`                    :guilabel:`Manage Layers`
-|icon_sqlanywhere| :guilabel:`Add SQL Anywhere Layer`                \                     see :ref:`sqlanywhere`                      :guilabel:`Manage Layers`
-|mActionAddWmsLayer| :guilabel:`Add WMS/WMTS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
-|wcs| :guilabel:`Add WCS Layer`                                      \                     see :ref:`ogc-wcs`                          :guilabel:`Manage Layers`
-|wfs| :guilabel:`Add WFS Layer`                                      \                     see :ref:`ogc-wfs`                          :guilabel:`Manage Layers`
-|mActionAddDelimitedTextLayer| :guilabel:`Add Delimited Text Layer`  \                     see :ref:`vector_csv`                       :guilabel:`Manage Layers`
+:guilabel:`Add from Layer Definition File ...`			     \                     \                                           \
 |mActionEditCopy| :guilabel:`Copy style`                             \                     see :ref:`vector_style_menu`                \
 |mActionEditPaste| :guilabel:`Paste style`                           \                     see :ref:`vector_style_menu`                \
 |mActionOpenTable| :guilabel:`Open Attribute Table`                  \                     see :ref:`sec_attribute_table`              :guilabel:`Attributes`
@@ -182,12 +174,13 @@ Menu Option                                                          Shortcut   
 |mActionFileSave| :guilabel:`Save Layer Edits`                       \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionAllEdits| :menuselection:`Current Edits -->`                 \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 :menuselection:`Save as...`                                          \                     \                                           \
-:menuselection:`Save selection as vector file...`                    \                     See :ref:`sec_attribute_table`              \
-|mActionRemoveLayer| :guilabel:`Remove Layer(s)`                     :kbd:`Ctrl+D`         \                                           \
+:menuselection:`Save as layer definition file...`                    \                     \                                           \
+|mActionRemoveLayer| :guilabel:`Remove Layer/Group`                  :kbd:`Ctrl+D`         \                                           \
 |mActionDuplicateLayer| :guilabel:`Duplicate Layers (s)`             \                     \                                           \
+:guilabel:`Set Scale Visibility of Layers`                           \                     \                                           \
 :menuselection:`Set CRS of Layer(s)`                                 :kbd:`Ctrl+Shift+C`   \                                           \
 :menuselection:`Set project CRS from Layer`                          \                     \                                           \
-:menuselection:`Properties`                                          \                     \                                           \
+:menuselection:`Properties ...`                                      \                     \                                           \
 :menuselection:`Query...`                                            \                     \                                           \
 |mActionLabeling| :guilabel:`Labeling`                               \                     \                                           \
 |mActionInOverview| :guilabel:`Add to Overview`                      :kbd:`Ctrl+Shift+O`   \                                           :guilabel:`Manage Layers`
@@ -195,6 +188,8 @@ Menu Option                                                          Shortcut   
 |RemoveAllOverview| :guilabel:`Remove All From Overview`             \                     \                                           \
 |mActionShowAllLayers| :guilabel:`Show All Layers`                   :kbd:`Ctrl+Shift+U`   \                                           :guilabel:`Manage Layers`
 |mActionHideAllLayers| :guilabel:`Hide All Layers`                   :kbd:`Ctrl+Shift+H`   \                                           :guilabel:`Manage Layers`
+|mActionShowAllLayers| :guilabel:`Show selected Layers`              \                     \                                           \
+|mActionHideAllLayers| :guilabel:`Hide selected Layers`              \                     \                                           \
 ===================================================================  ====================  ==========================================  ===============================
 
 Settings
@@ -218,12 +213,12 @@ Menu Option                                                     Shortcut        
 Plugins
 .......
 
-=================================================================  ====================  ==========================================  ===============================
-Menu Option                                                        Shortcut              Reference                                   Toolbar
-=================================================================  ====================  ==========================================  ===============================
-|mActionShowPluginManager| :guilabel:`Manage and Install Plugins`  \                     see :ref:`managing_plugins`                 \
-:menuselection:`Python Console`                                    \                     \                                           \
-=================================================================  ====================  ==========================================  ===============================
+======================================================================  ====================  ===================================  ===============================
+Menu Option                                                             Shortcut              Reference                            Toolbar
+======================================================================  ====================  ===================================  ===============================
+|mActionShowPluginManager| :guilabel:`Manage and Install Plugins ...`   \                     see :ref:`managing_plugins`          \
+:menuselection:`Python Console`                                         :kbd:`Ctrl+Alt+P`     \                                    \
+======================================================================  ====================  ===================================  ===============================
 
 When starting |qg| for the first time not all core plugins are loaded.
 
@@ -254,6 +249,28 @@ Menu Option                                                     Shortcut        
 
 When starting |qg| for the first time not all core plugins are loaded.
 
+Database
+........
+
+==============================================================  ====================  ==========================================  ===============================
+Menu Option							Shortcut	      Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+:menuselection:`Database -->`                                   \                     see :ref:`dbmanager`                        :guilabel:`Database`
+
+When starting |qg| for the first time not all core plugins are loaded.
+
+
+Web
+...
+
+==============================================================  ====================  ==========================================  ==============================
+Menu Option							Shortcut	      Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ==============================
+:guilabel:`Metasearch`                                          \                     see :ref:`metasearch`                       :guilabel:`Web`
+
+When starting |qg| for the first time not all core plugins are loaded.
+
+
 Processing
 ..........
 
@@ -261,10 +278,10 @@ Processing
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 |proc_toolbox| :guilabel:`Toolbox`                              \                     see :ref:`processing.toolbox`               \
-|proc_model| :guilabel:`Graphical Modeler`                      \                     see :ref:`processing.modeler`               \
-|proc_history| :guilabel:`History and log`                      \                     see :ref:`processing.history`               \
-|proc_option| :guilabel:`Options and configuration`             \                     see :ref:`processing.options`               \
-|proc_result| :guilabel:`Results viewer`                        \                     see :ref:`processing.results`               \
+|proc_model| :guilabel:`Graphical Modeler ...`                  \                     see :ref:`processing.modeler`               \
+|proc_history| :guilabel:`History and log ...`                  \                     see :ref:`processing.history`               \
+|proc_option| :guilabel:`Options ...`                           \                     see :ref:`processing.options`               \
+|proc_result| :guilabel:`Results viewer ...`                    \                     see :ref:`processing.results`               \
 |proc_commander| :guilabel:`Commander`                          :kbd:`Ctrl+Alt+M`     see :ref:`processing.commander`             \
 ==============================================================  ====================  ==========================================  ===============================
 
