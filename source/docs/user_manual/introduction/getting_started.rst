@@ -128,18 +128,18 @@ Start QGIS
 Load raster and vector layers from the sample dataset
 .....................................................
 
-#. Click on the |mActionAddRasterLayer| :sup:`Load Raster` icon.
+#. Click on the |mActionAddRasterLayer| :sup:`Add Raster Layer` icon.
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select
    the ERDAS IMG file :file:`landcover.img` and click **[Open]**.
 #. If the file is not listed, check if the :guilabel:`Files of type`
    |selectstring| combo box at the bottom of the dialog is set on the right
    type, in this case "Erdas Imagine Images (\*.img, \*.IMG)".
-#. Now click on the |mActionAddOgrLayer| :sup:`Load Vector` icon.
+#. Now click on the |mActionAddOgrLayer| :sup:`Add Vector Layer` icon.
 #. |radiobuttonon| :guilabel:`File` should be selected as :guilabel:`Source Type`
    in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to
    select the vector layer.
 #. Browse to the folder :file:`qgis_sample_data/gml/`, select 'Geography Markup
-   Language [GML] [OGR] (.gml,.GML)' from the :guilabel:`Files of type` |selectstring| combo box, then select the GML file :file:`lakes.gml` and
+   Language [GML] [OGR] (.gml,.GML)' from the :guilabel:`Filter` |selectstring| combo box, then select the GML file :file:`lakes.gml` and
    click **[Open]**. In the :guilabel:`Add vector layer` dialog, click **[OK]**.
    The :guilabel:`Coordinate Reference System Selector` dialog opens with :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**. 
 #. Zoom in a bit to your favorite area with some lakes.
@@ -346,9 +346,21 @@ changes have been made since it was opened or last saved.
 The kinds of information saved in a project file include:
 
 * Layers added
-* Layer properties, including symbolization
+* Which layers can be queried
+* Layer properties, including symbolization and styles
 * Projection for the map view
 * Last viewed extent
+* Print Composers
+* Print Composer elements with settings
+* Print Composer atlas settings
+* Digitizing settings
+* Table Relations
+* Project Macros
+* Project default styles
+* Plugins settings
+* QGIS Server settings from the OWS settings tab in the Project properties
+* Queries stored in the DB Manager
+
 
 The project file is saved in XML format, so it is possible to edit the file
 outside |qg| if you know what you are doing. The file format has been updated several
@@ -362,7 +374,7 @@ select:
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
   version of QGIS`
 
-Whenever you save a project in |qg| 2.2 now a backup of the project file is made. 
+Whenever you save a project in |qg| a backup of the project file is made with the extension ~. 
 
 .. _`sec_output`:
 
@@ -380,12 +392,12 @@ Here is a sampling of other ways to produce output files:
 
 * Menu option :menuselection:`Project -->` |mActionSaveMapAsImage| :sup:`Save
   as Image` opens a file dialog where you select the name, path and type of
-  image (PNG or JPG format). A world file with extension PNGW or JPGW saved
+  image (PNG,JPG and many other formats). A world file with extension PNGW or JPGW saved
   in the same folder georeferences the image.
 * Menu option :menuselection:`Project -->` :guilabel:`DXF Export ...` opens
   a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
-  vector layers you want to export to DXF. Through the 'Symbology mode' marker symbols
+  vector layers you want to export to DXF. Through the 'Symbology mode' symbols
   from the original QGIS Symbology can be exported with high fidelity.
 * Menu option :menuselection:`Project -->` |mActionNewComposer|
-  :menuselection:`New Print Composer` opens a dialog where you can lay out and
+  :menuselection:`New Print Composer` opens a dialog where you can layout and
   print the current map canvas (see section :ref:`label_printcomposer`).

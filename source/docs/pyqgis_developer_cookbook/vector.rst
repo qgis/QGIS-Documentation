@@ -14,7 +14,7 @@ Iterating over Vector Layer
 ===========================
 
 Iterating over the features in a vector layer is one of the most common tasks.
-Below is an example of the simple basic code to perform this task and showing
+Below is an example of the simple basic code to perform this task aend showing
 some information about each feature. the ``layer`` variable is assumed to have
 a :class:`QgsVectorLayer` object
 
@@ -49,36 +49,28 @@ a :class:`QgsVectorLayer` object
       # attrs is a list. It contains all the attribute values of this feature
       print attrs
 
+Accessing attributes
+--------------------
 
-Attributes can be referred by index.
+Attributes can be referred to by their name.
 
 ::
 
-  idx = layer.fieldNameIndex('name')
-  print feature.attributes()[idx]
+  print feature['name']
 
+Alternatively, attributes can be referred to by index. 
+This is will be a bit faster than using the name. 
+For example, to get the first attribute:
+
+::
+
+  print feature[0]
 
 
 Iterating over selected features
 --------------------------------
 
-Convenience methods.
-
-For the above cases, and in case you need to consider selection in a vector
-layer in case it exist, you can use the :func:`features` method from the
-built-in Processing plugin, as follows:
-
-::
-
-  import processing
-  features = processing.features(layer)
-  for feature in features:
-      # do whatever you need with the feature
-
-This will iterate over all the features in the layer, in case there is no
-selection, or over the selected features otherwise.
-
-if you only need selected features, you can use the :func: `selectedFeatures`
+if you only need selected features, you can use the :func:`selectedFeatures`
 method from vector layer:
 
 ::
@@ -87,6 +79,21 @@ method from vector layer:
   print len(selection)
   for feature in selection:
       # do whatever you need with the feature
+
+
+Another option is the Processing :func:`features` method:
+
+::
+
+  import processing
+  features = processing.features(layer)
+  for feature in features:
+      # do whatever you need with the feature
+
+By default, this will iterate over all the features in the layer, in case there is no
+selection, or over the selected features otherwise. Note that this behavior can be changed
+in the Processing options to ignore selections.
+
 
 Iterating over a subset of features
 -----------------------------------
@@ -97,13 +104,26 @@ to the :func:`getFeatures()` call. Here's an example
 
 ::
 
-  request=QgsFeatureRequest()
+  request = QgsFeatureRequest()
   request.setFilterRect(areaOfInterest)
   for f in layer.getFeatures(request):
       ...
 
+
+If you need an attribute-based filter instead (or in addition) of a spatial one like shown in the example
+above, you can build an :obj:`QgsExpression` object and pass it to the
+:obj:`QgsFeatureRequest` constructor. Here's an example
+
+::
+
+  # The expression will filter the features where the field "location_name" contains
+  # the word "Lake" (case insensitive)
+  exp = QgsExpression('location_name ILIKE \'%Lake%\'')
+  request = QgsFeatureRequest(exp)
+
+
 The request can be used to define the data retrieved for each feature, so the
-iterator returns all features, but return partial data for each of them.
+iterator returns all features, but returns partial data for each of them.
 
 ::
 
