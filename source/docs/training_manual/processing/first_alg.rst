@@ -29,7 +29,7 @@ The algorithm has a single output, which is the centroids layer. There are two o
 
 In case you want to set a destination and not save the result in a temporary file, the format of the output is defined by the filename extension. To select a format,
 just select the corresponding file extension (or add it if you are directly typing the filepath instead). If the extension of the filepath you entered does not
-match any of the supported ones, a default extension (usually ``.dbf``` for tables, ``.tif`` for raster layers and ``.shp`` for vector ones) will be appended to the filepath and the file format corresponding to that extension will be used to save the layer or table.
+match any of the supported ones, a default extension (usually ``.dbf`` for tables, ``.tif`` for raster layers and ``.shp`` for vector ones) will be appended to the filepath and the file format corresponding to that extension will be used to save the layer or table.
 
 In all the exercises in this guide, we will be saving results to a temporary file, since there is no need to save them for a later use. Feel free to save them to a permament location if you want to.
 

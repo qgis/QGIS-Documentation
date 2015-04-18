@@ -42,7 +42,7 @@ If all goes fine, you will not notice any difference between this SAGA--based al
 
 This kind of problems might happen, even if SAGA (or any other application that we are calling from the processing framework) is correctly installed, and it is important to know how to deal with them. Let's produce one of those error messages.
 
-Open the *Create graticule from extent* algorithm and use the following values.
+Open the *Create graticule* algorithm and use the following values.
 
 .. image:: img/first_saga_alg/create_graticule.png
 

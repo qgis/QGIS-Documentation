@@ -70,7 +70,7 @@ That means that those layers do not match, and that they cannot be multiplied di
 In this case (and in most cases), this produces the desired results, but you should always be aware of the additional operations that are taking place, since they might affect the result. In cases when this behaviour might not be the desired, manual resampling should be applied in advance. In later chapters, we will see more about the behaviour of algorithms when using multiple raster layers.
 
 
-Let's finish this lesson with another masking exercise. We are going to calculate the mean slope in all areas with an elevation between 1000 and 1500 meters.
+Let's finish this lesson with another masking exercise. We are going to calculate the slope in all areas with an elevation between 1000 and 1500 meters.
 
 In this case, we do not have a layer to use as a mask, but we can create it using the calculator.
 

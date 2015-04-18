@@ -30,7 +30,7 @@ Enter the following formula
 
 ::
 
-	1.0 *  "MALES"  /  "FEMALES" 
+	"MALES"  /  "FEMALES" 
 
 This time the parameters window should look like this before pressing the *OK* button. 
 
