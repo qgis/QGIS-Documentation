@@ -132,7 +132,10 @@ General Menu
 * |checkbox| :guilabel:`Show tips at startup`
 * |checkbox| :guilabel:`Bold group box titles`
 * |checkbox| :guilabel:`QGIS-styled group boxes`
-* |checkbox| :guilabel:`Use live-updating color chooser dialog`
+* |checkbox| :guilabel:`Use native color chooser dialogs`
+* |checkbox| :guilabel:`Use live-updating color chooser dialogs`
+* |checkbox| :guilabel:`Custom side bar style`
+* |checkbox| :guilabel:`Experimental canvas rotation support (restart required)`
 
 **Project files**
 
@@ -148,6 +151,7 @@ General Menu
   a project in the project templates folder.
 * |checkbox| :guilabel:`Prompt to save project and data source changes when
   required`
+* |checkbox| :guilabel:`Prompt for confirmation when a layer is to be removed`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
   version of QGIS`
 * :guilabel:`Enable macros` |selectstring|. This option was created to handle
@@ -235,7 +239,7 @@ Data Sources Menu
 
 * |checkbox| :guilabel:`Ignore shapefile encoding declaration`. If a shapefile
   has encoding information, this will be ignored by |qg|.
-* |checkbox| :guilabel:`Add PostGIS layer with double click and select in
+* |checkbox| :guilabel:`Add PostGIS layers with double click and select in
   extended mode`
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in
   extended mode`
@@ -311,7 +315,6 @@ Canvas and Legend Menu
   * |checkbox| :guilabel:`Bold group names`
   * |checkbox| :guilabel:`Display classification attribute names`
   * |checkbox| :guilabel:`Create raster icons (may be slow)`
-  * |checkbox| :guilabel:`Add new layers to selected or current group`
 
 Map tools Menu
 --------------
@@ -357,16 +360,12 @@ You can define the :guilabel:`Default` font here.
 **Grid appearance**
 
 * Define the :guilabel:`Grid style` |selectstring| ('Solid', 'Dots', 'Crosses')
-* Define the :guilabel:`Color...`
+* Define the :guilabel:`Grid color`
 
-**Grid defaults**
+**Grid and guide defaults**
 
-* Define the :guilabel:`Spacing` |selectnumber|
+* Define the :guilabel:`Grid spacing` |selectnumber|
 * Define the :guilabel:`Grid offset` |selectnumber| for x and y
-* Define the :guilabel:`Snap tolerance` |selectnumber|
-
-**Guide defaults**
-
 * Define the :guilabel:`Snap tolerance` |selectnumber|
 
 
@@ -439,7 +438,7 @@ a layer without a CRS is loaded.
 
 * |radiobuttonon| :guilabel:`Prompt for CRS`
 * |radiobuttonoff| :guilabel:`Use project CRS`
-* |radiobuttonoff| :guilabel:`Use default CRS displayed below`
+* |radiobuttonoff| :guilabel:`Use default CRS`
 
 **Default datum transformations**
 
@@ -538,7 +537,7 @@ installed that you never use and that are filling your screen.
    The Customization dialog |nix|
 
 |qg| Customization is divided into five groups. In |checkbox| :guilabel:`Menus`,
-you can hide entries in the Menu bar. In |checkbox| :guilabel:`Panel`, you
+you can hide entries in the Menu bar. In |checkbox| :guilabel:`Panels`, you
 find the panel windows. Panel windows are applications that can be started and
 used as a floating, top-level window or embedded to the |qg| main window as a
 docked widget (see also :ref:`sec_panels_and_toolbars`). In the |checkbox|
