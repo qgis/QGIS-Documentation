@@ -98,6 +98,8 @@ instructions.
 .. index::
   pair: Python; custom applications
 
+.. _pythonapplications:
+
 Python Applications
 ===================
 

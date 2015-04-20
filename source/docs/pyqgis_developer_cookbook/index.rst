@@ -8,6 +8,7 @@ PyQGIS Developer Cookbook
    :maxdepth: 2
 
    intro
+   loadproject
    loadlayer
    raster
    vector
@@ -17,9 +18,9 @@ PyQGIS Developer Cookbook
    composer
    expressions
    settings
-   communicating      
+   communicating
    plugins
-   ide_debugging   
+   ide_debugging
    pluginlayer
    compatibility
    releasing
