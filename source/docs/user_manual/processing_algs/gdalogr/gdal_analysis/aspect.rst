@@ -4,7 +4,8 @@ Aspect
 Description
 -----------
 
-<put algortithm description here>
+Generates an aspect map from any GDAL-supported elevation raster.
+Aspect is the compass direction that a slope faces.
 
 Parameters
 ----------
