@@ -4,29 +4,35 @@ Color relief
 Description
 -----------
 
-<put algortithm description here>
+Generates a color relief map from any GDAL-supported elevation raster.
+Color reliefs can particularly be used to depict elevations.
+The Algorithm outputs a 4-band raster with values computed from the elevation
+and a text-based color configuration file. By default, the colors between the given
+elevation values are blenden smoothly and the result is a nice colorized elevation raster.
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Elevation raster layer.
 
 ``Band number`` [number]
-  <put parameter description here>
+  The number of a band containing elevation values.
 
   Default: *1*
 
 ``Compute edges`` [boolean]
-  <put parameter description here>
+  Generates edges from the elevation raster.
 
   Default: *False*
 
 ``Color configuration file`` [file]
-  <put parameter description here>
+  A text-based color configuration file.
 
 ``Matching mode`` [selection]
-  <put parameter description here>
+  The "0,0,0,0" RGBA mode results in color interpolation whereas the Exact color and
+  Nearest color modes avoid interpolation of values that don't match an index of the
+  color configuration file.
 
   Options:
 
@@ -40,7 +46,7 @@ Outputs
 -------
 
 ``Output file`` [raster]
-  <put output description here>
+  A 4-band output raster.
 
 Console usage
 -------------

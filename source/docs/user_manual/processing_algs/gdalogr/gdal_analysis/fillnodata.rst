@@ -4,7 +4,8 @@ Fill nodata
 Description
 -----------
 
-<put algortithm description here>
+Fill raster regions with no data values by interpolation from edges. The values for
+the no-data regions are calculated by the sourrounding pixel values.
 
 Parameters
 ----------
