@@ -58,8 +58,8 @@ Attributes can be referred to by their name.
 
   print feature['name']
 
-Alternatively, attributes can be referred to by index. 
-This is will be a bit faster than using the name. 
+Alternatively, attributes can be referred to by index.
+This is will be a bit faster than using the name.
 For example, to get the first attribute:
 
 ::
@@ -150,7 +150,7 @@ to find out what set of functionality is supported
 
   caps = layer.dataProvider().capabilities()
 
-By using any of following methods for vector layer editing, the changes are
+By using any of the following methods for vector layer editing, the changes are
 directly committed to the underlying data store (a file, database etc). In case
 you would like to do only temporary changes, skip to the next section that
 explains how to do :ref:`modifications with editing buffer <editing-buffer>`.
