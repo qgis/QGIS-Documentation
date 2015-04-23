@@ -8,7 +8,7 @@ Generates a color relief map from any GDAL-supported elevation raster.
 Color reliefs can particularly be used to depict elevations.
 The Algorithm outputs a 4-band raster with values computed from the elevation
 and a text-based color configuration file. By default, the colors between the given
-elevation values are blenden smoothly and the result is a nice colorized elevation raster.
+elevation values are blended smoothly and the result is a nice colorized elevation raster.
 
 Parameters
 ----------

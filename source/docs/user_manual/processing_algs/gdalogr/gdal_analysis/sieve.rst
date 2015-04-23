@@ -4,13 +4,15 @@ Sieve
 Description
 -----------
 
-<put algortithm description here>
+Removes raster polygons smaller than a provided threshold size (in pixels) and
+replaces them with the pixel value of the largest neighbour polygon. It is 
+useful if you have a large amount of small areas on your raster map.
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Raster layer.
 
 ``Threshold`` [number]
   <put parameter description here>
