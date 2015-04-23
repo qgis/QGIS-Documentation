@@ -9,7 +9,7 @@ Reading And Storing Settings
 Many times it is useful for a plugin to save some variables so that the user
 does not have to enter or select them again next time the plugin is run.
 
-These variables can be saved a retrieved with help of Qt and QGIS API. For each
+These variables can be saved and retrieved with help of Qt and QGIS API. For each
 variable, you should pick a key that will be used to access the variable ---
 for user's favourite color you could use key "favourite_color" or any other
 meaningful string. It is recommended to give some structure to naming of keys.
