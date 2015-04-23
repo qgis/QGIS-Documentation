@@ -27,17 +27,17 @@ Parameters
   Default: *False*
 
 ``Use Zevenbergen&Thorne formula (instead of the Horn's one)`` [boolean]
-  Activate Zevenbergen&Thorne formula for smooth landscapes
+  Activates Zevenbergen&Thorne formula for smooth landscapes.
 
   Default: *False*
 
 ``Return trigonometric angle (instead of azimuth)`` [boolean]
-  Activating the trigonometric angle results in different categories: 0° (=East), 90° (North), 180° (=West), 270° (=South)
+  Activating the trigonometric angle results in different categories: 0° (=East), 90° (North), 180° (=West), 270° (=South).
 
   Default: *False*
 
 ``Return 0 for flat (instead of -9999)`` [boolean]
-  Activating this option will insert a 0-value for the value -9999 on flat areas
+  Activating this option will insert a 0-value for the value -9999 on flat areas.
 
   Default: *False*
 
