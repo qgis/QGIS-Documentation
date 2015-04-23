@@ -463,6 +463,7 @@ The following example code illustrates creating and populating a memory provider
   pr.addAttributes([QgsField("name", QVariant.String),
                       QgsField("age",  QVariant.Int),
                       QgsField("size", QVariant.Double)])
+  vl.updateFields() # tell the vector layer to fetch changes from the provider
 
   # add a feature
   fet = QgsFeature()
