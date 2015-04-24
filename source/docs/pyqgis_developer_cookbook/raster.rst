@@ -85,15 +85,19 @@ Single Band Rasters
 They are rendered in gray colors by default. To change the drawing style to
 pseudocolor::
 
-  rlayer.setDrawingStyle("SingleBandPseudoColor")
-  rlayer.setColorShadingAlgorithm(QgsRasterLayer.PseudoColorShader)
+    # Check the renderer
+    rlayer.renderer().type()
+    u'singlebandgray'
+    rlayer.setDrawingStyle("SingleBandPseudoColor")
+    # The renderer is now changed
+    rlayer.renderer().type()
+    u'singlebandpseudocolor'
+    # Set a color ramp hader function
+    shader_func = QgsColorRampShader()
+    rlayer.renderer().shader().setRasterShaderFunction(shader_func)
 
-The ``PseudoColorShader`` is a basic shader that highlights low values in blue
-and high values in red. Another, ``FreakOutShader`` uses more fancy colors and
-according to the documentation, it will frighten your granny and make your dogs
-howl.
-
-There is also ``ColorRampShader`` which maps the colors as specified by its
+The :class:`PseudoColorShader` is a basic shader that highlights low values in blue
+and high values in red. There is also :class:`ColorRampShader` which maps the colors as specified by its
 color map. It has three modes of interpolation of values:
 
 * linear (``INTERPOLATED``): resulting color is linearly interpolated from the
@@ -106,16 +110,16 @@ color map. It has three modes of interpolation of values:
 To set an interpolated color ramp shader ranging from green to yellow color
 (for pixel values from 0 to 255)::
 
-  rlayer.setColorShadingAlgorithm(QgsRasterLayer.ColorRampShader)
+  rlayer.renderer().shader().setRasterShaderFunction(QgsColorRampShader())
   lst = [QgsColorRampShader.ColorRampItem(0, QColor(0, 255, 0)), \
       QgsColorRampShader.ColorRampItem(255, QColor(255, 255 ,0))]
-  fcn = rlayer.rasterShader().rasterShaderFunction()
+  fcn = rlayer.renderer().shader().rasterShaderFunction()
   fcn.setColorRampType(QgsColorRampShader.INTERPOLATED)
   fcn.setColorRampItemList(lst)
 
-To return back to default gray levels, use:
+To return back to default gray levels, use::
 
-  rlayer.setDrawingStyle(QgsRasterLayer.SingleBandGray)
+  rlayer.setDrawingStyle('SingleBandGray')
 
 .. index:: rasters; multi band
 
@@ -127,16 +131,9 @@ create a color image (this is the ``MultiBandColor`` drawing style. In some
 cases you might want to override these setting. The following code interchanges
 red band (1) and green band (2)::
 
-  rlayer.setGreenBandName(rlayer.bandName(1))
-  rlayer.setRedBandName(rlayer.bandName(2))
-
-In case only one band is necessary for visualization of the raster, single band
-drawing can be chosen --- either gray levels or pseudocolor, see previous
-section::
-
-  rlayer.setDrawingStyle(QgsRasterLayer.MultiBandSingleBandPseudoColor)
-  rlayer.setGrayBandName(rlayer.bandName(1))
-  rlayer.setColorShadingAlgorithm(QgsRasterLayer.PseudoColorShader)
+    rlayer.setDrawingStyle('MultiBandColor')
+    rlayer.renderer().setGreenBand(1)
+    rlayer.setRedBand(2)
 
 
 .. index::
