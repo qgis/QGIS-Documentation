@@ -5,7 +5,12 @@ Description
 -----------
 
 Outputs a single-band raster with values computed from the elevation. Roughness
-is the largest inter-cell difference of a central pixel and its sourrounding cell. 
+is the degree of irregularity of the surface. It's calculated by the largest inter-cell
+difference of a central pixel and its sourrounding cell.
+The determination of the roughness plays a role in the analysis of terrain elevation data, 
+it's useful for calculations of the river morphology, in climatology and physical geography
+in general.
+
 
 Parameters
 ----------

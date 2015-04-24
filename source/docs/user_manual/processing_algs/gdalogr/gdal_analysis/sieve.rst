@@ -15,12 +15,12 @@ Parameters
   Raster layer.
 
 ``Threshold`` [number]
-  <put parameter description here>
+  Only raster polygons smaller than this size will be removed.
 
   Default: *2*
 
 ``Pixel connection`` [selection]
-  <put parameter description here>
+  Either four connectedness or eight connectedness should be used when determining.
 
   Options:
 
@@ -33,7 +33,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  Output raster layer.
 
 Console usage
 -------------

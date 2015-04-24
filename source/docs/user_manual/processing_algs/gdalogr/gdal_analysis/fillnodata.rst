@@ -38,10 +38,10 @@ Parameters
 ``Validity mask`` [raster]
   Optional.
 
-  <put parameter description here>
+  A mask that defines which areas are to be filled.
 
 ``Do not use default validity mask`` [boolean]
-  <put parameter description here>
+  Activates the user-defined validity mask.
 
   Default: *False*
 
