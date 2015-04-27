@@ -4,13 +4,13 @@ Import Vector into PostGIS database (available connections)
 Description
 -----------
 
-<put algortithm description here>
+Imports vector layers inside a PostGIS database.
 
 Parameters
 ----------
 
 ``Database (connection name)`` [selection]
-  <put parameter description here>
+  Requires the database (connection) name.
 
   Options:
 
@@ -19,10 +19,10 @@ Parameters
   Default: *0*
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Any OGr-supported vector layer.
 
 ``Output geometry type`` [selection]
-  <put parameter description here>
+  Defines the output geometry type. By default this is Polygon.
 
   Options:
 
@@ -40,12 +40,12 @@ Parameters
   Default: *5*
 
 ``Input CRS (EPSG Code)`` [crs]
-  <put parameter description here>
+  CRS of the input vector layer.
 
   Default: *EPSG:4326*
 
 ``Output CRS (EPSG Code)`` [crs]
-  <put parameter description here>
+  Defines the output CRS of the database table.
 
   Default: *EPSG:4326*
 

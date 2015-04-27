@@ -4,16 +4,18 @@ Extract projection
 Description
 -----------
 
-<put algortithm description here>
+Extracts the projection of a raster file and writes it into a 
+world-file.
 
 Parameters
 ----------
 
 ``Input file`` [raster]
-  <put parameter description here>
+  input raster file.
 
 ``Create also .prj file`` [boolean]
-  <put parameter description here>
+  If this is acivated also a *.prj-file containing the projection 
+  information is created.
 
   Default: *False*
 

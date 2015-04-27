@@ -4,31 +4,33 @@ Warp (reproject)
 Description
 -----------
 
-<put algortithm description here>
+Transfers a raster layer into another Coordinate Reference System (CRS).
+The output file resolution and the resampling method can be chosen.
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Input raster layer.
 
 ``Source SRS (EPSG Code)`` [crs]
-  <put parameter description here>
+  Defines the CRS of the input raster layer.
 
   Default: *EPSG:4326*
 
 ``Destination SRS (EPSG Code)`` [crs]
-  <put parameter description here>
+  Defines the target CRS of the raster layer. 
 
   Default: *EPSG:4326*
 
 ``Output file resolution in target georeferenced units (leave 0 for no change)`` [number]
-  <put parameter description here>
+  Defines the output file resolution of reprojection result.
 
   Default: *0.0*
 
 ``Resampling method`` [selection]
-  <put parameter description here>
+  Several resampling methods can be chosen for the reprojection.
+  By default a near resampling method is chosen.
 
   Options:
 
@@ -48,7 +50,8 @@ Parameters
   Default: *(not set)*
 
 ``Output raster type`` [selection]
-  <put parameter description here>
+  Defines the format of the output raster file.
+  By default this is Float32.
 
   Options:
 

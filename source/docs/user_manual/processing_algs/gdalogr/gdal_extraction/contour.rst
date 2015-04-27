@@ -4,23 +4,25 @@ Contour
 Description
 -----------
 
-<put algortithm description here>
+Extracts contour lines from any GDAL-supported elevation raster.
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Input elevation raster.
 
 ``Interval between contour lines`` [number]
-  <put parameter description here>
+  Defines the interval between the contour lines in the given units of the
+  elevation raster. 
 
   Default: *10.0*
 
 ``Attribute name (if not set, no elevation attribute is attached)`` [string]
   Optional.
 
-  <put parameter description here>
+  Defines the attribute name for the field containing the values of the 
+  contour lines. If nothing is defines the default name will be 'ELEV'.
 
   Default: *ELEV*
 

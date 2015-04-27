@@ -4,16 +4,17 @@ Clip vectors by extent
 Description
 -----------
 
-<put algortithm description here>
+Clips any OGR-supported vector file to a given extent.
 
 Parameters
 ----------
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer.
 
 ``Clip extent`` [extent]
-  <put parameter description here>
+  Defines the bounding box that should be used for the output vector file.
+  It has to be defined in target CRS units.
 
   Default: *0,1,0,1*
 
@@ -28,7 +29,7 @@ Outputs
 -------
 
 ``Output layer`` [vector]
-  <put output description here>
+  Output vector layer.
 
 Console usage
 -------------
