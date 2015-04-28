@@ -111,7 +111,7 @@ Handling errors
 
   exp = QgsExpression("1 + 1 = 2 ")
   if exp.hasParserError():
-    raise Expection(exp.parserErrorString())
+    raise Exception(exp.parserErrorString())
 
   value = exp.evaluate()
   if exp.hasEvalError():
