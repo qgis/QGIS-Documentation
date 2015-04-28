@@ -30,6 +30,8 @@ method of :class:`QgsMapCanvas` as shown in the following example::
 To add add features to the selected features list for a given layer, you
 can call :func:`setSelectedFeatures()` passing to it the list of features IDs::
 
+    # Get the active layer (must be a vector layer)
+    layer = iface.activeLayer()
     # Get the first feature from the layer
     feature = layer.getFeatures().next()
     # Add this features to the selected list
