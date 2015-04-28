@@ -4,16 +4,18 @@ Import into PostGIS
 Description
 -----------
 
-<put algortithm description here>
+Imports existing vector layer in QGIS int a PostGIS database.
+Before a connection between QGIS and the PostGIS database has to
+be created (for example with the DB Manager).
 
 Parameters
 ----------
 
 ``Layer to import`` [vector: any]
-  <put parameter description here>
+  Existing vector layer in QGIS.
 
 ``Database (connection name)`` [selection]
-  <put parameter description here>
+  Name of the database connection name (not the database name).
 
   Options:
 
@@ -22,42 +24,48 @@ Parameters
   Default: *0*
 
 ``Schema (schema name)`` [string]
-  <put parameter description here>
+  An existing schema of the selected database can be chosen.
+  By feault this is the 'public' schema.
 
   Default: *public*
 
 ``Table to import to (leave blank to use layer name)`` [string]
-  <put parameter description here>
+  Defines a table name for the imported vector file.
+  By default the name of the vector file is chosen.
 
   Default: *(not set)*
 
 ``Primary key field`` [tablefield: any]
   Optional.
 
-  <put parameter description here>
+  Sets the primary key field from an existing field in the vector layer.
 
 ``Geometry column`` [string]
-  <put parameter description here>
+  Defines the name for the geometry information of the table.
 
   Default: *geom*
 
 ``Overwrite`` [boolean]
-  <put parameter description here>
+  Overwrites existing tables having the same name.
 
   Default: *True*
 
 ``Create spatial index`` [boolean]
-  <put parameter description here>
+  Defines that no spatial index is created. By default a spatial index 
+  is created.
 
   Default: *True*
 
 ``Convert field names to lowercase`` [boolean]
-  <put parameter description here>
+  If activated this prevents that the field names of the input vector layer
+  are set to lowercase.
+  By default field names will be lowercase after the import.
 
   Default: *True*
 
 ``Drop length constraints on character fields`` [boolean]
-  <put parameter description here>
+  Activates that the length constraints on character fields are dropped.
+  By default the length constraints are valid.
 
   Default: *False*
 

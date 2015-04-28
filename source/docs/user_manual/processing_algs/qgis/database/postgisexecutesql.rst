@@ -4,18 +4,21 @@ PostGIS execute SQL
 Description
 -----------
 
-<put algortithm description here>
+Makes it possible to perform a SQL database query on a PostGIS database
+connected to QGIS.
 
 Parameters
 ----------
 
 ``Database`` [string]
-  <put parameter description here>
+  Name of the database, not the connection name.
+  By default you don't have to fill in the name, the current database
+  connection will be chosen.
 
   Default: *(not set)*
 
 ``SQL query`` [string]
-  <put parameter description here>
+  Defines the SQL query, for example 'create schema test;'.
 
   Default: *(not set)*
 
