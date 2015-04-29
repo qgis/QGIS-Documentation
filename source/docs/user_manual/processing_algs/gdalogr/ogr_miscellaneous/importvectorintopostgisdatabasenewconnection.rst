@@ -4,7 +4,9 @@ Import Vector into PostGIS database (new connection)
 Description
 -----------
 
-<put algortithm description here>
+Imports vector layers inside a PostGIS database. A new connection
+to the PostGIS database must be created.
+The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ----------

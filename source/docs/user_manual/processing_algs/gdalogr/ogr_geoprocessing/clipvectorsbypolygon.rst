@@ -5,6 +5,7 @@ Description
 -----------
 
 Clips any OGR-supported vector layer by a polygon.
+The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ----------

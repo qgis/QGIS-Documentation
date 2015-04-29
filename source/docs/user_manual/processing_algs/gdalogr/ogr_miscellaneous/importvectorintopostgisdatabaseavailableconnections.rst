@@ -4,7 +4,9 @@ Import Vector into PostGIS database (available connections)
 Description
 -----------
 
-Imports vector layers inside a PostGIS database.
+Imports vector layers inside a PostGIS database on the basis of
+an available connection.
+The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ----------

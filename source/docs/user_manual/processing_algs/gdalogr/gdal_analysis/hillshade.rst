@@ -7,6 +7,7 @@ Description
 Outputs a raster with a nice shaded relief effect. It’s very useful for visualizing
 the terrain. You can optionally specify the azimuth and altitude of the light source, a vertical
 exaggeration factor and a scaling factor to account for differences between vertical and horizontal units.
+The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
 
 Parameters
 ----------

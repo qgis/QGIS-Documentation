@@ -7,6 +7,7 @@ Description
 Merges raster files in a simple way. Here you can use a pseudocolor
 table from an input raster and define the output raster type. All
 the images must be in the same coordinate system.
+The algorithm is derived from the `GDAL merge utility <http://www.gdal.org/gdal_merge.html>`_ .
 
 Parameters
 ----------

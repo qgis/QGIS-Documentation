@@ -5,6 +5,7 @@ Description
 -----------
 
 Clips any GDAL-supported raster by a vector mask layer.
+The algorithm is derived from the `GDAL grid utility <http://www.gdal.org/gdal_grid.html>`_ .
 
 Parameters
 ----------

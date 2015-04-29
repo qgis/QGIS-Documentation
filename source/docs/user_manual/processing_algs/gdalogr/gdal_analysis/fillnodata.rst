@@ -12,6 +12,7 @@ interpolating missing regions of fairly continuously varying rasters (such as el
 models for instance). It is also suitable for filling small holes and cracks in more irregularly
 varying images (like airphotos). It is generally not so great for interpolating a raster 
 from sparse point data.
+The algorithm is derived from the `GDAL fillnodata utility <http://www.gdal.org/gdal_fillnodata.html>`_ .
 
 Parameters
 ----------

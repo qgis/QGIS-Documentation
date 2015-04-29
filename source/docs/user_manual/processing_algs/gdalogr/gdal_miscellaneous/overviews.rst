@@ -7,6 +7,7 @@ Description
 To speed up rendering time of raster layers overviews (pyramids) can
 be created. Overviews are lower resolution copies of the data which 
 QGIS uses depending of the level of zoom.
+The algorithm is derived from the `GDAL addo utility <http://www.gdal.org/gdaladdo.html>`_ .
 
 Parameters
 ----------

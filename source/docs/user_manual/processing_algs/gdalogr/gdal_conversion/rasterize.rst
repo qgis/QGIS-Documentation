@@ -5,6 +5,7 @@ Description
 -----------
 
 Converts vector geometries (points, lines and polygons) into a raster image.
+The algorithm is derived from the `GDAL rasterize utility <http://www.gdal.org/gdal_rasterize.html>`_ .
 
 
 Parameters

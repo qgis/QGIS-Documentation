@@ -7,6 +7,8 @@ Description
 Creates vector polygons for all connected regions of pixels in the
 raster sharing a common pixel value. Each polygon is created with an
 attribute indicating the pixel value of that polygon. 
+The algorithm is derived from the `GDAL polygonize utility <http://www.gdal.org/gdal_polygonize.html>`_ .
+
 Parameters
 ----------
 

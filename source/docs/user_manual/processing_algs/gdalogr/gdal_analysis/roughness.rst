@@ -10,6 +10,7 @@ difference of a central pixel and its sourrounding cell.
 The determination of the roughness plays a role in the analysis of terrain elevation data, 
 it's useful for calculations of the river morphology, in climatology and physical geography
 in general.
+The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
 
 
 Parameters

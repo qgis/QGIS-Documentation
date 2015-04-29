@@ -7,6 +7,7 @@ Description
 Removes raster polygons smaller than a provided threshold size (in pixels) and
 replaces them with the pixel value of the largest neighbour polygon. It is 
 useful if you have a large amount of small areas on your raster map.
+The algorithm is derived from the `GDAL sieve utility <http://www.gdal.org/gdal_sieve.html>`_ .
 
 Parameters
 ----------

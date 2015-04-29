@@ -5,6 +5,7 @@ Description
 -----------
 
 Extracts contour lines from any GDAL-supported elevation raster.
+The algorithm is derived from the `GDAL contour utility <http://www.gdal.org/gdal_contour.html>`_ .
 
 Parameters
 ----------
