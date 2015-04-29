@@ -23,6 +23,12 @@ like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier) or
 subdirectories of these paths have to contain an __init__.py file to be
 considered Python packages that can be imported as plugins.
 
+.. note::
+
+    By setting `QGIS_PLUGINPATH` to an existing directory path, you can add this
+    path to the list of paths that are searched for plugins.
+
+
 Steps:
 
 #. *Idea*: Have an idea about what you want to do with your new QGIS plugin.
