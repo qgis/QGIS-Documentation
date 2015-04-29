@@ -11,6 +11,7 @@ table. This conversion utilizes Floyd-Steinberg dithering (error diffusion) to
 maximize output image visual quality.
 If you want to classify a raster map and want to reduce the number of classes it
 can be helpful to downsample your image with this algorithm before.
+The algorithm is derived from the `GDAL rgb2pct utility <http://www.gdal.org/rgb2pct.html>`_ .
 
 Parameters
 ----------

@@ -6,6 +6,7 @@ Description
 
 Extracts the projection of a raster file and writes it into a 
 world-file.
+The algorithm is derived from the the `GDAL srsinfo utility <http://www.gdal.org/gdalsrsinfo.html>`_ .
 
 Parameters
 ----------

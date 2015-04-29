@@ -9,6 +9,7 @@ Aspect is the compass direction that a slope faces. The pixels will
 have a value from 0-360° measured in degress from north indicating the azimuth.
 On the northern hemisphere, the north side of slopes is often shaded (small azimuth from 0°-90°),
 while the southern side receives more solar radiation (higher azimuth from 180°-270°).
+The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
 
 Parameters
 ----------

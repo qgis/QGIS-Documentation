@@ -5,6 +5,8 @@ Description
 -----------
 
 Clips any GDAL-supported raster file to a given extent.
+The algorithm is derived from the `GDAL grid utility <http://www.gdal.org/gdal_grid.html>`_ .
+
 
 Parameters
 ----------
@@ -34,7 +36,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  Output raster layer.
 
 Console usage
 -------------

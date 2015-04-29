@@ -9,6 +9,7 @@ Color reliefs can particularly be used to depict elevations.
 The Algorithm outputs a 4-band raster with values computed from the elevation
 and a text-based color configuration file. By default, the colors between the given
 elevation values are blended smoothly and the result is a nice colorized elevation raster.
+The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
 
 Parameters
 ----------

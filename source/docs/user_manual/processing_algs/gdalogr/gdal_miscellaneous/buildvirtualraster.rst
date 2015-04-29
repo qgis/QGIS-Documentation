@@ -6,6 +6,7 @@ Description
 
 Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
 With a mosaic you can merge several raster files.
+The algorithm is derived from the `GDAL buildvrt utility <http://www.gdal.org/gdalbuildvrt.html>`_ .
 
 Parameters
 ----------

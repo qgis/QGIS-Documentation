@@ -6,7 +6,8 @@ Description
 
 Generate a slope map from any GDAL-supported elevation raster. Slope is the
 angle of inclination to the horizontal. You have the option of specifying the
-type of slope value you want: degrees or percent slope. 
+type of slope value you want: degrees or percent slope.
+The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
 
 
 

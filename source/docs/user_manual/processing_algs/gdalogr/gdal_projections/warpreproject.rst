@@ -6,6 +6,7 @@ Description
 
 Transfers a raster layer into another Coordinate Reference System (CRS).
 The output file resolution and the resampling method can be chosen.
+The algorithm is derived from the `GDAL warp utility <http://www.gdal.org/gdalwarp.html>`_ .
 
 Parameters
 ----------
