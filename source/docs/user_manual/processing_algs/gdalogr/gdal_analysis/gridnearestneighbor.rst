@@ -3,43 +3,44 @@ Grid (Nearest neighbor)
 
 Description
 -----------
-
-<put algortithm description here>
+The Nearest Neighbor method doesn't perform any interpolation or smoothing, it just takes the value of nearest point 
+found in grid node search ellipse and returns it as a result. If there are no points found, the specified NODATA value
+will be returned.
 
 Parameters
 ----------
 
 ``Input layer`` [vector: point]
-  <put parameter description here>
+  Point vector layer
 
 ``Z field`` [tablefield: numeric]
-  Optional.
-
-  <put parameter description here>
+  Field for the interpolation (*Optional*).
 
 ``Radius 1`` [number]
-  <put parameter description here>
-
+  The first radius (X axis if rotation angle is 0) of search ellipse.
+  
   Default: *0.0*
 
 ``Radius 2`` [number]
-  <put parameter description here>
-
+  The second radius (Y axis if rotation angle is 0) of search ellipse.
+  
   Default: *0.0*
 
 ``Angle`` [number]
-  <put parameter description here>
-
+  Angle of ellipse rotation in degrees.
+  Ellipse rotated counter clockwise.
+  
   Default: *0.0*
 
 ``Nodata`` [number]
-  <put parameter description here>
-
+  No data marker to fill empty points.
+  
   Default: *0.0*
 
 ``Output raster type`` [selection]
-  <put parameter description here>
 
+  Raster file type
+  
   Options:
 
   * 0 --- Byte
@@ -60,7 +61,8 @@ Outputs
 -------
 
 ``Output file`` [raster]
-  <put output description here>
+
+Interpolated raster file
 
 Console usage
 -------------
@@ -71,4 +73,5 @@ Console usage
 
 See also
 --------
+`GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
 
