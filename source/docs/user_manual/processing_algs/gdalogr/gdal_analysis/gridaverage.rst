@@ -3,48 +3,51 @@ Grid (Moving average)
 
 Description
 -----------
+The Moving Average is a simple data averaging algorithm. It uses a moving window of elliptic form to search values 
+and averages all data points within the window. Search ellipse can be rotated by specified angle, the center of ellipse
+located at the grid node. Also the minimum number of data points to average can be set, if there are not enough points 
+in window, the grid node considered empty and will be filled with specified NODATA value.
 
-<put algortithm description here>
 
 Parameters
 ----------
 
 ``Input layer`` [vector: point]
-  <put parameter description here>
+  point vector layer
 
 ``Z field`` [tablefield: numeric]
-  Optional.
-
-  <put parameter description here>
+  Field for the interpolation (*Optional*)
 
 ``Radius 1`` [number]
-  <put parameter description here>
-
+  The first radius (X axis if rotation angle is 0) of search ellipse.
+  
   Default: *0.0*
 
 ``Radius 2`` [number]
-  <put parameter description here>
-
+  The second radius (Y axis if rotation angle is 0) of search ellipse.
+  
   Default: *0.0*
 
 ``Min points`` [number]
-  <put parameter description here>
-
+  Minimum number of data points to average.
+  If less amount of points found the grid node considered empty and will be filled with NODATA marker.
+  
   Default: *0.0*
 
 ``Angle`` [number]
-  <put parameter description here>
-
+  Angle of ellipse rotation in degrees.
+  Ellipse rotated counter clockwise.
+  
   Default: *0.0*
 
 ``Nodata`` [number]
-  <put parameter description here>
-
+  No data marker to fill empty points.
+  
   Default: *0.0*
 
 ``Output raster type`` [selection]
-  <put parameter description here>
-
+  Raster file type
+  
   Options:
 
   * 0 --- Byte
@@ -65,7 +68,7 @@ Outputs
 -------
 
 ``Output file`` [raster]
-  <put output description here>
+Interpolated raster file
 
 Console usage
 -------------
@@ -76,4 +79,4 @@ Console usage
 
 See also
 --------
-
+ `GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
