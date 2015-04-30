@@ -4,21 +4,24 @@ Proximity (raster distance)
 Description
 -----------
 
-<put algortithm description here>
+The proximity algorithm generates a raster proximity map indicating the distance from the center of each pixel
+to the center of the nearest pixel identified as a target pixel. Target pixels are those in the source raster for which
+the raster pixel value is in the set of target pixel values.
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Raster in input
 
 ``Values`` [string]
-  <put parameter description here>
+  A list of target pixel values in the source image to be considered target pixels. If not specified, all non-zero 
+  pixels will be considered target pixels. 
 
   Default: *(not set)*
 
 ``Dist units`` [selection]
-  <put parameter description here>
+  Indicate whether distances generated should be in pixel or georeferenced coordinates.
 
   Options:
 
@@ -28,22 +31,27 @@ Parameters
   Default: *0*
 
 ``Max dist (negative value to ignore)`` [number]
-  <put parameter description here>
+  The maximum distance to be generated. The nodata value will be used for pixels beyond this distance. If a nodata 
+  value is not provided, the output band will be queried for its nodata value. 
+  
+  If the output band does not have a nodata value, then the value 65535 will be used. 
+  Distance is interpreted in pixels unless *distunits* GEO is specified
 
   Default: *-1*
 
 ``No data (negative value to ignore)`` [number]
-  <put parameter description here>
+  Specify a nodata value to use for the destination proximity raster
 
   Default: *-1*
 
 ``Fixed buf val (negative value to ignore)`` [number]
-  <put parameter description here>
+  Specify a value to be applied to all pixels that are within the -maxdist of target pixels 
+  (including the target pixels) instead of a distance value
 
   Default: *-1*
 
 ``Output raster type`` [selection]
-  <put parameter description here>
+  Raster file type
 
   Options:
 
@@ -65,7 +73,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  Raster file in output
 
 Console usage
 -------------
@@ -76,4 +84,4 @@ Console usage
 
 See also
 --------
-
+`GDAL proximity algorithm <http://www.gdal.org/gdal_proximity.html>`_
