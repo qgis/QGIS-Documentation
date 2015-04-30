@@ -13,7 +13,7 @@ Parameters
 ----------
 
 ``Input layer`` [vector: point]
-  point vector layer
+  Point vector layer
 
 ``Z field`` [tablefield: numeric]
   Field for the interpolation (*Optional*)
@@ -68,6 +68,7 @@ Outputs
 -------
 
 ``Output file`` [raster]
+
 Interpolated raster file
 
 Console usage
