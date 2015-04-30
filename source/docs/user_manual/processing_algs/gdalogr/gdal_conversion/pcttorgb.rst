@@ -3,17 +3,18 @@ PCT to RGB
 
 Description
 -----------
+Convert an 8bit paletted image to 24bit RGB
 
-<put algortithm description here>
+This utility will convert a pseudocolor band on the input file into an output RGB file of the desired format.
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Input 8bit raster image
 
 ``Band to convert`` [selection]
-  <put parameter description here>
+  Band to convert to RGB
 
   Options:
 
@@ -49,7 +50,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  24bit RGB raster image
 
 Console usage
 -------------
@@ -60,4 +61,4 @@ Console usage
 
 See also
 --------
-
+`GDAL pct2rgb utility <http://www.gdal.org/pct2rgb.html>`_
