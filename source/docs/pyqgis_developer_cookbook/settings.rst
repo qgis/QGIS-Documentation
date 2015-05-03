@@ -9,7 +9,7 @@ Reading And Storing Settings
 Many times it is useful for a plugin to save some variables so that the user
 does not have to enter or select them again next time the plugin is run.
 
-These variables can be saved a retrieved with help of Qt and QGIS API. For each
+These variables can be saved and retrieved with help of Qt and QGIS API. For each
 variable, you should pick a key that will be used to access the variable ---
 for user's favourite color you could use key "favourite_color" or any other
 meaningful string. It is recommended to give some structure to naming of keys.
@@ -21,10 +21,10 @@ We can make difference between several types of settings:
 * **global settings** --- they are bound to the user at particular machine.
   QGIS itself stores a lot of global settings, for example, main window size or
   default snapping tolerance. This functionality is provided directly by Qt
-  framework by the means of QSettings class. By default, this class stores
+  framework by the means of :class:`QSettings` class. By default, this class stores
   settings in system's "native" way of storing settings, that is --- registry
   (on Windows), .plist file (on Mac OS X) or .ini file (on Unix). The
-  `QSettings documentation <http://doc.qt.nokia.com/stable/qsettings.html>`_
+  `QSettings documentation <http://doc.qt.io/qt-4.8/qsettings.html>`_
   is comprehensive, so we will provide just a simple example
 
   ::

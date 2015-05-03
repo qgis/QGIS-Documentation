@@ -4,16 +4,18 @@ Convert format
 Description
 -----------
 
-<put algortithm description here>
+Converts any OGR-supported vector layer into another OGR-supported
+format.
+This algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ----------
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer.
 
 ``Destination Format`` [selection]
-  <put parameter description here>
+  Defines the destination format. By default this is ESRI Shapefile.
 
   Options:
 
@@ -53,7 +55,7 @@ Outputs
 -------
 
 ``Output layer`` [vector]
-  <put output description here>
+  Output vector layer.
 
 Console usage
 -------------

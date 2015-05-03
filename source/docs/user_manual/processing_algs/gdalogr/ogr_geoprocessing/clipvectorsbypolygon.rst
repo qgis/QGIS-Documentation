@@ -4,16 +4,17 @@ Clip vectors by polygon
 Description
 -----------
 
-<put algortithm description here>
+Clips any OGR-supported vector layer by a polygon.
+The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ----------
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer.
 
 ``Clip layer`` [vector: polygon]
-  <put parameter description here>
+  Layer to be used as clipping extent for the input vector layer.
 
 ``Additional creation Options`` [string]
   Optional.
@@ -26,7 +27,7 @@ Outputs
 -------
 
 ``Output layer`` [vector]
-  <put output description here>
+  Output vector layer. By default this is an ESRI Shapefile.
 
 Console usage
 -------------

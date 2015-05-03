@@ -4,24 +4,28 @@ Rasterize (vector to raster)
 Description
 -----------
 
-<put algortithm description here>
+Converts vector geometries (points, lines and polygons) into a raster image.
+The algorithm is derived from the `GDAL rasterize utility <http://www.gdal.org/gdal_rasterize.html>`_ .
+
 
 Parameters
 ----------
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer with point, line or polygon geometries.
 
 ``Attribute field`` [tablefield: any]
-  <put parameter description here>
+  Defines the attribute field from which the attributes for the pixels
+  should be chosen.
 
 ``Write values inside an existing raster layer(*)`` [boolean]
-  <put parameter description here>
+  If activated writes the results into an existing raster layer. 
 
   Default: *False*
 
 ``Set output raster size (ignored if above option is checked)`` [selection]
-  <put parameter description here>
+  If the above option is not checked either the output size is in pixels (0)
+  or the output resolution is in map units per pixel (1).
 
   Options:
 
@@ -31,17 +35,17 @@ Parameters
   Default: *1*
 
 ``Horizontal`` [number]
-  <put parameter description here>
+  Sets the horizontal resolution of the output raster.
 
   Default: *100.0*
 
 ``Vertical`` [number]
-  <put parameter description here>
+  Sets the vertical resolution of the output raster.
 
   Default: *100.0*
 
 ``Raster type`` [selection]
-  <put parameter description here>
+  Defines the type of the resulting raster image.
 
   Options:
 
@@ -63,7 +67,8 @@ Outputs
 -------
 
 ``Output layer: mandatory to choose an existing raster layer if the (*) option is selected`` [raster]
-  <put output description here>
+  Output raster layer. Give in here the name of the raster layer in which the results should be written
+  (if this option is used).
 
 Console usage
 -------------

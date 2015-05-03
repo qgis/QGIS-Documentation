@@ -4,29 +4,31 @@ Clip raster by mask layer
 Description
 -----------
 
-<put algortithm description here>
+Clips any GDAL-supported raster by a vector mask layer.
+The algorithm is derived from the `GDAL grid utility <http://www.gdal.org/gdal_grid.html>`_ .
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Input raster layer.
 
 ``Mask layer`` [vector: polygon]
-  <put parameter description here>
+  Defines the vector mask for clipping the raster.
 
 ``Nodata value, leave as none to take the nodata value from input`` [string]
-  <put parameter description here>
+  Defines a value for the no-data areas of the input raster.
 
   Default: *none*
 
 ``Create and output alpha band`` [boolean]
-  <put parameter description here>
+  Creates an alpha band for the result. The alpha band then includes the transparency
+  values of the pixels. 
 
   Default: *False*
 
 ``Keep resolution of output raster`` [boolean]
-  <put parameter description here>
+  The resolution of the output raster will not be changed.
 
   Default: *False*
 
@@ -41,7 +43,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  Output raster layer.
 
 Console usage
 -------------

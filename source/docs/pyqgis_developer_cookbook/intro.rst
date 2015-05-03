@@ -21,6 +21,7 @@ SIP and this allows seamless integration of PyQGIS with PyQt.
 There are several ways how to use QGIS python bindings, they are covered
 in detail in the following sections:
 
+* automatically run Python code when QGIS starts
 * issue commands in Python console within QGIS
 * create and use plugins in Python
 * create custom applications based on QGIS API
@@ -38,6 +39,42 @@ with plugins is to download some plugins from `plugin repository <http://plugins
 and examine their code. Also, the ``python/plugins/`` folder in your QGIS installation contains
 some plugin that you can use to learn how to develop such plugin and how to perform some
 of the most common tasks
+
+.. index::
+  pair: Python; startup
+
+Run Python code when QGIS starts
+================================
+
+There are two distinct methods to run Python code every time QGIS starts.
+
+.. index::
+  pair: environment; PYQGIS_STARTUP
+
+PYQGIS_STARTUP environment variable
+-----------------------------------
+
+You can run Python code just before QGIS initialization completes by setting the
+``PYQGIS_STARTUP`` environment variable  to the path of an existing Python file.
+
+This method is something you will probably rarely need, but worth mentioning here
+because it is one of the several ways to run Python code within QGIS and because
+this code will run before QGIS initialization is complete. This method is
+very useful for cleaning sys.path, which may have undesireable paths, or for
+isolating/loading the initial environ without requiring a virt env, e.g.
+homebrew or MacPorts installs on Mac.
+
+
+.. index::
+  pair: Python; startup.py
+
+The :file:`startup.py` file
+----------------------------
+
+Every time QGIS starts, the user's Python home directory (usually:
+:file:`.qgis2/python`) is searched for a file named :file:`startup.py`, if that file exists,
+it is executed by the embedded Python interpreter.
+
 
 .. index::
   pair: Python; console
@@ -97,6 +134,8 @@ instructions.
 
 .. index::
   pair: Python; custom applications
+
+.. _pythonapplications:
 
 Python Applications
 ===================

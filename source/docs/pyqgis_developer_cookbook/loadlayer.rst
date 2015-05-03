@@ -27,12 +27,14 @@ check whether the layer has been loaded successfully. If it was not, an invalid
 layer instance is returned.
 
 The quickest way to open and display a vector layer in QGIS is the addVectorLayer function of the :class:`QgisInterface`:
-  
-  ::
-  
-    iface.addVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
 
-This creates a new layer and adds it to the map layer registry (making it appear in the layer list) in one step.
+  ::
+
+    layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
+    if not layer:
+      print "Layer failed to load!"
+
+This creates a new layer and adds it to the map layer registry (making it appear in the layer list) in one step. The function returns the layer instance or `None` if the layer couldn't be loaded.
 
 The following list shows how to access various data sources using vector data
 providers:
@@ -174,9 +176,9 @@ by default). To load a raster from a file, specify its file name and base name
   pair: loading; WMS raster
 
 Similarly to vector layers, raster layers can be loaded using the addRasterLayer function of the :class:`QgisInterface`:
-  
+
   ::
-  
+
     iface.addRasterLayer("/path/to/raster/file.tif", "layer_name_you_like")
 
 This creates a new layer and adds it to the map layer registry (making it appear in the layer list) in one step.

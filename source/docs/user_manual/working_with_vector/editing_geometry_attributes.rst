@@ -438,6 +438,16 @@ make sure the schemas match.
    guarantee the geometry is identical. This is simply because there are
    small rounding-off errors involved when converting between projections.
 
+.. _tip_copying_string_attributes:
+
+.. tip:: **Copy string attribute into another**
+
+   If you have created a new column in your attribute table with type 'string'
+   and want to paste values from another attribute column that has a greater length
+   the length of the column size will be extended to the same amount. This is because
+   the GDAL Shapefile driver starting with GDAL/OGR 1.10 knows to auto-extend string
+   and integer fields to dynamically accomodate for the length of the data to be inserted.
+
 Deleting Selected Features
 ..........................
 

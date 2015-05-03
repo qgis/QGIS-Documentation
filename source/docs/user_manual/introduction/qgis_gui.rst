@@ -256,6 +256,7 @@ Database
 Menu Option							Shortcut	      Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 :menuselection:`Database -->`                                   \                     see :ref:`dbmanager`                        :guilabel:`Database`
+==============================================================  ====================  ==========================================  ===============================
 
 When starting |qg| for the first time not all core plugins are loaded.
 
@@ -267,6 +268,7 @@ Web
 Menu Option							Shortcut	      Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ==============================
 :guilabel:`Metasearch`                                          \                     see :ref:`metasearch`                       :guilabel:`Web`
+==============================================================  ====================  ==========================================  ==============================
 
 When starting |qg| for the first time not all core plugins are loaded.
 
@@ -426,37 +428,37 @@ selected legend item is a raster or a vector layer. For GRASS vector layers,
 
 **Right mouse button menu for raster layers**
 
-* :menuselection:`Zoom to layer extent`
+* :menuselection:`Zoom to Layer`
 * :menuselection:`Show in overview`
 * :menuselection:`Zoom to Best Scale (100%)`
-* :menuselection:`Stretch Using Current Extent`
 * :menuselection:`Remove`
 * :menuselection:`Duplicate`
 * :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
+* :menuselectioin:`Styles -->`
 * :menuselection:`Save as ...`
-* :menuselection:`Save As Layer Definition Style`
+* :menuselection:`Save As Layer Definition File ...`
 * :menuselection:`Properties`
 * :menuselection:`Rename`
-* :menuselection:`Copy Style`
 
 Additionally, according to layer position and selection
 
-* :menuselection:`Make to toplevel item`
+* :menuselection:`Move to Top-level`
 * :menuselection:`Group Selected`
 
 ..   * :menuselection:`Show file groups`
 
 **Right mouse button menu for vector layers**
 
-* :menuselection:`Zoom to Layer Extent`
-* :menuselection:`Show in Overview`
+* :menuselection:`Zoom to Layer`
+* :menuselection:`Show in overview`
 * :menuselection:`Remove`
 * :menuselection:`Duplicate`
 * :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
+* :menuselection:`Styles -->
 * :menuselection:`Open Attribute Table`
 * :menuselection:`Toggle Editing` (not available for GRASS layers)
 * :menuselection:`Save As ...`
@@ -465,11 +467,10 @@ Additionally, according to layer position and selection
 * :menuselection:`Show Feature Count`
 * :menuselection:`Properties`
 * :menuselection:`Rename`
-* :menuselection:`Copy Style`
 
 Additionally, according to layer position and selection
 
-* :menuselection:`Make to toplevel item`
+* :menuselection:`Move to Top-level`
 * :menuselection:`Group Selected`
 
 ..   * :menuselection:`Show file groups`
@@ -605,8 +606,7 @@ properties for the current project.
    coordinate in your layer as specified in degrees. To get correct scale values, you can
    either change this setting to meters manually in the :guilabel:`General` tab
    under :menuselection:`Settings --> Project Properties`, or you can select a
-   project CRS clicking on the
-   |mIconProjectionDisabled| :sup:`CRS status` icon in the lower right-hand
-   corner of the status bar. In the last case, the units are set to what the
+   project CRS clicking on the |mIconProjectionDisabled| :sup:`Current CRS:` icon in the
+   lower right-hand corner of the status bar. In the last case, the units are set to what the
    project projection specifies (e.g., '+units=m').
 

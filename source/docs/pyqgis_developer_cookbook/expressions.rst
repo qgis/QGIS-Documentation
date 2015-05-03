@@ -111,7 +111,7 @@ Handling errors
 
   exp = QgsExpression("1 + 1 = 2 ")
   if exp.hasParserError():
-    raise Expection(exp.parserErrorString())
+    raise Exception(exp.parserErrorString())
 
   value = exp.evaluate()
   if exp.hasEvalError():
@@ -131,7 +131,7 @@ matches a predicate.
     print "Where"
     exp = QgsExpression(exp)
     if exp.hasParserError():
-      raise Expection(exp.parserErrorString())
+      raise Exception(exp.parserErrorString())
     exp.prepare(layer.pendingFields())
     for feature in layer.getFeatures():
       value = exp.evaluate(feature)

@@ -4,21 +4,24 @@ Clip raster by extent
 Description
 -----------
 
-<put algortithm description here>
+Clips any GDAL-supported raster file to a given extent.
+The algorithm is derived from the `GDAL grid utility <http://www.gdal.org/gdal_grid.html>`_ .
+
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Input raster file.
 
 ``Nodata value, leave as none to take the nodata value from input`` [string]
-  <put parameter description here>
+  Defines a value that should be inserted for the nodata values in the output raster.
 
   Default: *none*
 
 ``Clipping extent`` [extent]
-  <put parameter description here>
+  Extent that should be used for the output raster. Selects only features within the
+  specified bounding box.
 
   Default: *0,1,0,1*
 
@@ -33,7 +36,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  Output raster layer.
 
 Console usage
 -------------

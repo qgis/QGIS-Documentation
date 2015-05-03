@@ -4,36 +4,45 @@ Fill nodata
 Description
 -----------
 
-<put algortithm description here>
+Fill raster regions with no data values by interpolation from edges. The values for
+the no-data regions are calculated by the sourrounding pixel values using inverse distance
+weighting. After the interpolation a smoothing of the results takes placce.
+Input can be any GDAL-supported raster layer. This algorithm is generally suitable for
+interpolating missing regions of fairly continuously varying rasters (such as elevation
+models for instance). It is also suitable for filling small holes and cracks in more irregularly
+varying images (like airphotos). It is generally not so great for interpolating a raster 
+from sparse point data.
+The algorithm is derived from the `GDAL fillnodata utility <http://www.gdal.org/gdal_fillnodata.html>`_ .
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Raster layer.
 
 ``Search distance`` [number]
-  <put parameter description here>
+  The number of pixels to search in all directions to interpolate from.
 
   Default: *100*
 
 ``Smooth iterations`` [number]
-  <put parameter description here>
+  The number of 3x3 filter passes to run (0 or more) to smoothen the results
+  of the interpolation.
 
   Default: *0*
 
 ``Band to operate on`` [number]
-  <put parameter description here>
+  The band to operate on. Nodata values must be represented by the value 0.
 
   Default: *1*
 
 ``Validity mask`` [raster]
   Optional.
 
-  <put parameter description here>
+  A mask that defines which areas are to be filled.
 
 ``Do not use default validity mask`` [boolean]
-  <put parameter description here>
+  Activates the user-defined validity mask.
 
   Default: *False*
 
@@ -41,7 +50,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  Output raster in any GDAL-supported format.
 
 Console usage
 -------------

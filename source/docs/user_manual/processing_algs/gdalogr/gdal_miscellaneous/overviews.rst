@@ -4,26 +4,30 @@ Build overviews (pyramids)
 Description
 -----------
 
-<put algortithm description here>
+To speed up rendering time of raster layers overviews (pyramids) can
+be created. Overviews are lower resolution copies of the data which 
+QGIS uses depending of the level of zoom.
+The algorithm is derived from the `GDAL addo utility <http://www.gdal.org/gdaladdo.html>`_ .
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Input raster layer.
 
 ``Overview levels`` [string]
-  <put parameter description here>
+  Defines the number of overview levels calculated by the original resolution
+  of the input raster layer. By default 4 levels will be taken into consideration.
 
   Default: *2 4 8 16*
 
 ``Remove all existing overviews`` [boolean]
-  <put parameter description here>
+  Removes existing overviews from the raster. By default these aren't removed.
 
   Default: *False*
 
 ``Resampling method`` [selection]
-  <put parameter description here>
+  Calculates the overviews with a defined resampling method.
 
   Options:
 
@@ -38,7 +42,8 @@ Parameters
   Default: *0*
 
 ``Overview format`` [selection]
-  <put parameter description here>
+  The overviews can be stored internally, or externally as GTiff or ERDAS Imagine file.
+  By default the overviews are stored in the output raster.
 
   Options:
 
@@ -52,7 +57,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  Output raster layer with overviews.
 
 Console usage
 -------------

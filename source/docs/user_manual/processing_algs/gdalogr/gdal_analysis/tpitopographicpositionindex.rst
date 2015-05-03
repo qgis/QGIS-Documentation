@@ -3,22 +3,23 @@ TPI (Topographic Position Index)
 
 Description
 -----------
-
-<put algortithm description here>
+This command outputs a single-band raster with values computed from the elevation. 
+TPI stands for Topographic Position Index, which is defined as the difference between a central pixel and the mean 
+of its surrounding cells 
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Elevation raster layer
 
 ``Band number`` [number]
-  <put parameter description here>
+  The number of a band containing elevation values
 
   Default: *1*
 
 ``Compute edges`` [boolean]
-  <put parameter description here>
+  Generates edges from the elevation raster
 
   Default: *False*
 
@@ -26,7 +27,7 @@ Outputs
 -------
 
 ``Output file`` [raster]
-  <put output description here>
+  TPI raster in output
 
 Console usage
 -------------
@@ -37,4 +38,5 @@ Console usage
 
 See also
 --------
+`GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TPI>`_
 

@@ -7,6 +7,42 @@ Using Vector Layers
 This section summarizes various actions that can be done with vector layers.
 
 
+
+.. index::
+  triple: vector layers; selection; features
+
+Selecting features
+==================
+
+In QGIS desktop, features can be selected in different ways, the user can click
+on a feature, draw a rectangle on the map canvas or use an expression filter.
+Selected fatures are normally higlighted in a different color (default
+is yellow) to draw user's attention on the selection.
+Sometimes can be useful to programmatically select features or to change the
+default color.
+
+To change the selection color you can use :func:`setSelectionColor()`
+method of :class:`QgsMapCanvas` as shown in the following example::
+
+    iface.mapCanvas().setSelectionColor( QColor("red") )
+
+
+To add add features to the selected features list for a given layer, you
+can call :func:`setSelectedFeatures()` passing to it the list of features IDs::
+
+    # Get the active layer (must be a vector layer)
+    layer = iface.activeLayer()
+    # Get the first feature from the layer
+    feature = layer.getFeatures().next()
+    # Add this features to the selected list
+    layer.setSelectedFeatures([feature.id()])
+
+To clear the selection, just pass an empty list::
+
+    layer.setSelectedFeatures([])
+
+
+
 .. index::
   triple: vector layers; iterating; features
 
@@ -14,7 +50,7 @@ Iterating over Vector Layer
 ===========================
 
 Iterating over the features in a vector layer is one of the most common tasks.
-Below is an example of the simple basic code to perform this task aend showing
+Below is an example of the simple basic code to perform this task and showing
 some information about each feature. the ``layer`` variable is assumed to have
 a :class:`QgsVectorLayer` object
 
@@ -58,8 +94,8 @@ Attributes can be referred to by their name.
 
   print feature['name']
 
-Alternatively, attributes can be referred to by index. 
-This is will be a bit faster than using the name. 
+Alternatively, attributes can be referred to by index.
+This is will be a bit faster than using the name.
 For example, to get the first attribute:
 
 ::
@@ -150,7 +186,7 @@ to find out what set of functionality is supported
 
   caps = layer.dataProvider().capabilities()
 
-By using any of following methods for vector layer editing, the changes are
+By using any of the following methods for vector layer editing, the changes are
 directly committed to the underlying data store (a file, database etc). In case
 you would like to do only temporary changes, skip to the next section that
 explains how to do :ref:`modifications with editing buffer <editing-buffer>`.
@@ -463,6 +499,7 @@ The following example code illustrates creating and populating a memory provider
   pr.addAttributes([QgsField("name", QVariant.String),
                       QgsField("age",  QVariant.Int),
                       QgsField("size", QVariant.Double)])
+  vl.updateFields() # tell the vector layer to fetch changes from the provider
 
   # add a feature
   fet = QgsFeature()

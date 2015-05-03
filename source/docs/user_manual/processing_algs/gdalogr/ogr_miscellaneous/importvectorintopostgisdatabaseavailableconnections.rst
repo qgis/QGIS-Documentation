@@ -4,13 +4,15 @@ Import Vector into PostGIS database (available connections)
 Description
 -----------
 
-<put algortithm description here>
+Imports vector layers inside a PostGIS database on the basis of
+an available connection.
+The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ----------
 
 ``Database (connection name)`` [selection]
-  <put parameter description here>
+  Requires the database (connection) name.
 
   Options:
 
@@ -19,10 +21,10 @@ Parameters
   Default: *0*
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Any OGR-supported vector layer.
 
 ``Output geometry type`` [selection]
-  <put parameter description here>
+  Defines the output geometry type. By default this is Polygon.
 
   Options:
 
@@ -40,45 +42,49 @@ Parameters
   Default: *5*
 
 ``Input CRS (EPSG Code)`` [crs]
-  <put parameter description here>
+  CRS of the input vector layer.
 
   Default: *EPSG:4326*
 
 ``Output CRS (EPSG Code)`` [crs]
-  <put parameter description here>
+  Defines the output CRS of the database table.
 
   Default: *EPSG:4326*
 
 ``Schema name`` [string]
   Optional.
 
-  <put parameter description here>
+  Defines the schema to which the database table will be assigned to.
+  By default, 'public' is chosen.
 
   Default: *public*
 
 ``Table name, leave blank to use input name`` [string]
   Optional.
 
-  <put parameter description here>
+  Defines a name for the table that will be imported into the database.
+  By default the table name is the name oof the input vector file.
 
   Default: *(not set)*
 
 ``Primary Key`` [string]
   Optional.
 
-  <put parameter description here>
+  Defines which attribute field will be the primary key of the database table.
+  By default this is 'id'.
 
   Default: *id*
 
 ``Geometry column name`` [string]
   Optional.
 
-  <put parameter description here>
+  Defines in which attribute field of the database there will be the geometry
+  information. By default it will be taken from the 'geom' column.
 
   Default: *geom*
 
 ``Vector dimensions`` [selection]
-  <put parameter description here>
+  Defines if the vector file to be imported has 2-D or 3-D data.
 
   Options:
 
@@ -90,14 +96,15 @@ Parameters
 ``Distance tolerance for simplification`` [string]
   Optional.
 
-  <put parameter description here>
+  Defines a distance tolerance for the simplification of the vector geometries
+  to be imported.
 
   Default: *(not set)*
 
 ``Maximum distance between 2 nodes (densification)`` [string]
   Optional.
 
-  <put parameter description here>
+  The maximum distance between two nodes. Used to create intermediate points.
 
   Default: *(not set)*
 

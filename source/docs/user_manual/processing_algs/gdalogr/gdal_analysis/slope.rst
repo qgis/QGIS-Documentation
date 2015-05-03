@@ -4,36 +4,41 @@ Slope
 Description
 -----------
 
-<put algortithm description here>
+Generate a slope map from any GDAL-supported elevation raster. Slope is the
+angle of inclination to the horizontal. You have the option of specifying the
+type of slope value you want: degrees or percent slope.
+The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
+
+
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Elevation raster layer.
 
 ``Band number`` [number]
-  <put parameter description here>
+  The number of a band containing elevation values.
 
   Default: *1*
 
 ``Compute edges`` [boolean]
-  <put parameter description here>
+  Generates edges from the elevation raster.
 
   Default: *False*
 
 ``Use Zevenbergen&Thorne formula (instead of the Horn's one)`` [boolean]
-  <put parameter description here>
+  Activates Zevenbergen&Thorne formula for smooth landscapes.
 
   Default: *False*
 
 ``Slope expressed as percent (instead of degrees)`` [boolean]
-  <put parameter description here>
+  You have the option to use slope expressed as degrees.
 
   Default: *False*
 
 ``Scale (ratio of vert. units to horiz.)`` [number]
-  <put parameter description here>
+  The ratio of vertical units to horizontal units.
 
   Default: *1.0*
 
@@ -41,7 +46,7 @@ Outputs
 -------
 
 ``Output file`` [raster]
-  <put output description here>
+  32-bit float output raster.
 
 Console usage
 -------------

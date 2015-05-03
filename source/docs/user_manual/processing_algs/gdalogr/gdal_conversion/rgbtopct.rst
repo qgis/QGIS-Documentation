@@ -4,16 +4,23 @@ RGB to PCT
 Description
 -----------
 
-<put algortithm description here>
+Converts a 24bit RGB image into a 8bit paletted. Computes an optimal pseudo-color
+table for the given RGB-image using a median cut algorithm on a downsampled RGB
+histogram. Then it converts the image into a pseudo-colored image using the color
+table. This conversion utilizes Floyd-Steinberg dithering (error diffusion) to
+maximize output image visual quality.
+If you want to classify a raster map and want to reduce the number of classes it
+can be helpful to downsample your image with this algorithm before.
+The algorithm is derived from the `GDAL rgb2pct utility <http://www.gdal.org/rgb2pct.html>`_ .
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Input RGB image raster.
 
 ``Number of colors`` [number]
-  <put parameter description here>
+  The number of colors the resulting image will contain. A value from 2-256 is possible.
 
   Default: *2*
 
@@ -21,7 +28,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  8-bit output raster.
 
 Console usage
 -------------

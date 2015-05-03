@@ -4,26 +4,30 @@ Merge
 Description
 -----------
 
-<put algortithm description here>
+Merges raster files in a simple way. Here you can use a pseudocolor
+table from an input raster and define the output raster type. All
+the images must be in the same coordinate system.
+The algorithm is derived from the `GDAL merge utility <http://www.gdal.org/gdal_merge.html>`_ .
 
 Parameters
 ----------
 
 ``Input layers`` [multipleinput: rasters]
-  <put parameter description here>
+  Input raster layers.
 
 ``Grab pseudocolor table from first layer`` [boolean]
-  <put parameter description here>
+  The pseudocolor table from the first layer will be used for the
+  coloring.
 
   Default: *False*
 
 ``Layer stack`` [boolean]
-  <put parameter description here>
+  If 'True' is chosen each input file will be placed into a separate stacked band. 
 
   Default: *False*
 
 ``Output raster type`` [selection]
-  <put parameter description here>
+  Defines the output raster type. By default this will be 'Float23'.
 
   Options:
 
@@ -45,7 +49,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  Output raster layer.
 
 Console usage
 -------------

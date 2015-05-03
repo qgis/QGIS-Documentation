@@ -4,16 +4,19 @@ Build Virtual Raster
 Description
 -----------
 
-<put algortithm description here>
+Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
+With a mosaic you can merge several raster files.
+The algorithm is derived from the `GDAL buildvrt utility <http://www.gdal.org/gdalbuildvrt.html>`_ .
 
 Parameters
 ----------
 
 ``Input layers`` [multipleinput: rasters]
-  <put parameter description here>
+  GDAL-supported raster layers.
 
 ``Resolution`` [selection]
-  <put parameter description here>
+  The output resolution of the mosaic. By default the average resolution of th
+  raster files will be chosen.
 
   Options:
 
@@ -24,12 +27,14 @@ Parameters
   Default: *0*
 
 ``Layer stack`` [boolean]
-  <put parameter description here>
+  With 'False' you can define that each raster file goes into a separated stacked band 
+  in the VRT band.
 
   Default: *True*
 
 ``Allow projection difference`` [boolean]
-  <put parameter description here>
+  Allows that the output bands have different projections derived from the
+  projection of the input raster layers.
 
   Default: *False*
 
@@ -37,7 +42,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  Output raster file.
 
 Console usage
 -------------

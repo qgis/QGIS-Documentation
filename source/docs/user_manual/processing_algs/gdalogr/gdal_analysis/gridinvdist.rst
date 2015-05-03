@@ -3,62 +3,69 @@ Grid (Inverse distance to a power)
 
 Description
 -----------
+The Inverse Distance to a Power gridding method is a weighted average interpolator. 
 
-<put algortithm description here>
+You should supply the input arrays with the scattered data values including coordinates of every data point and output
+grid geometry. The function will compute interpolated value for the given position in output grid.
 
 Parameters
 ----------
 
 ``Input layer`` [vector: point]
-  <put parameter description here>
+  Point vector layer
 
 ``Z field`` [tablefield: numeric]
-  Optional.
-
-  <put parameter description here>
+  Field for the interpolation (*Optional*).
 
 ``Power`` [number]
-  <put parameter description here>
-
+  Weighting power 
+  
   Default: *2.0*
 
 ``Smothing`` [number]
-  <put parameter description here>
+  Smoothing parameter
 
   Default: *0.0*
 
 ``Radius 1`` [number]
-  <put parameter description here>
+  The first radius (X axis if rotation angle is 0) of search ellipse
 
   Default: *0.0*
 
 ``Radius 2`` [number]
-  <put parameter description here>
+  The second radius (Y axis if rotation angle is 0) of search ellipse
 
   Default: *0.0*
 
 ``Max points`` [number]
-  <put parameter description here>
+  Maximum number of data points to use.
+  
+  Do not search for more points than this number. If less amount of points found the grid node considered empty and 
+  will be filled with NODATA marker
 
   Default: *0.0*
 
 ``Min points`` [number]
-  <put parameter description here>
+  Minimum number of data points to use.
+  
+  If less amount of points found the grid node considered empty and will be filled with NODATA marker
 
   Default: *0.0*
 
 ``Angle`` [number]
-  <put parameter description here>
+  Angle of ellipse rotation in degrees.
+  
+  Ellipse rotated counter clockwise.
 
   Default: *0.0*
 
 ``Nodata`` [number]
-  <put parameter description here>
+  No data marker to fill empty points
 
   Default: *0.0*
 
 ``Output raster type`` [selection]
-  <put parameter description here>
+  Raster file type
 
   Options:
 
@@ -80,7 +87,8 @@ Outputs
 -------
 
 ``Output file`` [raster]
-  <put output description here>
+
+Interpolated raster file
 
 Console usage
 -------------
@@ -91,4 +99,5 @@ Console usage
 
 See also
 --------
+`GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
 

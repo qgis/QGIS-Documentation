@@ -4,21 +4,28 @@ Roughness
 Description
 -----------
 
-<put algortithm description here>
+Outputs a single-band raster with values computed from the elevation. Roughness
+is the degree of irregularity of the surface. It's calculated by the largest inter-cell
+difference of a central pixel and its sourrounding cell.
+The determination of the roughness plays a role in the analysis of terrain elevation data, 
+it's useful for calculations of the river morphology, in climatology and physical geography
+in general.
+The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
+
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Elevation raster layer.
 
 ``Band number`` [number]
-  <put parameter description here>
+  The number of a band containing elevation values.
 
   Default: *1*
 
 ``Compute edges`` [boolean]
-  <put parameter description here>
+  Generates edges from the elevation raster.
 
   Default: *False*
 
@@ -26,7 +33,7 @@ Outputs
 -------
 
 ``Output file`` [raster]
-  <put output description here>
+  Single-band output raster. The value -9999 is used as the output nodata value.
 
 Console usage
 -------------

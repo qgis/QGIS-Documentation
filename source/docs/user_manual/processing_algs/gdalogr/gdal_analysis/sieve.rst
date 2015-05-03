@@ -4,21 +4,24 @@ Sieve
 Description
 -----------
 
-<put algortithm description here>
+Removes raster polygons smaller than a provided threshold size (in pixels) and
+replaces them with the pixel value of the largest neighbour polygon. It is 
+useful if you have a large amount of small areas on your raster map.
+The algorithm is derived from the `GDAL sieve utility <http://www.gdal.org/gdal_sieve.html>`_ .
 
 Parameters
 ----------
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Raster layer.
 
 ``Threshold`` [number]
-  <put parameter description here>
+  Only raster polygons smaller than this size will be removed.
 
   Default: *2*
 
 ``Pixel connection`` [selection]
-  <put parameter description here>
+  Either four connectedness or eight connectedness should be used when determining.
 
   Options:
 
@@ -31,7 +34,7 @@ Outputs
 -------
 
 ``Output layer`` [raster]
-  <put output description here>
+  Output raster layer.
 
 Console usage
 -------------

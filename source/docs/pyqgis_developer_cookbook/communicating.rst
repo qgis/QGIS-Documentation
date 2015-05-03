@@ -141,6 +141,8 @@ save about the execution of your code.
 
 ::
 
-    QgsMessageLog.logMessage("Your plugin code has been executed correctly", QgsMessageLog.INFO)
-    QgsMessageLog.logMessage("Your plugin code might have some problems", QgsMessageLog.WARNING)
-    QgsMessageLog.logMessage("Your plugin code has crashed!", QgsMessageLog.CRITICAL)
+    # You can optionally pass a 'tag' and a 'level' parameters
+    QgsMessageLog.logMessage("Your plugin code has been executed correctly", 'MyPlugin', QgsMessageLog.INFO)
+    QgsMessageLog.logMessage("Your plugin code might have some problems", level=QgsMessageLog.WARNING)
+    QgsMessageLog.logMessage("Your plugin code has crashed!", level=QgsMessageLog.CRITICAL)
+
