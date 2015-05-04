@@ -310,26 +310,19 @@ default ones in the KDE window manager. In GNOME, the :menuselection:`Settings` 
 has different content and its items have to be found here:
 
 +-----------------------------------------------------------------------+------------------------+
-| |mActionProjectProperties| :guilabel:`Project Properties`             | :guilabel:`Project`    |
-+-----------------------------------------------------------------------+------------------------+
-| |mActionOptions| :guilabel:`Options`                                  | :guilabel:`Edit`       |
-+-----------------------------------------------------------------------+------------------------+
-| |mActionOptions| :guilabel:`Configure Shortcuts`                      | :guilabel:`Edit`       |
+| |mActionCustomProjection| :guilabel:`Custom CRS`                      | :guilabel:`Edit`       |
 +-----------------------------------------------------------------------+------------------------+
 | :guilabel:`Style Manager`                                             | :guilabel:`Edit`       |
 +-----------------------------------------------------------------------+------------------------+
-| |mActionCustomProjection| :guilabel:`Custom CRS`                      | :guilabel:`Edit`       |
+| |mActionOptions| :guilabel:`Configure Shortcuts`                      | :guilabel:`Edit`       |
 +-----------------------------------------------------------------------+------------------------+
-| :menuselection:`Panels -->`                                           | :guilabel:`View`       |
+| |mActionOptions| :guilabel:`Customization`                            | :guilabel:`Edit`       |
 +-----------------------------------------------------------------------+------------------------+
-| :menuselection:`Toolbars -->`                                         | :guilabel:`View`       |
+| |mActionOptions| :guilabel:`Options`                                  | :guilabel:`Edit`       |
 +-----------------------------------------------------------------------+------------------------+
-| :guilabel:`Toggle Full Screen Mode`                                   | :guilabel:`View`       |
+| :menuselection:`Snapping Options ...`                                 | :guilabel:`Edit`       |
 +-----------------------------------------------------------------------+------------------------+
-| :guilabel:`Tile scale slider`                                         | :guilabel:`View`       |
-+-----------------------------------------------------------------------+------------------------+
-| :guilabel:`Live GPS tracking`                                         | :guilabel:`View`       |
-+-----------------------------------------------------------------------+------------------------+
+
 
 .. See Appendix :ref:`app_menu` for complete descriptions of the menu items.
 
