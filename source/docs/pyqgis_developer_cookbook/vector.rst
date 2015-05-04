@@ -6,6 +6,19 @@ Using Vector Layers
 
 This section summarizes various actions that can be done with vector layers.
 
+.. index::
+  triple: vector layers; features; attributes
+
+Retrieving informations about attributes
+========================================
+
+You can retrieve informations about the fields associated with a vector layer
+by calling :func:`pendingFields` on a :class:`QgsVectorLayer` instance::
+
+    # "layer" is a QgsVectorLayer instance
+    for field in layer.pendingFields():
+        print field.name(), field.typeName()
+
 
 
 .. index::
@@ -142,8 +155,8 @@ to the :func:`getFeatures()` call. Here's an example
 
   request = QgsFeatureRequest()
   request.setFilterRect(areaOfInterest)
-  for f in layer.getFeatures(request):
-      ...
+  for feature in layer.getFeatures(request):
+      # do whatever you need with the feature
 
 
 If you need an attribute-based filter instead (or in addition) of a spatial one like shown in the example
@@ -191,6 +204,16 @@ directly committed to the underlying data store (a file, database etc). In case
 you would like to do only temporary changes, skip to the next section that
 explains how to do :ref:`modifications with editing buffer <editing-buffer>`.
 
+
+.. note::
+
+    If you are working inside QGIS (either from the console or from a plugin),
+    it might be necessary to force a redraw of the map canvas in order to see
+    the changes you've done to the geometry or to the attributes::
+
+        iface.mapCanvas().refresh()
+
+
 Add Features
 ------------
 
@@ -201,10 +224,10 @@ list of added features (their ID is set by the data store)
 ::
 
   if caps & QgsVectorDataProvider.AddFeatures:
-    feat = QgsFeature()
-    feat.addAttribute(0, 'hello')
-    feat.setGeometry(QgsGeometry.fromPoint(QgsPoint(123, 456)))
-    (res, outFeats) = layer.dataProvider().addFeatures([feat])
+      feat = QgsFeature()
+      feat.addAttribute(0, 'hello')
+      feat.setGeometry(QgsGeometry.fromPoint(QgsPoint(123, 456)))
+      (res, outFeats) = layer.dataProvider().addFeatures([feat])
 
 
 Delete Features
@@ -215,7 +238,7 @@ To delete some features, just provide a list of their feature IDs
 ::
 
   if caps & QgsVectorDataProvider.DeleteFeatures:
-    res = layer.dataProvider().deleteFeatures([5, 10])
+      res = layer.dataProvider().deleteFeatures([5, 10])
 
 Modify Features
 ---------------
@@ -229,12 +252,12 @@ then it changes the feature's geometry
   fid = 100   # ID of the feature we will modify
 
   if caps & QgsVectorDataProvider.ChangeAttributeValues:
-    attrs = { 0 : "hello", 1 : 123 }
-    layer.dataProvider().changeAttributeValues({ fid : attrs })
+      attrs = { 0 : "hello", 1 : 123 }
+      layer.dataProvider().changeAttributeValues({ fid : attrs })
 
   if caps & QgsVectorDataProvider.ChangeGeometries:
-    geom = QgsGeometry.fromPoint(QgsPoint(111,222))
-    layer.dataProvider().changeGeometryValues({ fid : geom })
+      geom = QgsGeometry.fromPoint(QgsPoint(111,222))
+      layer.dataProvider().changeGeometryValues({ fid : geom })
 
 Adding and Removing Fields
 --------------------------
@@ -245,10 +268,10 @@ For deletion of fields just provide a list of field indexes.
 ::
 
   if caps & QgsVectorDataProvider.AddAttributes:
-    res = layer.dataProvider().addAttributes([QgsField("mytext", QVariant.String), QgsField("myint", QVariant.Int)])
+      res = layer.dataProvider().addAttributes([QgsField("mytext", QVariant.String), QgsField("myint", QVariant.Int)])
 
   if caps & QgsVectorDataProvider.DeleteAttributes:
-    res = layer.dataProvider().deleteAttributes([0])
+      res = layer.dataProvider().deleteAttributes([0])
 
 After adding or removing fields in the data provider the layer's fields need
 to be updated because the changes are not automatically propagated.
@@ -306,8 +329,8 @@ have the changes stored immediately, then you will have easier work by
   # ... call layer's editing methods ...
 
   if problem_occurred:
-    layer.destroyEditCommand()
-    return
+      layer.destroyEditCommand()
+     return
 
   # ... more editing ...
 
@@ -392,11 +415,11 @@ There are two possibilities how to export a vector layer:
     error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_shapes.shp", "CP1250", None, "ESRI Shapefile")
 
     if error == QgsVectorFileWriter.NoError:
-      print "success!"
+        print "success!"
 
     error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json.json", "utf-8", None, "GeoJSON")
     if error == QgsVectorFileWriter.NoError:
-      print "success again!"
+        print "success again!"
 
   The third parameter specifies output text encoding. Only some drivers need this
   for correct operation - shapefiles are one of those --- however in case you
@@ -431,7 +454,7 @@ There are two possibilities how to export a vector layer:
     writer = QgsVectorFileWriter("my_shapes.shp", "CP1250", fields, QGis.WKBPoint, None, "ESRI Shapefile")
 
     if writer.hasError() != QgsVectorFileWriter.NoError:
-      print "Error when creating shapefile: ", writer.hasError()
+        print "Error when creating shapefile: ", writer.hasError()
 
     # add a feature
     fet = QgsFeature()
@@ -525,7 +548,7 @@ Finally, let's check whether everything went well
   f = QgsFeature()
   features = vl.getFeatures()
   for f in features:
-    print "F:", f.id(), f.attributes(), f.geometry().asPoint()
+      print "F:", f.id(), f.attributes(), f.geometry().asPoint()
 
 .. index:: vector layers; symbology
 
@@ -592,7 +615,7 @@ To get a list of categories
 ::
 
   for cat in rendererV2.categories():
-    print "%s: %s :: %s" % (cat.value().toString(), cat.label(), str(cat.symbol()))
+      print "%s: %s :: %s" % (cat.value().toString(), cat.label(), str(cat.symbol()))
 
 Where :func:`value` is the value used for discrimination between categories,
 :func:`label` is a text used for category description and :func:`symbol` method
@@ -615,12 +638,12 @@ To find out more about ranges used in the renderer
 ::
 
   for ran in rendererV2.ranges():
-    print "%f - %f: %s %s" % (
-        ran.lowerValue(),
-        ran.upperValue(),
-        ran.label(),
-        str(ran.symbol())
-       )
+      print "%f - %f: %s %s" % (
+          ran.lowerValue(),
+          ran.upperValue(),
+          ran.label(),
+          str(ran.symbol())
+        )
 
 you can again use :func:`classAttribute` to find out classification attribute
 name, :func:`sourceSymbol` and :func:`sourceColorRamp` methods.  Additionally
@@ -692,8 +715,8 @@ the symbol. To get a list of symbol layers
 ::
 
   for i in xrange(symbol.symbolLayerCount()):
-    lyr = symbol.symbolLayer(i)
-    print "%d: %s" % (i, lyr.layerType())
+      lyr = symbol.symbolLayer(i)
+      print "%d: %s" % (i, lyr.layerType())
 
 To find out symbol's color use :func:`color` method and :func:`setColor` to
 change its color. With marker symbols additionally you can query for the symbol
@@ -723,7 +746,7 @@ given symbol layer class like this
   myRegistry = QgsSymbolLayerV2Registry.instance()
   myMetadata = myRegistry.symbolLayerMetadata("SimpleFill")
   for item in myRegistry.symbolLayersForType(QgsSymbolV2.Marker):
-    print item
+      print item
 
 Output
 
@@ -760,31 +783,31 @@ radius
   class FooSymbolLayer(QgsMarkerSymbolLayerV2):
 
     def __init__(self, radius=4.0):
-      QgsMarkerSymbolLayerV2.__init__(self)
-      self.radius = radius
-      self.color = QColor(255,0,0)
+        QgsMarkerSymbolLayerV2.__init__(self)
+        self.radius = radius
+        self.color = QColor(255,0,0)
 
     def layerType(self):
-      return "FooMarker"
+       return "FooMarker"
 
     def properties(self):
-      return { "radius" : str(self.radius) }
+        return { "radius" : str(self.radius) }
 
     def startRender(self, context):
       pass
 
     def stopRender(self, context):
-      pass
+        pass
 
     def renderPoint(self, point, context):
-      # Rendering depends on whether the symbol is selected (QGIS >= 1.5)
-      color = context.selectionColor() if context.selected() else self.color
-      p = context.renderContext().painter()
-      p.setPen(color)
-      p.drawEllipse(point, self.radius, self.radius)
+        # Rendering depends on whether the symbol is selected (QGIS >= 1.5)
+        color = context.selectionColor() if context.selected() else self.color
+        p = context.renderContext().painter()
+        p.setPen(color)
+        p.drawEllipse(point, self.radius, self.radius)
 
     def clone(self):
-      return FooSymbolLayer(self.radius)
+        return FooSymbolLayer(self.radius)
 
 
 The :func:`layerType` method determines the name of the symbol layer, it has
@@ -808,34 +831,34 @@ widget
 
 ::
 
-  class FooSymbolLayerWidget(QgsSymbolLayerV2Widget):
-    def __init__(self, parent=None):
-      QgsSymbolLayerV2Widget.__init__(self, parent)
+    class FooSymbolLayerWidget(QgsSymbolLayerV2Widget):
+        def __init__(self, parent=None):
+            QgsSymbolLayerV2Widget.__init__(self, parent)
 
-      self.layer = None
+            self.layer = None
 
-      # setup a simple UI
-      self.label = QLabel("Radius:")
-      self.spinRadius = QDoubleSpinBox()
-      self.hbox = QHBoxLayout()
-      self.hbox.addWidget(self.label)
-      self.hbox.addWidget(self.spinRadius)
-      self.setLayout(self.hbox)
-      self.connect(self.spinRadius, SIGNAL("valueChanged(double)"), \
-        self.radiusChanged)
+            # setup a simple UI
+            self.label = QLabel("Radius:")
+            self.spinRadius = QDoubleSpinBox()
+            self.hbox = QHBoxLayout()
+            self.hbox.addWidget(self.label)
+            self.hbox.addWidget(self.spinRadius)
+            self.setLayout(self.hbox)
+            self.connect(self.spinRadius, SIGNAL("valueChanged(double)"), \
+                self.radiusChanged)
 
-    def setSymbolLayer(self, layer):
-      if layer.layerType() != "FooMarker":
-        return
-      self.layer = layer
-      self.spinRadius.setValue(layer.radius)
+        def setSymbolLayer(self, layer):
+            if layer.layerType() != "FooMarker":
+                return
+            self.layer = layer
+            self.spinRadius.setValue(layer.radius)
 
-    def symbolLayer(self):
-      return self.layer
+        def symbolLayer(self):
+            return self.layer
 
-    def radiusChanged(self, value):
-      self.layer.radius = value
-      self.emit(SIGNAL("changed()"))
+        def radiusChanged(self, value):
+            self.layer.radius = value
+            self.emit(SIGNAL("changed()"))
 
 This widget can be embedded into the symbol properties dialog. When the symbol
 layer type is selected in symbol properties dialog, it creates an instance of
