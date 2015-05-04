@@ -38,31 +38,121 @@ Sample installation on Debian Squeeze
 -------------------------------------
 
 At this point, we will give a short and simple sample installation how-to for
-Debian Squeeze. Many other OSs provide packages for |qg| Server, too. If you
-have to build it all from source, please refer to the URLs above.
+a minimal working configuration using Apache2 on Debian Squeeze. Many other OSs provide
+packages for |qg| Server, too. If you have to build it all from source, please refer to the URLs above.
 
-Apart from |qg| and |qg| Server, you need a web server, in our case apache2.
-You can install all packages with ``aptitude`` or ``apt-get install`` together with other
-necessary dependency packages. After installation, you should test to confirm that the web server
-and |qg| Server work as expected. Make sure the apache server is running with
-``/etc/init.d/apache2 start``. Open a web browser and type URL: ``http://localhost``.
-If apache is up, you should see the message 'It works!'.
+Firstly, add the following debian GIS repository by adding the following repository:
 
-Now we test the |qg| Server installation. The :file:`qgis_mapserv.fcgi` is available
-at ``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` and provides a standard WMS that shows
-the state boundaries of Alaska. Add the WMS with the URL
-``http://localhost/cgi-bin/qgis_mapserv.fcgi`` as described in :ref:`ogc-wms-servers`.
+::
+  
+  $ cat /etc/apt/sources.list.d/debian-gis.list
+  deb http://qgis.org/debian trusty main
+  deb-src http://qgis.org/debian trusty main
 
-.. _figure_server_1:
+  $ # Add keys
+  $ sudo gpg --recv-key DD45F6C3
+  $ sudo gpg --export --armor DD45F6C3 | sudo apt-key add -
 
-.. only:: html
+  $ # Update package list
+  $ sudo apt-get update && sudo apt-get upgrade
 
-   **Figure Server 1:**
+Now, install QGIS-Server:
 
-.. figure:: /static/user_manual/working_with_ogc/standard_wms_usa.png
-   :align: center
+:: 
+  
+  $ sudo apt-get install qgis-server python-qgis
 
-   Standard WMS with USA boundaries included in the |qg| Server (KDE) |nix|
+Installation of a HelloWorld example plugin for testing the servers. You create a directory
+to hold server plugins. This will be specified in the virtual host configuration and passed
+on to the server through an environment variable:
+
+:: 
+
+  $ sudo mkdir -p /opt/qgis-server/plugins
+  $ cd /opt/qgis-server/plugins
+  $ sudo wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
+  $ # In case unzip was not installed before:
+  $ sudo apt-get install unzip
+  $ sudo unzip master.zip 
+  $ sudo mv qgis-helloserver-master HelloServer
+
+Install the Apache server in a separate virtual host listening on port 80. Enable the rewrite
+module to pass HTTP BASIC auth headers:
+
+::
+  
+  $ sudo a2enmod rewrite
+  $ cat /etc/apache2/conf-available/qgis-server-port.conf
+  Listen 80
+  $ sudo a2enconf qgis-server-port
+
+This is the virtual host configuration, stored in :file:`/etc/apache2/sites-available/001-qgis-server.conf` :
+
+::
+  
+  <VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html
+ 
+    ErrorLog ${APACHE_LOG_DIR}/qgis-server-error.log
+    CustomLog ${APACHE_LOG_DIR}/qgis-server-access.log combined
+ 
+    # Longer timeout for WPS... default = 40
+    FcgidIOTimeout 120 
+    FcgidInitialEnv LC_ALL "en_US.UTF-8"
+    FcgidInitialEnv PYTHONIOENCODING UTF-8
+    FcgidInitialEnv LANG "en_US.UTF-8"
+    FcgidInitialEnv QGIS_DEBUG 1
+    FcgidInitialEnv QGIS_SERVER_LOG_FILE /tmp/qgis-000.log
+    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
+    FcgidInitialEnv QGIS_PLUGINPATH "/opt/qgis-server/plugins"
+ 
+    # ABP: needed for QGIS HelloServer plugin HTTP BASIC auth
+    <IfModule mod_fcgid.c>
+        RewriteEngine on
+        RewriteCond %{HTTP:Authorization} .
+        RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    </IfModule>
+ 
+    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+    <Directory "/usr/lib/cgi-bin">
+        AllowOverride All
+        Options +ExecCGI -MultiViews +FollowSymLinks
+	# for apache2 > 2.4        
+	Require all granted
+        #Allow from all
+    </Directory>
+   </VirtualHost>
+
+Now enable the virtual host and restart Apache:
+
+::
+
+  $ sudo a2ensite 001-qgis-server
+  $ sudo service apache2 restart
+
+Test the server with the HelloWorld plugin:
+
+:: 
+
+  $ wget -q -O - "http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=HELLO"
+  HelloServer!
+
+
+You can have a look at the default GetCpabilities of the |qg| server at:
+:file:`http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
+
+.. tip::
+
+   If you work with a feature that has many nodes then modyfying and adding a new feature
+   will fail. In this case it is possible to insert the following code into the  
+   :file:`001-qgis-server.conf` file:
+   ::
+
+     <IfModule mod_fcgid.c>
+     FcgidMaxRequestLen 26214400
+     FcgidConnectTimeout 60
+     </IfModule>
 
 
 .. _`Creating a WMS from a QGIS project`:
