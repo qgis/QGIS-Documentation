@@ -5,7 +5,10 @@ Description
 -----------
 
 Imports vector layers inside a PostGIS database on the basis of
-an available connection.
+an available connection. The connection has to be defined properly
+with the 'Add PostGIS Table(s)' dialog before. Use the 'Edit' button
+to define the connection. Be aware that the checkboxes 'Save Username' 
+and 'Save Password' are activated. Then you can use the algorithm.
 The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
@@ -21,7 +24,7 @@ Parameters
   Default: *0*
 
 ``Input layer`` [vector: any]
-  Any OGR-supported vector layer.
+  Any OGR-supported vector layer loaded into the |qg| map canvas.
 
 ``Output geometry type`` [selection]
   Defines the output geometry type. By default this is Polygon.
@@ -63,7 +66,7 @@ Parameters
   Optional.
 
   Defines a name for the table that will be imported into the database.
-  By default the table name is the name oof the input vector file.
+  By default the table name is the name of the input vector file.
 
   Default: *(not set)*
 

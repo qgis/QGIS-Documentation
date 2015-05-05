@@ -468,6 +468,14 @@ key or with a unique constraint, preferably indexed).
 option gets the ids without the attributes which is faster in most cases. It
 can make sense to disable this option when you use expensive views.
 
+.. tip:: **Backup of PostGIS database with layers saved by QGIS**
+
+   If you want to make a backup of your PostGIS database using the :file:`pg_dump` and 
+   :file:`pg_restore`commands the default layer styles as saved by QGIS are failing to
+   restore afterwards. You need to set the XML option to :file:`DOCUMENT` and the
+   restore will work.
+
+
 .. %FIXME: Add missing information
 .. % When dealing with views, |qg| parses the view definition and
 
