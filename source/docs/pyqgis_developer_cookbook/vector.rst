@@ -69,34 +69,34 @@ a :class:`QgsVectorLayer` object
 
 ::
 
-  iter = layer.getFeatures()
-  for feature in iter:
-      # retrieve every feature with its geometry and attributes
-      # fetch geometry
-      geom = feature.geometry()
-      print "Feature ID %d: " % feature.id()
+    iter = layer.getFeatures()
+    for feature in iter:
+        # retrieve every feature with its geometry and attributes
+        # fetch geometry
+        geom = feature.geometry()
+        print "Feature ID %d: " % feature.id()
 
-      # show some information about the feature
-      if geom.type() == QGis.Point:
-        x = geom.asPoint()
-        print "Point: " + str(x)
-      elif geom.type() == QGis.Line:
-        x = geom.asPolyline()
-        print "Line: %d points" % len(x)
-      elif geom.type() == QGis.Polygon:
-        x = geom.asPolygon()
-        numPts = 0
-        for ring in x:
-          numPts += len(ring)
-        print "Polygon: %d rings with %d points" % (len(x), numPts)
-      else:
-        print "Unknown"
+        # show some information about the feature
+        if geom.type() == QGis.Point:
+            x = geom.asPoint()
+            print "Point: " + str(x)
+        elif geom.type() == QGis.Line:
+            x = geom.asPolyline()
+            print "Line: %d points" % len(x)
+        elif geom.type() == QGis.Polygon:
+            x = geom.asPolygon()
+            numPts = 0
+            for ring in x:
+            numPts += len(ring)
+            print "Polygon: %d rings with %d points" % (len(x), numPts)
+        else:
+            print "Unknown"
 
-      # fetch attributes
-      attrs = feature.attributes()
+        # fetch attributes
+        attrs = feature.attributes()
 
-      # attrs is a list. It contains all the attribute values of this feature
-      print attrs
+        # attrs is a list. It contains all the attribute values of this feature
+        print attrs
 
 Accessing attributes
 --------------------
@@ -188,7 +188,7 @@ iterator returns all features, but returns partial data for each of them.
 
     If you only need a subset of the attributes or you don't need the geometry
     informations, you can significantly increase the **speed** of the features
-    request by using `QgsFeatureRequest.NoGeometry` flag or specifying a subset
+    request by using ``QgsFeatureRequest.NoGeometry`` flag or specifying a subset
     of attributes (possibly empty) like shown in the example above.
 
 
@@ -272,6 +272,14 @@ then it changes the feature's geometry
   if caps & QgsVectorDataProvider.ChangeGeometries:
       geom = QgsGeometry.fromPoint(QgsPoint(111,222))
       layer.dataProvider().changeGeometryValues({ fid : geom })
+
+
+.. tip::
+
+    If you only need to change geometries, you might consider using
+    the :class:`QgsVectorLayerEditUtils` which provides some of useful
+    methods to edit geometries (translate, insert or move vertex etc.)
+
 
 Adding and Removing Fields
 --------------------------
@@ -615,6 +623,38 @@ Single Symbol Renderer
 You can get the symbol used for rendering by calling :func:`symbol` method and
 change it with :func:`setSymbol` method (note for C++ devs: the renderer takes
 ownership of the symbol.)
+
+You can change the symbol used by a particular vector layer by calling
+:func:`setSymbol()` passing an instance of the appropriate symbol instance.
+Symbols for *point*, *line* and *polygon* layers can be created by calling
+the :func:`createSimple` function of the corresponding classes
+:class:`QgsMarkerSymbolV2`,  :class:`QgsLineSymbolV2` and
+:class:`QgsFillSymbolV2`.
+
+The dictionary passed to :func:`createSimple` sets the style properties of the
+symbol.
+
+For example you can change the symbol used by a particular **point** layer
+by calling :func:`setSymbol()` passing an instance of a :class:`QgsMarkerSymbolV2`
+as in the following code example::
+
+    symbol = QgsMarkerSymbolV2.createSimple({'name': 'square', 'color': 'red'})
+    layer.rendererV2().setSymbol(symbol)
+
+``name`` indicates the shape of the marker, and can be any of the following:
+
+* ``circle``
+* ``square``
+* ``rectangle``
+* ``diamond``
+* ``pentagon``
+* ``triangle``
+* ``equilateral_triangle``
+* ``star``
+* ``regular_star``
+* ``arrow``
+* ``filled_arrowhead``
+
 
 .. index:: categorized symbology renderer, symbology; categorized symbol renderer
 
