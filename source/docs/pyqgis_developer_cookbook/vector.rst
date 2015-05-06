@@ -184,6 +184,14 @@ iterator returns all features, but returns partial data for each of them.
   request.setFlags(QgsFeatureRequest.NoGeometry)
 
 
+.. tip::
+
+    If you only need a subset of the attributes or you don't need the geometry
+    informations, you can significantly increase the **speed** of the features
+    request by using `QgsFeatureRequest.NoGeometry` flag or specifying a subset
+    of attributes (possibly empty) like shown in the example above.
+    
+
 .. index:: vector layers; editing
 
 .. _editing:
