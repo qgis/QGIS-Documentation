@@ -190,7 +190,7 @@ iterator returns all features, but returns partial data for each of them.
     informations, you can significantly increase the **speed** of the features
     request by using `QgsFeatureRequest.NoGeometry` flag or specifying a subset
     of attributes (possibly empty) like shown in the example above.
-    
+
 
 .. index:: vector layers; editing
 
@@ -217,9 +217,15 @@ explains how to do :ref:`modifications with editing buffer <editing-buffer>`.
 
     If you are working inside QGIS (either from the console or from a plugin),
     it might be necessary to force a redraw of the map canvas in order to see
-    the changes you've done to the geometry or to the attributes::
+    the changes you've done to the geometry, to the style or to the attributes::
 
-        iface.mapCanvas().refresh()
+        # If caching is enabled, a simple canvas refresh might not be sufficient
+        # to trigger a redraw and you must clear the cached image for the layer
+        if iface.mapCanvas().isCachingEnabled():
+            layer.setCacheImage(None)
+        else:
+            iface.mapCanvas().refresh()
+
 
 
 Add Features
