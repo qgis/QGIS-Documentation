@@ -570,6 +570,10 @@ Choose the :guilabel:`Placement` menu for the label placement and the labeling p
 |radiobuttonon| :guilabel:`Offset from point` setting, you now have the option to use :guilabel:`Quadrants`
 to place your label. Additionally, you can alter the angle of the label placement with the :guilabel:`Rotation` setting.
 Thus, a placement in a certain quadrant with a certain rotation is possible.
+In the :guilabel:`priority` section you can define with which priority the labels are rendered.
+It interacts with labels of the other vector layers in the map canvas. If there are labels from different layers
+in the same location then the label with the higher priority will be displayed and the other will be
+left out. 
 
 .. index:: Colliding_labels
 
@@ -626,6 +630,7 @@ Some Placement setup will display more options, for example, :guilabel:`Curved` 
 Placements will allow the user to set up the position of the label (above, below or on the line),
 :guilabel:`distance` from the line and for :guilabel:`Curved`, the user can also setup inside/outside
 max angle between curved label.
+As for point vector layers you have the possibility to define a :guilabel:`Priority` for the labels.
 
 The :guilabel:`Rendering` menu has nearly the same entries as for point layers. In the
 :guilabel:`Feature options`, you can now :guilabel:`Suppress labeling of features smaller than`.
@@ -682,6 +687,9 @@ a distance for the label. For the position, |checkbox| :guilabel:`Above line`, |
 
 Related to the choice of Label Placement, several options will appear. As for Point Placement you can
 choose the distance for the polygon outline, repeat the label around the polygon perimeter.
+
+As for point and line vector layers you have the possibility to define a :guilabel:`Priority`
+for the polygon vector layer.
 
 The entries in the :guilabel:`Rendering` menu are the same as for line layers. You can also use
 :guilabel:`Suppress labeling of features smaller than` in the :guilabel:`Feature options`.

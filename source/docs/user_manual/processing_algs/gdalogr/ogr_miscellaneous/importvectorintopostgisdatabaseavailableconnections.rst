@@ -100,7 +100,7 @@ Parameters
   Optional.
 
   Defines a distance tolerance for the simplification of the vector geometries
-  to be imported.
+  to be imported. By default no simplification there is no simplification.
 
   Default: *(not set)*
 
@@ -108,35 +108,39 @@ Parameters
   Optional.
 
   The maximum distance between two nodes. Used to create intermediate points.
+  By default there is no maximum distance.
 
   Default: *(not set)*
 
 ``Select features by extent (defined in input layer CRS)`` [extent]
-  <put parameter description here>
+  You can select features from a given extent that will be in the output table.
 
   Default: *0,1,0,1*
 
 ``Clip the input layer using the above (rectangle) extent`` [boolean]
-  <put parameter description here>
+  The input layer will be clipped by the extent you defined before.
 
   Default: *False*
 
 ``Select features using a SQL "WHERE" statement (Ex: column="value")`` [string]
   Optional.
 
-  <put parameter description here>
+  Defines with a SQL "WHERE" statement which features should be selected for the
+  output table.
 
   Default: *(not set)*
 
 ``Group "n" features per transaction (Default: 20000)`` [string]
   Optional.
 
-  <put parameter description here>
+  You can group the input features in transactions where "n" defines the size.
+  By default "n" limits the transaction size to 20000 features.
 
   Default: *(not set)*
 
 ``Overwrite existing table?`` [boolean]
-  <put parameter description here>
+  If there is a table with the same name in the database, it won't
+  be overwritten. By default this takes place.
 
   Default: *True*
 
@@ -146,17 +150,20 @@ Parameters
   Default: *False*
 
 ``Append and add new fields to existing table?`` [boolean]
-  <put parameter description here>
+  If activated the vector data will be appended to an existing table,
+  there won't be created a new table. By default a new table will be
+  created.
 
   Default: *False*
 
 ``Do not launder columns/table name/s?`` [boolean]
-  <put parameter description here>
+  With this option you can prevent processing from converting column
+  names to lowercase, from removing spaces and other invalid characters.
 
   Default: *False*
 
 ``Do not create Spatial Index?`` [boolean]
-  <put parameter description here>
+  Prevents that a spatial index in the output table will be created.
 
   Default: *False*
 
