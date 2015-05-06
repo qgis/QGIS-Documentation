@@ -15,32 +15,28 @@
   </layer-tree-group>
   <relations/>
   <mapcanvas>
-    <units>degrees</units>
+    <units>meters</units>
     <extent>
-      <xmin>-5.79575892295665263</xmin>
-      <ymin>40.19881853298271324</ymin>
-      <xmax>-5.60661676814876309</xmax>
-      <ymax>40.30000107727261138</ymax>
+      <xmin>262470.90072500001406297</xmin>
+      <ymin>4453768.75</ymin>
+      <xmax>278247.15072500001406297</xmax>
+      <ymax>4464531.25</ymax>
     </extent>
     <rotation>0</rotation>
-    <projections>1</projections>
+    <projections>0</projections>
     <destinationsrs>
       <spatialrefsys>
-        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-        <srsid>3452</srsid>
-        <srid>4326</srid>
-        <authid>EPSG:4326</authid>
-        <description>WGS 84</description>
-        <projectionacronym>longlat</projectionacronym>
-        <ellipsoidacronym>WGS84</ellipsoidacronym>
-        <geographicflag>true</geographicflag>
+        <proj4>+proj=utm +zone=30 +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +units=m +no_defs</proj4>
+        <srsid>1976</srsid>
+        <srid>23030</srid>
+        <authid>EPSG:23030</authid>
+        <description>ED50 / UTM zone 30N</description>
+        <projectionacronym>utm</projectionacronym>
+        <ellipsoidacronym>intl</ellipsoidacronym>
+        <geographicflag>false</geographicflag>
       </spatialrefsys>
     </destinationsrs>
-    <layer_coordinate_transform_info>
-      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:23030" srcDatumTransform="-1" destDatumTransform="-1" layerid="dem2520130721085906257"/>
-      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:23030" srcDatumTransform="-1" destDatumTransform="-1" layerid="accflow20130721085906002"/>
-      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:23030" srcDatumTransform="-1" destDatumTransform="-1" layerid="slope_tif20130721085950674"/>
-    </layer_coordinate_transform_info>
+    <layer_coordinate_transform_info/>
   </mapcanvas>
   <visibility-presets/>
   <layer-tree-canvas>
@@ -100,13 +96,17 @@
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
+        <rasterrenderer opacity="1" alphaBand="-1" classificationMax="1.40862e+07" classificationMinMaxOrigin="MinMaxFullExtentEstimated" band="1" classificationMin="625" type="singlebandpseudocolor">
           <rasterTransparency/>
-          <contrastEnhancement>
-            <minValue>625</minValue>
-            <maxValue>634478</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </contrastEnhancement>
+          <rastershader>
+            <colorrampshader colorRampType="INTERPOLATED" clip="0">
+              <item alpha="255" value="625" label="625.000000" color="#ca0020"/>
+              <item alpha="255" value="2500" label="3522018.750000" color="#f4a582"/>
+              <item alpha="255" value="50000" label="7043412.500000" color="#f7f7f7"/>
+              <item alpha="255" value="1e+06" label="10564806.250000" color="#92c5de"/>
+              <item alpha="255" value="1.40862e+07" label="14086200.000000" color="#0571b0"/>
+            </colorrampshader>
+          </rastershader>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0"/>
         <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
@@ -114,7 +114,7 @@
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <id>dem2520130721085906257</id>
       <datasource>./dem25.tif</datasource>
       <title></title>
@@ -146,13 +146,21 @@
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
+        <rasterrenderer opacity="1" alphaBand="0" classificationMax="2410" classificationMinMaxOrigin="MinMaxFullExtentEstimated" band="1" classificationMin="514" type="singlebandpseudocolor">
           <rasterTransparency/>
-          <contrastEnhancement>
-            <minValue>599.32</minValue>
-            <maxValue>2212.82</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </contrastEnhancement>
+          <rastershader>
+            <colorrampshader colorRampType="INTERPOLATED" clip="0">
+              <item alpha="255" value="514" label="514.000000" color="#4aad5a"/>
+              <item alpha="255" value="751" label="751.000000" color="#74c353"/>
+              <item alpha="255" value="988" label="988.000000" color="#b5d663"/>
+              <item alpha="255" value="1225" label="1225.000000" color="#dede63"/>
+              <item alpha="255" value="1462" label="1462.000000" color="#ffe710"/>
+              <item alpha="255" value="1699" label="1699.000000" color="#ffce08"/>
+              <item alpha="255" value="1936" label="1936.000000" color="#ff9c08"/>
+              <item alpha="255" value="2173" label="2173.000000" color="#ff7b10"/>
+              <item alpha="255" value="2410" label="2410.000000" color="#ff7b10"/>
+            </colorrampshader>
+          </rastershader>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0"/>
         <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
@@ -160,7 +168,7 @@
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <id>slope_tif20130721085950674</id>
       <datasource>./slope.tif</datasource>
       <title></title>
@@ -192,13 +200,17 @@
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
+        <rasterrenderer opacity="1" alphaBand="0" classificationMax="1.05017" classificationMinMaxOrigin="MinMaxFullExtentEstimated" band="1" classificationMin="0" type="singlebandpseudocolor">
           <rasterTransparency/>
-          <contrastEnhancement>
-            <minValue>0.0714118</minValue>
-            <maxValue>0.66686</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </contrastEnhancement>
+          <rastershader>
+            <colorrampshader colorRampType="INTERPOLATED" clip="0">
+              <item alpha="255" value="0" label="0.000000" color="#1a9641"/>
+              <item alpha="255" value="0.262543" label="0.262543" color="#a6d96a"/>
+              <item alpha="255" value="0.525085" label="0.525085" color="#ffffc0"/>
+              <item alpha="255" value="0.787628" label="0.787628" color="#fdae61"/>
+              <item alpha="255" value="1.05017" label="1.050170" color="#d7191c"/>
+            </colorrampshader>
+          </rastershader>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0"/>
         <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
@@ -208,13 +220,39 @@
     </maplayer>
   </projectlayers>
   <properties>
-    <SpatialRefSys>
-      <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
-      <ProjectCRSID type="int">3452</ProjectCRSID>
-    </SpatialRefSys>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <WFSUrl type="QString"></WFSUrl>
     <Paths>
       <Absolute type="bool">false</Absolute>
     </Paths>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <WFSLayers type="QStringList"/>
+    <WMSContactMail type="QString"></WMSContactMail>
+    <PositionPrecision>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <Automatic type="bool">true</Automatic>
+      <DegreeFormat type="QString">D</DegreeFormat>
+    </PositionPrecision>
+    <WCSUrl type="QString"></WCSUrl>
+    <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+    <Measure>
+      <Ellipsoid type="QString">NONE</Ellipsoid>
+    </Measure>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WFSTLayers>
+      <Insert type="QStringList"/>
+      <Update type="QStringList"/>
+      <Delete type="QStringList"/>
+    </WFSTLayers>
     <Gui>
       <SelectionColorBluePart type="int">0</SelectionColorBluePart>
       <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
@@ -224,12 +262,33 @@
       <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
       <CanvasColorBluePart type="int">255</CanvasColorBluePart>
     </Gui>
-    <PositionPrecision>
-      <DecimalPlaces type="int">2</DecimalPlaces>
-      <Automatic type="bool">true</Automatic>
-    </PositionPrecision>
+    <Identify>
+      <disabledLayers type="QStringList"/>
+    </Identify>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+    <WCSLayers type="QStringList"/>
     <Legend>
       <filterByMap type="bool">false</filterByMap>
     </Legend>
+    <SpatialRefSys>
+      <ProjectCRSProj4String type="QString">+proj=utm +zone=30 +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
+      <ProjectCrs type="QString">EPSG:23030</ProjectCrs>
+      <ProjectCRSID type="int">1976</ProjectCRSID>
+      <ProjectionsEnabled type="int">0</ProjectionsEnabled>
+    </SpatialRefSys>
+    <DefaultStyles>
+      <Fill type="QString"></Fill>
+      <Line type="QString"></Line>
+      <Marker type="QString"></Marker>
+      <RandomColors type="bool">true</RandomColors>
+      <AlphaInt type="int">255</AlphaInt>
+      <ColorRamp type="QString"></ColorRamp>
+    </DefaultStyles>
+    <WMSFees type="QString"></WMSFees>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <WMSUrl type="QString"></WMSUrl>
   </properties>
 </qgis>
