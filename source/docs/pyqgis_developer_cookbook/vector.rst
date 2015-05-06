@@ -606,7 +606,17 @@ graduatedSymbol    :class:`QgsGraduatedSymbolRendererV2`    Renders features usi
 
 There might be also some custom renderer types, so never make an assumption
 there are just these types. You can query :class:`QgsRendererV2Registry`
-singleton to find out currently available renderers.
+singleton to find out currently available renderers::
+
+    QgsRendererV2Registry.instance().renderersList()
+    # Prints:
+    [u'singleSymbol',
+    u'categorizedSymbol',
+    u'graduatedSymbol',
+    u'RuleRenderer',
+    u'pointDisplacement',
+    u'invertedPolygonRenderer',
+    u'heatmapRenderer']
 
 It is possible to obtain a dump of a renderer contents in text form --- can be
 useful for debugging
