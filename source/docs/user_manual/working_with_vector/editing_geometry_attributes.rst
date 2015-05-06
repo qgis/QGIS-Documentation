@@ -90,7 +90,7 @@ wouldn't work correctly because the units would be actually degrees. So now
 the 'map units' has been relabeled to 'layer units' and the new entry 'map
 units' operates with units of the map view. While working with 'on-the-fly' CRS transformation
 it is now possible to use a snapping tolerance that refers to either the units of the reprojected
-layer (setting 'layer units') or the units of the map view (setting 'map units'). 
+layer (setting 'layer units') or the units of the map view (setting 'map units').
 
 
 Search radius
@@ -510,14 +510,14 @@ Advanced digitizing
 | |mActionAddRing|                 | Add Ring                              | |mActionAddPart|            | Add Part                |
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
 | |mActionFillRing|                | Fill Ring                             | |mActionDeleteRing|         | Delete Ring             |
-+----------------------------------+---------------------------------------+-----------------------------+-------------------------+ 
-| |mActionDeletePart|              | Delete Part                           | |mActionReshape|            | Reshape Features        | 
++----------------------------------+---------------------------------------+-----------------------------+-------------------------+
+| |mActionDeletePart|              | Delete Part                           | |mActionReshape|            | Reshape Features        |
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
 | |mActionOffsetCurve|             | Offset Curve                          | |mActionSplitFeatures|      | Split Features          |
-+----------------------------------+---------------------------------------+-----------------------------+-------------------------+               
++----------------------------------+---------------------------------------+-----------------------------+-------------------------+
 | |mActionSplitParts|              | Split Parts                           | |mActionMergeFeatures|      | Merge Selected Features |
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionMergeFeatureAttributes|  | Merge Attributes of Selected Features | |mActionRotatePointSymbols| | Rotate Point Symbols    |  
+| |mActionMergeFeatureAttributes|  | Merge Attributes of Selected Features | |mActionRotatePointSymbols| | Rotate Point Symbols    |
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
 
 Table Advanced Editing: Vector layer advanced editing toolbar
@@ -556,21 +556,18 @@ after the selected operation.
 Rotate Feature(s)
 .................
 
-Use |mActionRotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple
-selected features in the map canvas. You first need to select the features
-and then press the |mActionRotateFeature|:sup:`Rotate Feature(s)` icon. The
-centroid of the feature(s) appears and will be the rotation anchor point. If you selected
-multiple features, the rotation anchor point will be the common center of the features.
-Press and drag the left mouse button in the desired direction to rotate the
-selected features.
+Use |mActionRotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple features
+in the map canvas. Press the |mActionRotateFeature|:sup:`Rotate Feature(s)` icon and then
+click on the feature to rotate. Either click on the map to place the rotated feature or
+enter an angle in the user input widget. If you want to rotate several features,
+they shall be selected first.
 
+If you enable the map tool with feature(s) selected, its (their) centroid appears
+and will be the rotation anchor point. If you want to move the anchor point,
+hold the :kbd:`Ctrl` button  and click on the map to place it.
 
-It's also possible to create a user-defined rotation anchor point around which the selected feature will rotate.
-Select the features to rotate and activate the |mActionRotateFeature|:sup:`Rotate Feature(s)` tool.
-Press and hold the :kbd:`Ctrl` button and move the mouse pointer (without pressing the mouse button)
-to the place where you want the rotation anchor to be moved. Release the :kbd:`Ctrl` button
-when the desired rotation anchor point is reached. Now, press and drag the left mouse button
-in the desired direction to rotate the selected feature(s).
+If you hold :kbd:`Shift` before clicking on the map, the rotation will be done
+in 45 degree steps, which can be modified afterwards in the user input widget.
 
 Simplify Feature
 ................
@@ -584,7 +581,7 @@ will appear. |qg| calculates the amount of vertices that can be deleted while ma
 geometry using the given tolerance. The higher the tolerance is the more vertices can be deleted. After
 gaining the statistics about the simplification just klick the :guilabel:`OK` button.
 The tolerance you used will be saved when leaving a project or when leaving an edit session.
-So you can go back to the same tolerance the next time when simplifying a feature. 
+So you can go back to the same tolerance the next time when simplifying a feature.
 
 Add Ring
 ........
@@ -607,8 +604,8 @@ Fill Ring
 
 You can use the |mActionFillRing| :sup:`Fill Ring` function to add a ring to
 a polygon and add a new feature to the layer at the same time. Thus you need not
-first use the |mActionAddRing| :sup:`Add Ring` icon and then the 
-|mActionCapturePolygon| :sup:`Add feature` function anymore. 
+first use the |mActionAddRing| :sup:`Add Ring` icon and then the
+|mActionCapturePolygon| :sup:`Add feature` function anymore.
 
 Delete Ring
 ...........
@@ -664,13 +661,13 @@ or also to background layers (in which case it creates copies of the lines / rin
 It is thus ideally suited for the creation of distance line layers. The displacement is
 shown at the bottom left of the taskbar.
 
-To create a shift of a line layer, you must first go into editing mode and then
-select the feature. You can make the |mActionOffsetCurve| :sup:`Offset Curve` tool active and drag
-the cross to the desired distance. Your changes may then be saved with the
-|mActionSaveEdits|:sup:`Save Layer Edits` tool.
+To create a shift of a line layer, you must first go into editing mode and activate the
+|mActionOffsetCurve| :sup:`Offset Curve` tool. Then click on a feature to shift it.
+Move the mouse and click where wanted or enter the desired distance in the user input widget.
+the cross to . Your changes may then be saved with the|mActionSaveEdits|:sup:`Save Layer Edits` tool.
 
-|qg| options dialog (Digitizing tab then **Curve offset tools** section) allows 
-you to configure some parameters like **Join style**, **Quadrant segments**, 
+|qg| options dialog (Digitizing tab then **Curve offset tools** section) allows
+you to configure some parameters like **Join style**, **Quadrant segments**,
 **Miter limit**.
 
 .. index:: Split_Features
@@ -694,8 +691,8 @@ Merge selected features
 .......................
 
 The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows you to merge
-features that have common boundaries. A new dialog will allow you to choose which 
-value to choose between each selected features or select a function (Minimum, Maximum, 
+features that have common boundaries. A new dialog will allow you to choose which
+value to choose between each selected features or select a function (Minimum, Maximum,
 Median, Sum, Skip Attribute) to use for each column.
 
 .. index:: Merge_Attributes_of_Selected_Features
@@ -752,7 +749,7 @@ The Advanced Digitizing panel
 When capturing new geometries or geometry parts you also have the possibility to use
 the Advanced Digitizing panel. You can digitize lines exactly parallel or at a specific angle
 or lock lines to specific angles. Furthermore you can enter coordinates directly so that you can
-make a precise definition for your new geomtry. 
+make a precise definition for your new geomtry.
 
 _figure_advanced_edit 1:
 
@@ -878,7 +875,7 @@ Creating a new Temporary Scratch Layer
 Empty, editable memory layers can be defined using :menuselection:`Layer --> Create Layer --> New Temporary Scratch Layer`.
 Here you can even create |radiobuttonoff| :guilabel:`Multipoint`, |radiobuttonoff|:guilabel:`Multiline`
 and |radiobuttonoff|:guilabel:`Multipolygon` Layers beneath |radiobuttonon|:guilabel:`Point`,
-|radiobuttonoff|:guilabel:`Line` and |radiobuttonoff|:guilabel:`Polygon` Layers. 
+|radiobuttonoff|:guilabel:`Line` and |radiobuttonoff|:guilabel:`Polygon` Layers.
 Temporary Scratch Layers are not saved and will be discarded when |qg| is closed.
 See also paste_into_layer_ .
 
@@ -965,7 +962,7 @@ In the :guilabel:`Expression` field, the following query appears:
 
 Here you can also use the :menuselection:`Function list --> Recent (Selection)` to
 make a selection that you used before. The expression builder remembers the last 20
-used expressions. 
+used expressions.
 
 The matching rows will be selected, and the total number of matching rows will
 appear in the title bar of the attribute table, as well as in the status bar of
@@ -1005,9 +1002,9 @@ following functionality:
   layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+L`)
 * |mActionCalculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+I`)
 
-Below these buttons is the Field Calculator bar, which allows calculations 
-to be quickly applied attributes visible in the table. This bar uses the 
-same expressions as the |mActionCalculateField| :sup:`Field Calculator` 
+Below these buttons is the Field Calculator bar, which allows calculations
+to be quickly applied attributes visible in the table. This bar uses the
+same expressions as the |mActionCalculateField| :sup:`Field Calculator`
 (see :ref:`vector_field_calculator`).
 
 .. tip:: **Skip WKT geometry**
@@ -1025,7 +1022,7 @@ The selected features can be saved as any OGR-supported vector format and
 also transformed into another coordinate reference system (CRS). Just open
 the right mouse menu of the layer and click on :menuselection:`Save
 as` to define the name of the output file, its format and CRS (see section
-:ref:`label_legend`). To save the selection ensure that the |checkbox| 
+:ref:`label_legend`). To save the selection ensure that the |checkbox|
 :menuselection:`Save only selected features` is selected.
 It is also possible to specify OGR creation options within the dialog.
 
@@ -1067,20 +1064,20 @@ layer during digitizing. Have a closer look at the edit widget in section
 Creating one to many relations
 -------------------------------
 
-Relations are a technique often used in databases. The concept is, that 
-features (rows) of different layers (tables) can belong to each other. 
+Relations are a technique often used in databases. The concept is, that
+features (rows) of different layers (tables) can belong to each other.
 
-As an example you have a layer with all regions of alaska (polygon) 
-which provides some attributes about its name and region type and a 
+As an example you have a layer with all regions of alaska (polygon)
+which provides some attributes about its name and region type and a
 unique id (which acts as primary key).
 
 Foreign keys
 ............
 
-Then you get another point layer or table with information about airports 
-that are located in the regions and you also want to keep track of these. If 
-you want to add them to the region layer, you need to create a one to many 
-relation using foreign keys, because there are several airports in most regions. 
+Then you get another point layer or table with information about airports
+that are located in the regions and you also want to keep track of these. If
+you want to add them to the region layer, you need to create a one to many
+relation using foreign keys, because there are several airports in most regions.
 
 .. _figure_relations_1:
 
@@ -1093,32 +1090,32 @@ relation using foreign keys, because there are several airports in most regions.
 
    Alaska region with airports |nix|
 
-In addition to the already existing attributes in the airports attribute table 
-another field fk_region which acts as a foreign key (if you have a database, you will 
+In addition to the already existing attributes in the airports attribute table
+another field fk_region which acts as a foreign key (if you have a database, you will
 probably want to define a constraint on it).
 
-This field fk_region will always contain an id of a region. It can be seen 
-like a pointer to the region it belongs to. And you can design a custom edit 
-form for the editing and QGIS takes care about the setup. It works with different 
-providers (so you can also use it with shape and csv files) and all you have 
+This field fk_region will always contain an id of a region. It can be seen
+like a pointer to the region it belongs to. And you can design a custom edit
+form for the editing and QGIS takes care about the setup. It works with different
+providers (so you can also use it with shape and csv files) and all you have
 to do is to tell QGIS the relations between your tables.
 
 Layers
 ......
 
-QGIS makes no difference between a table and a vector layer. Basically, a vector 
-layer is a table with a geometry. So can add your table as a vector layer. To 
-demostrate you can load the 'region' shapefile (with geometries) and the 'airport' 
-csv table (without geometries) and a foreign key (fk_region) to the layer 
-region. This means, that each airport belongs to exactly one region while each 
+QGIS makes no difference between a table and a vector layer. Basically, a vector
+layer is a table with a geometry. So can add your table as a vector layer. To
+demostrate you can load the 'region' shapefile (with geometries) and the 'airport'
+csv table (without geometries) and a foreign key (fk_region) to the layer
+region. This means, that each airport belongs to exactly one region while each
 region can have any number of airports (a typical one to many relation).
 
 
 Definition (Relation Manager)
 .............................
 
-The first thing we are going to do is to let QGIS know about the relations between the layer. 
-This is done in :menuselection:`Settings -->` :menuselection:`Project Properties`. 
+The first thing we are going to do is to let QGIS know about the relations between the layer.
+This is done in :menuselection:`Settings -->` :menuselection:`Project Properties`.
 Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
 
 * **name** is going to be used as a title. It should be a human readable string, describing, what the relation is used for. We will just call say "Airports" in this case.
@@ -1143,11 +1140,11 @@ Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
 Forms
 .....
 
-Now that QGIS knows about the relation, it will be used to improve the 
-forms it generates. As we did not change the default form method (autogenerated) 
-it will just add a new widget in our form. So let's select the layer region in 
-the legend and use the identify tool. Depending on your settings, the form might 
-open directly or you will have to choose to open it in the identification dialog 
+Now that QGIS knows about the relation, it will be used to improve the
+forms it generates. As we did not change the default form method (autogenerated)
+it will just add a new widget in our form. So let's select the layer region in
+the legend and use the identify tool. Depending on your settings, the form might
+open directly or you will have to choose to open it in the identification dialog
 under actions.
 
 .. _figure_relations_3:
@@ -1161,7 +1158,7 @@ under actions.
 
    Identification dialog regions with relation to airports |nix|
 
-As you can see, the airports assigned to this particular region are all shown in a 
+As you can see, the airports assigned to this particular region are all shown in a
 table. And there are also some buttons available. Let's review them shortly
 
 * The |mActionToggleEditing| button is for toggling the edit mode. Be aware that it toggles the edit mode of the airport layer, although we are in the feature form of a feature from the region layer. But the table is representing features of the airport layer.
@@ -1171,14 +1168,14 @@ table. And there are also some buttons available. Let's review them shortly
 * The |mActionUnlink| symbol will unlink the selected airport from the current region, leaving them unassigned (the foreign key is set to NULL) effectively.
 * The two buttons to the right switch between table view and form view where the later let's you view all the airports in their respective form.
 
-If you work on the airport table, a new widget type is available which lets you 
-embed the feature form of the referenced region on the feature form of the airports. 
-It can be used when you open the layer properties of the airports table, switch to 
-the :menuselection:`Fields` menu and change the widget type of the foreign key field 'fk_region' to 
+If you work on the airport table, a new widget type is available which lets you
+embed the feature form of the referenced region on the feature form of the airports.
+It can be used when you open the layer properties of the airports table, switch to
+the :menuselection:`Fields` menu and change the widget type of the foreign key field 'fk_region' to
 Relation Reference.
 
-If you look at the feature dialog now, you will see, that the form of the region 
-is embedded inside the airports form and will even have a combobox, which allows you 
+If you look at the feature dialog now, you will see, that the form of the region
+is embedded inside the airports form and will even have a combobox, which allows you
 to assign the current airport to another region.
 
 .. _figure_relations_4:
