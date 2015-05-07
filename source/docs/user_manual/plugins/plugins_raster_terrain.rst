@@ -17,13 +17,15 @@ Description of the analysis:
 * **Aspect**: Exposition (starting with 0 for north direction, in degrees
   counterclockwise).
 * **Hillshade**: Creates a shaded map using light and shadow to provide a more
-  three-dimensional appearance for a shaded relief map.
+  three-dimensional appearance for a shaded relief map. The output map is a
+  Single band gray reflecting the gray value of the pixels. 
 * **Ruggedness Index**: A quantitative measurement of terrain heterogeneity as
   described by Riley et al. (1999). It is calculated for every location by
   summarizing the change in elevation within the 3x3 pixel grid.
 * **Relief**: Creates a shaded relief map from digital elevation data.
   Implemented is a method to choose the elevation colors by analysing the frequency
-  distribution.
+  distribution. The output map is a multiband color with three bands reflecting the
+  RGB values of the shaded relief.
 
 .. _figure_raster_terrain_1:
 

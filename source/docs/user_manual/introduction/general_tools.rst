@@ -349,13 +349,23 @@ display three kinds of information:
 
    Identify feaures dialog |nix| (Gnome)
 
-At the bottom of the window, you have five icons:
+At the top of the window, you have five icons:
 
 * |mActionIdentifyExpand| :sup:`Expand tree`
 * |mActionIdentifyCollapse| :sup:`Collapse tree`
 * |mActionIdentifyDefaultExpand| :sup:`Default behaviour`
 * |mActionIdentifyCopyAttributes| :sup:`Copy attributes`
 * |mActionIdentifyPrint| :sup:`Print selected HTML response`
+
+At the bottom of the window, you have the :guilabel:`Mode` and :guilabel:`View`
+comboboxes.
+With the :guilabel:`Mode` combobox you can define the identify mode: 'Current layer',
+'Top down, stop at first', 'Top down' and 'Layer selection'.
+The :guilabel:`View` can be set as 'Tree', 'Table' and 'Graph'.
+
+The identify tool allows you to auto open a form. In this mode you can change the
+feautures attributes.
+
 
 Other functions can be found in the context menu of the identified item. For
 example, from the context menu you can:
