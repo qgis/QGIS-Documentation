@@ -54,8 +54,8 @@ figure_attributes_3_). For example, if you choose a field width of 10 and a fiel
 precision of 3, it means you have 6 digits before the dot, then the dot and another
 3 digits for the precision.
 
-A short example illustrates how the field calculator works. We want to
-calculate the length in km of the ``railroads`` layer from the |qg| sample dataset:
+A short example illustrates how field calculator works when using the :guilabel:`Expression` tab.
+We want to calculate the length in km of the ``railroads`` layer from the |qg| sample dataset:
 
 #. Load the shapefile :file:`railroads.shp` in |qg| and press |mActionOpenTable|
    :sup:`Open Attribute Table`.

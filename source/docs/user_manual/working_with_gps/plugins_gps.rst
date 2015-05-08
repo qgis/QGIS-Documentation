@@ -35,11 +35,11 @@ To load a GPX file, you first need to load the plugin.
 :menuselection:`Plugins -->` |mActionShowPluginManager|
 :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
 Activate the |checkbox| :guilabel:`GPS Tools` checkbox. When this plugin
-is loaded, two buttons with a small handheld GPS device will show up in the
-toolbar:
+is loaded, a button with a small handheld GPS device will show up in the
+toolbar and in :menuselection:`Layer --> Create Layer -->` :
 
-* |create_gpx| :sup:`Create new GPX Layer`
 * |import_gpx| :sup:`GPS Tools`
+* |create_gpx| :guilabel:`Create new GPX Layer`
 
 For working with GPS data, we provide an example GPX file available in the |qg|
 sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See section
@@ -62,7 +62,7 @@ sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See section
 
    The *GPS Tools* dialog window |nix|
 
-Use the **[Browse...]** button  to select the GPX file, then use the checkboxes
+Use the **[Browse...]** button to select the GPX file, then use the checkboxes
 to select the feature types you want to load from that GPX file.
 Each feature type will be loaded in a separate layer when you click
 **[OK]**. The file :file:`national_monuments.gpx` only includes waypoints.

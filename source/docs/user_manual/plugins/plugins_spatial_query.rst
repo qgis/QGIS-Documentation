@@ -45,8 +45,11 @@ shown in figure_spatial_query_1_.
   :sup:`Create layer with selected`.
 * Select 'Remove from current selection' in the field
   :guilabel:`And use the result to` |selectstring|.
-* Additionally, you can |checkbox| :guilabel:`Zoom to item` or display
+* You can |checkbox| :guilabel:`Zoom to item` or display
   |checkbox| :guilabel:`Log messages`.
+* Additionally in :guilabel:`Result Feature ID's` with the options 'Invalid source'
+  and 'Invalid reference' you can have a look at features with geometries errors.
+  These features aren't used for the query.
 
 .. _figure_spatial_query_1:
 

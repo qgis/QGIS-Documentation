@@ -429,7 +429,7 @@ selected legend item is a raster or a vector layer. For GRASS vector layers,
 * :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
-* :menuselectioin:`Styles -->`
+* :menuselection:`Styles -->`
 * :menuselection:`Save as ...`
 * :menuselection:`Save As Layer Definition File ...`
 * :menuselection:`Properties`
@@ -451,7 +451,7 @@ Additionally, according to layer position and selection
 * :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
-* :menuselection:`Styles -->
+* :menuselection:`Styles -->`
 * :menuselection:`Open Attribute Table`
 * :menuselection:`Toggle Editing` (not available for GRASS layers)
 * :menuselection:`Save As ...`

@@ -75,7 +75,7 @@ use the following expression to create a raster with two values 1 and 2 in one s
 
 ::
 
-  ("elevation@1" < 50) * 1 + ("eleevation@1" >= 50) * 2
+  ("elevation@1" < 50) * 1 + ("elevation@1" >= 50) * 2
 
 In other words, for every cell less than 50 set its value to 1. For every cell greater than or 
 equal 50 set its value to 2.
