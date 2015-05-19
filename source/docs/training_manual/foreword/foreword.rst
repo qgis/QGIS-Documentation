@@ -123,12 +123,10 @@ from the following sources:
 Latest Version
 --------------
 
-You can always obtain the latest version of this document by visiting our `home
-page <http://readthedocs.org/builds/the-free-qgis-training-manual/>`_ which is
-kindly hosted by http://readthedocs.org.
+You can always obtain the latest version of this document by visiting the online
+version which is part of the QGIS documentation website (http://docs.qgis.org).
 
-.. note:: There are links to PDF and epub versions of the documentation in the
-   lower right hand corner of the above mentioned home page.
+.. note:: There are links to online and PDF versions of the Documentation and Training manuals.
 
 
 
