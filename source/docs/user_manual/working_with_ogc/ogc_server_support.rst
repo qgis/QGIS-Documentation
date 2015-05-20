@@ -233,6 +233,15 @@ If one of your layers uses the Map Tip display (i.e. to show text using expressi
 this will be listed inside the GetFeatureInfo output. If the layer uses a Value Map for one
 of his attributes, also this information will be shown in the GetFeatureInfo output.
 
+|qgs| support the following request for WMS service:
+
+* GetCapabilities
+* GetMap
+* GetFeatureInfo
+* GetLegendGraphic (SLD profile)
+* DescribeLayer (SLD profile)
+* GetStyles (custom QGIS profile)
+
 **WFS capabilities**
 
 In the :guilabel:`WFS capabilities` area, you can select the layers that you
@@ -241,6 +250,13 @@ delete operations.
 If you enter a URL in the :guilabel:`Advertised URL` field of the
 :guilabel:`WFS capabilities` section, |qg| Server will advertise this specific
 URL in the WFS GetCapabilities response.
+
+|qgs| support the following request for WFS service:
+
+* GetCapabilities
+* DescribeFeatureType
+* GetFeature
+* Transaction
 
 **WCS capabilities**
 
@@ -261,6 +277,12 @@ The URL is:
 ::
 
  http://localhost/cgi-bin/project/qgis_mapserv.fcgi
+
+|qgs| support the following request for WCS service:
+
+* GetCapabilities
+* DescribeCoverage
+* GetCoverage
 
 Fine tuning your OWS
 .....................
