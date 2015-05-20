@@ -154,6 +154,7 @@ Settings
 
 You can fine tune MetaSearch with the following settings:
 
+- **Connection naming**: when adding an OWS connection (WMS/WMTS|WFS|WCS), the connection is stored with the various QGIS layer provider. Use this setting to set whether to use the name provided from MetaSearch, whether to overwrite or to use a temporary name
 - **Results paging**: when searching metadata catalogues, the number of results to show per page
 - **Timeout**: when searching metadata catalogues, the number of seconds for blocking connection attempt.  Default value is 10
 
