@@ -663,8 +663,7 @@ shown at the bottom left of the taskbar.
 
 To create a shift of a line layer, you must first go into editing mode and activate the
 |mActionOffsetCurve| :sup:`Offset Curve` tool. Then click on a feature to shift it.
-Move the mouse and click where wanted or enter the desired distance in the user input widget.
-the cross to . Your changes may then be saved with the|mActionSaveEdits|:sup:`Save Layer Edits` tool.
+Move the mouse and click where wanted or enter the desired distance in the user input widget. Your changes may then be saved with the|mActionSaveEdits|:sup:`Save Layer Edits` tool.
 
 |qg| options dialog (Digitizing tab then **Curve offset tools** section) allows
 you to configure some parameters like **Join style**, **Quadrant segments**,
