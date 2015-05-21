@@ -61,7 +61,7 @@ guidelines are as follows:
   at office@linfiniti.com and we will advise you if what you intend doing is
   acceptable.
 * If you publish this work under a self publishing site such as
-  http:://lulu.com we request that you donate the profits to the QGIS project.
+  http://lulu.com we request that you donate the profits to the QGIS project.
 * You may not commercialise this work, except with the expressed permission of
   the authors. To be clear, by commercialisation we mean that you may not sell
   for profit, create commercial derivative works (e.g. selling content for use
