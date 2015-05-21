@@ -9,7 +9,7 @@ If you place your plugin menu entries into one of the new menus
 (:guilabel:`Raster`, :guilabel:`Vector`, :guilabel:`Database` or
 :guilabel:`Web`), you should modify the code of the :func:`initGui()` and
 :func:`unload()` functions. Since these new menus are available only in QGIS
-2.0, the first step is to check that the running QGIS version has all necessary
+2.0 and greater, the first step is to check that the running QGIS version has all the necessary
 functions. If the new menus are available, we will place our plugin under this
 menu, otherwise we will use the old :guilabel:`Plugins` menu. Here is an
 example for :guilabel:`Raster` menu
