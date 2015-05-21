@@ -83,7 +83,7 @@ What do those options mean?
   -r, --createrole   role can create new roles
   -s, --superuser    role will be superuser
 
-Now you should should leave the postgres user's bash shell environment by
+Now you should leave the postgres user's bash shell environment by
 typing::
 
   exit
