@@ -1,5 +1,6 @@
 Use R scripts in Processing
 ===========================
+
 Module contributed by Matteo Ghetta - `Dropcode <www.dropcode.weebly.com>`_ 
 
 Processing allows to write and run R scripts inside QGIS.
@@ -39,21 +40,21 @@ You **must** specify some parameters before the script body:
 so you will find your script in the **plots** group in the Processing toolbox.
 
 2. you have to tell Processing that you want to display a plot (just in this example):: 
-    
+
     ##showplots
-    
+
 this way in the **Result Viewer** of Processing you'll see the plot.
 
 3. You need also to tell Processing with which kind of data you are working with. In this example we want to create a plot from a field of a vector layer::
 
     ##Layer=vector
-    
+
 Processing knows now that the input is a vector. The name *Layer* is not important, what matters is the **vector** parameter.
 
 4. Finally, you have to specify the input field of the vector layer you want to plot::
 
     ##X=Field Layer
-    
+
 So Processing knows that you have called **X** the **Field Layer**.
 
 Script body
@@ -107,5 +108,5 @@ This is the final result you'll see:
 
 Beware that Processing uses some special syntax to get the results out of R::
 
-  ``+`` means 
-  ``>`` means
+  `+` means 
+  `>` before your command, as in `>lillie.test(Layer[[Field]])` means the result should be sent to R output (Result viewer)
