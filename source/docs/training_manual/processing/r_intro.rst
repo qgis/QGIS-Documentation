@@ -2,7 +2,9 @@ Use R scripts in Processing
 ===========================
 Module contributed by Matteo Ghetta - `Dropcode <www.dropcode.weebly.com>`_ 
 
-Processing allows to write and run R scripts inside QGIS. 
+Processing allows to write and run R scripts inside QGIS.
+
+.. note:: Obviously you have to install R with the necessary libraries (sp, rgdal) beforehand.
 
 In this tutorial we are going to create a boxplot of a vector layer field.
 
