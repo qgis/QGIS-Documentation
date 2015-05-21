@@ -6,7 +6,7 @@ Processing allows to write and run R scripts inside QGIS.
 
 In this tutorial we are going to create a boxplot of a vector layer field.
 
-Load the :file:`sample_points.shp` in QGIS or open the :file:`r_intro.qps` QGIS project.
+Open the :file:`r_intro.qps` QGIS project.
 
 Adding scripts
 --------------
@@ -59,7 +59,7 @@ Script body
 Now that you have set up the *heading* of the script you can add the function::
 
     boxplot(Layer[[X]])
-    
+
 Notice that **boxplot** is the name of the R function itself that calls **Layer** as dataset and **X** as the field of the dataset.
 
 .. warning:: The parameter **X** is within a double square bracket ``[[]]``
@@ -71,9 +71,8 @@ The script you looks like this::
     ##Layer=vector
     ##X=Field Layer
     boxplot(Layer[[X]])
-    
+
 .. image:: img/r_intro/r_intro_3.png
-        
 
 Save the script in the default path suggested by Processing. The name you choose will be the same as the name of the script you'll find in the Processing toolbox.
 
@@ -103,3 +102,8 @@ This is the final result you'll see:
 .. image:: img/r_intro/r_intro_7.png
 
 .. note:: You can open, copy and save the image by right clicking on the plot
+
+Beware that Processing uses some special syntax to get the results out of R::
+
+  ``+`` means 
+  ``>`` means
