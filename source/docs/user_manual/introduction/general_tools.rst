@@ -322,8 +322,9 @@ features` or press :kbd:`Ctrl + Shift + I`, or click on the |mActionIdentify|
 
 If you click on several features, the :guilabel:`Identify results` dialog will
 list information about all the selected features. The first item is the number of the
-feature in the list of results, followed by the layer name. Then, its first child will
-be the name of a field with its value. Finally, all information about the feature
+layer in the list of results, followed by the layer name. Then, its first child will
+be the name of a field with its value. The first field is the one selected in 
+:menuselection:`Properties --> Display`. Finally, all information about the feature
 is displayed.
 
 This window can be customized to display custom fields, but by default it will

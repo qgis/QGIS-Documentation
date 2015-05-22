@@ -355,7 +355,7 @@ Composer Menu
 
 **Composition defaults**
 
-You can define the :guilabel:`Default` font here.
+You can define the :guilabel:`Default font` here.
 
 **Grid appearance**
 
