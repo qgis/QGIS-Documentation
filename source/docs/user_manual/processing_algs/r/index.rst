@@ -15,8 +15,8 @@ displays of data from custom data sets
 .. toctree::
      :maxdepth: 2
 
-     basic_statistics/index
-     home_range_analysis/index
-     point_pattern_analysis/index
-     raster_processing/index
-     vector_processing/index
+     basic_statistics
+     home_range_analysis
+     point_pattern_analysis
+     raster_processing
+     vector_processing

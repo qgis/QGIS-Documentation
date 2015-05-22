@@ -4,7 +4,7 @@
 TauDEM algorithm provider
 *************************
 
-`TauDEM <http://hydrology.usu.edu/taudem/taudem5/index.html>`_
+`TauDEM <http://hydrology.usu.edu/taudem/taudem5.html>`_
 (Terrain Analysis Using Digital Elevation Models) is a set of Digital Elevation
 Model (DEM) tools for the extraction and analysis of hydrologic information
 from topography as represented by a DEM. This is software developed at Utah
@@ -25,6 +25,6 @@ documentation <http://hydrology.usu.edu/taudem/taudem5/documentation.html>`_
 .. toctree::
      :maxdepth: 2
 
-     basic_grid_analysis_tools/index
-     specialized_grid_analysis_tools/index
-     stream_network_analysis_tools/index
+     basic_grid_analysis_tools
+     specialized_grid_analysis_tools
+     stream_network_analysis_tools

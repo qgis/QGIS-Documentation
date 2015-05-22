@@ -19,13 +19,13 @@ or SAR (TerraSarX, ERS, Palsar) are available.
 .. toctree::
      :maxdepth: 2
 
-     calibration/index
-     feature_extraction/index
-     geometry/index
-     image_filtering/index
-     image_manipulation/index
-     learning/index
-     miscellaneous/index
-     segmentation/index
-     stereo/index
-     vector_data_manipulation/index
+     calibration
+     feature_extraction
+     geometry
+     image_filtering
+     image_manipulation
+     learning
+     miscellaneous
+     segmentation
+     stereo
+     vector_data_manipulation
