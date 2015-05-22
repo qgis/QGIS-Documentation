@@ -117,7 +117,7 @@ With an R script you can also create a vector and automatically load it in QGIS.
 
 The following example has been taken from the ``Random sampling grid`` script that you can download from the online collection :menuselection:`R --> Tools --> Download R scripts from the on-line collection`.
 
-The aim of this exercise is to crate a random point vector in a layer extend using the ``spsample`` function of the ``sp`` package.
+The aim of this exercise is to crate a random point vector in a layer extent using the ``spsample`` function of the ``sp`` package.
 
 
 Script parameters
@@ -151,7 +151,7 @@ Now you can add the body of the function:
 
     pts=spsample(Layer,Size,type="random")
     
-this way the function takes the extend of the *Layer*, the number of points is taken from the *Size* parameter and the type po point generation is *random*
+this way the function takes the extent of the *Layer*, the number of points is taken from the *Size* parameter and the type po point generation is *random*
 
 2. Write the line that contains the parameters of the output:: 
 
