@@ -153,7 +153,7 @@ executed automatically.
 
 For further information about working with the Python console and
 programming |qg| plugins and applications, please refer to
-http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
+http://docs.qgis.org/2.8/en/docs/pyqgis_developer_cookbook/index.html.
 
 Known Issues 
 ------------
