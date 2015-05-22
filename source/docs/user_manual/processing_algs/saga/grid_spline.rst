@@ -9,7 +9,7 @@ B-spline approximation
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -66,7 +66,7 @@ Cubic spline approximation
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -138,7 +138,7 @@ Multilevel b-spline interpolation (from grid)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -217,7 +217,7 @@ Multilevel b-spline interpolation
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -289,7 +289,7 @@ Thin plate spline (global)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -346,7 +346,7 @@ Thin plate spline (local)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -433,7 +433,7 @@ Thin plate spline (tin)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

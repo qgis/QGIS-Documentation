@@ -58,7 +58,7 @@ Add grid values to shapes
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -104,7 +104,7 @@ Clip grid with polygon
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -137,7 +137,7 @@ Contour lines from grid
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -182,7 +182,7 @@ Gradient vectors from directional components
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -251,7 +251,7 @@ Gradient vectors from direction and length
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -320,7 +320,7 @@ Gradient vectors from surface
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -386,7 +386,7 @@ Grid statistics for polygons
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -464,7 +464,7 @@ Grid values to points (randomly)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -499,7 +499,7 @@ Grid values to points
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -549,7 +549,7 @@ Local minima and maxima
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -582,7 +582,7 @@ Vectorising grid classes
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

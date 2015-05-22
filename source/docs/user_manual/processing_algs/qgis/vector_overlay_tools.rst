@@ -9,7 +9,7 @@ Clip
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -42,7 +42,7 @@ Difference
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -75,7 +75,7 @@ Intersection
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -108,7 +108,7 @@ Line intersections
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -147,7 +147,7 @@ Symetrical difference
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -180,7 +180,7 @@ Union
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

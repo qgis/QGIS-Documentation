@@ -105,7 +105,7 @@ Polygon dissolve
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -162,7 +162,7 @@ Polygon-line intersection
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -195,7 +195,7 @@ Polygon parts to separate polygons
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -230,7 +230,7 @@ Polygon properties
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

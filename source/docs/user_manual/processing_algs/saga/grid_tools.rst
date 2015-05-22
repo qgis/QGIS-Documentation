@@ -9,7 +9,7 @@ Aggregate
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -52,7 +52,7 @@ Change grid values
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -96,7 +96,7 @@ Close gaps
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -136,7 +136,7 @@ Close gaps with spline
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -211,7 +211,7 @@ Close one cell gaps
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -241,7 +241,7 @@ Convert data storage type
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -288,7 +288,7 @@ Crop to data
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -318,7 +318,7 @@ Grid buffer
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -363,7 +363,7 @@ Grid masking
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -396,7 +396,7 @@ Grid orientation
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -438,7 +438,7 @@ Grid proximity buffer
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -484,7 +484,7 @@ Grid shrink/expand
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -551,7 +551,7 @@ Invert data/no-data
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -581,7 +581,7 @@ Merge raster layers
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -651,7 +651,7 @@ Patching
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -697,7 +697,7 @@ Proximity grid
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -733,7 +733,7 @@ Reclassify grid values
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -857,7 +857,7 @@ Resampling
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -942,7 +942,7 @@ Sort grid
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -977,7 +977,7 @@ Split RGB bands
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1013,7 +1013,7 @@ Threshold buffer
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

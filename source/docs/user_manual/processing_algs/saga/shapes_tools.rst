@@ -66,7 +66,7 @@ Cut shapes layer
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -191,7 +191,7 @@ Polar to cartesian coordinates
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -239,7 +239,7 @@ Quadtree structure to shapes
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -384,7 +384,7 @@ Transform shapes
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

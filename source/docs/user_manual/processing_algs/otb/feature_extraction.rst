@@ -9,7 +9,7 @@ BinaryMorphologicalOperation (closing)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -72,7 +72,7 @@ BinaryMorphologicalOperation (dilate)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -145,7 +145,7 @@ BinaryMorphologicalOperation (erode)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -208,7 +208,7 @@ BinaryMorphologicalOperation (opening)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -271,7 +271,7 @@ EdgeExtraction (gradient)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -320,7 +320,7 @@ EdgeExtraction (sobel)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -369,7 +369,7 @@ EdgeExtraction (touzi)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -423,7 +423,7 @@ GrayScaleMorphologicalOperation (closing)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -486,7 +486,7 @@ GrayScaleMorphologicalOperation (dilate)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -549,7 +549,7 @@ GrayScaleMorphologicalOperation (erode)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -612,7 +612,7 @@ GrayScaleMorphologicalOperation (opening)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -675,7 +675,7 @@ Haralick Texture Extraction
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -761,7 +761,7 @@ Line segment detection
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -796,7 +796,7 @@ Local Statistic Extraction
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -841,7 +841,7 @@ Multivariate alteration detector
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -879,7 +879,7 @@ Radiometric Indices
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

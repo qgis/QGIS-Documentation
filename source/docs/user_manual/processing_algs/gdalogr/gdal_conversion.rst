@@ -9,7 +9,7 @@ gdal2xyz
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -272,7 +272,7 @@ Translate (convert format)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

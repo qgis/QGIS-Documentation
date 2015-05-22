@@ -75,7 +75,7 @@ Line dissolve
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -124,7 +124,7 @@ Line-polygon intersection
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

@@ -9,7 +9,7 @@ Classification Map Regularization
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -64,7 +64,7 @@ ComputeConfusionMatrix (raster)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -116,7 +116,7 @@ ComputeConfusionMatrix (vector)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -175,7 +175,7 @@ Compute Images second order statistics
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -210,7 +210,7 @@ FusionOfClassifications (dempstershafer)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -274,7 +274,7 @@ FusionOfClassifications (majorityvoting)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -323,7 +323,7 @@ Image Classification
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -371,7 +371,7 @@ SOM Classification
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -474,7 +474,7 @@ TrainImagesClassifier (ann)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -636,7 +636,7 @@ TrainImagesClassifier (bayes)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -721,7 +721,7 @@ TrainImagesClassifier (boost)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -833,7 +833,7 @@ TrainImagesClassifier (dt)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -953,7 +953,7 @@ TrainImagesClassifier (gbt)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1058,7 +1058,7 @@ TrainImagesClassifier (knn)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1148,7 +1148,7 @@ TrainImagesClassifier (libsvm)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1255,7 +1255,7 @@ TrainImagesClassifier (rf)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1375,7 +1375,7 @@ TrainImagesClassifier (svm)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1513,7 +1513,7 @@ Unsupervised KMeans image classification
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

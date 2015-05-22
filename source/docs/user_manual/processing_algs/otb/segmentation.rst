@@ -9,7 +9,7 @@ Connected Component Segmentation
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -68,7 +68,7 @@ Exact Large-Scale Mean-Shift segmentation, step 2
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -138,7 +138,7 @@ Exact Large-Scale Mean-Shift segmentation, step 3 (optional)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -186,7 +186,7 @@ Exact Large-Scale Mean-Shift segmentation, step 4
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -229,7 +229,7 @@ Hoover compare segmentation
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -295,7 +295,7 @@ Segmentation (cc)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -412,7 +412,7 @@ Segmentation (edison)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -544,7 +544,7 @@ Segmentation (meanshift)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -681,7 +681,7 @@ Segmentation (mprofiles)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -813,7 +813,7 @@ Segmentation (watershed)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

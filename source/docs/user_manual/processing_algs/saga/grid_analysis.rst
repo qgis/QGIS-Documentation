@@ -9,7 +9,7 @@ Accumulated cost (anisotropic)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -55,7 +55,7 @@ Accumulated cost (isotropic)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -96,7 +96,7 @@ Aggregation index
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -131,7 +131,7 @@ Analytical hierarchy process
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -164,7 +164,7 @@ Cross-classification and tabulation
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -205,7 +205,7 @@ Fragmentation (alternative)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -299,7 +299,7 @@ Fragmentation classes from density and connectivity
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -352,7 +352,7 @@ Fragmentation (standard)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -451,7 +451,7 @@ Layer of extreme value
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -491,7 +491,7 @@ Least cost paths
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -532,7 +532,7 @@ Ordered Weighted Averaging
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -565,7 +565,7 @@ Pattern analysis
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -626,7 +626,7 @@ Soil texture classification
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

@@ -9,7 +9,7 @@ Set style for raster layer
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

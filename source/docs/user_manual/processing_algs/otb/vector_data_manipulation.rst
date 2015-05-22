@@ -9,7 +9,7 @@ Concatenate
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

@@ -9,7 +9,7 @@ Directional statistics for single grid
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -119,7 +119,7 @@ Fast representativeness
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -160,7 +160,7 @@ Geographically weighted multiple regression (points/grids)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -282,7 +282,7 @@ Geographically weighted multiple regression (points)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -387,7 +387,7 @@ Geographically weighted multiple regression
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -520,7 +520,7 @@ Geographically weighted regression (points/grid)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -640,7 +640,7 @@ Geographically weighted regression
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -776,7 +776,7 @@ Global moran's i for grids
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -852,7 +852,7 @@ Multi-band variation
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -920,7 +920,7 @@ Multiple regression analysis (grid/grids)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1010,7 +1010,7 @@ Multiple regression analysis (points/grids)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1103,7 +1103,7 @@ Polynomial regression
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1186,7 +1186,7 @@ Radius of variance (grid)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1236,7 +1236,7 @@ Regression analysis
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1302,7 +1302,7 @@ Representativeness
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1342,7 +1342,7 @@ Residual analysis
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1425,7 +1425,7 @@ Spatial point pattern analysis
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1466,7 +1466,7 @@ Statistics for grids
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1514,7 +1514,7 @@ Variogram cloud
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1557,7 +1557,7 @@ Variogram surface
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -1606,7 +1606,7 @@ Zonal grid statistics
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

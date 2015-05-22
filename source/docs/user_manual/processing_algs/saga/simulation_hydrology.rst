@@ -9,7 +9,7 @@ Overland flow - kinematic wave d8
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -88,7 +88,7 @@ Water retention capacity
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

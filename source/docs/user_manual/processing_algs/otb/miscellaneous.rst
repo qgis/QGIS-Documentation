@@ -9,7 +9,7 @@ Band Math
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -49,7 +49,7 @@ ComputeModulusAndPhase-one (OneEntry)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -96,7 +96,7 @@ ComputeModulusAndPhase-two (TwoEntries)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -146,7 +146,7 @@ Images comparaison
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -206,7 +206,7 @@ Image to KMZ Export
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

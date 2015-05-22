@@ -9,7 +9,7 @@ Image Envelope
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -51,7 +51,7 @@ OrthoRectification (epsg)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -141,7 +141,7 @@ OrthoRectification (fit-to-ortho)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -221,7 +221,7 @@ OrthoRectification (lambert-WGS84)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -308,7 +308,7 @@ OrthoRectification (utm)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -403,7 +403,7 @@ Pansharpening (bayes)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -460,7 +460,7 @@ Pansharpening (lmvm)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -517,7 +517,7 @@ Pansharpening (rcs)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -564,7 +564,7 @@ RigidTransformResample (id)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -634,7 +634,7 @@ RigidTransformResample (rotation)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -709,7 +709,7 @@ RigidTransformResample (translation)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -789,7 +789,7 @@ Superimpose sensor
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

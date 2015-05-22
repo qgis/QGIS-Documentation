@@ -9,7 +9,7 @@ Vegetation index[distance based]
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -61,7 +61,7 @@ Vegetation index[slope based]
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

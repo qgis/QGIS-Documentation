@@ -9,7 +9,7 @@ Advanced raster histogram
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -44,7 +44,7 @@ Raster histogram
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

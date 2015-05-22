@@ -9,7 +9,7 @@ Frequency table
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -42,7 +42,7 @@ Kolmogrov-Smirnov test
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -75,7 +75,7 @@ Summary statistics
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

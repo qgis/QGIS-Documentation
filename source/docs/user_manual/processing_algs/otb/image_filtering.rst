@@ -9,7 +9,7 @@ DimensionalityReduction (ica)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -74,7 +74,7 @@ DimensionalityReduction (maf)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -126,7 +126,7 @@ DimensionalityReduction (napca)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -191,7 +191,7 @@ DimensionalityReduction (pca)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -246,7 +246,7 @@ Mean Shift filtering (can be used as Exact Large-Scale Mean-Shift segmentation, 
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -309,7 +309,7 @@ Smoothing (anidif)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -363,7 +363,7 @@ Smoothing (gaussian)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -412,7 +412,7 @@ Smoothing (mean)
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

@@ -9,7 +9,7 @@ Fast region growing algorithm
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

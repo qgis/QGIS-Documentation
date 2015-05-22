@@ -135,7 +135,7 @@ Distance matrix
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -190,7 +190,7 @@ Distance to nearest hub
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -249,7 +249,7 @@ Generate points (pixel centroids) along line
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -282,7 +282,7 @@ Generate points (pixel centroids) inside polygons
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -398,7 +398,7 @@ Nearest neighbour analysis
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -443,7 +443,7 @@ Sum line lengths
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
