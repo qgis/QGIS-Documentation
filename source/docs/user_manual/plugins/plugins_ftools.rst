@@ -159,6 +159,15 @@ Geometry tools
 +=====================+=================+======================================+
 | |check_geometry|    | Check geometry  | Check polygons for intersections,    |
 |                     | validity        | closed holes, and fix node ordering. |
+|                     |                 | You can choose the engine used by the|
+|                     |                 | in the options dialog, digitizing tab|
+|                     |                 | Change the Validate geometries value.| 
+|                     |                 | There is two engines: QGIS and GEOS  |
+|                     |                 | which have pretty different          |
+|                     |                 | behaviour. Another tools exists which|
+|                     |                 | shows different result as well:      |
+|                     |                 | Topology Checker plugin and 'must not|
+|                     |                 | have invalid geometries' rule.       |
 +---------------------+-----------------+--------------------------------------+
 | |export_geometry|   | Export/Add      | Add vector layer geometry info to    |
 |                     | geometry columns| point (XCOORD, YCOORD), line         |
