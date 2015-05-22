@@ -152,8 +152,8 @@ a script, then drag and drop it into the |qg| window and it will be
 executed automatically.
 
 For further information about working with the Python console and
-programming |qg| plugins and applications, please refer to
-http://docs.qgis.org/2.8/en/docs/pyqgis_developer_cookbook/index.html.
+programming |qg| plugins and applications, please refer to 
+:ref:`PyQGIS-Developer-Cookbook`.
 
 Known Issues 
 ------------
