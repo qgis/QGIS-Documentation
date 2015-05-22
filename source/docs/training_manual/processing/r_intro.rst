@@ -9,10 +9,6 @@ Processing allows to write and run R scripts inside QGIS.
 
 .. note:: If you have some *packages* problem, maybe it is related to missing *mandatory* packages required by Processing, like ``sp``, ``rgdal`` and ``raster``.
 
-In this tutorial we are going to create a boxplot of a vector layer field.
-
-Open the :file:`r_intro.qps` QGIS project. 
-
 Adding scripts
 --------------
 Adding a script is very simple. Open the Processing toolbox and just click on the :menuselection:`R --> Tools --> Create new R script`.
@@ -27,11 +23,19 @@ It opens a *script editor window* in which you have to specify some parameters b
     :scale: 70%
     :align: center
 
-Script parameters
-^^^^^^^^^^^^^^^^^
-Start writing at the beginning of the editor. 
 
-You **must** specify some parameters before the script body:
+Creating plots
+^^^^^^^^^^^^^^
+In this tutorial we are going to create a **boxplot** of a vector layer field.
+
+Open the :file:`r_intro.qps` QGIS project.
+
+
+Script parameters
+"""""""""""""""""
+Open the editor and start writing at the beginning of it. 
+
+You **must** specify some parameters **before** the script body:
 
 1. the name of the group in which you want to put your script::
 
@@ -57,8 +61,9 @@ Processing knows now that the input is a vector. The name *Layer* is not importa
 
 So Processing knows that you have called **X** the **Field Layer**.
 
+
 Script body
-^^^^^^^^^^^
+"""""""""""
 Now that you have set up the *heading* of the script you can add the function::
 
     boxplot(Layer[[X]])
@@ -67,7 +72,7 @@ Notice that **boxplot** is the name of the R function itself that calls **Layer*
 
 .. warning:: The parameter **X** is within a double square bracket ``[[]]``
 
-The script you looks like this::
+The final script looks like this::
 
     ##Vector processing=group
     ##showplots
@@ -106,9 +111,72 @@ This is the final result you'll see:
 
 .. note:: You can open, copy and save the image by right clicking on the plot
 
+Create a vector
+^^^^^^^^^^^^^^^
+With an R script you can also create a vector and automatically load it in QGIS.
+
+The following example has been taken from the ``Random sampling grid`` script that you can download from the online collection :menuselection:`R --> Tools --> Download R scripts from the on-line collection`.
+
+The aim of this exercise is to crate a random point vector in a layer extend using the ``spsample`` function of the ``sp`` package.
+
+
+Script parameters
+"""""""""""""""""
+As before we have to set some parameters before the script body:
+
+1. specify the the name of the group in which you want to put your script, for example *Point pattern analysis*:: 
+
+    ##Point pattern analysis=group
+    
+2. set the layer that will contain the random points::
+
+    ##Layer=vector
+    
+3. set the number of points that are going to be created::
+
+    ##Size=number 10
+    
+.. note:: 10 is going to be the default value. You can change this number or you can leave the parameter without a default number
+
+4. specify that the output is a vector layer::
+
+    ##Output= output vector 
+
+    
+Script body
+"""""""""""
+Now you can add the body of the function:
+
+1. run the ``spsample`` function::
+
+    pts=spsample(Layer,Size,type="random")
+    
+this way the function takes the extend of the *Layer*, the number of points is taken from the *Size* parameter and the type po point generation is *random*
+
+2. Write the line that contains the parameters of the output:: 
+
+    Output=SpatialPointsDataFrame(pts, as.data.frame(pts))
+    
+The final script should look like:
+
+.. image:: img/r_intro/r_intro_8.png
+
+Save it and run it, clicking on the running button. 
+
+In the new window type in the right parameters:
+
+.. image:: img/r_intro/r_intro_9.png
+
+and click on run.
+
+Resulting points will be displayed in the map canvas
+
+.. image:: img/r_intro/r_intro_10.png
+
+
 R - Processing syntax
 ---------------------
 Beware that Processing uses some special syntax to get the results out of R::
 
-    `>` before your command, as in `>lillie.test(Layer[[Field]])` means the result should be sent to R output (Result viewer)
-    `+` after a plot to call overlay plots. For example `plot(Layer[[X]], Layer[[Y]]) + abline(h=mean(Layer[[X]]))`
+* ``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means the result should be sent to R output (Result viewer)
+* ``+`` after a plot to call overlay plots. For example ``plot(Layer[[X]], Layer[[Y]]) + abline(h=mean(Layer[[X]]))``
