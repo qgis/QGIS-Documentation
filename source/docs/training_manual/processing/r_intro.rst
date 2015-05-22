@@ -108,7 +108,7 @@ This is the final result you'll see:
 
 R - Processing syntax
 ---------------------
-Beware that Processing uses some special syntax to get the results out of R::
+Beware that Processing uses some special syntax to get the results out of R:
 
-    `>` before your command, as in `>lillie.test(Layer[[Field]])` means the result should be sent to R output (Result viewer)
-    `+` after a plot to call overlay plots. For example `plot(Layer[[X]], Layer[[Y]]) + abline(h=mean(Layer[[X]]))`
+* ``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means the result should be sent to R output (Result viewer)
+* ``+`` after a plot to call overlay plots. For example ``plot(Layer[[X]], Layer[[Y]]) + abline(h=mean(Layer[[X]]))``
