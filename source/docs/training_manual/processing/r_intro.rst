@@ -5,19 +5,19 @@ Module contributed by Matteo Ghetta - `Dropcode <www.dropcode.weebly.com>`_
 
 Processing allows to write and run R scripts inside QGIS.
 
-.. note:: Obviously you have to install R with the necessary libraries (sp, rgdal) beforehand.
+.. warning:: R has to be installed on your computer and the PATH has to correctly set up. Moreover Processing just calls the external R packages, it is not able to install them. So be sure to install external packages directly in R. See the related `chapter <http://docs.qgis.org/testing/en/docs/user_manual/processing/3rdParty.html>`_ in the training manual.
+
+.. note:: If you have some *packages* problem, maybe it is related to missing *mandatory* packages required by Processing, like ``sp``, ``rgdal`` and ``raster``.
 
 In this tutorial we are going to create a boxplot of a vector layer field.
 
-Open the :file:`r_intro.qps` QGIS project.
+Open the :file:`r_intro.qps` QGIS project. 
 
 Adding scripts
 --------------
 Adding a script is very simple. Open the Processing toolbox and just click on the :menuselection:`R --> Tools --> Create new R script`.
 
 .. image:: img/r_intro/r_intro_1.png
-
-.. note:: R has to be installed on your computer and the PATH has to correctly set up. See the related `chapter <http://docs.qgis.org/testing/en/docs/user_manual/processing/3rdParty.html>`_ in the training manual.
 
 .. note:: If you cannot see R in Processing, you have to activate it in :menuselection:`Processing --> Options --> Providers`
 
@@ -106,7 +106,9 @@ This is the final result you'll see:
 
 .. note:: You can open, copy and save the image by right clicking on the plot
 
+R - Processing syntax
+---------------------
 Beware that Processing uses some special syntax to get the results out of R::
 
-  `+` means 
-  `>` before your command, as in `>lillie.test(Layer[[Field]])` means the result should be sent to R output (Result viewer)
+    `>` before your command, as in `>lillie.test(Layer[[Field]])` means the result should be sent to R output (Result viewer)
+    `+` after a plot to call overlay plots. For example `plot(Layer[[X]], Layer[[Y]]) + abline(h=mean(Layer[[X]]))`
