@@ -40,104 +40,29 @@ msgid ""
 " not, an invalid layer instance is returned."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:33
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:43
 msgid ""
 "The following list shows how to access various data sources using vector "
 "data providers:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:39
-msgid ""
-"OGR library (shapefiles and many other file formats) --- data source is the "
-"path to the file ::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:49
-msgid ""
-"PostGIS database --- data source is a string with all information needed to "
-"create a connection to PostgreSQL database. :class:`QgsDataSourceURI` class "
-"can generate this string for you. Note that QGIS has to be compiled with "
-"Postgres support, otherwise this provider isn't available. ::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:67
-msgid ""
-"CSV or other delimited text files --- to open a file with a semicolon as a "
-"delimiter, with field \"x\" for x-coordinate and field \"y\" with "
-"y-coordinate you would use something like this ::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:75
-msgid ""
-"Note: from QGIS version 1.7 the provider string is structured as a URL, so "
-"the path must be prefixed with *file://*. Also it allows WKT (well known "
-"text) formatted geomtries as an alternative to \"x\" and \"y\" fields, and "
-"allows the coordinate reference system to be specified. For example ::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:87
-msgid ""
-"GPX files --- the \"gpx\" data provider reads tracks, routes and waypoints "
-"from gpx files. To open a file, the type (track/route/waypoint) needs to be "
-"specified as part of the url ::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:98
-msgid ""
-"SpatiaLite database --- supported from QGIS v1.1. Similarly to PostGIS "
-"databases, :class:`QgsDataSourceURI` can be used for generation of data "
-"source identifier ::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:116
-msgid ""
-"MySQL WKB-based geometries, through OGR --- data source is the connection "
-"string to the table ::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:127
-msgid ""
-"WFS connection:. the connection is defined with a URI and using the ``WFS`` "
-"provider ::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:134
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:148
 msgid "The uri can be created using the standard ``urllib`` library."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:148
-msgid "And you can also use the"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:153
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:163
 msgid "Raster Layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:155
-msgid ""
-"For accessing raster files, GDAL library is used. It supports a wide range "
-"of file formats. In case you have troubles with opening some files, check "
-"whether your GDAL has support for the particular format (not all formats are"
-" available by default). To load a raster from a file, specify its file name "
-"and base name ::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:171
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:190
 msgid "Raster layers can also be created from a WCS service."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:182
-msgid ""
-"Alternatively you can load a raster layer from WMS server. However currently"
-" it's not possible to access GetCapabilities response from API --- you have "
-"to know what layers you want ::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:196
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:217
 msgid "Map Layer Registry"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:198
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:219
 msgid ""
 "If you would like to use the opened layers for rendering, do not forget to "
 "add them to map layer registry. The map layer registry takes ownership of "
@@ -146,21 +71,11 @@ msgid ""
 "deleted, too."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:205
-msgid "Adding a layer to the registry::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:209
-msgid ""
-"Layers are destroyed automatically on exit, however if you want to delete "
-"the layer explicitly, use::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:217
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:247
 msgid "**TODO:**"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:216
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:246
 msgid "More about map layer registry?"
 msgstr ""
 
@@ -169,54 +84,242 @@ msgid "vector layers"
 msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:15
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:36
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:46
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:64
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:84
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:95
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:113
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:124
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:168
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:56
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:75
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:96
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:108
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:127
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:138
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:179
 msgid "loading"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:36
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:46
 msgid "OGR layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:46
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:56
 msgid "PostGIS layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:64
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:75
 msgid "delimited text layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:84
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:96
 msgid "GPX files"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:95
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:108
 msgid "SpatiaLite layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:113
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:127
 msgid "MySQL geometries"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:124
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:138
 msgid "raster layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:168
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:179
 msgid "WMS raster"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:193
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:203
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:214
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:224
 msgid "map layer registry"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:203
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:224
 msgid "adding a layer"
 msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:33
+msgid ""
+"The quickest way to open and display a vector layer in QGIS is the "
+"addVectorLayer function of the :class:`QgisInterface`:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:41
+msgid ""
+"This creates a new layer and adds it to the map layer registry (making it "
+"appear in the layer list) in one step. The function returns the layer "
+"instance or `None` if the layer couldn't be loaded."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:49
+msgid ""
+"OGR library (shapefiles and many other file formats) --- data source is the "
+"path to the file"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:59
+msgid ""
+"PostGIS database --- data source is a string with all information needed to "
+"create a connection to PostgreSQL database. :class:`QgsDataSourceURI` class "
+"can generate this string for you. Note that QGIS has to be compiled with "
+"Postgres support, otherwise this provider isn't available."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:78
+msgid ""
+"CSV or other delimited text files --- to open a file with a semicolon as a "
+"delimiter, with field \"x\" for x-coordinate and field \"y\" with "
+"y-coordinate you would use something like this"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:87
+msgid ""
+"Note: from QGIS version 1.7 the provider string is structured as a URL, so "
+"the path must be prefixed with *file://*. Also it allows WKT (well known "
+"text) formatted geometries as an alternative to \"x\" and \"y\" fields, and "
+"allows the coordinate reference system to be specified. For example"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:99
+msgid ""
+"GPX files --- the \"gpx\" data provider reads tracks, routes and waypoints "
+"from gpx files. To open a file, the type (track/route/waypoint) needs to be "
+"specified as part of the url"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:111
+msgid ""
+"SpatiaLite database --- supported from QGIS v1.1. Similarly to PostGIS "
+"databases, :class:`QgsDataSourceURI` can be used for generation of data "
+"source identifier"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:130
+msgid ""
+"MySQL WKB-based geometries, through OGR --- data source is the connection "
+"string to the table"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:141
+msgid ""
+"WFS connection:. the connection is defined with a URI and using the ``WFS`` "
+"provider"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:165
+msgid ""
+"For accessing raster files, GDAL library is used. It supports a wide range "
+"of file formats. In case you have troubles with opening some files, check "
+"whether your GDAL has support for the particular format (not all formats are"
+" available by default). To load a raster from a file, specify its file name "
+"and base name"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:182
+msgid ""
+"Similarly to vector layers, raster layers can be loaded using the "
+"addRasterLayer function of the :class:`QgisInterface`:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:188
+msgid ""
+"This creates a new layer and adds it to the map layer registry (making it "
+"appear in the layer list) in one step."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:200
+msgid ""
+"detailed URI settings can be found in `provider documentation "
+"<https://github.com/qgis/QGIS/blob/master/src/providers/wcs/URI>`_"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:203
+msgid ""
+"Alternatively you can load a raster layer from WMS server. However currently"
+" it's not possible to access GetCapabilities response from API --- you have "
+"to know what layers you want"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:226
+msgid "Adding a layer to the registry"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:232
+msgid ""
+"Layers are destroyed automatically on exit, however if you want to delete "
+"the layer explicitly, use"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:239
+msgid "For a list of loaded layers and layer ids, use"
+msgstr ""
+
+#~ msgid ""
+#~ "OGR library (shapefiles and many other file formats) --- data source is the "
+#~ "path to the file ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "PostGIS database --- data source is a string with all information needed to "
+#~ "create a connection to PostgreSQL database. :class:`QgsDataSourceURI` class "
+#~ "can generate this string for you. Note that QGIS has to be compiled with "
+#~ "Postgres support, otherwise this provider isn't available. ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "CSV or other delimited text files --- to open a file with a semicolon as a "
+#~ "delimiter, with field \"x\" for x-coordinate and field \"y\" with "
+#~ "y-coordinate you would use something like this ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note: from QGIS version 1.7 the provider string is structured as a URL, so "
+#~ "the path must be prefixed with *file://*. Also it allows WKT (well known "
+#~ "text) formatted geomtries as an alternative to \"x\" and \"y\" fields, and "
+#~ "allows the coordinate reference system to be specified. For example ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "GPX files --- the \"gpx\" data provider reads tracks, routes and waypoints "
+#~ "from gpx files. To open a file, the type (track/route/waypoint) needs to be "
+#~ "specified as part of the url ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "SpatiaLite database --- supported from QGIS v1.1. Similarly to PostGIS "
+#~ "databases, :class:`QgsDataSourceURI` can be used for generation of data "
+#~ "source identifier ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "MySQL WKB-based geometries, through OGR --- data source is the connection "
+#~ "string to the table ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "WFS connection:. the connection is defined with a URI and using the ``WFS`` "
+#~ "provider ::"
+#~ msgstr ""
+
+#~ msgid "And you can also use the"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For accessing raster files, GDAL library is used. It supports a wide range "
+#~ "of file formats. In case you have troubles with opening some files, check "
+#~ "whether your GDAL has support for the particular format (not all formats are"
+#~ " available by default). To load a raster from a file, specify its file name "
+#~ "and base name ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Alternatively you can load a raster layer from WMS server. However currently"
+#~ " it's not possible to access GetCapabilities response from API --- you have "
+#~ "to know what layers you want ::"
+#~ msgstr ""
+
+#~ msgid "Adding a layer to the registry::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Layers are destroyed automatically on exit, however if you want to delete "
+#~ "the layer explicitly, use::"
+#~ msgstr ""

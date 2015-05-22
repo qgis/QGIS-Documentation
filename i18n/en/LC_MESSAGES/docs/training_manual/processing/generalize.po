@@ -1,0 +1,65 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-22 21:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/training_manual/processing/generalize.rst:6
+msgid "Vector simplification and smoothing"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/generalize.rst:8
+msgid ""
+"Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/generalize.rst:10
+msgid "This chapter shows how simplify vectors, and smooth out sharp corners."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/generalize.rst:12
+msgid ""
+"Sometimes we need a simplified version of a vector, to have a smaller file "
+"size and get rid of unnecessary details. Many tools do this in a very rough "
+"way, and miss the adjacency and sometimes the topological correctness of "
+"polygons. GRASS is the ideal tool for this: being a topological GIS, "
+"adjacency and correctness are preserved even at very high simplification "
+"levels. In our case, we have a vector resulting from a raster, thus showing "
+"a \"saw\" pattern at borders. Applying a simplification results in straight "
+"lines:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/generalize.rst:15
+msgid ""
+":menuselection:`GRASS --> v.generalize` [Maximal tolerance value: 30 m]"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/generalize.rst:17
+msgid ""
+"We can also do the reverse, and make a layer more complex, smoothing out "
+"sharp corners:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/generalize.rst:19
+msgid ":menuselection:`GRASS --> v.generalize` [method: chaiken]"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/generalize.rst:21
+msgid ""
+"Try to apply this second command both to original vector and to the one from"
+" the first analysis, and see the difference. Note that adjacency is not "
+"lost."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/generalize.rst:23
+msgid ""
+"This second option can be applied e.g. to contour lines resulting from a "
+"coarse raster, to GPS tracks with sparse vertices, etc."
+msgstr ""

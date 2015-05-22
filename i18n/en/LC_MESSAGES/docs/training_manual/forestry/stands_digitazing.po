@@ -1,0 +1,732 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-22 21:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:6
+msgid "|LS| Digitizing Forest Stands"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:8
+msgid ""
+"Unless you are going to use your georeferenced map as a simple background "
+"image, the next natural step is to digitize elements from it. You have "
+"already done so in the exercises about creating vector data in "
+":doc:`../create_vector_data/create_new_vector` , when you digitized the "
+"school fields. In this lesson, you are going to digitize the forest stands' "
+"borders that appear in the map as green lines but instead of doing it using "
+"an aerial image, you will use your georeferenced map."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:10
+msgid ""
+"**The goal for this lesson:** Learn a technique to help the digitizing task,"
+" digitizing forest stands and finally adding the inventory data to them."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:13
+msgid "|basic| |FA| Extracting the Forest Stands Borders"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:15
+msgid ""
+"Open your :kbd:`map_digitizing.qgs` project in QGIS, that you saved from the"
+" previous lesson."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:17
+msgid ""
+"Once you have scanned and georeferenced your map you could start to digitize"
+" directly by looking at the image as a guide. That would most likely be the "
+"way to go if the image you are going to digitize from is, for example, an "
+"aerial photograph."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:19
+msgid ""
+"If what you are using to digitize is a good map, as it is in our case, it is"
+" likely that the information is clearly displayed as lines with different "
+"colors for each type of element. Those colors can be relatively easy "
+"extracted as individual images using an image processing software like `GIMP"
+" <http://www.gimp.org/>`_. Such separate images can be used to assist the "
+"digitizing, as you will see below."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:21
+msgid ""
+"The first step will be to use GIMP to obtain an image that contains only the"
+" forest stands, that is, all those greenish lines that you could see in the "
+"original scanned map:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:23
+msgid ""
+"Open GIMP (if you don't have it installed yet, download it from the internet"
+" or ask your teacher)."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:24
+msgid ""
+"Open the original map image, :menuselection:`File --> Open`, "
+":kbd:`rautjarvi_map.tif` in the :kbd:`exercise_data/forestry` folder. Note "
+"that the forest stands are represented as green lines (with the number of "
+"the stand also in green inside each polygon)."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:29
+msgid ""
+"Now you can select the pixels in the image that are making up the forest "
+"stands' borders (the greenish pixels):"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:31
+msgid "Open the tool :menuselection:`Select --> By color`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:32
+msgid ""
+"With the tool active, zoom into the image (:guilabel:`Ctrl + mouse wheel`) "
+"so that a forest stand line is close enough to differentiate the pixels "
+"forming the line. See the left image below."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:33
+msgid ""
+"Click and drag the mouse cursor in the middle of the line so that the tool "
+"will collect several pixel color values."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:34
+msgid ""
+"Release the mouse click and wait a few seconds. The pixels matching the "
+"colors collected by the tool will be selected through the whole image."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:35
+msgid ""
+"Zoom out to see how the greenish pixels have been selected throughout the "
+"image."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:36
+msgid ""
+"If you are not happy with the result, repeat the click and drag operation."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:37
+msgid "Your pixel selection should look something like the right image below."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:42
+msgid ""
+"Once you are done with the selection you need to copy this selection as a "
+"new layer and then save it as separate image file:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:44
+msgid "Copy (:guilabel:`Ctr+C`) the selected pixels."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:45
+msgid ""
+"And paste the pixels directly (:guilabel:`Ctr+V`), GIMP will display the "
+"pasted pixels as a new temporary layer in the :guilabel:`Layers - Brushes` "
+"panel as a :guilabel:`Floating Selection (Pasted Layer)`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:46
+msgid "Right click that temporary layer and select :guilabel:`To New Layer`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:47
+msgid ""
+"Click the \"eye\" icon next to the original image layer to switch it off, so"
+" that only the :guilabel:`Pasted Layer` is visible:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:52
+msgid ""
+"Finally, select :menuselection:`File --> Export...`, set :guilabel:`Select "
+"File Type (By Extension)` as a :guilabel:`TIFF image`, select the "
+":kbd:`digitizing` folder and name it :kbd:`rautjarvi_map_green.tif`. Select "
+"no compression when asked."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:54
+msgid ""
+"You could do the same process with other elements in the image, for example "
+"extracting the black lines that represent roads or the brown ones that "
+"represent the terrain' contour lines. But for us, the forest stands is "
+"enough."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:57
+msgid "|basic| |TY| Georeference the Green Pixels Image"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:59
+msgid ""
+"As you did in the previous lesson, you need to georeference this new image "
+"to be able to use it with the rest of your data."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:61
+msgid ""
+"Note that you don't need to digitize the ground control points any more "
+"because this image is basically the same image as the original map image, as"
+" far as the Georeferencer tool is concerned. Here are some things you should"
+" remember:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:63
+msgid "This image is also, of course, in :kbd:`KKJ / Finland zone 2` CRS."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:64
+msgid ""
+"You should use the ground control points you saved, :menuselection:`File -->"
+" Load GCP points`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:65
+msgid "Remember to review the :guilabel:`Transformation settings`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:66
+msgid ""
+"Name the output raster as :kbd:`rautjarvi_green_georef.tif` in the "
+":kbd:`digitizing` folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:68
+msgid "Check that the new raster is fitting nicely with the original map."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:72
+msgid "|basic| |FA| Creating Supporting Points for Digitizing"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:74
+msgid ""
+"Having in mind the digitizing tools in QGIS, you might already be thinking "
+"that it would be helpful to snap to those green pixels while digitizing. "
+"That is precisely what you are going to do next create points from those "
+"pixels to use them later to help you follow the forest stands' borders when "
+"digitizing, by using the snapping tools available in QGIS."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:76
+msgid ""
+"Use the :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
+"Vector)` tool to vectorize your green lines to polygons. If you don't "
+"remember how, you can review it in "
+":doc:`../complete_analysis/raster_to_vector`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:77
+msgid ""
+"Save as :kbd:`rautjarvi_green_polygon.shp` inside the :kbd:`digitizing` "
+"folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:79
+msgid ""
+"Zoom in and see what the polygons look like. You will get something like "
+"this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:84
+msgid ""
+"Next one option to get points out of those polygons is to get their "
+"centroids:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:86
+msgid "Open :menuselection:`Vector --> Geometry tools --> Polygon centroids`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:87
+msgid "Set the polygon layer you just got as the input file for the tool."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:88
+msgid ""
+"Name the output as :kbd:`green_centroids.shp` inside the :kbd:`digitizing` "
+"folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:89
+msgid "Check :menuselection:`Add result to canvas`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:90
+msgid "Run the tool to calculate the centroids for the polygons."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:95
+msgid ""
+"Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the "
+"TOC."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:97
+msgid "Change the symbology of the centroids layer as:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:99
+msgid "Open the :guilabel:`Layer Properties` for :guilabel:`green_centroids`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:100
+msgid "Go to the :guilabel:`Style` tab."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:101
+msgid "Set the :guilabel:`Unit` to Map unit."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:102
+msgid "Set the :guilabel:`Size` to 1."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:104
+msgid ""
+"It is not necessary to differentiate points from each other, you just need "
+"them to be there for the snapping tools to use them. You can use those "
+"points now to follow the original lines much easily than without them."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:107
+msgid "|basic| |FA| Digitize the Forest Stands"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:109
+msgid ""
+"Now you are ready to start with the actual digitizing work. You would start "
+"by creating a vector file of :guilabel:`polygon type`, but for this "
+"exercise, there is a shapefile with part of the area of interest already "
+"digitized. You will just finish digitizing the half of the forest stands "
+"that are left between the main roads (wide pink lines) and the lake:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:114
+msgid "Go to the :kbd:`digitizing` folder using your file manager browser."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:115
+msgid "Drag and drop the :kbd:`forest_stands.shp` vector file to your map."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:117
+msgid ""
+"Change the new layer's symbology so that it will be easier to see what "
+"polygons have already been digitized:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:119
+msgid "The filling of the polygon to green."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:120
+msgid "The polygons' borders to 1 mm."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:121
+msgid "and set the transparency to 50%."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:123
+msgid ""
+"Now, if you remember past modules, we have to set up and activate the "
+"snapping options:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:125
+msgid "Go to :menuselection:`Settings --> Snapping options...`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:126
+msgid ""
+"Activate the snapping the  :kbd:`green_centroids` and the "
+":kbd:`forest_stands` layers."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:127
+msgid "Set their :guilabel:`Tolerance` to 5 map units."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:128
+msgid ""
+"Check the :guilabel:`Avoid Int.` box for the :kbd:`forest_stands` layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:129
+msgid "Check :guilabel:`Enable topological editing`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:130
+msgid "Click :guilabel:`Apply`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:135
+msgid ""
+"With these snapping settings, whenever you are digitizing and get close "
+"enough to one of the points in the centroids layer or any vertex of your "
+"digitized polygons, a pink cross will appear on the point that will be "
+"snapped to."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:137
+msgid ""
+"Finally, turn off the visibility of all the layers except "
+":kbd:`forest_stands` and :kbd:`rautjarvi_georef`. Make sure that the map "
+"image has not transparency any more."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:139
+msgid "A couple of important things to note before you start digitizing:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:141
+msgid "Don't try to be too accurate with the digitizing of the borders."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:142
+msgid ""
+"If a border is a straight line, digitize it with just two nodes. In general,"
+" digitize using as few nodes as possible."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:143
+msgid ""
+"Zoom in to close ranges only if you feel that you need to be accurate, for "
+"example, at some corners or when you want a polygon to connect with another "
+"polygon at a certain node."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:144
+msgid ""
+"Use the mouse's middle button to zoom in/out and to pan as you digitize."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:145
+msgid "Digitize only one polygon at a time."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:146
+msgid ""
+"After digitizing one polygon, write the forest stand id that you can see "
+"from the map."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:148
+msgid "Now you can start digitizing:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:150
+msgid "Locate the forest stand number 357 in the map window."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:151
+msgid "Enable editing for the :kbd:`forest_stands.shp` layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:152
+msgid "Select the :guilabel:`Add feature` tool."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:153
+msgid "Start digitizing the stand :kbd:`357` by connecting some of the dots."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:154
+msgid "Note the pink crosses indicating the snapping."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:159
+msgid "When you are done, right click to end digitizing that polygon."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:160
+msgid "Enter the forest stand :kbd:`id` (in this case 357)."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:161
+msgid "Click :guilabel:`OK`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:163
+msgid ""
+"If you were not prompted for the polygon :kbd:`id` when you finished "
+"digitizing it, go to :menuselection:`Settings --> Options --> Digitizing` "
+"and make sure that the :guilabel:`Suppress attribute form pop-up after "
+"feature creation` is not checked."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:165
+msgid "Your digitized polygon will look like this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:170
+msgid ""
+"Now for the second polygon, pick up the stand number 358. Make sure that the"
+" :guilabel:`Avoid int.` is checked for the :kbd:`forest_stands` layer. This "
+"option does not allow intersecting polygons at digitizing, so that if you "
+"digitize  over an existing polygon, the new polygon will be trimmed to meet "
+"the border of the already existing polygons. You can use this characteristic"
+" to automatically obtain a common border."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:172
+msgid ""
+"Begin digitizing the stand 358 at one of the common corners with the stand "
+"357."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:173
+msgid ""
+"Then continue normally until you get to the other common corner for both "
+"stands."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:174
+msgid ""
+"Finally, digitize a few points inside polygon 357 making sure that the "
+"common border is not intersected. See left image below."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:175
+msgid "Right click to finish editing the forest stand 358."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:176
+msgid "Enter the :kbd:`id` as 358."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:177
+msgid ""
+"Click :guilabel:`OK`, your new polygon should show a common border with the "
+"stand 357 as you can seen in the image on the right."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:182
+msgid ""
+"The part of the polygon that was overlapping the existing polygon has been "
+"automatically trimmed out and you are left with a common border, as you "
+"intended it to be."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:186
+msgid "|basic| |TY| Finish Digitizing the Forest Stands"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:188
+msgid ""
+"Now you have two forest stands ready. And a good idea on how to proceed. "
+"Continue digitizing on your own until you have digitized all the forest "
+"stands that are limited by the main road and the lake."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:190
+msgid ""
+"It might look like a lot of work, but you will soon get used to digitizing "
+"the forest stands. It should take you about 15 minutes."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:192
+msgid ""
+"During the digitizing you might need to edit or delete nodes, split or merge"
+" polygons. You learned about the necessary tools in "
+":doc:`../create_vector_data/topo_editing`, now is probably a good moment to "
+"go read about them again."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:194
+msgid ""
+"Remember that having :guilabel:`Enable topological editing` activated, "
+"allows you to move nodes common to two polygons so that the common border is"
+" edited at the same time for both polygons."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:196
+msgid "Your result will look like this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:202
+msgid "|basic| |FA| Joining the Forest Stand Data"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:204
+msgid ""
+"It is possible that the forest inventory data you have for you map is also "
+"written in paper. In that case, you would have to first write that data to a"
+" text file or a spreadsheet. For this exercise, the information from the "
+"inventory for 1994 (the same inventory as the map) is ready as a comma "
+"separated text (csv) file."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:206
+msgid ""
+"Open the :kbd:`rautjarvi_1994.csv` file from the "
+":kbd:`exercise_data\\\\forestry` directory in a text editor and note that "
+"the inventory data file has an attribute called :kbd:`ID` that has the "
+"numbers of the forest stands. Those numbers are the same as the forest "
+"stands ids you have entered for your polygons and can be used to link the "
+"data from the text file to your vector file. You can see the metadata for "
+"this inventory data in the file :kbd:`rautjarvi_1994_legend.txt` in the same"
+" folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:208
+msgid ""
+"Open the :kbd:`.csv` in QGIS with the :menuselection:`Layer --> Add "
+"Delimited Text Layer...` tool. In the dialog, set it as follows:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:213
+msgid "To add the data from the :kbd:`.csv` file:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:215
+msgid "Open the Layer Properties for the :kbd:`forest_stands` layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:216
+msgid "Go to the :guilabel:`Joins` tab."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:217
+msgid "Click the plus sign on the bottom of the dialog box."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:218
+msgid ""
+"Select :kbd:`rautjarvi_1994.csv` as the :guilabel:`Join layer` and :kbd:`ID`"
+" as the :guilabel:`Join` field."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:219
+msgid "Make sure that the :guilabel:`Target` field is also set to :kbd:`id`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:220
+msgid "Click :guilabel:`OK` two times."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:222
+msgid ""
+"The data from the text file should be now linked to your vector file. To see"
+" what has happened, open the attribute table for the :kbd:`forest_stands` "
+"layer. You can see that all the attributes from the inventory data file are "
+"now linked to your digitized vector layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:225
+msgid "|basic| |TY| Renaming Attribute Names and Adding Area and Perimeter"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:227
+msgid ""
+"The data from the :kbd:`.csv` file is just linked to your vector file. To "
+"make this link permanent, so that the data is actually recorded to the "
+"vector file you need to save the :kbd:`forest_stands` layer as a new vector "
+"file. Close the attribute table and right click the forest_stands layer to "
+"save it as :kbd:`forest_stands_1994.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:229
+msgid ""
+"Open your new :kbd:`forest_stands_1994.shp` in your map if you did not added"
+" yet. Then open the attribute table. You notice that the names of the "
+"columns that you just added are no very useful. To solve this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:231
+msgid ""
+"Add the plugin :guilabel:`Table Manager` as you have done with other plugins"
+" before."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:232
+msgid "Make sure the plugin is activated."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:233
+msgid "In the TOC select the layer :kbd:`forest_stands_1994.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:234
+msgid ""
+"Then, go to :menuselection:`Vector --> Table Manager --> Table manager`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:235
+msgid ""
+"Use the dialogue box to edit the names of the columns to match the ones in "
+"the :kbd:`.csv` file."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:240
+msgid "Click on :guilabel:`Save`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:241
+msgid "Select :guilabel:`Yes` to keep the layer style."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:242
+msgid "Close the :guilabel:`Table Manager` dialogue."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:244
+msgid ""
+"To finish gathering the information related to these forest stands, you "
+"might calculate the area and the perimeter of the stands. You calculated "
+"areas for polygons in :doc:`../complete_analysis/analysis_exercise`. Go back"
+" to that lesson if you need to and calculate the areas for the forest "
+"stands, name the new attribute :kbd:`Area` and make sure that the values "
+"calculated are in hectares."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:246
+msgid ""
+"Now your :kbd:`forest_stands_1994.shp` layer is ready and packed with all "
+"the available information."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:248
+msgid ""
+"Save your project to keep the current map presentation in case you need to "
+"come back later to it."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:251
+msgid "|IC|"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:253
+msgid ""
+"It has taken a few clicks of the mouse but you now have your old inventory "
+"data in digital format and ready for use in QGIS."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:256
+msgid "|WN|"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:258
+msgid ""
+"You could start doing different analysis with your brand new dataset, but "
+"you might be more interested in performing analysis in a dataset more up to "
+"date. The topic of the next lesson will be the creation of forest stands "
+"using current aerial photos and the addition of some relevant information to"
+" your dataset."
+msgstr ""

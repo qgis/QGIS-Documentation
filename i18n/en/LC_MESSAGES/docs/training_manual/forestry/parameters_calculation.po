@@ -1,0 +1,409 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-22 21:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:6
+msgid "|LS| Calculating the Forest Parameters"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:8
+msgid ""
+"Estimating the parameters of the forest is the goal of the forest inventory."
+" Continuing the example from previous lesson, you will use the inventory "
+"information gathered in the field to calculate the forest parameters, for "
+"the whole forest first, and then for the stands you digitized before."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:10
+msgid ""
+"**The goal for this lesson:** Calculate forest parameters at general and "
+"stand level."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:13
+msgid "|basic| |FA| Adding the Inventory Results"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:15
+msgid ""
+"The field teams visited the forest and with the help of the information you "
+"provided, gathered information about the forest at every sample plot."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:17
+msgid ""
+"Most often the information will be collected into paper forms in the field, "
+"then typed to a spreadsheet. The sample plots information has been condensed"
+" into a :kbd:`.csv` file that can be easily open in QGIS."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:19
+msgid ""
+"Continue with the QGIS project from the lesson about designing the "
+"inventory, you probably named it :kbd:`forest_inventory.qgs`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:21
+msgid "First, add the sample plots measurements to your QGIS project:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:23
+msgid "Go to :menuselection:`Layer --> Add Delimited Text Layer...`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:24
+msgid ""
+"Browse to the file :kbd:`systematic_inventory_results.csv` located in "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:25
+msgid "Make sure that the :guilabel:`Point coordinates` option is checked."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:26
+msgid ""
+"Set the fields for the coordinates to the :kbd:`X` and :kbd:`Y` fields."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:27
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:51
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:74
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:93
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:110
+msgid "Click :guilabel:`OK`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:28
+msgid "When prompted, select :kbd:`ETRS89 / ETRS-TM35FIN` as the CRS."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:29
+msgid ""
+"Open the new layer's :guilabel:`Attribute table` and have a look at the "
+"data."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:31
+msgid ""
+"You can read the type of data that is contained in the sample plots "
+"measurements in the text file :kbd:`legend_2012_inventorydata.txt` located "
+"in the :kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:33
+msgid ""
+"The :kbd:`systematic_inventory_results` layer you just added is actually "
+"just a virtual representation of the text information in the :kbd:`.csv` "
+"file. Before you continue, convert the inventory results to a real "
+"shapefile:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:35
+msgid "Right click on the :kbd:`systematic_inventory_results` layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:36
+msgid "Browse to :kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:37
+msgid "Name the file :kbd:`sample_plots_results.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:38
+msgid "Check :guilabel:`Add saved file to map`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:39
+msgid ""
+"Remove the :kbd:`systematic_inventory_results` layer from your project."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:42
+msgid "|basic| |FA| Whole Forest Parameters Estimation"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:44
+msgid ""
+"You can calculate the averages for this whole forest area from the inventory"
+" results for the some interesting parameters, like the volume and the number"
+" of stems per hectare. Since the systematic sample plots represent equal "
+"areas, you can directly calculate the averages of the volumes and number of "
+"stems per hectare from the :kbd:`sample_plots_results` layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:46
+msgid ""
+"You can calculate the average of a field in a vector layer using the "
+":guilabel:`Basic statistics` tool:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:48
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:106
+msgid "Open :menuselection:`Vector --> Analysis Tools --> Basic statistics`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:49
+msgid ""
+"Select the :kbd:`sample_plots_results` as the :guilabel:`Input Vector "
+"Layer`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:50
+msgid "Select :kbd:`Vol` as :guilabel:`Target field`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:53
+msgid "The average volume in the forest is :kbd:`135.2 m3/ha`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:55
+msgid ""
+"You can calculate the average for the number of stems in the same way, "
+":kbd:`2745 stems/ha`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:61
+msgid "|basic| |FA| Estimating Stand Parameters"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:63
+msgid ""
+"You can make use of those same systematic sample plots to calculate "
+"estimates for the different forest stands you digitized previously. Some of "
+"the forest stands did not get any sample plot and for those you will not get"
+" information. You could have planned some extra sample plots when you "
+"planned the systematic inventory, so that the field teams would have "
+"measured a few extra sample plots for this purpose. Or you could send a "
+"field team later to get estimates of the missing forest stands to complete "
+"the stand inventory. Nevertheless, you will get information for a good "
+"number of stands just using the planned plots."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:65
+msgid ""
+"What you need is to get the averages of the sample plots that are falling "
+"within each of the forest stands. When you want to combine information based"
+" on their relative locations, you perform a spatial join:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:67
+msgid ""
+"Open the  :menuselection:`Vector --> Data Management --> Join attributes by "
+"location` tool."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:68
+msgid ""
+"Set :kbd:`forest_stands_2012` as the :guilabel:`Target vector layer`. The "
+"layer you want the results for."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:69
+msgid ""
+"Set :kbd:`sample_plots_results` as the :guilabel:`Join vector layer`. The "
+"layer you want to calculate estimates from."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:70
+msgid "Check :guilabel:`Take summary of intersecting features`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:71
+msgid "Check to calculate only the :guilabel:`Mean`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:72
+msgid ""
+"Name the result as :kbd:`forest_stands_2012_results.shp` and save it in the "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:73
+msgid ""
+"Finally select :guilabel:`Keep all records...`, so you can check later what "
+"stands did not get information."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:75
+msgid "Accept adding the new layer to your project when prompted."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:76
+msgid "Close the :guilabel:`Join attributes by location` tool."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:78
+msgid ""
+"Open the :guilabel:`Attribute table` for :kbd:`forest_stands_2012_results` "
+"and review the results you got. Note that a number of forest stands have "
+":kbd:`NULL` as the value for the calculations, those are the ones having no "
+"sample plots. Select them all review them in the map, they are some of the "
+"smaller stands:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:83
+msgid ""
+"Lets calculate now the same averages for the whole forest as you did before,"
+" only this time you will use the averages you got for the stands as the "
+"bases for the calculation. Remember that in the previous situation, each "
+"sample plot represented a theoretical stand of :kbd:`80x80 m`. Now you have "
+"to consider the area of each of the stands individually instead. That way, "
+"again, the average values of the parameters that are in, for example, m3/ha "
+"for the volumes are converted to total volumes for the stands."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:85
+msgid ""
+"You need to first calculate the areas for the stands and then calculate "
+"total volumes and stem numbers for each of them:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:87
+msgid "In the :guilabel:`Attribute table` enable editing."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:88
+msgid "Open the :guilabel:`Field calculator`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:89
+msgid "Create a new field called :kbd:`area`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:90
+msgid ""
+"Leave the :guilabel:`Output field type` to :kbd:`Decimal number (real)`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:91
+msgid "Set the :guilabel:`Precision` to :kbd:`2`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:92
+msgid ""
+"In the :guilabel:`Expression` box, write :kbd:`$area / 10000`. This will "
+"calculate the area of the forest stands in ha."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:95
+msgid ""
+"Now calculate a field with the total volumes and number of stems estimated "
+"for every stand:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:97
+msgid "Name the fields :kbd:`s_vol` and :kbd:`s_stem`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:98
+msgid "The fields can be integer numbers or you can use real numbers also."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:99
+msgid ""
+"Use the expressions :kbd:`\"area\"  *  \"MEANVol\"` and :kbd:`\"area\"  *  "
+"\"MEANStems\"` for total volumes and total stems respectively."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:100
+msgid "Save the edits when you are finished."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:101
+msgid "Disable editing."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:103
+msgid ""
+"In the previous situation, the areas represented by every sample plot were "
+"the same, so it was enough to calculate the average of the sample plots. Now"
+" to calculate the estimates, you need to divide the sum of the stands "
+"volumes or number of stems by the sum of the areas of the stands containing "
+"information."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:105
+msgid ""
+"In the :guilabel:`Attribute table` for the :kbd:`forest_stands_2012_results`"
+" layer, select all the stands containing information."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:107
+msgid ""
+"Select the :kbd:`forest_stands_2012_results` as the :guilabel:`Input Vector "
+"Layer`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:108
+msgid "Select :kbd:`area` as :guilabel:`Target field`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:109
+msgid "Check the :guilabel:`Use only selected features`"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:115
+msgid ""
+"As you can see, the total sum of the stands' areas is :kbd:`66.04 ha`. Note "
+"that the area of the missing forest stands is only about :kbd:`7 ha`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:117
+msgid ""
+"In the same way, you can calculate that the total volume for these stands is"
+" :kbd:`8908 m3/ha` and the total number of stems is :kbd:`179594 stems`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:119
+msgid ""
+"Using the information from the forest stands, instead of directly using that"
+" from the sample plots, gives the following average estimates:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:121
+msgid ":kbd:`184.9 m3/ha` and"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:122
+msgid ":kbd:`2719 stems/ha`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:124
+msgid "Save your QGIS project, :kbd:`forest_inventory.qgs`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:127
+msgid "|IC|"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:129
+msgid ""
+"You managed to calculate forest estimates for the whole forest using the "
+"information from your systematic sample plots, first without considering the"
+" forest characteristics and also using the interpretation of the aerial "
+"image into forest stands. And you also got some valuable information about "
+"the particular stands, which could be used to plan the management of the "
+"forest in the coming years."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:132
+msgid "|WN|"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:134
+msgid ""
+"In the following lesson, you will first create a hillshade background from a"
+" LiDAR dataset which you will use to prepare a map presentation with the "
+"forest results you just calculated."
+msgstr ""

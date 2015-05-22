@@ -1,0 +1,110 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-22 21:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:6
+msgid "A model within a model"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:8
+msgid ""
+"Beware, this chapter is not well tested, please report any issue; images are"
+" missing"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:10
+msgid "In this lesson we will see how to use a model within a bigger model."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:12
+msgid ""
+"We have already created a few models, and in this lesson we are going to see"
+" how we can combine them on a single bigger one. A model behaves like any "
+"other algorithm, which means that you can add a model that you have already "
+"created as part of another one that you create after that."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:14
+msgid ""
+"In this case, we are going to expand our hydrological model, by adding the "
+"mean TWI value in each of the basins that it generates as result. To do "
+"that, we need to calculate the TWI, and to compute the statistics. Since we "
+"have already created a model to calculate TWI from a DEM, it is a good idea "
+"to reuse that model instead of adding the algorithms it contains "
+"individually."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:16
+msgid ""
+"Let's start with the model we used as starting point for the last lesson."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:18
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:26
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:32
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:36
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:40
+msgid "todo: Add image"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:20
+msgid ""
+"First, we will add the TWI model. For it to be available, it should have "
+"been saved on the models folder, since otherwise it will not be shown in the"
+" toolbox or the algorithms list in the modeler. Make sure you have it "
+"available."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:22
+msgid ""
+"Add it to the current model and use the input DEM as its input. The output "
+"is a temporary one, since we just want the TWI layer to compute the "
+"statistics. The only output of this model we are creating will still be the "
+"vector layer with the watersheds."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:24
+msgid "Here is the corresponding parameters dialog:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:28
+msgid ""
+"Now we have a TWI layer that we can use along with the watersheds vector "
+"layer, to generate a new one which contains the values of the TWI "
+"corresponding to each watershed."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:30
+msgid ""
+"This calculation is done using the *Grid statistics in polygons* algorithm. "
+"Use the layers mentioned above as input, to create the final result."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:34
+msgid ""
+"The output of the *Vectorize grid classes* algorithm was originally our "
+"final output, but now we just want it as an intermediate result. To change "
+"that, we have to edit the algorithm. Just double--click on it to see its "
+"parameters dialog, and delete the name of the output. That will make it a "
+"temporary output, as it is by default."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:38
+msgid "This is how the final model should look like:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_twi.rst:42
+msgid ""
+"As you see, using a model in another model is nothing special, and you can "
+"add it just like you add another algorithm, as long as the model is saved in"
+" the models folder and is available in the toolbox."
+msgstr ""

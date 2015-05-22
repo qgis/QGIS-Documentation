@@ -1,0 +1,187 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-22 21:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:6
+msgid "|LS| Map Presentation"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:8
+msgid ""
+"In the previous lessons you have imported an old forest inventor as a GIS "
+"project, updated it to the current situation, designed a forest inventory, "
+"created maps for the field work and calculated forest parameters from the "
+"field measurements."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:10
+msgid ""
+"It is often important to create maps with the results of a GIS project. A "
+"map presenting the results of the forest inventory will make it easier for "
+"anyone to have a good idea of what the results are in a quick glance, "
+"without looking at the specific numbers."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:12
+msgid ""
+"**The goal for this lesson:** Create a map to present the inventory results "
+"using a hillshade raster as background."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:15
+msgid "|basic| |FA| Preparing the Map Data"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:17
+msgid ""
+"Open the QGIS project from the parameters calculations lesson, "
+":kbd:`forest_inventory.qgs`. Keep at least the following layers:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:19
+msgid ":kbd:`forest_stands_2012_results`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:20
+msgid ":kbd:`basic_map`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:21
+msgid ":kbd:`rautjarvi_aerial`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:22
+msgid ""
+":kbd:`lakes` (if you don't have it, add it from the "
+":kbd:`exercise_data\\\\forestry\\\\` folder)."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:24
+msgid ""
+"You are going to present the average volumes of your forest stands in a map."
+" If you open the :guilabel:`Attribute table` for the "
+":kbd:`forest_stands_2012_results` layer, you can see the :kbd:`NULL` values "
+"for the stands without information. To be able to get also those stands into"
+" your styling you should change the :kbd:`NULL` values to, for example, "
+":kbd:`-999`, knowing that those negative numbers mean there is no data for "
+"those polygons."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:26
+msgid "For the :kbd:`forest_stands_2012_results` layer:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:28
+msgid "Open the :guilabel:`Attribute table` and enable editing."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:29
+msgid "Select the polygons with :kbd:`NULL` values."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:30
+msgid ""
+"Use the calculator to update the values of the :kbd:`MEANVol` field to "
+":kbd:`-999` only for the selected features."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:31
+msgid "Disable editing and save the changes."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:33
+msgid "Now you can use a saved style for this layer:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:35
+msgid "Go to the :guilabel:`Style` tab."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:36
+msgid "Click on :guilabel:`Load Style`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:37
+msgid ""
+"Select the :kbd:`forest_stands_2012_results.qml` from the "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:38
+msgid "Click :guilabel:`OK`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:43
+msgid "Your map will look something like this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:50
+msgid "|basic| |TY| Try Different Blending Modes"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:52
+msgid "The style you loaded:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:57
+msgid ""
+"is using the :kbd:`Hard light` mode for the :guilabel:`Layer blending mode`."
+" Note that the different modes apply different filters combining the "
+"underlying and overlying layers, in this case the hillshade raster and your "
+"forest stands are used. You can read about these modes in the `User Guide "
+"<http://docs.qgis.org/2.2/en/docs/user_manual/working_with_vector/vector_properties.html>`_."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:59
+msgid ""
+"Try with different modes and see the differences in your map. Then choose "
+"the one you like better for your final map."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:63
+msgid "|basic| |TY| Using a Composer Template to Create the Map result"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:65
+msgid ""
+"Use a template prepared in advanced to present the results. The template "
+":kbd:`forest_map.qpt` is located in the "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder. Load it using the "
+":menuselection:`Project --> Composer Manager...` dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:70
+msgid ""
+"Open the map composer and edit the final map to get a result you are happy "
+"with."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:72
+msgid "The map template you are using will give a map similar to this one:"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:77
+msgid "Save your QGIS project for future references."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:80
+msgid "|IC|"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:82
+msgid ""
+"Through this module you have seen how a basic forest inventory can be "
+"planned and presented with QGIS. Many more forest analysis are possible with"
+" the variety of tools that you can access, but hopefully this manual has "
+"given you a good starting point to explore how you could achieve the "
+"specific results you need."
+msgstr ""
