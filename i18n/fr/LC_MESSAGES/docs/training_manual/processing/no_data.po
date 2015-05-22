@@ -1,0 +1,255 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-20 08:54+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/no_data.rst:6
+msgid "The raster calculator. No-data values"
+msgstr "La calculatrice raster. Valeurs No-data"
+
+#: ../../source/docs/training_manual/processing/no_data.rst:9
+msgid ""
+"In this lesson we will see how to use the raster calculator to perform some "
+"operations on raster layers. We will also explain what are no--data values "
+"and how the calculator and other algorithms deal with them"
+msgstr "Dans cette leçon, nous verrons comment utiliser la calculatrice raster pour effectuer des opérations sur des couches raster. Nous expliquerons également qu'est-ce que sont les valeurs no--data et comment la calculatrice et les autres algorithmes réagissent avec elles."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:12
+msgid ""
+"The raster calculator is one of the most powerful algorithms that you will "
+"find. It's a very flexible and versatile algorithm that can be used for many"
+" different calculations, and one that will soon become an important part of "
+"your toolbox."
+msgstr "La calculatrice rester est un des plus puissants algorithmes que vous trouverez. C'est un algorithme très flexible et souple qui peut être utilisé pour beaucoup de calculs différents, et il deviendra bientôt une partie importante de votre boîte à outils."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:14
+msgid ""
+"In this lesson we will be performing some calculation with the raster "
+"calculator, most of them rather simple. This will let us see how it is used "
+"and how it deals with some particular situations that it might find. "
+"Understanding that is important to later get the expected results when using"
+" the calculator, and also to understand certain techniques that are commonly"
+" applied with it."
+msgstr "Dans cette leçon, nous allons réaliser quelques calculs, plutôt simples, à l'aide de la calculatrice raster. Cela nous permettra de voir comment l'utiliser et comment gérer certaines situations particulières que nous pourrons rencontrer. Comprendre est une étape importante pour obtenir à l'avenir des résultats adaptés en utilisant la calculatrice et également pour maîtriser certaines techniques qui sont courramment employées avec."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:16
+msgid ""
+"Open the QGIS project corresponding to this lesson and you will see that it "
+"contains several raster layers."
+msgstr "Ouvrez le projet QGIS correspondant à cette leçon et vous verrez qu'il contient plusieurs couches raster."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:18
+msgid ""
+"Now open the toolbox and open the dialog corresponding to the raster "
+"calculator."
+msgstr "Ouvrez maintenant la boîte à outils et ouvrez la boîte de dialogue correspondant à la calculatrice raster."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:22
+msgid "The dialog contains 2 parameters."
+msgstr "La boîte de dialogue contient 2 paramètres."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:24
+msgid ""
+"The layers to use for the analysis. This is a multiple input, that meaning "
+"that you can select as many layers as you want. Click on the button on the "
+"right--hand side and then select the layers that you want to use in the "
+"dialog that will appear."
+msgstr "Les couches à utiliser pour l'analyse. C'est une entrée multiple, ce qui signifie que vous pouvez sélectionner autant de couches que vous voulez. Cliquez sur le bouton sur le côté droit et sélectionnez ensuite les couches que vous voulez utiliser dans la boîte de dialogue qui apparaît."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:25
+msgid ""
+"The formula to apply. The formula uses the layers selected in the above "
+"parameter, which are named using alphabet letters (``a, b, c...``) or ``g1, "
+"g2, g3...`` as variable names. That is, the formula ``a + 2 * b`` is the "
+"same as ``g1 + 2 * g2`` and will compute the sum of the value in the first "
+"layer plus two times the value in the second layer. The ordering of the "
+"layers is the some ordering that you see in the selection dialog."
+msgstr "La formule à appliquer. La formule utilise les couches sélectionnées dans le paramètre du haut, qui sont nommées en utilisant les lettres de l'alphabet (``a, b, c...``) ou ``g1, g2, g3...`` comme nom de variable. Autrement dit, la formule ``a + 2 * b`` est la même que ``g1 + 2 * g2`` et calculera la somme des valeurs dans la première couche plus deux fois la valeur dans la seconde couche. L'ordre des couches est le même ordre que vous voyez dans la boîte de dialogue de sélection."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:27
+msgid "the calculator is case sensitive"
+msgstr "la calculatrice est sensible"
+
+#: ../../source/docs/training_manual/processing/no_data.rst:29
+msgid ""
+"To start with, we will change the units of the DEM from meters to feet. The "
+"formula we need is the following one:"
+msgstr "Pour commencer, nous changerons les unités du MNE des mètres aux pieds. La formule dont nous avons besoin est la suivante :"
+
+#: ../../source/docs/training_manual/processing/no_data.rst:35
+msgid ""
+"Select the DEM in the layers field and type ``a * 3.28084`` in the formula "
+"field."
+msgstr "Sélectionnez le MNE dans le champ des couches et tapez ``a * 3.28084`` dans le champ de formule."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:37
+msgid "for non English users: use always \".\", not \",\""
+msgstr "pour les utilisateurs non-anglophones : utilisez toujours \".\", not \",\""
+
+#: ../../source/docs/training_manual/processing/no_data.rst:39
+msgid ""
+"Click *Run* to run the algorithm. You will get a layer that has the same "
+"appearance of the input layer, but with different values. The input layer "
+"that we used has valid values in all its cells, so the last parameter has no"
+" effect at all."
+msgstr "Cliquez sur *Exécuter* pour lancer l'algorithme. Vous obtiendrez une couche qui a la même apparence que la couche d'entrée, mais avec des valeurs différentes. La couche d'entrée que nous avons utilisée possède des valeurs valides dans toutes ses cellules, donc le dernier paramètre n'a pas du tout d'effet."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:41
+msgid ""
+"Let's now perform another calculation, this time on the *accflow* layer. "
+"This layer contains values of accumulated flow, a hydrological parameter. It"
+" contains those values only within the area of a given watershed, with no--"
+"data values outside of it. As you can see, the rendering is not very "
+"informative, due to the way values are distributed. Using the logarithm of "
+"that flow accumulation will yield a much more informative representation. We"
+" can calculate that using the raster calculator."
+msgstr "Effectuons maintenant un autre calcul, cette fois sur la couche *accflow*. Cette couche contient des valeurs de flux cumulés, un paramètre hydrologique. Elle contient des valeurs seulement dans la zone d'un bassin hydrographique donné, avec des valeurs no--data en dehors de celui-ci. Comme vous pouvez le voir, le rendu n'est pas très instructif, en raison de la façon dont les valeurs sont distribuées. L'utilisation du logarithme de cette accumulation de flux donnera une représentation beaucoup plus instructive. Nous pouvons calculer cela en utilisant la calculatrice raster."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:43
+msgid ""
+"Open the algorithm dialog again, select the *accflow* layer as the only "
+"input layer, and enter the following formula: ``log(a)``."
+msgstr "Ouvrez à nouveau la boîte de dialogue de l'algorithme, sélectionnez la couche *accflow* comme la seule couche d'entrée, et entrez la formule suivante : `log(a)``."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:45
+msgid "Here is the layer that you will get."
+msgstr "Voici la couche que vous obtiendrez."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:49
+msgid ""
+"If you select the *Identify* tool to know the value of a layer at a given "
+"point, select the layer that we have just created, and click on a point "
+"outside of the basin, you will see that it contains a no--data value."
+msgstr "Si vous sélectionnez l'outil *Identifier* pour connaître la valeur d'une couche à un point donné, sélectionnez la couche que nous venons juste de créer, et cliquez sur un point en dehors du bassin, vous verrez qu'il contient une valeur no--data."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:53
+msgid ""
+"For the next exercise we are going to use two layers instead of one, and we "
+"are going to get a DEM with valid elevation values only within the basin "
+"defined in the second layer. Open the calculator dialog and select both "
+"layers of the project in the input layers field. Enter the following formula"
+" in the corresponding field:"
+msgstr "Pour l'exercice suivant, nous allons utiliser deux couches à la place d'une, et nous allons obtenir un MNE avec des valeurs d'élévation valides seulement dans le bassin défini dans la seconde couche. Ouvrez la boîte de dialogue de la calculatrice et sélectionnez les deux couches du projet dans le champ des couches d'entrée. Entrez la formule suivant dans le champ correspondant :"
+
+#: ../../source/docs/training_manual/processing/no_data.rst:59
+msgid ""
+"``a`` refers to the accumulated flow layer (since it is the first one to "
+"appear in the list) and ``b`` refers to the DEM. What we are doing in the "
+"first part of the formula here is to divide the accumulated flow layer by "
+"itself, which will result in a value of 1 inside the basin, and a no--data "
+"value outside. Then we multiply by the DEM, to get the elevation value in "
+"those cells inside the basin (``DEM * 1 = DEM``) and the no--data value "
+"outside (``DEM * no_data = no_data``)"
+msgstr "``a`` fait référence à la couche de flux cumulé (car il est la premier à apparaître dans la liste) et ``b`` fait référence au MNE. Ce que nous allons faire dans la première partie de cette formule ici est de diviser la couche de flux cumulé par elle-même, ce qui donnera une valeur de 1 dans le bassin, et une valeur no--data à l'extérieur. Puis nous multiplions par le MNE, pour obtenir la valeur d'élévation dans les cellules dans le bassin (``MNE * 1 = MNE``) et des valeurs no--data à l'extérieur (``MNE * no_data = no_data``)"
+
+#: ../../source/docs/training_manual/processing/no_data.rst:61
+msgid "Here is the resulting layer."
+msgstr "Voici la couche de résultat."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:66
+msgid ""
+"This technique is used frequently to *mask* values ina raster layer, and is "
+"useful whenever you want to perform calculations for a region other that the"
+" arbitrary rectangular region that is used by raster layer. For instance, an"
+" elevation histogram of a raster layer doesn't have much meaning. If it is "
+"instead computed using only values corresponding to a basin (as in he case "
+"above), the result that we obtain is a meaningful one that actually gives "
+"information about the configuration of the basin."
+msgstr "Cette technique est fréquemment utilisée pour *masquer* des valeurs dans une couche raster, et est utile lorsque vous voulez effectuer des calculs pour une région autre que la région rectangulaire arbitraire qui est utilisée par une couche raster. Par exemple, un histogramme d'élévation d'une couche raster n'a pas beaucoup de sens. S'il est à la place calculé en utilisant seulement des valeurs correspondants à un bassin (comme dans le cas ci-dessus), le résultat que nous obtenons a un sens et donne effectivement des informations sur la configuration du bassin,"
+
+#: ../../source/docs/training_manual/processing/no_data.rst:68
+msgid ""
+"There are other interesting things about this algorithm that we have just "
+"run apart from the no--data values and how they are handled. If you have a "
+"look at the extents of the layers that we have multiplied (you can do it "
+"double--clicking on their names of the layer in the table of contents and "
+"looking at their properties), you will see that they are not the same, since"
+" the extent covered by the flow accumulation layer is smaller that the "
+"extent of the full DEM."
+msgstr "Il y a d'autres choses intéressantes sur cet algorithme que nous venons juste d'exécuter en dehors des valeurs no--data et comment elles sont traitées. Si vous jetez un oeil à l'étendue des couches que nous avons multipliées (vous pouvez le faire en double--cliquant sur le nom des couches dans la table des matières et regarder leurs propriétés), vous verrez que ce ne sont pas les mêmes, puisque la mesure prévue par la couche d'accumulation de flux est plus petite que l'étendue de l'entier du MNE."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:70
+msgid ""
+"That means that those layers do not match, and that they cannot be "
+"multiplied directly without homogenizing those sizes and extents by "
+"resampling one or both layers. However, we did not do anything. QGIS takes "
+"care of this situation and automatically resamples input layers when needed."
+" The output extent is the minimum covering extent calculated from the imput "
+"layers, and the minimum cell size of their cellsizes."
+msgstr "Cela signifie que ces couches ne correspondent pas, et qu'elles ne peuvent pas être multipliées directement sans homogénéiser leur taille et leur étendue en ré-échantillonnant une ou les deux couches. Cependant, nous n'avons rien fait. QGIS prend soin de la situation et ré-échantillonne automatiquement les couches d'entrée lorsque nécessaire. La mesure de sortie est le degré de recouvrement minimum calculé à partir des couches d'entrée, et la taille de cellule minimum de leurs tailles de cellule."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:72
+msgid ""
+"In this case (and in most cases), this produces the desired results, but you"
+" should always be aware of the additional operations that are taking place, "
+"since they might affect the result. In cases when this behaviour might not "
+"be the desired, manual resampling should be applied in advance. In later "
+"chapters, we will see more about the behaviour of algorithms when using "
+"multiple raster layers."
+msgstr "Dans ce cas (et dans la plupart des cas), cela produit les résultats souhaités, mais vous devriez toujours être conscient des opérations supplémentaires qui ont lieu, car elles pourraient influencer sur le résultat. Dans les cas où ce comportement ne devrait pas être désiré, un ré-échantillonnage manuel doit être appliqué à l'avance. Dans les chapitres suivants, nous en verrons plus sur le comportement des algorithmes lors de l'utilisation de plusieurs couches raster."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:75
+msgid ""
+"Let's finish this lesson with another masking exercise. We are going to "
+"calculate the mean slope in all areas with an elevation between 1000 and "
+"1500 meters."
+msgstr "Finissons cette leçon avec un autre exercice de masquage. Nous allons calculer la pente moyenne dans toutes les aires avec une élévation entre 1000 et 1500 mètres."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:77
+msgid ""
+"In this case, we do not have a layer to use as a mask, but we can create it "
+"using the calculator."
+msgstr "Dans ce cas, nous n'avons pas de couche à utiliser comme masque, mais nous pouvons en créer une en utilisant la calculatrice."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:79
+msgid ""
+"Run the calculator using the DEM as only input layer and the following "
+"formula"
+msgstr "Lancez la calculatrice en utilisant le MNE comme seule couche d'entrée et la formule suivante"
+
+#: ../../source/docs/training_manual/processing/no_data.rst:85
+msgid ""
+"As you can see, we can use the calculator not only to do simple algebraic "
+"operations, but also to run more complex calculation involving conditional "
+"sentences, like the one above."
+msgstr "Comme vous pouvez le voir, nous pouvons utiliser la calculatrice non seulement pour faire de simples opérations algébriques, mais aussi pour exécuter des calculs plus complexes impliquant des propositions conditionnelles, comme celui ci-dessus."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:87
+msgid ""
+"The result has a value of 1 inside the range we want to work with, and no-"
+"data in cells outside of it."
+msgstr "Le résultat a une valeur de 1 dans la plage avec laquelle nous voulons travailler, et no--data dans les cellules à l'extérieur de celle-ci."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:91
+msgid ""
+"The no-data value comes from the 0/0 expression. Since that is an "
+"undetermined value, SAGA will add a NaN (Not a Number) value, which is "
+"actually handled as a no-data value. With this little trick you can set a "
+"no-data value without needing to know what the no--data value of the cell "
+"is."
+msgstr "La valeur no--data vient de l'expression 0/0. Comme c'est une valeur indéterminée, SAGA ajoutera une valeur NaN (Not a Numbre, pas un nombre en anglais), qui est en fait traitée comme une valeur no--data. Avec ce petit truc, vous pouvez mettre une valeur no--data sans avoir besoin de savoir qu'est-ce que la valeur no--data de la cellule."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:93
+msgid ""
+"Now you just have to multiply it by the slope layer included in the project,"
+" and you will get the desired result."
+msgstr "Vous n'avez plus qu'à maintenant la multiplier avec la couche de pente intégrée au projet, et vous obtiendrez le résultat désiré."
+
+#: ../../source/docs/training_manual/processing/no_data.rst:95
+msgid ""
+"All that can be done in a single operation with the calculator. We leave "
+"that as an exercise for the reader."
+msgstr "Tout cela peut être fait en une simple opération avec la calculatrice. Nous laissons cela comme exercice au lecteur."

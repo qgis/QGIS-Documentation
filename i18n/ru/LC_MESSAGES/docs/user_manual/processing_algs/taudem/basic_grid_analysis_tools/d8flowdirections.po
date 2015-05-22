@@ -1,0 +1,142 @@
+# 
+# Translators:
+# Марина Павлова <pavlova.marina.v@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-10 08:47+0000\n"
+"Last-Translator: Марина Павлова <pavlova.marina.v@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/qgis-documentation/language/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:6
+msgid "D8 Flow Directions"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:9
+msgid "Description"
+msgstr "Описание"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:11
+msgid ""
+"Creates 2 grids. The first contains the flow direction from each grid cell "
+"to one of its adjacent or diagonal neighbors, calculated using the direction"
+" of steepest descent. The second contain the slope, as evaluated in the "
+"direction of steepest descent, and is reported as drop/distance, i.e. tan of"
+" the angle. Flow direction is reported as NODATA for any grid cell adjacent "
+"to the edge of the DEM domain, or adjacent to a NODATA value in the DEM. In "
+"flat areas, flow directions are assigned away from higher ground and towards"
+" lower ground using the method of Garbrecht and Martz (1997). The D8 flow "
+"direction algorithm may be applied to a DEM that has not had its pits "
+"filled, but it will then result in NODATA values for flow direction and "
+"slope at the lowest point of each pit."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:22
+msgid "D8 Flow Direction Coding:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:24
+msgid "1 --- East"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:25
+msgid "2 --- Northeast"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:26
+msgid "3 --- North"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:27
+msgid "4 --- Northwest"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:28
+msgid "5 --- West"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:29
+msgid "6 --- Southwest"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:30
+msgid "7 --- South"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:31
+msgid "8 --- Southeast"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:37
+msgid ""
+"The flow direction routing across flat areas is performed according to the "
+"method described by Garbrecht, J. and L. W. Martz, (1997), \"The Assignment "
+"of Drainage Direction Over Flat Surfaces in Raster Digital Elevation "
+"Models\", Journal of Hydrology, 193: 204-213."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:43
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:59
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:46
+msgid ""
+"A grid of elevation values. This is usually the output of the **\"Pit "
+"Remove\"** tool, in which case it is elevations with pits removed. Pits are "
+"low elevation areas in digital elevation models (DEMs) that are completely "
+"surrounded by higher terrain. They are generally taken to be artifacts of "
+"the digitation process that interfere with the processing of flow across "
+"DEMs. So they are removed by raising their elevation to the point where they"
+" just drain off the domain. This step is not essential if you have reason to"
+" believe that the pits in your DEM are real. If a few pits actually exist "
+"and so should not be removed, while at the same time others are believed to "
+"be artifacts that need to be removed, the actual pits should have NODATA "
+"elevation values inserted at their lowest point. NODATA values serve to "
+"define edges of the domain in the flow field, and elevations are only raised"
+" to where flow is off an edge, so an internal NODATA value will stop a pit "
+"from being removed, if necessary."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:62
+msgid "Outputs"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:67
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:65
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:70
+msgid "``D8 Slope Grid`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:70
+msgid ""
+"A grid giving slope in the D8 flow direction. This is measured as "
+"drop/distance."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:73
+msgid "Console usage"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:80
+msgid "See also"
+msgstr ""

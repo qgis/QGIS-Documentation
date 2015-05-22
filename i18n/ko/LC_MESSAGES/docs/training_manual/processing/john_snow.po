@@ -1,0 +1,131 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-11 05:46+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:6
+msgid "First analysis example"
+msgstr "첫 번째 분석 예제"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:9
+msgid ""
+"In this lesson we will perform some real analysis using just the toolbox, so"
+" you can get more familiar with the processing framework elements."
+msgstr "이 강의에서는 사용자가 처리 과정 프레임워크 요소에 더 익숙해질 수 있도록 툴박스만을 사용해서 실제 분석 작업을 수행할 것입니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:11
+msgid ""
+"Now that everything is configured and we can use external algorithms, we "
+"have a very powerful tool to perform spatial analysis. It is time to work "
+"out a larger exercise with some real--world data."
+msgstr "필요한 모든 설정을 끝내고 외부 알고리듬을 사용할 수 있으므로, 공간 분석을 수행할 수 있는 강력한 도구를 갖게 되었습니다. 이제 실재 세계의 데이터를 써서 광범위한 예제를 풀어볼 때가 되었습니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:13
+msgid ""
+"We will be using the well-known dataset that John Snow used in his "
+"groundbreaking work, and we will get some interesting results. The analysis "
+"of this dataset is pretty obvious and there is no need for sofisticated GIS "
+"techniques to end up with good results and conclusions, but it is a good way"
+" of showing how these spatial problems can be analyzed and solved by using "
+"different processing tools."
+msgstr "존 스노우(John Snow)가 자신의 획기적인 작업에 사용했던 유명한 데이터셋을 이용해서 흥미로운 결과를 얻을 것입니다. 이 데이터셋을 분석하는 작업은 꽤 명확한 편으로 제대로 된 결과물 및 결론을 얻는 데 복잡한 GIS 기술이 필요하지는 않지만, 이 공간 문제들을 서로 다른 처리 과정 도구들을 써서 어떻게 분석하고 해결할 수 있는지 알 수 있는 훌륭한 방법입니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:15
+msgid ""
+"The dataset contains shapefiles with cholera deaths and pump locations, and "
+"an OSM rendered map in TIFF format. Open the corresponding QGIS project for "
+"this lesson."
+msgstr "이 데이터셋은 콜레라에 의한 사망자 수 및 펌프 위치를 담고 있는 shapefile과 TIFF 포맷으로 렌더링된 OSM 맵을 포함합니다. 이 강의에 해당하는 QGIS 프로젝트를 여십시오."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:19
+msgid ""
+"The first thing to do is to calculting the Voronoi diagram (a.k.a. Thyessen "
+"polygons) of the pumps layer, to get the influence zone of each pump. The "
+"*Voronoi Diagram* algorithm can be used for that."
+msgstr "먼저 :guilabel:`Pumps` 레이어의 보로노이 도표(Voronoi diagram, 일명 티센(Thyessen) 폴리곤)을 계산해서 각 펌프의 영향 범위를 계산해야 합니다. 이 작업에 :guilabel:`Voronoi Diagram` 알고리듬을 사용할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:24
+msgid "Pretty easy, but it will already give us interesting information."
+msgstr "꽤 쉬운 작업이지만, 벌써 흥미로운 정보를 알려주고 있습니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:28
+msgid "Clearly, most cases are within one of the polygons"
+msgstr "명백히 보이듯이, 폴리곤 중 하나 안에 사망자 대부분이 존재합니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:30
+msgid ""
+"To get a more quantitative result, we can count the number of deaths in each"
+" polygon. Since each point represents a building where deaths occured, and "
+"the number of deaths is stored in an attribute, we cannot just count the "
+"points. We need a weighted count, so we will use the *Count points in "
+"polygon (weighted)* tool."
+msgstr "좀더 정량적인 결과를 얻으려면 각 폴리곤에서의 사망자 수를 세어볼 수 있습니다. 각 포인트가 사망자가 발생한 건물을 나타내고 사망자 수는 포인트의 속성에 저장돼 있으므로, 그냥 포인트만 세어서는 안 됩니다. 숫자에 가중치를 부여해야 하므로, :guilabel:`Count points in polygon (weighted)` 도구를 사용할 것입니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:34
+msgid ""
+"The new field will be called *DEATHS*, and we use the *COUNT* field as "
+"weighting field. The resulting table clearly reflects that the number of "
+"deaths in the polygon corresponding to the first pump is much larger than "
+"the other ones."
+msgstr "새 필드에 :guilabel:`DEATHS` 라는 명칭을 부여하고, 가중치 항목에 :guilabel:`COUNTS` 필드를 이용합니다. 그 결과 생성되는 테이블은 첫 번째 펌프에 해당하는 폴리곤에서의 사망자 수가 다른 폴리곤들보다 훨씬 많다는 사실을 분명히 반영하고 있습니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:38
+msgid ""
+"Another good way of visualizing the dependence of each point in the "
+"``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
+"line to the closest one. This can be done with the *Distance to closest hub*"
+" tool, and using the configuration shown next."
+msgstr ":kbd:`Cholera_deaths` 레이어의 각 포인트와 :kbd:`Pumps` 레이어의 포인트 사이의 의존성을 시각화하는 또다른 훌륭한 방법은 각 :kbd:`Cholera_deaths` 포인트에서 가장 가까운 :kbd:`Pumps` 포인트로 라인을 그려보는 것입니다. :guilabel:`Distance to closest hub` 도구를 다음과 같이 설정해서 이 작업을 할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:42
+msgid "The result looks like this:"
+msgstr "결과는 다음과 같습니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:46
+msgid ""
+"Although the number of lines is larger in the case of the central pump, do "
+"not forget that this does not represent the number of deaths, but the number"
+" of locations where cholera cases were found. It is a representative "
+"parameter, but it is not considering that some locations might have more "
+"cases than other."
+msgstr "중앙에 있는 펌프의 라인 개수가 가장 많지만, 이것은 사망자 수가 아니라 콜레라가 발생한 위치의 개수라는 점을 잊어서는 안 됩니다. 분명 결과를 대표할 수 있는 파라미터이긴 하지만 일부 위치의 사망자 수가 다른 곳보다 더 많을 수 있다는 사실을 고려하지 않고 있습니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:48
+msgid ""
+"A density layer will also give us a very clear view of what is happening. We"
+" can create it with the *Kernel density* algorithm. Using the "
+"*Cholera_deaths* layer, its *COUNT* field as weight field, with a radius of "
+"100, the extent and cellsize of the streets raster layer, we get something "
+"like this."
+msgstr "밀도 레이어로도 어떤 일이 일어나는지를 명확하게 시각화할 수 있습니다. :guilabel:`Kernel density` 알고리듬을 써서 밀도 레이어를 생성할 수 있습니다. 입력 레이어에 :guilabel:`Cholera_deaths` 레이어를, 가중치 항목에 :guilabel:`COUNT` 필드를 사용하고, 반경을 100으로 설정한 다음 :kbd:`streets` 래스터 레이어의 범위 및 셀 크기를 사용하면 다음과 같은 결과를 얻을 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:52
+msgid ""
+"Remember that, to get the output extent, you do not have to type it. Click "
+"on the button on the right-hand side and select *Use layer/canvas extent*."
+msgstr "산출물의 범위를 설정하기 위해 직접 입력할 필요가 없다는 사실을 기억하십시오. :guilabel:`Output extent...` 항목 오른쪽에 있는 버튼을 클릭한 다음 :guilabel:`Use layer/canvas extent` 를 선택하면 됩니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:56
+msgid ""
+"Select the streets raster layer and its extent will be automatically added "
+"to the text field. You must do the same with the cellsize, selecting the "
+"cellsize of that layer as well."
+msgstr "그리고 도로 래스터 레이어를 선택하면 해당 레이어의 범위가 자동적으로 텍스트 란에 채워질 것입니다. 셀 크기도 동일한 방법으로, 해당 레이어의 셀 크기를 선택해서 설정해야 합니다."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:58
+msgid ""
+"Combining with the pumps layer, we see that there is one pump clearly in the"
+" hotspot where the maximum density of death cases is found."
+msgstr ":kbd:`Pumps` 레이어와 결합하면, 콜레라 발생 지역에서 명확하게 사망자 수가 최대 밀도를 보이는 곳에 펌프 하나가 있다는 사실을 알 수 있습니다."

@@ -1,0 +1,87 @@
+# 
+# Translators:
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2015
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-01-12 17:24+0000\n"
+"Last-Translator: Minerva Durán Martínez <mine_tod@yahoo.com.mx>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/qgis-documentation/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/solar.rst:6
+msgid "Planning a solar farm"
+msgstr "La planificación de un parque solar"
+
+#: ../../source/docs/training_manual/processing/solar.rst:8
+msgid ""
+"Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+msgstr "Módulo aportado por Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+
+#: ../../source/docs/training_manual/processing/solar.rst:10
+msgid ""
+"This chapter shows how to use several criteria to locate the areas suitable "
+"for installing a photovoltaic power station"
+msgstr "Este capítulo muestra cómo utilizar varios criterios para ubicar las áreas adecuadas para instalar un estación de energía fotovoltaica"
+
+#: ../../source/docs/training_manual/processing/solar.rst:12
+msgid "First of all, create an aspect map from DTM:"
+msgstr "Primero, crear un mapa de orientación desde MTD"
+
+#: ../../source/docs/training_manual/processing/solar.rst:14
+msgid ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
+msgstr ":menuselection:`GRASS --> r.aspect` [Tipo de dato: int; tamaño de celda:100]"
+
+#: ../../source/docs/training_manual/processing/solar.rst:16
+msgid ""
+"In GRASS, aspect is calculated in degrees, counterclockwise starting from "
+"East. To extract only South facing slopes (270 degrees +- 45), we can "
+"reclassify it:"
+msgstr "En GRASS, la orientación se calcula en grados, en sentido contrario a partir de este. Para extraer sólo laderas orientadas al sur (270 grados +- 45), se puede reclasificar:"
+
+#: ../../source/docs/training_manual/processing/solar.rst:18
+msgid ":menuselection:`GRASS --> r.reclass`"
+msgstr ":menuselection:`GRASS --> r.reclass`"
+
+#: ../../source/docs/training_manual/processing/solar.rst:20
+msgid "with the following rules::"
+msgstr "con las siguientes reglas::"
+
+#: ../../source/docs/training_manual/processing/solar.rst:25
+msgid ""
+"You can use the text file ``reclass_south.txt`` provided. Note that with "
+"these simple text files we can create also very complex reclassifications."
+msgstr "Se puede utilizar el archivo de texto ``reclass_south.txt`` proporcionado. Tome en cuenta que con estos simples archivos de texto podemos crear también reclasificaciones muy complejas."
+
+#: ../../source/docs/training_manual/processing/solar.rst:27
+msgid ""
+"We want to build a large farm, so we select only large (> 100 ha) contiguous"
+" areas:"
+msgstr "Queremos construir una granja grande, por lo que seleccionamos sólo grandes áreas contiguas (> 100 ha):"
+
+#: ../../source/docs/training_manual/processing/solar.rst:29
+msgid ":menuselection:`GRASS --> r.reclass.greater`"
+msgstr ":menuselection:`GRASS --> r.reclass.greater`"
+
+#: ../../source/docs/training_manual/processing/solar.rst:31
+msgid "Finally, we convert to a vector:"
+msgstr "Por último, convertimos a un vector:"
+
+#: ../../source/docs/training_manual/processing/solar.rst:33
+msgid ""
+":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
+"yes]"
+msgstr ":menuselection:`GRASS --> r.to.vect` [Tipo de objeto espacial: área; Esquinas lisas: si]"
+
+#: ../../source/docs/training_manual/processing/solar.rst:35
+msgid ""
+"**Exercise for the reader**: repeat the analysis, replacing GRASS commands "
+"with analogous from other programs."
+msgstr "**Ejercicio para el lector**: repetir el análisis, sustituir comandos GRASS con análogos de otros programas."

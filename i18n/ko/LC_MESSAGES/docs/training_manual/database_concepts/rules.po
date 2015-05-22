@@ -1,0 +1,87 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-06-24 12:47+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:6
+msgid "|LS| Rules"
+msgstr "규칙"
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:8
+msgid ""
+"Rules allow the \"query tree\" of an incoming query to be rewritten. One "
+"common usage is to implement views, including updatable view. *- Wikipedia*"
+msgstr "규칙을 쓰면 입력 받은 쿼리의 \"쿼리 트리\"를 재작성할 수 있다. 흔히 업데이트 가능한 뷰를 포한한 뷰를 시행하는 데 쓰인다. *- 위키백과*"
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:11
+msgid ""
+"**The goal for this lesson:** To learn how to create new rules for the "
+"database."
+msgstr "**이 강의의 목표:** 데이터베이스에 대해 새 규칙을 생성하는 방법을 배우기."
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:15
+msgid "Materialised Views (Rule based views)"
+msgstr "구체화 뷰(규칙 기반 뷰)"
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:17
+msgid ""
+"Say you want to log every change of phone_no in your people table in to a "
+"people_log table. So you set up a new table::"
+msgstr "사용자의 'people' 테이블에서 'phone_no'의 모든 변경 사항을 'people_log' 테이블에 로그 기록하고 싶다고 해봅시다. 그러면 새 테이블을 생성해야 합니다."
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:22
+msgid ""
+"In the next step, create a rule that logs every change of a phone_no in the "
+"people table into the people_log table::"
+msgstr "그 다음, 'people' 테이블에서 일어나는 'phone_no'의 모든 변경 사항을 'people_log' 테이블에 로그 기록하는 규칙을 다음과 같이 생성하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:29
+msgid "To test that the rule works, let's modify a phone number::"
+msgstr "이 규칙이 작동하는지 시험해보기 위해, 전화번호를 수정해보겠습니다."
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:33
+msgid "Check that the :kbd:`people` table was updated correctly::"
+msgstr ":kbd:`people` 테이블이 정확히 업데이트됐는지 확인하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:42
+msgid ""
+"Now, thanks to the rule we created, the :kbd:`people_log` table will look "
+"like this::"
+msgstr "이제 방금 생성한 규칙 덕분에 :kbd:`people_log` 테이블이 다음과 같이 보일 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:52
+msgid ""
+"The value of the :kbd:`time` field will depend on the current date and time."
+msgstr ":kbd:`time` 필드의 값은 현재 날짜와 시간에 따라 달라집니다."
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:56
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:58
+msgid ""
+"Rules allow you to automatically add or change data in your database to "
+"reflect changes in other parts of the database."
+msgstr "규칙을 사용하면 사용자 데이터베이스에 자동적으로 데이터베이스의 다른 부분에서 일어난 변경 사항을 반영하는 데이터를 추가하거나 변경하도록 할 수 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:62
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/database_concepts/rules.rst:64
+msgid ""
+"The next module will introduce you to Spatial Database using PostGIS, which "
+"takes these database concepts and applies them to GIS data."
+msgstr "다음 모듈에서 PostGIS를 사용한 공간 데이터베이스를 소개할 것입니다. 이번 모듈에서 배운 데이터베이스의 개념들을 GIS 데이터에 적용하는 단계입니다."

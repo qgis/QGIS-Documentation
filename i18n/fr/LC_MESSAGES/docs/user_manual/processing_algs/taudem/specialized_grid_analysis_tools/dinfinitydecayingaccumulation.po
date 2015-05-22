@@ -1,0 +1,157 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-03 15:34+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:6
+msgid "D-Infinity Decaying Accumulation"
+msgstr "Accumulation de décroissance D-Infinity"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:11
+msgid ""
+"The D-Infinity Decaying Accumulation tool creates a grid of the accumulated "
+"quantity at each location in the domain where the quantity accumulates with "
+"the D-infinity flow field, but is subject to first order decay in moving "
+"from cell to cell. By default, the quantity contribution of each grid cell "
+"is the cell length to give a per unit width accumulation, but can optionally"
+" be expressed with a weight grid. The decay multiplier grid gives the "
+"fractional (first order) reduction in quantity in accumulating from grid "
+"cell ``x`` to the next downslope cell."
+msgstr "L'outil d'accumulation de décroissance D-Infinity créé une grille des quantités accumulée de chaque lieu du domaine où la quantité s'accumule avec le champ de flux D-Infinity mais est sujet à la décroissance de premier ordre par le déplacement cellule à cellule. Par défaut, la contibution de chaque cellule est la longueur de cellule qui donne une accumulation par unité de largeur mais qui peut être exprimée comme une grille de pondération. La grille de multiplication de décroissance donne la réduction fractionnelle (premier ordre) dans la quantité d'accumulation de la cellule ``x`` jusqu'à la prochaine cellule de pente descendante."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:20
+msgid ""
+"A decayed accumulation operator ``DA[.]`` takes as input a mass loading "
+"field ``m(x)`` expressed at each grid location as ``m(i, j)`` that is "
+"assumed to move with the flow field but is subject to first order decay in "
+"moving from cell to cell. The output is the accumulated mass at each "
+"location ``DA(x)``. The accumulation of ``m`` at each grid cell can be "
+"numerically evaluated."
+msgstr "Un opérateur d'accumulation de décroissance ``DA[.]`` prend en entrée un champ de charge ``m(x)`` exprimé pour chaque emplacement de la grille sous la forme ``m(i, j)``. Ce champ est supposé se déplacer avec le champ de flux mais il est sujet à une décroissance du premier ordre dans le déplacement d'une cellule à une autre. La sortie est la masse accumulée de chaque emplacement ``DA(x)``. L'accumulation de ``m`` à chaque cellule peut être évaluée numériquement."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:29
+msgid ""
+"Here ``d(x) = d(i ,j)`` is a decay multiplier giving the fractional (first "
+"order) reduction in mass in moving from grid cell ``x`` to the next "
+"downslope cell. If travel (or residence) times ``t(x)`` associated with flow"
+" between cells are available ``d(x)`` may be evaluated as ``exp(-k t(x))`` "
+"where ``k`` is a first order decay parameter. The weight grid is used to "
+"represent the mass loading ``m(x)``. If not specified this is taken as 1. If"
+" the outlets shapefile is used the function is only evaluated on that part "
+"of the domain that contributes flow to the locations given by the shapefile."
+msgstr "Ici, ``d(x) = d(i, j)`` est un multiplicateur de décroissance donnant la réduction fractionnelle (premier ordre) de la masse en mouvement de la cellule ``x`` à la prochaine cellule de pente descendante. Si les temps de déplacement (ou le positionnement) ``t(x)`` associé à chaque flux entre les cellules sont disponibles, ``d(x)`` peut être évalué sous la forme ``exp(-k t(x))`` où ``k`` est un paramètre de décroissance du premier ordre. La grille de pondération est utilisée pour représenter la charge de masse ``m(x)``. Si elle n'est pas spécifiée, sa valeur vaut 1. Si le fichier Shape des exutoires est utilisé, la fonction sera évaluée seulement sur la partie du domaine qui contribue au flux des emplacement donnés par le fichier Shape."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:41
+msgid ""
+"Useful for a tracking contaminant or compound subject to decay or "
+"attenuation."
+msgstr "Utile pour un contaminant tracé ou un objet sujet à la dégradation ou à l'atténuation."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:44
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:49
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D-Infinity`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:47
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This grid can be created "
+"by the function **\"D-Infinity Flow Directions\"**."
+msgstr "Une grille donnant le flux de direction par la méthode D-Infinity. La direction de flux est mesurée en radians, dans le sens des aiguilles d'une montre depuis l'Est. Elle peut être obtenue par l'outil **\"Directions de flux D-Infinity\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:54
+msgid "``Decay Multiplier Grid`` [raster]"
+msgstr "``Grille de multiplicateur de désagrégation`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:52
+msgid ""
+"A grid giving the factor by which flow leaving each grid cell is multiplied "
+"before accumulation on downslope grid cells. This may be used to simulate "
+"the movement of an attenuating substance."
+msgstr "Une grille donnant le facteur par lequel le flux sortant de chaque cellule est multiplié avant l'accumulation sur les cellules de pente descendante. Elle peut être utilisée pour simuler le mouvement d'une substance d'atténuation."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:61
+msgid "``Weight Grid`` [raster]"
+msgstr "``Grille de pondération`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:57
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:64
+msgid "Optional."
+msgstr "En option."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:59
+msgid ""
+"A grid giving weights (loadings) to be used in the accumulation. If this "
+"optional grid is not specified, weights are taken as the linear grid cell "
+"size to give a per unit width accumulation."
+msgstr "Une grille donnant les poids (charges) à utiliser dans l'accumulation. Si cette grille optionnelle n'est pas utilisée, les poids sont pris de la taille linéaire de cellule pour donner une accumulation par unité de largeur."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:68
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Fichier Shape des exutoires`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:66
+msgid ""
+"This optional input is a point shapefile defining outlets of interest. If "
+"this file is used, the tool will only evaluate ther area upslope of these "
+"outlets."
+msgstr "Ce fichier optionnel est un fichier Shape de points définissant les exutoires d'intérêt. Si ce fichier est utilisé, l'outil évaluera uniquement les surfaces de pente ascendantes de ces exutoires."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:76
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Vérifier la contamination des arcs`` [booléen]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:71
+msgid ""
+"This option determines whether the tool should check for edge contamination."
+" Edge contamination is defined as the possibility that a value may be "
+"underestimated due to grid cells outside of the domain not being considered "
+"when determining contributing area."
+msgstr "Cette option détermine s'il faut vérifier la contamination des arcs. La contamination des arcs se définit comme la possibilité qu'une valeur soit sous-estimée à cause des cellules situées en dehors du domaine d'étude lors de la détermination des résultats."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:76
+msgid "Default: *True*"
+msgstr "Par défaut : *Vrai*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:79
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:84
+msgid "``Decayed Specific Catchment Area Grid`` [raster]"
+msgstr "``Grille de bassin versant de dégradation spécifique`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:82
+msgid ""
+"The D-Infinity Decaying Accumulation tool creates a grid of the accumulated "
+"mass at each location in the domain where mass moves with the D-infinity "
+"flow field, but is subject to first order decay in moving from cell to cell."
+msgstr "L'outil d'accumulation de décroissance D-Infinity créé une grille de masse accumulée pour chaque emplacement du domaine où la masse se déplace avec le champ de flux D-Infinity mais est sujette à une décroissance de premier ordre lors du déplacement de cellule à cellule."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:87
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:94
+msgid "See also"
+msgstr "Voir également"

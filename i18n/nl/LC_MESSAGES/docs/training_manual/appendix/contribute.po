@@ -1,0 +1,583 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-01-04 13:16+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:7
+msgid "Appendix: Contributing To This Manual"
+msgstr "Appendix: Bijdragen aan deze handleiding"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:9
+msgid ""
+"To add materials to this course, you must follow the guidelines in this "
+"Appendix. You are not to alter the conditions in this Appendix except for "
+"clarification. This is to ensure that the quality and consistency of this "
+"manual can be maintained."
+msgstr "U moet de richtlijnen in deze Appendix volgen om materiaal aan deze cursus toe te voegen. U wordt geacht de voorwaarden in deze Appendix niet te wijzigen, uitgezonderd om te verduidelijken. Dat is om er voor te zorgen dat de kwaliteit en consistentie van deze handleiding kunnen worden onderhouden."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:15
+msgid "Downloading Resources"
+msgstr "Bronnen downloaden"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:17
+msgid ""
+"The source of this document is available at `GitHub <https://github.com/qgis"
+"/QGIS-Documentation>`_. Consult `GitHub.com <https://github.com/>`_ for "
+"instructions on how to use the git version control system."
+msgstr "De bron van dit document is beschikbaar op `GitHub <https://github.com/qgis/QGIS-Documentation>`_. Consulteer `GitHub.com <https://github.com/>`_ voor instructies over hoe het versiebeheerssysteem GIT te gebruiken."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:23
+msgid "Manual Format"
+msgstr "Indeling handleiding"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:25
+msgid ""
+"This manual is written using `Sphinx <http://sphinx.pocoo.org/>`_, a Python "
+"document generator using the `reStructuredText "
+"<http://docutils.sourceforge.net/rst.html>`_ markup language. Instructions "
+"on how to use these tools are available on their respective sites."
+msgstr "Deze handleiding is geschreven met behulp van `Sphinx <http://sphinx.pocoo.org/>`_, een Python documentgenerator door middel van de opmaaktaal `reStructuredText <http://docutils.sourceforge.net/rst.html>`_ . Instructies oovee hoe deze gereedschappen te gebruiken zijn beschikbaar op hun respectievelijke sites."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:31
+msgid "Adding a Module"
+msgstr "Een module toevoegen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:33
+msgid ""
+"To add a new module, first create a new directory (directly under the top-"
+"level of the :kbd:`qgis-training-manual` directory) with the name of the new"
+" module."
+msgstr "Maak eerst een nieuwe map (direct onder het bovenste niveau van de map :kbd:`qgis-training-manual`) met de naam voor de nieuwe module om een nieuwe module toe te voegen."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:36
+msgid ""
+"Under this new directory, create a file called :kbd:`index.rst`. Leave this "
+"file blank for now."
+msgstr "Maak, onder deze nieuwe map, een bestand genaamd :kbd:`index.rst`. Laat dit voor nu blanco."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:38
+msgid ""
+"Open the :kbd:`index.rst` file under the top-level directory. Its first "
+"lines are::"
+msgstr "Open het bestand :kbd:`index.rst` in de map van het bovenste niveau. De eerste regels daarvan zijn::"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:48
+msgid ""
+"You will note that this is a list of directory names, followed by the name "
+":kbd:`index`. This directs the top-level index file to the index files in "
+"each directory. The order in which they are listed determines the order they"
+" will have in the document."
+msgstr "Het zal u opvallen dat dit een lijst met namen van mappen is, gevolgd door de naam :kbd:`index`. Dit verwijst het index-bestand op het bovenste niveau naar de indexbestanden in elke map. De volgorde waarin zij staan bepaalt de volgorde die zij in het document zullen hebben."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:53
+msgid ""
+"Add the name of your new module (i.e., the name you gave the new directory),"
+" followed by :kbd:`/index`, to this list, wherever you want your module to "
+"appear."
+msgstr "Voeg de naam van uw nieuwe module (d.i. de naam die u aan de nieuwe map gaf), gevolgd door :kbd:`/index`, aan die lijst toe, waar u wilt dat uw module zou moeten verschijnen."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:56
+msgid ""
+"Remember to keep the order of the modules logical, such that later modules "
+"build on the knowledge presented in earlier modules."
+msgstr "Onthoud om de volgorde van de modules logisch te houden, en wel zo dat latere modules zijn gebouwd op de in eerder modules gepresenteerde kennis."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:58
+msgid ""
+"Open your new module's own index file (:kbd:`[module name]/index.rst`)."
+msgstr "Open het indexbestand van uw eigen module (:kbd:`[naam module]/index.rst`)."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:59
+msgid ""
+"Along the top of the page, write a line of 80 asterisks (:kbd:`*`).  This "
+"represents a module heading."
+msgstr "Schrijf, aan de bovenzijde van de pagina, een regel met 80 asterisken (:kbd:`*`). Dit staat voor een kop van een module."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:61
+msgid ""
+"Follow this with a line containing the markup phrase :kbd:`|MOD|` (which "
+"stands for \"module\"), followed by the name of your module."
+msgstr "Vervolg deze regel met een regel die de frase voor opmaak :kbd:`|MOD|` (wat \"module\" betekent) bevat, gevolgd door de naam van uw module."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:63
+msgid "End this off with another line of 80 asterisks."
+msgstr "Sluit dit af met nog een regel met 80 asterisken."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:64
+msgid "Leave a line open beneath this."
+msgstr "Laat hieronder een regel open."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:65
+msgid ""
+"Write a short paragraph explaining the purpose and content of the module."
+msgstr "Schrijf een korte alinea die het doel en de inhoud van de module uitlegt."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:66
+msgid "Leave one line open, then add the following text::"
+msgstr "Laat één regel open en voeg dan de volgende tekst toe::"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:75
+msgid ""
+"... where :kbd:`lesson1`, :kbd:`lesson2`, etc., are the names of your "
+"planned lessons."
+msgstr "... waar :kbd:`lesson1`, :kbd:`lesson2`, etc., de namen zijn van uw geplande lessen."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:78
+msgid "The module-level index file will look like this:"
+msgstr "Het indexbestand op het niveau van de module zal er zo uitzien dit:"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:96
+msgid "Adding a Lesson"
+msgstr "Een les toevoegen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:98
+msgid "To add a lesson to a new or existing module:"
+msgstr "Een les toevoegen aan een nieuwe of bestaande module:"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:100
+msgid "Open the module directory."
+msgstr "Open de map van de module."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:101
+msgid ""
+"Open the :kbd:`index.rst` file (created above in the case of new modules)."
+msgstr "Open het bestand :kbd:`index.rst` (in het geval van nieuwe modules, hierboven gemaakt)."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:102
+msgid ""
+"Ensure that the name of the planned lesson is listed underneath the "
+":kbd:`toctree` directive, as shown above."
+msgstr "Zorg er voor dat de naam van de geplande les is vermeld onder de vermelding :kbd:`toctree`, zoals hierboven weergegeven."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:104
+msgid "Create a new file under the module directory."
+msgstr "Maak een nieuw bestand aan in de map van de module."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:105
+msgid ""
+"Name this file exactly the same as the name you provided in the module's "
+":kbd:`index.rst` file, and add the extension :kbd:`.rst`."
+msgstr "Noem dit bestand exact hetzelfde als de naam die u heeft vermeld in het bestand :kbd:`index.rst` van de module, en voeg de extensie :kbd:`.rst` toe."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:108
+msgid ""
+"For editing purposes, a :kbd:`.rst` file works exactly like a normal text "
+"file (:kbd:`.txt`)."
+msgstr "Voor bewerkingsdoeleinden werkt een :kbd:`.rst`-bestand exact hetzelfde als een normaal tekstbestand (:kbd:`.txt`)."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:111
+msgid ""
+"To begin writing the lesson, write the markup phrase :kbd:`|LS|`, followed "
+"by the lesson name."
+msgstr "Schrijf de frase voor opmaak :kbd:`|LS|`, gevolgd door de naam van de les om te beginnen met het schrijven van de les."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:113
+msgid "In the next line, write a line of 80 equal signs (:kbd:`=`)."
+msgstr "Schrijf, op de volgende regel, een regel met 80 'is gelijk aan'-tekens (:kbd:`=`)."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:114
+msgid "Leave a line open after this."
+msgstr "Laat hieronder een regel open."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:115
+msgid "Write a short description of the lesson's intended purpose."
+msgstr "Schrijf een korte omschrijving van het beoogde doel van de les."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:116
+msgid ""
+"Include a general introduction to the subject matter. See the existing "
+"lessons in this manual for examples."
+msgstr "Neem een algemene introductie op voor het onderwerp. Bekijk de bestaande lessen in de handleiding voor voorbeelden."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:118
+msgid "Beneath this, start a new paragraph, beginning with this phrase::"
+msgstr "Begin hieronder een nieuwe alinea, beginnend met deze frase::"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:122
+msgid "Briefly explain the intended outcome of completing this lesson."
+msgstr "Leg in het kort de bedoelde leerdoelen uit van het voltooien van deze les."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:123
+msgid ""
+"If you can't describe the goal of the lesson in one or two sentences, "
+"consider breaking the subject matter up into multiple lessons."
+msgstr "Als u het doel van de les niet kunt uitleggen in één of twee zinnen, overweeg dan om het onderwerp op te delen in meerdere lessen."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:126
+msgid ""
+"Each lesson will be subdivided into multiple sections, which will be "
+"addressed next."
+msgstr "Elke les zal worden opgedeeld in meerdere gedeelten, die hierna zullen worden besproken."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:130
+msgid "Adding a Section"
+msgstr "Een gedeelte toevoegen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:132
+msgid "There are two types of sections: \"follow along\" and \"try yourself\"."
+msgstr "Er zijn twee typen gedeelten: \"follow along\" en \"try yourself\"."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:134
+msgid ""
+"A \"follow along\" section is a detailed set of directions intended to teach"
+" the reader how to use a given aspect of QGIS. This is typically done by "
+"giving click-by-click directions as clearly as possible, interspersed with "
+"screenshots."
+msgstr "Een gedeelte \"follow along\" is een gedetailleerde verzameling aanwijzingen die zijn bedoeld om de lezer te leren hoe een bepaald aspect van QGIS te gebruiken. Dit wordt over het algemeen gedaan door zo duidelijk mogelijke klik-na-klik aanwijzingen te geven, afgewisseld met schermafdrukken."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:138
+msgid ""
+"A \"try yourself\" section gives the reader a short assignment to try by "
+"themselves. It is usually associated with an entry in the answer sheet at "
+"the end of the documentation, which will show or explain how to complete the"
+" assignment, and will show the expected outcome if possible."
+msgstr "Een gedeelte \"try yourself\" geeft de lezer een korte opdracht om zelf te proberen. Het wordt gewoonlijk geassocieerd met een item in het antwoordenblad aan het einde van de documentatie, wat zal weergeven of verklaren hoe de opdracht te voltooien, en zal, indien mogelijk, de verwachte uitvoer weergeven."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:143
+msgid ""
+"Every section comes with a difficulty level. An easy section is denoted by "
+":kbd:`|basic|`, moderate by :kbd:`|moderate|`, and advanced by "
+":kbd:`|hard|`."
+msgstr "Elk gedeelte heeft een niveau van moeilijkheid. Een eenvoudig gedeelte wordt vermeld als :kbd:`|basic|`, gemiddeld door :kbd:`|moderate|`, en moeilijk door :kbd:`|hard|`."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:147
+msgid "Adding a \"follow along\" section"
+msgstr "Een gedeelte \"follow along\" toevoegen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:149
+#: ../../source/docs/training_manual/appendix/contribute.rst:167
+msgid ""
+"To start this section, write the markup phrase of the intended difficulty "
+"level (as shown above)."
+msgstr "Vermeld, om dit gedeelte te beginnen, de frase voor opmaak van de bedoelde moeilijkheidsgraad (zoals hierboven weergegeven)."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:151
+msgid "Leave a space and then write :kbd:`|FA|` (for \"follow along\")."
+msgstr "Plaats een spatie en schrijf dan :kbd:`|FA|` (voor \"follow along\")."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:152
+msgid ""
+"Leave another space and write the name of the section (use only an initial "
+"capital letter, as well as capitals for proper nouns)."
+msgstr "Plaats nog een spatie en vermeld de naam van het gedeelte (gebruik alleen een hoofdletter aan het begin, en voor eigennamen)."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:154
+#: ../../source/docs/training_manual/appendix/contribute.rst:170
+msgid ""
+"In the next line, write a line of 80 minuses/dashes (:kbd:`-`). Ensure that "
+"your text editor does not replace the default minus/dash character with a "
+"long dash or other character."
+msgstr "Schrijf, op de volgende regel, een regel met 80 minussen/streepjes (:kbd:`-`). Zorg er voor dat uw tekstverwerker niet het standaard teken minus/streepje vervangt door een lang streepje of ander teken."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:157
+msgid ""
+"Write a short introduction to the section, explaining its purpose. Then give"
+" detailed (click-by-click) instructions on the procedure to be demonstrated."
+msgstr "Schrijf een korte introductie voor het gedeelte, die het doel ervan uitlegt. Geef dan gedetailleerde (klik-na-klik) instructies over de procedure die moet worden gedemonstreerd."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:159
+msgid ""
+"In each section, include internal links, external links and screenshots as "
+"needed."
+msgstr "Neem in elk gedeelte de benodigde interne links, externe links en schermafdrukken op."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:161
+msgid ""
+"Try to end each section with a short paragraph that concludes it and leads "
+"naturally to the next section, if possible."
+msgstr "Probeer elk gedeelte af te sluiten met een korte alinea met een conclusie en die op natuurlijke wijze leidt naar het volgende gedeelte, indien mogelijk."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:165
+msgid "Adding a \"try yourself\" section"
+msgstr "Een gedeelte \"try yourself\" toevoegen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:169
+msgid "Leave a space and then write :kbd:`|TY|` (for \"try yourself\")."
+msgstr "Plaats een spatie en schrijf dan  :kbd:`|TY|` (voor \"try yourself\")."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:173
+msgid ""
+"Explain the exercise that you want the reader to complete. Refer to previous"
+" sections, lessons or modules if necessary."
+msgstr "Leg de oefening uit die u de lezer wilt laten voltooien. Verwijs, indien nodig, naar eerdere gedeelten, lessen of modules."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:175
+msgid ""
+"Include screenshots to clarify the requirements if a plain textual "
+"description is not clear."
+msgstr "Neem schermafdrukken op om de vereisten te verduidelijken als een heldere tekstuele omschrijving niet duidelijk is."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:178
+msgid ""
+"In most cases, you will want to provide an answer regarding how to complete "
+"the assignment given in this section. To do so, you will need to add an "
+"entry in the answer sheet."
+msgstr "In de meeste gevallen zult u een antwoord willen verschaffen met betrekking tot hoe de in dit gedeelte vermelde opdracht zou moeten worden voltooid. To do so, U zult een item in het antwoordenblad moeten toevoegen om dat te doen."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:182
+msgid ""
+"First, decide on a unique name for the answer. Ideally, this name will "
+"include the name of the lesson and an incrementing number."
+msgstr "bepaal eerst een unieke naam voor het antwoord. Idealiter zal deze naam de naam van de les bevatten en een volgnummer."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:184
+msgid "Create a link for this answer:"
+msgstr "Een koppeling voor dit antwoord maken:"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:190
+msgid "Open the answer sheet (:kbd:`answers/answers.rst`)."
+msgstr "Open het antwoordneblad (:kbd:`answers/answers.rst`)."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:191
+msgid "Create a link to the \"try yourself\" section by writing this line:"
+msgstr "Maak een koppeling naar het gedeelte \"try yourself\" door deze regel te vermelden:"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:197
+msgid ""
+"Write the instructions on how to complete the assignment, using links and "
+"images where needed."
+msgstr "Schrijf de instructies over hoe de opdracht te voltooien, gebruik, waar nodig, koppelingen en afbeeldingen."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:199
+msgid ""
+"To end it off, include a link back to the \"try yourself\" section by "
+"writing this line:"
+msgstr "Neem, om het af te sluiten, een koppeling terug op naar het gedeelte \"try yourself\" door deze regel te vermelden:"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:206
+msgid ""
+"To make this link work, add the following line above the heading to the "
+"\"try yourself\" section:"
+msgstr "Voeg, om deze koppeling te laten werken, de volgende regel toe boven de kop naar het gedeelte \"try yourself\":"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:213
+msgid ""
+"Remember that each of these lines shown above must have a blank line above "
+"and below it, otherwise it could cause errors while creating the document."
+msgstr "Onthoud dat elk van deze hierboven weergegeven regels een lege regel erboven en eronder moet hebben, anders zou het fouten kunnen veroorzaken bij het maken van het document."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:217
+msgid "Add a Conclusion"
+msgstr "Een conclusie toevoegen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:219
+msgid ""
+"To end a lesson, write the phrase :kbd:`|IC|` for \"in conclusion\", "
+"followed by a new line of 80 minuses/dashes (:kbd:`-`). Write a conclusion "
+"for the lesson, explaining which concepts have been covered in the lesson."
+msgstr "Vermeld, om een les te beëindigen, de frase :kbd:`|IC|` voor \"in conclusion\", gevolgd door een nieuwe regel met 80 minussen/streepjes (:kbd:`-`). Schrijf een conclusie voor de les waarin u uitlegt welke concepten zijn behandeld in de les."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:224
+msgid "Add a Further Reading Section"
+msgstr "Een gedeelte Meer informatie toevoegen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:226
+msgid "This section is optional."
+msgstr "Dit gedeelte is optioneel."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:227
+msgid ""
+"Write the phrase :kbd:`FR` for \"further reading\", followed by a new line "
+"of 80 minuses/dashes (:kbd:`-`)."
+msgstr "Schrijf de frase :kbd:`FR` voor \"further reading\", gevolgd door een nieuwe regel van 80 minussen/streepjes (:kbd:`-`)."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:229
+msgid "Include links to appropriate external websites."
+msgstr "Neem koppelingen op naar de van toepassing zijnde externe websites."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:232
+msgid "Add a What's Next Section"
+msgstr "Een gedeelte Wat nu toevoegen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:234
+msgid ""
+"Write the phrase :kbd:`|WN|` for \"what's next\", followed by a new line of "
+"80 minuses/dashes (:kbd:`-`)."
+msgstr "Schrijf de frase :kbd:`|WN|` voor \"what's next\", gevolgd door een nieuwe regel van 80 minussen/streepjes (:kbd:`-`)."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:236
+msgid ""
+"Explain how this lesson has prepared students for the next lesson or module."
+msgstr "Leg uit hoe deze les studenten heeft voorbereid voor de volgende les of module."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:237
+msgid ""
+"Remember to change the \"what's next\" section of the previous lesson if "
+"necessary, so that it refers to your new lesson. This will be necessary if "
+"you have inserted a new lesson among existing lessons, or after an existing "
+"lesson."
+msgstr "Onthoud om het gedeelte \"what's next\" van de vorige les indien nodig te wijzigen, zodat die verwijst naar uw nieuwe les. Dit zal nodig zijn als u een nieuwe les tussen bestaande lessen heeft ingevoegd, of na een bestaande les."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:243
+msgid "Using Markup"
+msgstr "Opmaak gebruiken"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:245
+msgid ""
+"To adhere to the standards of this document, you will need to add standard "
+"markup to your text."
+msgstr "U zult standaard opgemaakte tekst zullen moeten toevoegen aan uw tekst om de standaarden van dit document te volgen,"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:249
+msgid "New concepts"
+msgstr "Nieuwe concepten"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:251
+msgid ""
+"If you are explaining a new concept, you will need to write the new "
+"concept's name in italics by enclosing it in asterisks (:kbd:`*`)."
+msgstr "Als u een nieuw concept uitlegt,zult u de naam van het nieuwe concept cursief moeten schrijven door het te omsluiten met asterisken (:kbd:`*`)."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:259
+msgid "Emphasis"
+msgstr "Benadrukken"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:261
+msgid ""
+"To emphasize a crucial term which is not a new concept, write the term in "
+"bold by enclosing it in double asterisks (:kbd:`**`)."
+msgstr "Een cruciale term benadrukken die geen nieuw new concept is, schrijf de term vet door die te omsluiten met dubbele asterisken (:kbd:`**`)."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:263
+msgid ""
+"Use this sparingly! If used too much, it can seem to the reader that you are"
+" shouting or being condescending."
+msgstr "Gebruik dit spaarzaam! Als u dit teveel gebruikt kan het voor de lezer lijken of u schreeuwt of neerbuigend doet."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:273
+msgid "Images"
+msgstr "Afbeeldingen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:275
+msgid ""
+"When adding an image, save it to the folder :kbd:`_static/lesson_name/`."
+msgstr "Bij het toevoegen vaneen afbeelding, sla die op in de map :kbd:`_static/naam_les/`."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:276
+msgid "Include it in the document like this::"
+msgstr "Neem die als volgt op in het document::"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:281
+msgid "Remember to leave a line open above and below the image markup."
+msgstr "Onthoud om een lege regel over te laten boven en onder de opmaak voor de afbeelding."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:284
+msgid "Internal links"
+msgstr "Interne koppelingen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:286
+msgid ""
+"To create an anchor for a link, write the following line above the place "
+"where you want the link to point to::"
+msgstr "Schrijf, om een anker voor een koppeling te maken, de volgende regel boven de plaats waar u wilt dat de koppeling naar verwijst::"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:291
+msgid "To create a link, add this line::"
+msgstr "Voeg deze regel toe om een koppeling te maken::"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:295
+#: ../../source/docs/training_manual/appendix/contribute.rst:304
+msgid "Remember to leave a line open above and below this line."
+msgstr "Onthoud om een lege regel boven en onder deze regel te houden."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:298
+msgid "External links"
+msgstr "Externe koppelingen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:300
+msgid "To create an external link, write it out like this::"
+msgstr "Schrijf, om een externe koppeling te maken, die als volgt uit::"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:307
+msgid "Using monospaced text"
+msgstr "Mono gespatieerde tekst gebruiken"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:309
+msgid ""
+"When you are writing text that the user needs to enter, a path name, or the "
+"name of a database element such as a table or column name, you must write it"
+" in :kbd:`monospaced text`. For example::"
+msgstr "Wanneer u tekst schrijft die de gebruiker moet invoeren, een padnaam, of de naam van een element van een database, zoals een naam van een tabel of kolom, moet u die schrijven in :kbd:`mono gespatieerde tekst`. Biijvoorbeeld::"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:316
+msgid "Labeling GUI items"
+msgstr "Items voor de GUI labelen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:318
+msgid ""
+"If you are referring to a GUI item, such as a button, you must write its "
+"name in :guilabel:`the GUI label format`. For example::"
+msgstr "Indien u verwijst naar een item van de GUI, zoals een knop, moet u de naam ervan schrijven in :guilabel:`de opmaak voor label van de GUI`. Bijvoorbeeld::"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:323
+msgid ""
+"This also applies if you are mentioning the name of a tool without requiring"
+" the user to click a button."
+msgstr "Dit is ook van toepassing als u de naam van een gereedschap vermeld, zonder dat de gebruiker op een knop hoeft te drukken."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:327
+msgid "Menu selections"
+msgstr "Menuselecties"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:329
+msgid ""
+"If you are guiding a user through menus, you must use the "
+":menuselection:`menu --> selection --> format`. For example::"
+msgstr "Als u een gebruiker door menu's leidt, moet u de :menuselection:`indeling menu --> selectie --> ` gebruiken. Bijvoorbeeld::"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:336
+msgid "Adding notes"
+msgstr "Opmerkingen toevoegen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:338
+msgid ""
+"You might need to a note in the text, which explains extra details that "
+"can't easily be made part of the flow of the lesson. This is the markup::"
+msgstr "U wilt misschien een opmerking in de tekst opnemen, die extra details uitlegt die niet eenvoudig deel van de les kunnen worden gemaakt. Dit is de opmaak::"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:351
+msgid "Adding a sponsorship/authorship note"
+msgstr "Een opmerking voor sponsors/auteurs toevoegen"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:353
+msgid ""
+"If you are writing a new module, lesson or section on behalf of a sponsor, "
+"you must include a short sponsor message of their choice. This must notify "
+"the reader of the name of the sponsor and must appear below the heading of "
+"the module, lesson or section that they sponsored. However, it may not be an"
+" advertisement for their company."
+msgstr "Als u een nieuwe module, les of gedeelte schrijft ten behoeve van een sponsor, moet u een kort bericht van de sponsor opnemen, naar hun keuze. Dit moet de gebruiker attenderen op de naam van de sponsor en moet onder de kop van de module, les of gedeelte, dat zij sponsoren, verschijnen. Het mag echter geen advertentie voor hun bedrijf zijn."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:359
+msgid ""
+"If you have volunteered to write a module, lesson or section in your own "
+"capacity, and not on behalf of a sponsor, you may include an authorship note"
+" below the heading of the module, lesson or section that you authored. This "
+"must take the form :kbd:`This [module/lesson/section] contributed by [author"
+" name].` Do not add further text, contact details, etc. Such details are to "
+"be added in the \"Contributors\" section of the Foreword, along with the "
+"name(s) of the part(s) you added. If you only made enhancements, corrections"
+" and/or additions, list yourself as an editor."
+msgstr "Als u op vrijwillige basis, op eigen titel, een module, les of gedeelte, schrijft, en niet ten behoeve van een sponsor, mag u een opmerking over de auteur opnemen onder de kop van de module, les of het gedeelte dat u schreef. Dat moet in de vorm :kbd:`Deze [module/les/gedeelte] is bijgedragen door [naam auteur].` Voeg geen verdere tekst, contactdetails, etc. toe. Dergelijke details dienen te worden toegevoegd in het gedeelte \"Contributors\" van het Voorwoord, tezamen met de namen van de gedeelte(n) die u heeft toegevoegd. Als u alleen verbeteringen, correcties en/of toevoegingen heeft gemaakt, vermeld u zichzelf als een editor."
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:369
+msgid "Thank You!"
+msgstr "Dank u wel!"
+
+#: ../../source/docs/training_manual/appendix/contribute.rst:371
+msgid ""
+"Thank you for contributing to this project! By so doing, you are making QGIS"
+" more accessible to users and adding value to the QGIS project as a whole."
+msgstr "Dank u voor uw bijdrage aan dit project! Hierdoor maakt u QGIS meer toegankelijk voor gebruikers en voegt u waarde toe aan het project QGIS als geheel."

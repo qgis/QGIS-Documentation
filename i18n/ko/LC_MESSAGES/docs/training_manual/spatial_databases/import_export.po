@@ -1,0 +1,143 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-06-25 05:47+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:6
+msgid "|LS| Import and Export"
+msgstr "|LS| 임포트와 엑스포트"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:8
+msgid ""
+"Of course, a database with no easy way to migrate data into it and out of it"
+" would not be of much use. Fortunately, there are a number of tools that "
+"will let you easily move data into and out of PostGIS."
+msgstr "물론, 데이터를 가져오거나 내보내기 힘든 데이터베이스는 쓸모가 없습니다. 다행히도 PostGIS에서 데이터를 쉽게 가져오거나 내보낼 수 있는 도구가 많이 있습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:13
+msgid "shp2pgsql"
+msgstr "shp2pgsql"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:15
+msgid ""
+"shp2pgsql is a commandline tool to import ESRI shapefiles to the database. "
+"Under Unix, you can use the following command for importing a new PostGIS "
+"table::"
+msgstr "shp2pgsql은 데이터베이스에 ESRI shapefile을 임포트할 수 있는 커맨드라인 도구입니다. 유닉스에서 다음 명령어를 써서 새 PostGIS 테이블을 임포트할 수 있습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:22
+msgid "Under Windows, you have to perform the import process in two steps::"
+msgstr "윈도우에서는, 임포트 과정을 다음 두 단계로 실행해야 합니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:27
+msgid "You may encounter this error::"
+msgstr "다음과 같은 오류가 발생할 수도 있습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:32
+msgid ""
+"This is a known issue regarding the creation *in situ* of a spatial index "
+"for the data you're importing. To avoid the error, exclude the :kbd:`-I` "
+"parameter. This will mean that no spatial index is being created directly, "
+"and you'll need to create it in the database after the data have been "
+"imported. (The creation of a spatial index will be covered in the next "
+"lesson.)"
+msgstr "사용자가 임포트하는 데이터에 대한 공간 인덱스의 생성 *원위치*와 관련된, 잘 알려진 문제입니다. 이 오류를 피하려면 :kbd:`-I` 파라미터를 제외하십시오. 이렇게 하면 공간 인덱스를 자동으로 생성하지 않고, 데이터를 임포트한 뒤 사용자가 데이터베이스에 직접 생성해야 합니다. (다음 강의에서 공간 인덱스 생성에 대해 배울 것입니다.)"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:39
+msgid "pgsql2shp"
+msgstr "pgsql2shp"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:41
+msgid ""
+"pgsql2shp is a commandline tool to export PostGIS Tables, Views or SQL "
+"select queries. To do this under Unix::"
+msgstr "pgsql2shp는 PostGIS 테이블, 뷰, 또는 SQL 선택 쿼리를 엑스포트하는 커맨드라인 도구입니다. 유닉스에서는 이 명령어를 다음과 같이 사용합니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:47
+msgid "To export the data using a query::"
+msgstr "쿼리를 이용해 데이터를 엑스포트하려면 다음과 같이 합니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:53
+msgid "ogr2ogr"
+msgstr "ogr2ogr"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:55
+msgid ""
+"ogr2ogr is a very powerful tool to convert data into and from postgis to "
+"many data formats. ogr2ogr is part of the GDAL/OGR Software and has to be "
+"installed separately. To export a table from PostGIS to GML, you can use "
+"this command::"
+msgstr "ogr2ogr은 PostGIS의 데이터를 다른 데이터 포맷으로 변환하거나, 다른 데이터 포맷을 PostGIS 데이터로 변환할 수 있는 매우 강력한 도구입니다. ogr2ogr은 GDAL/OGR 소프트웨어의 일부로, 개별적으로 설치해야 합니다. PostGIS의 테이블을 GML로 엑스포트하려면 다음 명령어를 사용하면 됩니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:63
+msgid "SPIT"
+msgstr "SPIT"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:65
+msgid ""
+"SPIT is a QGIS plugin which is delivered with QGIS. You can use SPIT for "
+"uploading ESRI shapefiles to PostGIS."
+msgstr "SPIT은 QGIS에 내장된 QGIS 플러그인입니다. ESRI shapefile을 PostGIS로 업로드하는 데 쓸 수 있습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:68
+msgid ""
+"Once you've added the SPIT plugin via the :guilabel:`Plugin Manager`, look "
+"for this button:"
+msgstr ":guilabel:`Plugin Manager` 를 통해 SPIT을 추가한 다음, 다음 버튼을 찾아보십시오."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:74
+msgid ""
+"Clicking on it or selecting :guilabel:`Database --> Spit --> Import "
+"Shapefiles to PostgreSQL` from the menu will give you the SPIT dialog:"
+msgstr "이 버튼을 클릭하거나 메뉴에서 :guilabel:`Database --> Spit --> Import Shapefiles to PostgreSQL` 을 선택하면 다음과 같은 SPIT 대화 창이 뜹니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:80
+msgid ""
+"You can add shapefiles to the database by clicking the :guilabel:`Add` "
+"button, which will give you a file browser window."
+msgstr ":guilabel:`Add` 버튼을 클릭하면 데이터베이스에 shapefile을 추가할 수 있는 파일 탐색기 창이 뜹니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:84
+msgid "DB Manager"
+msgstr "DB 관리자"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:86
+msgid ""
+"You may have noticed another option in the :guilabel:`Database` menu labeled"
+" :guilabel:`DB Manager`. This is a new tool in QGIS 2.0 that provides a "
+"unified interface for interacting with spatial databases including PostGIS. "
+"It also allows you to import and export from databases to other formats. "
+"Since the next module is largely devoted to using this tool, we will only "
+"briefly mention it here."
+msgstr ":guilabel:`Database` 메뉴에서 :guilabel:`DB Manager` 라는 또다른 옵션을 눈치챘을지도 모르겠습니다. QGIS 2.0부터 추가된 이 새로운 도구는 PostGIS를 포함한 공간 데이터베이스와 상호 작용할 수 있는 통합 인터페이스를 제공합니다. 또 데이터베이스로 다른 포맷을 임포트할 수도, 데이터베이스에서 다른 포맷으로 엑스포트할 수도 있습니다. 다음 모듈이 거의 이 도구에 대한 내용이기 때문에, 여기에서는 간단히 언급만 하겠습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:95
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:97
+msgid ""
+"Importing and exporting data to and from the database can be done in many "
+"various ways. Especially when using disparate data sources, you will "
+"probably use these functions (or others like them) on a regular basis."
+msgstr "데이터베이스에(서) 데이터를 임포트하거나 엑스포트하는 방법은 여러 가지가 있습니다. 특히 서로 전혀 다른 데이터소스를 이용할 경우, 상시적으로 이 기능들, 또는 다른 비슷한 기능들을 사용하게 될 것입니다."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:102
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:104
+msgid "Next we'll look at how to query the data we've created before."
+msgstr "다음으로 이전에 생성했던 데이터를 어떻게 쿼리할 수 있는지 알아보겠습니다."

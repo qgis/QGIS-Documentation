@@ -1,0 +1,535 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-10 14:48+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:6
+msgid "|LS| Actions"
+msgstr "|LS| 액션"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:8
+msgid ""
+"Now that you've seen a default action in the previous lesson, it's time to "
+"define your own actions. An action is something that happens when you click "
+"on a feature. It can add a lot of extra functionality to your map, allowing "
+"you to retrieve additional information about an object, for example. "
+"Assigning actions can add a whole new dimension to your map!"
+msgstr "이전 강의에서 기본 액션에 대해 알았으니, 이제 여러분 자신의 액션을 정의해볼 차례입니다. 액션이란 피처를 클릭했을 때 일어나는 어떤 일을 말합니다. 액션으로 사용자 맵에 수많은 기능성을 추가할 수 있습니다. 예를 들자면 오브젝트에 대한 추가적인 정보를 얻을 수 있습니다. 액션을 할당함으로써 여러분의 맵에 완전히 새로운 차원을 추가할 수 있습니다!"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:14
+msgid "**The goal for this lesson:** To learn how to add custom actions."
+msgstr "**이 강의의 목표:** 사용자 지정 액션을 추가하는 방법을 배우기."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:18
+msgid "|basic| |FA| Open an Image"
+msgstr "|basic| |FA| 이미지 열기"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:20
+msgid ""
+"Use the :guilabel:`school_property` layer you created previously. The course"
+" materials include photos of each of the three properties you digitized. "
+"What we're going to do next is to associate each property with its image. "
+"Then we'll create an action that will open the image for a property when "
+"clicking on the property."
+msgstr "이전 강의에서 생성한 :guilabel:`school_property` 레이어를 사용합니다. 강의 자료에 여러분이 디지타이즈한 세 부지의 사진이 포함돼 있습니다. 다음 단계는 각 부지에 해당 이미지를 연계시키는 것입니다. 그 다음, 부지를 클릭하면 해당 부지의 사진을 나타내는 액션을 생성할 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:27
+msgid "|basic| |FA| Add a Field for Images"
+msgstr "|basic| |FA| 이미지 용 항목 추가"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:29
+msgid ""
+"The :guilabel:`school_property` layer has no way to associate an image with "
+"a property yet. First we'll create a field for this purpose."
+msgstr ":guilabel:`school_property` 레이어의 속성에 이미지를 연계시킬 방법이 아직 없습니다. 먼저 이를 위한 항목을 생성하겠습니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:32
+msgid "Open the :guilabel:`Layer Properties` dialog."
+msgstr ":guilabel:`Layer Properties` 대화 창을 엽니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:33
+msgid "Click on the :guilabel:`Fields` tab."
+msgstr ":guilabel:`Fields` 탭을 클릭합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:34
+msgid "Toggle editing mode:"
+msgstr "편집 모드를 엽니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:39
+msgid "Add a new column:"
+msgstr "다음 새 열을 추가합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:44
+msgid "Enter the values below:"
+msgstr "다음 값을 입력합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:49
+msgid ""
+"After the field has been created, click on the :guilabel:`Line edit` button "
+"next to the new field."
+msgstr "항목을 생성한 다음, 새 항목 옆에 있는 :guilabel:`Line edit` 버튼을 클릭합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:51
+msgid "Set it up for a :guilabel:`File name`:"
+msgstr "다음과 같이 :guilabel:`File name` 에 대해 설정합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:56
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:127
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:232
+msgid "Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog."
+msgstr ":guilabel:`Layer Properties` 대화 창의 :guilabel:`OK` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:57
+msgid ""
+"Use the :guilabel:`Identify` tool to click on one of the three features in "
+"the :guilabel:`school_property` layer."
+msgstr ":guilabel:`Identify` 도구를 사용해 :guilabel:`school_property` 레이어에 있는 세 피처 가운데 하나를 클릭합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:60
+msgid ""
+"Since you're still in edit mode, the dialog should be active and look like "
+"this:"
+msgstr "아직 편집 모드이므로, 다음과 같은 대화 창이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:66
+msgid ""
+"Click on the browse button (the :guilabel:`...` next to the "
+":guilabel:`image` field)."
+msgstr ":guilabel:`image` 항목 옆의 :guilabel:`...` 탐색 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:68
+msgid ""
+"Select the path for your image. The images are in "
+":kbd:`exercise_data/school_property_photos/` and are named the same as the "
+"features they should be associated with."
+msgstr "사용자 이미지가 있는 경로를 선택하십시오. 이미지들은 :kbd:`exercise_data/school_property_photos/` 경로에 있으며, 각각 연계되어야 할 피처와 동일한 명칭을 가지고 있습니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:71
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:72
+msgid ""
+"Associate all of the images with the correct features using this method."
+msgstr "이런 방법으로 모든 이미지들을 올바른 피처와 연계하십시오."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:73
+msgid "Save your edits and exit edit mode."
+msgstr "편집 내용을 저장하고 편집 모드를 끕니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:77
+msgid "|basic| |FA| Creating an Action"
+msgstr "|basic| |FA| 액션 생성"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:79
+msgid ""
+"Open the :guilabel:`Actions` form for the :guilabel:`school_property` layer."
+msgstr ":guilabel:`school_property` 레이어에 대한 :guilabel:`Actions` 서식을 엽니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:80
+msgid ""
+"In the :kbd:`Action properties` panel, enter the words :kbd:`Show Image` "
+"into the :guilabel:`Name` field:"
+msgstr ":kbd:`Action properties` 패널에 있는 :guilabel:`Name` 항목에 :kbd:`Show Image` 라는 텍스트를 입력합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:86
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:163
+msgid ""
+"What to do next varies according to your operating system, so choose the "
+"appropriate course to follow:"
+msgstr "다음 단계는 사용자의 OS에 따라 달라지므로, 다음 가운데 적합한 지침을 선택하십시오."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:91
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:167
+msgid "Windows"
+msgstr "윈도우"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:93
+msgid "Click on the :guilabel:`Type` dropdown and choose :guilabel:`Open`."
+msgstr ":guilabel:`Type` 드롭다운 메뉴를 클릭하고 :guilabel:`Open` 을 선택합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:97
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:173
+msgid "Ubuntu Linux"
+msgstr "우분투 리눅스"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:99
+msgid ""
+"Under :guilabel:`Action`, write :kbd:`eog` for the *Gnome Image Viewer*, or "
+"write :kbd:`display` to use *ImageMagick*. Remember to put a space after the"
+" command!"
+msgstr ":guilabel:`Action` 아래에 *Gnome Image Viewer* 를 위해 :kbd:`eog` 를 입력하거나, *ImageMagick* 를 사용하려면 :kbd:`display` 를 입력합니다. 명령어 뒤에 공백을 입력해야 한다는 점을 기억하십시오!"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:105
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:179
+msgid "MacOS"
+msgstr "MacOS"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:107
+msgid "Click on the :guilabel:`Type` dropdown and choose :guilabel:`Mac`."
+msgstr ":guilabel:`Type` 드롭다운 메뉴를 클릭하고 :guilabel:`Mac` 을 선택합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:108
+msgid ""
+"Under :guilabel:`Action`, write :kbd:`open`. Remember to put a space after "
+"the command!"
+msgstr ":guilabel:`Action` 아래에 :kbd:`open` 이라고 입력하십시오. 명령어 뒤에 공백을 입력해야 합니다!"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:113
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:185
+msgid "Continue writing the command"
+msgstr "명령어 입력 계속"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:115
+msgid ""
+"You want to open the image, and QGIS knows where the image is. All it needs "
+"to do is to tell the :guilabel:`Action` where the image is."
+msgstr "우리는 이미지를 열기를 원하고, QGIS는 이미지의 경로를 알고 있습니다. 이제 남은 것은 :guilabel:`Action` 에 이미지의 경로를 알려주는 일뿐입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:119
+msgid "Select :guilabel:`image` from the list:"
+msgstr "다음 목록에서 :guilabel:`image` 를 선택하십시오."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:124
+msgid ""
+"Click the :guilabel:`Insert field` button. QGIS will add the phrase :kbd:`[%"
+" \"image\" %]` in the :guilabel:`Action` field."
+msgstr ":guilabel:`Insert field` 항목을 클릭하십시오. QGIS가 :guilabel:`Action` 항목에 :kbd:`[% \"image\" %]` 라는 문구를 추가할 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:126
+msgid "Click the :guilabel:`Add to action list` button."
+msgstr ":guilabel:`Add to action list` 버튼을 클릭합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:129
+msgid "Now we will test the new Action:"
+msgstr "이제 새로 만든 액션을 테스트해봅시다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:131
+msgid ""
+"Click on the :guilabel:`school_property` layer in the :guilabel:`Layers "
+"list` so that it is highlighted."
+msgstr ":guilabel:`Layers list` 에 있는 :guilabel:`school_property` 레이어를 클릭해서 하이라이트시킵니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:133
+msgid ""
+"Find the :guilabel:`Run feature action` button (on the same toolbar as the "
+":guilabel:`Open Attribute Table` button):"
+msgstr "(:guilabel:`Open Attribute Table` 버튼이 있는 툴바에서) 다음 :guilabel:`Run feature action` 버튼을 찾아보십시오."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:136
+msgid "|mAction|"
+msgstr "|mAction|"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:138
+msgid ""
+"Click on the down arrow to the right of this button. There's only one action"
+" defined for this layer so far, which is the one you just created."
+msgstr "이 버튼의 오른쪽에 있는 아래 방향 화살표를 클릭해보십시오. 지금 현재 이 레이어에 정의된 액션은 여러분이 방금 생성한 하나뿐입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:140
+msgid "Click the button itself to activate the tool."
+msgstr "버튼을 클릭해서 도구를 활성화합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:141
+msgid "Using this tool, click on any of the three school properties."
+msgstr "이 도구를 이용해서, 학교 부지 세 곳 가운데 하나를 클릭합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:142
+msgid "The image for that property will now open."
+msgstr "해당 부지의 사진이 열릴 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:145
+msgid "|moderate| |FA| Searching the Internet"
+msgstr "|moderate| |FA| 인터넷 검색"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:147
+msgid ""
+"Let's say we're looking at the map and want to know more about the area that"
+" a farm is in. Suppose you know nothing of the area in question and want to "
+"find general information about it. Your first impulse, considering that "
+"you're using a computer right now, would probably be to Google the name of "
+"the area. So let's tell QGIS to do that automatically for us!"
+msgstr "맵을 보고 있다가 어떤 농장이 있는 지역에 대해 더 알고 싶어졌다고 해봅시다. 해당 지역에 대해 아무것도 모르고 있고, 그 지역에 대한 일반적인 정보를 찾고 싶다고 가정합시다. 지금 컴퓨터 앞에 앉아 있다는 점을 생각해보면 여러분이 처음 취할 행동은 아마도 해당 지역의 명칭을 구글해보는 것일 겁니다. 그러면 QGIS가 자동으로 그 액션을 취하도록 만들어볼까요!"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:153
+msgid "Open the attribute table for the :guilabel:`landuse` layer."
+msgstr ":guilabel:`landuse` 레이어의 속성 테이블을 엽니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:155
+msgid ""
+"We'll be using the :kbd:`name` field for each of our landuse areas to search"
+" Google."
+msgstr "각 토지이용구역의 :kbd:`name` 항목을 이용해서 구글 검색을 해보겠습니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:158
+msgid "Close the attribute table."
+msgstr "속성 테이블을 닫습니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:159
+msgid "Go back to :guilabel:`Actions` in :guilabel:`Layer Properties`."
+msgstr ":guilabel:`Layer Properties` 의 :guilabel:`Actions` 로 돌아갑니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:160
+msgid ""
+"In the field :menuselection:`Action Properties --> Name`, write :kbd:`Google"
+" Search`."
+msgstr ":menuselection:`Action Properties --> Name` 메뉴 항목에 :kbd:`Google Search` 를 입력합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:169
+msgid ""
+"Under :guilabel:`Type`, choose :guilabel:`Open`. This will tell Windows to "
+"open an Internet address in your default browser, such as Internet Explorer."
+msgstr ":guilabel:`Type` 아래에 있는 :guilabel:`Open` 을 선택하면, 윈도우에 인터넷 익스플로러 같은 기본 브라우저에서 인터넷 주소를 열도록 명령합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:175
+msgid ""
+"Under :guilabel:`Action`, write :kbd:`xdg-open`. This will tell Ubuntu to "
+"open an Internet address in your default browser, such as Chrome or Firefox."
+msgstr ":guilabel:`Action` 아래에 :kbd:`xdg-open` 을 입력하면, 우분투에 크롬이나 파이어폭스 같은 기본 브라우저에서 인터넷 주소를 열도록 명령합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:181
+msgid ""
+"Under :guilabel:`Action`, write :kbd:`open`. This will tell MacOS to open an"
+" Internet address in your default browser, such as Safari."
+msgstr ":guilabel:`Action` 아래에 :kbd:`open` 을 입력하면, MacOS에 사파리 같은 기본 브라우저에서 인터넷 주소를 열도록 명령합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:187
+msgid ""
+"Whichever command you used above, you need to tell it which Internet address"
+" to open next. You want it to visit Google, and to search for a phrase "
+"automatically."
+msgstr "앞에 나열한 명령어 가운데 어떤 것을 이용하든, 이제 어떤 인터넷 주소를 열 것인지 알려줘야 합니다. 즉 구글 사이트로 가서 자동으로 지역명을 검색해야 합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:191
+msgid ""
+"Usually when you use Google, you enter your search phrase into the Google "
+"Search bar. But in this case, you want your computer to do this for you. The"
+" way you tell Google to search for something (if you don't want to use its "
+"search bar directly) is by giving your Internet browser the address "
+":kbd:`http://www.google.com/search?q=SEARCH_PHRASE`, where "
+":kbd:`SEARCH_PHRASE` is what you want to search for. Since we don't know "
+"what phrase to search for yet, we'll just enter the first part (without the "
+"search phrase)."
+msgstr "구글을 이용할 때는 보통 구글 검색란에 검색 문구를 입력합니다. 그러나 이 경우에는 컴퓨터가 자동으로 검색해야 합니다. 구글에 뭔가를 검색하라고 명령하는 방법은 (검색란을 직접 이용하지 않으려면) 인터넷 브라우저에 다음 :kbd:`http://www.google.com/search?q=SEARCH_PHRASE` 라는 주소를 부여하는 것입니다. 이때 :kbd:`SEARCH_PHRASE` 가 여러분이 검색하길 바라는 구문입니다. 아직 어떤 구문을 검색해야 하는지 모르기 때문에, (검색 구문 없이) 주소의 전반부만 입력하겠습니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:200
+msgid ""
+"In the :guilabel:`Action` field, write "
+":kbd:`http://www.google.com/search?q=`. Remember to add a space after your "
+"initial command before writing this in!"
+msgstr ":guilabel:`Action` 항목에 :kbd:`http://www.google.com/search?q=` 라고 입력하십시오. 기존 명령어 뒤에 공백을 삽입한 다음 이 주소를 입력해야 합니다!"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:204
+msgid ""
+"Now you want QGIS to tell the browser to tell Google to search for the value"
+" of :kbd:`name` for any feature that you could click on."
+msgstr "이제 여러분이 어떤 피처를 클릭하더라도 QGIS가 해당 피처의 :kbd:`name` 값을 구글에서 검색하도록 브라우저에 명령해야 합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:207
+msgid "Select the :guilabel:`name` field."
+msgstr ":guilabel:`name` 항목을 선택합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:208
+msgid "Click :guilabel:`Insert field`:"
+msgstr ":guilabel:`Insert field` 를 클릭하면,"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:213
+msgid "This will tell QGIS to add the phrase next:"
+msgstr "QGIS가 다음과 같이 구문을 추가할 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:218
+msgid ""
+"What this means is that QGIS is going to open the browser and send it to the"
+" address :kbd:`http://www.google.com/search?q=[% \"name\" %]`. But :kbd:`[% "
+"\"name\" %]` tells QGIS to use the contents of the :kbd:`name` field as the "
+"phrase to search for."
+msgstr "다시 말해 QGIS가 브라우저를 열고 :kbd:`http://www.google.com/search?q=[% \"name\" %]` 라는 주소를 전송하는 액션입니다. 그런데 :kbd:`[% \"name\" %]` 라는 부분을 통해 QGIS가 검색 구문으로 :kbd:`name` 항목의 내용을 보내게 하는 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:223
+msgid ""
+"So if, for example, the landuse area you click on is named :kbd:`Marloth "
+"Nature Reserve`, then QGIS is going to send the browser to "
+":kbd:`http://www.google.com/search?q=Marloth%20Nature%20Reserve`, which will"
+" cause your browser to visit Google, which will in turn search for \"Marloth"
+" Nature Reserve\"."
+msgstr "따라서 예를 들자면, 사용자가 클릭한 토지이용구역의 명칭이 :kbd:`Marloth Nature Reserve` 라고 할 때 QGIS는 브라우저에 :kbd:`http://www.google.com/search?q=Marloth%20Nature%20Reserve` 라는 주소를 보내게 되고, 그러면 브라우저는 구글 사이트로 가서 \"Marloth Nature Reserve\"에 대한 검색 결과를 반환할 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:229
+msgid "If you haven't done so already, set everything up as explained above."
+msgstr "아직 이 예제를 실행하지 않았다면, 앞에 설명한 모든 것을 따라해보십시오."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:230
+msgid ""
+"Click the :guilabel:`Add to action list` button. The new action will appear "
+"in the list above."
+msgstr ":guilabel:`Add to action list` 버튼을 클릭합니다. 위 목록에 새 액션이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:234
+msgid "Now to test the new action."
+msgstr "이제 새로운 액션을 테스트해봅시다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:236
+msgid ""
+"With the :guilabel:`landuse` layer active in the :guilabel:`Layers list`, "
+"click on the :guilabel:`Run feature action` button."
+msgstr ":guilabel:`Layers list` 에서 :guilabel:`landuse` 레이어를 활성화한 다음, :guilabel:`Run feature action` 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:238
+msgid ""
+"Click on any landuse area you can see on the map. Your browser will now "
+"open, and will automatically start a Google search for the town that is "
+"recorded as that area's :kbd:`name` value."
+msgstr "맵 상에 보이는 토지이용구역 가운데 아무 곳이나 클릭해보십시오. 여러분의 브라우저가 열리고, 해당 구역의 :kbd:`name` 값으로 저장된 도시를 자동으로 구글 검색할 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:242
+msgid ""
+"If your action doesn't work, check that everything was entered correctly; "
+"typos are common with this kind of work!"
+msgstr "액션이 제대로 실행되지 않을 경우, 모든 명령어를 제대로 입력했는지 확인해보십시오. 이런 작업 시 오타가 흔하게 날 수 있습니다!"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:246
+msgid "|hard| |FA| Open a Webpage Directly in QGIS"
+msgstr "|hard| |FA| QGIS 안에서 직접 웹페이지 열기"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:248
+msgid ""
+"Above, you've seen how to open a webpage in an external browser. There are "
+"some shortcomings with this approach in that it adds an unknowable "
+"dependency – will the end-user have the software required to execute the "
+"action on their system? As you've seen, they don't necessarily even have the"
+" same kind of base command for the same kind of action, if you don't know "
+"which OS they'll be using. With some OS versions, the above commands to open"
+" the browser might not work at all. This could be an insurmountable problem."
+msgstr "앞 단계에서 외부 브라우저에서 웹페이지를 여는 방법을 배웠습니다. 그런데 이 방식은 예측할 수 없는 의존성이라는 문제를 제기합니다. 최종 사용자의 시스템에 이 액션을 실행하는 데 필요한 소프트웨어가 반드시 있을까요? 여러분이 배운 대로, 최종 사용자가 사용하는 OS가 무엇인지 모른다면 동일한 액션에 대해 어떤 종류의 기초 명령어를 써야 하는지 확실하지 않을 수도 있습니다. 또 OS의 버전에 따라 앞에 나온 브라우저를 여는 명령어가 먹히지 않을 수도 있는데, 이 문제를 해결하지 못 할 수도 있습니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:256
+msgid ""
+"However, QGIS sits on top of the incredibly powerful and versatile Qt4 "
+"library. Also, QGIS actions can be arbitrary, tokenized (i.e. using variable"
+" information based on the contents of a field attribute) Python commands!"
+msgstr "그러나 QGIS는 매우 강력하고 다용도인 Qt4 라이브러리를 사용하고 있습니다. 또 QGIS의 액션은 임의적이고 표식화된 (예를 들어 속성 항목의 내용에 기반한 다양한 정보를 이용하는) 파이썬 명령어일 수도 있습니다!"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:260
+msgid ""
+"Now you'll see how to use a python action to show a web page. It's the same "
+"general idea as opening a site in an external browser, but it requires no "
+"browser on the user’s system since it uses the Qt4 QWebView class (which is "
+"a webkit based html widget) to display the content in a pop up window."
+msgstr "이제 웹페이지를 보여주는 파이썬 액션을 이용하는 방법을 배워보겠습니다. 외부 브라우저에서 웹사이트를 여는 것과 동일한 보편적인 아이디어이지만, 팝업 창에 웹사이트를 표출하는 (html 위젯에 기반한 웹킷인) Qt4 QWebView 클래스를 이용하기 때문에 사용자 시스템의 브라우저를 필요로 하지 않습니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:265
+msgid ""
+"Instead of Google, let's use Wikipedia this time. So the URL you request "
+"will look like this:"
+msgstr "이번에는 구글 대신 위키피디아를 사용해봅시다. 여러분이 요청할 URL은 다음과 같을 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:268
+msgid ":kbd:`http://wikipedia.org/wiki/SEARCH_PHRASE`"
+msgstr ":kbd:`http://wikipedia.org/wiki/SEARCH_PHRASE`"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:270
+msgid "To create the layer action:"
+msgstr "레이어 액션을 생성하려면,"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:272
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog and head over to the "
+":guilabel:`Actions` tab."
+msgstr ":guilabel:`Layer Properties` 대화 창을 열고 :guilabel:`Actions` 탭을 선택합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:274
+msgid "Set up a new action using the following properties for the action:"
+msgstr "새 액션을 위한 다음 속성들을 이용해서 해당 액션을 설정하십시오."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:276
+msgid ":guilabel:`Type`: :kbd:`Python`"
+msgstr ":guilabel:`Type`: :kbd:`Python`"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:277
+msgid ":guilabel:`Name`: :kbd:`Wikipedia`"
+msgstr ":guilabel:`Name`: :kbd:`Wikipedia`"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:278
+msgid ""
+":guilabel:`Action` (all on one line): :kbd:`from PyQt4.QtCore import QUrl; "
+"from PyQt4.QtWebKit import QWebView;  myWV = QWebView(None); "
+"myWV.load(QUrl('http://wikipedia.org/wiki/[% \"name\" %]')); myWV.show()`"
+msgstr ":guilabel:`Action` (모두 한 줄로 입력): :kbd:`from PyQt4.QtCore import QUrl; from PyQt4.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('http://wikipedia.org/wiki/[% \"name\" %]')); myWV.show()`"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:284
+msgid "There are a couple of things going on here:"
+msgstr "이 명령어에 대해 설명하겠습니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:286
+msgid ""
+"All the python code is in a single line with semi-colons separating commands"
+" (instead of newlines, the usual way of separating Python commands)."
+msgstr "모든 파이썬 코드는 한 줄로, 쌍반점으로 구분되는 명령어들로 이루어집니다. (일반적인 파이썬 명령어들처럼 행갈이를 하지 않습니다.)"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:288
+msgid ""
+":kbd:`[% \"name\" %]` will be replaced by the actual attribute value when "
+"the action is invoked (as before)."
+msgstr ":kbd:`[% \"name\" %]` 은 액션을 실행할 때 (이전과 마찬가지로) 실제 속성 값으로 대체될 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:290
+msgid ""
+"The code simply creates a new :kbd:`QWebView` instance, sets its URL, and "
+"then calls :kbd:`show()` on it to make it visible as a window on the user’s "
+"desktop."
+msgstr "이 코드는 단순하게 새 :kbd:`QWebView` 인스턴스를 생성하고, URL을 설정하고, :kbd:`show()` 를 호출해서 사용자 데스크탑에 창으로 표출되도록 합니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:294
+msgid ""
+"Note that this is a somewhat contrived example. Python works with "
+"semantically significant indentation, so separating things with semicolons "
+"isn't the best way to write it. So, in the real world, you'd be more likely "
+"to import your logic from a Python module and then call a function with a "
+"field attribute as parameter."
+msgstr "이 예제가 조금 부자연스럽다는 점을 알아야 합니다. 파이썬은 의미론적으로 특별한 들여쓰기를 사용합니다. 따라서 쌍반점으로 명령어를 구분하는 것은 파이썬을 사용하는 최적의 방식이 아닙니다. 그러므로 실제 상황에서는 파이썬 모듈에서 사용자 로직을 불러들여, 속성 항목을 파라미터로 쓰는 함수를 호출하는 일이 더 많을 것입니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:300
+msgid ""
+"You could equally use the approach to display an image without requiring "
+"that the user has a particular image viewer on their system."
+msgstr "마찬가지로 사용자 시스템의 특정 이미지 뷰어 없이도 이미지를 표출하는 방식을 쓸 수 있습니다."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:303
+msgid ""
+"Try using the methods described above to load a Wikipedia page using the "
+"Wikipedia action you just created."
+msgstr "앞에 설명한 방법을 사용해서, 방금 생성한 위키피디아 액션을 통해 위키피디아 페이지를 불러와보십시오."
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:307
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:309
+msgid ""
+"Actions allow you to give your map extra functionality, useful to the end-"
+"user who views the same map in QGIS. Due to the fact that you can use shell "
+"commands for any operating system, as well as Python, the sky's the limit in"
+" terms of the functions you could incorporate!"
+msgstr "액션을 사용하면 사용자 맵에 추가적인 기능성을 부여해서, QGIS에서 동일한 맵을 보는 최종 사용자에게 도움을 줄 수 있습니다. 어떤 OS에서도 셸 명령어는 물론 파이썬을 사용할 수 있으므로, 여러분이 생성할 수 있는 기능에 제한이란 없습니다!"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:315
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/create_vector_data/actions.rst:317
+msgid ""
+"Now that you've done all kinds of vector data creation, you'll learn how to "
+"analyze this data to solve problems. That's the topic of the next module."
+msgstr "벡터 데이터 생성에 대해 모두 배웠으니, 이제 문제를 해결하기 위해 이 데이터를 분석하는 방법을 배울 차례입니다. 이것이 다음 모듈의 주제입니다."

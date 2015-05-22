@@ -1,0 +1,132 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-20 08:47+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:6
+msgid "First analysis example"
+msgstr "Premier exemple d'analyse"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:9
+msgid ""
+"In this lesson we will perform some real analysis using just the toolbox, so"
+" you can get more familiar with the processing framework elements."
+msgstr "Dans cette leçon, nous effectuerons une véritable analyse en utilisant uniquement la boîte à outils, afin que vous puissiez vous familiariser avec les éléments du module de traitements."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:11
+msgid ""
+"Now that everything is configured and we can use external algorithms, we "
+"have a very powerful tool to perform spatial analysis. It is time to work "
+"out a larger exercise with some real--world data."
+msgstr "Maintenant que tout est configuré et que nous pouvons utiliser des algorithmes externes, nous avons un outil très puissant pour effectuer une analyse spatiale. Il est temps de réaliser un exercice plus important avec des données du monde réel."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:13
+msgid ""
+"We will be using the well-known dataset that John Snow used in his "
+"groundbreaking work, and we will get some interesting results. The analysis "
+"of this dataset is pretty obvious and there is no need for sofisticated GIS "
+"techniques to end up with good results and conclusions, but it is a good way"
+" of showing how these spatial problems can be analyzed and solved by using "
+"different processing tools."
+msgstr "Nous utiliserons le bien connu jeu de données que John Snow a utilisé dans son travail révolutionnaire, et nous obtiendrons des résultats intéressants. L'analyse de ce jeu de données est assez évidente et il n'y a pas besoin de techniques SIG sophistiquées pour se retrouver avec de bons résultats et des conclusions, mais c'est une bonne façon de montrer comment ces problèmes spatiaux peuvent être analysés et résolus en utilisant différents outils de traitement."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:15
+msgid ""
+"The dataset contains shapefiles with cholera deaths and pump locations, and "
+"an OSM rendered map in TIFF format. Open the corresponding QGIS project for "
+"this lesson."
+msgstr "Le jeu de données contient des fichiers Shape qui référencent les décès dus au choléra, les emplacements des pompes à eau ainsi qu'une carte raster issue d'OSM au format TIFF. Ouvrez le projet QGIS correspondant à cette leçon."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:19
+msgid ""
+"The first thing to do is to calculting the Voronoi diagram (a.k.a. Thyessen "
+"polygons) of the pumps layer, to get the influence zone of each pump. The "
+"*Voronoi Diagram* algorithm can be used for that."
+msgstr "La première chose à faire est de calculer le diagramme de Voronoï (aussi connu sous le nom des polygones de Thyessen) de la couche des pompes, pour obtenir la zone d'influence pour chaque pompe. L'algorithme du *Diagramme de Voronoï* peut être utilisé pour cela."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:24
+msgid "Pretty easy, but it will already give us interesting information."
+msgstr "C'est assez facile, mais cela nous donne déjà des informations intéressantes."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:28
+msgid "Clearly, most cases are within one of the polygons"
+msgstr "Il est clair que la plupart des cas soient dans un des polygones."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:30
+msgid ""
+"To get a more quantitative result, we can count the number of deaths in each"
+" polygon. Since each point represents a building where deaths occured, and "
+"the number of deaths is stored in an attribute, we cannot just count the "
+"points. We need a weighted count, so we will use the *Count points in "
+"polygon (weighted)* tool."
+msgstr "Pour obtenir un résultat plus quantitatif, nous pouvons compter le nombre de décès dans chaque polygones. Comme chaque point représente un bâtiment où il y a eu un ou des décès, et que le nombre de décès est stocké dans un attribut, nous ne pouvons pas simplement compter les points. Nous avons besoin d'un nombre pondéré, donc nous utiliserons l'outil *Compter les points dans les polygones (pondérés)*."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:34
+msgid ""
+"The new field will be called *DEATHS*, and we use the *COUNT* field as "
+"weighting field. The resulting table clearly reflects that the number of "
+"deaths in the polygon corresponding to the first pump is much larger than "
+"the other ones."
+msgstr "Le nouveau champ sera appelé *DEATHS*, et nous utiliserons le champ *COUNT* comme champ de pondération. La table de résultats reflète clairement que le nombre de décès dans le polygone correspondant à la première pompe est beaucoup plus grand que celui des autres."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:38
+msgid ""
+"Another good way of visualizing the dependence of each point in the "
+"``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
+"line to the closest one. This can be done with the *Distance to closest hub*"
+" tool, and using the configuration shown next."
+msgstr "Une autre bonne façon de visualiser la dépendance de chaque point dans la couche ``Cholera_deaths`` avec un point dans la couche ``Pumps`` est de dessiner une ligne vers le plus proche. Cela peut être fait avec l'outil *Distance au milieu le plus proche*, et en utilisant la configuration montrée après."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:42
+msgid "The result looks like this:"
+msgstr "Le résultat ressemble à cela :"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:46
+msgid ""
+"Although the number of lines is larger in the case of the central pump, do "
+"not forget that this does not represent the number of deaths, but the number"
+" of locations where cholera cases were found. It is a representative "
+"parameter, but it is not considering that some locations might have more "
+"cases than other."
+msgstr "Bien que le nombre de lignes soit plus grand dans le cas de la pompe centrale, n'oubliez pas que cela ne représente par le nombre de décès, mais le nombre de lieux où des cas de choléra ont été détecté. C'est un paramètre représentatif, mais il ne considère pas que certains emplacements puissent représenter plus de cas qu'un autre."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:48
+msgid ""
+"A density layer will also give us a very clear view of what is happening. We"
+" can create it with the *Kernel density* algorithm. Using the "
+"*Cholera_deaths* layer, its *COUNT* field as weight field, with a radius of "
+"100, the extent and cellsize of the streets raster layer, we get something "
+"like this."
+msgstr "Une couche de densité nous donnera aussi une vision très claire de ce qu'il se passe. Nous pouvons la créer avec l'algorithme *Densité par noyau*. En utilisant la couche *Cholera_deaths* et son champ *COUNT* comme champ de pondération, avec un rayon de 100 ainsi que l'emprise et la taille des cellule de la couche raster des rues, nous obtenons quelque chose comme ça."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:52
+msgid ""
+"Remember that, to get the output extent, you do not have to type it. Click "
+"on the button on the right-hand side and select *Use layer/canvas extent*."
+msgstr "Souvenez-vous que pour obtenir l'emprise de sortie, vous ne devez pas la taper. Cliquez sur le bouton sur le côté droit et sélectionnez *Utiliser l'emprise de la couche/du canevas*."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:56
+msgid ""
+"Select the streets raster layer and its extent will be automatically added "
+"to the text field. You must do the same with the cellsize, selecting the "
+"cellsize of that layer as well."
+msgstr "Sélectionnez la couche raster des routes et son étendue sera automatiquement ajoutée au champ de texte. Vous devez faire de même avec la taille de cellule, en sélectionnant la taille de cellule de cette couche."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:58
+msgid ""
+"Combining with the pumps layer, we see that there is one pump clearly in the"
+" hotspot where the maximum density of death cases is found."
+msgstr "En combinant la couche des pompes, nous voyons qu'il y a une pompe qui se trouve clairement dans le point chaud où la densité maximale de cas de décès a été trouvée."

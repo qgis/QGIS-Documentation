@@ -1,0 +1,125 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-15 10:12+0000\n"
+"Last-Translator: MarieAude <marie-aude.aeby@camptocamp.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:6
+msgid "Numeric calculations in the modeler"
+msgstr "Calculs numériques dans le modeleur"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:8
+msgid ""
+"Beware, this chapter is not well tested, please report any issue; images are"
+" missing"
+msgstr "Prenez garde, ce chapitre n'est pas bien testé, s'il vous plaît rapporter tous problèmes ; les images sont manquantes"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:10
+msgid "In this lesson we will see how to use numeric outputs in the modeler"
+msgstr "Dans cette leçon nous verrons comment utiliser des sorties numériques dans le modeleur"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:13
+msgid ""
+"For this lesson, we are going to modify the hydrological model that we "
+"created in the last chapter (open it in the modeler before starting), so we "
+"can automate the calculation of a valid threshold value and we do not have "
+"to ask the user to enter it. Since that value refers to the variable in the "
+"threshold raster layer, we will extract it from that layer, based on some "
+"simple statistical analysis."
+msgstr "Pour cette leçon, nous allons modifier le modèle hydrologique que nous avons créé dans le dernier chapitre (ouvrez-le dans le modeleur avant de commencer), de sorte que nous puissions automatiser le calcul d'une valeur de seuil valide et que nous n'ayons pas besoin de demander à l'utilisateur de l'entrer. Comme cette valeur fait référence à la variable dans la couche raster de seuil, nous l'extrairons de cette couche, basée sur une analyse statistique simple."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:15
+msgid ""
+"Starting with the aforemetioned model, let's do the following modifications:"
+msgstr "En commençant avec le modèle précédemment mentionné, faisons les modifications suivantes :"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:17
+msgid ""
+"First, calculate statistics of the flow accumulation layer using the *Raster"
+" layer statistics* algorithm."
+msgstr "Premièrement, calculons les statistiques de la couche d'accumulation de flux en utilisant l'algorithme *Statistiques de la couche raster*."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:21
+msgid ""
+"This will generate a set of statistical values that will now be available "
+"for all numeric fields in other algorithms."
+msgstr "Cela va générer un ensemble de valeurs statistiques qui seront maintenant disponibles pour tous les champs numériques dans les autres algorithmes."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:23
+msgid ""
+"If you double click on the  *Channel network* algorithm to modify it, as we "
+"did in the last lesson, you will see now that you have other options apart "
+"from the numeric input that you added."
+msgstr "Si vous double-cliquez sur l'algorithme *Réseau de canaux* pour le modifier, comme nous l'avons fait dans la dernière leçon, vous verrez que vous avez maintenant d'autres options en dehors de l'entrée numérique que vous avez ajoutée."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:27
+msgid ""
+"However, none of this values is suitable for being used as a valid "
+"threshold, since they will result in channel networks that will not be very "
+"realistic. We can, instead, derive some new parameter based on them, to get "
+"a better result. For instance, we can use the mean plus 2 times the standard"
+" deviation."
+msgstr "Cependant, aucune de ces valeurs n'est apte à être utilisée comme un seuil valable, étant donné qu'elles auront comme résultat des réseaux de canaux qui ne seront pas très réalistes. Nous pouvons, à la place, tirer quelques nouveaux paramètres à partir d'elles, pour obtenir un meilleur résultat. Par exemple, nous pouvons utiliser la moyenne plus 2 fois l'écart-type."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:29
+msgid ""
+"To add that arithmetical operation, we can use the calculator that you will "
+"find in the *Geoalgorithms/modeler/modeler-tools* group. This group contains"
+" algorithms that are not very useful outside of the modeler, but that "
+"provide some useful functionality when creating a model."
+msgstr "Pour ajouter cette opération arithmétique, nous pouvons utiliser la calculatrice que vous trouverez dans le groupe *Géoalgorithmes/modeleur/outils du modeleur*. Ce groupe contient des algorithmes qui ne sont pas très utiles en dehors de ce modeleur, mais qui fournissent des fonctionnalités utiles lors de la création d'un modèle."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:31
+msgid "The parameters dialog of the calculator algorithm looks like this:"
+msgstr "La boîte de dialogue des paramètres de l'algorithme de la calculatrice ressemble à ça :"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:35
+msgid ""
+"As you can see, the dialog is different to the other ones we have seen, but "
+"you have in there the same variables that were available in the *Threshold* "
+"field in the *Channel network* algorithm. Enter the above formula and click "
+"on *OK* to add the algorithm."
+msgstr "Comme vous pouvez le voir, la boîte de dialogue est différente des autres que nous avons vues, mais vous avez ici les mêmes variables qui étaient disponibles dans le champ *Seuil* dans l'algorithme *Réseau de canaux*. Entrez la formule ci-dessous et cliquez sur *OK* pour ajouter l'algorithme."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:39
+msgid ""
+"If you expand the outputs entry, as shown above, you will see that the model"
+" is connected to two of the values, namely the mean and the standard "
+"deviation, which are the ones that we have used in the formula."
+msgstr "Si vous étendez l'entrée des sorties, comme montré ci-dessus, vous verrez que le modèle est relié à deux des valeurs, à savoir la moyenne et l'écart-type, qui sont celles que nous avons utilisées dans la formule."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:41
+msgid ""
+"Adding this new algorithm will add a new numeric value. If you go again to "
+"the *Channel network* algorithm, you can now select that value in the "
+"*Threshold* parameter."
+msgstr "L'ajout de ce nouvel algorithme va ajouter une nouvelle valeur numérique. Si vous ouvrez de nouveau l'algorithme *Réseau de canaux*, vous pouvez maintenant sélectionner cette valeur dans le paramètre *Seuil*."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:45
+msgid "Click on *OK* and your model should look like this."
+msgstr "Cliquez sur *OK* et votre modèle devrait ressembler à cela."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:49
+msgid ""
+"We are not using the numeric input that we added to the model, so it can be "
+"removed. Right--click on it and select *Remove*"
+msgstr "Nous n'utilisons pas l'entrée numérique que nous avons ajoutée au modèle, donc elle peut être supprimée. Faites un clic--droit dessus et sélectionnez *Supprimer*."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:51
+msgid "todo: Add image"
+msgstr "todo: Ajouter des images"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:53
+msgid "Our new model is now finished."
+msgstr "Notre nouveau modèle est maintenant terminé."

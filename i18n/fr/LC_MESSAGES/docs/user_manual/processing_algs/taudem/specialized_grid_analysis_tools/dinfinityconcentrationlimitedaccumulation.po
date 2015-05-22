@@ -1,0 +1,208 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-04 09:29+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:6
+msgid "D-Infinity Concentration Limited Accumulation"
+msgstr "Accumulation limitée de concentration D-Infinity"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:11
+msgid ""
+"This function applies to the situation where an unlimited supply of a "
+"substance is loaded into flow at a concentration or solubility threshold "
+"Csol over a region indicated by an indicator grid (dg). It a grid of the "
+"concentration of a substance at each location in the domain, where the "
+"supply of substance from a supply area is loaded into the flow at a "
+"concentration or solubility threshold. The flow is first calculated as a "
+"D-infinity weighted contributing area of an input Effective Runoff Weight "
+"Grid (notionally excess precipitation). The concentation of substance over "
+"the supply area (indicator grid) is at the concentration threshold. As the "
+"substance moves downslope with the D-infinity flow field, it is subject to "
+"first order decay in moving from cell to cell as well as dilution due to "
+"changes in flow. The decay multiplier grid gives the fractional (first "
+"order) reduction in quantity in moving from grid cell ``x`` to the next "
+"downslope cell. If the outlets shapefile is used, the tool only evaluates "
+"the part of the domain that contributes flow to the locations given by the "
+"shapefile. This is useful for a tracking a contaminant or compound from an "
+"area with unlimited supply of that compound that is loaded into a flow at a "
+"concentration or solubility threshold over a zone and flow from the zone may"
+" be subject to decay or attenuation."
+msgstr "Cette fonction s'applique à la situation où une quantité illimitée de substance est chargée dans un flux à une concentration ou une solubilité donnée suivant le seuil Csol sur une région identifiée par un indicateur de grille (dg). Il s'agit d'une grille de concentration de substance pour chaque emplacement du domaine où la quantité de substance d'une surface d'approvisionnement est chargée dans le flux à une concentration ou une solubilité donnée. Le flux est d'abord calculé comme une surface contributive pondérée D-Infinity d'une grille d'entrée d'érosion pondérée effective (théoriquement excès de précipitations). La concentration de la substance sur la surface d'approvisionnement (grille d'indicateur) est définie au seuil de concentration. A mesure que la substance se déplace sur la pente descendante avec le champ de flux D-Infinity, elle est sujette à une décroissance de premier ordre lors de son déplacement d'une cellule à une autre ainsi qu'à une dilution liée aux changements du flux. La grille de multiplicateur de décroissance donne la réduction fractionnelle (premier ordre) de la quantité lors du déplacement d'une cellule ``x`` à la prochaine cellule de pente descendante. Si le fichier Shape des exutoires est utilisé, l'outil évalue seulement la parti du domaine qui contribue au flux au endroits indiqués dans le fichier. C'est utile pour suivre un contaminant ou un composé d'une surface où l'approvisionnement du composé est illimité dans un flux à une concentration ou une solubilité donnée sur une zone et où le flux de la zone peut être sujet à une décroissance ou une atténuation."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:29
+msgid ""
+"The indicator grid (``dg``) is used to delineate the area of the substance "
+"supply using the (0, 1) indicator function ``i(x)``. ``A[]`` denotes the "
+"weighted accumulation operator evaluated using the D-Infinity Contributing "
+"Area function. The Effective Runoff Weight Grid gives the supply to the flow"
+" (e.g. the excess rainfall if this is overland flow) denoted as ``w(x)``. "
+"The specific discharge is then given by:"
+msgstr "La grille d'indicateur (``dg``) est utilisée pour délimiter la surface d'approvisionnement de la substance en utilisant la fonction d' indicateur (1, 0) nommée ``i(x)``. ``A[]`` indique l'opérateur d'accumulation pondérée évalué en utilisant la fonction de surface contributive D-Infinity. La grille d'érosion effective pondérée donne l'approvisionnement du flux (ex: l'excès de pluie si on étudie les inondations), dénommé ``w(x)``. La décharge spécifique est donnée par:"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:40
+msgid ""
+"This weighted accumulation ``Q(x)`` is output as the Overland Flow Specific "
+"Discharge Grid. Over the substance supply area concentration is at the "
+"threshold (the threshold is a saturation or solubility limit). If ``i(x) = "
+"1``, then"
+msgstr "Cette accumulation pondérée ``Q(x)`` est la sortie qui forme la grille de décharge spécifique de flux terrestre. Sur la zone d'approvisionnement de la substance, la concentration est située au niveau du seuil (le seuil correspond à la saturation ou la limite de solubilité). Si ``i(x) = 1``, alors"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:48
+msgid ""
+"where ``L(x)`` denotes the load being carried by the flow. At remaining "
+"locations, the load is determined by load accumulation and the concentration"
+" by dilution:"
+msgstr "où ``L(x)`` indique la charge transportée par le flux. Aux endroits qui restent, la charge est déterminée par l'accumulation de charge et la concentration par la dilution:"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:54
+msgid ""
+"Here ``d(x) = d(i, j)`` is a decay multiplier giving the fractional (first "
+"order) reduction in mass in moving from grid cell ``x`` to the next "
+"downslope cell. If travel (or residence) times ``t(x)`` associated with flow"
+" between cells are available ``d(x)`` may be evaluated as ``exp(-k t(x))`` "
+"where ``k`` is a first order decay parameter. The Concentration grid output "
+"is ``C(x)``. If the outlets shapefile is used, the tool only evaluates the "
+"part of the domain that contributes flow to the locations given by the "
+"shapefile."
+msgstr "Ici, ``d(x) = d(i, j)`` est un multiplicateur de décroissance donnant la réduction fractionnelle (premier ordre) de la masse en mouvement de la cellule ``x`` à la prochaine cellule de pente descendante. Si les temps de déplacement (ou le positionnement) ``t(x)`` associé à chaque flux entre les cellules sont disponibles, ``d(x)`` peut être évalué sous la forme ``exp(-k t(x))`` où ``k`` est un paramètre de décroissance du premier ordre. La grille de concentration en sortie est ``C(x)``. Si le fichier Shape des exutoires est utilisé, la fonction sera évaluée seulement sur la partie du domaine qui contribue au flux des emplacement donnés par le fichier."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:65
+msgid ""
+"Useful for a tracking a contaminant released or partitioned to flow at a "
+"fixed threshold concentration."
+msgstr "Utile pour un suivi d'un contaminant libéré ou partitionné en flux à un seuil fixe de concentration."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:69
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:74
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D-Infinity`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:72
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This grid can be created "
+"by the function **\"D-Infinity Flow Directions\"**."
+msgstr "Une grille donnant le flux de direction par la méthode D-Infinity. La direction de flux est mesurée en radians, dans le sens des aiguilles d'une montre depuis l'Est. Elle peut être obtenue par l'outil **\"Directions de flux D-Infinity\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:78
+msgid "``Disturbance Indicator Grid`` [raster]"
+msgstr "``Grille d'indicateur de perturbation`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:77
+msgid ""
+"A grid that indicates the source zone of the area of substance supply and "
+"must be 1 inside the zone and 0 or NODATA over the rest of the domain."
+msgstr "Une grille indiquant la zone source de la surface d'approvisionnement de la substance.  La valeur 1 identifie ce qui est dans la zone, une valeur vide ou à 0 indique ce qui fait partie du reste du domaine."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:85
+msgid "``Decay Multiplier Grid`` [raster]"
+msgstr "``Grille de multiplicateur de désagrégation`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:81
+msgid ""
+"A grid giving the factor by which flow leaving each grid cell is multiplied "
+"before accumulation on downslope grid cells. This may be used to simulate "
+"the movement of an attenuating or decaying substance. If travel (or "
+"residence) times ``t(x)`` associated with flow between cells are available "
+"``d(x)`` may be evaluated as ``exp(-k t(x))`` where ``k`` is a first order "
+"decay parameter."
+msgstr "Une grille donnant le facteur par lequel le flux sortant de chaque cellule est multiplié avant l'accumulation sur les cellules de pente descendante. Elle peut être utilisée pour simuler le mouvement d'une substance en atténuation ou en décroissance. Si les temps de déplacement (ou le positionnement) ``t(x)`` associé à chaque flux entre les cellules sont disponibles, ``d(x)`` peut être évalué sous la forme ``exp(-k t(x))`` où ``k`` est un paramètre de décroissance du premier ordre."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:90
+msgid "``Effective Runoff Weight Grid`` [raster]"
+msgstr "``Grille de pondération de ruissellement effectif`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:88
+msgid ""
+"A grid giving the input quantity (notionally effective runoff or excess "
+"precipitation) to be used in the D-infinity weighted contributing area "
+"evaluation of Overland Flow Specific Discharge."
+msgstr "Une grille en entrée donnant la quantité (l'érosion effective ou l'excès de précipitation) à utiliser dans l'évaluation de la surface contributive pondérée D-Infinity d'une décharge spécifique de flux terrestre."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:96
+msgid "``Outlets shapefile`` [vector: point]"
+msgstr "``Fichier Shape des exutoires`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:93
+msgid "Optional."
+msgstr "En option."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:95
+msgid ""
+"This optional input is a point shapefile defining outlets of interest. If "
+"this file is used, the tool will only evaluate the area upslope of these "
+"outlets."
+msgstr "Ce fichier optionnel est un fichier Shape de points définissant les exutoires d'intérêt. Si ce fichier est utilisé, l'outil évaluera uniquement les surfaces de pente ascendantes de ces exutoires."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:102
+msgid "``Concentration Threshold`` [number]"
+msgstr "``Seuil de concentration`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:99
+msgid ""
+"The concentration or solubility threshold. Over the substance supply area, "
+"concentration is at this threshold."
+msgstr "Le seuil de concentration ou de solubilité. Sur la zone d'approvisionnement de la substance, la concentration est à ce seuil."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:102
+msgid "Default: *1.0*"
+msgstr "Par défaut : *1.0*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:110
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Vérifier la contamination des arcs`` [booléen]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:105
+msgid ""
+"This option determines whether the tool should check for edge contamination."
+" Edge contamination is defined as the possibility that a value may be "
+"underestimated due to grid cells outside of the domain not being considered "
+"when determining contributing area."
+msgstr "Cette option détermine s'il faut vérifier la contamination des arcs. La contamination des arcs se définit comme la possibilité qu'une valeur soit sous-estimée à cause des cellules situées en dehors du domaine d'étude lors de la détermination des résultats."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:110
+msgid "Default: *True*"
+msgstr "Par défaut : *Vrai*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:113
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:117
+msgid "``Concentration Grid`` [raster]"
+msgstr "``Grille de concentration`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:116
+msgid ""
+"A grid giving the resulting concentration of the compound of interest in the"
+" flow."
+msgstr "Une grille donnant le résutlat de concentration du composé d'intérêt dans le flux."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:120
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityconcentrationlimitedaccumulation.rst:127
+msgid "See also"
+msgstr "Voir également"

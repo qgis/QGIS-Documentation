@@ -1,0 +1,123 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-01-03 13:03+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:6
+msgid "Interpolation and contouring"
+msgstr "Interpolatie en contouren"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:8
+msgid ""
+"Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+msgstr "Module bijgedragen door Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:10
+msgid ""
+"This chapter shows how to use different backends to calculate different "
+"interpolations."
+msgstr "Dit hoofdstuk geeft weer hoe verschillende programma's te gebruiken om verschillende interpolaties te berekenen."
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:13
+msgid "Interpolation"
+msgstr "Interpolatie"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:15
+msgid ""
+"The project shows a gradient in rainfall, from south to north. Let's use "
+"different methods for interpolation, all based on vector ``points.shp``, "
+"parameter ``RAIN``:"
+msgstr "Het project toont een kleurverloop voor regenval, van zuid naar noord. Laten we verschillende methoden gebruiken voor interpoleren, alle gebaseerd op de vector ``points.shp``, parameter ``RAIN``:"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:18
+msgid "set cell size to :kbd:`500`"
+msgstr "stel de celgrootte in op :kbd:`500`"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:20
+msgid ":menuselection:`GRASS --> v.surf.rst`"
+msgstr ":menuselection:`GRASS --> v.surf.rst`"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:21
+msgid ":menuselection:`SAGA --> Multilevel B-Spline Interpolation`"
+msgstr ":menuselection:`SAGA --> Multilevel B-Spline Interpolation`"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:22
+msgid ""
+":menuselection:`SAGA --> Inverse Distance Weighted` [Power: 4; Search range:"
+" Global]"
+msgstr ":menuselection:`SAGA --> Inverse Distance Weighted` [Power: 4; Search range: Global]"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:23
+msgid ":menuselection:`GDAL --> Grid (Inverse Distance to a power)` [Power:4]"
+msgstr ":menuselection:`GDAL --> Grid (Inverse Distance to a power)` [Power:4]"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:24
+msgid ":menuselection:`GDAL --> Grid (Moving average)` [Radius1&2: 50000]"
+msgstr ":menuselection:`GDAL --> Grid (Moving average)` [Radius1&2: 50000]"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:26
+msgid ""
+"Then measure variation among methods and correlate it with distance to "
+"points:"
+msgstr "Meet dan de variatie tussen de methoden en correleer die met de afstanden tot de punten:"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:28
+msgid ""
+":menuselection:`GRASS --> r.series` [Unselect Propagate NULLs, Aggregate "
+"operation: stddev]"
+msgstr ":menuselection:`GRASS --> r.series` [Unselect Propagate NULLs, Aggregate operation: stddev]"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:29
+msgid ":menuselection:`GRASS --> v.to.rast.value` on *points*"
+msgstr ":menuselection:`GRASS --> v.to.rast.value` op *points*"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:30
+msgid ":menuselection:`GDAL --> Proximity`"
+msgstr ":menuselection:`GDAL --> Proximity`"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:31
+msgid ""
+":menuselection:`GRASS --> r.covar` to show the correlation matrix (**NB:** "
+"results are in the log only); check the significance of the correlation e.g."
+" with http://vassarstats.net/rsig.html."
+msgstr ":menuselection:`GRASS --> r.covar` om de correlatie-matrix weer te geven (**NB:** resultaten zijn alleen in het log); controleer de significantie van de correlatie bijvoorbeeld met http://vassarstats.net/rsig.html."
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:33
+msgid "Thus, areas far from points will have less accurate interpolation."
+msgstr "Dus, gebieden ver van punten zullen minder nauwkeurige interpolatie hebben."
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:36
+msgid "Contour"
+msgstr "Contour"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:38
+msgid ""
+"Various methods to draw contour lines [always step= 10] on the *stddev* "
+"raster:"
+msgstr "Verscheidene methoden om contourlijnen te tekenen [altijd stap= 10] op het raster *stddev*:"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:40
+msgid ":menuselection:`GRASS --> r.contour.step`"
+msgstr ":menuselection:`GRASS --> r.contour.step`"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:41
+msgid ""
+":menuselection:`SAGA --> Contour lines from grid` [**NB:** output shp is not"
+" valid, known bug]"
+msgstr ":menuselection:`SAGA --> Contour lines from grid` [**NB:** output shp is niet geldig, onbekend probleem]"
+
+#: ../../source/docs/training_manual/processing/interp_contour.rst:42
+msgid ":menuselection:`GDAL --> Contour`"
+msgstr ":menuselection:`GDAL --> Contour`"

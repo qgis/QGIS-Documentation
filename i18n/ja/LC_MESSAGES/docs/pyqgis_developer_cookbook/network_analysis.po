@@ -1,0 +1,672 @@
+# 
+# Translators:
+# Choro <u.ko.kubot@gmail.com>, 2013-2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2014-12-02 14:10+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:9
+msgid "Network analysis library"
+msgstr "ネットワーク分析ライブラリ"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:11
+msgid ""
+"Starting from revision `ee19294562 <https://github.com/qgis/Quantum-"
+"GIS/commit/ee19294562b00c6ce957945f14c1727210cffdf7>`_ (QGIS >= 1.8) the new"
+" network analysis library was added to the QGIS core analysis library. The "
+"library:"
+msgstr "リビジョン `ee19294562 <https://github.com/qgis/Quantum-GIS/commit/ee19294562b00c6ce957945f14c1727210cffdf7>`_ (QGIS >= 1.8) から、QGISのコアプラグインにネットワーク分析ライブラリが追加されました。このライブラリは："
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:15
+msgid ""
+"creates mathematical graph from geographical data (polyline vector layers)"
+msgstr "地理データから数学的なグラフ（ポリラインベクタレイヤー）を作成します。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:24
+msgid "General information"
+msgstr "一般情報"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:28
+msgid "create graph from geodata (usually polyline vector layer)"
+msgstr "地理データから地理学的なグラフ（たいていはポリラインベクタレイヤー）を作成します。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:29
+msgid "run graph analysis"
+msgstr "グラフ分析の実行"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:30
+msgid "use analysis results (for example, visualize them)"
+msgstr "分析結果の利用（例えば、これらの可視化）"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:139
+msgid "crs --- coordinate reference system to use. Mandatory argument."
+msgstr "crs ---使用する空間参照系。必須の引数です。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:140
+msgid ""
+"otfEnabled --- use \"on the fly\" reprojection or no. By default "
+"const:`True` (use OTF)."
+msgstr "otfEnabled --- \"オンザフライ\"再投影を使うかどうか。デフォルトでは定数:`True` (OTF使用)."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:142
+msgid "topologyTolerance --- topological tolerance. Default value is 0."
+msgstr "トポロジ許容値---トポロジ的な許容値です。デフォルト値は0です。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:143
+msgid "ellipsoidID --- ellipsoid to use. By default \"WGS84\"."
+msgstr "楕円体ID --- 使用する楕円体です。デフォルトは \"WGS84\"です。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:182
+msgid "Graph analysis"
+msgstr "グラフ分析"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:209
+msgid "source --- input graph"
+msgstr "source　--- 入力グラフ "
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:210
+msgid ""
+"startVertexIdx --- index of the point on the tree (the root of the tree)"
+msgstr "startVertexIdx --- ツリー上のポイントのインデックス（ツリーのルート）"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:211
+msgid "criterionNum --- number of edge property to use (started from 0)."
+msgstr "criterionNum --- 使用するエッジプロパティの数（0から始まる）。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:217
+msgid ""
+"The :func:`dijkstra` method has the same arguments, but returns two arrays. "
+"In the first array element i contains index of the incoming edge or -1 if "
+"there are no incoming edges. In the second array element i contains distance"
+" from the root of the tree to vertex i or DOUBLE_MAX if vertex i is "
+"unreachable from the root."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:267
+msgid "Same thing but using :func:`dijkstra` method::"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:16
+msgid ""
+"implements basic methods from graph theory (currently only Dijkstra's "
+"algorithm)"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:19
+msgid ""
+"The network analysis library was created by exporting basic functions from "
+"the RoadGraph core plugin and now you can use it's methods in plugins or "
+"directly from the Python console."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:26
+msgid "Briefly, a typical use case can be described as:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:33
+msgid "Building a graph"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:35
+msgid ""
+"The first thing you need to do --- is to prepare input data, that is to "
+"convert a vector layer into a graph. All further actions will use this "
+"graph, not the layer."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:39
+msgid ""
+"As a source we can use any polyline vector layer. Nodes of the polylines "
+"become graph vertexes, and segments of the polylines are graph edges. If "
+"several nodes have the same coordinates then they are the same graph vertex."
+" So two lines that have a common node become connected to each other."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:44
+msgid ""
+"Additionally, during graph creation it is possible to \"fix\" (\"tie\") to "
+"the input vector layer any number of additional points. For each additional "
+"point a match will be found --- the closest graph vertex or closest graph "
+"edge. In the latter case the edge will be split and a new vertex added."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:49
+msgid ""
+"Vector layer attributes and length of an edge can be used as the properties "
+"of an edge."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:52
+msgid ""
+"Converting from a vector layer to the graph is done using the `Builder "
+"<http://en.wikipedia.org/wiki/Builder_pattern>`_ programming pattern. A "
+"graph is constructed using a so-called Director. There is only one Director "
+"for now: `QgsLineVectorLayerDirector "
+"<http://qgis.org/api/classQgsLineVectorLayerDirector.html>`_. The director "
+"sets the basic settings that will be used to construct a graph from a line "
+"vector layer, used by the builder to create the graph. Currently, as in the "
+"case with the director, only one builder exists: `QgsGraphBuilder "
+"<http://qgis.org/api/classQgsGraphBuilder.html>`_, that creates `QgsGraph "
+"<http://qgis.org/api/classQgsGraph.html>`_ objects. You may want to "
+"implement your own builders that will build a graphs compatible with such "
+"libraries as `BGL "
+"<http://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_ or "
+"`NetworkX <http://networkx.lanl.gov/>`_."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:63
+msgid ""
+"To calculate edge properties the programming pattern `strategy "
+"<http://en.wikipedia.org/wiki/Strategy_pattern>`_ is used. For now only "
+"`QgsDistanceArcProperter "
+"<http://qgis.org/api/classQgsDistanceArcProperter.html>`_ strategy is "
+"available, that takes into account the length of the route. You can "
+"implement your own strategy that will use all necessary parameters. For "
+"example, RoadGraph plugin uses a strategy that computes travel time using "
+"edge length and speed value from attributes."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:70
+msgid "It's time to dive into the process."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:72
+msgid ""
+"First of all, to use this library we should import the networkanalysis "
+"module"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:78
+msgid "Then some examples for creating a director"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:93
+msgid ""
+"To construct a director  we should pass a vector layer, that will be used as"
+" the source for the graph structure and information about allowed movement "
+"on each road segment (one-way or bidirectional movement, direct or reverse "
+"direction). The call looks like this"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:106
+msgid "And here is full list of what these parameters mean:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:108
+msgid "``vl`` --- vector layer used to build the graph"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:109
+msgid ""
+"``directionFieldId`` --- index of the attribute table field, where "
+"information about roads direction is stored. If ``-1``, then don't use this "
+"info at all. An integer."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:112
+msgid ""
+"``directDirectionValue`` --- field value for roads with direct direction "
+"(moving from first line point to last one). A string."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:114
+msgid ""
+"``reverseDirectionValue`` --- field value for roads with reverse direction "
+"(moving from last line point to first one). A string."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:116
+msgid ""
+"``bothDirectionValue`` --- field value for bidirectional roads (for such "
+"roads we can move from first point to last and from last to first). A "
+"string."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:118
+msgid ""
+"``defaultDirection`` --- default road direction. This value will be used for"
+" those roads where field ``directionFieldId`` is not set or has some value "
+"different from any of the three values specified above. An integer. ``1`` "
+"indicates direct direction, ``2`` indicates reverse direction, and ``3`` "
+"indicates both directions."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:124
+msgid ""
+"It is necessary then to create a strategy for calculating edge properties"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:130
+msgid "And tell the director about this strategy"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:136
+msgid ""
+"Now we can use the builder, which will create the graph. The QgsGraphBuilder"
+" class constructor takes several arguments:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:150
+msgid ""
+"Also we can define several points, which will be used in the analysis. For "
+"example"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:158
+msgid ""
+"Now all is in place so we can build the graph and \"tie\" these points to it"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:164
+msgid ""
+"Building the graph can take some time (which depends on the number of "
+"features in a layer and layer size). ``tiedPoints`` is a list with "
+"coordinates of \"tied\" points. When the build operation is finished we can "
+"get the graph and use it for the analysis"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:173
+msgid "With the next code we can get the vertex indexes of our points"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:184
+msgid ""
+"Networks analysis is used to find answers to two questions: which vertexes "
+"are connected and how to find a shortest path. To solve these problems the "
+"network analysis library provides Dijkstra's algorithm."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:188
+msgid ""
+"Dijkstra's algorithm finds the shortest route from one of the vertexes of "
+"the graph to all the others and the values of the optimization parameters. "
+"The results can be represented as a shortest path tree."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:192
+msgid ""
+"The shortest path tree is a directed weighted graph (or more precisely --- "
+"tree) with the following properties:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:195
+msgid "only one vertex has no incoming edges — the root of the tree"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:196
+msgid "all other vertexes have only one incoming edge"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:197
+msgid ""
+"if vertex B is reachable from vertex A, then the path from A to B is the "
+"single available path and it is optimal (shortest) on this graph"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:200
+msgid ""
+"To get the shortest path tree use the methods :func:`shortestTree` and "
+":func:`dijkstra` of `QgsGraphAnalyzer "
+"<http://qgis.org/api/classQgsGraphAnalyzer.html>`_ class. It is recommended "
+"to use method :func:`dijkstra` because it works faster and uses memory more "
+"efficiently."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:205
+msgid ""
+"The :func:`shortestTree` method is useful when you want to walk around the "
+"shortest path tree. It always creates a new graph object (QgsGraph) and "
+"accepts three variables:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:227
+msgid ""
+"Here is some very simple code to display the shortest path tree using the "
+"graph created with the :func:`shortestTree` method (select linestring layer "
+"in TOC and replace coordinates with your own). **Warning**: use this code "
+"only as an example, it creates a lots of `QgsRubberBand "
+"<http://qgis.org/api/classQgsRubberBand.html>`_ objects and may be slow on "
+"large data-sets."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:302
+msgid "Finding shortest paths"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:304
+msgid ""
+"To find the optimal path between two points the following approach is used. "
+"Both points (start A and end B) are \"tied\" to the graph when it is built. "
+"Then using the methods :func:`shortestTree` or :func:`dijkstra` we build the"
+" shortest path tree with root in the start point A. In the same tree we also"
+" find the end point B and start to walk through the tree from point B to "
+"point A. The Whole algorithm can be written as"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:321
+msgid ""
+"At this point we have the path, in the form of the inverted list of vertexes"
+" (vertexes are listed in reversed order from end point to start point) that "
+"will be visited during traveling by this path."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:325
+msgid ""
+"Here is the sample code for QGIS Python Console (you will need to select "
+"linestring layer in TOC and replace coordinates in the code with yours) that"
+" uses method :func:`shortestTree`"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:379
+msgid "And here is the same sample but using :func:`dikstra` method"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:429
+msgid "Areas of availability"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:431
+msgid ""
+"The area of availability for vertex A is the subset of graph vertexes that "
+"are accessible from vertex A and the cost of the paths from A to these "
+"vertexes are not greater that some value."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:435
+msgid ""
+"More clearly this can be shown with the following example: \"There is a fire"
+" station. Which parts of city can a fire truck reach in 5 minutes? 10 "
+"minutes? 15 minutes?\". Answers to these questions are fire station's areas "
+"of availability."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:440
+msgid ""
+"To find the areas of availability we can use method :func:`dijkstra` of the "
+":class:`QgsGraphAnalyzer` class. It is enough to compare the elements of the"
+" cost array with a predefined value. If cost[i] is less than or equal to a "
+"predefined value, then vertex i is inside the area of availability, "
+"otherwise it is outside."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:446
+msgid ""
+"A more difficult problem is to get the borders of the area of availability. "
+"The bottom border is the set of vertexes that are still accessible, and the "
+"top border is the set of vertexes that are not accessible. In fact this is "
+"simple: it is the availability border based on the edges of the shortest "
+"path tree for which the source vertex of the edge is accessible and the "
+"target vertex of the edge is not."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:453
+msgid "Here is an example"
+msgstr ""
+
+#~ msgid ""
+#~ "implements basics method of the graph theory (currently only Dijkstra's "
+#~ "algorithm)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Network analysis library was created by exporting basics functions from "
+#~ "RoadGraph core plugin and now you can use it's methods in plugins or "
+#~ "directly from Python console."
+#~ msgstr ""
+
+#~ msgid "Briefly typical use case can be described as:"
+#~ msgstr ""
+
+#~ msgid "Building graph"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The first thing you need to do --- is to prepare input data, that is to "
+#~ "convert vector layer into graph. All further actions will use this graph, "
+#~ "not the layer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As a source we can use any polyline vector layer. Nodes of the polylines "
+#~ "become graph vertices, and segments of the polylines are graph edges. If "
+#~ "several nodes have the same coordinates then they are the same graph vertex."
+#~ " So two lines that have a common node become connected to each other."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Additionally, during graph creation it is possible to \"fix\" (\"tie\") to "
+#~ "the input vector layer any number of additional points. For each additional "
+#~ "point a match will be found --- closest graph vertex or closest graph edge. "
+#~ "In the latter case the edge will be splitted and new vertex added."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As the properties of the edge a vector layer attributes can be used and "
+#~ "length of the edge."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Converter from vector layer to graph is developed using `Builder "
+#~ "<http://en.wikipedia.org/wiki/Builder_pattern>`_ programming pattern. For "
+#~ "graph construction response so-called Director. There is only one Director "
+#~ "for now: `QgsLineVectorLayerDirector "
+#~ "<http://qgis.org/api/api/classQgsLineVectorLayerDirector.html>`_. The "
+#~ "director sets the basic settings that will be used to construct a graph from"
+#~ " a line vector layer, used by the builder to create graph. Currently, as in "
+#~ "the case with the director, only one builder exists: `QgsGraphBuilder "
+#~ "<http://qgis.org/api/api/classQgsGraphBuilder.html>`_, that creates "
+#~ "`QgsGraph <http://qgis.org/api/api/classQgsGraph.html>`_ objects. You may "
+#~ "want to implement your own builders that will build a graphs compatible with"
+#~ " such libraries as `BGL "
+#~ "<http://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_ or "
+#~ "`NetworkX <http://networkx.lanl.gov/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To calculate edge properties programming pattern `strategy "
+#~ "<http://en.wikipedia.org/wiki/Strategy_pattern>`_ is used. For now only "
+#~ "`QgsDistanceArcProperter "
+#~ "<http://qgis.org/api/api/classQgsDistanceArcProperter.html>`_ strategy is "
+#~ "available, that takes into account the length of the route. You can "
+#~ "implement your own strategy that will use all necessary parameters. For "
+#~ "example, RoadGraph plugin uses strategy that compute travel time using edge "
+#~ "length and speed value from attributes."
+#~ msgstr ""
+
+#~ msgid "It's time to dive in the process."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First of all, to use this library we should import networkanalysis module::"
+#~ msgstr ""
+
+#~ msgid "Than create director::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To construct a director  we should pass vector layer, that will be used as "
+#~ "source for graph and information about allowed movement on each road segment"
+#~ " (unilateral or bilateral movement, direct or reverse direction). Here is "
+#~ "full list of this parameters:"
+#~ msgstr ""
+
+#~ msgid "vl --- vector layer used to build graph"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "directionFieldId --- index of the attribute table field, where information "
+#~ "about roads directions is stored. If -1, then don't use this info at all"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "directDirectionValue --- field value for roads with direct direction (moving"
+#~ " from first line point to last one)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "reverseDirectionValue --- field value for roads with reverse direction "
+#~ "(moving from last line point to first one)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "bothDirectionValue --- field value for bilateral roads (for such roads we "
+#~ "can move from first point to last and from last to first)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "defaultDirection --- default road direction. This value will be used for "
+#~ "those roads where field directionFieldId is not set or have some value "
+#~ "different from above."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is necessary then to create strategy for calculating edge properties::"
+#~ msgstr ""
+
+#~ msgid "And tell the director about this strategy::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now we can create builder, which will create graph. QgsGraphBuilder "
+#~ "constructor takes several arguments:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Also  we can set several points, which will be used in analysis. For "
+#~ "example::"
+#~ msgstr ""
+
+#~ msgid "Now all is in place so we can build graph and \"tie\" points to it::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Building graph can take some time (depends on number of features in a layer "
+#~ "and layer size). tiedPoints is a list with coordinates of \"tied\" points. "
+#~ "When build operation is finished we can get graph and use it for the "
+#~ "analysis::"
+#~ msgstr ""
+
+#~ msgid "With the next code we can get indexes of our points::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Networks analysis is used to find answers on two questions: which vertices "
+#~ "are connected and how to find a shortest path. To solve this problems "
+#~ "network analysis library provides Dijkstra's algorithm."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Dijkstra's algorithm finds the best route from one of the vertices of the "
+#~ "graph to all the others and the values of the optimization parameters. The "
+#~ "results can be represented as shortest path tree."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The shortest path tree is as oriented weighted graph (or more precisely --- "
+#~ "tree) with the following properties:"
+#~ msgstr ""
+
+#~ msgid "only one vertex have no incoming edges — the root of the tree"
+#~ msgstr ""
+
+#~ msgid "all other vertices have only one incoming edge"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "if vertex B is reachable from vertex A, then path from A to B is single "
+#~ "available path and it is optimal (shortest) on this graph"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To get shortest path tree use methods Use methods :func:`shortestTree` and "
+#~ ":func:`dijkstra` of `QgsGraphAnalyzer "
+#~ "<http://qgis.org/api/api/classQgsGraphAnalyzer.html>`_ class. It is "
+#~ "recommended to use method :func:`dijkstra` because it works faster and uses "
+#~ "memory more efficiently."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :func:`shortestTree` method is useful when you want to walk around the "
+#~ "shortest path tree. It always creates new graph object (QgsGraph) and "
+#~ "accepts three variables:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here is very simple code to display shortest path tree using graph created "
+#~ "with :func:`shortestTree` method (select linestring layer in TOC and replace"
+#~ " coordinates with yours one). **Warning**: use this code only as an example,"
+#~ " it creates a lots of `QgsRubberBand "
+#~ "<http://qgis.org/api/api/classQgsRubberBand.html>`_ objects and may be slow "
+#~ "on large datasets."
+#~ msgstr ""
+
+#~ msgid "Finding shortest path"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To find optimal path between two points the following approach is used. Both"
+#~ " points (start A and end B) are \"tied\" to graph when it builds. Than using"
+#~ " methods :func:`shortestTree` or :func:`dijkstra` we build shortest tree "
+#~ "with root in the start point A. In the same tree we also found end point B "
+#~ "and start to walk through tree from point B to point A. Whole algorithm can "
+#~ "be written as::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "At this point we have path, in the form of the inverted list of vertices "
+#~ "(vertices are listed in reversed order from end point to start one) that "
+#~ "will be visited during traveling by this path."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here is the sample code for QGIS Python Console (you will need to select "
+#~ "linestring layer in TOC and replace coordinates in the code with yours) that"
+#~ " uses method :func:`shortestTree`::"
+#~ msgstr ""
+
+#~ msgid "And here is the same sample but using :func:`dikstra` method::"
+#~ msgstr ""
+
+#~ msgid "Areas of the availability"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Area of availability for vertex A is a subset of graph vertices, that are "
+#~ "accessible from vertex A and cost of the path from A to this vertices are "
+#~ "not greater that some value."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "More clearly this can be shown with the following example: \"There is a fire"
+#~ " station. What part of city fire command can reach in 5 minutes? 10 minutes?"
+#~ " 15 minutes?\". Answers on this questions are fire station's areas of "
+#~ "availability."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To find areas of availablity we can use method :func:`dijksta` of the "
+#~ ":class:`QgsGraphAnalyzer` class. It is enough to compare elements of cost "
+#~ "array with predefined value. If cost[ i ] is less or equal than predefined "
+#~ "value, than vertex i is inside area of availability, otherwise --- outside."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "More difficult it is to get borders of area of availablity. Bottom border "
+#~ "--- is a set of vertices that are still accessible, and top border --- is a "
+#~ "set of vertices which are not accesible. In fact this is simple: "
+#~ "availability border passed on such edges of the shortest path tree for which"
+#~ " start vertex is accessible and end vertex is not accessible."
+#~ msgstr ""
+
+#~ msgid "Here is an example::"
+#~ msgstr ""

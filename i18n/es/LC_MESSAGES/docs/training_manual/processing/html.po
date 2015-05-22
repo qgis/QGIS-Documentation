@@ -1,0 +1,86 @@
+# 
+# Translators:
+# José Román Bilbao <jrbcast@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-06 16:17+0000\n"
+"Last-Translator: José Román Bilbao <jrbcast@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/qgis-documentation/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/html.rst:6
+msgid "HTML outputs"
+msgstr "salidas en HTML"
+
+#: ../../source/docs/training_manual/processing/html.rst:9
+msgid ""
+"In this lesson we learn how QGIS handles outputs in HTML format, which are "
+"used to produce text outputs and graphs."
+msgstr "En esta lección, aprendemos como maneja QGIS las salidas en el formato HTML, que se utilizan para producir texto y gráficos."
+
+#: ../../source/docs/training_manual/processing/html.rst:11
+msgid ""
+"All the outputs we have produced so far were layers (whether raster or "
+"vector). However, some algorithms generate outputs in the form of text and "
+"graphics. All this outputs are wrapped in HTML files and displayed in the so"
+"--called *Results viewer*, which is another element of the processing "
+"framework."
+msgstr "Todas las salidas producidas hasta el momento eran capas (tanto vectoriales como raster). Sin embargo, algunos algoritmos generan salidas en forma de texto o gráficos. Todas estas salidas se definen mediante archivos en HTML y se muestran en el denominado *Results viewer*, que es otro elemento del entorno de procesamiento."
+
+#: ../../source/docs/training_manual/processing/html.rst:13
+msgid "Let's see one of those algorithms to understand how they work."
+msgstr "Veamos uno de esos algoritmos para comprender cómo funcionan."
+
+#: ../../source/docs/training_manual/processing/html.rst:15
+msgid ""
+"Open the project with the data to be used in this lesson and then open the "
+"*Basic statistics for numeric fields* algorithm."
+msgstr "Abrir el archivo con los datos que se van a usar en esta lección y entonces abrir el algoritmo *Basic statistics for numeric fields*."
+
+#: ../../source/docs/training_manual/processing/html.rst:19
+msgid ""
+"The algorithm is rather simple, and you just have to select the layer to use"
+" and one of its field (a numeric one). The output is of type HTML, but the "
+"corresponding box works exactly like the one that you can find in the case "
+"of a raster or vector output. You can enter a filepath or leave it blank to "
+"save to a temporary file. In this case, however, only the ``html`` and "
+"``htm`` extensions are allowed, so there is no way of altering the output "
+"format by using a different one."
+msgstr "El algoritmo es bastante simple y sólo se deben seleccionar la capa a utilizar y uno de sus campos (uno numérico). La salida es de tipo HTML, pero el campo correspondiente funciona exactamente como el que se pueda encontrar en el caso de una salida vectorial o raster. Se puede introducir la ruta de un archivo o dejarlo en blanco para almacenarla en un archivo temporal. En este caso, sin embargo, sólo se permiten las extensiones ``html`` and ``htm``, de modo que no hay manera de alterar el formato de salido utilizando cualquier otra. "
+
+#: ../../source/docs/training_manual/processing/html.rst:21
+msgid ""
+"Run the algorithm selecting the only layer in the project as input, and the "
+"*POP2000* field, and a new dialog like the one shown next will appear once "
+"the algorithm is executed and the parameters dialog is closed."
+msgstr "Ejecutar el algoritmo seleccionando como entrada la única capa del proyecto y el campo *POP2000*. Una vez que el algoritmo se ejecute y se cierre la ventana con los parámetros, aparecerá un nuevo diálogo como el que se muestra a continuación."
+
+#: ../../source/docs/training_manual/processing/html.rst:25
+msgid ""
+"This is the *Results viewer*. It keeps all the HTML result generated during "
+"the current session, easily accessible, so you can check them quickly "
+"whenever you need it. As it happens with layers, if you have saved the "
+"output to a temporary file, it will be deleted once you close QGIS. If you "
+"have saved to a non-temporary path, the file will remain, but it will not "
+"appear in the *Results viewer* the next time you open QGIS."
+msgstr "Este es el *Results viewer*. Mantiene accesibles de forma sencilla todos los resultados HTML generados durante la sesión actual, de forma que puedan ser consultados cuando sea necesario. Al igual que sucede con las capas, si la salida se ha guardado en un archivo temporal, ésta se eliminará al cerrar QGIS. Si se ha guardado en un archivo no temporal, éste se mantendrá, pero no aparecerá en el *Results viewer* la próxima vez que se inicie QGIS. "
+
+#: ../../source/docs/training_manual/processing/html.rst:27
+msgid ""
+"Some algorithms generate text that cannot be divided into other more "
+"detailed outputs. That is the case if, for instance, the algorithm captures "
+"the text output from an external process. In other cases, the output is "
+"presented as text, but internally is divided into several smaller outputs, "
+"usually in the form of numeric values. The algorithm that we have just "
+"executed is one of them. Each one of those values is handled as a single "
+"output, and stored in a variable. This has no importance at all now, but "
+"once we move to the graphical modeler, you will see that it will allow us to"
+" use those values as numeric inputs for other algorithms."
+msgstr "Algunos algoritmos generan textos que no se pueden dividir en otros más detallados. Este es el caso si, por ejemplo, el algoritmo captura el texto resultante de la ejecución de un proceso externo. En otros casos, la salida se muestra como texto, pero internamente se divide en varias salidas más pequeñas, generalmente en forma de datos numéricos. El algoritmo que acabamos de ejecutar es un de ellos. Cada uno de esos valores se maneja como una única salida y se almacena en una variable. Ahora mismo esto no tiene ninguna importancia, pero conforme nos movamos al modelador gráfico, comprobaremos que nos permite utilizar dichos valores como entradas numéricas para otros algoritmos."

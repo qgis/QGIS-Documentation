@@ -1,0 +1,285 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-03 18:45+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:6
+msgid "|LS| Changing Raster Symbology"
+msgstr "|LS| Symbologie van rasters wijzigen"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:8
+msgid ""
+"Not all raster data consists of aerial photographs. There are many other "
+"forms of raster data, and in many of those cases, it's essential to "
+"symbolize the data properly so that it becomes properly visible and useful."
+msgstr "Niet alle rastergegevens bestaan uit luchtfoto's. Er zijn vele andere vormen van rastergegevens en in veel van deze gevallen, is het essentieel om de gegevens juist te symboliseren zodat het op de juiste manier zichtbaar wordt en bruikbaar."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:12
+msgid ""
+"**The goal for this lesson:** To change the symbology for a raster layer."
+msgstr "**Het doel voor deze les** De symbologie voor een rasterlaag wijzigen."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:15
+msgid "|basic| |TY|"
+msgstr "|basic| |TY|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:17
+msgid ""
+"Start with the current map which you should have created during the previous"
+" exercise: :kbd:`analysis.qgs`."
+msgstr "Begin met de huidige kaart, die u zou moeten hebben gemaakt in de vorige oefening, :kbd:`analysis.qgs`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:19
+msgid ""
+"Use the :guilabel:`Add Raster Layer` button to load the new raster dataset."
+msgstr "Gebruik de knop :guilabel:`Rasterlaag toevoegen` om de nieuwe raster gegevensset te laden."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:20
+msgid ""
+"Load the dataset |srtmFileName|, found under the directory "
+":kbd:`exercise_data/raster/SRTM/`."
+msgstr "Laad de gegevensset |srtmFileName|, te vinden in de map :kbd:`exercise_data/raster/SRTM/`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:22
+msgid ""
+"Once it appears in the :guilabel:`Layers list`, rename it to :kbd:`DEM`."
+msgstr "Als die eenmaal is verschenen in de :guilabel:`Lagenlijst`, hernoem hem naar :kbd:`DEM`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:23
+msgid ""
+"Zoom to the extent of this layer by right-clicking on it in the Layer List "
+"and selecting :guilabel:`Zoom to Layer Extent`."
+msgstr "Zoom naar het bereik van deze laag door er met rechts op te klikken in de Lagenlijst en te selecteren :guilabel:`Zoom naar laag`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:26
+msgid ""
+"This dataset is a *Digital Elevation Model (DEM)*. It's a map of the "
+"elevation (altitude) of the terrain, allowing us to see where the mountains "
+"and valleys are, for example."
+msgstr "Deze gegevensset is een *Digital Elevation Model (DEM)*. Het is een kaart van de hoogte van het terrein, wat ons bijvoorbeeld in staat stelt te zien waar de bergen en valleien zijn."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:30
+msgid ""
+"Once it's loaded, you'll notice that it's a basic stretched grayscale "
+"representation of the DEM. It's seen here with the vector layers on top:"
+msgstr "Als het eenmaal is geladen zult u zien dat het in feite een uitgestrekte weergave in grijswaarden is van de DEM. Hier is het te zien met de vectorlagen er bovenop:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:36
+msgid ""
+"QGIS has automatically applied a stretch to the image for visualization "
+"purposes, and we will learn more about how this works as we continue."
+msgstr "QGIS heeft automatisch de afbeelding opgerekt om redenen van visualisatie en we zullen meer leren over hoe dit werkt als we doorgaan."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:40
+msgid "|basic| |FA| Changing Raster Layer Symbology"
+msgstr "|basic| |FA| Symbologie van rasterlagen wijzigen"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:42
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog for the :guilabel:`SRTM` layer "
+"by right-clicking on the layer in the Layer tree and selecting "
+":guilabel:`Properties` option."
+msgstr "Open het dialoogvenster :guilabel:`Laag-eigenschappen` voor de laag :guilabel:`SRTM` door met rechts te klikken op de laag in de boom met lagen en de optie :guilabel:`Eigenschappen` te selecteren."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:45
+msgid "Switch to the :guilabel:`Style` tab."
+msgstr "Schakel naar de tab :guilabel:`Stijl`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:50
+msgid ""
+"These are the current settings that QGIS applied for us by default. Its just"
+" one way to look at a DEM, so lets explore some others."
+msgstr "Dit zijn de huidige instellingen die QGIS standaard voor ons heeft toegepast. Het is slechts één manier om naar een DEM te kijken, dus laten we enkele andere verkennen."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:53
+msgid ""
+"Change the :guilabel:`Render type` to :guilabel:`Singleband pseudocolor`, "
+"and use the default options presented."
+msgstr "Wijzig het :guilabel:`Rendertype` naar een :guilabel:`Enkelbands pseudocolor` en gebruik de weergegeven standaard opties."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:55
+msgid ""
+"Click the :guilabel:`Classify` button to generate a new color "
+"classification, and click :guilabel:`OK` to apply this classification to the"
+" DEM."
+msgstr "Klik op de knop :guilabel:`Classificeren` om een nieuwe kleur te classificeren en klik op :guilabel:`OK` om deze classificatie op de DEM toe te passen."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:61
+msgid "You'll see the raster looking like this:"
+msgstr "U zult zien dat het raster er als volgt uitziet:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:66
+msgid ""
+"This is an interesting way of looking at the DEM, but maybe we don't want to"
+" symbolize it using these colors."
+msgstr "Dit is een interessante manier om naar de DEM te kijken, maar misschien willen we het niet symboliseren met behulp van deze kleuren."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:69
+msgid "Open :guilabel:`Layer Properties` dialog again."
+msgstr "Open opnieuw het dialoogvenster :guilabel:`Laag-eigenschappen`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:70
+msgid ""
+"Switch the :guilabel:`Render Type` back to :guilabel:`Singleband gray`."
+msgstr "Schakel het :guilabel:`Rendertype` terug naar :guilabel:`Enkelbands grijs`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:71
+msgid "Click :guilabel:`OK` to apply this setting to the raster."
+msgstr "Klik op :guilabel:`OK` om deze instelling toe te passen op het raster."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:73
+msgid ""
+"You will now see a totally gray rectangle that isn't very useful at all."
+msgstr "U zult nu een totaal grijze rechthoek zien die helemaal niet bruikbaar is."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:78
+msgid ""
+"This is because we have lost the default settings which \"stretch\" the "
+"color values to show them contrast."
+msgstr "Dat komt omdat we de standaard instellingen zijn verloren die de kleurwaarden \"oprekten\" om ze contrast weer te laten geven."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:81
+msgid ""
+"Let's tell QGIS to again \"stretch\" the color values based on the range of "
+"data in the DEM. This will make QGIS use  all of the available colors (in "
+":guilabel:`Grayscale`, this is black, white and all shades of gray in "
+"between)."
+msgstr "Laten we QGIS vertellen om opnieuw de kleurwaarden \"op te rekken\", gebaseerd op het bereik van de gegevens in de DEM. Dit zal QGIS gebruik laten maken van alle beschikbare kleuren (in :guilabel:`Grijswaarden`, dit zijn zwart, wit en alle tinten grijs daar tussenin)."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:85
+msgid "Specify the :guilabel:`Min` and :guilabel:`Max` values as shown below."
+msgstr "Specificeer de waarden :guilabel:`Min` en :guilabel:`Max` zoals hieronder is weergegeven."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:86
+msgid ""
+"Set the value :guilabel:`Contrast enhancement` to :guilabel:`Stretch To "
+"MinMax`:"
+msgstr "Stel de waarde :guilabel:`Contrastverbetering` in op :guilabel:`'Stretch' tot MinMax`:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:92
+msgid ""
+"But what are the minimum and maximum values that should be used for the "
+"stretch? The ones that are currently under :guilabel:`Min` and "
+":guilabel:`Max` values are the same values that just gave us a gray "
+"rectangle before. Instead, we should be using the minimum and maximum values"
+" that are actually in the image, right? Fortunately, you can determine those"
+" values easily by loading the minimum and maximum values of the raster."
+msgstr "Maar wat zijn de minimale en maximale waarden die zouden moeten worden gebruikt voor het uitrekken? Die welke zijn vermeld onder de waarden :guilabel:`Min` en :guilabel:`Max` zijn dezelfde waarden die ons zojuist een grijze rechthoek gaven. In plaats daarvan zouden we de minimum- en maximum-waarden moeten gebruiken die aanwezig zijn in de afbeelding, niet? Gelukkig kunt u deze waarden eenvoudig bepalen door de minimum- en maximum-waarden van het raster te laden."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:99
+msgid ""
+"Under :guilabel:`Load min / max values`, select :guilabel:`Min / Max` "
+"option."
+msgstr "Selecteer de optie :guilabel:`Min / Max` onder :guilabel:`Min / max waarden laden`,  "
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:100
+msgid "Click the :guilabel:`Load` button:"
+msgstr "Klik op de knop :guilabel:`Laden`:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:102
+msgid ""
+"Notice how the :guilabel:`Custom min / max values` have changed to reflect "
+"the actual values in our DEM:"
+msgstr "Zie hoe de :guilabel:`Aangepaste waarden Min / Max` zijn gewijzigd om de feitelijke waarden in onze DEM te laten zien:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:108
+msgid "Click :guilabel:`OK` to apply these settings to the image."
+msgstr "Klik op :guilabel:`OK` om deze instellingen toe te passen op de afbeelding."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:110
+msgid ""
+"You'll now see that the values of the raster are again properly displayed, "
+"with the darker colors representing valleys and the lighter ones, mountains:"
+msgstr "U zult nu zien dat de aarden van het raster weer opnieuw juist zijn weergegeven, met de donkere kleuren die valleien weergeven en de lichtere bergen:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:117
+msgid "But isn't there a better or easier way?"
+msgstr "Maar is er geen betere of eenvoudiger manier?"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:119
+msgid ""
+"Yes, there is. Now that you understand what needs to be done, you'll be glad"
+" to know that there's a tool for doing all of this easily."
+msgstr "Ja, die is er. Nu u begrijpt wat er moet gebeuren, zult u blij zijn dat er een gereedschap is om dit allemaal eenvoudig te doen."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:122
+msgid "Remove the current DEM from the :guilabel:`Layers list`."
+msgstr "Verwijder de huidge DEM uit de :guilabel:`Lagenlijst`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:123
+msgid ""
+"Load the raster in again, renaming it to :kbd:`DEM` as before. It's a gray "
+"rectangle again..."
+msgstr "Laad het raster opnieuw in, hernoem het naar :kbd:`DEM` zoals eerder. Het is opnieuw een grijze rechthoek...."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:125
+msgid ""
+"Enable the tool you'll need by enabling :menuselection:`View --> Toolbars "
+"--> Raster`. These icons will appear in the interface:"
+msgstr "Schakel het gereedschap in dat u nodig heeft via :menuselection:`Beeld --> Werkbalken --> Raster`. Deze pictogrammen zullen in de interface verschijnen:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:131
+msgid ""
+"The third button from the left :guilabel:`Local Histogram Stretch` will "
+"automatically stretch the minimum and  maximum values to give you the best "
+"contrast in the local area that you're  zoomed into. It's useful for large "
+"datasets. The button on the left :guilabel:`Local Cumulative Cut Stretch "
+"...` will stretch the minimum and maximum values  to constant values across "
+"the whole image."
+msgstr "De derde knop van links :guilabel:`Lokaal histogram Stretch` zal automatisch uitrekken tot de minimum- en  maximum-waarden om u het beste contrast te geven in het lokale gebied waarop u bent ingezoomd. Het is handig voor grote gegevenssets. De knop links :guilabel:`Lokale cumulatieve strekking...` zal de minimum- en maximum-waarden uitrekken  tot constante waarden in de gehele afbeelding."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:138
+msgid ""
+"Click the fourth button from the left (:guilabel:`Stretch Histogram to Full "
+"Dataset`). You'll see the data is now correctly represented as before."
+msgstr "Klik op de vierde knop vanaf links (:guilabel:`Histogram uitbreiden op basis van gehele gegevensset`). U zult zien dat de gegevens nu opnieuw juist worden weergegeven zoals eerder."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:141
+msgid ""
+"You can try the other buttons in this toolbar and see how they alter the "
+"stretch of the image when zoomed in to local areas or when fully zoomed out."
+msgstr "U kunt de andere knoppen op deze werkbalk proberen en zien hoe zij het oprekken van de afbeelding wijzigen indien op lokale gebieden is ingezoomd of indien volledig is uitgezoomd."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:145
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:147
+msgid ""
+"These are only the basic functions to get you started with raster symbology."
+" QGIS also allows you many other options, such as symbolizing a layer using "
+"standard deviations, or representing different bands with different colors "
+"in a multispectral image."
+msgstr "Dit zijn slechts de basisfuncties om u te laten beginnen met symbologie voor rasters. QGIS heeft nog vele andere opties voor u, zoals het symboliseren van een laag met behulp van standaard afwijkingen, of het weergeven van verschillende banden in verschillende kleuren in een multispectrale afbeelding."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:153
+msgid "Reference"
+msgstr "Verwijzing"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:155
+msgid ""
+"The SRTM dataset was obtained from `http://srtm.csi.cgiar.org/ "
+"<http://srtm.csi.cgiar.org/>`_"
+msgstr "De gegevensset van SRTM werd verkregen vanaf `http://srtm.csi.cgiar.org/ <http://srtm.csi.cgiar.org/>`_"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:159
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:161
+msgid ""
+"Now that we can see our data displayed properly, let's investigate how we "
+"can analyze it further."
+msgstr "Nu we kunnen zien dat onze gegevens juist zijn weergegeven, kunnen we onderzoeken hoe ze verder zijn te analyseren."

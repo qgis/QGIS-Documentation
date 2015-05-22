@@ -1,0 +1,381 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-10 14:59+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:6
+msgid "|LS| Implementing the Data Model"
+msgstr "|LS| 데이터 모델 시행"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:8
+msgid ""
+"Now that we've covered all the theory, let's create a new database. This "
+"database will be used for our exercises for the lessons that will follow "
+"afterwards."
+msgstr "이제 모든 이론을 살펴봤으니, 새 데이터베이스를 생성해봅시다. 이 강의에서 생성할 데이터베이스를 이번 모듈 내내 예제로 사용할 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:12
+msgid ""
+"**The goal for this lesson:** To install the required software and use it to"
+" implement our example database."
+msgstr "**이 강의의 목표:** 필수 소프트웨어를 설치하고 예제 데이터베이스를 시행하는 데 사용하기."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:16
+msgid "Install PostgreSQL"
+msgstr "PostgreSQL 설치"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:18
+msgid ""
+"Although outside the scope of this document, Mac users can install "
+"PostgreSQL using `Homebrew <http://russbrooks.com/2010/11/25/install-"
+"postgresql-9-on-os-x>`_. Windows users can use the graphical installer "
+"located here: `<http://www.postgresql.org/download/windows/>`_. Please note "
+"that the documentation will assume users are running QGIS under Ubuntu."
+msgstr "이 교재가 다루는 범위에서는 벗어나지만, 맥 사용자는 `홈브루 <http://russbrooks.com/2010/11/25/install-postgresql-9-on-os-x>`_ 를 사용해서 PostgreSQL을 설치할 수 있습니다. 윈도우 사용자는 GUI 인스톨러를 `여기 <http://www.postgresql.org/download/windows/>`_ 에서 다운로드할 수 있습니다. 이 강의에서는 사용자가 우분투에서 QGIS를 실행하고 있다고 가정한다는 사실을 알아두십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:26
+msgid "Under Ubuntu::"
+msgstr "우분투에서 다음과 같이 설치하면,"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:30
+msgid "You should get a message like this::"
+msgstr "다음과 같은 메시지를 받게 될 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:47
+msgid ""
+"Press :kbd:`Y` and :kbd:`Enter` and wait for the download and installation "
+"to finish."
+msgstr ":kbd:`Y` 를 입력하고 :kbd:`Enter` 키를 누른 다음, 다운로드 및 설치가 끝날 때까지 기다리십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:51
+msgid "Help"
+msgstr "도움말"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:53
+msgid ""
+"PostgreSQL has very good `online "
+"<http://www.postgresql.org/docs/9.1/static/index.html>`_ documentation."
+msgstr "PostgreSQL는 매우 훌륭한 `온라인 <http://www.postgresql.org/docs/9.1/static/index.html>`_ 문서를 갖추고 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:57
+msgid "Create a database user"
+msgstr "데이터베이스 사용자 생성"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:59
+msgid "Under Ubuntu:"
+msgstr "우분투의 경우,"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:61
+msgid ""
+"After the installation is complete, run this command to become the postgres "
+"user and then create a new database user::"
+msgstr "설치가 완료된 후 다음 명령어를 실행해서 PostgreSQL의 사용자가 된 다음, 새 데이터베이스 사용자를 생성하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:66
+msgid ""
+"Type in your normal log in password when prompted (you need to have sudo "
+"rights)."
+msgstr "시스템이 비밀번호를 요구하면 사용자의 우분투 비밀번호를 입력하십시오. (사용자에게 sudo 권한이 있어야 합니다)"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:68
+msgid ""
+"Now, at the postgres user's bash prompt, create the database user. Make sure"
+" the user name matches your unix login name: it will make your life much "
+"easier, as postgres will automatically authenticate you when you are logged "
+"in as that user::"
+msgstr "그 다음 PostgreSQL 사용자의 배시 프롬프트에서 데이터베이스 사용자를 생성하십시오. 이때 사용자명을 우분투 사용자명과 동일하게 하십시오. 해당 사용자로 로그인 시 PostgreSQL이 자동적으로 인증할 것이기 때문에 프로그램 사용이 훨씬 쉬워집니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:75
+msgid ""
+"Enter a password when prompted. You should use a different password to your "
+"login password."
+msgstr "시스템이 비밀번호를 요구하면 입력합니다. 시스템 로그인 비밀번호와는 달라야 합니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:78
+msgid "What do those options mean?"
+msgstr "이 옵션들은 무슨 뜻일까요?"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:90
+msgid ""
+"Now you should should leave the postgres user's bash shell environment by "
+"typing::"
+msgstr "이제 다음 명령어를 입력해서 PostgreSQL 사용자의 배시 셸 환경에서 벗어나십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:96
+msgid "Verify the new account"
+msgstr "새 계정 확인"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:102
+msgid "Should return something like this::"
+msgstr "다음과 같은 화면을 보게 될 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:112
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:136
+msgid "Type :kbd:`q` to exit."
+msgstr ":kbd:`q` 를 입력해서 벗어나십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:115
+msgid "Create a database"
+msgstr "데이터베이스 생성"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:117
+msgid ""
+"The :kbd:`createdb` command is used to create a new database. It should be "
+"run from the bash shell prompt::"
+msgstr "새 데이터베이스를 생성하려면 :kbd:`createdb` 명령어를 사용합니다. 다음과 같이 배시 셸 프롬프트에서 실행해야 합니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:122
+msgid ""
+"You can verify the existence of your new database by using this command::"
+msgstr "다음 명령어를 통해 새 데이터베이스의 존재를 확인할 수 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:126
+msgid "Which should return something like this::"
+msgstr "다음과 같은 내용을 반환할 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:139
+msgid "Starting a database shell session"
+msgstr "데이터베이스 셸 세션 시작"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:141
+msgid "You can connect to your database easily like this::"
+msgstr "다음과 같이 손쉽게 사용자 데이터베이스에 접속할 수 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:145
+msgid "To exit out of the psql database shell, type::"
+msgstr "psql 데이터베이스 셸에서 나오려면 다음과 같이 입력하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:149
+msgid "For help in using the shell, type::"
+msgstr "셸 사용법에 대한 도움말을 보려면 다음과 같이 입력하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:153
+msgid "For help in using sql commands, type::"
+msgstr "SQL 명령어에 대한 도움말을 보려면 다음과 같이 입력하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:157
+msgid "To get help on a specific command, type (for example)::"
+msgstr "특정 명령어에 대한 도움말을 보려면 (예를 들어) 다음과 같이 입력합니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:161
+msgid ""
+"See also the `Psql cheat sheet "
+"</static/training_manual/postgres/psql_cheatsheet.pdf>`_ - available online "
+"`here "
+"<http://www.postgresonline.com/special_feature.php?sf_name=postgresql83_psql_cheatsheet&outputformat=html>`_."
+msgstr "`psql 치트 시트 </static/training_manual/postgres/psql_cheatsheet.pdf>`_ 도 참조하십시오. `이곳 <http://www.postgresonline.com/special_feature.php?sf_name=postgresql83_psql_cheatsheet&outputformat=html>`_ 에서 구할 수 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:166
+msgid "Make Tables in SQL"
+msgstr "SQL로 테이블 생성"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:168
+msgid ""
+"Let's start making some tables! We will use our ER Diagram as a guide. "
+"First, connect to the address db::"
+msgstr "테이블을 만들어보겠습니다! 이전 강의에서 만들었던 ER 도표를 지침으로 삼을 것입니다. 먼저 주소 DB에 접속하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:173
+msgid "Then create a :kbd:`streets` table::"
+msgstr "그 다음 :kbd:`streets` 테이블을 생성합니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:177
+msgid ""
+":kbd:`serial` and :kbd:`varchar` are **data types**. :kbd:`serial` tells "
+"PostgreSQL to start an integer sequence (auto-number) to populate the "
+":kbd:`id` automatically for every new record. :kbd:`varchar(50)` tells "
+"PostgreSQL to create a character field of 50 characters in length."
+msgstr ":kbd:`serial` 과 :kbd:`varchar` 는 **데이터형**입니다. :kbd:`serial` 은 PostgreSQL이 새 레코드가 추가될 때마다 자동적으로 :kbd:`id` 를 정수 시퀀스(자동 숫자)로 채우도록 지정합니다. :kbd:`varchar(50)` 은 PostgreSQL이 길이 50글자인 캐릭터 필드를 생성하도록 합니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:182
+msgid ""
+"You will notice that the command ends with a :kbd:`;` - all SQL commands "
+"should be terminated this way. When you press enter, psql will report "
+"something like this::"
+msgstr "명령어가 :kbd:`;` 문자로 끝난다는 것을 알아차리셨을 겁니다. 모든 SQL 명령어가 이렇게 끝나야 합니다. 엔터를 입력하면, psql이 다음과 같은 내용을 보고할 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:192
+msgid ""
+"That means your table was created successfully, with a primary key "
+":kbd:`streets_pkey` using :kbd:`streets.id`."
+msgstr "사용자의 테이블을 :kbd:`streets.id` 를 이용하는 기본 키 :kbd:`streets_pkey` 와 함께 성공적으로 생성했다는 뜻입니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:195
+msgid ""
+"Note: If you hit return without entering a :kbd:`;`, then you will get a "
+"prompt like this: :kbd:`address-#`. This is because PG is expecting you to "
+"enter more. Enter :kbd:`;` to run your command."
+msgstr "주석 : :kbd:`;` 을 입력하지 않고 엔터를 누르면 :kbd:`address-#` 과 같은 프롬프트로 들어가게 됩니다. PostgreSQL이 연속되는 명령어를 기다리고 있기 때문입니다. 명령어를 실행하려면 :kbd:`;` 을 입력하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:199
+msgid "To view your table schema, you can do this::"
+msgstr "테이블 스키마를 살펴보려면 다음처럼 하면 됩니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:203
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:218
+msgid "Which should show something like this::"
+msgstr "그러면 다음과 같은 내용을 반환할 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:214
+msgid "To view your table contents, you can do this::"
+msgstr "테이블의 내용을 살펴보려면 다음처럼 하면 됩니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:224
+msgid "As you can see, our table is currently empty."
+msgstr "사용자 테이블이 현재 비어 있다는 것을 알 수 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:227
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate| 중급"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:229
+msgid "Use the approach shown above to make a table called people:"
+msgstr "앞에서 배운 내용대로 people이라는 테이블을 만드십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:231
+msgid ""
+"Add fields such as phone number, home address, name, etc. (these aren't all "
+"valid names: change them to make them valid). Make sure you give the table "
+"an ID column with the same data-type as above."
+msgstr ":kbd:`phone number` , :kbd:`home address` , :kbd:`name` 등의 항목들을 추가하십시오. (예시한 항목명들이 모두 유효하지는 않습니다. 유효한 명칭으로 변경하십시오.) 앞에서와 마찬가지로 동일한 데이터 유형의 ID 열을 테이블에 추가해야 합니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:235
+msgid ":ref:`Check your results <database-concepts-4>`"
+msgstr ":ref:`결과 확인 <database-concepts-4>`"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:240
+msgid "Create Keys in SQL"
+msgstr "SQL로 키 생성"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:242
+msgid ""
+"The problem with our solution above is that the database doesn't know that "
+"people and streets have a logical relationship. To express this "
+"relationship, we have to define a foreign key that points to the primary key"
+" of the streets table."
+msgstr "앞 단계까지의 문제점은 데이터베이스가 people과 streets가 논리적 관계를 가지고 있다는 사실을 모른다는 것입니다. 이 관계를 표현하려면, streets 테이블의 기본 키를 가리키는 외래 키를 정의해야만 합니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:250
+msgid "There are two ways to do this:"
+msgstr "두 가지 방법이 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:252
+msgid "Add the key after the table has been created"
+msgstr "테이블 생성 후 키 추가"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:253
+msgid "Define the key at time of table creation"
+msgstr "테이블 생성 시 키 정의"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:255
+msgid "Our table has already been created, so let's do it the first way::"
+msgstr "이미 테이블을 생성했으므로, 첫 번째 방법을 써봅시다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:261
+msgid ""
+"That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
+"match a valid street :kbd:`id` from the :kbd:`streets` table."
+msgstr "이렇게 하면 :kbd:`people` 테이블에 :kbd:`street_id` 필드가 :kbd:`streets` 테이블의 유효한 도로 :kbd:`id` 와 일치해야만 한다고 알려주게 됩니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:264
+msgid ""
+"The more usual way to create a constraint is to do it when you create the "
+"table::"
+msgstr "제약 조건을 생성하는 좀 더 일반적인 방법은 테이블 생성 시 다음과 같이 하는 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:274
+msgid "After adding the constraint, our table schema looks like this now::"
+msgstr "제약 조건을 추가하면, 테이블 스키마가 다음과 같이 변합니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:292
+msgid "Create Indexes in SQL"
+msgstr "SQL로 인덱스 생성"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:294
+msgid ""
+"We want lightning fast searches on peoples names. To provide for this, we "
+"can create an index on the name column of our people table::"
+msgstr "우리는 인명 검색이 눈 깜짝할 사이에 이뤄지기를 바랍니다. 이렇게 하려면 다음과 같이 people 테이블의 name 열에 인덱스를 생성하면 됩니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:301
+msgid "Which results in::"
+msgstr "테이블 스키마가 다음과 같이 변경됩니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:320
+msgid "Dropping Tables in SQL"
+msgstr "SQL로 테이블 드롭"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:322
+msgid ""
+"If you want to get rid of a table you can use the :kbd:`drop` command::"
+msgstr "테이블을 없애버리고 싶은 경우 :kbd:`drop` 명령어를 쓸 수 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:327
+msgid ""
+"In our current example, the above command would not work. Why not? :ref:`See"
+" why <database-concepts-5>`"
+msgstr "현재 예제에서 이 명령어는 동작하지 않습니다. 어째서일까요? :ref:`이런 이유 때문입니다. <database-concepts-5>`"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:332
+msgid ""
+"If you used the same :kbd:`drop table` command on the `people` table, it "
+"would be successful::"
+msgstr "'people' 테이블에 대해 동일한 :kbd:`drop table` 명령어를 사용할 경우, 성공적으로 동작할 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:338
+msgid ""
+"If you actually did enter that command and dropped the :kbd:`people` table, "
+"now would be a good time to rebuild it, as you will need it in the next "
+"exercises."
+msgstr "실제로 명령어를 입력해서 :kbd:`people` 테이블을 드롭했다면, 다음 예제에 필요하므로 지금 다시 생성하도록 하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:343
+msgid "A word on pgAdmin III"
+msgstr "pgAdmin III에 대해"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:345
+msgid ""
+"We are showing you the SQL commands from the `psql` prompt because it's a "
+"very useful way to learn about databases. However, there are quicker and "
+"easier ways to do a lot of what we are showing you. Install pgAdmin III and "
+"you can create, drop, alter etc tables using 'point and click' operations in"
+" a GUI."
+msgstr "여러분에게 `psql` 프롬프트에서 SQL 명령을 보여주는 이유는 데이터베이스에 대해 배우는 데 아주 유용한 방법이기 때문입니다. 하지만 여기서 여러분이 배운 작업의 대부분을 더 빠르고 쉽게 할 수 있는 방법이 있습니다. pgAdmin III를 설치하면 GUI 환경에서 '포인트 & 클릭'만으로 테이블의 생성, 삭제, 수정 등을 할 수 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:350
+msgid "Under Ubuntu, you can install it like this::"
+msgstr "우분투에서 다음과 같이 설치할 수 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:354
+msgid "pgAdmin III will be covered in more detail in another module."
+msgstr "다른 모듈에서 pgAdmin III에 대해 더 자세히 배우게 될 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:357
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:359
+msgid ""
+"You have now seen how to create a brand new database, starting completely "
+"from scratch."
+msgstr "이제 완전히 처음부터 새 데이터베이스를 생성하는 방법을 배웠습니다."
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:363
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:365
+msgid "Next you'll learn how to use the DBMS to add new data."
+msgstr "다음 강의에서 DBMS를 통해 새 데이터를 추가하는 방법을 배울 것입니다."

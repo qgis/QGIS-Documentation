@@ -1,0 +1,246 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-15 10:30+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:6
+msgid "|LS| Adding Data to the Model"
+msgstr "|LS| Gegevens aan het model toevoegen"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:8
+msgid ""
+"The models we've created will now need to be populated with the data they're"
+" intended to contain."
+msgstr "De modellen die we hebben gemaakt moeten nu worden gevuld met de gegevens die zij geacht worden te bevatten."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:11
+msgid ""
+"**The goal for this lesson:** To learn how to insert new data into the "
+"database models."
+msgstr "**Het doel voor deze les:** Leren hoe nieuwe gegevens in de modellen van de database in te voeren."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:15
+msgid "Insert statement"
+msgstr "Argument Insert"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:17
+msgid ""
+"How do you add data to a table? The sql :kbd:`INSERT` statement provides the"
+" functionality for this::"
+msgstr "Hoe voegt u gegevens toe aan een tabel? Het argument voor SQL :kbd:`INSERT`  verschaft daar de functionaliteit voor::"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:22
+msgid "A couple of things to note:"
+msgstr "Een anatal dingen om te onthouden:"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:24
+msgid ""
+"After the table name (:kbd:`streets`), you list the column names that you "
+"will be populating (in this case only the :kbd:`name` column)."
+msgstr "Na de naam van de tabel (:kbd:`streets`), vermeldt u de kolomnamen die u wilt vullen (in dit geval alleen de kolom :kbd:`name`)."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:26
+msgid "After the :kbd:`values` keyword, place the list of field values."
+msgstr "Na het sleutelwoord :kbd:`values`, plaats de lijst met veldwaarden."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:27
+msgid "Strings should be quoted using single quotes."
+msgstr "Strings zouden moeten worden omsloten door enkele aanhalingstekens."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:28
+msgid ""
+"Note that we did not insert a value for the :kbd:`id` column; this is "
+"because it is a sequence and will be auto-generated."
+msgstr "Onthoud dat we geen waarde hebben ingevuld voor de kolom :kbd:`id`; dat is omdat het een reeks is en automatisch wordt gegenereerd."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:30
+msgid ""
+"If you do manually set the :kbd:`id`, you may cause serious problems with "
+"the integrity of your database."
+msgstr "Indien u de :kbd:`id` handmatig instelt, kunt u ernstige problemen veroorzaken voor de integriteit van uw database."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:33
+msgid "You should see :kbd:`INSERT 0 1` if it is successful."
+msgstr "U zou :kbd:`INSERT 0 1` moeten zien als het met succes is voltooid."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:35
+msgid ""
+"You can see the result of your insert action by selecting all the data in "
+"the table::"
+msgstr "U kunt het resultaat van uw invoeractie zien door alle gegevens in de tabel te selecteren::"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:40
+msgid "Result::"
+msgstr "Resultaat::"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:50
+msgid "|TY| |basic|"
+msgstr "|TY| |basic|"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:52
+msgid ""
+"Use the :kbd:`INSERT` command to add a new street to the :kbd:`streets` "
+"table."
+msgstr "Gebruik de opdracht :kbd:`INSERT` om een nieuwe straat in te voeren in de tabel :kbd:`streets`."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:54
+msgid ":ref:`Check your results <database-concepts-6>`"
+msgstr ":ref:`Controleer uw resultaten <database-concepts-6>`"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:60
+msgid "Sequencing Data Addition According to Constraints"
+msgstr "Toevoegen van gegevens in overeenstemming met beperkingen"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:63
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate|"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:65
+msgid ""
+"Try to add a person object to the :kbd:`people` table with the following "
+"details::"
+msgstr "probeer een object persoon toe te voegen aan de tabel :kbd:`people` met de volgende details::"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:72
+msgid ""
+"Recall that in this example, we defined phone numbers as strings, not "
+"integers."
+msgstr "Onthoud dat we in dit voorbeeld telefoonnummers hebben gedefinieerd als strings, niet als integers."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:75
+msgid ""
+"At this point, you should have an error report if you try to do this without"
+" first creating a record for Main Street in the :kbd:`streets` table."
+msgstr "Op dit punt zou u een foutbericht moeten krijgen als u dit probeert te doen zonder eerst een record voor Main Street te hebben gemaakt in de tabel :kbd:`streets`."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:78
+msgid "You should have also noticed that:"
+msgstr "U zou ook moeten hebben opgemerkt dat:"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:80
+msgid "You can't add the street using its name"
+msgstr "U kunt de straat niet toevoegen met behulp van zijn naam"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:81
+msgid ""
+"You can't add a street using a street :kbd:`id` before first creating the "
+"street record on the streets table"
+msgstr "U kunt geen straat toevoegen met behulp van een :kbd:`id` voor de straat zonder eerst het record voor de straat te hebben gemaakt in de tabel streets"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:84
+msgid ""
+"Remember that our two tables are linked via a Primary/Foreign Key pair. This"
+" means that no valid person can be created without there also being a valid "
+"corresponding street record."
+msgstr "Onthoud dat onze twee tabellen zijn gekoppeld via een paar Primaire/Vreemde sleutel. Dit betekent dat geen geldige persoon kan worden gemaakt zonder dat er ook een geldig overeenkomend record is voor de straat."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:88
+msgid "Using the above knowledge, add the new person to the database."
+msgstr "Voeg, met behulp van bovenstaande kennis, de nieuwe persoon toe aan de database."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:90
+msgid ":ref:`Check your results <database-concepts-7>`"
+msgstr ":ref:`Controleer uw resultaten <database-concepts-7>`"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:95
+msgid "Select data"
+msgstr "Gegevens selecteren"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:97
+msgid ""
+"We have already shown you the syntax for selecting records. Let's look at a "
+"few more examples::"
+msgstr "We hebben u de syntaxis voor het selecteren van records al laten zien. Laten we eens naar nog een aantal voorbeelden kijken::"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:110
+msgid ""
+"In later sessions we will go into more detail on how to select and filter "
+"data."
+msgstr "In latere gedeelten zullen we meer in detail ingaan op hoe gegevens te selecteren en te filteren."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:113
+msgid "Update data"
+msgstr "Gegevens bijwerken"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:115
+msgid ""
+"What if you want to make a change to some existing data? For example, a "
+"street name is changed::"
+msgstr "Wat als u een wijziging wilt maken in enkele bestaande gegevens? Bijvoorbeeld: een straatnaam is gewijzigd::"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:120
+msgid ""
+"Be very careful using such update statements - if more than one record "
+"matches your :kbd:`WHERE` clause, they will all be updated!"
+msgstr "Wees zeer voorzichtig met het gebruiken van dergelijke argumenten voor bijwerken - als meer dan één record overeenkomt met uw clausule :kbd:`WHERE`, zullen zij allemaal worden bijgewerkt!"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:123
+msgid ""
+"A better solution is to use the primary key of the table to reference the "
+"record to be changed::"
+msgstr "Een betere oplossing is om de primaire sleutel van de tabel te gebruiken om te verwijzen naar het record dat moet worden gewijzigd::"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:128
+msgid "It should return :kbd:`UPDATE 1`."
+msgstr "Het zou terug moeten geven :kbd:`UPDATE 1`."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:130
+msgid ""
+"the :kbd:`WHERE` statement criteria are case sensitive :kbd:`Main Road` is "
+"not the same as :kbd:`Main road`"
+msgstr "de criteria voor het argument :kbd:`WHERE` zijn hoofdlettergevoelig :kbd:`Main Road` is niet hetzelfde als :kbd:`Main road`"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:134
+msgid "Delete Data"
+msgstr "Gegevens verwijderen"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:136
+msgid ""
+"In order to delete an object from a table, use the :kbd:`DELETE` command::"
+msgstr "Gebruik de opdracht :kbd:`DELETE` om een object uit een tabel te verwijderen::"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:140
+msgid "Let's look at our people table now::"
+msgstr "Laten we nu eens naar onze tabel people kijken::"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:149
+msgid "|TY| |hard|"
+msgstr "|TY| |hard|"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:151
+msgid ""
+"Use the skills you have learned to add some new friends to your database::"
+msgstr "Gebruik de vaardigheden die u heeft geleerd om enkele nieuwe vrienden aan uw database toe te voegen::"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:162
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:164
+msgid ""
+"Now you know how to add new data to the existing models you created "
+"previously. Remember that if you want to add new kinds of data, you may want"
+" to modify and/or create new models to contain that data."
+msgstr "Nu weet u hoe u nieuwe gegevens moet toevoegen aan de bestaande modellen die u eerder heeft gemaakt. Onthoud dat als u nieuwe soorten gegevens wilt toevoegen, u misschien moet aanpassen en/of nieuwe modellen moet maken om die gegevens te kunnen bevatten."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:169
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:171
+msgid ""
+"Now that you've added some data, you'll learn how to use queries to access "
+"this data in various ways."
+msgstr "Nu dat u enkele gegevens heeft toegevoegd, zult u leren hoe u query's gebruikt om op verschillende manieren toegang te krijgen tot deze gegevens."

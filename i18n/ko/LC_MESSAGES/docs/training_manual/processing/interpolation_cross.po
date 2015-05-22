@@ -1,0 +1,150 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-11 05:41+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:6
+msgid "More interpolation"
+msgstr "심화 보간법"
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:8
+msgid ""
+"This chapter shows another practical case where interpolation algorithms are"
+" used"
+msgstr "이 강의에서는 보간법 알고리듬을 사용하는 또다른 실질적인 사례를 배울 것입니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:10
+msgid ""
+"Interpolation is a common technique, and it can be used to demonstrate "
+"several techniques that can be applied using the QGIS processing framework. "
+"This lesson uses some interpolation algorithms that were already introduced,"
+" but has a different approach."
+msgstr "보간법은 일반적인 기법으로, QGIS 처리 과정 프레임워크를 사용해 적용할 수 있는 몇 가지 기술을 시연하는 데 쓰일 수 있습니다. 이 강의에서는 앞에서 이미 언급했던 몇몇 보간법 알고리듬을 사용하지만, 다르게 접근해볼 것입니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:12
+msgid ""
+"The data for this lesson contains also a points layer, in this case with "
+"elevation data. We are going to interpolate it much in the same way as we "
+"did in the previous lesson, but this time we will save part of the original "
+"data to use it for assessing the quality of the interpolation process."
+msgstr "이 강의를 위한 데이터는 표고 데이터를 담고 있는 포인트 레이어 하나입니다. 이전 강의에서와 거의 동일한 방법으로 보간할 것이지만, 이번에는 보간 처리 과정의 질을 평가하는데 사용하기 위해 원래 데이터의 일부를 보전할 것입니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:14
+msgid ""
+"First, we have to rasterize the points layer and fill the resulting no--data"
+" cells, but using just a fraction of the points in the layer. We will save "
+"10% of the points for a later check, so we need to have 90% of the points "
+"ready for the interpolation. To do so, we could use the *Split shapes layer "
+"randomly* algorithm, which we have already used in a previous lesson, but "
+"there is a better way to do that, without having to create any new "
+"intermediate layer. Instead of that, we can just select the points we want "
+"to use for the interpolation (the 90% fraction), and then run the algorithm."
+" As we have already seen, the rasterizing algorithm will use only those "
+"selected points and ignore the rest. The selection can be done using the "
+"*Random selection* algorithm. Run it with the following parameters."
+msgstr "먼저, 포인트 레이어를 래스터화하고 결과물의 비 데이터 셀을 채워야 합니다. 다만 레이어가 담고 있는 포인트의 일부만을 사용할 것입니다. 이후에 확인하기 위해 포인트 가운데 10%를 보전할 것이므로, 보간하기 위한 90%의 포인트를 준비해야 합니다. 이를 위해 :guilabel:`Split shapes layer randomly` 알고리듬을 쓸 수 있습니다. 이전 강의에서 벌써 사용해본 알고리듬이지만, 새로운 중간 단계 레이어를 생성할 필요가 없는 더 나은 방법이 있습니다. 중간 단계 대신, 보간하고자 하는 (90% 부분) 포인트를 선택한 다음 알고리듬을 실행하면 됩니다. 이미 배웠듯이, 래스터화 알고리듬은 선택한 포인트만 사용하고 나머지는 무시합니다. :guilabel:`Random selection` 알고리듬을 통해 선택 집합을 만들 수 있습니다. 다음 파라미터 값을 써서 실행하십시오."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:18
+msgid "That will select 90% of the points in the layer to rasterize"
+msgstr "래스터화할 레이어에 있는 포인트 가운데 90%를 선택할 것입니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:22
+msgid ""
+"The selection is random, so your selection might differ from the selection "
+"shown in the above image."
+msgstr "랜덤하게 선택하기 때문에, 앞의 그림에 보이는 선택 집합과 사용자의 선택 집합이 서로 다를 수도 있습니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:24
+msgid ""
+"Now run the *Shapes to grid* to get the first raster layer, and then run the"
+" *Close gaps* algorithm to fill the no--data cells [Cell resolution: 100 m]."
+msgstr "이제 :guilabel:`Shapes to grid` 를 실행해서 첫 번째 래스터 레이어를 생성한 다음, :guilabel:`Close gaps` 알고리듬을 실행해서 비 데이터 값을 가진 셀을 채우십시오. [셀 크기 : 100m]"
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:28
+msgid ""
+"To check the quality of the interpolation, we can now use the points that "
+"are not selected. At this points, we know the real elevation (the value in "
+"the points layer) and the interpolated elevation (the value in the "
+"interpolated raster layer). We can compare the by computing the differences "
+"between those values."
+msgstr "보간 결과의 질을 확인하기 위해, 이제 선택하지 않은 포인트를 사용할 수 있습니다. 이 시점에서 (포인트 레이어의 값인) 실제 표고와 (보간 처리된 래스터 레이어의 값인) 보간된 표고를 알고 있습니다. 이 두 값들의 차이를 계산해서 비교해볼 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:30
+msgid ""
+"Since we are going to use the points that are not selected, first, let's "
+"invert the selection."
+msgstr "선택하지 않은 포인트를 사용할 것이므로, 먼저 선택을 반전시킵시다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:34
+msgid ""
+"The points contain the original values, but not the interpolated ones. To "
+"add them in a new field, we can use the *Add grid values to points* "
+"algorithm"
+msgstr "포인트는 보간 처리된 값이 아니라 원래 값을 담고 있습니다. 이 값들을 새 필드에 추가하는 데 :guilabel:`Add grid values to points` 알고리듬을 사용할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:38
+msgid ""
+"The raster layer to select (the algorithm supports multiple raster, but we "
+"just need one) is the resulting one from the interpolation. We have renamed "
+"it to *interpolate* and that layer name is the one that will be used for the"
+" name of the field to add."
+msgstr "선택해야 할 래스터 레이어는 (해당 알고리듬이 복수의 레이어를 지원하지만, 이 경우 하나만 필요합니다) 보간법 알고리듬의 결과물입니다. 해당 레이어의 명칭을 :kbd:`interpolate` 로 변경하고, 이 레이어명을 추가할 필드의 명칭으로 사용할 것입니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:40
+msgid ""
+"Now we have a vector layer that contains both values, with points that were "
+"not used for the interpolation."
+msgstr "이제 보간 처리에 쓰이지 않았던 포인트가 두 가지 값을 담고 있는 벡터 레이어를 얻었습니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:44
+msgid ""
+"Now, we will use the fields calculator for this task. Open the *Field "
+"calculator* algorithm and run it with the following parameters."
+msgstr "다음 작업에 필드 계산기를 사용할 것입니다. :guilabel:`Field calculator` 알고리듬을 열고 다음 파라미터 값을 써서 실행하십시오."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:48
+msgid ""
+"If your field with the values from the raster layer has a different name, "
+"you should modify the above formula accordingly. Running this algorithm, you"
+" will get a new layer with just the points that we haven't used for the "
+"interpolation, each of them containing the difference between the two "
+"elevation values."
+msgstr "래스터 레이어에서 가져온 값을 담은 필드명을 다른 명칭으로 정했다면, 앞의 그림에 나온 공식을 그에 맞춰 수정해야 합니다. 이 알고리듬을 실행하면, 보간 퍼리에 쓰이지 않았던 포인트가 두 가지 표고 값의 차를 담고 있는 새 레이어를 얻게 됩니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:50
+msgid ""
+"Representing that layer according to that value will give us a first idea of"
+" where the largest discrepancies are found."
+msgstr "이 차이 값에 따라 레이어를 렌더링하면, 불일치가 가장 크게 발생하는 곳이 어디인지 감을 잡을 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:54
+msgid ""
+"Interpolating that layer will get you a raster layer with the estimated "
+"error in all points of the interpolated area."
+msgstr "해당 레이어를 보간하면, 보간된 지역의 모든 포인트에서 측정된 오류를 나타내는 래스터 레이어를 얻게 됩니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:58
+msgid ""
+"You can also get the same information (difference between original point "
+"values and interpolated ones) directly with :menuselection:`GRASS --> "
+"v.sample`."
+msgstr "또한 동일한 정보(원래 포인트 값과 보간된 포인트 값의 차이)를 :menuselection:`GRASS --> v.sample` 메뉴를 통해 얻을 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:60
+msgid ""
+"Your results might differ from these ones, since there is a random component"
+" introduced when running the random selection, at the beginning of this "
+"lesson."
+msgstr "이 강의의 시작 부분에서 설명한 대로, :guilabel:`Random selection` 알고리듬 실행 시 랜덤 이라는 요소가 관여하므로 사용자의 결과는 앞의 그림과 다를 수도 있습니다."

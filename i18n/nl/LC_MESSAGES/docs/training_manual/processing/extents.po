@@ -1,0 +1,146 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-27 15:27+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/extents.rst:6
+msgid "Defining extents"
+msgstr "Bereiken definiëren"
+
+#: ../../source/docs/training_manual/processing/extents.rst:9
+msgid ""
+"In this lesson we will see how to define extents, which are needed by some "
+"algorithms, specially raster ones."
+msgstr "In deze les zullen we zien hoe we bereiken definiëren, die bij sommige algoritmen nodig zijn, in het bijzonder voor rasters."
+
+#: ../../source/docs/training_manual/processing/extents.rst:12
+msgid ""
+"Some algorithms require an extent to define the area to be covered by the "
+"analysis they perform, and usually to define the extent of the resulting "
+"layer."
+msgstr "Sommige algoritmen vereisen een bereik om het gebied te definiëren dat moet worden bedekt door de analyse die zij uitvoeren, en gewoonlijk ook om het bereik van de resulterende laag te definiëren."
+
+#: ../../source/docs/training_manual/processing/extents.rst:14
+msgid ""
+"When an extent is required, it can be defined manually but entering the four"
+" values that define it (min X, min Y, max X, max Y), but there are other "
+"more practical and more interesting ways of doing it as well. We will see "
+"all of them in this lesson."
+msgstr "Wanneer een bereik wordt vereist, kan het handmatig gedefinieerd worden door de vier waarden die het definieert in te voeren (min X, min Y, max X, max Y), maar er zijn ook meer praktische en interessantere manieren om dat te doen. We zullen ze allemaal zien in deze les."
+
+#: ../../source/docs/training_manual/processing/extents.rst:16
+msgid ""
+"First, let's open an algorithm that requires an extent to be defined. Open "
+"the *Shapes to grid* algorithm, which creates a raster layer from a vector "
+"layer."
+msgstr "Laten we eerst een algoritme openen dat vereist dat een bereik wordt gedefinieerd. Open het algoritme *Shapes to grid*, wat een rasterlaag uit een vectorlaag maakt."
+
+#: ../../source/docs/training_manual/processing/extents.rst:20
+msgid ""
+"All the parameters, except for the last two ones, are used to define which "
+"layer is to be rasterized, and configure how the rasterization process "
+"should work. The two last parameters, on the other hand, define the "
+"characteristics of the output layer. That means that they define the area "
+"that is covered (which is not necesarily the same area covered by the input "
+"vector layer), and the resolution/cellsize (which cannot be infered from the"
+" vector layer, since vector layers do not have a cellsize)."
+msgstr "Alle parameters, met uitzondering van de laatste twee, worden gebruikt om te definiëren welke laag moet worden omgezet naar een raster, en configureren hoe het proces van het omzetten naar raster zou moeten werken. De twee laatste parameters, aan de andere kant, definiëren de karakteristieken voor de uitvoerlaag. Dat betekent dat zij het gebied definiëren dat wordt bedekt (wat niet noodzakelijkerwijze hetzelfde gebied is als dat wat wordt bedekt door de invoerlaag), en de resolutie/celgrootte (die niet kan worden afgeleid vanuit de vectorlaag, omdat vectorlagen geen celgrootten hebben)."
+
+#: ../../source/docs/training_manual/processing/extents.rst:22
+msgid ""
+"The first thing you can do is to type the 4 defining values explained "
+"before, separated by commas."
+msgstr "Het eerste dat u kunt doen is de 4 waarden voor de definitie, zoals hierboven besproken, in te typen, gescheiden door komma's."
+
+#: ../../source/docs/training_manual/processing/extents.rst:26
+msgid ""
+"That doesn't need any extra explanation. While this is the most flexible "
+"option, it is also the less practical in some cases, and that's why other "
+"options are implemented. To access them, you have to click on the button on "
+"the right--hand side of the extent text box."
+msgstr "Dat behoeft geen nadere extra uitleg. Hoewel dit de meest flexibele optie is, is het in sommige gevallen ook minder praktisch, en dat is waarom ander opties werden geïmplementeerd.  U moet op de knop aan de rechterkant van het tekstvak voor het bereik klikken om daar toegang toe te krijgen."
+
+#: ../../source/docs/training_manual/processing/extents.rst:30
+msgid "Let's see what each one of them does."
+msgstr "Laten we eens kijken wat elk ervan doet."
+
+#: ../../source/docs/training_manual/processing/extents.rst:32
+msgid ""
+"The first option is *Use layer/canvas extent*, which will show the selection"
+" dialog shown below."
+msgstr "De eerste optie is *Use layer/canvas extent*, wat het dialoogvenster voor selectie zal weergeven dat hieronder staat."
+
+#: ../../source/docs/training_manual/processing/extents.rst:36
+msgid ""
+"Here you can select the extent of the canvas (the extent covered by the "
+"current zoom), or the extension any of the available layers. Select it and "
+"click on *OK*, and the text box will be automatically filled with the "
+"corresponding values."
+msgstr "Hier kunt u het bereik voor het kaartvenster selecteren (het bereik dat wordt bedekt door de huidige zoom), of het bereik van elk van de beschikbare lagen. Selecteer het en klik op *OK*, en het tekstvak zal automatisch worden gevuld met de overeenkomende waarden."
+
+#: ../../source/docs/training_manual/processing/extents.rst:38
+msgid ""
+"The second option is *Select extent on canvas*. In this case, the algorithm "
+"dialog disappears and you can click and drag on the QGIS canvas to define "
+"the desired extent."
+msgstr "De tweede optie is *Select extent on canvas*. In dit geval verdwijnt het dialoogvenster van het algoritme en kunt u in het kaartvenster van QGIS klikken en slepen om het gewenste bereik te definiëren."
+
+#: ../../source/docs/training_manual/processing/extents.rst:42
+msgid ""
+"Once you release the mouse button, the dialog will reappear and the text box"
+" will already have the values corresponding to the defined extent."
+msgstr "Als u de muisknop weer loslaat zal het dialoogvenster weer verschijnen en zal het tekstvak al de waarden bevatten die overeenkomen met het gedefinieerde bereik."
+
+#: ../../source/docs/training_manual/processing/extents.rst:44
+msgid ""
+"The last option is *Use min covering extent from input layers*, which is the"
+" default option. This will compute the min covering extent of all layers "
+"used to run the algorithm, and there is no need to enter any value in the "
+"text box. In the case of a single input layer, as in the algorithm we are "
+"running, the same extent can be obtained by selecting that same input layer "
+"in the *Use layer/canvas extent* that we already saw. However, when there "
+"are several input layers, the min covering extent does not correspond to any"
+" of the input layer extent, since it is computed from all of them together."
+msgstr "De laatste optie is *Use min covering extent from input layers*, wat de standaard optie is. Dit zal de minimale bedekte bereik berekenen van alle lagen die gebruikt zullen worden om het algoritme uit te voeren, en er is geen reden om enige waarde in het tekstvak in te voeren. In het geval van één enkele invoerlaag, zoals in het algoritme dat we uitvoeren, kan hetzelfde bereik worden verkregen door diezelfde invoerlaag te selecteren in *Use layer/canvas extent* die we al eerder zagen. Echter, wanneer er verscheidene invoerlagen zijn, correspondeert het minimale bedekte bereik niet met enig bereik van de invoerlaag, omdat het uit alle tezamen wordt berekend."
+
+#: ../../source/docs/training_manual/processing/extents.rst:46
+msgid "We will use this last method to execute our rasterization algorith."
+msgstr "We zullen deze laatste methode gebruiken om ons algoritme voor het omzetten naar raster uit te voeren."
+
+#: ../../source/docs/training_manual/processing/extents.rst:48
+msgid "Fill the parameters dialog as shown next, and press *OK*."
+msgstr "Vul het dialoogvenster voor de parameters zoals hieronder weergegeven en druk op *OK*."
+
+#: ../../source/docs/training_manual/processing/extents.rst:52
+msgid ""
+"You will get a rasterized layer that covers exactly the area covered by the "
+"original vector layer."
+msgstr "U zult een rasterlaag verkrijgen die exact het gebied bedekt dat wordt bedekt door de originele vectorlaag."
+
+#: ../../source/docs/training_manual/processing/extents.rst:56
+msgid ""
+"In some cases, the last option, *Use min covering extent from input layers*,"
+" might not be avaialble. This will happen in those algorithm that do not "
+"have input layers, but just parameters of other types. In that case, you "
+"will have to enter the value manually or use any of the other options."
+msgstr "In sommige gevallen zou de laatste optie, *Use min covering extent from input layers*, niet beschikbaar kunnen zijn. Dit zal gebeuren bij die algoritmen die geen invoerlagen hebben, maar slechts parameters van andere typen. In dat geval zult u de waarde handmatig moeten invoeren of een van de andere opties gebruiken."
+
+#: ../../source/docs/training_manual/processing/extents.rst:58
+msgid ""
+"Notice that, when a selection exist, the extent of the layer is that of the "
+"whole set of features, and the selection is not used to compute the extent. "
+"In that case, you might want to actually create a new layer from the "
+"selection, and then use it as input."
+msgstr "Onthoud dat, wanneer een selectie bestaat, het bereik van de laag dat van de gehele verzameling objecten is, en de selectie wordt niet gebruikt voor de berekening van het bereik. In dat geval wilt u misschien een nieuwe laag maken van de selectie, en die dan gebruiken als invoer."

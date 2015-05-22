@@ -1,0 +1,105 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-03 12:27+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:6
+msgid "D-Infinity Reverse Accumulation"
+msgstr "Accumulation inverse D-Infinity"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:11
+msgid ""
+"This works in a similar way to evaluation of weighted Contributing area, "
+"except that the accumulation is by propagating the weight loadings upslope "
+"along the reverse of the flow directions to accumulate the quantity of "
+"weight loading downslope from each grid cell. The function also reports the "
+"maximum value of the weight loading downslope from each grid cell in the "
+"Maximum Downslope grid."
+msgstr "Cette accumulation fonctionne d'une manière similaire au calcul de la surface contributive pondérée à l'exception que l'accumulation est réalisation par la propagation des charges de pente ascendante le long des flux de direction inverse pour faire la somme des charges de pente descendante pour chaque cellule. La fonction renvoie également la valeur maximale de la charge de pente descendante de chaque cellule dans la grille de pente descendante maximale."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:20
+msgid ""
+"This function is designed to evaluate and map the hazard due to activities "
+"that may have an effect downslope. The example is land management activities"
+" that increase runoff. Runoff is sometimes a trigger for landslides or "
+"debris flows, so the weight grid here could be taken as a terrain stability "
+"map. Then the reverse accumulation provides a measure of the amount of "
+"unstable terrain downslope from each grid cell, as an indicator of the "
+"danger of activities that may increase runoff, even though there may be no "
+"potential for any local impact."
+msgstr "Cette fonction est destinée à calculer et cartographier les risques des activités qui peuvent avoir un effet de pente descendante. Un exemple concerne la gestion du territoire des activité qui accélèrent l'érosion. L'érosion est souvent un déclencheur de glissement de terrains ou de flux de débris et la grille de pondération doit être considérée comme une carte de stabilité de terrain. L'accumulation inverse fournit une mesure de la quantité de pente descendante de terrain instable pour chaque cellule de la grille. Il s'agit d'un indicateur de danger pour les activités entraînant de l'érosion même s'il peut ne pas y avoir de potentiel d'impact local."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:29
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:34
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D-Infinity`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:32
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This can be created by the"
+" tool **\"D-Infinity Flow Directions\"**."
+msgstr "Une grille donnant le flux de direction par la méthode D-Infinity. La direction de flux est mesurée en radians, dans le sens des aiguilles d'une montre depuis l'Est. Elle peut être obtenue par l'outil **\"Directions de flux D-Infinity\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:37
+msgid "``Weight Grid`` [raster]"
+msgstr "``Grille de pondération`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:37
+msgid "A grid giving weights (loadings) to be used in the accumulation."
+msgstr "Une grille donnant des poids (chargements) à utiliser dans l'accumulation."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:40
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:47
+msgid "``Reverse Accumulation Grid`` [raster]"
+msgstr "``Grille d'accumulation inverse`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:43
+msgid ""
+"The grid giving the result of the **\"Reverse Accumulation\"** function. "
+"This works in a similar way to evaluation of weighted Contributing area, "
+"except that the accumulation is by propagating the weight loadings upslope "
+"along the reverse of the flow directions to accumulate the quantity of "
+"loading downslope from each grid cell."
+msgstr "La grille donnant le résultat de la fonction d'**\"accumulation inverse\"**. Elle fonctionne d'une manière similaire au calcul de la surface contributive pondérée à l'exception que l'accumulation se fait par propagation des charges de pente ascendante le long des directions inverses de flux pour effectuer la somme des quantités de charges de pente descendante pour chaque cellule de la grille."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:51
+msgid "``Maximum Downslope Grid`` [raster]"
+msgstr "``Grille de pente descendante maximale`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:50
+msgid ""
+"The grid giving the maximum of the weight loading grid downslope from each "
+"grid cell."
+msgstr "La grille donnant la charge maximum de pente descendante à partir de chaque cellule de la grille d'entrée."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:54
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityreverseaccumulation.rst:61
+msgid "See also"
+msgstr "Voir également"

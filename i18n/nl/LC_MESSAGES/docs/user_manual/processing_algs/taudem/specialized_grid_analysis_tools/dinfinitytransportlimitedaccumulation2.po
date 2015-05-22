@@ -1,0 +1,215 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-08 14:09+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:6
+msgid "D-Infinity Transport Limited Accumulation - 2"
+msgstr "D-oneindigheid transportbegrensde accumulatie - 2"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:11
+msgid ""
+"This function is designed to calculate the transport and deposition of a "
+"substance (e.g. sediment) that may be limited by both supply and the "
+"capacity of the flow field to transport it. This function accumulates "
+"substance flux (e.g. sediment transport) subject to the rule that transport "
+"out of any grid cell is the minimum between supply and transport capacity, "
+"``Tcap``. The total supply at a grid cell is calculated as the sum of the "
+"transport in from upslope grid cells, ``Tin``, plus the local supply "
+"contribution, ``E`` (e.g. erosion). This function also outputs deposition, "
+"``D``, calculated as total supply minus actual transport."
+msgstr "Deze functie is ontworpen om het transport en achterlaten van een substantie (bijv. sediment) te berekenen, dat kan worden begrensd door zowel de aanvoer als de capaciteit van het stroomveld om het te transporteren. Deze functie accumuleert de vloeibare substantie (bijv. transport van sediment) onderwerp van de regel dat transport uit een cel van het raster het minimum is tussen aanvoer en transportcapaciteit, ``Tcap``. De totale aanvoer in een cel van het raster wordt berekend als de som van het inkomende transport van hoger gelegen cellen van het raster, ``Tin``, plus de lokale deelname aan de aanvoer, ``E`` (bijv. erosie). Deze functie voert ook het achterlaten uit, ``D``, berekend als de totale aanvoer minus het actuele transport."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:23
+msgid ""
+"Here ``E`` is the supply. ``Tout`` at each grid cell becomes ``Tin`` for "
+"downslope grid cells and is reported as Transport limited accumulation "
+"(``tla``). ``D`` is deposition (``tdep``). The function provides the option "
+"to evaluate concentration of a compound (contaminant) adhered to the "
+"transported substance. This is evaluated as follows:"
+msgstr "Hier is ``E`` de aanvoer. ``Tout`` in elke cel van het raster wordt ``Tin`` voor lager gelegen cellen in het raster en wordt gerapporteerd als Transportbegrensde accumulatie (``tla``). ``D`` is achtergelaten (``tdep``). De functie verschaft de optie om concentratie van een stof (verontreiniger) verkleefd met de getransporteerde substantie te evalueren. Dit wordt als volgt geëvalueerd:"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:32
+msgid ""
+"Where ``Lin`` is the total incoming compound loading and ``Cin`` and ``Tin``"
+" refer to the Concentration and Transport entering from each upslope grid "
+"cell."
+msgstr "Waar ``Lin`` de totale inkomende lading stof is en ``Cin`` en ``Tin``verwijzen naar de Concentratie en Transport die worden ingevoerd vanuit elke hoger gelegen cel van het raster."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:38
+msgid "If"
+msgstr "Als"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:44
+msgid "else"
+msgstr "anders"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:49
+msgid ""
+"where ``Cs`` is the concentration supplied locally and the difference in the"
+" second term on the right represents the additional supply from the local "
+"grid cell. Then,"
+msgstr "waar ``Cs`` de concentratie is die lokaal wordt aangevoerd en het verschil in de tweede term aan de rechterkant vertegenwoordigt de aanvullende aanvoer vanuit de lokale cel van het raster. Dan,"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:56
+msgid ""
+"``Cout`` at each grid cell comprises is the concentration grid output from "
+"this function."
+msgstr "bestaat ``Cout`` voor elke cel van het raster uit de uitvoer van het raster voor de concentratie vanuit deze functie."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:59
+msgid ""
+"If the outlets shapefile is used the tool only evaluates that part of the "
+"domain that contributes flow to the locations given by the shapefile."
+msgstr "Als het shapefile voor de afvoeren werd gebruikt evalueert het gereedschap alleen dat deel van het domein dat  deelneemt in de stroom voor de locaties die worden opgegeven door het shapefile."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:62
+msgid ""
+"Transport limited accumulation is useful for modeling erosion and sediment "
+"delivery, including the spatial dependence of sediment delivery ratio and "
+"contaminant that adheres to sediment."
+msgstr "Transportbegrensde accumulatie is handig voor het modelleren van aflevering van erosie en sediment, inclusief de ruimtelijke afhankelijkheid van de ratio aflevering sediment en verontreiniger die verkleefd is met het sediment."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:67
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:72
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``D-oneindigheid raster stroomrichting`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:70
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This can be created by the"
+" tool **\"D-Infinity Flow Directions\"**."
+msgstr "Een raster dat de stroomrichting geeft volgens de methode D-oneindigheid. Stroomrichting wordt gemeten in radialen, tegen de wijzers van de klok in vanuit Oost. Dit kan worden gemaakt door het gereedschap **\"D-oneindigheid stroomrichtingen\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:77
+msgid "``Supply Grid`` [raster]"
+msgstr "``Aanvoerraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:75
+msgid ""
+"A grid giving the supply (loading) of material to a transport limited "
+"accumulation function. In the application to erosion, this grid would give "
+"the erosion detachment, or sediment supplied at each grid cell."
+msgstr "Een raster dat de aanvoer (lading) van een materiaal geeft voor een functie transportbegrensde accumulatie. In de toepassing voor erosie, zou dit raster de afname aan erosie, of aangevoerd sediment voor elke cel van het raster geven."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:82
+msgid "``Transport Capacity Grid`` [raster]"
+msgstr "``Raster transportcapaciteit`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:80
+msgid ""
+"A grid giving the transport capacity at each grid cell for the transport "
+"limited accumulation function. In the application to erosion this grid would"
+" give the transport capacity of the carrying flow."
+msgstr "Een raster dat de transportcapaciteit voor elke cel van het raster geeft voor de functie transportbegrensde accumulatie. In de toepassing voor erosie zou dit raster de transportcapaciteit geven van de dragende stroom."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:88
+msgid "``Input Concentration Grid`` [raster]"
+msgstr "``Invoer raster concentratie`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:85
+msgid ""
+"A grid giving the concentration of a compound of interest in the supply to "
+"the transport limited accumulation function. In the application to erosion, "
+"this grid would give the concentration of say phosphorous adhered to the "
+"eroded sediment."
+msgstr "Een raster dat de concentrati van een van belang zijnde stof in de aanvoer geeft voor de functie transportbegrensde accumulatie. In de toepassing voor erosie, zou dit raster de concentratie van, zeg fosfor, verkleefd met het geërodeerde sediment geven."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:95
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Afvoeren-shapefile`` [vector: punt]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:91
+msgid "Optional."
+msgstr "Optioneel."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:93
+msgid ""
+"This optional input is a point shapefile defining outlets of interest. If "
+"this file is used, the tool will only evaluate the area upslope of these "
+"outlets."
+msgstr "Deze optionele invoer is een punt-shapefile dat de interessante afvoerpunten definieert. Als het bestand wordt gebruikt, zal het gereedschap alleen het hoger gelegen gebied voor deze afvoeren evalueren."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:103
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Controleren op besmetting rand`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:98
+msgid ""
+"This option determines whether the tool should check for edge contamination."
+" Edge contamination is defined as the possibility that a value may be "
+"underestimated due to grid cells outside of the domain not being considered "
+"when determining the result."
+msgstr "Deze optie bepaalt of het gereedschap moet controleren op besmetting van randen. Besmetting van randen wordt gedefinieerd als de mogelijkheid dat een waarde niet kan worden bepaald vanwege het feit dat cellen voor het raster buiten het domein niet in overweging worden genomen bij het bepalen van het resultaat."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:103
+msgid "Default: *True*"
+msgstr "Standaard: *True*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:106
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:113
+msgid "``Transport Limited Accumulation Grid`` [raster]"
+msgstr "``Raster Transportbegrensde accumulatie`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:109
+msgid ""
+"This grid is the weighted accumulation of supply accumulated respecting the "
+"limitations in transport capacity and reports the transport rate calculated "
+"by accumulating the substance flux subject to the rule that the transport "
+"out of any grid cell is the minimum of the total supply (local supply plus "
+"transport in) to that grid cell and the transport capacity."
+msgstr "Dit raster is de gewogen accumulatie van aanvoer, geaccumuleerd met inachtneming van de beperkingen in transportcapaciteit en rapporteert de transporthoeveelheid berekend door de vloeibare substantie te accumuleren onderworpen aan de regel dat het uitgaande transport van een cel van het raster het minimum is van de totale aanvoer (lokale aanvoer plus inkomend transport) voor die cel van het raster en de transportcapaciteit."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:119
+msgid "``Deposition Grid`` [raster]"
+msgstr "``Raster van achterlating`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:116
+msgid ""
+"A grid giving the deposition resulting from the transport limited "
+"accumulation. This is the residual from the transport in to each grid cell "
+"minus the transport capacity out of the grid cell. The deposition grid is "
+"calculated as the transport in + the local supply - the tranport out."
+msgstr "Een raster dat de achterlating geeft dat resulteert uit de  transportbegrensde accumulatie. Dit is het residu van het inkomende transport voor elke cel van het raster minus de uitgaande transportcapaciteit van de cel van het raster. De  achterlating word berekend als: inkomend transport + de lokale aanvoer - uitgaande transport."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:124
+msgid "``Output Concentration Grid`` [raster]"
+msgstr "``Uitvoer raster concentratie`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:122
+msgid ""
+"If an input concentation in supply grid is given, then this grid is also "
+"output and gives the concentration of a compound (contaminant) adhered or "
+"bound to the transported substance (e.g. sediment) is calculated."
+msgstr "Als een invoer concentratie in het aanvoer-raster is gegeven, dan is dit raster ook uitvoer en wordt de concentratie van een stof (verontreiniger) die is verkleefd of gebonden aan de getransporteerde substantie (bijv. sediment) berekend."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:127
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitytransportlimitedaccumulation2.rst:134
+msgid "See also"
+msgstr "Zie ook"

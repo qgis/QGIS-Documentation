@@ -1,0 +1,189 @@
+# 
+# Translators:
+# Julien Francois <julien.francois1@hotmail.fr>, 2014
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-11 12:29+0000\n"
+"Last-Translator: MarieAude <marie-aude.aeby@camptocamp.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:6
+msgid "Clipping and merging raster layers"
+msgstr "Découpage et fusion de couches raster"
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:8
+msgid ""
+"In this lesson we will see another example of spatial data preparation, to "
+"continue using geoalgorithms in real-world scenarios"
+msgstr "Dans cette leçon, nous verrons un autre exemple de préparation de données spatiales, pour continuer à utiliser des géoalgorithmes dans des scénarios du monde réel."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:10
+msgid ""
+"For this lesson, we are going to calculate a slope layer for an area "
+"surrounding a city area, which is given in a vector layer with a single "
+"polygon. The base DEM is divided in two raster layers that, together, cover "
+"an area much larger than that around the city that we want to work with. If "
+"you open the project corresponding to this lesson, you will see something "
+"like this."
+msgstr "Pour cette leçon, nous allons calculer une couche de pente pour une zone entourant une zone de ville, qui est donnée dans une couche vecteur avec un seul polygone. Le MNE de base est divisé en deux couches raster qui, ensemble, couvrent une zone beaucoup plus grande que celle autour de la ville avec laquelle nous voulons travailler. Si vous ouvrez le projet correspondant à cette leçon, vous verrez quelque chose comme ça."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:15
+msgid "These layers have two problems:"
+msgstr "Ces couches ont deux problèmes :"
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:17
+msgid ""
+"They cover an area that is too large for what we want (we are interested in "
+"a smaller region around the city center)"
+msgstr "Elles couvrent une aire qui est trop grande pour ce que l'on veut (nous nous intéressons à une plus petite région autour du centre ville) "
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:18
+msgid ""
+"They are in two different files. (The city limits fall into just one single "
+"raster layer, but, as it's been said, we want some extra area around it)."
+msgstr "Elles sont dans deux fichiers différents. (Les limites de la ville tombent dans une seule couche raster, mais, comme cela a été dit, nous voulons des zones supplémentaires autour d'elle)."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:20
+msgid "Both of them are easily solvable with the appropriate geoalgorithms."
+msgstr "Ces deux problèmes sont facilement résolvables avec les géoalgorithmes appropriés."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:22
+msgid ""
+"First, we create a rectangle defining the area that we want. To do it, we "
+"create a layer containing the bounding box of the layer with the limits of "
+"the city area, and then we buffer it, so as to have a raster layer that "
+"covers a bit more that the strictly necessary."
+msgstr "Premièrement, nous créons un rectangle définissant la zone que nous voulons. Pour faire cela, nous créons une couche contenant la boîte englobante de la couche avec les limites de la zone de la ville, et ensuite nous lui mettons un tampon, afin d'obtenir une couche raster qui couvre un peu plus que le strict nécessaire."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:24
+msgid ""
+"To calculate the bounding box , we can use the *Polygon from layer extent* "
+"algorithm"
+msgstr "Pour calculer la boîte englobante, nous pouvons utiliser l'algorithme *Créer un polygone à partir de l'emprise de la couche*."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:28
+msgid ""
+"To buffer it, we use the *Fixed distance buffer* algorithm, with the "
+"following parameter values."
+msgstr "Pour lui mettre un tampon, nous utilisons l'algorithme *Tampon à distance fixe*, avec les valeurs de paramètres suivantes."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:33
+msgid ""
+"Here is the resulting bounding box obtained using the parameters shown above"
+msgstr "Voici la boîte englobante de résultat obtenue en utilisant les paramètres montrés au-dessus."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:37
+msgid ""
+"It is a rounded box, but we can easily get the equivalent box with square "
+"angles, by running the *Polygon from layer extent* algorithm on it. We could"
+" have buffered the city limits first, and then calculate the extent "
+"rectangle, saving one step."
+msgstr "C'est une boîte ronde, mais nous pouvons facilement obtenir la boîte équivalente avec des angles droits, en lançant pour elle l'algorithme *Créer un polygone à partir de l'emprise de la couche*. Nous pourrions avoir fait un tampon sur les limites de la ville d'abord, et ensuite calculer l'emprise du rectangle, en sauvegardant à chaque étape."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:41
+msgid ""
+"You will notice that the rasters has a different projection from the vector."
+" We should therefore reproject them before proceeding further, using the "
+"*Warp (reproject)* tool."
+msgstr "Vous remarquerez que les rasters ont une projection différente que celle du vecteur. Nous devons donc les reprojeter avant de poursuivre, en utilisant l'outil *Projection (reprojection)*."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:45
+msgid ""
+"With this layer that contains the bounding box of the raster layer that we "
+"want to obtain, we can crop both of the raster layers, using the *Clip Grid "
+"with Polygons algorithm.*"
+msgstr "Avec cette couche qui contient la boîte englobante de la couche raster que nous voulons obtenir, nous pouvons recadrer les deux couches raster, en utilisant l'algorithme *Découper une grille avec des polygones*."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:49
+msgid ""
+"Once the layers have been cropped, they can be merged using the *Merge "
+"raster layers* algorithm"
+msgstr "Une fois que les couches ont été découpées, elles peuvent être fusionnées en utilisant l'algorithme *Fusionner des couches raster*"
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:53
+msgid ""
+"A cellsize is needed for the merged layer. We will use the same one of the "
+"input ones. You do not need to know it in advance before calling the "
+"algorithm. Just click on the button in the right--hand size of the text "
+"field and you will have a dialog to enter small mathematical formulas, and a"
+" list of frequently used values, among them the cellsizes and bounding "
+"coordinates of all available layers."
+msgstr "Une taille de cellule est nécessaire pour la couche fusionnée. Nous utiliserons la même que celle des couches d'entrée. Vous n'avez pas besoin de la connaître à l'avance avant d'appeler l'algorithme. Cliquez simplement sur le bouton sur le côté droit du champ de texte et vous obtiendrez une boîte de dialogue pour entrer de petites formules mathématiques, et une liste des valeurs fréquemment utilisées, au milieu d'elles les tailles de cellules et les coordonnées de la boîte de toutes les couches disponibles."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:55
+msgid ""
+"Note: You can save time merging first and then cropping, and you will avoid "
+"calling the clipping algorith twice. However, if there are several layers to"
+" merge and they have a rather big size, you will end up with a large layer "
+"than it can later be difficult to process. In that case, you might have to "
+"call the clipping algorithm several times, which might be time consuming, "
+"but don't worry, we will soon see that there are some additional tools to "
+"automate that operation. In this example, we just have two layers, so you "
+"shouldn't worry about that now."
+msgstr "Note : Vous pouvez gagner du temps en fusionnant d'abord et en découpant ensuite, et vous éviterez d'appeler deux fois l'algorithme de découpage. Cependant, s'il y a plusieurs couches à fusionner et qu'elles ont une assez grande taille, vous finirez avec une grande couche qui pourra être difficile à traiter plus tard. Dans ce cas, vous devriez appeler l'algorithme de découpage plusieurs fois, ce qui peut prendre beaucoup de temps, mais ne vous inquiétez pas, nous verrons bientôt qu'il existe des outils supplémentaires pour automatiser cette opération. Dans cet exemple, nous avons seulement deux couches, donc vous n'aurez pas besoin de vous soucier de cela maintenant."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:57
+msgid "With that, we get the final DEM we want."
+msgstr "Avec cela, nous obtenons le MNE final que nous voulons."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:61
+msgid "Now it is time to compute the slope layer."
+msgstr "Il est maintenant temps de calculer la couche de pente."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:63
+msgid ""
+"A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm,"
+" but the DEM obtained in the last step is not suitable as input, since "
+"elevation values are in meters but cellsize is not expressed in meters (the "
+"layer uses a CRS with geographic coordinates). A reprojection is needed. To "
+"reproject a raster layer, the *Warp (reproject)* algorithm can be used "
+"again. We reproject into a CRS with meters as units (e.g. 3857), so we can "
+"then correctly calculate the slope, with either SAGA or GDAL."
+msgstr "Une couche de pente peut être calculée avec l'algorithme *Pente, Aspect, Courbes*, mais le MNE obtenu dans la dernière étape n'est pas approprié comme entrée, puisque les valeurs d'élévation sont en mètre mais la taille de cellule n'est pas exprimée en mètre (la couche utilise un SCR avec des coordonnées géographiques). Une reprojection est nécessaire. Pour reprojeter une couche raster, l'algorithme *Projection (reprojection)* peut encore être utilisé. Nous reprojetons dans un SCR avec des mètres comme unités (par exemple 3857), donc nous pouvons ensuite calculer correctement la pente, avec soit SAGA soit GDAL."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:65
+msgid "Here is the reprojected DEM."
+msgstr "Voici le MNE reprojeté."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:69
+msgid "With the new DEM, slope can now be computed."
+msgstr "Avec ce nouveau MNE, la pente peut maintenant être calculée."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:73
+msgid "And here is the resulting slope layer."
+msgstr "Et voici la couche de pente de résultat."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:77
+msgid ""
+"The slope produced by the *Slope, Aspect, Curvature* algorithm is expressed "
+"in radians, but degrees are a more practical and common unit. The *Metric "
+"conversions* algorithm will help us to do the conversion (but in case you "
+"didn't know that algorithm existed, you could use the raster calculator that"
+" we have already used)."
+msgstr "La pente produite par l'algorithme *Pente, Aspect, Courbes* est exprimée en radian, mais les degrés sont une unité plus pratique et plus commune. L'algorithme *Conversions métriques* nous aidera à faire la conversion (mais dans le cas où vous ne sauriez pas que cet algorithme existe, vous pourriez utiliser la calculatrice raster que nous avons déjà utilisée)."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:81
+msgid ""
+"Reprojecting the converted slope layer back with the *Reproject raster "
+"layer*, we get the final layer we wanted."
+msgstr "En reprojetant la couche de pente reconvertie avec la *Reprojection de couche raster*, nous obtenons la couche finale que nous souhaitons."
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:83
+msgid "todo: Add image"
+msgstr "todo: Ajouter une image"
+
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:85
+msgid ""
+"The reprojection processes have caused the final layer to contain data "
+"outside the bounding box that we calculated in one of the first steps. This "
+"can be solved by clipping it again, as we did to obtain the base DEM."
+msgstr "Les processus de reprojection ont donné la couche finale qui contient des données en dehors de la boîte englobante que nous avons calculée dans une des premières étapes. Cela peut être résolu en la découpant à nouveau, comme nous l'avons fait pour obtenir le MNE de base."

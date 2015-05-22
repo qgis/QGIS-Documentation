@@ -1,0 +1,145 @@
+# 
+# Translators:
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-29 19:03+0000\n"
+"Last-Translator: Minerva Durán Martínez <mine_tod@yahoo.com.mx>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/qgis-documentation/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:6
+msgid "The batch processing interface"
+msgstr "La interfaz de procesamiento por lote"
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:8
+msgid ""
+"This lesson introduces the batch processing interface, which allows to "
+"execute a single algorithm with a set of different input values"
+msgstr "Esta lección presenta la interfaz de procesamiento por lote, que permite ejecutar un solo algoritmo con un conjunto de diferentes valores de entrada "
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:10
+msgid ""
+"Sometimes a given algorithm has to be executed repeteadly with different "
+"inputs. This is, for instance, the case when a set of input files have to be"
+" converted from one format to another, or when several layers in a given "
+"projection must be converted into another projection."
+msgstr "Algunas veces un algoritmo dado tiene que ser ejecutado repetidamente con diferentes entradas. Esto es, por ejemplo, el caso cuando un conjunto de archivos de entrada tienen que ser convertidos de un formato a otro, o cuando varias capas en una proyección dada deben ser convertidas a otra."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:12
+msgid ""
+"In that case, calling the algorithm repeatedly on the toolbox is not the "
+"best option. Instead, the batch processing interface should be used, which "
+"greatly simplifies performing a multiple execution of a given algorithm. To "
+"run an algorithm as a batch process, find it in the toolbox, and instead of "
+"double--clicking on it, right--click on it and select *Run as batch "
+"process*."
+msgstr "En ese caso, llamando al algoritmo repetidamente en la caja de herramientas no es la mejor opción. En lugar de ello, la interfaz de procesamiento por lotes se debe utilizar, que simplifica en gran medida el rendimiento de una ejecución múltiple de un algoritmo dado. Para ejecutar un algoritmo como un proceso por lotes, búsquelo en la caja de herramientas, y en lugar de doble clic sobre él , haga clic derecho en él y seleccione *Ejecutar como proceso por lotes* ."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:16
+msgid ""
+"For this example, we will use the *Reproject algorithm*, so find it and do "
+"as described above. You will get to the following dialog."
+msgstr "Para este ejemplo, utilizaremos el *Algoritmo de reproyección*, así que encontrado y hacer como se describe anteriormente. Obtendrá el siguiente diálogo."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:20
+msgid ""
+"If you have a look at the data fo this lesson, you will see that it contains"
+" a set of three shapefiles, but no QGIS project file. This is because, when "
+"an algorithm is run as a batch process, layer inputs can be selected either "
+"from the current QGIS project or from files. That makes it easier to process"
+" large amounts of layers, such as, for instance, all the layers in a given "
+"folder."
+msgstr "Si tiene una vista de los datos de esta lección, verá que contiene un conjunto de tres archivos shape, pero no hay ningún archivo de proyecto de QGIS. Esto es porque, cuando un algoritmo se ejecuta como un procesamiento por lotes, las capas de entradas se pueden seleccionar ya sea desde el proyecto QGIS actual o a partir de los archivos. Eso hace que sea más fácil de procesar grandes cantidades de capas,  así como, por ejemplo, todas las capas en una carpeta determinada."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:22
+msgid ""
+"Each row in the table of the batch processing dialog represents a single "
+"execution of the algorithm. Cells in a row correspond to the parameter "
+"needed by the algorithm, which are not arranged one above the other, as in "
+"the normal single--execution dialog, but horizontally in that row."
+msgstr "Cada fila de la tabla del diálogo de proceso por lotes representa una solo ejecución del algoritmo. Las celdas en una fila corresponden a parámetros necesarios por el algoritmo, que no es organizado uno encima del otro, como en un diálogo normal de solo--ejecución, pero horizontalmente en esa fila."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:24
+msgid ""
+"Defining the batch process to run is one by filling the table with the "
+"corresponding values, and the dialog itself contains several tools to make "
+"this task easier."
+msgstr "Definir el proceso por lotes para ejecutar es uno al rellenar la tabla con los valores correspondientes, y el diálogo en sí contiene varias herramientas para hacer esta tarea más fácil."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:26
+msgid ""
+"Let's start filling the fields one by one. The first column to fill is the "
+"*Input layer* one. Instead of entering the names of each one of the layers "
+"we want to process, you can select all of them and let the dialog put one in"
+" each row. Click on the button in the upper-left cell, and in the file "
+"selection dialog that will popup, select the three files to reproject. Since"
+" only one of them is needed for each row, the remaining ones will be used to"
+" fill the rows underneath."
+msgstr "Vamos a empezar llenando los campos de uno en uno. La primera columna para anotar es la *Capa de entrada*. En lugar de introducir los nombres de cada una de las capas que queremos procesar, puede seleccionar todos ellos y dejar que el diálogo ponga uno en cada fila. Haga clic en el botón de la casilla superior izquierda y, en el cuadro de diálogo de selección de archivos que emergente, seleccione los tres archivos a reproyectar. Dado que sólo uno de ellos se necesita para cada fila, las restantes se utilizarán para llenar las filas debajo."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:30
+msgid ""
+"The default number of rows is 3, which is exactly the number of layers we "
+"have to convert, but if you select more layers, new rows will be added "
+"automatically. If you want to fill the entries manually, you can add more "
+"rows using the *Add row* button."
+msgstr "El número predeterminado de filas es 3, que es exactamente el numero de capas que tenemos que convertir, pero si seleccionamos más capas, nuevas filas se añadirán automáticamente.Si desea llenar las entradas manualmente, se puede añadir más más filas utilizando el botón *Añadir fila*."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:32
+msgid ""
+"We are going to convert all those layers to the EPSG:23029 CRS, so we have "
+"to select that CRS in the second field. We want the same on for all rows, "
+"but we do not have to do it for every single row. Instead, set that CRS for "
+"the first row (the one at the top) using the button in the corresponding "
+"cell, and then double click on the column header. That causes all the cells "
+"in the column to be filled using the value of the top cell."
+msgstr "Vamos a convertir todas estas capas al SRC EPSG:23029, así que tenemos que seleccionar ese SRC en el segundo campo. Queremos lo mismo en todas las filas, pero no tenemos que hacerlo para cada fila individual. En su lugar, establezca el SRC para la primera fila (el que está en la parte superior) con el botón de la casilla correspondiente y haga doble clic en el encabezado de la columna. Eso hace que todas las celdas de la columna se llenen con el valor de la celda superior."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:36
+msgid ""
+"Finally, we have to select an output file for each execution, which will "
+"contain the corresponding reprojected layer. Once again, let's do it just "
+"for the first column. Click on the button in the upper cell and, in a folder"
+" where you want to put your output files, enter a filename (for instance, "
+"``reprojected.shp``)."
+msgstr "Finalmente, tenemos que seleccionar un archivo de salida para cada ejecución, que contendrá la capa reproyectada correspondiente. Una vez más, vamos a hacerlo solo para la primer columna. Haga clic en el botón en la celda superior y en un folder donde quiera colocar los archivos de salida, escriba el nombre del archivo (por ejemplo, \"reproyectado.shp\")"
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:38
+msgid ""
+"Now, when you click *OK* on the file selection dialog, the file does not "
+"automatically gets written to the cell, but an input box like the following "
+"one is shown instead."
+msgstr "Ahora, cuando haga clic en *Aceptar* el diálogo de selección de archivo, el archivo no se escribe automáticamente en la celda, pero un cuadro de entrada como el siguiente se muestra en su lugar."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:42
+msgid ""
+"If you select the first option, only the current cell will be filled. If you"
+" select any of the other ones, all the rows below will be filled with a "
+"given pattern. In this case, we are going to select the *Fill with parameter"
+" value* option, and then the *Input Layer* value in the drop down menu "
+"below. That will cause the value in the *Input Layer* (that is, the layer "
+"name) to be added to the filename we have added, making each output filename"
+" different. The batch processing table should now look like this."
+msgstr "Si selecciona la primera opción, se llenará solo la celda actual. Si se selecciona cualquiera de las otras, todas las filas inferiores se llenarán con un patrón predeterminado. En este caso, vamos a seleccionar la opción *Llenar con el valor del parámetro*, y el valor *Capa de entrada* en el menú desplegable más abajo. Eso hará que el valor en la *Capa de entrada* (es decir, el nombre de la capa) que se añada al nombre de archivos que hemos añadido, por lo que cada nombre de archivo de salida diferente. La tabla de procesamiento por lotes ahora debería tener este aspecto."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:46
+msgid ""
+"The last column sets whether or not to add the resulting layers to the "
+"current QGIS project. Leave the default *Yes* option, so you can see your "
+"results in this case."
+msgstr "La última columna establece si desea o no agregar las capas resultantes al proyecto QGIS actual. Deje el valor de la opción predeterminada *Sí* , así que usted puede ver los resultados en este caso."
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:48
+msgid ""
+"Click on *OK* and the batch process will be run. If everything went fine, "
+"all your layers will have been processed, and 3 new layers would have been "
+"created."
+msgstr "Haga clic en *Aceptar* y el proceso por lote será ejecutado. Si todo ha ocurrido bien, todas las capas se han procesado  y se han creado 3 nuevas capas."

@@ -1,0 +1,520 @@
+# 
+# Translators:
+# Choro <u.ko.kubot@gmail.com>, 2014
+# Minoru Akagi <akaginch@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-02 14:36+0000\n"
+"Last-Translator: Choro <u.ko.kubot@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:6
+msgid "|LS| The Label Tool"
+msgstr "|LS| ラベルツール"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:8
+msgid ""
+"Labels can be added to a map to show any information about an object. Any "
+"vector layer can have labels associated with it. These labels rely on the "
+"attribute data of a layer for their content."
+msgstr "オブジェクトに関する情報を表示するためにラベルを地図に追加することができます。任意のベクタレイヤはそれに関連するラベルを持つことができます。ラベルの内容はレイヤの属性データに依存します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:12
+msgid ""
+"The :guilabel:`Layer Properties` dialog does have a :guilabel:`Labels` tab, "
+"which now offers the same functionality, but for this example we'll use the "
+":guilabel:`Label tool`, accessed via a toolbar button."
+msgstr ":guilabel:`レイヤプロパティ` ダイアログは :guilabel:`ラベル` タブを持ち同じ機能を提供していますが、この例ではツールバーのボタンからアクセスできる :guilabel:`ラベルツール` を使用します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:17
+msgid ""
+"**The goal for this lesson:** To apply useful and good-looking labels to a "
+"layer."
+msgstr "**このレッスンの目標:** 役に立ち見栄えの良いラベルをレイヤに適用します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:21
+msgid "|basic| |FA| Using Labels"
+msgstr "|basic| |FA| ラベルの使用"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:23
+msgid ""
+"Before being able to access the Label tool, you will need to ensure that it "
+"has been activated."
+msgstr "ラベルツールにアクセスする前に、それがアクティブになっていることを確認する必要があります。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:26
+msgid "Go to the menu item :menuselection:`View --> Toolbars`."
+msgstr "メニュー項目 :menuselection:`ビュー --> ツールバー` に移動します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:27
+msgid ""
+"Ensure that the :guilabel:`Label` item has a check mark next to it. If it "
+"doesn't, click on the :guilabel:`Label` item, and it will be activated."
+msgstr ":guilabel:`ラベル` アイテムの横にチェックマークがあることを確認して下さい。もしなければ :guilabel:`ラベル` アイテムをクリックするとアクティブになります。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:29
+msgid ""
+"Click on the :guilabel:`places` layer in the :guilabel:`Layers list`, so "
+"that it is highlighted."
+msgstr ":guilabel:`レイヤリスト` で :guilabel:`places` レイヤをクリックしてハイライト表示させます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:31
+msgid "Click on the following toolbar button: |mActionLabeling|"
+msgstr "このツールバーのボタンをクリックします: |mActionLabeling|"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:33
+msgid "This gives you the :guilabel:`Layer labeling settings` dialog."
+msgstr ":guilabel:`レイヤラベリング設定` ダイアログが表示されます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:35
+msgid "Check the box next to :guilabel:`Label this layer with...`."
+msgstr ":guilabel:`このレイヤのラベル` の隣のボックスをチェックします。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:37
+msgid ""
+"You'll need to choose which field in the attributes will be used for the "
+"labels. In the previous lesson, you decided that the :kbd:`NAME` field was "
+"the most suitable one for this purpose."
+msgstr "ラベルに使用する属性フィールドを選択します。前のレッスンであなたはこの目的には :kbd:`NAME` フィールドが最も適していると決めました。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:41
+msgid "Select :guilabel:`name` from the list:"
+msgstr "リストから :guilabel:`name` を選択します:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:46
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` をクリックします。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:48
+msgid "The map should now have labels like this:"
+msgstr "今、地図にはこのようなラベルが表示されるはずです:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:54
+msgid "|basic| |FA| Changing Label Options"
+msgstr "|basic| |FA| ラベルオプションの変更"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:56
+msgid ""
+"Depending on the styles you chose for your map in earlier lessons, you'll "
+"might find that the labels are not appropriately formatted and either "
+"overlap or are too far away from their point markers."
+msgstr "以前のレッスンであなたが選択したスタイルによってはラベルが適切にフォーマットされず、重複していたりポイントマーカーから遠く離れていたりしているかもしれません。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:60
+msgid ""
+"Open the :guilabel:`Label tool` again by clicking on its button as before."
+msgstr "前のようにツールバーのボタンを押して :guilabel:`ラベルツール` を再度開きます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:61
+msgid ""
+"Make sure :guilabel:`Text` is selected in the left-hand options list, then "
+"update the text formatting options to match those shown here:"
+msgstr "左側のオプションリストで :guilabel:`テキスト` が選択されていることを確認し、ここに示されているものと同じになるようにテキスト書式設定を更新します:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:68
+msgid ""
+"That's the font problem solved! Now let's look at the problem of the labels "
+"overlapping the points, but before we do that, let's take a look at the "
+":guilabel:`Buffer` option."
+msgstr "フォントの問題が解決されました! では、ポイントにラベルが重なる問題を見てみましょう。しかし、その前に :guilabel:`バッファ` オプションを見てみます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:72
+msgid "Open the :guilabel:`Label tool` dialog."
+msgstr ":guilabel:`ラベルツール` ダイアログを開きます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:73
+msgid "Select :guilabel:`Buffer` from the left-hand options list."
+msgstr "左側のオプションリストから :guilabel:`バッファ` を選択します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:74
+msgid ""
+"Select the checkbox next to :guilabel:`Draw text buffer`, then choose "
+"options to match those shown here:"
+msgstr ":guilabel:`テキスト縁取りの描画` の隣のチェックボックスをチェックし、ここに示されているものと同じになるようにテキスト書式設定を更新します:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:81
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:101
+msgid "Click :guilabel:`Apply`."
+msgstr ":guilabel:`適用` をクリックします。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:84
+msgid ""
+"You'll see that this adds a colored buffer or border to the place labels, "
+"making them easier to pick out on the map:"
+msgstr "着色されたバッファまたは境界線が場所ラベルに追加されて地図上で見分けやすくなりました:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:90
+msgid ""
+"Now we can address the positioning of the labels in relation to their point "
+"markers."
+msgstr "ポイントマーカーに相対的なラベルの配置に取りかかります。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:93
+msgid ""
+"In the :guilabel:`Label tool` dialog, go to the :guilabel:`Placement` tab."
+msgstr ":guilabel:`ラベルツール` ダイアログで :guilabel:`配置` タブに移ります。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:94
+msgid ""
+"Change the value of :guilabel:`Distance` to :kbd:`2mm` and make sure that "
+":guilabel:`Around point` is selected:"
+msgstr ":guilabel:`距離` の値を :kbd:`2mm` に変更して、:guilabel:`ポイント周辺` が選択されていることを確認します:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:104
+msgid ""
+"You'll see that the labels are no longer overlapping their point markers."
+msgstr "ラベルはもはやポイントマーカーに重なっていません。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:108
+msgid "|moderate| |FA| Using Labels Instead of Layer Symbology"
+msgstr "|moderate| |FA| レイヤシンボロジの代わりにラベルを使用する"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:110
+msgid ""
+"In many cases, the location of a point doesn't need to be very specific. For"
+" example, most of the points in the :guilabel:`places` layer refer to entire"
+" towns or suburbs, and the specific point associated with such features is "
+"not that specific on a large scale. In fact, giving a point that is too "
+"specific is often confusing for someone reading a map."
+msgstr "多くの場合、ポイントの位置はあまり的確である必要はありません。たとえば、 :guilabel:`places` レイヤのポイントのほとんどは町全体や郊外を指し示し、そのような地物に関連するポイントは大縮尺ではそれほど的確ではありません。実際には、詳細すぎるポイントを与えるとしばしば地図を読む人に混乱を招くことがあります。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:116
+msgid ""
+"To name an example: on a map of the world, the point given for the European "
+"Union may be somewhere in Poland, for instance. To someone reading the map, "
+"seeing a point labeled *European Union* in Poland, it may seem that the "
+"capital of the European Union is therefore in Poland."
+msgstr "例を挙げると: 例えば、世界地図上では欧州連合のために与えられた点はポーランドのどこかにあります。 *European Union* のラベルの付いたポイントがポーランドにあるので、地図を読んでいる人には欧州連合の首都はポーランドにあるように見える場合があります。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:121
+msgid ""
+"So, to prevent this kind of misunderstanding, it's often useful to "
+"deactivate the point symbols and replace them completely with labels."
+msgstr "だから、この種の誤解を防ぐためにポイントシンボルを非アクティブ化してラベルに完全に置き換えるのがよい場合があります。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:124
+msgid ""
+"In QGIS, you can do this by changing the position of the labels to be "
+"rendered directly over the points they refer to."
+msgstr "QGISではラベルが参照するポイントの直上にラベルの位置を変更することによってこれを行うことができます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:127
+msgid ""
+"Open the :guilabel:`Layer labeling settings` dialog for the "
+":guilabel:`places` layer."
+msgstr ":guilabel:`places` レイヤの :guilabel:`レイヤラベリング設定` ダイアログを開きます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:129
+msgid "Select the :guilabel:`Placement` option from the options list."
+msgstr "オプションリストの中から :guilabel:`配置` オプションを選択します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:130
+msgid "Click on the :guilabel:`Offset from point` button."
+msgstr ":guilabel:`ポイントからのオフセット` ボタンをクリックします。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:132
+msgid ""
+"This will reveal the :guilabel:`Quadrant` options which you can use to set "
+"the position of the label in relation to the point marker. In this case, we "
+"want the label to be centered on the point, so choose the center quadrant:"
+msgstr "ポイントマーカーとの相対位置でラベルの位置を設定することのできる :guilabel:`象限` オプションが現れます。この場合、私たちはラベルは点を中心に配置したいので中央の象限を選択します:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:139
+msgid ""
+"Hide the point symbols by editing the layer style as usual, and setting the "
+"size of the :guilabel:`Ellipse marker` width and height to :kbd:`0`:"
+msgstr "ポイントシンボルを隠すためにいつものようにレイヤスタイルを編集して、 :guilabel:`楕円マーカー` の幅と高さのサイズを :kbd:`0` に設定します:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:145
+msgid "Click :guilabel:`OK` and you'll see this result:"
+msgstr ":guilabel:`OK` をクリックすると、この結果が表示されます:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:150
+msgid ""
+"If you were to zoom out on the map, you would see that some of the labels "
+"disappear at larger scales to avoid overlapping. Sometimes this is what you "
+"want when dealing with datasets that have many points, but at other times "
+"you will lose useful information this way. There is another possibility for "
+"handling cases like this, which we'll cover in a later exercise in this "
+"lesson."
+msgstr "マップ上でズームアウトした場合にはラベルの一部がより小さな縮尺では重なりを避けるために消えていることがわかりました。これは多くのポイントを持つデータセットを扱う場合に都合がよい場合がありますが、有用な情報を失ってしまう場合もあります。このレッスンの後ほどのエクササイズでは、このような場合で処理するための別の手段を取り上げます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:160
+msgid "|moderate| |TY| Customize the Labels"
+msgstr "|moderate| |TY| ラベルのカスタマイズ"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:162
+msgid ""
+"Return the label and symbol settings to have a point marker and a label "
+"offset of :kbd:`2.00mm`. You may like to adjust the styling of the point "
+"marker or labels at this stage."
+msgstr "シンボルとラベルの設定をポイントマーカーと :kbd:`2.00mm` のラベルオフセットに戻します。この段階でポイントマーカーやラベルのスタイリングを調整したいと思うことがあります。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:166
+msgid ":ref:`Check your results <label-tool-1>`"
+msgstr ":ref:`結果をチェックする <label-tool-1>`"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:168
+msgid ""
+"Set the map to the scale :kbd:`1:100000`. You can do this by typing it into "
+"the :guilabel:`Scale` box in the :guilabel:`Status Bar`."
+msgstr "地図の縮尺を :kbd:`1:100000` に設定します。 :guilabel:`ステータスバー` の :guilabel:`スケール` ボックスに入力することでこれを行うことができます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:170
+msgid "Modify your labels to be suitable for viewing at this scale."
+msgstr "この縮尺での表示に合うようにラベルを変更します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:172
+msgid ":ref:`Check your results <label-tool-2>`"
+msgstr ":ref:`結果をチェックする <label-tool-2>`"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:176
+msgid "|moderate| |FA| Labeling Lines"
+msgstr "|moderate| |FA| ラインのラベリング"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:178
+msgid ""
+"Now that you know how labeling works, there's an additional problem. Points "
+"and polygons are easy to label, but what about lines? If you label them the "
+"same way as the points, your results would look like this:"
+msgstr "今、あなたはラベリングがどのように動作するか知っていますが、まだ別の問題があります。ポイントとポリゴンにラベルを付けるのは簡単ですが、ラインはどうでしょうか? ポイントと同じようにラベルを付ける場合、このようになります:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:185
+msgid ""
+"We will now reformat the :guilabel:`roads` layer labels so that they are "
+"easy to understand."
+msgstr "では、 :guilabel:`roads` レイヤのラベルの体裁を理解しやすいように再調整します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:188
+msgid "Hide the :guilabel:`Places` layer so that it doesn't distract you."
+msgstr "気が散らないように :guilabel:`Places` レイヤを非表示にします。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:189
+msgid "Activate labels for the :guilabel:`streets` layer as before."
+msgstr ":guilabel:`streets` レイヤのラベルを前のように有効化します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:190
+msgid ""
+"Set the font :guilabel:`Size` to :kbd:`10` so that you can see more labels."
+msgstr "より多くのラベルが表示されるようにフォント :guilabel:`サイズ` を :kbd:`10` に設定します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:191
+msgid "Zoom in on the |majorUrbanName| town area."
+msgstr "|majorUrbanName| の市街地にズームインします。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:192
+msgid ""
+"In the :guilabel:`Label tool` dialog's :guilabel:`Advanced` tab, choose the "
+"following settings:"
+msgstr ":guilabel:`ラベルツール` ダイアログの :guilabel:`配置` オプションで次の設定をします:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:198
+msgid ""
+"You'll probably find that the text styling has used default values and the "
+"labels are consequently very hard to read. Set the label text format to have"
+" a dark-grey or black :kbd:`Color` and a light-yellow :kbd:`buffer`."
+msgstr "おそらく、テキストスタイルが既定値を使用していてその結果としてラベルは非常に読みづらいことがわかります。ラベルテキストの書式に暗い灰または黒の :kbd:`色` と淡黄色の :kbd:`バッファ` を設定します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:202
+msgid "The map will look somewhat like this, depending on scale:"
+msgstr "地図は縮尺に応じてこのように見えます:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:207
+msgid ""
+"You'll see that some of the road names appear more than once and that's not "
+"always necessary. To prevent this from happening:"
+msgstr "いくつかの道路名が複数回表示されますがいつも必要だとは限りません。これを防ぐには:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:210
+msgid ""
+"In the :guilabel:`Label labelling settings` dialog, choose the "
+":guilabel:`Rendering` option and select the :guilabel:`Merge connected lines"
+" to avoid duplicate labels`:"
+msgstr ":guilabel:`レイヤラベリング設定` ダイアログで :guilabel:`レンダリング` オプションを選択し、 :guilabel:`重複ラベルを除去するために接続するラインを結合する` を選択します:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:217
+msgid "Click :guilabel:`OK`"
+msgstr ":guilabel:`OK` をクリックします"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:219
+msgid ""
+"Another useful function is to prevent labels being drawn for features too "
+"short to be of notice."
+msgstr "もう1つの有用な機能はラベルを付けるには短すぎる地物にラベルが描画されないようにするものです。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:222
+msgid ""
+"In the same :guilabel:`Rendering` panel, set the value of "
+":guilabel:`Suppress labeling of features smaller than ...` to :kbd:`5mm` and"
+" note the results when you click :guilabel:`Apply`."
+msgstr "同じ :guilabel:`レンダリング` パネルで :guilabel:`これより地物が小さい場合ラベリングを行わない` の値を :kbd:`5mm` に設定します。 :guilabel:`適用` ボタンをクリックした時に表示される結果に注目して下さい。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:226
+msgid ""
+"Try out different :guilabel:`Placement` settings as well. As we've seen "
+"before, the :guilabel:`horizontal` option is not a good idea in this case, "
+"so let's try the :guilabel:`curved` option instead."
+msgstr "同様にして異なる :guilabel:`配置` 設定を試してみて下さい。前に見てきたように :guilabel:`水平` オプションはこの場合にはお勧めできません。その代わりに :guilabel:`曲がって` オプションを試してみましょう。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:230
+msgid ""
+"Select the :guilabel:`Curved` option in the :guilabel:`Placement` panel of "
+"the :guilabel:`Layer labeling settings` dialog."
+msgstr ":guilabel:`レイヤラベリング設定` ダイアログの :guilabel:`配置` パネルで :guilabel:`曲がって` オプションを選択します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:233
+msgid "Here's the result:"
+msgstr "この結果です:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:238
+msgid ""
+"As you can see, this hides a lot of the labels that were previously visible,"
+" because of the difficulty of making some of them follow twisting street "
+"lines and still be legible. You can decide which of these options to use, "
+"depending on what you think seems more useful or what looks better."
+msgstr "ご覧のように、それらのいくつかは曲がりくねった街路に沿わせると判読可能な状態ではなくなってしまうせいで以前表示されていたラベルの多くが非表示になります。より有用であるようにと考えるか、またはより格好がよくなるようにと考えるかによって、これらのオプションのどれを使うかを決めることができます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:244
+msgid "|hard| |FA| Data Defined Settings"
+msgstr "|hard| |FA| データ定義による設定"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:246
+msgid "Deactivate labeling for the :guilabel:`Streets` layer."
+msgstr ":guilabel:`Streets` レイヤのラベリングを無効にします。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:247
+msgid "Reactivate labeling for the :guilabel:`Places` layer."
+msgstr ":guilabel:`Places` レイヤのラベリングを再度有効にします。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:248
+msgid ""
+"Open the attribute table for :guilabel:`Places` via the |attributes| button."
+msgstr "|attributes| ボタンをクリックして :guilabel:`Places` の属性テーブルを開きます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:250
+msgid ""
+"It has one fields which is of interest to us now: :kbd:`place` which defines"
+" the type of urban area for each object. We can use this data to influence "
+"the label styles."
+msgstr "今私たちに関心のあるフィールドが1つあります。 :kbd:`place` は各オブジェクトの都市エリアの種類を定義します。このデータを用いてラベルスタイルに影響を与えることができます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:254
+msgid ""
+"Navigate to the :guilabel:`Text` panel in the :guilabel:`places` "
+":guilabel:`Labels` panel."
+msgstr ":guilabel:`places` の :guilabel:`ラベル` ダイアログの :guilabel:`テキスト` パネルに移動します。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:256
+msgid ""
+"In the :guilabel:`Italic` dropdown, select :kbd:`Edit...` to open the "
+":guilabel:`Expression string builder`:"
+msgstr ":guilabel:`イタリックテキスト` の右側のボタンをクリックし、 :kbd:`編集...` を選択して :guilabel:`式文字列ビルダー` を開きます:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:262
+msgid ""
+"In the text input, type: :kbd:`\"place\"  =  'town'` and click "
+":guilabel:`Ok` twice:"
+msgstr "テキスト入力で :kbd:`\"place\"  =  'town'` と入力し、 :guilabel:`Ok` を2回クリックします:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:268
+msgid "Notice its effects:"
+msgstr "その効果に注目してください:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:277
+msgid "|hard| |TY| Using Data Defined Settings"
+msgstr "|hard| |TY| データ定義による設定の使用"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:279
+msgid ""
+"We're jumping ahead a bit here to demonstrate some advanced labeling "
+"settings. At the advanced level, it's assumed that you'll know what the "
+"following means. If you don't, feel free to leave out this section and come "
+"back later when you've covered the requisite materials."
+msgstr "私たちはいくつかの高度なラベリング設定を示すために、ここで少し先にジャンプしています。高度なレベルでは以下のことが何を意味するか知っていることを想定しています。そうでなければこのセクションはスキップして必要なマテリアルをカバーした時に戻って来て下さい。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:284
+msgid "Open the Attribute Table for :guilabel:`places`."
+msgstr ":guilabel:`places` の属性テーブルを開きます。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:285
+msgid "Enter edit mode by clicking this button: |edit|"
+msgstr "このボタンをクリックして編集モードにします: |edit|"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:287
+msgid "Add a new column:"
+msgstr "新しい列を追加します:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:292
+msgid "Configure it like this:"
+msgstr "このように構成します:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:297
+msgid ""
+"Use this to set custom font sizes for each different type of place (i.e., "
+"each key in the :kbd:`PLACE` field)."
+msgstr "これを使用して、それぞれの場所の種類に応じてカスタムフォントサイズを設定します (すなわち :kbd:`PLACE` フィールドの各キー)。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:300
+msgid ":ref:`Check your results <label-data-defined-1>`"
+msgstr ":ref:`結果をチェックする <label-data-defined-1>`"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:304
+msgid "|hard| Further Possibilities With Labeling"
+msgstr "|hard| ラベリングのさらなる可能性"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:306
+msgid ""
+"We can't cover every option in this course, but be aware that the "
+":guilabel:`Label tool` has many other useful functions. You can set scale-"
+"based rendering, alter the rendering priority for labels in a layer, and set"
+" every label option using layer attributes. You can even set the rotation, "
+"XY position, and other properties of a label (if you have attribute fields "
+"allocated for the purpose), then edit these properties using the tools "
+"adjacent to the main :guilabel:`Label tool`:"
+msgstr "このコースではすべてのオプションをカバーすることはできませんが、 :guilabel:`ラベルツール` には他にも多くの有用な機能があることを知っておいて下さい。縮尺ベースのレンダリングを設定したり、ラベルのレンダリングの優先順位を変更したり、すべてのラベルオプションをレイヤの属性を用いて設定したりすることができます。ラベルの回転やXY位置、その他のプロパティを設定することもできます(この目的のために割り当てられた属性フィールドを持っている場合)。そして、これらのプロパティをメインの :guilabel:`ラベルツール` の隣にあるツールを使って編集することができます:"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:314
+msgid ""
+"|mActionLabeling| |mActionShowPinnedLabels| |mActionPinLabels| "
+"|mActionShowHideLabels| |mActionMoveLabel| |mActionRotateLabel| "
+"|mActionChangeLabelProperties|"
+msgstr "|mActionLabeling| |mActionShowPinnedLabels| |mActionPinLabels| |mActionShowHideLabels| |mActionMoveLabel| |mActionRotateLabel| |mActionChangeLabelProperties|"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:318
+msgid ""
+"(These tools will be active if the required attribute fields exist and you "
+"are in edit mode.)"
+msgstr "(これらのツールは必要な属性フィールドが存在して、編集モードの場合にアクティブになります。)"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:321
+msgid "Feel free to explore more possibilities of the labeling system."
+msgstr "ラベリングシステムの可能性をもっと探してみて下さい。"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:324
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:326
+msgid ""
+"You've learned how to use layer attributes to create dynamic labels. This "
+"can make your map a lot more informative and stylish!"
+msgstr "あなたは動的なラベル作成のためにレイヤの属性を使用する方法を学びました。これによりあなたの地図の情報量を増やし、地図をスタイリッシュにすることができます!"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:330
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/vector_classification/label_tool.rst:332
+msgid ""
+"Now that you know how attributes can make a visual difference for your map, "
+"how about using them to change the symbology of objects themselves? That's "
+"the topic for the next lesson!"
+msgstr "属性によって地図に視覚的な違いを生じさせる方法がわかりました。オブジェクトそれ自体のシンボロジを変更するのに属性を使用することはどうでしょうか? 次のレッスンのトピックです!"

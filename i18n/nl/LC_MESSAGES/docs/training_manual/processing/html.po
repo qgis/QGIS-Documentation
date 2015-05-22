@@ -1,0 +1,86 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-27 15:57+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/html.rst:6
+msgid "HTML outputs"
+msgstr "HTML-uitvoer"
+
+#: ../../source/docs/training_manual/processing/html.rst:9
+msgid ""
+"In this lesson we learn how QGIS handles outputs in HTML format, which are "
+"used to produce text outputs and graphs."
+msgstr "In deze les leren we hoe QGIS uitvoer in de indeling HTML afhandelt, die wordt gebruikt om uitvoer als tekst en afbeeldingen te produceren."
+
+#: ../../source/docs/training_manual/processing/html.rst:11
+msgid ""
+"All the outputs we have produced so far were layers (whether raster or "
+"vector). However, some algorithms generate outputs in the form of text and "
+"graphics. All this outputs are wrapped in HTML files and displayed in the so"
+"--called *Results viewer*, which is another element of the processing "
+"framework."
+msgstr "Alle uitvoer die we tot dusverre hebben geproduceerd waren lagen (zowel raster als vector). Echter, sommige algoritmen genereren uitvoer in de vorm van tekst en afbeeldingen. Al deze uitvoer wordt verpakt in in HTML-bestanden en weergegeven in het zogenaamde venster *Resultaten*, wat een ander element is van het framework Processing."
+
+#: ../../source/docs/training_manual/processing/html.rst:13
+msgid "Let's see one of those algorithms to understand how they work."
+msgstr "Laten we eens naar één van die algoritmen kijken om te begrijpen hoe die werken."
+
+#: ../../source/docs/training_manual/processing/html.rst:15
+msgid ""
+"Open the project with the data to be used in this lesson and then open the "
+"*Basic statistics for numeric fields* algorithm."
+msgstr "Open het project met de gegevens die in de les moeten worden gebruikt en open dan het algoritme *Basic statistics for numeric fields*."
+
+#: ../../source/docs/training_manual/processing/html.rst:19
+msgid ""
+"The algorithm is rather simple, and you just have to select the layer to use"
+" and one of its field (a numeric one). The output is of type HTML, but the "
+"corresponding box works exactly like the one that you can find in the case "
+"of a raster or vector output. You can enter a filepath or leave it blank to "
+"save to a temporary file. In this case, however, only the ``html`` and "
+"``htm`` extensions are allowed, so there is no way of altering the output "
+"format by using a different one."
+msgstr "Het algoritme is nogal eenvoudig, en u hoeft slechts de laag te selecteren die moet worden gebruikt en één veld daarvan (een numeriek veld). De uitvoer is van het type HTML, maar het overeenkomstige vak werkt exact zoals dat wat u zult vinden in het geval van een uitvoer als raster of vector. U kunt ofwel een bestandspad invoeren of het leeg laten om naar een tijdelijk bestand op te slaan. In dit geval, zijn echter alleen de extensies ``html`` en ``htm`` toegestaan, dus is er geen manier om de indeling van de uitvoer te wijzigen door een andere te gebruiken."
+
+#: ../../source/docs/training_manual/processing/html.rst:21
+msgid ""
+"Run the algorithm selecting the only layer in the project as input, and the "
+"*POP2000* field, and a new dialog like the one shown next will appear once "
+"the algorithm is executed and the parameters dialog is closed."
+msgstr "Voer het algoritme uit door de enige laag in het project als invoer te selecteren, en het veld *POP2000*, en een nieuw dialoogvenster zoals dat wat hieronder wordt weergegeven zal verschijnen zodra het algoritme is uitgevoerd en het dialoogvenster voor de parameters wordt gesloten."
+
+#: ../../source/docs/training_manual/processing/html.rst:25
+msgid ""
+"This is the *Results viewer*. It keeps all the HTML result generated during "
+"the current session, easily accessible, so you can check them quickly "
+"whenever you need it. As it happens with layers, if you have saved the "
+"output to a temporary file, it will be deleted once you close QGIS. If you "
+"have saved to a non-temporary path, the file will remain, but it will not "
+"appear in the *Results viewer* the next time you open QGIS."
+msgstr "Dit is het venster *Resultaten*. Het bevat alle HTML-resultaten die zijn gegenereerd gedurende de huidige sessie, eenvoudig toegankelijk, dus u kunt ze snel controleren wanneer u ze maar nodig heeft. Net zoals met lagen, als u de uitvoer hebt opgeslagen naar een tijdelijk bestand, zal het worden verwijderd als u QGIS afsluit. Als u hebt opgeslagen naar een niet tijdelijk pad, wordt het bestand behouden, maar het zal niet verschijnen in het venster *Resultaten* als u de volgende keer QGIS opent."
+
+#: ../../source/docs/training_manual/processing/html.rst:27
+msgid ""
+"Some algorithms generate text that cannot be divided into other more "
+"detailed outputs. That is the case if, for instance, the algorithm captures "
+"the text output from an external process. In other cases, the output is "
+"presented as text, but internally is divided into several smaller outputs, "
+"usually in the form of numeric values. The algorithm that we have just "
+"executed is one of them. Each one of those values is handled as a single "
+"output, and stored in a variable. This has no importance at all now, but "
+"once we move to the graphical modeler, you will see that it will allow us to"
+" use those values as numeric inputs for other algorithms."
+msgstr "Sommige algoritmen genereren tekst die niet kan worden opgedeeld in meer gedetailleerde uitvoer. Dat is het geval als, bijvoorbeeld, het algoritme de tekstuitvoer vastlegt vanuit een extern proces. In andere gevallen wordt de uitvoer gepresenteerd als tekst, maar wordt intern opgedeeld in verscheidene kleinere uitvoeren, gewoonlijk in de vorm van numerieke waarden. Het algoritme dat we zojuist hebben uitgevoerd is er daar één van. Elk van deze waarden wordt afgehandeld als één enkele uitvoer, en opgeslagen in een variabele. Dit heeft op dit moment geen enkel belang, maar als we eenmaal doorgaan naar Grafische modellen bouwen, zult u zien dat het ons zal toestaan die waarden te gebruiken als numerieke invoer voor andere algoritmen."

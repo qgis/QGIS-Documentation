@@ -1,0 +1,892 @@
+# 
+# Translators:
+# Eduardo Gonzalez Latorre <eg@gismood.com>, 2014
+# elgina <elgina88@gmail.com>, 2014
+# joselanio <lanio.morais@gmail.com>, 2014
+# Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-10 02:21+0000\n"
+"Last-Translator: Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:6
+msgid "|LS| Spatial Statistics"
+msgstr "|LS| Estadísticas Espaciales"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:8
+msgid ""
+"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr "Lección desarrollada por Linfiniti y S Motala (Universidad Tecnológica de Península del Cabo)"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:11
+msgid ""
+"Spatial statistics allow you to analyze and understand what is going on in a"
+" given vector dataset. QGIS includes several standard tools for statistical "
+"analysis which prove useful in this regard."
+msgstr "Las estadísticas espaciales te permiten entender que está pasando en un conjunto de datos vectoriales dado. QGIS incluye muchas herramientas estándar para análisis estadísticos que demuestran ser muy útiles para estas materias."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:15
+msgid ""
+"**The goal for this lesson:** To know how to use QGIS' spatial statistics "
+"tools."
+msgstr "**El objetivo de esta lección:** Saber como utilizar las herramientas estadísticas espaciales de QGIS."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:19
+msgid "|basic| |FA| Create a Test Dataset"
+msgstr "|basic| |FA| Crear un Conjunto de Datos de Prueba"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:21
+msgid ""
+"In order to get a point dataset to work with, we'll create a random set of "
+"points."
+msgstr "Para obtener un conjunto de datos con el que trabajar, crearemos un conjunto de puntos al azar. "
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:24
+msgid ""
+"To do so, you'll need a polygon dataset defining the extents of the area you"
+" want to create the points in."
+msgstr "Para ello, necesitarás un conjunto de datos poligonal para definir la extensión del área en la que quieres crear los puntos."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:27
+msgid "We'll use the area covered by streets."
+msgstr "Utilizaremos el área cubierta por calles."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:29
+msgid "Create a new empty map."
+msgstr "Crea un mapa vacío nuevo."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:30
+msgid ""
+"Add your :kbd:`roads_34S` layer, as well as the |srtmFileName| raster "
+"(elevation data) found in :kbd:`exercise_data/raster/SRTM/`."
+msgstr "Añade tu capa :kbd:`roads_34S`, así como el ráster |srtmFileName| (datos de elevaciones) que s encuentran en :kbd:`exercise_data/raster/SRTM/`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:34
+msgid ""
+"You might find that your SRTM DEM layer has a different CRS to that of the "
+"roads layer. If so, you can reproject either the roads or DEM layer using "
+"techniques learnt earlier in this module."
+msgstr "Puedes encontrar que tu SRTM MDE tiene un SRC diferente que el de la capa de carreteras. En ese caso, puedes reproyectar la capa de carreteras o la del MDE utilizando las técnicas aprendidas anteriormente en este módulo."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:38
+msgid ""
+"Use the :guilabel:`Convex hull(s)` tool (available under "
+":menuselection:`Vector --> Geoprocessing Tools`) to generate an area "
+"enclosing all the roads:"
+msgstr "Utiliza la herramienta :guilabel:`Envolvente(s) convexa(s)` (disponible en :menuselection:`Vectorial --> Herramientas de geoproceso`) para generar un área conteniendo todas las calles:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:45
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`roads_hull.shp`."
+msgstr "Guárdalo como :kbd:`envolvente_carreteras.shp` en :kbd:`exercise_data/spatial_statistics/`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:47
+msgid "Add it to the TOC (:guilabel:`Layers list`) when prompted."
+msgstr "Añádelo a TOC (:guilabel:`Lista de capas`) cuando se solicite."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:50
+msgid "Creating random points"
+msgstr "Creación de puntos al azar"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:52
+msgid ""
+"Create random points in this area using the tool at :menuselection:`Vector "
+"--> Research Tools --> Random points`:"
+msgstr "Crea puntos al azar en el área utilizando la herramienta en :menuselection:`Vectorial --> Herramientas de investigación --> Puntos aleatorios`:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:58
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`random_points.shp`."
+msgstr "Guárdalo en :kbd:`exercise_data/spatial_statistics/` como :kbd:`puntos_aleatorios.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:60
+msgid "Add it to the TOC (:guilabel:`Layers list`) when prompted:"
+msgstr "Añádelo a TOC (:guilabel:`Lista de capas`) cuando se solicite:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:66
+msgid "Sampling the data"
+msgstr "Muestreo de los datos"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:68
+msgid ""
+"To create a sample dataset from the raster, you'll need to use the "
+":guilabel:`Point sampling tool` plugin."
+msgstr "Para crear un conjunto de datos de muestreo desde el raster, necesitarás utilizar el plugin :guilabel:`Point sampling tool`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:70
+msgid "Refer ahead to the module on plugins if necessary."
+msgstr "Refiérete al módulo de complementos si es necesario."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:71
+msgid ""
+"Search for the phrase :kbd:`point sampling` in the :guilabel:`Plugin --> "
+"Manage and Install Plugins...` and you will find the plugin."
+msgstr "Busca la frase :kbd:`point sampling` en el :guilabel:`Complementos --> Administrar e instalar complementos...` y encontrarás el complemento."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:73
+msgid ""
+"As soon as it has been activated with the :guilabel:`Plugin Manager`, you "
+"will find the tool under :menuselection:`Plugins --> Analyses --> Point "
+"sampling tool`:"
+msgstr "Tan pronto como la actives en el :guilabel:`Administrador de complementos`, encontrarás la herramienta en :menuselection:`Complementos --> Analyses --> Point sampling tool`:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:80
+msgid ""
+"Select :guilabel:`random_points` as the layer containing sampling points, "
+"and the SRTM raster as the band to get values from."
+msgstr "Selecciona :guilabel:`puntos_aleatorios` como la capa contenedora de puntos de muestreo, y el SRTM raster como la banda de la que se obtengan los valores."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:82
+msgid "Make sure that \"Add created layer to the TOC\" is checked."
+msgstr "Asegúrate de que \"Add created layer to the TOC\" está habilitado."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:83
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`random_samples.shp`."
+msgstr "Guardalo en :kbd:`exercise_data/spatial_statistics/` como :kbd:`muestras_aleatorias.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:86
+msgid ""
+"Now you can check the sampled data from the raster file in the attributes "
+"table of the :guilabel:`random_samples` layer, they will be in a column "
+"named |srtmFileName|."
+msgstr "Ahora puedes comprobar los datos muestreados del archivo ráster en la tabla de atributos de la capa :guilabel:`muestras_aleatorias`, estarán en una columna llamada |srtmFileName|."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:90
+msgid "A possible sample layer is shown here:"
+msgstr "Aquí tienes una posible capa de muestreo:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:95
+msgid ""
+"The sample points are classified by their value such that darker points are "
+"at a lower altitude."
+msgstr "Los puntos de muestreo están clasificados por su valor como los puntos oscuros lo son a baja altitud."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:98
+msgid ""
+"You'll be using this sample layer for the rest of the statistical exercises."
+msgstr "Utilizarás esta capa de datos de muestreo durante el resto de los ejercicios estadísticos."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:101
+msgid "|basic| |FA| Basic Statistics"
+msgstr "|basic| |FA| Estadísticas Básicas"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:103
+msgid "Now get the basic statistics for this layer."
+msgstr "Ahora obtén lsa estadísticas básica de esta capa."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:105
+msgid ""
+"Click on the :menuselection:`Vector --> Analysis Tools --> Basic statistics`"
+" menu entry."
+msgstr "Haz clic en la entrada del menú :menuselection:`Vectorial --> Herramientas de analisis --> Estadísticas básicas`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:107
+msgid ""
+"In the dialog that appears, specify the :guilabel:`random_samples` layer as "
+"the source."
+msgstr "En el cuadro de diálogo que aparece, especifíca la capa :guilabel:`muestras_aleatorias` como fuente."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:109
+msgid ""
+"Make sure that the :menuselection:`Target field` is set to |srtmFileName| "
+"which is the field you will calculate statistics for."
+msgstr "Asegurate de que :menuselection:`Campo objeto` esta ajustado a |srtmFileName| que es el campo para el que calcularás las estadísticas."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:111
+msgid "Click :guilabel:`OK`. You'll get results like this:"
+msgstr "Haz clic en :guilabel:`Aceptar`. Obtendrás resultados como estos:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:116
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:205
+msgid ""
+"You can copy and paste the results into a spreadsheet. The data uses a "
+"(colon :kbd:`:`) separator."
+msgstr "Puedes copiar y pegar los resultados en una hoja de cálculo. Los datos utilizan como separador (dos puntos :kbd:`:`)."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:122
+msgid "Close the plugin dialog when done."
+msgstr "Cierra el cuadro de diálogo del plugin cuando acabes."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:124
+msgid "To understand the statistics above, refer to this definition list:"
+msgstr "Para entender las estadísticas anteriores, mira esta lista de definiciones:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:128
+msgid "Mean"
+msgstr "Media"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:127
+msgid ""
+"The mean (average) value is simply the sum of the values divided by the "
+"amount of values."
+msgstr "La media (promedio) es simplemente la suma de los valores dividido por el número de valores."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:133
+msgid "StdDev"
+msgstr "Dev. Est."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid ""
+"The standard deviation. Gives an indication of how closely the values are "
+"clustered around the mean. The smaller the standard deviation, the closer "
+"values tend to be to the mean."
+msgstr "La desviación estándar. Da una indicación de cómo de cerca se agrupan los valores alrededor de la media. Cuanto menor sea la desviación estándar, más cerca estarán los valores a la media."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:136
+msgid "Sum"
+msgstr "Suma"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:136
+msgid "All the values added together."
+msgstr "Todos los valores sumados."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:139
+msgid "Min"
+msgstr "Mín"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:139
+msgid "The minimum value."
+msgstr "El valor mínimo"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:142
+msgid "Max"
+msgstr "Máx"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:142
+msgid "The maximum value."
+msgstr "El valor máximo."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:145
+msgid "N"
+msgstr "N"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:145
+msgid "The amount of samples/values."
+msgstr "Número de muestras/valores."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:149
+msgid "CV"
+msgstr "CV"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:148
+msgid ""
+"The `spatial <http://en.wikipedia.org/wiki/Spatial_covariance>`_ `covariance"
+" <http://en.wikipedia.org/wiki/Covariance>`_ of the dataset."
+msgstr "La covarianza `espacial <http://en.wikipedia.org/wiki/Spatial_covariance>`_ `covarianza <http://es.wikipedia.org/wiki/Covarianza>`_  del conjunto de datos."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:154
+msgid "Number of unique values"
+msgstr "Número de valores únicos"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:152
+msgid ""
+"The number of values that are unique across this dataset. If there are 90 "
+"unique values in a dataset with N=100, then the 10 remaining values are the "
+"same as one or more of each other."
+msgstr "El número de valores que son únicos en el conjunto de datos. Si hay 90 datos únicos en un conjunto de datos con N=100, entonces los restantes 10 valores son iguales a uno o más de los otros."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:157
+msgid "Range"
+msgstr "Intervalo"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:157
+msgid "The difference between the minimum and maximum values."
+msgstr "La diferencia entre los valores mínimo y máximo."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "Median"
+msgstr "Mediana"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:160
+msgid ""
+"If you arrange all the values from least to greatest, the middle value (or "
+"the average of the two middle values, if N is an even number) is the median "
+"of the values."
+msgstr "Si organizas todos los valores de menor a mayor, el valor en el medio (o la media de los dos valores en el medio, si N es un número par) es la mediana de los valores."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "|basic| |FA| Compute a Distance Matrix"
+msgstr "|basic| |FA| Cálculo de una Matriz de Distancia"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:167
+msgid ""
+"Create a new point layer in the same projection as the other datasets "
+"(|localCRS|)."
+msgstr "Crea una nueva capa de puntos en la misma proyección que los demás conjuntos de datos (|localCRS|)."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:169
+msgid ""
+"Enter edit mode and digitize three point somewhere among the other points."
+msgstr "Entra en el modo edición y digitaliza tres puntos en en algún lugar entre los otros puntos."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:170
+msgid ""
+"Alternatively, use the same random point generation method as before, but "
+"specify only three points."
+msgstr "Como alternativa, utiliza el mismo método de generación de punto al azar como antes, pero especifica sólo tres puntos."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:172
+msgid "Save your new layer as :kbd:`distance_points.shp`."
+msgstr "Guarda tu nueva capa como :kbd:`puntos_distancia.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:174
+msgid "To generate a distance matrix using these points:"
+msgstr "Para generar una matriz de distancia utilizando esos puntos:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:176
+msgid ""
+"Open the tool :menuselection:`Vector --> Analysis Tools --> Distance "
+"matrix`."
+msgstr "Abre la herramienta :menuselection:`Vectorial --> Herramientas de análisis --> Matriz de distancia`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:177
+msgid ""
+"Select the :guilabel:`distance_points` layer as the input layer, and the "
+":guilabel:`random_samples` layer as the target layer."
+msgstr "Selecciona la capa :guilabel:`puntos_distancia` como capa de entrada, y la capa :guilabel:`muestras_aleatorias` como capa de destino."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:179
+msgid "Set it up like this:"
+msgstr "Ajústalo así:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:184
+msgid "Save the result as :kbd:`distance_matrix.csv`."
+msgstr "Guarda el resultado como :kbd:`matriz_distancia.csv`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:185
+msgid "Click :guilabel:`OK` to generate the distance matrix."
+msgstr "Haz clic en :guilabel:`Aceptar` para generar la matriz de distancia."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:186
+msgid ""
+"Open it in a spreadsheet program to see the results. Here is an example:"
+msgstr "Abre un programa de hoja de cálculo para ver los resultados. Aquí tienes un ejemplo:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:192
+msgid "|basic| |FA| Nearest Neighbor Analysis"
+msgstr "|basic| |FA| Análisis del Vecinos más Próximos"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:194
+msgid "To do a nearest neighbor analysis:"
+msgstr "Para hacer un análisis de vecinos más próximos:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:196
+msgid ""
+"Click on the menu item :menuselection:`Vector --> Analysis Tools --> Nearest"
+" neighbor analysis`."
+msgstr "Haz clic en el elemento del menú :menuselection:`Vectorial --> Herramientas de análisis --> Análisis de vecinos más próximos`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:198
+msgid ""
+"In the dialog that appears, select the :guilabel:`random_samples` layer and "
+"click :guilabel:`OK`."
+msgstr "En el cuadro de diálogo que aparece, selecciona la capa :guilabel:`muestras_aleatorias` y haz clic en :guilabel:`Aceptar`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:200
+msgid "The results will appear in the dialog's text window, for example:"
+msgstr "Los resultados aparecerán en el cuadro de diálogo de la ventana de texto, por ejemplo:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:209
+msgid "|basic| |FA| Mean Coordinates"
+msgstr "|basic| |FA| Coordenadas Medias"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:211
+msgid "To get the mean coordinates of a dataset:"
+msgstr "Para obtener las coordenadas medias de un conjunto de datos:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:213
+msgid ""
+"Click on the :menuselection:`Vector --> Analysis Tools --> Mean "
+"coordinate(s)` menu item."
+msgstr "Haz clic en el elemento del menú :menuselection:`Vectorial --> Herramientas de análisis -->  Coordenada(s) media`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:215
+msgid ""
+"In the dialog that appears, specify :guilabel:`random_samples` as the input "
+"layer, but leave the optional choices unchanged."
+msgstr "En el cuadro de diálogo que aparece, especifica :guilabel:`muestras_aleatorias` como la capa de entrada, pero deja las elecciones opcionales sin cambiar."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:217
+msgid "Specify the output layer as :kbd:`mean_coords.shp`."
+msgstr "Especifica la capa de destino como :kbd:`coord_medias.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:218
+msgid "Click :guilabel:`OK`."
+msgstr "Haz clic en :guilabel:`Aceptar`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:219
+msgid "Add the layer to the :guilabel:`Layers list` when prompted."
+msgstr "Añade la capa a la :guilabel:`Lista de capas` cuando se solicite."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:221
+msgid ""
+"Let's compare this to the central coordinate of the polygon that was used to"
+" create the random sample."
+msgstr "Compara estas con la coordenada central del polígono que fue utilizada para crear la muestra aleatoria."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:224
+msgid ""
+"Click on the :menuselection:`Vector --> Geometry Tools --> Polygon "
+"centroids` menu item."
+msgstr "Haz clic en el elemento del menú :menuselection:`Vectorial --> Herramientas de geometría --> Centroides de polígonos`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:226
+msgid ""
+"In the dialog that appears, select :guilabel:`roads_hull` as the input "
+"layer."
+msgstr "En el cuadro de diálogo que aparece, selecciona :guilabel:`envolvente_carreteras` como la capa de entrada."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:227
+msgid "Save the result as :kbd:`center_point`."
+msgstr "Guarda el resultado como :kbd:`punto_central`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:228
+msgid "Add it to the :guilabel:`Layers list` when prompted."
+msgstr "Añadelo a la :guilabel:`Lista de capas` cuando se solicite."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:230
+msgid ""
+"As you can see from the example below, the mean coordinates and the center "
+"of the study area (in orange) don't necessarily coincide:"
+msgstr "Como puedes ver en el ejemplo siguiente, las coordenadas medias y el centro del área de estudio (en naranja) no coinciden necesariamente:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:237
+msgid "|basic| |FA| Image Histograms"
+msgstr "|basic| |FA| Histogramas de Imagenes"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:239
+msgid ""
+"The histogram of a dataset shows the distribution of its values. The "
+"simplest way to demonstrate this in QGIS is via the image histogram, "
+"available in the :guilabel:`Layer Properties` dialog of any image layer."
+msgstr "El histograma de un conjunto de datos muestra la distribución de sus valores. La forma más simple de demostrarlo en QGIS es a través de la histograma de imagen, disponible en el cuadro de diálogo :guilabel:`Propieadades de la capa` de cualquier capa imagen."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:243
+msgid "In your :guilabel:`Layers list`, right-click on the SRTM DEM layer."
+msgstr "En tu :guilabel:`Lista de capas`, haz clic derecho en la capa SRTM DEM."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:244
+msgid "Select :menuselection:`Properties`."
+msgstr "Selecciona :menuselection:`Propiedades`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:245
+msgid ""
+"Choose the tab :guilabel:`Histogram`. You may need to click on the "
+":guilabel:`Compute Histogram` button to generate the graphic. You will see a"
+" graph describing the frequency of values in the image."
+msgstr "Elige la pestaña :guilabel:`Histograma`. Puede que necesites clicar en el botón :guilabel:`Calcular Histograma` para generar un gráfico. Verás un gráfico describiendo la frecuencia de los valores en la imagen."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:248
+msgid "You can export it as an image:"
+msgstr "Puedes exportarlo como una imagen:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:253
+msgid ""
+"Select the :guilabel:`Metadata` tab, you can see more detailed information "
+"inside the :guilabel:`Properties` box."
+msgstr "Selecciona la pestaña :guilabel:`Metadata`, puedes ver información más detallada dentro de la caja :guilabel:`Propiedades`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:256
+msgid ""
+"The mean value is :kbd:`332.8`, and the maximum value is :kbd:`1699`! But "
+"those values don't show up on the histogram. Why not? It's because there are"
+" so few of them, compared to the abundance of pixels with values below the "
+"mean. That's also why the histogram extends so far to the right, even though"
+" there is no visible red line marking the frequency of values higher than "
+"about :kbd:`250`."
+msgstr "El valor medio es :kbd:`332.8`, ¡y el valor máximo es :kbd:`1699`! Pero esos valores no se muestran en el histograma. ¿Por qué no? Porque hay muy pocos, comparado con la abundancia de píxels con valores por debajo de la media. Por eso el histograma se extiende tan lejos hacia la derecha, incluso hay una línea no visible marcando la frecuencia de valores mayores que :kbd:`250`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:262
+msgid ""
+"Therefore, keep in mind that a histogram shows you the distribution of "
+"values, and not all values are necessarily visible on the graph."
+msgstr "Además, ten presente que el histograma te muestra la distribución de los valores, y no todos los valores son necesariamente visibles en el gráfico."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:265
+msgid "(You may now close :guilabel:`Layer Properties`.)"
+msgstr "(Puedes cerrar ahora las :guilabel:`Propiedades de la capa`.)"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:268
+msgid "|basic| |FA| Spatial Interpolation"
+msgstr "|basic| |FA| Interpolación Espacial"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:270
+msgid ""
+"Let's say you have a collection of sample points from which you would like "
+"to extrapolate data. For example, you might have access to the "
+":guilabel:`random_samples` dataset we created earlier, and would like to "
+"have some idea of what the terrain looks like."
+msgstr "Digamos que tienes una colección de puntos de muestra de los que te gustaría extrapolar datos. Por ejemplo, puede que tengas acceso al conjunto de datos :guilabel:`muestras_aleatorias` que creaste antes, y quieres tener una idea de que aspecto tiene el terreno."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:275
+msgid ""
+"To start, launch the :guilabel:`Grid (Interpolation)` tool by clicking on "
+"the :menuselection:`Raster --> Analysis --> Grid (Interpolation)` menu item."
+msgstr "Para empezar, inicia el :guilabel:`Cuadrícula (Interpolación)` clicando en el elemento del menú :menuselection:`Ráster --> Análisis--> Cuadrícula (Interpolación)`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:278
+msgid "In the :guilabel:`Input file` field, select :kbd:`random_samples`."
+msgstr "En el campo :guilabel:`Archivo de entrada`, selecciona :kbd:`muestras_aleatorias`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:279
+msgid ""
+"Check the :guilabel:`Z Field` box, and select the field :kbd:`srtm_41_19`."
+msgstr "Comprueba la caja :guilabel:`Campo Z`, y selecciona el campo :kbd:`srtm_41_19`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:280
+msgid ""
+"Set the :guilabel:`Output file` location to "
+":kbd:`exercise_data/spatial_statistics/interpolation.tif`."
+msgstr "Ajusta la situación de :guilabel:`Archivo de salida` a :kbd:`exercise_data/spatial_statistics/interpolacion.tif`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:282
+msgid ""
+"Check the :guilabel:`Algorithm` box and select :guilabel:`Inverse distance "
+"to a power`."
+msgstr "Comprueba la caja :guilabel:`Algoritmo` y selecciona :guilabel:`Distancia inversa a una potencia`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:284
+msgid ""
+"Set the :guilabel:`Power` to :kbd:`5.0` and the :guilabel:`Smoothing` to "
+":kbd:`2.0`. Leave the other values as-is."
+msgstr "Ajusta el :guilabel:`Potencia` a :kbd:`5.0` y el :guilabel:`Suavizado` a :kbd:`2.0`. Deja los otros valores como están."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:286
+msgid ""
+"Check the :guilabel:`Load into canvas when finished` box and click "
+":guilabel:`OK`."
+msgstr "Comprueba la caja :guilabel:`Cargar en la vista del mapa cuando se termine` y haz clic en :guilabel:`Aceptar`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:288
+msgid ""
+"When it's done, click :guilabel:`OK` on the dialog that says :kbd:`Process "
+"completed`, click :guilabel:`OK` on the dialog showing feedback information "
+"(if it has appeared), and click :guilabel:`Close` on the :guilabel:`Grid "
+"(Interpolation)` dialog."
+msgstr "Cuando esté hecho, haz clic en :guilabel:`Aceptar` en el cuadro de diálogo que dice :kbd:`Proceso completado`, haz clic en :guilabel:`Aceptar` en el diálogo que muestra la información de retorno (si ha aparecido), u haz clic en :guilabel:`Cerrar` del cuadro de diálogo :guilabel:`Cuadrícula (Interpolación)`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:293
+msgid ""
+"Here's a comparison of the original dataset (left) to the one constructed "
+"from our sample points (right). Yours may look different due to the random "
+"nature of the location of the sample points."
+msgstr "Aquí se compara el conjunto de datos original (izquierda) y el construido por nuestros puntos de muestreo (derecha). El tuyo puede parecer diferente debido a la forma aleatoria de situación y puntos de muestreo."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:300
+msgid ""
+"As you can see, 100 sample points aren't really enough to get a detailed "
+"impression of the terrain. It gives a very general idea, but it can be "
+"misleading as well. For example, in the image above, it is not clear that "
+"there is a high, unbroken mountain running from east to west; rather, the "
+"image seems to show a valley, with high peaks to the west. Just using visual"
+" inspection, we can see that the sample dataset is not representative of the"
+" terrain."
+msgstr "Como puedes ver, 100 puntos de muestreo no son realmente suficientes para tener una impresión detallada del terreno. Te dan una idea muy general, pero también puede ser engañoso. Por ejemplo, en la imagen anterior, no está claro que hay una montaña alta que discurre de este a oeste; sin embargo, la imagen parece mostrar un valle, con puntos altos en el oeste. Simplemente utilizando una inspección visual, podemos ver que el conjunto de datos de muestreo no es representativo del territorio."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:308
+msgid "|moderate| |TY|"
+msgstr "|moderate| |TY|"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:310
+msgid ""
+"Use the processes shown above to create a new set of :kbd:`1000` random "
+"points."
+msgstr "Utiliza los procesos mostrados antes para crear un nuevo conjunto de datos aleatorios de :kbd:`1000`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:311
+msgid "Use these points to sample the original DEM."
+msgstr "Utiliza los puntos para muestrear el DEM original."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:312
+msgid ""
+"Use the :guilabel:`Grid (Interpolation)` tool on this new dataset as above."
+msgstr "Utiliza la herramienta :guilabel:`Cuadrícula (Interpolación)` en el nuevo conjunto de datos como antes."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:313
+msgid ""
+"Set the output filename to :kbd:`interpolation_1000.tif`, with "
+":guilabel:`Power` and :guilabel:`Smoothing` set to :kbd:`5.0` and "
+":kbd:`2.0`, respectively."
+msgstr "Nombra al archivo de salida :kbd:`interpolacion_1000.tif`, con :guilabel:`Potencia` y :guilabel:`Suavizado` ajustado a :kbd:`5.0` y :kbd:`2.0`, respectivamente."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:317
+msgid ""
+"The results (depending on the positioning of your random points) will look "
+"more or less like this:"
+msgstr "Los resultados (dependiendo de la posición de tus puntos aleatorios) se verán más o menos como esto:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:323
+msgid ""
+"The border shows the :guilabel:`roads_hull` layer (which represents the "
+"boundary of the random sample points) to explain the sudden lack of detail "
+"beyond its edges. This is a much better representation of the terrain, due "
+"to the much greater density of sample points."
+msgstr "El borde muestra la capa :guilabel:`envolvente_carreteras` (que representa los límites de puntos aleatorios de muestreo) para explicar una repentina falta de detalle más allá de sus bordes. Esto es una representación mucho mejor del terreno, debido a la mayor densidad de puntos de muestreo."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:328
+msgid ""
+"Here is an example of what it looks like with :kbd:`10 000` sample points:"
+msgstr "Aquí hay un ejemplo del aspecto con puntos de muestreo de :kbd:`10 000`:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:333
+msgid ""
+"It's not recommended that you try doing this with 10 000 sample points if "
+"you are not working on a fast computer, as the size of the sample dataset "
+"requires a lot of processing time."
+msgstr "No es recomendable que intentes hacer esto con 10 000 puntos de muestreo si no estás trabajando con un ordenador rápido, ya que con ese tamaño de conjunto de datos de muestreo se requiere mucho más tiempo de procesado."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:338
+msgid "|moderate| |FA| Additional Spatial Analysis Tools"
+msgstr "|moderate| |FA| Herramientas Adicionales de Análisis Espacial"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:340
+msgid ""
+"Originally a separate project and then accessible as a plugin, the SEXTANTE "
+"software has been added to QGIS as a core function from version 2.0. You can"
+" find it as a new QGIS menu with its new name :menuselection:`Processing` "
+"from where you can access a rich toolbox of spatial analysis tools allows "
+"you to access various plugin tools from within a single interface."
+msgstr "Originalmente un proyecto separado y luego accesible como complemento, el software SEXANTE se ha añadido al QGIS como una función básica desde la versión 2.0. Puedes encontrarlo como un menú QGIS nuevo con su nuevo nombre :menuselection:`Procesado` desde donde puedes acceder a una caja de herramientas rica en herramientas de análisis espacial que te permiten acceder a varios complementos desde una simple interfaz."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:346
+msgid ""
+"Activate this set of tools by enabling the :menuselection:`Processing --> "
+"Toolbox` menu entry. The toolbox looks like this:"
+msgstr "Ative este conjunto de ferramentas, permitindo a entrada do menu :menuselection:`Processamento -->  Caixa de Ferramentas`. A caixa de ferramentas parece como essa:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:352
+msgid ""
+"You will probably see it docked in QGIS to the right of the map. Note that "
+"the tools listed here are links to the actual tools. Some of them are "
+"SEXTANTE's own algorithms and others are links to tools that are accessed "
+"from external applications such as GRASS, SAGA or the Orfeo Toolbox. This "
+"external applications are installed with QGIS so you are already able to "
+"make use of them. In case you need to change the configuration of the "
+"Processing tools or, for example, you need to update to a new version of one"
+" of the external applications, you can access its setting from "
+":menuselection:`Processing --> Options and configurations`."
+msgstr "Es probable que la veas anclada en QGIS en la parte derecha del mapa. Observa que las herramientas listadas ahí son enlaces a las herramientas. Algunos de ellos son algoritmos propios de SEXTANTE y otros son enlaces de herramientas a las que se accede desde aplicaciones externas como GRASS, SAGA o la caja de herramientas Orfeo. Estas aplicaciones externas están instaladas con QGIS así que ya puedes utilizarlas. En caso de que necesites cambiar la configuración de las herramientas de Procesado, o por ejemplo, necesites actualizar una nueva versión de una de la aplicaciones externas, puedes acceder a sus ajustes desde :menuselection:`Procesado --> Opciones y configuración`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:364
+msgid "|moderate| |FA| Spatial Point Pattern Analysis"
+msgstr "|moderate| |FA| Análisis de Patrones Espaciales de Puntos"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:366
+msgid ""
+"For a simple indication of the spatial distribution of points in the "
+":guilabel:`random_samples` dataset, we can make use of SAGA's "
+":guilabel:`Spatial Point Pattern Analysis` tool via the "
+":guilabel:`Processing Toolbox` you just opened."
+msgstr "Para una simple indicación de la distribución espacial de puntos en el conjunto de datos :guilabel:`muestras_aleatorias`, podemos utilizar la herramienta de SAGA :guilabel:`Spatial Point Pattern Analysis` a través de la :guilabel:`Caja de herramientas de procesado` que abriste antes."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:371
+msgid ""
+"In the :guilabel:`Processing Toolbox`, search for this tool  "
+":guilabel:`Spatial Point Pattern Analysis`."
+msgstr "En :guilabel:`Caja de herramientas de procesado`, busca la herramienta :guilabel:`Spatial Point Pattern Analysis`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:373
+msgid "Double-click on it to open its dialog."
+msgstr "Haz doble clic en él para abrir el cuadro de diálogo."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:376
+msgid "Installing SAGA"
+msgstr "Instalando SAGA"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:378
+msgid ""
+"If SAGA is not installed on your system, the plugin's dialog will inform you"
+" that the dependency is missing. If this is not the case, you can skip these"
+" steps."
+msgstr "Si SAGA no está instalado en tu sistema, el cuadro de diálogo del complemento te informará que la dependencia no se encuentra. Si éste no es el caso, puedes saltarte estos pasos."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:383
+msgid "On Windows"
+msgstr "En Windows"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:385
+msgid ""
+"Included in your course materials you will find the SAGA installer for "
+"Windows."
+msgstr "Encontrarás una instalación de SAGA para Windows en los materiales del curso."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:387
+msgid ""
+"Start the program and follow its instructions to install SAGA on your "
+"Windows system. Take note of the path you are installing it under!"
+msgstr "Inicia el programa y sigue sus instrucciones para instalar SAGA en tu sistema de Windows. ¡Anota la ruta en la que lo estás instalando!"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:390
+msgid ""
+"Once you have installed SAGA, you'll need to configure SEXTANTE to find the "
+"path it was installed under."
+msgstr "Una vez instalado el SAGA, necesitarás configurar SEXTANTE para encontrar la ruta en el que estaba instalado."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:393
+msgid ""
+"Click on the menu entry :menuselection:`Analysis --> SAGA options and "
+"configuration`."
+msgstr "Haz clic en la entrada del menú :menuselection:`Analysis --> SAGA options and configuration`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:395
+msgid ""
+"In the dialog that appears, expand the :guilabel:`SAGA` item and look for "
+":guilabel:`SAGA folder`. Its value will be blank."
+msgstr "En el cuadro de diálogo que aparece, expande :guilabel:`SAGA` item and look for :guilabel:`SAGA folder`. Su valor estará en blanco."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:397
+msgid "In this space, insert the path where you installed SAGA."
+msgstr "En ese espacio, inserta la ruta donde instalaste el SAGA."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:400
+msgid "On Ubuntu"
+msgstr "En Ubuntu"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:402
+msgid ""
+"Search for :guilabel:`SAGA GIS` in the :guilabel:`Software Center`, or enter"
+" the phrase :kbd:`sudo apt-get install saga-gis` in your terminal. (You may "
+"first need to add a SAGA repository to your sources.)"
+msgstr "Busca :guilabel:`SAGA GIS` en el :guilabel:`Software Center`, o introduce la frase :kbd:`sudo apt-get install saga-gis` en tu terminal. (Puede que necesites primero añadir un repositorio de SAGA en tus fuentes.)"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:405
+msgid ""
+"QGIS will find SAGA automatically, although you may need to restart QGIS if "
+"it doesn't work straight away."
+msgstr "QGIS encontrará SAGA automáticamente, aunque puede que necesites reiniciar QGIS si no funciona directamente."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:409
+msgid "On Mac"
+msgstr "En Mac"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:411
+msgid "Homebrew users can install SAGA with this command:"
+msgstr "Los usuarios Homebrew pueden instalar SAGA con este comando:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:413
+msgid "brew install saga-core"
+msgstr "instalación brew del saga básico "
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:415
+msgid "If you do not use Homebrew, please follow the instructions here:"
+msgstr "Si no utilizas Homebrew, sigue las instrucciones siguientes:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:417
+msgid ""
+"http://sourceforge.net/apps/trac/saga-"
+"gis/wiki/Compiling%20SAGA%20on%20Mac%20OS%20X"
+msgstr "http://sourceforge.net/apps/trac/saga-gis/wiki/Compiling%20SAGA%20on%20Mac%20OS%20X"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:420
+msgid "After installing"
+msgstr "Después de instalar"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:422
+msgid ""
+"Now that you have installed and configured SAGA, its functions will become "
+"accessible to you."
+msgstr "Ahora que has instalado y configurado SAGA, sus funciones te serán accesibles."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:426
+msgid "Using SAGA"
+msgstr "Utilizando SAGA"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:428
+msgid "Open the SAGA dialog."
+msgstr "Abre un cuadro de diálogo del SAGA."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:429
+msgid "SAGA produces three outputs, and so will require three output paths."
+msgstr "SAGA produce tres salidas, así que requiere tres rutas de salida."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:430
+msgid ""
+"Save these three outputs under :kbd:`exercise_data/spatial_statistics/`, "
+"using whatever file names you find appropriate."
+msgstr "Guarda esas tres salidas en :kbd:`exercise_data/spatial_statistics/`, utilizando los nombres de archivo que creas conveniente."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:436
+msgid ""
+"The output will look like this (the symbology was changed for this example):"
+msgstr "La salida se verá así (la simbología se cambió para este ejemplo):"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:441
+msgid ""
+"The red dot is the mean center; the large circle is the standard distance, "
+"which gives an indication of how closely the points are distributed around "
+"the mean center; and the rectangle is the bounding box, describing the "
+"smallest possible rectangle which will still enclose all the points."
+msgstr "El punto rojo es la media central; el gran círculo es la distancia estándar, que dá una indicación de cómo de cerca estan distribuidos los puntos alrededor de la media central; y el rectángulo es la caja delimitadora, describiendo el mínimo rectángulo posible que todavía incluye todos los puntos."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:447
+msgid "|moderate| |FA| Minimum Distance Analysis"
+msgstr "|moderate| |FA| Análisis de la Distancia Mínima"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:449
+msgid ""
+"Often, the output of an algorithm will not be a shapefile, but rather a "
+"table summarizing the statistical properties of a dataset. One of these is "
+"the :guilabel:`Minimum Distance Analysis` tool."
+msgstr "A menudo, la salida de un algoritmo no es un archivo shape, sino una tabla resumen de las propiedades estadísticas del conjunto de datos. Una de esas herramientas es :guilabel:`Minimum Distance Analysis`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:453
+msgid ""
+"Find this tool in the :guilabel:`Processing Toolbox` as :guilabel:`Minimum "
+"Distance Analysis`."
+msgstr "Encontre esta ferramenta no :guilabel:`Caixa de Ferramentas Processamento` como :guilabel:`Analise de Distância Mínima`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:456
+msgid ""
+"It does not require any other input besides specifying the vector point "
+"dataset to be analyzed."
+msgstr "No requiere ninguna otra entrada a parte de especificar el conjunto de puntos vectoriales a ser analizado."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:459
+msgid "Choose the :guilabel:`random_points` dataset."
+msgstr "Escoge el conjunto de datos :guilabel:`puntos_aleatorios`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:460
+msgid ""
+"Click :guilabel:`OK`. On completion, a DBF table will appear in the "
+":guilabel:`Layers list`."
+msgstr "Haz clic en :guilabel:`Aceptar`. Al finalizar, una tabla DBF aparecerá en la :guilabel:`Lista de capas`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:462
+msgid ""
+"Select it, then open its attribute table. Although the figures may vary, "
+"your results will be in this format:"
+msgstr "Selecciónala, luego abre su tabla de atributos. Aunque algunas figuras puede que varíen, tus resultados estarán en este formato:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:469
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:471
+msgid ""
+"QGIS allows many possibilities for analyzing the spatial statistical "
+"properties of datasets."
+msgstr "QGIS permite muchas posibilidades para analizar las propiedades espaciales estadísticas de conjuntos de datos."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:475
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:477
+msgid ""
+"Now that we've covered vector analysis, why not see what can be done with "
+"rasters? That's what we'll do in the next module!"
+msgstr "Ahora que has cubierto los análisis vectoriales, ¿Por qué no ver qué se puede hacer con rasters? ¡Eso es lo que haremos en el próximo módulo!"

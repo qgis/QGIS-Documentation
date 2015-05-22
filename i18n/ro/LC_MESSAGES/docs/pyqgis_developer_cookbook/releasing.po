@@ -1,0 +1,183 @@
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2014-12-05 11:21+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:7
+msgid "Releasing your plugin"
+msgstr "Lansarea plugin-ului dvs."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:9
+msgid ""
+"Once your plugin is ready and you think the plugin could be helpful for some"
+" people, do not hesitate to upload it to :ref:`official_pyqgis_repository`. "
+"On that page you can find also packaging guidelines about how to prepare the"
+" plugin to work well with the plugin installer. Or in case you would like to"
+" set up your own plugin repository, create a simple XML file that will list "
+"the plugins and their metadata, for examples see other `plugin repositories "
+"<http://www.qgis.org/wiki/Python_Plugin_Repositories>`_."
+msgstr "O dată ce plugin-ul este gata și credeți că el ar putea fi de ajutor pentru unii utilizatori, nu ezitați să-l încărcați la :ref:`official_pyqgis_repository`. Pe acea pagină puteți găsi instrucțiuni de împachetare și de pregătire a plugin-ului, pentru a lucra bine cu programul de instalare. Sau, în cazul în care ați dori să înființați un depozit propriu pentru plugin-uri, creați un simplu fișier XML, care va lista plugin-urile și metadatele lor, exemplu pe care îl puteți vedea în `depozite pentru plugin-uri <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:23
+msgid "Official python plugin repository"
+msgstr "Depozitul oficial al plugin-urilor python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:25
+msgid ""
+"You can find the *official* python plugin repository at "
+"`<http://plugins.qgis.org/>`_."
+msgstr "Puteți găsi depozitul *oficial* al plugin-urilor python la `<http://plugins.qgis.org/>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:28
+msgid ""
+"In order to use the official repository you must obtain an OSGEO ID from the"
+" `OSGEO web portal <http://www.osgeo.org/osgeo_userid/>`_."
+msgstr "Pentru a folosi depozitul oficial, trebuie să obțineți un ID OSGEO din portalul web  `OSGEO <http://www.osgeo.org/osgeo_userid/>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:31
+msgid ""
+"Once you have uploaded your plugin it will be approved by a staff member and"
+" you will be notified."
+msgstr "O dată ce ați încărcat plugin-ul, acesta va fi aprobat de către un membru al personalului și veți primi o notificare."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:41
+msgid "Permissions"
+msgstr "Permisiuni"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:43
+msgid "These rules have been implemented in the official plugin repository:"
+msgstr "Aceste reguli au fost implementate în depozitul oficial al plugin-urilor:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:45
+msgid "every registered user can add a new plugin"
+msgstr "fiecare utilizator inregistrat poate adăuga un nou plugin"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:46
+msgid "*staff* users can approve or disapprove all plugin versions"
+msgstr "membrii *staff-ului* pot aproba sau dezaproba toate versiunile plugin-ului"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:47
+msgid ""
+"users which have the special permission `plugins.can_approve` get the "
+"versions they upload automatically approved"
+msgstr "utilizatorii care au permisiunea specială `plugins.can_approve` au versiunile pe care le încarcă aprobate în mod automat"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:49
+msgid ""
+"users which have the special permission `plugins.can_approve` can approve "
+"versions uploaded by others as long as they are in the list of the plugin "
+"*owners*"
+msgstr "utilizatorii care au permisiunea specială `plugins.can_approve` pot aproba versiunile încărcate de către alții, atât timp cât aceștia sunt prezenți în lista *proprietarilor* de plugin-uri"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:52
+msgid ""
+"a particular plugin can be deleted and edited only by *staff* users and "
+"plugin *owners*"
+msgstr "un anumit plug-in pot fi șters și editat doar de utilizatorii *staff-ului* și de către *proprietarii* plugin-uri"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:54
+msgid ""
+"if a user without `plugins.can_approve` permission uploads a new version, "
+"the plugin version is automatically unapproved."
+msgstr "în cazul în care un utilizator fără permisiunea `plugins.can_approve` încarcă o nouă versiune, versiunea plug-inului nu va fi aprobată, din start."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:59
+msgid "Trust management"
+msgstr "Managementul încrederii"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:61
+msgid ""
+"Staff members can grant *trust* to selected plugin creators setting "
+"`plugins.can_approve` permission through the front-end application."
+msgstr "Membrii personalului pot acorda *încredere* creatorilor de plugin-uri, bifând permisiunea `plugins.can_approve` în cadrul front-end-ului."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:64
+msgid ""
+"The plugin details view offers direct links to grant trust to the plugin "
+"creator or the plugin *owners*."
+msgstr "Detaliile despre plugin oferă legături directe pentru a crește încrederea în creatorul sau *proprietarul*.plugin-ului."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:70
+msgid "Validation"
+msgstr "Validare"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:72
+msgid ""
+"Plugin's metadata are automatically imported and validated from the "
+"compressed package when the plugin is uploaded."
+msgstr "Metadatele plugin-ului sunt importate automat din pachetul arhivat și sunt validate, la încărcarea plugin-ului."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:75
+msgid ""
+"Here are some validation rules that you should aware of when you want to "
+"upload a plugin on the official repository:"
+msgstr "Iată câteva reguli de validare pe care ar trebui să le cunoașteți atunci când doriți să încărcați un plugin în depozitul oficial:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:78
+msgid ""
+"the name of the main folder containing your plugin must contain only "
+"contains ASCII characters (A-Z and a-z), digits and the characters "
+"underscore (_) and minus (-), also it cannot start with a digit"
+msgstr "numele folderului principal în care este stocat plugin-ul dvs. trebuie să conțină doar caractere ASCII (A-Z și a-z), cifre și caracterele de subliniere (_) și minus (-), și nu poate începe cu o cifră"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:81
+msgid ":file:`metadata.txt` is required"
+msgstr ":file:`metadata.txt` este necesar"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:82
+msgid ""
+"all required metadata listed in :ref:`metadata table<plugin_metadata_table>`"
+" must be present"
+msgstr "toate metadatele necesare, menționate în :ref:`tabela de metadate<plugin_metadata_table>` trebuie să fie prezente"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:84
+msgid "the `version` metadata field must be unique"
+msgstr " câmpul de metadate `versiunea` trebuie să fie unic"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:17
+msgid "plugins;"
+msgstr "plugin-uri;"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:37
+msgid "plugins"
+msgstr "plugin-uri"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:37
+msgid "official python plugin repository"
+msgstr "depozitul oficial al plugin-urilor python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:35
+msgid "**TODO:**"
+msgstr "**DE EFECTUAT:**"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:35
+msgid "Insert a link to the governance document"
+msgstr "Introduceți un link către documentul guvernanței"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:87
+msgid "Plugin structure"
+msgstr "Structura plugin-ului"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:89
+msgid ""
+"Following the validation rules the compressed (.zip) package of your plugin "
+"must have a specific structure to validate as a functional plugin. As the "
+"plugin will be unzipped inside the users plugins folder it must have it's "
+"own directory inside the .zip file to not interfere with other plugins. "
+"Mandatory files are: :file:`metadata.txt` and :file:`__init__.py`. But it "
+"would be nice to have a :file:`README` and of course an icon to represent "
+"the plugin (:file:`resources.qrc`). Following is an example of how a "
+"plugin.zip should look like."
+msgstr "Conform regulilor de validare, pachetul compresat (.zip) al plugin-ului trebuie să aibă o structură specifică, pentru a fi validat ca plugin funcțional. Deorece plugin-ul va fi dezarhivat în interiorul directorului de plugin-uri ale utilizatorului, el trebuie să aibă propriul director în interiorul fișierului zip, pentru a nu interfera cu alte plugin-uri. Fișierele obligatorii sunt: :file:`metadata.txt` și :file:`__init__.py`. Totuși, ar fi frumos să existe un :file:`README` și, desigur, o pictogramă care să reprezinte pluginul (:file:`resources.qrc`). Iată un exemplu despre modul în care ar trebui să arate un plugin.zip."

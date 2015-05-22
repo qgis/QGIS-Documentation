@@ -1,0 +1,112 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-03 13:16+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:6
+msgid "Stream Definition By Threshold"
+msgstr "Définition de flux par seuil"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:11
+msgid ""
+"Operates on any grid and outputs an indicator (1, 0) grid identifing cells "
+"with input values >= the threshold value. The standard use is to use an "
+"accumulated source area grid to as the input grid to generate a stream "
+"raster grid as the output. If you use the optional input mask grid, it "
+"limits the domain being evaluated to cells with mask values >= 0. When you "
+"use a D-infinity contributing area grid (:file:`*sca`) as the mask grid, it "
+"functions as an edge contamination mask. The threshold logic is:"
+msgstr "S'applique sur n'importe quelle grille et calcule un indicateur (1, 0) identifiant les cellules dont les valeurs d'entrée sont supérieures ou égales à la valeur de seuil. L'utilisation courante est d'utiliser une grille de surface de source accumulée en entrée pour générer une grille raster de cours d'eau en sortie. Si vous utilisez la grille de masque optionnelle, le domaine évalué sera limité au cellules dont la valeur de masque sera supérieure ou égale à 0. Lorsque vous utilisez une grille de surface contributive D-Infinity (:file:`*sca`) comme grille de masque, elle fonctionnera comme un masque de contamination des arcs. La logique de seuil est la suivante:"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:24
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:33
+msgid "``Accumulated Stream Source Grid`` [raster]"
+msgstr "``Grille de Flux Source Accumulé`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:27
+msgid ""
+"This grid nominally accumulates some characteristic or combination of "
+"characteristics of the watershed. The exact characteristic(s) varies "
+"depending on the stream network raster algorithm being used. This grid needs"
+" to have the property that grid cell values are monotonically increasing "
+"downslope along D8 flow directions, so that the resulting stream network is "
+"continuous. While this grid is often from an accumulation, other sources "
+"such as a maximum upslope function will also produce a suitable grid."
+msgstr "Cette grille fait la somme de certaines caractéristiques ou de combinaison de ces caractéristiques sur un bassin versant. Les caractéristiques exactes varient selon l'algorithme de raster de réseau de cours d'eau utilisé. Cette grille implique que les valeurs de cellule incrémentent pas à pas la pente descendante selon les directions de flux D8 de manière à ce que le réseau de cours d'eau résultant soit continu. Même si cette grille est souvent obtenue à partir d'une accumulation, d'autres sources telle que la fonction de pente ascendante maximum produira également une grille convenable."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:40
+msgid "``Threshold`` [number]"
+msgstr "``Seuil`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:36
+msgid ""
+"This parameter is compared to the value in the Accumulated Stream Source "
+"grid (:file:`*ssa`) to determine if the cell should be considered a stream "
+"cell. Streams are identified as grid cells for which ssa value is >= this "
+"threshold."
+msgstr "Ce paramètre est comparé à la valeur de la grille source d'accumulation de cours d'eau (:file:`*ssa`) pour déterminer si la cellule doit être considérée comme une cellule de cours d'eau. Les cours d'eau sont identifiés par les cellules ou la valeur ssa est >= à ce seuil."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:40
+msgid "Default: *100*"
+msgstr "Par défaut : *100*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:50
+msgid "``Mask Grid`` [raster]"
+msgstr "``Grille de masque`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:43
+msgid "Optional."
+msgstr "En option."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:45
+msgid ""
+"This optional input is a grid that is used to mask the domain of interest "
+"and output is only provided where this grid is >= 0. A common use of this "
+"input is to use a D-Infinity contributing area grid as the mask so that the "
+"delineated stream network is constrained to areas where D-infinity "
+"contributing area is available, replicating the functionality of an edge "
+"contamination mask."
+msgstr "Cette entrée optionnelle est une grille qui est utilisée pour masquer le domaine d'intérêt et la sortie est calculée uniquement lorsque cette grille est >=0. Un cas d'utilisation courant est d'utiliser une grille de surface contributive D-Infinity comme masque de manière à ce que le réseau des cours d'eau délimités soit contraint aux surfaces où la surface contributive D-Infinity est disponible, répliquant la fonctionnalité de masque de contamination des arcs."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:53
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:57
+msgid "``Stream Raster Grid`` [raster]"
+msgstr "``Grille raster de flux`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:56
+msgid ""
+"This is an indicator grid (1, 0) that indicates the location of streams, "
+"with a value of 1 for each of the stream cells and 0 for the remainder of "
+"the cells."
+msgstr "Il s'agit d'une grille d'indicateur (1, 0) qui indique l'emplacement des cours d'eau avec une valeur de 1 pour les cellules de cours d'eau et 0 pour les autres."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:60
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdefinitionbythreshold.rst:67
+msgid "See also"
+msgstr "Voir également"

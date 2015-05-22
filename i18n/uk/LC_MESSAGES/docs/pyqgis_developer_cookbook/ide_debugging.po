@@ -1,0 +1,563 @@
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2014-12-16 19:03+0000\n"
+"Last-Translator: alexbruy <alexander.bruy@gmail.com>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/projects/p/qgis-documentation/language/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:7
+msgid "IDE settings for writing and debugging plugins"
+msgstr "Настройка IDE для розробки плаґінів"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:14
+msgid "A note on configuring your IDE on Windows"
+msgstr "Про настройку IDE у Windows"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:16
+msgid ""
+"On Linux there is no additional configuration needed to develop plug-ins. "
+"But on Windows you need to make sure you that you have the same environment "
+"settings and use the same libraries and interpreter as QGIS. The fastest way"
+" to do this, is to modify the startup batch file of QGIS."
+msgstr "В Linux для розробки плаґінів додаткових настройок не потрібно. Але якщо ви працюєте в Windows, то необхідно переконатися що QGIS та інтерпретатор використовують однакові змінні оточення та бібліотеки. Найпростіший та найшвидший спосіб зробити це --- відредагувати файл запуску QGIS."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:21
+msgid ""
+"If you used the OSGeo4W Installer, you can find this under the bin folder of"
+" your OSGoeW install. Look for something like :file:`C:\\\\OSGeo4W\\\\bin"
+"\\\\qgis-unstable.bat`."
+msgstr "Якщо використовується інсталятор OSGeo4W, файл можна знайти у каталозі :file:`bin` директорії, де встановлено OSGeo4W. Шукайте щось на кшалт :file:`C:\\\\OSGeo4W\\\\bin\\\\qgis-unstable.bat`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:28
+msgid "Make a copy of qgis-unstable.bat and rename it pyscripter.bat."
+msgstr "зробіть копію :file:`qgis-unstable.bat` та перейменуйте його в :file:`pyscripter.bat`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:55
+msgid "To create that batch file, follow these steps."
+msgstr "Для цього:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:71
+msgid "Debugging using Eclipse and PyDev"
+msgstr "Зневадження в Eclipse та PyDev"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:74
+msgid "Installation"
+msgstr "Встановлення"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:76
+msgid "To use Eclipse, make sure you have installed the following"
+msgstr "Для роботи з Eclipse переконайтеся, що встановили наступні програми:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:78
+msgid "Eclipse"
+msgstr "Eclipse"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:79
+msgid "Aptana Eclipse Plugin or PyDev"
+msgstr "Aptana Eclipse Plugin або PyDev"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:80
+msgid "QGIS 2.0"
+msgstr "QGIS 2.0"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:83
+msgid "Preparing QGIS"
+msgstr "Підготовка QGIS"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:85
+msgid ""
+"There is some preparation to be done on QGIS itself. Two plugins are of "
+"interest: *Remote Debug* and *Plugin reloader*."
+msgstr "Спочатку слід підготувати QGIS. Нам знадобляться плаґіни *Remote Debug* та *Plugin reloader*."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:92
+msgid ""
+"Search for *Plugin reloader* and install it as well. This will let you "
+"reload a plugin instead of having to close and restart QGIS to have the "
+"plugin reloaded."
+msgstr "знайдіть плаґін Plugin Reloader і також встановіть його. Це дозволить вам перезавантажувати модуль, а не закривати та знову запускати QGIS."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:97
+msgid "Setting up Eclipse"
+msgstr "Настройка Eclipse"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:106
+msgid "Eclipse project"
+msgstr "Проект Eclipse"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:119
+msgid "Configuring the debugger"
+msgstr "Настройка зневаджувача"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:132
+msgid ""
+"Now you can set a breakpoint and as soon as the code hits it, execution will"
+" stop and you can inspect the current state of your plugin. (The breakpoint "
+"is the green dot in the image below, set one by double clicking in the white"
+" space left to the line you want the breakpoint to be set)"
+msgstr "Після цього можна встановлювати точку зупинки, і як тільки виконання дійде до неї, ви зможете перевірити поточний стан свого плаґіна. (Точка зупинки це зелена точки на зображені нижче, встановлюються вони подвійним клацанням на білій смузі поряд з рядком на якому її необхідно встановити)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:140
+msgid "Breakpoint"
+msgstr "Точка зупинки"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:142
+msgid ""
+"A very interesting thing you can make use of now is the debug console. Make "
+"sure that the execution is currently stopped at a break point, before you "
+"proceed."
+msgstr "Дуже корисним інструментом, який зараз можна використовувати, є зневаджувальна консоль. Перш ніж використовувати її переконайтесь, що виконання зараз зупинилось у точці зупинки."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:158
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:190
+msgid "PyDev Debug Console"
+msgstr "Зневаджувальна консоль PyDev"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:161
+msgid ""
+"You have now an interactive console which let's you test any commands from "
+"within the current context. You can manipulate variables or make API calls "
+"or whatever you like."
+msgstr "Тепер у вас є інтерактивна консоль, у якій можна виконувати будь-які команди у поточному контексті. Ви можете маніпулювати змінними, викликати різні методи API і таке інше."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:171
+msgid "Making eclipse understand the API"
+msgstr "Підключення файлів API до Eclipse"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:173
+msgid ""
+"A very handy feature is to have Eclipse actually know about the QGIS API. "
+"This enables it to check your code for typos. But not only this, it also "
+"enables Eclipse to help you with autocompletion from the imports to API "
+"calls."
+msgstr "Дуже зручно, коли Eclipse знає API QGIS. Це значно зменшує кількість друкарських помилок, а крім того, дозволяє використовувати автозавершення коду викликів API."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:177
+msgid ""
+"To do this, Eclipse parses the QGIS library files and gets all the "
+"information out there. The only thing you have to do is to tell Eclipse "
+"where to find the libraries."
+msgstr "Для цього Eclipse необхідно проаналізувати файли бібліотек QGIS та витягти з них необхідну інформацію. Вам треба тільки вказати Eclipse де саме шукати ці бібліотеки."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:183
+msgid ""
+"You will see your configured python interpreter in the upper part of the "
+"window (at the moment python2.7 for QGIS) and some tabs in the lower part. "
+"The interesting tabs for us are *Libraries* and *Forced Builtins*."
+msgstr "У верхній частині вікна знаходяться налаштовані інтерпретатори Python (у нашому випадку тільки Python 2.7 для QGIS), а в нижній частині --- декілька вкладок. Нас цікавлять вкладки :guilabel:`Libraries` та :guilabel:`Forced Builtins`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:207
+msgid "Click *OK* and you're done."
+msgstr "Натисніть **[OK]** щоб закінчити."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:213
+msgid ""
+"For another possible setting of Eclipse to work with QGIS Python plugins, "
+"check `this link <http://linfiniti.com/2011/12/remote-debugging-qgis-python-"
+"plugins-with-pydev>`_"
+msgstr "Інший варіант настройки Eclipse для роботи з плаґінами QGIS описано `тут <http://linfiniti.com/2011/12/remote-debugging-qgis-python-plugins-with-pydev>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:217
+msgid "Debugging using PDB"
+msgstr "Зневадження з PDB"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:232
+msgid "Then run QGIS from the command line."
+msgstr "тепер запустить QGIS з командного рядка"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:234
+msgid "On Linux do:"
+msgstr "в Linux виконайте:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:236
+msgid ":command:`$ ./Qgis`"
+msgstr ":command:`$ ./Qgis`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:238
+msgid "On Mac OS X do:"
+msgstr "в Mac OS X виконайте:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:240
+msgid ":command:`$ /Applications/Qgis.app/Contents/MacOS/Qgis`"
+msgstr ":command:`$ /Applications/Qgis.app/Contents/MacOS/Qgis`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:242
+msgid ""
+"And when the application hits your breakpoint you can type in the console!"
+msgstr "Як тільки програма дійде до вашої точки зупинки, консоль стане доступною і ви зможете виконувати будь-які команди!"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:244
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:249
+msgid "plugins"
+msgstr "плаґіни"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:244
+msgid "testing"
+msgstr "тестування"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:249
+msgid "releasing"
+msgstr "реліз"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:9
+msgid ""
+"Although each programmer has his preferred IDE/Text editor, here are some "
+"recommendations for setting up popular IDE's for writing and debugging QGIS "
+"Python plugins."
+msgstr "Хоча кожен програміст має улюблену IDE або текстовий редактор, ось деякі рекомендації з настройки популярних IDE для розробки плаґінів QGIS на Python."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:25
+msgid ""
+"For using `Pyscripter IDE <http://code.google.com/p/pyscripter>`_, here's "
+"what you have to do:"
+msgstr "Далі описується настройка `PyScripter IDE <http://code.google.com/p/pyscripter>`_:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:29
+msgid ""
+"Open it in an editor. And remove the last line, the one that starts QGIS."
+msgstr "відкрийте цей файл у текстовому редакторі та видаліть останній рядок, який відповідає за запуск QGIS"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:30
+msgid ""
+"Add a line that points to the your Pyscripter executable and add the "
+"commandline argument that sets the version of Python to be used (2.7 in the "
+"case of QGIS 2.0)"
+msgstr "додайте рядок запуску PyScripter з параметром, що вказує версію Python, яку слід використовувати (у випадку QGIS 2.0 це 2.7)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:33
+msgid ""
+"Also add the argument that points to the folder where Pyscripter can find "
+"the Python dll used by QGIS, you can find this under the bin folder of your "
+"OSGeoW install"
+msgstr "додайте ще один параметр, що вказує на каталог, де PyScripter повинен шукати бібліотеки Python QGIS. Зазвичай це каталог :file:`bin` директорії, де встановлено OSGeo4W"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:47
+msgid ""
+"Now when you double click this batch file it will start Pyscripter, with the"
+" correct path."
+msgstr "Тепер після запуску цього командного файлу буде встановлено необхідні змінні оточення та запущено PyScripter."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:50
+msgid ""
+"More popular that Pyscripter, Eclipse is a common choice among developers. "
+"In the following sections, we will be explaining how to configure it for "
+"developing and testing plugins. To prepare your environment for using "
+"Eclipse in Windows, you should also create a batch file and use it to start "
+"Eclipse."
+msgstr "Більш популярна ніж PyScripter, Eclipse використовується багатьма розробниками. У наступному розділі ми розглянемо її настройку для розробки та тестування плаґінів. Але спочатку необхідно підготувати ваше робоче оточення. Для використання Eclipse у Windows також необхідно створити командний файл для запуску IDE."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:57
+msgid ""
+"Locate the folder where file:`qgis_core.dll` resides in. Normally this is "
+":file:`C:\\OSGeo4W\\apps\\qgis\\bin`, but if you compiled your own QGIS "
+"application this is in your build folder in "
+":file:`output/bin/RelWithDebInfo`"
+msgstr "знайдіть каталог, в якому розміщено :file:`qgis_core.dll`. Зазвичай це :file:`C:\\OSGeo4W\\apps\\qgis\\bin`, але якщо ви збирали QGIS самостійно, то швидше за все файл буде у каталозі :file:`output/bin/RelWithDebInfo`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:60
+msgid "Locate your :file:`eclipse.exe` executable."
+msgstr "знайдіть каталог, де знаходиться :file:`eclipse.exe`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:61
+msgid ""
+"Create the following script and use this to start eclipse when developing "
+"QGIS plugins."
+msgstr "створіть командний файл з наступним вмістом та використовуйте його для запуску Eclipse"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:88
+msgid "Go to :menuselection:`Plugins --> Fetch python plugins`"
+msgstr "Зайдіть у меню :menuselection:`Плаґіни --> Управління плаґінами`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:89
+msgid ""
+"Search for *Remote Debug* ( at the moment it's still experimental, so enable"
+" experimental plugins under the Options tab in case it does not show up ). "
+"Install it."
+msgstr "знайдіть плаґін Remote Debug (на момент написання він мав статус експериментального, то ж якщо не можете його знайти --- включіть відображення експериментальних плаґінів на вкладці :guilabel:`Настройки`). Встановіть його."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:99
+msgid ""
+"In Eclipse, create a new project. You can select *General Project* and link "
+"your real sources later on, so it does not really matter where you place "
+"this project."
+msgstr "Створіть новий проект у Eclipse. Ви можете вибрати :guilabel:`General Project` і додати реальні файли пізніше, тобто зараз немає значення де саме буде розміщено проект."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:108
+msgid ""
+"Now right click your new project and choose :menuselection:`New --> Folder`."
+msgstr "Клацніть правою клавішею миші на новому проекті та виберіть :menuselection:`New --> Folder`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:110
+msgid ""
+"Click **[Advanced]** and choose :guilabel:`Link to alternate location "
+"(Linked Folder)`. In case you already have sources you want to debug, choose"
+" these, in case you don't, create a folder as it was already explained"
+msgstr "Натисніть кнопку **[Advanced]** та виберіть :guilabel:`Link to alternate location (Linked Folder)`. Якщо ви вже маєте код, який необхідно зневаджувати, виберіть цей пункт, якщо ж не --- створіть новий каталог як було написано вище."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:114
+msgid ""
+"Now in the view :guilabel:`Project Explorer`, your source tree pops up and "
+"you can start working with the code. You already have syntax highlighting "
+"and all the other powerful IDE tools available."
+msgstr "Після цього у :guilabel:`Project Explorer` з'явиться дерево вихідних кодів і ви можете починати працювати з кодом. У вашому розпорядженні підсвітка синтаксису та інші інструменти IDE."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:121
+msgid ""
+"To get the debugger working, switch to the Debug perspective in Eclipse "
+"(:menuselection:`Window --> Open Perspective --> Other --> Debug`)."
+msgstr "Щоб зневаджувач запрацював відкрийте *Debug perspective* в Eclipse (:menuselection:`Window --> Open Perspective --> Other --> Debug`)."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:124
+msgid ""
+"Now start the PyDev debug server by choosing :menuselection:`PyDev --> Start"
+" Debug Server`."
+msgstr "Потім запустить зневаджувальний сервер PyDev, вибравши :menuselection:`PyDev --> Start Debug Server`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:127
+msgid ""
+"Eclipse is now waiting for a connection from QGIS to its debug server and "
+"when QGIS connects to the debug server it will allow it to control the "
+"python scripts. That's exactly what we installed the *Remote Debug* plugin "
+"for. So start QGIS in case you did not already and click the bug symbol ."
+msgstr "Тепер Eclipse очікує підключення до зневаджувального сервера зі сторони QGIS. Тільки-но QGIS підключиться до зневаджувального сервера, Eclipse зможе контролювати сценарії Python. Саме для цього ми встановили плаґін Remote Debug. Отже запускаємо QGIS, якщо цього зе не зроблено, а потім запускаємо модуль Remote Debug."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:146
+msgid ""
+"Open the Console view (:menuselection:`Window --> Show view`). It will show "
+"the :guilabel:`Debug Server` console which is not very interesting. But "
+"there is a button **[Open Console]** which lets you change to a more "
+"interesting PyDev Debug Console. Click the arrow next to the **[Open "
+"Console]** button and choose *PyDev Console*. A window opens up to ask you "
+"which console you want to start. Choose *PyDev Debug Console*. In case its "
+"greyed out and tells you to Start the debugger and select the valid frame, "
+"make sure that you've got the remote debugger attached and are currently on "
+"a breakpoint."
+msgstr "Відкрийте консоль (:menuselection:`Window --> Show view`). Ви побачите консоль зневаджувального сервера, де нічого цікавого немає. Але після натискання на кнопку **[Open Console]** вона перетворюється на значно цікавішу консоль зневадження PyDev. Натисніть на стрілку поруч з кнопкою **[Open Console]** та виберіть *PyDev Console*. З'явиться вікно з питанням, яку консоль ви хочете активувати. Виберіть *PyDev Debug Console*. Якщо цей пункт недоступний та вас просять запустити зневаджувач та вказати правильний фрейм, переконайтесь, що ви знаходитесь у режимі зневадження та виконання зупинилось у казаній точці зупинки."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:165
+msgid ""
+"A little bit annoying is, that every time you enter a command, the console "
+"switches back to the Debug Server. To stop this behavior, you can click the "
+"*Pin Console* button when on the Debug Server page and it should remember "
+"this decision at least for the current debug session."
+msgstr "Трохи дратує те, що після кожної виконаної команди консоль переключається до зневаджувального сервера. Щоб змінити цю поведінку натисніть кнопку *Pin Console* коли знаходитись на сторінці зневаджувального сервера. Ваш вибір повинен зберегтися принаймні для поточної сесії зневадження."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:181
+msgid ""
+"Click :menuselection:`Window --> Preferences --> PyDev --> Interpreter --> "
+"Python`."
+msgstr "Виберіть :menuselection:`Window --> Preferences --> PyDev --> Interpreter --> Python`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:192
+msgid ""
+"First open the Libraries tab. Add a New Folder and choose the python folder "
+"of your QGIS installation. If you do not know where this folder is (it's not"
+" the plugins folder) open QGIS, start a python console and simply enter "
+"``qgis`` and press Enter. It will show you which QGIS module it uses and its"
+" path. Strip the trailing ``/qgis/__init__.pyc`` from this path and you've "
+"got the path you are looking for."
+msgstr "Спочатку перейдіть на вкладку :guilabel:`Libraries`. Натисніть **[New Folder]** та вкажіть каталог Python вашої встановленої QGIS. Якщо ви не знаєте де цей каталог знаходиться (це не каталог плаґінів!), відкрийте QGIS, активуйте консоль Python та виконайте команду ``qgis``. Результатом цієї команди буде список плаґінів та їх каталоги. Відкиньте :file:`/qgis/__init__.pyc` з цього шляху та отримаєте шуканий каталог."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:199
+msgid ""
+"You should also add your plugins folder here (on Linux it is "
+":file:`~/.qgis/python/plugins`)."
+msgstr "Також необхідно додати каталог плаґінів (в Linux це :file:`~/.qgis2/python/plugins`)."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:202
+msgid ""
+"Next jump to the *Forced Builtins* tab, click on *New...* and enter "
+"``qgis``. This will make Eclipse parse the QGIS API. You probably also want "
+"eclipse to know about the PyQt4 API. Therefore also add PyQt4 as forced "
+"builtin. That should probably already be present in your libraries tab."
+msgstr "Тепер перейдіть на вкладку :guilabel:`Forced Builtins`, натисніть **[New...]** та введіть ``qgis``. Це змусить Eclipse проаналізувати API QGIS. Швидше за все ви також захочете щоб Eclipse знала й API PyQt4. Тому додайте PyQt4 як *forced builtin*. Можливо, цей пункт уже буде присутній на вашій вкладці."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:209
+msgid ""
+"Note: every time the QGIS API changes (e.g. if you're compiling QGIS master "
+"and the SIP file changed), you should go back to this page and simply click "
+"*Apply*. This will let Eclipse parse all the libraries again."
+msgstr "Зверніть увагу: кожного разу, коли API QGIS змінюється (наприклад, коли ви перезібрали QGIS і файли SIP змінилися), необхідно повертатися на ці вкладки та натискати **[Apply]** щоб Eclipse проаналізували бібліотеки знову."
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:219
+msgid ""
+"If you do not use an IDE such as Eclipse, you can debug using PDB, following"
+" these steps."
+msgstr "Якщо ви не користуєтесь такими IDE як Eclipse, ви можете зневаджувати за допомогою PDB. Для цього:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:222
+msgid "First add this code in the spot where you would like to debug"
+msgstr "додайте наступний код, у місце, яке необхідно зневадити"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:247
+msgid "**TODO:**"
+msgstr "**TODO:**"
+
+#: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:247
+msgid "Add testing information"
+msgstr "Add testing information"
+
+#~ msgid ""
+#~ "Although each programmer has his prefered IDE/Text editor, here are some "
+#~ "recommendations for setting up popular IDE's for writing and debugging QGIS "
+#~ "Python plugins."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For using `Pyscripter IDE <http://code.google.com/p/pyscripter>`_, here's "
+#~ "what ou have to do:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open it in an editor. And remove the last line, the one that starts qgis."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add a line that points to the your pyscripter executable and add the "
+#~ "commandline argument that sets the version of python to be used (2.7 in the "
+#~ "case of QGIs 2.0)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Also add the argument that points to the folder where pyscripter can find "
+#~ "the python dll used by qgis, you can find this under the bin folder of your "
+#~ "OSGeoW install::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now when you double click this batch file it will start pyscripter, with the"
+#~ " correct path."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "More popular that Pyscripter, Eclipse is a common choice among developers. "
+#~ "In the following sections, we will be explaining how to configure it for "
+#~ "depelopping and testing plugins. To prepare your environment for using "
+#~ "Eclipse in windows, you should also create a batch file and use it to start "
+#~ "Eclipse."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Locate the folder where ``qgis_core.dll`` resides in. Normally this is "
+#~ "``C:\\OSGeo4W\\apps\\qgis\\bin`` , but if you compiled your own qgis "
+#~ "application this is in your build folder in ``output/bin/RelWithDebInfo``"
+#~ msgstr ""
+
+#~ msgid "Locate your eclipse.exe executable."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create the following script and use this to start eclipse when developping "
+#~ "QGIS plugins."
+#~ msgstr ""
+
+#~ msgid "Go to *Plugins/Fetch python plugins*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Search for Remote Debug ( at the moment it's still experimental, so enable "
+#~ "experimental plugins under the Options tab in case it does not show up ). "
+#~ "Install it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In Eclipse, create a new project. You can select *General Project* and link "
+#~ "your real sources later on, so it does not really mather where you place "
+#~ "this project."
+#~ msgstr ""
+
+#~ msgid "Now right click your new project and choose *New => Folder*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click *Advanced* and choose *Link to alternate location (Linked Folder)*. In"
+#~ " case you already have sources you want to debug, choose these, in case you "
+#~ "don't, create a folder as it was already explained"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now in the view *Project Explorer*, your source tree pops up and you can "
+#~ "start working with the code. You already have syntax highlighting and all "
+#~ "the other powerful IDE tools available."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To get the debugger working, switch to the Debug perspective in eclipse "
+#~ "(*Window=>Open Perspective=>Other=>Debug*)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now start the PyDev debug server by choosing *PyDev=>Start Debug Server*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Eclipse is now waiting for a connection from QGIS to its debug server and "
+#~ "when QGIS connects to the debug server it will allow it to control the "
+#~ "python scripts. That's exactly what we installed the Remote Debug plugin "
+#~ "for. So start QGIS in case you did not already and click the bug symbol ."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open the Console view (*Window => Show view*). It will show the Debug Server"
+#~ " console which is not very interesting. But there is a button *Open Console*"
+#~ " which lets you change to a more interesting PyDev Debug Console. Click the "
+#~ "arrow next to the Open Console button and choose *PyDev Console*. A window "
+#~ "opens up to ask you which console you want to start. Choose *PyDev Debug "
+#~ "Console*. In case its greyed out and tells you to Start the debugger and "
+#~ "select the valid frame, make sure that you've got the remote debugger "
+#~ "attached and are currently on a breakpoint."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A little bit annoying is, that everytime you enter a command, the console "
+#~ "switches back to the Debug Server. To stop this behavior, you can click the "
+#~ "*Pin Console* button when on the Debug Server page and it should remember "
+#~ "this decision at least for the current debug session."
+#~ msgstr ""
+
+#~ msgid "Click *Window=>Preferences=>PyDev=>Interpreter - Python*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First open the Libraries tab. Add a New Folder and choose the python folder "
+#~ "of your QGIS installation. If you do not know where this folder is (it's not"
+#~ " the plugins folder) open QGIS, start a python console and simply enter "
+#~ "``qgis`` and press enter. It will show you which qgis module it uses and its"
+#~ " path. Strip the trailing ``/qgis/__init__.pyc`` from this path and you've "
+#~ "got the path you are looking for."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You should also add your plugins folder here (on linux its "
+#~ "~/.qgis/python/plugins )."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Next jump to the *Forced Builtins* tab, click on *New...* and enter "
+#~ "``qgis``. This will make eclipse parse the QGIS API. You probably also want "
+#~ "eclipse to know about the PyQt4 API. Therefore also add PyQt4 as forced "
+#~ "builtin. That should probably already be present in your libraries tab"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note: everytime the QGIS API changes (e.g. if you're compiling QGIS master "
+#~ "and the sip file changed), you should go back to this page and simply click "
+#~ "*Apply*. This will let Eclipse parse all the libraries again."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you do not use an IDE such as Eclipse, you can debug using PDB, following"
+#~ " this steps."
+#~ msgstr ""
+
+#~ msgid "First add this code in the spot where you would like to debug::"
+#~ msgstr ""

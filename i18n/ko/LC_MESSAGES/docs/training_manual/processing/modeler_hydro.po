@@ -1,0 +1,131 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-11 05:50+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:6
+msgid "More complex models"
+msgstr "더 복잡한 모델"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:8
+msgid ""
+"In this lesson we will work with a more complex model in the graphical "
+"modeler."
+msgstr "이 강의에서는, 도표 모델 작성자에서 좀 더 복잡한 모델로 작업할 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:10
+msgid ""
+"The first model that we created in the previous chapter was a very simple "
+"one, with just one input and 3 algorithms. More complex models can be "
+"created, with different types of inputs and containing more step. For this "
+"chapter we will work with a model that creates a vector layer with "
+"watersheds, based on a DEM and a threshold value. That will be very useful "
+"for calculating several vector layers corresponding to different thresholds,"
+" without having to repeat each single step each time."
+msgstr "이전 강의에서 생성했던 첫 번째 모델은 입력물 하나와 알고리듬 3개만으로 된 아주 단순한 모델이었습니다. 서로 다른 입력물들과 더 많은 단계를 담고 있는 더 복잡한 모델을 생성할 수 있습니다. 이 강의에서 우리는 DEM 및 임계값을 기반으로 유역 벡터 레이어를 생성하는 모델을 작성할 것입니다. 이 모델은 매번 매 단계를 반복할 필요 없이 서로 다른 임계값에 상응하는 여러 벡터 레이어를 계산하는 데 매우 유용할 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:12
+msgid ""
+"This lesson does not contain instructions about how to create you model. You"
+" already know the necessary steps (we saw them in a previous lesson) and you"
+" have already seen the basic ideas about the modeler, so you should try it "
+"yourself. Spend a few minutes trying to create your model, and don't worry "
+"about making mistakes. Remember: first add the inputs and then add the "
+"algorithms that use them to create the workflow."
+msgstr "이 강의는 모델 생성 방법에 대한 지침을 포함하고 있지 않습니다. 사용자는 (이전 강의에서 배웠듯이) 필요한 단계를 이미 알고 있고 모델 작성자에 대한 기본적인 개념을 배웠으므로, 직접 모델을 생성해보아야 합니다. 몇 분 동안 사용자 모델을 생성해보고, 실수에 대해서는 걱정하지 마십시오. 작업 흐름을 생성하기 위해서는 먼저 입력물을 추가한 다음, 해당 입력물을 사용하는 알고리듬을 추가해야 한다는 사실만 기억하십시오."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:14
+msgid ""
+"In case you could not create the full model yourself and you need some extra"
+" help, the data folder corresponding to this lesson contains and 'almost' "
+"finished version of it. Open the modeler and then open the model file that "
+"you will find in the data folder. You should see something like this."
+msgstr "여러분이 전체 모델을 생성할 수 없어 도움이 필요할 경우, 이 강의에 해당하는 데이터 폴더는 '거의' 완성된 버전의 모델을 담고 있습니다. 모델 작성자를 실행해서 해당 데이터 폴더에 있는 모델 파일을 열어보십시오. 다음과 같은 모델을 보게 될 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:18
+msgid ""
+"This model contains all the steps needed to complete the calculation, but it"
+" just has one input: the DEM That means that the threshold for channel "
+"definition use a fixed value, which makes the model not as useful as it "
+"could be. That is not a problem, since we can edit the model, and that is "
+"exactly what we will do."
+msgstr "이 모델은 계산을 완료하는 데 필요한 모든 단계를 담고 있지만, 입력물은 DEM 하나뿐입니다. 즉 하천 형성을 위한 임계값에 고정 값을 사용한다는 의미로, 이 모델의 가능성을 제한하고 있습니다. 하지만 모델을 편집할 수 있기 때문에 문제는 없습니다. 이제 모델을 수정해봅시다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:20
+msgid ""
+"First, let's add a numerical input. That will ask the user for a numerical "
+"input that we can use when such a value is needed in any of the algorithms "
+"included in our model. Click on the *Number* entry in the inputs tree, and "
+"you will see the corresponding dialog. Fill it with the values shown next."
+msgstr "먼저 숫자 입력을 추가해봅시다. 모델에 포함된 알고리듬 가운데 어떤 것이라도 숫자 값을 필요로 할 때 사용할 수 있는 숫자를 입력하도록 사용자에게 요청할 것입니다. :guilabel:`Inputs` 탭에서 :guilabel:`Number` 항목을 클릭하면 대화 창이 뜰 것입니다. 이 대화 창을 다음과 같이 설정하십시오."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:24
+msgid "Now your model should look like this."
+msgstr "이제 모델이 다음과 같이 보일 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:28
+msgid ""
+"The input that we have just added is not used, so the model hasn't actually "
+"changed. We have to link that input to the algorithm that uses it, in this "
+"case the *Channel network* one. To edit an algorithm that already exists in "
+"the modeler, just double click on its corresponding box in the canvas. If "
+"you click on the *Channel network* algorithm, you will see something like "
+"this."
+msgstr "방금 추가한 입력을 사용하고 있지 않으므로, 모델이 실제로 변경되지는 않았습니다. 이 입력을 사용하는 알고리듬에 연결시켜야 합니다. 이 경우에는 :guilabel:`Channel network` 알고리듬입니다. 모델 작성자의 기존 알고리듬을 편집하려면 캔버스 상의 해당 박스를 더블클릭하면 됩니다. :guilabel:`Channel network` 알고리듬을 더블클릭하면, 다음 대화 창이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:32
+msgid ""
+"The dialog is filled with the current values used by the algorithm. You can "
+"see that the threshold parameter has a fixed value of 1,000,000 (this is "
+"also the default value of the algorithm, but any other value could be put in"
+" there). However, you might notice that the parameter is not entered in a "
+"common text box, but in an option menu. If you unfold it, you will see "
+"something like this."
+msgstr "해당 알고리듬이 현재 사용하는 값이 이 대화 창을 채우고 있습니다. 임계값 파라미터가 고정 값 1,000,000으로 설정되어 있는 것을 볼 수 있습니다. (이 값은 해당 알고리듬의 기본값이지만, 다른 값을 입력할 수도 있습니다.) 하지만 이 파라미터를 입력하는 데 일반적인 텍스트 란을 쓰지 않고, 옵션 메뉴를 사용하고 있습니다. 해당 드롭다운 메뉴를 클릭하면, 다음과 같은 목록을 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:36
+msgid ""
+"The input that we added is there and we can select it. Whenever an algorithm"
+" in a model requires a numerical value, you can hardcode it and directly "
+"type it, or you can use any of the available inputs and values (remember "
+"that some algorithms generate sinlge numerical values. We will see more "
+"about this soon). In the case of a string parameter, you will also see "
+"string inputs and you will be able to select on of them or type the desired "
+"fixed value."
+msgstr "방금 추가했던 입력이 목록에 있어서 이를 선택할 수 있습니다. 모델 내부의 알고리듬이 숫자 값을 필요로 할 때마다, 데이터를 쉽게 변경할 수 없도록 직접 입력할 수도 있고, 또는 사용 가능한 어떤 입력이나 값들을 사용할 수도 있습니다. (일부 알고리듬은 단일 숫자 값을 생성한다는 사실을 기억하십시오. 이에 대해서는 곧 배우게 될 것입니다.) 문자열 파라미터의 경우에도, 사용자가 선택할 수 있는 문자열 입력을 추가하거나, 또는 원하는 고정 값을 입력할 수도 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:38
+msgid ""
+"Select the *Threshold* input in the *Threshold* parameter and click on *OK* "
+"to apply the changes to your model. Now the design of the model should look "
+"like this."
+msgstr ":guilabel:`Initiation Threshold` 파라미터에 :guilabel:`Threshold for ...` 입력을 선택한 다음, :guilabel:`OK` 를 클릭해서 모델의 변경 사항을 적용하십시오. 이제 모델이 다음과 같이 보일 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:42
+msgid ""
+"The model is now complete. Try to run it using the DEM that we have used in "
+"previous lessons, and with different threshold values. Here you have a "
+"sample of the result obtained for different values. You can compare with the"
+" result for the default value, which is the one we obtained in the "
+"hydrological analysis lesson."
+msgstr "이제 모델이 완성됐습니다. 이전 강의에서 사용했던 DEM과, 서로 다른 임계값을 사용해서 실행해보십시오. 다음은 서로 다른 임계값을 사용해 얻은 결과물의 예시들입니다. 수문학적 분석 강의에서 얻은, 기본값을 사용한 결과물과 비교해볼 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:46
+msgid "Threshold = 100,000"
+msgstr "임계값 = 100,000"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:50
+msgid "Threshold = 1,0000,000"
+msgstr "임계값 = 10,000,000"

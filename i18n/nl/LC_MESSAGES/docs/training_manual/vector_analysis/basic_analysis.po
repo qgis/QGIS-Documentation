@@ -1,0 +1,750 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+# Milo van der Linden <milo@dogodigi.net>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-03 16:45+0000\n"
+"Last-Translator: Milo van der Linden <milo@dogodigi.net>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:6
+msgid "|LS| Vector Analysis"
+msgstr "|LS| Vectoranalyse"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:8
+msgid ""
+"Vector data can also be analyzed to reveal how different features interact "
+"with each other in space. There are many different analysis-related "
+"functions in GIS, so we won't go through them all. Rather, we'll pose a "
+"question and try to solve it using the tools that QGIS provides."
+msgstr "Vectorgegevens kunnen ook worden geanalyseerd om te onthullen hoe verschillende objecten met elkaar omgaan in de ruimte. Er zijn vele aan analyse gerelateerde functies in GIS, dus zullen we ze niet allemaal behandelen. In plaats daarvan zullen we een vraag stellen en die proberen op te lossen met behulp van de gereedschappen die QGIS verschaft."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:13
+msgid ""
+"**The goal for this lesson:** To ask a question and solve it using analysis "
+"tools."
+msgstr "**Het doel voor deze les.** Een vraag stellen en die beantwoorden met behulp van gereedschappen voor analyse."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:18
+msgid "|basic| The GIS Process"
+msgstr "|basic| Het proces GIS"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:20
+msgid ""
+"Before we start, it would be useful to give a brief overview of a process "
+"that can be used to solve any GIS problem. The way to go about it is:"
+msgstr "Vóór we beginnen zou het handig zijn om een kort overzicht te geven van een proces dat gebruikt kan worden om elk probleem in GIS op te lossen. De manier om dat te doen is:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:23
+msgid "State the Problem"
+msgstr "Benoem het probleem"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:24
+msgid "Get the Data"
+msgstr "Haal de gegevens op"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:25
+msgid "Analyze the Problem"
+msgstr "Analyseer het probleem"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:26
+msgid "Present the Results"
+msgstr "Geef de resultaten weer"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:29
+msgid "|basic| The problem"
+msgstr "|basic| Het probleem"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:31
+msgid ""
+"Let's start off the process by deciding on a problem to solve. For example, "
+"you are an estate agent and you are looking for a residential property in "
+"|majorUrbanName| for clients who have the following criteria:"
+msgstr "Laten we het proces beginnen door een probleem te benoemen om op te lossen. U bent bijvoorbeeld een makelaar en u zoekt naar een woning in |majorUrbanName| voor cliënten die de volgende criteria hebben:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:35
+msgid "It needs to be in |majorUrbanName|."
+msgstr "Het moet liggen in |majorUrbanName|."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:36
+msgid "It must be within reasonable driving distance of a school (say 1km)."
+msgstr "Het moet binnen een redelijke rij-afstand van een school liggen (zeg maar 1 km)."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:37
+msgid "It must be more than 100m squared in size."
+msgstr "Het moet groter zijn dan 100 m2."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:38
+msgid "Closer than 50m to a main road."
+msgstr "Minder dan 50 m vanaf een hoofdweg."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:39
+msgid "Closer than 500m to a restaurant."
+msgstr "Minder dan 500 m vanaf een restaurant."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:42
+msgid "|basic| The data"
+msgstr "|basic| De gegevens"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:44
+msgid "To answer these questions, we're going to need the following data:"
+msgstr "We hebben de volgende gegevens nodig om deze vragen te kunnen beantwoorden:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:46
+msgid "The residential properties (buildings) in the area."
+msgstr "De woningen (gebouwen) in het area."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:47
+msgid "The roads in and around the town."
+msgstr "De wegen in en rondom de stad."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:48
+msgid "The location of schools and restaurants."
+msgstr "De locaties van scholen en restaurants."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:49
+msgid "The size of buildings."
+msgstr "De grootte van gebouwen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:51
+msgid ""
+"All of this data is available through OSM and you should find that the "
+"dataset you have been using throughout this manual can also be used for this"
+" lesson. However, in order to ensure we have the complete data, we will re-"
+"download the data from OSM using QGIS' built-in OSM download tool."
+msgstr "Al deze gegevens zijn beschikbaar via OSM en u zou kunnen besluiten dat ook de gegevensset die u voor deze handleiding heeft gebruikt ook voor deze les kan worden gebruikt. Echter, om er voor te zorgen dat we de volledige gegevens hebben, zullen we de gegevens opnieuw downloaden vanaf OSM met behulp van het in QGIS ingebouwde gereedschappen voor het downloaden van gegevens van OSM."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:56
+msgid ""
+"Although OSM downloads have consistent data fields, the coverage and detail "
+"does vary. If you find that your chosen region does not contain information "
+"on restaurants, for example, you may need to chose a different region."
+msgstr "Hoewel downloads van OSM consistente velden voor de gegevens hebben, kunnen de bedekking en de details variëren. Als u ziet dat de door u gekozen regio, bijvoorbeeld, geen informatie bevat over restaurants,  zou u misschien een andere regio moeten kiezen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:62
+msgid "|basic| |FA| Start a Project"
+msgstr "|basic| |FA| Een project beginnen"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:64
+msgid "Start a new QGIS project."
+msgstr "Begin een nieuw project binnen QGIS."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:65
+msgid ""
+"Use the OpenStreetMap data download tool found in the :guilabel:`Vector` -> "
+":guilabel:`OpenStreetMap` menu to download the data for your chosen region."
+msgstr "Gebruik het gereedschap om gegevens van OpenStreetMap te downloaden , te vinden in het menu :guilabel:`Vector` -> :guilabel:`OpenStreetMap` om de gegevens voor de door u gekozen regio te downloaden."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:67
+msgid ""
+"Save the data as :kbd:`osm_data.osm` in your :kbd:`exercise_data` folder."
+msgstr "Sla de gegevens op als :kbd:`osm_data.osm` in uw map :kbd:`exercise_data`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:69
+msgid ""
+"Note that the :guilabel:`osm` format is a type of vector data. Add this data"
+" as a vector layer as usually :guilabel:`Layer` -> :guilabel:`Add vector "
+"layer...`, browse to the new :kbd:`osm_data.osm` file you just downloaded. "
+"You may need to select :guilabel:`Show All Files` as the file format."
+msgstr "Onthoud dat de indeling :guilabel:`osm` een type vectorgegevens is. Voeg deze gegevens op de nnormale manier toe als een vectorlaag :guilabel:`Laag` -> :guilabel:`Vectorlaag toevoegen...`, blader naar het nieuwe bestand :kbd:`osm_data.osm` dat u zojuist hebt gedownload. U moet misschien"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:73
+msgid "Select :kbd:`osm_data.osm` and click :guilabel:`Open`"
+msgstr "Selecteer :kbd:`osm_data.osm` en klik op :guilabel:`Open`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:74
+msgid ""
+"In the dialog which opens, select all the layers, *except* the "
+":kbd:`other_relations` and :kbd:`multilinestrings` layer:"
+msgstr "Selecteer, in het dialoogvenster dat opent, alle lagen, *behalve* de lagen :kbd:`other_relations` en :kbd:`multilinestrings`:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:80
+msgid "This will import the OSM data as separate layers into your map."
+msgstr "Dit zal de gegevens van OSM als afzonderlijke lagen in uw kaart importeren."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:82
+msgid ""
+"The data you just downloaded from OSM is in a geographic coordinate system, "
+"WGS84, which uses latitude and longitude coordinates, as you know from the "
+"previous lesson. You also learnt that to calculate distances in meters, we "
+"need to work with a projected coordinate system. Start by setting your "
+"project's coordinate system to a suitable :guilabel:`CRS` for your data, in "
+"the case of |majorUrbanName|, :guilabel:`WGS 84 / UTM zone 34S`:"
+msgstr "De gegevens die u zojuist hebt gedownload vanaf OSM staat in een geografisch coördinatensysteem, WGS84, wat coördinaten met breedtegraad en lengtegraad gebruikt, zoals u weet uit de vorige les. U heeft ook geleerd dat, om afstanden in meters te kunnen berekenen, we moeten werken met een geprojecteerd coördinatensysteem. Begin met het instellen van het coördinatensysteem van uw project op een geschikt :guilabel:`CRS` voor uw gegevens, in het geval van |majorUrbanName|, :guilabel:`WGS 84 / UTM zone 34S`:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:89
+msgid ""
+"Open the :kbd:`Project Properties` dialog, select :guilabel:`CRS` and filter"
+" the list to find :guilabel:`WGS 84 / UTM zone 34S`."
+msgstr "Open het dialoogvenster :kbd:`Projectinstellingen`, selecteer :guilabel:`CRS` en filter de lijst om naar :guilabel:`WGS 84 / UTM zone 34S` te zoeken."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:91
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:352
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:388
+msgid "Click :guilabel:`OK`."
+msgstr "Klik op :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:93
+msgid ""
+"We now need to extract the information we need from the OSM dataset. We need"
+" to end up with layers representing all the houses, schools, restaurants and"
+" roads in the region. That information is inside the "
+":guilabel:`multipolygons` layer and can be extracted using the information "
+"in its :guilabel:`Attribute Table`. We'll start with the :kbd:`schools` "
+"layer:"
+msgstr "We moeten nu de informatie uitnemen die we nodig hebben vanuit de gegevensset van OSM. We moeten eindigen met lagen die alle huizen, scholen, restaurants en wegen in de regio weergeven. Die informatie staat in de laag :guilabel:`multipolygons` en kan worden uitgenomen met behulp van de informatie die aanwezig is in de :guilabel:`Attributentabel`. We zullen beginnen met de laag :kbd:`scholen`:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:98
+msgid ""
+"Right-click on the :guilabel:`multipolygons` layer in the :guilabel:`Layers "
+"list` and open the :guilabel:`Layer Properties`."
+msgstr "Klik met rechts op de laag :guilabel:`multipolygons` in de :guilabel:`Lagenlijst` en open de :guilabel:`Laag-eigenschappen`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:100
+msgid "Go to the :guilabel:`General` menu."
+msgstr "Ga naar het menu :guilabel:`Algemeen`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:101
+msgid ""
+"Under :guilabel:`Feature subset` click on the **[Query Builder]** button to "
+"open the :guilabel:`Query builder` dialog."
+msgstr "Onder :guilabel:`Subset objecten` klik op de knop **[Query bouwer]** om het dialoogvenster :guilabel:`Query bouwer` te openen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:103
+msgid ""
+"In the :guilabel:`Fields` list on the left of this dialog until you see the "
+"field :kbd:`amenity`."
+msgstr "Ga door de lijst :guilabel:`Velden`, links in dat dialoogvenster, totdat u het veld :kbd:`amenity` ziet."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:105
+msgid "Click on it once."
+msgstr "Klik er eenmaal op."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:106
+msgid ""
+"Click the :guilabel:`All` button underneath the :guilabel:`Values` list:"
+msgstr "Klik op de knop :guilabel:`Alles` onder de lijst :guilabel:`Waarden`:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:108
+msgid ""
+"Now we need to tell QGIS to only show us the polygons where the value of "
+":kbd:`amenity` is equal to :kbd:`school`."
+msgstr "Nu moeten we QGIS vertellen om ons alleen de polygonen te laten zien waar de waarde van :kbd:`amenity` gelijk is aan :kbd:`school`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:111
+msgid "Double-click the word :kbd:`amenity` in the :guilabel:`Fields` list."
+msgstr "Dubbelklik op het woord :kbd:`amenity` in de lijst :guilabel:`Velden`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:112
+msgid ""
+"Watch what happens in the :guilabel:`Provider specific filter expression` "
+"field below:"
+msgstr "Bekijk wat er onder gebeurt in het veld :guilabel:`Provider-specifieke filter-expressie`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:118
+msgid "The word :kbd:`\"amenity\"` has appeared. To build the rest of the query:"
+msgstr "Het woord :kbd:`\"amenity\"` is verschenen. De rest van de query opbouwen:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:120
+msgid "Click the :guilabel:`=` button (under :guilabel:`Operators`)."
+msgstr "Klik op de knop :guilabel:`=` (onder :guilabel:`Operatoren`)."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:121
+msgid "Double-click the value :kbd:`school` in the :guilabel:`Values` list."
+msgstr "Dubbelklik op de waarde :kbd:`school` in de lijst :guilabel:`Waarden`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:122
+msgid "Click :kbd:`OK` twice."
+msgstr "Klik tweemaal op :kbd:`OK`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:124
+msgid ""
+"This will filter OSM's :kbd:`multipolygons` layer to only show the schools "
+"in your region. You can now either:"
+msgstr "Dit zal de laag :kbd:`multipolygons` van OSM filteren om alleen de scholen in uw regio te laten zien. U kunt nu ofwel:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:127
+msgid ""
+"Rename the filtered OSM layer to :kbd:`schools` and re-import the "
+":kbd:`multipolygons` layer from :kbd:`osm_data.osm`, OR"
+msgstr "De gefilterde OSM-laag hernoemen naar :kbd:`schools` en de laag :kbd:`multipolygons` opnieuw importeren vanuit :kbd:`osm_data.osm`, OF"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:129
+msgid ""
+"Duplicate the filtered layer, rename the copy, clear the :kbd:`Query "
+"Builder` and create your new query in the :guilabel:`Query Builder`."
+msgstr "De gefilterde laag dupliceren, de kopie hernoemen, de :kbd:`Query bouwer` leeg maken en uw nieuwe query maken in de :guilabel:`Query bouwer`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:135
+msgid "|moderate| |TY| Extract Required Layers from OSM"
+msgstr "|moderate| |TY| Vereiste lagen uit OSM uitnemen"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:136
+msgid ""
+"Using the above technique, use the :kbd:`Query Builder` tool to extract the "
+"remaining data from OSM to create the following layers:"
+msgstr "Gebruik, met behulp van de hierboven vermelde techniek, het gereedschap :kbd:`Query bouwer` om de resterende gegevens uit OSM te halen om de volgende lagen te maken:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:139
+msgid ":kbd:`roads` (from OSM's :kbd:`lines` layer)"
+msgstr ":kbd:`roads` (uit de laag :kbd:`lines` van OSM)"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:140
+msgid ":kbd:`restaurants` (from OSM's :kbd:`multipolygons` layer)"
+msgstr ":kbd:`restaurants` (uit de laag :kbd:`multipolygons` van OSM)"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:141
+msgid ":kbd:`houses` (from OSM's :kbd:`multipolygons` layer)"
+msgstr ":kbd:`houses` (uit de laag :kbd:`multipolygons` van OSM)"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:143
+msgid ""
+"You may wish to re-use the :kbd:`roads.shp` layer you created in earlier "
+"lessons."
+msgstr "U wilt misschien de laag :kbd:`roads.shp` opnieuw gebruiken die in eerdere lessen maakte."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:145
+msgid ":ref:`Check your results <vector-analysis-basic-1>`"
+msgstr ":ref:`Controleer uw resultaten <vector-analysis-basic-1>`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:147
+msgid ""
+"Save your map under :guilabel:`exercise_data`, as :kbd:`analysis.qgs` (this "
+"map will be used in future modules)."
+msgstr "Sla uw kaart op onder :guilabel:`exercise_data`, als :kbd:`analysis.qgs`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:149
+msgid ""
+"In your operating system's file manager, create a new folder under "
+":guilabel:`exercise_data` and call it :kbd:`residential_development`. This "
+"is where you'll save the datasets that will be the results of the analysis "
+"functions."
+msgstr "Maak, in de bestandsbeheerder van uw besturingssysteem, een nieuwe map onder :guilabel:`exercise_data` en noem die :kbd:`residential_development`. Dit zal de plaats zijn waar u de gegevenssets zal opslaan die de resultaten van de analyse-functies zijn."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:157
+msgid "|basic| |TY| Find important roads"
+msgstr "|basic| |TY| Belangrijke wegen zoeken"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:159
+msgid ""
+"Some of the roads in OSM's dataset are listed as :kbd:`unclassified`, "
+":kbd:`tracks`, :kbd:`path` and :kbd:`footway`. We want to exclude these from"
+" our roads dataset."
+msgstr "Enkele van de wegen in de gegevensset van OSM zijn vermeld als :kbd:`unclassified`, :kbd:`tracks`, :kbd:`path` en :kbd:`footway`. We willen die uit onze gegevensset van wegen weglaten."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:163
+msgid ""
+"Open the :kbd:`Query Builder` for the :kbd:`roads` layer, click "
+":guilabel:`Clear` and build the following query:"
+msgstr "Open de :kbd:`Query bouwer` voor de laag :kbd:`roads`, klik op :guilabel:`Leeg maken` en bouw de volgende query:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:166
+msgid ""
+":kbd:`\"highway\"  != 'NULL' AND \"highway\" != 'unclassified' AND "
+"\"highway\" != 'track' AND \"highway\" != 'path' AND \"highway\" != "
+"'footway'`"
+msgstr ":kbd:`\"highway\"  != 'NULL' AND \"highway\" != 'unclassified' AND \"highway\" != 'track' AND \"highway\" != 'path' AND \"highway\" != 'footway'`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:168
+msgid ""
+"You can either use the approach above, where you double-clicked values and "
+"clicked buttons, or you can copy and paste the command above."
+msgstr "U kunt ofwel de bovenstaande benadering gebruiken, waar u dubbel klikte op waarden en op knoppen drukte, of u kunt de opdracht hierboven kopiëren en plakken."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:171
+msgid "This should immediately reduce the number of roads on your map:"
+msgstr "Dit zou het aantal wegen op uw kaart onmiddellijk moeten reduceren:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:177
+msgid "|basic| |TY| Convert Layers' CRS"
+msgstr "|basic| |TY| CRS van een laag converteren"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:179
+msgid ""
+"Because we are going to be measuring distances within our layers, we need to"
+" change the layers' CRS. To do this, we need to select each layer in turn, "
+"save the layer to a new shapefile with our new projection, then import that "
+"new layer into our map."
+msgstr "Omdat we binnen onze lagen afstanden gaan meten, moeten we het CRS van de lagen wijzigen. We moeten, om dit te doen, elke laag op zijn beurt selecteren, de laag opslaan naar een nieuw shapefile met onze nieuwe projectie, en dan die nieuwe laag in onze kaart importeren."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:184
+msgid ""
+"In this example, we are using the :guilabel:`WGS 84 / UTM zone 34S` CRS, but"
+" you may use a UTM CRS which is more appropriate for your region."
+msgstr "In dit voorbeeld gebruiken we het CRS :guilabel:`WGS 84 / UTM zone 34S`, maar u kunt een UTM CRS gebruiken dat meer toepasselijk is voor uw regio."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:188
+msgid "Right click the :kbd:`roads` layer in the :kbd:`Layers` panel."
+msgstr "Klik met rechts op de laag :kbd:`roads` in het paneel :kbd:`Lagen`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:189
+msgid "Click :kbd:`Save as...`"
+msgstr "Klik op :kbd:`Opslaan als...`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:190
+msgid ""
+"In the :kbd:`Save Vector As` dialog, choose the following settings and click"
+" :guilabel:`Ok` (making sure you select :kbd:`Add saved file to map`):"
+msgstr "Kies, in het dialoogvenster :kbd:`Vectorlaag opslaan als`, de volgende instellingen en klik op :guilabel:`OK` (zorg er voor dat u :kbd:`Voeg opgeslagen bestand toe aan kaart` hebt geselecteerd):"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:196
+msgid ""
+"The new shapefile will be created and the resulting layer added to your map."
+msgstr "Het nieuwe shapefile zal worden gemaakt en de resulterende laag wordt toegevoegd aan uw kaart."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:198
+msgid ""
+"If you don't have activated :guilabel:`Enable 'on the fly' CRS "
+"transformation` or the :guilabel:`Automatically enable 'on the fly' "
+"reprojection if layers have different CRS` settings (see previous lesson), "
+"you might not be able to see the new layers you just added to the map. In "
+"this case, you can focus the map on any of the layers by right click on any "
+"layer and click :guilabel:`Zoom to layer extent`, or just enable any of the "
+"mentioned 'on the fly' options."
+msgstr "Als u de instellingen :guilabel:`Gelijktijdige CRS-transformatie inschakelen` of :guilabel:`Automatisch 'on the fly'-herprojectie inschakelen indien lagen verschillen van CRS` niet heeft geactiveerd (zie de vorige les), zou u misschien niet in staat zijn om de nieuwe lagen te zien die u zojuist heeft toegevoegd aan uw kaart. In dit geval kunt u de kaart focussen op een willekeurige laag door met rechts te klikken op een laag en te klikken op :guilabel:`Zoom naar laag`, of schakel een van de genoemde opties voor 'direct' in."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:205
+msgid "Remove the old :kbd:`roads` layer."
+msgstr "Verwijder de oude laag :kbd:`roads`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:207
+msgid ""
+"Repeat this process for each layer, creating a new shapefile and layer with "
+"\"_34S\" appended to the original name and removing each of the old layers."
+msgstr "Herhaal dit proces voor elke laag door een nieuwe shapefile en laag te maken met \"_34S\" toegevoegd aan de originele naam en elk van de oude lagen te verwijderen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:210
+msgid ""
+"Once you have completed the process for each layer, right click on any layer"
+" and click :guilabel:`Zoom to layer extent` to focus the map to the area of "
+"interest."
+msgstr "Als u eenmaal het proces voor elke laag heeft voltooid, klik dan met rechts op een laag en klik op :guilabel:`Zoom naar laag` om de kaart te focussen op het gebied waarin we geïnteresseerd zijn."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:213
+msgid ""
+"Now that we have converted OSM's data to a UTM projection, we can begin our "
+"calculations."
+msgstr "Nu we de gegevens van OSM hebben geconverteerd naar een UTM-projectie, kunnen we onze berekeningen beginnen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:217
+msgid "|basic| |FA| Analyzing the Problem: Distances From Schools and Roads"
+msgstr "|basic| |FA| Analyseren van het probleem: Afstanden van scholen en wegen"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:219
+msgid "QGIS allows you to calculate distances from any vector object."
+msgstr "QGIS stelt u in staat afstanden te berekenen vanaf elk vectorobject."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:221
+msgid ""
+"Make sure that only the :guilabel:`roads_34S` and :guilabel:`houses_34S` "
+"layers are visible, to simplify the map while you're working."
+msgstr "Zorg er voor dat alleen de lagen :guilabel:`roads_34S` en :guilabel:`houses_34S` zichtbaar zijn, om de kaart te vereenvoudigen terwijl u werkt."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:224
+msgid ""
+"Click on the :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` "
+"tool:"
+msgstr "Klik op het gereedschap :menuselection:`Vector --> Geoprocessing-gereedschappen --> Buffer(s)`:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:227
+msgid "This gives you a new dialog."
+msgstr "Dit geeft u een nieuw dialoogvenster."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:229
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:327
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:381
+msgid "Set it up like this:"
+msgstr "Stel dat als volgt in:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:234
+msgid ""
+"The :guilabel:`Buffer distance` is in meters because our input dataset is in"
+" a Projected Coordinate System that uses meter as its basic measurement "
+"unit. This is why we needed to use projected data."
+msgstr "De :guilabel:`Bufferafstand` is in meters omdat onze gegevensset voor invoer in een geProjecteerd Coördinaten Systeem dat meter gebruikt als zijn basis maateenheid. Dat is waarom we geprojecteerde gegevens moesten gebruiken."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:238
+msgid ""
+"Save the resulting layer under :kbd:`exercise_data/residential_development/`"
+" as :kbd:`roads_buffer_50m.shp`."
+msgstr "Sla de resulterende laag op onder :kbd:`exercise_data/residential_development/` als :kbd:`roads_buffer_50m.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:240
+msgid "Click :guilabel:`OK` and it will create the buffer."
+msgstr "Klik op :guilabel:`OK` en het zal de buffer maken."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:241
+msgid ""
+"When it asks you if it should \"add the new layer to the TOC\", click "
+":guilabel:`Yes`. (\"TOC\" stands for \"Table of Contents\", by which it "
+"means the :guilabel:`Layers list`)."
+msgstr "Wanneer er naar gevraagd wordt zou u \"Resultaat aan kaartvenster toevoegen\" moeten selecteren, klik op :guilabel:`Ja`. (\"TOC\" betekent \"Inhoudsopgave\", waarmee het de :guilabel:`Lagenlijst` bedoelt)."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:244
+msgid "Close the :guilabel:`Buffer(s)` dialog."
+msgstr "Sluit het dialoogvenster :guilabel:`Buffer(s)`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:246
+msgid "Now your map will look something like this:"
+msgstr "Nu zal uw kaart er ongeveer zo uitzien:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:251
+msgid ""
+"If your new layer is at the top of the :kbd:`Layers` list, it will probably "
+"obscure much of your map, but this gives us all the areas in your region "
+"which are within 50m of a road."
+msgstr "Als uw nieuwe laag boven in de lijst :kbd:`Lagen` staat, zal het waarschijnlijk veel van uw kaart verbergen, maar dit geeft ons alle gebieden in uw regio die binnen 50 m van een weg liggen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:255
+msgid ""
+"However, you'll notice that there are distinct areas within our buffer, "
+"which correspond to all the individual roads. To get rid of this problem, "
+"remove the layer and re-create the buffer using the settings shown here:"
+msgstr "Echter, het zal u opvallen dat er binnen onze buffer bepaalde gebieden zijn, die overeenkomen met alle individuele wegen. Verwijder de laag en maak de buffer opnieuw met behulp van de hier weergegeven instellingen om dit probleem op te lossen, "
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:262
+msgid ""
+"Note that we're now checking the :guilabel:`Dissolve buffer results` box."
+msgstr "Merk op dat we nu het vak :guilabel:`Dissolve buffer resultaten` selecteren."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:263
+msgid ""
+"Save the output under the same name as before (click :guilabel:`Yes` when it"
+" asks your permission to overwrite the old one)."
+msgstr "Sla de uitvoer op onder dezelfde naam als eerder (klik :guilabel:`Yes` wanneer het uw toestemming vraagt om de oude te overschrijven)."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:265
+msgid "Click :guilabel:`OK` and close the :guilabel:`Buffer(s)` dialog again."
+msgstr "Klik op :guilabel:`OK` en sluit opnieuw het dialoogvenster :guilabel:`Buffer(s)`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:267
+msgid ""
+"Once you've added the layer to the :guilabel:`Layers list`, it will look "
+"like this:"
+msgstr "Als u eenmaal de laag aan de :guilabel:`Lagenlijst` heeft toegevoegd, zal het er zo uitzien:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:273
+msgid "Now there are no unnecessary subdivisions."
+msgstr "Nu zijn er geen onnodige onderverdelingen meer."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:278
+msgid "|basic| |TY| Distance from schools"
+msgstr "|basic| |TY| Afstand van scholen"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:280
+msgid "Use the same approach as above and create a buffer for your schools."
+msgstr "Gebruik dezelfde benadering als hierboven en maak een buffer voor uw scholen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:282
+msgid ""
+"It needs to be :kbd:`1 km` in radius, and saved under the usual directory as"
+" :kbd:`schools_buffer_1km.shp`."
+msgstr "Die moet in een straal van :kbd:`1 km` zijn, en worden opgeslagen in de gebruikelijke map als :kbd:`schools_buffer_1km.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:285
+msgid ":ref:`Check your results <vector-analysis-basic-2>`"
+msgstr ":ref:`Controleer uw resultaten <vector-analysis-basic-2>`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:288
+msgid "|basic| |FA| Overlapping Areas"
+msgstr "|basic| |FA| Overlappende gebieden"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:290
+msgid ""
+"Now we have areas where the road is 50 meters away and there's a school "
+"within 1 km (direct line, not by road). But obviously, we only want the "
+"areas where both of these criteria are satisfied. To do that, we'll need to "
+"use the :guilabel:`Intersect` tool. Find it under :menuselection:`Vector -->"
+" Geoprocessing Tools --> Intersect`. Set it up like this:"
+msgstr "Nu hebben we gebieden waar de weg 50 m verwijderd is en waar een school binnen 1 km ligt (directe lijn, niet via de weg). Maar natuurlijk willen we alleen de gebieden waar aan beide criteria wordt voldaan. We zullen het gereedschap :guilabel:`Intersect` moeten gebruiken om dat te kunnen doen. U vindt het onder :menuselection:`Vector --> Geoprocessing-gereedschappen --> Intersect`. Stel het als volgt in:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:300
+msgid ""
+"The two input layers are the two buffers; the save location is as usual; and"
+" the file name is :kbd:`road_school_buffers_intersect.shp`. Once it's set up"
+" like this, click :guilabel:`OK` and add the layer to the :guilabel:`Layers "
+"list` when prompted."
+msgstr "De twee invoerlagen zijn de twee buffers; de locatie om op te slaan is de gewoonlijke; en de bestandsnaam is :kbd:`school_roads_intersect.shp`. Als het eenmaal is ingesteld zoals hier, klik op :guilabel:`OK` en voeg de laag toe aan de :guilabel:`Lagenlijst` als daar naar gevraagd wordt."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:305
+msgid ""
+"In the image below, the blue areas show us where both distance criteria are "
+"satisfied at once!"
+msgstr "In de afbeelding hieronder geven de blauwe gebieden aan waar in één keer aan beide criteria voor de afstand wordt voldaan!"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:311
+msgid ""
+"You may remove the two buffer layers and only keep the one that shows where "
+"they overlap, since that's what we really wanted to know in the first place:"
+msgstr "U kunt de twee bufferlagen verwijderen en alleen die ene behouden waar zij overlappen, omdat dat is wat we in eerste instantie echt wilden weten:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:320
+msgid "|basic| |FA| Select the Buildings"
+msgstr "|basic| |FA| Selecteren van de gebouwen"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:322
+msgid ""
+"Now you've got the area that the buildings must overlap. Next, you want to "
+"select the buildings in that area."
+msgstr "Nu heeft u het gebied dat de gebouwen moet overlappen. Vervolgens wilt u de gebouwen in dat gebied selecteren."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:325
+msgid ""
+"Click on the menu entry :menuselection:`Vector --> Research Tools --> Select"
+" by location`. A dialog will appear."
+msgstr "Klik op het menu-item :menuselection:`Vector --> Onderzoeks-gereedschap --> Selecteren op plaats`. Een dialoogvenster zal verschijnen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:332
+msgid "Click :guilabel:`OK`, then :guilabel:`Close`."
+msgstr "Klik op :guilabel:`OK`, en :guilabel:`Close`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:333
+msgid ""
+"You'll probably find that not much seems to have changed. If so, move the "
+":kbd:`school_roads_intersect` layer to the bottom of the layers list, then "
+"zoom in:"
+msgstr "U zult waarschijnlijk vinden dat er niet veel lijkt te zijn veranderd. Als dat zo is, verplaats dan de laag :kbd:`school_roads_intersect` tot onderin de lagenlijst en zoom dan in:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:340
+msgid ""
+"The buildings highlighted in yellow are those which match our criteria and "
+"are selected, while the buildings in green are those which do not. We can "
+"now save the selected buildings as a new layer."
+msgstr "De gebouwen die geel zijn geaccentueerd zijn die welke voldoen aan onze criteria en zijn geselecteerd, terwijl de groene gebouwen er niet aan voldoen. We kunnen nu de geselecteerde gebouwen opslaan als een nieuwe laag."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:344
+msgid ""
+"Right-click on the :guilabel:`houses_34S` layer in the :guilabel:`Layers "
+"list`."
+msgstr "Klik met rechts op de laag :guilabel:`houses_34S` in de :guilabel:`Lagenlijst`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:345
+msgid "Select :guilabel:`Save Selection As...`."
+msgstr "Selecteer :guilabel:`Selectie opslaan als...`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:346
+msgid "Set the dialog up like this:"
+msgstr "Stel het dialoogvenster als volgt in:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:351
+msgid "The file name is :kbd:`well_located_houses.shp`."
+msgstr "De bestandsnaam is :kbd:`well_located_houses.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:354
+msgid ""
+"Now you have the selection as a separate layer and can remove the "
+":kbd:`houses_34S` layer."
+msgstr "Nu heeft u de selectie als een afzonderlijke laag en kunt u de laag :kbd:`houses_34S` verwijderen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:360
+msgid "|moderate| |TY| Further Filter our Buildings"
+msgstr "|moderate| |TY| Onze gebouwen verder filteren"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:362
+msgid ""
+"We now have a layer which shows us all the buildings within 1km of a school "
+"and within 50m of a road. We now need to reduce that selection to only show "
+"buildings which are within 500m of a restaurant."
+msgstr "We hebben nu een laag die ons alle gebouwen binnen 1 km van een school en binnen 50 m vanaf een weg toont. We moeten nu die selectie verkleinen om ons alleen gebouwen te tonen die binnen 500 m vanaf een restaurant liggen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:366
+msgid ""
+"Using the processes described above, create a new layer called "
+":kbd:`houses_restaurants_500m` which further filters your "
+":kbd:`well_located_houses` layer to show only those which are within 500m of"
+" a restaurant."
+msgstr "Maak, met behulp van de hierboven beschreven processen, een nieuwe laag, genaamd :kbd:`houses_restaurants_500m` die uw laag :kbd:`well_located_houses` verder filtert om alleen die gebouwen te laten zien die binnen 500 m van een restaurant liggen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:371
+msgid ":ref:`Check your results <vector-analysis-basic-3>`"
+msgstr ":ref:`Controleer uw resultaten <vector-analysis-basic-3>`"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:374
+msgid "|basic| |FA| Select Buildings of the Right Size"
+msgstr "|basic| |FA| Selecteren van gebouwen met de juiste grootte"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:376
+msgid ""
+"To see which buildings are the correct size (more than 100 square meters), "
+"we first need to calculate their size."
+msgstr "Bereken eerst de oppervlakten om te zien welke gebouwen groter zijn dan 100 vierkante meter."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:379
+msgid ""
+"Open the attribute table for the :guilabel:`houses_restaurants_500m` layer."
+msgstr "Open de attributentabel voor de laag :guilabel:`houses_restaurants_500m`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:380
+msgid "Enter edit mode and open the field calculator."
+msgstr "Ga naar modus Bewerken en open de veldberekening."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:386
+msgid ""
+"If you can't find :guilabel:`AREA` in the list, try creating a new field as "
+"you did in the previous lesson of this module."
+msgstr "Als u :guilabel:`AREA` niet in de lijst vindt, probeer dan een nieuw veld te maken zoals u in een eerdere les in deze module deed."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:389
+msgid ""
+"Scroll to the right of the attribute table; your :kbd:`AREA` field now has "
+"areas in metres for all the buildings in your "
+":guilabel:`houses_restaurants_500m` layer."
+msgstr "Scroll naar de rechterzijde van de attributentabel; uw veld :kbd:`AREA` heeft nu gebieden in meters voor alle gebouwen in uw laag :guilabel:`houses_restaurants_500m`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:392
+msgid ""
+"Click the edit mode button again to finish editing, and save your edits when"
+" prompted."
+msgstr "Klik opnieuw op de knop voor de modus Bewerken om het bewerken te voltooien en sla uw gegevens op als daarnaar gevraagd wordt."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:394
+msgid "Build a query as earlier in this lesson:"
+msgstr "Bouw, zoals eerder in deze les, een query:"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:399
+msgid ""
+"Click :guilabel:`OK`. Your map should now only show you those buildings "
+"which match our starting criteria and which are more than 100m squared in "
+"size."
+msgstr "Klik op :guilabel:`OK`. Uw kaart zou nu alleen die gebouwen moeten laten zien die overeenkomen met uw begincriteria en die groter zijn dan 100 m2."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:404
+msgid "|basic| |TY|"
+msgstr "|basic| |TY|"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:406
+msgid ""
+"Save your solution as a new layer, using the approach you learned above for "
+"doing so. The file should be saved under the usual directory, with the name "
+":kbd:`solution.shp`."
+msgstr "Sla uw oplossing op als een nieuwe laag, met behulp van de benadering die u hierboven hebt geleerd om dat te doen. Het bestand zou moeten worden opgeslagen in de gebruikelijke map, met de naam :kbd:`solution.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:411
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:413
+msgid ""
+"Using the GIS problem-solving approach together with QGIS vector analysis "
+"tools, you were able to solve a problem with multiple criteria quickly and "
+"easily."
+msgstr "Met behulp van de benadering van probleemoplossing voor GIS, tezamen met de gereedschappen voor vectoranalyse van QGIS, was u in staat een probleem met meerdere criteria snel een gemakkelijk op te lossen."
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:418
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:420
+msgid ""
+"In the next lesson, we'll look at how to calculate the shortest distance "
+"along the road from one point to another."
+msgstr "In de volgende les, zullen we kijken naar de berekening van de kortste afstand over de weg van het ene punt naar een ander."

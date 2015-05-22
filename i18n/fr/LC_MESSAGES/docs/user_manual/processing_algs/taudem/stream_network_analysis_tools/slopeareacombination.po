@@ -1,0 +1,111 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-03 12:17+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:6
+msgid "Slope Area Combination"
+msgstr "Combinaison de la surface de pente"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:11
+msgid ""
+"Creates a grid of slope-area values = ``(Sm) (An)`` based on slope and "
+"specific catchment area grid inputs, and parameters ``m`` and ``n``. This "
+"tool is intended for use as part of the slope-area stream raster delineation"
+" method."
+msgstr "Créé une grille de valeurs de surface de pente ``(Sm) (An)`` basée sur des grilles d'entrée de pente et de bassin versant ainsi que sur les paramètres ``m`` et ``n``. Cet outil est destiné à être utilisé en tant qu'une partie de la méthode de délimitation des raster de pente-surface de cours d'eau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:16
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:20
+msgid "``Slope Grid`` [raster]"
+msgstr "``Grille de pente`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:19
+msgid ""
+"This input is a grid of slope values. This grid can be obtained from the "
+"**\"D-Infinity Flow Directions\"** tool."
+msgstr "Cette entrée est une grille des valeurs de pente. Cette grille peut être obtenue à partir de l'outil **\"Directions de flux D-Infinity\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:26
+msgid "``Contributing Area Grid`` [raster]"
+msgstr "``Grille de surface contributive`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:23
+msgid ""
+"A grid giving the specific catchment area for each cell taken as its own "
+"contribution (grid cell length or summation of weights) plus the "
+"proportional contribution from upslope neighbors that drain in to it. This "
+"grid is typically obtained from the **\"D-Infinity Contributing Area\"** "
+"tool."
+msgstr "Une grille donnant le bassin versant spécifique de chaque cellule calculé par sa contribution (longueur de cellule ou somme des poids) additionnée de la contribution des voisins de pente ascendante qui s'y écoule. Cette grille peut être obtenue par l'outil **\"Surface contributive D-Infinity\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:32
+msgid "``Slope Exponent`` [number]"
+msgstr "``Exposant de pente`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:29
+msgid ""
+"The slope exponent (``m``) parameter which will be used in the formula: "
+"``(Sm)(An)``, that is used to create the slope-area grid."
+msgstr "Le paramètre d'exposant de pente (``m``) qui sera utilisé dans la formule : ``(Sm)(An)``, qui est utilisée pour créer la grille de la surface de pente."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:32
+msgid "Default: *2*"
+msgstr "Par défaut : *2*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:38
+msgid "``Area Exponent`` [number]"
+msgstr "``Exposant de surface`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:35
+msgid ""
+"The area exponent (``n``) parameter which will be used in the formula: "
+"``(Sm)(An)``, that is used to create the slope-area grid."
+msgstr "Le paramètre d'exposant de surface (``n``) qui sera utilisé dans la formule : ``(Sm)(An)``, qui est utilisée pour créer la grille de surface de pente."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:38
+msgid "Default: *1*"
+msgstr "Par défaut : *1*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:41
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:46
+msgid "``Slope Area Grid`` [raster]"
+msgstr "``Grille de surface de pente`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:44
+msgid ""
+"A grid of slope-area values = ``(Sm)(An)`` calculated from the slope grid, "
+"specific catchment area grid, ``m`` slope exponent parameter, and ``n`` area"
+" exponent parameter."
+msgstr "Une grille de valeurs de surface de pente ``(Sm) (An)`` basée sur une grille d'entrée de pente et de bassin versant ainsi que sur les paramètres ``m`` et ``n``, respectivement paramètre exponentiel de pente et paramètre exponentiel de surface."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:49
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:56
+msgid "See also"
+msgstr "Voir également"

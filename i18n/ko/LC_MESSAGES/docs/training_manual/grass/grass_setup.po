@@ -1,0 +1,306 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-11 04:20+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:6
+msgid "|LS| GRASS Setup"
+msgstr "|LS| GRASS 설정"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:8
+msgid ""
+"Using GRASS in QGIS requires you to think of the interface in a slightly "
+"different way. Remember that you're not working in QGIS directly, but "
+"working in GRASS *via* QGIS."
+msgstr "QGIS에서 GRASS를 사용하려면 인터페이스를 조금 다른 방식으로 봐야 할 필요가 있습니다. QGIS에서 직접 작업하는 것이 아니라, QGIS를 *통해서* GRASS에서 작업하는 것이라는 걸 기억하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:12
+msgid "**The goal for this lesson:** To begin a GRASS project in QGIS."
+msgstr "**이 강의의 목표:** QGIS에서 GRASS 프로젝트를 시작하기."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:15
+msgid "|basic| |FA| Start a New GRASS Project"
+msgstr "|basic| |FA| 새 GRASS 프로젝트 시작"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:17
+msgid ""
+"To launch GRASS from within QGIS, you need to activate it as with any other "
+"plugin. First, open a new QGIS project."
+msgstr "QGIS 내에서 GRASS를 실행하려면, 다른 플러그인과 마찬가지로 활성화해야 합니다. 먼저 새 QGIS 프로젝트를 여십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:20
+msgid ""
+"In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:"
+msgstr ":guilabel:`Plugin Manager` 의 목록에서, :guilabel:`GRASS` 를 활성화하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:25
+msgid "The GRASS toolbar will appear:"
+msgstr "다음과 같은 GRASS 툴바가 나타날 것입니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:30
+msgid ""
+"Before you can use GRASS, you need to create a **mapset**. GRASS always "
+"works in a database environment, which means that you need to import all the"
+" data you want to use into a GRASS database."
+msgstr "GRASS를 사용할 수 있으려면 먼저 **맵셋** 을 생성해야 합니다. GRASS는 항상 데이터베이스 환경에서 작동하기 때문에, 사용자가 사용하길 바라는 모든 데이터를 GRASS 데이터베이스로 가져와야 합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:34
+msgid "Click on the :guilabel:`New mapset` button:"
+msgstr "다음 :guilabel:`New mapset` 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:36
+msgid "|grass_new_mapset|"
+msgstr "|grass_new_mapset|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:38
+msgid "You'll see a dialog explaining the structure of a GRASS mapset."
+msgstr "GRASS 맵셋의 구조를 설명하는 대화 창이 뜰 것입니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:40
+msgid ""
+"Create a new directory called :kbd:`grass_db` in :guilabel:`exercise_data`."
+msgstr ":guilabel:`exercise_data` 폴더 아래 :kbd:`grass_db` 라는 새 디렉터리를 생성하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:41
+msgid ""
+"Set it as the directory that will be used by GRASS to set up its database:"
+msgstr "GRASS의 데이터베이스를 설정하는 데 다음과 같이 이 디렉터리를 설정하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:46
+#: ../../source/docs/training_manual/grass/grass_setup.rst:56
+#: ../../source/docs/training_manual/grass/grass_setup.rst:62
+#: ../../source/docs/training_manual/grass/grass_setup.rst:69
+msgid "Click :guilabel:`Next`."
+msgstr ":guilabel:`Next` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:48
+msgid ""
+"GRASS needs to create a \"location\", which describes the maximum extents of"
+" the geographic area you'll be working in."
+msgstr "GRASS에서 사용자가 작업할 지리적 영역의 최대 범위를 지정하는 \"위치\"를 생성해야 합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:51
+msgid "Call the new location :kbd:`South_Africa`:"
+msgstr "새 위치를 :kbd:`South_Africa` 라고 명명하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:57
+msgid ""
+"We'll be working with :kbd:`WGS 84`, so search for and select this CRS:"
+msgstr ":kbd:`WGS 84` 좌표계로 작업할 예정이니, 해당 CRS를 검색해서 선택하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:63
+msgid ""
+"Now select the region :guilabel:`South Africa` from the dropdown and click "
+":guilabel:`Set`:"
+msgstr "이제 드롭다운 목록에서 :guilabel:`South Africa` 를 선택한 다음 :guilabel:`Set` 을 클릭하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:70
+msgid "Create a mapset, which is the map file that you'll be working with."
+msgstr "여러분이 작업하게 될 맵 파일인 맵셋을 생성하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:75
+msgid ""
+"Once you're done, you'll see a dialog asking you to confirm that the "
+"settings it displays are correct."
+msgstr "모두 완료되면 모든 설정을 보여주면서 정확하냐고 묻는 대화 창이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:78
+msgid "Click :guilabel:`Finish`."
+msgstr ":guilabel:`Finish` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:79
+msgid "Click :guilabel:`OK` on the success dialog."
+msgstr "이어지는 대화 창의 :guilabel:`OK` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:82
+msgid "|basic| |FA| Loading Vector Data into GRASS"
+msgstr "GRASS에 벡터 데이터 불러오기"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:84
+msgid ""
+"You'll now have a blank map. To load data into GRASS, you need to follow a "
+"two-step process."
+msgstr "이제 비어 있는 맵이 생겼습니다. GRASS에 데이터를 불러오려면 다음 두 단계의 과정을 거쳐야 합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:87
+msgid ""
+"Load data into QGIS as usual. Use the :kbd:`roads.shp` dataset (found under "
+":kbd:`exercise_data/epsg4326/`) for now."
+msgstr "하던 대로 QGIS에 데이터를 불러오십시오. 지금은 (:kbd:`exercise_data/epsg4326/` 폴더에 있는) :kbd:`roads.shp` 데이터셋을 쓰겠습니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:89
+msgid "As soon as it's loaded, click on the :guilabel:`GRASS Tools` button:"
+msgstr "불러오기가 끝나자마자, 다음 :guilabel:`GRASS Tools` 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:91
+msgid "|grass_tools|"
+msgstr "|grass_tools|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:93
+msgid "In the new dialog, select :guilabel:`Modules list`."
+msgstr "새 대화 창이 뜨면, :guilabel:`Modules list` 를 선택합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:94
+msgid ""
+"Find the vector import tool by entering the term :kbd:`v.in.ogr.qgis` in the"
+" :guilabel:`Filter` field."
+msgstr ":guilabel:`Filter` 란에 :kbd:`v.in.ogr.qgis` 라고 입력해서 벡터 가져오기 도구를 찾으십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:97
+msgid ""
+"The :kbd:`v` stands for \"vector\", :kbd:`in` means its a function to import"
+" data into the GRASS database, :kbd:`ogr` is the software library used to "
+"read vector data, and :kbd:`qgis` means that the tool will look for a vector"
+" from among the vectors already loaded into QGIS."
+msgstr ":kbd:`v` 는 벡터를, :kbd:`in` 은 GRASS 데이터베이스에 데이터를 가져오는 기능을, :kbd:`ogr` 은 벡터 데이터를 읽는 데 사용되는 소프트웨어 라이브러리를, 그리고 :kbd:`qgis` 는 이 도구가 QGIS에 이미 로드된 벡터들 가운데 한 벡터를 찾을 것이라는 사실을 의미합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:102
+msgid "Once you've found this tool, click on it to bring up the tool itself:"
+msgstr "해당 도구를 찾으면, 클릭해서 도구의 대화 창을 불러옵니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:107
+msgid ""
+"Set the loaded layer to :guilabel:`roads` and its GRASS version's name to "
+":kbd:`g_roads` to prevent confusion."
+msgstr "로드된 레이어에 :guilabel:`roads` 를 설정하고, 혼란을 피하기 위해 GRASS 버전의 명칭을 :kbd:`g_roads` 로 설정하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:113
+msgid ""
+"|hard| Note the extra import options provided under :guilabel:`Advanced "
+"Options`. These include the ability to add a WHERE clause for the SQL query "
+"used for importing the data."
+msgstr "|hard| :guilabel:`Advanced Options` 아래 있는 추가적인 가져오기 옵션들을 살펴보십시오. 이 옵션들 중에는 데이터를 가져오는 데 쓰이는 SQL 쿼리에 WHERE 구문을 추가할 수 있는 기능도 있습니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:117
+msgid "Click :guilabel:`Run` to begin the import."
+msgstr ":guilabel:`Run` 을 클릭해서 가져오기를 시작합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:118
+msgid ""
+"When it's done, click the :guilabel:`View output` button to see the newly "
+"imported GRASS layer in the map."
+msgstr "가져오기가 끝나면 :guilabel:`View output` 버튼을 클릭해서 맵에 새로 가져온 GRASS 레이어를 살펴보십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:120
+msgid ""
+"Close first the import tool (click the :guilabel:`Close` button to the "
+"immediate right of :guilabel:`View output`), then close the :guilabel:`GRASS"
+" Tools` window."
+msgstr "첫 번째 가져오기 도구를 ( :guilabel:`View output` 바로 옆에 있는 :guilabel:`Close` 버튼을 클릭해서) 닫은 다음, :guilabel:`GRASS Tools` 창을 닫으십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:123
+msgid "Remove the original :guilabel:`roads` layer."
+msgstr "원래 :guilabel:`roads` 레이어를 제거합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:125
+msgid ""
+"Now you are left with only the imported GRASS layer as displayed in your "
+"QGIS map."
+msgstr "이제 사용자의 QGIS 맵에 가져온 GRASS 레이어만 보이게 됩니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:129
+msgid "|basic| |FA| Loading Raster Data into GRASS"
+msgstr "|basic| |FA| GRASS에 래스터 데이터 불러오기"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:131
+msgid ""
+"Recall that our DEM is in the Projected CRS :kbd:`UTM 33S / WGS 84`, but our"
+" GRASS project is in the Geographic CRS :kbd:`WGS 84`. So let's re-project "
+"the DEM first."
+msgstr "우리가 사용했던 DEM은 투영 CRS인 :kbd:`UTM 33S / WGS 84` 를 사용하지만, 이번 GRASS 프로젝트는 지리 CRS인 :kbd:`WGS 84` 를 사용한다는 점을 상기하십시오. 따라서 먼저 DEM을 재투영하겠습니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:135
+msgid ""
+"Load the |srtmFileName| dataset (found under "
+":kbd:`exercise_data/raster/SRTM/`) into the QGIS map as usual, using QGIS' "
+":guilabel:`Add Raster Layer` tool."
+msgstr "QGIS의 :guilabel:`Add Raster Layer` 도구를 써서 QGIS 맵에 (:kbd:`exercise_data/raster/SRTM/` 폴더에 있는) |srtmFileName| 데이터셋을 불러오십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:138
+msgid ""
+"Re-project it using GDAL Warp tool (:menuselection:`Raster --> Projections "
+"--> Warp (Reproject)`), setting it up as shown:"
+msgstr "GDAL Warp 도구를 (:menuselection:`Raster --> Projections --> Warp (Reproject)`) 이용해서 재투영하십시오. 다음과 같이 설정해야 합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:144
+msgid ""
+"Save the raster under the same folder as the original, but with the file "
+"name :kbd:`DEM_WGS84.tif`. Once it appears in your map, remove the "
+"|srtmFileName| dataset from your :guilabel:`Layers list`."
+msgstr "원래 파일과 동일한 폴더에 래스터를 저장하되, 파일명은 :kbd:`DEM_WGS84.tif` 로 지정하십시오. 사용자 맵에 래스터가 표출되면, :guilabel:`Layers list` 에서 |srtmFileName| 데이터셋을 제거하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:148
+msgid "Now that it's reprojected, you can load it into your GRASS database."
+msgstr "재투영이 끝났으니, 이제 GRASS 데이터베이스로 불러올 수 있습니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:150
+msgid "Open the :guilabel:`GRASS Tools` dialog again."
+msgstr ":guilabel:`GRASS Tools` 대화 창을 다시 여십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:151
+msgid "Click on the :guilabel:`Modules List` tab."
+msgstr ":guilabel:`Modules List` 탭을 선택합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:152
+msgid ""
+"Search for :kbd:`r.in.gdal.qgis` and double click the tool to open the "
+"tool's dialog."
+msgstr ":kbd:`r.in.gdal.qgis` 를 검색한 다음 도구를 더블클릭해서 도구 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:154
+msgid ""
+"Set it up so that the input layer is :guilabel:`DEM_WGS84` and the output is"
+" :kbd:`g_dem`."
+msgstr "입력 레이어를 :guilabel:`DEM_WGS84`, 산출물을 :kbd:`g_dem` 으로 설정하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:160
+msgid "Click :guilabel:`Run`."
+msgstr ":guilabel:`Run` 을 클릭합니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:161
+msgid "When the process is done, click :guilabel:`View output`."
+msgstr "처리가 끝나면 :guilabel:`View output` 을 클릭하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:162
+msgid ""
+":guilabel:`Close` the current tab, and then :guilabel:`Close` the whole "
+"dialog."
+msgstr "현재 탭의 :guilabel:`Close` 를 클릭한 다음, 전체 대화 창의 :guilabel:`Close` 를 클릭하십시오."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:168
+msgid "You may now remove the original :guilabel:`DEM_WGS84` layer."
+msgstr "이제 원래 :guilabel:`DEM_WGS84` 레이어를 제거해도 됩니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:171
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:173
+msgid ""
+"The GRASS workflow for ingesting data is somewhat different from the QGIS "
+"method because GRASS loads its data into a spatial database structure. "
+"However, by using QGIS as a frontend, you can make the setup of a GRASS "
+"mapset easier by using existing layers in QGIS as data sources for GRASS."
+msgstr "GRASS는 데이터를 공간 데이터베이스 구조로 불러온다는 점에서 GRASS의 데이터 획득 작업 흐름은 QGIS의 방법과 약간 다릅니다. 하지만 QGIS를 프론트엔드로 사용하면, QGIS의 기존 레이어를 GRASS를 위한 데이터소스로 이용할 수 있기 때문에 GRASS 맵셋을 더 쉽게 설정할 수 있게 됩니다."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:179
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:181
+msgid ""
+"Now that the data is imported into GRASS, we can look at the advanced "
+"analysis operations that GRASS offers."
+msgstr "이제 GRASS에 데이터를 가져왔으니, GRASS가 제공하는 고급 분석 작업을 해볼 차례입니다."

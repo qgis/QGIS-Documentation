@@ -1,0 +1,179 @@
+# 
+# Translators:
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-03 10:05+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:6
+msgid "D-Infinity Contributing Area"
+msgstr "Surface contributive D-Infinity"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:11
+msgid ""
+"Calculates a grid of specific catchment area which is the contributing area "
+"per unit contour length using the multiple flow direction D-infinity "
+"approach. D-infinity flow direction is defined as steepest downward slope on"
+" planar triangular facets on a block centered grid. The contribution at each"
+" grid cell is taken as the grid cell length (or when the optional weight "
+"grid input is used, from the weight grid). The contributing area of each "
+"grid cell is then taken as its own contribution plus the contribution from "
+"upslope neighbors that have some fraction draining to it according to the "
+"D-infinity flow model. The flow from each cell either all drains to one "
+"neighbor, if the angle falls along a cardinal (0, π/2, π, 3π/2) or ordinal "
+"(π/4, 3π/4, 5π/4, 7π/4) direction, or is on an angle falling between the "
+"direct angle to two adjacent neighbors. In the latter case the flow is "
+"proportioned between these two neighbor cells according to how close the "
+"flow direction angle is to the direct angle to those cells. The contour "
+"length used here is the grid cell size. The resulting units of the specific "
+"catchment area are length units the same as those of the grid cell size."
+msgstr "Calcule une grille de bassin versant spécifique qui est la surface contributive par unité de longueur de contour utilisant l'approche de direction de flux multiple D-Infinity. La direction de flux D-Infinity est définie comme étant la pente la plus raide sur les faces d'un triangles plat sur une grille centrée sur un bloc. La contribution de chaque cellule est calculée par la longueur de cellule (ou lorsque la grille de pondération optionnelle est utilisée, la cellule pondérée). La surface contributive de chaque cellule est alors calculée comme sa propre contribution ajoutée à la contribution des cellules voisines de pente ascendante qui participent à l'écoulement selon le modèle de flux D-Infinity. Le flux de chaque cellule s'écoule soit complètement dans une cellule voisine si l'angle de chute est une direction cardinale (0, π/2, π, 3π/2) ou ordinale (π/4, 3π/4, 5π/4, 7π/4), soit dans deux cellules adjacentes. Le dernier cas le flux est proportionnel entre ces deux cellules voisines selon le rapport entre l'angle de direction et l'angle direct pour ces deux cellules. La longueur du contour utilisée est la taille de la cellule de la grille. Les unités utilisées pour la surface du bassin versant spécifique sont les unités de longueur des cellules de la grille."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:30
+msgid ""
+"When the optional weight grid is not used, the result is reported in terms "
+"of specific catchment area, the upslope area per unit contour length, taken "
+"here as the number of cells times grid cell length (cell area divided by "
+"cell length). This assumes that grid cell length is the effective contour "
+"length, in the definition of specific catchment area and does not "
+"distinguish any difference in contour length dependent upon the flow "
+"direction. When the optional weight grid is used, the result is reported "
+"directly as a summation of weights, without any scaling."
+msgstr "Lorsque la grille de poids n'est pas utilisée, le résultat sera un bassin versant spécifique et la surface de pente ascendante par unité de longueur de contour sera exprimée en nombre de cellules multiplié par la taille d'une cellule (surface des cellules divisée par la longueur d'une cellule). La taille de la cellule sera la longueur effective du contour dans la définition du bassin versant spécifique. Cette longueur ne sera pas variable selon la direction de flux. Lorsque la grille de pondération optionnelle est utilisée, le résultat renvoie la somme des poids, sans mise à l'échelle."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:39
+msgid ""
+"If the optional outlet point shapefile is used, only the outlet cells and "
+"the cells upslope (by the D-infinity flow model) of them are in the domain "
+"to be evaluated."
+msgstr "Si le fichier Shape des exutoires optionnels est utilisé, seules les cellules d'exutoire et les cellules de pente ascendante (par le modèle de flux D-Infinity qui leur appartiennent font partie du domaine à évaluer."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:43
+msgid ""
+"By default, the tool checks for edge contamination. This is defined as the "
+"possibility that a contributing area value may be underestimated due to grid"
+" cells outside of the domain not being counted. This occurs when drainage is"
+" inwards from the boundaries or areas with \"no data\" values for elevation."
+" The algorithm recognizes this and reports \"no data\" for the contributing "
+"area. It is common to see streaks of \"no data\" values extending inwards "
+"from boundaries along flow paths that enter the domain at a boundary. This "
+"is the desired effect and indicates that contributing area for these grid "
+"cells is unknown due to it being dependent on terrain outside of the domain "
+"of data available. Edge contamination checking may be turned off in cases "
+"where you know it is not an issue or want to ignore these problems, if for "
+"example, the DEM has been clipped along a watershed outline."
+msgstr "Par défaut, l'outil vérifie la contamination des arcs. Il s'agit de la possibilité qu'une valeur de surface contributive soit sous-estimée à cause de la non-prise en compte des cellules en dehors du domaine. Cela se produit lorsque le drainage est à l'intérieur des limites ou avec des surfaces avec des valeurs vides d'élévation. L'algorithme reconnaît ce phénomène et renvoie les valeurs vides pour la surface contributive. Il est courant de constater des trainées des données vides à l'intérieur des limites le long des chemins de flux qui entre dans le domaine au niveau d'une limite. C'est l'effet désiré et cela indique que la surface contributive de ces cellules est inconnue car elle est dépendante du terrain qui se situe en dehors du domaine de travail. La vérification de la contamination des arcs peut être désactivée lorsque vous savez qu'il ne s'agit pas d'un problème ou que vous voulez ignorer ces problèmes, par exemple, si le MEN a été découpé le long d'une limite de bassin versant."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:57
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:67
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D-Infinity`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:60
+msgid ""
+"A grid of flow directions based on the D-infinity flow method using the "
+"steepest slope of a triangular facet. Flow direction is determined as the "
+"direction of the steepest downward slope on the 8 triangular facets of a 3x3"
+" block centered grid. Flow direction is encoded as an angle in radians, "
+"counter-clockwise from east as a continuous (floating point) quantity "
+"between 0 and 2π. The resulting flow in a grid is then usually interpreted "
+"as being proportioned between the two neighboring cells that define the "
+"triangular facet with the steepest downward slope."
+msgstr "Une grille de directions de flux basée sur la méthode de flux D-Infinity qui utilise la pente la plus raide d'une face triangulaire. La direction de flux est déterminée selon la direction de la pente descendante la plus raide sur les 8 faces d'un triangle d'un bloc de grille de 3x3 cellules. Le flux de direction est exprimé en radians, dans le sens des aiguilles d'une montre à partir de l'est comme une quantité comprise (réel) entre 0 et 2π. Le flux résultant est une grille qui est généralement interprétée comme étant proportionnelle aux deux cellules voisines qui définissent la face triangulaire avec la pente descendante la plus raide."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:74
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Fichier Shape des exutoires`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:70
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:77
+msgid "Optional."
+msgstr "En option."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:72
+msgid ""
+"A point shapefile defining the outlets of interest. If this input file is "
+"used, only the cells upslope of these outlet cells are considered to be "
+"within the domain being evaluated."
+msgstr "Un fichier Shape de points définissant les exutoires d'intérêt. Si le fichier en entrée est utilisé, seules les cellules de pente ascendante de ces exutoires seront considérées comme à l'intérieur du domaine à évaluer."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:84
+msgid "``Weight Grid`` [raster]"
+msgstr "``Grille de pondération`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:79
+msgid ""
+"A grid giving contribution to flow for each cell. These contributions (also "
+"sometimes referred to as weights or loadings) are used in the contributing "
+"area accumulation. If this input file is not used, the result is reported in"
+" terms of specific catchment area (the upslope area per unit contour length)"
+" taken as the number of cells times grid cell length (cell area divided by "
+"cell length)."
+msgstr "Une grille donnant la contribution de flux pour chaque cellule. Ces contributions (autrement dénommées comme charge ou pondération) sont utilisées dans l'accumulation de surface contributive. Si le fichier en entrée n'est pas utilisé, le résultat sera renvoyé sous forme de bassin versant spécifique (surface de pente ascendante par unité de longueur du contour) calculé à partir du nombre de cellules multplié par la longueur d'une cellule (surface de la cellule divisée par sa longueur)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:101
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Vérifier la contamination des arcs`` [booléen]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:87
+msgid ""
+"A flag that indicates whether the tool should check for edge contamination. "
+"Edge contamination is defined as the possibility that a contributing area "
+"value may be underestimated due to the fact that grid cells outside of the "
+"domain have not been evaluated. This occurs when drainage is inwards from "
+"the boundaries or areas with NODATA values for elevation. The algorithm "
+"recognizes this and reports NODATA for the impated cells. It is common to "
+"see streaks of NODATA values extending inwards from boundaries along flow "
+"paths that enter the domain at a boundary. This is the desired effect and "
+"indicates that contributing area for these grid cells is unknown due to it "
+"being dependent on terrain outside of the domain of available data. Edge "
+"contamination checking may be turned off in cases where you know this is not"
+" an issue, or want to ignore these problems, if for example, the DEM has "
+"been clipped along a watershed outline."
+msgstr "Un drapeau qui indique si l'outil doit vérifier la contamination des arcs. Il s'agit de la possibilité qu'une valeur de surface contributive soit sous-estimée à cause de la non-prise en compte des cellules en dehors du domaine. Cela se produit lorsque le drainage est à l'intérieur des limites ou avec des surfaces avec des valeurs vides d'élévation. L'algorithme reconnaît ce phénomène et renvoie les valeurs vides pour la surface contributive. Il est courant de constater des trainées des données vides à l'intérieur des limites le long des chemins de flux qui entre dans le domaine au niveau d'une limite. C'est l'effet désiré et cela indique que la surface contributive de ces cellules est inconnue car elle est dépendante du terrain qui se situe en dehors du domaine de travail. La vérification de la contamination des arcs peut être désactivée lorsque vous savez qu'il ne s'agit pas d'un problème ou que vous voulez ignorer ces problèmes, par exemple, si le MEN a été découpé le long d'une limite de bassin versant."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:101
+msgid "Default: *True*"
+msgstr "Par défaut : *Vrai*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:104
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:111
+msgid "``D-Infinity Specific Catchment Area Grid`` [raster]"
+msgstr "``Grille de bassin versant spécifique D-Infinity`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:107
+msgid ""
+"A grid of specific catchment area which is the contributing area per unit "
+"contour length using the multiple flow direction D-infinity approach. The "
+"contributing area of each grid cell is then taken as its own contribution "
+"plus the contribution from upslope neighbors that have some fraction "
+"draining to it according to the D-infinity flow model."
+msgstr "Une grille des bassin versant spécifique qui correspond à la surface contributive par unité de longueur de contour en utilisant le modèle de direction de flux multiple D-Infinity. La surface contributive de chaque cellule est prise comme sa propre contribution ajoutée à la contribution des voisins en pente ascendante qui s'y déversent, selon le modèle de flux D-Infinity."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:114
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinitycontributingarea.rst:121
+msgid "See also"
+msgstr "Voir également"

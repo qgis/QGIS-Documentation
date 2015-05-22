@@ -1,0 +1,182 @@
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2014-12-16 18:59+0000\n"
+"Last-Translator: alexbruy <alexander.bruy@gmail.com>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/projects/p/qgis-documentation/language/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:7
+msgid "Releasing your plugin"
+msgstr "Публікація плаґіна"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:9
+msgid ""
+"Once your plugin is ready and you think the plugin could be helpful for some"
+" people, do not hesitate to upload it to :ref:`official_pyqgis_repository`. "
+"On that page you can find also packaging guidelines about how to prepare the"
+" plugin to work well with the plugin installer. Or in case you would like to"
+" set up your own plugin repository, create a simple XML file that will list "
+"the plugins and their metadata, for examples see other `plugin repositories "
+"<http://www.qgis.org/wiki/Python_Plugin_Repositories>`_."
+msgstr "Якщо після створення плаґіна ви вирішите, що він може знадобитися й іншим користувачам, не бійтеся опублікувати його в :ref:`official_pyqgis_repository`. На цій сторінці ви також знайдете інструкції з підготовки пакету, слідуванням яким позбавить вас від проблем з встановленням плаґіна через Менеджер плаґінів. Якщо ж вам необхідно створити свій власний репозиторій --- створіть простий файл XML, який описує всі плаґіни та їх метадані. Приклад такого файлу можна знайти на сторінці `Python Plugin Repositories <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:23
+msgid "Official python plugin repository"
+msgstr "Офіційний репозиторій плаґінів"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:25
+msgid ""
+"You can find the *official* python plugin repository at "
+"`<http://plugins.qgis.org/>`_."
+msgstr "*Офіційний* репозиторій плаґінів знаходиться за адресою `<http://plugins.qgis.org/>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:28
+msgid ""
+"In order to use the official repository you must obtain an OSGEO ID from the"
+" `OSGEO web portal <http://www.osgeo.org/osgeo_userid/>`_."
+msgstr "Щоб повноцінно користуватися офіційним репозиторієм, необхідно отримати OSGeo ID на `порталі OSGeo <http://www.osgeo.org/osgeo_userid/>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:31
+msgid ""
+"Once you have uploaded your plugin it will be approved by a staff member and"
+" you will be notified."
+msgstr "Після завантаження плагіна на сервер, він буде перевірений та схвалений адміністрацією і ви отримаєте повідомлення."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:41
+msgid "Permissions"
+msgstr "Права"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:43
+msgid "These rules have been implemented in the official plugin repository:"
+msgstr "Офіційний репозиторій плаґінів працює за такими правилами:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:45
+msgid "every registered user can add a new plugin"
+msgstr "кожний зареєстрований користувач може додавати плагіни"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:46
+msgid "*staff* users can approve or disapprove all plugin versions"
+msgstr "*адміністратори* можуть схвалювати та відкликати всі версії плаґінів"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:47
+msgid ""
+"users which have the special permission `plugins.can_approve` get the "
+"versions they upload automatically approved"
+msgstr "всі версії плаґінів користувачів, які мають дозвіл `plugins.can_approve`, схвалюються автоматично після завантаження на сервер"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:49
+msgid ""
+"users which have the special permission `plugins.can_approve` can approve "
+"versions uploaded by others as long as they are in the list of the plugin "
+"*owners*"
+msgstr "користувачі, що мають дозвіл `plugins.can_approve` і знаходяться у списку *власників* плаґіна, можуть схвалювати версії цього плаґіна, завантажені іншими користувачами"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:52
+msgid ""
+"a particular plugin can be deleted and edited only by *staff* users and "
+"plugin *owners*"
+msgstr "плаґін може бути видалений з репозиторію лише *адміністрацією* та *власником* плаґіна"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:54
+msgid ""
+"if a user without `plugins.can_approve` permission uploads a new version, "
+"the plugin version is automatically unapproved."
+msgstr "якщо користувач без дозволу `plugins.can_approve` завантажує нову версію плаґіна, то ця версія не буде схвалена, навіть якщо плаґін був схвалений раніше"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:59
+msgid "Trust management"
+msgstr "Довірче управлення"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:61
+msgid ""
+"Staff members can grant *trust* to selected plugin creators setting "
+"`plugins.can_approve` permission through the front-end application."
+msgstr "Адміністрація може *довіряти* окремим авторам плаґінів шляхом надання дозволу `plugins.can_approve`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:64
+msgid ""
+"The plugin details view offers direct links to grant trust to the plugin "
+"creator or the plugin *owners*."
+msgstr "Панель адміністрування дозволяє видати необхідні дозволи як автору так і всім *власникам* плаґіна."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:70
+msgid "Validation"
+msgstr "Перевірка"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:72
+msgid ""
+"Plugin's metadata are automatically imported and validated from the "
+"compressed package when the plugin is uploaded."
+msgstr "Під час завантаження плаґінів на сервер їх метадані автоматично імпортуються та перевіряться."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:75
+msgid ""
+"Here are some validation rules that you should aware of when you want to "
+"upload a plugin on the official repository:"
+msgstr "Ось список основних правил перевірки, про які необхідно знати перед публікацією плаґіна в офіційному репозиторії:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:78
+msgid ""
+"the name of the main folder containing your plugin must contain only "
+"contains ASCII characters (A-Z and a-z), digits and the characters "
+"underscore (_) and minus (-), also it cannot start with a digit"
+msgstr "назва каталогу плаґіна повинна містити лише символи ASCII (A-Z та a-z), цифри, символи підкреслення (``_``) та дефіс (``-``) і не повинна починатися з цифри"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:81
+msgid ":file:`metadata.txt` is required"
+msgstr "обов'язково повинен бути файл :file:`metadata.txt`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:82
+msgid ""
+"all required metadata listed in :ref:`metadata table<plugin_metadata_table>`"
+" must be present"
+msgstr "всі обов'язкові метадані, описані в :ref:`metadata table<plugin_metadata_table>`, повинні бути заповненими"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:84
+msgid "the `version` metadata field must be unique"
+msgstr "значення поля `version` метаданих повинно бути унікальним"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:17
+msgid "plugins;"
+msgstr "плаґіни;"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:37
+msgid "plugins"
+msgstr "плаґіни"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:37
+msgid "official python plugin repository"
+msgstr "офіційний репозиторій плаґінів"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:35
+msgid "**TODO:**"
+msgstr "**TODO:**"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:35
+msgid "Insert a link to the governance document"
+msgstr "Insert a link to the governance document"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:87
+msgid "Plugin structure"
+msgstr "Структура плаґіна"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:89
+msgid ""
+"Following the validation rules the compressed (.zip) package of your plugin "
+"must have a specific structure to validate as a functional plugin. As the "
+"plugin will be unzipped inside the users plugins folder it must have it's "
+"own directory inside the .zip file to not interfere with other plugins. "
+"Mandatory files are: :file:`metadata.txt` and :file:`__init__.py`. But it "
+"would be nice to have a :file:`README` and of course an icon to represent "
+"the plugin (:file:`resources.qrc`). Following is an example of how a "
+"plugin.zip should look like."
+msgstr "Щоб пройти перевірку, стиснений (:file:`.zip`) пакет плагіна повинен мати певну структуру. Оскільки плаґіни розпаковуються у домашньому каталозі користувача, до директорії плаґінів, вони повинні знаходитися кожний у своєму каталозі всередині файлу :file:`.zip`. Обов'язковими файлами є лише :file:`metadata.txt` та :file:`__init__.py`. Але не завадить також мати :file:`README` та іконку. Нижче показано структуру пакета плаґіна"

@@ -1,0 +1,132 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-01-01 13:56+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/iterative.rst:6
+msgid "Iterative execution of algorithms"
+msgstr "Herhalend uitvoeren van algoritmen"
+
+#: ../../source/docs/training_manual/processing/iterative.rst:8
+msgid ""
+"This lesson shows a different way of executing algorithms that use vector "
+"layers, by running them repeatedly, iterating over the features in an input "
+"vector layer"
+msgstr "Deze les toont u een andere manier voor het uitvoeren van algoritmen die vectorlagen gebruiken, door ze herhalend uit te voeren, doorlopend over de objecten in een vectorlaag als invoer"
+
+#: ../../source/docs/training_manual/processing/iterative.rst:10
+msgid ""
+"We already know the graphical modeler, which is one way of automating "
+"processing tasks. However, in some situations, the modeler might not be what"
+" we need to automate a given task. Let's see one of those situation and how "
+"to easily solve it using a different functionality: the iterative execution "
+"of algorithms."
+msgstr "We kennen al Grafische modellen bouwen, wat één manier is van het automatiseren van taken voor Processing. In sommige situaties zou echter Grafische modellen bouwen niet kunnen zijn wat we nodig hebben om een bepaalde taak te automatiseren. Laten we eens naar zo'n situatie kijken en hoe eenvoudig die op te lossen is met een andere functionaliteit: het herhalend uitvoeren van algoritmen."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:12
+msgid "Open the data corresponding to this chapter. It should look like this."
+msgstr "Open de gegevens die overeenkomen voor dit hoofdstuk. Het zou er zo uit moeten zien."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:16
+msgid ""
+"You will recognize our well-known DEM from previous chapters and a set of "
+"watersheds extracted from it. Imagine that you need to cut the DEM into "
+"several smaller layers, each of them containing just the elevation data "
+"corresponding to a single watershed. That will be useful if you later want "
+"to calculate some parameters related to each watershed, such as its mean "
+"elevation or it hypsographic curve."
+msgstr "U zult onze welbekende DEM herkennen uit eerdere hoofdstukken en een daaruit uitgenomen verzameling waterbergingen. Veronderstel dat u de DEM dient op te delen in verscheidene kleinere lagen, die elk slechts de hoogtegegevens bevatten van slechts één waterberging. Dat zou handig kunnen zijn als u later enkele parameters wilt berekenen die gerelateerd zijn aan elke waterberging, zoals de gemiddelde hoogte of de hypsografische curve ervan."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:18
+msgid ""
+"This can be a lengthy and tedious task, especially if the number of "
+"watersheds is large. However, it is a task that can be easily automated, as "
+"we will see."
+msgstr "Dit kan een lange en saaie taak zijn, speciaal als het aantal waterbergingen groot is. Het is echter, zoals we zullen zien, een taak die eenvoudig geautomatiseerd kan worden."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:20
+msgid ""
+"The algorithm to use for clipping a raster layer with a polygon layer is "
+"called *Clip grid with polygons*, and has the following parameters dialog."
+msgstr "Het algoritme om te gebruiken voor het clippen van een rasterlaag met een polygoonlaag is genaamd *Clip grid with polygons*, en heeft het volgende dialoogvenster voor de parameters."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:24
+msgid ""
+"Yo can run it using the watersheds layer and the DEM as input, and you will "
+"get the following result."
+msgstr "U kunt het uitvoeren met de lagen van waterbergingen en de DEM als invoer, en u zult het volgende resultaat verkrijgen."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:28
+msgid ""
+"As you can see, the area covered by all the watershed polygons is used."
+msgstr "Zoals u kunt zien wordt het gebied, dat bedekt is door alle polygonen van de waterbergingen, gebruikt."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:30
+msgid ""
+"You can have the DEM clipped with just a single watershed by selecting the "
+"desired watershed and then running the algorithm as we did before."
+msgstr "U kunt de DEM clippen met slechts één enkele waterberging door de gewenste waterberging te selecteren en dan het algoritme uit te voeren zoals we eerder deden."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:34
+msgid ""
+"Since only selected features are used, only the selected polygon will be "
+"used to crop the raster layer."
+msgstr "Omdat alleen geselecteerde objecten worden gebruikt, zal alleen de geselecteerde polygoon worden gebruikt om de rasterlaag bij te snijden."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:38
+msgid ""
+"Doing this for all the watersheds will produce the result we are looking "
+"for, but it doesn't look like a very practical way of doing it. Instead, "
+"let's see how to automate that *select and crop* routine."
+msgstr "Door dit voor alle waterbergingen te doen zal dat het resultaat produceren waar we naar op zoek zijn, maar het lijkt niet een praktische manier om het te doen. Laten we, in plaats daarvan, eens zien hoe we die *selecteer en snij bij*-routine kunnen automatiseren."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:40
+msgid ""
+"First of all, remove the previous selection, so all polygons will be used "
+"again. Now open the *Clip grid with polygon* algorithm and select the same "
+"inputs as before, but this time click on the button that you will find in "
+"the right--hand side of the vector layer input where you have selected the "
+"watersheds layer."
+msgstr "Verwijder als eerste de eerdere selectie, zodat opnieuw alle polygonen zullen worden gebruikt. Open nu het algoritme *Clip grid with polygon* en selecteer dezelfde invoer als hiervoor, maar klik deze keer op de knop aan de rechterkant van de invoer voor de vectorlaag waar u de laag watersheds heeft geselecteerd."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:44
+msgid ""
+"This button will cause the selected input layer to be split into as many "
+"layer as feature are found in it, each of them containing a single polygon. "
+"With that, the algorithm will be called repeatedly, one for each one of "
+"those single-polygon layers. The result, instead of just one raster layer in"
+" the case of this algorithm, will be a set of raster layers, each one of "
+"them corresponding to one of the executions of the algorithm."
+msgstr "Deze knop zal er voor zorgen dat de geselecteerde invoerlaag zal worden gesplitst in net zoveel lagen als er objecten in gevonden worden, waarvan elk één enkele polygoon bevat. Daarmee zal het algoritme herhaaldelijk worden aangeroepen, één keer voor elk van die lagen met één polygoon. Het resultaat, in plaats van slechts één rasterlaag in het geval van dit algoritme, zal een verzameling rasterlagen zijn, elk corresponderend met één van de uitvoeringen van het algoritme."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:46
+msgid ""
+"Here's the result that you will get if you run the clipping algorithm as "
+"explained."
+msgstr "Hier is het resultaat dat u zult krijgen als u het algoritme voor het clippen uitvoert zoals is uitgelegd."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:50
+msgid ""
+"For each layer, the black and white color palette, (or whatever palette you "
+"are using), is adjusted differently, from its minimum to its maximum values."
+" That's the reason why you can see the different pieces and the colors do "
+"not seem to match in the border between layers. Values, however, do match."
+msgstr "Voor elke laag wordt het kleurenpalet zwart en wit, (of welk palet u dan ook gebruikt), anders aangepast, van zijn minimale tot zijn maximale waarden. Dat is de reden waarom u kunt zien dat de onderscheidenlijke stukken en de kleuren niet lijken overeen te komen met de grenzen tussen de lagen. De waarden komen echter overeen."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:52
+msgid ""
+"If you enter an output filename, resulting files will be named using that "
+"filename and a number corresponding to each iteration as suffix."
+msgstr "Als u een bestandsnaam voor de uitvoer invoert, zullen de resulterende bestanden worden benoemd met behulp van die bestandsnaam en een getal dat correspondeert met elke iteratie als achtervoegsel."

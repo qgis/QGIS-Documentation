@@ -1,0 +1,352 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+# Sant-anna <delazj@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-17 10:31+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:6
+msgid "|LS| DEM from LiDAR Data"
+msgstr "|LS| MNE à partir de données LiDAR"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:8
+msgid ""
+"You can improve the look of your maps by using different background images. "
+"You could use the basic map or the aerial image you have been using before, "
+"but a hillshade raster of the terrain will look nicer in some situations."
+msgstr "Vous pouvez améliorer l'allure de vos cartes en utilisant différentes images de fond. Vous pourriez utiliser la carte de base ou l'image aérienne que vous avez utilisées avant, mais un raster d'ombrage du terrain sera plus joli dans certaines situations."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:10
+msgid ""
+"You will use LAStools to extract a DEM from a LiDAR dataset and then create "
+"a hillshade raster to use in your map presentation later."
+msgstr "Vous utiliserez LAStools pour extraire un MNE depuis un jeu de données LiDAR et ensuite créerez un raster d'ombrage pour l'utiliser dans votre carte de présentation plus tard."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:12
+msgid ""
+"**The goal for this lesson:** Install LAStools and calculate a DEM from "
+"LiDAR data and a hillshade raster."
+msgstr "**Objectif de cette leçon :** Installer LAStools et calculer un MNE depuis des données LiDAR et un raster d'ombrage."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:16
+msgid "|basic| |FA| Installing Lastools"
+msgstr "|basic| |FA| Installation de Lastools"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:18
+msgid ""
+"Managing LiDAR data within QGIS is possible using the Processing framework "
+"and the algorithms provided by `LAStools <http://rapidlasso.com/2013/09/29"
+"//how-to-install-lastools-toolbox-in-qgis>`_."
+msgstr "La gestion de données LiDAR dans QGIS est possible en utilisant le Module de Traitements et les algorithmes fournis par `LAStools <http://rapidlasso.com/2013/09/29//how-to-install-lastools-toolbox-in-qgis>`_."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:20
+msgid ""
+"You can obtain a digital elevation model (DEM) from a LiDAR point cloud and "
+"then create a hillshade raster that is visually more intuitive for "
+"presentation purposes. First you will have to set up the "
+":guilabel:`Processing` framework settings to properly work with LAStools:"
+msgstr "Vous pouvez obtenir un modèle numérique d'élévation (MNE) à partir d'un nuage de points LiDAR et ensuite créer un raster d'ombrage qui est visuellement plus intuitif à des fins de présentation. Premièrement, vous devrez configurez les paramètres du :guilabel:`Traitements` pour fonctionner correctement avec LAStools :"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:22
+msgid "Close QGIS, if you have already started it."
+msgstr "Fermez QGIS, si vous l'aviez déjà démarré."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:23
+msgid ""
+"An old lidar plugin might be installed by default in your system in the "
+"folder :file:`C:/Program Files/QGIS "
+"Valmiera/apps/qgis/python/plugins/processing/`."
+msgstr "Une ancienne extension lidar devrait être installée par défaut sur votre système dans le dossier :file:`C:/Program Files/QGIS Valmiera/apps/qgis/python/plugins/processing/`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:24
+msgid ""
+"If you have a folder named :kbd:`lidar`, delete it. This is valid for some "
+"installations of QGIS 2.2 and 2.4."
+msgstr "Si vous avez un dossier nommé :kbd:`lidar`, supprimez-le. Ceci est valable pour les installations de QGIS 2.2 et 2.4."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:29
+msgid ""
+"Go to the :kbd:`exercise_data\\\\forestry\\\\lidar\\\\` folder, there you "
+"can find the file :kbd:`QGIS_2_2_toolbox.zip`. Open it and extract the "
+":kbd:`lidar` folder to replace the one you just deleted."
+msgstr "Rendez-vous au dossier :kbd:`exercise_data\\\\forestry\\\\lidar\\\\`, vous pouvez y trouver le fichier :kbd:`QGIS_2_2_toolbox.zip`. Ouvrez-le et extrayez le dossier :kbd:`lidar` pour remplacer celui que vous venez de supprimer."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:30
+msgid ""
+"If you are using a different QGIS version, you can see more installation "
+"instructions in `this tutorial <http://rapidlasso.com/2013/09/29/how-to-"
+"install-lastools-toolbox-in-qgis/>`_."
+msgstr "Si vous utilisez une autre version de QGIS, vous pouvez avoir plus d'informations et d'instructions dans `ce tutorial <http://rapidlasso.com/2013/09/29/how-to-install-lastools-toolbox-in-qgis/>`_."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:32
+msgid ""
+"Now you need to install the LAStools to your computer. Get the newest "
+":kbd:`lastools` version `here <http://lastools.org/download/lastools.zip>`_"
+"  and extract the content of the :kbd:`lastools.zip` file into a folder in "
+"your system, for example, :kbd:`c:\\\\lastools\\\\`. The path to the "
+":kbd:`lastools` folder cannot have spaces or special characters."
+msgstr "Vous devez maintenant installer LAStools sur votre ordinateur. Obtenez la nouvelle version `ici <http://lastools.org/download/lastools.zip>`_ et extrayez le contenu du fichier :kbd:`lastools.zip` dans un dossier dans votre système, par exemple, :kbd:`c:\\\\lastools\\\\`. Le chemin vers le dossier :kbd:`lastools` ne doit pas avoir d'espace ou de caractères spéciaux."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:34
+msgid ""
+"Read the :kbd:`LICENSE.txt` file inside the :kbd:`lastools` folder. Some of "
+"the LAStools are open source and other are closed source and require "
+"licensing for most commercial and governmental use.  For education and "
+"evaluation purposes you can use and test LAStools as much as you need to."
+msgstr "Lisez le fichier :kbd:`LICENSE.txt` dans le dossier :kbd:`lastools`. Certains des LAStools sont open-source et d'autres sont à code source fermé et nécessitent une licence pour la plupart des utilisations commerciales et gouvernementales. À des fins d'éducation et d'évaluation, vous pouvez utiliser et tester autant de LAStools que vous en avez besoin."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:36
+msgid ""
+"The plugin and the actual algorithms are now installed in your computer and "
+"almost ready to use, you just need to set up the Processing framework to "
+"start using them:"
+msgstr "L'extension et les algorithmes actuels sont maintenant installés sur votre ordinateur et bien que prêt à être utilisés, vous devez juste configurez le Module de Traitements pour commencer à les utiliser :"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:38
+msgid "Open a new project in QGIS."
+msgstr "Ouvrez un nouveau projet dans QGIS."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:39
+msgid "Set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN`."
+msgstr "Mettez le SCR du projet en :kbd:`ETRS89 / ETRS-TM35FIN`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:40
+msgid "Save the project as :kbd:`forest_lidar.qgs`."
+msgstr "Sauvegardez le projet sous :kbd:`forest_lidar.qgs`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:42
+msgid "To setup the LAStools in QGIS:"
+msgstr " Pour configurer les LAStools dans QGIS :"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:44
+msgid "Go to :menuselection:`Processing --> Options and configuration`."
+msgstr "Rendez-vous à :menuselection:`Traitements --> Options et configuration`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:45
+msgid ""
+"In the :guilabel:`Processing options` dialog, go to :guilabel:`Providers` "
+"and then to :guilabel:`Tools for LiDAR data`."
+msgstr "Dans la boîte de dialogue :guilabel:`Options de traitements`, rendez-vous à :guilabel:`Prestataires` et ensuite à :guilabel:`Outils pour données LiDAR`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:46
+msgid "Check :guilabel:`Activate`."
+msgstr "Cochez :guilabel:`Activer`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:47
+msgid ""
+"For :guilabel:`LAStools folder` set :kbd:`c:\\\\lastools\\\\` (or the folder"
+" you extracted LAStools to)."
+msgstr "Pour le :guilabel:`dossier LAStools`, mettez :kbd:`c:\\\\lastools\\\\` (ou le dossier que vous avez extrait de LAStools)."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:53
+msgid "|basic| |FA| Calculating a DEM with LAStools"
+msgstr "|basic| |FA| Calcul d'un MNE avec LAStools"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:55
+msgid ""
+"You have already used the :menuselection:`Processing` toolbox in "
+":doc:`../vector_analysis/spatial_statistics` to run some SAGA algorithms. "
+"Now you are going to use it to run LAStools programs:"
+msgstr "Vous avez déjà utilisé la boîte à outils :menuselection:`Traitements` dans :doc:`../vector_analysis/spatial_statistics` pour faire tourner des algorithmes SAGA. Vous allez maintenant l'utiliser pour faire tourner des programmes LAStools :"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:57
+msgid "Open :menuselection:`Processing --> Toolbox`."
+msgstr "Ouvrez :menuselection:`Traitement --> Boîte à outils`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:58
+msgid ""
+"In the dropdown menu at the bottom, select :guilabel:`Advanced interface`."
+msgstr "En haut dans le menu déroulant, sélectionnez :guilabel:`Interface avancée`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:59
+msgid "You should see the :guilabel:`Tools for LiDAR data` category."
+msgstr "Vous devriez voir la catégorie :guilabel:`Outils pour données LiDAR`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:64
+msgid ""
+"Expand it to see the tools available, and expand also the "
+":guilabel:`LAStools` category (the number of algorithms may vary)."
+msgstr "Déroulez-le pour voir les outils disponibles, et déroulez aussi la catégorie :guilabel:`LAStools` (le nombre des algorithmes peut varier)."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:65
+msgid ""
+"Scroll down until you find the :guilabel:`lasview` algorithm, double click "
+"it to open."
+msgstr "Faites défiler jusqu'à ce que vous trouviez l'algorithme :guilabel:`lasview`, double-cliquez dessus pour l'ouvrir."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:66
+msgid ""
+"At :guilabel:`Input LAS/LAZ file`, browse to "
+":kbd:`exercise_data\\\\forestry\\\\lidar\\\\` and select the "
+":kbd:`rautjarvi_lidar.laz` file."
+msgstr "Dans le :guilabel:`fichier source LAS/LAZ`, parcourez jusqu'à :kbd:`exercise_data\\\\forestry\\\\lidar\\\\` et sélectionnez le fichier :kbd:`rautjarvi_lidar.laz`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:71
+msgid "Click :guilabel:`Run`."
+msgstr "Cliquez sur :guilabel:`Exécuter`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:73
+msgid ""
+"Now you can see the LiDAR data in the :guilabel:`just a little LAS and LAZ "
+"viewer` dialog window:"
+msgstr "Vous pouvez maintenant visualiser les données LiDAR dans la fenêtre de dialogue :guilabel:`Visualisateur LAS et LAZ`:"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:78
+msgid ""
+"There are many things you can do within this viewer, but for now you can "
+"just click and drag on the viewer to pan the LiDAR point cloud to see what "
+"it looks like."
+msgstr "De nombreuses choses peuvent être faîtes dans ce visualiseur mais pour le moment, vous pouvez cliquer et vous déplacer sur le nuage de points LiDAR pour voir à quoi il ressemble."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:80
+msgid ""
+"If you want to know further details on how the LAStools work, you can read "
+"the :kbd:`README` text files about each of the tools, in the "
+":kbd:`C:\\\\lastools\\\\bin\\\\` folder. Tutorials and other materials are "
+"available at the `Rapidlasso webpage <http://rapidlasso.com/>`_."
+msgstr "Si vous voulez savoir plus en détail comment les LAStools fonctionnent, vous pouvez lire les fichiers texte :kbd:`README` sur chacun de ces outils, dans le dossier :kbd:`C:\\\\lastools\\\\bin\\\\`. Des tutoriels et autres matériels sont disponibles sur la `page internet Rapidlasso <http://rapidlasso.com/>`_."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:82
+msgid "Close the viewer when you are ready."
+msgstr "Fermez le visualiseur lorsque vous avez fini."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:84
+msgid ""
+"Creating a DEM with LAStools can be done in two steps, first one to classify"
+" the point cloud into :kbd:`ground` and :kbd:`no ground` points and then "
+"calculating a DEM using only the :kbd:`ground` points."
+msgstr "La création d'un MNE avec LAStools peut être faite en deux étapes, premièrement en classant le nuage de points en points :kbd:`de contrôle` et :kbd:`pas de contrôle` et ensuite en calculant un MNE en utilisant seulement les points :kbd:`de contrôle`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:86
+msgid "Go back to the :guilabel:`Processing Toolbox`."
+msgstr "Retournez vers la :guilabel:`Boîte à outils de traitements`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:87
+msgid "Note the :guilabel:`Search...` box, write :kbd:`lasground`."
+msgstr "Remarquez la boîte :guilabel:`Recherche...`, écrivez :kbd:`lasground`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:88
+msgid ""
+"Double click to open the :guilabel:`lasground` tool and set it as shown in "
+"this image:"
+msgstr "Double-cliquez pour ouvrir l'outil :guilabel:`lasground` et configurez-le comme montré dans cette image :"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:93
+msgid ""
+"The output file is saved to the same folder where the "
+":kbd:`rautjarvi_lidar.laz` is located and it is named "
+":kbd:`rautjarvi_lidar_1.las`."
+msgstr "Le fichier de sortie est sauvegardé dans le même dossier où se trouve :kbd:`rautjarvi_lidar.laz` et il se nomme :kbd:`rautjarvi_lidar_1.las`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:95
+msgid "You can open it with :guilabel:`lasview` if you want to check it."
+msgstr "Vous pouvez l'ouvrir avec :guilabel:`lasview` si vous voulez le contrôler."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:100
+msgid ""
+"The brown points are the points classified as ground and the gray ones are "
+"the rest, you can click the letter :kbd:`g` to visualize only the ground "
+"points or the letter :kbd:`u` to see only the unclassified points. Click the"
+" letter :kbd:`a` to see all the points again. Check the "
+":kbd:`lasview_README.txt` file for more commands. If you are interested, "
+"also this `tutorial <http://www.rapidlasso.com/2014/03/02/tutorial-manual-"
+"lidar-editing/>`_ about editing LiDAR points manually will show you "
+"different operations within the viewer."
+msgstr "Les points bruns sont les points classés comme de contrôle et les gris représentent le reste, vous pouvez cliquez sur la lettre :kbd:`g` pour ne visualiser que les points de contrôle ou la lettre :kbd:`u` pour voir seulement les points non classés. Cliquez sur la lettre :kbd:`a` pour voir à nouveau tous les points. Consultez le fichier :kbd:`lasview_README.txt` pour plus de commandes. Si vous êtes intéressées, ce `tutoriel <http://www.rapidlasso.com/2014/03/02/tutorial-manual-lidar-editing/>`_ vous montrera également différentes opérations dans le visualiseur."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:102
+msgid "Close the viewer again."
+msgstr "Fermez à nouveau le visualiseur."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:103
+msgid "In the :guilabel:`Processing Toolbox`, search for :kbd:`las2dem`."
+msgstr "Dans la :guilabel:`Boîte à outils de traitements`, cherchez :kbd:`las2dem`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:104
+msgid "Open the :guilabel:`las2dem` tool and set it as shown in this image:"
+msgstr "Ouvrez l'outil :guilabel:`las2dem` et configurez-le comme montré dans cette image :"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:109
+msgid ""
+"The result DEM is added to your map with the generic name :kbd:`Output "
+"raster file`."
+msgstr "Le résultat MNE est ajouté à votre carte avec le nom générique :kbd:`Fichier raster de sortie`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:111
+msgid ""
+"The :guilabel:`lasground` and :guilabel:`las2dem` tools require licensing. "
+"You can use the unlicensed tool as indicated in the license file, but you "
+"get the diagonals you can appreciate in the image results."
+msgstr "Les outils :guilabel:`lasground` et :guilabel:`las2dem` nécessitent une licence. Vous pouvez utiliser l'outil sans licence, comme indiqué dans le fichier de licence, mais vous obtiendrez les diagonales que vous pouvez observer dans l'image des résultats."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:114
+msgid "|basic| |FA| Creating a Terrain Hillshade"
+msgstr "|basic| |FA| Création d'un ombrage de terrain"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:116
+msgid ""
+"For visualization purposes, a hillshade generated from a DEM gives a better "
+"visualization of the terrain:"
+msgstr "À des fins de visualisation, un ombrage généré à partir d'un MNE donne une meilleure visualisation du terrain :"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:118
+msgid "Open :menuselection:`Raster --> Terrain analysis --> Hillshade`."
+msgstr "Ouvrez :menuselection:`Raster --> Analyse de terrain --> Ombrage`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:119
+msgid ""
+"As the :guilabel:`Output layer`, browse to "
+":kbd:`exercise_data\\\\forestry\\\\lidar\\\\` and name the file "
+":kbd:`hillshade.tif`."
+msgstr "Comme :guilabel:`Couche de sortie`, naviguez jusqu'à :kbd:`exercise_data\\\\forestry\\\\lidar\\\\` et nommez le fichier :kbd:`hillshade.tif`."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:120
+msgid "Leave the rest of parameters with the default settings."
+msgstr "Laissez la configuration par défaut pour le reste des paramètres."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:125
+msgid "Select :kbd:`ETRS89 / ETRS-TM35FIN` as the CRS when prompted."
+msgstr "Sélectionnez :kbd:`ETRS89 / ETRS-TM35FIN` comme SCR quand demandé."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:127
+msgid ""
+"Despite the diagonal lines remaining in the hillshade raster result, you can"
+" clearly see an accurate relief of the area. You can even see the different "
+"soil drains that have been dug in the forests."
+msgstr "Malgré les lignes diagonales qui restent dans le résultat raster d'ombrage, vous pouvez voir clairement un relief précis de la zone. Vous pouvez même voir les différentes canalisations du sol qui ont été creusées dans les forêts."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:134
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:136
+msgid ""
+"Using LiDAR data to get a DEM, specially in forested areas, gives good "
+"results with not much effort. You could also use ready LiDAR derived DEMs or"
+" other sources like the `SRTM 9m resolution DEMs <http://www.cgiar-"
+"csi.org/data/srtm-90m-digital-elevation-database-v4-1>`_. Either way, you "
+"can use them to create a hillshade raster to use in your map presentations."
+msgstr "L'utilisation de données LiDAR pour obtenir un MNE, spécialement dans les zones forestières, donne de bons résultats sans beaucoup d'efforts. Vous pourriez aussi utiliser des MNE déjà prêts dérivés de LiDAR ou d'autres sources comme les `résolutions SRTM 9m MNE <http://www.cgiar-csi.org/data/srtm-90m-digital-elevation-database-v4-1>`_.  Quoi qu'il en soit, vous pouvez les utiliser pour créer un raster d'ombrage à utiliser dans vos cartes de présentation."
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:139
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/forestry/basic_lidar.rst:141
+msgid ""
+"In the next, and final step in this module, lesson you will use the "
+"hillshade raster and the forest inventory results to create a map "
+"presentation of the results."
+msgstr "Dans la prochaine leçon, et dernière étape de ce module, vous utiliserez le raster d'ombrage et les résultats de l'inventaire forestier pour créer une carte de présentation des résultats."

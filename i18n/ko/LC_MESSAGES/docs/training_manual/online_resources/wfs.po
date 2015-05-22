@@ -1,0 +1,245 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-11 04:48+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:6
+msgid "|LS| Web Feature Services"
+msgstr "|LS| WFS(Web Feature Service)"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:8
+msgid ""
+"A Web Feature Service (WFS) provides its users with GIS data in formats that"
+" can be loaded directly in QGIS. Unlike a WMS, which provides you only with "
+"a map which you can't edit, a WFS gives you access to the features "
+"themselves."
+msgstr "WFS(Web Feature Service)는 사용자가 QGIS에 직접 불러올 수 있는 형식으로 GIS 데이터를 제공합니다. 사용자가 편집할 수 없는 맵만을 제공하는 WMS와는 달리, WFS는 피처 그 자체에 접근할 수 있도록 해줍니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:12
+msgid ""
+"**The goal for this lesson:** To use a WFS and understand how it differs "
+"from a WMS."
+msgstr "**이 강의의 목표:** WFS를 사용하고 WMS와의 차이점을 이해하기."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:16
+msgid "|basic| |FA| Loading a WFS Layer"
+msgstr "|basic| |FA| WFS 레이어 불러오기"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:18
+msgid "Start a new map. This is for demo purposes and won't be saved."
+msgstr "새 맵을 시작하십시오. 이 맵은 시연 용이기 때문에 저장하지 않을 겁니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:19
+msgid "Ensure that \"on the fly\" re-projection is switched off."
+msgstr "\"실시간\" 재투영이 비활성화돼 있는지 확인하십시오."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:20
+msgid "Click the :guilabel:`Add WFS Layer` button:"
+msgstr "다음 :guilabel:`Add WFS Layer` 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:22
+msgid "|wfs|"
+msgstr "|wfs|"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:24
+msgid "Click the :guilabel:`New` button."
+msgstr ":guilabel:`New` 버튼을 클릭합니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:25
+msgid ""
+"In the dialog that appears, enter the :guilabel:`Name` as :kbd:`nsidc.org` "
+"and the :guilabel:`URL` as :kbd:`http://nsidc.org/cgi-"
+"bin/atlas_south?version=1.1.0`."
+msgstr "대화 창이 뜨면, :guilabel:`Name` 에 :kbd:`nsidc.org` 를, :guilabel:`URL` 에 :kbd:`http://nsidc.org/cgi-bin/atlas_south?version=1.1.0` 을 입력하십시오."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:32
+msgid ""
+"Click :guilabel:`OK`, and the new connection will appear in your "
+":guilabel:`Server connections`."
+msgstr ":guilabel:`OK` 를 클릭하면 :guilabel:`Server connections` 에 새 연결이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:34
+msgid ""
+"Click the :guilabel:`Connect`. A list of the available layers will appear:"
+msgstr ":guilabel:`Connect` 를 클릭하면 사용 가능한 레이어들의 목록이 나타납니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:39
+msgid "Find the layer :guilabel:`south_poles_wfs`."
+msgstr ":guilabel:`south_poles_wfs` 레이어를 찾으십시오."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:40
+msgid "Click on the layer to select it:"
+msgstr "해당 레이어를 클릭해서 선택한 다음,"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:45
+msgid "Click :guilabel:`Add`."
+msgstr ":guilabel:`Add` 를 클릭하십시오."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:47
+msgid ""
+"It may take a while to load the layer. When it has loaded, it will appear in"
+" the map. Here it is over the outlines of Antarctica (available on the same "
+"server, and by the name of :guilabel:`antarctica_country_border`):"
+msgstr "레이어를 불러오는 데 시간이 걸릴 수도 있습니다. 불러오기가 끝나면 맵 상에 나타날 것입니다. 다음 화면은 남극 대륙의 윤곽선(동일 서버에서 불러올 수 있는 :guilabel:`antarctica_country_border`) 위에 나타난 레이어입니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:54
+msgid ""
+"How is this different from having a WMS layer? That will become obvious when"
+" you see the layers' attributes."
+msgstr "이게 WMS 레이어와 다른 점은 무엇일까요? 레이어의 속성을 보게 되면 명확해집니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:57
+msgid ""
+"Open the :guilabel:`south_poles_wfs` layer's attribute table. You should see"
+" this:"
+msgstr ":guilabel:`south_poles_wfs` 레이어의 속성 테이블을 여십시오. 다음과 같은 내용을 보게 될 겁니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:63
+msgid ""
+"Since the points have attributes, we are able to label them, as well as "
+"change their symbology. Here's an example:"
+msgstr "포인트에 속성이 부여돼 있으므로, 라벨을 붙이는 것은 물론 심볼도 변경할 수 있습니다. 다음은 그 예입니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:69
+msgid ""
+"Add labels to your layer to take advantage of the attribute data in this "
+"layer."
+msgstr "이 레이어의 속성 데이터를 활용해서 라벨을 추가해보십시오."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:73
+msgid "Differences from WMS layers"
+msgstr "WMS 레이어와의 차이점"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:75
+msgid ""
+"A Web Feature Service returns the layer itself, not just a map rendered from"
+" it. This gives you direct access to the data, meaning that you can change "
+"its symbology and run analysis functions on it. However, this is at the cost"
+" of much more data being transmitted. This will be especially obvious if the"
+" layers you're loading have complicated shapes, a lot of attributes, or many"
+" features; or even if you're just loading a lot of layers. WFS layers "
+"typically take a very long time to load because of this."
+msgstr "WFS는 레이어를 렌더링한 맵이 아니라 레이어 그 자체를 반환합니다. 데이터에 직접 접근할 수 있기 때문에, 레이어의 심볼을 변경하거나 분석 기능을 실행할 수 있습니다. 하지만 훨씬 많은 데이터를 전송해야 한다는 단점도 있습니다. 사용자가 불러오는 레이어가 복잡한 형태, 많은 속성들, 또는 많은 피처를 담고 있을 경우나 단순히 많은 레이어를 불러오는 경우 이 단점이 특히 두드러지게 됩니다. 이 때문에 WFS 레이어를 불러오는 데에는 일반적으로 긴 시간이 걸립니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:84
+msgid "|moderate| |FA| Querying a WFS Layer"
+msgstr "|moderate| |FA| WFS 레이어 쿼리"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:86
+msgid ""
+"Although it is of possible to query a WFS layer after having loaded it, it's"
+" often more efficient to query it before you load it. That way, you're only "
+"requesting the features you want, meaning that you use far less bandwidth."
+msgstr "WFS 레이어를 불러온 다음 쿼리할 수도 있지만, 대부분의 경우 불러오기 전에 쿼리하는 편이 훨씬 효율적입니다. 그렇게 하면 사용자가 원하는 피처만 요청하기 때문에 훨씬 적은 대역폭을 쓰게 되기 때문입니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:90
+msgid ""
+"For example, on the WFS server we're currently using, there is a layer "
+"called :guilabel:`countries (excluding Antarctica)`. Let's say that we want "
+"to know where South Africa is relative to the :guilabel:`south_poles_wfs` "
+"layer (and perhaps also the :guilabel:`antarctica_country_border` layer) "
+"that's already been loaded."
+msgstr "예를 들어, 현재 사용 중인 WFS 서버 상에 :guilabel:`countries (excluding Antarctica)` 라는 레이어가 있습니다. 여기서 (아마도 :guilabel:`antarctica_country_border` 레이어와 함께) 이미 불러온 :guilabel:`south_poles_wfs` 레이어의 위치와 남아프리카 공화국의 위치를 비교해보고 싶다고 해봅시다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:96
+msgid ""
+"There are two ways to do this. You can load the whole :guilabel:`countries "
+"...` layer, and then build a query as usual once it's loaded. However, "
+"transmitting the data for all the countries in the world and then only using"
+" the data for South Africa seems a bit wasteful of bandwidth. Depending on "
+"your connection, this dataset can take several minutes to load."
+msgstr "두 가지 방법이 있습니다. 먼저 :guilabel:`countries ...` 레이어 전체를 불러온 다음, 평소와 마찬가지로 쿼리를 작성할 수 있습니다. 하지만 전 세계의 모든 나라들의 데이터를 전송받아 남아프리카 공화국의 데이터만 이용하는 것은 대역폭을 조금 낭비하는 것 같군요. 사용자의 인터넷 연결 속도에 따라 이 데이터를 불러오는 데 몇 분이 걸릴 수도 있습니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:102
+msgid ""
+"The alternative is to build the query as a filter before even loading the "
+"layer from the server."
+msgstr "두 번째는 서버에서 레이어를 불러오기도 전에 필터 역할을 하는 쿼리를 작성하는  방법입니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:105
+msgid ""
+"In the :guilabel:`Add WFS Layer ...` dialog, connect to the server we used "
+"before and you should see the list of available layers."
+msgstr ":guilabel:`Add WFS Layer ...` 대화 창에서 이전에 사용했던 서버에 연결하십시오. 사용 가능한 레이어들의 목록이 보일 겁니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:107
+msgid ""
+"Double-click next to the :guilabel:`countries ...` layer in the "
+":guilabel:`Filter` field, or click :guilabel:`Build query`:"
+msgstr ":guilabel:`countries ...` 레이어 옆의 :guilabel:`Filter` 란을 더블클릭하거나, :guilabel:`Build query` 를 클릭하십시오."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:113
+msgid ""
+"In the dialog that appears, build the query :kbd:`\"Countryeng\" = 'South "
+"Africa'`:"
+msgstr "대화 창이 뜨면 다음과 같이 :kbd:`\"Countryeng\" = 'South Africa'` 라는 쿼리를 작성하십시오."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:119
+msgid "It will appear as the :guilabel:`Filter` value:"
+msgstr "쿼리가 :guilabel:`Filter` 값으로 나타날 것입니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:124
+msgid ""
+"Click :guilabel:`Add` with the :guilabel:`countries` layer selected as "
+"above. Only the country with the :kbd:`Countryeng` value of :kbd:`South "
+"Africa` will load from that layer:"
+msgstr "앞의 그림처럼 :guilabel:`countries` 레이어를 선택한 상태에서 :guilabel:`Add` 를 클릭하십시오. 다음과 같이 해당 레이어에서 :kbd:`Countryeng` 값이 :kbd:`South Africa` 인 나라만 불러오게 됩니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:131
+msgid ""
+"You don't have to, but if you tried both methods, you'll notice that this is"
+" a lot faster than loading all the countries before filtering them!"
+msgstr "그럴 필요는 없지만 두 가지 방법을 다 해봤다면, 필터링하기 전에 모든 나라를 불러오는 것이 훨씬 느리다는 것을 알 수 있을 겁니다!"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:135
+msgid "Notes on WFS availability"
+msgstr "WFS의 사용성에 대해"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:137
+msgid ""
+"It is rare to find a WFS hosting features you need, if your needs are very "
+"specific. The reason why Web Feature Services are relatively rare is because"
+" of the large amounts of data that must be transmitted to describe a whole "
+"feature. It is therefore not very cost-effective to host a WFS rather than a"
+" WMS, which sends only images."
+msgstr "사용자의 요구가 매우 특화되어 있을 경우, 사용자가 필요한 피처를 호스팅하고 있는 WFS를 찾기란 매우 어렵습니다. WFS가 상대적으로 희귀한 이유는 전체 피처를 표현하기 위해 전송해야 하는 데이터가 대용량이기 때문입니다. 따라서 이미지만을 전송하는 WMS에 비해, WFS를 호스팅하는 것은 가성비가 떨어집니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:143
+msgid ""
+"The most common type of WFS you'll encounter will therefore probably be on a"
+" local network or even on your own computer, rather than on the Internet."
+msgstr "그러므로 사용자가 앞으로 보게 될 WFS는 아마도 인터넷 상에 있는 것보다는 로컬 네트워크나 혹은 사용자 자신의 컴퓨터에 있을 가능성이 가장 큽니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:147
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:149
+msgid ""
+"WFS layers are preferable over WMS layers if you need direct access to the "
+"attributes and geometries of the layers. However, considering the amount of "
+"data that needs to be downloaded (which leads to speed problems and also a "
+"lack of easily available public WFS servers) it's not always possible to use"
+" a WFS instead of a WMS."
+msgstr "사용자가 레이어의 속성 및 도형에 직접 접근해야 할 경우, WMS 레이어보다 WFS 레이어가 더 낫습니다. 하지만 (속도는 물론 쉽게 사용할 수 있는 공공 WFS 서버 부족이라는 문제를 일으키는) 다운로드해야 할 데이터 용량을 감안하면 언제나 WMS 대신 WFS를 사용할 수 있는 것은 아닙니다."
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:156
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/online_resources/wfs.rst:158
+msgid ""
+"Next, you'll see how to use QGIS as a frontend for the famous GRASS GIS."
+msgstr "다음으로 어떻게 QGIS를 유명한 GRASS GIS의 프론트엔드로 사용할 수 있는지 배워보겠습니다."

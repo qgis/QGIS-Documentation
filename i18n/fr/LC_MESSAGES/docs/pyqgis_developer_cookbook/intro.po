@@ -1,0 +1,332 @@
+# 
+# Translators:
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+# Robin PREST <robin@georezo.net>, 2014
+# Sant-anna <delazj@gmail.com>, 2014
+# Vincent Picavet <vincent.ml@oslandia.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2015-02-12 15:10+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:9
+msgid "Introduction"
+msgstr "Introduction"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:11
+msgid ""
+"This document is intended to work both as a tutorial and a reference guide. "
+"While it does not list all possible use cases, it should give a good "
+"overview of the principal functionality."
+msgstr "Ce document est à la fois un tutoriel et un guide de référence. Il ne liste pas tous les cas d'utilisation possibles, mais donne une bonne idée générale des principales fonctionnalités."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:15
+msgid ""
+"Starting from 0.9 release, QGIS has optional scripting support using Python "
+"language. We've decided for Python as it's one of the most favourite "
+"languages for scripting. PyQGIS bindings depend on SIP and PyQt4. The reason"
+" for using SIP instead of more widely used SWIG is that the whole QGIS code "
+"depends on Qt libraries. Python bindings for Qt (PyQt) are done also using "
+"SIP and this allows seamless integration of PyQGIS with PyQt."
+msgstr "Dès la version 0.9, QGIS intégrait un support optionnel pour le langage Python. Nous avons choisi Python car c'est un des langages les plus adaptés pour la création de scripts. Les dépendances PyQGIS proviennent de SIP et PyQt4. Le choix de l'utilisation de SIP plutôt que de SWIG plus généralement répandu est dû au fait que le noyau de QGIS dépend des librairies Qt. Les dépendances Python pour Qt (PyQt) sont opérées via SIP, ce qui permet une intégration parfaite de PyQGIS avec PyQt."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:25
+msgid "**TODO:**"
+msgstr "**A FAIRE : **"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:24
+msgid "Getting PyQGIS to work (Manual compilation, Troubleshooting)"
+msgstr "Faire fonctionner PyQGIS (compilation manuelle, débogage)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:27
+msgid ""
+"There are several ways how to use QGIS python bindings, they are covered in "
+"detail in the following sections:"
+msgstr "Il y a de nombreuses façons d'utiliser les dépendances python de QGIS; elles sont mentionnées en détail dans les sections suivantes :"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:30
+msgid "issue commands in Python console within QGIS"
+msgstr "lancer des commandes dans la console Python de QGIS"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:31
+msgid "create and use plugins in Python"
+msgstr "créer et utiliser des plugins en Python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:32
+msgid "create custom applications based on QGIS API"
+msgstr "créer des applications personnalisées basées sur l'API QGIS"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:36
+msgid ""
+"There is a `complete QGIS API <http://qgis.org/api/>`_ reference that "
+"documents the classes from the QGIS libraries. Pythonic QGIS API is nearly "
+"identical to the API in C++."
+msgstr "Il y a une documentation `complète de l'API QGIS <http://qgis.org/api/>`_  qui détaille les classes des librairies QGIS. l'API Python de QGIS est presque identique à l'API en C++."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:52
+msgid "Python Console"
+msgstr "La Console Python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:54
+msgid ""
+"For scripting, it is possible to take advantage of integrated Python "
+"console. It can be opened from menu: :menuselection:`Plugins --> Python "
+"Console`. The console opens as a non-modal utility window:"
+msgstr "Il est possible de tirer partie d'une console Python intégrée pour créer des scripts et les exécuter. La console peut être ouverte grâce au menu: :menuselection:`Plugins --> Console Python`. La console s'ouvre comme une fenêtre d'utilitaire windows non modale :"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:62
+msgid "QGIS Python console"
+msgstr "La Console Python de QGIS"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:64
+msgid ""
+"The screenshot above illustrates how to get the layer currently selected in "
+"the layer list, show its ID and optionally, if it is a vector layer, show "
+"the feature count. For interaction with QGIS environment, there is a "
+":data:`iface` variable, which is an instance of :class:`QgsInterface`. This "
+"interface allows access to the map canvas, menus, toolbars and other parts "
+"of the QGIS application."
+msgstr "La capture d'écran ci-dessus montre comment récupérer la couche sélectionnée dans la liste des couches, afficher son identifiant et éventuellement, si c'est une couche vecteur, afficher le nombre d'entités. Pour interagir avec l'environnement de QGIS, il y a une variable :data:`iface`, instance de la classe :class:`QgsInterface`. Cette interface permet d'accéder au canevas de carte, aux menus, barres d'outils et autres composantes de l'application QGIS."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:80
+msgid ""
+"For those which use the console often, it may be useful to set a shortcut "
+"for triggering the console (within menu :menuselection:`Settings --> "
+"Configure shortcuts...`)"
+msgstr "Pour ceux qui utilisent souvent la console, il peut être utile de définir un raccourci pour déclencher la console (dans le menu :menuselection:`Préférences --> Configurer les raccourcis...`)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:87
+msgid "Python Plugins"
+msgstr "Extensions Python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:89
+msgid ""
+"QGIS allows enhancement of its functionality using plugins. This was "
+"originally possible only with C++ language. With the addition of Python "
+"support to QGIS, it is also possible to use plugins written in Python. The "
+"main advantage over C++ plugins is its simplicity of distribution (no "
+"compiling for each platform needed) and easier development."
+msgstr "QGIS permet d'enrichir ses fonctionnalités à l'aide d'extensions. Au départ, ce n'était possible qu'avec le langage C++. Avec l'ajout du support de Python dans QGIS, il est également possible d'utiliser les extensions écrites en Python. Le principal avantage sur des extensions C++ est leur simplicité de distribution (pas de compilation nécessaire pour chaque plate-forme) et la facilité du développement."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:95
+msgid ""
+"Many plugins covering various functionality have been written since the "
+"introduction of Python support. The plugin installer allows users to easily "
+"fetch, upgrade and remove Python plugins. See the `Python Plugin "
+"Repositories <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_ page "
+"for various sources of plugins."
+msgstr "De nombreuses extensions couvrant diverses fonctionnalités ont été écrites depuis l'introduction du support de Python. L'installateur d'extensions permet aux utilisateurs de facilement  chercher, mettre à niveau et supprimer les extensions Python. Voir la page du ` Dépôt des Extensions Python <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_  pour diverses sources d'extensions."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:101
+msgid ""
+"Creating plugins in Python is simple, see :ref:`developing_plugins` for "
+"detailed instructions."
+msgstr "Créer des extensions Python est simple. Voir :ref:`developing_plugins` pour des instructions détaillées."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:108
+msgid "Python Applications"
+msgstr "Applications Python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:110
+msgid ""
+"Often when processing some GIS data, it is handy to create some scripts for "
+"automating the process instead of doing the same task again and again. With "
+"PyQGIS, this is perfectly possible --- import the :mod:`qgis.core` module, "
+"initialize it and you are ready for the processing."
+msgstr "Souvent lors du traitement de données SIG, il est très pratique de créer des scripts pour automatiser le processus au lieu de faire la même tâche encore et encore. Avec PyQGIS, cela est parfaitement possible --- importez le module :mod:`qgis.core`, initialisez-le et vous êtes prêt pour le traitement."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:115
+msgid ""
+"Or you may want to create an interactive application that uses some GIS "
+"functionality --- measure some data, export a map in PDF or any other "
+"functionality. The :mod:`qgis.gui` module additionally brings various GUI "
+"components, most notably the map canvas widget that can be very easily "
+"incorporated into the application with support for zooming, panning and/or "
+"any further custom map tools."
+msgstr "Vous pouvez aussi souhaiter créer une application interactive utilisant certaines fonctionnalités SIG --- mesurer des données, exporter une carte en PDF ou  toute autre fonction. Le module :mod:`qgis.gui` vous apporte différentes composantes de l'interface, le plus notable étant le canevas de carte qui peut être facilement intégré dans l'application, avec le support du zoom, du déplacement ou de tout autre outil personnalisé de cartographie."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:124
+msgid "Using PyQGIS in custom application"
+msgstr "Utiliser PyQGIS dans une application personnalisée "
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:126
+msgid ""
+"Note: do *not* use :file:`qgis.py` as a name for your test script --- Python"
+" will not be able to import the bindings as the script's name will shadow "
+"them."
+msgstr "Note: *ne pas* utiliser :file:`qgis.py` comme nom de script test --- Python ne sera pas en mesure d'importer les dépendances étant donné qu'elles sont occultées par le nom du script."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:129
+msgid ""
+"First of all you have to import qgis module, set QGIS path where to search "
+"for resources --- database of projections, providers etc. When you set "
+"prefix path with second argument set as :const:`True`, QGIS will initialize "
+"all paths with standard dir under the prefix directory. Calling "
+":func:`initQgis` function is important to let QGIS search for the available "
+"providers."
+msgstr "D'abord, vous devez importer le module qgis, indiquer les chemins QGIS pour trouver les ressources (base de données des projections, fournisseurs de données, etc.). Lorsque vous définissez une base de chemin et que le deuxième argument vaut :const:`True`, QGIS initialisera tous les chemins avec un répertoire qui sera le répertoire de base indiqué par défaut. Appeler la fonction :func:`initQgis` est important pour laisser QGIS rechercher les fournisseurs de données disponibles."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:145
+msgid ""
+"Now you can work with QGIS API --- load layers and do some processing or "
+"fire up a GUI with a map canvas. The possibilities are endless :-)"
+msgstr "Maintenant, vous pouvez travailler avec l'API de QGIS --- charger des couches et effectuer des traitements ou lancer une interface graphique avec un canevas de carte. Les possibilités sont infinies :-)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:148
+msgid ""
+"When you are done with using QGIS library, call :func:`exitQgis` to make "
+"sure that everything is cleaned up (e.g. clear map layer registry and delete"
+" layers)::"
+msgstr "Quand vous avez fini d'utiliser la librairie QGIS, appelez la fonction :func:`exitQgis` pour vous assurer que tout est nettoyé (par ex, effacer le registre de couche cartographique et supprimer les couches)::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:158
+msgid "Running Custom Applications"
+msgstr "Exécuter des applications personnalisées"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:160
+msgid ""
+"You will need to tell your system where to search for QGIS libraries and "
+"appropriate Python modules if they are not in a well-known location --- "
+"otherwise Python will complain::"
+msgstr "Vous devrez indiquer au système où trouver les librairies de QGIS et les modules Python appropriés s'ils ne sont pas à un emplacement connu --- autrement, Python se plaindra::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:167
+msgid ""
+"This can be fixed by setting the ``PYTHONPATH`` environment variable. In the"
+" following commands, ``qgispath`` should be replaced with your actual QGIS "
+"installation path:"
+msgstr "Ceci peut être corrigé en définissant la variable d'environnement ``PYTHONPATH``. Dans les commandes suivantes, ``qgispath`` doit être remplacé par le réel chemin d'accès au dossier d'installation de QGIS:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:171
+msgid "on Linux: :command:`export PYTHONPATH=/qgispath/share/qgis/python`"
+msgstr "sur Linux: :command:`export PYTHONPATH=/qgispath/share/qgis/python`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:172
+msgid "on Windows: :command:`set PYTHONPATH=c:\\\\qgispath\\\\python`"
+msgstr "sur Windows: :command:`set PYTHONPATH=c:\\\\qgispath\\\\python`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:174
+msgid ""
+"The path to the PyQGIS modules is now known, however they depend on "
+"``qgis_core`` and ``qgis_gui`` libraries (the Python modules serve only as "
+"wrappers). Path to these libraries is typically unknown for the operating "
+"system, so you get an import error again (the message might vary depending "
+"on the system)::"
+msgstr "Le chemin vers les modules PyQGIS est maintenant connu. Néanmoins, ils dépendent des bibliothèques ``qgis_core`` et ``qgis_gui`` (les modules Python qui servent d'encapsulage). Le chemin vers ces bibliothèques est inconnu du système d'exploitation et vous allez encore récupérer une erreur d'import (le message peut varier selon le système)::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:182
+msgid ""
+"Fix this by adding the directories where the QGIS libraries reside to search"
+" path of the dynamic linker:"
+msgstr "Corrigez ce problème en ajoutant les répertoires d'emplacement des bibliothèques QGIS au chemin de recherche de l'éditeur dynamique de liens:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:185
+msgid "on Linux: :command:`export LD_LIBRARY_PATH=/qgispath/lib`"
+msgstr "sur Linux: :command:`export LD_LIBRARY_PATH=/qgispath/lib`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:186
+msgid "on Windows: :command:`set PATH=C:\\\\qgispath;%PATH%`"
+msgstr "sur Windows: :command:`set PATH=C:\\\\qgispath;%PATH%`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:188
+msgid ""
+"These commands can be put into a bootstrap script that will take care of the"
+" startup. When deploying custom applications using PyQGIS, there are usually"
+" two possibilities:"
+msgstr "Ces commandes peuvent être écrites dans un script de lancement qui gérera le démarrage. Lorsque vous déployez des applications personnalisées qui utilisent PyQGIS, il existe généralement deux possibilités:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:192
+msgid ""
+"require user to install QGIS on his platform prior to installing your "
+"application. The application installer should look for default locations of "
+"QGIS libraries and allow user to set the path if not found. This approach "
+"has the advantage of being simpler, however it requires user to do more "
+"steps."
+msgstr "Imposer à l'utilisateur d'installer QGIS sur la plate-forme avant d'installer l'application. L'installateur de l'application devrait s'occuper des emplacements par défaut des bibliothèques QGIS et permettre à l'utilisateur de préciser un chemin si ce dernier n'est pas trouvé. Cette approche a l'avantage d'être plus simple mais elle impose plus d'actions à l'utilisateur."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:198
+msgid ""
+"package QGIS together with your application. Releasing the application may "
+"be more challenging and the package will be larger, but the user will be "
+"saved from the burden of downloading and installing additional pieces of "
+"software."
+msgstr "Créer un paquet QGIS qui contiendra votre application. Publier l'application sera plus complexe et le paquet d'installation sera plus volumineux mais l'utilisateur n'aura pas à télécharger et à installer d'autres logiciels."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:203
+msgid ""
+"The two deployment models can be mixed - deploy standalone application on "
+"Windows and Mac OS X, for Linux leave the installation of QGIS up to user "
+"and his package manager."
+msgstr "Les deux modèles de déploiement peuvent être mélangés: déployer une application autonome sous Windows et Mac OS X et laisser l'installation de QGIS par l'utilisateur (via son gestionnaire de paquets) pour Linux."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:34
+msgid "API"
+msgstr "API"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:48
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:84
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:104
+msgid "Python"
+msgstr "Python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:48
+msgid "console"
+msgstr "console"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:84
+msgid "plugins"
+msgstr "extensions"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:104
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:154
+msgid "custom applications"
+msgstr "applications personnalisées"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:154
+msgid "running"
+msgstr "exécution"
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:40
+msgid ""
+"There are some resources about programming with PyQGIS on `QGIS blog "
+"<http://blog.qgis.org/>`_. See `QGIS tutorial ported to Python "
+"<http://blog.qgis.org/node/59.html>`_ for some examples of simple 3rd party "
+"apps. A good resource when dealing with plugins is to download some plugins "
+"from `plugin repository <http://plugins.qgis.org/>`_ and examine their code."
+" Also, the ``python/plugins/`` folder in your QGIS installation contains "
+"some plugin that you can use to learn how to develop such plugin and how to "
+"perform some of the most common tasks"
+msgstr "Il existe quelques ressources sur la programmation sous PyQGIS sur `blog QGIS <http://blog.qgis.org/>`_ (Note du traducteur: ce site est obsolète).   Vous pouvez consulter `QGIS tutorial ported to Python <http://blog.qgis.org/node/59.html>`_ pour visualiser quelques exemple d'applications externes. Une bonne source d'information en ce qui concerne les extensions est de simplement télécharger des extensions depuis `le dépôt des extensions <http://plugins.qgis.org/>`_ et d'examiner leur code. De plus, le répertoire ``python/plugins/`` de votre installation QGIS contient quelques extensions qui vous permettront d'apprendre comment développer et comment réaliser la majorité des tâches courantes."
+
+#: ../../source/docs/pyqgis_developer_cookbook/intro.rst:71
+msgid ""
+"For convenience of the user, the following statements are executed when the "
+"console is started (in future it will be possible to set further initial "
+"commands)"
+msgstr "A la convenance de l'utilisateur, les déclarations qui suivent sont exécutées lors du lancement de la console (à l'avenir, il sera possible de paramétrer d'autres commandes d'initialisation):"
+
+#~ msgid ""
+#~ "There are some resources about programming with PyQGIS on `QGIS blog "
+#~ "<http://blog.qgis.org/>`_. See `QGIS tutorial ported to Python "
+#~ "<http://blog.qgis.org/?q=node/59>`_ for some examples of simple 3rd party "
+#~ "apps. A good resource when dealing with plugins is to download some plugins "
+#~ "from `plugin repository <http://plugins.qgis.org/>`_ and examine their code."
+#~ " Also, the ``python/plugins/`` folder in your QGIS installation contains "
+#~ "some plugin that you can use to learn how to develop such plugin and how to "
+#~ "perform some of the most common tasks"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For convenience of the user, the following statements are executed when the "
+#~ "console is started (in future it will be possible to set further initial "
+#~ "commands)::"
+#~ msgstr ""

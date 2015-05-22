@@ -1,0 +1,102 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-08 12:57+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:6
+msgid "D-Infinity Upslope Dependence"
+msgstr "D-oneindigheid afhankelijkheid helling opwaarts"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:11
+msgid ""
+"The D-Infinity Upslope Dependence tool quantifies the amount each grid cell "
+"in the domain contributes to a destination set of grid cells. D-Infinity "
+"flow directions proportion flow from each grid cell between multiple "
+"downslope grid cells. Following this flow field downslope the amount of flow"
+" originating at each grid cell that reaches the destination zone is defined."
+" Upslope influence is evaluated using a downslope recursion, examining grid "
+"cells downslope from each grid cell, so that the map produced identifies the"
+" area upslope where flow through the destination zone originates, or the "
+"area it depends on, for its flow."
+msgstr "Het gereedschap D-oneindigheid afhankelijkheid helling opwaarts kwantificeert de hoeveelheid die elke cel van het raster in het domein bijdraagt aan een verzameling doelen van cellen in het raster. D-oneindigheid stroomrichtingen proportioneren de stroom vanuit elke cel van het raster tussen meerdere neerwaarts gelegen cellen in het raster. Volgend op dit neerwaartse stroomveld wordt de hoeveelheid stroom, afkomstig uit elke cel van het raster, die de doelzone bereikt gedefinieerd. Opwaartse invloed wordt geëvalueerd met behulp van een neerwaartse recursie, neerwaartse cellen in het raster vanuit elke cel van het raster onderzoekend,, zodat de geproduceerde kaart het opwaartse gebied identificeert waaruit de stroom  die door de doelzone stroomt afkomstig is, of het gebied waarvan het afhankelijk is, voor zijn stroom."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:20
+msgid ""
+"The figures below illustrate the amount each source point in the domain "
+"``x`` (blue) contributes to the destination point or zone ``y`` (red). If "
+"the indicator weighted contributing area function is denoted ``I(y; x)`` "
+"giving the weighted contribution using a unit value (1) from specific grid "
+"cells ``y`` to grid cells ``x``, then the upslope dependence is: ``D(x; y) ="
+" I(y; x)``."
+msgstr "De afbeeldingen hieronder illustreren de hoeveelheid die elk bronpunt in het domein ``x`` (blauw) bijdraagt aan het doelpunt of -zone ``y`` (rood). Als de indicatie functie Gewogen deelname gebied is genoteerd als ``I(y; x)`` wat de gewogen bijdrage een waarde voor eenheid geeft (1) vanuit specifieke cellen van het raster ``y`` naar cellen van het raster ``x``, dan is de opwaartse afhankelijkheid: ``D(x; y) = I(y; x)``."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:29
+msgid ""
+"This is useful for example to track where flow or a flow related substance "
+"or contaminant that enters a destination area may come from."
+msgstr "Dit is bijvoorbeeld handig om na te gaan waar een stroom of een aan een stroom gerelateerde substantie of verontreiniger dat een doelgebied binnenkomt vandaan zou kunnen komen."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:33
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:40
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``D-oneindigheid raster stroomrichting`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:36
+msgid ""
+"A grid giving flow direction by the D-Infinity method where the flow "
+"direction angle is determined as the direction of the steepest downward "
+"slope on the eight triangular facets formed in a 3x3 grid cell window "
+"centered on the grid cell of interest. This grid can be produced using the "
+"**\"D-Infinity Flow Direction\"** tool."
+msgstr "Een raster dat de stroomrichting geeft met behulp van de methode D-oneindigheid waar de hoek van de stroomrichting wordt bepaald als de richting van de steilste neerwaartse helling op de acht driehoekige facetten die worden gevormd in een venster van 3x3-cellen van het raster gecentreerd in de betrokken cel van het raster. Dit raster kan worden geproduceerd met behulp van het gereedschap **\"D-oneindigheid stroomrichting\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:44
+msgid "``Destination Grid`` [raster]"
+msgstr "``Doel-grid`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:43
+msgid ""
+"A grid that encodes the destination zone that may receive flow from upslope."
+" This grid must be 1 inside the zone y and 0 over the rest of the domain."
+msgstr "Een raster dat de doelzone codeert die de stroom van boven ontvangt. Dit raster moet 1 zijn binnen de zone y en 0 voor de rest van het domein."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:47
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:51
+msgid "``Output Upslope Dependence Grid`` [raster]"
+msgstr "``Uitvoer raster opwaartse afhankelijkheid`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:50
+msgid ""
+"A grid quantifing the amount each source point in the domain contributes to "
+"the zone defined by the destination grid."
+msgstr "Een raster dat de hoeveelheid kwantificeert die elk bronpunt in het domein bijdraagt aan de zone die wordt gedefinieerd door het doel-grid."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:54
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:61
+msgid "See also"
+msgstr "Zie ook"

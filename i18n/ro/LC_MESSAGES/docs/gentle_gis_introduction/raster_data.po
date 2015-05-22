@@ -1,0 +1,609 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# 
+# Translators:
+# Mihai Terente <terenteml@gmail.com>, 2014
+# Sorin Călinică <scalinica@gmail.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2015-03-25 18:21+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+# e87a9da03c1d46008b631432594290a8
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:8
+msgid "Raster Data"
+msgstr "Datele raster"
+
+# 116602b76771441384ca7ddbb1ab5e90
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:11
+msgid "|gentlelogo|"
+msgstr "|gentlelogo|"
+
+# f7548650bdac483f929f8b1d6079e620
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:11
+msgid "Objectives:"
+msgstr "Obiective:"
+
+# 13e11ec3a3fb49339d6085f857a6254b
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:11
+msgid "Understand what raster data is and how it can be used in a GIS."
+msgstr "Aflați ce sunt datele raster și cum pot fi acestea utilizate într-un GIS."
+
+# 3ee70e1e29774819986668dc908ee10f
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:13
+msgid "Keywords:"
+msgstr "Cuvinte cheie:"
+
+# 9a47adcb8bdd40d49d8c7a3805252d3b
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:13
+msgid "Raster, Pixel, Remote Sensing, Satellite, Image, Georeference"
+msgstr "Raster, Pixel, Teledetecție, Satelit, Imagine, Georeferențiere"
+
+# 5edca81b11e2484fabc0ea1e2f2197ff
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:17
+msgid "Overview"
+msgstr "Prezentare generală"
+
+# a69e4a0a1531457eaa50c831d84e1ddf
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:19
+msgid ""
+"In the previous topics we have taken a closer look at vector data. While "
+"vector features use geometry (points, polylines and polygons) to represent "
+"the real world, raster data takes a different approach. Rasters are made up "
+"of a matrix of pixels (also called cells), each containing a value that "
+"represents the conditions for the area covered by that cell (see "
+"figure_raster_). In this topic we are going to take a closer look at raster "
+"data, when it is useful and when it makes more sense to use vector data."
+msgstr "În temele anterioare am privit în detaliu datele vectoriale. În timp ce elementele vectoriale folosesc geometrie (puncte, linii și poligoane) pentru a reprezenta lumea reală, datele raster oferă o abordare diferită. Rasterele se constituie dintr-o matrice de pixeli (denumiți și celule), fiecare conținând o valuare ce reprezintă condițiile pentru suprafața acoperită de acea celulă (vezi figure_raster_). În această secțiune vom privi în detaliu datele raster, când sunt acestea utile și când are mai mult sens utilizarea datelor vector."
+
+# bb272f264fea422fbbecc1056a0089cc
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:37
+msgid ""
+"A raster dataset is composed of rows (running across) and columns (running "
+"down) of pixels (also know as cells). Each pixel represents a geographical "
+"region, and the value in that pixel represents some characteristic of that "
+"region."
+msgstr "Un set de date raster este compus din rânduri (desfășurate pe orizontală) și coloane (desfășurate pe verticală) de pixeli (denumiți și celule). Fiecare pixel reprezintă o regiune geografică și valoarea acelui pixel reprezintă o anumită caracteristică a acelei regiuni."
+
+# c5429dbbba0d4a22ad113c527a2fafb1
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:43
+msgid "Raster data in detail"
+msgstr "Datele raster în detaliu"
+
+# cf850d2f08aa4083acb50d6b8c6f01de
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:45
+msgid ""
+"Raster data is used in a GIS application when we want to display information"
+" that is continuous across an area and cannot easily be divided into vector "
+"features. When we introduced you to vector data we showed you the image in "
+"figure_landscape_. Point, polyline and polygon features work well for "
+"representing some features on this landscape, such as trees, roads and "
+"building footprints. Other features on a landscape can be more difficult to "
+"represent using vector features. For example the grasslands shown have many "
+"variations in colour and density of cover. It would be easy enough to make a"
+" single polygon around each grassland area, but a lot of the information "
+"about the grassland would be lost in the process of simplifying the features"
+" to a single polygon. This is because when you give a vector feature "
+"attribute values, they apply to the whole feature, so vectors aren't very "
+"good at representing features that are not homogeneous (entirely the same) "
+"all over. Another approach you could take is to digitise every small "
+"variation of grass colour and cover as a separate polygon. The problem with "
+"that approach is that it will take a huge amount of work in order to create "
+"a good vector dataset."
+msgstr "Datele raster se utilizează într-o aplicație GIS atunci cînd dorim afișarea informației care se desfășoară continuu într-o anumită regiune și care nu poate fi divizată cu ușurință în elemente vectoriale. Când v-am introdus în tematica datelor vectoriale v-am prezentat imaginea din figura_landscape_. Elementele de tip punct, linie și poligon se potrivesc foarte bine pentru reprezentarea elementelor din acest peisaj, precum arbori, drumuri și amprentele clădirilor la sol. Alte elemente din peisaj pot fi mai dificil de reprezentat folosind elemente vectoriale. De exemplu, câmpul din imagine are multe variații de culoare și densitate. Ar fi destul de simplu să desenăm câte un poligon în jurul fiecărei regiuni din câmp, dar o mare cantitate de informație s-ar pierde în procesul de simplificare a elementelor în poligoane singulare. Aceasta pentru că atunci cînd se asociază unui element vectorial valori de atribute, acestea se aplică întregului element, așa că datele vector nu sunt foarte potrivite pentru reprezentarea elementelor care nu sunt omogene (identice) în întregime. O altă abordare ar putea fi digitizarea fiecărei mici variații de culoare și densitate a cîmpului ca poligon separat. Problema atunci ar fi durata foarte mare necesară obținerii unui set de date vectoriale adecvat.  "
+
+# ab7de235011b40bba914746ea34b47e2
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:72
+msgid ""
+"Some features on a landscape are easy to represent as points, polylines and "
+"polygons (e.g. trees, roads, houses). In other cases it can be difficult. "
+"For example how would you represent the grasslands? As polygons? What about "
+"the variations in colour you can see in the grass? When you are trying to "
+"represent large areas with continuously changing values, raster data can be "
+"a better choice."
+msgstr "Unele entități dintr-un peisaj sunt ușor de reprezentat sub formă de puncte, polilinii și poligoane (cum ar fi copacii, drumurile, casele). În alte cazuri, poate fi mai dificil. De exemplu, cum ați reprezenta pajiștile? Ca poligoane? Dar ce spuneți de variațiile de culoare pe care le puteți observa în iarbă? Când încercați să reprezentați zone largi, cu valori în continuă schimbare, datele raster pot fi o alegere mai bună."
+
+# ec39a0214be14e0882955ac349edba8c
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:79
+msgid ""
+"Using raster data is a solution to these problems. Many people use raster "
+"data as a **backdrop** to be used behind vector layers in order to provide "
+"more meaning to the vector information. The human eye is very good at "
+"interpreting images and so using an image behind vector layers, results in "
+"maps with a lot more meaning. Raster data is not only good for images that "
+"depict the real world surface (e.g. satellite images and aerial "
+"photographs), they are also good for representing more abstract ideas. For "
+"example, rasters can be used to show rainfall trends over an area, or to "
+"depict the fire risk on a landscape. In these kinds of applications, each "
+"cell in the raster represents a different value e.g. risk of fire on a scale"
+" of one to ten."
+msgstr "Folosirea datelor raster oferă o soluție la aceste probleme. Mulți oameni folosesc datele raster ca **fundal** pentru straturile vectoriale, în scopul evidențierii informațiilor vectoriale. Ochiul uman este foarte bun la interpretarea imaginilor, așa că prin utilizarea unei imagini în spatele straturilor vectoriale, hărțile vor căpăta mai multă semnificație. Datele Raster nu sunt bune doar pentru imagini care descriu suprafața lumea reală (cum ar fi imaginile din satelit și fotografiile aeriene), ele sunt, de asemenea, bune și la reprezentarea unor idei abstracte. De exemplu, rasterele pot fi folosite pentru a prezenta tendința precipitațiilor pe o suprafață, sau pentru a descrie riscul de incendiu dintr-un teritoriu. În aceste tipuri de aplicații, fiecare celulă a unui raster reprezintă o valoare diferită, cum ar fi riscul de incendiu, pe o scară de la unu la zece."
+
+# 549e5ed3dcf1457c84455b586b36e317
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:90
+msgid ""
+"An example that shows the difference between an image obtained from a "
+"satellite and one that shows calculated values can be seen in "
+"figure_raster_types_."
+msgstr "Un exemplu care arată diferența dintre o imagine obținută de la satelit și una care prezintă valori calculate, se poate vedea în figure_raster_types_."
+
+# 303f26c050c14986bdc19724f7a56bd1
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:103
+msgid ""
+"True colour raster images (left) are useful as they provide a lot of detail "
+"that is hard to capture as vector features but easy to see when looking at "
+"the raster image. Raster data can also be non-photographic data such as the "
+"raster layer shown on the right which shows the calculated average minimum "
+"temperature in the Western Cape for the month of March."
+msgstr "Culorile reale ale imaginii raster (stânga) sunt utile deoarece oferă o mulțime de detalii care sunt dificil de capturat sub formă de entitate vectorială, dar sunt ușor de observat atunci când se privește imaginea raster. Datele raster pot fi, de asemenea, date non-fotografice, cum ar fi stratul raster afișat în dreapta, care prezintă temperatura minimă medie calculată pentru Western Cape, în luna martie."
+
+# 14d7b34b348b4748b2af370ca901c42e
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:110
+msgid "Georeferencing"
+msgstr "Georeferențierea"
+
+# bf6a75255d42406ebb9e7d9c01520107
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:112
+msgid ""
+"Georeferencing is the process of defining exactly where on the earth's "
+"surface an image or raster dataset was created. This positional information "
+"is stored with the digital version of the aerial photo. When the GIS "
+"application opens the photo, it uses the positional information to ensure "
+"that the photo appears in the correct place on the map. Normally this "
+"positional information consists of a coordinate for the top left pixel in "
+"the image, the size of each pixel in the X direction, the size of each pixel"
+" in the Y direction, and the amount (if any) by which the image is rotated. "
+"With these few pieces of information, the GIS application can ensure that "
+"raster data are displayed in the correct place. The georeferencing "
+"information for a raster is often provided in a small text file accompanying"
+" the raster."
+msgstr "Georeferențierea este procesul de definire exactă a locului de pe suprafața pământului, pentru care s-a creat o imagine sau un set de date de tip raster. Această informație pozițională este stocată în versiunea digitală a fotografiei aeriene. Când aplicația GIS deschide fotografia, va utiliza informațiile de poziție, pentru a se asigura că fotografia apare în locul corect pe hartă. În mod normal, această informație constă într-o coordonată pentru pixelul din stânga sus al imaginii, dimensiunea fiecărui pixel în direcția X, dimensiunea fiecărui pixel în direcția Y, și (opțional) valoarea cu care este rotită imaginea. Cu ajutorul acestor informații, aplicația GIS poate garanta că datele raster sunt afișate în locul corect. Informațiile de georeferențiere sunt, adesea, furnizate într-un mic fișier, de tip text, care însoțește rasterul."
+
+# ad4a25d71c084b43810f1f07c2b5c9ec
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:125
+msgid "Sources of raster data"
+msgstr "Surse de date raster"
+
+# bc24676b97044c1baf7797ffc3e4779f
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:127
+msgid ""
+"Raster data can be obtained in a number of ways. Two of the most common ways"
+" are aerial photography and satellite imagery. In aerial photography, an "
+"aeroplane flies over an area with a camera mounted underneath it. The "
+"photographs are then imported into a computer and georeferenced. Satellite "
+"imagery is created when satellites orbiting the earth point special digital "
+"cameras towards the earth and then take an image of the area on earth they "
+"are passing over. Once the image has been taken it is sent back to earth "
+"using radio signals to special receiving stations such as the one shown in "
+"figure_csir_station_. The process of capturing raster data from an aeroplane"
+" or satellite is called **remote sensing**."
+msgstr "Date raster pot fi obținute pe mai multe căi. Două dintre cele mai comune modalități sunt fotografiile aeriene și imaginile luate din satelit. Pentru obținerea fotografiilor aeriene, un avion zboară deasupra unei zone, având montată sub el o cameră. Fotografiile sunt ulterior importate și  georeferențiate într-un calculator. Imaginile satelitare sunt create cu ajutorul sateliților care se deplasează pe orbita terestră și care sunt dotați cu camere digitale speciale, orientate spre pământ. O dată ce imaginea a fost luată, aceasta este trimisă la sol cu ajutorul unui semnal radio care va fi captat de stațiile de recepție, cum ar fi cea prezentată în figure_csir_station_. Procesul de captură a datelor raster prin avion sau satelit se numește **teledetecție**."
+
+# e96e82f4fbb44eed9d972f566db4cf21
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:147
+msgid ""
+"The CSIR Satellite Applications Center at Hartebeeshoek near Johannesburg. "
+"Special antennae track satellites as they pass overhead and download images "
+"using radio waves."
+msgstr "Centrul de Aplicații  prin Satelit CSIR din Hartebeeshoek, lângă Johannesburg. Antene speciale urmăresc sateliții care trec pe deasupra lor și descarcă imaginile folosind unde radio."
+
+# d18bd006ed374c9fab7369fea2ddb2c8
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:151
+msgid ""
+"In other cases, raster data can be computed. For example an insurance "
+"company may take police crime incident reports and create a country wide "
+"raster map showing how high the incidence of crime is likely to be in each "
+"area. Meteorologists (people who study weather patterns) might generate a "
+"province level raster showing average temperature, rainfall and wind "
+"direction using data collected from weather stations (see "
+"figure_csir_station_). In these cases, they will often use raster analysis "
+"techniques such as interpolation (which we describe in Topic "
+":ref:`spatial_analysys`)."
+msgstr "În alte cazuri, datele raster pot fi calculate. De exemplu, o societate de asigurări, pe baza rapoartelor poliției, referitoare la activitatea infracțională, poate crea o hartă raster la nivelul unei țări, care să prezinte cât de mare este incidența criminalității în fiecare zonă. Meteorologii (oameni care studiază modelele meteorologice) ar putea genera un raster la nivel de provincie, care să arate temperatura medie, cantitatea de precipitații și direcția vântului, folosind datele colectate de la stațiile meteorologice (a se vedea figure_csir_station_). În aceste cazuri, se folosesc adesea tehnici de analiză raster, cum ar fi interpolarea (pe care am descris-o la subiectul :ref:`spatial_analysys`)."
+
+# b17ce38b307b47c09ef713b52b5756b0
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:160
+msgid ""
+"Sometimes raster data are created from vector data because the data owners "
+"want to share the data in an easy to use format. For example, a company with"
+" road, rail, cadastral and other vector datasets may choose to generate a "
+"raster version of these datasets so that employees can view these datasets "
+"in a web browser. This is normally only useful if the attributes, that users"
+" need to be aware of, can be represented on the map with labels or "
+"symbology. If the user needs to look at the attribute table for the data, "
+"providing it in raster format could be a bad choice because raster layers do"
+" not usually have any attribute data associated with them."
+msgstr "Uneori, datele raster sunt create din date vectoriale, deoarece proprietarii datelor doresc să partajeze datele într-un format mai ușor de utilizat. De exemplu, o companie care deține seturi de date vectoriale pentru drumuri, căi ferate, cadastru și altele, poate lua decizia de a genera o versiune raster a acestor seturi de date, astfel încât angajații să le poată vizualiza într-un browser web. Acest lucru va fi util, în mod normal, doar dacă atributele care le-ar putea fi utile utilizatorilor, se vor putea reprezenta pe hartă cu ajutorul etichetelor sau a simbologiei. În cazul în care utilizatorul trebuie să afișeze tabela de atribute a datelor, alegerea unui format raster ar putea fi o alegere neinspirată, deoarece straturile raster nu au asociate, de obicei, date ale atributelor."
+
+# 915d966680ed4206a010732f840fdbfe
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:171
+msgid "Spatial Resolution"
+msgstr "Rezoluția spațială"
+
+# e12d8ca354df40fbafbd84701ce89242
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:173
+msgid ""
+"Every raster layer in a GIS has pixels (cells) of a fixed size that "
+"determine its spatial resolution. This becomes apparent when you look at an "
+"image at a small scale (see figure_raster_small_scale_) and then zoom in to "
+"a large scale (see figure_raster_large_scale_)."
+msgstr "Fiecare strat raster dintr-un GIS are pixeli (celule) de o mărime fixă ​​care determină rezoluția spațială. Acest lucru devine evident atunci când te uiți la o imagine la o scară mică (v. figure_raster_small_scale_) și apoi treceți la o scară mai mare (v. figure_raster_large_scale_)."
+
+# 336473c503b643d38752780b6f453bbd
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:188
+msgid "This satellite image looks good when using a small scale..."
+msgstr "Această imagine din satelit arată bine atunci când se utilizează o scară mică..."
+
+# 1b7ce07deb494243982646e7f0ad497d
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:200
+msgid ""
+"...but when viewed at a large scale you can see the individual pixels that "
+"the image is composed of."
+msgstr "...dar când este privită la o scară mare, puteți vedea pixelii individuali din care este compusă imaginea."
+
+# c1003555a8ab4151ad4aa5e0375455fb
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:203
+msgid ""
+"Several factors determine the spatial resolution of an image. For remote "
+"sensing data, spatial resolution is usually determined by the capabilities "
+"of the sensor used to take an image. For example SPOT5 satellites can take "
+"images where each pixel is 10 m x 10 m. Other satellites, for example MODIS "
+"take images only at 500 m x 500 m per pixel. In aerial photography, pixel "
+"sizes of 50 cm x 50 cm are not uncommon. Images with a pixel size covering a"
+" small area are called '**high resolution**' images because it is possible "
+"to make out a high degree of detail in the image. Images with a pixel size "
+"covering a large area are called '**low resolution**' images because the "
+"amount of detail the images show is low."
+msgstr "Mai mulți factori determină rezoluția spațială a unei imagini. Pentru datele de teledetecție, rezoluția spațială este dată de obicei de capacitățile senzorului folosit pentru a lua o imagine. De exemplu, sateliții SPOT5 pot lua imagini în care fiecare pixel corespunde unei suprafețe de 10 m x 10 m. Alte sateliți, de exemplu MODIS oferă imagini doar de 500 m x 500 m per pixel. În fotografiile aeriene, dimensiuni ale pixelilor corespunzătoare unei suprafețe de 50 cm x 50 cm nu sunt rare. Imaginile cu o dimensiune a pixelului care acoperă o suprafață mică se numesc imagini '**de înaltă rezoluție**', deoarece dispun de un grad ridicat de detaliu în imagine. Imaginile cu o dimensiune a pixelului care acoperă o zonă amplă sunt denumite imagini cu '**rezoluție scăzută**', deoarece prezintă o cantitate redusă de detalii."
+
+# 08f74b0ac9344288beb5cd03a988f7f1
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:213
+msgid ""
+"In raster data that is computed by spatial analysis (such as the rainfall "
+"map we mentioned earlier), the spatial density of information used to create"
+" the raster will usually determine the spatial resolution. For example if "
+"you want to create a high resolution average rainfall map, you would ideally"
+" need many weather stations in close proximity to each other."
+msgstr "În datele raster care sunt calculate prin analiză spațială (cum ar fi harta precipitațiilor pe care am menționat-o mai devreme), densitatea spațială a informațiilor folosite pentru a crea rasterul, va determina, de obicei, rezoluția spațială. De exemplu, dacă doriți să creați o hartă de înaltă rezoluție a mediei precipitațiilor, veți avea nevoie, la modul ideal, de mai multe stații meteorologice, așezate foarte aproape una de alta."
+
+# 0c8a8b15bfb44feeab1b36067d61a72d
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:219
+msgid ""
+"One of the main things to be aware of with rasters captured at a high "
+"spatial resolution is storage requirements. Think of a raster that is 3 x 3 "
+"pixels, each of which contains a number representing average rainfall. To "
+"store all the information contained in the raster, you will need to store 9 "
+"numbers in the computer's memory. Now imagine you want to have a raster "
+"layer for the whole of South Africa with pixels of 1 km x 1 km. South Africa"
+" is around 1,219,090 km :sup:`2`. Which means your computer would need to "
+"store over a million numbers on its hard disk in order to hold all of the "
+"information. Making the pixel size smaller would greatly increase the amount"
+" of storage needed."
+msgstr "Trebuie să știți că cerințele de stocare sunt foarte mari pentru rasterele capturate la o rezoluție spațială ridicată. Gândiți-vă că un raster are cel puțin 3 x 3 pixeli, fiecare dintre ei conținând un număr care reprezintă media precipitațiilor. Pentru a stoca toate informațiile conținute în acest raster, va trebui să stocați 9 numere în calculator. Acum, imaginați-vă că doriți să aveți un strat raster cu pixeli de 1 km x 1 km pentru întreaga Africă de Sud. Africa de Sud este de aproximativ 1,219,090 km :sup:`2`. Asta înseamnă că în hard disk-ul computerului ar trebui să fie stocate peste un milion de numere, în scopul reținerii tuturor aceste informații. Scăderea dimensiunii pixelilor ar crește foarte mult cantitatea de stocare cerută."
+
+# 6a7c868664ca4db9b7af8f675597f428
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:229
+msgid ""
+"Sometimes using a low spatial resolution is useful when you want to work "
+"with a large area and are not interested in looking at any one area in a lot"
+" of detail. The cloud maps you see on the weather report, are an example of "
+"this –-- it's useful to see the clouds across the whole country. Zooming in "
+"to one particular cloud in high resolution will not tell you very much about"
+" the upcoming weather!"
+msgstr "Uneori, folosirea unei rezoluții spațiale scăzute este utilă atunci când doriți să lucrați cu o suprafață mare, iar într-o anumită zonă nu vă interesează să vedeți o multitudine de detalii. Hărțile norilor, pe care le vedeți la meteo, reprezintă un astfel de exemplu --- ele sunt utile pentru a vedea masa noroasă deasupra întregii țări. Chiar dacă vedeți un anumit nor la o rezoluție înaltă, nu veți afla foarte multe despre evoluția vremii!"
+
+# 2192974a412f429cadd36809b487c2bd
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:235
+msgid ""
+"On the other hand, using low resolution raster data can be problematic if "
+"you are interested in a small region because you probably won't be able to "
+"make out any individual features from the image."
+msgstr "Pe de altă parte, folosirea datelor raster cu rezoluție mică poate fi problematică dacă vă interesează o regiune mică, pentru că, probabil, nu veți avea posibilitatea să recunoașteți entitățile individuale din imagine."
+
+# 41bc083c8a9e49ee9f1ba6068dbff06f
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:240
+msgid "Spectral resolution"
+msgstr "Rezoluția spectrală"
+
+# f2f26b935dc74bc18024aea2662abbca
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:242
+msgid ""
+"If you take a colour photograph with a digital camera or camera on a "
+"cellphone, the camera uses electronic sensors to detect red, green and blue "
+"light. When the picture is displayed on a screen or printed out, the red, "
+"green and blue (RGB) information is combined to show you an image that your "
+"eyes can interpret. While the information is still in digital format though,"
+" this RGB information is stored in separate colour **bands**."
+msgstr "Atunci când efectuați o fotografie color cu ajutorul unui aparat de fotografiat digital sau a unui telefon mobil, camera foto utilizează senzori electronici pentru a detecta luminile roșie, verde și albastră. La momentul afișării pe un ecran sau la o imprimantă, fiecare informație roșie, verde și albastră (RGB) este combinată, în așa fel încât să vedeți o imagine pe care ochii dvs să o poată interpreta. Chiar dacă informațiile sunt stocate într-un anumit format digital, informațiile RGB sunt păstrate în **benzi de culoare** separate."
+
+# 9c3b116414354c6c8ad19d4901040396
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:249
+msgid ""
+"Whilst our eyes can only see RGB wavelengths, the electronic sensors in "
+"cameras are able to detect wavelengths that our eyes cannot. Of course in a "
+"hand held camera it probably doesn't make sense to record information from "
+"the **non-visible** parts of the spectrum since most people just want to "
+"look at pictures of their dog or what have you. Raster images that include "
+"data for non-visible parts of the light spectrum are often referred to as "
+"multi-spectral images. In GIS recording the non-visible parts of the "
+"spectrum can be very useful. For example, measuring infra-red light can be "
+"useful in identifying water bodies."
+msgstr "În timp ce ochii noștri pot sesiza doar lungimile de undă RGB, senzorii electronici ai camerelor sunt capabili să detecteze lungimi de undă adiționale. Desigur, pentru un aparat obișnuit probabil că nu are sens să înregistreze informații din zonele **non-vizibile** ale spectrului luminos, atât timp cât oamenii își doresc doar să se uite la poze cu animalul de companie preferat. Acele imagini raster care includ date pentru părțile invizibile ale spectrului sunt adesea denumite ca imagini multi-spectrale. În GIS, înregistrarea părților non-vizibile ale spectrului poate fi foarte utilă. De exemplu, măsurarea luminii infra-roșii poate fi utilă în identificarea cursurilor de apă."
+
+# 2d4d595e44c646acbc721b2b3166ebe4
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:258
+msgid ""
+"Because having images containing multiple bands of light is so useful in "
+"GIS, raster data are often provided as multi-band images. Each band in the "
+"image is like a separate layer. The GIS will combine three of the bands and "
+"show them as red, green and blue so that the human eye can see them. The "
+"number of bands in a raster image is referred to as its **spectral "
+"resolution**."
+msgstr "Pentru că imaginile care conțin multiple benzi luminoase sunt atât de utile în GIS, datele raster sunt adesea furnizate ca imagini multi-bandă. Fiecare bandă din imagine este ca un strat separat. GIS va combina trei dintre benzi și le va arăta ca roșu, verde și albastru, astfel încât ochiul uman să le poate vedea. Numărul de benzi dintr-o imagine raster este considerat ca fiind **rezoluția sa spectrală**."
+
+# 2303e49c2d224d7b9a510956d48a051a
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:264
+msgid ""
+"If an image consists of only one band, it is often called a **grayscale** "
+"image. With grayscale images, you can apply false colouring to make the "
+"differences in values in the pixels more obvious. Images with false "
+"colouring applied are often referred to as **pseudocolour images**."
+msgstr "În cazul în care o imagine conține o singură bandă, ea este adesea denumită ca imagine în  **tonuri de gri**. În cazul imaginilor în tonuri de gri, puteți aplica o colorare falsă pentru a evidenția diferențele dintre valorile pixelilor. În general, imaginile cărora li s-a aplicat o colorare falsă sunt denumite ca **imagini pseudocolorate**."
+
+# 5e87c28b4e9945e29c04e52dcbe631b8
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:270
+msgid "Raster to vector conversion"
+msgstr "Conversia din raster în vector"
+
+# 95844329caa74c6d81473b83dea8423e
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:272
+msgid ""
+"In our discussion of vector data, we explained that often raster data are "
+"used as a backdrop layer, which is then used as a base from which vector "
+"features can be digitised."
+msgstr "În discuția noastră despre datele vectoriale, am explicat că, adesea, datele raster sunt folosite ca și strat de fundal, pe baza căruia pot fi digitizate entitățile vectoriale."
+
+# 2ed2bf2631f04a7b90cc85bb5849c667
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:276
+msgid ""
+"Another approach is to use advanced computer programs to automatically "
+"extract vector features from images. Some features such as roads show in an "
+"image as a sudden change of colour from neighbouring pixels. The computer "
+"program looks for such colour changes and creates vector features as a "
+"result. This kind of functionality is normally only available in very "
+"specialised (and often expensive) GIS software."
+msgstr "O altă abordare constă în utilizarea programelor de calculator avansate, pentru a extrage automat entitățile vectoriale din imagini. Unele caracteristici, cum ar fi drumurile, arată într-o imagine ca o schimbare bruscă de culoare a pixelilor învecinați. Programul de calculator caută astfel de modificări de culoare, apoi creează entitățile vectoriale ca rezultat. Acest tip de funcționalitate este în mod normal disponibil numai în aplicații GIS foarte specializate (și de multe ori, costisitoare)."
+
+# 0928c694416e48c197fc1f1c40a825e1
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:284
+msgid "Vector to raster conversion"
+msgstr "Conversia din vector în raster"
+
+# 40564271f63649ff8ef1060a7b6c3666
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:286
+msgid ""
+"Sometimes it is useful to convert vector data into raster data. One side "
+"effect of this is that attribute data (that is attributes associated with "
+"the original vector data) will be lost when the conversion takes place. "
+"Having vectors converted to raster format can be useful though when you want"
+" to give GIS data to non GIS users. With the simpler raster formats, the "
+"person you give the raster image to can simply view it as an image on their "
+"computer without needing any special GIS software."
+msgstr "Uneori este utilă transformarea datelor vectoriale în date raster. Un efect secundar în acest caz este faptul că datele atributelor (care sunt atribute asociate cu datele vectoriale originale) se vor pierde în cazul în care are loc conversia. Vectorii convertiți în format raster pot fi foarte utili, mai ales dacă doriți să transmiteți date GIS utilizatorilor non-GIS. În cazul formatelor raster simple, persoana căreia îi veți da imaginea raster o va putea vedea, pur și simplu, pe computer, fără a avea nevoie de software GIS special."
+
+# 2361864b515548ccaf6ee86ae8ff60c0
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:295
+msgid "Raster analysis"
+msgstr "Analizarea rasterelor"
+
+# d05425ae7b524abba8119b1d144be036
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:297
+msgid ""
+"There are a great many analytical tools that can be run on raster data which"
+" cannot be used with vector data. For example, rasters can be used to model "
+"water flow over the land surface. This information can be used to calculate "
+"where watersheds and stream networks exist, based on the terrain."
+msgstr "Există un număr mare de instrumente analitice care pot fi rulate pe date raster, și care nu se pot utiliza pentru datele vectoriale. De exemplu, rasterele pot fi folosite la modelarea fluxurilor de apă de la suprafața terenului. Aceste informații pot fi utilizate pentru a afla, prin calcul, locația bazinelor de captare și a rețelei fluxurilor, în funcție de teren."
+
+# 5d9762b9dd514bb0a78eb3a1867ce9b3
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:302
+msgid ""
+"Raster data are also often used in agriculture and forestry to manage crop "
+"production. For example with a satellite image of a farmer's lands, you can "
+"identify areas where the plants are growing poorly and then use that "
+"information to apply more fertilizer on the affected areas only. Foresters "
+"use raster data to estimate how much timber can be harvested from an area."
+msgstr "Datele raster sunt, de asemenea, de multe ori folosite în agricultură și silvicultură pentru a gestiona producția vegetală. De exemplu, într-o imagine din satelit a terenurilor unui fermier, se pot identifica zonele în care plantele cresc prost și, apoi, aceste informații pot sta la baza aplicării unei cantități mai mari de îngrășământ doar pe zonele afectate. Silvicultorii folosesc datele raster pentru a estima cât de multă cherestea poate fi recoltată dintr-o zonă."
+
+# 8fda906126df42f3a603cb420a06b64b
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:308
+msgid ""
+"Raster data is also very important for disaster management. Analysis of "
+"Digital Elevation Models (a kind of raster where each pixel contains the "
+"height above sea level) can then be used to identify areas that are likely "
+"to be flooded. This can then be used to target rescue and relief efforts to "
+"areas where it is needed the most."
+msgstr "Datele raster sunt, de asemenea, foarte importante pentru managementul dezastrelor. Analiza Modelelor Digitale ale Elevației (un fel de raster în care fiecare pixel conține înălțimea față de nivelul mării), poate fi apoi folosită pentru a identifica zonele care sunt susceptibile de a fi inundate. Acest lucru poate fi apoi utilizat pentru a direcționa eforturile de salvare și ajutorare în zonele de care este nevoie cel mai mult."
+
+# cdf9875eb8774fe29590b343d90820e4
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:315
+msgid "Common problems / things to be aware of"
+msgstr "Probleme comune / lucruri pe care trebuie să le cunoașteți"
+
+# 23799c2790324820ab19399b53ff6965
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:317
+msgid ""
+"As we have already mentioned, high resolution raster data can require large "
+"amounts of computer storage."
+msgstr "Așa cum am menționat deja, datele raster de înaltă rezoluție pot necesita un spațiu mare pentru stocarea în calculator."
+
+# fb7ffcf7830a452d9db1b94517ed6d74
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:321
+msgid "What have we learned?"
+msgstr "Ce am învățat?"
+
+# 504e786446274ecc9f27eba967cb69b0
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:323
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Să recapitulăm subiectele abordate în acest capitol:"
+
+# 7937e21307884025867aac1f19f8dbfb
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:325
+msgid "Raster data are a grid of regularly sized **pixels.**"
+msgstr "Datele raster reprezintă o grilă cu **pixeli** de aceeași dimensiune."
+
+# 04006f4f7cfa483bb81dcc70fe517b10
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:326
+msgid "Raster data are good for showing **continually varying information.**"
+msgstr "Datele raster sunt bune pentru a arăta **informațiile care variază în mod continuu.**"
+
+# 6a54e558c8a74f43b9070010be214eaa
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:327
+msgid "The size of pixels in a raster determines its **spatial resolution.**"
+msgstr "Dimensiunea pixelilor dintr-un raster determină rezoluția **spațială** a acestuia."
+
+# 7cf9ff46749545acace7cf93223ed338
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:328
+msgid ""
+"Raster images can contain one or more **bands**, each covering the same "
+"spatial area, but containing different information."
+msgstr "Imaginile raster pot conține una sau mai multe **benzi**, fiecare acoperind aceeași zonă spațială, dar care conțin informații diferite."
+
+# 6bfe282110af49c3acb271f66aa4db57
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:330
+msgid ""
+"When raster data contains bands from different parts of the electromagnetic "
+"spectrum, they are called **multi-spectral images**."
+msgstr "Atunci când datele raster conțin benzi din diferite părți ale spectrului electromagnetic, acestea sunt denumite imagini **multi-spectrale**."
+
+# 9065a21c52614dac96e7343a12e09f46
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:332
+msgid ""
+"Three of the bands of a multi-spectral image can be shown in the colours "
+"Red, Green and Blue so that we can see them."
+msgstr "Trei dintre benzile unei imagini multi-spectrale pot fi prezentate în culorile roșu, verde și albastru, astfel încât să le putem vedea."
+
+# 798916877fb5465b9e015367752e198e
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:334
+msgid "Images with a single band are called grayscale images."
+msgstr "Imaginile cu o singură bandă sunt denumite imagini în tonuri de gri."
+
+# 8386d964cfa0455d853a28e652e5d2f2
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:335
+msgid "Single band, grayscale images can be shown in pseudocolour by the GIS."
+msgstr "Imaginile cu o singură bandă, în tonuri de gri, pot fi afișate cu pseudoculori în GIS."
+
+# 74759241a26847d9aea2eebb29c53938
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:336
+msgid "Raster images can consume a large amount of storage space."
+msgstr "Imaginile raster pot fi mari consumatoare de spațiu de stocare."
+
+# 90de7c20095e45eb9b583ab109fa8b39
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:339
+msgid "Now you try!"
+msgstr "Încercați acum!"
+
+# fcb486e06155440b9a15b178a189a2b9
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:341
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Aici sunt câteva idei care pot fi testate împreună cu elevii dumneavoastră:"
+
+# 1432e1417200468f93dfeda4d74abac6
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:343
+msgid ""
+"Discuss with your learners in which situations you would use raster data and"
+" in which you would use vector data."
+msgstr "Stabiliți cu studenții dumneavoastră în ce situații ați folosi datele raster și în care v-ar fi utile cele vectoriale."
+
+# 745c938a6e8d4bb0984de3903fe90294
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:345
+msgid ""
+"Get your learners to create a raster map of your school by using A4 "
+"transparency sheets with grid lines drawn on them. Overlay the "
+"transparencies onto a toposheet or aerial photograph of your school. Now let"
+" each learner or group of learners colour in cells that represent a certain "
+"type of feature e.g. building, playground, sports field, trees, footpaths "
+"etc. When they are all finished, overlay all the sheets together and see if "
+"it makes a good raster map representation of your school. Which types of "
+"features worked well when represented as rasters? How did your choice in "
+"cell size affect your ability to represent different feature types?"
+msgstr "Propuneți elevilor dvs. să creeze o hartă raster a școlii, prin utilizarea de coli transparente A4, având linii de grilă desenate pe ele. Suprapuneți foliile transparente peste o hârtie topografică sau peste fotografia aeriană a școlii dumneavoastră. Apoi, fiecare elev sau grup de elevi, trebuie să coloreze celulele care reprezintă un anumit tip de entitate, cum ar fi clădirile, locurile de joacă, terenul de sport, copacii, trotuarele etc. Când operațiunea s-a încheiat, suprapubeți colile transparente și vedeți dacă acestea pot alcătui o bună hartă raster a școlii. Ce tipuri de entități au funcționat bine atunci când au fost reprezentate ca raster? În ce mod a influențat dimensiunea stabilită pentru celule, capacitatea de reprezentare a diverselor tipuri de entități?"
+
+# 74f54ce4ed6048fca273cbaca80d9fd8
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:356
+msgid "Something to think about"
+msgstr "De reținut"
+
+# ee89cd380ebe4a5a8c70e9e7eef34713
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:358
+msgid ""
+"If you don't have a computer available, you can understand raster data using"
+" pen and paper. Draw a grid of squares onto a sheet of paper to represent "
+"your soccer field. Fill the grid in with numbers representing values for "
+"grass cover on your soccer field. If a patch is bare give the cell a value "
+"of 0. If the patch is mixed bare and covered, give it a value of 1. If an "
+"area is completely covered with grass, give it a value of 2. Now use pencil "
+"crayons to colour the cells based on their values. Colour cells with value 2"
+" dark green. Value 1 should get coloured light green, and value 0 coloured "
+"in brown. When you finish, you should have a raster map of your soccer "
+"field!"
+msgstr "Dacă nu aveți la dispoziție un calculator, puteți înțelege datele raster folosind un stilou și o hârtie. Desenați o grilă cu pătrate pe o foaie, pentru a reprezenta terenul de fotbal. Completați grila cu numere, folosind valori pentru iarba de pe teren. Dacă un pătrat este gol atribuiți-i valoarea 0. Dacă o celulă este mixtă, acordați-i valoarea 1. Dacă o zonă este complet acoperită cu iarbă, va avea valoarea 2. Ulterior, colorați celulele pe baza valorilor lor. Celulele cu valoarea 2 vor avea culoarea verde închis. Valorii 1 îi corespunde culoarea verde deschis, iar lui 0 maro. Când ați terminat, ar trebui să aveți o hartă raster a terenului dvs. de fotbal!"
+
+# 6fe2fd8ef7dc4e4dbab405c08a56424a
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:369
+msgid "Further reading"
+msgstr "Lecturi suplimentare"
+
+# bc9f52f479fd49a5970af5f5ebf86fb1
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:371
+msgid "**Book**:"
+msgstr "**Carte**:"
+
+# fc1720f9cd634abfaa53c7e4b13123e5
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:373
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr "Chang, Kang-Tsung (2006). Introducere în sistemele de informații geografice. A 3-a ediție. McGraw Hill. ISBN: 0070658986"
+
+# ce5f950c144543debba1d4c5a606f91a
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:375
+msgid ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr "DeMers, Michael N. (2005). Bazele Sistemelor Informatice Geografice. A 3-a ediție. Wiley. ISBN: 9814126195"
+
+# eb6a350605e04ad3b57401335ab4da12
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:378
+msgid "**Website:** http://en.wikipedia.org/wiki/GIS#Raster"
+msgstr "**Site web:** http://en.wikipedia.org/wiki/GIS#Raster"
+
+# 2ba4d78e0bd246c4a66f98b510b47349
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:380
+msgid ""
+"The QGIS User Guide also has more detailed information on working with "
+"raster data in QGIS."
+msgstr "Ghidul utilizatorului QGIS conține, de asemenea, informații detaliate cu privire la lucrul cu date raster în QGIS."
+
+# fe68349ec6864c2a91e76bd1da405cf4
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:384
+msgid "What's next?"
+msgstr "Ce urmează?"
+
+# f778602decd34c22a02659b0de9d4a81
+#: ../../source/docs/gentle_gis_introduction/raster_data.rst:386
+msgid ""
+"In the section that follows we will take a closer look at **topology** to "
+"see how the relationship between vector features can be used to ensure the "
+"best data quality."
+msgstr "În secțiunea care urmează, vom arunca o privire mai atentă la **topologie** pentru a afla despre modul în care pot fi folosite relațiile dintre funcțiile vectoriale, pentru a asigura cea mai înaltă calitate a datelor."

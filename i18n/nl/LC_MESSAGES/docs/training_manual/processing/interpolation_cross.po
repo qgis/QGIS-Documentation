@@ -1,0 +1,150 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-29 15:45+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:6
+msgid "More interpolation"
+msgstr "Meer interpolatie"
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:8
+msgid ""
+"This chapter shows another practical case where interpolation algorithms are"
+" used"
+msgstr "Dit hoofdstuk geeft een ander praktisch geval weer waar algoritmen voor interpolatie werden gebruikt"
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:10
+msgid ""
+"Interpolation is a common technique, and it can be used to demonstrate "
+"several techniques that can be applied using the QGIS processing framework. "
+"This lesson uses some interpolation algorithms that were already introduced,"
+" but has a different approach."
+msgstr "Interpolatie is een veel voorkomende techniek, en het kan worden gebruikt om verscheidene technieken te demonstreren die kunnen worden toegepast met behulp van het framework Processing van QGIS. Deze les gebruikt enkele algoritmen voor interpolatie dia al werden besproken, maar het heeft een andere benadering."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:12
+msgid ""
+"The data for this lesson contains also a points layer, in this case with "
+"elevation data. We are going to interpolate it much in the same way as we "
+"did in the previous lesson, but this time we will save part of the original "
+"data to use it for assessing the quality of the interpolation process."
+msgstr "De gegevens voor deze les bevat ook een puntenlaag, in dit geval met hoogtegegevens. We gaan het in grote mate op dezelfde manier interpoleren zoals we in de eerdere les deden, maar deze keer zullen we een deel van de originele gegevens opslaan om die te gebruiken om de kwaliteit van het proces van interpolatie te beoordelen."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:14
+msgid ""
+"First, we have to rasterize the points layer and fill the resulting no--data"
+" cells, but using just a fraction of the points in the layer. We will save "
+"10% of the points for a later check, so we need to have 90% of the points "
+"ready for the interpolation. To do so, we could use the *Split shapes layer "
+"randomly* algorithm, which we have already used in a previous lesson, but "
+"there is a better way to do that, without having to create any new "
+"intermediate layer. Instead of that, we can just select the points we want "
+"to use for the interpolation (the 90% fraction), and then run the algorithm."
+" As we have already seen, the rasterizing algorithm will use only those "
+"selected points and ignore the rest. The selection can be done using the "
+"*Random selection* algorithm. Run it with the following parameters."
+msgstr "We moeten eerst de puntenlaag rasterizeren en de resulterende cellen met Geen gegevens vullen, maar met behulp van slechts een fractie van de punten op de laag. We zullen 10% van de punten opslaan voor een latere controle, dus moeten we 90% van de punten klaarmaken voor de interpolatie. We zouden, om dat te doen, het algoritme *Split shapes layer randomly* kunnen gebruiken, wat we al in een eerdere les hebben gebruikt, maar er is een betere manier om het te doen, zonder dat we een nieuwe tussenliggende laag zouden moeten maken. In plaats daarvan hoeven we slechts de punten die we willen gebruiken voor de interpolatie te selecteren (het gedeelte van 90%), en dan het algoritme uit te voeren. Zoals we al hebben gezien zal het algoritme voor het rasterizeren alleen de geselecteerde punten gebruiken en de rest negeren. De selectie kan worden gedaan met het algoritme *Random selection*. Voer dat uit met de volgende parameters."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:18
+msgid "That will select 90% of the points in the layer to rasterize"
+msgstr "Dat zal 90% van de punten in de laag selecteren om te rasterizeren"
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:22
+msgid ""
+"The selection is random, so your selection might differ from the selection "
+"shown in the above image."
+msgstr "De selectie is willekeurig, dus zou uw selectie af kunnen wijken van de selectie die in bovenstaande afbeelding wordt weergegeven."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:24
+msgid ""
+"Now run the *Shapes to grid* to get the first raster layer, and then run the"
+" *Close gaps* algorithm to fill the no--data cells [Cell resolution: 100 m]."
+msgstr "Voer nu het algoritme *Shapes to grid* uit om de eerste rasterlaag te krijgen, en voer dan het algoritme *Close gaps* uit om de cellen met Geen gegevens te vullen [Cell resolution: 100 m]."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:28
+msgid ""
+"To check the quality of the interpolation, we can now use the points that "
+"are not selected. At this points, we know the real elevation (the value in "
+"the points layer) and the interpolated elevation (the value in the "
+"interpolated raster layer). We can compare the by computing the differences "
+"between those values."
+msgstr "We kunnen nu de punten gebruiken die niet zijn geselecteerd om de kwaliteit van de interpolatie te controleren. Op dit punt weten we de echte hoogte (de waarde in de puntenlaag) en de geïnterpoleerde hoogte (de waarde in de geïnterpoleerde rasterlaag). We kunnen die twee vergelijken door de verschillen tussen die waarden te berekenen."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:30
+msgid ""
+"Since we are going to use the points that are not selected, first, let's "
+"invert the selection."
+msgstr "Omdat we de punten gaan gebruiken die niet zijn geselecteerd, laten we dus eerst de selectie omdraaien."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:34
+msgid ""
+"The points contain the original values, but not the interpolated ones. To "
+"add them in a new field, we can use the *Add grid values to points* "
+"algorithm"
+msgstr "De punten bevatten de originele waarden, maar niet de geïnterpoleerde. We kunnen het algoritme *Add grid values to points* gebruiken om ze toe te voegen aan een nieuw veld,"
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:38
+msgid ""
+"The raster layer to select (the algorithm supports multiple raster, but we "
+"just need one) is the resulting one from the interpolation. We have renamed "
+"it to *interpolate* and that layer name is the one that will be used for the"
+" name of the field to add."
+msgstr "De rasterlaag om te selecteren (het algoritme ondersteunt meerdere rasters, maar we hebben er slechts één nodig) is de resulterende van de interpolatie. We hebben die hernoemd naar *interpolate* en die laagnaam is die welke zal worden gebruikt als naam voor het veld dat zal worden toegevoegd."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:40
+msgid ""
+"Now we have a vector layer that contains both values, with points that were "
+"not used for the interpolation."
+msgstr "Nu hebben we een vectorlaag die beide waarden bevat, met punten die niet werden gebruikt voor de interpolatie."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:44
+msgid ""
+"Now, we will use the fields calculator for this task. Open the *Field "
+"calculator* algorithm and run it with the following parameters."
+msgstr "Nu zullen we Veldcalculator gebruiken voor deze taak. Open het algoritme *Field calculator* en voer dat uit met de volgende parameters."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:48
+msgid ""
+"If your field with the values from the raster layer has a different name, "
+"you should modify the above formula accordingly. Running this algorithm, you"
+" will get a new layer with just the points that we haven't used for the "
+"interpolation, each of them containing the difference between the two "
+"elevation values."
+msgstr "Als uw veld met de waarden uit de rasterlaag een andere naam heeft, zou u de hierboven vermelde formule overeenkomstig moeten aanpassen. Door het uitvoeren van dit algoritme zult u een nieuwe laag verkrijgen met slechts de punten die we niet hebben gebruikt voor de interpolatie, waarvan elk het verschil bevat tussen de twee hoogtewaarden."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:50
+msgid ""
+"Representing that layer according to that value will give us a first idea of"
+" where the largest discrepancies are found."
+msgstr "Weergeven van die laag overeenkomstig die waarde zal ons een eerste idee geven over waar de grootste verschillen te vinden zullen zijn."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:54
+msgid ""
+"Interpolating that layer will get you a raster layer with the estimated "
+"error in all points of the interpolated area."
+msgstr "Interpoleren van die laag zal u een rasterlaag geven met de geschatte fout in alle punten van het geïnterpoleerde gebied."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:58
+msgid ""
+"You can also get the same information (difference between original point "
+"values and interpolated ones) directly with :menuselection:`GRASS --> "
+"v.sample`."
+msgstr "U kunt dezelfde informatie (verschil tussen originele puntwaarden en de geïnterpoleerde) ook direct krijgen met :menuselection:`GRASS --> v.sample`."
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:60
+msgid ""
+"Your results might differ from these ones, since there is a random component"
+" introduced when running the random selection, at the beginning of this "
+"lesson."
+msgstr "Uw resultaten zouden af kunnen wijken van deze, omdat er een willekeurige component werd geïntroduceerd bij het uitvoeren van de willekeurige selectie, aan het begin van deze les."

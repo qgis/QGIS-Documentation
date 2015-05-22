@@ -1,0 +1,156 @@
+# 
+# Translators:
+# Eduardo Gonzalez Latorre <eg@gismood.com>, 2014
+# elgina <elgina88@gmail.com>, 2014
+# Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-05 02:05+0000\n"
+"Last-Translator: Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:6
+msgid "|LS| Combining the Analyses"
+msgstr "|LS| Combinando los Análisis"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:8
+msgid ""
+"Using the vectorized results of the raster analysis will allow you to select"
+" only those buildings on suitable terrain."
+msgstr "Utilizar los resultados vectorizados del análisis ráster te permitirá seleccionar solo construcciones con terreno adecuado."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:11
+msgid ""
+"**The goal for this lesson:** To use the vectorized terrain results to "
+"select suitable plots."
+msgstr "**El objetivo de esta lección:** Utilizar los resultados de terreno vectorizado para seleccionar las parcelas adecuadas. "
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:15
+msgid "|moderate| |TY|"
+msgstr "|moderate| |TY|"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:17
+msgid "Save your current map (:kbd:`raster_analysis.qgs`)."
+msgstr "Guarda tu mapa actual (:kbd:`raster_analysis.qgs`)."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:18
+msgid ""
+"Open the map in which you created during the vector analysis earlier (you "
+"should have saved the file as :kbd:`analysis.qgs`)."
+msgstr "Abra o mapa em que você criou durante a análise vetor anterior (você deve ter salvo o arquivo como :kbd:`analysis.qgs`)."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:20
+msgid "In the :guilabel:`Layers list`, enable these layers:"
+msgstr "En la :guilabel:`Lista de capas`, habilita estas capas:"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:22
+msgid ":guilabel:`hillshade`,"
+msgstr ":guilabel:`hillshade`,"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:23
+msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
+msgstr ":guilabel:`solution` (o :guilabel:`buildings_over_100`)"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:25
+msgid ""
+"In addition to these layers, which should already be loaded in the map from "
+"when you worked on it before, also add the :kbd:`suitable_terrain.shp` "
+"dataset."
+msgstr "Además de esas capas, que deberían estar ya cargadas en el mapa de cuando trabajaste con ellas, añade el conjunto de datos :kbd:`suitable_terrain.shp`."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:28
+msgid ""
+"If you are missing some layers, you should find them in "
+":kbd:`exercise_data/residential_development/`"
+msgstr "Si te faltan algunas capas, deberías encontrarlas en :kbd:`exercise_data/residential_development/`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:30
+msgid ""
+"Use the :guilabel:`Intersect` tool (:guilabel:`Vector -> Geoprocessing "
+"Tools`) to create a new vector layer called :kbd:`new_solution.shp` which "
+"contains only those buildings which intersect the :kbd:`suitable_terrain` "
+"layer."
+msgstr "Utiliza la herramienta :guilabel:`Intersección` (:guilabel:`Vectorial -> Herramientas de geoproceso`) para crear una nueva capa vectorial llamada :kbd:`new_solution.shp` que contenga solo las construcciones que intersectan  a la capa :kbd:`suitable_terrain`."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:34
+msgid ""
+"You should now have a layer showing certain buildings as your solution, for "
+"example:"
+msgstr "Ahora deberías tener una capa mostrando ciertas construcciones como tu solución, por ejemplo:"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:40
+msgid ""
+"If you find that the :guilabel:`Intersect` tool does not produce any "
+"results, check the CRS settings of each of your layers. The CRS must be the "
+"same for both the layers you are comparing. You may need to reproject one "
+"layer by saving the layer as a new shapefile with the required CRS. In our "
+"example, the :kbd:`suitable_terrain` layer was reprojected to |localCRS| and"
+" named :kbd:`suitable_terrain_34S`."
+msgstr "Si encuentras que la herramienta :guilabel:`Intersección` no produce ningún resultado, comprueba los ajustes SRC de cada una de tus capas. El SRC debe ser el mismo para las capas que estás comparando. Puede que necesites reproyectar una capa guardando la capa como un nuevo archivo shape con el SRC requerido. En nuestro ejemplo, la capa :kbd:`suitable_terrain` se reproyectó a |localCRS| y se nombró :kbd:`suitable_terrain_34S`."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:51
+msgid "|moderate| |TY| Inspecting the Results"
+msgstr "|moderate| |TY| Inspeccionando los Resultados"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:53
+msgid ""
+"Look at each of the buildings in your :guilabel:`new_solution` layer. "
+"Compare them with the :guilabel:`suitable_terrain` layer by changing the "
+"symbology for the :guilabel:`new_solution` layer so that it has outlines "
+"only. What do you notice about some of the buildings? Are they all suitable "
+"just because they intersect with the :guilabel:`suitable_terrain` layer? Why"
+" or why not? Which ones would you deem to be unsuitable?"
+msgstr "Mira cada una de las construcciones en tu capa :guilabel:`new_solution`. Compáralos con la capa :guilabel:`suitable_terrain` cambiando la simbología para la capa :guilabel:`new_solution` para que solo tenga contornos. ¿Qué observas sobre algunas de las construcciones? ¿Son adecuadas solo porque intersectan con la capa :guilabel:`suitable_terrain`? ¿O por qué no? ¿Cuáles dirías que no son adecuadas?"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:60
+msgid ":ref:`Check your results <complete-analysis-2>`"
+msgstr ":ref:`Comprueba tus resultados <complete-analysis-2>`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:66
+msgid "|moderate| |TY| Refining the Analysis"
+msgstr "|moderate| |TY| Refina el Análisis"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:68
+msgid ""
+"You can see from the results that some buildings which were included were "
+"not really suitable, so we can now refine the analysis."
+msgstr "Puedes ver en los resultados que algunas construcciones que estaban incluidas no eran realmente adecuadas, así que ahora podemos refinar el análisis."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:71
+msgid ""
+"We want to ensure that our analysis returns only those buildings which fall "
+"entirely within the :kbd:`suitable_terrain` layer. How would you achieve "
+"this? Use one or more Vector Analysis tools and remember that our buildings "
+"are all over 100m squared in size."
+msgstr "Queremos asegurarnos que nuestro análisis muestra solo aquellas construcciones que están completamente dentro de la capa :kbd:`suitable_terrain`. ¿Cómo lo harías? Utiliza una o más herramientas de Análisis Vectorial y recuerda que nuestras construcciones tienen más de 100m cuadrados de tamaño."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:76
+msgid ":ref:`Check your results <complete-analysis-3>`"
+msgstr ":ref:`Comprueba tus resultados <complete-analysis-3>`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:79
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:81
+msgid ""
+"You have now answered the original research question, and can offer an "
+"opinion (with reasons, backed by analysis) for a recommendation regarding "
+"which property to develop."
+msgstr "Ahora has respondido a la pregunta original del estudio, y puedes ofrecer una opinión (con razonamientos respaldados en el análisis) para una recomendación respecto a que propiedad desarrollar."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:86
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:88
+msgid "Next you will present these results as part of your second assignment."
+msgstr "Lo siguiente será presentar esos resultados como parte de tu segundo ejercicio."

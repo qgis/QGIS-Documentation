@@ -1,0 +1,87 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-20 08:35+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/html.rst:6
+msgid "HTML outputs"
+msgstr "Sorties HTML"
+
+#: ../../source/docs/training_manual/processing/html.rst:9
+msgid ""
+"In this lesson we learn how QGIS handles outputs in HTML format, which are "
+"used to produce text outputs and graphs."
+msgstr "Dans cette leçon, nous apprenons comment QGIS gère les sorties en format HTML, qui sont utilisées pour produire des sorties texte et graphiques."
+
+#: ../../source/docs/training_manual/processing/html.rst:11
+msgid ""
+"All the outputs we have produced so far were layers (whether raster or "
+"vector). However, some algorithms generate outputs in the form of text and "
+"graphics. All this outputs are wrapped in HTML files and displayed in the so"
+"--called *Results viewer*, which is another element of the processing "
+"framework."
+msgstr "Toutes les sorties que nous avons produites jusqu'à maintenant étaient des couches (soit raster soit vecteur). Cependant, certains algorithmes génèrent des sorties sous forme de textes et de graphiques. Toutes ces sorties sont intégrées dans des fichiers HTML et affichées dans un *Affichage des résultats*, comme appelé, qui est un autre élément du module de traitement."
+
+#: ../../source/docs/training_manual/processing/html.rst:13
+msgid "Let's see one of those algorithms to understand how they work."
+msgstr "Voyons un de ces algorithmes pour comprendre comment ils fonctionnent."
+
+#: ../../source/docs/training_manual/processing/html.rst:15
+msgid ""
+"Open the project with the data to be used in this lesson and then open the "
+"*Basic statistics for numeric fields* algorithm."
+msgstr "Ouvrez le projet avec les données à utiliser dans cette leçon et ensuite ouvrez l'algorithme *Statistiques basiques pour champs numériques*."
+
+#: ../../source/docs/training_manual/processing/html.rst:19
+msgid ""
+"The algorithm is rather simple, and you just have to select the layer to use"
+" and one of its field (a numeric one). The output is of type HTML, but the "
+"corresponding box works exactly like the one that you can find in the case "
+"of a raster or vector output. You can enter a filepath or leave it blank to "
+"save to a temporary file. In this case, however, only the ``html`` and "
+"``htm`` extensions are allowed, so there is no way of altering the output "
+"format by using a different one."
+msgstr "L'algorithme est assez simple, et vous avez juste à sélectionner la couche à utiliser et un de ses champs (un numérique). La sortie est de type HTML, mais le champ correspondant fonctionne exactement comme celui que vous pouvez trouver dans le cas d'une sortie raster ou vecteur. Vous pouvez entrer un chemin de fichier ou le laisser blanc pour sauvegarder en tant que fichier temporaire. Dans ce cas, cependant, seul le ``html`` et les extensions ``html`` sont autorisés, il n'y a donc aucun moyen de modifier le format de sortie en utilisant un autre format."
+
+#: ../../source/docs/training_manual/processing/html.rst:21
+msgid ""
+"Run the algorithm selecting the only layer in the project as input, and the "
+"*POP2000* field, and a new dialog like the one shown next will appear once "
+"the algorithm is executed and the parameters dialog is closed."
+msgstr "Lancez l'algorithme en sélectionnant la seule couche dans le projet comme entrée, et le champ *POP2000*, et une nouvelle boîte de dialogue comme celle montrée après apparaîtra une fois l'algorithme exécuté et la boîte de dialogue des paramètres fermée."
+
+#: ../../source/docs/training_manual/processing/html.rst:25
+msgid ""
+"This is the *Results viewer*. It keeps all the HTML result generated during "
+"the current session, easily accessible, so you can check them quickly "
+"whenever you need it. As it happens with layers, if you have saved the "
+"output to a temporary file, it will be deleted once you close QGIS. If you "
+"have saved to a non-temporary path, the file will remain, but it will not "
+"appear in the *Results viewer* the next time you open QGIS."
+msgstr "Voici le *Visualiseur de résultats*. Il conserve tous les résultats HTML générés durant la session actuelle, et il est facilement accessible. Vous pouvez donc les vérifier rapidement chaque fois que vous en avez besoin. Comme pour les couches, si vous avez sauvegardé la sortie dans un fichier temporaire, il s'effacera une fois que vous fermerez QGIS. Si vous avez sauvegardé sous un chemin non temporaire, le fichier restera, mais il n'apparaîtra pas dans le *Visualiseur de résultats* la prochaine fois que vous ouvrirez QGIS."
+
+#: ../../source/docs/training_manual/processing/html.rst:27
+msgid ""
+"Some algorithms generate text that cannot be divided into other more "
+"detailed outputs. That is the case if, for instance, the algorithm captures "
+"the text output from an external process. In other cases, the output is "
+"presented as text, but internally is divided into several smaller outputs, "
+"usually in the form of numeric values. The algorithm that we have just "
+"executed is one of them. Each one of those values is handled as a single "
+"output, and stored in a variable. This has no importance at all now, but "
+"once we move to the graphical modeler, you will see that it will allow us to"
+" use those values as numeric inputs for other algorithms."
+msgstr "Certains algorithmes génèrent du texte qui ne peut pas être divisé en d'autres sorties plus détaillées. C'est le cas, par exemple, si l'algorithme saisit la sortie de texte à partir d'un processus externe. Dans d'autres cas, la sortie se présente sous forme de texte, mais est divisée à l'intérieur en plusieurs petites sorties, habituellement sous forme de valeurs numériques. L'algorithme que nous venons d'exécuter est l'un de ceux-ci. Chacune de ses valeurs est traitée comme une sortie unique, et stockée dans une variable. Cela n'a pas du tout d'importance pour l'instant, mais une fois que nous passerons au modeleur graphique, vous verrez que cela nous permet d'utiliser ces valeurs comme entrées numériques pour des autres algorithmes."

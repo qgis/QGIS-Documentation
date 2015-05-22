@@ -1,0 +1,132 @@
+# 
+# Translators:
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2015
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-01-12 23:29+0000\n"
+"Last-Translator: Minerva Durán Martínez <mine_tod@yahoo.com.mx>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/qgis-documentation/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:6
+msgid "First analysis example"
+msgstr "Primer ejemplo de análisis"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:9
+msgid ""
+"In this lesson we will perform some real analysis using just the toolbox, so"
+" you can get more familiar with the processing framework elements."
+msgstr "En esta lección vamos a realizar un análisis real utilizando sólo la caja de herramientas, para que pueda tener más familiaridad con los elementos del área de trabajo de procesamiento."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:11
+msgid ""
+"Now that everything is configured and we can use external algorithms, we "
+"have a very powerful tool to perform spatial analysis. It is time to work "
+"out a larger exercise with some real--world data."
+msgstr "Ahora que todo está configurado y podemos usar algoritmos externos, tenemos una herramienta muy poderosa para realizar análisis espacial. Es tiempo de trabajar un ejercicio más grande con algunos datos reales -del mundo."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:13
+msgid ""
+"We will be using the well-known dataset that John Snow used in his "
+"groundbreaking work, and we will get some interesting results. The analysis "
+"of this dataset is pretty obvious and there is no need for sofisticated GIS "
+"techniques to end up with good results and conclusions, but it is a good way"
+" of showing how these spatial problems can be analyzed and solved by using "
+"different processing tools."
+msgstr "Vamos a utilizar el conjunto de datos bien conocido que John Snow utilizó en su trabajo pionero, y obtendremos algunos resultados interesantes. El análisis de este conjunto de datos es bastante obvio y no hay necesidad de técnicas SIG sofisticadas para terminar con buenos resultados y conclusiones, pero es una buena manera de mostrar cómo estos problemas espaciales pueden ser analizados y resueltos mediante el uso de diferentes herramientas de procesamiento. "
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:15
+msgid ""
+"The dataset contains shapefiles with cholera deaths and pump locations, and "
+"an OSM rendered map in TIFF format. Open the corresponding QGIS project for "
+"this lesson."
+msgstr "El conjunto de datos contiene archivos shape con muertes por cólera y ubicaciones de bombas, y un mapa rendido OSM en formato TIFF. Abra el proyecto de QGIS correspondiente para esta lección."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:19
+msgid ""
+"The first thing to do is to calculting the Voronoi diagram (a.k.a. Thyessen "
+"polygons) of the pumps layer, to get the influence zone of each pump. The "
+"*Voronoi Diagram* algorithm can be used for that."
+msgstr "Lo primero que debe hacer es calcular el diagrama de Voronoi (a. k. a polígonos de Thyessen) de la capa de bombas, para obtener la zona de influencia de cada bomba. El algoritmo *Diagrama de Voronoi * se puede utilizar para eso."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:24
+msgid "Pretty easy, but it will already give us interesting information."
+msgstr "Bastante fácil, pero ya nos dará información interesante."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:28
+msgid "Clearly, most cases are within one of the polygons"
+msgstr "Claramente, muchos de los casos se encuentran dentro de uno de los polígonos"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:30
+msgid ""
+"To get a more quantitative result, we can count the number of deaths in each"
+" polygon. Since each point represents a building where deaths occured, and "
+"the number of deaths is stored in an attribute, we cannot just count the "
+"points. We need a weighted count, so we will use the *Count points in "
+"polygon (weighted)* tool."
+msgstr "Para obtener un resultado más cuantitativo, podemos contar el número de muertes en cada polígono. Dado que cada punto representa un edificio donde las muertes ocurrieron, y el número de muertes se almacena en un atributo, no podemos contar los puntos. Necesitamos un recuento ponderado, por lo que utilizaremos la herramienta *Contar puntos en polígono (ponderada)*."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:34
+msgid ""
+"The new field will be called *DEATHS*, and we use the *COUNT* field as "
+"weighting field. The resulting table clearly reflects that the number of "
+"deaths in the polygon corresponding to the first pump is much larger than "
+"the other ones."
+msgstr "El nuevo campo se llamará *DEATHS*, y usamos el campo *COUNT* como campo de ponderación. La tabla resultante refleja claramente que el número de muertes en el polígono correspondiente a la primera bomba es mucho más grande que los otros."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:38
+msgid ""
+"Another good way of visualizing the dependence of each point in the "
+"``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
+"line to the closest one. This can be done with the *Distance to closest hub*"
+" tool, and using the configuration shown next."
+msgstr "Otra buena forma de visualizar la dependencia de cada punto de la capa  ``Cholera_deaths`` con un punto en la capa  ``Pumps`` es dibujar una línea a la más cercana. Esto se puede hacer con la herramienta *Distancia al más cercano centro*, y el uso de la configuración que se muestra a continuación."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:42
+msgid "The result looks like this:"
+msgstr "El resultado se parece a esto:"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:46
+msgid ""
+"Although the number of lines is larger in the case of the central pump, do "
+"not forget that this does not represent the number of deaths, but the number"
+" of locations where cholera cases were found. It is a representative "
+"parameter, but it is not considering that some locations might have more "
+"cases than other."
+msgstr "Aunque el número de líneas es mayor en el caso de la bomba central, no se olvide de que esto no representa el número de muertes, pero el número de lugares donde se encontraron casos de cólera. Es un parámetro representativo, pero no está considerando que algunos lugares podrían tener más casos que otros."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:48
+msgid ""
+"A density layer will also give us a very clear view of what is happening. We"
+" can create it with the *Kernel density* algorithm. Using the "
+"*Cholera_deaths* layer, its *COUNT* field as weight field, with a radius of "
+"100, the extent and cellsize of the streets raster layer, we get something "
+"like this."
+msgstr "Una capa de densidad también nos dará una visión muy clara de lo que está sucediendo. Podemos crearlo con el algoritmo *Densidad de Kernel *. Usar la capa *Cholera_deaths*, su campo *COUNT * como campo de peso, con un radio de 100, la extensión y tamaño de celda de la capa ráster de calles, obtenemos algo como esto."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:52
+msgid ""
+"Remember that, to get the output extent, you do not have to type it. Click "
+"on the button on the right-hand side and select *Use layer/canvas extent*."
+msgstr "Recuerde que, para conseguir la extensión de salida, no tiene que escribirla. Haga clic en el botón en el lado derecho y seleccione *Uso capa/extensión del área del mapa*."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:56
+msgid ""
+"Select the streets raster layer and its extent will be automatically added "
+"to the text field. You must do the same with the cellsize, selecting the "
+"cellsize of that layer as well."
+msgstr "Seleccione la capa de calles ráster y su extensión automáticamente se añadirá al campo de texto. Debe hacer lo mismo con el tamaño de celda, seleccionando el tamaño de celda de esa capa también."
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:58
+msgid ""
+"Combining with the pumps layer, we see that there is one pump clearly in the"
+" hotspot where the maximum density of death cases is found."
+msgstr "La combinación con la capa de bombas, vemos que hay una bomba claramente en el punto de acceso donde se encuentra la máxima densidad de los casos de muerte."

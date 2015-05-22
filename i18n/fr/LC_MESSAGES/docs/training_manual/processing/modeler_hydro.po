@@ -1,0 +1,132 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+# Sant-anna <delazj@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-15 09:03+0000\n"
+"Last-Translator: MarieAude <marie-aude.aeby@camptocamp.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:6
+msgid "More complex models"
+msgstr "Des modèles plus complexes"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:8
+msgid ""
+"In this lesson we will work with a more complex model in the graphical "
+"modeler."
+msgstr "Dans cette leçon nous travaillerons avec un modèle plus complexe dans le modeleur graphique."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:10
+msgid ""
+"The first model that we created in the previous chapter was a very simple "
+"one, with just one input and 3 algorithms. More complex models can be "
+"created, with different types of inputs and containing more step. For this "
+"chapter we will work with a model that creates a vector layer with "
+"watersheds, based on a DEM and a threshold value. That will be very useful "
+"for calculating several vector layers corresponding to different thresholds,"
+" without having to repeat each single step each time."
+msgstr "Le premier modèle que nous avons créé dans le chapitre précédent était très simple, avec seulement une entrée et 3 algorithmes. Des modèles plus complexes peuvent être créés, avec différents types d'entrée et contenant plus d'étapes. Dans ce chapitre nous travaillerons avec un modèle qui crée une couche vectorielle avec des bassins versants basés sur un MNE et une valeur de seuil. Cela sera très utile pour calculer plusieurs couches vecteur correspondant à différents bassins versants, sans avoir à répéter chacune des étapes à chaque fois."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:12
+msgid ""
+"This lesson does not contain instructions about how to create you model. You"
+" already know the necessary steps (we saw them in a previous lesson) and you"
+" have already seen the basic ideas about the modeler, so you should try it "
+"yourself. Spend a few minutes trying to create your model, and don't worry "
+"about making mistakes. Remember: first add the inputs and then add the "
+"algorithms that use them to create the workflow."
+msgstr "Cette leçon ne contient pas d'instructions sur comment créer votre modèle. Vous connaissez déjà les étapes nécessaires (nous les avons vues dans une leçon précédente) et vous avez déjà vu les idées de base sur le modeleur, donc vous devrez essayer de le faire vous-même. Passez quelques minutes à essayer de créer votre modèle, et n'ayez crainte de faire des fautes. Souvenez-vous : premièrement, ajoutez les entrées et ensuite ajoutez les algorithmes qui les utilisent pour créer le flux de traitements."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:14
+msgid ""
+"In case you could not create the full model yourself and you need some extra"
+" help, the data folder corresponding to this lesson contains and 'almost' "
+"finished version of it. Open the modeler and then open the model file that "
+"you will find in the data folder. You should see something like this."
+msgstr "Dans le cas où vous ne pourriez pas créer l'entier du modèle vous-même et que vous avez besoin d'aide supplémentaire, le dossier de données correspondant à cette leçon contient la version 'presque' terminée de celui-ci. Ouvrez le modeleur et ensuite ouvrez le fichier modèle que vous trouverez dans le dossier de données. Vous devriez voir quelque chose comme cela."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:18
+msgid ""
+"This model contains all the steps needed to complete the calculation, but it"
+" just has one input: the DEM That means that the threshold for channel "
+"definition use a fixed value, which makes the model not as useful as it "
+"could be. That is not a problem, since we can edit the model, and that is "
+"exactly what we will do."
+msgstr "Ce modèle contient toutes les étapes nécessaires pour compléter le calcul, mais il a seulement une entrée : le MNE. Cela signifie que le seuil fr définition du canal utilise une valeur fixe, ce qui rend le modèle pas aussi utile qu'il aurait dû l'être. Ce n'est pas un problème, étant donné que nous pouvons modifier le problème, et c'est exactement ce que nous ferons."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:20
+msgid ""
+"First, let's add a numerical input. That will ask the user for a numerical "
+"input that we can use when such a value is needed in any of the algorithms "
+"included in our model. Click on the *Number* entry in the inputs tree, and "
+"you will see the corresponding dialog. Fill it with the values shown next."
+msgstr "Premièrement, ajoutons une entrée numérique. Cela demandera à l'utilisateur une entrée numérique que nous pouvons utiliser lorsqu'une telle valeur est nécessaire dans un des algorithmes inclus dans notre modèle. Cliquez sur l'entrée *Nombre* dans l'arbre de saisie, et vous verrez la boîte de dialogue correspondante. Remplissez-la avec les valeurs montrées ensuite."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:24
+msgid "Now your model should look like this."
+msgstr "Votre modèle devrait maintenant ressembler à cela."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:28
+msgid ""
+"The input that we have just added is not used, so the model hasn't actually "
+"changed. We have to link that input to the algorithm that uses it, in this "
+"case the *Channel network* one. To edit an algorithm that already exists in "
+"the modeler, just double click on its corresponding box in the canvas. If "
+"you click on the *Channel network* algorithm, you will see something like "
+"this."
+msgstr "L'entrée que nous venons juste d'ajouter n'est pas utilisée, donc le modèle n'a pas réellement changé. Nous devons lier cette entrée à l'algorithme qui l'utilise, dans ce cas, le *Réseau de canaux*. Pour modifier un algorithme qui existe déjà dans le modeleur, double-cliquez simplement sur sa boîte correspondante dans le canevas. Si vous cliquez sur l'algorithme *Réseau de canaux*, vous verrez quelque chose comme ça."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:32
+msgid ""
+"The dialog is filled with the current values used by the algorithm. You can "
+"see that the threshold parameter has a fixed value of 1,000,000 (this is "
+"also the default value of the algorithm, but any other value could be put in"
+" there). However, you might notice that the parameter is not entered in a "
+"common text box, but in an option menu. If you unfold it, you will see "
+"something like this."
+msgstr "La boîte de dialogue est remplie avec les valeurs actuelles utilisées par l'algorithme. Vous pouvez voir que le paramètre de seuil a une valeur fixe de 1,000,000 (c'est également la valeur par défaut de cet algorithme, mais toute autre valeur pourrait être mise ici). Cependant, vous remarquerez peut-être que le paramètre n'est pas entré dans une zone de texte commune, mais dans un menu d'options. Si vous le déroulez, vous verrez quelque chose comme ça."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:36
+msgid ""
+"The input that we added is there and we can select it. Whenever an algorithm"
+" in a model requires a numerical value, you can hardcode it and directly "
+"type it, or you can use any of the available inputs and values (remember "
+"that some algorithms generate sinlge numerical values. We will see more "
+"about this soon). In the case of a string parameter, you will also see "
+"string inputs and you will be able to select on of them or type the desired "
+"fixed value."
+msgstr "L'entrée que nous avons ajoutée se trouve ici et nous pouvons la sélectionner. Chaque fois qu'un algorithme dans un modèle requière une valeur numérique, vous pouvez la coder en dur et directement la taper, ou vous pouvez utiliser l'une des entrées et valeurs disponibles (souvenez-vous que certains algorithmes génèrent des valeurs numériques simples. Nous en verrons bientôt plus là-dessus). Dans le cas d'un paramètre de chaîne, vous verrez également des entrées de chaînes et vous pourrez en sélectionner une ou taper la valeur fixe souhaitée."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:38
+msgid ""
+"Select the *Threshold* input in the *Threshold* parameter and click on *OK* "
+"to apply the changes to your model. Now the design of the model should look "
+"like this."
+msgstr "Sélectionnez l'entrée *Seuil* dans le paramètre *Seuil* et cliquez sur *OK* pour appliquer les changements à votre modèle. La conception du modèle devrait maintenant ressembler à cela."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:42
+msgid ""
+"The model is now complete. Try to run it using the DEM that we have used in "
+"previous lessons, and with different threshold values. Here you have a "
+"sample of the result obtained for different values. You can compare with the"
+" result for the default value, which is the one we obtained in the "
+"hydrological analysis lesson."
+msgstr "Le modèle est maintenant complet. Essayer de le lancer en utilisant le MNE que nous avons utilisé dans les leçons précédentes, et avec différentes valeurs de seuil. Ici vous avez un échantillon des résultats obtenus pour différentes valeurs. Vous pouvez comparer avec le résultat pour la valeur par défaut, qui est celui que nous avons obtenu dans la leçon d'analyse hydrologique."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:46
+msgid "Threshold = 100,000"
+msgstr "Seuil = 100,000"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:50
+msgid "Threshold = 1,0000,000"
+msgstr "Seuil = 1,0000,000"

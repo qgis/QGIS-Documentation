@@ -1,0 +1,86 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-01-03 13:24+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/solar.rst:6
+msgid "Planning a solar farm"
+msgstr "Zonnepanelen plannen"
+
+#: ../../source/docs/training_manual/processing/solar.rst:8
+msgid ""
+"Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+msgstr "Module bijgedragen door Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+
+#: ../../source/docs/training_manual/processing/solar.rst:10
+msgid ""
+"This chapter shows how to use several criteria to locate the areas suitable "
+"for installing a photovoltaic power station"
+msgstr "Dit hoofdstuk toont hoe verscheidene criteria te gebruiken om de geschikte gebieden vast te stellen voor een fotovoltaïsche elektriciteitscentrale"
+
+#: ../../source/docs/training_manual/processing/solar.rst:12
+msgid "First of all, create an aspect map from DTM:"
+msgstr "Ten eerste, maak een kaart van het aspect vanuit DTM:"
+
+#: ../../source/docs/training_manual/processing/solar.rst:14
+msgid ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
+msgstr ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
+
+#: ../../source/docs/training_manual/processing/solar.rst:16
+msgid ""
+"In GRASS, aspect is calculated in degrees, counterclockwise starting from "
+"East. To extract only South facing slopes (270 degrees +- 45), we can "
+"reclassify it:"
+msgstr "In GRASS wordt aspect berekend in graden, tegen de wijzers van de klok beginnend vanuit het oosten. We kunnen het opnieuw classificeren om alleen hellingen uit te nemen die uitkijken op het zuiden (270 graden +- 45):"
+
+#: ../../source/docs/training_manual/processing/solar.rst:18
+msgid ":menuselection:`GRASS --> r.reclass`"
+msgstr ":menuselection:`GRASS --> r.reclass`"
+
+#: ../../source/docs/training_manual/processing/solar.rst:20
+msgid "with the following rules::"
+msgstr "met de volgende regels::"
+
+#: ../../source/docs/training_manual/processing/solar.rst:25
+msgid ""
+"You can use the text file ``reclass_south.txt`` provided. Note that with "
+"these simple text files we can create also very complex reclassifications."
+msgstr "U kunt het verschafte tekstbestand ``reclass_south.txt`` gebruiken. Onthoud dat we met deze eenvoduige tekstbestanden ook zeer complexe opnieuw uitgevoerde classificaties kunnen maken."
+
+#: ../../source/docs/training_manual/processing/solar.rst:27
+msgid ""
+"We want to build a large farm, so we select only large (> 100 ha) contiguous"
+" areas:"
+msgstr "We willen een grote centrale bouwen, dus selecteren we alleen grote (> 100 ha) aaneengesloten gebieden:"
+
+#: ../../source/docs/training_manual/processing/solar.rst:29
+msgid ":menuselection:`GRASS --> r.reclass.greater`"
+msgstr ":menuselection:`GRASS --> r.reclass.greater`"
+
+#: ../../source/docs/training_manual/processing/solar.rst:31
+msgid "Finally, we convert to a vector:"
+msgstr "Tenslotte converteren we naar een vector:"
+
+#: ../../source/docs/training_manual/processing/solar.rst:33
+msgid ""
+":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
+"yes]"
+msgstr ":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: yes]"
+
+#: ../../source/docs/training_manual/processing/solar.rst:35
+msgid ""
+"**Exercise for the reader**: repeat the analysis, replacing GRASS commands "
+"with analogous from other programs."
+msgstr "**Oefening voor de lezer**: herhaal de analyse, vervang de opdrachten voor GRASS door analoge voor andere programma's."

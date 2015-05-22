@@ -1,0 +1,1142 @@
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2014-12-06 08:21+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:9
+msgid "Using Vector Layers"
+msgstr "Utilizarea straturilor vectoriale"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:11
+msgid ""
+"This section summarizes various actions that can be done with vector layers."
+msgstr "Această secțiune rezumă diferitele acțiuni care pot fi efectuate asupra straturilor vectoriale."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:18
+msgid "Iterating over Vector Layer"
+msgstr "Iterații în straturile vectoriale"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:67
+msgid "Iterating over selected features"
+msgstr "Parcurgerea entităților selectate"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:82
+msgid ""
+"This will iterate over all the features in the layer, in case there is no "
+"selection, or over the selected features otherwise."
+msgstr "În acest mod se vor parcurge toate entitățile stratului, în cazul în care nu există o selecție, sau, în caz contrar, doar entitățile selectate."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:96
+msgid "Iterating over a subset of features"
+msgstr "Parcurgerea unui subset de entități"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:98
+msgid ""
+"If you want to iterate over a given subset of features in a layer, such as "
+"those within a given area, you have to add a :obj:`QgsFeatureRequest` object"
+" to the :func:`getFeatures()` call. Here's an example"
+msgstr "Dacă doriți să parcurgeți un anumit subset de entități dintr-un strat, cum ar fi cele dintr-o anumită zonă, trebuie să adăugați un obiect `QgsFeatureRequest` la apelul funcției `getFeatures()`. Iată un exemplu"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:109
+msgid ""
+"The request can be used to define the data retrieved for each feature, so "
+"the iterator returns all features, but return partial data for each of them."
+msgstr "Cererea poate fi utilizată pentru a defini datele cerute pentru fiecare entitate, astfel încât iteratorul să întoarcă toate caracteristicile, dar să returneze date parțiale pentru fiecare dintre ele."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:127
+msgid "Modifying Vector Layers"
+msgstr "Modificarea straturilor vectoriale"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:137
+msgid ""
+"By using any of following methods for vector layer editing, the changes are "
+"directly committed to the underlying data store (a file, database etc). In "
+"case you would like to do only temporary changes, skip to the next section "
+"that explains how to do :ref:`modifications with editing buffer <editing-"
+"buffer>`."
+msgstr "Utilizând oricare dintre următoarele metode de editare a straturilor vectoriale, schimbările sunt efectuate direct în depozitul de date (un fișier, o bază de date etc). În cazul în care doriți să faceți doar schimbări  temporare, treceți la secțiunea următoare, care explică modul de editare al unei memorii tampon <editing-buffer>`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:143
+msgid "Add Features"
+msgstr "Adăugarea entităților"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:159
+msgid "Delete Features"
+msgstr "Ștergerea entităților"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:169
+msgid "Modify Features"
+msgstr "Modificarea entităților"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:188
+msgid "Adding and Removing Fields"
+msgstr "Adăugarea și eliminarea câmpurilor"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:210
+msgid "Modifying Vector Layers with an Editing Buffer"
+msgstr "Modificarea straturi vectoriale prin editarea unui tampon de memorie"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:212
+msgid ""
+"When editing vectors within QGIS application, you have to first start "
+"editing mode for a particular layer, then do some modifications and finally "
+"commit (or rollback) the changes. All the changes you do are not written "
+"until you commit them --- they stay in layer's in-memory editing buffer. It "
+"is possible to use this functionality also programmatically --- it is just "
+"another method for vector layer editing that complements the direct usage of"
+" data providers. Use this option when providing some GUI tools for vector "
+"layer editing, since this will allow user to decide whether to "
+"commit/rollback and allows the usage of undo/redo. When committing changes, "
+"all changes from the editing buffer are saved to data provider."
+msgstr "Când editați vectori în aplicația QGIS, în primul rând, trebuie să comutați în modul de editare pentru stratul în care lucrați, apoi să efectuați modificări pe care, în cele din urmă, să le salvați (sau să le anulați). Modificările nu vor fi scrise până când nu sunt salvate --- ele rezidând în memorie, în tamponul de editare al stratului.  De asemenea, este posibilă utilizarea programatică a acestei funcționalități --- aceasta fiind doar o altă metodă pentru editarea straturilor vectoriale, care completează utilizarea directă a furnizorilor de date. Utilizați această opțiune atunci când furnizați unele instrumente GUI pentru editarea straturilor vectoriale, permițând utilizatorului să decidă dacă să salveze/anuleze, și punându-i la dispoziție facilitățile de undo/redo. Atunci când salvați modificările, acestea vor fi transferate din memoria tampon de editare în furnizorul de date."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:270
+msgid ""
+"To start editing mode, there is :func:`startEditing` method, to stop editing"
+" there are :func:`commitChanges` and :func:`rollback()` --- however normally"
+" you should not need these methods and leave this functionality to be "
+"triggered by the user."
+msgstr "Pentru a activa modul de editare, este disponibilă metoda :func:`startEditing`, pentru a opri editarea există :​​func:`commitChanges` și :func:`rollback ()` --- totuși, în mod normal, ar trebui să nu nevoie de aceste metode și să permiteți utilizatorului declanșarea acestor funcționalități."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:279
+msgid "Using Spatial Index"
+msgstr "Crearea unui index spațial"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:296
+msgid ""
+"Spatial indexes are not created by default for a QGIS vector layer, but you "
+"can create them easily. This is what you have to do."
+msgstr "Indicii spațiali nu sunt creați în mod implicit pentru un strat vectorial QGIS, dar îi puteți realiza cu ușurință. Iată ce trebuie să faceți."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:327
+msgid "Writing Vector Layers"
+msgstr "Scrierea straturilor vectoriale"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:329
+msgid ""
+"You can write vector layer files using :class:`QgsVectorFileWriter` class. "
+"It supports any other kind of vector file that OGR supports (shapefiles, "
+"GeoJSON, KML and others)."
+msgstr "Puteți scrie în fișierele conținând straturi vectoriale folosind clasa :class:`QgsVectorFileWriter`. Aceasta acceptă orice alt tip de fișier vector care suportă OGR (fișiere shape, GeoJSON, KML și altele)."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:333
+msgid "There are two possibilities how to export a vector layer:"
+msgstr "Există două posibilități de a exporta un strat vectorial:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:348
+msgid ""
+"The third parameter specifies output text encoding. Only some drivers need "
+"this for correct operation - shapefiles are one of those --- however in case"
+" you are not using international characters you do not have to care much "
+"about the encoding. The fourth parameter that we left as ``None`` may "
+"specify destination CRS --- if a valid instance of "
+":class:`QgsCoordinateReferenceSystem` is passed, the layer is transformed to"
+" that CRS."
+msgstr "Al treilea parametru se referă la codificarea textului de ieșire. Doar unele formate au nevoie de acest lucru pentru o funcționare corectă - fișierul shape fiind printre ele --- totuși, în cazul în care nu utilizați caractere internaționale nu trebuie să vă îngrijoreze codificarea. În al patrulea parametru, care acum are valoarea ``None``, se poate specifica destinația CRS --- dacă este trecută o instanță validă a :class:`QgsCoordinateReferenceSystem`, stratul este transformat pentru acel CRS."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:395
+msgid "Memory Provider"
+msgstr "Furnizorul de memorie"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:397
+msgid ""
+"Memory provider is intended to be used mainly by plugin or 3rd party app "
+"developers. It does not store data on disk, allowing developers to use it as"
+" a fast backend for some temporary layers."
+msgstr "Furnizorul de memorie este destinat, în principal, dezvoltatorilor de plugin-uri sau de aplicații terț3. El nu stochează date pe disc, permițând dezvoltatorilor să-l folosească ca pe un depozit rapid pentru straturi temporare."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:401
+msgid "The provider supports string, int and double fields."
+msgstr "Furnizorul suportă câmpuri de tip string, int sau double."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:403
+msgid ""
+"The memory provider also supports spatial indexing, which is enabled by "
+"calling the provider's :func:`createSpatialIndex` function. Once the spatial"
+" index is created you will be able to iterate over features within smaller "
+"regions faster (since it's not necessary to traverse all the features, only "
+"those in specified rectangle)."
+msgstr "Furnizorul de memorie suportă, de asemenea, indexarea spațială, care este activată prin apelarea furnizorului funcției :func:`createSpatialIndex`. O dată ce indexul spațial este creat, veți fi capabili de a parcurge mai rapid entitățile, în interiorul unor regiuni mai mici (din moment ce nu este necesar să traversați toate entitățile, ci doar pe cele din dreptunghiul specificat)."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:409
+msgid ""
+"A memory provider is created by passing ``\"memory\"`` as the provider "
+"string to the :class:`QgsVectorLayer` constructor."
+msgstr "Un furnizor de memorie este creat prin transmiterea ``\"memoriei\"`` ca șir furnizor către constructorul :class:`QgsVectorLayer`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:412
+msgid ""
+"The constructor also takes a URI defining the geometry type of the layer, "
+"one of: ``\"Point\"``, ``\"LineString\"``, ``\"Polygon\"``, "
+"``\"MultiPoint\"``, ``\"MultiLineString\"``, or ``\"MultiPolygon\"``."
+msgstr "Constructorul are, de asemenea, un URI care definește unul din următoarele tipuri de geometrie a stratului: ``\"Point\"``, ``\"LineString\"``, ``\"Polygon\"``, ``\"MultiPoint\"``, ``\"MultiLineString\"`` sau ``\"MultiPolygon\"``."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:416
+msgid ""
+"The URI can also specify the coordinate reference system, fields, and "
+"indexing of the memory provider in the URI. The syntax is:"
+msgstr "URI poate specifica, de asemenea, sistemul de coordonate de referință, câmpurile, precum și indexarea furnizorului de memorie. Sintaxa este:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:421
+msgid "crs=definition"
+msgstr "crs=definiție"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:420
+msgid ""
+"Specifies the coordinate reference system, where definition may be any of "
+"the forms accepted by :func:`QgsCoordinateReferenceSystem.createFromString`"
+msgstr "Specificați sistemul de referință de coordonate, unde definiția poate fi oricare din formele acceptate de: :func:`QgsCoordinateReferenceSystem.createFromString`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:424
+msgid "index=yes"
+msgstr "index=yes"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:424
+msgid "Specifies that the provider will use a spatial index"
+msgstr "Specificați dacă furnizorul va utiliza un index spațial."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:429
+msgid "field=name:type(length,precision)"
+msgstr "field=nume:tip(lungime,precizie)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:427
+msgid ""
+"Specifies an attribute of the layer.  The attribute has a name, and "
+"optionally a type (integer, double, or string), length, and precision. There"
+" may be multiple field definitions."
+msgstr "Specificați un atribut al stratului. Atributul are un nume și, opțional, un tip (integer, double sau string), lungime și precizie. Pot exista mai multe definiții de câmp."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:479
+msgid "Appearance (Symbology) of Vector Layers"
+msgstr "Aspectul (simbologia) straturilor vectoriale"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:481
+msgid ""
+"When a vector layer is being rendered, the appearance of the data is given "
+"by **renderer** and **symbols** associated with the layer.  Symbols are "
+"classes which take care of drawing of visual representation of features, "
+"while renderers determine what symbol will be used for a particular feature."
+msgstr "Când un strat vector este randat, aspectul datelor este dat de **render** și de **simbolurile** asociate stratului. Simbolurile sunt clase care au grijă de reprezentarea vizuală a tuturor entităților, în timp ce un render determină ce simbol va fi folosit doar pentru anumite entități."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:486
+msgid "The renderer for a given layer can obtained as shown below:"
+msgstr "Tipul de render pentru un strat oarecare poate fi obținut astfel:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:498
+msgid "There are several known renderer types available in QGIS core library:"
+msgstr "Există mai multe tipuri de rendere disponibile în biblioteca de bază a QGIS:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:501
+msgid "Type"
+msgstr "Tipul"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:501
+msgid "Class"
+msgstr "Clasa"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:501
+msgid "Description"
+msgstr "Descrierea"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:503
+msgid "singleSymbol"
+msgstr "singleSymbol"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:503
+msgid ":class:`QgsSingleSymbolRendererV2`"
+msgstr ":class:`QgsSingleSymbolRendererV2`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:503
+msgid "Renders all features with the same symbol"
+msgstr "Asociază tuturor entităților același simbol"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:504
+msgid "categorizedSymbol"
+msgstr "categorizedSymbol"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:504
+msgid ":class:`QgsCategorizedSymbolRendererV2`"
+msgstr ":class:`QgsCategorizedSymbolRendererV2`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:504
+msgid "Renders features using a different symbol for each category"
+msgstr "Asociază entităților un simbol diferit, în funcție de categorie"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:505
+msgid "graduatedSymbol"
+msgstr "graduatedSymbol"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:505
+msgid ":class:`QgsGraduatedSymbolRendererV2`"
+msgstr ":class:`QgsGraduatedSymbolRendererV2`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:505
+msgid "Renders features using a different symbol for each range of values"
+msgstr "Asociază fiecărei entități un simbol diferit pentru fiecare gamă de valori"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:508
+msgid ""
+"There might be also some custom renderer types, so never make an assumption "
+"there are just these types. You can query :class:`QgsRendererV2Registry` "
+"singleton to find out currently available renderers."
+msgstr "Ar mai putea exista, de asemenea, unele tipuri de randare personalizate, așa că să nu presupuneți că există numai aceste tipuri. Puteți interoga singelton-ul :class:`QgsRendererV2Registry` pentru a afla tipurile de randare disponibile în prezent."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:524
+msgid ""
+"You can get the symbol used for rendering by calling :func:`symbol` method "
+"and change it with :func:`setSymbol` method (note for C++ devs: the renderer"
+" takes ownership of the symbol.)"
+msgstr "Puteți obține simbolul folosit pentru randare apelând metoda :func:`simbol`, și-l puteți schimba cu ajutorul metodei :func:`setSymbol` (notă pentru dezvoltatorii C++: renderul devine proprietarul simbolului.)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:533
+msgid ""
+"You can query and set attribute name which is used for classification: use "
+":func:`classAttribute` and :func:`setClassAttribute` methods."
+msgstr "Puteți interoga și seta numele atributului care este folosit pentru clasificare: folosiți metodele :func:`classAttribute` și :func:`setClassAttribute`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:543
+msgid ""
+"Where :func:`value` is the value used for discrimination between categories,"
+" :func:`label` is a text used for category description and :func:`symbol` "
+"method returns assigned symbol."
+msgstr "În cazul în care :func:`value` reprezintă valoarea utilizată pentru discriminare între categorii, :func:`label` este un text utilizat pentru descrierea categorie iar metoda :func:`symbol` returnează simbolul asignat."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:547
+msgid ""
+"The renderer usually stores also original symbol and color ramp which were "
+"used for the classification: :func:`sourceColorRamp` and "
+":func:`sourceSymbol` methods."
+msgstr "Renderul, de obicei, stochează atât simbolul original cât și gamele de culoare care au fost utilizate pentru clasificare: metodele :func:`sourceColorRamp` și :func:`sourceSymbol`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:555
+msgid ""
+"This renderer is very similar to the categorized symbol renderer described "
+"above, but instead of one attribute value per class it works with ranges of "
+"values and thus can be used only with numerical attributes."
+msgstr "Acest render este foarte similar cu renderul cu simbol clasificat, descris mai sus, dar în loc de o singură valoare de atribut per clasă el lucrează cu intervale de valori, putând fi, astfel, utilizat doar cu atribute numerice."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:571
+msgid ""
+"you can again use :func:`classAttribute` to find out classification "
+"attribute name, :func:`sourceSymbol` and :func:`sourceColorRamp` methods.  "
+"Additionally there is :func:`mode` method which determines how the ranges "
+"were created: using equal intervals, quantiles or some other method."
+msgstr "puteți folosi din nou :func:`classAttribute` pentru a afla numele atributului de clasificare, metodele :func:`sourceSymbol` și :func:`sourceColorRamp`. În plus, există metoda :func:`mode` care determină modul în care au fost create gamele: folosind intervale egale, cuantile sau o altă metodă."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:622
+msgid ""
+"For representation of symbols, there is :class:`QgsSymbolV2` base class with"
+" three derived classes:"
+msgstr "Pentru reprezentarea simbolurilor există clasa de bază :class:`QgsSymbolV2`, având trei clase derivate:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:629
+msgid ""
+"**Every symbol consists of one or more symbol layers** (classes derived from"
+" :class:`QgsSymbolLayerV2`). The symbol layers do the actual rendering, the "
+"symbol class itself serves only as a container for the symbol layers."
+msgstr "**Fiecare simbol este format din unul sau mai multe straturi** (clase derivate din :class:`QgsSymbolLayerV2`). Straturile simbolului realizează în mod curent randarea, clasa simbolului servind doar ca un container pentru acestea."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:644
+msgid ""
+"To find out symbol's color use :func:`color` method and :func:`setColor` to "
+"change its color. With marker symbols additionally you can query for the "
+"symbol size and rotation with :func:`size` and :func:`angle` methods, for "
+"line symbols there is :func:`width` method returning line width."
+msgstr "Pentru a afla culoarea simbolului folosiți metoda :func:`color`, iar pentru a schimba culoarea :func:`setColor`. În cazul simbolurilor marker, în plus, puteți interoga pentru dimensiunea simbolului și unghiul de rotație cu metodele :func:`size` și :func:`angle`, iar pentru simbolurile linie există metoda :func:`width` care returnează lățimea liniei."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:649
+msgid "Size and width are in millimeters by default, angles are in degrees."
+msgstr "Dimensiunea și lățimea sunt în milimetri, în mod implicit, iar unghiurile sunt în grade."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:656
+msgid ""
+"As said before, symbol layers (subclasses of :class:`QgsSymbolLayerV2`) "
+"determine the appearance of the features.  There are several basic symbol "
+"layer classes for general use. It is possible to implement new symbol layer "
+"types and thus arbitrarily customize how features will be rendered. The "
+":func:`layerType` method uniquely identifies the symbol layer class --- the "
+"basic and default ones are SimpleMarker, SimpleLine and SimpleFill symbol "
+"layers types."
+msgstr "Așa cum s-a arătat mai înainte, straturile simbolului (subclase ale :class:`QgsSymbolLayerV2`), determină aspectul entităților. Există mai multe clase de strat simbol de bază, pentru uzul general. Este posibilă implementarea unor noi tipuri de strat simbol și, astfel, personalizarea în mod arbitrar a modului în care vor fi randate entitățile. Metoda :func:`layerType` identifică în mod unic clasa stratului simbol --- tipurile de straturi simbol de bază și implicite sunt  SimpleMarker, SimpleLine și SimpleFill."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:684
+msgid ""
+":class:`QgsSymbolLayerV2Registry` class manages a database of all available "
+"symbol layer types."
+msgstr "clasa :class:`QgsSymbolLayerV2Registry` gestionează o bază de date a tuturor tipurilor de straturi simbol disponibile."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:687
+msgid ""
+"To access symbol layer data, use its :func:`properties` method that returns "
+"a key-value dictionary of properties which determine the appearance. Each "
+"symbol layer type has a specific set of properties that it uses. "
+"Additionally, there are generic methods :func:`color`, :func:`size`, "
+":func:`angle`, :func:`width` with their setter counterparts. Of course size "
+"and angle is available only for marker symbol layers and width for line "
+"symbol layers."
+msgstr "Pentru a accesa datele stratului simbol, folosiți metoda :func:`properties` care returnează un dicționar cu valori-cheie ale proprietăților care îi determină aparența. Fiecare tip de strat simbol are un set specific de proprietăți pe care le utilizează. În plus, există metodele generice :func:`color`, :func:`size`, :func:`angle`, :func:`width` împreună cu cu omologii lor de setare. Desigur, mărimea și unghiul sunt disponibile doar pentru straturi simbol de tip marcer iar lățimea pentru straturi simbol de tip linie."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:736
+msgid ""
+"The :func:`layerType` method determines the name of the symbol layer, it has"
+" to be unique among all symbol layers. Properties are used for persistence "
+"of attributes. :func:`clone` method must return a copy of the symbol layer "
+"with all attributes being exactly the same. Finally there are rendering "
+"methods: :func:`startRender` is called before rendering first feature, "
+":func:`stopRender` when rendering is done. And :func:`renderPoint` method "
+"which does the rendering. The coordinates of the point(s) are already "
+"transformed to the output coordinates."
+msgstr "Metoda :func:`layerType` determină numele stratului simbol, acesta trebuind să fie unic printre toate straturile simbol. Proprietățile sunt utilizate pentru persistența atributelor. \nMetoda :func:`clone` trebuie să returneze o copie a stratului simbol, având toate atributele exact la fel. În cele din urmă, mai există metodele de randare: :func:`startRender` care este apelată înainte de randarea primei entități, și :func:`stopRender` care oprește randarea. Efectiv, randarea are loc cu ajutorul metodei :func:`renderPoint`. Coordonatele punctului(punctelor) sunt deja transformate la coordonatele de ieșire."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:745
+msgid ""
+"For polylines and polygons the only difference would be in the rendering "
+"method: you would use :func:`renderPolyline` which receives a list of lines,"
+" resp. :func:`renderPolygon` which receives list of points on outer ring as "
+"a first parameter and a list of inner rings (or None) as a second parameter."
+msgstr "Pentru polilinii și poligoane singura diferență constă în metoda de randare: ar trebui să utilizați :func:`renderPolyline` care primește o listă de linii, respectiv :func:`renderPolygon` care primește lista de puncte de pe inelul exterior ca prim parametru și o listă de inele interioare (sau nici unul), ca al doilea parametru."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:786
+msgid ""
+"This widget can be embedded into the symbol properties dialog. When the "
+"symbol layer type is selected in symbol properties dialog, it creates an "
+"instance of the symbol layer and an instance of the symbol layer widget. "
+"Then it calls :func:`setSymbolLayer` method to assign the symbol layer to "
+"the widget. In that method the widget should update the UI to reflect the "
+"attributes of the symbol layer. :func:`symbolLayer` function is used to "
+"retrieve the symbol layer again by the properties dialog to use it for the "
+"symbol."
+msgstr "Acest widget poate fi integrat în fereastra de proprietăți a simbolului. În cazul în care tipul de strat simbol este selectat în fereastra de proprietăți a simbolului, se creează o instanță a stratului simbol și o instanță a widget-ului stratului simbol. Apoi, se apelează metoda :func:`setSymbolLayer` pentru a aloca stratul simbol widget-ului. În acea metodă, widget-ul ar trebui să actualizeze UI pentru a reflecta atributele stratului simbol. Funcția :func:`symbolLayer` este utilizată la preluarea stratului simbol din fereastra de proprietăți, în scopul folosirii sale pentru simbol."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:794
+msgid ""
+"On every change of attributes, the widget should emit :func:`changed()` "
+"signal to let the properties dialog update the symbol preview."
+msgstr "La fiecare schimbare de atribute, widget-ul ar trebui să emită semnalul :func:`changed()` pentru a permite ferestrei de proprietăți să-și actualizeze previzualizarea simbolului."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:797
+msgid ""
+"Now we are missing only the final glue: to make QGIS aware of these new "
+"classes. This is done by adding the symbol layer to registry. It is possible"
+" to use the symbol layer also without adding it to the registry, but some "
+"functionality will not work: e.g. loading of project files with the custom "
+"symbol layers or inability to edit the layer's attributes in GUI."
+msgstr "Acum mai lipsește doar liantul final: pentru a face QGIS conștient de aceste noi clase. Acest lucru se face prin adăugarea stratului simbol la registru. Este posibilă utilizarea stratului simbol, de asemenea, fără a-l adăuga la registru, dar unele funcționalități nu vor fi disponibile: de exemplu, încărcarea de fișiere de proiect cu straturi simbol personalizate sau incapacitatea de a edita atributele stratului în GUI."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:821
+msgid ""
+"You should pass layer type (the same as returned by the layer) and symbol "
+"type (marker/line/fill) to the constructor of parent class. "
+":func:`createSymbolLayer` takes care of creating an instance of symbol layer"
+" with attributes specified in the `props` dictionary. (Beware, the keys are "
+"QString instances, not \"str\" objects). And there is "
+":func:`createSymbolLayerWidget` method which returns settings widget for "
+"this symbol layer type."
+msgstr "Ar trebui să transmiteți tipul stratului (cel returnat de către strat) și tipul de simbol (marker/linie/umplere) către constructorul clasei părinte. :func:`createSymbolLayer` are grijă de a crea o instanță de strat simbol cu ​​atributele specificate în dicționarul `props`. (Atenție, tastele reprezintă instanțe QString, nu obiecte \"str\"). Există, de asemenea, metoda :func:`createSymbolLayerWidget` care returnează setările widget-ului pentru acest tip de strat simbol."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:828
+msgid ""
+"The last step is to add this symbol layer to the registry --- and we are "
+"done."
+msgstr "Ultimul pas este de a adăuga acest strat simbol la registru --- și am încheiat."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:836
+msgid ""
+"It might be useful to create a new renderer implementation if you would like"
+" to customize the rules how to select symbols for rendering of features. "
+"Some use cases where you would want to do it: symbol is determined from a "
+"combination of fields, size of symbols changes depending on current scale "
+"etc."
+msgstr "Ar putea fi utilă crearea unei noi implementări de render, dacă doriți să personalizați regulile de selectare a simbolurilor pentru randarea entităților. Unele cazuri de utilizare: simbolul să fie determinat de o combinație de câmpuri, dimensiunea simbolurilor să depindă în funcție de scara curentă, etc"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:870
+msgid ""
+"The constructor of parent :class:`QgsFeatureRendererV2` class needs renderer"
+" name (has to be unique among renderers). :func:`symbolForFeature` method is"
+" the one that decides what symbol will be used for a particular feature. "
+":func:`startRender` and :func:`stopRender` take care of "
+"initialization/finalization of symbol rendering. :func:`usedAttributes` "
+"method can return a list of field names that renderer expects to be present."
+" Finally :func:`clone` function should return a copy of the renderer."
+msgstr "Constructorul clasei părinte :class:`QgsFeatureRendererV2` are nevoie de numele renderului (trebuie să fie unic printre rendere). Metoda :func:`symbolForFeature` este cea care decide ce simbol va fi folosit pentru o anumită entitate. :func:`startRender` și :func:`stopRender` vor avea grijă de inițializarea/finalizarea randării simbolului. Metoda :func:`usedAttributes` poate returna o listă de nume de câmpuri a căror prezență o așteaptă renderul. În cele din urmă :func:`clone` ar trebui să returneze o copie a renderului."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:909
+msgid ""
+"The constructor receives instances of the active layer "
+"(:class:`QgsVectorLayer`), the global style (:class:`QgsStyleV2`) and "
+"current renderer. If there is no renderer or the renderer has different "
+"type, it will be replaced with our new renderer, otherwise we will use the "
+"current renderer (which has already the type we need). The widget contents "
+"should be updated to show current state of the renderer. When the renderer "
+"dialog is accepted, widget's :func:`renderer` method is called to get the "
+"current renderer --- it will be assigned to the layer."
+msgstr "Constructorul primește instanțe ale stratului activ (:class:`QgsVectorLayer`), stilul global (:class:`QgsStyleV2`) și renderul curent. Dacă nu există un render sau renderul are alt tip, acesta va fi înlocuit cu noul nostru render, în caz contrar vom folosi renderul curent (care are deja tipul de care avem nevoie). Conținutul widget-ului ar trebui să fie actualizat pentru a arăta starea actuală a renderului. Când dialogul renderului este acceptat, metoda :func:`renderer` a widgetului este apelată pentru a obține renderul curent --- acesta fiind atribuit stratului."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:936
+msgid ""
+"Similarly as with symbol layers, abstract metadata constructor awaits "
+"renderer name, name visible for users and optionally name of renderer's "
+"icon. :func:`createRenderer` method passes :class:`QDomElement` instance "
+"that can be used to restore renderer's state from DOM tree. "
+":func:`createRendererWidget` method creates the configuration widget. It "
+"does not have to be present or can return `None` if the renderer does not "
+"come with GUI."
+msgstr "În mod similar cu straturile simbol, constructorul de metadate abstracte așteaptă numele renderului, nume vizibil pentru utilizatori și numele opțional al pictogramei renderului. Metoda :func:`createRenderer` transmite instanța :class:`QDomElement` care poate fi folosită pentru a restabili starea renderului din arborele DOM. Metoda :func:`createRendererWidget` creează widget-ul de configurare. Aceasta nu trebuie să fie prezent sau ar putea returna `None`, dacă renderul nu vine cu GUI-ul. "
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:955
+msgid ""
+"The icon can be associated also at any later time using :func:`setIcon` "
+"method of the metadata class. The icon can be loaded from a file (as shown "
+"above) or can be loaded from a `Qt resource "
+"<http://qt.nokia.com/doc/4.5/resources.html>`_ (PyQt4 includes .qrc compiler"
+" for Python)."
+msgstr "Pictograma poate fi asociată ulterior, de asemenea, în orice moment, folosind metoda :func:`setIcon` a clasei de metadate. Pictograma poate fi încărcată dintr-un fișier (așa cum s-a arătat mai sus), sau dintr-o `resursă Qt <http://qt.nokia.com/doc/4.5/resources.html>`_ (PyQt4 include compilatorul .qrc pentru Python)."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:969
+msgid "**TODO:**"
+msgstr "**DE EFECTUAT:**"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:14
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:122
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:324
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:476
+msgid "vector layers"
+msgstr "straturi vectoriale"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:14
+msgid "iterating"
+msgstr "iterarea"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:14
+msgid "features"
+msgstr "entități"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:122
+msgid "editing"
+msgstr "editare"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:276
+msgid "spatial index"
+msgstr "index spatial"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:276
+msgid "using"
+msgstr "folosind"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:324
+msgid "writing"
+msgstr "scris"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:392
+msgid "memory provider"
+msgstr "furnizor de memorie"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:476
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:519
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:528
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:550
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:971
+msgid "symbology"
+msgstr "simbologie"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:519
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:519
+msgid "single symbol renderer"
+msgstr "render cu un singur simbol "
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:528
+msgid "categorized symbology renderer"
+msgstr "render cu simbologie clasificată"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:528
+msgid "categorized symbol renderer"
+msgstr "render cu simbol clasificat"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:550
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:550
+msgid "graduated symbol renderer"
+msgstr "render cu simbol gradual"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:617
+msgid "symbols"
+msgstr "simboluri"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:617
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:651
+msgid "working with"
+msgstr "lucrul cu"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:651
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:694
+msgid "symbol layers"
+msgstr "straturile simbolului"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:694
+msgid "creating custom types"
+msgstr "crearea tipurilor personalizate"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:830
+msgid "custom"
+msgstr "personalizat"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:830
+msgid "renderers"
+msgstr "rendere"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:971
+msgid "old"
+msgstr "vechi"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:20
+msgid ""
+"Iterating over the features in a vector layer is one of the most common "
+"tasks. Below is an example of the simple basic code to perform this task and"
+" showing some information about each feature. the ``layer`` variable is "
+"assumed to have a :class:`QgsVectorLayer` object"
+msgstr "Parcurgerea elementelor dintr-un strat vectorial este una dintre cele mai obișnuite activități. Mai jos este prezentat un exemplu de cod de bază, simplu, pentru a efectua această sarcină și care arată unele informații despre fiecare entitate spațială. Variabila ``layer`` se consideră a conține un obiect :class:`QgsVectorLayer`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:57
+msgid "Attributes can be referred by index."
+msgstr "Atributele pot fi referite după index."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:69
+msgid "Convenience methods."
+msgstr "Metode facile."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:71
+msgid ""
+"For the above cases, and in case you need to consider selection in a vector "
+"layer in case it exist, you can use the :func:`features` method from the "
+"built-in Processing plugin, as follows:"
+msgstr "Pentru cazurile de mai sus, și atunci când trebuie să luați în considerare eventuala selecție dintr-un strat vectorial, puteți utiliza metoda :func:`features` din plugin-ul intern Processing, după cum urmează:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:85
+msgid ""
+"if you only need selected features, you can use the :func: "
+"`selectedFeatures` method from vector layer:"
+msgstr "dacă aveți nevoie doar de caracteristicile selectate, puteți utiliza metoda :func:`selectedFeatures` a stratului vectorial:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:129
+msgid ""
+"Most vector data providers support editing of layer data. Sometimes they "
+"support just a subset of possible editing actions. Use the "
+":func:`capabilities` function to find out what set of functionality is "
+"supported"
+msgstr "Cei mai mulți dintre furnizorii de date vectoriale suportă editarea datelor stratului. Uneori, aceștia acceptă doar un subset restrâns de acțiuni de editare. Utilizați funcția :func:`capabilities` pentru a afla care set de funcții este disponibil"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:145
+msgid ""
+"Create some :class:`QgsFeature` instances and pass a list of them to "
+"provider's :func:`addFeatures` method. It will return two values: result "
+"(true/false) and list of added features (their ID is set by the data store)"
+msgstr "Creați câteva instanțe ale clasei :class:`QgsFeature` și transmiteți o listă a acestora metodei furnizorului :func:`addFeatures`. Acesta va returna două valori: rezultatul (true/false) și lista entităților adăugate (ID-ul lor fiind stabilit de către depozitul de date)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:161
+msgid "To delete some features, just provide a list of their feature IDs"
+msgstr "Pentru a șterge unele entități, e suficientă furnizarea unei liste cu ID-uri"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:171
+msgid ""
+"It is possible to either change feature's geometry or to change some "
+"attributes. The following example first changes values of attributes with "
+"index 0 and 1, then it changes the feature's geometry"
+msgstr "Este posibilă, fie schimbarea geometriei unei entități, fie schimbarea unor atribute. În următorul exemplu are loc mai întâi schimbarea valorilor atributelor cu indexul 0 sau 1, iar mai apoi se schimbă geometria entității"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:190
+msgid ""
+"To add fields (attributes), you need to specify a list of field definitions."
+" For deletion of fields just provide a list of field indexes."
+msgstr "Pentru a adăuga câmpuri (atribute), trebuie să specificați o listă de definiții pentru acestea. Pentru ștergerea de câmpuri e suficientă furnizarea unei liste de indecși pentru câmpuri."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:201
+msgid ""
+"After adding or removing fields in the data provider the layer's fields need"
+" to be updated because the changes are not automatically propagated. ::"
+msgstr "După adăugarea sau eliminarea câmpurilor din furnizorul de date câmpurile stratului trebuie să fie actualizate, deoarece schimbările nu se propagă în mod automat. ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:223
+msgid ""
+"To find out whether a layer is in editing mode, use :func:`isEditing` --- "
+"the editing functions work only when the editing mode is turned on. Usage of"
+" editing functions"
+msgstr "Pentru a afla dacă un strat se află în modul de editare, utilizați :func:`isEditing` --- funcțiile de editare funcționînd numai atunci când modul de editare este activat. Utilizarea funcțiilor de editare"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:244
+msgid ""
+"In order to make undo/redo work properly, the above mentioned calls have to "
+"be wrapped into undo commands. (If you do not care about undo/redo and want "
+"to have the changes stored immediately, then you will have easier work by "
+":ref:`editing with data provider <editing>`.) How to use the undo "
+"functionality"
+msgstr "Pentru ca undo/redo să funcționeze în mod corespunzător, apelurile de mai sus trebuie să fie înglobate în comenzi undo. (Dacă nu vă pasă de undo/redo și doriți să stocați imediat modificările, atunci veți avea o sarcină mai ușoară prin :ref: `folosirea <editorului> furnizorului de date`.) Cum să utilizați funcționalitatea undo"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:263
+msgid ""
+"The :func:`beginEditCommand` will create an internal \"active\" command and "
+"will record subsequent changes in vector layer. With the call to "
+":func:`endEditCommand` the command is pushed onto the undo stack and the "
+"user will be able to undo/redo it from GUI. In case something went wrong "
+"while doing the changes, the :func:`destroyEditCommand` method will remove "
+"the command and rollback all changes done while this command was active."
+msgstr ":func:`beginEndCommand` va crea o comandă internă \"activă\" și va înregistra modificările ulterioare din stratul vectorial. Cu apelul către :func:`endEditCommand` comanda este împinsă pe stiva undo, iar utilizatorul va putea efectua undo/redo prin GUI. În cazul în care ceva nu a mers bine pe timpul efectuării schimbărilor, metoda :func:`destroyEditCommand` va elimina comanda și va da înapoi toate modificările făcute pe perioada când această comandă a fost activă."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:281
+msgid ""
+"Spatial indexes can dramatically improve the performance of your code if you"
+" need to do frequent queries to a vector layer. Imagine, for instance, that "
+"you are writing an interpolation algorithm, and that for a given location "
+"you need to know the 10 closest points from a points layer, in order to use "
+"those point for calculating the interpolated value. Without a spatial index,"
+" the only way for QGIS to find those 10 points is to compute the distance "
+"from each and every point to the specified location and then compare those "
+"distances. This can be a very time consuming task, especially if it needs to"
+" be repeated for several locations. If a spatial index exists for the layer,"
+" the operation is much more effective."
+msgstr "Indecșii spațiali pot îmbunătăți dramatic performanța codului dvs, în cazul în care este nevoie să interogați frecvent un strat vectorial. Imaginați-vă, de exemplu, că scrieți un algoritm de interpolare, și că, pentru o anumită locație, trebuie să aflați cele mai apropiate 10 puncte dintr-un strat, în scopul utilizării acelor puncte în calculul valorii interpolate. Fără un index spațial, singura modalitate pentru QGIS de a găsi cele 10 puncte, este de a calcula distanța tuturor punctelor față de locația specificată și apoi de a compara aceste distanțe. Această sarcină poate fi mare consumatoare de timp, mai ales în cazul în care trebuie să fie repetată pentru mai multe locații. Dacă pentru stratul respectiv există un index spațial, operațiunea va fi mult mai eficientă."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:292
+msgid ""
+"Think of a layer without a spatial index as a telephone book in which "
+"telephone numbers are not ordered or indexed. The only way to find the "
+"telephone number of a given person is to read from the beginning until you "
+"find it."
+msgstr "Gândiți-vă la un strat fără index spațial ca la o carte de telefon în care numerele de telefon nu sunt ordonate sau indexate. Singura modalitate de a afla numărul de telefon al unei anumite persoane este de a citi toate numerele, începând cu primul, până când îl găsiți."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:299
+msgid "create spatial index --- the following code creates an empty index"
+msgstr "creare index spațial --- următorul cod creează un index vid"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:305
+msgid ""
+"add features to index --- index takes :class:`QgsFeature` object and adds it"
+" to the internal data structure. You can create the object manually or use "
+"one from previous call to provider's :func:`nextFeature()`"
+msgstr "adăugare entități la index --- indexul ia obiectul :class:`QgsFeature` și-l adaugă la structura internă de date. Puteți crea obiectul manual sau puteți folosi unul dintre apelurile anterioare către funcția :func:`nextFeature()` a furnizorului"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:313
+msgid "once spatial index is filled with some values, you can do some queries"
+msgstr "o dată ce ați introdus valori în indexul spațial, puteți efectua unele interogări"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:335
+msgid "from an instance of :class:`QgsVectorLayer`"
+msgstr "dintr-o instanță a :class:`QgsVectorLayer`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:355
+msgid ""
+"For valid driver names please consult the `supported formats by OGR`_ --- "
+"you should pass the value in the \"Code\" column as the driver name. "
+"Optionally you can set whether to export only selected features, pass "
+"further driver-specific options for creation or tell the writer not to "
+"create attributes --- look into the documentation for full syntax."
+msgstr "Pentru denumirile valide ale driver-elor, vă rugăm să consultați `formatele suportate de OGR`_ --- ar trebui să treceți valoarea în coloana \"Code\", ca și nume de driver. Opțional, puteți stabili dacă se exportă numai entitățile selectate, transmițând opțiunile specifice driver-ului pentru creare sau indicând generatorului să nu creeze atribute --- analizați documentația pentru sintaxa completă."
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:361
+msgid "directly from features"
+msgstr "direct din entități"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:431
+msgid "The following example of a URI incorporates all these options"
+msgstr "Următorul exemplu de URI încorporează toate aceste opțiuni"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:437
+msgid ""
+"The following example code illustrates creating and populating a memory "
+"provider"
+msgstr "Următorul exemplu de cod ilustrează crearea și popularea unui furnizor de memorie"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:460
+msgid "Finally, let's check whether everything went well"
+msgstr "În cele din urmă, să verificăm dacă totul a mers bine"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:492
+msgid "And with that reference, let us explore it a bit"
+msgstr "Și cu acea referință, să explorăm un pic"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:512
+msgid ""
+"It is possible to obtain a dump of a renderer contents in text form --- can "
+"be useful for debugging"
+msgstr "Este posibilă obținerea conținutului renderului sub formă de text --- lucru util pentru depanare"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:522
+msgid "Single Symbol Renderer"
+msgstr "Render cu Simbol Unic"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:531
+msgid "Categorized Symbol Renderer"
+msgstr "Render cu Simboluri Categorisite"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:536
+msgid "To get a list of categories"
+msgstr "Pentru a obține o listă de categorii"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:553
+msgid "Graduated Symbol Renderer"
+msgstr "Render cu Simboluri Graduale"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:559
+msgid "To find out more about ranges used in the renderer"
+msgstr "Pentru a afla mai multe despre gamele utilizate în render"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:576
+msgid ""
+"If you wish to create your own graduated symbol renderer you can do so as "
+"illustrated in the example snippet below (which creates a simple two class "
+"arrangement)"
+msgstr "Dacă doriți să creați propriul render cu simbol gradual, puteți face acest lucru așa cum este ilustrat în fragmentul de mai jos (care creează un simplu aranjament cu două clase)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:620
+msgid "Working with Symbols"
+msgstr "Lucrul cu Simboluri"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:625
+msgid ":class:`QgsMarkerSymbolV2` --- for point features"
+msgstr ":class:`QgsMarkerSymbolV2` --- pentru entități de tip punct"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:626
+msgid ":class:`QgsLineSymbolV2` --- for line features"
+msgstr ":class:`QgsLineSymbolV2` --- pentru entități de tip linie"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:627
+msgid ":class:`QgsFillSymbolV2` --- for polygon features"
+msgstr ":class:`QgsFillSymbolV2` --- pentru entități de tip poligon"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:633
+msgid ""
+"Having an instance of a symbol (e.g. from a renderer), it is possible to "
+"explore it: :func:`type` method says whether it is a marker, line or fill "
+"symbol. There is a :func:`dump` method which returns a brief description of "
+"the symbol. To get a list of symbol layers"
+msgstr "Având o instanță a unui simbol (de exemplu, de la un render), este posibil să o explorăm: metoda :func:`type` spunându-ne dacă acesta este un marker, o linie sau un simbol de umplere. Există și metoda :func:`dump` care returnează o scurtă descriere a simbolului. Pentru a obține o listă a straturilor simbolului"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:654
+msgid "Working with Symbol Layers"
+msgstr "Lucrul cu Straturile Simbolului"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:663
+msgid ""
+"You can get a complete list of the types of symbol layers you can create for"
+" a given symbol layer class like this"
+msgstr "Puteți obține, în modul următor, o listă completă a tipurilor de straturi pe care le puteți crea pentru o anumită clasă de simboluri"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:674
+msgid "Output"
+msgstr "Rezultat"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:697
+msgid "Creating Custom Symbol Layer Types"
+msgstr "Crearea unor Tipuri Personalizate de Straturi pentru Simboluri"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:699
+msgid ""
+"Imagine you would like to customize the way how the data gets rendered. You "
+"can create your own symbol layer class that will draw the features exactly "
+"as you wish. Here is an example of a marker that draws red circles with "
+"specified radius"
+msgstr "Imaginați-vă că ați dori să personalizați modul în care se randează datele. Vă puteți crea propria dvs. clasă de strat de simbol, care va desena entitățile exact așa cum doriți. Iată un exemplu de marker care desenează cercuri roșii cu o rază specificată"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:750
+msgid ""
+"Usually it is convenient to add a GUI for setting attributes of the symbol "
+"layer type to allow users to customize the appearance: in case of our "
+"example above we can let user set circle radius. The following code "
+"implements such widget"
+msgstr "De obicei, este convenabilă adăugarea unui GUI pentru setarea atributelor tipului de strat pentru simboluri, pentru a permite utilizatorilor să personalizeze aspectul: în exemplul de mai sus, putem lăsa utilizatorul să seteze raza cercului. Codul de mai jos implementează un astfel de widget"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:803
+msgid "We will have to create metadata for the symbol layer"
+msgstr "Va trebui să creăm metadate pentru stratul simbolului"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:834
+msgid "Creating Custom Renderers"
+msgstr "Crearea \\renderelor Personalizate"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:841
+msgid ""
+"The following code shows a simple custom renderer that creates two marker "
+"symbols and chooses randomly one of them for every feature"
+msgstr "Urmatorul cod prezintă o simplă randare personalizată, care creează două simboluri de tip marker și apoi alege aleatoriu unul dintre ele pentru fiecare entitate"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:878
+msgid ""
+"Like with symbol layers, it is possible to attach a GUI for configuration of"
+" the renderer. It has to be derived from :class:`QgsRendererV2Widget`. The "
+"following sample code creates a button that allows user to set symbol of the"
+" first symbol"
+msgstr "Ca și în cazul straturilor simbol, este posibilă atașarea unui GUI pentru configurarea renderului. Acesta trebuie să fie derivat din :class:`QgsRendererV2Widget`. Următorul exemplu de cod creează un buton care permite utilizatorului setarea primului simbol"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:918
+msgid ""
+"The last missing bit is the renderer metadata and registration in registry, "
+"otherwise loading of layers with the renderer will not work and user will "
+"not be able to select it from the list of renderers. Let us finish our "
+"RandomRenderer example"
+msgstr "Ultimul bit lipsă este cel al metadatelor renderului și înregistrarea în registru, altfel încărcarea straturilor cu renderul nu va funcționa, iar utilizatorul nu va fi capabil să-l selecteze din lista de rendere. Să finalizăm exemplul nostru de RandomRenderer"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:943
+msgid ""
+"To associate an icon with the renderer you can assign it in "
+":class:`QgsRendererV2AbstractMetadata` constructor as a third (optional) "
+"argument --- the base class constructor in the RandomRendererMetadata "
+":func:`__init__` function becomes"
+msgstr "Pentru a asocia o pictogramă renderului ați putea să o asignați în constructorul :class:`QgsRendererV2AbstractMetadata` ca un al treilea argument (opțional) --- constructorul clasei de bază din funcția :func:`__init__` a RandomRendererMetadata devine"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:961
+msgid "Further Topics"
+msgstr "Lecturi suplimentare"
+
+#: ../../source/docs/pyqgis_developer_cookbook/vector.rst:965
+msgid ""
+"creating/modifying symbols working with style (:class:`QgsStyleV2`) working "
+"with color ramps (:class:`QgsVectorColorRampV2`) rule-based renderer (see "
+"`this blogpost <http://snorf.net/blog/2014/03/04/symbology-of-vector-layers-"
+"in-qgis-python-plugins>`_) exploring symbol layer and renderer registries"
+msgstr "crearea/modificarea simbolurilor, modificarea stilului (:class:`QgsStyleV2`), modificarea gamelor de culori (:class:`QgsVectorColorRampV2`), rendere bazate pe reguli (citiți `această postare pe blog <http://snorf.net/blog/2014/03/04/symbology-of-vector-layers-in-qgis-python-plugins>`_), explorarea straturilor unui simbol și a regiștrilor renderelor"
+
+#~ msgid ""
+#~ "Iterating over the features in a vector layer is one of the most common "
+#~ "tasks. Below is an example of the simple basic code to perform this task and"
+#~ " showing some information about each feature. the ``layer`` variable is "
+#~ "assumed to have a QgsVectorLayer object"
+#~ msgstr ""
+
+#~ msgid "Attributes can be refered by name or by index."
+#~ msgstr ""
+
+#~ msgid "This code"
+#~ msgstr ""
+
+#~ msgid "Has the same effect as this one:"
+#~ msgstr ""
+
+#~ msgid "Convenience methods"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For the above cases, and in case you need to consider selection in a vector "
+#~ "layer in case it exist, you can use the :func:`getfeatures` method from the "
+#~ "buil-in processing plugin, as follows:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Most vector data providers support editing of layer data. Sometimes they "
+#~ "support just a subset of possible editing actions. Use the "
+#~ ":func:`capabilities` function to find out what set of functionality is "
+#~ "supported::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create some :class:`QgsFeature` instances and pass a list of them to "
+#~ "provider's :func:`addFeatures` method. It will return two values: result "
+#~ "(true/false) and list of added features (their ID is set by the data "
+#~ "store)::"
+#~ msgstr ""
+
+#~ msgid "To delete some features, just provide a list of their feature IDs::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is possible to either change feature's geometry or to change some "
+#~ "attributes. The following example first changes values of attributes with "
+#~ "index 0 and 1, then it changes the feature's geometry::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To add fields (attributes), you need to specify a list of field defnitions. "
+#~ "For deletion of fields just provide a list of field indexes. ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To find out whether a layer is in editing mode, use :func:`isEditing` --- "
+#~ "the editing functions work only when the editing mode is turned on. Usage of"
+#~ " editing functions::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order to make undo/redo work properly, the above mentioned calls have to "
+#~ "be wrapped into undo commands. (If you do not care about undo/redo and want "
+#~ "to have the changes stored immediately, then you will have easier work by "
+#~ ":ref:`editing with data provider <editing>`.) How to use the undo "
+#~ "functionality ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :func:`beginEndCommand` will create an internal \"active\" command and "
+#~ "will record subsequent changes in vector layer. With the call to "
+#~ ":func:`endEditCommand` the command is pushed onto the undo stack and the "
+#~ "user will be able to undo/redo it from GUI. In case something went wrong "
+#~ "while doing the changes, the :func:`destroyEditCommand` method will remove "
+#~ "the command and rollback all changes done while this command was active."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Spatial indexes can dramatically improve the performance of your code if you"
+#~ " need to do frequent queries to a vector layer. Imagin, for instance, that "
+#~ "you are writing an interpolation algorithm, and that for a given location "
+#~ "you need to know the 10 closest point from a points layer,, in order to use "
+#~ "those point for calculating the interpolated value. Without a spatial index,"
+#~ " the only way for QGIS to find those 10 points is to compute the distance "
+#~ "from each and every point to the specified location and then compare those "
+#~ "distances. This can be a very time consuming task, specilly if it needs to "
+#~ "be repeated fro several locations. If a spatial index exists for the layer, "
+#~ "the operation is much more effective."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Think of a layer withou a spatial index as a telephone book in which "
+#~ "telephone number are not orderer or indexed. The only way to find the "
+#~ "telephone number of a given person is to read from the beginning until you "
+#~ "find it."
+#~ msgstr ""
+
+#~ msgid "create spatial index --- the following code creates an empty index::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "add features to index --- index takes :class:`QgsFeature` object and adds it"
+#~ " to the internal data structure. You can create the object manually or use "
+#~ "one from previous call to provider's :func:`nextFeature()` ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "once spatial index is filled with some values, you can do some queries::"
+#~ msgstr ""
+
+#~ msgid "from an instance of :class:`QgsVectorLayer`::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For valid driver names please consult the `supported formats by OGR`_ --- "
+#~ "you should pass the value in `the \"Code\" column as the driver name. "
+#~ "Optionally you can set whether to export only selected features, pass "
+#~ "further driver-specific options for creation or tell the writer not to "
+#~ "create attributes --- look into the documentation for full syntax."
+#~ msgstr ""
+
+#~ msgid "directly from features::"
+#~ msgstr ""
+
+#~ msgid "The following example of a URI incorporates all these options::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following example code illustrates creating and populating a memory "
+#~ "provider::"
+#~ msgstr ""
+
+#~ msgid "Finally, let's check whether everything went well::"
+#~ msgstr ""
+
+#~ msgid "And with that reference, let us explore it a bit::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is possible to obtain a dump of a renderer contents in text form --- can "
+#~ "be useful for debugging::"
+#~ msgstr ""
+
+#~ msgid "To get a list of categories::"
+#~ msgstr ""
+
+#~ msgid "To find out more about ranges used in the renderer::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you wish to create your own graduated symbol renderer you can do so as "
+#~ "illustrated in the example snippet below (which creates a simple two class "
+#~ "arrangement)::"
+#~ msgstr ""
+
+#~ msgid ":class:`QgsMarkerSymbolV2` - for point features"
+#~ msgstr ""
+
+#~ msgid ":class:`QgsLineSymbolV2` - for line features"
+#~ msgstr ""
+
+#~ msgid ":class:`QgsFillSymbolV2` - for polygon features"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Having an instance of a symbol (e.g. from a renderer), it is possible to "
+#~ "explore it: :func:`type` method says whether it is a marker, line or fill "
+#~ "symbol. There is a :func:`dump` method which returns a brief description of "
+#~ "the symbol. To get a list of symbol layers::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can get a complete list of the types of symbol layers you can create for"
+#~ " a given symbol layer class like this::"
+#~ msgstr ""
+
+#~ msgid "Output::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Imagine you would like to customize the way how the data gets rendered. You "
+#~ "can create your own symbol layer class that will draw the features exactly "
+#~ "as you wish. Here is an example of a marker that draws red circles with "
+#~ "specified radius::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Usually it is convenient to add a GUI for setting attributes of the symbol "
+#~ "layer type to allow users to customize the appearance: in case of our "
+#~ "example above we can let user set circle radius. The following code "
+#~ "implements such widget::"
+#~ msgstr ""
+
+#~ msgid "We will have to create metadata for the symbol layer::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following code shows a simple custom renderer that creates two marker "
+#~ "symbols and chooses randomly one of them for every feature::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Like with symbol layers, it is possible to attach a GUI for configuration of"
+#~ " the renderer. It has to be derived from :class:`QgsRendererV2Widget`. The "
+#~ "following sample code creates a button that allows user to set symbol of the"
+#~ " first symbol::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The last missing bit is the renderer metadata and registration in registry, "
+#~ "otherwise loading of layers with the renderer will not work and user will "
+#~ "not be able to select it from the list of renderers. Let us finish our "
+#~ "RandomRenderer example::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To associate an icon with the renderer you can assign it in "
+#~ ":class:`QgsRendererV2AbstractMetadata` constructor as a third (optional) "
+#~ "argument --- the base class constructor in the RandomRendererMetadata "
+#~ ":func:`__init__` function becomes::"
+#~ msgstr ""
+
+#~ msgid "creating/modifying symbols"
+#~ msgstr ""
+
+#~ msgid "working with style (:class:`QgsStyleV2`)"
+#~ msgstr ""
+
+#~ msgid "working with color ramps (:class:`QgsVectorColorRampV2`)"
+#~ msgstr ""
+
+#~ msgid "rule-based renderer"
+#~ msgstr ""
+
+#~ msgid "exploring symbol layer and renderer registries"
+#~ msgstr ""

@@ -1,0 +1,143 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# MarieSilvestre <marie.silvestre@gmail.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-02 08:54+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:6
+msgid "D8 Extreme Upslope Value"
+msgstr "Valeur extrême de pente positive D8"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:11
+msgid ""
+"Evaluates the extreme (either maximum or minimum) upslope value from an "
+"input grid based on the D8 flow model. This is intended initially for use in"
+" stream raster generation to identify a threshold of the slope times area "
+"product that results in an optimum (according to drop analysis) stream "
+"network."
+msgstr "Évalue la valeur extrême (maximale ou minimale) de pente positive à partir d'une grille d'entrée basée sur le modèle de flux D8. Ceci est initialement prévu pour être utilisé à la génération d'un raster de flux pour identifier un seuil du produit de la zone de temps de pente qui aboutit à un réseau de flux optimum (selon l'analyse de diminution)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:16
+msgid ""
+"If the optional outlet point shapefile is used, only the outlet cells and "
+"the cells upslope (by the D8 flow model) of them are in the domain to be "
+"evaluated."
+msgstr "Si le shapefile optionnel en point d'exutoire est utilisé, seules les cellules d'exutoires et les cellules de pente positive (par le modèle de flux D8) de ceux-ci sont dans le domaine qui doit être évalué."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:19
+msgid ""
+"By default, the tool checks for edge contamination. This is defined as the "
+"possibility that a result may be underestimated due to grid cells outside of"
+" the domain not being counted. This occurs when drainage is inwards from the"
+" boundaries or areas with \"no data\" values for elevation. The algorithm "
+"recognizes this and reports \"no data\" for the result for these grid cells."
+" It is common to see streaks of \"no data\" values extending inwards from "
+"boundaries along flow paths that enter the domain at a boundary. This is the"
+" desired effect and indicates that the result for these grid cells is "
+"unknown due to it being dependent on terrain outside of the domain of data "
+"available. Edge contamination checking may be turned off in cases where you "
+"know this is not an issue or want to ignore these problems, if for example, "
+"the DEM has been clipped along a watershed outline."
+msgstr "Par défaut, l'outil vérifie la contamination des arcs. Il s'agit de la possibilité qu'une valeur de surface contributive soit sous-estimée à cause de la non-prise en compte des cellules en dehors du domaine. Cela se produit lorsque le drainage est à l'intérieur des limites ou avec des surfaces avec des valeurs vides d'élévation. L'algorithme reconnaît ce phénomène et renvoie les valeurs vides pour la surface contributive. Il est courant de constater des trainées des données vides à l'intérieur des limites le long des chemins de flux qui entre dans le domaine au niveau d'une limite. C'est l'effet désiré et cela indique que la surface contributive de ces cellules est inconnue car elle est dépendante du terrain qui se situe en dehors du domaine de travail. La vérification de la contamination des arcs peut être désactivée lorsque vous savez qu'il ne s'agit pas d'un problème ou que vous voulez ignorer ces problèmes, par exemple, si le MEN a été découpé le long d'une limite de bassin versant."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:32
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:38
+msgid "``D8 Flow Directions Grid`` [raster]"
+msgstr "``Grille de Direction de Flux`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:35
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr "Une grille de directions de flux D8 définies pour chaque cellule comme la direction d'une de ses 8 voisins adjacents ou ses voisins diagonaux avec une pente descendante la plus raide. Cette grille peut être obtenue depuis la sortie de l'outil **\"Directions de flux D8\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:43
+msgid "``Upslope Values Grid`` [raster]"
+msgstr "``Grille de valeur de pente positive`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:41
+msgid ""
+"This is the grid of values of which the maximum or minimum upslope value is "
+"selected. The values most commonly used are the slope times area product "
+"needed when generating stream rasters according to drop analysis."
+msgstr "Il s'agit de la grille de valeur où la valeur maximale ou minimale de la pente ascendante est sélectionnée. Les valeurs les plus courramment utilisées sont les produits des aires temporelles des pentes dont on a besoin pour générer les rasters de ruisseaux selon l'analyse de la pente."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:49
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Fichier Shape des exutoires`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:46
+msgid "Optional."
+msgstr "En option."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:48
+msgid ""
+"A point shape file defining outlets of interest. If this input file is used,"
+" only the area upslope of these outlets will be evaluated by the tool."
+msgstr "Un fichier Shape de points définissant les exutoires d'intérêt. Si le fichier en entrée est utilisé, seules les cellules de pente ascendante de ces exutoires seront évaluées par l'outil."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:54
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Vérifier la contamination des arcs`` [booléen]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:52
+msgid ""
+"A flag that indicates whether the tool should check for edge contamination."
+msgstr "Un drapeau indiquant si l'outil doit vérifier la contamination des arcs."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:54
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:60
+msgid "Default: *True*"
+msgstr "Par défaut : *Vrai*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:60
+msgid "``Use max upslope value`` [boolean]"
+msgstr "``Utiliser la valeur de seuil supérieur maximale`` [booléen]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:57
+msgid ""
+"A flag to indicate whether the maximum or minimum upslope value is to be "
+"calculated."
+msgstr "Un drapeau pour indiquer si la valeur de seuil supérieur minimale ou maximale doit être calculée."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:63
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:66
+msgid "``Extereme Upslope Values Grid`` [raster]"
+msgstr "``Grille de valeurs extrèmes de pente positive`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:66
+msgid "A grid of the maximum/minimum upslope values."
+msgstr "Une grille avec les valeurs maximales/minimales de pente."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:69
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:76
+msgid "See also"
+msgstr "Voir également"

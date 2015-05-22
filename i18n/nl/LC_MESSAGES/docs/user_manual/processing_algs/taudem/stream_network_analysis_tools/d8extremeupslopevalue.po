@@ -1,0 +1,141 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-14 17:08+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:6
+msgid "D8 Extreme Upslope Value"
+msgstr "D8 extreme opwaartse waarde"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:11
+msgid ""
+"Evaluates the extreme (either maximum or minimum) upslope value from an "
+"input grid based on the D8 flow model. This is intended initially for use in"
+" stream raster generation to identify a threshold of the slope times area "
+"product that results in an optimum (according to drop analysis) stream "
+"network."
+msgstr "Evalueert de extreme (maximum of minimum) opwaartse waarde van een invoerraster, gebaseerd op het D8 stroommodel. Dit is initieel bedoeld voor gebruik in het generen van stroomrasters om een drempel te identificeren van het product helling maal gebied dat resulteert in een optimaal (overeenkomstig de analyse van het verval) stroomnetwerk."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:16
+msgid ""
+"If the optional outlet point shapefile is used, only the outlet cells and "
+"the cells upslope (by the D8 flow model) of them are in the domain to be "
+"evaluated."
+msgstr "Als het optionele shapefile voor afvoerpunten wordt gebruikt, worden alleen de cellen voor afvoer en de hoger gelegen cellen (volgens het D8 stroommodel) die binnen het domein liggen geëvalueerd."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:19
+msgid ""
+"By default, the tool checks for edge contamination. This is defined as the "
+"possibility that a result may be underestimated due to grid cells outside of"
+" the domain not being counted. This occurs when drainage is inwards from the"
+" boundaries or areas with \"no data\" values for elevation. The algorithm "
+"recognizes this and reports \"no data\" for the result for these grid cells."
+" It is common to see streaks of \"no data\" values extending inwards from "
+"boundaries along flow paths that enter the domain at a boundary. This is the"
+" desired effect and indicates that the result for these grid cells is "
+"unknown due to it being dependent on terrain outside of the domain of data "
+"available. Edge contamination checking may be turned off in cases where you "
+"know this is not an issue or want to ignore these problems, if for example, "
+"the DEM has been clipped along a watershed outline."
+msgstr "Standaard controleert het gereedschap op besmetting van randen. Dit wordt gedefinieerd als de mogelijkheid dat een waarde van een deelnemend gebied ondergewaardeerd kan zijn wegens het feit dat rastercellen buiten het domein niet worden meegeteld. Dit komt voor als de drainage inwaarts gericht is van de grenzen van het gebied met waarden  \"Geen gegevens\" voor hoogte. Het algoritme herkent dit en rapporteert \"Geen gegevens\" voor deze cellen van het raster. Het is normaal om stroken met waarden \"Geen gegevens\"  te zien die zich inwaarts uitstrekken vanaf grenzen langs stroompaden die het domein binnenkomen bij een grens. Dit is het gewenste effect en geeft aan dat het deelnemende gebied voor deze cellen van het raster onbekend zijn wegens het feit dat het afhankelijk is van terrein buiten het domein voor beschikbare gegevens. Controle van besmetting van randen kan worden uitgeschakeld in die gevallen waarvan u weet dat het geen probleem is of als u deze problemen wilt negeren, als bijvoorbeeld de DEM werd geclipt langs de omtrek van een waterberging."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:32
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:38
+msgid "``D8 Flow Directions Grid`` [raster]"
+msgstr "``D8 raster stroomrichtingen`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:35
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr "Een raster van D8 stroomrichtingen die zijn gedefinieerd, voor elke cel, al de richting van die van één van zijn acht aangelegen of diagonale buren met de steilste neerwaartse helling. Dit raster kan worden verkregen als de uitvoer van het gereedschap **\"D8 Stroomrichtingen\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:43
+msgid "``Upslope Values Grid`` [raster]"
+msgstr "``Raster opwaartse waarden`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:41
+msgid ""
+"This is the grid of values of which the maximum or minimum upslope value is "
+"selected. The values most commonly used are the slope times area product "
+"needed when generating stream rasters according to drop analysis."
+msgstr "Dit is het raster met waarden waarvan de maximum of minimum opwaartse waarde is geselecteerd. De meest algemeen gebruikte waarden zijn het product helling maal gebied, nodig bij het genereren van stroomrasters overeenkomstig de analyse van het verval."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:49
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Afvoeren-shapefile`` [vector: punt]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:46
+msgid "Optional."
+msgstr "Optioneel."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:48
+msgid ""
+"A point shape file defining outlets of interest. If this input file is used,"
+" only the area upslope of these outlets will be evaluated by the tool."
+msgstr "Een punt-shapefile dat de interessante afvoerpunten definieert. Als dit invoerbestand wordt gebruikt wordt alleen het hoger gelegen gebied van deze cellen voor afvoer geëvalueerd door het gereedschap."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:54
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Controleren op besmetting rand`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:52
+msgid ""
+"A flag that indicates whether the tool should check for edge contamination."
+msgstr "Een vlag die aangeeft of het gereedschap moet controleren op besmitting van randen."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:54
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:60
+msgid "Default: *True*"
+msgstr "Standaard: *True*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:60
+msgid "``Use max upslope value`` [boolean]"
+msgstr "``Max. opwaartse waarde gebruiken`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:57
+msgid ""
+"A flag to indicate whether the maximum or minimum upslope value is to be "
+"calculated."
+msgstr "Een vlag om aan te geven of de maximale of minimale opwaartse waarde moet worden berekend."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:63
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:66
+msgid "``Extereme Upslope Values Grid`` [raster]"
+msgstr "``Raster extreme opwaartse waarden`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:66
+msgid "A grid of the maximum/minimum upslope values."
+msgstr "Een raster van de maximale/minimale opwaartse waarden."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:69
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/d8extremeupslopevalue.rst:76
+msgid "See also"
+msgstr "Zie ook"

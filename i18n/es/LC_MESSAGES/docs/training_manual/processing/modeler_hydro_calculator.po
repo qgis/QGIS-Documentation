@@ -1,0 +1,126 @@
+# 
+# Translators:
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2015
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-01-09 17:58+0000\n"
+"Last-Translator: Minerva Durán Martínez <mine_tod@yahoo.com.mx>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/qgis-documentation/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:6
+msgid "Numeric calculations in the modeler"
+msgstr "Cálculos numéricos en el modelador"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:8
+msgid ""
+"Beware, this chapter is not well tested, please report any issue; images are"
+" missing"
+msgstr "Tenga cuidado, este capítulo no esta bien probado, por favor de informar de cualquier problema; faltan imágenes"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:10
+msgid "In this lesson we will see how to use numeric outputs in the modeler"
+msgstr "En esta lección veremos cómo utilizar salidas numéricas en el modelador"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:13
+msgid ""
+"For this lesson, we are going to modify the hydrological model that we "
+"created in the last chapter (open it in the modeler before starting), so we "
+"can automate the calculation of a valid threshold value and we do not have "
+"to ask the user to enter it. Since that value refers to the variable in the "
+"threshold raster layer, we will extract it from that layer, based on some "
+"simple statistical analysis."
+msgstr "Para esta lección, vamos a modificar el modelo hidrológico que creamos en el capitulo anterior (abrirlo en el modelador antes de iniciar), por tanto podemos automatizar el cálculo de un valor de umbral válido y no tenemos que pedir al usuario para introduzca. Desde ese valor se refiere a la variable en la capa ráster umbral, extraeremos de esa capa, basado en un análisis estadístico simple."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:15
+msgid ""
+"Starting with the aforemetioned model, let's do the following modifications:"
+msgstr "A partir del modelo antes mencionado, vamos a hacer las siguientes modificaciones:"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:17
+msgid ""
+"First, calculate statistics of the flow accumulation layer using the *Raster"
+" layer statistics* algorithm."
+msgstr "Primero, calcular estadísticas de la capa de acumulación de flujo utilizando el algoritmo *Estadísticas de la capa ráster*"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:21
+msgid ""
+"This will generate a set of statistical values that will now be available "
+"for all numeric fields in other algorithms."
+msgstr "Esto generará un conjunto de valores estadísticos que ahora estarán disponibles para todos los campos numéricos en otros algoritmos."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:23
+msgid ""
+"If you double click on the  *Channel network* algorithm to modify it, as we "
+"did in the last lesson, you will see now that you have other options apart "
+"from the numeric input that you added."
+msgstr "Si se hace doble clic en el algoritmo *Channel network* para modificarlo, como hicimos en la última lección, ahora verá que tiene otras opciones aparte de los entrada numérica que añadió."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:27
+msgid ""
+"However, none of this values is suitable for being used as a valid "
+"threshold, since they will result in channel networks that will not be very "
+"realistic. We can, instead, derive some new parameter based on them, to get "
+"a better result. For instance, we can use the mean plus 2 times the standard"
+" deviation."
+msgstr "Sin embargo, ninguno de estos valores es adecuado para ser utilizado como un umbral válido, ya que resultarán en redes de canales que no será muy realista. Podemos, en cambio, obtener algún parámetro nuevo basado en ellos, para obtener un mejor resultado. Por ejemplo, podemos utilizar la media más 2 veces la desviación estándar."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:29
+msgid ""
+"To add that arithmetical operation, we can use the calculator that you will "
+"find in the *Geoalgorithms/modeler/modeler-tools* group. This group contains"
+" algorithms that are not very useful outside of the modeler, but that "
+"provide some useful functionality when creating a model."
+msgstr "Para añadir esa operación aritmética, podemos utilizar la calculadora que encontramos en el grupo *Geoalgorithms/modeler/modeler-tools*. Este grupo contiene algoritmos que no son muy útiles fuera del modelador, pero que proveen algunas funcionalidades útiles cuando crea un modelo."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:31
+msgid "The parameters dialog of the calculator algorithm looks like this:"
+msgstr "El diálogo de parámetros de la calculadora de algoritmo se ve así:"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:35
+msgid ""
+"As you can see, the dialog is different to the other ones we have seen, but "
+"you have in there the same variables that were available in the *Threshold* "
+"field in the *Channel network* algorithm. Enter the above formula and click "
+"on *OK* to add the algorithm."
+msgstr "Como se puede ver, el diálogo es diferente otras que hemos visto, pero usted tiene en allí las mismas variables que estaban disponibles en el *Umbral* El campo en el algoritmo *Channel network*. Escriba la fórmula anterior y haga clic en *Aceptar* para añadir el algoritmo."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:39
+msgid ""
+"If you expand the outputs entry, as shown above, you will see that the model"
+" is connected to two of the values, namely the mean and the standard "
+"deviation, which are the ones that we have used in the formula."
+msgstr "Si se expande la entrada salidas, como se muestra arriba, se verá que el modelo está conectado a dos de los valores, es decir, la media y la desviación estándar, que son los que hemos utilizado en la fórmula."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:41
+msgid ""
+"Adding this new algorithm will add a new numeric value. If you go again to "
+"the *Channel network* algorithm, you can now select that value in the "
+"*Threshold* parameter."
+msgstr "Añadir este nuevo algoritmo añadirá un nuevo valor numérico. Si se va de nuevo al algoritmo *Channel network*, ahora puede seleccionar ese valor en parámetro *Umbral*."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:45
+msgid "Click on *OK* and your model should look like this."
+msgstr "Haga clic en *Aceptar* y su modelo debería de tener este aspecto."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:49
+msgid ""
+"We are not using the numeric input that we added to the model, so it can be "
+"removed. Right--click on it and select *Remove*"
+msgstr "No usamos la entrada numérica que añadimos al modelo, por lo que se puede borrar. Haga clic derecho y seleccione *Borrar*"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:51
+msgid "todo: Add image"
+msgstr "todo: Añadir imagen"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:53
+msgid "Our new model is now finished."
+msgstr "Nuestro nuevo modelo ahora esta finalizado."

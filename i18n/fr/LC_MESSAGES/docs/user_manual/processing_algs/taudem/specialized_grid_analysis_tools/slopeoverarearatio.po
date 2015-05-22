@@ -1,0 +1,83 @@
+# 
+# Translators:
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-26 09:12+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:6
+msgid "Slope Over Area Ratio"
+msgstr "Ratio de pente sur la surface"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:11
+msgid ""
+"Calculates the ratio of the slope to the specific catchment area "
+"(contributing area). This is algebraically related to the more common "
+"ln(a/tan beta) wetness index, but contributing area is in the denominator to"
+" avoid divide by 0 errors when slope is 0."
+msgstr "Calcule le ration de la pente sur la surface spécifique de bassin versant (la surface contributive). Il est algébriquement lié au plus connu index d'humidité ln(a/tan beta) mais la surface contributive est dans le dénominateur pour éviter les erreurs de division par 0 lorsque la pente vaut 0."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:17
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:21
+msgid "``Slope Grid`` [raster]"
+msgstr "``Grille de pente`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:20
+msgid ""
+"A grid of slope. This grid can be generated using ether the **\"D8 Flow "
+"Directions\"** tool or the **\"D-Infinity Flow Directions\"** tool."
+msgstr "Une grille de pente. Cette grille peut être obtenue des outils **\"Directions de flux D8\"** ou **\"Directions de flux D-Infinity\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:28
+msgid "``Specific Catchment Area Grid`` [raster]"
+msgstr "``Grille de bassin versant spécifique`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:24
+msgid ""
+"A grid giving the contributing area value for each cell taken as its own "
+"contribution plus the contribution from upslope neighbors that drain in to "
+"it. Contributing area is counted in terms of the number of grid cells (or "
+"summation of weights). This grid can be generated using either the **\"D8 "
+"Contributing Area\"** tool or the **\"D-Infinity Contributing Area\"** tool."
+msgstr "Une grille donnant la surface contributive de chaque cellule calculée par sa contribution additionnée de la contribution des voisins de pente ascendante qui s'y écoule . La surface contributive est déterminée par le nombre de cellules de grille (ou par la somme des poids). Cette grille peut être obtenue par les outils **\"Surface contributive D8\"** ou **\"Surface contributive D-Infinity\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:31
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:37
+msgid "``Slope Divided By Area Ratio Grid`` [raster]"
+msgstr "``Grille ratio de pente divisée par la surface`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:34
+msgid ""
+"A grid of the ratio of slope to specific catchment area (contributing area)."
+" This is algebraically related to the more common ``ln(a/tan beta)`` wetness"
+" index, but contributing area is in the denominator to avoid divide by 0 "
+"errors when slope is 0."
+msgstr "Une grille contenant le ratio de la pente sur la l'aire de bassin versant spécifique (surface contributive). Il s'agit de la relation algébrique du plus connu index d'humidité ``ln(a/tan beta)`` où la surface contributive est dans le dénominateur pour éviter les divisions par 0 lorsque la pente vaut 0."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:40
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/slopeoverarearatio.rst:47
+msgid "See also"
+msgstr "Voir également"

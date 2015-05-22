@@ -1,0 +1,237 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-10 17:29+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:6
+msgid "D-Infinity Avalanche Runout"
+msgstr "D-oneindigheid lawine uitloop"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:11
+msgid ""
+"Identifies an avalanche's affected area and the flow path length to each "
+"cell in that affacted area. All cells downslope from each source area cell, "
+"up to the point where the slope from the source to the affected area is less"
+" than a threshold angle called the Alpha Angle can be in the affected area. "
+"This tool uses the D-infinity multiple flow direction method for determining"
+" flow direction. This will likely cause very small amounts of flow to be "
+"dispersed to some downslope cells that might overstate the affected area, so"
+" a threshold proportion can be set to avoid this excess dispersion. The flow"
+" path length is the distance from the cell in question to the source cell "
+"that has the highest angle."
+msgstr "Identificeert een door een lawine beïnvloed gebied en de lengte van het stroompad tot elke cel in dat beïnvloede gebied. Alle neerwaartse cellen vanuit elke broncel, tot aan het punt waar de helling van de bron kleiner is dan een hoek als drempel, Alfahoek genoemd, kan in het beïnvloede gebied liggen. Dit gereedschap gebruikt de methode D-oneindigheid stroomrichting voor het bepalen van de stroomrichting. Dit zal er waarschijnlijk voor zorgen dat zeer kleine hoeveelheden stroom worden verspreid over enkele neerwaartse cellen die het beïnvloede gebied groter maken, dus een drempel als proportie kan worden ingesteld om deze overmatige verspreiding te vermijden. De lengte van het stroompad is de afstand van de betrokken cel tot de broncel die de grootste hoek heeft."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:21
+msgid ""
+"All points downslope from the source area are potentially in the affected "
+"area, but not beyond a point where the slope from the source to the affected"
+" area is less than a threshold angle called the Alpha Angle."
+msgstr "Alle neerwaartse punten vanaf het brongebied liggen potentieel in het beïnvloede gebied, maar niet voorbij een punt waar de helling vanaf de bron tot het beïnvloede gebied kleiner is dan een hoek als drempel, genaamd de Alfahoek."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:28
+msgid ""
+"Slope is to be measured using the straight line distance from source point "
+"to evaluation point."
+msgstr "Helling dient te worden gemeten met behulp van de afstand in een rechte lijn vanaf het bronpunt tot het punt van evaluatie."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:31
+msgid ""
+"It makes more physical sense to me for the angle to be measured along the "
+"flow path. Nevertheless it is equally easy to code straight line angles as "
+"angles along the flow path, so an option that allows switching will be "
+"provided. The most practical way to evaluate avalanche runout is to keep "
+"track of the source point with the greatest angle to each point. Then the "
+"recursive upslope flow algebra approach will look at a grid cell and all its"
+" upslope neighbors that flow to it. Information from the upslope neighbors "
+"will be used to calculate the angle to the grid cell in question and retain "
+"it in the runout zone if the angle exceeds the alpha angle. This procedure "
+"makes the assumption that the maximum angle at a grid cell will be from the "
+"set of cells that have maximum angles to the inflowing neighbors. This will "
+"always be true of angle is calculated along a flow path, but I can conceive "
+"of cases where flow paths bend back on themselves where this would not be "
+"the case for straight line angles."
+msgstr "Voor mij is het fysiek logischer dat de te meten hoek wordt gemeten langs het stroompad. Niettegenstaande dat is net zo eenvoudig om hoeken voor rechte lijnen te coderen als hoeken langs het stroompad, dus zal een optie die het mogelijk maakt te schakelen beschikbaar worden gesteld. De meest praktische manier om de uitloop van een lawine te evalueren is om het bronpunt met de grootste hoek tot elk punt bij te houden. Dan zal de algebraïsche benadering van recursieve opwaartse stroom kijken naar een cel van het raster en alle opwaartse buren daarvan die erin stromen. Informatie van de opwaartse buren zal worden gebruikt om de hoek naar de betrokken cel te berekenen en die behouden in de zone van de uitloop als de hoek groter is dan de Alfahoek. Deze procedure neemt aan dat de maximale hoek voor een cel van het raster uit de verzameling cellen zal komen die maximale hoeken hebben naar de instromende buren. Dit zal altijd waar zijn als de hoek wordt berekend langs een stroompad, maar ik kan gevallen bedenken waar stroompaden terug buigen op zichzelf, waar dit niet het geval zou zijn voor hoeken van rechte lijnen."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:45
+msgid ""
+"The D-infinity multiple flow direction field assigns flow from each grid "
+"cell to multiple downslope neighbors using proportions (``Pik``) that vary "
+"between 0 and 1 and sum to 1 for all flows out of a grid cell. It may be "
+"desirable to specify a threshold ``T`` that this proportion has to exceed "
+"before a grid cell is counted as flowing to a downslope grid cell, e.g. "
+"``Pik > T`` (=0.2 say) to avoid dispersion to grid cells that get very "
+"little flow. ``T`` will be specified as a user input. If all upslope grid "
+"cells are to be used ``T`` may be input as 0."
+msgstr "Het veld D-oneindigheid meerdere stroomrichtingen wijst de stroom toe vanuit elke cel van het raster aan meerdere neerwaartse buren met behulp van proporties (``Pik``) die variëren tussen 0 en 1 en sommeren tot 1 voor alle stromen die een cel van het raster uitgaan. het kan gewenst zijn een drempelwaarde ``T`` te specificeren die deze proportie moeten overschrijden voordat een cel wordt geteld als stromend naar een neerwaartse cel van het raster, bijv. ``Pik > T`` (zeg =0.2) om verspreiding naar cellen die heel weinig stroom krijgen te vermijden. ``T`` zal worden gespecificeerd als een invoer door ene gebruiker. Als alle opwaartse celen van het raster moeten worden gebruikt kan ``T`` worden ingevoerd als 0."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:53
+msgid ""
+"Avalanche source sites are to be input as a short integer grid (name suffix "
+":file:`*ass`, e.g. :file:`demass`) comprised of positive values where "
+"avalanches may be triggered and 0 values elsewhere."
+msgstr "Bronnen van lawines moeten worden ingevoerd als een klein geheel getal-raster (naam achtervoegsel :file:`*ass`, bijv. :file:`demass`) samengesteld uit positieve waarden waar lawines kunnen worden geactiveerd en waarden 0 elders."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:57
+msgid "The following grids are output:"
+msgstr "De volgende rasters zijn uitvoer:"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:59
+msgid ""
+"rz --- A runout zone indicator with value 0 to indicate that this grid cell "
+"is not in the runout zone and value > 0 to indicate that this grid cell is "
+"in the runout zone. Since there may be information in the angle to the "
+"associated source site, this variable will be assigned the angle to the "
+"source site (in degrees)"
+msgstr "rz --- Een indicator voor de uitloopzone met waarde 0 om aan te geven dat deze cel van het raster niet in de uitloopzone ligt en waarde > 0 om aan te geven dat deze cel van het raster wel in de uitloopzone ligt. Omdat er informatie kan zijn in de hoek naar de geassocieerde bron, zal deze variabele worden toegewezen aan de hoek naar de bron (in graden)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:64
+msgid ""
+"dm --- Along flow distance from the source site that has the highest angle "
+"to the point in question"
+msgstr "dm --- Afstand langs de stroom van de bron die de grootste hoek tot het betrokken punt heeft"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:68
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:73
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``D-oneindigheid raster stroomrichting`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:71
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This can be created  by "
+"the tool **\"D-Infinity Flow Directions\"**."
+msgstr "Een raster dat de stroomrichting geeft volgens de methode D-oneindigheid. Stroomrichting wordt gemeten in radialen, tegen de wijzers van de klok in vanuit Oost. Dit kan worden gemaakt door het gereedschap **\"D-oneindigheid stroomrichtingen\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:81
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr "``Gatengevuld hoogteraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:76
+msgid ""
+"This input is a grid of elevation values. As a general rule, it is "
+"recommended that you use a grid of elevation values that have had the pits "
+"removed for this input. Pits are generally taken to be artifacts that "
+"interfere with the analysis of flow across them. This grid can be obtained "
+"as the output of the **\"Pit Remove\"** tool, in which case it contains "
+"elevation values where the pits have been filled to the point where they "
+"just drain."
+msgstr "Deze invoer is een raster van hoogtewaarden. Als algemene regel wordt aanbevolen dat u een raster met hoogtewaarden gebruikt waarin de gaten zijn verwijderd voor deze invoer. Van gaten wordt in het algemeen aangenomen dat het artefacten zijn die interfereren met de analyse van de stroom rondom hen. Dit raster kan worden verkregen als de uitvoer van het gereedschap **\"Gaten verwijderen\"**, in welk geval het hoogtewaarden bevat waarvan de gaten zijn verwijderd tot het punt waarop zij nog net afvoeren."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:88
+msgid "``Avalanche Source Site Grid`` [raster]"
+msgstr "``Lawine bronraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:84
+msgid ""
+"This is a grid of source areas for snow avalanches that are commonly "
+"identified manually using a mix of experience and visual interpretation of "
+"maps. Avalanche source sites are to be input as a short integer grid (name "
+"suffix :file:`*ass`, e.g. :file:`demass`) comprised of positive values where"
+" avalanches may be triggered and 0 values elsewhere."
+msgstr "Dit is een raster van brongebieden voor sneeuwlawines die gewoonlijk handmatig geïdentificeerd worden met behulp van een mix van ervaring en visuele interpretatie van kaarten. Bronnen van lawines moeten worden ingevoerd als een klein geheel getal-raster (naam achtervoegsel :file:`*ass`, bijv. :file:`demass`) samengesteld uit positieve waarden waar lawines kunnen worden geactiveerd en waarden 0 elders."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:98
+msgid "``Proportion Threshold`` [number]"
+msgstr "``Drempel proportie`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:91
+msgid ""
+"This value is a threshold proportion that is used to limit the disperson of "
+"flow caused by using the D-infinity multiple flow direction method for "
+"determining flow direction. The D-infinity multiple flow direction method "
+"often causes very small amounts of flow to be dispersed to some downslope "
+"cells that might overstate the affected area, so a threshold proportion can "
+"be set to avoid this excess dispersion."
+msgstr "Deze waarde is een drempel proportie die wordt gebruikt om de verspreiding van de stroom, veroorzaakt door het gebruiken van de methode D-oneindigheid meerdere stroomrichtingen, te beperken. De methode D-oneindigheid meerdere stroomrichtingen zorgt er vaak voor dat zeer kleine hoeveelheden stroom worden verspreid over enkele neerwaartse cellen die het beïnvloede gebied groter maken, dus een drempel als proportie kan worden ingesteld om deze overmatige verspreiding te vermijden."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:98
+msgid "Default: *0.2*"
+msgstr "Standaard: *0.2*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:107
+msgid "``Alpha Angle Threshold`` [number]"
+msgstr "``Drempel Alfahoek`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:101
+msgid ""
+"This value is the threshold angle, called the Alpha Angle, that is used to "
+"determine which of the cells downslope from the source cells are in the "
+"affected area. Only the cells downslope from each source area cell, up to "
+"the point where the slope from the source to the affected area is less than "
+"a threshold angle are in the affected area."
+msgstr "Deze waarde is de drempelhoek, de Alfahoek genaamd, die wordt gebruikt om te bepalen welke van de neerwaartse cellen vanaf de broncel in het beïnvloede gebied liggen. Alle neerwaartse punten vanaf het brongebied liggen potentieel in het beïnvloede gebied, Alleen de neerwaartse cellen vanuit elke cel in het brongebied tot aan het punt waar de helling vanaf de bron kleiner is dan een hoek als drempel in het beïnvloede gebied."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:107
+msgid "Default: *18*"
+msgstr "Standaard: *18*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:115
+msgid "``Measure distance along flow path`` [boolean]"
+msgstr "``Afstand meten langs stroompad`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:110
+msgid ""
+"This option selects the method used to measure the distance used to "
+"calculate the slope angle. If option is *True* then measure it along the "
+"flow path, where the *False* option causes the slope to be measure along the"
+" straight line distance from the source cell to the evaluation cell."
+msgstr "Deze optie selecteert de gebruikte methode om de afstand te meten die wordt gebruikt om de hoek van de helling te berekenen. Als de optie *True* is dan wordt het gemeten langs het stroompad, waar de optie *False* er voor zorgt dat de helling wordt gemeten langs de afstand voor de rechte lijn vanaf de broncel tot aan de te evalueren cel."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:115
+msgid "Default: *True*"
+msgstr "Standaard: *True*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:118
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:126
+msgid "``Runout Zone Grid`` [raster]"
+msgstr "``Raster uitloopzone`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:121
+msgid ""
+"This grid Identifies the avalanche's runout zone (affected area) using a "
+"runout zone indicator with value 0 to indicate that this grid cell is not in"
+" the runout zone and value > 0 to indicate that this grid cell is in the "
+"runout zone. Since there may be information in the angle to the associated "
+"source site, this variable will be assigned the angle to the source site (in"
+" degrees)."
+msgstr "Dit raster identificeert het uitloopgebied van de lawine (het beïnvloede gebied) met behulp van een indicator voor de uitloopzone met waarde 0 om aan te geven dat deze cel van het raster niet in de uitloopzone ligt en waarde > 0 om aan te geven dat deze cel van het raster wel in de uitloopzone ligt. Omdat er informatie kan zijn in de hoek naar de geassocieerde bron, zal deze variabele worden toegewezen aan de hoek naar de bron (in graden)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:130
+msgid "``Path Distance Grid`` [raster]"
+msgstr "``Afstand pad raster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:129
+msgid ""
+"This is a grid of the flow distance from the source site that has the "
+"highest angle to each cell."
+msgstr "Dit is een raster van de afstand langs de stroom van de bron die de grootste hoek tot elke cel heeft"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:133
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:140
+msgid "See also"
+msgstr "Zie ook"

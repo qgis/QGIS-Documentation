@@ -1,0 +1,261 @@
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2014-12-05 16:25+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:11
+msgid "Map Rendering and Printing"
+msgstr "Randarea hărților și imprimarea"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:13
+msgid ""
+"There are generally two approaches when input data should be rendered as a "
+"map: either do it quick way using :class:`QgsMapRenderer` or produce more "
+"fine-tuned output by composing the map with :class:`QgsComposition` class "
+"and friends."
+msgstr "Există, în general, două abordări atunci când datele de intrare ar trebui să fie randate într-o hartă: fie o modalitate rapidă, folosind :class:`QgsMapRenderer`, fie producerea unei ieșiri mai rafinate, prin compunerea hărții cu ajutorul clasei :class:`QgsComposition`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:20
+msgid "Simple Rendering"
+msgstr "Randarea simplă"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:65
+msgid "Output using Map Composer"
+msgstr "Generarea folosind Compozitorul de hărți"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:67
+msgid ""
+"Map composer is a very handy tool if you would like to do a more "
+"sophisticated output than the simple rendering shown above. Using the "
+"composer it is possible to create complex map layouts consisting of map "
+"views, labels, legend, tables and other elements that are usually present on"
+" paper maps. The layouts can be then exported to PDF, raster images or "
+"directly printed on a printer."
+msgstr "Compozitorul de hărți reprezintă un instrument foarte util în cazul în care doriți să elaborați ceva mai sofisticat decât simpla randare de mai sus. Utilizănd Constructorului este posibilă crearea unor machete complexe de hărți, conținând extrase de hartă, etichete, legendă, tabele și alte elemente care sunt de obicei prezente pe hărțile tipărite. Machetele pot fi apoi exportate în format PDF, ca imagini raster sau pot fi transmise direct la o imprimantă."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:89
+msgid ""
+"Note that the composition takes an instance of :class:`QgsMapRenderer`. In "
+"the code we expect we are running within QGIS application and thus use the "
+"map renderer from map canvas. The composition uses various parameters from "
+"the map renderer, most importantly the default set of map layers and the "
+"current extent. When using composer in a standalone application, you can "
+"create your own map renderer instance the same way as shown in the section "
+"above and pass it to the composition."
+msgstr "Rețineți: compoziția este o instanță a :class:`QgsMapRenderer`. În cod, ne așteptăm să rulăm în interiorul aplicației QGIS și, astfel, să folosim render-ul suportului de hartă. Compoziția utilizează diverși parametri ai render-ului, cei mai importanți fiind setul implicit de straturi de hartă și granițele curente. Atunci când utilizați compozitorul într-o aplicație independentă, vă puteți crea propria dvs. instanță de render de hărți, în același mod cum s-a arătat în secțiunea de mai sus, și să-l transmiteți compoziției."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:97
+msgid ""
+"It is possible to add various elements (map, label, ...) to the composition "
+"--- these elements have to be descendants of :class:`QgsComposerItem` class."
+" Currently supported items are:"
+msgstr "Este posibilă adăugarea diferitelor elemente (hartă, etichete, ...) în compoziție --- aceste elemente trebuie să fie descendenți ai clasei :class:`QgsComposerItem`. Elementele suportate în prezent sunt: "
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:119
+msgid "legend ::"
+msgstr "legendă ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:126
+msgid "scale bar ::"
+msgstr "bara scării ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:135
+msgid "arrow"
+msgstr "săgeată"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:136
+msgid "picture"
+msgstr "imagine"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:137
+msgid "shape"
+msgstr "formă"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:138
+msgid "table"
+msgstr "tabelă"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:157
+msgid ""
+"Besides creating the composer items by hand, QGIS has support for composer "
+"templates which are essentially compositions with all their items saved to a"
+" .qpt file (with XML syntax). Unfortunately this functionality is not yet "
+"available in the API."
+msgstr "Pe lângă crearea manuală a elementele compozitorului, QGIS are suport pentru șabloane, care sunt, în esență, compoziții cu toate elementele lor salvate într-un fișier .qpt (cu sintaxă XML). Din păcate, această funcționalitate nu este încă disponibilă în API."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:162
+msgid ""
+"Once the composition is ready (the composer items have been created and "
+"added to the composition), we can proceed to produce a raster and/or vector "
+"output."
+msgstr "Odată ce compoziția este gata (elementele compozitorului au fost create și adăugate la compoziție), putem trece la producerea unui raster și/sau a unei ieșiri vectoriale."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:177
+msgid "Output to a raster image"
+msgstr "Ieșire ca imagine raster"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:206
+msgid "Output to PDF"
+msgstr "Ieșire în format PDF"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:17
+msgid "map rendering"
+msgstr "randare hartă"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:5
+msgid "map printing"
+msgstr "tipărire hartă"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:17
+msgid "simple"
+msgstr "simplu"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:62
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:174
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:203
+msgid "output"
+msgstr "ieșire"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:62
+msgid "using Map Composer"
+msgstr "folosirea Compozitorului de Hărți"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:174
+msgid "raster image"
+msgstr "imagine raster"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:203
+msgid "PDF"
+msgstr "PDF"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:22
+msgid ""
+"Render some layers using :class:`QgsMapRenderer` --- create destination "
+"paint device (``QImage``, ``QPainter`` etc.), set up layer set, extent, "
+"output size and do the rendering"
+msgstr "Randați mai multe straturi, folosind :class:`QgsMapRenderer` --- creați destinația dispozitivului de colorare (``QImage``, ``QPainter`` etc), setați stratul, limitele sale, dimensiunea de ieșire și efectuați randarea"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:73
+msgid ""
+"The composer consists of a bunch of classes. They all belong to the core "
+"library. QGIS application has a convenient GUI for placement of the "
+"elements, though it is not available in the GUI library. If you are not "
+"familiar with `Qt Graphics View framework "
+"<http://doc.qt.nokia.com/stable/graphicsview.html>`_, then you are "
+"encouraged to check the documentation now, because the composer is based on "
+"it."
+msgstr "Compozitorul constă într-o serie de clase. Toate acestea fac parte din biblioteca de bază. Aplicația QGIS are un GUI convenabil pentru plasarea elementelor, deși nu face parte din biblioteca GUI. Dacă nu sunteți familiarizați cu `cadrul de lucru Qt Graphics View <http://doc.qt.nokia.com/stable/graphicsview.html>`_, atunci vă încurajăm să verificați documentația acum, deoarece compozitorul este bazat pe el."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:80
+msgid ""
+"The central class of the composer is :class:`QgsComposition` which is "
+"derived from :class:`QGraphicsScene`. Let us create one"
+msgstr "Clasa centrală a Compozitorului este :class:`QgsComposition`, care este derivată din :class:`QGraphicsScene`. Să creăm una"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:101
+msgid ""
+"map --- this item tells the libraries where to put the map itself. Here we "
+"create a map and stretch it over the whole paper size ::"
+msgstr "harta --- acest element indică bibliotecilor unde să pună harta. Vom crea o hartă și o vom întinde peste întreaga dimensiune a hârtiei ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:110
+msgid ""
+"label --- allows displaying labels. It is possible to modify its font, "
+"color, alignment and margin ::"
+msgstr "eticheta --- permite afișarea etichetelor. Este posibilă modificarea fontului, culoarea, alinierea și marginea ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:140
+msgid ""
+"By default the newly created composer items have zero position (top left "
+"corner of the page) and zero size. The position and size are always measured"
+" in millimeters"
+msgstr "În mod implicit, elementele compozitorului nou creat au poziția zero (colțul din stânga sus a paginii) și dimensiunea zero. Poziția și dimensiunea sunt măsurate întotdeauna în milimetri"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:151
+msgid "A frame is drawn around each item by default. How to remove the frame"
+msgstr "În jurul fiecărui element este desenat, în mod implicit, un cadru. Astfel se elimină cadrul"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:165
+msgid ""
+"The default output settings for composition are page size A4 and resolution "
+"300 DPI. You can change them if necessary. The paper size is specified in "
+"millimeters"
+msgstr "Setările de ieșire implicite pentru compoziție sunt pentru o pagină A4 și o rezoluție de 300 DPI. Le puteți modifica, atunci când este necesar. Dimensiunea hârtiei este specificată în milimetri"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:179
+msgid ""
+"The following code fragment shows how to render a composition to a raster "
+"image"
+msgstr "Următorul fragment de cod arată cum se randează o compoziție într-o imagine raster"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:208
+msgid "The following code fragment renders a composition to a PDF file"
+msgstr "Următorul fragment de cod randează o compoziție într-un fișier PDF"
+
+#~ msgid ""
+#~ "Render some layers using :class:`QgsMapRenderer` - create destination paint "
+#~ "device (``QImage``, ``QPainter`` etc.), set up layer set, extent, output "
+#~ "size and do the rendering::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The composer consists of a bunch of classes. They all belong to the core "
+#~ "library. QGIS application has a convenient GUI for placement of the "
+#~ "elements, though it is not available in the gui library. If you are not "
+#~ "familiar with `Qt Graphics View framework "
+#~ "<http://doc.qt.nokia.com/stable/graphicsview.html>`_, then you are "
+#~ "encouraged to check the documentation now, because the composer is based on "
+#~ "it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The central class of the composer is :class:`QgsComposition` which is "
+#~ "derived from :class:`QGraphicsScene`. Let us create one::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "map --- this item tells the libraries where to put the map itself. Here we "
+#~ "create a map and stretch it over the whole paper size::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "label --- allows displaying labels. It is possible to modify its font, "
+#~ "color, alignment and margin::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default the newly created composer items have zero position (top left "
+#~ "corner of the page) and zero size. The position and size are always measured"
+#~ " in millimeters::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A frame is drawn around each item by default. How to remove the frame::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The default output settings for composition are page size A4 and resolution "
+#~ "300 DPI. You can change them if necessary. The paper size is specified in "
+#~ "millimeters::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following code fragment shows how to render a composition to a raster "
+#~ "image::"
+#~ msgstr ""
+
+#~ msgid "The following code fragment renders a composition to a PDF file::"
+#~ msgstr ""

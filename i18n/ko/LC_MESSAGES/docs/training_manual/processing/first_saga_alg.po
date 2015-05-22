@@ -1,0 +1,175 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-06-30 05:53+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:6
+msgid "Running an external algorithm"
+msgstr "외부 알고리듬 실행"
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:9
+msgid ""
+"In this lesson we will see how to use algorithms that depend on a third-"
+"party application, particularly SAGA, which is one of the main algorithm "
+"providers."
+msgstr "이 강의에서 제3자 응용 프로그램에 의존하는 알고리듬의 사용법을 배울 것입니다. 특히 주요 알고리듬 제공자 가운데 하나인 SAGA에 대해 배워보겠습니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:11
+msgid ""
+"All the algorithms that we have run so far are part of processing framework."
+" That is, they are *native* algorithms implemented in the plugin and run by "
+"QGIS just like the plugin itself is run. However, one of the greatest "
+"features of the processing framework is that it can use algorithms from "
+"external application and extend the possibilites of those applications. Such"
+" algorithms are wrapped and included in the toolbox, so you can easily use "
+"them from QGIS, and use QGIS data to run them."
+msgstr "우리가 지금까지 실행했던 알고리듬은 모두 처리 과정 프레임워크의 일부였습니다. 그러니까, 플러그인에서 시행되어 마치 플러그인 자체를 실행하는 것처럼 QGIS가 실행하는 *자체(native)* 알고리듬입니다. 하지만, 처리 과정 프레임워크의 가장 훌륭한 기능 가운데 하나가 외부 응용 프로그램으로부터 알고리듬을 사용해서 해당 응용 프로그램의 가능성을 확장시킬 수 있다는 점입니다. 이런 알고리듬들은 잘 포장되어 툴박스에 포함되어 있으므로 QGIS에서 쉽게 쓸 수 있으며, QGIS 데이터를 사용해 실행할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:13
+msgid ""
+"Some of the algorithms that you see in the simplified view require third "
+"party applications to be installed in your system. One algorithm provider of"
+" special interest is SAGA (System for Automated Geospatial Analysis). At the"
+" end of this lesson we will run an algorithm called *Convergence index*, "
+"which is provided by SAGA and computes a morphometrical measurement from a "
+"DEM. But first, we need to configure everything so QGIS can correctly call "
+"SAGA. This is not difficult, but it's important to understand how it works. "
+"Each external application has its own configuration, and later in this same "
+"manual we will talk about some of the other ones, but SAGA is going to be "
+"our main backend, so we will discuss it here."
+msgstr "단순 뷰에서 볼 수 있는 알고리듬 중 일부를 사용하려면 제3자 응용 프로그램을 사용자 시스템에 설치해야 합니다. 이 가운데 특히 관심을 기울여야 할 알고리듬 제공자가 SAGA(System for Automated Geospatial Analysis)입니다. 이 강의 마지막에서 :guilabel:`Convergence index` 라는 알고리듬을 실행할 텐데, SAGA가 제공한 이 알고리듬은 DEM에서 형상 측정(morphometrical measurement)을 계산합니다. 그러나 먼저, QGIS가 제대로 SAGA를 호출할 수 있도록 모든 것을 설정해야 합니다. 그렇게 어려운 일은 아니지만, SAGA가 어떻게 작동하는지 이해하는 것이 중요합니다. 외부 응용 프로그램은 각각 자신만의 설정을 가지고 있으며, 이 지침서의 이후 부분에서 다른 응용 프로그램에 대해서도 배우겠지만, SAGA가 주요 백엔드(backend)가 될 것이므로 여기에서는 SAGA에 대해 이야기하겠습니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:15
+msgid ""
+"If you are on Windows, the best way to work with external algorithms is to "
+"install QGIS using the OSGeo4W installer. It will take care of installing "
+"all the needed dependencies, including SAGA, so if you have used it, there "
+"is nothing else to do. You can open the settings dialog and go to the "
+"*Providers/SAGA* group."
+msgstr "윈도우 시스템의 경우 외부 알고리듬 작업을 위한 가장 좋은 방법은 OSGeo4W 인스톨러를 통해 QGIS를 설치하는 것입니다. OSGeo4W 인스톨러가 SAGA를 포함하는 필요한 모든 의존성을 설치해주기 때문에 이 인스톨러를 사용했다면 아무것도 할 필요가 없습니다. 설정 대화 창을 열고 :guilabel:`Providers/SAGA` 그룹을 찾으십시오."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:19
+msgid ""
+"The SAGA path should already be configured and pointing to the folder where "
+"SAGA is installed."
+msgstr "이미 SAGA 경로가 설정되어 SAGA가 설치된 폴더를 가리키고 있을 것입니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:21
+msgid ""
+"If you have installed QGIS not using the OSGeo4W installer, then you must "
+"enter the path to your SAGA installation (which you must have installed "
+"separately) there. The required version is SAGA 2.1"
+msgstr "OSGeo4W 인스톨러를 통해 QGIS를 설치하지 않았다면, (사용자가 개별적으로 설치해야만 하는) SAGA 설치 경로를 입력해야 합니다. SAGA 2.1 버전이 필요합니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:23
+msgid ""
+"In case you are using Linux, you do not have to set the path to your SAGA "
+"installation in the processing configuration. Instead, you must install SAGA"
+" and make sure that the SAGA folder is in PATH, so it can be called from the"
+" console (just open a console and type ``saga_cmd`` to check it). Under "
+"Linux, the target version for SAGA is also 2.1, but in some installations "
+"(such as the OSGeo Live DVD) you might have just 2.0.8 available. There are "
+"some 2.1 packages available, but they are not commonly installed and might "
+"have some issues, so if you prefer to use the more common and stable 2.0.8, "
+"you can do it by enabling 2.0.8 compatibility in the configuration dialog, "
+"under the *SAGA* group"
+msgstr "리눅스 시스템의 경우, 처리 과정 설정에서 SAGA 설치 경로를 설정할 필요가 없습니다. 그 대신 SAGA를 설치한 다음, 콘솔에서 SAGA를 호출할 수 있도록 SAGA 폴더가 :kbd:`PATH` 에 포함되었는지 확인하십시오. (콘솔을 열고 :kbd:`saga_cmd` 를 입력해 확인하면 됩니다.) 리눅스에서도 2.1 버전이 필요하지만, (OSGeo Live DVD 같은) 몇몇 설치의 경우 2.0.8 버전밖에 사용할 수 없을지도 모릅니다. 사용자가 쓸 수 있는 2.1 버전 패키지가 몇 개 있기는 하지만 일반적인 방법으로 설치하기도 어렵고 문제가 생길 수도 있으므로, 좀 더 일반적이고 안정적인 2.0.8 버전을 사용하고 싶다면 설정 대화 창의 :guilabel:`SAGA` 그룹에 있는 2.0.8 호환성을 활성화하면 됩니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:27
+msgid ""
+"Once SAGA is installed, you can launch a SAGA algorithm double clicking on "
+"its name, as with any other algorithm. Since we are using the simplified "
+"interface, you do not know which algorithms are based on SAGA or in another "
+"external application, but if you happen to double--click on one of them and "
+"the corresponding application is not installed, you will see something like "
+"this."
+msgstr "SAGA 설치가 완료되면 다른 알고리듬과 마찬가지로 알고리듬 명칭을 더블클릭해서 실행할 수 있습니다. 단순 인터페이스를 사용하고 있기 때문에 어떤 알고리듬이 SAGA 혹은 다른 외부 응용 프로그램을 기반으로 하고 있는지 알 수 없지만, 우연히 그런 알고리듬을 더블클릭했는데 상응하는 응용 프로그램이 설치되지 않았을 경우 다음과 같은 메시지 창을 보게 됩니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:31
+msgid ""
+"In our case, and assuming that SAGA is correctly installed and configured, "
+"you should not see this window, and you will get to the parameters dialog "
+"instead."
+msgstr "SAGA를 제대로 설치하고 설정했다면 이 메시지 창을 볼 일이 없습니다. 그 대신 다음과 같은 파라미터 대화 창을 보게 될 것입니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:33
+msgid ""
+"Let's try with a SAGA--based algorithm, the one called *Split shapes layer "
+"randomly*."
+msgstr "그러면 :guilabel:`Split shapes layer randomly` 라는 SAGA 기반 알고리듬을 실행해봅시다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:37
+msgid ""
+"Use the points layer in the project corresponding to this lesson as input, "
+"and the default parameter values, and you will get something like this (the "
+"split is random, so your result might be different)."
+msgstr "이 강의에 해당하는 프로젝트의 포인트 레이어를 입력으로 설정하고 다른 파라미터 값을 그대로 둘 경우 다음과 비슷한 결과를 얻게 됩니다. (스플릿이 임의로 일어나므로 사용자의 결과는 다를 수도 있습니다.)"
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:41
+msgid ""
+"The input layer has been split in two layer, each one with the same number "
+"of points. This result has been computed by SAGA, and later taken by QGIS "
+"and added to the QGIS project."
+msgstr "입력 레이어가 각각 동일한 개수의 포인트를 담은 레이어 두 개로 스플릿되엇습니다. SAGA가 이 결과물을 계산한  QGIS가 결과물을 가져와 QGIS 프로젝트에 추가한 것입니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:43
+msgid ""
+"If all goes fine, you will not notice any difference between this SAGA--"
+"based algorithm and one of the others that we have previously run. However, "
+"SAGA might, for some reason, not be able to produce a result and not "
+"generate the file that QGIS is expecting. In that case, there will be "
+"problems adding the result to the QGIS project, and an error message like "
+"this will be shown."
+msgstr "모든 작업이 잘 이루어졌다면 이전에 실행했던 다른 알고리듬과 이 SAGA 기반 알고리듬을 구분하지 못할 것입니다. 그러나 어떤 이유에서인지 SAGA가 결과물을 생산하지 못 해 QGIS가 기대하고 있던 파일을 생성하지 못 할 수도 있습니다. 이럴 경우 결과물을 QGIS 프로젝트에 추가하는 과정에서 문제가 발생, 다음과 같은 메시지를 보게 될 것입니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:47
+msgid ""
+"This kind of problems might happen, even if SAGA (or any other application "
+"that we are calling from the processing framework) is correctly installed, "
+"and it is important to know how to deal with them. Let's produce one of "
+"those error messages."
+msgstr "SAGA가 (또는 처리 과정 프레임워크가 호출하는 어떤 다른 응용 프로그램이든) 제대로 설치되었다 하더라도 이런 문제가 발생할 수 있기 때문에, 이런 문제에 대응하는 법을 아는 것이 중요합니다. 이런 오류 메시지를 나타나게 해봅시다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:49
+msgid ""
+"Open the *Create graticule from extent* algorithm and use the following "
+"values."
+msgstr ":guilabel:`Create graticule from extent` 알고리듬을 실행하고 다음과 같은 값들을 사용하십시오."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:54
+msgid ""
+"We are using  width and height values that is larger than the specified "
+"extent, so SAGA cannot produce any output. In other words, the parameter "
+"values are wrong, but they are not checked until SAGA gets them and tries to"
+" create the graticule. Since it cannot create it, it will not produce the "
+"expected layer, and you will see the error message shown above."
+msgstr "설정된 범위보다 큰 높이 및 너비 값을 사용했기 때문에  SAGA가 어떤 산출물도 생산하지 못 합니다. 다시 말하면 파라미터 값이 잘못되었는데도 SAGA가 이 값을 받아서 격자선을 계산하려 할 때까지 값을 확인하지 않는다는 뜻입니다. SAGA가 결과를 생성하지 못 하므로, 기대했던 레이어를 생산하지 못 하게 되고, 앞에 나왔던 오류 메시지를 띄우게 됩니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:56
+msgid ""
+"Understanding this kind of problems will help you solve them and find an "
+"explanation to what is happening. As you can see in the error message, a "
+"test is performed to check that the connection with SAGA is working "
+"correctly, indicating you that there might be a problem in how the algorithm"
+" was executed. This applies not only to SAGA, but also to other external "
+"applications as well."
+msgstr "이런 유형의 문제를 이해하면 해당 문제를 해결하고, 어떤 일이 일어나고 있는지에 대한 설명을 찾는 데 도움이 됩니다. 오류 메시지에서 볼 수 있듯이 SAGA와의 연결이 제대로 작동하고 있는지 확인하기 위한 테스트를 수행했다는 사실은 알고리듬이 실행된 방식에 문제가 있을지도 모른다는 것을 암시하고 있습니다. 이 사실은 SAGA뿐만이 아니라 다른 외부 응용 프로그램들에도 동일하게 적용됩니다."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:58
+msgid ""
+"In the next lesson we will introduce the processing log, where information "
+"about commands run by geoalgorithms is kept, and you will see how to get "
+"more detail when issues like this appear."
+msgstr "다음 강의에서 지리 알고리듬이 실행하는 명령어에 대한 정보를 저장하는 처리 과정 로그를 소개하겠습니다. 앞에서 본 것과 같은 문제가 발생했을 때, 어떻게 더 자세한 정보를 얻을 수 았는지 배울 것입니다."

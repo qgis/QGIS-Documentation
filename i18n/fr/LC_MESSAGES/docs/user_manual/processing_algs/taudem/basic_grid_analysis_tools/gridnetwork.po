@@ -1,0 +1,186 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-03 12:56+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:6
+msgid "Grid Network"
+msgstr "Réseau de grille"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:11
+msgid ""
+"Creates 3 grids that contain for each grid cell: 1) the longest path, 2) the"
+" total path, and 3) the Strahler order number. These values are derived from"
+" the network defined by the D8 flow model."
+msgstr "Crée 3 grilles qui contiennent pour chaque cellule de la grille : 1) le chemin le plus long, 2) le chemin complet, et 3) le numéro d'ordre de Strahler. Ces valeurs sont dérivées du réseau défini par le modèle de flux D8."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:15
+msgid ""
+"The longest upslope length is the length of the flow path from the furthest "
+"cell that drains to each cell. The total upslope path length is the length "
+"of the entire grid network upslope of each grid cell. Lengths are measured "
+"between cell centers taking into account cell size and whether the direction"
+" is adjacent or diagonal."
+msgstr "La longueur de pente ascendante la plus longue est la longueur du cheminement de flux à partir de la cellule la plus éloignée qui s'écoule vers une cellule donnée. La longueur de pente ascendante totale est la longueur du réseau complet de pente ascendante pour chaque cellule. Les longueurs sont mesurées entre les centres des cellules en prenant en compte la taille de cellule et la direction adjacente ou diagonale."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:21
+msgid ""
+"Strahler order is defined as follows: A network of flow paths is defined by "
+"the D8 Flow Direction grid. Source flow paths have a Strahler order number "
+"of one. When two flow paths of different order join the order of the "
+"downstream flow path is the order of the highest incoming flow path. When "
+"two flow paths of equal order join the downstream flow path order is "
+"increased by 1. When more than two flow paths join the downstream flow path "
+"order is calculated as the maximum of the highest incoming flow path order "
+"or the second highest incoming flow path order + 1. This generalizes the "
+"common definition to cases where more than two flow paths join at a point."
+msgstr "L'ordre Strahler est défini comme suit: un réseau de cheminements de flux est défini par la grille de direction de flux D8. Les cheminements de flux source on un nombre d'ordre de Strahler à un. Lorsque deux cheminements de flux de différents ordres se rejoignent l'ordre de cheminement de flux d'écoulement est l'ordre du flux au plus gros débit. Lorsque deux cheminements de flux de même ordre se rejoignent, l'ordre est incrémenté de 1. Lorsque plus de deux cheminements de flux se rejoignent, le cheminement du flux d'écoulement est calculé en prenant le maximum de l'ordre du cheminement à plus grand débit ou en prenant le l'ordre + 1 du cheminement avec le second plus grand débit. Cela permet de généraliser la définition pour les cas où plus de deux cheminements se rejoignent en un point."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:31
+msgid ""
+"Where the optional mask grid and threshold value are input, the function is "
+"evaluated only considering grid cells that lie in the domain with mask grid "
+"value greater than or equal to the threshold value. Source (first order) "
+"grid cells are taken as those that do not have any other grid cells from "
+"inside the domain draining in to them, and only when two of these flow paths"
+" join is order propagated according to the ordering rules. Lengths are also "
+"only evaluated counting paths within the domain greater than or equal to the"
+" threshold."
+msgstr "Lorsqu'on paramètre en entrée la grille de masque et la valeur de seuil comme option, la fonction gère uniquement les cellules du domaine avec des valeurs de masque plus grandes ou égales à la valeur de seuil. Les cellules de source (premier ordre) sont prise parmi celles qui n'ont pas d'autres cellules de déversement vers elles au sein du domaine de travail. Lorsque deux des cheminements de flux se rejoignent, l'ordre est propagé selon les règles d'ordre. Les longueurs sont calculées en comptant les cheminements au sein du domaine qui sont plus grandes ou égales au seuil."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:39
+msgid ""
+"If the optional outlet point shapefile is used, only the outlet cells and "
+"the cells upslope (by the D8 flow model) of them are in the domain to be "
+"evaluated."
+msgstr "Si le fichier Shape des exutoires optionnels est utilisé, seules les cellules d'exutoire et les cellules de pente ascendante (par le modèle de flux D8) qui leur appartiennent font partie du domaine à évaluer."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:43
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:49
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D8`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:46
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr "Une grille de directions de flux D8 définies pour chaque cellule comme la direction d'une de ses 8 voisins adjacents ou ses voisins diagonaux avec une pente descendante la plus raide. Cette grille peut être obtenue depuis la sortie de l'outil **\"Directions de flux D8\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:56
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Fichier Shape des exutoires`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:52
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:59
+msgid "Optional."
+msgstr "En option."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:54
+msgid ""
+"A point shapefile defining the outlets of interest. If this input file is "
+"used, only the cells upslope of these outlet cells are considered to be "
+"within the domain being evaluated."
+msgstr "Un fichier Shape de points définissant les exutoires d'intérêt. Si le fichier en entrée est utilisé, seules les cellules de pente ascendante de ces exutoires seront considérées comme à l'intérieur du domaine à évaluer."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:66
+msgid "``Mask Grid`` [raster]"
+msgstr "``Grille de masque`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:61
+msgid ""
+"A grid that is used to determine the domain do be analyzed. If the mask grid"
+" value >= mask threshold (see below), then the cell will be included in the "
+"domain. While this tool does not have an edge contamination flag, if edge "
+"contamination analysis is needed, then a mask grid from a function like "
+"**\"D8 Contributing Area\"** that does support edge contamination can be "
+"used to achieve the same result."
+msgstr "Une grille qui est utilisée pour déterminer le domaine à analyser. Si la valeur de grille de masque est supérieure ou égale au seuil (voir ci-dessous), alors la cellule sera incluse dans le domaine. Même si cet outil ne gère pas la contamination des arcs, une grille de masque issue de l'outil **\"Surface contributive D8\"** qui gère cette contamination peut être utilisée pour obtenir le même effet."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:72
+msgid "``Mask Threshold`` [number]"
+msgstr "``Seuil de masque`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:69
+msgid ""
+"This input parameter is used in the calculation mask grid value >= mask "
+"threshold to determine if the grid cell is in the domain to be analyzed."
+msgstr "Ce paramètre d'entrée est utilisé dans le calcul de la valeur de la grille de masque >= seuil pour déterminer sur la cellule fait partie du domaine à analyser."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:72
+msgid "Default: *100*"
+msgstr "Par défaut : *100*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:75
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:80
+msgid "``Longest Upslope Length Grid`` [raster]"
+msgstr "``Grille de plus longue pente`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:78
+msgid ""
+"A grid that gives the length of the longest upslope D8 flow path terminating"
+" at each grid cell. Lengths are measured between cell centers taking into "
+"account cell size and whether the direction is adjacent or diagonal."
+msgstr "Une grille indiquant la longueur du plus long cheminement de flux en pente ascendante D8 se terminant à chaque cellule de la grille. Les longueurs sont mesurées entre les centres des cellules en prenant en compte la taille de la cellule et soit la direction adjacente, soit la direction diagonale."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:85
+msgid "``Total Upslope Length Grid`` [raster]"
+msgstr "``Grille de longueur totale de pente`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:83
+msgid ""
+"The total upslope path length is the length of the entire D8 flow grid "
+"network upslope of each grid cell. Lengths are measured between cell centers"
+" taking into account cell size and whether the direction is adjacent or "
+"diagonal."
+msgstr "La longueur totale de cheminement en pente ascendante est la longueur de l'ensemble du réseau de pente ascendante par la méthode de flux D8 de chaque cellule de la grille. Les longueurs sont mesurées entre les centres des cellules en prenant en compte la taille de la cellule et soit la direction adjacente, soit la direction diagonale."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:96
+msgid "``Strahler Network Order Grid`` [raster]"
+msgstr "``Grille de réseau d'ordre Strahler`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:88
+msgid ""
+"A grid giving the Strahler order number for each cell. A network of flow "
+"paths is defined by the D8 Flow Direction grid. Source flow paths have a "
+"Strahler order number of one. When two flow paths of different order join "
+"the order of the downstream flow path is the order of the highest incoming "
+"flow path. When two flow paths of equal order join the downstream flow path "
+"order is increased by 1. When more than two flow paths join the downstream "
+"flow path order is calculated as the maximum of the highest incoming flow "
+"path order or the second highest incoming flow path order + 1. This "
+"generalizes the common definition to cases where more than two flow paths "
+"join at a point."
+msgstr "Une grille donnant le nombre d'ordre Strahler de chaque cellule. Un réseau de cheminement de flux est défini par la grille de direction de flux D8. Les cheminements de flux source on un nombre d'ordre de Strahler à un. Lorsque deux cheminements de flux de différents ordres se rejoignent l'ordre de cheminement de flux d'écoulement est l'ordre du flux au plus gros débit. Lorsque deux cheminements de flux de même ordre se rejoignent, l'ordre est incrémenté de 1. Lorsque plus de deux cheminements de flux se rejoignent, le cheminement du flux d'écoulement est calculé en prenant le maximum de l'ordre du cheminement à plus grand débit ou en prenant le l'ordre + 1 du cheminement avec le second plus grand débit. Cela permet de généraliser la définition pour les cas où plus de deux cheminements se rejoignent en un point."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:99
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:106
+msgid "See also"
+msgstr "Voir également"

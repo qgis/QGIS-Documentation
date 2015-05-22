@@ -1,0 +1,364 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-03 17:48+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:6
+msgid "|LS| Web Mapping Services"
+msgstr "|LS| Web Mapping Services"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:8
+msgid ""
+"A Web Mapping Service (WMS) is a service hosted on a remote server. Similar "
+"to a website, you can access it as long as you have a connection to the "
+"server. Using QGIS, you can load a WMS directly into your existing map."
+msgstr "Een Web Mapping Service (WMS) is een service die wordt gehost op een server op afstand. Net als met een website kunt u er toegang tot verkrijgen, zolang u een verbinding met de server heeft. Met behulp van QGIS kunt u een WMS direct in uw bestaande kaart laden."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:12
+msgid ""
+"From the lesson on plugins, you will remember that it's possible to load a "
+"new raster image from Google, for example.  However, this is a once-off "
+"transaction: once you have downloaded the image, it doesn't change. A WMS is"
+" different in that it's a live service that will automatically refresh its "
+"view if you pan or zoom on the map."
+msgstr "Uit de les over plug-ins zult u hebben onthouden dat het mogelijk is een nieuwe rasterafbeelding te laden vanaf, bijvoorbeeld, Google. Dat is echter een eenmalige transactie: als u de afbeelding eenmaal heeft gedownload, wijzigt die niet meer. Een WMS is anders in die zin dat het een live service is die automatisch zijn weergave zal vernieuwen als u op de kaart inzoomt of erover schuift."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:18
+msgid ""
+"**The goal for this lesson:** To use a WMS and understand its limitations."
+msgstr "**Het doel voor deze les:** Een WMS gebruiken en de beperkingen ervan begrijpen."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:21
+msgid "|basic| |FA| Loading a WMS Layer"
+msgstr "|basic| |FA| Een WMS-laag laden"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:23
+msgid ""
+"For this exercise, you can either use the basic map you made at the start of"
+" the course, or just start a new map and load some existing layers into it. "
+"For this example, we used a new map and loaded the original "
+":guilabel:`places` and :guilabel:`landuse` layers and adjusted the "
+"symbology:"
+msgstr "Voor deze oefening kunt ofwel de basiskaart gebruiken die u aan het begin van de cursus heeft gemaakt, of gewoon een nieuwe kaart beginnen en er enkele bestaande lagen in laden. Voor dit voorbeeld gebruikten we een nieuwe kaart en laden de originele lagen :guilabel:`places` en :guilabel:`landuse` en pasten de symbologie aan:"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:31
+msgid ""
+"Load these layers into a new map, or use your original map with only these "
+"layers visible."
+msgstr "Laad deze lagen nu in een nieuwe kaart, of gebruik uw originele kaart met alleen deze lagen zichtbaar."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:34
+msgid ""
+"Before starting to add the WMS layer, first deactivate \"on the fly\" "
+"projection.  This may cause the layers to no longer overlap properly, but "
+"don't worry: we'll fix that later."
+msgstr "Deactiveer eerst \"Gelijktijdige CRS-transformatie gebruiken\" vóórdat u begint met het toevoegen van de WMS-laag. Dit kan er voor zorgen dat de lagen elkaar niet langer juist overlappen, maar geen zorgen, dat repareren we later."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:37
+msgid "To add WMS layers, click on the :guilabel:`Add WMS Layer` button:"
+msgstr "Klik op de knop :guilabel:`WMS-laag toevoegen` om WMS-lagen toe te voegen: "
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:39
+msgid "|mActionAddWmsLayer|"
+msgstr "|mActionAddWmsLayer|"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:41
+msgid ""
+"Remember how you connected to a SpatiaLite database at the beginning of the "
+"course. The :guilabel:`landuse`, :guilabel:`places`, and :guilabel:`water` "
+"layers are in that database. To use those layers, you first needed to "
+"connect to the database. Using a WMS is similar, with the exception that the"
+" layers are on a remote server."
+msgstr "Weet u nog hoe u verbonden was met een database van SpatiaLite aan het begin van de cursus?. De lagen :guilabel:`landuse`, :guilabel:`places` en :guilabel:`water` staan in die database. U moest eerst verbinden met die database om die lagen te kunnen gebruiken. Een WMS gebruiken is soortgelijk, met de uitzondering dat de lagen op een server op afstand staan."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:47
+msgid ""
+"To create a new connection to a WMS, click on the :guilabel:`New` button."
+msgstr "Klik op de knop :guilabel:`Nieuw` om een nieuwe verbinding naar een WMS te maken."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:49
+msgid ""
+"You'll need a WMS address to continue. There are several free WMS servers "
+"available on the Internet. One of these is `terrestris "
+"<http://ows.terrestris.de/osm/service>`_, which makes use of the "
+"`OpenStreetMap <http://wiki.openstreetmap.org/wiki/Main_Page>`_ dataset."
+msgstr "U heeft een adres voor een WMS nodig om door te gaan. Er zijn verschillende gratis servers voor WMS beschikbaar op het internet. Een daarvan is `terrestris <http://ows.terrestris.de/osm/service>`_, die gebruik maakt van de gegevensset van `OpenStreetMap <http://wiki.openstreetmap.org/wiki/Main_Page>`_."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:54
+msgid "To make use of this WMS, set it up in your current dialog, like this:"
+msgstr "Stel, om gebruik te maken van deze WMS, het als volgt in in uw huidige dialoogvenster:"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:59
+msgid "The value of the :guilabel:`Name` field should be :kbd:`terrestris`."
+msgstr "De waarde van het veld :guilabel:`Naam` zou :kbd:`terrestris` moeten zijn."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:60
+msgid ""
+"The value of the :guilabel:`URL` field should be "
+":kbd:`http://ows.terrestris.de/osm/service`."
+msgstr "De waarde van het veld :guilabel:`URL` zou :kbd:`http://ows.terrestris.de/osm/service` moeten zijn."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:62
+msgid "Click :guilabel:`OK`. You should see the new WMS server listed:"
+msgstr "Klik op :guilabel:`OK`. U zou de nieuwe server voor WMS moeten zien vermeld:"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:67
+msgid ""
+"Click :guilabel:`Connect`. In the list below, you should now see these new "
+"entries loaded:"
+msgstr "Klik op :guilabel:`Verbinden`. In de lijst hieronder zou u nu deze nieuwe items zien geladen:"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:73
+msgid "These are all the layers hosted by this WMS server."
+msgstr "Dit zijn alle lagen die worden gehost door de server van deze WMS."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:75
+msgid ""
+"Click once on the :guilabel:`OSM-WMS` layer. This will display its "
+":guilabel:`Coordinate Reference System`:"
+msgstr "Klik eenmaal op de laag :guilabel:`OSM-WMS`. Dit zal het :guilabel:`CoördinatenReferentieSysteem` ervan weergeven:"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:81
+msgid ""
+"Since we're not using :kbd:`WGS 84` for our map, let's see all the CRSs we "
+"have to choose from."
+msgstr "Laten we eens kijken naar alle CRS-en waaruit we kunnen kiezen, omdat we :kbd:`WGS 84` niet voor onze kaart gebruiken."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:84
+msgid ""
+"Click the :guilabel:`Change` button. You will see a standard "
+":guilabel:`Coordinate Reference System Selector` dialog."
+msgstr "Klik op de knop :guilabel:`Aanpassen`. U zult een standaard dialoogvenster zien voor :guilabel:`CoördinatenReferentieSysteem selecteren`."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:86
+msgid ""
+"We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo "
+"Mercator`."
+msgstr "We willen een *geprojecteerd* CRS, dus laten we kiezen voor :guilabel:`WGS 84 / Pseudo Mercator`."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:92
+#: ../../source/docs/training_manual/online_resources/wms.rst:110
+msgid "Click :guilabel:`OK`."
+msgstr "Klik op :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:93
+msgid ""
+"Click :guilabel:`Add` and the new layer will appear in your map as :guilabel"
+":`OSM-WMS`."
+msgstr "Klik op :guilabel:`Toevoegen` en de nieuwe laag zal in uw kaart verschijnen als :guilabel:`OSM-WMS`."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:95
+msgid ""
+"In the :guilabel:`Layers list`, click and drag it to the bottom of the list."
+msgstr "In de :guilabel:`Lagenlijst`, klik en sleep het tot onderin de lijst."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:97
+msgid ""
+"You will notice that your layers aren't located correctly. This is because "
+"\"on the fly\" projection is disabled. Let's enable it again, but using the "
+"same projection as the :guilabel:`OSM-WMS` layer, which is :guilabel:`WGS 84"
+" / Pseudo Mercator`."
+msgstr "Het zal u opvallen dat de lagen niet op de juist locatie staan. Dat komt omdat \"Gelijktijdige CRS-transformatie gebruiken\" is uitgeschakeld. Laten we die opnieuw inschakelen, maar laten we dezelfde projectie gebruiken als de laag :guilabel:`OSM-WMS` , wat :guilabel:`WGS 84 / Pseudo Mercator` is."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:102
+msgid "Enable \"on the fly\" projection."
+msgstr "Schakel \"Gelijktijdige CRS-transformatie gebruiken\" in."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:103
+msgid ""
+"In the :guilabel:`CRS` tab (:guilabel:`Project Properties` dialog), enter "
+"the value :kbd:`pseudo` in the :guilabel:`Filter` field:"
+msgstr "Voer, op de tab :guilabel:`CRS`  (dialoogvenster :guilabel:`Projectinstellingen`), de waarde :kbd:`pseudo` in in het veld :guilabel:`Filter`:"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:109
+msgid "Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list."
+msgstr "Kies :guilabel:`WGS 84 / Pseudo Mercator` uit de lijst."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:111
+msgid ""
+"Now right-click on one of your own layers in the :guilabel:`Layers list` and"
+" click :guilabel:`Zoom to layer extent`. You should see the |majorUrbanName|"
+" area:"
+msgstr "Klik nu met rechts op uw eigen lagen in de :guilabel:`Lagenlijst` en klik op :guilabel:`Zoom naar laag`. U zou het gebied |majorUrbanName| moeten zien:"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:118
+msgid ""
+"Note how the WMS layer's streets and our own streets overlap. That's a good "
+"sign!"
+msgstr "Zie nu hoe de straten van de WMS-laag en uw eigen straten elkaar overlappen. Dat is een goed teken!"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:122
+msgid "The nature and limitations of WMS"
+msgstr "De natuur en beperkingen van WMS"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:124
+msgid ""
+"By now you may have noticed that this WMS layer actually has many features "
+"in it. It has streets, rivers, nature reserves, and so on. What's more, even"
+" though it looks like it's made up of vectors, it seems to be a raster, but "
+"you can't change its symbology. Why is that?"
+msgstr "Het zou u inmiddels opgevallen kunnen zijn dat deze WMS-laag in feite vele objecten in zich draagt. Het heeft straten, rivieren, natuurreservaten, enzovoort. Maar verder, zelfs alsof het eruit ziet alsof het is gemaakt uit vectoren, het lijkt een raster te zijn, maar u kunt de symbologie ervan niet veranderen. Waarom is dat?"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:129
+msgid ""
+"This is how a WMS works: it's a map, similar to a normal map on paper, that "
+"you receive as an image. What usually happens is that you have vector "
+"layers, which QGIS renders as a map. But using a WMS, those vector layers "
+"are on the WMS server, which renders it as a map and sends that map to you "
+"as an image.  QGIS can display this image, but can't change its symbology, "
+"because all that is handled on the server."
+msgstr "Dit is hoe een WMS werkt: Het is een kaart, soortgelijk aan een normale kaart op papier, die u ontvangt als een afbeelding. Wat gewoonlijk gebeurd is dat u vectorlagen heeft, die QGIS rendert als een kaart. Maar bij het gebruiken van een WMS, bevinden die vectorlagen zich op de server van WMS, die het als een kaart rendert en die kaart naar u verzendt als een afbeelding. QGIS kan deze afbeelding weergeven, maar kan de symbologie ervan niet wijzigen, omdat dat allemaal wordt afgehandeld op de server."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:136
+msgid ""
+"This has several advantages, because you don't need to worry about the "
+"symbology. It's already worked out, and should be nice to look at on any "
+"competently designed WMS."
+msgstr "Dit heeft verschillende voordelen, omdat u zich geen zorgen hoeft te maken over de symbologie. Dat is allemaal al verwerkt, en zal goed genoeg zijn om te bekijken op elk competent ontworpen WMS."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:140
+msgid ""
+"On the other hand, you can't change the symbology if you don't like it, and "
+"if things change on the WMS server, then they'll change on your map as well."
+" This is why you sometimes want to use a Web Feature Service (WFS) instead, "
+"which gives you vector layers separately, and not as part of a WMS-style "
+"map."
+msgstr "Aan de andere kant kunt u de symbologie niet wijzigen als die u niet bevalt, en als er dingen wijzigen op de server van WMS, dan zullen zij ook op uw kaart wijzigen. Dat is waarom soms in plaats daarvan een Web Feature Service (WFS) wilt gebruiken, die u afzonderlijke vectorlagen geeft en niet als deel van een kaart in WMS-stijl."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:145
+msgid ""
+"This will be covered in the next lesson, however. First, let's add another "
+"WMS layer from the :guilabel:`terrestris` WMS server."
+msgstr "Dit zal echter worden behandeld in de volgende les. Laten we eerst een andere WMS-laag van de WMS-server :guilabel:`terrestris` toevoegen."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:151
+msgid "|basic| |TY|"
+msgstr "|basic| |TY|"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:153
+msgid "Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers list`."
+msgstr "Verberg de laag :guilabel:`OSM-WSM` in de :guilabel:`Lagenlijst`."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:154
+msgid ""
+"Add the \"ZAF CGS 1M Bedrock Lithostratigraphy\" WMS server at this URL: "
+":kbd:`http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms`"
+msgstr "Voeg de server voor WMS \"ZAF CGS 1M Bedrock Lithostratigraphy\" op deze URL: :kbd:`http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms` toe."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:156
+msgid ""
+"Load the :guilabel:`BEDROCKGEOLOGY` layer into the map (use the "
+":guilabel:`Add WMS Layer` button as before). Remember to check that it's in "
+"the same :guilabel:`WGS 84 / World Mercator` projection as the rest of your "
+"map!"
+msgstr "Laad de laag :guilabel:`BEDROCKGEOLOGY` in de kaart (gebruik de knop :guilabel:`WMS-laag toevoegen` zoals eerder). Denk er aan om die in dezelfde projectie :guilabel:`WGS 84 / World Mercator` te plaatsen als de rest van uw kaart!"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:159
+msgid ""
+"You might want to set its :guilabel:`Encoding` to :guilabel:`JPEG` and its "
+":guilabel:`Tile size` option to :kbd:`200` by :kbd:`200`, so that it loads "
+"faster:"
+msgstr "U wilt misschien :guilabel:`Afbeeldingsformaat` instellen op :guilabel:`JPEG` en de optie :guilabel:`Tile-grootte` op :kbd:`200` bij :kbd:`200`, zodat het sneller laadt:"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:166
+msgid ":ref:`Check your results <wms-1>`"
+msgstr ":ref:`Controleer uw resultaten <wms-1>`"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:172
+msgid "|moderate| |TY|"
+msgstr "|moderate| |TY|"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:174
+msgid ""
+"Hide all other WMS layers to prevent them rendering unnecessarily in the "
+"background."
+msgstr "Verberg alle andere WMS-lagen om te voorkomen dat ze op de achtergrond onnodig worden gerenderd."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:176
+msgid "Add the \"OGC\" WMS server at this URL: :kbd:`http://ogc.gbif.org:80/wms`"
+msgstr "Voeg de server voor WMS \"OGC\" op deze URL toe: :kbd:`http://ogc.gbif.org:80/wms` "
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:178
+msgid "Add the :guilabel:`bluemarble` layer."
+msgstr "Voeg de laag :guilabel:`bluemarble` toe."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:180
+msgid ":ref:`Check your results <wms-2>`"
+msgstr ":ref:`Controleer uw resultaten <wms-2>`"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:186
+msgid "|hard| |TY|"
+msgstr "|hard| |TY|"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:188
+msgid "Part of the difficulty of using WMS is finding a good (free) server."
+msgstr "Een deel van de moeilijkheid van het gebruiken van WMS is het vinden van een goede (gratis) server."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:190
+msgid ""
+"Find a new WMS at `spatineo.com <http://www.spatineo.com/>`_ (or elsewhere "
+"online). It must not have associated fees or restrictions, and must have "
+"coverage over the |majorUrbanName| study area."
+msgstr "Zoek een nieuwe WMS op `spatineo.com <http://www.spatineo.com/>`_ (of ergens anders online). Het moet geen geassocieerde kosten of beperkingen hebben en moet dekking hebben voor het te onderzoeken gebied |majorUrbanName|."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:194
+msgid ""
+"Remember that what you need in order to use a WMS is only its URL (and "
+"preferably some sort of description)."
+msgstr "Onthoud dat het enige wat u nodig heeft om een WMS te gebruiken is alleen de URL ervan (en bij voorkeur een soort beschrijving)."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:197
+msgid ":ref:`Check your results <wms-3>`"
+msgstr ":ref:`Controleer uw resultaten <wms-3>`"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:201
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:203
+msgid ""
+"Using a WMS, you can add inactive maps as backdrops for your existing map "
+"data."
+msgstr "U kunt inactieve kaarten om op terug te vallen toevoegen aan uw bestaande gegevens voor uw kaarten door een WMS te gebruiken,."
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:206
+msgid "|FR|"
+msgstr "|FR|"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:208
+msgid "`spatineo.com <http://www.spatineo.com/>`_"
+msgstr "`spatineo.com <http://www.spatineo.com/>`_"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:209
+msgid "`Geopole.org <http://geopole.org/>`_"
+msgstr "`Geopole.org <http://geopole.org/>`_"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:210
+msgid ""
+"`OpenStreetMap.org list of WMS servers "
+"<http://wiki.openstreetmap.org/wiki/WMS>`_"
+msgstr "`OpenStreetMap.org lijst van WMS-servers <http://wiki.openstreetmap.org/wiki/WMS>`_"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:214
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/online_resources/wms.rst:216
+msgid ""
+"Now that you've added an inactive map as a backdrop, you'll be glad to know "
+"that it's also possible to add features (such as the other vector layers you"
+" added before). Adding features from remote servers is possible by using a "
+"Web Feature Service (WFS). That's the topic of the next lesson."
+msgstr "Nu u een inactieve kaart om op terug te vallen heeft toegevoegd, zult u blij zijn te weten dat het ook mogelijk is om objecten (zoals de andere vectorlagen die u eerder toevoegd) kunt toevoegen. Toevoegen van objecten vanaf servers op afstand is mogelijk door een Web Feature Service (WFS) te gebruiken. Dat is het onderwerp van de volgende les."

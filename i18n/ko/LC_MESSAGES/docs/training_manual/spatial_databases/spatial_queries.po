@@ -1,0 +1,261 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-06-25 07:57+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:6
+msgid "|LS| Spatial Queries"
+msgstr "|LS| 공간 쿼리"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:8
+msgid ""
+"Spatial queries are no different from other database queries. You can use "
+"the geometry column like any other database column. With the installation of"
+" PostGIS in our database, we have additional functions to query our "
+"database."
+msgstr "공간 쿼리는 다른 데이터베이스 쿼리와 크게 다르지 않습니다. 도형 열도 다른 어떤 데이터베이스 열과 똑같이 사용할 수 있습니다. 데이터베이스에 PostGIS를 설치하면, 데이터베이스를 쿼리할 수 있는 추가적인 기능들이 생깁니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:12
+msgid ""
+"**The goal for this lesson:** To see how spatial functions are implemented "
+"similarly to \"normal\" non-spatial functions."
+msgstr "**이 강의의 목표:** 공간 기능이 얼마나 \"일반적인\" 비공간 기능과 비슷하게 시행되는지 보기."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:18
+msgid "Spatial Operators"
+msgstr "공간 연산자"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:20
+msgid ""
+"When you want to know which points are within a distance of 2 degrees to a "
+"point(X,Y) you can do this with:"
+msgstr "포인트(X,Y)에서 2˚ 거리 안에 어떤 포인트가 있는지 알고 싶을 경우 다음과 같이 쿼리할 수 있습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:29
+msgid "Result:"
+msgstr "결과 :"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:38
+msgid ""
+"the_geom value above was truncated for space on this page. If you want to "
+"see the point in human-readable coordinates, try something similar to what "
+"you did in the section \"View a point as WKT\", above."
+msgstr "앞의 'the_geom' 값은 이 페이지의 공간을 절약하기 위해 중간에서 잘랐습니다. 사람이 읽을 수 있는 좌표로 포인트를 보려면, 앞의 \"View a point as WKT\" 부분에서 한 작업과 비슷하게 해보십시오."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:42
+msgid ""
+"How do we know that the query above returns all the points within 2 "
+"*degrees*? Why not 2 *meters*? Or any other unit, for that matter?"
+msgstr "이 쿼리가 *2˚* 내에 있는 모든 포인트를 반환하는지 어떻게 알 수 있을까요? 왜 2m가 아닐까요? 다른 단위를 쓸 수도 있지 않을까요?"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:45
+msgid ":ref:`Check your results <spatial-queries-1>`"
+msgstr ":ref:`결과 확인 <spatial-queries-1>`"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:50
+msgid "Spatial Indexes"
+msgstr "공간 인덱스"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:52
+msgid ""
+"We also can define spatial indexes. A spatial index makes your spatial "
+"queries much faster. To create a spatial index on the geometry column use::"
+msgstr "사용자가 공간 인덱스도 정의할 수 있습니다. 공간 인덱스는 사용자의 공간 쿼리를 더 빠르게 해줍니다. 도형 열에 대해 공간 인덱스를 생성하려면 다음 선언문을 이용하십시오."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:62
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:139
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:173
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:262
+msgid "Result::"
+msgstr "결과 :"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:86
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate| 중급"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:87
+msgid "Modify the cities table so its geometry column is spatially indexed."
+msgstr "'cities' 테이블을 수정해서 도형 열에 공간 인덱스를 생성하십시오."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:89
+msgid ":ref:`Check your results <spatial-queries-2>`"
+msgstr ":ref:`결과 확인 <spatial-queries-2>`"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:93
+msgid "PostGIS Spatial Functions Demo"
+msgstr "PostGIS 공간 기능 시연"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:95
+msgid ""
+"In order to demo PostGIS spatial functions, we'll create a new database "
+"containing some (fictional) data."
+msgstr "PostGIS의 공간 기능을 시연하기 위해, 몇몇 (가상) 데이터를 담고 있는 새 데이터베이스를 생성하겠습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:98
+msgid "To start, create a new database (exit the psql shell first)::"
+msgstr "첫 번째로, 새 데이터베이스를 생성하십시오. (먼저 psql 셸에서 나오십시오.)"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:102
+msgid "Remember to install the postgis extensions::"
+msgstr "PostGIS 확장 프로그램을 설치하는 것을 잊지 마십시오."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:106
+msgid ""
+"Next, import the data provided in the :kbd:`exercise_data/postgis/` "
+"directory. Refer back to the previous lesson for instructions, but remember "
+"that you'll need to create a new PostGIS connection to the new database. You"
+" can import \\ from the terminal or via SPIT. Import the files into the "
+"following database tables:"
+msgstr "두 번째로, :kbd:`exercise_data/postgis/` 디렉터리에서 제공하는 데이터를 임포트하십시오. 이전 강의에서 배운 내용대로 하되, 새 데이터베이스에는 새 PostGIS 연결을 생성해야 한다는 것을 기억하십시오. 터미널에서 또는 SPIT을 통해 임포트할 수 있습니다. 파일을 다음 데이터베이스 테이블에 임포트하십시오."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:112
+msgid ":kbd:`points.shp` into :kbd:`building`"
+msgstr ":kbd:`points.shp` 를 :kbd:`building` 테이블로"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:113
+msgid ":kbd:`lines.shp` into :kbd:`road`"
+msgstr ":kbd:`lines.shp` 파일을 :kbd:`road` 테이블로"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:114
+msgid ":kbd:`polygons.shp` into :kbd:`region`"
+msgstr ":kbd:`polygons.shp` 파일을 :kbd:`region` 테이블로"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:116
+msgid ""
+"Load these three database layers into QGIS via the :guilabel:`Add PostGIS "
+"Layers` dialog, as usual. When you open their attribute tables, you'll note "
+"that they have both an :kbd:`id` field and a :kbd:`gid` field created by the"
+" PostGIS import."
+msgstr "평상시대로 :guilabel:`Add PostGIS Layers` 대화 창을 통해 이 세 데이터베이스 레이어를 QGIS로 불러오십시오. 이 레이어들의 속성 테이블을 열면, :kbd:`id` 필드와 함께 PostGIS 임포트 과정에서 생성된 :kbd:`gid` 필드를 둘 다 가지고 있다는 사실을 알 수 있습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:121
+msgid ""
+"Now that the tables are imported, we can use PostGIS to query the data. Go "
+"back to your terminal (command line) and enter the psql prompt by running::"
+msgstr "이제 테이블을 임포트했으니, PostGIS를 사용해서 데이터를 쿼리할 수 있습니다. 다시 터미널(커맨드 입력 창)으로 가서 다음 명령을 실행해서 psql 프롬프트로 들어가십시오."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:126
+msgid ""
+"We'll demo some of these select statements by creating views from them, so "
+"that you can open them in QGIS and see the results."
+msgstr "다음 선택된 선언문들을 시연해서 뷰를 생성하겠습니다. 이렇게 하면 QGIS에서 뷰를 열어 결과물을 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:130
+msgid "Select by location"
+msgstr "위치에 따른 선택"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:132
+msgid "Get all the buildings in the KwaZulu region::"
+msgstr "KwaZulu 지역에 있는 모든 건물을 가져오십시오."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:150
+msgid "Or, if we create a view from it::"
+msgstr "또는, 다음과 같이 뷰를 생성할 경우,"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:158
+msgid "Add the view as a layer and view it in QGIS:"
+msgstr "QGIS에 뷰를 레이어로 추가해서 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:164
+msgid "Select neighbors"
+msgstr "인접 검색"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:166
+msgid ""
+"Show a list of all the names of regions adjoining the Hokkaido region::"
+msgstr "Hokkaido 지역에 붙어 있는 모든 지역들의 명칭 목록을 가져오십시오."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:182
+msgid "As a view::"
+msgstr "뷰 생성 :"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:190
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:231
+msgid "In QGIS:"
+msgstr "QGIS에서 뷰를 봅니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:195
+msgid ""
+"Note the missing region (Queensland). This may be due to a topology error. "
+"Artifacts such as this can alert us to potential problems in the data. To "
+"solve this enigma without getting caught up in the anomalies the data may "
+"have, we could use a buffer intersect instead::"
+msgstr "오류 지역(Queensland)이 보이십니까? 위상 오류 때문일지도 모릅니다. 이런 오류는 데이터 안에 어떤 잠재적인 문제가 있다고 경고해주는 것일 수 있습니다. 데이터에 있을지도 모르는 이상을 피해 이 수수께끼를 풀려면, 대신 버퍼 인터섹트를 이용할 수 있습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:205
+msgid "This creates a buffer of 100 meters around the region Hokkaido."
+msgstr "Hokkaido 지역 주변에 100m의 버퍼를 생성했습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:207
+msgid "The darker area is the buffer:"
+msgstr "어두운 영역이 버퍼입니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:212
+msgid "Select using the buffer::"
+msgstr "이 버퍼를 써서 선택합니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:225
+msgid ""
+"In this query, the original buffer view is used as any other table would be."
+" It is given the alias :kbd:`a`, and its geometry field, :kbd:`a.the_geom`, "
+"is used to select any polygon in the :kbd:`region` table (alias :kbd:`b`) "
+"that intersects it. However, Hokkaido itself is excluded from this select "
+"statement, because we don't want it; we only want the regions adjoining it."
+msgstr "이 쿼리에서 다른 어떤 테이블과도 마찬가지로 원래 버퍼 뷰를 사용했습니다. 뷰에 :kbd:`a` 라는 가칭을 부여하고, :kbd:`a.the_geom` 이라는 해당 뷰의 도형 필드를 사용해서 :kbd:`region` 테이블(가칭 :kbd:`b` )에서 뷰와 교차하는 모든 폴리곤을 선택했습니다. 그러나 Hokkaido 자체는 이 선택 선언문에서 제외되었습니다. 해당 지역이 아니라 인접한 지역만을 원하기 때문입니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:236
+msgid ""
+"It is also possible to select all objects within a given distance, without "
+"the extra step of creating a buffer::"
+msgstr "버퍼 생성이라는 추가적인 단계 없이 어떤 주어진 거리 안에 있는 모든 오브젝트를 선택할 수도 있습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:246
+msgid ""
+"This achieves the same result, without need for the interim buffer step:"
+msgstr "이렇게 하면 임시적인 버퍼 단계 없이도 동일한 결과를 달성할 수 있습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:253
+msgid "Select unique values"
+msgstr "유일 값 선택"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:255
+msgid ""
+"Show a list of unique town names for all buildings in the Queensland "
+"region::"
+msgstr "Queensland 지역에 있는 모든 건물들에 대해 유일한 도시명 목록을 가져오십시오."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:273
+msgid "Further examples ..."
+msgstr "심화 예시"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:332
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:334
+msgid ""
+"You have seen how to query spatial objects using the new database functions "
+"from PostGIS."
+msgstr "PostGIS의 새로운 데이터베이스 기능을 사용해 공간 오브젝트를 쿼리하는 방법을 배웠습니다."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:338
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:340
+msgid ""
+"Next we're going to investigate the structures of more complex geometries "
+"and how to create them using PostGIS."
+msgstr "다음으로 좀 더 복잡한 도형의 구조 및 PostGIS를 써서 생성하는 방법을 알아보겠습니다."

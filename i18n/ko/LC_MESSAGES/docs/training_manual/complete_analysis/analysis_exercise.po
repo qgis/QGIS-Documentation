@@ -1,0 +1,1681 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-10 14:44+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:6
+msgid "|LS| Supplementary Exercise"
+msgstr "|LS| 보충 예제"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:8
+msgid ""
+"In this lesson, you will be guided through a complete GIS analysis in QGIS."
+msgstr "이 강의를 통해 QGIS를 이용한 완전한 GIS 분석을 하게 될 것입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:10
+msgid ""
+"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr "이 강의는 Linfiniti와 S. Motala(남아프리카공화국 케이프 페닌슐라 기술대학교)가 작성했습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:14
+msgid "Problem Statement"
+msgstr "과제 제시"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:16
+msgid ""
+"You are tasked with finding areas in and around the Cape Peninsula that are "
+"a suitable habitat for a rare fynbos plant species. The extent of your area "
+"of investigation in the Cape Peninsula is: south of Melkbosstrand, west of "
+"Strand. Botanists have provided you with the following preferences exhibited"
+" by the species in question:"
+msgstr "여러분은 케이프 페닌슐라 주변에서 희귀한 파인보스 식물종에 적합한 서식지를 찾아야 합니다. 케이프 페닌슐라에서의 조사 범위는 Melkbosstrand의 남쪽, Strand의 서쪽입니다. 식물학자들은 해당 종이 선호하는 환경을 다음과 같이 제시하고 있습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:22
+msgid "It grows on east facing slopes."
+msgstr "동쪽을 면한 비탈에서 자랍니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:23
+msgid "It grows on slopes with a gradient between 15% and 60%."
+msgstr "15%에서 60% 사이의 경사도에서 자랍니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:24
+msgid "It grows in areas that have a total annual rainfall of > 1200 mm."
+msgstr "연간 강수량이 1200mm를 초과하는 지역에서 자랍니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:25
+msgid "It will only be found at least 250 m away from any human settlement."
+msgstr "인간 거주지에서 최소 250m 이상 떨어진 지역에서 발견됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:26
+msgid ""
+"The area of vegetation in which it occurs should be at least 6000m2 in area."
+msgstr "초지의 면적이 최소 6000㎡ 이상이어야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:28
+msgid ""
+"As a volunteer for Cape Nature, you have agreed to search for the plant on "
+"the closest suitable piece of land to your house. Use your GIS skills to "
+"determine where you should go to look."
+msgstr "웨스턴 케이프 자연보전위원회의 자원봉사자로서, 여러분은 여러분의 집에서 가장 가까운 해당 식물에 적합한 토지를 찾아보기로 했습니다. 여러분의 GIS 기술을 이용해서 어디를 찾아봐야 할지 결정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:33
+msgid "Solution Outline"
+msgstr "해답의 개요"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:35
+msgid ""
+"In order to solve this problem, you will have to use the available data "
+"(available in :kbd:`exercise_data/more_analysis`) to find the candidate area"
+" that is closest to your house.  If you don't live in Cape Town (where this "
+"problem is based) you can choose any house in the Cape Town region. The "
+"solution will involve:"
+msgstr "이 문제를 해결하려면 여러분의 집에서 가장 가까운 후보 지역을 찾는 데 쓸 수 있는 데이터( :kbd:`exercise_data/more_analysis` 경로에서 찾을 수 있습니다)를 사용해야 할 것입니다. 여러분이 (이 문제가 제기된) 케이프타운에 살고 있지 않을 경우, 케이프타운 지역의 아무 집이나 선택해도 됩니다. 이 문제의 해답은 다음과 같은 단계를 포함할 것입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:41
+msgid ""
+"analysing the DEM to find the east facing slopes and the slopes with the "
+"correct gradients;"
+msgstr "DEM을 분석해서 알맞은 경사도를 가진, 동쪽을 면하고 있는 비탈을 찾고,"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:43
+msgid ""
+"analysing the rainfall raster to find the areas with the correct amount of "
+"rainfall;"
+msgstr "강수량 래스터를 분석해서 알맞은 강수량을 가진 곳을 찾아,"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:45
+msgid ""
+"analysing the Zoning vector layer to find areas that are away from human "
+"settlement and are of the correct size."
+msgstr "도시계획 벡터 레이어를 분석해서 인간 거주지에서 떨어져 있는, 알맞은 면적의 토지를 찾습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:49
+msgid "Setting up the Map"
+msgstr "맵 준비"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:51
+msgid ""
+"Click on the \"CRS status\" button in the extreme lower right corner of the "
+"screen. Under the :guilabel:`CRS` tab of the screen that appears, you will "
+"see the box :guilabel:`Coordinate reference systems of the world.`"
+msgstr "화면의 최우하단에 있는 \"CRS status\" 버튼을 클릭하십시오. 대화 창이 뜨면 :guilabel:`CRS` 탭에 있는 :guilabel:`Coordinate reference systems of the world` 박스가 보일 겁니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:54
+msgid ""
+"In this box, navigate to :menuselection:`Projected Coordinate Systems --> "
+"Universal Transverse Mercator (UTM)`."
+msgstr "이 박스에서 :menuselection:`Projected Coordinate Systems --> Universal Transverse Mercator (UTM)` 을 찾으십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:56
+msgid ""
+"Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code "
+":kbd:`32733`)."
+msgstr ":guilabel:`WGS 84 / UTM zone 33S` (EPSG 코드 :kbd:`32733`) 항목을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:58
+msgid ""
+"Click :guilabel:`OK`. The map is now in the :kbd:`UTM33S` coordinate "
+"reference system."
+msgstr ":guilabel:`OK` 를 클릭하십시오. 이제 맵이 :kbd:`UTM33S` 좌표계를 사용하게 됐습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:60
+msgid ""
+"Save the map by clicking on the :guilabel:`Save Project As` toolbar button, "
+"or use the :menuselection:`File --> Save Project As...` menu item."
+msgstr "툴바에서 :guilabel:`Save Project As` 버튼을 클릭하거나, 메뉴에서 :menuselection:`File --> Save Project As...` 항목을 선택해서 맵을 저장하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:62
+msgid ""
+"Save the map in a directory called :kbd:`Rasterprac` that you should create "
+"somewhere on your computer. You will save whatever layers you create in this"
+" directory as well."
+msgstr "여러분의 컴퓨터에 :kbd:`Rasterprac` 이라는 디렉터리를 생성한 다음, 맵을 해당 디렉터리에 저장하십시오. 여러분이 생성할 모든 레이어도 이 디렉터리에 저장하게 됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:67
+msgid "Loading Data into the Map"
+msgstr "맵에 데이터 불러오기"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:69
+msgid ""
+"In order to process the data, you will need to load the necessary layers "
+"(street names, zones, rainfall, DEM) into the map canvas."
+msgstr "데이터를 처리하려면 맵 캔버스에 필수 레이어(도로명, 도시 구역, 강수량, DEM)를 로드해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:73
+msgid "For vectors ..."
+msgstr "벡터의 경우"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:75
+msgid ""
+"Click on the :guilabel:`Add Vector Layer` button, or use the "
+":menuselection:`Layer --> Add Vector Layer...` menu item."
+msgstr ":guilabel:`Add Vector Layer` 버튼을 클릭하거나, 메뉴에서 :menuselection:`Layer --> Add Vector Layer...` 항목을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:77
+msgid ""
+"In the dialog that appears, ensure that the :guilabel:`File` radio button is"
+" selected."
+msgstr "대화 창이 뜨면, :guilabel:`File` 라디오 버튼을 선택하도록 하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:79
+msgid "Click on the :guilabel:`Browse` button."
+msgstr ":guilabel:`Browse` 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:80
+msgid ""
+"In the dialog that appears, open the "
+":guilabel:`exercise_data/more_analysis/streets` directory."
+msgstr "대화 창이 뜨면, :guilabel:`exercise_data/more_analysis/streets` 디렉터리를 여십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:82
+msgid "Select the file :guilabel:`Street_Names_UTM33S.shp`."
+msgstr ":guilabel:`Street_Names_UTM33S.shp` 파일을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:83
+msgid "Click :guilabel:`Open`."
+msgstr ":guilabel:`Open` 을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:85
+msgid ""
+"The dialog closes and shows the original dialog, with the file path "
+"specified in the text field next to the :guilabel:`Browse` button. This "
+"allows you to ensure that the correct file is selected. It is also possible "
+"to enter the file path in this field manually, should you wish to do so."
+msgstr "대화 창이 닫히면서 이전 대화 창의 :guilabel:`Browse` 버튼 옆에 있는 텍스트 란에 파일 경로가 지정됩니다. 이렇게 하면 정확한 파일을 선택했는지 확인할 수 있습니다. 또 원한다면 이 텍스트 란에 파일 경로를 직접 입력해도 됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:90
+msgid ""
+"Click :guilabel:`Open`. The vector layer will load in your map. Its color is"
+" automatically assigned. It will be changed later."
+msgstr ":guilabel:`Open` 을 클릭합니다. 맵에 벡터 레이어를 로드할 것입니다. 색상은 자동 할당됩니다. 이후 단계에서 색상을 조절하겠습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:92
+msgid "Rename the layer to :kbd:`Streets`."
+msgstr "레이어의 명칭을 :kbd:`Streets` 로 변경합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:93
+msgid ""
+"Right-click on it in the :guilabel:`Layers list` (by default, the pane along"
+" the left-hand side of the screen)."
+msgstr "(기본적으로 화면의 왼쪽에 있는 패널인) :guilabel:`Layers list` 에 있는 해당 레이어를 오른쪽 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:95
+msgid ""
+"Click :guilabel:`Rename` in the dialog that appears and rename it, pressing "
+"the :guilabel:`Enter` key when done."
+msgstr "컨텍스트 메뉴에서 :guilabel:`Rename` 을 클릭해서 명칭을 변경한 다음, 완료 시 :guilabel:`Enter` 키를 누르십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:97
+msgid ""
+"Repeat the vector adding process, but this time select the "
+":guilabel:`Generalised_Zoning_Dissolve_UTM33S.shp` file in the "
+":guilabel:`Zoning` directory."
+msgstr "벡터 추가 과정을 반복합니다. 다만 이번에는 :guilabel:`Zoning` 디렉터리에 있는 :guilabel:`Generalised_Zoning_Dissolve_UTM33S.shp` 파일을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:100
+msgid "Rename it to :kbd:`Zoning`."
+msgstr "해당 레이어의 명칭을 :kbd:`Zoning` 으로 변경하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:103
+msgid "For rasters ..."
+msgstr "래스터의 경우"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:105
+msgid ""
+"Click on the :guilabel:`Add Raster Layer` button, or use the "
+":menuselection:`Layer --> Add Raster Layer...` menu item."
+msgstr ":guilabel:`Add Raster Layer` 버튼을 클릭하거나, 메뉴에서 :menuselection:`Layer --> Add Raster Layer...` 항목을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:107
+msgid ""
+"Navigate to the appropriate file, select it, and click :guilabel:`Open`."
+msgstr "적절한 파일을 찾아 선택한 다음, :guilabel:`Open` 을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:108
+msgid ""
+"Do this for each of the two raster files. The files you want are "
+":guilabel:`DEM/reproject/DEM` and "
+":guilabel:`Rainfall/reprojected/rainfall.tif`."
+msgstr "두 래스터 파일에 대해 이 과정을 반복합니다. 필요한 파일은 :guilabel:`DEM/reproject/DEM` 과 :guilabel:`Rainfall/reprojected/rainfall.tif` 입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:111
+msgid ""
+"Rename the rainfall raster to :kbd:`Rainfall` (with an initial capital). "
+"Initially when you load them, the images will be gray rectangles. Don't "
+"worry, this will be changed later."
+msgstr "강수량 래스터의 명칭을 :kbd:`Rainfall` (첫 글자를 대문자로) 로 변경합니다. 처음 불러왔을 때 이미지가 회색 사각형으로 보일 것입니다. 걱정하지 마십시오. 이후 단계에서 조정할 것입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:114
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:252
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:281
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:468
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:492
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:535
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:720
+msgid "Save the map."
+msgstr "맵을 저장하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:116
+msgid ""
+"In order to properly see what's going on, the symbology for the layers needs"
+" to be changed."
+msgstr "레이어에 담긴 정보를 제대로 보려면 레이어의 심볼을 변경해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:120
+msgid "Changing the symbology of vector layers"
+msgstr "벡터 레이어의 심볼 변경"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:122
+msgid ""
+"In the :guilabel:`Layers list`, right-click on the :guilabel:`Streets` "
+"layer."
+msgstr ":guilabel:`Layers list` 에서 :guilabel:`Streets` 레이어를 오른쪽 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:123
+msgid "Select :guilabel:`Properties` from the menu that appears."
+msgstr "컨텍스트 메뉴에서 :guilabel:`Properties` 항목을 선택합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:124
+msgid "Switch to the :guilabel:`Style` tab in the dialog that appears."
+msgstr "대화 창이 뜨면 :guilabel:`Style` 탭을 선택합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:125
+msgid ""
+"Click on the button labeled :guilabel:`Change`, with a square showing the "
+"current color of the :guilabel:`Streets` layer."
+msgstr ":guilabel:`Streets` 레이어의 현재 색상을 보여주는 사각형 옆의 :guilabel:`Change` 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:127
+msgid "Select a new color in the dialog that appears."
+msgstr "표준 색상 대화 창에서 새 색상을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:128
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:241
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:269
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:298
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:317
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:339
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:384
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:423
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:454
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:532
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:551
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:586
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:644
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:675
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:718
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:747
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` 를 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:129
+msgid ""
+"Click :guilabel:`OK` again in the :guilabel:`Layer Properties` dialog. This "
+"will change the color of the :guilabel:`Streets` layer."
+msgstr "다시 :guilabel:`Layer Properties` 창의 :guilabel:`OK` 를 클릭하십시오. :guilabel:`Streets` 레이어의 색상이 변경됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:131
+msgid ""
+"Follow a similar process for the :guilabel:`Zoning` layer and choose an "
+"appropriate color for it."
+msgstr ":guilabel:`Zoning` 레이어에 대해서도 비슷한 과정을 따라 적절한 색상을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:135
+msgid "Changing the symbology of raster layers"
+msgstr "래스터 레이어의 심볼 변경"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:137
+msgid "Raster layer symbology is somewhat different."
+msgstr "래스터 레이어의 심볼은 조금 다릅니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:139
+msgid ""
+"Open the :guilabel:`Properties` dialog for the :guilabel:`Rainfall` raster."
+msgstr ":guilabel:`Rainfall` 레스터의 :guilabel:`Layer Properties` 대화 창을 엽니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:140
+msgid ""
+"Switch to the :guilabel:`Style` tab. You'll notice that this style dialog is"
+" very different from the version used for vector layers."
+msgstr ":guilabel:`Style` 탭을 선택하십시오. 벡터 레이어 용 스타일 대화 창과는 매우 다르다는 것을 알 수 있습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:142
+msgid "Ensure that the button :guilabel:`Use standard deviation` is selected."
+msgstr ":guilabel:`Use standard deviation` 버튼을 선택했는지 확인하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:143
+msgid ""
+"Change the value in the associated box to :kbd:`2.00` (it should be set to "
+":kbd:`0.00` by default)."
+msgstr "그 옆에 있는 텍스트 란의 값을 :kbd:`2.00` 으로 변경하십시오. (기본값 :kbd:`0.00` 으로 설정돼 있을 겁니다.)"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:145
+msgid ""
+"Under the heading :guilabel:`Contrast enhancement`, change the value of the "
+":guilabel:`Current` dropdown list to :guilabel:`Stretch to MinMax`."
+msgstr ":guilabel:`Contrast enhancement` 라는 제목 아래에 있는 :guilabel:`Current` 드롭다운 목록의 값을 :guilabel:`Stretch to MinMax` 로 변경합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:147
+msgid ""
+"Click :guilabel:`OK`. The \"Rainfall\" raster, if visible, should change "
+"colors, allowing you to see different brightness values for each pixel."
+msgstr ":guilabel:`OK` 를 클릭하십시오. \"Rainfall\" 래스터가 보인다면, 각 픽셀의 서로 다른 밝기 값을 볼 수 있도록 색상이 변경될 것입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:149
+msgid ""
+"Repeat this process for the DEM, but set the standard deviations used for "
+"stretching to :kbd:`4.00`."
+msgstr "DEM에 대해서도 이 과정을 반복하십시오. 다만 구간화에 쓰이는 표준 편차를 :kbd:`4.00` 으로 설정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:153
+msgid "Changing the layer order"
+msgstr "레이어 순서 변경"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:155
+msgid ""
+"In the :guilabel:`Layers list`, click and drag layers up and down to change "
+"the order they appear in on the map."
+msgstr ":guilabel:`Layers list` 에서, 레이어들을 아래위로 클릭 & 드래그해서 맵 상에 표출되는 순서를 변경하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:157
+msgid ""
+"Newer versions of QGIS may have a :guilabel:`Control rendering order` "
+"checkbox beneath the :guilabel:`Layers list`. Ensure that it is checked."
+msgstr "QGIS 신규 버전의 경우, :guilabel:`Layers list` 아래에 :guilabel:`Control rendering order` 체크박스가 있을 것입니다. 체크돼 있는지 확인하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:160
+msgid ""
+"Now that all the data is loaded and properly visible, the analysis can "
+"begin. It is best if the clipping operation is done first. This is so that "
+"no processing power is wasted on computing values in areas that aren't going"
+" to be used anyway."
+msgstr "이제 모든 데이터를 불러와서 제대로 시각화했으니, 분석을 시작할 수 있습니다. 처음에 오리기 작업을 하는 편이 제일 좋습니다. 그렇게 하면 어차피 사용하지도 않을 지역의 값들을 계산하는 데 컴퓨터의 계산 능력을 허비하지 않아도 됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:166
+msgid "Find the Correct Districts"
+msgstr "알맞은 구역 찾기"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:168
+msgid ""
+"Load the vector layer :kbd:`admin_boundaries/Western_Cape_UTM33S.shp` into "
+"your map."
+msgstr "여러분의 맵에 벡터 레이어 :kbd:`admin_boundaries/Western_Cape_UTM33S.shp` 를 불러오십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:170
+msgid "Rename it to :kbd:`Districts`."
+msgstr "명칭을 :kbd:`Districts` 로 변경하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:171
+msgid ""
+"Right-click on the :guilabel:`Districts` layer in the :guilabel:`Layers "
+"list`."
+msgstr ":guilabel:`Layers list` 에서 :guilabel:`Districts` 레이어를 오른쪽 클릭합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:172
+msgid ""
+"In the menu that appears,  select the :guilabel:`Query...` menu item. The "
+":guilabel:`Query Builder` dialog appears."
+msgstr "컨텍스트 메뉴에서 :guilabel:`Query...` 항목을 선택하십시오. :guilabel:`Query Builder` 대화 창이 나타납니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:175
+msgid ""
+"You will now build a query to select only the following list of districts:"
+msgstr "이제 다음 구역들만 선택하는 쿼리를 만들어보겠습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:177
+msgid ":kbd:`Bellville`,"
+msgstr ":kbd:`Bellville`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:178
+msgid ":kbd:`Cape`,"
+msgstr ":kbd:`Cape`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:179
+msgid ":kbd:`Goodwood`,"
+msgstr ":kbd:`Goodwood`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:180
+msgid ":kbd:`Kuils River`,"
+msgstr ":kbd:`Kuils River`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:181
+msgid ":kbd:`Mitchells Plain`,"
+msgstr ":kbd:`Mitchells Plain`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:182
+msgid ":kbd:`Simons Town`, and"
+msgstr ":kbd:`Simons Town`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:183
+msgid ":kbd:`Wynberg`."
+msgstr ":kbd:`Wynberg`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:185
+msgid ""
+"In the :guilabel:`Fields` list, double-click on the :guilabel:`NAME_2` "
+"field. It appears in the :guilabel:`SQL where clause` text field below."
+msgstr ":guilabel:`Fields` 목록에서 :guilabel:`NAME_2` 항목을 더블클릭하십시오. 아래쪽에 있는 :guilabel:`SQL where clause` 텍스트 란에 나타날 것입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:187
+msgid ""
+"Click the :guilabel:`=` button; an :kbd:`=` sign is added to the SQL query."
+msgstr ":guilabel:`=` 버튼을 클릭하면 SQL 쿼리에 :kbd:`=` 부호가 추가됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:188
+msgid ""
+"Click the :guilabel:`All` button below the (currently empty) "
+":guilabel:`Values` list. After a short delay, this will populate the "
+":guilabel:`Values` list with the values of the selected field "
+"(:guilabel:`NAME_2`)."
+msgstr "(현재 비어 있는) :guilabel:`Values` 목록 아래 있는 :guilabel:`All` 버튼을 클릭하십시오. 잠시 후 :guilabel:`Values` 목록이 선택한 항목( :guilabel:`NAME_2` )의 값들로 채워질 것입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:192
+msgid ""
+"Double-click the value :guilabel:`Bellville` in the :guilabel:`Values` list."
+" As before, this will be added to the SQL query."
+msgstr ":guilabel:`Values` 목록에서 :guilabel:`Bellville` 값을 더블클릭하십시오. 이전과 마찬가지로 SQL 쿼리에 추가됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:195
+msgid ""
+"In order to select more than one district, you'll need to use the :kbd:`OR` "
+"boolean operator."
+msgstr "하나 이상의 구역을 선택하려면, 불 연산자 :kbd:`OR` 를 사용해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:198
+msgid "Click the :guilabel:`OR` button and it will be added to the SQL query."
+msgstr ":guilabel:`OR` 버튼을 클릭해서 SQL 쿼리에 추가하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:199
+msgid ""
+"Using a process similar to the above, add the following to the existing SQL "
+"query:"
+msgstr "앞과 비슷한 과정을 거쳐, 다음 내용을 기존 쿼리에 추가하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:206
+msgid ""
+"Add another :kbd:`OR` operator, then work your way through the list of "
+"districts above in a similar fashion."
+msgstr "다시 :kbd:`OR` 연산자를 추가한 다음, 비슷한 방법으로 구역 목록을 차례로 추가하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:208
+msgid "The final query should be"
+msgstr "최종 쿼리는 다음과 같아야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:216
+msgid ""
+"Click :guilabel:`OK`. The districts shown in your map are now limited to "
+"those in the list above."
+msgstr ":guilabel:`OK` 를 클릭하십시오. 이제 맵 상에 앞의 목록에 있는 구역들만 보이게 됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:220
+msgid "Clip the Rasters"
+msgstr "래스터 오리기"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:222
+msgid ""
+"Now that you have an area of interest, you can clip the rasters to this "
+"area."
+msgstr "이제 관심 지역을 지정했으니, 래스터를 이 지역에 맞춰 자를 수 있습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:224
+msgid ""
+"Ensure that the only layers that are visible are the :guilabel:`DEM`, "
+":guilabel:`Rainfall` and :guilabel:`Districts` layers."
+msgstr ":guilabel:`DEM`, :guilabel:`Rainfall` 과 :guilabel:`Districts` 레이어만 보이도록 확인하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:226
+msgid ":guilabel:`Districts` must be on top so that they are visible."
+msgstr ":guilabel:`Districts` 가 보이도록 맨 위에 위치해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:227
+msgid ""
+"Open the clipping dialog by selecting the menu item :menuselection:`Raster "
+"--> Extraction --> Clipper`."
+msgstr "메뉴에서 :menuselection:`Raster --> Extraction --> Clipper` 항목을 선택해서 오리기 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:229
+msgid ""
+"In the :guilabel:`Input file (raster)` dropdown list, select the "
+":guilabel:`DEM` layer."
+msgstr ":guilabel:`Input file (raster)` 드롭다운 목록에서 :guilabel:`DEM` 레이어를 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:231
+msgid ""
+"Specify an output location in the :guilabel:`Output file` text field by "
+"clicking the :guilabel:`Select...` button."
+msgstr ":guilabel:`Select...` 버튼을 클릭해서 :guilabel:`Output file` 텍스트 란에 산출물의 경로를 지정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:233
+msgid "Navigate to your :kbd:`Rasterprac` directory."
+msgstr "사용자의 :kbd:`Rasterprac` 디렉터리를 찾아가십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:234
+msgid "Enter a file name."
+msgstr "파일명을 입력하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:235
+msgid "Save the file. Leave the :guilabel:`No data value` checkbox unchecked."
+msgstr "파일을 저장하십시오. :guilabel:`No data value` 체크박스는 체크하지 않습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:236
+msgid ""
+"Use the :guilabel:`Extent` clipping mode by ensuring the correct radio "
+"button is selected."
+msgstr "정확한 라디오 버튼을 선택했는지 확인해서 :guilabel:`Extent` 오리기 모드를 사용합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:238
+msgid ""
+"Click and drag an area in the canvas, so that the area which includes the "
+"districts is selected."
+msgstr "캔버스 안의 지역을 클릭 & 드래그해서 구역들을 포함하고 있는 지역을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:240
+msgid "Check the :guilabel:`Load into canvas when finished` box."
+msgstr ":guilabel:`Load into canvas when finished` 체크박스를 체크합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:242
+msgid ""
+"After the clipping operation is completed, DO NOT CLOSE the "
+":guilabel:`Clipper` dialog. (Doing so would cause you to lose the clipping "
+"area that you have already defined.)"
+msgstr "오리기 작업이 완료된 후, :guilabel:`Clipper` 대화 창을 **닫지 마십시오.** (그러면 이미 지정한 오리기 지역을 잃게 됩니다.)"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:245
+msgid ""
+"Select the :guilabel:`Rainfall` raster in the :guilabel:`Input file "
+"(raster)` dropdown list and choose a different output file name."
+msgstr ":guilabel:`Input file (raster)` 드롭다운 목록에 있는 :guilabel:`Rainfall` 래스터를 선택하고 산출 파일명을 다르게 지정합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:247
+msgid ""
+"Do not change any other options. Do not alter the existing clipping area "
+"which you drew previously. Leave everything the same and click "
+":guilabel:`OK`."
+msgstr "다른 옵션들은 그대로 두십시오. 여러분이 이전 단계에 지정한 오리기 지역도 건드리지 마십시오. 모든 것을 그대로 둔 채 :guilabel:`OK` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:250
+msgid ""
+"After the second clipping operation has completed, you may close the "
+":guilabel:`Clipper` dialog."
+msgstr "이 두 번째 오리기 작업이 완료된 다음에, :guilabel:`Clipper` 대화 창을 닫아도 됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:255
+msgid "Clean up the map"
+msgstr "맵 정리"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:257
+msgid ""
+"Remove the original :guilabel:`Rainfall` and :guilabel:`DEM` layers from the"
+" :guilabel:`Layers list`:"
+msgstr ":guilabel:`Layers list` 에서 원래 :guilabel:`Rainfall` 및 :guilabel:`DEM` 레이어를 제거합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:260
+msgid "Right-click on these layers and select :guilabel:`Remove`."
+msgstr "해당 레이어들을 오른쪽 클릭한 다음 :guilabel:`Remove` 를 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:262
+msgid ""
+"This will not remove the data from your storage device, it will merely take "
+"it out of your map."
+msgstr "사용자의 저장 장치에서 데이터를 삭제하는 것이 아니라, 사용자 맵에서 해당 데이터를 빼는 것뿐입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:265
+msgid "Deactivate the labels on the :guilabel:`Streets` layer:"
+msgstr ":guilabel:`Streets` 레이어의 라벨을 비활성화합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:267
+msgid "Click the :guilabel:`Labeling` button."
+msgstr ":guilabel:`Labeling` 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:268
+msgid "Uncheck the :guilabel:`Label this layer with` box."
+msgstr ":guilabel:`Label this layer with` 체크박스를 해제하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:271
+msgid "Show all the :guilabel:`Streets` again:"
+msgstr "다시 모든 :guilabel:`Streets` 를 보이도록 하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:273
+msgid "Right-click on the layer in the :guilabel:`Layers list`."
+msgstr ":guilabel:`Layers list` 에서 해당 레이어를 오른쪽 클릭합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:274
+msgid "Select :guilabel:`Query`."
+msgstr ":guilabel:`Query` 를 선택합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:276
+msgid ""
+"In the :guilabel:`Query` dialog that appears, click the :guilabel:`Clear` "
+"button, then click :guilabel:`OK`."
+msgstr ":guilabel:`Query` 대화 창이 나타나면, :guilabel:`Clear` 버튼을 클릭한 다음 :guilabel:`OK` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:278
+msgid "Wait while the data is loaded. All the streets will now be visible."
+msgstr "데이터를 불러올 동안 기다리십시오. 이제 모든 도로가 보일 것입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:279
+msgid ""
+"Change the raster symbology as before (see *Changing the symbology of raster"
+" layers*)."
+msgstr "래스터 심볼을 이전처럼 변경하십시오. ( *래스터 레이어의 심볼 변경* 참조)"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:282
+msgid ""
+"You can now hide the vector layers by unchecking the box next to them in the"
+" :guilabel:`Layers list`. This will make the map render faster and will save"
+" you some time."
+msgstr "이제 :guilabel:`Layers list` 에서 레이어 옆에 있는 체크박스를 해제해서 벡터 레이어를 보이지 않게 할 수 있습니다. 이렇게 하면 맵을 더 빨리 렌더링할 수 있어 시간을 절약할 수 있습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:286
+msgid ""
+"In order to create the hillshade, you will need to use a plugin that was "
+"written for this purpose."
+msgstr "음영기복도를 생성하려면, 그 목적을 위해 작성된 플러그인을 사용해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:290
+msgid "Activating the :guilabel:`Raster Terrain Analysis` plugin"
+msgstr ":guilabel:`Raster Terrain Analysis` 플러그인 활성화"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:292
+msgid ""
+"This plugin is included by default in QGIS 1.8. However, it may not be "
+"immediately visible. To check if it is accessible on your system:"
+msgstr "QGIS 1.8부터 기본적으로 이 플러그인을 포함하고 있습니다. 하지만 기본 상태에서는 보이지 않을 수도 있습니다. 사용자 시스템에서 사용할 수 있는지 확인하려면,"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:295
+msgid "Click on the menu item :guilabel:`Plugins --> Manage Plugins...`."
+msgstr "메뉴에서 :menuselection:`Plugins --> Manage Plugins...` 항목을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:296
+msgid ""
+"Ensure that the box next to :guilabel:`Raster Terrain Analysis plugin` is "
+"selected."
+msgstr ":guilabel:`Raster Terrain Analysis plugin` 옆에 있는 체크박스가 체크되어 있는지 확인하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:300
+msgid ""
+"You will now have access to this plugin via the :menuselection:`Raster --> "
+"Terrain analysis` menu item."
+msgstr "이제 :menuselection:`Raster --> Terrain analysis` 메뉴 항목을 통해 이 플러그인을 사용할 수 있습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:303
+msgid ""
+"Remember that plugins may sometimes depend on certain Python modules being "
+"installed on your system.  Should a plugin refuse to work while complaining "
+"of missing dependencies, please ask your tutor or lecturer for assistance."
+msgstr "가끔 플러그인이 사용자 시스템에 설치된 특정 파이썬 모듈에 의존하고 있을 수도 있습니다. 플러그인이 의존성 문제로 작동하지 않을 경우, 강사에게 도움을 청하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:308
+msgid "Create the hillshade"
+msgstr "음영기복도 생성"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:310
+msgid ""
+"In the :guilabel:`Layers list`, ensure that the :guilabel:`DEM` is the "
+"active layer (i.e., it is highlighted by having been clicked on)."
+msgstr ":guilabel:`Layers list` 에서 :guilabel:`DEM` 레이어가 활성화돼 있는지 (예를 들어 클릭된 상태로 하이라이트돼 있는지) 확인하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:312
+msgid ""
+"Click on the :menuselection:`Raster --> Terrain analysis --> Hillshade` menu"
+" item to open the :guilabel:`Hillshade` dialog."
+msgstr "메뉴에서 :menuselection:`Raster --> Terrain analysis --> Hillshade` 항목을 클릭해서 :guilabel:`Hillshade` 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:314
+msgid ""
+"Specify an appropriate location for the output layer and call it "
+":guilabel:`hillshade`."
+msgstr "산출물 레이어를 위한 적절한 경로를 지정한 뒤 :guilabel:`hillshade` 라고 명명합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:316
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:338
+msgid "Check the :guilabel:`Add result to project` box."
+msgstr ":guilabel:`Add result to project` 체크박스를 체크했는지 확인하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:318
+msgid "Wait for it to finish processing."
+msgstr "처리가 끝날 때까지 기다리십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:320
+msgid ""
+"The new :guilabel:`hillshade` layer has appeared in your :guilabel:`Layers "
+"list`."
+msgstr ":guilabel:`Layers list` 에 새 :guilabel:`hillshade` 레이어가 추가됐습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:323
+msgid ""
+"Right-click on the :guilabel:`hillshade` layer in your :guilabel:`Layers "
+"list` and bring up the :guilabel:`Properties` dialog."
+msgstr ":guilabel:`Layers list` 에 있는 :guilabel:`hillshade` 레이어를 오른쪽 클릭해서 :guilabel:`Properties` 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:325
+msgid ""
+"Click on the :guilabel:`Transparency` tab and set the transparency slider to"
+" :kbd:`80%`."
+msgstr ":guilabel:`Transparency` 탭을 클릭한 다음 투명도 슬라이더를 :kbd:`80%` 로 설정합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:327
+msgid "Click :guilabel:`OK` on the dialog."
+msgstr "대화 창의 :guilabel:`OK` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:328
+msgid ""
+"Note the effect when the transparent hillshade is superimposed over the "
+"clipped DEM."
+msgstr "오린 DEM 위에 겹쳐진 반투명한 음영기복도의 효과를 확인해보십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:332
+msgid "Slope"
+msgstr "경사도"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:334
+msgid "Click on the menu item :menuselection:`Raster --> Terrain analysis`."
+msgstr "메뉴에서 :menuselection:`Raster --> Terrain analysis` 항목을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:335
+msgid ""
+"Select the :guilabel:`Slope` analysis type, with the clipped DEM as the "
+"input layer."
+msgstr ":guilabel:`Slope` 분석 유형을 선택하고, 입력 레이어를 오린 DEM으로 설정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:337
+msgid "Specify an appropriate file name and location for output purposes."
+msgstr "산출물을 위한 적절한 파일명 및 경로를 지정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:341
+msgid ""
+"The slope image has been calculated and added to the map. However, as usual "
+"it is just a gray rectangle. To properly see what's going on, change the "
+"symbology as follows."
+msgstr "경사도 이미지가 계산되어 맵에 추가되었습니다. 하지만 이 역시 회색 사각형이군요. 그 내용을 제대로 보려면, 다음과 같이 심볼을 변경하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:345
+msgid ""
+"Open the layer :guilabel:`Properties` dialog (as usual, via the right-click "
+"menu of the layer)."
+msgstr "(마찬가지로 해당 레이어의 컨텍스트 메뉴를 통해) 레이어의 :guilabel:`Properties` 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:347
+msgid "Click on the :guilabel:`Style` tab."
+msgstr ":guilabel:`Style` 탭을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:348
+msgid ""
+"Where it says :guilabel:`Grayscale` (in the :guilabel:`Color map` dropdown "
+"menu), change it to :guilabel:`Pseudocolor`."
+msgstr "(:guilabel:`Color map` 드롭다운 메뉴가) :guilabel:`Grayscale` 이라면 :guilabel:`Pseudocolor` 로 변경하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:350
+msgid ""
+"Ensure that the :guilabel:`Use standard deviation` radio button is selected."
+msgstr ":guilabel:`Use standard deviation` 라디오 버튼을 선택했는지 확인하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:353
+msgid "Aspect"
+msgstr "향"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:355
+msgid ""
+"Use the same approach as for calculating the slope, but select "
+":guilabel:`Aspect` in the initial dialog box."
+msgstr "경사를 계산할 때와 동일한 방법을 사용하지만, 초기 대화 창에서 :guilabel:`Aspect` 를 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:358
+msgid "Remember to save the map periodically."
+msgstr "주기적으로 맵을 저장하는 일을 잊지 마십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:361
+msgid "Reclassifying rasters"
+msgstr "래스터 재범주화"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:363
+msgid "Click the menu item :menuselection:`Raster --> Raster calculator`."
+msgstr "메뉴에서 :menuselection:`Raster --> Raster calculator` 항목을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:364
+msgid ""
+"Specify your :kbd:`Rasterprac` directory as the location for the output "
+"layer."
+msgstr "산출물 레이어를 위한 경로로 사용자의 :kbd:`Rasterprac` 디렉터리를 지정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:366
+msgid "Ensure that the :guilabel:`Add result to project` box is selected."
+msgstr ":guilabel:`Add result to project` 체크박스를 체크했는지 확인하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:368
+msgid ""
+"In the :guilabel:`Raster bands` list on the left, you will see all the "
+"raster layers in your :guilabel:`Layers list`. If your Slope layer is called"
+" :guilabel:`slope`, it will be listed as :guilabel:`slope@1`."
+msgstr "왼쪽에 있는 :guilabel:`Raster bands` 목록에서 사용자의 :guilabel:`Layers list` 에 있는 모든 래스터 레이어를 볼 수 있습니다. 사용자의 경사도 레이어 명칭이 :guilabel:`slope` 인 경우, 목록에 :guilabel:`slope@1` 이라고 나타날 것입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:372
+msgid ""
+"The slope needs to be between :kbd:`15` and :kbd:`60` degrees. Everything "
+"less than :kbd:`15` or greater than :kbd:`60` must therefore be excluded."
+msgstr "경사는 :kbd:`15` ˚에서 :kbd:`60` ˚ 사이여야 합니다. 따라서 :kbd:`15` ˚ 미만이나 :kbd:`60` ˚ 초과 지역을 제외해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:375
+msgid ""
+"Using the list items and buttons in the interface, build the following "
+"expression:"
+msgstr "인터페이스에 있는 목록 항목 및 버튼을 이용해서 다음 표현식을 작성하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:382
+msgid ""
+"Set the :guilabel:`Output layer` field to an appropriate location and file "
+"name."
+msgstr ":guilabel:`Output layer` 란에 적절한 경로 및 파일명을 설정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:386
+msgid ""
+"Now find the correct aspect (east-facing: between :kbd:`45` and :kbd:`135` "
+"degrees) using the same approach."
+msgstr "이제 동일한 방법으로 알맞은 향(동쪽 : :kbd:`45` ˚에서 :kbd:`135` ˚ 사이)을 찾으십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:389
+msgid "Build the following expression:"
+msgstr "다음 표현식을 작성하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:395
+msgid ""
+"Find the correct rainfall (greater than :kbd:`1200mm`) the same way. Build "
+"the following expression:"
+msgstr "역시 동일한 방법으로 알맞은 강수량( :kbd:`1200mm` 초과)을 찾으십시오. 다음 표현식을 작성하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:402
+msgid ""
+"Having reclassified all the rasters, you will now see them displayed as gray"
+" rectangles in your map (assuming that they have been added to the map "
+"correctly). To properly display raster data with only two classes (:kbd:`1` "
+"and :kbd:`0`, meaning true or false), you will need to change their "
+"symbology."
+msgstr "모든 레이어를 재범주화했다면, 이제 (레이어들이 맵에 제대로 추가됐다면) 맵 상에 회색 사각형들을 볼 수 있을 것입니다. 두 가지 범주만을 가진 (:kbd:`1` 과 :kbd:`0`, 즉 참과 거짓) 래스터 데이터를 제대로 표현하려면 래스터의 심볼을 변경해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:408
+msgid "Setting the style for the reclassified layers"
+msgstr "재범주화된 레이어의 스타일 설정"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:410
+msgid ""
+"Open the :guilabel:`Style` tab in the layer's :guilabel:`Properties` dialog "
+"as usual."
+msgstr "레이어의 :guilabel:`Properties` 대화창에 있는 :guilabel:`Style` 탭을 선택합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:412
+msgid ""
+"Under the heading :guilabel:`Load min / max values from band`, select the "
+":guilabel:`Actual (slower)` radio button."
+msgstr ":guilabel:`Load min / max values from band` 라는 제목 아래 있는 :guilabel:`Actual (slower)` 라디오 버튼을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:414
+msgid "Click the :guilabel:`Load` button."
+msgstr ":guilabel:`Load` 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:416
+msgid ""
+"The :guilabel:`Custom min / max values` fields should now populate with "
+":kbd:`0` and :kbd:`1`, respectively. (If they do not, then there was a "
+"mistake with your reclassification of the data, and you will need to go over"
+" that part again.)"
+msgstr "이제 :guilabel:`Custom min / max values` 란이 :kbd:`0` 과 :kbd:`1` 로 채워질 것입니다. (아닐 경우, 사용자가 데이터를 재범주화할 때 실수를 했다는 의미입니다. 다시 재범주화 작업을 해야 합니다.)"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:421
+msgid ""
+"Under the heading :guilabel:`Contrast enhancement`, set the "
+":guilabel:`Current` dropdown list to :guilabel:`Stretch To MinMax`."
+msgstr ":guilabel:`Contrast enhancement` 라는 제목 아래에 있는 :guilabel:`Current` 드롭다운 목록을 :guilabel:`Stretch to MinMax` 로 설정합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:424
+msgid ""
+"Do this for all three reclassified rasters, and remember to save your work!"
+msgstr "재범주화된 세 래스터에 대해 이 과정을 각각 반복한 다음, 반드시 작업을 저장하십시오!"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:426
+msgid ""
+"The only criterion that remains is that the area must be :kbd:`250m` away "
+"from urban areas. We will satisfy this requirement by ensuring that the "
+"areas we compute are :kbd:`250m` or more from the edge of a rural area. "
+"Hence, we need to find all rural areas first."
+msgstr "하나 남은 기준은 도시 지역에서 :kbd:`250m` 이상 떨어진 지역이어야 한다는 것입니다. 교외 지역의 경계에서 :kbd:`250m` 이상 안쪽에 있는 지역을 계산해서 이 요구 사항을 만족시킬 것입니다. 따라서, 먼저 모든 교외 지역을 찾아야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:432
+msgid "Finding rural areas"
+msgstr "교외 지역 찾기"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:434
+msgid "Hide all layers in the :guilabel:`Layers list`."
+msgstr ":guilabel:`Layers list` 에 있는 모든 레이어를 숨기십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:435
+msgid "Unhide the :guilabel:`Zoning` vector layer."
+msgstr ":guilabel:`Zoning` 벡터 레이어만 활성화하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:436
+msgid "Right-click on it and bring up the :guilabel:`Query` dialog."
+msgstr "해당 레이어를 오른쪽 클릭한 다음, :guilabel:`Query` 대화 창을 불러옵니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:437
+msgid "Build the following query:"
+msgstr "다음 쿼리를 작성하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:443
+msgid ""
+"See the earlier instructions for building the :guilabel:`Streets` query if "
+"you get stuck."
+msgstr "작성 방법을 잘 모르겠다면 이전 단계에서 :guilabel:`Streets` 쿼리 작성 시 지침을 참조하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:445
+msgid "When you're done, close the :guilabel:`Query` dialog."
+msgstr "작성 완료 시 :guilabel:`Query` 대화 창을 닫으십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:447
+msgid ""
+"You should see a collection of polygons from the :guilabel:`Zoning` layer. "
+"You will need to save these to a new layer file."
+msgstr ":guilabel:`Zoning` 레이어에서 추출된 폴리곤 집합이 보일 것입니다. 이것을 새 레이어 파일로 저장해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:450
+msgid ""
+"On the right-click menu for :guilabel:`Zoning`, select :guilabel:`Save "
+"as...`."
+msgstr ":guilabel:`Zoning` 레이어를 오른쪽 클릭한 다음 :guilabel:`Save As...` 를 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:452
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:461
+msgid "Save your layer under the :guilabel:`Zoning` directory."
+msgstr ":guilabel:`Zoning` 디렉터리에 새 레이어를 저장하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:453
+msgid "Name the output file :kbd:`rural.shp`."
+msgstr "산출물 파일명을 :kbd:`rural.shp` 으로 지정합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:455
+msgid "Add the layer to your map."
+msgstr "맵에 이 레이어를 추가하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:456
+msgid ""
+"Click the menu item :menuselection:`Vector --> Geoprocessing Tools --> "
+"Dissolve`."
+msgstr "메뉴에서 :menuselection:`Vector --> Geoprocessing Tools --> Dissolve` 항목을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:458
+msgid ""
+"Select the :guilabel:`rural` layer as your input vector layer, while leaving"
+" the :guilabel:`Use only selected features` box unchecked."
+msgstr "입력 벡터 레이어로 :guilabel:`rural` 레이어를 선택하고, :guilabel:`Use only selected features` 체크박스를 해제하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:460
+msgid ""
+"Under :guilabel:`Dissolve field`, select :guilabel:`--- Dissolve all ---`."
+msgstr ":guilabel:`Dissolve field` 아래, :guilabel:`--- Dissolve all ---` 을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:462
+msgid ""
+"Click :guilabel:`OK`. A dialog will appear asking whether you want to add "
+"the new layer to the TOC (\"Table of Contents\", referring to the "
+":guilabel:`Layers list`)."
+msgstr ":guilabel:`OK` 를 클릭합니다. 새 레이어를 TOC(\"Table of Contents\", :guilabel:`Layers list` 를 의미)에 추가하기 원하느냐고 묻는 대화 창이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:465
+msgid "Click :guilabel:`Yes`."
+msgstr ":guilabel:`Yes` 를 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:466
+msgid "Close the :guilabel:`Dissolve` dialog."
+msgstr ":guilabel:`Dissolve` 대화 창을 닫으십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:467
+msgid "Remove the :guilabel:`rural` and :guilabel:`Zoning` layers."
+msgstr ":guilabel:`rural` 및 :guilabel:`Zoning` 레이어를 제거하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:470
+msgid ""
+"Now you need to exclude the areas that are within :kbd:`250m` from the edge "
+"of the rural areas. Do this by creating a negative buffer, as explained "
+"below."
+msgstr "이제 교외 지역 경계선에서 안쪽으로 :kbd:`250m` 까지의 지역을 제외해야 합니다. 다음 단계에서 설명할 음의 버퍼를 생성하면 됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:474
+msgid "Creating a negative buffer"
+msgstr "음의 버퍼 생성"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:476
+msgid ""
+"Click the menu item :menuselection:`Vector --> Geoprocessing Tools --> "
+"Buffer(s)`."
+msgstr "메뉴에서 :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` 항목을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:478
+msgid ""
+"In the dialog that appears, select the :guilabel:`rural_dissolve` layer as "
+"your input vector layer (:guilabel:`Use only selected features` should not "
+"be checked)."
+msgstr "대화 창이 뜨면, 입력 벡터 레이어로 :guilabel:`rural_dissolve` 레이어를 선택합니다. (:guilabel:`Use only selected features` 체크박스를 해제해야 합니다.)"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:481
+msgid ""
+"Select the :guilabel:`Buffer distance` button and enter the value "
+":kbd:`-250` into the associated field; the negative value means that the "
+"buffer must be an internal buffer."
+msgstr ":guilabel:`Buffer distance` 버튼을 선택한 다음 옆의 텍스트 란에 :kbd:`-250` 값을 입력하십시오. 음수 값은 이 버퍼가 내부 버퍼라는 것을 의미합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:484
+msgid "Check the :guilabel:`Dissolve buffer results` box."
+msgstr ":guilabel:`Dissolve buffer results` 체크박스를 체크하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:485
+msgid ""
+"Set the output file to the same directory as the other rural vector files."
+msgstr "다른 교외 벡터 파일과 동일한 디렉터리에 산출물 파일을 저장하도록 설정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:486
+msgid "Name the output file :kbd:`rural_buffer.shp`."
+msgstr "산출물 파일명을 :kbd:`rural_buffer.shp` 로 지정합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:487
+msgid "Click :guilabel:`Save`."
+msgstr ":guilabel:`Save` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:488
+msgid "Click :guilabel:`OK` and wait for the processing to complete."
+msgstr ":guilabel:`OK` 를 클릭한 다음 처리가 완료될 때까지 기다리십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:489
+msgid "Select :guilabel:`Yes` on the dialog that appears."
+msgstr "대화 창이 뜨면 :guilabel:`Yes` 를 선택합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:490
+msgid "Close the :guilabel:`Buffer` dialog."
+msgstr ":guilabel:`Buffer` 대화 창을 닫습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:491
+msgid "Remove the :guilabel:`rural_dissolve` layer."
+msgstr ":guilabel:`rural_dissolve` 레이어를 제거하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:494
+msgid ""
+"In order to incorporate the rural zones into the same analysis with the "
+"three existing rasters, it will need to be rasterized as well. But in order "
+"for the rasters to be compatible for analysis, they will need to be the same"
+" size. Therefore, before you can rasterize, you'll need to clip the vector "
+"to the same area as the three rasters. A vector can only be clipped by "
+"another vector, so you will first need to create a bounding box polygon the "
+"same size as the rasters."
+msgstr "교외 구역을 기존 세 래스터와 함께 동일한 분석 작업에 포함시키려면, 해당 레이어도 래스터화해야 합니다. 그러나 래스터들을 분석 작업을 위해 호환시키려면 각 래스터들의 크기가 똑같아야 합니다. 따라서 래스터화 작업 전에 벡터를 세 래스터와 같은 크기로 오려내야 합니다. 벡터는 벡터로만 오릴 수 있으므로, 래스터와 동일한 크기의 범위(bounding box) 폴리곤을 생성해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:503
+msgid "Creating a bounding box vector"
+msgstr "범위 벡터 생성"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:505
+msgid ""
+"Click on the menu item :guilabel:`Layer --> New --> New Shapefile Layer...`."
+msgstr "메뉴에서 :guilabel:`Layer --> New --> New Shapefile Layer...` 항목을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:506
+msgid ""
+"Under the :guilabel:`Type` heading, select the :guilabel:`Polygon` button."
+msgstr ":guilabel:`Type` 제목 아래 :guilabel:`Polygon` 버튼을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:507
+msgid ""
+"Click :guilabel:`Specify CRS` and set the coordinate reference system "
+":kbd:`WGS 84 / UTM zone 33S : EPSG:32733`."
+msgstr ":guilabel:`Specify CRS` 를 클릭한 다음, 좌표계를 :kbd:`WGS 84 / UTM zone 33S : EPSG:32733` 으로 설정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:509
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:614
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:631
+msgid "Click OK."
+msgstr ":guilabel:`OK` 를 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:510
+msgid ""
+"Click :guilabel:`OK` on the :guilabel:`New Vector Layer` dialog as well."
+msgstr ":guilabel:`New Vector Layer` 대화 창의 :guilabel:`OK` 도 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:511
+msgid "Save the vector in the :guilabel:`Zoning` directory."
+msgstr ":guilabel:`Zoning` 디렉터리에 벡터를 저장합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:512
+msgid "Name the output file :kbd:`bbox.shp`."
+msgstr "산출물 파일명을 :kbd:`bbox.shp` 로 지정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:513
+msgid ""
+"Hide all layers except the new :guilabel:`bbox` layer and one of the "
+"reclassified rasters."
+msgstr "새 :guilabel:`bbox` 레이어 및 재범주화된 래스터 가운데 하나를 제외한 모든 레이어를 비활성화하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:515
+msgid ""
+"Ensure that the :guilabel:`bbox` layer is highlighted in the "
+":guilabel:`Layers list`."
+msgstr ":guilabel:`Layers list` 에서 :guilabel:`bbox` 레이어가 하이라이트되었는지 확인하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:517
+msgid ""
+"Navigate to the :menuselection:`View > Toolbars` menu item and ensure that "
+":guilabel:`Digitizing` is selected. You should then see a toolbar icon with "
+"a pencil or koki on it. This is the :guilabel:`Toggle editing` button."
+msgstr "메뉴에서 :menuselection:`View > Toolbars` 항목을 찾은 다음, :guilabel:`Digitizing` 이 선택되었는지 확인하십시오. 그러면 연필 또는 사인펜이 그려진 툴바 아이콘이 보일 것입니다. 바로 :guilabel:`Toggle editing` 버튼입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:520
+msgid ""
+"Click the :guilabel:`Toggle editing` button to enter *edit mode*. This "
+"allows you to edit a vector layer."
+msgstr ":guilabel:`Toggle editing` 버튼을 클릭해서 *편집 모드* 로 들어갑니다. 그러면 벡터 레이어를 편집할 수 있습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:522
+msgid ""
+"Click the :guilabel:`Add feature` button, which should be nearby the "
+":guilabel:`Toggle editing` button. It may be hidden behind a double arrow "
+"button; if so, click the double arrows to show the :guilabel:`Digitizing` "
+"toolbar's hidden buttons."
+msgstr ":guilabel:`Toggle editing` 버튼 근처에 있는 :guilabel:`Add feature` 버튼을 클릭하십시오. 쌍화살표 뒤에 숨어 있을 수도 있습니다. 이 경우, 쌍화살표를 클릭해서 :guilabel:`Digitizing` 툴바의 숨어 있는 버튼들을 보이도록 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:526
+msgid ""
+"With the :guilabel:`Add feature` tool activated, left-click on the corners "
+"of the raster. You may need to zoom in with the mouse wheel to ensure that "
+"it is accurate. To pan across the map in this mode, click and drag in the "
+"map with the middle mouse button or mouse wheel."
+msgstr ":guilabel:`Add feature` 도구를 활성화시킨 다음, 래스터의 구석들을 클릭하십시오. 정확한 위치를 찾기 위해 마우스 휠로 줌인해야 할 수도 있습니다. 이 모드에서 맵을 이동하려면 마우스 중간 버튼이나 마우스 휠로 맵을 클릭 & 드래그하면 됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:530
+msgid "For the fourth and final point, right-click to finalize the shape."
+msgstr "네 번째이자 마지막 포인트에서 오른쪽 클릭해서 피처를 완성하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:531
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:717
+msgid "Enter any arbitrary number for the shape ID."
+msgstr "shape ID를 위한 임의의 숫자를 입력하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:533
+msgid "Click the :guilabel:`Save edits` button."
+msgstr ":guilabel:`Save edits` 버튼을 클릭합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:534
+msgid ""
+"Click the :guilabel:`Toggle editing` button to stop your editing session."
+msgstr ":guilabel:`Toggle editing` 버튼을 클릭해서 편집 작업을 완료하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:537
+msgid ""
+"Now that you have a bounding box, you can use it to clip the rural buffer "
+"layer."
+msgstr "이제 범위를 생성했으니, 이를 사용해서 교외 버퍼 레이어를 오려낼 수 있습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:541
+msgid "Clipping a vector layer"
+msgstr "벡터 레이어 오리기"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:543
+msgid ""
+"Ensure that only the :guilabel:`bbox` and :guilabel:`rural_buffer` layers "
+"are visible, with the latter on top."
+msgstr ":guilabel:`rural_buffer` 레이어가 :guilabel:`bbox` 위에 오도록 한 다음, 이 두 레이어만 보이도록 하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:545
+msgid ""
+"Click the menu item :menuselection:`Vector > Geoprocessing Tools > Clip`."
+msgstr "메뉴에서 :menuselection:`Vector > Geoprocessing Tools > Clip` 항목을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:546
+msgid ""
+"In the dialog that appears, set the input vector layer to "
+":guilabel:`rural_buffer` and the clip layer to :guilabel:`bbox`, with both "
+":guilabel:`Use only selected features` boxes unchecked."
+msgstr "대화 창이 뜨면 입력 벡터 레이어에 :guilabel:`rural_buffer` 를, 오리기 레이어에 :guilabel:`bbox` 를 설정합니다. 양쪽 모두 :guilabel:`Use only selected features`  체크박스를 해제해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:549
+msgid "Put the output file under the :guilabel:`Zoning` directory."
+msgstr "산출물 파일을 :guilabel:`Zoning` 디렉터리에 저장합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:550
+msgid "Name the output file :kbd:`rural_clipped`."
+msgstr "산출물 파일명을 :kbd:`rural_clipped` 로 지정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:552
+msgid "When prompted to add the layer to the TOC, click :guilabel:`Yes`."
+msgstr "레이어를 TOC에 추가하느냐는 메시지 창이 뜨면 :guilabel:`Yes` 를 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:553
+msgid "Close the dialog."
+msgstr "대화 창을 닫으십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:554
+msgid "Compare the three vectors and see the results for yourself."
+msgstr "세 벡터를 비교해 보면서 결과를 직접 살펴보십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:555
+msgid ""
+"Remove the :guilabel:`bbox` and :guilabel:`rural_buffer` layers, then save "
+"your map."
+msgstr ":guilabel:`bbox` 및 :guilabel:`rural_buffer` 레이어를 제거한 다음, 사용자 맵을 저장합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:558
+msgid "Now it's ready to be rasterized."
+msgstr "이제 래스터화 준비가 끝났습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:561
+msgid "Rasterizing a vector layer"
+msgstr "벡터 레이어 래스터화"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:563
+msgid ""
+"You'll need to specify a pixel size for a new raster that you create, so "
+"first you'll need to know the size of one of your existing rasters."
+msgstr "여러분이 생성할 새 래스터의 픽셀 크기를 설정해야 합니다. 따라서 먼저 기존 래스터의 픽셀 크기를 알아야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:566
+msgid ""
+"Open the :guilabel:`Properties` dialog of any of the three existing rasters."
+msgstr "기존 세 래스터 가운데 아무거나 골라서 :guilabel:`Properties` 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:567
+msgid "Switch to the :guilabel:`Metadata` tab."
+msgstr ":guilabel:`Metadata` 탭을 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:568
+msgid ""
+"Make a note of the :kbd:`X` and :kbd:`Y` values under the heading "
+":guilabel:`Dimensions` in the Metadata table."
+msgstr "메타데이터 테이블의 :guilabel:`Dimensions` 라는 제목 아래 있는 :kbd:`X` 와 :kbd:`Y` 값을 기억하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:570
+msgid "Close the :guilabel:`Properties` dialog."
+msgstr ":guilabel:`Properties` 대화 창을 닫으십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:571
+msgid ""
+"Click on the :menuselection:`Raster --> Conversion --> Rasterize` menu item."
+" You may receive a warning about a dataset being unsupported. Click it away "
+"and ignore it."
+msgstr "메뉴에서 :menuselection:`Raster --> Conversion --> Rasterize` 항목을 클릭하십시오. 지원하지 않는 데이터셋이라는 경고가 뜰지도 모릅니다. 무시하고 클릭해서 메시지 창을 닫으십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:574
+msgid "Select :guilabel:`rural_clipped` as your input layer."
+msgstr "입력 레이어로 :guilabel:`rural_clipped` 를 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:575
+msgid "Set an output file location inside the :guilabel:`Zoning` directory."
+msgstr "산출물 파일을 :guilabel:`Zoning` 디렉터리에 저장하도록 설정합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:576
+msgid "Name the output file :kbd:`rural_raster.tif`."
+msgstr "산출물 파일명을 :kbd:`rural_raster.tif` 로 지정합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:577
+msgid ""
+"Check the :guilabel:`New size` box and enter the :kbd:`X` and :kbd:`Y` "
+"values you made a note of earlier."
+msgstr ":guilabel:`New size` 체크박스를 체크하고, 방금 기억해둔 :kbd:`X` 와 :kbd:`Y` 값을 입력하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:579
+msgid "Check the :guilabel:`Load into canvas` box."
+msgstr ":guilabel:`Load into canvas...` 체크박스를 체크하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:580
+msgid ""
+"Click the pencil icon next to the text field which shows the command that "
+"will be run. At the end of the existing text, add a space and then the text "
+":kbd:`-burn 1`. This tells the Rasterize function to \"burn\" the existing "
+"vector into the new raster and give the areas covered by the vector the new "
+"value of :kbd:`1` (as opposed to the rest of the image, which will "
+"automatically be :kbd:`0`)."
+msgstr "실행될 명령어를 보여주는 텍스트 란 옆에 있는 연필 아이콘을 클릭하십시오. 입력되어 있는 텍스트 끝 부분에 공백을 입력한 후 :kbd:`-burn 1` 이라고 입력합니다. 이렇게 하면 래스터화 기능이 기존 벡터를 새 래스터로 \"굽고\" 벡터가 커버하는 영역을 :kbd:`1` 이라는 새 값으로 채웁니다. (이미지의 나머지 영역은 자동적으로 :kbd:`0` 값이 됩니다.)"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:587
+msgid "The new raster should show up in your map once it has been computed."
+msgstr "계산 완료 시 새 래스터가 사용자 맵에 추가될 것입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:588
+msgid ""
+"The new raster will look like a grey rectangle – you may change the display "
+"style as you did for the reclassified rasters."
+msgstr "새 래스터가 회색 사각형처럼 보일 것입니다. 래스터를 재범주화했을 때처럼 표출 스타일을 변경해볼 수도 있습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:590
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:651
+msgid "Save your map."
+msgstr "맵을 저장하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:592
+msgid ""
+"Now that you have all four criteria each in a separate raster, you need to "
+"combine them to see which areas satisfy all the criteria. To do so, the "
+"rasters will be multiplied with each other. When this happens, all "
+"overlapping pixels with a value of :kbd:`1` will retain the value of "
+":kbd:`1`, but if a pixel has the value of :kbd:`0` in any of the four "
+"rasters, then it will be :kbd:`0` in the result. In this way, the result "
+"will contain only the overlapping areas."
+msgstr "이제 모든 4가지 기준이 각각 개별적인 래스터로 준비되었으므로, 모든 기준을 만족하는 지역을 보려면 래스터들을 결합해야 합니다. 그러려면 래스터들을 서로 곱하면 됩니다. 그렇게 하면 서로 겹치는 픽셀의 값이 모두 :kbd:`1` 이면 :kbd:`1` 값을 유지하지만, 네 래스터 가운데 하나라도 :kbd:`0` 값의 픽셀인 경우엔 결과적으로 :kbd:`0` 이 됩니다. 이런 방식으로, 서로 겹치는 지역만을 담은 결과물이 나오게 됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:600
+msgid "Combining rasters"
+msgstr "래스터 결합"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:602
+msgid "Click the :menuselection:`Raster --> Raster calculator` menu item."
+msgstr "메뉴에서 :menuselection:`Raster --> Raster calculator` 항목을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:603
+msgid ""
+"Build the following expression (with the appropriate names for your layers, "
+"depending on what you called them):"
+msgstr "다음 표현식을 작성하십시오. (여러분이 지정한 명칭에 따라 적합한 레이어명을 이용하십시오.)"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:611
+msgid "Set the output location to the :kbd:`Rasterprac` directory."
+msgstr "산출물을 :guilabel:`Rasterprac` 디렉터리에 저장하도록 설정합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:612
+msgid "Name the output raster :kbd:`cross_product.tif`."
+msgstr "산출물 파일명을 :kbd:`cross_product.tif` 로 지정합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:613
+msgid "Ensure that the :guilabel:`Add result to project` box is checked."
+msgstr ":guilabel:`Add result to project` 체크박스를 체크했는지 확인하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:615
+msgid ""
+"Change the symbology of the new raster in the same way as you set the style "
+"for the other reclassified rasters.  The new raster now properly displays "
+"the areas where all the criteria are satisfied."
+msgstr "다른 재범주화 래스터의 스타일을 설정한 것처럼 새 래스터의 심볼을 변경하십시오. 이제 새 래스터가 모든 기준을 만족하는 지역을 제대로 표출할 것입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:619
+msgid ""
+"To get the final result, you need to select the areas that are greater than "
+":kbd:`6000m^2`. However, computing these areas accurately is only possible "
+"for a vector layer, so you will need to vectorize the raster."
+msgstr "최종 결과물을 얻으려면 면적이 :kbd:`6000m^2` 를 초과하는 지역만을 선택해야 합니다. 그러나 면적을 정확하게 계산하는 것은 벡터 레이어에서만 가능하기 때문에, 래스터를 벡터화해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:624
+msgid "Vectorizing the raster"
+msgstr "래스터 벡터화"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:626
+msgid ""
+"Click on the menu item :menuselection:`Raster --> Conversion --> "
+"Polygonize`."
+msgstr "메뉴에서 :menuselection:`Raster --> Conversion --> Polygonize` 항목을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:627
+msgid "Select the :guilabel:`cross_product` raster."
+msgstr ":guilabel:`cross_product` 래스터를 선택하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:628
+msgid "Set the output location to :kbd:`Rasterprac`."
+msgstr "산출물의 경로를 :kbd:`Rasterprac` 으로 설정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:629
+msgid "Name the file :kbd:`candidate_areas.shp`."
+msgstr "파일명을 :kbd:`candidate_areas.shp` 로 지정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:630
+msgid "Ensure that :guilabel:`Load into canvas when finished` is checked."
+msgstr ":guilabel:`Load into canvas when finished` 체크박스를 체크했는지 확인합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:632
+msgid "Close the dialog when processing is complete."
+msgstr "처리가 완료되면 대화 창을 닫으십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:634
+msgid ""
+"All areas of the raster have been vectorized, so you need to select only the"
+" areas that have a value of :kbd:`1`."
+msgstr "래스터의 모든 영역이 벡터화되었으므로, :kbd:`1` 값을 가지는 영역만을 선택해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:637
+msgid "Open the :guilabel:`Query` dialog for the new vector."
+msgstr "새 벡터의 :guilabel:`Query` 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:638
+msgid "Build this query:"
+msgstr "다음 쿼리를 작성하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:645
+msgid ""
+"Create a new vector file from the results by saving the "
+":guilabel:`candidate_areas` vector after the query is complete (and only the"
+" areas with a value of :kbd:`1` are visible). Use the :guilabel:`Save as...`"
+" function in the layer's right-click menu for this."
+msgstr "쿼리가 완료된 후 :guilabel:`candidate_areas` 벡터를 저장해서 결과물인 새 벡터 파일을 생성하십시오. (:kbd:`1` 값을 가지는 영역만 보이게 됩니다.) 이를 위해 해당 레이어를 오른쪽 클릭해서 :guilabel:`Save as...` 기능을 사용하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:649
+msgid "Save the file in the :kbd:`Rasterprac` directory."
+msgstr "파일을 :guilabel:`Rasterprac` 디렉터리에 저장하도록 설정합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:650
+msgid "Name the file :guilabel:`candidate_areas_only.shp`."
+msgstr "파일명을 :kbd:`candidate_areas_only.shp` 로 지정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:654
+msgid "Calculating the area for each polygon"
+msgstr "각 폴리곤의 면적 계산"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:656
+msgid "Open the new vector layer's right-click menu."
+msgstr "새 벡터 레이어를 오른쪽 클릭해서 컨텍스트 메뉴를 여십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:657
+msgid "Select :guilabel:`Open attribute table`."
+msgstr ":guilabel:`Open attribute table` 을 선택합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:658
+msgid ""
+"Click the :guilabel:`Toggle editing mode` button along the bottom of the "
+"table, or press :kbd:`Ctrl+E`."
+msgstr "테이블 아래쪽에 있는 :guilabel:`Toggle editing mode` 버튼을 클릭하거나, :kbd:`Ctrl+E` 키를 누르십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:660
+msgid ""
+"Click the :guilabel:`Open field calculator` button along the bottom of the "
+"table, or press :kbd:`Ctrl+I`."
+msgstr "테이블 아래쪽에 있는 :guilabel:`Open field calculator` 버튼을 클릭하거나, :kbd:`Ctrl+I` 키를 누르십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:662
+msgid ""
+"Under the :guilabel:`New field` heading in the dialog that appears, enter "
+"the field name :kbd:`area`. The output field type should be an integer, and "
+"the field width should be :kbd:`10`."
+msgstr "새로 나타난 대화 창의 :guilabel:`New field` 제목 아래, 항목명을 :kbd:`area` 라고 입력하십시오. 산출물 항목 유형은 정수, 항목 길이는 :kbd:`10` 이어야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:665
+msgid "In :guilabel:`Field calculator expression`, type:"
+msgstr ":guilabel:`Field calculator expression` 란에 다음과 같이 입력합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:671
+msgid ""
+"This means that the field calculator will calculate the area of each polygon"
+" in the vector layer and will then populate a new integer column (called "
+":guilabel:`area`) with the computed value."
+msgstr "이렇게 하면 항목 계산기가 벡터 레이어의 각 폴리곤의 면적을 계산해서 (:guilabel:`area` 라는) 새 정수 열에 계산 값을 채우게 됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:676
+msgid ""
+"Do the same thing for another new field called :guilabel:`id`. In "
+":guilabel:`Field calculator expression`, type:"
+msgstr ":guilabel:`id` 라는 또다른 새 항목에 대해서도 동일한 작업을 하십시오. :guilabel:`Field calculator expression` 란에 다음과 같이 입력합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:683
+msgid ""
+"This ensures that each polygon has a unique ID for identification purposes."
+msgstr "이렇게 하면 각 폴리곤에 식별 목적의 유일한 ID를 부여하게 됩니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:684
+msgid ""
+"Click :guilabel:`Toggle editing mode` again, and save your edits if prompted"
+" to do so."
+msgstr ":guilabel:`Toggle editing mode` 를 다시 클릭하고, 저장 여부를 물어볼 경우 편집 내용을 저장하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:688
+msgid "Selecting areas of a given size"
+msgstr "주어진 면적의 영역 선택"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:690
+msgid "Now that the areas are known:"
+msgstr "이제 면적을 알게 됐으니,"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:692
+msgid ""
+"Build a query (as usual) to select only the polygons larger than "
+":kbd:`6000m^2`.  The query is:"
+msgstr "쿼리를 (평소와 같이) 작성해서 :kbd:`6000m^2` 보다 넓은 폴리곤만을 선택하십시오. 쿼리는 다음과 같습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:699
+msgid ""
+"Save the selection as a new vector layer called :guilabel:`solution.shp`."
+msgstr "선택된 폴리곤 집합을 :guilabel:`solution.shp` 라는 명칭의 새 벡터 레이어로 저장하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:701
+msgid ""
+"You now have your solution areas, from which you will pick the one nearest "
+"to your house."
+msgstr "이제 해답 영역들을 얻었으니, 사용자의 집에서 가장 가까운 곳을 선택할 차례입니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:705
+msgid "Digitize your house"
+msgstr "사용자 주택 디지타이즈 작업"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:707
+msgid ""
+"Create a new vector layer as before, but this time, select the "
+":guilabel:`Type` value as being a :guilabel:`Point`."
+msgstr "이전과 동일한 방법으로 새 벡터 레이어를 생성하되, 이번에는 :guilabel:`Type` 값에 :guilabel:`Point` 를 선택합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:709
+msgid "Ensure that it is in the correct CRS!"
+msgstr "레이어가 정확한 CRS를 사용하는지 확인하십시오!"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:710
+msgid "Name the new layer :kbd:`house.shp`."
+msgstr "새 레이어의 명칭을 :kbd:`house.shp` 로 지정합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:711
+msgid "Finish creating the new layer."
+msgstr "새 레이어 생성을 완료하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:712
+msgid "Enter edit mode (while the new layer is selected)."
+msgstr "(새 레이어를 선택한 다음) 편집 모드로 들어갑니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:713
+msgid ""
+"Click the point where your house or other current place of residence is, "
+"using the streets as a guide. You might have to open other layers to help "
+"you find your house. If you don't live anywhere nearby, just click somewhere"
+" among the streets where a house could conceivably be."
+msgstr "도로명을 기준으로 사용자의 주택 또는 현재 주거지가 있는 곳의 포인트를 클릭하십시오. 사용자의 집을 찾기 위해 다른 레이어를 열어 참조해야 할 수도 있습니다. 여러분이 이 근처에 살지 않는다면, 도로를 따라 집이 있을 만한 곳을 골라 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:719
+msgid "Save your edits and exit edit mode."
+msgstr "편집 내용을 저장하고 편집 모드를 끕니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:722
+msgid ""
+"You will need to find the centroids (\"centers of mass\") for the solution "
+"area polygons in order to decide which is closest to your house."
+msgstr "사용자의 집에서 가장 가까운 폴리곤을 정하려면, 해답 영역 폴리곤들의 중심(\"형태의 중앙\")을 찾아야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:726
+msgid "Calculate polygon centroids"
+msgstr "폴리곤 중심 계산"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:728
+msgid ""
+"Click on the :menuselection:`Vector --> Geometry Tools --> Polygon "
+"centroids` menu item."
+msgstr "메뉴에서 :menuselection:`Vector --> Geometry Tools --> Polygon centroids` 항목을 클릭하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:730
+msgid "Specify the input layer as :guilabel:`solution.shp`."
+msgstr "입력 레이어로 :guilabel:`solution.shp` 을 설정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:731
+msgid "Provide the output location as :kbd:`Rasterprac`."
+msgstr "산출물의 경로를 :kbd:`Rasterprac` 으로 설정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:732
+msgid "Call the destination file :kbd:`solution_centroids.shp`."
+msgstr "산출물 파일의 명칭을 :kbd:`solution_centroids.shp` 로 설정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:733
+msgid ""
+"Click :guilabel:`OK` and add the result to the TOC (:guilabel:`Layers "
+"list`), then close the dialog."
+msgstr ":guilabel:`OK` 를 클릭해서 결과물을 TOC( :guilabel:`Layers list` )에 추가한 다음, 대화 창을 닫습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:735
+msgid ""
+"Drag the new layer to the top of the layer order so that you can see it."
+msgstr "새 레이어를 레이어 순서의 맨 위로 드래그해서 볼 수 있도록 만듭니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:738
+msgid "Calculate which centroid is closest to your house"
+msgstr "사용자 주택에서 가장 가까운 중심 계산"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:740
+msgid ""
+"Click on the menu item :guilabel:`Vector --> Analysis Tools --> Distance "
+"matrix`."
+msgstr "메뉴에서 :menuselection:`Vector --> Analysis Tools --> Distance matrix` 항목을 클릭합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:742
+msgid ""
+"The input layer should be your house, and the target layer "
+":guilabel:`solution_centroids`. Both of these should use the :kbd:`id` field"
+" as their unique ID field."
+msgstr "입력 레이어를 사용자의 집, 그리고 목표 레이어를 :guilabel:`solution_centroids` 로 설정해야 합니다. 두 레이어 모두 유일한 ID 항목인 :kbd:`id` 항목을 사용해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:745
+msgid "The output matrix type should be :guilabel:`linear`."
+msgstr "산출물 행렬 유형을 :guilabel:`linear` 로 설정해야 합니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:746
+msgid "Set an appropriate output location and name."
+msgstr "적절한 산출물 경로 및 파일명을 설정하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:748
+msgid ""
+"Open the file in a text editor (or import it into a spreadsheet). Note which"
+" target ID is associated with the shortest :guilabel:`Distance`. There may "
+"be more than one at the same distance."
+msgstr "텍스트 편집기로 (또는 스프레드시트로) 산출물 파일을 열어보십시오. 어떤 목표 ID가 가장 짧은 :guilabel:`Distance` 와 연결되어 있는지 살펴보십시오. 동일한 거리가 하나 이상일 수도 있습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:751
+msgid ""
+"Build a query in QGIS to select only the solution areas closest to your "
+"house (selecting it using the :kbd:`id` field)."
+msgstr "QGIS에서 사용자의 집에서 가장 가까운 해답 영역을 (:kbd:`id` 항목을 이용해서) 선택하는 쿼리를 작성하십시오."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:754
+msgid "This is the final answer to the research question."
+msgstr "연구 과제에 대한 최종 해답을 얻었습니다."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:756
+msgid ""
+"For your submission, include the semi-transparent hillshade layer over an "
+"appealing raster of your choice (such as the :guilabel:`DEM` or the "
+":guilabel:`slope` raster, for example). Also include the polygon of the "
+"closest solution area(s), as well as your house. Follow all the best "
+"practices for cartography in creating your output map."
+msgstr "과제 제출 시 여러분이 선택한 (예를 들면 :guilabel:`DEM` 이나 :guilabel:`slope` 래스터 같은) 알맞은 래스터 위에 반투명한 음영기복도 레이어를 포함시키십시오. 또 여러분의 집은 물론 가장 가까운 해답 영역(들)의 폴리곤도 포함시켜야 합니다. 여러분의 결과물 맵을 생성하는 데 지도 제작을 위한 최상의 관습들을 따르십시오."

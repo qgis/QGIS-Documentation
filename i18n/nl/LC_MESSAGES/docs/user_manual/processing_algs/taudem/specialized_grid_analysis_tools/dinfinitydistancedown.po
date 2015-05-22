@@ -1,0 +1,214 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-14 16:22+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:6
+msgid "D-Infinity Distance Down"
+msgstr "``D-oneindigheid neerwaartse afstand`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:11
+msgid ""
+"Calculates the distance downslope to a stream using the D-infinity flow "
+"model. The D-infinity flow model is a multiple flow direction model, because"
+" the outflow from each grid cell is proportioned between up to 2 downslope "
+"grid cells. As such, the distance from any grid cell to a stream is not "
+"uniquely defined. Flow that originates at a particular grid cell may enter "
+"the stream at a number of different cells. The statistical method may be "
+"selected as the longest, shortest or weighted average of the flow path "
+"distance to the stream. Also one of several ways of measuring distance may "
+"be selected: the total straight line path (Pythagoras), the horizontal "
+"component of the straight line path, the vertical component of the straight "
+"line path, or the total surface flow path."
+msgstr "Berekent de afstand stroomafwaarts naar een stroom met behulp van het D-oneindigheid stroommodel. Het stroommodel D-oneindigheid is een model voor meerdere stroomrichtingen, omdat de uitstroom uitstroom van elke cel van het raster geproportioneerd tussen twee neerwaartse cellen van het raster. Daarom wordt de afstand van een cel van het raster tot een stroom niet uniek gedefinieerd. Stroom die afkomstig is uit een bepaalde cel van het raster kan in de stroom komen in een aantal cellen. De statistische methode kan worden geselecteerd als de langste (maximum), kortste (minimum) of gewogen gemiddelde van de afstand neerwaarts naar de stroom. ook kan een van verscheidene manieren voor het meten van de afstand kan worden geselecteerd: het totale pad in een rechte lijn (Pythagoras), de horizontale component van het pad van de rechte lijn, de verticale component van het pad van de rechte lijn, of het pad van de stroom over het totale oppervlak."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:23
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:28
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``D-oneindigheid raster stroomrichting`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:26
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This can be created by the"
+" tool **\"D-Infinity Flow Directions\"**."
+msgstr "Een raster dat de stroomrichting geeft volgens de methode D-oneindigheid. Stroomrichting wordt gemeten in radialen, tegen de wijzers van de klok in vanuit Oost. Dit kan worden gemaakt door het gereedschap **\"D-oneindigheid stroomrichtingen\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:36
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr "``Gatengevuld hoogteraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:31
+msgid ""
+"This input is a grid of elevation values. As a general rule, it is "
+"recommended that you use a grid of elevation values that have had the pits "
+"removed for this input. Pits are generally taken to be artifacts that "
+"interfere with the analysis of flow across them. This grid can be obtained "
+"as the output of the **\"Pit Remove\"** tool, in which case it contains "
+"elevation values where the pits have been filled to the point where they "
+"just drain."
+msgstr "Deze invoer is een raster van hoogtewaarden. Als algemene regel wordt aanbevolen dat u een raster met hoogtewaarden gebruikt waarin de gaten zijn verwijderd voor deze invoer. Van gaten wordt in het algemeen aangenomen dat het artefacten zijn die interfereren met de analyse van de stroom rondom hen. Dit raster kan worden verkregen als de uitvoer van het gereedschap **\"Gaten verwijderen\"**, in welk geval het hoogtewaarden bevat waarvan de gaten zijn verwijderd tot het punt waarop zij nog net afvoeren."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:41
+msgid "``Stream Raster Grid`` [raster]"
+msgstr "``Stroomraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:39
+msgid ""
+"A grid indicating streams, by using a grid cell value of 1 on streams and 0 "
+"off streams. This is usually the output of one of the tools in the "
+"**\"Stream Network Analysis\"** toolset."
+msgstr "Dit raster geeft de locatie van stromen aan, met een celwaarde 1 voor stromen en 0 voor buiten stromen. Dit bestand wordt geproduceerd door verscheidene gereedschappen in de set met gereedschappen **\"Stroomnetwerk-analyse\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:51
+msgid "``Weight Path Grid`` [raster]"
+msgstr "``Gewogen pad raster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:44
+msgid "Optional."
+msgstr "Optioneel."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:46
+msgid ""
+"A grid giving weights (loadings) to be used in the distance calculation. "
+"This might be used for example where only flow distance through a buffer is "
+"to be calculated. The weight is then 1 in the buffer and 0 outside it. "
+"Alternatively the weight may reflect some sort of cost function for travel "
+"over the surface, perhaps representing travel time or attenuation of a "
+"process. If this input file is not used, the loadings will assumed to be one"
+" for each grid cell."
+msgstr "Een raster dat de wegingen (ladingen) weergeeft die moeten worden gebruikt in de berekening van de afstand. Dit zou bijvoorbeeld kunnen worden gebruikt waar alleen een stroomafstand door een buffer moet worden berekend. De weging is dan 1 in de buffer en 0 daarbuiten. Als alternatief kan de weging enkele soort functie van kosten voor verplaatsen over het oppervlak weergeven, misschien de reistijd of verdunning van een proces weergevend. Als dit invoerbestand niet wordt gebruikt, wordt aangenomen dat de ladingen één voor elke cel in het raster zijn."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:68
+msgid "``Statistical Method`` [selection]"
+msgstr "``Statistische methode`` [selectie]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:54
+msgid ""
+"Statistical method used to calculate the distance down to the stream. In the"
+" D-Infinity flow model, the outflow from each grid cell is proportioned "
+"between two downslope grid cells. Therefore, the distance from any grid cell"
+" to a stream is not uniquely defined. Flow that originates at a particular "
+"grid cell may enter the stream at a number of cells. The distance to the "
+"stream may be defined as the longest (maximum), shortest (minimum) or "
+"weighted average of the distance down to the stream."
+msgstr "Statistische methode gebruikt om de afstand stroomafwaarts te meten. In het model D-oneindigheid is de uitstroom van elke cel van het raster geproportioneerd tussen twee neerwaartse cellen van het raster. daarom wordt de afstand van een cel van het raster tot een stroom niet uniek gedefinieerd. Stroom die afkomstig is uit een bepaalde cel van het raster kan in de stroom komen in een aantal cellen. De afstand tot de stroom kan worden gedefinieerd als de langste (maximum), kortste (minimum) of gewogen gemiddelde van de afstand neerwaarts naar de stroom."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:62
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:77
+msgid "Options:"
+msgstr "Opties:"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:64
+msgid "0 --- Minimum"
+msgstr "0 --- Minimum"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:65
+msgid "1 --- Maximum"
+msgstr "1 --- Maximum"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:66
+msgid "2 --- Average"
+msgstr "2 --- Gemiddelde"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:68
+msgid "Default: *2*"
+msgstr "Standaard: *2*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:84
+msgid "``Distance Method`` [selection]"
+msgstr "``Methode afstand`` [selectie]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:71
+msgid ""
+"Distance method used to calculate the distance down to the stream. One of "
+"several ways of measuring distance may be selected: the total straight line "
+"path (Pythagoras), the horizontal component of the straight line path "
+"(horizontal), the vertical component of the straight line path (vertical), "
+"or the total surface flow path (surface)."
+msgstr "De methode voor de afstand die wordt gebruikt voor het berekenen van de neerwaartse afstand naar de stroom. Eén van de verscheidene manieren om afstand te meten kan worden geselecteerd: het pad van de totale rechte lijn (Pythagoras), de horizontale component van het pad van de rechte lijn (horizontaal), de verticale component van het pad van de rechte lijn (verticaal), of het totale oppervlak stroompad (oppervlak)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:79
+msgid "0 --- Pythagoras"
+msgstr "0 --- Pythagoras"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:80
+msgid "1 --- Horizontal"
+msgstr "1 --- Horizontaal"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:81
+msgid "2 --- Vertical"
+msgstr "2 --- Verticaal"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:82
+msgid "3 --- Surface"
+msgstr "3 --- Oppervlak"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:84
+msgid "Default: *1*"
+msgstr "Standaard: *1*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:99
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Controleren op besmetting rand`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:87
+msgid ""
+"A flag that determines whether the tool should check for edge contamination."
+" This is defined as the possibility that a value may be underestimated due "
+"to grid cells outside of the domain not being counted. In the context of "
+"Distance Down this occurs when part of a flow path traced downslope from a "
+"grid cell leaves the domain without reaching a stream grid cell. With edge "
+"contamination checking selected, the algorithm recognizes this and reports "
+"no data for the result. This is the desired effect and indicates that values"
+" for these grid cells is unknown due to it being dependent on terrain "
+"outside of the domain of data available. Edge contamination checking may be "
+"overridden in cases where you know this is not an issue or want to evaluate "
+"the distance using only the fraction of flow paths that terminate at a "
+"stream."
+msgstr "Een vlag die bepaalt of het gereedschap moet controleren op besmetting van randen. Dit wordt gedefinieerd als de mogelijkheid dat een waarde van een deelnemend gebied ondergewaardeerd kan zijn wegens het feit dat rastercellen buiten het domein niet worden meegeteld.  In de context van Afstand neerwaarts komt dit voor als een deel van een neerwaarts getraceerd stroompad vanuit een cel van het raster het domein verlaat zonder een stroomcel te bereiken. Met Besmetting van randen controleren geselecteerd herkent het algoritme dit en rapporteert \"Geen gegevens\"  als resultaat. Dit is het gewenste effect en geeft aan dat het deelnemende gebied voor deze cellen van het raster onbekend zijn wegens het feit dat het afhankelijk is van terrein buiten het domein voor beschikbare gegevens. Controle van besmetting van randen kan worden uitgeschakeld in die gevallen waarvan u weet dat het geen probleem is of u de afstand alleen wilt evalueren met behulp van de delen van stroompaden die eindigen in een stroom."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:99
+msgid "Default: *True*"
+msgstr "Standaard: *True*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:102
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:106
+msgid "``D-Infinity Drop to Stream Grid`` [raster]"
+msgstr "``D-oneindigheid verval naar stroom raster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:105
+msgid ""
+"Grid containing the distance to stream calculated using the D-infinity flow "
+"model and the statistical and path methods chosen."
+msgstr "Raster dat de afstand tot stroom bevat die is berekend met behulp van het D-oneindigheid stroommodel en de gekozen statistische en pad-methoden."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:109
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydistancedown.rst:116
+msgid "See also"
+msgstr "Zie ook"

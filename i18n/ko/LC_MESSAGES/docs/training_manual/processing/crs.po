@@ -1,0 +1,174 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-07-11 00:59+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/crs.rst:6
+msgid "CRSs. Reprojecting"
+msgstr "CRS와 재투영"
+
+#: ../../source/docs/training_manual/processing/crs.rst:9
+msgid ""
+"In this lesson we will discuss how Processing uses CRSs. We will also see a "
+"very useful algorithm: reprojecting."
+msgstr "이 강의에서 처리 과정 프레임워크의 CRS 이용법을 배울 것입니다. 또 재투영이라는 매우 유용한 알고리듬도 살펴볼 것입니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:12
+msgid ""
+"CRS's are a great source of confusion for QGIS Processing users, so here are"
+" some general rules about how they are handled by geoalgorithms when "
+"creating a new layer."
+msgstr "QGIS 처리 과정 사용자는 대부분 CRS를 혼란스러워합니다. 따라서 새 레이어 생성 시 지리 알고리듬이 CRS를 어떻게 다루는지에 대한 몇몇 일반적인 규칙을 설명하겠습니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:14
+msgid ""
+"If there are input layers, it will use the CRS of the first layer. This is "
+"assumed to be the CRS of all input layers, since they should have the same "
+"one. If you use layers with unmatching CRS's, QGIS will warn you about it. "
+"Notice that the CRS of input layers is shown along with its name in the "
+"parameters dialog."
+msgstr "입력 레이어가 있을 경우 첫 번째 레이어의 CRS를 사용합니다. 모든 레이어의 CRS가 동일해야 하기 때문에, 첫 번째 레이어의 CRS를 모든 레이어의 CRS라고 가정하는 것입니다. 서로 일치하지 않는 CRS를 사용하는 레이어들을 쓸 경우, QGIS가 경고 메시지를 띄울 것입니다. 파라미터 대화 창에 입력 레이어의 CRS가 레이어명과 함께 나타난 다는 사실을 명심하십시오."
+
+#: ../../source/docs/training_manual/processing/crs.rst:18
+msgid ""
+"If there are no input layer, it will use the project CRS, unless the "
+"algorithm contains a specific CRS field (as it happenend in the last lesson "
+"with the graticule algorithm)"
+msgstr "입력 레이어가 없을 경우, 알고리듬이 (이전 강의의 격자선 알고리듬처럼) 특정 CRS 필드를 담고 있지 않는 이상, 프로젝트 CRS를 사용합니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:20
+msgid ""
+"Open the project corresponding to this lesson and you will see two layers "
+"named 23030 and 4326. They both contain the same points, but in different "
+"CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS "
+"is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
+"actually the same layer."
+msgstr "이 강의에 해당하는 프로젝트를 열어보면 :kbd:`23030` 및 :kbd:`4326` 이라는 두 레이어를 볼 수 있습니다. 양쪽 다 동일한 포인트들을 담고 있지만, 서로 다른 CRS( :kbd:`EPSG:23030` 및 :kbd:`EPSG:4326` )를 사용합니다. QGIS가 실시간 재투영으로 프로젝트 CRS( :kbd:`EPSG:4326` )로 재투영하기 때문에 같은 위치에 있는 것으로 보일 뿐, 실제로 동일한 레이어는 아닙니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:22
+msgid "Open the *Export/Add geometry columns* algorithm."
+msgstr ":guilabel:`Export/Add geometry columns` 알고리듬을 실행하십시오."
+
+#: ../../source/docs/training_manual/processing/crs.rst:26
+msgid ""
+"This algorithm add new columns to the attributes table of a vector layer. "
+"The content of the columns depend on the type of geometry of the layer. In "
+"the case of points, it adds new columns with the X and Y coordinates of each"
+" point."
+msgstr "이 알고리듬이 벡터 레이어의 속성 테이블에 새 열을 추가합니다. 해당 열의 내용은 레이어의 도형 유형에 따라 달라집니다. 포인트일 경우 각 포인트의 X 및 Y 좌표를 담은 새 열들을 추가합니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:28
+msgid ""
+"In the list of available layers that you will find in the input layer field,"
+" you will see each one with its corresponding CRS. That means that, although"
+" they appear in the same place in your canvas, they will be treated "
+"differently. Select the 4326 layer."
+msgstr "입력 레이어 항목에서 찾은 사용 가능한 레이어 목록에서, 각 레이어를 그에 대응하는 CRS와 함께 보게 될 것입니다. 즉 아무리 사용자의 맵 캔버스 위에 동일한 위치로 나타나더라도, 서로 다르게 다루어질 것이라는 의미입니다. :kbd:`4326` 레이어를 선택하십시오."
+
+#: ../../source/docs/training_manual/processing/crs.rst:30
+msgid ""
+"The other parameter of the algorithm allows to set how the algorithm uses "
+"coordinates to calculate the new value that it will add to the resulting "
+"layers. Most algorithms do not have an option like that, and just use the "
+"coordinates directly. Select the *Layer CRS* option to just use coordinates "
+"as they are. This is how almost all geoalgorithms work."
+msgstr "이 알고리듬의 또 하나의 파라미터로 어떻게 알고리듬이 좌표를 이용, 결과 레이어에 추가할 새 값을 계산하는지 설정할 수 있습니다. 알고리듬 대부분은 이런 옵션을 지원하지 않고, 좌표를 직접 이용할 뿐입니다. :guilabel:`Layer CRS` 옵션을 선택해서 좌표 그자체로 이용하십시오. 대부분의 지리 알고리듬도 이렇게 작동합니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:32
+msgid ""
+"You should get a new layer with exactly the same points as the other two "
+"layers. If you right click on the name of the layer and open its properties,"
+" you will see that it shares the same CRS of the input layer, that is, "
+"EPSG:4326. When the layer is loaded into QGIS, you will not be asked to "
+"enter the CRS of the layer, since QGIS already knows about it."
+msgstr "다른 두 레이어와 정확하게 동일한 포인트를 담은 새 레이어를 얻게 될 것입니다. 레이어명을 오른쪽 클릭해서 속성을 열어보면, 입력 레이어의 CRS인 :kbd:`EPSG:4326` 을 사용한다는 사실을 알게 될 것입니다.  QGIS가 이 레이어를 불러올 때, 해당 레이어의 CRS를 입력하라고 묻지 않을 것입니다. QGIS가 이미 알고 있기 때문입니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:34
+msgid ""
+"If you open the attributes table of the new layer you will see that it "
+"contains two new fields with the X and Y coordinates of each point."
+msgstr "새 레이어의 속성 테이블을 열어보면 각 포인트의 X 및 Y 좌표를 담은 2개의 새 필드를 담고 있는 것을 보게 될 것입니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:38
+msgid ""
+"Those coordinate values are given in the layer CRS, since we chose that "
+"option. However, even if you choose another option, the output CRS of the "
+"layer would have been the same, since the input CRS is used to set the CRS "
+"of the output layer. Choosing another option will cause the values to be "
+"different, but not the resulting point to change or the CRS of the ouput "
+"layer to be different to the CRS of the input one."
+msgstr "이 좌표값들은 레이어의 CRS를 사용합니다. 해당 옵션을 선택했기 때문입니다. 그러나 사용자가 다른 옵션을 선택했더라도, 입력 레이어의 CRS를 사용해 산출물 레이어의 CRS를 설정하기 때문에, 산출물의 CRS는 동일했을 것입니다. 다른 옵션을 선택했더라면 값은 달라졌겠지만 산출 포인트가 달라지거나 산출물 레이어의 CRS가 입력 레이어의 CRS와 달라지지는 않습니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:41
+msgid ""
+"Now do the same calculation using the other layer. You should find the "
+"resulting layer rendered exactly in the same place as the other ones, and it"
+" will have the EPSG:23030 CRS, since that was the one of the input layer."
+msgstr "이제 다른 레이어를 사용해 동일한 계산을 하십시오. 산출물 레이어가 다른 레이어들과 정확히 동일한 위치에 렌더링됩니다. 이 레이어는 입력 레이어의 CRS인 :kbd:`EPSG:23030` 을 사용할 것입니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:43
+msgid ""
+"If you go to its attribute table, you will see values that are different to "
+"the ones in the first layer that we created."
+msgstr "해당 레이어의 속성 테이블을 열어보면, 첫 번째로 생성한 레이어와는 다른 값들을 볼 수 있을 것입니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:47
+msgid ""
+"This is because the original data is different (it uses a different CRS), "
+"and those coordinates are taken from it."
+msgstr "원래 데이터가 (다른 CRS를 사용했기 때문에) 다르며, 이 다른 데이터에서 좌표를 가져왔기 때문입니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:49
+msgid ""
+"What should you learn from this? The main idea behind these examples is that"
+" geoalgorithms use the layer as it is in its original data source, and "
+"completely ignore the reprojections that QGIS might be doing before "
+"rendering. In other words, do not trust what you see in the canvas, but "
+"always have in mind that the original data will be used. That is no so "
+"important in this case, since we are just using one single layer at a time, "
+"but in an algorithm that needs several of them (such as a clip algorithm), "
+"layers that appear to match or overlay might be very far one from each "
+"other, since they might have different CRSs."
+msgstr "여기에서 무엇을 배울 수 있을까요? 이 예제의 중요한 의미는 지리 알고리듬이 레이어를 원래 데이터소스 그대로 사용하며, QGIS가 렌더링하기 전에 어떤 재투영을 하더라도 그것을 철저히 무시한다는 사실입니다. 다시 말해 맵 캔버스에 보이는 것을 믿지 말고, 원래 데이터가 사용된다는 사실을 항상 기억해야 한다는 뜻입니다. 이 경우에는 한 번에 하나의 레이어만 사용했기 때문에 그렇게 중요한 사실은 아니지만, 복수의 레이어가 필요한 (클리핑 알고리듬 같은) 알고리듬의 경우 일치하거나 겹치는 것처럼 보이는 레이어들이 서로 다른 CRS를 사용하고 있을 수도 있기 때문에 실제로는 서로 매우 다를 수도 있습니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:51
+msgid ""
+"Algorithms performs no reprojection (except in the reprojection algorithm "
+"that we will see next), so it is up to you to make sure that layers have "
+"matching CRS's."
+msgstr "알고리듬은 (다음에 배울 재투영 알고리듬을 제외하면) 재투영을 수행하지 않습니다. 따라서 레이어들이 동일한 CRS를 사용하도록 사용자가 확인해야 합니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:53
+msgid ""
+"An interesting module that deals with CRS's is the reprojection one. It "
+"represents a particular case, since it has an input layer (the one to "
+"reproject), but it will not use its CRS for the the output one."
+msgstr "재투영 알고리듬은 CRS를 다루는 흥미로운 모듈입니다. 이 알고리듬은 매우 특별한 경우인데, (재투영하게 될) 입력 레이어를 사용하지만, 입력 레이어의 CRS를 산출물의 CRS로 사용하지 않기 때문입니다."
+
+#: ../../source/docs/training_manual/processing/crs.rst:55
+msgid "Open the *Reprojection* algorithm."
+msgstr ":guilabel:`Reprojection` 알고리듬을 실행하십시오."
+
+#: ../../source/docs/training_manual/processing/crs.rst:59
+msgid ""
+"Select any of the layers as input, and select EPSG:23029 as the destination "
+"CRS. Run the algorithm and you will get a new layer, identical to the input "
+"one, but with a different CRS. It will appear on the same region of the "
+"canvas, like the other ones, since QGIS will reproject it on the fly, but "
+"its original coordinates are different. You can see that by running the *Add"
+" geometry columns* algorithm using this new layer as input, and veryfing "
+"that the added coordinates are different to the ones in the attribute tables"
+" of both of the two layers that we had computed before."
+msgstr "아무 레이어나 입력 레이어로 선택한 다음, 산출물의 CRS로 :kbd:`EPSG:23029` 를 선택하십시오. 알고리듬을 실행하면 입력 레이어와 동일하지만, 다른 CRS를 사용하는 새 레이어를 얻게 됩니다. QGIS가 실시간 재투영을 하기 때문에 다른 레이어들과 마찬가지로 맵 캔버스의 동일한 지역에 나타나지만, 원래 좌표는 다릅니다. 이 새 레이어를 입력 레이어로 사용해 :guilabel:`Add geometry columns` 알고리듬을 실행해서, 먼저 계산했던 두 레이어의 속성 테이블에 있는 값과는 다른 좌표가 추가되었다는 사실을 확인할 수 있습니다."

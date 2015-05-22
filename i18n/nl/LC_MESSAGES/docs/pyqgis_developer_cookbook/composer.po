@@ -1,0 +1,261 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2015-03-01 14:29+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:11
+msgid "Map Rendering and Printing"
+msgstr "Kaart renderen en afdrukken"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:13
+msgid ""
+"There are generally two approaches when input data should be rendered as a "
+"map: either do it quick way using :class:`QgsMapRenderer` or produce more "
+"fine-tuned output by composing the map with :class:`QgsComposition` class "
+"and friends."
+msgstr "Er zijn over het algemeen twee benaderingen wanneer ingevoerde gegevens zouden moeten worden gerenderd als een kaart: ofwel doe het op de snelle manier met behulp van :class:`QgsMapRenderer` of produceer een meer fijn afgestemde uitvoer door de kaart samen te stellen met behulp van de klasse :class:`QgsComposition` en diens vrienden."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:20
+msgid "Simple Rendering"
+msgstr "Eenvoudig renderen"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:65
+msgid "Output using Map Composer"
+msgstr "Uitvoer met behulp van Printvormgeving"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:67
+msgid ""
+"Map composer is a very handy tool if you would like to do a more "
+"sophisticated output than the simple rendering shown above. Using the "
+"composer it is possible to create complex map layouts consisting of map "
+"views, labels, legend, tables and other elements that are usually present on"
+" paper maps. The layouts can be then exported to PDF, raster images or "
+"directly printed on a printer."
+msgstr "Printvormgeving is een zeer handig gereedschap als u een uitgebreidere uitvoer wilt dan de eenvoudige rendering van die welke hierboven is weergegeven. Met behulp van printvormgeving is het mogelijk complexe lay-outs voor kaarten te maken, bestaande uit weergaven van kaarten, labels, legenda, tabellen en andere elementen die gewoonlijk aanwezig zij op papieren kaarten. De lay-outs kunnen dan worden geëxporteerd naar PDF, rasterafbeeldingen of direct worden afgedrukt op een printer."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:89
+msgid ""
+"Note that the composition takes an instance of :class:`QgsMapRenderer`. In "
+"the code we expect we are running within QGIS application and thus use the "
+"map renderer from map canvas. The composition uses various parameters from "
+"the map renderer, most importantly the default set of map layers and the "
+"current extent. When using composer in a standalone application, you can "
+"create your own map renderer instance the same way as shown in the section "
+"above and pass it to the composition."
+msgstr "Onthoud dat de Printvormgeving een instance heeft van :class:`QgsMapRenderer`. In de code gaan we er van uit dat het binnen de toepassing QGIS wordt uitgevoerd en dus de renderer voor de kaart gebruiken van het kaartvenster. De compositie gebruikt verscheidene parameters van de renderer van de kaart, meest belangrijke daarvan zijn de standaard set kaartlagen en het huidige bereik. Bij het gebruiken van printvormgeving in een zelfstandige toepassing kunt u uw eigen instance van de renderer voor de kaart maken  op dezelfde manier zoals die welke in het gedeelte hierboven wordt weergegeven en die doorgeven aan de compositie."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:97
+msgid ""
+"It is possible to add various elements (map, label, ...) to the composition "
+"--- these elements have to be descendants of :class:`QgsComposerItem` class."
+" Currently supported items are:"
+msgstr "Het is mogelijk om verscheidene elementen (map, label, ...) toe te voegen aan de compositie --- deze elementen moeten afstammen van de klasse :class:`QgsComposerItem`. De huidige ondersteunde items zijn:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:119
+msgid "legend ::"
+msgstr "legenda ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:126
+msgid "scale bar ::"
+msgstr "schaalbalk ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:135
+msgid "arrow"
+msgstr "pijl"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:136
+msgid "picture"
+msgstr "afbeelding"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:137
+msgid "shape"
+msgstr "vorm"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:138
+msgid "table"
+msgstr "tabel"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:157
+msgid ""
+"Besides creating the composer items by hand, QGIS has support for composer "
+"templates which are essentially compositions with all their items saved to a"
+" .qpt file (with XML syntax). Unfortunately this functionality is not yet "
+"available in the API."
+msgstr "Naast het handmatig maken van items voor Printvormgeving, heeft QGIS ondersteuning voor sjablonen van Printvormgeving wat in essentie composities zijn met al hun items, opgeslagen als een bestand .qpt (met syntaxis XML). Helaas is deze functionaliteit nog niet beschikbaar in de API."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:162
+msgid ""
+"Once the composition is ready (the composer items have been created and "
+"added to the composition), we can proceed to produce a raster and/or vector "
+"output."
+msgstr "Als de compositie eenmaal gereed is (de items van Printvormgeving zijn gemaakt en toegevoegd aan de compositie), kunnen we doorgaan en een raster- en/of vector-uitvoer produceren."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:177
+msgid "Output to a raster image"
+msgstr "Naar een rasterafbeelding uitvoeren"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:206
+msgid "Output to PDF"
+msgstr "Naar PDF uitvoeren"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:17
+msgid "map rendering"
+msgstr "renderen van kaart"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:5
+msgid "map printing"
+msgstr "afdrukken van kaart"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:17
+msgid "simple"
+msgstr "eenvoudig"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:62
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:174
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:203
+msgid "output"
+msgstr "uitvoer"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:62
+msgid "using Map Composer"
+msgstr "Printvormgeving gebruiken"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:174
+msgid "raster image"
+msgstr "rasterafbeelding"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:203
+msgid "PDF"
+msgstr "PDF"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:22
+msgid ""
+"Render some layers using :class:`QgsMapRenderer` --- create destination "
+"paint device (``QImage``, ``QPainter`` etc.), set up layer set, extent, "
+"output size and do the rendering"
+msgstr "Render enkele lagen met behulp van :class:`QgsMapRenderer` --- maak een doel-kleurapparaat (``QImage``, ``QPainter`` etc.), stel de set van kaartlagen in, bereik, grootte van de uitvoer en voer het renderen uit"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:73
+msgid ""
+"The composer consists of a bunch of classes. They all belong to the core "
+"library. QGIS application has a convenient GUI for placement of the "
+"elements, though it is not available in the GUI library. If you are not "
+"familiar with `Qt Graphics View framework "
+"<http://doc.qt.nokia.com/stable/graphicsview.html>`_, then you are "
+"encouraged to check the documentation now, because the composer is based on "
+"it."
+msgstr "De Printvormgeving bestaat uit een aantal klassen. Zij behoren allemaal tot de bron-bibliotheek. De toepassing QGIS heeft een handige GUI voor het plaatsen van de elementen, hoewel die niet beschikbaar is in de bibliotheek van de GUI. Als u niet bekend bent met het `framework Qt Graphics View <http://doc.qt.nokia.com/stable/graphicsview.html>`_, dan wordt u aangeraden nu de documentatie te raadplegen, omdat Printvormgeving daarop is gebaseerd."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:80
+msgid ""
+"The central class of the composer is :class:`QgsComposition` which is "
+"derived from :class:`QGraphicsScene`. Let us create one"
+msgstr "De centrale klasse van de printvormgeving is :class:`QgsComposition` die is afgeleid van :class:`QGraphicsScene`. Laten we er een maken"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:101
+msgid ""
+"map --- this item tells the libraries where to put the map itself. Here we "
+"create a map and stretch it over the whole paper size ::"
+msgstr "kaart --- dit item vertelt de bibliotheken waar de kaart zelf moet worden geplaatst. Hier maken we ene kaart en spreiden die over de gehele grootte van het papier ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:110
+msgid ""
+"label --- allows displaying labels. It is possible to modify its font, "
+"color, alignment and margin ::"
+msgstr "label --- maakt het weergeven an labels mogelijk. Het is mogelijk het lettertype, de kleur, de uitlijning en marge aan te passen ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:140
+msgid ""
+"By default the newly created composer items have zero position (top left "
+"corner of the page) and zero size. The position and size are always measured"
+" in millimeters"
+msgstr "Standaard hebben de nieuw gemaakte items voor Printvormgeving de positie nul (linkerbovenhoek van de pagina) en de grootte nul. De positie en grootte worden altijd in millimeters gemeten"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:151
+msgid "A frame is drawn around each item by default. How to remove the frame"
+msgstr "Een kader wordt standaard rondom elk item getekend. Hoe dat kader te verwijderen"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:165
+msgid ""
+"The default output settings for composition are page size A4 and resolution "
+"300 DPI. You can change them if necessary. The paper size is specified in "
+"millimeters"
+msgstr "De standaard instellingen voor uitvoer van de compositie zijn paginagrootte A4 en resolutie 300 DPI. U kunt ze wijzigen, indien nodig. De grootte van het papier wordt gespecificeerd in millimeters"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:179
+msgid ""
+"The following code fragment shows how to render a composition to a raster "
+"image"
+msgstr "Het volgende fragment code geeft weer hoe een compositie te renderen naar een rasterafbeelding"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:208
+msgid "The following code fragment renders a composition to a PDF file"
+msgstr "Het volgende fragment code rendert een compositie naar een PDF-bestand"
+
+#~ msgid ""
+#~ "Render some layers using :class:`QgsMapRenderer` - create destination paint "
+#~ "device (``QImage``, ``QPainter`` etc.), set up layer set, extent, output "
+#~ "size and do the rendering::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The composer consists of a bunch of classes. They all belong to the core "
+#~ "library. QGIS application has a convenient GUI for placement of the "
+#~ "elements, though it is not available in the gui library. If you are not "
+#~ "familiar with `Qt Graphics View framework "
+#~ "<http://doc.qt.nokia.com/stable/graphicsview.html>`_, then you are "
+#~ "encouraged to check the documentation now, because the composer is based on "
+#~ "it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The central class of the composer is :class:`QgsComposition` which is "
+#~ "derived from :class:`QGraphicsScene`. Let us create one::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "map --- this item tells the libraries where to put the map itself. Here we "
+#~ "create a map and stretch it over the whole paper size::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "label --- allows displaying labels. It is possible to modify its font, "
+#~ "color, alignment and margin::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default the newly created composer items have zero position (top left "
+#~ "corner of the page) and zero size. The position and size are always measured"
+#~ " in millimeters::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A frame is drawn around each item by default. How to remove the frame::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The default output settings for composition are page size A4 and resolution "
+#~ "300 DPI. You can change them if necessary. The paper size is specified in "
+#~ "millimeters::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following code fragment shows how to render a composition to a raster "
+#~ "image::"
+#~ msgstr ""
+
+#~ msgid "The following code fragment renders a composition to a PDF file::"
+#~ msgstr ""

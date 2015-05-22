@@ -1,0 +1,552 @@
+# 
+# Translators:
+# Eduardo Gonzalez Latorre <eg@gismood.com>, 2014
+# elgina <elgina88@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-09-29 01:56+0000\n"
+"Last-Translator: Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:6
+msgid "|LS| Terrain Analysis"
+msgstr "|LS| Análisis del Terreno "
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:8
+msgid ""
+"Certain types of rasters allow you to gain more insight into the terrain "
+"that they represent. Digital Elevation Models (DEMs) are particularly useful"
+" in this regard. In this lesson you will use terrain analysis tools to find "
+"out more about the study area for the proposed residential development from "
+"earlier."
+msgstr "Ciertos tipos de ráster te permiten obtener una visión más clara del terreno que representan. Los Modelos de Digital de Elevaciones (MDEs) son particularmente útiles para ello. En esta lección utilizaras herramientas de análisis de terrenos para obtener más información sobre el área de estudio para la propuesta de desarrollo residencial anterior."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:13
+msgid ""
+"**The goal for this lesson:** To use terrain analysis tools to derive more "
+"information about the terrain."
+msgstr "**El objetivo de esta lección:** Utilizar herramientas de análisis del terreno para obtener más información sobre el terreno."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:17
+msgid "|basic| |FA| Calculating a Hillshade"
+msgstr "|basic| |FA| Cálculo del Relieve Sombreado"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:19
+msgid ""
+"The DEM you have on your map right now does show you the elevation of the "
+"terrain, but it can sometimes seem a little abstract. It contains all the 3D"
+" information about the terrain that you need, but it doesn't look like a 3D "
+"object. To get a better look at the terrain, it is possible to calculate a "
+"*hillshade*, which is a raster that maps the terrain using light and shadow "
+"to create a 3D-looking image."
+msgstr "El MDE que tienes en tu mapa ahora mismo te muestra la elevación del terreno, pero en ocasiones puede ser un poco abstracto. Contiene toda la información 3D que necesitas sobre el terreno, pero no parece un objeto 3D. Para tener una mejor visión del terreno, es posible calcular un *sombreado del relieve*, que es un ráster que utiliza la luz y sombra del terreno para crear una imagen que aprenta ser 3D de este."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:26
+msgid ""
+"To work with DEMs, you should use QGIS' all-in-one :guilabel:`DEM (Terrain "
+"models)` analysis tool."
+msgstr "Para trabajar con MDEs, deberías utilizar la herramienta de análisis todo-en-uno del QGIS :guilabel:`MDT (Modelos de terreno)`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:29
+msgid ""
+"Click on the menu item :menuselection:`Raster --> Analysis --> DEM (Terrain "
+"models)`."
+msgstr "Haz clic en el elemento del menú :menuselection:`Ráster --> Análisis --> MDT (Modelos de terreno)`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:31
+msgid ""
+"In the dialog that appears, ensure that the :guilabel:`Input file` is the "
+":guilabel:`DEM` layer."
+msgstr "En el cuadro de diálogo que aparece, asegúrate que el :guilabel:`Archivo de entrada file` es la capa :guilabel:`MDE`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:33
+msgid ""
+"Set the :guilabel:`Output file` to :kbd:`hillshade.tif` in the directory "
+":kbd:`exercise_data/residential_development`."
+msgstr "Ajusta el :guilabel:`Archivo de salida` a :kbd:`relieve_sombreado.tif` en el directorio :kbd:`exercise_data/residential_development`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:35
+msgid ""
+"Also make sure that the :guilabel:`Mode` option has :guilabel:`Hillshade` "
+"selected."
+msgstr "Asegúrate también de que la opción :guilabel:`Modo` tiene :guilabel:`Mapa de sombras (Hillshade)` seleccionada."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:37
+msgid "Check the box next to :guilabel:`Load into canvas when finished`."
+msgstr "Comprueba que la caja junto a :guilabel:`Cargar en la vista del mapa cuando se termine` esta seleccionada."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:38
+msgid "You may leave all the other options unchanged."
+msgstr "Puedes dejar todas las demás opciones sin cambiar."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:39
+msgid "Click :guilabel:`OK` to generate the hillshade."
+msgstr "Haz clic en :guilabel:`Aceptar` para generar el sombreado del relieve."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:40
+msgid ""
+"When it tells you that processing is completed, click :guilabel:`OK` on the "
+"message to get rid of it."
+msgstr "Cuando te diga que el proceso se ha completado, haz clic en :guilabel:`Aceptar` en el mensaje para cerrarlo."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:42
+msgid ""
+"Click :guilabel:`Close` on the main :guilabel:`DEM (Terrain models)` dialog."
+msgstr "Haz clic en :guilabel:`Cerrar` en el cuadro de diálogo principal :guilabel:`MDT (Modelos del terreno)`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:44
+msgid ""
+"You will now have a new layer called :guilabel:`hillshade` that looks like "
+"this:"
+msgstr "Ahora tendrás una capa nueva llamada :guilabel:`relieve_sombreado` que tiene este aspecto:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:50
+msgid ""
+"That looks nice and 3D, but can we improve on this? On its own, the "
+"hillshade looks like a plaster cast. Can't we use it together with our "
+"other, more colorful rasters somehow? Of course we can, by using the "
+"hillshade as an overlay."
+msgstr "Se ve bien en 3D, pero ¿podemos mejorarla? En sí mismo, el sombreado del relieve parece un molde de yeso. ¿No podríamos utilizarlo con nuestros otros ráster más coloridos de alguna manera? Por supuesto que podemos, utilizando el sombreado del relieve como una capa sobrepuesta."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:56
+msgid "|basic| |FA| Using a Hillshade as an Overlay"
+msgstr "|basic| |FA| Utilizando un Sombreado del Relieve como Capa Sobrepuesta"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:58
+msgid ""
+"A hillshade can provide very useful information about the sunlight at a "
+"given time of day. But it can also be used for aesthetic purposes, to make "
+"the map look better. The key to this is setting the hillshade to being "
+"mostly transparent."
+msgstr "Un sombreado del relieve puede proporcionar información muy útil sobre la luz solar en un momento dado del día. Pero también puede ser utilizado para fines estéticos, para que el mapa tenga mejor aspecto. La clave en este caso está en que el sombreado del relieve sea defina como mayormente transparente."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:63
+msgid ""
+"Change the symbology of the original :guilabel:`DEM` to use the "
+":guilabel:`Pseudocolor` scheme as in the previous exercise."
+msgstr "Cambia la simbología del :guilabel:`MDE` original  para utilizar el esquema :guilabel:`Pseudocolor` como en el ejercicio anterior."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:65
+msgid ""
+"Hide all the layers except the :guilabel:`DEM` and :guilabel:`hillshade` "
+"layers."
+msgstr "Oculta todas las capas excepto :guilabel:`MDE` y :guilabel:`relieve_sombreado`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:67
+msgid ""
+"Click and drag the :guilabel:`DEM` to be beneath the :guilabel:`hillshade` "
+"layer in the :guilabel:`Layers list`."
+msgstr "Haz clic y arrastra la :guilabel:`MDE` hasta debajo de la capa :guilabel:`relieve_sombreado` en la :guilabel:`Lista de capas`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:69
+msgid ""
+"Set the :guilabel:`hillshade` layer to be transparent by opening its "
+":guilabel:`Layer Properties` and go to the :guilabel:`Transparency` tab."
+msgstr "Ajusta la capa :guilabel:`relieve_sombreado` para ser transparente abriendo sus :guilabel:`Propiedades de la capa` y ve a la pestaña :guilabel:`Transparencia`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:72
+msgid "Set the :guilabel:`Global transparency` to :kbd:`50%`:"
+msgstr "Ajusta la :guilabel:`Transparencia global` a :kbd:`50%`:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:73
+msgid ""
+"Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog. You'll get "
+"a result like this:"
+msgstr "Haz clic en :guilabel:`Aceptar` en el cuadro de diálogo :guilabel:`Propiedades de la capa`. Obtendrás resultados como estos:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:79
+msgid ""
+"Switch the :guilabel:`hillshade` layer off and back on in the "
+":guilabel:`Layers list` to see the difference it makes."
+msgstr "Activa y desactiva varias veces la capa :guilabel:`relieve_sombeado` en la :guilabel:`Lista de capas` para ver la diferencia que hay."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:82
+msgid ""
+"Using a hillshade in this way, it's possible to enhance the topography of "
+"the landscape. If the effect doesn't seem strong enough to you, you can "
+"change the transparency of the :guilabel:`hillshade` layer; but of course, "
+"the brighter the hillshade becomes, the dimmer the colors behind it will be."
+" You will need to find a balance that works for you."
+msgstr "Utilizando el sombreado del relieve de esta forma, es posible enaltecer la topografía del paisaje. Si el efecto no parece ser suficiente para ti, puedes cambiar la transparencia de la capa :guilabel:`relieve_sombreado`, pero por supuesto, cuanto más brillante se vuelva el sombreado del relieve, peor se verán los colores bajo él.\nNecesitarás encontrar un balance que funcione."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:88
+msgid "Remember to save your map when you are done."
+msgstr "Recuerda guardar tu mapa cuando hayas terminado."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:90
+msgid ""
+"For the next two exercises, please use a new map. Load only the :kbd:`DEM` "
+"raster dataset into it (:kbd:`exercise_data/raster/SRTM/srtm_41_19.tif`). "
+"This is to simplify matters while you're working with the raster analysis "
+"tools. Save the map as :kbd:`exercise_data/raster_analysis.qgs`."
+msgstr "Para los siguientes dos ejercicios,  por favor, usa un mapa nuevo. Carga solo el conjunto de datos ráster :kbd:`MDE` en el mapa (:kbd:`exercise_data/raster/SRTM/srtm_41_19.tif`).  Es para simplificar la tarea mientras trabajas con la herramienta de análisis del ráster. Guarda el mapa como :kbd:`exercise_data/raster_analysis.qgs`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:97
+msgid "|moderate| |FA| Calculating the Slope"
+msgstr "|moderate| |FA| Calculo de la Pendiente"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:99
+msgid ""
+"Another useful thing to know about the terrain is how steep it is. If, for "
+"example, you want to build houses on the land there, then you need land that"
+" is relatively flat."
+msgstr "Otra cosa útil a saber sobre el terreno es cómo de escarpado es. Si, por ejemplo, quieres construir casas en esas tierras, entonces necesitarás un terreno relativamente plano."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:103
+msgid ""
+"To do this, you need to use the :guilabel:`Slope` mode of the :guilabel:`DEM"
+" (Terrain models)` tool."
+msgstr "Para hacer esto, necesitas utilizar la herramienta :guilabel:`Pendiente` mode of the :guilabel:`MDT (Modelos de terreno)`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:106
+msgid "Open the tool as before."
+msgstr "Abre la herramienta como antes."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:107
+msgid "Select the :guilabel:`Mode` option :guilabel:`Slope`:"
+msgstr "Selecciona la opción :guilabel:`Pendiente` dentro de :guilabel:`Modo`:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:112
+msgid ""
+"Set the save location to "
+":kbd:`exercise_data/residential_development/slope.tif`"
+msgstr "Ajusta la localización de guardado a :kbd:`exercise_data/residential_development/pendiente.tif`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:114
+msgid "Enable the :guilabel:`Load into canvas...` checkbox."
+msgstr "Habilita la casilla de verificación :guilabel:`Cargar en la vista...`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:115
+msgid ""
+"Click :guilabel:`OK` and close the dialogs when processing is complete, and "
+"click :guilabel:`Close` to close the dialog. You'll see a new raster loaded "
+"into your map."
+msgstr "Haz clic en :guilabel:`Aceptar` y cierra el cuadro de diálogo cuando el proceso esté completo, y haz clic en :guilabel:`Cerrar` para cerrar el cuadro de diálogo. Verás un nuevo ráster cargado en tu mapa."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:118
+msgid ""
+"With the new raster selected in the :guilabel:`Layers list`, click the "
+":guilabel:`Stretch Histogram to Full Dataset` button. Now you'll see the "
+"slope of the terrain, with black pixels being flat terrain and white pixels,"
+" steep terrain:"
+msgstr "Con el nuevo ráster seleccionado en la :guilabel:`Lista de capas`, haz clic en el botón :guilabel:`Estirar histograma a la extensión de todo el conjunto de datos`. Ahora verás la pendiente del terreno, con pixeles negros siendo terreno llano y pixeles blancos siendo terreno escapado:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:129
+msgid "|moderate| |TY| calculating the aspect"
+msgstr "|moderate| |TY| Cálculo del orientación"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:131
+msgid ""
+"The *aspect* of terrain refers to the direction it's facing in. Since this "
+"study is taking place in the Southern Hemisphere, properties should ideally "
+"be built on a north-facing slope so that they can remain in the sunlight."
+msgstr "La *orientación* del terreno se refiere a la dirección en la que está orientado. Como el estudio se lleva a cabo en el Hemisferio Sur, las propiedades deberían ser construidas idílicamente en una pendiente orientada al norte para permanecer iluminadas."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:135
+msgid ""
+"Use the :guilabel:`Aspect` mode of the :guilabel:`DEM (Terain models)` tool "
+"to calculate the aspect of the terrain."
+msgstr "Utiliza el modo :guilabel:`Orientación` de la herramienta :guilabel:`MDT (Modelos de terreno)` para calcular la orientación del terreno."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:138
+msgid ":ref:`Check your results <raster-analysis-1>`"
+msgstr ":ref:`Comprueba tus resultados <raster-analysis-1>`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:141
+msgid "|moderate| |FA| Using the Raster Calculator"
+msgstr "|moderate| |FA| Utilizando la Calculadora Ráster"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:143
+msgid ""
+"Think back to the estate agent problem, which we last addressed in the "
+"*Vector Analysis* lesson. Let's imagine that the buyers now wish to purchase"
+" a building and build a smaller cottage on the property. In the Southern "
+"Hemisphere, we know that an ideal plot for development needs to have areas "
+"on it that are north-facing, and with a slope of less than five degrees. But"
+" if the slope is less than 2 degrees, then the aspect doesn't matter."
+msgstr "Piensa en el problema del agente inmobiliario anterior, que se abordó en la lección *Análisis Vectorial*. Imagina que los compradores ahora quieren encontrar una construcción y construir una pequeña casa de campo en la propiedad. En el Hemisferio Sur, sabemos que una parcela con un desarrollo ideal debe estar orientada al norte, y con una pendiente de menos de cinco grados. Pero si la pendiente es menor a 2 grados, la orientación no importará."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:150
+msgid ""
+"Fortunately, you already have rasters showing you the slope as well as the "
+"aspect, but you have no way of knowing where both conditions are satisfied "
+"at once. How could this analysis be done?"
+msgstr "Afortunadamente, ya tienes rásters mostrándote la pendiente además de la orientación, pero no tienes ninguna forma de saber dónde se dan ambas condiciones a la vez. ¿Cómo se podría realizar este análisis?"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:154
+msgid "The answer lies with the :guilabel:`Raster calculator`."
+msgstr "La respuesta está en la :guilabel:`Calculadora ráster`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:156
+msgid ""
+"Click on :menuselection:`Raster > Raster calculator...` to start this tool."
+msgstr "Haz clic en :menuselection:`Ráster > Calculadora ráster...` para iniciar la herramienta."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:157
+msgid ""
+"To make use of the :guilabel:`aspect` dataset, double-click on the item "
+":guilabel:`aspect@1` in the :guilabel:`Raster bands` list on the left. It "
+"will appear in the :guilabel:`Raster calculator expression` text field "
+"below."
+msgstr "Para utilizar el conjunto de datos :guilabel:`orientación`, doble clic en el elemento :guilabel:`orientación@1` en la lista :guilabel:`Bandas ráster` de la izquierda. Aparecerá en el campo de texto :guilabel:`Expresión de la calculadora de campos` más abajo."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:161
+msgid ""
+"North is at 0 (zero) degrees, so for the terrain to face north, its aspect "
+"needs to be greater than 270 degrees and less than 90 degrees."
+msgstr "El norte está a 0 (cero) grados, así que para un terreno orientado al norte, la orientación debe ser mayor de 270 grados y menor de 90."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:164
+msgid ""
+"In the :guilabel:`Raster calculator expression` field, enter this "
+"expression:"
+msgstr "En el campo :guilabel:`Expresión de la calculadora de campos`, introduce esta expresión:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:166
+msgid ":kbd:`aspect@1 <= 90 OR aspect@1 >= 270`"
+msgstr ":kbd:`aspect@1 <= 90 OR aspect@1 >= 270`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:168
+msgid ""
+"Set the output file to :kbd:`aspect_north.tif` in the directory "
+":kbd:`exercise_data/residential_development/`."
+msgstr "Ajusta el archivo de salida a :kbd:`orientación_norte.tif` en el directorio :kbd:`exercise_data/residential_development/`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:170
+msgid "Ensure that the box :guilabel:`Add result to project` is checked."
+msgstr "Asegúrate de que la caja :guilabel:`Añadir resultados al proyecto` está seleccionada."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:171
+msgid "Click :guilabel:`OK` to begin processing."
+msgstr "Haz clic en :guilabel:`Aceptar` para empezar a procesar."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:176
+msgid "Your result will be this:"
+msgstr "Tu resultado será este:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:185
+msgid "|moderate| |TY|"
+msgstr "|moderate| |TY|"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:187
+msgid ""
+"Now that you've done the aspect, create two separate new analyses of the "
+":guilabel:`DEM` layer."
+msgstr "Ahora que has hecho la orientación, crea dos nuevos análisis de la capa :guilabel:`MDE`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:190
+msgid ""
+"The first will be to identify all areas where the slope is less than or "
+"equal to :kbd:`2` degrees."
+msgstr "El primero será para identificar todas las áreas donde la pendiente es menor o igual a :kbd:`2` grados."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:192
+msgid ""
+"The second is similar, but the slope should be less than or equal to "
+":kbd:`5` degrees."
+msgstr "El segundo es similar, pero la pendiente debería ser menor o igual a :kbd:`5` grados."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:194
+msgid ""
+"Save them under :kbd:`exercise_data/residential_development/` as "
+":kbd:`slope_lte2.tif` and :kbd:`slope_lte5.tif`."
+msgstr "Guárdalos en :kbd:`exercise_data/residential_development/` como :kbd:`pendiente_lte2.tif` y :kbd:`pendiente_lte5.tif`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:197
+msgid ":ref:`Check your results <raster-analysis-2>`"
+msgstr ":ref:`Comprueba tus resultados <raster-analysis-2>`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:201
+msgid "|moderate| |FA| Combining Raster Analysis Results"
+msgstr "|moderate| |FA| Combinando Resultados de Análisis Ráster"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:203
+msgid "Now you have three new analysis rasters of the :guilabel:`DEM` layer:"
+msgstr "Ahora tienes tres nuevos análisis ráster de la capa :guilabel:`MDE`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:205
+msgid ":guilabel:`aspect_north`: the terrain faces north"
+msgstr ":guilabel:`orientacion_norte`: el terreno orientado al norte"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:206
+msgid ":guilabel:`slope_lte2`: the slope is at or below 2 degrees"
+msgstr ":guilabel:`pendiente_lte2`: la pendiente igual o menor a 2 grados"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:207
+msgid ":guilabel:`slope_lte5`: the slope is at or below 5 degrees"
+msgstr ":guilabel:`pendiente_lte5`: la pendiente igual o menor a 5 grados"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:209
+msgid ""
+"Where the conditions of these layers are met, they are equal to :kbd:`1`. "
+"Elsewhere, they are equal to :kbd:`0`. Therefore, if you multiply one of "
+"these rasters by another one, you will get the areas where both of them are "
+"equal to :kbd:`1`."
+msgstr "Cuando las condiciones de esas tres capas coinciden, son iguales a :kbd:`1`. En cualquier otro punto, son iguales a :kbd:`0`. Además, si multiplicas uno de esos ráster por otro, tendrás el área donde ambos son iguales a :kbd:`1`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:214
+msgid ""
+"The conditions to be met are: at or below 5 degrees of slope, the terrain "
+"must face north; but at or below 2 degrees of slope, the direction that the "
+"terrain faces in does not matter."
+msgstr "Las condiciones a cumplir son; a pendientes iguales o menores de 5 grados, el terreno debe estar orientado al norte; pero a pendientes iguales o menores de 2 grados, la dirección a la que se orienta el terreno no importa."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:218
+msgid ""
+"Therefore, you need to find areas where the slope is at or below 5 degrees "
+":kbd:`AND` the terrain is facing north; :kbd:`OR` the slope is at or below 2"
+" degrees. Such terrain would be suitable for development."
+msgstr "Por lo tanto, necesitas encontrar áreas donde la pendiente sea menor o igual a 5 grados :kbd:`Y` el terreno está orientado al norte; :kbd:`O` la pendiente es menor o igual a 2 grados. Dicho terreno sería aceptable para el desarrollo."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:222
+msgid "To calculate the areas that satisfy these criteria:"
+msgstr "Para calcular las áreas que cumplen esos criterios:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:224
+msgid "Open your :guilabel:`Raster calculator` again."
+msgstr "Abre de nuevo tu :guilabel:`Calculadora ráster`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:225
+msgid ""
+"Use the :guilabel:`Raster bands` list, the :guilabel:`Operators` buttons, "
+"and your keyboard to build this expression in the :guilabel:`Raster "
+"calculator expression` text area:"
+msgstr "Utiliza la lista :guilabel:`Bandas ráster`, los botones :guilabel:`Operadores`, y tu teclado para construir esa expresión en el área de texto :guilabel:`Expresión de la calculadora de campos`:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:229
+msgid ""
+":kbd:`( aspect_north@1 = 1 AND slope_lte5@1 = 1 )  OR slope_lte2@1 = 1`"
+msgstr ":kbd:`( aspect_north@1 = 1 AND slope_lte5@1 = 1 )  OR slope_lte2@1 = 1`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:231
+msgid ""
+"Save the output under :kbd:`exercise_data/residential_development/` as "
+":kbd:`all_conditions.tif`."
+msgstr "Guarda el resultado en :kbd:`exercise_data/residential_development/` como :kbd:`todas_condiciones.tif`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:233
+msgid ""
+"Click :guilabel:`OK` on the :guilabel:`Raster calculator`. Your results:"
+msgstr "Haz clic en :guilabel:`Aceptar` en el :guilabel:`Calculadora ráster`. Tus resultados:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:240
+msgid "|moderate| |FA| Simplifying the Raster"
+msgstr "|moderate| |FA| Simplificando el Ráster"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:242
+msgid ""
+"As you can see from the image above, the combined analysis has left us with "
+"many, very small areas where the conditions are met. But these aren't really"
+" useful for our analysis, since they're too small to build anything on. "
+"Let's get rid of all these tiny unusable areas."
+msgstr "Como puedes ver en la imagen superior, los análisis combinados nos dejan con muchas áreas pequeñas donde se cumplen las condiciones. Pero esas no son realmente útiles para nuestro análisis, ya que son demasiado pequeñas para construir. Vamos a deshacernos de todas esas áreas minúsculas."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:247
+msgid ""
+"Open the :guilabel:`Sieve` tool (:menuselection:`Raster --> Analysis --> "
+"Sieve`)."
+msgstr "Abre la herramienta :guilabel:`Sieve` (:menuselection:`Ráster --> Análisis --> Filtrado`)."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:249
+msgid ""
+"Set the :guilabel:`Input file` to :kbd:`all_conditions`, and the "
+":guilabel:`Output file` to :kbd:`all_conditions_sieve.tif` (under "
+":kbd:`exercise_data/residential_development/`)."
+msgstr "Ajusta el :guilabel:`Archivo de entrada` a :kbd:`todas_condiciones`, y el :guilabel:`Archivo de salida` a :kbd:`todas_condiciones_filtrado.tif` (en :kbd:`exercise_data/residential_development/`)."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:252
+msgid ""
+"Set both the :guilabel:`Threshold` and :guilabel:`Pixel connections` values "
+"to :kbd:`8`, then run the tool."
+msgstr "Ajusta ambos valores :guilabel:`Umbral` y :guilabel:`Conexiones de píxeles` a :kbd:`8`, luego ejecuta la herramienta."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:258
+msgid ""
+"Once processing is done, the new layer will load into the canvas. But when "
+"you try to use the histogram stretch tool to view the data, this happens:"
+msgstr "Cuando el proceso esté terminado, la nueva capa se cargará en el mapa. Pero cuando intentes utilizar la herramienta de estiramiento del histograma para ver los datos, ocurrirá esto:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:264
+msgid "What's going on? The answer lies in the new raster file's metadata."
+msgstr "¿Qué está pasando? La respuesta se encuentra en los metadatos del nuevo archivo ráster."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:266
+msgid ""
+"View the metadata under the :guilabel:`Metadata` tab of the :guilabel:`Layer"
+" Properties` dialog. Look in the :guilabel:`Properties` section at the "
+"bottom."
+msgstr "Mira los metadatos en la pestaña :guilabel:`Metadatos` del cuadro de diálogo :guilabel:`Propiedades de la capa`. Mira en la sección inferior :guilabel:`Propiedades`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:272
+msgid ""
+"Whereas this raster, like the one it's derived from, should only feature the"
+" values :kbd:`1` and :kbd:`0`, it has the :kbd:`STATISTICS_MINIMUM` value of"
+" a very large negative number. Investigation of the data shows that this "
+"number acts as a null value. Since we're only after areas that weren't "
+"filtered out, let's set these null values to zero."
+msgstr "A pesar de que este ráster, al igual  que el ráster de que se ha derivado, debería solo mostrar los valores :kbd:`1` y :kbd:`0`, tiene como valor de :kbd:`STATISTICS_MINIMUM` un número negativo muy alto. La investigación de los datos muestran que este número actua como valor nulo. Como solo buscamos áreas que no estaban filtradas, vamos a ajustar esos valores nulos a cero."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:278
+msgid ""
+"Open the :guilabel:`Raster Calculator` again, and build this expression:"
+msgstr "Abre de nuevo el :guilabel:`Calculadora ráster`, y construye esta expresion:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:280
+msgid ":kbd:`(all_conditions_sieve@1 <= 0) = 0`"
+msgstr ":kbd:`(todas_condiciones_filtrado@1 <= 0) = 0`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:282
+msgid ""
+"This will maintain all existing zero values, while also setting the negative"
+" numbers to zero; which will leave all the areas with value :kbd:`1` intact."
+msgstr "Esto mantendrá los valores cero existentes, mientras cambiará los valores negativos a cero; lo que dejará a todas las áreas con el valor :kbd:`1` intacto."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:284
+msgid ""
+"Save the output under :kbd:`exercise_data/residential_development/` as "
+":kbd:`all_conditions_simple.tif`."
+msgstr "Guarda el resultado en :kbd:`exercise_data/residential_development/` como :kbd:`todas_condiciones_simple.tif`."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:287
+msgid "Your output looks like this:"
+msgstr "Tu resultado tiene este aspecto:"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:292
+msgid ""
+"This is what was expected: a simplified version of the earlier results. "
+"Remember that if the results you get from a tool aren't what you expected, "
+"viewing the metadata (and vector attributes, if applicable) can prove "
+"essential to solving the problem."
+msgstr "Eso era lo que se esperaba: una versión simplificada de los resultados anteriores. Recuerda que si los resultados que obtienes de una herramienta no son los que esperabas, comprobando los metadatos (y atributos vectoriales, si es aplicable) puede ser esencial para solucionar el problema."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:298
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:300
+msgid ""
+"You've seen how to derive all kinds of analysis products from a DEM. These "
+"include hillshade, slope and aspect calculations. You've also seen how to "
+"use the raster calculator to further analyze and combine these results."
+msgstr "Has visto cómo derivar todo tipo de análisis desde un MDE. Esto incluye cálculos de sombreado del relieve, pendiente y orientaciones. También has visto cómo utilizar la calculadora ráster para analizar más profundamente y combinar esos resultados."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:305
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:307
+msgid ""
+"Now you have two analyses: the vector analysis which shows you the "
+"potentially suitable plots, and the raster analysis that shows you the "
+"potentially suitable terrain. How can these be combined to arrive at a final"
+" result for this problem? That's the topic for the next lesson, starting in "
+"the next module."
+msgstr "Ahora tienes dos análisis: el análisis vectorial que te muestra las parcelas potencialmente adecuadas, y el análisis ráster que te muestra el terreno potencialmente adecuado. ¿Cómo se pueden combinar para llegar a un resultado final para este problema? Ese es el tema de la siguiente lección, empezando en el módulo siguiente."

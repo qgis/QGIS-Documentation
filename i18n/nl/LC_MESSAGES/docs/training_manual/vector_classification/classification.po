@@ -1,0 +1,476 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-03 17:52+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:6
+msgid "|LS| Classification"
+msgstr "|LS| Classificatie"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:8
+msgid ""
+"Labels are a good way to communicate information such as the names of "
+"individual places, but they can't be used for everything. For example, let's"
+" say that someone wants to know what each :guilabel:`landuse` area is used "
+"for. Using labels, you'd get this:"
+msgstr "Labels zijn een goede manier om informatie te communiceren, zoals de namen van individuele plaatsen, maar zij kunnen niet overal voor worden gebruikt. Laten we bijvoorbeeld zeggen dat iemand wil weten waar elk gebied van :guilabel:`landuse` voor wordt gebruikt. Met behulp van labels zou u dit krijgen:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:16
+msgid ""
+"This makes the map's labeling difficult to read and even overwhelming if "
+"there are numerous different landuse areas on the map."
+msgstr "Dit maakt het labelen van de kaart moeilijk te lezen en zelfs overweldigend als er onnoemelijk veel verschillende gebieden voor het gebruik van land zijn op de kaart staan."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:19
+msgid ""
+"**The goal for this lesson:** To learn how to classify vector data "
+"effectively."
+msgstr "**Het doel voor deze les:** Leren om vectorgegevens effectief te classificeren."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:22
+msgid "|basic| |FA| Classifying Nominal Data"
+msgstr "|basic| |FA| Nominale gegevens classificeren "
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:24
+#: ../../source/docs/training_manual/vector_classification/classification.rst:247
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog for the :guilabel:`landuse` "
+"layer."
+msgstr "Open het dialoogvenster :guilabel:`Laag eigenschappen` voor de laag :guilabel:`landuse`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:25
+msgid "Go to the :guilabel:`Style` tab."
+msgstr "Ga naar de tab :guilabel:`Style`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:26
+msgid ""
+"Click on the dropdown that says :guilabel:`Single Symbol` and change it to "
+":guilabel:`Categorized`:"
+msgstr "Klik op de keuzelijst genaamd :guilabel:`Enkel symbool` en wijzig het naar :guilabel:`Categorieën`:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:32
+msgid ""
+"In the new panel, change the :guilabel:`Column` to :guilabel:`landuse` and "
+"the :guilabel:`Color ramp` to :guilabel:`Greens`."
+msgstr "Wijzig, in het nieuwe paneel, :guilabel:`Kolom` naar :guilabel:`landuse` en :guilabel:`Kleurverloop` naar :guilabel:`Greens`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:34
+msgid "Click the button labeled :guilabel:`Classify`:"
+msgstr "Klik op de knop genaamd :guilabel:`Classificeren`:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:39
+#: ../../source/docs/training_manual/vector_classification/classification.rst:146
+#: ../../source/docs/training_manual/vector_classification/classification.rst:176
+#: ../../source/docs/training_manual/vector_classification/classification.rst:212
+msgid "Click :guilabel:`OK`."
+msgstr "Klik op :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:41
+msgid "You'll see something like this:"
+msgstr "U zult iets zien zoals dit:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:46
+msgid ""
+"Click the arrow (or plus sign) next to :guilabel:`landuse` in the "
+":guilabel:`Layer list`, you'll see the categories explained:"
+msgstr "Klik op de pijl (of plusteken) naast :guilabel:`landuse` in de :guilabel:`Lagenl;ijst`, u zult de categorieën zien uitgelegd:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:52
+msgid ""
+"Now our landuse polygons are appropriately colored and are classified so "
+"that areas with the same land use are the same color. You may wish to remove"
+" the black border from the :guilabel:`landuse` layer:"
+msgstr "Nu zijn onze polygonen voor het gebruik van land toepasselijk gekleurd en geclassificeerd zodat gebieden met hetzelfde gebruik van het land dezelfde kleur hebben. U wilt misschien de zwarte rand uit de laag :guilabel:`landuse` verwijderen:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:56
+msgid ""
+"Open :guilabel:`Layer Properties`, go to the :guilabel:`Style` tab and "
+"select :guilabel:`Symbol`."
+msgstr "Open :guilabel:`Laag eigenschappen`, ga naar de tab :guilabel:`Stijl` en selecteer :guilabel:`Symbool`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:58
+msgid ""
+"Change the symbol by removing the border from the :guilabel:`Simple Fill` "
+"layer and click :guilabel:`OK`."
+msgstr "Wijzig het symbool door de rand te verwijderen van de laag :guilabel:`Standaard vulling` en klik op :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:61
+msgid ""
+"You'll see that the landuse polygon outlines have been removed, leaving just"
+" our new fill colours for each categorisation."
+msgstr "U zult zien dat de randen van de polygonen voor gebruik van het land zijn verwijderd, wat rest zijn de nieuwe vulkleuren voor elke categorie."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:64
+msgid ""
+"If you wish to, you can change the fill color for each landuse area by "
+"double-clicking the relevant color block:"
+msgstr "Als u wilt kunt de kleur voor elk gebied voor gebruik van het land wijzigen door te dubbelklikken op het relevant kleurblok:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:70
+msgid "Notice that there is one category that's empty:"
+msgstr "Merk op dat er één categorie is die leeg is:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:75
+msgid ""
+"This empty category is used to color any objects which do not have a landuse"
+" value defined or which have a *NULL* value. It is important to keep this "
+"empty category so that areas with a *NULL* value are still represented on "
+"the map. You may like to change the color to more obviously represent a "
+"blank or *NULL* value."
+msgstr "Deze lege categorie wordt gebruikt om objecten te kleuren die geen waarde voor het gebruik van het land gedefinieerd hebben of een waarde *NULL* hebben. Het is belangrijk om deze lege categorie te behouden zodat gebieden met een waarde *NULL* nog steeds worden weergegeven op de kaart. U wilt misschien de kleur wijzigen naar een meer opvallende om een blanco of *NULL*-waarde weer te geven."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:80
+msgid ""
+"Remember to save your map now so that you don't lose all your hard-earned "
+"changes!"
+msgstr "Onthoud om uw kaart nu op te slaan zodat u uw welverdiende wijzigingen niet verliest!"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:84
+msgid "|basic| |TY| More Classification"
+msgstr "|basic| |TY| Meer classificatie"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:86
+msgid ""
+"If you're only following the basic-level content, use the knowledge you "
+"gained above to classify the :guilabel:`buildings` layer. Set the "
+"categorisation against the :guilabel:`building` column and use the "
+":guilabel:`Spectral` color ramp."
+msgstr "Als u alleen de inhoud voor het basisniveau volgt, gebruik dan de kennis die u hierboven hebt opgedaan om de laag :guilabel:`buildings` te classificeren. Stel de categorie in op de kolom :guilabel:`building` en gebruik de kleurenbalk :guilabel:`Spectraal`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:90
+msgid "Remember to zoom into an urban area to see the results."
+msgstr "Onthoud om in te zoomen op een stadsgebied om de resultaten te zien."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:93
+msgid "|moderate| |FA| Ratio Classification"
+msgstr "|moderate| |FA| Ratio-classificatie"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:95
+msgid ""
+"There are four types of classification: *nominal*, *ordinal*, *interval* and"
+" *ratio*."
+msgstr "Er zijn vier typen classificatie: *nominaal*, *ordinaal*, *interval* en *ratio*."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:98
+msgid ""
+"In nominal classification, the categories that objects are classified into "
+"are name-based; they have no order. For example: town names, district codes,"
+" etc."
+msgstr "Bij nominale classificatie zijn de categorieën waarin de objecten worden geclassificeerd gebaseerd op namen; zij hebben geen volgorde. Bijvoorbeeld: namen van steden, codes voor buurten, etc."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:101
+msgid ""
+"In ordinal classification, the categories are arranged in a certain order. "
+"For example, world cities are given a rank depending on their importance for"
+" world trade, travel, culture, etc."
+msgstr "Bij ordinale classificatie worden de categorieën geschikt in een bepaalde volgorde. Wereldsteden wordt bijvoorbeeld een rang gegeven afhankelijk van hun belang voor de wereldhandel, reizen, cultuur, etc."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:105
+msgid ""
+"In interval classification, the numbers are on a scale with positive, "
+"negative and zero values. For example: height above/below sea level, "
+"temperature above/below freezing (0 degrees Celsius), etc."
+msgstr "Bij classificatie op interval staan de getallen op een schaal met positieve, negatieve en nulwaarden. Bijvoorbeeld: hoogte boven/onder zeeniveau, temperatuur boven/onder het vriespunt (0 graden Celsius), etc."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:109
+msgid ""
+"In ratio classification, the numbers are on a scale with only positive and "
+"zero values. For example: temperature above absolute zero (0 degrees "
+"Kelvin), distance from a point, the average amount of traffic on a given "
+"street per month, etc."
+msgstr "Bij ratio-classificatie staan de getallen op een schaal met alleen positieve en nulwaarden. Bijvoorbeeld: temperatuur boven absoluut nul (0 graden Kelvin), afstand vanaf een punt, de gemiddelde hoeveelheid verkeer in een bepaalde straat per maand, etc."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:114
+msgid ""
+"In the example above, we used nominal classification to assign each farm to "
+"the town that it is administered by. Now we will use ratio classification to"
+" classify the farms by area."
+msgstr "In het voorbeeld hierboven gebruikten we nominale classificatie om elke boerderij toe te wijzen aan de stad waarin hij administratief ligt. Nu zullen we ratio-classificatie gebruiken om de boerderijen per gebied te classificeren."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:118
+msgid ""
+"Save your landuse symbology (if you want to keep it) by clicking on the "
+":guilabel:`Save Style ...` button in the :guilabel:`Style` dialog."
+msgstr "Sla uw symbologie voor het gebruik van het land op (als u die wilt behouden) door te klikken op de knop :guilabel:`Stijl opslaan ...` in het dialoogvenster :guilabel:`Stijl`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:121
+msgid ""
+"We're going to reclassify the layer, so existing classes will be lost if not"
+" saved."
+msgstr "We gaan de laag opnieuw classificeren dus zullen bestaande klassen verloren gaan indien zij niet zijn opgeslagen."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:124
+msgid "Close the :guilabel:`Style` dialog."
+msgstr "Sluit het dialoogvenster :guilabel:`Stijl`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:125
+msgid "Open the Attributes Table for the :guilabel:`landuse` layer."
+msgstr "Open de attributentabel voor de laag :guilabel:`landuse`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:127
+msgid ""
+"We want to classify the landuse areas by size, but there's a problem: they "
+"don't have a size field, so we'll have to make one."
+msgstr "We willen de gebieden voor het gebruik van het land classificeren op grootte, maar er is een probleem: zij hebben geen veld voor de grootte, dus zullen we er een moeten maken."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:130
+msgid "Enter edit mode by clicking this button:"
+msgstr "Ga naar de modus Bewerken met deze knop:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:136
+msgid "Add a new column with this button:"
+msgstr "Voeg een nieuwe kolom toe met deze knop:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:141
+msgid "Set up the dialog that appears, like this:"
+msgstr "Stel het dialoogvenster dat verschijnt als volgt in:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:148
+msgid ""
+"The new field will be added (at the far right of the table; you may need to "
+"scroll horizontally to see it). However, at the moment it is not populated, "
+"it just has a lot of :kbd:`NULL` values."
+msgstr "Het nieuwe veld zal worden toegevoegd (aan de uiterste rechterkant van de tabel; u zult misschien horizontaal moeten scrollen om het te zien). Op dit moment bevat het echter geen gegevens, het heeft slechts veel waarden :kbd:`NULL`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:152
+msgid "To solve this problem, we'll need to calculate the areas."
+msgstr "We moeten de gebieden berekenen om dit probleem op te lossen."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:154
+msgid "Open the field calculator:"
+msgstr "Open het veld Veldberekening:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:160
+msgid "You'll get this dialog:"
+msgstr "U krijgt dit dialoogvenster:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:165
+msgid "Change the values at the top of the dialog to look like this:"
+msgstr "Wijzig de waarden aan de bovenzijde van het dialoogvenster zodat het er zo uitziet:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:170
+msgid ""
+"In the :guilabel:`Function List`, select :menuselection:`Geometry --> "
+"$area`:"
+msgstr "In de :guilabel:`Functielijst`, selecteer :menuselection:`Geometrie --> $area`:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:175
+msgid ""
+"Double-click on it so that it appears in the :guilabel:`Expression` field."
+msgstr "Dubbelklik er op zodat het in het veld :guilabel:`Expressie` verschijnt."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:178
+msgid ""
+"Now your :kbd:`AREA` field is populated with values (you may need to click "
+"the column header to refresh the data). Save the edits and click "
+":guilabel:`Ok`."
+msgstr "Nu is uw veld :kbd:`AREA` gevuld met waarden (u moet misschien op de kolomkop klikken om de gegevens te vernieuwen). Sla de bewerkingen op en klik op :guilabel:`Ok`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:181
+msgid ""
+"These areas are in degrees. Later, we will compute them in square meters."
+msgstr "Deze gebieden zijn in graden. Later zullen we ze in vierkante meters berekenen."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:184
+msgid "Open the :guilabel:`Layer properties` dialog's :guilabel:`Style` tab."
+msgstr "Open de tab :guilabel:`Stijl` van het dialoogvenster :guilabel:`Laag eigenschappen`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:185
+msgid ""
+"Change the classification style from :guilabel:`Categorized` to "
+":guilabel:`Graduated`."
+msgstr "Wijzig de stijl voor de classificatie van :guilabel:`Categorieën` naar :guilabel:`Gradueel`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:188
+msgid "Change the :guilabel:`Column` to :guilabel:`AREA`:"
+msgstr "Wijzig de :guilabel:`Kolom` naar :guilabel:`AREA`:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:190
+msgid ""
+"Under :guilabel:`Color ramp`, choose the option :guilabel:`New color "
+"ramp...` to get this dialog:"
+msgstr "Kies, onder :guilabel:`Kleurverloop`, de optie :guilabel:`Nieuw kleurverloop...` om dit dialoogvenster te krijgen:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:196
+msgid ""
+"Choose :guilabel:`Gradient` (if it's not selected already) and click "
+":guilabel:`OK`. You'll see this:"
+msgstr "Kies :guilabel:`Gradient` (als het al niet geselecteerd is) en klik op :guilabel:`OK`. U zult dit zien:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:202
+msgid ""
+"You'll be using this to denote area, with small areas as :guilabel:`Color 1`"
+" and large areas as :guilabel:`Color 2`."
+msgstr "U zilt dit gebruiken om gebieden aan te duiden, met kleine gebieden als :guilabel:`Kleur 1` en grote gebieden als :guilabel:`Kleur 2`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:205
+msgid "Choose appropriate colors."
+msgstr "Kies toepasselijke kleuren."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:207
+msgid "In the example, the result looks like this:"
+msgstr "In het voorbeeld ziet het resultaat er als volgt uit:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:213
+msgid "Choose a suitable name for the new color ramp."
+msgstr "Kies een geschikte naam  voor het nieuwe kleurverloop."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:214
+msgid "Click :guilabel:`OK` after filling in the name."
+msgstr "Klik op :guilabel:`OK` na het invullen van de naam."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:216
+msgid "Now you'll have something like this:"
+msgstr "Nu zult u iets zien zoals dit:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:221
+msgid "Leave everything else as-is."
+msgstr "Laat alles zoals het is."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:223
+msgid "Click :guilabel:`Ok`:"
+msgstr "Klik op :guilabel:`Ok`:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:232
+msgid "|moderate| |TY| Refine the Classification"
+msgstr "|moderate| |TY| De classificatie verfijnen"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:234
+msgid "Get rid of the lines between the classes."
+msgstr "De lijnen tussen de klassen verwijderen."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:235
+msgid ""
+"Change the values of :guilabel:`Mode` and :guilabel:`Classes` until you get "
+"a classification that makes sense."
+msgstr "Wijzig de waarden van :guilabel:`Modus` en :guilabel:`Klassen` totdat u een classificatie heeft die zinvol is."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:238
+msgid ":ref:`Check your results <classification-refine-1>`"
+msgstr ":ref:`Controleer uw resultaten <classification-refine-1>`"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:241
+msgid "|hard| |FA| Rule-based Classification"
+msgstr "|hard| |FA| Op regels gebaseerde classificatie"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:243
+msgid ""
+"It's often useful to combine multiple criteria for a classification, but "
+"unfortunately normal classification only takes one attribute into account. "
+"That's where rule-based classification comes in handy."
+msgstr "Het is vaak nuttig om meerdere criteria voor een classificatie te combineren, maar helaas houdt normale classificatie slechts rekening met één attribuut. Dat is waar op regels gebaseerde classificatie handig is."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:248
+msgid "Switch to the :guilabel:`Style` tab."
+msgstr "Schakel naar de tab :guilabel:`Stijl`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:249
+msgid ""
+"Switch the classification style to :guilabel:`Rule-based`. You'll get this:"
+msgstr "Schakel de stijl voor de classificatie naar :guilabel:`Regel-gebaseerd`. U krijgt dit:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:254
+msgid "Click the :guilabel:`Add rule` button: |mActionSignPlus|."
+msgstr "Klik op de knop :guilabel:`Regel toevoegen`: |mActionSignPlus|."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:255
+msgid "A new dialog then appears."
+msgstr "Er verschijnt dan een nieuw dialoogvenster."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:256
+msgid ""
+"Click the ellipsis :guilabel:`...` button next to the :guilabel:`Filter` "
+"text area."
+msgstr "Klik op de knop Ellipsis :guilabel:`...` naast het tekstgebied :guilabel:`Filter`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:257
+msgid ""
+"Using the query builder that appears, enter the criterion :kbd:`\"landuse\" "
+"= 'residential' AND \"name\" != ' |majorUrbanName| '` , click :guilabel:`Ok`"
+" and choose a pale blue-grey for it and remove the border:"
+msgstr "Voer, met behulp van de querybouwer die verschijnt, het criterium :kbd:`\"landuse\" = 'residential' AND \"name\" != ' |majorUrbanName| '` in , klik op :guilabel:`OK` en kies een bleek blauwgrijs voor de rand:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:268
+msgid ""
+"Add a new criterion :kbd:`\"landuse\" != 'residential' AND AREA >= 0.00005` "
+"and choose a mid-green color."
+msgstr "Voeg een nieuw criterium toe :kbd:`\"landuse\" != 'residential' AND AREA >= 0.00005` en kies een gemiddelde groene kleur."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:270
+msgid ""
+"Add another new criterion :kbd:`\"name\"  =  ' |majorUrbanName| '` and "
+"assign it a darker grey-blue color in order to indicate the town's "
+"importance in the region."
+msgstr "Voeg nog een nieuw criterium :kbd:`\"name\"  =  ' |majorUrbanName| '` toe en wijs het een donkerder grijsblauwe kleur toe om het belang van de stad in de regio aan te duiden."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:273
+msgid "Click and drag this criterion to the top of the list."
+msgstr "Klik en sleep dit criterium naar de bovenste plaats in de lijst."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:275
+msgid ""
+"These filters are exclusive, in that they collectively exclude some areas on"
+" the map (i.e. those which are smaller that 0.00005, are not residential and"
+" are not '|majorUrbanName|'). This means that the excluded polygons take the"
+" style of the default :guilabel:`(no filter)` category."
+msgstr "Deze filters zijn exclusief, met dien verstande dat zij collectief enkele gebieden op de kaart uitsluiten (d.i. die welke kleiner zijn dan 0.00005, geen woongebied zijn en niet '|majorUrbanName|' zijn). Dit betekent dat de uitgesloten polygonen de stijl aannemen van de standaard categorie :guilabel:`(no filter)`."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:280
+msgid ""
+"We know that the excluded polygons on our map cannot be residential areas, "
+"so give the default category a suitable pale green color."
+msgstr "We weten dat de op onze kaart uitgesloten polygonen geen woongebieden kunnen zijn, dus geef de standaard categorie een geschikte bleekgroene kleur."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:283
+msgid "Your dialog should now look like this:"
+msgstr "Uw dialoogvenster zou er nu ongeveer zo uit moeten zien:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:288
+msgid "Apply this symbology."
+msgstr "Pas deze symbologie toe."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:290
+msgid "Your map will look something like this:"
+msgstr "Uw kaart zal er ongeveer zo uitzien:"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:295
+msgid ""
+"Now you have a map with |majorUrbanName| the most prominent residential area"
+" and other non-residential areas colored according to their size."
+msgstr "Nu heeft u een kaart met |majorUrbanName| als het meest prominente woongebied en andere gebieden die geen woongebied zijn gekleurd overeenkomstig hun grootte."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:299
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:301
+msgid ""
+"Symbology allows us to represent the attributes of a layer in an easy-to-"
+"read way. It allows us as well as the map reader to understand the "
+"significance of features, using any relevant attributes that we choose. "
+"Depending on the problems you face, you'll apply different classification "
+"techniques to solve them."
+msgstr "Symbologie stelt ons in staat de attributen van een kaart weer te geven op een eenvoudig te lezen manier. Het stelt zowel ons als de lezer van de kaart in staat om de significantie van objecten te begrijpen, met behulp van relevante attributen die we kiezen. Afhankelijk van de problemen die u tegenkomt, pas u verschillende technieken voor classificatie toe om ze op te lossen."
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:308
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/vector_classification/classification.rst:310
+msgid ""
+"Now we have a nice-looking map, but how are we going to get it out of QGIS "
+"and into a format we can print out, or make into an image or PDF? That's the"
+" topic of the next lesson!"
+msgstr "Nu hebben we een kaart die er goed uitziet, maar hoe krijgen we die uit QGIS en in een indeling die we kunnen afdrukken, of waarvan we een afbeelding of PDF kunnen maken? Dat is het onderwerp van de volgende les!"

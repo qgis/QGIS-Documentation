@@ -1,0 +1,184 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-01-04 12:59+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:6
+msgid "More algorithms and data types"
+msgstr "Meer algoritmen en gegevenstypen"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:9
+msgid ""
+"In this lesson we will run three more algorithms, learn how to use other "
+"input types, and configure outputs to be saved to a given folder "
+"automatically."
+msgstr "In deze les zullen we nog drie algoritmen uitvoeren, leren hoe andere typen voor invoer te gebruiken, en uitvoer configureren om automatisch te worden opgeslagen in een bepaalde map."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:11
+msgid ""
+"For this lessons we will need a table and a polygons layer. We are going to "
+"create a points layer based on coordinates in the table, and then count the "
+"number of points in each polygon. If you open the QGIS project corresponding"
+" to this lesson, you will find a table with X and Y coordinates, but you "
+"will find no polygons layer. Don't worry, we will create it using a "
+"processing geoalgorithm."
+msgstr "Voor deze lessen zullen we een tabel en een laag voor polygonen nodig hebben. We zullen een puntenlaag gaan maken gebaseerd op coördinaten in de tabel, en dan het aantal punten in elke polygoon tellen. Als u het project voor QGIS opent dat correspondeert met deze les, zult u een tabel vinden met X- en Y-coördinaten, maar u zult geen laag voor polygonen vinden. Geen zorgen, die zullen we maken met behulp van een geo-algoritme van Processing."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:13
+msgid ""
+"The first thing we are going to do is to create a points layer from the "
+"coordinates in the table, using the *Points layer to table* algorithm. You "
+"now know how to use the search box, so it should not be hard for you to find"
+" it. Double--click on it to run it and get to its following dialog."
+msgstr "Het eerste dat we zullen gaan doen is een puntenlaag maken uit de coördinaten in de tabel, met behulp van het algoritme *Points layer from table*. U weet nu hoe u het zoekvak kunt gebruiken, dus zou het voor u niet zo moeilijk moeten zijn om dat op te zoeken. Dubbelklik erop om het uit te voeren en u krijgt het volgende dialoogvenster."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:15
+msgid ""
+"This algorithm, like the one from the previous lesson, just generates a "
+"single output, and it has three inputs:"
+msgstr "Dit algoritme, net zoals dat uit de vorige les, genereert slechts één enkele uitvoer, en het heeft drie invoeren:"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:17
+msgid ""
+"Table: the table with the coordinates. You should select here the table from"
+" the lesson data."
+msgstr "Tabel: de tabel met de coördinaten. U zou hier de tabel uit de gegevens voor de les moeten selecteren."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:18
+msgid ""
+"X an Y fields: these two parameters are linked to the first one. The "
+"corresponding selector will show the name of those fields that are available"
+" in the selected table. Select the *XCOORD* field for the *X* parameter, and"
+" the *YYCOORD* field for the *Y* parameter."
+msgstr "X- en Y-velden: deze twee parameters zijn gekoppeld aan de eerste. De overeenkomende selectie zal de naam weergeven van de velden die beschikbaar zijn in de geselecteerde tabel. Selecteer het veld *XCOORD* voor de parameter *X*, en het veld *YYCOORD* voor de parameter *Y*."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:19
+msgid ""
+"CRS: Since this algorithm takes no input layers, it cannot assign a CRS to "
+"the output layer based on them. Instead, it asks you to manually select the "
+"CRS that the coordinates in the table use. Click on the button on the left--"
+"hand side to open the QGIS CRS selector, and select EPSG:4326 as the output "
+"CRS. We are using this CRS because the coordinates in the table are in that "
+"CRS."
+msgstr "CRS: Omdat dit algoritme geen invoerlagen heeft, kan het geen CRS aan de uitvoerlaag toewijzen die daar op is gebaseerd. In plaats daarvan vraagt het u om handmatig het CRS te selecteren dat de coördinaten in de tabel gebruiken. Klik on de knop aan de linkerkant om de selectie van CRS voor QGIS te openen, en selecteer EPSG:4326 als het CRS voor de uitvoer. We gebruiken dat CRS omdat de coördinaten in de tabel in dat CRS staan."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:21
+msgid "Your dialog should look like this."
+msgstr "Uw dialoogvenster zou er nu zo uit moeten zien."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:25
+msgid "Now press the *Run* button to get the following layer:"
+msgstr "Druk nu op de knop *Run* om de volgende laag t everkrijgen:"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:29
+msgid ""
+"The next thing we need is the polygon layer. We are going to create a "
+"regular grid of polygons using the *Create grid* algorithm, which has the "
+"following parameters dialog."
+msgstr "Het volgende dat we nodig hebben is de polygoonlaag. We gaan een rechthoekig raster van polygonen maken met behulp van het algoritme *Create grid*, wat het volgende dialoogvenster voor de parameters heeft."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:33
+msgid ""
+"The inputs required to create the grid are all numbers. When you have to "
+"enter a numerical value, you have two options: typing it directly on the "
+"corresponding box or clicking the button on the right--hand side to get to a"
+" dialog like the one shown next."
+msgstr "De vereiste invoeren voor het maken van het raster zijn allemaal getallen. Wanneer u een numerieke waarde dient in te voeren heeft u twee opties: het direct typen in het overeenkomende vak of klikken op de knop aan de rechterkant om een dialoogvenster te krijgen zoals dat hieronder wordt weergegeven."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:37
+msgid ""
+"The dialog contains a simple calculator, so you can type expressions such as"
+" ``11 * 34.7 + 4.6``, and the result will be computed and put in the "
+"corresponding text box in the parameters dialog. Also, it contains constants"
+" that you can use, and values from other layers available."
+msgstr "Het dialoogvenster bevat een eenvoudige calculator, dus u kunt expressies typen zoals ``11 * 34.7 + 4.6``, en het resultaat zal worden berekend en in het overeenkomende vak in het dialoogvenster van de parameters worden geplaatst. Het bevat ook constanten die u kunt gebruiken en waarden uit andere beschikbare lagen."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:39
+msgid ""
+"In this case, we want to create a grid that covers the extent of the input "
+"points layer, so we should use its coordinates to calculate the center "
+"coordinate of the grid and its width and height, since those are the "
+"parameters that the algorithm takes to create the grid. With a little bit of"
+" math, try to do that yourself using the calculator dialog and the constants"
+" from the input points layer."
+msgstr "In dit geval willen we een raster maken dat het bereik van de puntenlaag voor invoer bedekt, dus zouden we de coördinaten daarvan moeten gebruiken om de coördinaat van het midden van het raster te berekenen en de breedte en hoogte daarvan, omdat dat de parameters zijn die het algoritme nodig heeft om het raster te kunnen maken. met een beetje rekenkundige hulp, probeer dat zelf eens te doen met behulp van het dialoogvenster met de calculator en de constanten van de puntenlaag van de invoer."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:41
+msgid "Select *Rectangles (polygons)* in the *Type* field."
+msgstr "Selecteer *Rectangles (polygons)* in het veld *Type*."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:43
+msgid ""
+"As in the case of the last algorithm, we have to enter the CRS here as well."
+" Select EPSG:4326 as the target CRS, as we did before."
+msgstr "Net zoals in het geval van het laatste algoritme moeten we hier ook het CRS invullen. Selecteer EPSG:4326 als het doel-CRS, zoals we al eerder deden."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:45
+msgid "In the end, you should have a parameters dialog like this:"
+msgstr "Uiteindelijk zou u een dialoogvenster voor parameters moeten hebben zoals dit:"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:49
+msgid ""
+"(Better add one spacing on the width and height: Horizontal spacing: 0.0001,"
+" Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: "
+"-5.695674, Center Y: 40.2477955) The case of X center is a bit tricky, see: "
+"-5.696126+(( -5.695222+ 5.696126)/2)"
+msgstr "(Het is beter om één  afstand toe te voegen voor breedte en hoogte: Horizontal spacing: 0.0001, Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: -5.695674, Center Y: 40.2477955) Het geval van X center is een beetje gevoelig, zie: -5.696126+(( -5.695222+ 5.696126)/2)"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:52
+msgid "Press *Run* and you will get the graticule layer."
+msgstr "Druk op *Run* en u zult de laag met het raster krijgen."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:56
+msgid ""
+"The last step is to count the points in each on of the rectangles of that "
+"graticule. We will use the *Count points in polygons* algorithm."
+msgstr "De laatste stap is om de punten te tellen in elke rechthoek van dat raster. We zullen het algoritme *Count points in polygons* gebruiken."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:60
+msgid "Now we have the result we were looking for."
+msgstr "Nu hebben we het resultaat dat we zochten."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:62
+msgid ""
+"Before finishing this lesson, here is a quick tip to make your life easier "
+"in case you want to persistently save your data. If you want all your output"
+" files to be saved in a given folder, you do not have to type the folder "
+"name each time. Instead, go to the processing menu and select the *Options "
+"and configuration* item. It will open the configuration dialog."
+msgstr "Vóórdat we deze les beëindigen: hier is een snelle tip om uw leven eenvoudiger te maken voor het geval u uw gegevens steeds wilt opslaan. Als u wilt dat al uw gegevens voor de uitvoer worden opgeslagen in één bepaalde map, hoeft u niet elke keer de naam van de map te typen. Ga, in plaats daarvan, naar het menu Processing en selecteer het item *Opties en configuratie*. dat zal het dialoogvenster voor configuratie openen."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:66
+msgid ""
+"In the *Output folder* entry that you will find in the *General* group, type"
+" the path to your destination folder."
+msgstr "In het item *Output folder* dat u zult vinden in de groep *General*, typt u het pad naar uw doelmap."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:70
+msgid ""
+"Now when you run an algorithm, just use the filename instead of the full "
+"path. For instance, with the configuration shown above, if you enter "
+"``graticule.shp`` as the output path for the algorithm that we have just "
+"used, the result will be saved in ``D:\\processing_output\\graticule.shp``. "
+"You can still enter a full path in case you want a result to be saved in a "
+"different folder."
+msgstr "Wanneer u nu een algoritme uitvoert, gebruik dan slechts de bestandsnaam in plaats van het volledige pad. Bijvoorbeeld, met de hierboven weergegeven configuratie, als u ``graticule.shp`` invoert als het pad voor uitvoer voor het algoritme dat we zojuist hebben gebruikt, zal het resultaat worden opgeslagen in ``D:\\processing_output\\graticule.shp``. U kunt nog steeds een volledig pad invoeren voor de gevallen waarin u wilt dat het resultaat wordt opgeslagen in een andere map."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:73
+msgid ""
+"Try yourself the *Create grid* algorithm with different grid sizes, and also"
+" with different types of grids. We will use the hexagonal one in a later "
+"chapter."
+msgstr "Probeer zelf het algoritme *Create grid* met verschillende grootten raster, en ook met verschillende typen raster. We zullen het hexagonale in een later hoofdstuk gebruiken."

@@ -1,0 +1,155 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+# Milo van der Linden <milo@dogodigi.net>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-20 15:56+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:6
+msgid "|LS| Combining the Analyses"
+msgstr "|LS| Combineren van de analyses"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:8
+msgid ""
+"Using the vectorized results of the raster analysis will allow you to select"
+" only those buildings on suitable terrain."
+msgstr "Het gebruiken van de gevectoriseerde resultaten van de rasteranalyse stelt u in staat alleen die gebouwen te selecteren die op geschikt terrein staan."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:11
+msgid ""
+"**The goal for this lesson:** To use the vectorized terrain results to "
+"select suitable plots."
+msgstr "**Het doel voor deze les:** De gevectoriseerde terreinresultaten gebruiken om geschikte bouwplaatsen te selecteren."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:15
+msgid "|moderate| |TY|"
+msgstr "|moderate| |TY|"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:17
+msgid "Save your current map (:kbd:`raster_analysis.qgs`)."
+msgstr "Sla uw huidige kaart op (:kbd:`raster_analysis.qgs`)."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:18
+msgid ""
+"Open the map in which you created during the vector analysis earlier (you "
+"should have saved the file as :kbd:`analysis.qgs`)."
+msgstr "Open de kaart waarin eerder de vectoranalyse is uitgevoerd (:kbd:`analysis.qgs`)."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:20
+msgid "In the :guilabel:`Layers list`, enable these layers:"
+msgstr "Schakel, in de :guilabel:`Lagenlijst`, deze lagen in:"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:22
+msgid ":guilabel:`hillshade`,"
+msgstr ":guilabel:`hillshade`,"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:23
+msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
+msgstr ":guilabel:`solution` (of :guilabel:`buildings_over_100`)"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:25
+msgid ""
+"In addition to these layers, which should already be loaded in the map from "
+"when you worked on it before, also add the :kbd:`suitable_terrain.shp` "
+"dataset."
+msgstr "In aanvulling op deze lagen, die al in de kaart zouden moeten zijn geladen van toen u daarin nog werkte, voeg ook de gegevensset :kbd:`suitable_terrain.shp` toe."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:28
+msgid ""
+"If you are missing some layers, you should find them in "
+":kbd:`exercise_data/residential_development/`"
+msgstr "Als u enkele lagen mist zou u ze moeten vinden in :kbd:`exercise_data/residential_development/`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:30
+msgid ""
+"Use the :guilabel:`Intersect` tool (:guilabel:`Vector -> Geoprocessing "
+"Tools`) to create a new vector layer called :kbd:`new_solution.shp` which "
+"contains only those buildings which intersect the :kbd:`suitable_terrain` "
+"layer."
+msgstr "Gebruik het gereedschap :guilabel:`Intersectie` (:guilabel:`Vector -> Geoprocessing-gereedschap`) om een nieuwe vectorlaag, genaamd :kbd:`new_solution.shp`, te maken die alleen die gebouwen bevat die kruisen met de laag :kbd:`suitable_terrain`."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:34
+msgid ""
+"You should now have a layer showing certain buildings as your solution, for "
+"example:"
+msgstr "U zou nu een laag moeten hebben die bepaalde gebouwen als uw oplossing laat zien, bijvoorbeeld:"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:40
+msgid ""
+"If you find that the :guilabel:`Intersect` tool does not produce any "
+"results, check the CRS settings of each of your layers. The CRS must be the "
+"same for both the layers you are comparing. You may need to reproject one "
+"layer by saving the layer as a new shapefile with the required CRS. In our "
+"example, the :kbd:`suitable_terrain` layer was reprojected to |localCRS| and"
+" named :kbd:`suitable_terrain_34S`."
+msgstr "Als u merkt dat het gereedschap :guilabel:`Intersectie` geen resultaten produceert, controleer dan de instellingen voor het CRS voor elk van uw lagen. Het CRS moet hetzelfde zijn voor beide lagen die u vergelijkt. U moet misschien de ene laag opnieuw projecteren door de laag op te slaan als een nieuwe shapefile met het vereiste CRS. In ons voorbeeld werd de laag :kbd:`suitable_terrain` opnieuw geprojecteerd naar |localCRS| en :kbd:`suitable_terrain_34S` genoemd."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:51
+msgid "|moderate| |TY| Inspecting the Results"
+msgstr "|moderate| |TY| Inspecteren van de resultaten"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:53
+msgid ""
+"Look at each of the buildings in your :guilabel:`new_solution` layer. "
+"Compare them with the :guilabel:`suitable_terrain` layer by changing the "
+"symbology for the :guilabel:`new_solution` layer so that it has outlines "
+"only. What do you notice about some of the buildings? Are they all suitable "
+"just because they intersect with the :guilabel:`suitable_terrain` layer? Why"
+" or why not? Which ones would you deem to be unsuitable?"
+msgstr "Kijk naar elk gebouw in uw laag :guilabel:`new_solution`. Vergelijk ze met de laag :guilabel:`suitable_terrain` door de symbologie voor de laag :guilabel:`new_solution` te veranderen zodat het alleen de omtrekken heeft. Wat valt u op aan sommige gebouwen? Zijn zij alleen geschikt omdat zij kruisen met de laag :guilabel:`suitable_terrain`? Waarom wel of waarom niet? Welke zou u beoordelen als ongeschikt?"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:60
+msgid ":ref:`Check your results <complete-analysis-2>`"
+msgstr ":ref:`Controleer uw resultaten <complete-analysis-2>`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:66
+msgid "|moderate| |TY| Refining the Analysis"
+msgstr "|moderate| |TY| De analyse opnieuw definiëren"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:68
+msgid ""
+"You can see from the results that some buildings which were included were "
+"not really suitable, so we can now refine the analysis."
+msgstr "U kunt uit de resultaten aflezen dat sommig gebouwen die werden opgenomen niet echt geschikt waren, dus kunnen we nu de analyse verfijnen."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:71
+msgid ""
+"We want to ensure that our analysis returns only those buildings which fall "
+"entirely within the :kbd:`suitable_terrain` layer. How would you achieve "
+"this? Use one or more Vector Analysis tools and remember that our buildings "
+"are all over 100m squared in size."
+msgstr "We willen er zeker van zijn dat onze analyse alleen die gebouwen oplevert die geheel binnen de laag :kbd:`suitable_terrain` vallen. Hoe zou u dit bereiken? Gebruik één of meer gereedschappen voor Vectoranalyse en onthoud dat onze gebouwen allemaal groter zijn dan 100m:sup:'2'."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:76
+msgid ":ref:`Check your results <complete-analysis-3>`"
+msgstr ":ref:`Controleer uw resultaten <complete-analysis-3>`"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:79
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:81
+msgid ""
+"You have now answered the original research question, and can offer an "
+"opinion (with reasons, backed by analysis) for a recommendation regarding "
+"which property to develop."
+msgstr "U heeft nu de originele onderzoeksvraag beantwoord, en kunt een mening bieden (met redenen omkleed, geruggesteund door de analyses) voor een aanbeveling met betrekking tot welk gedeelte te ontwikkelen."
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:86
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_combination.rst:88
+msgid "Next you will present these results as part of your second assignment."
+msgstr "Vervolgens zult u deze resultaten presenteren als deel van uw tweede opdracht."

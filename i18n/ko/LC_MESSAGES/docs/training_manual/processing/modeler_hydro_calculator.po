@@ -1,0 +1,125 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-11 05:51+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:6
+msgid "Numeric calculations in the modeler"
+msgstr "모델 작성자 내부에서의 숫자 계산"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:8
+msgid ""
+"Beware, this chapter is not well tested, please report any issue; images are"
+" missing"
+msgstr "이 강의는 제대로 검증되지 않았으므로 주의하십시오. 어떤 문제라도 알려주십시오. 그림이 뜨지 않을 수도 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:10
+msgid "In this lesson we will see how to use numeric outputs in the modeler"
+msgstr "이 강의에서는 모델 작성자에서 숫자 산출물을 사용하는 방법에 대해 배워보겠습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:13
+msgid ""
+"For this lesson, we are going to modify the hydrological model that we "
+"created in the last chapter (open it in the modeler before starting), so we "
+"can automate the calculation of a valid threshold value and we do not have "
+"to ask the user to enter it. Since that value refers to the variable in the "
+"threshold raster layer, we will extract it from that layer, based on some "
+"simple statistical analysis."
+msgstr "이 강의에서, 마지막 강의에서 생성했던 (시작하기 전에 모델 작성자에서 파일을 여십시오) 수문학적 모델을 수정, 유효한 임계값을 자동적으로 계산해서 사용자에게 입력하도록 요청하지 않을 수 있게 만들 것입니다. 해당 임계값이 임계값 래스터 레이어 내부의 변수를 참조하므로, 몇몇 단순한 통계 분석을 기반으로 해당 레이어에서 변수를 추출할 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:15
+msgid ""
+"Starting with the aforemetioned model, let's do the following modifications:"
+msgstr "앞에서 말했던 모델을 실행해서, 다음과 같이 변경해봅시다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:17
+msgid ""
+"First, calculate statistics of the flow accumulation layer using the *Raster"
+" layer statistics* algorithm."
+msgstr "먼저 :guilabel:`Raster Layer Statistics` 알고리듬을 사용해 집수 지역 레이어의 통계를 계산하십시오."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:21
+msgid ""
+"This will generate a set of statistical values that will now be available "
+"for all numeric fields in other algorithms."
+msgstr "이를 통해 생성된 통계값들을 다른 알고리듬의 모든 숫자 파라미터에 입력할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:23
+msgid ""
+"If you double click on the  *Channel network* algorithm to modify it, as we "
+"did in the last lesson, you will see now that you have other options apart "
+"from the numeric input that you added."
+msgstr "이전 강의와 마찬가지로 :guilabel:`Channel network` 알고리듬을 수정하기 위해 더블클릭할 경우, 사용자가 추가했던 숫자 입력 외에 다른 옵션이 생성된 것을 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:27
+msgid ""
+"However, none of this values is suitable for being used as a valid "
+"threshold, since they will result in channel networks that will not be very "
+"realistic. We can, instead, derive some new parameter based on them, to get "
+"a better result. For instance, we can use the mean plus 2 times the standard"
+" deviation."
+msgstr "하지만 이 값들을 그대로 유효한 임계값으로 사용할 수는 없습니다. 아주 현실적이지 않은 하계망이 산출될 것이기 때문입니다. 그 대신 이 값들을 바탕으로 몇 가지 새로운 파라미터를 유도해서 더 나은 결과물을 생성할 수 있습니다. 예를 들면 평균 더하기 표준 편차의 2배라는 값을 사용할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:29
+msgid ""
+"To add that arithmetical operation, we can use the calculator that you will "
+"find in the *Geoalgorithms/modeler/modeler-tools* group. This group contains"
+" algorithms that are not very useful outside of the modeler, but that "
+"provide some useful functionality when creating a model."
+msgstr "산술 연산을 추가하려면, :guilabel:`Algorithms` 탭의 :menuselection:`Geoalgorithms --> Modeler --> Modeler tools` 그룹에 있는 계산기를 사용할 수 있습니다. 이 그룹은 모델 작성자 바깥에서는 그닥 쓸모가 없지만 모델 생성 시 몇몇 유용한 기능을 제공하는 알고리듬들을 담고 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:31
+msgid "The parameters dialog of the calculator algorithm looks like this:"
+msgstr "계산기 알고리듬의 파라미터 대화 창은 다음과 같습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:35
+msgid ""
+"As you can see, the dialog is different to the other ones we have seen, but "
+"you have in there the same variables that were available in the *Threshold* "
+"field in the *Channel network* algorithm. Enter the above formula and click "
+"on *OK* to add the algorithm."
+msgstr "한 눈에 알 수 있듯이, 우리가 지금까지 봐왔던 대화 창들과는 다릅니다. 그러나 :guilabel:`Channel network` 알고리듬의 :guilabel:`Threshold` 항목에서 봤던 것과 동일한 변수들을 보여주고 있습니다. 그림에 보이는 공식을 입력한 다음 :guilabel:`OK` 를 클릭해서 알고리듬에 추가하십시오."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:39
+msgid ""
+"If you expand the outputs entry, as shown above, you will see that the model"
+" is connected to two of the values, namely the mean and the standard "
+"deviation, which are the ones that we have used in the formula."
+msgstr "모델 작성자 캔버스를 보면, 앞의 그림과 같이 계산기 알고리듬이 평균과 표준 편차라는 두 개의 값과 연결되어 있는 것을 볼 수 있습니다. 바로 공식에서 사용했던 값들입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:41
+msgid ""
+"Adding this new algorithm will add a new numeric value. If you go again to "
+"the *Channel network* algorithm, you can now select that value in the "
+"*Threshold* parameter."
+msgstr "이렇게 새 알고리듬을 추가하면 새 숫자 값이 추가됩니다. 다시 :guilabel:`Channel network` 알고리듬을 더블클릭하면, :guilabel:`Initiation Threshold` 파라미터에 해당 값을 선택할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:45
+msgid "Click on *OK* and your model should look like this."
+msgstr ":guilabel:`OK` 를 클릭하면 모델이 다음과 같이 변할 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:49
+msgid ""
+"We are not using the numeric input that we added to the model, so it can be "
+"removed. Right--click on it and select *Remove*"
+msgstr "이전 강의에서 추가했던 숫자 입력을 더 이상 사용하지 않으므로 삭제해도 됩니다. 숫자 입력을 오른쪽 클릭한 다음 :guilabel:`Remove` 를 선택하십시오."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:51
+msgid "todo: Add image"
+msgstr "할 일 : 이미지 추가"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:53
+msgid "Our new model is now finished."
+msgstr "이제 새 모델을 완성했습니다."

@@ -1,0 +1,103 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-03 14:03+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:6
+msgid "D-Infinity Upslope Dependence"
+msgstr "Dépendance de pente ascendante D-Infinity"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:11
+msgid ""
+"The D-Infinity Upslope Dependence tool quantifies the amount each grid cell "
+"in the domain contributes to a destination set of grid cells. D-Infinity "
+"flow directions proportion flow from each grid cell between multiple "
+"downslope grid cells. Following this flow field downslope the amount of flow"
+" originating at each grid cell that reaches the destination zone is defined."
+" Upslope influence is evaluated using a downslope recursion, examining grid "
+"cells downslope from each grid cell, so that the map produced identifies the"
+" area upslope where flow through the destination zone originates, or the "
+"area it depends on, for its flow."
+msgstr "L'outil de dépendance de pente ascendante D-Infinity quantifie la contribution de chaque cellule du domaine à un ensemble de cellules de destination. Il s'agit de la proportion de flux, calculé selon la méthode D-Infinity, de chaque cellule entre plusieurs cellules de pente descendante.La quantité de flux d'origine pour chaque cellule qui atteint la zone de destination est définie en suivant ce champ de flux de pente descendante. L'influence de la pente ascendante est évaluée en utilisant une pente descendante récursive, en examinant les cellules de pente descendante de chaque cellule de manière à ce que la carte produite identifie la surface de pente ascendante d'où le flux de la zone de destination est originaire."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:20
+msgid ""
+"The figures below illustrate the amount each source point in the domain "
+"``x`` (blue) contributes to the destination point or zone ``y`` (red). If "
+"the indicator weighted contributing area function is denoted ``I(y; x)`` "
+"giving the weighted contribution using a unit value (1) from specific grid "
+"cells ``y`` to grid cells ``x``, then the upslope dependence is: ``D(x; y) ="
+" I(y; x)``."
+msgstr "La figure ci-dessous illustre la quantité de chaque point de source dans le domaine ``x`` (bleu) qui contribue au point ou à la zone de destination ``y`` (rouge). Si la fonction de surface contributive par indicateur pondéré est ``l(y; x)```, ce qui donne une contribution pondérée utilisant une valeur de 1 pour les cellules ```y`` données et les cellules ``x``, alors la dépendance de pente ascendante est: ``D(x; y) = l(y; x)``."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:29
+msgid ""
+"This is useful for example to track where flow or a flow related substance "
+"or contaminant that enters a destination area may come from."
+msgstr "C'est utile par exemple pour suivre d'où l'écoulement ou une substance liée à un flux ou un contaminant qui pénètre dans une zone de destination peuvent provenir."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:33
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:40
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D-Infinity`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:36
+msgid ""
+"A grid giving flow direction by the D-Infinity method where the flow "
+"direction angle is determined as the direction of the steepest downward "
+"slope on the eight triangular facets formed in a 3x3 grid cell window "
+"centered on the grid cell of interest. This grid can be produced using the "
+"**\"D-Infinity Flow Direction\"** tool."
+msgstr "Une grille donnant la direction de flux par la méthode D-Infinity où l'angle de direction de flux est déterminé par la direction de la pente descendante la plus raide des huit faces triangulaires formées par une fenêtre de 3x3 cellules centrée sur la cellule donnée. On peut obtenir cette grille en utilisant l'outil **\"Direction de flux D-Infinity\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:44
+msgid "``Destination Grid`` [raster]"
+msgstr "``Grille de destination`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:43
+msgid ""
+"A grid that encodes the destination zone that may receive flow from upslope."
+" This grid must be 1 inside the zone y and 0 over the rest of the domain."
+msgstr "Une grille qui encode la zone de destination qui peut recevoir un flux d'une pente ascendante. Cette grille doit avoir une valeur de 1 dans la zone y et 0 pour le reste du domaine."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:47
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:51
+msgid "``Output Upslope Dependence Grid`` [raster]"
+msgstr "``Grille de valeur de pente positive de sortie`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:50
+msgid ""
+"A grid quantifing the amount each source point in the domain contributes to "
+"the zone defined by the destination grid."
+msgstr "Une grille quantifiant la contribution de chaque point de source à la zone définie par la grille de destination."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:54
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityupslopedependence.rst:61
+msgid "See also"
+msgstr "Voir également"

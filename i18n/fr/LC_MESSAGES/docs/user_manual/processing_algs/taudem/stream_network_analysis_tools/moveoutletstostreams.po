@@ -1,0 +1,132 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-03 15:15+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:6
+msgid "Move Outlets To Streams"
+msgstr "Déplacer les exutoires en flux"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:11
+msgid ""
+"Moves outlet points that are not aligned with a stream cell from a stream "
+"raster grid, downslope along the D8 flow direction until a stream raster "
+"cell is encountered, the \"max_dist\" number of grid cells are examined, or "
+"the flow path exits the domain (i.e. a \"no data\" value is encountered for "
+"the D8 flow direction). The output file is a new outlets shapefile where "
+"each point has been moved to coincide with the stream raster grid, if "
+"possible. A field \"dist_moved\" is added to the new outlets shapefile to "
+"indicate the changes made to each point. Points that are already on a stream"
+" cell are not moved and their \"dist_moved\" field is assigned a value 0. "
+"Points that are initially not on a stream cell are moved by sliding them "
+"downslope along the D8 flow direction until one of the following occurs: a) "
+"A stream raster grid cell is encountered before traversing the \"max_dist\" "
+"number of grid cells. In which case, the point is moved and the "
+"\"dist_moved\" field is assigned a value indicating how many grid cells the "
+"point was moved. b) More than the \"max_number\" of grid cells are "
+"traversed, or c) the traversal ends up going out of the domain (i.e., a \"no"
+" data\" D8 flow direction value is encountered). In which case, the point is"
+" not moved and the \"dist_moved\" field is assigned a value of -1."
+msgstr "Déplace des points d'exutoires qui ne sont pas alignés avec une cellule de cours d'eau à partir d'un raster de grille de cours d'eau ou le long d'une pente descendante de direction de flux D8 jusqu'à ce qu'un cours d'eau soit rencontré ou qu'une distance maximale de cellules soient examinées ou bien si le cheminement du flux sort du domaine (c'est à dire qu'une valeur vide est rencontrée lors de la direction de flux D8). Le fichier de sortie est un fichier Shape de nouveaux exutoires où chaque point a été déplacé pour coincider avec le raster de cours d'eau si possible. Un champ \"dist_moved\" est ajouté au fichier pour indiquer les changements effectués sur chaque point. Les points qui sont déjà sur une cellule de cours d'eau ne sont pas déplacé et leur champ \"dist_moved\" vaut 0. Les points qui ne sont pas sur une cellule de cours d'eau sont déplacé le long d'une pente descendante suivant la direction de flux D8 jusqu'à ce qu'une des situations suivantes apparaisse: a) Une cellule de cours d'eau est rencontrée avant de dépasser la valeur \"max_dist\" de nombre de cellules. Dans ce cas, le point est déplacé et le champ \"dist_moved\" reçoit une valeur indiquant le nombre de cellules de déplacement. b) Plus de \"max_number\" cellules ont été parcourues ou, c) la traversée sort du domaine (une valeur de direction de flux D8 vide est rencontrée). Dans ces cas, le point n'est pas déplacé et le champ \"dist_moved\" reçoit une valeur de -1."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:30
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:36
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D8`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:33
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr "Une grille de directions de flux D8 définies pour chaque cellule comme la direction d'une de ses 8 voisins adjacents ou ses voisins diagonaux avec une pente descendante la plus raide. Cette grille peut être obtenue depuis la sortie de l'outil **\"Directions de flux D8\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:42
+msgid "``Stream Raster Grid`` [raster]"
+msgstr "``Grille raster de flux`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:39
+msgid ""
+"This output is an indicator grid (1, 0) that indicates the location of "
+"streams, with a value of 1 for each of the stream cells and 0 for the "
+"remainder of the cells. This file is produced by several different tools in "
+"the **\"Stream Network Analysis\"** toolset."
+msgstr "Il s'agit d'une grille d'indicateur (1, 0) qui indique l'emplacement des cours d'eau avec une valeur de 1 pour les cellules de cours d'eau et 0 pour les autres. Ce fichier est issu de la sortie d'un des outils de l'**\"Analyse de Réseau de cours d'eau\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:48
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Fichier Shape des exutoires`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:45
+msgid ""
+"A point shape file defining points of interest or outlets that should "
+"ideally be located on a stream, but may not be exactly on the stream due to "
+"the fact that the shapefile point locations may not have been accurately "
+"registered with respect to the stream raster grid."
+msgstr "Un fichier Shape de points définissant des points d'intérêt ou des exutoires qui devraient se trouver idéalement sur un cours d'eau mais qui peuvent très bien ne pas y être dû au manque de précision lors de la numérisation des points par rapport à la grille raster des cours d'eau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:55
+msgid "``Maximum Number of Grid Cells to traverse`` [number]"
+msgstr "``Nombre maximum de cellules de grille à traverser`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:51
+msgid ""
+"This input paramater is the maximum number of grid cells that the points in "
+"the input outlet shapefile will be moved before they are saved to the output"
+" outlet shapefile."
+msgstr "Ce paramètre d'entrée est le nombre maximal de cellules de décalage des points du fichier Shape des exutoires d'entrée qui seront déplacés avant d'être enregistrés dans un fichier Shape de sortie."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:55
+msgid "Default: *50*"
+msgstr "Par défaut : *50*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:58
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:69
+msgid "``Output Outlet Shapefile`` [vector]"
+msgstr "``Fichier Shape des exutoires`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:61
+msgid ""
+"A point shape file defining points of interest or outlets. This file has one"
+" point in it for each point in the input outlet shapefile. If the original "
+"point was located on a stream, then the point was not moved. If the origianl"
+" point was not on a stream, the point was moved downslope according to the "
+"D8 flow direction until it reached a stream or the maximum distance had been"
+" reached. This file has an additional field \"dist_moved\" added to it which"
+" is the number of cells that the point was moved. This field is 0 if the "
+"cell was originally on a stream, -1 if it was not moved becuase there was "
+"not a stream within the maximum distance, or some positive value if it was "
+"moved."
+msgstr "Un fichier Shape de points définissant des points d'intérêt ou des exutoires. Ce fichier présente un point pour chaque point du fichier d'exutoires en entrée. Si le point originel est situé sur un cours d'eau, le point n'est pas déplacé. Si le point originel n'est pas situé sur un cours d'eau, le point est déplacé sur la pente descendante selon la direction de flux D8 jusqu'à ce qu'il atteigne un cours d'eau ou la distance maximale. Ce fichier dispose d'un champ additionnel nommé \"dist_moved\" qui est le nombre de cellules de déplacement du point. Ce champ vaut 0 si la cellule était sur un cours d'eau, -1 si la cellule n'a pas été déplacée du fait qu'aucun cours d'eau n'était disponible dans la distance maximale ou une valeur positive lors du déplacement."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:72
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:79
+msgid "See also"
+msgstr "Voir également"

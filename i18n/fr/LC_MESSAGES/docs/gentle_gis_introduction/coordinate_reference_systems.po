@@ -1,0 +1,786 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# 
+# Translators:
+# David Astier <t.davidastier@laposte.net>, 2015
+# Jacolin <yjacolin@free.fr>, 2015
+# Libros Ekzek <libros71@outlook.fr>, 2014
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014-2015
+# MarieSilvestre <marie.silvestre@gmail.com>, 2014
+# Akia35 <philippe.boulinguiez@inrap.fr>, 2014
+# Sant-anna <delazj@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2015-05-22 09:54+0000\n"
+"Last-Translator: Jacolin <yjacolin@free.fr>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# 3a6103e98f3f444aadbaf2ff60849aac
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:8
+msgid "Coordinate Reference Systems"
+msgstr "Systèmes de Coordonnées de Référence"
+
+# fa3623cda87540349de5f84a4e68f6b2
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:11
+msgid "|gentlelogo|"
+msgstr "|gentlelogo|"
+
+# 98fa6dab61114ea595828bd3ddd56a7d
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:11
+msgid "Objectives:"
+msgstr "Objectifs :"
+
+# 1df7fc6247fb49a3be89eabbef134286
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:11
+msgid "Understanding of Coordinate Reference Systems."
+msgstr "Comprendre les Systèmes de Coordonnées de Référence"
+
+# 9f4d03d71ed74cc1bac01efca2fa5bac
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:13
+msgid "Keywords:"
+msgstr "Mots clés :"
+
+# e4a031f4e8d141e3893a3e22f2446267
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:13
+msgid ""
+"Coordinate Reference System (CRS), Map Projection, On the Fly Projection, "
+"Latitude, Longitude, Northing, Easting"
+msgstr "Système de Coordonnées de Référence (SCR), Projection de carte, Projection à la volée, Latitude, Longitude, Ordonnée, Abscisse"
+
+# f8ac6dc96aea498aad821de4e298c4f8
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:17
+msgid "Overview"
+msgstr "Aperçu"
+
+# 4e540a690f44440e92ae1e86f01d1954
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:19
+msgid ""
+"**Map projections** try to portray the surface of the earth or a portion of "
+"the earth on a flat piece of paper or computer screen. A **coordinate "
+"reference system** (CRS) then defines, with the help of coordinates, how the"
+" two-dimensional, projected map in your GIS is related to real places on the"
+" earth. The decision as to which map projection and coordinate reference "
+"system to use, depends on the regional extent of the area you want to work "
+"in, on the analysis you want to do and often on the availability of data."
+msgstr "**Projections de Cartes** : Mise à \"Plat\" d'une partie ou de la totalité de la surface \"courbe\" de la terre, sur un écran d'ordinateur ou sur un tirage papier.\n**Système de Coordonnées de Référence\" (SCR) : modèle mathématique permettant, grâce aux coordonnées, de faire le lien entre un endroit réel sur terre et sa représentation en plan. Il faut bien faire attention au choix du système. Cela dépend de la taille de la zone de travail (commune, pays, continent), des analyses que l'on veut en tirer et, souvent aussi de la disponibilité des données."
+
+# 1bd81917f4884b1ba3296ee866fdde65
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:28
+msgid "Map Projection in detail"
+msgstr "Projection Cartographique en détail"
+
+# 2151cd3ebc57463cb7606054bfe4ac39
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:30
+msgid ""
+"A traditional method of representing the earth's shape is the use of globes."
+" There is, however, a problem with this approach. Although globes preserve "
+"the majority of the earth's shape and illustrate the spatial configuration "
+"of continent-sized features, they are very difficult to carry in one's "
+"pocket. They are also only convenient to use at extremely small scales (e.g."
+" 1:100 million)."
+msgstr "Une méthode traditionnelle pour représenter la terre est d'user de globes terrestres. Cependant, ceci pose un problème au niveau de l'approche.  Bien que les globes terrestres conservent la majorité de forme de la terre et montrent la configuration spatiale et la taille des continents, ils sont difficilement transportables. Ils sont aussi peu pratiques à utiliser à de très petites échelles (ex : 1:100 millions)."
+
+# 8953a2f16cae4888a7d2157162f5f14c
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:36
+msgid ""
+"Most of the thematic map data commonly used in GIS applications are of "
+"considerably larger scale. Typical GIS datasets have scales of 1:250 000 or "
+"greater, depending on the level of detail. A globe of this size would be "
+"difficult and expensive to produce and even more difficult to carry around. "
+"As a result, cartographers have developed a set of techniques called **map "
+"projections** designed to show, with reasonable accuracy, the spherical "
+"earth in two-dimensions."
+msgstr "La plupart des données de cartes thématiques utilisées couramment dans les applications SIG ont une échelle plus grande. L'ensemble de données typiques SIG ont des échelles de 1:250 000 ou plus, en fonction du niveau des détails. Un globe de cette taille serait compliqué et coûteux à produire, et encore plus à transporter. En conséquence, les cartographes ont développés un ensemble de techniques appelé **projections cartographiques** servant à montrer, avec une précision raisonnable, la terre sphérique en deux dimensions."
+
+# 7719394dfa6247d1ab384e8fd4ffc189
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:43
+msgid ""
+"When viewed at close range the earth appears to be relatively flat. However "
+"when viewed from space, we can see that the earth is relatively spherical. "
+"Maps, as we will see in the upcoming map production topic, are "
+"representations of reality. They are designed to not only represent "
+"features, but also their shape and spatial arrangement. Each map projection "
+"has **advantages** and **disadvantages**. The best projection for a map "
+"depends on the **scale** of the map, and on the purposes for which it will "
+"be used. For example, a projection may have unacceptable distortions if used"
+" to map the entire African continent, but may be an excellent choice for a "
+"**large-scale (detailed) map** of your country. The properties of a map "
+"projection may also influence some of the design features of the map. Some "
+"projections are good for small areas, some are good for mapping areas with a"
+" large East-West extent, and some are better for mapping areas with a large "
+"North-South extent."
+msgstr "Lorsque l'on voit la terre depuis la terre, elle semble être plate. Cependant, lorsqu'on la regarde depuis l'espace, on constate qu'elle est sphérique. Les cartes, comme nous le verrons dans le prochain sujet de production de cartes, sont des représentations de la réalité. Elles ne servent pas juste à représenter les apparences, mais aussi les formes et les dispositions géographiques. Chaque projection cartographique a des **avantages** et des **désavantages**. La meilleure projection d'une carte dépend de **l'échelle** de la carte, et pour l'objectif pour laquelle elle sera utilisée. Par exemple, une projection peut avoir des distorsions inacceptables si elles sont utilisées pour cartographier l'ensemble du continent africain, mais peut être un excellent choix pour une **carte à grande échelle (détaillée)** de votre pays. Les propriétés d'une projection cartographique peut aussi influencer certaines caractéristiques de conception de la carte. Certaines projections sont bonnes pour de petites zones, d'autres pour cartographier une large étendue Est-Ouest et d'autres sont bonnes pour cartographier des zones avec une grande étendue Nord-Sud."
+
+# 3300680172744fc9b5b85aa82c834be8
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:58
+msgid "The three families of map projections"
+msgstr "Les trois familles de projections cartographiques"
+
+# 5c3feade2325435ba564d0372d4ed980
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:60
+msgid ""
+"The process of creating map projections can be visualised by positioning a "
+"light source inside a transparent globe on which opaque earth features are "
+"placed. Then project the feature outlines onto a two-dimensional flat piece "
+"of paper. Different ways of projecting can be produced by surrounding the "
+"globe in a **cylindrical** fashion, as a **cone**, or even as a **flat "
+"surface**. Each of these methods produces what is called a **map projection "
+"family**. Therefore, there is a family of **planar projections**, a family "
+"of **cylindrical projections**, and another called **conical projections** "
+"(see figure_projection_families_)"
+msgstr "Le processus pour la création de projection d'une carte peut être visualisé en positionnant une source de lumière à l'intérieur d'un globe transparent, sur lequel sont placés les éléments de la terre. Puis projeter le résultat à plat sur une feuille de papier. Différentes projections peuvent être produites en entourant le globe par un **cylindre**, un **cône** ou même une **surface plane**. Chacune de ces méthodes fournit ce que l'on appelle un **ensemble de projections cartographique**. Par conséquent, il y a un ensemble de **projections planaires**, de **projections cylindriques** et enfin de \"projections coniques** (voir figure_projection_families_)"
+
+# 6cf0c72767ec496a8e49f10d953bd1ce
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:80
+msgid ""
+"The three families of map projections. They can be represented by a) "
+"cylindrical projections, b) conical projections or c) planar projections."
+msgstr "Les trois familles de projections cartographiques. On peut les regrouper en a) projections cylindriques, b) projections coniques ou c) projections planes ou azimutales."
+
+# 9e5697f60e3143f682636a3a6036e34b
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:83
+msgid ""
+"Today, of course, the process of projecting the spherical earth onto a flat "
+"piece of paper is done using the mathematical principles of geometry and "
+"trigonometry. This recreates the physical projection of light through the "
+"globe."
+msgstr "Aujourd'hui, bien sur, la méthode de projection d'une zone courbe sur un plan utilise les théorèmes mathématiques de la géométrie de la trigonométrie. Pour imaginer ce procédé, on place une lampe au centre d'un globe et on regarde l'image projetée de ce globe sur une feuille de papier."
+
+# 462935e236234fc8b47b694e89e76844
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:88
+msgid "Accuracy of map projections"
+msgstr "Précision des projections cartographiques"
+
+# 8f1ef34055214da0bbe2e1bceacbd5b0
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:90
+msgid ""
+"Map projections are never absolutely accurate representations of the "
+"spherical earth. As a result of the map projection process, every map shows "
+"**distortions of angular conformity, distance and area**. A map projection "
+"may combine several of these characteristics, or may be a compromise that "
+"distorts all the properties of area, distance and angular conformity, within"
+" some acceptable limit. Examples of compromise projections are the **Winkel "
+"Tripel projection** and the **Robinson projection** (see "
+"figure_robinson_projection_), which are often used for world maps."
+msgstr "Les projections cartographiques ne sont en aucun cas une représentation précise de la terre. À chaque projection, les cartes affichent des **distorsions sur la conformité des angles, des distances et des surfaces**. Une projection cartographique peut combiner plusieurs de ces caractéristiques, ou peut être un compromis entre ces déformations de surface, de distance et d'angle, dans des limites raisonnables. Par exemple, la **projection de Winkel-Tripel** et la **projection de Robinson** offrent un bon compromis (voir figure_robinson_projection_), qui sont les plus utilisées pour les cartes du monde."
+
+# 2327a3dc7c124112881f13a56bbcabad
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:109
+msgid ""
+"The Robinson projection is a compromise where distortions of area, angular "
+"conformity and distance are acceptable."
+msgstr "La projection Robinson est un compromis où les distorsions d'aires, la conservation des angles et des distances sont acceptables."
+
+# 57efe489b95042f4840d60e94304183d
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:112
+msgid ""
+"It is usually impossible to preserve all characteristics at the same time in"
+" a map projection. This means that when you want to carry out accurate "
+"analytical operations, you need to use a map projection that provides the "
+"best characteristics for your analyses. For example, if you need to measure "
+"distances on your map, you should try to use a map projection for your data "
+"that provides high accuracy for distances."
+msgstr "La plupart du temps, il est impossible de conserver à la fois toutes les caractéristiques d'une projection cartographique. Cela signifie que lorsque vous aurez besoin de précisions sur des opérations d'analyse, il vous faudra choisir une projection adaptée à vos besoins. Par exemple, si vous avez besoin de mesurer les distances sur une carte, vous devriez essayer une projection qui fournit une haute précision pour les distances."
+
+# c85ab2e40fa34d3587f46759daf3da31
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:120
+msgid "Map projections with angular conformity"
+msgstr "Projection conservant les angles"
+
+# e7c5f54065cc4f54bfdff9ab02cfa56d
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:122
+msgid ""
+"When working with a globe, the main directions of the compass rose (North, "
+"East, South and West) will always occur at 90 degrees to one another. In "
+"other words, East will always occur at a 90 degree angle to North. "
+"Maintaining correct **angular properties** can be preserved on a map "
+"projection as well. A map projection that retains this property of angular "
+"conformity is called a **conformal** or **orthomorphic projection**."
+msgstr "Lorsque l'on travaille sur un globe, les principales directions d'une rose des vents (Nord, Sud, Est, Ouest) se situeront toujours à 90 degrés d'une autre. En d'autres termes, l'Est sera toujours à 90 degrés du Nord. Le maintien correct des **propriétés angulaires** peut ainsi être préservé sur certaines projections. Une projection qui conserve ces propriétés d'angle est appelée **conforme** ou **projection orthomorphique**."
+
+# 04d170ca770a437795a875136d669202
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:129
+msgid ""
+"These projections are used when the **preservation of angular "
+"relationships** is important. They are commonly used for navigational or "
+"meteorological tasks. It is important to remember that maintaining true "
+"angles on a map is difficult for large areas and should be attempted only "
+"for small portions of the earth. The conformal type of projection results in"
+" distortions of areas, meaning that if area measurements are made on the "
+"map, they will be incorrect. The larger the area the less accurate the area "
+"measurements will be. Examples are the **Mercator projection** (as shown in "
+"figure_mercator_projection_) and the **Lambert Conformal Conic projection**."
+" The U.S. Geological Survey uses a conformal projection for many of its "
+"topographic maps."
+msgstr "Ces projections sont utilisées lorsque la **relation de conservation des angles** est importante. Elles sont souvent employées à des fins de navigation ou de météorologie. Il est important de se rappeler que le maintien correct des angles sur une carte est assez difficile sur de larges surfaces et devraient donc être gardées pour des petites zones. La projection type de conformité résulte dans la déformation des surfaces, signifiant que si les mesures sont effectuées sur la carte, elles seront incorrectes. Une plus grande surface aura donc de plus grandes erreurs de mesure. Il en va ainsi pour la **projection Mercator** (comme présentée dans figure_mercator_projection_) et la **projection Conique conforme de Lambert**. Le U.S. Geological Survey utilise une projection conforme pour plusieurs de ses cartes topographiques."
+
+# ecaf8f98b83b43a7be11151ea757926f
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:150
+msgid ""
+"The Mercator projection, for example, is used where angular relationships "
+"are important, but the relationship of areas are distorted."
+msgstr "La projection Mercator, par exemple,  est utilisée lorsque le respect des angles est important. Cependant, elle ne respecte pas les surfaces."
+
+# 2405bd6a7ee44753ab0e3b0efb707784
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:154
+msgid "Map projections with equal distance"
+msgstr "Projection conservant les distances"
+
+# 7061b8aef80546f89d5f55ff00343923
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:156
+msgid ""
+"If your goal in projecting a map is to accurately measure distances, you "
+"should select a projection that is designed to preserve distances well. Such"
+" projections, called **equidistant projections**, require that the **scale**"
+" of the map is **kept constant**. A map is equidistant when it correctly "
+"represents distances from the centre of the projection to any other place on"
+" the map. **Equidistant projections** maintain accurate distances from the "
+"centre of the projection or along given lines. These projections are used "
+"for radio and seismic mapping, and for navigation. The **Plate Carree "
+"Equidistant Cylindrical** (see figure_plate_caree_projection_) and the "
+"**Equirectangular projection** are two good examples of equidistant "
+"projections. The **Azimuthal Equidistant projection** is the projection used"
+" for the emblem of the United Nations (see "
+"figure_azimuthal_equidistant_projection_)."
+msgstr "Si votre but en projetant une carte est de mesurer précisément des distances, vous devriez sélectionner une projection qui est désignée pour bien préserver des distances. Ces projections, appelées **projections équidistantes**, demandent que l'**échelle** de la carte soit **maintenue constante**. Une carte est équidistante lorsqu'elle représente correctement des distances depuis le centre de la projection à un autre endroit sur la carte. Les **Projections équidistantes** maintiennent des distances précises depuis le centre de la projection ou le long de lignes données. Ces projections sont utilisées pour la radio et la cartographie sismique, et pour la navigation. La projection **Plate Carrée Cylindrique Équidistante** (voir figure_plate_caree_projection_) et la **Projection équirectangulaire** sont deux bons exemples de projections équidistantes. La **Projection azimutale équidistante** est la projection utilisée pour l'emblème des Nations Unies (voir figure_azimuthal_equidistant_projection_)."
+
+# fa32b3e6c5794dc38af10cffe0a8b8b3
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:179
+msgid ""
+"The Plate Carree Equidistant Cylindrical projection, for example, is used "
+"when accurate distance measurement is important."
+msgstr "La projection Plate Carrée Cylindrique Équidistante est, par exemple, utilisée lorsque la mesure précise de la distance est importante."
+
+# 85648cd599cc409a98d70b40de71ba93
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:192
+msgid "The United Nations Logo uses the Azimuthal Equidistant projection."
+msgstr "Sur le logo des Nations Unies, on peut voir une représentation symbolique d'une projection Azimutale Équidistante."
+
+# 268bfa01feeb4d2ab2a88064f04daf3f
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:195
+msgid "Projections with equal areas"
+msgstr "Projections respectant les surfaces"
+
+# 015c77d9d85b4f7298eb008b9925f933
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:197
+msgid ""
+"When a map portrays areas over the entire map, so that all mapped areas have"
+" the same proportional relationship to the areas on the Earth that they "
+"represent, the map is an **equal area map**. In practice, general reference "
+"and educational maps most often require the use of **equal area "
+"projections**. As the name implies, these maps are best used when "
+"calculations of area are the dominant calculations you will perform. If, for"
+" example, you are trying to analyse a particular area in your town to find "
+"out whether it is large enough for a new shopping mall, equal area "
+"projections are the best choice. On the one hand, the larger the area you "
+"are analysing, the more precise your area measures will be, if you use an "
+"equal area projection rather than another type. On the other hand, an equal "
+"area projection results in** distortions of angular conformity** when "
+"dealing with large areas. Small areas will be far less prone to having their"
+" angles distorted when you use an equal area projection. **Alber's equal "
+"area**, **Lambert's equal area** and **Mollweide Equal Area Cylindrical "
+"projections** (shown in figure_mollweide_equal_area_projection_) are types "
+"of equal area projections that are often encountered in GIS work."
+msgstr "Lorsqu'une carte dépeint les zones sur la carte entière, de sorte que toutes les zones cartographiées ont la même relation proportionnelle aux zones sur la Terre qu'ils représentent, la carte est une **carte égale**. Dans la pratique, les cartes de références générales et les cartes éducatives nécessitent le plus souvent l'utilisation de **projections équivalentes**. Comme son nom l'indique, ces cartes sont mieux utilisées lorsque vous souhaitez favoriser les calculs de superficie. Si, par exemple, vous essayez d'analyser un domaine particulier dans votre ville pour savoir s'il est assez grand pour un nouveau centre commercial, les projections équivalentes sont votre meilleur choix. D'une part, plus la zone que vous analyserez sera importante, plus précises seront vos mesures, si vous utilisez une projection équivalente plutôt qu'une autre. D'autre part, en travaillant sur de grandes surfaces, une projection équivalente résulte en une **distorsion des angles**. De petites zones seront beaucoup moins enclins à avoir leurs angles déformés lorsque vous utilisez une projection de surface égale. **Superficie égale d'Alber**, **superficie égale de Lambert** et **projections cylindriques à surface égale de Mollweide** (indiquées dans figure_mollweide_equal_area_projection_) sont des types de projections équivalentes qui sont souvent rencontrées dans le travail de SIG."
+
+# fd2dde43f6e3410d864e97e10d5c1a68
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:224
+msgid ""
+"The Mollweide Equal Area Cylindrical projection, for example, ensures that "
+"all mapped areas have the same proportional relationship to the areas on the"
+" Earth."
+msgstr "Par exemple, la projection Mollweide Cylindrique de Surface Égale assure que toutes les zones cartographiées ont la même relation proportionnelle aux zones de la Terre."
+
+# a3b57b2cf4b34fe9a2cc4ff5c2dce970
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:227
+msgid ""
+"Keep in mind that map projection is a very complex topic. There are hundreds"
+" of different projections available world wide each trying to portray a "
+"certain portion of the earth's surface as faithfully as possible on a flat "
+"piece of paper. In reality, the choice of which projection to use, will "
+"often be made for you. Most countries have commonly used projections and "
+"when data is exchanged people will follow the **national trend**."
+msgstr "Gardez en tête que la projection de carte est un sujet très complexe. Il y a des centaines de projections différentes disponibles dans le monde, chacun essayant de représenter une certaine portion de la surface de la terre aussi fidèlement que possible sur une feuille de papier plate. En réalité, le choix de quelle projection utiliser sera souvent fait par vous. La plupart des pays ont communément utilisé des projections et lorsque les données sont échangées, les gens vont suivre la **tendance nationale**."
+
+# 0f574a2f44ff4e01a5d1bcb5558d56e8
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:235
+msgid "Coordinate Reference System (CRS) in detail"
+msgstr "Système de Coordonnées de Référence (SCR) en détail"
+
+# 55385dd9fd0f4abf8b7e15d6aaef7f7f
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:237
+msgid ""
+"With the help of coordinate reference systems (CRS) every place on the earth"
+" can be specified by a set of three numbers, called coordinates. In general "
+"CRS can be divided into **projected coordinate reference systems** (also "
+"called Cartesian or rectangular coordinate reference systems) and "
+"**geographic coordinate reference systems**."
+msgstr "Grâce aux systèmes de coordonnées de référence (SCR), chaque point de la terre peut être spécifié par un ensemble de trois nombres, appelés coordonnées. En général, les SCR se divisent en **systèmes de coordonnées de référence projetées** (aussi appelés systèmes de coordonnées de référence cartésiennes ou rectangulaires) et **systèmes de coordonnées de référence géographique**."
+
+# ba02397e51df4fb3ba93b2a3f99be069
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:244
+msgid "Geographic Coordinate Systems"
+msgstr "Systèmes de Coordonnées Géographiques"
+
+# ae16f436d7a74fc9bf7da2abb78ab7f6
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:246
+msgid ""
+"The use of Geographic Coordinate Reference Systems is very common. They use "
+"degrees of latitude and longitude and sometimes also a height value to "
+"describe a location on the earth’s surface. The most popular is called **WGS"
+" 84**."
+msgstr "L'utilisation des Systèmes de Coordonnées Géographique est très courante. Pour définir un point à la surface de la Terre, ils utilisent la Latitude et la Longitude qui s'expriment en degrés, et parfois une valeur de hauteur est donnée en plus. Le plus connu et le plus utilisé est le **WGS 84**."
+
+# 701646d704b344b0b561d453e019b85f
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:250
+msgid ""
+"**Lines of latitude** run parallel to the equator and divide the earth into "
+"180 equally spaced sections from North to South (or South to North). The "
+"reference line for latitude is the equator and each **hemisphere** is "
+"divided into ninety sections, each representing one degree of latitude. In "
+"the northern hemisphere, degrees of latitude are measured from zero at the "
+"equator to ninety at the north pole. In the southern hemisphere, degrees of "
+"latitude are measured from zero at the equator to ninety degrees at the "
+"south pole. To simplify the digitisation of maps, degrees of latitude in the"
+" southern hemisphere are often assigned negative values (0 to -90°). "
+"Wherever you are on the earth’s surface, the distance between the lines of "
+"latitude is the same (60 nautical miles). See figure_geographic_crs_ for a "
+"pictorial view."
+msgstr "Les **Lignes de latitude** courent parallèlement à l'équateur et divisent la terre en 180 sections séparées de manière égale du Nord au Sud (ou du Sud au Nord). La ligne de référence pour la latitude est l'équateur et chaque **hémisphère** est divisé en quatre-vingt-dix sections, chacune représentant un degré de latitude. Dans l'hémisphère nord, les degrés de latitude sont mesurés depuis zéro à l'équateur jusqu'à quatre-vingt-dix au pôle nord. Dans l'hémisphère sud, les degrés de latitude sont mesuré depuis zéro à l'équateur jusqu'à quatre-vingt-dix au pôle sud. Pour simplifier la digitalisation des cartes, les degrés de latitude dans l'hémisphère sud sont souvent assignés à des valeurs négatives (0 à -90°). Peu importe où vous vous trouvez sur la surface terrestre, la distance entre les lignes de latitude est la même (60 miles nautiques). Voir figure_geographic_crs_ pour une vue en perspective."
+
+# edcb7af0f65b4bd2b55e6ff1485c52b6
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:272
+msgid ""
+"Geographic coordinate system with lines of latitude parallel to the equator "
+"and lines of longitude with the prime meridian through Greenwich."
+msgstr "Les Systèmes de Coordonnées Géographiques avec des lignes de Latitude, parallèles à l'équateur, et des lignes de Longitude, qui démarrent avec le méridien de Greenwich (à côté de Londres)"
+
+# 680a186e91b24afe80434bc33f28e462
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:275
+msgid ""
+"**Lines of longitude**, on the other hand, do not stand up so well to the "
+"standard of uniformity. Lines of longitude run perpendicular to the equator "
+"and converge at the poles. The reference line for longitude (the prime "
+"meridian) runs from the North pole to the South pole through Greenwich, "
+"England. Subsequent lines of longitude are measured from zero to 180 degrees"
+" East or West of the prime meridian. Note that values West of the prime "
+"meridian are assigned negative values for use in digital mapping "
+"applications. See figure_geographic_crs_ for a pictorial \\view."
+msgstr "Les **Lignes de longitude**, d'autre part, ne résistent pas aussi bien à la norme d'uniformité. Les lignes de longitude courent perpendiculairement à l'équateur et convergent aux pôles. La ligne de référence pour la longitude (le méridien) court du Pôle Nord au Pôle Sud via Greenwich, Angleterre. Les lignes ultérieures de longitude sont mesurées depuis zéro jusqu'à 180 degrés à l'Est ou à l'Ouest du méridien. Notez que les valeurs à l'Ouest du méridien sont assignées à des valeurs négatives à utiliser dans des applications de cartographie digitale. Voir figure_geographic_crs_ pour une vue en perspective."
+
+# 79a6c1bb22fc4406b12d362ac8e086eb
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:284
+msgid ""
+"At the equator, and only at the equator, the distance represented by one "
+"line of longitude is equal to the distance represented by one degree of "
+"latitude. As you move towards the poles, the distance between lines of "
+"longitude becomes progressively less, until, at the exact location of the "
+"pole, all 360° of longitude are represented by a single point that you could"
+" put your finger on (you probably would want to wear gloves though). Using "
+"the geographic coordinate system, we have a grid of lines dividing the earth"
+" into squares that cover approximately 12363.365 square kilometres at the "
+"equator --- a good start, but not very useful for determining the location "
+"of anything within that square."
+msgstr "À l'équateur, et seulement à l'équateur, la distance représentée par une ligne de longitude est égale à la distance représentée par un degré de latitude. Lorsque vous vous déplacez vers les pôles, la distance entre les lignes de longitude devient progressivement moins grande, jusqu'à ce que, à l'exacte position du pôle, les 360° de longitude soient représentés par un unique point sur lequel vous pouvez mettre votre doigt (même si vous auriez probablement envie de porter des gants). En utilisant le système de coordonnées géographiques, nous avons une grille de lignes divisant la terre en carrés qui couvrent approximativement 12363.365 kilomètres carrés à l'équateur --- un bon départ, mais pas très utile pour déterminer la localisation de n'importe quoi d'autre sans ce carré."
+
+# 2f9e602d6be94e1eb278c2b09bcb1c02
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:294
+msgid ""
+"To be truly useful, a map grid must be divided into small enough sections so"
+" that they can be used to describe (with an acceptable level of accuracy) "
+"the location of a point on the map. To accomplish this, degrees are divided "
+"into **minutes** (``'``) and **seconds** (``\"``). There are sixty minutes "
+"in a degree, and sixty seconds in a minute (3600 seconds in a degree). So, "
+"at the equator, one second of latitude or longitude = 30.87624 meters."
+msgstr "Pour être vraiment utile, une grille de carte doit être divisée en suffisamment de petites sections de sorte qu'elles puissent être utilisées pour décrire (avec un niveau acceptable de précision) l'emplacement d'un point sur la carte. Pour faire ceci, les degrés sont divisés en **minutes** (``'``) et **secondes** (``\"``). Il y a soixante minutes dans un degré, et soixante secondes dans une minute (3600 secondes dans un degré). Donc, à l'équateur, une seconde de latitude ou de longitude = 30.87624 mètres."
+
+# dedf63d9b6dc4e689dc1af4faff1aa3b
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:302
+msgid "Projected coordinate reference systems"
+msgstr "Système de Coordonnées de Référence Projeté"
+
+# 6c3db5bbae514b9aa58c0f2b884330b3
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:304
+msgid ""
+"A two-dimensional coordinate reference system is commonly defined by two "
+"axes. At right angles to each other, they form a so called **XY-plane** (see"
+" figure_projected_crs_ on the left side). The horizontal axis is normally "
+"labelled **X**, and the vertical axis is normally labelled **Y**. In a "
+"three-dimensional coordinate reference system, another axis, normally "
+"labelled **Z**, is added. It is also at right angles to the **X** and **Y** "
+"axes. The **Z** axis provides the third dimension of space (see "
+"figure_projected_crs_ on the right side). Every point that is expressed in "
+"spherical coordinates can be expressed as an **X Y Z** coordinate."
+msgstr "Un système de coordonnées de référence à deux dimensions est communément défini par deux axes. À angle droit l'un de l'autre, ils forment ce qu'on appelle un **plan XY** (voir figure_projected_crs_ sur le côté gauche). L'axe horizontal est normalement étiqueté **X**, et l'axe vertical est normalement étiqueté **Y**. Dans un système de coordonnées de référence à trois dimensions, un autre axe, normalement étiqueté **Z**, est ajouté. Il est aussi à angle droit avec les axes **X** et **Y**. L'axe **Z** fournit la troisième dimension de l'espace (voir figure_projected_crs_ sur le côté droit). Chaque point qui est exprimé en coordonnées sphériques peut être exprimé comme une coordonnée **X Y Z**."
+
+# 070d0f397f9b4957bfb0e07e057bc5c9
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:324
+msgid "Two and three dimensional coordinate reference systems."
+msgstr "Système de Coordonnées de Référence à deux ou trois dimensions"
+
+# 6622b3ad443e48c58d997a1d426e8f7d
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:326
+msgid ""
+"A projected coordinate reference system in the southern hemisphere (south of"
+" the equator) normally has its origin on the equator at a specific "
+"**Longitude**. This means that the Y-values increase southwards and the "
+"X-values increase to the West. In the northern hemisphere (north of the "
+"equator) the origin is also the equator at a specific **Longitude**. "
+"However, now the Y-values increase northwards and the X-values increase to "
+"the East. In the following section, we describe a projected coordinate "
+"reference system, called Universal Transverse Mercator (UTM) often used for "
+"South Africa."
+msgstr "Un système de coordonnées de référence projeté dans l'hémisphère sud (sud de l'équateur) a normalement son origine sur l'équateur à une **Longitude** spécifique. Cela signifie que les valeurs Y augmentent vers le sud et que les valeurs X augment vers l'Ouest. Dans l'hémisphère nord (nord de l'équateur), l'origine est aussi l'équateur à une **Longitude** spécifique. Cependant, les valeurs Y augmentent maintenant vers le nord et les valeurs X augmentent vers l'Est. Dans la section suivante, nous décrivons un système de coordonnées de référence projeté, appelé Transverse Universelle de Mercator (UTM, en anglais Universal Transverse Mercator), souvent utilisé pour l'Afrique du Sud."
+
+# c8696c8d19364168abcdbc9ce7125693
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:336
+msgid "Universal Transverse Mercator (UTM) CRS in detail"
+msgstr "Transverse Universelle de Mercator (UTM) en détail"
+
+# 6d48fa011d724f0ab99f8a84c8c238f1
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:338
+msgid ""
+"The Universal Transverse Mercator (UTM) coordinate reference system has its "
+"origin on the **equator** at a specific **Longitude**. Now the Y-values "
+"increase southwards and the X-values increase to the West. The UTM CRS is a "
+"global map projection. This means, it is generally used all over the world. "
+"But as already described in the section 'accuracy of map projections' above,"
+" the larger the area (for example South Africa) the more distortion of "
+"angular conformity, distance and area occur. To avoid too much distortion, "
+"the world is divided into **60 equal zones** that are all **6 degrees** wide"
+" in longitude from East to West. The **UTM zones** are numbered **1 to 60**,"
+" starting at the **international date line** (**zone 1** at 180 degrees West"
+" longitude) and progressing East back to the **international date line** "
+"(**zone 60** at 180 degrees East longitude) as shown in figure_utm_zones_."
+msgstr "Le système de coordonnées de référence Transverse Universelle de Mercator (UTM) a son origine sur l'**équateur** à une **Longitude** spécifique. Maintenant, les valeurs Y augmentent vers le sud et les valeurs X augmentent vers l'Ouest. Le SCR UTM et une projection cartographique mondiale. Cela signifie qu'il est généralement utilisé partout dans le monde. Mais comme cela a déjà été décrit dans la section 'exactitude des projections cartographiques' ci-dessus, plus la zone est grande (par exemple l'Afrique du Sud), plus il y a de distorsions de la conformité angulaire, des distances et des surfaces. Pour éviter de trop grandes distorsions, le monde est divisé en **60 zones égales** qui sont toutes larges de **6 degrés** en longitude, d'Est en Ouest. Les **zones UTM** sont numérotées de **1 à 60**, commençant à la **ligne de date internationale** (**zone 1** à 180 degrés de longitude Ouest) et progressant à l'Est en arrière de la **ligne de date internationale** (**zone 60** à 180 degrés de longitude Est) comme montré dans figure_utm_zones_."
+
+# 422ccbf19efe4d5b96b8716076c48659
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:361
+msgid ""
+"The Universal Transverse Mercator zones. For South Africa UTM zones 33S, "
+"34S, 35S, and 36S are used."
+msgstr "Les zones Universal Transverse Mercator. Pour l'Afrique du Sud, les zones UTM 33S, 34S, 35S et 36S sont utilisées."
+
+# 199134bd576d47a48da34c160d5cb3ef
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:364
+msgid ""
+"As you can see in figure_utm_zones_ and figure_utm_for_sa_, South Africa is "
+"covered by four **UTM zones** to minimize distortion. The **zones** are "
+"called **UTM 33S**, **UTM 34S**, **UTM 35S** and **UTM 36S**. The **S** "
+"after the zone means that the UTM zones are located **south of the "
+"equator**."
+msgstr "Comme vous pouvez le voir sur figure_utm_zones_ et figure_utm_for_sa_, l'Afrique du Sud est couverte par quatre **zones UTM** pour minimiser les déformations. Ces **zones** sont appelées **UTM 33S**, **UTM 34S**, **UTM 35S** et **UTM 36S**. Le **S** après la zone signifie que les zones UTM sont situées au **sud de l'équateur**."
+
+# 4d39fbb2b2c24d8197bced57a7294fcc
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:379
+msgid ""
+"UTM zones 33S, 34S, 35S, and 36S with their central longitudes (meridians) "
+"used to project South Africa with high accuracy. The red cross shows an Area"
+" of Interest (AOI)."
+msgstr "Les Projections UTM 33S, 34S, 35S et 36S, avec leur longitude centrale sont utilisés pour représenter l'Afrique du Sud avec une bonne précision. La croix rouge localise une Zone d'Intérêt (ZI)."
+
+# c1113ce969244aedbd8ca804f42072b8
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:383
+msgid ""
+"Say, for example, that we want to define a two-dimensional coordinate within"
+" the **Area of Interest (AOI)** marked with a red cross in "
+"figure_utm_for_sa_. You can see, that the area is located within the **UTM "
+"zone 35S**. This means, to minimize distortion and to get accurate analysis "
+"results, we should use **UTM zone 35S** as the coordinate reference system."
+msgstr "Disons, par exemple, que nous voulions définir une coordonnée à deux dimensions dans une **Zone d'Intérêt**(ZI) représentée par une croix dans la figue  utm_for_sa_. Vous pouvez voir que la ZI est localisé en **UTM Zone 35S**. Cela signifie que pour minimiser les déformations et pour obtenir des résultats d'analyse spatiale, il faut utiliser l' **UTM Zone 35S** comme Système de Coordonnées de Référence."
+
+# a0ca95762d514354a2a31be50f66c2f7
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:389
+msgid ""
+"The position of a coordinate in UTM south of the equator must be indicated "
+"with the **zone number** (35) and with its **northing (y) value** and "
+"**easting (x) value** in meters. The **northing value** is the distance of "
+"the position from the **equator** in meters. The **easting value** is the "
+"distance from the **central meridian** (longitude) of the used UTM zone. For"
+" UTM zone 35S it is **27 degrees** **East** as shown in figure_utm_for_sa_. "
+"Furthermore, because we are south of the equator and negative values are not"
+" allowed in the UTM coordinate reference system, we have to add a so called "
+"**false northing value** of 10,000,000 m to the northing (y) value and a "
+"false easting value of 500,000 m to the easting (x) value. This sounds "
+"difficult, so, we will do an example that shows you how to find the correct "
+"**UTM 35S** coordinate for the **Area of Interest**."
+msgstr "La position d'une coordonnée en UTM au sud de l'équateur doit être indiquée avec le **nombre de la zone** (35) et avec son **ordonnée (y)** et son **abscisse (x)** en mètres. La **valeur de l'ordonnée** est la distance de la position depuis l'**équateur** en mètres. La **valeur de l'abscisse** est la distance depuis le **méridien central** (longitude) de la zone UTM utilisée. Pour la zone UTM 35S c'est **27 degrés** **Est** comme montré dans la figure_utm_for_sa_. En outre, parce que nous sommes au sud de l'équateur et que les valeurs négatives ne sont pas autorisées dans le système de coordonnées de référence UTM, nous devons ajouter une fausse valeur d'abscisse de 500,000 m à la valeur d'abscisse (x). Cela semble difficile, donc nous ferons un exemple qui vous montre comment trouver la coordonnée correcte **UTM 35S** pour la **Zone d'Intérêt**."
+
+# 6e6e32f985084856b9a03faa2452e344
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:403
+msgid "The northing (y) value"
+msgstr "L'ordonnée (y)"
+
+# c0eb64c0c62c42af88e5c7c197741cd7
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:405
+msgid ""
+"The place we are looking for is 3,550,000 meters south of the equator, so "
+"the northing (y) value gets a **negative sign** and is -3,550,000 m. "
+"According to the UTM definitions we have to add a **false northing value** "
+"of 10,000,000 m. This means the northing (y) value of our coordinate is "
+"6,450,000 m (-3,550,000 m + 10,000,000 m)."
+msgstr "L'endroit que nous recherchons est à 3 550 000 mètres au sud de l'équateur; la valeur de l'ordonnée (y) prend alors un **signe négatif**, soit -3 550 000 m. Conformément aux définitions de l'UTM, nous devons y ajouter une **fausse valeur d'ordonnée** de 10 000 000 m. Cela signifie donc que la valeur de l'ordonnée (y) de notre coordonnée est 6 450 000 m (-3 500 000 m + 10 000 000 m)."
+
+# 37814ee06eca4da98c95b47004c614a0
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:412
+msgid "The easting (x) value"
+msgstr "L'abscisse (x)"
+
+# 8f74c608e4b44b77a21045f911428df7
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:414
+msgid ""
+"First we have to find the **central meridian** (longitude) for the **UTM "
+"zone 35S**. As we can see in figure_utm_for_sa_ it is **27 degrees East**. "
+"The place we are looking for is **85,000 meters West** from the central "
+"meridian. Just like the northing value, the easting (x) value gets a "
+"negative sign, giving a result of **-85,000 m**. According to the UTM "
+"definitions we have to add a **false easting value** of 500,000 m. This "
+"means the easting (x) value of our coordinate is 415,000 m (-85,000 m + "
+"500,000 m). Finally, we have to add the **zone number** to the easting value"
+" to get the correct value."
+msgstr "Tout d'abord, nous devons trouver le **méridien central** (longitude) de la **UTM zone 35S**. Comme nous pouvons le voir sur figure_utm_for_sa_, il est **27 degrés Est**. L'endroit que nous recherchons est à **85 000 mètres Ouest** du méridien central. Comme pour l'ordonnée, la valeur de l'abscisse (x) prend un signe négative, devenant ainsi **-85 000m**. Conformément aux définitions de l'UTM, nous devons y ajouter une **fausse valeur d'abscisse** de 500 000m. Cela signifie donc que la valeur de l'abscisse (x) de notre coordonnée est 415 000 m (-85 000 m + 500 000 m). enfin, nous devons ajouter le **numéro de zone** à l'abscisse pour obtenir la valeur correcte."
+
+# 52bf2abd116e4517b369e37423d545ca
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:423
+msgid ""
+"As a result, the coordinate for our **Point of Interest**, projected in "
+"**UTM zone 35S** would be written as: **35 415,000 m E / 6,450,000 m N**. In"
+" some GIS, when the correct UTM zone 35S is defined and the units are set to"
+" meters within the system, the coordinate could also simply appear as "
+"**415,000 6,450,000**."
+msgstr "En conséquence, les coordonnées de notre **Point d'Intérêt** en **UTM zone 35S** seraient écrites comme suit: **35 415 000 m E / 6 450 000 m N**. Dans certains SIG, lorsque la projection UTM zone 35S est correctement définie et que les unités sont définies en mètres dans le système, les coordonnées peuvent aussi apparaître sous la forme **415 000 , 6 450 000**."
+
+# 94f362b56c2c4c7d8f29e7853da6ef5c
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:429
+msgid "On-The-Fly Projection"
+msgstr "Projection à la volée"
+
+# 55005edb6ab244b4949d8dfa07bb17a6
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:431
+msgid ""
+"As you can probably imagine, there might be a situation where the data you "
+"want to use in a GIS are projected in different coordinate reference "
+"systems. For example, you might get a vector layer showing the boundaries of"
+" South Africa projected in UTM 35S and another vector layer with point "
+"information about rainfall provided in the geographic coordinate system WGS "
+"84. In GIS these two vector layers are placed in totally different areas of "
+"the map window, because they have different projections."
+msgstr "Comme vous l'imaginez sans doute, il pourrait y avoir une situation où les données que vous souhaitez utiliser dans un SIG sont projetées dans des systèmes de coordonnées de référence différents. Par exemple, vous pourriez obtenir une couche vecteur montrant les limites de l'Afrique du Sud projetée en UTM 35S et une autre couche de vecteur avec des points d'informations sur les précipitations projetée dans le système de coordonnées géographiques WGS84. Dans un SIG, ces deux couches vecteur sont placées dans des zones totalement différentes de la fenêtre de carte, parce qu'elles ont différentes projections."
+
+# 1ed3b9ec1b104d3db84bbb10200696c5
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:447
+msgid "Common problems / things to be aware of"
+msgstr "Problèmes courants / choses à savoir"
+
+# f3822c4421f34cb1b8c0694b54855ddb
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:449
+msgid ""
+"The topic **map projection** is very complex and even professionals who have"
+" studied geography, geodetics or any other GIS related science, often have "
+"problems with the correct definition of map projections and coordinate "
+"reference systems. Usually when you work with GIS, you already have "
+"projected data to start with. In most cases these data will be projected in "
+"a certain CRS, so you don't have to create a new CRS or even re project the "
+"data from one CRS to another. That said, it is always useful to have an idea"
+" about what map projection and CRS means."
+msgstr "Le sujet **projection de la carte** est très complexe et même des professionnels qui ont étudié la géographie, la géodésie et toutes autres sciences liées aux SIG ont souvent des problèmes avec la définition correcte des projections de cartes et les systèmes de coordonnées de référence. Habituellement, lorsque vous travaillez avec des SIG, vous avez déjà projeté les données pour commencer. Dans la plupart des cas, ces données seront projetées dans un certain SCR, donc vous n'avez pas besoin de créer un nouveau SCR ou même de reprojeter les données d'un SCR à un autre. Cela dit, c'est toujours utile d'avoir une idée sur ce que signifient une projection de carte et un SCR."
+
+# 86701c9e7f01458c948a197a8381f810
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:458
+msgid "What have we learned?"
+msgstr "Qu'avons-nous appris ?"
+
+# 63e865b8505746509752a0757fae1f6e
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:460
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Faisons le point sur ce que nous avons abordé dans cette partie :"
+
+# 90df72398d634516af545f3ae793df9d
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:462
+msgid ""
+"**Map projections** portray the surface of the earth on a two-dimensional, "
+"flat piece of paper or computer screen."
+msgstr "Les \"Projections de Cartes\" figurent la surface de la terre sur une représentation à deux dimensions, sur une feuille de papier ou sur un écran d'ordinateur."
+
+# 5a49f2f47f2b43be9effd19ba8f28193
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:464
+msgid ""
+"There are global map projections, but most map projections are created and "
+"**optimized to project smaller areas** of the earth's surface."
+msgstr "Il existe des projections \"globales\", mais la plupart des projections sont adaptées à une représentation de petites zones par rapport à la surface de la terre."
+
+# 18bd1e2409424f828b6ed18385aeea7f
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:466
+msgid ""
+"Map projections are never absolutely accurate representations of the "
+"spherical earth. They show **distortions of angular conformity, distance and"
+" area.** It is impossible to preserve all these characteristics at the same "
+"time in a map projection."
+msgstr "Les Projections ne donnent jamais une représentation exacte de la rotondité de la terre. \"La conformité des angles, des distances et des surfaces\" n'est pas toujours respecté. C'est d'ailleurs impossible de respecter toutes ces caractéristiques mathématiques à la fois sur une projection."
+
+# fd1fbfc028114a2dba05148322e68b8b
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:470
+msgid ""
+"A **Coordinate reference system** (CRS) defines, with the help of "
+"coordinates, how the two-dimensional, projected map is related to real "
+"locations on the earth."
+msgstr "Un \"Système de Coordonnées de Référence\" (SCR) défini, avec l'aide des coordonnées, comment des lieux réels sur terre sont projetés sur un plan à deux dimensions."
+
+# 51b5be61863444889ac69af86805daf7
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:473
+msgid ""
+"There are two different types of coordinate reference systems: **Geographic "
+"Coordinate Systems** and **Projected Coordinate Systems**."
+msgstr "Il y a deux types de systèmes de coordonnées de référence : **Systèmes de Coordonnées Géographiques** et **Systèmes de Coordonnées Projetées**."
+
+# cb93373d6f8244519b59dadecc7745af
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:475
+msgid ""
+"**On the Fly** projection is a functionality in GIS that allows us to "
+"overlay layers, even if they are projected in different coordinate reference"
+" systems."
+msgstr "La projection *à la volée* est une fonctionnalité dans les SIG qui permet de superposer des couches, même si elles sont projetées dans différents systèmes de coordonnées de référence."
+
+# 41bf86e22e87486cbde920d1c79a5419
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:479
+msgid "Now you try!"
+msgstr "Maintenant, essayez !"
+
+# 9d1a1a1dddc445419f4dffb554c58a3e
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:481
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Voici quelques pistes d'actions à essayer avec vos élèves :"
+
+# 5035494809a64b67a1af2ed470543323
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:483
+msgid ""
+"Start QGIS and load two layers of the same area but with different "
+"projections and let your pupils find the coordinates of several places on "
+"the two layers. You can show them that it is not possible to overlay the two"
+" layers. Then define the coordinate reference system as Geographic/WGS 84 "
+"inside the :guilabel:`Project Properties` dialog and activate the checkbox "
+"|checkbox| :guilabel:`Enable on-the-fly CRS transformation`. Load the two "
+"layers of the same area again and let your pupils see how on-the-fly "
+"projection works."
+msgstr "Démarrez QGIS et chargez deux couches de la même zone mais avec des projections différentes et laissez vos élèves trouver les coordonnées de plusieurs endroits sur les deux couches. Vous pouvez leur montrer qu'il n'est pas possible de superposer les deux couches. Ensuite, définissez le système de coordonnées de référence comme Géographique/WGS 84 dans la boîte de dialogue :guilabel:`Propriétés du Projet` et activez la case à cocher |checkbox| :guilabel:`Activer la projection 'à la volée'`. Chargez à nouveau les deux couches de la même zone et laissez vos élèves voir comment la projection 'à la volée' fonctionne."
+
+# dc896cdefdc143f68db9bfa604b6dd84
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:490
+msgid ""
+"You can open the :guilabel:`Project Properties` dialog in QGIS and show your"
+" pupils the many different Coordinate Reference Systems so they get an idea "
+"of the complexity of this topic. With 'on-the-fly' CRS transformation "
+"enabled you can select different CRS to display the same layer in different "
+"projections."
+msgstr "Vous pouvez ouvrir la fenêtre :guilabel:`Propriétés du Projet` et montrer à vos élèves les différents Systèmes de Coordonnées de Référence afin de leur faire prendre conscience de la complexité du sujet. Avec la transformation du SCR 'à la volée', vous pouvez sélectionner différents SCR pour afficher la même couche dans différentes projections."
+
+# 806794ddc6b44b21a89112c75057a08b
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:496
+msgid "Something to think about"
+msgstr "Un peu de réflexion ..."
+
+# 8ccec86779b34b7782b73d15f029194b
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:498
+msgid ""
+"If you don't have a computer available, you can show your pupils the "
+"principles of the three map projection families. Get a globe and paper and "
+"demonstrate how cylindrical, conical and planar projections work in general."
+" With the help of a transparency sheet you can draw a two-dimensional "
+"coordinate reference system showing X axes and Y axes. Then, let your pupils"
+" define coordinates (x and y values) for different places."
+msgstr "Si vous n'avez pas d'ordinateur disponible, vous pouvez montrer à vos élèves les principes des trois familles de projection de carte. Prenez un globe et une feuille de papier et démontrez comment les projections cylindriques, coniques et planes fonctionne en général. Avec l'aide d'une feuille transparente, vous pouvez dessiner un système de coordonnées de référence à deux dimensions montrant les axes X et Y. Ensuite, laissez vos élèves définir les coordonnées (valeurs x et y) pour les différents endroits."
+
+# 1ffae313a5df4176a007905336744820
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:506
+msgid "Further reading"
+msgstr "Pour aller plus loin"
+
+# be7391f079a040a68ec75664d1d027af
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:508
+msgid "**Books**:"
+msgstr "**Livres** :"
+
+# 6983aa2aba374d01ab33785e8dd0bbb2
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:510
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr "Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. 3rd Edition. McGraw Hill. ISBN: 0070658986"
+
+# d444c06abb434bbebaba37199a508198
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:512
+msgid ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr "DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. 3rd Edition. Wiley. ISBN: 9814126195"
+
+# 40a4a21a41c6464bad6b871565d96e93
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:514
+msgid ""
+"Galati, Stephen R. (2006): Geographic Information Systems Demystified. "
+"Artech House Inc. ISBN: 158053533X"
+msgstr "Galati, Stephen R. (2006): Geographic Information Systems Demystified. Artech House Inc. ISBN: 158053533X"
+
+# a53431aca965430e8b2ce713cbc8466a
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:517
+msgid "**Websites**:"
+msgstr "**Sites Web** :"
+
+# 7e5cee84ad9648c782d0e2106846b1ef
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:519
+msgid "http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html"
+msgstr "http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html"
+
+# 61a72a2427ac426191a8e2a076fc56f6
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:520
+msgid "http://geology.isu.edu/geostac/Field_Exercise/topomaps/index.htm"
+msgstr "http://geology.isu.edu/geostac/Field_Exercise/topomaps/index.htm"
+
+# d9231935602343cc82cc81a20987beba
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:522
+msgid ""
+"The QGIS User Guide also has more detailed information on working with map "
+"projections in QGIS."
+msgstr "Le Guide de l'Utilisateur de QGIS contient également plus d'informations détaillées sur l'utilisation des projections cartographiques dans QGIS."
+
+# fc82462884ca49cb86d7133d41f8a5c9
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:526
+msgid "What's next?"
+msgstr "La suite ?"
+
+# dc7b1f30c6a146e5b4dc873f406d9bb5
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:528
+msgid ""
+"In the section that follows we will take a closer look at **Map "
+"Production**."
+msgstr "Dans la section suivante, nous allons nous intéresser à la **Réalisation de cartes**."
+
+#: ../../source/docs/gentle_gis_introduction/coordinate_reference_systems.rst:439
+msgid ""
+"To solve this problem, many GIS include a functionality called **on-the-"
+"fly** projection. It means, that you can **define** a certain projection "
+"when you start the GIS and all layers that you then load, no matter what "
+"coordinate reference system they have, will be automatically displayed in "
+"the projection you defined. This functionality allows you to overlay layers "
+"within the map window of your GIS, even though they may be in **different** "
+"reference systems."
+msgstr "Pour résoudre ce problème, beaucoup de SIG incluent une fonctionnalité appelée projection **à la volée**. Cela signifie que vous pouvez **définir** une certaine projection lorsque vous commencer le SIG et toutes les couches que vous chargez ensuite, peu importe le système de coordonnées de référence qu'elles ont, seront automatiquement affichées dans la projection que vous avez définie. Cette fonctionnalité vous permet de superposer des couches dans la fenêtre de la carte de votre SIG, même si elles sont dans **différents** systèmes de référence."
+
+#~ msgid ""
+#~ "To solve this problem, many GIS include a functionality called **оn-the-"
+#~ "fly** projection. It means, that you can **define** a certain projection "
+#~ "when you start the GIS and all layers that you then load, no matter what "
+#~ "coordinate reference system they have, will be automatically displayed in "
+#~ "the projection you defined. This functionality allows you to overlay layers "
+#~ "within the map window of your GIS, even though they may be in **different** "
+#~ "reference systems."
+#~ msgstr ""

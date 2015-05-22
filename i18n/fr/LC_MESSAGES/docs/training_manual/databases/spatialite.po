@@ -1,0 +1,144 @@
+# 
+# Translators:
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+# Sant-anna <delazj@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-17 12:35+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:6
+msgid "|LS| Working with spatialite databases in QGIS"
+msgstr "|LS| Travailler avec des Bases de Données Spatialite dans QGIS"
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:7
+msgid ""
+"While PostGIS is generally used on a server to provide spatial database "
+"capabilities to multiple users at the same time, QGIS also supports the use "
+"of a file format called *spatialite* that is a lightweight, portable way to "
+"store an entire spatial database in a single file. Obviously, these 2 types "
+"of spatial databases should be used for different purposes, but the same "
+"basic principles and techniques apply to both. Let's create a new spatialite"
+" database and explore the functionality provided to work with these "
+"databases in QGIS."
+msgstr "Alors que PostGIS est généralement utilisé sur un serveur pour fournir des fonctionnalités de bases de données spatiales à de multiples utilisateurs en même temps, QGIS gère également l'utilisation d'un format de fichier nommé *spatialite* qui est un moyen léger et portable de stocker une base de données spatiale dans un seul fichier. Naturellement ces deux types de bases de données spatiales doivent être utilisées pour des objetcifs différents mais les mêmes principes de bases s'appliquent aux deux. Créons une nouvelle base de données spatialite et explorons les fonctionnalités offertes par QGIS pour travailler avec."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:15
+msgid ""
+"**The goal for this lesson:** To learn how to interact with spatialite "
+"databases using the QGIS Browser interface."
+msgstr "**L'objectif de cette leçon:** Apprendre à interagir avec des bases de données Spatialite dans le Navigateur de QGIS."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:19
+msgid "|basic| |FA| Creating a Spatialite database with the Browser"
+msgstr "|basic| |FA| Créer une base de données Spatialite avec le Navigateur"
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:21
+msgid ""
+"Using the Browser panel, we can create a new spatialite database and get it "
+"setup for use in QGIS."
+msgstr "A l'aide du panneau Navigateur, nous pouvons créer une nouvelle base de données Spatialite et la configurer pour un usage sous |qg|."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:24
+msgid ""
+"Right click on the :guilabel:`Spatialite` entry in the Browser tree and "
+"select :guilabel:`Create Database`."
+msgstr "Clic droit sur l'entrée :guilabel:`Spatialite` dans l'arborescence du Navigateur et sélectionnez :guilabel:`Créer une base de données`."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:26
+msgid ""
+"Specify where on your filesystem you want to store the file and name it :kbd"
+":`qgis-sl.db`."
+msgstr "Spécifiez où vous souhaitez stocker le fichier et nommez-le :kbd:`qgis-sl.db`."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:28
+msgid ""
+"Again right click on the :guilabel:`Spatialite` entry in the Browser tree "
+"and now select the :guilabel:`New Connection` item. Find the file you "
+"created in the last step and open it."
+msgstr "Faites à nouveau un clic droit sur l'entrée :guilabel:`Spatialite` de l'arborescence du Navigateur et sélectionnez cette fois :guilabel:`Nouvelle Connexion`. Trouvez et ouvrez le fichier précédemment créé."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:32
+msgid ""
+"Now that you have configured your new database you will find that the entry "
+"in Browser tree has nothing underneath it and the only thing you can do at "
+"this point is to delete the connection. This is of course because we haven't"
+" added any tables to this database. Let's go ahead and do that."
+msgstr "Maintenant que vous avez configuré votre nouvelle base de données, vous pourrez remarquer que l'entrée de l'arbre de Navigation n'a rien en dessous et que la seule chose que vous pouvez faire à ce niveau et de supprimer la connexion. Ce comportement est présent uniquement parce que nous n'avons pas encore ajouté de tables à cette base de données. Faisons-le."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:37
+msgid ""
+"Find the button to create a new layer and use the dropdown to create a new "
+"new Spatialite layer, or select :guilabel:`Layer --> New --> New Spatialite "
+"Layer`."
+msgstr "Trouvez le bouton pour créer une nouvelle couche et utilisez le menu déroulant pour créer une nouvelle couche Spatialite ou sélectionnez :guilabel:`Couche --> Nouveau --> Nouvelle couche Spatialite`."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:41
+msgid "|mActionNewSpatiaLiteLayer|"
+msgstr "|mActionNewSpatiaLiteLayer|"
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:43
+msgid "Select the database we created in the previous steps in the drop down."
+msgstr "Sélectionnez dans la liste déroulante la base de données créée dans les étapes précédentes."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:44
+msgid "Give the layer the name :kbd:`places`."
+msgstr "Nommez la couche en :kbd:`places`."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:45
+msgid ""
+"Tick the checkbox next to :guilabel:`Create an auto-incrementing primary "
+"key`."
+msgstr "Cochez la case à côté de :guilabel:`Créer une clé primaire auto-incrémentée`."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:46
+msgid "Add 2 attributes as shown in below"
+msgstr "Ajoutez 2 attributs comme montré ci-dessous"
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:47
+msgid "Click :guilabel:`OK` to create the table."
+msgstr "Cliquez sur :guilabel:`OK` pour créer la table."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:52
+msgid ""
+"Click the refresh button at the top of the Browser and you should now see "
+"your :kbd:`places` table listed."
+msgstr "Cliquez sur le bouton Actualiser en haut de la fenêtre Navigateur et vous devriez pouvoir voir la table :kbd:`places` dans la liste."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:58
+msgid ""
+"You can right click on the table and view its properties as we did in the "
+"previous exercise."
+msgstr "Un clic droit sur la table vous permet de voir ses propriétés, comme vu dans l'exercice précédent."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:61
+msgid ""
+"From here you can start an editing session and start adding data to your new"
+" database directly."
+msgstr "A ce stade, vous pouvez commencer une session d'édition et ajouter des données directement à votre nouvelle base de données."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:64
+msgid ""
+"We also learned about how to import data into a database using the DB "
+"Manager and you can use this same technique to import data into your new "
+"spatialite DB."
+msgstr "Nous avons déjà appris à importer des données dans une base de données à l'aide de DB Manager. Vous pouvez utiliser cette technique pour importer des données dans votre nouvelle base de données Spatialite."
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:68
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/databases/spatialite.rst:70
+msgid ""
+"You have seen how to create spatialite databases and add tables to them and "
+"to use these tables as layers in QGIS."
+msgstr "Vous avez vu comment créer des bases de données Spatialite, leur ajouter des tables et utiliser celles-ci comme couches dans |qg|."

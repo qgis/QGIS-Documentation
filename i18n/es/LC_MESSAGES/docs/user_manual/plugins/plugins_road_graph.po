@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# 
+# Translators:
+# Carlos Dávila <cdavilam@orangecorreo.es>, 2014
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2014-07-12 16:56+0000\n"
+"Last-Translator: Carlos Dávila <cdavilam@orangecorreo.es>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/qgis-documentation/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# fe239c12a1ed4f87a3158bcb2340a6a4
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:10
+msgid "Road Graph Plugin"
+msgstr "Complemento Grafo de rutas"
+
+# f7eeb293a29440af9997fcc40149f71d
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:24
+msgid "Road Graph Plugin |nix|"
+msgstr "Complemento Grafo de rutas |nix|"
+
+# 95ae448adde64b3a86b4bcd1f7062a8f
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:26
+msgid "Main features:"
+msgstr "Características principales:"
+
+# b40de58fedf2445dbe2556642416ad36
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:51
+msgid "Using the plugin"
+msgstr "Usar el componente"
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:67
+msgid "Road graph plugin settings |nix|"
+msgstr "Configuración del complemento Grafo de rutas |nix|"
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:5
+msgid "|updatedisclaimer|"
+msgstr "|updatedisclaimer| "
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
+msgid ""
+"The Road Graph Plugin is a C++ plugin for |qg| that calculates the shortest "
+"path between two points on any polyline layer and plots this path over the "
+"road network."
+msgstr "Grafo de rutas es un complemento en C++ para |qg| que calcula la ruta más corta entre dos puntos de una capa de polilíneas y traza esta ruta sobre la red de carreteras."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:28
+msgid "Calculates path, as well as length and travel time."
+msgstr "Calcula la ruta, así como la longitud y el tiempo de viaje."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:29
+msgid "Optimizes by length or by travel time."
+msgstr "Optimiza la longitud o el tiempo de viaje."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:30
+msgid "Exports path to a vector layer."
+msgstr "Exporta la ruta a una capa vectorial."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:31
+msgid ""
+"Highlights roads directions (this is slow and used mainly for debug purposes"
+" and for the settings testing)."
+msgstr "Resalta la dirección de las carreteras (esto es lento y se utiliza principalmente para fines de depuración y para pruebas de configuración)"
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:34
+msgid ""
+"As a roads layer, you can use any polyline vector layer in any "
+"|qg|-supported format. Two lines with a common point are considered "
+"connected. Please note, it is required to use layer CRS as project CRS while"
+" editing a roads layer. This is due to the fact that recalculation of the "
+"coordinates between different CRSs introduces some errors that can result in"
+" discontinuities, even when 'snapping' is used."
+msgstr "Como una capa de carreteras, se puede usar cualquier capa vectorial de polilíneas en cualquier formato admitido por |qg|. Dos líneas con un punto en común se consideran conectadas. Tenga en cuenta que es necesario usar el SRC de la capa como SRC del proyecto mientras edita una capa de carreteras. Esto es debido al hecho de que recalcular las coordenadas entre diferentes SRC introduce algunos errores que pueden resultar en discontinuidades, incluso cuando se utiliza el 'autoensamblado'."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:41
+msgid "In the layer attribute table, the following fields can be used:"
+msgstr "En la tabla de atributos de la capa, se pueden usar los siguientes campos:"
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:43
+msgid "Speed on road section (numeric field)."
+msgstr "Velocidad en una sección de la carretera (campo numérico)."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:44
+msgid ""
+"Direction (any type that can be cast to string). Forward and reverse "
+"directions correspond to a one-way road, both directions indicate a two-way "
+"road."
+msgstr "Dirección (cualquier tipo que se pueda convertir en texto). Las direcciones de avance y retroceso corresponden a una carretera de un solo sentido, ambas direcciones indican una carretera de doble sentidos."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:47
+msgid ""
+"If some fields don't have any value or do not exist, default values are "
+"used. You can change defaults and some plugin settings in the plugin "
+"settings dialog."
+msgstr "Si algunos campos no tienen ningún valor o no existen, se usan los valores predeterminados. Puede cambiar lo predeterminado y algunas configuraciones del complemento en el diálogo de configuración del complemento."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:53
+msgid ""
+"After plugin activation, you will see an additional panel on the left side "
+"of the main |qg| window. Now, enter some parameters into the :guilabel:`Road"
+" graph plugin settings` dialog in the :menuselection:`Vector --> Road Graph`"
+" menu (see figure_road_graph_2_)."
+msgstr "Después de activar el complemento verá un panel adicional en el lado izquierdo de la ventana principal de |qg|. Ahora, escriba algunos parámetros en el diálogo :guilabel:`Configuración del complemento Grafos de rutas` en el menú :menuselection:`Vectorial --> Grafo de rutas` (vea figure_road_graph_2_)."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:69
+msgid ""
+"After setting the :guilabel:`Time unit`, :guilabel:`Distance unit` and "
+":guilabel:`Topology tolerance`, you can choose the vector layer in the "
+":guilabel:`Transportation layer` tab. Here you can also choose the "
+":guilabel:`Direction field` and :guilabel:`Speed field`. In the "
+":guilabel:`Default settings` tab, you can set the :guilabel:`Direction` for "
+"the calculation."
+msgstr "Después de configurar :guilabel:`Unidad de tiempo`, :guilabel:`Unidad de distancia` y :guilabel:`Tolerancia de topología`, puede seleccionar la capa vectorial en la pestaña :guilabel:`Capa de transporte`. Aquí también puede seleccionar el :guilabel:`Campo de sentido` y el :guilabel:`Campo de velocidad`. En la pestaña :guilabel:`Configuración predeterminada`, puede establecer el :guilabel:`Sentido` para el calculo."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:76
+msgid ""
+"Finally, in the :guilabel:`Shortest Path` panel, select a Start and a Stop "
+"point in the road network layer and click on **[Calculate]**."
+msgstr "Finalmente, en el panel :guilabel:`Ruta más corta`, seleccione un punto de Inicio y un punto Final en la capa de red de carreteras y pulse **[Calcular]**."
+
+#~ msgid "calculate path, it's length and travel time"
+#~ msgstr ""
+
+#~ msgid "optimize by length or by travel time"
+#~ msgstr ""
+
+#~ msgid "export path to a vector layer"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "highlight roads directions (this is slow and used mainly for debug purposes "
+#~ "and for the settings testing)"
+#~ msgstr ""
+
+#~ msgid "In the layer attribute table the following fields can be used:"
+#~ msgstr ""
+
+#~ msgid "speed on road section --- numeric field;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "direction --- any type, that can be casted to string. Forward and reverse "
+#~ "directions are correspond to the one-way road, both directions --- two-way "
+#~ "road"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If some fields don't have any value or do not exist --- default values are "
+#~ "used. You can change defaults and some plugin settings in plugin settings "
+#~ "dialog."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After setting the :guilabel:`Time unit`, :guilabel:`Distance unit` and "
+#~ ":guilabel:`Topology tolerance` you can choose the vector layer in the "
+#~ ":guilabel:`Transportation layer` tab. Here you can also choose the "
+#~ ":guilabel:`Direction field` and :guilabel:`Speed field`. In the "
+#~ ":guilabel:`Default settings` tab you can set the :guilabel:`Direction` for "
+#~ "the calculation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Finally in the :guilabel:`Shortest Path` panel select a Start and a Stop "
+#~ "point in the road network layer and click on **[Calculate]**."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Road Graph Plugin is a C++ plugin for |qg|, that calculates the shortest"
+#~ " path between two points on any polyline layer and plots this path over the "
+#~ "road network."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As a roads layer you can use any polyline vector layer in any |qg| supported"
+#~ " format. Two lines with a common point are considered connected. Please "
+#~ "note, it is required to use layer CRS as project CRS while editing roads "
+#~ "layer. This is due to the fact that recalculation of the coordinates between"
+#~ " different CRS introduce some errors that can result in discontinuities, "
+#~ "even when 'snapping' is used."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After plugin activation you will see an additional panel on the left side of"
+#~ " the main |qg| window. Now make some definitions to the :guilabel:`Road "
+#~ "graph plugin settings` dialog in the menu :menuselection:`Vector --> Road "
+#~ "Graph` (see figure_road_graph_2_)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Road Graph Plugin is a C++ plugin for QGIS, that calculates the shortest"
+#~ " path between two points on any polyline layer and plots this path over the "
+#~ "road network."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As a roads layer you can use any polyline vector layer in any QGIS supported"
+#~ " format. Two lines with a common point are considered connected. Please "
+#~ "note, it is required to use layer CRS as project CRS while editing roads "
+#~ "layer. This is due to the fact that recalculation of the coordinates between"
+#~ " different CRS introduce some errors that can result in discontinuities, "
+#~ "even when 'snapping' is used."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After plugin activation you will see an additional panel on the left side of"
+#~ " the main QGIS window. Now make some definitions to the :guilabel:`Road "
+#~ "graph plugin settings` dialog in the menu :menuselection:`Vector --> Road "
+#~ "Graph` (see figure_road_graph_2_)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After plugin activation you will see an additional panel on the left side of"
+#~ " the main QGIS window. Now make some definitions to the :guilabel:`Road "
+#~ "graph plugin settings` dialog in the menu :menuselection:`Vector --> Road "
+#~ "Graph`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select a Start and a Stop point in the road network layer and click on "
+#~ "**[Calculate]**."
+#~ msgstr ""

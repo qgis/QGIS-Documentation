@@ -1,0 +1,70 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+# Sant-anna <delazj@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-18 08:27+0000\n"
+"Last-Translator: MarieAude <marie-aude.aeby@camptocamp.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/generalize.rst:6
+msgid "Vector simplification and smoothing"
+msgstr "Simplification vectorielle et lissage"
+
+#: ../../source/docs/training_manual/processing/generalize.rst:8
+msgid ""
+"Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+msgstr "Module développé par Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+
+#: ../../source/docs/training_manual/processing/generalize.rst:10
+msgid "This chapter shows how simplify vectors, and smooth out sharp corners."
+msgstr "Ce chapitre montre comment simplifier des vecteurs, et lisser les coins pointus."
+
+#: ../../source/docs/training_manual/processing/generalize.rst:12
+msgid ""
+"Sometimes we need a simplified version of a vector, to have a smaller file "
+"size and get rid of unnecessary details. Many tools do this in a very rough "
+"way, and miss the adjacency and sometimes the topological correctness of "
+"polygons. GRASS is the ideal tool for this: being a topological GIS, "
+"adjacency and correctness are preserved even at very high simplification "
+"levels. In our case, we have a vector resulting from a raster, thus showing "
+"a \"saw\" pattern at borders. Applying a simplification results in straight "
+"lines:"
+msgstr "Parfois nous avons besoin d'une version simplifiée d'un vecteur, pour avoir une plus petite taille de fichier et se débarrasser des détails inutiles. Beaucoup d'outils font ça d'une manière très approximative, et oublient l'adjacence et parfois l'exactitude topologique des polygones. GRASS est l'outil idéal pour cela : étant un SIG topologique, l'adjacence et l'exactitude sont préservées même à des niveaux de simplification très grande. Dans notre cas, nous avons un vecteur résultant d'un raster, montrant ainsi un motif de \"scie\" aux bords. Appliquer une simplification résulte dans les grandes lignes :"
+
+#: ../../source/docs/training_manual/processing/generalize.rst:15
+msgid ""
+":menuselection:`GRASS --> v.generalize` [Maximal tolerance value: 30 m]"
+msgstr ":menuselection:`GRASS --> v.generalize` [Valeur de tolérance maximale : 30 m]"
+
+#: ../../source/docs/training_manual/processing/generalize.rst:17
+msgid ""
+"We can also do the reverse, and make a layer more complex, smoothing out "
+"sharp corners:"
+msgstr "Nous pouvons aussi faire l'inverse, et faire une couche plus complexe, en lissant les coins pointus."
+
+#: ../../source/docs/training_manual/processing/generalize.rst:19
+msgid ":menuselection:`GRASS --> v.generalize` [method: chaiken]"
+msgstr ":menuselection:`GRASS --> v.generalize` [méthode : chaiken]"
+
+#: ../../source/docs/training_manual/processing/generalize.rst:21
+msgid ""
+"Try to apply this second command both to original vector and to the one from"
+" the first analysis, and see the difference. Note that adjacency is not "
+"lost."
+msgstr "Essayez d'appliquer cette deuxième commande sur le vecteur original et aussi sur celui résultant de la première analyse, et voyez la différence. Notez que l'adjacence n'est pas perdue."
+
+#: ../../source/docs/training_manual/processing/generalize.rst:23
+msgid ""
+"This second option can be applied e.g. to contour lines resulting from a "
+"coarse raster, to GPS tracks with sparse vertices, etc."
+msgstr "Cette seconde option peut être appliquée par exemple aux lignes de contour résultant d'un raster grossier, à des pistes GPS avec de rares sommets , etc."

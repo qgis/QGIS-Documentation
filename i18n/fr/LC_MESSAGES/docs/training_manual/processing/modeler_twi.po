@@ -1,0 +1,255 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-20 08:52+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:6
+msgid "Starting with the graphical modeler"
+msgstr "Commencer avec le modeleur graphique"
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:9
+msgid ""
+"In this lesson we will use the graphical modeler, a powerful component that "
+"we can use to define a workflow and run a chain of algorithms."
+msgstr "Dans cette leçon nous utiliserons le modeleur graphique, un élément puissant que nous pouvons utiliser pour définir un flux de traitements et exécuter une chaîne d'algorithmes."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:12
+msgid ""
+"A normal session with the processign tools includes more than running a "
+"single algorithm. Usually several of them are run to obtain a result, and "
+"the outputs of some of those algorithms are used as input for some of the "
+"other ones."
+msgstr "Une session normale avec les outils de traitement comprend plus que l'exécution d'un unique algorithme. Habituellement, plusieurs d'entre eux sont exécutés pour obtenir un résultat, et les sorties de certains de ces algorithmes sont utilisées comme entrée pour certains autres d'entre eux."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:14
+msgid ""
+"Using the graphical modeler, that workflow can be put into a model, which "
+"will run all the necessary algorithms in a single run, thus simplifying the "
+"whole process and automating it."
+msgstr "En utilisant le modeleur graphique, ce flux de traitement peut être mis dans un modèle, qui exécutera tous les algorithmes nécessaires en une unique exécution, en simplifiant ainsi le processus entier et en l'automatisant."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:16
+msgid ""
+"To start this lesson, we are going to calculate a parameter named "
+"Topographic Wetness Index. The algorithm that computes it is called "
+"*Topographic Wetness Index (TWI)*"
+msgstr "Pour commencer cette leçon, nous allons calculer un paramètre nommé Indice d'Humidité Topographique (TWI pour Topographic Wetness Index en anglais). L'algorithme qui le calcule est appelé *Indice d'Humidité Topographique (TWI)*"
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:20
+msgid ""
+"As you can see, there are two mandatory inputs: *Slope* and *Catchment "
+"area*. There is also an optional input, but we will not be using it, so we "
+"can ignore it."
+msgstr "Comme vous pouvez le voir, il y a deux entrées obligatoires : *Pente* et *Bassin versant*. Il y a aussi une entrée optionnelle, mais nous ne l'utiliserons pas, donc nous pouvons l'ignorer."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:22
+msgid ""
+"The data for this lesson contains just a DEM, so we do not have any of the "
+"required inputs. However, we know how to calculate both of them from that "
+"DEM, since we have already seen the algorithms to compute slope and "
+"catchment area. So we can first compute those layers and then use them for "
+"the TWI algorithm."
+msgstr "Les données pour cette leçon comprennent juste un MNE, donc nous n'avons aucune des entrées requises. Cependant, nous savons comment les calculer les deux avec ce MNE, étant donné que nous avons déjà vu les algorithmes pour calculer une pente et un bassin versant. Donc nous pouvons d'abord calculer ces couches et ensuite les utiliser pour l'algorithme TWI."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:24
+msgid ""
+"Here are the parameter dialogs that you should use to calculate the 2 "
+"intermediate layers."
+msgstr "Voici les boîtes de dialogue des paramètres que vous devriez utiliser pour calculer les 2 couches intermédiaires."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:30
+msgid ""
+"And this is how you have to set the parameters dialog of the TWI algorithm."
+msgstr "Et c'est comme ça que vous devez configurer la boîte de dialogue des paramètres de l'algorithme TWI."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:34
+msgid ""
+"This is the result that you will obtain (the default singleband pseudocolor "
+"inverted palette has been used for rendering)."
+msgstr "Ceci est le résultat que vous obtiendrez (la palette par défaut pseudo-couleur inversée à bande unique a été utilisée pour le rendu)."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:38
+msgid ""
+"What we will try to do now is to create an algorithm that calculates the TWI"
+" from a DEM in jut one single step. That will save us work in case we later "
+"have to compute a TWI layer from another DEM, since we will need just one "
+"single step to do it instead of the 3 ones above. All the processes that we "
+"need are found in the  toolbox, so what we have to do is to define the "
+"workflow to wrap them. This is where the graphical modeler comes in."
+msgstr "Ce que nous essayerons de faire maintenant est de créer un algorithme qui calcule le TWI depuis un MNE en seulement une seule étape. Cela nous sauvegarde le travail au cas où nous aurions plus tard à calculer une couche TWI à partir d'un autre MNE, puisque nous aurons besoin juste d'une seule étape pour le faire à la place des trois ci-dessus. Tous les traitements dont nous avons besoin se trouvent dans la boîte à outils, donc ce que nous avons à faire est de définir le flux de traitements pour les activer. C'est ici que le modeleur graphique entre en jeu."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:40
+msgid "Open the modeler by selecting its menu entry in the processing menu."
+msgstr "Ouvrez le modeleur en sélectionnant son entrée dans le menu du traitement."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:44
+msgid ""
+"Two things are needed to create a model: setting the inputs that it will "
+"need, and defining the algorithm that it contains. Both of them are done by "
+"adding elements from the two tabs in the left--hand side of the modeler "
+"window: *Inputs* and *Algorithms*"
+msgstr "Deux choses sont nécessaires pour créer un modèle : configurer les entrées qu'il faudra, et définir l'algorithme qu'il contient. Tous les deux sont faits en ajoutant des éléments depuis les deux onglets sur la partie gauche de la fenêtre du modeleur : *Entrées* et *Algorithmes*"
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:46
+msgid ""
+"Let's start with the inputs. In this case we do not have much to add. We "
+"just need a raster layer with the DEM, and that will be our only input data."
+msgstr "Commençons avec les entrées. Dans ce cas nous ne devons pas en ajouter plus. Nous avons juste besoin d'une couche raster avec un MNE, et ceci sera notre seule entrée de données."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:48
+msgid ""
+"Double click on the *Raster layer* input and you will see the following "
+"dialog."
+msgstr "Double-cliquez sur l'entrée *Couche raster* et vous verrez la boîte de dialogue suivante."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:52
+msgid ""
+"Here wil have to define the input we want. Since we expect this raster layer"
+" to be a DEM, we will call it *DEM*. That's the name that the user of the "
+"model will see when running it. Since we need that layer to work, we will "
+"define it as a mandatory layer."
+msgstr "Ici nous devons définir l'entrée que nous voulons. Puisque nous nous attendons à ce que cette couche raster soit un MNE, nous l'appellerons *MNE*. C'est le nom que l'utilisateur du modèle verra lorsqu'il l'exécutera. Comme nous avons besoin de cette couche pour que ça fonctionne, nous la définirons comme une couche obligatoire."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:54
+msgid "Here is how the dialog should be configured."
+msgstr "Voici comment la boîte de dialogue devrait être configurée."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:58
+msgid "Click on *OK* and the input will appear in the modeler canvas."
+msgstr "Cliquez sur *OK* et l'entrée apparaîtra dans le canevas du modeleur."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:62
+msgid ""
+"Now let's move to the *Algorithms* tab. The first algorithm we have to run "
+"is the *Slope, aspect, curvatures* algorithm. Locate it in the algorithm "
+"list, double--click on it and you will see the dialog shown below."
+msgstr "Rendons-nous maintenant à l'onglet *Algorithmes*. Le premier algorithme que nous devons exécuter est l'algorithme *Pente, aspect, courbes*. Localisez-le dans la liste des algorithmes, double-cliquez dessus et vous verrez la boîte de dialogue montrée ci-dessous."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:66
+msgid ""
+"This dialog is very similar to the one that you can find when running the "
+"algorithm from the toolbox, but the element that you can use as parameter "
+"values are not taken from the current QGIS project, but from the model "
+"itself. That means that, in this case, we will not have all the raster "
+"layers of our project available for the *Elevation* field, but just the ones"
+" defined in our model. Since we have added just one single raster input "
+"named *DEM*, that will be the only raster layer that we will see in the list"
+" corresponding to the *Elevation* parameter."
+msgstr "Cette boîte de dialogue est très semblable à celle que vous pouvez trouver lors de l'exécution de l'algorithme depuis la boîte à outils, mais les éléments que vous pouvez utiliser comme valeurs de paramètre ne viennent pas du projet QGIS courant, mais du modèle lui-même. Cela signifie que, dans ce cas, nous n'aurons pas toutes les couches raster de notre projet disponibles pour le champ *Élévation*, mais uniquement pour ceux définis dans notre modèle. Comme nous avons ajouté seulement un seul raster d'entrée nommé *MNE*, ce sera la seule couche raster que nous verrons dans la liste correspondant au paramètre d'*Élévation*."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:68
+msgid ""
+"Output generated by an algorithm are handled a bit differently when the "
+"algorithm is used as a part of a model. Instead of selecting the filepath "
+"where you want to save each output, you just have to specify if that ouput "
+"is an intermediate layer (and you do not want it to be preserved after the "
+"model has been executed), or it is a final one. In this case, all layers "
+"produced by this algorithm are intermediate. We will only use one of them "
+"(the slope layer), but we do not want to keep it, since we just need it to "
+"calculate the TWI layer, which is the final result that we want to obtain."
+msgstr "Les sorties générées par un algorithme sont gérées un peu différemment lorsque l'algorithme est utilisé comme une partie du modèle. À la place de sélectionner le chemin du fichier où vous voulez sauvegarder chaque sortie, vous devez simplement spécifier si cette sortie est une couche intermédiaire (et vous ne voulez pas la garder après l'exécution du modèle), ou si c'est une couche finale. Dans ce cas, toutes les couches produites par cet algorithme sont intermédiaires. Nous utiliserons seulement l'une d'entre elles (la couche de pente), mais nous ne voulons pas la garder, puisque nous avons juste besoin d'elle pour calculer la couche TWI, qui est le résultat final que nous voulons obtenir."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:70
+msgid ""
+"When layers are not a final result, you should just leave the corresponding "
+"field. Otherwise, you have to enter a name that will be used to identify the"
+" layer in the parameters dialog that will be shown when you run the model "
+"later."
+msgstr "Lorsque des couches ne sont pas un résultat final, vous devriez juste laisser le champ correspondant. Autrement, vous devez entrer un nom qui sera utilisé pour identifier la couche dans la boîte de dialogue des paramètres qui apparaîtra lorsque vous exécuterez plus tard le modèle."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:72
+msgid ""
+"There is not much to select in this first dialog, since we do not have but "
+"just one layer in or model (The DEM input that we created). Actually, the "
+"default configuration of the dialog is the correct one in this case, so you "
+"just have to press *OK*. This is what you will no have in the modeler "
+"canvas."
+msgstr "Il n'y a plus rien d'autre à sélectionner dans cette première boîte de dialogue étant donné que nous n'avons qu'une seule couche d'entrée dans le modèle (le MEN que nous avons créé). En fait la configuration par défaut de la boîte de dialogue est correcte et vous pouvez simplement cliquer sur *Ok*. Voici ce que vous pouvez visualiser dans le canevas du modeleur."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:76
+msgid ""
+"The second algorithm we have to add to our model is the catchment area "
+"algorithm. We will use the algorithm named *Catchment area (Paralell)*. We "
+"will use the DEM layer again as input, and none of the ouputs it produces "
+"are final, so here is how you have to fill the corresponding dialog."
+msgstr "Le second algorithme que nous devons ajouter à notre modèle est l'algorithme de bassin versant. Nous utiliserons l'algorithme nommé *Bassin versant (Parallèle)*. Nous utiliserons à nouveau la couche MNE comme entrée, et aucune des sorties produites seront des sorties finales, donc voici comment vous devez remplir la boîte de dialogue correspondante."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:80
+msgid "Now your model should look like this."
+msgstr "Votre modèle devrait maintenant ressembler à cela."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:84
+msgid ""
+"The last step is to add the *Topographic Wetness Index* algorithm, with the "
+"following configuration."
+msgstr "La dernière étape est l'ajout de l'algorithme *Indice d'Humidité Topographique*, avec la configuration suivante."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:88
+msgid ""
+"In this case, we will not be using the DEM as input, but instead, we will "
+"use the slope and catchment area layers that are calcualted by the "
+"algorithms that we previously added. As you add new algorithms, the outputs "
+"they produce become available for other algorithms, and using them you link "
+"the algorithms, creating the workflow."
+msgstr "Dans ce cas, nous n'utiliserons pas le MNE comme entrée, mais à la place, nous utiliserons les couches de pente et de bassin versant qui sont calculées par les algorithmes que nous avons précédemment ajoutés. Comme vous ajoutez de nouveaux algorithmes, les sorties qu'ils produisent deviennent disponibles pour les autres algorithmes, et en les utilisant vous liez les algorithmes, créant le flux de traitement."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:90
+msgid ""
+"In this case, the output TWI layer is a final layer, so we have to indicate "
+"so. In the corresponding textbox, enter the name that you want to be shown "
+"for this output."
+msgstr "Dans ce cas, la couche de sortie TWI est une couche finale, donc nous devons l'indiquer. Dans le champ correspondant, entrez le nom que vous voulez qu'il soit montré pour cette sortie."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:92
+msgid "Now our model is finished and it should look like this."
+msgstr "Notre modèle est maintenant terminé et il devrait ressembler à cela."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:96
+msgid ""
+"Enter a name and a group name in the upper part of the model window, and "
+"then save it clicking on the *Save* button."
+msgstr "Entrez un nom et un nom de groupe dans la partie du haut de la fenêtre du modèle, et ensuite sauvegardez-le en cliquant sur le bouton *Sauvegarder*."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:100
+msgid ""
+"You can save it anywhere you want an open it later, but if you save it in "
+"the models folder (which is the folder that you will see when the save file "
+"dialog appears), you model will also be available in the toolbox as well. So"
+" stay on that folder and save the model with the filename that you prefer."
+msgstr "Vous pouvez le sauvegarder n'importe où où vous voulez l'ouvrir plus tard, mais si vous le sauvegardez dans le dossier des modèles (qui est le dossier que vous verrez lorsque la boîte de dialogue de sauvegarde du fichier apparaîtra), votre modèle sera également disponible dans la boîte à outils. Donc restez dans ce dossier et sauvegardez le modèle avec le nom de fichier que vous désirez."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:102
+msgid ""
+"Now close the modeler dialog and go to the toolbox. In the *Models* entry "
+"you will find you model."
+msgstr "Fermez maintenant la boîte de dialogue du modeleur et rendez-vous dans la boîte à outils. Sous l'entrée *Modèles*, vous trouverez votre modèle."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:106
+msgid "You can run it just like any normal algorithm, double--clicking on it."
+msgstr "Vous pouvez l'exécuter simplement comme n'importe quel algorithme normal, en double-cliquant dessus."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:110
+msgid ""
+"As you can see, the parameters dialog, contain the input that you added to "
+"the model, along with the outputs that you set as final when adding the "
+"corresponding algorithms."
+msgstr "Comme vous pouvez le voir, la boîte de dialogue des paramètres contient l'entrée que vous avez ajoutée au modèle, de même que les sorties que vous avez configurées comme finales lors de l'ajout des algorithmes correspondants."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:112
+msgid ""
+"Run it using the DEM as input and you will get the TWI layer in just one "
+"single step."
+msgstr "Exécutez-le en utilisant le MNE comme entrée et vous obtiendrez la couche TWI en seulement une seule étape."

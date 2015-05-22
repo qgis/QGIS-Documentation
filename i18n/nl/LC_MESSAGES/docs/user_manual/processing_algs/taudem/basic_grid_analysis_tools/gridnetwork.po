@@ -1,0 +1,185 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-09 12:19+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:6
+msgid "Grid Network"
+msgstr "Rasternetwerk"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:11
+msgid ""
+"Creates 3 grids that contain for each grid cell: 1) the longest path, 2) the"
+" total path, and 3) the Strahler order number. These values are derived from"
+" the network defined by the D8 flow model."
+msgstr "Maakt 3 rasters die voor elke cel van het raster bevatten: 1) het langste pad, 2) het totale pad en 3) het nummer van de volgorde volgens Strahler. Deze waarden worden afgeleid van het netwerk, gedefinieerd door het D8 stroommodel."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:15
+msgid ""
+"The longest upslope length is the length of the flow path from the furthest "
+"cell that drains to each cell. The total upslope path length is the length "
+"of the entire grid network upslope of each grid cell. Lengths are measured "
+"between cell centers taking into account cell size and whether the direction"
+" is adjacent or diagonal."
+msgstr "De langste lengte opwaarts is de lengte van het stroompad vanaf de verste cel die afvoert in elke cel. De totale opwaartse lengte van het pad is de opwaartse lengte van het gehele rasternetwerk van elke cel van het raster. Lengtes worden gemeten tussen centra van cellen, waarbij rekening wordt gehouden met de grootte van de cel en of de richting aanliggend of diagonaal is."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:21
+msgid ""
+"Strahler order is defined as follows: A network of flow paths is defined by "
+"the D8 Flow Direction grid. Source flow paths have a Strahler order number "
+"of one. When two flow paths of different order join the order of the "
+"downstream flow path is the order of the highest incoming flow path. When "
+"two flow paths of equal order join the downstream flow path order is "
+"increased by 1. When more than two flow paths join the downstream flow path "
+"order is calculated as the maximum of the highest incoming flow path order "
+"or the second highest incoming flow path order + 1. This generalizes the "
+"common definition to cases where more than two flow paths join at a point."
+msgstr "De volgorde volgens Strahler wordt als volgt gedefinieerd: Een netwerk van stroompaden wordt gedefinieerd door het raster D8 stroomrichting. Bron-stroompaden hebben het nummer één in de volgorde volgens Strahler. Wanneer twee stroompaden van een verschillende orde samenkomen wordt de orde van het neerwaartse stroompad de orde van het hoogste inkomende stroompad. Wanneer twee stroompaden van gelijke orde samenkomen wordt het neerwaartse stroompad verhoogd met 1. Wanneer meer dan twee stroompaden samenkomen wordt het neerwaartse stroompad berekent als het maximum van de orde van het hoogste inkomende stroompad of de orde van het op één na hoogste inkomende stroompad + 1. Dit generaliseert de algemene definitie voor gevallen waarin meer dan twee stroompaden samenkomen op één punt."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:31
+msgid ""
+"Where the optional mask grid and threshold value are input, the function is "
+"evaluated only considering grid cells that lie in the domain with mask grid "
+"value greater than or equal to the threshold value. Source (first order) "
+"grid cells are taken as those that do not have any other grid cells from "
+"inside the domain draining in to them, and only when two of these flow paths"
+" join is order propagated according to the ordering rules. Lengths are also "
+"only evaluated counting paths within the domain greater than or equal to the"
+" threshold."
+msgstr "Waar het optionele gemaskeerde grid en drempelwaarde worden ingevoerd, wordt de functie geëvalueerd met alleen de overweging dat cellen van het raster die in het domein liggen van het maskergrind met een waarde die gelijk is aan of hoger dan de drempelwaarde meetellen. Bron-(eerste orde) cellen van het raster worden genomen als die welke geen drainage vanuit andere cellen in het raster in het domein in zich hebben, en alleen wanneer twee van deze stroompaden samenkomen wordt de orde verhoogd overeenkomstig de regels voor de volgorde. Lengtes worden ook alleen geëvalueerd door paden binnen het domein te tellen die groter zijn dan of gelijk aan de drempelwaarde."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:39
+msgid ""
+"If the optional outlet point shapefile is used, only the outlet cells and "
+"the cells upslope (by the D8 flow model) of them are in the domain to be "
+"evaluated."
+msgstr "Als het optionele shapefile voor afvoerpunten wordt gebruikt, worden alleen de cellen voor afvoer en de hoger gelegen cellen (volgens het D8 stroommodel) die binnen het domein liggen geëvalueerd."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:43
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:49
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``D8 raster stroomrichting`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:46
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr "Een raster van D8 stroomrichtingen die zijn gedefinieerd, voor elke cel, al de richting van die van één van zijn acht aangelegen of diagonale buren met de steilste neerwaartse helling. Dit raster kan worden verkregen als de uitvoer van het gereedschap **\"D8 Stroomrichtingen\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:56
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Afvoeren-shapefile`` [vector: punt]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:52
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:59
+msgid "Optional."
+msgstr "Optioneel."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:54
+msgid ""
+"A point shapefile defining the outlets of interest. If this input file is "
+"used, only the cells upslope of these outlet cells are considered to be "
+"within the domain being evaluated."
+msgstr "Een punt-shapefile dat de interessante afvoerpunten definieert. Als het bestand wordt gebruikt worden alleen de de hoger gelegen cellen van deze cellen voor afvoer in overweging genomen om binnen het te evalueren domein te liggen ."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:66
+msgid "``Mask Grid`` [raster]"
+msgstr "``Gemaskeerd grid`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:61
+msgid ""
+"A grid that is used to determine the domain do be analyzed. If the mask grid"
+" value >= mask threshold (see below), then the cell will be included in the "
+"domain. While this tool does not have an edge contamination flag, if edge "
+"contamination analysis is needed, then a mask grid from a function like "
+"**\"D8 Contributing Area\"** that does support edge contamination can be "
+"used to achieve the same result."
+msgstr "Een raster dat wordt gebruikt om het domein te bepalen dat moet worden geanalyseerd. Als de waarde voor het gemaskeerde raster >= drempelwaarde gemaskeerd (zie hieronder), dan zal de cel worden opgenomen in het domein. Omdat dit gereedschap geen vlag voor besmetting randen heeft, kan, als analyse van besmetting randen nodig is, een gemaskeerd raster van een functie als **\"D8 deelnemend gebied\"**, dat besmetting van randen wel ondersteunt, worden gebruikt om hetzelfde resultaat te behalen."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:72
+msgid "``Mask Threshold`` [number]"
+msgstr "``Drempelwaarde gemaskeerd`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:69
+msgid ""
+"This input parameter is used in the calculation mask grid value >= mask "
+"threshold to determine if the grid cell is in the domain to be analyzed."
+msgstr "Deze parameter voor de invoer wordt gebruikt in de berekening waarde gemaskeerd raster >= drempelwaarde gemaskeerd om te bepalen of de cel van het raster in het te analyseren domein ligt."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:72
+msgid "Default: *100*"
+msgstr "Standaard: *100*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:75
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:80
+msgid "``Longest Upslope Length Grid`` [raster]"
+msgstr "``Langste opwaarts lengte raster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:78
+msgid ""
+"A grid that gives the length of the longest upslope D8 flow path terminating"
+" at each grid cell. Lengths are measured between cell centers taking into "
+"account cell size and whether the direction is adjacent or diagonal."
+msgstr "Een raster dat de lengte van het langste opwaartse D8 stroompad, dat eindigt in elke cel van het raster, geeft. Lengtes worden gemeten tussen centra van cellen, waarbij rekening wordt gehouden met de grootte van de cel en of de richting aanliggend of diagonaal is."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:85
+msgid "``Total Upslope Length Grid`` [raster]"
+msgstr "``Totale lengte opwaarts raster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:83
+msgid ""
+"The total upslope path length is the length of the entire D8 flow grid "
+"network upslope of each grid cell. Lengths are measured between cell centers"
+" taking into account cell size and whether the direction is adjacent or "
+"diagonal."
+msgstr "De totale lengte van het opwaartse pad is de lengte van het gehele D8 stroom rasternetwerk opwaarts van elke cel in het raster. Lengtes worden gemeten tussen centra van cellen, waarbij rekening wordt gehouden met de grootte van de cel en of de richting aanliggend of diagonaal is."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:96
+msgid "``Strahler Network Order Grid`` [raster]"
+msgstr "``Volgorde volgens Strahler netwerkraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:88
+msgid ""
+"A grid giving the Strahler order number for each cell. A network of flow "
+"paths is defined by the D8 Flow Direction grid. Source flow paths have a "
+"Strahler order number of one. When two flow paths of different order join "
+"the order of the downstream flow path is the order of the highest incoming "
+"flow path. When two flow paths of equal order join the downstream flow path "
+"order is increased by 1. When more than two flow paths join the downstream "
+"flow path order is calculated as the maximum of the highest incoming flow "
+"path order or the second highest incoming flow path order + 1. This "
+"generalizes the common definition to cases where more than two flow paths "
+"join at a point."
+msgstr "Een raster dat de volgorde volgens Strahler voor elke cel geeft. Een netwerk van stroompaden wordt gedefinieerd door het raster D8 stroomrichting. Bron-stroompaden hebben het nummer één in de volgorde volgens Strahler. Wanneer twee stroompaden van een verschillende orde samenkomen wordt de orde van het neerwaartse stroompad de orde van het hoogste inkomende stroompad. Wanneer twee stroompaden van gelijke orde samenkomen wordt het neerwaartse stroompad verhoogd met 1. Wanneer meer dan twee stroompaden samenkomen wordt het neerwaartse stroompad berekent als het maximum van de orde van het hoogste inkomende stroompad of de orde van het op één na hoogste inkomende stroompad + 1. Dit generaliseert de algemene definitie voor gevallen waarin meer dan twee stroompaden samenkomen op één punt."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:99
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/gridnetwork.rst:106
+msgid "See also"
+msgstr "Zie ook"

@@ -1,0 +1,102 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-18 12:39+0000\n"
+"Last-Translator: MarieAude <marie-aude.aeby@camptocamp.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:6
+msgid "Vector calculator"
+msgstr "Calculatrice Vecteur"
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:9
+msgid ""
+"In this lesson we will see how to add new attributes to a vector layer based"
+" on a mathematical expression, using the vector calculator"
+msgstr "Dans cette leçon, nous verrons comment ajouter des nouveaux attributs à une couche vectorielle en se basant sur une expression mathématique, en utilisant la calculatrice vecteur."
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:11
+msgid ""
+"We already know how to use the raster calculator to create new raster layers"
+" usig mathematical expressions. A similar algorithm is available for vector "
+"layer, and generates a new layer with the same attributes of the input "
+"layer, plus an additional on with the result of the expression entered. The "
+"algorithm is called *Field calculator* and has the following parameters "
+"dialog."
+msgstr "Nous savons déjà comme utiliser la calculatrice raster pour créer de nouvelles couches raster en utilisant des expressions mathématiques. Un algorithme semblable est disponible pour la couche vectorielle, et génère une nouvelle couche avec les mêmes attributs que la couche d'entrée, plus un attribut supplémentaire avec le résultat de l'expression entrée. L'algorithme est appelé *Calculatrice de champ* et possède la boîte de dialogue des paramètres suivante."
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:15
+msgid "In newer versions of Processing the interface has changed considerably"
+msgstr "Dans les versions plus récentes de Traitement, l'interface a considérablement changé"
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:17
+msgid "Here are a couple of examples of using that algorithm."
+msgstr "Voici quelques exemples d'utilisation de cet algorithme."
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:19
+msgid ""
+"First, let's calculate the population density of white people in each "
+"polygon, which represents a census. We have two fields in the attributes "
+"table that we can use for that, namely ``WHITE`` and ``SHAPE_AREA``. We just"
+" have to divide them and multiply by one million (to have density per square"
+" km), so we can use the following formula in the corresponding field"
+msgstr "Tout d'abord, calculons la densité de population des personnes blanches dans chaque polygone, qui représente un recensement. Nous avons deux champs dans la table attributaire que nous pouvons utiliser pour cela, à savoir ``WHITE`` et ``SHAPE_AREA``. Nous avons juste à les diviser et les multiplier par un million (pour avoir la densité par km carré), nous pouvons donc utiliser la formulaire suivante dans le champ correspondant :"
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:25
+msgid "The parameters dialog should be filled as shown below."
+msgstr "La boîte de dialogue des paramètres devrait être remplie comme montré ci-dessous :"
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:29
+msgid "This will generate a new field named ``WHITE_DENS``"
+msgstr "Cela va générer un nouveau champ appelé ``WHITE_DENS``"
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:31
+msgid ""
+"Now let's calculate the ratio between the ``MALES`` and ``FEMALES`` fields "
+"to create a new one that indicates if male population is predominant over "
+"female population."
+msgstr "Calculons maintenant le ratio entre les champs `MALES`` et ``FEMALES`` pour en créer un nouveau qui indique si la population masculine est prédominante sur la population féminine."
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:33
+msgid "Enter the following formula"
+msgstr "Entrez la formule suivante"
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:39
+msgid ""
+"This time the parameters window should look like this before pressing the "
+"*OK* button."
+msgstr "Cette fois, la fenêtre des paramètres devrait ressembler à cela avant de cliquer sur le bouton *OK*."
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:44
+msgid ""
+"Both fields are of type integer, and the result would be truncate to an "
+"integer. That's why we have multiplied by 1.0, to indicate that we want "
+"floating point number a result."
+msgstr "Les deux champs sont de type entier, et le résultat sera tronqué en un entier. C'est pourquoi nous avons multiplié par 1.0, pour indiquer que nous voulons un nombre à virgule flottante comme résultat."
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:46
+msgid ""
+"We can use conditional functions to have a new field with ``male`` or "
+"``female`` text strings instead of those ratio value, using the following "
+"formula::"
+msgstr "Nous pouvons utiliser des fonctions conditionnelles pour avoir un nouveau champ avec comme chaîne de caractères ``mâle`` ou ``femelle`` à la place de ces valeurs de rapport, en utilisant la formule suivante::"
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:50
+msgid "The parameters windows should look like this."
+msgstr "Les fenêtres de paramètres devraient ressembler à cela."
+
+#: ../../source/docs/training_manual/processing/vector_calculator.rst:54
+msgid ""
+"A python field calculator is available in the \"Advanced Python field "
+"calculator\", which will not be detailed here"
+msgstr "Une calculatrice de champ python est disponible dans la \"Calculatrice de champ avancée Python\", qui ne sera pas détaillée ici."

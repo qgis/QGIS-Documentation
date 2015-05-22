@@ -1,0 +1,129 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-11 05:47+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/log.rst:6
+msgid "The processing log"
+msgstr "처리 과정 로그"
+
+#: ../../source/docs/training_manual/processing/log.rst:8
+msgid "This lesson describes the processing log"
+msgstr "이 강의에서 처리 과정 로그에 대해 설명합니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:10
+msgid ""
+"All the analysis performed with the processing framework is logged in its "
+"own logging system. This allows you to know more about what has been done "
+"with the processing tools, to solve problems when they happen, and also to "
+"re--run previous operations, since the logging system also implements some "
+"interactivity."
+msgstr "처리 과정 프레임워크가 수행하는 모든 분석을 자체 로그 시스템이 기록하고 있습니다. 이를 통해 문제 발생 시 해결하기 위해 처리 과정 도구가 어떤 작업을 했는지 더 자세히 알 수 있습니다. 또 로그 시스템이 일종의 쌍방향성을 지원하기 때문에 이전 작업을 재실행할 수도 있습니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:13
+msgid ""
+"To open the log, select the corresponding entry in the processing menu. You "
+"will see the following dialog."
+msgstr "로그를 열어보려면 처리 과정 메뉴에 있는 해당 항목을 선택하십시오. 다음 대화 창이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:17
+msgid ""
+"It contains four blocks of information: *Info*, *Error*, *Warnings* and "
+"*Algorithms*. Here is a description of all of them."
+msgstr "*Info*, *Error*, *Warnings* 그리고 *Algorithms* 라는 네 개의 정보 항목을 담고 있습니다. 다음은 그 각각에 대한 설명입니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:19
+msgid ""
+"*Info*. Some algorithms might leave here information about their execution. "
+"For instance, those algorithms that call an external application usually log"
+" the console output of that application to this entry. If you have a look at"
+" it, you will see that the output of the SAGA algorithm that we just run "
+"(and that fail to execute because input data was not correct) is stored "
+"here."
+msgstr "*Info* : 몇몇 알고리듬은 여기에 자신의 실행에 대한 정보를 남길 수도 있습니다. 예를 들면, 외부 응용 프로그램을 호출하는 알고리듬은 일반적으로 해당 응용 프로그램의 콘솔 산출물을 이 항목에 기록합니다. 여기를 살펴보면, 이전 강의에서 실행했던 (그리고 입력 데이터가 정확하지 않아 실행에 실패했던) SAGA 알고리듬의 산출물이 여기에 저장되어 있는 것을 알 수 있을 겁니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:23
+msgid ""
+"This is helpful to understand what is going on. Advanced users will be able "
+"to analyze that output to find out why the algorithm failed. If you are not "
+"an advanced user, this will be useful for others to help you diagnose the "
+"problem you are having, which might be a problem in the installation of the "
+"external software or an issue with the data you provided."
+msgstr "작업이 어떻게 진행되고 있는지 이해하는 데 큰 도움이 됩니다. 고급 사용자는 이 산출물을 분석해서 어째서 알고리듬이 실패했는지 알아낼 수 있을 것입니다. 고급 사용자가 아닐 경우, 다른 이들이 이 산출물을 가지고 어떤 문제인지, 외부 응용 프로그램의 설치에 문제가 있는지 또는 사용자가 제공한 데이터에 문제가 있는지 진단해줄 수 있을 것입니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:25
+msgid ""
+"*Warnings*. Even if the algorithm could be executed, some algorithms might "
+"leave warnings in case the result might not be right. For instance, when "
+"executing an interpolation algorithm with a very small amount of points. The"
+" algorithm can run and will produce a result, but it is likely that it will "
+"not be correct, since more points should be used. It's a good idea to "
+"regularly check for this type of warnings if you are not sure about some "
+"aspect of a given algorithm."
+msgstr "*Warnings* : 알고리듬을 실행할 수 있다 하더라도, 결과물이 정확하지 않을 경우 몇몇 알고리듬은 경고 메시지를 띄울 수도 있습니다. 예를 들면 아주 적은 개수의 포인트를 가지고 보간법 알고리듬을 실행했을 경우입니다. 알고리듬을 실행하고 결과를 생산할 수도 있지만, 좀 더 많은 포인트를 사용해야 하기 때문에, 결과물이 정확하지 않을 가능성이 높습니다. 사용자가 주어진 알고리듬의 어떤 면에 대해 잘 모를 경우, 이런 경고 유형을 주기적으로 확인하는 편이 좋습니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:27
+msgid ""
+"*Error*. Errors that appear and are not directly related to external "
+"applications are logged in this section."
+msgstr "*Error* : 외부 응용 프로그램과 직접 연관되지 않은 오류가 발생하면 이 항목에 기록됩니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:29
+msgid ""
+"*Algorithms*. All algorithms that are executed, even if they are executed "
+"from the GUI and not from the console (which will be explained later in this"
+" manual) are stored in this part of the log as a console call. That means "
+"that everytime you run an algorithm, a console command is added to the log, "
+"and you have the full history of your working session. Here is how that "
+"history looks like"
+msgstr "*Algorithms* : 콘솔이 아니라 (이 지침서의 이후에서 설명할) GUI에서 실행되었더라도, 이 로그 항목에 실행된 모든 알고리듬을 콘솔 호출로 저장합니다. 즉 사용자가 알고리듬을 실행할 때마다 로그에 콘솔 명령어를 추가하므로, 사용자의 작업 이력이 전부 기록됩니다. 다음은 그 이력의 예입니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:33
+msgid ""
+"This can be very useful when starting working with the console, to learn "
+"about the syntax of algorithms. We will use it when we discuss how to run "
+"analysis commands from the console."
+msgstr "이 로그는 콘솔 작업을 시작할 때, 알고리듬의 문법을 배우는 데 굉장히 유용합니다. 콘솔에서 어떻게 분석 명령어를 실행하는지 설명할 때 이 로그를 이용할 것입니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:35
+msgid ""
+"The history is also interactive, and you can re--run any previous algorithm "
+"just by double--clicking on its entry. This is an easy way of replicating "
+"the work we already did before."
+msgstr "이 이력은 쌍방향성도 가지고 있기 때문에, 이전에 실행했던 알고리듬이라면 어떤 것이든 더블클릭해서 재실행할 수 있습니다. 이를 통해 이전에 이미 했던 작업을 손쉽게 복제할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:37
+msgid ""
+"For instance, try the following. Open the data corresponding to the first "
+"chapter of this manual and run the algorithm explained there. Now go to the "
+"log dialog and locate the last algorithm in the list, which corresponds to "
+"the algorithm you have just run. Double--click on it an a new result should "
+"be produced, just like when you run it using the normal dialog and calling "
+"it from the toolbox."
+msgstr "예를 들면 다음을 실행해보십시오. 이 지침서의 첫 번째 강의에 해당하는 데이터를 열어 그 강의에서 설명하는 알고리듬을 실행하십시오. 이제 로그 대화 창을 열고 목록에서 여러분이 방금 실행했던 알고리듬에 해당하는 마지막 알고리듬을 찾아보십시오. 그 알고리듬을 더블클릭하면, 일반적인 경우의 대화 창을 이용해 툴박스에서 호출해서 실행했을 때와 동일한 새로운 결과물을 생산할 것입니다."
+
+#: ../../source/docs/training_manual/processing/log.rst:41
+msgid "|hard| Advanced"
+msgstr "|hard| 고급"
+
+#: ../../source/docs/training_manual/processing/log.rst:43
+msgid ""
+"You can also modify the algorithm. Just copy it, open the "
+":menuselection:`Plugins --> Python console`, click on :menuselection:`Import"
+" class --> Import Processing class`, then paste it to re-run the analysis; "
+"change the text at will. To display the resulting file, type "
+":kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', "
+"'ogr')`."
+msgstr "사용자가 알고리듬을 수정할 수도 있습니다. 로그에서 복사한 다음, 메뉴에서 :menuselection:`Plugins --> Python console` 을 열고 :menuselection:`Import class --> Import Processing class` 항목을 클릭한 후, 붙여넣고 마음대로 텍스트를 변경해서 분석을 재실행하십시오. 결과물 파일을 맵에 표출하려면 :kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', 'ogr')` 이라고 입력하십시오."

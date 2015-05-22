@@ -1,0 +1,273 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-07-19 22:05+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:6
+msgid "|LS| Working with Vector Data"
+msgstr "|LS| 벡터 데이터 작업"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:8
+msgid ""
+"Vector data is arguably the most common kind of data you will find in the "
+"daily use of GIS. It describes geographic data in terms of points, that may "
+"be connected into lines and polygons. Every object in a vector dataset is "
+"called a **feature**, and is associated with data that describes that "
+"feature."
+msgstr "이견이 있을 수도 있지만 보통 GIS를 사용할 때 가장 흔히 볼 수 있는 데이터가 벡터 데이터입니다. 벡터 데이터는 포인트로 지리 데이터를 묘사하며, 이러한 포인트는 연결되어 라인이나 폴리곤이 될 수 있습니다. 벡터 데이터셋에 포함된 모든 오브젝트를 **피처** 라고 하며, 이 피처를 묘사하는 데이터와 연결되어 있습니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:13
+msgid ""
+"**The goal for this lesson:** To learn about the structure of vector data, "
+"and how to load vector datasets into a map."
+msgstr "**이 강의의 목표:** 벡터 데이터의 구조와 맵에 벡터 데이터셋을 로드하는 방법을 배우기."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:17
+msgid "|basic| |FA| Viewing Layer Attributes"
+msgstr "|basic| |FA| 레이어 속성 뷰"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:19
+msgid ""
+"It's important to know that the data you will be working with does not only "
+"represent **where** objects are in space, but also tells you **what** those "
+"objects are."
+msgstr "여러분이 작업할 데이터가 오브젝트가 **어디에** 위치하는지 나타낼 뿐만 아니라 **어떤** 오브젝트인지도 나타낸다는 사실을 알아야 합니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:23
+msgid ""
+"From the previous exercise, you should have the :guilabel:`roads` layer "
+"loaded in your map. What you can see right now is merely the position of the"
+" roads."
+msgstr "이전 예제를 실행했다면 사용자 맵에 :guilabel:`roads` 레이어가 로드돼 있을 것입니다. 현재 사용자는 단순히 도로의 위치밖에 알 수 없습니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:27
+msgid ""
+"To see all the data available to you, with the :guilabel:`roads` layer "
+"selected in the Layers panel:"
+msgstr "사용할 수 있는 모든 데이터를 보려면 레이어 목록에서 :guilabel:`roads` 레이어를 선택한 다음,"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:30
+msgid "Click on this button: |attributes|"
+msgstr "이 |attributes| 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:32
+msgid ""
+"It will show you a table with more data about the :guilabel:`roads` layer. "
+"This extra data is called *attribute data*. The lines that you can see on "
+"your map represent where the roads go; this is the *spatial data*."
+msgstr ":guilabel:`roads` 레이어에 대한 더 많은 데이터가 담긴 테이블이 나타납니다. 이 추가 데이터를 *속성 데이터(attribute data)* 라고 합니다. 사용자 맵에 보이는 라인은 도로가 어디로 뻗어 있는지 나타냅니다. 이것을 *공간 데이터(spatial data)* 라고 합니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:36
+msgid ""
+"These definitions are commonly used in GIS, so it's essential to remember "
+"them!"
+msgstr "GIS에서 이 정의는 흔히 사용되므로, 잘 기억해두는 편이 좋습니다!"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:38
+msgid "You may now close the attribute table."
+msgstr "이제 속성 테이블을 닫으십시오."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:40
+msgid ""
+"Vector data represents features in terms of points, lines and polygons on a "
+"coordinate plane. It is usually used to store discrete features, like roads "
+"and city blocks."
+msgstr "벡터 데이터는 좌표 평면 상에서 포인트, 라인, 폴리곤으로 피처를 나타냅니다. 보통 도로나 도시 블럭 같은 개별 피처를 저장하는 데 쓰입니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:48
+msgid "|basic| |FA| Loading Vector Data From Shapefiles"
+msgstr "|basic| |FA| Shapefile에서 벡터 데이터 로드"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:50
+msgid ""
+"The Shapefile is a specific file format that allows you to store GIS data in"
+" an associated group of files. Each layer consists of several files with the"
+" same name, but different file types. Shapefiles are easy to send back and "
+"forth, and most GIS software can read them."
+msgstr "Shapefile은 GIS 데이터를 관련 파일 그룹으로 저장할 수 있는 특정한 파일 형식입니다. 각 레이어는 확장자는 다르지만 파일명이 동일한 몇 개 파일들로 이루어집니다. 손쉽게 shapefile을 주고받을 수 있어 대부분의 GIS 소프트웨어가 지원합니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:55
+msgid ""
+"Refer back to the introductory exercise in the previous section for "
+"instructions on how to add vector layers."
+msgstr "이전 강의에서 기초 예제로 설명했던 벡터 레이어를 추가하는 방법을 떠올려 보십시오."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:58
+msgid "Load the data sets into your map following the same method:"
+msgstr "동일한 방법으로 사용자 맵에 데이터셋을 로드합니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:60
+msgid "\"places\""
+msgstr "\"places\""
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:61
+msgid "\"water\""
+msgstr "\"water\""
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:62
+msgid "\"rivers\""
+msgstr "\"rivers\""
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:63
+msgid "\"buildings\""
+msgstr "\"buildings\""
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:65
+msgid ":ref:`Check your results <vector-load-shapefiles-1>`"
+msgstr ":ref:`결과 확인 <vector-load-shapefiles-1>`"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:71
+msgid "|basic| |FA| Loading Vector Data From a Database"
+msgstr "|basic| |FA| 데이터베이스에서 벡터 데이터 로드"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:73
+msgid ""
+"Databases allow you to store a large volume of associated data in one file. "
+"You may already be familiar with a database management system (DBMS) such as"
+" Microsoft Access. GIS applications can also make use of databases. GIS-"
+"specific DBMSes (such as PostGIS) have extra functions, because they need to"
+" handle spatial data."
+msgstr "데이터베이스는 대용량의 관련 데이터를 하나의 파일로 저장할 수 있습니다. 여러분은 벌써 Microsoft Access 같은 DBMS(database management system)를 잘 알고 있을지도 모르겠군요. GIS 응용 프로그램도 데이터베이스를 활용할 수 있습니다. 공간 데이터를 다뤄야 하기 때문에 GIS에 특화된 (PostGIS 같은) DBMS들은 추가 기능들을 갖추고 있습니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:79
+msgid "Click on this icon: |mActionAddSpatiaLiteLayer|"
+msgstr "이 |mActionAddSpatiaLiteLayer| 아이콘을 클릭하십시오."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:81
+msgid ""
+"(If you're sure you can't see it at all, check that the :guilabel:`Manage "
+"Layers` toolbar is enabled.)"
+msgstr "(이 아이콘이 보이지 않는다면, :guilabel:`Manage Layers` 툴바가 활성화돼 있는지 확인하십시오.)"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:84
+msgid "It will give you a new dialog. In this dialog:"
+msgstr "새 대화 창이 나타날 것입니다. 이 대화 창에서,"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:86
+msgid "Click the :guilabel:`New` button."
+msgstr ":guilabel:`New` 버튼을 클릭합니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:87
+msgid ""
+"In the same folder as the other data, you should find the file "
+":guilabel:`landuse.sqlite`. Select it and click :guilabel:`Open`."
+msgstr "다른 데이터가 담긴 동일 폴더에서 :guilabel:`landuse.sqlite` 파일을 찾을 수 있을 것입니다. 해당 파일을 선택한 다음 :guilabel:`Open` 을 클릭합니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:90
+msgid ""
+"You will now see the first dialog again. Notice that the dropdown select "
+"above the three buttons now reads \"land_use.db@...\", followed by the path "
+"of the database file on your computer."
+msgstr "이제 처음 대화 창이 다시 보일 것입니다. 세 버튼 위에 있는 드롭다운 선택 메뉴가 사용자 컴퓨터에 있는 데이터베이스 파일의 경로 \"land_use.db@...\"으로 변한 것이 보이십니까?"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:94
+msgid ""
+"Click the :guilabel:`Connect` button. You should see this in the previously "
+"empty box:"
+msgstr ":guilabel:`Connect` 버튼을 클릭합니다. 이전까지 비어 있단 창에 다음과 같은 내용이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:100
+msgid ""
+"Click on the :kbd:`landuse` layer to select it, then click "
+":menuselection:`Add`"
+msgstr ":kbd:`landuse` 레이어를 클릭해서 선택한 다음, :menuselection:`Add` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:103
+msgid ""
+"Remember to save the map often! The map file doesn't contain any of the data"
+" directly, but it remembers which layers you loaded into your map."
+msgstr "맵을 자주 저장해야 합니다! 맵 파일은 어떤 데이터도 직접 담고 있지 않지만, 어떤 레이어를 로드했는지 저장합니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:106
+msgid ":ref:`Check your results <vector-load-from-database-1>`"
+msgstr ":ref:`결과 확인 <vector-load-from-database-1>`"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:110
+msgid "|FA| Reordering the Layers"
+msgstr "|FA| 레이어 재배열"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:112
+msgid ""
+"The layers in your Layers list are drawn on the map in a certain order. The "
+"layer at the bottom of the list is drawn first, and the layer at the top is "
+"drawn last. By changing the order that they are shown on the list, you can "
+"change the order they are drawn in."
+msgstr "사용자 레이어 목록에 있는 레이어들은 맵 상에 특정 순서대로 그려집니다. 목록 맨 아래에 있는 레이어를 첫 번째로 그리고, 맨 위에 있는 레이어를 마지막에 그립니다. 목록에서 레이어 순서를 바꾸면 맵 상에 그려지는 순서도 바꿀 수 있습니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:117
+msgid ""
+"Depending on the version of QGIS that you are using, you may have a checkbox"
+" beneath your Layers list reading :guilabel:`Control rendering order`. This "
+"must be checked (switched on) so that moving the layers up and down in the "
+"Layers list will bring them to the front or send them to the back in the "
+"map. If your version of QGIS doesn't have this option, then it is switched "
+"on by default and you don't need to worry about it."
+msgstr "사용자의 QGIS 버전에 따라 레이어 목록 아래쪽에 :guilabel:`Control rendering order` 라는 체크박스가 있을 수도 있습니다. 이것을 체크(활성화)해야만 레이어 목록에서 레이어를 위아래로 이동할 때 맵 상에서도 앞뒤로 움직입니다. 사용자의 QGIS 버전에 이 옵션이 없을 경우, 기본적으로 활성화된 상태이므로 걱정할 필요는 없습니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:124
+msgid ""
+"The order in which the layers have been loaded into the map is probably not "
+"logical at this stage. It's possible that the road layer is completely "
+"hidden because other layers are on top of it."
+msgstr "현재 맵 상에 레이어가 로드되는 순서가 전혀 논리적이지 않을 수도 있습니다. 다른 레이어들이 road 레이어를 덮어 완전히 가려져 있을 수도 있습니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:128
+msgid "For example, this layer order..."
+msgstr "예를 들어 레이어 순서를 이렇게 하면..."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:133
+msgid ""
+"... would result in roads and places being hidden as they run *underneath* "
+"urban areas."
+msgstr "... \"roads\" 및 \"places\" 레이어가 \"urban areas\" 레이어 *아래로* 가기 때문에 보이지 않게 됩니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:136
+msgid "To resolve this problem:"
+msgstr "이 문제를 해결하려면,"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:138
+msgid "Click and drag on a layer in the Layers list."
+msgstr "레이어 목록에서 레이어를 클릭 & 드래그하십시오."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:139
+msgid "Reorder them to look like this:"
+msgstr "다음처럼 순서를 재배열하십시오."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:144
+msgid ""
+"You'll see that the map now makes more sense visually, with roads and "
+"buildings appearing above the land use regions."
+msgstr "이제 도로와 건물이 토지이용구역 위에 나타나는, 시각적으로 더 논리적인 맵을 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:148
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:150
+msgid ""
+"Now you've added all the layers you need from several different sources."
+msgstr "이제 몇 가지 다른 소스들로부터 필요한 모든 레이어를 추가했습니다."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:153
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:155
+msgid ""
+"Using the random palette automatically assigned when loading the layers, "
+"your current map is probably not easy to read. It would be preferable to "
+"assign your own choice of colors and symbols. This is what you'll learn to "
+"do in the next lesson."
+msgstr "레이어를 로드할 때 랜덤한 색상이 자동적으로 적용되므로, 현재 사용자 맵을 읽기 힘들 수도 있습니다. 사용자가 직접 색상 및 심볼을 적용하는 편이 좋습니다. 다음 강의에서 그 방법을 배울 것입니다."

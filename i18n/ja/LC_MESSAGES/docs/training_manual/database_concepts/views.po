@@ -1,0 +1,101 @@
+# 
+# Translators:
+# Minoru Akagi <akaginch@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-10-30 08:18+0000\n"
+"Last-Translator: Minoru Akagi <akaginch@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:6
+msgid "|LS| Views"
+msgstr "|LS| ビュー"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:8
+msgid ""
+"When you write a query, you need to spend a lot of time and effort "
+"formulating it. With views, you can save the definition of an SQL query in a"
+" reusable 'virtual table'."
+msgstr "クエリを記述するときはそれを考案するのに多くの時間と労力が必要です。ビューを使えばSQLクエリの定義を再利用可能な'仮想テーブル'に保存できます。"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:12
+msgid "**The goal for this lesson:** To save a query as a view."
+msgstr "**このレッスンの目標:** クエリをビューとして保存します。"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:15
+msgid "Creating a View"
+msgstr "ビューの作成"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:17
+msgid ""
+"You can treat a view just like a table, but its data is sourced from a "
+"query. Let's make a simple view based on the above::"
+msgstr "ビューはテーブルのように扱うことができますが、そのデータはクエリから供給されます。上記に基いて単純なビューを作りましょう::"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:25
+msgid ""
+"As you can see the only change is the :kbd:`create view roads_count_v as` "
+"part at the beginning. We can now select data from that view::"
+msgstr "はじめの :kbd:`create view roads_count_v as` の部分だけが異なります。そのビューからデータを選択することができます::"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:30
+msgid "Result::"
+msgstr "結果::"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:40
+msgid "Modifying a View"
+msgstr "ビューの変更"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:42
+msgid ""
+"A view is not fixed, and it contains no 'real data'. This means you can "
+"easily change it without impacting on any data in your database::"
+msgstr "ビューは固定されておらず、'実データ'を持ちません。つまりデータベースの中のデータに影響を与えることなく簡単に変更することができます::"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:51
+msgid ""
+"(This example also shows the best practice convention of using UPPER CASE "
+"for all SQL keywords.)"
+msgstr "(また、この例はすべてのSQLキーワードには大文字を使用する最良慣行を示しています。)"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:54
+msgid ""
+"You will see that we have added an :kbd:`ORDER BY` clause so that our view "
+"rows are nicely sorted::"
+msgstr ":kbd:`ORDER BY` 句を追加したのでビューの行はきれいに並べ替えられています::"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:67
+msgid "Dropping a View"
+msgstr "ビューの削除"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:69
+msgid "If you no longer need a view, you can delete it like this::"
+msgstr "不要になったビューはこのように削除できます::"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:74
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:76
+msgid ""
+"Using views, you can save a query and access its results as if it were a "
+"table."
+msgstr "ビューを用いてクエリを保存し、テーブルであるかのようにその結果へアクセスできます。"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:79
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/database_concepts/views.rst:81
+msgid ""
+"Sometimes, when changing data, you want your changes to have effects "
+"elsewhere in the database. The next lesson will show you how to do this."
+msgstr "データを変更する時に変更がデータベースの中の他の場所へ影響を及ぼすのが望ましい場合があります。次のレッスンではこの方法を紹介します。"

@@ -1,0 +1,457 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-10 15:06+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:6
+msgid "|LS| Using DB Manager to work with Spatial Databases in QGIS"
+msgstr "|LS| QGIS에서 DB 관리자를 통해 공간 데이터베이스 사용"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:8
+msgid ""
+"We have already seen how to perform many database operations with QGIS as "
+"well as with other tools, but now it's time to look at the DB Manager tool "
+"which provides much of this same functionality as well as more management "
+"oriented tools."
+msgstr "벌써 QGIS는 물론 다른 도구들을 통해 여러 가지 데이터베이스 작업을 수행하는 방법을 살펴보았습니다. 그러나 이제 그와 동일한 기능은 물론 관리 지향 도구들을 더 많이 제공하는 DB 관리자 도구에 대해 배워볼 때입니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:13
+msgid ""
+"**The goal for this lesson:** To learn how to interact with spatial "
+"databases using the QGIS DB Manager."
+msgstr "**이 강의의 목표:** QGIS DB 관리자를 이용해서 공간 데이터베이스와 상호 작용을 하는 방법을 배우기."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:17
+msgid "|basic| |FA| Managing PostGIS Databases with DB Manager"
+msgstr "|basic| |FA| DB 관리자를 통해 PostGIS 데이터베이스 관리"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:19
+msgid ""
+"You should first open the DB Manager interface by selecting "
+":guilabel:`Database --> DB Manager --> DB Manager` on the menu or by "
+"selecting the DB Manager icon on the toolbar."
+msgstr "먼저 메뉴에서 :menuselection:`Database --> DB Manager --> DB Manager` 항목을 선택하거나 툴바에서 다음 DB 관리자 아이콘을 클릭해서 DB 관리자 인터페이스를 실행해야 합니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:23
+msgid "|dbmanager|"
+msgstr "|dbmanager|"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:25
+msgid ""
+"You should already see the previous connections we have configured and be "
+"able to expand the :kbd:`myPG` section and its :kbd:`public` schema to see "
+"the tables we have worked with in previous sections."
+msgstr "이전에 설정한 연결에서 :kbd:`myPG` 부분의 :kbd:`public` 스키마를 확장하면 이전 강의에서 작업했던 테이블을 볼 수 있어야 합니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:29
+msgid ""
+"The first thing you may notice is that you can now see some metadata about "
+"the Schemas contained in your database."
+msgstr "사용자 데이터베이스가 담고 있는 스키마에 대한 몇몇 메타데이터를 볼 수 있다는 사실을 알 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:35
+msgid ""
+"Schemas are a way of grouping data tables and other objects in a PostgreSQL "
+"database and a container for permissions and other constraints. Managing "
+"PostgreSQL schemas is beyond the scope of this manual, but you can find more"
+" information about them in the `PostgreSQL documentation on Schemas "
+"<http://www.postgresql.org/docs/9.1/static/ddl-schemas.html>`_. You can use "
+"the DB Manager to create new Schemas, but will need to use a tool like "
+"pgAdmin III or the command line interface to manage them effectively."
+msgstr "스키마란 PostgreSQL 데이터베이스에 있는 테이블과 다른 오브젝트 및 해당 권한과 제약을 위한 컨테이너를 묶는 한 가지 방식입니다. PostgreSQL 스키마 관리는 이 교재의 범위를 벗어나지만, `PostgreSQL documentation  on Schemas <http://www.postgresql.org/docs/9.1/static/ddl-schemas.html>` 에서 스키마 관리에 대한 더 자세한 정보를 얻을 수 있습니다. DB 관리자를 사용해 새 스키마를 생성할 수 있지만, 스키마를 효율적으로 관리하려면 pgAdmin III 또는 커맨드라인 인터페이스와 같은 도구가 필요할 것입니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:43
+msgid ""
+"DB Manager can also be used to manage the tables within your database. We "
+"have already looked at various ways to create and manage tables on the "
+"command line, but now lets look at how to do this in DB Manager."
+msgstr "사용자 데이터베이스 내부의 테이블을 관리하는 데에도 DB 관리자를 사용할 수 있습니다. 벌써 커맨드라인에서 테이블을 생성하고 관리하는 다양한 방법을 배웠지만, 이제 DB 관리자에서 이런 작업을 하는 방법을 배워보겠습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:47
+msgid ""
+"First, its useful to just look at a table's metadata by clicking on its name"
+" in tree and looking in the :guilabel:`Info` tab."
+msgstr "먼저 트리에서 테이블명을 클릭한 다음, :guilabel:`Info` 탭에서 테이블의 메타데이터를 살펴보면 도움이 됩니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:53
+msgid ""
+"In this panel you can see the :guilabel:`General Info` about the table as "
+"well the information that the PostGIS extension maintains about the geometry"
+" and spatial reference system."
+msgstr "이 패널에서 테이블에 대한 :guilabel:`General Info` 는 물론 PostGIS 확장 프로그램이 도형 및 공간 참조 시스템에 대해 유지관리하고 있는 정보를 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:57
+msgid ""
+"If you scroll down in the :guilabel:`Info` tab, you can see more information"
+" about the :guilabel:`Fields`, :guilabel:`Constraints` and "
+":guilabel:`Indexes` for the table you are viewing."
+msgstr ":guilabel:`Info` 탭을 스크롤다운할 경우, 현재 보고 있는 테이블의 :guilabel:`Fields`, :guilabel:`Constraints`, :guilabel:`Indexes` 에 대한 자세한 정보를 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:64
+msgid ""
+"Its also very useful to use DB Manager to simply look at the records in the "
+"database in much the same way you might do this by viewing the attribute "
+"table of a layer in the Layer Tree. You can browse the data by selecting the"
+" :guilabel:`Table` tab."
+msgstr "DB 관리자를 사용하면 레이어 트리에 있는 레이어의 속성 테이블을 보는 것과 동일한 방식으로 간단히 데이터베이스 내부의 레코드를 볼 수 있다는 것도 도움이 됩니다. :guilabel:`Table` 탭을 선택하면 데이터를 둘러볼 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:72
+msgid ""
+"There is also a :guilabel:`Preview` tab which will show you the layer data "
+"in a map preview."
+msgstr "레이어의 데이터를 맵 프리뷰로 보여주는 :guilabel:`Preview` 탭도 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:75
+msgid ""
+"Right Clicking on a layer in the tree and clicking :guilabel:`Add to Canvas`"
+" will add this layer to your map."
+msgstr "트리에 있는 레이어를 오른쪽 클릭한 다음 :guilabel:`Add to Canvas` 를 선택하면 해당 레이어를 사용자 맵에 추가할 것입니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:78
+msgid ""
+"So far we have only been viewing the database its schemas and tables and "
+"their metadata, but what if we wanted to alter the table to add an "
+"additional column perhaps? DB Manager allows you to do this directly."
+msgstr "지금까지 데이터베이스의 스키마와 테이블의 메타데이터를 살펴보기만 했지만, 테이블을 수정하거나 새 열을 추가하려면 어떻게 해야 할까요? DB 관리자에서 직접 이런 작업을 할 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:82
+msgid "Select the table you want to edit in the tree"
+msgstr "트리에서 편집하고자 하는 테이블을 선택하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:83
+msgid ""
+"Select :guilabel:`Table --> Edit Table` from the menu to open the "
+":guilabel:`Table Properties` dialog."
+msgstr "메뉴에서 :menuselection:`Table --> Edit Table` 항목을 선택해서 :guilabel:`Table Properties` 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:89
+msgid ""
+"You can use this dialog to Add Columns, Add geometry columns, edit existing "
+"columns or to remove a column completely."
+msgstr "이 대화 창에서 열을 추가하고, 도형 열을 추가하고, 기존 열을 편집하거나 완전히 삭제할 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:92
+msgid ""
+"Using the :guilabel:`Constraints` tab, you can manage which fields are used "
+"as the primary key or to drop existing constraints."
+msgstr ":guilabel:`Constraints` 탭에서 어떤 필드를 기본 키로 사용할지 관리하거나 기존 제약을 드롭할 수도 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:98
+msgid ""
+"The :guilabel:`Indexes` tab can be used to add and delete both spatial and "
+"normal indexes."
+msgstr ":guilabel:`Indexes` 탭에서 공간 및 일반 인덱스 모두를 추가하거나 삭제할 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:105
+msgid "|basic| |FA| Creating a New Table"
+msgstr "|basic| |FA| 새 테이블 생성"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:107
+msgid ""
+"Now that we have gone through the process of working with existing tables in"
+" our database, let's use DB Manager to create a new table."
+msgstr "이제 데이터베이스에 있는 기존 테이블을 작업하는 과정을 배웠으니, DB 관리자를 이용해서 새 테이블을 생성해봅시다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:110
+msgid ""
+"If it is not already open, open the DB Manager window, and expand the tree "
+"until you see the list of tables already in your databse."
+msgstr "DB 관리자를 닫았을 경우 다시 DB 관리자 창을 열고, 사용자 데이터베이스에 이미 존재하는 테이블 목록이 보일 때까지 트리를 확장하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:112
+msgid ""
+"From the menu select :guilabel:`Table --> Create Table` to bring up the "
+"Create Table dialog."
+msgstr "메뉴의 :menuselection:`Table --> Create Table` 항목을 선택해서 :guilabel:`Create Table` 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:114
+msgid "Use the default :kbd:`Public` schema and name the table :kbd:`places`."
+msgstr "기본값인 :kbd:`Public` 스키마를 이용하고, 테이블명을 :kbd:`places` 라고 설정하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:115
+msgid ""
+"Add the :kbd:`id`, :kbd:`place_name`, and :kbd:`elevation` fields as shown "
+"below"
+msgstr ":kbd:`id`, :kbd:`place_name`, :kbd:`elevation` 필드를 다음과 같이 추가하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:117
+msgid "Make sure the :kbd:`id` field is set as the primary key."
+msgstr ":kbd:`id` 항목을 기본 키로 설정했는지 확인하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:118
+msgid ""
+"Click the checkbox to :guilabel:`Create geometry column` and make sure it is"
+" set to a :kbd:`POINT` type and leave it named :kbd:`geom` and specify "
+":kbd:`4326` as the :guilabel:`SRID`."
+msgstr ":guilabel:`Create geometry column` 항목의 체크박스를 체크한 다음 :kbd:`POINT` 유형으로, :guilabel:`Name` 을 :kbd:`geom` 으로, :guilabel:`SRID` 를 :kbd:`4326` 으로 설정하도록 하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:121
+msgid ""
+"Click the checkbox to :guilabel:`Create spatial index` and click "
+":guilabel:`Create` to create the table."
+msgstr ":guilabel:`Create spatial index` 항목의 체크박스를 체크한 다음, :guilabel:`Create` 를 클릭해서 테이블을 생성합니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:127
+msgid ""
+"Dismiss the dialog letting you know that the table was created and click "
+":guilabel:`Close` to close the Create Table Dialog."
+msgstr "테이블이 생성되었다고 알려주는 대화 창을 닫고, :guilabel:`Close` 를 클릭해서 :guilabel:`Create Table` 대화 창을 닫으십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:130
+msgid ""
+"You can now inspect your table in the DB Manager and you will of course find"
+" that there is no data in it. From here you can :guilabel:`Toggle Editing` "
+"on the layer menu and begin to add places to your table."
+msgstr "이제 DB 관리자에서 새 테이블을 검사해보면 물론 어떤 데이터도 없다는 사실을 알게 될 겁니다. 이때 레이어 메뉴의 :guilabel:`Toggle Editing` 을 통해 해당 테이블에 :guilabel:`places` 데이터를 추가할 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:135
+msgid "|basic| |FA| Basic Database Administration"
+msgstr "|basic| |FA| 기본적인 데이터베이스 관리"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:137
+msgid ""
+"The DB Manager will also let you do some basic Database Administration "
+"tasks. It is certainly not a substitute for a more complete Database "
+"Administration tool, but it does provide some functionality that you can use"
+" to maintain your database."
+msgstr "DB 관리자를 통해 몇몇 기본적인 데이터베이스 관리 작업을 할 수도 있습니다. 좀 더 완전한 데이터베이스 관리 도구의 대체제로 사용할 수는 분명 없지만, 사용자 데이터베이스를 유지관리하는 데 쓸 수 있는 몇 가지 기능들을 제공하고 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:142
+msgid ""
+"Database tables can often become quite large and tables which are being "
+"modified frequently can end up leaving around remnants of records that are "
+"no longer needed by PostgreSQL. The *VACUUM* command takes care of doing a "
+"kind of garbage collection to compact and optionall analyze your tables for "
+"better performance."
+msgstr "종종 데이터베이스 테이블이 아주 커질 수도 있고 자주 수정되는 테이블의 경우 PostgreSQL이 더 이상 필요로 하지 않는 레코드 찌꺼기가 남게 될 수도 있습니다. :kbd:`VACUUM` 명령어는 일종의 쓰레기 정리 작업을 수행하며, 또 좀 더 나은 퍼포먼스를 위해 사용자 테이블을 분석하는 옵션도 갖추고 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:148
+msgid ""
+"Lets take a look at how we can perform a *VACUUM ANALYZE* command from "
+"within DB Manager."
+msgstr "DB 관리자 내부에서 :kbd:`VACUUM ANALYZE` 명령어를 실행할 수 있는 방법을 알아보겠습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:151
+msgid "Select one of your tables in the DB Manager Tree."
+msgstr "DB 관리자의 트리에서 사용자 테이블 가운데 하나를 선택하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:152
+msgid "Select :guilabel:`Table --> Run Vacuum Analyze` from the menu."
+msgstr "메뉴에서 :menuselection:`Table --> Run Vacuum Analyze` 항목을 선택하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:154
+msgid ""
+"Thats it! PostgreSQL will perform the operation. Depending on how big your "
+"table is, this may take some time to complete."
+msgstr "끝입니다! PostgreSQL이 해당 작업을 수행할 것입니다. 사용자 테이블의 크기에 따라 완료하는 데 시간이 걸릴 수도 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:157
+msgid ""
+"You can find more information about the VACUUM ANALYZE process in the "
+"`PostgreSQL Documentation on VACUUM ANALYZE "
+"<http://www.postgresql.org/docs/9.1/static/sql-vacuum.html>`_"
+msgstr "`PostgreSQL Documentation on VACUUM ANALYZE <http://www.postgresql.org/docs/9.1/static/sql-vacuum.html>` 에서 :kbd:`VACUUM ANALYZE` 처리에 대한 더 자세한 정보를 얻을 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:162
+msgid "|basic| |FA| Executing SQL Queries with DB Manager"
+msgstr "|basic| |FA| DB 관리자에서 SQL 쿼리 실행"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:164
+msgid ""
+"DB Manager also provides a way for you to write queries against your "
+"database tables and to view the results. We have already seen this type of "
+"functionality in the :guilabel:`Browser` panel, but lets look at it again "
+"here with DB Manager."
+msgstr "DB 관리자는 사용자 데이터베이스에 대해 쿼리를 작성하고 그 결과를 살펴볼 수 있는 방법도 제공합니다. 이미 :guilabel:`Browser` 패널에서 이런 유형의 기능을 배웠지만, DB 관리자에서도 다시 살펴보도록 하겠습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:169
+msgid "Select the :kbd:`lines` table in the tree."
+msgstr "트리에서 :kbd:`lines` 테이블을 선택하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:170
+msgid "Select the :guilabel:`SQL window` button in the DB Manager toolbar."
+msgstr "DB 관리자 툴바에서 다음 :guilabel:`SQL window` 버튼을 선택하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:175
+msgid "Compose the following :guilabel:`SQL query` in the space provided::"
+msgstr "쿼리 작성 공간에 다음 :guilabel:`SQL query` 를 작성하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:179
+msgid "Click the :guilabel:`Execute (F5)` button to run the query."
+msgstr ":guilabel:`Execute (F5)` 버튼을 클릭해서 쿼리를 실행하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:180
+msgid ""
+"You should now see the records that match in the :guilabel:`Result` panel."
+msgstr "이제 :guilabel:`Result` 패널에서 쿼리와 일치하는 레코드를 볼 수 있을 겁니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:185
+msgid ""
+"Click the checkbox for :guilabel:`Load as new layer` to add the results to "
+"your map."
+msgstr "이 결과를 사용자 맵에 추가하려면 :guilabel:`Load as new layer` 항목의 체크박스를 체크하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:186
+msgid ""
+"Select the :kbd:`id` column as the :guilabel:`Column with unique integer "
+"values` and the :kbd:`geom` column as the :guilabel:`Geometry column`."
+msgstr ":guilabel:`Column with unique integer values` 에 :kbd:`id` 열을, :guilabel:`Geometry column` 에 :kbd:`geom` 열을 선택하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:188
+msgid "Enter :kbd:`roads_primary` as the :guilabel:`Layer name (prefix)`."
+msgstr ":guilabel:`Layer name (prefix)` 텍스트 란에 :kbd:`roads_primary` 라고 입력하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:189
+msgid ""
+"Click :guilabel:`Load now!` to load the results as a new layer into your "
+"map."
+msgstr ":guilabel:`Load now!` 를 클릭하십시오. 이 결과가 사용자 맵에 새 레이어로 뜰 것입니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:194
+msgid ""
+"The layers that matched your query are now displayed on your map. You can of"
+" course use this query tool to execute any arbitrary SQL command including "
+"many of the ones we looked at in previous modules and sections."
+msgstr "이제 사용자 쿼리와 일치하는 레이어가 사용자 맵에 나타났습니다. 물론 이 쿼리 도구를 사용해서 이전 강의들에서 살펴보았던 많은 명령어를 포함하는 어떤 임의의 SQL 명령어라도 실행할 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:199
+msgid "Importing Data into a Database with DB Manager"
+msgstr "데이터베이스에 DB 관리자를 통해 데이터 임포트"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:201
+msgid ""
+"We have already looked at how to import data into a spatial database using "
+"command line tools and also looked at how to use the SPIT plugin, so now "
+"lets learn how to use DB Manager to do imports."
+msgstr "커맨드라인을 이용해 공간 데이터베이스에 데이터를 임포트하는 방법을 벌써 배웠고 SPIT 플러그인 사용법도 배웠으므로, 이제 DB 관리자를 통해 임포트하는 방법을 배워보겠습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:205
+msgid ""
+"Click the :guilabel:`Import layer/file` button on the toolbar in the DB "
+"Manager dialog."
+msgstr "DB 관리자 툴바에서 다음 :guilabel:`Import layer/file` 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:211
+msgid ""
+"Select the :kbd:`urban_33S.shp` file from "
+":kbd:`exercise_data/projected_data` as the input dataset."
+msgstr ":kbd:`exercise_data/projected_data` 경로에 있는 :kbd:`urban_33S.shp` 파일을 입력 데이터셋으로 선택하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:213
+msgid ""
+"Click the :guilabel:`Update Options` button to pre-fill some of the form "
+"values."
+msgstr ":guilabel:`Update Options` 버튼을 클릭해서 일부 서식값을 미리 채우십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:215
+msgid "Make sure that the :guilabel:`Create new table` option is selected"
+msgstr ":guilabel:`Create new table` 옵션을 반드시 선택하도록 하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:216
+msgid ""
+"Specify the :guilabel:`Source SRID` as :kbd:`32722` and the "
+":guilabel:`Target SRID` as :kbd:`4326`."
+msgstr ":guilabel:`Source SRID` 를 :kbd:`32722` 로, :guilabel:`Target SRID` 를 :kbd:`4326` 으로 설정하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:218
+msgid "Enable the checkbox to :guilabel:`Create Spatial Index`"
+msgstr ":guilabel:`Create Spatial Index` 항목의 체크박스를 체크하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:219
+msgid "Click :guilabel:`OK` to perform the import."
+msgstr ":guilabel:`OK`를 클릭해서 임포트를 수행하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:224
+msgid "Dismiss the dialog letting you know that the import was successful"
+msgstr "임포트가 성공했다고 알려주는 대화 창을 닫으십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:225
+msgid "Click the :guilabel:`Refresh` button on the DB Manager Toolbar."
+msgstr "DB 관리자 툴바에서 :guilabel:`Refresh` 버튼을 선택하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:227
+msgid ""
+"You can now inspect the table in your database by clicking on it in the "
+"Tree. Verify that the data has been reprojected by checking that the "
+":guilabel:`Spatial ref:` is listed as :kbd:`WGS 84 (4326)`"
+msgstr "이제 트리에서 사용자 데이터베이스의 해당 테이블을 클릭해서 검사할 수 있습니다. :guilabel:`Spatial ref:` 항목의 값이 :kbd:`WGS 84 (4326)` 인지 확인해서 데이터가 재투영되었는지 확인하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:234
+msgid ""
+"Right clicking on the table in the Tree and a selecting :guilabel:`Add to "
+"Canvas` will add the table as a layer in your map."
+msgstr "트리에 있는 해당 테이블을 오른쪽 클릭한 다음 :guilabel:`Add to Canvas` 를 선택하면 해당 레이어를 사용자 맵에 추가할 것입니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:239
+msgid "Exporting Data from a Database with DB Manager"
+msgstr "데이터베이스에서 DB 관리자를 통해 데이터 익스포트"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:241
+msgid ""
+"Of course DB Manager can also be used to export data from your spatial "
+"databases, so lets take a look at how that is done."
+msgstr "DB 관리자는 물론 사용자의 공간 데이터베이스에서 데이터를 익스포트할 수도 있으므로, 그 방법을 배워보겠습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:244
+msgid ""
+"Select the :kbd:`lines` layer in the Tree and click the :guilabel:`Export to"
+" File` button on the toolbar to open the :guilabel:`Export to vector file` "
+"dialog."
+msgstr "트리에서 :kbd:`lines` 레이어를 선택한 다음 툴바에 있는 :guilabel:`Export to File` 버튼을 클릭해서 :guilabel:`Export to vector file` 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:247
+msgid ""
+"Click the :guilabel:`...` button to select the :guilabel:`Output file` and "
+"save the data to your :kbd:`exercise_data` directory as :kbd:`urban_4326`."
+msgstr ":guilabel:`Output file` 항목의 오른쪽에 있는 :guilabel:`...` 버튼을 클릭해서 해당 데이터를 :kbd:`exercise_data` 디렉터리에 :kbd:`urban_4326` 라는 파일명으로 저장하도록 설정합니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:249
+msgid "Set the :guilabel:`Target SRID` as :kbd:`4326`."
+msgstr ":guilabel:`Target SRID` 를 :kbd:`4326` 으로 설정하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:250
+msgid "Click :guilabel:`OK` to initialize the export."
+msgstr ":guilabel:`OK`를 클릭해서 익스포트를 시작하십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:255
+msgid ""
+"Dismiss the dialog letting you know the export was successful and close the "
+"DB Manager."
+msgstr "임포트가 성공했다고 알려주는 대화 창을 닫고, DB 관리자 창도 닫으십시오."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:258
+msgid "You can now inspect the shapefile you created with the Browser panel."
+msgstr "이제 브라우저 패널에서 방금 생성한 shapefile을 검사할 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:264
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:266
+msgid ""
+"You have now seen how to use the DB Manager interface in QGIS to Manage your"
+" spatial databases, to execute sql queries against your data and how to "
+"import and export data."
+msgstr "이제 QGIS에서 DB 관리자 인터페이스를 통해 사용자의 공간 데이터베이스를 관리하는 방법, 사용자 데이터에 대해 SQL 쿼리를 실행하는 방법, 그리고 데이터를 임포트하고 익스포트하는 방법을 배웠습니다."
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:271
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:273
+msgid ""
+"Next, we will look at how to use many of these same techniques with "
+"*spatialite* databases."
+msgstr "다음 강의에서 *spatialite* 데이터베이스에 대해 이런 동일한 기술들을 사용하는 방법을 살펴보겠습니다."

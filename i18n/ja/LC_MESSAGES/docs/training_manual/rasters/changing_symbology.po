@@ -1,0 +1,286 @@
+# 
+# Translators:
+# Choro <u.ko.kubot@gmail.com>, 2014
+# Minoru Akagi <akaginch@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-02 14:52+0000\n"
+"Last-Translator: Choro <u.ko.kubot@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:6
+msgid "|LS| Changing Raster Symbology"
+msgstr "|LS| ラスタシンボロジーの変更"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:8
+msgid ""
+"Not all raster data consists of aerial photographs. There are many other "
+"forms of raster data, and in many of those cases, it's essential to "
+"symbolize the data properly so that it becomes properly visible and useful."
+msgstr "ラスタデータは航空写真ばかりではありません。ラスタデータには他にも多くの形態があり、それらの多くの場合ではデータが適切に表示されて役立つように適切にシンボライズすることが不可欠です。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:12
+msgid ""
+"**The goal for this lesson:** To change the symbology for a raster layer."
+msgstr "**このレッスンの目標:** ラスタレイヤのシンボロジーを変更します。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:15
+msgid "|basic| |TY|"
+msgstr "|basic| |TY|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:17
+msgid ""
+"Start with the current map which you should have created during the previous"
+" exercise: :kbd:`analysis.qgs`."
+msgstr "前の実習で作成したカレントの地図 :kbd:`analysis.qgs` から始めます。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:19
+msgid ""
+"Use the :guilabel:`Add Raster Layer` button to load the new raster dataset."
+msgstr "新しいラスタデータセットをロードするには :guilabel:`Add Raster Layer` ボタンを使います。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:20
+msgid ""
+"Load the dataset |srtmFileName|, found under the directory "
+":kbd:`exercise_data/raster/SRTM/`."
+msgstr "データセット |srtmFileName| を読み込みます。 :kbd:`exercise_data/raster/SRTM/` ディレクトリにあります。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:22
+msgid ""
+"Once it appears in the :guilabel:`Layers list`, rename it to :kbd:`DEM`."
+msgstr ":guilabel:`Layers list` に表示されたらその名前を :kbd:`DEM` に変更します。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:23
+msgid ""
+"Zoom to the extent of this layer by right-clicking on it in the Layer List "
+"and selecting :guilabel:`Zoom to Layer Extent`."
+msgstr "このレイヤの領域にズームします。レイヤリストを右クリックして :guilabel:`レイヤの領域にズーム` を選択します。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:26
+msgid ""
+"This dataset is a *Digital Elevation Model (DEM)*. It's a map of the "
+"elevation (altitude) of the terrain, allowing us to see where the mountains "
+"and valleys are, for example."
+msgstr "このデータセットは *数値標高モデル (DEM)* です。それは地形の標高を表す地図で、例えば山や谷はどこにあるか知ることができます。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:30
+msgid ""
+"Once it's loaded, you'll notice that it's a basic stretched grayscale "
+"representation of the DEM. It's seen here with the vector layers on top:"
+msgstr "それがロードされると、DEMの基本的な引き伸ばされたグレースケール表現が表示されます。上にベクトルレイヤを重ねるとこのように表示されます:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:36
+msgid ""
+"QGIS has automatically applied a stretch to the image for visualization "
+"purposes, and we will learn more about how this works as we continue."
+msgstr "QGISは可視化のためにイメージに引きのばしを自動的に適用しました。引き続いて私たちはこれがどのように機能するかについて詳しく学びます。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:40
+msgid "|basic| |FA| Changing Raster Layer Symbology"
+msgstr "|basic| |FA| ラスタレイヤのシンボロジーの変更"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:42
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog for the :guilabel:`SRTM` layer "
+"by right-clicking on the layer in the Layer tree and selecting "
+":guilabel:`Properties` option."
+msgstr ":guilabel:`SRTM` レイヤの :guilabel:`レイヤプロパティ` ダイアログを開きます。レイヤツリーのレイヤを右クリックして :guilabel:`プロパティ` を選択します。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:45
+msgid "Switch to the :guilabel:`Style` tab."
+msgstr ":guilabel:`スタイル` タブに移ります。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:50
+msgid ""
+"These are the current settings that QGIS applied for us by default. Its just"
+" one way to look at a DEM, so lets explore some others."
+msgstr "現在の設定はQGISがデフォルトで適用したものです。それはDEMの表示の一つの方法にすぎません。では他の方法を探りましょう。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:53
+msgid ""
+"Change the :guilabel:`Render type` to :guilabel:`Singleband pseudocolor`, "
+"and use the default options presented."
+msgstr ":guilabel:`レンダータイプ` を :guilabel:`単バンド疑似カラー` に変更します。与えられたデフォルトオプションを使います。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:55
+msgid ""
+"Click the :guilabel:`Classify` button to generate a new color "
+"classification, and click :guilabel:`OK` to apply this classification to the"
+" DEM."
+msgstr ":guilabel:`分類` ボタンをクリックして新しい色の分類を生成します。 :guilabel:`OK` をクリックしてDEMにこの分類を適用します。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:61
+msgid "You'll see the raster looking like this:"
+msgstr "このようにラスタが見えるでしょう。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:66
+msgid ""
+"This is an interesting way of looking at the DEM, but maybe we don't want to"
+" symbolize it using these colors."
+msgstr "これはDEMを表示する興味深い方法ですが、多分私たちはこれらの色を使ってシンボライズしたいとは思いません。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:69
+msgid "Open :guilabel:`Layer Properties` dialog again."
+msgstr "もう一度 :guilabel:`レイヤプロパティ` ダイアログを開きます。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:70
+msgid ""
+"Switch the :guilabel:`Render Type` back to :guilabel:`Singleband gray`."
+msgstr ":guilabel:`レンダータイプ` を :guilabel:`単バンドグレー` に戻します。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:71
+msgid "Click :guilabel:`OK` to apply this setting to the raster."
+msgstr ":guilabel:`OK` をクリックしてラスタにこの設定を適用します。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:73
+msgid ""
+"You will now see a totally gray rectangle that isn't very useful at all."
+msgstr "あまり有用ではないすべて灰色の四角形が表示されます。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:78
+msgid ""
+"This is because we have lost the default settings which \"stretch\" the "
+"color values to show them contrast."
+msgstr "これはコントラストをつけるために色の値を\"引きのばす\"デフォルト設定を失ったからです。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:81
+msgid ""
+"Let's tell QGIS to again \"stretch\" the color values based on the range of "
+"data in the DEM. This will make QGIS use  all of the available colors (in "
+":guilabel:`Grayscale`, this is black, white and all shades of gray in "
+"between)."
+msgstr "それではもう一度DEMのデータの範囲に基づいて色の値を\"引きのばす\"ようにQGISに指示しましょう。QGISに使用可能な全ての色を使わせます (:guilabel:`Grayscale` の、黒と白とそれらの間の灰色のすべての色合い)。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:85
+msgid "Specify the :guilabel:`Min` and :guilabel:`Max` values as shown below."
+msgstr ":guilabel:`最小` と :guilabel:`最大` の値を次に示す通りに指定します。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:86
+msgid ""
+"Set the value :guilabel:`Contrast enhancement` to :guilabel:`Stretch To "
+"MinMax`:"
+msgstr ":guilabel:`コントラスト拡張` を :guilabel:`最小最大に引き延ばす` に設定します:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:92
+msgid ""
+"But what are the minimum and maximum values that should be used for the "
+"stretch? The ones that are currently under :guilabel:`Min` and "
+":guilabel:`Max` values are the same values that just gave us a gray "
+"rectangle before. Instead, we should be using the minimum and maximum values"
+" that are actually in the image, right? Fortunately, you can determine those"
+" values easily by loading the minimum and maximum values of the raster."
+msgstr "しかし、引き延ばしのために使用されるべき最小値と最大値とは何でしょうか? :guilabel:`最小` と :guilabel:`最大` の値の下に現在あるものは前に私たちに灰色の矩形を与えた値と同じです。そのかわりに私たちは画像の中にある実際の最小値と最大値を使用するべきでしょうか? 幸いなことに、ラスタの最小値と最大値をロードすることによって、これらの値は簡単に決定することができます。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:99
+msgid ""
+"Under :guilabel:`Load min / max values`, select :guilabel:`Min / Max` "
+"option."
+msgstr ":guilabel:`最小値/最大値のロード` の下の :guilabel:`最小/最大` オプションを選択します。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:100
+msgid "Click the :guilabel:`Load` button:"
+msgstr ":guilabel:`読み込み` ボタンをクリックします:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:102
+msgid ""
+"Notice how the :guilabel:`Custom min / max values` have changed to reflect "
+"the actual values in our DEM:"
+msgstr ":guilabel:`Custom min / max values` がDEMの実際の値を反映するように変わったことに注目して下さい:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:108
+msgid "Click :guilabel:`OK` to apply these settings to the image."
+msgstr ":guilabel:`OK` をクリックしてこれらの設定をイメージに適用します。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:110
+msgid ""
+"You'll now see that the values of the raster are again properly displayed, "
+"with the darker colors representing valleys and the lighter ones, mountains:"
+msgstr "これでラスタの値は再び適切に表示されます。より暗い色は谷を、より明るい色は山を表しています。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:117
+msgid "But isn't there a better or easier way?"
+msgstr "でも、もっといい、もっと簡単な方法はないでしょうか?"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:119
+msgid ""
+"Yes, there is. Now that you understand what needs to be done, you'll be glad"
+" to know that there's a tool for doing all of this easily."
+msgstr "はい、あります。何がされる必要があるのかをあなたは理解しているので、このすべてを簡単に行うためのツールがあることを知って嬉しくなるでしょう。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:122
+msgid "Remove the current DEM from the :guilabel:`Layers list`."
+msgstr ":guilabel:`レイヤリスト` から今あるDEMを削除します。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:123
+msgid ""
+"Load the raster in again, renaming it to :kbd:`DEM` as before. It's a gray "
+"rectangle again..."
+msgstr "ラスタをもう一度ロードして、前と同じように :kbd:`DEM` に名前を変えます。再び灰色の矩形が現れました..."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:125
+msgid ""
+"Enable the tool you'll need by enabling :menuselection:`View --> Toolbars "
+"--> Raster`. These icons will appear in the interface:"
+msgstr ":menuselection:`ビュー --> ツールバー --> ラスタ` を有効にして必要なツールを有効化します。これらのアイコンがインターフェイスに現れるでしょう。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:131
+msgid ""
+"The third button from the left :guilabel:`Local Histogram Stretch` will "
+"automatically stretch the minimum and  maximum values to give you the best "
+"contrast in the local area that you're  zoomed into. It's useful for large "
+"datasets. The button on the left :guilabel:`Local Cumulative Cut Stretch "
+"...` will stretch the minimum and maximum values  to constant values across "
+"the whole image."
+msgstr "左から3番目のボタン :guilabel:`Local Histogram Stretch` はあなたがズームしている地域に最もよいコントラストを与えるために自動的に最小値と最大値を引きのばします。これは大規模なデータセットの場合に便利です。左のボタン :guilabel:`表示範囲内でヒストグラムの累積的カットと引き伸ばし ...` は画像全体にわたる一定値に最小値と最大値を引きのばします。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:138
+msgid ""
+"Click the fourth button from the left (:guilabel:`Stretch Histogram to Full "
+"Dataset`). You'll see the data is now correctly represented as before."
+msgstr "左から4番目のボタン (:guilabel:`ヒストグラムをフルデータセットに伸ばす`) をクリックします。データが前のように正しく表示されます。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:141
+msgid ""
+"You can try the other buttons in this toolbar and see how they alter the "
+"stretch of the image when zoomed in to local areas or when fully zoomed out."
+msgstr "このツールバーの他のボタンを試してみて、ローカルエリアにズームインした時や完全にズームアウトした時に画像の引きのばしがどのように変わるかを見てみましょう。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:145
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:147
+msgid ""
+"These are only the basic functions to get you started with raster symbology."
+" QGIS also allows you many other options, such as symbolizing a layer using "
+"standard deviations, or representing different bands with different colors "
+"in a multispectral image."
+msgstr "これらはあなたがラスタシンボロジーを使い始めるための基本的な機能にすぎません。 QGISは標準偏差を用いたレイヤのシンボロジーやマルチスペクトル画像の異なるバンドを異なる色で表現することもできます。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:153
+msgid "Reference"
+msgstr "リファレンス"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:155
+msgid ""
+"The SRTM dataset was obtained from `http://srtm.csi.cgiar.org/ "
+"<http://srtm.csi.cgiar.org/>`_"
+msgstr "SRTMデータセットは `http://srtm.csi.cgiar.org/ <http://srtm.csi.cgiar.org/>`_ から入手しました。"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:159
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:161
+msgid ""
+"Now that we can see our data displayed properly, let's investigate how we "
+"can analyze it further."
+msgstr "私たちはデータを適切に表示することができるようになりました。それではさらに、それを解析する方法を調べてみましょう。"

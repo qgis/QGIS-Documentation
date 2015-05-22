@@ -1,0 +1,140 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-21 15:25+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:6
+msgid "Running our first algorithm. The  toolbox"
+msgstr "Uw eerste algoritme uitvoeren. De  Toolbox"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:9
+msgid ""
+"In this lesson we will run our first algorithm, and get our first result "
+"from it."
+msgstr "In deze les zullen we ons eerste algoritme uitvoeren, en ons eerste resultaat daaruit verkrijgen."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:12
+msgid ""
+"As we have already mentioned, the processing framework can run algorithms "
+"from other applications, but it also contains native algorithm that need no "
+"external software to be run. To start exploring the processing framework, we"
+" are going to run one of those native algorithms. In particular, we are "
+"going to calculate the centroids of set of polygons."
+msgstr "Zoals we al hebben besproken kan het framework Processing algoritmen uit andere toepassingen uitvoeren, maar het bevat ook eigen algoritmen die geen externe software nodig hebben om te worden uitgevoerd. We gaan één van deze eigen algoritmen uitvoeren om te beginnen met het verkennen van het framework Processing. In het bijzonder gaan we de middelpunten berekenen van een verzameling polygonen."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:14
+msgid ""
+"First, open the QGIS project corresponding to this lesson. It contains just "
+"a single layer with two polygons"
+msgstr "Open eerst het project van QGIS dat correspondeert met deze les. Het bevat slechts één enkele laag met twee polygonen"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:18
+msgid ""
+"Now go to the text box at the top of the toolbox. That is the search box, "
+"and if you type text in it, it will filter the list of algorithms so just "
+"those ones contaning the entered text are shown. Type ``centroids`` and you "
+"should see something like this."
+msgstr "Ga nu naar het tekstvak bovenin de Toolbox. Dat is het zoekvak en als u tekst daarin typt, zal het de lijst met algoritmen filteren zodat slechts die, welke de ingevoerde tekst bevatten worden weergegeven. Typ ``centroids`` en u zou iets zoals dit moeten zien."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:22
+msgid ""
+"The search box is a very practical way of finding the algorithm you are "
+"looking for."
+msgstr "Het zoekvak is een zeer praktische manier voor het vinden van het algoritme dat u zoekt."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:24
+msgid ""
+"To execute an algorithm, you just have to double-click on its name in the "
+"toolbox. When you double-click on the *Centroids* algorithm, you will see "
+"the following dialog."
+msgstr "U hoeft slechts te dubbelklikken op de naam in de Toolbox om een algoritme uit te voeren. Als u dubbelklikt op het algoritme *Centroids*, zult u het volgende dialoogvenster zien."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:28
+msgid ""
+"All algorithms have a similar interface, which basically contains input "
+"parameters that you have to fill, and outputs that you have to select where "
+"to store. In this case, the only inputs we have are a vector layer with "
+"polygons and a selector to select whether we want several centroids for a "
+"single feature in case it is a multipart features, or the algorithm should "
+"generate just one centroid for each feature."
+msgstr "Alle algoritmen hebben een soortgelijke interface, die als basis parameters voor invoer bevat die u moet invullen en voor uitvoer die u moet selecteren om de plaats voor opslaan te kiezen. In dit geval zijn de enige invoer die we hebben een vectorlaag met polygonen en een selectie om te selecteren of we verschillende middelpunten voor één enkel object willen voor het geval het een object met meerdere delen is, of dat het algoritme slechts één middelpunt voor elk object zou moeten genereren."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:30
+msgid ""
+"Select the *Polygons* layer as input. The other field will have no effect at"
+" all, since the input layer has no multi-part features."
+msgstr "Selecteer de laag *Polygons* als invoer. Het andere veld zal helemaal gene effect hebben, omdat de laag geen objecten met meerdere delen heeft."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:32
+msgid ""
+"The algorithm has a single output, which is the centroids layer. There are "
+"two options to define where a data output is saved: enter a filepath or save"
+" it to a temporary filename"
+msgstr "Het algoritme heeft één enkele uitvoer, wat de laag Centroids is. Er zijn twee opties om te definiëren waar uitvoer van gegevens wordt opgeslagen: voer fowel een bestandspad in of sla het op naar een tijdelijke bestandsnaam"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:34
+msgid ""
+"In case you want to set a destination and not save the result in a temporary"
+" file, the format of the output is defined by the filename extension. To "
+"select a format, just select the corresponding file extension (or add it if "
+"you are directly typing the filepath instead). If the extension of the "
+"filepath you entered does not match any of the supported ones, a default "
+"extension (usually ``.dbf``` for tables, ``.tif`` for raster layers and "
+"``.shp`` for vector ones) will be appended to the filepath and the file "
+"format corresponding to that extension will be used to save the layer or "
+"table."
+msgstr "In het geval dat u een bestemming wilt instellen, en het resultaat niet wilt opslaan in een tijdelijk bestand, wordt de indeling van de uitvoer gedefinieerd door de extensie van de bestandsnaam. Selecteer eenvoudigweg de corresponderende bestandsextensie (of voeg die toe, als u in plaats daarvan het bestandspad direct intypt) om een indeling te selecteren. Als de extensie van het bestandspad dat u invoerde niet overeenkomt met een van de ondersteunde indelingen, zal een standaard extensie (gewoonlijk :file:`.dbf`` voor tabellen, :file:`.tif` voor rasterlagen en :file:`.shp` voor vectorlagen) worden toegevoegd aan het bestandspad, en de bestandsindeling die correspondeert met die extensie zal worden gebruikt om de laag of de tabel op te slaan."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:38
+msgid ""
+"In all the exercises in this guide, we will be saving results to a temporary"
+" file, since there is no need to save them for a later use. Feel free to "
+"save them to a permament location if you want to."
+msgstr "In alle oefeningen in deze handleiding zullen we de resultaten opslaan naar een tijdelijk bestand, omdat er geen reden is ze op te slaan voor later gebruik. het staat u uiteraard vrij om ze op een vaste locatie op te slaan als u dat wilt."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:40
+msgid ""
+"Notice that temporary files are deleted once you close QGIS. If you create a"
+" project with an output that was saved as a temporary output, QGIS will "
+"complain when you try to open back the project later, since that output file"
+" will not exist."
+msgstr "Onthoud dat tijdelijke bestanden worden verwijderd als u QGIS afsluit. Als u een project maakte met een uitvoer die werd opgeslagen als een tijdelijk bestand, zal QGIS klagen als u later het project weer wilt openen, omdat het uitvoerbestand niet meer bestaat."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:42
+msgid ""
+"Once you have configured the algorithm dialog, press *Run* to run the "
+"algorithm."
+msgstr "Als u eenmaal het dialoogvenster voor het algoritme heeft geconfigureerd, druk dan op *Run* om het algoritme uit te voeren."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:44
+msgid "You will get the following output."
+msgstr "U zult de volgende uitvoer krijgen."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:48
+msgid ""
+"The output has the same CRS as the input.  Geoalgorithms assumes all input "
+"layers share the in the same CRS and does not perform any reprojection. "
+"Except in the case of some special algorithms (for instance, reprojection "
+"ones), the outputs will also have that same CRS. We will see more about this"
+" soon."
+msgstr "De uitvoer heeft hetzelfde CRS als de invoer. Geo-algoritmen gaan er van uit dat alle invoerlagen hetzelfde CRS delen en projecteert niets opnieuw. Behalve in het geval van enkele speciale algoritmen (bijvoorbeeld die voor opnieuw projecteren), de uitvoer zal ook datzelfde CRS hebben. We zullen hier snel meer van zien."
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:50
+msgid ""
+"Try yourself saving it using different file formats (use, for instance, "
+"``shp`` and ``geojson`` as extensions). Also, if you do not want the layer "
+"to be loaded in QGIS after it is generated, you can check off the check box "
+"that is found below the output path box."
+msgstr "Probeer het zelf op te slaan in verschillende bestandsindelingen (gebruik bijvoorbeeld ``shp`` en ``geojson`` als extensies). Ook kunt u, als u niet wilt dat de laag zal worden geladen in QGIS nadat die is gegenereerd, het keuzevak deselecteren dat staat onder het vak voor het pad van de uitvoer."

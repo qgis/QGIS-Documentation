@@ -1,0 +1,287 @@
+# 
+# Translators:
+# Eduardo Gonzalez Latorre <eg@gismood.com>, 2014
+# elgina <elgina88@gmail.com>, 2014
+# Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-05 02:20+0000\n"
+"Last-Translator: Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:6
+msgid "|LS| Changing Raster Symbology"
+msgstr "|LS| Cambiando la Simbología Ráster"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:8
+msgid ""
+"Not all raster data consists of aerial photographs. There are many other "
+"forms of raster data, and in many of those cases, it's essential to "
+"symbolize the data properly so that it becomes properly visible and useful."
+msgstr "No todos los datos ráster consisten en fotografías aéreas. Hay muchas otras formas de datos ráster, y en muchos de esos casos, es esencial simbolizar correctamente los datos para que sean fácilmente visibles y útiles."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:12
+msgid ""
+"**The goal for this lesson:** To change the symbology for a raster layer."
+msgstr "**El objetivo de esta lección:** Cambiar la simbología de una capa ráster."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:15
+msgid "|basic| |TY|"
+msgstr "|basic| |TY|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:17
+msgid ""
+"Start with the current map which you should have created during the previous"
+" exercise: :kbd:`analysis.qgs`."
+msgstr "Comece com o mapa atual que você deve ter criado durante o exercício anterior: :kbd:`analysis.qgs`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:19
+msgid ""
+"Use the :guilabel:`Add Raster Layer` button to load the new raster dataset."
+msgstr "Utiliza el botón :guilabel:`Añadir capa ráster` para cargar el nuevo conjunto de datos ráster."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:20
+msgid ""
+"Load the dataset |srtmFileName|, found under the directory "
+":kbd:`exercise_data/raster/SRTM/`."
+msgstr "Carga el conjunto de datos |srtmFileName|, que se encuentra en el directorio :kbd:`exercise_data/raster/SRTM/`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:22
+msgid ""
+"Once it appears in the :guilabel:`Layers list`, rename it to :kbd:`DEM`."
+msgstr "Una vez que haya aparecido en la :guilabel:`Lista de capas`, cámbiale el nombre a :kbd:`MDE`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:23
+msgid ""
+"Zoom to the extent of this layer by right-clicking on it in the Layer List "
+"and selecting :guilabel:`Zoom to Layer Extent`."
+msgstr "Aplica el zoom a la extensión de la capa con clic derecho en ella en la Lista de Capas y selecciona :guilabel:`Zum a la extensión de la capa`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:26
+msgid ""
+"This dataset is a *Digital Elevation Model (DEM)*. It's a map of the "
+"elevation (altitude) of the terrain, allowing us to see where the mountains "
+"and valleys are, for example."
+msgstr "Ese conjunto de datos es un *Modelo Digital de Elevación (MDE)*. Es un mapa de la elevación (altitud) del terreno, permitiendonos ver donde están las montañas y los valles, por ejemplo."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:30
+msgid ""
+"Once it's loaded, you'll notice that it's a basic stretched grayscale "
+"representation of the DEM. It's seen here with the vector layers on top:"
+msgstr "Una vez cargado, observarás que hay una representación básica en escala de grises del MDE. Se ve aquí con las capas vectoriales por encima:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:36
+msgid ""
+"QGIS has automatically applied a stretch to the image for visualization "
+"purposes, and we will learn more about how this works as we continue."
+msgstr "QGIS ha aplicado automáticamente un estiramiento a la imagen para fines de visualización, y aprenderemos más sobre cómo funciona esto mientras avanzamos."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:40
+msgid "|basic| |FA| Changing Raster Layer Symbology"
+msgstr "|basic| |FA| Cambiando Simbología de la Capa Ráster"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:42
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog for the :guilabel:`SRTM` layer "
+"by right-clicking on the layer in the Layer tree and selecting "
+":guilabel:`Properties` option."
+msgstr "Abre el cuadro de diálogo :guilabel:`Propiedades de la capa` para la capa :guilabel:`SRTM` con clic derecho en la capa en el árbol de capas y selecciona la opción :guilabel:`Propiedades`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:45
+msgid "Switch to the :guilabel:`Style` tab."
+msgstr "Cambia a la pestaña :guilabel:`Estilo`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:50
+msgid ""
+"These are the current settings that QGIS applied for us by default. Its just"
+" one way to look at a DEM, so lets explore some others."
+msgstr "Esos son los ajustes actuales que QGIS ha aplicado por defecto. Esto es solo una forma de ver el MDE, así que exploremos otras."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:53
+msgid ""
+"Change the :guilabel:`Render type` to :guilabel:`Singleband pseudocolor`, "
+"and use the default options presented."
+msgstr "Cambia el :guilabel:`Tipo de renderizador` a :guilabel:`Unibanda pseudocolor`, y utiliza las opciones presentadas por defecto."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:55
+msgid ""
+"Click the :guilabel:`Classify` button to generate a new color "
+"classification, and click :guilabel:`OK` to apply this classification to the"
+" DEM."
+msgstr "Haz clic en el botón :guilabel:`Clasificar` para generar una clasificación por color nueva, y haz clic en :guilabel:`Aceptar` para aplicar esta clasificación al MDE."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:61
+msgid "You'll see the raster looking like this:"
+msgstr "Verás el ráster con este aspecto:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:66
+msgid ""
+"This is an interesting way of looking at the DEM, but maybe we don't want to"
+" symbolize it using these colors."
+msgstr "Es un modo interesante para ver al MDE así, pero puede que no queramos simbolizarlo utilizando estos colores."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:69
+msgid "Open :guilabel:`Layer Properties` dialog again."
+msgstr "Vuelve a abrir el cuadro de diálogo :guilabel:`Propiedades de la capa`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:70
+msgid ""
+"Switch the :guilabel:`Render Type` back to :guilabel:`Singleband gray`."
+msgstr "Vuelve a cambiar el :guilabel:`Tipo de renderizador` a :guilabel:`Unibanda gris`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:71
+msgid "Click :guilabel:`OK` to apply this setting to the raster."
+msgstr "Haz clic en :guilabel:`Aceptar` para aplicar los ajustes al ráster."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:73
+msgid ""
+"You will now see a totally gray rectangle that isn't very useful at all."
+msgstr "Ahora verás un rectangulo totalmente gris que no es útil en absoluto. "
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:78
+msgid ""
+"This is because we have lost the default settings which \"stretch\" the "
+"color values to show them contrast."
+msgstr "Esto ocurre porque hemos perdido los ajustes por defecto que \"estira\" los valores del color para mostrarlos contrastados."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:81
+msgid ""
+"Let's tell QGIS to again \"stretch\" the color values based on the range of "
+"data in the DEM. This will make QGIS use  all of the available colors (in "
+":guilabel:`Grayscale`, this is black, white and all shades of gray in "
+"between)."
+msgstr "Digamos a QGIS que vuelva a \"estirar\" los valores del color basados en el rango de los datos del MDE. Esto hará que QGIS use todos los colores disponibles (en :guilabel:`Escala de grises`, esto es negro, blanco y todos los tipos de gris intermedios)."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:85
+msgid "Specify the :guilabel:`Min` and :guilabel:`Max` values as shown below."
+msgstr "Especifica los valores :guilabel:`Mín` and :guilabel:`Máx` como se muestran abajo."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:86
+msgid ""
+"Set the value :guilabel:`Contrast enhancement` to :guilabel:`Stretch To "
+"MinMax`:"
+msgstr "Ajusta el valor :guilabel:`Mejora de contraste` a :guilabel:`Estirar a MinMax`:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:92
+msgid ""
+"But what are the minimum and maximum values that should be used for the "
+"stretch? The ones that are currently under :guilabel:`Min` and "
+":guilabel:`Max` values are the same values that just gave us a gray "
+"rectangle before. Instead, we should be using the minimum and maximum values"
+" that are actually in the image, right? Fortunately, you can determine those"
+" values easily by loading the minimum and maximum values of the raster."
+msgstr "Pero ¿Cuáles son los valores máximos y mínimos que deberían usarse en los ajustes? Aquellos que ya estan en :guilabel:`Mín` y :guilabel:`Máx` son los mismos valores que nos dieron el rectángulo gris de antes. En lugar de ello, deberíamos utilizar los valores mínimos y máximos que están realmente en la imagen, ¿verdad? Afortunadamente, puedes determinar esos valores fácilmente cargando el valor mínimo y máximo del ráster."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:99
+msgid ""
+"Under :guilabel:`Load min / max values`, select :guilabel:`Min / Max` "
+"option."
+msgstr "En :guilabel:`Cargar valores min / max`, selecciona la opción :guilabel:`Min / Max`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:100
+msgid "Click the :guilabel:`Load` button:"
+msgstr "Haz clic en el botón :guilabel:`Cargar`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:102
+msgid ""
+"Notice how the :guilabel:`Custom min / max values` have changed to reflect "
+"the actual values in our DEM:"
+msgstr "Observa cómo los :guilabel:`Los valores min / max` han cambiado para relejar los valores reales de nuestro MDE:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:108
+msgid "Click :guilabel:`OK` to apply these settings to the image."
+msgstr "Haz clic en :guilabel:`Aceptar` para aplicar estos ajustes a la imagen. "
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:110
+msgid ""
+"You'll now see that the values of the raster are again properly displayed, "
+"with the darker colors representing valleys and the lighter ones, mountains:"
+msgstr "Verás que los valores del ráster vuelven a estar adecuadamente representados, con los colores oscuros representando valles, y los más claros montañas:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:117
+msgid "But isn't there a better or easier way?"
+msgstr "Pero ¿No hay otra forma mejor o más fácil?"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:119
+msgid ""
+"Yes, there is. Now that you understand what needs to be done, you'll be glad"
+" to know that there's a tool for doing all of this easily."
+msgstr "Si, la hay. Ahora que entiendes que se necesita hacer, te alegrará saber que hay una herramienta para hacer todo eso fácilmente."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:122
+msgid "Remove the current DEM from the :guilabel:`Layers list`."
+msgstr "Borra el MDE actual de la :guilabel:`Lista de capas`."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:123
+msgid ""
+"Load the raster in again, renaming it to :kbd:`DEM` as before. It's a gray "
+"rectangle again..."
+msgstr "Carga el ráster otra vez, vuelve a llamarlo :kbd:`MDE` como antes. Ahí vuelve a estar el rectángulo gris..."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:125
+msgid ""
+"Enable the tool you'll need by enabling :menuselection:`View --> Toolbars "
+"--> Raster`. These icons will appear in the interface:"
+msgstr "Activa la herramienta que necesitarás en :menuselection:`Ver --> Barras de herramientas --> Ráster`. Esos iconos aparecerán en el interfaz:"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:131
+msgid ""
+"The third button from the left :guilabel:`Local Histogram Stretch` will "
+"automatically stretch the minimum and  maximum values to give you the best "
+"contrast in the local area that you're  zoomed into. It's useful for large "
+"datasets. The button on the left :guilabel:`Local Cumulative Cut Stretch "
+"...` will stretch the minimum and maximum values  to constant values across "
+"the whole image."
+msgstr "El tercer botón por la izquierda :guilabel:`Estiramiento de histograma local` ajustará automáticamente los valores mínimos y máximos para darte el mejor contraste en el área local a la que has ampliado. Es útil para conjuntos de datos grandes. El botón de la izquierda :guilabel:`Cortar estiramiento local acumulativo ...` ajustará los valores mínimos y máximos a valores constantes en toda la imagen."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:138
+msgid ""
+"Click the fourth button from the left (:guilabel:`Stretch Histogram to Full "
+"Dataset`). You'll see the data is now correctly represented as before."
+msgstr "Haz clic en el cuarto botón desde la izquierda  (:guilabel:`Estirar histograma a la extensión de todo el conjunto de datos`). Verás que los datos están ahora correctamente representados como antes."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:141
+msgid ""
+"You can try the other buttons in this toolbar and see how they alter the "
+"stretch of the image when zoomed in to local areas or when fully zoomed out."
+msgstr "Puedes probar los otros botones de esta barra de herramientas y ver cómo alteran los ajustes de la imagen cuando amplías a áreas locales o cuando alejas el zum."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:145
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:147
+msgid ""
+"These are only the basic functions to get you started with raster symbology."
+" QGIS also allows you many other options, such as symbolizing a layer using "
+"standard deviations, or representing different bands with different colors "
+"in a multispectral image."
+msgstr "Estas son solo las funciones básicas para iniciarte con la simbología ráster. QGIS también te permite muchas otras opciones, como simbolizar una capa utilizando desviaciones estándar, o representar diferentes bandas con diferentes colores en una imagen multi espectral. "
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:153
+msgid "Reference"
+msgstr "Referencia"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:155
+msgid ""
+"The SRTM dataset was obtained from `http://srtm.csi.cgiar.org/ "
+"<http://srtm.csi.cgiar.org/>`_"
+msgstr "El conjunto de datos SRTM fue obtenido de `http://srtm.csi.cgiar.org/ <http://srtm.csi.cgiar.org/>`_"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:159
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:161
+msgid ""
+"Now that we can see our data displayed properly, let's investigate how we "
+"can analyze it further."
+msgstr "Ahora que podemos ver nuestros datos adecuadamente representados, investiguemos cómo podemos analizarlos todavía mejor."

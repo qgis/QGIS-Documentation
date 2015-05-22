@@ -1,0 +1,175 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-26 14:43+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:6
+msgid "Running an external algorithm"
+msgstr "Een extern algoritme uitvoeren"
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:9
+msgid ""
+"In this lesson we will see how to use algorithms that depend on a third-"
+"party application, particularly SAGA, which is one of the main algorithm "
+"providers."
+msgstr "In deze les zullen we zien hoe we algoritmen gebruiken die afhankelijk zijn van een toepassing van een derde partij, in het bijzonder SAGA, die één van de belangrijkste providers van algoritmen is."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:11
+msgid ""
+"All the algorithms that we have run so far are part of processing framework."
+" That is, they are *native* algorithms implemented in the plugin and run by "
+"QGIS just like the plugin itself is run. However, one of the greatest "
+"features of the processing framework is that it can use algorithms from "
+"external application and extend the possibilites of those applications. Such"
+" algorithms are wrapped and included in the toolbox, so you can easily use "
+"them from QGIS, and use QGIS data to run them."
+msgstr "Alle algoritmen die we tot dusverre hebben uitgevoerd maken deel uit van het framework Processing. Dat is, zij zijn *eigen* algoritmen die zijn geïmplementeerd in de plug-in en worden uitgevoerd door QGIS net zoals de plug-in zelf wordt uitgevoerd. Echter, één van de grootste mogelijkheden van het framework Processing is dat het algoritmen kan gebruiken van externe toepassingen en de mogelijkheden van die toepassingen kan uitbreiden. Dergelijke algoritmen zijn verpakt en opgenomen in de Toolbox, zodat u ze eenvoudig vanuit QGIS kunt gebruiken, en gegevens van QGIS kunt gebruiken om ze uit te voeren."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:13
+msgid ""
+"Some of the algorithms that you see in the simplified view require third "
+"party applications to be installed in your system. One algorithm provider of"
+" special interest is SAGA (System for Automated Geospatial Analysis). At the"
+" end of this lesson we will run an algorithm called *Convergence index*, "
+"which is provided by SAGA and computes a morphometrical measurement from a "
+"DEM. But first, we need to configure everything so QGIS can correctly call "
+"SAGA. This is not difficult, but it's important to understand how it works. "
+"Each external application has its own configuration, and later in this same "
+"manual we will talk about some of the other ones, but SAGA is going to be "
+"our main backend, so we will discuss it here."
+msgstr "Sommig algoritmen die u ziet in de vereenvoudigde weergave vereisen dat toepassingen van derde partijen zijn geïnstalleerd op uw systeem. Een provider van algoritmen die speciale aandacht behoeft is SAGA (System for Automated Geospatial Analysis). Aan het einde van deze les zullen we een algoritme, genaamd *Convergence index*, uitvoeren, dat wordt verschaft door SAGA en een morfometrische meting vanuit een DEM berekent. Maar eerst moeten we alles configureren zodat QGIS SAGA op de juiste wijze kan aanroepen. Dit is niet moeilijk, maar het is belangrijk te weten hoe dit werkt. Elke externe toepassing heeft zijn eigen configuratie, en later in deze zelfde handleiding zullen we enkele van de andere bespreken, maar SAGA zal ons belangrijkste backend zijn, dus zullen we dat hier bespreken."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:15
+msgid ""
+"If you are on Windows, the best way to work with external algorithms is to "
+"install QGIS using the OSGeo4W installer. It will take care of installing "
+"all the needed dependencies, including SAGA, so if you have used it, there "
+"is nothing else to do. You can open the settings dialog and go to the "
+"*Providers/SAGA* group."
+msgstr "Als u op Windows werkt, is de beste manier om met externe algoritmen te werken om QGIS te installeren met behulp van het installatieprogramma van OSGeo4W. Dat zal zorg dragen voor het installeren van alle benodigde afhankelijkheden, inclusief SAGA, dus als u het heeft gebruikt, is er niets anders te doen. U kunt het dialoogvenster Instellingen openen en naar de groep *Providers/SAGA* gaan."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:19
+msgid ""
+"The SAGA path should already be configured and pointing to the folder where "
+"SAGA is installed."
+msgstr "Het pad SAGA zou reeds moeten zijn geconfigureerd en moeten wijzen naar de map waar SAGA is geïnstalleerd."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:21
+msgid ""
+"If you have installed QGIS not using the OSGeo4W installer, then you must "
+"enter the path to your SAGA installation (which you must have installed "
+"separately) there. The required version is SAGA 2.1"
+msgstr "Als u QGIS heeft geïnstalleerd zonder het installatieprogramma van OSGeo4W, dan moet u daar het pad naar uw installatie van SAGA invoeren (wat u afzonderlijk zou moeten hebben geïnstalleerd). De vereiste versie is SAGA 2.1"
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:23
+msgid ""
+"In case you are using Linux, you do not have to set the path to your SAGA "
+"installation in the processing configuration. Instead, you must install SAGA"
+" and make sure that the SAGA folder is in PATH, so it can be called from the"
+" console (just open a console and type ``saga_cmd`` to check it). Under "
+"Linux, the target version for SAGA is also 2.1, but in some installations "
+"(such as the OSGeo Live DVD) you might have just 2.0.8 available. There are "
+"some 2.1 packages available, but they are not commonly installed and might "
+"have some issues, so if you prefer to use the more common and stable 2.0.8, "
+"you can do it by enabling 2.0.8 compatibility in the configuration dialog, "
+"under the *SAGA* group"
+msgstr "Voor het geval u Linux gebruikt hoeft u het pad naar uw installatie van SAGA niet in te stellen in de configuratie van processing. In plaats daarvan moet u SAGA installeren en er voor zorgen dat de map van SAGA in PATH staat, zodat het kan worden aangeroepen vanaf de console (open eenvoudigweg een console en typ ``saga_cmd`` om het te controleren). Onder Linux is de doelversie van SAGA ook 2.1, maar in sommige installaties (zoals de OSGeo Live DVD) heeft u misschien alleen 2.0.8 beschikbaar. er zijn enkele pakketten voor 2.1 beschikbaar, maar zij worden niet algemeen geïnstalleerd en zouden enkele problemen kunnen hebben, dus als u liever de meer algemene en stabielere 2.0.8 zou willen gebruiken, dan kunt u dat doen door compatibiliteit voor 2.0.8 in te schakelen in het dialoogvenster voor configuratie, onder de groep *SAGA*"
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:27
+msgid ""
+"Once SAGA is installed, you can launch a SAGA algorithm double clicking on "
+"its name, as with any other algorithm. Since we are using the simplified "
+"interface, you do not know which algorithms are based on SAGA or in another "
+"external application, but if you happen to double--click on one of them and "
+"the corresponding application is not installed, you will see something like "
+"this."
+msgstr "Als SAGA eenmaal is geïnstalleerd, kunt u een algoritme van SAGA starten door dubbel te klikken op de naam ervan, net als met elk ander algoritme. Omdat we de vereenvoudigde interface gebruiken, weet u niet welke algoritmen zijn gebaseerd op SAGA of een andere externe toepassing, maar als dubbelklikt op een er van en de overeenkomende toepassing is niet geïnstalleerd, zult u iets soortgelijks als dit zien."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:31
+msgid ""
+"In our case, and assuming that SAGA is correctly installed and configured, "
+"you should not see this window, and you will get to the parameters dialog "
+"instead."
+msgstr "In ons geval, en er van uit gaande dat SAGA juist is geïnstalleerd en geconfigureerd, zou u dit venster niet zien, en u zou in plaats daarvan naar het dialoogvenster voor de  parameters gaan."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:33
+msgid ""
+"Let's try with a SAGA--based algorithm, the one called *Split shapes layer "
+"randomly*."
+msgstr "Laten we het eens proberen met een algoritme dat is gebaseerd op SAGA, dat welke is genaamd *Split shapes layer randomly*."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:37
+msgid ""
+"Use the points layer in the project corresponding to this lesson as input, "
+"and the default parameter values, and you will get something like this (the "
+"split is random, so your result might be different)."
+msgstr "Gebruik de puntenlaag in het project dat bedoeld is voor deze les als invoer, en de standaard waarden voor de parameters, en u zult iets zoals dit krijgen (de splitsing is willekeurig, dus uw resultaat zou anders kunnen zijn)."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:41
+msgid ""
+"The input layer has been split in two layer, each one with the same number "
+"of points. This result has been computed by SAGA, and later taken by QGIS "
+"and added to the QGIS project."
+msgstr "De invoerlaag is gesplitst in twee lagen, elk met hetzelfde aantal punten. Dit resultaat is berekend door SAGA, en later overgenomen door QGIS en toegevoegd aan het project van QGIS."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:43
+msgid ""
+"If all goes fine, you will not notice any difference between this SAGA--"
+"based algorithm and one of the others that we have previously run. However, "
+"SAGA might, for some reason, not be able to produce a result and not "
+"generate the file that QGIS is expecting. In that case, there will be "
+"problems adding the result to the QGIS project, and an error message like "
+"this will be shown."
+msgstr "Als alles goed gaat zult u geen verschil merken tussen dit op SAGA gebaseerde algoritme en een van de andere die we eerder uitgevoerd hebben. Echter, SAGA zou, om enige reden, niet in staat kunnen zijn een resultaat te produceren en niet het bestand genereren dat QGIS verwacht. In dat geval zullen er problemen zijn om het resultaat toe te voegen aan het project van QGIS, en een foutbericht zoals dit zal worden weergegeven."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:47
+msgid ""
+"This kind of problems might happen, even if SAGA (or any other application "
+"that we are calling from the processing framework) is correctly installed, "
+"and it is important to know how to deal with them. Let's produce one of "
+"those error messages."
+msgstr "Dit soort problemen zouden kunnen voorkomen, zelfs als SAGA (of enige andere toepassing die we aanroepen vanuit het framework Processing) correct is geïnstalleerd, en het is belangrijk te weten hoe dit af te handelen. Laten we eens een van deze foutberichten produceren."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:49
+msgid ""
+"Open the *Create graticule from extent* algorithm and use the following "
+"values."
+msgstr "Open het algoritme *Create graticule from extent* en gebruik de volgende waarden."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:54
+msgid ""
+"We are using  width and height values that is larger than the specified "
+"extent, so SAGA cannot produce any output. In other words, the parameter "
+"values are wrong, but they are not checked until SAGA gets them and tries to"
+" create the graticule. Since it cannot create it, it will not produce the "
+"expected layer, and you will see the error message shown above."
+msgstr "We gebruiken waarden voor breedte en hoogte die groter zijn dan het gespecificeerde bereik, dus kan SAGA geen uitvoer produceren. Met andere woorden, de waarden van de parameters zijn verkeerd, maar zij worden niet gecontroleerd totdat SAGA ze krijgt en probeert het raster te maken. Omdat het het niet kan maken, zal het niet de verwachte laag produceren, en u zult het foutbericht dat hierboven wordt weergegeven zien."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:56
+msgid ""
+"Understanding this kind of problems will help you solve them and find an "
+"explanation to what is happening. As you can see in the error message, a "
+"test is performed to check that the connection with SAGA is working "
+"correctly, indicating you that there might be a problem in how the algorithm"
+" was executed. This applies not only to SAGA, but also to other external "
+"applications as well."
+msgstr "Het begrijpen van dit soort problemen zal u helpen ze op te lossen en een verklaring te vinden voor wat er gebeurt. Zoals u in het foutbericht kunt zien wordt een test uitgevoerd om te controleren of de verbinding met SAGA correct werkt, wat voor u een indicatie zou kunnen zijn dat er een probleem zou kunnen zijn in hoe het algoritme werd uitgevoerd. Dit is niet alleen van toepassing op SAGA, maar ook op andere externe toepassingen."
+
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:58
+msgid ""
+"In the next lesson we will introduce the processing log, where information "
+"about commands run by geoalgorithms is kept, and you will see how to get "
+"more detail when issues like this appear."
+msgstr "In de volgende les zullen we het log van de verwerking introduceren, waar informatie over opdrachten, uitgevoerd door geo-algoritmen, wordt bijgehouden, en u zult zien hoe u meer details verkrijgt als problemen zoals deze optreden."

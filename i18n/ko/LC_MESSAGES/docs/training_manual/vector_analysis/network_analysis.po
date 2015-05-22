@@ -1,0 +1,334 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-02 14:12+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:6
+msgid "|LS| Network Analysis"
+msgstr "|LS| 네트워크 분석"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:8
+msgid ""
+"Calculating the shortest distance between two points is a commonly cited use"
+" for GIS. QGIS ships with this tool, but it's not visible by default. In "
+"this brief lesson, we'll show you what you need to get started."
+msgstr "GIS 사용 시 두 포인트 사이의 가장 가까운 거리를 계산하는 일은 매우 흔합니다. QGIS도 이 도구를 내장하고 있지만, 기본 설정에서는 보이지 않습니다. 이번 간단한 강의에서, 어떻게 해야 이 도구를 사용할 수 있는지 배워보겠습니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:12
+msgid ""
+"**The goal for this lesson:** To activate, configure and use the "
+":guilabel:`Road Graph` plugin."
+msgstr "**이 강의의 목표:** :guilabel:`Road Graph` 플러그인을 활성화, 설정, 사용하기."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:16
+msgid "|basic| |FA| Activate the Tool"
+msgstr "|basic| |FA| 도구 활성화"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:18
+msgid ""
+"QGIS has many plugins that add to its basic functions. Many of these plugins"
+" are so useful that they ship along with the program straight out of the "
+"box. They're still hidden by default, though. So in order to use them, you "
+"need to activate them first."
+msgstr "QGIS의 기본 기능 외에 추가적인 플러그인이 많습니다. 이 플러그인들 대부분은 활용도가 높아서, QGIS 설치 시 기본적으로 내장되어 있습니다. 그러나 기본 설정에서는 보이지 않습니다. 따라서 이 플러그인들을 사용하려면 먼저 활성화시켜줘야 합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:23
+msgid "To activate the :guilabel:`Road Graph` plugin:"
+msgstr ":guilabel:`Road Graph` 플러그인을 활성화하려면,"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:25
+msgid ""
+"Start the :guilabel:`Plugin Manager` by clicking on the QGIS main window's "
+"menu item :menuselection:`Plugins --> Manage and Install Plugins...`. A "
+"dialog appears."
+msgstr "먼저 QGIS 메인 창 메뉴에서 :menuselection:`Plugins --> Manage and Install Plugins...` 항목을 클릭, :guilabel:`Plugin Manager` 를 실행합니다. 대화 창이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:27
+msgid "Select the plugin like this:"
+msgstr "다음과 같이 플러그인을 선택하십시오."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:32
+msgid "Click :guilabel:`Close` on the :guilabel:`Plugin Manager` dialog."
+msgstr ":guilabel:`Plugin Manager` 대화 창의 :guilabel:`Close` 버튼을 클릭합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:34
+msgid ""
+"If you do not see the plugin in your interface, go to :menuselection:`View "
+"--> Panels` and ensure that :guilabel:`Shortest path` has a check mark next "
+"to it."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:38
+msgid "This panel will appear in your interface:"
+msgstr "인터페이스에 다음과 같은 패널이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:45
+msgid "|basic| |FA| Configure the Tool"
+msgstr "|basic| |FA| 도구 설정"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:47
+msgid ""
+"To have a layer to calculate on, first save your current map. If you haven't"
+" already done so, save your :kbd:`roads_34S` layer to a shapefile by right-"
+"clicking the layer and selecting :guilabel:`Save as...`. Create a new map "
+"and load this layer into it."
+msgstr "계산을 실행할 레이어를 설정하려면 먼저 현재 맵을 저장하십시오. 그 다음 :kbd:`roads_34S` 레이어를 오른쪽 클릭하고 :guilabel:`Save as...` 를 선택해서 레이어를 shapefile로 저장합니다. 그리고 새 맵을 생성해서 해당 레이어를 로드하십시오."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:52
+msgid ""
+"Since so many different configurations are possible when analyzing networks,"
+" the plugin doesn't assume anything before you've set it up. This means that"
+" it won't do anything at all if you don't set it up first."
+msgstr "네트워크 분석 작업 시 아주 많은 유형의 설정이 가능하기 때문에, 여러분이 설정하기 전까지 플러그인은 아무 것도 가정하지 않습니다. 즉 여러분이 먼저 설정하지 않으면 플러그인은 어떤 작업도 하지 않는다는 의미입니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:56
+msgid ""
+"Click on the menu item :menuselection:`Vector --> Road graph --> settings`. "
+"A dialog will appear."
+msgstr "메뉴에서 :menuselection:`Vector --> Road graph --> settings` 항목을 클릭하십시오. 대화 창이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:58
+msgid ""
+"Make sure it's set up like this (use defaults unless otherwise specified):"
+msgstr "다음과 같이 설정하도록 합니다. (다른 설명이 없으면 기본값을 사용합니다.)"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:63
+msgid ":guilabel:`Time unit`: :guilabel:`hour`"
+msgstr ":guilabel:`Time unit`: :guilabel:`hour`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:64
+msgid ":guilabel:`Distance unit`: :guilabel:`kilometer`"
+msgstr ":guilabel:`Distance unit`: :guilabel:`kilometer`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:65
+msgid ":guilabel:`Layer`: :guilabel:`roads_34S`"
+msgstr ":guilabel:`Layer`: :guilabel:`roads_34S`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:66
+msgid ""
+":guilabel:`Speed field`: :guilabel:`Always use default` / :guilabel:`km/h`"
+msgstr ":guilabel:`Speed field`: :guilabel:`Always use default` / :guilabel:`km/h`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:71
+msgid ":guilabel:`Direction`: :guilabel:`Two-way direction`"
+msgstr ":guilabel:`Direction`: :guilabel:`Two-way direction`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:72
+msgid ":guilabel:`Speed`: :guilabel:`60`"
+msgstr ":guilabel:`Speed`: :guilabel:`60`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:76
+msgid "|basic| |FA| Use the Tool"
+msgstr "|basic| |FA| 도구 사용"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:78
+msgid ""
+"Find two points, on roads, on your map. They do not need to have any "
+"significance, but they should be connected by roads and separated by a "
+"reasonable distance:"
+msgstr "여러분의 지도에 있는 도로 상의 두 포인트를 선택하십시오. 포인트에 어떤 의미가 있어야 할 필요는 없지만, 이 두 포인트는 도로로 연결되어 있고 일정 거리 이상 떨어져 있어야 합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:85
+msgid ""
+"In the plugin panel, click on the :guilabel:`Capture Point` button next to "
+"the :guilabel:`Start` field:"
+msgstr "플러그인 패널에서 :guilabel:`Start` 항목 옆에 있는 :guilabel:`Capture Point` 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:91
+msgid "Click on your chosen start point."
+msgstr "여러분이 선택한 시작 포인트를 클릭하십시오."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:92
+msgid ""
+"Use the :guilabel:`Capture Point` button next to the :guilabel:`Stop` field "
+"and capture your chosen end point."
+msgstr ":guilabel:`Stop` 항목 옆에 있는 :guilabel:`Capture Point` 버튼을 이용해서 여러분이 선택한 종료 포인트를 캡처하십시오."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:94
+msgid "Click on the :guilabel:`Calculate` button to see the solution:"
+msgstr ":guilabel:`Calculate` 버튼을 클릭하면 다음과 같은 계산 결과를 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:100
+msgid "|moderate| |FA| Using Criteria"
+msgstr "|moderate| |FA| 기준 사용"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:102
+msgid ""
+"Section developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr "이 부분은 Linfiniti와 S. Motala(남아프리카공화국 케이프 페닌슐라 기술대학교)가 작성했습니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:105
+msgid ""
+"Add your :kbd:`restaurants_34S` layer to the map (extract it from your "
+":kbd:`analyis` map if necessary)."
+msgstr "사용자의 :kbd:`restaurants_34S` 레이어를 (필요하다면 여러분의 :kbd:`analyis` 맵에서 추출한 다음) 맵에 추가합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:107
+msgid ""
+"Open the attribute table for the :guilabel:`roads_34S` layer and enter edit "
+"mode."
+msgstr ":guilabel:`roads_34S` 레이어의 속성 테이블을 열고 편집 모드로 들어가십시오."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:109
+msgid ""
+"Add a new column with the name :kbd:`SPEED`, and give it the type "
+":guilabel:`Whole number (integer)` with a width of :kbd:`3`."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:111
+msgid ""
+"In the main window, activate the :guilabel:`Select Features by Rectangle` "
+"tool:"
+msgstr "메인 창에서 다음과 같이 :guilabel:`Select Features by Rectangle` 도구를 활성화합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:117
+msgid "Select any main roads in urban - but not residential - areas:"
+msgstr "주거 지역이 아닌 도심 지역에 있는 주 도로 가운데 아무 도로나 선택하십시오."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:122
+msgid ""
+"(To select more than one road, hold the :kbd:`ctrl` button and drag a box "
+"across any road that you want to include in the selection.)"
+msgstr "(하나 이상의 도로를 선택하려면, :kbd:`ctrl` 버튼을 누른 채 포함하고자 하는 도로 위에 사각형을 드래그합니다.)"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:125
+msgid "In the attribute table, select :guilabel:`Show selected features`."
+msgstr "속성 테이블에서 :guilabel:`Show selected features` 를 선택하십시오."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:130
+msgid "Set the :kbd:`SPEED` value for all the selected streets to :kbd:`60`:"
+msgstr "선택한 모든 도로의 :kbd:`SPEED` 값을 :kbd:`60` 으로 설정합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:135
+msgid ""
+"In context, this means that you're setting the speed limit on those roads to"
+" :kbd:`60 km/h`."
+msgstr "문맥 상 해당 도로의 제한 속도를 :kbd:`60 km/h` 로 설정한 것입니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:138
+msgid "Select any highways or major roads outside urban areas:"
+msgstr "도심 지역 바깥에 있는 고속 도로나 주요 도로 가운데 아무 도로나 선택하십시오."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:143
+msgid "Set the :kbd:`SPEED` value for all the selected streets to :kbd:`120`."
+msgstr "선택한 모든 도로의 :kbd:`SPEED` 값을 :kbd:`120` 으로 설정합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:144
+msgid "Close the attribute table, save your edits, and exit edit mode."
+msgstr "속성 테이블을 닫고, 편집 내용을 저장한 다음 편집 모드를 종료합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:145
+msgid ""
+"Check the :menuselection:`Vector --> Road graph --> Road graph settings` to "
+"ensure that it's set up as explained previously in this lesson, but with the"
+" :guilabel:`Speed` value set to the :kbd:`SPEED` field you just created."
+msgstr ":menuselection:`Vector --> Road graph --> Road graph settings` 메뉴에서 :guilabel:`Speed` 값을 여러분이 방금 생성한 :kbd:`SPEED` 항목으로 설정한 다음, 다른 설정들은 이전과 동일한지 확인하십시오."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:148
+msgid ""
+"In the :guilabel:`Shortest path` panel, click the :guilabel:`Start point` "
+"button."
+msgstr ":guilabel:`Shortest path` 패널에 있는 :guilabel:`Start point` 버튼을 클릭합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:150
+msgid ""
+"Set the starting point on a minor road on one side of |majorUrbanName| and "
+"the end point on a major road on the other side of town:"
+msgstr "다음과 같이 |majorUrbanName| 의 한 쪽에 있는 주요 도로 상에 시작 포인트를, 도시의 다른 한 쪽에 있는 주요 도로 상에 종료 포인트를 설정합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:156
+msgid ""
+"In the :guilabel:`Criterion` drop-down list in the :guilabel:`Shortest path`"
+" panel, select :guilabel:`Length`."
+msgstr ":guilabel:`Shortest path` 패널에 있는 :guilabel:`Criterion` 드롭다운 목록에서 :guilabel:`Length` 를 선택합니다. "
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:158
+msgid ""
+"Click :guilabel:`Calculate`. The route will be calculated for the shortest "
+"distance:"
+msgstr ":guilabel:`Calculate` 를 클릭하십시오. 다음과 같이 최단 거리의 경로를 계산합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:164
+msgid ""
+"Notice the values of :guilabel:`Length` and :guilabel:`Time` in the "
+":guilabel:`Shortest path` panel."
+msgstr ":guilabel:`Shortest path` 에 있는 :guilabel:`Length` 와 :guilabel:`Time` 의 값을 살펴보십시오."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:167
+msgid "Set the :guilabel:`Criterion` to :guilabel:`Time`."
+msgstr ":guilabel:`Criterion` 을 :guilabel:`Time` 으로 설정합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:168
+msgid ""
+"Click :guilabel:`Calculate` again. The route will be calculated for the "
+"shortest time:"
+msgstr ":guilabel:`Calculate` 를 다시 클릭해보십시오. 다음과 같이 최단 시간의 경로를 계산할 것입니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:174
+msgid ""
+"You can switch back and forth between these criteria, recalculating each "
+"time, and note the changes in the :guilabel:`Length` and :guilabel:`Time` "
+"taken. Remember that the assumption being made to arrive at the time taken "
+"to travel a route does not account for acceleration, and assumes that you "
+"will be traveling at the speed limit at all times. In a real situation, you "
+"may want to split roads into smaller sections and note the average or "
+"expected speed in each section, rather than the speed limit."
+msgstr "이 기준들을 차례로 선택하면서 매번 재계산 작업을 할 수 있습니다. :guilabel:`Length` 와 :guilabel:`Time` 의 값이 어떻게 변화하는지 살펴보십시오. 해당 경로의 최단 시간 계산은 과속 등을 염두에 두지 않고, 항상 제한 속도로 달린다는 가정 하에 이루어진다는 점을 기억하십시오. 실제 상황에서는 제한 속도보다는 도로를 좀 더 작은 구역으로 나누고, 각 구역에서의 평균 또는 기대 속도를 염두에 두어야 합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:182
+msgid ""
+"If, on clicking :guilabel:`Calculate`, you see an error stating that a path "
+"could not be found, make sure that the roads you digitized actually meet "
+"each other. If they're not quite touching, either fix them by modifying the "
+"features, or set the :guilabel:`Topology tolerance` in the plugin's "
+"settings. If they're passing over each other without intersecting, use the "
+":guilabel:`Split features` tool to \"split\" roads at their intersections:"
+msgstr ":guilabel:`Calculate` 를 클릭했을 때 경로를 찾을 수 없다는 오류가 발생하는 경우, 여러분이 디지타이즈한 도로가 서로 연결되어 있는지 확인하십시오. 도로들이 서로 맞닿아 있지 않다면 피처를 수정하든지, 아니면 플러그인 설정에서 :guilabel:`Topology tolerance` 를 설정해서 문제를 해결해야 합니다. 두 도로가 서로 지나가지만 교차하지는 않을 경우, 다음 :guilabel:`Split features` 도구를 이용해서 교차점에서 도로를 \"분리\"해야 합니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:189
+msgid "|mActionSplitFeatures|"
+msgstr "|mActionSplitFeatures|"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:191
+msgid ""
+"Remember that the :guilabel:`Split features` tool only works in edit mode on"
+" selected features, though!"
+msgstr "하지만 :guilabel:`Split features` 도구는 선택한 피처가 편집 모드일 경우에만 실행된다는 점을 기억해야 합니다!"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:194
+msgid ""
+"You might also find that the shortest route is also the quickest if this "
+"error is returned."
+msgstr "그런데 최단 거리 경로와 최단 시간 경로가 동일한 경우에 이 오류가 발생할 수도 있습니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:198
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:200
+msgid ""
+"Now you know how to use the :guilabel:`Road Graph` plugin to solve shortest-"
+"path problems."
+msgstr "이제 최단 경로 문제를 해결하려면 어떻게 :guilabel:`Road Graph` 플러그인을 사용해야 하는지 배웠습니다."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:204
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:206
+msgid ""
+"Next you'll see how to run spatial statistics algorithms on vector datasets."
+msgstr "다음 강의에서는 벡터 데이터셋 상에서 공간 통계 알고리듬을 실행하는 방법을 배워보겠습니다."

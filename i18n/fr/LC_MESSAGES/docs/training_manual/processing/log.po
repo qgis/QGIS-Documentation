@@ -1,0 +1,130 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-20 08:48+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/log.rst:6
+msgid "The processing log"
+msgstr "Le journal de progression"
+
+#: ../../source/docs/training_manual/processing/log.rst:8
+msgid "This lesson describes the processing log"
+msgstr "Cette leçon décrit le journal de progression"
+
+#: ../../source/docs/training_manual/processing/log.rst:10
+msgid ""
+"All the analysis performed with the processing framework is logged in its "
+"own logging system. This allows you to know more about what has been done "
+"with the processing tools, to solve problems when they happen, and also to "
+"re--run previous operations, since the logging system also implements some "
+"interactivity."
+msgstr "Toutes les analyses effectuées avec le module de traitements sont enregistrées dans son propre système de suivi du journal. Cela vous permet d'en savoir plus à propos de ce qui a été fait avec les outils de traitement, pour résoudre des problèmes quand ils surviennent, et aussi de re-exécuter les opérations précédentes, puisque le système de suivi du journal met également en oeuvre une certaine interactivité."
+
+#: ../../source/docs/training_manual/processing/log.rst:13
+msgid ""
+"To open the log, select the corresponding entry in the processing menu. You "
+"will see the following dialog."
+msgstr "Pour ouvrir le journal, sélectionnez l'entrée correspondante dans le menu de traitement. Vous verrez la boîte de dialogue suivante."
+
+#: ../../source/docs/training_manual/processing/log.rst:17
+msgid ""
+"It contains four blocks of information: *Info*, *Error*, *Warnings* and "
+"*Algorithms*. Here is a description of all of them."
+msgstr "Elle contient quatre blocs d'information : *Info*, *Erreur*, *Avertissements* et *Algorithmes*. Voici une description de chacun d'entre eux."
+
+#: ../../source/docs/training_manual/processing/log.rst:19
+msgid ""
+"*Info*. Some algorithms might leave here information about their execution. "
+"For instance, those algorithms that call an external application usually log"
+" the console output of that application to this entry. If you have a look at"
+" it, you will see that the output of the SAGA algorithm that we just run "
+"(and that fail to execute because input data was not correct) is stored "
+"here."
+msgstr "*Info*. Certains algorithmes peuvent laisser ici des informations sur leur exécution. Par exemple, ces algorithmes qui appellent une application externe enregistrent habituellement la sortie de la console de l'application dans cette entrée. Si vous jetez un oeil à celle-ci, vous verrez que la sortie de l'algorithme SAGA que nous venons de faire tourner (et qui n'est pas parvenu à s'exécuter car les données d'entrée n'étaient pas correct) est stockée ici."
+
+#: ../../source/docs/training_manual/processing/log.rst:23
+msgid ""
+"This is helpful to understand what is going on. Advanced users will be able "
+"to analyze that output to find out why the algorithm failed. If you are not "
+"an advanced user, this will be useful for others to help you diagnose the "
+"problem you are having, which might be a problem in the installation of the "
+"external software or an issue with the data you provided."
+msgstr "Ceci est utile pour comprendre ce qui se passe. Les utilisateurs avancés seront capables d'analyser cette sortie pour trouver pourquoi l'algorithme n'a pas pu s'exécuter. Si vous n'êtes pas un utilisateur avancé, ceci permettra aux autres personnes de vous aider à diagnostiquer le problème, qui peut être un problème dans l'installation du logiciel externe ou un problème avec les données que vous avez fournies."
+
+#: ../../source/docs/training_manual/processing/log.rst:25
+msgid ""
+"*Warnings*. Even if the algorithm could be executed, some algorithms might "
+"leave warnings in case the result might not be right. For instance, when "
+"executing an interpolation algorithm with a very small amount of points. The"
+" algorithm can run and will produce a result, but it is likely that it will "
+"not be correct, since more points should be used. It's a good idea to "
+"regularly check for this type of warnings if you are not sure about some "
+"aspect of a given algorithm."
+msgstr "*Avertissements* Même si l'algorithme pourrait être exécuté, des algorithmes peuvent laisser des messages d'avertissements dans le cas où le résultat pourrait ne pas être correct. Par exemple, lors de l'exécution d'un algorithme d'interpolation avec un très petit amas de points. L'algorithme peut tourner et produira un résultat, mais il est probable qu'il ne sera pas correct, étant donné que plusieurs points doivent être utilisés. C'est une bonne idée de vérifier régulièrement ce type d'avertissements si vous n'êtes pas sûr de certains aspets pour  "
+
+#: ../../source/docs/training_manual/processing/log.rst:27
+msgid ""
+"*Error*. Errors that appear and are not directly related to external "
+"applications are logged in this section."
+msgstr "*Erreurs*. Les erreurs qui apparaissent et ne sont pas directement liées à des applications externes sont enregistrées dans cette section."
+
+#: ../../source/docs/training_manual/processing/log.rst:29
+msgid ""
+"*Algorithms*. All algorithms that are executed, even if they are executed "
+"from the GUI and not from the console (which will be explained later in this"
+" manual) are stored in this part of the log as a console call. That means "
+"that everytime you run an algorithm, a console command is added to the log, "
+"and you have the full history of your working session. Here is how that "
+"history looks like"
+msgstr "*Algorithmes*. Tous les algorithmes qui sont exécutés, même s'ils sont lancés depuis le GUI et non depuis la console (dont on parlera plus tard dans ce manuel), sont stockés dans cette parties du journal comme un appel de console. Cela signifie que chaque fois que vous lancez un algorithme, une commande de console est ajoutée au journal, et vous avez l'historique entier de votre session de travail. Voici à quoi ressemble cet historique de travail."
+
+#: ../../source/docs/training_manual/processing/log.rst:33
+msgid ""
+"This can be very useful when starting working with the console, to learn "
+"about the syntax of algorithms. We will use it when we discuss how to run "
+"analysis commands from the console."
+msgstr "Il peut être très utile lorsque l'on commence à travailler avec la console, d'apprendre la syntaxe des algorithmes. Nous l'utiliserons lorsque nous discuterons de comment lancer des commandes d'analyses depuis la console."
+
+#: ../../source/docs/training_manual/processing/log.rst:35
+msgid ""
+"The history is also interactive, and you can re--run any previous algorithm "
+"just by double--clicking on its entry. This is an easy way of replicating "
+"the work we already did before."
+msgstr "L'historique est aussi interactif, et vous pouvez re-exécuter chaque algorithme précédent simplement en double--cliquant sur son entrée. C'est une façon simple de répéter le travailler que nous avons déjà fait avant."
+
+#: ../../source/docs/training_manual/processing/log.rst:37
+msgid ""
+"For instance, try the following. Open the data corresponding to the first "
+"chapter of this manual and run the algorithm explained there. Now go to the "
+"log dialog and locate the last algorithm in the list, which corresponds to "
+"the algorithm you have just run. Double--click on it an a new result should "
+"be produced, just like when you run it using the normal dialog and calling "
+"it from the toolbox."
+msgstr "Par exemple, essayez ce qui suit. Ouvrez les données correspondantes au premier chapitre de ce manuel et exécuter l'algorithme expliqué ici. Rendez-vous maintenant à la boîte de dialogue du journal et localisez le dernier algorithme dans la liste, qui correspond à l'algorithme que nous venons d'exécuter. Double--cliquez dessus et un nouveau résultat devrait être produit, simplement comme lorsque vous l'avez lancé en utilisant la boîte de dialogue normale et en l'appelant depuis la boîte à outils."
+
+#: ../../source/docs/training_manual/processing/log.rst:41
+msgid "|hard| Advanced"
+msgstr "|hard| Avancé"
+
+#: ../../source/docs/training_manual/processing/log.rst:43
+msgid ""
+"You can also modify the algorithm. Just copy it, open the "
+":menuselection:`Plugins --> Python console`, click on :menuselection:`Import"
+" class --> Import Processing class`, then paste it to re-run the analysis; "
+"change the text at will. To display the resulting file, type "
+":kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', "
+"'ogr')`."
+msgstr "Vous pouvez également modifier l'algorithme. Simplement copiez-le, ouvrez :menuselection:`Extensions --> Console Python`, cliquez sur :menuselection:`Importer une classe --> Importer une classe de traitement`, puis collez-le pour re-lancer l'analyse ; modifiez le texte à volonté. Pour afficher le fichier obtenu, tapez :kbd:`iface.addVectorLayer('/chemin/nomdufichier.shp', 'Nom de la couche dans la légende', 'ogr')`."

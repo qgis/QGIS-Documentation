@@ -1,0 +1,375 @@
+# 
+# Translators:
+# André Filipe Mendes Duarte <a_topas@hotmail.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-30 22:41+0000\n"
+"Last-Translator: André Filipe Mendes Duarte <a_topas@hotmail.com>\n"
+"Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:6
+msgid "|LS| Systematic Sampling Design"
+msgstr "|LS| Design da Amostragem Sistemática"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:8
+msgid ""
+"You have already digitized a set of polygons that represent the forest "
+"stands, but you don't have information about the forest just yet. For that "
+"purpose you can design a survey to inventory the whole forest area and then "
+"estimate its parameters. In this lesson you will create a systematic set of "
+"sampling plots."
+msgstr "Já digitalizou um conjunto de polígonos que representam povoamentos florestais, mas ainda não tem informações sobre a floresta. Para esse efeito, pode projetar uma pesquisa para o inventário da área de floresta e, em seguida, estimar os seus parâmetros. Nesta lição,  vai criar um conjunto de pontos de amostragem sistemática."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:10
+msgid ""
+"When you start planning your forest inventory it is important to clearly "
+"define the objectives, the types of sample plots that will be used, and the "
+"data that will be collected to achieve the objectives. For each individual "
+"case, those will depend on the type of forest and the management purpose; "
+"and should be carefully planned by someone with forestry knowledge. In this "
+"lesson, you will implement a theoretical inventory based on a systematic "
+"sampling plot design."
+msgstr "Quando começamos a planear um inventário florestal é importante definir claramente os objetivos,  os tipos de parcelas que vão ser utilizados, e os dados que serão recolhidos para atingir os objectivos. Para cada caso individual, irá depender do tipo de gestão da floresta proposta; e deve ser cuidadosamente planeado por alguém com conhecimento na área florestal. Nesta lição, vai implementar um inventário teórico baseado numa amostragem sistemática de parcelas."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:12
+msgid ""
+"**The goal for this lesson:** To create a systematic sampling plot design to"
+" survey the forest area."
+msgstr "**O objetivo desta lição:**Criar um esquema de parcelas de amostragem sistemática com o intuito de fazer o levantamento da área florestal."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:15
+msgid "Inventorying the Forest"
+msgstr "Inventariar a Floresta"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:17
+msgid ""
+"There are several methods to inventory forests, each of them suiting "
+"different purposes and conditions. For example, one very accurate way to "
+"inventory a forest (if you consider only tree species) would be to visit the"
+" forest and make a list of every tree and their characteristics. As you can "
+"imagine this is not commonly applicable except for some small areas or some "
+"special situations."
+msgstr "Existem diversos métodos de inventariar a floresta, cada um com diferentes condições e propósitos. Por exemplo, de uma forma muito precisa para inventariar uma floresta (se considerar apenas espécies de árvores) seria visitar a floresta e fazer uma lista de todas as árvores e as suas características. Como pode imaginar este não é geralmente aplicável excepto para áreas pequenas ou situações especiais."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:19
+msgid ""
+"The most common way to find out about a forest is by sampling it, that is, "
+"taking measurements in different locations at the forest and generalizing "
+"that information to the whole forest. These measurements are often made in "
+"*sample plots* that are smaller forest areas that can be easily measured. "
+"The sample plots can be of any size (for ex. 50 m2, 0.5 ha) and form (for "
+"ex. circular, rectangular, variable size), and can be located in the forest "
+"in different ways (for ex. randomly, systematically, along lines). The size,"
+" form and location of the sample plots are usually decided following "
+"statistical, economical and practical considerations. If you have no "
+"forestry knowledge, you might be interested in reading `this Wikipedia "
+"article <http://en.wikipedia.org/wiki/Forest_inventory>`_."
+msgstr "A forma mais comum para descobrir mais sobre a floresta é, por amostragem, isto é, fazer medições em locais diferentes na floresta e generalizar essa informação para toda a floresta. Estas medições são muitas vezes feitas em parcelas *parcelas de amostragem* que são áreas florestais menores que podem ser facilmente medidas. As parcelas podem ser de qualquer tamanho (por ex. 50 m2, 0,5 ha) e forma (por ex. Circular, rectangular, de tamanho variável), e pode ser localizado na floresta de maneiras diferentes (por ex. Aleatoriamente, sistematicamente, ao longo de linhas). O tamanho, forma e localização das parcelas geralmente são decididos de acordo com critérios estatísticos, económicos e práticos. Se  não tem conhecimento de silvicultura, pode estar interessado em ler este artigo <http://en.wikipedia.org/wiki/Forest_inventory>`_."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:22
+msgid "|basic| |FA| Implementing a Systematic Sampling Plot Design"
+msgstr "|basic| |FA| Implementação do design da amostragem sistemática"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:24
+msgid ""
+"For the forest you are working with, the manager has decided that a "
+"systematic sampling design is the most appropriate for this forest and has "
+"decided that a fixed distance of 80 meters between the sample plots and "
+"sampling lines will yield reliable results (for this case, +- 5% average "
+"error at a probability of 68%). Variable size plots has been decided to be "
+"the most effective method for this inventory, for growing and mature stands,"
+" but a 4 meters fixed radius plots will be used for seedling stands."
+msgstr "Para a floresta que está a trabalhar, o gestor decidiu que o design da amostragem sistemática como o mais apropriado para esta floresta decidindo que a distância entre as parcelas seria fixa, com 80 metros entre as linhas de amostragem visto que iria produzir resultados confiáveis (para este caso, + - 5% de erro médio a uma probabilidade de 68%). Como o método mais eficaz para este inventário decidiu-se que as parcelas teriam tamanho variável, para os povoamentos em crescimento e maduros, para povoamentos jovens seriam usadas parcelas de raio fixo com 4 metros de raio."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:26
+msgid ""
+"In practice, you simply need to represented the sample plots as points that "
+"will be used by the field teams later:"
+msgstr "Na prática, necessita de simplesmente representar as parcelas de amostra como pontos que serão usados pelas equipas de campo posteriormente:"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:28
+msgid "Open your :kbd:`digitizing_2012.qgs` project from the previous lesson."
+msgstr "Abra o seu :kbd:`digitizing_2012.qgs` projecto da lição anterior."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:29
+msgid "Remove all the layers except for :kbd:`forest_stands_2012`."
+msgstr "Remova todas as camadas excepto a :kbd:`forest_stands_2012`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:30
+msgid "Save your project now as :kbd:`forest_inventory.qgs`"
+msgstr "Guarde o seu projecto agora como :kbd:`forest_inventory.qgs`"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:32
+msgid ""
+"Now you need to create a rectangular grid of points separated 80 meters from"
+" each other:"
+msgstr "Agora necessita de criar uma grelha retangular de pontos separados por 80 metros um do outro:"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:34
+msgid "Open :menuselection:`Vector --> Research Tools --> Regular points`."
+msgstr "Abrir :menuselection:`Vector --> Research Tools --> Pontos regulares`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:35
+msgid ""
+"In the :guilabel:`Area` definitions select :guilabel:`Input Boundary Layer`."
+msgstr "In the :guilabel:`Area` Seleccionar definições :guilabel:`Input Boundary Layer`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:36
+msgid "And as input layer set the :kbd:`forest_stands_2012` layer."
+msgstr "And as input layer set the :kbd:`forest_stands_2012` layer."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:37
+msgid ""
+"In the :guilabel:`Grid Spacing` settings, select :guilabel:`Use this point "
+"spacing` and set it to :kbd:`80`."
+msgstr "In the :guilabel:`Grid Spacing` opções, sleccionar :guilabel:`Use este espassamento de pontos` e configure para :kbd:`80`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:38
+msgid ""
+"Save the output as :kbd:`systematic_plots.shp` in the "
+":kbd:`forestry\\\\sampling\\\\` folder."
+msgstr "Guarde a saída como :kbd:`systematic_plots.shp` na :kbd:`forestry\\\\sampling\\\\` pasta."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:39
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:53
+msgid "Check :guilabel:`Add result to canvas`."
+msgstr "Check :guilabel:`Adicionar resultado ao mapa`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:40
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:54
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:63
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:76
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:97
+msgid "Click :guilabel:`OK`."
+msgstr "Click :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:42
+msgid ""
+"The suggested :guilabel:`Regular points` creates the systematic points "
+"starting in the corner upper-left corner of the extent of the selected "
+"polygon layer. If you want to add some randomness to this regular points, "
+"you could use a randomly calculated number between 0 and 80 (80 is the "
+"distance between our points), and then write it as the :guilabel:`Initial "
+"inset from corner (LH side)` parameter in the tool's dialog."
+msgstr "A sugestão :guilabel:`Pontos regulares` cria pontos sistemáticos que começam no canto superior esquerdo da extensão da camada do polígono seleccionado. Se  quiser adicionar um pouco de aleatoriedade para estes pontos regulares, pode usar um número calculado de forma aleatória entre 0 e 80 (80 é a distância entre nossos pontos), e depois escreve isto como o parâmetro :guilabel:`Initial inset from corner (LH side)` na caixa de diálogo da ferramenta."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:44
+msgid ""
+"You notice that the tool has used the whole extent of your stands layer to "
+"generate a rectangular grid of points. But you are only interested on those "
+"points that are actually inside your forest area (see the images below):"
+msgstr "Percebe que a ferramenta usa toda a extensão da sua camada de povoamentos para gerar uma grelha retangular de pontos. Mas interessa-nos apenas  esses pontos que estão, na verdade, dentro da sua área de floresta (veja as imagens abaixo):"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:49
+msgid "Open :menuselection:`Vector --> Geoprocessing Tools --> Clip`."
+msgstr "Open :menuselection:`Vector --> Ferramentas de Geoprocessamento --> Corte`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:50
+msgid "Select :kbd:`systematic_plots` as :guilabel:`Input vector layer`."
+msgstr "Select :kbd:`systematic_plots` as :guilabel:`Input vector layer`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:51
+msgid "Set :kbd:`forest_stands_2012` as the :guilabel:`Clip layer`."
+msgstr "Set :kbd:`forest_stands_2012` as the :guilabel:`Clip layer`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:52
+msgid "Save the result as :kbd:`systematic_plots_clip.shp`."
+msgstr "Guardar resultado como:kbd:`systematic_plots_clip.shp`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:56
+msgid ""
+"You have now the points that the field teams will use to navigate to the "
+"designed sample plots locations. You can still prepare these points so that "
+"they are more useful for the field work. At the least you will have to add "
+"meaningful names for the points and export them to a format that can be used"
+" in their GPS devices."
+msgstr "Tem agora os pontos que as equipas de campo vão usar para navegar até os locais das parcelas planeadas. Pode ainda preparar estes pontos de modo a que  eles sejam mais úteis para o trabalho de campo. Pelo menos terá que adicionar nomes significativos para os pontos e exportá-los para um formato que pode ser usado no seu aparelho de GPS."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:58
+msgid ""
+"Lets start with the naming of the sample plots. If you check the "
+":guilabel:`Attribute table` for the plots inside the forest area, you can "
+"see that you have the default :guilabel:`id` field automatically generated "
+"by the :guilabel:`Regular points` tool. Label the points to see them in the "
+"map and consider if you could use those numbers as part of your sample plot "
+"naming:"
+msgstr "Vamos começar com o nome das parcelas. Se verificar a :guilabel:`Tabela de atributos` para as parcelas dentro da área florestal, pode verificar que tem por defeito :guilabel:`id` gerado automaticamente pela ferramenta :guilabel:`Pontos regulares`.  Rotule os pontos para vê-los no mapa e considerar se poderia usar estes números como parte das suas parcelas de amostra nomeadas."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:60
+msgid ""
+"Open the :guilabel:`Layer Properties --> Labels` for your "
+":kbd:`systematic_plots_clip`."
+msgstr "Abra as :guilabel:`Layer Properties --> Labels` para a sua :kbd:`systematic_plots_clip`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:61
+msgid ""
+"Check :guilabel:`Label this layer with` and select the field :kbd:`ID`."
+msgstr "Verifique :guilabel:`Label this layer with`  e seleccione o campo :kbd:`ID`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:62
+msgid ""
+"Go to the :guilabel:`Buffer` options and check the :guilabel:`Draw text "
+"buffer`, set the :guilabel:`Size` to :kbd:`1`."
+msgstr "Vá às :guilabel:`Buffer` opções e verifique a :guilabel:`Draw text buffer`, defina :guilabel:`Size` to :kbd:`1`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:65
+msgid ""
+"Now look at the labels on your map. You can see that the points have been "
+"created and numbered first West to East and then North to South. If you look"
+" at the attribute table again, you will notice that the order in the table "
+"is following also that pattern. Unless you would have a reason to name the "
+"sample plots in a different way, naming them in a West-East/North-South "
+"fashion follows a logical order and is a good option."
+msgstr "Agora olhe para os rótulos do seu mapa. Pode verificar que os pontos foram criadas e numeradas primeiro de Ocidente para o Oriente e, em seguida, do Norte para o Sul. Se  olhar para a tabela de atributos de novo,  vai notar que a ordem na tabela também segue esse padrão. Se pretender nomear por outras razões as parcelas de uma forma diferente, nomeando-os de uma forma Leste-Oeste / Norte-Sul segue uma ordem lógica e é uma boa opção."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:67
+msgid ""
+"If you would like to order or name them in a different way, you could use a "
+"spreadsheet to be able to order and combine rows and columns in any "
+"different way."
+msgstr "Se pretender nomear de uma maneira diferente, pode usar uma folha para ser capaz de ordenar e combinar as linhas e colunas de uma forma diferente."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:69
+msgid ""
+"Nevertheless, the number values in the :kbd:`id` field are not so good. It "
+"would be better if the naming would be something like :kbd:`p_1, p_2...`. "
+"You can create a new column for the :kbd:`systematic_plots_clip` layer:"
+msgstr "No entanto, o número de valores do campo :kbd:`id` não é tão bom. Seria melhor se a nomeação fosse algo como: kbd:`p_1, p_2...`.  :kbd:`systematic_plots_clip` layer:"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:71
+msgid ""
+"Go to the :guilabel:`Attribute table` for :kbd:`systematic_plots_clip`."
+msgstr "Vá à :guilabel:`Tabela de atributos` da :kbd:`systematic_plots_clip`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:72
+msgid "Enable the edit mode."
+msgstr "Active o modo de edição."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:73
+msgid ""
+"Open the :guilabel:`Field calculator` and name the new column "
+":kbd:`Plot_id`."
+msgstr "Abra a :guilabel:`Calculadora de campos` e o nome de uma nova coluna :kbd:`Plot_id`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:74
+msgid "Set the :guilabel:`Output field type`to :kbd:`Text (string)`."
+msgstr "Defina o  :guilabel:`Tipo de campo de saída`para :kbd:`Text (string)`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:75
+msgid ""
+"In the :guilabel:`Expression` field, write, copy or construct this formula "
+":kbd:`concat('P_', $rownum )`. Remember that you can also double click on "
+"the elements inside the :guilabel:`Function list`. The :kbd:`concat` "
+"function can be found under :guilabel:`String` and the :kbd:`$rownum` "
+"parameter can be found under :guilabel:`Record`."
+msgstr "No campo :guilabel:`Expression` , escreva, copie ou construa a fórmula :kbd:`concat('P_', $rownum )`. Lembre-se que também pode clicar duas vezes sobre os elementos dentro do :guilabel:`Function list`. The :kbd:`concat` função que pode ser encontrada :guilabel:`String` e o parametro :kbd:`$rownum` pode ser encontrado em :guilabel:`Record`. "
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:77
+msgid "Disable the edit mode and save your changes."
+msgstr "Desactive o modo de edição e guarde as alterações."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:79
+msgid ""
+"Now you have a new column with plot names that are meaningful to you. For "
+"the :kbd:`systematic_plots_clip` layer, change the field used for labeling "
+"to your new :kbd:`Plot_id` field."
+msgstr "Agora tem uma nova coluna com os nomes de cada parcela que são compreendidas por si. Para a camada kbd:`systematic_plots_clip`, altere o campo usado para o seu novo rótulo :kbd:`Plot_id` field."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:85
+msgid "|basic| |FA| Exporting Sample Plots as GPX format"
+msgstr "|basic| |FA| Exportar a amostra de parcelas como formato GPX"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:87
+msgid ""
+"The field teams will be probably using a GPS device to locate the sample "
+"plots you planned. The next step is to export the points you created to a "
+"format that your GPS can read. QGIS allows you to save your point and line "
+"vector data in `GPS eXchange Format "
+"(GPX)<http://en.wikipedia.org/wiki/GPS_Exchange_Format>`, which is an "
+"standard GPS data format that can be read by most of the specialized "
+"software. You need to be careful with selecting the CRS when you save your "
+"data:"
+msgstr "As equipas de campo provavelmente podem usar um dispositivo de GPS para localizar as parcelas que planeou. O próximo passo é exportar os pontos que  criou para um formato que o seu GPS pode ler. O QGIS permite que salve o seu ponto e linha de dados vectoriais em `eXchange Format GPS (GPX) <http://en.wikipedia.org/wiki/GPS_Exchange_Format>`, que é um formato de dados de GPS padrão que pode ser lido pela maior parte do software especializado. Deve ter cuidado com a seleção do SRC quando guardar os seus dados:"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:89
+msgid ""
+"Right click :kbd:`systematic_plots_clip` and select :guilabel:`Save as`."
+msgstr "Right click :kbd:`systematic_plots_clip` and select :guilabel:`Save as"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:90
+msgid "In :guilabel:`Format` select :guilabel:`GPS eXchange Format [GPX]`."
+msgstr "Em :guilabel:`Formato` seleccione :guilabel:`GPS eXchange Format [GPX]`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:91
+msgid "Save the output as :kbd:`plots_wgs84.gpx`."
+msgstr "Guarde a saída como :kbd:`plots_wgs84.gpx`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:92
+msgid "In :guilabel:`CRS` select :guilabel:`Selected CRS`."
+msgstr "Em :guilabel:`SRC` selecionar :guilabel:`Seleccionar SRC`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:93
+msgid "Browse for :kbd:`WGS 84 (EPSG:4326)`."
+msgstr "Browse for :kbd:`WGS 84 (EPSG:4326)`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:95
+msgid ""
+"..note:: The :kbd:`GPX` format accepts only this CRS, if you select a "
+"different one, QGIS will give no error but you will get an empty file."
+msgstr "..nota:: O :kbd:`GPX` este SRC aceita apenas este formato, se seleccionar outro formato, o QGIS não dará nenhum erro mas o ficheiro ficará vazio."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:98
+msgid ""
+"In the dialog that opens, select only the :kbd:`waypoints` layer (the rest "
+"of the layers are empty)."
+msgstr "Na caixa de diálogo que abriu, seleccione apenas :kbd:`waypoints` camada ( o resto das camadas estão vazias)."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:103
+msgid ""
+"The inventory sample plots are now in a standard format that can be managed "
+"by most of the GPS software. The field teams can now upload the locations of"
+" the sample plots to their devices. That would be done by using the specific"
+" devices own software and the :kbd:`plots_wgs84.gpx` file you just saved. "
+"Other option would be to use the :guilabel:`GPS Tools` plugin but it would "
+"most likely involve setting the tool to work with your specific GPS device. "
+"If you are working with your own data and want to see how the tool works you"
+" can find out information about it in the section `Working with GPS Data "
+"<http://docs.qgis.org/2.2/en/docs/user_manual/working_with_gps/index.html>`_"
+" in the :guilabel:`QGIS User Manual`."
+msgstr "As parcelas do inventário estão agora num formato padrão que pode ser geridos pela maioria dos softwares GPS. As equipas de campo podem agora fazer o carregamento dos locais das parcelas nos seus dispositivos. Poderá ser realizado usando os dispositivos específicos próprios de software e o arquivo : kbd: `plots_wgs84.gpx` que acabou de guardar. Outra opção seria usar o módulo: guilabel: `GPS Tools`, mas seria mais provável envolver a fixação da ferramenta para trabalhar com o seu dispositivo GPS específico. Se  estiver a trabalhar com os seus próprios dados e quer ver como a ferramenta funciona pode descobrir informações sobre ele na seção `Trabalhar com dados GPS <http://docs.qgis.org/2.2/en/docs/user_manual/working_with_gps/index.html>`_ in the :guilabel:`QGIS Manual do Utilizador`."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:105
+msgid "Save your QGIS project now."
+msgstr "Guarde o seu projecto QGIS"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:108
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:110
+msgid ""
+"You just saw how easily you can create a systematic sampling design to be "
+"used in a forest inventory. Creating other types of sampling designs will "
+"involve the use of different tools within QGIS, spreadsheets or scripting to"
+" calculate the coordinates of the sample plots, but the general idea remains"
+" the same."
+msgstr "Acabou de ver como poderá criar facilmente um projeto de amostragem sistemática para ser usado num inventário florestal. A criação de outros tipos de planos de amostragem envolve o uso de diferentes ferramentas dentro do QGIS, folhas de cálculo ou scripts para calcular as coordenadas das parcelas, mas a ideia geral permanece a mesma."
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:113
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/forestry/systematic_sampling.rst:115
+msgid ""
+"In the next lesson you will see how to use the Atlas capabilities in QGIS to"
+" automatically generate detailed maps that the field teams will be using to "
+"navigate to the sample plots assigned to them."
+msgstr "Na próxima lição  verá como usar os recursos do atlas no QGIS para gerar automaticamente mapas detalhados que as equipas de campo usam para navegar para as parcelas que lhes foram atribuídas."

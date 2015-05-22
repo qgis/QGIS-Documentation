@@ -1,0 +1,382 @@
+# 
+# Translators:
+# Choro <u.ko.kubot@gmail.com>, 2014
+# Minoru Akagi <akaginch@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-02 14:41+0000\n"
+"Last-Translator: Choro <u.ko.kubot@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:6
+msgid "|LS| Implementing the Data Model"
+msgstr "|LS| データモデルの実装"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:8
+msgid ""
+"Now that we've covered all the theory, let's create a new database. This "
+"database will be used for our exercises for the lessons that will follow "
+"afterwards."
+msgstr "私たちはすべての理論をカバーしたので新しいデータベースを作成してみましょう。このデータベースは後に続くレッスンの実習で使います。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:12
+msgid ""
+"**The goal for this lesson:** To install the required software and use it to"
+" implement our example database."
+msgstr "**このレッスンの目標:** 必要なソフトウェアをインストールしてサンプルデータベースの実装に使用します。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:16
+msgid "Install PostgreSQL"
+msgstr "PostgreSQLのインストール"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:18
+msgid ""
+"Although outside the scope of this document, Mac users can install "
+"PostgreSQL using `Homebrew <http://russbrooks.com/2010/11/25/install-"
+"postgresql-9-on-os-x>`_. Windows users can use the graphical installer "
+"located here: `<http://www.postgresql.org/download/windows/>`_. Please note "
+"that the documentation will assume users are running QGIS under Ubuntu."
+msgstr "このドキュメントの範囲外ではありますが、Macユーザは `Homebrew <http://russbrooks.com/2010/11/25/install-postgresql-9-on-os-x>`_ を用いてPostgreSQLをインストールすることができます。Windowsユーザはここにあるグラフィカルなインストーラを使うことができます: `<http://www.postgresql.org/download/windows/>`_ このドキュメントではUbuntuでQGISを動作させているユーザを想定しています。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:26
+msgid "Under Ubuntu::"
+msgstr "Ubuntuで::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:30
+msgid "You should get a message like this::"
+msgstr "このようなメッセージを取得するはずです:"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:47
+msgid ""
+"Press :kbd:`Y` and :kbd:`Enter` and wait for the download and installation "
+"to finish."
+msgstr ":kbd:`Y` and :kbd:`Enter` キーを押し、ダウンロードとインストールが完了するまで待ちます。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:51
+msgid "Help"
+msgstr "ヘルプ"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:53
+msgid ""
+"PostgreSQL has very good `online "
+"<http://www.postgresql.org/docs/9.1/static/index.html>`_ documentation."
+msgstr "PostgreSQLには非常に良い `オンライン <http://www.postgresql.org/docs/9.1/static/index.html>`_ ドキュメントがあります。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:57
+msgid "Create a database user"
+msgstr "データベースユーザの作成"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:59
+msgid "Under Ubuntu:"
+msgstr "Ubuntuで:"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:61
+msgid ""
+"After the installation is complete, run this command to become the postgres "
+"user and then create a new database user::"
+msgstr "インストールが完了したらこのコマンドを実行して postgres ユーザになり、新しいデータベースユーザを作成します::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:66
+msgid ""
+"Type in your normal log in password when prompted (you need to have sudo "
+"rights)."
+msgstr "入力を求められたら通常のログインパスワードを入力します (sudo権限を持っている必要があります)。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:68
+msgid ""
+"Now, at the postgres user's bash prompt, create the database user. Make sure"
+" the user name matches your unix login name: it will make your life much "
+"easier, as postgres will automatically authenticate you when you are logged "
+"in as that user::"
+msgstr "では、postgres ユーザでの bash プロンプトでデータベースユーザを作成します。ユーザ名は unix ログイン名と一致させて下さい。そうするとログインする時に postgres が自動的に認証するのでいろいろと楽になります::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:75
+msgid ""
+"Enter a password when prompted. You should use a different password to your "
+"login password."
+msgstr "入力を求められたらパスワードを入力します。ログインパスワードとは異なるパスワードを使用するべきです。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:78
+msgid "What do those options mean?"
+msgstr "これらのオプションはどういう意味ですか?"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:90
+msgid ""
+"Now you should should leave the postgres user's bash shell environment by "
+"typing::"
+msgstr "次のように入力して postgres ユーザの bash シェル環境を去ります::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:96
+msgid "Verify the new account"
+msgstr "新しいアカウントの確認"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:102
+msgid "Should return something like this::"
+msgstr "このように返されるはずです::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:112
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:136
+msgid "Type :kbd:`q` to exit."
+msgstr ":kbd:`q` を入力して終了します。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:115
+msgid "Create a database"
+msgstr "データベースの作成"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:117
+msgid ""
+"The :kbd:`createdb` command is used to create a new database. It should be "
+"run from the bash shell prompt::"
+msgstr ":kbd:`createdb` コマンドは新しいデータベースを作成するのに使います。bash シェルプロンプトから実行します::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:122
+msgid ""
+"You can verify the existence of your new database by using this command::"
+msgstr "このコマンドを使用して新しいデータベースの存在を確認できます::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:126
+msgid "Which should return something like this::"
+msgstr "このように返されるはずです::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:139
+msgid "Starting a database shell session"
+msgstr "データベースのシェルセッションの開始"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:141
+msgid "You can connect to your database easily like this::"
+msgstr "このようにして簡単にデータベースに接続することができます::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:145
+msgid "To exit out of the psql database shell, type::"
+msgstr "psql データベースシェルを終了するには::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:149
+msgid "For help in using the shell, type::"
+msgstr "シェルのヘルプを見るには::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:153
+msgid "For help in using sql commands, type::"
+msgstr "sql コマンドのヘルプを見るには::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:157
+msgid "To get help on a specific command, type (for example)::"
+msgstr "特定のコマンドのヘルプを表示するには(例)::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:161
+msgid ""
+"See also the `Psql cheat sheet "
+"</static/training_manual/postgres/psql_cheatsheet.pdf>`_ - available online "
+"`here "
+"<http://www.postgresonline.com/special_feature.php?sf_name=postgresql83_psql_cheatsheet&outputformat=html>`_."
+msgstr "`Psql cheat sheet </static/training_manual/postgres/psql_cheatsheet.pdf>`_ も参照して下さい。`ここ <http://www.postgresonline.com/special_feature.php?sf_name=postgresql83_psql_cheatsheet&outputformat=html>`_ で利用可能です。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:166
+msgid "Make Tables in SQL"
+msgstr "SQLでテーブルを作成する"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:168
+msgid ""
+"Let's start making some tables! We will use our ER Diagram as a guide. "
+"First, connect to the address db::"
+msgstr "いくつかのテーブルを作ってみましょう! ガイドとしてER図を使用します。まず、addressデータベースに接続します::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:173
+msgid "Then create a :kbd:`streets` table::"
+msgstr ":kbd:`streets` テーブルを作成します::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:177
+msgid ""
+":kbd:`serial` and :kbd:`varchar` are **data types**. :kbd:`serial` tells "
+"PostgreSQL to start an integer sequence (auto-number) to populate the "
+":kbd:`id` automatically for every new record. :kbd:`varchar(50)` tells "
+"PostgreSQL to create a character field of 50 characters in length."
+msgstr ":kbd:`serial` と :kbd:`varchar` は **データ型** です。 :kbd:`serial` は新しいレコードのそれぞれに :kbd:`id` を自動的に設定するために PostgreSQLに整数シーケンス(自動番号割り当て)を開始させます。 :kbd:`varchar(50)` は PostgreSQLに長さ50文字の文字列フィールドを作成させます。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:182
+msgid ""
+"You will notice that the command ends with a :kbd:`;` - all SQL commands "
+"should be terminated this way. When you press enter, psql will report "
+"something like this::"
+msgstr "コマンドが :kbd:`;` で終わっていることに気づきましたか。すべてのSQLコマンドはこのように終わるべきです。Enterキーを押すと psql は次のように報告します::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:192
+msgid ""
+"That means your table was created successfully, with a primary key "
+":kbd:`streets_pkey` using :kbd:`streets.id`."
+msgstr ":kbd:`streets.id` を使用する主キー :kbd:`streets_pkey` を持つテーブルが正しく作成されました。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:195
+msgid ""
+"Note: If you hit return without entering a :kbd:`;`, then you will get a "
+"prompt like this: :kbd:`address-#`. This is because PG is expecting you to "
+"enter more. Enter :kbd:`;` to run your command."
+msgstr "注: :kbd:`;` を入力せずに Enterキーを押すと :kbd:`address-#` のようなプロンプトが表示されます。PGはさらなる入力を期待しています。コマンドを実行するには :kbd:`;` を入力して下さい。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:199
+msgid "To view your table schema, you can do this::"
+msgstr "テーブルのスキーマを表示するにはこうします::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:203
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:218
+msgid "Which should show something like this::"
+msgstr "このように表示されるはずです::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:214
+msgid "To view your table contents, you can do this::"
+msgstr "テーブルの内容を表示するにはこうします::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:224
+msgid "As you can see, our table is currently empty."
+msgstr "ご覧のようにテーブルは現在空です。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:227
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate|"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:229
+msgid "Use the approach shown above to make a table called people:"
+msgstr "上記のアプローチを使用して people というテーブルを作成します:"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:231
+msgid ""
+"Add fields such as phone number, home address, name, etc. (these aren't all "
+"valid names: change them to make them valid). Make sure you give the table "
+"an ID column with the same data-type as above."
+msgstr "電話番号、自宅住所、名前などのフィールドを追加します。上記と同じデータ型のID列も作ったか確認して下さい。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:235
+msgid ":ref:`Check your results <database-concepts-4>`"
+msgstr ":ref:`結果をチェックする <database-concepts-4>`"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:240
+msgid "Create Keys in SQL"
+msgstr "SQLでキーを作成する"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:242
+msgid ""
+"The problem with our solution above is that the database doesn't know that "
+"people and streets have a logical relationship. To express this "
+"relationship, we have to define a foreign key that points to the primary key"
+" of the streets table."
+msgstr "上記のソリューションの問題はデータベースが people と streets に論理的な関係があることを知らないことです。この関係を表現するには、streets テーブルの主キーを指す外部キーを定義する必要があります。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:250
+msgid "There are two ways to do this:"
+msgstr "これを行うには2つの方法があります:"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:252
+msgid "Add the key after the table has been created"
+msgstr "テーブル作成後にキーを追加する"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:253
+msgid "Define the key at time of table creation"
+msgstr "テーブル作成時にキーを定義する"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:255
+msgid "Our table has already been created, so let's do it the first way::"
+msgstr "テーブルは既に作成されているので最初の方法を採ります::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:261
+msgid ""
+"That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
+"match a valid street :kbd:`id` from the :kbd:`streets` table."
+msgstr ":kbd:`people` テーブルの :kbd:`street_id` フィールドは :kbd:`streets` テーブルの有効な街路 :kbd:`id` と一致しなければならないことを指示します。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:264
+msgid ""
+"The more usual way to create a constraint is to do it when you create the "
+"table::"
+msgstr "より一般的には制約の作成はテーブルの作成時に行います::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:274
+msgid "After adding the constraint, our table schema looks like this now::"
+msgstr "制約を追加した後、テーブルのスキーマはこのようになります::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:292
+msgid "Create Indexes in SQL"
+msgstr "SQLでインデックスを作成する"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:294
+msgid ""
+"We want lightning fast searches on peoples names. To provide for this, we "
+"can create an index on the name column of our people table::"
+msgstr "人の名前をすばやく検索できるようにするには people テーブルの name 列にインデックスを作成します::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:301
+msgid "Which results in::"
+msgstr "その結果::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:320
+msgid "Dropping Tables in SQL"
+msgstr "SQLでテーブルを削除する"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:322
+msgid ""
+"If you want to get rid of a table you can use the :kbd:`drop` command::"
+msgstr "テーブルを取り除きたい場合は :kbd:`drop` コマンドを使用します::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:327
+msgid ""
+"In our current example, the above command would not work. Why not? :ref:`See"
+" why <database-concepts-5>`"
+msgstr "現在の例では上記のコマンドは動作しないでしょう。なぜでしょうか。 :ref:`こちら <database-concepts-5>` を参照して下さい。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:332
+msgid ""
+"If you used the same :kbd:`drop table` command on the `people` table, it "
+"would be successful::"
+msgstr "`people` テーブルに同じ :kbd:`drop table` コマンドを使う場合は正しく削除されるでしょう::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:338
+msgid ""
+"If you actually did enter that command and dropped the :kbd:`people` table, "
+"now would be a good time to rebuild it, as you will need it in the next "
+"exercises."
+msgstr "実際にそのコマンドを入力して :kbd:`people` テーブルを削除した場合は、再度作成して下さい。次の演習で必要になります。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:343
+msgid "A word on pgAdmin III"
+msgstr "pgAdmin III 上の単語"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:345
+msgid ""
+"We are showing you the SQL commands from the `psql` prompt because it's a "
+"very useful way to learn about databases. However, there are quicker and "
+"easier ways to do a lot of what we are showing you. Install pgAdmin III and "
+"you can create, drop, alter etc tables using 'point and click' operations in"
+" a GUI."
+msgstr "データベースについて学ぶために非常に有効な方法なので `psql` プロンプトからSQLコマンドを入力しています。しかし、より早くより簡単に行う方法があります。pgAdminIII をインストールするとGUI上のクリック操作でテーブルの create, drop, alter 等を行うことができます。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:350
+msgid "Under Ubuntu, you can install it like this::"
+msgstr "Ubuntuではこのようにインストールします::"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:354
+msgid "pgAdmin III will be covered in more detail in another module."
+msgstr "pgAdmin III は別のモジュールで詳しく取り上げます。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:357
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:359
+msgid ""
+"You have now seen how to create a brand new database, starting completely "
+"from scratch."
+msgstr "真新しいデータベースを完全にゼロから作成する方法を見てきました。"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:363
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:365
+msgid "Next you'll learn how to use the DBMS to add new data."
+msgstr "次はDBMSを使用して新しいデータを追加する方法を学びます。"

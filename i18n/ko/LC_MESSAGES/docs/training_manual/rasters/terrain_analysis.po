@@ -1,0 +1,551 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-07-15 08:45+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:6
+msgid "|LS| Terrain Analysis"
+msgstr "|LS| 지형 분석"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:8
+msgid ""
+"Certain types of rasters allow you to gain more insight into the terrain "
+"that they represent. Digital Elevation Models (DEMs) are particularly useful"
+" in this regard. In this lesson you will use terrain analysis tools to find "
+"out more about the study area for the proposed residential development from "
+"earlier."
+msgstr "래스터가 표현하고 있는 지형에 대해 더 깊이 이해할 수 있게 해주는 특정한 래스터 형식이 있습니다. 수치 표고 모델(DEM)이 이런 점에서 특히 유용합니다. 이 강의에서는 지형 분석을 이용해서, 이전 모듈에서 다뤘던 주거 구역 개발에 대해 더 자세히 알아보도록 하겠습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:13
+msgid ""
+"**The goal for this lesson:** To use terrain analysis tools to derive more "
+"information about the terrain."
+msgstr "**이 강의의 목표:** 지형 분석을 이용해서 지형에 대해 더 많은 정보를 끌어내기."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:17
+msgid "|basic| |FA| Calculating a Hillshade"
+msgstr "|basic| |FA| 음영기복도 계산"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:19
+msgid ""
+"The DEM you have on your map right now does show you the elevation of the "
+"terrain, but it can sometimes seem a little abstract. It contains all the 3D"
+" information about the terrain that you need, but it doesn't look like a 3D "
+"object. To get a better look at the terrain, it is possible to calculate a "
+"*hillshade*, which is a raster that maps the terrain using light and shadow "
+"to create a 3D-looking image."
+msgstr "지금 여러분의 맵에 있는 DEM이 지형의 표고를 보여주기는 하지만, 가끔은 조금 추상적으로 보일 수도 있습니다. 여러분에게 필요한 지형의 모든 3D 정보를 담고 있지만, 3D 오브젝트로 보이지는 않습니다. 이 지형을 좀 더 잘 표현하기 위해 *음영기복도* 를 계산할 수 있습니다. 음영기복도란 빛과 그림자를 이용해서 지형을 3D처럼 보이는 이미지로 생성한 래스터입니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:26
+msgid ""
+"To work with DEMs, you should use QGIS' all-in-one :guilabel:`DEM (Terrain "
+"models)` analysis tool."
+msgstr "DEM을 작업하려면 QGIS의 일체형 :guilabel:`DEM (Terrain models)` 분석 도구를 사용해야 합니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:29
+msgid ""
+"Click on the menu item :menuselection:`Raster --> Analysis --> DEM (Terrain "
+"models)`."
+msgstr "메뉴에서 :menuselection:`Raster --> Analysis --> DEM (Terrain models)` 항목을 클릭하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:31
+msgid ""
+"In the dialog that appears, ensure that the :guilabel:`Input file` is the "
+":guilabel:`DEM` layer."
+msgstr "대화 창이 뜨면, :guilabel:`Input file` 이 :guilabel:`DEM` 레이어인지 확인하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:33
+msgid ""
+"Set the :guilabel:`Output file` to :kbd:`hillshade.tif` in the directory "
+":kbd:`exercise_data/residential_development`."
+msgstr ":guilabel:`Output file` 을 :kbd:`exercise_data/residential_development` 디렉터리의 :kbd:`hillshade.tif` 로 설정하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:35
+msgid ""
+"Also make sure that the :guilabel:`Mode` option has :guilabel:`Hillshade` "
+"selected."
+msgstr "또 :guilabel:`Mode` 옵션에서 :guilabel:`Hillshade` 를 선택하도록 합니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:37
+msgid "Check the box next to :guilabel:`Load into canvas when finished`."
+msgstr ":guilabel:`Load into canvas when finished` 옆에 있는 체크박스를 체크하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:38
+msgid "You may leave all the other options unchanged."
+msgstr "다른 옵션은 그대로 놔둬도 됩니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:39
+msgid "Click :guilabel:`OK` to generate the hillshade."
+msgstr ":guilabel:`OK` 를 클릭해서 음영기복도를 생성합니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:40
+msgid ""
+"When it tells you that processing is completed, click :guilabel:`OK` on the "
+"message to get rid of it."
+msgstr "처리가 완료됐다는 메시지 창이 뜨면, 메시지 창의 :guilabel:`OK` 를 클릭해서 창을 닫으십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:42
+msgid ""
+"Click :guilabel:`Close` on the main :guilabel:`DEM (Terrain models)` dialog."
+msgstr ":guilabel:`DEM (Terrain models)` 대화 창의 :guilabel:`Close` 를 클릭하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:44
+msgid ""
+"You will now have a new layer called :guilabel:`hillshade` that looks like "
+"this:"
+msgstr "이제 다음과 같이 :guilabel:`hillshade` 라는 새 레이어가 생성되었습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:50
+msgid ""
+"That looks nice and 3D, but can we improve on this? On its own, the "
+"hillshade looks like a plaster cast. Can't we use it together with our "
+"other, more colorful rasters somehow? Of course we can, by using the "
+"hillshade as an overlay."
+msgstr "멋진 3D로 보입니다만, 좀 더 향상시킬 수 있을까요? 음영기복도 그 자체로는 마치 석고 모형처럼 보입니다. 다른, 좀 더 다채로운 래스터들과 어떻게 함께 사용할 수는 없을까요? 물론 할 수 있습니다. 음영기복도를 오버레이로서 사용한다면 말이죠."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:56
+msgid "|basic| |FA| Using a Hillshade as an Overlay"
+msgstr "|basic| |FA| 음영기복도를 오버레이로 사용"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:58
+msgid ""
+"A hillshade can provide very useful information about the sunlight at a "
+"given time of day. But it can also be used for aesthetic purposes, to make "
+"the map look better. The key to this is setting the hillshade to being "
+"mostly transparent."
+msgstr "음영기복도는 낮 동안의 특정 시간의 햇빛에 대한 유용한 정보를 제공할 수 있습니다. 하지만 맵을 더 보기 좋게 하기 위한 심미적 목적을 위해서도 사용할 수 있습니다. 이렇게 하려면 음영기복도를 거의 투명하게 설정하면 됩니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:63
+msgid ""
+"Change the symbology of the original :guilabel:`DEM` to use the "
+":guilabel:`Pseudocolor` scheme as in the previous exercise."
+msgstr "이전 강의에서처럼 원래 :guilabel:`DEM` 의 심볼에 :guilabel:`Pseudocolor` 배합을 쓰도록 변경하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:65
+msgid ""
+"Hide all the layers except the :guilabel:`DEM` and :guilabel:`hillshade` "
+"layers."
+msgstr ":guilabel:`DEM` 과 :guilabel:`hillshade` 레이어를 제외한 모든 레이어를 비활성화하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:67
+msgid ""
+"Click and drag the :guilabel:`DEM` to be beneath the :guilabel:`hillshade` "
+"layer in the :guilabel:`Layers list`."
+msgstr ":guilabel:`Layers list` 에서 :guilabel:`DEM` 을 클릭 & 드래그해서 :guilabel:`hillshade` 레이어 밑으로 옮기십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:69
+msgid ""
+"Set the :guilabel:`hillshade` layer to be transparent by opening its "
+":guilabel:`Layer Properties` and go to the :guilabel:`Transparency` tab."
+msgstr ":guilabel:`hillshade` 레이어의 :guilabel:`Layer Properties` 를 열고 :guilabel:`Transparency` 탭으로 가서 투명도를 설정하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:72
+msgid "Set the :guilabel:`Global transparency` to :kbd:`50%`:"
+msgstr ":guilabel:`Global transparency` 를 :kbd:`50%` 로 설정합니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:73
+msgid ""
+"Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog. You'll get "
+"a result like this:"
+msgstr ":guilabel:`Layer Properties` 대화 창의 :guilabel:`OK` 를 클릭하십시오. 다음과 같은 화면을 보게 될 것입니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:79
+msgid ""
+"Switch the :guilabel:`hillshade` layer off and back on in the "
+":guilabel:`Layers list` to see the difference it makes."
+msgstr ":guilabel:`Layers list` 에서 :guilabel:`hillshade` 레이어를 껐다 켰다 하면서 그 차이점을 살펴보십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:82
+msgid ""
+"Using a hillshade in this way, it's possible to enhance the topography of "
+"the landscape. If the effect doesn't seem strong enough to you, you can "
+"change the transparency of the :guilabel:`hillshade` layer; but of course, "
+"the brighter the hillshade becomes, the dimmer the colors behind it will be."
+" You will need to find a balance that works for you."
+msgstr "음영기복도를 이런 식으로 사용하면 경관의 지형을 향상시킬 수 있습니다. 만약 그 효과가 미미하다고 느껴진다면, :guilabel:`hillshade` 레이어의 투명도를 조절할 수 있습니다. 하지만 물론, 음영기복도가 밝아질수록 그 아래의 색상은 침침해질 것입니다. 여러분이 만족할 수 있는 균형을 찾아야 합니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:88
+msgid "Remember to save your map when you are done."
+msgstr "작업 완료 시 맵을 저장하는 일을 잊지 마십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:90
+msgid ""
+"For the next two exercises, please use a new map. Load only the :kbd:`DEM` "
+"raster dataset into it (:kbd:`exercise_data/raster/SRTM/srtm_41_19.tif`). "
+"This is to simplify matters while you're working with the raster analysis "
+"tools. Save the map as :kbd:`exercise_data/raster_analysis.qgs`."
+msgstr "다음 두 가지 실습에서는 새 맵을 사용하십시오. :kbd:`DEM` 래스터 데이터셋( :kbd:`exercise_data/raster/SRTM/srtm_41_19.tif` )만을 불러오십시오. 여러분이 래스터 분석 도구를 이용해 작업할 때 문제를 단순화하기 위해서입니다. 이 맵을 :kbd:`exercise_data/raster_analysis.qgs` 로 저장하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:97
+msgid "|moderate| |FA| Calculating the Slope"
+msgstr "|moderate| |FA| 경사도 계산"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:99
+msgid ""
+"Another useful thing to know about the terrain is how steep it is. If, for "
+"example, you want to build houses on the land there, then you need land that"
+" is relatively flat."
+msgstr "지형에 대해 알아두면 좋은 점 가운데 하나는 얼마나 가파르냐는 것입니다. 예를 들어 어떤 토지에 집을 짓고 싶다고 할 때, 그 토지는 어느 정도 평평해야 할 것입니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:103
+msgid ""
+"To do this, you need to use the :guilabel:`Slope` mode of the :guilabel:`DEM"
+" (Terrain models)` tool."
+msgstr "이 작업을 하려면 :guilabel:`DEM (Terrain models)` 도구의 :guilabel:`Slope` 모드를 사용해야 합니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:106
+msgid "Open the tool as before."
+msgstr "이전처럼 도구를 여십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:107
+msgid "Select the :guilabel:`Mode` option :guilabel:`Slope`:"
+msgstr "다음과 같이 :guilabel:`Mode` 옵션에서 :guilabel:`Slope` 를 선택하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:112
+msgid ""
+"Set the save location to "
+":kbd:`exercise_data/residential_development/slope.tif`"
+msgstr "저장 경로를 :kbd:`exercise_data/residential_development/slope.tif` 로 설정하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:114
+msgid "Enable the :guilabel:`Load into canvas...` checkbox."
+msgstr ":guilabel:`Load into canvas...` 체크박스를 체크하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:115
+msgid ""
+"Click :guilabel:`OK` and close the dialogs when processing is complete, and "
+"click :guilabel:`Close` to close the dialog. You'll see a new raster loaded "
+"into your map."
+msgstr ":guilabel:`OK` 를 클릭한 다음 처리가 완료되면 메시지 창을 닫고, :guilabel:`Close` 를 클릭해서 대화 창을 닫으십시오. 사용자 맵에 새 래스터가 로드됐을 것입니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:118
+msgid ""
+"With the new raster selected in the :guilabel:`Layers list`, click the "
+":guilabel:`Stretch Histogram to Full Dataset` button. Now you'll see the "
+"slope of the terrain, with black pixels being flat terrain and white pixels,"
+" steep terrain:"
+msgstr ":guilabel:`Layers list` 에서 새 래스터를 선택하고, :guilabel:`Stretch Histogram to Full Dataset` 버튼을 클릭하십시오. 이제 검은 픽셀은 평평한 지형, 하얀 픽셀은 가파른 지형을 나타내는 다음과 같은 경사도를 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:129
+msgid "|moderate| |TY| calculating the aspect"
+msgstr "|moderate| |TY| 향 계산"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:131
+msgid ""
+"The *aspect* of terrain refers to the direction it's facing in. Since this "
+"study is taking place in the Southern Hemisphere, properties should ideally "
+"be built on a north-facing slope so that they can remain in the sunlight."
+msgstr "지형의 *향* 이란 어떤 지형이 면하고 있는 방향을 말합니다. 현재의 연구 지역이 남반구에 있으므로, 햇빛을 받으려면 북쪽을 면하고 있는 비탈에 건물을 지어야 하겠죠."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:135
+msgid ""
+"Use the :guilabel:`Aspect` mode of the :guilabel:`DEM (Terain models)` tool "
+"to calculate the aspect of the terrain."
+msgstr "지형의 향을 계산하려면 :guilabel:`DEM (Terain models)` 도구의 :guilabel:`Aspect` 모드를 사용하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:138
+msgid ":ref:`Check your results <raster-analysis-1>`"
+msgstr ":ref:`결과 확인 <raster-analysis-1>`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:141
+msgid "|moderate| |FA| Using the Raster Calculator"
+msgstr "|moderate| |FA| 래스터 계산기 사용"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:143
+msgid ""
+"Think back to the estate agent problem, which we last addressed in the "
+"*Vector Analysis* lesson. Let's imagine that the buyers now wish to purchase"
+" a building and build a smaller cottage on the property. In the Southern "
+"Hemisphere, we know that an ideal plot for development needs to have areas "
+"on it that are north-facing, and with a slope of less than five degrees. But"
+" if the slope is less than 2 degrees, then the aspect doesn't matter."
+msgstr "*벡터 분석* 강의에서 마지막으로 다뤘던 부동산 중개업자 문제를 다시 떠올려보십시오. 그때의 구매자가 지금은 건물을 산 다음 부지 내에 작은 집을 짓고 싶어 한다고 해봅시다. 남반구에서 이런 개발에 이상적인 계획은 우선 5˚ 미만 경사의 북쪽을 면한 토지가 있어야 할 것입니다. 그러나 경사가 2˚ 미만인 경우, 향은 문제가 되지 않습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:150
+msgid ""
+"Fortunately, you already have rasters showing you the slope as well as the "
+"aspect, but you have no way of knowing where both conditions are satisfied "
+"at once. How could this analysis be done?"
+msgstr "다행히 여러분에게는 이미 경사는 물론 향을 보여주는 래스터가 있습니다. 그런데 이 두 가지 조건을 동시에 만족하는 곳을 알 도리가 없죠. 어떻게 이런 분석을 할 수 있을까요?"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:154
+msgid "The answer lies with the :guilabel:`Raster calculator`."
+msgstr "그 답은 :guilabel:`Raster calculator` 가 가지고 있습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:156
+msgid ""
+"Click on :menuselection:`Raster > Raster calculator...` to start this tool."
+msgstr ":menuselection:`Raster > Raster calculator...` 를 클릭해서 이 도구를 실행하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:157
+msgid ""
+"To make use of the :guilabel:`aspect` dataset, double-click on the item "
+":guilabel:`aspect@1` in the :guilabel:`Raster bands` list on the left. It "
+"will appear in the :guilabel:`Raster calculator expression` text field "
+"below."
+msgstr ":guilabel:`aspect` 데이터셋을 사용하려면 왼쪽에 있는 :guilabel:`Raster bands` 목록에서 :guilabel:`aspect@1` 항목을 더블클릭하십시오. 아래쪽에 있는 :guilabel:`Raster calculator expression` 텍스트 란에 나타날 것입니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:161
+msgid ""
+"North is at 0 (zero) degrees, so for the terrain to face north, its aspect "
+"needs to be greater than 270 degrees and less than 90 degrees."
+msgstr "북쪽은 0˚이므로, 북쪽을 면한 지형을 원한다면 그 향이 270˚ 이상, 90˚ 이하여야 합니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:164
+msgid ""
+"In the :guilabel:`Raster calculator expression` field, enter this "
+"expression:"
+msgstr ":guilabel:`Raster calculator expression` 란에 다음 표현식을 입력하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:166
+msgid ":kbd:`aspect@1 <= 90 OR aspect@1 >= 270`"
+msgstr ":kbd:`aspect@1 <= 90 OR aspect@1 >= 270`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:168
+msgid ""
+"Set the output file to :kbd:`aspect_north.tif` in the directory "
+":kbd:`exercise_data/residential_development/`."
+msgstr "산출물 파일 경로를 :kbd:`exercise_data/residential_development/` , 파일명을 :kbd:`aspect_north.tif` 로 설정하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:170
+msgid "Ensure that the box :guilabel:`Add result to project` is checked."
+msgstr ":guilabel:`Add result to project` 체크박스를 체크했는지 확인하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:171
+msgid "Click :guilabel:`OK` to begin processing."
+msgstr ":guilabel:`OK` 를 클릭해서 처리를 시작합니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:176
+msgid "Your result will be this:"
+msgstr "결과는 다음과 같을 것입니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:185
+msgid "|moderate| |TY|"
+msgstr "|moderate| |TY|"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:187
+msgid ""
+"Now that you've done the aspect, create two separate new analyses of the "
+":guilabel:`DEM` layer."
+msgstr "이제 향 작업을 끝냈으니, :guilabel:`DEM` 레이어에 대한 두 가지 새로운 분석을 생성해봅시다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:190
+msgid ""
+"The first will be to identify all areas where the slope is less than or "
+"equal to :kbd:`2` degrees."
+msgstr "먼저 경사가 :kbd:`2` ˚ 이하인 모든 지역을 구분해봅시다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:192
+msgid ""
+"The second is similar, but the slope should be less than or equal to "
+":kbd:`5` degrees."
+msgstr "다음도 비슷합니다. 다만 경사가 :kbd:`5` ˚ 이하인 지역을 구해봅시다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:194
+msgid ""
+"Save them under :kbd:`exercise_data/residential_development/` as "
+":kbd:`slope_lte2.tif` and :kbd:`slope_lte5.tif`."
+msgstr "그 결과물을 :kbd:`exercise_data/residential_development/` 디렉터리 아래, :kbd:`slope_lte2.tif` 및 :kbd:`slope_lte5.tif` 파일로 저장합니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:197
+msgid ":ref:`Check your results <raster-analysis-2>`"
+msgstr ":ref:`결과 확인 <raster-analysis-2>`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:201
+msgid "|moderate| |FA| Combining Raster Analysis Results"
+msgstr "|moderate| |FA| 래스터 분석 결과 결합"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:203
+msgid "Now you have three new analysis rasters of the :guilabel:`DEM` layer:"
+msgstr "이제 다음과 같은 :guilabel:`DEM` 레이어의 세 가지 분석 래스터가 생겼습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:205
+msgid ":guilabel:`aspect_north`: the terrain faces north"
+msgstr ":guilabel:`aspect_north` : 북쪽을 면한 지형"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:206
+msgid ":guilabel:`slope_lte2`: the slope is at or below 2 degrees"
+msgstr ":guilabel:`slope_lte2`: 경사가 2˚ 이하인 지형"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:207
+msgid ":guilabel:`slope_lte5`: the slope is at or below 5 degrees"
+msgstr ":guilabel:`slope_lte5`: 경사가 5˚ 이하인 지형"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:209
+msgid ""
+"Where the conditions of these layers are met, they are equal to :kbd:`1`. "
+"Elsewhere, they are equal to :kbd:`0`. Therefore, if you multiply one of "
+"these rasters by another one, you will get the areas where both of them are "
+"equal to :kbd:`1`."
+msgstr "이 레이어들의 조건을 만족하는 곳의 값은 :kbd:`1` 로 동일합니다. 만족하지 않는 곳의 값도 :kbd:`0` 으로 동일합니다. 따라서 이 래스터들 가운데 하나를 다른 래스터와 곱하면, 양쪽 모두의 값이 :kbd:`1` 인 곳들을 얻을 수 있습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:214
+msgid ""
+"The conditions to be met are: at or below 5 degrees of slope, the terrain "
+"must face north; but at or below 2 degrees of slope, the direction that the "
+"terrain faces in does not matter."
+msgstr "만족해야 하는 조건은 다음과 같습니다. 경사가 5˚ 이하이며, 북쪽을 면하는 지형일 것, 다만 경사가 2˚ 이하인 곳은 해당 지형이 어느쪽을 면하든지 상관 없슴."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:218
+msgid ""
+"Therefore, you need to find areas where the slope is at or below 5 degrees "
+":kbd:`AND` the terrain is facing north; :kbd:`OR` the slope is at or below 2"
+" degrees. Such terrain would be suitable for development."
+msgstr "그러므로, 경사가 5˚ 이하 :kbd:`AND` 북쪽을 면한 지형, :kbd:`OR` 경사가 2˚ 이하인 지형을 찾아야 합니다. 그런 지형이 개발에 적합할 테니까요."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:222
+msgid "To calculate the areas that satisfy these criteria:"
+msgstr "이 기준들을 만족하는 지역을 계산하려면,"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:224
+msgid "Open your :guilabel:`Raster calculator` again."
+msgstr ":guilabel:`Raster calculator` 를 다시 실행합니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:225
+msgid ""
+"Use the :guilabel:`Raster bands` list, the :guilabel:`Operators` buttons, "
+"and your keyboard to build this expression in the :guilabel:`Raster "
+"calculator expression` text area:"
+msgstr ":guilabel:`Raster bands` 목록, :guilabel:`Operators` 버튼 및 사용자의 키보드를 이용해서 다음 표현식을 :guilabel:`Raster calculator expression` 텍스트 란에 입력하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:229
+msgid ""
+":kbd:`( aspect_north@1 = 1 AND slope_lte5@1 = 1 )  OR slope_lte2@1 = 1`"
+msgstr ":kbd:`( aspect_north@1 = 1 AND slope_lte5@1 = 1 )  OR slope_lte2@1 = 1`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:231
+msgid ""
+"Save the output under :kbd:`exercise_data/residential_development/` as "
+":kbd:`all_conditions.tif`."
+msgstr "산출물의 경로를 :kbd:`exercise_data/residential_development/` , 파일명을 :kbd:`all_conditions.tif` 로 설정하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:233
+msgid ""
+"Click :guilabel:`OK` on the :guilabel:`Raster calculator`. Your results:"
+msgstr ":guilabel:`Raster calculator` 에 있는 :guilabel:`OK` 를 클릭하십시오. 결과는 다음과 같습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:240
+msgid "|moderate| |FA| Simplifying the Raster"
+msgstr "|moderate| |FA| 래스터 단순화"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:242
+msgid ""
+"As you can see from the image above, the combined analysis has left us with "
+"many, very small areas where the conditions are met. But these aren't really"
+" useful for our analysis, since they're too small to build anything on. "
+"Let's get rid of all these tiny unusable areas."
+msgstr "앞의 이미지에서 볼 수 있듯이, 이렇게 결합된 분석의 결과물은 조건을 만족하는 수많은, 아주 작은 지역들로 이루어져 있습니다. 그러나 이 결과는 우리의 분석에 그다지 쓸모가 없습니다. 뭔가를 짓기에는 너무 작은 토지들이니까요. 이 쓸모 없는 작은 토지들을 제거해보겠습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:247
+msgid ""
+"Open the :guilabel:`Sieve` tool (:menuselection:`Raster --> Analysis --> "
+"Sieve`)."
+msgstr "메뉴에서 :menuselection:`Raster --> Analysis --> Sieve` 항목을 클릭해서 :guilabel:`Sieve` 도구를 실행하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:249
+msgid ""
+"Set the :guilabel:`Input file` to :kbd:`all_conditions`, and the "
+":guilabel:`Output file` to :kbd:`all_conditions_sieve.tif` (under "
+":kbd:`exercise_data/residential_development/`)."
+msgstr ":guilabel:`Input file` 을 :kbd:`all_conditions` 로, :guilabel:`Output file` 을 :kbd:`exercise_data/residential_development/` 디렉터리의 :kbd:`all_conditions_sieve.tif` 파일로 설정하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:252
+msgid ""
+"Set both the :guilabel:`Threshold` and :guilabel:`Pixel connections` values "
+"to :kbd:`8`, then run the tool."
+msgstr ":guilabel:`Threshold` 및 :guilabel:`Pixel connections` 의 값을 모두 :kbd:`8` 로 설정한 다음 도구를 실행하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:258
+msgid ""
+"Once processing is done, the new layer will load into the canvas. But when "
+"you try to use the histogram stretch tool to view the data, this happens:"
+msgstr "처리가 완료되면 캔버스에 새 레이어가 로드될 것입니다. 하지만 데이터를 보기 위해 히스토그램 구간 도구를 사용하면 다음과 같은 화면을 보게 됩니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:264
+msgid "What's going on? The answer lies in the new raster file's metadata."
+msgstr "무엇 때문일까요? 그 답은 이 새 래스터 파일의 메타데이터에 있습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:266
+msgid ""
+"View the metadata under the :guilabel:`Metadata` tab of the :guilabel:`Layer"
+" Properties` dialog. Look in the :guilabel:`Properties` section at the "
+"bottom."
+msgstr ":guilabel:`Layer Properties` 대화 창의 :guilabel:`Metadata` 탭을 선택해서 메타데이터를 살펴보십시오. 맨 아래에 있는 :guilabel:`Properties` 부분을 보십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:272
+msgid ""
+"Whereas this raster, like the one it's derived from, should only feature the"
+" values :kbd:`1` and :kbd:`0`, it has the :kbd:`STATISTICS_MINIMUM` value of"
+" a very large negative number. Investigation of the data shows that this "
+"number acts as a null value. Since we're only after areas that weren't "
+"filtered out, let's set these null values to zero."
+msgstr "이 래스터는, 추출되었던 원래 래스터와 마찬가지로, :kbd:`1` 과 :kbd:`0` 값만을 가져야 하는데, 굉장히 큰 음수값의 :kbd:`STATISTICS_MINIMUM` 값을 가지고 있습니다. 이 데이터를 조사해보면 이 숫자가 null 값 역할을 하고 있다는 사실을 알 수 있습니다. 우리는 필터링되지 않은 지역만을 원하니까, 이 null 값들을 0으로 바꿉시다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:278
+msgid ""
+"Open the :guilabel:`Raster Calculator` again, and build this expression:"
+msgstr "다시 :guilabel:`Raster Calculator` 를 실행하고, 다음 표현식을 입력합니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:280
+msgid ":kbd:`(all_conditions_sieve@1 <= 0) = 0`"
+msgstr ":kbd:`(all_conditions_sieve@1 <= 0) = 0`"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:282
+msgid ""
+"This will maintain all existing zero values, while also setting the negative"
+" numbers to zero; which will leave all the areas with value :kbd:`1` intact."
+msgstr "이 표현식은 기존 0 값을 모두 보전하는 동시에 음수를 모두 0으로 변경할 것입니다. :kbd:`1` 값을 가진 지역은 그대로 남게 됩니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:284
+msgid ""
+"Save the output under :kbd:`exercise_data/residential_development/` as "
+":kbd:`all_conditions_simple.tif`."
+msgstr "산출물의 경로를 :kbd:`exercise_data/residential_development/` , 파일명을 :kbd:`all_conditions_simple.tif` 로 설정하십시오."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:287
+msgid "Your output looks like this:"
+msgstr "산출물은 다음과 같습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:292
+msgid ""
+"This is what was expected: a simplified version of the earlier results. "
+"Remember that if the results you get from a tool aren't what you expected, "
+"viewing the metadata (and vector attributes, if applicable) can prove "
+"essential to solving the problem."
+msgstr "우리가 기대한 산출물입니다. 이전 결과물을 단순화시킨 버전이죠. 어떤 도구의 결과물이 기대했던 것과 다를 경우, 문제를 해결 하는 데 메타데이터(및, 적용 가능할 경우 벡터 속성)을 살펴보는 작업이 필수적일 수도 있습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:298
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:300
+msgid ""
+"You've seen how to derive all kinds of analysis products from a DEM. These "
+"include hillshade, slope and aspect calculations. You've also seen how to "
+"use the raster calculator to further analyze and combine these results."
+msgstr "DEM에서 모든 유형의 분석 결과를 추출하는 방법을 배웠습니다. 여기에는 음영기복도, 경사도, 향 계산이 포함됩니다. 또한  래스터 계산기를 이용해서 이 결과들을 더 심도 있게 분석하고 결합하는 방법도 배웠습니다."
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:305
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/rasters/terrain_analysis.rst:307
+msgid ""
+"Now you have two analyses: the vector analysis which shows you the "
+"potentially suitable plots, and the raster analysis that shows you the "
+"potentially suitable terrain. How can these be combined to arrive at a final"
+" result for this problem? That's the topic for the next lesson, starting in "
+"the next module."
+msgstr "이제 여러분은 두 가지 분석을 할 수 있습니다. 벡터 분석은 잠재적으로 적합한 계획을 보여주며, 래스터 분석은 잠재적으로 적합한 지형을 보여줍니다. 이들을 어떻게 결합해야 문제에 대한 최종 결론을 얻을 수 있을까요? 이것이 다음 모듈에서 시작하는 강의의 주제입니다."

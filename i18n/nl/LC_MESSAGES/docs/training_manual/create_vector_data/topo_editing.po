@@ -1,0 +1,459 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014-2015
+# Milo van der Linden <milo@dogodigi.net>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-08 14:08+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:6
+msgid "|LS| Feature Topology"
+msgstr "|LS| Topologie voor objecten"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:8
+msgid ""
+"Topology is a useful aspect of vector data layers, because it minimizes "
+"errors such as overlap or gaps."
+msgstr "Topologie is een handig aspect van vector gegevenslagen, omdat het fouten zoals overlappen of gaten minimaliseert."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:11
+msgid ""
+"For example: if two features share a border, and you edit the border using "
+"topology, then you won't need to edit first one feature, then another, and "
+"carefully line up the borders so that they match. Instead, you can edit "
+"their shared border and both features will change at the same time."
+msgstr "Bijvoorbeeld: als twee objecten een rand delen en u bewerkt de rand met behulp van topologie, dan hoeft u niet eerst het ene object te bewerken, dan een ander en dan zorgvuldig de randen op elkaar af te stemmen zodat zij overeenkomen. In plaats daarvan kunt u hun gedeelde rand bewerken en beide objecten zullen tegelijkertijd wijzigen."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:16
+msgid "**The goal for this lesson:** To understand topology using examples."
+msgstr "**Het doel voor deze les:** Topologie begrijpen door middel van voorbeelden."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:19
+msgid "|moderate| |FA| Snapping"
+msgstr "|moderate| |FA| Snappen"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:21
+msgid ""
+"To make topological editing easier, it's best if you enable snapping. This "
+"will allow your mouse cursor to snap to other objects while you digitize. To"
+" set snapping options:"
+msgstr "Het is het beste als u snappen inschakelt om het bewerken van topologie gemakkelijker te maken, Dit maakt mogelijk uw muiscursor aan objecten te snappen terwijl u digitaliseert. Opties voor snappen instellen:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:25
+msgid ""
+"Navigate to the menu entry :menuselection:`Settings --> Snapping "
+"Options...`."
+msgstr "Navigeer naar het menu-item :menuselection:`Extra --> 'Snapping'-opties...`."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:26
+msgid "Set up your :guilabel:`Snapping options` dialog as shown:"
+msgstr "Stel uw dialoogvenster :guilabel:`Snapping opties` in zoals weergegeven:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:31
+msgid ""
+"Ensure that the box in the :guilabel:`Avoid Int.` column is checked (set to "
+"true)."
+msgstr "Zorg er voor dat het vak in de kolom :guilabel:`Voorkom kruisingen` is geselecteerd (ingesteld op Waar)."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:33
+msgid "Click :guilabel:`OK` to save your changes and leave the dialog."
+msgstr "Klik op :guilabel:`OK` om uw wijzigingen op te slaan en het dialoogvenster te sluiten."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:34
+msgid "Enter edit mode with the :guilabel:`landuse` layer selected."
+msgstr "Ga naar de modus Bewerken met de laag :guilabel:`landuse` geselecteerd."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:35
+msgid ""
+"Check under :menuselection:`View --> Toolbars` to make sure that your "
+":guilabel:`Advanced Digitizing` toolbar is enabled."
+msgstr "Controleer onder :menuselection:`Beeld --> Werkbalken` om er zeker van te zijn dat uw werkbalk :guilabel:`Geavanceerd Digitaliseren` is ingeschakeld."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:37
+msgid "Zoom to this area (enable layers and labels if necessary):"
+msgstr "Zoom naar dit gebied (schakel indien nodig lagen en labels in):"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:42
+msgid "Digitize this new (fictional) area of the |largeLandUseArea|:"
+msgstr "Digitaliseer dit nieuwe (fictionele) gebied van het |largeLandUseArea|:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:47
+msgid ""
+"When prompted, give it a :guilabel:`OGC_FID` of :kbd:`999`, but feel free to"
+" leave the other values unchanged."
+msgstr "Indien gevraagd, geef het een :guilabel:`OGC_FID` van :kbd:`999`, maar het staat u vrij de andere waarden ongewijzigd te laten."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:50
+msgid ""
+"If you're careful while digitizing and allow the cursor to snap to the "
+"vertices of adjoining farms, you'll notice that there won't be any gaps "
+"between your new farm and the existing farms adjacent to it."
+msgstr "Als u voorzichtig bent tijdens het digitaliseren en de cursor toestaat te snappen aan de punten van aanliggende boerderijen, zult u merken dat er geen gaten zijn tussen uw nieuwe boerderij en de bestaande boerderijen die daarnaast liggen."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:54
+msgid ""
+"Note the undo/redo tools in the :guilabel:`Advanced Digitizing` toolbar:"
+msgstr "Denk aan de gereedschappen Ongedaan maken/Opnieuw in de werkbalk :guilabel:`Geavanceerd Digitaliseren`:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:56
+msgid "|mActionRedo| |mActionUndo|"
+msgstr "|mActionRedo| |mActionUndo|"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:60
+msgid "|moderate| |FA| Correct Topological Features"
+msgstr "|moderate| |FA| Juiste topologische objecten"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:62
+msgid ""
+"Topology features can sometimes need to be updated. In our example, the "
+":guilabel:`landuse` layer has some complex forest areas which have recently "
+"been joined to form one area:"
+msgstr "Objecten van topologie moeten soms bijgewerkt worden. In ons voorbeeld heeft de laag :guilabel:`landuse` enige complexe bosgebieden die recent zijn samengevoegd om één gebied te vormen:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:69
+msgid ""
+"Instead of creating new polygons to join the forest areas, we're going to "
+"use the :guilabel:`Node Tool` to edit the existing polygons and join them."
+msgstr "In plaats van het maken van nieuwe polygonen om samen te voegen met de bosgebieden, gaan we het gereedschap :guilabel:`Knooppunt-gereedschap` gebruiken om de bestaande polygonen te bewerken en ze samen te voegen."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:72
+msgid "Enter edit mode, if it isn't active already."
+msgstr "Ga naar de modus Bewerken, als die nog niet actief is."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:73
+msgid "Select the :guilabel:`Node Tool`."
+msgstr "Selecteer het :guilabel:`Knooppunt-gereedschap`."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:74
+msgid ""
+"Pick an area of forest, select a corner and move it to an adjoining corner "
+"so two forest sections meet:"
+msgstr "Kies een bosgebied, selecteer een hoek en verplaats die naar een naastgelegen hoek, zodat de twee bosgebieden elkaar raken:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:80
+msgid "Click and drag the nodes until they snap into place."
+msgstr "Klik en sleep de knopen totdat zij op hun plek snappen."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:85
+msgid "The topologically correct border looks like this:"
+msgstr "De juiste topologische rand ziet er uit zoals dit:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:90
+msgid ""
+"Go ahead and join a few more areas using the :guilabel:`Node Tool`. You can "
+"also use the :guilabel:`Add Feature` tool if it is appropriate. If you are "
+"using our example data, you should have a forest area looking something like"
+" this:"
+msgstr "Ga door een voeg nog een aantal gebieden samen met behulp van het :guilabel:`Knooppunt-gereedschap`. U kunt ook het gereedschap :guilabel:`Object toevoegen` gebruiken als dat van toepassing is. Als u onze voorbeeldgegevens gebruikt zou u een bosgebied moeten hebben dat er ongeveer uitziet zoals dit:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:97
+msgid ""
+"Don't worry if you have joined more, less or different areas of forest."
+msgstr "Maak u geen zorgen als u meer, minder of andere bosgebieden heeft samengevoegd."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:100
+msgid "|moderate| |FA| Tool: Simplify Feature"
+msgstr "|moderate| |FA| Gereedschap: Object vereenvoudigen"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:102
+msgid "This is the :guilabel:`Simplify Feature` tool:"
+msgstr "Dit is het gereedschap :guilabel:`Object vereenvoudigen`:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:104
+msgid "|mActionSimplify|"
+msgstr "|mActionSimplify|"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:106
+msgid "Click on it to activate it."
+msgstr "Klik er op om het te activeren."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:107
+msgid ""
+"Click on one of the areas which you joined using either the :guilabel:`Node "
+"Tool` or :guilabel:`Add Feature` tool. You'll see this dialog:"
+msgstr "Klik op één van de gebieden die u heeft samengevoegd met ofwel het :guilabel:`Knooppunt-gereedschap` of het gereedschap :guilabel:`Object toevoegen`. U zult dit dialoogvenster zien:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:113
+msgid "Move the slider from side to side and watch what happens:"
+msgstr "Verplaats de schuifbalk van de ene zijde naar de andere om te zien wat er gebeurt:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:118
+msgid "This allows you to reduce the amount of nodes in complex features."
+msgstr "Dit stelt u in staat het aantal knopen in complexe objecten te reduceren."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:120
+msgid "Click :guilabel:`Ok`"
+msgstr "Klik op :guilabel:`Ok`"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:122
+msgid ""
+"Notice what the tool does to the topology. The simplified polygon is now no "
+"longer touching the adjacent polygons as it should. This shows that this "
+"tool is better suited to generalizing stand-alone features. The advantage is"
+" that it provides you with a simple, intuitive interface for generalization."
+msgstr "Merk op wat het gereedschap doet met de topologie. De vereenvoudigde polygoon raakt nu niet langer de aanliggende polygonen zoals het zou moeten. Dit toont aan dat dit gereedschap beter geschikt is om zelfstandige objecten te generaliseren. Het voordeel is dat het u een eenvoudige, intuïtieve interface voor generalisatie biedt."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:127
+msgid ""
+"Before you go on, set the polygon back to its original state by undoing the "
+"last change."
+msgstr "Vóórdat u doorgaat, zet de polygoon terug naar zijn originele status door de laatste wijziging ongedaan te maken."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:133
+msgid "|moderate| |TY| Tool: Add Ring"
+msgstr "|moderate| |TY| Gereedschap: Ring toevoegen"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:135
+msgid "This is the :guilabel:`Add Ring` tool:"
+msgstr "Dit is het gereedschap :guilabel:`Ring toevoegen`:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:137
+msgid "|mActionAddRing|"
+msgstr "|mActionAddRing|"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:139
+msgid ""
+"It allows you to take a hole out of a feature, as long as the hole is "
+"bounded on all side by the feature. For example, if you've digitized the "
+"outer boundaries of South Africa and you need to add a hole for Lesotho, "
+"you'd use this tool."
+msgstr "Het stelt u in staat een gat in een object te maken, zolang het gat maar aan alle zijden wordt omringd door het object. Als u bijvoorbeeld de buitengrenzen van Zuid-Afrika heeft gedigitaliseerd en u moet een gat toevoegen voor Lesotho, zou u dit gereedschap gebruiken."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:144
+msgid ""
+"If you experiment with this tool, you'll notice that the current snapping "
+"options prevent you from creating a ring in the middle of the polygon. This "
+"would be fine if the area you wished to exclude linked to the polygon's "
+"boundaries."
+msgstr "Als u experimenteert met dit gereedschap, zult u merken dat de huidige opties voor snappen voorkomen dat u een ring in het midden van de polygoon kunt maken. Dit zou prima zijn als het gebied dat u wilt uitsluiten is gekoppeld aan de grenzen van de polygoon."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:149
+msgid ""
+"Disable snapping for the landuse layer via the dialog you used earlier."
+msgstr "Schakel snappen uit voor de laag landuse via het dialoogvenster dat u eerder gebruikte."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:150
+msgid ""
+"Now try using the :guilabel:`Add Ring` tool to create a gap in the middle of"
+" the |largeLandUseArea|."
+msgstr "Probeer nu :guilabel:`Ring toevoegen` te gebruiken om een gat te maken in het midden van het |largeLandUseArea|."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:152
+msgid "Delete your new feature by using the :guilabel:`Delete Ring` tool:"
+msgstr "Verwijder uw nieuwe object met behulp van het gereedschap :guilabel:`Ring verwijderen`:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:154
+msgid "|mActionDeleteRing|"
+msgstr "|mActionDeleteRing|"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:156
+msgid "You need to select a corner of the ring in order to delete it."
+msgstr "U dient een hoek van de ring te selecteren om die te kunnen verwijderen."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:158
+msgid ":ref:`Check your results <create-vector-topology-1>`"
+msgstr ":ref:`Controleer uw resultaten <create-vector-topology-1>`"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:164
+msgid "|moderate| |TY| Tool: Add Part"
+msgstr "|moderate| |TY| Gereedschap: Onderdeel toevoegen"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:166
+msgid "This is the :guilabel:`Add Part` tool:"
+msgstr "Dit is het gereedschap :guilabel:`Onderdeel toevoegen`:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:168
+msgid "|mActionAddIsland|"
+msgstr "|mActionAddIsland|"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:170
+msgid ""
+"It allows you to create an extra part of the feature, not directly connected"
+" to the main feature. For example, if you've digitized the boundaries of "
+"mainland South Africa but you haven't yet added the Prince Edward Islands, "
+"you'd use this tool to create them."
+msgstr "Het stelt u in staat een extra gedeelte voor het object te maken, niet direct verbonden met het hoofdobject. Als bijvoorbeeld de grenzen van het vasteland van Zuid-Afrika heeft gedigitaliseerd, maar u heeft de Prince Edward Islands nog niet toegevoegd, zou u dit gereedschap gebruiken om ze te maken."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:175
+msgid ""
+"To use this tool, you must first select the polygon to which you wish to add"
+" the part by using the :guilabel:`Select Single Feature` tool:"
+msgstr "U moet eerst, met behulp van het gereedschap :guilabel:`Eén object selecteren`, de polygoon selecteren waaraan u het gedeelte wilt toevoegen om dit gereedschap te kunnen gebruiken: "
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:178
+msgid "|mActionSelect|"
+msgstr "|mActionSelect|"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:180
+msgid ""
+"Now try using the :guilabel:`Add Part` tool to add an outlying area to the "
+"|largeLandUseArea|."
+msgstr "Probeer nu met het gereedschap :guilabel:`Onderdeel toevoegen` een gebied toe te voegen dat buiten het gebied |largeLandUseArea| ligt."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:182
+msgid "Delete your new feature by using the :guilabel:`Delete Part` tool:"
+msgstr "Verwijder uw nieuwe object met behulp van het gereedschap :guilabel:`Onderdeel verwijderen`:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:184
+msgid "|mActionDeletePart|"
+msgstr "|mActionDeletePart|"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:186
+msgid "You need to select a corner of the part in order to delete it."
+msgstr "U dient een hoek van het gedeelte te selecteren om dat te kunnen verwijderen."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:188
+msgid ":ref:`Check your results <create-vector-topology-2>`"
+msgstr ":ref:`Controleer uw resultaten <create-vector-topology-2>`"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:191
+msgid "|moderate| |FA| Tool: Reshape Features"
+msgstr "|moderate| |FA| Gereedschap: Objecten vervormen"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:193
+msgid "This is the :guilabel:`Reshape Features` tool:"
+msgstr "Dit is het gereedschap  :guilabel:`Objecten vervormen`:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:195
+msgid "|mActionReshape|"
+msgstr "|mActionReshape|"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:197
+msgid "It can add a bump to an existing feature. With this tool selected:"
+msgstr "Het kan een uitstulping toevoegen aan een bestaand object. Met dit gereedschap geselecteerd:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:199
+msgid "Left-click inside the |largeLandUseArea| to start drawing a polygon."
+msgstr "Klik met links binnen het |largeLandUseArea| om te beginnen met het tekenen van een polygoon."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:201
+msgid ""
+"Draw a polygon with three corners, the last of which should be back inside "
+"the original polygon, forming an open-sided rectangle."
+msgstr "Teken een polygoon met drie hoeken, waarvan de laatste binnen de originele polygoon moet liggen, op deze wijze een rechthoek met open zijde vormend."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:203
+msgid "Right-click to finish marking points:"
+msgstr "Klik met rechts om de markeringspunten te voltooien:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:208
+msgid "This will give a result similar to:"
+msgstr "Dit zal een soortgelijk resultaat geven als:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:213
+msgid "You can do the opposite, too:"
+msgstr "U kunt ook het tegenovergestelde doen:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:215
+msgid "Click outside the polygon."
+msgstr "Klik buiten de polygoon."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:216
+msgid "Draw a rectangle into the polygon."
+msgstr "Teken een rechthoek tot in de polygoon."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:217
+msgid "Right-click outside the polygon again:"
+msgstr "Klik met rechts opnieuw buiten de polygoon:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:222
+msgid "The result of the above:"
+msgstr "Het resultaat van bovenstaande:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:229
+msgid "|moderate| |TY| Tool: Split Features"
+msgstr "|moderate| |TY| Gereedschap: Objecten splitsen"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:231
+msgid ""
+"The :guilabel:`Split Features` tool is similar to how you took part of the "
+"farm away, except that it doesn't delete either of the two parts. Instead, "
+"it keeps them both."
+msgstr "Het gereedschap :guilabel:`Objecten splitsen` is soortgelijk aan de manier waarop u een gedeelte van de boerderij wegnam, met het verschil dat het geen van de twee gedeelten verwijdert. In plaats daarvan behoudt het beide."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:235
+msgid "|mActionSplitFeatures|"
+msgstr "|mActionSplitFeatures|"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:237
+msgid "First, re-enable snapping for the :guilabel:`landuse` layer."
+msgstr "Eerst, schakel snappen opnieuw in voor de laag :guilabel:`landuse`."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:239
+msgid "We will use the tool to split a corner from the |largeLandUseArea|."
+msgstr "We zullen het gereedschap gebruiken om een hoek van het |largeLandUseArea| af te splitsen."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:241
+msgid ""
+"Select the :guilabel:`Split Features` tool and click on a vertex to begin "
+"drawing a line. Click the vertex on the opposite side of the corner you wish"
+" to split and right-click to complete the line:"
+msgstr "Selecteer het gereedschap :guilabel:`Objecten splitsen` en klik op een punt om een lijn te tekenen. Klik op het punt aan de tegenoverliggende zijde van de hoek die u wilt afsplitsen en klik met rechts om de lijn te voltooien:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:248
+msgid ""
+"At this point, it may seem as if nothing has happened. But remember that "
+"your symbology for the :kbd:`landuse` layer does not have any border, so the"
+" new division line will not be shown."
+msgstr "Op dit punt zou het lijken alsof er niet is gebeurd. Maar onthoud dat uw symbologie voor de laag :kbd:`landuse` geen rand heeft, dus de nieuwe lijn waarop wordt gedeeld wordt niet getoond."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:251
+msgid ""
+"Use the :guilabel:`Select Single Feature` tool to select the corner you just"
+" split; the new feature will now be highlighted:"
+msgstr "Gebruik het gereedschap :guilabel:`Eén object selecteren` om de hoek te selecteren die u zojuist heeft afgesplitst; het nieuwe object zal nu worden geaccentueerd:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:260
+msgid "|hard| |TY| Tool: Merge Features"
+msgstr "|hard| |TY| Gereedschap: Objecten samenvoegen"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:262
+msgid ""
+"Now we will re-join the feature you just created to the original polygon:"
+msgstr "Nu zullen we het object dat u zojuist heeft gemaakt opnieuw samenvoegen met de originele polygoon:"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:264
+msgid ""
+"Experiment with  the :guilabel:`Merge Selected Features` and "
+":guilabel:`Merge Attributes of Selected Features` tools."
+msgstr "Experimenteer met de gereedschappen :guilabel:`Geselecteerde objecten samenvoegen` en :guilabel:`Attributen van geselecteerde objecten samenvoegen`."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:266
+msgid "Note the differences."
+msgstr "Let op de verschillen."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:268
+msgid ":ref:`Check your results <create-vector-topology-4>`"
+msgstr ":ref:`Controleer uw resultaten <create-vector-topology-4>`"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:271
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:273
+msgid ""
+"Topology editing is a powerful tool that allows you to create and modify "
+"objects quickly and easily, while ensuring that they remain topologically "
+"correct."
+msgstr "het bewerken van topologie is een krachtig gereedschap dat u in staat stelt objecten snel en gemakkelijk te maken en aan te passen, er onderwijl voor zorgend dat zij topologisch juist blijven."
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:278
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/create_vector_data/topo_editing.rst:280
+msgid ""
+"Now you know how to digitize the shape of the objects easily, but adding in "
+"the attributes is still a bit of a headache! Next we'll show you how to use "
+"forms so that attribute editing is simpler and more effective."
+msgstr "Nu weet u hoe u gemakkelijk de vorm van objecten kunt digitaliseren, maar het toevoegen van de attributen is nog steeds een ander verhaal! Hierna zullen we u tonen hoe u formulieren kunt gebruiken, zodat het bewerken van attributen eenvoudiger en meer effectief is."

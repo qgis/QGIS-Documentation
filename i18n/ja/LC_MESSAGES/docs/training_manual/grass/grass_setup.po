@@ -1,0 +1,307 @@
+# 
+# Translators:
+# Choro <u.ko.kubot@gmail.com>, 2014
+# Minoru Akagi <akaginch@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-02 14:43+0000\n"
+"Last-Translator: Choro <u.ko.kubot@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:6
+msgid "|LS| GRASS Setup"
+msgstr "|LS| GRASSのセットアップ"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:8
+msgid ""
+"Using GRASS in QGIS requires you to think of the interface in a slightly "
+"different way. Remember that you're not working in QGIS directly, but "
+"working in GRASS *via* QGIS."
+msgstr "QGISでGRASSを使用するにはインターフェイスを少し異なる方法で考える必要があります。QGISで直接作業しているのではなくQGIS *を通じて* GRASSで作業していることを覚えておいて下さい。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:12
+msgid "**The goal for this lesson:** To begin a GRASS project in QGIS."
+msgstr "**このレッスンの目標:** QGISでGRASSのプロジェクトを始めます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:15
+msgid "|basic| |FA| Start a New GRASS Project"
+msgstr "|basic| |FA| 新しいGRASSプロジェクトの開始"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:17
+msgid ""
+"To launch GRASS from within QGIS, you need to activate it as with any other "
+"plugin. First, open a new QGIS project."
+msgstr "QGISからGRASSを起動するには他のプラグインと同じようにそれをアクティブにする必要があります。まず新しいQGISプロジェクトを開きます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:20
+msgid ""
+"In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:"
+msgstr ":guilabel:`プラグインマネージャ` で :guilabel:`GRASS` を有効にします:"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:25
+msgid "The GRASS toolbar will appear:"
+msgstr "GRASSのツールバーが表示されます:"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:30
+msgid ""
+"Before you can use GRASS, you need to create a **mapset**. GRASS always "
+"works in a database environment, which means that you need to import all the"
+" data you want to use into a GRASS database."
+msgstr "GRASSを使用する前に **マップセット** を作成する必要があります。GRASSは常にデータベース環境で動作します。これはあなたが使いたいすべてのデータはGRASSデータベースへインポートする必要があることを意味します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:34
+msgid "Click on the :guilabel:`New mapset` button:"
+msgstr ":guilabel:`新規マップセット` ボタンをクリックします:"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:36
+msgid "|grass_new_mapset|"
+msgstr "|grass_new_mapset|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:38
+msgid "You'll see a dialog explaining the structure of a GRASS mapset."
+msgstr "GRASSマップセットの構造を説明するダイアログボックスが表示されます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:40
+msgid ""
+"Create a new directory called :kbd:`grass_db` in :guilabel:`exercise_data`."
+msgstr ":guilabel:`exercise_data` に :kbd:`grass_db` という名前の新しいディレクトリを作成します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:41
+msgid ""
+"Set it as the directory that will be used by GRASS to set up its database:"
+msgstr "データベースを構成するためにそれをGRASSが使用するディレクトリとして設定します:"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:46
+#: ../../source/docs/training_manual/grass/grass_setup.rst:56
+#: ../../source/docs/training_manual/grass/grass_setup.rst:62
+#: ../../source/docs/training_manual/grass/grass_setup.rst:69
+msgid "Click :guilabel:`Next`."
+msgstr ":guilabel:`次へ` をクリックします。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:48
+msgid ""
+"GRASS needs to create a \"location\", which describes the maximum extents of"
+" the geographic area you'll be working in."
+msgstr "GRASSでは\"ロケーション\"を作成する必要があります。それはあなたが作業しようとする地理的地域の最大範囲を記述します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:51
+msgid "Call the new location :kbd:`South_Africa`:"
+msgstr "新しいロケーション :kbd:`South_Africa` を作成しましょう:"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:57
+msgid ""
+"We'll be working with :kbd:`WGS 84`, so search for and select this CRS:"
+msgstr ":kbd:`WGS 84` で作業していますので、検索してこのCRSを選択します:"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:63
+msgid ""
+"Now select the region :guilabel:`South Africa` from the dropdown and click "
+":guilabel:`Set`:"
+msgstr "ドロップダウンリストから :guilabel:`South Africa` の領域を選択して、 :guilabel:`設定` をクリックします:"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:70
+msgid "Create a mapset, which is the map file that you'll be working with."
+msgstr "マップセットを作成します。あなたがこれから作業するマップファイルです。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:75
+msgid ""
+"Once you're done, you'll see a dialog asking you to confirm that the "
+"settings it displays are correct."
+msgstr "完了したら、設定が正しいことを確認するダイアログが表示されます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:78
+msgid "Click :guilabel:`Finish`."
+msgstr ":guilabel:`完了` をクリックします。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:79
+msgid "Click :guilabel:`OK` on the success dialog."
+msgstr "成功ダイアログで :guilabel:`OK` をクリックします。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:82
+msgid "|basic| |FA| Loading Vector Data into GRASS"
+msgstr "|basic| |FA| GRASSにベクタデータを読み込む"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:84
+msgid ""
+"You'll now have a blank map. To load data into GRASS, you need to follow a "
+"two-step process."
+msgstr "空の地図が用意されました。GRASSにデータを読み込むには2段階のプロセスを実行する必要があります。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:87
+msgid ""
+"Load data into QGIS as usual. Use the :kbd:`roads.shp` dataset (found under "
+":kbd:`exercise_data/epsg4326/`) for now."
+msgstr "QGISにいつものようにデータを読み込みます。さしあたり :kbd:`roads.shp` データセット(:kbd:`exercise_data/epsg4326/` 下にあります)を使用します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:89
+msgid "As soon as it's loaded, click on the :guilabel:`GRASS Tools` button:"
+msgstr "読み込まれたら :guilabel:`GRASSツール` ボタンをクリックします:"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:91
+msgid "|grass_tools|"
+msgstr "|grass_tools|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:93
+msgid "In the new dialog, select :guilabel:`Modules list`."
+msgstr "新しいダイアログで :guilabel:`モジュールリスト` を選択します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:94
+msgid ""
+"Find the vector import tool by entering the term :kbd:`v.in.ogr.qgis` in the"
+" :guilabel:`Filter` field."
+msgstr ":guilabel:`フィルタ` で :kbd:`v.in.ogr.qgis` と入力してベクタインポートツールを検索します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:97
+msgid ""
+"The :kbd:`v` stands for \"vector\", :kbd:`in` means its a function to import"
+" data into the GRASS database, :kbd:`ogr` is the software library used to "
+"read vector data, and :kbd:`qgis` means that the tool will look for a vector"
+" from among the vectors already loaded into QGIS."
+msgstr ":kbd:`v` は\"ベクタ\"、 :kbd:`in` はGRASSデータベースにデータをインポートする関数を意味し、 :kbd:`ogr` はベクタデータの読み込みに使用するソフトウェア・ライブラリです。そして、 :kbd:`qgis` はそのツールがQGISに既に読み込まれたベクタの中からベクタを探すことを意味します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:102
+msgid "Once you've found this tool, click on it to bring up the tool itself:"
+msgstr "このツールを見つけたらクリックして起動します:"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:107
+msgid ""
+"Set the loaded layer to :guilabel:`roads` and its GRASS version's name to "
+":kbd:`g_roads` to prevent confusion."
+msgstr "ロードされたレイヤに :guilabel:`roads` を設定し、GRASSでの名前を混乱を防ぐために :kbd:`g_roads` に設定します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:113
+msgid ""
+"|hard| Note the extra import options provided under :guilabel:`Advanced "
+"Options`. These include the ability to add a WHERE clause for the SQL query "
+"used for importing the data."
+msgstr "|hard| 別のインポートオプションが :guilabel:`アドバンスドオプション` で提供されています。データのインポートに使用するSQLクエリのWHERE句を追加する機能が含まれます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:117
+msgid "Click :guilabel:`Run` to begin the import."
+msgstr ":guilabel:`実行` をクリックしてインポートを開始します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:118
+msgid ""
+"When it's done, click the :guilabel:`View output` button to see the newly "
+"imported GRASS layer in the map."
+msgstr "それが終わったら :guilabel:`出力を見る` をクリックして新しくインポートされたGRASSレイヤを地図に表示します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:120
+msgid ""
+"Close first the import tool (click the :guilabel:`Close` button to the "
+"immediate right of :guilabel:`View output`), then close the :guilabel:`GRASS"
+" Tools` window."
+msgstr "まずインポートツールを閉じて (:guilabel:`出力を見る` のすぐ右にある :guilabel:`閉じる` ボタンをクリックします)、そして :guilabel:`GRASSツール` ウィンドウを閉じます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:123
+msgid "Remove the original :guilabel:`roads` layer."
+msgstr "オリジナルの :guilabel:`roads` レイヤを削除します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:125
+msgid ""
+"Now you are left with only the imported GRASS layer as displayed in your "
+"QGIS map."
+msgstr "今、QGISの地図に表示されているのはインポートされたGRASSレイヤだけです。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:129
+msgid "|basic| |FA| Loading Raster Data into GRASS"
+msgstr "|basic| |FA| GRASSにラスタデータを読み込む"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:131
+msgid ""
+"Recall that our DEM is in the Projected CRS :kbd:`UTM 33S / WGS 84`, but our"
+" GRASS project is in the Geographic CRS :kbd:`WGS 84`. So let's re-project "
+"the DEM first."
+msgstr "私たちのDEMは投影座標系の :kbd:`UTM 33S / WGS 84` ですが、GRASSプロジェクトは地理座標系の :kbd:`WGS 84` であることを思い出しましょう。それではまずDEMを再投影します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:135
+msgid ""
+"Load the |srtmFileName| dataset (found under "
+":kbd:`exercise_data/raster/SRTM/`) into the QGIS map as usual, using QGIS' "
+":guilabel:`Add Raster Layer` tool."
+msgstr "いつものように :guilabel:`ラスタレイヤの追加` ツールを使用してQGISの地図に |srtmFileName| データセット(:kbd:`exercise_data/raster/SRTM/` の下にあります)を読み込みます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:138
+msgid ""
+"Re-project it using GDAL Warp tool (:menuselection:`Raster --> Projections "
+"--> Warp (Reproject)`), setting it up as shown:"
+msgstr "GDALワープツール(:menuselection:`ラスタ --> 投影 --> ワープ (再投影)`)を用いて再投影します。次のように設定します:"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:144
+msgid ""
+"Save the raster under the same folder as the original, but with the file "
+"name :kbd:`DEM_WGS84.tif`. Once it appears in your map, remove the "
+"|srtmFileName| dataset from your :guilabel:`Layers list`."
+msgstr "ラスタをオリジナルと同じフォルダに、ファイル名を :kbd:`DEM_WGS84.tif` として保存します。それが地図に表示されたら |srtmFileName| データセットを :guilabel:`レイヤリスト` から削除します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:148
+msgid "Now that it's reprojected, you can load it into your GRASS database."
+msgstr "DEMが再投影されたのでGRASSデータベースに読み込むことができます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:150
+msgid "Open the :guilabel:`GRASS Tools` dialog again."
+msgstr ":guilabel:`GRASSツール` ダイアログを再度開きます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:151
+msgid "Click on the :guilabel:`Modules List` tab."
+msgstr ":guilabel:`モジュールリスト` タブをクリックします。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:152
+msgid ""
+"Search for :kbd:`r.in.gdal.qgis` and double click the tool to open the "
+"tool's dialog."
+msgstr ":kbd:`r.in.gdal.qgis` を検索します。ツールをダブルクリックしてダイアログを開きます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:154
+msgid ""
+"Set it up so that the input layer is :guilabel:`DEM_WGS84` and the output is"
+" :kbd:`g_dem`."
+msgstr "入力レイヤを :guilabel:`DEM_WGS84` に、出力を :kbd:`g_dem` に設定します。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:160
+msgid "Click :guilabel:`Run`."
+msgstr ":guilabel:`実行` をクリックします。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:161
+msgid "When the process is done, click :guilabel:`View output`."
+msgstr "処理が完了したら :guilabel:`出力を見る` をクリックします。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:162
+msgid ""
+":guilabel:`Close` the current tab, and then :guilabel:`Close` the whole "
+"dialog."
+msgstr "現在のタブを閉じ、そしてダイアログボックスを閉じます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:168
+msgid "You may now remove the original :guilabel:`DEM_WGS84` layer."
+msgstr "オリジナルの :guilabel:`DEM_WGS84` レイヤは削除できます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:171
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:173
+msgid ""
+"The GRASS workflow for ingesting data is somewhat different from the QGIS "
+"method because GRASS loads its data into a spatial database structure. "
+"However, by using QGIS as a frontend, you can make the setup of a GRASS "
+"mapset easier by using existing layers in QGIS as data sources for GRASS."
+msgstr "GRASSはデータを空間データベース構造にロードするため、GRASSのデータ収集ワークフローはQGISの方法とは多少異なります。しかし、フロントエンドとしてQGISを使用することによってGRASSのデータソースとしてQGIS内の既存レイヤを使用でき、GRASSマップセットのセットアップを簡単にすることができます。"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:179
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:181
+msgid ""
+"Now that the data is imported into GRASS, we can look at the advanced "
+"analysis operations that GRASS offers."
+msgstr "データはGRASSにインポートされました。GRASSの高度な分析操作を見ることができます。"

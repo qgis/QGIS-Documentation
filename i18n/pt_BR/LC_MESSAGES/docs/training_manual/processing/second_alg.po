@@ -1,0 +1,185 @@
+# 
+# Translators:
+# Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2014
+# Sâmara Assef Pereira da Rocha <sam.assef@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-04 10:10+0000\n"
+"Last-Translator: Sâmara Assef Pereira da Rocha <sam.assef@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:6
+msgid "More algorithms and data types"
+msgstr "Mais algoritmos e tipos de dados"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:9
+msgid ""
+"In this lesson we will run three more algorithms, learn how to use other "
+"input types, and configure outputs to be saved to a given folder "
+"automatically."
+msgstr "Nesta lição nós vamos correr mais três algoritmos, aprender como usar outros tipos de entrada e configurar saídas para serem salvas em uma determinada pasta automaticamente. "
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:11
+msgid ""
+"For this lessons we will need a table and a polygons layer. We are going to "
+"create a points layer based on coordinates in the table, and then count the "
+"number of points in each polygon. If you open the QGIS project corresponding"
+" to this lesson, you will find a table with X and Y coordinates, but you "
+"will find no polygons layer. Don't worry, we will create it using a "
+"processing geoalgorithm."
+msgstr "Para estas lições vamos precisar de uma mesa e uma camada de polígonos. Nós vamos criar uma camada de pontos baseado em coordenadas na tabela e depois contar o número de pontos em cada polígono. Se você abrir o projeto da QGIS correspondente a esta lição, você encontrará uma mesa com coordenadas X e Y, mas você não encontrará nenhuma camada de polígonos. Não se preocupe, nós criaremos isto usando o processamento de geoalgoritmo."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:13
+msgid ""
+"The first thing we are going to do is to create a points layer from the "
+"coordinates in the table, using the *Points layer to table* algorithm. You "
+"now know how to use the search box, so it should not be hard for you to find"
+" it. Double--click on it to run it and get to its following dialog."
+msgstr "A primeira coisa que nós vamos fazer é criar uma camada de pontos a partir das coordenadas da tabela, usando o algoritmo *pontos camada para tabela*. Você já sabe como usar a caixa de pesquisa, por isso não deve ser difícil para você encontrá-la. Clique duas vezes sobre ela para executá-la e chegar a sua caixa de diálogo seguinte. "
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:15
+msgid ""
+"This algorithm, like the one from the previous lesson, just generates a "
+"single output, and it has three inputs:"
+msgstr "Este algoritmo, como o da lição anterior, gera apenas uma única saída, e tem três entradas."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:17
+msgid ""
+"Table: the table with the coordinates. You should select here the table from"
+" the lesson data."
+msgstr "Tabela: a tabela com as coordenadas.  Você deve selecionar aqui a tabela com os dados da lição."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:18
+msgid ""
+"X an Y fields: these two parameters are linked to the first one. The "
+"corresponding selector will show the name of those fields that are available"
+" in the selected table. Select the *XCOORD* field for the *X* parameter, and"
+" the *YYCOORD* field for the *Y* parameter."
+msgstr "Campos X e Y: esses dois parâmetros são ligados ao primeiro. O seletor correspondente mostrará os nomes dos campos que estão disponíveis na tabela selecionada. Selecione o campo *XCOORD* para o parâmetro *X* e o campo *YYCOORD* para o parâmetro *Y*."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:19
+msgid ""
+"CRS: Since this algorithm takes no input layers, it cannot assign a CRS to "
+"the output layer based on them. Instead, it asks you to manually select the "
+"CRS that the coordinates in the table use. Click on the button on the left--"
+"hand side to open the QGIS CRS selector, and select EPSG:4326 as the output "
+"CRS. We are using this CRS because the coordinates in the table are in that "
+"CRS."
+msgstr "CRS: Uma vez que este algoritmo não leva camadas de entrada, não se pode atribuir um CRS para a camada de saída com base nelas. Ao invés disso, ele pede para você selecionar manualmente o CRS que as coordenadas na tabela usam. Click no botão do lado esquerdo para abrir o seletor QGIS CRS e selecione EPSG:4326 com a saída CRS. Nós estamos usando o CRS por que as coordenadas na tabela estão nessa CRS."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:21
+msgid "Your dialog should look like this."
+msgstr "Seu diálogo deve ser semelhante a este."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:25
+msgid "Now press the *Run* button to get the following layer:"
+msgstr "Agora pressione o botão *Executar* para obter a seguinte camada:"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:29
+msgid ""
+"The next thing we need is the polygon layer. We are going to create a "
+"regular grid of polygons using the *Create grid* algorithm, which has the "
+"following parameters dialog."
+msgstr "A próxima coisa que precisamos é a camada de polígono. Nós vamos criar uma grade regular de polígonos usando o algoritmo *Criar grade*, o qual tem o seguinte diálogo de parâmetros."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:33
+msgid ""
+"The inputs required to create the grid are all numbers. When you have to "
+"enter a numerical value, you have two options: typing it directly on the "
+"corresponding box or clicking the button on the right--hand side to get to a"
+" dialog like the one shown next."
+msgstr "Os dados necessários para criar a grade são todos os números. Quando você tem que adicionar um valor numérico, você tem duas opções: digitar isto direto na caixa correspondente ou clicando no botão do lado direito para chegar a um diálogo como o mostrado a seguir."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:37
+msgid ""
+"The dialog contains a simple calculator, so you can type expressions such as"
+" ``11 * 34.7 + 4.6``, and the result will be computed and put in the "
+"corresponding text box in the parameters dialog. Also, it contains constants"
+" that you can use, and values from other layers available."
+msgstr "O diálogo contém uma calculadora simples, assim você pode calcular expressões como ``11 * 34.7 + 4.6``, e o resultado será computado e colocado na caixa de texto correspondente dentro do diálogo de parâmetros. Além disso, o diálogo contém constantes que você pode usar e valores de outras camadas disponíveis."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:39
+msgid ""
+"In this case, we want to create a grid that covers the extent of the input "
+"points layer, so we should use its coordinates to calculate the center "
+"coordinate of the grid and its width and height, since those are the "
+"parameters that the algorithm takes to create the grid. With a little bit of"
+" math, try to do that yourself using the calculator dialog and the constants"
+" from the input points layer."
+msgstr "Neste caso, nós queremos criar uma grade que cubra a extensão dos pontos da camada de entrada, logo, nós devemos usar estas coordenadas para calcular a coordenada do centro da grade e sua largura e altura, já que elas são parâmetros que o algoritmo utiliza para criar a grade."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:41
+msgid "Select *Rectangles (polygons)* in the *Type* field."
+msgstr "Selecione *Retângulos (polígonos)* no campo *Tipo*."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:43
+msgid ""
+"As in the case of the last algorithm, we have to enter the CRS here as well."
+" Select EPSG:4326 as the target CRS, as we did before."
+msgstr "Como no caso do último algoritmo, nós temos que introduzir o CRS aqui também. Selecione EPSG:4326 na alvo CRS, como fizemos antes."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:45
+msgid "In the end, you should have a parameters dialog like this:"
+msgstr "No final, você deve ter um diálogo parâmetro como este:"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:49
+msgid ""
+"(Better add one spacing on the width and height: Horizontal spacing: 0.0001,"
+" Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: "
+"-5.695674, Center Y: 40.2477955) The case of X center is a bit tricky, see: "
+"-5.696126+(( -5.695222+ 5.696126)/2)"
+msgstr "(Melhor adicionar um espaçamento entre a largura e a altura: Espaçamento horizontal: 0.0001, Espaçamento vertical:0.0001, Largura: 0.001004, Altura: 0.000651, Centro X: -5.695674, Centro Y: 40.2477955). O caso do centro X é um pouco complicado. veja: -5.696126+(( -5.695222+ 5.696126)/2)"
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:52
+msgid "Press *Run* and you will get the graticule layer."
+msgstr "Pressione *Executar* e você você obterá a camada de retícula."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:56
+msgid ""
+"The last step is to count the points in each on of the rectangles of that "
+"graticule. We will use the *Count points in polygons* algorithm."
+msgstr "O último passo é contar os pontos em cada um nos retângulos daquela retícula. Nós usaremos o algoritmo *Contar pontos em polígonos*."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:60
+msgid "Now we have the result we were looking for."
+msgstr "Agora nós temos o resultado que estávamos procurando."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:62
+msgid ""
+"Before finishing this lesson, here is a quick tip to make your life easier "
+"in case you want to persistently save your data. If you want all your output"
+" files to be saved in a given folder, you do not have to type the folder "
+"name each time. Instead, go to the processing menu and select the *Options "
+"and configuration* item. It will open the configuration dialog."
+msgstr "Antes de terminar esta lição, aqui está uma dica rápida para tornar sua vida mais fácil no caso de você querer persistentemente salvar seus dados. Se você quiser todos os seus arquivos de saída salvos numa determinada pasta, você não precisa digitar o nome da pasta todas as vezes. Ao invés disso, vá ao menu de processamento e selecione o item *Opções e Configurações*. Isto abrirá a janela de configuração."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:66
+msgid ""
+"In the *Output folder* entry that you will find in the *General* group, type"
+" the path to your destination folder."
+msgstr "Na entrada *Pasta de saída* que você encontrará no grupo *Geral*, digite o caminho para sua pasta de destino."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:70
+msgid ""
+"Now when you run an algorithm, just use the filename instead of the full "
+"path. For instance, with the configuration shown above, if you enter "
+"``graticule.shp`` as the output path for the algorithm that we have just "
+"used, the result will be saved in ``D:\\processing_output\\graticule.shp``. "
+"You can still enter a full path in case you want a result to be saved in a "
+"different folder."
+msgstr "Agora quando você executar um algoritmo, é só usar o nome do arquivo ao invés do caminho completo. Por exemplo, com a configuração mostrada acima, se você digitar ``retícula.shp`` como o caminho de saída para o algoritmo que acabamos de utilizar, o resultado será salvo em ``D:\\processamento_saída\\retícula.shp``. Você ainda pode entrar em um caminho completo, caso você queira um resultado para ser salvo em uma pasta diferente."
+
+#: ../../source/docs/training_manual/processing/second_alg.rst:73
+msgid ""
+"Try yourself the *Create grid* algorithm with different grid sizes, and also"
+" with different types of grids. We will use the hexagonal one in a later "
+"chapter."
+msgstr "Teste você mesmo o algoritmo *Criar grade* com diferentes tamanhos de grade, e também com diferentes tipos de redes. Usaremos o hexagonal em um capítulo mais a frente."

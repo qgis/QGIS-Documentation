@@ -1,0 +1,254 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-11 05:54+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:6
+msgid "Starting with the graphical modeler"
+msgstr "도표 모델 작성자 시작"
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:9
+msgid ""
+"In this lesson we will use the graphical modeler, a powerful component that "
+"we can use to define a workflow and run a chain of algorithms."
+msgstr "이 강의에서 작업 흐름을 정의하고 일련의 알고리듬들을 실행할 수 있는 강력한 구성 요소인 도표 모델 작성자(graphical modeler) 사용법을 배울 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:12
+msgid ""
+"A normal session with the processign tools includes more than running a "
+"single algorithm. Usually several of them are run to obtain a result, and "
+"the outputs of some of those algorithms are used as input for some of the "
+"other ones."
+msgstr "일반적으로 처리 과정 도구를 사용할 때에는 알고리듬 하나를 실행하는 것보다 더 많은 작업을 포함합니다. 결과를 얻기 위해 보통 몇 개의 알고리듬을 실행하며, 그 가운데 일부 알고리듬의 산출물은 다른 알고리듬의 입력 레이어로 쓰이곤 합니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:14
+msgid ""
+"Using the graphical modeler, that workflow can be put into a model, which "
+"will run all the necessary algorithms in a single run, thus simplifying the "
+"whole process and automating it."
+msgstr "도표 모델 작성자를 사용하면, 이런 작업 흐름을 모델로 구성할 수 있습니다. 즉 필요한 모든 알고리듬을 한 번에 실행할 수 있으므로, 전체 과정을 단순화하고 자동화할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:16
+msgid ""
+"To start this lesson, we are going to calculate a parameter named "
+"Topographic Wetness Index. The algorithm that computes it is called "
+"*Topographic Wetness Index (TWI)*"
+msgstr "이 강의를 시작하기 전에 지형 습윤 지수(Topographic Wetness Index)라는 명칭의 파라미터를 계산해야 합니다. 이를 계산하는 알고리듬이 :guilabel:`Topographic Wetness Index (TWI)` 입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:20
+msgid ""
+"As you can see, there are two mandatory inputs: *Slope* and *Catchment "
+"area*. There is also an optional input, but we will not be using it, so we "
+"can ignore it."
+msgstr "그림에서 알 수 있듯이 :guilabel:`Slope` 와 :guilabel:`Catchment Area` 두 입력 레이어가 반드시 있어야 합니다. 다른 선택적인 입력 레이어도 있지만, 지금 사용할 것은 아니기 때문에 무시하도록 하겠습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:22
+msgid ""
+"The data for this lesson contains just a DEM, so we do not have any of the "
+"required inputs. However, we know how to calculate both of them from that "
+"DEM, since we have already seen the algorithms to compute slope and "
+"catchment area. So we can first compute those layers and then use them for "
+"the TWI algorithm."
+msgstr "이 강의에 해당하는 데이터는 DEM 하나만을 담고 있으므로 필요한 입력 레이어가 없습니다. 그러나 우리는 DEM에서 이 두 레이어를 계산하는 방법을 알고 있습니다. 경사도와 집수 지역을 게산하는 알고리듬을 배웠기 때문이죠. 따라서, 먼저 해당 레이어들을 계산한 다음 TWI 알고리듬에 쓸 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:24
+msgid ""
+"Here are the parameter dialogs that you should use to calculate the 2 "
+"intermediate layers."
+msgstr "이 중간 단계의 두 레이어를 계산하는 데 사용해야 하는 파라미터 대화 창은 다음과 같습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:30
+msgid ""
+"And this is how you have to set the parameters dialog of the TWI algorithm."
+msgstr "TWI 알고리듬의 파라미터 대화 창을 다음과 같이 설정해야 합니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:34
+msgid ""
+"This is the result that you will obtain (the default singleband pseudocolor "
+"inverted palette has been used for rendering)."
+msgstr "다음과 같은 결과물을 얻게 될 것입니다. (렌더링에 기본값인 단일 밴드 의사(pseudo) 색상 반전 색상표를 사용했습니다.)"
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:38
+msgid ""
+"What we will try to do now is to create an algorithm that calculates the TWI"
+" from a DEM in jut one single step. That will save us work in case we later "
+"have to compute a TWI layer from another DEM, since we will need just one "
+"single step to do it instead of the 3 ones above. All the processes that we "
+"need are found in the  toolbox, so what we have to do is to define the "
+"workflow to wrap them. This is where the graphical modeler comes in."
+msgstr "이제 DEM에서 TWI를 한 단계만에 계산하는 알고리듬을 생성해보도록 하겠습니다. 이후 다른 DEM에서 TWI 레이어를 계산해야 할 경우 작업 시간을 절약해줄 것입니다. 앞에서 했던 3단계 대신 단 1단계만에 할 수 있기 때문입니다. 필요한 모든 처리 과정은 툴박스에서 찾을 수 있으므로 이 단계들을 포장하는 작업 흐름을 정의하기만 하면 됩니다. 바로 도표 모델 작성자를 사용해서 말이죠."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:40
+msgid "Open the modeler by selecting its menu entry in the processing menu."
+msgstr ":guilabel:`Processing` 메뉴에서 :guilabel:`Processing modeler` 항목을 선택해서 모델 작성자를 실행하십시오."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:44
+msgid ""
+"Two things are needed to create a model: setting the inputs that it will "
+"need, and defining the algorithm that it contains. Both of them are done by "
+"adding elements from the two tabs in the left--hand side of the modeler "
+"window: *Inputs* and *Algorithms*"
+msgstr "모델을 생성하려면 두 가지가 필요합니다. 필요한 입력물을 설정하고, 모델이 담고 있는 알고리듬을 정의해야 합니다. 모델 작성자 창의 왼쪽에 있는 :guilabel:`Inputs` 및 :guilabel:`Algorithms` 탭에서 두 요소들을 추가하면 됩니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:46
+msgid ""
+"Let's start with the inputs. In this case we do not have much to add. We "
+"just need a raster layer with the DEM, and that will be our only input data."
+msgstr ":guilabel:`Inputs` 부터 시작해보겠습니다. 이 경우 추가할 것이 많지 않습니다. DEM 래스터 레이어만 필요하므로, 그것만 입력 데이터로 추가하겠습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:48
+msgid ""
+"Double click on the *Raster layer* input and you will see the following "
+"dialog."
+msgstr ":guilabel:`Input` 탭에서 :guilabel:`Raster Layer` 를 더블클릭하면 다음 대화 창이 뜹니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:52
+msgid ""
+"Here wil have to define the input we want. Since we expect this raster layer"
+" to be a DEM, we will call it *DEM*. That's the name that the user of the "
+"model will see when running it. Since we need that layer to work, we will "
+"define it as a mandatory layer."
+msgstr "여기서 원하는 입력물을 정의해야 합니다. 이 래스터 레이어가 DEM이어야 하므로, :kbd:`DEM` 이라고 명명하겠습니다. 모델 실행 시 사용자가 보게 될 명칭입니다. 작업 시 이 레이어가 필요하기 때문에 필수적인 레이어로 정의하겠습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:54
+msgid "Here is how the dialog should be configured."
+msgstr "다음과 같이 대화 창을 설정해야 합니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:58
+msgid "Click on *OK* and the input will appear in the modeler canvas."
+msgstr ":guilabel:`OK` 를 클릭하면 모델 작성자 캔버스에 입력물이 나타납니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:62
+msgid ""
+"Now let's move to the *Algorithms* tab. The first algorithm we have to run "
+"is the *Slope, aspect, curvatures* algorithm. Locate it in the algorithm "
+"list, double--click on it and you will see the dialog shown below."
+msgstr "이제 :guilabel:`Algorithms` 탭으로 옮겨볼까요? 처음 실행해야 할 알고리듬은 :guilabel:`Slope, aspect, curvatures` 입니다. 알고리듬 목록에서 해당 알고리듬을 찾은 다음 더블클릭하면 다음 대화 창이 나타날 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:66
+msgid ""
+"This dialog is very similar to the one that you can find when running the "
+"algorithm from the toolbox, but the element that you can use as parameter "
+"values are not taken from the current QGIS project, but from the model "
+"itself. That means that, in this case, we will not have all the raster "
+"layers of our project available for the *Elevation* field, but just the ones"
+" defined in our model. Since we have added just one single raster input "
+"named *DEM*, that will be the only raster layer that we will see in the list"
+" corresponding to the *Elevation* parameter."
+msgstr "이 대화 창은 툴박스에서 알고리듬을 실행할 때 볼 수 있는 창과 매우 비슷하지만, 파라미터 값으로 사용할 수 있는 요소를 현재 QGIS 프로젝트에서 가져오는 것이 아니라 모델 자체에서 가져옵니다. 즉 이 경우 :guilabel:`Elevation` 항목에 쓸 수 있는 프로젝트의 래스터 레이어가 없다는 뜻입니다. 다만 모델에서 정의된 레이어뿐입니다. 마침 :kbd:`DEM` 이란 명칭의 입력 래스터 레이어 하나를 추가했기 때문에, :guilabel:`Elevation` 파라미터에 해당하는 목록에서 볼 수 있는 래스터 레이어도 이 레이어 하나뿐입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:68
+msgid ""
+"Output generated by an algorithm are handled a bit differently when the "
+"algorithm is used as a part of a model. Instead of selecting the filepath "
+"where you want to save each output, you just have to specify if that ouput "
+"is an intermediate layer (and you do not want it to be preserved after the "
+"model has been executed), or it is a final one. In this case, all layers "
+"produced by this algorithm are intermediate. We will only use one of them "
+"(the slope layer), but we do not want to keep it, since we just need it to "
+"calculate the TWI layer, which is the final result that we want to obtain."
+msgstr "알고리듬이 모델의 일부로 사용될 때 알고리듬이 생성한 산출물도 조금 다르게 다뤄집니다. 각 산출물을 저장하고자 하는 파일 경로를 선택하는 대신, 해당 산출물이 중간 단계의 (따라서 모델 실행 완료 후 삭제하기를 바라는) 레이어인지 아니면 최종 레이어인지만 설정해주면 됩니다. 이 경우, 해당 알고리듬이 생산하는 모든 레이어가 중간 단계의 레이어입니다. 이 가운데 하나(경사도 레이어)만 사용하지만 저장하지는 않을 것입니다. 우리가 얻고자 하는 최종 결과물인 TWI 레이어를 계산하는 데에만 필요하기 때문입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:70
+msgid ""
+"When layers are not a final result, you should just leave the corresponding "
+"field. Otherwise, you have to enter a name that will be used to identify the"
+" layer in the parameters dialog that will be shown when you run the model "
+"later."
+msgstr "레이어가 최종 결과물이 아니라면 해당 항목을 변경해서는 안 됩니다. 최종 결과물일 경우, 후에 모델 실행 시 파라미터 대화 창에서 레이어를 식별하는 데 쓰이게 될 명칭을 입력해야 합니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:72
+msgid ""
+"There is not much to select in this first dialog, since we do not have but "
+"just one layer in or model (The DEM input that we created). Actually, the "
+"default configuration of the dialog is the correct one in this case, so you "
+"just have to press *OK*. This is what you will no have in the modeler "
+"canvas."
+msgstr "이 첫 대화 창에서 선택할 것은 별로 없습니다. 모델에 단 하나의 레이어(DEM 입력 레이어)만 있기 때문입니다. 실제로 이 경우 대화 창의 기본 설정이 정확하므로, :guilabel:`OK` 만 클릭하면 됩니다. 이제 모델 작성자 캔버스가 다음과 같이 보일 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:76
+msgid ""
+"The second algorithm we have to add to our model is the catchment area "
+"algorithm. We will use the algorithm named *Catchment area (Paralell)*. We "
+"will use the DEM layer again as input, and none of the ouputs it produces "
+"are final, so here is how you have to fill the corresponding dialog."
+msgstr "모델에 두 번째로 추가해야 할 알고리듬은 집수 지역 알고리듬입니다. :guilabel:`Catchment area (Paralell)` 알고리듬을 사용하십시오. DEM 레이어를 다시 입력 레이어로 사용하고, 이 알고리듬이 생산하는 모든 산출물이 최종 결과물이 아니므로, 해당 대화 창을 다음과 같이 설정해야 합니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:80
+msgid "Now your model should look like this."
+msgstr "이제 모델이 다음과 같이 보여야 합니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:84
+msgid ""
+"The last step is to add the *Topographic Wetness Index* algorithm, with the "
+"following configuration."
+msgstr "마지막으로 :guilabel:`Topographic Wetness Index` 알고리듬을 추가하고, 다음과 같이 설정하십시오."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:88
+msgid ""
+"In this case, we will not be using the DEM as input, but instead, we will "
+"use the slope and catchment area layers that are calcualted by the "
+"algorithms that we previously added. As you add new algorithms, the outputs "
+"they produce become available for other algorithms, and using them you link "
+"the algorithms, creating the workflow."
+msgstr "이 경우, 입력 레이어에 DEM이 아니라 이전 단계에서 추가했던 알고리듬이 계산한 경사도 및 집수 지역 레이어를 사용할 것입니다. 새 알고리듬을 추가하면 해당 알고리듬이 생산하는 산출물을 다른 알고리듬이 사용할 수 있습니다. 이를 이용해서 알고리듬들을 연결, 작업 흐름을 생성하는 것입니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:90
+msgid ""
+"In this case, the output TWI layer is a final layer, so we have to indicate "
+"so. In the corresponding textbox, enter the name that you want to be shown "
+"for this output."
+msgstr "이 때 산출물인 TWI 레이어가 최종 레이어이기 때문에, 그렇게 지정해야 합니다. 해당 텍스트 란에 이 산출물에 부여할 명칭을 입력하십시오."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:92
+msgid "Now our model is finished and it should look like this."
+msgstr "이제 모델 작성이 끝났습니다. 다음 화면처럼 보여야 합니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:96
+msgid ""
+"Enter a name and a group name in the upper part of the model window, and "
+"then save it clicking on the *Save* button."
+msgstr "모델 작성자 창 위쪽에 모델명 및 모델 그룹명을 입력한 다음, :guilabel:`Save` 버튼을 클릭해서 저장하십시오."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:100
+msgid ""
+"You can save it anywhere you want an open it later, but if you save it in "
+"the models folder (which is the folder that you will see when the save file "
+"dialog appears), you model will also be available in the toolbox as well. So"
+" stay on that folder and save the model with the filename that you prefer."
+msgstr "모델을 원하는 아무 위치에나 저장해서 나중에 열 수 있지만, :guilabel:`models` 폴더(파일 저장 대화 창에서 볼 수 있는 기본 폴더)에 저장할 경우 해당 모델을 툴박스에서도 사용할 수 있습니다. 따라서 폴더를 변경하지 말고 사용자가 원하는 파일명으로 저장하십시오."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:102
+msgid ""
+"Now close the modeler dialog and go to the toolbox. In the *Models* entry "
+"you will find you model."
+msgstr "이제 모델 작성자 대화 창을 닫고 툴박스를 살펴보십시오. :guilabel:`Models` 그룹에서 사용자가 방금 작성한 모델을 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:106
+msgid "You can run it just like any normal algorithm, double--clicking on it."
+msgstr "모델을 더블클릭해서, 다른 보통 알고리듬처럼 실행할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:110
+msgid ""
+"As you can see, the parameters dialog, contain the input that you added to "
+"the model, along with the outputs that you set as final when adding the "
+"corresponding algorithms."
+msgstr "파라미터 대화 창에서 볼 수 있듯이 사용자가 모델에 추가한 입력 항목과 함께, 마지막 알고리듬을 추가했을 때 사용자가 최종 레이어로 설정한 산출물 항목을 담고 있습니다."
+
+#: ../../source/docs/training_manual/processing/modeler_twi.rst:112
+msgid ""
+"Run it using the DEM as input and you will get the TWI layer in just one "
+"single step."
+msgstr "입력 레이어로 DEM을 설정해서 실행해보십시오. 클릭 한 번으로 TWI 레이어를 얻을 수 있을 것입니다."

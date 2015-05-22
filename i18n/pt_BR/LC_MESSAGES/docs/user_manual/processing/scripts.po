@@ -1,0 +1,396 @@
+# 
+# Translators:
+# Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-17 21:47+0000\n"
+"Last-Translator: Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:7
+msgid "Writing new Processing algorithms as python scripts"
+msgstr "Escrevendo novos algoritmos de processamento com scripts python"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:9
+msgid ""
+"You can create your own algorithms by writing the corresponding Python code "
+"and adding a few extra lines to supply additional information needed to "
+"define the semantics of the algorithm. You can find a :guilabel:`Create new "
+"script` menu under the :guilabel:`Tools` group in the :guilabel:`Script` "
+"algorithms block of the toolbox. Double-click on it to open the script "
+"edition dialog. That's where you should type your code. Saving the script "
+"from there in the :file:`scripts` folder (the default one when you open the "
+"save file dialog), with :file:`.py` extension, will automatically create the"
+" corresponding algorithm."
+msgstr "Você pode criar seus próprios algoritmos escrevendo com o código Python correspondente e adicionando algumas linhas extras para fornecer informações adicionais necessárias para definir a semântica do algoritmo. Você pode encontrar um menu :guilabel:`Criar um novo script` no grupo :guilabel:`Ferramentas` no bloco algoritmo :guilabel:`Script` da caixa de ferramentas. Dê um duplo clique sobre ele para abrir o diálogo edição script. É onde você deve digitar seu código. Salvando o script na pasta:` scripts` (o padrão quando você abrir o diálogo de salvar o arquivo), com: file:` extensão .py`, criará automaticamente o algoritmo correspondente."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:18
+msgid ""
+"The name of the algorithm (the one you will see in the toolbox) is created "
+"from the filename, removing its extension and replacing low hyphens with "
+"blank spaces."
+msgstr "O nome do algoritmo (o que você vai ver na caixa de ferramentas) é criado a partir do nome do arquivo, removendo a sua extensão e substituindo baixos hífens com espaços em branco."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:21
+msgid ""
+"Let's have the following code, which calculates the Topographic Wetness "
+"Index (TWI) directly from a DEM"
+msgstr "Vamos ter o seguinte código, que calcula o índice de vertente topográfica (TWI) diretamente de um MDE"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:35
+msgid ""
+"As you can see, it involves 3 algorithms, all of them coming from SAGA. The "
+"last one of them calculates the TWI, but it needs a slope layer and a flow "
+"accumulation layer. We do not have these ones, but since we have the DEM, we"
+" can calculate them calling the corresponding SAGA algorithms."
+msgstr "Como você pode ver, envolve 3 algoritmos, todos eles provenientes da SAGA. O último deles calcula o TWI, mas precisa de uma camada de inclinação e uma camada de acumulação de fluxo. Não temos estas, mas uma vez que temos o MDE, podemos calculá-los chamando os algoritmos SAGA correspondentes."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:40
+msgid ""
+"The part of the code where this processing takes place is not difficult to "
+"understand if you have read the previous chapter. The first lines, however, "
+"need some additional explanation. They provide the information that is "
+"needed to turn your code into an algorithm that can be run from any of the "
+"GUI components, like the toolbox or the graphical modeler."
+msgstr "A parte do código onde esta transformação substitui não é difícil de entender se você já leu o capítulo anterior. As primeiras linhas, no entanto, precisam de alguma explicação adicional. Eles fornecem a informação que é necessário para transformar o seu código em um algoritmo que pode ser executado a partir de qualquer um dos componentes da GUI, como a caixa de ferramentas ou o modelador gráfico."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:46
+msgid ""
+"These lines start with a double Python comment symbol (``##``) and have the "
+"following structure"
+msgstr "Estas linhas de começo com um comentário símbolo duplo Python (``##``) e tem a seguinte estrutura"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:53
+msgid ""
+"Here is a list of all the parameter types that are supported in processign "
+"scripts, their syntax and some examples."
+msgstr "Aqui está uma lista de todos os tipos de parâmetros que são suportadas no processamento de scripts, sua sintaxe e alguns exemplos."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:56
+msgid "``raster``. A raster layer"
+msgstr "``raster``. Uma camada raster"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:57
+msgid "``vector``. A vector layer"
+msgstr "``vetor``. Uma camada vetor"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:58
+msgid "``table``. A table"
+msgstr "``tabela``. Uma tabela"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:59
+msgid ""
+"``number``. A numerical value. A default value must be provided. For "
+"instance, ``depth=number 2.4``"
+msgstr "``número``. Um valor numérico. Um valor padrão deve ser fornecido. Por exemplo, ``profundidade=número 2.4``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:61
+msgid ""
+"``string``. A text string. As in the case of numerical values, a default "
+"value must be added. For instance, ``name=string Victor``"
+msgstr "``string``. Uma cadeia de texto. Como no caso de valores numéricos, um valor padrão deve ser adicionado. Por exemplo, ``nome=texto Vitor``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:63
+msgid ""
+"``longstring``. Same as string, but a larger text box will be shown, so it "
+"is better suited for long strings, such as for a script expecting a small "
+"code snippet."
+msgstr "``longstring``. Igual um texto, mas uma caixa de texto maior será mostrado, por isso, é mais adequado para textos longos, como para um script esperam um trecho de código pequeno."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:65
+msgid ""
+"``boolean``. A boolean value. Add ``True`` or ``False`` after it to set the "
+"default value. For example, ``verbose=boolean True``."
+msgstr "`` booleano``. Um valor booleano. Adicionar ``Verdadeiro`` ou `` Falso`` depois dele, para definir o valor padrão. Por exemplo, ``verbose=booleano Verdadeiro``."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:67
+msgid "``multiple raster``. A set of input raster layers."
+msgstr "``raster multiplo``. Um conjunto de camadas raster de entrada."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:68
+msgid "``multiple vector``. A set of input vector layers."
+msgstr "``vetor multiplo``. Um conjunto de camadas vetor de entrada."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:69
+msgid ""
+"``field``. A field in the attributes table of a vector layer. The name of "
+"the layer has to be added after the ``field`` tag. For instance, if you have"
+" declared a vector input with ``mylayer=vector``, you could use "
+"``myfield=field mylayer`` to add a field from that layer as parameter."
+msgstr "``Campo``. Um campo na tabela de atributos de uma camada de vetor. O nome da camada tem que ser adicionado após a tag ``Campo``. Por exemplo, se você declarou um vetor de entrada com ``minhacamada=vetor``, você poderia usar o ``minhacamada=campo minhacamada`` para adicionar um campo a partir dessa camada como parâmetro."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:73
+msgid "``folder``. A folder"
+msgstr "``pasta``. Um pasta"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:74
+msgid "``file``. A filename"
+msgstr "``arquivo``. Um arquivo"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:75
+msgid "``crs``. A Coordinate Reference System"
+msgstr "``src``. Um Sistema de Referência de Coordenada"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:77
+msgid ""
+"The parameter name is the name that will be shown to the user when executing"
+" the algorithm, and also the variable name to use in the script code. The "
+"value entered by the user for that parameter will be assigned to a variable "
+"with that name."
+msgstr "O nome do parâmetro é o nome que será mostrado para o usuário durante a execução do algoritmo, e também o nome da variável a ser usado no código de script. O valor digitado pelo usuário para esse parâmetro será atribuído a uma variável com esse nome."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:81
+msgid ""
+"When showing the name of the parameter to the user, the name will be edited "
+"it to improve its appearance, replacing low hyphens with spaces. So, for "
+"instance, if you want the user to see a parameter named ``A numerical "
+"value``, you can use the variable name ``A_numerical_value``."
+msgstr "Ao mostrar o nome do parâmetro para o nome, o usuário irá editado-lo para melhorar a sua aparência, substituindo hífens baixos com espaços. Assim, por exemplo, se você quiser que o usuário veja um parâmetro denominado ``Um valor numérico``, você pode usar o nome da variável ``A_numerical_value``."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:86
+msgid ""
+"Layers and tables values are strings containing the filepath of the "
+"corresponding object. To turn them into a |qg| object, you can use the "
+"``processing.getObjectFromUri()`` function. Multiple inputs also have a "
+"string value, which contains the filepaths to all selected objects, "
+"separated by semicolons (``;``)."
+msgstr "Valores de tabelas e camadas são sequências contendo o caminho de arquivo do objeto correspondente. Para transformá-los em um objeto do |qg|, você pode usar a função ``processing.getObjectFromUri()``. Várias entradas também têm um valor de texto, que contém os caminhos de arquivos para todos os objetos selecionados, separados por ponto e vírgula (``;``)."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:91
+msgid "Outputs are defined in a similar manner, using the following tags:"
+msgstr "Saídas são definidas de forma semelhante, usando as seguintes etiquetas:"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:93
+msgid "``output raster``"
+msgstr "``raster de saída``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:94
+msgid "``output vector``"
+msgstr "``vetor de saída``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:95
+msgid "``output table``"
+msgstr "``tabela de saída``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:96
+msgid "``output html``"
+msgstr "``html de saída``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:97
+msgid "``output file``"
+msgstr "``arquivo de saída``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:98
+msgid "``output number``"
+msgstr "``número de saída``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:99
+msgid "``output string``"
+msgstr "``texto de saída``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:100
+msgid "``output extent``"
+msgstr "``extensão de saída``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:102
+msgid ""
+"The value assigned to the output variables is always a string with a "
+"filepath. It will correspond to a temporary filepath in case the user has "
+"not entered any output filename."
+msgstr "O valor atribuído às variáveis de saída é sempre um texto com um caminho de arquivo. Ele vai corresponder a um caminho de arquivo temporário, caso o usuário não informe qualquer arquivo de saída."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:106
+msgid ""
+"In addition to the tags for parameters and outputs, you can also define the "
+"group under which the algorithm will be shown, using the ``group`` tag."
+msgstr "Além das marcas para os parâmetros e saídas, você também pode definir o grupo em que o algoritmo será mostrado, usando a etiqueta ``groupo``."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:109
+msgid ""
+"The last tag that you can use in your script header is ``##nomodeler``. Use "
+"that when you do not want your algorithm to be shown in the modeler window. "
+"This should be used for algorithms that do not have a clear syntax (for "
+"instance, if the number of layers to be created is not known in advance, at "
+"design time), which make them unsuitable for the graphical modeler"
+msgstr "A última marca que você pode usar em seu cabeçalho roteiro é ``##nomodeler``. Use isso quando você não quer que seu algoritmo seja mostrado na janela de modelador. Isto deve ser utilizado para algoritmos que não têm uma sintaxe clara (por exemplo, se o número de camadas a serem criadas não é conhecido antecipadamente, a tempo de desenho), o que os torna inadequados para a modelagem gráfica"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:112
+msgid "Handing data produced by the algorithm"
+msgstr "Entregando os dados produzidos pelo algoritmo"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:114
+msgid ""
+"When you declare an output representing a layer (raster, vector or table), "
+"the algorithm will try to add it to |qg| once it is finished. That is the "
+"reason why, although the ``runalg()`` method does not load the layers it "
+"produces, the final *TWI* layer will be loaded, since it is saved to the "
+"file entered by the user, which is the value of the corresponding output."
+msgstr "Quando você declara uma saída que representa uma camada (raster, vetor ou tabela), o algoritmo irá tentar adicioná-la ao |qg| uma vez que ela for concluída. Essa é a razão pela qual, apesar de o método ``runalg()`` não carregar as camadas que produz, a  camada final *TWI* será carregada, uma vez que será salva no arquivo digitado pelo usuário, que é o valor da saída correspondente."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:119
+msgid ""
+"Do not use the ``load()`` method in your script algorithms, but just when "
+"working with the console line. If a layer is created as output of an "
+"algorithm, it should be declared as such. Otherwise, you will not be able to"
+" properly use the algorithm in the modeler, since its syntax (as defined by "
+"the tags explained above) will not match what the algorithm really creates."
+msgstr "Não use o método ``load()`` em seus algoritmos de script, mas apenas quando se trabalha com a linha de console. Se uma camada é criada como saída de um algoritmo, que deve ser declarada como tal. Caso contrário, você não será capaz de usar corretamente o algoritmo no modelador, desde a sua sintaxe (como definido pelas etiquetas explicadas acima) não coincidir com o que o algoritmo realmente cria."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:125
+msgid ""
+"Hidden outputs (numbers and strings) do not have a value. Instead, it is you"
+" who has to assign a value to them. To do so, just set the value of a "
+"variable with the name you used to declare that output. For instance, if you"
+" have used this declaration,"
+msgstr "Saídas ocultas (números e textos) não tem um valor. Em vez disso, é você quem tem que atribuir um valor a elas. Para isso, basta definir o valor de uma variável com o nome usado para declarar que a saída. Por exemplo, se você usou esta declaração,"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:134
+msgid "the following line will set the value of the output to 5:"
+msgstr "a seguinte linha foi definido o valor de saída para 5:"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:142
+msgid "Communicating with the user"
+msgstr "Comunicação com o usuário"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:144
+msgid ""
+"If your algorithm takes a long time to process, it is a good idea to inform "
+"the user. You have a global named ``progress`` available, with two available"
+" methods: ``setText(text)`` and ``setPercentage(percent)`` to modify the "
+"progress text and the progress bar."
+msgstr "Se o algoritmo leva um longo tempo para processar, é uma boa idéia informar ao usuário. Você tem um chamado ``progresso`` global disponível, com dois métodos disponíveis: ``setText(texto)`` e ``setPercentage(por cento)`` para modificar o progresso do texto e a barra de progresso. "
+
+#: ../../source/docs/user_manual/processing/scripts.rst:149
+msgid ""
+"If you have to provide some information to the user, not related to the "
+"progress of the algorithm, you can use the ``setInfo(text)`` method, also "
+"from the ``progress`` object."
+msgstr "Se você tiver que fornecer algumas informações para o usuário, não relacionada com a evolução do algoritmo, você pode usar o método ``SetInfo (texto)``, também o ``progresso`` do objeto."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:152
+msgid ""
+"If your script has some problem, the correct way of propagating it is to "
+"raise an exception of type ``GeoAlgorithmExecutionException()``. You can "
+"pass a message as argument to the constructor of the exception. Processing "
+"will take care of handling it and communicating with the user, depending on "
+"where the algorithm is being executed from (toolbox, modeler, Python "
+"console...)"
+msgstr "Se o seu script tiver algum problema, a maneira correta de propagação é para levantar uma exceção do tipo ``GeoAlgorithmExecutionException()``. Você pode passar uma mensagem como argumento para o construtor da exceção. Processing vai cuidar de manuseá-lo e se comunicar com o usuário, dependendo de onde o algoritmo estiver sendo executado a partir da (caixa de ferramentas, modelador, console do Python ...)"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:156
+msgid "Documenting your scripts"
+msgstr "Documentando seus scripts"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:158
+msgid ""
+"As in the case of models, you can create additional documentation for your "
+"script, to explain what they do and how to use them. In the script editing "
+"dialog you will find a **[Edit script help]** button. Click on it and it "
+"will take you to the help editing dialog. Check the chapter about the "
+"graphical modeler to know more about this dialog and how to use it."
+msgstr "Como no caso dos modelos, você pode criar a documentação adicional para o seu roteiro, para explicar o que eles fazem e como usá-los. Na caixa de diálogo de edição de script que você vai encontrar o botão **[Editar roteiro ajuda]**. Clique nele e ele irá levá-lo para o diálogo ajuda a edição. Confira o capítulo sobre o modelador gráfico para saber mais sobre este diálogo e como usá-lo."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:164
+msgid ""
+"Help files are saved in the same folder as the script itself, adding the "
+":file:`.help` extension to the filename. Notice that you can edit your "
+"script's help before saving it for the first time. If you later close the "
+"script editing dialog without saving the script (i.e. you discard it), the "
+"help content you wrote will be lost. If your script was already saved and is"
+" associated to a filename, saving is done automatically."
+msgstr "Arquivos de ajuda são salvos na mesma pasta que o próprio script, acrescentando a extensão :file:`.help` ao nome do arquivo. Observe que você pode editar a ajuda de seu script antes de salvá-la pela primeira vez. Se mais tarde você fechar o script de diálogo edição sem salvar o script (ou seja, você descartá-lo), o conteúdo da ajuda que você escreveu sera perdidos. Se o seu roteiro já foi salvo e está associado a um nome de arquivo, a gravação será feita automaticamente."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:173
+msgid "Example scripts"
+msgstr "Exemplos de scripts"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:175
+msgid ""
+"Several examples are available in the on-line collection of scripts, which "
+"you can access by selecting the *Get script from on-line script collection* "
+"tool under the *Scripts/tools* entry in the toolbox."
+msgstr "Vários exemplos estão disponíveis na coleção on-line de scripts, que podem ser acessados selecionando o script *Adquirir script da coleção on-line* a ferramenta sob o *Scripts/ferramentas* entrada na caixa de ferramentas."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:183
+msgid ""
+"Please, check them to see real examples of how to create algorithms using "
+"the processing framework classes. You can right-click on any script "
+"algorithm and select :guilabel:`Edit script` to edit its code or just to see"
+" it."
+msgstr "Por favor, verifique-os para ver exemplos reais de como criar algoritmos usando as classes de estrutura de processamento. Você pode clicar o botão direito do mouse em qualquer algoritmo de roteiro e escolha: guilabel: `Editar script` para editar o seu código ou apenas para vê-lo."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:189
+msgid "Best practices for writing script algorithms"
+msgstr "Melhores práticas para algoritmos de script escrito"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:191
+msgid ""
+"Here's a quick summary of ideas to consider when creating your script "
+"algorithms and, epsecially, if you want to share with other QGIS users. "
+"Following these simple rules will ensure consistency across the different "
+"Processing elements such as the toolbox, the modeler or the batch processing"
+" interface."
+msgstr "Aqui está um rápido resumo das idéias a serem consideradas ao criar seus algoritmos de script e, essecialmente, se você quer compartilhar com outros usuários do QGIS. Seguindo estas regras simples irá assegurar a coerência entre os diferentes elementos de processamento, tais como a caixa de ferramentas, o modelador ou a interface de processamento em lote."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:193
+msgid ""
+"Do not load resulting layers. Let Processing handle your results and load "
+"your layers if needed."
+msgstr "Não coloque resultados das camadas. Vamos trabalhar o Processamento com seus resultados e carregar suas camadas se necessárias."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:194
+msgid ""
+"Always declare the outputs your algorithm creates. Avoid things such as "
+"decalring one output and then using the destination filename set for that "
+"output to create a collection of them. That will break the correct semantics"
+" of the algorithm and make it impossible to use it safely in the modeler. If"
+" you have to write an algorithm like that, make sure you add the "
+"``##nomodeler`` tag."
+msgstr "Sempre declare as saídas de seu algoritmo criadas. Evite coisas como decalring uma saída e, em seguida, usando o nome do arquivo de destino definido para que a saída para criar uma coleção deles. Isso vai quebrar a semântica correta do algoritmo e tornar impossível usá-lo com segurança no modelador. Se você tem que escrever um algoritmo assim, certifique-se de adicionar a etiqueta ``##nomodeler``."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:195
+msgid ""
+"Do not show message boxes or use any GUI element from the script. If you "
+"want to communicate with the user, use the ``setInfo()`` method or throw an "
+"``GeoAlgorithmExecutionException``"
+msgstr "Não mostrar caixas de mensagens ou usar qualquer elemento GUI do script. Se você quer se comunicar com o usuário, use o método ``SetInfo()``ou lançar uma ``GeoAlgorithmExecutionException``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:196
+msgid ""
+"As a rule of thumb, do not forget that your agorithm might be executed in a "
+"context other than the Processing toolbox."
+msgstr "Como regra geral, não se esqueça que o seu agoritmo pode ser executado em um contexto que não seja a caixa de ferramentas de processamento."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:200
+msgid "Pre- and post-execution script hooks"
+msgstr "Pré e pós-execução de ganchos de script"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:202
+msgid ""
+"Scripts can also be used to set pre- and post-execution hooks that are run "
+"before and after an algorithm is run. This can be used to automate tasks "
+"that should be performed whenever an algorithm is executed."
+msgstr "Os scripts também pode serem usados para definir ganchos pré e pós-execução que são executados antes e depois que algoritmo seja executado. Esta pode ser usada para automatizar as tarefas que devem ser executadas sempre que um algoritmo é executado."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:206
+msgid ""
+"The syntax is identical to the syntax explained above, but an additional "
+"global variable named ``alg`` is available, representing the algorithm that "
+"has just been (or is about to be) executed."
+msgstr "A sintaxe é idêntica à sintaxe explicada acima, mas uma variável global adicional chamado ``alg`` está disponível, que representa o algoritmo que acaba de ser (ou está prestes a ser) executado."
+
+#: ../../source/docs/user_manual/processing/scripts.rst:210
+msgid ""
+"In the :guilabel:`General` group of the processing config dialog you will "
+"find two entries named :guilabel:`Pre-execution script file` and :guilabel"
+":`Post-execution script file` where the filename of the scripts to be run in"
+" each case can be entered."
+msgstr "No grupo :guilabel:`Geral` da janela de configuração de processamento, você vai encontrar duas entradas com o nome :guilabel:`Arquivo de script de pré-execução` e :guilabel:`Arquivo de script de pós-execução` onde o nome do arquivo dos scripts a serem executado em cada caso, podem ser inseridos."

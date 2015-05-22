@@ -1,0 +1,167 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-07-06 02:45+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:6
+msgid "|LS| Working with Databases in the QGIS Browser"
+msgstr "|LS| QGIS 브라우저에서 데이터베이스 작업"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:8
+msgid ""
+"In the previous 2 modules we looked at the basic concepts, features and "
+"functions of relational databases as well as extensions that let us store, "
+"manage, query and manipulate spatial data in a relational database. This "
+"section will dive deeper into how to effectively use spatial databases in "
+"QGIS."
+msgstr "이전 2번의 강의를 통해 관계형 데이터베이스의 기능 및 함수는 물론 관계형 데이터베이스에서 공간 데이터를 저장, 관리, 쿼리, 조작할 수 있게 해주는 확장 프로그램에 대해서도 살펴보았습니다. 이 강의에서는 QGIS에서 어떻게 공간 데이터베이스를 효율적으로 사용할 수 있는지에 대해 더 심도 있게 다룰 것입니다."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:13
+msgid ""
+"**The goal for this lesson:** To learn how to interact with spatial "
+"databases using the QGIS Browser interface."
+msgstr "**이 강의의 목표:** QGIS 브라우저 인터페이스를 이용해 공간 데이터베이스와 상호 작용을 하는 방법을 배우기."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:17
+msgid "|basic| |FA| Adding Database Tables to QGIS using the Browser"
+msgstr "|basic| |FA| 브라우저를 사용해 QGIS에 데이터베이스 테이블 추가"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:19
+msgid ""
+"We have already briefly looked at how to add tables from a database as QGIS "
+"layers, now lets look at this in a bit more detail and look at the different"
+" ways this can be done in QGIS. Lets start by looking at the new Browser "
+"interface."
+msgstr "데이터베이스 테이블을 QGIS 레이어로 추가하는 방법에 대해서는 벌써 간단하게 다루었지만, 이제 좀 더 상세한 내용을 살펴보고 어떻게 QGIS에서 동일한 작업을 다른 방식으로 할 수 있는지 배워보겠습니다. 새로운 브라우저 인터페이스부터 시작합시다."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:24
+msgid "Start a new empty map in QGIS."
+msgstr "QGIS에서 비어 있는 새 맵을 생성하십시오."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:25
+msgid ""
+"Open the Browser by clicking the :guilabel:`Browser` tab at the bottom of "
+"the *Layer Panel*"
+msgstr ":guilabel:`Layer Panel` 맨 밑에 있는 :guilabel:`Browser` 탭을 클릭해서 브라우저를 여십시오."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:27
+msgid ""
+"Open the PostGIS portion of the tree and you should find your previously "
+"configured connection available (you may need to click the Refresh button at"
+" the top of the browser window)."
+msgstr "메뉴 트리에서 PostGIS 부분을 열면 이전에 설정했던 연결을 그대로 사용할 수 있다는 사실을 알 수 있을 것입니다. (브라우저 창 상단의 :guilabel:`Refresh` 버튼을 클릭해야 할 수도 있습니다.)"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:34
+msgid ""
+"Double clicking on any of the table/layers listed here will add it to the "
+"Map Canvas."
+msgstr "여기 나열된 테이블이나 레이어를 더블클릭하면 맵 캔버스에 추가될 것입니다."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:37
+msgid ""
+"Right Clicking on a table/layer in this view will give you a few options. "
+"Click on the :guilabel:`Properties` item to look at the properties of the "
+"layer."
+msgstr "테이블이나 레이어를 오른쪽 클릭하면 몇 가지 옵션이 나타납니다. :guilabel:`Properties` 항목을 클릭해서 해당 레이어의 속성을 살펴보십시오."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:44
+msgid ""
+"Of course you can also use this interface to connect to PostGIS databases "
+"hosted on a server external to your workstation. Right clicking on the "
+"PostGIS entry in the tree will allow you to specify connection paramaters "
+"for a new connection."
+msgstr "물론 이 인터페이스를 통해 사용자 시스템 외부에 있는 서버가 호스팅하고 있는 PostGIS 데이터베이스에 접속할 수도 있습니다. 메뉴 트리의 PostGIS 항목을 오른쪽 클릭하면 새 연결을 위한 접속 파라미터를 설정할 수 있습니다."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:51
+msgid "|basic| |FA| Adding a filtered set of records as a Layer"
+msgstr "|basic| |FA| 필터링된 레코드 집합을 레이어로 추가"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:53
+msgid ""
+"Now that we have seen how to add an entire table as a QGIS layer it might be"
+" nice to learn how to add a filtered set of records from a table as a layer "
+"by using queries that we learned about in previous sections."
+msgstr "테이블 전체를 QGIS 레이어로 추가하는 방법은 이미 알고 있습니다. 이제 테이블에서 필터링된 레코드 집합을 이전 강의들에서 배운 대로 쿼리를 통해 레이어로 추가하는 방법을 배울 차례입니다."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:57
+msgid "Start a new empty map with no layers"
+msgstr "아무 레이어도 없는 비어 있는 새 맵을 시작하십시오."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:58
+msgid ""
+"Click the :guilabel:`Add PostGIS Layers` button or select :guilabel:`Layer "
+"--> Add PostGIS Layers` from the menu."
+msgstr ":guilabel:`Add PostGIS Layers` 버튼을 클릭하거나, 메뉴에서 :menuselection:`Layer --> Add PostGIS Layers` 항목을 선택하십시오."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:60
+msgid ""
+"In the :guilabel:`Add PostGIS Table(s)` dialog that comes up, connect to the"
+" :kbd:`postgis_demo` connection."
+msgstr ":guilabel:`Add PostGIS Table(s)` 대화 창이 뜨면, :kbd:`postgis_demo` 연결에 접속하십시오."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:62
+msgid ""
+"Expand the :kbd:`public schema` and you should find the three tables we were"
+" working with previously."
+msgstr ":kbd:`public schema` 를 확장하면 이전에 작업했던 테이블 세 개를 볼 수 있을 것입니다."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:64
+msgid ""
+"Click the :kbd:`lines` layer to select it, but instead of adding it, click "
+"the :guilabel:`Set Filter` button to bring up the :guilabel:`Query Builder` "
+"dialog."
+msgstr ":kbd:`lines` 레이어를 클릭해서 선택하십시오. 그러나 그대로 추가하는 대신, :guilabel:`Set Filter` 버튼을 클릭해서 :guilabel:`Query Builder` 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:67
+msgid ""
+"Construct the following expression using the buttons or by entering it "
+"directly::"
+msgstr "버튼을 사용하거나 직접 입력해서 다음 표현식을 작성하십시오."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:75
+msgid ""
+"Click :guilabel:`OK` to complete editing the filter and click "
+":guilabel:`Add` to add the filtered layer to your map."
+msgstr ":guilabel:`OK` 를 클릭해서 필터 편집을 종료한 다음, :guilabel:`Add` 를 클릭해서 필터링된 레이어를 사용자 맵에 추가하십시오."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:77
+msgid "Rename the :kbd:`lines` layer in the tree to :kbd:`roads_primary`."
+msgstr "트리에 있는 :kbd:`lines` 레이어의 명칭을 :kbd:`roads_primary` 로 변경하십시오."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:79
+msgid ""
+"You will notice that only the Primary Roads have been added to your map "
+"rather than the entire layer."
+msgstr "전체 레이어가 아니라 '주요 도로'만 맵에 추가된 것을 알 수 있을 것입니다."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:83
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:85
+msgid ""
+"You have seen how to interact with spatial databases using the QGIS Browser "
+"and how to add layers to your map based on a query filter."
+msgstr "QGIS 브라우저를 통해 공간 데이터베이스와 상호 작용을 하는 방법 및 쿼리 필터를 기반으로 맵에 레이어를 추가하는 방법을 배웠습니다."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:89
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:91
+msgid ""
+"Next you'll see how to work with the DB Manager interface in QGIS for a more"
+" complete set of database management tasks."
+msgstr "다음 강의에서 좀 더 완전한 데이터베이스 관리 작업들을 위해 QGIS의 DB 관리자 인터페이스를 사용하는 방법을 배울 것입니다."

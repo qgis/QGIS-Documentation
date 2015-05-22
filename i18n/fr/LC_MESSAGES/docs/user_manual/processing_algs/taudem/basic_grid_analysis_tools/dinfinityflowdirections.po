@@ -1,0 +1,132 @@
+# 
+# Translators:
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-03 10:25+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:6
+msgid "D-Infinity Flow Directions"
+msgstr "Directions de Flux D-Infinity"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:11
+msgid ""
+"Assigns a flow direction based on the D-infinity flow method using the "
+"steepest slope of a triangular facet (Tarboton, 1997, \"A New Method for the"
+" Determination of Flow Directions and Contributing Areas in Grid Digital "
+"Elevation Models\", Water Resources Research, 33(2): 309-319). Flow "
+"direction is defined as steepest downward slope on planar triangular facets "
+"on a block centered grid. Flow direction is encoded as an angle in radians "
+"counter-clockwise from east as a continuous (floating point) quantity "
+"between 0 and 2π. The flow direction angle is determined as the direction of"
+" the steepest downward slope on the eight triangular facets formed in a 3 x "
+"3 grid cell window centered on the grid cell of interest. The resulting flow"
+" in a grid is then usually interpreted as being proportioned between the two"
+" neighboring cells that define the triangular facet with the steepest "
+"downward slope."
+msgstr "Assigne une direction de flux basée sur la méthode D-Infinity décrite par Tarboton, D. G., (1997), dans \"A New Method for the Determination of Flow Directions and Contributing Areas in Grid Digital Elevation Models\", Water Resources Research, 33(2): 309-319. Le flux de direction est exprimé en radians, dans le sens des aiguilles d'une montre à partir de l'est comme une quantité comprise (réel) entre 0 et 2π. L'angle de direction de flux est déterminé selon la direction de la pente descendante la plus raide sur les 8 faces d'un triangle d'un bloc de grille de 3x3 cellules centré sur la cellule sur laquelle le calcul est réalisé. Le flux résultant est une grille qui est généralement interprétée comme étant proportionnelle aux deux cellules voisines qui définissent la face triangulaire avec la pente descendante la plus raide. "
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:27
+msgid ""
+"A block-centered representation is used with each elevation value taken to "
+"represent the elevation of the center of the corresponding grid cell. Eight "
+"planar triangular facets are formed between each grid cell and its eight "
+"neighbors. Each of these has a downslope vector which when drawn outwards "
+"from the center may be at an angle that lies within or outside the 45 degree"
+" (π/4 radian) angle range of the facet at the center point. If the slope "
+"vector angle is within the facet angle, it represents the steepest flow "
+"direction on that facet. If the slope vector angle is outside a facet, the "
+"steepest flow direction associated with that facet is taken along the "
+"steepest edge. The slope and flow direction associated with the grid cell is"
+" taken as the magnitude and direction of the steepest downslope vector from "
+"all eight facets. Slope is measured as drop/distance, i.e. tan of the slope "
+"angle."
+msgstr "Une représentation de blocs centrés est utilisée pour chaque valeur d'élévation prise pour représenter l'élévation du centre de la cellule de grille correspondante. Les huit faces triangulaires sont formées entre chaque cellule de grille et ses huit voisins. Chacun de ces voisins possède un vecteur de pente descendante qui permet l'écoulement. Ce vecteur est orienté selon un angle compris entre plus ou moins 45 degrés (π/4 radians) au point de centre. Si l'angle de vecteur de pente se situe au sein de l'angle de la face, il représente la direction du flux la plus raide sur cette face. Si l'angle du vecteur de pente est en dehors de la face alors la direction de flux la plus raide de cette face est prise le long du segment le plus raide. La pente et la direction de flux associés à la cellule sont évalués à partir de la magnitude et de la direction du vecteur descendant le plus raide des huit faces. La pente est mesurée par la déclivité/distance, c'est-à-dire, la tangente de l'angle de pente."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:40
+msgid ""
+"In the case where no slope vectors are positive (downslope), the flow "
+"direction is set using the method of Garbrecht and Martz (1997) for the "
+"determination of flow across flat areas. This makes flat areas drain away "
+"from high ground and towards low ground. The flow path grid to enforce "
+"drainage along existing streams is an optional input, and if used, takes "
+"precedence over elevations for the setting of flow directions."
+msgstr "Dans le cas où aucun des vecteurs de pente n'est positif (pente descendante), la direction de flux est calculée selon la méthode de Garbrecht et Martz (1997) de détermination de flux sur les surfaces planes. Cela permet aux surfaces planes de présenter un écoulement des terrains élevés vers les terrains en contrebas. La grille de cheminement de flux qui force le drainage à se faire le long des cours d'eau existants est une entrée optionnelle. Si elle est utilisée, elle écrase les paramètres d'élévation de directions de flux."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:47
+msgid ""
+"The D-infinity flow direction algorithm may be applied to a DEM that has not"
+" had its pits filled, but it will then result in \"no data\" values for the "
+"D-infinity flow direction and slope associated with the lowest point of the "
+"pit."
+msgstr "L'algorithme de direction de flux D-Infinity peut s'appliquer à un MEN qui présente des fosses. Cela créera des valeurs vides pour la direction et la pente associée pour le point le plus bas de la fosse."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:52
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:56
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr "``Grille d'élévation de remplissage de fosse`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:55
+msgid ""
+"A grid of elevation values. This is usually the output of the **\"Pit "
+"Remove\"** tool, in which case it is elevations with pits removed."
+msgstr "Une grille des valeurs d'élévation. Ceci est généralement la sortie de l'outil **\"Supprimer les fosses\"**, auquel cas ce sont des élévations avec des fosses supprimés."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:59
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:69
+msgid "``D-Infinity Flow Directions Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D-Infinity`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:62
+msgid ""
+"A grid of flow directions based on the D-infinity flow method using the "
+"steepest slope of a triangular facet. Flow direction is determined as the "
+"direction of the steepest downward slope on the 8 triangular facets of a 3x3"
+" block centered grid. Flow direction is encoded as an angle in radians, "
+"counter-clockwise from east as a continuous (floating point) quantity "
+"between 0 and 2π. The resulting flow in a grid is then usually interpreted "
+"as being proportioned between the two neighboring cells that define the "
+"triangular facet with the steepest downward slope."
+msgstr "Une grille de directions de flux basée sur la méthode de flux D-Infinity qui utilise la pente la plus raide d'une face triangulaire. La direction de flux est déterminée selon la direction de la pente descendante la plus raide sur les 8 faces d'un triangle d'un bloc de grille de 3x3 cellules. Le flux de direction est exprimé en radians, dans le sens des aiguilles d'une montre à partir de l'est comme une quantité comprise (réel) entre 0 et 2π. Le flux résultant est une grille qui est généralement interprétée comme étant proportionnelle aux deux cellules voisines qui définissent la face triangulaire avec la pente descendante la plus raide."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:77
+msgid "``D-Infinity Slope Grid`` [raster]"
+msgstr "``Grille de pente D-Infinity`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:72
+msgid ""
+"A grid of slope evaluated using the D-infinity method described in Tarboton,"
+" D. G., (1997), \"A New Method for the Determination of Flow Directions and "
+"Contributing Areas in Grid Digital Elevation Models\", Water Resources "
+"Research, 33(2): 309-319. This is the steepest outwards slope on one of "
+"eight triangular facets centered at each grid cell, measured as "
+"drop/distance, i.e. tan of the slope angle."
+msgstr "Une grille de pente évaluée en utilisant la méthode D-Infinity décrite par Tarboton, D. G., (1997), dans \"A New Method for the Determination of Flow Directions and Contributing Areas in Grid Digital Elevation Models\", Water Resources Research, 33(2): 309-319. Il s'agit de la pente d'écoulement la plus raide sur une des huits faces triangulaires centrées sur chaque grille de cellule, mesurée en déclivité/distance, c'est-à-dire selon la tangente de l'angle de pente."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:80
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:87
+msgid "See also"
+msgstr "Voir également"

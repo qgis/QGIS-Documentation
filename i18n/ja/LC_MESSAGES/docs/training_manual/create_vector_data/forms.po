@@ -1,0 +1,439 @@
+# 
+# Translators:
+# Minoru Akagi <akaginch@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-10-21 08:30+0000\n"
+"Last-Translator: Minoru Akagi <akaginch@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:6
+msgid "|LS| Forms"
+msgstr "|LS| フォーム"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:8
+msgid ""
+"When you add new data via digitizing, you're presented with a dialog that "
+"lets you fill in the attributes for that feature. However, this dialog is "
+"not, by default, very nice to look at. This can cause a usability problem, "
+"especially if you have large datasets to create, or if you want other people"
+" to help you digitize and they find the default forms to be confusing."
+msgstr "デジタイズで新しいデータを追加する場合、その地物の属性を入力するダイアログが表示されます。ただし、このダイアログボックスは既定ではあまり見た目がよくありません。これは特に大規模なデータセットを作成する場合や他の人にデジタイズを手伝って貰うときに既定のフォームではわかりにくい場合に、ユーザビリティ上の問題を引き起こす可能性があります。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:14
+msgid ""
+"Fortunately, QGIS lets you create your own custom dialogs for a layer. This "
+"lesson shows you how."
+msgstr "幸いにも、QGISではレイヤに独自のカスタムダイアログを作成することができます。このレッスンではその方法について説明します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:17
+msgid "**The goal for this lesson:** To create a form for a layer."
+msgstr "**このレッスンの目標:** レイヤのフォームを作成します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:20
+msgid "|basic| |FA| Using QGIS' Form Design Functionality"
+msgstr "|basic| |FA| QGISのフォームデザイン機能の使用"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:22
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:41
+msgid "Select the :guilabel:`roads` layer in the :guilabel:`Layers list`."
+msgstr ":guilabel:`レイヤリスト` で :guilabel:`roads` レイヤを選択します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:23
+msgid "Enter :guilabel:`Edit Mode` as before."
+msgstr "前のように :guilabel:`編集モード` にします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:24
+msgid "Open its :guilabel:`Attribute Table`."
+msgstr ":guilabel:`属性テーブル` を開きます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:25
+msgid ""
+"Right-click on any cell in the table. A short menu will appear, with the "
+"only entry being :guilabel:`Open form`."
+msgstr "テーブル内の任意のセルを右クリックします。 :guilabel:`フォームのオープン` エントリのある短いメニューが表示されます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:27
+msgid "Click on it to see the form that QGIS generates for this layer."
+msgstr "それをクリックするとQGISがこのレイヤのために生成したフォームが表示されます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:29
+msgid ""
+"Obviously it would be nice to be able to do this while looking at the map, "
+"rather than needing to search for a specific street in the "
+":guilabel:`Attribute Table` all the time."
+msgstr "明らかに、毎回 :guilabel:`属性テーブル` で特定の街路を検索するのではなく、地図を見ながらこれを行うことができるといいですね。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:33
+msgid "Go to the :menuselection:`Settings --> Options` menu."
+msgstr ":menuselection:`設定 --> オプション` に移動します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:34
+msgid "In the dialog that appears, select the :guilabel:`Map Tools` tab."
+msgstr "表示されるダイアログで :guilabel:`マップツール` タブを選択します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:35
+msgid "Check the :guilabel:`Open feature form ...` checkbox:"
+msgstr ":guilabel:`単一の地物が確認された場合地物フォームを開く` チェックボックスをチェックします:"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:40
+msgid "Click :guilabel:`Ok`."
+msgstr ":guilabel:`Ok` をクリックします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:42
+msgid "Using the :guilabel:`Identify` tool, click on any street in the map."
+msgstr ":guilabel:`地物情報表示` ツールを使って地図上の任意の街路をクリックします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:44
+msgid "|mActionIdentify|"
+msgstr "|mActionIdentify|"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:46
+msgid ""
+"Instead of the normal :guilabel:`Identify` dialog, you'll see the now-"
+"familiar form instead:"
+msgstr "通常の :guilabel:`地物情報` ダイアログの代わりに、今ではおなじみのフォームが表示されます:"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:53
+msgid "|basic| |TY| Using the Form to Edit Values"
+msgstr "|basic| |TY| フォームを使った値の編集"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:55
+msgid ""
+"If you are in edit mode, you can use this form to edit a feature's "
+"attributes."
+msgstr "編集モードの場合は、このフォームを使用して地物の属性を編集することができます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:57
+msgid "Activate edit mode (if it isn't already activated)."
+msgstr "編集モードをアクティブにします (まだアクティブになっていない場合)。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:58
+msgid ""
+"Using the :guilabel:`Identify` tool, click on the main street running "
+"through |majorUrbanName|:"
+msgstr ":guilabel:`地物情報表示` ツールを使用して |majorUrbanName| を通り抜けるメインストリートをクリックします:"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:64
+msgid "Edit its :guilabel:`highway` value to be :kbd:`secondary`."
+msgstr ":guilabel:`highway` の値を変更して :kbd:`secondary` にします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:65
+msgid "Save your edits."
+msgstr "編集内容を保存します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:66
+msgid "Exit edit mode."
+msgstr "編集モードを終了します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:67
+msgid ""
+"Open the :guilabel:`Attribute Table` and note that the value has been "
+"updated in the attributes table and therefore in the source data."
+msgstr ":guilabel:`属性テーブル` を開いて、属性テーブルの値が更新されていること、すなわちソースデータが更新されていることに注意して下さい。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:70
+msgid ""
+"If you're using the default dataset, you'll find that there is more than one"
+" road on this map called :kbd:`Voortrek Street`."
+msgstr "デフォルトのデータセットを使用している場合は、地図には :kbd:`Voortrek Street` と呼ばれる道が複数あることがわかります。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:74
+msgid "|moderate| |FA| Setting Form Field Types"
+msgstr "|moderate| |FA| フォームのフィールドタイプの設定"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:76
+msgid ""
+"It's nice to edit things using a form, but you still have to enter "
+"everything by hand. Fortunately, forms have different kinds of so-called "
+"*widgets* that allow you to edit data in various different ways."
+msgstr "フォームを使用して編集するのはよいのですが、まだ何もかも手で入力しなければいけません。幸いにも、フォームには様々な方法でデータの編集ができる様々な種類の、いわゆる *ウィジェット* を持ちます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:80
+msgid "Open the :guilabel:`roads` layer's :guilabel:`Layer Properties`."
+msgstr ":guilabel:`roads` レイヤの :guilabel:`レイヤプロパティ` を開きます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:81
+msgid "Switch to the :guilabel:`Fields` tab. You'll see this:"
+msgstr ":guilabel:`フィールド` タブに切り替えます。次が表示されます:"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:86
+msgid ""
+"Click on the :guilabel:`Line edit` button in the same row as "
+":guilabel:`man_made` and you'll be given a new dialog."
+msgstr ":guilabel:`man_made` と同じ行の :guilabel:`行編集` ボタンをクリックしてダイアログを開きます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:88
+msgid "Select :guilabel:`Checkbox` in the list of options:"
+msgstr "オプションのリストから :guilabel:`チェックボックス` を選択します:"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:93
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` をクリックします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:94
+msgid ""
+"Enter edit mode (if the :guilabel:`roads` layer is not already in edit mode."
+msgstr "編集モードにします (:guilabel:`roads` レイヤが編集モードではない場合)。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:95
+msgid "Click on the :guilabel:`Identify` tool."
+msgstr ":guilabel:`地物情報表示` ツールをクリックします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:96
+msgid "Click on the same main road you chose earlier."
+msgstr "前に選択した同じ道路をクリックします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:98
+msgid ""
+"You'll now see that the :guilabel:`man_made` attribute has a checkbox next "
+"to it denoting :kbd:`True` (checked) or :kbd:`False` (unchecked)."
+msgstr ":guilabel:`man_made` 属性の隣にチェックボックスが表示されます。チェックされている場合は :kbd:`True` 、チェックされていない場合は :kbd:`False` を意味します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:104
+msgid "|hard| |TY|"
+msgstr "|hard| |TY|"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:106
+msgid "Set a more appropriate form widget for the :guilabel:`highway` field."
+msgstr ":guilabel:`highway` フィールドに、より適切なフォームウィジェットを設定します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:108
+msgid ":ref:`Check your results <create-vector-forms-1>`"
+msgstr ":ref:`結果をチェックする <create-vector-forms-1>`"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:111
+msgid "|hard| |TY| Creating Test Data"
+msgstr "|hard| |TY| テストデータの作成"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:113
+msgid "You can also design your own custom form completely from scratch."
+msgstr "まったくのゼロから独自のカスタム フォームを設計することもできます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:115
+msgid ""
+"Create a simple point layer named :kbd:`test-data` with two attributes:"
+msgstr ":kbd:`test-data` という名前で2つの属性を持つ単純なポイントレイヤを作成します:"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:117
+msgid "Name (text)"
+msgstr "名前 (テキスト)"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:118
+msgid "Age (text)"
+msgstr "年齢 (テキスト)"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:123
+msgid ""
+"Capture a few points on your new layer using the digitizing tools so that "
+"you have a little data to play with. You should be presented with the "
+"default QGIS generated attribute capture form each time you capture a new "
+"point."
+msgstr "デジタイズツールを使用して新しいレイヤ上にいくつかのポイントを追加してテスト用データを作成します。新しいポイントをキャプチャするたびにQGISの既定の属性フォームが表示されます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:128
+msgid "You may need to disable Snapping if still enabled from earlier tasks."
+msgstr "以前の作業の時からスナップを有効にしたままの場合、スナップを無効にする必要があります。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:134
+msgid "|hard| |FA| Creating a New Form"
+msgstr "|hard| |FA| 新しいフォームの作成"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:136
+msgid ""
+"Now we want to create our own custom form for the attribute data capture "
+"phase. To do this, you need to have *Qt4 Designer* installed (only needed "
+"for the person who creates the forms). It should be provided as part of your"
+" course materials, if you're using Windows. You may need to look for it if "
+"you're using another OS. In Ubuntu, do the following in the terminal:"
+msgstr "では、属性データのキャプチャ段階のための独自のカスタムフォームを作成したいと思います。これには *Qt4 Designer* がインストールされている必要があります(フォームを作成する人だけに必要です)。Windowsを使用している場合はコース教材の一部として提供されているはずです。他のOSを使用している場合はそれを求める必要があります。Ubuntuではターミナルで次の操作を行います:"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:142
+msgid ""
+"At the time of writing, Qt5 is the latest version available. However, this "
+"process specifically requires Qt4 and is not necessarily compatible with "
+"Qt5."
+msgstr "執筆時点ではQt5は利用可能な最新バージョンです。しかし、このプロセスは具体的にQt4を必要とし、必ずしもQt5と互換性がありません。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:146
+msgid ":kbd:`sudo apt-get install qt4-designer`"
+msgstr ":kbd:`sudo apt-get install qt4-designer`"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:148
+msgid ""
+"... and it should install automatically. Otherwise, look for it in the "
+"*Software Center*."
+msgstr "... とすれば自動的にインストールされるはずです。そうでなければ *ソフトウェアセンター* で探します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:151
+msgid ""
+"Start *Designer* by opening its *Start Menu* entry in Windows (or whatever "
+"approach is appropriate in your OS)."
+msgstr "Windowsの *スタートメニュー* を開き(またはお使いのOSに適切なアプローチで)、 *デザイナ* を開始します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:153
+msgid "In the dialog that appears, create a new dialog:"
+msgstr "表示されるダイアログで新しいダイアログボックスを作成します:"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:158
+msgid ""
+"Look for the :guilabel:`Widget Box` along the left of your screen (default)."
+" It contains an item called :guilabel:`Line Edit`."
+msgstr "画面の左側(デフォルト)にある :guilabel:`ウィジェットボックス` で :guilabel:`Line Edit` アイテムを探します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:160
+msgid ""
+"Click and drag this item into your form. This creates a new :guilabel:`Line "
+"Edit` in the form."
+msgstr "このアイテムをクリックしてフォームにドラッグします。フォーム上に新しい :guilabel:`Line Edit` が作成されます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:162
+msgid ""
+"With the new line edit element selected, you'll see its *properties* along "
+"the side of your screen (on the right by default):"
+msgstr "Line Edit要素を選択すると、その *プロパティ* が画面の片側に沿って表示されます(デフォルトで右側):"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:168
+msgid "Set its name to :kbd:`Name`."
+msgstr "名前を :kbd:`Name` に設定します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:169
+msgid ""
+"Using the same approach, create a new spinbox and set its name to "
+":kbd:`Age`."
+msgstr "同様にして新しいSpin Boxを作成し、名前を :kbd:`Age` に設定します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:170
+msgid ""
+"Add a :guilabel:`Label` with the text :kbd:`Add a New Person` in a bold font"
+" (look in the object *properties* to find out how to set this). "
+"Alternatively, you may want to set the title of the dialog itself (rather "
+"than adding a label)."
+msgstr ":kbd:`新しい人の追加` というテキストで :guilabel:`Label` を追加します。フォントは太字にします(設定項目はオブジェクト *プロパティ* で見つけます)。あるいは(ラベルを追加する代わりに)ダイアログ自体のタイトルを設定することもできます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:174
+msgid "Click anywhere in your dialog."
+msgstr "ダイアログの任意の場所をクリックします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:175
+msgid ""
+"Find the :guilabel:`Lay Out Vertically` button (in a toolbar along the top "
+"edge of the screen, by default). This lays out your dialog automatically."
+msgstr ":guilabel:`垂直に並べる` ボタンを見つけます(デフォルトでは画面の上端に沿うツールバーにあります)。これはダイアログを自動的にレイアウトします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:177
+msgid ""
+"Set the dialog's maximum size (in its properties) to :kbd:`200` (width) by "
+":kbd:`100` (height)."
+msgstr "プロパティでダイアログの最大サイズを :kbd:`200` (width) x :kbd:`100` (height)に設定します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:179
+msgid "Save your new form as :kbd:`exercise_data/forms/add_people.ui`."
+msgstr ":kbd:`exercise_data/forms/add_people.ui` として新しいフォームを保存します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:180
+msgid "When it's done saving, you can close the *Qt4 Designer* program."
+msgstr "保存が完了したら *Qt4デザイナ* プログラムを閉じます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:183
+msgid "|hard| |FA| Associating the Form with Your Layer"
+msgstr "|hard| |FA| レイヤをフォームに関連付ける"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:185
+msgid "Go back to QGIS."
+msgstr "QGISに戻ります。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:186
+msgid ""
+"Double click the :guilabel:`test-data` layer in the legend to access its "
+"properties."
+msgstr "凡例で :guilabel:`test-data` レイヤをダブルクリックしてプロパティにアクセスします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:187
+msgid ""
+"Click on the :guilabel:`Fields` tab in the :guilabel:`Layer Properties` "
+"dialog."
+msgstr ":guilabel:`レイヤプロパティ` ダイアログの :guilabel:`フィールド` タブをクリックします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:189
+msgid ""
+"In the :guilabel:`Attribute editor layout` dropdown, select "
+":guilabel:`Provide ui-file`."
+msgstr ":guilabel:`属性エディタレイアウト` ドロップダウンボックスで :guilabel:`ui-ファイルを提供する` を選択します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:191
+msgid ""
+"Click the ellipsis button and choose the :kbd:`add_people.ui` file you just "
+"created:"
+msgstr "省略記号ボタンをクリックして、作成した :kbd:`add_people.ui` を選択します:"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:197
+msgid "Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog."
+msgstr ":guilabel:`レイヤプロパティ` ダイアログの :guilabel:`OK` をクリックします。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:198
+msgid "Enter edit mode and capture a new point."
+msgstr "編集モードに切り替えて、新しいポイントを追加します。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:199
+msgid ""
+"When you do so, you will be presented with your custom dialog (instead of "
+"the generic one that QGIS usually creates)."
+msgstr "そうするとカスタムダイアログが表示されます(QGISが通常作成するものの代わりに)。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:201
+msgid ""
+"If you click on one of your points using the :guilabel:`Identify` tool, you "
+"can now bring up the form by right clicking in the identify results window "
+"and choosing :guilabel:`View Feature Form` from the context menu."
+msgstr ":guilabel:`地物情報表示` ツールを使ってポイントの1つをクリックした場合、地物情報ウィンドウで右クリックしてコンテキストメニューから :guilabel:`地物フォームを見る` を選択するとフォームを起動することができます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:204
+msgid ""
+"If you are in edit mode for this layer, that context menu will show "
+":guilabel:`Edit Feature Form` instead, and you can then adjust the "
+"attributes in the new form even after initial capture."
+msgstr "このレイヤが編集モードの場合はコンテキストメニューには代わりに :guilabel:`地物編集フォーム` が表示されます。キャプチャ後でもフォームで属性の調整ができます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:209
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:211
+msgid ""
+"Using forms, you can make life easier for yourself when editing or creating "
+"data. By editing widget types or creating an entirely new form from scratch,"
+" you can control the experience of someone who digitizes new data for that "
+"layer, thereby minimizing misunderstandings and unnecessary errors."
+msgstr "フォームを使用すればデータの編集や作成がもっと楽になります。ウィジェットの種類を編集するか全くのゼロから新しいフォームを作成することで、新しいデータをデジタイズをする人のエクスペリエンスをコントロールできます。それによって誤解や不必要なエラーを最小限に押さえることができます。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:217
+msgid "|FR|"
+msgstr "|FR|"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:219
+msgid ""
+"If you completed the advanced section above and have knowledge of Python, "
+"you may want to check out `this blog entry <http://tinyurl.com/6tr42rb>`_ "
+"about creating custom feature forms with Python logic, which allows advanced"
+" functions including data validation, autocompletion, etc."
+msgstr "もし上の高度なセクションを完了して、Pythonの知識がある場合には `このブログエントリ <http://tinyurl.com/6tr42rb>`_ をチェックしてみて下さい。Pythonロジックを用いたカスタム地物フォームの作成についての記事で、データ検証や自動補完などの高度な機能を可能にしています。"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:225
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/create_vector_data/forms.rst:227
+msgid ""
+"Opening a form on identifying a feature is one of the standard actions that "
+"QGIS can perform. However, you can also direct it to perform custom actions "
+"that you define. This is the subject of the next lesson."
+msgstr "地物フォームを開くことはQGISができる標準的な操作の1つです。一方で、あなたが定義したカスタムアクションを実行させることもできます。これは次のレッスンのテーマです。"

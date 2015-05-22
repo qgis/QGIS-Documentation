@@ -1,0 +1,238 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-04 08:59+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:6
+msgid "D-Infinity Avalanche Runout"
+msgstr "Dépôt d'avalanche D-Infinity"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:11
+msgid ""
+"Identifies an avalanche's affected area and the flow path length to each "
+"cell in that affacted area. All cells downslope from each source area cell, "
+"up to the point where the slope from the source to the affected area is less"
+" than a threshold angle called the Alpha Angle can be in the affected area. "
+"This tool uses the D-infinity multiple flow direction method for determining"
+" flow direction. This will likely cause very small amounts of flow to be "
+"dispersed to some downslope cells that might overstate the affected area, so"
+" a threshold proportion can be set to avoid this excess dispersion. The flow"
+" path length is the distance from the cell in question to the source cell "
+"that has the highest angle."
+msgstr "Identifie une surface concernée par une avalanche ainsi que la longueur de flux de chaque cellule de cette zone. Toutes les cellules de pente descendante de chaque cellule source, jusqu'au point où la pente allant de la source à la zone affectée est inférieur à un seuil d'angle nommé angle Alpha, peuvent être dans la zone concernée. Cet outil utilise la méthode de direction multiple de flux D-Infinity pour déterminer la direction du flux. Cela aura pour conséquence de minimiser la quantité de flux qui peut se disperser jusqu'à des cellules de pente descendante qui peuvent amplifier l'aire affectée. Un seuil de proportion peut être utilisé pour éviter cet excès de dispersion. La longueur du cheminement de flux est la distance de la cellule en question à la cellule source qui a le plus grand angle."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:21
+msgid ""
+"All points downslope from the source area are potentially in the affected "
+"area, but not beyond a point where the slope from the source to the affected"
+" area is less than a threshold angle called the Alpha Angle."
+msgstr "Tous les points de pente descendante issus de la surface source se trouvent potentiellement dans la surface affectée mais pas au delà d'un point où la pente depuis la source jusqu'à la surface affectée est inférieure à un angle de seuil appelé angle Alpha."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:28
+msgid ""
+"Slope is to be measured using the straight line distance from source point "
+"to evaluation point."
+msgstr "La pente doit être mesurée en utilisant la distance en ligne droite depuis le point de la source au point d'élévation."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:31
+msgid ""
+"It makes more physical sense to me for the angle to be measured along the "
+"flow path. Nevertheless it is equally easy to code straight line angles as "
+"angles along the flow path, so an option that allows switching will be "
+"provided. The most practical way to evaluate avalanche runout is to keep "
+"track of the source point with the greatest angle to each point. Then the "
+"recursive upslope flow algebra approach will look at a grid cell and all its"
+" upslope neighbors that flow to it. Information from the upslope neighbors "
+"will be used to calculate the angle to the grid cell in question and retain "
+"it in the runout zone if the angle exceeds the alpha angle. This procedure "
+"makes the assumption that the maximum angle at a grid cell will be from the "
+"set of cells that have maximum angles to the inflowing neighbors. This will "
+"always be true of angle is calculated along a flow path, but I can conceive "
+"of cases where flow paths bend back on themselves where this would not be "
+"the case for straight line angles."
+msgstr "Il y a plus de sens à mesurer l'angle le long du cheminement du flux. Néanmoins, il est également facile de coder les angles de ligne droite comme étant des angles de cheminement de flux. Une option permet donc de basculer entre ces deux méthodes. Le moyen le plus pratique d'évaluer une zone de dépôt d'avalanche est de conserver présent le point de source qui possède le plus grand angle avec chaque autre point. Ensuite, une approche récursive de flux de pente ascendante étudiera un cellule et toutes ses voisines de pente ascendante qui s'y déversent. Les données des cellules voisines de pente ascendante sont utilisées pour calculer l'angle avec la cellule en question et pour la retenir dans la zone affectée si l'angle dépasse l'angle alpha. Cette procédure prend l'hypothèse que l'angle maximum sur une cellule sera issu du jeu de cellules qui ont les angles maximum avec les cellules voisines de flux entrant. Cette assertion est toujours vérifiée si les angles sont calculés le long du cheminement de flux mais il existe des cas où les cheminements de flux forment des coudes sur eux-mêmes, ce qui n'apparaît pas avec les angles des lignes droites."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:45
+msgid ""
+"The D-infinity multiple flow direction field assigns flow from each grid "
+"cell to multiple downslope neighbors using proportions (``Pik``) that vary "
+"between 0 and 1 and sum to 1 for all flows out of a grid cell. It may be "
+"desirable to specify a threshold ``T`` that this proportion has to exceed "
+"before a grid cell is counted as flowing to a downslope grid cell, e.g. "
+"``Pik > T`` (=0.2 say) to avoid dispersion to grid cells that get very "
+"little flow. ``T`` will be specified as a user input. If all upslope grid "
+"cells are to be used ``T`` may be input as 0."
+msgstr "Le champ de direction de flux multiple D-Infinity affecte un flux à partir de chaque cellule vers plusieurs cellules voisines de pente descendante en utilisant des proportions (``Pik``) qui peuvent varier entre 0 et 1 et fait la somme à 1 pour tous les flux sortants d'une cellule. Il est préférable d'indiquer un seuil ``T`` que cette proportion doit dépasser avant que la cellule soit comptée comme flux entrant vers une cellule de pente ex: ``Pik > T`` (=0.2) pour éviter le phénomène de dispersion vers les cellules qui ont un flux faible. ``T`` est un paramètre d'entrée modifié par l'utilisateur. Si toutes les cellules de pente ascendante doivent être utilisées, ``T`` peut prendre la valeur 0."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:53
+msgid ""
+"Avalanche source sites are to be input as a short integer grid (name suffix "
+":file:`*ass`, e.g. :file:`demass`) comprised of positive values where "
+"avalanches may be triggered and 0 values elsewhere."
+msgstr "Les sites de source d'avalanche sont des éléments d'entrée qui prennent la forme d'une grille d'entiers courts (nom du suffixe :file:`*ass`, ex: :file:`demass`) composée de valeurs positives pour les emplacements où les avalanches peuvent être déclenchées et des valeurs de 0 pour le reste."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:57
+msgid "The following grids are output:"
+msgstr "Les grilles suivantes sont les sorties :"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:59
+msgid ""
+"rz --- A runout zone indicator with value 0 to indicate that this grid cell "
+"is not in the runout zone and value > 0 to indicate that this grid cell is "
+"in the runout zone. Since there may be information in the angle to the "
+"associated source site, this variable will be assigned the angle to the "
+"source site (in degrees)"
+msgstr "rz --- un indicateur de zone de dépôt. Une valeur à 0 qui indique que cette cellule n'est pas dans la zone de dépôt, une valeur >0 indique que la cellule est dans la zone de dépôt. Lorsqu'il y a une information dans l'angle du site source associé, cette variable aura comme valeur l'angle du site source (en degrés)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:64
+msgid ""
+"dm --- Along flow distance from the source site that has the highest angle "
+"to the point in question"
+msgstr "dm --- La distance de flux du site source ayant le plus grand angle jusqu'au point en question."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:68
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:73
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D-Infinity`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:71
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This can be created  by "
+"the tool **\"D-Infinity Flow Directions\"**."
+msgstr "Une grille donnant le flux de direction par la méthode D-Infinity. La direction de flux est mesurée en radians, dans le sens des aiguilles d'une montre depuis l'Est. Elle peut être obtenue par l'outil **\"Directions de flux D-Infinity\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:81
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr "``Grille d'élévation de remplissage de fosse`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:76
+msgid ""
+"This input is a grid of elevation values. As a general rule, it is "
+"recommended that you use a grid of elevation values that have had the pits "
+"removed for this input. Pits are generally taken to be artifacts that "
+"interfere with the analysis of flow across them. This grid can be obtained "
+"as the output of the **\"Pit Remove\"** tool, in which case it contains "
+"elevation values where the pits have been filled to the point where they "
+"just drain."
+msgstr "L'entrée est une grille de valeurs d'élévation. Il est recommandé que vous utilisiez une grille d'élévation de valeurs sans fosses. Les fosses sont généralement des artefacts qui interfèrent avec l'analyse de flux. Cette grille peut être obtenue en utilisant l'outil **\"Suppression de fosses\"** et en l'occurence, elle contiendra des données d'élévation où les fosses auront été remplies au niveau qui permet l'écoulement."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:88
+msgid "``Avalanche Source Site Grid`` [raster]"
+msgstr "``Grille de site de source d'avalanche`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:84
+msgid ""
+"This is a grid of source areas for snow avalanches that are commonly "
+"identified manually using a mix of experience and visual interpretation of "
+"maps. Avalanche source sites are to be input as a short integer grid (name "
+"suffix :file:`*ass`, e.g. :file:`demass`) comprised of positive values where"
+" avalanches may be triggered and 0 values elsewhere."
+msgstr "Il s'agit d'une grille de surfaces sources pour les avalanches de neige. Les sources sont généralement identifiées manuellement en utilisant un mélange d'expérience et de l'interprétation visuelle de cartes. Les sites source d'avalanche sont des éléments d'entrées sous forme d'une grille d'entiers courts (nom du suffixe :file:`*ass`, ex: :file:`demass`) composée de valeurs positives là où les avalanches peuvent être déclenchées et des valeurs à 0 pour le reste."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:98
+msgid "``Proportion Threshold`` [number]"
+msgstr "``Seuil de proportion`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:91
+msgid ""
+"This value is a threshold proportion that is used to limit the disperson of "
+"flow caused by using the D-infinity multiple flow direction method for "
+"determining flow direction. The D-infinity multiple flow direction method "
+"often causes very small amounts of flow to be dispersed to some downslope "
+"cells that might overstate the affected area, so a threshold proportion can "
+"be set to avoid this excess dispersion."
+msgstr "Cette valeur est un seuil de proportion qui est utilisé pour limiter la dispersion du flux causé par l'utilisation de la méthode de flux multiples D-Infinity qui détermine la direction de flux. La méthode D-Infinity provoque souvent une dispersion d'une petite partie du flux vers des cellules de pente descendante, ce qui peut amplifier la zone concernée par l'avalanche. Ce seuil de proportion peut être utilisé pour réduire une dispersion excessive."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:98
+msgid "Default: *0.2*"
+msgstr "Par défaut : *0.2*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:107
+msgid "``Alpha Angle Threshold`` [number]"
+msgstr "``Seuil d'angle alpha`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:101
+msgid ""
+"This value is the threshold angle, called the Alpha Angle, that is used to "
+"determine which of the cells downslope from the source cells are in the "
+"affected area. Only the cells downslope from each source area cell, up to "
+"the point where the slope from the source to the affected area is less than "
+"a threshold angle are in the affected area."
+msgstr "Cette valeur est le seuil d'angle, appelé angle Alpha, qui est utilisé pour déterminer quelles sont les cellules de pente descendante depuis les cellules sources sont situées dans la zone concernée. Seules les cellules de pente descendante de chaque cellule source, jusqu'au point om la pente entre la source et la zone concernée est inférieure à un seuil d'angle, sont situées dans la zone concernée."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:107
+msgid "Default: *18*"
+msgstr "Par défaut : *18*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:115
+msgid "``Measure distance along flow path`` [boolean]"
+msgstr "``Mesure la distance le long du chemin de flux`` [booléen]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:110
+msgid ""
+"This option selects the method used to measure the distance used to "
+"calculate the slope angle. If option is *True* then measure it along the "
+"flow path, where the *False* option causes the slope to be measure along the"
+" straight line distance from the source cell to the evaluation cell."
+msgstr "Cette option permet de sélectionner la méthode utilisée pour mesurer la distance utilisée dans le calcul de l'angle de pente. Si l'option vaut *True* alors la mesure est réalisée le long du cheminement de flux. Lorsque l'option vaut *False*, la pente est mesurée le long de la ligne droite de distance entre la cellule source et la cellule à évaluer."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:115
+msgid "Default: *True*"
+msgstr "Par défaut : *Vrai*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:118
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:126
+msgid "``Runout Zone Grid`` [raster]"
+msgstr "``Grille de zone de dépôt`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:121
+msgid ""
+"This grid Identifies the avalanche's runout zone (affected area) using a "
+"runout zone indicator with value 0 to indicate that this grid cell is not in"
+" the runout zone and value > 0 to indicate that this grid cell is in the "
+"runout zone. Since there may be information in the angle to the associated "
+"source site, this variable will be assigned the angle to the source site (in"
+" degrees)."
+msgstr "Cette grille permet d'identifier la zone de dépôt d'avalanche (la zone affectée) en utilisant un indicateur de zone de dépôt. Une valeur à 0 qui indique que cette cellule n'est pas dans la zone de dépôt, une valeur >0 indique que la cellule est dans la zone de dépôt. Lorsqu'il y a une information dans l'angle du site source associé, cette variable aura comme valeur l'angle du site source (en degrés)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:130
+msgid "``Path Distance Grid`` [raster]"
+msgstr "``Grille de distance de chemin`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:129
+msgid ""
+"This is a grid of the flow distance from the source site that has the "
+"highest angle to each cell."
+msgstr "Il s'agit d'une grille de distance de flux entre le site source ayant le plus grand angle et chaque cellule de la grille."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:133
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinityavalancherunout.rst:140
+msgid "See also"
+msgstr "Voir également"

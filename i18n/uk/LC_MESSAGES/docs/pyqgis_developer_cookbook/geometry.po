@@ -1,0 +1,228 @@
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2014-12-16 19:01+0000\n"
+"Last-Translator: alexbruy <alexander.bruy@gmail.com>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/projects/p/qgis-documentation/language/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:11
+msgid "Geometry Handling"
+msgstr "Робота з геометрією"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:13
+msgid ""
+"Points, linestrings and polygons that represent a spatial feature are "
+"commonly referred to as geometries. In QGIS they are represented with the "
+":class:`QgsGeometry` class. All possible geometry types are nicely shown in "
+"`JTS discussion page "
+"<http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_."
+msgstr "Точки, лінії та полігони, які представляють просторові об'єкти, зазвичай називають геометрією. В QGIS вони описуються класом :class:`QgsGeometry`. З усіма можливими типами геометрій можна ознайомитися на `сторінці обговорення JTS <http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:18
+msgid ""
+"Sometimes one geometry is actually a collection of simple (single-part) "
+"geometries. Such a geometry is called a multi-part geometry. If it contains "
+"just one type of simple geometry, we call it multi-point, multi-linestring "
+"or multi-polygon. For example, a country consisting of multiple islands can "
+"be represented as a multi-polygon."
+msgstr "Іноді одна геометрія насправді є колекцією простих (single-part) геометрій. Такі геометрії називаються складеними (multi-part). Якщо складена геометрія містить прості геометрії одного типу, то її називають мульти-точка, мульти-лінія або мульти-полігон. Наприклад, країна, що складається з декількох островів може бути представлена як мульти-полігон."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:24
+msgid ""
+"The coordinates of geometries can be in any coordinate reference system "
+"(CRS). When fetching features from a layer, associated geometries will have "
+"coordinates in CRS of the layer."
+msgstr "Координати, що описують геометрії, можуть бути в будь-якій системі координат (CRS). Коли виконується доступ до об'єктів шару, асоційовані геометрії будуть мати систему координат шару."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:31
+msgid "Geometry Construction"
+msgstr "Створення геометрії"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:33
+msgid "There are several options for creating a geometry:"
+msgstr "Існує декілька способів створити геометрію:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:42
+msgid "Coordinates are given using :class:`QgsPoint` class."
+msgstr "Координати задаються за допомогою класу :class:`QgsPoint`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:44
+msgid ""
+"Polyline (Linestring) is represented by a list of points. Polygon is "
+"represented by a list of linear rings (i.e. closed linestrings). First ring "
+"is outer ring (boundary), optional subsequent rings are holes in the "
+"polygon."
+msgstr "Полілінія описується масивом точок. Полігон в свою чергу описується як список лінійних кілець (тобто замкнених ліній). Перше кільце --- зовнішнє (межа), всі наступні необов'язкові кільця описують дірки в полігоні."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:48
+msgid ""
+"Multi-part geometries go one level further: multi-point is a list of points,"
+" multi-linestring is a list of linestrings and multi-polygon is a list of "
+"polygons."
+msgstr "Складені геометрії мають ще один рівень вкладеності: мульти-точка це список точок, мульти-лінія --- список ліній, а мульти-полігон, відповідно, список полігонів."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:67
+msgid "Access to Geometry"
+msgstr "Доступ до геометрії"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:83
+msgid ""
+"As an alternative, one can use :func:`type` method which returns a value "
+"from QGis.GeometryType enumeration. There is also a helper function "
+":func:`isMultipart` to find out whether a geometry is multipart or not."
+msgstr "Також можна користуватися методом :func:`type`, що повертає значення з перелічування QGis.GeometryType. Допоміжний метод :func:`isMultipart` дозволить визначити чи є геометрія складенною."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:99
+msgid ""
+"Note: the tuples (x,y) are not real tuples, they are :class:`QgsPoint` "
+"objects, the values are accessible with :func:`x` and :func:`y` methods."
+msgstr "Примітка: кортеж (x, y) насправді не кортеж, а об'єкт класу :class:`QgsPoint`. Отримати його значення можна за допомогою методів :func:`x` та :func:`y`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:102
+msgid ""
+"For multipart geometries there are similar accessor functions: "
+":func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`."
+msgstr "Для складених геометрій існують аналогічні методи доступу: :func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:108
+msgid "Geometry Predicates and Operations"
+msgstr "Геометричні предикати та операції"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:110
+msgid ""
+"QGIS uses GEOS library for advanced geometry operations such as geometry "
+"predicates (:func:`contains`, :func:`intersects`, ...) and set operations "
+"(:func:`union`, :func:`difference`, ...). It can also compute geometric "
+"properties of geometries, such as area (in the case of polygons) or lengths "
+"(for polygons and lines)"
+msgstr "QGIS використовує бібліотеку GEOS для виконання різноманітних операцій з геометріями, таких як геометричні предикати (:func:`contains`, :func:`intersects`, ...) та операції (:func:`union`, :func:`difference`, ...). Також вона може обчислювати геометричні характеристики, такі як площа (для полігонів) або довжина (для полігонів та ліній)."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:130
+msgid ""
+"Areas and perimeters don't take CRS into account when computed using these "
+"methods from the :class:`QgsGeometry` class. For a more powerful area and "
+"distance calculation, the :class:`QgsDistanceArea` class can be used. If "
+"projections are turned off, calculations will be planar, otherwise they'll "
+"be done on the ellipsoid. When an ellipsoid is not set explicitly, WGS84 "
+"parameters are used for calculations."
+msgstr "Площа та периметр розраховуються методами класу :class:`QgsGeometry` без врахування системи координат шару. Для більш гнучкого обчислення площі та відстані існує клас :class:`QgsDistanceArea`. Якщо перепроектування вимкнене, розрахунки відбуваються на площині, інакше --- на еліпсоїді. Якщо еліпсоїд не задано явно, використовуються параметри WGS 84."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:144
+msgid ""
+"You can find many example of algorithms that are included in QGIS and use "
+"these methods to analyze and transform vector data. Here are some links to "
+"the code of a few of them."
+msgstr "Багато прикладів використання методів аналізу та перетворення векторних даних можна знайти в коді алгоритмів QGIS. Ось декілька посилань для початку:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:150
+msgid ""
+"Geometry transformation: `Reproject algorithm <https://raw.github.com/qgis"
+"/Quantum-GIS/release-"
+"2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
+msgstr "трансформація геометрій: алгоритм `Перепроектування <https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:151
+msgid ""
+"Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix"
+" algorithm <https://raw.github.com/qgis/Quantum-GIS/release-"
+"2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
+msgstr "обчислення відстані та площі за допомогою :class:`QgsDistanceArea`: алгоритм `Матриця відстаней <https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:152
+msgid ""
+"`Multi-part to single-part algorithm <https://raw.github.com/qgis/Quantum-"
+"GIS/release-"
+"2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
+msgstr "алгоритм `Розбити складену геометрію <https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:28
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:64
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:105
+msgid "geometry"
+msgstr "геометрія"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:5
+msgid "handling"
+msgstr "обробка"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:28
+msgid "construction"
+msgstr "створення"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:64
+msgid "access to"
+msgstr "доступ"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:105
+msgid "predicates and operations"
+msgstr "предикати та операції"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:35
+msgid "from coordinates ::"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:52
+msgid "from well-known text (WKT) ::"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:57
+msgid "from well-known binary (WKB) ::"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:69
+msgid ""
+"First, you should find out geometry type, :func:`wkbType` method is the one "
+"to use --- it returns a value from QGis.WkbType enumeration"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:87
+msgid ""
+"To extract information from geometry there are accessor functions for every "
+"vector type. How to use accessors"
+msgstr "Для витягнення інформації з геометрії передбачено спеціальні функції доступу для кожного типу геометрії. Нижче показано як їх використовувати"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:116
+msgid ""
+"Here you have a small example that combines iterating over the features in a"
+" given layer and performing some geometric computations based on their "
+"geometries."
+msgstr "Нижче наведено маленький приклад, де показаний обхід всіх геометрій шару та обчислення деяких геометричних характеристик відповідних об'єктів."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:148
+msgid "Additional information can be found in followinf sources:"
+msgstr "Додаткову інформацію можна знайти за наступними посиланнями:"
+
+#~ msgid "from coordinates::"
+#~ msgstr ""
+
+#~ msgid "from well-known text (WKT)::"
+#~ msgstr ""
+
+#~ msgid "from well-known binary (WKB)::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First, you should find out geometry type, :func:`wkbType` method is the one "
+#~ "to use --- it returns a value from QGis.WkbType enumeration::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To extract information from geometry there are accessor functions for every "
+#~ "vector type. How to use accessors::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here you have a small example that combines iterating over the features in a"
+#~ " given layer and perfoming some geometric computations based on their "
+#~ "geometries."
+#~ msgstr ""

@@ -1,0 +1,131 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-14 17:08+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:6
+msgid "Move Outlets To Streams"
+msgstr "Afvoeren naar stromen verplaatsen"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:11
+msgid ""
+"Moves outlet points that are not aligned with a stream cell from a stream "
+"raster grid, downslope along the D8 flow direction until a stream raster "
+"cell is encountered, the \"max_dist\" number of grid cells are examined, or "
+"the flow path exits the domain (i.e. a \"no data\" value is encountered for "
+"the D8 flow direction). The output file is a new outlets shapefile where "
+"each point has been moved to coincide with the stream raster grid, if "
+"possible. A field \"dist_moved\" is added to the new outlets shapefile to "
+"indicate the changes made to each point. Points that are already on a stream"
+" cell are not moved and their \"dist_moved\" field is assigned a value 0. "
+"Points that are initially not on a stream cell are moved by sliding them "
+"downslope along the D8 flow direction until one of the following occurs: a) "
+"A stream raster grid cell is encountered before traversing the \"max_dist\" "
+"number of grid cells. In which case, the point is moved and the "
+"\"dist_moved\" field is assigned a value indicating how many grid cells the "
+"point was moved. b) More than the \"max_number\" of grid cells are "
+"traversed, or c) the traversal ends up going out of the domain (i.e., a \"no"
+" data\" D8 flow direction value is encountered). In which case, the point is"
+" not moved and the \"dist_moved\" field is assigned a value of -1."
+msgstr "Verplaatst afvoerpunten, die niet zijn uitgelijnd met een stroomcel in een stroomraster, neerwaarts langs de D8 stroomrichting totdat een stroomcel wordt tegengekomen, het aantal \"max_dist\" van rastercellen wordt bepaald, of het stroompad het domein verlaat (d.i. een waarde \"Geen gegevens\" wordt tegengekomen voor de D8 stroomrichting). Het uitvoerbestand is een nieuw shapefile met afvoeren waar elk punt is verplaatst om samen te vallen met het stroomraster, indien mogelijk. Een veld \"dist_moved\" wordt toegevoegd aan het nieuwe shapefile met afvoeren om de wijzigingen die voor elk punt zijn gemaakt aan te geven. Punten die al op een stroomcel liggen worden niet verplaatst en hun veld \"dist_moved\" wordt de waarde 0 toegewezen. Punten die initieel niet op een stroomcel liggen worden verplaatst door ze neerwaarts te verschuiven langs de D8 stroomrichting totdat één van de volgende mogelijkheden optreedt: a) Een cel van het stroomraster wordt tegengekomen vóórdat het aantal \"max_dist\" rastercellen is overschreden. In welk geval het punt wordt verplaatst en het veld \"dist_moved\" een waarde krijgt toegewezen die aangeeft met hoeveel rastercellen het punt werd verplaatst. b) Meer dan het aantal \"max_number\" rastercellen wordt gepasseerd, of c) het passeren eindigt buiten het domein (d.i., een waarde \"Geen gegevens\" voor de D8 stroomrichting wordt tegengekomen). In welk geval het punt niet wordt verplaatst en het veld \"dist_moved\" een waarde krijgt toegewezen van -1."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:30
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:36
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``D8 raster stroomrichting`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:33
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr "Een raster van D8 stroomrichtingen die zijn gedefinieerd, voor elke cel, al de richting van die van één van zijn acht aangelegen of diagonale buren met de steilste neerwaartse helling. Dit raster kan worden verkregen als de uitvoer van het gereedschap **\"D8 Stroomrichtingen\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:42
+msgid "``Stream Raster Grid`` [raster]"
+msgstr "``Stroomraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:39
+msgid ""
+"This output is an indicator grid (1, 0) that indicates the location of "
+"streams, with a value of 1 for each of the stream cells and 0 for the "
+"remainder of the cells. This file is produced by several different tools in "
+"the **\"Stream Network Analysis\"** toolset."
+msgstr "Deze uitvoer is een raster met indicaties (1, 0) dat de locatie van stromen aangeeft, met een waarde 1 voor elk van de stroomcellen en 0 voor de resterende cellen. Dit bestand wordt geproduceerd door verscheidene gereedschappen in de set met gereedschappen **\"Stroomnetwerk-analyse\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:48
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Afvoeren-shapefile`` [vector: punt]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:45
+msgid ""
+"A point shape file defining points of interest or outlets that should "
+"ideally be located on a stream, but may not be exactly on the stream due to "
+"the fact that the shapefile point locations may not have been accurately "
+"registered with respect to the stream raster grid."
+msgstr "Een shapefile met punten die de interessante punten definieert of de afvoeren die idealiter zouden zijn gelegen op een stroom, maar die niet exact op de stroom zouden kunnen liggen vanwege het feit dat de locaties van de punten van het shapefile niet nauwkeurig genoeg zouden zijn geregistreerd ten opzichte van het stroomraster."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:55
+msgid "``Maximum Number of Grid Cells to traverse`` [number]"
+msgstr "``Maximale aantal te passeren rastercellen`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:51
+msgid ""
+"This input paramater is the maximum number of grid cells that the points in "
+"the input outlet shapefile will be moved before they are saved to the output"
+" outlet shapefile."
+msgstr "Deze parameter voor de invoer is het maximale aantal rastercellen waarmee de punten in het invoer-shapefile met afvoeren zullen worden verplaatst vóórdat zij zullen worden opgeslagen in het uitvoer-shapefile met afvoeren."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:55
+msgid "Default: *50*"
+msgstr "Standaard: *50*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:58
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:69
+msgid "``Output Outlet Shapefile`` [vector]"
+msgstr "``Uitvoer afvoeren-shapefile`` [vector]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:61
+msgid ""
+"A point shape file defining points of interest or outlets. This file has one"
+" point in it for each point in the input outlet shapefile. If the original "
+"point was located on a stream, then the point was not moved. If the origianl"
+" point was not on a stream, the point was moved downslope according to the "
+"D8 flow direction until it reached a stream or the maximum distance had been"
+" reached. This file has an additional field \"dist_moved\" added to it which"
+" is the number of cells that the point was moved. This field is 0 if the "
+"cell was originally on a stream, -1 if it was not moved becuase there was "
+"not a stream within the maximum distance, or some positive value if it was "
+"moved."
+msgstr "Een shapefile met punten dat de interessante punten definieert of afvoeren. Dit bestand heeft één punt voor elk punt in het invoer-shapefile met afvoeren. Als het originele punt was gelegen op een stroom, dan werd dat punt niet verplaatst. Als het originele punt niet op een stroom lag, werd het punt neerwaarts verplaatst overeenkomstig de D8 stroomrichting totdat het een stroom bereikte of de maximale afstand werd bereikt. Dit bestand heeft een aanvullend veld \"dist_moved\" toegevoegd gekregen wat het aantal cellen is dat het punt werd verplaatst. Dit veld is 0 als het punt van origine op ene stroom lag, -1 als het niet werd verplaatst omdat er geen stroom binnen de maximale afstand lag, of een positieve waarde als het werd verplaatst."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:72
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/moveoutletstostreams.rst:79
+msgid "See also"
+msgstr "Zie ook"

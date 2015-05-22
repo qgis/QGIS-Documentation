@@ -1,0 +1,413 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-15 10:31+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:6
+msgid "|LS| Calculating the Forest Parameters"
+msgstr "|LS| De parameters voor het bos berekenen"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:8
+msgid ""
+"Estimating the parameters of the forest is the goal of the forest inventory."
+" Continuing the example from previous lesson, you will use the inventory "
+"information gathered in the field to calculate the forest parameters, for "
+"the whole forest first, and then for the stands you digitized before."
+msgstr "Het bepalen van de parameters van het bos is het doel van de inventarisatie van het bos. In aansluiting op het voorbeeld uit de vorige les, zult u de in het veld verzamelde informatie van de inventarisatie gaan gebruiken om de parameters voor het bos te berekenen, eerst voor het gehele bos, en dan voor de bosopstanden die u eerder digitaliseerde."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:10
+msgid ""
+"**The goal for this lesson:** Calculate forest parameters at general and "
+"stand level."
+msgstr "**Het doel voor deze les:** Parameters voor het bos berekenen, voor het geheel en op niveau van bosopstand."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:13
+msgid "|basic| |FA| Adding the Inventory Results"
+msgstr "|basic| |FA| De resultaten van de inventarisatie toevoegen"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:15
+msgid ""
+"The field teams visited the forest and with the help of the information you "
+"provided, gathered information about the forest at every sample plot."
+msgstr "De teams in het veld hebben het bos bezocht en, met behulp van de informatie die u heeft verschaft, informatie over het bos verzameld op elke monsterplaats."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:17
+msgid ""
+"Most often the information will be collected into paper forms in the field, "
+"then typed to a spreadsheet. The sample plots information has been condensed"
+" into a :kbd:`.csv` file that can be easily open in QGIS."
+msgstr "Heel vaak zal de informatie worden verzameld op papieren formulieren in het veld, daarna getypt in een werkblad. De informatie van de monsterplaatsen is opgenomen in een :kbd:`.csv`-bestand dat eenvoudig kan worden geopend in QGIS."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:19
+msgid ""
+"Continue with the QGIS project from the lesson about designing the "
+"inventory, you probably named it :kbd:`forest_inventory.qgs`."
+msgstr "Ga door met het project van QGIS uit de les over het ontwerpen van de inventarisatie. U heeft het waarschijnlijk :kbd:`forest_inventory.qgs` genoemd."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:21
+msgid "First, add the sample plots measurements to your QGIS project:"
+msgstr "Voeg als eerste de metingen van de monsterplaatsen toe aan uw project van QGIS:"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:23
+msgid "Go to :menuselection:`Layer --> Add Delimited Text Layer...`."
+msgstr "Ga naar :menuselection:`Laag --> Tekstgescheiden kaartlaag toevoegen...`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:24
+msgid ""
+"Browse to the file :kbd:`systematic_inventory_results.csv` located in "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\`."
+msgstr "Blader naar het bestand :kbd:`systematic_inventory_results.csv` located in de map :kbd:`exercise_data\\\\forestry\\\\results\\\\`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:25
+msgid "Make sure that the :guilabel:`Point coordinates` option is checked."
+msgstr "Zorg er voor dat de optie :guilabel:`Puntcoördinaten` is geselecteerd."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:26
+msgid ""
+"Set the fields for the coordinates to the :kbd:`X` and :kbd:`Y` fields."
+msgstr "Stel de velden voor de coördinaten in op de velden :kbd:`X` en :kbd:`Y`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:27
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:51
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:74
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:93
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:110
+msgid "Click :guilabel:`OK`."
+msgstr "Klik op :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:28
+msgid "When prompted, select :kbd:`ETRS89 / ETRS-TM35FIN` as the CRS."
+msgstr "Selecteer het CRS :kbd:`ETRS89 / ETRS-TM35FIN` CRS als daarnaar gevraagd wordt."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:29
+msgid ""
+"Open the new layer's :guilabel:`Attribute table` and have a look at the "
+"data."
+msgstr "Open de :guilabel:`Attributentabel` voor de nieuwe laag en bekijk de gegevens."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:31
+msgid ""
+"You can read the type of data that is contained in the sample plots "
+"measurements in the text file :kbd:`legend_2012_inventorydata.txt` located "
+"in the :kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
+msgstr "U kunt het type gegevens dat is opgenomen in de metingen op de monsterplaatsen lezen in het tekstbestand :kbd:`legend_2012_inventorydata.txt` dat is geplaatst in de map :kbd:`exercise_data\\\\forestry\\\\results\\\\`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:33
+msgid ""
+"The :kbd:`systematic_inventory_results` layer you just added is actually "
+"just a virtual representation of the text information in the :kbd:`.csv` "
+"file. Before you continue, convert the inventory results to a real "
+"shapefile:"
+msgstr "De laag :kbd:`systematic_inventory_results` die u zojuist heeft toegevoegd is in feite slechts een virtuele weergave van de tekstinformatie in het :kbd:`.csv`-bestand. Converteer, vóórdat u doorgaat, de resultaten van de inventarisatie naar een echt shapefile:"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:35
+msgid "Right click on the :kbd:`systematic_inventory_results` layer."
+msgstr "Klik met rechts op de laag :kbd:`systematic_inventory_results`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:36
+msgid "Browse to :kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
+msgstr "Blader naar de map :kbd:`exercise_data\\\\forestry\\\\results\\\\`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:37
+msgid "Name the file :kbd:`sample_plots_results.shp`."
+msgstr "Noem het bestand :kbd:`sample_plots_results.shp`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:38
+msgid "Check :guilabel:`Add saved file to map`."
+msgstr "Selecteer :guilabel:`Voeg opgeslagen bestand toe aan kaart`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:39
+msgid ""
+"Remove the :kbd:`systematic_inventory_results` layer from your project."
+msgstr "Verwijder de laag :kbd:`systematic_inventory_results` uit uw project."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:42
+msgid "|basic| |FA| Whole Forest Parameters Estimation"
+msgstr "|basic| |FA| Schatting voor parameters voor gehele bos"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:44
+msgid ""
+"You can calculate the averages for this whole forest area from the inventory"
+" results for the some interesting parameters, like the volume and the number"
+" of stems per hectare. Since the systematic sample plots represent equal "
+"areas, you can directly calculate the averages of the volumes and number of "
+"stems per hectare from the :kbd:`sample_plots_results` layer."
+msgstr "U kunt de gemiddelden berekenen voor het gehele bosgebied vanuit de resultaten voor de inventarisatie voor enkele interessante parameters, zoals het volume en het aantal stammen per hectare. Omdat de systematische monsterplaatsen gelijke gebieden vertegenwoordigen, kunt u direct de gemiddelden van de volumes en het anatal stammen per hectare berekenen vanuit de laag :kbd:`sample_plots_results`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:46
+msgid ""
+"You can calculate the average of a field in a vector layer using the "
+":guilabel:`Basic statistics` tool:"
+msgstr "U kunt het gemiddelde van een veld in een vectorlaag berekenen met behulp van het gereedschap :guilabel:`Basisstatistieken`:"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:48
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:106
+msgid "Open :menuselection:`Vector --> Analysis Tools --> Basic statistics`."
+msgstr "Open :menuselection:`Vector --> Analyse-gereedschap --> Basisstatistieken`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:49
+msgid ""
+"Select the :kbd:`sample_plots_results` as the :guilabel:`Input Vector "
+"Layer`."
+msgstr "Selecteer :kbd:`sample_plots_results` als de :guilabel:`Invoer vectorlaag`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:50
+msgid "Select :kbd:`Vol` as :guilabel:`Target field`."
+msgstr "Selecteer :kbd:`Vol` als :guilabel:`Doelveld`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:53
+msgid "The average volume in the forest is :kbd:`135.2 m3/ha`."
+msgstr "Het gemiddelde volume in het bos is :kbd:`135,2 m³/ha`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:55
+msgid ""
+"You can calculate the average for the number of stems in the same way, "
+":kbd:`2745 stems/ha`."
+msgstr "U kunt op dezelfde manier het gemiddelde aantal stammen berekenen, :kbd:`2745 stammen/ha`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:61
+msgid "|basic| |FA| Estimating Stand Parameters"
+msgstr "|basic| |FA| Parameters voor de bosopstanden schatten"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:63
+msgid ""
+"You can make use of those same systematic sample plots to calculate "
+"estimates for the different forest stands you digitized previously. Some of "
+"the forest stands did not get any sample plot and for those you will not get"
+" information. You could have planned some extra sample plots when you "
+"planned the systematic inventory, so that the field teams would have "
+"measured a few extra sample plots for this purpose. Or you could send a "
+"field team later to get estimates of the missing forest stands to complete "
+"the stand inventory. Nevertheless, you will get information for a good "
+"number of stands just using the planned plots."
+msgstr "U kunt gebruikmaken van deze zelfde systematische monsterplaatsen schattingen te berekenen voor de verschillende bosopstanden die u eerder digitaliseerde. Enkele van deze bosopstanden kregen geen monsterplaats en voor hen zult u dus geen informatie ontvangen. U zou enkele extra monsterplaatsen hebben kunnen plannen toen u de systematische inventarisatie plande, zodat de teams in het veld voor dit doel een paar extra monsterplaatsen zouden hebben bemeten. Of u zou  later een team het veld ingestuurd kunnen hebben om schattingen voor de ontbrekende bosopstanden te verkrijgen om de inventarisatie van de bosopstanden te completeren. Niettegenstaande dat, u zult informatie verkrijgen voor een groot aantal bosopstanden door slechts gebruik te maken van de geplande monsterplaatsen."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:65
+msgid ""
+"What you need is to get the averages of the sample plots that are falling "
+"within each of the forest stands. When you want to combine information based"
+" on their relative locations, you perform a spatial join:"
+msgstr "Wat u nodig heeft zijn de gemiddelden van de monsterplaatsen die binnen elk van de bosopstanden vallen. Wanneer u informatie wilt combineren, gebaseerd op hun relatieve locaties, moet u een ruimtelijke join uitvoeren:"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:67
+msgid ""
+"Open the  :menuselection:`Vector --> Data Management --> Join attributes by "
+"location` tool."
+msgstr "Open het gereedschap  :menuselection:`Vector --> Datamanagement-gereedschap  --> Attributen op basis van plaats bijeenbrengen`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:68
+msgid ""
+"Set :kbd:`forest_stands_2012` as the :guilabel:`Target vector layer`. The "
+"layer you want the results for."
+msgstr "Stel :kbd:`forest_stands_2012` in als de :guilabel:`Doel vectorlaag`. De laag waarvoor u de resultaten wilt."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:69
+msgid ""
+"Set :kbd:`sample_plots_results` as the :guilabel:`Join vector layer`. The "
+"layer you want to calculate estimates from."
+msgstr "Stel :kbd:`sample_plots_results` in als de :guilabel:`Join vectorlaag`. De laag waaruit u de schattingen wilt berekenen."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:70
+msgid "Check :guilabel:`Take summary of intersecting features`."
+msgstr "Selecteer :guilabel:`Samenvatting gebruiken van snijdende objecten`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:71
+msgid "Check to calculate only the :guilabel:`Mean`."
+msgstr "Selecteer om alleen het :guilabel:`Gemiddelde` te berekenen."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:72
+msgid ""
+"Name the result as :kbd:`forest_stands_2012_results.shp` and save it in the "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
+msgstr "Noem het resultaat :kbd:`forest_stands_2012_results.shp` en sla het op in de map :kbd:`exercise_data\\\\forestry\\\\results\\\\`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:73
+msgid ""
+"Finally select :guilabel:`Keep all records...`, so you can check later what "
+"stands did not get information."
+msgstr "Selecteer tenslotte :guilabel:`Alle rijen behouden...`, zodat u later kunt controleren welke bosopstanden geen informatie kregen."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:75
+msgid "Accept adding the new layer to your project when prompted."
+msgstr "Accepteer, indien daarnaar gevraagd, het toevoegen van de nieuwe laag aan uw project."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:76
+msgid "Close the :guilabel:`Join attributes by location` tool."
+msgstr "Sluit het gereedschap :guilabel:`Attributen op basis van plaats bijeenbrengen`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:78
+msgid ""
+"Open the :guilabel:`Attribute table` for :kbd:`forest_stands_2012_results` "
+"and review the results you got. Note that a number of forest stands have "
+":kbd:`NULL` as the value for the calculations, those are the ones having no "
+"sample plots. Select them all review them in the map, they are some of the "
+"smaller stands:"
+msgstr "Open de :guilabel:`Attributentabel` voor :kbd:`forest_stands_2012_results` en bekijk de resultaten die u heeft. Merk op dat een aantal bosopstanden :kbd:`NULL` hebben als de waarde voor de berekeningen, dat zijn die welke geen monsterplaatsen hebben. Selecteer ze en bekijk ze op de kaart, het zijn enkele van de kleinere bosopstanden:"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:83
+msgid ""
+"Lets calculate now the same averages for the whole forest as you did before,"
+" only this time you will use the averages you got for the stands as the "
+"bases for the calculation. Remember that in the previous situation, each "
+"sample plot represented a theoretical stand of :kbd:`80x80 m`. Now you have "
+"to consider the area of each of the stands individually instead. That way, "
+"again, the average values of the parameters that are in, for example, m3/ha "
+"for the volumes are converted to total volumes for the stands."
+msgstr "Laten we nu dezelfde gemiddelden berekenen zoals u eerder voor het gehele bos heeft gedaan, alleen zullen we deze keer de gemiddelden die u kreeg voor de bosopstanden gebruiken als basis voor de berekening. Onthoud dat in de eerdere situatie elke monsterplaats een theoretisch bosopstand weergaf van :kbd:`80x80 m`. Nu moet u in plaats daarvan het gebied van elke bosopstand individueel in ogenschouw nemen. Op die manier worden, opnieuw, de gemiddelde waarden van de parameters die in, bijvoorbeeld, m³/ha voor de volumes zijn, worden geconverteerd naar totale volumes voor de bosopstanden."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:85
+msgid ""
+"You need to first calculate the areas for the stands and then calculate "
+"total volumes and stem numbers for each of them:"
+msgstr "U moet eerst de gebieden voor de bosopstanden berekenen en dan totale volumes en aantal stammen voor elk ervan berekenen:"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:87
+msgid "In the :guilabel:`Attribute table` enable editing."
+msgstr "Schakel, in de :guilabel:`Atributentabel`, Bewerken in."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:88
+msgid "Open the :guilabel:`Field calculator`."
+msgstr "Open de :guilabel:`Veldberekening`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:89
+msgid "Create a new field called :kbd:`area`."
+msgstr "Maak een nieuw veld, genaamd :kbd:`area`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:90
+msgid ""
+"Leave the :guilabel:`Output field type` to :kbd:`Decimal number (real)`."
+msgstr "Laat het :guilabel:`Type voor veld` staan op :kbd:`Decimaal getal (real)`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:91
+msgid "Set the :guilabel:`Precision` to :kbd:`2`."
+msgstr "Stel :guilabel:`Precisie` in op :kbd:`2`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:92
+msgid ""
+"In the :guilabel:`Expression` box, write :kbd:`$area / 10000`. This will "
+"calculate the area of the forest stands in ha."
+msgstr "Schrijf, in het vak :guilabel:`Expressie`, :kbd:`$area / 10000`. Dit zal het gebied van de bosopstanden berekenen in ha."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:95
+msgid ""
+"Now calculate a field with the total volumes and number of stems estimated "
+"for every stand:"
+msgstr "Bereken nu een veld met de total volumes en geschatte anatal stammen voor elke bosopstand:"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:97
+msgid "Name the fields :kbd:`s_vol` and :kbd:`s_stem`."
+msgstr "Noem de velden :kbd:`s_vol` en :kbd:`s_stem`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:98
+msgid "The fields can be integer numbers or you can use real numbers also."
+msgstr "De velden mogen gehele getallen zijn of u kunt ook real-getallen gebruiken."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:99
+msgid ""
+"Use the expressions :kbd:`\"area\"  *  \"MEANVol\"` and :kbd:`\"area\"  *  "
+"\"MEANStems\"` for total volumes and total stems respectively."
+msgstr "Gebruik respectievelijk de expressies :kbd:`\"area\"  *  \"MEANVol\"` en :kbd:`\"area\"  *  \"MEANStems\"` voor totale volumes en totaal aantal stammen."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:100
+msgid "Save the edits when you are finished."
+msgstr "Sla de wijzigingen op als u gereed bent."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:101
+msgid "Disable editing."
+msgstr "Schakel Bewerken uit."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:103
+msgid ""
+"In the previous situation, the areas represented by every sample plot were "
+"the same, so it was enough to calculate the average of the sample plots. Now"
+" to calculate the estimates, you need to divide the sum of the stands "
+"volumes or number of stems by the sum of the areas of the stands containing "
+"information."
+msgstr "In de eerdere situatie waren de gebieden die door elke monsterplaats werden weergegeven hetzelfde, dus was het voldoende om het gemiddelde van de monsterplaatsen te berekenen. Voor het berekenen van de schattingen, moet u nu de som van het volume of het aantal stammen voor de bosopstand delen door de som van de gebieden van de bosopstanden die informatie bevatten."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:105
+msgid ""
+"In the :guilabel:`Attribute table` for the :kbd:`forest_stands_2012_results`"
+" layer, select all the stands containing information."
+msgstr "Selecteer, in de guilabel:`Attributentabel` voor de laag :kbd:`forest_stands_2012_results`, alle bosopstanden die informatie bevatten."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:107
+msgid ""
+"Select the :kbd:`forest_stands_2012_results` as the :guilabel:`Input Vector "
+"Layer`."
+msgstr "Selecteer :kbd:`forest_stands_2012_results` als de :guilabel:`Invoer vectorlaag`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:108
+msgid "Select :kbd:`area` as :guilabel:`Target field`."
+msgstr "Selecteer :kbd:`area` als :guilabel:`Doelveld`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:109
+msgid "Check the :guilabel:`Use only selected features`"
+msgstr "Selecteer :guilabel:`Alleen geselecteerde objecten gebruiken`"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:115
+msgid ""
+"As you can see, the total sum of the stands' areas is :kbd:`66.04 ha`. Note "
+"that the area of the missing forest stands is only about :kbd:`7 ha`."
+msgstr "Zoals u kunt zien is de totale som van de gebieden van de bosopstanden :kbd:`66.04 ha`. Merk op dat het gebied van de ontbrekende bosopstanden slechts ongeveer :kbd:`7 ha` is."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:117
+msgid ""
+"In the same way, you can calculate that the total volume for these stands is"
+" :kbd:`8908 m3/ha` and the total number of stems is :kbd:`179594 stems`."
+msgstr "Op dezelfde wijze kunt u berekenen dat het totale volume voor deze bosopstanden :kbd:`8908 m³/ha` is en het totale aantal stammen is :kbd:`179594 stammen`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:119
+msgid ""
+"Using the information from the forest stands, instead of directly using that"
+" from the sample plots, gives the following average estimates:"
+msgstr "Het gebruiken van de informatie voor de bosopstanden, in plaats van die direct vanuit de monsterplaatsen te gebruiken, geeft de volgende schattingen voor de gemiddelden:"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:121
+msgid ":kbd:`184.9 m3/ha` and"
+msgstr ":kbd:`184.9 m³/ha` en"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:122
+msgid ":kbd:`2719 stems/ha`."
+msgstr ":kbd:`2719 stammen/ha`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:124
+msgid "Save your QGIS project, :kbd:`forest_inventory.qgs`."
+msgstr "Sla uw project voor QGIS op, :kbd:`forest_inventory.qgs`."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:127
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:129
+msgid ""
+"You managed to calculate forest estimates for the whole forest using the "
+"information from your systematic sample plots, first without considering the"
+" forest characteristics and also using the interpretation of the aerial "
+"image into forest stands. And you also got some valuable information about "
+"the particular stands, which could be used to plan the management of the "
+"forest in the coming years."
+msgstr "U bent er in geslaagd schattingen voor het gehele bos te berekenen met behulp van de informatie uit uw systematische monsterplaatsen, eerst zonder de karakteristieken van het bos in overweging te nemen en ook met behulp van de interpretatie van de luchtfoto naar bosopstanden. En u heeft ook enige waardevolle informatie verkregen over de afzonderlijke bosopstanden, wat zou kunnen worden gebruikt om het beheer van het bos te plannen voor de komende jaren."
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:132
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/forestry/parameters_calculation.rst:134
+msgid ""
+"In the following lesson, you will first create a hillshade background from a"
+" LiDAR dataset which you will use to prepare a map presentation with the "
+"forest results you just calculated."
+msgstr "In de volgende les zult u eerst een achtergrond met schaduw voor een heuvel maken vanuit een gegevensset van LiDAR die u zult gebruiken om een kaartweergave voor te bereidem met de resultaten voor het bos die u zojuist heeft berekend."

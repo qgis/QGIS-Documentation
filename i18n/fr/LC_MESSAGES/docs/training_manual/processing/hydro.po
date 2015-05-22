@@ -1,0 +1,175 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-20 08:39+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/hydro.rst:6
+msgid "Hydrological analysis"
+msgstr "Analyse hydrologique"
+
+#: ../../source/docs/training_manual/processing/hydro.rst:9
+msgid ""
+"In this lesson we will perform some hydrological analysis. This analysis "
+"will be used in some of the following lessons, as it constitutes a very good"
+" example of an analysis workflow, and we will use it to demonstrate some "
+"advanced features."
+msgstr "Dans cette leçon nous allons réaliser une analyse hydrographique. Cette analyse sera utilisée dans certaines des leçons suivantes, car elle constitue un très bon exemple d'un flux de travail d'analyse, et nous l'utiliserons pour démontrer certaines fonctionnalités avancées."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:12
+msgid ""
+"In this lesson, we are going to do some hydrological analysis. Starting with"
+" a DEM, we are going to extract a channel network, delineate watersheds and "
+"calculate some statistics."
+msgstr "Dans cette leçon, nous allons faire une analyse hydrographique. En commençant avec un MNE, nous allons extraire un réseau de canaux, délimiter des bassins versants et calculer des statistiques."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:15
+msgid ""
+"The first thing is to load the project with the lesson data, which just "
+"contains a DEM."
+msgstr "La première chose à faire est de charger le projet avec les données de la leçon qui contient uniquement un MNE."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:20
+msgid ""
+"The first module to execute is *Catchment area*. You can use anyone of  the "
+"others named *Catchment area*. They have different algorithms underneath, "
+"but the results are basically the same."
+msgstr "Le premier module à lancer se nomme *Bassins versants*. Vous pouvez utiliser n'importe lequel des autres modules nommés *Bassins versants*. Ils disposent de différents algorithmes mais les résultats seront sensiblement identiques."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:22
+msgid ""
+"Select the DEM in the *Elevation* field, and leave the default values for "
+"the rest of parameters."
+msgstr "Sélectionnez le MNE dans le champ *Élévation*, et laissez les valeurs par défaut pour le reste des paramètres."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:26
+msgid ""
+"Some algorithm calculates many layers, but the *Catchment Area* one is the "
+"only one we will be using."
+msgstr "Certains algorithmes calculent de nombreuses couches, mais l'algorithme *Bassin versant* est le seul que nous allons utiliser."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:28
+msgid "You can get rid of the other ones if you want."
+msgstr "Vous pouvez vous débarrasser des autres si vous voulez."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:30
+msgid "The rendering of the layer is not very informative."
+msgstr "Le rendu de la couche n'est pas très instructif."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:34
+msgid ""
+"To know why, you can have a look at the histogram and you will see that "
+"values are not evenly distributed (there are a few cells with very high "
+"value, those corresponding to the channel network). Calculating the "
+"logarithm of the catchment area value yields a layer that conveys much more "
+"information (you can do it using the raster calculator)."
+msgstr "Pour savoir pourquoi, vous pouvez regarder l'histogramme et vous verrez que des valeurs ne sont pas distribuées uniformément (il y a quelques cellules avec une très grande valeur, celles qui correspondent au réseau de canaux). Le calcul du logarithme de la valeur du bassin versant produit une couche qui transmet beaucoup plus d'information (vous pouvez le faire en utilisant la calculatrice raster)."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:38
+msgid ""
+"The catchment area (also known as flow accumulation), can be used to set a "
+"threshold for channel initiation. This can be done using the *Channel "
+"network* algorithm. Here is how you have to set it up (note the *Initiation "
+"threshold* *Greater than* 10.000.000)."
+msgstr "Le basin versant (aussi connu comme l'accumulation de flux) peut être utilisé pour mettre une limite pour l'initiation de canaux. Voici comment vous devez le mettre en place (notez le *Seuil d'initiation* *Plus grand que* 10.000.000)."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:43
+msgid ""
+"Use the original catchment area layer, not the logarithm one. That one was "
+"just for rendering purposes."
+msgstr "Utilisez la couche originale bassin versant, pas celle du logarithme. Celle-ci était juste à des fins de rendu."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:45
+msgid ""
+"If you increase the *Initiation threshold* value, you will get a more sparse"
+" channel network. If you decrease it, you will get a denser one. With the "
+"proposed value, this is what you get."
+msgstr "Si vous augmentez la valeur *Seuil d'initiation*, vous obtiendrez un réseau de canaux plus clairsemé. Si vous le diminuez, vous obtiendrez un réseau dense. Avec la valeur proposée, c'est ce que vous obtenez."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:50
+msgid ""
+"The image above shows just the resulting vector layer and the DEM, but there"
+" should be also a raster one with the same channel network. That raster one "
+"will be, in fact, the one we will be using."
+msgstr "L'image ci-dessus montre simplement la couche vectorielle de résultat et le MNE, mais il devrait aussi y avoir un raster avec le même réseau de canaux. Ce raster-là sera en fait celui que nous utiliserons."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:52
+msgid ""
+"Now, we will use the *Watersheds basins* algorithm to delineate the "
+"subbasins corresponding to that channel network, using as outlet points all "
+"the junctions in it. Here is how you have to set the corresponding "
+"parameters dialog."
+msgstr "Maintenant, nous utiliserons l'algorithme *Basins versants* pour délimiter les sous-bassins correspondant à ce réseau de canaux, en utilisant comme points de sortie toutes les jonctions. Voici comment vous devez configurer la boîte de dialogue des paramètres correspondants."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:57
+msgid "And this is what you will get."
+msgstr "Et voici ce que vous obtiendrez."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:61
+msgid ""
+"This is a raster result. You can vectorise it using the *Vectorise grid "
+"classes* algorithm."
+msgstr "Il s'agit d'un résultat sous forme de raster. Vous pouvez le vectoriser en utilisant l'algorithme *Vectoriser par classes de grille*."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:68
+msgid ""
+"Now, let's try to compute statistics about the elevation values in one of "
+"the subbasins. The idea is to have a layer that just represents the "
+"elevation within that subbasin and then pass it to the module that "
+"calculates those statistics."
+msgstr "Maintenant, essayons de calculer des statistiques sur les valeurs d'élévation dans un des sous-bassins. L'idée est d'avoir une couche qui représente uniquement l'élévation au sein de ce sous-bassin et ensuite de la passer au module qui calcule ces statistiques."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:70
+msgid ""
+"First, let's clip the original DEM with the polygon representing a subbasin."
+" We will use the *Clip Grid with Polygon* algorithm. If we select a single "
+"subbasin polygon and then call the clipping algorithm, we can clip the DEM "
+"to the area covered by that polygon, since the algorithm is aware of the "
+"selection."
+msgstr "Premièrement, découpons le MNE original avec le polygone représentant un sous-bassin. Nous utiliserons l'algorithme *Découper la grille avec un polygone*. Si nous sélectionnons un unique polygone pour le sous-bassin et ensuite appelons l'algorithme de découpage, nous pouvons découper la zone du MNE couverte par ce polygone puisque l'algorithme prend en compte la sélection."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:72
+msgid "Select a polygon,"
+msgstr "Sélectionnez un polygone,"
+
+#: ../../source/docs/training_manual/processing/hydro.rst:76
+msgid "and call the clipping algorithm with the following parameters:"
+msgstr "et appelez l'algorithme de découpage avec les paramètres suivants :"
+
+#: ../../source/docs/training_manual/processing/hydro.rst:80
+msgid ""
+"The element selected in the input field is, or course, the DEM we want to "
+"clip."
+msgstr "L'élément sélectionné dans le champ d'entrée est, bien sûr, le MNE que nous voulons découper."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:82
+msgid "You will get something like this."
+msgstr "Vous obtiendrez quelque chose comme ça."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:87
+msgid ""
+"This layer is ready to be used in the *Raster layer statistics* algorithm."
+msgstr "Cette couche est prête à être utilisée dans l'algorithme *Statistiques de la couche raster*."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:91
+msgid "The resulting statistic are the following ones."
+msgstr "Les résultats des statistiques sont les suivants."
+
+#: ../../source/docs/training_manual/processing/hydro.rst:95
+msgid ""
+"We will use both the basin calculations procedure and the statistics "
+"calculation in other lessons, to find out how other elements can help us "
+"automate both of them and work more effectively."
+msgstr "Nous utiliserons tant la procédure de calculs de bassin que le calcul statistique dans d'autres leçons pour découvrir comment d'autres éléments peuvent nous aider à les automatiser les deux et à travailler plus efficacement."

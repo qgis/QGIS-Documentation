@@ -1,0 +1,334 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-03 18:02+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:6
+msgid "|LS| Network Analysis"
+msgstr "|LS| Netwerkanalyse"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:8
+msgid ""
+"Calculating the shortest distance between two points is a commonly cited use"
+" for GIS. QGIS ships with this tool, but it's not visible by default. In "
+"this brief lesson, we'll show you what you need to get started."
+msgstr "Berekenen van de kortste afstand tussen twee punten is een veel voorkomend gebruik voor GIS. QGIS bevat dit gereedschap, maar het is niet standaard zichtbaar. In deze korte les zullen we u laten zien wat er nodig is om te beginnen."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:12
+msgid ""
+"**The goal for this lesson:** To activate, configure and use the "
+":guilabel:`Road Graph` plugin."
+msgstr "**Het doel voor deze les:** De plug-in :guilabel:`Road Graph` activeren, configureren en gebruiken."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:16
+msgid "|basic| |FA| Activate the Tool"
+msgstr "|basic| |FA| Het gereedschap activeren"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:18
+msgid ""
+"QGIS has many plugins that add to its basic functions. Many of these plugins"
+" are so useful that they ship along with the program straight out of the "
+"box. They're still hidden by default, though. So in order to use them, you "
+"need to activate them first."
+msgstr "QGIS heeft vele plug-ins die iets toevoegen aan zijn basisfuncties. Veel van deze plug-ins zijn z handig dat zij tezamen met het programma worden verschaft. Zij zijn echter nog steeds standaard verborgen. U moet ze dus eerst activeren om ze te kunnen gebruiken."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:23
+msgid "To activate the :guilabel:`Road Graph` plugin:"
+msgstr "De plug-in :guilabel:`Road Graph` activeren:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:25
+msgid ""
+"Start the :guilabel:`Plugin Manager` by clicking on the QGIS main window's "
+"menu item :menuselection:`Plugins --> Manage and Install Plugins...`. A "
+"dialog appears."
+msgstr "Start :guilabel:`Plug-ins beheren` door te klikken op het menu-item :menuselection:`Plug-ins --> Beheer en installeer plug-ins...` in het hoofdvenster van.QGIS, Een dialoogvenster verschijnt."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:27
+msgid "Select the plugin like this:"
+msgstr "Selecteer de plug-in als volgt:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:32
+msgid "Click :guilabel:`Close` on the :guilabel:`Plugin Manager` dialog."
+msgstr "Klik op :guilabel:`Close` in het dialoogvenster :guilabel:`Plug-ins`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:34
+msgid ""
+"If you do not see the plugin in your interface, go to :menuselection:`View "
+"--> Panels` and ensure that :guilabel:`Shortest path` has a check mark next "
+"to it."
+msgstr "Als u de plug-in niet ziet in uw interface, ga dan naar :menuselection:`Beeld --> Panelen` en zorg er voor dat vóór :guilabel:`Kortste pad` een kruisje staat."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:38
+msgid "This panel will appear in your interface:"
+msgstr "Dit paneel zal in uw interface verschijnen:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:45
+msgid "|basic| |FA| Configure the Tool"
+msgstr "|basic| |FA| Het gereedschap configureren"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:47
+msgid ""
+"To have a layer to calculate on, first save your current map. If you haven't"
+" already done so, save your :kbd:`roads_34S` layer to a shapefile by right-"
+"clicking the layer and selecting :guilabel:`Save as...`. Create a new map "
+"and load this layer into it."
+msgstr "Sla eerst uw huidige kaart op om een laag te hebben om mee te rekenen. Als u dat nog niet heeft gedaan, sla dan uw laag :kbd:`roads_34S` op naar een shapefile door met rechts op de laag te klikken en te selecteren :guilabel:`Opslaan als...`. Maak een nieuwe kaart en laad deze laag daarin."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:52
+msgid ""
+"Since so many different configurations are possible when analyzing networks,"
+" the plugin doesn't assume anything before you've set it up. This means that"
+" it won't do anything at all if you don't set it up first."
+msgstr "Omdat er bij het analyseren van netwerken zoveel configuraties mogelijk zijn, gaat de plug-in nergens van uit vóór u het zelf heeft ingesteld. Dat betekent dat het helemaal niets doet, totdat u het heeft ingesteld."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:56
+msgid ""
+"Click on the menu item :menuselection:`Vector --> Road graph --> settings`. "
+"A dialog will appear."
+msgstr "Klik op het menu-item :menuselection:`Vector --> Road graph --> Instellingen`. Een dialoogvenster zal verschijnen."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:58
+msgid ""
+"Make sure it's set up like this (use defaults unless otherwise specified):"
+msgstr "Zorg er voor dat het als volgt is ingesteld (gebruik deze standaarden, tenzij iets anders wordt gespecificeerd):"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:63
+msgid ":guilabel:`Time unit`: :guilabel:`hour`"
+msgstr ":guilabel:`Tijdseenheid`: :guilabel:`uren`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:64
+msgid ":guilabel:`Distance unit`: :guilabel:`kilometer`"
+msgstr ":guilabel:`Afstandseenheid`: :guilabel:`kilometer`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:65
+msgid ":guilabel:`Layer`: :guilabel:`roads_34S`"
+msgstr ":guilabel:`Laag`: :guilabel:`roads_34S`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:66
+msgid ""
+":guilabel:`Speed field`: :guilabel:`Always use default` / :guilabel:`km/h`"
+msgstr ":guilabel:`Snelheidsveld`: :guilabel:`Standaard gebruiken` / :guilabel:`km/u`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:71
+msgid ":guilabel:`Direction`: :guilabel:`Two-way direction`"
+msgstr ":guilabel:`Richting`: :guilabel:`Beide richtingen`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:72
+msgid ":guilabel:`Speed`: :guilabel:`60`"
+msgstr ":guilabel:`Snelheid`: :guilabel:`60`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:76
+msgid "|basic| |FA| Use the Tool"
+msgstr "|basic| |FA| Het gereedschap gebruiken"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:78
+msgid ""
+"Find two points, on roads, on your map. They do not need to have any "
+"significance, but they should be connected by roads and separated by a "
+"reasonable distance:"
+msgstr "Zoek, op de wegen, twee punten op uw kaart. Zij hoeven geen enkele betekenis te hebben, maar zij moeten zijn verbonden door wegen en op een redelijke afstand van elkaar liggen:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:85
+msgid ""
+"In the plugin panel, click on the :guilabel:`Capture Point` button next to "
+"the :guilabel:`Start` field:"
+msgstr "Klik, in het paneel van de plug-in, op de knop :guilabel:`Punt vastleggen` naast het veld :guilabel:`Start`:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:91
+msgid "Click on your chosen start point."
+msgstr "Klik op het door u gekozen beginpunt."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:92
+msgid ""
+"Use the :guilabel:`Capture Point` button next to the :guilabel:`Stop` field "
+"and capture your chosen end point."
+msgstr "Gebruik de knop :guilabel:`Punt vastleggen` naast het veld :guilabel:`Stop` en leg het door u gekozen eindpunt vast."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:94
+msgid "Click on the :guilabel:`Calculate` button to see the solution:"
+msgstr "Klik op de knop :guilabel:`Bereken` om de uitkomst te zien:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:100
+msgid "|moderate| |FA| Using Criteria"
+msgstr "|moderate| |FA| Criteria gebruiken"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:102
+msgid ""
+"Section developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr "Gedeelte ontwikkeld door Linfiniti en S Motala (Cape Peninsula University of Technology)"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:105
+msgid ""
+"Add your :kbd:`restaurants_34S` layer to the map (extract it from your "
+":kbd:`analyis` map if necessary)."
+msgstr "Voeg uw laag :kbd:`restaurants_34S` toe aan de kaart (neem het, indien nodig, uit uw kaart :kbd:`analyis`)."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:107
+msgid ""
+"Open the attribute table for the :guilabel:`roads_34S` layer and enter edit "
+"mode."
+msgstr "Open de attributentabel voor de laag :guilabel:`roads_34S` en ga naar de modus Bewerken."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:109
+msgid ""
+"Add a new column with the name :kbd:`SPEED`, and give it the type "
+":guilabel:`Whole number (integer)` with a width of :kbd:`3`."
+msgstr "Voeg een nieuwe kolom toe met de naam :kbd:`SPEED`, en geef die het type :guilabel:`Geheel getal (integer)` met een breedte van :kbd:`3`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:111
+msgid ""
+"In the main window, activate the :guilabel:`Select Features by Rectangle` "
+"tool:"
+msgstr "Activeer, in het hoofdvenster, het gereedschap :guilabel:`Objecten met een rechthoek selecteren`:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:117
+msgid "Select any main roads in urban - but not residential - areas:"
+msgstr "Selecteer enkele hoofdwegen in stedelijke - maar geen woon- - gebieden:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:122
+msgid ""
+"(To select more than one road, hold the :kbd:`ctrl` button and drag a box "
+"across any road that you want to include in the selection.)"
+msgstr "(Houd de toets :kbd:`Ctrl` ingedrukt en sleep een vak rondom een weg die u wilt opnemen in de selectie om meer dan één weg te selecteren.)"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:125
+msgid "In the attribute table, select :guilabel:`Show selected features`."
+msgstr "Selecteer, in de attributentabel, :guilabel:`Geselecteede objecten tonen`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:130
+msgid "Set the :kbd:`SPEED` value for all the selected streets to :kbd:`60`:"
+msgstr "Stel de waarde voor :kbd:`SPEED` voor alle geselecteerde wegen in op :kbd:`60`:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:135
+msgid ""
+"In context, this means that you're setting the speed limit on those roads to"
+" :kbd:`60 km/h`."
+msgstr "In context betekent dit dat u de snelheidslimiet op deze wegen instelt op :kbd:`60 km/u`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:138
+msgid "Select any highways or major roads outside urban areas:"
+msgstr "Selecteer enkele snelwegen of hoofdwegen buiten stedelijke gebieden:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:143
+msgid "Set the :kbd:`SPEED` value for all the selected streets to :kbd:`120`."
+msgstr "Stel de waarde voor :kbd:`SPEED` voor alle geselecteerde wegen in op :kbd:`120`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:144
+msgid "Close the attribute table, save your edits, and exit edit mode."
+msgstr "Sluit de attributentabel, sla uw bewerkingen op en verlaat de modus Bewerken."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:145
+msgid ""
+"Check the :menuselection:`Vector --> Road graph --> Road graph settings` to "
+"ensure that it's set up as explained previously in this lesson, but with the"
+" :guilabel:`Speed` value set to the :kbd:`SPEED` field you just created."
+msgstr "Controleer de instellingen voor :menuselection:`Vector --> Road graph --> Instellingen` om er voor te zorgen dat het is ingesteld zoals eerder in deze les is uitgelegd, maar met de waarde :guilabel:`Snelheid` ingesteld op het veld :kbd:`SPEED` dat u zojuist heeft gemaakt."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:148
+msgid ""
+"In the :guilabel:`Shortest path` panel, click the :guilabel:`Start point` "
+"button."
+msgstr "Klik, in het paneel :guilabel:`Kortste pad`, op de knop :guilabel:`Beginpunt`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:150
+msgid ""
+"Set the starting point on a minor road on one side of |majorUrbanName| and "
+"the end point on a major road on the other side of town:"
+msgstr "Stel het beginpunt in op een kleine weg aan één kant van |majorUrbanName| en het eindpunt op een hoofdweg aan de andere kant van de stad:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:156
+msgid ""
+"In the :guilabel:`Criterion` drop-down list in the :guilabel:`Shortest path`"
+" panel, select :guilabel:`Length`."
+msgstr "Selecteer, in de keuzelijst :guilabel:`Criterium` in het paneel :guilabel:`Kortste pad`, :guilabel:`Lengte`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:158
+msgid ""
+"Click :guilabel:`Calculate`. The route will be calculated for the shortest "
+"distance:"
+msgstr "Klik op :guilabel:`Bereken`. De route zal worden berekend voor de kortste afstand:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:164
+msgid ""
+"Notice the values of :guilabel:`Length` and :guilabel:`Time` in the "
+":guilabel:`Shortest path` panel."
+msgstr "Let op de waarden in :guilabel:`Lengte` en :guilabel:`Tijd` in het paneel :guilabel:`Kortste pad`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:167
+msgid "Set the :guilabel:`Criterion` to :guilabel:`Time`."
+msgstr "Stel :guilabel:`Criterium` in op :guilabel:`Tijd`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:168
+msgid ""
+"Click :guilabel:`Calculate` again. The route will be calculated for the "
+"shortest time:"
+msgstr "Klik opnieuw op :guilabel:`Bereken`. De route zal worden berekend voor de kortste tijd:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:174
+msgid ""
+"You can switch back and forth between these criteria, recalculating each "
+"time, and note the changes in the :guilabel:`Length` and :guilabel:`Time` "
+"taken. Remember that the assumption being made to arrive at the time taken "
+"to travel a route does not account for acceleration, and assumes that you "
+"will be traveling at the speed limit at all times. In a real situation, you "
+"may want to split roads into smaller sections and note the average or "
+"expected speed in each section, rather than the speed limit."
+msgstr "U kunt heen en weer schakelen tussen deze criteria, elke keer opnieuw berekenen en zien hoe de wijzigingen worden opgenomen in :guilabel:`Lengte` en :guilabel:`Tijd`. Onthoud dat de veronderstelling om te arriveren rond de tijd die het duurt om een route af te leggen geen rekening houdt met accelereren, en gaat er van uit dat u de gehele tijd reist met de snelheidslimiet. In een echte situatie zou u misschien wegen willen opsplitsen in kleinere gedeelten en rekening houden met de gemiddelde of verwachte snelheid op elk gedeelte, in plaats van met de snelheidslimiet."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:182
+msgid ""
+"If, on clicking :guilabel:`Calculate`, you see an error stating that a path "
+"could not be found, make sure that the roads you digitized actually meet "
+"each other. If they're not quite touching, either fix them by modifying the "
+"features, or set the :guilabel:`Topology tolerance` in the plugin's "
+"settings. If they're passing over each other without intersecting, use the "
+":guilabel:`Split features` tool to \"split\" roads at their intersections:"
+msgstr "Indien, bij het klikken op :guilabel:`Bereken`, u een fout ziet die aangeeft dat een pad niet kon worden gevonden, zorg er dan voor dat de wegen die u heeft gedigitaliseerd ook echt op elkaar aansluiten. Als zij elkaar niet echt raken, repareer ze dan ofwel door het aanpassen van de objecten, of stel de :guilabel:`Topologie tolerantie` in de instellingen van de plug-in in. Als zij over elkaar heengaan zonder te kruisen, gebruik dan het gereedschap :guilabel:`Objecten splitsen` om wegen op hun kruisingen te \"splitsen\":"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:189
+msgid "|mActionSplitFeatures|"
+msgstr "|mActionSplitFeatures|"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:191
+msgid ""
+"Remember that the :guilabel:`Split features` tool only works in edit mode on"
+" selected features, though!"
+msgstr "Onthoud dat het gereedschap :guilabel:`Objecten splitsen` echter alleen werkt op geselecteerde objecten in de modus Bewerken!"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:194
+msgid ""
+"You might also find that the shortest route is also the quickest if this "
+"error is returned."
+msgstr "U zou ook kunnen vinden dat de kortste route ook de snelste is als deze fout wordt teruggegeven."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:198
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:200
+msgid ""
+"Now you know how to use the :guilabel:`Road Graph` plugin to solve shortest-"
+"path problems."
+msgstr "Nu weet u hoe u de plug-in :guilabel:`Road Graph` kunt gebruiken om problemen met kortste paden op te lossen."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:204
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:206
+msgid ""
+"Next you'll see how to run spatial statistics algorithms on vector datasets."
+msgstr "Vervolgens zult u zien hoe u algoritmen voor ruimtelijke statistieken uitvoert op vector gegevenssets."

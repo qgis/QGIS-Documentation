@@ -1,0 +1,307 @@
+# 
+# Translators:
+# David Astier <t.davidastier@laposte.net>, 2015
+# Sant-anna <delazj@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-05-21 15:27+0000\n"
+"Last-Translator: Jacolin <yjacolin@free.fr>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:6
+msgid "|LS| GRASS Setup"
+msgstr "|LS| Configuration de GRASS"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:8
+msgid ""
+"Using GRASS in QGIS requires you to think of the interface in a slightly "
+"different way. Remember that you're not working in QGIS directly, but "
+"working in GRASS *via* QGIS."
+msgstr "Utiliser GRASS dans QGIS nécessite de voir l'interface légèrement différemment.\nSouvenez-vous que vous ne travaillez pas directement dans QGIS, mais dans GRASS *via* QGIS."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:12
+msgid "**The goal for this lesson:** To begin a GRASS project in QGIS."
+msgstr "**Le but de cette leçon :** Commencer un projet GRASS dans QGIS."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:15
+msgid "|basic| |FA| Start a New GRASS Project"
+msgstr "|basic| |FA| Démarrer un nouveau projet GRASS"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:17
+msgid ""
+"To launch GRASS from within QGIS, you need to activate it as with any other "
+"plugin. First, open a new QGIS project."
+msgstr "Pour lancer GRASS depuis QGIS, vous avez besoin de l'activer à travers, comme pour n'importe quelle autre extension. Premièrement, ouvrez un nouveau projet QGIS."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:20
+msgid ""
+"In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:"
+msgstr "Dans le :guilabel:`Gestionnaire d'extension`, activez :guilabel:`GRASS` dans la liste :"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:25
+msgid "The GRASS toolbar will appear:"
+msgstr "La barre d'outil de GRASS fera son apparition :"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:30
+msgid ""
+"Before you can use GRASS, you need to create a **mapset**. GRASS always "
+"works in a database environment, which means that you need to import all the"
+" data you want to use into a GRASS database."
+msgstr "Avant d'utiliser GRASS, vous avez besoin de créer un **jeu de donnée**. GRASS travaille constamment avec l'environnement de base des données, ce qui signifie que vous avez besoin d'importer toutes les données que vous souhaitez utiliser dans une base de données de GRASS."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:34
+msgid "Click on the :guilabel:`New mapset` button:"
+msgstr "Cliquez sur le bouton :guilabel:`Nouveau jeu de donnée`"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:36
+msgid "|grass_new_mapset|"
+msgstr "|grass_new_mapset|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:38
+msgid "You'll see a dialog explaining the structure of a GRASS mapset."
+msgstr "Vous pourrez voir une fenêtre expliquant la structure d'un jeu de donnée GRASS."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:40
+msgid ""
+"Create a new directory called :kbd:`grass_db` in :guilabel:`exercise_data`."
+msgstr "Créez un nouveau dossier nommé :kbd:`grass_db` dans :guilabel:`exercise_data`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:41
+msgid ""
+"Set it as the directory that will be used by GRASS to set up its database:"
+msgstr "Définissez le dossier qui sera utilisé par GRASS pour y placer sa base de donnée :"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:46
+#: ../../source/docs/training_manual/grass/grass_setup.rst:56
+#: ../../source/docs/training_manual/grass/grass_setup.rst:62
+#: ../../source/docs/training_manual/grass/grass_setup.rst:69
+msgid "Click :guilabel:`Next`."
+msgstr "Cliquez sur :guilabel:`Suivant`"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:48
+msgid ""
+"GRASS needs to create a \"location\", which describes the maximum extents of"
+" the geographic area you'll be working in."
+msgstr "GRASS a besoin d'une \"localisation\", qui définira l'étendue géographique maximale sur laquelle vous allez travailler."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:51
+msgid "Call the new location :kbd:`South_Africa`:"
+msgstr "Nommez la nouvelle localisation :kbd:`Afrique_du_Sud` :"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:57
+msgid ""
+"We'll be working with :kbd:`WGS 84`, so search for and select this CRS:"
+msgstr "Nous allons travailler avec le SCR :kbd:`WGS 84`, sélectionnez-le donc :"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:63
+msgid ""
+"Now select the region :guilabel:`South Africa` from the dropdown and click "
+":guilabel:`Set`:"
+msgstr "Maintenant, sélectionnez la région :guilabel:`Afrique du Sud` depuis la liste déroulante et cliquez sur :guilabe:`Définir`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:70
+msgid "Create a mapset, which is the map file that you'll be working with."
+msgstr "Créez un jeu de donnée, qui est le fichier sur lequel vous allez travailler."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:75
+msgid ""
+"Once you're done, you'll see a dialog asking you to confirm that the "
+"settings it displays are correct."
+msgstr "Une fois cela fait, une boite de dialogue vous demandera de confirmer que les paramètres sont corrects."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:78
+msgid "Click :guilabel:`Finish`."
+msgstr "Cliquez sur :guilabel:`Terminer`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:79
+msgid "Click :guilabel:`OK` on the success dialog."
+msgstr "Cliquez sur :guilabel:`OK` dans la fenêtre de succès."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:82
+msgid "|basic| |FA| Loading Vector Data into GRASS"
+msgstr "|basic| |FA| Chargement des données vecteur dans GRASS"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:84
+msgid ""
+"You'll now have a blank map. To load data into GRASS, you need to follow a "
+"two-step process."
+msgstr "Vous devriez désormais avoir une carte vide. Pour charger les données dans GRASS, vous allez avoir besoin de suivre deux étapes."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:87
+msgid ""
+"Load data into QGIS as usual. Use the :kbd:`roads.shp` dataset (found under "
+":kbd:`exercise_data/epsg4326/`) for now."
+msgstr "Charger les données dans QGIS comme d'habitude. Utilisez pour l'instant le jeu de donnée :kbd:`roads.shp` (que vous trouverez dans :kbd:`exercise_data/epsg/4326/`)."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:89
+msgid "As soon as it's loaded, click on the :guilabel:`GRASS Tools` button:"
+msgstr "Une fois chargées, cliquez sur le bouton :guilabel:` Outils GRASS` :"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:91
+msgid "|grass_tools|"
+msgstr "|grass_tools|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:93
+msgid "In the new dialog, select :guilabel:`Modules list`."
+msgstr "Dans la nouvelle boite de dialogue, sélectionnez :guilabel:`Liste des modules`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:94
+msgid ""
+"Find the vector import tool by entering the term :kbd:`v.in.ogr.qgis` in the"
+" :guilabel:`Filter` field."
+msgstr "Chercher l'outil d'import de vecteur en saisissant le terme :kbd:`v.in.ogr.qgis` dans le :guilabel:`champ filtre`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:97
+msgid ""
+"The :kbd:`v` stands for \"vector\", :kbd:`in` means its a function to import"
+" data into the GRASS database, :kbd:`ogr` is the software library used to "
+"read vector data, and :kbd:`qgis` means that the tool will look for a vector"
+" from among the vectors already loaded into QGIS."
+msgstr "Le :kbd:`v` est pour \"vecteur\", :kbd:`in` est une fonction pour importer les données dans la base de GRASS, :kbd:`ogr` est la librairie utilisée pour lire les données vectorielles, et :kbd:`qgis` signifie que l'outil va chercher un vecteur parmi les vecteurs déjà chargés dans QGIS."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:102
+msgid "Once you've found this tool, click on it to bring up the tool itself:"
+msgstr "Une fois l'outil trouvé, cliquez dessus pour l'utiliser :"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:107
+msgid ""
+"Set the loaded layer to :guilabel:`roads` and its GRASS version's name to "
+":kbd:`g_roads` to prevent confusion."
+msgstr "Nommez la couche chargée auparavant :guilabel:roads` et la version de GRASS :kbd:`g_roads` pour éviter les erreurs."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:113
+msgid ""
+"|hard| Note the extra import options provided under :guilabel:`Advanced "
+"Options`. These include the ability to add a WHERE clause for the SQL query "
+"used for importing the data."
+msgstr "|hard| Notez les options supplémentaires d'import fournies dans :guilabel:`Options avancées`. Cela inclut la possibilité d'ajouter une clause WHERE pour la requête SQL utilisée lors de l'import de donnée."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:117
+msgid "Click :guilabel:`Run` to begin the import."
+msgstr "Cliquez sur :guilabel:`Exécuter' pour commencer l'import."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:118
+msgid ""
+"When it's done, click the :guilabel:`View output` button to see the newly "
+"imported GRASS layer in the map."
+msgstr "Une fois fait, cliquez sur le bouton :guilabel:`Voir le résultat' pour voir la nouvelle couche GRASS importée dans la carte."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:120
+msgid ""
+"Close first the import tool (click the :guilabel:`Close` button to the "
+"immediate right of :guilabel:`View output`), then close the :guilabel:`GRASS"
+" Tools` window."
+msgstr "Fermez d'abord l'outil d'import (cliquez sur le bouton :guilabel:`Fermer` juste à droite de :guilabel:`Voir le résultat`), puis fermez la fenêtre :guilabel:`Outils GRASS`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:123
+msgid "Remove the original :guilabel:`roads` layer."
+msgstr "Enlever la couche original :guilabel:`roads`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:125
+msgid ""
+"Now you are left with only the imported GRASS layer as displayed in your "
+"QGIS map."
+msgstr "Vous ne disposez désormais plus que de la couche GRASS affichée dans la carte QGIS."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:129
+msgid "|basic| |FA| Loading Raster Data into GRASS"
+msgstr "|basic| |FA| Chargement des données Raster dans GRASS"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:131
+msgid ""
+"Recall that our DEM is in the Projected CRS :kbd:`UTM 33S / WGS 84`, but our"
+" GRASS project is in the Geographic CRS :kbd:`WGS 84`. So let's re-project "
+"the DEM first."
+msgstr "N'oubliez pas que notre MNE est dans le SCR Projeté :kbd:`UTM 33S / WGS 84`, alors que notre projet GRASS est dans le SCR Géographique :kbd:`WGS 84`. Donc reprojetons d'abord notre MNE."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:135
+msgid ""
+"Load the |srtmFileName| dataset (found under "
+":kbd:`exercise_data/raster/SRTM/`) into the QGIS map as usual, using QGIS' "
+":guilabel:`Add Raster Layer` tool."
+msgstr "Chargez le |srtmFileName| jeu de donnée (trouvé dans :kbd:`exercise_data/raster/SRTM/`) dans QGIS comme d'habitude, en utilisant l'outil QGIS :guilabel:`Ajouter une couche raster`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:138
+msgid ""
+"Re-project it using GDAL Warp tool (:menuselection:`Raster --> Projections "
+"--> Warp (Reproject)`), setting it up as shown:"
+msgstr "Re-projetez le avec l'outil GDAL Warp (:menuselection:`Raster --> Projections --> Déformation (Reprojeter)`), défini comme tel :"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:144
+msgid ""
+"Save the raster under the same folder as the original, but with the file "
+"name :kbd:`DEM_WGS84.tif`. Once it appears in your map, remove the "
+"|srtmFileName| dataset from your :guilabel:`Layers list`."
+msgstr "Sauvegardez le raster dans le même dossier que l'original, mais avec le nom :kbd:`MNE_WGS84.tif`. Une fois qu'il apparaît sur votre carte, supprimer le jeu de donné |srtmFileName| de votre :guilabel:`liste de couches`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:148
+msgid "Now that it's reprojected, you can load it into your GRASS database."
+msgstr "Maintenant qu'il est reprojeté, vous pouvez l'ajouter dans votre base de données GRASS."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:150
+msgid "Open the :guilabel:`GRASS Tools` dialog again."
+msgstr "Ouvrez à nouveau les :guilabel:`Outils GRASS`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:151
+msgid "Click on the :guilabel:`Modules List` tab."
+msgstr "Cliquez sur l'onglet :guilabel:`Liste des modules`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:152
+msgid ""
+"Search for :kbd:`r.in.gdal.qgis` and double click the tool to open the "
+"tool's dialog."
+msgstr "Cherchez :kbd:`r.in.gdal.qgis` et double-cliquez dessus pour ouvrir ses propriétés."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:154
+msgid ""
+"Set it up so that the input layer is :guilabel:`DEM_WGS84` and the output is"
+" :kbd:`g_dem`."
+msgstr "Paramétrez-le pour que la couche d'entrée soit :guilabel:`MNE_WGS84` et que celle de sortie soit :kbd:`g_dem`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:160
+msgid "Click :guilabel:`Run`."
+msgstr "Cliquez sur :guilabel:`Exécuter`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:161
+msgid "When the process is done, click :guilabel:`View output`."
+msgstr "Une fois l'opération réussie, cliquez sur :guilabel:`Voir le résultat`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:162
+msgid ""
+":guilabel:`Close` the current tab, and then :guilabel:`Close` the whole "
+"dialog."
+msgstr "Vous pouvez :guilabel:`Fermer` l'onglet actuel puis cliquez dans le dialogue suivant sur :guilabel:`Fermer`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:168
+msgid "You may now remove the original :guilabel:`DEM_WGS84` layer."
+msgstr "Vous pouvez maintenant enlever la couche :guilabel:`MNE_WGS84`."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:171
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:173
+msgid ""
+"The GRASS workflow for ingesting data is somewhat different from the QGIS "
+"method because GRASS loads its data into a spatial database structure. "
+"However, by using QGIS as a frontend, you can make the setup of a GRASS "
+"mapset easier by using existing layers in QGIS as data sources for GRASS."
+msgstr "La méthode de travail de GRASS pour la gestion des données est quelque peu différente de celle de QGIS car GRASS les charge dans une base de donnée à structure spatiale. Toutefois, en utilisant QGIS comme interface, vous pouvez rendre plus facile la création d'un jeu de donnée GRASS grâce aux couches QGIS comme sources de données pour GRASS."
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:179
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/grass/grass_setup.rst:181
+msgid ""
+"Now that the data is imported into GRASS, we can look at the advanced "
+"analysis operations that GRASS offers."
+msgstr "Maintenant que les données sont importées dans GRASS, nous pouvons nous intéresser aux opérations d'analyses plus évoluées que nous permet GRASS."

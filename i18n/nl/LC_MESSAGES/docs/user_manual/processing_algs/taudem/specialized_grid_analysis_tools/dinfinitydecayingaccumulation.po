@@ -1,0 +1,156 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-14 15:59+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:6
+msgid "D-Infinity Decaying Accumulation"
+msgstr "D-oneindigheid accumulatie van verval"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:11
+msgid ""
+"The D-Infinity Decaying Accumulation tool creates a grid of the accumulated "
+"quantity at each location in the domain where the quantity accumulates with "
+"the D-infinity flow field, but is subject to first order decay in moving "
+"from cell to cell. By default, the quantity contribution of each grid cell "
+"is the cell length to give a per unit width accumulation, but can optionally"
+" be expressed with a weight grid. The decay multiplier grid gives the "
+"fractional (first order) reduction in quantity in accumulating from grid "
+"cell ``x`` to the next downslope cell."
+msgstr "Het gereedschap D-oneindigheid accumulatie van verval maakt een raster van de geaccumuleerde kwantiteit op elke locatie in het domein waar de kwantiteit accumuleert met het veld D-oneindigheid stroom, maar onderwerp is van verval in de eerste orde bij het verplaatsen van cel naar cel. Standaard is de bijdrage aan de kwantiteit van elke cel in het raster de lengte van de cel die een per eenheid brede accumulatie geeft, maar kan optioneel worden uitgedrukt in een gewogen raster. Het raster vermenigvuldigingsfactor verval geeft de fractionele (eerste orde) reductie in kwantiteit, geaccumuleerd vanaf rastercel ``x`` naar de volgende neerwaartse cel."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:20
+msgid ""
+"A decayed accumulation operator ``DA[.]`` takes as input a mass loading "
+"field ``m(x)`` expressed at each grid location as ``m(i, j)`` that is "
+"assumed to move with the flow field but is subject to first order decay in "
+"moving from cell to cell. The output is the accumulated mass at each "
+"location ``DA(x)``. The accumulation of ``m`` at each grid cell can be "
+"numerically evaluated."
+msgstr "De operator voor accumulatie van het verval ``DA[.]`` neemt als invoer een veld voor het laden van massa ``m(x)``, uitgedrukt op elke locatie van het raster als ``m(i, j)`` waarvan wordt aangenomen dat die verplaatst met het stroomveld, maar onderwerp is van verval in de eerste orde bij het verplaatsen van cel naar cel. De uitvoer is de geaccumuleerde massa op elke locatie ``DA(x)``. De accumulatie van ``m`` in elke cel van het raster kan numeriek worden geëvalueerd."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:29
+msgid ""
+"Here ``d(x) = d(i ,j)`` is a decay multiplier giving the fractional (first "
+"order) reduction in mass in moving from grid cell ``x`` to the next "
+"downslope cell. If travel (or residence) times ``t(x)`` associated with flow"
+" between cells are available ``d(x)`` may be evaluated as ``exp(-k t(x))`` "
+"where ``k`` is a first order decay parameter. The weight grid is used to "
+"represent the mass loading ``m(x)``. If not specified this is taken as 1. If"
+" the outlets shapefile is used the function is only evaluated on that part "
+"of the domain that contributes flow to the locations given by the shapefile."
+msgstr "Hier is ``d(x) = d(i, j)`` een vermenigvuldigingsfactor voor verval die de fractionele (eerste orde) reductie in massa geeft bij het verplaatsen van rastercel ``x`` naar de volgende neerwaartse cel. Als verplaatsing (of stilstand) maal ``t(x)`` geassocieerd met de stroom tussen cellen beschikbaar zijn, kan ``d(x)`` worden geëvalueerd als ``exp(-k t(x))`` waar ``k`` een parameter is voor het verval van de eerste orde. Het gewogen raster wordt gebruikt om de lading van de massa ``m(x)`` uit te drukken. Indien niet gespecificeerd wordt 1 genomen. Als het shapefile met afvoeren wordt gebruikt, evalueert het gereedschap alleen dat gedeelte van het domein dat stroom bijdraagt aan de in het shapefile vermelde locaties."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:41
+msgid ""
+"Useful for a tracking contaminant or compound subject to decay or "
+"attenuation."
+msgstr "Handig voor het volgen van verontreiniger of stof die onderwerp zijn van verval of verdunning."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:44
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:49
+msgid "``D-Infinity Flow Direction Grid`` [raster]"
+msgstr "``D-oneindigheid raster stroomrichting`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:47
+msgid ""
+"A grid giving flow direction by the D-infinity method. Flow direction is "
+"measured in radians, counter clockwise from east. This grid can be created "
+"by the function **\"D-Infinity Flow Directions\"**."
+msgstr "Een raster dat de stroomrichting geeft volgens de methode D-oneindigheid. Stroomrichting wordt gemeten in radialen, tegen de wijzers van de klok in vanuit Oost. Dit raster kan worden gemaakt door het gereedschap **\"D-oneindigheid stroomrichtingen\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:54
+msgid "``Decay Multiplier Grid`` [raster]"
+msgstr "``Raster Vermenigvuldigingsfactor verval`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:52
+msgid ""
+"A grid giving the factor by which flow leaving each grid cell is multiplied "
+"before accumulation on downslope grid cells. This may be used to simulate "
+"the movement of an attenuating substance."
+msgstr "Een raster dat de factor geeft waarmee de stroom die elke cel van het raster verlaat wordt vermenigvuldigt vóór accumulatie op neerwaartse cellen van het raster. Dit kan worden gebruikt om de verplaatsing van een verdunnende of vervallende substantie te simuleren."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:61
+msgid "``Weight Grid`` [raster]"
+msgstr "``Gewogen grid`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:57
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:64
+msgid "Optional."
+msgstr "Optioneel."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:59
+msgid ""
+"A grid giving weights (loadings) to be used in the accumulation. If this "
+"optional grid is not specified, weights are taken as the linear grid cell "
+"size to give a per unit width accumulation."
+msgstr "Een raster dat wegingen (ladingen) weergeeft die moeten worden gebruikt in de accumulatie. Als dit optionele raster niet wordt gespecificeerd, worden wegingen genomen als de lineaire grootte van een cel van het raster om een per eenheid brede accumulatie te geven."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:68
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Afvoeren-shapefile`` [vector: punt]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:66
+msgid ""
+"This optional input is a point shapefile defining outlets of interest. If "
+"this file is used, the tool will only evaluate ther area upslope of these "
+"outlets."
+msgstr "Deze optionele invoer is een punt-shapefile dat de interessante afvoerpunten definieert. Als het bestand wordt gebruikt, zal het gereedschap alleen het hoger gelegen gebied voor deze afvoeren evalueren."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:76
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Controleren op besmetting rand`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:71
+msgid ""
+"This option determines whether the tool should check for edge contamination."
+" Edge contamination is defined as the possibility that a value may be "
+"underestimated due to grid cells outside of the domain not being considered "
+"when determining contributing area."
+msgstr "Deze optie bepaalt of het gereedschap moet controleren op besmetting van randen. Besmetting van randen wordt gedefinieerd als de mogelijkheid dat een waarde ondergewaardeerd kan worden vanwege het feit dat cellen voor het raster buiten het domein niet in overweging worden genomen bij het bepalen van het deelnemende gebied."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:76
+msgid "Default: *True*"
+msgstr "Standaard: *True*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:79
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:84
+msgid "``Decayed Specific Catchment Area Grid`` [raster]"
+msgstr "``Verval specifiek opvanggebied raster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:82
+msgid ""
+"The D-Infinity Decaying Accumulation tool creates a grid of the accumulated "
+"mass at each location in the domain where mass moves with the D-infinity "
+"flow field, but is subject to first order decay in moving from cell to cell."
+msgstr "Het gereedschap D-oneindigheid accumulatie van verval maakt een raster van de geaccumuleerde massa op elke locatie in het domein waarin massa verplaatst met het veld D-oneindigheid stroom, maar onderwerp is van verval van de eerste orde bij het verplaatsen van cel naar cel."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:87
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/dinfinitydecayingaccumulation.rst:94
+msgid "See also"
+msgstr "Zie ook"

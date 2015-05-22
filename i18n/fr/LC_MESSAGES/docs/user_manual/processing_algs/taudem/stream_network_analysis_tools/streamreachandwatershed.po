@@ -1,0 +1,399 @@
+# 
+# Translators:
+# Jacolin <yjacolin@free.fr>, 2015
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+# Vincent Picavet <vincent.ml@oslandia.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-03 16:45+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:6
+msgid "Stream Reach and Watershed"
+msgstr "Portée de cours d'eau et bassin versant"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:11
+msgid ""
+"This tool produces a vector network and shapefile from the stream raster "
+"grid. The flow direction grid is used to connect flow paths along the stream"
+" raster. The Strahler order of each stream segment is computed. The "
+"subwatershed draining to each stream segment (reach) is also delineated and "
+"labeled with the value identifier that corresponds to the WSNO (watershed "
+"number) attribute in the Stream Reach Shapefile."
+msgstr "Cet outil produit un réseau de vecteur et un fichier Shape à partir d'une grille raster de cours d'eau. La grille de direction de flux est utilisée pour connecter les flux aux cours d'eau. L'ordre de Strahler de chaque segment de cours d'eau est calculé. Le sous-bassin versant se déversant dans chaque segment de cours d'eau (portée) est également délimité et étiqueté avec la valeur de l'identifiant qui correspond à l'attribut WSNO (numéro du bassin versant) du fichier Shape de porté de cours d'eau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:18
+msgid ""
+"This tool orders the stream network according to the Strahler ordering "
+"system. Streams that don't have any other streams draining in to them are "
+"order 1. When two stream reaches of different order join the order of the "
+"downstream reach is the order of the highest incoming reach. When two "
+"reaches of equal order join the downstream reach order is increased by 1. "
+"When more than two reaches join the downstream reach order is calculated as "
+"the maximum of the highest incoming reach order or the second highest "
+"incoming reach order + 1. This generalizes the common definition to cases "
+"where more than two reaches join at a point. The network topological "
+"connectivity is stored in the Stream Network Tree file, and coordinates and "
+"attributes from each grid cell along the network are stored in the Network "
+"Coordinates file."
+msgstr "Cet outil ordonne le réseau des cours d'eau selon le système d'ordre de Strahler. Les cours d'eau qui n'ont pas d'autres cours d'eau qui se déversent en eux ont nombre d'ordre à un. Lorsque deux cours d'eau de différents ordres se rejoignent, l'ordre de la portée de cours d'eau descendant est l'ordre de la portée la plus importante. Lorsque deux cours d'eau de même ordre se rejoignent, l'ordre est incrémenté de 1. Lorsque plus de deux cours d'eau se rejoignent, l'ordre de la porté de cousr d'eau descendant est calculé en prenant le l'ordre de la portée maximale ou en prenant l'ordre + 1 de la seconde plus grande portée. Cela permet de généraliser la définition pour les cas où plus de deux portées se rejoignent en un point. La connectivité tolopgique du réseau est stockée dans le fichier d'arbre de réseau de cours d'eau et les coordonnées et les attributs de chaque cellule le long du réseau sont stockés dans le fichier des coordonnées du réseau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:30
+msgid ""
+"The stream raster grid is used as the source for the stream network, and the"
+" flow direction grid is used to trace connections within the stream network."
+" Elevations and contributing area are used to determine the elevation and "
+"contributing area attributes in the network coordinate file. Points in the "
+"outlets shapefile are used to logically split stream reaches to facilitate "
+"representing watersheds upstream and downstream of monitoring points. The "
+"program uses the attribute field \"id\" in the outlets shapefile as "
+"identifiers in the Network Tree file. This tool then translates the text "
+"file vector network representation in the Network Tree and Coordinates files"
+" into a shapefile. Further attributes are also evaluated. The program has an"
+" option to delineate a single watershed by representing the entire area "
+"draining to the Stream Network as a single value in the output watershed "
+"grid."
+msgstr "La grille raster de cours d'eau est utilisée comme source de réseau de cours d'eau et la grille de direction de courant est utilisée pour tracer les connections avec le réseau de cours d'eau. Les élévations et la surface contributive sont utilisées pour déterminer les attributs d'élévation et de surface contributive dans le fichier des coordonnées du réseau. Les points du fichier Shape des exutoires sont utilisés pour séparer les portées de cours d'eau de manière logique pour faciliter la représentation des bassins versants amont et aval des points surveillés. Le programme utiliser l'attribut \"id\" dans le fichier Shape des exutoires comme identifiant dans le fichier de l'arbre du réseau. Cet outil transforme ensuite la représentation texte du réseau dans les fichiers Shape d'arbre du réseau et de coordonnées. Les autres attributs sont également évalués. Le programme dispose d'une option pour délimiter un seul bassin versant en représentant la surface totale de drainage du réseau de cours d'eau en une seule valeur dans la grille de sortie de bassin versant."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:44
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:48
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr "``Grille d'élévation de remplissage de fosse`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:47
+msgid ""
+"A grid of elevation values. This is usually the output of the **\"Pit "
+"Remove\"** tool, in which case it is elevations with pits removed."
+msgstr "Une grille des valeurs d'élévation. Ceci est généralement la sortie de l'outil **\"Supprimer les fosses\"**, auquel cas ce sont des élévations avec des fosses supprimés."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:54
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D8`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:51
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr "Une grille de directions de flux D8 définies pour chaque cellule comme la direction d'une de ses 8 voisins adjacents ou ses voisins diagonaux avec une pente descendante la plus raide. Cette grille peut être obtenue depuis la sortie de l'outil **\"Directions de flux D8\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:62
+msgid "``D8 Drainage Area`` [raster]"
+msgstr "``Grille de surface de drainage D8`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:57
+msgid ""
+"A grid giving the contributing area value in terms of the number of grid "
+"cells (or the summation of weights) for each cell taken as its own "
+"contribution plus the contribution from upslope neighbors that drain in to "
+"it using the D8 algorithm. This is usually the output of the **\"D8 "
+"Contributing Area\"** tool and is used to determine the contributing area "
+"attribute in the Network Coordinate file."
+msgstr "Une grille donnant la surface contributive de chaque cellule calculée par le nombre de cellules (ou la somme des poids) pour chaque cellule additionné de la contribution des voisins de pente ascendante qui s'y écoule en utilisant l'algorithme D8. Cette grille peut être obtenue par l'outil **\"Surface contributive D8\"** et est utilisée pour déterminer l'attribut de la surface contributive dans le fichier des coordonnées du réseau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:68
+msgid "``Stream Raster Grid`` [raster]"
+msgstr "``Grille raster de flux`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:65
+msgid ""
+"An indicator grid indicating streams, by using a grid cell value of 1 on "
+"streams and 0 off streams. Several of the **\"Stream Network Analysis\"** "
+"tools produce this type of grid. The Stream Raster Grid is used as the "
+"source for the stream network."
+msgstr "Une grille indiquant les cours d'eau par une valeur de cellule à 1 pour les cours d'eau et 0 pour le reste. C'est généralement une grille issue de la sortie d'un des outils de l'**\"Analyse de Réseau de cours d'eau\"**. La grille raster de cours d'eau est utilisée comme source du réseau des cours d'eau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:79
+msgid "``Outlets Shapefile as Network Nodes`` [vector: point]"
+msgstr "``Fichier Shape des exutoires en tant que noeuds du réseau`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:71
+msgid "Optional."
+msgstr "Optionnel."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:73
+msgid ""
+"A point shape file defining points of interest. If this file is used, the "
+"tool will only deliiniate the stream network upstream of these outlets. "
+"Additionally, points in the Outlets Shapefile are used to logically split "
+"stream reaches to facilitate representing watersheds upstream and downstream"
+" of monitoring points. This tool REQUIRES THAT THERE BE an integer attribute"
+" field \"id\" in the Outlets Shapefile, because the \"id\" values are used "
+"as identifiers in the Network Tree file."
+msgstr "Un fichier Shape de points définissant les points d'intérêt. Si ce fichier est utilisé, l'outil délimitera uniquement le réseau des cours d'eau amont de ces exutoires. De plus les points du fichier Shape des exutoires sont utilisés pour séparer logiquement les portées pour faciliter la représentation des bassins versants amonts et avals des points de surveillance. Cet outil IMPOSE l'utilisation d'un attribut \"id\" dans le fichier Shape car les valeurs \"id\" sont utilisées comme identifiants dans le fichier de l'arbre du réseau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:87
+msgid "``Delineate Single Watershed`` [boolean]"
+msgstr "``Délimiter un seul bassin versant`` [booléen]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:82
+msgid ""
+"This option causes the tool to delineate a single watershed by representing "
+"the entire area draining to the Stream Network as a single value in the "
+"output watershed grid. Otherwise a seperate watershed is delineated for each"
+" stream reach. Default is *False* (seperate watershed)."
+msgstr "Cette option indique à l'outil de délimiter un seul bassin versant en représentant l'aire complète de drainage du réseau de cours d'eau avec une seule valeur dans la grille de bassin versant en sortie. Sinon, un bassin versant pour chaque portée de cours d'eau est généré. La valeur par défaut est *False* (bassins versants séparés)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:87
+msgid "Default: *False*"
+msgstr "Par défaut : *Faux*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:90
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:102
+msgid "``Stream Order Grid`` [raster]"
+msgstr "``Grille d'ordre de flux`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:93
+msgid ""
+"The Stream Order Grid has cells values of streams ordered according to the "
+"Strahler order system. The Strahler ordering system defines order 1 streams "
+"as stream reaches that don't have any other reaches draining in to them. "
+"When two stream reaches of different order join the order of the downstream "
+"reach is the order of the highest incoming reach. When two reaches of equal "
+"order join the downstream reach order is increased by 1. When more than two "
+"reaches join the downstream reach order is calculated as the maximum of the "
+"highest incoming reach order or the second highest incoming reach order + 1."
+" This generalizes the common definition to cases where more than two flow "
+"paths reaches join at a point."
+msgstr "La grille d'ordre des cours d'eau contient des valeurs de cellules des cours d'eau ordonnées selon le système d'ordre de Strahler. Les cours d'eau qui n'ont pas d'autres cours d'eau qui se déversent en eux ont nombre d'ordre à un. Lorsque deux cours d'eau de différents ordres se rejoignent, l'ordre de la portée de cours d'eau descendant est l'ordre de la portée la plus importante. Lorsque deux cours d'eau de même ordre se rejoignent, l'ordre est incrémenté de 1. Lorsque plus de deux cours d'eau se rejoignent, l'ordre de la porté de cours d'eau descendant est calculé en prenant le l'ordre de la portée maximale ou en prenant l'ordre + 1 de la seconde plus grande portée. Cela permet de généraliser la définition pour les cas où plus de deux portées se rejoignent en un point."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:107
+msgid "``Watershed Grid`` [raster]"
+msgstr "``Grille de bassin versant`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:105
+msgid ""
+"This output grid identified each reach watershed with a unique ID number, or"
+" in the case where the delineate single watershed option was checked, the "
+"entire area draining to the stream network is identified with a single ID."
+msgstr "Cette grille de sortie identifie chaque bassin-versant de portée avec un identifiant unique ou au cas où l'option de délimitation unique de bassin versant a été activée, la surface totale de drainage du réseau de cours d'eau, identifiée avec un seul identifiant."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:146
+msgid "``Stream Reach Shapefile`` [vector]"
+msgstr "``Fichier Shape des portées de cours d'eau`` [vecteur]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:110
+msgid ""
+"This output is a polyline shapefile giving the links in a stream network. "
+"The columns in the attribute table are:"
+msgstr "Il s'agit d'un fichier Shape de polylignes donnant les liens dans un réseau de cours d'eau. Les colonnes de la table d'attributs sont:"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:113
+msgid ""
+"LINKNO --- Link Number. A unique number associated with each link (segment "
+"of channel between junctions). This is arbitrary and will vary depending on "
+"number of processes used"
+msgstr "LINKNO --- Le numéro de lien. Un numéro unique associé à chaque lien (segment de canal entre les jonctions). Ce numéro est arbitraire et peut varier en fonction du nombre de processus utilisés."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:116
+msgid ""
+"DSLINKNO --- Link Number of the downstream link. -1 indicates that this does"
+" not exist"
+msgstr "DSLINKNO --- Numéro de lien du lien de cours d'eau aval. -1 indique qu'il n'existe pas."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:118
+msgid ""
+"USLINKNO1 --- Link Number of first upstream link. (-1 indicates no link "
+"upstream, i.e. for a source link)"
+msgstr "USLINKNO1 --- Numéro de lien du lien de cours d'eau amont. (-1 indique qu'il n'y a pas de cours d'eau amont, par exemple pour un lien d'une source)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:120
+msgid ""
+"USLINKNO2 --- Link Number of second upstream link. (-1 indicates no second "
+"link upstream, i.e. for a source link or an internal monitoring point where "
+"the reach is logically split but the network does not bifurcate)"
+msgstr "USLINKNO2 --- Numéro de lien du second lien de cours d'eau amont. (-1 indique qu'il n'y a pas de second cours d'eau amont, par exemple pour un lien d'une source ou un point de surveillance interne où la portée est logiquement séparée mais que le réseau ne bifurque pas)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:123
+msgid ""
+"DSNODEID --- Node identifier for node at downstream end of stream reach. "
+"This identifier corresponds to the \"id\" attribute from the Outlets "
+"shapefile used to designate nodes"
+msgstr "DSNODEID --- Identifiant de noeud pour le noeud à une extrimté aval d'une portée de cours d'eau. Cet identifiant correspond à l'attribut \"id\" du fichier Shape des exutoires utilisé pour désigner les noeuds."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:126
+msgid "Order --- Strahler Stream Order"
+msgstr "Ordre --- Ordre de flux de Strahler"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:127
+msgid ""
+"Length --- Length of the link. The units are the horizontal map units of the"
+" underlying DEM grid"
+msgstr "Longueur --- Longueur du lien. Les unités sont les unités de carte horizontales de la grille MNT sous-jacente"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:129
+msgid ""
+"Magnitude --- Shreve Magnitude of the link. This is the total number of "
+"sources upstream"
+msgstr "Magnitude --- Magnitude Shreve du lien. C'est le nombre total de sources en amont"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:131
+msgid ""
+"DS_Cont_Ar --- Drainage area at the downstream end of the link. Generally "
+"this is one grid cell upstream of the downstream end because the drainage "
+"area at the downstream end grid cell includes the area of the stream being "
+"joined"
+msgstr "DS_Cont_Ar --- Surface de drainage à l'extrémité aval du lien. Généralement, il s'agit d'une cellule amont de l'extrémité aval car la surface de drainage à la cellule d'extrémité aval inclut la surface du cours d'eau qui est relié."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:135
+msgid "Drop --- Drop in elevation from the start to the end of the link"
+msgstr "Baisse --- Baisse dans l'élévation depuis le début jusqu'à la fin du lien"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:136
+msgid "Slope --- Average slope of the link (computed as drop/length)"
+msgstr "Pente --- Pente moyenne du lien (calculé comme baisse/longueur)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:137
+msgid ""
+"Straight_L --- Straight line distance from the start to the end of the link"
+msgstr "Straight_L --- Distance en ligne droite du début à la fin du lien."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:138
+msgid "US_Cont_Ar --- Drainage area at the upstream end of the link"
+msgstr "US_Cont_Ar --- Surface de drainage à l'extrême amont du lien"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:139
+msgid ""
+"WSNO --- Watershed number. Cross reference to the :file:`*w.shp` and "
+":file:`*w` grid files giving the identification number of the watershed "
+"draining directly to the link"
+msgstr "WSNO --- Numéro de bassin versant. Référence croisée aux fichiers :file:`*w.shp` et aux fichiers de grilles :file:`*w` en donnant le numéro d'identification du bassin versant se déversant directement dans le lien."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:142
+msgid ""
+"DOUT_END --- Distance to the eventual outlet (i.e. the most downstream point"
+" in the stream network) from the downstream end of the link"
+msgstr "DOUT_END --- Distance éventuelle jusqu'à un exutoire (le point le plus en aval du réseau de cours d'eau) à partir de l'extrémité aval du lien."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:144
+msgid ""
+"DOUT_START --- Distance to the eventual outlet from the upstream end of the "
+"link"
+msgstr "DOUT_START --- Distance à un éventuel exutoire à partir de l'extrémité amont du lien."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:146
+msgid ""
+"DOUT_MID --- Distance to the eventual outlet from the midpoint of the link"
+msgstr "DOUT_MID --- Distance d'un éventuel exutoire à partir du point du milieu du lien."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:169
+msgid "``Network Connectivity Tree`` [file]"
+msgstr "\"Arbre de connectivité du réseau\" [fichier]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:149
+msgid ""
+"This output is a text file that details the network topological connectivity"
+" is stored in the Stream Network Tree file. Columns are as follows:"
+msgstr "Cette sortie est un fichier texte qui détaille la connectivité topologique du réseau. Il est stocké dans le fichier d'arbre de connectivité des flux. Les colonnes sont les suivantes :"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:152
+msgid ""
+"Link Number (Arbitrary --- will vary depending on number of processes used)"
+msgstr "Numéro de lien (arbitraire, dépendra du nombre de processus utilisés)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:153
+msgid ""
+"Start Point Number in Network coordinates (:file:`*coord.dat)` file (Indexed"
+" from 0)"
+msgstr "Numéro du point de départ dans le fichier (:file:`*coord.dat`) des coordonnées du réseau (indexé depuis 0)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:155
+msgid ""
+"End Point Number in Network coordinates (:file:`*coord.dat`) file (Indexed "
+"from 0)"
+msgstr "Numéro du point d'arrivée dans le fichier (:file:`*coord.dat`) des coordonnées du réseau (indexé depuis 0)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:157
+msgid ""
+"Next (Downstream) Link Number. Points to Link Number. -1 indicates no links "
+"downstream, i.e. a terminal link"
+msgstr "Prochain numéro (aval) de lien. Pointe vers un numéro de lien. -1 indique qu'il n'y a pas de liens aval, pour un lien terminal."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:159
+msgid ""
+"First Previous (Upstream) Link Number. Points to Link Number. -1 indicates "
+"no upstream links"
+msgstr "Premier numéro (amont) de lien précédent. Pointe vers un numéro de lien. -1 indique qu'il n'y a pas de liens amont."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:161
+msgid ""
+"Second Previous (Upstream) Link Numbers. Points to Link Number. -1 indicates"
+" no upstream links. Where only one previous link is -1, it indicates an "
+"internal monitoring point where the reach is logically split, but the "
+"network does not bifurcate"
+msgstr "Numéros de second lien de cours d'eau amont. Pointe vers un numéro de lien. -1 indique qu'il n'y a pas de cours d'eau amont. Lorsqu'un seul lien précédent vaut -1, cela indique un point de surveillance interne où la portée est logiquement séparée mais que le réseau ne bifurque pas."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:165
+msgid "Strahler Order of Link"
+msgstr "Ordre Strahler du lien"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:166
+msgid ""
+"Monitoring point identifier at downstream end of link. -1 indicates "
+"downstream end is not a monitoring point"
+msgstr "Identifiant de point de surveillance sur une extrémité aval d'un lien. -1 indique que l'extrémité aval n'est pas un point de surveillance."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:168
+msgid ""
+"Network magnitude of the link, calculated as the number of upstream sources "
+"(following Shreve)"
+msgstr "Magnitude du réseau du lien, calculée par le nombre de sources amont (selon Shreve)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:179
+msgid "``Network Coordinates`` [file]"
+msgstr "``Coordonnées de réseau`` [fichier]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:172
+msgid ""
+"This output is a text file that contains the coordinates and attributes of "
+"points along the stream network. Columns are as follows:"
+msgstr "La sortie est un fichier texte qui contient les coordonnées et les attributs des points le long du réseau de cours d'eau. Les colonnes sont les suivantes:"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:175
+msgid "X coordinate"
+msgstr "Coordonnée X"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:176
+msgid "Y Coordinate"
+msgstr "Coordonnée Y"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:177
+msgid "Distance along channels to the downstream end of a terminal link"
+msgstr "Distance le long des canaux jusqu'à l'extrémité aval d'un lien terminal."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:178
+msgid "Elevation"
+msgstr " Élévation"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:179
+msgid "Contributing area"
+msgstr "Surface contributive"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:182
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamreachandwatershed.rst:189
+msgid "See also"
+msgstr "Voir également"

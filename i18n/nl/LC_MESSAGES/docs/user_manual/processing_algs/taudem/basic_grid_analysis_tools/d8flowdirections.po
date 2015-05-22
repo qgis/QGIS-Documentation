@@ -1,0 +1,142 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-08 14:07+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:6
+msgid "D8 Flow Directions"
+msgstr "D8 Stroomrichtingen"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:11
+msgid ""
+"Creates 2 grids. The first contains the flow direction from each grid cell "
+"to one of its adjacent or diagonal neighbors, calculated using the direction"
+" of steepest descent. The second contain the slope, as evaluated in the "
+"direction of steepest descent, and is reported as drop/distance, i.e. tan of"
+" the angle. Flow direction is reported as NODATA for any grid cell adjacent "
+"to the edge of the DEM domain, or adjacent to a NODATA value in the DEM. In "
+"flat areas, flow directions are assigned away from higher ground and towards"
+" lower ground using the method of Garbrecht and Martz (1997). The D8 flow "
+"direction algorithm may be applied to a DEM that has not had its pits "
+"filled, but it will then result in NODATA values for flow direction and "
+"slope at the lowest point of each pit."
+msgstr "Maakt 2 rasters. Het eerste bevat de stroomrichting vanuit elke cel van het raster naar één van zijn aangelegen of diagonale buren, berekent met behulp van de richting van de steilste afdaling. Het tweede bevat de helling, zoals geëvalueerd in de richting van de steilste afdaling, en wordt gerapporteerd als verval/afstand, d.i. tan van de hoek. Stroomrichting wordt gerapporteerd als GEEN GEGEVENS voor elke cel van een raster die aanligt aan de rand van het domein van de DEM, of aanligt aan een waarde GEEN GEGEVENS in de DEM. In vlakke gebieden worden stroomrichtingen toegewezen, weg van hoger gelegen grond en in de richting van lager gelegen grond, met behulp van de methode van Garbrecht en Martz (1997). Het algoritme D8 stroomrichting kan worden toegepast op een DEM dat zijn gaten niet heeft gevuld, maar zal dan resulteren in waarden GEEN GEGEVENS voor stroomrichting en helling op het laagste punt van elk gat."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:22
+msgid "D8 Flow Direction Coding:"
+msgstr "Coderen D8 stroomrichting:"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:24
+msgid "1 --- East"
+msgstr "1 --- Oost"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:25
+msgid "2 --- Northeast"
+msgstr "2 --- Noordoost"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:26
+msgid "3 --- North"
+msgstr "3 --- Noord"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:27
+msgid "4 --- Northwest"
+msgstr "4 --- Noordwest"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:28
+msgid "5 --- West"
+msgstr "5 --- West"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:29
+msgid "6 --- Southwest"
+msgstr "6 --- Zuidwest"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:30
+msgid "7 --- South"
+msgstr "7 --- Zuid"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:31
+msgid "8 --- Southeast"
+msgstr "8 --- Zuidoost"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:37
+msgid ""
+"The flow direction routing across flat areas is performed according to the "
+"method described by Garbrecht, J. and L. W. Martz, (1997), \"The Assignment "
+"of Drainage Direction Over Flat Surfaces in Raster Digital Elevation "
+"Models\", Journal of Hydrology, 193: 204-213."
+msgstr "De route van de stroomrichting over vlakke gebieden wordt uitgevoerd overeenkomstig de methode die is beschreven door Garbrecht, J. en L. W. Martz, (1997), \"The Assignment of Drainage Direction Over Flat Surfaces in Raster Digital Elevation Models\", Journal of Hydrology, 193: 204-213."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:43
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:59
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr "``Gatengevuld hoogteraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:46
+msgid ""
+"A grid of elevation values. This is usually the output of the **\"Pit "
+"Remove\"** tool, in which case it is elevations with pits removed. Pits are "
+"low elevation areas in digital elevation models (DEMs) that are completely "
+"surrounded by higher terrain. They are generally taken to be artifacts of "
+"the digitation process that interfere with the processing of flow across "
+"DEMs. So they are removed by raising their elevation to the point where they"
+" just drain off the domain. This step is not essential if you have reason to"
+" believe that the pits in your DEM are real. If a few pits actually exist "
+"and so should not be removed, while at the same time others are believed to "
+"be artifacts that need to be removed, the actual pits should have NODATA "
+"elevation values inserted at their lowest point. NODATA values serve to "
+"define edges of the domain in the flow field, and elevations are only raised"
+" to where flow is off an edge, so an internal NODATA value will stop a pit "
+"from being removed, if necessary."
+msgstr "Een raster met hoogtewaarden. Dit is gewoonlijk de uitvoer van het gereedschap **\"Gaten verwijderen\"**, in welk geval het hoogten zijn met verwijderde gaten. gaten zijn laag gelegen hoogtegebieden in digitale hoogtemodellen (DEM's) die volledig zijn omsloten door hoger terrein. Zij worden gewoonlijk beschouwd als artefacten van het proces van digitaliseren die interfereren met het verwerken van de stroom over DEM's. Zij worden dus verwijder door hun hoogte te verhogen tot het punt waarop zij nog juist vanuit het domein afvoeren. Deze stap is niet essentieel als u redenen heeft om aan te nemen dat de gaten in uw DEM echt zijn. Indien een aantal gaten inderdaad zouden bestaan en dus niet zouden moeten worden verwijderd, terwijl tegelijkertijd andere artefacten worden geacht te zijn die zouden moeten worden verwijderd, zouden de actuele gaten hoogtewaarden GEEN GEGEVENS moeten hebben ingevoegd op hun laagste punt. Waarden GEEN GEGEVENS dienen om randen van het domein te definiëren in het stroomveld, en hoogten worden alleen verhoogd tot waar de stroom over een rand loopt, dus een interne waarde GEEN GEGEVENS zal er voor zorgen dat een gat niet wordt verwijderd, indien nodig."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:62
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:67
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``D8 raster stroomrichting`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:65
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope."
+msgstr "Een raster van D8 stroomrichtingen die zijn gedefinieerd, voor elke cel, als de richting van die van één van zijn acht aangelegen of diagonale buren met de steilste neerwaartse helling."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:70
+msgid "``D8 Slope Grid`` [raster]"
+msgstr "``D8  raster helling`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:70
+msgid ""
+"A grid giving slope in the D8 flow direction. This is measured as "
+"drop/distance."
+msgstr "Een raster dat de helling weergeeft in de D8 stroomrichting. Dit wordt gemeten als verval/afstand."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:73
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.rst:80
+msgid "See also"
+msgstr "Zie ook"

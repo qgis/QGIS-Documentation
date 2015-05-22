@@ -1,0 +1,132 @@
+# 
+# Translators:
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2015
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-01-13 00:18+0000\n"
+"Last-Translator: Minerva Durán Martínez <mine_tod@yahoo.com.mx>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/qgis-documentation/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:6
+msgid "More complex models"
+msgstr "Modelos más complejos"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:8
+msgid ""
+"In this lesson we will work with a more complex model in the graphical "
+"modeler."
+msgstr "En esta lección vamos a trabajar con un modelo más complejo en el modelador gráfico."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:10
+msgid ""
+"The first model that we created in the previous chapter was a very simple "
+"one, with just one input and 3 algorithms. More complex models can be "
+"created, with different types of inputs and containing more step. For this "
+"chapter we will work with a model that creates a vector layer with "
+"watersheds, based on a DEM and a threshold value. That will be very useful "
+"for calculating several vector layers corresponding to different thresholds,"
+" without having to repeat each single step each time."
+msgstr "El primer modelo que hemos creado en el capítulo anterior era muy simple, con una sola entrada y 3 algoritmos. Los modelos más complejos se pueden crear, con diferentes tipos de entradas y contienen más pasos. Para este capítulo trabajaremos con un modelo que crea una capa vectorial con las cuencas hidrográficas, en base a un DEM y un valor de umbral. Eso será muy útil para el cálculo de varias capas vectoriales correspondientes a diferentes umbrales, sin tener que repetir cada paso sencillo cada vez."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:12
+msgid ""
+"This lesson does not contain instructions about how to create you model. You"
+" already know the necessary steps (we saw them in a previous lesson) and you"
+" have already seen the basic ideas about the modeler, so you should try it "
+"yourself. Spend a few minutes trying to create your model, and don't worry "
+"about making mistakes. Remember: first add the inputs and then add the "
+"algorithms that use them to create the workflow."
+msgstr "Esta lección no contiene instrucciones sobre cómo crear su modelo. Ya conoce los pasos necesarios (los vimos en una lección anterior) y ya ha visto las ideas básicas sobre el modelador, por lo que debe hacerlo por sí mismo. Dedique unos minutos para tratar de crear su modelo, y no se preocupe por cometer errores. Recuerde: agregar primero las entradas y después agregar los algoritmos que los usan para crear el flujo de trabajo."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:14
+msgid ""
+"In case you could not create the full model yourself and you need some extra"
+" help, the data folder corresponding to this lesson contains and 'almost' "
+"finished version of it. Open the modeler and then open the model file that "
+"you will find in the data folder. You should see something like this."
+msgstr "En caso de que no pudiera crear el modelo completo usted mismo y necesitará un poco de ayuda extra, la carpeta de datos correspondiente a esta lección contiene y \"casi\" la versión terminada de la misma. Abra el modelador y abra el archivo de modelo que se encuentra en la carpeta de datos. Debería ver algo como esto."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:18
+msgid ""
+"This model contains all the steps needed to complete the calculation, but it"
+" just has one input: the DEM That means that the threshold for channel "
+"definition use a fixed value, which makes the model not as useful as it "
+"could be. That is not a problem, since we can edit the model, and that is "
+"exactly what we will do."
+msgstr "Este modelo contiene todos los pasos necesarios para completar el cálculo, pero sólo tiene una entrada: el DEM Eso significa que el umbral para la definición del canal utiliza un valor fijo, lo que hace que el modelo no sea tan útil como podría ser. Eso no es un problema, ya que podemos editar el modelo, y eso es exactamente lo que haremos."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:20
+msgid ""
+"First, let's add a numerical input. That will ask the user for a numerical "
+"input that we can use when such a value is needed in any of the algorithms "
+"included in our model. Click on the *Number* entry in the inputs tree, and "
+"you will see the corresponding dialog. Fill it with the values shown next."
+msgstr "En primer lugar, vamos a añadir una entrada numérica. Eso le preguntará al usuario por  una entrada numérica que podemos utilizar cuando un valor sea necesario en cualquiera de los algoritmos incluidos en nuestro modelo. Haga clic en la entrada *Número * en el árbol de los insumos, y verá el diálogo correspondiente. Rellene con los valores que se muestran a continuación."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:24
+msgid "Now your model should look like this."
+msgstr "Ahora su modelo debería tener este aspecto."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:28
+msgid ""
+"The input that we have just added is not used, so the model hasn't actually "
+"changed. We have to link that input to the algorithm that uses it, in this "
+"case the *Channel network* one. To edit an algorithm that already exists in "
+"the modeler, just double click on its corresponding box in the canvas. If "
+"you click on the *Channel network* algorithm, you will see something like "
+"this."
+msgstr "La entrada que acabamos de añadir no se utiliza, por lo que el modelo no ha cambiado realmente. Tenemos que vincular esa entrada para el algoritmo que utiliza, en este caso un *Canal de red*. Para editar un algoritmo que ya existe en el modelador, simplemente haga doble clic en su casilla correspondiente en el lienzo. Si hace clic en el algoritmo *Canal de red*, verá algo como esto."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:32
+msgid ""
+"The dialog is filled with the current values used by the algorithm. You can "
+"see that the threshold parameter has a fixed value of 1,000,000 (this is "
+"also the default value of the algorithm, but any other value could be put in"
+" there). However, you might notice that the parameter is not entered in a "
+"common text box, but in an option menu. If you unfold it, you will see "
+"something like this."
+msgstr "El diálogo se llena con los valores actuales utilizados por el algoritmo. Se puede ver que el parámetro umbral tiene un valor fijo de 1.000.000 (esto también es el valor por defecto del algoritmo, pero cualquier otro valor podría poner ahí). Sin embargo, es posible que note que el parámetro no se introduce en un cuadro de texto común, sino en un menú de opciones. Si desdoblarla, verá algo como esto."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:36
+msgid ""
+"The input that we added is there and we can select it. Whenever an algorithm"
+" in a model requires a numerical value, you can hardcode it and directly "
+"type it, or you can use any of the available inputs and values (remember "
+"that some algorithms generate sinlge numerical values. We will see more "
+"about this soon). In the case of a string parameter, you will also see "
+"string inputs and you will be able to select on of them or type the desired "
+"fixed value."
+msgstr "La entrada que hemos añadido está allí y podemos seleccionarla. Cada vez que un algoritmo en un modelo requiere un valor numérico, puede codificar y directamente escribirla, o puede utilizar cualquiera de las entradas y los valores disponibles (recuerde que algunos algoritmos generan valores numéricos sencillos. Veremos más sobre esto pronto). En el caso de un parámetro de cadena, también verá entradas de texto y será capaz de seleccionar el de ellos o escriba el valor fijo deseado."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:38
+msgid ""
+"Select the *Threshold* input in the *Threshold* parameter and click on *OK* "
+"to apply the changes to your model. Now the design of the model should look "
+"like this."
+msgstr "Seleccione la entrada *Umbral* en el parámetro *Umbral* y haga clic en *Aceptar* para aplicar los cambios a su modelo. Ahora el diseño del modelo debería tener este aspecto. "
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:42
+msgid ""
+"The model is now complete. Try to run it using the DEM that we have used in "
+"previous lessons, and with different threshold values. Here you have a "
+"sample of the result obtained for different values. You can compare with the"
+" result for the default value, which is the one we obtained in the "
+"hydrological analysis lesson."
+msgstr "El modelo ahora está completo. Trate de ejecutarlo mediante el DEM que hemos usado en lecciones anteriores, y con diferentes valores de umbral. Aquí tienes un ejemplo del resultado obtenido para diferentes valores. Puede comparar con el resultado por el valor por defecto, que es el que hemos obtenido en la lección análisis hidrológico."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:46
+msgid "Threshold = 100,000"
+msgstr "Umbral = 100,000"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:50
+msgid "Threshold = 1,0000,000"
+msgstr "Umbral = 1,0000,000"

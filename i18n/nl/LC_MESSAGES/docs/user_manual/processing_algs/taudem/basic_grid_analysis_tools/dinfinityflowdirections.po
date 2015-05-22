@@ -1,0 +1,132 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-08 13:32+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:6
+msgid "D-Infinity Flow Directions"
+msgstr "D-oneindigheid stroomrichtingen"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:11
+msgid ""
+"Assigns a flow direction based on the D-infinity flow method using the "
+"steepest slope of a triangular facet (Tarboton, 1997, \"A New Method for the"
+" Determination of Flow Directions and Contributing Areas in Grid Digital "
+"Elevation Models\", Water Resources Research, 33(2): 309-319). Flow "
+"direction is defined as steepest downward slope on planar triangular facets "
+"on a block centered grid. Flow direction is encoded as an angle in radians "
+"counter-clockwise from east as a continuous (floating point) quantity "
+"between 0 and 2π. The flow direction angle is determined as the direction of"
+" the steepest downward slope on the eight triangular facets formed in a 3 x "
+"3 grid cell window centered on the grid cell of interest. The resulting flow"
+" in a grid is then usually interpreted as being proportioned between the two"
+" neighboring cells that define the triangular facet with the steepest "
+"downward slope."
+msgstr "Wijst een stroomrichting toe, gebaseerd op de stroommethode D-oneindigheid met  behulp van de steilste helling van een driehoekig facet (Tarboton, 1997, \"A New Method for the Determination of Flow Directions and Contributing Areas in Grid Digital Elevation Models\", Water Resources Research, 33(2): 309-319). Stroomrichting wordt gedefinieerd als de steilste helling op vlakke driehoekige facetten op een blok gecentreerd raster. Stroomrichting wordt gecodeerd als een hoek in radialen, tegen de wijzers van de klok in vanuit Oost als een doorlopende (floating point) kwantiteit tussen 0 en 2π. Stroomrichting wordt bepaald als de richting van de steilste neerwaartse helling op de 8 driehoekige facetten van een 3x3-blok gecentreerd raster.  De resulterende stroom in een raster wordt dan gewoonlijk geïnterpreteerd als zijnde geproportioneerd tussen de twee naburige cellen die het driehoekige facet  met de steilste neerwaartse helling definiëren."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:27
+msgid ""
+"A block-centered representation is used with each elevation value taken to "
+"represent the elevation of the center of the corresponding grid cell. Eight "
+"planar triangular facets are formed between each grid cell and its eight "
+"neighbors. Each of these has a downslope vector which when drawn outwards "
+"from the center may be at an angle that lies within or outside the 45 degree"
+" (π/4 radian) angle range of the facet at the center point. If the slope "
+"vector angle is within the facet angle, it represents the steepest flow "
+"direction on that facet. If the slope vector angle is outside a facet, the "
+"steepest flow direction associated with that facet is taken along the "
+"steepest edge. The slope and flow direction associated with the grid cell is"
+" taken as the magnitude and direction of the steepest downslope vector from "
+"all eight facets. Slope is measured as drop/distance, i.e. tan of the slope "
+"angle."
+msgstr "Een blok gecentreerde weergave wordt gebruikt waarin elke waarde voor hoogte de hoogte van het centrum van de corresponderende cel van het raster weergeeft. Acht vlakke driehoekige facetten worden gevormd tussen elke cel van het raster en zijn acht buren. Elk daarvan heeft een neerwaartse vector die, wanneer vanuit het centrum naar buiten getekend, een hoek kan hebben die ligt binnen of buiten het 45 graden (π/4 radiaal) hoekbereik van het facet op het centrumpunt. Als de hoek van de vector van de helling binnen de hoek van het facet ligt, vertegenwoordigt het de steilste stroomrichting op dat facet. Als de hoek van de vector van de helling buiten een facet ligt, wordt de steilste stroomrichting, geassocieerd met dat facet, genomen langs de steilste hoek. De helling en stroomrichting, geassocieerd met het raster van de cel, wordt genomen als de magnitude en richting van de steilste neerwaartse vector uit alle acht facetten. Helling wordt gemeten als verval/afstand, d.i. tan van de hoek van de helling."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:40
+msgid ""
+"In the case where no slope vectors are positive (downslope), the flow "
+"direction is set using the method of Garbrecht and Martz (1997) for the "
+"determination of flow across flat areas. This makes flat areas drain away "
+"from high ground and towards low ground. The flow path grid to enforce "
+"drainage along existing streams is an optional input, and if used, takes "
+"precedence over elevations for the setting of flow directions."
+msgstr "In het geval dat er geen positieve vectoren voor de helling zijn (neerwaarts), wordt de stroomrichting ingesteld met behulp van de methode van Garbrecht en Martz (1997) voor het bepalen van de stroom over vlakke gebieden. Dit zorgt er voor dat vlakke gebieden afvoeren weg van hoger gelegen grond en in de richting van lager gelegen grond. Het raster voor het stroompad om drainage langs bestaande stromen te forceren is een optionele invoer en, indien gebruikt, neemt voorrang boven de hoogten voor het instellen van de stroomrichtingen."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:47
+msgid ""
+"The D-infinity flow direction algorithm may be applied to a DEM that has not"
+" had its pits filled, but it will then result in \"no data\" values for the "
+"D-infinity flow direction and slope associated with the lowest point of the "
+"pit."
+msgstr "Het algoritme D-oneindigheid stroomrichting kan worden toegepast op een DEM dat zijn gaten niet heeft gevuld, maar zal dan resulteren in waarden \"Geen gegevens\" voor de D-oneindigheid stroomrichting en helling, geassocieerd met het laagste punt van het gat."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:52
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:56
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr "``Gatengevuld hoogteraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:55
+msgid ""
+"A grid of elevation values. This is usually the output of the **\"Pit "
+"Remove\"** tool, in which case it is elevations with pits removed."
+msgstr "Een raster van hoogtewaarden. Dit is gewoonlijk de uitvoer van het gereedschap **\"Gaten verwijderen\"**, in welk het hoogten zijn met verwijderde gaten."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:59
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:69
+msgid "``D-Infinity Flow Directions Grid`` [raster]"
+msgstr "``D-oneindigheid raster stroomrichtingen`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:62
+msgid ""
+"A grid of flow directions based on the D-infinity flow method using the "
+"steepest slope of a triangular facet. Flow direction is determined as the "
+"direction of the steepest downward slope on the 8 triangular facets of a 3x3"
+" block centered grid. Flow direction is encoded as an angle in radians, "
+"counter-clockwise from east as a continuous (floating point) quantity "
+"between 0 and 2π. The resulting flow in a grid is then usually interpreted "
+"as being proportioned between the two neighboring cells that define the "
+"triangular facet with the steepest downward slope."
+msgstr "Een raster van stroomrichtingen, gebaseerd op de D-oneindigheid stroommethode met behulp van de steilste helling van een driehoekig facet. Stroomrichting wordt bepaald als de richting van de steilste neerwaartse helling op de 8 driehoekige facetten van een 3x3-blok gecentreerd raster. Stroomrichting wordt gecodeerd als een hoek in radialen, tegen de wijzers van de klok in vanuit Oost als een doorlopende (floating point) kwantiteit tussen 0 en 2π. De resulterende stroom in een raster wordt dan gewoonlijk geïnterpreteerd als zijnde geproportioneerd tussen de twee naburige cellen die het driehoekige facet  met de steilste neerwaartse helling definiëren."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:77
+msgid "``D-Infinity Slope Grid`` [raster]"
+msgstr "``D-oneindigheid  raster helling`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:72
+msgid ""
+"A grid of slope evaluated using the D-infinity method described in Tarboton,"
+" D. G., (1997), \"A New Method for the Determination of Flow Directions and "
+"Contributing Areas in Grid Digital Elevation Models\", Water Resources "
+"Research, 33(2): 309-319. This is the steepest outwards slope on one of "
+"eight triangular facets centered at each grid cell, measured as "
+"drop/distance, i.e. tan of the slope angle."
+msgstr "Een raster van helling geëvalueerd met behulp van de methode D-oneindigheid, beschreven in Tarboton, D. G., (1997), \"A New Method for the Determination of Flow Directions and Contributing Areas in Grid Digital Elevation Models\", Water Resources Research, 33(2): 309-319. Dit is de steilste uitgaande helling van één van de acht driehoekige facetten, gecentreerd op elk cel van het raster, gemeten als verval/afstand, d.i. tan van de hoek van de helling."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:80
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/dinfinityflowdirections.rst:87
+msgid "See also"
+msgstr "Zie ook"

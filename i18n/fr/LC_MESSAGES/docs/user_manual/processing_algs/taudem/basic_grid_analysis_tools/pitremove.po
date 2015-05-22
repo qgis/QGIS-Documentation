@@ -1,0 +1,78 @@
+# 
+# Translators:
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-26 08:46+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:6
+msgid "Pit Remove"
+msgstr "Supprimer les fosses"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:11
+msgid ""
+"Identifies all pits in the DEM and raises their elevation to the level of "
+"the lowest pour point around their edge. Pits are low elevation areas in "
+"digital elevation models (DEMs) that are completely surrounded by higher "
+"terrain. They are generally taken to be artifacts that interfere with the "
+"routing of flow across DEMs, so are removed by raising their elevation to "
+"the point where they drain off the edge of the domain. The pour point is the"
+" lowest point on the boundary of the \"watershed\" draining to the pit. This"
+" step is not essential if you have reason to believe that the pits in your "
+"DEM are real. If a few pits actually exist and so should not be removed, "
+"while at the same time others are believed to be artifacts that need to be "
+"removed, the actual pits should have NODATA elevation values inserted at "
+"their lowest point. NODATA values serve to define edges in the domain, and "
+"elevations are only raised to where flow is off an edge, so an internal "
+"NODATA value will stop a pit from being removed, if necessary."
+msgstr "Identifie toutes les fosses du MEN et augmente leur élévation au niveau du point d'écoulement le plus bas autour de leur segment. Les fosses sont des surfaces de faible élévation dans les modèles d'élévation numériques (MEN) qui sont complètement entourées par du terrain plus haut. Elles sont généralement considérées comme des artefacts qui interfèrent avec le cheminement des flux sur le MEN et elles sont donc supprimées en augmentant leur élévation jusqu'au niveau ou elles se déversent dans le domaine. Le point d'écoulement est le point le plus bas dans les limites du bassin versant d'écoulement dans la fosse. Cette étape n'est pas essentielle si vous considérez que les fosses présentes dans le DEM sont réelles. S'il existe quelques fosses à ne pas supprimer ainsi que d'autres qui doivent l'être, les fosses à conserver doivent avoir une valeur vide à leur point le plus bas. Les valeurs vides permettent de définir les segments du domaine et les élévations sont uniquement augmentées là où le flux par d'un segment. Ainsi, une valeur vide empèchera une fosse dêtre supprimée si nécessaire."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:27
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:31
+msgid "``Elevation Grid`` [raster]"
+msgstr "``Grille d'élévation`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:30
+msgid ""
+"A digital elevation model (DEM) grid to serve as the base input for the "
+"terrain analysis and stream delineation."
+msgstr "Une grille de modèle d'élévation numérique (MEN) qui sert de couche d'entrée pour l'analyse de terrain et la délimitation des flux."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:34
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:38
+msgid "``Pit Removed Elevation Grid`` [raster]"
+msgstr "``Grille d'élévation de vidange de fosse`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:37
+msgid ""
+"A grid of elevation values with pits removed so that flow is routed off of "
+"the domain."
+msgstr "Une grille de données d'élévation avec les fosses supprimées de manière à ce que le flux soit dérouté du domaine."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:41
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:48
+msgid "See also"
+msgstr "Voir également"

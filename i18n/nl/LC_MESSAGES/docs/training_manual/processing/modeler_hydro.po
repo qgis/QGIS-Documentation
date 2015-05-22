@@ -1,0 +1,132 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014-2015
+# Rodolfo_Jadon, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-14 13:05+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:6
+msgid "More complex models"
+msgstr "Meer complexe modellen"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:8
+msgid ""
+"In this lesson we will work with a more complex model in the graphical "
+"modeler."
+msgstr "In deze les zullen we werken met een meer complex model in Grafische modellen bouwen."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:10
+msgid ""
+"The first model that we created in the previous chapter was a very simple "
+"one, with just one input and 3 algorithms. More complex models can be "
+"created, with different types of inputs and containing more step. For this "
+"chapter we will work with a model that creates a vector layer with "
+"watersheds, based on a DEM and a threshold value. That will be very useful "
+"for calculating several vector layers corresponding to different thresholds,"
+" without having to repeat each single step each time."
+msgstr "Het eerste model dat we hebben gemaakt in het vorige hoofdstuk was een heel eenvoudig, met slechts één invoer en 3 algoritmen. Meer complexe modellen kunnen worden gemaakt, met verschillende typen voor invoer en die meerdere stappen bevatten. Voor dit hoofdstuk zullen we werken met een model dat een vectorlaag met waterkering maakt, gebaseerd op een DEM en een drempelwaarde. Dat zal zeer bruikbaar zijn voor het berekenen van verscheidene vectorlagen die overeenkomen met verschillende drempelwaarden, zonder elke stap elke keer te hoeven herhalen."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:12
+msgid ""
+"This lesson does not contain instructions about how to create you model. You"
+" already know the necessary steps (we saw them in a previous lesson) and you"
+" have already seen the basic ideas about the modeler, so you should try it "
+"yourself. Spend a few minutes trying to create your model, and don't worry "
+"about making mistakes. Remember: first add the inputs and then add the "
+"algorithms that use them to create the workflow."
+msgstr "Deze les bevat geen instructies over hoe uw model te maken. U kent de noodzakelijke stappen al (we zagen ze al in een eerdere les) en u u heeft de basisideeën voor het bouwen van modellen al gezien, dus u zou het zelf moeten proberen. Spendeer een paar minuten aan het proberen te maken van uw eigen model, en maak u geen zorgen over eventuele fouten die u maakt. Onthoud om eerst de invoer toe te voegen en voeg dan de algoritmen toe die ze gebruiken om de werkstroom te maken."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:14
+msgid ""
+"In case you could not create the full model yourself and you need some extra"
+" help, the data folder corresponding to this lesson contains and 'almost' "
+"finished version of it. Open the modeler and then open the model file that "
+"you will find in the data folder. You should see something like this."
+msgstr "Voor het geval u het volledige model niet zelf kon bouwen en u heeft wat extra hulp nodig, de map met gegevens die overeenkomt met deze les bevat een 'bijna gereed' voltooide versie ervan. Open Grafische modellen bouwen en open het bestand van het model dat u zult vinden in de map met gegevens. U zou iets als dit moeten zien."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:18
+msgid ""
+"This model contains all the steps needed to complete the calculation, but it"
+" just has one input: the DEM That means that the threshold for channel "
+"definition use a fixed value, which makes the model not as useful as it "
+"could be. That is not a problem, since we can edit the model, and that is "
+"exactly what we will do."
+msgstr "Dit model bevat alle stappen die nodig zijn om de berekening te voltooien, maar het heeft slechts één invoer: de DEM. Dat betekent dat de drempel voor de definitie van het kanaal een vaste waarde gebruikt, wat het model niet zo bruikbaar maakt als zo kunnen. Dat is geen probleem, omdat we het model kunnen bewerken en dat is precies wat we zullen gaan doen."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:20
+msgid ""
+"First, let's add a numerical input. That will ask the user for a numerical "
+"input that we can use when such a value is needed in any of the algorithms "
+"included in our model. Click on the *Number* entry in the inputs tree, and "
+"you will see the corresponding dialog. Fill it with the values shown next."
+msgstr "Laten we als eerste een numerieke invoer toevoegen. Die zal de gebruiker vragen naar een numerieke invoer die we kunnen gebruiken wanneer een dergelijke waarde nodig is in een van de algoritmen die zijn opgenomen in ons model. Klik op het item *Number* in de boom voor de invoer, en u zult het overeenkomende dialoogvenster zien. Vul het met de waarden  doe hieronder worden weergegeven."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:24
+msgid "Now your model should look like this."
+msgstr "Uw model zou er nu ongeveer zo uit moeten zien."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:28
+msgid ""
+"The input that we have just added is not used, so the model hasn't actually "
+"changed. We have to link that input to the algorithm that uses it, in this "
+"case the *Channel network* one. To edit an algorithm that already exists in "
+"the modeler, just double click on its corresponding box in the canvas. If "
+"you click on the *Channel network* algorithm, you will see something like "
+"this."
+msgstr "De invoer die we hebben toegevoegd is niet gebruikt, dus is het model in feite niet veranderd. We moeten die invoer koppelen aan het algoritme dat het gebruikt, in dit geval is dat *Channel network*. Dubbelklik eenvoudigweg op het overeenkomstige vak in het kaartvenster om een algoritme, dat al bestaat in Grafische modellen bouwen, te bewerken,. Als u klikt op het algoritme *Channel network* zult u iets als dit zien."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:32
+msgid ""
+"The dialog is filled with the current values used by the algorithm. You can "
+"see that the threshold parameter has a fixed value of 1,000,000 (this is "
+"also the default value of the algorithm, but any other value could be put in"
+" there). However, you might notice that the parameter is not entered in a "
+"common text box, but in an option menu. If you unfold it, you will see "
+"something like this."
+msgstr "Het dialoogvenster is gevuld met de huidige waarden die door het algoritme gebruikt worden. U kunt zien dat de parameter voor de drempelwaarde een vast waarde heeft van 1.000.000 (dit is ook de standaard waarde van het algoritme, maar elke andere waarde kan daar ingevoerd worden). U zou echter kunnen opmerken dat de parameter niet is ingevoerd in een algemeen tekstvak, maar in een menu met opties. Als u dat openvouwt zult u iets zoals dit zien."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:36
+msgid ""
+"The input that we added is there and we can select it. Whenever an algorithm"
+" in a model requires a numerical value, you can hardcode it and directly "
+"type it, or you can use any of the available inputs and values (remember "
+"that some algorithms generate sinlge numerical values. We will see more "
+"about this soon). In the case of a string parameter, you will also see "
+"string inputs and you will be able to select on of them or type the desired "
+"fixed value."
+msgstr "De invoer die we hebben toegevoegd is daar en we kunnen die selecteren. Wanneer een algoritme in een model een numerieke waarde vereist, kunt u die hard coderen en er direct in typen, of u kunt een van de beschikbare invoeren en waarden gebruiken (onthoud dat sommige algoritmen single numerieke waarden genereren. We zullen hier snel meer van zien). In het geval van een parameter string, zult u ook invoer voor tekenreeksen zien en u u zult in staat zijn er één van te selecteren of de gewenste vaste waarde in te typen."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:38
+msgid ""
+"Select the *Threshold* input in the *Threshold* parameter and click on *OK* "
+"to apply the changes to your model. Now the design of the model should look "
+"like this."
+msgstr "Selecteer de invoer *Threshold* in de parameter *Threshold* en klik op *OK* om de wijzigingen aan uw model toe te passen. Nu zou het ontwerp van het model er zo uit moeten zien."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:42
+msgid ""
+"The model is now complete. Try to run it using the DEM that we have used in "
+"previous lessons, and with different threshold values. Here you have a "
+"sample of the result obtained for different values. You can compare with the"
+" result for the default value, which is the one we obtained in the "
+"hydrological analysis lesson."
+msgstr "Het model is nu compleet. Probeer het uit te voeren met behulp van de DEM die we in eerdere lessen hebben gebruikt, en met verschillende drempelwaarden. Hier heeft u een voorbeeld van het resultaat dat is verkregen voor verschillende waarden. U kunt het vergelijken met het resultaat voor de standaard waarde, wat die is welke we hebben verkregen in de les over hydrologische analyse."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:46
+msgid "Threshold = 100,000"
+msgstr "Threshold = 100.000"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro.rst:50
+msgid "Threshold = 1,0000,000"
+msgstr "Threshold = 1.0000.000"

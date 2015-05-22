@@ -1,0 +1,246 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-06-24 12:44+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:6
+msgid "|LS| Adding Data to the Model"
+msgstr "|LS| 모델에 데이터 추가"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:8
+msgid ""
+"The models we've created will now need to be populated with the data they're"
+" intended to contain."
+msgstr "이제 우리가 생성한 모델을, 원래 담으려던 데이터로 채워야 합니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:11
+msgid ""
+"**The goal for this lesson:** To learn how to insert new data into the "
+"database models."
+msgstr "**이 강의의 목표:** 데이터베이스 모델에 새 데이터를 인서트하는 방법을 배우기."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:15
+msgid "Insert statement"
+msgstr "인서트 선언문"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:17
+msgid ""
+"How do you add data to a table? The sql :kbd:`INSERT` statement provides the"
+" functionality for this::"
+msgstr "어떻게 테이블에 데이터를 추가할까요? SQL :kbd:`INSERT` 를 선언하면 해당 기능을 쓸 수 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:22
+msgid "A couple of things to note:"
+msgstr "다음 내용을 기억하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:24
+msgid ""
+"After the table name (:kbd:`streets`), you list the column names that you "
+"will be populating (in this case only the :kbd:`name` column)."
+msgstr "테이블명( :kbd:`streets` ) 뒤에 사용자가 채우려고 하는 열명을 나열하십시오. (이 경우에는 :kbd:`name` 열뿐입니다.)"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:26
+msgid "After the :kbd:`values` keyword, place the list of field values."
+msgstr ":kbd:`values` 키워드 뒤에 필드 값의 목록을 넣으십시오."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:27
+msgid "Strings should be quoted using single quotes."
+msgstr "문자열을 작은따옴표로 감싸야 합니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:28
+msgid ""
+"Note that we did not insert a value for the :kbd:`id` column; this is "
+"because it is a sequence and will be auto-generated."
+msgstr ":kbd:`id` 열을 위한 값을 인서트하지 않았습니다. :kbd:`id` 는 시퀀스로 자동 생성되기 때문입니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:30
+msgid ""
+"If you do manually set the :kbd:`id`, you may cause serious problems with "
+"the integrity of your database."
+msgstr ":kbd:`id` 를 수동으로 설정하면, 사용자 데이터베이스의 무결성을 심각하게 해칠 수도 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:33
+msgid "You should see :kbd:`INSERT 0 1` if it is successful."
+msgstr "선언이 성공했다면 :kbd:`INSERT 0 1` 을 볼 수 있을 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:35
+msgid ""
+"You can see the result of your insert action by selecting all the data in "
+"the table::"
+msgstr "테이블의 모든 데이터를 선택하면 사용자의 인서트 선언의 결과를 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:40
+msgid "Result::"
+msgstr "결과물 :"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:50
+msgid "|TY| |basic|"
+msgstr "|TY| |basic| 초급"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:52
+msgid ""
+"Use the :kbd:`INSERT` command to add a new street to the :kbd:`streets` "
+"table."
+msgstr ":kbd:`INSERT` 명령어를 사용해서 :kbd:`streets` 테이블에 새 도로를 추가하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:54
+msgid ":ref:`Check your results <database-concepts-6>`"
+msgstr ":ref:`결과 확인 <database-concepts-6>`"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:60
+msgid "Sequencing Data Addition According to Constraints"
+msgstr "제약 조건에 따라 데이터 연속 추가"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:63
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate| 중급"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:65
+msgid ""
+"Try to add a person object to the :kbd:`people` table with the following "
+"details::"
+msgstr ":kbd:`people` 테이블에 다음 세부 사항을 갖춘 인물 오브젝트를 추가해보십시오."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:72
+msgid ""
+"Recall that in this example, we defined phone numbers as strings, not "
+"integers."
+msgstr "이 예제에서 전화번호를 정수가 아니라 문자열로 정의한 것을 기억하십니까?"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:75
+msgid ""
+"At this point, you should have an error report if you try to do this without"
+" first creating a record for Main Street in the :kbd:`streets` table."
+msgstr "이 시점에서 :kbd:`streets` 테이블에 Main Street에 대한 레코드를 먼저 생성하지 않고 데이터를 추가하려 하면 오류 보고를 받게 될 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:78
+msgid "You should have also noticed that:"
+msgstr "다음 사항에 대해서도 알게 됐을 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:80
+msgid "You can't add the street using its name"
+msgstr "도로명으로는 추가할 수 없습니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:81
+msgid ""
+"You can't add a street using a street :kbd:`id` before first creating the "
+"street record on the streets table"
+msgstr "'streets' 테이블에 도로 레코드를 먼저 생성하지 않으면 도로 :kbd:`id` 를 이용해서 도로를 추가할 수 없습니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:84
+msgid ""
+"Remember that our two tables are linked via a Primary/Foreign Key pair. This"
+" means that no valid person can be created without there also being a valid "
+"corresponding street record."
+msgstr "사용자의 두 테이블이 기본/외래 키로 연결되어 있다는 사실을 기억하십시오. 다시 말해 상응하는 유효한 도로 레코드 없이는 유효한 인물을 생성할 수 없다는 뜻입니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:88
+msgid "Using the above knowledge, add the new person to the database."
+msgstr "이런 지식을 사용해서 데이터베이스에 새 인물을 추가해보십시오."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:90
+msgid ":ref:`Check your results <database-concepts-7>`"
+msgstr ":ref:`결과 확인 <database-concepts-7>`"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:95
+msgid "Select data"
+msgstr "데이터 선택"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:97
+msgid ""
+"We have already shown you the syntax for selecting records. Let's look at a "
+"few more examples::"
+msgstr "이미 데이터를 선택할 수 있는 문법을 배웠습니다. 몇 가지 예를 더 들어보겠습니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:110
+msgid ""
+"In later sessions we will go into more detail on how to select and filter "
+"data."
+msgstr "이후 단계에서 데이터를 선택하고 필터링하는 방법에 대해 더 자세히 알아볼 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:113
+msgid "Update data"
+msgstr "데이터 업데이트"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:115
+msgid ""
+"What if you want to make a change to some existing data? For example, a "
+"street name is changed::"
+msgstr "어떤 기존 데이터를 변경하고자 할 경우 어떻게 해야 할까요? 예를 들어 도로명이 변경됐다고 해봅시다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:120
+msgid ""
+"Be very careful using such update statements - if more than one record "
+"matches your :kbd:`WHERE` clause, they will all be updated!"
+msgstr "이런 업데이트 선언문을 사용할 때는 매우 주의해야 합니다. :kbd:`WHERE` 구문과 일치하는 레코드가 하나 이상일 경우 모두 업데이트될 겁니다!"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:123
+msgid ""
+"A better solution is to use the primary key of the table to reference the "
+"record to be changed::"
+msgstr "다음과 같이 변경할 레코드를 참조하는 테이블 기본 키를 사용하는 방법이 더 낫습니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:128
+msgid "It should return :kbd:`UPDATE 1`."
+msgstr ":kbd:`UPDATE 1` 을 반환할 것입니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:130
+msgid ""
+"the :kbd:`WHERE` statement criteria are case sensitive :kbd:`Main Road` is "
+"not the same as :kbd:`Main road`"
+msgstr ":kbd:`WHERE` 선언문 기준은 대소문자를 구분합니다. :kbd:`Main Road` 와 :kbd:`Main road` 를 서로 다르게 인식합니다."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:134
+msgid "Delete Data"
+msgstr "데이터 딜리트"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:136
+msgid ""
+"In order to delete an object from a table, use the :kbd:`DELETE` command::"
+msgstr "테이블에서 오브젝트를 삭제하려면, :kbd:`DELETE` 명령어를 이용하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:140
+msgid "Let's look at our people table now::"
+msgstr "'people' 테이블이 어떻게 변경됐는지 볼까요?"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:149
+msgid "|TY| |hard|"
+msgstr "|TY| |hard| 고급"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:151
+msgid ""
+"Use the skills you have learned to add some new friends to your database::"
+msgstr "지금까지 배운 기술을 이용해서 사용자 데이터베이스에 새 친구들 몇 명을 추가해보십시오."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:162
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:164
+msgid ""
+"Now you know how to add new data to the existing models you created "
+"previously. Remember that if you want to add new kinds of data, you may want"
+" to modify and/or create new models to contain that data."
+msgstr "이제 이전 단계에서 생성했던 기존 모델에 새 데이터를 추가하는 방법을 배웠습니다. 새로운 유형의 데이터를 추가하려면 기존 모델을 수정하거나, 해당 데이터를 담을 수 있는 새 모델을 생성해야 할 수도 있다는 사실을 기억하십시오."
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:169
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/database_concepts/adding_data.rst:171
+msgid ""
+"Now that you've added some data, you'll learn how to use queries to access "
+"this data in various ways."
+msgstr "이제 데이터를 추가했으니, 쿼리를 통해 이 데이터에 다양한 방식으로 접근하는 방법에 대해 배워보겠습니다."

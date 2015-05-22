@@ -1,0 +1,174 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-11-07 15:02+0000\n"
+"Last-Translator: MarieAude <marie-aude.aeby@camptocamp.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/crs.rst:6
+msgid "CRSs. Reprojecting"
+msgstr "SCR. Reprojection"
+
+#: ../../source/docs/training_manual/processing/crs.rst:9
+msgid ""
+"In this lesson we will discuss how Processing uses CRSs. We will also see a "
+"very useful algorithm: reprojecting."
+msgstr "Dans cette leçon, nous discuterons de comment les Traitements utilisent les SCR. Nous verrons également un algorithme très utile : la reprojection."
+
+#: ../../source/docs/training_manual/processing/crs.rst:12
+msgid ""
+"CRS's are a great source of confusion for QGIS Processing users, so here are"
+" some general rules about how they are handled by geoalgorithms when "
+"creating a new layer."
+msgstr "Les SCR sont une grande source de confusion pour les utilisateurs de Traitements QGIS, alors voici quelques règles générales sur la façon dont ils sont traités par les géoalgorithmes lors de la création d'une nouvelle couche."
+
+#: ../../source/docs/training_manual/processing/crs.rst:14
+msgid ""
+"If there are input layers, it will use the CRS of the first layer. This is "
+"assumed to be the CRS of all input layers, since they should have the same "
+"one. If you use layers with unmatching CRS's, QGIS will warn you about it. "
+"Notice that the CRS of input layers is shown along with its name in the "
+"parameters dialog."
+msgstr "S'il y a des couches d'entrée, le SCR de la première couche sera utilisé. Celui-ci est supposé être le SCR de toutes les couches d'entrée, car ils devraient avoir le même. Si vous utilisez des couches avec des SCR non correspondants, QGIS vous en avertira. Notez que le SCR des couches d'entrées est affiché avec son nom dans la boîte de dialogue des paramètres."
+
+#: ../../source/docs/training_manual/processing/crs.rst:18
+msgid ""
+"If there are no input layer, it will use the project CRS, unless the "
+"algorithm contains a specific CRS field (as it happenend in the last lesson "
+"with the graticule algorithm)"
+msgstr "S'il n'y a pas de couche d'entrée, ce sera le SCR du projet qui sera utilisé, à moins que l'algorithme contienne un champ spécifique au SCR (comme cela s'est passé dans la dernière leçon avec l'algorithme graticule)"
+
+#: ../../source/docs/training_manual/processing/crs.rst:20
+msgid ""
+"Open the project corresponding to this lesson and you will see two layers "
+"named 23030 and 4326. They both contain the same points, but in different "
+"CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS "
+"is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
+"actually the same layer."
+msgstr "Ouvrez le projet correspondant à cette leçon et vous verrez deux couches nommées 23030 et 4326. Elles contiennent toutes les deux les mêmes points, mais dans des SCR différents (EPSG:23030 and EPSG:4326). Elles apparaissent à la même place parce que QGIS reprojecte à la volée le SCR du projet (EPSG:4326), mais elles ne sont pas réellement la même couche."
+
+#: ../../source/docs/training_manual/processing/crs.rst:22
+msgid "Open the *Export/Add geometry columns* algorithm."
+msgstr "Ouvrez l'algorithme *Exporter/ajouter des colonnes de géométrie*."
+
+#: ../../source/docs/training_manual/processing/crs.rst:26
+msgid ""
+"This algorithm add new columns to the attributes table of a vector layer. "
+"The content of the columns depend on the type of geometry of the layer. In "
+"the case of points, it adds new columns with the X and Y coordinates of each"
+" point."
+msgstr "Cet algorithme ajoute des nouvelles colonnes aux tables attributaires d'une couche vectorielle. Le contenu des colonnes dépend du type de géométrie de la couche. Dans le cas des points, de nouvelles colonnes avec les coordonnées X et Y de chaque point sont ajoutées."
+
+#: ../../source/docs/training_manual/processing/crs.rst:28
+msgid ""
+"In the list of available layers that you will find in the input layer field,"
+" you will see each one with its corresponding CRS. That means that, although"
+" they appear in the same place in your canvas, they will be treated "
+"differently. Select the 4326 layer."
+msgstr "Dans la liste des couches disponibles que vous pouvez trouver dans le champ de couche d'entrée, vous verrez chacune avec son SCR. Cela signifie que, bien qu'elles apparaissent à la même place dans votre canevas, elles seront traitées différemment. Sélectionnez la couche 4326."
+
+#: ../../source/docs/training_manual/processing/crs.rst:30
+msgid ""
+"The other parameter of the algorithm allows to set how the algorithm uses "
+"coordinates to calculate the new value that it will add to the resulting "
+"layers. Most algorithms do not have an option like that, and just use the "
+"coordinates directly. Select the *Layer CRS* option to just use coordinates "
+"as they are. This is how almost all geoalgorithms work."
+msgstr "L'autre paramètre de l'algorithme permet de définir la manière dont l'algorithme utilise des coordonnées pour calculer la nouvelle valeur qu'il ajoute aux couches résultantes. La plupart des algorithmes n'ont pas d'option comme celle-ci, et il suffit d'utiliser directement les coordonnées. Sélectionnez l'option *SCR de la couche* pour simplement utiliser des coordonnées telles qu'elles sont. Voilà comment presque tous les géoalgorithmes sont."
+
+#: ../../source/docs/training_manual/processing/crs.rst:32
+msgid ""
+"You should get a new layer with exactly the same points as the other two "
+"layers. If you right click on the name of the layer and open its properties,"
+" you will see that it shares the same CRS of the input layer, that is, "
+"EPSG:4326. When the layer is loaded into QGIS, you will not be asked to "
+"enter the CRS of the layer, since QGIS already knows about it."
+msgstr "Vous devriez obtenir une nouvelle couche avec exactement les mêmes points comme les deux autres couches. Si c'est le cas, cliquez sur le nom de la couche et ouvrez ses propriétés, vous verrez qu'elle partage le même SCR que la couche d'entrée, qui est EPSG:4326. Lorsque la couche est chargée dans QGIS, il ne vous sera pas demandé d'entrer le SCR de la couche, dès lors que QGIS sait déjà lequel c'est."
+
+#: ../../source/docs/training_manual/processing/crs.rst:34
+msgid ""
+"If you open the attributes table of the new layer you will see that it "
+"contains two new fields with the X and Y coordinates of each point."
+msgstr "Si vous ouvrez la table attributaire de la nouvelle couche, vous verrez qu'elle contient deux nouveaux champs avec les coordonnées X et Y de chaque point."
+
+#: ../../source/docs/training_manual/processing/crs.rst:38
+msgid ""
+"Those coordinate values are given in the layer CRS, since we chose that "
+"option. However, even if you choose another option, the output CRS of the "
+"layer would have been the same, since the input CRS is used to set the CRS "
+"of the output layer. Choosing another option will cause the values to be "
+"different, but not the resulting point to change or the CRS of the ouput "
+"layer to be different to the CRS of the input one."
+msgstr "Ces valeurs de coordonnées sont données dans le SCR de la couche, comme nous avons choisi cette option. Cependant, même si vous choisissez une autre option, le SCR de la couche de sortie sera le même, comme le SCR d'entrée est utilisé pour définir le SCR de la couche de sortie. Le choix d'une autre option donnera des valeurs différentes, mais ne changerait pas le point ou le SCR de la couche de sortie par rapport au SCR de la couche d'entrée."
+
+#: ../../source/docs/training_manual/processing/crs.rst:41
+msgid ""
+"Now do the same calculation using the other layer. You should find the "
+"resulting layer rendered exactly in the same place as the other ones, and it"
+" will have the EPSG:23030 CRS, since that was the one of the input layer."
+msgstr "Faites maintenant le même calcul en utilisant l'autre couche. Vous devriez trouver la couche résultante exactement à la même place que les autres, et elle aura le SCR EPSG:23030, dès lors que c'était celui de la couche d'entrée."
+
+#: ../../source/docs/training_manual/processing/crs.rst:43
+msgid ""
+"If you go to its attribute table, you will see values that are different to "
+"the ones in the first layer that we created."
+msgstr "Si vous vous rendez à sa table attributaire, vous verrez des valeurs qui sont différentes de celles dans la première couche que nous avons créée."
+
+#: ../../source/docs/training_manual/processing/crs.rst:47
+msgid ""
+"This is because the original data is different (it uses a different CRS), "
+"and those coordinates are taken from it."
+msgstr "Cela est dû au fait que les données originales sont différentes (elles utilisent un SCR différent), et ces coordonnées sont prises de lui."
+
+#: ../../source/docs/training_manual/processing/crs.rst:49
+msgid ""
+"What should you learn from this? The main idea behind these examples is that"
+" geoalgorithms use the layer as it is in its original data source, and "
+"completely ignore the reprojections that QGIS might be doing before "
+"rendering. In other words, do not trust what you see in the canvas, but "
+"always have in mind that the original data will be used. That is no so "
+"important in this case, since we are just using one single layer at a time, "
+"but in an algorithm that needs several of them (such as a clip algorithm), "
+"layers that appear to match or overlay might be very far one from each "
+"other, since they might have different CRSs."
+msgstr "Que devons-nous en tirer ? L'idée principale derrière ces exemples est que les géoalgorithmes utilisent la couche dans sa source de données d'origine, et ignorent complètement les reprojections que QGIS pourrait faire avant le rendu. En d'autres termes, ne vous fiez pas à ce que vous voyez dans le canevas, mais gardez toujours en tête que les données originales seront utilisées. Ce n'est pas si important dans ce cas, car nous n'utilisons qu'une seule couche à la fois, mais dans un algorithme qui a besoin de plusieurs d'entre elles (comme un algorithme découper), des couches qui semblent correspondre ou se superposer pourraient être très loin l'une de l'autre, car elles pourraient avoir des SCR différents."
+
+#: ../../source/docs/training_manual/processing/crs.rst:51
+msgid ""
+"Algorithms performs no reprojection (except in the reprojection algorithm "
+"that we will see next), so it is up to you to make sure that layers have "
+"matching CRS's."
+msgstr "Les algorithmes n'effectuent aucune reprojection (excepté dans l'algorithme de reprojection que nous verrons plus tard), c'est donc à vous de vous assurez que les couches ont des SCR correspondants."
+
+#: ../../source/docs/training_manual/processing/crs.rst:53
+msgid ""
+"An interesting module that deals with CRS's is the reprojection one. It "
+"represents a particular case, since it has an input layer (the one to "
+"reproject), but it will not use its CRS for the the output one."
+msgstr "Un module intéressant qui travaille avec les SCR est celui de reprojection. Il représente un cas particulier, car il a une couche d'entrée (celle à reprojeter), mais il n'utilise pas son SCR pour la couche de sortie."
+
+#: ../../source/docs/training_manual/processing/crs.rst:55
+msgid "Open the *Reprojection* algorithm."
+msgstr "Ouvrez l'algorithme de *Reprojection*."
+
+#: ../../source/docs/training_manual/processing/crs.rst:59
+msgid ""
+"Select any of the layers as input, and select EPSG:23029 as the destination "
+"CRS. Run the algorithm and you will get a new layer, identical to the input "
+"one, but with a different CRS. It will appear on the same region of the "
+"canvas, like the other ones, since QGIS will reproject it on the fly, but "
+"its original coordinates are different. You can see that by running the *Add"
+" geometry columns* algorithm using this new layer as input, and veryfing "
+"that the added coordinates are different to the ones in the attribute tables"
+" of both of the two layers that we had computed before."
+msgstr "Sélectionnez une des couches en entrée, et sélectionnez EPSG:23029 comme le SCR de destination. Lancez l'algorithme et vous obtiendrez une nouvelle couche, identique à celle d'entrée, mais avec un SCR différent. Elle apparaîtra dans la même région du canevas, comme les autres, tant que QGIS reprojette à la volée, mais ses coordonnées originales sont différentes. Vous pouvez voir cela en lançant l'algorithme *Ajouter des colonnes géométriques* en utilisant cette nouvelle couche comme entrée, et en vérifiant que les coordonnées ajoutées sont différentes que celles dans les tables attributaires des deux couches que nous avons calculées avant."

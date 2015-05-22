@@ -1,0 +1,276 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+# Sant-anna <delazj@gmail.com>, 2014
+# Xavier Tardieu <xapitoun@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-14 15:05+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:6
+msgid "|LS| Working with Vector Data"
+msgstr "|LS| Travailler avec des données vectorielles"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:8
+msgid ""
+"Vector data is arguably the most common kind of data you will find in the "
+"daily use of GIS. It describes geographic data in terms of points, that may "
+"be connected into lines and polygons. Every object in a vector dataset is "
+"called a **feature**, and is associated with data that describes that "
+"feature."
+msgstr "Les données vectorielles sont sans doute le type le plus commun de données que vous trouverez dans l'utilisation quotidienne des SIG. Elles décrivent des données géographiques en termes de points, qui peuvent être connecté à des lignes et polygones. Chaque objet d'un jeu de données vectorielles est appelé  une **entité**, et est associé à des données qui décrivent cette entité."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:13
+msgid ""
+"**The goal for this lesson:** To learn about the structure of vector data, "
+"and how to load vector datasets into a map."
+msgstr "**L’objectif de cette leçon :** Apprendre à reconnaître la structure des données vectorielles, et la façon de charger des jeux de données vectoriels sur une carte."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:17
+msgid "|basic| |FA| Viewing Layer Attributes"
+msgstr "|basic| |FA| Visualisation des attributs d'une couche"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:19
+msgid ""
+"It's important to know that the data you will be working with does not only "
+"represent **where** objects are in space, but also tells you **what** those "
+"objects are."
+msgstr "Il est important de comprendre que les données avec lesquelles vous êtes en train de travailler ne montrent pas seulement  **où ** ces objets se trouvent dans l’espace, mais aussi vous informent sur  **ce que ** sont ces objets."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:23
+msgid ""
+"From the previous exercise, you should have the :guilabel:`roads` layer "
+"loaded in your map. What you can see right now is merely the position of the"
+" roads."
+msgstr "De l'exercice précédent, vous devriez avoir chargé la couche :guilabel:`roads` dans votre carte. Vous pouvez pour l'instant seulement voir la position des routes."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:27
+msgid ""
+"To see all the data available to you, with the :guilabel:`roads` layer "
+"selected in the Layers panel:"
+msgstr "Pour voir toutes les données qui vous sont disponibles, avec la couche :guilabel:`roads` sélectionnée dans la légende de la carte :"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:30
+msgid "Click on this button: |attributes|"
+msgstr "Cliquer sur ce bouton : |attributes|"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:32
+msgid ""
+"It will show you a table with more data about the :guilabel:`roads` layer. "
+"This extra data is called *attribute data*. The lines that you can see on "
+"your map represent where the roads go; this is the *spatial data*."
+msgstr "Cela vous montrera une table avec plus de données sur la couche :guilabel:`roads`. Ces données supplémentaires sont appelées *données attributaires*. Les lignes que vous pouvez voir sur votre carte représentent où les routes vont ; ce sont les *données spatiales*."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:36
+msgid ""
+"These definitions are commonly used in GIS, so it's essential to remember "
+"them!"
+msgstr "Ces définitions sont communément utilisées dans les SIG, c'est pourquoi il est essentiel de s'en souvenir !"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:38
+msgid "You may now close the attribute table."
+msgstr "Vous pouvez maintenant fermer la table d’attributs."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:40
+msgid ""
+"Vector data represents features in terms of points, lines and polygons on a "
+"coordinate plane. It is usually used to store discrete features, like roads "
+"and city blocks."
+msgstr "Les données vectorielles représentent des entités sous forme de points, lignes et polygones sur un plan de coordonnées. Elles sont habituellement utilisées pour stocker des données discrètes, telles que des routes ou des pâtés de maisons."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:48
+msgid "|basic| |FA| Loading Vector Data From Shapefiles"
+msgstr "|basic| |FA| Chargement des données vectorielles à partir de shapefiles"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:50
+msgid ""
+"The Shapefile is a specific file format that allows you to store GIS data in"
+" an associated group of files. Each layer consists of several files with the"
+" same name, but different file types. Shapefiles are easy to send back and "
+"forth, and most GIS software can read them."
+msgstr "Le shapefile est un format de fichier spécifique qui vous permet de stocker des données SIG dans un groupe associé de fichiers. Chaque couche consiste en plusieurs fichiers avec le même nom, mais différents types de fichiers. Les shapefiles sont faciles à échanger, et la plupart des logiciels SIG peuvent les lire."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:55
+msgid ""
+"Refer back to the introductory exercise in the previous section for "
+"instructions on how to add vector layers."
+msgstr "Référez-vous à l'exercice d'introduction dans la section précédente pour les instructions sur comment ajouter des couches vectorielles."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:58
+msgid "Load the data sets into your map following the same method:"
+msgstr "Chargez les ensembles de données dans votre carte en suivant la même méthode."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:60
+msgid "\"places\""
+msgstr "« lieux »"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:61
+msgid "\"water\""
+msgstr "« eau »"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:62
+msgid "\"rivers\""
+msgstr "« rivières »"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:63
+msgid "\"buildings\""
+msgstr "« bâtiments »"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:65
+msgid ":ref:`Check your results <vector-load-shapefiles-1>`"
+msgstr ":ref:`Vérifiez vos résultats <vector-load-shapefiles-1>`"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:71
+msgid "|basic| |FA| Loading Vector Data From a Database"
+msgstr "|basic| |FA| Chargement des données vectorielles à partir d’une base de données"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:73
+msgid ""
+"Databases allow you to store a large volume of associated data in one file. "
+"You may already be familiar with a database management system (DBMS) such as"
+" Microsoft Access. GIS applications can also make use of databases. GIS-"
+"specific DBMSes (such as PostGIS) have extra functions, because they need to"
+" handle spatial data."
+msgstr "Les bases de données vous permettent de stocker un large volume de données associées dans un fichier. Vous pouvez déjà être familier avec un Système de Gestion de Base de Données (SGBD), tel que Microsoft Access. Les applications SIG peuvent aussi utiliser les bases de données. Les SGBD spécifiques aux SIG (comme PostGIS) ont des fonctions supplémentaires, car ils ont besoin de gérer des données spatiales."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:79
+msgid "Click on this icon: |mActionAddSpatiaLiteLayer|"
+msgstr "Cliquez sur cet icône : |mActionAddSpatiaLiteLayer|"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:81
+msgid ""
+"(If you're sure you can't see it at all, check that the :guilabel:`Manage "
+"Layers` toolbar is enabled.)"
+msgstr "(Si vous êtes certain que vous ne pouvez pas du tout le voir, vérifiez que la barre d'outils :guilabel:`Contrôle des couches` est activée.)"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:84
+msgid "It will give you a new dialog. In this dialog:"
+msgstr "Cela va vous ouvrir une nouvelle boîte de dialogue. Dans cette boîte de dialogue :"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:86
+msgid "Click the :guilabel:`New` button."
+msgstr "Cliquez sur le bouton :guilabel:`Nouveau`."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:87
+msgid ""
+"In the same folder as the other data, you should find the file "
+":guilabel:`landuse.sqlite`. Select it and click :guilabel:`Open`."
+msgstr "Dans le même dossier que les autres données, vous devriez trouver le fichier :guilabel:`landuse.sqlite`. Sélectionnez-le et cliquez sur :guilabel:`Ouvrir`."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:90
+msgid ""
+"You will now see the first dialog again. Notice that the dropdown select "
+"above the three buttons now reads \"land_use.db@...\", followed by the path "
+"of the database file on your computer."
+msgstr "Vous allez maintenant voir à nouveau la première boîte de dialogue. Notez que le menu déroulant de sélection au-dessus des trois boutons indique à présent \"land_use.db@...\", suivi par le chemin du fichier de base de données sur votre ordinateur."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:94
+msgid ""
+"Click the :guilabel:`Connect` button. You should see this in the previously "
+"empty box:"
+msgstr "Cliquez sur le bouton :guilabel:`Connecter`. Vous devriez voir ceci dans la case précédemment vide :"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:100
+msgid ""
+"Click on the :kbd:`landuse` layer to select it, then click "
+":menuselection:`Add`"
+msgstr "Cliquez sur la couche :kbd:`landuse` pour la sélectionner, puis cliquez sur :menuselection:`Ajouter`"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:103
+msgid ""
+"Remember to save the map often! The map file doesn't contain any of the data"
+" directly, but it remembers which layers you loaded into your map."
+msgstr "Souvenez-vous de souvent sauvegarder la carte ! Le fichier de la carte ne contient pas directement les données, mais il se souvient quelles couches vous aviez chargé dans votre carte."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:106
+msgid ":ref:`Check your results <vector-load-from-database-1>`"
+msgstr ":ref:`Vérifiez vos résultats <vector-load-from-database-1>`"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:110
+msgid "|FA| Reordering the Layers"
+msgstr "|FA| Réorganisation des calques"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:112
+msgid ""
+"The layers in your Layers list are drawn on the map in a certain order. The "
+"layer at the bottom of the list is drawn first, and the layer at the top is "
+"drawn last. By changing the order that they are shown on the list, you can "
+"change the order they are drawn in."
+msgstr "Les calques dans votre liste de calques sont dessinés sur la carte dans un certain ordre. Le calque en bas de la liste est dessiné en premier, et le calque en haut est dessiné en dernier. En changeant leur ordre dans la liste, vous pouvez changer l’ordre suivant lesquel ils sont dessinés."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:117
+msgid ""
+"Depending on the version of QGIS that you are using, you may have a checkbox"
+" beneath your Layers list reading :guilabel:`Control rendering order`. This "
+"must be checked (switched on) so that moving the layers up and down in the "
+"Layers list will bring them to the front or send them to the back in the "
+"map. If your version of QGIS doesn't have this option, then it is switched "
+"on by default and you don't need to worry about it."
+msgstr "En fonction de la version de QGIS que vous utilisez, vous pouvez avoir une case à cocher :guilabel:`Contrôle de l'ordre de rendu des couches` en dessous de votre liste de Couches. Celle-ci doit être cochée (activée) afin que le déplacement des couches vers le bas et vers le haut dans la liste des Couches les déplacera vers le devant ou les enverra vers l'arrière de la carte. Si votre version de QGIS n'a pas cette option, alors elle est activée par défaut et vous n'avez pas besoin de vous en inquiétez."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:124
+msgid ""
+"The order in which the layers have been loaded into the map is probably not "
+"logical at this stage. It's possible that the road layer is completely "
+"hidden because other layers are on top of it."
+msgstr "L'ordre dans lequel les couches ont été chargées dans la carte n'est probablement pas logique à ce stade. Il est possible que la couche des routes soit complètement cachée parce que les autres couches sont au-dessus d'elle."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:128
+msgid "For example, this layer order..."
+msgstr "Par exemple, cet ordre de couche…"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:133
+msgid ""
+"... would result in roads and places being hidden as they run *underneath* "
+"urban areas."
+msgstr "... résultera par une absence de visibilité pour les lieux et les routes car elles sont *en dessous* des aires urbaines."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:136
+msgid "To resolve this problem:"
+msgstr "Pour résoudre le problème :"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:138
+msgid "Click and drag on a layer in the Layers list."
+msgstr "Cliquez et glissez sur la couche dans la légende de la carte."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:139
+msgid "Reorder them to look like this:"
+msgstr "Réorganiser-les pour obtenir ça :"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:144
+msgid ""
+"You'll see that the map now makes more sense visually, with roads and "
+"buildings appearing above the land use regions."
+msgstr "Vous verrez que la carte a maintenant visuellement plus de sens, avec les routes et les bâtiments qui apparaissent au-dessus des régions d'utilisation du sol."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:148
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:150
+msgid ""
+"Now you've added all the layers you need from several different sources."
+msgstr "Maintenant vous avez ajouté tous les calques dont vous aviez besoin à partir de plusieurs différentes sources."
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:153
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/basic_map/vector_data.rst:155
+msgid ""
+"Using the random palette automatically assigned when loading the layers, "
+"your current map is probably not easy to read. It would be preferable to "
+"assign your own choice of colors and symbols. This is what you'll learn to "
+"do in the next lesson."
+msgstr "En utilisant la palette de couleur aléatoire automatiquement assignée lors du chargement des couches, votre carte actuelle n'est sans doute pas facile à lire. Il est donc préférable d'assigner votre propre choix de couleurs et de symboles aux couches. C'est ce que nous verrons dans la prochaine leçon."

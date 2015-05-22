@@ -1,0 +1,543 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-03 18:10+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:6
+msgid "|LS| Reprojecting and Transforming Data"
+msgstr "|LS| Gegevens opnieuw projecteren en transformeren"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:8
+msgid ""
+"Let's talk about Coordinate Reference Systems (CRSs) again. We've touched on"
+" this briefly before, but haven't discussed what it means practically."
+msgstr "Laten we het nog eens hebben over Coördinaten ReferentieSystemen (CRS-en). We hebben dit eerder kort behandeld, maar we hebben niet besproken wat het in de praktijk betekent."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:11
+msgid ""
+"**The goal for this lesson:** To reproject and transform vector datasets."
+msgstr "**Het doel voor deze les:** Vector-gegevenssets opnieuw projecteren en transformeren."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:14
+msgid "|basic| |FA| Projections"
+msgstr "|basic| |FA| Projecties"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:16
+msgid ""
+"The CRS that all the data as well as the map itself are in right now is "
+"called WGS84. This is a very common Geographic Coordinate System (GCS) for "
+"representing data. But there's a problem, as we will see."
+msgstr "Het CRS waarin alle gegevens en ook de kaart nu staan wordt WGS84 genoemd. Dit is een vrij algemeen Geografisch CoördinatenSysteem (GCS) voor het weergeven van gegevens. Maar er is een probleem, zoals we zullen zien."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:20
+msgid "Save your current map."
+msgstr "Sla uw huidige kaart op."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:21
+msgid ""
+"Then open the map of the world which you'll find under "
+":kbd:`exercise_data/world/world.qgs`."
+msgstr "Open dan de wereldkaart die u kunt vinden onder :kbd:`exercise_data/world/world.qgs`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:23
+msgid "Zoom in to South Africa by using the :guilabel:`Zoom In` tool."
+msgstr "Zoom in naar Zuid Afrika met behulp van het gereedschap :guilabel:`Inzoomen`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:24
+msgid ""
+"Try setting a scale in the :guilabel:`Scale` field, which is in the "
+":guilabel:`Status Bar` along the bottom of the screen. While over South "
+"Africa, set this value to :kbd:`1:5000000` (one to five million)."
+msgstr "Probeer een schaal in te stellen in het veld :guilabel:`Schaal`, dat in de :guilabel:`Statusbalk` staat, aan de onderzijde van het scherm. Terwijl u boven Zuid Afrika bent, stel deze waarde in op :kbd:`1:5000000` (één tot vijf miljoen)."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:27
+msgid ""
+"Pan around the map while keeping an eye on the :guilabel:`Scale` field."
+msgstr "Schuif over de kaart terwijl u een oogje houdt op het veld :guilabel:`Schaal`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:29
+msgid ""
+"Notice the scale changing? That's because you're moving away from the one "
+"point that you zoomed into at :kbd:`1:5000000`, which was at the center of "
+"your screen. All around that point, the scale is different."
+msgstr "Ziet u dat de schaal verandert? Dat komt omdat u zich verplaatst vanaf het ene punt waarop u inzoomde met :kbd:`1:5000000`, dat in het midden van uw scherm stond. Voor alles rondom dat is de schaal anders."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:33
+msgid ""
+"To understand why, think about a globe of the Earth. It has lines running "
+"along it from North to South. These longitude lines are far apart at the "
+"equator, but they meet at the poles."
+msgstr "Denk aan een wereldbol om dit te begrijpen. Die heeft lijnen lopen van Noord naar Zuid. Deze lijnen voor de lengtegraad staan ver van elkaar af aan de evenaar, maar ontmoeten elkaar aan de polen."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:37
+msgid ""
+"In a GCS, you're working on this sphere, but your screen is flat. When you "
+"try to represent the sphere on a flat surface, distortion occurs, similar to"
+" what would happen if you cut open a tennis ball and tried to flatten it "
+"out. What this means on a map is that the longitude lines stay equally far "
+"apart from each other, even at the poles (where they are supposed to meet). "
+"This means that, as you travel away from the equator on your map, the scale "
+"of the objects that you see gets larger and larger. What this means for us, "
+"practically, is that there is no constant scale on our map!"
+msgstr "In een GCS werkt u met deze bol, maar uw scherm is plat. Wanneer u de bol op een plat oppervlak probeert weer te geven, treedt vervorming op, soortgelijk aan die welke zal optreden als u een tennisbal opent en die probeert plat te maken. Wat dit betekent op een kaart is dat de lijnen voor de lengtegraad op gelijke afstand van elkaar blijven, zelfs aan de polen (waar zij verondersteld worden samen te komen). Dit betekent dat, als u op uw kaart vanaf de evenaar weg reist, de schaal van de objecten die u ziet groter en groter worden. Wat dit voor ons in de praktijk betekent is dat er geen constante schaal op uw kaart is!"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:46
+msgid ""
+"To solve this, let's use a Projected Coordinate System (PCS) instead. A PCS "
+"\"projects\" or converts the data in a way that makes allowance for the "
+"scale change and corrects it. Therefore, to keep the scale constant, we "
+"should reproject our data to use a PCS."
+msgstr "Laten we in plaats daarvan een geProjecteerd Coördinaten Systeem (PCS) gebruiken, om dit op te lossen. Een PCS \"projecteert\" of converteert de gegevens op een manier die het mogelijk maakt dat de schaal wijzigt en corrigeert die. Daarom, om de schaal constant te houden, zouden we onze gegevens opnieuw moeten projecteren en een PCS gebruiken."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:52
+msgid "|basic| |FA| \"On the Fly\" Reprojection"
+msgstr "|basic| |FA| \"Direct\" opnieuw projecteren"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:54
+msgid ""
+"QGIS allows you to reproject data \"on the fly\". What this means is that "
+"even if the data itself is in another CRS, QGIS can project it as if it were"
+" in a CRS of your choice."
+msgstr "QGIS stelt u in staat uw gegevens \"direct\" opnieuw te projecteren. Wat dit betekent is dat, zelfs als de gegevens zelf in een ander CRS staan, QGIS ze kan projecteren alsof ze in een CRS van uw keuze staan."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:58
+msgid ""
+"To enable \"on the fly\" projection, click on the :guilabel:`CRS Status` "
+"button in the :guilabel:`Status Bar` along the bottom of the QGIS window:"
+msgstr "Klik op de knop :guilabel:`CRS-status` in de :guilabel:`Statusbalk` onder in het venster van QGIS om \"direct\" projecteren in te schakelen:"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:64
+msgid ""
+"In the dialog that appears, check the box next to :guilabel:`Enable 'on the "
+"fly' CRS transformation`."
+msgstr "Selecteer, in het dialoogvenster dat verschijnt, het vak naast :guilabel:`Gelijktijdige CRS-transformatie gebruiken`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:66
+msgid ""
+"Type the word :kbd:`global` into the :guilabel:`Filter` field. One CRS "
+"(:guilabel:`NSIDC EASE-Grid Global`) should appear in the list below."
+msgstr "Type het woord :kbd:`global` in het veld :guilabel:`Filter`. Eén CRS (:guilabel:`NSIDC EASE-Grid Global`) zou in de lijst eronder moeten verschijnen."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:68
+msgid ""
+"Click on the :guilabel:`NSIDC EASE-Grid Global` to select it, then click "
+":kbd:`OK`."
+msgstr "Klik op :guilabel:`NSIDC EASE-Grid Global` om die te selecteren, klik dan op :kbd:`OK`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:70
+msgid ""
+"Notice how the shape of South Africa changes. All projections work by "
+"changing the apparent shapes of objects on Earth."
+msgstr "Merk op hoe de vorm van Zuid Afrika verandert. Alle projecties werken door de uiterlijke vormen van objecten op aarde te wijzigen."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:72
+msgid "Zoom in to a scale of :kbd:`1:5000000` again, as before."
+msgstr "Zoom opnieuw in naar een schaal van :kbd:`1:5000000`, zoals eerder."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:73
+msgid "Pan around the map."
+msgstr "Schuif over de kaart."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:74
+msgid "Notice how the scale stays the same!"
+msgstr "Merk op dat de schaal nu hetzelfde blijft!"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:76
+msgid ""
+"\"On the fly\" reprojection is also used for combining datasets that are in "
+"different CRSs."
+msgstr "\"Direct\" opnieuw projecteren wordt ook gebruikt voor het combineren van gegevenssets die in verschillende CRS-en staan."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:79
+msgid "Deactivate \"on the fly\" re-projection again:"
+msgstr "Schakel \"direct\" opnieuw projecteren opnieuw uit:"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:81
+msgid "Click on the :guilabel:`CRS Status` button again."
+msgstr "Klik opnieuw op de knop :guilabel:`CRS-status`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:82
+msgid "Un-check the :guilabel:`Enable 'on the fly' CRS transformation` box."
+msgstr "Deselecteer het vak :guilabel:`Gelijktijdige CRS-transformatie gebruiken`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:83
+msgid "Clicking :guilabel:`OK`."
+msgstr "Klik op :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:85
+msgid ""
+"In QGIS 2.0, the 'on the fly' reprojection is automatically activated when "
+"layers with different CRSs are loaded in the map. To understand what 'on the"
+" fly' reprojection does, deactivate this automatic setting:"
+msgstr "In QGIS 2.0 wordt 'Gelijktijdige CRS-transformatie gebruiken' automatisch geactiveerd als lagen met verschillende CRS-en worden geladen in de kaart. Deactiveer deze automatische instelling om te begrijpen wat opnieuw projecteren met 'Gelijktijdige CRS-transformatie gebruiken' doet."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:89
+msgid "Go to :menuselection:`Settings --> Options...`"
+msgstr "Ga naar :menuselection:`Extra --> Opties...`"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:90
+msgid "On the left panel of the dialog, select :guilabel:`CRS`."
+msgstr "Selecteer, in het linkerpaneel van het dialoogvenster, :guilabel:`CRS`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:91
+msgid ""
+"Un-check :guilabel:`Automatically enable 'on the fly' reprojection if layers"
+" have different CRS`."
+msgstr "Deselecteer :guilabel:`Automatisch 'on the fly'-herprojectie inschakelen indien kaartlagen verschillen van CRS`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:93
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:191
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:247
+msgid "Click :guilabel:`OK`."
+msgstr "Klik op :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:95
+msgid ""
+"Add another vector layer to your map which has the data for South Africa "
+"only.  You'll find it as :kbd:`exercise_data/world/RSA.shp`."
+msgstr "Voeg een andere vectorlaag toe aan uw kaart die alleen gegevens voor Zuid Afrika heeft. U vindt dat als :kbd:`exercise_data/world/RSA.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:98
+msgid "What do you notice?"
+msgstr "Wat valt u op?"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:100
+msgid "The layer isn't visible! But that's easy to fix, right?"
+msgstr "De laag is niet zichtbaar! Maar dat is eenvoudig op te lossen, toch?"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:102
+msgid ""
+"Right-click on the :guilabel:`RSA` layer in the :guilabel:`Layers list`."
+msgstr "Klik met rechts op de laag :guilabel:`RSA` in de Lagenlijst."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:103
+msgid "Select :guilabel:`Zoom to Layer Extent`."
+msgstr "Selecteer :guilabel:`Zoom naar laag`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:105
+msgid "OK, so now we see South Africa... but where is the rest of the world?"
+msgstr "OK, dus nu zien we Zuid Afrika... maar waar is de rest van de wereld?"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:107
+msgid ""
+"It turns out that we can zoom between these two layers, but we can't ever "
+"see them at the same time. That's because their Coordinate Reference Systems"
+" are so different. The :guilabel:`continents` dataset is in *degrees*, but "
+"the :guilabel:`RSA` dataset is in *meters*. So, let's say that a given point"
+" in Cape Town in the :guilabel:`RSA` dataset is about :kbd:`4 100 000` "
+"meters away from the equator. But in the :guilabel:`continents` dataset, "
+"that same point is about :kbd:`33.9` degrees away from the equator."
+msgstr "het komt erop neer dat we tussen deze twee lagen kunnen zoomen, maar we kunnen ze nooit tegelijkertijd zien. Dat komt omdat hun Coördinaten Referentie Systemen zo verschillend zijn. De gegevensset :guilabel:`continents` staat in *graden*, maar de gegevensset :guilabel:`RSA` staat in *meters*. Dus, laten we zeggen dat een bepaald punt in Kaapstad in de gegevensset :guilabel:`RSA` ongeveer :kbd:`4.100.000` meters verwijderd is van de evenaar. Maar inde gegevensset :guilabel:`continents` is datzelfde punt ongeveer :kbd:`33.9` graden verwijderd van de evenaar."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:115
+msgid ""
+"This is the same distance - but QGIS doesn't know that. You haven't told it "
+"to reproject the data. So as far as it's concerned, the version of South "
+"Africa that we see in the :guilabel:`RSA` dataset has Cape Town at the "
+"correct distance of :kbd:`4 100 000` meters from the equator. But in the "
+":guilabel:`continents` dataset, Cape Town is only :kbd:`33.9` *meters* away "
+"from the equator! You can see why this is a problem."
+msgstr "Dit is dezelfde afstand - maar QGIS weet dat niet. U heeft het niet opgedragen de gegevens opnieuw te projecteren. Dus, zover als het QGIS betreft, heeft de versie van Zuid Afrika die we zien in de gegevensset :guilabel:`RSA` Kaapstad op de juiste afstand van :kbd:`4.100.000` meter vanaf de evenaar. Maar in de gegevensset :guilabel:`continents` is Kaapstad slechts :kbd:`33.9` *meter* verwijderd van de evenaar! U ziet waarom dit een probleem is."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:122
+msgid ""
+"QGIS doesn't know where Cape Town is *supposed* to be - that's what the data"
+" should be telling it. If the data tells QGIS that Cape Town is :kbd:`34` "
+"meters away from the equator and that South Africa is only about :kbd:`12` "
+"meters from north to south, then that is what QGIS will draw."
+msgstr "QGIS weet niet waar Kaapstad *verondersteld* wordt zich te bevinden - dat is wat de gegevens het zouden moeten vertellen. Als de gegevens QGIS vertellen dat Kaapstad :kbd:`34` meter verwijderd ligt van de evenaar en dat Zuid Afrika slechts ongeveer :kbd:`12` meter van Noord tot Zuid groot is, dan is dat wat QGIS zal tekenen."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:127
+msgid "To correct this:"
+msgstr "Dit corrigeren:"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:129
+msgid ""
+"Click on the :guilabel:`CRS Status` button again and switch "
+":guilabel:`Enable 'on the fly' CRS transformation` on again as before."
+msgstr "Klik opnieuw op de knop :guilabel:`CRS-status` en schakel :guilabel:`Gelijktijdige CRS-transformatie gebruiken` opnieuw in zoals eerder."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:131
+msgid "Zoom to the extents of the :guilabel:`RSA` dataset."
+msgstr "Zoom naar het bereik van de gegevensset :guilabel:`RSA`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:133
+msgid ""
+"Now, because they're made to project in the same CRS, the two datasets fit "
+"perfectly:"
+msgstr "Omdat zij nu opgedragen zijn om in hetzelfde CRS te projecteren, passen de twee gegevenssets perfect:"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:139
+msgid ""
+"When combining data from different sources, it's important to remember that "
+"they might not be in the same CRS. \"On the fly\" reprojection helps you to "
+"display them together."
+msgstr "Bij het combineren van gegevens uit verschillende bronnen is het belangrijk om te onthouden dat zij misschien niet hetzelfde CRS hebben. \"Direct\" opnieuw projecteren helpt u ze tezamen weer te geven."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:143
+msgid ""
+"Before you go on, you probably want to have the 'on the fly' reprojection to"
+" be automatically activated whenever you open datasets having different CRS:"
+msgstr "Vóórdat u verder gaat wilt u waarschijnlijk dat het 'direct' opnieuw projecteren automatisch wordt geactiveerd wanneer u gegevenssets opent die verschillende CRS-en hebben:"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:146
+msgid ""
+"Open again :menuselection:`Settings --> Options...` and select "
+":guilabel:`CRS`."
+msgstr "Open opnieuw :menuselection:`Extra --> Opties...` en selecteer :guilabel:`CRS`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:147
+msgid ""
+"Activate :guilabel:`Automatically enable 'on the fly' reprojection if layers"
+" have different CRS`."
+msgstr "Activeer :guilabel:`Automatisch 'on the fly'-herprojectie inschakelen indien kaartlagen verschillen van CRS`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:151
+msgid "|moderate| |FA| Saving a Dataset to Another CRS"
+msgstr "|moderate| |FA| Een gegevensset opslaan in een anderCRS"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:153
+msgid ""
+"Remember when you calculated areas for the buildings in the "
+":guilabel:`Classification` lesson? You did it so that you could classify the"
+" buildings according to area."
+msgstr "Weet u nog dat u gebieden heeft berekend voor de gebouwen in de les :guilabel:`Classificatie`? U deed dat zo dat u de gebouwen kon classificeren overeenkomstig het gebied."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:157
+msgid "Open your usual map again (containing the |majorUrbanName| data)."
+msgstr "Open opnieuw uw gewone kaart (die de gegevens voor het gebied |majorUrbanName| bevat)."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:158
+msgid "Open the attribute table for the :guilabel:`buildings` layer."
+msgstr "Open de attributentabel voor de laag :guilabel:`buildings`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:159
+msgid "Scroll to the right until you see the :kbd:`AREA` field."
+msgstr "Scroll naar rechts totdat u het veld :kbd:`AREA` ziet."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:161
+msgid ""
+"Notice how the areas are all very small; probably zero. This is because "
+"these areas are given in degrees - the data isn't in a Projected Coordinate "
+"System. In order to calculate the area for the farms in square meters, the "
+"data has to be in square meters as well. So, we'll need to reproject it."
+msgstr "Merk op dat de gebieden zeer klein zijn; waarschijnlijk nul. Dat komt omdat de gebieden zijn vermeld in graden - de gegevens staan niet in een geProjecteerd Coördinaten Systeem.  De gegevens moeten ook in vierkante meters zijn om het gebied voor de boerderij ook in vierkante meters te kunnen berekenen. We moeten ze dus opnieuw projecteren."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:166
+msgid ""
+"But it won't help to just use 'on the fly' reprojection. 'On the fly' does "
+"what it says - it doesn't change the data, it just reprojects the layers as "
+"they appear on the map. To truly reproject the data itself, you need to "
+"export it to a new file using a new projection."
+msgstr "Maar het helpt niet om alleen 'direct' opnieuw projecteren te gebruiken. 'Direct' doet wat het zegt - het wijzigt de gegevens niet, het projecteert de lagen slechts opnieuw als zij op de kaart verschijnen. U moet ze naar een nieuw bestand exporteren met behulp van een nieuwe projectie om de gegevens zelf opnieuw te projecteren,."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:171
+msgid ""
+"Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers "
+"list`."
+msgstr "Klik met rechts op de laag :guilabel:`buildings` in de :guilabel:`Lagenlijst`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:172
+msgid ""
+"Select :guilabel:`Save As...` in the menu that appears. You will be shown "
+"the :guilabel:`Save vector layer as...` dialog."
+msgstr "Selecteer :guilabel:`Opslaan als...` in het menu dat verschijnt. U zult het dialoogvenster :guilabel:`Vectorlaag opslaan als...` te zien krijgen."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:174
+msgid ""
+"Click on the :guilabel:`Browse` button next to the :guilabel:`Save as` "
+"field."
+msgstr "Klik op de knop :guilabel:`Bladeren` naast het veld :guilabel:`Opslaan als`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:175
+msgid ""
+"Navigate to :kbd:`exercise_data/` and specify the name of the new layer as "
+":kbd:`buildings_reprojected.shp`."
+msgstr "Navigeer naar :kbd:`exercise_data/` en specificeer de naam voor de nieuwe laag als :kbd:`buildings_reprojected.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:177
+msgid "Leave the :guilabel:`Encoding` unchanged."
+msgstr "Laat :guilabel:`Codering` ongewijzigd."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:178
+msgid ""
+"Change the value of the :guilabel:`Layer CRS` dropdown to "
+":guilabel:`Selected CRS`."
+msgstr "Wijzig de waarde van de keuzelijst :guilabel:`Laag CRS` naar :guilabel:`Geselecteerd CRS`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:180
+msgid "Click the :guilabel:`Browse` button beneath the dropdown."
+msgstr "Klik op de knop :guilabel:`Bladeren` onder de keuzelijst."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:181
+msgid "The :guilabel:`CRS Selector` dialog will now appear."
+msgstr "Het dialoogvenster :guilabel:`Keuze Coördinaten ReferentieSysteem` zal nu verschijnen."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:182
+msgid "In its :guilabel:`Filter` field, search for :kbd:`34S`."
+msgstr "Zoek, in het veld :guilabel:`Filter`, naar :kbd:`34S`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:183
+msgid "Choose :guilabel:`WGS 84 / UTM zone 34S` from the list."
+msgstr "Kies :guilabel:`WGS 84 / UTM zone 34S` uit de lijst."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:184
+msgid "Leave the :guilabel:`Symbology export` unchanged."
+msgstr "Laat :guilabel:`Exporteren van symbologie` ongewijzigd."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:186
+msgid "The :guilabel:`Save vector layer as...` dialog now looks like this:"
+msgstr "Het dialoogvenster :guilabel:`Vectorlaag opslaan als...` ziet er nu zo uit:"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:193
+msgid "Start a new map and load the reprojected layer you just created."
+msgstr "Start een nieuwe kaart en laad de opnieuw geprojecteerde laag die u zojuist gemaakt heeft."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:195
+msgid ""
+"Refer back to the lesson on :guilabel:`Classification` to remember how you "
+"calculated areas."
+msgstr "Bekijk de les over :guilabel:`Classificatie` nog eens om te zien hoe u gebieden berekent."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:198
+msgid ""
+"Update (or add) the :kbd:`AREA` field by running the same expression as "
+"before:"
+msgstr "Werk het veld :kbd:`AREA` bij (of voeg dat toe) door dezelfde uitdrukking als eerst uit te voeren:"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:203
+msgid ""
+"This will add an :kbd:`AREA` field with the size of each building in square "
+"meters"
+msgstr "Dat zal een veld :kbd:`AREA` toevoegen met de grootte van elk gebouw in vierkante meters"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:206
+msgid ""
+"To calculate the area in another unit of measurement, for example hectares, "
+"use the :kbd:`AREA` field to create a second column:"
+msgstr "Gebruik, om het gebied te berekenen in een andere maateenheid, bijvoorbeeld hectares, het veld :kbd:`AREA` om een tweede kolom te maken:"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:212
+msgid ""
+"Look at the new values in your attribute table. This is much more useful, as"
+" people actually quote building size in meters, not in degrees. This is why "
+"it's a good idea to reproject your data, if necessary, before calculating "
+"areas, distances, and other values that are dependent on the spatial "
+"properties of the layer."
+msgstr "Bekijk de nieuwe waarden in uw attributentabel. Dit is veel handiger omdat mensen in feite de grootte van gebouwen beschrijven in meters, niet in graden. Dat is een van de redenen waarom het een goed idee is uw gegevens, indien nodig, opnieuw te projecteren vóórdat u gebieden, afstanden en andere waarden berekent die afhankelijk zijn van de ruimtelijke eigenschappen van de laag."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:219
+msgid "|hard| |FA| Creating Your Own Projection"
+msgstr "|hard| |FA| Uw eigen projectie maken"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:221
+msgid ""
+"There are many more projections than just those included in QGIS by default."
+" You can also create your own projections."
+msgstr "Er zijn nog veel meer projecties dan die welke standaard zijn opgenomen in QGIS. U kunt ook uw eigen projecties maken."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:224
+msgid "Start a new map."
+msgstr "Begin een nieuwe kaart."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:225
+msgid "Load the :kbd:`world/oceans.shp` dataset."
+msgstr "Laad de gegevensset :kbd:`world/oceans.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:226
+msgid ""
+"Go to :menuselection:`Settings --> Custom CRS...` and you'll see this "
+"dialog:"
+msgstr "Ga naar :menuselection:`Extra --> Aangepast CRS...` en u zult dit dialoogvenster zien:"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:231
+msgid ""
+"Click on the :guilabel:`Add new CRS` button to create a new projection."
+msgstr "Klik op de knop :guilabel:`Nieuw CRS toevoegen` om een nieuwe projectie te maken."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:233
+msgid "An interesting projection to use is called :kbd:`Van der Grinten I`."
+msgstr "Een interessante projectie om te gebruiken is genaamd :kbd:`Van der Grinten I`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:235
+msgid "Enter its name in the :guilabel:`Name` field."
+msgstr "Voer de naam ervan in in het veld :guilabel:`Naam`."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:237
+msgid ""
+"This projection represents the Earth on a circular field instead of a "
+"rectangular one, as most other projections do."
+msgstr "Deze projectie geeft de Aarde weer op een cirkelvormig veld in plaats van op een rechthoekig, zoals de meeste andere projecties doen."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:240
+msgid "For its parameters, use the following string:"
+msgstr "Gebruik, voor de parameters ervan, de volgende tekenreeks:"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:242
+msgid ""
+":kbd:`+proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m"
+" +no_defs`"
+msgstr ":kbd:`+proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m +no_defs`"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:248
+msgid "Enable \"on the fly\" reprojection."
+msgstr "Schakel \"direct\" opnieuw projecteren in."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:249
+msgid ""
+"Choose your newly defined projection (search for its name in the "
+":guilabel:`Filter` field)."
+msgstr "Kies uw nieuwe gedefinieerde projectie (zoek naar de naam ervan in het veld :guilabel:`Filter`)."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:251
+msgid "On applying this projection, the map will be reprojected thus:"
+msgstr "Bij het toepassen van deze projectie, zal de kaart opnieuw geprojecteerd worden als:"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:257
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:259
+msgid ""
+"Different projections are useful for different purposes. By choosing the "
+"correct projection, you can ensure that the features on your map are being "
+"represented accurately."
+msgstr "Verschillende projecties zijn handige voor verschillende doeleinden. Door de juiste projectie te kiezen kunt u er voor zorgen dat de objecten op uw kaart nauwkeurig worden weergegeven."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:264
+msgid "|FR|"
+msgstr "|FR|"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:266
+msgid ""
+"Materials for the *Advanced* section of this lesson were taken from `this "
+"article <http://tinyurl.com/75b92np>`_."
+msgstr "Materiaal voor het gedeelte *Gevorderd* van deze les is afkomstig uit `dit artikel <http://tinyurl.com/75b92np>`_."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:269
+msgid ""
+"Further information on Coordinate Reference Systems is available `here "
+"<http://linfiniti.com/dla/worksheets/7_CRS.pdf>`_."
+msgstr "Meer informatie over Coördinaten ReferentieSystemen is  `hier <http://linfiniti.com/dla/worksheets/7_CRS.pdf>`_ beschikbaar."
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:273
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:275
+msgid ""
+"In the next lesson you'll learn how to analyze vector data using QGIS' "
+"various vector analysis tools."
+msgstr "In de volgende les zult u leren hoe u vectorgegevens kunt analyseren met behulp van de verschillende gereedschappen voor vectoranalyse in QGIS."

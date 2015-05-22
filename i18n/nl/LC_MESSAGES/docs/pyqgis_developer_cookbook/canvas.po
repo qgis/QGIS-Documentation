@@ -1,0 +1,381 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2015-02-28 15:40+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:11
+msgid "Using Map Canvas"
+msgstr "Kaartvenster gebruiken"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:13
+msgid ""
+"The Map canvas widget is probably the most important widget within QGIS "
+"because it shows the map composed from overlaid map layers and allows "
+"interaction with the map and layers. The canvas shows always a part of the "
+"map defined by the current canvas extent. The interaction is done through "
+"the use of **map tools**: there are tools for panning, zooming, identifying "
+"layers, measuring, vector editing and others. Similar to other graphics "
+"programs, there is always one tool active and the user can switch between "
+"the available tools."
+msgstr "De widget Kaartvenster is waarschijnlijk de meest belangrijke widget in QGIS, omdat het de samengestelde kaart weergeeft uit op elkaar gelegde kaartlagen en interactie mogelijk maakt met de kaart en de lagen. Het kaartvenster geeft altijd een gedeelte van de kaart weer, gedefinieerd door het huidige bereik van het kaartvenster. De interactie wordt gedaan door middel van het gebruiken van **gereedschappen voor de kaart**: er zijn gereedschappen pannen, zoomen, identificeren van lagen, meten, bewerken van vector en andere. Soortgelijk aan andere grafische programma's is er altijd één gereedschap actief en de gebruiker kan tussen de verschillende gereedschappen schakelen."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:29
+msgid ""
+"Whenever the map has been panned, zoomed in/out (or some other action "
+"triggers a refresh), the map is rendered again within the current extent. "
+"The layers are rendered to an image (using :class:`QgsMapRenderer` class) "
+"and that image is then displayed in the canvas. The graphics item (in terms "
+"of the Qt graphics view framework) responsible for showing the map is "
+":class:`QgsMapCanvasMap` class. This class also controls refreshing of the "
+"rendered map. Besides this item which acts as a background, there may be "
+"more **map canvas items**. Typical map canvas items are rubber bands (used "
+"for measuring, vector editing etc.) or vertex markers. The canvas items are "
+"usually used to give some visual feedback for map tools, for example, when "
+"creating a new polygon, the map tool creates a rubber band canvas item that "
+"shows the current shape of the polygon. All map canvas items are subclasses "
+"of :class:`QgsMapCanvasItem` which adds some more functionality to the basic"
+" ``QGraphicsItem`` objects."
+msgstr "Wanneer de kaart wordt verschoven, in of uit wordt gezoomd (of een andere actie die een verversing activeert), wordt de kaart opnieuw gerenderd binnen de huidige inhoud. De lagen worden tot een afbeelding gerenderd (met behulp van de klasse :class:`QgsMapRenderer`) en ie afbeelding wordt dan weergegeven in het kaartvenster. Het item voor de afbeelding (in termen van de grafische weergave van het framework van Qt) dat verantwoordelijk is voor het weergeven van de kaart is de klasse :class:`QgsMapCanvasMap`. Deze klasse beheert ook het vernieuwen van de gerenderde kaart. Naast het item dat dat optreedt als een achtergrond, kunnen er meer **items voor het kaartvenster** zijn. Typische items voor het kaartvenster zijn elastieken banden (gebruikt voor meten, bewerken van vectoren etc.) of markeringen van punten. De items voor het kaartvenster worden gewoonlijk gebruikt om een bepaalde visuele terugkoppeling te geven voor gereedschappen voor de kaart, bijvoorbeeld, bij het maken van een nieuwe polygoon,maakt het gereedschap voor de kaart een item elastieken band die de huidige vorm van de polygoon weergeeft. Alle items voor het kaartvenster zijn sub-klassen van :class:`QgsMapCanvasItem` die iets meer functionaliteit toevoegt aan de kasisobjecten ``QGraphicsItem``."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:45
+msgid "To summarize, the map canvas architecture consists of three concepts:"
+msgstr "Samenvattend, de architectuur van het kaartvenster bestaat uit drie concepten:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:47
+msgid "map canvas --- for viewing of the map"
+msgstr "kaartvenster --- voor het bekijken van de kaart"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:48
+msgid ""
+"map canvas items --- additional items that can be displayed in map canvas"
+msgstr "items voor het kaartvenster --- aanvullende items die kunnen worden weergegeven in het kaartvenster"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:49
+msgid "map tools --- for interaction with map canvas"
+msgstr "gereedschappen voor de kaart --- voor interactie met het kaartvenster"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:54
+msgid "Embedding Map Canvas"
+msgstr "Kaartvenster inbedden"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:64
+msgid ""
+"This produces a standalone window with map canvas. It can be also embedded "
+"into an existing widget or window. When using .ui files and Qt Designer, "
+"place a ``QWidget`` on the form and promote it to a new class: set "
+"``QgsMapCanvas`` as class name and set ``qgis.gui`` as header file. The "
+"``pyuic4`` utility will take care of it. This is a very convenient way of "
+"embedding the canvas. The other possibility is to manually write the code to"
+" construct map canvas and other widgets (as children of a main window or "
+"dialog) and create a layout."
+msgstr "Dit produceert een zelfstandig venster met een kaartvenster. Het kan ook worden ingebed in een bestaand widget of venster. Plaats een ``QWidget`` op het formulier en promoveer dat tot een nieuwe klasse: stel ``QgsMapCanvas`` in als naam voor de klasse en stel ``qgis.gui`` in als kopbestand bij het gebruiken van .ui-bestanden en Qt Designer. De functionaliteit ``pyuic4`` zal er zorg voor dragen. Dit is een handige manier om het kaartvenster in te bedden. De andere mogelijkheid is om handmatig de code te schrijven door het kaartvenster en andere widgets (als kinderen van een hoofdvenster of dialoogvenster) te construeren en een lay-out te maken."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:80
+msgid ""
+"(In case you are wondering, ``Qt`` comes from ``PyQt4.QtCore`` module and "
+"``Qt.white`` is one of the predefined ``QColor`` instances.)"
+msgstr "(Voor het geval u zich dat afvraagt, ``Qt`` komt van de module ``PyQt4.QtCore`` en ``Qt.white`` is één van de voorgedefinieerde instances ``QColor``.)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:102
+msgid ""
+"After executing these commands, the canvas should show the layer you have "
+"loaded."
+msgstr "Nadat deze opdrachten zijn uitgevoerd, zou het kaartvenster de laag moeten weergeven die u heeft geladen."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:108
+msgid "Using Map Tools with Canvas"
+msgstr "Gereedschappen voor de kaart gebruiken in het kaartvenster"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:110
+msgid ""
+"The following example constructs a window that contains a map canvas and "
+"basic map tools for map panning and zooming.  Actions are created for "
+"activation of each tool: panning is done with :class:`QgsMapToolPan`, "
+"zooming in/out with a pair of :class:`QgsMapToolZoom` instances. The actions"
+" are set as checkable and later assigned to the tools to allow automatic "
+"handling of checked/unchecked state of the actions -- when a map tool gets "
+"activated, its action is marked as selected and the action of the previous "
+"map tool is deselected. The map tools are activated using :func:`setMapTool`"
+" method."
+msgstr "Het volgende voorbeeld maakt een venster dat een kaartvenster bevat en basisgereedschappen voor het verschuiven van en zoomen op de kaart.  Acties zijn gemaakt voor het activeren van elk gereedschap: verschuiven (pannen) wordt gedaan met :class:`QgsMapToolPan`, in/uitzoomen met een paar van instances van :class:`QgsMapToolZoom`. De acties zijn ingesteld als te selecteren en later toegewezen aan het gereedschap om de automatische afhandeling van de status geselecteerd/niet geselecteerd van de acties mogelijk te maken -- wanneer een gereedschap voor de kaart wordt geactiveerd, wordt de actie daarvan gemarkeerd als geselecteerd en de actie van het vorige gereedschap voor de kaart wordt gedeselecteerd. De gereedschappen voor de kaart worden geactiveerd met behulp van de methode :func:`setMapTool`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:184
+msgid ""
+"Just make sure that the ``mywnd.py`` file is located within Python search "
+"path (``sys.path``). If it isn't, you can simply add it: "
+"``sys.path.insert(0, '/my/path')`` --- otherwise the import statement will "
+"fail, not finding the module."
+msgstr "Zorg er echter voor dat het bestand ``mywnd.py`` is geplaatst binnen het zoekpad van Python (``sys.path``). Als dat niet zo is kunt u het eenvoudig toevoegen: ``sys.path.insert(0, '/my/path')`` --- anders zal het argument voor het importeren falen, het vindt de module niet."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:192
+msgid "Rubber Bands and Vertex Markers"
+msgstr "Elastieken banden en markeringen voor punten"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:194
+msgid ""
+"To show some additional data on top of the map in canvas, use map canvas "
+"items. It is possible to create custom canvas item classes (covered below), "
+"however there are two useful canvas item classes for convenience: "
+":class:`QgsRubberBand` for drawing polylines or polygons, and "
+":class:`QgsVertexMarker` for drawing points.  They both work with map "
+"coordinates, so the shape is moved/scaled automatically when the canvas is "
+"being panned or zoomed."
+msgstr "Gebruik items voor het kaartvenster om enkele aanvullende gegevens bovenop de kaart in het kaartvenster weer te geven. Het is mogelijk om aangepaste klassen voor items voor het kaartvenster te maken (hieronder behandeld), er zijn voor het gemak echter twee handige klassen voor items voor het kaartvenster: :class:`QgsRubberBand` voor het tekenen van polylijnen of polygonen, en :class:`QgsVertexMarker` voor het tekenen van punten.  Zij werken beide met coördinaten op de kaart, dus de vorm wordt automatisch verplaatst/geschaald als het kaartvenster wordt verschoven of als er wordt gezoomd."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:218
+msgid ""
+"Note that points for polygon is not a plain list: in fact, it is a list of "
+"rings containing linear rings of the polygon: first ring is the outer "
+"border, further (optional) rings correspond to holes in the polygon."
+msgstr "Onthoud dat de punten voor polygoon geen platte lijst is: in feite is het een lijst van ringen die lineaire ringen van de polygoon bevat: de eerste ring is de buitenste grens, verdere (optionele) ringen corresponderen met gaten in de polygoon."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:238
+msgid ""
+"(in C++ it's possible to just delete the item, however in Python ``del r`` "
+"would just delete the reference and the object will still exist as it is "
+"owned by the canvas)"
+msgstr "(in C++ is het mogelijk het item eenvoudigweg te verwijderen, in Python echter zou ``del r`` slechts de verwijzing verwijderen en zou het object nog steeds bestaan omdat het eigendom is van het kaartvenster)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:262
+msgid ""
+"For temporary hiding of vertex markers and removing them from canvas, the "
+"same applies as for the rubber bands."
+msgstr "Voor het tijdelijk verbergen van markeringen voor punten en ze uit het kaartvenster te verwijderen, is hetzelfde van toepassing als voor elastieken banden."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:268
+msgid "Writing Custom Map Tools"
+msgstr "Aangepaste gereedschappen voor de kaart schrijven"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:273
+msgid ""
+"Map tools should inherit from the :class:`QgsMapTool` class or any derived "
+"class, and selected as active tools in the canvas using the "
+":func:`setMapTool` method as we have already seen."
+msgstr "Gereedschappen voor de kaart zouden moeten ervan van de klasse :class:`QgsMapTool` of een daarvan afgeleide klasse, en in het kaartvenster moeten worden geselecteerd als actief gereedschap met behulp van de methode :func:`setMapTool` zoals we al eerder hebben gezien."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:348
+msgid "Writing Custom Map Canvas Items"
+msgstr "Aangepaste items voor het kaartvenster schrijven"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:43
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:51
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:105
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:189
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:189
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:265
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:345
+msgid "map canvas"
+msgstr "kaartvenster"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:43
+msgid "architecture"
+msgstr "architectuur"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:51
+msgid "embedding"
+msgstr "inbedden"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:105
+msgid "map tools"
+msgstr "gereedschappen voor de kaart"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:189
+msgid "rubber bands"
+msgstr "elastieken banden"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:189
+msgid "vertex markers"
+msgstr "markeringen voor punten"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:265
+msgid "writing custom map tools"
+msgstr "aangepaste gereedschappen voor de kaart schrijven"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:345
+msgid "writing custom canvas items"
+msgstr "aangepaste items voor het kaartvenster schrijven"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:21
+msgid ""
+"Map canvas is implemented as :class:`QgsMapCanvas` class in :mod:`qgis.gui` "
+"module.  The implementation is based on the Qt Graphics View framework. This"
+" framework generally provides a surface and a view where custom graphics "
+"items are placed and user can interact with them.  We will assume that you "
+"are familiar enough with Qt to understand the concepts of the graphics "
+"scene, view and items. If not, please make sure to read the `overview of the"
+" framework <http://qt-project.org/doc/qt-4.8/graphicsview.html>`_."
+msgstr "Kaartvenster wordt geïmplementeerd als klasse :class:`QgsMapCanvas` in de module :mod:`qgis.gui`.  De implementatie is gebaseerd op het framework Qt Graphics View. Dat raamwerk verschaft in het algemeen een oppervlak en een weergave waar aangepaste grafische items zijn geplaatst en waarmee de gebruiker interactief kan werken.  We gaan er van uit dat u bekend genoeg bent met Qt om de concepten van de grafische scene, weergave en items te begrijpen. Indien niet, zorg er dan voor `overview of the framework <http://qt-project.org/doc/qt-4.8/graphicsview.html>`_ te hebben gelezen."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:56
+msgid ""
+"Map canvas is a widget like any other Qt widget, so using it is as simple as"
+" creating and showing it"
+msgstr "Kaartvenster is een widget net als elk ander widget van Qt, dus het gebruiken ervan is zo eenvoudig als het maken en weergeven ervan"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:72
+msgid ""
+"By default, map canvas has black background and does not use anti-aliasing. "
+"To set white background and enable anti-aliasing for smooth rendering"
+msgstr "Standaard heeft kaartvenster een zwarte achtergrond en gebruikt geen anti-aliasing. Een witte achtergrond instellen en anti-aliasing inschakelen voor glad renderen"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:83
+msgid ""
+"Now it is time to add some map layers. We will first open a layer and add it"
+" to the map layer registry.  Then we will set the canvas extent and set the "
+"list of layers for canvas"
+msgstr "Nu is het tijd om enkele kaartlagen toe te voegen. We zullen eerst een laag openen en die toevoegen aan het register van de kaartlaag. Daarna zullen we het bereik van het kaartvenster instellen alsmede de lijst met lagen voor het kaartvenster"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:174
+msgid ""
+"You can put the above code to a file, e.g. ``mywnd.py`` and try it out in "
+"Python console within QGIS.  This code will put the currently selected layer"
+" into newly created canvas"
+msgstr "U kunt de bovenstaande code plaatsen in een bestand, bijv. ``mywnd.py`` en het uitproberen in de console van Python binnen QGIS. Deze code zal de huidige geselecteerde laag in een nieuw gemaakt kaartvenster plaatsen"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:202
+msgid "To show a polyline"
+msgstr "Een polylijn weergeven"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:210
+msgid "To show a polygon"
+msgstr "Een polygoon weregeven"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:222
+msgid ""
+"Rubber bands allow some customization, namely to change their color and line"
+" width"
+msgstr "Elastieken banden maken enige aanpassingen mogelijk, namelijk om hun kleur en lijndikte te wijzigen"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:230
+msgid ""
+"The canvas items are bound to the canvas scene. To temporarily hide them "
+"(and show again, use the :func:`hide` and :func:`show` combo. To completely "
+"remove the item, you have to remove it from the scene of the canvas"
+msgstr "De items voor het kaartvenster zij gebonden aan de scene van het kaartvenster. Gebruik de combinatie :func:`hide` en :func:`show` om ze tijdelijk te verbergen (en weer opnieuw weer te geven). U moet het uit de scene van het kaartvenster verwijderen om het item volledig te verwijderen"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:242
+msgid ""
+"Rubber band can be also used for drawing points, however "
+":class:`QgsVertexMarker` class is better suited for this "
+"(:class:`QgsRubberBand` would only draw a rectangle around the desired "
+"point). How to use the vertex marker"
+msgstr "Een elastieken band kan ook gebruikt worden om punten te tekenen, de klasse :class:`QgsVertexMarker` is echter beter geschikt hiervoor (:class:`QgsRubberBand` zou alleen een rechthoek rondom het gewenste punt tekenen). Hoe de markering voor punten te gebruiken"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:252
+msgid ""
+"This will draw a red cross on position [0,0]. It is possible to customize "
+"the icon type, size, color and pen width"
+msgstr "Dit zal een rood kruis tekenen op de positie [0,0]. Het is mogelijk om het type pictogram, de grootte, de kleur en de dikte van de pen aan te passen"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:270
+msgid ""
+"You can write your custom tools, to implement a custom behaviour to actions "
+"performed by users on the canvas."
+msgstr "U kunt aangepaste gereedschappen schrijven, om een aagepast gedrag te implementeren voor acties die door gebruikers op het kaartvenster worden uitgevoerd."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:277
+msgid ""
+"Here is an example of a map tool that allows to define a rectangular extent "
+"by clicking and dragging on the canvas. When the rectangle is defined, it "
+"prints its boundary coordinates in the console. It uses the rubber band "
+"elements described before to show the selected rectangle as it is being "
+"defined."
+msgstr "Hier is een voorbeeld van een gereedschap voor de kaart dat het mogelijk maakt een rechthoekig bereik te definiëren door te klikken en te slepen in het kaartvenster. Wanneer de rechthoek is gedefinieerd, zal het de coördinaten voor de begrenzing afdrukken in de console. Het gebruikt de elementen voor elastieken banden zoals eerder beschreven om de geselecteerde rechthoek weer te geven als die wordt gedefinieerd."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:353
+msgid "**TODO:**"
+msgstr "**TODO:**"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:351
+msgid "how to create a map canvas item"
+msgstr "hoe een item voor het kaartvenster te maken"
+
+#~ msgid ""
+#~ "Map canvas is implemented as :class:`QgsMapCanvas` class in :mod:`qgis.gui` "
+#~ "module.  The implementation is based on the Qt Graphics View framework. This"
+#~ " framework generally provides a surface and a view where custom graphics "
+#~ "items are placed and user can interact with them.  We will assume that you "
+#~ "are familiar enough with Qt to understand the concepts of the graphics "
+#~ "scene, view and items. If not, please make sure to read the `overview of the"
+#~ " framework <http://doc.qt.nokia.com/graphicsview.html>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Map canvas is a widget like any other Qt widget, so using it is as simple as"
+#~ " creating and showing it::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default, map canvas has black background and does not use anti-aliasing. "
+#~ "To set white background and enable anti-aliasing for smooth rendering::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now it is time to add some map layers. We will first open a layer and add it"
+#~ " to the map layer registry.  Then we will set the canvas extent and set the "
+#~ "list of layers for canvas::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can put the above code to a file, e.g. ``mywnd.py`` and try it out in "
+#~ "Python console within QGIS.  This code will put the currently selected layer"
+#~ " into newly created canvas::"
+#~ msgstr ""
+
+#~ msgid "To show a polyline::"
+#~ msgstr ""
+
+#~ msgid "To show a polygon::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Rubber bands allow some customization, namely to change their color and line"
+#~ " width::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The canvas items are bound to the canvas scene. To temporarily hide them "
+#~ "(and show again, use the :func:`hide` and :func:`show` combo. To completely "
+#~ "remove the item, you have to remove it from the scene of the canvas::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Rubber band can be also used for drawing points, however "
+#~ ":class:`QgsVertexMarker` class is better suited for this "
+#~ "(:class:`QgsRubberBand` would only draw a rectangle around the desired "
+#~ "point). How to use the vertex marker::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This will draw a red cross on position [0,0]. It is possible to customize "
+#~ "the icon type, size, color and pen width::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can write your custom tools, to implement a custom behaviour to actions "
+#~ "perfored by users on the canvas."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here is an example of a map tool that allows to define a rectangular extent "
+#~ "by clicking and draggin on the canvas. When the rectangle is defined, it "
+#~ "prints its boundary coordinates in the console. It uses the rubber band "
+#~ "elements described before to show the selected rectangle as it is being "
+#~ "defined."
+#~ msgstr ""
+
+#~ msgid "**TODO:** how to create a map canvas item"
+#~ msgstr ""

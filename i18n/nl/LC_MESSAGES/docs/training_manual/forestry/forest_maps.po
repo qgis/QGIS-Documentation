@@ -1,0 +1,942 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014-2015
+# Milo van der Linden <milo@dogodigi.net>, 2014
+# Rodolfo_Jadon, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-01-04 13:11+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:6
+msgid "|LS| Creating Detailed Maps with the Atlas Tool"
+msgstr "|LS| Gedetailleerde kaarten maken met het gereedschap Atlas"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:8
+msgid ""
+"The systematic sampling design is ready and the field teams have loaded the "
+"GPS coordinates in their navigation devices. They also have a field data "
+"form where they will collect the information measured at every sample plot. "
+"To easier find their way to every sample plot, they have requested a number "
+"of detail maps where some ground information can be clearly seen along with "
+"a smaller subset of sample plots and some information about the map area. "
+"You can use the Atlas tool to automatically generate a number of maps with a"
+" common format."
+msgstr "Het systematisch ontwerp voor het nemen van monsters is gereed en de teams in het veld hebben de GPS-coördinaten in hun navigatieapparaten geladen. Zij hebben ook een formulier met veldgegevens waarop zij de informatie zullen verzamelen die zij hebben gemeten op elke monsterplaats. Zij hebben een aantal gedetailleerde kaarten gevraagd waarop enige informatie over het terrein duidelijk zichtbaar is, tezamen met een kleinere subset van monsterplaatsen en enige informatie over het gebied van de kaart om eenvoudiger hun weg naar elke monsterplaats te vinden. U kunt het gereedschap Atlas gebruiken om automatisch een aantal kaarten in een gelijke indeling te generen."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:10
+msgid ""
+"**The goal for this lesson:** Learn to use the Atlas tool in QGIS to "
+"generate detailed printable maps to assist in the field inventory work."
+msgstr "**Het doel voor deze les:** Het gereedschap Atlas in QGIS leren gebruiken om gedetailleerde af te drukken kaarten te genereren om te helpen bij de inventarisatie in het veld."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:13
+msgid "|basic| |FA| Preparing the Map Composer"
+msgstr "|basic| |FA| De Printvormgeving voorbereiden"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:15
+msgid ""
+"Before we can automate the detailed maps of the forest area and our sampling"
+" plots, we need to create a map template with all the elements we consider "
+"useful for the field work. Of course the most important will be a properly "
+"styled but, as you have seen before, you will also need to add lots of other"
+" elements that complete the printed map."
+msgstr "Vóór we de gedetailleerde kaarten van het bosgebied en onze monsterplaatsen kunnen automatiseren, moeten we een kaartsjabloon maken met alle elementen die we nuttig achten voor het werk in het veld. Natuurlijk is het meest belangrijke dat het goed opgemaakt is, maar, zoals u al eerder heeft gezien, u zult ook heel veel andere elementen moeten toevoegen die de afgedrukte kaart completeren."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:17
+msgid ""
+"Open the QGIS project from the previous lesson :kbd:`forest_inventory.qgs`. "
+"You should have at least the following layers:"
+msgstr "Open het project :kbd:`forest_inventory.qgs` van QGIS vanuit de vorige les. U zou ten minste de volgende lagen moeten hebben:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:19
+msgid ""
+":kbd:`forest_stands_2012` (with a 50% transparency, green fill and darker "
+"green border lines)."
+msgstr ":kbd:`forest_stands_2012` (met een transparantie van 50%, groene vulling en donkergroene lijnen als rand)."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:20
+msgid ":kbd:`systematic_plots_clip`."
+msgstr ":kbd:`systematic_plots_clip`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:21
+msgid ":kbd:`rautjarvi_aerial`."
+msgstr ":kbd:`rautjarvi_aerial`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:23
+msgid "Save the project with a new name, :kbd:`map_creation.qgs`."
+msgstr "Sla het project op onder de nieuwe naam :kbd:`map_creation.qgs`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:25
+msgid ""
+"To create a printable map, remember that you use the :guilabel:`Composer "
+"Manager`:"
+msgstr "Onthoud dat u de :guilabel:`Printvormgeving-manager`: gebruikt om een kaart te maken die kan worden afgedrukt,"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:27
+msgid "Open :menuselection:`Project --> Composer Manager...`."
+msgstr "Open :menuselection:`Project --> Printvormgeving-manager...`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:28
+msgid "In the :guilabel:`Composer manager` dialog."
+msgstr "In het dialoogvenster :guilabel:`Printvormgeving-manager`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:29
+msgid ""
+"Click the :guilabel:`Add` button and name your composer :kbd:`forest_map`."
+msgstr "Klik op de knop :guilabel:`Toevoegen` en noem uw compositie :kbd:`forest_map`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:30
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:290
+msgid "Click :guilabel:`OK`."
+msgstr "Klik op :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:31
+msgid "Click the :guilabel:`Show` button."
+msgstr "Klik op de knop :guilabel:`Tonen`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:33
+msgid ""
+"Set up the printer options so that your maps will suit your paper and "
+"margins, for an A4 paper:"
+msgstr "Stel de printeropties zo in dat uw kaarten en marges op uw papier passen, voor een A4-tje:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:35
+msgid "Open menuselection:`Composer --> Page Setup`."
+msgstr "Open menuselection:`Printvormgeving --> Pagina-instellingen`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:36
+msgid ":guilabel:`Size` is :guilabel:`A4 (217 x 297 mm)`."
+msgstr ":guilabel:`Grootte` is :guilabel:`A4 (217 x 297 mm)`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:37
+msgid ":guilabel:`Orientation` is :guilabel:`Landscape`."
+msgstr ":guilabel:`Oriëntatie` is :guilabel:`Landschap`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:38
+msgid ":guilabel:`Margins (milimeters)` are all set to :kbd:`5`."
+msgstr ":guilabel:`Marges (millimeters)` worden allemaal ingesteld op :kbd:`5`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:40
+msgid ""
+"In the :guilabel:`Print Composer` window, go to the :guilabel:`Composition` "
+"tab (on the right panel) and make sure that these settings for "
+":guilabel:`Paper and quality` are the same you defined for the printer:"
+msgstr "Ga, in het venster :guilabel:`Printvormgeving`, naar de tab :guilabel:`Lay-out` (in het paneel rechts) en zorg er voor dat deze instellingen voor :guilabel:`Papier en kwaliteit` hetzelfde zijn als die welke u definieerde voor de printer:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:42
+msgid ":guilabel:`Size`: :kbd:`A4 (210x297mm)`."
+msgstr ":guilabel:`Voorinstellingen`: :kbd:`A4 (210x297mm)`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:43
+msgid ":guilabel:`Orientation`: :kbd:`Landscape`."
+msgstr ":guilabel:`Oriëntatie`: :kbd:`Liggend`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:44
+msgid ":guilabel:`Quality`: :kbd:`300dpi`."
+msgstr ":guilabel:`Export resolutie`: :kbd:`300dpi`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:46
+msgid ""
+"Composing a map is easier if you make use of the canvas grid to position the"
+" different elements. Review the settings for the composer grid:"
+msgstr "Het maken van een kaart gaat eenvoudiger als u gebruikt maakt van het kaartraster om de verschillende elementen te plaatsen. Bekijk de instellingen voor het raster van Printvormgeving:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:48
+msgid "In the :guilabel:`Composition` tab expand the :guilabel:`Grid` region."
+msgstr "Vergroot, op de tab :guilabel:`Lay-out`, het gebied :guilabel:`Hulplijnen en raster`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:49
+msgid "Check that :guilabel:`Spacing` is set to :kbd:`10 mm`."
+msgstr "Controleer of :guilabel:`Rasterafstand` is ingesteld op :kbd:`10 mm`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:50
+msgid "And that :guilabel:`Tolerance` is set to :kbd:`2 mm`."
+msgstr "En dat :guilabel:`Tolerantie voor 'snappen'` is ingesteld op :kbd:`2 mm`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:52
+msgid "You need to activate the use of the grid:"
+msgstr "U dient het gebruiken van het raster te activeren:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:54
+msgid "Open the :menuselection:`View` menu."
+msgstr "Open het menu :menuselection:`Beeld`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:55
+msgid "Check :guilabel:`Show grid`."
+msgstr "Klik op :guilabel:`Grid tonen`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:56
+msgid "Check :guilabel:`Snap to grid`."
+msgstr "Selecteer :guilabel:`Aan grid snappen`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:57
+msgid ""
+"Notice that options for using :guilabel:`guides` are checked by default, "
+"which allows you to see red guiding lines when you are moving elements in "
+"the composer."
+msgstr "Merk op dat de opties voor het gebruiken van :guilabel:`hulplijnen` standaard zijn geselecteerd, wat u in staat stelt rode hulplijnen te zien wanneer u elementen in de printvormgeving verplaatst."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:59
+msgid ""
+"Now you can start to add elements to your map canvas. Add first a map "
+"element so you can review how it looks as you will be making changes in the "
+"layers symbology:"
+msgstr "Nu kunt u beginnen met het toevoegen van elementen aan aan kaartvenster. Voeg eerst een kaartelement toe zodat u kunt bekijken hoe het er uitziet als u wijzigingen in de symbologie van de kaart maakt:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:61
+msgid "Click on the :guilabel:`Add New Map` button: |mActionAddMap|."
+msgstr "Klik op de knop :guilabel:`Nieuwe kaart toevoegen`: |mActionAddMap|."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:62
+msgid ""
+"Click and drag a box on the canvas so that the map occupies most of it."
+msgstr "Klik en sleep een rechthoek op het kaartvenster zodat de kaart het grootste deel daarvan bedekt."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:67
+msgid ""
+"Notice how the mouse cursor snaps to the canvas grid. Use this function when"
+" you add other elements. If you want to have more accuracy, change the grid "
+":guilabel:`Spacing` setting. If for some reason you don't want to snap to "
+"the grid at some point, you can always check or uncheck it in the "
+":menuselection:`View` menu."
+msgstr "Merk op hoe de muiscursor snapt aan het kaartraster. Gebruik deze functie als u andere elementen toevoegt. Als u nauwkeuriger wilt werken, wijzig dan de instelling :guilabel:`Rasterafstand` voor het raster. Als u om enige reden niet op een bepaald punt niet zou willen snappen aan het raster, kunt u het altijd in- of uitschakelen in het menu :menuselection:`Beeld`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:72
+msgid "|basic| |FA| Adding Background Map"
+msgstr "|basic| |FA| Een achtergrondkaart toevoegen"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:74
+msgid ""
+"Leave the composer open but go back to the map. Lets add some background "
+"data and create some styling so that the map content is as clear as "
+"possible."
+msgstr "Laat de printvormgeving open maar ga terug naar de kaart. Laten we enige achtergrondgegevens toevoegen en enige opmaak maken zodat de inhoud van de kaart zo duidelijk als maar mogelijk is."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:76
+msgid ""
+"Add the background raster :kbd:`basic_map.tif` that you can find in the "
+":kbd:`exercise_data\\\\forestry\\\\` folder."
+msgstr "Voeg het raster voor de achtergrond :kbd:`basic_map.tif` toe dat u kunt vinden in de map :kbd:`exercise_data\\\\forestry\\\\`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:77
+msgid ""
+"When prompted select the :kbd:`ETRS89 / ETRS-TM35FIN` CRS for the raster."
+msgstr "Selecteer het CRS :kbd:`ETRS89 / ETRS-TM35FIN` CRS voor het raster als daarnaar gevraagd wordt."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:79
+msgid ""
+"As you can see the background map is already styled. This type of ready to "
+"use cartography raster is very common. It is created from vector data, "
+"styled in a standard format and stored as a raster so that you don't have to"
+" bother styling several vector layers and worrying about getting a good "
+"result."
+msgstr "Zoals u kunt zien is de kaart voor de achtergrond al opgemaakt. Dit type direct te gebruiken cartografie-raster is vrij algemeen. Het wordt gemaakt vanuit vectorgegevens, opgemaakt in een standaard indeling en opgeslagen als een raster zodat u zich niet bezig hoeft te houden met het opmaken van verscheidene vectorlagen en u geen zorgen hoeft te maken of u wel een goed resultaat krijgt."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:81
+msgid ""
+"Now zoom to your sample plots, so that you can see only about four or five "
+"lines of plots."
+msgstr "Zoom nu in op uw monsterplaatsen, zodat u alleen nog vier of vijf lijnen met monsterplaatsen ziet."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:83
+msgid ""
+"The current styling of the sample plots is not the best, but how does it "
+"look in the map composer?:"
+msgstr "De huidige opmaak van de monsterplaatsen is niet al te best, maar hoe ziet het er in de printvormgeving uit?:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:88
+msgid ""
+"While during the last exercises, the white buffer was OK on top of the "
+"aerial image, now that the background image is mostly white you barely can "
+"see the labels. You can also check how it looks like on the composer:"
+msgstr "Gedurende de laatste oefeningen was de witte buffer  boven op de luchtfoto OK, maar nu dat de achtergrondafbeelding meest wit is kunt u de labels nog nauwelijks zien. U kunt ook controleren hoe het eruit ziet in de printvormgeving:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:90
+msgid "Go to the :guilabel:`Print Composer` window."
+msgstr "Ga naar het venster :guilabel:`Printvormgeving`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:91
+msgid ""
+"Use the |mActionSelect| button to select the map element in the composer."
+msgstr "Gebruik de knop |mActionSelect| om het kaartelement te selecteren in de printvormgeving."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:92
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:235
+msgid "Go to the :guilabel:`Item properties` tab."
+msgstr "Ga naar de tab :guilabel:`Item-eigenschappen`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:93
+msgid ""
+"Under :guilabel:`Extents` click on :guilabel:`Set to map canvas extent`."
+msgstr "Klik, onder :guilabel:`Bereik`, op :guilabel:`Toon bereik in kaartvenster`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:94
+msgid ""
+"If you need to refresh the element, under :guilabel:`Main properties` click "
+"on the :guilabel:`Update preview`."
+msgstr "Klik onder :guilabel:`Algemene eigenschappen` op de knop :guilabel:`Voorvertoning bijwerken` als u het element moet vernieuwen."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:96
+msgid ""
+"Obviously this is not good enough, you want to make the plot numbers as "
+"clearly visible as possible for the field teams."
+msgstr "Dit is duidelijk niet voldoende, u wilt de nummers van de monsterplaatsen zo zichtbaar mogelijk maken voor de teams in het veld."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:100
+msgid "|basic| |TY| Changing the Symbology of the Layers"
+msgstr "|basic| |TY| De symbologie van de lagen wijzigen"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:102
+msgid ""
+"You have been working in :doc:`../basic_map/index` with symbology and in "
+":doc:`../vector_classification/index` with labeling. Go back to those "
+"modules if you need to refresh about some of the available options and "
+"tools. Your goal is to get the plots locations and their name to be as "
+"clearly visible as possible but always allowing to see the background map "
+"elements. You can take some guidance from this image:"
+msgstr "In :doc:`../training_manual/basic_map/index` is gewerkt met symbologie en in :doc:`../vector_classification/index` met labels. Het is aan te raden deze delen van de handleiding nog even door te lezen. Doel is om locaties en namen van monsterplaatsen zichtbaar te maken op een manier waarbij de ondergrond ook zichtbaar blijft. Onderstaande afbeelding geeft een mogelijk resultaat:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:107
+msgid ""
+"You will use later the the green styling of the :kbd:`forest_stands_2012` "
+"layer. In order to keep it, and have a visualization of it that shows only "
+"the stand borders:"
+msgstr "U zult later de groene opmaak van de laag :kbd:`forest_stands_2012` gebruiken. Om die te behouden en een visualisatie er van te hebben die alleen de randen van de bosopstanden weergeeft:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:109
+msgid ""
+"Right click on :kbd:`forest_stands_2012` and select :guilabel:`Duplicate`"
+msgstr "Klik met rechts op :kbd:`forest_stands_2012` en selecteer :guilabel:`Dupliceren`"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:110
+msgid ""
+"you get a new layer named :kbd:`forest_stands_2012 copy` that you can use to"
+" define a different style, for example with no filling and red borders."
+msgstr "U krijgt een nieuwe laag, genaamd :kbd:`forest_stands_2012 kopiëren`, die u kunt gebruiken om een andere stijl te definiëren, bijvoorbeeld zonder vulling en met rode randen."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:112
+msgid ""
+"Now you have two different visualizations of the forest stands and you can "
+"decide which one to display for your detail map."
+msgstr "Nu heeft u twee verschillende visualisaties van de bosopstanden en kunt u beslissen welke weer te geven voor uw detailkaart."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:114
+msgid ""
+"Go back to the :guilabel:`Print composer` window often to see what the map "
+"would look like. For the purposes of creating detailed maps, you are looking"
+" for a symbology that looks good not at the scale of the whole forest area "
+"(left image below) but at a closer scale (right image below). Remember to "
+"use :guilabel:`Update preview` and :guilabel:`Set to map canvas extent` "
+"whenever you change the zoom in your map or the composer."
+msgstr "Ga vaak terug naar het venster :guilabel:`Printvormgeving` om te zien hoe de kaart er uit zou komen te zien. Voor het doel gedetailleerde kaarten te maken, zoekt u naar een symbologie die er niet goed uitziet op de schaal van het gehele bosgebied (linker afbeelding hieronder) maar op een kleinere schaal (rechter afbeelding hieronder). Vergeet niet :guilabel:`Voorvertoning bijwerken` en :guilabel:`Aanpassen aan kaartformaat` te gebruiken wanneer u de zoomfactor wijzigt in uw kaart of de printvormgeving."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:120
+msgid "|basic| |TY| Create a Basic Map Template"
+msgstr "|basic| |TY| Een sjabloon voor een basiskaart maken"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:122
+msgid ""
+"Once you have a symbology your happy with, you are ready to add some more "
+"information to your printed map. Add at least the following elements:"
+msgstr "Als u eenmaal een symbologie heeft die u bevalt, bent u klaar om meer informatie aan uw af te drukken kaart toe te voegen. Voeg ten minste de volgende elementen toe:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:124
+msgid "Title."
+msgstr "Titel."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:125
+msgid "A scale bar."
+msgstr "Een schaalbalk."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:126
+msgid "Grid frame for your map."
+msgstr "Een raster voor uw kaart."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:127
+msgid "Coordinates on the sides of the grid."
+msgstr "Coördinaten aan de zijkanten van het raster."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:129
+msgid ""
+"You have created a similar composition already in "
+":doc:`../map_composer/index`. Go back to that module as you need. You can "
+"look at this example image for reference:"
+msgstr "U heeft een soortgelijke lay-out al gemaakt in composition already in :doc:`../map_composer/index`. Ga terug naar die module als dat nodig is. U kunt deze voorbeeldafbeelding als verwijzing gebruiken:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:134
+msgid "Export your map as an image and look at it."
+msgstr "Exporteer uw kaart als een afbeelding en bekijk hem."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:136
+msgid ":menuselection:`Composer --> Export as Image`."
+msgstr ":menuselection:`Printvormgeving --> Als afbeelding exporteren`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:137
+msgid "Use for example the :kbd:`JPG format`."
+msgstr "Gebruik de :kbd:`JPG format` voor het voorbeeld."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:139
+msgid "That is what it will look like when printed."
+msgstr "Dat is hoe het er uit zal zien na het afdrukken."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:142
+msgid "|basic| |FA| Adding More Elements to the Composer"
+msgstr "|basic| |FA| Meer elementen aan de printvormgeving toevoegen"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:144
+msgid ""
+"As you probably noticed in the suggested map template images, there are "
+"plenty of room on the right side of the canvas. Lets see what else could go "
+"in there. For the purposes of our map, a legend is not really necessary, but"
+" an overview map and some text boxes could add value to the map."
+msgstr "Zoals u waarschijnlijk al is opgevallen in de voorgestelde voorbeelden voor afbeeldingen van sjablonen, is er ruim voldoende ruimte aan de rechterzijde van het kaartvenster. Laten we eens zien wat daar nog meer zou kunnen worden geplaatst. Voor het doel van onze kaart is een legenda niet echt nodig, maar een overzichtskaart en enkele tekstvakken zouden waarde aan de kaart kunnen toevoegen."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:146
+msgid ""
+"The overview map will help the field teams place the detail map inside the "
+"general forest area:"
+msgstr "Een overzichtskaart zou de teams in het veld helpen de gedetailleerde kaart binnen het algehele bosgebied te plaatsen:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:148
+msgid "Add another map element to the canvas, right under the title text."
+msgstr "Voeg een ander kaartelement toe aan het kaartvenster, rechts onder de tekst voor de titel."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:149
+msgid ""
+"In the :guilabel:`Item properties` tab, open the :guilabel:`Overview` "
+"dropdown."
+msgstr "Open, op de tab :guilabel:`Item-eigenschappen`, de keuzelijst :guilabel:`Overzichtskaarten`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:150
+msgid ""
+"Set the :guilabel:`Overview frame` to :guilabel:`Map 0`. This creates a "
+"shadowed rectangle over the smaller map representing the extent visible in "
+"the bigger map."
+msgstr "Stel het :guilabel:`Kaartframe` in op :guilabel:`Kaart 0`. Dit maakt een geschaduwde rechthoek over de kleinere kaart die het bereik weergeeft dat zichtbaar is in de grotere kaart."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:151
+msgid ""
+"Check also the :guilabel:`Frame` option with a black color and a "
+":guilabel:`Thickness` of :kbd:`0.30`."
+msgstr "Selecteer ook de optie :guilabel:`Frame` met een zwarte kleur en een :guilabel:`Dikte` van :kbd:`0.30`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:156
+msgid ""
+"Notice that your overview map is not really giving an overview of the forest"
+" area which is what you want. You want this map to represent the whole "
+"forest area and you want it to show only the background map and the "
+":kbd:`forest_stands_2012` layer, and not display the sample plots. And also "
+"you want to lock its view so it does not change anymore whenever you change "
+"the visibility or order of the layers."
+msgstr "Merk op dat uw overzichtskaart niet echt een overzicht geeft van het gehele bosgebied, wat is wat u wilt. U wilt dat deze kaart het gehele bosgebied weergeeft en u wilt dat het alleen de achtergrondkaart en de laag :kbd:`forest_stands_2012` weergeeft, en niet de monsterplaatsen. Ook wilt u dat zijn weergave wordt vergrendeld zodat die niet meer wijzigt wanneer u de zichtbaarheid of volgorde van de lagen wijzigt."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:158
+msgid "Go back to the map, but don't close the :guilabel:`Print composer`."
+msgstr "Ga terug naar de kaart, maar sluit de :guilabel:`Printvormgeving` niet."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:159
+msgid ""
+"Right click the :kbd:`forest_stands_2012` layer and click on :guilabel:`Zoom"
+" to Layer Extent`."
+msgstr "Klik met rechts op de laag :kbd:`forest_stands_2012` en klik op :guilabel:`Op kaartlaag inzoomen`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:160
+msgid ""
+"Deactivate all layers except for :kbd:`basic_map` and "
+":kbd:`forest_stands_2012`."
+msgstr "Deactiveer alle lagen met uitzondering van :kbd:`basic_map` en :kbd:`forest_stands_2012`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:161
+msgid "Go back to the :guilabel:`Print composer`."
+msgstr "Ga terug naar de :guilabel:`Printvormgeving`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:162
+msgid ""
+"With the small map selected, click the :guilabel:`Set to map canvas extent` "
+"to set its extents to what you can see in the map window."
+msgstr "Klik, met de kleine kaart geselecteerd, op :guilabel:`Aanpassen aan kaartformaat` om zijn bereik in te stellen op wat u ziet in het kaartvenster."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:163
+msgid ""
+"Lock the view for the overview map by checking :guilabel:`Lock layers for "
+"map item` under :guilabel:`Main properties`."
+msgstr "Vergrendel de weergave voor de overzichtskaart door te selecteren :guilabel:`Lagen vastzetten voor kaartonderdeel` onder :guilabel:`Algemene eigenschappen`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:165
+msgid ""
+"Now your overview map is more what you expected and its view will not change"
+" anymore. But, of course, now your detail map is not showing anymore the "
+"stand borders nor the sample plots. Lets fix that:"
+msgstr "Nu is uw overzichtskaart meer zoals u verwachtte en de weergave ervan zal niet meer wijzigen. Maar, natuurlijk, nu geeft uw gedetailleerde kaart de randen van de bosopstanden niet meer weer, noch de monsterplaatsen. Laten we dat repareren:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:167
+msgid ""
+"Go to the map window again and select the layers you want to be visible "
+"(:kbd:`systematic_plots_clip`, :kbd:`forest_stands_2012 copy` and "
+":kbd:`Basic_map`)."
+msgstr "Ga opnieuw naar het kaartvenster en selecteer de lagen die zichtbaar moeten zijn (:kbd:`systematic_plots_clip`, :kbd:`forest_stands_2012 kopiëren` en :kbd:`Basic_map`)."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:168
+msgid "Zoom again to have only a few lines of sample plots visible."
+msgstr "Zoom opnieuw in zodat slechts een paar lijnen met monsterplaatsen zichtbaar zijn."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:169
+msgid "Go back to the :guilabel:`Print composer` window."
+msgstr "Ga terug naar het venster :guilabel:`Printvormgeving`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:170
+msgid "Select the bigger map in your composer (|mActionSelect|)."
+msgstr "Selecteer de grotere kaart in uw printvormgeving (|mActionSelect|)."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:171
+msgid ""
+"In :guilabel:`Item properties` click on :guilabel:`Update preview` and "
+":guilabel:`Set to map canvas extent`."
+msgstr "Klik, in :guilabel:`Item-eigenschappen` op :guilabel:`Voorvertoning bijwerken` en :guilabel:`Aanpassen aan kaartformaat`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:173
+msgid ""
+"Notice that only the bigger map is displaying the current map view, and the "
+"small overview map is keeping the same view you had when you locked it."
+msgstr "Merk op dat alleen de grotere kaart de huidige kaartweergave toont, en dat de kleinere overzichtskaart dezelfde weergave heeft als toen u die vergrendelde."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:175
+msgid ""
+"Note also that the overview is showing a shaded frame for the extent shown "
+"in the detail map."
+msgstr "Merk ook op dat de overzichtskaart een geschaduwd frame weergeeft voor het bereik dat wordt weergegeven in de detailkaart."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:180
+msgid ""
+"Your template map is almost ready. Add now two text boxes below the map, one"
+" containing the text 'Detailed map zone: ' and the other one 'Remarks: '. "
+"Place them as you can see in the image above."
+msgstr "Uw sjabloon voor de kaart is bijna voltooid. Voeg nu twee tekstvakken onder de kaart toe, één met de tekst 'Gedetailleerde kaart zone: ' en de andere met 'Opmerking: '. Plaats ze zoals u kunt zien in bovenstaande afbeelding."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:182
+msgid "You can also add a North arrow to the overview map:"
+msgstr "U kunt ook een Noordpijl toevoegen aan de overzichtskaart:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:184
+msgid "Use the :guilabel:`Add image` tool, |mActionAddImage|."
+msgstr "Gebruik het gereedschap :guilabel:`Afbeelding toevoegen`, |mActionAddImage|."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:185
+msgid "Click at the upper right corner of the overview map."
+msgstr "Klik in de rechter bovenhoek van de overzichtskaart."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:186
+msgid ""
+"In :guilabel:`Item properties` open :guilabel:`Search directories` and "
+"browse for an arrow image."
+msgstr "Open, in :guilabel:`Item-eigenschappen`, :guilabel:`Mappen doorzoeken` en blader naar een afbeelding van een pijl."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:187
+msgid ""
+"Under :guilabel:`Image rotation`, check the :guilabel:`Sync with map` and "
+"select :kbd:`Map 1` (the overview map)."
+msgstr "Selecteer, onder :guilabel:`Rotatie afbeelding`, :guilabel:`Met kaart synchroniseren` en selecteer :kbd:`Kaart 1` (de overzichtskaart)."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:188
+msgid "Uncheck :guilabel:`Background`."
+msgstr "Deselecteer :guilabel:`Achtergrond`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:189
+msgid "Resize the arrow image to a size that looks good on the small map."
+msgstr "Wijzig de grootte van de afbeelding van de pijl zodat die er goed uitziet op een kleine kaart."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:191
+msgid ""
+"The basic map composer is ready, now you want to make use of the Atlas tool "
+"to generate as many detail maps in this format as you consider necessary."
+msgstr "De lay-out voor de basiskaart is nu gereed, nu wilt u gebruikmaken van het gereedschap Atlas om zoveel gedetailleerde kaarten in deze indeling te generen als u nodig vindt."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:195
+msgid "|basic| |FA| Creating an Atlas Coverage"
+msgstr "|basic| |FA| Een Atlas-bedekking genereren"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:197
+msgid ""
+"The Atlas coverage is just a vector layer that will be used to generate the "
+"detail maps, one map for every feature in the coverage. To get an idea of "
+"what you will do next, here is a full set of detail maps for the forest "
+"area:"
+msgstr "De Atlas dekking is slechts een vectorlaag die zal worden gebruikt om de gedetailleerde kaarten te genereren, één kaart voor elk object in de dekking. Hier is een volledige set van gedetailleerde kaarten voor het bosgebied om een idee te krijgen van wat vervolgens zal worden gedaan."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:202
+msgid ""
+"The coverage could be any existing layer, but usually it makes more sense to"
+" create one for the specific purpose. Let's create a grid of polygons "
+"covering the forest area:"
+msgstr "De bedekking zou elke bestaande laag kunnen zijn, maar gewoonlijk is het verstandiger er een te maken voor dit specifieke doel. Laten we een raster van polygonen maken die het bosgebied bedekken:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:204
+msgid ""
+"In the QGIS map view, open :menuselection:`Vector --> Research Tools --> "
+"Vector grid`."
+msgstr "Open, in de kaartweergave van QGIS, :menuselection:`Vector --> Onderzoeks-gereedschap --> Vectorgrid`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:205
+msgid "Set the tool as shown in this image:"
+msgstr "Stel het gereedschap in zoals in deze afbeelding:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:210
+msgid "Save the output as :kbd:`atlas_coverage.shp`."
+msgstr "Sla de uitvoer op als :kbd:`atlas_coverage.shp`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:211
+msgid ""
+"Style the new :kbd:`atlas_coverage` layer so that the polygons have no "
+"filling."
+msgstr "Maak de nieuwe laag :kbd:`atlas_coverage` zo op dat de polygonen geen vulling hebben."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:213
+msgid ""
+"The new polygons are covering the whole forest area and they give you an "
+"idea of what each map (created from each polygon) will contain."
+msgstr "De nieuwe vlakken bedekken het hele gebied van het bos en geven een indruk van wat elke kaart (gemaakt van individuele vlakken) bevat."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:219
+msgid "|basic| |FA| Setting Up the Atlas Tool"
+msgstr "|basic| |FA| Het gereedschap Atlas instellen"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:221
+msgid "The last step is to set up the Atlas tool:"
+msgstr "De laatste stap is om het gereedschap Atlas in te stellen:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:223
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:284
+msgid "Go back to the :guilabel:`Print Composer`."
+msgstr "Ga terug naar de :guilabel:`Printvormgeving`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:224
+msgid "In the panel on the right, go to the :guilabel:`Atlas generation` tab."
+msgstr "Ga, in het paneel rechts, naar de tab :guilabel:`Atlas-generatie`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:225
+msgid "Set the options as follows:"
+msgstr "Stel de opties als volgt in:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:230
+msgid ""
+"That tells the Atlas tool to use the features (polygons) inside "
+":kbd:`atlas_coverage` as the focus for every detail map. It will output one "
+"map for every feature in the layer. The :guilabel:`Hidden coverage layer` "
+"tells the Atlas to not show the polygons in the output maps."
+msgstr "Dat vertelt het gereedschap Atlas om de objecten (polygonen) binnen :kbd:`atlas_coverage` te gebruiken als de focus voor elke gedetailleerde kaart. Het zal één kaart uitvoeren voor elk object in de laag. De :guilabel:`Verborgen bedekkingslaag` vertelt de Atlas om de polygonen niet weer te geven op de uitgevoerde kaarten."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:232
+msgid ""
+"One more thing needs to be done. You need to tell the Atlas tool what map "
+"element is going to be updated for every output map. By now, you probably "
+"can guess that the map to be changed for every feature is the one you have "
+"prepared to contain detail views of the sample plots, that is the bigger map"
+" element in your canvas:"
+msgstr "Er moet nog één ding worden gedaan. U moet het gereedschap Atlas vertellen welk kaartelement moet worden bijgewerkt voor elke uitgevoerde kaart. U kunt nu waarschijnlijk wel raden dat het kaartonderdeel dat voor elke kaart moet worden bijgewerkt dat is welk u heeft voorbereid om detailweergaven te bevatten van de monsterplaatsen, dat is het grotere kaartelement in uw kaartvenster:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:234
+msgid "Select the bigger map element."
+msgstr "Selecteer het grotere kaartelement."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:236
+msgid "In the list, check :guilabel:`Controlled by atlas`."
+msgstr "Selecteer in de lijst :guilabel:`Beheerd door Atlas`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:237
+msgid ""
+"And set the :guilabel:`Marging around feature` to :kbd:`10%`. The view "
+"extent will be 10% bigger than the polygons, which means that your detail "
+"maps will have a 10% overlap."
+msgstr "En stel :guilabel:`Marge rond object` in op :kbd:`10%`. Het bereik voor de weergave zal 10% groter zijn dan de polygonen, wat betekent dat uw gedetailleerde kaarten elkaar 10% overlappen."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:242
+msgid ""
+"Now you can use the preview tool for Atlas maps to review what your maps "
+"will look like:"
+msgstr "Nu kunt u het gereedschap Voorvertoning voor Atlas-kaarten gebruiken om te zien hoe uw kaarten eruit zullen komen te zien:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:244
+msgid ""
+"Activate the Atlas previews using the button |mIconAtlas| or if your Atlas "
+"toolbar is not visible, via :menuselection:`Atlas --> Preview Atlas`."
+msgstr "Activeer de voorbeelden van Atlas met behulp van de knop |mIconAtlas| of, als uw werkbalk Atlas niet zichtbaar is, via :menuselection:`Atlas --> Voorbeeld Atlas`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:245
+msgid ""
+"You can use the arrows in the Atlas tool bar or in the "
+":menuselection:`Atlas` menu to move through maps that will be created."
+msgstr "U kunt de pijlen in de werkbalk Atlas gebruiken of die in het menu :menuselection:`Atlas` om door de te maken kaarten te verplaatsen."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:247
+msgid ""
+"Note that some of them cover areas that are not interesting. Lets do "
+"something about it and save some trees by not printing those useless maps."
+msgstr "Merk op dat sommige ervan niet interessant zijn. Laten we daar iets aan doen en enkele bomen sparen door die onbruikbare kaarten niet af te drukken."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:250
+msgid "|basic| |FA| Editing the Coverage Layer"
+msgstr "|basic| |FA| De bedekkingslaag bewerken"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:252
+msgid ""
+"Besides removing the polygons for those areas that are not interesting, you "
+"can also customize the text labels in your map to be generated with content "
+"from the :guilabel:`Attribute table` of your coverage layer:"
+msgstr "Naast het verwijderen van de polygonen voor die gebieden die niet interessant zijn, kunt u ook de tekstlabels in uw te generen kaart aanpassen met inhoud uit de :guilabel:`Attributentabel` van uw bedekkingslaag:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:254
+msgid "Go back to the map view."
+msgstr "Ga terug naar de kaartweergave."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:255
+msgid "Enable editing for the :kbd:`atlas_coverage` layer."
+msgstr "Schakel Bewerken in voor de laag :kbd:`atlas_coverage`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:256
+msgid "Select the polygons that are selected (in yellow) in the image below."
+msgstr "Selecteer de polygonen die zijn geselecteerd (in geel) in onderstaande afbeelding."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:257
+msgid "Remove the selected polygons."
+msgstr "Verwijder de geselecteerde polygonen."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:258
+msgid "Disable editing and save the edits."
+msgstr "Schakel Bewerken uit en sla de wijzigingen op."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:263
+msgid ""
+"You can go back to the :guilabel:`Print Composer` and check that the "
+"previews of the Atlas use only the polygons you left in the layer."
+msgstr "U kunt nu terug gaan naar de :guilabel:`Printvormgeving` en controleren of de voorbeelden van Atlas alleen de polygonen gebruiken die zijn overgebleven op de laag."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:265
+msgid ""
+"The coverage layer you are using does not yet have useful information that "
+"you could use to customize the content of the labels in your map. The first "
+"step is to create them, you can add for example a zone code for the polygon "
+"areas and a field with some remarks for the field teams to have into "
+"account:"
+msgstr "De bedekkingslaag die u gebruikt heeft nog geen bruikbare informatie die u zou kunnen gebruiken om de inhoud van de labels op uw kaart aan te passen. De eerste stap is om ze te maken, u kunt bijvoorbeeld een code voor de zone toevoegen voor de gebieden van de polygonen en een veld met enkele opmerkingen voor de teams in het veld om rekening mee te houden:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:267
+msgid ""
+"Open the :guilabel:`Attribute table` for the :kbd:`atlas_coverage` layer."
+msgstr "Open de :guilabel:`Attributentabel` voor de laag :kbd:`atlas_coverage`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:268
+msgid "Enable editing."
+msgstr "Schakel Bewerken in."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:269
+msgid ""
+"Use the |mActionCalculateField| calculator to create and populate the "
+"following two fields."
+msgstr "Gebruik de |mActionCalculateField| veldberekening om de volgende twee velden te maken in te vullen."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:270
+msgid ""
+"Create a field named :kbd:`Zone` and type :kbd:`Whole number (integer)`."
+msgstr "Maak een veld genaamd :kbd:`Zone` en typ :kbd:`Geheel getal (integer)`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:271
+msgid "In the :guilabel:`Expression` box write/copy/construct :kbd:`$rownum`."
+msgstr "In het vak :guilabel:`Expressie`  schrijf/kopieer/construeer :kbd:`$rownum`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:272
+msgid ""
+"Create another field named :kbd:`Remarks`, of type :kbd:`Text (string)` and "
+"a width of :kbd:`255`."
+msgstr "Maak een ander veld, genaamd :kbd:`Opmerking:`,van het type :kbd:`Tekst (string)` en een breedte van :kbd:`255`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:273
+msgid ""
+"In the :guilabel:`Expression` box write :kbd:`'No remarks.'`. This will set "
+"all the default value for all the polygons."
+msgstr "Schrijf, in het vak :guilabel:`Expressie`, :kbd:`'Geen opmerkingen.'`. Dat zal de standaard waarde instellen voor alle polygonen."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:275
+msgid ""
+"The forest manager will have some information about the area that might be "
+"useful when visiting the area. For example, the existence of a bridge, a "
+"swamp or the location of a protected species. The :kbd:`atlas_coverage` "
+"layer is probably in edit mode still, add the following text in the "
+":kbd:`Remarks` field to the corresponding polygons (double click the cell to"
+" edit it):"
+msgstr "De beheerder van het bos zal enige informatie hebben over het gebied die bruikbaar is bij het bezoeken van het gebied.Bijvoorbeeld de aanwezigheid van een brug, een moeras of de locatie van een beschermde soort. De laag :kbd:`atlas_coverage` staat waarschijnlijk nog steeds in de modus Bewerken, voeg de volgende tekst toe in het veld :kbd:`Opmerking` voor de overeenkomende polygonen (dubbelklik op de cel om die te bewerken):"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:277
+msgid ""
+"For the :kbd:`Zone` 2: :kbd:`Bridge to the North of plot 19. Siberian "
+"squirrel between p_13 and p_14.`."
+msgstr "Voor de :kbd:`Zone` 2: :kbd:`Brug ten noorden van monsterplaats 19. Gewone vliegende eekhoorn tussen p_13 en p_14.`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:278
+msgid ""
+"For the :kbd:`Zone` 6: :kbd:`Difficult to transit in swamp to the North of "
+"the lake.`."
+msgstr "Voor de :kbd:`Zone` 6: :kbd:`Moeilijk te verplaatsen in het moeras ten noorden van het meer.`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:279
+msgid ""
+"For the :kbd:`Zone` 7: :kbd:`Siberian squirrel to the South East of p_94.`."
+msgstr "Voor de :kbd:`Zone` 7: :kbd:`Gewone vliegende eekhoorn ten zuiden van p_94.`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:280
+msgid "Disable editing and save your edits."
+msgstr "Schakel Bewerken uit en sla uw wijzigingen op."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:282
+msgid ""
+"Almost ready, now you have to tell the Atlas tool that you want some of the "
+"text labels to use the information from the :kbd:`atlas_coverage` layer's "
+"attribute table."
+msgstr "Bijna klaar. Nu moet u het gereedschap Atlas vertellen dat u wilt dat enkele tekstlabels de informatie uit de attributentabel van de laag :kbd:`atlas_coverage` gebruiken."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:285
+msgid "Select the text label containing :kbd:`Detailed map...`."
+msgstr "Selecteer het tekstlabel dat :kbd:`Gedetailleerde kaart...` bevat."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:286
+msgid "Set the :guilabel:`Font` size to :kbd:`12`."
+msgstr "Stel de grootte van :guilabel:`Lettertype` in op :kbd:`12`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:287
+msgid "Set the cursor at the end of the text in the label."
+msgstr "Zet de cursor aan het einde van de tekst in het label."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:288
+msgid ""
+"In  the :guilabel:`Item properties` tab, inside the :guilabel:`Main "
+"properties` click on :guilabel:`Insert an expression`."
+msgstr "Klik op :guilabel:`Voeg een expressie in` op de tab :guilabel:`Item-eigenschappen`, in de :guilabel:`Algemene eigenschappen` ."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:289
+msgid ""
+"In the :guilabel:`Function list` double click on the field :kbd:`Zone` under"
+" :guilabel:`Field and Values`."
+msgstr "Dubbelklik, in de :guilabel:`Functielijst`, op het veld :kbd:`Zone` onder :guilabel:`Velden en waarden`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:291
+msgid ""
+"The text inside the box in the :guilabel:`Item properties` should show "
+":kbd:`Detail map inventory zone: [% \"Zone\" %]`. Note that the :kbd:`[% "
+"\"Zone\" %]` will be substituted by the value of the field :kbd:`Zone` for "
+"the corresponding feature from the layer :kbd:`atlas_coverage`."
+msgstr "De tekst in het vak in de :guilabel:`Item-eigenschappen` zou nu :kbd:`Gedetailleerde kaart zone [% \"Zone\" %]` moeten weergeven. Onthoud dat :kbd:`[% \"Zone\" %]` zal worden vervangen door de waarde van het veld :kbd:`Zone` voor het overeenkomende object uit de laag :kbd:`atlas_coverage`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:293
+msgid ""
+"Test the contents of the label by looking at the different Atlas preview "
+"maps."
+msgstr "Test de inhoud van het label door te kijken naar de verschillende voorbeelden van de kaarten in Atlas."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:295
+msgid ""
+"Do the same for the labels with the text :kbd:`Remarks:` using the field "
+"whit the zone information. You can leave a break line before you enter the "
+"expression. You can see the result for the preview of zone 2 in the image "
+"below:"
+msgstr "Doe hetzelfde voor de labels met de tekst :kbd:`Opmerking:` door het veld met de informatie voor de zone te gebruiken. U kunt een regeleinde invoegen vóór u de expressie invoert. U kunt het resultaat voor het voorbeeld van zone 2 zien in de afbeelding hieronder:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:300
+msgid ""
+"Use the Atlas preview to browse through all the maps you will be creating "
+"soon and enjoy!"
+msgstr "Gebruik de voorbeelden van Atlas om door alle kaarten te bladeren die u nu snel zult maken en geniet ervan!"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:303
+msgid "|basic| |FA| Printing the Maps"
+msgstr "|basic| |FA| De kaarten afdrukken"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:305
+msgid ""
+"Last but not least, printing or exporting your maps to image files or PDF "
+"files. You can use the :menuselection:`Atlas --> Export Atlas as Images...` "
+"or :menuselection:`Atlas --> Export Atlas as PDF...`. Currently the SVG "
+"export format is not working properly and will give a poor result."
+msgstr "Als laatste maar niet het minste, afdrukken of exporteren van uw kaarten als afbeeldingen of PDF-bestanden. U kunt :menuselection:`Atlas --> Atlas als afbeeldingen exporteren...` of :menuselection:`Atlas --> Atlas als PDF exporteren...` gebruiken. Momenteel werkt het exporteren naar de indeling SVG nog niet goed en zal een slecht resultaat geven."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:307
+msgid ""
+"Lets print the maps as a single PDF that you can send to the field office "
+"for printing:"
+msgstr "Laten we de kaarten als één enkele PDF exporteren die u naar het veldbureau kunt sturen om af te drukken:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:309
+msgid "Go to the :guilabel:`Atlas generation` tab on the right panel."
+msgstr "Ga naar de tab :guilabel:`Atlas-generatie` in het paneel rechts."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:310
+msgid ""
+"Under the :guilabel:`Output` check the :guilabel:`Single file export when "
+"possible`. This will put all the maps together into a PDF file, if this "
+"option is not checked you will get one file for every map."
+msgstr "Selecteer, onder :guilabel:`Uitvoer`, :guilabel:`Exporteren naar enkel bestand indien mogelijk`. Dit zal alle kaarten bij elkaar in één PDF stoppen, als deze optie niet wordt geselecteerd krijgt u één bestand voor elke kaart."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:311
+msgid "Open :menuselection:`Composer --> Export as PDF...`."
+msgstr "Open :menuselection:`Printvormgeving --> Als PDF exporteren...`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:312
+msgid ""
+"Save the PDF file as :kbd:`inventory_2012_maps.pdf` in your "
+":kbd:`exercise_data\\\\forestry\\\\samplig\\\\map_creation\\\\` folder."
+msgstr "Sla het PDF-bestand op als :kbd:`inventory_2012_maps.pdf` in  uw map :kbd:`exercise_data\\\\forestry\\\\samplig\\\\map_creation\\\\`."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:314
+msgid "Open the PDF file to check that everything went as expected."
+msgstr "Open het PDF-bestand om te controleren of alles is gegaan zoals verwacht."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:316
+msgid ""
+"You could just as easily create separate images for every map (remember to "
+"uncheck the single file creation), here you can see the thumbnails of the "
+"images that would be created:"
+msgstr "U zou net zo makkelijk afzonderlijke afbeeldingen kunnen maken voor elke kaart (onthoud om het maken van één enkel bestand uit te schakelen), hier kunt u de miniaturen zien voor de afbeeldingen die gemaakt zullen worden:"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:321
+msgid ""
+"In the :guilabel:`Print Composer`, save your map as a composer template as "
+":kbd:`forestry_atlas.qpt` in your "
+":kbd:`exercise_data\\\\forestry\\\\map_creation\\\\` folder. Use "
+":menuselection:`Composer --> Save as Template`. You will be able to use this"
+" template again and again."
+msgstr "Sla, in de :guilabel:`Printvormgeving`, uw jaart op als een sjabloon voor printvormgeving als :kbd:`forestry_atlas.qpt` in uw map :kbd:`exercise_data\\\\forestry\\\\map_creation\\\\`. Gebruik :menuselection:`Printvormgeving --> Als sjabloon opslaan`. U zult in staat zijn dit sjabloon steeds opnieuw te gebruiken."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:323
+msgid "Close the :guilabel:`Print Composer` and save your QGIS project."
+msgstr "Sluit de :guilabel:`Printvormgeving` en sla uw project van QGIS op."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:327
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:329
+msgid ""
+"You have managed to create a template map that can be used to automatically "
+"generate detail maps to be used in the field to help navigate to the "
+"different plots. As you noticed, this was not an easy task but the benefit "
+"will come when you need to create similar maps for other regions and you can"
+" use the template you just saved."
+msgstr "U bent erin geslaagd een sjabloonkaart te maken die kan worden gebruikt om automatisch gedetailleerde kaarten te genereren die in het veld kunnen worden gebruikt om naar de verschillende monsterplaatsen te navigeren. Zoals u heeft gemerkt was dit geen eenvoudige taak maar de voordelen worden duidelijk wanneer u soortgelijke kaarten moet maken voor andere regio's en u het sjabloon kunt gebruiken dat u zojuist heeft gemaakt."
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:332
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:334
+msgid ""
+"In the next lesson, you will see how you can use LiDAR data to create a DEM "
+"and then use it to your enhance your data and maps visibility."
+msgstr "In de volgende les zult u zien hoe u gegevens van LiDAR kunt gebruiken om een DEM te maken en die dan te gebruiken om de zichtbaarheid van uw gegevens en kaarten te vergroten."

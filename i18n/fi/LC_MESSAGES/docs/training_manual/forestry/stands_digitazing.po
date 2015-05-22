@@ -1,0 +1,736 @@
+# 
+# Translators:
+# Kari Salovaara <kari.salovaara@pp1.inet.fi>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-02 14:11+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/qgis-documentation/language/fi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:6
+msgid "|LS| Digitizing Forest Stands"
+msgstr "|LS| Metsäkuvioiden digitointi"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:8
+msgid ""
+"Unless you are going to use your georeferenced map as a simple background "
+"image, the next natural step is to digitize elements from it. You have "
+"already done so in the exercises about creating vector data in "
+":doc:`../create_vector_data/create_new_vector` , when you digitized the "
+"school fields. In this lesson, you are going to digitize the forest stands' "
+"borders that appear in the map as green lines but instead of doing it using "
+"an aerial image, you will use your georeferenced map."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:10
+msgid ""
+"**The goal for this lesson:** Learn a technique to help the digitizing task,"
+" digitizing forest stands and finally adding the inventory data to them."
+msgstr "**Tämän oppitunnin tavoite:**  Oppia tekniikka helpottamaan digitointitoimenpidettä, digitoida metsäkuvioita ja lopuksi lisätä inventointitiedot niihin."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:13
+msgid "|basic| |FA| Extracting the Forest Stands Borders"
+msgstr "|basic| |FA| Metsäkuvioiden rajojen poimiminen"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:15
+msgid ""
+"Open your :kbd:`map_digitizing.qgs` project in QGIS, that you saved from the"
+" previous lesson."
+msgstr "Avaa edellisellä oppitunnilla tallentamasi :kbd:`map_digitizing.qgs` projekti QGIS:ssä."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:17
+msgid ""
+"Once you have scanned and georeferenced your map you could start to digitize"
+" directly by looking at the image as a guide. That would most likely be the "
+"way to go if the image you are going to digitize from is, for example, an "
+"aerial photograph."
+msgstr "Kun olet skannanut ja georeferoinut karttasi voisit aloittaa digitoinnin samoin tein käyttämällä kuvaa oppaana. Tämä olisikin varmasti se tapa jos kuva olisi skannattu esimerkiksi ilmakuvasta."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:19
+msgid ""
+"If what you are using to digitize is a good map, as it is in our case, it is"
+" likely that the information is clearly displayed as lines with different "
+"colors for each type of element. Those colors can be relatively easy "
+"extracted as individual images using an image processing software like `GIMP"
+" <http://www.gimp.org/>`_. Such separate images can be used to assist the "
+"digitizing, as you will see below."
+msgstr "Jos digitoitava onkin hyvä kartta, kuten tapauksessamme, on todennäköisempää että informaation on selkeästi esitetty eri värisin viivoin jokaiselle eri elementtityypille. Nuo värit on suhteellisen helposti poimittavissa yksilöllisiin kuviin käyttäen kuvankäsittelyohjelmistoa kuten  `GIMP <http://www.gimp.org/>`_. Tämänkaltaisia erillisiä kuvia voidaan käyttää avustamaan digitointia kuten tulet näkemään myöhemmin."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:21
+msgid ""
+"The first step will be to use GIMP to obtain an image that contains only the"
+" forest stands, that is, all those greenish lines that you could see in the "
+"original scanned map:"
+msgstr "Ensi askel on käyttää GIMP ohjelmaa tehdessä kuva joka sisältää ainoastaan metsäkuviot, tämä tarkoittaa, kaikki nuo vihertävät viivat jotka voit nähdä alkuperäisessä skannatussa kartassa:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:23
+msgid ""
+"Open GIMP (if you don't have it installed yet, download it from the internet"
+" or ask your teacher)."
+msgstr "Avaa GIMP (jos et ole vielä asentanut sitä. lataa se internetistä tai kysy ohjaajaltasi)."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:24
+msgid ""
+"Open the original map image, :menuselection:`File --> Open`, "
+":kbd:`rautjarvi_map.tif` in the :kbd:`exercise_data/forestry` folder. Note "
+"that the forest stands are represented as green lines (with the number of "
+"the stand also in green inside each polygon)."
+msgstr "Avaa alkuperäinen karttakuva,  :menuselection:`Tiedosto --> Avaa...`, :kbd:`rautjarvi_map.tif` hakemistossa :kbd:`exercise_data/forestry`. Huomaa että metsäkuviot on esitetty vihreinä viivoina (joissa kuvion numero myös vihreänä jokaisen monikulmion sisällä)."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:29
+msgid ""
+"Now you can select the pixels in the image that are making up the forest "
+"stands' borders (the greenish pixels):"
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:31
+msgid "Open the tool :menuselection:`Select --> By color`."
+msgstr "Avaa työkalu :menuselection:`Valitse --> Värin mukaan`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:32
+msgid ""
+"With the tool active, zoom into the image (:guilabel:`Ctrl + mouse wheel`) "
+"so that a forest stand line is close enough to differentiate the pixels "
+"forming the line. See the left image below."
+msgstr "Kun työkalu on käytössä zoomaa kuvaa (:guilabel:`Ctrl + mouse wheel`) siten että metsäkuvion viivasta näkyvät yksittäiset pikselit jotka muodostavat viivan. Katso vasenta kuvaa alla."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:33
+msgid ""
+"Click and drag the mouse cursor in the middle of the line so that the tool "
+"will collect several pixel color values."
+msgstr "Klikkaa ja vedä hiiren osoitinta viivan keskellä siten että työkalu kerää lukuisia pikselin väriarvoja."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:34
+msgid ""
+"Release the mouse click and wait a few seconds. The pixels matching the "
+"colors collected by the tool will be selected through the whole image."
+msgstr "Vapauta hiiren klikkaus ja odota joitakin sekunteja. Työkalun keräämät värejä vastaavat pikselit valitaan koko kuvasta."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:35
+msgid ""
+"Zoom out to see how the greenish pixels have been selected throughout the "
+"image."
+msgstr "Zoomaa laajemmaksi nähdäksesi kuinka vihertävät pikselit on valittu koko kuvasta."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:36
+msgid ""
+"If you are not happy with the result, repeat the click and drag operation."
+msgstr "Jos et ole tyytyväinen tulokseen, toista klikkaus- ja vetämistoimenpide."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:37
+msgid "Your pixel selection should look something like the right image below."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:42
+msgid ""
+"Once you are done with the selection you need to copy this selection as a "
+"new layer and then save it as separate image file:"
+msgstr "Kun olet saanut valintasi valmiiksi tarvitsee Sinun kopioida valintasi uudeksi tasoksi ja tallentaa se erilliseksi kuvatiedostoksi:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:44
+msgid "Copy (:guilabel:`Ctr+C`) the selected pixels."
+msgstr "Kopioi (:guilabel:`Ctr+C`) valitut pikselit."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:45
+msgid ""
+"And paste the pixels directly (:guilabel:`Ctr+V`), GIMP will display the "
+"pasted pixels as a new temporary layer in the :guilabel:`Layers - Brushes` "
+"panel as a :guilabel:`Floating Selection (Pasted Layer)`."
+msgstr "Ja liitä pikselit suoraan  (:guilabel:`Ctr+V`), GIMP näyttää liitetyt pikselit uutena väliaikaisena tasona :guilabel:`Tasot - Siveltimet` panelissa :guilabel:`Kelluva Valinta (Liitetty Taso)` tasona."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:46
+msgid "Right click that temporary layer and select :guilabel:`To New Layer`."
+msgstr "Klikkaa oikealla väliaikaista tasoa ja valitse :guilabel:`Uudeksi tasoksi`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:47
+msgid ""
+"Click the \"eye\" icon next to the original image layer to switch it off, so"
+" that only the :guilabel:`Pasted Layer` is visible:"
+msgstr ":guilabel:`Pasted Layer` Klikkaa \"silmää\" alkuperäisen kuvatason vieressä piilottaaksesi sen niin että ainoastaan :guilabel:`Liitetty Taso` jää näkyväksi:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:52
+msgid ""
+"Finally, select :menuselection:`File --> Export...`, set :guilabel:`Select "
+"File Type (By Extension)` as a :guilabel:`TIFF image`, select the "
+":kbd:`digitizing` folder and name it :kbd:`rautjarvi_map_green.tif`. Select "
+"no compression when asked."
+msgstr "Lopuksi valitse :menuselection:`Tiedosto --> Export...`, aseta :guilabel:`Valitse tiedoston tyyppi (Päätteestä)` arvoon :guilabel:`TIFF-kuva`, valitse :kbd:`digitizing` hakemisto ja anna nimeksi :kbd:`rautjarvi_map_green.tif`. Valitse Ei mitään pakkaukseksi kun kysytään. "
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:54
+msgid ""
+"You could do the same process with other elements in the image, for example "
+"extracting the black lines that represent roads or the brown ones that "
+"represent the terrain' contour lines. But for us, the forest stands is "
+"enough."
+msgstr "Voit suorittaa saman prosessin muille elementeille kuvassa, esimerkiksi poimia mustat viivat jotka edustavat teitä tai ruskeat viivat jotka edustavat maaston korkeuskäyriä. Mutta meille metsäkuviot riittävät."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:57
+msgid "|basic| |TY| Georeference the Green Pixels Image"
+msgstr "|basic| |TY| Georeferoi vihreiden pikselien kuva"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:59
+msgid ""
+"As you did in the previous lesson, you need to georeference this new image "
+"to be able to use it with the rest of your data."
+msgstr "Aivan kuten teit edellisellä oppitunnilla Sinun tulee georeferoida tämä uusi kuva jotta voit käyttää sitä muiden tietojesi kanssa,"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:61
+msgid ""
+"Note that you don't need to digitize the ground control points any more "
+"because this image is basically the same image as the original map image, as"
+" far as the Georeferencer tool is concerned. Here are some things you should"
+" remember:"
+msgstr "Huomaa ettei Sinun tarvitse digitoida maaston tarkisuspisteitä änää koska tämä kuva on pohjimmiltaan sama kuva kuin alkuperäinen kartta, ainakin Georeferointi työkalun kannalta. Tässä on eräiä seikkoja jotka Sinun tulee muistaa:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:63
+msgid "This image is also, of course, in :kbd:`KKJ / Finland zone 2` CRS."
+msgstr "Tämä kuva on myös, tietenkin, :kbd:`KKJ / Finland zone 2` koordinaattijärjestelmässä."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:64
+msgid ""
+"You should use the ground control points you saved, :menuselection:`File -->"
+" Load GCP points`."
+msgstr "Sinun tulee käyttää maaston tarkistuspisteitä jotka talletit, :menuselection:`Tiedosto --> Lataa GCP pisteet`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:65
+msgid "Remember to review the :guilabel:`Transformation settings`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:66
+msgid ""
+"Name the output raster as :kbd:`rautjarvi_green_georef.tif` in the "
+":kbd:`digitizing` folder."
+msgstr "Nimeä tulosrasteri :kbd:`rautjarvi_green_georef.tif` hakemistoon :kbd:`digitizing`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:68
+msgid "Check that the new raster is fitting nicely with the original map."
+msgstr "Tarkista että uusi rasteri sopii hyvin yhteen alkuperäisen kartan kanssa."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:72
+msgid "|basic| |FA| Creating Supporting Points for Digitizing"
+msgstr "|basic| |FA| Tukipisteiden luominen digitointiin"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:74
+msgid ""
+"Having in mind the digitizing tools in QGIS, you might already be thinking "
+"that it would be helpful to snap to those green pixels while digitizing. "
+"That is precisely what you are going to do next create points from those "
+"pixels to use them later to help you follow the forest stands' borders when "
+"digitizing, by using the snapping tools available in QGIS."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:76
+msgid ""
+"Use the :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
+"Vector)` tool to vectorize your green lines to polygons. If you don't "
+"remember how, you can review it in "
+":doc:`../complete_analysis/raster_to_vector`."
+msgstr "Käytä :menuselection:`Rasteri --> Muunnos --> Monikulmioiksi (Rasteri Vektoriksi)` työkalua muuntaaksesi vihreät viivat monikulmioiksi. Jos et muista kuinka voit palauttaa mieleen sen katsomalla "
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:77
+msgid ""
+"Save as :kbd:`rautjarvi_green_polygon.shp` inside the :kbd:`digitizing` "
+"folder."
+msgstr "Tallenna nimellä :kbd:`rautjarvi_green_polygon.shp` hakemistoon :kbd:`digitizing` ."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:79
+msgid ""
+"Zoom in and see what the polygons look like. You will get something like "
+"this:"
+msgstr "Zoomaa ja katso miltä monikulmiot näyttävät. Saat jotain tämän kaltaista:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:84
+msgid ""
+"Next one option to get points out of those polygons is to get their "
+"centroids:"
+msgstr "Seuraava toimenpide saada pisteet näistä monikulmioista on etsiä niiden keskiöt:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:86
+msgid "Open :menuselection:`Vector --> Geometry tools --> Polygon centroids`."
+msgstr "Avaa  :menuselection:`Vektorr --> Geometriatyökalut --> Monikulmioiden keskiöt`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:87
+msgid "Set the polygon layer you just got as the input file for the tool."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:88
+msgid ""
+"Name the output as :kbd:`green_centroids.shp` inside the :kbd:`digitizing` "
+"folder."
+msgstr "Nimeä tulostiedosto  :kbd:`green_centroids.shp` hakemistoon :kbd:`digitizing`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:89
+msgid "Check :menuselection:`Add result to canvas`."
+msgstr "Merkkaa :menuselection:`Lisää tulokset karttapohjalle`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:90
+msgid "Run the tool to calculate the centroids for the polygons."
+msgstr "Suorita työkalu monikulmioiden keskiöiden laskemiseksi."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:95
+msgid ""
+"Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the "
+"TOC."
+msgstr "Nyt voit poistaa :guilabel:`rautjarvi_green_polygon` tason Tasot panelista."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:97
+msgid "Change the symbology of the centroids layer as:"
+msgstr "Muuta keskiötason symboleja seuraavasti:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:99
+msgid "Open the :guilabel:`Layer Properties` for :guilabel:`green_centroids`."
+msgstr "Avaa :guilabel:`green_centroids` tason :guilabel:`Ominaisuudet`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:100
+msgid "Go to the :guilabel:`Style` tab."
+msgstr "Mene :guilabel:`Tyyli` välilehdelle."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:101
+msgid "Set the :guilabel:`Unit` to Map unit."
+msgstr "Aseta :guilabel:`Yksikkö` Karttayksiköksi."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:102
+msgid "Set the :guilabel:`Size` to 1."
+msgstr "Aseta :guilabel:`Koko` arvoon 1."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:104
+msgid ""
+"It is not necessary to differentiate points from each other, you just need "
+"them to be there for the snapping tools to use them. You can use those "
+"points now to follow the original lines much easily than without them."
+msgstr "Ei ole tarpeen erotella pisteitä toisistaan, tarvitset niiden vain olevan siellä kohdistustyökalun käyttöä varten. Voit nyt käyttää noita pisteitä seurataksesi alkuperäisiä viivoja paljon helpommin kuin ilman niitä."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:107
+msgid "|basic| |FA| Digitize the Forest Stands"
+msgstr "|basic| |FA| Digitoi metsäkuviot"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:109
+msgid ""
+"Now you are ready to start with the actual digitizing work. You would start "
+"by creating a vector file of :guilabel:`polygon type`, but for this "
+"exercise, there is a shapefile with part of the area of interest already "
+"digitized. You will just finish digitizing the half of the forest stands "
+"that are left between the main roads (wide pink lines) and the lake:"
+msgstr "Olet nyt valmis aloittamaan todellisen digitointityön. Voisit aloittaa luomalla :guilabel:`monikulmio tyypin` vektoritiedoston, mutta tässä harjoituksessa on jo olemassa shapefile tiedosto jossa osa kiinnostuksen alueesta on jo digitoitu. Tulet vain viimeistelemään puolet metsäkuvioista jotka on jätetty pääteiden (leveät pinkit viivat) ja järven väliin:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:114
+msgid "Go to the :kbd:`digitizing` folder using your file manager browser."
+msgstr "Siirry :kbd:`digitizing` hakemistoon käyttäen Selain panelia (tiedoston hallinta)."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:115
+msgid "Drag and drop the :kbd:`forest_stands.shp` vector file to your map."
+msgstr "Vedä ja pudota :kbd:`forest_stands.shp` vektoritiedosto karttapohjallesi."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:117
+msgid ""
+"Change the new layer's symbology so that it will be easier to see what "
+"polygons have already been digitized:"
+msgstr "Muuta uuden tason tyyliä siten että on helpompi nähdä monikulmiot jotka on jo digitoitu:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:119
+msgid "The filling of the polygon to green."
+msgstr "Monikulmioiden täyttö vihreäksi."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:120
+msgid "The polygons' borders to 1 mm."
+msgstr "Monikulmioiden rajojen leveys 1 mm."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:121
+msgid "and set the transparency to 50%."
+msgstr "ja aseta läpinäkyvyys 50%."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:123
+msgid ""
+"Now, if you remember past modules, we have to set up and activate the "
+"snapping options:"
+msgstr "Nyt, jos muistat aiemmista moduleista, meidän tulee asettaa ja ottaa käyttöön kohdistusvalinnat:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:125
+msgid "Go to :menuselection:`Settings --> Snapping options...`."
+msgstr "Mene :menuselection:`Asetukset --> Kohdistusvaihtoehdot...`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:126
+msgid ""
+"Activate the snapping the  :kbd:`green_centroids` and the "
+":kbd:`forest_stands` layers."
+msgstr "Aktivoi kohdistaminen :kbd:`green_centroids` ja :kbd:`forest_stands` tasoille."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:127
+msgid "Set their :guilabel:`Tolerance` to 5 map units."
+msgstr "Aseta niiden guilabel:`Toleranssi` arvoon 5 karttayksikköä."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:128
+msgid ""
+"Check the :guilabel:`Avoid Int.` box for the :kbd:`forest_stands` layer."
+msgstr "Merkkaa :guilabel:`Vältä risteämiä` laatikko :kbd:`forest_stands` tasolle."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:129
+msgid "Check :guilabel:`Enable topological editing`."
+msgstr "Merkkaa :guilabel:`Mahdollista topologian muokkaus`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:130
+msgid "Click :guilabel:`Apply`."
+msgstr "Klikkaa"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:135
+msgid ""
+"With these snapping settings, whenever you are digitizing and get close "
+"enough to one of the points in the centroids layer or any vertex of your "
+"digitized polygons, a pink cross will appear on the point that will be "
+"snapped to."
+msgstr "Näillä kohdistusasetuksilla, ainakun digitoit ja pääset tarpeeksi lähelle jotain pistetta keskiöiden tasolla tai jotain verteksiä digitoimissasi monikulmioissa, pinkki risti ilmestyy pisteelle johon kohdistetaan."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:137
+msgid ""
+"Finally, turn off the visibility of all the layers except "
+":kbd:`forest_stands` and :kbd:`rautjarvi_georef`. Make sure that the map "
+"image has not transparency any more."
+msgstr "Lopuksi poista kaikkien muiden tason näkyminen paitsi :kbd:`forest_stands` ja :kbd:`rautjarvi_georef`. Varmista ettei karttakuvassa ole enää läpinäkyvyyttä."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:139
+msgid "A couple of important things to note before you start digitizing:"
+msgstr "Vielä pari tärkeää seikka ennenkuin aloitat digitoinnin:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:141
+msgid "Don't try to be too accurate with the digitizing of the borders."
+msgstr "Älä yritä olla liian tarkka digitoidessasi rajoja."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:142
+msgid ""
+"If a border is a straight line, digitize it with just two nodes. In general,"
+" digitize using as few nodes as possible."
+msgstr "Jos raja on suora viiva, digitoi se vain kahdella pisteellä. Yleisesti ottaen digitoi niin vähin pistein kuin mahdollista."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:143
+msgid ""
+"Zoom in to close ranges only if you feel that you need to be accurate, for "
+"example, at some corners or when you want a polygon to connect with another "
+"polygon at a certain node."
+msgstr "Zoomaa lähietäisyydelle vain kun Sinusta tuntuu että haluat olla tarkka, esimerkiksi, joissain kulmissa tai kun haluat monikulmion yhdistyvän toiseen monikulmioon tietyssä pisteessä."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:144
+msgid ""
+"Use the mouse's middle button to zoom in/out and to pan as you digitize."
+msgstr "Käytä hiiren keskinäppäintä zoomaukseen lähelle ja kauas ja panoroi digitoidessasi."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:145
+msgid "Digitize only one polygon at a time."
+msgstr "Digitoi ainoastaan yhtä monikulmiota kerrallaan."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:146
+msgid ""
+"After digitizing one polygon, write the forest stand id that you can see "
+"from the map."
+msgstr "Jokaisen digitoimasi monikulmion jälkeen, kirjoita metsäkuvion identifiointitunnus jonka näet kartalta."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:148
+msgid "Now you can start digitizing:"
+msgstr "Nyt voit aloittaa digitoinnin:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:150
+msgid "Locate the forest stand number 357 in the map window."
+msgstr "Paikanna metsäkuvio jonka numero on 357 karttaikkunassa."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:151
+msgid "Enable editing for the :kbd:`forest_stands.shp` layer."
+msgstr "Ota käyttöön muokkaus :kbd:`forest_stands.shp` tasolle."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:152
+msgid "Select the :guilabel:`Add feature` tool."
+msgstr "Valitse :guilabel:`Lisää kohde` työkalu."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:153
+msgid "Start digitizing the stand :kbd:`357` by connecting some of the dots."
+msgstr "Aloita kuvion 357 digitointi yhdistämällä joitakin pisteitä."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:154
+msgid "Note the pink crosses indicating the snapping."
+msgstr "Huomaa pinkit ristit jotka osoittavat kohdistusta."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:159
+msgid "When you are done, right click to end digitizing that polygon."
+msgstr "Kun olet saanut valmiiksi klikkaa oikealla päättääksesi tämän monikulmion digitoinnin."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:160
+msgid "Enter the forest stand :kbd:`id` (in this case 357)."
+msgstr "Anna metsäkuviolle  :kbd:`id` (tässä tapauksessa 357)."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:161
+msgid "Click :guilabel:`OK`."
+msgstr "Klikkaa  :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:163
+msgid ""
+"If you were not prompted for the polygon :kbd:`id` when you finished "
+"digitizing it, go to :menuselection:`Settings --> Options --> Digitizing` "
+"and make sure that the :guilabel:`Suppress attribute form pop-up after "
+"feature creation` is not checked."
+msgstr "Jos Sinulta ei kysytty monikulmion :kbd:`id` tietoa kun lopetit monikulmion digitoinnin mene :menuselection:`Asetukset --> Asetukset --> Digitointi` ja varmista että  :guilabel:`Häivytä ominaisuustietojen pop-up ikkunat ominaisuuden luonnin jälkeen EI ole merkattu."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:165
+msgid "Your digitized polygon will look like this:"
+msgstr "Digitoimasi monikulmio näyttää tältä:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:170
+msgid ""
+"Now for the second polygon, pick up the stand number 358. Make sure that the"
+" :guilabel:`Avoid int.` is checked for the :kbd:`forest_stands` layer. This "
+"option does not allow intersecting polygons at digitizing, so that if you "
+"digitize  over an existing polygon, the new polygon will be trimmed to meet "
+"the border of the already existing polygons. You can use this characteristic"
+" to automatically obtain a common border."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:172
+msgid ""
+"Begin digitizing the stand 358 at one of the common corners with the stand "
+"357."
+msgstr "Aloita kuvion 358 digitointi yhdestä yhteisestä kulmasta kuvion 357 kanssa."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:173
+msgid ""
+"Then continue normally until you get to the other common corner for both "
+"stands."
+msgstr "Sitten jatka normaalisti kunnes pääset toiseen molemmille yhteiseen kulmaan."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:174
+msgid ""
+"Finally, digitize a few points inside polygon 357 making sure that the "
+"common border is not intersected. See left image below."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:175
+msgid "Right click to finish editing the forest stand 358."
+msgstr "Klikkaa oikealla päättääksesi metsäkuvio 358 digitointi."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:176
+msgid "Enter the :kbd:`id` as 358."
+msgstr "Anna :kbd:`id` arvoksi 358."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:177
+msgid ""
+"Click :guilabel:`OK`, your new polygon should show a common border with the "
+"stand 357 as you can seen in the image on the right."
+msgstr "Klikkaa :guilabel:`OK`, uuden monikulmiosi tulisi näyttää yhteinen raja kuvion 357 kanssa kuten näet kuvassa oikealla alhaalla."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:182
+msgid ""
+"The part of the polygon that was overlapping the existing polygon has been "
+"automatically trimmed out and you are left with a common border, as you "
+"intended it to be."
+msgstr "Monikulmion osa joka peitti olemassa olevaa monikulmiota on automaattisesti häivytetty pois ja jäljelle on jäänyt yhteinen raja kuten tarkoitus olikin."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:186
+msgid "|basic| |TY| Finish Digitizing the Forest Stands"
+msgstr "|basic| |TY| Lopetellaan metsäkuvioiden digitoiinti"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:188
+msgid ""
+"Now you have two forest stands ready. And a good idea on how to proceed. "
+"Continue digitizing on your own until you have digitized all the forest "
+"stands that are limited by the main road and the lake."
+msgstr "Nyt Sinulla on kaksi metsäkuviota valmiina. Ja hyvä ajatus kuinka jatkaa. Jatka digitointia itseksesi kunnes olet digitoinut kaikki metsäkuviot jotka rajautuvat pääteihin ja järveen."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:190
+msgid ""
+"It might look like a lot of work, but you will soon get used to digitizing "
+"the forest stands. It should take you about 15 minutes."
+msgstr "Työ voi näyttää paljolta mutta pikaisesti tulee metsäkuvioiden digitointi tutuksi. Työ kestänee noin 15 minuuttia."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:192
+msgid ""
+"During the digitizing you might need to edit or delete nodes, split or merge"
+" polygons. You learned about the necessary tools in "
+":doc:`../create_vector_data/topo_editing`, now is probably a good moment to "
+"go read about them again."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:194
+msgid ""
+"Remember that having :guilabel:`Enable topological editing` activated, "
+"allows you to move nodes common to two polygons so that the common border is"
+" edited at the same time for both polygons."
+msgstr "Muista että kun :guilabel:`Mahdollista topologian muokkaus` on aktivoitu Sinun on mahdollista siirtää kahden monikulmion yhteisiä solmupisteitä siten että yhteistä rajaa muokataan saman aikaisesti molemmille monikulmiolle."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:196
+msgid "Your result will look like this:"
+msgstr "Tuloksesi tulee näyttämään tältä:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:202
+msgid "|basic| |FA| Joining the Forest Stand Data"
+msgstr "|basic| |FA| Metsäkuviotietojen yhdistäminen"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:204
+msgid ""
+"It is possible that the forest inventory data you have for you map is also "
+"written in paper. In that case, you would have to first write that data to a"
+" text file or a spreadsheet. For this exercise, the information from the "
+"inventory for 1994 (the same inventory as the map) is ready as a comma "
+"separated text (csv) file."
+msgstr "On mahdollista että karttasi metsän inventointitiedot ovat kirjoitettu paperille. Tässä tapauksessa tulee Sinun ensin kirjoittaa tiedot tekstitiedostoon tai laskentataulukkoon. Tässä harjoituksessa vuoden 1994 inventoinnin tiedot (sama inventointi kuin kartta) ovat jo pilkuin erotellussa tekstitiedostossa (csv)."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:206
+msgid ""
+"Open the :kbd:`rautjarvi_1994.csv` file from the "
+":kbd:`exercise_data\\\\forestry` directory in a text editor and note that "
+"the inventory data file has an attribute called :kbd:`ID` that has the "
+"numbers of the forest stands. Those numbers are the same as the forest "
+"stands ids you have entered for your polygons and can be used to link the "
+"data from the text file to your vector file. You can see the metadata for "
+"this inventory data in the file :kbd:`rautjarvi_1994_legend.txt` in the same"
+" folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:208
+msgid ""
+"Open the :kbd:`.csv` in QGIS with the :menuselection:`Layer --> Add "
+"Delimited Text Layer...` tool. In the dialog, set it as follows:"
+msgstr "Avaa :kbd:`.csv` QGIS:ssä käyttäen työkalua :menuselection:`Tasot --> Lisää erotinmerkkejä sisältävä tekstitiedosto...`. Valintaikkunasssa aseta tiedot seuraavasti:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:213
+msgid "To add the data from the :kbd:`.csv` file:"
+msgstr "Lisää tiedot :kbd:`.csv` tiedostosta:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:215
+msgid "Open the Layer Properties for the :kbd:`forest_stands` layer."
+msgstr "Avaa Ominaisuudet tasolle :kbd:`forest_stands`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:216
+msgid "Go to the :guilabel:`Joins` tab."
+msgstr "Siirry :guilabel:`Yhdistymät` välilehdelle."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:217
+msgid "Click the plus sign on the bottom of the dialog box."
+msgstr "Klikkaa plus-merkkiä valintaikkunan alalaidassa."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:218
+msgid ""
+"Select :kbd:`rautjarvi_1994.csv` as the :guilabel:`Join layer` and :kbd:`ID`"
+" as the :guilabel:`Join` field."
+msgstr "Valitse :kbd:`rautjarvi_1994.csv` :guilabel:`Yhdistä taso` tietoon ja :kbd:`ID` :guilabel:`Liittämiskenttä` tietoon."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:219
+msgid "Make sure that the :guilabel:`Target` field is also set to :kbd:`id`."
+msgstr "Varmista että :guilabel:`Kohdekenttä` tietoon on myös asetettu :kbd:`id`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:220
+msgid "Click :guilabel:`OK` two times."
+msgstr "Klikkaa :guilabel:`OK` kahdesti."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:222
+msgid ""
+"The data from the text file should be now linked to your vector file. To see"
+" what has happened, open the attribute table for the :kbd:`forest_stands` "
+"layer. You can see that all the attributes from the inventory data file are "
+"now linked to your digitized vector layer."
+msgstr "Tiedot tekstitiedostosta tulisivat nyt olla yhdistettynä vektoritiedostoosi. Nähdäksesi mitä on tapahtunut avaa tason :kbd:`forest_stands` attribuuttitaulu. Voit nähdä että kaikki attribuutit inventointitiedot on nyt yhdistetty digitoimaasi vektoritasoon."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:225
+msgid "|basic| |TY| Renaming Attribute Names and Adding Area and Perimeter"
+msgstr "|basic| |TY| Attribuuttien uudelleen nimeäminen sekä alan ja ympärysmitan lisääminen"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:227
+msgid ""
+"The data from the :kbd:`.csv` file is just linked to your vector file. To "
+"make this link permanent, so that the data is actually recorded to the "
+"vector file you need to save the :kbd:`forest_stands` layer as a new vector "
+"file. Close the attribute table and right click the forest_stands layer to "
+"save it as :kbd:`forest_stands_1994.shp`."
+msgstr "Tiedot :kbd:`.csv` tiedostosta on vain linkattu vektoritiedostoosi. Tehdäksesi tämä yhdistämisen pysyväksi, siten että tiedot todellakin ovat aidosti talletettu vektoritiedostoon tulee Sinun tallentaa :kbd:`forest_stands` taso uutena vektoritiedostona. Sulje attribuuttitaulu ja klikkaa oikealla forest_stands tasoa tallentaaksesi sen nimellä "
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:229
+msgid ""
+"Open your new :kbd:`forest_stands_1994.shp` in your map if you did not added"
+" yet. Then open the attribute table. You notice that the names of the "
+"columns that you just added are no very useful. To solve this:"
+msgstr "Avaa uusi :kbd:`forest_stands_1994.shp` kartallesi jottel jo tehnyt sitä. Avaa attribuuttitaulu. Huomaat että sarakkeiden nimet jotka juuri lisäsit eivät ole kovin käyttökelpoisia. Tämän ratkaisemiseksi:"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:231
+msgid ""
+"Add the plugin :guilabel:`Table Manager` as you have done with other plugins"
+" before."
+msgstr "Lisää liitännäinen :guilabel:`Table Manager` kuten olet tehnyt muidenkin liitännäisten kanssa aiemmin."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:232
+msgid "Make sure the plugin is activated."
+msgstr "Varmista että liitännäinen on aktivoitu."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:233
+msgid "In the TOC select the layer :kbd:`forest_stands_1994.shp`."
+msgstr "Tasot panelissa valitse taso :kbd:`forest_stands_1994.shp`."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:234
+msgid ""
+"Then, go to :menuselection:`Vector --> Table Manager --> Table manager`."
+msgstr ""
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:235
+msgid ""
+"Use the dialogue box to edit the names of the columns to match the ones in "
+"the :kbd:`.csv` file."
+msgstr "Käytä valintaikkunan laatikoita sarakkeiden nimien muokkauksessa vastaamaan :kbd:`.csv` tiedostossa olevia."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:240
+msgid "Click on :guilabel:`Save`."
+msgstr "Klikkaa "
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:241
+msgid "Select :guilabel:`Yes` to keep the layer style."
+msgstr "Valitse :guilabel:`Yes` säilyttääksesi tason tyylin."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:242
+msgid "Close the :guilabel:`Table Manager` dialogue."
+msgstr "Sulje (close) :guilabel:`Table Manager` valintaikkuna."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:244
+msgid ""
+"To finish gathering the information related to these forest stands, you "
+"might calculate the area and the perimeter of the stands. You calculated "
+"areas for polygons in :doc:`../complete_analysis/analysis_exercise`. Go back"
+" to that lesson if you need to and calculate the areas for the forest "
+"stands, name the new attribute :kbd:`Area` and make sure that the values "
+"calculated are in hectares."
+msgstr "Näihin metsäkuivioihin liittyvien tietojen keräämisen lopettelemiseksi voisit laskea kuvioiden alan ja ympärysmitan. Laskit monikulmioiden aloja harjoituksessa :doc:`../complete_analysis/analysis_exercise`. Palaa tuolle oppitunnille jos tarpeen ja laske metsäkuvioiden alat, nimeä uusi attribuutti :kbd:`Area` ja varmista että lasketut arvot ovat hehtaareina."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:246
+msgid ""
+"Now your :kbd:`forest_stands_1994.shp` layer is ready and packed with all "
+"the available information."
+msgstr "Nyt :kbd:`forest_stands_1994.shp` tasosi on valmis ja pakattuna kaikella saatavilla olevilla tiedoilla."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:248
+msgid ""
+"Save your project to keep the current map presentation in case you need to "
+"come back later to it."
+msgstr "Tallenna projekti säilyttääksesi nykyisen kartan esityksen siinä tapauksessa että Sinun tulee palata siihen myöhemmin."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:251
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:253
+msgid ""
+"It has taken a few clicks of the mouse but you now have your old inventory "
+"data in digital format and ready for use in QGIS."
+msgstr "Tähän on tarvittu mmutamia hiiren klikkauksia mutta nyt Sinulla on vanhemmat inventointitiedot digitaalisessa muodossa ja valmiina käytettäväksi QGIS:ssä."
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:256
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/forestry/stands_digitazing.rst:258
+msgid ""
+"You could start doing different analysis with your brand new dataset, but "
+"you might be more interested in performing analysis in a dataset more up to "
+"date. The topic of the next lesson will be the creation of forest stands "
+"using current aerial photos and the addition of some relevant information to"
+" your dataset."
+msgstr "Voi olla että olisit kiinnostunut tekemään erilaista analyysia uudella tietojoukollasi, mutta saatat olla enemmän kiinnostuneempi tekemään analyysia nykyisemmällä tietojoukolla. Seuraavan oppitunnin aiheena on metsäkuvioiden luominen nykyisistä ilmavalokuvista ja jonkin merkityksellisen tiedon lisääminen tietojoukkoosi."

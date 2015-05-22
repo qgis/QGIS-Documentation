@@ -1,0 +1,110 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-14 13:57+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:6
+msgid "Slope Area Combination"
+msgstr "Combinatie helling gebied "
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:11
+msgid ""
+"Creates a grid of slope-area values = ``(Sm) (An)`` based on slope and "
+"specific catchment area grid inputs, and parameters ``m`` and ``n``. This "
+"tool is intended for use as part of the slope-area stream raster delineation"
+" method."
+msgstr "Maakt een raster van waarden voor helling-gebied = ``(Sm) (An)``, gebaseerd op rasterinvoeren voor helling en specifieke opvanggebieden, en de parameters ``m`` en ``n``. Dit gereedschap is bedoeld om te gebruiken als deel van de methode voor het karakteriseren van het helling-gebied stroomraster."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:16
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:20
+msgid "``Slope Grid`` [raster]"
+msgstr "``Raster helling`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:19
+msgid ""
+"This input is a grid of slope values. This grid can be obtained from the "
+"**\"D-Infinity Flow Directions\"** tool."
+msgstr "Deze invoer is een raster van waarden voor de helling. Dit raster kan verkregen worden als uitvoer van het gereedschap **\"D-oneindigheid stroomrichtingen\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:26
+msgid "``Contributing Area Grid`` [raster]"
+msgstr "``Raster deelnemend gebied`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:23
+msgid ""
+"A grid giving the specific catchment area for each cell taken as its own "
+"contribution (grid cell length or summation of weights) plus the "
+"proportional contribution from upslope neighbors that drain in to it. This "
+"grid is typically obtained from the **\"D-Infinity Contributing Area\"** "
+"tool."
+msgstr "Een raster dat de waarde voor het deelnemend gebied geeft voor elke cel, genomen als zijn eigen bijdrage  (lengte rastercellen of optelsom van wegingen) plus de bijdrage van opwaarts gelegen buren die er in afvoeren. Het deelnemend gebied wordt geteld in termen van het aantal celen van het raster (of opgetelde wegingen). Dit raster kan gewoonlijk worden verkregen met het gereedschap **\"D-oneindigheid deelnemend gebied\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:32
+msgid "``Slope Exponent`` [number]"
+msgstr "``Exponent helling`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:29
+msgid ""
+"The slope exponent (``m``) parameter which will be used in the formula: "
+"``(Sm)(An)``, that is used to create the slope-area grid."
+msgstr "De parameter Exponent van de helling (``m``) die zal worden gebruikt in de formule: ``(Sm)(An)``, die wordt gebruikt voor het maken van het raster helling-gebied."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:32
+msgid "Default: *2*"
+msgstr "Standaard: *2*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:38
+msgid "``Area Exponent`` [number]"
+msgstr "``Exponent gebied`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:35
+msgid ""
+"The area exponent (``n``) parameter which will be used in the formula: "
+"``(Sm)(An)``, that is used to create the slope-area grid."
+msgstr "De parameter Exponent van het gebied (``n``) die zal worden gebruikt in de formule: ``(Sm)(An)``, die wordt gebruikt voor het maken van het raster helling-gebied."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:38
+msgid "Default: *1*"
+msgstr "Standaard: *1*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:41
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:46
+msgid "``Slope Area Grid`` [raster]"
+msgstr "``Raster helling-gebied`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:44
+msgid ""
+"A grid of slope-area values = ``(Sm)(An)`` calculated from the slope grid, "
+"specific catchment area grid, ``m`` slope exponent parameter, and ``n`` area"
+" exponent parameter."
+msgstr "Een raster van waarden voor helling-gebied = ``(Sm)(An)``, berekend uit het hellingraster, raster voor het specifieke opvanggebied, parameter ``m`` voor de exponent van de helling en de parameter ``n`` voor de exponent van het gebied."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:49
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/slopeareacombination.rst:56
+msgid "See also"
+msgstr "Zie ook"

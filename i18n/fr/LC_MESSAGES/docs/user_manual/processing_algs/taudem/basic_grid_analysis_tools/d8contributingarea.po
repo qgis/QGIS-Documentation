@@ -1,0 +1,149 @@
+# 
+# Translators:
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-26 08:35+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:6
+msgid "D8 Contributing Area"
+msgstr "Surface contributive D8"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:11
+msgid ""
+"Calculates a grid of contributing areas using the single direction D8 flow "
+"model. The contribution of each grid cell is taken as one (or when the "
+"optional weight grid is used, the value from the weight grid). The "
+"contributing area for each grid cell is taken as its own contribution plus "
+"the contribution from upslope neighbors that drain in to it according to the"
+" D8 flow model."
+msgstr "Calcule une grille des surfaces contributives en utilisant le modèle de direction de flux unique D8. La contribution de chaque cellule de grille est prise en tant que tel (ou lorsqu'une grille optionelle de pondération est utilisée, la valeur de la grille de pondération). La surface contributive de chaque cellule est prise comme sa propre contribution ajoutée à la contribution des voisins en pente ascendante qui s'y déversent, selon le modèle de flux D8."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:17
+msgid ""
+"If the optional outlet point shapefile is used, only the outlet cells and "
+"the cells upslope (by the D8 flow model) of them are in the domain to be "
+"evaluated."
+msgstr "Si le fichier Shape des exutoires optionnels est utilisé, seules les cellules d'exutoire et les cellules de pente ascendante (par le modèle de flux D8) qui leur appartiennent font partie du domaine à évaluer."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:20
+msgid ""
+"By default, the tool checks for edge contamination. This is defined as the "
+"possibility that a contributing area value may be underestimated due to grid"
+" cells outside of the domain not being counted. This occurs when drainage is"
+" inwards from the boundaries or areas with \"no data\" values for elevation."
+" The algorithm recognizes this and reports \"no data\" for the contributing "
+"area. It is common to see streaks of \"no data\" values extending inwards "
+"from boundaries along flow paths that enter the domain at a boundary. This "
+"is the desired effect and indicates that contributing area for these grid "
+"cells is unknown due to it being dependent on terrain outside of the domain "
+"of data available. Edge contamination checking may be turned off in cases "
+"where you know this is not an issue or want to ignore these problems, if for"
+" example, the DEM has been clipped along a watershed outline."
+msgstr "Par défaut, l'outil vérifie la contamination des arcs. Il s'agit de la possibilité qu'une valeur de surface contributive soit sous-estimée à cause de la non-prise en compte des cellules en dehors du domaine. Cela se produit lorsque le drainage est à l'intérieur des limites ou avec des surfaces avec des valeurs vides d'élévation. L'algorithme reconnaît ce phénomène et renvoie les valeurs vides pour la surface contributive. Il est courant de constater des trainées des données vides à l'intérieur des limites le long des chemins de flux qui entre dans le domaine au niveau d'une limite. C'est l'effet désiré et cela indique que la surface contributive de ces cellules est inconnue car elle est dépendante du terrain qui se situe en dehors du domaine de travail. La vérification de la contamination des arcs peut être désactivée lorsque vous savez qu'il ne s'agit pas d'un problème ou que vous voulez ignorer ces problèmes, par exemple, si le MEN a été découpé le long d'une limite de bassin versant."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:34
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:40
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D8`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:37
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr "Une grille de directions de flux D8 définies pour chaque cellule comme la direction d'une de ses 8 voisins adjacents ou ses voisins diagonaux avec une pente descendante la plus raide. Cette grille peut être obtenue depuis la sortie de l'outil **\"Directions de flux D8\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:47
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Fichier Shape des exutoires`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:43
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:50
+msgid "Optional."
+msgstr "En option."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:45
+msgid ""
+"A point shapefile defining the outlets of interest. If this input file is "
+"used, only the cells upslope of these outlet cells are considered to be "
+"within the domain being evaluated."
+msgstr "Un fichier Shape de points définissant les exutoires d'intérêt. Si le fichier en entrée est utilisé, seules les cellules de pente ascendante de ces exutoires seront considérées comme à l'intérieur du domaine à évaluer."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:55
+msgid "``Weight Grid`` [raster]"
+msgstr "``Grille de pondération`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:52
+msgid ""
+"A grid giving contribution to flow for each cell. These contributions (also "
+"sometimes referred to as weights or loadings) are used in the contributing "
+"area accumulation. If this input file is not used, the contribution to flow "
+"will assumed to be one for each grid cell."
+msgstr "Une grille donnant la contribution de flux pour chaque cellule. Ces contributions (autrement dénommées comme charge ou pondération) sont utilisées dans l'accumulation de surface contributive. Si le fichier en entrée n'est pas utilisé, la contribution au flux sera celle de chaque cellule de grille."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:72
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Vérifier la contamination des arcs`` [booléen]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:58
+msgid ""
+"A flag that indicates whether the tool should check for edge contamination. "
+"Edge contamination is defined as the possibility that a contributing area "
+"value may be underestimated due to the fact that grid cells outside of the "
+"domain have not been evaluated. This occurs when drainage is inwards from "
+"the boundaries or areas with NODATA values for elevation. The algorithm "
+"recognizes this and reports NODATA for the impated cells. It is common to "
+"see streaks of NODATA values extending inwards from boundaries along flow "
+"paths that enter the domain at a boundary. This is the desired effect and "
+"indicates that contributing area for these grid cells is unknown due to it "
+"being dependent on terrain outside of the domain of available data. Edge "
+"contamination checking may be turned off in cases where you know this is not"
+" an issue, or want to ignore these problems, if for example, the DEM has "
+"been clipped along a watershed outline."
+msgstr "Un drapeau qui indique si l'outil doit vérifier la contamination des arcs. Il s'agit de la possibilité qu'une valeur de surface contributive soit sous-estimée à cause de la non-prise en compte des cellules en dehors du domaine. Cela se produit lorsque le drainage est à l'intérieur des limites ou avec des surfaces avec des valeurs vides d'élévation. L'algorithme reconnaît ce phénomène et renvoie les valeurs vides pour la surface contributive. Il est courant de constater des trainées des données vides à l'intérieur des limites le long des chemins de flux qui entre dans le domaine au niveau d'une limite. C'est l'effet désiré et cela indique que la surface contributive de ces cellules est inconnue car elle est dépendante du terrain qui se situe en dehors du domaine de travail. La vérification de la contamination des arcs peut être désactivée lorsque vous savez qu'il ne s'agit pas d'un problème ou que vous voulez ignorer ces problèmes, par exemple, si le MEN a été découpé le long d'une limite de bassin versant."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:72
+msgid "Default: *True*"
+msgstr "Par défaut : *Vrai*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:75
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:80
+msgid "``D8 Contributing Area Grid`` [raster]"
+msgstr "``Grille de surface contributive D8`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:78
+msgid ""
+"A grid of contributing area values calculated as the cells own contribution "
+"plus the contribution from upslope neighbors that drain in to it according "
+"to the D8 flow model."
+msgstr "Une grille de valeurs de surface contributive, calculées à partir de la valeur de contribution de la cellule plus la contribution des voisins de pente ascendante qui y drainent, selon  le modèle de flux D8."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:83
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8contributingarea.rst:90
+msgid "See also"
+msgstr "Voir également"

@@ -1,0 +1,267 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-16 10:15+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:6
+msgid "Stream Drop Analysis"
+msgstr "Analyse verval van stroom"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:11
+msgid ""
+"Applies a series of thresholds (determined from the input parameters) to the"
+" input accumulated stream source grid (:file:`*ssa`) grid and outputs the "
+"results in the :file:`*drp.txt` file the stream drop statistics table. This "
+"function is designed to aid in the determination of a geomorphologically "
+"objective threshold to be used to delineate streams. Drop Analysis attempts "
+"to select the right threshold automatically by evaluating a stream network "
+"for a range of thresholds and examining the constant drop property of the "
+"resulting Strahler streams. Basically it asks the question: Is the mean "
+"stream drop for first order streams statistically different from the mean "
+"stream drop for higher order streams, using a T-test. Stream drop is the "
+"difference in elevation from the beginning to the end of a stream defined as"
+" the sequence of links of the same stream order. If the T-test shows a "
+"significant difference then the stream network does not obey this \"law\" so"
+" a larger threshold needs to be chosen. The smallest threshold for which the"
+" T-test does not show a significant difference gives the highest resolution "
+"stream network that obeys the constant stream drop \"law\" from "
+"geomorphology, and is the threshold chosen for the \"objective\" or "
+"automatic mapping of streams from the DEM. This function can be used in the "
+"development of stream network rasters, where the exact watershed "
+"characteristic(s) that were accumulated in the accumulated stream source "
+"grid vary based on the method being used to determine the stream network "
+"raster."
+msgstr "Past een reeks drempelwaarden (bepaald uit de parameters voor invoer) toe op het invoerraster voor geaccumuleerde stroombron (:file:`*ssa`) en voert de resultaten uit naar het bestand :file:`*drp.txt`, de tabel met statistieken voor het verval van de stroom. Deze functie is ontworpen om te helpen bij de bepaling van een geomorfologische objectieve drempelwaarde om te worden gebruikt om stromen te karakteriseren. Analyse van verval probeert automatisch de juiste drempelwaarde te selecteren door een stroomnetwerk te evalueren op een bereik van drempelwaarden en de eigenschap voor het constante verval van de resulterende Strahler-stromen te onderzoeken. In de basis stelt het de vraag: Is het gemiddelde verval van de stroom voor stromen van de eerste orde statistisch anders dan die voor het verval van de stroom voor stromen van een hogere orde, met behulp van een T-test. Verval van een stroom is het verschil in hoogte van het begin tot het einde van een stroom, gedefinieerd als de reeks koppelingen van dezelfde orde van stromen. Als de T-test een significant verschil weergeeft dan voldoet het stroomnetwerk niet aan deze \"wet\", dus moet een hogere drempelwaarde worden gekozen. De kleinste drempelwaarde waar de T-test niet een significant verschil weergeeft geeft de hoogste resolutie stroomnetwerk dat voldoet aan de \"wet\" van de constante verval van de stroom van geomorfologie, en is de gekozen drempelwaarde voor de \"objectieve\" of automatisch in kaart brengen van de stromen uit de DEM. Deze functie kan worden gebruikt in de ontwikkeling van rasters voor stroomnetwerken, waar de exacte karakteristiek(en) voor de waterberging, die werden geaccumuleerd in het geaccumuleerde stroombron raster variëren, gebaseerd op de gebruikte methode om het raster van het stroomnetwerk te bepalen."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:35
+msgid ""
+"The constant stream drop \"law\" was identified by Broscoe (1959). For the "
+"science behind using this to determine a stream delineation threshold, see "
+"Tarboton et al. (1991, 1992), Tarboton and Ames (2001)."
+msgstr "De \"wet\" voor constant verval van een stroom werd geïdentificeerd door Broscoe (1959). Voor de wetenschap hierachter om een drempelwaarde voor de karakteristieken van een stroom te bepalen, zie Tarboton et al. (1991, 1992), Tarboton en Ames (2001)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:40
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:49
+msgid "``D8 Contributing Area Grid`` [raster]"
+msgstr "``D8 raster deelnemend gebied`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:43
+msgid ""
+"A grid of contributing area values for each cell that were calculated using "
+"the D8 algorithm. The contributing area for a cell is the sum of its own "
+"contribution plus the contribution from all upslope neighbors that drain to "
+"it, measured as a number of cells or the sum of weight loadings. This grid "
+"can be obtained as the output of the **\"D8 Contributing Area\"** tool. This"
+" grid is used in the evaluation of drainage density reported in the stream "
+"drop table."
+msgstr "Een raster van waarden van deelnemende gebieden voor elke cel die werden berekend met behulp van het algoritme D8. Het deelnemend gebied voor een cel is de som van zijn eigen bijdrage plus de bijdrage van alle opwaarts gelegen buren die er in afvoeren, gemeten als aantal cellen of de som van de gewogen ladingen. Dit raster kan worden verkregen als de uitvoer van het gereedschap **\"D8 deelnemend gebied\"**. Dit raster wordt gebruikt bij de evaluatie van de dichtheid van drainage, gerapporteerd in de tabel van verval van de stroom."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:55
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``D8 raster stroomrichting`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:52
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr "Een raster van D8 stroomrichtingen die zijn gedefinieerd, voor elke cel, al de richting van die van één van zijn acht aangelegen of diagonale buren met de steilste neerwaartse helling. Dit raster kan worden verkregen als de uitvoer van het gereedschap **\"D8 Stroomrichtingen\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:59
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr "``Gatengevuld hoogteraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:58
+msgid ""
+"A grid of elevation values. This is usually the output of the **\"Pit "
+"Remove\"** tool, in which case it is elevations with pits removed."
+msgstr "Een raster van hoogtewaarden. Dit is gewoonlijk de uitvoer van het gereedschap **\"Gaten verwijderen\"**, in welk het hoogten zijn met verwijderde gaten."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:68
+msgid "``Accumulated Stream Source Grid`` [raster]"
+msgstr "``Geaccumuleerd stroom bronraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:62
+msgid ""
+"This grid must be monotonically increasing along the downslope D8 flow "
+"directions. It it compared to a series of thresholds to determine the "
+"beginning of the streams. It is often generated by accumulating some "
+"characteristic or combination of characteristics of the watershed with the "
+"**\"D8 Contributing Area\"** tool, or using the maximum option of the **\"D8"
+" Flow Path Extreme\"** tool. The exact method varies depending on the "
+"algorithm being used."
+msgstr "Dit raster moet monotoon worden verhoogd langs de neerwaartse D8 stroomrichtingen. Het wordt vergeleken met een reeks drempelwaarden om het begin van stromen te bepalen. Het wordt vaak gegenereerd door een karakteristiek of combinatie van karakteristieken van de waterberging te accumuleren met het gereedschap **\"D8 deelnemend gebied\"**, of met behulp van de optie Maximum van het gereedschap **\"D8 extreem stroompad\"**. De exacte methode varieert, afhankelijk van het gebruikte algoritme."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:72
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Afvoeren-shapefile`` [vector: punt]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:71
+msgid ""
+"A point shapefile defining the outlets upstream of which drop analysis is "
+"performed."
+msgstr "Een punt-shapefile dat de opwaarts gelegen afvoeren definieert van waaruit de analyses van het verval wordt uitgevoerd."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:81
+msgid "``Minimum Threshold`` [number]"
+msgstr "``Minimum drempel`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:75
+msgid ""
+"This parameter is the lowest end of the range searched for possible "
+"threshold values using drop analysis. This technique looks for the smallest "
+"threshold in the range where the absolute value of the t-statistic is less "
+"than 2. For the science behind the drop analysis see Tarboton et al. (1991, "
+"1992), Tarboton and Ames (2001)."
+msgstr "Deze parameter is het laagste eind van het bereik waarmee mogelijke drempelwaarden worden gezocht met behulp van analyse van het verval. Deze techniek zoekt naar de laagste drempelwaarde in het bereik waar de absolute waarde voor de t-statistiek kleiner is dan 2. Voor de wetenschap achter de analyse van het verval, zie Tarboton et al. (1991, 1992), Tarboton en Ames (2001)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:81
+msgid "Default: *5*"
+msgstr "Standaard: *5*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:90
+msgid "``Maximum Threshold`` [number]"
+msgstr "``Maximum drempel`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:84
+msgid ""
+"This parameter is the highest end of the range searched for possible "
+"threshold values using drop analysis. This technique looks for the smallest "
+"threshold in the range where the absolute value of the t-statistic is less "
+"than 2. For the science behind the drop analysis see Tarboton et al. (1991, "
+"1992), Tarboton and Ames (2001)."
+msgstr "Deze parameter is het hoogste eind van het bereik waarmee mogelijke drempelwaarden worden gezocht met behulp van analyse van het verval. Deze techniek zoekt naar de laagste drempelwaarde in het bereik waar de absolute waarde voor de t-statistiek kleiner is dan 2. Voor de wetenschap achter de analyse van het verval, zie Tarboton et al. (1991, 1992), Tarboton en Ames (2001)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:90
+msgid "Default: *500*"
+msgstr "Standaard: *500*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:99
+msgid "``Number of Threshold Values`` [number]"
+msgstr "``Aantal drempelwaarden`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:93
+msgid ""
+"The parameter is the number of steps to divide the search range into when "
+"looking for possible threshold values using drop analysis. This technique "
+"looks for the smallest threshold in the range where the absolute value of "
+"the t-statistic is less than 2. For the science behind the drop analysis see"
+" Tarboton et al. (1991, 1992), Tarboton and Ames (2001)."
+msgstr "De parameter is het aantal stappen waarin het zoekbereik moet worden opgedeeld bij het zoeken naar mogelijke drempelwaarden met behulp van analyse van het verval. Deze techniek zoekt naar de laagste drempelwaarde in het bereik waar de absolute waarde voor de t-statistiek kleiner is dan 2. Voor de wetenschap achter de analyse van het verval, zie Tarboton et al. (1991, 1992), Tarboton en Ames (2001)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:99
+msgid "Default: *10*"
+msgstr "Standaard: *10*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:110
+msgid "``Spacing for Threshold Values`` [selection]"
+msgstr "``Afstand voor drempelwaarden`` [selectie]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:102
+msgid ""
+"This parameter indicates whether logarithmic or linear spacing should be "
+"used when looking for possible threshold values using drop ananlysis."
+msgstr "Deze parameter geeft aan of logaritmische of lineaire afstand moet worden gebruikt bij het zoeken naar mogelijke drempelwaarden met behulp van de analyse van het verval."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:105
+msgid "Options:"
+msgstr "Opties:"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:107
+msgid "0 --- Logarithmic"
+msgstr "0 --- Logaritmisch"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:108
+msgid "1 --- Linear"
+msgstr "1 --- Lineair"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:110
+msgid "Default: *0*"
+msgstr "Standaard: *0*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:113
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:126
+msgid "``D-Infinity Drop to Stream Grid`` [file]"
+msgstr "``D-oneindigheid verval naar stroom raster`` [bestand]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:116
+msgid "This is a comma delimited text file with the following header line:"
+msgstr "Dit is een komma gescheiden tekstbestand met de volgende kopregel:"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:120
+msgid "::"
+msgstr "::"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:120
+msgid ""
+"Threshold,DrainDen,NoFirstOrd,NoHighOrd,MeanDFirstOrd,MeanDHighOrd,StdDevFirstOrd,StdDevHighOrd,T"
+msgstr "Threshold,DrainDen,NoFirstOrd,NoHighOrd,MeanDFirstOrd,MeanDHighOrd,StdDevFirstOrd,StdDevHighOrd,T"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:122
+msgid ""
+"The file then contains one line of data for each threshold value examined, "
+"and then a summary line that indicates the optimum threshold value. This "
+"technique looks for the smallest threshold in the range where the absolute "
+"value of the t-statistic is less than 2. For the science behind the drop "
+"analysis, see Tarboton et al. (1991, 1992), Tarboton and Ames (2001)."
+msgstr "Het bestand bevat dan één regel met gegevens voor elke onderzochte drempelwaarde, en dan een overzichtsregel die de optimale drempelwaarde aangeeft. Deze techniek zoekt naar de laagste drempelwaarde in het bereik waar de absolute waarde voor de t-statistiek kleiner is dan 2. Voor de wetenschap achter de analyse van het verval, zie Tarboton et al. (1991, 1992), Tarboton en Ames (2001)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:129
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:136
+msgid "See also"
+msgstr "Zie ook"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:138
+msgid ""
+"Broscoe, A. J., (1959), \"Quantitative analysis of longitudinal stream "
+"profiles of small watersheds\", Office of Naval Research, Project NR "
+"389-042, Technical Report No. 18, Department of Geology, Columbia "
+"University, New York."
+msgstr "Broscoe, A. J., (1959), \"Quantitative analysis of longitudinal stream profiles of small watersheds\", Office of Naval Research, Project NR 389-042, Technical Report No. 18, Department of Geology, Columbia University, New York."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:141
+msgid ""
+"Tarboton, D. G., R. L. Bras and I. Rodriguez-Iturbe, (1991), \"On the "
+"Extraction of Channel Networks from Digital Elevation Data\", Hydrologic "
+"Processes, 5(1): 81-100."
+msgstr "Tarboton, D. G., R. L. Bras en I. Rodriguez-Iturbe, (1991), \"On the Extraction of Channel Networks from Digital Elevation Data\", Hydrologic Processes, 5(1): 81-100."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:144
+msgid ""
+"Tarboton, D. G., R. L. Bras and I. Rodriguez-Iturbe, (1992), \"A Physical "
+"Basis for Drainage Density\", Geomorphology, 5(1/2): 59-76."
+msgstr "Tarboton, D. G., R. L. Bras en I. Rodriguez-Iturbe, (1992), \"A Physical Basis for Drainage Density\", Geomorphology, 5(1/2): 59-76."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools/streamdropanalysis.rst:146
+msgid ""
+"Tarboton, D. G. and D. P. Ames, (2001), \"Advances in the mapping of flow "
+"networks from digital elevation data\", World Water and Environmental "
+"Resources Congress, Orlando, Florida, May 20-24, ASCE, "
+"http://www.engineering.usu.edu/dtarb/asce2001.pdf."
+msgstr "Tarboton, D. G. en D. P. Ames, (2001), \"Advances in the mapping of flow networks from digital elevation data\", World Water and Environmental Resources Congress, Orlando, Florida, May 20-24, ASCE, http://www.engineering.usu.edu/dtarb/asce2001.pdf."

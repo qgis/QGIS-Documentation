@@ -1,0 +1,185 @@
+# 
+# Translators:
+# MarieSilvestre <marie.silvestre@gmail.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2014-2015
+# Sant-anna <delazj@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2015-03-04 16:31+0000\n"
+"Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:7
+msgid "Releasing your plugin"
+msgstr "Publier votre extension"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:9
+msgid ""
+"Once your plugin is ready and you think the plugin could be helpful for some"
+" people, do not hesitate to upload it to :ref:`official_pyqgis_repository`. "
+"On that page you can find also packaging guidelines about how to prepare the"
+" plugin to work well with the plugin installer. Or in case you would like to"
+" set up your own plugin repository, create a simple XML file that will list "
+"the plugins and their metadata, for examples see other `plugin repositories "
+"<http://www.qgis.org/wiki/Python_Plugin_Repositories>`_."
+msgstr "Une fois que l'extension est prête et que vous pensez qu'elle pourra être utile à d'autres, n'hésitez pas à la téléverser sur :ref:`official_pyqgis_repository`. Sur cette page, vous pouvez également trouver un guide d'empaquetage sur comment préparer l'extension pour qu'elle fonctionne correctement avec l'installateur d'extensions. Dans le cas où vous souhaitez mettre en place votre propre dépôt d'extensions, créez un unique fichier XML qui listera vos extensions ainsi que leur métadonnées Pour des exemples, consultez les autres `dépôts d'extension <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:23
+msgid "Official python plugin repository"
+msgstr "Dépôt officiel des extensions Python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:25
+msgid ""
+"You can find the *official* python plugin repository at "
+"`<http://plugins.qgis.org/>`_."
+msgstr "Vous pouvez trouver le dépôt *officiel* des extensions python à `<http://plugins.qgis.org/>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:28
+msgid ""
+"In order to use the official repository you must obtain an OSGEO ID from the"
+" `OSGEO web portal <http://www.osgeo.org/osgeo_userid/>`_."
+msgstr "Afin d'utiliser le dépôt officiel, vous devez détenir un identifiant OSGEO, à partir du `portail web OSGEO <http://www.osgeo.org/osgeo_userid/>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:31
+msgid ""
+"Once you have uploaded your plugin it will be approved by a staff member and"
+" you will be notified."
+msgstr "Une fois que vous avez téléversé votre extension, elle sera approuvée par un membre du staff et une notification vous sera adressée."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:41
+msgid "Permissions"
+msgstr "Permissions"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:43
+msgid "These rules have been implemented in the official plugin repository:"
+msgstr "Ces règles ont été implémentées dans le dépôt officiel des extensions :"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:45
+msgid "every registered user can add a new plugin"
+msgstr "tout utilisateur enregistré peut ajouter une nouvelle extension"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:46
+msgid "*staff* users can approve or disapprove all plugin versions"
+msgstr "les utilisateurs membres du *staff* sont habilités à approuver ou non chacune des versions de toutes les extensions"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:47
+msgid ""
+"users which have the special permission `plugins.can_approve` get the "
+"versions they upload automatically approved"
+msgstr "Les utilisateurs qui ont l'autorisation spéciale `plugins.can_approve` ont leurs versions d'extension automatiquement approuvées"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:49
+msgid ""
+"users which have the special permission `plugins.can_approve` can approve "
+"versions uploaded by others as long as they are in the list of the plugin "
+"*owners*"
+msgstr "Les utilisateurs ayant l'autorisation spéciale `plugins.can_approve` peuvent approuver les versions téléversées par d'autres, dès lors qu'ils sont dans la liste des *propriétaires* de l'extension"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:52
+msgid ""
+"a particular plugin can be deleted and edited only by *staff* users and "
+"plugin *owners*"
+msgstr "une extension particulière peut être effacée et éditer uniquement par les utilisateurs de *l'équipe* et par leurs *propriétaires*"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:54
+msgid ""
+"if a user without `plugins.can_approve` permission uploads a new version, "
+"the plugin version is automatically unapproved."
+msgstr "Si un utilisateur ne disposant pas de la permission `plugins.can_approve` téléverse une nouvelle version, cette version de l'extension est automatiquement signalée comme non approuvée."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:59
+msgid "Trust management"
+msgstr "Gestion de la confiance"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:61
+msgid ""
+"Staff members can grant *trust* to selected plugin creators setting "
+"`plugins.can_approve` permission through the front-end application."
+msgstr "Les membres de l'équipe peuvent ajouter un niveau de confiance à certains créateurs d'extension en paramétrant la permission dans la variable `plugins.can_approve` depuis l'application frontale."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:64
+msgid ""
+"The plugin details view offers direct links to grant trust to the plugin "
+"creator or the plugin *owners*."
+msgstr "La vue détaillée de l'extension montre les liens directs pour modifier le niveau de confiance du créateur d'extension ou des *propriétaires* de l'extension."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:70
+msgid "Validation"
+msgstr "Validation"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:72
+msgid ""
+"Plugin's metadata are automatically imported and validated from the "
+"compressed package when the plugin is uploaded."
+msgstr "Les métadonnées de l'extension sont importées et validées automatiquement à partir du paquet compressé lorsque l'extension est envoyée."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:75
+msgid ""
+"Here are some validation rules that you should aware of when you want to "
+"upload a plugin on the official repository:"
+msgstr "Voici quelques règles de validation auxquelles vous devriez faire attention quand vous souhaitez charger votre extension sur le dépôt officiel:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:78
+msgid ""
+"the name of the main folder containing your plugin must contain only "
+"contains ASCII characters (A-Z and a-z), digits and the characters "
+"underscore (_) and minus (-), also it cannot start with a digit"
+msgstr "le nom du dossier principal contenant votre extension ne doit contenir que des caractères ASCII (A-Z et a-z), des chiffres et les caractères underscore(_) et moins (-), sans cependant commencer par un chiffre"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:81
+msgid ":file:`metadata.txt` is required"
+msgstr ":file:`metadata.txt` est requis"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:82
+msgid ""
+"all required metadata listed in :ref:`metadata table<plugin_metadata_table>`"
+" must be present"
+msgstr "Toutes les métadonnées requises listées dans :ref:`metadata table<plugin_metadata_table>` doivent être présentes."
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:84
+msgid "the `version` metadata field must be unique"
+msgstr "Le champ de métadonnée `version` doit être unique"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:17
+msgid "plugins;"
+msgstr "extensions ;"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:37
+msgid "plugins"
+msgstr "extensions"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:37
+msgid "official python plugin repository"
+msgstr "dépôt officiel des extensions python"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:35
+msgid "**TODO:**"
+msgstr "**A FAIRE :**"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:35
+msgid "Insert a link to the governance document"
+msgstr "Insérer un lien vers le document de gouvernance"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:87
+msgid "Plugin structure"
+msgstr "Structure d'une extension"
+
+#: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:89
+msgid ""
+"Following the validation rules the compressed (.zip) package of your plugin "
+"must have a specific structure to validate as a functional plugin. As the "
+"plugin will be unzipped inside the users plugins folder it must have it's "
+"own directory inside the .zip file to not interfere with other plugins. "
+"Mandatory files are: :file:`metadata.txt` and :file:`__init__.py`. But it "
+"would be nice to have a :file:`README` and of course an icon to represent "
+"the plugin (:file:`resources.qrc`). Following is an example of how a "
+"plugin.zip should look like."
+msgstr "Le paquet compressé (.zip) de votre extension, suivant les règles de validation, doit avoir une structure spécifique pour être validé en tant qu'extension fonctionnelle. Étant donné que l'extension doit être décompressée à l'intérieur du répertoire des extensions de l'utilisateur, elle doit disposer de sont propre répertoire au sein de l'archive .zip pour ne pas interférer avec les autres extensions. Les fichiers obligatoires sont: :file:`metadata.txt` et :file:`__init__.py`. Il serait également appréciable de fournir un fichier :file:`README` ainsi qu'une icône pour représenter l'extension (:file:`resources.qrc`). Voici à quoi devrait ressembler le contenu d'une archive zip contenant une extension:"

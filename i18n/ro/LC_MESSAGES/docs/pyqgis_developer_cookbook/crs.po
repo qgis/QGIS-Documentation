@@ -1,0 +1,153 @@
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2014-12-05 18:36+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:9
+msgid "Projections Support"
+msgstr "Proiecții suportate"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:14
+msgid "Coordinate reference systems"
+msgstr "Sisteme de coordonate de referință"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:16
+msgid ""
+"Coordinate reference systems (CRS) are encapsulated by "
+":class:`QgsCoordinateReferenceSystem` class. Instances of this class can be "
+"created by several different ways:"
+msgstr "Sisteme de coordonate de referință (SIR) sunt încapsulate de către clasa  :class:`QgsCoordinateReferenceSystem`. Instanțele acestei clase pot fi create prin mai multe moduri diferite:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:26
+msgid "QGIS uses three different IDs for every reference system:"
+msgstr "QGIS folosește trei ID-uri diferite pentru fiecare sistem de referință:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:32
+msgid ""
+"If not specified otherwise in second parameter, PostGIS SRID is used by "
+"default."
+msgstr "În cazul în care nu se specifică altfel în al doilea parametru, PostGIS SRID este utilizat în mod implicit."
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:50
+msgid ""
+"It's wise to check whether creation (i.e. lookup in the database) of the CRS"
+" has been successful: :func:`isValid` must return :const:`True`."
+msgstr "Este înțelept să verificăm dacă a avut loc crearea cu succes a CRS-ului (de exemplu, efectuând o căutare în baza de date): :func:`isValid` trebuie să întoarcă :const:`True`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:79
+msgid "Projections"
+msgstr "Proiecții"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:11
+msgid "coordinate reference systems"
+msgstr "aisteme de coordonate de referință"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:76
+msgid "projections"
+msgstr "proiecții"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:20
+msgid "specify CRS by its ID ::"
+msgstr "specifică CRS-ul după ID-ul său ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:28
+msgid ":const:`PostgisCrsId` --- IDs used within PostGIS databases."
+msgstr ":const:`PostgisCrsId` --- ID-uri folosite în interiorul bazei de date PostGIS."
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:29
+msgid ":const:`InternalCrsId` --- IDs internally used in QGIS database."
+msgstr ":const:`InternalCrsId` --- ID-uri folosite în baza de date QGIS."
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:30
+msgid ":const:`EpsgCrsId` --- IDs assigned by the EPSG organization"
+msgstr ":const:`EpsgCrsId` --- ID-uri asignate de către organizația EPSG"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:34
+msgid "specify CRS by its well-known text (WKT) ::"
+msgstr "specifică CRS-ul prin well-known text (WKT) ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:42
+msgid ""
+"create invalid CRS and then use one of the :func:`create*` functions to "
+"initialize it. In following example we use Proj4 string to initialize the "
+"projection ::"
+msgstr "creați un CRS nevalid iar apoi utilizați una din funcțiile :func:`create*` pentru a-l inițializa. În următorul exemplu vom folosi șirul Proj4 pentru a inițializa proiecția ::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:53
+msgid ""
+"Note that for initialization of spatial reference systems QGIS needs to look"
+" up appropriate values in its internal database :file:`srs.db`. Thus in case"
+" you create an independent application you need to set paths correctly with "
+":func:`QgsApplication.setPrefixPath` otherwise it will fail to find the "
+"database. If you are running the commands from QGIS python console or "
+"developing a plugin you do not care: everything is already set up for you."
+msgstr "Rețineți că pentru inițializarea sistemelor de referință spațiale, QGIS trebuie să caute valorile corespunzătoare în baza de date internă :file:`srs.db`. Astfel, în cazul în care creați o aplicație independentă va trebui să stabiliți corect căile, cu ajutorul :func:`QgsApplication.setPrefixPath`, în caz contrar baza de date nu va fi găsită. Dacă executați comenzile din consola QGIS python sau dezvoltați vreun plugin, atunci totul este în regulă: totul este deja configurat pentru dvs."
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:60
+msgid "Accessing spatial reference system information"
+msgstr "Accesarea informațiilor sistemului de referință spațial"
+
+#: ../../source/docs/pyqgis_developer_cookbook/crs.rst:81
+msgid ""
+"You can do transformation between different spatial reference systems by "
+"using :class:`QgsCoordinateTransform` class. The easiest way to use it is to"
+" create source and destination CRS and construct "
+":class:`QgsCoordinateTransform` instance with them. Then just repeatedly "
+"call :func:`transform` function to do the transformation. By default it does"
+" forward transformation, but it is capable to do also inverse transformation"
+msgstr "Puteți face transformarea între diferitele sisteme de referință spațiale, cu ajutorul clasei :class:`QgsCoordinateTransform`. Cel mai simplu mod de a o folosi este de a crea CRS-urile sursă și destinație și să construiți cu ele o instanță :class:`QgsCoordinateTransform`. Apoi, doar repetați apelul funcției :func:`transform` pentru a realiza transformarea. În mod implicit, aceasta face transformarea în ordinea deja precizată, dar este capabilă de a face și transformarea inversă"
+
+#~ msgid "specify CRS by its ID::"
+#~ msgstr ""
+
+#~ msgid ":const:`PostgisCrsId` - IDs used within PostGIS databases."
+#~ msgstr ""
+
+#~ msgid ":const:`InternalCrsId` - IDs internally used in QGIS database."
+#~ msgstr ""
+
+#~ msgid ":const:`EpsgCrsId` - IDs assigned by the EPSG organization"
+#~ msgstr ""
+
+#~ msgid "specify CRS by its well-known text (WKT)::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "create invalid CRS and then use one of the :func:`create*` functions to "
+#~ "initialize it. In following example we use Proj4 string to initialize the "
+#~ "projection::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that for initialization of spatial reference systems QGIS needs to "
+#~ "lookup appropriate values in its internal database :file:`srs.db`. Thus in "
+#~ "case you create an independent application you need to set paths correctly "
+#~ "with :func:`QgsApplication.setPrefixPath` otherwise it will fail to find the"
+#~ " database. If you are running the commands from QGIS python console or "
+#~ "developing a plugin you do not care: everything is already set up for you."
+#~ msgstr ""
+
+#~ msgid "Accessing spatial reference system information::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can do transformation between different spatial reference systems by "
+#~ "using :class:`QgsCoordinateTransform` class. The easiest way to use it is to"
+#~ " create source and destination CRS and construct "
+#~ ":class:`QgsCoordinateTransform` instance with them. Then just repeatedly "
+#~ "call :func:`transform` function to do the transformation. By default it does"
+#~ " forward transformation, but it is capable to do also inverse "
+#~ "transformation::"
+#~ msgstr ""

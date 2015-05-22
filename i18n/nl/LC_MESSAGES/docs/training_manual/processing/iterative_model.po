@@ -1,0 +1,95 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-01-01 15:22+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:6
+msgid "More iterative execution of algorithms"
+msgstr "Meer herhaalde uitvoering van algoritmen"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:8
+msgid ""
+"This lessons shows how to combine the iterative execution of algorithm with "
+"the modeler to get more automation"
+msgstr "Deze les toont hoe de herhaalde uitvoering van algoritmen te combineren  met Grafische modellen bouwen om meer automatisering te verkrijgen"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:11
+msgid ""
+"The iterative execution of algorithms is available not just for built-in "
+"algorithms, but also for the algorithms that you can create your self, such "
+"as models. We are going to see how to combine a model and the iterative "
+"execution of algorithms, so we can obtain more complex results with ease."
+msgstr "De herhaalde uitvoering van algoritmen is niet alleen beschikbaar voor ingebouwde algoritmen, maar ook voor de algoritmen die u zelf kunt maken, zoals modellen. We gaan zien hoe een model en de herhaalde uitvoering van algoritmen te combineren, zodat we eenvoudiger meer complexe resultaten kunnen verkrijgen."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:14
+msgid ""
+"The data the we are going to use for this lesson is the same one that we "
+"already used for the last one. In this case, instead of just clipping the "
+"DEM with each watershed polygon, we will add some extra steps and calculate "
+"a hypsometric curve for each of them, to study how elevation is distributed "
+"within the watershed."
+msgstr "De gegevens die we voor deze les gaan gebruiken zijn dezelfde als die we voor de laatste gebruikten. In dit geval, in plaats van slechts de DEM te clippen met elk polygoon van een waterberging, zullen we enkele extra stappen toevoegen en een hypsometrische curve berekenen voor elk daarvan, om te bestuderen hoe de hoogte is verdeeld binnen de waterberging."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:16
+msgid ""
+"Since we have a workflow that involves several steps (clipping + computing "
+"the hypsometric curve), we should go to the modeler and create the "
+"corresponding model for that workflow."
+msgstr "Omdat we een werkstroom hebben die verscheidene stappen omvat (clippen + berekenen van de hypsometrische curve), zouden we naar Grafische modellen bouwen moeten gaan en het corresponderende model voor die werkstroom moeten maken."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:18
+msgid ""
+"You can find the model already created in the data folder for this lesson, "
+"but it would be good if you first try to create it yourself. The clipped "
+"layer is not a final result in this case, since we are just interested in "
+"the curves, so this model will not generated any layers, but just a table "
+"with the curve data."
+msgstr "U vindt het reeds gebouwde model in de map met gegevens voor deze les, maar het zou goed zijn als u het eerst zelf probeert. De geclipte laag is in dit geval niet een uiteindelijk resultaat, omdat we alleen zijn geïnteresseerd in de curves, dus dit model zal geen lagen genereren, maar slechts een tabel met de gegevens van de curves."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:20
+msgid "The model should look like this:"
+msgstr "Het model zou er zo uit moeten zien:"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:24
+msgid ""
+"Add the model to you models folder, so it is available in the toolbox, and "
+"now execute it."
+msgstr "Voeg het model toe aan uw  map met modellen, zodat het beschikbaar is in de Toolbox, en voer het nu uit."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:28
+msgid ""
+"Select the DEM and watersheds basins, and do not forget to toggle the button"
+" that indicates that the algorithm has to be run iteratively."
+msgstr "Selecteer de DEM en de bassins van waterbergingen, en vergeet niet de knop te schakelen die aangeeft dat het algoritme iteratief moet worden uitgevoerd."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:30
+msgid ""
+"The algorithm will be run several times, and the corresponding tables will "
+"be created and open in your QGIS project."
+msgstr "Het algoritme zal verscheidene keren worden uitgevoerd, en de corresponderende tabellen zullen worden gemaakt en geopend in uw project van QGIS."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:34
+msgid ""
+"We can make this example more complex by extending the model and computing "
+"some slope statistics. Add the *Slope, aspect, curvatures* algorithm to the "
+"model, and then the *Raster statistics* algorithm, which should use the "
+"slope output as its only input."
+msgstr "We kunnen dit voorbeeld nog complexer maken door het model uit te breiden en enkele statistieken voor hellingen te berekenen. Voeg het algoritme *Slope, aspect, curvature* toe aan het model en daarna het algoritme *Raster statistics*, wat de uitvoer voor de hellingen als enige invoer zou moeten gebruiken."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:38
+msgid ""
+"If you now run the model, apart from the tables you will get a set of pages "
+"with statistics. These pages will be available in the results dialog."
+msgstr "Als u nu het model uitvoert, zult u, naast de tabellen, een aantal pagina's met statistieken verkrijgen. Deze pagina's zullen beschikbaar zijn in het dialoogvenster Resultaten."

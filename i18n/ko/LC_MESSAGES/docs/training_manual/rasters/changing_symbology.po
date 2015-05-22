@@ -1,0 +1,285 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-02 14:11+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:6
+msgid "|LS| Changing Raster Symbology"
+msgstr "|LS| 래스터 심볼 변경"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:8
+msgid ""
+"Not all raster data consists of aerial photographs. There are many other "
+"forms of raster data, and in many of those cases, it's essential to "
+"symbolize the data properly so that it becomes properly visible and useful."
+msgstr "모든 래스터 데이터가 항공사진인 것은 아닙니다. 다른 형식의 래스터 데이터도 많이 있으며, 대부분의 경우, 데이터를 적절히 심볼화해서 제대로 활용할 수 있도록 표출하는 작업이 필요합니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:12
+msgid ""
+"**The goal for this lesson:** To change the symbology for a raster layer."
+msgstr "**이 강의의 목표:** 래스터 레이어를 위해 심볼을 변경하기."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:15
+msgid "|basic| |TY|"
+msgstr "|basic| |TY|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:17
+msgid ""
+"Start with the current map which you should have created during the previous"
+" exercise: :kbd:`analysis.qgs`."
+msgstr ""
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:19
+msgid ""
+"Use the :guilabel:`Add Raster Layer` button to load the new raster dataset."
+msgstr ":guilabel:`Add Raster Layer` 버튼을 사용해서 새 래스터 데이터셋을 불러옵니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:20
+msgid ""
+"Load the dataset |srtmFileName|, found under the directory "
+":kbd:`exercise_data/raster/SRTM/`."
+msgstr ":kbd:`exercise_data/raster/SRTM/` 디렉터리에 있는 데이터셋 |srtmFileName| 을 로드하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:22
+msgid ""
+"Once it appears in the :guilabel:`Layers list`, rename it to :kbd:`DEM`."
+msgstr "래스터 데이터셋이 :guilabel:`Layers list` 에 추가되면 :kbd:`DEM` 이라는 명칭으로 변경하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:23
+msgid ""
+"Zoom to the extent of this layer by right-clicking on it in the Layer List "
+"and selecting :guilabel:`Zoom to Layer Extent`."
+msgstr "레이어 목록에서 해당 데이터셋을 오른쪽 클릭하고 :guilabel:`Zoom to Layer Extent` 를 선택해서 레이어 전체가 보이도록 줌인/줌아웃하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:26
+msgid ""
+"This dataset is a *Digital Elevation Model (DEM)*. It's a map of the "
+"elevation (altitude) of the terrain, allowing us to see where the mountains "
+"and valleys are, for example."
+msgstr "이 데이터셋은 *수치 표고 모델(Digital Elevation Model, DEM)* 입니다. 지형의 표고(고도)를 표현하는 맵으로, 예를 들면 산과 계곡의 위치를 볼 수 있게 해줍니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:30
+msgid ""
+"Once it's loaded, you'll notice that it's a basic stretched grayscale "
+"representation of the DEM. It's seen here with the vector layers on top:"
+msgstr "불러오기가 완료되면, 이 데이터셋이 DEM을 표현하는, 기본 구간화 흑백 스케일 래스터라는 것을 알 수 있습니다. 다음은 벡터 레이어를 맨 위에 놓은 화면입니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:36
+msgid ""
+"QGIS has automatically applied a stretch to the image for visualization "
+"purposes, and we will learn more about how this works as we continue."
+msgstr "QGIS는 시각화 목적을 위해 자동적으로 이미지에 구간을 적용합니다. 이번 실습을 계속하면서 이것이 어떻게 작용하는지 배우게 될 것입니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:40
+msgid "|basic| |FA| Changing Raster Layer Symbology"
+msgstr "|basic| |FA| 래스터 레이어 심볼 변경"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:42
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog for the :guilabel:`SRTM` layer "
+"by right-clicking on the layer in the Layer tree and selecting "
+":guilabel:`Properties` option."
+msgstr "레이어 목록에서 :guilabel:`SRTM` 레이어를 오른쪽 클릭하고 :guilabel:`Properties` 옵션을 선택해서 :guilabel:`Layer Properties` 대화 창을 여십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:45
+msgid "Switch to the :guilabel:`Style` tab."
+msgstr ":guilabel:`Style` 탭을 선택하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:50
+msgid ""
+"These are the current settings that QGIS applied for us by default. Its just"
+" one way to look at a DEM, so lets explore some others."
+msgstr "QGIS가 기본적으로 적용한 현재 설정 화면입니다. 이 설정은 DEM을 시각화하는 한 방법일 뿐이므로, 다른 설정을 알아보도록 합시다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:53
+msgid ""
+"Change the :guilabel:`Render type` to :guilabel:`Singleband pseudocolor`, "
+"and use the default options presented."
+msgstr ":guilabel:`Render type` 을 :guilabel:`Singleband pseudocolor` 로 변경한 다음, 나타나는 기본 옵션을 그대로 사용하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:55
+msgid ""
+"Click the :guilabel:`Classify` button to generate a new color "
+"classification, and click :guilabel:`OK` to apply this classification to the"
+" DEM."
+msgstr ":guilabel:`Classify` 버튼을 클릭해서 새 색상 범주화를 생성한 다음, :guilabel:`OK` 를 클릭해서 해당 범주화를 DEM에 적용하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:61
+msgid "You'll see the raster looking like this:"
+msgstr "래스터가 다음과 같이 보이게 됩니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:66
+msgid ""
+"This is an interesting way of looking at the DEM, but maybe we don't want to"
+" symbolize it using these colors."
+msgstr "DEM을 시각화하는 데 있어 분명히 재미있는 방법이긴 하지만, 이 색상들로 심볼화하는 건 적당하지 않은 것 같군요."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:69
+msgid "Open :guilabel:`Layer Properties` dialog again."
+msgstr ":guilabel:`Layer Properties` 대화 창을 다시 여십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:70
+msgid ""
+"Switch the :guilabel:`Render Type` back to :guilabel:`Singleband gray`."
+msgstr ":guilabel:`Render Type` 을 다시 :guilabel:`Singleband gray` 로 바꾸십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:71
+msgid "Click :guilabel:`OK` to apply this setting to the raster."
+msgstr ":guilabel:`OK` 를 클릭해서 이 설정을 래스터에 적용하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:73
+msgid ""
+"You will now see a totally gray rectangle that isn't very useful at all."
+msgstr "이제 하나도 쓸모 없는 회색 사각형만 보게 됩니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:78
+msgid ""
+"This is because we have lost the default settings which \"stretch\" the "
+"color values to show them contrast."
+msgstr "색상값이 서로 대비되도록 구간을 적용하는 기본 설정이 사라졌기 때문입니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:81
+msgid ""
+"Let's tell QGIS to again \"stretch\" the color values based on the range of "
+"data in the DEM. This will make QGIS use  all of the available colors (in "
+":guilabel:`Grayscale`, this is black, white and all shades of gray in "
+"between)."
+msgstr "DEM 데이터의 범위에 기반해 색상값을 다시 \"구간화\"하도록 QGIS에 명령해봅시다. QGIS는 사용할 수 있는 모든 색상( :guilabel:`Grayscale` 에서는, 검정, 하양 그리고 그 사이의 모든 회색 색조들을 말합니다)을 이용할 것입니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:85
+msgid "Specify the :guilabel:`Min` and :guilabel:`Max` values as shown below."
+msgstr ":guilabel:`Min` 과 :guilabel:`Max` 값을 다음과 같이 설정하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:86
+msgid ""
+"Set the value :guilabel:`Contrast enhancement` to :guilabel:`Stretch To "
+"MinMax`:"
+msgstr ":guilabel:`Contrast enhancement` 의 값을 :guilabel:`Stretch To MinMax` 로 설정하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:92
+msgid ""
+"But what are the minimum and maximum values that should be used for the "
+"stretch? The ones that are currently under :guilabel:`Min` and "
+":guilabel:`Max` values are the same values that just gave us a gray "
+"rectangle before. Instead, we should be using the minimum and maximum values"
+" that are actually in the image, right? Fortunately, you can determine those"
+" values easily by loading the minimum and maximum values of the raster."
+msgstr "그런데 구간에 쓰여야 할 최소 및 최대값이란 무엇일까요? 지금 현재 :guilabel:`Min` 이나 :guilabel:`Max` 에 설정된 값으로는 아까처럼 커다란 회색 사각형을 만들 뿐입니다. 그 대신 이미지에 실제로 담겨 있는 최소/최대값을 사용해야 하지 않을까요? 다행히도, 래스터의 최소/최대값을 불러와 이 값들을 손쉽게 결정할 수 있습니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:99
+msgid ""
+"Under :guilabel:`Load min / max values`, select :guilabel:`Min / Max` "
+"option."
+msgstr ":guilabel:`Load min / max values` 란에서 :guilabel:`Min / Max` 옵션을 선택하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:100
+msgid "Click the :guilabel:`Load` button:"
+msgstr ":guilabel:`Load` 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:102
+msgid ""
+"Notice how the :guilabel:`Custom min / max values` have changed to reflect "
+"the actual values in our DEM:"
+msgstr ":guilabel:`Custom min / max values` 가 어떻게 DEM의 실제 값들을 반영해서 변경됐는지 살펴보십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:108
+msgid "Click :guilabel:`OK` to apply these settings to the image."
+msgstr ":guilabel:`OK` 를 클릭해서 이 설정을 이미지에 적용하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:110
+msgid ""
+"You'll now see that the values of the raster are again properly displayed, "
+"with the darker colors representing valleys and the lighter ones, mountains:"
+msgstr "이제 래스터의 값들이 다시 한 번 제대로 표출되는 것을 볼 수 있습니다. 색이 어두울 수록 골짜기를, 밝을 수록 봉우리를 나타냅니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:117
+msgid "But isn't there a better or easier way?"
+msgstr "하지만 좀 더 나은, 또는 쉬운 방법이 있지 않을까요?"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:119
+msgid ""
+"Yes, there is. Now that you understand what needs to be done, you'll be glad"
+" to know that there's a tool for doing all of this easily."
+msgstr "네, 있습니다. 이제 어떤 작업을 해야 하는지 이해했으니, 이 모든 작업을 손쉽게 할 수 있는 도구가 있다는 사실을 알면 기뻐하실 겁니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:122
+msgid "Remove the current DEM from the :guilabel:`Layers list`."
+msgstr ":guilabel:`Layers list` 에서 현재 DEM을 제거하십시오."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:123
+msgid ""
+"Load the raster in again, renaming it to :kbd:`DEM` as before. It's a gray "
+"rectangle again..."
+msgstr "래스터를 다시 불러들인 다음, 마찬가지로 :kbd:`DEM` 이라는 명칭으로 변경합니다. 역시 회색 사각형이 보입니다..."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:125
+msgid ""
+"Enable the tool you'll need by enabling :menuselection:`View --> Toolbars "
+"--> Raster`. These icons will appear in the interface:"
+msgstr ":menuselection:`View --> Toolbars --> Raster` 를 활성화해서 필요한 도구를 활성화하십시오. 인터페이스에 다음과 같은 아이콘들이 나타납니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:131
+msgid ""
+"The third button from the left :guilabel:`Local Histogram Stretch` will "
+"automatically stretch the minimum and  maximum values to give you the best "
+"contrast in the local area that you're  zoomed into. It's useful for large "
+"datasets. The button on the left :guilabel:`Local Cumulative Cut Stretch "
+"...` will stretch the minimum and maximum values  to constant values across "
+"the whole image."
+msgstr "왼쪽에서 세 번째, :guilabel:`Local Histogram Stretch` 버튼을 클릭하면, 여러분이 현재 보고 있는 지역에 가장 적절한 대비가 되도록 자동적으로 최소/최대값을 구간화합니다. 대용량 데이터셋에 유용합니다. 왼쪽에 있는 :guilabel:`Local Cumulative Cut Stretch ...` 버튼을 클릭하면 전체 이미지에 걸쳐 현재 최소.최대값을 상수값으로 구간화합니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:138
+msgid ""
+"Click the fourth button from the left (:guilabel:`Stretch Histogram to Full "
+"Dataset`). You'll see the data is now correctly represented as before."
+msgstr "왼쪽에서 네 번째 :guilabel:`Stretch Histogram to Full Dataset` 버튼을 클릭해보십시오. 데이터가 이전과 마찬가지로 정확히 표현되는 것을 볼 수 있습니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:141
+msgid ""
+"You can try the other buttons in this toolbar and see how they alter the "
+"stretch of the image when zoomed in to local areas or when fully zoomed out."
+msgstr "이 툴바에 있는 다른 버튼들도 시험해보십시오. 어떤 지역으로 줌인했을 때, 또는 전체 레이어 범위로 줌아웃했을 때 이미지의 구간을 어떻게 변경시키는지 살펴보도록 합시다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:145
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:147
+msgid ""
+"These are only the basic functions to get you started with raster symbology."
+" QGIS also allows you many other options, such as symbolizing a layer using "
+"standard deviations, or representing different bands with different colors "
+"in a multispectral image."
+msgstr "이 강의에서 설명한 것들은 래스터 심볼에 대한 가장 기본적인 기능들입니다. QGIS에서는 표준 편차를 이용해서 레이어를 심볼화하거나, 다중 스펙트럼 이미지에서 밴드 별로 다른 색상을 표현하거나 하는, 다른 많은 옵션을 쓸 수 있습니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:153
+msgid "Reference"
+msgstr "참조"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:155
+msgid ""
+"The SRTM dataset was obtained from `http://srtm.csi.cgiar.org/ "
+"<http://srtm.csi.cgiar.org/>`_"
+msgstr "SRTM 데이터셋의 출처는 `http://srtm.csi.cgiar.org/ <http://srtm.csi.cgiar.org/>`_ 입니다."
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:159
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/rasters/changing_symbology.rst:161
+msgid ""
+"Now that we can see our data displayed properly, let's investigate how we "
+"can analyze it further."
+msgstr "이제 데이터를 제대로 표출할 수 있게 됐으니, 어떻게 더 심도 있게 분석할 수 있을지 알아보겠습니다."

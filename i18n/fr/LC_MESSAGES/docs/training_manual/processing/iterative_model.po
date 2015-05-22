@@ -1,0 +1,95 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-16 08:15+0000\n"
+"Last-Translator: MarieAude <marie-aude.aeby@camptocamp.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:6
+msgid "More iterative execution of algorithms"
+msgstr "Plus d'exécution itérative d'algorithme"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:8
+msgid ""
+"This lessons shows how to combine the iterative execution of algorithm with "
+"the modeler to get more automation"
+msgstr "Cette leçon montre comment combiner l'exécution itérative d'algorithme avec le modeleur pour obtenir plus d'automatisation"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:11
+msgid ""
+"The iterative execution of algorithms is available not just for built-in "
+"algorithms, but also for the algorithms that you can create your self, such "
+"as models. We are going to see how to combine a model and the iterative "
+"execution of algorithms, so we can obtain more complex results with ease."
+msgstr "L'exécution itérative d'algorithmes est disponible non seulement pour les algorithmes intégrés, mais également pour les algorithmes que vous pouvez créer vous-même, comme modèles. Nous allons voir comment combiner un modèle et l'exécution itérative des algorithmes, afin que nous puissions facilement obtenir des résultats plus complexes."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:14
+msgid ""
+"The data the we are going to use for this lesson is the same one that we "
+"already used for the last one. In this case, instead of just clipping the "
+"DEM with each watershed polygon, we will add some extra steps and calculate "
+"a hypsometric curve for each of them, to study how elevation is distributed "
+"within the watershed."
+msgstr "Les données que nous allons utiliser pour cette leçon sont les mêmes que celles que nous avons déjà utilisés à la dernière leçon. Dans ce cas, à la place de simplement couper le MNE avec chaque polygone de bassin versant, nous ajouterons quelques étapes supplémentaires et calculerons une courbe hypsométrique pour chacun d'entre eux, afin d'étudier comment l'élévation est distribué au sein du bassin versant."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:16
+msgid ""
+"Since we have a workflow that involves several steps (clipping + computing "
+"the hypsometric curve), we should go to the modeler and create the "
+"corresponding model for that workflow."
+msgstr "Tant que nous avons un flux de traitements qui implique plusieurs étapes (découpage + calcul de la courbe hypsométrique), nous devrions aller dans le modeleur et créer le modèle correspondant pour ce flux de traitements."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:18
+msgid ""
+"You can find the model already created in the data folder for this lesson, "
+"but it would be good if you first try to create it yourself. The clipped "
+"layer is not a final result in this case, since we are just interested in "
+"the curves, so this model will not generated any layers, but just a table "
+"with the curve data."
+msgstr "Vous pouvez trouver le modèle déjà créé dans le dossier de données pour cette leçon, mais il serait bien que vous essayiez d'abord de le créer vous-même. La couche découpée n'est pas un résultat final dans ce cas, puisque nous nous intéressons seulement aux courbes, donc ce modèle ne générera aucune couche, mais uniquement une table avec les données de la courbe."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:20
+msgid "The model should look like this:"
+msgstr "Le modèle devrait ressembler à cela :"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:24
+msgid ""
+"Add the model to you models folder, so it is available in the toolbox, and "
+"now execute it."
+msgstr "Ajoutez le modèle à votre dossier de modèles afin qu'il soit disponible dans la boîte à outils, et exécutez-le maintenant."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:28
+msgid ""
+"Select the DEM and watersheds basins, and do not forget to toggle the button"
+" that indicates that the algorithm has to be run iteratively."
+msgstr "Sélectionnez le MNE et les bassins versants, et n'oubliez pas d'utiliser le bouton qui indique que l'algorithme doit être exécuté itérativement."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:30
+msgid ""
+"The algorithm will be run several times, and the corresponding tables will "
+"be created and open in your QGIS project."
+msgstr "L'algorithme sera exécuté plusieurs fois, et les tables correspondantes seront créées et ouvertes dans votre projet QGIS."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:34
+msgid ""
+"We can make this example more complex by extending the model and computing "
+"some slope statistics. Add the *Slope, aspect, curvatures* algorithm to the "
+"model, and then the *Raster statistics* algorithm, which should use the "
+"slope output as its only input."
+msgstr "Nous pouvons rendre cet exemple plus complexe en étendant le modèle et en calculant certaines statistiques de la pente. Ajoutez l'algorithme *Pente, aspect, courbes* au modèle, et ensuite l'algorithme *Statistiques raster* qui devrait utiliser la sortie de pente comme sa seule entrée."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:38
+msgid ""
+"If you now run the model, apart from the tables you will get a set of pages "
+"with statistics. These pages will be available in the results dialog."
+msgstr "Si vous exécutez maintenant le modèle, en dehors des tables, vous obtiendrez un ensemble de pages avec des statistiques. Ces pages seront disponibles dans la boîte de dialogue des résultats."

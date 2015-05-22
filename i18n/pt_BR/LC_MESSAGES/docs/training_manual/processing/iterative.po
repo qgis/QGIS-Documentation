@@ -1,0 +1,132 @@
+# 
+# Translators:
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-09-29 02:41+0000\n"
+"Last-Translator: Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/iterative.rst:6
+msgid "Iterative execution of algorithms"
+msgstr "Ejecución iterativa de algoritmos"
+
+#: ../../source/docs/training_manual/processing/iterative.rst:8
+msgid ""
+"This lesson shows a different way of executing algorithms that use vector "
+"layers, by running them repeatedly, iterating over the features in an input "
+"vector layer"
+msgstr "Esta lección muestra una forma diferente de ejecutar algoritmos que usan capas vectoriales, al ejecutarlos repetidamente, iterar sobre las entidades de una capa vectorial de entrada"
+
+#: ../../source/docs/training_manual/processing/iterative.rst:10
+msgid ""
+"We already know the graphical modeler, which is one way of automating "
+"processing tasks. However, in some situations, the modeler might not be what"
+" we need to automate a given task. Let's see one of those situation and how "
+"to easily solve it using a different functionality: the iterative execution "
+"of algorithms."
+msgstr "Ya sabemos que el modelador gráfico, es una forma de automatizar las tareas de procesamiento. Sin embargo, en algunas situaciones, el modelador puede que no sea lo que necesitemos para automatizar una tarea dada. Veamos una de esas situaciones y la forma de resolver fácilmente utilizando una funcionalidad distinta: la ejecución iterativa de algoritmos."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:12
+msgid "Open the data corresponding to this chapter. It should look like this."
+msgstr "Abra los datos correspondientes de este capitulo. Debe tener un aspecto como este."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:16
+msgid ""
+"You will recognize our well-known DEM from previous chapters and a set of "
+"watersheds extracted from it. Imagine that you need to cut the DEM into "
+"several smaller layers, each of them containing just the elevation data "
+"corresponding to a single watershed. That will be useful if you later want "
+"to calculate some parameters related to each watershed, such as its mean "
+"elevation or it hypsographic curve."
+msgstr "Usted reconocerá nuestro DEM conocido de los capítulos anteriores y un conjunto de cuencas extraídos de ella. Imagine que usted necesita cortar el DEM en varias capas más pequeñas, cada una de ellas contiene sólo los datos de elevación correspondientes a una sola cuenca. Eso será útil si más adelante desea calcular algunos parámetros relacionados con cada cuenca, como su elevación media o curva hipsográfica."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:18
+msgid ""
+"This can be a lengthy and tedious task, especially if the number of "
+"watersheds is large. However, it is a task that can be easily automated, as "
+"we will see."
+msgstr "Esta puede ser una tarea larga y extensa, especialmente si el numero de cuencas  es grande. Sin embargo, es una tarea que se puede automatizar fácilmente, como veremos más adelante."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:20
+msgid ""
+"The algorithm to use for clipping a raster layer with a polygon layer is "
+"called *Clip grid with polygons*, and has the following parameters dialog."
+msgstr "El algoritmo que se utilizará para cortar una capa ráster con una capa de polígono llamada *Clip grid with polygon* y tiene el diálogo de parámetros siguiente."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:24
+msgid ""
+"Yo can run it using the watersheds layer and the DEM as input, and you will "
+"get the following result."
+msgstr "Puede ejecutarlo utilizando la capa de cuencas y el DEM como entrada, y obtendrá el siguiente resultado."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:28
+msgid ""
+"As you can see, the area covered by all the watershed polygons is used."
+msgstr "Como puede ver, se utiliza el área cubierta por todos los polígonos de cuenca."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:30
+msgid ""
+"You can have the DEM clipped with just a single watershed by selecting the "
+"desired watershed and then running the algorithm as we did before."
+msgstr "Puede tener el DEM recortado con sólo una sola cuenca, seleccionando la cuenca deseada y luego ejecutar el algoritmo como lo hicimos antes."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:34
+msgid ""
+"Since only selected features are used, only the selected polygon will be "
+"used to crop the raster layer."
+msgstr "Dado que solo se utilizan las entidades seleccionadas, sólo el polígono seleccionado se utilizará para recortar la capa ráster."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:38
+msgid ""
+"Doing this for all the watersheds will produce the result we are looking "
+"for, but it doesn't look like a very practical way of doing it. Instead, "
+"let's see how to automate that *select and crop* routine."
+msgstr "Hacer esto para todas las cuencas producirá el resultado que estamos buscando, pero no se ve como una forma practica de hacerlo. En su lugar, vamos a ver cómo automatizar esta rutina *seleccionar y cortar*."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:40
+msgid ""
+"First of all, remove the previous selection, so all polygons will be used "
+"again. Now open the *Clip grid with polygon* algorithm and select the same "
+"inputs as before, but this time click on the button that you will find in "
+"the right--hand side of the vector layer input where you have selected the "
+"watersheds layer."
+msgstr "Primero que todo, quite la selección anterior, por lo que todos los polígonos se utilizarán de nuevo. Ahora abra el algoritmo  *Clip grid with polygon* y seleccione las mismas entradas que antes, pero esta vez haga clic sobre el botón que se encuentra a la derecha de la capa vectorial de entrada, donde se ha seleccionado la capa de cuencas."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:44
+msgid ""
+"This button will cause the selected input layer to be split into as many "
+"layer as feature are found in it, each of them containing a single polygon. "
+"With that, the algorithm will be called repeatedly, one for each one of "
+"those single-polygon layers. The result, instead of just one raster layer in"
+" the case of this algorithm, will be a set of raster layers, each one of "
+"them corresponding to one of the executions of the algorithm."
+msgstr "Este botón hará que la capa de entrada seleccionada para ser dividida en tantas capas como entidades se encuentran en ella, cada uno de ellos contiene un solo polígono. Con eso, el algoritmo se llama varias veces, una para cada una de esas capas de un solo polígono. El resultado, en lugar de sólo una capa de trama en el caso de este algoritmo, será un conjunto de capas de mapa de bits, cada uno de ellos correspondiente a una de las ejecuciones del algoritmo."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:46
+msgid ""
+"Here's the result that you will get if you run the clipping algorithm as "
+"explained."
+msgstr "Aquí esta el resultado que se obtendrá si se ejecuta el algoritmo de recorte como se ha explicado."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:50
+msgid ""
+"For each layer, the black and white color palette, (or whatever palette you "
+"are using), is adjusted differently, from its minimum to its maximum values."
+" That's the reason why you can see the different pieces and the colors do "
+"not seem to match in the border between layers. Values, however, do match."
+msgstr "Para cada capa, la paleta de color blanco y negro, (o cualquier paleta que este utilizando), se ajusta de manera diferente, desde valores un mínimo a sus valores máximos. Esa es a razón por el cual se pueden ver las diferentes piezas y los colores no parecen coincidir en la frontera entre las capas.Los valores, sin embargo, hacen juego."
+
+#: ../../source/docs/training_manual/processing/iterative.rst:52
+msgid ""
+"If you enter an output filename, resulting files will be named using that "
+"filename and a number corresponding to each iteration as suffix."
+msgstr "Si introduce un nombre de archivo de salida, los archivos resultantes serán nombrados utilizando ese nombre de archivo y un número correspondiente para cada iteración como sufijo"

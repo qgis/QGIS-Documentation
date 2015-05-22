@@ -1,0 +1,568 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# 
+# Translators:
+# Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2014-2015
+# Lucas Hoenig <lucas.hoenig@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2015-02-19 14:53+0000\n"
+"Last-Translator: Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# 9924cc5bd83c4bfaa3315e0a0afae4ff
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:8
+msgid "Vector Spatial Analysis (Buffers)"
+msgstr "Análise Espacial Vetorial (Bordas)"
+
+# 7d9d6b2d42c34be394210f644b9ba925
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:11
+msgid "|gentlelogo|"
+msgstr "|gentlelogo|"
+
+# ee781a1c0ddf4ce1bdbe51ad2215b601
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:11
+msgid "Objectives:"
+msgstr "Objetivos:"
+
+# d2fb99c6cda04cf187d58a27d2bcfe66
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:11
+msgid "Understanding the use of buffering in vector spatial analysis."
+msgstr "Entendimento do uso de borda(s) em análise espacial vetorial."
+
+# ad0e6e78b5114c7e80785074cd87bb3e
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:13
+msgid "Keywords:"
+msgstr "Palavras chave:"
+
+# 71147f5cdecf44548f48cea92f289110
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:13
+msgid ""
+"Vector, buffer zone, spatial analysis, buffer distance, dissolve boundary, "
+"outward and inward buffer, multiple buffer"
+msgstr "Vetor, borda, zona, análise espacial, distância da borda, dissolver fronteiras, para fora e para dentro da borda, borda multipla"
+
+# 88092e9c3662445b9102934bb9664f28
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:17
+msgid "Overview"
+msgstr "Visão geral"
+
+# 9ee71c2915644662aaab3ee1f50dfedb
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:19
+msgid ""
+"**Spatial analysis** uses spatial information to extract new and additional "
+"meaning from GIS data. Usually spatial analysis is carried out using a GIS "
+"Application. GIS Applications normally have spatial analysis tools for "
+"feature statistics (e.g. how many vertices make up this polyline?) or "
+"geoprocessing such as feature buffering. The types of spatial analysis that "
+"are used vary according to subject areas. People working in water management"
+" and research (hydrology) will most likely be interested in analysing "
+"terrain and modelling water as it moves across it. In wildlife management "
+"users are interested in analytical functions that deal with wildlife point "
+"locations and their relationship to the environment. In this topic we will "
+"discuss buffering as an example of a useful spatial analysis that can be "
+"carried out with vector data."
+msgstr "**Análise espacial** usa informação espacial para extrair significado novo e adicional aos dados SIG. Normalmente, a análise espacial é realizada utilizando um aplicativo SIG. Aplicações SIG normalmente têm ferramentas de análise espacial para as estatísticas de feições (por exemplo, quantos vértices compõem esta linha?) Ou geoprocessamento como a borda de uma feição. Os tipos de análise espacial que são utilizados variam de acordo com as áreas temáticas. As pessoas que trabalham na gestão da água e da investigação (hidrologia) estarão provavelmente mais interessados em analisar o terreno e modelagem da água que se move através dele. Os gestores da vida silvestre estão interessados em funções analíticas que lidam com as localizações dos pontos da vida selvagem e sua relação com o meio ambiente. Neste tópico discutiremos bordas como um exemplo de uma análise do espaço útil, que pode ser realizada com dados vetoriais."
+
+# c6770c09cb184e2d9510585784d071e6
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:32
+msgid "Buffering in detail"
+msgstr "Bordas em detalhe"
+
+# 370927f329b643c3b409bb2570bfad44
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:34
+msgid ""
+"**Buffering** usually creates two areas: one area that is **within** a "
+"specified distance to selected real world features and the other area that "
+"is **beyond**. The area that is within the specified distance is called the "
+"**buffer zone**."
+msgstr "**Bordas** normalmente criam duas área: uma área que é **dentro** de uma determinada distância da feição real selecionada e outra área que é **fora**. A área que está dentro da distância especificada é chamada **zona de borda**."
+
+# 7205fd1024104d2184cf1ea3583ebedc
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:38
+msgid ""
+"A **buffer zone** is any area that serves the purpose of keeping real world "
+"features distant from one another. Buffer zones are often set up to protect "
+"the environment, protect residential and commercial zones from industrial "
+"accidents or natural disasters, or to prevent violence. Common types of "
+"buffer zones may be greenbelts between residential and commercial areas, "
+"border zones between countries (see figure_buffer_zone_), noise protection "
+"zones around airports, or pollution protection zones along rivers."
+msgstr "Uma **Zona de borda** é qualquer área que serve ao propósito de manter no mundo real uma distancia um do outro. Zonas de borda são muitas vezes criadas para proteger o meio ambiente, proteger as zonas residenciais e comerciais de acidentes de trabalho ou de catástrofes naturais, ou para prevenir a violência. Os tipos comuns de zonas-borda podem ser cinturões verdes entre áreas residenciais e comerciais, zonas de fronteira entre os países (ver figure_buffer_zone_), zonas de proteção de ruídos nas imediações dos aeroportos, ou zonas de proteção da poluição ao longo dos rios."
+
+# cf4c484467d14ae6ace462675f81bd76
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:56
+msgid ""
+"The border between the United States of America and Mexico is separated by a"
+" buffer zone. (Photo taken by SGT Jim Greenhill 2006)."
+msgstr "A fronteira entre os Estados Unidos e o México é separada por uma zona de borda. (Photo taken by SGT Jim Greenhill 2006)."
+
+# 06a5b7795a0b400dbf8c73a11e0e5212
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:59
+msgid ""
+"In a GIS Application, **buffer zones are** always represented as **vector "
+"polygons** enclosing other polygon, line or point features (see "
+"figure_point_buffer_, figure_line_buffer_, )."
+msgstr "Nas aplicações SIG, **zonas de borda são** sempre representadas como **polígonos vetoriais** contendo outras feições de polígono, linha ou ponto (ver figure_point_buffer_, figure_line_buffer_,)."
+
+# e32010795a60471a818f207d6a9a64ff
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:73
+msgid "A buffer zone around vector points."
+msgstr "Uma zona de borda ao redor de pontos vetoriais"
+
+# 8bd3ffe548c3474f8169decb3c719aec
+# 7c9154f87a4a4f64ac4b54ecf19916f7
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:85
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:97
+msgid "A buffer zone around vector polylines."
+msgstr "Uma zona de borda entorno de linhas vetoriais."
+
+# 811b3b23fd5d4255a826ffeace918079
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:100
+msgid "Variations in buffering"
+msgstr "Variações nas bordas"
+
+# 1acd1cb25e03407fba48a8962475a010
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:102
+msgid ""
+"There are several variations in buffering. The **buffer distance** or buffer"
+" size **can vary** according to numerical values provided in the vector "
+"layer attribute table for each feature. The numerical values have to be "
+"defined in map units according to the Coordinate Reference System (CRS) used"
+" with the data. For example, the width of a buffer zone along the banks of a"
+" river can vary depending on the intensity of the adjacent land use. For "
+"intensive cultivation the buffer distance may be bigger than for organic "
+"farming (see Figure figure_variable_buffer_ and Table "
+"table_buffer_attributes_)."
+msgstr "Existem diversas variações nas bordas. A **distância da borda** ou tamanho da borda **pode variar** de acordo com valores numéricos fornecidos na tabela de atributos da camada de vetor para cada feição. Os valores numéricos têm de ser definidos em unidades do mapa de acordo com o sistema de referência de coordenadas (SRC) usado com os dados. Por exemplo, a largura de uma zona de borda ao longo das margens de um rio pode variar, dependendo da intensidade do uso da terra adjacente. Para o cultivo intensivo da distância de borda pode ser maior do que para a agricultura organica (ver figura figure_variable_buffer_ e Tabela table_buffer_attributes_)."
+
+# 46f6db5204a94d6197fe878eab288500
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:121
+msgid "Buffering rivers with different buffer distances."
+msgstr "Bordas de rios com diferentes distâncias de borda."
+
+# d2c81533c77d4dc091c4a5fcce672f50
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:126
+msgid "River"
+msgstr "Rios"
+
+# 377ea97e58d54f43a92c03c4f9237316
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:126
+msgid "Adjacent land use"
+msgstr "Uso da terra adjacente"
+
+# 2381b2bc4825431d94c1578971f9afcf
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:126
+msgid "Buffer distance (meters)"
+msgstr "Distância da borda (metros)"
+
+# 879c6b66d3f34cb8bd033f883eee92d7
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:128
+msgid "Breede River"
+msgstr "Local do rio"
+
+# 705b63a35828467bba15de09396577d9
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:128
+msgid "Intensive vegetable cultivation"
+msgstr "Cultivo intensivo de vegetais"
+
+# 56f33b7496cf46f4aeae80447f4366fe
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:128
+msgid "100"
+msgstr "100"
+
+# 4185deeb3b3942289f6c79c17b598315
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:130
+msgid "Komati"
+msgstr "Komati"
+
+# e1c9163e54da4994b8bdf56e46ef1f29
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:130
+msgid "Intensive cotton cultivation"
+msgstr "Cultivo intensivo de algodão"
+
+# 0dee79b0ffaf40deb71f92bce01e6c9a
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:130
+msgid "150"
+msgstr "150"
+
+# 1ad3192881794aae87fb1b55c10a3a3c
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:132
+msgid "Oranje"
+msgstr "Laranja"
+
+# f8abd1d168cd497eb75687926c00e2cc
+# b72ab91a75e8420a9484ba2c1e1f102c
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:132
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:134
+msgid "Organic farming"
+msgstr "Fazenda orgânica"
+
+# eea9313749d145aa818520d90e3895f4
+# 34e75ea7c5d84306bf02e11ef496d152
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:132
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:134
+msgid "50"
+msgstr "50"
+
+# b541dfa4539c40aa99af5c55be52a2c3
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:134
+msgid "Telle river"
+msgstr "Rio Telle"
+
+# 173c27b428f249a0896f3141dce7d65f
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:137
+msgid ""
+"Table Buffer Attributes 1: Attribute table with different buffer distances "
+"to rivers based on information about the adjacent land use."
+msgstr "Tabela de Atributos da Borda 1: tabela de atributos com diferentes distâncias de borda para os rios com base em informações sobre o uso das terras adjacentes."
+
+# 2e9aed96c67c40bb9ae8a1ff1168aed4
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:140
+msgid ""
+"Buffers around polyline features, such as rivers or roads, do not have to be"
+" on both sides of the lines. They can be on either the left side or the "
+"right side of the line feature. In these cases the left or right side is "
+"determined by the direction from the starting point to the end point of line"
+" during digitising."
+msgstr "Bordas ao redor de feições poligonais, tais como rios ou estradas, não tem que estar em ambos os lados das linhas. Eles podem estar em qualquer lado esquerdo ou do lado direito da feição tipo linha. Nestes casos, o lado esquerdo ou direito é determinado pela direção do ponto de partida para o ponto final da linha durante a digitalização."
+
+# b3032e0e021d4f1e82ab938d0ac8f128
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:146
+msgid "Multiple buffer zones"
+msgstr "Zonas de borda multipla"
+
+# f0f7ea91026e4cad8534cf4c43747e89
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:148
+msgid ""
+"A feature can also have more than one buffer zone. A nuclear power plant may"
+" be buffered with distances of 10, 15, 25 and 30 km, thus forming multiple "
+"rings around the plant as part of an evacuation plan (see "
+"figure_multiple_buffers_)."
+msgstr "Uma feição também pode ter mais de uma zona de borda. Uma usina de energia nuclear pode ter bordas com distâncias de 10, 15, 25 e 30 km, formando assim vários anéis ao redor da planta, como parte de um plano de evacuação (ver figure_multiple_buffers_)."
+
+# 1a079dd94be740dab57e93ba8365aa34
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:162
+msgid "Buffering a point feature with distances of 10, 15, 25 and 30 km."
+msgstr "Borda de uma feiçãoo de ponto com distâncias de 10, 15, 25 e 30 km."
+
+# 355036da14f04329b4d84e5cf8523322
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:165
+msgid "Buffering with intact or dissolved boundaries"
+msgstr "Bordas inteiras ou fronteiras dissolvidas"
+
+# f289e60876fe4f3ba3eba3bcf4ab2615
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:167
+msgid ""
+"Buffer zones often have dissolved boundaries so that there are no "
+"overlapping areas between the buffer zones. In some cases though, it may "
+"also be useful for boundaries of buffer zones to remain intact, so that each"
+" buffer zone is a separate polygon and you can identify the overlapping "
+"areas (see Figure figure_buffer_dissolve_)."
+msgstr "Zonas de borda, muitas vezes se dissolveram as fronteiras de modo que não há áreas de sobreposição entre as zonas de borda. Em alguns casos, porém, pode também ser útil para os limites das zonas de proteção para permanecer intacto, de modo a que cada zona tampão é um polígono separada e é possível identificar as áreas de sobreposição (ver Figura figure_buffer_dissolve_)."
+
+# 015a8c20b63142d892d11511a7b5d0f2
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:183
+msgid ""
+"Buffer zones with dissolved (left) and with intact boundaries (right) "
+"showing overlapping areas."
+msgstr "As zonas borda com dissolvidos (à esquerda) e com fronteiras intactas (à direita) mostrando áreas sobrepostas."
+
+# 8c5f4c12a7604858a0f57bf043e58103
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:187
+msgid "Buffering outward and inward"
+msgstr "Bordas de exterior e interior"
+
+# 4fccfd36304847f1a15bb98c82c231d1
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:189
+msgid ""
+"Buffer zones around polygon features are usually extended outward from a "
+"polygon boundary but it is also possible to create a buffer zone inward from"
+" a polygon boundary. Say, for example, the Department of Tourism wants to "
+"plan a new road around Robben Island and environmental laws require that the"
+" road is at least 200 meters inward from the coast line. They could use an "
+"inward buffer to find the 200 m line inland and then plan their road not to "
+"go beyond that line."
+msgstr "As zonas de borda ao redor de feições de polígonos são normalmente estendidas para fora a partir do limite do polígono mas também é possível criar uma zona de borda para dentro do limite do polígono. Digamos, por exemplo, o Departamento de Turismo quer planejar uma nova estrada em torno da Ilha Robben e as leis ambientais exigem que a estrada seja de pelo menos 200 metros para dentro da linha de costa. Eles poderiam usar uma borda para dentro para encontrar a linha de 200 m no interior e, em seguida, planejar seu caminho para não ir além dessa linha."
+
+# 22473a2dc87744f8857cd03744fb158a
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:197
+msgid "Common problems / things to be aware of"
+msgstr "Os problemas mais comuns / coisas para estar ciente"
+
+# 1d23381d567a4cb5b399c2730b9511bc
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:199
+msgid ""
+"Most GIS Applications offer buffer creation as an analysis tool, but the "
+"options for creating buffers can vary. For example, not all GIS Applications"
+" allow you to buffer on either the left side or the right side of a line "
+"feature, to dissolve the boundaries of buffer zones or to buffer inward from"
+" a polygon boundary."
+msgstr "A maioria das aplicações SIG oferecem criação borda como uma ferramenta de análise, mas as opções para a criação de bordas pode variar. Por exemplo, nem todos os aplicativos SIG permitem que você crie bordas em ambos os lados esquerdo ou direito de uma feição de linha, para dissolver os limites das zonas de proteção ou de borda para dentro do limite do polígono."
+
+# 9f42867d46c649829e34333d21501e85
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:204
+msgid ""
+"A buffer distance always has to be defined as a whole number (integer) or a "
+"decimal number (floating point value). This value is defined in map units "
+"(meters, feet, decimal degrees) according to the Coordinate Reference System"
+" (CRS) of the vector layer."
+msgstr "A distância do borda sempre tem que ser definida como um número inteiro (inteiro) ou um número decimal (valor de ponto flutuante). Este valor é definido pelas unidades do mapa (metros, pés, graus decimais) de acordo com o sistema de referência de coordenadas (SRC) da camada de vetor."
+
+# 519582ef298c40ec9a40b3a323fc6d52
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:210
+msgid "More spatial analysis tools"
+msgstr "Mais ferramentas de análise espacial"
+
+# caf07437d82c4d83bbeea8514236da83
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:212
+msgid ""
+"Buffering is a an important and often used spatial analysis tool but there "
+"are many others that can be used in a GIS and explored by the user."
+msgstr "Borda é uma ferramenta de análise espacial importante e muitas vezes utilizada, mas há muitos outras que podem ser usadas em um SIG e exploradas para o usuário."
+
+# de7b7022b29344b0bead161440a0d20d
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:215
+msgid ""
+"**Spatial overlay** is a process that allows you to identify the "
+"relationships between two polygon features that share all or part of the "
+"same area. The output vector layer is a combination of the input features "
+"information (see figure_overlay_operations_)."
+msgstr "**Sobreposição Espacial** é um processo que permite identificar as relações entre feições de dois polígonos que compartilham a totalidade ou parte da mesma área. A camada vetorial de saída é uma combinação de informações de feições de entrada (ver figure_overlay_operations_)."
+
+# bab8cfa262884c9aa435679bd907bdc8
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:230
+msgid ""
+"Spatial overlay with two input vector layers (a_input = rectangle, b_input ="
+" circle). The resulting vector layer is displayed green."
+msgstr "Sobreposição espacial com duas camadas de vetor de entrada (a_input = retângulo, b_input = círculo). A camada de vetor resultante é exibida em verde."
+
+# 7ffb627603de4577a368a8f65c9bc1c7
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:233
+msgid "Typical spatial overlay examples are:"
+msgstr "São exemplos típicos de sobreposição espacial:"
+
+# e2cfa76b0e8240a09a9944b3bbeec268
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:235
+msgid ""
+"**Intersection**: The output layer contains all areas where both layers "
+"overlap (intersect)."
+msgstr "**Intersecção**: A camada de saída contém todas as áreas em que ambas as camadas se sobrepõem (intersecção)."
+
+# 617675b4d75d4a8198f80d2f61d84e79
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:237
+msgid ""
+"**Union**: the output layer contains all areas of the two input layers "
+"combined."
+msgstr "**União**: a camada de saída contém todas as áreas das duas camadas de entrada combinadas."
+
+# 1ebd80b25c7d4c64b609e89a5655f116
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:238
+msgid ""
+"**Symmetrical difference**: The output layer contains all areas of the input"
+" layers except those areas where the two layers overlap (intersect)."
+msgstr "**Diferença simétrica**: A camada de saída contém todas as áreas das camadas de entrada, exceto as áreas em que as duas camadas se sobrepõem (intersecção)."
+
+# fbe8075efc1f44c7b957926b28f3a36b
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:240
+msgid ""
+"**Difference**: The output layer contains all areas of the first input layer"
+" that do not overlap (intersect) with the second input layer."
+msgstr "**Diferença**: A camada de saída contém todas as áreas da primeira camada de entrada que não se sobrepõem (intersecção) com a segunda camada de entrada."
+
+# 4cda697cf6e84de087c5f4bb77a8a33c
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:244
+msgid "What have we learned?"
+msgstr "O que aprendemos?"
+
+# 1b2b33b896cf41919f409e97a710f782
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:246
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Vamos resumir o que nós abordamos nesta planilha:"
+
+# 03402ca6476a407fa5924b553e8437de
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:248
+msgid "**Buffer zones** describe areas around real world features."
+msgstr "**Zonas de buffer** descreve áreas entorno de feições do mundo real."
+
+# 593c5eb8d7134a09b5d1d736654070a7
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:249
+msgid "Buffer zones are always **vector polygons**."
+msgstr "As zonas borda são sempre **polígonos vetoriais**."
+
+# 221664a854f847cb8a2780c3e166bafd
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:250
+msgid "A feature can have **multiple** buffer zones."
+msgstr "Uma feição pode ter várias **zonas-tampão**."
+
+# b4069a2348a845e38b8161675eafd25f
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:251
+msgid "The size of a buffer zone is defined by a **buffer distance**."
+msgstr "O tamanho de uma zona de borda é definido pela **Distância da borda**."
+
+# f55489b220264bab9fefe59341d1d33b
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:252
+msgid ""
+"A buffer distance has to be an **integer** or **floating point** value."
+msgstr "Um distância de borda pode ser um valor **inteiro** ou **ponto flutuante**."
+
+# 994c9f0980894621a00204a3edd21a87
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:253
+msgid ""
+"A buffer distance can be different for each feature within a vector layer."
+msgstr "A distância de borda pode ser diferente para cada feição dentro de uma camada vetorial."
+
+# e5d8497b59944f0f9bb0e7dce17f9595
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:254
+msgid ""
+"Polygons can be buffered **inward** or **outward** from the polygon "
+"boundary."
+msgstr "Polígonos pode ter bordas **internas** ou **externas** ao limite do polígono."
+
+# 0b234340200f4beeaa1ad503e7983dbe
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:255
+msgid ""
+"Buffer zones can be created with **intact** or **dissolved** boundaries."
+msgstr "Zonas de borda pode ser criadas com bordas **intactas** ou **dissolvidas**."
+
+# a85dc9e2f38640a8b80207cb276a4d23
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:256
+msgid ""
+"Besides buffering, a GIS usually provides a variety of vector analysis tools"
+" to solve spatial tasks."
+msgstr "Além de bordas, um SIG normalmente oferece uma variedade de ferramentas de análise de vetor para resolver tarefas espaciais."
+
+# 705343358fb84110abd80412c7f4634f
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:260
+msgid "Now you try!"
+msgstr "Agora tente!"
+
+# 1ee5d6c3877e454f8429aa9dc564e882
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:262
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Aqui estão algumas idéias para você experimentar com os seus alunos:"
+
+# 1011619f29ab402f9031d03afe9c7b76
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:264
+msgid ""
+"Because of dramatic traffic increase, the town planners want to widen the "
+"main road and add a second lane. Create a buffer around the road to find "
+"properties that fall within the buffer zone (see figure_buffer_road_)."
+msgstr "Por causa do aumento de tráfego dramático, os urbanistas querem alargar a estrada principal e adicionar uma segunda pista. Criar um borda em torno da estrada para encontrar imóveis que se enquadram dentro da zona de borda (ver figure_buffer_road_)."
+
+# 1154808654b54cdab76ef6f468003503
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:267
+msgid ""
+"For controlling protesting groups, the police want to establish a neutral "
+"zone to keep protesters at least 100 meters from a building. Create a buffer"
+" around a building and colour it so that event planners can see where the "
+"buffer area is."
+msgstr "Para controlar os grupos que protestam, a polícia pretende estabelecer uma zona neutra para manter os manifestantes, pelo menos, 100 metros de um prédio. Criar uma borda em torno de um prédio e colori-la de modo que os organizadores de eventos possam ver onde a área de borda é."
+
+# 14d14a36ab4146c781e65d5eb5b82cae
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:271
+msgid ""
+"A truck factory plans to expand. The siting criteria stipulate that a "
+"potential site must be within 1 km of a heavy-duty road. Create a buffer "
+"along a main road so that you can see where potential sites are."
+msgstr "A fábrica de caminhões planeja expandir. Os Critérios de localização estipulam que um local em potencial deve ser de 1 km de uma estrada para cargas pesadas. Criar uma borda ao longo de uma estrada principal para que você possa ver quais são os locais potenciais."
+
+# 910116d15f6143fa88dd1f9a4d5182e0
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:274
+msgid ""
+"Imagine that the city wants to introduce a law stipulating that no bottle "
+"stores may be within a 1000 meter buffer zone of a school or a church. "
+"Create a 1 km buffer around your school and then go and see if there would "
+"be any bottle stores too close to your school."
+msgstr "Imagine que a cidade quer introduzir uma lei estipulando que não pode haver lojas de bebidas dentro de uma zona de borda de 1000 metros de uma escola ou uma igreja. Criar uma borda de 1 km em torno de sua escola e depois ver se haveria alguma loja de bebidas próxima perto da escola."
+
+# 73805a856fa14445bd46b8f13e44bf49
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:289
+msgid ""
+"Buffer zone (green) around a roads map (brown). You can see which houses "
+"fall within the buffer zone, so now you could contact the owner and talk to "
+"him about the situation."
+msgstr "Zona de borda (verde) em torno de um mapa de estradas (marrom). Você pode ver que as casas caem dentro da zona de borda, então agora você pode entrar em contato com o proprietário e conversar com ele sobre a situação."
+
+# 1ce39b5599a84b449c9bc5f21fefea08
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:294
+msgid "Something to think about"
+msgstr "Algo para pensar"
+
+# d96a093da3624cb9ad1428fbb7920b14
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:296
+msgid ""
+"If you don't have a computer available, you can use a toposheet and a "
+"compass to create buffer zones around buildings. Make small pencil marks at "
+"equal distance all along your feature using the compass, then connect the "
+"marks using a ruler!"
+msgstr "Se você não tiver um computador disponível, você pode usar uma carta topográfica e um compasso para criar zonas buffer em torno de construções. Faça pequenas marcas de lápis na mesma distância ao longo de toda a sua funcionalidade utilizando o compasso, em seguida, conecte as marcas com uma régua!"
+
+# 38c27888580f4e47aa9129e69769a481
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:301
+msgid "Further reading"
+msgstr "Leitura complementar"
+
+# 6373634b29c94fa096bd96556435310b
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:303
+msgid "**Books**:"
+msgstr "**Livros**:"
+
+# a33b2de710a94abfb5030e6a83597a18
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:305
+msgid ""
+"Galati, Stephen R. (2006). Geographic Information Systems Demystified. "
+"Artech House Inc. ISBN: 158053533X"
+msgstr "Galati, Stephen R. (2006). Geographic Information Systems Demystified. Artech House Inc. ISBN: 158053533X"
+
+# 43275f690ec94817a2929c26d17452e2
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:307
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr "Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. 3rd Edition. McGraw Hill. ISBN: 0070658986"
+
+# 849f304dff654f1d9690be34fd1cf260
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:309
+msgid ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr "DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. 3rd Edition. Wiley. ISBN: 9814126195"
+
+# fb725620d405489084c54638a2cadf58
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:312
+msgid "**Websites**:"
+msgstr "**Websites**:"
+
+# 37ec07f0e1344c01b2b8dbfac19584df
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:314
+msgid "http://www.manifold.net/doc/transform_border_buffers.htm"
+msgstr "http://www.manifold.net/doc/transform_border_buffers.htm"
+
+# 7dffcca318754f46b522f303ed8f31cf
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:316
+msgid ""
+"The QGIS User Guide also has more detailed information on analysing vector "
+"data in QGIS."
+msgstr "O Guia do Usuário QGIS também possui mais informações  detalhadas sobre a análise de dados vetoriais no QGIS."
+
+# 75451153b9b547d4a8dc5cbeee12fc99
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:320
+msgid "What's next?"
+msgstr "O que vem depois?"
+
+# 3e3b19df39c64b3f992c0141fc93294e
+#: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:322
+msgid ""
+"In the section that follows we will take a closer look at **interpolation** "
+"as an example of spatial analysis you can do with raster data."
+msgstr "Na seção seguinte, vamos dar uma olhada mais de perto sobre **interpolação** como um exemplo de análise espacial que você pode fazer com dados raster."

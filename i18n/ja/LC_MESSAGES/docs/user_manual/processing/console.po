@@ -1,0 +1,984 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# 
+# Translators:
+# Choro <u.ko.kubot@gmail.com>, 2014
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2014
+# OKANO Takayoshi <kano@na.rim.or.jp>, 2014
+# Shu Higashi <higa432@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2014-12-05 13:24+0000\n"
+"Last-Translator: Choro <u.ko.kubot@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# a1362793eebb429f9e3cfa4ffa34a46a
+#: ../../source/docs/user_manual/processing/console.rst:8
+msgid "Using processing algorithms from the console"
+msgstr "処理アルゴリズムをコンソールから使う"
+
+# 450a9219215447178b0a02dd9f255a58
+#: ../../source/docs/user_manual/processing/console.rst:21
+msgid ""
+"The code that you can execute from the Python console, even if it does not "
+"call any specific processing method, can be converted into a new algorithm "
+"that you can later call from the toolbox, the graphical modeler or any other"
+" component, just like you do with any other algorithm. In fact, some "
+"algorithms that you can find in the toolbox are simple scripts."
+msgstr "Pythonコンソールから実行できるコードは、たとえいかなる処理メソッドを使っていない場合でも、ちょうど他のアルゴリズムでそうするように、ツールボックス、グラフィカルなモデラー、あるいはいかなる他のコンポーネントからでも呼び出すことができます。実際、ツールボックス内で見られるアルゴリズムの中にはシンプルなスクリプトもあります。"
+
+# f81eeabbb6424ee0afc7fedf3c6159ae
+#: ../../source/docs/user_manual/processing/console.rst:31
+msgid "Calling algorithms from the Python console"
+msgstr "Python コンソールからの呼び出しアルゴリズム"
+
+# 8da1efcdb76c44278f885fedaa3fa94f
+#: ../../source/docs/user_manual/processing/console.rst:33
+msgid ""
+"The first thing you have to do is to import the processing functions with "
+"the following line:"
+msgstr "最初にやるべきことは、次行で処理ファンクションをインポートすることです:"
+
+# 790008553c664701b7957d56e6e6312b
+#: ../../source/docs/user_manual/processing/console.rst:53
+msgid "You will see something like this."
+msgstr "このようなものを目にするでしょう。"
+
+# 54cf61a685374707813845a74252d135
+#: ../../source/docs/user_manual/processing/console.rst:76
+msgid ""
+"That's a list of all the available algorithms, alphabetically ordered, along"
+" with their corresponding command-line names."
+msgstr "これが、アルファベット順の、対応するコマンドライン名に沿った、利用可能な全アルゴリズムの一覧です。"
+
+# ffe17d1c249d4eb4869175aa9770ca82
+#: ../../source/docs/user_manual/processing/console.rst:94
+msgid ""
+"This result might change depending on the algorithms you have available."
+msgstr "この結果は、あなたが利用可能なアルゴリズムによって変わります。"
+
+# d8e5878b23ef4b76a7164a1ab73500e0
+#: ../../source/docs/user_manual/processing/console.rst:96
+msgid ""
+"It is easier now to find the algorithm you are looking for and its command-"
+"line name, in this case ``saga:slopeaspectcurvature``."
+msgstr "これであなたが探しているアルゴリズムは探しやすくなったはずです。コマンドライン名はこの場合``saga:slopeaspectcurvature``です。"
+
+# 4b0b2fdb6f554494815f758129bf70bd
+#: ../../source/docs/user_manual/processing/console.rst:122
+msgid ""
+"Now you have everything you need to run any algorithm. As we have already "
+"mentioned, there is only one single command to execute algorithms: "
+"``runalg()``. Its syntax is as follows:"
+msgstr "これであらゆるアルゴリズムを実行する準備ができました。すでに述べたとおり、アルゴリズムを実行するのは単一のコマンド: ``runalg()``だけです。その構文は以下の通りです:"
+
+# d53e581b54564b6db6dfb95b2799b8d2
+#: ../../source/docs/user_manual/processing/console.rst:131
+msgid ""
+"The list of parameters and outputs to add depends on the algorithm you want "
+"to run, and is exactly the list that the ``alghelp()`` method gives you, in "
+"the same order as shown."
+msgstr "追加すべきパラメータとアウトプットの一覧は実行したいアルゴリズムによって異なり、まさに``alghelp()``メソッドから受け取った通りで、順番も表示された通りです。 "
+
+# f4717d4423f84f4ba804e9604caf2cf8
+#: ../../source/docs/user_manual/processing/console.rst:144
+msgid ""
+"Selection. If an algorithm has a selection parameter, the value of that "
+"parameter should be entered using an integer value. To know the available "
+"options, you can use the ``algoptions()`` command, as shown in the following"
+" example:"
+msgstr "選択。アルゴリズムに選択パラメータがある場合、そのパラメータの値は整数値で入力すべきです。利用可能なオプションを調べるには、 ``algoptions()`` コマンドを使って、次の例のように表示させることができます:"
+
+# 200eadd944114022960da57e11aafbf2
+#: ../../source/docs/user_manual/processing/console.rst:166
+msgid ""
+"Table Field from XXX. Use a string with the name of the field to use. This "
+"parameter is case-sensitive."
+msgstr "XXX のテーブル項目名。項目名の文字列を利用して使ってください。このパラメータは大文字小文字を区別します。"
+
+# 57fb7029ca3442f3bf0450a295806058
+#: ../../source/docs/user_manual/processing/console.rst:171
+msgid "CRS. Enter the EPSG code number of the desired CRS."
+msgstr "CRS. 必要なCRSのEPSG コード番号を入力。"
+
+# a43f17dd9ddd467d84048132455f6ab1
+#: ../../source/docs/user_manual/processing/console.rst:172
+msgid ""
+"Extent. You must use a string with ``xmin``, ``xmax``, ``ymin`` and ``ymax``"
+" values separated by commas (``,``)."
+msgstr "拡張。カンマ (``,``)区切りの ``xmin``, ``xmax``, ``ymin`` および``ymax`` 付きの文字列を使わなければなりません。"
+
+# 4c1a0b56041b49bda8834df8666ebc7e
+#: ../../source/docs/user_manual/processing/console.rst:175
+msgid ""
+"Boolean, file, string and numerical parameters do not need any additional "
+"explanations."
+msgstr "ブーリアン、ファイル、文字列および数値のパラメータには、追加説明は不要です。"
+
+# 8478edf297ea4a018f558e84a3cfa73a
+#: ../../source/docs/user_manual/processing/console.rst:200
+msgid "Additional functions for handling data"
+msgstr "データ操作用の付加的なファンクション"
+
+# 00443acdb1984e37b1066169a576d1e9
+#: ../../source/docs/user_manual/processing/console.rst:227
+msgid "Creating scripts and running them from the toolbox"
+msgstr "スクリプトの作成とツールボックスからの実行"
+
+# 54448587f51b42eeb0478a1a69ed7ead
+#: ../../source/docs/user_manual/processing/console.rst:238
+msgid ""
+"The name of the algorithm (the one you will see in the toolbox) is created "
+"from the filename, removing its extension and replacing low hyphens with "
+"blank spaces."
+msgstr "アルゴリズムの名前(ツールボックスで見えるもの)はファイル名から、拡張子を除き、アンダースコアを空白に置き換えて作成されます。"
+
+# 1cf52f535ad349e49c724b6cb9a5dc41
+#: ../../source/docs/user_manual/processing/console.rst:260
+msgid ""
+"The part of the code where this processing takes place is not difficult to "
+"understand if you have read the previous sections in this chapter. The first"
+" lines, however, need some additional explanation. They provide the "
+"information that is needed to turn your code into an algorithm that can be "
+"run from any of the GUI components, like the toolbox or the graphical "
+"modeler."
+msgstr "この処理が行われるコードの部分は本章の前節を読んでいれば理解は難しくありません。しかしながら、最初の行にはもう少し説明が必要です。ツールボックスやグラフィカルモデラーのように、あらゆるGUIコンポーネントから実行できるようなアルゴリズムへとあなたのコードを変えるのに必要な情報が提供されています。"
+
+# 4321e05596b74b4d8f18e039a7e91e8e
+#: ../../source/docs/user_manual/processing/console.rst:285
+msgid "``multiple raster``. A set of input raster layers."
+msgstr "``multiple raster``。入力ラスターレイヤのセット。"
+
+# 08e43d4da8f24fa7a86df769532e63e3
+#: ../../source/docs/user_manual/processing/console.rst:286
+msgid "``multiple vector``. A set of input vector layers."
+msgstr "``multiple vector``。入力ベクターレイヤのセット。"
+
+# a7cf68f9b508432f91649e2fd59cb859
+#: ../../source/docs/user_manual/processing/console.rst:287
+msgid ""
+"``field``. A field in the attributes table of a vector layer. The name of "
+"the layer has to be added after the ``field`` tag. For instance, if you have"
+" declared a vector input with ``mylayer=vector``, you could use "
+"``myfield=field mylayer`` to add a field from that layer as parameter."
+msgstr "``field``。ベクターレイヤの属性テーブル内の項目。レイヤ名を``field`` タグの後に追加しなければなりません。例えば、ベクター入力を``mylayer=vector``で宣言した場合、``myfield=field mylayer`` を使ってパラメータとしてそのレイヤから項目を追加することができます。"
+
+# 111226001f1c47fda77b383e034dac3d
+#: ../../source/docs/user_manual/processing/console.rst:294
+msgid ""
+"The parameter name is the name that will be shown to the user when executing"
+" the algorithm, and also the variable name to use in the script code. The "
+"value entered by the user for that parameter will be assigned to a variable "
+"with that name."
+msgstr "パラメータ名はアルゴリズム実行時にユーザに表示される名前であり、同時にスクリプトコード内で使う変数名でもあります。このパラメータに対してユーザが入力した値は、この名前の変数に割り当てられます。"
+
+# b3f5083bc8ae4468adb452562346d4e4
+#: ../../source/docs/user_manual/processing/console.rst:308
+msgid "Outputs are defined in a similar manner, using the following tags:"
+msgstr "出力は同様のやり方で定義されます。次のタグを使います:"
+
+# daa7b748dace41a2ab6e542e85760f08
+#: ../../source/docs/user_manual/processing/console.rst:310
+msgid "``output raster``"
+msgstr "``output raster``"
+
+# a85b75243e004b81b1759ebf3664e93c
+#: ../../source/docs/user_manual/processing/console.rst:311
+msgid "``output vector``"
+msgstr "``output vector``"
+
+# 7fb9fb7192214cbab1d7e82a6aa91630
+#: ../../source/docs/user_manual/processing/console.rst:312
+msgid "``output table``"
+msgstr "``output table``"
+
+# dcd7e4ad4a4f4fce882679f13ad46a49
+#: ../../source/docs/user_manual/processing/console.rst:313
+msgid "``output html``"
+msgstr "``output html``"
+
+# eb44ae6858484dac8bc8e484d576c65d
+#: ../../source/docs/user_manual/processing/console.rst:314
+msgid "``output file``"
+msgstr "``output file``"
+
+# 20e0ef154d0e406dacbbcc46d9b80131
+#: ../../source/docs/user_manual/processing/console.rst:315
+msgid "``output number``"
+msgstr "``output number``"
+
+# 6cf38ae1b6294fd384cf09c65bbcff39
+#: ../../source/docs/user_manual/processing/console.rst:316
+msgid "``output string``"
+msgstr "``output string``"
+
+# f5e9ecf5e71e4927a5f541e1bf1daf29
+#: ../../source/docs/user_manual/processing/console.rst:342
+msgid "the following line will set the value of the output to 5:"
+msgstr "次の行は出力の値を5にセットします:"
+
+# cf3972bd96264d57a7f7969597ccbfdd
+#: ../../source/docs/user_manual/processing/console.rst:348
+msgid ""
+"In addition to the tags for parameters and outputs, you can also define the "
+"group under which the algorithm will be shown, using the ``group`` tag."
+msgstr "パラメータと出力向けのタグに加えて、``group``タグを使えばその下にアルゴリズムが表示されるグループを定義することができます。"
+
+# 2e67e747e09a46868ab6618541e61be3
+#: ../../source/docs/user_manual/processing/console.rst:362
+msgid "Documenting your scripts"
+msgstr "自分のスクリプトのドキュメント化"
+
+# 6ec4cfaa48444d46bdbc7b8fc70f651b
+#: ../../source/docs/user_manual/processing/console.rst:378
+msgid "Pre- and post-execution script hooks"
+msgstr "実行前後のスクリプトのフック"
+
+# 73558b845fe7429684f1847c0e96e153
+#: ../../source/docs/user_manual/processing/console.rst:380
+msgid ""
+"Scripts can also be used to set pre- and post-execution hooks that are run "
+"before and after an algorithm is run. This can be used to automate tasks "
+"that should be performed whenever an algorithm is executed."
+msgstr "アルゴリズムを動かす前後に走らせる実行前および実行後フックをセットするのにもスクリプトは利用可能です。これは、アルゴリズムが実行される都度実行すべきタスクを自動化するのに使うことができます。"
+
+# 98066e72385e452da6f872aeaabf28f7
+#: ../../source/docs/user_manual/processing/console.rst:384
+msgid ""
+"The syntax is identical to the syntax explained above, but an additional "
+"global variable named ``alg`` is available, representing the algorithm that "
+"has just been (or is about to be) executed."
+msgstr "文法は上述のものと同様ですが、付加的に``alg`` という名前のグローバル変数を使うことができ、これはたった今(あるいはまさにこれから)実行されたアルゴリズムを表します。"
+
+#: ../../source/docs/user_manual/processing/console.rst:202
+msgid ""
+"Apart from the functions used to call algorithms, importing the "
+"``processing`` package will also import some additional functions that make "
+"it easier to work with data, particularly vector data. They are just "
+"convenience functions that wrap some functionality from the |qg| API, "
+"usually with a less complex syntax. These functions should be used when "
+"developing new algorithms, as they make it easier to operate with input "
+"data."
+msgstr "アルゴリズム呼び出しに使われるファンクションから離れて、``processing`` パッケージをインポートするとデータ、とりわけベクターデータでの作業を簡単にしてくれる付加ファンクションも同時にインポートします。それらは通常、文法があまり複雑でなく、 |qg| APIからのいくつかのファンクションをラップする便利なファンクションです。これらのファンクションは、入力データの操作を簡単にしてくれるので、新しいアルゴリズムを開発する際には使用するべきです。"
+
+#: ../../source/docs/user_manual/processing/console.rst:5
+msgid "|updatedisclaimer|"
+msgstr "|updatedisclaimer|"
+
+#: ../../source/docs/user_manual/processing/console.rst:10
+msgid ""
+"The console allows advanced users to increase their productivity and perform"
+" complex operations that cannot be performed using any of the other GUI "
+"elements of the processing framework. Models involving several algorithms "
+"can be defined using the command-line interface, and additional operations "
+"such as loops and conditional sentences can be added to create more flexible"
+" and powerful workflows."
+msgstr "処理フレームワークの他のGUIエレメントを使用しては実現できない上級ユーザ向けの生産性向上を可能にします。複数のアルゴリズムを含むモデルは、コマンドラインインタフェースを使って定義できます。また、ループや条件分岐のような付加的な演算子を追加して、より柔軟でパワフルなワークフローを作成することができます。"
+
+#: ../../source/docs/user_manual/processing/console.rst:16
+msgid ""
+"There is not a proccesing console in |qg|, but all processing commands are "
+"available instead from the |qg| built-in Python console. That means that you"
+" can incorporate those commands into your console work and connect "
+"processing algorithms to all the other features (including methods from the "
+"|qg| API) available from there."
+msgstr "|qg| 内には処理コンソールはありませんが、 |qg|  ビルトインPython コンソールで代わりにすべての処理コマンドが使えます.これは,自分のコンソール作業に対してそれらのコマンドを組み合わせて,そこから利用できるあらゆる他の地物( |qg| APIからのメソッドも含め)に対する処理アルゴリズムにつなぐことができるということを意味しています."
+
+#: ../../source/docs/user_manual/processing/console.rst:27
+msgid ""
+"In this section, we will see how to use processing algorithms from the |qg| "
+"Python console, and also how to write algorithms using Python."
+msgstr "この章では |qg| Python コンソールから,処理アルゴリズムの使い方と,同時にPython を使った自分のアルゴリズムを書く方法を見て行きます."
+
+#: ../../source/docs/user_manual/processing/console.rst:40
+msgid ""
+"Now, there is basically just one (interesting) thing you can do with that "
+"from the console: execute an algorithm. That is done using the ``runalg()`` "
+"method, which takes the name of the algorithm to execute as its first "
+"parameter, and then a variable number of additional parameters depending on "
+"the requirements of the algorithm. So the first thing you need to know is "
+"the name of the algorithm to execute. That is not the name you see in the "
+"toolbox, but rather a unique command–line name. To find the right name for "
+"your algorithm, you can use the ``algslist()`` method. Type the following "
+"line in your console:"
+msgstr "今や、コンソールからこれを使ってできるのは基本的にひとつの(興味深い)ことだけ: つまりアルゴリズムの実行です。``runalg()`` メソッドを使いますが、これはその第一パラメータとしてアルゴリズムの名前を使って、次にアルゴリズムの要件に応じた付加的なパラメータの可変な数値、を使って実行されます。このため、最初に知っておくべきことは、実行するアルゴリズムの名前です。ツールボックスで見える名前ではなく、むしろユニークなコマンドラインの名前です。自分のアルゴリズム用に正しい名前を探す場合は、``algslist()`` メソッドを使うことができます。コンソールで次の行をタイプしてください:"
+
+#: ../../source/docs/user_manual/processing/console.rst:79
+msgid ""
+"You can use a string as a parameter for this method. Instead of returning "
+"the full list of algorithms, it will only display those that include that "
+"string. If, for instance, you are looking for an algorithm to calculate "
+"slope from a DEM, type ``alglist(\"slope\")`` to get the following result:"
+msgstr "このメソッドでは、パラメ－タとして文字列を使えます。アルゴリズムの全文を返却する代わりに、その文字列を含むものだけを表示します。もし、例えば、DEMからスロープを計算するアルゴリズムを探している場合、``alglist(\"slope\")`` とタイプすると次のような結果が得られます:"
+
+#: ../../source/docs/user_manual/processing/console.rst:99
+msgid ""
+"Once you know the command-line name of the algorithm, the next thing to do "
+"is to determine the right syntax to execute it. That means knowing which "
+"parameters are needed and the order in which they have to be passed when "
+"calling the ``runalg()`` method. There is a method to describe an algorithm "
+"in detail, which can be used to get a list of the parameters that an "
+"algorithm requires and the outputs that it will generate. To get this "
+"information, you can use the ``alghelp(name_of_the_algorithm)`` method. Use "
+"the command-line name of the algorithm, not the full descriptive name."
+msgstr "いったんアルゴリズムのコマンドライン名が分かれば、次にやるのはそれを実行する構文を知ることです。それはすなわち、必要なパラメータと ``runalg()`` メソッドを呼び出す際に引き渡す順序を知ることです。アルゴリズムを詳細に説明するメソッドがあり、アルゴリズムが必要とするパラメータと、生成されるアウトプットの一覧を取得することができます。その目的のために、``alghelp(name_of_the_algorithm)`` メソッドを使うことができます。説明用の長い名前ではなく、コマンドライン名を使用してください。"
+
+#: ../../source/docs/user_manual/processing/console.rst:107
+msgid ""
+"Calling the method with ``saga:slopeaspectcurvature`` as parameter, you get "
+"the following description:"
+msgstr "``saga:slopeaspectcurvature`` をパラメータとしてこのメソッドを呼び出すと,次の説明が得られるでしょう."
+
+#: ../../source/docs/user_manual/processing/console.rst:135
+msgid ""
+"Depending on the type of parameter, values are introduced differently. The "
+"next list gives a quick review of how to introduce values for each type of "
+"input parameter:"
+msgstr "パラメータの種別により,値は様々に説明されます.次は各種別の入力パラメータ値の説明方法についてのクイックレビューです:"
+
+#: ../../source/docs/user_manual/processing/console.rst:138
+msgid ""
+"Raster Layer, Vector Layer or Table. Simply use a string with the name that "
+"identifies the data object to use (the name it has in the |qg| Table of "
+"Contents) or a filename (if the corresponding layer is not opened, it will "
+"be opened but not added to the map canvas). If you have an instance of a "
+"|qg| object representing the layer, you can also pass it as parameter. If "
+"the input is optional and you do not want to use any data object, use "
+"``None``."
+msgstr "ラスターレイヤ,ベクターレイヤあるいは表.使用対象のデータオブジェクト( |qg| の目次内にある名前)や,ファイル名(対応するレイヤがお開かれていない場合は開かれますが,マップキャンバスには追加されません)を識別する名前の文字列を単に使ってください.レイヤを表す |qg|  オブジェクトのインスタンスを持っている場合,それをパラメータとして渡すこともできます.入力がオプションで,データオブジェクトを使いたくない場合は``None``を使ってください."
+
+#: ../../source/docs/user_manual/processing/console.rst:161
+msgid ""
+"In this case, the algorithm has one such parameter, with seven options. "
+"Notice that ordering is zero-based."
+msgstr "この場合,アルゴリズムには、そのようなパラメータのひとつが,7つのオプション付きであります.順序はゼロから始まることに注意してください."
+
+#: ../../source/docs/user_manual/processing/console.rst:163
+msgid ""
+"Multiple input. The value is a string with input descriptors separated by "
+"semicolons (``;``). As in the case of single layers or tables, each input "
+"descriptor can be the data object name, or its file path."
+msgstr "複数のインプット.値はセミコロン (``;``)で区切られたインプット記述子付きの文字列です.単一のレイヤやテーブルの場合と同様,各インプット記述子にはデータオブジェクト名やファイルパスが使えます."
+
+#: ../../source/docs/user_manual/processing/console.rst:168
+msgid ""
+"Fixed Table. Type the list of all table values separated by commas (``,``) "
+"and enclosed between quotes (``\"``). Values start on the upper row and go "
+"from left to right. You can also use a 2-D array of values representing the "
+"table."
+msgstr "固定テーブル.カンマ (``,``) で区切られ,引用符 (``\"``)で閉じられた全てのテーブル値の一覧をタイプします.値は上部の列から始まり,左から右に進みます.テーブルを表す2次元の配列も使えます."
+
+#: ../../source/docs/user_manual/processing/console.rst:178
+msgid ""
+"Input parameters such as strings, booleans, or numerical values have default"
+" values. To use them, specify ``None`` in the corresponding parameter entry."
+msgstr "文字列,ブーリアン,数値といった入力パラメータにはデフォルト値があります.それを使う場合は,対応するパラメータエントリーに``None`` を使ってください."
+
+#: ../../source/docs/user_manual/processing/console.rst:181
+msgid ""
+"For output data objects, type the file path to be used to save it, just as "
+"it is done from the toolbox. If you want to save the result to a temporary "
+"file, use ``None``. The extension of the file determines the file format. If"
+" you enter a file extension not supported by the algorithm, the default file"
+" format for that output type will be used, and its corresponding extension "
+"appended to the given file path."
+msgstr "アウトプットデータオブジェクト用には,ツールボックスでそうするように,保存時は使用するファイルパスをタイプしてください.結果を一時ファイルに保存したい場合は,``None``を使用してください.ファイルの拡張子でファイル形式が決まります.アルゴリズムがサポートしていない拡張子を入力した場合は,その出力種別用のデフォルトのファイル形式が使用され,与えられたファイルパスに対応する拡張子が追加されます."
+
+#: ../../source/docs/user_manual/processing/console.rst:188
+msgid ""
+"Unlike when an algorithm is executed from the toolbox, outputs are not added"
+" to the map canvas if you execute that same algorithm from the Python "
+"console. If you want to add an output to the map canvas, you have to do it "
+"yourself after running the algorithm. To do so, you can use |qg| API "
+"commands, or, even easier, use one of the handy methods provided for such "
+"tasks."
+msgstr "アルゴリズムがツールボックスから実行される時とは異なり,Python コンソールから同じアルゴリズムを実行しても出力はマップキャンバスに追加されません.出力を追加したい場合は,アルゴリズムを実行した後に自分でやらなければなりません.それを行うには |qg| APIコマンドを使うことができ,あるいはより簡単に,このようなタスク用に提供されているハンディなメソッドのひとつを使うこともできます."
+
+#: ../../source/docs/user_manual/processing/console.rst:194
+msgid ""
+"The ``runalg`` method returns a dictionary with the output names (the ones "
+"shown in the algorithm description) as keys and the file paths of those "
+"outputs as values. You can load those layers by passing the corresponding "
+"file paths to the ``load()`` method."
+msgstr "``runalg`` メソッドは出力名(アルゴリズムの説明に書かれているもの)付きの辞書をキーとして、出力のファイルパスを値として返します。そのファイルパスを``load()`` メソッドに渡すことでこれらのレイヤをロードすることができます."
+
+#: ../../source/docs/user_manual/processing/console.rst:209
+msgid ""
+"Below is a list of some of these commands. More information can be found in "
+"the classes under the ``processing/tools`` package, and also in the example "
+"scripts provided with |qg|."
+msgstr "下記はこのコマンドのいくつかの一覧です.より詳細な情報は``processing/tools`` パッケージ配下のクラス内と, |qg| とともに提供されたサンプルスクリプト内にもあります."
+
+#: ../../source/docs/user_manual/processing/console.rst:213
+msgid ""
+"``getObject(obj)``: Returns a |qg| object (a layer or table) from the passed"
+" object, which can be a filename or the name of the object in the |qg| Table"
+" of Contents."
+msgstr "``getObject(obj)``: 渡されたオブジェクトから|qg| オブジェクト (レイヤまたはテーブル)を返します。これはファイル名または|qg| の目次内のオブジェクト名になることができます。"
+
+#: ../../source/docs/user_manual/processing/console.rst:216
+msgid ""
+"``values(layer, fields)``: Returns the values in the attributes table of a "
+"vector layer, for the passed fields. Fields can be passed as field names or "
+"as zero-based field indices. Returns a dict of lists, with the passed field "
+"identifiers as keys. It considers the existing selection."
+msgstr "``values(layer, fields)``: 渡された項目に,ベクターレイヤの属性テーブル内の値を返します.項目は項目名またはゼロから始まる項目インデックスで渡すことができます.渡された項目の識別子をキーとして,一覧の辞書を返します。既存の選択を考慮します."
+
+#: ../../source/docs/user_manual/processing/console.rst:220
+msgid ""
+"``features(layer)``: Returns an iterator over the features of a vector "
+"layer, considering the existing selection."
+msgstr "``features(layer)``: ベクターレイヤにかかる反復子を既存の選択を考慮して返します。"
+
+#: ../../source/docs/user_manual/processing/console.rst:222
+msgid ""
+"``uniqueValues(layer, field)``: Returns a list of unique values for a given "
+"attribute.  Attributes can be passed as a field name or a zero-based field "
+"index. It considers the existing selection."
+msgstr "``uniqueValues(layer, field)``: 保有している属性のユニークな値の一覧を返却します。属性は項目名またはゼロから始まる項目のインデックスとして渡すことができます.既存の選択を考慮します."
+
+#: ../../source/docs/user_manual/processing/console.rst:229
+msgid ""
+"You can create your own algorithms by writing the corresponding Python code "
+"and adding a few extra lines to supply additional information needed to "
+"define the semantics of the algorithm. You can find a :guilabel:`Create new "
+"script` menu under the :guilabel:`Tools` group in the :guilabel:`Script` "
+"algorithms block of the toolbox. Double-click on it to open the script "
+"editing dialog. That's where you should type your code. Saving the script "
+"from there in the :file:`scripts` folder (the default folder when you open "
+"the save file dialog) with :file:`.py` extension will automatically create "
+"the corresponding algorithm."
+msgstr "対応するPythonのコードを書いたり,アルゴリズムのセマンティクスを定義するのに必要な付加情報をいくつか追加することで,自分自身のアルゴリズムを作成することができます.ツールボックスの :guilabel:`Script`  アルゴリズムブロック内の :guilabel:`Tools` グループの下にある :guilabel:`Create new script` メニューが見つかると思います.それをダブルクリックしてスクリプト編集ダイアログを開いて下さい.これがコードを打ち込む場所です. ここで入力したスクリプトを :file:`scripts` フォルダ (ファイル保存ダイアログを開くときのデフォルトのひとつ)に :file:`.py` という拡張子で保存すると, それに対応するアルゴリズムが自動的に作られます."
+
+#: ../../source/docs/user_manual/processing/console.rst:241
+msgid ""
+"Let's have a look at the following code, which calculates the Topographic "
+"Wetness Index (TWI) directly from a DEM."
+msgstr "次のコードを取り上げましょう。これは地表流水指標(TWI)をDEMから直接計算します"
+
+#: ../../source/docs/user_manual/processing/console.rst:255
+msgid ""
+"As you can see, the calculation involves three algorithms, all of them "
+"coming from SAGA. The last one calculates the TWI, but it needs a slope "
+"layer and a flow accumulation layer. We do not have these layers, but since "
+"we have the DEM, we can calculate them by calling the corresponding SAGA "
+"algorithms."
+msgstr "見て頂いたとおり,これは3つのアルゴリズムを含んでおり,それらは全てSAGAから来ています.最後のものはTWIを計算しますが,斜面のレイヤと流量蓄積のレイヤが必要です.これらのものはありませんが,DEMがあるので,対応するSAGAアルゴリズムを呼び出して計算することができるのです."
+
+#: ../../source/docs/user_manual/processing/console.rst:266
+msgid ""
+"These lines start with a double Python comment symbol (``##``) and have the "
+"following structure:"
+msgstr "これらの行はダブルPython コメントシンボル (``##``) で始まり、次のような構造を持っています"
+
+#: ../../source/docs/user_manual/processing/console.rst:273
+msgid ""
+"Here is a list of all the parameter types that are supported in processing "
+"scripts, their syntax and some examples."
+msgstr "これは,処理スクリプト中でサポートされる全パラメータ種別の一覧,文法,そしていくつかの例です."
+
+#: ../../source/docs/user_manual/processing/console.rst:276
+msgid "``raster``. A raster layer."
+msgstr "``raster``. A ラスターレイヤ"
+
+#: ../../source/docs/user_manual/processing/console.rst:277
+msgid "``vector``. A vector layer."
+msgstr "``vector``. A ベクターレイヤ"
+
+#: ../../source/docs/user_manual/processing/console.rst:278
+msgid "``table``. A table."
+msgstr "``table``. A テーブル"
+
+#: ../../source/docs/user_manual/processing/console.rst:279
+msgid ""
+"``number``. A numerical value. A default value must be provided. For "
+"instance, ``depth=number 2.4``."
+msgstr "``number``.A 数値.A デフォルト値が必要です.たとえば、``depth=number 2.4``"
+
+#: ../../source/docs/user_manual/processing/console.rst:281
+msgid ""
+"``string``. A text string. As in the case of numerical values, a default "
+"value must be added. For instance, ``name=string Victor``."
+msgstr "``string``。テキスト文字列。数値と同様、デフォルト値が必須です。例、 ``name=string Victor``"
+
+#: ../../source/docs/user_manual/processing/console.rst:283
+msgid ""
+"``boolean``. A boolean value. Add ``True`` or ``False`` after it to set the "
+"default value. For example, ``verbose=boolean True``."
+msgstr "``boolean``。ブーリアン値。その後に``True`` または ``False`` を追加してデフォルト値をセットします。例えば、  ``verbose=boolean True``"
+
+#: ../../source/docs/user_manual/processing/console.rst:291
+msgid "``folder``. A folder."
+msgstr "``folder``. あるフォルダ."
+
+#: ../../source/docs/user_manual/processing/console.rst:292
+msgid "``file``. A filename."
+msgstr "``file``. あるファイル名."
+
+#: ../../source/docs/user_manual/processing/console.rst:298
+msgid ""
+"When showing the name of the parameter to the user, the name will be edited "
+"to improve its appearance, replacing low hyphens with spaces. So, for "
+"instance, if you want the user to see a parameter named ``A numerical "
+"value``, you can use the variable name ``A_numerical_value``."
+msgstr "ユーザにパラメータ名を表示する場合、名前は見栄えを改善するために、アンダースコアを空白に置き換えて、編集されます。このため、例えば、ユーザに ``A numerical value``という名前のパラメータを見せたければ、``A_numerical_value``という変数名を使うことができます。"
+
+#: ../../source/docs/user_manual/processing/console.rst:303
+msgid ""
+"Layers and table values are strings containing the file path of the "
+"corresponding object. To turn them into a |qg| object, you can use the "
+"``processing.getObjectFromUri()`` function. Multiple inputs also have a "
+"string value, which contains the file paths to all selected object, "
+"separated by semicolons (``;``)."
+msgstr "レイヤとテーブルの値は対応するオブジェクトのファイルパスを含む文字列です。これを |qg| オブジェクトに切り替えるには、``processing.getObjectFromUri()`` ファンクションを使うことができます。複数入力も文字列値を持ち、セミコロン (``;``)で区切られた、すべての選択済みオブジェクトに対するファイルパスを含んでいます。"
+
+#: ../../source/docs/user_manual/processing/console.rst:318
+msgid ""
+"The value assigned to the output variables is always a string with a file "
+"path. It will correspond to a temporary file path in case the user has not "
+"entered any output filename."
+msgstr "出力変数に割り当てられた値は常にファイルパス付きの文字列です。ユーザが出力ファイル名を入力していない場合の一時ファイルパスに対応します。"
+
+#: ../../source/docs/user_manual/processing/console.rst:322
+msgid ""
+"When you declare an output, the algorithm will try to add it to |qg| once it"
+" is finished. That is why, although the ``runalg()`` method does not load "
+"the layers it produces, the final TWI layer will be loaded (using the case "
+"of our previous example), since it is saved to the file entered by the user,"
+" which is the value of the corresponding output."
+msgstr "出力を宣言すると、アルゴリズムは終了時に、それを|qg| に追加しようとします。このため、``runalg()`` メソッドは自分が作り出すレイヤをロードしませんが、最後のTWI レイヤはロードされます。なぜならそれはユーザが入力した、対応する出力の値であるファイルに保存されるからです。"
+
+#: ../../source/docs/user_manual/processing/console.rst:327
+msgid ""
+"Do not use the ``load()`` method in your script algorithms, just when "
+"working with the console line. If a layer is created as output of an "
+"algorithm, it should be declared as such. Otherwise, you will not be able to"
+" properly use the algorithm in the modeler, since its syntax (as defined by "
+"the tags explained above) will not match what the algorithm really creates."
+msgstr "``load()`` メソッドは自分のアルゴリズム内ではなく、コンソール行での作業中に使ってください。レイヤがアルゴリズムの出力として作成されている場合は、そのように宣言すべきです。さもないと、モデラー内のアルゴリズムを正しく使えないことになります。なぜならその文法(上述のタグで定義されているとおり)はアルゴリズムが実際に作成するものと一致しないからです。"
+
+#: ../../source/docs/user_manual/processing/console.rst:333
+msgid ""
+"Hidden outputs (numbers and strings) do not have a value. Instead, you have "
+"to assign a value to them. To do so, just set the value of a variable with "
+"the name you used to declare that output. For instance, if you have used "
+"this declaration,"
+msgstr "非表示の出力(数値及び文字列)は値を持ちません。代わりに、それらに値を割り当てるのはあなたです。そうするためには、その出力の定義で使用した名前付きの変数の値をセットします。例えば、この宣言を使っている場合、"
+
+#: ../../source/docs/user_manual/processing/console.rst:351
+msgid ""
+"If your algorithm takes a long time to process, it is a good idea to inform "
+"the user. You have a global named ``progress`` available, with two possible "
+"methods: ``setText(text)`` and ``setPercentage(percent)`` to modify the "
+"progress text and the progress bar."
+msgstr "あなたのアルゴリズムが、処理に時間が掛かる場合、ユーザに知らせるのは良いアイデアです。``progress``という名前のglobal を使って2つのメソッド: ``setText(text)`` および ``setPercentage(percent)`` で進捗テキストと進捗バーを変更することができます。"
+
+#: ../../source/docs/user_manual/processing/console.rst:356
+msgid ""
+"Several examples are provided. Please check them to see real examples of how"
+" to create algorithms using the processing framework classes. You can right-"
+"click on any script algorithm and select :guilabel:`Edit script` to edit its"
+" code or just to see it."
+msgstr "いくつかの例が提供されています。処理フレームワーククラスを使っているアルゴリズムの作成方法を実際の例でチェックしてみてください。任意のスクリプトアルゴリズム上で右クリックして :guilabel:`Edit script` を選んでコードを編集したり、単に閲覧したりすることができます。"
+
+#: ../../source/docs/user_manual/processing/console.rst:364
+msgid ""
+"As in the case of models, you can create additional documentation for your "
+"scripts, to explain what they do and how to use them. In the script editing "
+"dialog, you will find an **[Edit script help]** button. Click on it and it "
+"will take you to the help editing dialog. Check the section about the "
+"graphical modeler to know more about this dialog and how to use it."
+msgstr "モデルの場合と同様、自分のスクリプト用に付加的な文書を作成して、その内容や使い方を説明することができます。スクリプト編集ダイアログに、**[Edit script help]** ボタンがあります。それをクリックすると、ヘルプ編集ダイアログに移動します。グラフィカルモデラーについての章をチェックして、このダイアログについての詳細やその使い方を知ることができます。"
+
+#: ../../source/docs/user_manual/processing/console.rst:370
+msgid ""
+"Help files are saved in the same folder as the script itself, adding the "
+":file:`.help` extension to the filename. Notice that you can edit your "
+"script's help before saving the script for the first time. If you later "
+"close the script editing dialog without saving the script (i.e., you discard"
+" it), the help content you wrote will be lost. If your script was already "
+"saved and is associated to a filename, saving the help content is done "
+"automatically."
+msgstr "ヘルプファイルはスクリプトと同じフォルダに保存されており、:file:`.help`拡張子がファイル名に追加されています。自分のスクリプトのヘルプは、最初に保存する前に編集できますので注意してください。後で、スクリプトを保存せずにスクリプト編集ダイアログを閉じた場合(例えば無視して)、自分で書いたヘルプの内容は失われます。自分のスクリプトが既に保存され、ファイル名に関連付けられていれば、保存は自動的に行われます。"
+
+#: ../../source/docs/user_manual/processing/console.rst:388
+msgid ""
+"In the :guilabel:`General` group of the processing configuration dialog, you"
+" will find two entries named :guilabel:`Pre-execution script file` and "
+":guilabel:`Post-execution script file` where the filename of the scripts to "
+"be run in each case can be entered."
+msgstr "処理構成ダイアログの :guilabel:`General` グループ内に、 :guilabel:`実行前スクリプトファイル` 及び :guilabel:`実行後スクリプトファイル名`という２つのエントリ名があり、ここでそれぞれの場合に実行するスクリプトのファイル名を入力することができます。"
+
+#~ msgid ""
+#~ "The console allows advanced users to increase their productivity and perform"
+#~ " complex operations that cannot be performed using any of the other GUI "
+#~ "elements of the processing framework GUI. Models involving several "
+#~ "algorithms can be defined using the command-line interface, and additional "
+#~ "operations such as loops and conditional sentences can be added to create "
+#~ "more flexible and powerful workflows."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now, there is basically just one (interesting) thing you can do with that "
+#~ "from the console: to execute an algorithm. That is done using the "
+#~ "``runalg()`` method, which takes the name of the algorithm to execute as its"
+#~ " first parameter, and then a variable number of additional parameter "
+#~ "depending on the requirements of the algorithm. So the first thing you need "
+#~ "to know is the name of the algorithm to execute. That is not the name you "
+#~ "see in the toolbox, but rather a unique command–line name. To find the right"
+#~ " name for your algorithm, you can use the ``algslist()`` method. Type the "
+#~ "following line in you console:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can use a string as a parameter for this method. Instead of returning "
+#~ "the full list of algorithm, it will only display those that include that "
+#~ "string. If, for instance, you are looking for an algorithm to calculate "
+#~ "slope from a DEM, type ``alglist(\"slope\")`` to get the following result:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once you know the command-line name of the algorithm, the next thing to do "
+#~ "is to know the right syntax to execute it. That means knowing which "
+#~ "parameters are needed and the order in which they have to be passed when "
+#~ "calling the ``runalg()`` method. There is a method to describe an algorithm "
+#~ "in detail, which can be used to get a list of the parameters that an "
+#~ "algorithms require and the outputs that it will generate. To do it, you can "
+#~ "use the ``alghelp(name_of_the_algorithm)`` method. Use the command-line name"
+#~ " of the algorithm, not the full descriptive name."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Calling the method with ``saga:slopeaspectcurvature`` as parameter, you get "
+#~ "the following description."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Depending on the type of parameter, values are introduced differently. The "
+#~ "next one is a quick review of how to introduce values for each type of input"
+#~ " parameter:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this case, the algorithm has one of such such parameters, with 7 options."
+#~ " Notice that ordering is zero-based."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Multiple input. The value is a string with input descriptors separated by "
+#~ "semicolons (``;``). As in the case of single layers or tables, each input "
+#~ "descriptor can be the data object name, or its filepath."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Fixed Table. Type the list of all table values separated by commas (``,``) "
+#~ "and enclosed between quotes (``\"``). Values start on the upper row and go "
+#~ "from left to right. You can also use a 2D array of values representing the "
+#~ "table."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Input parameters such as strings booleans or numerical values have default "
+#~ "values. To use them, use ``None`` in the corresponding parameter entry."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For output data objects, type the filepath to be used to save it, just as it"
+#~ " is done from the toolbox. If you want to save the result to a temporary "
+#~ "file, use ``None``. The extension of the file determines the file format. If"
+#~ " you enter a file extension not included in the ones supported by the "
+#~ "algorithm, the default file format for that output type will be used, and "
+#~ "its corresponding extension appended to the given filepath."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ``runalg`` method returns a dictionary with the output names (the ones "
+#~ "shown in the algorithm description) as keys and the filepaths of those "
+#~ "outputs as values. You can load those layers by passing its filepath to the "
+#~ "``load()`` method."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``values(layer, fields)``: Returns the values in the attributes table of a "
+#~ "vector layer, for the passed fields. Fields can be passed as field names or "
+#~ "as zero-based field indices. Returns a dict of lists, with the passed field "
+#~ "identifiers as keys. It considers the existing selection"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``getfeatures(layer)``: Returns an iterator over the features of a vector "
+#~ "layer, considering the existing selection."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``uniquelabels(layer, field)``: Returns a list of unique values for a given "
+#~ "attribute.  Attribute can be passed as a field name or a zero-based field "
+#~ "index. It considers the existing selection"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can create your own algorithms by writing the corresponding Python code "
+#~ "and adding a few extra lines to supply additional information needed to "
+#~ "define the semantics of the algorithm. You can find a :guilabel:`Create new "
+#~ "script` menu under the :guilabel:`Tools` group in the :guilabel:`Script` "
+#~ "algorithms block of the toolbox. Double-click on it to open the script "
+#~ "edition dialog. That's where you should type your code. Saving the script "
+#~ "from there in the :file:`scripts` folder (the default one when you open the "
+#~ "save file dialog), with :file:`.py` extension, will automatically create the"
+#~ " corresponding algorithm."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Let's have the following code, which calculates the Topographic Wetness "
+#~ "Index (TWI) directly from a DEM"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As you can see, it involves 3 algorithms, all of them coming from SAGA. The "
+#~ "last one of them calculates the TWI, but it needs a slope layer and a flow "
+#~ "accumulation layer. We do not have these ones, but since we have the DEM, we"
+#~ " can calculate them calling the corresponding SAGA algorithms."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These lines start with a double Python comment symbol (``##``) and have the "
+#~ "following structure"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here is a list of all the parameter types that are supported in processign "
+#~ "scripts, their syntax and some examples."
+#~ msgstr ""
+
+#~ msgid "``raster``. A raster layer"
+#~ msgstr ""
+
+#~ msgid "``vector``. A vector layer"
+#~ msgstr ""
+
+#~ msgid "``table``. A table"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``number``. A numerical value. A default value must be provided. For "
+#~ "instance, ``depth=number 2.4``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``string``. A text string. As in the case of numerical values, a default "
+#~ "value must be added. For instance, ``name=string Victor``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``boolean``. A boolean value. Add ``True`` or ``False`` after it to set the "
+#~ "default value. For example, ``verbose=boolean True``"
+#~ msgstr ""
+
+#~ msgid "``folder``. A folder"
+#~ msgstr ""
+
+#~ msgid "``file``. A filename"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When showing the name of the parameter to the user, the name will be edited "
+#~ "it to improve its appearance, replacing low hyphens with spaces. So, for "
+#~ "instance, if you want the user to see a parameter named ``A numerical "
+#~ "value``, you can use the variable name ``A_numerical_value``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The value assigned to the output variables is always a string with a "
+#~ "filepath. It will correspond to a temporary filepath in case the user has "
+#~ "not entered any output filename."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Do not use the ``load()`` method in your script algorithms, but just when "
+#~ "working with the console line. If a layer is created as output of an "
+#~ "algorithm, it should be declared as such. Otherwise, you will not be able to"
+#~ " properly use the algorithm in the modeler, since its syntax (as defined by "
+#~ "the tags explained above) will not match what the algorithm really creates."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Hidden outputs (numbers and strings) do not have a value. Instead, it is you"
+#~ " who has to assign a value to them. To do so, just set the value of a "
+#~ "variable with the name you used to declare that output. For instance, if you"
+#~ " have used this declaration,"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you algorithm takes a long time to process, it is a good idea to inform "
+#~ "the user. You have a global named ``progress`` available, with two available"
+#~ " methods: ``setText(text)`` and ``setPercentage(percent)`` to modify the "
+#~ "progress text and the progress bar."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Several examples are provided. Please, check them to see real examples of "
+#~ "how to create algorithms using the processing framework classes. You can "
+#~ "right-click on any script algorithm and select :guilabel:`Edit script` to "
+#~ "edit its code or just to see it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As in the case of models, you can create additional documentation for your "
+#~ "script, to explain what they do and how to use them. In the script editing "
+#~ "dialog you will find a **[Edit script help]** button. Click on it and it "
+#~ "will take you to the help editing dialog. Check the chapter about the "
+#~ "graphical modeler to know more about this dialog and how to use it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Help files are saved in the same folder as the script itself, adding the "
+#~ ":file:`.help` extension to the filename. Notice that you can edit your "
+#~ "script's help before saving it for the first time. If you later close the "
+#~ "script editing dialog without saving the script (i.e. you discard it), the "
+#~ "help content you wrote will be lost. If your script was already saved and is"
+#~ " associated to a filename, saving is done automatically."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :guilabel:`General` group of the processing config dialog you will "
+#~ "find two entries named :guilabel:`Pre-execution script file` and :guilabel"
+#~ ":`Post-execution script file` where the filename of the scripts to be run in"
+#~ " each case can be entered."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There is not a proccesing console in |qg|, but all processing commands are "
+#~ "available instead from the |qg| built-in Python console. That means that you"
+#~ " can incorporate those command to your console work and connect processing "
+#~ "algorithms to all the other features (including methods from the |qg| API) "
+#~ "available from there."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this chapter we will see how to use processing algorithms from the |qg| "
+#~ "Python console, and also how to write your own algorithms using Python."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Raster Layer, Vector Layer or Table. Simply use a string with the name that "
+#~ "identifies the data object to use (the name it has in the |qg| Table of "
+#~ "Contents) or a filename (if the corresponding layer is not opened, it will "
+#~ "be opened, but not added to the map canvas). If you have an instance of a "
+#~ "|qg| object representing the layer, you can also pass it as parameter. If "
+#~ "the input is optional and you do not want to use any data object, use "
+#~ "``None``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Unlike when an algorithm is executed from the toolbox, outputs are not added"
+#~ " to the map canvas if you execute that same algorithm from the Python "
+#~ "Console. If you want to add an output to it, you have to do it yourself "
+#~ "after running the algorithm. To do so, you can use |qg| API commands, or, "
+#~ "even easier, use one of the handy methods provided for such task."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Below is a list of some of this commands. More information can be found in "
+#~ "the classes under the ``processing/tools`` package, and aso in the example "
+#~ "scripts provided with |qg|."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``getobject(obj)``: Returns a |qg| object (a layer or table) from the passed"
+#~ " object, which can be a filename or the name of the object in the |qg| Table"
+#~ " of Contents."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Layers and tables values are strings containing the filepath of the "
+#~ "corresponding object. To turn them into a |qg| object, you can use the "
+#~ "``processing.getObjectFromUri()`` function. Multiple inputs also have a "
+#~ "string value, which contains the filepaths to all selected object, separated"
+#~ " by semicolons (``;``)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you declare an output, the algorithm will try to add it to |qg| once it"
+#~ " is finished. That is the reason why, although the ``runalg()`` method does "
+#~ "not load the layers it produces, the final TWI layer will be loaded, since "
+#~ "it is saved to the file entered by the user, which is the value of the "
+#~ "corresponding output."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There is not a proccesing console in QGIS, but all processing commands are "
+#~ "available instead from the QGIS built-in Python console. That means that you"
+#~ " can incorporate those command to your console work and connect processing "
+#~ "algorithms to all the other features (including methods from the QGIS API) "
+#~ "available from there."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this chapter we will see how to use processing algorithms from the QGIS "
+#~ "Python console, and also how to write your own algorithms using Python."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Raster Layer, Vector Layer or Table. Simply use a string with the name that "
+#~ "identifies the data object to use (the name it has in the QGIS Table of "
+#~ "Contents) or a filename (if the corresponding layer is not opened, it will "
+#~ "be opened, but not added to the map canvas). If you have an instance of a "
+#~ "QGIS object representing the layer, you can also pass it as parameter. If "
+#~ "the input is optional and you do not want to use any data object, use "
+#~ "``None``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Unlike when an algorithm is executed from the toolbox, outputs are not added"
+#~ " to the map canvas if you execute that same algorithm from the Python "
+#~ "Console. If you want to add an output to it, you have to do it yourself "
+#~ "after running the algorithm. To do so, you can use QGIS API commands, or, "
+#~ "even easier, use one of the handy methods provided for such task."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Apart from the functions used to call algorithms, importing the "
+#~ "``processing`` package will also import some additional functions that make "
+#~ "it easier to work with data, particularly vector data. They are just "
+#~ "convenience functions that wrap some functionality from the QGIS API, "
+#~ "usually with a less complex syntax. These functions should be used when "
+#~ "developing new algorithms, as they make it easier to operate with input "
+#~ "data."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Below is a list of some of this commands. More information can be found in "
+#~ "the classes under the ``processing/tools`` package, and aso in the example "
+#~ "scripts provided with QGIS."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``getobject(obj)``: Returns a QGIS object (a layer or table) from the passed"
+#~ " object, which can be a filename or the name of the object in the QGIS Table"
+#~ " of Contents."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Layers and tables values are strings containing the filepath of the "
+#~ "corresponding object. To turn them into a QGIS object, you can use the "
+#~ "``processing.getObjectFromUri()`` function. Multiple inputs also have a "
+#~ "string value, which contains the filepaths to all selected object, separated"
+#~ " by semicolons (``;``)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you declare an output, the algorithm will try to add it to QGIS once it"
+#~ " is finished. That is the reason why, although the ``runalg()`` method does "
+#~ "not load the layers it produces, the final TWI layer will be loaded, since "
+#~ "it is saved to the file entered by the user, which is the value of the "
+#~ "corresponding output."
+#~ msgstr ""

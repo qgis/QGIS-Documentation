@@ -1,0 +1,147 @@
+# 
+# Translators:
+# Jacolin <yjacolin@free.fr>, 2014
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-11-22 17:00+0000\n"
+"Last-Translator: Jacolin <yjacolin@free.fr>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/processing/extents.rst:6
+msgid "Defining extents"
+msgstr "Définition des étendues"
+
+#: ../../source/docs/training_manual/processing/extents.rst:9
+msgid ""
+"In this lesson we will see how to define extents, which are needed by some "
+"algorithms, specially raster ones."
+msgstr "Dans cette leçon, nous verrons comment définir des étendues, qui sont nécessaires pour certains algorithmes, spécialement ceux avec des raster."
+
+#: ../../source/docs/training_manual/processing/extents.rst:12
+msgid ""
+"Some algorithms require an extent to define the area to be covered by the "
+"analysis they perform, and usually to define the extent of the resulting "
+"layer."
+msgstr "Certains algorithmes nécessitent une étendue pour définir l'aire à couvrir par l'analyse qu'ils effectuent, et habituellement, définir l'étendue de la couche de résultat."
+
+#: ../../source/docs/training_manual/processing/extents.rst:14
+msgid ""
+"When an extent is required, it can be defined manually but entering the four"
+" values that define it (min X, min Y, max X, max Y), but there are other "
+"more practical and more interesting ways of doing it as well. We will see "
+"all of them in this lesson."
+msgstr "Lorsqu'une étendue est nécessaire, elle peut être définie manuellement mais en entrant les quatre valeurs qui la définissent (min X, min Y, max X, max Y), mais il y a aussi d'autres façons plus pratiques et plus intéressantes de le faire. Nous les verrons toutes dans cette leçon."
+
+#: ../../source/docs/training_manual/processing/extents.rst:16
+msgid ""
+"First, let's open an algorithm that requires an extent to be defined. Open "
+"the *Shapes to grid* algorithm, which creates a raster layer from a vector "
+"layer."
+msgstr "Premièrement, ouvrons un algorithme qui requière une étendue pour être défini. Ouvrez l'algorithme *Couches sur la grille*, qui crée une couche raster à partir d'une couche vectorielle."
+
+#: ../../source/docs/training_manual/processing/extents.rst:20
+msgid ""
+"All the parameters, except for the last two ones, are used to define which "
+"layer is to be rasterized, and configure how the rasterization process "
+"should work. The two last parameters, on the other hand, define the "
+"characteristics of the output layer. That means that they define the area "
+"that is covered (which is not necesarily the same area covered by the input "
+"vector layer), and the resolution/cellsize (which cannot be infered from the"
+" vector layer, since vector layers do not have a cellsize)."
+msgstr "Tous les paramètres, excepté les deux derniers, sont utilisés pour définir quelle couche doit être numérisée, et configurer comment le processus de numérisation devrait fonctionner. Les deux derniers paramètres, d'autre part, définissent les caractéristiques de la couche de sortie. Cela signifie qu'ils définissent la zone qui est couverte (qui n'est pas nécessairement la même zone couverte par la couche vectorielle d'entrée), et la résolution/taille de cellules (qui ne peut pas être déduite de la couche vectorielle, étant donné que les couches vectorielles n'ont pas de taille de cellules)."
+
+#: ../../source/docs/training_manual/processing/extents.rst:22
+msgid ""
+"The first thing you can do is to type the 4 defining values explained "
+"before, separated by commas."
+msgstr "La première chose que vous pouvez faire est de taper les 4 valeurs définies expliquées plus tôt, séparées par des virgules."
+
+#: ../../source/docs/training_manual/processing/extents.rst:26
+msgid ""
+"That doesn't need any extra explanation. While this is the most flexible "
+"option, it is also the less practical in some cases, and that's why other "
+"options are implemented. To access them, you have to click on the button on "
+"the right--hand side of the extent text box."
+msgstr "Cela ne nécessite pas d'explication supplémentaire. Bien que ce soit l'option la plus flexible, c'est aussi la moins pratique dans certains cas, et c'est pourquoi d'autres options sont mises en oeuvre. Pour y accéder, vous devez cliquer sur le bouton sur le côté droit de la zone de texte étendue."
+
+#: ../../source/docs/training_manual/processing/extents.rst:30
+msgid "Let's see what each one of them does."
+msgstr "Voyons ce que fait chacune d'entre elles."
+
+#: ../../source/docs/training_manual/processing/extents.rst:32
+msgid ""
+"The first option is *Use layer/canvas extent*, which will show the selection"
+" dialog shown below."
+msgstr "La première option est *Utiliser l'emprise de la couche/du canevas*, qui montrera la boîte de dialogue de sélection montrée ci-dessous."
+
+#: ../../source/docs/training_manual/processing/extents.rst:36
+msgid ""
+"Here you can select the extent of the canvas (the extent covered by the "
+"current zoom), or the extension any of the available layers. Select it and "
+"click on *OK*, and the text box will be automatically filled with the "
+"corresponding values."
+msgstr "Ici vous pouvez sélectionner l'étendue du canevas (dans la mesure prévue par le zoom en cours), ou l'extension de n'importe quelles couches disponibles. Sélectionnez-la et cliquez sur *OK*, et la zone de texte sera automatiquement remplie avec les valeurs correspondantes."
+
+#: ../../source/docs/training_manual/processing/extents.rst:38
+msgid ""
+"The second option is *Select extent on canvas*. In this case, the algorithm "
+"dialog disappears and you can click and drag on the QGIS canvas to define "
+"the desired extent."
+msgstr "La seconde option est *Sélectionner l'emprise depuis le canevas*. Dans ce cas, la boîte de dialogue de l'algorithme disparaît et vous pouvez cliquer et faire glisser sur le canevas QGIS pour définir l'étendue désirée."
+
+#: ../../source/docs/training_manual/processing/extents.rst:42
+msgid ""
+"Once you release the mouse button, the dialog will reappear and the text box"
+" will already have the values corresponding to the defined extent."
+msgstr "Une fois que vous relâchez le bouton de la souris, la boîte de dialogue réapparaîtra et la zone de texte aura déjà les valeurs correspondantes à l'emprise définie."
+
+#: ../../source/docs/training_manual/processing/extents.rst:44
+msgid ""
+"The last option is *Use min covering extent from input layers*, which is the"
+" default option. This will compute the min covering extent of all layers "
+"used to run the algorithm, and there is no need to enter any value in the "
+"text box. In the case of a single input layer, as in the algorithm we are "
+"running, the same extent can be obtained by selecting that same input layer "
+"in the *Use layer/canvas extent* that we already saw. However, when there "
+"are several input layers, the min covering extent does not correspond to any"
+" of the input layer extent, since it is computed from all of them together."
+msgstr "La dernière option est *Utiliser l'étendue de couverture minimale depuis les couches d'entrée*, qui est l'option par défaut. Cette fonction calcule l'étendue de couverture minimale de toutes les couches utilisées pour exécuter l'algorithme, et il n'y a pas besoin d'entrer de valeur dans la zone de texte. Dans le cas d'une seule couche d'entrée, comme dans l'algorithme que nous avons lancé, la même étendue peut être obtenue en sélectionnant cette même couche d'entrée dans *Utiliser l'emprise de la couche/du canevas* que nous avons déjà vu. Cependant, quand il y a plusieurs couches d'entrée, l'étendue de couverture minimale ne doit correspondre à aucune étendue d'une des couches d'entrée, car elle est calculée à partir de toutes les couches mises ensemble."
+
+#: ../../source/docs/training_manual/processing/extents.rst:46
+msgid "We will use this last method to execute our rasterization algorith."
+msgstr "Nous utiliserons cette dernière méthode pour exécuter notre algorithme de numérisation."
+
+#: ../../source/docs/training_manual/processing/extents.rst:48
+msgid "Fill the parameters dialog as shown next, and press *OK*."
+msgstr "Remplissez la boîte de dialogue des paramètres comme montré par la suite et cliquez sur *OK*."
+
+#: ../../source/docs/training_manual/processing/extents.rst:52
+msgid ""
+"You will get a rasterized layer that covers exactly the area covered by the "
+"original vector layer."
+msgstr "Vous obtiendrez une couche de numérisation qui couvre exactement la zone couverte par la couche vecteur originale."
+
+#: ../../source/docs/training_manual/processing/extents.rst:56
+msgid ""
+"In some cases, the last option, *Use min covering extent from input layers*,"
+" might not be avaialble. This will happen in those algorithm that do not "
+"have input layers, but just parameters of other types. In that case, you "
+"will have to enter the value manually or use any of the other options."
+msgstr "Dans certains cas, la dernière option, *Utiliser l'étendue de couverture minimale depuis les couches d'entrée*, pourrait ne pas être disponible. Cela arrivera avec les algorithmes qui n'ont pas de couches d'entrée, mais juste des paramètres d'autres types. Dans ce cas, vous devrez entrer la valeur manuellement ou utiliser une des autres options."
+
+#: ../../source/docs/training_manual/processing/extents.rst:58
+msgid ""
+"Notice that, when a selection exist, the extent of the layer is that of the "
+"whole set of features, and the selection is not used to compute the extent. "
+"In that case, you might want to actually create a new layer from the "
+"selection, and then use it as input."
+msgstr "Notez que, lorsqu'une sélection existe, l'étendue de la couche est celle de l'ensemble des caractéristiques et la sélection n'est pas utilisée pour calculer l'étendue. Dans ce cas, vous pouvez vouloir créer réellement une nouvelle couche à partir de la sélection, et ensuite l'utiliser comme une entrée."

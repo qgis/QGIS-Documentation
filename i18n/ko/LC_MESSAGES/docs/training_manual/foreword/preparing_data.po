@@ -1,0 +1,370 @@
+# 
+# Translators:
+# BJ Jang <qgis.tr.kr@gmail.com>, 2014
+# Kwon.Yongchan <ruvyn@naver.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-07-15 02:34+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:6
+msgid "Preparing Exercise Data"
+msgstr "예제 데이터 준비"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:8
+msgid ""
+"The sample data provided with the Training Manual refers to the town of "
+"|majorUrbanName| and its surroundings. |majorUrbanName| is located about 2 "
+"hours' east of Cape Town in the Western Cape of South Africa. The dataset "
+"contains feature names in both English and Afrikaans."
+msgstr "교육 교재와 함께 제공되는 샘플 데이터는 |majorUrbanName| 마을 및 그 주변에 대한 자료입니다. |majorUrbanName| 은 남아프리카 공화국의 웨스턴케이프에 있는 케이프타운에서 동쪽으로 2시간 거리에 있습니다. 이 데이터셋의 피처명은 영어와 아프리칸스어 두 가지로 되어 있습니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:13
+msgid ""
+"Anyone can use this dataset without difficulty, but you may prefer to use "
+"data from your own country or home town. If you choose to do so, your "
+"localised data will be used in all lessons from Module 3 to Module 7.2. "
+"Later modules use more complex data sources which may or may not be "
+"available for your region."
+msgstr "누구나 이 데이터셋을 어려움없이 이용할 수 있습니다. 그러나 사용자 자국 또는 고향의 데이터를 이용하고자 할 경우, 모듈 3에서 모듈 7.2까지의 모든 강의에 사용자의 데이터를 쓸 수 있습니다. 이후 강의에는 좀더 복잡한 데이터 소스를 사용하게 되는데, 사용자의 지역에 따라 이런 데이터가 존재하지 않을 수도 있습니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:18
+msgid ""
+"This process is intended for course conveners, or more experienced QGIS "
+"users who wish to create localised sample data sets for their course. "
+"Default data sets are provided with the Training Manual, but you may follow "
+"these instructions if you wish to replace the default data sets."
+msgstr "강의 담당자나 숙련된 QGIS 사용자가 강의에 로컬 샘플 데이터를 이용하고자 할 경우 이 준비 과정이 필요합니다. 교육 교재와 함께 기본 데이터셋이 제공되지만, 기본 데이터셋을 로컬 데이터로 대체하고자 한다면 다음 지침을 따라야 합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:23
+msgid ""
+"The sample data used throughout the manual can be downloaded here: "
+"http://qgis.org/downloads/data/training_manual_exercise_data.zip"
+msgstr "이 교육 교재 전반에 쓰이는 샘플 데이터를 http://qgis.org/downloads/data/training_manual_exercise_data.zip 에서 다운로드할 수 있습니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:28
+msgid "|hard| |TY|"
+msgstr "|hard| |TY|"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:30
+msgid ""
+"These instructions assume you have a good knowledge of QGIS and are not "
+"intended to be used as teaching material."
+msgstr "이 지침은 사용자가 QGIS를 잘 알고 있다고 가정하며, 강의 교재로 쓰이도록 작성된 것은 아닙니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:33
+msgid ""
+"If you wish to replace the default data set with localised data for your "
+"course, this can easily be done with tools built into QGIS. The region you "
+"choose to use should have a good mix of urban and rural areas, containing "
+"roads of differing significance, area boundaries (such as nature reserves or"
+" farms) and surface water, such as streams and rivers."
+msgstr "사용자의 강의에 기본 데이터셋 대신 로컬 데이터를 사용하고자 할 경우 QGIS에 내장된 도구로 간단히 데이터를 준비할 수 있습니다. 이때 사용자가 선택한 지역은 도심과 교외가 균형 있게 분포하며, 서로 다른 종류의 도로와 (자연보호구역 또는 농장 같은) 지역 경계, 그리고 하천 같은 지표수를 포함해야 합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:39
+msgid "Open a new QGIS project"
+msgstr "새 QGIS 프로젝트 열기"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:40
+msgid ""
+"In the :guilabel:`Vector` menu dropdown, select :guilabel:`OpenStreetMap -> "
+"Download Data`. You can then manually enter the co-ordinates of the region "
+"you wish to use, or you can use an existing layer to set the co-ordinates."
+msgstr ":guilabel:`Vector` 드롭다운 메뉴에서 :guilabel:`OpenStreetMap -> Download Data` 메뉴를 선택합니다. 그 다음 사용자가 원하는 지역의 좌표를 직접 입력하거나 기존 레이어를 이용해서 좌표를 설정할 수 있습니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:44
+msgid ""
+"Choose a location to save the resulting .osm file and click :guilabel:`Ok`:"
+msgstr "반환되는 :kbd:`.osm` 파일을 저장하려면 위치를 선택하고 :guilabel:`OK` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:49
+msgid ""
+"You can then open the .osm file using the :guilabel:`Add Vector Layer` "
+"button. You may need to select :guilabel:`All files` in the browser window. "
+"Alternatively, you can drag and drop the file into the QGIS window."
+msgstr "그 다음 :guilabel:`Add Vector Layer` 버튼을 클릭해서 :kbd:`.osm` 파일을 열 수 있습니다. 브라우저 창에서 :guilabel:`All files` 를 선택해야 할 수도 있습니다. 아니면 파일을 QGIS 창으로 드래그 & 드롭 할 수도 있습니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:52
+msgid ""
+"In the dialog which opens, select all the layers, *except* the "
+":kbd:`other_relations` and :kbd:`multilinestrings` layer:"
+msgstr "대화 창이 열리면 :kbd:`other_relations` 및 :kbd:`multilinestrings` 레이어를 *제외한* 모든 레이어를 선택합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:58
+msgid ""
+"This will load four layers into your map which relate to OSM's naming "
+"conventions (you may need to zoom in/out to see the vector data)."
+msgstr "OSM의 명명 규칙을 따르는 4개 레이어가 사용자 맵에 로드됩니다. (벡터 데이터를 보려면 줌인/줌아웃해야 할 수도 있습니다.)"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:64
+msgid ""
+"We need to extract the useful data from these layers, rename them and create"
+" corresponding shape files:"
+msgstr "이 레이어들에서 쓸 만한 데이터를 추출해서 다시 명명해, 해당하는 shapefile을 생성해야 합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:67
+msgid ""
+"First, double-click the :kbd:`multipolygons` layer to open the "
+":guilabel:`Layer properties` dialog."
+msgstr "먼저 :kbd:`multipolygons` 레이어를 더블클릭해서 :guilabel:`Layer properties` 대화 창을 엽니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:69
+msgid ""
+"In the :guilabel:`General` tab, click :guilabel:`Query Builder` to open the "
+":guilabel:`Query builder` window."
+msgstr ":guilabel:`General` 탭을 선택하고 :guilabel:`Query Builder` 를 클릭해서 :guilabel:`Query builder` 창을 엽니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:72
+msgid ""
+"This layer contains three fields whose data we will need to extract for use "
+"throughout the Training Manual:"
+msgstr "이제 이 레이어에서 교육 교재 전반에 걸쳐 사용하게 될 다음 세 가지 항목의 데이터를 추출해야 합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:75
+msgid ":kbd:`building`"
+msgstr ":kbd:`building`"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:76
+msgid ":kbd:`natural` (specifically, water)"
+msgstr ":kbd:`natural` (특히 지표수)"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:77
+msgid ":kbd:`landuse`"
+msgstr ":kbd:`landuse`"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:79
+msgid ""
+"You can sample the data your region contains in order to see what kind of "
+"results your region will yield. If you find that \"landuse\" returns no "
+"results, then feel free to exclude it."
+msgstr "사용자 지역이 담고 있는 데이터를 샘플링해서 사용자의 지역이 어떤 결과를 내놓을지 볼 수도 있습니다. \"landuse\" 항목에 아무것도 없다면 제외해도 됩니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:83
+msgid ""
+"You'll need to write filter expressions for each field to extract the data "
+"we need. We'll use the \"building\" field as an example here:"
+msgstr "필요한 데이터를 추출하려면 각 항목에 대해 필터 표현식을 작성해야 합니다. \"building\" 항목을 예로 들어보겠습니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:86
+msgid ""
+"Enter the following expression into the text area: :kbd:`building != "
+"\"NULL\"` and click :guilabel:`Test` to see how many results the query will "
+"return. If the number of results is small, you may wish to have a look at "
+"the layer's :guilabel:`Attribute Table` to see what data OSM has returned "
+"for your region:"
+msgstr "다음 표현식 :kbd:`building != \"NULL\"` 을 텍스트 영역에 입력하고 :guilabel:`Test` 를 클릭해서 이 쿼리가 얼마나 많은 결과를 반환하는지 확인합니다. 결과가 적을 경우 레이어의 :guilabel:`Attribute Table` 을 보면 OSM이 사용자 지역에 대해 어떤 데이터를 반환했는지 확인할 수 있습니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:95
+msgid ""
+"Click :guilabel:`Ok` and you'll see that the layer elements which are not "
+"buildings have been removed from the map."
+msgstr ":guilabel:`OK` 를 클릭하십시오. 맵에서 \"building\"이 아닌 레이어 요소가 전부 삭제됩니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:98
+msgid ""
+"We now need to save the resulting data as a shapefile for you to use during "
+"your course:"
+msgstr "이제 사용자의 강의에 사용하기 위해 남은 데이터를 shapefile로 저장해야 합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:101
+msgid ""
+"Right-click the :guilabel:`multipolygons` layer and select :guilabel:`Save "
+"As...`"
+msgstr ":guilabel:`multipolygons` 레이어를 오른쪽 클릭한 다음 :guilabel:`Save As...` 를 선택합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:103
+msgid ""
+"Make sure the file type is :kbd:`ESRI Shapefile` and save the file in your "
+"new :kbd:`exercise_data` directory, under a directory called \"epsg4326\"."
+msgstr "파일 형식이 :kbd:`ESRI Shapefile` 인지 확인한 후 새 :kbd:`exercise_data` 디렉터리 아래 \"epsg4326\" 디렉터리에 저장합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:105
+msgid ""
+"Make sure :menuselection:`No Symbology` is selected (we'll add symbology as "
+"part of the course later on)."
+msgstr ":menuselection:`No Symbology` 가 선택되어 있는지 확인하십시오. (심볼에 대한 강좌는 차후 추가 예정입니다.)"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:107
+msgid "You can also select :guilabel:`Add saved file to map`."
+msgstr ":guilabel:`Add saved file to map` 도 선택할 수 있습니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:109
+msgid ""
+"Once the :guilabel:`buildings` layer has been added to the map, you can "
+"repeat the process for the :kbd:`natural` and :kbd:`landuse` fields using "
+"the following expressions:"
+msgstr "맵에 :guilabel:`buildings` 레이어가 추가되면 다음 표현식을 써서 :kbd:`natural` 및 :kbd:`landuse` 항목에 대해 같은 과정을 반복합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:113
+msgid ""
+"Make sure you clear the previous filter (via the :guilabel:`Layer "
+"properties` dialog) from the :guilabel:`multipolygons` layer before "
+"proceeding with the next filter expression!"
+msgstr "다음 필터 표현식을 진행하기 전에 (:guilabel:`Layer properties` 대화 창을 통해) :guilabel:`multipolygons` 레이어에서 이전 필터를 지워줘야 합니다!"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:118
+msgid ":kbd:`natural`: \"natural = 'water'\""
+msgstr ":kbd:`natural`: \"natural = 'water'\""
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:119
+msgid ":kbd:`landuse`: \"landuse != 'NULL'\""
+msgstr ":kbd:`landuse`: \"landuse != 'NULL'\""
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:121
+msgid ""
+"Each resulting data set should be saved in the \"epsg4326\" directory in "
+"your new :kbd:`exercise_data` directory (i.e. \"water\", \"landuse\")."
+msgstr "결과로 나온 데이터를 각각 새 :kbd:`exercise_data` 디렉터리(예를 들자면 \"water\", \"landuse\") 아래 \"epsg4326\" 디렉터리에 저장해야 합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:124
+msgid ""
+"You should then extract and save the following fields from the :kbd:`lines` "
+"and :kbd:`points` layers to their corresponding directories:"
+msgstr "그 다음 :kbd:`lines` 와 :kbd:`points` 레이어에서 다음 항목들을 추출해서 상응하는 디렉터리에 저장해야 합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:127
+msgid ""
+":kbd:`lines`: \"highway != 'NULL'\" to :kbd:`roads`, and \"waterway != "
+"'NULL'\" to :kbd:`rivers`"
+msgstr ":kbd:`lines`: \"highway != 'NULL'\" 을 써서 :kbd:`roads` 로, \"waterway != 'NULL'\" 을 써서 :kbd:`rivers` 로"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:130
+msgid ":kbd:`points`: \"place != 'NULL'\" to :kbd:`places`"
+msgstr ":kbd:`points`: \"place != 'NULL'\" 을 써서 :kbd:`places` 로"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:133
+msgid ""
+"Once you have finished extracting the above data, you can remove the "
+":guilabel:`multipolygons`, :guilabel:`lines` and :guilabel:`points` layers."
+msgstr "이렇게 데이터 추출이 완료되면 :guilabel:`multipolygons`, :guilabel:`lines`, :guilabel:`points` 레이어를 삭제해도 됩니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:136
+msgid ""
+"You should now have a map which looks something like this (the symbology "
+"will certainly be very different, but that is fine):"
+msgstr "이제 사용자 맵이 이와 비슷하게 보일 것입니다. (심볼은 매우 다를 수 있습니다.)"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:142
+msgid ""
+"The important thing is that you have 6 layers matching those shown above and"
+" that all those layers have some data."
+msgstr "중요한 것은 앞에 보이는 6개 레이어에 대응하는 레이어가 있으며, 모든 레이어가 데이터를 담고 있어야 한다는 점입니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:145
+msgid ""
+"The last step is to create a spatiallite file from the :kbd:`landuse` layer "
+"for use during the course:"
+msgstr "마지막으로 :kbd:`landuse` 레이어에서 강의에 쓰일 spatiallite 파일을 생성합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:148
+msgid ""
+"Right-click the :kbd:`landuse` layer and select :menuselection:`Save as...`"
+msgstr ":kbd:`landuse` 레이어를 오른쪽 클릭한 다음 :menuselection:`Save as...` 를 선택합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:149
+msgid ""
+"Select :menuselection:`SpatialLite` as the format and save the file as "
+":kbd:`landuse` under the \"epsg4326\" directory."
+msgstr "파일 형식으로 :menuselection:`SpatialLite` 를 선택한 다음 \"epsg4326\" 디렉터리 아래 :kbd:`landuse` 파일로 저장합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:151
+msgid "Click :menuselection:`Ok`."
+msgstr ":menuselection:`OK` 를 클릭합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:152
+msgid "Delete the :kbd:`landuse.shp` and its related files (if created)."
+msgstr ":kbd:`landuse.shp` 및 (생성되었다면) 관련 파일을 삭제합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:156
+msgid "|hard| |TY| Create SRTM DEM tiff Files"
+msgstr "|hard| |TY| SRTM DEM tiff 파일 생성"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:158
+msgid ""
+"For Module 6 (Creating Vector Data) and Module 8 (Rasters), you'll also need"
+" raster images (SRTM DEM) which cover the region you have selected for your "
+"course."
+msgstr "모듈 6(벡터 데이터 생성) 및 모듈 8(래스터)에 사용자 강의에 쓰일 지역의 래스터 이미지(SRTM DEM)가 필요합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:162
+msgid ""
+"SRTM DEM can be downloaded from the CGIAR-CGI: http://srtm.csi.cgiar.org/"
+msgstr "CGIAR-CGI: http://srtm.csi.cgiar.org/ 에서 SRTM DEM을 다운로드할 수 있습니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:164
+msgid ""
+"You'll need images which cover the entire region you have chosen to use."
+msgstr "사용자가 선택한 지역 전체를 포함하는 이미지가 필요합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:166
+msgid ""
+"Once you have downloaded the required file(s), they should be saved in the "
+"\"exercise_data\" directory under \"raster/SRTM/\"."
+msgstr "필수 파일(들)을 다운로드한 다음 \"exercise_data\" 디렉터리 아래 \"raster/SRTM/\" 디렉터리에 저장합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:169
+msgid ""
+"In Module 6, Lesson 1.2 shows close-up images of three school sports fields "
+"which students are asked to digitize. You'll therefore need to reproduce "
+"these images using your new SRTM DEM tiff file(s). There is no obligation to"
+" use school sports fields: any three school land-use types can be used (e.g."
+" different school buildings, playgrounds or car parks)."
+msgstr "모듈 6의 강의 1.2를 보면 수강생이 디지타이즈해야 하는 학교 운동장 3개의 근접 이미지가 있습니다. 따라서 사용자의 새로운 SRTM DEM tiff 파일(들)을 이용해 이 이미지들을 재생성해야 합니다. 꼭 학교 운동장일 필요는 없습니다. 동일한 학교 토지이용 유형 3개면 됩니다. (예를 들어 학교 건물, 운동장, 주차장 등)"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:175
+msgid "For reference, the images in the example data are:"
+msgstr "참고로 예제 데이터에 포함된 이미지는 다음과 같습니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:186
+msgid "|basic| |TY| Replace Tokens"
+msgstr "|basic| |TY| 표식 교체"
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:188
+msgid ""
+"Having created your localised dataset, the final step is to replace the "
+"tokens in the :kbd:`conf.py` file so that the appropriate names will appear "
+"in your localised version of the Training Manual."
+msgstr "사용자 로컬 데이터를 생성한 다음, 마지막으로 :kbd:`conf.py` 안에 있는 표식(token)을 교체해서 사용자 로컬 버전에 상응하는 명칭들이 교육 교재에 나오도록 해야 합니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:192
+msgid "The tokens you need to replace are as follows:"
+msgstr "교체해야 할 표식들은 다음과 같습니다."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:194
+msgid ""
+":kbd:`majorUrbanName`: this defaults to \"Swellendam\". Replace with the "
+"name of the major town in your region."
+msgstr ":kbd:`majorUrbanName`: 기본값은 \"Swellendam\"입니다. 사용자 지역의 중심 도시의 명칭으로 바꾸십시오."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:196
+msgid ""
+":kbd:`schoolAreaType1`: this defaults to \"athletics field\". Replace with "
+"the name of the largest school area type in your region."
+msgstr ":kbd:`schoolAreaType1`: 기본값은 \"athletics field\" 입니다. 사용자 지역에서 가장 큰 학교 지역 유형의 명칭으로 바꾸십시오."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:198
+msgid ""
+":kbd:`largeLandUseArea`: this defaults to \"Bontebok National Park\". "
+"Replace with the name of a large landuse polygon in your region."
+msgstr ":kbd:`largeLandUseArea`: 기본값은 \"Bontebok National Park\" 입니다. 사용자 지역에서 가장 큰 토지이용 폴리곤의 명칭으로 바꾸십시오."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:200
+msgid ""
+":kbd:`srtmFileName`: this defaults to :kbd:`srtm_41_19.tif`. Replace this "
+"with the filename of your SRTM DEM file."
+msgstr ":kbd:`srtmFileName`: 기본값은 :kbd:`srtm_41_19.tif` 입니다. 사용자의 SRTM DEM 파일명으로 바꾸십시오."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:202
+msgid ""
+":kbd:`localCRS`: this defaults to :kbd:`WGS 84 / UTM 34S`. You should "
+"replace this with the correct CRS for your region."
+msgstr ":kbd:`localCRS`: 기본값은 :kbd:`WGS 84 / UTM 34S` 입니다. 사용자 지역의 정확한 CRS로 바꿔야 합니다."

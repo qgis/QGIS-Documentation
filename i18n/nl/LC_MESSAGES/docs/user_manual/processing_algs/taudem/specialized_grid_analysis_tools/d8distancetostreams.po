@@ -1,0 +1,101 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-10 16:15+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:6
+msgid "D8 Distance To Streams"
+msgstr "D8 afstand tot stromen"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:11
+msgid ""
+"Computes the horizontal distance to stream for each grid cell, moving "
+"downslope according to the D8 flow model, until a stream grid cell is "
+"encountered."
+msgstr "Berekent de horizontale afstand tot de stroom voor elke cel van het raster, neerwaarts verplaatsend overeenkomstig het D8 stroommodel, totdat een stroom van een cel van het raster wordt tegengekomen."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:15
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:21
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``D8 raster stroomrichting`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:18
+msgid ""
+"This input is a grid of flow directions that are encoded using the D8 method"
+" where all flow from a cells goes to a single neighboring cell in the "
+"direction of steepest descent. This grid can be obtained as the output of "
+"the **\"D8 Flow Directions\"** tool."
+msgstr "Deze invoer is een raster van stroomrichtingen die zijn gecodeerd met behulp van de methode D8 waarbij alle stroom vanuit een cel naar één enkele buurcel gaat in de richting van de steilste afdaling. Dit raster kan worden verkregen als de uitvoer van het gereedschap **\"D8 Stroomrichtingen\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:32
+msgid "``Stream Raster Grid`` [raster]"
+msgstr "``Stroomraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:24
+msgid ""
+"A grid indicating streams. Such a grid can be created by several of the "
+"tools in the **\"Stream Network Analysis\"** toolset. However, the tools in "
+"the **\"Stream Network Analysis\"** toolset only create grids with a value "
+"of 0 for no stream, or 1 for stream cells. This tool can also accept grids "
+"with values greater than 1, which can be used in conjunction with the "
+"``Threshold`` parameter to determine the location of streams. This allows "
+"Contributing Area grids to be used to define streams as well as the normal "
+"Stream Raster grids. This grid expects integer (long integer) values and any"
+" non-integer values will be truncated to an integer before being evaluated."
+msgstr "Een raster dat stromen aangeeft. Een dergelijk raster kan worden gemaakt door verscheidene gereedschappen in de verzameling **\"Stroomnetwerk-analyse\"**. Echter, de gereedschappen in de verzameling **\"Stroomnetwerk-analyse\"** maakt alleen rasters met een waarde van 0 voor geen stroom, of 1 voor stroomcellen. Dit gereedschap kan ook rasters accepteren met waarden groter dan 1, die in samenwerking kunnen worden gebruikt met de parameter ``Drempel`` om de locatie van stromen te bepalen. Dit maakt het mogelijk dat rasters deelnemend gebied worden gebruikt om stromen te definiëren als ook de normale Stroomrasters. Dit raster verwacht waarden geheel getal (long integer) en alle niet geheel getal-waarden zullen worden worden afgekort tot een geheel getal voordat zij worden geëvalueerd."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:39
+msgid "``Threshold`` [number]"
+msgstr "``Drempel`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:35
+msgid ""
+"This value acts as threshold on the ``Stream Raster Grid`` to determine the "
+"location of streams. Cells with a ``Stream Raster Grid`` value  greater than"
+" or equal to the ``Threshold`` value are interpreted as streams."
+msgstr "Deze waarde acteert als drempel voor het ``Stroomraster`` om de locatie van de stromen te bepalen. Cellen met een waarde ``Stroomraster`` groter dan of gelijk aan de waarde van de ``Drempel`` worden geïnterpreteerd als stromen."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:39
+msgid "Default: *50*"
+msgstr "Standaard: *50*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:42
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:46
+msgid "``Output Distance to Streams`` [raster]"
+msgstr "``Uitvoer afstand tot stromen`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:45
+msgid ""
+"A grid giving the horizontal distance along the flow path as defined by the "
+"D8 Flow Directions Grid to the streams in the Stream Raster Grid."
+msgstr "Een raster dat de horizontale afstand geeft langs het stroompad, zoals gedefinieerd door het raster D8 stroomrichtingen tot de stromen in het Stroomraster."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:49
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:56
+msgid "See also"
+msgstr "Zie ook"

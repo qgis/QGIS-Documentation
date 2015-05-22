@@ -1,0 +1,125 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2014-12-29 12:30+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:6
+msgid "Numeric calculations in the modeler"
+msgstr "Numerieke berekeningen in Grafische modellen bouwen"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:8
+msgid ""
+"Beware, this chapter is not well tested, please report any issue; images are"
+" missing"
+msgstr "Wees voorzichtig, dit hoofdstuk is nog niet goed getest, rapporteer problemen; afbeeldingen ontbreken"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:10
+msgid "In this lesson we will see how to use numeric outputs in the modeler"
+msgstr "In deze les zullen we zien hoe we numerieke uitvoer gebruiken in Grafische modellen bouwen"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:13
+msgid ""
+"For this lesson, we are going to modify the hydrological model that we "
+"created in the last chapter (open it in the modeler before starting), so we "
+"can automate the calculation of a valid threshold value and we do not have "
+"to ask the user to enter it. Since that value refers to the variable in the "
+"threshold raster layer, we will extract it from that layer, based on some "
+"simple statistical analysis."
+msgstr "Voor deze les gaan we het hydrologische model, dat we en het laatste hoofdstuk maakten, aanpassen (open het in Grafische modellen bouwen om te beginnen), zodat we de berekening van een geldige drempelwaarde kunnen automatiseren en we de gebruiker niet hoeven te vragen die in te voeren. Omdat die waarde verwijst naar de variabele in de drempel rasterlaag, zullen we die uitnemen uit die laag, gebaseerd op enkele eenvoudige statistische analyses."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:15
+msgid ""
+"Starting with the aforemetioned model, let's do the following modifications:"
+msgstr "Laten we, beginnend met het eerder vermelde model, de volgende aanpassingen doen:"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:17
+msgid ""
+"First, calculate statistics of the flow accumulation layer using the *Raster"
+" layer statistics* algorithm."
+msgstr "Bereken eerst de statistieken van de laag flow accumulation met behulp van het algoritme *Raster layer statistics*."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:21
+msgid ""
+"This will generate a set of statistical values that will now be available "
+"for all numeric fields in other algorithms."
+msgstr "Dit zal een statistische waarden genereren die nu beschikbaar  zullen komen voor alle numerieke velden in andere algoritmen."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:23
+msgid ""
+"If you double click on the  *Channel network* algorithm to modify it, as we "
+"did in the last lesson, you will see now that you have other options apart "
+"from the numeric input that you added."
+msgstr "Als u dubbelklikt op het algoritme *Channel network* om het aan te passen, zoals we deden in de laatste les, zult u zien dat u nu andere opties heeft, naast de numerieke invoer die u had toegevoegd."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:27
+msgid ""
+"However, none of this values is suitable for being used as a valid "
+"threshold, since they will result in channel networks that will not be very "
+"realistic. We can, instead, derive some new parameter based on them, to get "
+"a better result. For instance, we can use the mean plus 2 times the standard"
+" deviation."
+msgstr "Echter, geen van deze waarden is geschikt om te worden gebruikt als geldige drempelwaarde, omdat zij zullen resulteren in netwerken van kanalen die niet erg realistisch zullen zijn. We kunnen, in plaats daarvan, enkele nieuwe parameters, daarop gebaseerd, afleiden, om een beter resultaat te verkrijgen. We kunnen bijvoorbeeld het gemiddelde plus 2 keer de standaard afwijking gebruiken."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:29
+msgid ""
+"To add that arithmetical operation, we can use the calculator that you will "
+"find in the *Geoalgorithms/modeler/modeler-tools* group. This group contains"
+" algorithms that are not very useful outside of the modeler, but that "
+"provide some useful functionality when creating a model."
+msgstr "We kunnen de calculator gebruiken die u zult vinden in de groep *Geoalgorithms/modeler/modeler-tools* om een rekenkundige bewerking toe te voegen. Deze groep bevat algoritmen die niet erg bruikbaar zijn buiten Grafische modellen bouwen, maar dat verschaft enige bruikbare functionaliteit bij het maken van een model."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:31
+msgid "The parameters dialog of the calculator algorithm looks like this:"
+msgstr "Het dialoogvenster voor de parameters van het algoritme Calculator zier er als volgt uit:"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:35
+msgid ""
+"As you can see, the dialog is different to the other ones we have seen, but "
+"you have in there the same variables that were available in the *Threshold* "
+"field in the *Channel network* algorithm. Enter the above formula and click "
+"on *OK* to add the algorithm."
+msgstr "Zoals u kunt zien is het dialoogvenster afwijkend van dat welke we eerder hebben gezien, maar u heeft daar dezelfde variabelen als die welke beschikbaar waren in het veld *Threshold* in het algoritme *Channel network*. Voer bovenstaande formule in en klik op *OK* om het algoritme toe te voegen."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:39
+msgid ""
+"If you expand the outputs entry, as shown above, you will see that the model"
+" is connected to two of the values, namely the mean and the standard "
+"deviation, which are the ones that we have used in the formula."
+msgstr "Als u het item voor de uitvoer uitbreidt, zoals hierboven weergegeven, zult u zien dat het model is verbonden met twee van de waarden, namelijk het gemiddelde en de standaard afwijking, wat die zijn die we in de formule hebben gebruikt."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:41
+msgid ""
+"Adding this new algorithm will add a new numeric value. If you go again to "
+"the *Channel network* algorithm, you can now select that value in the "
+"*Threshold* parameter."
+msgstr "Toevoegen van dit nieuwe algoritme zal een nieuwe numerieke waarde toevoegen. Als u opnieuw naar het algoritme *Channel network* gaat, kunt u nu die waarde selecteren in de parameter *Threshold*."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:45
+msgid "Click on *OK* and your model should look like this."
+msgstr "Klik op *OK* en uw model zou er nu zo uit moeten zien."
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:49
+msgid ""
+"We are not using the numeric input that we added to the model, so it can be "
+"removed. Right--click on it and select *Remove*"
+msgstr "We gebruiken niet de numerieke invoer die we aan het model hadden toegevoegd, dus die kan worden verwijderd. Klik er met rechts op en selecteer *Remove*"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:51
+msgid "todo: Add image"
+msgstr "todo: Afbeelding toevoegen"
+
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:53
+msgid "Our new model is now finished."
+msgstr "Ons nieuwe model is nu voltooid."

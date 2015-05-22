@@ -1,0 +1,102 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2015
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-01 13:44+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:6
+msgid "D8 Distance To Streams"
+msgstr "Distance par rapport aux ruisseaux D8"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:9
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:11
+msgid ""
+"Computes the horizontal distance to stream for each grid cell, moving "
+"downslope according to the D8 flow model, until a stream grid cell is "
+"encountered."
+msgstr "Calcule la distance horizontale jusqu'au ruisseau pour chaque cellule de grille, en déplaçant la pente descendante selon le modèle de flux D8 jusqu'à ce que la cellule de ruisseau soit rencontrée."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:15
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:21
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D8`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:18
+msgid ""
+"This input is a grid of flow directions that are encoded using the D8 method"
+" where all flow from a cells goes to a single neighboring cell in the "
+"direction of steepest descent. This grid can be obtained as the output of "
+"the **\"D8 Flow Directions\"** tool."
+msgstr "L'entrée est une grille de directions de flux qui est encodée en utilisant la méthode D8 où tous les flux d'une cellule vont dans une seule cellule de voisinage dans la direction de la pente la plus raide. Cette grille peut être obtenue par l'outil **\"Directions de flux D8\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:32
+msgid "``Stream Raster Grid`` [raster]"
+msgstr "``Grille raster de ruisseaux`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:24
+msgid ""
+"A grid indicating streams. Such a grid can be created by several of the "
+"tools in the **\"Stream Network Analysis\"** toolset. However, the tools in "
+"the **\"Stream Network Analysis\"** toolset only create grids with a value "
+"of 0 for no stream, or 1 for stream cells. This tool can also accept grids "
+"with values greater than 1, which can be used in conjunction with the "
+"``Threshold`` parameter to determine the location of streams. This allows "
+"Contributing Area grids to be used to define streams as well as the normal "
+"Stream Raster grids. This grid expects integer (long integer) values and any"
+" non-integer values will be truncated to an integer before being evaluated."
+msgstr "Une grille indiquant les ruisseaux. Une telle grille peut être créée en utilisant l'un des outils de l'**Analyse de Réseau de Ruisseaux**. Néanmoins, ces outils créent seulement des grilles avec des cellules de valeur 0 lorsqu'il n'y a pas de ruisseau et de valeur à 1 lorsqu'il y en a un. Cet outil accepte également les grilles avec une valeur supérieure à 1 qui peut être utilisée en conjonction avec le paramètre ``Seuil`` pour déterminer l'emplacement des ruisseaux. Cela permet aux grilles de surface contributive d'être utilisées pour déterminer les ruisseaux ainsi que les grilles raster de ruisseaux classiques. Cette grille attend des valeurs entières (entier long) et toute valeur non entière sera tronquée sous forme d'un entier avant d'être utilisée."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:39
+msgid "``Threshold`` [number]"
+msgstr "``Seuil`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:35
+msgid ""
+"This value acts as threshold on the ``Stream Raster Grid`` to determine the "
+"location of streams. Cells with a ``Stream Raster Grid`` value  greater than"
+" or equal to the ``Threshold`` value are interpreted as streams."
+msgstr "Cette valeur agit comme un seuil sur la ``Grille Raster de Ruisseaux`` pour déterminer la localisation des ruisseaux. Les cellules avec une valeur supérieur ou égale au ``Seuil`` sont interprétées comme étant des ruisseaux."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:39
+msgid "Default: *50*"
+msgstr "Par défaut : *50*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:42
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:46
+msgid "``Output Distance to Streams`` [raster]"
+msgstr "``Distance des flux en sortie`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:45
+msgid ""
+"A grid giving the horizontal distance along the flow path as defined by the "
+"D8 Flow Directions Grid to the streams in the Stream Raster Grid."
+msgstr "Une grille donnant la distance horizontale jusqu'au ruisseau, définie par la grille de direction de flux D8 jusqu'au ruisseau de la grille raster de ruisseaux."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:49
+msgid "Console usage"
+msgstr "Utilisation dans la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/specialized_grid_analysis_tools/d8distancetostreams.rst:56
+msgid "See also"
+msgstr "Voir également"

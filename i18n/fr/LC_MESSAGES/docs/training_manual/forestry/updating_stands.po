@@ -1,0 +1,507 @@
+# 
+# Translators:
+# MarieAude <marie-aude.aeby@camptocamp.com>, 2014
+# Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-17 12:13+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.homenet.org>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:6
+msgid "|LS| Updating Forest Stands"
+msgstr "|LS| Mise à jour des massifs forestiers"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:8
+msgid ""
+"Now that you have digitized the information from the old inventory maps and "
+"added the corresponding information to the forest stands, the next step "
+"would be to create the inventory of the current state of the forest."
+msgstr "Maintenant que vous avez numérisé les informations depuis les anciennes cartes d'inventaire et ajouté l'information correspondant aux massifs de forêt, la prochaine étape sera de créer l'inventaire de l'état actuel de la forêt."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:10
+msgid ""
+"You will digitize new forest stands from scratch following an  aerial photo "
+"from that forest area. The forestry map you digitized in the previous lesson"
+" was created from an aerial Color Infrared (CIR) photograph. This type of "
+"imagery, where the infrared light is recorded instead of the blue light, are"
+" widely used to study vegetated areas. You will also use a CIR photograph in"
+" this lesson."
+msgstr "Vous numériserez les nouveaux massifs de forêt à partir de zéro en suivant une photo aérienne de cette aire forestière. La carte forestière que vous avez numérisée dans la leçon précédente a été crée depuis une photographique aérienne infrarouge couleur (CIR). Ce type d'imagerie, où la lumière infrarouge est enregistrée à la place de la lumière bleue, est largement utilisé pour étudier les zones de végétation. Vous utiliserez aussi une photographie CIR dans cette leçon."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:12
+msgid ""
+"After digitizing the forest stands, you will add information such as new "
+"constraints given by conservation regulations."
+msgstr "Après la numérisation des massifs de forêt, vous ajouterez des informations telles que les nouvelles contraintes données par les réglementations de conservation."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:14
+msgid ""
+"**The goal for this lesson:** To digitize a new set of forest stands from "
+"CIR aerial photographs and add information from other data-sets."
+msgstr "**Objectif de cette leçon :** Numériser un nouveau jeu de données des massifs de forêt depuis des photographies aériennes CIR et ajouter de l'information depuis d'autres jeux de données."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:18
+msgid "|basic| Comparing the Old Forest Stands to Current Aerial Photographs"
+msgstr "|basic| Comparaison des anciens massifs de forêt avec des photographies aériennes actuelles"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:20
+msgid ""
+"The National Land Survey of Finland has an open data policy that allows you "
+"downloading a variety of geographical data like aerial imagery, traditional "
+"topographic maps, DEM, LiDAR data, etc. The service can be accessed also in "
+"English `here <http://www.maanmittauslaitos.fi/en/file_download_service>`_. "
+"The aerial image used in this exercise has been created from two "
+"orthorectified CIR images downloaded from that service (M4134F_21062012 and "
+"M4143E_21062012)."
+msgstr "Le National Land Survey of Finland a une politique des données libres qui vous permet de télécharger une variété de données géographiques comme de l'imagerie aérienne, des cartes topographiques traditionnelles, des MNE, des données LiDAR, etc. Le service est aussi disponible en anglais `ici <http://www.maanmittauslaitos.fi/en/file_download_service>`_. L'image aérienne utilisée dans cet exercice a été créée à partir de deux images CIR orthorectifiées téléchargeables depuis ce service (M4134F_21062012 et M4143E_21062012)."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:22
+msgid ""
+"Open QGIS and set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN` in "
+":menuselection:`Project --> Project Properties --> CRS`."
+msgstr "Ouvrez QGIS et mettez le SCR du projet à :kbd:`ETRS89 / ETRS-TM35FIN` depuis :menuselection:`Projet --> Propriétés du project --> SCR`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:23
+msgid ""
+"Make sure that :guilabel:`Enable 'on the fly' CRS transformation` is "
+"checked."
+msgstr "Assurez-vous que l'option :guilabel:`Activer la projection 'à la volée'` est cochée."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:24
+msgid ""
+"From the :kbd:`exercise_data\\\\forestry\\\\` folder, add the CIR image "
+":kbd:`rautjarvi_aerial.tif` that is containing the digitized lakes."
+msgstr "Depuis le dossier :kbd:`exercise_data\\\\forestry\\\\`, ajoutez l'image CIR :kbd:`rautjarvi_aerial.tif` contenant les lacs numérisés."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:25
+msgid "Then save the QGIS project as :kbd:`digitizing_2012.qgs`."
+msgstr "Puis sauvegardez le projet QGIS sous :kbd:`digitizing_2012.qgs`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:27
+msgid ""
+"The CIR images are from 2012. You can compare the stands that were created "
+"in 1994 with the situation almost 20 years later."
+msgstr "Les images CIR sont de 2012. Vous pouvez comparer les massifs qui ont été créés en 1994 avec la situation d'il y a environ 20 ans."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:29
+msgid "Add your :kbd:`forest_stands_1994.shp` layer."
+msgstr "Ajoutez votre couche :kbd:`forest_stands_1994.shp`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:30
+msgid "Set its styling so that you can see through your polygons."
+msgstr "Modifiez son style afin que vous puissiez voir à travers vos polygones."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:31
+msgid ""
+"Review how the old forest stands follow (or not) what you might visually "
+"interpret as an homogeneous forest."
+msgstr "Étudiez comment les anciens massifs de forêt suivent (ou non) ce que vous pouvez visuellement interpréter comme de la forêt homogène."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:33
+msgid ""
+"Zoom and pan around the area. You probably will notice that some of the old "
+"forest stands might be still corresponding with the image but others are "
+"not."
+msgstr "Zoomez et bouger autour de la zone. Vous remarquerez probablement que certains des anciens massifs de forêt pourraient correspondre à l'image alors que d'autres non."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:35
+msgid ""
+"This is a normal situation, as some 20 years have passed by and different "
+"forest operations have been done (harvesting, thinning...). It is also "
+"possible that the forest stands looked homogeneous back in 1992 to the "
+"person who digitized them but as time has passed some forest has developed "
+"in different ways. Or simply the priorities for the forest inventory were "
+"different that they are today."
+msgstr "Ceci est une situation ordinaire, étant donné que 20 ans se sont écoulés et différentes exploitations forestières ont été menées (récolte, éclaircissage,...). Il est également possible que les massifs de forêt aient semblé homogène à la personne qui les a numérisés en 1992 mais avec le temps les forêts se sont développées de différentes façons. Ou simplement les priorités de l'inventaire des forêts étaient différentes que celles d'aujourd'hui."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:37
+msgid ""
+"Next, you will create new forest stands for this image without using the old"
+" ones. Later you can compare them to see the differences."
+msgstr "Ensuite, vous créerez de nouveaux massifs de forêt pour cette image sans utiliser les anciens. Plus tard, vous pourrez les comparer pour voir les différences."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:41
+msgid "|basic| Interpreting the CIR Image"
+msgstr "|basic| Interprétation de l'image CIR"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:43
+msgid ""
+"Let's digitize the same area that was covered by the old inventory, limited "
+"by the roads and the lake. You don't have to digitize the whole area, as in "
+"the previous exercise you can start with a vector file that already contains"
+" most of the forest stands."
+msgstr "Numérisons la même zone qui était couverte par l'ancien inventaire, limitée par les routes et par le lac. Vous n'avez pas besoin de numériser l'entier de la zone, comme dans l'exercice précédent, vous pouvez commencer avec un fichier vectoriel qui contient déjà la plupart des massifs de forêt."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:45
+msgid "Remove the :kbd:`forest_stands_1994.shp` layer."
+msgstr "Enlevez la couche :kbd:`forest_stands_1994.shp`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:46
+msgid ""
+"Add the :kbd:`forest_stands_2012.shp` layer, located in the "
+":kbd:`exercise_data\\\\forestry\\\\` folder."
+msgstr "Ajoutez la couche :kbd:`forest_stands_2012.shp`, située dans le dossier :kbd:`exercise_data\\\\forestry\\\\`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:47
+msgid ""
+"Set the styling of this layer so that the polygons have no fill and the "
+"borders are visible."
+msgstr "Configurez le style de cette couche de sorte que les polygones n'aient pas de remplissage et que les bordures soient visibles."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:52
+msgid ""
+"You can see that a region to the North of the inventory area is still "
+"missing. That will be your task, digitizing the missing forest stands."
+msgstr "Vous pouvez voir qu'une région au Nord de la zone d'inventaire est toujours manquante. Cela sera votre tâche, numériser les massifs de forêts manquants."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:54
+msgid ""
+"But before you start, spend some time reviewing the forest stands already "
+"digitized and the corresponding forest in the image. Try to get an idea "
+"about how the stands borders are decided, it helps if you have some forestry"
+" knowledge."
+msgstr "Mais avant de commencer, passez un peu de temps à revoir les massifs de forêt déjà numérisé et la forêt correspondant à l'image. Essayez de vous faire une idée sur la façon dont les bords des massifs sont décidés, cela aide si vous avez quelques connaissances forestières."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:56
+msgid "Some ideas about what you could identify from the images:"
+msgstr "Quelques idées de ce que vous pourriez identifier sur les images :"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:58
+msgid ""
+"What forests are deciduous species (in Finland mostly birch forests) and "
+"which ones are conifers (in this region pine or spruce). In CIR images, "
+"deciduous species will often come as bright red color whereas conifers "
+"present dark green colors."
+msgstr "Quelles forêts ont des espèces à feuilles caduques (en Finlande surtout des forêts de bouleau) et lesquelles ont des conifères (dans cette région, pin ou épicéa). Dans les images de CIR, les espèces à feuilles caduques seront souvent de couleur rouge vif alors que les conifères présentent des couleurs vert foncé."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:59
+msgid ""
+"When a forest stand age changes, by looking at the  sizes of the tree crowns"
+" that can be identified in the imagery."
+msgstr "Quand un massif de forêt change d'âge, en regardant les tailles des couronnes des arbres qui peuvent être identifiées grâce à l'imagerie."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:60
+msgid ""
+"The different forest stands' densities, for example forest stand were a "
+"thinning operation has recently been done would clearly show spaces between "
+"the tree crowns and should be easy to differentiate from other forest stands"
+" around it."
+msgstr "Les différentes densités des massifs de forêt, par exemple des massifs de forêt qui ont récemment subi un amincissement, montreront clairement des espaces entre les couronnes d'arbres et pourraient être faciles à différencier des autres massifs de forêt autour d'eux."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:61
+msgid ""
+"Blueish areas indicate barren terrain, roads and urban areas, crops that "
+"have not started to grow etc."
+msgstr "Des zones bleutées indiquent des terrains stériles, routes et zones urbaines, les cultures qui ne sont pas ouvertes à croître, etc."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:62
+msgid ""
+"Don't use zooms too close to the image when trying to identify forest "
+"stands. A scale between 1:3 000 and 1: 5 000 should be enough for this "
+"imagery. See the image below (1 : 4 000 scale):"
+msgstr "N'utilisez pas de zoom trop proche de l'image quand vous essayez d'identifier les massifs de forêt, entre 1: 3 000 et 1: 5 000 devrait être suffisant pour cette imagerie. Regardez l'image entre les deux (échelle à 1: 4 000)."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:68
+msgid "|basic| |TY| Digitizing Forest Stands from CIR Imagery"
+msgstr "|basic| |TY| Numérisation des massifs de forêts depuis l'imagerie CIR"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:70
+msgid ""
+"When digitizing the forest stands, you should try to get forest areas that "
+"are as homogeneous as possible in terms of tree species, forest age, stand "
+"density... Don't be too detailed though, or you will end up making hundreds "
+"of small forest stands that would not be useful at all. You should try to "
+"get stands that are meaningful in the context of forestry, not too small (at"
+" least 0.5 ha) but not too big either (no more than 3 ha)."
+msgstr "Lors de la numérisation des massifs de forêts, vous devez essayer de trouver des zones forestières qui sont aussi homogènes que possible en termes d'espèces d'arbres, d'âge de la forêt, de densité... Ne soyez pas trop pointilleux cependant, sinon vous finirez par faire des centaines de petits massifs de forêt qui ne seront pas du tout utiles. Vous devrez essayer de trouver des massifs qui ont un sens dans le contexte de la foresterie, pas trop petite (au moins 0.5 ha) mais pas trop grand non plus (pas plus de 3 ha)."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:72
+msgid ""
+"With this indications in mind, you can now digitize the missing forest "
+"stands."
+msgstr "En gardant ces indications en tête, vous pouvez maintenant numériser les massifs de forêt manquants."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:74
+msgid "Enable editing for :kbd:`forest_stands_2012.shp`."
+msgstr "Activez l'édition pour :kbd:`forest_stands_2012.shp`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:75
+msgid "Set up the snapping and topology options as in the image."
+msgstr "Configurez les options d'accrochage et de topologie comme sur l'image."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:76
+msgid "Remember to click :guilabel:`Apply` or :guilabel:`OK`."
+msgstr "Souvenez-vous de cliquer sur :guilabel:`Appliquer` ou :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:81
+msgid ""
+"Start digitizing as you did in the previous lesson, with the only difference"
+" that you don't have any point layer that you are snapping to. For this area"
+" you should get around 14 new forest stands. While digitizing, fill in the "
+":kbd:`Stand_id` field with numbers starting at :kbd:`901`."
+msgstr "Commencez la numérisation comme vous l'avez fait dans la leçon précédente, avec la seule différence que vous n'avez pas de couche de point sur laquelle vous vous accrochez. Pour cette zone, vous devriez obtenir environ 14 nouveaux massifs de forêt. Lors de la numérisation, remplissez le champ :kbd:`Stand_id` avec des numéros commençant à :kbd:`901`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:83
+msgid "When you are finished your layer should look something like:"
+msgstr "Quand vous avez terminé, votre couche devrait ressembler à quelque chose comme ça :"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:88
+msgid ""
+"Now you have a  new set of polygons defining the different forest stands for"
+" the current situation as can interpreted from the CIR images. But you are "
+"obviously still missing the forest inventory data, right? For that you will "
+"still need to visit the forest and get some sample data that you will use to"
+" estimate the forest attributes for each of the forest stands. You will see "
+"how to do that in the next lesson."
+msgstr "Vous avez maintenant un nouveau jeu de polygones qui définissent les différents massifs de forêt pour la situation actuelle comme elle peut être interprétée depuis les images CIR. Mais il vous manque encore évidemment les données d'inventaire de forêt, n'est-ce pas ? Pour cela, vous devrez toujours visiter la forêt et récolter des échantillons de données que vous utiliserez pour estimer les attributs forestiers de chacun des massifs de forêt. Vous verrez comment faire cela dans la prochaine leçon."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:90
+msgid ""
+"For the moment, you still can improve your vector layer with some extra "
+"information that you have about conservation regulation that should be taken"
+" into account for this area."
+msgstr "Pour le moment, vous pouvez toujours améliorer votre couche vectorielle avec quelques informations supplémentaires que vous avez sur la réglementation de protection qui pourraient être prises en compte pour cette zone."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:94
+msgid "|basic| |FA| Updating Forest Stands with Conservation Information"
+msgstr "|basic| |FA| Mise à jour des massifs de forêt avec l'information de conservation"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:96
+msgid ""
+"For the area you are working with, it has been researched that the following"
+" conservation regulations must be taken into account while doing the forest "
+"planning:"
+msgstr "Pour la zone sur laquelle vous travaillez, les études ont montré que les règles de conservation suivantes doivent être prises en compte lors de la planification forestière :"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:98
+msgid ""
+"Two locations of a protected species of Siberian flying squirrel (Pteromys "
+"volans) have been identified. According to the regulation, an area of 15 "
+"meters around the spots must be left untouched."
+msgstr "Deux emplacements d'une espèce protégée d'écureuil volant de Sibérie (Pteromys volans) ont été identifiés. Selon le règlement, une zone de 15 mètres autours des lieux devrait restée intacte."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:99
+msgid ""
+"A riparian forest of special interest growing along a stream in the area "
+"must be protected. In a visit to the field, it was found that 20 meters to "
+"both sides of the stream must be protected."
+msgstr "Une forêt riveraine d'un intérêt particulier grandissant le long d'un cours d'eau dans la zone doit être protégée. Lors d'une visite sur le terrain, il a été découvert que 20 mètres de part et d'autre du cours d'eau doivent être protégés."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:101
+msgid ""
+"You have one vector file containing the information about the squirrel "
+"locations and another containing the digitized stream running in the North "
+"area towards the lake. From the :kbd:`exercise_data\\\\forestry\\\\` folder,"
+" add the vector files :kbd:`squirrel.shp` and :kbd:`stream.shp`."
+msgstr "Vous avez un fichier vectoriel contenant les informations à propos des emplacements des écureuils et un autre contenant le cours d'eau numérisé dans la région du Nord près du lac. Depuis le dossier :kbd:`exercise_data\\\\forestry\\\\`, ajoutez les fichiers vectoriels :kbd:`squirrel.shp` et :kbd:`stream.shp`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:103
+msgid ""
+"For the protection of the squirrels locations, you are going to add a new "
+"attribute (column) to your new forest stands that will contain information "
+"about point locations that have to be protected. That information will later"
+" be available whenever a forest operation is planned, and the field team "
+"will be able to mark the area that has to be left untouched before the work "
+"starts."
+msgstr "Pour la protection des emplacements des écureuils, vous allez ajouter un nouvel attribut (colonne) à vos nouveaux massifs de forêt qui contiendront l'information sur l'emplacement des points qui doivent être protégés. Cette information sera disponible plus tard chaque fois qu'une opération forestière est planifiée, et l'équipe de terrain pourra marquer les zones qui doivent rester intactes avant que les travaux ne commencent. "
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:105
+msgid "Open the attribute table for the :kbd:`squirrel` layer."
+msgstr "Ouvrez la table attributaire pour la couche :kbd:`squirrel`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:106
+msgid ""
+"You can see that there are two locations that are defined as Siberian flying"
+" squirrel, and that the area to be protected is indicated by a distance of "
+"15 meters from the locations."
+msgstr "Vous pouvez voir qu'il y a deux emplacements qui sont définis comme écureuil volant de Sibérie, et que la zone à protéger est indiquée par une distance de 15 mètres des emplacements."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:108
+msgid ""
+"To join the information about the squirrels to your forest stands, you can "
+"use the :guilabel:`Join attributes by location`:"
+msgstr "Pour joindre l'information sur les écureuils à nos massifs de forêt, vous pouvez utiliser :guilabel:`Joindre les attributs par localisation` :"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:110
+msgid ""
+"Open :menuselection:`Vector --> Data Management Tools --> Join attributes by"
+" location`."
+msgstr "Ouvrez :menuselection:`Vecteur --> Outils de gestion de données --> Joindre les attributs par localisation`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:111
+msgid ""
+"Set the :kbd:`forest_stands_2012.shp` layer as the :guilabel:`Target vector "
+"layer`."
+msgstr "Mettez la couche :kbd:`forest_stands_2012.shp` comme :guilabel:`Couche vecteur cible`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:112
+msgid ""
+"As :guilabel:`Join vector layer` select the :kbd:`squirrel.shp` point layer."
+msgstr "Comme :guilabel:`Couche vecteur jointe` sélectionnez la couche point :kbd:`squirrel.shp`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:113
+msgid "Name the output file as :kbd:`stands_squirrel.shp`."
+msgstr "Nommez le fichier de sortie :kbd:`stands_squirrel.shp`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:114
+msgid ""
+"In :guilabel:`Output table` select :guilabel:`Keep all records (including "
+"non-matching target records)`. So that you keep all the forest stands in the"
+" layer instead of only keeping those that are spatially related to the "
+"squirrel locations."
+msgstr "Dans la :guilabel:`Table de sortie` sélectionnez :guilabel:`Conserver tous les enregistrements (même ceux sans correspondance)`. Ainsi vous gardez tous les massifs de forêt dans la couche à la place de ne garder que ceux qui sont spatialement associés à des emplacements d'écureuils."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:115
+msgid "Click :guilabel:`OK`."
+msgstr "Cliquez sur :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:116
+msgid "Select :guilabel:`Yes` when prompted to add the layer to the TOC."
+msgstr "Sélectionnez :guilabel:`Oui` quand on vous demande d'ajouter la couche à la Légende de la carte."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:117
+msgid "Close the dialogue box."
+msgstr "Fermez la boîte de dialogue."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:122
+msgid ""
+"Now you have a new forest stands layer, :kbd:`stands_squirrel` where there "
+"are new attributes corresponding to the protection information related to "
+"the Siberian flying squirrel."
+msgstr "Vous avez désormais une nouvelle couche de massifs de forêt, :kbd:`stands_squirrel` dans laquelle il y a des nouveaux attributs qui correspondent à l'information de protection liée à l'écureuil volant de Sibérie."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:124
+msgid ""
+"Open the table of the new layer and order it so that the forest stands with "
+"information for the :guilabel:`Protection` attribute are on top. You should "
+"have now two forest stands where the squirrel has been located:"
+msgstr "Ouvrez la table de la nouvelle couche et ordonnez-la selon les massifs de forêt avec l'information de l'attribut :guilabel:`Protection`. Vous devriez maintenant avoir deux massifs de forêt où l'écureuil a été localisé :"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:129
+msgid ""
+"Although this information might be enough, look at what areas related to the"
+" squirrels should be protected. You know that you have to leave a buffer of "
+"15 meters around the squirrels location:"
+msgstr "Bien que cette information pourrait être suffisante, regardez quelle zone liée aux écureuils doit être protégée. Vous savez que vous devez laisser un tampon de 15 mètres autour de l'emplacement des écureuils :"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:131
+msgid "Open :menuselection:`Vector --> Geoprocessing Tools --> Buffer`."
+msgstr "Ouvrez :menuselection:`Vecteur --> Outils de géotraitement --> Tampon`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:132
+msgid "Make a buffer of 15 meters for the :kbd:`squirrel` layer."
+msgstr "Faites un tampon de 15 mètres pour la couche :kbd:`squirrel`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:133
+msgid "Name the result :kbd:`squirrel_15m.shp`."
+msgstr "Nommez le résultat :kbd:`squirrel_15m.shp`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:138
+msgid ""
+"You will notice that if you zoom in to the location in the Northern part of "
+"the area, the buffer area extends to the neighbouring stand as well. This "
+"means that whenever a forest operation would take place in that stand, the "
+"protected location should also be taken into account."
+msgstr "Vous remarquerez que si vous zoomez sur l'emplacement dans la partie Nord de la zone, la zone tampon s'étend jusqu'au massif voisin. Cela signifie que chaque fois qu'une opération forestière a lieu dans ce massif, l'emplacement protégé devrait également être pris en compte."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:143
+msgid ""
+"From your previous analysis, you did not get that stand to register "
+"information about the protection status. To solve this problem:"
+msgstr "Lors de notre précédente analyse, nous n'avons pas enregistré l'information sur l'état de la protection. Voici comment régler le problème:"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:145
+msgid "Run the :guilabel:`Join attributes by location` tool again."
+msgstr "Lancez à nouveau l'outil :guilabel:`Joindre les attributs par localisation`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:146
+msgid "But this time use the :kbd:`squirrel_15m` layer as join layer."
+msgstr "Mais cette fois, utilisez la couche :kbd:`squirrel_15m` comme couche jointe."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:147
+msgid "Name the output file as :kbd:`stands_squirrel_15m.shp`."
+msgstr "Nommez le fichier de sortie :kbd:`stands_squirrel_15m.shp`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:152
+msgid ""
+"Open the attribute table for the this new layer and note that now you have "
+"three forest stands that have the information about the protection "
+"locations. The information in the forest stands data will indicate to the "
+"forest manager that there are protection considerations to be taken into "
+"account. Then he or she can get the location from the :kbd:`squirrel` "
+"dataset, and visit the area to mark the corresponding buffer around the "
+"location so that the operators in the field can avoid disturbing the "
+"squirrels environment."
+msgstr "Ouvrez la table attributaire de cette nouvelle couche et notez que maintenant vous avez trois massifs de forêt qui possèdent des informations sur les emplacements de protection. Les informations dans les données des massifs de forêt indiqueront au gestionnaire forestier qu'il y a des considérations de protection à prendre en compte. Puis il ou elle peut obtenir l'emplacement du jeu de données :kbd:`squirrel`, et visiter la zone pour marquer le tampon correspondant autour de l'emplacement afin que les opérateurs de terrain puissent éviter de déranger l'environnement des écureuils."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:155
+msgid "|basic| |TY| Updating Forest Stands with Distance to the Stream"
+msgstr "|basic| |TY| Mise à jour des massifs de forêt avec la distance au cours d'eau"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:157
+msgid ""
+"Following the same approach as indicated for the protected squirrel "
+"locations you can now update your forest stands with protection information "
+"related to the stream identified in the field:"
+msgstr "En suivant la même approche qu'indiquée pour les emplacements protégés d'écureuils, vous pouvez maintenant mettre à jour vos massifs de forêt avec l'information de protection liée au cours d'eau identifié sur le terrain :"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:159
+msgid "Remember that the buffer in this case is 20 meters around it."
+msgstr "Souvenez-vous que le tampon dans ce cas est de 20 mètres."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:160
+msgid ""
+"You want to have all the protection information in the same vector file, so "
+"use the :kbd:`stands_squirrel_15m` layer as the target."
+msgstr "Vous voulez avoir toutes les informations de protection dans le même fichier vecteur, alors utilisez la couche :kbd:`stands_squirrel_15m` comme cible."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:161
+msgid "Name your output as :kbd:`forest_stands_2012_protect.shp`."
+msgstr "Nommez votre sortie :kbd:`forest_stands_2012_protect.shp`."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:163
+msgid ""
+"Open the attributes table for the new vector layer and confirm that you now "
+"have all the protection information for the stands that are affected by the "
+"protection measures to protect the riparian forest associated with the "
+"stream."
+msgstr "Ouvrez la table attributaire de la nouvelle couche vecteur et vérifier que vous avez maintenant toutes les informations de protection pour les massifs qui sont touchés par les mesures de protection pour protéger la forêt riveraine liée à ce cours d'eau."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:165
+msgid "Save your QGIS project."
+msgstr "Sauvegardez votre projet QGIS."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:168
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:170
+msgid ""
+"You have seen how to interpret CIR images to digitize forest stands. Of "
+"course it would take some practice to make more accurate stands and usually "
+"using other information like soil maps would give better results, but you "
+"know now the basis for this type of task. And adding information from other "
+"datasets resulted to be quite a trivial task."
+msgstr "Vous avez vu comment interprétez des images CIR pour numériser des massifs forestiers. Bien sûr cela demanderait plus de pratique pour faire des massifs plus précis et le plus souvent avec d'autres informations, comme des cartes pédologiques donneraient de meilleurs résultats, mais vous savez désormais les bases pour ce type de tâche. Et l'ajout d'informations à partir de jeux de données s'est révélé être une tâche tout à fait banale."
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:173
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/forestry/updating_stands.rst:175
+msgid ""
+"The forest stands you digitized will be used for planning forestry "
+"operations in the future, but you still need to get more information about "
+"the forest. In the next lesson, you will see how to plan a set of sampling "
+"plots to inventory the forest area you just digitized, and get the overall "
+"estimate of forest parameters."
+msgstr "Les massifs de forêt que vous avez numérisés seront utilisés pour la planification des opérations forestières dans l'avenir, mais vous avez besoin d'obtenir toujours plus d'informations sur la forêt. Dans la prochaine leçon, vous verrez comment planifier un ensemble de parcelles d’échantillonnage pour inventorier la zone forestière que vous venez de numériser, et obtenir l'estimation globale des paramètres de la forêt."

@@ -1,0 +1,78 @@
+# 
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-02-09 12:29+0000\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:6
+msgid "Pit Remove"
+msgstr "Gaten verwijderen"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:11
+msgid ""
+"Identifies all pits in the DEM and raises their elevation to the level of "
+"the lowest pour point around their edge. Pits are low elevation areas in "
+"digital elevation models (DEMs) that are completely surrounded by higher "
+"terrain. They are generally taken to be artifacts that interfere with the "
+"routing of flow across DEMs, so are removed by raising their elevation to "
+"the point where they drain off the edge of the domain. The pour point is the"
+" lowest point on the boundary of the \"watershed\" draining to the pit. This"
+" step is not essential if you have reason to believe that the pits in your "
+"DEM are real. If a few pits actually exist and so should not be removed, "
+"while at the same time others are believed to be artifacts that need to be "
+"removed, the actual pits should have NODATA elevation values inserted at "
+"their lowest point. NODATA values serve to define edges in the domain, and "
+"elevations are only raised to where flow is off an edge, so an internal "
+"NODATA value will stop a pit from being removed, if necessary."
+msgstr "Identificeert alle gaten in de DEM en verhoogt hun hoogte tot het niveau van het laagste afvoerpunt rondom hun rand. Gaten zijn lage hoogtegebieden in digitale hoogtemodellen (DEM's) die volledig zijn omsloten door hoger terrein. Zij worden in het algemeen geacht artefacten te zijn die interfereren met het routeren van stroom over DEM's, dus worden zij verwijderd door hun hoogte te verhogen tot het punt waarop zij afvoeren over de rand van het domein. Het afvoerpunt is het laagste punt op de grens van het afvoeren van de \"waterberging\" tot het gat. Deze stap is niet essentieel als u redenen heeft om aan te nemen dat de gaten in uw DEM echt zijn. Indien een aantal gaten inderdaad zouden bestaan en dus niet zouden moeten worden verwijderd, terwijl tegelijkertijd andere artefacten worden geacht te zijn die zouden moeten worden verwijderd, zouden de actuele gaten hoogtewaarden GEEN GEGEVENS moeten hebben ingevoegd op hun laagste punt. Waarden GEEN GEGEVENS dienen om randen van het domein te definiëren in het stroomveld, en hoogten worden alleen verhoogd tot waar de stroom over een rand loopt, dus een interne waarde GEEN GEGEVENS zal er voor zorgen dat ene gat niet wordt verwijderd, indien nodig."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:27
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:31
+msgid "``Elevation Grid`` [raster]"
+msgstr "``Hoogteraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:30
+msgid ""
+"A digital elevation model (DEM) grid to serve as the base input for the "
+"terrain analysis and stream delineation."
+msgstr "Een digitaal hoogtemodel (DEM)-raster om te dienen als basisinvoer voor de analyse van het terrein en het karakteriseren van de stroom."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:34
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:38
+msgid "``Pit Removed Elevation Grid`` [raster]"
+msgstr "``Gatengevuld hoogteraster`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:37
+msgid ""
+"A grid of elevation values with pits removed so that flow is routed off of "
+"the domain."
+msgstr "Een raster van hoogtewaarden met verwijderde gaten zodat de stroom van het domein wordt geleid."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:41
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/pitremove.rst:48
+msgid "See also"
+msgstr "Zie ook"

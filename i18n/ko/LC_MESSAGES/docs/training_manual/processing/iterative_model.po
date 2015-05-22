@@ -1,0 +1,95 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-02 11:42+0100\n"
+"PO-Revision-Date: 2015-03-11 05:44+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:6
+msgid "More iterative execution of algorithms"
+msgstr "알고리듬 심화 반복 실행"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:8
+msgid ""
+"This lessons shows how to combine the iterative execution of algorithm with "
+"the modeler to get more automation"
+msgstr "이 강의에서 자동화를 더 심화시킬 수 있도록 모델 작성자와 알고리듬의 반복 실행을 결합하는 방법을 살펴보겠습니다."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:11
+msgid ""
+"The iterative execution of algorithms is available not just for built-in "
+"algorithms, but also for the algorithms that you can create your self, such "
+"as models. We are going to see how to combine a model and the iterative "
+"execution of algorithms, so we can obtain more complex results with ease."
+msgstr "내장된 알고리듬에서만이 아니라, 사용자가 직접 생성할 수 있는 알고리듬, 즉 모델에서도 알고리듬을 반복 실행할 수 있습니다. 더 복잡한 결과물을 더 쉽게 얻을 수 있도록, 모델과 알고리듬의 반복 실행을 결합하는 방법을 살펴보겠습니다."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:14
+msgid ""
+"The data the we are going to use for this lesson is the same one that we "
+"already used for the last one. In this case, instead of just clipping the "
+"DEM with each watershed polygon, we will add some extra steps and calculate "
+"a hypsometric curve for each of them, to study how elevation is distributed "
+"within the watershed."
+msgstr "이 강의에서 사용할 데이터는 직전 강의에서 사용했던 것과 동일합니다. 이 경우 DEM을 각 유역 폴리곤으로 클리핑만하는 것이 아니라, 유역 안에서 표고가 어떻게 분포되어 있는지 연구하기 위해 몇몇 단계를 추가해서 클리핑된 각 레이어에 대해 고도분포 곡선을 계산할 것입니다."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:16
+msgid ""
+"Since we have a workflow that involves several steps (clipping + computing "
+"the hypsometric curve), we should go to the modeler and create the "
+"corresponding model for that workflow."
+msgstr "몇 단계로 (클리핑 + 고도분포 곡선 계산) 이루어진 작업 흐름이기 때문에, 모델 작성자를 실행해서 해당 작업 흐름에 상응하는 모델을 생성해야 합니다."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:18
+msgid ""
+"You can find the model already created in the data folder for this lesson, "
+"but it would be good if you first try to create it yourself. The clipped "
+"layer is not a final result in this case, since we are just interested in "
+"the curves, so this model will not generated any layers, but just a table "
+"with the curve data."
+msgstr "이 강의를 위한 데이터 폴더에 이미 모델이 생성되어 있지만, 먼저 사용자가 직접 생성해보는 편이 좋습니다. 이 경우 고도분포 곡선에 흥미가 있기 때문에, 클리핑된 레이어가 최종 결과물이 아닙니다. 즉 이 모델은 어떤 레이어도 생성하지 않습니다. 곡선 데이터를 담은 테이블을 생성할 뿐입니다."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:20
+msgid "The model should look like this:"
+msgstr "모델이 다음과 같이 보여야 합니다."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:24
+msgid ""
+"Add the model to you models folder, so it is available in the toolbox, and "
+"now execute it."
+msgstr "이 모델을 사용자의 :kbd:`models` 폴더에 추가, 툴박스에서 사용할 수 있도록 한 다음 실행하십시오."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:28
+msgid ""
+"Select the DEM and watersheds basins, and do not forget to toggle the button"
+" that indicates that the algorithm has to be run iteratively."
+msgstr "DEM과 유역 분지 레이어를 선택하십시오. 물론 알고리듬을 반복적으로 실행해야 한다는 사실을 알리는 버튼을 클릭하는 일도 잊지 마십시오."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:30
+msgid ""
+"The algorithm will be run several times, and the corresponding tables will "
+"be created and open in your QGIS project."
+msgstr "알고리듬이 몇 번 실행된 후, 상응하는 테이블들이 생성되어 QGIS 프로젝트에 열릴 것입니다."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:34
+msgid ""
+"We can make this example more complex by extending the model and computing "
+"some slope statistics. Add the *Slope, aspect, curvatures* algorithm to the "
+"model, and then the *Raster statistics* algorithm, which should use the "
+"slope output as its only input."
+msgstr "모델을 확장해서 경사도 통계를 계산하도록 해서 이 예제를 더 복잡하게 만들 수 있습니다. 모델에 :guilabel:`Slope, aspect, curvatures` 알고리듬을 추가한 다음, 경사도 산출물만 입력에 사용해야 하는 :guilabel:`Raster statistics` 알고리듬을 추가하십시오."
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:38
+msgid ""
+"If you now run the model, apart from the tables you will get a set of pages "
+"with statistics. These pages will be available in the results dialog."
+msgstr "이제 모델을 실행하면, 테이블들 외에도 통계를 담은 페이지 셋을 얻게 될 것입니다. :guilabel:`Results` 대화 창에서 이 페이지들을 사용할 수 있습니다."
