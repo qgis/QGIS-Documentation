@@ -353,7 +353,7 @@ own scripts.
    make sure that the corresponding packages are installed in the R distribution
    used by |qg|. The processing framework will not take care of any package installation. If you
    run a script that requires a package that is not installed, the execution will fail, and
-   SEXTANTE will try to detect which packages are missing. You must install those
+   Processing will try to detect which packages are missing. You must install those
    missing libraries manually before you can run the algorithm.
 
 GRASS
