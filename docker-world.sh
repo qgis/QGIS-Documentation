@@ -1,14 +1,11 @@
 #!/bin/bash
 
-# QGIS testing/master ONLY in english
-# translation is done only in latest stable
-
 # cd to script dir
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
 
 now=`date`
-echo "Starting $now"
+echo "Starting: $now"
 
 if [ -f running ]; then
 	echo "$0 still running"
@@ -24,11 +21,18 @@ git stash drop
 # get latest version
 git pull
 
-for LANG in en
+# only languages which have translations in transifex
+# nqo is not available in python :-(
+: ${langs:=en de es fi fr gl hi id it ja ko nl pl pt_BR pt_PT ro ru uk}
+
+# if you only want to build one language, do:
+# $ langs=de ./docker-world.sh
+
+for l in $langs
   do
-    time /bin/bash ./docker-run.sh full LANG=$LANG
-    time rsync -hvrzc -e ssh --progress output/pdf/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation/live/html/pdf
-    time rsync -hvrzc -e ssh --progress output/html/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation/live/html
+    time /bin/bash ./docker-run.sh full LANG=$l
+    time rsync -hvrzc -e ssh --progress output/pdf/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.8/live/html/pdf
+    time rsync -hvrzc -e ssh --progress output/html/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.8/live/html
   done
 
 now=`date`
