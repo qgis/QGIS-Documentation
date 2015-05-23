@@ -249,7 +249,7 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the label.
   Use the :guilabel:`Frame color` and :guilabel:`Thickness` menus to adjust those properties.
 * Use the :guilabel:`Background color` menu for setting a background color.
-  With the dialog you can pick a color (see color_picker_ ).
+  With the dialog you can pick a color (see :ref:`color_picker` ).
 * Use the :guilabel:`Item ID` to create a relationship to other Print Composer items. This is used with |qg| server and any potential web 
   client. You can set an ID on an item (e.g., a map and a label), and then the web client can send data to set a property 
   (e.g., label text) for that specific item. The GetProjectSettings command will list what items and which IDs are available in a layout.
@@ -1137,7 +1137,7 @@ tab provide the following functionalities (see figure_composer_table_2_):
   the atlas coverage layer's current feature (for further information about the atlas generation
   see atlasgeneration_).
 
-.. Figure_composer_table_2b:
+.. _Figure_composer_table_2b:
 
 .. only:: html
 
@@ -1149,7 +1149,7 @@ tab provide the following functionalities (see figure_composer_table_2_):
    Attribute table Main properties for 'Current atlas feature' |nix|
 
 
-.. Figure_composer_table_2c:
+.. _Figure_composer_table_2c:
 
 .. only:: html
 
