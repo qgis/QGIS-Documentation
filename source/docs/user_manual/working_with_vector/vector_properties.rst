@@ -907,10 +907,14 @@ When creating a new category, |qg| will insert a new tab or named group for the 
 The next step will be to assign the relevant fields to a selected category 
 with the |mActionArrowRight| icon. You can create more categories and use the 
 same fields again. 
-Other options in the dialog are 'Autogenerate' and 'Provide ui-file'. 'Autogenerate' just creates editors for all fields
-and tabulates them.
-The 'Provide ui-file' option allows you to use complex dialogs made with the Qt-Designer. Using a UI-file allows
-a great deal of freedom in creating a dialog. For detailed information, see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+
+Other options in the dialog are 'Autogenerate' and 'Provide ui-file'. 
+
+* 'Autogenerate' just creates editors for all fields and tabulates them.
+
+* The 'Provide ui-file' option allows you to use complex dialogs made with the Qt-Designer. 
+  Using a UI-file allows a great deal of freedom in creating a dialog. 
+  For detailed information, see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
 
 |qg| dialogs can have a Python function that is called when the dialog is opened. Use this function to add extra logic to your dialogs.
 An example is (in module MyForms.py):
