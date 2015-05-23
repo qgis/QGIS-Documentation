@@ -867,7 +867,7 @@ In the :guilabel:`Save new GPX file as` dialog, you can choose where to save the
 new GPX layer.
 
 .. index:: New_Temporary_Scratch_Layer
-.. _vector_create_gpx:
+.. _vector_new_scratch_layer:
 
 Creating a new Temporary Scratch Layer
 ......................................
@@ -975,8 +975,10 @@ at the bottom left.
 The field calculator bar allows you to make calculations on the selected rows only.
 For example, you can alter the number of the ID field of the file:`regions.shp` with
 the expression
+
 ::
-  ID+5
+
+ ID+5
 
 as shown in figure_attributes_1_ .
 
