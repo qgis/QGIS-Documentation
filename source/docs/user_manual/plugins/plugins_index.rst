@@ -22,12 +22,10 @@ Plugins
    plugins_interpolation
    plugins_metasearch
    plugins_offline_editing
-   plugins_open_layers
    plugins_oracle_raster
    plugins_raster_terrain
    plugins_road_graph
    plugins_spatial_query
    plugins_spit
-   plugins_table_manager
    plugins_topology_checker
    plugins_zonal_statistics

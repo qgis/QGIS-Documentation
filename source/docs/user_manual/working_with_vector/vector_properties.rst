@@ -891,7 +891,7 @@ widgets. These widgets are:
 
 .. note::
 
-   |qgis| has an advanced 'hidden' option to define your own field 
+   |qg| has an advanced 'hidden' option to define your own field 
    widget using python and add it to this impressive list of widgets. 
    It is tricky but it is very well explained in following excellent blog that
    explains how to create a real time validation widget that can be used like 
