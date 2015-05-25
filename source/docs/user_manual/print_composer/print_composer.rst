@@ -816,7 +816,7 @@ The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
 * You can change the font of the legend title, group, subgroup and item (layer) in the legend item. 
   Click on a category button to open a **Select font** dialog.
 * You provide the labels with a **Color** using the advanced color picker, however the selected 
-  color will be given to all font items in the legend..
+  color will be given to all font items in the legend.
 * Legend items can be arranged over several columns. Set the number of columns in 
   the :guilabel:`Count` |selectnumber| field.
 
@@ -1777,7 +1777,7 @@ Hide and show panels
 To maximise the space available to interact with a composition you can use :guilabel:`View -->`
 |checkbox| :guilabel:`Hide panels` or press :kbd:`F10`.
 
-:: note::
+.. note::
 
    It's also possible to switch to a full screen mode to have more space to interact by pressing
    :kbd:`F11` or using :guilabel:`View --> |checkbox| :guilabel:`Toggle full screen`.
