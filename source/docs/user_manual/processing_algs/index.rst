@@ -10,8 +10,8 @@ Processing providers and algorithms
      :maxdepth: 2
 
      gdalogr/index
-     lidartools/lastools/index
-     modelertools/modeleronly_tools/index
+     lidartools/lastools
+     modelertools/modeleronly_tools
      otb/index
      qgis/index
      r/index

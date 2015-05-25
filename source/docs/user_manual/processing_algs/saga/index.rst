@@ -4,7 +4,7 @@
 SAGA algorithm provider
 ***********************
 
-`SAGA <http://www.saga-gis.org/en/index.html>`_ (System for Automated
+`SAGA <http://www.saga-gis.org/en.html>`_ (System for Automated
 Geoscientific Analyses) is a free, hybrid, cross-platform GIS software. SAGA
 provides many geoscientific methods which are bundled in so-called module
 libraries.
@@ -16,31 +16,31 @@ libraries.
 .. toctree::
      :maxdepth: 2
 
-     geostatistics/index
-     grid_analysis/index
-     grid_calculus/index
-     grid_filter/index
-     grid_gridding/index
-     grid_spline/index
-     grid_tools/index
-     grid_visualization/index
-     imagery_classification/index
-     imagery_rga/index
-     imagery_segmentation/index
-     imagery_tools/index
-     kriging/index
-     shapes_grid/index
-     shapes_lines/index
-     shapes_points/index
-     shapes_polygons/index
-     shapes_tools/index
-     shapes_transect/index
-     simulation_fire_spreading/index
-     simulation_hydrology/index
-     table_calculus/index
-     table_tools/index
-     terrain_analysis_channels/index
-     terrain_analysis_hydrology/index
-     terrain_analysis_lighting/index
-     terrain_analysis_morphometry/index
-     terrain_analysis_profiles/index
+     geostatistics
+     grid_analysis
+     grid_calculus
+     grid_filter
+     grid_gridding
+     grid_spline
+     grid_tools
+     grid_visualization
+     imagery_classification
+     imagery_rga
+     imagery_segmentation
+     imagery_tools
+     kriging
+     shapes_grid
+     shapes_lines
+     shapes_points
+     shapes_polygons
+     shapes_tools
+     shapes_transect
+     simulation_fire_spreading
+     simulation_hydrology
+     table_calculus
+     table_tools
+     terrain_analysis_channels
+     terrain_analysis_hydrology
+     terrain_analysis_lighting
+     terrain_analysis_morphometry
+     terrain_analysis_profiles
