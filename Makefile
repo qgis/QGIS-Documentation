@@ -87,6 +87,10 @@ html: localizeresources
 
 # pdf will also make html
 pdf: html
+	# add the 'processing algorithms' part OUT of the pdf by adding it to exclude_patterns of build
+	# NOTE: this exlcusion line will be removed in docker-world.sh via a git checkout!
+	@echo "exclude_patterns += ['docs/user_manual/processing_algs/*']" >> $(SOURCEDIR)/conf.py;
+
 	@-if [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
 		cp -f $(SOURCEDIR)/conf.py $(SOURCEDIR)/i18n/$(LANG)/; \
 		cat $(SOURCEDIR)/i18n/$(LANG)/conf.py.diff >> $(SOURCEDIR)/i18n/$(LANG)/conf.py; \
