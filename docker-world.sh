@@ -31,6 +31,9 @@ git pull
 for l in $langs
   do
     time /bin/bash ./docker-run.sh full LANG=$l
+    # we changed source/conf.py during build (exclude processing algs for pdf (see Makefile)
+    # let's get a fresh checkout of source/conf.py
+    git checkout source/conf.py
     time rsync -hvrzc -e ssh --progress output/pdf/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.8/live/html/pdf
     time rsync -hvrzc -e ssh --progress output/html/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.8/live/html
   done
