@@ -75,7 +75,7 @@ with three vector layers and one raster elevation map.
    :file:`gtopo30` and click **[OK]**. The elevation layer will be visualized.
 #. Click on |grass_add_vector| :sup:`Add GRASS vector layer`, choose the map name
    :file:`alaska` and click **[OK]**. The Alaska boundary vector layer will be
-   overlayed on top of the :file:`gtopo30` map. You can now adapt the layer
+   overlaid on top of the :file:`gtopo30` map. You can now adapt the layer
    properties as described in chapter :ref:`vector_properties_dialog` (e.g.,
    change opacity, fill and outline color).
 #. Also load the other two vector layers, :file:`rivers` and :file:`airports`, and
