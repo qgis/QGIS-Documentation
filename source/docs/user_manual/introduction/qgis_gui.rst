@@ -535,7 +535,7 @@ changes you make in the legend area.
    You can use the mouse wheel to zoom in and out on the map. Place the mouse
    cursor inside the map area and roll the wheel forward (away from you) to
    zoom in and backwards (towards you) to zoom out. The zoom is centered on the
-   mouse cursor position. You can customize the behavior of the
+   mouse cursor position. You can customize the behaviour of the
    mouse wheel zoom using the :guilabel:`Map tools` tab under the
    :menuselection:`Settings --> Options` menu.
 

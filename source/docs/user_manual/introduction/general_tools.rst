@@ -1,6 +1,6 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not up-to-date with release
 
 .. _general_tools:
 
@@ -348,7 +348,7 @@ display three kinds of information:
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
 
-   Identify feaures dialog |nix| (Gnome)
+   Identify features dialog |nix| (Gnome)
 
 At the top of the window, you have five icons:
 
@@ -365,7 +365,7 @@ With the :guilabel:`Mode` combobox you can define the identify mode: 'Current la
 The :guilabel:`View` can be set as 'Tree', 'Table' and 'Graph'.
 
 The identify tool allows you to auto open a form. In this mode you can change the
-feautures attributes.
+features attributes.
 
 
 Other functions can be found in the context menu of the identified item. For
@@ -478,7 +478,7 @@ Scale Bar
 ---------
 
 |scale_bar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
-can control the style and placement, as well as the labeling of the bar.
+can control the style and placement, as well as the labelling of the bar.
 
 .. _figure_decorations_4:
 
