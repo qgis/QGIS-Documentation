@@ -45,7 +45,7 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
    current map extent. This allows you to quickly determine which area of the
    map you are currently viewing. Note that labels are not rendered to the map
    overview even if the layers in the map overview have been set up for
-   labeling. If you click and drag the red rectangle in the overview that shows
+   labelling. If you click and drag the red rectangle in the overview that shows
    your current extent, the main map view will update accordingly.
 
 .. tip:: **Show Log Messages**
@@ -254,7 +254,7 @@ Rendering Menu
 * |checkbox| :guilabel:`Render layers in parallel using many CPU cores`
 * |checkbox| :guilabel:`Max cores to use`
 * :guilabel:`Map update interval (default to 250 ms)`
-* |checkbox| :guilabel:`Enable feature simplication by default for newly added layers`
+* |checkbox| :guilabel:`Enable feature simplification by default for newly added layers`
 * :guilabel:`Simplification threshold`
 * |checkbox| :guilabel:`Simplify on provider side if possible`
 * :guilabel:`Maximum scale at which the layer should be simplified`

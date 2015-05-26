@@ -7,7 +7,7 @@ Print Composer
 **************
 .. index:: Create_Maps, Layout_Maps, Compose_Maps
 
-With the Print Composer you can create nice maps and atlasses that can be printed or saved as PDF-file, an image or an SVG-file. This is a powerfull way to share geographical information produced with |qg| that can be included in reports or published.
+With the Print Composer you can create nice maps and atlasses that can be printed or saved as PDF-file, an image or an SVG-file. This is a powerful way to share geographical information produced with |qg| that can be included in reports or published.
 
 The Print Composer provides growing layout and printing capabilities. It allows
 you to add elements such as the |qg| map canvas, text labels, images, legends, scale bars, basic
@@ -478,7 +478,7 @@ map element. Expand this option to provide a lot of configuration options, see F
 
 As grid type, you can specify to use a 'Solid', 'Cross', 'Markers' or 'Frame and annotations only'.
 'Frame and annotations only' is especially useful when working with rotated maps or reprojected
-grids. In the devisions section of the Grid Frame Dialog mentioned below you then have a corresponding setting.
+grids. In the divisions section of the Grid Frame Dialog mentioned below you then have a corresponding setting.
 Symbology of the grid can be chosen. See section Rendering_Mode_.
 Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
 and the width used for the cross or line grid type.
@@ -497,7 +497,7 @@ and the width used for the cross or line grid type.
 * There are different options to style the frame that holds the map. Following options are 
   available: No Frame, Zebra, Interior ticks, Exterior ticks, Interior and Exterior ticks and Lineborder.
 
-* With 'LatitudeY/ only' and 'Longitude/X only' setting in the devisions section you have the possibility
+* With 'LatitudeY/ only' and 'Longitude/X only' setting in the divisions section you have the possibility
   to prevent a mix of latitude/y and longitude/x coordinates showing on a side when working with
   rotated maps or reprojected grids. 
 
@@ -951,7 +951,7 @@ You can define how the scale bar will be displayed in its frame.
 
 * :guilabel:`Box margin` : space between text and frame borders
 * :guilabel:`Labels margin` :  space between text and scale bar drawing
-* :guilabel:`Line width` : line widht of the scale bar drawing
+* :guilabel:`Line width` : line width of the scale bar drawing
 * :guilabel:`Join style` : Corners at the end of scalebar in style Bevel, Rounded or Square 
   (only available for Scale bar style Single Box & Double Box)  
 * :guilabel:`Cap style` : End of all lines in style Square, Round or Flat
@@ -1237,7 +1237,7 @@ You can:
   * ``NAME NOT LIKE 'AN%`` 
   * ``regexp_match( attribute( $currentfeature, 'USE' )  , '[i]')``
 
-  The last regular expression will include only the arpoirts that have a letter 'i' 
+  The last regular expression will include only the airports that have a letter 'i' 
   in the attribute field 'USE'. 
 
 Appearance
@@ -1265,7 +1265,7 @@ tab provide the following functionalities  (see figure_composer_table_5_):
 * The option :guilabel:`Empty table` controls what will be displayed when the result
   selection is empty.
 
-  * **Draw headers only**, will only draw the header except if you have choosen 'No header' 
+  * **Draw headers only**, will only draw the header except if you have chosen 'No header' 
     for :guilabel:`Display header`.
   * **Hide entire table**, will only draw the background of the table. You can activate 
     |checkbox| :guilabel:`Don't draw background if frame is empty` in :guilabel:`Frames` 
@@ -1750,7 +1750,7 @@ You can provide following expression for field :guilabel:`X` :
 For all other composer items you can set the position in a similar way so they are correctly positioned 
 when page is automatically rotated in portrait or landscape.
 
-Information provided is derived from the excellent blog (in english and portugese) 
+Information provided is derived from the excellent blog (in English and Portuguese) 
 on the Data Defined Override options Multiple_format_map_series_using_QGIS_2.6_ .
 
 This is just one example of how you can use Data Defined Overrides.

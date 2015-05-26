@@ -19,7 +19,7 @@ Installation
     single:installation
 
 Installation of |qg| is very simple. Standard installer packages are available
-for MS Windows and Mac OS X. For many flavors of GNU/Linux, binary packages (rpm
+for MS Windows and Mac OS X. For many flavours of GNU/Linux, binary packages (rpm
 and deb) or software repositories are provided to add to your installation manager. Get the latest information on binary packages at the |qg| website at
 http://download.qgis.org.
 
@@ -142,12 +142,12 @@ Load raster and vector layers from the sample dataset
    Language [GML] [OGR] (.gml,.GML)' from the :guilabel:`Filter` |selectstring| combo box, then select the GML file :file:`lakes.gml` and
    click **[Open]**. In the :guilabel:`Add vector layer` dialog, click **[OK]**.
    The :guilabel:`Coordinate Reference System Selector` dialog opens with :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**. 
-#. Zoom in a bit to your favorite area with some lakes.
+#. Zoom in a bit to your favourite area with some lakes.
 #. Double click the :file:`lakes` layer in the map legend to open the
    :guilabel:`Properties` dialog.
 #. Click on the :guilabel:`Style` tab and select a blue as fill color.
 #. Click on the :guilabel:`Labels` tab and check the |checkbox|
-   :guilabel:`Label this layer with` checkbox to enable labeling. Choose the
+   :guilabel:`Label this layer with` checkbox to enable labelling. Choose the
    "NAMES" field as the field containing labels.
 #. To improve readability of labels, you can add a white buffer around them
    by clicking "Buffer" in the list on the left, checking |checkbox|
@@ -246,7 +246,7 @@ be added after ``--snapshot``.
 
 Based on your locale, |qg| selects the correct localization. If you would like
 to change your language, you can specify a language code. For example,
-``--lang=it`` starts |qg| in italian localization.
+``--lang=it`` starts |qg| in Italian localization.
 
 **Command line option** ``--project``
 
@@ -365,7 +365,7 @@ The kinds of information saved in a project file include:
 The project file is saved in XML format, so it is possible to edit the file
 outside |qg| if you know what you are doing. The file format has been updated several
 times compared with earlier |qg| versions. Project files from older |qg| versions
-may not work properly anymore. To be made aware of this, in the
+may not work properly any more. To be made aware of this, in the
 :guilabel:`General` tab under :menuselection:`Settings --> Options` you can
 select:
 
