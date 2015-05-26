@@ -29,7 +29,7 @@ Selecting features
 
 In QGIS desktop, features can be selected in different ways, the user can click
 on a feature, draw a rectangle on the map canvas or use an expression filter.
-Selected fatures are normally higlighted in a different color (default
+Selected features are normally highlighted in a different color (default
 is yellow) to draw user's attention on the selection.
 Sometimes can be useful to programmatically select features or to change the
 default color.
