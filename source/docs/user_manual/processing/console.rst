@@ -9,7 +9,7 @@ the processing framework. Models involving several algorithms can be defined usi
 command-line interface, and additional operations such as loops and conditional
 sentences can be added to create more flexible and powerful workflows.
 
-There is not a proccesing console in |qg|, but all processing commands are available
+There is not a processing console in |qg|, but all processing commands are available
 instead from the |qg| built-in Python console. That means that you can incorporate
 those commands into your console work and connect processing algorithms to all the
 other features (including methods from the |qg| API) available from there.

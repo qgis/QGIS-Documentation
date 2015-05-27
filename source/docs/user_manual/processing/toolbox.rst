@@ -77,7 +77,7 @@ In particular, the simplified view contains algorithms from the following provid
 In the case of running |qg| under Windows, these algorithms are
 fully-functional in a fresh installation of |qg|, and they can be run without
 requiring any additional installation. Also, running them requires no prior
-knowledge of the external applications they use, making them more accesible for
+knowledge of the external applications they use, making them more accessible for
 first-time users.
 
 If you want to use an algorithm not provided by any of the above providers,
@@ -266,7 +266,7 @@ A note on projections
 Algorithms run from the processing framework --- this is also true of most of the external applications whose algorithms are
 exposed through it. Do not perform any reprojection on input layers and
 assume that all of them are already in a common coordinate system and ready to
-be analized. Whenever you use more than one layer as input to an algorithm,
+be analyzed. Whenever you use more than one layer as input to an algorithm,
 whether vector or raster, it is up to you to make sure that they are all in the
 same coordinate system.
 

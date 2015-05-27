@@ -11,7 +11,7 @@ Description
 
 Generates an aspect map from any GDAL-supported elevation raster.
 Aspect is the compass direction that a slope faces. The pixels will
-have a value from 0-360° measured in degress from north indicating the azimuth.
+have a value from 0-360° measured in degrees from north indicating the azimuth.
 On the northern hemisphere, the north side of slopes is often shaded (small azimuth from 0°-90°),
 while the southern side receives more solar radiation (higher azimuth from 180°-270°).
 The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
@@ -283,7 +283,7 @@ Grid (Data metrics)
 Description
 ...........
 
-This algorith computes some data metrics using the specified window and output grid geometry.
+This algorithm computes some data metrics using the specified window and output grid geometry.
 
 Parameters
 ..........
@@ -768,7 +768,7 @@ Description
 
 Outputs a single-band raster with values computed from the elevation. Roughness
 is the degree of irregularity of the surface. It's calculated by the largest inter-cell
-difference of a central pixel and its sourrounding cell.
+difference of a central pixel and its surrounding cell.
 The determination of the roughness plays a role in the analysis of terrain elevation data,
 it's useful for calculations of the river morphology, in climatology and physical geography
 in general.

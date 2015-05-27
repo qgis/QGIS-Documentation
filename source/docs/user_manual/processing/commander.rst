@@ -63,7 +63,7 @@ functions that you need.
 
 The file is created with a few example
 functions the first time you open the Commander. If you haven't launched the Commander yet, you can create the file
-yourself. To edit the commands file, use your favorite text editor. You can also
+yourself. To edit the commands file, use your favourite text editor. You can also
 use a built-in editor by calling the ``edit`` command from the Commander. It will
 open the editor with the commands file, and you can edit it directly and then
 save your changes.

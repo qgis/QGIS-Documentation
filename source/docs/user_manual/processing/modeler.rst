@@ -181,7 +181,7 @@ Elements can be dragged to a different position within the canvas, to change the
 way the module structure is displayed and make it more clear and intuitive. Links
 between elements are updated automatically. You can zoom in and out by using the mouse wheel.
 
-You can run your algorithm anytime by clicking on the **[Run]** button. However, in
+You can run your algorithm any time by clicking on the **[Run]** button. However, in
 order to use the algorithm from the toolbox, it has to be saved and the modeler dialog
 closed, to allow the toolbox to refresh its contents.
 
