@@ -29,7 +29,7 @@ QGIS User Guide
     grass_integration/grass_integration
     processing/index
     processing_algs/index
-    print_composer/print_composer
+    print_composer/index
     plugins/plugins_index
     preamble/help_and_support
     appendices/appendices
