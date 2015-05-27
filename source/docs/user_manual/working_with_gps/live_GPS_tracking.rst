@@ -146,7 +146,7 @@ Remember the number of the COM port assigned to the GPS connection as resulting
 by the Bluetooth properties.
 
 After the GPS has been recognized, make the pairing for the connection. Usually
-the autorization code is ``0000``.
+the authorization code is ``0000``.
 
 Now open :guilabel:`GPS information` panel and switch to |mActionOptions| GPS
 options screen. Select the COM port assigned to the GPS connection and click

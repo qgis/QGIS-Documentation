@@ -498,7 +498,7 @@ you have to click on it to open it in real dimension (due to QgsLegendInterface
 architectural limitation). Clicking on the layer's legend will open a frame with
 the legend at full resolution.
 
-In the print composer, the legend will be integrated at it's original (dowloaded)
+In the print composer, the legend will be integrated at it's original (downloaded)
 dimension. Resolution of the legend graphic can be set in the item properties
 under Legend -> WMS LegendGraphic to match your printing requirements
 
@@ -612,7 +612,7 @@ Note that any proxy settings you may have set in your preferences are also recog
 
 .. Commented out..
    in |qg| 1.8 the following checkbox seems to be missing, maybe the
-   loading of features is allready prevented by default when it is not
+   loading of features is already prevented by default when it is not
    the first layer loaded? This needs to be checked..
 
    Without using the checkbox |checkbox|
@@ -637,6 +637,6 @@ mailing lists.
 
 .. tip:: **Finding WFS Servers**
 
-   You can find additional WFS servers by using Google or your favorite search
+   You can find additional WFS servers by using Google or your favourite search
    engine. There are a number of lists with public URLs, some of them maintained
    and some not.

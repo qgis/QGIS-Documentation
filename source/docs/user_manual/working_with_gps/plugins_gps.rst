@@ -275,7 +275,7 @@ Downloading with GPSBabel, both with USB and BT returns always an error like
 
   gpsbabel -t -i mtk -f COM12 -o gpx -F C:/temp/test.gpx
   mtk_logger: Can't create temporary file data.bin
-  Error running gpsbabel: Process exited unsucessfully with code 1
+  Error running gpsbabel: Process exited unsuccessfully with code 1
 
 **Ubuntu/Mint GNU/Linux**
 
