@@ -118,7 +118,7 @@ Changing the symbology of vector layers
 * In the :guilabel:`Layers list`, right-click on the :guilabel:`Streets` layer.
 * Select :guilabel:`Properties` from the menu that appears.
 * Switch to the :guilabel:`Style` tab in the dialog that appears.
-* Click on the button labeled :guilabel:`Change`, with a square showing the
+* Click on the button labelled :guilabel:`Change`, with a square showing the
   current color of the :guilabel:`Streets` layer.
 * Select a new color in the dialog that appears.
 * Click :guilabel:`OK`.
