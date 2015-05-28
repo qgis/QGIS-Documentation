@@ -13,7 +13,7 @@ previous releases.
 This release includes hundreds of bug fixes and many new features and
 enhancements that will be described in this manual. You may also
 review the visual changelog at
-http://changelog.linfiniti.com/qgis/version/2.8/.
+http://qgis.org/en/site/forusers/visualchangelog28/index.html.
 
 
 Application 
