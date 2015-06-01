@@ -49,6 +49,13 @@ we then can use this language to build language dependent switches #}
         {% endif %}
 
       </p>
+      <p class="credit">
+        {{ _('Untranslated page? Or you spot a translation error:') }}
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-documentation/">{{ _('fix me') }}</a>
+        <!--<br/>
+        {{ _('Textual error, missing text or you know better:') }}
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Documentation">{{ _('fix me') }}</a>-->
+      </p>
     </div>
   </footer>
 {% endblock %}

@@ -54,10 +54,20 @@
         }
         langPlusPage = langPlusPage[0];
         currentLang = langPlusPage.replace(currentPage, '');
-        // put some style around the current locale flag, we have to remove the '/' here
-        // this is for the flags:
-        //$('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
-        // set language select to current lang
+
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-documentation/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/\//g, "_").replace(/-/g, "_").replace(/\.html/g, "")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Documentation/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
 
         $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
 
