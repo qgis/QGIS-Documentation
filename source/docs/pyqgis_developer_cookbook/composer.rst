@@ -96,9 +96,10 @@ then exported to PDF, raster images or directly printed on a printer.
 The composer consists of a bunch of classes. They all belong to the core
 library. QGIS application has a convenient GUI for placement of the elements,
 though it is not available in the GUI library. If you are not familiar with
-`Qt Graphics View framework <http://doc.qt.nokia.com/stable/graphicsview.html>`_,
+`Qt Graphics View framework <http://doc.qt.io/qt-4.8/qgraphicsview.html>`_,
 then you are encouraged to check the documentation now, because the composer
-is based on it.
+is based on it. Also check the `Python documentation of the implementation of QGraphicView
+<http://pyqt.sourceforge.net/Docs/PyQt4/qgraphicsview.html>`_.
 
 The central class of the composer is :class:`QgsComposition` which is derived
 from :class:`QGraphicsScene`. Let us create one
