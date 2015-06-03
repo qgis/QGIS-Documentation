@@ -45,7 +45,7 @@ Fill the parameters dialog as shown next, and press *OK*.
 
 .. image:: img/extents/parameters.png
 
-.. note:: In this case, better use an *Integer (1 byte)* instead of a *Floating point (4 byte)*, since the *ID* is an integer with maximum value=63. This will result in a smaller file size and faster computations.
+.. note:: In this case, better use an *Integer (1 byte)* instead of a *Floating point (4 byte)*, since the *NAME* is an integer with maximum value=64. This will result in a smaller file size and faster computations.
 
 You will get a rasterized layer that covers exactly the area covered by the original vector layer.
 

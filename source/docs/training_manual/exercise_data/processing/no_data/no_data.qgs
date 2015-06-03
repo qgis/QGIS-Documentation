@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.9.0-Master">
+<qgis projectname="" version="2.8.2-Wien">
   <title></title>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
@@ -9,7 +9,7 @@
     <layer-tree-layer expanded="0" checked="Qt::Checked" id="dem2520130721085906257" name="dem25">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Checked" id="slope_tif20130721085950674" name="slope.tif">
+    <layer-tree-layer expanded="0" checked="Qt::Checked" id="slope_tif20130721085950674" name="slope">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -57,7 +57,7 @@
         <legendlayerfile isInOverview="0" layerid="dem2520130721085906257" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="slope.tif" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="slope" showFeatureCount="0">
       <filegroup open="false" hidden="false">
         <legendlayerfile isInOverview="0" layerid="slope_tif20130721085950674" visible="1"/>
       </filegroup>
@@ -66,7 +66,7 @@
   <projectlayers layercount="3">
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <id>accflow20130721085906002</id>
-      <datasource>/usr/local/src/qgis/QGIS-Documentation/source/docs/training_manual/exercise_data/processing/no_data/accflow.tif</datasource>
+      <datasource>./accflow.tif</datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>
@@ -116,7 +116,7 @@
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <id>dem2520130721085906257</id>
-      <datasource>/usr/local/src/qgis/QGIS-Documentation/source/docs/training_manual/exercise_data/processing/no_data/dem25.tif</datasource>
+      <datasource>./dem25.tif</datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>
@@ -168,15 +168,15 @@
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <id>slope_tif20130721085950674</id>
-      <datasource>/usr/local/src/qgis/QGIS-Documentation/source/docs/training_manual/exercise_data/processing/no_data/slope.tif</datasource>
+      <datasource>./slope.tif</datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>slope.tif</layername>
+      <layername>slope</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=utm +zone=30 +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +units=m +no_defs</proj4>
@@ -200,7 +200,7 @@
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer opacity="1" alphaBand="0" classificationMax="1.05017" classificationMinMaxOrigin="MinMaxFullExtentEstimated" band="1" classificationMin="0" type="singlebandpseudocolor">
+        <rasterrenderer opacity="1" alphaBand="-1" classificationMax="1.05017" classificationMinMaxOrigin="MinMaxFullExtentEstimated" band="1" classificationMin="0" type="singlebandpseudocolor">
           <rasterTransparency/>
           <rastershader>
             <colorrampshader colorRampType="INTERPOLATED" clip="0">

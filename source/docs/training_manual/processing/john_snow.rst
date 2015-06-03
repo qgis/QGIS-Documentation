@@ -31,7 +31,7 @@ The new field will be called *DEATHS*, and we use the *COUNT* field as weighting
 
 .. image:: img/john_snow/pointsinpolytable.png
 
-Another good way of visualizing the dependence of each point in the ``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a line to the closest one. This can be done with the *Distance to closest hub* tool, and using the configuration shown next.
+Another good way of visualizing the dependence of each point in the ``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a line to the closest one. This can be done with the *Distance to nearest hub* tool, and using the configuration shown next.
 
 .. image:: img/john_snow/nearest.png
 
