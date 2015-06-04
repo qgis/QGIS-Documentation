@@ -1,9 +1,7 @@
 Starting with the graphical modeler
 ============================================================
 
-
 .. note:: In this lesson we will use the graphical modeler, a powerful component that we can use to define a workflow and run a chain of algorithms.
-
 
 A normal session with the processing tools includes more than running a single algorithm. Usually several of them are run to obtain a result, and the outputs of some of those algorithms are used as input for some of the other ones.
 
@@ -18,6 +16,8 @@ As you can see, there are two mandatory inputs: *Slope* and *Catchment area*. Th
 The data for this lesson contains just a DEM, so we do not have any of the required inputs. However, we know how to calculate both of them from that DEM, since we have already seen the algorithms to compute slope and catchment area. So we can first compute those layers and then use them for the TWI algorithm.
 
 Here are the parameter dialogs that you should use to calculate the 2 intermediate layers.
+
+.. note:: Slope must be calculated in radians, not in degrees.
 
 .. image:: img/modeler_twi/slope.png
 
