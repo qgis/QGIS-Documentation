@@ -44,4 +44,13 @@ method of your project instance. The :func:`write()` method also accepts an opti
 Both :func:`read()` and :func:`write()` funtions return a boolean value that you can
 use to check if the operation was successful.
 
+.. note::
+
+   If you are inside a |QG| python console, in order to synchronise the loaded project with
+   the canvas you need to instanciate a :class:`QgsLayerTreeMapCanvasBridge` as in the example below::
+
+      bridge = QgsLayerTreeMapCanvasBridge( \
+               QgsProject.instance().layerTreeRoot(), canvas)
+      # Now you can safely load your project and see it in the canvas
+      project.read(QFileInfo('/home/user/projects/my_other_qgis_project.qgs'))
 

@@ -608,8 +608,8 @@ There might be also some custom renderer types, so never make an assumption
 there are just these types. You can query :class:`QgsRendererV2Registry`
 singleton to find out currently available renderers::
 
-    QgsRendererV2Registry.instance().renderersList()
-    # Prints:
+    print QgsRendererV2Registry.instance().renderersList()
+    # Print:
     [u'singleSymbol',
     u'categorizedSymbol',
     u'graduatedSymbol',
@@ -644,7 +644,7 @@ the :func:`createSimple` function of the corresponding classes
 The dictionary passed to :func:`createSimple` sets the style properties of the
 symbol.
 
-For example you can change the symbol used by a particular **point** layer
+For example you can replace the symbol used by a particular **point** layer
 by calling :func:`setSymbol()` passing an instance of a :class:`QgsMarkerSymbolV2`
 as in the following code example::
 
@@ -655,6 +655,7 @@ as in the following code example::
 
 * ``circle``
 * ``square``
+* ``cross``
 * ``rectangle``
 * ``diamond``
 * ``pentagon``
@@ -664,6 +665,42 @@ as in the following code example::
 * ``regular_star``
 * ``arrow``
 * ``filled_arrowhead``
+* ``x``
+
+
+To get the full list of properties for the first symbol layer of a simbol
+instance you can follow the example code::
+
+    print layer.rendererV2().symbol().symbolLayers()[0].properties()
+    # Prints
+    {u'angle': u'0',
+    u'color': u'0,128,0,255',
+    u'horizontal_anchor_point': u'1',
+    u'name': u'circle',
+    u'offset': u'0,0',
+    u'offset_map_unit_scale': u'0,0',
+    u'offset_unit': u'MM',
+    u'outline_color': u'0,0,0,255',
+    u'outline_style': u'solid',
+    u'outline_width': u'0',
+    u'outline_width_map_unit_scale': u'0,0',
+    u'outline_width_unit': u'MM',
+    u'scale_method': u'area',
+    u'size': u'2',
+    u'size_map_unit_scale': u'0,0',
+    u'size_unit': u'MM',
+    u'vertical_anchor_point': u'1'}
+
+This can be useful if you want to alter some properties::
+
+    # You can alter a single propery...
+    layer.rendererV2().symbol().symbolLayer(0).setName('square')
+    # ... but not all properties are accessible from methods,
+    # you can also replace the symbol completely:
+    props = layer.rendererV2().symbol().symbolLayer(0).properties()
+    props['color'] = 'yellow'
+    props['name'] = 'square'
+    layer.p_rendererV2.setSymbol(QgsMarkerSymbolV2.createSimple(props))
 
 
 .. index:: categorized symbology renderer, symbology; categorized symbol renderer
