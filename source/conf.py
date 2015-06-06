@@ -201,7 +201,7 @@ htmlhelp_basename = 'QGISWebsitedoc'
 
 rst_prolog = """
 .. role:: disclaimer
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org for QGIS 2.6 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org for QGIS 2.8 docs and translations.`
 """
 
 rst_epilog = """
@@ -355,8 +355,6 @@ rst_epilog = """
 .. |iconSettingsConsole|  image:: /static/common/iconSettingsConsole.png
    :width: 1.5em
 .. |dem_analysis| image:: /static/common/dem.png
-   :width: 1.5em
-.. |icon_sqlanywhere| image:: /static/common/sqlanywhere.png
    :width: 1.5em
 .. |icon_newgpx| image:: /static/common/create_gpx.png
    :width: 1.5em

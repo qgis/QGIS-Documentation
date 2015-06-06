@@ -82,7 +82,7 @@ Icon                            Substitution                        Icon        
 |mActionAddLayer|               ``|mActionAddLayer|``    	    |mActionAddSpatiaLiteLayer|	    ``|mActionAddSpatiaLiteLayer|``
 |mActionNewVectorLayer|		``|mActionNewVectorLayer|``         |mActionRemoveLayer|	    ``|mActionRemoveLayer|``
 |mActionAddWmsLayer|       	``|mActionAddWmsLayer|``    	    |wfs|         		    ``|wfs|``
-|icon_sqlanywhere|              ``|icon_sqlanywhere|``              |oracle_raster|                 ``|oracle_raster|``
+|oracle_raster|                 ``|oracle_raster|``
 |dbmanager|           		``|dbmanager|``              	    |gdal|                 	    ``|gdal|``
 |mActionInOverview|		``|mActionInOverview|``  	    |mActionAddAllToOverview|	    ``|mActionAddAllToOverview|``
 |mActionRemoveAllFromOverview|	``|mActionRemoveAllFromOverview|``  |RemoveAllOVerview|             ``|RemoveAllOVerview|``
