@@ -6,8 +6,8 @@ Usage
 =====
 
 When you want to use an icon from |qg| in a rst document 
-there is a big chance that there is allready a substitution defined 
-in conf.py that can/should be used. When a new icon in QGIS is added
+there is a big chance that there is already a substitution defined 
+in conf.py that can/should be used. When a new icon in |qg| is added
 it should be added first to conf.py before it is used in a rst document.
 
 
