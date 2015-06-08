@@ -130,11 +130,44 @@ and :guilabel:`Rotation`. Here, the layers are joined together.
 In any spinbox in this dialog you can enter expressions. E.g. you can calculate simple
 math like multiplying the existing size of a point by 3 without resorting to a calculator.
 
+The |mIconDataDefine| menu provides 'Data-defined override' for points size
+and rotation and for line width (for points and line layers resp.). For point
+layers, an assistant is accessible through the |mIconDataDefine| menu
+to help you define size expression.
+
 .. _figure_symbology_4:
 
 .. only:: html
 
    **Figure Symbology 4:**
+
+.. figure:: /static/user_manual/working_with_vector/varying_size_assistant.png
+   :align: center
+
+   Varying size assistant |nix|
+
+The assistant let you define:
+
+* The attribute (using the Field listbox or the |mActionmIconExpressionEditorOpen| 
+  :guilabel:`Set column expression` function, see :ref:`vector_expressions`)
+* The minimum and maximum size of the symbol
+* The minimum and maximum values of the Field. The down pointing arrow allows to 
+  set the minimum and maximum values according to your data.
+
+The values presented in the varying size assistant above will set the size
+'Data-defined override' with:
+::
+
+ scale_exp( Importance, 1, 20, 1, 10, 0.57 )
+
+The available scale methods are 'Flannery', 'Surface' and 'Radius'.
+
+ 
+.. _figure_symbology_5:
+
+.. only:: html
+
+   **Figure Symbology 5:**
 
 .. figure:: /static/user_manual/working_with_vector/expression_symbol_size_spinbox.png
    :align: center
@@ -157,11 +190,11 @@ field 'budged'. Here a comment functionality is inserted.
    ELSE '#228B22'                -- Positive value: green
  END
 
-.. _figure_symbology_5:
+.. _figure_symbology_6:
 
 .. only:: html
 
-   **Figure Symbology 5:**
+   **Figure Symbology 6:**
 
 .. figure:: /static/user_manual/working_with_vector/symbol_data_defined_edit.png
    :align: center
@@ -203,11 +236,11 @@ be rendered.
 The example in figure_symbology_6_ shows the category rendering dialog used
 for the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology_6:
+.. _figure_symbology_7:
 
 .. only:: html
 
-   **Figure Symbology 6:**
+   **Figure Symbology 7:**
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
    :align: center
@@ -223,11 +256,11 @@ The Graduated Renderer is used to render all the features from a layer, using
 a single user-defined symbol whose color reflects the assignment of a
 selected feature's attribute to a class.
 
-.. _figure_symbology_7:
+.. _figure_symbology_8:
 
 .. only:: html
 
-   **Figure Symbology 7:**
+   **Figure Symbology 8:**
 
 .. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
    :align: center
@@ -313,11 +346,11 @@ Since QGIS 2.8 the rules appear in a tree hierarchy in the map legend. Just doub
 the rules in the map legend and the Style menu of the layer properties appears showing the rule that
 is the background for the symbol in the tree.
 
-.. _figure_symbology_8:
+.. _figure_symbology_9:
 
 .. only:: html
 
-   **Figure Symbology 8:**
+   **Figure Symbology 9:**
 
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
    :align: center
@@ -333,11 +366,11 @@ The Point Displacement Renderer works to visualize all features of a point layer
 even if they have the same location. To do this, the symbols of the points are
 placed on a displacement circle around a center symbol.
 
-.. _figure_symbology_9:
+.. _figure_symbology_10:
 
 .. only:: html
 
-   **Figure Symbology 9:**
+   **Figure Symbology 10:**
 
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
    :align: center
@@ -361,11 +394,11 @@ Inverted polygon renderer allows user to define a symbol to fill in outside of t
 polygons. As before you can select subrenderers. These subrenderers are the
 same as for the main renderers.
 
-.. _figure_symbology_10:
+.. _figure_symbology_11:
 
 .. only:: html
 
-   **Figure Symbology 10:**
+   **Figure Symbology 11:**
 
 .. figure:: /static/user_manual/working_with_vector/inverted_polygon_symbol.png
    :align: center
