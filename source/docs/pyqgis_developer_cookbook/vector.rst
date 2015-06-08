@@ -700,7 +700,7 @@ This can be useful if you want to alter some properties::
     props = layer.rendererV2().symbol().symbolLayer(0).properties()
     props['color'] = 'yellow'
     props['name'] = 'square'
-    layer.p_rendererV2.setSymbol(QgsMarkerSymbolV2.createSimple(props))
+    layer.rendererV2().setSymbol(QgsMarkerSymbolV2.createSimple(props))
 
 
 .. index:: categorized symbology renderer, symbology; categorized symbol renderer
