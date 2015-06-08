@@ -5,7 +5,7 @@ Background
 ----------
 
 In 2008 we launched the `Gentle Introduction to GIS
-<http://linfiniti.com/dla>`_, a completely free, open content resource for
+<http://docs.qgis.org/testing/en/docs/gentle_gis_introduction/>`_, a completely free, open content resource for
 people who want to learn about GIS without being overloaded with jargon and new
 terminology. It was sponsored by the South African government and has been a
 phenomenal success, with people all over the world writing to us to tell us how
@@ -30,11 +30,10 @@ License
 
 .. image:: /static/training_manual/license.png
 
-The Free Quantum GIS Training Manual by Linfiniti Consulting CC. is licensed
-under a `Creative Commons Attribution 4.0 International <http://creativecommons.org/licenses/by/4.0/>`_.
-Based on a work at https://github.com/qgis/QGIS-Training-Manual.
-Permissions beyond the scope of this license may be available at
-https://github.com/qgis/QGIS-Training-Manual/blob/master/index.rst.
+The Free Quantum GIS Training Manual by Linfiniti Consulting CC. is based on 
+an earlier version from Linfiniti and is licensed under a 
+`Creative Commons Attribution 4.0 International <http://creativecommons.org/licenses/by/4.0/>`_.
+Permissions beyond the scope of this license may be available at below.
 
 We have published this QGIS training manual under a liberal license that allows
 you to freely copy, modify and redistribute this work. A complete copy of the 
