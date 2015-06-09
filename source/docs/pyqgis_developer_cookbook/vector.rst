@@ -171,6 +171,8 @@ above, you can build an :obj:`QgsExpression` object and pass it to the
   request = QgsFeatureRequest(exp)
 
 
+See :ref:`expressions` for the details about the syntax supported by :class:`QgsExpression`.
+
 The request can be used to define the data retrieved for each feature, so the
 iterator returns all features, but returns partial data for each of them.
 
