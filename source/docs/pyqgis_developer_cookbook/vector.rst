@@ -478,9 +478,10 @@ There are two possibilities how to export a vector layer:
 
   ::
 
-    # define fields for feature attributes. A list of QgsField objects is needed
-    fields = [QgsField("first", QVariant.Int),
-              QgsField("second", QVariant.String)]
+    # define fields for feature attributes. A QgsFields object is needed
+    fields = QgsFields()
+    fields.append(QgsField("first", QVariant.Int))
+    fields.append(QgsField("second", QVariant.String))
 
     # create an instance of vector file writer, which will create the vector file.
     # Arguments:
