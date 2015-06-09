@@ -215,6 +215,15 @@ to find out what set of functionality is supported
 For a list of all available capabilities, please refer to the 
 `API Documentation of QgsVectorDataProvider <http://qgis.org/api/classQgsVectorDataProvider.html>`_
 
+To print layer's capabilities textual description in a comma separated list you 
+can use :funct:`capabilitiesString` as in the following example::
+
+  caps_string = layer.dataProvider().capabilitiesString()
+  # Print:
+  # u'Add Features, Delete Features, Change Attribute Values, 
+  # Add Attributes, Delete Attributes, Create Spatial Index, 
+  # Fast Access to Features at ID, Change Geometries, 
+  # Simplify Geometries with topological validation' 
 
 By using any of the following methods for vector layer editing, the changes are
 directly committed to the underlying data store (a file, database etc). In case
