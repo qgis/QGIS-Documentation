@@ -3,7 +3,7 @@
 .. index:: HTML_Frame
 
 The HTML frame item
--------------------
+=====================
 
 It is possible to add a frame that displays the contents of a website or even create and style
 your own HTML page and display it!
@@ -26,7 +26,7 @@ and customize the appearance in the :guilabel:`Item Properties` tab
 
 
 HTML Source
-^^^^^^^^^^^
+-----------
 
 As an HTML source, you can either set a URL and activate the URL radiobutton or 
 enter the HTML source directly in the textbox provided and activate the Source radiobutton. 
@@ -63,7 +63,7 @@ provides the following functionalities (see figure_composer_html_2_):
 
 
 Frames
-^^^^^^
+---------
 
 The :guilabel:`Frames` dialog of the HTML frame :guilabel:`Item Properties` tab
 provides the following functionalities (see figure_composer_html_3_):
@@ -104,7 +104,7 @@ provides the following functionalities (see figure_composer_html_3_):
 
 
 Use smart page breaks and User style sheet
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------
 
 The :guilabel:`Use smart page breaks` dialog and :guilabel:`Use style sheet` dialog of 
 the HTML frame :guilabel:`Item Properties` tab provides the following functionalities 

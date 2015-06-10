@@ -3,10 +3,10 @@
 
 
 Managing the Composer
-===================
+=====================
 
 Composer Menu
---------------------
+---------------
 With the :menuselection:`Composer --> Save Project` action, you can save the project file directly from the print composer window.
 The :menuselection:`Composer` menu also provides actions to:
 
