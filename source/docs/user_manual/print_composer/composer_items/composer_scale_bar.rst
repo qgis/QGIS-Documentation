@@ -4,7 +4,7 @@
    single: Scalebar; Map_Scalebar
 
 The Scale Bar item
-==================
+------------------
 
 To add a scale bar, click the |mActionScaleBar| :sup:`Add new scalebar` icon, place
 the element with the left mouse button on the Print Composer canvas and position
@@ -25,7 +25,7 @@ functionalities (see figure_composer_scalebar_1_):
    Scale Bar Item properties Tab |nix|
 
 Main properties
-----------------
+^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialog of the scale bar :guilabel:`Item Properties` tab
 provides the following functionalities (see figure_composer_scalebar_2_):
@@ -49,7 +49,7 @@ provides the following functionalities (see figure_composer_scalebar_2_):
   * **Numeric**, where the scale ratio is printed (i.e., 1:50000).
 
 Units and Segments
-------------------
+^^^^^^^^^^^^^^^^^^
 
 The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar :guilabel:`Item Properties` tab
 provide the following functionalities (see figure_composer_scalebar_3_):
@@ -75,7 +75,7 @@ In these two dialogs, you can set how the scale bar will be represented.
   and how long each segment will be (:guilabel:`Size` field). :guilabel:`Height` can also be defined.
 
 Display
--------
+^^^^^^^
 
 The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_scalebar_4_):
 
@@ -103,7 +103,7 @@ You can define how the scale bar will be displayed in its frame.
   (works only for Scale bar style Numeric) 
 
 Fonts and colors
------------------
+^^^^^^^^^^^^^^^^
 
 The :guilabel:`Fonts and colors` dialog of the scale bar :guilabel:`Item Properties` tab 
 provide the following functionalities (see figure_composer_scalebar_5_):

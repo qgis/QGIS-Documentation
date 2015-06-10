@@ -1,7 +1,7 @@
 |updatedisclaimer|
 
 The Label item
-===============
+--------------
 
 To add a label, click the |mActionLabel| :sup:`Add label` icon, place the element
 with the left mouse button on the Print Composer canvas and position and customize
@@ -22,7 +22,7 @@ for the label item (see Figure_composer_label_):
    Label Item properties Tab |nix|
 
 Main properties
----------------
+^^^^^^^^^^^^^^^
 
 * The main properties dialog is where the text (HTML or not) or the expression 
   needed to fill the label is added to the Composer canvas.
@@ -34,7 +34,7 @@ Main properties
   geometry functions and records functions. At the bottom, a preview of the expression is shown.
 
 Appearance
-----------
+^^^^^^^^^^
 
 * Define :guilabel:`Font` by clicking on the **[Font...]** button or a :guilabel:`Font color` 
   selecting a color using the color selection tool.

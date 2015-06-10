@@ -2,7 +2,7 @@
 
 
 The Basic Shape Items
-======================
+---------------------
 
 To add a basic shape (ellipse, rectangle, triangle), click the |mActionAddBasicShape| :sup:`Add basic shape` icon,  place the element holding down the left mouse. Customize the 
 appearance in the :guilabel:`Item Properties` tab. 

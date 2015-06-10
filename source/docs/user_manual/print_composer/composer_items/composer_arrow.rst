@@ -3,7 +3,7 @@
 .. _arrow_item:
 
 The Arrow item
-===============
+--------------
 
 To add an arrow, click the |mActionAddArrow| :sup:`Add Arrow` icon, place the element holding 
 down the left mouse button and drag a line to draw the arrow on the Print Composer canvas and 
@@ -29,7 +29,7 @@ an image item with a map so it can rotate automatically with the map (see :ref:`
    Arrow Item properties Tab |nix|
 
 Item Properties
----------------
+^^^^^^^^^^^^^^^
 
 The :guilabel:`Arrow` item properties tab allows you to configure an arrow item.
 

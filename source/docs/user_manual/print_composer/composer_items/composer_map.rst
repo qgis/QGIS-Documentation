@@ -3,7 +3,7 @@
 .. index:: composer_map
 
 The Map item
-=============
+------------
 
 Click on the |mActionAddMap| :sup:`Add new map` toolbar button in the Print
 Composer toolbar to add the |qg| map canvas. Now, drag a rectangle onto the Composer
@@ -38,7 +38,7 @@ the map item frame with the left mouse button.
 .. _`composer_main_properties`:
 
 Main properties
----------------
+^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialog of the map :guilabel:`Item Properties` tab provides the
 following functionalities (see figure_composer_map_1_):
@@ -81,7 +81,7 @@ following functionalities (see figure_composer_map_1_):
   create presets views.
 
 Extents
---------
+^^^^^^^
 
 The :guilabel:`Extents` dialog of the map item tab provides the following
 functionalities (see figure_composer_map_2_):
@@ -113,7 +113,7 @@ in the map :guilabel:`Item Properties` tab (see figure_composer_map_1_).
    single: Grid;Grids;Map_Grid
 
 Grids
-------
+^^^^^
 
 The :guilabel:`Grids` dialog of the map :guilabel:`Item Properties` tab provides the
 possibility to add several grids to a map item.
@@ -198,7 +198,7 @@ and the width used for the cross or line grid type.
 
 
 Overviews
----------
+^^^^^^^^^
 
 The :guilabel:`Overviews` dialog of the map :guilabel:`Item Properties` tab provides the
 following functionalities:

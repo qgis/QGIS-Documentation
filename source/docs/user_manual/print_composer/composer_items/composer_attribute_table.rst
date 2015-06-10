@@ -4,7 +4,7 @@
 
 
 The Attribute Table item
-=========================
+------------------------
 
 It is possible to add parts of a vector attribute table to the Print Composer
 canvas: Click the |mActionOpenTable| :sup:`Add attribute table` icon, place the 
@@ -27,7 +27,7 @@ functionalities (see figure_composer_table_1_):
 
 
 Main properties
-----------------
+^^^^^^^^^^^^^^^
 
 The :guilabel:`Main properties` dialogs of the attribute table :guilabel:`Item Properties` 
 tab provide the following functionalities (see figure_composer_table_2_):
@@ -125,7 +125,7 @@ tab provide the following functionalities (see figure_composer_table_2_):
 
 
 Feature filtering
------------------
+^^^^^^^^^^^^^^^^^
 
 The :guilabel:`Feature filtering` dialogs of the attribute table :guilabel:`Item Properties` 
 tab provide the following functionalities  (see figure_composer_table_4_):
@@ -165,7 +165,7 @@ You can:
   in the attribute field 'USE'. 
 
 Appearance
-----------
+^^^^^^^^^^
 
 The :guilabel:`Appearance` dialogs of the attribute table :guilabel:`Item Properties` 
 tab provide the following functionalities  (see figure_composer_table_5_):
@@ -205,7 +205,7 @@ tab provide the following functionalities  (see figure_composer_table_5_):
 * With :guilabel:`Background color` you can set the background color of the table.
 
 Show grid
-----------
+^^^^^^^^^
 
 The :guilabel:`Show grid` dialog of the attribute table :guilabel:`Item Properties` tab
 provides the following functionalities (see figure_composer_table_6_):
@@ -228,7 +228,7 @@ provides the following functionalities (see figure_composer_table_6_):
 
 
 Fonts and text styling
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 The :guilabel:`Fonts and text styling` dialog of the attribute table 
 :guilabel:`Item Properties` tab provides the following functionalities (see 
@@ -253,7 +253,7 @@ figure_composer_table_7_):
 
 
 Frames
--------
+^^^^^^
 
 The :guilabel:`Frames` dialog of the attribute table :guilabel:`Item Properties` tab
 provides the following functionalities (see figure_composer_table_8_):

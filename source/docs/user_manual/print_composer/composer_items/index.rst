@@ -14,11 +14,11 @@ Composer Items
    composer_items_options
    composer_map
    composer_label
+   composer_image
    composer_legend
    composer_scale_bar
-   composer_image
-   composer_attribute_table
-   composer_html_frame
    composer_basic_shape
    composer_arrow
+   composer_attribute_table
+   composer_html_frame
 
