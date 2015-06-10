@@ -17,8 +17,8 @@ Composer Items
    composer_image
    composer_legend
    composer_scale_bar
-   composer_basic_shape
-   composer_arrow
    composer_attribute_table
    composer_html_frame
+   composer_basic_shape
+   composer_arrow
 

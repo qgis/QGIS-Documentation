@@ -3,8 +3,6 @@
 First Steps
 ===========
 
-With the Print Composer you can create nice maps and atlasses that can be printed or saved as PDF-file, an image or an SVG-file. This is a powerful way to share geographical information produced with |qg| that can be included in reports or published.
-
 The Print Composer provides growing layout and printing capabilities. It allows
 you to add elements such as the |qg| map canvas, text labels, images, legends, scale bars, basic
 shapes, arrows, attribute tables and HTML frames. You can size, group, align, position and rotate each

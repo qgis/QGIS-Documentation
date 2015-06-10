@@ -1,5 +1,7 @@
+|updatedisclaimer|
+
 Composer items common options
-------------------------------
+==============================
 
 Composer items have a set of common properties you will find on the bottom of the :guilabel:`Item Properties` tab: Position and size, Rotation, Frame,
 Background, Item ID and Rendering (See figure_composer_common_1_).
@@ -47,7 +49,7 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
 .. index:: Rendering_Mode
 
 Rendering mode
-^^^^^^^^^^^^^^
+--------------
 
 |qg| now allows advanced rendering for Composer items just like vector and raster layers.
 
@@ -104,7 +106,7 @@ Rendering mode
 
 
 Size and position
-^^^^^^^^^^^^^^^^^^
+------------------
 
 Each item inside the Composer can be moved/resized to create a perfect layout.
 For both operations the first step is to activate the |mActionSelect| :sup:`Select/Move item` 
@@ -142,7 +144,7 @@ Inside the :menuselection:`Edit` menu, you can find actions to select all the it
 to invert the current selection.
 
 Alignment
-^^^^^^^^^^
+----------
 
 Raising or lowering functionalities for elements are inside the |mActionRaiseItems|
 :sup:`Raise selected items` pull-down menu. Choose an element on the Print Composer

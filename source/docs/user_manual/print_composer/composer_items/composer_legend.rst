@@ -3,7 +3,7 @@
 .. index:: legend_composer
 
 The Legend item
----------------
+================
 
 To add a map legend, click the |mActionAddLegend| :sup:`Add new legend` icon,
 place the element with the left mouse button on the Print Composer canvas and
@@ -25,7 +25,7 @@ functionalities (see figure_composer_legend_1_):
    Legend Item properties Tab |nix|
 
 Main properties
-^^^^^^^^^^^^^^^
+---------------
 
 The :guilabel:`Main properties` dialog of the legend :guilabel:`Item Properties` tab
 provides the following functionalities (see figure_composer_legend_2_):
@@ -51,7 +51,7 @@ In Main properties you can:
 
 
 Legend items
-^^^^^^^^^^^^
+------------
 
 The :guilabel:`Legend items` dialog of the legend :guilabel:`Item Properties` tab
 provides the following functionalities (see figure_composer_legend_3_):
@@ -89,7 +89,7 @@ provides the following functionalities (see figure_composer_legend_3_):
 
 
 Fonts, Columns, Symbol
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the legend 
 :guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_legend_4_):
@@ -120,7 +120,7 @@ The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
 
 
 WMS LegendGraphic and Spacing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` dialogs of the legend 
 :guilabel:`Item Properties` tab provide the following functionalities (see 
