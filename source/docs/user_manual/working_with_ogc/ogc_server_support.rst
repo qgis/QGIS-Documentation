@@ -144,7 +144,7 @@ You can have a look at the default GetCpabilities of the |qg| server at:
 
 .. tip::
 
-   If you work with a feature that has many nodes then modyfying and adding a new feature
+   If you work with a feature that has many nodes then modifying and adding a new feature
    will fail. In this case it is possible to insert the following code into the  
    :file:`001-qgis-server.conf` file:
    ::
@@ -218,7 +218,7 @@ allows you to choose the layers and groups that you don't want to be published.
 Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries at once.
 
 You can receive requested GetFeatureInfo as plain text, XML and GML. Default is XML, 
-text or GML format depends the output format choosen for the GetFeatureInfo request.
+text or GML format depends the output format chosen for the GetFeatureInfo request.
 
 If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`. 
 This will include in the GetFeatureInfo response the geometries of the 

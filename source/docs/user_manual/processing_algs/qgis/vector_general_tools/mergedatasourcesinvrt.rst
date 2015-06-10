@@ -5,7 +5,7 @@ Description
 -----------
 
 This algorithm merge the layers of different data sources in a single vrt file
-This algo is expecially useful in case an algo need multiple layers but accept only one vrt in wich the layers are specified
+This algorithm is especially useful in case another algorithm needs multiple layers but accept only one vrt in which the layers are specified
 
 Parameters
 ----------

@@ -37,7 +37,7 @@ The plugin requires the following parameters to be specified before running:
 
 Note that using lines as constraints for the interpolation the triangulation (TIN method) you can
 either use 'structure lines' or 'break lines'. When using 'break lines' you produce sharp breaks
-in the surface while using 'structure lines' you produce continous breaks.
+in the surface while using 'structure lines' you produce continuous breaks.
 The triangulation is modified by both methods such that no edge crosses a breakline or structure
 line.
 

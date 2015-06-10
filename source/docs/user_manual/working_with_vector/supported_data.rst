@@ -27,7 +27,7 @@ This section describes how to work with several common formats: ESRI
 shapefiles, PostGIS layers, SpatiaLite layers, OpenStreetMap vectors, and Comma
 Separated data (CSV). Many of the features available in |qg| work the same,
 regardless of the vector data source. This is by design, and it includes the
-identify, select, labeling and attributes functions.
+identify, select, labelling and attributes functions.
 
 .. index:: ESRI, Shapefile, OGR
 .. _vector_shapefiles:
@@ -291,7 +291,7 @@ point, line or polygon objects. If the file contains non-spatial data, activate
 |radiobuttonon| :guilabel:`No geometry (attribute only table)` and it will be
 loaded as an ordinal table.
 
-Additionaly, you can enable:
+Additionally, you can enable:
 
 * |checkbox| :guilabel:`Use spatial index` to improve the performance of displaying
   and spatially selecting features.
@@ -310,7 +310,7 @@ In recent years, the OpenStreetMap project has gained popularity because in many
 countries no free geodata such as digital road maps are available. The objective
 of the OSM project is to create a free editable map of the world from GPS data,
 aerial photography or local knowledge. To support this objective, |qg|
-provides suppport for OSM data.
+provides support for OSM data.
 
 .. _open_street_map:
 
@@ -372,7 +372,7 @@ dialog. The parameters required for a connection are:
   port is 5432.
 * **Database**: Name of the database.
 * **SSL mode**: How the SSL connection will be negotiated with the server. Note
-  that massive speedups in PostGIS layer rendering can be achieved by disabling
+  that massive speed-ups in PostGIS layer rendering can be achieved by disabling
   SSL in the connection editor. The following options are available:
 
   * Disable: Only try an unencrypted SSL connection.

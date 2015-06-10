@@ -17,7 +17,7 @@ on them. Once you have correctly configured the system, you will be able to
 execute external algorithms from any component like the toolbox or the
 graphical modeler, just like you do with any other geoalgorithm.
 
-By default, all algorithms that rely on an external appplication not shipped with
+By default, all algorithms that rely on an external application not shipped with
 |qg| are not enabled. You can enable them in the configuration dialog.
 Make sure that the corresponding application is already installed in your system.
 Enabling an algorithm provider without installing the application it needs will
@@ -39,7 +39,7 @@ not be interested in reading the rest of this chapter. Make sure you install
 |qg| in your system using the standalone installer. That will automatically
 install SAGA, GRASS and OTB in your system and configure them so they can be
 run from |qg|. All the algorithms in the simplified view of the toolbox will
-be ready to be run without needing any further configuration. If installing through OSGeo4W application, make sure you select for insttallation SAGA and OTB as well.
+be ready to be run without needing any further configuration. If installing through OSGeo4W application, make sure you select for installation SAGA and OTB as well.
 
 If you want to know more about how these providers work, or if you want to use some
 algorithms not included in the simplified toolbox (such as R scripts), keep on
@@ -361,7 +361,7 @@ GRASS
 
 Configuring GRASS is not much different from configuring SAGA. First, the path
 to the GRASS folder has to be defined, but only if you are running Windows.
-Additionaly, a shell interpreter (usually :file:`msys.exe`, which can be found
+Additionally, a shell interpreter (usually :file:`msys.exe`, which can be found
 in most GRASS for Windows distributions) has to be defined and its path set up
 as well.
 

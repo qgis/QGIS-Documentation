@@ -4,7 +4,7 @@
 QGIS algorithm provider
 ***********************
 
-QGIS algortihm provider implements various analysis and geoprocessing operations
+QGIS algorithm provider implements various analysis and geoprocessing operations
 using mostly only QGIS API. So almost all algorithms from this provider will work
 "out of the box" without any additional configuration.
 

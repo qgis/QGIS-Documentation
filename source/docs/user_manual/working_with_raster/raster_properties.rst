@@ -73,7 +73,7 @@ data type.
    with several bands)
 #. Paletted - if a single band file comes with an indexed palette (e.g., used with a digital topographic map)
 #. Singleband gray - (one band of) the image will be rendered as gray; |qg| will choose this renderer
-   if the file has neither multibands nor an indexed palette nor a continous palette
+   if the file has neither multibands nor an indexed palette nor a continuous palette
    (e.g., used with a shaded relief map)
 #. Singleband pseudocolor - this renderer is possible for files with a continuous palette,
    or color map (e.g., used with an elevation map)
@@ -195,7 +195,7 @@ a raster grid that are having a negative impact on the rendering of the raster.
 
 **Singleband pseudocolor**
 
-This is a render option for single-band files, including a continous palette.
+This is a render option for single-band files, including a continuous palette.
 You can also create individual color maps for the single bands here.
 
 .. _figure_raster_5:
@@ -266,7 +266,7 @@ For every :guilabel:`Band rendering`, a :guilabel:`Color rendering` is possible.
 You can also achieve special rendering effects for your raster file(s) using one
 of the blending modes (see :ref:`vector_properties_dialog`).
 
-Further settings can be made in modifiying the :guilabel:`Brightness`, the
+Further settings can be made in modifying the :guilabel:`Brightness`, the
 :guilabel:`Saturation` and the :guilabel:`Contrast`. You can also use a :guilabel:`Grayscale`
 option, where you can choose between 'By lightness', 'By luminosity' and 'By average'.
 For one hue in the color table, you can modify the 'Strength'.
@@ -315,7 +315,7 @@ An even more flexible way to customize the transparency can be done in the
 can be set here.
 
 As an example, we want to set the water of our example raster file :file:`landcover.tif`
-to a transparency of 20%. The following steps are neccessary:
+to a transparency of 20%. The following steps are necessary:
 
 #. Load the raster file :file:`landcover.tif`.
 #. Open the :guilabel:`Properties` dialog by double-clicking on the raster

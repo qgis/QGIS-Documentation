@@ -120,7 +120,7 @@ To enable scale-based rendering:
 * Open the :guilabel:`Layer Properties` dialog for the :guilabel:`buildings`
   layer.
 * Activate the :guilabel:`General` tab.
-* Enable scale-based rendering by clicking on the checkbox labeled
+* Enable scale-based rendering by clicking on the checkbox labelled
   :guilabel:`Scale dependent visibility`:
 
 .. image:: /static/training_manual/symbology/scale_dependent_visibility.png
