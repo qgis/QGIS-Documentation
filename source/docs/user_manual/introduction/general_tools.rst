@@ -201,20 +201,40 @@ Measuring
 =========
 .. index::
    single:measure
+|qg| provides four means of measuring geometries:
+* the interactive measurement tools |mActionMeasure|,
+* measuring in the |mActionCalculateField| :sup:`Field Calculator`,
+* derived measures in the :ref:`identify` tool, and
+* a vector analysis tool: :menuselection:`Vector --> Geometry Tools --> Export/Add Geometry Columns`
 
 Measuring works within projected coordinate systems (e.g., UTM) and unprojected
-data. If the loaded map is defined with a geographic coordinate system
-(latitude/longitude), the results from line or area measurements will be
-incorrect. To fix this, you need to set an appropriate map coordinate system
-(see section :ref:`label_projections`). All measuring modules also use the
-snapping settings from the digitizing module. This is useful, if you want to
-measure along lines or areas in vector layers.
+data. The first three measuring tools behave equally to global project settings:
+
+If "on the fly" CRS transformation is enabled, the default measurement metric is 
+- different from most other GIS - ellipsoidal, using the ellipsoid defined in 
+:menuselection:`File --> Project properties`, :guilabel:`General`. This is true both 
+when geographic and projected coordinate systems are defined for the project. 
+If you want to calculate the projected / planimetric area or distance using cartesian 
+maths, the measurement ellipsoid has to be set to "None / Planimetric". However, 
+with a geographic (= unprojected) CRS defined for the data and project, area and 
+distance measurement will be ellipsoidal.
+If "on the fly" CRS transformation is disabled, the measurement metric is planimetric 
+when the project coordinate system is projected and ellipsoidal when the project 
+coordinate system is unprojected / geographic.
+
+However, neither the identify tool nor the field calculator will transform youyr data 
+to the project CRS before measuring. If you want to achive this you have to use the 
+vector analysis tool: :menuselection:`Vector --> Geometry Tools --> Export/Add Geometry Columns`. 
+Here, measurement is by default planimetric except if you choose the ellipsoidal measure.
+
+Measure length, areas and angles interactive
+--------------------------------
+
+All measuring modules use the snapping settings from the digitizing module. This is useful, 
+if you want to measure along lines or areas in vector layers.
 
 To select a measuring tool, click on |mActionMeasure| and select the tool you want
 to use.
-
-Measure length, areas and angles
---------------------------------
 
 .. index::
    single:measure;line length
@@ -223,12 +243,11 @@ Measure length, areas and angles
 .. index::
    single:measure;angles
 
-|mActionMeasure| :sup:`Measure Line`: |qg| is able to measure real distances
-between given points according to a defined ellipsoid. To configure this,
-choose menu option :menuselection:`Settings --> Options`, click on the
-:guilabel:`Map tools` tab and select the appropriate ellipsoid. There, you can
-also define a rubberband color and your preferred measurement units (meters or
-feet) and angle units (degrees, radians and gon). The tool then allows you to
+By default, |mActionMeasure| :sup:`Measure Line`: |qg| measures real distances
+between given points according to a defined ellipsoid. You candefine a rubberband 
+color and your preferred measurement units (meters or feet) and angle units 
+(degrees, radians and gon) in the menu option :menuselection:`Settings --> Options`.
+The tool then allows you to
 click points on the map. Each segment length, as well as the total, shows up in
 the measure window. To stop measuring, click your right mouse button.
 Note that you can interactively change the measurement units in the measurement
