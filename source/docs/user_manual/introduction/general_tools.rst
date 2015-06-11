@@ -215,14 +215,15 @@ If "on the fly" CRS transformation is enabled, the default measurement metric is
 :menuselection:`File --> Project properties`, :guilabel:`General`. This is true both 
 when geographic and projected coordinate systems are defined for the project. 
 If you want to calculate the projected / planimetric area or distance using cartesian 
-maths, the measurement ellipsoid has to be set to "None / Planimetric". However, 
+maths, the measurement ellipsoid has to be set to "None / Planimetric" 
+(:menuselection:`File --> Project properties`, :guilabel:`CRS`). However, 
 with a geographic (= unprojected) CRS defined for the data and project, area and 
 distance measurement will be ellipsoidal.
 If "on the fly" CRS transformation is disabled, the measurement metric is planimetric 
 when the project coordinate system is projected and ellipsoidal when the project 
 coordinate system is unprojected / geographic.
 
-However, neither the identify tool nor the field calculator will transform youyr data 
+However, neither the identify tool nor the field calculator will transform your data 
 to the project CRS before measuring. If you want to achive this you have to use the 
 vector analysis tool: :menuselection:`Vector --> Geometry Tools --> Export/Add Geometry Columns`. 
 Here, measurement is by default planimetric except if you choose the ellipsoidal measure.
