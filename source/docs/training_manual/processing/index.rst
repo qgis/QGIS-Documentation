@@ -43,5 +43,6 @@ Contents:
    interp_contour
    generalize
    solar
+   r_intro
 
 
