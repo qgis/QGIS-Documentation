@@ -221,9 +221,7 @@ The following code fragment shows how to render a composition to a raster image
 
   # render the composition
   imagePainter = QPainter(image)
-  sourceArea = QRectF(0, 0, c.paperWidth(), c.paperHeight())
-  targetArea = QRectF(0, 0, width, height)
-  c.render(imagePainter, targetArea, sourceArea)
+  c.renderPage( imagePainter, 0 )
   imagePainter.end()
 
   image.save("out.png", "png")
