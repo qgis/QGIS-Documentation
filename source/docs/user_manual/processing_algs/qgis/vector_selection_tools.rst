@@ -74,20 +74,19 @@ Parameters
 ``Additional layer (intersection layer)`` [vector: any]
   <put parameter description here>
 
-``Include input features that touch the selection features`` [boolean]
-  <put parameter description here>
+``Predicate [array of Unicode strings]
+Condition for the selection. Array of one or more of the following predicates:
 
-  Default: *False*
+* disjoint
+* intersects
+* contains
+* equals
+* touches
+* overlaps
+* within
+* crosses
 
-``Include input features that overlap/cross the selection features`` [boolean]
-  <put parameter description here>
-
-  Default: *False*
-
-``Include input features completely within the selection features`` [boolean]
-  <put parameter description here>
-
-  Default: *False*
+For console usage the precicates must be defined as an array of Unicode strings, eg. [u'intersects',u'contains']
 
 Outputs
 .......
@@ -100,7 +99,7 @@ Console usage
 
 ::
 
-  processing.runalg('qgis:extractbylocation', input, intersect, touches, overlaps, within, output)
+  processing.runalg('qgis:extractbylocation', input, intersect, predicates, output)
 
 See also
 ........
@@ -411,20 +410,20 @@ Parameters
 ``Additional layer (intersection layer)`` [vector: any]
   <put parameter description here>
 
-``Include input features that touch the selection features`` [boolean]
-  <put parameter description here>
+``Predicate [array of Unicode strings]
+Condition for the selection. Array of one or more of the following predicates:
 
-  Default: *False*
+* disjoint
+* intersects
+* contains
+* equals
+* touches
+* overlaps
+* within
+* crosses
 
-``Include input features that overlap/cross the selection features`` [boolean]
-  <put parameter description here>
+For console usage the precicates must be defined as an array of Unicode strings, eg. [u'intersects',u'contains']
 
-  Default: *False*
-
-``Include input features completely within the selection features`` [boolean]
-  <put parameter description here>
-
-  Default: *False*
 
 ``Modify current selection by`` [selection]
   <put parameter description here>
@@ -448,7 +447,7 @@ Console usage
 
 ::
 
-  processing.runalg('qgis:selectbylocation', input, intersect, touches, overlaps, within, method)
+  processing.runalg('qgis:selectbylocation', input, intersect, predicate, method)
 
 See also
 ........
