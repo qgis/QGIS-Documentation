@@ -50,6 +50,13 @@ Parameters
 ``Join vector layer`` [vector: any]
   <put parameter description here>
 
+``Geometric predicate`` [geometrypredicate]
+  Predicate name or list of predicate names interpreted in an OR like manner.
+
+  Possible values: *['intersects', 'contains', 'equals', 'touches', 'overlaps', 'within', 'crosses']*
+
+  Default: *[]*
+
 ``Attribute summary`` [selection]
   <put parameter description here>
 
@@ -61,11 +68,13 @@ Parameters
   Default: *0*
 
 ``Statistics for summary (comma separated)`` [string]
+  Optional.
+
   <put parameter description here>
 
   Default: *sum,mean,min,max,median*
 
-``Output table`` [selection]
+``Joined table`` [selection]
   <put parameter description here>
 
   Options:
@@ -78,7 +87,7 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
+``Joined layer`` [vector]
   <put output description here>
 
 Console usage
@@ -86,7 +95,7 @@ Console usage
 
 ::
 
-  processing.runalg('qgis:joinatributesbylocation', target, join, summary, stats, keep, output)
+  processing.runalg('qgis:joinattributesbylocation', target, join, predicate, summary, stats, keep, output)
 
 See also
 ........
