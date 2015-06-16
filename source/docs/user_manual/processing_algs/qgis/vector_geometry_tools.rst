@@ -3,6 +3,53 @@
 Vector geometry
 ===============
 
+Check validity
+--------------
+
+Description
+...........
+
+Check features geometry validity.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Source layer to check.
+
+``Method`` [selection]
+  Check validity method.
+
+  Options:
+
+  * 0 --- The one selected in digitizing settings
+  * 1 --- QGIS
+  * 2 --- GEOS
+
+  Default: *0*
+
+Outputs
+.......
+
+``Valid output`` [vector]
+  Ouput valid features, unchanged.
+
+``Invalid output`` [vector]
+  Output invalid features, with an additionnal *_errors* field describing the validity problems.
+
+``Error output`` [vector]
+  Output exact position on the validity problems as a point layer with a *message* field.
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:checkvalidity', input_layer, method, valid_output, invalid_output, error_output)
+
+See also
+........
+
 Concave hull
 ------------
 
