@@ -66,6 +66,7 @@ their syntax and some examples.
   layer has to be added after the ``field`` tag. For instance, if you have
   declared a vector input with ``mylayer=vector``, you could use ``myfield=field
   mylayer`` to add a field from that layer as parameter.
+* ``extent``. A spatial extent defined by xmin, xmax, ymin, ymax
 * ``folder``. A folder
 * ``file``. A filename
 * ``crs``. A Coordinate Reference System
