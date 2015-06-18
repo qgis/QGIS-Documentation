@@ -36,32 +36,29 @@ stored in the palette::
   rlayer.hasPyramids()
   False
 
-.. index:: raster layers; drawing style
+.. index:: raster layers; renderer
 
-Drawing Style
-=============
+Renderer
+========
 
-When a raster layer is loaded, it gets a default drawing style based on its
+When a raster layer is loaded, it gets a default renderer based on its
 type. It can be altered either in raster layer properties or programmatically.
-The following drawing styles exist:
 
-====== =============================== ===============================================================================================
-Index   Constant: QgsRasterLater.X     Comment
-====== =============================== ===============================================================================================
-  1     SingleBandGray                 Single band image drawn as a range of gray colors
-  2     SingleBandPseudoColor          Single band image drawn using a pseudocolor algorithm
-  3     PalettedColor                  "Palette" image drawn using color table
-  4     PalettedSingleBandGray         "Palette" layer drawn in gray scale
-  5     PalettedSingleBandPseudoColor  "Palette" layer drawn using a pseudocolor algorithm
-  7     MultiBandSingleBandGray        Layer containing 2 or more bands, but a single band drawn as a range of gray colors
-  8     MultiBandSingleBandPseudoColor Layer containing 2 or more bands, but a single band drawn using a pseudocolor algorithm
-  9     MultiBandColor                 Layer containing 2 or more bands, mapped to RGB color space.
-====== =============================== ===============================================================================================
+To query the current renderer::
 
-To query the current drawing style::
-
-  rlayer.renderer().type()
+  >>> rlayer.renderer()
+  <qgis._core.QgsSingleBandPseudoColorRenderer object at 0x7f471c1da8a0>
+  >>> rlayer.renderer().type()
   u'singlebandpseudocolor'
+
+To set a renderer use :func:`setRenderer` method of :class:`QgsRasterLayer`. There
+are several available renderer classes (derived from :class:`QgsRasterRenderer`):
+
+* QgsMultiBandColorRenderer
+* QgsPalettedRasterRenderer
+* QgsSingleBandColorDataRenderer
+* QgsSingleBandGrayRenderer
+* QgsSingleBandPseudoColorRenderer
 
 Single band raster layers can be drawn either in gray colors (low values =
 black, high values = white) or with a pseudocolor algorithm that assigns colors
@@ -82,23 +79,22 @@ After doing the changes, you might want to force update of map canvas, see
 Single Band Rasters
 -------------------
 
-They are rendered in gray colors by default. To change the drawing style to
-pseudocolor::
+Let's say we want to render our raster layer (assuming one band only)
+with colors ranging from green to yellow (for pixel values from 0 to 255).
+In the first stage we will prepare ``QgsRasterShader`` object and configure
+its shader function:
 
-    # Check the renderer
-    rlayer.renderer().type()
-    u'singlebandgray'
-    rlayer.setDrawingStyle("SingleBandPseudoColor")
-    # The renderer is now changed
-    rlayer.renderer().type()
-    u'singlebandpseudocolor'
-    # Set a color ramp hader function
-    shader_func = QgsColorRampShader()
-    rlayer.renderer().shader().setRasterShaderFunction(shader_func)
+  >>> fcn = QgsColorRampShader()
+  >>> fcn.setColorRampType(QgsColorRampShader.INTERPOLATED)
+  >>> lst = [ QgsColorRampShader.ColorRampItem(0, QColor(0,255,0)), \
+      QgsColorRampShader.ColorRampItem(255, QColor(255,255,0)) ]
+  >>> fcn.setColorRampItemList(lst)
+  >>> shader = QgsRasterShader()
+  >>> shader.setRasterShaderFunction(fcn)
 
-The :class:`PseudoColorShader` is a basic shader that highlights low values in blue
-and high values in red. There is also :class:`ColorRampShader` which maps the colors as specified by its
-color map. It has three modes of interpolation of values:
+The shader maps the colors as specified by its color map. The color map is
+provided as a list of items with pixel value and its associated color.
+There are three modes of interpolation of values:
 
 * linear (``INTERPOLATED``): resulting color is linearly interpolated from the
   color map entries above and below the actual pixel value
@@ -107,19 +103,13 @@ color map. It has three modes of interpolation of values:
 * exact (``EXACT``): color is not interpolated, only the pixels with value
   equal to color map entries are drawn
 
-To set an interpolated color ramp shader ranging from green to yellow color
-(for pixel values from 0 to 255)::
+In the second step we will associate this shader with the raster layer::
 
-  rlayer.renderer().shader().setRasterShaderFunction(QgsColorRampShader())
-  lst = [QgsColorRampShader.ColorRampItem(0, QColor(0, 255, 0)), \
-      QgsColorRampShader.ColorRampItem(255, QColor(255, 255 ,0))]
-  fcn = rlayer.renderer().shader().rasterShaderFunction()
-  fcn.setColorRampType(QgsColorRampShader.INTERPOLATED)
-  fcn.setColorRampItemList(lst)
+  >>> renderer = QgsSingleBandPseudoColorRenderer(layer.dataProvider(), 1, shader)
+  >>> layer.setRenderer(renderer)
 
-To return back to default gray levels, use::
+The number 1 in the code above is band number (raster bands are indexed from one).
 
-  rlayer.setDrawingStyle('SingleBandGray')
 
 .. index:: rasters; multi band
 
@@ -131,10 +121,11 @@ create a color image (this is the ``MultiBandColor`` drawing style. In some
 cases you might want to override these setting. The following code interchanges
 red band (1) and green band (2)::
 
-    rlayer.setDrawingStyle('MultiBandColor')
     rlayer.renderer().setGreenBand(1)
-    rlayer.setRedBand(2)
+    rlayer.renderer().setRedBand(2)
 
+In case only one band is necessary for visualization of the raster, single band
+drawing can be chosen --- either gray levels or pseudocolor.
 
 .. index::
   pair: raster layers; refreshing
