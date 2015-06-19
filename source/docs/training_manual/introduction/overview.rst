@@ -65,7 +65,7 @@ most often, adding or removing toolbars as necessary via the
 Even if they are not visible in a toolbar, all of your tools will remain
 accessible via the menus. For example, if you remove the :guilabel:`File`
 toolbar (which contains the :guilabel:`Save` button), you can still save your
-map by clicking on the :guilabel:`File` menu and then clicking on
+map by clicking on the :guilabel:`Project` menu and then clicking on
 :guilabel:`Save`.
 
 |basic| The Map Canvas

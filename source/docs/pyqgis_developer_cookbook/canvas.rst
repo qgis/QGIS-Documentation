@@ -335,7 +335,7 @@ described before to show the selected rectangle as it is being defined.
         return QgsRectangle(self.startPoint, self.endPoint)
 
     def deactivate(self):
-        QgsMapTool.deactivate(self)
+        super(RectangleMapTool, self).deactivate()
         self.emit(SIGNAL("deactivated()"))
 
 .. index:: map canvas; writing custom canvas items

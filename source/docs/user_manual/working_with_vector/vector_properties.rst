@@ -6,7 +6,7 @@ The Vector Properties Dialog
 ============================
 
 The :guilabel:`Layer Properties` dialog for a vector layer provides information
-about the layer, symbology settings and labeling options. If your vector layer
+about the layer, symbology settings and labelling options. If your vector layer
 has been loaded from a PostgreSQL/PostGIS datastore, you can also alter the
 underlying SQL for the layer by invoking the :guilabel:`Query Builder` dialog on
 the :guilabel:`General` tab. To access the :guilabel:`Layer Properties` dialog,
@@ -264,7 +264,7 @@ modes are:
 The listbox in the center part of the :guilabel:`Style` menu lists the classes
 together with their ranges, labels and symbols that will be rendered.
 
-Click on **Classify** button to create classes using the choosen mode. Each
+Click on **Classify** button to create classes using the chosen mode. Each
 classes can be disabled unchecking the checkbox at the left of the class name.
 
 You can change symbol, value and/or label of the clic, just double clicking
@@ -384,7 +384,7 @@ same as for the main renderers.
 
 With the Heatmap renderer you can create live dynamic heatmaps for (multi)point layers. You can
 specify the heatmap radius in pixels, mm or map units, choose a color ramp for the heatmap style
-and use a slider for selecting a tradeoff between render speed and quality.
+and use a slider for selecting a trade-off between render speed and quality.
 When adding or removing a feature the heatmap renderer updates the heatmap style automatically.
 
 .. _color_picker:
@@ -427,7 +427,7 @@ populated with one of three methods: :guilabel:`Recent colors`, :guilabel:`Stand
 .. figure:: /static/user_manual/working_with_vector/color_picker_recent_colors.png
    :align: center
 
-   Color picker swatcher tab |nix|
+   Color picker switcher tab |nix|
  
 Another option is to use the |mIconColorPicker| :sup:`color picker` which allows you to sample a color from under your mouse pointer at any part of 
 QGIS or even from another application by pressing the space bar. Please note that the color picker is OS dependent and is currently not supported by OSX.
@@ -486,11 +486,11 @@ Layer rendering
 Labels Menu
 -----------
 The |mActionLabeling| :sup:`Labels` core application provides smart
-labeling for vector point, line and polygon layers, and it only requires a
+labelling for vector point, line and polygon layers, and it only requires a
 few parameters. This new application also supports on-the-fly transformed layers.
 The core functions of the application have been redesigned. In |qg|, there are a
-number of other features that improve the labeling. The following menus
-have been created for labeling the vector layers:
+number of other features that improve the labelling. The following menus
+have been created for labelling the vector layers:
 
 * Text
 * Formatting
@@ -507,13 +507,13 @@ Let us see how the new menus can be used for various vector layers.
 **Labeling point layers**
 
 Start |qg| and load a vector point layer. Activate the layer in the legend and click on the
-|mActionLabeling| :sup:`Layer Labeling Options` icon in the |qg| toolbar menu.
+|mActionLabeling| :sup:`Layer Labelling Options` icon in the |qg| toolbar menu.
 
 The first step is to activate the |checkbox| :guilabel:`Label this layer with` checkbox
-and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
+and select an attribute column to use for labelling. Click |mActionmIconExpressionEditorOpen| if you
 want to define labels based on expressions - See labeling_with_expressions_.
 
-The following steps describe a simple labeling without using the :guilabel:`Data defined override` functions,
+The following steps describe a simple labelling without using the :guilabel:`Data defined override` functions,
 which are situated next to the drop-down menus.
 
 You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_ ). Use the
@@ -580,8 +580,8 @@ left out.
 In the :guilabel:`Rendering` menu, you can define label and feature options. Under :guilabel:`Label options`,
 you find the scale-based visibility setting now. You can prevent |qg| from rendering only selected labels with
 the |checkbox| :guilabel:`Show all labels for this layer (including colliding labels)` checkbox.
-Under :guilabel:`Feature options`, you can define whether every part of a multipart feature is to be labeled. It's possible to define
-whether the number of features to be labeled is limited and to |checkbox| :guilabel:`Discourage labels from covering features`.
+Under :guilabel:`Feature options`, you can define whether every part of a multipart feature is to be labelled. It's possible to define
+whether the number of features to be labelled is limited and to |checkbox| :guilabel:`Discourage labels from covering features`.
 
 
 .. features act as obstacles for labels or not .
@@ -633,7 +633,7 @@ max angle between curved label.
 As for point vector layers you have the possibility to define a :guilabel:`Priority` for the labels.
 
 The :guilabel:`Rendering` menu has nearly the same entries as for point layers. In the
-:guilabel:`Feature options`, you can now :guilabel:`Suppress labeling of features smaller than`.
+:guilabel:`Feature options`, you can now :guilabel:`Suppress labelling of features smaller than`.
 
 
 .. if features act as obstacles for labels or not.
@@ -650,10 +650,10 @@ The :guilabel:`Rendering` menu has nearly the same entries as for point layers. 
    Smart labeling of vector line layers |nix|
 
 
-**Labeling polygon layers**
+**Labelling polygon layers**
 
 The first step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
-and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
+and select an attribute column to use for labelling. Click |mActionmIconExpressionEditorOpen| if you
 want to define labels based on expressions - See labeling_with_expressions_.
 
 In the :guilabel:`Text` menu, define the text style. The entries are the same as for point
@@ -692,7 +692,7 @@ As for point and line vector layers you have the possibility to define a :guilab
 for the polygon vector layer.
 
 The entries in the :guilabel:`Rendering` menu are the same as for line layers. You can also use
-:guilabel:`Suppress labeling of features smaller than` in the :guilabel:`Feature options`.
+:guilabel:`Suppress labelling of features smaller than` in the :guilabel:`Feature options`.
 
 
 .. if features act as obstacles for labels or not
@@ -706,7 +706,7 @@ The entries in the :guilabel:`Rendering` menu are the same as for line layers. Y
 .. figure:: /static/user_manual/working_with_vector/label_area.png
    :align: center
 
-   Smart labeling of vector polygon layers |nix|
+   Smart labelling of vector polygon layers |nix|
 
 
 .. _labeling_with_expressions:
@@ -733,9 +733,9 @@ some descriptive text and the function '$area()' in combination with
    :align: center
    :width: 30em
 
-   Using expressions for labeling |nix|
+   Using expressions for labelling |nix|
 
-Expression based labeling is easy to work with. All you have to take care of
+Expression based labelling is easy to work with. All you have to take care of
 is, that you need to combine all elements (strings, fields and functions) with a
 string concatenation sign '||' and that fields a written in "double quotes"
 and strings in 'single quotes'. Let's have a look at some examples:
@@ -775,9 +775,9 @@ As you can see in the expression builder, you have hundreds of functions availab
 create simple and very complex expressions to label your data in QGIS. See 
 :ref:`vector_expressions` chapter for more information and examples on expressions.
 
-**Using data-defined override for labeling**
+**Using data-defined override for labelling**
 
-With the data-defined override functions, the settings for the labeling
+With the data-defined override functions, the settings for the labelling
 are overridden by entries in the attribute table.
 You can activate and deactivate the function with the right-mouse button.
 Hover over the symbol and you see the information about the data-defined override,
@@ -805,7 +805,7 @@ We now describe an example using the data-defined override function for the
 .. figure:: /static/user_manual/working_with_vector/label_data_defined.png
    :align: center
 
-   Labeling of vector polygon layers with data-defined override |nix|
+   Labelling of vector polygon layers with data-defined override |nix|
 
 
 .. _figure_labels_6:
@@ -873,7 +873,7 @@ widgets. These widgets are:
 * **Photo**: Field contains a filename for a picture. The width and height of the field can be defined.
 * **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
-* **Relation Reference**: This widged lets you embed the feature form of the referenced layer on the feature form
+* **Relation Reference**: This widget lets you embed the feature form of the referenced layer on the feature form
   of the actual layer. See :ref:`vector_relations`.
 * **Text edit** (default): This opens a text edit field that allows simple text or multiple lines to
   be used. If you choose multiple lines you can also choose html content.
@@ -899,7 +899,7 @@ widgets. These widgets are:
    See http://blog.vitu.ch/10142013-1847/write-your-own-qgis-form-elements
 
 
-With the **Attribute editor layout**, you can now define built-in forms (see figure_fields_2_). This is usefull for data entry jobs or to identify objects using the option auto open form when you have objects with many attributes. You can create an editor with several tabs and named groups to present the attribute fields.
+With the **Attribute editor layout**, you can now define built-in forms (see figure_fields_2_). This is useful for data entry jobs or to identify objects using the option auto open form when you have objects with many attributes. You can create an editor with several tabs and named groups to present the attribute fields.
 
 Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| icon to create
 a category to insert a tab or a named group (see figure_fields_3_). 
@@ -1101,7 +1101,7 @@ surrounded by square brackets, use a second set like this: ``[[%col10]]``.
 Using the :guilabel:`Identify Features` tool, you can open the :guilabel:`Identify Results`
 dialog. It includes a *(Derived)* item that contains information relevant to the
 layer type. The values in this item can be accessed in a similar way to the other
-fields by preceeding the derived field name with ``(Derived).``. For example,
+fields by proceeding the derived field name with ``(Derived).``. For example,
 a point layer has an ``X`` and ``Y`` field, and the values of these fields can be used in
 the action with ``%(Derived).X`` and ``%(Derived).Y``. The derived attributes
 are only available from the :guilabel:`Identify Results` dialog box, not the
@@ -1347,10 +1347,10 @@ vector layer (see figure_diagrams_1_).
 The current core implementation of diagrams provides support for pie charts, text diagrams
 and histograms.
 
-The menu is divided into four tabs: :guilabel:`Appearance`, :guilabel:`Size`, :guilabel:`Postion` and :guilabel:`Options`.
+The menu is divided into four tabs: :guilabel:`Appearance`, :guilabel:`Size`, :guilabel:`Position` and :guilabel:`Options`.
 
 In the cases of the text diagram and pie chart, text values of different data columns are displayed one below the other with a circle or a box and dividers. In the :guilabel:`Size` tab, diagram size is based on a fixed size or on linear scaling according to a classification attribute.
-The placement of the diagrams, which is done in the :guilabel:`Position` tab, interacts with the new labeling, so position
+The placement of the diagrams, which is done in the :guilabel:`Position` tab, interacts with the new labelling, so position
 conflicts between diagrams and labels are detected and solved. In addition,
 chart positions can be fixed manually.
 

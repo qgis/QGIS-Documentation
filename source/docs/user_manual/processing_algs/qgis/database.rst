@@ -9,7 +9,7 @@ Import into PostGIS
 Description
 ...........
 
-Imports existing vector layer in QGIS int a PostGIS database.
+Imports existing vector layer in QGIS into a PostGIS database.
 Before a connection between QGIS and the PostGIS database has to
 be created (for example with the DB Manager).
 
@@ -30,7 +30,7 @@ Parameters
 
 ``Schema (schema name)`` [string]
   An existing schema of the selected database can be chosen.
-  By feault this is the 'public' schema.
+  By default this is the 'public' schema.
 
   Default: *public*
 

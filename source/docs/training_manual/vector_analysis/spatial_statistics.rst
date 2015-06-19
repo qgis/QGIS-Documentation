@@ -40,7 +40,7 @@ We'll use the area covered by streets.
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`roads_hull.shp`.
-* Add it to the TOC (:guilabel:`Layers list`) when prompted.
+* Check :guilabel:`Add result to canvas` option to add the output to the TOC (:guilabel:`Layers list`).
 
 Creating random points
 ...............................................................................
@@ -53,7 +53,7 @@ Creating random points
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`random_points.shp`.
-* Add it to the TOC (:guilabel:`Layers list`) when prompted:
+* Check :guilabel:`Add result to canvas` option to add the output to the TOC (:guilabel:`Layers list`).
 
 .. image:: /static/training_manual/vector_analysis/random_points_result.png
    :align: center

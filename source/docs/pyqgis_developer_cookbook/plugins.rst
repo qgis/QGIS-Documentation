@@ -140,7 +140,7 @@ name                   True      a short string  containing the name of the plug
 qgisMinimumVersion     True      dotted notation of minimum QGIS version
 qgisMaximumVersion     False     dotted notation of maximum QGIS version
 description            True      short text which describes the plugin, no HTML allowed
-about                  False     longer text which describes the plugin in details, no HTML allowed
+about                  True      longer text which describes the plugin in details, no HTML allowed
 version                True      short string with the version dotted notation
 author                 True      author name
 email                  True      email of the author, will *not* be shown on the web site
@@ -149,7 +149,7 @@ experimental           False     boolean flag, `True` or `False`
 deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin and not just to the uploaded version
 tags                   False     comma separated list, spaces are allowed inside individual tags
 homepage               False     a valid URL pointing to the homepage of your plugin
-repository             False     a valid URL for the source code repository
+repository             True      a valid URL for the source code repository
 tracker                False     a valid URL for tickets and bug reports
 icon                   False     a file name or a relative path (relative to the base folder of the plugin's compressed package)
 category               False     one of `Raster`, `Vector`, `Database` and `Web`
@@ -194,6 +194,8 @@ An example for this metadata.txt
   about=This paragraph can contain a detailed description
       of the plugin. Multiline is allowed, HTML is not.
   version=version 1.2
+  tracker=http://bugs.itopen.it
+  repository=http://www.itopen.it/repo
   ; end of mandatory metadata
 
   ; start of optional metadata
@@ -212,8 +214,6 @@ An example for this metadata.txt
 
   ; these metadata can be empty, they will eventually become mandatory.
   homepage=http://www.itopen.it
-  tracker=http://bugs.itopen.it
-  repository=http://www.itopen.it/repo
   icon=icon.png
 
   ; experimental flag (applies to the single version)

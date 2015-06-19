@@ -1,9 +1,7 @@
 Selection
 ============================================================
 
-
 .. note:: In this lesson we will see how processing algorithms handle selections in vector layers that are used as inputs, and how to create a selection using a particular type of algorithm.
-
 
 Unlike other analysis plugins in QGIS, you will not find in processing geoalgorithms any "Use only selected features" checkbox or similar. The behaviour regarding selection is set for the whole plugin and all its algorithms, and not for each algorithm execution. Algorithms follow the following simple rules when using a vector layer.
 

@@ -171,6 +171,8 @@ above, you can build an :obj:`QgsExpression` object and pass it to the
   request = QgsFeatureRequest(exp)
 
 
+See :ref:`expressions` for the details about the syntax supported by :class:`QgsExpression`.
+
 The request can be used to define the data retrieved for each feature, so the
 iterator returns all features, but returns partial data for each of them.
 
@@ -206,6 +208,22 @@ to find out what set of functionality is supported
 ::
 
   caps = layer.dataProvider().capabilities()
+  # Check if a particular capability is supported:
+  caps & QgsVectorDataProvider.DeleteFeatures
+  # Print 2 if DeleteFeatures is supported
+
+For a list of all available capabilities, please refer to the 
+`API Documentation of QgsVectorDataProvider <http://qgis.org/api/classQgsVectorDataProvider.html>`_
+
+To print layer's capabilities textual description in a comma separated list you 
+can use :funct:`capabilitiesString` as in the following example::
+
+  caps_string = layer.dataProvider().capabilitiesString()
+  # Print:
+  # u'Add Features, Delete Features, Change Attribute Values, 
+  # Add Attributes, Delete Attributes, Create Spatial Index, 
+  # Fast Access to Features at ID, Change Geometries, 
+  # Simplify Geometries with topological validation' 
 
 By using any of the following methods for vector layer editing, the changes are
 directly committed to the underlying data store (a file, database etc). In case
@@ -460,9 +478,10 @@ There are two possibilities how to export a vector layer:
 
   ::
 
-    # define fields for feature attributes. A list of QgsField objects is needed
-    fields = [QgsField("first", QVariant.Int),
-              QgsField("second", QVariant.String)]
+    # define fields for feature attributes. A QgsFields object is needed
+    fields = QgsFields()
+    fields.append(QgsField("first", QVariant.Int))
+    fields.append(QgsField("second", QVariant.String))
 
     # create an instance of vector file writer, which will create the vector file.
     # Arguments:
@@ -700,7 +719,7 @@ This can be useful if you want to alter some properties::
     props = layer.rendererV2().symbol().symbolLayer(0).properties()
     props['color'] = 'yellow'
     props['name'] = 'square'
-    layer.p_rendererV2.setSymbol(QgsMarkerSymbolV2.createSimple(props))
+    layer.rendererV2().setSymbol(QgsMarkerSymbolV2.createSimple(props))
 
 
 .. index:: categorized symbology renderer, symbology; categorized symbol renderer

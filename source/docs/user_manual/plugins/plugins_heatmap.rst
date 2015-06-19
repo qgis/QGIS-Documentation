@@ -1,6 +1,6 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not up-to-date with release
 
 .. _heatmap_plugin:
 
@@ -38,7 +38,7 @@ The dialog has the following options:
   filename for the output raster the Heatmap plugin generates. A file extension
   is not required.
 * **Output format**: Selects the output format. Although all formats supported
-  by GDAL can be choosen, in most cases GeoTIFF is the best format to choose.
+  by GDAL can be chosen, in most cases GeoTIFF is the best format to choose.
 * **Radius**: Is used to specify the heatmap search radius (or kernel bandwidth) in meters
   or map units. The radius specifies the distance around a point at which the influence
   of the point will be felt. Larger values result in greater smoothing, but smaller

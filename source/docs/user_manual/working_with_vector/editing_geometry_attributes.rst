@@ -133,7 +133,7 @@ window, and you can roll the mouse wheel to zoom in and out on the map.
 For zooming, place the mouse cursor inside the map area and roll it forward
 (away from you) to zoom in and backwards (towards you) to zoom out. The mouse
 cursor position will be the center of the zoomed area of interest. You can
-customize the behavior of the mouse wheel zoom using the :guilabel:`Map tools`
+customize the behaviour of the mouse wheel zoom using the :guilabel:`Map tools`
 tab under the :menuselection:`Settings -->` |mActionOptions|
 :menuselection:`Options` menu.
 
@@ -446,7 +446,7 @@ make sure the schemas match.
    and want to paste values from another attribute column that has a greater length
    the length of the column size will be extended to the same amount. This is because
    the GDAL Shapefile driver starting with GDAL/OGR 1.10 knows to auto-extend string
-   and integer fields to dynamically accomodate for the length of the data to be inserted.
+   and integer fields to dynamically accommodate for the length of the data to be inserted.
 
 Deleting Selected Features
 ..........................
@@ -1107,7 +1107,7 @@ Layers
 
 QGIS makes no difference between a table and a vector layer. Basically, a vector
 layer is a table with a geometry. So can add your table as a vector layer. To
-demostrate you can load the 'region' shapefile (with geometries) and the 'airport'
+demonstrate you can load the 'region' shapefile (with geometries) and the 'airport'
 csv table (without geometries) and a foreign key (fk_region) to the layer
 region. This means, that each airport belongs to exactly one region while each
 region can have any number of airports (a typical one to many relation).
