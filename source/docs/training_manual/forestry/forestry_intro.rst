@@ -10,7 +10,7 @@ Note that you need to download an additional data package for this module.
 Forestry Sample Data
 -------------------------------------------------------------------------------
 
-.. note:: The sample data used in this module can be downloaded `here  (125 Mb) <https://dl.dropboxusercontent.com/u/3200993/forestry_data.zip>`_.
+.. note:: The sample data used in this module is part of training manual data set and can be downloaded `here  <http://qgis.org/downloads/data/training_manual_exercise_data.zip>`_.
    Download the zip file and extract the :kbd:`forestry\\` folder into your :kbd:`exercise_data\\` folder.
 
 The forestry related sample data (forestry map, forest data), has been provided by the `EVO-HAMK forestry school <http://www.hamk.fi/tietoa-hamkista/kartat-ja-toimipaikat/Sivut/evo.aspx>`_. The datasets have been modified to adapt to the lessons needs.
