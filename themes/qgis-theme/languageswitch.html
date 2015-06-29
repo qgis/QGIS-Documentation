@@ -57,8 +57,11 @@
 
         // TODO: links should come from conf.py
         // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
         fix_translation_link = 'https://www.transifex.com/projects/p/qgis-documentation/translate/#' + 
-            currentLang.slice(1) + currentPage.replace(/\//g, "_").replace(/-/g, "_").replace(/\.html/g, "")
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
         if ('/en/' != currentLang) {
             $('#fix_translation_link').attr('href', fix_translation_link);
         }
