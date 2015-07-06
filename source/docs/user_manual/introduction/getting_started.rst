@@ -56,7 +56,7 @@ to install the sample dataset during the initial |qg| installation, you may do o
 
 * Use GIS data that you already have
 * Download sample data from
-  http://download.osgeo.org/qgis/data/qgis_sample_data.zip
+  http://qgis.org/downloads/data/qgis_sample_data.zip
 * Uninstall |qg| and reinstall with the data download option checked (only recommended if
   the above solutions are unsuccessful)
 
