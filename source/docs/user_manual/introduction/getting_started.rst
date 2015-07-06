@@ -63,7 +63,7 @@ to install the sample dataset during the initial |qg| installation, you may do o
 |nix| |osx| For GNU/Linux and Mac OS X, there are not yet dataset installation
 packages available as rpm, deb or dmg. To use the sample dataset, download the
 file :file:`qgis_sample_data` as a ZIP archive from
-http://download.osgeo.org/qgis/data/qgis_sample_data.zip and unzip the archive
+http://qgis.org/downloads/data and unzip the archive
 on your system.
 
 The Alaska dataset includes all GIS data that are used for examples and
