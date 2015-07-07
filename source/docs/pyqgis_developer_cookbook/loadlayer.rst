@@ -202,8 +202,8 @@ know what layers you want
 
 ::
 
-    urlWithParams = 'url=http://wms.jpl.nasa.gov/wms.cgi&layers=global_mosaic&styles=pseudo&format=image/jpeg&crs=EPSG:4326'
-    rlayer = QgsRasterLayer(urlWithParams, 'some layer name', 'wms')
+    urlWithParams = 'url=http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r-t.cgi?format=image/png&layers=nexrad-n0r-wmst&styles=&crs=EPSG:3857&'
+    rlayer = QgsRasterLayer(urlWithParams,'nexrad-n0r-wmst', 'wms')
     if not rlayer.isValid():
       print "Layer failed to load!"
 
