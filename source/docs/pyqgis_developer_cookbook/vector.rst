@@ -212,18 +212,18 @@ to find out what set of functionality is supported
   caps & QgsVectorDataProvider.DeleteFeatures
   # Print 2 if DeleteFeatures is supported
 
-For a list of all available capabilities, please refer to the 
+For a list of all available capabilities, please refer to the
 `API Documentation of QgsVectorDataProvider <http://qgis.org/api/classQgsVectorDataProvider.html>`_
 
-To print layer's capabilities textual description in a comma separated list you 
-can use :funct:`capabilitiesString` as in the following example::
+To print layer's capabilities textual description in a comma separated list you
+can use :func:`capabilitiesString` as in the following example::
 
   caps_string = layer.dataProvider().capabilitiesString()
   # Print:
-  # u'Add Features, Delete Features, Change Attribute Values, 
-  # Add Attributes, Delete Attributes, Create Spatial Index, 
-  # Fast Access to Features at ID, Change Geometries, 
-  # Simplify Geometries with topological validation' 
+  # u'Add Features, Delete Features, Change Attribute Values,
+  # Add Attributes, Delete Attributes, Create Spatial Index,
+  # Fast Access to Features at ID, Change Geometries,
+  # Simplify Geometries with topological validation'
 
 By using any of the following methods for vector layer editing, the changes are
 directly committed to the underlying data store (a file, database etc). In case
@@ -251,13 +251,20 @@ Add Features
 
 Create some :class:`QgsFeature` instances and pass a list of them to provider's
 :func:`addFeatures` method. It will return two values: result (true/false) and
-list of added features (their ID is set by the data store)
+list of added features (their ID is set by the data store).
+
+To set up the attributes you can either intialize the feature passing a
+:class:`QgsFiels` instance or call :func:`initAttributes` passing
+the number of fields you want to be added.
 
 ::
 
   if caps & QgsVectorDataProvider.AddFeatures:
-      feat = QgsFeature()
-      feat.addAttribute(0, 'hello')
+      feat = QgsFeature(layer.pendingFields())
+      feat.setAttributes([0, 'hello'])
+      # Or set a single attribute by key or by index:
+      feat.setAttribute('name', 'hello')
+      feat.setAttribute(0, 'hello')
       feat.setGeometry(QgsGeometry.fromPoint(QgsPoint(123, 456)))
       (res, outFeats) = layer.dataProvider().addFeatures([feat])
 
@@ -416,7 +423,7 @@ create them easily. This is what you have to do.
 
    ::
 
-    index = QgsSpatialIndex()
+   index = QgsSpatialIndex()
 
 #. add features to index --- index takes :class:`QgsFeature` object and adds it
    to the internal data structure. You can create the object manually or use
@@ -424,7 +431,7 @@ create them easily. This is what you have to do.
 
    ::
 
-      index.insertFeature(feat)
+   index.insertFeature(feat)
 
 #. once spatial index is filled with some values, you can do some queries
 
