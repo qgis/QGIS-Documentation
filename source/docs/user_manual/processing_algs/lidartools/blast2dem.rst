@@ -4,18 +4,23 @@ blast2dem
 Description
 ...........
 
-This tool can turn billions of points with via seamless Delaunay triangulation implemented using streaming into large elevation, intensity, or RGB rasters. For more info see the `blast2dem <http://rapidlasso.com/blast2dem>`_ page and its online `README <http://lastools.org/blast2dem_README.txt>`_ file.
+This tool can turn billions of points with via seamless Delaunay triangulation implemented using streaming into large elevation, intensity, or RGB rasters. For more info see the `blast2dem <http://rapidlasso.com/blast2dem>`_ page and its online `README <http://lastools.org/download/blast2dem_README.txt>`_ file.
 
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Elevation raster layer.
+``verbose`` [boolean]
+  Generates more textual control output to the console.
+  
+  Default: *False*
 
-``Band number`` [number]
-  The number of a band containing elevation values.
-
-  Default: *1*
+``open LAStools GUI`` [boolean]
+  Starts the GUI of LAStools with pre-populated input files.
+  
+  Default: *False*
+  
+``input LAS/LAZ file`` [file]
+  The file containing the points to be rastered in LAS/LAZ format.
 
 ``Compute edges`` [boolean]
   Generates edges from the elevation raster.
@@ -41,14 +46,14 @@ Outputs
 .......
 
 ``Output file`` [raster]
-  Output raster with angle values in degrees.
+  Output raster with chosen resolution and content.
 
 Console usage
 .............
 
 ::
 
-  processing.runalg('blast2dem', input, band, compute_edges, zevenbergen, trig_angle, zero_flat, output)
+  processing.runalg('blast2dem', verbose, gui, input, band, compute_edges, zevenbergen, trig_angle, zero_flat, output)
 
 See also
 ........
