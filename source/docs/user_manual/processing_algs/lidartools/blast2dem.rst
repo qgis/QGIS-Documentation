@@ -19,41 +19,50 @@ Parameters
   
   Default: *False*
   
-``input LAS/LAZ file`` [file]
+``input LAS/LAZ file`` [points]
   The file containing the points to be rastered in LAS/LAZ format.
 
-``Compute edges`` [boolean]
-  Generates edges from the elevation raster.
+``filter`` [string]
+  Specifies which points to use to construct the temporary TIN that is then rastered.
 
+  Default: *---*
+
+``step size / pixel size`` [number]
+  Specifies the size of the cells of the grid the TIN is rastered onto.
+
+  Default: *1.0*
+
+``Attribute`` [string]
+  Specifies the attribute that is to be rastered.
+
+  Default: *elevation*
+
+``Product`` [string]
+  Specifies how the attribute is to be turned into raster values.
+
+  Default: *actual values*
+
+``use tile bounding box`` [boolean]
+  Specifies to limit the rastered area to the tile bounding box (only meaningful for input LAS/LAZ tiles that were created with lastile).
+  
   Default: *False*
 
-``Use Zevenbergen&Thorne formula (instead of the Horn's one)`` [boolean]
-  Activates Zevenbergen&Thorne formula for smooth landscapes.
+``additional command line parameter(s)`` [string]
+  Specifies other command-line switches not available via this menu but known to the (advanced) LAStools user.
 
-  Default: *False*
-
-``Return trigonometric angle (instead of azimuth)`` [boolean]
-  Activating the trigonometric angle results in different categories: 0° (=East), 90° (North), 180° (=West), 270° (=South).
-
-  Default: *False*
-
-``Return 0 for flat (instead of -9999)`` [boolean]
-  Activating this option will insert a 0-value for the value -9999 on flat areas.
-
-  Default: *False*
-
+  Default: *---*
+  
 Outputs
 .......
 
-``Output file`` [raster]
-  Output raster with chosen resolution and content.
+``Output raster file`` [raster]
+  Specifies where the output raster is stored. Use image rasters like TIF, PNG, and JPG for false color, gray ramps, and hillshades. Use value rasters like TIF, BIL, IMG, ASC, DTM, FLT, XYZ, and CSV for actual values.
 
 Console usage
 .............
 
 ::
 
-  processing.runalg('blast2dem', verbose, gui, input, band, compute_edges, zevenbergen, trig_angle, zero_flat, output)
+  processing.runalg('blast2dem', verbose, gui, input, filter, step, attribute, product, use_tile_bb, additional, output)
 
-See also
-........
+See also the `blast2dem <http://rapidlasso.com/blast2dem>`_ page and its online `README <http://lastools.org/download/blast2dem_README.txt>`_ file.
