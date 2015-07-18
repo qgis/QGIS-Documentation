@@ -144,6 +144,11 @@ Parameters
 
   Default: *(not set)*
 
+``additional command line parameter(s)`` [string]
+  Specifies other command-line switches not available via this menu but known to the (advanced) LAStools user.
+
+  Default: *---*
+
 Outputs
 .......
 
