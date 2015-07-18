@@ -1,10 +1,10 @@
-blast2dem
----------
+las2dem
+-------
 
 Description
 ...........
 
-This tool can turn up to 20 million points via a temporary Delaunay triangulation that is then rastered with a user-defined step size into an elevation, intensity, or RGB raster. For more info see the `las2dem <http://rapidlasso.com/las2dem>`_ page and its online `README <http://lastools.org/download/las2dem_README.txt>`_ file.
+This tool turns points (up to 20 million) via a temporary Delaunay triangulation that is rastered with a user-defined step size into an elevation, intensity, or RGB raster. For more info see the `las2dem <http://rapidlasso.com/las2dem>`_ page and its online `README <http://lastools.org/download/las2dem_README.txt>`_ file.
 
 Parameters
 ..........
