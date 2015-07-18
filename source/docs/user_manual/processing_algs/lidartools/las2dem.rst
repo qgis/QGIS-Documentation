@@ -22,7 +22,7 @@ Parameters
 ``input LAS/LAZ file`` [points]
   The file containing the points to be rastered in LAS/LAZ format.
 
-``filter`` [string]
+``filter`` [selection]
   Specifies which points to use to construct the temporary TIN that is then rastered.
 
   Default: *---*
@@ -32,12 +32,12 @@ Parameters
 
   Default: *1.0*
 
-``Attribute`` [string]
+``Attribute`` [selection]
   Specifies the attribute that is to be rastered.
 
   Default: *elevation*
 
-``Product`` [string]
+``Product`` [selection]
   Specifies how the attribute is to be turned into raster values.
 
   Default: *actual values*
@@ -63,6 +63,6 @@ Console usage
 
 ::
 
-  processing.runalg('las2dem', verbose, gui, input, filter, step, attribute, product, use_tile_bb, additional, output)
+  processing.runalg('lidartools:las2dem', verbose, gui, input, filter, step, attribute, product, use_tile_bb, additional, output)
 
 See also the `las2dem <http://rapidlasso.com/las2dem>`_ page and its online `README <http://lastools.org/download/las2dem_README.txt>`_ file.
