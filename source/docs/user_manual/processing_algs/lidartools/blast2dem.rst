@@ -1,14 +1,10 @@
-LAStools
-========
-
 blast2dem
 ---------
 
 Description
 ...........
 
-This tool can turn billions of points with via seamless Delaunay triangulation implemented using streaming into large elevation, intensity, or RGB rasters.
-For more info see `blast2dem <http://rapidlasso.com/blast2dem>`_.
+This tool can turn billions of points with via seamless Delaunay triangulation implemented using streaming into large elevation, intensity, or RGB rasters. For more info see the `blast2dem <http://rapidlasso.com/blast2dem>`_ page and its online `README <http://lastools.org/blast2dem_README.txt>`_ file.
 
 Parameters
 ..........
