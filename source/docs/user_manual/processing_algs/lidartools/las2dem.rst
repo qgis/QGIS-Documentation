@@ -63,6 +63,6 @@ Console usage
 
 ::
 
-  processing.runalg('blast2dem', verbose, gui, input, filter, step, attribute, product, use_tile_bb, additional, output)
+  processing.runalg('las2dem', verbose, gui, input, filter, step, attribute, product, use_tile_bb, additional, output)
 
 See also the `las2dem <http://rapidlasso.com/las2dem>`_ page and its online `README <http://lastools.org/download/las2dem_README.txt>`_ file.
