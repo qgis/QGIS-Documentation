@@ -10,17 +10,20 @@ Parameters
 ..........
 
 ``verbose`` [boolean]
-  <put parameter description here>
+  Generates more textual control output to the console.
 
   Default: *False*
 
+``open LAStools GUI`` [boolean]
+  Starts the GUI of LAStools with pre-populated input files.
+  
+  Default: *False*
+  
 ``input LAS/LAZ file`` [file]
-  Optional.
-
-  <put parameter description here>
+  The file containing the points to be processed.
 
 ``filter (by return, classification, flags)`` [selection]
-  <put parameter description here>
+  Filters points based on various options such as return, classification, or flags.
 
   Options:
 
@@ -44,7 +47,7 @@ Parameters
   Default: *0*
 
 ``second filter (by return, classification, flags)`` [selection]
-  <put parameter description here>
+  Also filters points based on various options such as return, classification, or flags.
 
   Options:
 
@@ -68,17 +71,17 @@ Parameters
   Default: *0*
 
 ``filter (by coordinate, intensity, GPS time, ...)`` [selection]
-  <put parameter description here>
+  Filters points based on various other options (that require a value as argument).
 
   Options:
 
   * 0 --- ---
-  * 1 --- clip_x_above
-  * 2 --- clip_x_below
-  * 3 --- clip_y_above
-  * 4 --- clip_y_below
-  * 5 --- clip_z_above
-  * 6 --- clip_z_below
+  * 1 --- drop_x_above
+  * 2 --- drop_x_below
+  * 3 --- drop_y_above
+  * 4 --- drop_y_below
+  * 5 --- drop_z_above
+  * 6 --- drop_z_below
   * 7 --- drop_intensity_above
   * 8 --- drop_intensity_below
   * 9 --- drop_gps_time_above
@@ -100,22 +103,22 @@ Parameters
   Default: *0*
 
 ``value for filter (by coordinate, intensity, GPS time, ...)`` [string]
-  <put parameter description here>
+  The value that is the argument for the filter selected above.
 
   Default: *(not set)*
 
 ``second filter (by coordinate, intensity, GPS time, ...)`` [selection]
-  <put parameter description here>
+  Also filters points based on various other options (that require a value as argument).
 
   Options:
 
   * 0 --- ---
-  * 1 --- clip_x_above
-  * 2 --- clip_x_below
-  * 3 --- clip_y_above
-  * 4 --- clip_y_below
-  * 5 --- clip_z_above
-  * 6 --- clip_z_below
+  * 1 --- drop_x_above
+  * 2 --- drop_x_below
+  * 3 --- drop_y_above
+  * 4 --- drop_y_below
+  * 5 --- drop_z_above
+  * 6 --- drop_z_below
   * 7 --- drop_intensity_above
   * 8 --- drop_intensity_below
   * 9 --- drop_gps_time_above
@@ -137,7 +140,7 @@ Parameters
   Default: *0*
 
 ``value for second filter (by coordinate, intensity, GPS time, ...)`` [string]
-  <put parameter description here>
+  The value that is the argument for the filter selected above.
 
   Default: *(not set)*
 
@@ -145,13 +148,13 @@ Outputs
 .......
 
 ``output LAS/LAZ file`` [file]
-  <put output description here>
+  Specifies where the output point cloud is stored. Use LAZ for compressed output, LAS for uncompressed output, and TXT for ASCII.
 
 Console usage
 .............
 
 ::
 
-  processing.runalg('lidartools:las2lasfilter', verbose, input_laslaz, filter_return_class_flags1, filter_return_class_flags2, filter_coords_intensity1, filter_coords_intensity1_arg, filter_coords_intensity2, filter_coords_intensity2_arg, output_laslaz)
+  processing.runalg('lidartools:las2las_filter', verbose, input_laslaz, filter_return_class_flags1, filter_return_class_flags2, filter_coords_intensity1, filter_coords_intensity1_arg, filter_coords_intensity2, filter_coords_intensity2_arg, output_laslaz)
 
 See also the `las2las <http://rapidlasso.com/las2las>`_ page and its online `README <http://lastools.org/download/las2las_README.txt>`_ file.
