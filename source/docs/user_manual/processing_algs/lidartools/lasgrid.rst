@@ -52,6 +52,11 @@ Parameters
 
   Default: *---*
   
+``additional command line parameter(s)`` [string]
+  Specifies other command-line switches not available via this menu but known to the (advanced) LAStools user.
+
+  Default: *---*
+  
 Outputs
 .......
 
@@ -63,6 +68,6 @@ Console usage
 
 ::
 
-  processing.runalg('lasgrid', verbose, gui, input, filter, step, attribute, method, use_tile_bb, additional, output)
+  processing.runalg('lidartools:lasgrid', verbose, gui, input, filter, step, attribute, method, use_tile_bb, additional, output)
 
 See also the `lasgrid <http://rapidlasso.com/lasgrid>`_ page and its online `README <http://lastools.org/download/lasgrid_README.txt>`_ file.
