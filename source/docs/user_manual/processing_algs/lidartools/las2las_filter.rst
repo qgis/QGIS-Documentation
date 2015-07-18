@@ -4,7 +4,7 @@ las2las_filter
 Description
 ...........
 
-Uses
+This tool uses las2las to filter LiDAR points based on different attributes and write the surviving subset of points into a new file. For more info see the `las2las <http://rapidlasso.com/las2las>`_ page and its online `README <http://lastools.org/download/las2las_README.txt>`_ file.
 
 Parameters
 ..........
