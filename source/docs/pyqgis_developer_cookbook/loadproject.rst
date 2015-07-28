@@ -46,7 +46,7 @@ use to check if the operation was successful.
 
 .. note::
 
-   If you are inside a |QG| python console, in order to synchronise the loaded project with
+   If you are writing a |QG| standalone application, in order to synchronise the loaded project with
    the canvas you need to instanciate a :class:`QgsLayerTreeMapCanvasBridge` as in the example below::
 
       bridge = QgsLayerTreeMapCanvasBridge( \
