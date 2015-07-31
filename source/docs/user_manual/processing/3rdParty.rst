@@ -474,6 +474,7 @@ and extract archive contents. Open terminal and cd into :file:`src` directory in
 extacted folder. Create build directory and cd into it
 
 ::
+
     mkdir build
     cd build
 
