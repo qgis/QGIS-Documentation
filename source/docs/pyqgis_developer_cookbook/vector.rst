@@ -19,6 +19,9 @@ by calling :func:`pendingFields` on a :class:`QgsVectorLayer` instance::
     for field in layer.pendingFields():
         print field.name(), field.typeName()
 
+.. note::
+  Starting from QGIS 2.12 there is also a :func:`fields()` in
+  :class:`QgsVectorLayer` which is an alias to :func:`pendingFields`.
 
 
 .. index::
