@@ -31,6 +31,7 @@ more information:
 * http://karlinapp.ethz.ch/qgis_wms/
 * http://hub.qgis.org/projects/quantum-gis/wiki/QGIS_Server_Tutorial
 * http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/
+* http://www.itopen.it/qgis-server-python-plugins-ubuntu-setup/
 
 .. index:: apache, apache2, Debian_Squeeze
 
@@ -375,12 +376,37 @@ To log requests send to server, set the following environment variables:
 Environment variables
 .....................
 
-* **QGIS_OPTIONS_PATH**: The variable specifies path to directory with settings. 
+You can configure some aspects of |qg| server by setting **environment variables**.
+For example, to set |qg| server on Apache to use /path/to/config/QGIS/QGIS2.ini settings file, 
+add to Apache config:
+
+::
+
+  SetEnv QGIS_OPTIONS_PATH "/path/to/config/"
+
+or, if using fcgi:
+
+::
+
+  FcgidInitialEnv QGIS_OPTIONS_PATH "/path/to/config/"
+
+
+This is a list of the variables supported by |qg| server:
+
+* **QGIS_OPTIONS_PATH**: Specifies the path to directory with settings. 
   It works the same ways as QGIS application --optionspath option. It is looking 
-  for settings file in <QGIS_OPTIONS_PATH>/QGIS/QGIS2.ini. For exaple, to set 
-  QGIS server on Apache to use /path/to/config/QGIS/QGIS2.ini settings file, 
-  add to Apache config:
-
-  ::
-
-    SetEnv QGIS_OPTIONS_PATH "/path/to/config/"
+  for settings file in <QGIS_OPTIONS_PATH>/QGIS/QGIS2.ini.
+* **QUERY_STRING**: The query string, normally passed by the web server, this variable
+  can be useful while testing |qg| server binary from the command line
+* **QGIS_PROJECT_FILE**: the `.qgs` project file, normally passed as a parameter in the query string, 
+  you can also set it as an environment variable (for example by using `mod_rewrite` Apache module
+* **QGIS_SERVER_LOG_FILE**: Specify path and filename. Make sure that server
+  has proper permissions for writing to file. File should be created automatically, just send
+  some requests to server. If it's not there, check permissions.
+* **QGIS_SERVER_LOG_LEVEL**: Specify desired log level. Available values are:
+* **MAX_CACHE_LAYERS**: Specify the maximum number o cached layers (default: 100)
+* **DISPLAY**: This is used to pass (fake) X server display number (needed on Unix-like systems)
+* **QGIS_PLUGINPATH**: Useful if you are using Python plugins for the server, this sets the folder that 
+  is searched for Python plugins
+  
+ 
