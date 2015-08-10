@@ -314,6 +314,12 @@ paths (in the :guilabel:`General` menu of the
 :menuselection:`Project --> Project Properties` dialog) or to manually modify
 the path to the SVG image in a way that it represents a valid relative path.
 
+Extra parameters supported by all requests
+...................................................
+
+* **FILE_NAME** parameter: if set, the server response will be sent to the client as a file 
+  attachment with the specified file name.
+
 Extra parameters supported by the WMS GetMap request
 ....................................................
 
