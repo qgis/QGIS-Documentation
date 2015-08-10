@@ -15,9 +15,6 @@ for using SIP instead of more widely used SWIG is that the whole QGIS code
 depends on Qt libraries. Python bindings for Qt (PyQt) are done also using
 SIP and this allows seamless integration of PyQGIS with PyQt.
 
-**TODO:**
-   Getting PyQGIS to work (Manual compilation, Troubleshooting)
-
 There are several ways how to use QGIS python bindings, they are covered
 in detail in the following sections:
 
@@ -131,6 +128,12 @@ sources of plugins.
 
 Creating plugins in Python is simple, see :ref:`developing_plugins` for detailed
 instructions.
+
+.. note::
+
+    Python plugins are also available in |qg| server (:ref:`label_qgisserver`),
+    see :ref:`server_plugins` for further details.
+
 
 .. index::
   pair: Python; custom applications
