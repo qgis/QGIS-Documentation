@@ -9,10 +9,10 @@ This section summarizes various actions that can be done with vector layers.
 .. index::
   triple: vector layers; features; attributes
 
-Retrieving informations about attributes
+Retrieving information about attributes
 ========================================
 
-You can retrieve informations about the fields associated with a vector layer
+You can retrieve information about the fields associated with a vector layer
 by calling :func:`pendingFields` on a :class:`QgsVectorLayer` instance::
 
     # "layer" is a QgsVectorLayer instance
@@ -192,7 +192,7 @@ iterator returns all features, but returns partial data for each of them.
 .. tip::
 
     If you only need a subset of the attributes or you don't need the geometry
-    informations, you can significantly increase the **speed** of the features
+    information, you can significantly increase the **speed** of the features
     request by using ``QgsFeatureRequest.NoGeometry`` flag or specifying a subset
     of attributes (possibly empty) like shown in the example above.
 
