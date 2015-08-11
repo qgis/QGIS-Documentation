@@ -2,20 +2,21 @@
 
 .. _server_plugins:
 
-*************************
-Server Python Plugins
-*************************
+****************************
+QGIS Server Python Plugins
+****************************
 
-Python plugins can also run on |qg| Server (see: :ref:`label_qgisserver`), by having a
-*server interface* a Python plugin running on the server can alter the behavior of existing
-core services (**WMS**, **WFS** etc.) by altering input parameters, changind the output
-or even by providing new services.
+Python plugins can also run on |qg| Server (see: :ref:`label_qgisserver`): by using the
+*server interface* (:class:`QgsServerInterface`) a Python plugin running on the
+server can alter the behavior of existing core services (**WMS**, **WFS** etc.)
+by changing the input parameters, changing the generated output or even by
+providing new services.
 
 
 Server Plugins architecture
 ===========================================
 
-Server python plugins are loaded once when the FCGI application starts and they
+Server python plugins are loaded once when the FCGI application starts. They
 register one or more :class:`QgsServerFilter` (from this point, you might
 find useful a quick look to the `server plugins API docs <http://qgis.org/api/group__server.html>`_).
 Each filter should implement at least one of three callbacks:
@@ -41,6 +42,9 @@ Here is a pseudo code showing a typical server session and when the filter’s c
         * call plugins :func:`responseComplete` filters
     * call plugins :func:`sendResponse` filters
     * request handler output the response
+
+
+The following paragraphs describe the available callbacks in details.
 
 requestReady
 ---------------------------------------
