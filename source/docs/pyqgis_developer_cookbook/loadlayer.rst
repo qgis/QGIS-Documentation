@@ -155,6 +155,15 @@ providers:
     uri = 'http://localhost:8080/geoserver/wfs?' + urllib.unquote(urllib.urlencode(params))
 
 
+.. note::
+
+    You can change the data source of an existing layer by calling :func:`setDataSource()`
+    on a :class:`QgsVectorLayer` instance, as in the following example::
+
+        # layer is a vector layer, uri is a QgsDataSourceURI instance
+        layer.setDataSource(uri.uri(), "layer_name_you_like", "postgres")
+        
+
 Raster Layers
 =============
 
@@ -238,5 +247,3 @@ For a list of loaded layers and layer ids, use
 
   QgsMapLayerRegistry.instance().mapLayers()
 
-**TODO:**
-   More about map layer registry?

@@ -1,5 +1,7 @@
 |updatedisclaimer|
 
+.. index:: QGIS Server; WMS Server; WFS Server; WCS Server
+
 .. _`label_qgisserver`:
 
 
@@ -508,6 +510,8 @@ FORMAT_OPTIONS Parameters:
 * LAYERSATTRIBUTES:yourcolumn_with_values_to_be_used_for_dxf_layernames - if not specified, the original QGIS layer names are used
 
 
+.. index::
+    pair: logging; QGIS Server
 
 |qg| Server logging
 ----------------------------------
@@ -533,6 +537,9 @@ To log requests send to server, set the following environment variables:
     * When using Fcgid module use FcgidInitialEnv instead of SetEnv!
     * Server logging is enabled also if executable is compiled in release mode.
 
+
+.. index::
+    pair: environment; QGIS Server
 
 Environment variables
 ---------------------------------
