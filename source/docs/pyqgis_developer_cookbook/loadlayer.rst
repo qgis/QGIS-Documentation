@@ -32,7 +32,7 @@ The quickest way to open and display a vector layer in QGIS is the addVectorLaye
 
 ::
 
-  layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
+  layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
   if not layer:
     print "Layer failed to load!"
 
@@ -49,7 +49,7 @@ providers:
 
   ::
 
-    vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
+    vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
 
 .. index::
   pair: loading; PostGIS layers
@@ -68,7 +68,7 @@ providers:
     # subset (WHERE clause)
     uri.setDataSource("public", "roads", "the_geom", "cityid = 2643")
 
-    vlayer = QgsVectorLayer(uri.uri(), "layer_name_you_like", "postgres")
+    vlayer = QgsVectorLayer(uri.uri(), "layer name you like", "postgres")
 
 .. index::
   pair: loading; delimited text layers
@@ -80,7 +80,7 @@ providers:
   ::
 
     uri = "/some/path/file.csv?delimiter=%s&xField=%s&yField=%s" % (";", "x", "y")
-    vlayer = QgsVectorLayer(uri, "layer_name_you_like", "delimitedtext")
+    vlayer = QgsVectorLayer(uri, "layer name you like", "delimitedtext")
 
   Note: from QGIS version 1.7 the provider string is structured as a URL, so
   the path must be prefixed with *file://*. Also it allows WKT (well known
@@ -101,7 +101,7 @@ providers:
   ::
 
     uri = "path/to/gpx/file.gpx?type=track"
-    vlayer = QgsVectorLayer(uri, "layer_name_you_like", "gpx")
+    vlayer = QgsVectorLayer(uri, "layer name you like", "gpx")
 
 .. index::
   pair: loading; SpatiaLite layers
@@ -131,7 +131,7 @@ providers:
   ::
 
     uri = "MySQL:dbname,host=localhost,port=3306,user=root,password=xxx|layername=my_table"
-    vlayer = QgsVectorLayer( uri, "my_table", "ogr" )
+    vlayer = QgsVectorLayer( uri, "my table", "ogr" )
 
 .. index::
   pair: raster layers; loading
@@ -141,7 +141,7 @@ providers:
   ::
 
     uri = "http://localhost:8080/geoserver/wfs?srsname=EPSG:23030&typename=union&version=1.0.0&request=GetFeature&service=WFS",
-    vlayer = QgsVectorLayer(uri, "my_wfs_layer", "WFS")
+    vlayer = QgsVectorLayer(uri, "my wfs layer", "WFS")
 
   The uri can be created using the standard ``urllib`` library:
 
@@ -163,7 +163,7 @@ providers:
     on a :class:`QgsVectorLayer` instance, as in the following example: ::
 
         # layer is a vector layer, uri is a QgsDataSourceURI instance
-        layer.setDataSource(uri.uri(), "layer_name_you_like", "postgres")
+        layer.setDataSource(uri.uri(), "layer name you like", "postgres")
         
 
 Raster Layers
@@ -190,7 +190,7 @@ Similarly to vector layers, raster layers can be loaded using the addRasterLayer
 
 ::
 
-  iface.addRasterLayer("/path/to/raster/file.tif", "layer_name_you_like")
+  iface.addRasterLayer("/path/to/raster/file.tif", "layer name you like")
 
 This creates a new layer and adds it to the map layer registry (making it appear in the layer list) in one step.
 
@@ -202,7 +202,7 @@ Raster layers can also be created from a WCS service:
     uri = QgsDataSourceURI()
     uri.setParam('url', 'http://demo.mapserver.org/cgi-bin/wcs')
     uri.setParam("identifier", layer_name)
-    rlayer = QgsRasterLayer(str(uri.encodedUri()), 'my_wcs_layer', 'wcs')
+    rlayer = QgsRasterLayer(str(uri.encodedUri()), 'my wcs layer', 'wcs')
 
 detailed URI settings can be found in `provider
 documentation <https://github.com/qgis/QGIS/blob/master/src/providers/wcs/URI>`_
