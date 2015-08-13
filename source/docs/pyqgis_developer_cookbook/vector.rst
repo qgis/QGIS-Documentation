@@ -9,7 +9,7 @@ This section summarizes various actions that can be done with vector layers.
 .. index::
   triple: vector layers; features; attributes
 
-Retrieving information about attributesbu
+Retrieving information about attributes
 ========================================
 
 You can retrieve information about the fields associated with a vector layer
