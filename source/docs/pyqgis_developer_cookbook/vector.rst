@@ -379,11 +379,11 @@ have the changes stored immediately, then you will have easier work by
   # ... call layer's editing methods ...
 
   if problem_occurred:
-      layer.destroyEditCommand()
-     return
+    layer.destroyEditCommand()
+    return
 
   # ... more editing ...
-
+  
   layer.endEditCommand()
 
 The :func:`beginEditCommand` will create an internal "active" command and will
@@ -393,14 +393,13 @@ it from GUI. In case something went wrong while doing the changes, the
 :func:`destroyEditCommand` method will remove the command and rollback all
 changes done while this command was active.
 
-To start editing mode, there is :func:`startEditing` method, to stop editing
-there are :func:`commitChanges` and :func:`rollback()` --- however normally
+To start editing mode, there is :func:`startEditing()` method, to stop editing
+there are :func:`commitChanges()` and :func:`rollBack()` --- however normally
 you should not need these methods and leave this functionality to be triggered
 by the user.
 
-You can also use the :func:`edit()` function inside a `with` statement 
-to wrap commit and rollback into a more semantic code block as shown in the 
-example below:
+You can also use the :func:`with edit(layer)`-statement to wrap commit and rollback into
+a more semantic code block as shown in the example below:
 
 ::
 
@@ -410,9 +409,9 @@ example below:
     layer.updateFeature(f)
 
 
-This will automatically call commitChanges() in the end.
-If any exception occurs, it will rollBack() all the changes.
-
+This will automatically call :func:`commitChanges()` in the end.
+If any exception occurs, it will :func:`rollBack()` all the changes.
+In case a problem is encountered within :func:`commitChanges()` (when the method returns False) a :class:`QgsEditError` exception will be raised.
 
 .. index:: spatial index; using
 
