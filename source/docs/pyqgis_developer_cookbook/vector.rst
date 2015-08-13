@@ -398,7 +398,7 @@ there are :func:`commitChanges()` and :func:`rollBack()` --- however normally
 you should not need these methods and leave this functionality to be triggered
 by the user.
 
-You can also use the :func:`with edit(layer)`-statement to wrap commit and rollback into
+You can also use the :code:`with edit(layer)`-statement to wrap commit and rollback into
 a more semantic code block as shown in the example below:
 
 ::
