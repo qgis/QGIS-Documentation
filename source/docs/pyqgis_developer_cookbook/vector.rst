@@ -9,7 +9,7 @@ This section summarizes various actions that can be done with vector layers.
 .. index::
   triple: vector layers; features; attributes
 
-Retrieving information about attributes
+Retrieving information about attributesbu
 ========================================
 
 You can retrieve information about the fields associated with a vector layer
@@ -397,6 +397,21 @@ To start editing mode, there is :func:`startEditing` method, to stop editing
 there are :func:`commitChanges` and :func:`rollback()` --- however normally
 you should not need these methods and leave this functionality to be triggered
 by the user.
+
+You can also use the :func:`edit()` function inside a `with` statement 
+to wrap commit and rollback into a more semantic code block as shown in the 
+example below:
+
+::
+
+  with edit(layer):
+    f = layer.getFeatures().next()
+    f[0] = 5
+    layer.updateFeature(f)
+
+
+This will automatically call commitChanges() in the end.
+If any exception occurs, it will rollBack() all the changes.
 
 
 .. index:: spatial index; using
