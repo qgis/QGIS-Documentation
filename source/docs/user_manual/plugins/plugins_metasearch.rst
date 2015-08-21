@@ -9,7 +9,7 @@ MetaSearch Catalogue Client
   :scale: 100%
   :alt: MetaSearch
   :align: right
-  :target: http://geopython.github.io/MetaSearch
+  :target: https://hub.qgis.org/wiki/MetaSearch
 
 Introduction
 ------------
