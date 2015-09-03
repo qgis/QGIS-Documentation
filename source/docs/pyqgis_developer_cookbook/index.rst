@@ -26,3 +26,5 @@ PyQGIS Developer Cookbook
    releasing
    snippets
    network_analysis
+   server
+

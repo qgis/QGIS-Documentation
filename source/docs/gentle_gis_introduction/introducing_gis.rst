@@ -394,8 +394,6 @@ Further reading
 **Book:** Desktop GIS: Mapping the Planet with Open Source Tools. **Author:** Gary
 Sherman. **ISBN:** 9781934356067
 
-**Website:** http://www.gisdevelopment.net/tutorials/tuman006.htm
-
 The QGIS User Guide also has more detailed information on working with QGIS.
 
 What's next?

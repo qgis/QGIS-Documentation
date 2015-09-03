@@ -201,7 +201,7 @@ htmlhelp_basename = 'QGISWebsitedoc'
 
 rst_prolog = """
 .. role:: disclaimer
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org for QGIS 2.8 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.8 for QGIS 2.8 docs and translations.`
 """
 
 rst_epilog = """
@@ -247,6 +247,12 @@ rst_epilog = """
 .. |mIconColorSwatches| image:: /static/common/mIconColorSwatches.png
    :width: 1.5em
 .. |mIconColorWheel| image:: /static/common/mIconColorWheel.png
+   :width: 1.5em
+.. |mIconImport| image:: /static/common/mIconImport.gif
+   :width: 1.5em
+.. |mIconRasterGroup| image:: /static/common/mIconRasterGroup.png
+   :width: 1.5em
+.. |mIconRasterLink| image:: /static/common/mIconRasterLink.png
    :width: 1.5em
 .. |columnview|  image:: /static/common/columnview.png
    :width: 1.5em

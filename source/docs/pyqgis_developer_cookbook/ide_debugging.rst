@@ -15,7 +15,7 @@ settings and use the same libraries and interpreter as QGIS. The fastest
 way to do this, is to modify the startup batch file of QGIS.
 
 If you used the OSGeo4W Installer, you can find this under the bin folder
-of your OSGoeW install. Look for something like
+of your OSGeo4W install. Look for something like
 :file:`C:\\OSGeo4W\\bin\\qgis-unstable.bat`.
 
 For using `Pyscripter IDE <http://code.google.com/p/pyscripter>`_, here's what
@@ -25,7 +25,7 @@ you have to do:
 * Open it in an editor. And remove the last line, the one that starts QGIS.
 * Add a line that points to the your Pyscripter executable and add the
   commandline argument that sets the version of Python to be used (2.7 in the
-  case of QGIS 2.0)
+  case of QGIS >= 2.0)
 * Also add the argument that points to the folder where Pyscripter can
   find the Python dll used by QGIS, you can find this under the bin folder
   of your OSGeoW install
@@ -43,15 +43,15 @@ you have to do:
 Now when you double click this batch file it will start Pyscripter, with the
 correct path.
 
-More popular that Pyscripter, Eclipse is a common choice among developers. In
+More popular than Pyscripter, Eclipse is a common choice among developers. In
 the following sections, we will be explaining how to configure it for
 developing and testing plugins. To prepare your environment for using Eclipse
 in Windows, you should also create a batch file and use it to start Eclipse.
 
 To create that batch file, follow these steps.
 
-* Locate the folder where file:`qgis_core.dll` resides in. Normally this is
-  :file:`C:\OSGeo4W\apps\qgis\bin`, but if you compiled your own QGIS
+* Locate the folder where :file:`qgis_core.dll` resides in. Normally this is
+  :file:`C:\\OSGeo4W\\apps\\qgis\\bin`, but if you compiled your own QGIS
   application this is in your build folder in :file:`output/bin/RelWithDebInfo`
 * Locate your :file:`eclipse.exe` executable.
 * Create the following script and use this to start eclipse when developing
@@ -73,7 +73,7 @@ To use Eclipse, make sure you have installed the following
 
 * Eclipse
 * Aptana Eclipse Plugin or PyDev
-* QGIS 2.0
+* QGIS 2.x
 
 Preparing QGIS
 --------------
@@ -105,7 +105,7 @@ Now right click your new project and choose :menuselection:`New --> Folder`.
 
 Click **[Advanced]** and choose :guilabel:`Link to alternate location
 (Linked Folder)`. In case you already have sources you want to debug, choose
-these, in case you don't, create a folder as it was already explained
+these. In case you don't, create a folder as it was already explained.
 
 Now in the view :guilabel:`Project Explorer`, your source tree pops up and you
 can start working with the code. You already have syntax highlighting and all
@@ -192,10 +192,10 @@ trailing ``/qgis/__init__.pyc`` from this path and you've got the path you are
 looking for.
 
 You should also add your plugins folder here (on Linux it is
-:file:`~/.qgis/python/plugins`).
+:file:`~/.qgis2/python/plugins`).
 
 Next jump to the *Forced Builtins* tab, click on *New...* and enter ``qgis``.
-This will make Eclipse parse the QGIS API. You probably also want eclipse to
+This will make Eclipse parse the QGIS API. You probably also want Eclipse to
 know about the PyQt4 API. Therefore also add PyQt4 as forced builtin. That
 should probably already be present in your libraries tab.
 

@@ -737,3 +737,82 @@ Console usage
 See also
 ........
 
+
+Gage Watershed
+--------------
+
+Description
+...........
+
+Calculates Gage Watersheds Grid. Each grid cell is labeled with the identifier
+(from column ``id``) of the gage to which it drains directly without passing
+through any other gages.
+
+Parameters
+..........
+
+``D8 Flow Directions Grid`` [raster]
+  A grid of D8 flow directions which are defined, for each cell, as the
+  direction of the one of its eight adjacent or diagonal neighbors with the
+  steepest downward slope. This grid can be obtained as the output of the
+  **"D8 Flow Directions"** tool.
+
+``Gages Shapefile`` [vector: point]
+  A point shapefile defining the gages to which watersheds will be delineated.
+  This shapefile should have a colmun ``id``. Grid cells draining directly to
+  each point in this shapefile will be labeled with this id.
+
+Outputs
+.......
+
+``Gage Watershed Grid`` [raster]
+  A grid identifies each gage watershed. Each grid cell is labeled with the
+  identifier (from column ``id``) of the gage to which it drains directly
+  without passing through any other gages.
+
+``Downstream Identifiers File`` [file]
+  Text file giving watershed downslope connectivity
+
+Console usage
+.............
+
+::
+
+  processing.runalg('taudem:gagewatershed2', -p, -o, -gw, -id)
+
+See also
+........
+
+
+Topographic Wetness Index
+-------------------------
+
+Description
+...........
+
+<put algortithm description here>
+
+Parameters
+..........
+
+``D-Infinity Specific Catchment Area Grid`` [raster]
+  <put parameter description here>
+
+``D-Infinity Slope Grid`` [raster]
+  <put parameter description here>
+
+Outputs
+.......
+
+``Topographic Wetness Index Grid`` [raster]
+  <put output description here>
+
+Console usage
+.............
+
+::
+
+  processing.runalg('taudem:topographicwetnessindex', -sca, -slp, -twi)
+
+See also
+........

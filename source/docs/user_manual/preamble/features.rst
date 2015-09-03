@@ -46,7 +46,7 @@ friendly GUI. The many helpful tools available in the GUI include:
 *  Annotation tools
 *  Identify/select features
 *  Edit/view/search attributes
-*  Data-defined feature labeling
+*  Data-defined feature labelling
 *  Data-defined vector and raster symbology tools
 *  Atlas map composition with graticule layers
 *  North arrow scale bar and copyright label for maps
@@ -173,7 +173,7 @@ You can see all current ulimit info by typing ::
 
     user@host:~$ ulimit -aS
 
-You can see the current allowed number of opened files per proccess
+You can see the current allowed number of opened files per process
 with the following command on a console ::
 
     user@host:~$ ulimit -Sn

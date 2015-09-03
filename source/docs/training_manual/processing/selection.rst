@@ -1,16 +1,14 @@
 Selection
 ============================================================
 
-
 .. note:: In this lesson we will see how processing algorithms handle selections in vector layers that are used as inputs, and how to create a selection using a particular type of algorithm.
-
 
 Unlike other analysis plugins in QGIS, you will not find in processing geoalgorithms any "Use only selected features" checkbox or similar. The behaviour regarding selection is set for the whole plugin and all its algorithms, and not for each algorithm execution. Algorithms follow the following simple rules when using a vector layer.
 
 - If the layer has a selection, only selected features are used.
 - If there is no selection, all features are used.
 
-Please note that you can change this behaviour by ubselecting the relevant option in the :menuselection:`Processing --> Options --> General` menu.
+Please note that you can change this behaviour by unselecting the relevant option in the :menuselection:`Processing --> Options --> General` menu.
 
 You can test that yourself by selecting a few points in any of the layers that we used in the last chapter, and running the reprojection algorithm on them. The reprojected layer that you will obtain will contain only those points that were selected, unless there was no selection, which will cause the resulting layer to contain all points from the original layer.
 

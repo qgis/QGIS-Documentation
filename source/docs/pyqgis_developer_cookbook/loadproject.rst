@@ -11,7 +11,7 @@ when developing a stand-alone QGIS Python application (see: :ref:`pythonapplicat
 .. index::
   pair: projects; loading
 
-To load a project into the current QGIS aplication you need a :class:`QgsProject`
+To load a project into the current QGIS application you need a :class:`QgsProject`
 :func:`instance()` object and call its :func:`read()` method passing to it a
 :class:`QFileInfo` object that contains the path from where the project will
 be loaded::
@@ -46,7 +46,7 @@ use to check if the operation was successful.
 
 .. note::
 
-   If you are inside a |QG| python console, in order to synchronise the loaded project with
+   If you are writing a |QG| standalone application, in order to synchronise the loaded project with
    the canvas you need to instanciate a :class:`QgsLayerTreeMapCanvasBridge` as in the example below::
 
       bridge = QgsLayerTreeMapCanvasBridge( \

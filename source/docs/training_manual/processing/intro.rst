@@ -5,7 +5,7 @@ This guide describes how to use QGIS processing framework. It assumes no previou
 
 This guide is designed for self-study or to be used for running a processing workshop.
 
-Examples in this guide use QGIS 2.0, with partil upgrades to 2.8. They might not work or not be available in versions other than that ones.
+Examples in this guide use QGIS 2.0, with partial upgrades to 2.8. They might not work or not be available in versions other than that ones.
 
 This guide is comprised of a set of small exercises of progressive complexity. If you have never used the processing framework, you should start from the very beginning. If you have some previous experience, feel free to skip lessons. They are more or less independent from each other, and each one introduces some new concept or some new element, which is indicated in the chapter title and the short introduction at the begining of each chapter. That should make it easy to locate lessons dealing with a particular topic.
 

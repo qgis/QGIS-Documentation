@@ -6,7 +6,7 @@ Introduction
 ============
 
 These are guidelines about general use of rst in QGIS documentation. The documentation will
-be build automatically on the server 0, 8am, 4pm PDT (Pacific Daylight Time). The current
+be built automatically on the server 0, 8am, 4pm PDT (Pacific Daylight Time). The current
 status is available at http://docs.qgis.org.
 
 See also: http://sphinx.pocoo.org/markup/inline.html or convention.rst file.

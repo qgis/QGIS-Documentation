@@ -135,7 +135,7 @@ parameters are used for calculations.
 ::
 
   d = QgsDistanceArea()
-  d.setProjectionsEnabled(True)
+  d.setEllipsoidalMode(True)
 
   print "distance in meters: ", d.measureLine(QgsPoint(10,10),QgsPoint(11,11))
 

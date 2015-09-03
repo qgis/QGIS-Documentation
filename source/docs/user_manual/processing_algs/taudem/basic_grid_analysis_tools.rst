@@ -517,3 +517,43 @@ Console usage
 See also
 ........
 
+
+Select GT Threshold
+-------------------
+
+Description
+...........
+
+Select only data values from a grid that are greater than a given threshold.
+The rest are converted to no data. This tool uses next logic
+
+::
+
+  if (dem <= thresh) then dem = NODATA
+
+Parameters
+..........
+
+``Elevation Grid`` [raster]
+  Input grid
+
+``Threshold`` [number]
+  Threshold value
+
+  Default: *0.0*
+
+Outputs
+.......
+
+``Output Grid`` [raster]
+  Output grid
+
+Console usage
+.............
+
+::
+
+  processing.runalg('taudem:selectgtthreshold', -z, -thresh, -t)
+
+See also
+........

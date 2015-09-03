@@ -15,10 +15,7 @@ for using SIP instead of more widely used SWIG is that the whole QGIS code
 depends on Qt libraries. Python bindings for Qt (PyQt) are done also using
 SIP and this allows seamless integration of PyQGIS with PyQt.
 
-**TODO:**
-   Getting PyQGIS to work (Manual compilation, Troubleshooting)
-
-There are several ways how to use QGIS python bindings, they are covered
+There are several ways how to use Python bindings in |qg| desktop, they are covered
 in detail in the following sections:
 
 * automatically run Python code when QGIS starts
@@ -26,19 +23,24 @@ in detail in the following sections:
 * create and use plugins in Python
 * create custom applications based on QGIS API
 
+
+Python bindings are also available for |qg| Server:
+
+* starting from 2.8 release, Python plugins are also available on |qg| Server (see: `Server Python Plugins <server_plugins>`_)
+* starting from 2.11 version (Master at 2015-08-11), |qg| Server library has Python bindings that can be used to embed |qg| Server into a Python application.
+
+
 .. index:: API
 
 There is a `complete QGIS API <http://qgis.org/api/>`_ reference that documents
 the classes from the QGIS libraries. Pythonic QGIS API is nearly identical
 to the API in C++.
 
-There are some resources about programming with PyQGIS on `QGIS blog <http://blog.qgis.org/>`_.
-See `QGIS tutorial ported to Python <http://blog.qgis.org/node/59.html>`_
-for some examples of simple 3rd party apps. A good resource when dealing
-with plugins is to download some plugins from `plugin repository <http://plugins.qgis.org/>`_
-and examine their code. Also, the ``python/plugins/`` folder in your QGIS installation contains
-some plugin that you can use to learn how to develop such plugin and how to perform some
-of the most common tasks
+A good resource when dealing with plugins is to download some plugins from
+`plugin repository <http://plugins.qgis.org/>`_ and examine their code.
+Also, the ``python/plugins/`` folder in your QGIS installation contains
+some plugin that you can use to learn how to develop such plugin and how to
+perform some of the most common tasks.
 
 .. index::
   pair: Python; startup
@@ -131,6 +133,12 @@ sources of plugins.
 
 Creating plugins in Python is simple, see :ref:`developing_plugins` for detailed
 instructions.
+
+.. note::
+
+    Python plugins are also available in |qg| server (:ref:`label_qgisserver`),
+    see :ref:`server_plugins` for further details.
+
 
 .. index::
   pair: Python; custom applications

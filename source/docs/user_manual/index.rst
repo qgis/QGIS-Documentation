@@ -1,6 +1,6 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not up-to-date with release
 
 .. _QGIS-manual-index-reference:
 
@@ -29,7 +29,7 @@ QGIS User Guide
     grass_integration/grass_integration
     processing/index
     processing_algs/index
-    print_composer/print_composer
+    print_composer/index
     plugins/plugins_index
     preamble/help_and_support
     appendices/appendices

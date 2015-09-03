@@ -33,7 +33,7 @@ different ways. Each plugin have some metadatas displayed in the right panel:
 
 * information if the plugin is experimental
 * description
-* rating vote(s) (you can vote for your prefered plugin!)
+* rating vote(s) (you can vote for your preferred plugin!)
 * tags
 * some useful links as the home page, tracker and code repository
 * author(s)

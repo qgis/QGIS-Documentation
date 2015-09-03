@@ -32,21 +32,23 @@ any other software. Running the algorithm, however, needs the application binari
 to be installed in your system.
 
 A note for Windows users
-........................
+------------------------
 
 If you are not an advanced user and you are running |qg| on Windows, you might
 not be interested in reading the rest of this chapter. Make sure you install
 |qg| in your system using the standalone installer. That will automatically
 install SAGA, GRASS and OTB in your system and configure them so they can be
 run from |qg|. All the algorithms in the simplified view of the toolbox will
-be ready to be run without needing any further configuration. If installing through OSGeo4W application, make sure you select for insttallation SAGA and OTB as well.
+be ready to be run without needing any further configuration. If installing
+through OSGeo4W application, make sure you select for insttallation SAGA and
+OTB as well.
 
 If you want to know more about how these providers work, or if you want to use some
 algorithms not included in the simplified toolbox (such as R scripts), keep on
 reading.
 
 A note on file formats
-......................
+----------------------
 
 When using an external software, opening a file in |qg| does not mean that it can
 be opened and processed as well in that other software. In most cases, other software can read
@@ -83,7 +85,7 @@ be added to set a default format. In the case of raster layers, the :file:`.tif`
 extension is used, while :file:`.shp` is used for vector layers.
 
 A note on vector layer selections
-.................................
+---------------------------------
 
 External applications may also be made aware of the selections that exist in vector layers
 within |qg|. However, that requires rewriting all input vector layers, just as
@@ -248,7 +250,7 @@ especially, ``sp``, is mandatory.
 The first lines, which start with a double Python comment sign (``##``), tell
 |qg| the inputs of the algorithm described in the file and the outputs that
 it will generate. They work with exactly the same syntax as the SEXTANTE scripts
-that we have already seen, so they will not be described here again. 
+that we have already seen, so they will not be described here again.
 
 When you declare an input parameter, |qg| uses that information for two
 things: creating the user interface to ask the user for the value of that
@@ -353,7 +355,7 @@ own scripts.
    make sure that the corresponding packages are installed in the R distribution
    used by |qg|. The processing framework will not take care of any package installation. If you
    run a script that requires a package that is not installed, the execution will fail, and
-   Processing will try to detect which packages are missing. You must install those
+   SEXTANTE will try to detect which packages are missing. You must install those
    missing libraries manually before you can run the algorithm.
 
 GRASS
@@ -400,7 +402,6 @@ Orfeo Toolbox (OTB) algorithms can be run from |qg| if you have OTB installed
 in your system and you have configured |qg| properly, so it can find all
 necessary files (command-line tools and libraries).
 
-
 As in the case of SAGA, OTB binaries are included in the stand-alone installer for
 Windows, but they are not included if you are runing Linux, so you have to download
 and install the software yourself. Please check the OTB website for more
@@ -425,25 +426,82 @@ are installed:
 TauDEM
 ------
 
-To use this provider, you need to install TauDEM command line tools.
+TauDEM (Terrain Analysis Using Digital Elevation Models) is a tools for the
+extraction and analysis of hydrologic information from Digital Elevation Models
+(DEM). TauDEM can be used from |qg| if you have it installed in your system and
+configured |qg| properly, so it can find all necessary files.
 
-Windows
-.......
+There are two versions of TauDEM tools: singlefile (TauDEM 5.0.6 or 5.1.2) and
+multifile (TauDEM 5.2.0). The difference between these versions in the supported
+inputs/outputs. Single files version accepts only single raster file and write
+single file as output. Multifile version accepts a directory with rasters and
+writes directory with rasters as output. Such directory should contain rasters
+that will be treated as a single DEM grid.
 
-Please visit the `TauDEM homepage <http://hydrology.usu.edu/taudem/taudem5.0/downloads.html>`_
-for installation instructions and precompiled binaries for 32-bit and 64-bit systems.
-**IMPORTANT**: You need TauDEM 5.0.6 executables. Version 5.2 is currently not
-supported.
+TauDEM Processing provider supports both single- and multifile versions of TauDEM
+and even allows to use them simultaneously.
 
-Linux
-.....
+.. note::
+   While TauDEM Processing provider supports TauDEM 5.0.6, 5.1.2 and 5.2.0 we
+   recomment to use 5.1.2 and/or 5.2.0 as this versions have some new tools
+   available, like Gage Watershed and TWI.
 
-There are no packages for most Linux distributions, so you should compile TauDEM
-by yourself. As TauDEM uses MPICH2, first install it using your favorite package
-manager. Alternatively, TauDEM works fine with Open MPI, so you can use it instead of MPICH2.
 
-Download TauDEM 5.0.6 `source code <http://hydrology.usu.edu/taudem/taudem5.0/TauDEM5PCsrc_506.zip>`_
-and extract the files in some folder.
+Installing TauDEM under Windows
+...............................
+
+Please visit the `TauDEM homepage <http://hydrology.usu.edu/taudem/taudem5/downloads.html>`_
+and download desired version of the precompiled binaries for your platform
+(32-bit or 64-bit), usually this is "Command Line Executables". Also you need
+to download `Microsoft HPC Pack 2012 MS-MPI <http://www.microsoft.com/en-us/download/details.aspx?id=36045>`_.
+First install Microsoft HPC Pack 2012 MS-MPI by runing :file:`mpi_x64.Msi` for
+64-bit platforms and :file:`mpi_x86.Msi` for 32-bit platforms.
+
+.. note::
+   If you want to use TauDEM 5.0.6
+
+
+Installing TauDEM under Linux
+.............................
+
+Unfortunately there are no packages for most Linux distributions, so you should
+compile TauDEM by yourself. As TauDEM uses MPI it is necessary to install first
+any MPI implementation e.g MPICH or OpenMPI. Use your favorite package manager
+to install MPICH or OpenMPI.
+
+Download TauDEM 5.2.0 source code package from `GitHub repository <https://github.com/dtarb/TauDEM/releases>`_
+and extract archive contents. Open terminal and cd into :file:`src` directory inside
+extacted folder. Create build directory and cd into it
+
+::
+
+    mkdir build
+    cd build
+
+Configure your build (change install prefix if necessary) and compile
+
+::
+
+   CXX=mpicxx cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
+   make
+
+When compilation finished install TauDEM tools by running
+
+::
+
+    sudo make install
+
+.. note::
+   Executable files will be installed into :file:`bin` subdirectory inside
+   prefix you specified at the configure stage. For example if you specified
+   prefix :file:`/opt/taudem5.2` than binaries will be installed into
+   :file:`/opt/taudem5.2/bin`.
+
+To use singlefile version --- download source package `here <http://hydrology.usu.edu/taudem/taudem5/TauDEM5PCsrc_512.zip>`_
+and perform abovementioned steps to compile and install it.
+
+Old TauDEM 5.0.6 also `available <http://hydrology.usu.edu/taudem/taudem5/downloads5.0.html>`_.
+But before compiling this version it is necessary to edit some source files.
 
 Open the :file:`linearpart.h` file, and after line
 
@@ -471,27 +529,59 @@ and replace quotes (``""``) with ``<>``, so you'll get
 
    #include <stdint.h>
 
-Save the changes and close the file. Create a build directory and cd into it
+Save the changes and close the file.
 
-::
+Now configure, compile and install TauDEM 5.0.6 using same commands as described
+above.
 
-   mkdir build
-   cd build
+Configuring TauDEM provider
+...........................
 
-Configure your build with the command
+Once TauDEM is installed, start |qg|, open the Processing options dialog from
+:menuselection:`Processing --> Options...` and configure the TauDEM algorithm
+provider. In the :guilabel:`Providers` group find :guilabel:`TauDEM (hydrologic analysis)`
+block, and expand it. Here you will see all settings related to TauDEM.
 
-::
+First, ensure that algorithms are enabled, and activate provider if necessary.
 
-   CXX=mpicxx cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
+Next step is to configure MPI. The :guilabel:`MPICH/OpenMPI bin directory`
+setting used to define location of the :file:`mpiexec` program. In most Linux
+distributions you can safely leave this empty, as :file:`mpiexec` available in
+your ``PATH``.
 
-and then compile
+The :guilabel:`Number of MPI parallel processes to use` is a second setting
+related to MPI. It defines number of processes that will be used to execute
+TauDEM commands. If you don't know which value to use, it is better to leave
+this value unchanged.
 
-::
+Now we need to configure the path to the folder(s) where TauDEM command-line
+tools are installed. As we already mention TauDEM provider supports both single-
+and multifile TauDEM, so there are two settings for TauDEM folders:
 
-   make
+* :guilabel:`TauDEM command line tools folder` used to set location of the
+  singlefile tools
+* :guilabel:`TauDEM multifile command line tools folder` used to set location
+  of the multifile tools
 
-Finally, to install TauDEM into ``/usr/local/bin``, run
+If you have both TauDEM versions installed in different directories it is possible
+to specify both options.
 
-::
+The last step is to define which TauDEM version to use:
 
-   sudo make install
+* with :guilabel:`Enable multifile TauDEM tools` option checked you will use
+  multifile TauDEM tools from directory, specified in the
+  :guilabel:`TauDEM multifile command line tools folder`. Multifile tools have
+  same name as singlefile with "(multifile)" suffix added
+* with :guilabel:`Enable single TauDEM tools` option checked you will use
+  multifile TauDEM tools from directory, specified in the
+  :guilabel:`TauDEM command line tools folder`.
+
+It is possible to enable both tools simultaneously. In this case you will have
+two instances of each tool in toolbox and can use them in your analysis.
+
+**IMPORTANT!** Be careful with developing Processing models using TauDEM. As
+single- and multifile versions have different inputs, model created with
+singlefile algortihms will not work if only multifile algorithms are available.
+If you plan to share your model please specify which TauDEM version should be
+used or, better, provide two versions of your model: for single- and multifile
+TauDEM.

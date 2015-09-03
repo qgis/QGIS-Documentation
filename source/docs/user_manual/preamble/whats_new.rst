@@ -29,7 +29,7 @@ Application
     create your own Python custom functions in a comfortable way
   * in any spinbox of the style menu you can enter expressions and evaluate them immediately
   * a get and transform geometry function was added for using expressions
-  * a comment functionality was inserted if for example you want to work with data defined labeling
+  * a comment functionality was inserted if for example you want to work with data defined labelling
 * **Joins**: You can specify a custom prefix for joins
 * **Layer Legend**: Show rule-based renderer's legend as a tree
 * **DB Manager**: Run only the selected part of a SQL query

@@ -177,7 +177,7 @@ Currently, the following :guilabel:`Transformation types` are available:
    introduced to match source and destination ground control points. The most
    widely used polynomial algorithm is the second-order polynomial transformation,
    which allows some curvature. First-order polynomial transformation (affine)
-   preserves colliniarity and allows scaling, translation and rotation only.
+   preserves collinearity and allows scaling, translation and rotation only.
 *  The **Thin Plate Spline** (TPS) algorithm is a more modern georeferencing
    method, which is able to introduce local deformations in the data. This
    algorithm is useful when very low quality originals are being georeferenced.

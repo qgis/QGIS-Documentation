@@ -5,6 +5,7 @@ The processing log
 
 All the analysis performed with the processing framework is logged in its own logging system. This allows you to know more about what has been done with the processing tools, to solve problems when they happen, and also to re--run previous operations, since the logging system also implements some interactivity.
 
+.. warning:: The log has changed considerably in the current version.
 
 To open the log, select the corresponding entry in the processing menu. You will see the following dialog.
 
