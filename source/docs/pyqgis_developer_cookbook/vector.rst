@@ -519,7 +519,7 @@ There are two possibilities how to export a vector layer:
     writer = QgsVectorFileWriter("my_shapes.shp", "CP1250", fields, QGis.WKBPoint, None, "ESRI Shapefile")
 
     if writer.hasError() != QgsVectorFileWriter.NoError:
-        print "Error when creating shapefile: ", writer.hasError()
+        print "Error when creating shapefile: ",  w.errorMessage()
 
     # add a feature
     fet = QgsFeature()
@@ -527,7 +527,7 @@ There are two possibilities how to export a vector layer:
     fet.setAttributes([1, "text"])
     writer.addFeature(fet)
 
-    # delete the writer to flush features to disk (optional)
+    # delete the writer to flush features to disk
     del writer
 
 .. index:: memory provider
