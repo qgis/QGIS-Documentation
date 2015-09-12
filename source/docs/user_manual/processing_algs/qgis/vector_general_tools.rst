@@ -369,3 +369,38 @@ Console usage
 See also
 ........
 
+Oriented minimum bounding box
+-----------------------------
+
+Description
+...........
+
+Return an oriented minimum bounding Box layer by using the rotating calipers algorithm.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  <put parameter description here>
+
+``Calculate OMBB for each feature separately`` [boolean]
+  <put parameter description here>
+
+  Default: *True*
+
+Outputs
+.......
+
+``Oriented_MBBox`` [vector]
+  The resulting layer.
+
+Console usage
+.............
+
+::
+
+  processing.runalg("qgis:orientedminimumboundingbox", input , by_feature, output)
+
+See also
+........
+
