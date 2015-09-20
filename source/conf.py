@@ -362,8 +362,6 @@ rst_epilog = """
    :width: 1.5em
 .. |dem_analysis| image:: /static/common/dem.png
    :width: 1.5em
-.. |icon_sqlanywhere| image:: /static/common/sqlanywhere.png
-   :width: 1.5em
 .. |icon_newgpx| image:: /static/common/create_gpx.png
    :width: 1.5em
 .. |icon_dbmanager| image:: /static/common/dbmanager.png
