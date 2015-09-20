@@ -183,7 +183,7 @@ layer from the :guilabel:`terrestris` WMS server.
 
 Part of the difficulty of using WMS is finding a good (free) server.
 
-* Find a new WMS at `spatineo.com <http://www.spatineo.com/>`_ (or
+* Find a new WMS at `directory.spatineo.com <http://directory.spatineo.com/>`_ (or
   elsewhere online). It must not have associated fees or restrictions, and must
   have coverage over the |majorUrbanName| study area.
 
@@ -201,7 +201,7 @@ Using a WMS, you can add inactive maps as backdrops for your existing map data.
 |FR|
 -------------------------------------------------------------------------------
 
-- `spatineo.com <http://www.spatineo.com/>`_
+- `Spatineo Directory <http://directory.spatineo.com/>`_
 - `Geopole.org <http://geopole.org/>`_
 - `OpenStreetMap.org list of WMS servers
   <http://wiki.openstreetmap.org/wiki/WMS>`_
