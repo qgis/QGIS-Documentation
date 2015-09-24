@@ -346,7 +346,7 @@ will allow user to decide whether to commit/rollback and allows the usage of
 undo/redo. When committing changes, all changes from the editing buffer are
 saved to data provider.
 
-To find out whether a layer is in editing mode, use :func:`isEditing` --- the
+To find out whether a layer is in editing mode, use :func:`isEditable` --- the
 editing functions work only when the editing mode is turned on. Usage of
 editing functions
 
