@@ -133,13 +133,17 @@ available for this.
 Feature requests can be submitted as well using the same ticket system
 as for bugs. Please make sure to select the type ``Feature``.
 
-If you have found a bug and fixed it yourself, you can submit this
-patch also. Again, the lovely redmine ticketsystem at
+If you have found a bug and fixed it yourself, you can submit either a 
+Pull Request on the Github QGIS Project (prefered) or a patch also. 
+The lovely redmine ticketsystem at 
 http://hub.qgis.org/wiki/quantum-gis/issues has this type as well.
 Check the ``Patch supplied`` checkbox and attach your patch before
 submitting your bug. One of the developers will review it and apply it
 to |qg|. Please don't be alarmed if your patch is not applied straight
-away -- developers may be tied up with other commitments.
+away -- developers may be tied up with other commitments. 
+
+Note that if you supply a Pull Request, your change would be more 
+likely be merged into the source code!
 
 Blog 
 ====
