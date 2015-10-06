@@ -20,7 +20,7 @@ Parameters
   input raster file.
 
 ``Create also .prj file`` [boolean]
-  If this is activated also a *.prj-file containing the projection
+  If this is activated also a \*.prj-file containing the projection
   information is created.
 
   Default: *False*

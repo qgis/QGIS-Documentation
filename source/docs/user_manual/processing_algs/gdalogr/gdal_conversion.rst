@@ -130,7 +130,7 @@ Outputs
 .......
 
 ``Output layer`` [vector]
-  Output vector layer. Default format is *.shp .
+  Output vector layer. Default format is \*.shp. 
 
 Console usage
 .............

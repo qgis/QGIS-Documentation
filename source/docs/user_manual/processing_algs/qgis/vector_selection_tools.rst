@@ -74,7 +74,7 @@ Parameters
 ``Additional layer (intersection layer)`` [vector: any]
   <put parameter description here>
 
-``Predicate [array of Unicode strings]
+``Predicate`` [array of Unicode strings]
 Condition for the selection. Array of one or more of the following predicates:
 
 * disjoint
@@ -410,7 +410,7 @@ Parameters
 ``Additional layer (intersection layer)`` [vector: any]
   <put parameter description here>
 
-``Predicate [array of Unicode strings]
+``Predicate`` [array of Unicode strings]
 Condition for the selection. Array of one or more of the following predicates:
 
 * disjoint
