@@ -88,7 +88,7 @@ Data Defined Override Buttons
 -----------------------------
 
 There are several places where you can use a |mIconDataDefine| :sup:`Data Defined Override` 
-button to override the selected setting. These options are particularly usefull with Atlas Generation.
+button to override the selected setting. These options are particularly useful with Atlas Generation.
 
 For the following examples the `Regions` layer of the |qg| sample dataset is used and selected
 for Atlas Generation.

@@ -442,8 +442,8 @@ Parameters in the GetPrint request are:
 * <map_id>:EXTENT gives the extent for a composer map as xmin,ymin,xmax,ymax.
 * <map_id>:ROTATION map rotation in degrees
 * <map_id>:GRID_INTERVAL_X, <map_id>:GRID_INTERVAL_Y Grid line density for a composer map in x- and y-direction
-* <map_id>:SCALE Sets a mapscale to a composer map. This is usefull to ensure scale based visibility of layers and labels even if client and server may have different algorithms to calculate the scale denominator
-* <map_id>:LAYERS, <map_id>:STYLES possibility to give layer and styles list for composer map (usefull in case of overview maps which should have only a subset of layers)
+* <map_id>:SCALE Sets a mapscale to a composer map. This is useful to ensure scale based visibility of layers and labels even if client and server may have different algorithms to calculate the scale denominator
+* <map_id>:LAYERS, <map_id>:STYLES possibility to give layer and styles list for composer map (useful in case of overview maps which should have only a subset of layers)
 
 
 GetLegendGraphics request
