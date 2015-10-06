@@ -229,7 +229,7 @@ vector analysis tool: :menuselection:`Vector --> Geometry Tools --> Export/Add G
 Here, measurement is by default planimetric except if you choose the ellipsoidal measure.
 
 Measure length, areas and angles interactive
---------------------------------
+----------------------------------------------
 
 All measuring modules use the snapping settings from the digitizing module. This is useful, 
 if you want to measure along lines or areas in vector layers.
