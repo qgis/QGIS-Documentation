@@ -69,6 +69,13 @@ their syntax and some examples.
 * ``folder``. A folder
 * ``file``. A filename
 * ``crs``. A Coordinate Reference System
+* ``selection``. A dropdown menu that allows the user to select from
+  a pre-populated list. For example ``units=selection sq_km;sq_miles;sq_degrees``
+* ``name``. Name of the script. This will be displayed as the algorithm name in the
+  processing toolbox. For example ``My Algorithm Name=name``
+* ``group``. Folder name where the script will appear in the Processing Toolbox. 
+  For Example, adding ``Utils=groups`` will put the script within a ``Utils`` folder
+  within Scripts.
 
 The parameter name is the name that will be shown to the user when executing the
 algorithm, and also the variable name to use in the script code. The value entered
