@@ -10,13 +10,13 @@ We already know how to use the raster calculator to create new raster layers usi
 
 .. note:: In newer versions of Processing the interface has changed considerably, it's more powerful and easier to use.
 
-Here are a couple of examples of using that algorithm.
+Here are a few examples of using that algorithm.
 
 First, let's calculate the population density of white people in each polygon, which represents a census. We have two fields in the attributes table that we can use for that, namely ``WHITE`` and ``SHAPE_AREA``. We just have to divide them and multiply by one million (to have density per square km), so we can use the following formula in the corresponding field
 
 ::
 
-	( WHITE / SHAPE_AREA ) * 1000000
+	( "WHITE" / "SHAPE_AREA" ) * 1000000
 
 The parameters dialog should be filled as shown below.
 
@@ -30,7 +30,7 @@ Enter the following formula
 
 ::
 
-	"MALES"  /  "FEMALES" 
+	"MALES" / "FEMALES" 
 
 This time the parameters window should look like this before pressing the *OK* button. 
 

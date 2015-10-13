@@ -37,5 +37,5 @@ For instance, try the following. Open the data corresponding to the first chapte
 |hard| Advanced
 ---------------------
 
-You can also modify the algorithm. Just copy it, open the :menuselection:`Plugins --> Python console`, click on :menuselection:`Import class --> Import Processing class`, then paste it to re-run the analysis; change the text at will. To display the resulting file, type :kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', 'ogr')`.
+You can also modify the algorithm. Just copy it, open the :menuselection:`Plugins --> Python console`, click on :menuselection:`Import class --> Import Processing class`, then paste it to re-run the analysis; change the text at will. To display the resulting file, type :kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', 'ogr')`. Otherwise, you can use :kbd:`processing.runandload`.
 

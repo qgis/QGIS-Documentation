@@ -14,7 +14,7 @@ This algorithm, like the one from the previous lesson, just generates a single o
 - *X and Y fields*: these two parameters are linked to the first one. The corresponding selector will show the name of those fields that are available in the selected table. Select the *XCOORD* field for the *X* parameter, and the *YYCOORD* field for the *Y* parameter.
 - *CRS*: Since this algorithm takes no input layers, it cannot assign a CRS to the output layer based on them. Instead, it asks you to manually select the CRS that the coordinates in the table use. Click on the button on the left--hand side to open the QGIS CRS selector, and select EPSG:4326 as the output CRS. We are using this CRS because the coordinates in the table are in that CRS.
 
-Your dialog should look like this.
+Your dialog should look like this (you may need to zoom full to reenter the map around the newly created points).
 
 .. image:: img/second_alg/points_from_table.png
 
@@ -25,6 +25,8 @@ Now press the *Run* button to get the following layer:
 The next thing we need is the polygon layer. We are going to create a regular grid of polygons using the *Create grid* algorithm, which has the following parameters dialog.
 
 .. image:: img/second_alg/graticule_dialog.png
+
+.. warning:: The options are simpler in recent versions of QGIS; you just need to enter min and max for X and Y (suggested values: -5.696226,-5.695122,40.24742,40.248171)
 
 The inputs required to create the grid are all numbers. When you have to enter a numerical value, you have two options: typing it directly on the corresponding box or clicking the button on the right--hand side to get to a dialog like the one shown next.
 
@@ -44,8 +46,6 @@ In the end, you should have a parameters dialog like this:
 
 (Better add one spacing on the width and height: Horizontal spacing: 0.0001, Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: -5.695674, Center Y: 40.2477955)
 The case of X center is a bit tricky, see: -5.696126+(( -5.695222+ 5.696126)/2)
-
-.. warning:: The options are simpler in recent versions of QGIS; you just need to enter min and max for X and Y (suggested values: -5.696226,-5.695122,40.24742,40.248171)
 
 Press *Run* and you will get the graticule layer.
 
