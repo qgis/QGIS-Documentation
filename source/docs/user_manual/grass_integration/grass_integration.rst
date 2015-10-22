@@ -98,24 +98,19 @@ on location or mapset item in the browser and choosing :guilabel:`GRASS Options`
 Starting the GRASS plugin
 =========================
 
-To use GRASS functionalities and/or visualize GRASS vector and rastload_grassdataer layers in
-|qg|, you must select and load the GRASS plugin with the Plugin Manager.
+To use GRASS functionalities in |qg|, you must select and load the GRASS plugin with the Plugin Manager.
 Therefore, go to the menu :menuselection:`Plugins -->` |mActionShowPluginManager|
 :menuselection:`Manage Plugins`, select |checkbox| :guilabel:`GRASS` and click
 **[OK]**.
 
-The following main features are provided
-with the toolbar menu when you start the GRASS plugin, as described in section
-sec_starting_grass_:
+The following main features are provided with the toolbar menu when you start the GRASS plugin:
 
-* |grass_open_mapset| :sup:`Open mapset`
-* |grass_new_mapset| :sup:`New mapset`
-* |grass_close_mapset| :sup:`Close mapset`
-* |grass_new_vector_layer| :sup:`Create new GRASS vector`
-* |grass_edit| :sup:`Edit GRASS vector layer`
-* |grass_tools| :sup:`Open GRASS tools`
-* |grass_region| :sup:`Display current GRASS region`
-* |grass_region_edit| :sup:`Edit current GRASS region`
+* |grass_open_mapset| :sup:`Open Mapset`
+* |grass_new_mapset| :sup:`New Mapset`
+* |grass_close_mapset| :sup:`Close Mapset`
+* |grass_tools| :sup:`Open GRASS Tools`
+* |grass_region| :sup:`Display Current GRASS Region`
+* || :sup:`GRASS Options`
 
 Opening GRASS mapset
 ====================
@@ -368,22 +363,28 @@ used as the link to one key column in the database table.
 Creating a new GRASS vector layer
 =================================
 
-To create a new GRASS vector layer with the GRASS plugin, click the
-|grass_new_vector_layer| :sup:`Create new GRASS vector` toolbar icon.
-Enter a name in the text box, and you can start digitizing point, line or polygon
-geometries following the procedure described in section :ref:`grass_digitizing`.
+To create a new GRASS vector layer, select one of following items from mapset context 
+menu in the browser:
+
+  -  New Point Layer
+  -  New Line Layer
+  -  New Polygon Layer
+
+and enter a name in the dialog. A new vector map will be created and layer will be added
+to canvas and editing started. Selecting type of the layer does not restrict geometry 
+types which can be digitized in the vector map. In GRASS, it is possible to organize all sorts 
+of geometry types (point, line and polygon) in one vector map. The type is only used to add 
+the layer to the canvas, because |qg| requires a layer to have a specific type.
+
+It is also possible to add layers to existing vector maps selecting one of the items
+described above from context menu of existing vector map.
+
 
 In GRASS, it is possible to organize all sorts of geometry types (point, line and
 area) in one layer, because GRASS uses a topological vector model, so you don't
 need to select the geometry type when creating a new GRASS vector. This is
 different from shapefile creation with |qg|, because shapefiles use the Simple
 Feature vector model (see section :ref:`sec_create_vector`).
-
-.. tip:: **Creating an attribute table for a new GRASS vector layer**
-
-   If you want to assign attributes to your digitized geometry features, make
-   sure to create an attribute table with columns before you start digitizing
-   (see figure_grass_digitizing_5_).
 
 .. _grass_digitizing:
 
@@ -393,177 +394,107 @@ Digitizing and editing a GRASS vector layer
 .. index::
    single:GRASS;digitizing tools
 
-The digitizing tools for GRASS vector layers are accessed using the
-|grass_edit| :sup:`Edit GRASS vector layer` icon on the toolbar. Make sure you
-have loaded a GRASS vector and it is the selected layer in the legend before
-clicking on the edit tool. Figure figure_grass_digitizing_2_ shows the GRASS
-edit dialog that is displayed when you click on the edit tool. The tools and
-settings are discussed in the following sections.
+GRASS vector layers can be digitized using the standard |qg| digitizing tools. 
+There are however some particularities, which you should know about, due to 
+
+  - GRASS topological model versus QGIS simple feature
+  - complexity of GRASS model
+  
+    - multiple layers in single maps
+    - multiple geometry types in single map
+    - geometry sharing by multiple features from multiple layers
+
+The particularities are discussed in the following sections.    
+    
+**Save, discard changes, undo, redo**
+
+.. warning:: All the changes done during editing are immediately written to vector map and related attribute tables.
+
+However changes are written after each operation, it is whenever possible to do undo/redo 
+or discard all changes when closing editing. If undo or discard changes is used, original state
+is rewritten in vector map and attribute tables. 
+
+There are two main reasons for this behavior:
+
+  - It is the nature of GRASS vectors coming from conviction that user wants to do what he is
+    doing and it is better to have data saved when the work is suddenly interrupted (blackout 
+    for example)
+  - Necessity for effective editing of topological data is visualized information about topological
+    correctness, such information can only be acquired from GRASS vector map if changes are 
+    written to the map   
+    
+**Toolbar**
+
+The 'Digitizing Toolbar' has some specific tools when a GRASS layer is edited:
+
+.. _table_grass_digitizing_1:
+
++-------------------------+---------------------+---------------------------------------------+
+| Icon                    | Tool                | Purpose                                     |
++=========================+=====================+=============================================+
+| |mActionCapturePoint|   | New Point           | Digitize new point                          |
++-------------------------+---------------------+---------------------------------------------+
+| |mActionCaptureLine|    | New Line            | Digitize new line                           |
++-------------------------+---------------------+---------------------------------------------+
+| |mActionCaptureBoundary|| New Boundary        | Digitize new boundary                       |
++-------------------------+---------------------+---------------------------------------------+
+| |mActionCaptureCentroid|| New Centroid        | Digitize new centroid (label existing area) |
++-------------------------+---------------------+---------------------------------------------+
+| |mActionCapturePolygon| | New Closed Boundary | Digitize new closed boundary                |
++-------------------------+---------------------+---------------------------------------------+
+
+
+Table GRASS Digitizing 1: GRASS Digitizing Tools
 
 .. tip:: **Digitizing polygons in GRASS**
 
    If you want to create a polygon in GRASS, you first digitize the boundary of
-   the polygon, setting the mode to 'No category'. Then you add a centroid
-   (label point) into the closed boundary, setting the mode to 'Next not used'.
+   the polygon. Then you add a centroid (label point) into the closed boundary.
    The reason for this is that a topological vector model links the attribute information of
    a polygon always to the centroid and not to the boundary.
 
-.. _label_grasstoolbar:
+   
+**Category**
 
-**Toolbar**
+Category, offten called cat, is sort of ID. The name comes from times when GRASS vectors
+had only singly attribute "category". Category is used as a link between geometry and attributes.
+A single geometry may have multiple categories and thus represent multiple features in different
+layers. Currently it is possible to assign only one category per layer using |qg| editing tools.
+New features have automatically assigned new unique category, except boundaries. 
+Boundaries usually only form areas and do not represent linear features, it is however 
+possible to define attributes for a boundary later, for example in different layer.
 
-In figure_grass_digitizing_1_, you see the GRASS digitizing toolbar icons provided
-by the GRASS plugin. Table table_grass_digitizing_1_ explains the available
-functionalities.
+New categories are always created only in currently being edited layer.
 
-.. _figure_grass_digitizing_1:
+However it is not possible to assign more categories to geometry using QGIS editing,
+such data are properly represented as multiple features, and individual features,
+even from different layers, may be deleted.
 
-.. only:: html
-
-   **Figure GRASS digitizing 1:**
-
-.. figure:: /static/user_manual/grass_integration/grass_digitizing_toolbar.png
-   :align: center
-
-   GRASS Digitizing Toolbar
-
-.. _table_grass_digitizing_1:
-
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| Icon                   | Tool            | Purpose                                                                                           |
-+========================+=================+===================================================================================================+
-| |grass_new_point|      | New Point       | Digitize new point                                                                                |
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_new_line|       | New Line        | Digitize new line                                                                                 |
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_new_boundary|   | New Boundary    | Digitize new boundary (finish by selecting new tool)                                              |
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_new_centroid|   | New Centroid    | Digitize new centroid (label existing area)                                                       |
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_move_vertex|    | Move vertex     | Move one vertex of existing line or boundary and identify new position                            |
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_add_vertex|     | Add vertex      | Add a new vertex to existing line                                                                 |
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_delete_vertex|  | Delete vertex   | Delete vertex from existing line (confirm selected vertex by another click)                       |
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_move_line|      | Move element    | Move selected boundary, line, point or centroid and click on new position                         |
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_split_line|     | Split line      | Split an existing line into two parts                                                             |
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_delete_line|    | Delete element  | Delete existing boundary, line, point or centroid (confirm selected element by another click)     |
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_edit_attributes|| Edit attributes | Edit attributes of selected element (note that one element can represent more features, see above)|
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-| |grass_close_edit|     | Close           | Close session and save current status (rebuilds topology afterwards)                              |
-+------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-
-Table GRASS Digitizing 1: GRASS Digitizing Tools
-
-
-**Category Tab**
+**Editing style**
 
 .. index::
-   single:GRASS;category settings
+   single:GRASS;style
+   
+The topological symbology is essential for effective editing of topological data. When editing 
+starts, a specialized 'GRASS Edit' renderer is set on the layer automatically and original renderer
+is restored when editing is closed. The style may be customized in layer properties 'Style' tab.
+The style can also be stored in project file or in separate file as any other style. 
+If you customize the style, do not change its name, because it is used to reset the style 
+when editing is started again.
 
-The :guilabel:`Category` tab allows you to define the way in which the category
-values will be assigned to a new geometry element.
+.. warning:: Do not save project file when the layer is edited, the layer would be stored with 'Edit Style' which has no meaning if layer is not edited.
 
-.. _figure_grass_digitizing_2:
+The style is based on topologycal information which is temporarily added to attribute table 
+as field 'topo_symbol'. The field is automatically removed when editing is closed.
 
-.. only:: html
+.. warning:: Do not remove 'topo_symbol' field from attribute table, that would make features invisible because the renderer is based on that column.
 
-   **Figure GRASS digitizing 2:**
+**Snapping**
 
-.. figure:: /static/user_manual/grass_integration/grass_digitizing_category.png
-   :align: center
+.. tip::
+  
+   To form an area, vertices of connected boundaries must have EXACTLY the same coordinates. This can be achieved using snapping tool only if canvas and vector map have the same CRS. Otherwise, due conversion from map coordinates to canvas and back, the coordinate may become slightly different due to representation error and CRS transformations.
 
-   GRASS Digitizing Category Tab
-
-* **Mode**: The category value that will be applied to new geometry elements.
-
-  -  Next not used - Apply next not yet used category value to geometry element.
-  -  Manual entry - Manually define the category value for the geometry element
-     in the 'Category' entry field.
-  -  No category - Do not apply a category value to the geometry element. This is
-     used, for instance, for area boundaries, because the category values are connected via
-     the centroid.
-
-* **Category** - The number (ID) that is attached to each digitized geometry element.
-  It is used to connect each geometry element with its attributes.
-* **Field (layer)** - Each geometry element can be connected with several
-  attribute tables using different GRASS geometry layers. The default layer number
-  is 1.
-
-.. tip:: **Creating an additional GRASS 'layer' with |qg|**
-
-   If you would like to add more layers to your dataset, just add a new number
-   in the 'Field (layer)' entry box and press return. In the Table tab, you can
-   create your new table connected to your new layer.
-
-.. _label_settingtab:
-
-**Settings Tab**
-
-.. index::
-   single:GRASS;snapping tolerance
-
-The :guilabel:`Settings` tab allows you to set the snapping in screen pixels.
-The threshold defines at what distance new points or line ends are snapped to
-existing nodes. This helps to prevent gaps or dangles between boundaries. The
-default is set to 10 pixels.
-
-.. _figure_grass_digitizing_3:
-
-.. only:: html
-
-   **Figure GRASS digitizing 3:**
-
-.. figure:: /static/user_manual/grass_integration/grass_digitizing_settings.png
-   :align: center
-
-   GRASS Digitizing Settings Tab
-
-**Symbology Tab**
-
-.. index::
-   single:GRASS;symbology settings
-
-The :guilabel:`Symbology` tab allows you to view and set symbology and color
-settings for various geometry types and their topological status (e.g., closed
-/ opened boundary).
-
-.. _figure_grass_digitizing_4:
-
-.. only:: html
-
-   **Figure GRASS digitizing 4:**
-
-.. figure:: /static/user_manual/grass_integration/grass_digitizing_symbology.png
-   :align: center
-
-   GRASS Digitizing Symbology Tab
-
-
-**Table Tab**
-
-.. index::
-   single:GRASS;table editing
-
-The :guilabel:`Table` tab provides information about the database table for a
-given 'layer'. Here, you can add new columns to an existing attribute table, or
-create a new database table for a new GRASS vector layer (see section
-:ref:`creating_new_grass_vectors`).
-
-.. _figure_grass_digitizing_5:
-
-.. only:: html
-
-   **Figure GRASS digitizing 5:**
-
-.. figure:: /static/user_manual/grass_integration/grass_digitizing_table.png
-   :align: center
-
-   GRASS Digitizing Table Tab
 
 .. tip:: **GRASS Edit Permissions**
 
@@ -593,13 +524,10 @@ canvas using the |grass_region| :sup:`Display current GRASS region` button.
 .. index::
    single:GRASS;region display
 
-With the |grass_region_edit| :sup:`Edit current GRASS region` icon, you can open
-a dialog to change the current region and the symbology of the GRASS region
-rectangle in the |qg| canvas. Type in the new region bounds and resolution, and
-click **[OK]**. The dialog also allows you to select a new region interactively with your
-mouse on the |qg| canvas. Therefore, click with the left mouse button in the |qg|
-canvas, open a rectangle, close it using the left mouse button again and click
-**[OK]**.
+The region can be modified in 'Region' tab in 'GRASS Tolls' dock widget.
+Type in the new region bounds and resolution, and click **[Apply]**. 
+If you click on **[Select the extent by dragging on canvas]** you can select 
+a new region interactively with your mouse on the |qg| canvas dragging a rectangle.
 
 .. index::
    single:GRASS;region editing
