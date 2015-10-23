@@ -6,7 +6,7 @@
 The QGIS processing guide
 ==========================================
 
-This module contributed by Victor Olaya.
+This module contributed by Victor Olaya and Paolo Cavallini.
 
 Contents:
 
