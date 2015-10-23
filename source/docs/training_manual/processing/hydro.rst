@@ -13,7 +13,7 @@ The first thing is to load the project with the lesson data, which just contains
 .. image:: img/hydro/dem.png
 
 
-The first module to execute is *Catchment area*. You can use anyone of  the others named *Catchment area*. They have different algorithms underneath, but the results are basically the same.
+The first module to execute is *Catchment area* (in SAGA >=2.2 it is called *Flow accumulation (Top Down)*). You can use anyone of  the others named *Catchment area*. They have different algorithms underneath, but the results are basically the same.
 
 Select the DEM in the *Elevation* field, and leave the default values for the rest of parameters.
 

@@ -81,9 +81,10 @@ Dissolve features based on a common attribute:
 
 - :menuselection:`GRASS --> v.dissolve` ``municipalities.shp`` on PROVINCIA
 - :menuselection:`QGIS --> Dissolve` ``municipalities.shp`` on PROVINCIA
+- :menuselection:`OGR --> Dissolve` ``municipalities.shp`` on PROVINCIA
 - :menuselection:`SAGA --> Polygon Dissolve` ``municipalities.shp`` on PROVINCIA (**NB:** `Keep inner boundaries` must be unselected)
 
-.. warning:: The last one is broken in SAGA <=2.10
+.. note:: The last one is broken in SAGA <=2.10
 
 **Exercise for the reader**: find the differences (geometry and attributes) between different methods.
 
