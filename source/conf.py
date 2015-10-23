@@ -580,6 +580,10 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionToggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
+.. |mActionCaptureBoundary| image:: /static/common/mActionCaptureBoundary.png
+   :width: 1.5em
+.. |mActionCaptureCentroid| image:: /static/common/mActionCaptureCentroid.png
+   :width: 1.5em
 .. |mActionCapturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
 .. |mActionCaptureLine| image:: /static/common/mActionCaptureLine.png

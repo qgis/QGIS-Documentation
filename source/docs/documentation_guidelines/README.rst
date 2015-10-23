@@ -310,23 +310,27 @@ Add new Screenshots
 
 Here are some hints to create new, nice looking screenshots. For the user guide they go into :file:`./resources/en/user_manual/`
 
-* same environment for all the screen caps (same OS, same decoration, same font size)
+* same environment for all the screen caps (same OS, same decoration, same font size). We have used Ubuntu with Unity and the default "ambience" theme. For screenshots of QGIS main window and composer we have set it to show menus on the window (not the default in unity).
 * reduce the window to the minimal space needed to show the feature (taking the all screen for a small modal window > overkill)
 * the less clutter, the better (no need to activate all the toolbars)
 * don't resize them in an image editor, the size will be set into the rst files if necessary (downscaling the dimensions without properly upping the resolution > ugly)
 * cut the background
-* Set print size resolution to 135 dpi (this way, if no size is set in the rst files, images will be at original size in html and at a good print resolution in the PDF)
+* Set print size resolution to 135 dpi, eg in Gimp set the print resolution (image > print size) and save. This way, if no size is set in the rst files, images will be at original size in html and at a good print resolution in the PDF. You can use ImageMagick convert command to do a batch of images:
+
+::
+
+ convert -units PixelsPerInch input.png -density 135 output.png
+
 * save them in png (no jpeg artifacts)
 * the screenshot should show the content according to what is described in the text
 * you can find some prepared |qg| -projects that were used before to create screenshots in :file:`./qgis-projects`.
   This makes it easier to reproduce screenshots for the next version of |qg|.
   These projects use the |qg| sample dataset which should be placed in the same folder as the QGIS-Documentation Repository.
-* Use the following command to remove the global menu function in Ubuntu to create smaller application screens with menu's.
-
+* Use the following command to remove the global menu function in Ubuntu to create smaller application screens with menu's:
 
 ::
 
-   sudo apt-get autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
+  sudo apt-get autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
 
 
 Translate Screenshots

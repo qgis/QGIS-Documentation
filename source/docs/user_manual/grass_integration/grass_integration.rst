@@ -110,7 +110,7 @@ The following main features are provided with the toolbar menu when you start th
 * |grass_close_mapset| :sup:`Close Mapset`
 * |grass_tools| :sup:`Open GRASS Tools`
 * |grass_region| :sup:`Display Current GRASS Region`
-* || :sup:`GRASS Options`
+* |mActionOptions| :sup:`GRASS Options`
 
 Opening GRASS mapset
 ====================
@@ -366,9 +366,9 @@ Creating a new GRASS vector layer
 To create a new GRASS vector layer, select one of following items from mapset context 
 menu in the browser:
 
-  -  New Point Layer
-  -  New Line Layer
-  -  New Polygon Layer
+* New Point Layer
+* New Line Layer
+* New Polygon Layer
 
 and enter a name in the dialog. A new vector map will be created and layer will be added
 to canvas and editing started. Selecting type of the layer does not restrict geometry 
@@ -397,12 +397,12 @@ Digitizing and editing a GRASS vector layer
 GRASS vector layers can be digitized using the standard |qg| digitizing tools. 
 There are however some particularities, which you should know about, due to 
 
-  - GRASS topological model versus QGIS simple feature
-  - complexity of GRASS model
+* GRASS topological model versus QGIS simple feature
+* complexity of GRASS model
   
-    - multiple layers in single maps
-    - multiple geometry types in single map
-    - geometry sharing by multiple features from multiple layers
+  * multiple layers in single maps
+  * multiple geometry types in single map
+  * geometry sharing by multiple features from multiple layers
 
 The particularities are discussed in the following sections.    
     
@@ -416,12 +416,12 @@ is rewritten in vector map and attribute tables.
 
 There are two main reasons for this behavior:
 
-  - It is the nature of GRASS vectors coming from conviction that user wants to do what he is
-    doing and it is better to have data saved when the work is suddenly interrupted (blackout 
-    for example)
-  - Necessity for effective editing of topological data is visualized information about topological
-    correctness, such information can only be acquired from GRASS vector map if changes are 
-    written to the map   
+* It is the nature of GRASS vectors coming from conviction that user wants to do what he is
+  doing and it is better to have data saved when the work is suddenly interrupted (blackout 
+  for example)
+* Necessity for effective editing of topological data is visualized information about topological
+  correctness, such information can only be acquired from GRASS vector map if changes are 
+  written to the map   
     
 **Toolbar**
 
@@ -470,6 +470,22 @@ However it is not possible to assign more categories to geometry using QGIS edit
 such data are properly represented as multiple features, and individual features,
 even from different layers, may be deleted.
 
+**Attributes**
+
+Attributes of currently edited layer can only be modified. If the vector map cantains more layers,
+features of other layers will have all attributes set to '<not editable (layer #)>' to warn you that 
+such attribute is not editable. The reason is, that other layers may have and usually have different
+set of fields while QGIS only supports one fixed set of fields per layer.
+
+If a geometry primitive does not have yet category assigned, a new unique category is automaticaly 
+assigned and new record in attribute table is created when an attribute of that geometry is changed.
+
+.. tip::
+
+   If you want to do bulk update of attributes in table, for example using 'Field Calculator' (:ref:`vector_field_calculator`), and there are features withou category which you don't want to update
+   (typically boundaries), you can filter them out by setting 'Advanced Filter' to ``cat is not null``.
+
+
 **Editing style**
 
 .. index::
@@ -482,21 +498,34 @@ The style can also be stored in project file or in separate file as any other st
 If you customize the style, do not change its name, because it is used to reset the style 
 when editing is started again.
 
-.. warning:: Do not save project file when the layer is edited, the layer would be stored with 'Edit Style' which has no meaning if layer is not edited.
+.. tip::  Do not save project file when the layer is edited, the layer would be stored with 'Edit Style' which has no meaning if layer is not edited.
 
 The style is based on topologycal information which is temporarily added to attribute table 
 as field 'topo_symbol'. The field is automatically removed when editing is closed.
 
-.. warning:: Do not remove 'topo_symbol' field from attribute table, that would make features invisible because the renderer is based on that column.
+.. tip::  Do not remove 'topo_symbol' field from attribute table, that would make features invisible because the renderer is based on that column.
+
 
 **Snapping**
+ 
+To form an area, vertices of connected boundaries must have EXACTLY the same coordinates. 
+This can be achieved using snapping tool only if canvas and vector map have the same CRS. 
+Otherwise, due conversion from map coordinates to canvas and back, the coordinate may become 
+slightly different due to representation error and CRS transformations.
+   
+.. tip:: Use layer's CRS also for canvas when editing.
 
-.. tip::
-  
-   To form an area, vertices of connected boundaries must have EXACTLY the same coordinates. This can be achieved using snapping tool only if canvas and vector map have the same CRS. Otherwise, due conversion from map coordinates to canvas and back, the coordinate may become slightly different due to representation error and CRS transformations.
+
+**Limitations**
+
+Simultaneous editing of multiple layers within the same vector at the same time is not supported.
+This is mainly due to impossibility to handle multiple undo stacks for a single data source.
+
+|nix| |osx| On Linux and Mac OSX only one GRASS layer can be edited at time. This is due to bug in GRASS
+which does not allow to close database drivers in random order. This is being solved with GRASS developers.
 
 
-.. tip:: **GRASS Edit Permissions**
+.. tip:: **GRASS Edit Permissions** 
 
    You must be the owner of the GRASS :file:`MAPSET` you want to edit. It is
    impossible to edit data layers in a :file:`MAPSET` that is not yours, even
@@ -674,15 +703,12 @@ Here, it is assumed that you have the Alaska :file:`LOCATION` set up as explaine
 
 * First, open the location by clicking the
   |grass_open_mapset| :sup:`Open mapset` button and choosing the Alaska location.
-* Now load the ``gtopo30`` elevation raster by clicking
-  |grass_add_raster| :sup:`Add GRASS raster layer` and selecting the
-  ``gtopo30`` raster from the demo location.
 * Now open the Toolbox with the |grass_tools| :sup:`Open GRASS tools` button.
 * In the list of tool categories, double-click :menuselection:`Raster --> Surface
   Management --> Generate vector contour lines`.
 * Now a single click on the tool **r.contour** will open the tool dialog as
-  explained above (see :ref:`grass_modules`). The ``gtopo30`` raster should appear as
-  the :guilabel:`Name of input raster`.
+  explained above (see :ref:`grass_modules`).
+* In the :guilabel:`Name of input raster map` enter ``gtopo30``.
 * Type into the :guilabel:`Increment between Contour levels` |selectnumber|
   the value 100. (This will create contour lines at intervals of 100 meters.)
 * Type into the :guilabel:`Name for output vector map` the name ``ctour_100``.
