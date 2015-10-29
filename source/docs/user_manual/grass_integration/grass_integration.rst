@@ -14,9 +14,9 @@ change GRASS region, create and edit vector layers and analyse GRASS 2-D and 3-D
 with more than 400 GRASS modules. In this section, we'll introduce the provider and plugin 
 functionalities and give some examples of managing and working with GRASS data. 
 
-The provider supports GRASS version 6 and 7, the plugin supports GRASS 6 
-(support for GRASS 7 is under development for |qg| 2.12). QGIS distribution may contain 
-provider/plugin for either GRASS 6 or GRASS 7 or for both versions at the same time 
+The provider supports GRASS version 6 and 7, the plugin supports GRASS 6 and 7
+(starting from |qg| 2.12). QGIS distribution may contain provider/plugin for either 
+GRASS 6 or GRASS 7 or for both versions at the same time 
 (binaries have different file names). Only one version of the provider/plugin may be 
 loaded on runtime however.
 
@@ -73,7 +73,7 @@ CRS and the format is known to GDAL. You can set these options in :guilabel:`Bro
 :ref:`grass_options`.
 
 If a source raster had more bands, a new GRASS map is created for each layer with **.<band number>**
-sufix and group of all maps with |mIconRasterGroup| icon is created. External rasters have 
+suffix and group of all maps with |mIconRasterGroup| icon is created. External rasters have 
 different icon |mIconRasterLink|.
 
 .. _managing_grass_data:
@@ -133,7 +133,7 @@ by its coordinate system, map projection and geographical boundaries. Each
 :file:`LOCATION`) that are used to subdivide the project into different topics or
 subregions, or as workspaces for individual team members (see Neteler & Mitasova
 2008 in :ref:`literature_and_web`). In order to analyze vector and raster layers
-with GRASS modules, you must import them into a GRASS :file:`LOCATION`. (This is
+with GRASS modules, you generally have to import them into a GRASS :file:`LOCATION`. (This is
 not strictly true -- with the GRASS modules :file:`r.external` and :file:`v.external`
 you can create read-only links to external GDAL/OGR-supported datasets without
 importing them. But because this is not the usual way for beginners to work with
@@ -311,7 +311,7 @@ In general, GRASS uses a topological vector model.
 This means that areas are not represented as closed polygons, but by one or more
 boundaries. A boundary between two adjacent areas is digitized only once, and it
 is shared by both areas. Boundaries must be connected and closed without gaps.
-An area is identified (and labeled) by the **centroid** of the area.
+An area is identified (and labelled) by the **centroid** of the area.
 
 Besides boundaries and centroids, a vector map can also contain points and lines.
 All these geometry elements can be mixed in one vector and will be represented
@@ -379,7 +379,6 @@ the layer to the canvas, because |qg| requires a layer to have a specific type.
 It is also possible to add layers to existing vector maps selecting one of the items
 described above from context menu of existing vector map.
 
-
 In GRASS, it is possible to organize all sorts of geometry types (point, line and
 area) in one layer, because GRASS uses a topological vector model, so you don't
 need to select the geometry type when creating a new GRASS vector. This is
@@ -404,7 +403,7 @@ There are however some particularities, which you should know about, due to
   * multiple geometry types in single map
   * geometry sharing by multiple features from multiple layers
 
-The particularities are discussed in the following sections.    
+The particularities are discussed in the following sections.
     
 **Save, discard changes, undo, redo**
 
@@ -414,14 +413,14 @@ However changes are written after each operation, it is whenever possible to do 
 or discard all changes when closing editing. If undo or discard changes is used, original state
 is rewritten in vector map and attribute tables. 
 
-There are two main reasons for this behavior:
+There are two main reasons for this behaviour:
 
 * It is the nature of GRASS vectors coming from conviction that user wants to do what he is
   doing and it is better to have data saved when the work is suddenly interrupted (blackout 
   for example)
 * Necessity for effective editing of topological data is visualized information about topological
   correctness, such information can only be acquired from GRASS vector map if changes are 
-  written to the map   
+  written to the map.
     
 **Toolbar**
 
@@ -456,7 +455,7 @@ Table GRASS Digitizing 1: GRASS Digitizing Tools
    
 **Category**
 
-Category, offten called cat, is sort of ID. The name comes from times when GRASS vectors
+Category, often called cat, is sort of ID. The name comes from times when GRASS vectors
 had only singly attribute "category". Category is used as a link between geometry and attributes.
 A single geometry may have multiple categories and thus represent multiple features in different
 layers. Currently it is possible to assign only one category per layer using |qg| editing tools.
@@ -466,24 +465,23 @@ possible to define attributes for a boundary later, for example in different lay
 
 New categories are always created only in currently being edited layer.
 
-However it is not possible to assign more categories to geometry using QGIS editing,
+However it is not possible to assign more categories to geometry using |qg| editing,
 such data are properly represented as multiple features, and individual features,
 even from different layers, may be deleted.
 
 **Attributes**
 
-Attributes of currently edited layer can only be modified. If the vector map cantains more layers,
+Attributes of currently edited layer can only be modified. If the vector map contains more layers,
 features of other layers will have all attributes set to '<not editable (layer #)>' to warn you that 
 such attribute is not editable. The reason is, that other layers may have and usually have different
-set of fields while QGIS only supports one fixed set of fields per layer.
+set of fields while |qg| only supports one fixed set of fields per layer.
 
-If a geometry primitive does not have yet category assigned, a new unique category is automaticaly 
+If a geometry primitive does not have yet category assigned, a new unique category is automatically 
 assigned and new record in attribute table is created when an attribute of that geometry is changed.
 
 .. tip::
 
-   If you want to do bulk update of attributes in table, for example using 'Field Calculator' (:ref:`vector_field_calculator`), and there are features withou category which you don't want to update
-   (typically boundaries), you can filter them out by setting 'Advanced Filter' to ``cat is not null``.
+   If you want to do bulk update of attributes in table, for example using 'Field Calculator' (:ref:`vector_field_calculator`), and there are features without category which you don't want to update (typically boundaries), you can filter them out by setting 'Advanced Filter' to ``cat is not null``.
 
 
 **Editing style**
@@ -500,7 +498,7 @@ when editing is started again.
 
 .. tip::  Do not save project file when the layer is edited, the layer would be stored with 'Edit Style' which has no meaning if layer is not edited.
 
-The style is based on topologycal information which is temporarily added to attribute table 
+The style is based on topological information which is temporarily added to attribute table 
 as field 'topo_symbol'. The field is automatically removed when editing is closed.
 
 .. tip::  Do not remove 'topo_symbol' field from attribute table, that would make features invisible because the renderer is based on that column.
@@ -508,7 +506,7 @@ as field 'topo_symbol'. The field is automatically removed when editing is close
 
 **Snapping**
  
-To form an area, vertices of connected boundaries must have EXACTLY the same coordinates. 
+To form an area, vertices of connected boundaries must have **exactly** the same coordinates. 
 This can be achieved using snapping tool only if canvas and vector map have the same CRS. 
 Otherwise, due conversion from map coordinates to canvas and back, the coordinate may become 
 slightly different due to representation error and CRS transformations.
@@ -631,8 +629,7 @@ further module-specific parameters to run the module.
 
    GRASS Toolbox Module Options |nix|
 
-
-The provided module parameters are often not complete to keep the dialog clear.
+The provided module parameters are often not complete to keep the dialog simple.
 If you want to use further module parameters and flags, you need to start the
 GRASS shell and run the module in the command line.
 
