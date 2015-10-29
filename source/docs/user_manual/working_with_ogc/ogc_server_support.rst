@@ -148,7 +148,7 @@ Test the server with the HelloWorld plugin:
   HelloServer!
 
 
-You can have a look at the default GetCpabilities of the |qg| server at:
+You can have a look at the default GetCapabilities of the |qg| server at:
 :file:`http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
 
 .. tip::
@@ -199,6 +199,17 @@ If you don't check |checkbox| :guilabel:`Service capabilities`,
 |qg| Server will use the information given in the :file:`wms_metadata.xml` file
 located in the :file:`cgi-bin` folder.
 
+.. warning::
+
+ If you're using the |qg| project with styling based on SVG files using
+ relative paths then you should know that the server considers the path
+ relative to its `qgis_mapserv.fcgi` file (not to the `qgs` file).
+ So, if you deploy on the server a project and the SVG files are not placed
+ accordingly, the output images may not respect the Desktop styling.
+ To ensure this doesn't happen, you can simply copy the SVG files relative
+ to the `qgis_mapserv.fcgi`. You can also create a symbolic link in the
+ directory where the fcgi file resides that points to the directory containing
+ the SVG files (on Linux/Unix).
 
 WMS capabilities
 ------------------------------
