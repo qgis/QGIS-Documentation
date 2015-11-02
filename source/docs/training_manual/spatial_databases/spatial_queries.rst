@@ -180,7 +180,7 @@ As a view::
   CREATE VIEW vw_regions_adjoining_hokkaido AS
     SELECT b.gid, b.name, b.the_geom
       FROM region a, region b
-        WHERE TOUCHES(a.the_geom, b.the_geom)
+        WHERE st_touches(a.the_geom, b.the_geom)
         AND a.name = 'Hokkaido';
 
 In QGIS:

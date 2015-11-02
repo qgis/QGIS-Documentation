@@ -1032,7 +1032,7 @@ that you expect.
              32,
              1,
              '071 812 31 28',
-             1,F
+             1,
              'SRID=4326;POINT(32 -34)');
 
   insert into people (name,house_no, street_id, phone_no, city_id, the_geom)
