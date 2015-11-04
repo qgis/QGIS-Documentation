@@ -98,6 +98,11 @@ several style in the database. Only one will be the default style anyway.
 
 .. index:: Single_Symbol_Renderer, Renderer_Single_Symbol
 
+The **[Advanced]** button in the lower-right corner of the dialog allows you to
+disable the automatic clipping of lines/polygons to the canvas extent. In
+some cases this clipping results in unfavourable symbology (eg centroid fills 
+where the centroid must always be the actual feature's centroid).
+
 **Single Symbol Renderer**
 
 The Single Symbol Renderer is used to render all features of the layer using
@@ -112,8 +117,10 @@ the menu on the right side.
 .. _defining_symbols:
 
 If you click on the first level in the :guilabel:`Symbol layers` dialog on the left
-side, it's possible to define basic parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`color`
-and :guilabel:`Rotation`. Here, the layers are joined together.
+side, it's possible to define basic parameters like :guilabel:`Size` or 
+:guilabel:`width` (for point and line features), :guilabel:`Rotation` (for point 
+features), :guilabel:`color` and :guilabel:`Transparenc` (for all types of 
+feature). Here, the layers are joined together.
 
 
 .. _figure_symbology_3:
@@ -206,7 +213,6 @@ field 'budged'. Here a comment functionality is inserted.
 
 **Categorized Renderer**
 
-
 The Categorized Renderer is used to render all features from a layer, using
 a single user-defined symbol whose color reflects the value of a selected
 feature's attribute. The :guilabel:`Style` menu allows you to select:
@@ -226,12 +232,6 @@ on the item you want to change.
 
 Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Change 
 transparency**, **Change output unit**, **Change symbol width**.
-
-The **[Advanced]** button in the lower-right corner of the dialog allows you to
-set the fields containing rotation and size scale information.
-For convenience, the center of the menu lists the values of
-all currently selected attributes together, including the symbols that will
-be rendered.
 
 The example in figure_symbology_6_ shows the category rendering dialog used
 for the rivers layer of the |qg| sample dataset.

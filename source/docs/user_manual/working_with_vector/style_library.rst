@@ -184,6 +184,11 @@ It is possible to only draw polygon borders inside the polygon. Using
 'Outline: Simple line' select |checkbox| :guilabel:`Draw line
 only inside polygon`.
 
+**Note:** When geometry type is polygon, you can choose to disable the
+automatic clipping of lines/polygons to the canvas extent. In
+some cases this clipping results in unfavourable symbology (eg
+centroid fills where the centroid must always be the actual
+feature's centroid).
 
 Color ramp
 **********
