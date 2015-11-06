@@ -367,8 +367,8 @@ At the top of the window, you have five icons:
 * |mActionIdentifyCollapse| :sup:`Collapse tree`
 * |mActionIdentifyDefaultExpand| :sup:`Default behaviour`
 * View the feature form
-* Clear Results
-* |mActionIdentifyCopyAttributes| :sup:`Copy attributes`
+* |mActionDeselectAll| :sup:`Clear Results`
+* |mActionIdentifyCopyAttributes| :sup:`Copy selected feature to clipboard`
 * |mActionIdentifyPrint| :sup:`Print selected HTML response`
 
 At the bottom of the window, you have the :guilabel:`Mode` and :guilabel:`View`
