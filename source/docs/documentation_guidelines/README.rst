@@ -19,7 +19,7 @@ the `Python documentation style guide lines
 Using headlines
 ===============
 
-Adding new haedlines, you should use following styles for chapter, section,
+Adding new headlines, you should use following styles for chapter, section,
 subsection and minisec.
 
 headlines
@@ -192,7 +192,7 @@ It can be used in the same :file:`.rst` document but not in other .rst
 documents.
 
 You can not use the reference like this anymore, because in html the reference
-to the caption is lost (it now refers to the place before **Figure Readme 1:**
+to the caption is lost (it now refers to the place before **Figure Readme 1:**)
 
 ::
 
