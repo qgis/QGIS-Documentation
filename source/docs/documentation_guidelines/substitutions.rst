@@ -113,6 +113,18 @@ Icon                            Substitution                        Icon        
 |mActionEditCopy|		``|mActionEditCopy|``		    |mActionEditPaste|		    ``|mActionEditPaste|``
 ==============================  ==================================  ==============================  ==================================
 
+Identity result
+...............
+
+==============================  ==================================  ==============================  ==================================
+Icon                            Substitution                        Icon                            Substitution
+==============================  ==================================  ==============================  ==================================
+|mActionExpandTree|             ``|mActionExpandTree|``             |mActionCollapseTree|           ``|mActionCollapseTree|``
+|mActionExpandNewTree|          ``|mActionExpandNewTree|``          |mActionPropertyItem|           ``|mActionPropertyItem|``
+|mActionDeselectAll|            ``|mActionDeselectAll|``            |mActionEditCopy|               ``|mActionEditCopy|``
+|mActionFilePrint|              ``|mActionFilePrint|``  	    \                               \ 
+==============================  ==================================  ==============================  ==================================
+
 
 Digitizing and Advanced Digitizing
 ..................................
