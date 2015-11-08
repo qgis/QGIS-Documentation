@@ -68,17 +68,17 @@ exclude_patterns = ['../output', "../i18n", "../resources", "../scripts"]
 # for faster builds, you can exclude certain parts from the build
 # uncomment one or more lines below, or construct such line yourself
 # uncomment to exclude the processing algs from build
-exclude_patterns += ['docs/user_manual/processing_algs/*']
+#exclude_patterns += ['docs/user_manual/processing_algs/*']
 # uncomment to exclude the user manual from build
 #exclude_patterns += ['docs/user_manual/*']
 # uncomment to exclude training manual from build
-exclude_patterns += ['docs/training_manual/*']
+#exclude_patterns += ['docs/training_manual/*']
 # uncomment to exclude doc guides from build
 #exclude_patterns += ['docs/documentation_guidelines/*']
 # uncomment to exclude gentle intro  from build
-exclude_patterns += ['docs/gentle_gis_introduction/*']
+#exclude_patterns += ['docs/gentle_gis_introduction/*']
 # uncomment to exclude pyqgis dev book from build
-exclude_patterns += ['docs/pyqgis_developer_cookbook/*']
+#exclude_patterns += ['docs/pyqgis_developer_cookbook/*']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
