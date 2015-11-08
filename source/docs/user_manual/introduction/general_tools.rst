@@ -292,7 +292,7 @@ The |qg| toolbar provides several tools to select features in the map canvas.
 To select one or several features, just click on |mActionSelect| and select your
 tool:
 
-* |mActionSelect| :sup:`Select Single Feature` which select feature(s) either by by simple click or by click and drag
+* |mActionSelectRectangle| :sup:`Select Features by area or single click` to select feature(s) either by simple click or by rectangle
 * |mActionSelectPolygon| :sup:`Select Features by Polygon`
 * |mActionSelectFreehand| :sup:`Select Features by Freehand`
 * |mActionSelectRadius| :sup:`Select Features by Radius`
