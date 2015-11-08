@@ -9,22 +9,25 @@ Clip
 Description
 ...........
 
-<put algorithm description here>
+This algorithm extracts features from the Input Layer that fall within, or partially within, the boundaries of features in the Clip Layer. Input Layer features that fall partially within clip layer feature(s) are split along the boundary of the clip layer feature(s). If any features are selected in the Input and Clip Layers, then only those features are used in the clip operation. If no features are selected then the clip operation is performed using all features. The clip function is also known as the cookie-cutter.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  The layer containing the features to be clipped.
 
 ``Clip layer`` [vector: any]
-  <put parameter description here>
+  The layer containing the features that are used to clip the features in the input layer.
+
+``Open output file after running algorithm``
+  Choose whether to load the clipped layer to the map canvas once the clip operation has been completed.
 
 Outputs
 .......
 
 ``Clipped`` [vector]
-  <put output description here>
+  Where to save the clipped layer. Can be saved to file, a temporary file or a memory layer.
 
 Console usage
 .............
@@ -57,7 +60,7 @@ Outputs
 .......
 
 ``Difference`` [vector]
-  <put output description here>
+  Where to save the difference layer. Can be saved to file, a temporary file or a memory layer.
 
 Console usage
 .............
@@ -90,7 +93,7 @@ Outputs
 .......
 
 ``Intersection`` [vector]
-  <put output description here>
+  Where to save the intersection layer. Can be saved to file, a temporary file or a memory layer.
 
 Console usage
 .............
@@ -129,7 +132,7 @@ Outputs
 .......
 
 ``Output layer`` [vector]
-  <put output description here>
+  Where to save the line intersection layer. Can be saved to file, a temporary file or a memory layer.
 
 Console usage
 .............
@@ -141,7 +144,7 @@ Console usage
 See also
 ........
 
-Symetrical difference
+Symmetrical difference
 ---------------------
 
 Description
@@ -161,8 +164,8 @@ Parameters
 Outputs
 .......
 
-``Symetrical difference`` [vector]
-  <put output description here>
+``Symmetrical difference`` [vector]
+  Where to save the symmetrical difference layer. Can be saved to file, a temporary file or a memory layer.
 
 Console usage
 .............
@@ -195,7 +198,7 @@ Outputs
 .......
 
 ``Union`` [vector]
-  <put output description here>
+  Where to save the union layer. Can be saved to file, a temporary file or a memory layer.
 
 Console usage
 .............
