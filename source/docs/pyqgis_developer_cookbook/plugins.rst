@@ -14,8 +14,8 @@ language.
 Python plugins are listed together with C++ plugins in QGIS plugin manager.
 They are searched for in these paths:
 
-* UNIX/Mac: :file:`~/.qgis/python/plugins` and :file:`(qgis_prefix)/share/qgis/python/plugins`
-* Windows: :file:`~/.qgis/python/plugins` and :file:`(qgis_prefix)/python/plugins`
+* UNIX/Mac: :file:`~/.qgis2/python/plugins` and :file:`(qgis_prefix)/share/qgis/python/plugins`
+* Windows: :file:`~/.qgis2/python/plugins` and :file:`(qgis_prefix)/python/plugins`
 
 Home directory (denoted by above :file:`~`) on Windows is usually something
 like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier) or
