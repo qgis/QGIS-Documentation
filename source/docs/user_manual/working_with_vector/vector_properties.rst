@@ -554,7 +554,14 @@ You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_
 the text 'All uppercase', 'All lowercase' or 'Capitalize first letter'. Use the blend modes to create effects
 known from graphics programs (see blend_modes_).
 
-In the :guilabel:`Formatting` menu, you can define a character for a line break in the labels with the 'Wrap on character' function.
+In the :guilabel:`Formatting` menu, you can define a character for a line break in the 
+labels with the 'Wrap on character' function. You can format the :guilabel:`Line Height` 
+and the alignment. For the latter typical values are available plus *Follow label 
+placement*. When set to this mode, text alignment for labels will be dependant on the 
+final placement of the label relative to the point. Eg, if the label is placed to the 
+left of the point then the label will be right aligned, and if it is placed to the right 
+of the point then the label will be left aligned.
+
 Use the |checkbox| :guilabel:`Formatted numbers` option to format the numbers in an attribute table. Here,
 decimal places may be inserted. If you enable this option, three decimal places are initially set by default.
 
