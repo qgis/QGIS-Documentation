@@ -919,7 +919,10 @@ widgets. These widgets are:
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
 * **Value Relation**: Offers values from a related table in a combobox. You can
-  select layer, key column and value column.
+  select layer, key column and value column. Several options are available to change 
+  the standard behaviours: allow null value, order by value, allow multiple selections 
+  and use of autocompleter. The forms will display either a dropdown list or a line edit 
+  field when completer checkbox is enabled.
 * **Webview**: Field contains a URL. The width and height of the field is variable.
 
 .. note::
