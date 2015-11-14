@@ -757,15 +757,13 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionSplitParts| image:: /static/common/mActionSplitParts.png
    :width: 1.5em
-.. |mActionIdentifyExpand| image:: /static/common/mActionExpandTree.png
+.. |mActionExpandTree| image:: /static/common/mActionExpandTree.png
    :width: 1.5em
-.. |mActionIdentifyCollapse| image:: /static/common/mActionCollapseTree.png
+.. |mActionCollapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
-.. |mActionIdentifyDefaultExpand| image:: /static/common/mActionExpandNewTree.png
+.. |mActionExpandNewTree| image:: /static/common/mActionExpandNewTree.png
    :width: 1.5em
-.. |mActionIdentifyCopyAttributes| image:: /static/common/mActionEditCopy.png
-   :width: 1.5em
-.. |mActionIdentifyPrint| image:: /static/common/mActionFilePrint.png
+.. |mActionPropertyItem| image:: /static/common/mActionPropertyItem.png
    :width: 1.5em
 .. |mActionUnselectAttributes| image:: /static/common/mActionUnselectAttributes.png
    :width: 1.5em
