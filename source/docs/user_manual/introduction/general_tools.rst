@@ -325,16 +325,25 @@ features` or press :kbd:`Ctrl + Shift + I`, or click on the |mActionIdentify|
 |qg| offers two ways to identify features with the |mActionIdentify|
 :sup:`Identify features`:
 
+<<<<<<< eb18df703b95bf68b4e999446d3bb870c50fb9fc
 * **left click** will identify features according to the mode set in the
   :guilabel:`Identify results` panel
 * **right click** will fetch all the snapped features from all the visible layers.
   This will be shown in a context menu, allowing the user to choose more precisely
   the features to identify.
+=======
+* **left click** will identify features according to the mode set in the :guilabel:`Identify results` panel
+* **right click** will fetch all the snapped features from all the visible layers. This will open a context menu, allowing the user to choose more precisely the features to identify.
+>>>>>>> add substitutions in identify panel
 
 If you click on feature, the :guilabel:`Identify results` dialog will
 list informations about the clicked feature(s). The default view is a tree view where the first item is the name of the
 layer and its children are its identified feature(s). Each feature is described by
+<<<<<<< eb18df703b95bf68b4e999446d3bb870c50fb9fc
 the name of a field with its value. This field is the one set in
+=======
+the name of a field with its value. This field is the one set in 
+>>>>>>> add substitutions in identify panel
 :menuselection:`Properties --> Display`. Then follow all the other informations about the feature.
 
 This window can be customized to display custom fields, but by default it will
@@ -362,13 +371,13 @@ display three kinds of information:
 
 At the top of the window, you have five icons:
 
-* |mActionIdentifyExpand| :sup:`Expand tree`
-* |mActionIdentifyCollapse| :sup:`Collapse tree`
-* |mActionIdentifyDefaultExpand| :sup:`Default behaviour`
-* View the feature form
+* |mActionExpandTree| :sup:`Expand tree`
+* |mActionCollapseTree| :sup:`Collapse tree`
+* |mActionExpandNewTree| :sup:`Default behaviour` to define whether next identified features informations should be collapsed or expanded
+* |mActionPropertyItem| :sup:`View the feature form`
 * |mActionDeselectAll| :sup:`Clear Results`
-* |mActionIdentifyCopyAttributes| :sup:`Copy selected feature to clipboard`
-* |mActionIdentifyPrint| :sup:`Print selected HTML response`
+* |mActionEditCopy| :sup:`Copy selected feature to clipboard`
+* |mActionFilePrint| :sup:`Print selected HTML response`
 
 At the bottom of the window, you have the :guilabel:`Mode` and :guilabel:`View`
 comboboxes.
@@ -379,7 +388,7 @@ With the :guilabel:`Mode` combobox you can define from which layers features sho
 * 'Top down': for all features from the visible layers. The results are shown in the panel.
 * and 'Layer selection': opens a context menu where user selects the layer to identify features from. Operates like a right-click. Only the choosen features will be shown in the result panel.
 
-The :guilabel:`View` can be set as 'Tree', 'Table' and 'Graph'. The view can only be set for raster layers.
+The :guilabel:`View` can be set as 'Tree', 'Table' and 'Graph'. 'Table' and 'Graph' views can only be set for raster layers.
 
 The identify tool allows you to |checkbox|:guilabel:`auto open a form`. If checked, each time a single feature is identified
 |qg| will open a form showing its attributes. This is a handy way to quickly edit feature's attributes.
