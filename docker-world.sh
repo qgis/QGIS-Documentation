@@ -23,7 +23,7 @@ git pull
 
 # only languages which have translations in transifex
 # nqo is not available in python :-(
-: ${langs:=en de es fi fr gl hi id it ja ko nl pl pt_BR pt_PT ro ru uk}
+: ${langs:=en de es fi fr gl hi id it ja ko nl pl pt_BR pt_PT ro ru tr uk}
 
 # if you only want to build one language, do:
 # $ langs=de ./docker-world.sh
