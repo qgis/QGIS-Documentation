@@ -852,6 +852,37 @@ We now describe an example using the data-defined override function for the
 
    Move labels |nix|
 
+**Rule-based labeling**
+
+With Rule-based labeling multiple label configurations can be defined 
+and applied selectively on the base of expression filters, as in :ref:`Rule-based rendering <rule_based_rendering>`
+
+Rules can be set selecting the corresponding option at the top of the Labels panel (see figure_labels_7_ )
+
+.. _figure_labels_7:
+
+.. only:: html
+
+   **Figure Labels 7:**
+
+.. figure:: /static/user_manual/working_with_vector/label_rules_panel.png
+   :align: center
+   
+   Rule based labeling panel |nix|
+   
+To create a rule, activate an existing row by double-clicking on it, or click on ‘+’ and click on the new rule.
+Within the panel you can set the filter expression and the related label configurations.
+
+.. _figure_labels_8:
+
+.. only:: html
+
+   **Figure Labels 8:**
+
+.. figure:: /static/user_manual/working_with_vector/label_rule_settings.png
+   :align: center
+   
+   Rule settings |nix|
 
 .. _vector_attributes_menu:
 

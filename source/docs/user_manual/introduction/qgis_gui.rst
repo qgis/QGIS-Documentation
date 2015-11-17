@@ -474,12 +474,15 @@ Additionally, according to layer position and selection
 * :menuselection:`Remove`
 * :menuselection:`Set Group CRS`
 * :menuselection:`Rename`
+* :menuselection:`Mutually Exclusive Group`
 * :menuselection:`Add Group`
 
 ..   Additionally, according to position
 
 ..   *  :menuselection:`Show file groups`
 
+Enabling the **Mutually Esclusive Group** option you can make a group have only one layer visible at the same time. 
+Whenever a layer within the group is set visible the others will be toggled not visible.
 
 It is possible to select more than one layer or group at the same time by
 holding down the :kbd:`Ctrl` key while selecting the layers with the left mouse
