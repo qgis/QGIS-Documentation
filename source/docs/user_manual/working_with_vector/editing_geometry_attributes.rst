@@ -690,9 +690,9 @@ Merge selected features
 .......................
 
 The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows you to merge
-features. A new dialog will allow you to choose which value to choose between each 
-selected features or select a function (Minimum, Maximum, Median, Sum, Skip 
-Attribute) to use for each column. If features don't have a common boundaries, 
+features. A new dialog will allow you to choose which value to choose between each
+selected features or select a function (Minimum, Maximum, Median, Sum, Skip
+Attribute) to use for each column. If features don't have a common boundaries,
 a multipolygon will be created.
 
 .. index:: Merge_Attributes_of_Selected_Features
@@ -1117,7 +1117,7 @@ Definition (Relation Manager)
 .............................
 
 The first thing we are going to do is to let QGIS know about the relations between the layer.
-This is done in :menuselection:`Settings -->` :menuselection:`Project Properties`.
+This is done in :menuselection:`Project -->` :menuselection:`Project Properties`.
 Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
 
 * **name** is going to be used as a title. It should be a human readable string, describing, what the relation is used for. We will just call say "Airports" in this case.
