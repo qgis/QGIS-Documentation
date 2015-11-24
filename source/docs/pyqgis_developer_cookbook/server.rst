@@ -8,12 +8,16 @@ QGIS Server Python Plugins
 
 Python plugins can also run on |qg| Server (see: :ref:`label_qgisserver`): by using the
 *server interface* (:class:`QgsServerInterface`) a Python plugin running on the
-server can alter the behavior of existing core services (**WMS**, **WFS** etc.)
-by changing the input parameters, changing the generated output or even by
-providing new services.
+server can alter the behavior of existing core services (**WMS**, **WFS** etc.).
+
+With the *server filter interface* (:class:`QgsServerFilter`) we can change the input
+parameters, change the generated output or even by providing new services.
+
+With the *access control interface* (:class:`QgsAccessControlFilter`) we can apply
+some access restriction per requests.
 
 
-Server Plugins architecture
+Server Filter Plugins architecture
 ===========================================
 
 Server python plugins are loaded once when the FCGI application starts. They
@@ -276,3 +280,170 @@ The watermark filter example shows how to replace the WMS output with a new imag
 
 In this example the **SERVICE** parameter value is checked and if the incoming request is a **WMS** **GETMAP** and no exceptions have been set by a previously executed plugin or by the core service (WMS in this case), the WMS generated image is retrieved from the output buffer and the watermark image is added. The final step is to clear the output buffer and replace it with the newly generated image. Please note that in a real-world situation we should also check for the requested image type instead of returning PNG in any case.
 
+Access control plugin
+=====================
+
+Plugin files
+------------
+
+Here's the directory structure of our example server plugin::
+
+  PYTHON_PLUGINS_PATH/
+    MyAccessControl/
+      __init__.py    --> *required*
+      AccessControl.py  --> *required*
+      metadata.txt   --> *required*
+
+
+__init__.py
+-----------
+
+This file is required by Python's import system. As for all |qg| server plugins, this
+file contains a :func:`serverClassFactory()` function, which is called when the
+plugin gets loaded into |qg| Server when the server starts. It receives reference to instance of
+:class:`QgsServerInterface` and must return instance of your plugin's class.
+This is how the example plugin `__init__.py` looks like:
+
+.. code:: python
+
+    # -*- coding: utf-8 -*-
+
+    def serverClassFactory(serverIface):
+        from MyAccessControl.AccessControl import AccessControl
+        return AccessControl(serverIface)
+
+
+AccessControl.py
+----------------
+
+.. code:: python
+
+   class AccessControl(QgsAccessControlFilter):
+
+       def __init__(self, server_iface):
+           super(QgsAccessControlFilter, self).__init__(server_iface)
+
+       def layerFilterExpression(self, layer):
+           """ Return an additional expression filter """
+           return super(QgsAccessControlFilter, self).layerFilterExpression(layer)
+
+       def layerFilterSubsetString(self, layer):
+           """ Return an additional subset string (typically SQL) filter """
+           return super(QgsAccessControlFilter, self).layerFilterSubsetString(layer)
+
+       def layerPermissions(self, layer):
+           """ Return the layer rights """
+           return super(QgsAccessControlFilter, self).layerPermissions(layer)
+
+       def authorizedLayerAttributes(self, layer, attributes):
+           """ Return the authorised layer attributes """
+           return super(QgsAccessControlFilter, self).authorizedLayerAttributes(layer, attributes)
+
+       def allowToEdit(self, layer, feature):
+           """ Are we authorise to modify the following geometry """
+           return super(QgsAccessControlFilter, self).allowToEdit(layer, feature)
+
+       def cacheKey(self):
+           return super(QgsAccessControlFilter, self).cacheKey()
+
+This example gives a full access for everybody.
+
+It's the role of the plugin to know who is logged on.
+
+On all those methods we have the layer on argument to be able to customise
+the restriction per layer.
+
+
+layerFilterExpression
+---------------------
+
+Used to add an Expression to limit the results, e.g.:
+
+.. code:: python
+
+   def layerFilterExpression(self, layer):
+       return "$role = 'user'"
+
+To limit on feature where the attribute role is equals to "user".
+
+
+layerFilterSubsetString
+-----------------------
+
+Same than the previous but use the ``SubsetString`` (executed in the database)
+
+.. code:: python
+
+   def layerFilterSubsetString(self, layer):
+       return "role = 'user'"
+
+To limit on feature where the attribute role is equals to "user".
+
+
+layerPermissions
+----------------
+
+Limit the access to the layer.
+
+Return an object of type ``QgsAccessControlFilter.LayerPermissions``,
+who has the properties:
+
+* ``canRead`` to see him in the ``GetCapabilities`` and have read access.
+* ``canInsert`` to be able to insert a new feature.
+* ``canUpdate`` to be able to update a feature.
+* ``candelete`` to be able to delete a feature.
+
+Example:
+
+.. code:: python
+
+   def layerPermissions(self, layer):
+       rights = QgsAccessControlFilter.LayerPermissions()
+       rights.canRead = True
+       rights.canRead = rights.canInsert = rights.canUpdate = rights.canDelete = False
+       return rights
+
+To limit everything on read only access.
+
+
+authorizedLayerAttributes
+-------------------------
+
+Used to limit the visibility of a specific subset of attribute.
+
+The argument attribute return the current set of visible attributes.
+
+Example:
+
+.. code:: python
+
+   def authorizedLayerAttributes(self, layer, attributes):
+       return [a for a in attributes if a != "role"]
+
+To hide the 'role' attribute.
+
+
+allowToEdit
+-----------
+
+This is used to limit the editing on a subset of features.
+
+It is used in the ``WFS-Transaction`` protocol.
+
+Example:
+
+.. code:: python
+
+   def allowToEdit(self, layer, feature):
+       return feature.attribute('role') == 'user'
+
+To be able to edit only feature that has the attribute role
+with the value user.
+
+
+cacheKey
+--------
+
+QGIS server maintain a cache of the capabilities then to have a cache
+per role you can return the role in this method. Or return ``None``
+to completely disable the cache.
