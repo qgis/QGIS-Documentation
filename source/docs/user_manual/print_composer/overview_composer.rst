@@ -59,7 +59,6 @@ The toolbars and the tabs can be switched off and on using the right mouse butto
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | Icon                     | Purpose                               | Icon                       | Purpose                                  |
 +==========================+=======================================+============================+==========================================+
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionFileSave|        | Save Project                          | |mActionNewComposer|       | New Composer                             |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionDupComposer|     | Duplicate Composer                    | |mActionComposerManager|   | Composer Manager                         |
@@ -120,7 +119,11 @@ Table Composer 1: Print Composer Tools
 Items tab
 ----------
 
-The Items tab lists all the items added to the print composer canvas. For each element, you can set it visible or not, lock or unlock its position.
+The Items tab lists all the items added to the print composer canvas. For each element, you can :
+
+- rename the item,
+- |mActionShowAllLayers| set it visible or not,
+- |mIconLock| lock or unlock its position.
 Once you have found the correct position for an item, you can lock it by ticking the box in |locked| column. Locked items are **not** selectable on the canvas. 
 
 Locked items can be unlocked by selecting the item in the 
@@ -193,7 +196,7 @@ The print composer includes actions to use the common Copy/Cut/Paste functionali
 in the layout. As usual first you need to select the items using one of the options seen above;
 at this point the actions can be found in the :menuselection:`Edit` menu. When using the Paste action, the elements
 will be pasted according to the current mouse position.
-When using the :menuselection:`Edit --> Paste in Place` action, the elements will be pasted in the current page, according to their position in their initial page. It ensures to copy/paste items at the same place, from page to page.
+Using the :menuselection:`Edit --> Paste in Place` action or pressing :kbd:`Ctrl+Shift+V` will paste the items into the current page, at the same position they were in their initial page. It ensures to copy/paste items at the same place, from page to page.
 
 .. note::
    HTML items can not be copied in this way. As a workaround, use the **[Add Frame]** button in the :menuselection:`Item Properties` tab.
