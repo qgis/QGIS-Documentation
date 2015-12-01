@@ -5,7 +5,7 @@ Module contributed by Matteo Ghetta - `Dropcode <www.dropcode.weebly.com>`_
 
 Processing allows to write and run R scripts inside QGIS.
 
-.. warning:: R has to be installed on your computer and the PATH has to correctly set up. Moreover Processing just calls the external R packages, it is not able to install them. So be sure to install external packages directly in R. See the related `chapter <http://docs.qgis.org/testing/en/docs/user_manual/processing/3rdParty.html>`_ in the training manual.
+.. warning:: R has to be installed on your computer and the PATH has to correctly set up. Moreover Processing just calls the external R packages, it is not able to install them. So be sure to install external packages directly in R. See the related `chapter <http://docs.qgis.org/testing/en/docs/user_manual/processing/3rdParty.html#r-creating-r-scripts>`_ in the training manual.
 
 .. note:: If you have some *packages* problem, maybe it is related to missing *mandatory* packages required by Processing, like ``sp``, ``rgdal`` and ``raster``.
 
