@@ -395,61 +395,17 @@ rst_epilog = """
    :width: 1.5em
 .. |grass| image:: /static/common/grasslogo.png
    :width: 1.5em
-.. |grass_add_map| image:: /static/common/grass_add_map.png
-   :width: 1.5em
-.. |grass_add_raster| image:: /static/common/grass_add_raster.png
-   :width: 1.5em
-.. |grass_add_vector| image:: /static/common/grass_add_vector.png
-   :width: 1.5em
-.. |grass_add_vertex| image:: /static/common/grass_add_vertex.png
-   :width: 1.5em
-.. |grass_close_edit| image:: /static/common/grass_close_edit.png
-   :width: 1.5em
 .. |grass_close_mapset| image:: /static/common/grass_close_mapset.png
-   :width: 1.5em
-.. |grass_copy_map| image:: /static/common/grass_copy_map.png
-   :width: 1.5em
-.. |grass_delete_line| image:: /static/common/grass_delete_line.png
-   :width: 1.5em
-.. |grass_delete_map| image:: /static/common/grass_delete_map.png
-   :width: 1.5em
-.. |grass_delete_vertex| image:: /static/common/grass_delete_vertex.png
-   :width: 1.5em
-.. |grass_edit| image:: /static/common/grass_edit.png
-   :width: 1.5em
-.. |grass_edit_attributes| image:: /static/common/grass_edit_attributes.png
    :width: 1.5em
 .. |grass_location|  image:: /static/common/grass_location.png
    :width: 1.5em
-.. |grass_move_line| image:: /static/common/grass_move_line.png
-   :width: 1.5em
-.. |grass_move_vertex| image:: /static/common/grass_move_vertex.png
-   :width: 1.5em
-.. |grass_new_boundary| image:: /static/common/grass_new_boundary.png
-   :width: 1.5em
-.. |grass_new_centroid| image:: /static/common/grass_new_centroid.png
-   :width: 1.5em
-.. |grass_new_line| image:: /static/common/grass_new_line.png
-   :width: 1.5em
 .. |grass_new_mapset| image:: /static/common/grass_new_mapset.png
-   :width: 1.5em
-.. |grass_new_point| image:: /static/common/grass_new_point.png
-   :width: 1.5em
-.. |grass_new_vector_layer| image:: /static/common/grass_new_vector_layer.png
    :width: 1.5em
 .. |grass_open_mapset| image:: /static/common/grass_open_mapset.png
    :width: 1.5em
-.. |grass_refresh| image:: /static/common/grass_refresh.png
-   :width: 1.5em
 .. |grass_region| image:: /static/common/grass_region.png
    :width: 1.5em
-.. |grass_region_edit| image:: /static/common/grass_region_edit.png
-   :width: 1.5em
-.. |grass_rename_map| image:: /static/common/grass_rename_map.png
-   :width: 1.5em
 .. |grass_set_region| image:: /static/common/grass_set_region.png
-   :width: 1.5em
-.. |grass_split_line| image:: /static/common/grass_split_line.png
    :width: 1.5em
 .. |grass_tools| image:: /static/common/grass_tools.png
    :width: 1.5em
