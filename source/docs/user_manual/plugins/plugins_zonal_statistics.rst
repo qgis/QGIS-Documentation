@@ -33,4 +33,4 @@ The available statistics are :
 .. figure:: /static/user_manual/plugins/zonal_statistics.png
    :align: center
 
-   Zonal statistics dialog (KDE) |nix|
+   Zonal statistics dialog |nix|
