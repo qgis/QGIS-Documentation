@@ -379,6 +379,10 @@ rst_epilog = """
 .. |geographic| image:: /static/common/geographic.png
 .. |geometry| image:: /static/common/geometry.png
    :width: 1.5em
+.. |geometrychecker| image:: /static/common/geometrychecker.png
+   :width: 1.5em
+.. |geometrysnapper| image:: /static/common/geometrysnapper.png
+   :width: 1.5em
 .. |geoprocessing| image:: /static/common/geoprocessing.png
    :width: 1.5em
 .. |georeferencer| image:: /static/common/georeferencer.png
@@ -1042,6 +1046,8 @@ rst_epilog = """
 .. |tab| image:: /static/common/tab.png
    :width: 1.5em
 .. |to_lines| image:: /static/common/to_lines.png
+   :width: 1.5em
+.. |topologychecker| image:: /static/common/topol.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
    :width: 1.5em
