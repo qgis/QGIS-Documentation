@@ -34,10 +34,20 @@ tab. This tab contains the following widgets (see Figure_composer_atlas_):
   (vector) layer containing the features on which to iterate over.
 * An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked, will
   hide the coverage layer (but not the other ones) during the generation.
+* An optional :guilabel:`Page name` combo box to give a more explicite name to each feature's page(s)
+  when previewing atlas. You can select an attribute of the coverage layer or set an expression. If this option is empty,
+  |qg| will use an internal ID, according to the filter and/or the sort order applied to the layer.
 * An optional :guilabel:`Filter with` text area that allows you to specify an
   expression for filtering features from the coverage layer. If the expression
   is not empty, only features that evaluate to ``True`` will be selected. The
   button on the right allows you to display the expression builder.
+* An optional |checkbox| :guilabel:`Sort by` that, if checked, allows you to
+  sort features of the coverage layer. The associated combo box allows you to choose
+  which column will be used as the sorting key. Sort order (either ascending or
+  descending) is set by a two-state button that displays an up or a down arrow.
+  
+You also have options to set the output of the atlas:
+
 * An :guilabel:`Output filename expression` textbox that is used to generate a
   filename for each geometry if needed. It is based on expressions. This field is
   meaningful only for rendering to multiple files.
@@ -45,10 +55,7 @@ tab. This tab contains the following widgets (see Figure_composer_atlas_):
   the generation of a single file if this is possible with the chosen output format
   (PDF, for instance). If this field is checked, the value of the
   :guilabel:`Output filename expression` field is meaningless.
-* An optional |checkbox| :guilabel:`Sort by` that, if checked, allows you to
-  sort features of the coverage layer. The associated combo box allows you to choose
-  which column will be used as the sorting key. Sort order (either ascending or
-  descending) is set by a two-state button that displays an up or a down arrow.
+
 
 
 You can use multiple map items with the atlas generation; each map will be rendered according
@@ -139,12 +146,31 @@ on the Data Defined Override options Multiple_format_map_series_using_QGIS_2.6_ 
 
 This is just one example of how you can use Data Defined Override option.
 
+.. _atlas_preview:
+
 Preview
 -------
 
-Once the atlas settings have been configured and map items selected, you can create a preview of all the pages by
-clicking on :menuselection:`Atlas --> Preview Atlas` and using the arrows, in the same menu, to navigate
-through all the features.
+.. _figure_composer_atlas:
+
+.. only:: html
+
+   **Figure Composer Atlas:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_atlas_preview.png
+   :align: center
+
+   Atlas Preview toolbar |nix|
+
+Once the atlas settings have been configured and composer items (map, table, image...) linked to it, you can create a preview of all the pages by
+clicking on :menuselection:`Atlas --> Preview Atlas` or |mIconAtlas| :sup:`Preview Atlas` icon. You can then use the arrows in the same toolbar to navigate through all the features:
+
+* |mActionAtlasFirst| :sup:`First feature`
+* |mActionAtlasPrev| :sup:`Previous feature`
+* |mActionAtlasNext| :sup:`Next feature`
+* |mActionAtlasLast| :sup:`Last feature`
+You can also use the combo box to directly select and preview a specific feature. The combo box shows 
+atlas features name according to the expression set in the atlas :guilabel:`Page name` option. 
 
 Generation
 ----------
