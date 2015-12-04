@@ -628,8 +628,6 @@ rst_epilog = """
    :width: 2em
 .. |mActionDeleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
-.. |mActionDeleteVertex| image:: /static/common/mActionDeleteVertex.png
-   :width: 1.5em
 .. |mActionDeselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
 .. |mActionDraw| image:: /static/common/mActionDraw.png
@@ -834,6 +832,8 @@ rst_epilog = """
 .. |mActionTextAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
 .. |mActionToggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |mActionTouch| image:: /static/common/mActionTouch.svg
    :width: 1.5em
 .. |mActionTransformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em
