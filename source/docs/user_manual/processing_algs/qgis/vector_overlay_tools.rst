@@ -145,7 +145,7 @@ See also
 ........
 
 Symmetrical difference
----------------------
+-----------------------
 
 Description
 ...........
