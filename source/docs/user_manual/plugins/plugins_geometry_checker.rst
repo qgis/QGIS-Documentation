@@ -11,7 +11,7 @@ Geometry Checker Plugin
 
    **Figure Geometry Checker:**
 
-.. figure:: /static/user_manual/plugins/geometrychecker.png
+.. figure:: /static/user_manual/plugins/check_geometries.png
    :align: center
 
    The Geometry Checker Plugin

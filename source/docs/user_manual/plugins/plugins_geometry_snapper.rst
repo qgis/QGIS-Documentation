@@ -11,7 +11,7 @@ Geometry Snapper Plugin
 
    **Figure Geometry Snapper:**
 
-.. figure:: /static/user_manual/plugins/geometrysnapper.png
+.. figure:: /static/user_manual/plugins/snap_geometries.png
    :align: center
 
    The Geometry Snapper Plugin

@@ -40,6 +40,6 @@ Icon                    Plugin                        Description               
 |roadgraph|             Road Graph plugin             Shortest path analysis                                  :ref:`roadgraph`
 |spatialquery|          Spatial Query                 Spatial queries on vectors                              :ref:`spatial_query`
 |spiticon|              SPIT                          Shapefile to PostgreSQL/PostGIS Import Tool             :ref:`label_spit`
-|topologychecker|       Topology Checker              Find topological errors in vector layers                :ref:`topo_checker`
+|topologychecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
 |raster-stats|          Zonal Statistics              Calculate raster statistics for vector polygons         :ref:`zonal_statistics`
 ======================  ============================  ======================================================  ===============================
