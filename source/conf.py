@@ -528,8 +528,6 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddImage|  image:: /static/common/mActionAddImage.png
    :width: 1.5em
-.. |mActionAddIsland| image:: /static/common/mActionAddIsland.png
-   :width: 2em
 .. |mActionAddLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
 .. |mActionAddLegend| image:: /static/common/mActionAddLegend.png
@@ -713,7 +711,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionMeasureArea| image:: /static/common/mActionMeasureArea.png
    :width: 1.5em
-.. |mActionMergeFeatureAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
+.. |mActionMergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mActionMergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
@@ -833,7 +831,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionToggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |mActionTouch| image:: /static/common/mActionTouch.svg
+.. |mActionTouch| image:: /static/common/mActionTouch.png
    :width: 1.5em
 .. |mActionTransformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em
@@ -869,8 +867,6 @@ rst_epilog = """
 .. |matrix| image:: /static/common/matrix.png
    :width: 1.5em
 .. |mean| image:: /static/common/mean.png
-   :width: 1.5em
-.. |mergeFeats| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
 .. |merge_shapes| image:: /static/common/merge_shapes.png
    :width: 1.5em
@@ -1041,6 +1037,7 @@ rst_epilog = """
 .. |sym_difference| image:: /static/common/sym_difference.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
+   :width: 1.5em
 .. |simplify| image:: /static/common/simplify.png
    :width: 1.5em
 .. |tab| image:: /static/common/tab.png
