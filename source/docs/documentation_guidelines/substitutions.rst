@@ -130,21 +130,21 @@ Icon                            Substitution                        Icon        
 Digitizing and Advanced Digitizing
 ..................................
 
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
+==============================  ==================================  ===============================  ==================================
+Icon                            Substitution                        Icon                             Substitution
+==============================  ==================================  ===============================  ==================================
 |mActionToggleEditing|          ``|mActionToggleEditing|``
-|mActionCapturePoint|           ``|mActionCapturePoint|``           |mActionCapturePolygon|         ``|mActionCapturePolygon|``
+|mActionCapturePoint|           ``|mActionCapturePoint|``           |mActionCapturePolygon|          ``|mActionCapturePolygon|``
 |mActionCaptureLine|            ``|mActionCaptureLine|``
-|mActionNodeTool|               ``|mActionNodeTool|``               |mActionMoveFeature|            ``|mActionMoveFeature|``
+|mActionNodeTool|               ``|mActionNodeTool|``               |mActionMoveFeature|             ``|mActionMoveFeature|``
 |mActionDeleteSelected|         ``|mActionDeleteSelected|``
-|mActionSimplify|               ``|mActionSimplify|``               |mActionReshape|                ``|mActionReshape|``
-|mActionAddRing|                ``|mActionAddRing|``                |mActionAddIsland|              ``|mActionAddIsland|``
-|mActionDeleteRing|             ``|mActionDeleteRing|``             |mActionDeletePart|             ``|mActionDeletePart|``
-|mergeFeats|                    ``|mergeFeats|``                    |mActionMergeFeatures|          ``|mActionMergeFeatures|``
-|mActionSplitFeatures|          ``|mActionSplitFeatures|``          |mActionRotatePointSymbols|     ``|mActionRotatePointSymbols|``
-|mActionOffsetCurve|            ``|mActionOffsetCurve|``            \                               \ 
-==============================  ==================================  ==============================  ==================================
+|mActionSimplify|               ``|mActionSimplify|``               |mActionReshape|                 ``|mActionReshape|``
+|mActionAddRing|                ``|mActionAddRing|``                |mActionAddPart|                 ``|mActionAddPart|``
+|mActionDeleteRing|             ``|mActionDeleteRing|``             |mActionDeletePart|              ``|mActionDeletePart|``
+|mActionMergeFeatures|          ``|mActionMergeFeatures|``          |mActionMergeFeatAttributes|     ``|mActionMergeFeatAttributes|``
+|mActionSplitFeatures|          ``|mActionSplitFeatures|``          |mActionSplitParts|              ``|mActionSplitParts|``
+|mActionOffsetCurve|            ``|mActionOffsetCurve|``            |mActionRotatePointSymbols|      ``|mActionRotatePointSymbols|``
+==============================  ==================================  ===============================  ==================================
 
 
 Map Navigation and attributes
@@ -226,8 +226,7 @@ Icon                            Substitution                        Icon        
 |mActionSelectedToTop|          ``|mActionSelectedToTop|``          |mActionInvertSelection|        ``|mActionInvertSelection|``
 |PanToSelected|                 ``|PanToSelected|``                 |mActionZoomToSelected|         ``|mActionZoomToSelected|``
 |mActionCopySelected|           ``|mActionCopySelected|``           |mActionEditPaste|              ``|mActionEditPaste|``
-|mIconExpressionSelect|         ``|mIconExpressionSelect|``
-|mActionDeleteSelection|        ``|mActionDeleteSelection|``
+|mIconExpressionSelect|         ``|mIconExpressionSelect|``         |mActionDeleteSelected|         ``|mActionDeleteSelected|``
 |mActionNewAttribute|           ``|mActionNewAttribute|``           |mActionDeleteAttribute|        ``|mActionDeleteAttribute|``
 |mActionCalculateField|         ``|mActionCalculateField|``         \                               \ 
 ==============================  ==================================  ==============================  ==================================
