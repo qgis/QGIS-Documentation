@@ -75,39 +75,5 @@ The available functions are listed in :ref:`vector_expressions` chapter.
 Function Editor tab
 -------------------
 With the Function Editor you are able to define your own Python custom functions in a 
-comfortable way.
-The function editor will create new Python files in :file:`qgis2\python\expressions` and
-will auto load all functions defined when starting QGIS. Be aware that new functions are 
-only saved in the :file:`expressions` folder and not in the project file.
-If you have a project that uses one of your custom functions you will need to also share 
-the .py file in the expressions folder. 
-
-Here's a short example on how to create your own functions:
-
-.. code-block:: python
-
-   @qgsfunction(args="auto", group='Custom')
-   def myfunc(value1, value2 feature, parent):
-       pass
-
-The short example creates a function 'myfunc' that will give you a function with two
-values.
-When using the args='auto' function argument the number of function
-arguments required will be calculated by the number of arguments the
-function has been defined with in Python (minus 2 - feature, and parent).
-
-This function then can be used with the following expression:
-
-.. code-block:: python
-
-   myfunc('test1', 'test2')
-
-Your function will be implemented in the 'Custom' :guilabel:`Functions` of the :guilabel:`Expression` tab
-after using the :guilabel:`Run Script` button.
-
-Further information about creating Python code can be found on 
-http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
-
-The function editor is not only limited to working with the field calculator, it can be found whenever
-you work with expressions. See also :ref:`vector_expressions`.
+comfortable way. See also :ref:`vector_expressions` for more informations.
 
