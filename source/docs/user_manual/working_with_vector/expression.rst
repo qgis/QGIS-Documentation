@@ -33,7 +33,7 @@ Functions List
 
    **Figure Expression 1:**
 
-.. figure:: /static/user_manual/working_with_vector/functions_list.png
+.. figure:: /static/user_manual/working_with_vector/function_list.png
    :align: center
 
    The Expression tab |nix|
@@ -557,6 +557,9 @@ To use these functions in an expression, they should be preceded by @ character 
 Function Editor
 ****************
 
+With the Function Editor, you are able to define your own Python custom functions in a 
+comfortable way.
+
 .. _figure_expression_2:
 
 .. only:: html
@@ -568,8 +571,6 @@ Function Editor
 
    The Function Editor tab |nix|
 
-With the Function Editor, you are able to define your own Python custom functions in a 
-comfortable way.
 The function editor will create new Python files in :file:`.qgis2\\python\\expressions` folder and
 will auto load all functions defined when starting QGIS. Be aware that new functions are 
 only saved in the :file:`expressions` folder and not in the project file.
