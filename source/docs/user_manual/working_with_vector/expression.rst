@@ -42,7 +42,7 @@ The **Expression** tab contains functions as well as layer's fields and values.
 It contains widgets to:
 
 - type expressions using functions and/or fields. A preview of the expression's result is displayed at the bottom of the dialog.
-- select the appropriate function among a list. A search box helps to quickly find a particular function or field. Double-clicking on its name adds it to the expression being written. 
+- select the appropriate function among a list. A search box is available to filter the list and quickly find a particular function or field. Double-clicking on the item's name adds it to the expression being written. 
 - display help for each function selected. When a field is selected, this widget shows a sample of its values. Double-clicking a value adds it to the expression.
 
 
@@ -292,8 +292,9 @@ it into the box.
 To display the values of a field, you just click on the
 appropriate field and choose between :guilabel:`Load top 10 unique values`
 and :guilabel:`Load all unique values`. On the right side, the **Field Values**
-list opens with the unique values. To add a value to the expression you are writing,
-double click its name in the list.
+list opens with the unique values. At the top of the list, a search box helps filtering the values.
+To add a value to the expression you are writing,
+double click its name in the list.  
 
 Sample values can also be accessed via right-click.
 Select the field name from the list, then right-click to access a context menu 
