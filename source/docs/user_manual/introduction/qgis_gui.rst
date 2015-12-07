@@ -86,37 +86,37 @@ Menu Option                                                     Shortcut        
 Edit
 ....
 
-==============================================================  ====================  ==========================================  ===============================
-Menu Option                                                     Shortcut              Reference                                   Toolbar
-==============================================================  ====================  ==========================================  ===============================
-|mActionUndo| :guilabel:`Undo`                                  :kbd:`Ctrl+Z`         see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionRedo| :guilabel:`Redo`                                  :kbd:`Ctrl+Shift+Z`   see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionEditCut| :guilabel:`Cut Features`                       :kbd:`Ctrl+X`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionEditCopy| :guilabel:`Copy Features`                     :kbd:`Ctrl+C`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionEditPaste| :guilabel:`Paste Features`                   :kbd:`Ctrl+V`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-:menuselection:`Paste features as -->`                          \		      see :ref:`sec_attribute_table`	          \		
-|mActionCapturePoint| :guilabel:`Add Feature`                   :kbd:`Ctrl+.`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionMoveFeature| :guilabel:`Move Feature(s)`                \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionDeleteSelected| :guilabel:`Delete Selected`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionRotatePointSymbols| :guilabel:`Rotate Feature(s)`       \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionSimplify| :guilabel:`Simplify Feature`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionAddRing| :guilabel:`Add Ring`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionAddPart| :guilabel:`Add Part`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionFillRing| :guilabel:`Fill Ring`                         \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionDeleteRing| :guilabel:`Delete Ring`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionDeletePart| :guilabel:`Delete Part`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionReshape| :guilabel:`Reshape Features`                   \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionOffsetCurve| :guilabel:`Offset Curve`                   \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionSplitFeatures| :guilabel:`Split Features`               \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionSplitParts| :guilabel:`Split Parts`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mergeFeats| :guilabel:`Merge Selected Features`                \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mergeFeats| :guilabel:`Merge Attr. of Selected Features`       \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionNodeTool| :guilabel:`Node Tool`                         \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`    \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-==============================================================  ====================  ==========================================  ===============================
+===========================================================================  ====================  ==========================================  ===============================
+Menu Option                                                                  Shortcut              Reference                                   Toolbar
+===========================================================================  ====================  ==========================================  ===============================
+|mActionUndo| :guilabel:`Undo`                                               :kbd:`Ctrl+Z`         see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionRedo| :guilabel:`Redo`                                               :kbd:`Ctrl+Shift+Z`   see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionEditCut| :guilabel:`Cut Features`                                    :kbd:`Ctrl+X`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionEditCopy| :guilabel:`Copy Features`                                  :kbd:`Ctrl+C`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionEditPaste| :guilabel:`Paste Features`                                :kbd:`Ctrl+V`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+:menuselection:`Paste features as -->`                                       \                     see :ref:`sec_attribute_table`              \
+|mActionCapturePoint| :guilabel:`Add Feature`                                :kbd:`Ctrl+.`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionMoveFeature| :guilabel:`Move Feature(s)`                             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionDeleteSelected| :guilabel:`Delete Selected`                          \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionRotatePointSymbols| :guilabel:`Rotate Feature(s)`                    \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionSimplify| :guilabel:`Simplify Feature`                               \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionAddRing| :guilabel:`Add Ring`                                        \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionAddPart| :guilabel:`Add Part`                                        \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionFillRing| :guilabel:`Fill Ring`                                      \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionDeleteRing| :guilabel:`Delete Ring`                                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionDeletePart| :guilabel:`Delete Part`                                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionReshape| :guilabel:`Reshape Features`                                \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionOffsetCurve| :guilabel:`Offset Curve`                                \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionSplitFeatures| :guilabel:`Split Features`                            \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionSplitParts| :guilabel:`Split Parts`                                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionMergeFeatures| :guilabel:`Merge Selected Features`                   \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionMergeFeatAttributes| :guilabel:`Merge Attr. of Selected Features`    \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionNodeTool| :guilabel:`Node Tool`                                      \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`                 \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+===========================================================================  ====================  ==========================================  ===============================
 
 After activating |mActionToggleEditing| :sup:`Toggle editing` mode for a layer,
-you will find the ``Add Feature`` icon in the :menuselection:`Edit` menu
+you will enable the ``Add Feature`` icon in the :menuselection:`Edit` menu
 depending on the layer type (point, line or polygon).
 
 Edit (extra)
