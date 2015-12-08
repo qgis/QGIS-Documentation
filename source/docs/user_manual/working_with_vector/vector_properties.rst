@@ -983,18 +983,24 @@ Other options in the dialog are 'Autogenerate' and 'Provide ui-file'.
   Using a UI-file allows a great deal of freedom in creating a dialog. 
   For detailed information, see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
 
-|qg| dialogs can have a Python function that is called when the dialog is opened. Use this function to add extra logic to your dialogs.
+|qg| dialogs can have a Python function that is called when the dialog is opened. Use this function to add extra logic to your dialogs. The form code can be specified in three different ways:
+
+* load from the environment (for example in `startup.py` or from a plugin)
+* load from an external file, a file chooser will appear in that case to allow you to select a Python file from your filesystem
+* load from inline code, a Python editor will appear where you can directly type your form code
+
+In all cases you must enter the name of the function that will be called (`open` in the example below).
+
 An example is (in module MyForms.py):
 
 ::
-
+  
   def open(dialog,layer,feature):
-  geom = feature.geometry()
-  control = dialog.findChild(QWidged,"My line edit")
+      geom = feature.geometry()
+      control = dialog.findChild(QWidged,"My line edit")
 
-Reference in Python Init Function like so: MyForms.open
+Reference in Python Init Function like so: `open`
 
-MyForms.py must live on PYTHONPATH, in .qgis2/python, or inside the project folder.
 
 .. _figure_fields_2:
 
