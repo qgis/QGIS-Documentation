@@ -325,25 +325,13 @@ features` or press :kbd:`Ctrl + Shift + I`, or click on the |mActionIdentify|
 |qg| offers two ways to identify features with the |mActionIdentify|
 :sup:`Identify features`:
 
-<<<<<<< eb18df703b95bf68b4e999446d3bb870c50fb9fc
-* **left click** will identify features according to the mode set in the
-  :guilabel:`Identify results` panel
-* **right click** will fetch all the snapped features from all the visible layers.
-  This will be shown in a context menu, allowing the user to choose more precisely
-  the features to identify.
-=======
 * **left click** will identify features according to the mode set in the :guilabel:`Identify results` panel
 * **right click** will fetch all the snapped features from all the visible layers. This will open a context menu, allowing the user to choose more precisely the features to identify.
->>>>>>> add substitutions in identify panel
 
 If you click on feature, the :guilabel:`Identify results` dialog will
 list informations about the clicked feature(s). The default view is a tree view where the first item is the name of the
 layer and its children are its identified feature(s). Each feature is described by
-<<<<<<< eb18df703b95bf68b4e999446d3bb870c50fb9fc
 the name of a field with its value. This field is the one set in
-=======
-the name of a field with its value. This field is the one set in 
->>>>>>> add substitutions in identify panel
 :menuselection:`Properties --> Display`. Then follow all the other informations about the feature.
 
 This window can be customized to display custom fields, but by default it will
