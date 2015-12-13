@@ -4,6 +4,9 @@
 Overview of the Print Composer
 ==============================
 
+Menu and tools in the composer
+-------------------------------
+
 Opening the Print Composer provides you with a blank canvas that represents the paper surface when using the print option. Initially you find buttons on the left beside the canvas to add map composer items: the current |qg| map canvas, text labels, images, legends, scale bars, basic shapes, arrows, attribute tables and HTML frames. In this toolbar you also find toolbar buttons to navigate, zoom in on an area and pan the view on the composer and toolbar buttons to select a map composer item and to move the contents of the map item.  
 
 Figure_composer_overview_ shows the initial view of the Print Composer before any elements are added.
@@ -116,28 +119,62 @@ The toolbars and the tabs can be switched off and on using the right mouse butto
 
 Table Composer 1: Print Composer Tools
 
-Items tab
-----------
 
-The Items tab lists all the items added to the print composer canvas. For each element, you can :
+Print Composer Options
+^^^^^^^^^^^^^^^^^^^^^^
 
-- rename the item,
-- |mActionShowAllLayers| set it visible or not,
-- |mIconLock| lock or unlock its position.
-Once you have found the correct position for an item, you can lock it by ticking the box in |locked| column. Locked items are **not** selectable on the canvas. 
+From :menuselection:`Settings --> Composer Options` you can set some options that will be
+used as default on any composer during your work.
 
-Locked items can be unlocked by selecting the item in the 
-:menuselection:`Items` tab and unchecking the tickbox or you can use the icons 
-on the toolbar.
+* :guilabel:`Compositions defaults` let you specify the default font to use.
+* With :guilabel:`Grid appearance`, you can set the grid style and its color.
+  There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
+* :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance of the grid. 
 
+
+Copy/Cut and Paste Items
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The print composer includes actions to use the common Copy/Cut/Paste functionality for the items in the layout. As usual first you need to select the items using one of the options seen above; at this point the actions can be found in the :menuselection:`Edit` menu.
+When using the Paste action, the elements will be pasted according to the current mouse position.
+Using the :menuselection:`Edit --> Paste in Place` action or pressing :kbd:`Ctrl+Shift+V` will paste the items into the current page, at the same position they were in their initial page. It ensures to copy/paste items at the same place, from page to page.
+
+.. note::
+   HTML items can not be copied in this way. As a workaround, use the **[Add Frame]** button in the :menuselection:`Item Properties` tab.
+
+Hide and Show Panels
+^^^^^^^^^^^^^^^^^^^^
+
+To maximise the space available to interact with a composition you can use :menuselection:`View -->` |checkbox| :guilabel:`Hide panels` or press :kbd:`F10`.
+
+.. note::
+
+   It's also possible to switch to a full screen mode to have more space to interact by pressing :kbd:`F11` or using :menuselection:`View -->` |checkbox| :guilabel:`Toggle full screen`.
+
+
+Navigation Tools
+^^^^^^^^^^^^^^^^
+
+To navigate in the canvas layout, the Print Composer provides some general tools:
+
+* |mActionZoomIn| :sup:`Zoom in`
+* |mActionZoomOut| :sup:`Zoom out`
+* |mActionZoomFullExtent| :sup:`Zoom full`
+* |mActionZoomActual| :sup:`Zoom to 100%`
+* |mActionDraw| :sup:`Refresh view` (if you find the view in an inconsistent
+  state)
+* |mActionPan| :sup:`Pan composer`
+* |mActionZoomToSelected| :sup:`Zoom` (zoom to a specific region of the Composer)
+
+You can change the zoom level also using the mouse wheel or the combo box in the status bar. If you need to switch to pan mode while working in the Composer area, you can hold the :kbd:`Spacebar` or the mouse wheel.
+With :kbd:`Ctrl+Spacebar`, you can temporarily switch to zoom in mode, and with :kbd:`Ctrl+Shift+Spacebar`, to zoom out mode.
 
 .. index:: Revert_Layout_Actions
 
-Command History tab : Revert and Restore tools
+Command History : Revert and Restore actions
 ----------------------------------------------
 
-During the layout process, it is possible to revert and restore changes). This can
-be done with the revert and restore tools:
+During the layout process, it is possible to revert and restore changes. This can be done with the revert and restore tools:
 
 * |mActionUndo| :sup:`Revert last change`
 * |mActionRedo| :sup:`Restore last change`
@@ -156,79 +193,16 @@ Just select the point you want to revert to and once you do new action all the a
 
    Command history in the Print Composer |nix|
 
+   
+Items Tab
+----------
 
+The Items tab lists all the items added to the print composer canvas. For each one, you can :
 
-Composition tab --- General composition setup
----------------------------------------------
+* change the name by double-clicking the text,
+* |mActionShowAllLayers| set it visible or not,
+* |mIconLock| lock or unlock its position.
 
-In the :guilabel:`Composition` tab, you can define the global settings of the current composition.
+Once you have found the correct position for an item, you can lock it by ticking the box in |locked| column. Locked items are **not** selectable on the canvas. 
 
-* You can choose one of the :guilabel:`Presets` for your paper sheet, or enter your custom :guilabel:`width` and :guilabel:`height`.
-* Composition can now be divided into several pages. For instance, a first page can show a map canvas, and a second
-  page can show the attribute table associated with a layer, while a third one shows an HTML frame linking to your organization website.
-  Set the :guilabel:`Number of pages` to the desired value. You can choose the page :guilabel:`Orientation` and its :guilabel:`Exported resolution`. When checked, |checkbox| :guilabel:`print as raster` means all elements will be rasterized before printing or saving as PostScript or
-  PDF.
-* :guilabel:`Grid and guides` lets you customize grid settings like :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`tolerance` to your need. The tolerance
-  is the maximum distance below which an item is snapped to smart guides.
-
-Snap to grid and/or to smart guides can be enabled from the :menuselection:`View` menu. In this menu, you can also hide or show the grid and smart guides.
-
-
-Menu and tools in the composer
--------------------------------
-
-Print Composer Options
-^^^^^^^^^^^^^^^^^^^^^^
-
-From :menuselection:`Settings --> Composer Options` you can set some options that will be
-used as default on any composer during your work.
-
-* :guilabel:`Compositions defaults` let you specify the default font to use.
-* With :guilabel:`Grid appearance`, you can set the grid style and its color.
-  There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
-* :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance of the grid. 
-
-
-Copy/Cut and Paste items
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-The print composer includes actions to use the common Copy/Cut/Paste functionality for the items
-in the layout. As usual first you need to select the items using one of the options seen above;
-at this point the actions can be found in the :menuselection:`Edit` menu. When using the Paste action, the elements
-will be pasted according to the current mouse position.
-Using the :menuselection:`Edit --> Paste in Place` action or pressing :kbd:`Ctrl+Shift+V` will paste the items into the current page, at the same position they were in their initial page. It ensures to copy/paste items at the same place, from page to page.
-
-.. note::
-   HTML items can not be copied in this way. As a workaround, use the **[Add Frame]** button in the :menuselection:`Item Properties` tab.
-
-Hide and show panels
-^^^^^^^^^^^^^^^^^^^^
-
-To maximise the space available to interact with a composition you can use :menuselection:`View -->`
-|checkbox| :guilabel:`Hide panels` or press :kbd:`F10`.
-
-.. note::
-
-   It's also possible to switch to a full screen mode to have more space to interact by pressing
-   :kbd:`F11` or using :menuselection:`View -->` |checkbox| :guilabel:`Toggle full screen`.
-
-
-Navigation tools
-^^^^^^^^^^^^^^^^
-
-To navigate in the canvas layout, the Print Composer provides some general tools:
-
-* |mActionZoomIn| :sup:`Zoom in`
-* |mActionZoomOut| :sup:`Zoom out`
-* |mActionZoomFullExtent| :sup:`Zoom full`
-* |mActionZoomActual| :sup:`Zoom to 100%`
-* |mActionDraw| :sup:`Refresh view` (if you find the view in an inconsistent
-  state)
-* |mActionPan| :sup:`Pan composer`
-* |mActionZoomToSelected| :sup:`Zoom` (zoom to a specific region of the Composer)
-
-You can change the zoom level also using the mouse wheel or the combo box in the status
-bar. If you need to switch to pan mode while working in the Composer area, you can
-hold the :kbd:`Spacebar` or the mouse wheel.
-With :kbd:`Ctrl+Spacebar`, you can temporarily switch to zoom in mode, and with 
-:kbd:`Ctrl+Shift+Spacebar`, to zoom out mode.
+Locked items can be unlocked by selecting the item in the :menuselection:`Items` tab and unchecking the tickbox or you can use the icons on the toolbar.
