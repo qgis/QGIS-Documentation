@@ -1,6 +1,7 @@
 |updatedisclaimer|
 
-Composer items common options
+
+Composer Items Common Options
 ==============================
 
 Composer items have a set of common properties you will find on the bottom of the :guilabel:`Item Properties` tab: Position and size, Rotation, Frame,
@@ -12,7 +13,7 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
 
    **Figure Composer Common 1:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_common_properties.png
+.. figure:: /static/user_manual/print_composer/common_properties.png
    :align: center
 
    Common Item properties Dialogs |nix|
@@ -44,9 +45,9 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
      (See :ref:`atlas_data_defined_override`).
 
 
-.. _Rendering_Mode:
-
 .. index:: Rendering_Mode
+
+.. _Composer_Rendering_Mode:
 
 Rendering mode
 --------------
@@ -64,53 +65,17 @@ Rendering mode
 
    Rendering mode |nix|
 
-* :guilabel:`Transparency` |slider|: You can make the underlying item in the Composer
-  visible with this tool. Use the slider to adapt the visibility of your item to your needs.
+* :guilabel:`Blending mode`: You can achieve special rendering effects with these tools that you previously only may know from graphics programs. The pixels of your overlaying and underlaying items are mixed through the settings described below.(See :ref:`layer_rendering` for more information)
+* :guilabel:`Transparency` |slider|: You can make the underlying item in the Composer visible with this tool. Use the slider to adapt the visibility of your item to your needs.
   You can also make a precise definition of the percentage of visibility in the menu beside the slider.
 * |checkbox| :guilabel:`Exclude item from exports`: You can decide to make an item not visible in all exports. After activating this checkbox, the item will not be included in PDF's, prints etc.. 
-* :guilabel:`Blending mode`: You can achieve special rendering effects with these tools that you
-  previously only may know from graphics programs. The pixels of your overlaying and underlaying items are mixed
-  through the settings described below.
-
-    * Normal: This is the standard blend mode, which uses the alpha channel of the 
-      top pixel to blend with the pixel beneath it; the colors aren't mixed.
-    * Lighten: This selects the maximum of each component from the foreground and 
-      background pixels. Be aware that the results tend to be jagged and harsh.
-    * Screen: Light pixels from the source are painted over the destination, while 
-      dark pixels are not. This mode is most useful for mixing the texture of one layer 
-      with another layer (e.g., you can use a hillshade to texture another layer).
-    * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness 
-      of the top pixel. So, brighter top pixels cause the saturation and brightness of the 
-      underlying pixels to increase. This works best if the top pixels aren't too bright; 
-      otherwise the effect is too extreme.
-    * Addition: This blend mode simply adds pixel values of one layer with pixel values of 
-      the other. In case of values above 1 (as in the case of RGB), white is displayed. This 
-      mode is suitable for highlighting features.
-    * Darken: This creates a resultant pixel that retains the smallest components of the 
-      foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
-    * Multiply: Here, the numbers for each pixel of the top layer are multiplied with the numbers 
-      for the corresponding pixel of the bottom layer. The results are darker pictures.
-    * Burn: Darker colors in the top layer cause the underlying layers to darken. Burn can be 
-      used to tweak and colorise underlying layers.
-    * Overlay: This mode combines the multiply and screen blending modes. In the resulting picture, 
-      light parts become lighter and dark parts become darker.
-    * Soft light: This is very similar to overlay, but instead of using multiply/screen it uses 
-      color burn/dodge. This mode is supposed to emulate shining a soft light onto an image.
-    * Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting 
-      a very intense light onto an image.
-    * Difference: Difference subtracts the top pixel from the bottom pixel, or the other way 
-      around, to always get a positive value. Blending with black produces no change, as the 
-      difference with all colors is zero.
-    * Subtract: This blend mode simply subtracts pixel values of one layer with pixel values of 
-      the other. In case of negative values, black is displayed.
 
 
 Size and position
 ------------------
 
 Each item inside the Composer can be moved/resized to create a perfect layout.
-For both operations the first step is to activate the |mActionSelect| :sup:`Select/Move item` 
-tool and to click on the item; you can then move it using the mouse while holding the left button. 
+For both operations the first step is to activate the |mActionSelect| :sup:`Select/Move item` tool and to click on the item; you can then move it using the mouse while holding the left button. 
 If you need to constrain the movements to the horizontal or the vertical axis, just hold 
 the :kbd:`Shift` while moving the mouse.
 If you need a better precision, you can move a selected item using the :kbd:`Arrow keys` on the keyboard; 
@@ -127,8 +92,7 @@ place. To delete a guide move it off the canvas. If you need to disable the
 snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
 
 You can choose multiple items with the |mActionSelect| :sup:`Select/Move item` button. 
-Just hold the :kbd:`Shift` button and click on all the items you need. You can then resize/move
-this group just like a single item.
+Just hold the :kbd:`Shift` button and click on all the items you need. You can then resize/move this group just like a single item.
 
 Once you have found the correct position for an item, you can lock it by using 
 the items on the toolbar or ticking the box next to the item in the 
@@ -142,6 +106,9 @@ To unselect an item, just click on it holding the :kbd:`Shift` button.
 
 Inside the :menuselection:`Edit` menu, you can find actions to select all the items, to clear all selections or 
 to invert the current selection.
+
+
+.. index:: Items_Alignment
 
 Alignment
 ----------
@@ -168,7 +135,6 @@ in this list.
 There are several alignment functionalities available within the |mActionAlignLeft|
 :sup:`Align selected items` pull-down menu (see figure_composer_common_3_). To use an
 alignment functionality, you first select some elements and then click on the
-matching alignment icon. All selected elements will then be aligned within to their common
-bounding box.
+matching alignment icon. All selected elements will then be aligned within to their common bounding box.
 When moving items on the Composer canvas, alignment helper lines appear when borders, centers or corners are aligned.
 

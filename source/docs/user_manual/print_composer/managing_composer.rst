@@ -23,7 +23,7 @@ In the :menuselection:`Composer` menu, there are also powerful ways to share geo
 
 .. index:: Composer_Manager
 
-.. _composer_manager_
+.. _composer_manager:
 
 The Composer Manager
 --------------------
@@ -51,13 +51,12 @@ The composer manager lists in its upper part all the available print composers i
 * rename the composer: you can also rename the composer by double-clicking on its title in the upper part
 * remove the composer: the print composer will be deleted from the project.
 
-With the Composer Manager, it's also possible to create new print composers as an empty composer or from a saved template. By default, |qg| will look for templates in user directory (~/.qgis2/composer_template) or application's one (appDir/composer_templates). |qg| will retrieve all the available templates and propose them in the combobox. The selected template will be used to create a new composer when clicking on :guilabel:`Add` button. 
+With the Composer Manager, it's also possible to create new print composers as an empty composer or from a saved template. By default, |qg| will look for templates in user directory (:file:`~/.qgis2/composer_templates`) or application's one (:file:`appDir/composer_templates`). |qg| will retrieve all the available templates and propose them in the combobox. The selected template will be used to create a new composer when clicking on :guilabel:`Add` button. 
 You can also save composer templates in another folder. Choosing *specific* in the template list offers the ability to select such template and use it to create a new print composer. 
 
 
 .. index::
    single:Printing; Export_Map
-
 
 
 Creating Output

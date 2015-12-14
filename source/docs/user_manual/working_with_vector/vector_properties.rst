@@ -119,7 +119,7 @@ the menu on the right side.
 If you click on the first level in the :guilabel:`Symbol layers` dialog on the left
 side, it's possible to define basic parameters like :guilabel:`Size` or 
 :guilabel:`width` (for point and line features), :guilabel:`Rotation` (for point 
-features), :guilabel:`color` and :guilabel:`Transparenc` (for all types of 
+features), :guilabel:`color` and :guilabel:`Transparency` (for all types of 
 feature). Here, the layers are joined together.
 
 
@@ -482,6 +482,8 @@ QGIS or even from another application by pressing the space bar. Please note tha
    :align: center
 
    Quick color picker menu |nix|
+
+.. _layer_rendering:
 
 Layer rendering
 ...............
