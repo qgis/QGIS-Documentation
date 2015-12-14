@@ -2,7 +2,7 @@
 
 .. _arrow_item:
 
-The Arrow item
+The Arrow Item
 ===============
 
 To add an arrow, click the |mActionAddArrow| :sup:`Add Arrow` icon, place the element holding 
@@ -23,7 +23,7 @@ an image item with a map so it can rotate automatically with the map (see :ref:`
 
    **Figure Composer Arrow:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_arrow.png
+.. figure:: /static/user_manual/print_composer/arrow_properties.png
    :align: center
 
    Arrow Item properties Tab |nix|
@@ -52,7 +52,7 @@ For :guilabel:`SVG Marker` you can use following options.
 
 * :guilabel:`Start marker` : Choose an SVG image to draw at the beginning of the line
 * :guilabel:`End marker` : Choose an SVG image to draw at the end of the line
-* :guilabel:`Arrow head width`: Set the size of Start and/or End marker
+* :guilabel:`Arrow head width` : Set the size of Start and/or End marker
 
 SVG images are automatically rotated with the line. The color of the SVG image can not be changed.
 
