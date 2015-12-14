@@ -53,9 +53,12 @@ While exporting to an image file format, you can choose to generate a world file
 Grid and guides
 ----------------
 
-:guilabel:`Grid and guides` lets you customize grid settings like :guilabel:`Grid spacing`, :guilabel:`Grid offset` and :guilabel:`Snap tolerance` to your need. The tolerance is the maximum distance below which an item is snapped to smart guides.
-Snap to grid and/or to smart guides can be enabled from the :menuselection:`View` menu. In that menu, you can also set the style and color of the grid. The options defined in :menuselection:`View` menu are applied by default to any new print composer.
+You can put some reference marks on your composition paper sheet to help you place some items. These marks can be:
 
+* simple lines (called **Guides**) put at the position you want. To do that, ensure that :guilabel:`Show Rulers` and :guilabel:`Show Guides` in :menuselection:`View` menu are checked. Then, click and drag from within the ruler to the paper sheet. A vertical or horizontal line is added to the paper and you can set its position following the coordinates displayed at the left bottom of the composer dialog.
+* or regular **Grid**.
+
+Whether grids or guides should be shown is set in :menuselection:`View` menu. There, you can also decide if they might be used to snap composer items. The :guilabel:`Grid and guides` section lets you customize grid settings like :guilabel:`Grid spacing`, :guilabel:`Grid offset` and :guilabel:`Snap tolerance` to your need. The tolerance is the maximum distance below which an item is snapped to a grid or a guide.
   
 .. _figure_composition_3:
 
@@ -67,3 +70,6 @@ Snap to grid and/or to smart guides can be enabled from the :menuselection:`View
    :align: center
 
    Snapping to grids in the Print Composer |nix|
+
+In the :menuselection:`Options --> Composer` menu in |qg| main canvas, you can also set the spacing, offset and snap tolerance of the grid as much as its style and color. These options are applied by default to any new print composer.
+
