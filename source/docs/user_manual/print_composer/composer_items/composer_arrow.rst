@@ -2,7 +2,7 @@
 
 .. _arrow_item:
 
-The Arrow item
+The Arrow Item
 ===============
 
 To add an arrow, click the |mActionAddArrow| :sup:`Add Arrow` icon, place the element holding 
@@ -23,7 +23,7 @@ an image item with a map so it can rotate automatically with the map (see :ref:`
 
    **Figure Composer Arrow:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_arrow.png
+.. figure:: /static/user_manual/print_composer/arrow_properties.png
    :align: center
 
    Arrow Item properties Tab |nix|
@@ -37,21 +37,21 @@ The  **[Line style ...]** button can be used to set the line style using the lin
 
 In :guilabel:`Arrows markers` you can select one of three radio buttons.
  
-* :guilabel:`Default` : To draw a regular arrow, gives you options to style the arrow head 
-* :guilabel:`None` : To draw a line without arrow head
-* :guilabel:`SVG Marker` : To draw a line with an SVG :guilabel:`Start marker` and/or :guilabel:`End marker`
+* :guilabel:`Default`: To draw a regular arrow, gives you options to style the arrow head 
+* :guilabel:`None`: To draw a line without arrow head
+* :guilabel:`SVG Marker`: To draw a line with an SVG :guilabel:`Start marker` and/or :guilabel:`End marker`
 
 For :guilabel:`Default` Arrow marker you can use following options to style the arrow head.
 
-* :guilabel:`Arrow outline color` : Set the outline color of the arrow head
-* :guilabel:`Arrow fill color` : Set the fill color of the arrow head
-* :guilabel:`Arrow outline width` : Set the outline width of the arrow head
+* :guilabel:`Arrow outline color`: Set the outline color of the arrow head
+* :guilabel:`Arrow fill color`: Set the fill color of the arrow head
+* :guilabel:`Arrow outline width`: Set the outline width of the arrow head
 * :guilabel:`Arrow head width`: Set the size of the arrow head
   
 For :guilabel:`SVG Marker` you can use following options. 
 
-* :guilabel:`Start marker` : Choose an SVG image to draw at the beginning of the line
-* :guilabel:`End marker` : Choose an SVG image to draw at the end of the line
+* :guilabel:`Start marker`: Choose an SVG image to draw at the beginning of the line
+* :guilabel:`End marker`: Choose an SVG image to draw at the end of the line
 * :guilabel:`Arrow head width`: Set the size of Start and/or End marker
 
 SVG images are automatically rotated with the line. The color of the SVG image can not be changed.

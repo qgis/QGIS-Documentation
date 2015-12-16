@@ -1,6 +1,6 @@
 |updatedisclaimer|
 
-The Label item
+The Label Item
 ===============
 
 To add a label, click the |mActionLabel| :sup:`Add label` icon, place the element
@@ -14,9 +14,9 @@ for the label item (see Figure_composer_label_):
 
 .. only:: html
 
-   **Figure Composer 8:**
+   **Figure Composer Label:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_label1.png
+.. figure:: /static/user_manual/print_composer/label_mainproperties.png
    :align: center
 
    Label Item properties Tab |nix|
@@ -46,5 +46,4 @@ Appearance
   the :guilabel:`Horizontal alignment` in |radiobuttonon|:guilabel:`Center` Position the 
   :guilabel:`Horizontal margin` feature is disabled.
 
-.. _the_image_item:
 
