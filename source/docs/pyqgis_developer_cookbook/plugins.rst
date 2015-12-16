@@ -365,11 +365,15 @@ You can see that in :func:`initGui()` we've used an icon from the resource file
 It is good to use a prefix that will not collide with other plugins or any
 parts of QGIS, otherwise you might get resources you did not want. Now you
 just need to generate a Python file that will contain the resources. It's
-done with :command:`pyrcc4` command
+done with :command:`pyrcc4` command:
 
 ::
 
   pyrcc4 -o resources.py resources.qrc
+  
+.. note::
+
+    In Windows environments :command:`pyrcc4` can be run from the OSGeo4W Shell
 
 And that's all... nothing complicated :)
 
