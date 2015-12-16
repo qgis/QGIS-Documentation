@@ -7,7 +7,8 @@ Managing the Composer
 
 Composer Menu
 --------------
-With the :menuselection:`Composer --> Save Project` action, you can save the project file directly from the print composer window.
+With the :menuselection:`Composer --> Save Project` action, you can save 
+the project file directly from the print composer window.
 The :menuselection:`Composer` menu also provides actions to:
 
 * Create a new and blank print composer with |mActionNewComposer| :sup:`New Composer...` 
@@ -19,7 +20,10 @@ Once the layout is designed, with |mActionFileSaveAs| :sup:`Save as template` an
 :sup:`Add items from template` icons, you can save the current state of a Print Composer
 session as a  :file:`.qpt` template and load its item again in another session.
 
-In the :menuselection:`Composer` menu, there are also powerful ways to share geographical information produced with |qg| that can be included in reports or published. These tools are |mActionSaveMapAsImage| :sup:`Export as Image...`, |mActionSaveAsPDF| :sup:`Export as PDF...`, |mActionSaveAsSVG| :sup:`Export as SVG...` and |mActionFilePrint| :sup:`Print...`.
+In the :menuselection:`Composer` menu, there are also powerful ways to share geographical 
+information produced with |qg| that can be included in reports or published. These tools 
+are |mActionSaveMapAsImage| :sup:`Export as Image...`, |mActionSaveAsPDF| :sup:`Export as PDF...`, 
+|mActionSaveAsSVG| :sup:`Export as SVG...` and |mActionFilePrint| :sup:`Print...`.
 
 .. index:: Composer_Manager
 
@@ -28,8 +32,11 @@ In the :menuselection:`Composer` menu, there are also powerful ways to share geo
 The Composer Manager
 --------------------
 
-The Composer Manager is the main window to manage print composers in the project. It helps you add new print composer, duplicate an existing one, rename or delete it. 
-To open the composer manager dialog, click on the |mActionComposerManager| :sup:`Composer Manager` button in the toolbar or choose :menuselection:`Composer --> Composer Manager`. It can also be reached from the main window of |qg| with :menuselection:`Project --> Composer Manager`.
+The Composer Manager is the main window to manage print composers in the project. 
+It helps you add new print composer, duplicate an existing one, rename or delete it. 
+To open the composer manager dialog, click on the |mActionComposerManager| :sup:`Composer Manager` 
+button in the toolbar or choose :menuselection:`Composer --> Composer Manager`. 
+It can also be reached from the main window of |qg| with :menuselection:`Project --> Composer Manager`.
 
 
 .. _figure_composer_manager:
@@ -44,15 +51,24 @@ To open the composer manager dialog, click on the |mActionComposerManager| :sup:
    The Print Composer Manager |nix|
 
 
-The composer manager lists in its upper part all the available print composers in the project. The bottom part shows tools that help to:
+The composer manager lists in its upper part all the available print composers in the project. 
+The bottom part shows tools that help to:
 
 * open the selected composer
-* duplicate the selected composer : it creates a new composer using the selected composer as template. You'll be prompted to choose a new title for the new composer
+* duplicate the selected composer : it creates a new composer using the selected 
+  composer as template. You'll be prompted to choose a new title for the new composer
 * rename the composer: you can also rename the composer by double-clicking on its title in the upper part
 * remove the composer: the print composer will be deleted from the project.
 
-With the Composer Manager, it's also possible to create new print composers as an empty composer or from a saved template. By default, |qg| will look for templates in user directory (:file:`~/.qgis2/composer_templates`) or application's one (:file:`appDir/composer_templates`). |qg| will retrieve all the available templates and propose them in the combobox. The selected template will be used to create a new composer when clicking on :guilabel:`Add` button. 
-You can also save composer templates in another folder. Choosing *specific* in the template list offers the ability to select such template and use it to create a new print composer. 
+With the Composer Manager, it's also possible to create new print composers as an 
+empty composer or from a saved template. By default, |qg| will look for templates 
+in user directory (:file:`~/.qgis2/composer_templates`) or application's one 
+(:file:`appDir/composer_templates`). |qg| will retrieve all the available templates 
+and propose them in the combobox. The selected template will be used to create 
+a new composer when clicking on :guilabel:`Add` button. 
+You can also save composer templates in another folder. 
+Choosing *specific* in the template list offers the ability to select such 
+template and use it to create a new print composer. 
 
 
 .. index::
