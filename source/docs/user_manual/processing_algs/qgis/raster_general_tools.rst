@@ -9,22 +9,22 @@ Set style for raster layer
 Description
 ...........
 
-<put algorithm description here>
+This algorithm applies the style defined in a QGIS layer style to a raster layer.
 
 Parameters
 ..........
 
 ``Raster layer`` [raster]
-  <put parameter description here>
+  The raster layer to which the style should be applied.
 
 ``Style file`` [file]
-  <put parameter description here>
+  A QGIS layer style file (*.qml) containing the style to apply to the raster layer.
 
 Outputs
 .......
 
 ``Styled layer`` [raster]
-  <put output description here>
+  The raster layer with the style set to the style in the QGIS layer style file.
 
 Console usage
 .............

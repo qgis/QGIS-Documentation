@@ -9,8 +9,8 @@ Import into PostGIS
 Description
 ...........
 
-Imports existing vector layer in QGIS into a PostGIS database.
-Before a connection between QGIS and the PostGIS database has to
+Imports a vector layer currently loaded in QGIS into a PostGIS database.
+Prior to this a connection between QGIS and the PostGIS database has to
 be created (for example with the DB Manager).
 
 Parameters
@@ -20,7 +20,7 @@ Parameters
   Existing vector layer in QGIS.
 
 ``Database (connection name)`` [selection]
-  Name of the database connection name (not the database name).
+  Name of the database connection (not the database name).
 
   Options:
 
@@ -46,7 +46,7 @@ Parameters
   Sets the primary key field from an existing field in the vector layer.
 
 ``Geometry column`` [string]
-  Defines the name for the geometry information of the table.
+  Defines the name of the geometry column in the new PostGIS table. Geometry information for the features is stored in this column.
 
   Default: *geom*
 
@@ -56,21 +56,20 @@ Parameters
   Default: *True*
 
 ``Create spatial index`` [boolean]
-  Defines that no spatial index is created. By default a spatial index
+  Specify whether to create a spatial index or not. By default a spatial index
   is created.
 
   Default: *True*
 
 ``Convert field names to lowercase`` [boolean]
-  If activated this prevents that the field names of the input vector layer
-  are set to lowercase.
+  If activated this prevents the field names of the input vector layer from being converted to lowercase.
   By default field names will be lowercase after the import.
 
   Default: *True*
 
 ``Drop length constraints on character fields`` [boolean]
-  Activates that the length constraints on character fields are dropped.
-  By default the length constraints are valid.
+  Specify whether the length constraints on character fields should be dropped or not.
+  By default the length constraints are applied.
 
   Default: *False*
 
@@ -93,8 +92,7 @@ PostGIS execute SQL
 Description
 ...........
 
-Makes it possible to perform a SQL database query on a PostGIS database
-connected to QGIS.
+Allows a SQL database query to be performed on a PostGIS database connected to QGIS.
 
 Parameters
 ..........
