@@ -78,11 +78,11 @@ provides the following functionalities (see figure_composer_legend_3_):
     functionality. The order can not be changed for WMS legend graphics.
   * Use the **[Add group]** button to add a legend group.
   * Use the **[plus]** and **[minus]** button to add or remove layers.
-  * The **[Edit]** button is used to edit the layer, groupname or title. First you need to 
-    select the legend item.
+  * The **[Edit]** button is used to edit the layer, groupname or title. 
+    First you need to select the legend item.
   * The **[Sigma]** button adds a feature count for each vector layer.
-  * Use the **[filter]** button to filter the legend by map content, only the legend items visible 
-    in the map will be listed in the legend.
+  * Use the **[filter]** button to filter the legend by map content, only the 
+    legend items visible in the map will be listed in the legend.
 
   After changing the symbology in the |qg| main window, you can click on **[Update All]** to 
   adapt the changes in the legend element of the Print Composer. 
@@ -93,7 +93,8 @@ Fonts, Columns, Symbol
 ----------------------
 
 The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the legend 
-:guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_legend_4_):
+:guilabel:`Item Properties` tab provide the following functionalities 
+(see figure_composer_legend_4_):
 
 .. _Figure_composer_legend_4:
 
@@ -117,7 +118,8 @@ The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
   * The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer 
     legend to be divided between columns.
 
-* You can also change the width and height of the legend symbol,set a color and a thickness in case of raster layer symbol.
+* You can also change the width and height of the legend symbol,set a color and 
+  a thickness in case of raster layer symbol.
 
 
 WMS LegendGraphic and Spacing
@@ -138,10 +140,14 @@ figure_composer_legend_5_):
 
    WMS LegendGraphic and Spacing Dialogs |nix|
 
-When you have added a WMS layer and you insert a legend composer item, a request will be send to the WMS server to provide a WMS legend. This Legend will only be shown if the WMS server provides the GetLegendGraphic capability. The WMS legend content will be provided as a raster image.
+When you have added a WMS layer and you insert a legend composer item, a request 
+will be sent to the WMS server to provide a WMS legend. This Legend will only be 
+shown if the WMS server provides the GetLegendGraphic capability. 
+The WMS legend content will be provided as a raster image.
 
-:guilabel:`WMS LegendGraphic` is used to be able to adjust the :guilabel:`Legend width` and 
-the :guilabel:`Legend height` of the WMS legend raster image.
+:guilabel:`WMS LegendGraphic` is used to be able to adjust the :guilabel:`Legend width` 
+and the :guilabel:`Legend height` of the WMS legend raster image.
 
-Spacing around title, group, subgroup, symbol, icon label, box space or column space can be customized through this dialog.
+Spacing around title, group, subgroup, symbol, icon label, box space 
+or column space can be customized through this dialog.
 
