@@ -365,11 +365,21 @@ You can see that in :func:`initGui()` we've used an icon from the resource file
 It is good to use a prefix that will not collide with other plugins or any
 parts of QGIS, otherwise you might get resources you did not want. Now you
 just need to generate a Python file that will contain the resources. It's
-done with :command:`pyrcc4` command
+done with :command:`pyrcc4` command:
 
 ::
 
   pyrcc4 -o resources.py resources.qrc
+  
+.. note::
+
+    In Windows environments, attempting to run the :command:`pyrcc4` from 
+    Command Prompt or Powershell will probably result in the error "Windows 
+    cannot access the specified device, path, or file [...]".  The easiest 
+    solution is probably to use the OSGeo4W Shell but if you are comfortable 
+    modifying the PATH environment variable or specifiying the path to the 
+    executable explicitly you should be able to find it at 
+    :file:`<Your QGIS Install Directory>\bin\pyrcc4.exe`.
 
 And that's all... nothing complicated :)
 
