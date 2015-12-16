@@ -51,7 +51,9 @@ provides the following functionalities (see figure_composer_scalebar_2_):
 Units and Segments
 ------------------
 
-The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar :guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_scalebar_3_):
+The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar 
+:guilabel:`Item Properties` tab provide the following functionalities 
+(see figure_composer_scalebar_3_):
 
 .. _Figure_composer_scalebar_3:
 
@@ -66,17 +68,25 @@ The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar :guilabe
 
 In these two dialogs, you can set how the scale bar will be represented.
 
-* Select the units you want to use with :guilabel:`Scalebar units`. There are four possible choices: **Map Units**, the default one and **Meters**, **Feet** or **Nautical Miles** which may force unit conversions.
-* The :guilabel:`Label unit multiplier` specifies how many scalebar units per labeled unit. Eg, if your scalebar units are set to "meters", a multiplier of 1000 will result in the scale bar labels in "kilometers".
-* The :guilabel:`Label for units` field defines the text used to describe the units of the scale bar, eg "m" or "km". This should be matched to reflect the multiplier above.
+* Select the units you want to use with :guilabel:`Scalebar units`. 
+  There are four possible choices: **Map Units**, the default one and **Meters**, 
+  **Feet** or **Nautical Miles** which may force unit conversions.
+* The :guilabel:`Label unit multiplier` specifies how many scalebar units per labeled unit. 
+  Eg, if your scalebar units are set to "meters", a multiplier of 1000 will result
+  in the scale bar labels in "kilometers".
+* The :guilabel:`Label for units` field defines the text used to describe the units 
+  of the scale bar, eg "m" or "km". This should be matched to reflect the multiplier above.
 * You can define how many :guilabel:`Segments` will be drawn on the left and on the right side of the scale bar.
-* You can set how long each segment will be (:guilabel:`fixed width`), or limit the scale bar size in mm with :guilabel:`Fit segment width` option. In the latter case, each time the map scale changes, the scale bar is resized (and its label updated) to fit the range set.
+* You can set how long each segment will be (:guilabel:`fixed width`), or limit the scale bar size in mm 
+  with :guilabel:`Fit segment width` option. In the latter case, each time the map scale changes, 
+  the scale bar is resized (and its label updated) to fit the range set.
 * :guilabel:`Height` is used to define the height of the bar.
 
 Display
 --------
 
-The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_scalebar_4_):
+The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties` tab provide 
+the following functionalities (see figure_composer_scalebar_4_):
 
 .. _Figure_composer_scalebar_4:
 
