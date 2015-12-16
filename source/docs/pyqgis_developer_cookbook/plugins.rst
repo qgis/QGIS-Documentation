@@ -373,7 +373,7 @@ done with :command:`pyrcc4` command:
   
 .. note::
 
-    In Windows environments :command:`pyrcc4` can be run from the OSGeo4W Shell
+    In Windows environments, attempting to run the :command:`pyrcc4` from Command Prompt or Powershell will probably result in the error "Windows cannot access the specified device, path, or file [...]".  The easiest solution is probably to use the OSGeo4W Shell but if you are comfortable modifying the PATH environment variable or specifiying the path to the executable explicitly you should be able to find it at :file:`<Your QGIS Install Directory>\bin\pyrcc4.exe`.
 
 And that's all... nothing complicated :)
 
