@@ -3,7 +3,7 @@ QGIS Testing Documentation
 
 QGIS Testing Documentation is build from corresponding branche and NOT translated.
 
-Only the current stable branch is translated.
+Only the current stable branch is available for translation.
 
 Latest stable documentation is on http://docs.qgis.org/2.8
 
@@ -68,42 +68,42 @@ Sphinx coming with most distro's is just 1.1.3. You will get an gettext error wi
 
 Best to run the make file in a virtual env ( http://www.virtualenv.org/ ):
 
-Move to a directory (~/myvirtualenvs/) and create a virtualenv enabled dir:
+Move to a directory (~/myvirtualenvs/) and create a virtualenv enabled dir::
 
     virtualenv sphinx  # one time action, only to create the environment
     cd sphinx
 
-And activate this virtualenv
+And activate this virtualenv::
 
     source bin/activate 
     # now you will see sphinx before your prompt:
     (sphinx)richard@mymachine
 
-Now always activate your environment before building. To deactivate, you can do:
+Now always activate your environment before building. To deactivate, you can do::
 
     deactivate
 
-You can install all tools in on go via the REQUIREMENTS.txt here in root of this repo:
+You can install all tools in on go via the REQUIREMENTS.txt here in root of this repo::
 
     pip install -r REQUIREMENTS.txt
 
 Alternatively do it one by one:
 
-Install sphinx 1.2 now in your virtual env:
+Install sphinx 1.2 now in your virtual env::
 
     pip install sphinx==1.2
 
-Sphinx intl extention ( https://pypi.python.org/pypi/sphinx-intl ):
+Sphinx intl extention ( https://pypi.python.org/pypi/sphinx-intl )::
 
     pip install sphinx-intl
 
-Then build:
+Then build::
 
     make html (to build the english language)
     make LANG=nl html (to build the dutch version)
 
 If you want add the QGIS-Documentation docs into the build, you either need to manually copy the sources, resources 
-and po files into the website project. Or use the fullhtml target of make (which will checkout the 2.0 branch):
+and po files into the website project. Or use the fullhtml target of make (which will checkout the 2.0 branch)::
 
     # to build english:
     make fullhtml
@@ -111,18 +111,18 @@ and po files into the website project. Or use the fullhtml target of make (which
     make LANG=nl fullhtml
 
 To gather new strings in a pot (.po) file for your language, and merge them with 
-excisting translations in the po files (normally to be ran by your language maintainer):
+excisting translations in the po files (normally to be ran by your language maintainer)::
 
     make pretranslate LANG=xx  # where xx is your language code
 
-To add a new language (the scripts will need some directory structure):
+To add a new language (the scripts will need some directory structure)::
 
     make createlang LANG=xx
 
 See the website in action: http://www.qgis.org
 
 
-Building the Documention using Docker
+Building the Documentation using Docker
 -------------------------------------
 
 Docker is an open platform for distributed applications for developers and 
@@ -135,19 +135,19 @@ to create your local docker image.
 
 - install Docker (see https://docs.docker.com/installation/#installation)
 
-- clone the QGIS-sysadmin repository:
+- clone the QGIS-sysadmin repository::
 
    git clone git@github.com:qgis/QGIS-Sysadmin.git
 
-- build the docker image:
+- build the docker image::
 
    cd QGIS-Sysadmin/docker/sphinx
    bash docker-build.sh
 
-- then you can go to your local QGIS-Documentation repository to build the doc:
+- then you can go to your local QGIS-Documentation repository to build the doc::
 
-  cd QGIS-Documentation/
-  docker-run.sh LANG=fr html
+   cd QGIS-Documentation/
+   docker-run.sh LANG=fr html
 
 Building the Documentation using Paver
 --------------------------------------
@@ -200,7 +200,7 @@ see http://support.transifex.com/customer/portal/articles/998120-client-on-windo
 To make tx.exe usable in the paver script, either put it IN this directory next to the pavement.py file, OR add it to your PATH
 
 IMPORTANT: to be able to pull from transifex.com, you will need a credentials file. 
-This file should be named: ``.transifexrc`` and easiest it to put it in you home dir c:/user/you. 
+This file should be named: ``.transifexrc`` and easiest is to put it in your home dir C:/users/you. 
 Another option is to put it in the root of this project, but be carefull to not put your credentials in Github :-)
 
 The file should contain this::
@@ -213,8 +213,8 @@ The file should contain this::
 
 With a working tx and a .transifexrc, you should be able to build for example the german version of docs via::	
 
-    # german:
-    paver html -l de
+        # german:
+        paver html -l de
     
 During the build you will see this command::
 
