@@ -252,23 +252,23 @@ This group contains functions for handling date and time data.
 ::
 
  age            returns difference between two dates
- day            extracts the day from a date, or the number of days from an 
-                interval
+ day            extracts the day from a date, or the number of days from 
+                an interval
  day_of_week    returns a number corresponding to the day of the week
                 for a specified date or datetime
  hour           extracts the hour from a datetime or time, or the number
                 of hours from an interval
  minute         extracts the minute from a datetime or time, or the number
                 of minutes from an interval
- month          extracts the month part from a date, or the number of months 
-                from an interval
+ month          extracts the month part from a date, or the number of  
+                months from an interval
  now            returns current date and time
  second         extracts the second from a datetime or time, or the number
                 of seconds from an interval
- week           extracts the week number from a date, or the number of weeks 
-                from an interval
- year           extracts the year part from a date, or the number of years 
-                from an interval
+ week           extracts the week number from a date, or the number of
+                weeks from an interval
+ year           extracts the year part from a date, or the number of  
+                years from an interval
 
 
 **Some example:**
