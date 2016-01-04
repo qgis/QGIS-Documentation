@@ -3,7 +3,7 @@
 .. index::
    single: Scalebar; Map_Scalebar
 
-The Scale Bar item
+The Scale Bar Item
 ==================
 
 To add a scale bar, click the |mActionScaleBar| :sup:`Add new scalebar` icon, place
@@ -19,7 +19,7 @@ functionalities (see figure_composer_scalebar_1_):
 
    **Figure Composer Scalebar 1:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_scalebar1.png
+.. figure:: /static/user_manual/print_composer/scalebar_properties.png
    :align: center
 
    Scale Bar Item properties Tab |nix|
@@ -36,7 +36,7 @@ provides the following functionalities (see figure_composer_scalebar_2_):
 
    **Figure Composer Scalebar 2:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_scalebar2.png
+.. figure:: /static/user_manual/print_composer/scalebar_mainproperties.png
    :align: center
 
    Scale Bar Main properties Dialog |nix|
@@ -51,8 +51,9 @@ provides the following functionalities (see figure_composer_scalebar_2_):
 Units and Segments
 ------------------
 
-The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar :guilabel:`Item Properties` tab
-provide the following functionalities (see figure_composer_scalebar_3_):
+The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar 
+:guilabel:`Item Properties` tab provide the following functionalities 
+(see figure_composer_scalebar_3_):
 
 .. _Figure_composer_scalebar_3:
 
@@ -60,24 +61,32 @@ provide the following functionalities (see figure_composer_scalebar_3_):
 
    **Figure Composer scalebar 3:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_scalebar3.png
+.. figure:: /static/user_manual/print_composer/scalebar_units.png
    :align: center
 
    Scale Bar Units and Segments Dialogs |nix|
 
 In these two dialogs, you can set how the scale bar will be represented.
 
-* Select the map units used. There are four possible choices: **Map Units** is the automated unit
-  selection; **Meters**, **Feet** or **Nautical Miles** force unit conversions.
-* The :guilabel:`Label` field defines the text used to describe the units of the scale bar.
-* The :guilabel:`Map units per bar unit` allows you to fix the ratio between a map unit and its representation in the scale bar.
-* You can define how many :guilabel:`Segments` will be drawn on the left and on the right side of the scale bar,
-  and how long each segment will be (:guilabel:`Size` field). :guilabel:`Height` can also be defined.
+* Select the units you want to use with :guilabel:`Scalebar units`. 
+  There are four possible choices: **Map Units**, the default one and **Meters**, 
+  **Feet** or **Nautical Miles** which may force unit conversions.
+* The :guilabel:`Label unit multiplier` specifies how many scalebar units per labeled unit. 
+  Eg, if your scalebar units are set to "meters", a multiplier of 1000 will result
+  in the scale bar labels in "kilometers".
+* The :guilabel:`Label for units` field defines the text used to describe the units 
+  of the scale bar, eg "m" or "km". This should be matched to reflect the multiplier above.
+* You can define how many :guilabel:`Segments` will be drawn on the left and on the right side of the scale bar.
+* You can set how long each segment will be (:guilabel:`fixed width`), or limit the scale bar size in mm 
+  with :guilabel:`Fit segment width` option. In the latter case, each time the map scale changes, 
+  the scale bar is resized (and its label updated) to fit the range set.
+* :guilabel:`Height` is used to define the height of the bar.
 
 Display
 --------
 
-The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties` tab provide the following functionalities (see figure_composer_scalebar_4_):
+The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties` tab provide 
+the following functionalities (see figure_composer_scalebar_4_):
 
 .. _Figure_composer_scalebar_4:
 
@@ -85,7 +94,7 @@ The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties` tab 
 
    **Figure Composer Scalebar 4:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_scalebar4.png
+.. figure:: /static/user_manual/print_composer/scalebar_display.png
    :align: center
 
    Scale Bar Display |nix|
@@ -114,7 +123,7 @@ provide the following functionalities (see figure_composer_scalebar_5_):
 
    **Figure Composer Scalebar 5:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_scalebar5.png
+.. figure:: /static/user_manual/print_composer/scalebar_fonts.png
    :align: center
 
    Scale Bar Fonts and colors Dialogs |nix|
