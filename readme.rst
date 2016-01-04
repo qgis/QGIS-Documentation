@@ -111,7 +111,7 @@ and po files into the website project. Or use the fullhtml target of make (which
     make LANG=nl fullhtml
 
 To gather new strings in a pot (.po) file for your language, and merge them with 
-excisting translations in the po files (normally to be ran by your language maintainer)::
+existing translations in the po files (normally to be run by your language maintainer)::
 
     make pretranslate LANG=xx  # where xx is your language code
 
