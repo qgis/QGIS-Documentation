@@ -41,7 +41,11 @@ Data Providers
 
 * **DXF Export tool improvements**: Improved marker symbol export
 * **WMS Layers**: Support for contextual WMS legend graphics
-* **Temporary Scratch Layers**: It is possible to create empty editable memory layers
+* **Temporary Scratch Layers**:
+
+  * It is possible to create empty editable memory layers, with or without geometries.
+  * Adding and removing fields is supported.
+  * The layer - without the features - will be saved to project files or layer definition files.
 
 Digitizing
 ----------
