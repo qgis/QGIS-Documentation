@@ -8,7 +8,7 @@ The graphical modeler
 The *graphical modeler* allows you to create complex models using a simple and
 easy-to-use interface. When working with a GIS, most analysis operations are not
 isolated, but rather part of a chain of operations instead. Using the graphical modeler,
-that chain of processes can be wrapped into a single process, so it is as easy and
+that chain of processes can be wrapped into a single process, so it is as more
 convenient to execute as a single process later on a different set of
 inputs. No matter how many steps and different algorithms it involves, a model
 is executed as a single algorithm, thus saving time and effort, especially for
@@ -24,7 +24,7 @@ be used to add new elements to the model.
 
 .. only:: html
 
-   **Figure Processing 16:**
+   **Figure Processing 17:**
 
 .. figure:: /static/user_manual/processing/modeler_canvas.png
    :align: center
@@ -69,7 +69,7 @@ default value and a range of valid values.
 
 .. only:: html
 
-   **Figure Processing 17:**
+   **Figure Processing 18:**
 
 .. figure:: /static/user_manual/processing/models_parameters.png
    :align: center
@@ -82,7 +82,7 @@ For each added input, a new element is added to the modeler canvas.
 
 .. only:: html
 
-   **Figure Processing 18:**
+   **Figure Processing 19:**
 
 .. figure:: /static/user_manual/processing/models_parameters2.png
    :align: center
@@ -102,29 +102,24 @@ in the same way as they are in the toolbox.
 
 .. only:: html
 
-   **Figure Processing 19:**
+   **Figure Processing 20:**
 
 .. figure:: /static/user_manual/processing/models_parameters3.png
    :align: center
 
    Model Parameters |win|
 
-The appearance of the toolbox has two modes here as well: simplified and advanced.
-However, there is no element to switch between views in the modeler, so you have
-to do it in the toolbox. The mode that is selected in the toolbox is the
-one that will be used for the list of algorithms in the modeler.
 
 To add an algorithm to a model, double-click on its name or drag and drop it, just like it was done when adding inputs. An execution dialog
 will appear, with a content similar to the one found in the execution panel that
 is shown when executing the algorithm from the toolbox. The one shown next
-corresponds to the SAGA 'Convergence index' algorithm, the same example we saw in the
-section dedicated to the toolbox.
+corresponds to the SAGA 'Convergence index' algorithm.
 
 .. _figure_model_parameter_4:
 
 .. only:: html
 
-   **Figure Processing 20:**
+   **Figure Processing 21:**
 
 .. figure:: /static/user_manual/processing/models_parameters4.png
    :align: center
@@ -168,7 +163,7 @@ When you use the output of a previous algorithm as the input of your algorithm,
 that implicitly sets the previous algorithm as parent of the current one (and places the
 corresponding arrow in the modeler canvas). However, in some cases an algorithm
 might depend on another one even if it does not use any output object from it
-(for instance, an algorithm that executes an SQL sentence on a PostGIS database
+(for instance, an algorithm that executes a SQL sentence on a PostGIS database
 and another one that imports a layer into that same database). In that case, just
 select the previous algorithm in the *Parent algorithms* parameter and the two steps will be executed in the correct order.
 
@@ -204,7 +199,7 @@ corresponding branch. When the toolbox is invoked, it searches the
 they contain. Since a model is itself an algorithm, it can be added to
 the toolbox just like any other algorithm.
 
-The models folder can be set from the processing configuration dialog, under the
+The models folder can be set from the Processing configuration dialog, under the
 :guilabel:`Modeler` group.
 
 Models loaded from the :file:`models` folder appear not only in the toolbox, but
@@ -212,13 +207,6 @@ also in the algorithms tree in the :guilabel:`Algorithms` tab of the modeler
 window. That means that you can incorporate a model as a part of a bigger model,
 just as you add any other algorithm.
 
-In some cases, a model might not be loaded because not all the algorithms included
-in its workflow are available. If you have used a given algorithm
-as part of your model, it should be available (that is, it should appear in the
-toolbox) in order to load that model. Deactivating an algorithm provider in the
-processing configuration window renders all the algorithms in that provider unusable
-by the modeler, which might cause problems when loading models. Keep that in mind
-when you have trouble loading or executing models.
 
 Editing a model
 ---------------
@@ -257,8 +245,7 @@ a warning message like the one you can see below will be shown:
 
    Cannot Delete Algorithm |win|
 
-Selecting the :guilabel:`Edit` option or simply double-clicking on the algorithm
-icon will show the parameters dialog of the algorithm, so you can change the
+Selecting the :guilabel:`Edit` option will show the parameters dialog of the algorithm, so you can change the
 inputs and parameter values. Not all input elements available in the model will
 appear in this case as available inputs. Layers or values generated at a more
 advanced step in the workflow defined by the model will not be available if they
@@ -267,6 +254,21 @@ cause circular dependencies.
 Select the new values and then click on the **[OK]** button as usual. The
 connections between the model elements will change accordingly in the modeler
 canvas.
+
+A model can be run partially, by deactivating some of its algorithms. To do it, select the :guilabel:`Deactivate` option in the context menu that appears when right-clicking on an algorithm element. The selected algorithm, and all the ones in the model that depend on it will be displayed in grey and will not be executed as part of the model. 
+
+.. _figure_cannot_model_deactivate:
+
+.. only:: html
+
+   **Figure Processing 24:**
+
+.. figure:: /static/user_manual/processing/model_deactivated.png
+   :align: center
+
+   Model With Deactivated Algorithms |win|
+
+When right-clicking on an algorithm that is not active, you will instead see a :guilabel:`Deactivate` menu option that you can use to activate it back.
 
 Editing model help files and meta-information
 ---------------------------------------------
@@ -292,8 +294,15 @@ time you open the help editor, all these descriptions are empty, but you can edi
 them using the elements on the left-hand side of the dialog. Select an element
 on the upper part and then write its description in the text box below.
 
-Model help is saved in a file in the same folder as the model itself. You do not
-have to worry about saving it, since it is done automatically.
+Model help is saved as part of the model itself. 
+
+Exporting a model as a Python script
+--------------------------------------
+
+As we will see in a later chapter, Processing algorithms can be called from the QGIS Python console, and new Processing algorithms can be created as well using Python. A quick way of creating such a Python script is to create a model and then to export is as a Python file.
+
+To do so, click on the :guilabel:`Export as Python script` button. Select the output file in the file chooser dialog, and Prcoessing will write in it the Python commands that perform the same operations defined in the current model.
+
 
 About available algorithms
 --------------------------

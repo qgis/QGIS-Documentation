@@ -8,7 +8,7 @@ Configuring external applications
 The processing framework can be extended using additional applications.
 Currently, SAGA, GRASS, OTB (Orfeo Toolbox) and R are supported, along
 with some other command-line applications that provide spatial data analysis
-functionalities. Algorithms relying on an external application are managed by
+functionalities. Algorithms relying on an external applications are managed by
 their own algorithm provider.
 
 This section will show you how to configure the processing framework to include these additional
@@ -18,18 +18,9 @@ execute external algorithms from any component like the toolbox or the
 graphical modeler, just like you do with any other geoalgorithm.
 
 By default, all algorithms that rely on an external appplication not shipped with
-|qg| are not enabled. You can enable them in the configuration dialog.
+|qg| are not enabled. You can enable them in the settings dialog.
 Make sure that the corresponding application is already installed in your system.
-Enabling an algorithm provider without installing the application it needs will
-cause the algorithms to appear in the toolbox, but an error will be thrown when
-you try to execute them.
 
-This is because the algorithm descriptions (needed to create the parameters dialog
-and provide the information needed about the algorithm) are not included
-with each application, but with |qg| instead. That is, they are part of
-|qg|, so you have them in your installation even if you have not installed
-any other software. Running the algorithm, however, needs the application binaries
-to be installed in your system.
 
 A note for Windows users
 ------------------------
@@ -38,9 +29,9 @@ If you are not an advanced user and you are running |qg| on Windows, you might
 not be interested in reading the rest of this chapter. Make sure you install
 |qg| in your system using the standalone installer. That will automatically
 install SAGA, GRASS and OTB in your system and configure them so they can be
-run from |qg|. All the algorithms in the simplified view of the toolbox will
+run from |qg|. All the algorithms from these providers will
 be ready to be run without needing any further configuration. If installing
-through OSGeo4W application, make sure you select for insttallation SAGA and
+through OSGeo4W application, make sure you select for installation SAGA, GRASS and
 OTB as well.
 
 If you want to know more about how these providers work, or if you want to use some
@@ -75,14 +66,10 @@ in |qg|, since they open it for analysis through |qg|.
 
 Regarding output formats, all formats supported by |qg| as output can be used,
 both for raster and vector layers. Some providers do not support certain formats,
-but all can export to common raster layer formats that can later be transformed
+but all can export to common  formats that can later be transformed
 by |qg| automatically. As in the case of input layers, if this conversion is
 needed, that might increase the processing time.
 
-If the extension of the filename specified when calling an algorithm does not
-match the extension of any of the formats supported by |qg|, then a suffix will
-be added to set a default format. In the case of raster layers, the :file:`.tif`
-extension is used, while :file:`.shp` is used for vector layers.
 
 A note on vector layer selections
 ---------------------------------
@@ -109,7 +96,7 @@ If you are running Windows, both the stand-alone installer and the OSGeo4W insta
 include SAGA along with |qg|, and the path is automatically configured, so there is
 no need to do anything else.
 
-If you have installed SAGA yourself (remember, you need version 2.1), the path to the
+If you have installed SAGA yourself and your QGIs installer did not include it, the path to the
 SAGA executable must be configured. To do this, open the
 configuration dialog. In the :guilabel:`SAGA` block, you will find a setting named
 :guilabel:`SAGA Folder`. Enter the path to the folder where SAGA is installed.
@@ -118,11 +105,10 @@ Close the configuration dialog, and now you are ready to run SAGA algorithms fro
 
 If you are running Linux, SAGA binaries
 are not included with Processing, so you have to download and install the software
-yourself. Please check the SAGA website for more information. SAGA 2.1 is
-needed.
+yourself. Please check the SAGA website for more information. 
 
 In this case, there is no need to configure the path to the SAGA executable, and you will not
-see those folders. Instead, you must make sure that SAGA is properly installed
+see those folder entries. Instead, you must make sure that SAGA is properly installed
 and its folder is added to the PATH environment variable. Just open a console and
 type ``saga_cmd`` to check that the system can find where the SAGA binaries are
 located.
@@ -384,11 +370,6 @@ to execute the algorithm each time. If the latter approach is the behaviour you 
 check the :guilabel:`Use min covering region` option in the GRASS configuration
 parameters.
 
-The last parameter that has to be configured is related to the mapset. A mapset
-is needed to run GRASS, and the processing framework creates a temporary one for each execution.
-You have to specify if the data you are working with uses geographical
-(lat/lon) coordinates or projected ones.
-
 GDAL
 ----
 
@@ -417,11 +398,9 @@ are installed:
 
 * |nix| Usually :guilabel:`OTB applications folder` points to ``/usr/lib/otb/applications``
   and :guilabel:`OTB command line tools folder` is ``/usr/bin``.
-* |win| If you use the OSGeo4W installer, then install ``otb-bin`` package and enter
-  ``C:\OSGeo4W\apps\orfeotoolbox\applications`` as :guilabel:`OTB applications folder`
-  and ``C:\OSGeo4W\bin`` as :guilabel:`OTB command line tools folder`. These values should be
-  configured by default, but if you have a different OTB installation, configure them
-  to the corresponding values in your system.
+* |win| If you use any of the installers that include OTB, such as OSGeo4W, there is non need for further configuration. Processing will detect the path automatically and will not show the corresponding configuration entries. Otherwise, fill the :guilabel:`OTB applications folder`
+  and :guilabel:`OTB command line tools folder` parameters with the 
+  to the corresponding values for your installation.
 
 TauDEM
 ------

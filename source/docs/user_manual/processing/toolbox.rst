@@ -22,12 +22,16 @@ of the same algorithm on different sets of inputs.
 
    Processing Toolbox |win|
 
-The toolbox contains all the available algorithms, divided into predefined groups.
-All these groups are found under a single tree entry named *Geoalgorithms*.
+The toolbox contains all the available algorithms, divided into so-called "Providers".
 
-Additionally, two more entries are found, namely *Models* and *Scripts*.
-These include user-created algorithms, and they allow you to define your own
-workflows and processing tasks. We will devote a full section to them a bit later.
+Providers can be (de)activated in the settings dialog. 
+A label in the bottom part of the toolbox will remind you of that whenever there
+are inactive providers. Use the link in the label to open the settings window and 
+set up providers. We will discuss the settings dialog later in this manual.
+
+By default only, providers that do not rely on third-party applications (that is, those that
+only require QGIS elements to be run) are active. ALgorithms requiring external applications
+might need additional configuration. Configuring providers is explained in a later chapter in this manual.
 
 In the upper part of the toolbox, you will find a text box. To reduce the number
 of algorithms shown in the toolbox and make it easier to find the one you need,
@@ -35,54 +39,35 @@ you can enter any word or phrase on the text box. Notice that, as you type, the
 number of algorithms in the toolbox is reduced to just those that contain the
 text you have entered in their names.
 
-In the lower part, you will find a box that allows you to switch between the
-simplified algorithm list (the one explained above) and the advanced list. If
-you change to the advanced mode, the toolbox will look like this:
+If there are algorithms that match your search but belong to a provider that is not active,
+an additional label will be shown in the lower part of the toolbox.
 
-.. _figure_toolbox_advanced:
+.. _figure_toolbox_search:
 
 .. only:: html
 
    **Figure Processing 6:**
 
-.. figure:: /static/user_manual/processing/toolbox_advanced.png
+.. figure:: /static/user_manual/processing/toolbox_search.png
    :align: center
 
-   Processing Toolbox (advanced mode) |win|
+   Processing Toolbox showing search results |win|
 
-In the advanced view, each group
-represents a so-called 'algorithm provider', which is a set of algorithms coming
-from the same source, for instance, from a third-party application with
-geoprocessing capabilities. Some of these groups represent algorithms from
-third-party applications like SAGA, GRASS or R, while others contain
-algorithms directly coded as part of the processing plugin, not relying on any
-additional software.
 
-This view is recommended to those users who have a certain knowledge of the
-applications that are backing the algorithms, since they will be shown with
-their original names and groups.
+If you click on the link in that label, the list of algorithms will also include those from
+inactive provider, which will be shown in light gray. A link to active each inactive provider
+is also shown.
 
-Also, some additional algorithms are available only in the advanced view, such as
-LiDAR tools and scripts based on the R statistical computing software, among
-others. Independent |qg| plugins that add new algorithms to the toolbox will only
-be shown in the advanced view.
+.. _figure_toolbox_search2:
 
-In particular, the simplified view contains algorithms from the following providers:
+.. only:: html
 
-* GRASS
-* SAGA
-* OTB
-* Native |qg| algorithms
+   **Figure Processing 7:**
 
-In the case of running |qg| under Windows, these algorithms are
-fully-functional in a fresh installation of |qg|, and they can be run without
-requiring any additional installation. Also, running them requires no prior
-knowledge of the external applications they use, making them more accessible for
-first-time users.
+.. figure:: /static/user_manual/processing/toolbox_search.png
+   :align: center
 
-If you want to use an algorithm not provided by any of the above providers,
-switch to the advanced mode by selecting the corresponding option at the bottom
-of the toolbox.
+   Processing Toolbox showing search results |win|
 
 To execute an algorithm, just double-click on its name in the toolbox.
 
@@ -91,13 +76,13 @@ The algorithm dialog
 
 Once you double-click on the name of the algorithm that you want to execute, a
 dialog similar to that in the figure below is shown (in this case, the dialog corresponds to
-the SAGA 'Convergence index' algorithm).
+the 'Polygon centroids' algorithm).
 
 .. _figure_parameters_dialog:
 
 .. only:: html
 
-   **Figure Processing 7:**
+   **Figure Processing 8:**
 
 .. figure:: /static/user_manual/processing/parameters_dialog.png
    :align: center
@@ -106,11 +91,10 @@ the SAGA 'Convergence index' algorithm).
 
 
 This dialog is used to set the input values that the algorithm needs to be
-executed. It shows a table where input values and configuration parameters are to
+executed. It shows a list of input values and configuration parameters to
 be set. It of course has a different content, depending on the requirements of
 the algorithm to be executed, and is created automatically based on those
-requirements. On the left side, the name of the parameter is shown. On the right
-side, the value of the parameter can be set.
+requirements. 
 
 Although the number and type of parameters depend on the characteristics of the
 algorithm, the structure is similar for all of them. The parameters found in the
@@ -132,7 +116,7 @@ table can be of one of the following types.
 
 .. only:: html
 
-   **Figure Processing 8:**
+   **Figure Processing 9:**
 
 .. figure:: /static/user_manual/processing/vector_iterator.png
    :align: center
@@ -159,7 +143,7 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
 .. only:: html
 
-   **Figure Processing 9:**
+   **Figure Processing 10:**
 
 .. figure:: /static/user_manual/processing/number_selector.png
    :align: center
@@ -183,7 +167,7 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
   .. only:: html
 
-     **Figure Processing 10**
+     **Figure Processing 11**
 
   .. figure:: /static/user_manual/processing/extent.png
      :align: center
@@ -196,7 +180,7 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
   .. only:: html
 
-     **Figure Processing 11**
+     **Figure Processing 12**
 
   .. figure:: /static/user_manual/processing/extent_list.png
      :align: center
@@ -212,7 +196,7 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
   .. only:: html
 
-     **Figure Processing 12:**
+     **Figure Processing 13:**
 
   .. figure:: /static/user_manual/processing/extent_drag.png
      :align: center
@@ -228,7 +212,7 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
   .. only:: html
 
-     **Figure Processing 13:**
+     **Figure Processing 14:**
 
   .. figure:: /static/user_manual/processing/multiple_selection.png
      :align: center
@@ -244,7 +228,7 @@ If the algorithm contains several of them, you will be able to toggle just one o
 
   .. only:: html
 
-     **Figure Processing 14:**
+     **Figure Processing 15:**
 
   .. figure:: /static/user_manual/processing/fixed_table.png
      :align: center
@@ -254,17 +238,19 @@ If the algorithm contains several of them, you will be able to toggle just one o
   Depending on the algorithm, the number of rows can be modified or not by using
   the buttons on the right side of the window.
 
-You will find a **[Help]** tab in the the parameters dialog. If
-a help file is available, it will be shown, giving you more information about the
-algorithm and detailed descriptions of what each parameter does. Unfortunately,
-most algorithms lack good documentation, but if you feel like contributing to the
-project, this would be a good place to start.
+Along with the parameters tab, you will find another tab named 'Log'. Information provided by the algorithm during its execution is written in this tab, and allow you to track the execution and be aware and have more details about the algorithm as it runs. Notice that not all algorithms write information to this tab, and many of them might run silently without producing any output other than the final files.
+
+On the right hand side of the dialog you wil find a short description of the algorithm, which will help you understand its purpose and its basic ideas.
+If such a description is not available, the description panel will not be shown.
+
+Some algorithms might have a more detailed help file, which might include description of every parameter it uses, or examples. In that case, you will find a **[Help]** tab in the  parameters dialog.  
+
 
 A note on projections
 .....................
 
-Algorithms run from the processing framework --- this is also true of most of the external applications whose algorithms are
-exposed through it. Do not perform any reprojection on input layers and
+Algorithms that are run from the processing framework --- this is also true of most of the external applications whose algorithms are
+exposed through it--- do not perform any reprojection on input layers and
 assume that all of them are already in a common coordinate system and ready to
 be analyzed. Whenever you use more than one layer as input to an algorithm,
 whether vector or raster, it is up to you to make sure that they are all in the
@@ -280,7 +266,7 @@ the algorithms that are available in the processing framework itself.
 By default, the parameters dialog will show a description of the CRS of each layer along with
 its name, making it easy to select layers that share the same CRS to be used as
 input layers. If you do not want to see this additional information, you can
-disable this functionality in the processing configuration dialog, unchecking the
+disable this functionality in the Processing settings dialog, unchecking the
 :guilabel:`Show CRS` option.
 
 If you try to execute an algorithm using as input two or more layers with
@@ -303,14 +289,13 @@ These are all saved to disk, and the parameters
 table will contain a text box corresponding to each one of these outputs, where
 you can type the output channel to use for saving it. An output channel contains
 the information needed to save the resulting object somewhere. In the most usual
-case, you will save it to a file, but the architecture allows for any
-other way of storing it. For instance, a vector layer can be stored in a database
-or even uploaded to a remote server using a WFS-T service. Although solutions
-like these are not yet implemented, the processing framework is prepared to handle them, and we
-expect to add new kinds of output channels in a near feature.
+case, you will save it to a file, but in the case of vector layers, and when they are generated by native algorithms (algorithms not using external applications) you can also save to a PostGIS or Spatialite database, or a memory layer.
 
 To select an output channel, just click on the button on the right side of the
-text box. That will open a save file dialog, where you can select the desired
+text box, and you will see a small context menu with the available options.
+
+
+In the most usual case, you will select saving to a file. If you select that option, you will be prompted with a save file dialog, where you can select the desired
 file path. Supported file extensions are shown in the file format selector of the
 dialog, depending on the kind of output and the algorithm.
 
@@ -318,17 +303,17 @@ The format of the output is defined by the filename extension. The supported
 formats depend on what is supported by the algorithm itself. To select a format,
 just select the corresponding file extension (or add it, if you are directly typing
 the file path instead). If the extension of the file path you entered does not
-match any of the supported formats, a default extension (usually :file:`.dbf`` for
-tables, :file:`.tif` for raster layers and :file:`.shp` for vector layers) will be
+match any of the supported formats, a default extension will be
 appended to the file path, and the file format corresponding to that extension will
-be used to save the layer or table.
+be used to save the layer or table. Default extensions are :file:`.dbf`` for
+tables, :file:`.tif` for raster layers and :file:`.shp` for vector layers. These can be modified in the setting dialog, selecting any other of the formats supported by QGIS.
 
-If you do not enter any filename, the result will be saved as a temporary file
+If you do not enter any filename in the output text box (or select the corresponding option in the context menu), the result will be saved as a temporary file
 in the corresponding default file format, and it will be deleted once you exit
 |qg| (take care with that, in case you save your project and it contains temporary
 layers).
 
-You can set a default folder for output data objects. Go to the configuration
+You can set a default folder for output data objects. Go to the settings
 dialog (you can open it from the :menuselection:`Processing` menu), and in the
 :guilabel:`General` group, you will find a parameter named :guilabel:`Output folder`.
 This output folder is used as the default path in case you type just a filename
@@ -390,7 +375,7 @@ next.
 
 .. only:: html
 
-   **Figure Processing 15:**
+   **Figure Processing 16:**
 
 .. figure:: /static/user_manual/processing/rendering_styles.png
    :align: center
@@ -411,6 +396,7 @@ Other configuration parameters in the :guilabel:`General` group are listed below
   Notice that, if the output is saved to a temporary file, the filename of this
   temporary file is usually a long and meaningless one intended to avoid collision
   with other already existing filenames.
+* :guilabel:`Keep dialog open after running algorithm`. Once an algorithm has finished execution and its output layers are loaded into the QGIS project, the algorithm dialog is closed. If you want to keep it open (to run the algorithm again with different parameters, or to better check the output that is written to the log tab), check this option
 * :guilabel:`Use only selected features`. If this option is selected, whenever a
   vector layer is used as input for an algorithm, only its selected features will
   be used. If the layer has no selected features, all features will be used.
