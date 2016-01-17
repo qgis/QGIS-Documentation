@@ -37,7 +37,8 @@ on :
 
 * **[Change]** and press the new combination you want to assign as new shortcut 
 * **[Set none]** to clear any assigned shortcut
-* or **[Set default]** to backup the shortcut to its original and default value. 
+* or **[Set default]** to backup the shortcut to its original and default value.
+
 Once you have finished your
 configuration, you can save it as an XML file and load it to another |qg|
 installation.
@@ -72,7 +73,7 @@ refreshed. The events that trigger a refresh of the map canvas include:
 
 |qg| allows you to control the rendering process in a number of ways.
 
-.. `label_scaledepend`:
+.. _`label_scaledepend`:
 
 Scale Dependent Rendering
 -------------------------
@@ -185,12 +186,53 @@ tab and select or deselect the following checkboxes:
   a result, they quickly display. 
   Be aware that you can also face rendering inconsistencies.
 
+  
+.. index:: Zoom_In Zoom_Out, Pan, Map_Navigation
+
+.. _zoom-pan:
+
+Zooming and Panning
+====================
+
+QGIS provides tools to zoom and pan to your area of interest.
+
+Apart from using the |mActionPan| :sup:`pan` and |mActionZoomIn|
+:sup:`zoom-in` / |mActionZoomOut| :sup:`zoom-out` icons on the toolbar
+with the mouse, navigating can also be done with the mouse wheel, spacebar
+and the arrow keys.
+
+Zooming and panning with the mouse wheel
+----------------------------------------
+
+You can press the mouse wheel to pan inside of the main
+window, and you can roll the mouse wheel to zoom in and out on the map.
+For zooming, place the mouse cursor inside the map area and roll it forward
+(away from you) to zoom in and backwards (towards you) to zoom out. The mouse
+cursor position will be the center of the zoomed area of interest. You can
+customize the behaviour of the mouse wheel zoom using the :guilabel:`Map tools`
+tab under the :menuselection:`Settings -->` |mActionOptions|
+:menuselection:`Options` menu.
+
+Panning with the arrow keys
+---------------------------
+
+Panning the map is possible with the arrow keys.
+Place the mouse cursor inside the map area, and click on the right arrow key
+to pan east, left arrow key to pan west, up arrow key to pan north, and down
+arrow key to pan south.
+
+You can also use the space bar to temporarily cause mouse movements to pan
+the map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause
+the map display to zoom in or out.
+
+  
 .. _`sec_measure`:
 
 Measuring
 =========
 .. index::
    single:measure
+   
 |qg| provides four means of measuring geometries:
 
 * the interactive measurement tools |mActionMeasure|,
