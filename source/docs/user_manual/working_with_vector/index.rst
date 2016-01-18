@@ -15,5 +15,6 @@
    expression
    editing_geometry_attributes
    query_builder
+   virtual_layers
    field_calculator
 
