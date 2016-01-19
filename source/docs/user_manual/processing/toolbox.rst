@@ -55,7 +55,7 @@ an additional label will be shown in the lower part of the toolbox.
 
 
 If you click on the link in that label, the list of algorithms will also include those from
-inactive provider, which will be shown in light gray. A link to active each inactive provider
+inactive providers, which will be shown in light gray. A link to active each inactive provider
 is also shown.
 
 .. _figure_toolbox_search2:
@@ -64,7 +64,7 @@ is also shown.
 
    **Figure Processing 7:**
 
-.. figure:: /static/user_manual/processing/toolbox_search.png
+.. figure:: /static/user_manual/processing/toolbox_search2.png
    :align: center
 
    Processing Toolbox showing search results |win|
