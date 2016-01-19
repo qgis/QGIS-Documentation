@@ -44,5 +44,6 @@ Contents:
    generalize
    solar
    r_intro
+   geomorpho
 
 

@@ -411,6 +411,8 @@ rst_epilog = """
    :width: 1.5em
 .. |grass_set_region| image:: /static/common/grass_set_region.png
    :width: 1.5em
+.. |grass_region_edit| image:: /static/common/grass_region_edit.png
+   :width: 1.5em
 .. |grass_tools| image:: /static/common/grass_tools.png
    :width: 1.5em
 .. |groupbox|  image:: /static/common/groupbox.png

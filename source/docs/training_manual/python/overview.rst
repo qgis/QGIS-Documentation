@@ -1,3 +1,6 @@
+Overview
+========
+
 Here are the things we will cover in this course:
 
 * What is python?

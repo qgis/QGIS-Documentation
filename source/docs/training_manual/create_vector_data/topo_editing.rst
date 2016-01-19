@@ -161,7 +161,7 @@ boundaries.
 
 This is the :guilabel:`Add Part` tool:
 
-  |mActionAddIsland|
+  |mActionAddPart|
 
 It allows you to create an extra part of the feature, not directly connected to
 the main feature. For example, if you've digitized the boundaries of mainland

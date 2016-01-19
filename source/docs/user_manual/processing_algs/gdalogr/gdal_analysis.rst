@@ -75,7 +75,7 @@ Color reliefs can particularly be used to depict elevations.
 The Algorithm outputs a 4-band raster with values computed from the elevation
 and a text-based color configuration file. By default, the colors between the given
 elevation values are blended smoothly and the result is a nice colorized elevation raster.
-The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
+The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ .
 
 Parameters
 ..........
@@ -140,7 +140,7 @@ interpolating missing regions of fairly continuously varying rasters (such as el
 models for instance). It is also suitable for filling small holes and cracks in more irregularly
 varying images (like airphotos). It is generally not so great for interpolating a raster
 from sparse point data.
-The algorithm is derived from the `GDAL fillnodata utility <http://www.gdal.org/gdal_fillnodata.html>`_ .
+The algorithm is derived from the `GDAL fillnodata utility <http://www.gdal.org/gdal_fillnodata.html>`__ .
 
 Parameters
 ..........
@@ -562,7 +562,7 @@ Description
 Outputs a raster with a nice shaded relief effect. It’s very useful for visualizing
 the terrain. You can optionally specify the azimuth and altitude of the light source, a vertical
 exaggeration factor and a scaling factor to account for differences between vertical and horizontal units.
-The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
+The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ .
 
 Parameters
 ..........
@@ -772,7 +772,7 @@ difference of a central pixel and its surrounding cell.
 The determination of the roughness plays a role in the analysis of terrain elevation data,
 it's useful for calculations of the river morphology, in climatology and physical geography
 in general.
-The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
+The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ .
 
 
 Parameters
@@ -864,7 +864,7 @@ Description
 Generate a slope map from any GDAL-supported elevation raster. Slope is the
 angle of inclination to the horizontal. You have the option of specifying the
 type of slope value you want: degrees or percent slope.
-The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
+The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ .
 
 Parameters
 ..........
@@ -954,7 +954,7 @@ Console usage
 See also
 ........
 
-`GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TPI>`_
+`GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TPI>`__
 
 
 TRI (Terrain Ruggedness Index)
@@ -998,4 +998,4 @@ Console usage
 
 See also
 ........
-`GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TRI>`_
+`GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TRI>`__

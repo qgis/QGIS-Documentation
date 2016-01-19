@@ -864,7 +864,7 @@ We now describe an example using the data-defined override function for the
 **Rule-based labeling**
 
 With Rule-based labeling multiple label configurations can be defined 
-and applied selectively on the base of expression filters, as in :ref:`Rule-based rendering <rule_based_rendering>`
+and applied selectively on the base of expression filters, as in Rule-based rendering
 
 Rules can be set selecting the corresponding option at the top of the Labels panel (see figure_labels_7_ )
 

@@ -33,7 +33,7 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
   This is used with |qg| server and any potential web 
   client. You can set an ID on an item (e.g., a map and a label), and then the web client can send data to set a property 
   (e.g., label text) for that specific item. The GetProjectSettings command will list what items and which IDs are available in a layout.
-* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_Mode_.
+* :guilabel:`Rendering` mode can be selected in the option field. See Composer_Rendering_Mode_.
 
 .. note:: 
 

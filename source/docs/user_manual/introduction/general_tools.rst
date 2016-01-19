@@ -199,8 +199,10 @@ tab and select or deselect the following checkboxes:
 
 Measuring
 =========
+
 .. index::
    single:measure
+
 |qg| provides four means of measuring geometries:
 * the interactive measurement tools |mActionMeasure|,
 * measuring in the |mActionCalculateField| :sup:`Field Calculator`,

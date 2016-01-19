@@ -21,6 +21,7 @@ plugin and also adds its own algorithms.
      vector_analysis_tools
      vector_creation_tools
      vector_general_tools
+     vector_general_tools/mergedatasourcesinvrt
      vector_geometry_tools
      vector_overlay_tools
      vector_selection_tools
