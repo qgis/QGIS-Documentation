@@ -21,9 +21,8 @@ discussed below).
 
 .. figure:: /static/user_manual/introduction/startup.png
    :align: center
-   :width: 35em
 
-   |qg| GUI with Alaska sample data |nix|
+   |qg| GUI with Alaska sample data
 
 .. note::
    Your window decorations (title bar, etc.) may appear different depending on
@@ -380,7 +379,7 @@ Content**, **Expand All** or **Collapse All** and **Remove Layer or Group**.
    .. figure:: /static/user_manual/introduction/layer_toobar.png
       :align: center
 
-      Layer Tool Bar in Map Legend |nix|
+      Layer Tool Bar in Map Legend
 
 The button |mActionShowPresets| allows you to add **Presets** views in the legend. It means that you can choose to display some layer with specific categorization and add this view to the **Presets** list. To add a preset view just click on |mActionShowPresets|, choose *Add Preset...* from the drop down menu and give a name to the preset. After that you will see a list with all the presets that you can recall pressing on the |mActionShowPresets| button. 
 
@@ -511,7 +510,7 @@ list of layers will cause a revert to default behavior.
 .. figure:: /static/user_manual/introduction/layer_order.png
     :align: center
 
-    Define a legend independent layer order |nix|
+    Define a legend independent layer order
 
 .. _`label_mapview`:
 
