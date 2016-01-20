@@ -255,7 +255,7 @@ Select the new values and then click on the **[OK]** button as usual. The
 connections between the model elements will change accordingly in the modeler
 canvas.
 
-A model can be run partially, by deactivating some of its algorithms. To do it, select the :guilabel:`Deactivate` option in the context menu that appears when right-clicking on an algorithm element. The selected algorithm, and all the ones in the model that depend on it will be displayed in grey and will not be executed as part of the model. 
+A model can be run partially, by deactivating some of its algorithms. To do it, select the :guilabel:`Deactivate` option in the context menu that appears when right-clicking on an algorithm element. The selected algorithm, and all the ones in the model that depend on it will be displayed in grey and will not be executed as part of the model.
 
 .. _figure_cannot_model_deactivate:
 
@@ -263,7 +263,7 @@ A model can be run partially, by deactivating some of its algorithms. To do it, 
 
    **Figure Processing 24:**
 
-.. figure:: /static/user_manual/processing/model_deactivated.png
+.. figure:: /static/user_manual/processing/deactivated.png
    :align: center
 
    Model With Deactivated Algorithms |win|
@@ -294,7 +294,7 @@ time you open the help editor, all these descriptions are empty, but you can edi
 them using the elements on the left-hand side of the dialog. Select an element
 on the upper part and then write its description in the text box below.
 
-Model help is saved as part of the model itself. 
+Model help is saved as part of the model itself.
 
 Exporting a model as a Python script
 --------------------------------------
