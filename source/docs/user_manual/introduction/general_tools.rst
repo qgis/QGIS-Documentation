@@ -212,28 +212,28 @@ Measuring
 Measuring works within projected coordinate systems (e.g., UTM) and unprojected
 data. The first three measuring tools behave equally to global project settings:
 
-If "on the fly" CRS transformation is enabled, the default measurement metric is 
-- different from most other GIS - ellipsoidal, using the ellipsoid defined in 
-:menuselection:`File --> Project properties`, :guilabel:`General`. This is true both 
-when geographic and projected coordinate systems are defined for the project. 
-If you want to calculate the projected / planimetric area or distance using cartesian 
-maths, the measurement ellipsoid has to be set to "None / Planimetric" 
-(:menuselection:`File --> Project properties`, :guilabel:`CRS`). However, 
-with a geographic (= unprojected) CRS defined for the data and project, area and 
+If "on the fly" CRS transformation is enabled, the default measurement metric is
+- different from most other GIS - ellipsoidal, using the ellipsoid defined in
+:menuselection:`File --> Project properties`, :guilabel:`General`. This is true both
+when geographic and projected coordinate systems are defined for the project.
+If you want to calculate the projected / planimetric area or distance using cartesian
+maths, the measurement ellipsoid has to be set to "None / Planimetric"
+(:menuselection:`File --> Project properties`, :guilabel:`CRS`). However,
+with a geographic (= unprojected) CRS defined for the data and project, area and
 distance measurement will be ellipsoidal.
-If "on the fly" CRS transformation is disabled, the measurement metric is planimetric 
-when the project coordinate system is projected and ellipsoidal when the project 
+If "on the fly" CRS transformation is disabled, the measurement metric is planimetric
+when the project coordinate system is projected and ellipsoidal when the project
 coordinate system is unprojected / geographic.
 
-However, neither the identify tool nor the field calculator will transform your data 
-to the project CRS before measuring. If you want to achive this you have to use the 
-vector analysis tool: :menuselection:`Vector --> Geometry Tools --> Export/Add Geometry Columns`. 
+However, neither the identify tool nor the field calculator will transform your data
+to the project CRS before measuring. If you want to achive this you have to use the
+vector analysis tool: :menuselection:`Vector --> Geometry Tools --> Export/Add Geometry Columns`.
 Here, measurement is by default planimetric except if you choose the ellipsoidal measure.
 
 Measure length, areas and angles interactive
 ----------------------------------------------
 
-All measuring modules use the snapping settings from the digitizing module. This is useful, 
+All measuring modules use the snapping settings from the digitizing module. This is useful,
 if you want to measure along lines or areas in vector layers.
 
 To select a measuring tool, click on |mActionMeasure| and select the tool you want
@@ -247,8 +247,8 @@ to use.
    single:measure;angles
 
 By default, |mActionMeasure| :sup:`Measure Line`: |qg| measures real distances
-between given points according to a defined ellipsoid. You candefine a rubberband 
-color and your preferred measurement units (meters or feet) and angle units 
+between given points according to a defined ellipsoid. You candefine a rubberband
+color and your preferred measurement units (meters or feet) and angle units
 (degrees, radians and gon) in the menu option :menuselection:`Settings --> Options`.
 The tool then allows you to
 click points on the map. Each segment length, as well as the total, shows up in
@@ -322,11 +322,11 @@ tool:
 To deselect all selected features click on |mActionDeselectAll| :sup:`Deselect
 features from all layers`.
 
-|mIconExpressionSelect| :sup:`Select feature using an expression` allow user 
-to select feature using expression dialog. See :ref:`vector_expressions` 
+|mIconExpressionSelect| :sup:`Select feature using an expression` allow user
+to select feature using expression dialog. See :ref:`vector_expressions`
 chapter for some example.
 
-Users can save features selection into a **New Memory Vector Layer** or a **New Vector Layer** using 
+Users can save features selection into a **New Memory Vector Layer** or a **New Vector Layer** using
 :menuselection:`Edit --> Paste Feature as ...` and choose the mode you want.
 
 .. _`identify`:
@@ -345,7 +345,7 @@ features` or press :kbd:`Ctrl + Shift + I`, or click on the |mActionIdentify|
 If you click on several features, the :guilabel:`Identify results` dialog will
 list information about all the selected features. The first item is the number of the
 layer in the list of results, followed by the layer name. Then, its first child will
-be the name of a field with its value. The first field is the one selected in 
+be the name of a field with its value. The first field is the one selected in
 :menuselection:`Properties --> Display`. Finally, all information about the feature
 is displayed.
 
@@ -374,11 +374,13 @@ display three kinds of information:
 
 At the top of the window, you have five icons:
 
-* |mActionIdentifyExpand| :sup:`Expand tree`
-* |mActionIdentifyCollapse| :sup:`Collapse tree`
-* |mActionIdentifyDefaultExpand| :sup:`Default behaviour`
-* |mActionIdentifyCopyAttributes| :sup:`Copy attributes`
-* |mActionIdentifyPrint| :sup:`Print selected HTML response`
+* |mActionExpandTree| :sup:`Expand Tree`
+* |mActionCollapseTree| :sup:`Collapse Tree`
+* |mActionExpandNewTree| :sup:`New results will be expanded by default`
+* |mActionPropertyItem| :sup:`Open Form`
+* |mActionDeselectAll| :sup:`Clear Results`
+* |mActionEditCopy| :sup:`Copy selected feature to clipboard`
+* |mActionFilePrint| :sup:`Print selected HTML response`
 
 At the bottom of the window, you have the :guilabel:`Mode` and :guilabel:`View`
 comboboxes.
@@ -605,7 +607,7 @@ Additionally, you can also create your own annotation forms. The
 attributes of a vector layer in a customized Qt Designer form (see
 figure_custom_annotation_). This is similar to the designer forms for the
 :guilabel:`Identify features` tool, but displayed in an annotation item.
-Also see this video https://www.youtube.com/watch?v=0pDBuSbQ02o from 
+Also see this video https://www.youtube.com/watch?v=0pDBuSbQ02o from
 Tim Sutton for more information.
 
 .. _figure_custom_annotation:
@@ -676,7 +678,7 @@ the delete by clicking **[No]**.
 Import or export a bookmark
 ---------------------------
 
-To share or transfer your bookmarks between computers you can use the :guilabel:`Share` 
+To share or transfer your bookmarks between computers you can use the :guilabel:`Share`
 pull down menu in the :guilabel:`Geospatial Bookmarks` dialog.
 
 .. _nesting_projects:
