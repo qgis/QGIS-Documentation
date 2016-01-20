@@ -400,7 +400,7 @@ The documentation for the plugin can be written as HTML help files. The
 :mod:`qgis.utils` module provides a function, :func:`showPluginHelp` which
 will open the help file browser, in the same way as other QGIS help.
 
-The :func:`showPluginHelp`` function looks for help files in the same
+The :func:`showPluginHelp` function looks for help files in the same
 directory as the calling module. It will look for, in turn,
 :file:`index-ll_cc.html`, :file:`index-ll.html`, :file:`index-en.html`,
 :file:`index-en_us.html` and :file:`index.html`, displaying whichever it finds
