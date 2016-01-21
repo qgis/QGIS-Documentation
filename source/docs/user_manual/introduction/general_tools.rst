@@ -30,7 +30,7 @@ keyboard shortcuts and to add new keyboard shortcuts to |qg| features.
 .. figure:: /static/user_manual/introduction/shortcuts.png
    :align: center
 
-   Define shortcut options |nix| (Gnome)
+   Define shortcut options
 
 Configuration is very simple. Just select a feature from the list and click
 on **[Change]**, **[Set none]** or **[Set default]**. Once you have finished your
@@ -204,6 +204,7 @@ Measuring
    single:measure
 
 |qg| provides four means of measuring geometries:
+
 * the interactive measurement tools |mActionMeasure|,
 * measuring in the |mActionCalculateField| :sup:`Field Calculator`,
 * derived measures in the :ref:`identify` tool, and
@@ -247,7 +248,7 @@ to use.
    single:measure;angles
 
 By default, |mActionMeasure| :sup:`Measure Line`: |qg| measures real distances
-between given points according to a defined ellipsoid. You candefine a rubberband
+between given points according to a defined ellipsoid. You can define a rubberband
 color and your preferred measurement units (meters or feet) and angle units
 (degrees, radians and gon) in the menu option :menuselection:`Settings --> Options`.
 The tool then allows you to
@@ -267,7 +268,7 @@ during measurement calculations.
 .. figure:: /static/user_manual/introduction/measure_line.png
    :align: center
 
-   Measure Distance |nix| (Gnome)
+   Measure Distance
 
 |mActionMeasureArea| :sup:`Measure Area`: Areas can also be measured. In the
 measure window, the accumulated area size appears. In addition, the measuring
@@ -286,7 +287,7 @@ tools, each mouse click (within the tolerance setting) will snap to that layer.
 .. figure:: /static/user_manual/introduction/measure_area.png
    :align: center
 
-   Measure Area |nix| (Gnome)
+   Measure Area
 
 |mActionMeasureAngle| :sup:`Measure Angle`: You can also measure angles. The
 cursor becomes cross-shaped. Click to draw the first segment of the angle you
@@ -302,7 +303,7 @@ is displayed in a pop-up dialog.
 .. figure:: /static/user_manual/introduction/measure_angle.png
    :align: center
 
-   Measure Angle |nix| (Gnome)
+   Measure Angle
 
 .. _`sec_selection`:
 
@@ -370,7 +371,7 @@ display three kinds of information:
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
 
-   Identify features dialog |nix| (Gnome)
+   Identify features dialog
 
 At the top of the window, you have five icons:
 
@@ -434,7 +435,7 @@ annotations to the map canvas.
 .. figure:: /static/user_manual/introduction/grid_dialog.png
    :align: center
 
-   The Grid Dialog |nix|
+   The Grid Dialog
 
 #.  Select from menu :menuselection:`View --> Decorations --> Grid`.
     The dialog starts (see figure_decorations_1_).
@@ -460,7 +461,7 @@ you prefer to the map.
 .. figure:: /static/user_manual/introduction/copyright.png
    :align: center
 
-   The Copyright Dialog |nix|
+   The Copyright Dialog
 
 
 #.  Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
@@ -495,7 +496,7 @@ the four corners of the map canvas.
 .. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
 
-   The North Arrow Dialog |nix|
+   The North Arrow Dialog
 
 
 Scale Bar
@@ -513,7 +514,7 @@ can control the style and placement, as well as the labelling of the bar.
 .. figure:: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
 
-   The Scale Bar Dialog |nix|
+   The Scale Bar Dialog
 
 
 |qg| only supports displaying the scale in the same units as your map frame.
@@ -567,7 +568,7 @@ map canvas.
 .. figure:: /static/user_manual/introduction/annotation.png
    :align: center
 
-   Annotation text dialog |nix|
+   Annotation text dialog
 
 Double clicking on the item opens a dialog with various options. There is the
 text editor to enter the formatted text and other item settings. For instance, there
@@ -607,7 +608,7 @@ Additionally, you can also create your own annotation forms. The
 attributes of a vector layer in a customized Qt Designer form (see
 figure_custom_annotation_). This is similar to the designer forms for the
 :guilabel:`Identify features` tool, but displayed in an annotation item.
-Also see this video https://www.youtube.com/watch?v=0pDBuSbQ02o from
+Also see this video https://youtu.be/0pDBuSbQ02o?t=2m25s from 
 Tim Sutton for more information.
 
 .. _figure_custom_annotation:
@@ -619,7 +620,7 @@ Tim Sutton for more information.
 .. figure:: /static/user_manual/introduction/custom_annotation.png
    :align: center
 
-   Customized qt designer annotation form |nix|
+   Customized qt designer annotation form
 
 .. note::
    If you press :kbd:`Ctrl+T` while an :guilabel:`Annotation` tool is active
@@ -713,7 +714,7 @@ small example:
 .. figure:: /static/user_manual/introduction/embed_dialog.png
    :align: center
 
-   Select layers and groups to embed |nix|
+   Select layers and groups to embed
 
 While the embedded layers are editable, you can't change their properties like
 style and labeling.
