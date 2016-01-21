@@ -203,9 +203,7 @@ field 'budged'. Here a comment functionality is inserted.
 
    **Figure Symbology 6:**
 
-.. todo find the correct image "symbol_data_defined_edit.png" to put here. Temporarily (to not have build warning) put
-
-.. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
+.. figure:: /static/user_manual/working_with_vector/symbol_data_defined_edit.png
    :align: center
 
    Data-defined symbol with Edit... menu
