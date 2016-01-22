@@ -181,8 +181,8 @@ tab and select or deselect the following checkboxes:
   However, if rendering finishes faster than this duration, it will be shown
   instantaneously.
 * With |checkbox| :guilabel:`Enable Feature simplification by default for newly
-  added layers`, you simplify features' geometry (less nodes) and as
-  a result, they quickly display.
+  added layers`, you simplify features' geometry (less nodes) and as  a result,
+  they quickly display.
   Be aware that you can also face rendering inconsistencies.
 
 
@@ -223,7 +223,6 @@ arrow key to pan south.
 You can also use the space bar to temporarily cause mouse movements to pan
 the map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause
 the map display to zoom in or out.
-
 
 .. _`sec_measure`:
 
