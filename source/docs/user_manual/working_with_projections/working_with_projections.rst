@@ -69,7 +69,7 @@ sessions.
 .. figure:: /static/user_manual/working_with_projections/crsdialog.png
    :align: center
 
-   CRS tab in the |qg| Options Dialog |nix|
+   CRS tab in the |qg| Options Dialog
 
 When you use layers that do not have a CRS, you need to define how |qg|
 responds to these layers. This can be done globally or project-wide in the
@@ -133,7 +133,7 @@ layers will be OTF projected to the CRS shown next to the icon.
 .. figure:: /static/user_manual/working_with_projections/projectionDialog.png
    :align: center
 
-   Project Properties Dialog |nix|
+   Project Properties Dialog
 
 The :guilabel:`CRS` tab of the :guilabel:`Project Properties` dialog contains
 five important components, as shown in Figure_projection_2_ and described below:
@@ -187,7 +187,7 @@ database also contains your spatial bookmarks and other custom data.
 .. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
    :align: center
 
-   Custom CRS Dialog |nix|
+   Custom CRS Dialog
 
 .. index:: Proj.4
 
