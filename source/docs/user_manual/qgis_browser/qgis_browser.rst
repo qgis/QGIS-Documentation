@@ -14,17 +14,6 @@ or MS SQL Spatial) and WMS/WFS connections. You can also view your GRASS data
 
 .. index:: Browse_Maps, Import_Maps
 
-.. _figure_browser_standalone_metadata:
-
-.. only:: html
-
-   **Figure browser 1:**
-
-.. figure:: /static/user_manual/qgis_browser/browser_standalone_metadata.png
-   :align: center
-
-   |qg| browser as a stand alone application |nix|
-
 Use the |qg| Browser to preview your data. The drag-and-drop function makes it easy
 to get your data into the map view and the map legend.
 
@@ -42,7 +31,7 @@ to get your data into the map view and the map legend.
    For more information see :ref:`label_projections`.
 #. Click on |mActionZoomFullExtent| :sup:`Zoom Full` to make the layers
    visible.
-
+   
 There is a second browser available under :menuselection:`Settings --> Panels`.
 This is handy when you need to move files or layers between locations.
 
@@ -55,6 +44,17 @@ This is handy when you need to move files or layers between locations.
 #. Select a file with the left mouse button. Now you can use the
    |mActionAdd|:sup:`Add Selected Layers` icon to add it into the current project.
 
+.. _figure_browser_panels:
+
+.. only:: html
+
+   **Figure browser 1:**
+
+.. figure:: /static/user_manual/qgis_browser/browser_panels.png
+   :align: center
+
+   |qg| Browser panels side-by-side
+
 |qg| automatically looks for the coordinate reference system (CRS) and zooms to
 the layer extent if you work in a blank |qg| project. If there are already
 files in your project, the file will just be added, and in the case that it has the same
@@ -63,10 +63,10 @@ extent, you must first right-click on the layer and choose
 :guilabel:`Set Project CRS from Layer`. Then choose
 :guilabel:`Zoom to Layer Extent`.
 
-The |mActionFilter|:sup:`Filter files` function works on a directory level.
-Browse to the folder where you want to filter files and enter a search word
-or wildcard. The Browser will show only matching filenames -- other data
-won't be displayed.
+The |mActionFilter|:sup:`Filter browser` function allows you to search for
+specific data. Enter a search word or wildcard and the browser will show
+only matching filenames or parent folders -- other data or folders
+won't be displayed. See the Browser Panel(2) example on the _figure_browser_panels.
 
 It's also possible to run the |qg| Browser as a stand-alone application.
 
@@ -75,6 +75,17 @@ It's also possible to run the |qg| Browser as a stand-alone application.
 * |nix| Type in "qbrowser" at a command prompt.
 * |win| Start the |qg| Browser using the Start menu or desktop shortcut.
 * |osx| The |qg| Browser is available from your Applications folder.
+
+.. _figure_browser_standalone_metadata:
+
+.. only:: html
+
+   **Figure browser 2:**
+
+.. figure:: /static/user_manual/qgis_browser/browser_standalone_metadata.png
+   :align: center
+
+   |qg| browser as a stand alone application
 
 In figure_browser_standalone_metadata_, you can see the enhanced functionality
 of the stand-alone |qg| Browser. The :guilabel:`Param` tab provides the details of
