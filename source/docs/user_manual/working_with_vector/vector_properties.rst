@@ -5,13 +5,13 @@
 The Vector Properties Dialog
 ============================
 
-The :guilabel:`Layer Properties` dialog for a vector layer provides information
+The `Layer Properties` dialog for a vector layer provides information
 about the layer, symbology settings and labelling options. If your vector layer
 has been loaded from a PostgreSQL/PostGIS datastore, you can also alter the
-underlying SQL for the layer by invoking the :guilabel:`Query Builder` dialog on
-the :guilabel:`General` tab. To access the :guilabel:`Layer Properties` dialog,
+underlying SQL for the layer by invoking the `Query Builder` dialog on
+the `General` tab. To access the `Layer Properties` dialog,
 double-click on a layer in the legend or right-click on the layer and select
-:menuselection:`Properties` from the pop-up menu.
+`Properties` from the pop-up menu.
 
 
 .. do not change the order of reference-tag and only-tag, this figure has
@@ -23,7 +23,7 @@ double-click on a layer in the legend or right-click on the layer and select
 
 .. _figure_vector_properties_1:
 
-.. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
+.. figure:: ./images/vector_general_menu.png
    :align: center
 
    Vector Layer Properties Dialog |nix|
@@ -34,7 +34,7 @@ Style Menu
 ----------
 
 The Style menu provides you with a comprehensive tool for rendering and symbolizing your
-vector data. You can use :menuselection:`Layer rendering -->` tools that are common to
+vector data. You can use `Layer rendering -->` tools that are common to
 all vector data, as well as special symbolizing tools that were designed for the different kinds
 of vector data.
 
@@ -48,15 +48,15 @@ of the graduated renderer. The categorized and graduated renderers can be create
 by specifying a symbol and a color ramp - they will set the colors for symbols
 appropriately. For point layers, there is a point displacement renderer available.
 For each data type (points, lines and polygons), vector symbol layer types are available.
-Depending on the chosen renderer, the :guilabel:`Style` menu provides different
+Depending on the chosen renderer, the `Style` menu provides different
 additional sections. On the bottom right of the symbology dialog, there is a **[Symbol]** button, which gives access
 to the Style Manager (see :ref:`vector_style_manager`). The Style Manager allows you to edit and remove
 existing symbols and add new ones.
 
 After having made any needed changes, the symbol can be added to the list of
-current style symbols (using **[Symbol]** |selectstring| :guilabel:`Save in symbol library`),
+current style symbols (using **[Symbol]** |selectstring| `Save in symbol library`),
 and then it can easily be used in the future. Furthermore, you can use the **[Save Style]** |selectstring| button to
-save the symbol as a |qg| layer style file (.qml) or SLD file (.sld). SLDs can be exported from any type of renderer -- single symbol,
+save the symbol as a QGIS layer style file (.qml) or SLD file (.sld). SLDs can be exported from any type of renderer -- single symbol,
 categorized, graduated or rule-based -- but when importing an SLD, either a
 single symbol or rule-based renderer is created.
 That means that categorized or graduated styles are converted to rule-based.
@@ -71,10 +71,10 @@ will get lost.
 
 If the datasource of the layer is a database (PostGIS or Spatialite for example),
 you can save your layer style inside a table of the database. Just click on
-:guilabel:`Save Style` comboxbox and choose **Save in database** item then fill in
+`Save Style` comboxbox and choose **Save in database** item then fill in
 the dialog to define a style name, add a description, an ui file and if the style
 is a default style. When loading a layer from the database, if a style already
-exists for this layer, |qg| will load the layer and its style. You can add
+exists for this layer, QGIS will load the layer and its style. You can add
 several style in the database. Only one will be the default style anyway.
 
 .. only:: html
@@ -83,7 +83,7 @@ several style in the database. Only one will be the default style anyway.
 
 .. _figure_vector_properties_2:
 
-.. figure:: /static/user_manual/working_with_vector/save_style_database.png
+.. figure:: ./images/save_style_database.png
    :align: center
 
    Save Style in database Dialog |nix|
@@ -107,7 +107,7 @@ where the centroid must always be the actual feature's centroid).
 
 The Single Symbol Renderer is used to render all features of the layer using
 a single user-defined symbol. The properties, which can be adjusted in the
-:guilabel:`Style` menu, depend partially on the type of layer, but all types share
+`Style` menu, depend partially on the type of layer, but all types share
 the following dialog structure. In the top-left part of the menu, there is a preview
 of the current symbol to be rendered. On the right part of the menu, there is
 a list of symbols already defined for the current style, prepared to be used
@@ -116,10 +116,10 @@ the menu on the right side.
 
 .. _defining_symbols:
 
-If you click on the first level in the :guilabel:`Symbol layers` dialog on the left
-side, it's possible to define basic parameters like :guilabel:`Size` or 
-:guilabel:`width` (for point and line features), :guilabel:`Rotation` (for point 
-features), :guilabel:`color` and :guilabel:`Transparency` (for all types of 
+If you click on the first level in the `Symbol layers` dialog on the left
+side, it's possible to define basic parameters like `Size` or 
+`width` (for point and line features), `Rotation` (for point 
+features), `color` and `Transparency` (for all types of 
 feature). Here, the layers are joined together.
 
 
@@ -129,7 +129,7 @@ feature). Here, the layers are joined together.
 
    **Figure Symbology 3:**
 
-.. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png
+.. figure:: ./images/singlesymbol_ng_line.png
    :align: center
 
    Single symbol line properties |nix|
@@ -148,7 +148,7 @@ to help you define size expression.
 
    **Figure Symbology 4:**
 
-.. figure:: /static/user_manual/working_with_vector/varying_size_assistant.png
+.. figure:: ./images/varying_size_assistant.png
    :align: center
 
    Varying size assistant |nix|
@@ -156,7 +156,7 @@ to help you define size expression.
 The assistant let you define:
 
 * The attribute (using the Field listbox or the |mActionmIconExpressionEditorOpen| 
-  :guilabel:`Set column expression` function, see :ref:`vector_expressions`)
+  `Set column expression` function, see :ref:`vector_expressions`)
 * The minimum and maximum size of the symbol
 * The minimum and maximum values of the Field. The down pointing arrow allows to 
   set the minimum and maximum values according to your data.
@@ -176,12 +176,12 @@ The available scale methods are 'Flannery', 'Surface' and 'Radius'.
 
    **Figure Symbology 5:**
 
-.. figure:: /static/user_manual/working_with_vector/expression_symbol_size_spinbox.png
+.. figure:: ./images/expression_symbol_size_spinbox.png
    :align: center
 
    Expression in Size spinbox |nix|
 
-If you click on the second level in the :guilabel:`Symbol layers` dialog a 'Data-defined override'
+If you click on the second level in the `Symbol layers` dialog a 'Data-defined override'
 for nearly all settings is possible. When using a data-defined color one may want to link the color to a
 field 'budged'. Here a comment functionality is inserted.
 ::
@@ -203,7 +203,7 @@ field 'budged'. Here a comment functionality is inserted.
 
    **Figure Symbology 6:**
 
-.. figure:: /static/user_manual/working_with_vector/symbol_data_defined_edit.png
+.. figure:: ./images/symbol_data_defined_edit.png
    :align: center
 
    Data-defined symbol with Edit... menu
@@ -215,11 +215,11 @@ field 'budged'. Here a comment functionality is inserted.
 
 The Categorized Renderer is used to render all features from a layer, using
 a single user-defined symbol whose color reflects the value of a selected
-feature's attribute. The :guilabel:`Style` menu allows you to select:
+feature's attribute. The `Style` menu allows you to select:
 
 
 * The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| 
-  :guilabel:`Set column expression` function, see :ref:`vector_expressions`)
+  `Set column expression` function, see :ref:`vector_expressions`)
 * The symbol (using the Symbol dialog)
 * The colors (using the color Ramp listbox)
 
@@ -234,7 +234,7 @@ Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Chang
 transparency**, **Change output unit**, **Change symbol width**.
 
 The example in figure_symbology_6_ shows the category rendering dialog used
-for the rivers layer of the |qg| sample dataset.
+for the rivers layer of the QGIS sample dataset.
 
 .. _figure_symbology_7:
 
@@ -242,7 +242,7 @@ for the rivers layer of the |qg| sample dataset.
 
    **Figure Symbology 7:**
 
-.. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
+.. figure:: ./images/categorysymbol_ng_line.png
    :align: center
 
    Categorized Symbolizing options |nix|
@@ -262,7 +262,7 @@ selected feature's attribute to a class.
 
    **Figure Symbology 8:**
 
-.. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
+.. figure:: ./images/graduatesymbol_ng_line.png
    :align: center
 
    Graduated Symbolizing options |nix|
@@ -270,12 +270,12 @@ selected feature's attribute to a class.
 Like the Categorized Renderer, the Graduated Renderer allows you
 to define rotation and size scale from specified columns.
 
-Also, analogous to the Categorized Renderer, the :guilabel:`Style` tab allows you to
+Also, analogous to the Categorized Renderer, the `Style` tab allows you to
 select:
 
 
 * The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| 
-  :guilabel:`Set column expression` function, see :ref:`vector_expressions` chapter)
+  `Set column expression` function, see :ref:`vector_expressions` chapter)
 * The symbol (using the Symbol Properties button)
 * The colors (using the color Ramp list)
 
@@ -294,7 +294,7 @@ modes are:
 * Pretty Breaks: Computes a sequence of about n+1 equally spaced nice values which cover the range of the values in x. The values are chosen so that they are 1, 2 or 5 times a power of 10. (based on pretty from the R statistical environment http://astrostatistics.psu.edu/datasets/R/html/base/html/pretty.html)
 
 
-The listbox in the center part of the :guilabel:`Style` menu lists the classes
+The listbox in the center part of the `Style` menu lists the classes
 together with their ranges, labels and symbols that will be rendered.
 
 Click on **Classify** button to create classes using the chosen mode. Each
@@ -307,13 +307,13 @@ Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Chang
 transparency**, **Change output unit**, **Change symbol width**.
 
 The example in figure_symbology_7_ shows the graduated rendering dialog for
-the rivers layer of the |qg| sample dataset.
+the rivers layer of the QGIS sample dataset.
 
 .. tip:: **Thematic maps using an expression**
 
    Categorized and graduated thematic maps can now be created using the result of an expression.
    In the properties dialog for vector layers, the attribute chooser has been augmented with a
-   |mActionmIconExpressionEditorOpen| :guilabel:`Set column expression` function. So now you no longer
+   |mActionmIconExpressionEditorOpen| `Set column expression` function. So now you no longer
    need to write the classification attribute to a new column in your attribute table if you want the
    classification attribute to be a composite of multiple fields, or a formula of some sort.
 
@@ -329,14 +329,14 @@ allows rule grouping by filter or scale, and you can decide if you want to enabl
 symbol levels or use only the first-matched rule.
 
 The example in figure_symbology_8_ shows the rule-based rendering dialog
-for the rivers layer of the |qg| sample dataset.
+for the rivers layer of the QGIS sample dataset.
 
 To create a rule, activate an existing row by double-clicking on it, or click on '+' and
-click on the new rule. In the :guilabel:`Rule properties` dialog, you can define a label
+click on the new rule. In the `Rule properties` dialog, you can define a label
 for the rule. Press the |browsebutton| button to open the expression string builder. In
-the **Function List**, click on :guilabel:`Fields and Values` to view all attributes of
+the **Function List**, click on `Fields and Values` to view all attributes of
 the attribute table to be searched. To add an attribute to the field calculator **Expression** field,
-double click its name in the :guilabel:`Fields and Values` list. Generally, you
+double click its name in the `Fields and Values` list. Generally, you
 can use the various fields, values and functions to construct the calculation
 expression, or you can just type it into the box (see :ref:`vector_expressions`).
 You can create a new rule by copying and pasting an existing rule with the right mouse button.
@@ -352,7 +352,7 @@ is the background for the symbol in the tree.
 
    **Figure Symbology 9:**
 
-.. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
+.. figure:: ./images/rulesymbol_ng_line.png
    :align: center
 
    Rule-based Symbolizing options |nix|
@@ -372,18 +372,18 @@ placed on a displacement circle around a center symbol.
 
    **Figure Symbology 10:**
 
-.. figure:: /static/user_manual/working_with_vector/poi_displacement.png
+.. figure:: ./images/poi_displacement.png
    :align: center
 
    Point displacement dialog |nix|
 
 .. tip:: **Export vector symbology**
 
-   You have the option to export vector symbology from |qg| into Google \*.kml, \*.dxf
-   and MapInfo \*.tab files. Just open the right mouse menu of the layer and click on :menuselection:`Save selection
+   You have the option to export vector symbology from QGIS into Google \*.kml, \*.dxf
+   and MapInfo \*.tab files. Just open the right mouse menu of the layer and click on `Save selection
    as -->` to specify the name of the output file and its format.
-   In the dialog, use the :guilabel:`Symbology export` menu to save the symbology either as
-   :menuselection:`Feature symbology -->` or as :menuselection:`Symbol layer symbology -->`.
+   In the dialog, use the `Symbology export` menu to save the symbology either as
+   `Feature symbology -->` or as `Symbol layer symbology -->`.
    If you have used symbol layers, it is recommended to use the second setting.
 
 .. index:: Inverted_Polygon_Renderer
@@ -400,7 +400,7 @@ same as for the main renderers.
 
    **Figure Symbology 11:**
 
-.. figure:: /static/user_manual/working_with_vector/inverted_polygon_symbol.png
+.. figure:: ./images/inverted_polygon_symbol.png
    :align: center
 
    Inverted Polygon dialog |nix|
@@ -408,8 +408,8 @@ same as for the main renderers.
 .. tip:: **Switch quickly between styles**
 
    Once you created one of the above mentioned styles you can right-klick on the layer and
-   choose :menuselection:`Styles --> Add` to save your style. Now you can easily switch between
-   styles you created using the :menuselection:`Styles -->` menu again.
+   choose `Styles --> Add` to save your style. Now you can easily switch between
+   styles you created using the `Styles -->` menu again.
 
 .. index:: Heatmap Renderer
 
@@ -425,13 +425,13 @@ When adding or removing a feature the heatmap renderer updates the heatmap style
 Color Picker
 ...............
 
-Regardless the type of style to be used, the :guilabel:`select color` dialog will show when you click to choose a 
+Regardless the type of style to be used, the `select color` dialog will show when you click to choose a 
 color - either border or fill color. This dialog has four different tabs which allow you to select colors by |mIconColorBox| :sup:`color ramp`, 
 |mIconColorWheel| :sup:`color wheel`, |mIconColorSwatches| :sup:`color swatches` or |mIconColorPicker| :sup:`color picker`.
 
 Whatever method you use, the selected color is always described through color sliders for HSV  (Hue, Saturation, Value)
-and RGB (Red, Green, Blue) values. There is also an :guilabel:`opacity` slider to set transparency level. On the lower left part 
-of the dialog you can see a comparison between the :guilabel:`current` and the :guilabel:`new` color you are presently 
+and RGB (Red, Green, Blue) values. There is also an `opacity` slider to set transparency level. On the lower left part 
+of the dialog you can see a comparison between the `current` and the `new` color you are presently 
 selecting and on the lower right part you have the option to add the color you just tweaked into a color slot button. 
 
 .. _figure_color_picker_1:
@@ -440,7 +440,7 @@ selecting and on the lower right part you have the option to add the color you j
 
    **Figure color picker 1:**
 
-.. figure:: /static/user_manual/working_with_vector/color_picker_ramp.png
+.. figure:: ./images/color_picker_ramp.png
    :align: center
 
    Color picker ramp tab |nix|
@@ -449,7 +449,7 @@ selecting and on the lower right part you have the option to add the color you j
 
 With |mIconColorBox| :sup:`color ramp` or with |mIconColorWheel| :sup:`color wheel`, you can browse to all possible color combinations. 
 There are other possibilities though. By using `color swatches` |mIconColorSwatches| you can choose from a preselected list. This selected list is
-populated with one of three methods: :guilabel:`Recent colors`, :guilabel:`Standard colors` or :guilabel:`Project colors`
+populated with one of three methods: `Recent colors`, `Standard colors` or `Project colors`
 
 .. _figure_color_picker_2:
 
@@ -457,7 +457,7 @@ populated with one of three methods: :guilabel:`Recent colors`, :guilabel:`Stand
 
    **Figure color picker 2:**
 
-.. figure:: /static/user_manual/working_with_vector/color_picker_recent_colors.png
+.. figure:: ./images/color_picker_recent_colors.png
    :align: center
 
    Color picker switcher tab |nix|
@@ -469,7 +469,7 @@ QGIS or even from another application by pressing the space bar. Please note tha
 
 .. tip:: **quick color picker + copy/paste colors**
 
-   You can quickly choose from :guilabel:`Recent colors`, from :guilabel:`Standard colors` or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking 
+   You can quickly choose from `Recent colors`, from `Standard colors` or simply `copy` or `paste` a color by clicking 
    the drop-down arrow that follows a current color box.
 
 .. _figure_color_picker_3:
@@ -478,7 +478,7 @@ QGIS or even from another application by pressing the space bar. Please note tha
 
    **Figure color picker 3:**
 
-.. figure:: /static/user_manual/working_with_vector/quick_color_picker.png
+.. figure:: ./images/quick_color_picker.png
    :align: center
 
    Quick color picker menu |nix|
@@ -488,13 +488,13 @@ QGIS or even from another application by pressing the space bar. Please note tha
 Layer rendering
 ...............
 
-* :guilabel:`Layer transparency` |slider|: You can make the underlying layer in the map canvas
+* `Layer transparency` |slider|: You can make the underlying layer in the map canvas
   visible with this tool. Use the slider to adapt the visibility of your vector layer to your needs.
   You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
 
 .. _blend_modes:
 
-* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can achieve special rendering effects with these tools that you may
+* `Layer blending mode` and `Feature blending mode`: You can achieve special rendering effects with these tools that you may
   previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
   through the settings described below.
 
@@ -523,7 +523,7 @@ Labels Menu
 The |mActionLabeling| :sup:`Labels` core application provides smart
 labelling for vector point, line and polygon layers, and it only requires a
 few parameters. This new application also supports on-the-fly transformed layers.
-The core functions of the application have been redesigned. In |qg|, there are a
+The core functions of the application have been redesigned. In QGIS, there are a
 number of other features that improve the labelling. The following menus
 have been created for labelling the vector layers:
 
@@ -541,58 +541,58 @@ Let us see how the new menus can be used for various vector layers.
 
 **Labeling point layers**
 
-Start |qg| and load a vector point layer. Activate the layer in the legend and click on the
-|mActionLabeling| :sup:`Layer Labelling Options` icon in the |qg| toolbar menu.
+Start QGIS and load a vector point layer. Activate the layer in the legend and click on the
+|mActionLabeling| :sup:`Layer Labelling Options` icon in the QGIS toolbar menu.
 
-The first step is to activate the |checkbox| :guilabel:`Label this layer with` checkbox
+The first step is to activate the |checkbox| `Label this layer with` checkbox
 and select an attribute column to use for labelling. Click |mActionmIconExpressionEditorOpen| if you
 want to define labels based on expressions - See labeling_with_expressions_.
 
-The following steps describe a simple labelling without using the :guilabel:`Data defined override` functions,
+The following steps describe a simple labelling without using the `Data defined override` functions,
 which are situated next to the drop-down menus.
 
-You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_ ). Use the
-:guilabel:`Type case` option to influence the text rendering. You have the possibility to render
+You can define the text style in the `Text` menu (see Figure_labels_1_ ). Use the
+`Type case` option to influence the text rendering. You have the possibility to render
 the text 'All uppercase', 'All lowercase' or 'Capitalize first letter'. Use the blend modes to create effects
 known from graphics programs (see blend_modes_).
 
-In the :guilabel:`Formatting` menu, you can define a character for a line break in the 
-labels with the 'Wrap on character' function. You can format the :guilabel:`Line Height` 
+In the `Formatting` menu, you can define a character for a line break in the 
+labels with the 'Wrap on character' function. You can format the `Line Height` 
 and the alignment. For the latter typical values are available plus *Follow label 
 placement*. When set to this mode, text alignment for labels will be dependant on the 
 final placement of the label relative to the point. Eg, if the label is placed to the 
 left of the point then the label will be right aligned, and if it is placed to the right 
 of the point then the label will be left aligned.
 
-Use the |checkbox| :guilabel:`Formatted numbers` option to format the numbers in an attribute table. Here,
+Use the |checkbox| `Formatted numbers` option to format the numbers in an attribute table. Here,
 decimal places may be inserted. If you enable this option, three decimal places are initially set by default.
 
-To create a buffer, just activate the |checkbox| :guilabel:`Draw text buffer` checkbox in the :guilabel:`Buffer` menu.
+To create a buffer, just activate the |checkbox| `Draw text buffer` checkbox in the `Buffer` menu.
 The buffer color is variable. Here, you can also use blend modes (see blend_modes_).
 
-If the |checkbox| :guilabel:`color buffer's fill` checkbox is activated, it will interact with partially transparent
+If the |checkbox| `color buffer's fill` checkbox is activated, it will interact with partially transparent
 text and give mixed color transparency results. Turning off the buffer fill fixes that issue (except where the interior
 aspect of the buffer's stroke intersects with the text's fill) and also allows you to make outlined text.
 
-In the :guilabel:`Background` menu, you can define with :guilabel:`Size X` and :guilabel:`Size Y` the shape of your background.
-Use :guilabel:`Size type` to insert an additional 'Buffer' into your background. The buffer size is set by default here.
-The background then consists of the buffer plus the background in :guilabel:`Size X` and :guilabel:`Size Y`.
-You can set a :guilabel:`Rotation` where you can choose between 'Sync with label', 'Offset of label' and 'Fixed'.
-Using 'Offset of label' and 'Fixed', you can rotate the background. Define an :guilabel:`Offset X,Y` with X and Y values, and the background
-will be shifted. When applying :guilabel:`Radius X,Y`, the background gets rounded corners.
-Again, it is possible to mix the background with the underlying layers in the map canvas using the :guilabel:`Blend mode`
+In the `Background` menu, you can define with `Size X` and `Size Y` the shape of your background.
+Use `Size type` to insert an additional 'Buffer' into your background. The buffer size is set by default here.
+The background then consists of the buffer plus the background in `Size X` and `Size Y`.
+You can set a `Rotation` where you can choose between 'Sync with label', 'Offset of label' and 'Fixed'.
+Using 'Offset of label' and 'Fixed', you can rotate the background. Define an `Offset X,Y` with X and Y values, and the background
+will be shifted. When applying `Radius X,Y`, the background gets rounded corners.
+Again, it is possible to mix the background with the underlying layers in the map canvas using the `Blend mode`
 (see blend_modes_).
 
-Use the :guilabel:`Shadow` menu for a user-defined :guilabel:`Drop shadow`. The drawing of the background is very variable.
-Choose between 'Lowest label component', 'Text', 'Buffer' and 'Background'. The :guilabel:`Offset` angle depends on the orientation
-of the label. If you choose the |checkbox| :guilabel:`Use global shadow` checkbox, then the zero point of the angle is
+Use the `Shadow` menu for a user-defined `Drop shadow`. The drawing of the background is very variable.
+Choose between 'Lowest label component', 'Text', 'Buffer' and 'Background'. The `Offset` angle depends on the orientation
+of the label. If you choose the |checkbox| `Use global shadow` checkbox, then the zero point of the angle is
 always oriented to the north and doesn't depend on the orientation of the label. You can influence the appearance of the shadow
-with the :guilabel:`Blur radius`. The higher the number, the softer the shadows. The appearance of the drop shadow can also be altered by choosing a blend mode (see blend_modes_).
+with the `Blur radius`. The higher the number, the softer the shadows. The appearance of the drop shadow can also be altered by choosing a blend mode (see blend_modes_).
 
 
 .. comment FIXME: at the moment there is an error in this setting
 
-   |checkbox| :guilabel:`Blur only alpha pixels`:
+   |checkbox| `Blur only alpha pixels`:
    It is supposed to show only those
    pixels that have a partial alpha component beyond the base opaque pixels of
    the component being blurred. For example, if you set the shadow of some
@@ -608,22 +608,22 @@ with the :guilabel:`Blur radius`. The higher the number, the softer the shadows.
    used.
 
 
-Choose the :guilabel:`Placement` menu for the label placement and the labeling priority. Using the
-|radiobuttonon| :guilabel:`Offset from point` setting, you now have the option to use :guilabel:`Quadrants`
-to place your label. Additionally, you can alter the angle of the label placement with the :guilabel:`Rotation` setting.
+Choose the `Placement` menu for the label placement and the labeling priority. Using the
+|radiobuttonon| `Offset from point` setting, you now have the option to use `Quadrants`
+to place your label. Additionally, you can alter the angle of the label placement with the `Rotation` setting.
 Thus, a placement in a certain quadrant with a certain rotation is possible.
-In the :guilabel:`priority` section you can define with which priority the labels are rendered.
+In the `priority` section you can define with which priority the labels are rendered.
 It interacts with labels of the other vector layers in the map canvas. If there are labels from different layers
 in the same location then the label with the higher priority will be displayed and the other will be
 left out. 
 
 .. index:: Colliding_labels
 
-In the :guilabel:`Rendering` menu, you can define label and feature options. Under :guilabel:`Label options`,
-you find the scale-based visibility setting now. You can prevent |qg| from rendering only selected labels with
-the |checkbox| :guilabel:`Show all labels for this layer (including colliding labels)` checkbox.
-Under :guilabel:`Feature options`, you can define whether every part of a multipart feature is to be labelled. It's possible to define
-whether the number of features to be labelled is limited and to |checkbox| :guilabel:`Discourage labels from covering features`.
+In the `Rendering` menu, you can define label and feature options. Under `Label options`,
+you find the scale-based visibility setting now. You can prevent QGIS from rendering only selected labels with
+the |checkbox| `Show all labels for this layer (including colliding labels)` checkbox.
+Under `Feature options`, you can define whether every part of a multipart feature is to be labelled. It's possible to define
+whether the number of features to be labelled is limited and to |checkbox| `Discourage labels from covering features`.
 
 
 .. features act as obstacles for labels or not .
@@ -634,48 +634,48 @@ whether the number of features to be labelled is limited and to |checkbox| :guil
 
    **Figure Labels 1:**
 
-.. figure:: /static/user_manual/working_with_vector/label_points.png
+.. figure:: ./images/label_points.png
    :align: center
 
    Smart labeling of vector point layers |nix|
 
 **Labeling line layers**
 
-The first step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
-in the :guilabel:`Label settings` tab and select an attribute column to use for
+The first step is to activate the |checkbox| `Label this layer` checkbox
+in the `Label settings` tab and select an attribute column to use for
 labeling. Click |mActionmIconExpressionEditorOpen| if you
 want to define labels based on expressions - See labeling_with_expressions_.
 
-After that, you can define the text style in the :guilabel:`Text` menu. Here, you can use the
+After that, you can define the text style in the `Text` menu. Here, you can use the
 same settings as for point layers.
 
-Also, in the :guilabel:`Formatting` menu, the same settings as for point layers are possible.
+Also, in the `Formatting` menu, the same settings as for point layers are possible.
 
-The :guilabel:`Buffer` menu has the same functions as described in section labeling_point_layers_.
+The `Buffer` menu has the same functions as described in section labeling_point_layers_.
 
-The :guilabel:`Background` menu has the same entries as described in section labeling_point_layers_.
+The `Background` menu has the same entries as described in section labeling_point_layers_.
 
-Also, the :guilabel:`Shadow` menu has the same entries as described in section labeling_point_layers_.
+Also, the `Shadow` menu has the same entries as described in section labeling_point_layers_.
 
-In the :guilabel:`Placement` menu, you find special settings for line layers. The label can be placed
-|radiobuttonon| :guilabel:`Parallel`, |radiobuttonoff| :guilabel:`Curved` or |radiobuttonoff| :guilabel:`Horizontal`.
-With the |radiobuttonon| :guilabel:`Parallel` and |radiobuttonoff| :guilabel:`Curved` option, you can define the position |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`
-and |checkbox| :guilabel:`Below line`. It's possible to select several options at once.
-In that case, |qg| will look for the optimal position of the label. Remember that here you can
+In the `Placement` menu, you find special settings for line layers. The label can be placed
+|radiobuttonon| `Parallel`, |radiobuttonoff| `Curved` or |radiobuttonoff| `Horizontal`.
+With the |radiobuttonon| `Parallel` and |radiobuttonoff| `Curved` option, you can define the position |checkbox| `Above line`, |checkbox| `On line`
+and |checkbox| `Below line`. It's possible to select several options at once.
+In that case, QGIS will look for the optimal position of the label. Remember that here you can
 also use the line orientation for the position of the label.
-Additionally, you can define a :guilabel:`Maximum angle between curved characters` when
-selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
+Additionally, you can define a `Maximum angle between curved characters` when
+selecting the |radiobuttonoff| `Curved` option (see Figure_labels_2_ ).
 
 You can set up a minimum distance for repeating labels. Distance can be in mm or in map units.
 
-Some Placement setup will display more options, for example, :guilabel:`Curved` and :guilabel:`Parallel`
+Some Placement setup will display more options, for example, `Curved` and `Parallel`
 Placements will allow the user to set up the position of the label (above, below or on the line),
-:guilabel:`distance` from the line and for :guilabel:`Curved`, the user can also setup inside/outside
+`distance` from the line and for `Curved`, the user can also setup inside/outside
 max angle between curved label.
-As for point vector layers you have the possibility to define a :guilabel:`Priority` for the labels.
+As for point vector layers you have the possibility to define a `Priority` for the labels.
 
-The :guilabel:`Rendering` menu has nearly the same entries as for point layers. In the
-:guilabel:`Feature options`, you can now :guilabel:`Suppress labelling of features smaller than`.
+The `Rendering` menu has nearly the same entries as for point layers. In the
+`Feature options`, you can now `Suppress labelling of features smaller than`.
 
 
 .. if features act as obstacles for labels or not.
@@ -686,7 +686,7 @@ The :guilabel:`Rendering` menu has nearly the same entries as for point layers. 
 
    **Figure Labels 2:**
 
-.. figure:: /static/user_manual/working_with_vector/label_line.png
+.. figure:: ./images/label_line.png
    :align: center
 
    Smart labeling of vector line layers |nix|
@@ -694,47 +694,47 @@ The :guilabel:`Rendering` menu has nearly the same entries as for point layers. 
 
 **Labelling polygon layers**
 
-The first step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
+The first step is to activate the |checkbox| `Label this layer` checkbox
 and select an attribute column to use for labelling. Click |mActionmIconExpressionEditorOpen| if you
 want to define labels based on expressions - See labeling_with_expressions_.
 
-In the :guilabel:`Text` menu, define the text style. The entries are the same as for point
+In the `Text` menu, define the text style. The entries are the same as for point
 and line layers.
 
-The :guilabel:`Formatting` menu allows you to format multiple lines, also similar to the cases of point and line layers.
+The `Formatting` menu allows you to format multiple lines, also similar to the cases of point and line layers.
 
-As with point and line layers, you can create a text buffer in the :guilabel:`Buffer` menu.
+As with point and line layers, you can create a text buffer in the `Buffer` menu.
 
-Use the :guilabel:`Background` menu to create a complex user-defined background for the polygon layer.
+Use the `Background` menu to create a complex user-defined background for the polygon layer.
 You can use the menu also as with the point and line layers.
 
-The entries in the :guilabel:`Shadow` menu are the same as for point and line layers.
+The entries in the `Shadow` menu are the same as for point and line layers.
 
-In the :guilabel:`Placement` menu, you find special settings for polygon layers (see Figure_labels_3_).
-|radiobuttonon| :guilabel:`Offset from centroid`, |radiobuttonoff| :guilabel:`Horizontal (slow)`,
-|radiobuttonoff| :guilabel:`Around centroid`, |radiobuttonoff| :guilabel:`Free` and
-|radiobuttonoff| :guilabel:`Using perimeter` are possible.
+In the `Placement` menu, you find special settings for polygon layers (see Figure_labels_3_).
+|radiobuttonon| `Offset from centroid`, |radiobuttonoff| `Horizontal (slow)`,
+|radiobuttonoff| `Around centroid`, |radiobuttonoff| `Free` and
+|radiobuttonoff| `Using perimeter` are possible.
 
-In the |radiobuttonon| :guilabel:`Offset from centroid` settings, you can specify if the centroid
-is of the |radiobuttonon| :guilabel:`visible polygon` or |radiobuttonoff| :guilabel:`whole polygon`.
+In the |radiobuttonon| `Offset from centroid` settings, you can specify if the centroid
+is of the |radiobuttonon| `visible polygon` or |radiobuttonoff| `whole polygon`.
 That means that either the centroid is used for the polygon you can see on the map or the centroid is
 determined for the whole polygon, no matter if you can see the whole feature on the map.
 You can place your label with the quadrants here, and define offset and rotation.
-The |radiobuttonoff| :guilabel:`Around centroid` setting makes it possible to place the label
-around the centroid with a certain distance. Again, you can define |radiobuttonon| :guilabel:`visible polygon`
-or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
-With the |radiobuttonoff| :guilabel:`Using perimeter` settings, you can define a position and
-a distance for the label. For the position, |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
-|checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependent position` are possible.
+The |radiobuttonoff| `Around centroid` setting makes it possible to place the label
+around the centroid with a certain distance. Again, you can define |radiobuttonon| `visible polygon`
+or |radiobuttonoff| `whole polygon` for the centroid.
+With the |radiobuttonoff| `Using perimeter` settings, you can define a position and
+a distance for the label. For the position, |checkbox| `Above line`, |checkbox| `On line`,
+|checkbox| `Below line` and |checkbox| `Line orientation dependent position` are possible.
 
 Related to the choice of Label Placement, several options will appear. As for Point Placement you can
 choose the distance for the polygon outline, repeat the label around the polygon perimeter.
 
-As for point and line vector layers you have the possibility to define a :guilabel:`Priority`
+As for point and line vector layers you have the possibility to define a `Priority`
 for the polygon vector layer.
 
-The entries in the :guilabel:`Rendering` menu are the same as for line layers. You can also use
-:guilabel:`Suppress labelling of features smaller than` in the :guilabel:`Feature options`.
+The entries in the `Rendering` menu are the same as for line layers. You can also use
+`Suppress labelling of features smaller than` in the `Feature options`.
 
 
 .. if features act as obstacles for labels or not
@@ -745,7 +745,7 @@ The entries in the :guilabel:`Rendering` menu are the same as for line layers. Y
 
    **Figure Labels 3:**
 
-.. figure:: /static/user_manual/working_with_vector/label_area.png
+.. figure:: ./images/label_area.png
    :align: center
 
    Smart labelling of vector polygon layers |nix|
@@ -771,7 +771,7 @@ some descriptive text and the function '$area()' in combination with
 
    **Figure Labels 4:**
 
-.. figure:: /static/user_manual/working_with_vector/label_expression.png
+.. figure:: ./images/label_expression.png
    :align: center
    :width: 30em
 
@@ -827,11 +827,11 @@ including the current definition field.
 We now describe an example using the data-defined override function for the
 |mActionMoveLabel|:sup:`Move label` function (see figure_labels_5_ ).
 
-#. Import :file:`lakes.shp` from the |qg| sample dataset.
-#. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
-   and :guilabel:`Placement`. Select |radiobuttonon| :guilabel:`Offset from centroid`.
-#. Look for the :guilabel:`Data defined` entries. Click the |mIconDataDefine| icon to
-   define the field type for the :guilabel:`Coordinate`. Choose 'xlabel' for X and 'ylabel'
+#. Import :file:`lakes.shp` from the QGIS sample dataset.
+#. Double-click the layer to open the Layer Properties. Click on `Labels`
+   and `Placement`. Select |radiobuttonon| `Offset from centroid`.
+#. Look for the `Data defined` entries. Click the |mIconDataDefine| icon to
+   define the field type for the `Coordinate`. Choose 'xlabel' for X and 'ylabel'
    for Y. The icons are now highlighted in yellow.
 #. Zoom into a lake.
 #. Go to the Label toolbar and click the |mActionMoveLabel| icon. Now you can shift the label
@@ -844,7 +844,7 @@ We now describe an example using the data-defined override function for the
 
    **Figure Labels 5:**
 
-.. figure:: /static/user_manual/working_with_vector/label_data_defined.png
+.. figure:: ./images/label_data_defined.png
    :align: center
 
    Labelling of vector polygon layers with data-defined override |nix|
@@ -856,7 +856,7 @@ We now describe an example using the data-defined override function for the
 
    **Figure Labels 6:**
 
-.. figure:: /static/user_manual/working_with_vector/move_label.png
+.. figure:: ./images/move_label.png
    :align: center
 
    Move labels |nix|
@@ -874,7 +874,7 @@ Rules can be set selecting the corresponding option at the top of the Labels pan
 
    **Figure Labels 7:**
 
-.. figure:: /static/user_manual/working_with_vector/label_rules_panel.png
+.. figure:: ./images/label_rules_panel.png
    :align: center
    
    Rule based labeling panel |nix|
@@ -888,7 +888,7 @@ Within the panel you can set the filter expression and the related label configu
 
    **Figure Labels 8:**
 
-.. figure:: /static/user_manual/working_with_vector/label_rule_settings.png
+.. figure:: ./images/label_rule_settings.png
    :align: center
    
    Rule settings |nix|
@@ -898,7 +898,7 @@ Within the panel you can set the filter expression and the related label configu
 Fields Menu
 -----------
 
-|attributes| Within the :guilabel:`Fields` menu, the field attributes of the
+|attributes| Within the `Fields` menu, the field attributes of the
 selected dataset can be manipulated. The buttons |mActionNewAttribute|
 :sup:`New Column` and |mActionDeleteAttribute| :sup:`Delete Column`
 can be used when the dataset is in |mActionToggleEditing| :sup:`Editing mode`.
@@ -917,12 +917,12 @@ can be used when the dataset is in |mActionToggleEditing| :sup:`Editing mode`.
 
    **Figure Fields 1:**
 
-.. figure:: /static/user_manual/working_with_vector/editwidgetsdialog.png
+.. figure:: ./images/editwidgetsdialog.png
    :align: center
 
    Dialog to select an edit widget for an attribute column |nix|
 
-Within the :guilabel:`Fields` menu, you also find an **edit widget** column.
+Within the `Fields` menu, you also find an **edit widget** column.
 This column can be used to define values or a range of values that are allowed
 to be added to the specific attribute table column. If you click on the
 **[edit widget]** button, a dialog opens, where you can define different
@@ -932,7 +932,7 @@ widgets. These widgets are:
   added to the column when the checkbox is activated or not.
 * **Classification**: Displays a combo box with the values used for
   classification, if you have chosen 'unique value' as legend type in
-  the :guilabel:`Style` menu of the properties dialog.
+  the `Style` menu of the properties dialog.
 * **Color**: Displays a color button allowing user to choose a color from the
   color dialog window.
 * **Date/Time**: Displays a line field which can open a calendar widget to enter a
@@ -967,7 +967,7 @@ widgets. These widgets are:
 
 .. note::
 
-   |qg| has an advanced 'hidden' option to define your own field 
+   QGIS has an advanced 'hidden' option to define your own field 
    widget using python and add it to this impressive list of widgets. 
    It is tricky but it is very well explained in following excellent blog that
    explains how to create a real time validation widget that can be used like 
@@ -979,7 +979,7 @@ With the **Attribute editor layout**, you can now define built-in forms (see fig
 
 Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| icon to create
 a category to insert a tab or a named group (see figure_fields_3_). 
-When creating a new category, |qg| will insert a new tab or named group for the category in the built-in form.
+When creating a new category, QGIS will insert a new tab or named group for the category in the built-in form.
 The next step will be to assign the relevant fields to a selected category 
 with the |mActionArrowRight| icon. You can create more categories and use the 
 same fields again. 
@@ -992,7 +992,7 @@ Other options in the dialog are 'Autogenerate' and 'Provide ui-file'.
   Using a UI-file allows a great deal of freedom in creating a dialog. 
   For detailed information, see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
 
-|qg| dialogs can have a Python function that is called when the dialog is opened. Use this function to add extra logic to your dialogs. The form code can be specified in three different ways:
+QGIS dialogs can have a Python function that is called when the dialog is opened. Use this function to add extra logic to your dialogs. The form code can be specified in three different ways:
 
 * load from the environment (for example in `startup.py` or from a plugin)
 * load from an external file, a file chooser will appear in that case to allow you to select a Python file from your filesystem
@@ -1017,7 +1017,7 @@ Reference in Python Init Function like so: `open`
 
    **Figure Fields 2:**
 
-.. figure:: /static/user_manual/working_with_vector/attribute_editor_layout.png
+.. figure:: ./images/attribute_editor_layout.png
    :align: center
 
    Dialog to create categories with the **Attribute editor layout**
@@ -1028,7 +1028,7 @@ Reference in Python Init Function like so: `open`
 
    **Figure Fields 3:**
 
-.. figure:: /static/user_manual/working_with_vector/resulting_feature_form.png
+.. figure:: ./images/resulting_feature_form.png
    :align: center
 
    Resulting built-in form with tabs and named groups
@@ -1043,23 +1043,23 @@ There are several options available:
 
 Layer Info
 
-* Change the display name of the layer in :guilabel:`displayed as`
-* Define the :guilabel:`Layer source` of the vector layer
-* Define the :guilabel:`Data source encoding` to define provider-specific options and to
+* Change the display name of the layer in `displayed as`
+* Define the `Layer source` of the vector layer
+* Define the `Data source encoding` to define provider-specific options and to
   be able to read the file
 
 Coordinate Reference System
 
-* :guilabel:`Specify` the coordinate reference system. Here, you
+* `Specify` the coordinate reference system. Here, you
   can view or change the projection of the specific vector layer.
-* Create a :guilabel:`Spatial Index` (only for OGR-supported formats)
-* :guilabel:`Update Extents` information for a layer
+* Create a `Spatial Index` (only for OGR-supported formats)
+* `Update Extents` information for a layer
 * View or change the projection of the specific vector layer, clicking on
-  :guilabel:`Specify ...`
+  `Specify ...`
 
-|checkbox| :guilabel:`Scale dependent visibility`
+|checkbox| `Scale dependent visibility`
 
-* You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)`
+* You can set the `Maximum (inclusive)` and `Minimum (exclusive)`
   scale. The scale can also be set by the **[Current]** buttons.
 
 Feature subset
@@ -1073,7 +1073,7 @@ Feature subset
 
    **Figure General 1:**
 
-.. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
+.. figure:: ./images/vector_general_menu.png
    :align: center
 
    General menu in vector layers properties dialog |nix|
@@ -1081,9 +1081,9 @@ Feature subset
 Rendering Menu
 --------------
 
-|qg| 2.2 introduces support for on-the-fly feature generalisation. This can improve rendering times
+QGIS 2.2 introduces support for on-the-fly feature generalisation. This can improve rendering times
 when drawing many complex features at small scales. This feature can be enabled or disabled in the
-layer settings using the |checkbox| :guilabel:`Simplify geometry` option. There is also a new global
+layer settings using the |checkbox| `Simplify geometry` option. There is also a new global
 setting that enables generalisation by default for newly added layers (see section :ref:`gui_options`).
 **Note**: Feature generalisation may introduce artefacts into your rendered output in some cases.
 These may include slivers between polygons and inaccurate rendering when using offset-based symbol layers.
@@ -1092,9 +1092,9 @@ Display Menu
 ------------
 
 |mActionMapTips| This menu is specifically created for Map Tips. It includes a new feature:
-Map Tip display text in HTML. While you can still choose a |radiobuttonoff| :guilabel:`Field`
+Map Tip display text in HTML. While you can still choose a |radiobuttonoff| `Field`
 to be displayed when hovering over a feature on the map, it is now possible to insert HTML code that creates a complex
-display when hovering over a feature. To activate Map Tips, select the menu option :menuselection:`View --> MapTips`. Figure Display 1 shows an example of HTML code.
+display when hovering over a feature. To activate Map Tips, select the menu option `View --> MapTips`. Figure Display 1 shows an example of HTML code.
 
 .. _figure_display_1:
 
@@ -1102,7 +1102,7 @@ display when hovering over a feature. To activate Map Tips, select the menu opti
 
    **Figure Display 1:**
 
-.. figure:: /static/user_manual/working_with_vector/display_html.png
+.. figure:: ./images/display_html.png
    :align: center
 
    HTML code for map tip |nix|
@@ -1114,7 +1114,7 @@ display when hovering over a feature. To activate Map Tips, select the menu opti
 
    **Figure Display 2:**
 
-.. figure:: /static/user_manual/working_with_vector/map_tip.png
+.. figure:: ./images/map_tip.png
    :align: center
 
    Map tip made with HTML code |nix|
@@ -1123,7 +1123,7 @@ display when hovering over a feature. To activate Map Tips, select the menu opti
 Actions Menu
 ------------
 
-|action| |qg| provides the ability to perform an action based on the attributes
+|action| QGIS provides the ability to perform an action based on the attributes
 of a feature. This can be used to perform any number of actions, for example,
 running a program with arguments built from the attributes of a feature or
 passing parameters to a web reporting tool.
@@ -1134,7 +1134,7 @@ passing parameters to a web reporting tool.
 
    **Figure Actions 1:**
 
-.. figure:: /static/user_manual/working_with_vector/action_dialog.png
+.. figure:: ./images/action_dialog.png
    :align: center
 
    Overview action dialog with some sample actions |nix|
@@ -1158,9 +1158,9 @@ attribute value. This concept is used in the following discussion.
 
 **Defining Actions**
 
-Attribute actions are defined from the vector :guilabel:`Layer Properties`
-dialog. To :index:`define an action`, open the vector :guilabel:`Layer Properties`
-dialog and click on the :guilabel:`Actions` menu. Go to the :guilabel:`Action properties`.
+Attribute actions are defined from the vector `Layer Properties`
+dialog. To :index:`define an action`, open the vector `Layer Properties`
+dialog and click on the `Actions` menu. Go to the `Action properties`.
 Select 'Generic' as type and provide a descriptive name for the action. The action itself must contain
 the name of the application that will be executed when the action is invoked.
 You can add one or more attribute field values as arguments to the application.
@@ -1176,18 +1176,18 @@ If you have field names that are substrings of other field names (e.g.,
 ``col1`` and ``col10``), you should indicate that by surrounding the field name
 (and the \% character) with square brackets (e.g., ``[%col10]``). This will
 prevent the ``%col10`` field name from being mistaken for the ``%col1`` field name
-with a ``0`` on the end. The brackets will be removed by |qg| when it
+with a ``0`` on the end. The brackets will be removed by QGIS when it
 substitutes in the value of the field. If you want the substituted field to be
 surrounded by square brackets, use a second set like this: ``[[%col10]]``.
 
-Using the :guilabel:`Identify Features` tool, you can open the :guilabel:`Identify Results`
+Using the `Identify Features` tool, you can open the `Identify Results`
 dialog. It includes a *(Derived)* item that contains information relevant to the
 layer type. The values in this item can be accessed in a similar way to the other
 fields by proceeding the derived field name with ``(Derived).``. For example,
 a point layer has an ``X`` and ``Y`` field, and the values of these fields can be used in
 the action with ``%(Derived).X`` and ``%(Derived).Y``. The derived attributes
-are only available from the :guilabel:`Identify Results` dialog box, not the
-:guilabel:`Attribute Table` dialog box.
+are only available from the `Identify Results` dialog box, not the
+`Attribute Table` dialog box.
 
 Two :index:`example actions` are shown below:
 
@@ -1211,8 +1211,8 @@ the value of the selected field in the identify results or attribute table.
 
 **Using Actions**
 
-Actions can be invoked from either the :guilabel:`Identify Results` dialog,
-an :guilabel:`Attribute Table` dialog or from :guilabel:`Run Feature Action`
+Actions can be invoked from either the `Identify Results` dialog,
+an `Attribute Table` dialog or from `Run Feature Action`
 (recall that these dialogs can be opened by clicking |mActionIdentify|
 :sup:`Identify Features` or |mActionOpenTable| :sup:`Open Attribute Table` or
 |mAction| :sup:`Run Feature Action`). To invoke an action, right
@@ -1221,16 +1221,16 @@ listed in the popup menu by the name you assigned when defining the action.
 Click on the action you wish to invoke.
 
 If you are invoking an action that uses the ``%%`` notation, right-click on the
-field value in the :guilabel:`Identify Results` dialog or the
-:guilabel:`Attribute Table` dialog that you wish to pass to the application
+field value in the `Identify Results` dialog or the
+`Attribute Table` dialog that you wish to pass to the application
 or script.
 
 Here is another example that pulls data out of a vector layer and inserts
 it into a file using bash and the ``echo`` command (so it will only work on
-|nix| or perhaps |osx|). The layer in question has fields for a species name
+|nix| or perhaps ). The layer in question has fields for a species name
 ``taxon_name``, latitude ``lat`` and longitude ``long``. We would like to be
 able to make a spatial selection of localities and export these field values
-to a text file for the selected record (shown in yellow in the |qg| map area).
+to a text file for the selected record (shown in yellow in the QGIS map area).
 Here is the action to achieve this:
 
 ::
@@ -1259,10 +1259,10 @@ little effort, we see that the format is http://google.com/search?q=qgis,
 where ``QGIS`` is the search term. Armed with this information, we can proceed:
 
 #. Make sure the ``lakes`` layer is loaded.
-#. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
-   layer in the legend, or right-click and choose :guilabel:`Properties`
+#. Open the `Layer Properties` dialog by double-clicking on the
+   layer in the legend, or right-click and choose `Properties`
    from the pop-up menu.
-#. Click on the :guilabel:`Actions` menu.
+#. Click on the `Actions` menu.
 #. Enter a name for the action, for example ``Google Search``.
 #. For the action, we need to provide the name of the external program to run.
    In this case, we can use Firefox. If the program is not in your path, you
@@ -1270,7 +1270,7 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
 #. Following the name of the external application, add the URL used for doing
    a Google search, up to but not including the search term:
    ``http://google.com/search?q=``
-#. The text in the :guilabel:`Action` field should now look like this:
+#. The text in the `Action` field should now look like this:
    ``firefox http://google.com/search?q=``
 #. Click on the drop-down box containing the field names for the ``lakes``
    layer. It's located just to the left of the **[Insert Field]** button.
@@ -1288,7 +1288,7 @@ action should look like this:
 
    firefox http://google.com/search?q=%NAMES
 
-We can now use the action. Close the :guilabel:`Layer Properties` dialog and
+We can now use the action. Close the `Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and
 identify a lake. In the result box you'll now see that our action is visible:
 
@@ -1298,7 +1298,7 @@ identify a lake. In the result box you'll now see that our action is visible:
 
    **Figure Actions 2:**
 
-.. figure:: /static/user_manual/working_with_vector/action_identifyaction.png
+.. figure:: ./images/action_identifyaction.png
    :align: center
 
    Select feature and choose action |nix|
@@ -1311,7 +1311,7 @@ this example, there is just no other field available that would make sense
 to search for.
 
 You can define multiple actions for a layer, and each will show up in the
-:guilabel:`Identify Results` dialog.
+`Identify Results` dialog.
 
 .. % FIXME No longer valid??
 .. %You can also invoke actions from the attribute table
@@ -1392,13 +1392,13 @@ Joins Menu
 ----------
 
 
-|join| The :guilabel:`Joins` menu allows you to :index:`join` a loaded attribute table
-to a loaded vector layer. After clicking |mActionSignPlus|, the :guilabel:`Add vector join` dialog appears.
-As key columns, you have to define a :index:`join layer` you want to connect with the target vector layer. Then, you have to specify the join field that is common to both the join layer and the target layer. Now you can also specify a subset of fields from the joined layer based on the checkbox |checkbox| :guilabel:`Choose which fields are joined`. As a result of the join, all information from the join layer and the target layer are displayed in the attribute table of the target layer as joined information. If you specified a subset of fields only these fields are displayed in the attribute table of the target layer.
+|join| The `Joins` menu allows you to :index:`join` a loaded attribute table
+to a loaded vector layer. After clicking |mActionSignPlus|, the `Add vector join` dialog appears.
+As key columns, you have to define a :index:`join layer` you want to connect with the target vector layer. Then, you have to specify the join field that is common to both the join layer and the target layer. Now you can also specify a subset of fields from the joined layer based on the checkbox |checkbox| `Choose which fields are joined`. As a result of the join, all information from the join layer and the target layer are displayed in the attribute table of the target layer as joined information. If you specified a subset of fields only these fields are displayed in the attribute table of the target layer.
 
 .. FIXME: are table joins also possible with MSSQL and ORACLE tables?
 
-|qg| currently has support for joining non-spatial table formats supported by OGR (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL provider (see figure_joins_1_).
+QGIS currently has support for joining non-spatial table formats supported by OGR (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL provider (see figure_joins_1_).
 
 .. _figure_joins_1:
 
@@ -1406,33 +1406,33 @@ As key columns, you have to define a :index:`join layer` you want to connect wit
 
    **Figure Joins 1:**
 
-.. figure:: /static/user_manual/working_with_vector/join_attributes.png
+.. figure:: ./images/join_attributes.png
    :align: center
 
    Join an attribute table to an existing vector layer |nix|
 
 Additionally, the add vector join dialog allows you to:
 
-* |checkbox| :guilabel:`Cache join layer in virtual memory`
-* |checkbox| :guilabel:`Create attribute index on the join field`
-* |checkbox| :guilabel:`Choose which fields are joined`
-* Create a |checkbox| :guilabel:`Custom field name prefix`
+* |checkbox| `Cache join layer in virtual memory`
+* |checkbox| `Create attribute index on the join field`
+* |checkbox| `Choose which fields are joined`
+* Create a |checkbox| `Custom field name prefix`
 
 .. _`sec_diagram`:
 
 Diagrams Menu
 -------------
 
-|diagram| The :guilabel:`Diagrams` menu allows you to add a graphic overlay to a
+|diagram| The `Diagrams` menu allows you to add a graphic overlay to a
 vector layer (see figure_diagrams_1_).
 
 The current core implementation of diagrams provides support for pie charts, text diagrams
 and histograms.
 
-The menu is divided into four tabs: :guilabel:`Appearance`, :guilabel:`Size`, :guilabel:`Position` and :guilabel:`Options`.
+The menu is divided into four tabs: `Appearance`, `Size`, `Position` and `Options`.
 
-In the cases of the text diagram and pie chart, text values of different data columns are displayed one below the other with a circle or a box and dividers. In the :guilabel:`Size` tab, diagram size is based on a fixed size or on linear scaling according to a classification attribute.
-The placement of the diagrams, which is done in the :guilabel:`Position` tab, interacts with the new labelling, so position
+In the cases of the text diagram and pie chart, text values of different data columns are displayed one below the other with a circle or a box and dividers. In the `Size` tab, diagram size is based on a fixed size or on linear scaling according to a classification attribute.
+The placement of the diagrams, which is done in the `Position` tab, interacts with the new labelling, so position
 conflicts between diagrams and labels are detected and solved. In addition,
 chart positions can be fixed manually.
 
@@ -1442,36 +1442,36 @@ chart positions can be fixed manually.
 
    **Figure Diagrams 1:**
 
-.. figure:: /static/user_manual/working_with_vector/diagram_tab.png
+.. figure:: ./images/diagram_tab.png
    :align: center
 
    Vector properties dialog with diagram menu |nix|
 
 We will demonstrate an example and overlay on the Alaska boundary layer a
 text diagram showing temperature data from a climate vector layer.
-Both vector layers are part of the |qg| sample dataset (see section
+Both vector layers are part of the QGIS sample dataset (see section
 :ref:`label_sampledata`).
 
 #. First, click on the |mActionAddOgrLayer| :sup:`Load Vector` icon, browse
-   to the |qg| sample dataset folder, and load the two vector shape layers
+   to the QGIS sample dataset folder, and load the two vector shape layers
    :file:`alaska.shp` and :file:`climate.shp`.
 #. Double click the ``climate`` layer in the map legend to open the
-   :guilabel:`Layer Properties` dialog.
-#. Click on the :guilabel:`Diagrams` menu, activate |checkbox|:guilabel:`Display diagrams`,
-   and from the :guilabel:`Diagram type` |selectstring| combo box, select 'Text diagram'.
-#. In the :guilabel:`Appearance` tab, we choose a light blue as background color, and
-   in the :guilabel:`Size` tab, we set a fixed size to 18 mm.
-#. In the :guilabel:`Position` tab, placement could be set to 'Around Point'.
+   `Layer Properties` dialog.
+#. Click on the `Diagrams` menu, activate |checkbox| `Display diagrams`,
+   and from the `Diagram type` |selectstring| combo box, select 'Text diagram'.
+#. In the `Appearance` tab, we choose a light blue as background color, and
+   in the `Size` tab, we set a fixed size to 18 mm.
+#. In the `Position` tab, placement could be set to 'Around Point'.
 #. In the diagram, we want to display the values of the three columns
    ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. First select ``T_F_JAN`` as
-   :guilabel:`Attributes` and click the |mActionSignPlus| button, then ``T_F_JUL``, and
+   `Attributes` and click the |mActionSignPlus| button, then ``T_F_JUL``, and
    finally ``T_F_MEAN``.
-#. Now click **[Apply]** to display the diagram in the |qg| main window.
-#. You can adapt the chart size in the :guilabel:`Size` tab. Deactivate the |checkbox| :guilabel:`Fixed size` and set
+#. Now click **[Apply]** to display the diagram in the QGIS main window.
+#. You can adapt the chart size in the `Size` tab. Deactivate the |checkbox| `Fixed size` and set
    the size of the diagrams on the basis of an attribute with the **[Find maximum value]** button and the
-   :guilabel:`Size` menu. If the diagrams appear too small on the screen, you can activate the |checkbox| :guilabel:`Increase
+   `Size` menu. If the diagrams appear too small on the screen, you can activate the |checkbox| `Increase
    size of small diagrams` checkbox and define the minimum size of the diagrams.
-#. Change the attribute colors by double clicking on the color values in the :guilabel:`Assigned attributes` field.   Figure_diagrams_2_ gives an idea of the result.
+#. Change the attribute colors by double clicking on the color values in the `Assigned attributes` field.   Figure_diagrams_2_ gives an idea of the result.
 #. Finally, click **[Ok]**.
 
 .. _figure_diagrams_2:
@@ -1480,15 +1480,15 @@ Both vector layers are part of the |qg| sample dataset (see section
 
    **Figure Diagrams 2:**
 
-.. figure:: /static/user_manual/working_with_vector/climate_diagram.png
+.. figure:: ./images/climate_diagram.png
    :align: center
    :width: 25em
 
    Diagram from temperature data overlayed on a map |nix|
 
-Remember that in the :guilabel:`Position` tab, a |checkbox| :guilabel:`Data defined position`
+Remember that in the `Position` tab, a |checkbox| `Data defined position`
 of the diagrams is possible. Here, you can use attributes to define the position of the diagram.
-You can also set a scale-dependent visibility in the :guilabel:`Appearance` tab.
+You can also set a scale-dependent visibility in the `Appearance` tab.
 
 The size and the attributes can also be an expression. Use the |mActionmIconExpressionEditorOpen| button
 to add an expression. See :ref:`vector_expressions` chapter for more information and example.
@@ -1498,23 +1498,23 @@ to add an expression. See :ref:`vector_expressions` chapter for more information
 Metadata Menu
 -------------
 
-|metadata| The :guilabel:`Metadata` menu consists of :guilabel:`Description`,
-:guilabel:`Attribution`, :guilabel:`MetadataURL` and :guilabel:`Properties` sections.
+|metadata| The `Metadata` menu consists of `Description`,
+`Attribution`, `MetadataURL` and `Properties` sections.
 
-In the :guilabel:`Properties` section, you get general information about the layer,
+In the `Properties` section, you get general information about the layer,
 including specifics about the type and location, number of features, feature type,
-and editing capabilities. The :guilabel:`Extents`
-table provides you with layer extent information and the :guilabel:`Layer Spatial Reference System`, which is information about the CRS of the layer. This is a quick way
+and editing capabilities. The `Extents`
+table provides you with layer extent information and the `Layer Spatial Reference System`, which is information about the CRS of the layer. This is a quick way
 to get information about the layer.
 
-Additionally, you can add or edit a title and abstract for the layer in the :guilabel:`Description` section.
-It's also possible to define a :guilabel:`Keyword list` here. These keyword lists can be used in a
+Additionally, you can add or edit a title and abstract for the layer in the `Description` section.
+It's also possible to define a `Keyword list` here. These keyword lists can be used in a
 metadata catalogue. If you want to use a title from an XML metadata file, you have to fill in
-a link in the :guilabel:`DataUrl` field.
-Use :guilabel:`Attribution` to get attribute data from an XML metadata catalogue.
-In :guilabel:`MetadataUrl`, you can define the general path to the XML metadata catalogue.
-This information will be saved in the |qg| project file for subsequent sessions
-and will be used for |qg| server.
+a link in the `DataUrl` field.
+Use `Attribution` to get attribute data from an XML metadata catalogue.
+In `MetadataUrl`, you can define the general path to the XML metadata catalogue.
+This information will be saved in the QGIS project file for subsequent sessions
+and will be used for QGIS server.
 
 .. _figure_metadata_vect:
 
@@ -1522,7 +1522,7 @@ and will be used for |qg| server.
 
    **Figure Metadata 1:**
 
-.. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
+.. figure:: ./images/vector_metadata_tab.png
    :align: center
 
    Metadata menu in vector layers properties dialog |nix|
