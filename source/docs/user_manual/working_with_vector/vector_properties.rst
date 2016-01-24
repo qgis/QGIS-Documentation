@@ -26,7 +26,7 @@ double-click on a layer in the legend or right-click on the layer and select
 .. figure:: ./images/vector_general_menu.png
    :align: center
 
-   Vector Layer Properties Dialog |nix|
+   Vector Layer Properties Dialog
 
 .. _vector_style_menu:
 
@@ -86,7 +86,7 @@ several style in the database. Only one will be the default style anyway.
 .. figure:: ./images/save_style_database.png
    :align: center
 
-   Save Style in database Dialog |nix|
+   Save Style in database Dialog
 
 .. _tip_change_multiple_symbols:
 
@@ -132,7 +132,7 @@ feature). Here, the layers are joined together.
 .. figure:: ./images/singlesymbol_ng_line.png
    :align: center
 
-   Single symbol line properties |nix|
+   Single symbol line properties
 
 In any spinbox in this dialog you can enter expressions. E.g. you can calculate simple
 math like multiplying the existing size of a point by 3 without resorting to a calculator.
@@ -151,7 +151,7 @@ to help you define size expression.
 .. figure:: ./images/varying_size_assistant.png
    :align: center
 
-   Varying size assistant |nix|
+   Varying size assistant
 
 The assistant let you define:
 
@@ -179,7 +179,7 @@ The available scale methods are 'Flannery', 'Surface' and 'Radius'.
 .. figure:: ./images/expression_symbol_size_spinbox.png
    :align: center
 
-   Expression in Size spinbox |nix|
+   Expression in Size spinbox
 
 If you click on the second level in the `Symbol layers` dialog a 'Data-defined override'
 for nearly all settings is possible. When using a data-defined color one may want to link the color to a
@@ -245,7 +245,7 @@ for the rivers layer of the QGIS sample dataset.
 .. figure:: ./images/categorysymbol_ng_line.png
    :align: center
 
-   Categorized Symbolizing options |nix|
+   Categorized Symbolizing options
 
 .. index:: Graduated_Renderer, Renderer_Graduated
 .. index:: Natural_Breaks_(Jenks), Pretty_Breaks, Equal_Interval, Quantile
@@ -265,7 +265,7 @@ selected feature's attribute to a class.
 .. figure:: ./images/graduatesymbol_ng_line.png
    :align: center
 
-   Graduated Symbolizing options |nix|
+   Graduated Symbolizing options
 
 Like the Categorized Renderer, the Graduated Renderer allows you
 to define rotation and size scale from specified columns.
@@ -355,7 +355,7 @@ is the background for the symbol in the tree.
 .. figure:: ./images/rulesymbol_ng_line.png
    :align: center
 
-   Rule-based Symbolizing options |nix|
+   Rule-based Symbolizing options
 
 .. index:: Point_Displacement_Renderer, Renderer_Point_Displacement
 .. index:: Displacement_plugin
@@ -375,7 +375,7 @@ placed on a displacement circle around a center symbol.
 .. figure:: ./images/poi_displacement.png
    :align: center
 
-   Point displacement dialog |nix|
+   Point displacement dialog
 
 .. tip:: **Export vector symbology**
 
@@ -403,7 +403,7 @@ same as for the main renderers.
 .. figure:: ./images/inverted_polygon_symbol.png
    :align: center
 
-   Inverted Polygon dialog |nix|
+   Inverted Polygon dialog
 
 .. tip:: **Switch quickly between styles**
 
@@ -443,7 +443,7 @@ selecting and on the lower right part you have the option to add the color you j
 .. figure:: ./images/color_picker_ramp.png
    :align: center
 
-   Color picker ramp tab |nix|
+   Color picker ramp tab
 
  
 
@@ -460,7 +460,7 @@ populated with one of three methods: `Recent colors`, `Standard colors` or `Proj
 .. figure:: ./images/color_picker_recent_colors.png
    :align: center
 
-   Color picker switcher tab |nix|
+   Color picker switcher tab
  
 Another option is to use the |mIconColorPicker| :sup:`color picker` which allows you to sample a color from under your mouse pointer at any part of 
 QGIS or even from another application by pressing the space bar. Please note that the color picker is OS dependent and is currently not supported by OSX.
@@ -481,7 +481,7 @@ QGIS or even from another application by pressing the space bar. Please note tha
 .. figure:: ./images/quick_color_picker.png
    :align: center
 
-   Quick color picker menu |nix|
+   Quick color picker menu
 
 .. _layer_rendering:
 
@@ -637,7 +637,7 @@ whether the number of features to be labelled is limited and to |checkbox| `Disc
 .. figure:: ./images/label_points.png
    :align: center
 
-   Smart labeling of vector point layers |nix|
+   Smart labeling of vector point layers
 
 **Labeling line layers**
 
@@ -689,7 +689,7 @@ The `Rendering` menu has nearly the same entries as for point layers. In the
 .. figure:: ./images/label_line.png
    :align: center
 
-   Smart labeling of vector line layers |nix|
+   Smart labeling of vector line layers
 
 
 **Labelling polygon layers**
@@ -748,7 +748,7 @@ The entries in the `Rendering` menu are the same as for line layers. You can als
 .. figure:: ./images/label_area.png
    :align: center
 
-   Smart labelling of vector polygon layers |nix|
+   Smart labelling of vector polygon layers
 
 
 .. _labeling_with_expressions:
@@ -775,7 +775,7 @@ some descriptive text and the function '$area()' in combination with
    :align: center
    :width: 30em
 
-   Using expressions for labelling |nix|
+   Using expressions for labelling
 
 Expression based labelling is easy to work with. All you have to take care of
 is, that you need to combine all elements (strings, fields and functions) with a
@@ -847,7 +847,7 @@ We now describe an example using the data-defined override function for the
 .. figure:: ./images/label_data_defined.png
    :align: center
 
-   Labelling of vector polygon layers with data-defined override |nix|
+   Labelling of vector polygon layers with data-defined override
 
 
 .. _figure_labels_6:
@@ -859,7 +859,7 @@ We now describe an example using the data-defined override function for the
 .. figure:: ./images/move_label.png
    :align: center
 
-   Move labels |nix|
+   Move labels
 
 **Rule-based labeling**
 
@@ -877,7 +877,7 @@ Rules can be set selecting the corresponding option at the top of the Labels pan
 .. figure:: ./images/label_rules_panel.png
    :align: center
    
-   Rule based labeling panel |nix|
+   Rule based labeling panel
    
 To create a rule, activate an existing row by double-clicking on it, or click on ‘+’ and click on the new rule.
 Within the panel you can set the filter expression and the related label configurations.
@@ -891,7 +891,7 @@ Within the panel you can set the filter expression and the related label configu
 .. figure:: ./images/label_rule_settings.png
    :align: center
    
-   Rule settings |nix|
+   Rule settings
 
 .. _vector_attributes_menu:
 
@@ -920,7 +920,7 @@ can be used when the dataset is in |mActionToggleEditing| :sup:`Editing mode`.
 .. figure:: ./images/editwidgetsdialog.png
    :align: center
 
-   Dialog to select an edit widget for an attribute column |nix|
+   Dialog to select an edit widget for an attribute column
 
 Within the `Fields` menu, you also find an **edit widget** column.
 This column can be used to define values or a range of values that are allowed
@@ -1076,7 +1076,7 @@ Feature subset
 .. figure:: ./images/vector_general_menu.png
    :align: center
 
-   General menu in vector layers properties dialog |nix|
+   General menu in vector layers properties dialog
 
 Rendering Menu
 --------------
@@ -1105,7 +1105,7 @@ display when hovering over a feature. To activate Map Tips, select the menu opti
 .. figure:: ./images/display_html.png
    :align: center
 
-   HTML code for map tip |nix|
+   HTML code for map tip
 
 
 .. _figure_display_2:
@@ -1117,7 +1117,7 @@ display when hovering over a feature. To activate Map Tips, select the menu opti
 .. figure:: ./images/map_tip.png
    :align: center
 
-   Map tip made with HTML code |nix|
+   Map tip made with HTML code
 
 
 Actions Menu
@@ -1137,7 +1137,7 @@ passing parameters to a web reporting tool.
 .. figure:: ./images/action_dialog.png
    :align: center
 
-   Overview action dialog with some sample actions |nix|
+   Overview action dialog with some sample actions
 
 Actions are useful when you frequently want to run an external application or
 view a web page based on one or more values in your vector layer. They are
@@ -1227,7 +1227,7 @@ or script.
 
 Here is another example that pulls data out of a vector layer and inserts
 it into a file using bash and the ``echo`` command (so it will only work on
-|nix| or perhaps ). The layer in question has fields for a species name
+Linux or perhaps OSX). The layer in question has fields for a species name
 ``taxon_name``, latitude ``lat`` and longitude ``long``. We would like to be
 able to make a spatial selection of localities and export these field values
 to a text file for the selected record (shown in yellow in the QGIS map area).
@@ -1301,7 +1301,7 @@ identify a lake. In the result box you'll now see that our action is visible:
 .. figure:: ./images/action_identifyaction.png
    :align: center
 
-   Select feature and choose action |nix|
+   Select feature and choose action
 
 When we click on the action, it brings up Firefox and navigates to the URL
 http://www.google.com/search?q=Tustumena. It is also possible to add further
@@ -1409,7 +1409,7 @@ QGIS currently has support for joining non-spatial table formats supported by OG
 .. figure:: ./images/join_attributes.png
    :align: center
 
-   Join an attribute table to an existing vector layer |nix|
+   Join an attribute table to an existing vector layer
 
 Additionally, the add vector join dialog allows you to:
 
@@ -1445,7 +1445,7 @@ chart positions can be fixed manually.
 .. figure:: ./images/diagram_tab.png
    :align: center
 
-   Vector properties dialog with diagram menu |nix|
+   Vector properties dialog with diagram menu
 
 We will demonstrate an example and overlay on the Alaska boundary layer a
 text diagram showing temperature data from a climate vector layer.
@@ -1484,7 +1484,7 @@ Both vector layers are part of the QGIS sample dataset (see section
    :align: center
    :width: 25em
 
-   Diagram from temperature data overlayed on a map |nix|
+   Diagram from temperature data overlayed on a map
 
 Remember that in the `Position` tab, a |checkbox| `Data defined position`
 of the diagrams is possible. Here, you can use attributes to define the position of the diagram.
@@ -1525,4 +1525,4 @@ and will be used for QGIS server.
 .. figure:: ./images/vector_metadata_tab.png
    :align: center
 
-   Metadata menu in vector layers properties dialog |nix|
+   Metadata menu in vector layers properties dialog
