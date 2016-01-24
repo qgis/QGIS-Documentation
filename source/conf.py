@@ -205,6 +205,8 @@ rst_prolog = """
 """
 
 # Substitutions icons below are sorted
+# NOTE that for inline images (like button and menu icons inline in text) you HAVE TO make a substitution
+# so ONLY use common for this kind of images
 rst_epilog = """
 .. |nix| image:: /static/common/nix.png
    :width: 1em
