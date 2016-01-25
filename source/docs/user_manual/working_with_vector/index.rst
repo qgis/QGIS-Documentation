@@ -11,7 +11,7 @@
 
    supported_data
    style_library
-   vector_properties
+   vector_properties/index
    expression
    editing_geometry_attributes
    query_builder
