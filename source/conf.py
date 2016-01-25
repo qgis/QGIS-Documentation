@@ -819,7 +819,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionShowPresets| image:: /static/common/mActionShowPresets.png
    :width: 2.5em
-.. |mActionSignMinus| image:: /static/common/mActionSignMinus.png
+.. |mActionSignMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |mActionSignPlus| image:: /static/common/mActionSignPlus.png
    :width: 1.5em
@@ -1022,6 +1022,8 @@ rst_epilog = """
    :width: 1.5em
 .. |select_location| image:: /static/common/select_location.png
    :width: 1.5em
+.. |sharing| image:: /static/common/mActionSharing.png
+   :width: 1.5em
 .. |ShowRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
    :width: 1.5em
 .. |single_to_multi| image:: /static/common/single_to_multi.png
@@ -1041,6 +1043,8 @@ rst_epilog = """
 .. |sym_difference| image:: /static/common/sym_difference.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
+   :width: 1.5em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
 .. |simplify| image:: /static/common/simplify.png
    :width: 1.5em
