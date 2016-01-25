@@ -707,6 +707,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionLowerItems| image:: /static/common/mActionLowerItems.png
    :width: 1.5em
+.. |mActionMapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
 .. |mActionMapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
 .. |mActionMeasure| image:: /static/common/mActionMeasure.png
