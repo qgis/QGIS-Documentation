@@ -60,8 +60,7 @@ the layer extent if you work in a blank |qg| project. If there are already
 files in your project, the file will just be added, and in the case that it has the same
 extent and CRS, it will be visualized. If the file has another CRS and layer
 extent, you must first right-click on the layer and choose
-:guilabel:`Set Project CRS from Layer`. Then choose
-:guilabel:`Zoom to Layer Extent`.
+:guilabel:`Set Project CRS from Layer`. Then choose :guilabel:`Zoom to Layer Extent`.
 
 The |mActionFilter|:sup:`Filter browser` function allows you to search for
 specific data. Enter a search word or wildcard and the browser will show
