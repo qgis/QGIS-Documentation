@@ -13,7 +13,7 @@
    style_library
    vector_properties
    expression
-   editing_geometry_attributes
+   editing/index
    query_builder
    field_calculator
 
