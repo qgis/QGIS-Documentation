@@ -226,7 +226,7 @@ provided by the European Soil Portal WMS server.
 .. figure:: /static/user_manual/working_with_ogc/connection_wms.png
    :align: center
 
-   Dialog for adding a WMS server, showing its available layers |nix|
+   Dialog for adding a WMS server, showing its available layers
 
 **Image Encoding**
 
@@ -330,7 +330,7 @@ Within |qg|, you can search for WMS servers. Figure_OGC_2_ shows the
 .. figure:: /static/user_manual/working_with_ogc/wms_server_search.png
    :align: center
 
-   Dialog for searching WMS servers after some keywords |nix|
+   Dialog for searching WMS servers after some keywords
 
 As you can see, it is possible to enter a search string in the text field and hit
 the **[Search]** button. After a short while, the search result will be populated
@@ -606,7 +606,7 @@ Note that any proxy settings you may have set in your preferences are also recog
 .. figure:: /static/user_manual/working_with_ogc/connection_wfs.png
    :align: center
 
-   Adding a WFS layer |nix|
+   Adding a WFS layer
 
 .. Commented out..
    in |qg| 1.8 the following checkbox seems to be missing, maybe the
