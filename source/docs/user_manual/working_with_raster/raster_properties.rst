@@ -26,7 +26,7 @@ There are several menus in the dialog:
 .. figure:: /static/user_manual/working_with_raster/rasterPropertiesDialog.png
    :align: center
 
-   Raster Layers Properties Dialog |nix|
+   Raster Layers Properties Dialog
 
 .. _label_generaltab:
 
@@ -97,7 +97,7 @@ choose several :guilabel:`Contrast enhancement` methods: 'No enhancement', 'Stre
 .. figure:: /static/user_manual/working_with_raster/rasterMultibandColor.png
    :align: center
 
-   Raster Renderer - Multiband color |nix|
+   Raster Renderer - Multiband color
 
 This selection offers you a wide range of options to modify the appearance
 of your raster layer. First of all, you have to get the data range from your
@@ -147,7 +147,7 @@ to assign a label to the color values. The label appears in the legend of the ra
 .. figure:: /static/user_manual/working_with_raster/rasterPaletted.png
    :align: center
 
-   Raster Renderer - Paletted |nix|
+   Raster Renderer - Paletted
 
 .. index:: Contrast_enhancement
 
@@ -177,7 +177,7 @@ then pressing **[Load]**.  |qg| can |radiobuttonon| :guilabel:`Estimate (faster)
 .. figure:: /static/user_manual/working_with_raster/rasterSingleBandGray.png
    :align: center
 
-   Raster Renderer - Singleband gray |nix|
+   Raster Renderer - Singleband gray
 
 
 With the :guilabel:`Load min/max values` section, scaling of the color table
@@ -207,7 +207,7 @@ You can also create individual color maps for the single bands here.
 .. figure:: /static/user_manual/working_with_raster/rasterSingleBandPseudocolor.png
    :align: center
 
-   Raster Renderer - Singleband pseudocolor |nix|
+   Raster Renderer - Singleband pseudocolor
 
 .. _label_colormaptab:
 
@@ -287,7 +287,7 @@ matrix through a geometric transformation.
 .. figure:: /static/user_manual/working_with_raster/rasterRenderAndRessampling.png
    :align: center
 
-   Raster Rendering - Resampling |nix|
+   Raster Rendering - Resampling
 
 
 When applying the 'Nearest neighbour' method, the map can have a pixelated structure
@@ -372,7 +372,7 @@ If you choose 'Internal (if possible)' from the :guilabel:`Overview format` menu
 .. figure:: /static/user_manual/working_with_raster/rasterPyramids.png
    :align: center
 
-   The Pyramids Menu |nix|
+   The Pyramids Menu
 
 Please note that building pyramids may alter the original data file, and once
 created they cannot be removed. If you wish to preserve a 'non-pyramided'
@@ -406,7 +406,7 @@ you have chosen the :guilabel:`Min/max options`.
 .. figure:: /static/user_manual/working_with_raster/rasterHistogram.png
    :align: center
 
-   Raster Histogram |nix|
+   Raster Histogram
 
 .. index:: Metadata
 
@@ -428,4 +428,4 @@ basis, so it may well be that a given layer's statistics have not yet been colle
 .. figure:: /static/user_manual/working_with_raster/rasterMetadata.png
    :align: center
 
-   Raster Metadata |nix|
+   Raster Metadata
