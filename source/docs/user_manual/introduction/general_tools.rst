@@ -16,10 +16,10 @@ Keyboard shortcuts
 .. index::
    single:Keyboard shortcuts
 
-|qg| provides default keyboard shortcuts for many features. You can find them in
+QGIS provides default keyboard shortcuts for many features. You can find them in
 section :ref:`label_menubar`. Additionally, the menu option
 :menuselection:`Settings --> Configure Shortcuts...` allows you to change the default
-keyboard shortcuts and add new keyboard shortcuts to |qg| features.
+keyboard shortcuts and add new keyboard shortcuts to QGIS features.
 
 .. _figure_shortcuts:
 
@@ -40,7 +40,7 @@ on :
 * or **[Set default]** to backup the shortcut to its original and default value.
 
 Once you have finished your configuration, you can save it as an XML file
-and load it to another |qg| installation.
+and load it to another QGIS installation.
 
 .. _`context_help`:
 
@@ -62,15 +62,15 @@ Rendering
 .. index::
    single:Rendering
 
-By default, |qg| renders all visible layers whenever the map canvas is
+By default, QGIS renders all visible layers whenever the map canvas is
 refreshed. The events that trigger a refresh of the map canvas include:
 
 *  Adding a layer
 *  Panning or zooming
-*  Resizing the |qg| window
+*  Resizing the QGIS window
 *  Changing the visibility of a layer or layers
 
-|qg| allows you to control the rendering process in a number of ways.
+QGIS allows you to control the rendering process in a number of ways.
 
 .. _`label_scaledepend`:
 
@@ -87,7 +87,7 @@ dependent visibility` checkbox to activate the feature, then set the minimum and
 maximum scale values.
 
 You can determine the scale values by first zooming to the level you want to
-use and noting the scale value in the |qg| status bar.
+use and noting the scale value in the QGIS status bar.
 
 .. index::
    single:Scale
@@ -108,7 +108,7 @@ Suspending Rendering
 
 To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in the
 lower right corner of the status bar. When the |checkbox| :guilabel:`Render`
-checkbox is not checked, |qg| does not redraw the canvas in response to any of
+checkbox is not checked, QGIS does not redraw the canvas in response to any of
 the events described in section :ref:`redraw_events`. Examples of when you
 might want to suspend rendering include:
 
@@ -160,7 +160,7 @@ Influence Rendering Quality
 .. index::
    single:rendering quality
 
-|qg| has an option to influence the rendering quality of the map. Choose menu
+QGIS has an option to influence the rendering quality of the map. Choose menu
 option :menuselection:`Settings --> Options`, click on the :guilabel:`Rendering`
 tab and select or deselect |checkbox| :guilabel:`Make lines appear less jagged
 at the expense of some drawing performance`.
@@ -168,7 +168,7 @@ at the expense of some drawing performance`.
 Speed-up rendering
 ..................
 
-There are some settings that allow you to improve rendering speed. Open the |qg| options
+There are some settings that allow you to improve rendering speed. Open the QGIS options
 dialog using :menuselection:`Settings --> Options`, go to the :guilabel:`Rendering`
 tab and select or deselect the following checkboxes:
 
@@ -232,7 +232,7 @@ Measuring
 .. index::
    single:measure
 
-|qg| provides four means of measuring geometries:
+QGIS provides four means of measuring geometries:
 
 * the interactive measurement tools |mActionMeasure|,
 * measuring in the |mActionCalculateField| :sup:`Field Calculator`,
@@ -278,7 +278,7 @@ to use.
 .. index::
    single:measure;angles
 
-By default, |mActionMeasure| :sup:`Measure Line`: |qg| measures real distances
+By default, |mActionMeasure| :sup:`Measure Line`: QGIS measures real distances
 between given points according to a defined ellipsoid. You can define a rubberband
 color and your preferred measurement units (meters or feet) and angle units
 (degrees, radians and gon) in the menu option
@@ -342,7 +342,7 @@ is displayed in a pop-up dialog.
 Select and deselect features
 ============================
 
-The |qg| toolbar provides several tools to select features in the map canvas.
+The QGIS toolbar provides several tools to select features in the map canvas.
 To select one or several features, just click on |mActionSelect| and select your
 tool:
 
@@ -376,7 +376,7 @@ on features in a pop-up window. To identify features, use :menuselection:`View -
 features` or press :kbd:`Ctrl + Shift + I`, or click on the |mActionIdentify|
 :sup:`Identify features` icon in the Menu toolbar.
 
-|qg| offers two ways to identify features with the |mActionIdentify|
+QGIS offers two ways to identify features with the |mActionIdentify|
 :sup:`Identify features`:
 
 * **left click** will identify features according to the mode set in the
@@ -445,7 +445,7 @@ The :guilabel:`View` can be set as 'Tree', 'Table' and 'Graph'.
 'Table' and 'Graph' views can only be set for raster layers.
 
 The identify tool allows you to |checkbox|:guilabel:`auto open a form`.
-If checked, each time a single feature is identified |qg| will open a form
+If checked, each time a single feature is identified QGIS will open a form
 showing its attributes. This is a handy way to quickly edit feature's attributes.
 
 
@@ -472,7 +472,7 @@ example, from the context menu you can:
 Decorations
 ===========
 
-The Decorations of |qg| include the Grid, the Copyright Label, the North Arrow
+The Decorations of QGIS include the Grid, the Copyright Label, the North Arrow
 and the Scale Bar. They are used to 'decorate' the map by adding cartographic
 elements.
 
@@ -493,14 +493,13 @@ annotations to the map canvas.
 
    The Grid Dialog
 
-#.  Select from menu :menuselection:`View --> Decorations --> Grid`.
-    The dialog starts (see figure_decorations_1_).
-#.  Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid
-    definitions according to the layers loaded in the map canvas.
-#.  Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
-    annotation definitions according to the layers loaded in the map canvas.
-#.  Click **[Apply]** to verify that it looks as expected.
-#.  Click **[OK]** to close the dialog.
+#. Select from menu :menuselection:`View --> Decorations --> Grid`.
+   The dialog starts (see figure_decorations_1_).
+#. Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid
+   definitions according to the layers loaded in the map canvas.
+#. Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
+   annotation definitions according to the layers loaded in the map canvas.
+#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
 
 Copyright Label
 ---------------
@@ -519,29 +518,36 @@ you prefer to the map.
 
    The Copyright Dialog
 
+#. Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
+   The dialog starts (see figure_decorations_2_).
+#. Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is
+   checked.
+#. Enter the text you want to place on the map. You can use HTML as
+   shown in the example.
+#. Choose the placement of the label from the :guilabel:`Placement`
+   |selectstring| combo box.
+#. You can refine the placement of the item by setting a Horizontal and/or Vertical
+   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or 
+   **Pixels** or set as **Percentage** of the width or height of the map canvas.
+#. You can change the color to apply.
+#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
 
-#.  Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
-    The dialog starts (see figure_decorations_2_).
-#.  Enter the text you want to place on the map. You can use HTML as
-    shown in the example.
-#.  Choose the placement of the label from the :guilabel:`Placement`
-    |selectstring| combo box.
-#.  Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is
-    checked.
-#.  Click **[OK]**.
-
-In the example above, which is the default, |qg| places a copyright symbol
+In the example above, which is the default, QGIS places a copyright symbol
 followed by the date in the lower right-hand corner of the map canvas.
 
 North Arrow
 -----------
 
 |north_arrow| :sup:`North Arrow` places a simple north arrow on the map canvas.
-At present, there is only one style available. You can adjust the angle of the
-arrow or let |qg| set the direction automatically. If you choose to let |qg|
-determine the direction, it makes its best guess as to how the arrow should be
-oriented. For placement of the arrow, you have four options, corresponding to
+Currently, there is only one style available. You can adjust the angle of the
+arrow or let QGIS set the direction automatically.
+If you choose to let QGIS determine the direction, it makes its best guess
+as to how the arrow should be oriented.
+For placement of the arrow, you have four options, corresponding to
 the four corners of the map canvas.
+You can refine the placement of the arrow by setting a Horizontal and/or Vertical
+`Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
+**Pixels** or set as **Percentage** of the width or height of the map canvas.
 
 .. _figure_decorations_3:
 
@@ -572,26 +578,28 @@ can control the style and placement, as well as the labelling of the bar.
 
    The Scale Bar Dialog
 
-
-|qg| only supports displaying the scale in the same units as your map frame.
+QGIS only supports displaying the scale in the same units as your map frame.
 So if the units of your layers are in meters, you can't create a scale bar in
 feet. Likewise, if you are using decimal degrees, you can't create a scale
 bar to display distance in meters.
 
 To add a scale bar:
 
-#.  Select from menu :menuselection:`View --> Decorations --> Scale Bar`.
-    The dialog starts (see figure_decorations_4_).
-#.  Choose the placement from the :guilabel:`Placement` |selectstring| combo box.
-#.  Choose the style from the :guilabel:`Scale bar style` |selectstring|
-    combo box.
-#.  Select the color for the bar :guilabel:`Color of bar` |selectcolor| or use
-    the default black color.
-#.  Set the size of the bar and its label :guilabel:`Size of bar` |selectnumber|.
-#.  Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
-#.  Optionally, check |checkbox| :guilabel:`Automatically snap to round number
-    on resize`.
-#.  Click **[OK]**.
+#. Select from menu :menuselection:`View --> Decorations --> Scale Bar`.
+   The dialog starts (see figure_decorations_4_).
+#. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
+#. Choose the style from the :guilabel:`Scale bar style` |selectstring|
+   combo box.
+#. Select the color for the bar :guilabel:`Color of bar` |selectcolor| or use
+   the default black color.
+#. Set the :guilabel:`Size of bar` |selectnumber|.
+#. Optionally, check |checkbox| :guilabel:`Automatically snap to round number
+   on resize` to display values easy-to-read.
+#. Choose the placement from the :guilabel:`Placement` |selectstring| combo box.
+#. You can refine the placement of the item by setting a Horizontal and/or Vertical
+   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or 
+   **Pixels** or set as **Percentage** of the width or height of the map canvas.
+#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
 
 
 .. tip::
@@ -612,7 +620,7 @@ Annotation Tools
 
 The |mActionTextAnnotation| :sup:`Text Annotation` tool in the attribute
 toolbar provides the possibility to place formatted text in a balloon on the
-|qg| map canvas. Use the :guilabel:`Text Annotation` tool and click into the
+QGIS map canvas. Use the :guilabel:`Text Annotation` tool and click into the
 map canvas.
 
 .. _annotation:
@@ -642,14 +650,14 @@ Html annotations
 
 The |mActionFormAnnotation| :sup:`Html Annotation` tools in the attribute
 toolbar provides the possibility to place the content of an html file in a
-balloon on the |qg| map canvas. Using the :guilabel:`Html Annotation` tool,
+balloon on the QGIS map canvas. Using the :guilabel:`Html Annotation` tool,
 click into the map canvas and add the path to the html file into the dialog.
 
 SVG annotations
 ---------------
 
 The |mActionSaveAsSVG| :sup:`SVG Annotation` tool in the attribute toolbar
-provides the possibility to place an SVG symbol in a balloon on the |qg| map
+provides the possibility to place an SVG symbol in a balloon on the QGIS map
 canvas. Using the :guilabel:`SVG Annotation` tool, click into the map canvas and
 add the path to the SVG file into the dialog.
 
