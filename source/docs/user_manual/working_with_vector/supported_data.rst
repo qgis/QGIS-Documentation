@@ -3,6 +3,9 @@
 Supported Data Formats
 ======================
 
+.. contents::
+   :local:
+
 |qg| uses the OGR library to read and write vector data formats,
 including ESRI shapefiles, MapInfo and MicroStation file formats, AutoCAD DXF,
 PostGIS, SpatiaLite, Oracle Spatial and MSSQL Spatial databases, and many more.

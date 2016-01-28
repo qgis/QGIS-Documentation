@@ -6,6 +6,9 @@
 The Vector Properties Dialog
 *****************************
 
+.. contents::
+   :local:
+
 The `Layer Properties` dialog for a vector layer provides general
 settings to manage appearance of layer features in the map (symbology, labeling,
 diagrams), interaction with the mouse (actions, map tips, form design). It also

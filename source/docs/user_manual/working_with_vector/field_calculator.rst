@@ -7,6 +7,9 @@
 Field Calculator
 ================
 
+.. contents::
+   :local:
+
 The |mActionCalculateField| :sup:`Field Calculator` button in the attribute
 table allows you to perform calculations on the basis of existing attribute values or
 defined functions, for instance, to calculate length or area of geometry features. The

@@ -3,6 +3,9 @@
 Editing
 =======
 
+.. contents::
+   :local:
+
 |qg| supports various capabilities for :index:`editing` OGR,
 SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
 

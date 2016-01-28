@@ -7,6 +7,8 @@
 Expressions
 ============
 
+.. contents::
+   :local:
 
 The **Expressions** feature is available from many parts in |qg|. It can be 
 accessed using the |mIconExpressionSelect| :sup:`Select by expression`, the 

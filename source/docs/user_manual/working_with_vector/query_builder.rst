@@ -7,6 +7,9 @@
 Query Builder
 =============
 
+.. contents::
+   :local:
+
 The Query Builder allows you to define a subset of a table using a SQL-like WHERE
 clause and to display the result in the main window. The query result can then be
 saved as a new vector layer.

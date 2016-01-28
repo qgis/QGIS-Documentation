@@ -5,6 +5,9 @@
 The Symbol Library
 ==================
 
+.. contents::
+   :local:
+
 .. _vector_style_manager:
 
 Presentation
