@@ -373,11 +373,11 @@ Identify features
 
 The Identify tool allows you to interact with the map canvas and get information
 on features in a pop-up window. To identify features, use :menuselection:`View --> Identify
-features` or press :kbd:`Ctrl + Shift + I`, or click on the |mActionIdentify|
-:sup:`Identify features` icon in the Menu toolbar.
+features` or press :kbd:`Ctrl + Shift + I`, or click the |mActionIdentify|
+:sup:`Identify features` icon on the Attributes toolbar.
 
 |qg| offers two ways to identify features with the |mActionIdentify|
-:sup:`Identify features`:
+:sup:`Identify features` tool:
 
 * **left click** will identify features according to the mode set in the
   :guilabel:`Identify results` panel
@@ -385,25 +385,24 @@ features` or press :kbd:`Ctrl + Shift + I`, or click on the |mActionIdentify|
   This will open a context menu, allowing the user to choose more precisely the
   features to identify.
 
-If you click on feature, the :guilabel:`Identify results` dialog will list
-informations about the clicked feature(s). The default view is a tree view where
+If you click on feature(s), the :guilabel:`Identify results` dialog will list
+information about the clicked feature(s). The default view is a tree view where
 the first item is the name of the layer and its children are its identified feature(s).
-Each feature is described by the name of a field with its value.
+Each feature is described by the name of a field along with its value.
 This field is the one set in :menuselection:`Properties --> Display`.
-Then follow all the other informations about the feature.
+Then follows all the other information about the feature.
 
 This window can be customized to display custom fields, but by default it will
 display three kinds of information:
 
-* Actions: Actions can be added to the identify feature windows. When clicking
-  on the action label, action will be run. By default, only one action is added,
-  to view feature form for editing. You can define more actions in the layer's
+* Actions: Actions can be added to the identify feature windows. The action is run by clicking
+  on the action label. By default, only one action is added,
+  namely view feature form for editing. You can define more actions in the layer's
   properties dialog.
 * Derived: This information is calculated or derived from other information.
-  You can find clicked coordinate, X and Y coordinates, area in map units and
-  perimeter in map units for polygons, length in map units for lines and feature
-  ids.
-* Data attributes: This is the list of attribute fields from the data.
+  This includes the X and Y values of the clicked coordinate, the area and perimeter in map units
+  for polygons, the length in map units for lines, and the feature ids.
+* Data attributes: This is the list of attribute fields and values for the feature the has been clicked.
 
 .. _figure_identify:
 
@@ -416,7 +415,7 @@ display three kinds of information:
 
    Identify features dialog
 
-At the top of the window, you have five icons:
+At the top of the window, you have seven icons:
 
 * |mActionExpandTree| :sup:`Expand tree`
 * |mActionCollapseTree| :sup:`Collapse tree`
@@ -434,14 +433,14 @@ should be identified:
 
 * 'Current layer' : only features from the selected layer are identified. The
   layer may not be visible in the canvas.
-* 'Top down, stop at first': for only features from the upper visible layer
+* 'Top down, stop at first': for only features from the upper visible layer.
 * 'Top down': for all features from the visible layers. The results are shown in
   the panel.
-* and 'Layer selection': opens a context menu where user selects the layer to
-  identify features from. Operates like a right-click. Only the choosen features
+* and 'Layer selection': opens a context menu where the user selects the layer to
+  identify features from. Operates like a right-click. Only the chosen features
   will be shown in the result panel.
 
-The :guilabel:`View` can be set as 'Tree', 'Table' and 'Graph'.
+The :guilabel:`View` can be set as 'Tree', 'Table' or 'Graph'.
 'Table' and 'Graph' views can only be set for raster layers.
 
 The identify tool allows you to |checkbox|:guilabel:`auto open a form`.
