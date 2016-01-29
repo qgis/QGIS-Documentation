@@ -4,32 +4,33 @@
 
 .. _vector_expressions:
 
+************
 Expressions
-============
+************
 
 .. contents::
    :local:
 
-The **Expressions** feature is available from many parts in |qg|. It can be 
-accessed using the |mIconExpressionSelect| :sup:`Select by expression`, the 
-|mActionCalculateField| :sup:`Field calculator` or the 
-|mIconDataDefine| :sup:`Data defined override` tool. 
+The **Expressions** feature is available from many parts in |qg|. It can be
+accessed using the |mIconExpressionSelect| :sup:`Select by expression`, the
+|mActionCalculateField| :sup:`Field calculator` or the
+|mIconDataDefine| :sup:`Data defined override` tool.
 It offers a powerful way to manipulate attribute value or variables in
 order to dynamically change the geometry style, the content or position
-of the label, the value for diagram, the height of a composer item, 
+of the label, the value for diagram, the height of a composer item,
 select some feature, create virtual column ...
 
 The **Expressions** feature offers access to the:
 
-- :guilabel:`Expression` tab which lists functions to use 
-- :guilabel:`Function Editor` tab which helps to create custom functions 
+- :guilabel:`Expression` tab which lists functions to use
+- :guilabel:`Function Editor` tab which helps to create custom functions
   to use in the expressions.
 
 
 .. _functions_list:
 
 Functions List
-***************
+===============
 
 
 .. _figure_expression_1:
@@ -46,26 +47,26 @@ Functions List
 The **Expression** tab contains functions as well as layer's fields and values.
 It contains widgets to:
 
-- type expressions using functions and/or fields. A preview of the expression's 
+- type expressions using functions and/or fields. A preview of the expression's
   result is displayed at the bottom of the dialog.
-- select the appropriate function among a list. A search box is available to 
-  filter the list and quickly find a particular function or field. 
-  Double-clicking on the item's name adds it to the expression being written. 
-- display help for each function selected. When a field is selected, this widget 
+- select the appropriate function among a list. A search box is available to
+  filter the list and quickly find a particular function or field.
+  Double-clicking on the item's name adds it to the expression being written.
+- display help for each function selected. When a field is selected, this widget
   shows a sample of its values. Double-clicking a value adds it to the expression.
 
 
 To help to quickly find a function, they are organized in groups.
 In :guilabel:`Operators`, you find mathematical operators.
-Look in :guilabel:`Math` for mathematical functions. 
-The :guilabel:`Conversions` group contains functions that convert one 
+Look in :guilabel:`Math` for mathematical functions.
+The :guilabel:`Conversions` group contains functions that convert one
 data type to another.
-The :guilabel:`String` group provides functions for data strings, 
-such as :guilabel:`Date and Time` handles date and time data. 
-In the :guilabel:`Geometry` group, you find functions for geometry objects. 
-With :guilabel:`Record` group functions, you can add a numeration to your data set 
+The :guilabel:`String` group provides functions for data strings,
+such as :guilabel:`Date and Time` handles date and time data.
+In the :guilabel:`Geometry` group, you find functions for geometry objects.
+With :guilabel:`Record` group functions, you can add a numeration to your data set
 while :guilabel:`Fields and Values` group helps view all attributes of the attribute table.
-The :guilabel:`Customs` group lists the functions created or imported by the user. 
+The :guilabel:`Customs` group lists the functions created or imported by the user.
 There are many other groups, listed below.
 
 
@@ -76,45 +77,53 @@ Operators
 ----------
 
 This group contains operators (e.g., +, -, \*).
+Note that for most of the mathematical functions below,
+if one of the inputs is NULL then the result is NULL.
 
-::
 
- a + b      a plus b
- a - b      a minus b
- a * b      a multiplied by b
- a / b      a divided by b
- a % b      a modulo b (for example, 7 % 2 = 1, or 2 fits into 7 three 
-            times with remainder 1)
- a ^ b      a power b (for example, 2^2=4 or 2^3=8)
- a = b      a and b are equal
- a > b      a is larger than b
- a < b      a is smaller than b
- a <> b     a and b are not equal
- a != b     a and b are not equal
- a <= b     a is less than or equal to b
- a >= b     a is larger than or equal to b
- a ~ b      a matches the regular expression b
- + a        positive sign
- - a        negative value of a
- ||         joins two values together into a string 'Hello' || ' world'
- LIKE       returns 1 if the string matches the supplied pattern
- ILIKE      returns 1 if the string matches case-insensitive the supplied
-            pattern (ILIKE can be used instead of LIKE to make the match 
-            case-insensitive)
- IS         returns 1 if a is the same as b
- OR         returns 1 when condition a or b is true
- AND        returns 1 when condition a and b are true
- NOT        returns 1 if a is not the same as b
- column name "column name"     value of the field column name, take 
-                               care to not be confused with simple 
-                               quote, see below
- 'string'                      a string value, take care to not be 
-                               confused with double quote, see above
- NULL                          null value
- a IS NULL                     a has no value
- a IS NOT NULL                 a has a value
- a IN (value[,value])          a is below the values listed
- a NOT IN (value[,value])      a is not below the values listed
+===========================  ========================================================
+ Function                    Description
+===========================  ========================================================
+ a + b                       Addition of two values (a plus b)
+ a - b                       Subtraction of two values (a minus b).
+ a * b                       Multiplication of two values (a multiplied by b)
+ a / b                       Division of two valuesa divided by b
+ a % b                       Remainder of division of a by b
+                             (eg, 7 % 2 = 1, or 2 fits into 7 three times with remainder 1)
+ a ^ b                       Power of two values (for example, 2^2=4 or 2^3=8)
+ a < b                       Compares two values and evaluates to 1 if the left value is
+                             less than the right value (a is smaller than b)
+ a <= b                      Compares two values and evaluates to 1 if the left value is
+                             less than or equal to the right value
+ a <> b                      Compares two values and evaluates to 1 if they are not equal
+ a = b                       Compares two values and evaluates to 1 if they are equal
+ a != b                      a and b are not equal
+ a > b                       Compares two values and evaluates to 1 if the left value is
+                             greater than the right value (a is larger than b)
+ a >= b                      Compares two values and evaluates to 1 if the left value is
+                             greater than or equal to the right value
+ a ~ b                       a matches the regular expression b
+ ||                          Joins two values together into a string.
+                             If one of the values is NULL the result will be NULL
+ '\\n'                        Inserts a line break
+ LIKE                        Returns 1 if the first parameter matches the supplied pattern
+ ILIKE                       Returns 1 if the first parameter matches case-insensitive the
+                             supplied pattern (ILIKE can be used instead of LIKE to make
+                             the match case-insensitive)
+ a IS b                      Tests whether two values are identical. Returns 1 if a is the same as b
+ a OR b                      Returns 1 when condition a or b is true
+ a AND b                     Returns 1 when condition a and b are true
+ NOT                         Negates a condition
+ column name "column name"   Value of the field column name, take care to not be confused
+                             with simple quote, see below
+ 'string'                    a string value, take care to not be confused with double
+                             quote, see above
+ NULL                        null value
+ a IS NULL                   a has no value
+ a IS NOT NULL               a has a value
+ a IN (value[,value])        a is below the values listed
+ a NOT IN (value[,value])    a is not below the values listed
+===========================  ========================================================
 
 **Some examples:**
 
@@ -122,7 +131,7 @@ This group contains operators (e.g., +, -, \*).
 
     'My feature's id is: ' || "gid"
 
-* Test if the "description" attribute field starts with the 'Hello' string 
+* Test if the "description" attribute field starts with the 'Hello' string
   in the value (note the position of the % character)::
 
     "description" LIKE 'Hello%'
@@ -132,16 +141,17 @@ Conditionals
 
 This group contains functions to handle conditional checks in expressions.
 
-::
-
- CASE                evaluates multiple expressions and returns a result
- CASE ELSE           evaluates multiple expressions and returns a result           
- coalesce            returns the first non-NULL value from the
-                     expression list
- if                  tests a condition and returns a different result
+===================  ==========================================================
+ Function            Description
+===================  ==========================================================
+ CASE                Evaluates multiple expressions and returns a result
+ CASE ELSE           Evaluates multiple expressions and returns a result
+ coalesce            Returns the first non-NULL value from the expression list
+ if                  Tests a condition and returns a different result
                      depending on the conditional check
- regexp_match        returns true if any part of a string matches
-                     the supplied regular expression
+ regexp_match        Returns true if any part of a string matches the supplied
+                     regular expression
+===================  ==========================================================
 
 **Some example:**
 
@@ -154,37 +164,43 @@ Mathematical Functions
 
 This group contains math functions (e.g., square root, sin and cos).
 
-::
-
- $pi                pi as value for calculations
- abs                returns the absolute value of a number
+==================  ===========================================================
+ Function           Description
+==================  ===========================================================
+ abs                Returns the absolute value of a number
  acos(a)            arccos of a
  asin(a)            arcsin of a
  atan(a)            arctan of a
- atan2(y,x)         arctan of y/x using the signs of the two 
-                    arguments to determine the quadrant of the result             
- ceil               rounds a number upwards
- clamp              restricts an input value to a specified range
+ atan2(y,x)         arctan of y/x using the signs of the two
+                    arguments to determine the quadrant of the result
+ azimuth(a,b)       Returns the north-based azimuth as the angle in radians
+                    measured clockwise from the vertical on point a to point b
+ ceil               Rounds a number upwards
+ clamp              Restricts an input value to a specified range
  cos(a)             cosine of a
+ degrees            Converts from radians to degrees
  exp                exponential of a value
- floor              rounds a number downwards
+ floor              Rounds a number downwards
  ln                 value of the natural logarithm of the passed expression
  log                value of the logarithm of the passed value and base
  log10              value of the base 10 logarithm of the passed expression
  max                largest value in a set of values
  min                smallest value in a set of values
- rand               random integer within the range specified by 
+ pi                 pi as value for calculations
+ radians            Converts from degrees to radians
+ rand               random integer within the range specified by
                     the minimum and maximum argument (inclusive)
- randf              random float within the range specified by 
+ randf              random float within the range specified by
                     the minimum and maximum argument (inclusive)
  round              round to number of decimal places
- scale_linear       transforms a given value from an input domain
-                    to an output range using linear interpolation
  scale_exp          transforms a given value from an input domain
                     to an output range using an exponential curve
+ scale_linear       Transforms a given value from an input domain
+                    to an output range using linear interpolation
  sin(a)             sine of a
  sqrt(a)            square root of a
  tan(a)             tangent of a
+==================  ===========================================================
 
 
 Color Functions
@@ -192,57 +208,59 @@ Color Functions
 
 This group contains functions for manipulating colors.
 
-::
-
- color_cmyk      returns a string representation of a color based on its 
-                 cyan, magenta, yellow and black components
- color_cmyka     returns a string representation of a color based on its 
-                 cyan, magenta, yellow, black and alpha (transparency) 
-                 components
- color_hsl       returns a string representation of a color based on its 
-                 hue, saturation, and lightness attributes
- color_hsla      returns a string representation of a color based on its 
-                 hue, saturation, lightness and alpha (transparency) 
-                 attributes
- color_hsv       returns a string representation of a color based on its 
-                 hue, saturation, and value attributes
- color_hsva      returns a string representation of a color based on its 
-                 hue, saturation, value and alpha (transparency) 
-                 attributes
- color_part      returns a specific component from a color string,
-                 eg the red component or alpha component
- color_rgb       returns a string representation of a color based on its 
-                 red, green, and blue components
- color_rgba      returns a string representation of a color based on its 
-                 red, green, blue, and alpha (transparency) components
- project_color   returns a color from the project's color scheme
- ramp_color      returns a string representing a color from a color ramp
- set_color_part  sets a specific color component for a color string,
-                 eg the red component or alpha component.
-
+==================  ===========================================================
+ Function           Description
+==================  ===========================================================
+ color_cmyk         Returns a string representation of a color based on its
+                    cyan, magenta, yellow and black components
+ color_cmyka        Returns a string representation of a color based on its cyan,
+                    magenta, yellow, black and alpha (transparency) components
+ color_hsl          Returns a string representation of a color based on its
+                    hue, saturation, and lightness attributes
+ color_hsla         Returns a string representation of a color based on its hue,
+                    saturation, lightness and alpha (transparency) attributes
+ color_hsv          Returns a string representation of a color based on its
+                    hue, saturation, and value attributes
+ color_hsva         Returns a string representation of a color based on its
+                    hue, saturation, value and alpha (transparency) attributes
+ color_part         Returns a specific component from a color string,
+                    eg the red component or alpha component
+ color_rgb          Returns a string representation of a color based on its
+                    red, green, and blue components
+ color_rgba         Returns a string representation of a color based on its
+                    red, green, blue, and alpha (transparency) components
+ darker             Returns a darker (or lighter) color string
+ lighter            Returns a lighter (or darker) color string
+ project_color      Returns a color from the project's color scheme
+ ramp_color         Returns a string representing a color from a color ramp
+ set_color_part     Sets a specific color component for a color string,
+                    eg the red component or alpha component.
+==================  ===========================================================
 
 Conversions
 ------------
 
-This group contains functions to convert one data type to another 
+This group contains functions to convert one data type to another
 (e.g., string to integer, integer to string).
 
-::
-
- todate                  converts a string into Qt date type
- todatetime              converts a string into Qt date time type
- toint                   converts a string to integer number
- tointerval              converts a string to an interval type (can be used
-                         to take days, hours, months, etc. off a date)
- toreal                  converts a string to real number
- tostring                converts number to string
- totime                  converts a string into Qt time type
+==================  ===========================================================
+ Function           Description
+==================  ===========================================================
+ to_date            Converts a string into a date object
+ to_datetime        Converts a string into a datetime object
+ to_int             Converts a string to integer number
+ to_interval        Converts a string to an interval type (can be used
+                    to take days, hours, months, etc. of a date)
+ to_real            Converts a string to a real number
+ to_string          Converts number to string
+ to_time            Converts a string into a time object
+==================  ===========================================================
 
 
 Custom functions
 -----------------
 
-This group contains functions created by the user. 
+This group contains functions created by the user.
 See function_editor_ for more details.
 
 
@@ -251,27 +269,28 @@ Date and Time Functions
 
 This group contains functions for handling date and time data.
 
-::
-
- age            returns difference between two dates
- day            extracts the day from a date, or the number of days from 
+==============  ===============================================================
+ Function       Description
+==============  ===============================================================
+ age            Returns difference between two dates
+ day            Extracts the day from a date, or the number of days from
                 an interval
- day_of_week    returns a number corresponding to the day of the week
+ day_of_week    Returns a number corresponding to the day of the week
                 for a specified date or datetime
- hour           extracts the hour from a datetime or time, or the number
+ hour           Extracts the hour from a datetime or time, or the number
                 of hours from an interval
- minute         extracts the minute from a datetime or time, or the number
+ minute         Extracts the minute from a datetime or time, or the number
                 of minutes from an interval
- month          extracts the month part from a date, or the number of  
+ month          Extracts the month part from a date, or the number of
                 months from an interval
- now            returns current date and time
- second         extracts the second from a datetime or time, or the number
+ now            Returns current date and time
+ second         Extracts the second from a datetime or time, or the number
                 of seconds from an interval
- week           extracts the week number from a date, or the number of
+ week           Extracts the week number from a date, or the number of
                 weeks from an interval
- year           extracts the year part from a date, or the number of  
-                years from an interval
-
+ year           Extracts the year part from a date, or the number of years
+                from an interval
+==============  ===============================================================
 
 **Some example:**
 
@@ -283,24 +302,24 @@ This group contains functions for handling date and time data.
 Fields and Values
 ------------------
 
-Contains a list of fields from the layer. 
+Contains a list of fields from the layer.
 
 Generally, you can use the various fields,
-values and functions to construct the calculation expression, or you can just 
+values and functions to construct the calculation expression, or you can just
 type it into the box.
 
 To display the values of a field, you just click on the
 appropriate field and choose between :guilabel:`Load top 10 unique values`
 and :guilabel:`Load all unique values`. On the right side, the **Field Values**
-list opens with the unique values. At the top of the list, a search box helps 
+list opens with the unique values. At the top of the list, a search box helps
 filtering the values. To add a value to the expression you are writing,
-double click its name in the list.  
+double click its name in the list.
 
 Sample values can also be accessed via right-click.
-Select the field name from the list, then right-click to access a context menu 
+Select the field name from the list, then right-click to access a context menu
 with options to load sample values from the selected field.
 
-Fields name should be double-quoted in the expression. 
+Fields name should be double-quoted in the expression.
 Values or string should be simple-quoted.
 
 Fuzzy Matching Functions
@@ -308,138 +327,191 @@ Fuzzy Matching Functions
 
 This group contains functions for fuzzy comparisons between values.
 
-::
-
- hamming_distance            returns the number of characters at 
-                             corresponding positions within the input 
+===========================  ==================================================
+ Function                    Description
+===========================  ==================================================
+ hamming_distance            Returns the number of characters at
+                             corresponding positions within the input
                              strings where the characters are different.
- levensheim                  returns the minimum number of character edits 
-                             (insertions, deletions or substitutions) 
-                             required to change one string to another. 
+ levensheim                  Returns the minimum number of character edits
+                             (insertions, deletions or substitutions)
+                             required to change one string to another.
                              Measure the similarity between two strings.
- longest_common_substring    returns  the longest common substring between 
-                             two strings. 
- soundex                     returns the Soundex representation of a string.
+ longest_common_substring    Returns  the longest common substring between
+                             two strings.
+ soundex                     Returns the Soundex representation of a string.
+===========================  ==================================================
 
-                
+
 General Functions
 ------------------
 
 This group  contains general assorted functions.
 
-::
-
- layer_property       returns a property of a layer or a value of its 
-                      metadata. It can be layer name, crs, geometry type, 
+====================  =========================================================
+ Function             Description
+====================  =========================================================
+ eval                 Evaluates an expression which is passed in a string.
+                      Useful to expand dynamic parameters passed as context
+                      variables or fields.
+ layer_property       Returns a property of a layer or a value of its
+                      metadata. It can be layer name, crs, geometry type,
                       feature count...
- var                  returns the value stored within a specified 
+ var                  Returns the value stored within a specified
                       variable. See variable functions below
 
-                
-                
+====================  =========================================================
+
+
 Geometry Functions
 ------------------
 
 This group contains functions that operate on geometry objects (e.g., length, area).
 
-::
-
- $area            returns the area size of the current feature
- $geometry        returns the geometry of the current feature (can be used
-                  for processing with other functions)
- $length          returns the length of the current line feature
- $perimeter       returns the perimeter of the current polygon feature
- $x               returns the x coordinate of the current feature
- $x_at(n)         returns the x coordinate of the nth node of the current
-                  feature's geometry
- $y               returns the y coordinate of the current feature
- $y_at(n)         returns the y coordinate of the nth node 
-                  of the current feature's geometry 
- area             returns the area of a geometry polygon feature. 
-                  Calculations are in the Spatial 
-                  Reference System of this geometry.
- bounds           returns a geometry which represents the bounding box of 
-                  an input geometry. Calculations are in the Spatial 
-                  Reference System of this Geometry. 
- bounds_height    returns the height of the bounding box of a geometry. 
-                  Calculations are in the Spatial Reference System of 
-                  this Geometry.
- bounds_width     returns the width of the bounding box of a geometry. 
-                  Calculations are in the Spatial Reference System of 
-                  this Geometry.
- buffer           returns a geometry that represents all points whose 
-                  distance from this geometry is less than or equal to 
-                  distance. Calculations are in the Spatial Reference 
-                  System of this geometry.
- centroid         returns the geometric center of a geometry
- combine          returns the combination of two geometries
- contains(a,b)    returns 1 (true) if and only if no points of b lie in the 
-                  exterior of a, and at least one point of the interior 
-                  of b lies in the interior of a
- convex_hull       returns the convex hull of a geometry (this represents 
-                  the minimum convex geometry that encloses all geometries 
-                  within the set)
- crosses          returns 1 (true) if the supplied geometries have some, 
-                  but not all, interior points in common
- difference(a,b)  returns a geometry that represents that part of geometry 
-                  a that does not intersect with geometry b
- disjoint         returns 1 (true) if the geometries do not share any space 
-                  together
- distance         returns the minimum distance (based on spatial ref) 
-                  between two geometries in projected units
- end_point        returns the last node from a geometry
- geometry         returns a feature's geometry
- geom_from_gml    returns a geometry created from a GML representation of 
-                  geometry
- geom_from_wkt    returns a geometry created from a well-known text (WKT) 
-                  representation
- geom_to_wkt      returns the well-known text (WKT) representation of the
-                  geometry without SRID metadata
- intersection     returns a geometry that represents the shared portion
-                  of two geometries
- intersects       returns 1 (true) if the geometries spatially intersect
-                  (share any portion of space) and 0 if they don't
- intersects_bbox  returns 1 (true) if the geometries spatially intersect
-                  (share any portion of space) their bounding box and 0 if 
-                  they don't
- length           returns length of a line geometry feature
-                  (or length of a string)
- make_point(x,y)  returns a point geometry from x and y values
- num_points       returns the number of vertices in a geometry
- overlaps         returns 1 (true) if the geometries share space, are of 
-                  the same dimension, but are not completely contained 
-                  by each other
- perimeter        returns the perimeter of a geometry polygon feature.
-                  Calculations are in the Spatial Reference System of 
-                  this geometry.
- point_n          returns a specific node from a geometry
- start_point      returns the first node from a geometry
- sym_difference   returns a geometry that represents the portions of a and 
-                  b that do not intersect
- touches          returns 1 (true) if the geometries have at least one 
-                  point in common, but their interiors do not intersect
- transform        returns the geometry transformed from the source CRS to
-                  the dest CRS
- union            returns a geometry that represents the point set union of 
-                  the geometries
- within           returns 1 (true) if geometry a is completely inside 
-                  geometry b
- x                returns the x coordinate of a point geometry, or the
-                  x coordinate of the centroid for a non-point geometry
- x_min            returns the minimum x coordinate of a geometry. 
-                  Calculations are in the Spatial Reference System of this 
-                  geometry
- x_max            returns the maximum x coordinate of a geometry. 
-                  Calculations are in the Spatial Reference System of this 
-                  geometry
- y                returns the y coordinate of a point geometry, or the
-                  y coordinate of the centroid for a non-point geometry
- y_min            returns the minimum y coordinate of a geometry. 
-                  Calculations are in the Spatial Reference System of this 
-                  geometry 
- y_max            returns the maximum y coordinate of a geometry. 
-                  Calculations are in the Spatial Reference System of this 
-                  geometry
+====================  =========================================================
+ Function             Description
+====================  =========================================================
+ $area                Returns the area size of the current feature
+ $geometry            Returns the geometry of the current feature (can be
+                      used for processing with other functions)
+ $length              Returns the length of the current line feature
+ $perimeter           Returns the perimeter of the current polygon feature
+ $x                   Returns the x coordinate of the current feature
+ $x_at(n)             Returns the x coordinate of the nth node of the current
+                      feature's geometry
+ $y                   Returns the y coordinate of the current feature
+ $y_at(n)             Returns the y coordinate of the nth node
+                      of the current feature's geometry
+ area                 Returns the area of a geometry polygon feature.
+                      Calculations are in the Spatial
+                      Reference System of this geometry.
+ bounds               Returns a geometry which represents the bounding box of
+                      an input geometry. Calculations are in the Spatial
+                      Reference System of this Geometry.
+ bounds_height        Returns the height of the bounding box of a geometry.
+                      Calculations are in the Spatial Reference System of
+                      this Geometry.
+ bounds_width         Returns the width of the bounding box of a geometry.
+                      Calculations are in the Spatial Reference System of
+                      this Geometry.
+ buffer               Returns a geometry that represents all points whose
+                      distance from this geometry is less than or equal to
+                      distance. Calculations are in the Spatial Reference
+                      System of this geometry.
+ centroid             Returns the geometric center of a geometry
+ combine              Returns the combination of two geometries
+ contains(a,b)        Returns 1 (true) if and only if no points of b lie in the
+                      exterior of a, and at least one point of the interior
+                      of b lies in the interior of a
+ convex_hull          Returns the convex hull of a geometry (this represents
+                      the minimum convex geometry that encloses all geometries
+                      within the set)
+ crosses              Returns 1 (true) if the supplied geometries have some,
+                      but not all, interior points in common
+ difference(a,b)      Returns a geometry that represents that part of geometry
+                      a that does not intersect with geometry b
+ disjoint             Returns 1 (true) if the geometries do not share any space
+                      together
+ distance             Returns the minimum distance (based on spatial ref)
+                      between two geometries in projected units
+ end_point            Returns the last node from a geometry
+ exterior_ring        Returns a line string representing the exterior ring
+                      of a polygon geometry. If the geometry is not a polygon
+                      then the result will be null
+ extrude(geom,x,y)    Returns an extruded version of the input (Multi-)Curve
+                      or (Multi-)Linestring geometry with an extension
+                      specified by x and y
+ geom_from_gml        Returns a geometry created from a GML representation of
+                      geometry
+ geom_from_wkt        Returns a geometry created from a well-known text (WKT)
+                      representation
+ geom_to_wkt          Returns the well-known text (WKT) representation of the
+                      geometry without SRID metadata
+ geometry             Returns a feature's geometry
+ geometry_n           Returns the nth geometry from a geometry collection,
+                      or null if the input geometry is not a collection.
+ interior_ring_n      Returns the geometry of the nth interior ring from a
+                      polygon geometry, or null if the geometry is not a
+                      polygon
+ intersection         Returns a geometry that represents the shared portion
+                      of two geometries
+ intersects           Tests whether a geometry intersects another.
+                      Returns 1 (true) if the geometries spatially intersect
+                      (share any portion of space) and 0 if they don't
+ intersects_bbox      Tests whether a geometry's bounding box overlaps another
+                      geometry's bounding box. Returns 1 (true) if the
+                      geometries spatially intersect (share any portion of
+                      space) their bounding box and 0 if they don't
+ is_closed            Returns true if a line string is closed (start and end
+                      points are coincident), false if a line string is not
+                      closed and null if the geometry is not a line string
+ length               Returns length of a line geometry feature
+                      (or length of a string)
+ m                    Returns the m value of a point geometry
+ make_line            Creates a line geometry from a series of point geometries
+ make_point(x,y)      Returns a point geometry from x and y values
+                      (and optional z and m values)
+ make_point(x,y,m)    Returns a point geometry from x and y coordinates and m values
+ make_polygon         Creates a polygon geometry from an outer ring
+                      and optional series of inner ring geometries
+ nodes_to_points      Returns a multipoint geometry consisting of every node
+                      in the input geometry
+ num_geometries       Returns the number of geometries in a geometry
+                      collection, or null if the input geometry is not a
+                      collection
+ num_interior_rings   Returns the number of interior rings in a polygon
+                      or geometry collection, or null if the input geometry
+                      is not a polygon or collection
+ num_points           Returns the number of vertices in a geometry
+ num_rings            Returns the number of rings (including exterior rings)
+                      in a polygon or geometry collection, or null if the input
+                      geometry is not a polygon or collection
+ num_points           Orders the parts of a MultiGeometry by a given criteria
+ overlaps             Tests whether a geometry overlaps another. Returns 1 (true)
+                      if the geometries share space, are of the same dimension,
+                      but are not completely contained by each other
+ perimeter            Returns the perimeter of a geometry polygon feature.
+                      Calculations are in the Spatial Reference System of
+                      this geometry.
+ point_n              Returns a specific node from a geometry
+ point_on_surface     Returns a point guaranteed to lie on the surface of a geometry
+ relate               Tests or returns the Dimensional Extended 9 Intersection
+                      Model (DE-9IM) representation of the relationship between
+                      two geometries
+ reverse              Reverses the direction of a line string by reversing
+                      the order of its vertices
+ segments_to_lines    Returns a multi line geometry consisting of a line
+                      for every segment in the input geometry
+ shortest_line        Returns the shortest line joining two geometries.
+                      The resultant line will start at geometry 1 and end at geometry 2
+ start_point          Returns the first node from a geometry
+ sym_difference       Returns a geometry that represents the portions of two geometries
+                      that do not intersect
+ touches              Tests whether a geometry touches another.
+                      Returns 1 (true) if the geometries have at least one
+                      point in common, but their interiors do not intersect
+ transform            Returns the geometry transformed from the source CRS to
+                      the destination CRS
+ translate            Returns a translated version of a geometry.Calculations
+                      are in the Spatial Reference System of this geometry.
+ union                Returns a geometry that represents the point set union of
+                      the geometries
+ within (a,b)         Tests whether a geometry is within another. Returns 1 (true)
+                      if geometry a is completely inside geometry b
+ x                    Returns the x coordinate of a point geometry, or the
+                      x coordinate of the centroid for a non-point geometry
+ x_min                Returns the minimum x coordinate of a geometry. Calculations
+                      are in the Spatial Reference System of this geometry
+ x_max                Returns the maximum x coordinate of a geometry. Calculations
+                      are in the Spatial Reference System of this geometry
+ y                    Returns the y coordinate of a point geometry, or the
+                      y coordinate of the centroid for a non-point geometry
+ y_min                Returns the minimum y coordinate of a geometry. Calculations
+                      are in the Spatial Reference System of this geometry
+ y_max                Returns the maximum y coordinate of a geometry. Calculations
+                      are in the Spatial Reference System of this geometry
+ z                    Returns the z coordinate of a point geometry.
+====================  =========================================================
 
 
 Record Functions
@@ -447,135 +519,147 @@ Record Functions
 
 This group contains functions that operate on record identifiers.
 
-::
-
- $currentfeature     returns the current feature being evaluated. 
-                     This can be used with the 'attribute' function 
+===================  ==========================================================
+ Function            Description
+===================  ==========================================================
+ $currentfeature     Returns the current feature being evaluated.
+                     This can be used with the 'attribute' function
                      to evaluate attribute values from the current feature.
- $id                 returns the feature id of the current row
- $map                returns the id of the current map item if the map 
-                     is being drawn in a composition, or "canvas" if 
-                     the map is being drawn within the main QGIS window                 
- $rownum             returns the number of the current row
- $scale              returns the current scale of the map canvas
- attribute           returns the value of a specified attribute from 
-                     a feature.
- get_feature         returns the first feature of a layer matching a 
+ $id                 Returns the feature id of the current row
+ $map                Returns the id of the current map item if the map
+                     is being drawn in a composition, or "canvas" if
+                     the map is being drawn within the main QGIS window
+ $rownum             Returns the number of the current row
+ $scale              Returns the current scale of the map canvas
+ attribute           Returns the value of a specified attribute from a feature.
+ get_feature         Returns the first feature of a layer matching a
                      given attribute value.
- uuid                generates a Universally Unique Identifier (UUID) 
+ uuid                Generates a Universally Unique Identifier (UUID)
                      for each row. Each UUID is 38 characters long.
+===================  ==========================================================
+
 
 String Functions
 -----------------
 
-This group contains functions that operate on strings 
+This group contains functions that operate on strings
 (e.g., that replace, convert to upper case).
 
-::
-
- concat                       concatenates several strings to one
- format                       formats a string using supplied arguments
- format_number                returns a number formatted with the locale 
-                              separator for thousands (also truncates the 
-                              number to the number of supplied places)
- format_date                  formats a date type or string into a custom 
+============================  ====================================================
+ Function                     Description
+============================  ====================================================
+ concat                       Concatenates several strings to one
+ format                       Formats a string using supplied arguments
+ format_date                  Formats a date type or string into a custom
                               string format
- left                         returns a substring that contains the n 
+ format_number                Returns a number formatted with the locale
+                              separator for thousands (also truncates the
+                              number to the number of supplied places)
+ left                         Returns a substring that contains the n
                               leftmost characters of the string
- length                       returns length of a string 
+ length                       Returns length of a string
                               (or length of a line geometry feature)
  lower                        converts a string to lower case
- lpad                         returns a string with supplied width padded 
+ lpad                         Returns a string with supplied width padded
                               using the fill character
- replace                      returns a string with the supplied string 
-                              replaced
- regexp_replace               returns a string with the supplied regular 
+ regexp_replace               Returns a string with the supplied regular
                               expression replaced
- regexp_substr                returns the portion of a string which matches 
+ regexp_substr                Returns the portion of a string which matches
                               a supplied regular expression
- right                        returns a substring that contains the n 
+ replace                      Returns a string with the supplied string
+                              replaced
+ right                        Returns a substring that contains the n
                               rightmost characters of the string
- rpad                         returns a string with supplied width padded 
+ rpad                         Returns a string with supplied width padded
                               using the fill character
- strpos                       returns the index of a regular expression 
+ strpos                       Returns the index of a regular expression
                               in a string
- substr(*a*,from,len)         returns a part of a string
- title                        converts all words of a string to title 
-                              case (all words lower case with leading 
+ substr                       Returns a part of a string
+ title                        Converts all words of a string to title
+                              case (all words lower case with leading
                               capital letter)
- trim                         removes all leading and trailing white 
+ trim                         Removes all leading and trailing white
                               space (spaces, tabs, etc.) from a string
- upper                        converts string a to upper case
- wordwrap                     returns a string wrapped to a maximum/
+ upper                        Converts string a to upper case
+ wordwrap                     Returns a string wrapped to a maximum/
                               minimum number of characters
+============================  ====================================================
 
 
 Recent Functions
 -----------------
 
-This group contains recently used functions. Any expression used in the 
-Expression dialog is added to the list, sorted from the more recent to 
+This group contains recently used functions. Any expression used in the
+Expression dialog is added to the list, sorted from the more recent to
 the less one. This helps to quickly retrieve any previous expression.
 
 
 Variables Functions
 --------------------
 
-This group contains dynamic variables related to the application, the project 
-file and other settings. 
+This group contains dynamic variables related to the application, the project
+file and other settings.
 It means that some functions may not be available according to the context:
 
 - from the |mIconExpressionSelect| :sup:`Select by expression` dialog
 - from the |mActionCalculateField| :sup:`Field calculator` dialog
 - from the layer properties dialog
 - from the print composer
- 
-To use these functions in an expression, they should be preceded by @ character 
+
+To use these functions in an expression, they should be preceded by @ character
 (e.g, @row_number). Are concerned:
 
-::
-
- atlas_feature              returns the current atlas feature 
+==========================  ========================================================
+ Function                   Description
+==========================  ========================================================
+ atlas_feature              Returns the current atlas feature
                             (as feature object)
- atlas_featureid            returns the current atlas feature ID
- atlas_featurenumber        returns the number of pages in composition
- atlas_filename             returns the current atlas file name
- atlas_geometry             returns the current atlas feature geometry
- atlas_pagename             returns the current atlas page name
- atlas_totalfeatures        returns the total number of features in atlas
- grid_axis                  returns the current grid annotation axis 
+ atlas_featureid            Returns the current atlas feature ID
+ atlas_featurenumber        Returns the number of pages in composition
+ atlas_filename             Returns the current atlas file name
+ atlas_geometry             Returns the current atlas feature geometry
+ atlas_pagename             Returns the current atlas page name
+ atlas_totalfeatures        Returns the total number of features in atlas
+ grid_axis                  Returns the current grid annotation axis
                             (eg, 'x' for longitude, 'y' for latitude)
- grid_number                returns the current grid annotation value
- item_id                    returns the composer item user ID 
+ grid_number                Returns the current grid annotation value
+ item_id                    Returns the composer item user ID
                             (not necessarily unique)
- item_uuid                  returns the composer item unique ID
- layer_id                   returns the ID of current layer
- layer_name                 returns the name of current layer
- layout_dpi                 returns the composition resolution (DPI)
- layout_numpages            returns the number of pages in the composition
- layout_pageheight          returns the composition height in mm
- layout_pagewidth           returns the composition width in mm
- map_id                     returns the ID of current map destination. 
-                            This will be 'canvas' for canvas renders, and 
+ item_uuid                  Returns the composer item unique ID
+ layer_id                   Returns the ID of current layer
+ layer_name                 Returns the name of current layer
+ layout_dpi                 Returns the composition resolution (DPI)
+ layout_numpages            Returns the number of pages in the composition
+ layout_pageheight          Returns the composition height in mm
+ layout_pagewidth           Returns the composition width in mm
+ map_id                     Returns the ID of current map destination.
+                            This will be 'canvas' for canvas renders, and
                             the item ID for composer map renders
- map_rotation               returns the current rotation of the map
- map_scale                  returns the current scale of the map
- project_filename           returns the filename of current project 
- project_folder             returns the folder for current project
- project_path               returns the full path (including file name) 
+ map_rotation               Returns the current rotation of the map
+ map_scale                  Returns the current scale of the map
+ project_filename           Returns the filename of current project
+ project_folder             Returns the folder for current project
+ project_path               Returns the full path (including file name)
                             of current project
- project_title              returns the title of current project 
- qgis_release_name          returns the current QGIS release name
- qgis_version               returns the current QGIS version string
- qgis_version_no            returns the current QGIS version number
- row_number                 stores the number of the current row 
+ project_title              Returns the title of current project
+ qgis_os_name               Returns the current Operating system name,
+                            eg 'windows', 'linux' or 'osx'
+ qgis_platform              Returns the QGIS platform, eg 'desktop' or 'server'
+ qgis_release_name          Returns the current QGIS release name
+ qgis_version               Returns the current QGIS version string
+ qgis_version_no            Returns the current QGIS version number
+ user_account_name          Returns the current user's operating system account name
+ user_full_name             Returns the current user's operating system user name
+ row_number                 Stores the number of the current row
+==========================  ========================================================
+
 
 .. _function_editor:
 
 Function Editor
-****************
+===============
 
-With the Function Editor, you are able to define your own Python custom 
+With the Function Editor, you are able to define your own Python custom
 functions in a comfortable way.
 
 .. _figure_expression_2:
@@ -589,11 +673,11 @@ functions in a comfortable way.
 
    The Function Editor tab |nix|
 
-The function editor will create new Python files in :file:`.qgis2\\python\\expressions` 
-folder and will auto load all functions defined when starting QGIS. Be aware 
-that new functions are only saved in the :file:`expressions` folder and not in 
-the project file. If you have a project that uses one of your custom functions 
-you will need to also share the .py file in the expressions folder. 
+The function editor will create new Python files in :file:`.qgis2\\python\\expressions`
+folder and will auto load all functions defined when starting QGIS. Be aware
+that new functions are only saved in the :file:`expressions` folder and not in
+the project file. If you have a project that uses one of your custom functions
+you will need to also share the .py file in the expressions folder.
 
 Here's a short example on how to create your own functions:
 
@@ -603,7 +687,7 @@ Here's a short example on how to create your own functions:
    def myfunc(value1, value2, feature, parent):
        pass
 
-The short example creates a function 'myfunc' that will give you a function 
+The short example creates a function 'myfunc' that will give you a function
 with two values.
 When using the args='auto' function argument the number of function
 arguments required will be calculated by the number of arguments the
@@ -615,12 +699,12 @@ This function then can be used with the following expression:
 
    myfunc('test1', 'test2')
 
-Your function will be implemented in the :guilabel:`Custom` functions group of 
+Your function will be implemented in the :guilabel:`Custom` functions group of
 the :guilabel:`Expression` tab after using the :guilabel:`Run Script` button.
 
-Further information about creating Python code can be found on 
+Further information about creating Python code can be found on
 http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
 
-The function editor is not only limited to working with the field calculator, 
+The function editor is not only limited to working with the field calculator,
 it can be found whenever you work with expressions.
 
