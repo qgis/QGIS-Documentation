@@ -45,7 +45,7 @@ attributes.
 .. figure:: /static/user_manual/working_with_gps/gpstrack_main.png
    :align: center
 
-   GPS tracking position and additional attributes |nix|
+   GPS tracking position and additional attributes
 
 GPS signal strength
 -------------------
@@ -62,7 +62,7 @@ are receiving signals from.
 .. figure:: /static/user_manual/working_with_gps/gpstrack_stren.png
    :align: center
 
-   GPS tracking signal strength |nix|
+   GPS tracking signal strength
 
 
 GPS polar window
@@ -81,7 +81,7 @@ ID numbers of the satellites you are receiving signals from.
 .. figure:: /static/user_manual/working_with_gps/gpstrack_polar.png
    :align: center
 
-   GPS tracking polar window |nix|
+   GPS tracking polar window
 
 GPS options
 -----------
@@ -105,7 +105,7 @@ A click on **[Connect]** again initiates the connection to the GPS receiver.
 .. figure:: /static/user_manual/working_with_gps/gpstrack_options.png
    :align: center
 
-   GPS tracking options window |nix|
+   GPS tracking options window
 
 You can activate |checkbox| :menuselection:`Automatically save added features`
 when you are in editing mode. Or you can activate |checkbox|
