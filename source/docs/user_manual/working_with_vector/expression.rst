@@ -399,6 +399,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
                       distance. Calculations are in the Spatial Reference
                       System of this geometry.
  centroid             Returns the geometric center of a geometry
+ closest_point        Returns the point on a geometry that is closest to a second geometry
  combine              Returns the combination of two geometries
  contains(a,b)        Returns 1 (true) if and only if no points of b lie in the
                       exterior of a, and at least one point of the interior
