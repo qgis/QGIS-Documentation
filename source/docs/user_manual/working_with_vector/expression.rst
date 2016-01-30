@@ -87,7 +87,7 @@ if one of the inputs is NULL then the result is NULL.
  a + b                       Addition of two values (a plus b)
  a - b                       Subtraction of two values (a minus b).
  a * b                       Multiplication of two values (a multiplied by b)
- a / b                       Division of two valuesa divided by b
+ a / b                       Division of two values (a divided by b)
  a % b                       Remainder of division of a by b
                              (eg, 7 % 2 = 1, or 2 fits into 7 three times with remainder 1)
  a ^ b                       Power of two values (for example, 2^2=4 or 2^3=8)
@@ -234,7 +234,7 @@ This group contains functions for manipulating colors.
  project_color      Returns a color from the project's color scheme
  ramp_color         Returns a string representing a color from a color ramp
  set_color_part     Sets a specific color component for a color string,
-                    eg the red component or alpha component.
+                    eg the red component or alpha component
 ==================  ===========================================================
 
 Conversions
@@ -332,14 +332,14 @@ This group contains functions for fuzzy comparisons between values.
 ===========================  ==================================================
  hamming_distance            Returns the number of characters at
                              corresponding positions within the input
-                             strings where the characters are different.
+                             strings where the characters are different
  levensheim                  Returns the minimum number of character edits
                              (insertions, deletions or substitutions)
                              required to change one string to another.
-                             Measure the similarity between two strings.
+                             Measure the similarity between two strings
  longest_common_substring    Returns the longest common substring between
-                             two strings.
- soundex                     Returns the Soundex representation of a string.
+                             two strings
+ soundex                     Returns the Soundex representation of a string
 ===========================  ==================================================
 
 
@@ -353,7 +353,7 @@ This group  contains general assorted functions.
 ====================  =========================================================
  eval                 Evaluates an expression which is passed in a string.
                       Useful to expand dynamic parameters passed as context
-                      variables or fields.
+                      variables or fields
  layer_property       Returns a property of a layer or a value of its
                       metadata. It can be layer name, crs, geometry type,
                       feature count...
@@ -383,20 +383,20 @@ This group contains functions that operate on geometry objects (e.g., length, ar
                       of the current feature's geometry
  area                 Returns the area of a geometry polygon feature.
                       Calculations are in the Spatial
-                      Reference System of this geometry.
+                      Reference System of this geometry
  bounds               Returns a geometry which represents the bounding box of
                       an input geometry. Calculations are in the Spatial
-                      Reference System of this Geometry.
+                      Reference System of this Geometry
  bounds_height        Returns the height of the bounding box of a geometry.
                       Calculations are in the Spatial Reference System of
-                      this Geometry.
+                      this Geometry
  bounds_width         Returns the width of the bounding box of a geometry.
                       Calculations are in the Spatial Reference System of
-                      this Geometry.
+                      this Geometry
  buffer               Returns a geometry that represents all points whose
                       distance from this geometry is less than or equal to
                       distance. Calculations are in the Spatial Reference
-                      System of this geometry.
+                      System of this geometry
  centroid             Returns the geometric center of a geometry
  closest_point        Returns the point on a geometry that is closest to a second geometry
  combine              Returns the combination of two geometries
@@ -429,7 +429,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
                       geometry without SRID metadata
  geometry             Returns a feature's geometry
  geometry_n           Returns the nth geometry from a geometry collection,
-                      or null if the input geometry is not a collection.
+                      or null if the input geometry is not a collection
  interior_ring_n      Returns the geometry of the nth interior ring from a
                       polygon geometry, or null if the geometry is not a
                       polygon
@@ -472,7 +472,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
                       but are not completely contained by each other
  perimeter            Returns the perimeter of a geometry polygon feature.
                       Calculations are in the Spatial Reference System of
-                      this geometry.
+                      this geometry
  point_n              Returns a specific node from a geometry
  point_on_surface     Returns a point guaranteed to lie on the surface of a geometry
  relate               Tests or returns the Dimensional Extended 9 Intersection
@@ -493,7 +493,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
  transform            Returns the geometry transformed from the source CRS to
                       the destination CRS
  translate            Returns a translated version of a geometry.Calculations
-                      are in the Spatial Reference System of this geometry.
+                      are in the Spatial Reference System of this geometry
  union                Returns a geometry that represents the point set union of
                       the geometries
  within (a,b)         Tests whether a geometry is within another. Returns 1 (true)
@@ -510,7 +510,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
                       are in the Spatial Reference System of this geometry
  y_max                Returns the maximum y coordinate of a geometry. Calculations
                       are in the Spatial Reference System of this geometry
- z                    Returns the z coordinate of a point geometry.
+ z                    Returns the z coordinate of a point geometry
 ====================  =========================================================
 
 
@@ -535,7 +535,7 @@ This group contains functions that operate on record identifiers.
  get_feature         Returns the first feature of a layer matching a
                      given attribute value.
  uuid                Generates a Universally Unique Identifier (UUID)
-                     for each row. Each UUID is 38 characters long.
+                     for each row. Each UUID is 38 characters long
 ===================  ==========================================================
 
 
