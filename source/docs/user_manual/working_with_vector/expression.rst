@@ -294,7 +294,7 @@ This group contains functions for handling date and time data.
 
 **Some example:**
 
-* Get the month and the year of today in the format "02/2016" ::
+* Get the month and the year of today in the format "10/2014" ::
 
     month(now()) || '/' || year(now())
 
