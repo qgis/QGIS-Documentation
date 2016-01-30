@@ -1321,10 +1321,12 @@ Use |mActionSignPlus| :sup:`add item` button to select the desired fields into
 the 'Assigned Attributes' panel. Generated attributes with :ref:`vector_expressions`
 can also be used.
 
-You can move up and down any row with click and drag, sorting how atributes
+You can move up and down any row with clic and drag, sorting how atributes
 are displayed. You can also change the label in the 'Legend' column
 or the attibute color by double-clicking the item.
-This label is the default text displayed in the legend of the print composer.
+
+This label is the default text displayed in the legend of the print composer 
+or of the layer tree.
 
 .. _figure_diagrams_1:
 
