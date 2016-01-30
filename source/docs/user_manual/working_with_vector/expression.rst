@@ -105,7 +105,7 @@ if one of the inputs is NULL then the result is NULL.
  a ~ b                       a matches the regular expression b
  ||                          Joins two values together into a string.
                              If one of the values is NULL the result will be NULL
- '\\n'                        Inserts a line break
+ '\\n'                       Inserts a new line in a string
  LIKE                        Returns 1 if the first parameter matches the supplied pattern
  ILIKE                       Returns 1 if the first parameter matches case-insensitive the
                              supplied pattern (ILIKE can be used instead of LIKE to make
@@ -168,38 +168,38 @@ This group contains math functions (e.g., square root, sin and cos).
  Function           Description
 ==================  ===========================================================
  abs                Returns the absolute value of a number
- acos(a)            arccos of a
- asin(a)            arcsin of a
- atan(a)            arctan of a
- atan2(y,x)         arctan of y/x using the signs of the two
-                    arguments to determine the quadrant of the result
+ acos               Returns the inverse cosine of a value in radians
+ asin               Returns the inverse sine of a value in radians
+ atan               Returns the inverse cosine of a value in radians
+ atan2(y,x)         Returns the inverse tangent of y/x by using the signs
+                    of the two arguments to determine the quadrant of the result
  azimuth(a,b)       Returns the north-based azimuth as the angle in radians
                     measured clockwise from the vertical on point a to point b
  ceil               Rounds a number upwards
  clamp              Restricts an input value to a specified range
- cos(a)             cosine of a
+ cos                Returns the cosine of a value in radians
  degrees            Converts from radians to degrees
- exp                exponential of a value
+ exp                Returns exponential of a value
  floor              Rounds a number downwards
- ln                 value of the natural logarithm of the passed expression
- log                value of the logarithm of the passed value and base
- log10              value of the base 10 logarithm of the passed expression
- max                largest value in a set of values
- min                smallest value in a set of values
- pi                 pi as value for calculations
+ ln                 Returns the natural logarithm of the passed expression
+ log                Returns the value of the logarithm of the passed value and base
+ log10              Returns the value of the base 10 logarithm of the passed expression
+ max                Returns the largest value in a set of values
+ min                Returns the smallest value in a set of values
+ pi                 Returns the value of pi for calculations
  radians            Converts from degrees to radians
- rand               random integer within the range specified by
+ rand               Returns the random integer within the range specified by
                     the minimum and maximum argument (inclusive)
- randf              random float within the range specified by
+ randf              Returns the random float within the range specified by
                     the minimum and maximum argument (inclusive)
- round              round to number of decimal places
- scale_exp          transforms a given value from an input domain
+ round              Rounds to number of decimal places
+ scale_exp          Transforms a given value from an input domain
                     to an output range using an exponential curve
  scale_linear       Transforms a given value from an input domain
                     to an output range using linear interpolation
- sin(a)             sine of a
- sqrt(a)            square root of a
- tan(a)             tangent of a
+ sin                Returns the sine of an angle
+ sqrt(a)            Returns the square root of a value
+ tan                Returns the tangent of an angle
 ==================  ===========================================================
 
 
@@ -269,34 +269,34 @@ Date and Time Functions
 
 This group contains functions for handling date and time data.
 
-==============  ===============================================================
+==============  ===================================================================
  Function       Description
-==============  ===============================================================
- age            Returns difference between two dates
- day            Extracts the day from a date, or the number of days from
-                an interval
+==============  ===================================================================
+ age            Returns as an interval the difference between two dates or datetimes
+ day            Extracts the day from a date or datetime, or the number of days
+                from an interval
  day_of_week    Returns a number corresponding to the day of the week
                 for a specified date or datetime
  hour           Extracts the hour from a datetime or time, or the number
                 of hours from an interval
  minute         Extracts the minute from a datetime or time, or the number
                 of minutes from an interval
- month          Extracts the month part from a date, or the number of
+ month          Extracts the month part from a date or datetime, or the number of
                 months from an interval
- now            Returns current date and time
+ now()          Returns current date and time
  second         Extracts the second from a datetime or time, or the number
                 of seconds from an interval
- week           Extracts the week number from a date, or the number of
+ week           Extracts the week number from a date or datetime, or the number of
                 weeks from an interval
- year           Extracts the year part from a date, or the number of years
-                from an interval
-==============  ===============================================================
+ year           Extracts the year part from a date or datetime, or the number of 
+                years from an interval
+==============  ===================================================================
 
 **Some example:**
 
-* Get the month and the year of today in the format "10/2014" ::
+* Get the month and the year of today in the format "02/2016" ::
 
-    month($now) || '/' || year($now)
+    month(now()) || '/' || year(now())
 
 
 Fields and Values
@@ -337,7 +337,7 @@ This group contains functions for fuzzy comparisons between values.
                              (insertions, deletions or substitutions)
                              required to change one string to another.
                              Measure the similarity between two strings.
- longest_common_substring    Returns  the longest common substring between
+ longest_common_substring    Returns the longest common substring between
                              two strings.
  soundex                     Returns the Soundex representation of a string.
 ===========================  ==================================================
@@ -359,7 +359,6 @@ This group  contains general assorted functions.
                       feature count...
  var                  Returns the value stored within a specified
                       variable. See variable functions below
-
 ====================  =========================================================
 
 
@@ -551,12 +550,11 @@ This group contains functions that operate on strings
 ============================  ====================================================
  concat                       Concatenates several strings to one
  format                       Formats a string using supplied arguments
- format_date                  Formats a date type or string into a custom
-                              string format
+ format_date                  Formats a date type or string into a custom string format
  format_number                Returns a number formatted with the locale
                               separator for thousands (also truncates the
                               number to the number of supplied places)
- left                         Returns a substring that contains the n
+ left(string, n)              Returns a substring that contains the n
                               leftmost characters of the string
  length                       Returns length of a string
                               (or length of a line geometry feature)
@@ -569,7 +567,7 @@ This group contains functions that operate on strings
                               a supplied regular expression
  replace                      Returns a string with the supplied string
                               replaced
- right                        Returns a substring that contains the n
+ right(string, n)             Returns a substring that contains the n
                               rightmost characters of the string
  rpad                         Returns a string with supplied width padded
                               using the fill character
