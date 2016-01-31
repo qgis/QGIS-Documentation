@@ -10,7 +10,7 @@ Expressions
 .. contents::
    :local:
 
-The **Expressions** feature is available from many parts in |qg|. It can be 
+The **Expressions** feature is available from many parts in QGIS. It can be 
 accessed using the |mIconExpressionSelect| :sup:`Select by expression`, the 
 |mActionCalculateField| :sup:`Field calculator` or the 
 |mIconDataDefine| :sup:`Data defined override` tool. 
