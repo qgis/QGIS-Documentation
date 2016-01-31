@@ -520,6 +520,16 @@ FORMAT_OPTIONS Parameters:
 * MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY corresponds to the three export options offered in the QGIS Desktop DXF export dialogue
 * LAYERSATTRIBUTES:yourcolumn_with_values_to_be_used_for_dxf_layernames - if not specified, the original QGIS layer names are used
 
+Extra parameters supported by the WFS GetFeature request
+---------------------------------------------------------
+
+In the WFS GetFeature request, QGIS Server accepts one extra parameters in 
+addition to the standard parameters according to the OCG WFS 1.1.0 
+specification:
+
+* **GeometryName** parameter: this parameter can be used to get the *extent* or the 
+  *centroid* as the geometry or no geometry if *none* if used (ie attribut only). 
+  Allowed values are *extent*, *centroid* or *none*.
 
 .. index::
     pair: logging; QGIS Server
