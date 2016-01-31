@@ -17,7 +17,7 @@ Description of the analysis:
 * **Aspect**: Calculates the direction in which the slope faces. Aspect is
   calculated in degrees, ranging in value from 0 to 360 degrees, where 0 = North,
   90 = East, 180 = South, 270 = West and 360 = North. Flat areas are assigned a
-value of no data.
+  value of no data.
 * **Hillshade**: Creates a shaded map using light and shadow to provide a more
   three-dimensional appearance for a shaded relief map. The output map is a
   Single band gray reflecting the gray value of the pixels. 
