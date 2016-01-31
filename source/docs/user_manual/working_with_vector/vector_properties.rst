@@ -406,9 +406,16 @@ for the rivers layer of the QGIS sample dataset.
    click to change color, transparency, size, or width of selected
    entries.
 
+.. tip:: **Match categories to symbol name**
+
+   In the [Advanced] menu, under the classes, you can choose one of the two 
+   first actions to match symbol name to a category name in your classification.
+   *Matched to saved symbols* match category name with a symbol name from your 
+   *Style Manager*. *Match to symbols from file* match category name to a
+   symbol name from an external file.
+
 .. index:: Graduated_Renderer, Renderer_Graduated
 .. index:: Natural_Breaks_(Jenks), Pretty_Breaks, Equal_Interval, Quantile
-
 
 Graduated Renderer
 ..................
