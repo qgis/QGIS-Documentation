@@ -402,7 +402,7 @@ display three kinds of information:
 * Derived: This information is calculated or derived from other information.
   This includes the X and Y values of the clicked coordinate, the area and perimeter in map units
   for polygons, the length in map units for lines, and the feature ids.
-* Data attributes: This is the list of attribute fields and values for the feature the has been clicked.
+* Data attributes: This is the list of attribute fields and values for the feature that has been clicked.
 
 .. _figure_identify:
 
@@ -445,7 +445,7 @@ The :guilabel:`View` can be set as 'Tree', 'Table' or 'Graph'.
 
 The identify tool allows you to |checkbox|:guilabel:`auto open a form`.
 If checked, each time a single feature is identified QGIS will open a form
-showing its attributes. This is a handy way to quickly edit feature's attributes.
+showing its attributes. This is a handy way to quickly edit a feature's attributes.
 
 
 Other functions can be found in the context menu of the identified item. For
@@ -454,7 +454,7 @@ example, from the context menu you can:
 * View the feature form
 * Zoom to feature
 * Copy feature: Copy all feature geometry and attributes
-* Toggle feature selection: adds identified feature to selection
+* Toggle feature selection: Adds identified feature to selection
 * Copy attribute value: Copy only the value of the attribute that you click on
 * Copy feature attributes: Copy the attributes of the feature
 * Clear result: Remove results in the window
