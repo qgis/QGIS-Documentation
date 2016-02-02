@@ -145,7 +145,8 @@ This group contains functions to handle conditional checks in expressions.
  Function            Description
 ===================  ==========================================================
  CASE                Evaluates multiple expressions and returns a result
- CASE ELSE           Evaluates multiple expressions and returns a result
+ CASE ELSE           Evaluates multiple expressions and returns a result when the
+                     conditions aren't met
  coalesce            Returns the first non-NULL value from the expression list
  if                  Tests a condition and returns a different result
                      depending on the conditional check
