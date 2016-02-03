@@ -5,13 +5,14 @@
 DB Manager Plugin
 =================
 
-The DB Manager Plugin is officially part of the |qg| core and is intended to replace the
-SPIT Plugin and, additionally, to integrate all other
-database formats supported by |qg| in one user interface. The |icon_dbmanager|
-:sup:`DB Manager` Plugin provides several features. You can drag layers from the
-|qg| Browser into the DB Manager, and it will import your layer into your spatial
-database. You can drag and drop tables between spatial databases and they will
-get imported.
+The DB Manager Plugin is officially part of the QGIS core and is intended to replace the
+SPIT Plugin and, additionally, to integrate other spatial database formats supported by QGIS
+(PostGIS, SpatiaLite, Geopackage, Oracle Spatial, Virtual layers) in one user interface.
+The |icon_dbmanager| :sup:`DB Manager` Plugin provides several features.
+You can drag layers from the QGIS Browser into the DB Manager, and it will import your layer
+into your spatial database. You can drag and drop tables between spatial databases
+and they will get imported.
+
 .. _figure_db_manager:
 
 .. only:: html
@@ -21,7 +22,7 @@ get imported.
 .. figure:: /static/user_manual/plugins/db_manager.png
    :align: center
 
-   DB Manager dialog |nix|
+   DB Manager dialog
 
 
 The :menuselection:`Database` menu allows you to connect to an existing database, to
@@ -39,13 +40,13 @@ from one schema to another. As further functionality, you can perform a VACUUM a
 then an ANALYZE for each selected table. Plain VACUUM simply reclaims space and
 makes it available for reuse. ANALYZE updates statistics to determine the
 most efficient way to execute a query. Finally, you can import layers/files, if they
-are loaded in |qg| or exist in the file system. And you can export database tables
+are loaded in QGIS or exist in the file system. And you can export database tables
 to shape with the Export File feature.
 
-The :guilabel:`Tree` window lists all existing databases supported by |qg|. With
+The :guilabel:`Tree` window lists all existing databases supported by QGIS. With
 a double-click, you can connect to the database. With the right mouse button, you
 can rename and delete existing schemas and tables. Tables can also be added to
-the |qg| canvas with the context menu.
+the QGIS canvas with the context menu.
 
 If connected to a database, the **main** window of the DB Manager offers three
 tabs. The :guilabel:`Info` tab provides information about the table and its
@@ -59,7 +60,7 @@ Working with the SQL Window
 
 You can also use the DB Manager to execute SQL queries against your
 spatial database and then view the spatial output for queries by adding the
-results to |qg| as a query layer. It is possible to highlight a portion of the SQL
+results to QGIS as a query layer. It is possible to highlight a portion of the SQL
 and only that portion will be executed when you press :kbd:`F5` or click the 
 :guilabel:`Execute (F5)` button.
 
@@ -72,7 +73,7 @@ and only that portion will be executed when you press :kbd:`F5` or click the
 .. figure:: /static/user_manual/plugins/db_manager_sql.png
    :align: center
 
-   Executing SQL queries in the DB Manager SQL window |nix|
+   Executing SQL queries in the DB Manager SQL window
 
 
 
