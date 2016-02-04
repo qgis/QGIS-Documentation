@@ -5,8 +5,8 @@
 DB Manager Plugin
 =================
 
-The DB Manager Plugin is officially part of the QGIS core and is intended to replace the
-SPIT Plugin and, additionally, to integrate other spatial database formats supported by QGIS
+The DB Manager Plugin is officially part of the QGIS core and is intended to be the main tool
+to integrate and manage spatial database formats supported by QGIS
 (PostGIS, SpatiaLite, Geopackage, Oracle Spatial, Virtual layers) in one user interface.
 The |icon_dbmanager| :sup:`DB Manager` Plugin provides several features.
 You can drag layers from the QGIS Browser into the DB Manager, and it will import your layer
