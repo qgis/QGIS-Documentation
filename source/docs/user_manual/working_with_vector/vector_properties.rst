@@ -406,9 +406,16 @@ for the rivers layer of the QGIS sample dataset.
    click to change color, transparency, size, or width of selected
    entries.
 
+.. tip:: **Match categories to symbol name**
+
+   In the [Advanced] menu, under the classes, you can choose one of the two 
+   first actions to match symbol name to a category name in your classification.
+   *Matched to saved symbols* match category name with a symbol name from your 
+   *Style Manager*. *Match to symbols from file* match category name to a
+   symbol name from an external file.
+
 .. index:: Graduated_Renderer, Renderer_Graduated
 .. index:: Natural_Breaks_(Jenks), Pretty_Breaks, Equal_Interval, Quantile
-
 
 Graduated Renderer
 ..................
@@ -430,9 +437,16 @@ to select:
 * The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen|
   :guilabel:`Set column expression` function)
 * The symbol (using the Symbol selector dialog)
-* The colors (using the color Ramp list)
+* The legend format and the precision
+* The method to use to change the symbol: color or size
+* The colors (using the color Ramp list) if the color method is selected
+* The size (using the size domain and its unit
 
-Additionally, you can specify the number of classes and also the mode for
+Then you can use the Histogram tab which shows an interactive histogram of the 
+values from the assigned field or expression. Class breaks can be moved or 
+added using the histogram widget.
+
+Back to the Classes tab, you can specify the number of classes and also the mode for
 classifying features within the classes (using the Mode list). The available
 modes are:
 
@@ -1292,7 +1306,9 @@ can also be used.
 You can move up and down any row with click and drag, sorting how atributes
 are displayed. You can also change the label in the 'Legend' column
 or the attibute color by double-clicking the item.
-This label is the default text displayed in the legend of the print composer.
+
+This label is the default text displayed in the legend of the print composer 
+or of the layer tree.
 
 .. _figure_diagrams_1:
 
