@@ -2,7 +2,7 @@
 
 .. _image_item:
 
-The Image item
+The Image Item
 ===============
 
 To add an image, click the |mActionAddImage| :sup:`Add image` icon and drag a rectangle onto the Composer
@@ -22,7 +22,7 @@ The image :guilabel:`Item Properties` tab provides the following functionalities
 
    **Figure Composer image 1:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_image1.png
+.. figure:: /static/user_manual/print_composer/image_mainproperties.png
    :align: center
 
    Image Item properties Tab |nix|
@@ -87,5 +87,3 @@ you can now select one of the north arrow from the list as displayed in figure_c
    North arrows available for selection in provided SVG library
 
 
-.. index::
-   single:Map_Legend

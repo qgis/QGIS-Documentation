@@ -2,7 +2,7 @@
 
 .. index:: HTML_Frame
 
-The HTML frame item
+The HTML Frame Item
 ====================
 
 It is possible to add a frame that displays the contents of a website or even create and style
@@ -19,7 +19,7 @@ and customize the appearance in the :guilabel:`Item Properties` tab
 
    **Figure Composer HTML 1:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_html1.png
+.. figure:: /static/user_manual/print_composer/html_properties.png
    :align: center
 
    HTML frame, the item properties Tab |nix|
@@ -40,7 +40,7 @@ provides the following functionalities (see figure_composer_html_2_):
 
    **Figure Composer HTML 2:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_html2.png
+.. figure:: /static/user_manual/print_composer/html_source.png
    :align: center
 
    HTML frame, the HTML Source properties |nix|
@@ -74,7 +74,7 @@ provides the following functionalities (see figure_composer_html_3_):
 
    **Figure Composer HTML 3:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_html3.png
+.. figure:: /static/user_manual/print_composer/html_frame.png
    :align: center
 
    HTML frame, the Frames properties |nix|
@@ -116,7 +116,7 @@ the HTML frame :guilabel:`Item Properties` tab provides the following functional
 
    **Figure Composer HTML 4:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_html4.png
+.. figure:: /static/user_manual/print_composer/html_breaks.png
    :align: center
 
    HTML frame, Use smart page breaks and User stylesheet properties |nix|
@@ -142,6 +142,3 @@ the HTML frame :guilabel:`Item Properties` tab provides the following functional
      }
 
 * Use the **[Update HTML]** button to see the result of the stylesheet settings.
-
-
-.. index:: Elements_Alignment

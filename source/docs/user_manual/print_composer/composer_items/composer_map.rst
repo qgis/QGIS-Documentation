@@ -2,7 +2,7 @@
 
 .. index:: composer_map
 
-The Map item
+The Map Item
 =============
 
 Click on the |mActionAddMap| :sup:`Add new map` toolbar button in the Print
@@ -23,12 +23,15 @@ tab:
 
 You can resize the map element by clicking on the |mActionSelect|
 :sup:`Select/Move item` button, selecting the element, and dragging one of the
-blue handles in the corner of the map.  This button also helps to move the map to another place. Select the item and while holding the left mouse button, move to the new place and release the mouse button.
+blue handles in the corner of the map.  This button also helps to move the map to another place. 
+Select the item and while holding the left mouse button, move to the new place and release the mouse button.
 After you have found the right place for an item, you can lock the item position within the Print Composer
 canvas. Select the map item and use the toolbar |locked| 
 :sup:`Lock Selected Items` or the :menuselection:`Items` tab to Lock the 
 item. A locked item can only be selected using the :menuselection:`Items` 
-tab. Once selected you can use the :menuselection:`Items` tab to unlock individual items. The |unlocked|:sup:`Unlock All Items` icon will unlock all locked composer items.With the map selected, you can now adapt
+tab. Once selected you can use the :menuselection:`Items` tab to unlock individual items. 
+The |unlocked|:sup:`Unlock All Items` icon will unlock all locked composer items. 
+With the map selected, you can now adapt
 more properties in the map :guilabel:`Item Properties` tab.
 
 To move layers within the map element, select the map element, click the
@@ -49,7 +52,7 @@ following functionalities (see figure_composer_map_1_):
 
    **Figure Composer Map 1:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_map1.png
+.. figure:: /static/user_manual/print_composer/map_mainproperties.png
    :align: center
    
    Map Item properties Tab |nix|
@@ -92,7 +95,7 @@ functionalities (see figure_composer_map_2_):
 
    **Figure Composer Map 2:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_map2.png
+.. figure:: /static/user_manual/print_composer/map_extents.png
    :align: center
 
    Map Extents Dialog |nix|
@@ -143,7 +146,7 @@ map element. Expand this option to provide a lot of configuration options, see F
 
    **Figure Composer Map 4:**
 
-.. figure:: /static/user_manual/print_composer/draw_grid.png
+.. figure:: /static/user_manual/print_composer/map_draw_grid.png
    :align: center
 
    Draw Grid Dialog |nix|
@@ -151,7 +154,7 @@ map element. Expand this option to provide a lot of configuration options, see F
 As grid type, you can specify to use a 'Solid', 'Cross', 'Markers' or 'Frame and annotations only'.
 'Frame and annotations only' is especially useful when working with rotated maps or reprojected
 grids. In the divisions section of the Grid Frame Dialog mentioned below you then have a corresponding setting.
-Symbology of the grid and its rendering mode can be chosen. See :ref:`Rendering_mode`.
+Symbology of the grid and its rendering mode can be chosen. See :ref:`Composer_Rendering_Mode`.
 Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
 and the width used for the cross or line grid type.
 
@@ -161,7 +164,7 @@ and the width used for the cross or line grid type.
 
    **Figure Composer Map 5:**
 
-.. figure:: /static/user_manual/print_composer/grid_frame.png
+.. figure:: /static/user_manual/print_composer/map_grid_frame.png
    :align: center
 
    Grid Frame Dialog |nix|
@@ -191,7 +194,7 @@ and the width used for the cross or line grid type.
 
    **Figure Composer map 6:**
 
-.. figure:: /static/user_manual/print_composer/grid_draw_coordinates.png
+.. figure:: /static/user_manual/print_composer/map_grid_draw_coordinates.png
    :align: center
 
    Grid Draw Coordinates dialog |nix|
@@ -209,7 +212,7 @@ following functionalities:
 
    **Figure Composer Map 7:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_map4.png
+.. figure:: /static/user_manual/print_composer/map_overview.png
    :align: center
 
    Map Overviews Dialog |nix|

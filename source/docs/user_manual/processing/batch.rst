@@ -16,7 +16,7 @@ To execute an algorithm as a batch process, right-click on its name in the toolb
 and select the :guilabel:`Execute as batch process` option in the pop-up menu
 that will appear.
 
-.. _figure_processing_1:
+.. _figure_processing_batch_start:
 
 .. only:: html
 
@@ -27,6 +27,19 @@ that will appear.
 
    Batch Processing Right Click |win|
 
+If you have the execution dialog of the algorithm open, you can also start the batch processing interface from there, clicking on the :guilabel:`Run as batch process...` button.
+
+.. _figure_processing_batch_start2:
+
+.. only:: html
+
+   **Figure Processing 27:**
+
+.. figure:: /static/user_manual/processing/batch_processing_params_dialog.png
+   :align: center
+
+   Batch Processing From Algorithm Dialog |win|
+
 The parameters table
 --------------------
 
@@ -36,11 +49,11 @@ a single value for each parameter, but a set of them instead, one for each time
 the algorithm has to be executed. Values are introduced using a table like the
 one shown next.
 
-.. _figure_processing_2:
+.. _figure_processing_bath_parameters:
 
 .. only:: html
 
-   **Figure Processing 27:**
+   **Figure Processing 28:**
 
 .. figure:: /static/user_manual/processing/batch_processing.png
    :align: center
@@ -64,23 +77,17 @@ Filling the parameters table
 For most parameters, setting the value is trivial. Just type the value or select
 it from the list of available options, depending on the parameter type.
 
-The main differences are found for parameters representing layers or tables, and
-for output file paths. Regarding input layers and tables, when an algorithm is
-executed as part of a batch process, those input data objects are taken directly
-from files, and not from the set of them already opened in |qg|. For this reason,
-any algorithm can be executed as a batch process, even if no data objects at all
-are opened and the algorithm cannot be run from the toolbox.
-
 Filenames for input data objects are introduced directly typing or, more
-conveniently, clicking on the |browsebutton| button on the right hand of the cell,
-which shows a typical file chooser dialog. Multiple files can be selected at once.
+conveniently, clicking on the |browsebutton| button on the right hand of the cell, wich will show a context menu with two option: one for selecting from the layers currently opened and another to secet from the filesystem. This second option, when selected, shows a typical file chooser dialog. Multiple files can be selected at once.
 If the input parameter represents a single data object and several files are
 selected, each one of them will be put in a separate row, adding new ones if
 needed. If the parameter represents a multiple input, all the selected files will be added
 to a single cell, separated by semicolons (``;``).
 
+Layer identifiers can be directly typed in the parameter teext box. You can enter the full path to a file or the name of a layer that is currently loaded in the current QGIS project. The name of the layer will be automatically resolved to its source path. Notice that, if several layers have the same name, this might cause unexpected results due to ambiguity.
+
 Output data objects are always saved to a file and, unlike when executing an
-algorithm from the toolbox, saving to a temporary file is not permitted. You can
+algorithm from the toolbox, saving to a temporary file or database is not permitted. You can
 type the name directly or use the file chooser dialog that appears when clicking
 on the accompanying button.
 
@@ -91,7 +98,7 @@ other cells in the same column (same parameter).
 
 .. only:: html
 
-   **Figure Processing 28:**
+   **Figure Processing 29:**
 
 .. figure:: /static/user_manual/processing/batch_processing_save.png
    :align: center
@@ -112,7 +119,7 @@ particularly useful for naming output data objects according to input ones.
 
 .. only:: html
 
-   **Figure Processing 29:**
+   **Figure Processing 30:**
 
 .. figure:: /static/user_manual/processing/batch_processing_filepath.png
    :align: center

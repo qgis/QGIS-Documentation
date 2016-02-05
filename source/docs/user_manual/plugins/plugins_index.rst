@@ -17,6 +17,8 @@ Plugins
    plugins_evis
    plugins_ftools
    plugins_gdaltools
+   plugins_geometry_checker
+   plugins_geometry_snapper
    plugins_georeferencer
    plugins_heatmap
    plugins_interpolation

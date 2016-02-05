@@ -207,8 +207,7 @@ classes under the ``processing/tools`` package, and also in the example scripts
 provided with |qg|.
 
 * ``getObject(obj)``: Returns a |qg| object (a layer or table) from the passed
-  object, which can be a filename or the name of the object in the |qg| Table of
-  Contents.
+  object, which can be a filename or the name of the object in the |qg| Layers List
 * ``values(layer, fields)``: Returns the values in the attributes table of a
   vector layer, for the passed fields. Fields can be passed as field names or as
   zero-based field indices. Returns a dict of lists, with the passed field

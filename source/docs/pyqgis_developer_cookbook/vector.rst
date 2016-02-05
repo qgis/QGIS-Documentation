@@ -434,25 +434,25 @@ numbers are not ordered or indexed. The only way to find the telephone number
 of a given person is to read from the beginning until you find it.
 
 Spatial indexes are not created by default for a QGIS vector layer, but you can
-create them easily. This is what you have to do.
+create them easily. This is what you have to do:
 
-#. create spatial index --- the following code creates an empty index
+* create spatial index --- the following code creates an empty index
 
-   ::
+::
 
    index = QgsSpatialIndex()
 
-#. add features to index --- index takes :class:`QgsFeature` object and adds it
+* add features to index --- index takes :class:`QgsFeature` object and adds it
    to the internal data structure. You can create the object manually or use
    one from previous call to provider's :func:`nextFeature()`
 
-   ::
+::
 
    index.insertFeature(feat)
 
-#. once spatial index is filled with some values, you can do some queries
+* once spatial index is filled with some values, you can do some queries
 
-   ::
+::
 
     # returns array of feature IDs of five nearest features
     nearest = index.nearestNeighbor(QgsPoint(25.4, 12.7), 5)
@@ -474,7 +474,7 @@ There are two possibilities how to export a vector layer:
 
 * from an instance of :class:`QgsVectorLayer`
 
-  ::
+::
 
     error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_shapes.shp", "CP1250", None, "ESRI Shapefile")
 
@@ -500,7 +500,7 @@ There are two possibilities how to export a vector layer:
 
 * directly from features
 
-  ::
+::
 
     # define fields for feature attributes. A QgsFields object is needed
     fields = QgsFields()

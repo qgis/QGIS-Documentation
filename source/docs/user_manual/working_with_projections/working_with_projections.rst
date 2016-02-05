@@ -69,7 +69,7 @@ sessions.
 .. figure:: /static/user_manual/working_with_projections/crsdialog.png
    :align: center
 
-   CRS tab in the |qg| Options Dialog |nix|
+   CRS tab in the |qg| Options Dialog
 
 When you use layers that do not have a CRS, you need to define how |qg|
 responds to these layers. This can be done globally or project-wide in the
@@ -85,7 +85,7 @@ The options shown in figure_projection_1_ are:
 If you want to define the coordinate reference system for a certain layer
 without CRS information, you can also do that in the :guilabel:`General` tab
 of the raster and vector properties dialog (see :ref:`label_generaltab` for rasters and :ref:`vectorgeneralmenu` for vectors). If your layer already has a CRS
-defined, it will be displayed as shown in :ref:`figure_vector_properties_1`.
+defined, it will be displayed as shown in :ref:`figure_vector_general_1`.
 
 .. tip:: **CRS in the Map Legend**
 
@@ -133,7 +133,7 @@ layers will be OTF projected to the CRS shown next to the icon.
 .. figure:: /static/user_manual/working_with_projections/projectionDialog.png
    :align: center
 
-   Project Properties Dialog |nix|
+   Project Properties Dialog
 
 The :guilabel:`CRS` tab of the :guilabel:`Project Properties` dialog contains
 five important components, as shown in Figure_projection_2_ and described below:
@@ -159,7 +159,7 @@ five important components, as shown in Figure_projection_2_ and described below:
 .. tip:: **Project Properties Dialog**
 
    If you open the :guilabel:`Project Properties` dialog from the
-   :menuselection:`Project` menu, you must click on the :guilabel:`CRS` 
+   :menuselection:`Project` menu, you must click on the :guilabel:`CRS`
    tab to view the CRS settings.
 
    Opening the dialog from the |geographic| :sup:`CRS status` icon will
@@ -187,7 +187,7 @@ database also contains your spatial bookmarks and other custom data.
 .. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
    :align: center
 
-   Custom CRS Dialog |nix|
+   Custom CRS Dialog
 
 .. index:: Proj.4
 
@@ -231,7 +231,7 @@ available. |qg| allows you to define the transformation used otherwise
 In the :guilabel:`CRS` tab under :menuselection:`Settings -->` |mActionOptions|
 :guilabel:`Options` you can:
 
-* set |qg| to ask you when it needs define a transformation using |radiobuttonon| :guilabel:`Ask for datum transformation when no default is defined` 
+* set |qg| to ask you when it needs define a transformation using |radiobuttonon| :guilabel:`Ask for datum transformation when no default is defined`
 * edit a list of user defaults for transformations.
 
 |qg| asks which transformation to use by opening a dialogue box

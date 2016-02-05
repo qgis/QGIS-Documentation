@@ -16,6 +16,7 @@ This is a powerful way to share geographical information produced with |qg| that
 
    first_steps
    overview_composer
+   setting_composition
    managing_composer
    composer_items/index
    atlas_generation

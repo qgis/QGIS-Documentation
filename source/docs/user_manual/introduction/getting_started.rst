@@ -332,6 +332,8 @@ default for new projects (see section :ref:`gui_options`). |qg| can save the
 state of your workspace into a project file using the menu options
 :menuselection:`Project -->` |mActionFileSave| :menuselection:`Save`
 or :menuselection:`Project -->` |mActionFileSaveAs| :menuselection:`Save As...`.
+If the loaded project file on disk was meanwhile changed, |qg| will ask you if
+you want to overwrite the changes into the project file.
 
 Load saved projects into a |qg| session using :menuselection:`Project -->`
 |mActionFileOpen| :menuselection:`Open...`,

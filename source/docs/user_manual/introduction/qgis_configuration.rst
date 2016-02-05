@@ -32,7 +32,7 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
 .. figure:: /static/user_manual/introduction/panels_and_toolbars.png
    :align: center
 
-   The Panels and Toolbars menu |nix|
+   The Panels and Toolbars menu
 
 .. index::
    single:Map overview
@@ -534,7 +534,7 @@ installed that you never use and that are filling your screen.
 .. figure:: /static/user_manual/introduction/customization.png
    :align: center
 
-   The Customization dialog |nix|
+   The Customization dialog
 
 |qg| Customization is divided into five groups. In |checkbox| :guilabel:`Menus`,
 you can hide entries in the Menu bar. In |checkbox| :guilabel:`Panels`, you

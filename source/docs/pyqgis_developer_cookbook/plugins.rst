@@ -14,8 +14,8 @@ language.
 Python plugins are listed together with C++ plugins in QGIS plugin manager.
 They are searched for in these paths:
 
-* UNIX/Mac: :file:`~/.qgis/python/plugins` and :file:`(qgis_prefix)/share/qgis/python/plugins`
-* Windows: :file:`~/.qgis/python/plugins` and :file:`(qgis_prefix)/python/plugins`
+* UNIX/Mac: :file:`~/.qgis2/python/plugins` and :file:`(qgis_prefix)/share/qgis/python/plugins`
+* Windows: :file:`~/.qgis2/python/plugins` and :file:`(qgis_prefix)/python/plugins`
 
 Home directory (denoted by above :file:`~`) on Windows is usually something
 like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier) or
@@ -143,7 +143,7 @@ description            True      short text which describes the plugin, no HTML 
 about                  True      longer text which describes the plugin in details, no HTML allowed
 version                True      short string with the version dotted notation
 author                 True      author name
-email                  True      email of the author, will *not* be shown on the web site
+email                  True      email of the author, not shown in the QGIS plugin manager or in the website unless by a registered logged in user, so only visible to other plugin authors and plugin website administrators
 changelog              False     string, can be multiline, no HTML allowed
 experimental           False     boolean flag, `True` or `False`
 deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin and not just to the uploaded version
@@ -365,11 +365,21 @@ You can see that in :func:`initGui()` we've used an icon from the resource file
 It is good to use a prefix that will not collide with other plugins or any
 parts of QGIS, otherwise you might get resources you did not want. Now you
 just need to generate a Python file that will contain the resources. It's
-done with :command:`pyrcc4` command
+done with :command:`pyrcc4` command:
 
 ::
 
   pyrcc4 -o resources.py resources.qrc
+  
+.. note::
+
+    In Windows environments, attempting to run the :command:`pyrcc4` from 
+    Command Prompt or Powershell will probably result in the error "Windows 
+    cannot access the specified device, path, or file [...]".  The easiest 
+    solution is probably to use the OSGeo4W Shell but if you are comfortable 
+    modifying the PATH environment variable or specifiying the path to the 
+    executable explicitly you should be able to find it at 
+    :file:`<Your QGIS Install Directory>\bin\pyrcc4.exe`.
 
 And that's all... nothing complicated :)
 
@@ -390,7 +400,7 @@ The documentation for the plugin can be written as HTML help files. The
 :mod:`qgis.utils` module provides a function, :func:`showPluginHelp` which
 will open the help file browser, in the same way as other QGIS help.
 
-The :func:`showPluginHelp`` function looks for help files in the same
+The :func:`showPluginHelp` function looks for help files in the same
 directory as the calling module. It will look for, in turn,
 :file:`index-ll_cc.html`, :file:`index-ll.html`, :file:`index-en.html`,
 :file:`index-en_us.html` and :file:`index.html`, displaying whichever it finds

@@ -28,6 +28,7 @@ QGIS Training Manual
    spatial_databases/index
    processing/index
    databases/index
+   python/index
    appendix/contribute
 
    answers/answers

@@ -103,7 +103,8 @@ Therefore, go to the menu :menuselection:`Plugins -->` |mActionShowPluginManager
 :menuselection:`Manage Plugins`, select |checkbox| :guilabel:`GRASS` and click
 **[OK]**.
 
-The following main features are provided with the toolbar menu when you start the GRASS plugin:
+The following main features are provided with the menu `Plugins -->`:menuselection:`GRASS`
+when you start the GRASS plugin:
 
 * |grass_open_mapset| :sup:`Open Mapset`
 * |grass_new_mapset| :sup:`New Mapset`
@@ -111,6 +112,9 @@ The following main features are provided with the toolbar menu when you start th
 * |grass_tools| :sup:`Open GRASS Tools`
 * |grass_region| :sup:`Display Current GRASS Region`
 * |mActionOptions| :sup:`GRASS Options`
+
+For fast access, the `Open GRASS Tools` and `Display Current GRASS Region` features are also
+available in the GRASS toolbar menu.
 
 Opening GRASS mapset
 ====================
@@ -165,7 +169,7 @@ Therefore, we use the landcover raster map :file:`landcover.img` and the vector 
 file :file:`lakes.gml` from the |qg| 'Alaska' dataset (see :ref:`label_sampledata`).
 
 #. Start |qg| and make sure the GRASS plugin is loaded.
-#. In the GRASS toolbar, click the |grass_open_mapset| :sup:`Open MAPSET` icon
+#. In the GRASS menu, click the |grass_open_mapset| :sup:`Open MAPSET` icon
    to bring up the :guilabel:`MAPSET` wizard.
 #. Select as GRASS database the folder :file:`grassdata` in the |qg|
    Alaska dataset, as :file:`LOCATION` 'alaska', as :file:`MAPSET` 'demo' and
@@ -213,7 +217,7 @@ useful to download and install the dataset on your computer (see :ref:`label_sam
 #. Start |qg| and make sure the GRASS plugin is loaded.
 #. Visualize the :file:`alaska.shp` shapefile (see section
    :ref:`vector_load_shapefile`) from the |qg| Alaska dataset (see :ref:`label_sampledata`).
-#. In the GRASS toolbar, click on the |grass_new_mapset| :sup:`New mapset` icon
+#. In the GRASS menu, click on the |grass_new_mapset| :sup:`New mapset` icon
    to bring up the :guilabel:`MAPSET` wizard.
 #. Select an existing GRASS database (GISDBASE) folder :file:`grassdata`, or create
    one for the new :file:`LOCATION` using a file manager on your computer. Then
@@ -283,7 +287,7 @@ coordinate values and the currently selected raster resolution (see Neteler & Mi
 2008 in :ref:`literature_and_web`, and section :ref:`sec_grass_region`).
 
 #. Start |qg| and make sure the GRASS plugin is loaded.
-#. In the GRASS toolbar, click on the |grass_new_mapset| :sup:`New mapset` icon
+#. In the GRASS menu, click on the |grass_new_mapset| :sup:`New mapset` icon
    to bring up the :guilabel:`MAPSET` wizard.
 #. Select the GRASS database (GISDBASE) folder :file:`grassdata` with the
    :file:`LOCATION` 'alaska', where we want to add a further :file:`MAPSET`
@@ -546,7 +550,8 @@ the :file:`$LOCATION/$MAPSET/WIND` file, and it defines north, south, east and
 west bounds, number of columns and rows, horizontal and vertical spatial resolution.
 
 It is possible to switch on and off the visualization of the GRASS region in the |qg|
-canvas using the |grass_region| :sup:`Display current GRASS region` button.
+canvas using the |grass_region| :sup:`Display current GRASS region` button at the
+the GRASS toolbar.
 
 .. index::
    single:GRASS;region display
@@ -586,7 +591,7 @@ need to be written to the currently selected :file:`LOCATION` and :file:`MAPSET`
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_moduletree.png
    :align: center
 
-   GRASS Toolbox and Module Tree |nix|
+   GRASS Toolbox and Module Tree
 
 .. _grass_modules:
 
@@ -627,7 +632,7 @@ further module-specific parameters to run the module.
 .. figure:: /static/user_manual/grass_integration/grass_module_option.png
    :align: center
 
-   GRASS Toolbox Module Options |nix|
+   GRASS Toolbox Module Options
 
 The provided module parameters are often not complete to keep the dialog simple.
 If you want to use further module parameters and flags, you need to start the
@@ -651,7 +656,7 @@ to switch to the GRASS shell.
 .. figure:: /static/user_manual/grass_integration/grass_module_output.png
    :align: center
 
-   GRASS Toolbox Module Output |nix|
+   GRASS Toolbox Module Output
 
 The :guilabel:`Output` tab provides information about the output status of the
 module. When you click the **[Run]** button, the module switches to the
@@ -669,7 +674,7 @@ all works well, you will finally see a ``Successfully finished`` message.
 .. figure:: /static/user_manual/grass_integration/grass_module_manual.png
    :align: center
 
-   GRASS Toolbox Module Manual |nix|
+   GRASS Toolbox Module Manual
 
 The :guilabel:`Manual` tab shows the HTML help page of the GRASS module. You can
 use it to check further module parameters and flags or to get a deeper knowledge
@@ -762,9 +767,8 @@ causing it to load even more slowly.
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_vgeneralize.png
    :align: center
-   :width: 35em
 
-   GRASS module v.generalize to smooth a vector map |nix|
+   GRASS module v.generalize to smooth a vector map
 
 .. index::
    single:GRASS;toolbox
@@ -788,7 +792,7 @@ lighted; the slopes facing away from the sun (in shadow) are darkened.
 * Begin this example by loading the ``gtopo30`` elevation raster. Start the GRASS
   Toolbox, and under the Raster category, double-click to open :menuselection:`Spatial analysis
   --> Terrain analysis`.
-* Then click **r.shaded.relief** to open the module.
+* Then click **r.relief** (or **r.shaded.relief** if using GRASS 6.4) to open the module.
 * Change the :guilabel:`azimuth angle` |selectnumber| 270 to 315.
 * Enter ``gtopo30_shade`` for the new hillshade raster, and click **[Run**].
 * When the process completes, add the hillshade raster to the map. You should see
@@ -809,7 +813,7 @@ The GRASS plugin in |qg| is designed for users who are new to GRASS and not
 familiar with all the modules and options. As such, some modules in the Toolbox
 do not show all the options available, and some modules do not appear at all.
 The GRASS shell (or console) gives the user access to those additional GRASS
-modules that do not appear in the Toolbox tree, and also to some additional
+modules that do not appear in the Toolbox tree and also to some additional
 options to the modules that are in the Toolbox with the simplest default
 parameters. This example demonstrates the use of an additional option in the
 **r.shaded.relief** module that was shown above.
@@ -823,15 +827,15 @@ parameters. This example demonstrates the use of an additional option in the
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shell.png
    :align: center
 
-   The GRASS shell, r.shaded.relief module |nix|
+   The GRASS shell, r.relief module options
 
-The module **r.shaded.relief** can take a parameter ``zmult``, which multiplies
-the elevation values relative to the X-Y coordinate units so that the hillshade
-effect is even more pronounced.
+The module **r.relief** can take a parameter ``zscale`` (or ``zmult``
+if using GRASS 6.4), which multiplies the elevation values relative to
+the X-Y coordinate units so that the hillshade effect is even more pronounced.
 
 * Load the ``gtopo30`` elevation raster as above, then start the GRASS Toolbox
   and click on the GRASS shell. In the shell window, type the command
-  ``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3`` and
+  ``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zscale=3`` and
   press **[Enter]**.
 * After the process finishes, shift to the :guilabel:`Browse` tab and double-click
   on the new ``gtopo30_shade2`` raster to display it in |qg|.
@@ -848,9 +852,8 @@ effect is even more pronounced.
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shadedrelief.png
    :align: center
-   :width: 35em
 
-   Displaying shaded relief created with the GRASS module r.shaded.relief |nix|
+   Displaying shaded relief created with the GRASS module r.relief
 
 
 Raster statistics in a vector map

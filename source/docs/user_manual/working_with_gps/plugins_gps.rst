@@ -60,7 +60,7 @@ sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See section
 .. figure:: /static/user_manual/working_with_gps/loadgpx.png
    :align: center
 
-   The *GPS Tools* dialog window |nix|
+   The *GPS Tools* dialog window
 
 Use the **[Browse...]** button to select the GPX file, then use the checkboxes
 to select the feature types you want to load from that GPX file.

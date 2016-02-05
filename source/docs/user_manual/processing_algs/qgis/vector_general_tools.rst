@@ -33,6 +33,72 @@ Console usage
 See also
 ........
 
+Execute SQL
+-----------
+
+Description
+...........
+
+This algorithm allows to execute an SQL query on a set of input
+vector layers thanks to the virtual layer provider.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  <put parameter description here>
+
+``Additional data sources`` [vector] 
+data sources that have to be loaded for reference in the SQL query.
+Any layer already loaded in QGIS is available in the query through its name or id. But for use of this
+algorithm in a script, input sources should be set here. Each input data source can be referred to as
+input1 ... inputN as layer names in the query.
+
+``Query`` [string]
+the SQL query. SQLite, Spatialite and QGIS expression functions can be used here.
+
+``Unique identifier field`` [string]
+optional parameter to specify which field of the query should be used as a unique id.
+
+``Geometry field`` [string]
+optional parameter to specify which field should be considered as the geometry
+field, if one wants to avoid possibly slow autodetection.
+
+``Geometry type`` [selection]
+optional parameter to specify the type of the geometry if one wants to avoid possibly slow autodetection.
+
+Geometry types:
+
+  * 0 --- Autodetect
+  * 1 --- NoGeometry
+  * 2 --- Point
+  * 3 --- LineString
+  * 4 --- Polygon
+  * 5 --- MultiPoint
+  * 6 --- MultiLineString
+  * 7 --- MultiPolygon
+
+``Geometry CRS`` [crs]
+optional parameter to specify the coordinate system of the geometry
+if one wants to avoid possibly slow autodetection.
+
+Outputs
+.......
+
+``Output`` [vector]
+Output vector
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:executesql', inputs, query, uid, geom_field, geom_type, crs)
+
+See also
+........
+
+
 Join attributes by location
 ---------------------------
 

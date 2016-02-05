@@ -3,6 +3,9 @@
 Editing
 =======
 
+.. contents::
+   :local:
+
 |qg| supports various capabilities for :index:`editing` OGR,
 SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
 
@@ -517,7 +520,7 @@ Advanced digitizing
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
 | |mActionSplitParts|              | Split Parts                           | |mActionMergeFeatures|      | Merge Selected Features |
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionMergeFeatureAttributes|  | Merge Attributes of Selected Features | |mActionRotatePointSymbols| | Rotate Point Symbols    |
+| |mActionMergeFeatAttributes|     | Merge Attributes of Selected Features | |mActionRotatePointSymbols| | Rotate Point Symbols    |
 +----------------------------------+---------------------------------------+-----------------------------+-------------------------+
 
 Table Advanced Editing: Vector layer advanced editing toolbar
@@ -700,11 +703,11 @@ a multipolygon will be created.
 Merge attributes of selected features
 .....................................
 
-The |mActionMergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` tool
+The |mActionMergeFeatAttributes| :sup:`Merge Attributes of Selected Features` tool
 allows you to :index:`merge attributes of features` with common boundaries and
 attributes without merging their boundaries.
 First, select several features at once. Then
-press the |mActionMergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` button.
+press the |mActionMergeFeatAttributes| :sup:`Merge Attributes of Selected Features` button.
 Now |qg| asks you which attributes are to be applied to all selected objects.
 As a result, all selected objects have the same attribute entries.
 

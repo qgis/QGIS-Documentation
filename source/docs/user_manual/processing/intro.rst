@@ -16,7 +16,7 @@ There are four basic elements in the framework GUI, which are used to run
 algorithms for different purposes. Choosing one tool or another will depend on
 the kind of analysis that is to be performed and the particular characteristics
 of each user and project. All of them (except for the batch processing interface,
-which is called from the toolbox, as we will see) can be accessed from the
+which is called from the toolbox or the algorithm execution dialog, as we will see) can be accessed from the
 :menuselection:`Processing` menu item. (You will see more than four entries. The
 remaining ones are not used to execute algorithms and will be explained later in
 this chapter.)

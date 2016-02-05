@@ -17,6 +17,7 @@ message bar with the following code
 
 ::
 
+  from qgis.gui import QgsMessageBar
   iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=QgsMessageBar.CRITICAL)
 
 

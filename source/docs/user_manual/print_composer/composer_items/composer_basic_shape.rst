@@ -16,7 +16,7 @@ circle or triangle.
 
    **Figure Composer Basic Shape:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_shape.png
+.. figure:: /static/user_manual/print_composer/shape_properties.png
    :align: center
 
    Shape Item properties Tab |nix|

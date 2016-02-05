@@ -3,6 +3,9 @@
 Supported Data Formats
 ======================
 
+.. contents::
+   :local:
+
 |qg| uses the OGR library to read and write vector data formats,
 including ESRI shapefiles, MapInfo and MicroStation file formats, AutoCAD DXF,
 PostGIS, SpatiaLite, Oracle Spatial and MSSQL Spatial databases, and many more.
@@ -69,7 +72,7 @@ This will bring up a new window (see figure_vector_1_).
 .. figure:: /static/user_manual/working_with_vector/addvectorlayerdialog.png
    :align: center
 
-   Add Vector Layer Dialog |nix|
+   Add Vector Layer Dialog
 
 From the available options check |radiobuttonon| :guilabel:`File`. Click on
 **[Browse]**. That will bring up a standard open file dialog
@@ -88,7 +91,7 @@ You can also select the encoding for the shapefile if desired.
 .. figure:: /static/user_manual/working_with_vector/shapefileopendialog.png
    :align: center
 
-   Open an OGR Supported Vector Layer Dialog |nix|
+   Open an OGR Supported Vector Layer Dialog
 
 Selecting a shapefile from the list and clicking **[Open]** loads it into |qg|.
 Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file.
@@ -102,7 +105,7 @@ Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file.
 .. figure:: /static/user_manual/working_with_vector/shapefileloaded.png
    :align: center
 
-   |qg| with Shapefile of Alaska loaded |nix|
+   |qg| with Shapefile of Alaska loaded
 
 .. tip:: **Layer Colors**
 
@@ -257,7 +260,7 @@ Delimited Text File` dialog, as shown in figure_delimited_text_1_.
 .. figure:: /static/user_manual/introduction/delimited_text_dialog.png
    :align: center
 
-   Delimited Text Dialog |nix|
+   Delimited Text Dialog
 
 First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
 by clicking on the **[Browse]** button. Once the file is selected, |qg|
@@ -486,7 +489,7 @@ Importing Data into PostgreSQL
 ------------------------------
 
 Data can be imported into PostgreSQL/PostGIS using several tools, including the
-SPIT plugin and the command line tools shp2pgsql and ogr2ogr.
+DB Manager plugin and the command line tools shp2pgsql and ogr2ogr.
 
 DB Manager
 ..........
@@ -625,7 +628,7 @@ New Zealand main islands.
 .. figure:: /static/user_manual/working_with_vector/vectorNotWrapping.png
    :align: center
 
-   Map in lat/lon crossing the 180 |degrees| longitude line |nix|
+   Map in lat/lon crossing the 180 |degrees| longitude line
 
 A work-around is to transform the longitude values using PostGIS and the
 **ST_Shift_Longitude** function. This function reads every point/vertex in every
@@ -697,7 +700,7 @@ If you want to create a new SpatiaLite layer, please refer to section
 .. tip:: **SpatiaLite data management Plugins**
 
    For SpatiaLite data management, you can also use several Python plugins:
-   QSpatiaLite, SpatiaLite Manager or DB Manager (core plugin, recommended).
+   QSpatiaLite, SpatiaLite Manager or :ref:`DB Manager <dbmanager>` (core plugin, recommended).
    If necessary, they can be downloaded and installed with the Plugin Installer.
 
 .. index:: MSSQL Spatial
@@ -727,8 +730,8 @@ Creating a stored Connection
 
 |mActionAddOracleLayer| The first time you use an Oracle Spatial data source,
 you must create a connection to the database that contains the data. Begin by
-clicking on the |mActionAddOracleLayer| :sup:`Add Orcale Spatial Layer` toolbar
-button, selecting the |mActionAddOracleLayer| :menuselection:`Add Orcale
+clicking on the |mActionAddOracleLayer| :sup:`Add Oracle Spatial Layer` toolbar
+button, selecting the |mActionAddOracleLayer| :menuselection:`Add Oracle
 Spatial Layer...` option from the :menuselection:`Layer` menu, or typing
 :kbd:`Ctrl+Shift+O`. To access the connection manager, click on the **[New]**
 button to display the :guilabel:`Create a New Oracle Spatial Connection` dialog.
