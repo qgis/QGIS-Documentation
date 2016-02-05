@@ -668,11 +668,9 @@ Labels Menu
 ===========
 
 The |mActionLabeling| :sup:`Labels` core application provides smart
-labelling for vector point, line and polygon layers, and it only requires a
+labelling for vector point, line and polygon layers, and only requires a
 few parameters. This application also supports on-the-fly transformed layers.
-The core functions of the application have been redesigned. In QGIS, there are a
-number of other features that improve the labelling. The following menus
-have been created for labelling the vector layers:
+The following menus are used to configure the labelling of vector layers:
 
 * Text
 * Formatting
@@ -682,31 +680,33 @@ have been created for labelling the vector layers:
 * Placement
 * Rendering
 
-Let us see how the menus can be used for various vector layers.
+To label a layer start QGIS and load a vector layer. Activate the layer
+in the legend and click on the |mActionLabeling| :sup:`Layer Labelling Options`
+icon in the QGIS toolbar menu.
 
-.. _labeling_point_layers:
+The first step is to choose the labelling method from the drop-down list. There
+are four options available: **No labels**, **Show labels for this layer**, **Rule-based
+labelling** and **Discourage other labels from covering features in this layer**.
+Select the **Show labels for this layer** option and then select an attribute
+column to use for labelling from the **Label with** drop-down list. Click
+|mActionmIconExpressionEditorOpen| if you want to define labels based on
+expressions - See labeling_with_expressions_.
 
-Labeling point layers
----------------------
-
-Start QGIS and load a vector point layer. Activate the layer in the legend and
-click on the |mActionLabeling| :sup:`Layer Labelling Options` icon in the QGIS
-toolbar menu.
-
-The first step is to activate the |checkbox| :guilabel:`Label this layer with`
-checkbox and select an attribute column to use for labelling.
-Click |mActionmIconExpressionEditorOpen| if you want to define labels
-based on expressions - See labeling_with_expressions_.
-
-The following steps describe a simple labelling without using the
+The following steps describe simple labelling without using the
 :guilabel:`Data defined override` functions,
 which are situated next to the drop-down menus.
+
+Text menu
+---------
 
 You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_).
 Use the :guilabel:`Type case` option to influence the text rendering.
 You have the possibility to render the text 'All uppercase', 'All lowercase'
 or 'Capitalize first letter'. Use the :ref:`blend-modes` to create effects
 known from graphics programs.
+
+Formatting menu
+---------------
 
 In the :guilabel:`Formatting` menu, you can define a character for a line break
 in the labels with the 'Wrap on character' function. You can format the
@@ -717,9 +717,15 @@ point. Eg, if the label is placed to the left of the point then the label will
 be right aligned, and if it is placed to the right of the point then the label
 will be left aligned.
 
+For line vector layers you can include line directions symbols. There are options
+specifying the type of symbol and the symbol placement.
+
 Use the |checkbox| :guilabel:`Formatted numbers` option to format the numbers in
 an attribute table. Here, decimal places may be inserted.
 If you enable this option, three decimal places are initially set by default.
+
+Buffer menu
+-----------
 
 To create a buffer, just activate the |checkbox| :guilabel:`Draw text buffer`
 checkbox in the :guilabel:`Buffer` menu.
@@ -729,6 +735,9 @@ interact with partially transparent text and give mixed color transparency
 results. Turning off the buffer fill fixes that issue (except where the interior
 aspect of the buffer's stroke intersects with the text's fill) and also allows
 you to make outlined text.
+
+Background menu
+---------------
 
 In the :guilabel:`Background` menu, you can define with :guilabel:`Size X` and
 :guilabel:`Size Y` the shape of your background.
@@ -743,6 +752,9 @@ will be shifted. When applying :guilabel:`Radius X,Y`, the background gets
 rounded corners.
 Again, it is possible to mix the background with the underlying layers in the
 map canvas using the :guilabel:`Blend mode` (see :ref:`blend-modes`).
+
+Shadow menu
+-----------
 
 Use the :guilabel:`Shadow` menu for a user-defined :guilabel:`Drop shadow`.
 The drawing of the background is very variable.
@@ -773,18 +785,76 @@ can also be altered by choosing a blend mode.
    top of the shadow (depending upon the shadow's color), when that setting is
    used.
 
+Placement menu
+--------------
 
-Choose the :guilabel:`Placement` menu for the label placement and the labeling
-priority. Using the |radiobuttonon| :guilabel:`Offset from point` setting, you
-now have the option to use :guilabel:`Quadrants` to place your label. Additionally,
-you can alter the angle of the label placement with the :guilabel:`Rotation` setting.
-Thus, a placement in a certain quadrant with a certain rotation is possible.
-In the :guilabel:`priority` section you can define with which priority the labels
-are rendered. It interacts with labels of the other vector layers in the map canvas.
-If there are labels from different layers in the same location then the label
-with the higher priority will be displayed and the other will be left out.
+Choose the :guilabel:`Placement` menu for configuring label placement and labeling
+priority. Note that the placement options differ according to the type of
+vector layer, namely point, line or polygon.
 
-.. index:: Colliding_labels
+Placement for point layers
+..........................
+
+Using the |radiobuttonon| :guilabel:`Around point` setting, you are able to set
+the distance between the points and their labels.
+
+If you use the |radiobuttonon| :guilabel:`Offset from point` setting, you
+can select the :guilabel:`Quadrant` in which to place your label. You are also
+able to set the distance between the points and their labels and can alter the
+angle of the label placement with the :guilabel:`Rotation` setting. Thus,
+placement in a selected quadrant with a defined rotation is possible.
+
+Placement for line layers
+.........................
+
+Label options for line layers include |radiobuttonon| :guilabel:`Parallel`,
+|radiobuttonoff| :guilabel:`Curved` or |radiobuttonoff| :guilabel:`Horizontal`.
+For the |radiobuttonon| :guilabel:`Parallel` and 
+|radiobuttonoff| :guilabel:`Curved` options, you can set the position to 
+|checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line` and
+|checkbox| :guilabel:`Below line`. It's possible to select several options at once.
+In that case, QGIS will look for the optimal label position. For Parallel and
+curved placement you can also use the line orientation for the position of the label.
+Additionally, you can define a :guilabel:`Maximum angle between curved characters` when
+selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
+
+For all three placement options you can set up a minimum distance for repeating
+labels. The distance can be in mm or in map units.
+
+Placement for polygon layers
+............................
+
+You can choose one of the following options for placing labels in polygons:
+|radiobuttonon| :guilabel:`Offset from centroid`, |radiobuttonoff| :guilabel:`Horizontal
+(slow)`, |radiobuttonoff| :guilabel:`Around centroid`,
+|radiobuttonoff| :guilabel:`Free` and
+|radiobuttonoff| :guilabel:`Using perimeter`.
+
+In the |radiobuttonon| :guilabel:`Offset from centroid` settings you can specify
+if the centroid is of the |radiobuttonon| :guilabel:`visible polygon` or
+|radiobuttonoff| :guilabel:`whole polygon`. That means that either the centroid
+is used for the polygon you can see on the map or the centroid is determined for
+the whole polygon, no matter if you can see the whole feature on the map.
+You can place your label within a specific quadrant, and define offset and rotation.
+The |radiobuttonoff| :guilabel:`Around centroid` setting places the label at a
+specified distance around the centroid. Again, you can define
+|radiobuttonon| :guilabel:`visible polygon`
+or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
+With the |radiobuttonoff| :guilabel:`Using perimeter` settings, you can define a
+position and a distance for the label. For the position,
+|checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
+|checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation
+dependent position` are possible. You can specify the distance between the label
+and the polygon outline, as well as the repeat interval for the label.
+
+In the :guilabel:`priority` section you can define the priority with which labels
+are rendered for all three vector layer types (point, line, polygon). This
+placement option interact with labels of the other vector layers in the map
+canvas. If there are labels from different layers in the same location, the
+label with the higher priority will be displayed and the others will be left out.
+
+Rendering menu
+--------------
 
 In the :guilabel:`Rendering` menu, you can define label and feature options.
 Under :guilabel:`Label options`, you find the scale-based visibility setting now.
@@ -809,56 +879,8 @@ whether the number of features to be labelled is limited and to
 
    Smart labeling of vector point layers
 
-
-Labeling line layers
---------------------
-
-The first step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
-in the :guilabel:`Label settings` tab and select an attribute column to use for
-labeling. Click |mActionmIconExpressionEditorOpen| if you
-want to define labels based on expressions - See labeling_with_expressions_.
-
-After that, you can define the text style in the :guilabel:`Text` menu. Here,
-you can use the same settings as for point layers.
-
-Also, in the :guilabel:`Formatting` menu, the same settings as for
-point layers are possible.
-
-The :guilabel:`Buffer` menu has the same functions as described in
-section labeling_point_layers_.
-
-The :guilabel:`Background` menu has the same entries as described in
-section labeling_point_layers_.
-
-Also, the :guilabel:`Shadow` menu has the same entries as described in
-section labeling_point_layers_.
-
-In the :guilabel:`Placement` menu, you find special settings for line layers.
-The label can be placed |radiobuttonon| :guilabel:`Parallel`,
-|radiobuttonoff| :guilabel:`Curved` or |radiobuttonoff| :guilabel:`Horizontal`.
-With the |radiobuttonon| :guilabel:`Parallel` and |radiobuttonoff| :guilabel:`Curved`
-option, you can define the position |checkbox| :guilabel:`Above line`,
-|checkbox| :guilabel:`On line` and |checkbox| :guilabel:`Below line`.
-It's possible to select several options at once.
-In that case, QGIS will look for the optimal position of the label. Remember that
-here you can also use the line orientation for the position of the label.
-Additionally, you can define a :guilabel:`Maximum angle between curved characters` when
-selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
-
-You can set up a minimum distance for repeating labels.
-Distance can be in mm or in map units.
-
-Some Placement setup will display more options, for example, :guilabel:`Curved`
-and :guilabel:`Parallel` Placements will allow the user to set up the position
-of the label (above, below or on the line), :guilabel:`distance` from the line
-and for :guilabel:`Curved`, the user can also setup inside/outside max angle
-between curved label. As for point vector layers you have the possibility to
-define a :guilabel:`Priority` for the labels.
-
-The :guilabel:`Rendering` menu has nearly the same entries as for point layers.
-In the :guilabel:`Feature options`, you can now
+For line layers you can
 :guilabel:`Suppress labelling of features smaller than` a set length.
-
 
 .. if features act as obstacles for labels or not.
 
@@ -873,61 +895,7 @@ In the :guilabel:`Feature options`, you can now
 
    Smart labeling of vector line layers
 
-
-Labelling polygon layers
-------------------------
-
-The first step is to activate the |checkbox| :guilabel:`Label this layer`
-checkbox and select an attribute column to use for labelling. Click
-|mActionmIconExpressionEditorOpen| if you want to define labels
-based on expressions - See labeling_with_expressions_.
-
-In the :guilabel:`Text` menu, define the text style. The entries are the same as
-for point and line layers.
-
-The :guilabel:`Formatting` menu allows you to format multiple lines, also similar
-to the cases of point and line layers.
-
-As with point and line layers, you can create a text buffer in the
-:guilabel:`Buffer` menu.
-
-Use the :guilabel:`Background` menu to create a complex user-defined background
-for the polygon layer. You can use the menu also as with the point and line layers.
-
-The entries in the :guilabel:`Shadow` menu are the same as for point and line layers.
-
-In the :guilabel:`Placement` menu, you find special settings for polygon layers
-(see Figure_labels_3_).
-|radiobuttonon| :guilabel:`Offset from centroid`, |radiobuttonoff| :guilabel:`Horizontal
-(slow)`, |radiobuttonoff| :guilabel:`Around centroid`,
-|radiobuttonoff| :guilabel:`Free` and
-|radiobuttonoff| :guilabel:`Using perimeter` are possible.
-
-In the |radiobuttonon| :guilabel:`Offset from centroid` settings, you can specify
-if the centroid is of the |radiobuttonon| :guilabel:`visible polygon` or
-|radiobuttonoff| :guilabel:`whole polygon`. That means that either the centroid
-is used for the polygon you can see on the map or the centroid is determined for
-the whole polygon, no matter if you can see the whole feature on the map.
-You can place your label with the quadrants here, and define offset and rotation.
-The |radiobuttonoff| :guilabel:`Around centroid` setting makes it possible to place
-the label around the centroid with a certain distance. Again, you can define
-|radiobuttonon| :guilabel:`visible polygon`
-or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
-With the |radiobuttonoff| :guilabel:`Using perimeter` settings, you can define a
-position and a distance for the label. For the position,
-|checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
-|checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation
-dependent position` are possible.
-
-Related to the choice of Label Placement, several options will appear.
-As for Point Placement you can choose the distance for the polygon outline,
-repeat the label around the polygon perimeter.
-
-As for point and line vector layers you have the possibility to define a
-:guilabel:`Priority` for the polygon vector layer.
-
-The entries in the :guilabel:`Rendering` menu are the same as for line layers.
-You can also use :guilabel:`Suppress labelling of features smaller than` in
+For polygon layers you can also use :guilabel:`Suppress labelling of features smaller than` in
 the :guilabel:`Feature options`.
 
 
