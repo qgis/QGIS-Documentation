@@ -437,9 +437,16 @@ to select:
 * The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen|
   :guilabel:`Set column expression` function)
 * The symbol (using the Symbol selector dialog)
-* The colors (using the color Ramp list)
+* The legend format and the precision
+* The method to use to change the symbol: color or size
+* The colors (using the color Ramp list) if the color method is selected
+* The size (using the size domain and its unit
 
-Additionally, you can specify the number of classes and also the mode for
+Then you can use the Histogram tab which shows an interactive histogram of the 
+values from the assigned field or expression. Class breaks can be moved or 
+added using the histogram widget.
+
+Back to the Classes tab, you can specify the number of classes and also the mode for
 classifying features within the classes (using the Mode list). The available
 modes are:
 
