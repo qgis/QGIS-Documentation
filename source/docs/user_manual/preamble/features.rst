@@ -11,7 +11,7 @@ and plugins. A short summary of six general categories of features and
 plugins is presented below, followed by first insights into the
 integrated Python console.
 
-View data 
+View data
 ---------
 
 You can view and overlay vector and raster data in different formats
@@ -31,7 +31,7 @@ format. Supported formats include:
    WFS, and WFS-T. See section :ref:`sec_ogc`.
 
 
-Explore data and compose maps 
+Explore data and compose maps
 -----------------------------
 
 You can compose maps and interactively explore spatial data with a
@@ -52,7 +52,7 @@ friendly GUI. The many helpful tools available in the GUI include:
 *  North arrow scale bar and copyright label for maps
 *  Support for saving and restoring projects
 
-Create, edit, manage and export data 
+Create, edit, manage and export data
 ------------------------------------
 
 You can create, edit, manage and export vector and raster layers in
@@ -73,7 +73,7 @@ several formats. |qg| offers the following:
 *  DXF-Export tool with enhanced capabilities to export styles and plugins
    to perform CAD-like functions
 
-Analyse data 
+Analyse data
 ------------
 
 You can perform spatial data analysis on spatial databases and other
@@ -86,7 +86,7 @@ provides a powerful geospatial analysis framework to call native and
 third-party algorithms from |qg|, such as GDAL, SAGA, GRASS, fTools
 and more. (See section :ref:`sec_processing_intro`.)
 
-Publish maps on the Internet 
+Publish maps on the Internet
 ----------------------------
 
 |qg| can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as
@@ -94,7 +94,7 @@ a WMS, WCS or WFS server. (See section :ref:`sec_ogc`.) Additionally,
 you can publish your data on the Internet using a webserver with UMN
 MapServer or GeoServer installed.
 
-Extend |qg| functionality through plugins 
+Extend |qg| functionality through plugins
 -----------------------------------------
 
 |qg| can be adapted to your special needs with the extensible plugin
@@ -107,7 +107,7 @@ Core Plugins
 Core plugins include:
 
 #.  Coordinate Capture (Capture mouse coordinates in different CRSs)
-#.  DB Manager (Exchange, edit and view layers and tables; execute SQL queries)
+#.  DB Manager (Exchange, edit and view layers and tables from/to databases; execute SQL queries)
 #.  Dxf2Shp Converter (Convert DXF files to shapefiles)
 #.  eVIS (Visualize events)
 #.  fTools (Analyze and manage vector data)
@@ -124,7 +124,6 @@ Core plugins include:
 #.  Raster Terrain Analysis (Analyze raster-based terrain)
 #.  Road Graph Plugin (Analyze a shortest-path network)
 #.  Spatial Query Plugin
-#.  SPIT (Import shapefiles to PostgreSQL/PostGIS)
 #.  Topology Checker (Find topological errors in vector layers)
 #.  Zonal Statistics Plugin (Calculate count, sum, and mean of a raster for each
     polygon of a vector layer)
@@ -138,7 +137,7 @@ provided by the community. These plugins reside in the official
 Plugins Repository and can be easily installed using the Python Plugin
 Installer. See Section :ref:`managing_plugins`.
 
-Python Console 
+Python Console
 --------------
 
 For scripting, it is possible to take advantage of an integrated
@@ -152,10 +151,10 @@ a script, then drag and drop it into the |qg| window and it will be
 executed automatically.
 
 For further information about working with the Python console and
-programming |qg| plugins and applications, please refer to 
+programming |qg| plugins and applications, please refer to
 :ref:`PyQGIS-Developer-Cookbook`.
 
-Known Issues 
+Known Issues
 ------------
 
 Number of open files limitation
