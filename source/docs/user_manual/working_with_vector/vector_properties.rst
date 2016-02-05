@@ -668,11 +668,9 @@ Labels Menu
 ===========
 
 The |mActionLabeling| :sup:`Labels` core application provides smart
-labelling for vector point, line and polygon layers, and it only requires a
+labelling for vector point, line and polygon layers, and only requires a
 few parameters. This application also supports on-the-fly transformed layers.
-The core functions of the application have been redesigned. In QGIS, there are a
-number of other features that improve the labelling. The following menus
-have been created for labelling the vector layers:
+The following menus are used to configure the labelling of vector layers:
 
 * Text
 * Formatting
@@ -682,21 +680,19 @@ have been created for labelling the vector layers:
 * Placement
 * Rendering
 
-Let us see how the menus can be used for various vector layers.
-
-.. _labeling_point_layers:
-
-Labeling point layers
----------------------
-
-Start QGIS and load a vector point layer. Activate the layer in the legend and
-click on the |mActionLabeling| :sup:`Layer Labelling Options` icon in the QGIS
-toolbar menu.
+To label a layer start QGIS and load a vector point layer. Activate the layer
+in the legend and click on the |mActionLabeling| :sup:`Layer Labelling Options`
+icon in the QGIS toolbar menu.
 
 The first step is to activate the |checkbox| :guilabel:`Label this layer with`
 checkbox and select an attribute column to use for labelling.
 Click |mActionmIconExpressionEditorOpen| if you want to define labels
 based on expressions - See labeling_with_expressions_.
+
+.. _labeling_point_layers:
+
+Labeling point layers
+---------------------
 
 The following steps describe a simple labelling without using the
 :guilabel:`Data defined override` functions,
