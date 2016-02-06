@@ -1825,7 +1825,7 @@ including specifics about the type and location, number of features, feature typ
 and editing capabilities. The :guilabel:`Extents`
 table provides you with information on the layer extent and the
 :guilabel:`Layer Spatial Reference System`, which is information about the CRS
-of the layer. This can prvide a quick way to get usefule information about a layer.
+of the layer. This can provide a quick way to get useful information about the layer.
 
 Additionally, you can add or edit a title and abstract for the layer in the
 :guilabel:`Description` section. It's also possible to define a
