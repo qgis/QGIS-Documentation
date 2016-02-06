@@ -1823,9 +1823,9 @@ Metadata Menu
 In the :guilabel:`Properties` section, you get general information about the layer,
 including specifics about the type and location, number of features, feature type,
 and editing capabilities. The :guilabel:`Extents`
-table provides you with layer extent information and the
+table provides you with information on the layer extent and the
 :guilabel:`Layer Spatial Reference System`, which is information about the CRS
-of the layer. This is a quick way to get information about the layer.
+of the layer. This can prvide a quick way to get usefule information about a layer.
 
 Additionally, you can add or edit a title and abstract for the layer in the
 :guilabel:`Description` section. It's also possible to define a
