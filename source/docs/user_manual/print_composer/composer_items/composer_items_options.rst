@@ -21,18 +21,18 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
 
 .. _Frame_Dialog:
 
-* The :guilabel:`Position and size` dialog lets you define size and position of the frame that contains the item. 
+* The :guilabel:`Position and size` dialog lets you define the size and position of the frame which contains the item. 
   You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the item.
    Click on the [Color] and [Thickness] buttons to adjust those properties.
 * Use the :guilabel:`Background color` menu for setting a background color.
   Click on the [Color...] button to display a dialog where you can pick a color or choose from a custom setting. 
-  Transparency can also be adjusted throught the alpha field.  
+  Transparency can be adjusted through adjusting the alpha field settings.  
 * Use the :guilabel:`Item ID` to create a relationship to other Print Composer items. 
-  This is used with |qg| server and any potential web 
-  client. You can set an ID on an item (e.g., a map and a label), and then the web client can send data to set a property 
-  (e.g., label text) for that specific item. The GetProjectSettings command will list what items and which IDs are available in a layout.
+  This is used with |qg| server and other potential web 
+  clients. You can set an ID on an item (for example, a map or a label), and then the web client can send data to set a property 
+  (e.g., label text) for that specific item. The GetProjectSettings command will list the items and IDs which are available in a layout.
 * :guilabel:`Rendering` mode can be selected in the option field. See Composer_Rendering_Mode_.
 
 .. note:: 
@@ -67,25 +67,24 @@ Rendering mode
 
    Rendering mode |nix|
 
-* :guilabel:`Blending mode`: You can achieve special rendering effects with these tools that you previously 
-  only may know from graphics programs. The pixels of your overlaying and underlaying items are mixed 
+* :guilabel:`Blending mode`: With this tool you can achieve effects which would otherwise only be achieved using graphic rendering software. The pixels of your overlaying and underlaying items are mixed 
   through the settings described below.(See :ref:`layer_rendering` for more information)
 * :guilabel:`Transparency` |slider|: You can make the underlying item in the Composer visible with this tool.
   Use the slider to adapt the visibility of your item to your needs.
   You can also make a precise definition of the percentage of visibility in the menu beside the slider.
-* |checkbox| :guilabel:`Exclude item from exports`: You can decide to make an item not visible in all exports. 
-  After activating this checkbox, the item will not be included in PDF's, prints etc.. 
+* |checkbox| :guilabel:`Exclude item from exports`: You can decide to make an item invisible in all exports. 
+  After activating this checkbox, the item will not be included in export to PDF, print etc.. 
 
 
 Size and position
 ------------------
 
-Each item inside the Composer can be moved/resized to create a perfect layout.
+Each item inside the Composer can be moved and resized to create a perfect layout.
 For both operations the first step is to activate the |mActionSelect| :sup:`Select/Move item` tool 
 and to click on the item; you can then move it using the mouse while holding the left button. 
 If you need to constrain the movements to the horizontal or the vertical axis, just hold 
-the :kbd:`Shift` while moving the mouse.
-If you need a better precision, you can move a selected item using the :kbd:`Arrow keys` on the keyboard; 
+the :kbd:`Shift` button on the keyboard while moving the mouse.
+If you need better precision, you can move a selected item using the :kbd:`Arrow keys` on the keyboard; 
 if the movement is too slow, you can speed up it by holding :kbd:`Shift`.
 
 A selected item will show squares on its boundaries; moving one of them with the mouse, will resize
@@ -93,15 +92,15 @@ the item in the corresponding direction. While resizing,
 holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Alt` will 
 resize from the item center.
 
-The correct position for an item can be obtained using snapping to grid or 
-smart guides. Guides are set by clicking and dragging in the rulers. Guides are 
-moved by clicking in the ruler, level with the guide and dragging to a new 
-place. To delete a guide move it off the canvas. If you need to disable the 
-snap on the fly just hold :kbd:`Ctrl` while moving the mouse.
+The correct position for an item can be obtained using the grid snapping or 
+smart guides. Guides are set by clicking and dragging within the ruler area. To move a guide, click
+on the ruler, level with the guide and drag it to a new 
+position. To delete a guide move it off the canvas. If you need to disable the 
+snap on the fly, hold :kbd:`Ctrl` while moving the mouse.
 
 You can choose multiple items with the |mActionSelect| :sup:`Select/Move item` button. 
 Just hold the :kbd:`Shift` button and click on all the items you need. 
-You can then resize/move this group just like a single item.
+You can then resize/move this group like a single item.
 
 Once you have found the correct position for an item, you can lock it by using 
 the items on the toolbar or ticking the box next to the item in the 
@@ -122,7 +121,7 @@ to clear all selections or to invert the current selection.
 Alignment
 ----------
 
-Raising or lowering functionalities for elements are inside the |mActionRaiseItems|
+Raising or lowering the visual hierarchy for elements are inside the |mActionRaiseItems|
 :sup:`Raise selected items` pull-down menu. Choose an element on the Print Composer
 canvas and select the matching functionality to raise or lower the selected
 element compared to the other elements. This order is 
@@ -141,9 +140,9 @@ in this list.
 
    Alignment helper lines in the Print Composer |nix|
 
-There are several alignment functionalities available within the |mActionAlignLeft|
+There are several alignment options available within the |mActionAlignLeft|
 :sup:`Align selected items` pull-down menu (see figure_composer_common_3_). To use an
-alignment functionality, you first select some elements and then click on the
-matching alignment icon. All selected elements will then be aligned within to their common bounding box.
+alignment function, you first select the elements and , then click on the
+matching alignment icon. All selected elements will then be aligned to their common bounding box.
 When moving items on the Composer canvas, alignment helper lines appear when borders, centers or corners are aligned.
 
