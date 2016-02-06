@@ -127,7 +127,7 @@ Color Selector
 --------------
 
 The :guilabel:`select color` dialog will appear whenever you click
-to choose a color - either border or fill color. This dialog
+to choose a :index:`color` - either border or fill color. This dialog
 has four different tabs which allow you to select colors by
 |mIconColorBox| :sup:`color ramp`, |mIconColorWheel| :sup:`color wheel`,
 |mIconColorSwatches| :sup:`color swatches` or |mIconColorPicker| :sup:`color picker`.
@@ -201,7 +201,7 @@ that the color picker is OS dependent and is currently not supported by OSX.
 Blending Modes
 --------------
 
-QGIS offers different options for special rendering effects with these tools that
+QGIS offers different options for special :index:`rendering effects` with these tools that
 you may previously only know from graphics programs:
 
 * **Normal**: This is the standard blend mode, which uses the alpha channel of the top
@@ -373,7 +373,7 @@ a subset will prevent you from editing the layer.
 Style Menu
 ==========
 
-The Style menu provides you with a comprehensive tool for rendering and
+The :index:`Style` menu provides you with a comprehensive tool for rendering and
 symbolizing your vector data.
 You can use tools that are common to all vector data, as well as special symbolizing
 tools that were designed for the different kinds of vector data.
@@ -399,10 +399,12 @@ will get lost.
 
 .. index:: Single_Symbol_Renderer, Renderer_Single_Symbol
 
+.. _single_symbol_renderer:
+
 Single Symbol Renderer
 ......................
 
-The Single Symbol Renderer is used to render all features of the layer using
+The :index:`Single Symbol` Renderer is used to render all features of the layer using
 a single user-defined symbol. The properties, which can be adjusted in the
 :guilabel:`Style` menu, depend partially on the type of layer, but all types share
 the following dialog structure: in the upper part, you have panels that help you
@@ -421,13 +423,15 @@ and at the bottom the :ref:`layer_rendering` widget.
 
    Single symbol line properties
 
+
+
 .. index:: Categorized_Renderer, Renderer_Categorized
 
 
 Categorized Renderer
 ....................
 
-The Categorized Renderer is used to render all features from a layer, using
+The :index:`Categorized Renderer` is used to render all features from a layer, using
 an user-defined symbol whose aspect reflects the value of a selected
 feature's attribute. The :guilabel:`Style` menu allows you to select:
 
@@ -439,7 +443,7 @@ feature's attribute. The :guilabel:`Style` menu allows you to select:
 * The range of colors (using the Color ramp listbox) from which color applied
   to the symbol is selected
 
-Then click on **Classify** button to create classes from the distinct value of
+Then click on Classify button to create :index:`classes` from the distinct value of
 the attribute column. Each class can be disabled unchecking the checkbox at
 the left of the class name.
 
@@ -485,10 +489,9 @@ for the rivers layer of the QGIS sample dataset.
 Graduated Renderer
 ..................
 
-.. FixMe: This section is really really out of date
 
-The Graduated Renderer is used to render all the features from a layer, using
-an user-defined symbol whose color or size reflects the assignment of a
+The :index:`Graduated Renderer` is used to render all the features from a layer,
+using an user-defined symbol whose color or size reflects the assignment of a
 selected feature's attribute to a class.
 
 
@@ -507,7 +510,8 @@ to select:
 * The colors (using the color Ramp list) if the color method is selected
 * The size (using the size domain and its unit
 
-Then you can use the Histogram tab which shows an interactive histogram of the
+
+Then you can use the :index:`Histogram` tab which shows an interactive histogram of the
 values from the assigned field or expression. Class breaks can be moved or
 added using the histogram widget.
 
@@ -557,9 +561,38 @@ the rivers layer of the QGIS sample dataset.
    Graduated Symbolizing options
 
 
-The |mIconDataDefine| menu provides 'Data-defined override' for points size
-and rotation and for line width (for points and line layers resp.). For point
-layers, an assistant is accessible through the |mIconDataDefine| menu
+.. tip:: **Thematic maps using an expression**
+
+   Categorized and graduated thematic maps can be created using the result
+   of an expression. In the properties dialog for vector layers, the attribute
+   chooser is extended with a |mActionmIconExpressionEditorOpen|
+   :guilabel:`Set column expression` function.
+   So you don't need to write the classification attribute
+   to a new column in your attribute table if you want the classification
+   attribute to be a composite of multiple fields, or a formula of some sort.
+
+
+.. index:: proportional_symbol, multivariate_analysis
+
+Proportional Symbol and Multivariate Analysis
+.............................................
+
+:index:`Proportional Symbol` and :index:`Multivariate Analysis` are not
+rendering types available from the Style rendering drop-down list.
+However with the **Size Assistant** options applied over any of the previous
+rendering options, QGIS allows you to display your point and line data with
+such representation.
+
+.. _size_assistant:
+
+**Creating proportional symbol**
+
+Proportional rendering is done by first applying to the layer the :ref:`single_symbol_renderer`.
+Once you set the symbol, at the upper level of the symbol tree, the
+|mIconDataDefine| :guilabel:`Data-defined override` button available beside
+:guilabel:`Size` or :guilabel:`Width` options (for point or line layers
+respectively) provides tool to create proportional symbology for the layer.
+An assistant is moreover accessible through the |mIconDataDefine| menu
 to help you define size expression.
 
 .. _figure_symbology_4:
@@ -575,33 +608,43 @@ to help you define size expression.
 
 The assistant lets you define:
 
-* The attribute (using the Field listbox or the |mActionmIconExpressionEditorOpen|
-  :guilabel:`Set column expression` function, see :ref:`vector_expressions`)
+* The attribute to represent, using the Field listbox or the |mActionmIconExpressionEditorOpen|
+  :guilabel:`Set column expression` function (see :ref:`vector_expressions`)
+* the scale method of representation which can be 'Flannery', 'Surface' or 'Radius'
 * The minimum and maximum size of the symbol
-* The minimum and maximum values of the Field. The down pointing arrow allows
-  to set the minimum and maximum values according to your data.
+* The range of values to represent: The down pointing arrow helps you
+  fill automatically these fields with the minimum (or zero) and maximum values 
+  returned by the chosen attribute or the expression applied to your data.
+* An unique size to represent NULL values.
+
+To the right side of the dialog, you can preview the features representation
+within a live-update widget. This representation is added to the layer tree in the 
+layer legend and is also used to shape the layer representation in the
+print composer legend item.
 
 The values presented in the varying size assistant above will set the size
 'Data-defined override' with:
 ::
 
- scale_exp( Importance, 1, 20, 1, 10, 0.57 )
+ coalesce(scale_exp(Importance, 1, 20, 2, 10, 0.57), 1)
 
-The available scale methods are 'Flannery', 'Surface' and 'Radius'.
+**Creating multivariate analysis**
 
+A multivariate analysis rendering helps you evaluate the relationship between
+two or more variables e.g., one can be represented by a color ramp while the other is
+represented by a size. 
 
+The simplest way to create multivariate analysis in QGIS is to first apply
+a categorized or graduated rendering on a layer, using the same type of symbol
+for all the classes. Then, clicking on the symbol **[Change]** button above the
+classification frame, you get the :ref:`symbol-selector` dialog from which,
+as seen above, you can activate and set the :ref:`size assistant <size_assistant>`
+option either on size (for point layer) or width (for line layer).
 
+Like the proportional symbol, the size-related symbol is added to the layer tree,
+at the top of the categorized or graduated classes symbols. And both representation
+are also available in the print composer legend item.
 
-
-.. tip:: **Thematic maps using an expression**
-
-   Categorized and graduated thematic maps can be created using the result
-   of an expression. In the properties dialog for vector layers, the attribute
-   chooser is extended with a |mActionmIconExpressionEditorOpen|
-   :guilabel:`Set column expression` function.
-   So you don't need to write the classification attribute
-   to a new column in your attribute table if you want the classification
-   attribute to be a composite of multiple fields, or a formula of some sort.
 
 .. Index:: Rule-based_Rendering, Rendering_Rule-based
 
@@ -610,13 +653,13 @@ The available scale methods are 'Flannery', 'Surface' and 'Radius'.
 Rule-based rendering
 ....................
 
-The Rule-based Renderer is used to render all the features from a layer,
+The :index:`Rule-based Renderer` is used to render all the features from a layer,
 using rule based symbols whose aspect reflects the assignment of a selected
 feature's attribute to a class. The rules are based on SQL statements.
 The dialog allows rule grouping by filter or scale, and you can decide
 if you want to enable symbol levels or use only the first-matched rule.
 
-To create a rule, activate an existing row by double-clicking on it, or
+To :index:`create a rule`, activate an existing row by double-clicking on it, or
 click on '+' and click on the new rule. In the :guilabel:`Rule properties` dialog,
 you can define a label for the rule. Press the |browsebutton| button to open the
 expression string builder.
@@ -653,7 +696,7 @@ for the rivers layer of the QGIS sample dataset.
 Point displacement
 ..................
 
-The Point Displacement Renderer works to visualize all features of a point layer,
+The :index:`Point Displacement` renderer works to visualize all features of a point layer,
 even if they have the same location. To do this, the symbols of the points are
 placed on a displacement circle around a center symbol.
 
@@ -687,9 +730,9 @@ placed on a displacement circle around a center symbol.
 Inverted Polygon
 ................
 
-Inverted polygon renderer allows user to define a symbol to fill in outside of
-the layer's polygons. As before you can select subrenderers. These subrenderers
-are the same as for the main renderers.
+The :index:`Inverted Polygon` renderer allows user to define a symbol to fill in
+outside of the layer's polygons. As before you can select subrenderers.
+These subrenderers are the same as for the main renderers.
 
 .. _figure_symbology_7:
 
@@ -714,7 +757,7 @@ are the same as for the main renderers.
 Heatmap
 .......
 
-With the Heatmap renderer you can create live dynamic heatmaps for (multi)point
+With the :index:`Heatmap` renderer you can create live dynamic heatmaps for (multi)point
 layers. You can specify the heatmap radius in pixels, mm or map units, choose
 a color ramp for the heatmap style and use a slider for selecting a trade-off
 between render speed and quality. When adding or removing a feature the heatmap
@@ -869,7 +912,7 @@ Labels Menu
 ===========
 
 The |mActionLabeling| :sup:`Labels` core application provides smart
-labelling for vector point, line and polygon layers, and only requires a
+:index:`labelling` for vector point, line and polygon layers, and only requires a
 few parameters. This application also supports on-the-fly transformed layers.
 The following menus are used to configure the labelling of vector layers:
 
@@ -989,8 +1032,8 @@ can also be altered by choosing a blend mode.
 Placement menu
 --------------
 
-Choose the :guilabel:`Placement` menu for configuring label placement and labeling
-priority. Note that the placement options differ according to the type of
+Choose the :guilabel:`Placement` menu for configuring :index:`label placement`
+and labeling priority. Note that the placement options differ according to the type of
 vector layer, namely point, line or polygon.
 
 .. _cartographic:
@@ -1207,7 +1250,7 @@ some descriptive text and the function '$area()' in combination with
 
    Using expressions for labelling
 
-Expression based labelling is easy to work with. All you have to take care of
+:index:`Expression based labelling` is easy to work with. All you have to take care of
 is, that you need to combine all elements (strings, fields and functions) with a
 string concatenation sign '||' and that fields are written in "double quotes"
 and strings in 'single quotes'. Let's have a look at some examples:
@@ -1250,7 +1293,7 @@ to create simple and very complex expressions to label your data in QGIS. See
 Using data-defined override for labelling
 -----------------------------------------
 
-With the data-defined override functions, the settings for the labelling
+With the :index:`data-defined override` functions, the settings for the labelling
 are overridden by entries in the attribute table.
 You can activate and deactivate the function with the right-mouse button.
 Hover over the symbol and you see the information about the data-defined override,
@@ -1298,7 +1341,7 @@ We now describe an example using the data-defined override function for the
 Rule-based labeling
 -------------------
 
-With Rule-based labeling multiple label configurations can be defined
+With :index:`Rule-based labeling` multiple label configurations can be defined
 and applied selectively on the base of expression filters, as in
 :ref:`Rule-based rendering <rule_based_rendering>`
 
@@ -1418,7 +1461,7 @@ widgets. These widgets are:
    See http://blog.vitu.ch/10142013-1847/write-your-own-qgis-form-elements
 
 
-With the **Attribute editor layout**, you can now define built-in forms
+With the **Attribute editor layout**, you can now define :index:`built-in forms`
 (see figure_fields_2_). This is useful for data entry jobs or to identify
 objects using the option auto open form when you have objects with many attributes.
 You can create an editor with several tabs and named groups to present
@@ -1546,7 +1589,7 @@ The current core implementation of diagrams provides support for:
 * **text diagrams**, a horizontaly divided circle showing statistics values inside
 * and **histograms**.
 
-For each type of diagram, the menu is divided into five tabs:
+For each type of :index:`diagram`, the menu is divided into five tabs:
 
 Attributes
 ----------
@@ -1990,7 +2033,7 @@ To add a raster (a TIF image in this example), it becomes:
 Display Menu
 ============
 
-|mActionMapTips| This menu is specifically created for Map Tips.
+|mActionMapTips| This menu is specifically created for :index:`Map Tips`.
 It includes a nice feature: Map Tip display text in HTML.
 While you can still choose a |radiobuttonoff| :guilabel:`Field` to be displayed
 when hovering over a feature on the map, it is also possible to insert HTML code
@@ -2027,7 +2070,7 @@ Figure Display 1 and 2 show an example of HTML code and how it behaves in map ca
 Rendering Menu
 ==============
 
-QGIS offers support for on-the-fly feature generalisation. This can
+QGIS offers support for on-the-fly feature :index:`generalisation`. This can
 improve rendering times when drawing many complex features at small scales.
 This feature can be enabled or disabled in the layer settings using the
 |checkbox| :guilabel:`Simplify geometry` option. There is also a global
@@ -2065,7 +2108,7 @@ You can also do this by forcing the composer to export as a raster,
 but that is an all-or-nothing solution, given that the rasterisation
 is applied to all layers.
 
-
+.. index:: Metadata
 
 .. _vectormetadatamenu:
 
@@ -2085,7 +2128,7 @@ of the layer. This can provide a quick way to get useful information about the l
 
 Additionally, you can add or edit a title and abstract for the layer in the
 :guilabel:`Description` section. It's also possible to define a
-:guilabel:`Keyword list` here. These keyword lists can be used in a
+:guilabel:`Keyword list` here. These :index:`keyword lists` can be used in a
 metadata catalogue. If you want to use a title from an XML metadata file,
 you have to fill in a link in the :guilabel:`DataUrl` field.
 
