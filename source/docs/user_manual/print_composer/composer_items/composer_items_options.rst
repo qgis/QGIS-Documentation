@@ -142,7 +142,7 @@ in this list.
 
 There are several alignment options available within the |mActionAlignLeft|
 :sup:`Align selected items` pull-down menu (see figure_composer_common_3_). To use an
-alignment function, you first select the elements and , then click on the
+alignment function, you first select the elements then click on the
 matching alignment icon. All selected elements will then be aligned to their common bounding box.
 When moving items on the Composer canvas, alignment helper lines appear when borders, centers or corners are aligned.
 
