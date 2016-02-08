@@ -28,6 +28,5 @@ Plugins
    plugins_raster_terrain
    plugins_road_graph
    plugins_spatial_query
-   plugins_spit
    plugins_topology_checker
    plugins_zonal_statistics
