@@ -1834,7 +1834,7 @@ Metadata Menu
 =============
 
 |metadata| The `Metadata` menu consists of `Description`,
-`Attribution`, `MetadataURL` and `Properties` sections.
+`Attribution`, `MetadataURL`, `LegendUrl` and `Properties` sections.
 
 In the `Properties` section, you get general information about the layer,
 including specifics about the type and location, number of features, feature type,
@@ -1852,6 +1852,9 @@ Use `Attribution` to get attribute data from an XML metadata catalogue.
 In `MetadataUrl`, you can define the general path to the XML metadata
 catalogue. This information will be saved in the QGIS project file for subsequent
 sessions and will be used for QGIS server.
+In the `LegendUrl` section, you can provide the url of a legend image in the url
+field. You can use the Format drop down option to apply the appropriate format
+of the image. Currently png, jpg and jpeg image formats are supported.
 
 .. _figure_metadata_vect:
 
