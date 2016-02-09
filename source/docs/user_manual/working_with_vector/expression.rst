@@ -129,7 +129,7 @@ if one of the inputs is NULL then the result is NULL.
 
 * Joins a string and a value from a column name::
 
-    'My feature's id is: ' || "gid"
+    'My feature''s id is: ' || "gid"
 
 * Test if the "description" attribute field starts with the 'Hello' string
   in the value (note the position of the % character)::
@@ -141,24 +141,25 @@ Conditionals
 
 This group contains functions to handle conditional checks in expressions.
 
-===================  ==========================================================
- Function            Description
-===================  ==========================================================
- CASE                Evaluates multiple expressions and returns a result
- CASE ELSE           Evaluates multiple expressions and returns a result when the
-                     conditions aren't met
- coalesce            Returns the first non-NULL value from the expression list
- if                  Tests a condition and returns a different result
-                     depending on the conditional check
- regexp_match        Returns true if any part of a string matches the supplied
-                     regular expression
-===================  ==========================================================
+====================================  ===========================================================
+ Function                             Description
+====================================  ===========================================================
+ CASE WHEN ... THEN ... END           Evaluates an expression and returns a result if true.
+                                      You can test multiple conditions
+ CASE WHEN ... THEN ... ELSE ... END  Evaluates an expression and returns a different result
+                                      whether it's true or false. You can test multiple conditions
+ coalesce                             Returns the first non-NULL value from the expression list
+ if                                   Tests a condition and returns a different result
+                                      depending on the conditional check
+ regexp_match                         Returns true if any part of a string matches the supplied
+                                      regular expression
+====================================  ===========================================================
 
 **Some example:**
 
 * Send back a value if the first condition is true, else another value::
 
-    CASE WHEN "software" LIKE '%QGIS%' THEN 'QGIS' ELSE 'Other'
+    CASE WHEN "software" LIKE '%QGIS%' THEN 'QGIS' ELSE 'Other' END
 
 Mathematical Functions
 -----------------------
