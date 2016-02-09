@@ -10,8 +10,8 @@ The Symbol Library
 
 .. _vector_style_manager:
 
-Presentation
-------------
+The Style Manager
+-----------------
 
 The Symbol Library is the place where users can create generic symbols to be used
 in several QGIS projects. You can open it with the :menuselection:`Settings 
@@ -31,7 +31,7 @@ in several QGIS projects. You can open it with the :menuselection:`Settings
 .. figure:: /static/user_manual/working_with_vector/stylemanager.png
    :align: center
 
-   The Style Manager |nix|
+   The Style Manager
 
 
 Groups and smart groups
@@ -62,7 +62,7 @@ the entered condition(s) is automatically added to the smart group.
 .. figure:: /static/user_manual/working_with_vector/create_smartgroup.png
    :align: center
 
-   Creating a Smart Group |nix|
+   Creating a Smart Group
 
 To remove a group or a smart group, right click on the group and select 
 :menuselection:`Remove Group` or select it and push 
@@ -91,7 +91,7 @@ different tabs:
 * **Marker** for point symbols
 * **Line** for linear symbols
 * **Fill** for surface symbols
-* `Color Ramp`_
+* and `Color Ramp`_
 
 To delete a symbol you no longer need, just select it and click |mActionSignMinus| 
 :sup:`Remove item`. The symbol will be deleted from the local symbols database.
@@ -137,8 +137,52 @@ In the new dialog, you'll need to :
 .. figure:: /static/user_manual/working_with_vector/import_styles.png
    :align: center
 
-   Importing symbols |nix|
+   Importing symbols
 
+
+.. _color-ramp:
+
+Color Ramp
+..........
+
+.. index:: color_Ramp, Gradient_color_Ramp, colorBrewer, Custom_color_Ramp
+
+The Color ramp tab in the Style Manager presents different types of
+color ramps you can use to style layers.
+
+To create a custom color ramp, activate the Color ramp tab and click the
+|mActionSignPlus| :sup:`Add item` button. The button reveals a drop-down list to
+choose the ramp type: Gradient, Random, colorBrewer, or cpt-city.
+
+The first three have options for number of steps and/or multiple stops in
+the color ramp. You can use the |checkbox| :guilabel:`Invert` option while
+classifying the data with a color ramp. See figure_symbol_4_ for an
+example of custom color ramp and figure_symbol_4a_ for the cpt-city dialog.
+
+
+.. _figure_symbol_4:
+
+.. only:: html
+
+   **Figure Symbol 4:**
+
+.. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
+   :align: center
+
+   Example of custom gradient color ramp with multiple stops
+
+The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.
+
+.. _figure_symbol_4a:
+
+.. only:: html
+
+   **Figure Symbol 4a:**
+
+.. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
+   :align: center
+
+   cpt-city dialog with hundreds of color ramps
 
 
 .. _symbol-selector:
@@ -149,16 +193,16 @@ The symbol Selector
 The Symbol selector is the main dialog to design a symbol. 
 You can create or edit Marker, Line or Fill Symbols.
 
-.. _figure_symbol_4:
+.. _figure_symbol_5:
 
 .. only:: html
 
-   **Figure Symbol 4:**
+   **Figure Symbol 5:**
 
 .. figure:: /static/user_manual/working_with_vector/symbolselector.png
    :align: center
 
-   Designing a Marker symbol |nix|
+   Designing a Marker symbol
 
 
 For each kind of symbols, you will find always the same dialog structure:
@@ -321,49 +365,4 @@ automatic clipping of lines/polygons to the canvas extent. In
 some cases this clipping results in unfavourable symbology (eg
 centroid fills where the centroid must always be the actual
 feature's centroid).
-
-
-.. _color-ramp:
-
-Color Ramp
-----------
-
-.. index:: color_Ramp, Gradient_color_Ramp, colorBrewer, Custom_color_Ramp
-
-The Color ramp tab in the Style Manager presents a different types of 
-color ramps you can use to style layers.
-
-To create a custom color ramp, activate the Color ramp tab and click the 
-|mActionSignPlus| :sup:`Add item` button. The button reveals a drop-down list to
-choose the ramp type: Gradient, Random, colorBrewer, or cpt-city.
-
-The first three have options for number of steps and/or multiple stops in 
-the color ramp. You can use the |checkbox| :guilabel:`Invert` option while 
-classifying the data with a color ramp. See figure_symbol_5_ for an
-example of custom color ramp and figure_symbol_5a_ for the cpt-city dialog.
-
- 
-.. _figure_symbol_5:
-
-.. only:: html
-
-   **Figure Symbol 5:**
-
-.. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
-   :align: center
-
-   Example of custom gradient color ramp with multiple stops |nix|
-
-The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.
-
-.. _figure_symbol_5a:
-
-.. only:: html
-
-   **Figure Symbol 5a:**
-
-.. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
-   :align: center
-
-   cpt-city dialog with hundreds of color ramps |nix|
 
