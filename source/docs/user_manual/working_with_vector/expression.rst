@@ -129,7 +129,7 @@ if one of the inputs is NULL then the result is NULL.
 
 * Joins a string and a value from a column name::
 
-    'My feature's id is: ' || "gid"
+    'My feature''s id is: ' || "gid"
 
 * Test if the "description" attribute field starts with the 'Hello' string
   in the value (note the position of the % character)::
@@ -144,9 +144,9 @@ This group contains functions to handle conditional checks in expressions.
 ====================================  ===========================================================
  Function                             Description
 ====================================  ===========================================================
- case when ... then ... end           Evaluates an expression and returns a result if true.
+ CASE WHEN ... THEN ... END           Evaluates an expression and returns a result if true.
                                       You can test multiple conditions
- case when ... then .. else ... end   Evaluates an expression and returns a different result
+ CASE WHEN ... THEN ... ELSE ... END  Evaluates an expression and returns a different result
                                       whether it's true or false. You can test multiple conditions
  coalesce                             Returns the first non-NULL value from the expression list
  if                                   Tests a condition and returns a different result
