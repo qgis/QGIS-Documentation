@@ -451,9 +451,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
                       (or length of a string)
  m                    Returns the m value of a point geometry
  make_line            Creates a line geometry from a series of point geometries
- make_point(x,y)      Returns a point geometry from x and y values
+ make_point(x,y,z,m)  Returns a point geometry from x and y values
                       (and optional z and m values)
- make_point(x,y,m)    Returns a point geometry from x and y coordinates and m values
+ make_point_m(x,y,m)  Returns a point geometry from x and y coordinates and m values
  make_polygon         Creates a polygon geometry from an outer ring
                       and optional series of inner ring geometries
  nodes_to_points      Returns a multipoint geometry consisting of every node
@@ -468,13 +468,12 @@ This group contains functions that operate on geometry objects (e.g., length, ar
  num_rings            Returns the number of rings (including exterior rings)
                       in a polygon or geometry collection, or null if the input
                       geometry is not a polygon or collection
- num_points           Orders the parts of a MultiGeometry by a given criteria
+ order_parts          Orders the parts of a MultiGeometry by a given criteria 
  overlaps             Tests whether a geometry overlaps another. Returns 1 (true)
                       if the geometries share space, are of the same dimension,
                       but are not completely contained by each other
  perimeter            Returns the perimeter of a geometry polygon feature.
-                      Calculations are in the Spatial Reference System of
-                      this geometry
+                      Calculations are in the Spatial Reference System of this geometry
  point_n              Returns a specific node from a geometry
  point_on_surface     Returns a point guaranteed to lie on the surface of a geometry
  relate               Tests or returns the Dimensional Extended 9 Intersection
@@ -649,6 +648,9 @@ To use these functions in an expression, they should be preceded by @ character
  qgis_release_name          Returns the current QGIS release name
  qgis_version               Returns the current QGIS version string
  qgis_version_no            Returns the current QGIS version number
+ symbol_angle               Returns the angle of the symbol used to render 
+                            the feature (valid for marker symbols only)
+ symbol_color               Returns the color of the symbol used to render the feature
  user_account_name          Returns the current user's operating system account name
  user_full_name             Returns the current user's operating system user name
  row_number                 Stores the number of the current row
