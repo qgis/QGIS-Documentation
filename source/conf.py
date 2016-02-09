@@ -835,7 +835,7 @@ rst_epilog = """
    :width: 2.5em
 .. |mActionSignMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
-.. |mActionSignPlus| image:: /static/common/mActionSignPlus.png
+.. |mActionSignPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |mActionSimplify| image:: /static/common/mActionSimplify.png
    :width: 2em
