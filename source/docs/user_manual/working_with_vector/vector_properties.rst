@@ -1817,8 +1817,9 @@ is applied to all layers.
 Metadata Menu
 =============
 
-|metadata| The `Metadata` menu consists of `Description`,
-`Attribution`, `MetadataURL`, `LegendUrl` and `Properties` sections.
+|metadata| The :guilabel:`Metadata` menu consists of :guilabel:`Description`,
+:guilabel:`Attribution`, :guilabel:`MetadataURL`, :guilabel:`LegendUrl`
+and :guilabel:`Properties` sections.
 
 In the :guilabel:`Properties` section, you get general information about the layer,
 including specifics about the type and location, number of features, feature type,
@@ -1832,10 +1833,13 @@ Additionally, you can add or edit a title and abstract for the layer in the
 :guilabel:`Keyword list` here. These keyword lists can be used in a
 metadata catalogue. If you want to use a title from an XML metadata file,
 you have to fill in a link in the :guilabel:`DataUrl` field.
+
 Use :guilabel:`Attribution` to get attribute data from an XML metadata catalogue.
+
 In :guilabel:`MetadataUrl`, you can define the general path to the XML metadata
 catalogue. This information will be saved in the QGIS project file for subsequent
 sessions and will be used for QGIS server.
+
 In the :guilabel:`LegendUrl` section, you can provide the url of a legend image in the url
 field. You can use the Format drop down option to apply the appropriate format
 of the image. Currently png, jpg and jpeg image formats are supported.
