@@ -1823,10 +1823,6 @@ Metadata Menu
 =======
 |metadata| The `Metadata` menu consists of `Description`,
 `Attribution`, `MetadataURL`, `LegendUrl` and `Properties` sections.
-<<<<<<< HEAD
->>>>>>> Update vector_properties.rst
-=======
->>>>>>> f291b0cfac81118d624c7336c53bd4b3cdbe2b27
 
 In the :guilabel:`Properties` section, you get general information about the layer,
 including specifics about the type and location, number of features, feature type,
