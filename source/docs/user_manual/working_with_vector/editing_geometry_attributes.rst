@@ -114,43 +114,6 @@ The search radius for vertex edits in layer units can be defined in the
 :menuselection:`Options`. This is the same place where you define the general, project-
 wide snapping tolerance.
 
-.. index:: Zoom_In Zoom_Out, Pan, Map_Navigation
-
-Zooming and Panning
--------------------
-
-Before editing a layer, you should zoom in to your area of interest.
-This avoids waiting while all the vertex markers are rendered across the
-entire layer.
-
-Apart from using the |mActionPan| :sup:`pan` and |mActionZoomIn|
-:sup:`zoom-in` / |mActionZoomOut| :sup:`zoom-out` icons on the toolbar
-with the mouse, navigating can also be done with the mouse wheel, spacebar
-and the arrow keys.
-
-Zooming and panning with the mouse wheel
-........................................
-
-While digitizing, you can press the mouse wheel to pan inside of the main
-window, and you can roll the mouse wheel to zoom in and out on the map.
-For zooming, place the mouse cursor inside the map area and roll it forward
-(away from you) to zoom in and backwards (towards you) to zoom out. The mouse
-cursor position will be the center of the zoomed area of interest. You can
-customize the behaviour of the mouse wheel zoom using the :guilabel:`Map tools`
-tab under the :menuselection:`Settings -->` |mActionOptions|
-:menuselection:`Options` menu.
-
-Panning with the arrow keys
-...........................
-
-Panning the map during digitizing is possible with the arrow keys.
-Place the mouse cursor inside the map area, and click on the right arrow key
-to pan east, left arrow key to pan west, up arrow key to pan north, and down
-arrow key to pan south.
-
-You can also use the space bar to temporarily cause mouse movements to pan
-the map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause
-the map display to zoom in or out without interrupting your digitizing session.
 
 .. Index:: Topological_Editing
 
@@ -235,6 +198,8 @@ Using the basic digitizing tools, you can perform the following functions:
 
 Table Editing: Vector layer basic editing toolbar
 
+Note that while using any of the digitizing tools, you can still :ref:`zoom or pan 
+<zoom-pan>` in the map canvas without losing the focus on the tool.
 
 All editing sessions start by choosing the |mActionToggleEditing|
 :sup:`Toggle editing` option. This can be found in the context menu
