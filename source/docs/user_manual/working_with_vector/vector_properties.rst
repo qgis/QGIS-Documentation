@@ -1817,10 +1817,6 @@ is applied to all layers.
 Metadata Menu
 =============
 
-<<<<<<< f901220b0f6a46f23947c0aba380a5edef866123
-|metadata| The :guilabel:`Metadata` menu consists of :guilabel:`Description`,
-:guilabel:`Attribution`, :guilabel:`MetadataURL` and :guilabel:`Properties` sections.
-=======
 |metadata| The `Metadata` menu consists of `Description`,
 `Attribution`, `MetadataURL`, `LegendUrl` and `Properties` sections.
 
