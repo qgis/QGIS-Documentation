@@ -23,7 +23,7 @@ the current state of a Print Composer session as a :file:`.qpt` template
 and load its item again in another session.
 
 In the :menuselection:`Composer` menu, there are also powerful ways to share 
-geographical information produced with |qg| that can be included in reports or 
+geographical information produced with QGIS that can be included in reports or 
 published. These tools are |mActionSaveMapAsImage| :sup:`Export as Image...`, 
 |mActionSaveAsPDF| :sup:`Export as PDF...`, |mActionSaveAsSVG| :sup:`Export as
 SVG...` and |mActionFilePrint| :sup:`Print...`.
@@ -39,7 +39,7 @@ The Composer Manager is the main window to manage print composers in the project
 It helps you add new print composer, duplicate an existing one, rename or delete it. 
 To open the composer manager dialog, click on the |mActionComposerManager| 
 :sup:`Composer Manager` button in the toolbar or choose :menuselection:`Composer 
---> Composer Manager`. It can also be reached from the main window of |qg| with 
+--> Composer Manager`. It can also be reached from the main window of QGIS with 
 :menuselection:`Project --> Composer Manager`.
 
 
@@ -52,25 +52,26 @@ To open the composer manager dialog, click on the |mActionComposerManager|
 .. figure:: /static/user_manual/print_composer/print_composer_manager.png
    :align: center
 
-   The Print Composer Manager |nix|
+   The Print Composer Manager
 
 
-The composer manager lists in its upper part all the available print composers in 
-the project. 
+The composer manager lists in its upper part all the available print composers in the project.
 The bottom part shows tools that help to:
 
-* open the selected composer
-* duplicate the selected composer : it creates a new composer using the selected 
-  composer as template. You'll be prompted to choose a new title for the new composer
-* rename the composer: you can also rename the composer by double-clicking on 
-  its title in the upper part
-* remove the composer: the print composer will be deleted from the project.
+* show the selected composer(s): you can open multiple print composers in one-click 
+* duplicate the selected composer (available only if one print composer is selected):
+  it creates a new composer using the selected composer as template.
+  You'll be prompted to choose a new title for the new composer
+* rename the composer (also available only if one print composer is selected):
+  You'll be prompted to choose a new title for the composer. Note that you can
+  also rename the composer by double-clicking on its title in the upper part
+* remove the composer: the selected print composer(s) will be deleted from the project.
 
 With the Composer Manager, it's also possible to create new print composers as an 
-empty composer or from a saved template. By default, |qg| will look for templates 
+empty composer or from a saved template. By default, QGIS will look for templates 
 in user directory (:file:`~/.qgis2/composer_templates`) or application's one 
 (:file:`ApplicationFolder/composer_templates`). 
-|qg| will retrieve all the available templates and propose them in the combobox.
+QGIS will retrieve all the available templates and propose them in the combobox.
 The selected template will be used to create a new composer when clicking 
 :guilabel:`Add` button. 
 You can also save composer templates in another folder. 
@@ -98,14 +99,14 @@ including each type of map item described in the next section.
 .. figure:: /static/user_manual/print_composer/print_composer_complete.png
    :align: center
 
-   Print Composer with map view, legend, image, scale bar, coordinates, text and 
-   HTML frame added |nix|
+   Print Composer with map view, legend, image, scale bar, coordinates, text and
+   HTML frame added
 
 .. index:: Export_as_image, Export_as_PDF, Export_as_SVG
 
-Before printing a layout you have the possibility to view your composition 
-without bounding boxes. This can be enabled by deactivating :guilabel:`View -->` 
-|checkbox| :guilabel:`Show bounding boxes` or pressing the shortcut 
+Before printing a layout you have the possibility to view your composition
+without bounding boxes. This can be enabled by deactivating :guilabel:`View -->`
+|checkbox| :guilabel:`Show bounding boxes` or pressing the shortcut
 :kbd:`Ctrl+Shift+B`.
 
 The Print Composer allows you to create several output formats, and it is possible
@@ -125,14 +126,14 @@ Image export options
 
 Clicking the |mActionSaveMapAsImage| :sup:`Export as image` icon will ask you to
 enter the filename to use to export composition: in case of multi-page composition,
-each page will be exported to a file with the given name appended with the page 
+each page will be exported to a file with the given name appended with the page
 number.
 
-You can then override the print resolution (set in Composition tab) and resize 
+You can then override the print resolution (set in Composition tab) and resize
 exported image dimensions.
 
-By checking |checkbox| :guilabel:`Crop to content` option, the images output by 
-composer will include only the area of the composition with content. 
+By checking |checkbox| :guilabel:`Crop to content` option, the images output by
+composer will include only the area of the composition with content.
 There's also an option for margins to add around the item bounds if required.
 
 If the composition includes a single page, then the output will
@@ -149,11 +150,11 @@ include the area of that page with items.
 .. figure:: /static/user_manual/print_composer/image_export_options.png
    :align: center
 
-   Image Export Options |nix|
+   Image Export Options
 
 If you need to export your layout as a **georeferenced image** (i.e., to load back
-inside a ), you need to enable this feature under the Composition tab. Check 
-|checkbox| :guilabel:`World file on` and choose the map item to use. 
+inside a ), you need to enable this feature under the Composition tab. Check
+|checkbox| :guilabel:`World file on` and choose the map item to use.
 With this option, the 'Export as image' action will create a world file along
 the exported image.
 
@@ -161,7 +162,7 @@ SVG export options
 ....................
 
 With |mActionSaveAsSVG| :sup:`Export as SVG`, you also need to fill the filename
-(used as a basename for all files in case of multi_page composition) and then 
+(used as a basename for all files in case of multi_page composition) and then
 can apply |checkbox| :guilabel:`Crop to content` option.
 
 The SVG export options dialog allows also to :
@@ -178,7 +179,7 @@ The SVG export options dialog allows also to :
 .. figure:: /static/user_manual/print_composer/svg_export_options.png
    :align: center
 
-   SVG Export Options |nix|
+   SVG Export Options
 
 PDF export options
 ....................
@@ -186,19 +187,19 @@ PDF export options
 The |mActionSaveAsPDF| :sup:`Export as PDF` exports all the composition into a
 single PDF file.
 
-If you applied to your composition or any shown layer an advanced effect such as 
-blend modes, transparency or symbol effects, these cannot be printed 
-as vectors and your effects may be lost. 
+If you applied to your composition or any shown layer an advanced effect such as
+blend modes, transparency or symbol effects, these cannot be printed
+as vectors and your effects may be lost.
 Checking :guilabel:`Print as a raster` in Composition tab helps to keep the effects
-but rasterize the composition. Note that the :guilabel:`Force layer to render 
+but rasterize the composition. Note that the :guilabel:`Force layer to render
 as raster` in the Rendering tab of Layer Properties is a layer-level alternative
 that avoids global composition rasterization.
 
 .. note::
 
-   * Currently, the SVG output is very basic. This is not a |qg| problem, but a
-     problem with the underlying Qt library. This will hopefully be sorted out 
+   * Currently, the SVG output is very basic. This is not a QGIS problem, but a
+     problem with the underlying Qt library. This will hopefully be sorted out
      in future versions.
-   * Exporting big rasters can sometimes fail, even if there seems to be 
-     enough memory. This is also a problem with the underlying Qt management 
+   * Exporting big rasters can sometimes fail, even if there seems to be
+     enough memory. This is also a problem with the underlying Qt management
      of rasters.
