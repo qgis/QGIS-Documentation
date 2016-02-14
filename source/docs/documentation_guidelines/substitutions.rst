@@ -5,13 +5,19 @@ Substitutions
 Usage
 =====
 
-When you want to use an icon from |qg| in a rst document 
-there is a big chance that there is already a substitution defined 
-in conf.py that can/should be used. When a new icon in |qg| is added
-it should be added first to conf.py before it is used in a rst document.
+To easier the use of icons from QGIS in a rst document
+substitutions are defined for each in :file:`/source/conf.py` file.
+Thus, when you want to use an icon from QGIS in the documentation
+there is a big chance that there is already a substitution defined
+that can/should be used. If no substitution exists, don't forget to include one
+in the :file:`conf.py` file before using it.
 
+You'll also need to pick the icons image file from `QGIS repository <https://github.com/qgis/QGIS>`_
+and especially at https://github.com/qgis/QGIS/tree/master/images/themes/default
+and placed them (in ``.png`` format) inside :file:`/resources/en/docs/common` folder.
+It's strongly advised to keep files naming.
 
-Below the icons and the Substitions defined in conf.py are given.
+Below some icons and Substitions defined in conf.py are given.
 
 Common Substitutions
 ====================
@@ -42,7 +48,7 @@ Icon                     Substitution               Icon                   Subst
 |radiobuttonon|          ``|radiobuttonon|``        |radiobuttonoff|       ``|radiobuttonoff|``
 |selectnumber|           ``|selectnumber|``         |selectstring|         ``|selectstring|``
 |browsebutton|           ``|browsebutton|``         |slider|               ``|slider|``
-|mIconDataDefine|        ``|mIconDataDefine|``      \                      \ 
+|mIconDataDefine|        ``|mIconDataDefine|``      \                      \
 =======================  =========================  =====================  =========================
 
 Words and symbols
@@ -81,7 +87,8 @@ Icon                            Substitution                        Icon        
 |mActionAddRasterLayer|         ``|mActionAddRasterLayer|``         |mActionAddMssqlLayer|          ``|mActionAddMssqlLayer|``
 |mActionAddLayer|               ``|mActionAddLayer|``               |mActionAddSpatiaLiteLayer|     ``|mActionAddSpatiaLiteLayer|``
 |mActionNewVectorLayer|         ``|mActionNewVectorLayer|``         |mActionRemoveLayer|            ``|mActionRemoveLayer|``
-|mActionAddWmsLayer|            ``|mActionAddWmsLayer|``            |wfs|                           ``|wfs|``
+|virtualLayer|                  ``|virtualLayer|``                  |mActionAddWmsLayer|            ``|mActionAddWmsLayer|``
+|wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
 |oracle_raster|                 ``|oracle_raster|``
 |dbmanager|                     ``|dbmanager|``                     |gdal|                          ``|gdal|``
 |mActionInOverview|             ``|mActionInOverview|``             |mActionAddAllToOverview|       ``|mActionAddAllToOverview|``
@@ -99,7 +106,7 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 |mActionFileNew|                ``|mActionFileNew|``                |mActionFileOpen|               ``|mActionFileOpen|``
 |mActionFileSave|               ``|mActionFileSave|``               |mActionFileSaveAs|             ``|mActionFileSaveAs|``
-|mActionFileExit|               ``|mActionFileExit|``               \                               \ 
+|mActionFileExit|               ``|mActionFileExit|``               \                               \
 ==============================  ==================================  ==============================  ==================================
 
 Edit
@@ -123,28 +130,30 @@ Icon                            Substitution                        Icon        
 |mActionExpandTree|             ``|mActionExpandTree|``             |mActionCollapseTree|           ``|mActionCollapseTree|``
 |mActionExpandNewTree|          ``|mActionExpandNewTree|``          |mActionPropertyItem|           ``|mActionPropertyItem|``
 |mActionDeselectAll|            ``|mActionDeselectAll|``            |mActionEditCopy|               ``|mActionEditCopy|``
-|mActionFilePrint|              ``|mActionFilePrint|``              \                               \ 
+|mActionFilePrint|              ``|mActionFilePrint|``              \                               \
 ==============================  ==================================  ==============================  ==================================
 
 
 Digitizing and Advanced Digitizing
 ..................................
 
-==============================  ==================================  ===============================  ==================================
-Icon                            Substitution                        Icon                             Substitution
-==============================  ==================================  ===============================  ==================================
-|mActionToggleEditing|          ``|mActionToggleEditing|``
-|mActionCapturePoint|           ``|mActionCapturePoint|``           |mActionCapturePolygon|          ``|mActionCapturePolygon|``
-|mActionCaptureLine|            ``|mActionCaptureLine|``
-|mActionNodeTool|               ``|mActionNodeTool|``               |mActionMoveFeature|             ``|mActionMoveFeature|``
-|mActionDeleteSelected|         ``|mActionDeleteSelected|``
-|mActionSimplify|               ``|mActionSimplify|``               |mActionReshape|                 ``|mActionReshape|``
-|mActionAddRing|                ``|mActionAddRing|``                |mActionAddPart|                 ``|mActionAddPart|``
-|mActionDeleteRing|             ``|mActionDeleteRing|``             |mActionDeletePart|              ``|mActionDeletePart|``
-|mActionMergeFeatures|          ``|mActionMergeFeatures|``          |mActionMergeFeatAttributes|     ``|mActionMergeFeatAttributes|``
-|mActionSplitFeatures|          ``|mActionSplitFeatures|``          |mActionSplitParts|              ``|mActionSplitParts|``
-|mActionOffsetCurve|            ``|mActionOffsetCurve|``            |mActionRotatePointSymbols|      ``|mActionRotatePointSymbols|``
-==============================  ==================================  ===============================  ==================================
+===================================  ========================================  ====================================  =======================================
+Icon                                 Substitution                              Icon                                  Substitution
+===================================  ========================================  ====================================  =======================================
+|mActionToggleEditing|               ``|mActionToggleEditing|``                |mActionTracing|                      ``|mActionTracing|``
+|mActionCapturePoint|                ``|mActionCapturePoint|``                 |mActionCapturePolygon|               ``|mActionCapturePolygon|``
+|mActionCaptureLine|                 ``|mActionCaptureLine|``
+|mActionCircularStringCurvePoint|    ``|mActionCircularStringCurvePoint|``     |mActionCircularStringRadius|         ``|mActionCircularStringRadius|``
+|mActionNodeTool|                    ``|mActionNodeTool|``                     |mActionMoveFeature|                  ``|mActionMoveFeature|``
+|mActionDeleteSelected|              ``|mActionDeleteSelected|``
+|mActionSimplify|                    ``|mActionSimplify|``                     |mActionReshape|                      ``|mActionReshape|``
+|mActionAddRing|                     ``|mActionAddRing|``                      |mActionAddPart|                      ``|mActionAddPart|``
+|mActionFillRing|                    ``|mActionFillRing|``
+|mActionDeleteRing|                  ``|mActionDeleteRing|``                   |mActionDeletePart|                   ``|mActionDeletePart|``
+|mActionMergeFeatures|               ``|mActionMergeFeatures|``                |mActionMergeFeatAttributes|          ``|mActionMergeFeatAttributes|``
+|mActionSplitFeatures|               ``|mActionSplitFeatures|``                |mActionSplitParts|                   ``|mActionSplitParts|``
+|mActionOffsetCurve|                 ``|mActionOffsetCurve|``                  |mActionRotatePointSymbols|           ``|mActionRotatePointSymbols|``
+===================================  ========================================  ====================================  =======================================
 
 
 Map Navigation and attributes
@@ -156,16 +165,17 @@ Icon                            Substitution                        Icon        
 |mActionPan|                    ``|mActionPan|``                    |PanToSelected|                 ``|PanToSelected|``
 |mActionZoomIn|                 ``|mActionZoomIn|``                 |mActionZoomOut|                ``|mActionZoomOut|``
 |mActionZoomActual|             ``|mActionZoomActual|``             |mActionZoomFullExtent|         ``|mActionZoomFullExtent|``
-|mActionZoomToLayer|            ``|mActionZoomToLayer|``            |mActionZoomToSelected|         ``|mActionZoomToSelected|``  
+|mActionZoomToLayer|            ``|mActionZoomToLayer|``            |mActionZoomToSelected|         ``|mActionZoomToSelected|``
 |mActionZoomLast|               ``|mActionZoomLast|``               |mActionZoomNext|               ``|mActionZoomNext|``
 |mActionTouch|                  ``|mActionTouch|``                  |mActionDraw|                   ``|mActionDraw|``
 |mActionIdentify|               ``|mActionIdentify|``               |mActionMapTips|                ``|mActionMapTips|``
 |mActionShowBookmarks|          ``|mActionShowBookmarks|``          |mActionNewBookmark|            ``|mActionNewBookmark|``
 |mActionMeasure|                ``|mActionMeasure|``                |mActionMeasureArea|            ``|mActionMeasureArea|``
-|mActionMeasureAngle|           ``|mActionMeasureAngle|``           \                               \ 
+|mActionMeasureAngle|           ``|mActionMeasureAngle|``           \                               \
 |mActionSelectRectangle|        ``|mActionSelectRectangle|``        |mActionSelectPolygon|          ``|mActionSelectPolygon|``
 |mActionSelectFreehand|         ``|mActionSelectFreehand|``         |mActionSelectRadius|           ``|mActionSelectRadius|``
-|mActionDeselectAll|            ``|mActionDeselectAll|``            \                               \ 
+|mActionSelectAll|              ``|mActionSelectAll|``              |mActionDeselectAll|            ``|mActionDeselectAll|``
+|mIconExpressionSelect|         ``|mIconExpressionSelect|``         \                               \
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -212,7 +222,7 @@ Icon                            Substitution                        Icon        
 |scale_bar|                     ``|scale_bar|``                     |locale|                        ``|locale|``
 |gps_importer|                  ``|gps_importer|``                  |gpstrack_barchart|             ``|gpstrack_barchart|``
 |gpstrack_polarchart|           ``|gpstrack_polarchart|``           |tracking|                      ``|tracking|``
-|mActionFolder|                 ``|mActionFolder|``                 \                               \ 
+|mActionFolder|                 ``|mActionFolder|``                 \                               \
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -222,13 +232,13 @@ Attribute Table
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|mActionOpenTable|              ``|mActionOpenTable|``              \                               \ 
-|mActionSelectedToTop|          ``|mActionSelectedToTop|``          |mActionInvertSelection|        ``|mActionInvertSelection|``
+|mActionOpenTable|              ``|mActionOpenTable|``              |mActionSelectedToTop|          ``|mActionSelectedToTop|``
+|mActionSelectAll|              ``|mActionSelectAll|``              |mActionInvertSelection|        ``|mActionInvertSelection|``
 |PanToSelected|                 ``|PanToSelected|``                 |mActionZoomToSelected|         ``|mActionZoomToSelected|``
 |mActionCopySelected|           ``|mActionCopySelected|``           |mActionEditPaste|              ``|mActionEditPaste|``
 |mIconExpressionSelect|         ``|mIconExpressionSelect|``         |mActionDeleteSelected|         ``|mActionDeleteSelected|``
 |mActionNewAttribute|           ``|mActionNewAttribute|``           |mActionDeleteAttribute|        ``|mActionDeleteAttribute|``
-|mActionCalculateField|         ``|mActionCalculateField|``         \                               \ 
+|mActionNewTableRow|            ``|mActionNewTableRow|``            |mActionCalculateField|         ``|mActionCalculateField|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -269,7 +279,7 @@ Icon                            Substitution                        Icon        
 |mActionAlignLeft|              ``|mActionAlignLeft|``              |mActionAlignRight|             ``|mActionAlignRight|``
 |mActionAlignHCenter|           ``|mActionAlignHCenter|``           |mActionAlignVCenter|           ``|mActionAlignVCenter|``
 |mActionAlignTop|               ``|mActionAlignTop|``               |mActionAlignBottom|            ``|mActionAlignBottom|``
-|mIconLock|                     ``|mIconLock|``                     \                               \ 
+|mIconLock|                     ``|mIconLock|``                     \                               \
 ==============================  ==================================  ==============================  ==================================
 
 Properties
@@ -302,7 +312,7 @@ Icon                            Substitution                        Icon        
 |offline_editing_copy|          ``|offline_editing_copy|``          |offline_editing_sync|          ``|offline_editing_sync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |mapserver_export|              ``|mapserver_export|``              |mActionExportMapServer|        ``|mActionExportMapServer|``
-|spiticon|                      ``|spiticon|``                      |delimited_text|                ``|delimited_text|`` 
+|spiticon|                      ``|spiticon|``                      |delimited_text|                ``|delimited_text|``
 |mActionGDALScript|             ``|mActionGDALScript|``             |dxf2shp_converter|             ``|dxf2shp_converter|``
 |spatialquery|                  ``|spatialquery|``                  |selectesubsetlayer|            ``|selectesubsetlayer|``
 |selectcreatelayer|             ``|selectcreatelayer|``             |metasearch|                    ``|metasearch|``
@@ -317,13 +327,13 @@ FTools Icons
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|ftools|                        ``|ftools|``                        \                               \ 
+|ftools|                        ``|ftools|``                        \                               \
 |matrix|                        ``|matrix|``                        |unique|                        ``|unique|``
 |sum_lines|                     ``|sum_lines|``                     |sum_points|                    ``|sum_points|``
 |basic_statistics|              ``|basic_statistics|``              |neighbor|                      ``|neighbor|``
 |mean|                          ``|mean|``                          |intersections|                 ``|intersections|``
 |random_selection|              ``|random_selection|``              |sub_selection|                 ``|sub_selection|``
-|random_points|                 ``|random_points|``                 \                               \ 
+|random_points|                 ``|random_points|``                 \                               \
 |regular_points|                ``|regular_points|``                |vector_grid|                   ``|vector_grid|``
 |select_location|               ``|select_location|``               |layer_extent|                  ``|layer_extent|``
 |convex_hull|                   ``|convex_hull|``                   |buffer|                        ``|buffer|``
@@ -346,7 +356,7 @@ Grass integration
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|grass|                         ``|grass|``                         \                               \ 
+|grass|                         ``|grass|``                         \                               \
 |grass_tools|                   ``|grass_tools|``                   |grass_new_mapset|              ``|grass_new_mapset|``
 |grass_open_mapset|             ``|grass_open_mapset|``             |grass_close_mapset|            ``|grass_close_mapset|``
 |grass_region|                  ``|grass_region|``                  |grass_set_region|              ``|grass_set_region|``
@@ -362,11 +372,11 @@ Icon                            Substitution                        Icon        
 |osm_featureManager|            ``|osm_featureManager|``            |osm_identify|                  ``|osm_identify|``
 |osm_import|                    ``|osm_import|``                    |osm_save|                      ``|osm_save|``
 |osm_createPoint|               ``|osm_createPoint|``               |osm_createLine|                ``|osm_createLine|``
-|osm_createPolygon|             ``|osm_createPolygon|``             \                               \ 
+|osm_createPolygon|             ``|osm_createPolygon|``             \                               \
 |osm_move|                      ``|osm_move|``                      |osm_removeFeat|                ``|osm_removeFeat|``
 |osm_createRelation|            ``|osm_createRelation|``            |osm_addRelation|               ``|osm_addRelation|``
 |osm_editRelation|              ``|osm_editRelation|``              |osm_generateTags|              ``|osm_generateTags|``
-|osm_questionMark|              ``|osm_questionMark|``              \                               \ 
+|osm_questionMark|              ``|osm_questionMark|``              \                               \
 ==============================  ==================================  ==============================  ==================================
 
 Raster related
