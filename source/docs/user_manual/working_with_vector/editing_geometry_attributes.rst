@@ -198,7 +198,7 @@ Using the basic digitizing tools, you can perform the following functions:
 
 Table Editing: Vector layer basic editing toolbar
 
-Note that while using any of the digitizing tools, you can still :ref:`zoom or pan 
+Note that while using any of the digitizing tools, you can still :ref:`zoom or pan
 <zoom-pan>` in the map canvas without losing the focus on the tool.
 
 All editing sessions start by choosing the |mActionToggleEditing|
@@ -658,9 +658,9 @@ Merge selected features
 .......................
 
 The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows you to merge
-features. A new dialog will allow you to choose which value to choose between each 
-selected features or select a function (Minimum, Maximum, Median, Sum, Skip 
-Attribute) to use for each column. If features don't have a common boundaries, 
+features. A new dialog will allow you to choose which value to choose between each
+selected features or select a function (Minimum, Maximum, Median, Sum, Skip
+Attribute) to use for each column. If features don't have a common boundaries,
 a multipolygon will be created.
 
 .. index:: Merge_Attributes_of_Selected_Features
@@ -985,6 +985,12 @@ same expressions as the |mActionCalculateField| :sup:`Field Calculator`
    :menuselection:`Settings --> Options -->` Data sources menu |checkbox|
    :guilabel:`Copy geometry in WKT representation from attribute table`.
 
+Zoom to feature
+...................................
+
+To zoom into a feature, without having to select it, right-click on the feature
+you want to zoom in, within the attribute table, and select :guilabel:`Zoom to feature`.
+
 Save selected features as new layer
 ...................................
 
@@ -1158,6 +1164,3 @@ to assign the current airport to another region.
    :align: center
 
    Identification dialog airport with relation to regions |nix|
-
-
-
