@@ -24,6 +24,7 @@ To buffer it, we use the *Fixed distance buffer* algorithm, with the following p
 
 .. image:: img/cutting_merging/buffer_dialog.png
 
+.. warning:: Syntax changed in recent versions; set both Distance and Arc vertex to .25
 
 Here is the resulting bounding box obtained using the parameters shown above
 
@@ -37,9 +38,9 @@ You will notice that the rasters has a different projection from the vector. We 
 
 .. image:: img/cutting_merging/warp.png
 
-.. note:: Recent versions have a more complex interface. Select at least one compression method.
+.. note:: Recent versions have a more complex interface. Make sure at least one compression method is selected.
 
-With this layer that contains the bounding box of the raster layer that we want to obtain, we can crop both of the raster layers, using the *Clip grid with polygon* algorithm.
+With this layer that contains the bounding box of the raster layer that we want to obtain, we can crop both of the raster layers, using the *Clip raster with polygon* algorithm.
 
 .. image:: img/cutting_merging/clip.png 
 
