@@ -13,7 +13,7 @@ You will recognize our well-known DEM from previous chapters and a set of waters
 
 This can be a lengthy and tedious task, especially if the number of watersheds is large. However, it is a task that can be easily automated, as we will see.
 
-The algorithm to use for clipping a raster layer with a polygon layer is called *Clip grid with polygons*, and has the following parameters dialog.
+The algorithm to use for clipping a raster layer with a polygon layer is called *Clip raster with polygons*, and has the following parameters dialog.
 
 .. image:: img/iterative/clip.png
 
