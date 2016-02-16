@@ -114,13 +114,13 @@ Use of indexes
 When requesting a layer through a virtual layer, indexes of this source layer 
 will be used in the following ways:
 
-- if an ``=`` predicate is used on the primary key column of the layer, the 
-underlying data provider will be asked for a particular id (FilterFid)
+* if an ``=`` predicate is used on the primary key column of the layer, the 
+  underlying data provider will be asked for a particular id (FilterFid)
 
-- for any other predicates (``>``, ``<=``, ``!=``, etc.) or on a column without
-primary key, a request built from an expression will be used to request the 
-underlying vector data provider. It means indexes may be used on database
-providers if they exist.
+* for any other predicates (``>``, ``<=``, ``!=``, etc.) or on a column without
+  primary key, a request built from an expression will be used to request the 
+  underlying vector data provider. It means indexes may be used on database
+  providers if they exist.
 
 A specific syntax exists to handle spatial predicates in requests and trigger 
 the use of a spatial index: a hidden column named ``_search_frame_`` exists
