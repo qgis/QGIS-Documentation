@@ -28,7 +28,7 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
    Click on the [Color] and [Thickness] buttons to adjust those properties.
 * Use the :guilabel:`Background color` menu for setting a background color.
   Click on the [Color...] button to display a dialog where you can pick a color or choose from a custom setting. 
-  Transparency can be adjusted through adjusting the alpha field settings.  
+  Transparency can be adjusted through atlering the alpha field settings.  
 * Use the :guilabel:`Item ID` to create a relationship to other Print Composer items. 
   This is used with |qg| server and other potential web 
   clients. You can set an ID on an item (for example, a map or a label), and then the web client can send data to set a property 
