@@ -954,23 +954,25 @@ The other buttons at the top of the attribute table window provide the
 following functionality:
 
 * |mActionToggleEditing| :sup:`Toggle editing mode` to edit single values
-  and to enable functionalities described below (also with :kbd:`Ctrl+E`)
-* |mActionSaveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+S`)
-* |mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+U`)
-* |mActionSelectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+T`)
-* |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+R`)
+  and to enable functionalities described below (also with :kbd:`Ctrl+e`)
+* |mActionSaveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+s`)
+* |mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)
+* |mActionSelectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+t`)
+* |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
 * |mActionCopySelected| :sup:`Copy selected rows to clipboard` (also with
-  :kbd:`Ctrl+C`)
+  :kbd:`Ctrl+c`)
+* |mActionEditPaste| :sup:`Paste from clipboard to a new row` (also with 
+  :kbd:`Ctrl+v`)
 * |mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with
-  :kbd:`Ctrl+J`)
-* |PanToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+P`)
+  :kbd:`Ctrl+j`)
+* |PanToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+p`)
 * |mActionDeleteSelected| :sup:`Delete selected features` (also with
-  :kbd:`Ctrl+D`)
+  :kbd:`Ctrl+d`)
 * |mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR
-  layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+W`)
+  layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+w`)
 * |mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR
-  layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+L`)
-* |mActionCalculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+I`)
+  layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+l`)
+* |mActionCalculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+i`)
 
 Below these buttons is the Field Calculator bar, which allows calculations
 to be quickly applied attributes visible in the table. This bar uses the
