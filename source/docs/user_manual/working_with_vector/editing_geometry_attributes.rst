@@ -996,7 +996,7 @@ following functionality:
 * |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
 * |mActionCopySelected| :sup:`Copy selected rows to clipboard` (also with
   :kbd:`Ctrl+c`)
-* |mActionPasteSelected| :sup:`Paste from clipboard to a new row` (also with 
+* |mActionEditPaste| :sup:`Paste from clipboard to a new row` (also with 
   :kbd:`Ctrl+v`)
 * |mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with
   :kbd:`Ctrl+j`)
