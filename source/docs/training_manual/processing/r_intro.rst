@@ -10,7 +10,8 @@ Processing allows to write and run R scripts inside QGIS.
 .. note:: If you have some *packages* problem, maybe it is related to missing *mandatory* packages required by Processing, like ``sp``, ``rgdal`` and ``raster``.
 
 Adding scripts
---------------
+---------------
+
 Adding a script is very simple. Open the Processing toolbox and just click on the :menuselection:`R --> Tools --> Create new R script`.
 
 .. image:: img/r_intro/r_intro_1.png
@@ -23,16 +24,16 @@ It opens a *script editor window* in which you have to specify some parameters b
     :scale: 70%
     :align: center
 
-
 Creating plots
-^^^^^^^^^^^^^^
+----------------
+
 In this tutorial we are going to create a **boxplot** of a vector layer field.
 
 Open the :file:`r_intro.qps` QGIS project.
 
 
 Script parameters
-"""""""""""""""""
+--------------------
 Open the editor and start writing at the beginning of it. 
 
 You **must** specify some parameters **before** the script body:
@@ -43,7 +44,7 @@ You **must** specify some parameters **before** the script body:
     
 so you will find your script in the **plots** group in the Processing toolbox.
 
-2. you have to tell Processing that you want to display a plot (just in this example):: 
+2. you have to tell Processing that you want to display a plot (just in this example)::
 
     ##showplots
 
@@ -61,9 +62,9 @@ Processing knows now that the input is a vector. The name *Layer* is not importa
 
 So Processing knows that you have called **X** the **Field Layer**.
 
-
 Script body
-"""""""""""
+-------------
+
 Now that you have set up the *heading* of the script you can add the function::
 
     boxplot(Layer[[X]])
@@ -112,7 +113,8 @@ This is the final result you'll see:
 .. note:: You can open, copy and save the image by right clicking on the plot
 
 Create a vector
-^^^^^^^^^^^^^^^
+----------------
+
 With an R script you can also create a vector and automatically load it in QGIS.
 
 The following example has been taken from the ``Random sampling grid`` script that you can download from the online collection :menuselection:`R --> Tools --> Download R scripts from the on-line collection`.
@@ -121,7 +123,8 @@ The aim of this exercise is to crate a random point vector in a layer extent usi
 
 
 Script parameters
-"""""""""""""""""
+------------------
+
 As before we have to set some parameters before the script body:
 
 1. specify the the name of the group in which you want to put your script, for example *Point pattern analysis*:: 
@@ -142,9 +145,9 @@ As before we have to set some parameters before the script body:
 
     ##Output= output vector 
 
-    
 Script body
-"""""""""""
+-------------
+
 Now you can add the body of the function:
 
 1. run the ``spsample`` function::
@@ -176,6 +179,7 @@ Resulting points will be displayed in the map canvas
 
 R - Processing syntax
 ---------------------
+
 Beware that Processing uses some special syntax to get the results out of R:
 
 * ``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means the result should be sent to R output (Result viewer)
