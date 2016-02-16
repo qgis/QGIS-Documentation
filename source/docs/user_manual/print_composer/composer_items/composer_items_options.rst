@@ -21,13 +21,13 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
 
 .. _Frame_Dialog:
 
-* The :guilabel:`Position and size` dialog lets you define the size and position of the frame
-which contains the item. 
+* The :guilabel:`Position and size` dialog lets you define the size and position of the frame 
+  which contains the item. 
   You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** 
   coordinates previously defined.
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the item.
-   Click on the [Color] and [Thickness] buttons to adjust those properties.
+  Click on the [Color] and [Thickness] buttons to adjust those properties.
 * Use the :guilabel:`Background color` menu for setting a background color.
   Click on the [Color...] button to display a dialog where you can pick a color or choose from a
   custom setting. 
@@ -73,16 +73,16 @@ Rendering mode
    Rendering mode |nix|
 
 * :guilabel:`Blending mode`: With this tool you can achieve effects which would otherwise 
-only be achieved using graphic rendering software. The pixels of your overlaying and 
-underlaying items are mixed through the settings described below.(See :ref:`layer_rendering`
-for more information)
+  only be achieved using graphic rendering software. The pixels of your overlaying and 
+  underlaying items are mixed through the settings described below.(See :ref:`layer_rendering`
+  for more information)
 * :guilabel:`Transparency` |slider|: You can make the underlying item in the Composer visible
-with this tool.
+  with this tool.
   Use the slider to adapt the visibility of your item to your needs.
   You can also make a precise definition of the percentage of visibility in the menu beside the
   slider.
 * |checkbox| :guilabel:`Exclude item from exports`: You can decide to make an item invisible in 
-all exports. 
+  all exports. 
   After activating this checkbox, the item will not be included in export to PDF, print etc.. 
 
 
@@ -103,8 +103,8 @@ holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Alt` will
 resize from the item center.
 
 The correct position for an item can be obtained using the grid snapping or 
-smart guides. Guides are set by clicking and dragging within the ruler area. To move a guide, click
-on the ruler, level with the guide and drag it to a new 
+smart guides. Guides are set by clicking and dragging within the ruler area. To move a guide, 
+click on the ruler, level with the guide and drag it to a new 
 position. To delete a guide move it off the canvas. If you need to disable the 
 snap on the fly, hold :kbd:`Ctrl` while moving the mouse.
 
