@@ -5,7 +5,6 @@ Numeric calculations in the modeler
 
 .. note:: In this lesson we will see how to use numeric outputs in the modeler
 
-
 For this lesson, we are going to modify the hydrological model that we created in the last chapter (open it in the modeler before starting), so we can automate the calculation of a valid threshold value and we do not have to ask the user to enter it. Since that value refers to the variable in the threshold raster layer, we will extract it from that layer, based on some simple statistical analysis.
 
 Starting with the aforementioned model, let's do the following modifications:
@@ -16,7 +15,7 @@ First, calculate statistics of the flow accumulation layer using the *Raster lay
 
 This will generate a set of statistical values that will now be available for all numeric fields in other algorithms. 
 
-If you double click on the  *Channel network* algorithm to modify it, as we did in the last lesson, you will see now that you have other options apart from the numeric input that you added.
+If you edit the  *Channel network* algorithm, as we did in the last lesson, you will see now that you have other options apart from the numeric input that you added.
 
 .. image:: img/modeler_hydro_calculator/unfolded.png
 

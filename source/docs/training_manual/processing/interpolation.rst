@@ -25,7 +25,7 @@ Notice that we are not using the original layer as input, but the output of the 
 
 The final filter layer, with a reduced set of points, should look similar to the original one, but it contains a smaller number of points. You can check that by comparing their attribute tables.
 
-Now let's rasterize the layer using the *Shapes to grid* algorithm.
+Now let's rasterize the layer using the *Rasterize* algorithm.
 
 .. image:: img/interpolation/rasterize.png
 
