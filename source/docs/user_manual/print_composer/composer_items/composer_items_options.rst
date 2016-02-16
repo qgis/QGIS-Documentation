@@ -21,18 +21,23 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
 
 .. _Frame_Dialog:
 
-* The :guilabel:`Position and size` dialog lets you define the size and position of the frame which contains the item. 
-  You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
+* The :guilabel:`Position and size` dialog lets you define the size and position of the frame
+which contains the item. 
+  You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** 
+  coordinates previously defined.
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the item.
    Click on the [Color] and [Thickness] buttons to adjust those properties.
 * Use the :guilabel:`Background color` menu for setting a background color.
-  Click on the [Color...] button to display a dialog where you can pick a color or choose from a custom setting. 
+  Click on the [Color...] button to display a dialog where you can pick a color or choose from a
+  custom setting. 
   Transparency can be adjusted through atlering the alpha field settings.  
 * Use the :guilabel:`Item ID` to create a relationship to other Print Composer items. 
   This is used with |qg| server and other potential web 
-  clients. You can set an ID on an item (for example, a map or a label), and then the web client can send data to set a property 
-  (e.g., label text) for that specific item. The GetProjectSettings command will list the items and IDs which are available in a layout.
+  clients. You can set an ID on an item (for example, a map or a label), and then the web client
+  can send data to set a property 
+  (e.g., label text) for that specific item. The GetProjectSettings command will list the items
+  and IDs which are available in a layout.
 * :guilabel:`Rendering` mode can be selected in the option field. See Composer_Rendering_Mode_.
 
 .. note:: 
@@ -67,12 +72,17 @@ Rendering mode
 
    Rendering mode |nix|
 
-* :guilabel:`Blending mode`: With this tool you can achieve effects which would otherwise only be achieved using graphic rendering software. The pixels of your overlaying and underlaying items are mixed 
-  through the settings described below.(See :ref:`layer_rendering` for more information)
-* :guilabel:`Transparency` |slider|: You can make the underlying item in the Composer visible with this tool.
+* :guilabel:`Blending mode`: With this tool you can achieve effects which would otherwise 
+only be achieved using graphic rendering software. The pixels of your overlaying and 
+underlaying items are mixed through the settings described below.(See :ref:`layer_rendering`
+for more information)
+* :guilabel:`Transparency` |slider|: You can make the underlying item in the Composer visible
+with this tool.
   Use the slider to adapt the visibility of your item to your needs.
-  You can also make a precise definition of the percentage of visibility in the menu beside the slider.
-* |checkbox| :guilabel:`Exclude item from exports`: You can decide to make an item invisible in all exports. 
+  You can also make a precise definition of the percentage of visibility in the menu beside the
+  slider.
+* |checkbox| :guilabel:`Exclude item from exports`: You can decide to make an item invisible in 
+all exports. 
   After activating this checkbox, the item will not be included in export to PDF, print etc.. 
 
 
@@ -144,5 +154,6 @@ There are several alignment options available within the |mActionAlignLeft|
 :sup:`Align selected items` pull-down menu (see figure_composer_common_3_). To use an
 alignment function, you first select the elements then click on the
 matching alignment icon. All selected elements will then be aligned to their common bounding box.
-When moving items on the Composer canvas, alignment helper lines appear when borders, centers or corners are aligned.
+When moving items on the Composer canvas, alignment helper lines appear when borders, centers or 
+corners are aligned.
 
