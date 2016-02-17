@@ -610,6 +610,10 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionCheckQgisVersion| image:: /static/common/mActionCheckQgisVersion.png
    :width: 1.5em
+.. |mActionCircularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
+   :width: 1.5em
+.. |mActionCircularStringRadius| image:: /static/common/mActionCircularStringRadius.png
+   :width: 1.5em
 .. |mActionCollapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |mActionComposerManager| image:: /static/common/mActionComposerManager.png
@@ -741,6 +745,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionNewSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em
+.. |mActionNewTableRow| image:: /static/common/mActionNewTableRow.png
+   :width: 1.5em
 .. |mActionNewVectorLayer| image:: /static/common/mActionNewVectorLayer.png
    :width: 1.5em
 .. |mActionNodeTool| image:: /static/common/mActionNodeTool.png
@@ -797,6 +803,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionSelect| image:: /static/common/mActionSelect.png
    :width: 1.5em
+.. |mActionSelectAll| image:: /static/common/mActionSelectAll.png
+   :width: 1.5em
 .. |mActionSelectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
 .. |mActionSelectPan| image:: /static/common/mActionSelectPan.png
@@ -838,6 +846,8 @@ rst_epilog = """
 .. |mActionToggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |mActionTouch| image:: /static/common/mActionTouch.png
+   :width: 1.5em
+.. |mActionTracing| image:: /static/common/mActionTracing.png
    :width: 1.5em
 .. |mActionTransformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em
@@ -1070,11 +1080,12 @@ rst_epilog = """
    :width: 1.5em
 .. |vector_grid| image:: /static/common/vector_grid.png
    :width: 1.5em
+.. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+   :width: 1.5em
 .. |wcs| image:: /static/common/mActionAddWcsLayer.png
    :width: 1.5em
 .. |wfs| image:: /static/common/mActionAddWfsLayer.png
    :width: 1.5em
-
 
 
 .. |basic| image:: /static/training_manual/global/basic.png
