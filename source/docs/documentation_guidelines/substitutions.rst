@@ -17,7 +17,7 @@ and especially at https://github.com/qgis/QGIS/tree/master/images/themes/default
 and placed them (in ``.png`` format) inside :file:`/resources/en/docs/common` folder.
 It's strongly advised to keep files naming.
 
-Below some icons and Substitions defined in conf.py are given.
+Below some icons and substitutions defined in conf.py are given.
 
 Common Substitutions
 ====================
