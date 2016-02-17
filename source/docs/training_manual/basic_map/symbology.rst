@@ -126,7 +126,7 @@ To enable scale-based rendering:
 .. image:: /static/training_manual/symbology/scale_dependent_visibility.png
    :align: center
 
-* Change the :guilabel:`Maximum` value to :kbd:`1:10,000`.
+* Change the :guilabel:`Minimum` value to :kbd:`1:10,000`.
 * Click :guilabel:`OK`.
 
 Test the effects of this by zooming in and out in your map, noting when the
