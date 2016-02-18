@@ -913,7 +913,7 @@ the :guilabel:`Distance` or :guilabel:`Repeat` options in Placement tab.
 
 
 Under :guilabel:`Obstacles`, the |checkbox| :guilabel:`Discourage
-labels from covering features`helps you manage covering relation
+labels from covering features` helps you manage covering relation
 between labels and other features.
 
 
