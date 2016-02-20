@@ -26,7 +26,7 @@ Test some of the preinstalled examples, if you have R_ already installed (rememb
 OTB
 ----
 
-OTB_ (also known as Orfeo ToolBox) is a free and open source library of image processing algorithms. It is installed by deafult on Windows through the OSGeo4W standalone installer (32 bit). Paths should be configured in Processing.
+OTB_ (also known as Orfeo ToolBox) is a free and open source library of image processing algorithms. It is installed by deafult on Windows through the OSGeo4W standalone installer (**NB: 32 bit only**). Paths should be configured in Processing.
 
 In a standard OSgeo4W Windows installation, the paths will be::
 
@@ -72,7 +72,7 @@ Now, raster buffers and distances:
 
 - first, load and rasterize the vector ``rivers.shp`` with :menuselection:`GRASS --> v.to.rast.value`; **beware:** cell size must be set to 100 m, otherwise the computation time will be enormous; resulting map will have 1 and NULLs
 - same, with :menuselection:`SAGA --> Shapes to Grid --> COUNT` (resulting map: 6 to 60)
-- then, :menuselection:`proximity` (value= 1 for GRASS, a list of rivers ID for SAGA), :menuselection:`r.buffer` with parameters 1000,2000,3000, :menuselection:`r.grow.distance` (the first of the two maps). 
+- then, :menuselection:`proximity` (value= 1 for GRASS, a list of rivers ID for SAGA), :menuselection:`r.buffer` with parameters 1000,2000,3000, :menuselection:`r.grow.distance` (the first of the two maps; the second will show the areas pertaining to each river, if done on the SAGA raster). 
 
 Dissolve
 ..........
