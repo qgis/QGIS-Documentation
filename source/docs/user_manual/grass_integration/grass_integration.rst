@@ -61,7 +61,7 @@ This section gives an example of how to import raster and vector data into a GRA
 #. In QGIS browser find a layer you want to import to GRASS, note that you can 
    open another instance of the browser (:guilabel:`Browser Panel (2)`) if 
    source data are too far from the mapset in the tree.
-#. 3.	Drag a layer and drop it on the target mapset. The import may take some time for 
+#. Drag a layer and drop it on the target mapset. The import may take some time for 
    larger layers and you will see animated icon |mIconImport| in front of new layer item 
    until the import finishes.
    
@@ -83,7 +83,7 @@ Managing GRASS data in QGIS browser
 *	Copying maps: GRASS maps may be copied between mapsets within the same location using 
    drag and drop.
 *	Deleting maps: Right click on a GRASS map and select :guilabel:`Delete` from context menu.
-*	Renaming maps: Right click on a GRASS map and select :guilabel:`Rename` from context menu
+*	Renaming maps: Right click on a GRASS map and select :guilabel:`Rename` from context menu.
 
 .. _grass_options:
 
