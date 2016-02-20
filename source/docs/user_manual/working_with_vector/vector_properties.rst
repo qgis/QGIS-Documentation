@@ -806,17 +806,46 @@ Choose the :guilabel:`Placement` menu for configuring label placement and labeli
 priority. Note that the placement options differ according to the type of
 vector layer, namely point, line or polygon.
 
+.. _cartographic:
+
 Placement for point layers
 ..........................
 
-Using the |radiobuttonon| :guilabel:`Around point` setting, you are able to set
-the distance between the points and their labels.
+With the |radiobuttonon| :guilabel:`Cartographic` placement mode,
+point labels are generated with best visual relationship with the point feature,
+following ideal cartographic placement rules. Labels can be placed
+at a set :guilabel:`Distance` either from the point feature itself
+or from the bounds of the symbol used to represent the feature.
+The latter option is especially useful when the symbol size isn't fixed,
+e.g. if it's set by a data defined size or when using different symbols
+in a categorized renderer.
 
-If you use the |radiobuttonon| :guilabel:`Offset from point` setting, you
-can select the :guilabel:`Quadrant` in which to place your label. You are also
-able to set the distance between the points and their labels and can alter the
-angle of the label placement with the :guilabel:`Rotation` setting. Thus,
-placement in a selected quadrant with a defined rotation is possible.
+By default, placements are prioritised in the following order:
+
+* top right
+* top left
+* bottom right
+* bottom left
+* middle right
+* middle left
+* top, slightly right
+* bottom, slightly left.
+
+Placement priority can however be customized or set for an individual
+feature using a data defined list of prioritised positions.
+This also allows only certain placements to be used, so eg
+for coastal features you can prevent labels being placed over the land.
+
+The |radiobuttonon| :guilabel:`Around point` setting places the label in an equal
+radius (set in :guilabel:`Distance`) circle around the feature. The placement of 
+the label can even be constrained using the :guilabel:`Quadrant` option.
+
+In the |radiobuttonon| :guilabel:`Offset from point` placement, labels are placed
+at a fixed offset from the point feature.
+You can select the :guilabel:`Quadrant` in which to place your label. You are also
+able to set the X and Y offset distances between the points and their labels
+and can alter the angle of the label placement with the :guilabel:`Rotation` setting.
+Thus, placement in a selected quadrant with a defined rotation is possible.
 
 Placement for line layers
 .........................
