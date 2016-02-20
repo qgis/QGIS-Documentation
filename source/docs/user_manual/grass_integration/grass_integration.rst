@@ -14,11 +14,10 @@ change GRASS region, create and edit vector layers and analyse GRASS 2-D and 3-D
 with more than 400 GRASS modules. In this section, we'll introduce the provider and plugin 
 functionalities and give some examples of managing and working with GRASS data. 
 
-The provider supports GRASS version 6 and 7, the plugin supports GRASS 6 and 7
-(starting from |qg| 2.12). QGIS distribution may contain provider/plugin for either 
-GRASS 6 or GRASS 7 or for both versions at the same time 
-(binaries have different file names). Only one version of the provider/plugin may be 
-loaded on runtime however.
+The provider supports GRASS version 6 and 7, the plugin supports GRASS 6 and 7 (starting 
+from |qg| 2.12). QGIS distribution may contain provider/plugin for either GRASS 6, GRASS 7 
+or both versions at the same time (binaries have different file names). Only one version 
+of the provider/plugin may be loaded on runtime however.
 
 Demo dataset
 ============
@@ -42,8 +41,8 @@ icon is added in the browser tree under each folder item which contains GRASS lo
 Go to the folder :file:`grassdata` and expand location :file:`alaska` and 
 mapset :file:`demo`.
 
-You can load GRASS raster and vector layers like any other layer from the browser either 
-by double click on layer item or by dragging and dropping to map canvas or legend.
+You can load GRASS raster and vector layers like any other layer from the browser 
+either by double click on a layer item or by dragging and dropping to map canvas or legend.
 
 .. tip:: **GRASS Data Loading**
 
@@ -62,28 +61,29 @@ This section gives an example of how to import raster and vector data into a GRA
 #. In QGIS browser find a layer you want to import to GRASS, note that you can 
    open another instance of the browser (:guilabel:`Browser Panel (2)`) if 
    source data are too far from the mapset in the tree.
-#. Drag a layer and drop it on the target mapset. The imported may take some time for 
-   larger layers, you will see animated icon |mIconImport| in front of new layer item
+#. 3.	Drag a layer and drop it on the target mapset. The import may take some time for 
+   larger layers and you will see animated icon |mIconImport| in front of new layer item 
    until the import finishes.
    
-It is optional, if raster data in a different CRS will be reprojected using 
-:guilabel:`Approximate` (fast) or :guilabel:`Exact` (precise) transformation and 
-if a link to the source raster is created (using r.external) if the source data are in the same 
-CRS and the format is known to GDAL. You can set these options in :guilabel:`Browser` tab in 
-:ref:`grass_options`.
+There is the option, with raster data, to reproject in a different CRS using an 
+:guilabel:`Approximate` (fast) or :guilabel:`Exact`(precise) transformation. If a link 
+to the source raster is created (using r.external) it is assumed that the data are in 
+the same CRS and the format is known to GDAL. You can set these options in :guilabel:`Browser` 
+tab in :ref:`grass_options`.
 
-If a source raster had more bands, a new GRASS map is created for each layer with **.<band number>**
-suffix and group of all maps with |mIconRasterGroup| icon is created. External rasters have 
-different icon |mIconRasterLink|.
+If a source raster has more bands, a new GRASS map is created for each layer with a .<band number>
+suffix and a group of all maps with the |mIconRasterGroup| icon is created. External rasters 
+have a different icon |mIconRasterLink|.
 
 .. _managing_grass_data:
 
 Managing GRASS data in QGIS browser
 ===================================
 
-* Copying maps: GRASS maps may be copied between mapsets within the same location using drag and drop.
-* Deleting maps: Right click on a GRASS map and select :guilabel:`Delete` from contex menu.
-* Renaming maps: Right click on a GRASS map and select :guilabel:`Rename` from contex menu.
+*	Copying maps: GRASS maps may be copied between mapsets within the same location using 
+   drag and drop.
+*	Deleting maps: Right click on a GRASS map and select :guilabel:`Delete` from context menu.
+*	Renaming maps: Right click on a GRASS map and select :guilabel:`Rename` from context menu
 
 .. _grass_options:
 
