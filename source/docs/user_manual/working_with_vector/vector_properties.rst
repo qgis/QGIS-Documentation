@@ -859,9 +859,27 @@ features of the layer:
   One or more draw effects can be selected at the same time, which can also be
   moved up and down, in order to finally get the desired result.
 
-* :guilabel:`Control feature rendering order` allows you to define, using features
-  attributes, the order in which they shall be processed by the renderer.
+* :guilabel:`Control feature rendering order` allows you, using features
+  attributes, to define the :index:`z-order` in which they shall be rendered.
+  Activate the checkbox and click on the |browsebutton| button beside.
+  You then get the :guilabel`Define Order` dialog in which you:
 
+  * choose a field or build an expression to apply to the layer features
+  * set in which order the fetched features should be sorted, i.e. if you choose 
+    **Ascending** order, the features with lower value are rendered under those
+    with upper value.
+  * define when features returning NULL value should be rendered: **first** or **last**.
+
+  You can add several :index:`rules of ordering`. The first rule is applied
+  to all the features in the layer, z-ordering them according to the value returned.
+  Then, for each group of features with the same value (including those with 
+  NULL value) and thus same z-level, the next rule is applied to sort its items
+  among them.
+  And so on...
+  
+  Once the :guilabel`Define Order` dialog is applied, a summary of the expression(s)
+  used to control the :index:`layer rendering` is retranscribed in the textbox
+  beside |checkbox| :guilabel:`Control feature rendering order` option. 
 
 .. _vector_labels_tab:
 
