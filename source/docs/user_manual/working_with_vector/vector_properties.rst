@@ -899,14 +899,51 @@ label with the higher priority will be displayed and the others will be left out
 Rendering menu
 --------------
 
-In the :guilabel:`Rendering` menu, you can define label and feature options.
-Under :guilabel:`Label options`, you find the scale-based visibility setting now.
-You can prevent QGIS from rendering only selected labels with the
-|checkbox| :guilabel:`Show all labels for this layer (including colliding labels)`
-checkbox. Under :guilabel:`Feature options`, you can define whether every
-part of a multipart feature is to be labelled. It's possible to define
-whether the number of features to be labelled is limited and to
-|checkbox| :guilabel:`Discourage labels from covering features`.
+In the :guilabel:`Rendering` menu, you can tune when the labels can be rendered
+and their interaction with other labels and features.
+
+Under :guilabel:`Label options`, you find the :ref:`scale-based <label_scaledepend>`
+and the :guilabel:`Pixel size-based` visibility settings.
+
+The :guilabel:`Label z-index` determines the order in which labels are rendered,
+as well in relation with other feature labels in the layer (using data-defined override
+expression), as with labels from other layers.
+Labels with a higher z-index are rendered on top of labels (from any layer) with lower z-index.
+
+Additionally, the logic has been tweaked so that if 2 labels have
+matching z-indexes, then:
+
+* if they are from the same layer, the smaller label will be drawn above the larger label
+* if they are from different layers, the labels will be drawn in the same order
+  as their layers themselves (ie respecting the order set in the map legend).
+
+Note that this setting doesn't make labels to be drawn below the
+features from other layers, it just controls the order in which
+labels are drawn on top of all the layer's features.
+
+While rendering labels and in order to display readable labels,
+QGIS automatically evaluates the position of the labels and can hide some of them
+in case of collision. You can however choose to |checkbox| :guilabel:`Show all
+labels for this layer (including colliding labels)` in order to manually fix their placement.
+
+With data-defined expressions in :guilabel:`Show label` and :guilabel:`Always Show`
+you can fine tune which labels should be rendered.
+
+
+Under :guilabel:`Feature options`, you can choose to :guilabel:`label every
+part of a multi-part feature` and :guilabel:`limit the number of features to be labeled`.
+Both line and polygon layers offer the option to set a minimum size for the 
+features to be labeled.
+For polygon features, you can also filter the labels to show according to whether they 
+completely fit within the feature or not.
+For line features, you can choose to :guilabel:`Merge connected lines
+to avoid duplicate labels`, rendering a quite airy map in conjunction with
+the :guilabel:`Distance` or :guilabel:`Repeat` options in Placement tab.
+
+
+Under :guilabel:`Obstacles`, the |checkbox| :guilabel:`Discourage
+labels from covering features` helps you manage covering relation
+between labels and other features.
 
 
 .. features act as obstacles for labels or not .
