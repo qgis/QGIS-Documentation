@@ -76,6 +76,7 @@ Menu Option                                                     Shortcut        
 |mActionFileSaveAs| :guilabel:`Save As...`                      :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`Project`
 |mActionSaveMapAsImage| :guilabel:`Save as Image...`            \                     see :ref:`sec_output`                       \
 :guilabel:`DXF Export ...`                                      \                     see :ref:`sec_output`                       \
+|mActionProjectProperties| :guilabel:`Project Properties ...`   :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \
 |mActionNewComposer| :guilabel:`New Print Composer`             :kbd:`Ctrl+P`         see :ref:`label_printcomposer`              :guilabel:`Project`
 |mActionComposerManager| :guilabel:`Composer manager ...`       \                     see :ref:`label_printcomposer`              :guilabel:`Project`
 :menuselection:`Print Composers -->`                            \                     see :ref:`label_printcomposer`              \
@@ -147,13 +148,16 @@ Menu Option                                                     Shortcut        
 |mActionZoomToSelected| :guilabel:`Zoom To Selection`           :kbd:`Ctrl+J`         \                                           :guilabel:`Map Navigation`
 |mActionZoomLast| :guilabel:`Zoom Last`                         \                     \                                           :guilabel:`Map Navigation`
 |mActionZoomNext| :guilabel:`Zoom Next`                         \                     \                                           :guilabel:`Map Navigation`
-|mActionZoomActual| :guilabel:`Zoom Actual Size`                \                     \                                           :guilabel:`Map Navigation`
+|mActionZoomActual| :guilabel:`Zoom To Native Resolution`       \                     \                                           :guilabel:`Map Navigation`
 :menuselection:`Decorations -->`                                \                     see :ref:`decorations`                      \
 :menuselection:`Preview mode -->`                               \                     \                                           \
-|mActionMapTips| :guilabel:`Map Tips`                           \                     \                                           :guilabel:`Attributes`
-|mActionNewBookmark| :guilabel:`New Bookmark`                   :kbd:`Ctrl+B`         see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
+|mActionMapTips| :guilabel:`Map Tips`                           \                     see :ref:`maptips`                          :guilabel:`Attributes`
+|mActionNewBookmark| :guilabel:`New Bookmark...`                :kbd:`Ctrl+B`         see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
 |mActionShowBookmarks| :guilabel:`Show Bookmarks`               :kbd:`Ctrl+Shift+B`   see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
 |mActionDraw| :guilabel:`Refresh`                               :kbd:`F5`                                                         :guilabel:`Map Navigation`
+:menuselection:`Panels -->`                                     \                     see :ref:`sec_panels_and_toolbars`          \
+:menuselection:`Toolbars -->`                                   \                     see :ref:`sec_panels_and_toolbars`          \
+:guilabel:`Toggle Full Screen Mode`                             :kbd:`F11`            \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
 Layer
@@ -177,11 +181,11 @@ Menu Option                                                          Shortcut   
 |mActionRemoveLayer| :guilabel:`Remove Layer/Group`                  :kbd:`Ctrl+D`         \                                           \
 |mActionDuplicateLayer| :guilabel:`Duplicate Layers (s)`             \                     \                                           \
 :guilabel:`Set Scale Visibility of Layers`                           \                     \                                           \
-:menuselection:`Set CRS of Layer(s)`                                 :kbd:`Ctrl+Shift+C`   \                                           \
-:menuselection:`Set project CRS from Layer`                          \                     \                                           \
-:menuselection:`Properties ...`                                      \                     \                                           \
-:menuselection:`Query...`                                            \                     \                                           \
-|mActionLabeling| :guilabel:`Labeling`                               \                     \                                           \
+:guilabel:`Set CRS of Layer(s)`                                      :kbd:`Ctrl+Shift+C`   \                                           \
+:guilabel:`Set project CRS from Layer`                               \                     \                                           \
+:guilabel:`Properties...`                                            \                     see :ref:`vector_properties_dialog`          \
+:guilabel:`Filter...`                                                \                     see :ref:`vector_query_builder`             \
+|mActionLabeling| :guilabel:`Labeling`                               \                     see :ref:`vector_labels_tab`                \
 |mActionInOverview| :guilabel:`Add to Overview`                      :kbd:`Ctrl+Shift+O`   \                                           :guilabel:`Manage Layers`
 |mActionAddAllToOverview| :guilabel:`Add All To Overview`            \                     \                                           \
 |RemoveAllOverview| :guilabel:`Remove All From Overview`             \                     \                                           \
@@ -197,16 +201,12 @@ Settings
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:menuselection:`Panels -->`                                     \                     see :ref:`sec_panels_and_toolbars`          \
-:menuselection:`Toolbars -->`                                   \                     see :ref:`sec_panels_and_toolbars`          \
-:menuselection:`Toggle Full Screen Mode`                        :kbd:`F 11`           \                                           \
-|mActionProjectProperties| :guilabel:`Project Properties ...`   :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \
 |mActionCustomProjection| :guilabel:`Custom CRS ...`            \                     see :ref:`sec_custom_projections`           \
 :guilabel:`Style Manager...`                                    \                     see :ref:`vector_style_manager`             \
 |mActionOptions| :guilabel:`Configure shortcuts ...`            \                     \                                           \
 |mActionOptions| :guilabel:`Customization ...`                  \                     see :ref:`sec_customization`                \
 |mActionOptions| :guilabel:`Options ...`                        \                     see :ref:`gui_options`                      \
-:menuselection:`Snapping Options ...`                           \                     \                                           \
+:guilabel:`Snapping Options ...`                                \                     see :ref:`snapping_tolerance`               \
 ==============================================================  ====================  ==========================================  ===============================
 
 Plugins
@@ -216,7 +216,7 @@ Plugins
 Menu Option                                                             Shortcut              Reference                            Toolbar
 ======================================================================  ====================  ===================================  ===============================
 |mActionShowPluginManager| :guilabel:`Manage and Install Plugins ...`   \                     see :ref:`managing_plugins`          \
-:menuselection:`Python Console`                                         :kbd:`Ctrl+Alt+P`     \                                    \
+:guilabel:`Python Console`                                              :kbd:`Ctrl+Alt+P`     \                                    \
 ======================================================================  ====================  ===================================  ===============================
 
 When starting |qg| for the first time not all core plugins are loaded.
@@ -243,7 +243,7 @@ Raster
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:menuselection:`Raster calculator ...`                          \                     see :ref:`sec_raster_calc`                  \
+:guilabel:`Raster calculator ...`                               \                     see :ref:`sec_raster_calc`                  \
 ==============================================================  ====================  ==========================================  ===============================
 
 When starting |qg| for the first time not all core plugins are loaded.
@@ -296,8 +296,9 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 |mActionHelpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                                           :guilabel:`Help`
 |mActionWhatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
-:menuselection:`API Documentation`                              \                     \                                           \
-:menuselection:`Need commercial support?`                       \                     \                                           \
+:guilabel:`API Documentation`                                   \                     \                                           \
+:guilabel:`Report an Issue`                                     \                     \                                           \
+:guilabel:`Need commercial support?`                            \                     \                                           \
 |mActionQgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`         \                                           \
 |mActionCheckQgisVersion| :guilabel:`Check QGIS Version`        \                     \                                           \
 |mActionHelpAbout| :guilabel:`About`                            \                     \                                           \
