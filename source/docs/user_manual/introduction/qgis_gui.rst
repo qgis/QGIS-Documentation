@@ -420,11 +420,12 @@ selected legend item is a raster or a vector layer. For GRASS vector layers,
 
 **Right mouse button menu for raster layers**
 
-* :menuselection:`Zoom to Layer`
+* |mActionZoomToLayer| :menuselection:`Zoom to Layer`
 * :menuselection:`Show in overview`
-* :menuselection:`Zoom to Best Scale (100%)`
-* :menuselection:`Remove`
-* :menuselection:`Duplicate`
+* |mActionZoomActual| :menuselection:`Zoom to Native Resolution (100%)`
+* :menuselection:`Stretch Using Current Extent`
+* |mActionRemoveLayer| :menuselection:`Remove`
+* |mActionDuplicateLayer| :menuselection:`Duplicate`
 * :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
@@ -443,19 +444,19 @@ Additionally, according to layer position and selection
 
 **Right mouse button menu for vector layers**
 
-* :menuselection:`Zoom to Layer`
+* |mActionZoomToLayer| :menuselection:`Zoom to Layer`
 * :menuselection:`Show in overview`
-* :menuselection:`Remove`
-* :menuselection:`Duplicate`
+* |mActionRemoveLayer| :menuselection:`Remove`
+* |mActionDuplicateLayer|:menuselection:`Duplicate`
 * :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
 * :menuselection:`Styles -->`
 * :menuselection:`Open Attribute Table`
-* :menuselection:`Toggle Editing` (not available for GRASS layers)
+* |mActionToggleEditing| :menuselection:`Toggle Editing` (not available for GRASS layers)
 * :menuselection:`Save As ...`
 * :menuselection:`Save As Layer Definition Style`
-* :menuselection:`Filter`
+* :menuselection:`Filter...`
 * :menuselection:`Show Feature Count`
 * :menuselection:`Properties`
 * :menuselection:`Rename`
@@ -469,18 +470,21 @@ Additionally, according to layer position and selection
 
 **Right mouse button menu for layer groups**
 
-* :menuselection:`Zoom to Group`
-* :menuselection:`Remove`
+* |mActionZoomToLayer| :menuselection:`Zoom to Group`
+* |mActionRemoveLayer| :menuselection:`Remove`
 * :menuselection:`Set Group CRS`
 * :menuselection:`Rename`
+* :menuselection:`Set Group WMS Data`
 * :menuselection:`Mutually Exclusive Group`
-* :menuselection:`Add Group`
+* :menuselection:`Save As Layer Definition File`
+* |mActionAddGroup| :menuselection:`Add Group`
 
 ..   Additionally, according to position
 
 ..   *  :menuselection:`Show file groups`
 
-Enabling the **Mutually Exclusive Group** option you can make a group have only one layer visible at the same time. 
+Enabling the **Mutually Exclusive Group** option you can make a group have only
+one layer visible at the same time. 
 Whenever a layer within the group is set visible the others will be toggled not visible.
 
 It is possible to select more than one layer or group at the same time by
@@ -568,9 +572,9 @@ will toggle between showing coordinate position or the view extents of the
 map view as you pan and zoom in and out.
 
 Next to the coordinate display you will find the scale display. It shows the scale of
-the map view. If you zoom in or out, |qg| shows you the current scale. There is
-a scale selector, which allows you to choose between predefined scales from
-1:500 to 1:1000000.
+the map view. If you zoom in or out, QGIS shows you the current scale. There is
+a scale selector, which allows you to choose among :ref:`predefined and custom scales
+<predefinedscales>`.
 
 To the right of the scale display you can define a current clockwise rotation for
 your map view in degrees.

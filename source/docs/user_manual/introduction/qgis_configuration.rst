@@ -345,10 +345,14 @@ This menu offers some options regarding the behaviour of the :guilabel:`Identify
   'Zoom to mouse cursor', 'Nothing')
 * Define :guilabel:`Zoom factor` for wheel mouse
 
+.. _predefinedscales:
+
 **Predefined scales**
 
-Here, you find a list of predefined scales. With the **[+]** and **[-]** buttons
-you can add or remove your individual scales.
+Here, you find a list of predefined scales. With the |mActionSignPlus|
+and |mActionSignMinus| buttons you can add or remove your personal scales.
+You can also import or export scales from/to a ``.XML`` file. Note that you still have
+the possibility to remove your changes and reset to the predefined list.
 
 Composer Menu
 -------------
