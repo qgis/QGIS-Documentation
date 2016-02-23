@@ -18,9 +18,10 @@ Installation
 .. :index::
     single:installation
 
-Installation of |qg| is very simple. Standard installer packages are available
+Installation of QGIS is very simple. Standard installer packages are available
 for MS Windows and Mac OS X. For many flavours of GNU/Linux, binary packages (rpm
-and deb) or software repositories are provided to add to your installation manager. Get the latest information on binary packages at the |qg| website at
+and deb) or software repositories are provided to add to your installation manager.
+Get the latest information on binary packages at the QGIS website at
 http://download.qgis.org.
 
 Installation from source
@@ -34,9 +35,11 @@ http://htmlpreview.github.io/?https://raw.github.com/qgis/QGIS/master/doc/INSTAL
 Installation on external media
 ..............................
 
-|qg| allows you to define a ``--configpath`` option that overrides the default path for user configuration (e.g., :file:`~/.qgis2` under Linux) and forces
+QGIS allows you to define a ``--configpath`` option that overrides the default
+path for user configuration (e.g., :file:`~/.qgis2` under Linux) and forces
 **QSettings** to use this directory, too. This allows you to, for instance, carry a
-|qg| installation on a flash drive together with all plugins and settings. See section :ref:`env_options` for additional information.
+QGIS installation on a flash drive together with all plugins and settings.
+See section :ref:`env_options` for additional information.
 
 .. _label_sampledata:
 
@@ -48,11 +51,12 @@ Sample Data
 
 The user guide contains examples based on the |qg| sample dataset.
 
-|win| The Windows installer has an option to download the |qg| sample dataset.
+|win| The Windows installer has an option to download the QGIS sample dataset.
 If checked, the data will be downloaded to your :file:`My Documents` folder and
 placed in a folder called :file:`GIS Database`. You may use Windows Explorer to
 move this folder to any convenient location. If you did not select the checkbox
-to install the sample dataset during the initial |qg| installation, you may do one of the following:
+to install the sample dataset during the initial QGIS installation,
+you may do one of the following:
 
 * Use GIS data that you already have
 * Download sample data from
@@ -103,11 +107,12 @@ official GRASS GIS website, http://grass.osgeo.org/download/sample-data/.
 Sample Session
 ==============
 
-Now that you have |qg| installed and a sample dataset available, we would
-like to demonstrate a short and simple |qg| sample session. We will visualize
-a raster and a vector layer. We will use the :file:`landcover` raster layer,
-:file:`qgis_sample_data/raster/landcover.img`, and the :file:`lakes` vector
-layer, :file:`qgis_sample_data/gml/lakes.gml`.
+Now that you have QGIS installed and a sample dataset available, we would
+like to demonstrate a short and simple QGIS sample session. We will visualize
+a raster and a vector layer. We will use:
+
+* the :file:`landcover` raster layer i.e., :file:`qgis_sample_data/raster/landcover.img`
+* and the :file:`lakes` vector layer i.e., :file:`qgis_sample_data/gml/lakes.gml`.
 
 Start QGIS
 ..........
@@ -133,22 +138,24 @@ Load raster and vector layers from the sample dataset
    the ERDAS IMG file :file:`landcover.img` and click **[Open]**.
 #. If the file is not listed, check if the :guilabel:`Files of type`
    |selectstring| combo box at the bottom of the dialog is set on the right
-   type, in this case "Erdas Imagine Images (\*.img, \*.IMG)".
+   type, in this case **Erdas Imagine Images (\*.img \*.IMG)**.
 #. Now click on the |mActionAddOgrLayer| :sup:`Add Vector Layer` icon.
 #. |radiobuttonon| :guilabel:`File` should be selected as :guilabel:`Source Type`
    in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to
    select the vector layer.
-#. Browse to the folder :file:`qgis_sample_data/gml/`, select 'Geography Markup
-   Language [GML] [OGR] (.gml,.GML)' from the :guilabel:`Filter` |selectstring| combo box, then select the GML file :file:`lakes.gml` and
+#. Browse to the folder :file:`qgis_sample_data/gml/`, select **Geography Markup
+   Language [GML] [OGR] (*.gml *.GML)** from the :guilabel:`Filter` |selectstring| 
+   combo box, then select the GML file :file:`lakes.gml` and
    click **[Open]**. In the :guilabel:`Add vector layer` dialog, click **[OK]**.
-   The :guilabel:`Coordinate Reference System Selector` dialog opens with :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**. 
+   The :guilabel:`Coordinate Reference System Selector` dialog opens with 
+   :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**. 
 #. Zoom in a bit to your favourite area with some lakes.
 #. Double click the :file:`lakes` layer in the map legend to open the
    :guilabel:`Properties` dialog.
 #. Click on the :guilabel:`Style` tab and select a blue as fill color.
-#. Click on the :guilabel:`Labels` tab and check the |checkbox|
-   :guilabel:`Label this layer with` checkbox to enable labelling. Choose the
-   "NAMES" field as the field containing labels.
+#. Click on the :guilabel:`Labels` tab and select :guilabel:`Show labels for
+   this layer` in the drop-down menu to enable labelling. Then from the
+   :guilabel:`Label with` list, choose the "NAMES" field as the field containing labels.
 #. To improve readability of labels, you can add a white buffer around them
    by clicking "Buffer" in the list on the left, checking |checkbox|
    :guilabel:`Draw text buffer` and choosing 3 as buffer size.
@@ -289,7 +296,7 @@ You can have multiple configurations and decide which one to use when starting
 operating system saves the settings files. Presently, there is no way to specify
 a file to write settings to; therefore, you can create a copy of
 the original settings file and rename it. The option specifies path to directory 
-with settings. For example, to use /path/to/config/QGIS/QGIS2.ini settings file, 
+with settings. For example, to use :file:`/path/to/config/QGIS/QGIS2.ini` settings file, 
 use option:
 
 ::
@@ -376,7 +383,7 @@ select:
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
   version of QGIS`
 
-Whenever you save a project in |qg| a backup of the project file is made with the extension ~. 
+Whenever you save a project in QGIS a backup of the project file is made with the extension ``.qgs~``. 
 
 .. _`sec_output`:
 
@@ -394,8 +401,8 @@ Here is a sampling of other ways to produce output files:
 
 * Menu option :menuselection:`Project -->` |mActionSaveMapAsImage| :sup:`Save
   as Image` opens a file dialog where you select the name, path and type of
-  image (PNG,JPG and many other formats). A world file with extension PNGW or JPGW saved
-  in the same folder georeferences the image.
+  image (PNG, JPG and many other formats). A world file with extension ``PNGW``
+  or ``JPGW`` saved in the same folder georeferences the image.
 * Menu option :menuselection:`Project -->` :guilabel:`DXF Export ...` opens
   a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
   vector layers you want to export to DXF. Through the 'Symbology mode' symbols
