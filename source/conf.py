@@ -528,6 +528,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddGCPPoint| image:: /static/common/mActionAddGCPPoint.png
    :width: 1.5em
+.. |mActionAddGroup| image:: /static/common/mActionAddGroup.png
+   :width: 1.5em
 .. |mActionAddHtml| image:: /static/common/mActionAddHtml.png
    :width: 1.5em
 .. |mActionAddImage|  image:: /static/common/mActionAddImage.png
