@@ -256,14 +256,16 @@ General Menu
 |general| Use this menu to make general settings for the vector layer.
 There are several options available:
 
-**Layer Info**
+Layer Info
+----------
 
 * Change the display name of the layer in :guilabel:`displayed as`
 * Define the :guilabel:`Layer source` of the vector layer
 * Define the :guilabel:`Data source encoding` to define provider-specific options
   and to be able to read the file
 
-**Coordinate Reference System**
+Coordinate Reference System
+---------------------------
 
 * :guilabel:`Specify` the coordinate reference system. Here, you
   can view or change the projection of the specific vector layer.
@@ -272,18 +274,14 @@ There are several options available:
 * View or change the projection of the specific vector layer, clicking on
   :guilabel:`Specify ...`
 
-|checkbox| :guilabel:`Scale dependent visibility`
+Scale dependent visibility
+--------------------------
 
-* You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)`
-  scale, defining a range of scale in which features will be visible.
-  Out of this range, they are hidden.
-  The |mActionMapIdentification| :sup:`Set to current canvas scale` button helps
-  you use the current map canvas scale as boundary of the range visibility.
-
-**Feature subset**
-
-* With the **[Query Builder]** button, you can create a subset of the features in the
-  layer that will be visualized (also refer to section :ref:`vector_query_builder`).
+You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)`
+scale, defining a range of scale in which features will be visible.
+Out of this range, they are hidden.
+The |mActionMapIdentification| :sup:`Set to current canvas scale` button helps
+you use the current map canvas scale as boundary of the range visibility.
 
 .. do not change the order of reference-tag and only-tag, this figure has
    an external reference.
@@ -298,6 +296,73 @@ There are several options available:
    :align: center
 
    General menu in vector layers properties dialog
+
+
+.. _vector_query_builder:
+
+Query Builder
+-------------
+
+Under the **Provider Feature Filter** frame,
+the :index:`Query Builder` allows you to define a subset of the features in the
+layer using a SQL-like WHERE clause and to display the result in the main window.
+As long as the query is active, only the features corresponding to its result
+are available in the project. The query result can be saved as a new vector layer.
+
+The **Query Builder** is accessible through the eponym term at the bottom of the
+:guilabel:`General` menu in the Layer Properties.
+Under :guilabel:`Feature subset`, click on the **[Query Builder]** button
+to open the :guilabel:`Query builder`.
+For example, if you have a ``regions`` layer with a ``TYPE_2`` field, you could
+select only regions that are ``borough`` in the :guilabel:`Provider specific filter expression`
+box of the Query Builder. Figure_vector_general_2_ shows an example of the Query Builder
+populated with the :file:`regions.shp` layer from the QGIS sample data.
+The Fields, Values and Operators sections help you to construct the SQL-like
+query.
+
+.. _figure_vector_general_2:
+
+.. only:: html
+
+   **Figure Vector General 2:**
+
+.. figure:: /static/user_manual/working_with_vector/queryBuilder.png
+   :align: center
+
+   Query Builder
+
+The **Fields list** contains all attribute columns of the attribute table to be
+searched. To add an attribute column to the SQL WHERE clause field, double click
+its name in the Fields list. Generally, you can use the various fields, values and
+operators to construct the query, or you can just type it into the SQL box.
+
+The **Values list** lists the values of an attribute table. To list all possible
+values of an attribute, select the attribute in the Fields list and click
+the **[all]** button. To list the first 25 unique values of an attribute column,
+select the attribute column in the Fields list and click the
+**[Sample]** button. To add a value to the SQL WHERE clause field, double
+click its name in the Values list.
+
+The **Operators section** contains all usable operators. To add an operator
+to the SQL WHERE clause field, click the appropriate button. Relational
+operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), and logical
+operators (``AND``, ``OR``, ...) are available.
+
+The **[Test]** button shows a message box with the number of features
+satisfying the current query, which is useful in the process of query
+construction. The **[Clear]** button clears the text in the SQL WHERE
+clause text field. The **[OK]** button closes the window and selects
+the features satisfying the query. The **[Cancel]** button closes the
+window without changing the current selection.
+
+QGIS treats the resulting subset acts as if it where the entire layer. 
+For example if you applied the filter above for 'Borough', you can not
+display, query, save or edit Anchorage, because that is a 'Municipality'
+and therefore not part of the subset.
+
+The only exception is that unless your layer is part of a database, using
+a subset will prevent you from editing the layer. 
+
 
 
 .. index:: Symbology
