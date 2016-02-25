@@ -1798,6 +1798,8 @@ To add a raster (a TIF image in this example), it becomes:
     '[% "layername" %]')
 
 
+.. _maptips:
+
 Display Menu
 ============
 
