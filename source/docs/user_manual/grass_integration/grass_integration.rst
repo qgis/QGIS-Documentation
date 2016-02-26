@@ -34,7 +34,7 @@ http://grass.osgeo.org/download/sample-data/.
 
 .. _sec_load_grassdata:
 
-Loading GRASS raster and vector layers
+Loading GRASS raster and vector layers 
 ======================================
 
 If the provider is loaded in QGIS, the location item with GRASS |grass_location| 
