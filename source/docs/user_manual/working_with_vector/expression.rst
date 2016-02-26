@@ -10,7 +10,7 @@ Expressions
 .. contents::
    :local:
 
-The **Expressions** feature is available from many parts in QGIS. It can be 
+The **Expressions** feature is available from many parts in [qg]. It can be 
 accessed using the |mIconExpressionSelect| :sup:`Select by expression`, the 
 |mActionCalculateField| :sup:`Field calculator` or the 
 |mIconDataDefine| :sup:`Data defined override` tool. 
@@ -147,7 +147,7 @@ This group contains functions to handle conditional checks in expressions.
 
 * Send back a value if the first condition is true, else another value::
 
-    CASE WHEN "software" LIKE '%QGIS%' THEN 'QGIS' ELSE 'Other'
+    CASE WHEN "software" LIKE '%[qg]%' THEN '[qg]' ELSE 'Other'
 
 Mathematical Functions
 -----------------------
@@ -455,7 +455,7 @@ This group contains functions that operate on record identifiers.
  $id                 returns the feature id of the current row
  $map                returns the id of the current map item if the map 
                      is being drawn in a composition, or "canvas" if 
-                     the map is being drawn within the main QGIS window                 
+                     the map is being drawn within the main [qg] window                 
  $rownum             returns the number of the current row
  $scale              returns the current scale of the map canvas
  attribute           returns the value of a specified attribute from 
@@ -565,9 +565,9 @@ To use these functions in an expression, they should be preceded by @ character
  project_path               returns the full path (including file name) 
                             of current project
  project_title              returns the title of current project 
- qgis_release_name          returns the current QGIS release name
- qgis_version               returns the current QGIS version string
- qgis_version_no            returns the current QGIS version number
+ [qg]_release_name          returns the current [qg] release name
+ [qg]_version               returns the current [qg] version string
+ [qg]_version_no            returns the current [qg] version number
  row_number                 stores the number of the current row 
 
 .. _function_editor:
@@ -590,7 +590,7 @@ functions in a comfortable way.
    The Function Editor tab |nix|
 
 The function editor will create new Python files in :file:`.qgis2\\python\\expressions` 
-folder and will auto load all functions defined when starting QGIS. Be aware 
+folder and will auto load all functions defined when starting [qg]. Be aware 
 that new functions are only saved in the :file:`expressions` folder and not in 
 the project file. If you have a project that uses one of your custom functions 
 you will need to also share the .py file in the expressions folder. 
@@ -619,8 +619,7 @@ Your function will be implemented in the :guilabel:`Custom` functions group of
 the :guilabel:`Expression` tab after using the :guilabel:`Run Script` button.
 
 Further information about creating Python code can be found on 
-http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
+http://www.qgis.org/html/en/docs/py[qg]_developer_cookbook/index.html.
 
 The function editor is not only limited to working with the field calculator, 
 it can be found whenever you work with expressions.
-
