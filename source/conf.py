@@ -312,6 +312,8 @@ rst_epilog = """
    :width: 1.5em
 .. |export_projection| image:: /static/common/export_projection.png
    :width: 1.5em
+.. |extents| image:: /static/common/extents.png
+   :width: 1.5em
 .. |extract_nodes| image:: /static/common/extract_nodes.png
    :width: 1.5em
 .. |fontcombobox|  image:: /static/common/fontcombobox.png
@@ -928,6 +930,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mIconZip| image:: /static/common/mIconZip.png
    :width: 2em
+.. |mMessageLog| image:: /static/common/mMessageLog.png
+   :width: 1.5em
 .. |multi_to_single| image:: /static/common/multi_to_single.png
    :width: 1.5em
 .. |neighbor| image:: /static/common/neighbour.png

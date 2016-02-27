@@ -566,34 +566,49 @@ changes you make in the legend area.
 Status Bar
 ----------
 
-The status bar shows you your current position in map coordinates (e.g.,
-meters or decimal degrees) as the mouse pointer is moved across the map view.
-To the left of the coordinate display in the status bar is a small button that
-will toggle between showing coordinate position or the view extents of the
-map view as you pan and zoom in and out.
+The status bar provides you with general information about the map view,
+and actions processed or available and offers you tools to manage the map view.
 
-Next to the coordinate display you will find the scale display. It shows the scale of
-the map view. If you zoom in or out, QGIS shows you the current scale. There is
-a scale selector, which allows you to choose among :ref:`predefined and custom scales
-<predefinedscales>`.
+On the left side of the status bar, you can get a summary of actions you've done
+(such as selecting features in a layer, removing layer) or a long description
+of the tool you are hovering over (not available for all tools).
+On startup, the bar status also informs you about availability of new or upgradeable
+plugins (if checked in :ref:`Plugin Manager settings <setting_plugins>`).
+
+In case of lengthy operations such as gathering of statistics in raster layers
+or rendering several layers in map view, a progress bar is displayed in the
+status bar to show the current progress of the action.
+
+The |tracking| :guilabel:`Coordinate` option shows the current position of the mouse,
+following it while moving across the map view. You can set the unit (and precision)
+to use in the project properties, General tab.
+Click on the small button at the left of the textbox to toggle between
+the Coordinate option and the |extents| :guilabel:`Extents` option that displays
+in map units, the coordinates of the current lower leftmost and upper rightmost
+points of the map view, as you pan and zoom in and out.
+
+Next to the coordinate display you will find the :guilabel:`Scale` display.
+It shows the scale of the map view. If you zoom in or out, QGIS shows you the
+current scale. There is a scale selector, which allows you to choose among
+:ref:`predefined and custom scales <predefinedscales>` to assign to the map view.
 
 To the right of the scale display you can define a current clockwise rotation for
 your map view in degrees.
 
-A progress bar in the status bar shows the progress of rendering as each layer is
-drawn to the map view. In some cases, such as the gathering of statistics in
-raster layers, the progress bar will be used to show the status of lengthy
-operations.
 
-If a new plugin or a plugin update is available, you will see a message at the
-far left of the status bar. On the right side of the status bar, there is a small
+On the right side of the status bar, there is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
-map view (see section :ref:`redraw_events` below). The icon |mIconStopRendering|
-immediately stops the current map rendering process.
+map view (see section :ref:`redraw_events`).
 
-To the right of the render functions, you find the EPSG code of the current
-project CRS and a projector icon. Clicking on this opens the projection
-properties for the current project.
+To the right of the render functions, you find the |mIconProjectionDisabled|
+:sup:`Current CRS:` icon with the EPSG code of the current
+project CRS. Clicking on this lets you :guilabel:`Enable 'on the fly' CRS
+transformation` properties for the current project and apply another CRS to the
+map view. 
+
+Finally, the |mMessageLog| :sup:`Messages` button opens the :guilabel:`Log
+Messages Panel` which informs you on underlying process (QGIS startup, plugins
+loading, processing tools...)
 
 
 .. tip::
@@ -602,11 +617,13 @@ properties for the current project.
    .. index::
       single:scale calculate
 
-   When you start |qg|, the default units are degrees, and this means that |qg| will interpret any
-   coordinate in your layer as specified in degrees. To get correct scale values, you can
-   either change this setting to meters manually in the :guilabel:`General` tab
-   under :menuselection:`Settings --> Project Properties`, or you can select a
-   project CRS clicking on the |mIconProjectionDisabled| :sup:`Current CRS:` icon in the
-   lower right-hand corner of the status bar. In the last case, the units are set to what the
-   project projection specifies (e.g., '+units=m').
+   When you start QGIS, the default CRS is ``WGS 84 (epsg 4326)`` and 
+   units are degrees. This means that QGIS will interpret any
+   coordinate in your layer as specified in degrees. To get correct scale values,
+   you can either manually change this setting, e.g. to meters, in the :guilabel:`General`
+   tab under :menuselection:`Project --> Project Properties`, or you can use
+   the |mIconProjectionDisabled| :sup:`Current CRS:` icon seen above. In the latter case,
+   the units are set to what the project projection specifies (e.g., ``+units=us-ft``).
+   
+   Note that CRS choice on startup can be set in :menuselection:`Settings --> Options --> CRS`.
 
