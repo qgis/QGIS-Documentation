@@ -12,6 +12,9 @@ ESRI shapefiles or MapInfo files), databases (e.g., PostGIS, Oracle, SpatiaLite
 or MS SQL Spatial) and WMS/WFS connections. You can also view your GRASS data
 (to get the data into |qg|, see :ref:`sec_grass`).
 
+QGIS Browser widget
+===================
+
 .. index:: Browse_Maps, Import_Maps
 
 Use the |qg| Browser to preview your data. The drag-and-drop function makes it easy
@@ -66,6 +69,12 @@ The |mActionFilter|:sup:`Filter browser` function allows you to search for
 specific data. Enter a search word or wildcard and the browser will show
 only matching filenames or parent folders -- other data or folders
 won't be displayed. See the Browser Panel(2) example on the _figure_browser_panels.
+
+The next two icons respectively collapses the layer tree and removes the 
+information panel at the bottom of the QGIS browser.
+
+QGIS Browser as a stand-alone application
+==========================================
 
 It's also possible to run the |qg| Browser as a stand-alone application.
 
