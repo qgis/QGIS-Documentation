@@ -673,7 +673,7 @@ features of the layer:
   previously only know from graphics programs. The pixels of your overlaying and
   underlaying layers are mixed through the settings described in :ref:`blend-modes'.
 
-* :guilabel:'Draw effects': This function adds paint effects for customising the
+* :guilabel:'Draw effects': This function adds paint effects for customizing the
   visualization of vector files. The function is activated by checking the
   :menuselection:'Draw effects' button and then customize it by clicking the
   :menuselection:'Customize effects' button (the small “star” shape, on the right
@@ -710,7 +710,7 @@ features of the layer:
     like adding an extra dimension. This effect can be customized by changing the
     :menuselection:'offset' degrees and radius, determining where the shadow shifts
     towards to and the proximity to the source object. :menuselection:'Drop Shadow'
-    also has the option to change the blur radius, the transparency and the colour
+    also has the option to change the blur radius, the transparency and the color
     of the effect.
     .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
        :align: center
