@@ -408,9 +408,9 @@ for the rivers layer of the QGIS sample dataset.
 
 .. tip:: **Match categories to symbol name**
 
-   In the [Advanced] menu, under the classes, you can choose one of the two 
+   In the [Advanced] menu, under the classes, you can choose one of the two
    first actions to match symbol name to a category name in your classification.
-   *Matched to saved symbols* match category name with a symbol name from your 
+   *Matched to saved symbols* match category name with a symbol name from your
    *Style Manager*. *Match to symbols from file* match category name to a
    symbol name from an external file.
 
@@ -442,8 +442,8 @@ to select:
 * The colors (using the color Ramp list) if the color method is selected
 * The size (using the size domain and its unit
 
-Then you can use the Histogram tab which shows an interactive histogram of the 
-values from the assigned field or expression. Class breaks can be moved or 
+Then you can use the Histogram tab which shows an interactive histogram of the
+values from the assigned field or expression. Class breaks can be moved or
 added using the histogram widget.
 
 Back to the Classes tab, you can specify the number of classes and also the mode for
@@ -670,10 +670,34 @@ features of the layer:
 * :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can
   achieve special rendering effects with these tools that you may
   previously only know from graphics programs. The pixels of your overlaying and
-  underlaying layers are mixed through the settings described in :ref:`blend-modes`.
-* :guilabel:`Draw effects`
-* :guilabel:`Control feature rendering order` allows you to define, using features
-  attributes, the order in which they shall be processed by the renderer.
+  underlaying layers are mixed through the settings described in :ref:`blend-modes'.
+* :guilabel:'Draw effects': This function adds paint effects for customising the
+  visualization of vector files. The function is activated by checking the
+  :menuselection:'Draw effects' button and then customize it by clicking the
+  :menuselection:'Customize effects' button (the small “star” shape, on the right
+  of the :menuselection:'Draw effects' button).
+  The effects include the following categories, with the following options:
+    * **Blur:** Adds a blur effect on the vector layer. The options that someone
+    can change are the :menuselection:'Blur type' (:menuselection:'Stack' or
+    :menuselection:'Gaussian blur'), the strength and transparency of the blur
+    effect.
+    * **Colorize:** This effect can be used by someone who wants to adjust the
+    :menuselection:'brightness', :menuselection:'contrast' and :menuselection:'saturation'
+    levels of the feature. It, also, offers the option to overlay another colour
+    and mix it with the feature's current one. By default, there is a :menuselection:'grayscale'
+    effect selected, which colorizes the
+    * Source
+    * Drop Shadow
+    * Inner Glow
+    * Inner Shadow
+    * Outer Glow
+    * Transform
+     In each of the Draw effect types, the :menuselection:'Blend mode' and :menuselection:'Draw mode' can be adjusted
+     to match the user needs. The Blend mode follows the same methods as the ones
+     included for the layers (link here) and cannot be used for the transform effect.
+     The Draw mode can apply a render and/or modify mode for each of the effects.
+  * :guilabel:`Control feature rendering order` allows you to define, using features
+    attributes, the order in which they shall be processed by the renderer.
 
 
 .. _vector_labels_tab:
@@ -823,8 +847,8 @@ Placement for line layers
 
 Label options for line layers include |radiobuttonon| :guilabel:`Parallel`,
 |radiobuttonoff| :guilabel:`Curved` or |radiobuttonoff| :guilabel:`Horizontal`.
-For the |radiobuttonon| :guilabel:`Parallel` and 
-|radiobuttonoff| :guilabel:`Curved` options, you can set the position to 
+For the |radiobuttonon| :guilabel:`Parallel` and
+|radiobuttonoff| :guilabel:`Curved` options, you can set the position to
 |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line` and
 |checkbox| :guilabel:`Below line`. It's possible to select several options at once.
 In that case, QGIS will look for the optimal label position. For Parallel and
@@ -1307,7 +1331,7 @@ You can move up and down any row with click and drag, sorting how atributes
 are displayed. You can also change the label in the 'Legend' column
 or the attibute color by double-clicking the item.
 
-This label is the default text displayed in the legend of the print composer 
+This label is the default text displayed in the legend of the print composer
 or of the layer tree.
 
 .. _figure_diagrams_1:
@@ -1863,4 +1887,3 @@ of the image. Currently png, jpg and jpeg image formats are supported.
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/
-
