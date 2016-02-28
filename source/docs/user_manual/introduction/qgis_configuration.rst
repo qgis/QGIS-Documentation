@@ -248,6 +248,8 @@ Data Sources Menu
   extended mode`
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in
   extended mode`
+* |checkbox| :guilabel:`Execute expressions on postgres server-side if 
+  possible (Experimental)`
 
 Rendering Menu
 --------------
