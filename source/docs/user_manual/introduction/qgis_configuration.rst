@@ -371,18 +371,20 @@ This menu offers some options regarding the behaviour of the :guilabel:`Identify
   as long as you click within this tolerance.
 * :guilabel:`Highlight color` allows you to choose with which color should features being
   identified are to be highlighted.
-* :guilabel:`Buffer` expressed as a percentage of the map width, determines a buffer distance
+* :guilabel:`Buffer` determines a buffer distance
   to be rendered from the outline of the identify highlight. 
-* :guilabel:`Minimum width` expressed as a percentage of the map width, determines how thick should
+* :guilabel:`Minimum width` determines how thick should
   the outline of a highlighted object be.
 
 **Measure tool**
 
 * Define :guilabel:`Rubberband color` for measure tools
 * Define :guilabel:`Decimal places`
-* |checkbox| :guilabel:`Keep base unit`
-* :guilabel:`Preferred measurements units` |radiobuttonon| ('Meters', 'Feet', 'Nautical Miles' or 'Degrees')`
-* :guilabel:`Preferred angle units` |radiobuttonon| ('Degrees', 'Radians' or 'Gon')
+* |checkbox| :guilabel:`Keep base unit` to not automatically convert large numbers
+  (e.g., meters to kilometers)
+* :guilabel:`Preferred distance units` |radiobuttonon| ('Meters', 'Feet', 'Nautical Miles', 'Degrees' or 'Map Units' )
+* :guilabel:`Preferred area units` |radiobuttonon| ('Square meters', 'Square feet', 'Square yards', 'Hectares', 'Map Units' ...)
+* :guilabel:`Preferred angle units` |radiobuttonon| ('Degrees', 'Radians', 'Gon/gradians', 'Minutes of arc' ...)
 
 **Panning and zooming**
 
