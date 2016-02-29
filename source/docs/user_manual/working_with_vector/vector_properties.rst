@@ -355,13 +355,13 @@ clause text field. The **[OK]** button closes the window and selects
 the features satisfying the query. The **[Cancel]** button closes the
 window without changing the current selection.
 
-QGIS treats the resulting subset acts as if it where the entire layer. 
+QGIS treats the resulting subset acts as if it where the entire layer.
 For example if you applied the filter above for 'Borough', you can not
 display, query, save or edit Anchorage, because that is a 'Municipality'
 and therefore not part of the subset.
 
 The only exception is that unless your layer is part of a database, using
-a subset will prevent you from editing the layer. 
+a subset will prevent you from editing the layer.
 
 
 
@@ -741,7 +741,7 @@ features of the layer:
 * :guilabel:`Draw effects`: This function adds paint effects for customizing the
   visualization of vector files. The function is activated by checking the
   :menuselection:`Draw effects` button and then customize it by clicking the
-  :menuselection:`Customize effects` button (the small “star” shape, on the right
+  :menuselection:`Customize effects` button (the small "star" shape, on the right
   of the :menuselection:`Draw effects` button).
   The effects include the following categories, with the following options:
     * **Blur:** Adds a blur effect on the vector layer. The options that someone
@@ -1023,7 +1023,7 @@ This also allows only certain placements to be used, so eg
 for coastal features you can prevent labels being placed over the land.
 
 The |radiobuttonon| :guilabel:`Around point` setting places the label in an equal
-radius (set in :guilabel:`Distance`) circle around the feature. The placement of 
+radius (set in :guilabel:`Distance`) circle around the feature. The placement of
 the label can even be constrained using the :guilabel:`Quadrant` option.
 
 In the |radiobuttonon| :guilabel:`Offset from point` placement, labels are placed
@@ -1118,9 +1118,9 @@ you can fine tune which labels should be rendered.
 
 Under :guilabel:`Feature options`, you can choose to :guilabel:`label every
 part of a multi-part feature` and :guilabel:`limit the number of features to be labeled`.
-Both line and polygon layers offer the option to set a minimum size for the 
+Both line and polygon layers offer the option to set a minimum size for the
 features to be labeled.
-For polygon features, you can also filter the labels to show according to whether they 
+For polygon features, you can also filter the labels to show according to whether they
 completely fit within the feature or not.
 For line features, you can choose to :guilabel:`Merge connected lines
 to avoid duplicate labels`, rendering a quite airy map in conjunction with
