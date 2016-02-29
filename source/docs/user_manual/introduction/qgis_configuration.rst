@@ -103,7 +103,12 @@ project-specific options. These include:
    Macro settings in |qg|
 
 
-* The :guilabel:`Relations` menu is used to define 1:n relations. The relations are defined in the project properties dialog. Once relations exist for a layer, a new user interface element in the form view (e.g. when identifying a feature and opening its form) will list the related entities. This provides a powerful way to express e.g. the inspection history on a length of pipeline or road segment. You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+* The :guilabel:`Relations` menu is used to define 1:n relations. The relations
+  are defined in the project properties dialog. Once relations exist for a layer,
+  a new user interface element in the form view (e.g. when identifying a feature
+  and opening its form) will list the related entities. This provides a powerful
+  way to express e.g. the inspection history on a length of pipeline or road segment.
+  You can find out more about 1:n relations support in Section :ref:`vector_relations`.
 
 .. _gui_options:
 
@@ -345,10 +350,14 @@ This menu offers some options regarding the behaviour of the :guilabel:`Identify
   'Zoom to mouse cursor', 'Nothing')
 * Define :guilabel:`Zoom factor` for wheel mouse
 
+.. _predefinedscales:
+
 **Predefined scales**
 
-Here, you find a list of predefined scales. With the **[+]** and **[-]** buttons
-you can add or remove your individual scales.
+Here, you find a list of predefined scales. With the |mActionSignPlus|
+and |mActionSignMinus| buttons you can add or remove your personal scales.
+You can also import or export scales from/to a ``.XML`` file. Note that you still have
+the possibility to remove your changes and reset to the predefined list.
 
 Composer Menu
 -------------

@@ -17,7 +17,7 @@ That will select 90% of the points in the layer to rasterize
 
 The selection is random, so your selection might differ from the selection shown in the above image.
 
-Now run the *Shapes to grid* algorithm to get the first raster layer, and then run the *Close gaps* algorithm to fill the no--data cells [Cell resolution: 100 m].
+Now run the *Rasterize* algorithm to get the first raster layer, and then run the *Close gaps* algorithm to fill the no--data cells [Cell resolution: 100 m].
 
 .. image:: img/interpolation_cross/filled.png
 
@@ -27,7 +27,7 @@ Since we are going to use the points that are not selected, first, let's invert 
 
 .. image:: img/interpolation_cross/inverted.png
 
-The points contain the original values, but not the interpolated ones. To add them in a new field, we can use the *Add grid values to points* algorithm
+The points contain the original values, but not the interpolated ones. To add them in a new field, we can use the *Add raster values to points* algorithm
 
 .. image:: img/interpolation_cross/addgridvalues.png
 

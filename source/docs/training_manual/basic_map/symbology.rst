@@ -126,7 +126,7 @@ To enable scale-based rendering:
 .. image:: /static/training_manual/symbology/scale_dependent_visibility.png
    :align: center
 
-* Change the :guilabel:`Maximum` value to :kbd:`1:10,000`.
+* Change the :guilabel:`Minimum` value to :kbd:`1:10,000`.
 * Click :guilabel:`OK`.
 
 Test the effects of this by zooming in and out in your map, noting when the
@@ -447,8 +447,8 @@ First, we'll change the canvas to a size appropriate for a small texture.
 * Right-click on the circle you just created and open its :guilabel:`Fill and
   Stroke`:
 
-* Change the :guilabel:`Stroke paint` to a pale grey-blue and the
-  :guilabel:`Stroke style` to a darker color with thin stroke:
+* Change the :guilabel:`Fill` to a pale grey-blue, the :guilabel:`Stroke paint`
+  to a darker color and the :guilabel:`Stroke style` to a thinner thickness:
 
 .. image:: /static/training_manual/symbology/inkscape_stroke_fill.png
    :align: center

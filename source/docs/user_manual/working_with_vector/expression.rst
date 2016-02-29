@@ -635,6 +635,9 @@ To use these functions in an expression, they should be preceded by @ character
  map_id                     Returns the ID of current map destination.
                             This will be 'canvas' for canvas renders, and
                             the item ID for composer map renders
+ map_extent_center          Returns the point feature at the center of the map
+ map_extent_height          Returns the current height of the map
+ map_exent_width            Returns the current width of the map
  map_rotation               Returns the current rotation of the map
  map_scale                  Returns the current scale of the map
  project_filename           Returns the filename of current project

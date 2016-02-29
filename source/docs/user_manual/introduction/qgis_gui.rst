@@ -76,6 +76,7 @@ Menu Option                                                     Shortcut        
 |mActionFileSaveAs| :guilabel:`Save As...`                      :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`Project`
 |mActionSaveMapAsImage| :guilabel:`Save as Image...`            \                     see :ref:`sec_output`                       \
 :guilabel:`DXF Export ...`                                      \                     see :ref:`sec_output`                       \
+|mActionProjectProperties| :guilabel:`Project Properties ...`   :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \
 |mActionNewComposer| :guilabel:`New Print Composer`             :kbd:`Ctrl+P`         see :ref:`label_printcomposer`              :guilabel:`Project`
 |mActionComposerManager| :guilabel:`Composer manager ...`       \                     see :ref:`label_printcomposer`              :guilabel:`Project`
 :menuselection:`Print Composers -->`                            \                     see :ref:`label_printcomposer`              \
@@ -147,13 +148,16 @@ Menu Option                                                     Shortcut        
 |mActionZoomToSelected| :guilabel:`Zoom To Selection`           :kbd:`Ctrl+J`         \                                           :guilabel:`Map Navigation`
 |mActionZoomLast| :guilabel:`Zoom Last`                         \                     \                                           :guilabel:`Map Navigation`
 |mActionZoomNext| :guilabel:`Zoom Next`                         \                     \                                           :guilabel:`Map Navigation`
-|mActionZoomActual| :guilabel:`Zoom Actual Size`                \                     \                                           :guilabel:`Map Navigation`
+|mActionZoomActual| :guilabel:`Zoom To Native Resolution`       \                     \                                           :guilabel:`Map Navigation`
 :menuselection:`Decorations -->`                                \                     see :ref:`decorations`                      \
 :menuselection:`Preview mode -->`                               \                     \                                           \
-|mActionMapTips| :guilabel:`Map Tips`                           \                     \                                           :guilabel:`Attributes`
-|mActionNewBookmark| :guilabel:`New Bookmark`                   :kbd:`Ctrl+B`         see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
+|mActionMapTips| :guilabel:`Map Tips`                           \                     see :ref:`maptips`                          :guilabel:`Attributes`
+|mActionNewBookmark| :guilabel:`New Bookmark...`                :kbd:`Ctrl+B`         see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
 |mActionShowBookmarks| :guilabel:`Show Bookmarks`               :kbd:`Ctrl+Shift+B`   see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
 |mActionDraw| :guilabel:`Refresh`                               :kbd:`F5`                                                         :guilabel:`Map Navigation`
+:menuselection:`Panels -->`                                     \                     see :ref:`sec_panels_and_toolbars`          \
+:menuselection:`Toolbars -->`                                   \                     see :ref:`sec_panels_and_toolbars`          \
+:guilabel:`Toggle Full Screen Mode`                             :kbd:`F11`            \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
 Layer
@@ -177,11 +181,11 @@ Menu Option                                                          Shortcut   
 |mActionRemoveLayer| :guilabel:`Remove Layer/Group`                  :kbd:`Ctrl+D`         \                                           \
 |mActionDuplicateLayer| :guilabel:`Duplicate Layers (s)`             \                     \                                           \
 :guilabel:`Set Scale Visibility of Layers`                           \                     \                                           \
-:menuselection:`Set CRS of Layer(s)`                                 :kbd:`Ctrl+Shift+C`   \                                           \
-:menuselection:`Set project CRS from Layer`                          \                     \                                           \
-:menuselection:`Properties ...`                                      \                     \                                           \
-:menuselection:`Query...`                                            \                     \                                           \
-|mActionLabeling| :guilabel:`Labeling`                               \                     \                                           \
+:guilabel:`Set CRS of Layer(s)`                                      :kbd:`Ctrl+Shift+C`   \                                           \
+:guilabel:`Set project CRS from Layer`                               \                     \                                           \
+:guilabel:`Properties...`                                            \                     see :ref:`vector_properties_dialog`          \
+:guilabel:`Filter...`                                                \                     see :ref:`vector_query_builder`             \
+|mActionLabeling| :guilabel:`Labeling`                               \                     see :ref:`vector_labels_tab`                \
 |mActionInOverview| :guilabel:`Add to Overview`                      :kbd:`Ctrl+Shift+O`   \                                           :guilabel:`Manage Layers`
 |mActionAddAllToOverview| :guilabel:`Add All To Overview`            \                     \                                           \
 |RemoveAllOverview| :guilabel:`Remove All From Overview`             \                     \                                           \
@@ -197,16 +201,12 @@ Settings
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:menuselection:`Panels -->`                                     \                     see :ref:`sec_panels_and_toolbars`          \
-:menuselection:`Toolbars -->`                                   \                     see :ref:`sec_panels_and_toolbars`          \
-:menuselection:`Toggle Full Screen Mode`                        :kbd:`F 11`           \                                           \
-|mActionProjectProperties| :guilabel:`Project Properties ...`   :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \
 |mActionCustomProjection| :guilabel:`Custom CRS ...`            \                     see :ref:`sec_custom_projections`           \
 :guilabel:`Style Manager...`                                    \                     see :ref:`vector_style_manager`             \
 |mActionOptions| :guilabel:`Configure shortcuts ...`            \                     \                                           \
 |mActionOptions| :guilabel:`Customization ...`                  \                     see :ref:`sec_customization`                \
 |mActionOptions| :guilabel:`Options ...`                        \                     see :ref:`gui_options`                      \
-:menuselection:`Snapping Options ...`                           \                     \                                           \
+:guilabel:`Snapping Options ...`                                \                     see :ref:`snapping_tolerance`               \
 ==============================================================  ====================  ==========================================  ===============================
 
 Plugins
@@ -216,7 +216,7 @@ Plugins
 Menu Option                                                             Shortcut              Reference                            Toolbar
 ======================================================================  ====================  ===================================  ===============================
 |mActionShowPluginManager| :guilabel:`Manage and Install Plugins ...`   \                     see :ref:`managing_plugins`          \
-:menuselection:`Python Console`                                         :kbd:`Ctrl+Alt+P`     \                                    \
+:guilabel:`Python Console`                                              :kbd:`Ctrl+Alt+P`     \                                    \
 ======================================================================  ====================  ===================================  ===============================
 
 When starting |qg| for the first time not all core plugins are loaded.
@@ -243,7 +243,7 @@ Raster
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:menuselection:`Raster calculator ...`                          \                     see :ref:`sec_raster_calc`                  \
+:guilabel:`Raster calculator ...`                               \                     see :ref:`sec_raster_calc`                  \
 ==============================================================  ====================  ==========================================  ===============================
 
 When starting |qg| for the first time not all core plugins are loaded.
@@ -296,8 +296,9 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 |mActionHelpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                                           :guilabel:`Help`
 |mActionWhatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
-:menuselection:`API Documentation`                              \                     \                                           \
-:menuselection:`Need commercial support?`                       \                     \                                           \
+:guilabel:`API Documentation`                                   \                     \                                           \
+:guilabel:`Report an Issue`                                     \                     \                                           \
+:guilabel:`Need commercial support?`                            \                     \                                           \
 |mActionQgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`         \                                           \
 |mActionCheckQgisVersion| :guilabel:`Check QGIS Version`        \                     \                                           \
 |mActionHelpAbout| :guilabel:`About`                            \                     \                                           \
@@ -420,11 +421,12 @@ selected legend item is a raster or a vector layer. For GRASS vector layers,
 
 **Right mouse button menu for raster layers**
 
-* :menuselection:`Zoom to Layer`
+* |mActionZoomToLayer| :menuselection:`Zoom to Layer`
 * :menuselection:`Show in overview`
-* :menuselection:`Zoom to Best Scale (100%)`
-* :menuselection:`Remove`
-* :menuselection:`Duplicate`
+* |mActionZoomActual| :menuselection:`Zoom to Native Resolution (100%)`
+* :menuselection:`Stretch Using Current Extent`
+* |mActionRemoveLayer| :menuselection:`Remove`
+* |mActionDuplicateLayer| :menuselection:`Duplicate`
 * :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
@@ -443,19 +445,19 @@ Additionally, according to layer position and selection
 
 **Right mouse button menu for vector layers**
 
-* :menuselection:`Zoom to Layer`
+* |mActionZoomToLayer| :menuselection:`Zoom to Layer`
 * :menuselection:`Show in overview`
-* :menuselection:`Remove`
-* :menuselection:`Duplicate`
+* |mActionRemoveLayer| :menuselection:`Remove`
+* |mActionDuplicateLayer|:menuselection:`Duplicate`
 * :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
 * :menuselection:`Styles -->`
 * :menuselection:`Open Attribute Table`
-* :menuselection:`Toggle Editing` (not available for GRASS layers)
+* |mActionToggleEditing| :menuselection:`Toggle Editing` (not available for GRASS layers)
 * :menuselection:`Save As ...`
 * :menuselection:`Save As Layer Definition Style`
-* :menuselection:`Filter`
+* :menuselection:`Filter...`
 * :menuselection:`Show Feature Count`
 * :menuselection:`Properties`
 * :menuselection:`Rename`
@@ -469,18 +471,21 @@ Additionally, according to layer position and selection
 
 **Right mouse button menu for layer groups**
 
-* :menuselection:`Zoom to Group`
-* :menuselection:`Remove`
+* |mActionZoomToLayer| :menuselection:`Zoom to Group`
+* |mActionRemoveLayer| :menuselection:`Remove`
 * :menuselection:`Set Group CRS`
 * :menuselection:`Rename`
+* :menuselection:`Set Group WMS Data`
 * :menuselection:`Mutually Exclusive Group`
-* :menuselection:`Add Group`
+* :menuselection:`Save As Layer Definition File`
+* |mActionAddGroup| :menuselection:`Add Group`
 
 ..   Additionally, according to position
 
 ..   *  :menuselection:`Show file groups`
 
-Enabling the **Mutually Exclusive Group** option you can make a group have only one layer visible at the same time. 
+Enabling the **Mutually Exclusive Group** option you can make a group have only
+one layer visible at the same time. 
 Whenever a layer within the group is set visible the others will be toggled not visible.
 
 It is possible to select more than one layer or group at the same time by
@@ -519,7 +524,8 @@ Map View
 
 .. index::`map view`
 
-This is the "business end" of |qg| --- maps are displayed in this area! The
+Also called **Map canvas**, this is the "business end" of QGIS ---
+maps are displayed in this area! The
 map displayed in this window will depend on the vector and raster layers you
 have chosen to load (see sections that follow for more information on how to
 load layers). The map view can be panned, shifting the focus of the map display
@@ -568,9 +574,9 @@ will toggle between showing coordinate position or the view extents of the
 map view as you pan and zoom in and out.
 
 Next to the coordinate display you will find the scale display. It shows the scale of
-the map view. If you zoom in or out, |qg| shows you the current scale. There is
-a scale selector, which allows you to choose between predefined scales from
-1:500 to 1:1000000.
+the map view. If you zoom in or out, QGIS shows you the current scale. There is
+a scale selector, which allows you to choose among :ref:`predefined and custom scales
+<predefinedscales>`.
 
 To the right of the scale display you can define a current clockwise rotation for
 your map view in degrees.

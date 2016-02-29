@@ -15,7 +15,7 @@ Let's use different methods for interpolation, all based on vector ``points.shp`
 
 - :menuselection:`GRASS --> v.surf.rst`
 - :menuselection:`SAGA --> Multilevel B-Spline Interpolation`
-- :menuselection:`SAGA --> Inverse Distance Weighted` [Power: 4; Search range: Global]
+- :menuselection:`SAGA --> Inverse Distance Weighted` [Inverse distance to a power; Power: 4; Search radius: Global; Search range: all points]
 - :menuselection:`GDAL --> Grid (Inverse Distance to a power)` [Power:4]
 - :menuselection:`GDAL --> Grid (Moving average)` [Radius1&2: 50000]
 

@@ -16,10 +16,19 @@ defined functions, for instance, to calculate length or area of geometry feature
 results can be written to a new attribute field, a virtual field, or 
 they can be used to update values in an existing field.
 
+A :index:`virtual field` is a field based on an expression calculated on the fly, meaning that its
+value is automatically updated as soon as the underlying parameter changes. The expression
+is set once; you no more need to calculate again the field if underlying values change.
+For example, you may want to use a virtual field if you need area values to be calculated
+during a digitizing process (creating, merging, spliting features) or to
+calculate a duration that needs to be updated from time to time.
+
 .. tip:: **Virtual Fields**
 
-   * Virtual fields are not permanent and are not saved.
-   * To make a field virtual it must be done when the field is made.
+   * Virtual fields are not permanent and thus not saved in the layer attributes. They are however
+     saved in the project they were created. 
+   * To make a field virtual it must be set at the creation of the field and the expression used
+     can't be changed later.
 
 The field calculator is now available on any layer that supports edit. 
 When you click on the field calculator icon the dialog opens (see 

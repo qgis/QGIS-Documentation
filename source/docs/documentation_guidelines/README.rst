@@ -5,24 +5,35 @@ Documentation Guidelines
 Introduction
 ============
 
-These are guidelines about general use of rst in QGIS documentation. The documentation will
-be built automatically on the server 0, 8am, 4pm PDT (Pacific Daylight Time). The current
-status is available at http://docs.qgis.org.
+QGIS Documentation will
+be built automatically on the server at 0, 8am, 4pm PDT (Pacific Daylight Time).
+The current status is available at http://docs.qgis.org.
 
-See also: http://sphinx.pocoo.org/markup/inline.html or convention.rst file.
+QGIS Documentation is mainly written using the reStructuredText (reST) format syntax,
+coupled with some scripts from the Sphinx toolset to post-process the HTML output.
+See http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+or http://sphinx.pocoo.org/markup/inline.html.
 
 In general, when creating rst documentation for the QGIS project, please follow
-the `Python documentation style guide lines
+the `Python documentation style guidelines
 <http://docs.python.org/devguide/documenting.html>`_.
+Below are exposed some general guidelines to follow when
+using reST for the QGIS documentation writing.
 
+If you are looking for general rules on contributing to QGIS project or managing
+repositories, you may find help at
+`Get Involved in the QGIS Community <http://qgis.org/en/site/getinvolved/index.html>`_.
 
-Using headlines
-===============
+Headlines
+=========
 
-Adding new headlines, you should use following styles for chapter, section,
-subsection and minisec.
+To each webpage of the documentation corresponds a ``.rst`` file.
 
-headlines
+Sections used to structure the text are identified through their title which
+is underlined (and overlined for the first level).
+Same level titles must use same character for underline adornment.
+In QGIS Documentation, you should use following styles for chapter,
+section, subsection and minisec.
 
 ::
 
@@ -43,27 +54,31 @@ headlines
 Inline tags
 ===========
 
-* Shorcut keyboard:
+You can use some tags inside the text to emphasize some items.
 
-  ::
-
-     :kbd:`ctrl B`
-
-  will show :kbd:`Ctrl B`
-
-* Menu gui
+* **Menu gui**: to mark a complete sequence of menu selections,
+  including selecting submenus and choosing a specific operation,
+  or any subsequence of such a sequence.
 
   ::
 
      :menuselection:`menu --> submenu`
 
-* Filename
+* **Dialog and Tab title**: Labels presented as part of an interactive user interface
+  including button labels, window titles, field names, menu and menu selection names,
+  and even values in selection lists.
+
+  ::
+
+     :guilabel:`title`
+
+* **Filename or directory**
 
   ::
 
      :file:`README.rst`
 
-* Icon with popup text belonging to Icon
+* **Icon with popup text belonging to Icon**:
 
   ::
 
@@ -71,40 +86,31 @@ Inline tags
 
   (see `image`_ below).
 
-* Dialog and Tab title
+* **Shorcut keyboard**
 
   ::
 
-     :guilabel:`title`
+     :kbd:`ctrl B`
 
-* User text
+  will show :kbd:`Ctrl B`
+
+
+* **User text**
 
   ::
 
      ``label``
 
-Footnotes
-=========
-
-Please note: Footnotes are not recognized by any translation software and it is also
-not converted to pdf format properly. So, if don't use footnotes within any documentation.
-
-This is for creating a footnote
-
-::
-
-   blabla [1]_
-
-Which will point to:
-
-   .. [1] Updates of core plugins
 
 .. _my_anchor:
 
 Label/reference
 ===============
 
-This is used to create a reference somewhere
+References are used to place anchors inside the text.
+It then helps you create and call hyperlinks between sections or page.
+
+The example below creates the anchor of a section (e.g., Label/reference title)
 
 ::
 
@@ -113,25 +119,43 @@ This is used to create a reference somewhere
    Label/reference
    ===============
 
-This will call the reference in the **same page**
+To call the reference in the **same page**, use
 
 ::
 
-   see my_anchor_ for more information. Notice how it will jump to
-   the following line/thing following the 'anchor'.
-   Normally to declare this label you do not need to use apastroph's but
-   you do need to use empty lines before and after the anchor. If you use
-   :ref:`my_anchor` it will display the caption instead
-   (In this case the title of this section!)
+   see my_anchor_ for more information.
 
-So reference 1 (my_anchor_) and reference 2 :ref:`my_anchor`
+which will return:
 
+see my_anchor_ for more information.
+
+Notice how it will jump to the following line/thing following the 'anchor'.
+Normally to declare this label you do not need to use apastroph's but
+you do need to use empty lines before and after the anchor.
+
+Another way to jump to the same place **from anywhere in the documentation**
+is to use the ``:ref:`` role.
+
+::
+
+   see :ref:`my_anchor` for more information.
+
+which will display the caption instead (in this case the title of this section!):
+
+see :ref:`my_anchor` for more information.
+
+So reference 1 (my_anchor_) and reference 2 (:ref:`my_anchor`).
 Because the reference often displays a full caption, there is not really
-the need to use the word section
+the need to use the word *section*.
+Note that you can also use a custom caption to describe the reference
 
 ::
 
-   see :ref:`my_anchor`
+   see :ref:`Label and reference <my_anchor>` for more information.
+
+returning:
+
+see :ref:`Label and reference <my_anchor>` for more information.
 
 
 .. _`image`:
@@ -140,7 +164,53 @@ Figure and image
 =================
 
 
+Pictures
+--------
+
+To insert an image, use
+
+::
+
+   .. image:: /static/common/qgislogo.png
+      :width: 10 em
+
+which returns
+
+.. image:: /static/common/qgislogo.png
+    :width: 10 em
+
+Replacement
+-----------
+
+You can put an image inside text or add an alias to use everywhere. To use an image
+inside a paragraph, just create an alias somewhere.
+
+
+::
+
+   .. |nice_logo| image:: /static/common/qgislogo.png
+                  :width: 2 em
+
+and call it in your paragraph:
+
+::
+
+   my paragraph begins here with a nice logo |nice_logo|.
+
+Here is how this example become:
+
+.. |nice_logo| image:: /static/common/qgislogo.png
+               :width: 2 em
+
+my paragraph begins here with a nice logo |nice_logo|.
+
+.. note::
+
+   Currently, to ensure consistency and help in the use of QGIS icons
+   a list of alias is built and available in :ref:`substitutions` chapter.
+
 Figure
+------
 
 ::
 
@@ -179,8 +249,7 @@ the figure in pdf.
 To use a caption (see My caption) just insert indented text after a blank line
 in the figure block.
 
-Referencing to the figure can be done in two ways first using the reference
-label like this
+Referencing to the figure can be done using the reference label like this
 
 ::
 
@@ -191,7 +260,7 @@ It will show the anchor Figure_Readme_1_. You can use uppercase if you want.
 It can be used in the same :file:`.rst` document but not in other .rst
 documents.
 
-You can not use the reference like this anymore, because in html the reference
+You can not use the ``:ref:`` role for reference anymore, because in html the reference
 to the caption is lost (it now refers to the place before **Figure Readme 1:**)
 
 ::
@@ -203,7 +272,7 @@ to the caption is lost (it now refers to the place before **Figure Readme 1:**)
 Tables
 ------
 
-a simple table
+To create a simple table
 
 ::
 
@@ -214,9 +283,9 @@ a simple table
    2        4
    =======  =======  =======
 
-Use a ``\`` followed by an empty space ' ' to leave an empty space.
+Use a ``\`` followed by an empty space to leave an empty space.
 
-You can also use more complicated tables by drawing them using refences and all
+You can also use more complicated tables by drawing them using references and all
 
 ::
 
@@ -251,43 +320,6 @@ My drawn table, mind you this is unfortunately not regarded a caption
 You can reference to it like this my_drawn_table_1_.
 
 
-
-Pictures
---------
-
-Image
-
-::
-
-   .. image:: /static/common/qgislogo.png
-      :width: 10 em
-
-
-Replacement
------------
-
-You can put an image inside text or add an alias to use everywhere. To use an image
-inside a paragraph, just create an alias somewhere
-
-::
-
-   .. |nice_logo| image:: /static/common/qgislogo.png
-                  :width: 2 em
-
-and call it in your paragraph
-
-::
-
-   my paragraph begins here with a nice logo |nice_logo|.
-
-Here is how this example become:
-
-.. |nice_logo| image:: /static/common/qgislogo.png
-               :width: 2 em
-
-my paragraph begins here with a nice logo |nice_logo|.
-
-
 Index
 =====
 
@@ -304,18 +336,44 @@ If the term does not have to be translated, please use this syntax:
 
    .. index:: WMS, WFS, WCS, CAT, SFS, GML, ...
 
+Footnotes
+=========
+
+Please note: Footnotes are not recognized by any translation software and
+it is also not converted to pdf format properly.
+So, if possible don't use footnotes within any documentation.
+
+This is for creating a footnote
+
+::
+
+   blabla [1]_
+
+Which will point to:
+
+ .. [1] Updates of core plugins
+
 
 Add new Screenshots
 ===================
 
-Here are some hints to create new, nice looking screenshots. For the user guide they go into :file:`./resources/en/user_manual/`
+Here are some hints to create new, nice looking screenshots.
+For the user guide they go into :file:`./resources/en/user_manual/`
 
-* same environment for all the screen caps (same OS, same decoration, same font size). We have used Ubuntu with Unity and the default "ambience" theme. For screenshots of QGIS main window and composer we have set it to show menus on the window (not the default in unity).
-* reduce the window to the minimal space needed to show the feature (taking the all screen for a small modal window > overkill)
+* same environment for all the screen caps (same OS, same decoration, same font size).
+  We have used Ubuntu with Unity and the default "ambience" theme.
+  For screenshots of QGIS main window and composer we have set it to show menus on the window
+  (not the default in unity).
+* reduce the window to the minimal space needed to show the feature (taking the all screen
+  for a small modal window > overkill)
 * the less clutter, the better (no need to activate all the toolbars)
-* don't resize them in an image editor, the size will be set into the rst files if necessary (downscaling the dimensions without properly upping the resolution > ugly)
+* don't resize them in an image editor, the size will be set into the rst files if necessary
+  (downscaling the dimensions without properly upping the resolution > ugly)
 * cut the background
-* Set print size resolution to 135 dpi, eg in Gimp set the print resolution (image > print size) and save. This way, if no size is set in the rst files, images will be at original size in html and at a good print resolution in the PDF. You can use ImageMagick convert command to do a batch of images:
+* Set print size resolution to 135 dpi, eg in Gimp set the print resolution
+  (image > print size) and save. This way, if no size is set in the rst files,
+  images will be at original size in html and at a good print resolution in the PDF.
+  You can use ImageMagick convert command to do a batch of images:
 
 ::
 
@@ -323,10 +381,14 @@ Here are some hints to create new, nice looking screenshots. For the user guide 
 
 * save them in png (no jpeg artifacts)
 * the screenshot should show the content according to what is described in the text
-* you can find some prepared |qg| -projects that were used before to create screenshots in :file:`./qgis-projects`.
+* you can find some prepared |qg| -projects that were used before to create screenshots
+  in :file:`./qgis-projects`.
   This makes it easier to reproduce screenshots for the next version of |qg|.
-  These projects use the |qg| `Sample Data <http://qgis.org/downloads/data/>`_ (aka Alaska Dataset), which should be placed in the same folder as the QGIS-Documentation Repository.
-* Use the following command to remove the global menu function in Ubuntu to create smaller application screens with menu's:
+  These projects use the |qg| `Sample Data <http://qgis.org/downloads/data/>`_
+  (aka Alaska Dataset), which should be placed in the same folder
+  as the QGIS-Documentation Repository.
+* Use the following command to remove the global menu function in Ubuntu
+  to create smaller application screens with menu's:
 
 ::
 
@@ -336,16 +398,22 @@ Here are some hints to create new, nice looking screenshots. For the user guide 
 Translate Screenshots
 =====================
 
-Here are some hints to create screenshots for your translated user guide. They will go into :file:`./resources/<your language>/user_manual/`
+Here are some hints to create screenshots for your translated user guide.
+They will go into :file:`./resources/<your language>/user_manual/`
 
 * same environment for all the screen caps (same OS, same decoration, same font size)
 * use the |qg| -projects included in QGIS-Documentation repository (in :file:`./qgis_projects` ).
   These were used to produce the 'original' screenshots in the manual.
-  The |qg| `Sample Data <http://qgis.org/downloads/data/>`_ (aka Alaska Dataset) should be placed in the same folder as the QGIS-Documentation Repository.
-* same size as the english 'original' screenshots, otherwise they will be stretched and look ugly. If you need to have a different size due to longuer ui strings, don't forget to change the dimension in the rst code of your language.
-* reduce the window to the minimal space needed to show the feature (taking the all screen for a small modal window > overkill)
+  The |qg| `Sample Data <http://qgis.org/downloads/data/>`_ (aka Alaska Dataset)
+  should be placed in the same folder as the QGIS-Documentation Repository.
+* same size as the english 'original' screenshots, otherwise they will be stretched
+  and look ugly. If you need to have a different size due to longuer ui strings,
+  don't forget to change the dimension in the rst code of your language.
+* reduce the window to the minimal space needed to show the feature
+  (taking the all screen for a small modal window > overkill)
 * the less clutter, the better (no need to activate all the toolbars)
-* don't resize them in an image editor, the size will be set into the rst files (downscaling the dimensions without properly upping the resolution > ugly)
+* don't resize them in an image editor, the size will be set into the rst files
+  (downscaling the dimensions without properly upping the resolution > ugly)
 * cut the background
 * save them in png (no jpeg artifacts)
 * the screenshot should show the content according to what is described in the text
