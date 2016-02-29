@@ -751,10 +751,10 @@ features of the layer:
 
     **Figure Symbology 8:**
 
-    .. figure:: /static/user_manual/working_with_vector/blur.png
-      :align: center
+ .. figure:: /static/user_manual/working_with_vector/blur.png
+    :align: center
 
-      Draw Effects: Blur dialog
+    Draw Effects: Blur dialog
 
     * **Colorize:** This effect can be used by someone who wants to adjust the
     :menuselection:`brightness`, :menuselection:`contrast` and :menuselection:`saturation`
@@ -766,9 +766,9 @@ features of the layer:
     **Figure Symbology 9:**
 
     .. figure:: /static/user_manual/working_with_vector/colorise.png
-      :align: center
+    :align: center
 
-      Draw Effects: Colorize dialog
+    Draw Effects: Colorize dialog
 
     * **Source:** Implements the feature in the drawing menu, with its style as
       selected in the layer properties. The transparency of its style can be adjusted.
@@ -776,9 +776,9 @@ features of the layer:
       **Figure Symbology 10:**
 
       .. figure:: /static/user_manual/working_with_vector/source.png
-        :align: center
+      :align: center
 
-        Draw Effects: Source dialog
+      Draw Effects: Source dialog
 
     * **Drop Shadow:** Using this effect adds a shadow on the feature, which looks
     like adding an extra dimension. This effect can be customized by changing the
@@ -789,10 +789,10 @@ features of the layer:
 
     **Figure Symbology 11:**
 
-    .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
-      :align: center
+ .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
+    :align: center
 
-      Draw Effects: Drop Shadow dialog
+    Draw Effects: Drop Shadow dialog
 
     * **Inner Glow:** Adds a glow effect inside the feature. This effect can be
     customized by adjusting the :menuselection:`spread` (width) of the glow, or the
@@ -804,9 +804,9 @@ features of the layer:
     **Figure Symbology 12:**
 
     .. figure:: /static/user_manual/working_with_vector/inner_glow.png
-      :align: center
+    :align: center
 
-      Draw Effects: Inner Glow dialog
+    Draw Effects: Inner Glow dialog
 
     * **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect,
     but it adds the shadow effect on the inside of the edges of the feature. The
@@ -815,10 +815,10 @@ features of the layer:
 
     **Figure Symbology 13:**
 
-    .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
-      :align: center
+ .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
+    :align: center
 
-      Draw Effects: Inner Shadow dialog
+    Draw Effects: Inner Shadow dialog
 
     * **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect,
     but it adds the glow effect on the outside of the edges of the feature. The
@@ -828,9 +828,9 @@ features of the layer:
     **Figure Symbology 14:**
 
     .. figure:: /static/user_manual/working_with_vector/outer_glow.png
-      :align: center
+    :align: center
 
-      Draw Effects: Outer Glow dialog
+    Draw Effects: Outer Glow dialog
 
     * **Transform:** Adds the possibility of transforming the shape of the source
     feature. The first options available for customization are the :menuselection:`Reflect horizontal`
@@ -846,9 +846,9 @@ features of the layer:
     **Figure Symbology 15:**
 
     .. figure:: /static/user_manual/working_with_vector/transform.png
-      :align: center
+    :align: center
 
-      Draw Effects: Transform dialog
+    Draw Effects: Transform dialog
 
     In each of the Draw effect types, the :menuselection:`Blend mode` and :menuselection:`Draw mode`
     can be adjusted to match the user needs. The Blend mode follows the same methods as the ones
