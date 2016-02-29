@@ -849,7 +849,7 @@ features of the layer:
        :align: center
 
        Draw Effects: Transform dialog
-
+       
      In each of the Draw effect types, the :menuselection:`Blend mode` and :menuselection:`Draw mode`
      can be adjusted to match the user needs. The Blend mode follows the same methods as the ones
      included for the layers (link here) and cannot be used for the transform effect.
