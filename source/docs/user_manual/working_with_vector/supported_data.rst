@@ -6,29 +6,29 @@ Supported Data Formats
 .. contents::
    :local:
 
-|qg| uses the OGR library to read and write vector data formats,
+QGIS uses the OGR library to read and write vector data formats,
 including ESRI shapefiles, MapInfo and MicroStation file formats, AutoCAD DXF,
 PostGIS, SpatiaLite, Oracle Spatial and MSSQL Spatial databases, and many more.
-GRASS vector and PostgreSQL support is supplied by native |qg| data provider
+GRASS vector and PostgreSQL support is supplied by native QGIS data provider
 plugins. Vector data can also be loaded in read mode from zip and gzip archives
-into |qg|. As of the date of this document, 69 vector formats are supported by
+into QGIS. As of the date of this document, 69 vector formats are supported by
 the OGR library (see OGR-SOFTWARE-SUITE in :ref:`literature_and_web`). The
 complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
 
 .. note::
 
-   Not all of the listed formats may work in |qg| for various reasons. For
+   Not all of the listed formats may work in QGIS for various reasons. For
    example, some require external commercial libraries, or the GDAL/OGR
    installation of your OS may not have been built to support the format you
    want to use. Only those formats that have been well tested will appear in
-   the list of file types when loading a vector into |qg|. Other untested
+   the list of file types when loading a vector into QGIS. Other untested
    formats can be loaded by selecting ``*.*``.
 
 Working with GRASS vector data is described in Section :ref:`sec_grass`.
 
 This section describes how to work with several common formats: ESRI
 shapefiles, PostGIS layers, SpatiaLite layers, OpenStreetMap vectors, and Comma
-Separated data (CSV). Many of the features available in |qg| work the same,
+Separated data (CSV). Many of the features available in QGIS work the same,
 regardless of the vector data source. This is by design, and it includes the
 identify, select, labelling and attributes functions.
 
@@ -38,7 +38,7 @@ identify, select, labelling and attributes functions.
 ESRI Shapefiles
 ---------------
 
-The standard vector file format used in |qg| is the ESRI shapefile. Support is
+The standard vector file format used in QGIS is the ESRI shapefile. Support is
 provided by the :index:`OGR Simple Feature Library` (http://www.gdal.org/ogr/).
 
 A shapefile actually consists of several files. The following three are
@@ -59,7 +59,7 @@ http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 Loading a Shapefile
 ...................
 
-To :index:`load a shapefile`, start |qg| and click on the |mActionAddOgrLayer|
+To :index:`load a shapefile`, start QGIS and click on the |mActionAddOgrLayer|
 :sup:`Add Vector Layer` toolbar button, or simply press :kbd:`Ctrl+Shift+V`.
 This will bring up a new window (see figure_vector_1_).
 
@@ -93,8 +93,8 @@ You can also select the encoding for the shapefile if desired.
 
    Open an OGR Supported Vector Layer Dialog
 
-Selecting a shapefile from the list and clicking **[Open]** loads it into |qg|.
-Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file.
+Selecting a shapefile from the list and clicking **[Open]** loads it into QGIS.
+Figure_vector_3_ shows QGIS after loading the :file:`alaska.shp` file.
 
 .. _figure_vector_3:
 
@@ -105,7 +105,7 @@ Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file.
 .. figure:: /static/user_manual/working_with_vector/shapefileloaded.png
    :align: center
 
-   |qg| with Shapefile of Alaska loaded
+   QGIS with Shapefile of Alaska loaded
 
 .. tip:: **Layer Colors**
 
@@ -135,7 +135,7 @@ Improving Performance for Shapefiles
 
 To improve the performance of drawing a shapefile, you can create a spatial
 index. A spatial index will improve the speed of both zooming and panning.
-Spatial indexes used by |qg| have a :file:`.qix` extension.
+Spatial indexes used by QGIS have a :file:`.qix` extension.
 
 Use these steps to create the index:
 
@@ -149,18 +149,18 @@ Use these steps to create the index:
 Problem loading a shape .prj file
 .................................
 
-If you load a shapefile with a :file:`.prj` file and |qg| is not able to read the
+If you load a shapefile with a :file:`.prj` file and QGIS is not able to read the
 coordinate reference system from that file, you will need to define the proper
 projection manually within the :guilabel:`General` tab of the
 :guilabel:`Layer Properties` dialog of the layer by clicking the
 **[Specify...]**  button. This is due to the fact that :file:`.prj` files
-often do not provide the complete projection parameters as used in |qg| and
+often do not provide the complete projection parameters as used in QGIS and
 listed in the :guilabel:`CRS` dialog.
 
-For the same reason, if you create a new shapefile with |qg|, two different
+For the same reason, if you create a new shapefile with QGIS, two different
 projection files are created: a :file:`.prj` file with limited projection
 parameters, compatible with ESRI software, and a :file:`.qpj` file, providing
-the complete parameters of the used CRS. Whenever |qg| finds a :file:`.qpj`
+the complete parameters of the used CRS. Whenever QGIS finds a :file:`.qpj`
 file, it will be used instead of the :file:`.prj`.
 
 .. index:: MapInfo
@@ -210,7 +210,7 @@ Such data files can also contain positional information in two main forms:
 * As point coordinates in separate columns
 * As well-known text (WKT) representation of geometry
 
-|qg| allows you to load a delimited text file as a layer or ordinal table. But
+QGIS allows you to load a delimited text file as a layer or ordinal table. But
 first check that the file meets the following requirements:
 
 #. The file must have a delimited header row of field names. This must be the first line in the
@@ -221,7 +221,7 @@ first check that the file meets the following requirements:
    specified as numbers. The coordinate system is not important.
 
 As an example of a valid text file, we import the elevation point data file
-:file:`elevp.csv` that comes with the |qg| sample dataset (see section
+:file:`elevp.csv` that comes with the QGIS sample dataset (see section
 :ref:`label_sampledata`):
 
 ::
@@ -263,8 +263,8 @@ Delimited Text File` dialog, as shown in figure_delimited_text_1_.
    Delimited Text Dialog
 
 First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
-by clicking on the **[Browse]** button. Once the file is selected, |qg|
-attempts to parse the file with the most recently used delimiter. To enable |qg| to properly parse the
+by clicking on the **[Browse]** button. Once the file is selected, QGIS
+attempts to parse the file with the most recently used delimiter. To enable QGIS to properly parse the
 file, it is important to select the correct delimiter. You can specify a
 delimiter by activating |radiobuttonon| :guilabel:`Custom delimiters`, or by activating
 |radiobuttonon| :guilabel:`Regular expression delimiter` and entering
@@ -280,7 +280,7 @@ checkbox.
 
 Finally, enter a layer name (e.g., :file:`elevp`), as shown in
 figure_delimited_text_1_. To add the layer to the map, click **[OK]**. The
-delimited text file now behaves as any other map layer in |qg|.
+delimited text file now behaves as any other map layer in QGIS.
 
 There is also a helper option that allows you to trim leading and trailing
 spaces from fields --- |checkbox| :guilabel:`Trim fields`. Also, it is possible
@@ -300,7 +300,7 @@ Additionally, you can enable:
   and spatially selecting features.
 * |checkbox| :guilabel:`Use subset index`.
 * |checkbox| :guilabel:`Watch file` to watch for changes to the file by other
-  applications while |qg| is running.
+  applications while QGIS is running.
 
 .. index:: OSM, OpenStreetMap
 
@@ -312,7 +312,7 @@ OpenStreetMap data
 In recent years, the OpenStreetMap project has gained popularity because in many
 countries no free geodata such as digital road maps are available. The objective
 of the OSM project is to create a free editable map of the world from GPS data,
-aerial photography or local knowledge. To support this objective, |qg|
+aerial photography or local knowledge. To support this objective, QGIS
 provides support for OSM data.
 
 .. _open_street_map:
@@ -320,7 +320,7 @@ provides support for OSM data.
 Loading OpenStreetMap Vectors
 .............................
 
-|qg| integrates OpenStreetMap import as a core functionality.
+QGIS integrates OpenStreetMap import as a core functionality.
 
 * To connect to the OSM server and download data, open the menu
   :menuselection:`Vector --> Openstreetmap --> Load data`. You can skip this
@@ -347,7 +347,7 @@ PostGIS Layers
 PostGIS layers are stored in a PostgreSQL database. The advantages of PostGIS
 are the spatial indexing, filtering and query capabilities it provides. Using
 PostGIS, vector functions such as select and identify work more accurately than they do
-with OGR layers in |qg|.
+with OGR layers in QGIS.
 
 .. _vector_create_stored_connection:
 
@@ -370,7 +370,7 @@ dialog. The parameters required for a connection are:
   potentially database). This can be defined in :file:`pg_service.conf`.
 * **Host**: Name of the database host. This must be a resolvable host name
   such as would be used to open a telnet connection or ping the host. If the
-  database is on the same computer as |qg|, simply enter *'localhost'* here.
+  database is on the same computer as QGIS, simply enter *'localhost'* here.
 * **Port**: Port number the PostgreSQL database server listens on. The default
   port is 5432.
 * **Database**: Name of the database.
@@ -433,7 +433,7 @@ To load a layer from PostGIS, perform the following steps:
 .. tip:: **PostGIS Layers**
 
    Normally, a PostGIS layer is defined by an entry in the geometry_columns
-   table. From version 0.9.0 on, |qg| can load layers that do not have an
+   table. From version 0.9.0 on, QGIS can load layers that do not have an
    entry in the geometry_columns table. This includes both tables and views.
    Defining a spatial view provides a powerful means to visualize your data.
    Refer to your PostgreSQL manual for information on creating views.
@@ -443,16 +443,16 @@ To load a layer from PostGIS, perform the following steps:
 Some details about PostgreSQL layers
 ....................................
 
-This section contains some details on how |qg| accesses PostgreSQL layers.
-Most of the time, |qg| should simply provide you with a list of database
+This section contains some details on how QGIS accesses PostgreSQL layers.
+Most of the time, QGIS should simply provide you with a list of database
 tables that can be loaded, and it will load them on request. However, if you have
-trouble loading a PostgreSQL table into |qg|, the information below may
-help you understand any |qg| messages and give you direction on changing
-the PostgreSQL table or view definition to allow |qg| to load it.
+trouble loading a PostgreSQL table into QGIS, the information below may
+help you understand any QGIS messages and give you direction on changing
+the PostgreSQL table or view definition to allow QGIS to load it.
 
-|qg| requires that PostgreSQL layers contain a column that can be used
+QGIS requires that PostgreSQL layers contain a column that can be used
 as a unique key for the layer. For tables, this usually means that the table
-needs a primary key, or a column with a unique constraint on it. In |qg|,
+needs a primary key, or a column with a unique constraint on it. In QGIS,
 this column needs to be of type int4 (an integer of size 4 bytes).
 Alternatively, the ctid column can be used as primary key. If a table lacks
 these items, the oid column will be used instead. Performance will be
@@ -461,13 +461,13 @@ indexed in PostgreSQL).
 
 If the PostgreSQL layer is a view, the same requirement exists, but views
 do not have primary keys or columns with unique constraints on them. You have to
-define a primary key field (has to be integer) in the |qg| dialog before you
-can load the view. If a suitable column does not exist in the view, |qg|
+define a primary key field (has to be integer) in the QGIS dialog before you
+can load the view. If a suitable column does not exist in the view, QGIS
 will not load the layer. If this occurs, the solution is to alter the view so
 that it does include a suitable column (a type of integer and either a primary
 key or with a unique constraint, preferably indexed).
 
-|qg| offers a checkbox **Select at id** that is activated by default. This
+QGIS offers a checkbox **Select at id** that is activated by default. This
 option gets the ids without the attributes which is faster in most cases. It
 can make sense to disable this option when you use expensive views.
 
@@ -480,7 +480,13 @@ can make sense to disable this option when you use expensive views.
 
 
 .. %FIXME: Add missing information
-.. % When dealing with views, |qg| parses the view definition and
+.. % When dealing with views, QGIS parses the view definition and
+
+QGIS allows to filter features already on server side. Check the 
+|checkbox| :guilabel:`Execute expressions on postgres server-side if 
+possible (Experimental)` checkbox to do so. Only supported expressions will be 
+sent to the database. Expressions using unsupported operators or functions will
+gracefully fallback to local evaluation.
 
 .. index:: shp2pgsql
 .. _vector_import_data_in_postgis:
@@ -494,7 +500,7 @@ DB Manager plugin and the command line tools shp2pgsql and ogr2ogr.
 DB Manager
 ..........
 
-|qg| comes with a core plugin named |icon_dbmanager| :sup:`DB Manager`. It can
+QGIS comes with a core plugin named |icon_dbmanager| :sup:`DB Manager`. It can
 be used to load shapefiles and other data formats, and it includes support for
 schemas. See section :ref:`dbmanager` for more information.
 
@@ -614,7 +620,7 @@ Vector layers crossing 180 |degrees| longitude
 Many GIS packages don't wrap vector maps with a geographic reference system
 (lat/lon) :index:`crossing the 180 degrees longitude line`
 (http://postgis.refractions.net/documentation/manual-2.0/ST\_Shift\_Longitude.html).
-As result, if we open such a map in |qg|, we will see two far, distinct locations,
+As result, if we open such a map in QGIS, we will see two far, distinct locations,
 that should appear near each other. In Figure_vector_4_, the tiny point on the far
 left of the map canvas (Chatham Islands) should be within the grid, to the right of the
 New Zealand main islands.
@@ -673,7 +679,7 @@ database, begin by clicking on the |mActionAddSpatiaLiteLayer|
 |mActionAddSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option
 from the :menuselection:`Layer` menu, or by typing :kbd:`Ctrl+Shift+L`.
 This will bring up a window that will allow you either to connect to a
-SpatiaLite database already known to |qg|, which you can choose from the
+SpatiaLite database already known to QGIS, which you can choose from the
 drop-down menu, or to define a new connection to a new database. To define a
 new connection, click on **[New]** and use the file browser to point to
 your SpatiaLite database, which is a file with a :file:`.sqlite` extension.
@@ -685,7 +691,7 @@ Also, you can select 'SQLite' as format and then add ``SPATIALITE=YES`` in the
 OGR data source creation option field. This tells OGR to create a SpatiaLite
 database. See also http://www.gdal.org/ogr/drv_sqlite.html.
 
-|qg| also supports editable views in SpatiaLite.
+QGIS also supports editable views in SpatiaLite.
 
 Creating a new SpatiaLite layer
 ...............................
@@ -709,7 +715,7 @@ If you want to create a new SpatiaLite layer, please refer to section
 MSSQL Spatial Layers
 --------------------
 
-|mActionAddMssqlLayer| |qg| also provides native MS SQL 2008 support. The first
+|mActionAddMssqlLayer| QGIS also provides native MS SQL 2008 support. The first
 time you load MSSQL Spatial data, begin by clicking on the
 |mActionAddMssqlLayer| :sup:`Add MSSQL Spatial Layer` toolbar button or by
 selecting the |mActionAddMssqlLayer| :menuselection:`Add MSSQL Spatial Layer...`
@@ -722,7 +728,7 @@ Oracle Spatial Layers
 ---------------------
 
 The spatial features in Oracle Spatial aid users in managing geographic and
-location data in a native type within an Oracle database. |qg| now has
+location data in a native type within an Oracle database. QGIS now has
 support for such layers.
 
 Creating a stored Connection
@@ -741,7 +747,7 @@ The parameters required for a connection are:
 * **Database**: SID or SERVICE_NAME of the Oracle instance.
 * **Host**: Name of the database host. This must be a resolvable host name
   such as would be used to open a telnet connection or ping the host. If the
-  database is on the same computer as |qg|, simply enter *'localhost'* here.
+  database is on the same computer as QGIS, simply enter *'localhost'* here.
 * **Port**: Port number the Oracle database server listens on. The default
   port is 1521.
 * **Username**: Username used to login to the database.
@@ -780,10 +786,10 @@ clicking on the **[Test Connect]** button.
 
 .. tip:: **QGIS User Settings and Security**
 
-   Depending on your computing environment, storing passwords in your |qg|
+   Depending on your computing environment, storing passwords in your QGIS
    settings may be a security risk. Passwords are saved in clear text in the
    system configuration and in the project files!
-   Your customized settings for |qg| are stored based on the operating system:
+   Your customized settings for QGIS are stored based on the operating system:
 
    * |nix| The settings are stored in your home directory in :file:`~/.qgis2`.
    * |win| The settings are stored in the registry.
