@@ -112,6 +112,7 @@ to look for more recent plugin versions. This can be done with the **[Upgrade pl
 
    The |plugin_upgrade| :guilabel:`Upgradeable` menu |nix|
 
+.. _setting_plugins:
 
 |mActionTransformSettings| :guilabel:`Settings` 
 
