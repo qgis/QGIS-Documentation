@@ -355,13 +355,13 @@ clause text field. The **[OK]** button closes the window and selects
 the features satisfying the query. The **[Cancel]** button closes the
 window without changing the current selection.
 
-QGIS treats the resulting subset acts as if it where the entire layer. 
+QGIS treats the resulting subset acts as if it where the entire layer.
 For example if you applied the filter above for 'Borough', you can not
 display, query, save or edit Anchorage, because that is a 'Municipality'
 and therefore not part of the subset.
 
 The only exception is that unless your layer is part of a database, using
-a subset will prevent you from editing the layer. 
+a subset will prevent you from editing the layer.
 
 
 
@@ -473,9 +473,9 @@ for the rivers layer of the QGIS sample dataset.
 
 .. tip:: **Match categories to symbol name**
 
-   In the [Advanced] menu, under the classes, you can choose one of the two 
+   In the [Advanced] menu, under the classes, you can choose one of the two
    first actions to match symbol name to a category name in your classification.
-   *Matched to saved symbols* match category name with a symbol name from your 
+   *Matched to saved symbols* match category name with a symbol name from your
    *Style Manager*. *Match to symbols from file* match category name to a
    symbol name from an external file.
 
@@ -507,8 +507,8 @@ to select:
 * The colors (using the color Ramp list) if the color method is selected
 * The size (using the size domain and its unit
 
-Then you can use the Histogram tab which shows an interactive histogram of the 
-values from the assigned field or expression. Class breaks can be moved or 
+Then you can use the Histogram tab which shows an interactive histogram of the
+values from the assigned field or expression. Class breaks can be moved or
 added using the histogram widget.
 
 Back to the Classes tab, you can specify the number of classes and also the mode for
@@ -732,11 +732,133 @@ features of the layer:
   the map canvas visible with this tool. Use the slider to adapt the visibility
   of your vector layer to your needs. You can also make a precise definition of
   the percentage of visibility in the the menu beside the slider.
+
 * :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can
   achieve special rendering effects with these tools that you may
   previously only know from graphics programs. The pixels of your overlaying and
   underlaying layers are mixed through the settings described in :ref:`blend-modes`.
-* :guilabel:`Draw effects`
+
+* :guilabel:`Draw effects`: This function adds paint effects for customizing the
+  visualization of vector files. The function is activated by checking the
+  :menuselection:`Draw effects` button and then customize it by clicking the
+  :menuselection:`Customize effects` button (the small "star" shape, on the right
+  of the :menuselection:`Draw effects` button).
+  The effects include the following categories, with the following options:
+
+  * **Blur:** Adds a blur effect on the vector layer. The options that someone
+    can change are the :menuselection:`Blur type` (:menuselection:`Stack` or
+    :menuselection:`Gaussian blur`), the strength and transparency of the blur
+    effect.
+
+    **Figure Symbology 8:**
+
+    .. figure:: /static/user_manual/working_with_vector/blur.png
+       :align: center
+
+       Draw Effects: Blur dialog
+
+  * **Colorize:** This effect can be used by someone who wants to adjust the
+    :menuselection:`brightness`, :menuselection:`contrast` and :menuselection:`saturation`
+    levels of the feature. It, also, offers the option to overlay another color
+    and mix it with the feature's current one. By default, the :menuselection:`grayscale`
+    effect selected, which actually converts the color of the feature to grayscale,
+    based on 3 options: lightness, luminosity and average.
+
+    **Figure Symbology 9:**
+
+    .. figure:: /static/user_manual/working_with_vector/colorise.png
+       :align: center
+
+       Draw Effects: Colorize dialog
+
+  * **Source:** Implements the feature in the drawing menu, with its style as
+    selected in the layer properties. The transparency of its style can be adjusted.
+
+    **Figure Symbology 10:**
+
+    .. figure:: /static/user_manual/working_with_vector/source.png
+       :align: center
+
+       Draw Effects: Source dialog
+
+  * **Drop Shadow:** Using this effect adds a shadow on the feature, which looks
+    like adding an extra dimension. This effect can be customized by changing the
+    :menuselection:`offset` degrees and radius, determining where the shadow shifts
+    towards to and the proximity to the source object. :menuselection:`Drop Shadow`
+    also has the option to change the blur radius, the transparency and the color
+    of the effect.
+
+    **Figure Symbology 11:**
+
+    .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
+       :align: center
+
+       Draw Effects: Drop Shadow dialog
+
+  * **Inner Glow:** Adds a glow effect inside the feature. This effect can be
+    customized by adjusting the :menuselection:`spread` (width) of the glow, or the
+    :menuselection:`Blur radius`. The latter specifies the proximity from the edge
+    of the feature where you want any blurring to happen. Additionally, there are
+    options to customize the color of the glow, with a single color or a color
+    ramp.
+
+    **Figure Symbology 12:**
+
+    .. figure:: /static/user_manual/working_with_vector/inner_glow.png
+       :align: center
+
+       Draw Effects: Inner Glow dialog
+
+  * **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect,
+    but it adds the shadow effect on the inside of the edges of the feature. The
+    available options for customization are the same as the :menuselection:`Drop Shadow`
+    effect.
+
+    **Figure Symbology 13:**
+
+    .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
+       :align: center
+
+       Draw Effects: Inner Shadow dialog
+
+  * **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect,
+    but it adds the glow effect on the outside of the edges of the feature. The
+    available options for customization are the same as the :menuselection:`Inner Glow`
+    effect.
+
+    **Figure Symbology 14:**
+
+    .. figure:: /static/user_manual/working_with_vector/outer_glow.png
+       :align: center
+
+       Draw Effects: Outer Glow dialog
+
+  * **Transform:** Adds the possibility of transforming the shape of the source
+    feature. The first options available for customization are the :menuselection:`Reflect horizontal`
+    and :menuselection:`Reflect horizontal`, which actually create a reflection on the
+    horizontal and/or vertical axes. The 4 other options are the :menuselection:`Shear`,
+    :menuselection:`Scale`, :menuselection:`Rotation` and :menuselection:`Translate`
+    effects. The :menuselection:`Shear` effect slants the feature along the x and/or
+    y axis, the :menuselection:`Scale` enlarges or minimizes the feature along the x
+    and/or y axis, by the percentage given, while the :menuselection:`Rotation` effect
+    turns the feature around its center point and the :menuselection:`Translate` effect
+    changes the position of the item based on a distance given on the x and/or the y axis.
+
+    **Figure Symbology 15:**
+
+    .. figure:: /static/user_manual/working_with_vector/transform.png
+       :align: center
+
+       Draw Effects: Transform dialog
+
+  In each of the Draw effect types, the :menuselection:`Blend mode` and :menuselection:`Draw mode`
+  can be adjusted to match the user needs. The Blend mode follows the same methods as the ones
+  included for the layers (link here) and cannot be used for the transform effect.
+  You can find more information in the :ref:`blend-modes`.
+  The Draw mode can apply a render and/or modify mode for each of the effects.
+  One or more draw effects can be selected at the same time, which can also be
+  moved up and down, in order to finally get the desired result.
+
 * :guilabel:`Control feature rendering order` allows you to define, using features
   attributes, the order in which they shall be processed by the renderer.
 
@@ -902,7 +1024,7 @@ This also allows only certain placements to be used, so eg
 for coastal features you can prevent labels being placed over the land.
 
 The |radiobuttonon| :guilabel:`Around point` setting places the label in an equal
-radius (set in :guilabel:`Distance`) circle around the feature. The placement of 
+radius (set in :guilabel:`Distance`) circle around the feature. The placement of
 the label can even be constrained using the :guilabel:`Quadrant` option.
 
 In the |radiobuttonon| :guilabel:`Offset from point` placement, labels are placed
@@ -917,8 +1039,8 @@ Placement for line layers
 
 Label options for line layers include |radiobuttonon| :guilabel:`Parallel`,
 |radiobuttonoff| :guilabel:`Curved` or |radiobuttonoff| :guilabel:`Horizontal`.
-For the |radiobuttonon| :guilabel:`Parallel` and 
-|radiobuttonoff| :guilabel:`Curved` options, you can set the position to 
+For the |radiobuttonon| :guilabel:`Parallel` and
+|radiobuttonoff| :guilabel:`Curved` options, you can set the position to
 |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line` and
 |checkbox| :guilabel:`Below line`. It's possible to select several options at once.
 In that case, QGIS will look for the optimal label position. For Parallel and
@@ -997,9 +1119,9 @@ you can fine tune which labels should be rendered.
 
 Under :guilabel:`Feature options`, you can choose to :guilabel:`label every
 part of a multi-part feature` and :guilabel:`limit the number of features to be labeled`.
-Both line and polygon layers offer the option to set a minimum size for the 
+Both line and polygon layers offer the option to set a minimum size for the
 features to be labeled.
-For polygon features, you can also filter the labels to show according to whether they 
+For polygon features, you can also filter the labels to show according to whether they
 completely fit within the feature or not.
 For line features, you can choose to :guilabel:`Merge connected lines
 to avoid duplicate labels`, rendering a quite airy map in conjunction with
@@ -1438,7 +1560,7 @@ You can move up and down any row with click and drag, sorting how atributes
 are displayed. You can also change the label in the 'Legend' column
 or the attibute color by double-clicking the item.
 
-This label is the default text displayed in the legend of the print composer 
+This label is the default text displayed in the legend of the print composer
 or of the layer tree.
 
 .. _figure_diagrams_1:
@@ -1996,4 +2118,3 @@ of the image. Currently png, jpg and jpeg image formats are supported.
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/
-
