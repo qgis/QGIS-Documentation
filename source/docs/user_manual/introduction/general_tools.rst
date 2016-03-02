@@ -97,7 +97,7 @@ use and noting the scale value in the QGIS status bar.
 Controlling Map Rendering
 -------------------------
 
-Map rendering can be controlled in the various ways, as described below.
+Map rendering can be controlled in various ways, as described below.
 
 .. _`label_suspendrender`:
 
@@ -208,7 +208,7 @@ window, and you can roll the mouse wheel to zoom in and out on the map.
 For zooming, place the mouse cursor inside the map area and roll it forward
 (away from you) to zoom in and backwards (towards you) to zoom out. The mouse
 cursor position will be the center of the zoomed area of interest. You can
-customize the behaviour of the mouse wheel zoom using the :guilabel:`Map tools`
+customize the behavior of the mouse wheel zoom using the :guilabel:`Map tools`
 tab under the :menuselection:`Settings -->` |mActionOptions|
 :menuselection:`Options` menu.
 
@@ -419,8 +419,8 @@ At the top of the window, you have seven icons:
 
 * |mActionExpandTree| :sup:`Expand tree`
 * |mActionCollapseTree| :sup:`Collapse tree`
-* |mActionExpandNewTree| :sup:`Default behaviour` to define whether next
-  identified features informations should be collapsed or expanded
+* |mActionExpandNewTree| :sup:`Default behavior` to define whether next
+  identified features information should be collapsed or expanded
 * |mActionPropertyItem| :sup:`View the feature form`
 * |mActionDeselectAll| :sup:`Clear Results`
 * |mActionEditCopy| :sup:`Copy selected feature to clipboard`
@@ -731,7 +731,7 @@ panel allows you to:
   Confirm your choice.
 * Import or Export a bookmark: To share or transfer your bookmarks between
   computers you can use the :guilabel:`Import/Export Bookmarks` pull down menu
-  in the :guilabel:`Spatial Bookmarks` dialog. All the bookmarks are transfered.
+  in the :guilabel:`Spatial Bookmarks` dialog. All the bookmarks are transferred.
 
 .. _nesting_projects:
 
