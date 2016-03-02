@@ -63,21 +63,61 @@ Project Properties
 In the properties window for the project under |nix| 
 :menuselection:`Settings --> Project Properties` (kde) or |nix| |win| 
 :menuselection:`Project --> Project Properties` (Gnome), you can set 
-project-specific options. These include:
+project-specific options.
 
-* In the :guilabel:`General` menu, the project title, selection and background
-  color, layer units, precision, and the option to save relative paths to
-  layers can be defined. If the CRS transformation is on, you can choose an
-  ellipsoid for distance calculations. You can define the canvas units (only
-  used when CRS transformation is disabled) and the precision of decimal places
-  to use. You can also define a project scale list, which overrides the global
+* In the :guilabel:`General` menu, the **general settings** let you:
+
+  * give a title to the project beside the project file path
+  * choose the color to use for features when they are selected 
+  * choose the background color: the color to use for the map canvas
+  * set whether path to layers in the project should be saved as absolute
+    (or full) one or as relative to the project file location. You may prefer
+    relative path when both layers and project files can be moved or shared
+    or if the project is accessed from computers on different platforms.
+  * choose to avoid artifacts when project is rendered as map tiles. Note that
+    checking this option can lead to performance degradation.
+
+  Calculating areas and distances is a common need in GIS. However, these values
+  are really tied to the underlying projection settings. The **Measurements**
+  frame lets you control these parameters. You can indeed choose:
+  
+  * the ellipsoid to use: it can be an existing one, a custom one 
+    (you'll need to set values of the semi-major and semi-minor axis)
+    or None/Planimetric.
+  * the :guilabel:`units for distance measurements` for length and perimeter and
+    the :guilabel:`units for area measurements`. These settings, which default
+    to the units set in QGIS options but then overrides it for the current project,
+    are used in:
+  
+    * Attribute table field update bar
+    * Field calculator calculations
+    * Identify tool derived length, perimeter and area values
+    * Default unit shown in measure dialog
+
+  The **Coordinate display** allows you to choose and customize the format of units
+  to use to display the mouse coordinate in the status bar and the derived coordinates
+  shown via the identify tool.
+  
+  Finally, you can define a **project scale** list, which overrides the global
   predefined scales.
+
+.. _figure_general_menu:
+
+.. only:: html
+
+   **Figure General Menu:**
+
+.. figure:: /static/user_manual/introduction/project_general.png
+   :align: center
+
+   General tab of Project Properties dialog
+  
 * The :guilabel:`CRS` menu enables you to choose the Coordinate Reference
   System for this project, and to enable on-the-fly re-projection of raster and
   vector layers when displaying layers from a different CRS.
-* With the third :guilabel:`Identify layers` menu, you set (or disable) which
-  layers will respond to the identify tool (see the "Map tools" paragraph from
-  the :ref:`gui_options` section to enable identifying of multiple layers).
+* With the :guilabel:`Identify layers` menu, you set (or disable) which
+  layers will respond to the :ref:`identify tool <identify>`. By default, layers
+  are set queryable.
 * The :guilabel:`Default Styles` menu lets you control how new layers will be
   drawn when they do not have an existing :file:`.qml` style defined. You can
   also set the default transparency level for new layers and whether symbols
@@ -100,7 +140,7 @@ project-specific options. These include:
 .. figure:: /static/user_manual/introduction/macro.png
    :align: center
 
-   Macro settings in |qg|
+   Macro settings in QGIS
 
 
 * The :guilabel:`Relations` menu is used to define 1:n relations. The relations
@@ -333,18 +373,20 @@ This menu offers some options regarding the behaviour of the :guilabel:`Identify
   as long as you click within this tolerance.
 * :guilabel:`Highlight color` allows you to choose with which color should features being
   identified are to be highlighted.
-* :guilabel:`Buffer` expressed as a percentage of the map width, determines a buffer distance
+* :guilabel:`Buffer` determines a buffer distance
   to be rendered from the outline of the identify highlight. 
-* :guilabel:`Minimum width` expressed as a percentage of the map width, determines how thick should
+* :guilabel:`Minimum width` determines how thick should
   the outline of a highlighted object be.
 
 **Measure tool**
 
 * Define :guilabel:`Rubberband color` for measure tools
 * Define :guilabel:`Decimal places`
-* |checkbox| :guilabel:`Keep base unit`
-* :guilabel:`Preferred measurements units` |radiobuttonon| ('Meters', 'Feet', 'Nautical Miles' or 'Degrees')`
-* :guilabel:`Preferred angle units` |radiobuttonon| ('Degrees', 'Radians' or 'Gon')
+* |checkbox| :guilabel:`Keep base unit` to not automatically convert large numbers
+  (e.g., meters to kilometers)
+* :guilabel:`Preferred distance units` |radiobuttonon| ('Meters', 'Feet', 'Nautical Miles', 'Degrees' or 'Map Units' )
+* :guilabel:`Preferred area units` |radiobuttonon| ('Square meters', 'Square feet', 'Square yards', 'Hectares', 'Map Units' ...)
+* :guilabel:`Preferred angle units` |radiobuttonon| ('Degrees', 'Radians', 'Gon/gradians', 'Minutes of arc' ...)
 
 **Panning and zooming**
 
