@@ -236,13 +236,132 @@ you may previously only know from graphics programs:
 * **Subtract**: This blend mode simply subtracts pixel values of one layer from the other.
   In case of negative values, black is displayed.
 
-.. _draw-effects:
+.. _draw_effects:
+
+Draw effects
+------------
+
+Still in order to improve layer rendering and avoid (or at least reduce)
+the resort to other software for final rendering of maps, QGIS provides another
+powerful function: the |PaintEffects| :guilabel:`Draw Effects` tool.
+This option can be applied either at the feature level while shaping the symbol
+or at the whole layer level. It adds :index:`paint effects` for customizing the visualization
+of vector files.
+
+The function is activated by checking the |checkbox| :guilabel:`Draw effects` option
+and clicking the |PaintEffects| :guilabel:`Customize effects` button.
+The effects include the following categories, with the following options:
+
+* **Blur:** Adds a blur effect on the vector layer. The options that someone can change are the
+  :menuselection:`Blur type` (:menuselection:`Stack` or :menuselection:`Gaussian blur`),
+  the strength and transparency of the blur effect.
+
+  **Figure Effects 1:**
+
+  .. figure:: /static/user_manual/working_with_vector/blur.png
+     :align: center
+
+  Draw Effects: Blur dialog
+
+* **Colorize:** This effect can be used by someone who wants to adjust the :menuselection:`brightness`,
+  :menuselection:`contrast` and :menuselection:`saturation` levels of the feature. It also offers
+  the option to overlay another color and mix it with the feature's current one. By default,
+  the :menuselection:`grayscale` effect selected, which actually converts the color of the feature
+  to grayscale, based on 3 options: lightness, luminosity and average.
+
+  **Figure Effects 2:**
+
+  .. figure:: /static/user_manual/working_with_vector/colorise.png
+     :align: center
+
+     Draw Effects: Colorize dialog
+
+* **Source:** Implements the feature in the drawing menu, with its style as selected in the layer properties.
+  The transparency of its style can be adjusted.
+
+  **Figure Effects 3:**
+
+  .. figure:: /static/user_manual/working_with_vector/source.png
+     :align: center
+
+     Draw Effects: Source dialog
+
+* **Drop Shadow:** Using this effect adds a shadow on the feature, which looks like adding an
+  extra dimension. This effect can be customized by changing the :menuselection:`offset`
+  degrees and radius, determining where the shadow shifts towards to and the proximity to
+  the source object. :menuselection:`Drop Shadow` also has the option to change the blur radius,
+  the transparency and the color of the effect.
+
+  **Figure Effects 4:**
+
+  .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
+     :align: center
+
+     Draw Effects: Drop Shadow dialog
+
+* **Inner Glow:** Adds a glow effect inside the feature. This effect can be customized by adjusting
+  the :menuselection:`spread` (width) of the glow, or the :menuselection:`Blur radius`.
+  The latter specifies the proximity from the edge of the feature where you want any blurring to happen.
+  Additionally, there are options to customize the color of the glow, with a single color or a color ramp.
+
+  **Figure Effects 5:**
+
+  .. figure:: /static/user_manual/working_with_vector/inner_glow.png
+     :align: center
+
+     Draw Effects: Inner Glow dialog
+
+* **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect, but it adds
+  the shadow effect on the inside of the edges of the feature. The available options for customization
+  are the same as the :menuselection:`Drop Shadow` effect.
+
+  **Figure Effects 6:**
+
+  .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
+     :align: center
+
+     Draw Effects: Inner Shadow dialog
+
+* **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect, but it adds
+  the glow effect on the outside of the edges of the feature. The available options for customization
+  are the same as the :menuselection:`Inner Glow` effect.
+
+  **Figure Effects 7:**
+
+  .. figure:: /static/user_manual/working_with_vector/outer_glow.png
+     :align: center
+
+     Draw Effects: Outer Glow dialog
+
+* **Transform:** Adds the possibility of transforming the shape of the source feature.
+  The first options available for customization are the :menuselection:`Reflect horizontal`
+  and :menuselection:`Reflect horizontal`, which actually create a reflection on the
+  horizontal and/or vertical axes. The 4 other options are the :menuselection:`Shear`,
+  :menuselection:`Scale`, :menuselection:`Rotation` and :menuselection:`Translate` effects.
+  The :menuselection:`Shear` effect slants the feature along the x and/or y axis, the
+  :menuselection:`Scale` enlarges or minimizes the feature along the x and/or y axis,
+  by the percentage given, while the :menuselection:`Rotation` effect turns the feature
+  around its center point and the :menuselection:`Translate` effect changes the position
+  of the item based on a distance given on the x and/or the y axis.
+
+  **Figure Effects 8:**
+
+  .. figure:: /static/user_manual/working_with_vector/transform.png
+     :align: center
+
+     Draw Effects: Transform dialog
+
+In each of the Draw effect types, the :menuselection:`Blend mode` and :menuselection:`Draw mode`
+can be adjusted to match the user needs. The Blend mode follows the same methods as the ones
+included for the layers (link here) and cannot be used for the transform effect.
+You can find more information in the :ref:`blend-modes`.
+The Draw mode can apply a render and/or modify mode for each of the effects.
+One or more draw effects can be selected at the same time, which can also be
+moved up and down, in order to finally get the desired result.
+
+.. _data_def:
 
 ..
-  Draw effects
-  ------------
-
-
   Data-Defined Override
   ---------------------
 
@@ -738,126 +857,8 @@ features of the layer:
   previously only know from graphics programs. The pixels of your overlaying and
   underlaying layers are mixed through the settings described in :ref:`blend-modes`.
 
-* :guilabel:`Draw effects`: This function adds paint effects for customizing the
-  visualization of vector files. The function is activated by checking the
-  :menuselection:`Draw effects` button and then customize it by clicking the
-  :menuselection:`Customize effects` button (the small "star" shape, on the right
-  of the :menuselection:`Draw effects` button).
-  The effects include the following categories, with the following options:
-
-  * **Blur:** Adds a blur effect on the vector layer. The options that someone
-    can change are the :menuselection:`Blur type` (:menuselection:`Stack` or
-    :menuselection:`Gaussian blur`), the strength and transparency of the blur
-    effect.
-
-    **Figure Symbology 8:**
-
-    .. figure:: /static/user_manual/working_with_vector/blur.png
-       :align: center
-
-       Draw Effects: Blur dialog
-
-  * **Colorize:** This effect can be used by someone who wants to adjust the
-    :menuselection:`brightness`, :menuselection:`contrast` and :menuselection:`saturation`
-    levels of the feature. It, also, offers the option to overlay another color
-    and mix it with the feature's current one. By default, the :menuselection:`grayscale`
-    effect selected, which actually converts the color of the feature to grayscale,
-    based on 3 options: lightness, luminosity and average.
-
-    **Figure Symbology 9:**
-
-    .. figure:: /static/user_manual/working_with_vector/colorise.png
-       :align: center
-
-       Draw Effects: Colorize dialog
-
-  * **Source:** Implements the feature in the drawing menu, with its style as
-    selected in the layer properties. The transparency of its style can be adjusted.
-
-    **Figure Symbology 10:**
-
-    .. figure:: /static/user_manual/working_with_vector/source.png
-       :align: center
-
-       Draw Effects: Source dialog
-
-  * **Drop Shadow:** Using this effect adds a shadow on the feature, which looks
-    like adding an extra dimension. This effect can be customized by changing the
-    :menuselection:`offset` degrees and radius, determining where the shadow shifts
-    towards to and the proximity to the source object. :menuselection:`Drop Shadow`
-    also has the option to change the blur radius, the transparency and the color
-    of the effect.
-
-    **Figure Symbology 11:**
-
-    .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
-       :align: center
-
-       Draw Effects: Drop Shadow dialog
-
-  * **Inner Glow:** Adds a glow effect inside the feature. This effect can be
-    customized by adjusting the :menuselection:`spread` (width) of the glow, or the
-    :menuselection:`Blur radius`. The latter specifies the proximity from the edge
-    of the feature where you want any blurring to happen. Additionally, there are
-    options to customize the color of the glow, with a single color or a color
-    ramp.
-
-    **Figure Symbology 12:**
-
-    .. figure:: /static/user_manual/working_with_vector/inner_glow.png
-       :align: center
-
-       Draw Effects: Inner Glow dialog
-
-  * **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect,
-    but it adds the shadow effect on the inside of the edges of the feature. The
-    available options for customization are the same as the :menuselection:`Drop Shadow`
-    effect.
-
-    **Figure Symbology 13:**
-
-    .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
-       :align: center
-
-       Draw Effects: Inner Shadow dialog
-
-  * **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect,
-    but it adds the glow effect on the outside of the edges of the feature. The
-    available options for customization are the same as the :menuselection:`Inner Glow`
-    effect.
-
-    **Figure Symbology 14:**
-
-    .. figure:: /static/user_manual/working_with_vector/outer_glow.png
-       :align: center
-
-       Draw Effects: Outer Glow dialog
-
-  * **Transform:** Adds the possibility of transforming the shape of the source
-    feature. The first options available for customization are the :menuselection:`Reflect horizontal`
-    and :menuselection:`Reflect horizontal`, which actually create a reflection on the
-    horizontal and/or vertical axes. The 4 other options are the :menuselection:`Shear`,
-    :menuselection:`Scale`, :menuselection:`Rotation` and :menuselection:`Translate`
-    effects. The :menuselection:`Shear` effect slants the feature along the x and/or
-    y axis, the :menuselection:`Scale` enlarges or minimizes the feature along the x
-    and/or y axis, by the percentage given, while the :menuselection:`Rotation` effect
-    turns the feature around its center point and the :menuselection:`Translate` effect
-    changes the position of the item based on a distance given on the x and/or the y axis.
-
-    **Figure Symbology 15:**
-
-    .. figure:: /static/user_manual/working_with_vector/transform.png
-       :align: center
-
-       Draw Effects: Transform dialog
-
-  In each of the Draw effect types, the :menuselection:`Blend mode` and :menuselection:`Draw mode`
-  can be adjusted to match the user needs. The Blend mode follows the same methods as the ones
-  included for the layers (link here) and cannot be used for the transform effect.
-  You can find more information in the :ref:`blend-modes`.
-  The Draw mode can apply a render and/or modify mode for each of the effects.
-  One or more draw effects can be selected at the same time, which can also be
-  moved up and down, in order to finally get the desired result.
+* apply :ref:`paint effects <draw_effects>` on all the layer features with the
+  :guilabel:`Draw Effects` button.
 
 * :guilabel:`Control feature rendering order` allows you to define, using features
   attributes, the order in which they shall be processed by the renderer.

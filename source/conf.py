@@ -980,6 +980,8 @@ rst_epilog = """
    :width: 1.5em
 .. |osm_upload| image:: /static/common/osm_upload.png
    :width: 1.5em
+.. |PaintEffects| image:: /static/common/mIconPaintEffects.png
+   :width: 1.5em
 .. |PanToSelected| image:: /static/common/mActionPanToSelected.png
    :width: 1.5em
 .. |pencil| image:: /static/common/pencil.png
