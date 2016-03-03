@@ -19,7 +19,7 @@ Installation
     single:installation
 
 Installation of QGIS is very simple. Standard installer packages are available
-for MS Windows and Mac OS X. For many flavours of GNU/Linux, binary packages (rpm
+for MS Windows and Mac OS X. For many flavors of GNU/Linux, binary packages (rpm
 and deb) or software repositories are provided to add to your installation manager.
 Get the latest information on binary packages at the QGIS website at
 http://download.qgis.org.
@@ -137,7 +137,7 @@ Load raster and vector layers from the sample dataset
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select
    the ERDAS IMG file :file:`landcover.img` and click **[Open]**.
 #. If the file is not listed, check if the :guilabel:`Files of type`
-   |selectstring| combo box at the bottom of the dialog is set on the right
+   |select string| combo box at the bottom of the dialog is set on the right
    type, in this case **Erdas Imagine Images (\*.img \*.IMG)**.
 #. Now click on the |mActionAddOgrLayer| :sup:`Add Vector Layer` icon.
 #. |radiobuttonon| :guilabel:`File` should be selected as :guilabel:`Source Type`
@@ -383,7 +383,8 @@ select:
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
   version of QGIS`
 
-Whenever you save a project in QGIS a backup of the project file is made with the extension ``.qgs~``. 
+Whenever you save a project in QGIS a backup of the project file is made with the 
+extension ``.qgs~``. 
 
 .. _`sec_output`:
 
