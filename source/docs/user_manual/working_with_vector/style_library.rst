@@ -100,7 +100,7 @@ The symbol will be deleted from the local symbols database.
 The symbol list can be modified by adding new symbols with |mActionSignPlus|
 :sup:`Add item` button or modifying existing ones with |symbologyEdit|
 :sup:`Edit item`.
-See `The Symbol Selector`_ for further informations.
+See `The Symbol Selector`_ for further information.
 
 Share symbols
 .............
@@ -120,7 +120,7 @@ This file can then be imported in another user's style library.
 
 **Importing symbols**
 
-You can extend your symbols library by importing new symbols. Just select
+You can extend your symbols library by importing new symbols. Just select |sharing|
 :menuselection:`Import` from the drop-down list at the right bottom of the dialog.
 In the new dialog, you'll need to :
 
@@ -230,6 +230,7 @@ For each kind of symbols, you will find always the same dialog structure:
   Once the symbol is connected to a layer, this button offers access to the
   :ref:`size assistant <size_assistant>` dialog which helps to create proportional
   or multivariate analysis rendering.
+
 * under these parameters are displayed items of the symbols library you can choose from.
   This list of symbols can be filtered by selecting a group in the drop-down list
   just above.
@@ -237,13 +238,13 @@ For each kind of symbols, you will find always the same dialog structure:
 According to the level selected in the symbol tree,
 you'll get enabled different tools at the bottom of the dialog to :
 
-* |mActionSignPlus| add new symbol layers: you can imbricate as many symbols as you want
-* |mActionSignMinus| remove symbol layers
+* |mActionSignPlus| add new symbol layer: you can imbricate as many symbols as you want
+* |mActionSignMinus| remove the selected symbol layer
 * lock colors of symbol layer: a |locked| locked color stays unchanged when
   user changes the color at the global (or upper) symbol level
 * |mActionDuplicateLayer| duplicate a (group of) symbol layer(s)
 * move up or down the symbol layer
-* apply :ref:`special effects <draw-effects>` to the symbol layer
+* apply :ref:`special effects <draw_effects>` to the symbol layer
 * save the designed symbol into your symbol library
 * or choose in the :guilabel:`Advanced` |selectstring| drop-down list, to
   **clip features to canvas extent**.
