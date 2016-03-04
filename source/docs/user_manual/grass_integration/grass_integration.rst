@@ -10,7 +10,7 @@ GRASS GIS Integration
 (see GRASS-PROJECT in :ref:`literature_and_web`). The integration consists of two parts: 
 provider and plugin. The provider allows to browse, manage and visualize GRASS raster 
 and vector layers. The plugin can be used to create new GRASS locations and mapsets, 
-change GRASS region, create and edit vector layers and analyse GRASS 2-D and 3-D data 
+change GRASS region, create and edit vector layers and analyze GRASS 2-D and 3-D data 
 with more than 400 GRASS modules. In this section, we'll introduce the provider and plugin 
 functionalities and give some examples of managing and working with GRASS data. 
 
@@ -82,8 +82,8 @@ Managing GRASS data in QGIS browser
 ===================================
 
 * Copying maps: GRASS maps may be copied between mapsets within the same location using drag and drop.
-* Deleting maps: Right click on a GRASS map and select :guilabel:`Delete` from contex menu.
-* Renaming maps: Right click on a GRASS map and select :guilabel:`Rename` from contex menu.
+* Deleting maps: Right click on a GRASS map and select :guilabel:`Delete` from context menu.
+* Renaming maps: Right click on a GRASS map and select :guilabel:`Rename` from context menu.
 
 .. _grass_options:
 
