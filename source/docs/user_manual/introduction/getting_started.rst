@@ -137,7 +137,7 @@ Load raster and vector layers from the sample dataset
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select
    the ERDAS IMG file :file:`landcover.img` and click **[Open]**.
 #. If the file is not listed, check if the :guilabel:`Files of type`
-   |select string| combo box at the bottom of the dialog is set on the right
+   |selectstring| combo box at the bottom of the dialog is set on the right
    type, in this case **Erdas Imagine Images (\*.img \*.IMG)**.
 #. Now click on the |mActionAddOgrLayer| :sup:`Add Vector Layer` icon.
 #. |radiobuttonon| :guilabel:`File` should be selected as :guilabel:`Source Type`
