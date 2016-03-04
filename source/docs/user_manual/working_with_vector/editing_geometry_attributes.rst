@@ -650,7 +650,7 @@ icon on the toolbar. Just draw a line across the feature you want to split.
 Split parts
 ...........
 
-In |qg| 2.0 it is now possible to split the parts of a multi part feature so that the
+In QGIS it is possible to split the parts of a multi part feature so that the
 number of parts is increased. Just draw a line across the part you want to split using
 the |mActionSplitParts| :sup:`Split Parts` icon.
 
@@ -717,9 +717,9 @@ The Advanced Digitizing panel
 When capturing new geometries or geometry parts you also have the possibility to use
 the Advanced Digitizing panel. You can digitize lines exactly parallel or at a specific angle
 or lock lines to specific angles. Furthermore you can enter coordinates directly so that you can
-make a precise definition for your new geomtry.
+make a precise definition for your new geometry.
 
-_figure_advanced_edit 1:
+.. _figure_advanced_edit 1:
 
 .. only:: html
 
@@ -728,7 +728,7 @@ _figure_advanced_edit 1:
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing.png
    :align: center
 
-   The Advanced Digitizing panel |nix|
+   The Advanced Digitizing panel
 
 The tools are not enabled if the map view is in geographic coordinates.
 
@@ -953,31 +953,34 @@ as shown in figure_attributes_1_ .
 The other buttons at the top of the attribute table window provide the
 following functionality:
 
-* |mActionToggleEditing| :sup:`Toggle editing mode` to edit single values
-  and to enable functionalities described below (also with :kbd:`Ctrl+e`)
+* |mActionToggleEditing| :sup:`Toggle editing mode` to enable editing functionalities
+  (also with :kbd:`Ctrl+e`)
 * |mActionSaveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+s`)
+* |mActionDraw| :sup:`Reload the table`
+* |mActionNewTableRow| :sup:`Add feature`
+* |mActionDeleteSelected| :sup:`Delete selected features` (also with
+  :kbd:`Ctrl+d`)
+* |mActionSelectAll| :sup:`Select all` (also with :kbd:`Ctrl+a`)
+* |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
 * |mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)
 * |mActionSelectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+t`)
-* |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
+* |PanToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+p`)
+* |mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with
+  :kbd:`Ctrl+j`)
 * |mActionCopySelected| :sup:`Copy selected rows to clipboard` (also with
   :kbd:`Ctrl+c`)
 * |mActionEditPaste| :sup:`Paste from clipboard to a new row` (also with 
   :kbd:`Ctrl+v`)
-* |mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with
-  :kbd:`Ctrl+j`)
-* |PanToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+p`)
-* |mActionDeleteSelected| :sup:`Delete selected features` (also with
-  :kbd:`Ctrl+d`)
-* |mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR
-  layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+w`)
 * |mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR
   layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+l`)
+* |mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR
+  layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+w`)
 * |mActionCalculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+i`)
 
-Below these buttons is the Field Calculator bar, which allows calculations
-to be quickly applied attributes visible in the table. This bar uses the
-same expressions as the |mActionCalculateField| :sup:`Field Calculator`
-(see :ref:`vector_field_calculator`).
+Below these buttons is the Field Calculator bar (enabled only in editing mode),
+which allows calculations to be quickly applied to either all or selected features
+attributes in the table. This bar uses the same expressions as the |mActionCalculateField|
+:sup:`Field Calculator` (see :ref:`vector_field_calculator`).
 
 .. tip:: **Skip WKT geometry**
 
