@@ -235,7 +235,7 @@ Icon                            Substitution                        Icon        
 |scale_bar|                     ``|scale_bar|``                     |locale|                        ``|locale|``
 |gps_importer|                  ``|gps_importer|``                  |gpstrack_barchart|             ``|gpstrack_barchart|``
 |gpstrack_polarchart|           ``|gpstrack_polarchart|``           |tracking|                      ``|tracking|``
-|mActionFolder|                 ``|mActionFolder|``                 \                               \
+|mActionFolder|                 ``|mActionFolder|``                 |extents|                       ``|extents|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -281,14 +281,17 @@ Icons used in Composer:
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |mActionNewComposer|            ``|mActionNewComposer|``            |mActionComposerManager|        ``|mActionComposerManager|``
-|mActionSaveAsSVG|              ``|mActionSaveAsSVG|``              |mActionSaveAsPDF|              ``|mActionSaveAsPDF|``
+|mActionDupComposer|            ``|mActionDupComposer|``            \                               \
+|mActionAtlasSettings|          ``|mActionAtlasSettings|``          |mIconAtlas|                    ``|mIconAtlas|``
 |mActionFilePrint|              ``|mActionFilePrint|``              |mActionSaveMapAsImage|         ``|mActionSaveMapAsImage|``
+|mActionSaveAsSVG|              ``|mActionSaveAsSVG|``              |mActionSaveAsPDF|              ``|mActionSaveAsPDF|``
 |mActionAddArrow|               ``|mActionAddArrow|``               |mActionAddBasicShape|          ``|mActionAddBasicShape|``
 |mActionAddMap|                 ``|mActionAddMap|``                 |mActionAddLegend|              ``|mActionAddLegend|``
+|mActionAddHtml|                ``|mActionAddHtml|``                |mActionAddTable|               ``|mActionAddTable|``
 |mActionLabel|                  ``|mActionLabel|``                  |mActionScaleBar|               ``|mActionScaleBar|``
 |mActionSelectPan|              ``|mActionSelectPan|``              |mActionGroupItems|             ``|mActionGroupItems|``
-|mActionRaiseItems|             ``|mActionRaiseItems|``             |mActionLowerItems|             ``|mActionLowerItems|``
 |mActionSelect|                 ``|mActionSelect|``                 |mActionMoveItemContent|        ``|mActionMoveItemContent|``
+|mActionRaiseItems|             ``|mActionRaiseItems|``             |mActionLowerItems|             ``|mActionLowerItems|``
 |mActionMoveItemsToTop|         ``|mActionMoveItemsToTop|``         |mActionMoveItemsToBottom|      ``|mActionMoveItemsToBottom|``
 |mActionAlignLeft|              ``|mActionAlignLeft|``              |mActionAlignRight|             ``|mActionAlignRight|``
 |mActionAlignHCenter|           ``|mActionAlignHCenter|``           |mActionAlignVCenter|           ``|mActionAlignVCenter|``
