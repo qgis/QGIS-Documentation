@@ -70,8 +70,8 @@ project-specific options.
   * give a title to the project beside the project file path
   * choose the color to use for features when they are selected 
   * choose the background color: the color to use for the map canvas
-  * set whether path to layers in the project should be saved as absolute
-    (or full) one or as relative to the project file location. You may prefer
+  * set whether the path to layers in the project should be saved as absolute
+    (full) or as relative to the project file location. You may prefer
     relative path when both layers and project files can be moved or shared
     or if the project is accessed from computers on different platforms.
   * choose to avoid artifacts when project is rendered as map tiles. Note that
@@ -121,7 +121,7 @@ project-specific options.
 * The :guilabel:`Default Styles` menu lets you control how new layers will be
   drawn when they do not have an existing :file:`.qml` style defined. You can
   also set the default transparency level for new layers and whether symbols
-  should have random colours assigned to them.
+  should have random colors assigned to them.
   There is also an additional section where you can define specific colors for the 
   running project. You can find the added colors in the drop down menu of the color dialog
   window present in each renderer.
@@ -255,7 +255,7 @@ Data Sources Menu
   clipboard` from the :guilabel:`Attribute table` dialog, this has the
   result that the coordinates of points or vertices are also copied to the
   clipboard.
-* :guilabel:`Attribute table behaviour` |selectstring|. There are three
+* :guilabel:`Attribute table behavior` |selectstring|. There are three
   possibilities: 'Show all features', 'Show selected features' and 'Show
   features visible on map'.
 * :guilabel:`Attribute table row cache` |selectnumber|. This row cache makes
@@ -294,7 +294,7 @@ Data Sources Menu
 Rendering Menu
 --------------
 
-**Rendering behaviour**
+**Rendering behavior**
 
 * |checkbox| :guilabel:`By default new layers added to the map should be displayed`
 * |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
@@ -366,7 +366,7 @@ Canvas and Legend Menu
 Map tools Menu
 --------------
 
-This menu offers some options regarding the behaviour of the :guilabel:`Identify tool`.
+This menu offers some options regarding the behavior of the :guilabel:`Identify tool`.
 
 * :guilabel:`Search radius for identifying and displaying map tips` is a tolerance factor
   expressed as a percentage of the map width. This means the identify tool will depict results
