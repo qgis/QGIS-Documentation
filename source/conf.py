@@ -526,6 +526,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
+.. |mActionAddDb2Layer| image:: /static/common/mActionAddDb2Layer.png
+   :width: 1.5em 
 .. |mActionAddDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
 .. |mActionAddGCPPoint| image:: /static/common/mActionAddGCPPoint.png
@@ -908,6 +910,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mIconDataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
+.. |mIconDb2| image:: /static/common/mIconDb2.png
+   :width: 1.5em 
 .. |mIconExpression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |mIconExpressionSelect| image:: /static/common/mIconExpressionSelect.png
