@@ -854,7 +854,7 @@ Creating a stored Connection
 ............................
 
 |mActionAddDb2Layer| The DB2 provider uses ODBC to connect to a DB2 database.
-Windows includes ODBC by default. On *IX systems the unixodbc package needs to be
+Windows includes ODBC by default. On Linux and UNIX systems the **unixodbc** package needs to be
 installed.
 You also need the DB2 Data Server Client installed on the system where you will
 be using QGIS.
