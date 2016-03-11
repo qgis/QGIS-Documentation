@@ -906,7 +906,7 @@ features of the layer:
 * :guilabel:`Control feature rendering order` allows you, using features
   attributes, to define the :index:`z-order` in which they shall be rendered.
   Activate the checkbox and click on the |browsebutton| button beside.
-  You then get the :guilabel`Define Order` dialog in which you:
+  You then get the :guilabel:`Define Order` dialog in which you:
 
   * choose a field or build an expression to apply to the layer features
   * set in which order the fetched features should be sorted, i.e. if you choose 
@@ -921,7 +921,7 @@ features of the layer:
   among them.
   And so on...
   
-  Once the :guilabel`Define Order` dialog is applied, a summary of the expression(s)
+  Once the :guilabel:`Define Order` dialog is applied, a summary of the expression(s)
   used to control the :index:`layer rendering` is retranscribed in the textbox
   beside |checkbox| :guilabel:`Control feature rendering order` option. 
 
