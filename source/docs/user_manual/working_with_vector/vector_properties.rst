@@ -877,10 +877,22 @@ Heatmap
 .......
 
 With the :index:`Heatmap` renderer you can create live dynamic heatmaps for (multi)point
-layers. You can specify the heatmap radius in pixels, mm or map units, choose
-a color ramp for the heatmap style and use a slider for selecting a trade-off
-between render speed and quality. When adding or removing a feature the heatmap
-renderer updates the heatmap style automatically.
+layers. You can specify the heatmap radius in pixels, mm or map units, choose and
+edit a color ramp for the heatmap style and use a slider for selecting a trade-off
+between render speed and quality. You can also define a maximum value limit and give a 
+weight to points using a field or an expression. When adding or removing a feature
+the heatmap renderer updates the heatmap style automatically.
+
+.. _figure_symbology_8:
+
+.. only:: html
+  
+     **Figure Symbology 8:**
+
+.. figure:: /static/user_manual/working_with_vector/heatmap_symbol.png
+   :align: center
+
+   Heatmap dialog
 
 .. _layer_rendering:
 
@@ -925,11 +937,11 @@ features of the layer:
   used to control the :index:`layer rendering` is retranscribed in the textbox
   beside |checkbox| :guilabel:`Control feature rendering order` option.
 
-.. _figure_symbology_8:
+.. _figure_symbology_9:
 
 .. only:: html
   
-     **Figure Symbology 8:**
+     **Figure Symbology 9:**
 
 .. figure:: /static/user_manual/working_with_vector/layer_rendering_options.png
    :align: center
