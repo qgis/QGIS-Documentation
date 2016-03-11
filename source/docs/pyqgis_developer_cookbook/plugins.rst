@@ -129,7 +129,7 @@ right place to put this information.
 
 
 .. important::
-    All metadata must be in UTF-8 encoding.
+   All metadata must be in UTF-8 encoding.
 
 .. _plugin_metadata_table:
 
@@ -230,6 +230,7 @@ An example for this metadata.txt
 
 __init__.py
 -----------
+
 This file is required by Python's import system. Also, QGIS requires that this
 file contains a :func:`classFactory()` function, which is called when the
 plugin gets loaded to QGIS. It receives reference to instance of
@@ -417,13 +418,15 @@ on which the browser will be positioned.
 
 Translation
 ===========
+
 With a few steps you can set up the environment for the plugin localization so
 that depending on the locale settings of your computer the plugin will be loaded
 in different languages.
 
 Software requirements
 ---------------------
-The easiest way to create and manage all the translation files is to installation
+
+The easiest way to create and manage all the translation files is to install
 `Qt Linguist <http://doc.qt.io/qt-4.8/linguist-manual.html>`_.
 In a Linux like environment you can install it typing::
 
@@ -432,13 +435,15 @@ In a Linux like environment you can install it typing::
 
 Files and directory
 -------------------
+
 When you create the plugin you will find the ``i18n`` folder within the main
 plugin directory.
 
 **All the translation files have to be within this directory.**
 
 .pro file
-*********
+.........
+
 First you should create a ``.pro`` file, that is a *project* file that can be
 managed by Qt Linguist.
 
@@ -463,12 +468,14 @@ Finally with the *TRANSLATION* variable you can specify the translation language
 you want.
 
 .. warning::
-  be sure to name the ``ts`` file like ``your_plugin_`` + ``language`` + ``.ts``
-  otherwise the language loading will fail! Use 2 letters shortcut for the
-  language (**it** for Italian, **de** for German, etc...)
+
+   Be sure to name the ``ts`` file like ``your_plugin_`` + ``language`` + ``.ts``
+   otherwise the language loading will fail! Use 2 letters shortcut for the
+   language (**it** for Italian, **de** for German, etc...)
 
 .ts file
-********
+........
+
 Once you have created the ``.pro`` you are ready to generate the ``.ts`` file(s)
 of the language(s) of your plugin.
 
@@ -481,7 +488,8 @@ you should see the ``your_plugin_language.ts`` file(s).
 Open the ``.ts`` file with **Qt Linguist** and start to translate.
 
 .qm file
-********
+........
+
 When you finish to translate your plugin (if some strings are not completed the
 source language for those strings will be used) you have to create the ``.qm``
 file (the compiled ``.ts`` file that will be used by QGIS).
@@ -494,12 +502,14 @@ now, in the ``i18n`` directory you will see the ``your_plugin.qm`` file(s).
 
 Load the plugin
 ---------------
+
 In order to see the translation of your plugin just open QGIS, change the
-language (:menu:`Settings -> Options -> Language`) and restart QGIS.
+language (:menuselection:`Settings -> Options -> Language`) and restart QGIS.
 
 You should see your plugin in the correct language.
 
 .. note::
-  if you change something in your plugin (new UIs, new menu, etc..) you have to
-  **generate again** the update version of both ``.ts`` and ``.qm`` file, so run
-  again the command of above.
+
+   If you change something in your plugin (new UIs, new menu, etc..) you have to
+   **generate again** the update version of both ``.ts`` and ``.qm`` file, so run
+   again the command of above.
