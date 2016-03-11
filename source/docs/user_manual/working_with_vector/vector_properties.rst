@@ -1703,10 +1703,10 @@ You can use :
    Vector properties dialog with diagram menu, Size tab
 
 
-Position
---------
+Placement
+---------
 
-:guilabel:`Position` helps to define diagram placement.
+:guilabel:`Placement` helps to define diagram position.
 According to the layer geometry type, it offers different options for the placement:
 
 * 'Over the point' or 'Around  the point' for point geometry.
@@ -1725,7 +1725,7 @@ and ``Y`` fields with an attribute of the feature.
 
 The placement of the diagrams can interact with the labelling, so you can
 detect and solve position conflicts between diagrams and labels by setting
-the **Priority** slider.
+the **Priority** slider or the **z-index** value.
 
 Options
 -------
@@ -1735,10 +1735,11 @@ choose whether the bar orientation should be 'Up', 'Down', 'Right' and 'Left'.
 
 .. ToDo: explain the behaviour of this option
 
-.. note::
-  Given that almost all the settings above are common to the different types of
-  diagram, when designing your diagram, you can switch between them to check
-  which one is more appropriate to your data without any loss.
+.. tip:: **Switch quickly between diagrams**
+  
+   Given that almost all the settings above are common to the different types of
+   diagram, when designing your diagram, you can easily change the diagram type
+   and check which one is more appropriate to your data without any loss.
 
 Case Study
 ----------
