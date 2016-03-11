@@ -923,7 +923,18 @@ features of the layer:
   
   Once the :guilabel:`Define Order` dialog is applied, a summary of the expression(s)
   used to control the :index:`layer rendering` is retranscribed in the textbox
-  beside |checkbox| :guilabel:`Control feature rendering order` option. 
+  beside |checkbox| :guilabel:`Control feature rendering order` option.
+
+.. _figure_symbology_8:
+
+.. only:: html
+  
+     **Figure Symbology 8:**
+
+.. figure:: /static/user_manual/working_with_vector/layer_rendering_options.png
+   :align: center
+
+   Layer rendering options
 
 .. _vector_labels_tab:
 
