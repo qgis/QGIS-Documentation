@@ -995,9 +995,22 @@ as shown in figure_attributes_1_ .
 Filter features
 ................
 
-.. todo::
+At the bottom of the attribute table, you have a dropdown list of different 
+filter:
 
-:ref:`missing ref for a todo`
+* Show All Features;
+* Show Selected Features;
+* Show Features visible on map;
+* Show Edited and New Features;
+* Field Filter;
+* Advanced filter (Expression);
+
+The first four are self explanatory, the two last are expression filters. Field 
+Filter allow user to choose a column name in the list and add a simple form to 
+the right of the dropdown list to filter with a *like* expression parameter. 
+This filter will create an expression filter as an :menugui:`Advanced filter`.
+The last kind of filter will open an expression window, see :ref:`vector_expressions` 
+for more information.
 
 
 Tab/form mode
