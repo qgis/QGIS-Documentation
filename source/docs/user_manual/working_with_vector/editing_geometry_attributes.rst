@@ -881,6 +881,49 @@ selected features are shown in the attribute table title.
 
    Attribute Table for regions layer |nix|
 
+The buttons at the top of the attribute table window provide the
+following functionality:
+
+* |mActionToggleEditing| :sup:`Toggle editing mode` to enable editing functionalities
+  (also with :kbd:`Ctrl+e`)
+* |mActionSaveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+s`)
+* |mActionDraw| :sup:`Reload the table`
+* |mActionNewTableRow| :sup:`Add feature`
+* |mActionDeleteSelected| :sup:`Delete selected features` (also with
+  :kbd:`Ctrl+d`)
+* |mIconExpressionSelect| :sup:`Select features using an Expression`
+* |mActionSelectAll| :sup:`Select all` (also with :kbd:`Ctrl+a`)
+* |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
+* |mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)
+* |mActionSelectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+t`)
+* |PanToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+p`)
+* |mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with
+  :kbd:`Ctrl+j`)
+* |mActionCopySelected| :sup:`Copy selected rows to clipboard` (also with
+  :kbd:`Ctrl+c`)
+* |mActionEditPaste| :sup:`Paste from clipboard to a new row` (also with 
+  :kbd:`Ctrl+v`)
+* |mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR
+  layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+l`)
+* |mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR
+  layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+w`)
+* |mActionCalculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+i`)
+
+Below these buttons is the Field Calculator bar (enabled only in editing mode),
+which allows calculations to be quickly applied to either all or selected features
+attributes in the table. This bar uses the same expressions as the |mActionCalculateField|
+:sup:`Field Calculator` (see :ref:`vector_field_calculator`).
+
+.. tip:: **Skip WKT geometry**
+
+   If you want to use attribute data in external programs (such as Excel), use the
+   |mActionCopySelected| :sup:`Copy selected rows to clipboard` button.
+   You can copy the information without vector geometries if you deactivate
+   :menuselection:`Settings --> Options -->` Data sources menu |checkbox|
+   :guilabel:`Copy geometry in WKT representation from attribute table`.
+
+
+
 .. index:: Attribute_Table_Selection
 
 Selecting features in an attribute table
@@ -949,46 +992,6 @@ the expression
  ID+5
 
 as shown in figure_attributes_1_ .
-
-The other buttons at the top of the attribute table window provide the
-following functionality:
-
-* |mActionToggleEditing| :sup:`Toggle editing mode` to enable editing functionalities
-  (also with :kbd:`Ctrl+e`)
-* |mActionSaveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+s`)
-* |mActionDraw| :sup:`Reload the table`
-* |mActionNewTableRow| :sup:`Add feature`
-* |mActionDeleteSelected| :sup:`Delete selected features` (also with
-  :kbd:`Ctrl+d`)
-* |mActionSelectAll| :sup:`Select all` (also with :kbd:`Ctrl+a`)
-* |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
-* |mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)
-* |mActionSelectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+t`)
-* |PanToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+p`)
-* |mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with
-  :kbd:`Ctrl+j`)
-* |mActionCopySelected| :sup:`Copy selected rows to clipboard` (also with
-  :kbd:`Ctrl+c`)
-* |mActionEditPaste| :sup:`Paste from clipboard to a new row` (also with 
-  :kbd:`Ctrl+v`)
-* |mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR
-  layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+l`)
-* |mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR
-  layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+w`)
-* |mActionCalculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+i`)
-
-Below these buttons is the Field Calculator bar (enabled only in editing mode),
-which allows calculations to be quickly applied to either all or selected features
-attributes in the table. This bar uses the same expressions as the |mActionCalculateField|
-:sup:`Field Calculator` (see :ref:`vector_field_calculator`).
-
-.. tip:: **Skip WKT geometry**
-
-   If you want to use attribute data in external programs (such as Excel), use the
-   |mActionCopySelected| :sup:`Copy selected rows to clipboard` button.
-   You can copy the information without vector geometries if you deactivate
-   :menuselection:`Settings --> Options -->` Data sources menu |checkbox|
-   :guilabel:`Copy geometry in WKT representation from attribute table`.
 
 Zoom to feature
 ...................................
