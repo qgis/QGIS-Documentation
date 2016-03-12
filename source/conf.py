@@ -673,6 +673,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionFilter| image:: /static/common/mActionFilter.png
    :width: 1.5em
+.. |mActionFilterMap| image:: /static/common/mActionFilterMap.png
+   :width: 1.5em
 .. |mActionFolder| image:: /static/common/mActionFolder.png
    :width: 1.5em
 .. |mActionFormAnnotation| image:: /static/common/mActionFormAnnotation.png
@@ -909,6 +911,8 @@ rst_epilog = """
 .. |mIconDataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |mIconExpression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |mIconExpressionFilter| image:: /static/common/mIconExpressionFilter.png
    :width: 1.5em
 .. |mIconExpressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em

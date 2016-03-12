@@ -367,9 +367,17 @@ Map Legend
 
 The map legend area lists all the layers in the project. The checkbox in each
 legend entry can be used to show or hide the layer. The Legend toolbar in the 
-map legend are list allow you to **Add group**, **Manage Layer Visibility** of 
-all layers or manage preset layers combination, **Filter Legend by Map 
-Content**, **Expand All** or **Collapse All** and **Remove Layer or Group**.
+map legend area allows you to:
+
+* |mActionAddGroup| **Add** new **group**,
+* |mActionShowPresets| **Manage Visibility** of layers and presets layers combination,
+* |mActionFilterMap| **Filter Legend by Map Content**: only the layers that are set visible and whose
+  features intersects the current map canvas have their style rendered in the map
+  legend. Otherwise, a generic NULL symbol is applied to the layer. This is a
+  convenient way to identify which layers cover your area of interest.
+* |mIconExpressionFilter| **Filter Legend by Expression**
+* |mActionExpandTree| **Expand All** or |mActionCollapseTree| **Collapse All** layers and groups in the map legend
+* and |mActionRemoveLayer| **Remove** the selected **Layer or Group**.
 
 .. _figure_layer_toolbar:
 
