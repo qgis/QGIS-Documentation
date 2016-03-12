@@ -759,6 +759,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionOpenRaster| image:: /static/common/mActionOpenRaster.png
    :width: 1.5em
+.. |mActionOpenForm| image:: /static/common/mActionOpenForm.png
+   :width: 1.5em
 .. |mActionOpenTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |mActionOptions| image:: /static/common/mActionOptions.png
