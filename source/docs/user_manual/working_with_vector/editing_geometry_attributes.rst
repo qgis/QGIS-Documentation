@@ -923,7 +923,6 @@ attributes in the table. This bar uses the same expressions as the |mActionCalcu
    :guilabel:`Copy geometry in WKT representation from attribute table`.
 
 
-
 .. index:: Attribute_Table_Selection
 
 Selecting features in an attribute table
@@ -993,8 +992,25 @@ the expression
 
 as shown in figure_attributes_1_ .
 
+Filter features
+................
+
+.. todo::
+
+:ref:`missing ref for a todo`
+
+
+Tab/form mode
+...............
+
+By default the attribute window displays a table layout. In some case one 
+should prefer to use a form layout to help edit some features more easily.
+
+You can switch to form layout by clicking in the bottom right, on |mActionForm|
+and switch back to table layout with |mActionOpenTable|.
+
 Zoom to feature
-...................................
+.................
 
 To zoom into a feature, without having to select it, right-click on the feature
 you want to zoom in, within the attribute table, and select :guilabel:`Zoom to feature`.
