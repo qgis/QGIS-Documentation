@@ -6,7 +6,7 @@ Editing
 .. contents::
    :local:
 
-|qg| supports various capabilities for :index:`editing` OGR,
+QGIS supports various capabilities for :index:`editing` OGR,
 SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
 
 .. note::
@@ -17,7 +17,7 @@ SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
 
 .. tip:: **Concurrent Edits**
 
-   This version of |qg| does not track if somebody else is editing a feature
+   This version of QGIS does not track if somebody else is editing a feature
    at the same time as you are. The last person to save their edits wins.
 
 .. index:: Snapping, Snapping_Tolerance
@@ -34,9 +34,9 @@ geometries.
 Snapping tolerance
 ..................
 
-Snapping tolerance is the distance |qg| uses to ``search`` for the closest
+Snapping tolerance is the distance QGIS uses to ``search`` for the closest
 vertex and/or segment you are trying to connect to when you set a new vertex or
-move an existing vertex. If you aren't within the snapping tolerance, |qg|
+move an existing vertex. If you aren't within the snapping tolerance, QGIS
 will leave the vertex where you release the mouse button, instead of snapping
 it to an existing vertex and/or segment.
 The snapping tolerance setting affects all tools that work with tolerance.
@@ -99,13 +99,13 @@ layer (setting 'layer units') or the units of the map view (setting 'map units')
 Search radius
 .............
 
-Search radius is the distance |qg| uses to ``search`` for the closest vertex
+Search radius is the distance QGIS uses to ``search`` for the closest vertex
 you are trying to move when you click on the map. If you aren't within the
-search radius, |qg| won't find and select any vertex for editing, and it will
+search radius, QGIS won't find and select any vertex for editing, and it will
 pop up an annoying warning to that effect.
 Snap tolerance and search radius are set in map units or pixels, so you may
 find you need to experiment to get them set right. If you specify too big of
-a tolerance, |qg| may snap to the wrong vertex, especially if you are dealing
+a tolerance, QGIS may snap to the wrong vertex, especially if you are dealing
 with a large number of vertices in close proximity. Set search radius too
 small, and it won't find anything to move.
 
@@ -133,9 +133,9 @@ Enable topological editing
 ..........................
 
 The option |checkbox| :guilabel:`Enable topological editing` is for editing
-and maintaining common boundaries in polygon mosaics. |qg| 'detects' a
+and maintaining common boundaries in polygon mosaics. QGIS 'detects' a
 shared boundary in a polygon mosaic, so you only have to move the vertex
-once, and |qg| will take care of updating the other boundary.
+once, and QGIS will take care of updating the other boundary.
 
 .. Index:: Avoid_Intersections_Of_Polygons
 
@@ -146,7 +146,7 @@ The second topological option in the |checkbox| :guilabel:`Avoid Int.`
 column, called :guilabel:`Avoid intersections of new polygons`, avoids
 overlaps in polygon mosaics. It is for quicker digitizing of adjacent
 polygons. If you already have one polygon, it is possible with this option
-to digitize the second one such that both intersect, and |qg| then cuts the
+to digitize the second one such that both intersect, and QGIS then cuts the
 second polygon to the common boundary. The advantage is that you don't
 have to digitize all vertices of the common boundary.
 
@@ -167,7 +167,7 @@ the intersection.
 Digitizing an existing layer
 ----------------------------
 
-By default, |qg| loads layers read-only. This is a safeguard to avoid
+By default, QGIS loads layers read-only. This is a safeguard to avoid
 accidentally editing a layer if there is a slip of the mouse.
 However, you can choose to edit any layer as long as the data provider
 supports it, and the underlying data source is writable (i.e., its files are
@@ -223,7 +223,7 @@ Adding Features
 
 You can use the |mActionCapturePoint| :sup:`Add Feature`,
 |mActionCaptureLine| :sup:`Add Feature` or |mActionCapturePolygon|
-:sup:`Add Feature` icons on the toolbar to put the |qg| cursor into
+:sup:`Add Feature` icons on the toolbar to put the QGIS cursor into
 digitizing mode.
 
 For each feature, you first digitize the geometry, then enter its attributes.
@@ -293,20 +293,20 @@ feature vertices similar to CAD programs. It is possible to simply select
 multiple vertices at once and to move, add or delete them altogether.
 The node tool also works with 'on the fly' projection turned on, and it supports
 the topological editing feature. This tool is, unlike other tools in
-|qg|, persistent, so when some operation is done, selection stays
+QGIS, persistent, so when some operation is done, selection stays
 active for this feature and tool. If the node tool is unable to find any
 features, a warning will be displayed.
 
 It is important to set the property :menuselection:`Settings -->` |mActionOptions|
 :menuselection:`Options --> Digitizing -->` :guilabel:`Search Radius:`
-|selectnumber| to a number greater than zero (i.e., 10). Otherwise, |qg| will
+|selectnumber| to a number greater than zero (i.e., 10). Otherwise, QGIS will
 not be able to tell which vertex is being edited.
 
 .. _tip_vertex_markers:
 
 .. tip:: **Vertex Markers**
 
-   The current version of |qg| supports three kinds of vertex markers:
+   The current version of QGIS supports three kinds of vertex markers:
    'Semi-transparent circle', 'Cross' and 'None'. To change the marker style,
    choose |mActionOptions| :menuselection:`Options` from the
    :menuselection:`Settings` menu, click on the :guilabel:`Digitizing`
@@ -341,7 +341,7 @@ feature by clicking on it. Red boxes will appear at each vertex of this feature.
   should be moved if necessary.
 * **Deleting vertices**: After selecting vertices for deletion, click the
   :kbd:`Delete` key. Note that you cannot use the |mActionNodeTool|
-  :sup:`Node Tool` to delete a complete feature; |qg| will ensure it retains
+  :sup:`Node Tool` to delete a complete feature; QGIS will ensure it retains
   the minimum number of vertices for the feature type you are working on.
   To delete a complete feature use the |mActionDeleteSelected|
   :sup:`Delete Selected` tool.
@@ -359,7 +359,7 @@ Cutting, Copying and Pasting Features
 .....................................
 
 Selected features can be cut, copied and pasted between layers in the same
-|qg| project, as long as destination layers are set to |mActionToggleEditing|
+QGIS project, as long as destination layers are set to |mActionToggleEditing|
 :sup:`Toggle editing` beforehand.
 
 .. index:: CSV, WKT
@@ -368,8 +368,8 @@ Features can also be pasted to external applications as text. That is, the
 features are represented in CSV format, with the geometry data appearing in
 the OGC Well-Known Text (WKT) format.
 
-However, in this version of |qg|, text features from outside |qg| cannot be
-pasted to a layer within |qg|. When would the copy and paste function come
+However, in this version of QGIS, text features from outside QGIS cannot be
+pasted to a layer within QGIS. When would the copy and paste function come
 in handy? Well, it turns out that you can edit more than one layer at a time
 and copy/paste features between layers. Why would we want to do this? Say
 we need to do some work on a new layer but only need one or two lakes, not
@@ -390,7 +390,7 @@ As an example, we will copy some lakes to a new layer:
 #. Stop editing and save the changes
 
 What happens if the source and target layers have different schemas (field
-names and types are not the same)? |qg| populates what matches and ignores
+names and types are not the same)? QGIS populates what matches and ignores
 the rest. If you don't care about the attributes being copied to the target
 layer, it doesn't matter how you design the fields and data types. If you
 want to make sure everything - the feature and its attributes - gets copied,
@@ -402,7 +402,7 @@ make sure the schemas match.
 
    If your source and destination layers use the same projection, then the
    pasted features will have geometry identical to the source layer. However,
-   if the destination layer is a different projection, then |qg| cannot
+   if the destination layer is a different projection, then QGIS cannot
    guarantee the geometry is identical. This is simply because there are
    small rounding-off errors involved when converting between projections.
 
@@ -435,16 +435,16 @@ currently selected features, meaning we can operate on more than one at a time.
 Saving Edited Layers
 ....................
 
-When a layer is in editing mode, any changes remain in the memory of |qg|.
+When a layer is in editing mode, any changes remain in the memory of QGIS.
 Therefore, they are not committed/saved immediately to the data source or disk.
 If you want to save edits to the current layer but want to continue editing
 without leaving the editing mode, you can click the |mActionSaveEdits|
 :sup:`Save Layer Edits` button. When you turn editing mode off with
-|mActionToggleEditing| :sup:`Toggle editing` (or quit |qg| for that matter),
+|mActionToggleEditing| :sup:`Toggle editing` (or quit QGIS for that matter),
 you are also asked if you want to save your changes or discard them.
 
 If the changes cannot be saved (e.g., disk full, or the attributes have values
-that are out of range), the |qg| in-memory state is preserved. This allows
+that are out of range), the QGIS in-memory state is preserved. This allows
 you to adjust your edits and try again.
 
 .. _tip_data_integrity:
@@ -452,7 +452,7 @@ you to adjust your edits and try again.
 .. tip:: **Data Integrity**
 
    It is always a good idea to back up your data source before you start
-   editing. While the authors of |qg| have made every effort to preserve the
+   editing. While the authors of QGIS have made every effort to preserve the
    integrity of your data, we offer no warranty in this regard.
 
 .. _sec_advanced_edit:
@@ -545,7 +545,7 @@ number of vertices of a feature, as long as the geometry doesn't change. With th
 tool you can also simplify multi-part features.
 First, drag a rectangle over the feature. The vertices will be highlighted in red while the color of the
 feature will change and a dialog where you can define a tolerance in map units or pixels
-will appear. |qg| calculates the amount of vertices that can be deleted while maintaining the
+will appear. QGIS calculates the amount of vertices that can be deleted while maintaining the
 geometry using the given tolerance. The higher the tolerance is the more vertices can be deleted. After
 gaining the statistics about the simplification just klick the :guilabel:`OK` button.
 The tolerance you used will be saved when leaving a project or when leaving an edit session.
@@ -633,7 +633,7 @@ To create a shift of a line layer, you must first go into editing mode and activ
 |mActionOffsetCurve| :sup:`Offset Curve` tool. Then click on a feature to shift it.
 Move the mouse and click where wanted or enter the desired distance in the user input widget. Your changes may then be saved with the|mActionSaveEdits|:sup:`Save Layer Edits` tool.
 
-|qg| options dialog (Digitizing tab then **Curve offset tools** section) allows
+QGIS options dialog (Digitizing tab then **Curve offset tools** section) allows
 you to configure some parameters like **Join style**, **Quadrant segments**,
 **Miter limit**.
 
@@ -673,7 +673,7 @@ allows you to :index:`merge attributes of features` with common boundaries and
 attributes without merging their boundaries.
 First, select several features at once. Then
 press the |mActionMergeFeatAttributes| :sup:`Merge Attributes of Selected Features` button.
-Now |qg| asks you which attributes are to be applied to all selected objects.
+Now QGIS asks you which attributes are to be applied to all selected objects.
 As a result, all selected objects have the same attribute entries.
 
 .. index:: Rotate_Point_symbols
@@ -740,7 +740,7 @@ The tools are not enabled if the map view is in geographic coordinates.
 Creating new Vector layers
 --------------------------
 
-|qg| allows you to create new shapefile layers, new SpatiaLite layers, new
+QGIS allows you to create new shapefile layers, new SpatiaLite layers, new
 GPX layers and New Temporary Scratch Layers. Creation of a new GRASS layer is supported within the GRASS plugin.
 Please refer to section :ref:`creating_new_grass_vectors` for more information
 on creating GRASS vector layers.
@@ -754,7 +754,7 @@ To create a new shape layer for editing, choose :menuselection:`New -->`
 displayed as shown in Figure_edit_5_. Choose the type of layer (point, line or
 polygon) and the CRS (coordinate reference system).
 
-Note that |qg| does not yet support creation of 2.5D features (i.e., features
+Note that QGIS does not yet support creation of 2.5D features (i.e., features
 with X,Y,Z coordinates).
 
 .. _figure_edit_5:
@@ -775,7 +775,7 @@ wanted. Only :guilabel:`Type: real` |selectstring|, :guilabel:`Type: integer`
 |selectstring|, :guilabel:`Type: string` |selectstring| and :guilabel:`Type:date` |selectstring|
 attributes are supported. Additionally and according to the attribute type, you can also define
 the width and precision of the new attribute column. Once you are happy with
-the attributes, click **[OK]** and provide a name for the shapefile. |qg| will
+the attributes, click **[OK]** and provide a name for the shapefile. QGIS will
 automatically add a :file:`.shp` extension to the name you specify. Once the
 layer has been created, it will be added to the map, and you can edit it in the
 same way as described in section :ref:`sec_edit_existing_layer` above.
@@ -812,7 +812,7 @@ If desired, you can select |checkbox| :guilabel:`Create an autoincrementing prim
 To define an attribute table for the new SpatiaLite layer, add the names of
 the attribute columns you want to create with the corresponding column type, and
 click on the **[Add to attribute list]** button. Once you are happy with the
-attributes, click **[OK]**. |qg| will automatically add the new layer to the
+attributes, click **[OK]**. QGIS will automatically add the new layer to the
 legend, and you can edit it in the same way as described in section
 :ref:`sec_edit_existing_layer` above.
 
@@ -844,7 +844,7 @@ Empty, editable memory layers can be defined using :menuselection:`Layer --> Cre
 Here you can even create |radiobuttonoff| :guilabel:`Multipoint`, |radiobuttonoff|:guilabel:`Multiline`
 and |radiobuttonoff|:guilabel:`Multipolygon` Layers beneath |radiobuttonon|:guilabel:`Point`,
 |radiobuttonoff|:guilabel:`Line` and |radiobuttonoff|:guilabel:`Polygon` Layers.
-Temporary Scratch Layers are not saved and will be discarded when |qg| is closed.
+Temporary Scratch Layers are not saved and will be discarded when QGIS is closed.
 See also paste_into_layer_ .
 
 .. index:: Work_with_Attribute_Table
@@ -880,6 +880,48 @@ selected features are shown in the attribute table title.
    :align: center
 
    Attribute Table for regions layer |nix|
+
+The buttons at the top of the attribute table window provide the
+following functionality:
+
+* |mActionToggleEditing| :sup:`Toggle editing mode` to enable editing functionalities
+  (also with :kbd:`Ctrl+e`)
+* |mActionSaveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+s`)
+* |mActionDraw| :sup:`Reload the table`
+* |mActionNewTableRow| :sup:`Add feature`
+* |mActionDeleteSelected| :sup:`Delete selected features` (also with
+  :kbd:`Ctrl+d`)
+* |mIconExpressionSelect| :sup:`Select features using an Expression`
+* |mActionSelectAll| :sup:`Select all` (also with :kbd:`Ctrl+a`)
+* |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
+* |mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)
+* |mActionSelectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+t`)
+* |PanToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+p`)
+* |mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with
+  :kbd:`Ctrl+j`)
+* |mActionCopySelected| :sup:`Copy selected rows to clipboard` (also with
+  :kbd:`Ctrl+c`)
+* |mActionEditPaste| :sup:`Paste from clipboard to a new row` (also with 
+  :kbd:`Ctrl+v`)
+* |mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR
+  layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+l`)
+* |mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR
+  layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+w`)
+* |mActionCalculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+i`)
+
+Below these buttons is the Field Calculator bar (enabled only in editing mode),
+which allows calculations to be quickly applied to either all or selected features
+attributes in the table. This bar uses the same expressions as the |mActionCalculateField|
+:sup:`Field Calculator` (see :ref:`vector_field_calculator`).
+
+.. tip:: **Skip WKT geometry**
+
+   If you want to use attribute data in external programs (such as Excel), use the
+   |mActionCopySelected| :sup:`Copy selected rows to clipboard` button.
+   You can copy the information without vector geometries if you deactivate
+   :menuselection:`Settings --> Options -->` Data sources menu |checkbox|
+   :guilabel:`Copy geometry in WKT representation from attribute table`.
+
 
 .. index:: Attribute_Table_Selection
 
@@ -919,7 +961,7 @@ to define a subset of a table using a :guilabel:`Function List` like in the
 |mActionCalculateField| :sup:`Field Calculator` (see :ref:`vector_field_calculator`).
 The query result can then be saved as a new vector layer.
 For example, if you want to find regions that are boroughs from :file:`regions.shp`
-of the |qg| sample data, you have to open the :guilabel:`Fields and Values` menu
+of the QGIS sample data, you have to open the :guilabel:`Fields and Values` menu
 and choose the field that you want to query. Double-click the field 'TYPE_2' and also
 **[Load all unique values]** . From the list, choose and double-click 'Borough'.
 In the :guilabel:`Expression` field, the following query appears:
@@ -938,7 +980,7 @@ the main window. For searches that display only selected features on the map,
 use the Query Builder described in section :ref:`vector_query_builder`.
 
 To show selected records only, use :guilabel:`Show Selected Features` from the menu
-at the bottom left.
+at the bottom left. See next section for more information on filter feature.
 
 The field calculator bar allows you to make calculations on the selected rows only.
 For example, you can alter the number of the ID field of the file:`regions.shp` with
@@ -950,48 +992,38 @@ the expression
 
 as shown in figure_attributes_1_ .
 
-The other buttons at the top of the attribute table window provide the
-following functionality:
+Filter features
+................
 
-* |mActionToggleEditing| :sup:`Toggle editing mode` to enable editing functionalities
-  (also with :kbd:`Ctrl+e`)
-* |mActionSaveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+s`)
-* |mActionDraw| :sup:`Reload the table`
-* |mActionNewTableRow| :sup:`Add feature`
-* |mActionDeleteSelected| :sup:`Delete selected features` (also with
-  :kbd:`Ctrl+d`)
-* |mActionSelectAll| :sup:`Select all` (also with :kbd:`Ctrl+a`)
-* |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
-* |mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)
-* |mActionSelectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+t`)
-* |PanToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+p`)
-* |mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with
-  :kbd:`Ctrl+j`)
-* |mActionCopySelected| :sup:`Copy selected rows to clipboard` (also with
-  :kbd:`Ctrl+c`)
-* |mActionEditPaste| :sup:`Paste from clipboard to a new row` (also with 
-  :kbd:`Ctrl+v`)
-* |mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR
-  layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+l`)
-* |mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR
-  layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+w`)
-* |mActionCalculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+i`)
+At the bottom of the attribute table, you have a dropdown list of different 
+filter:
 
-Below these buttons is the Field Calculator bar (enabled only in editing mode),
-which allows calculations to be quickly applied to either all or selected features
-attributes in the table. This bar uses the same expressions as the |mActionCalculateField|
-:sup:`Field Calculator` (see :ref:`vector_field_calculator`).
+* Show All Features;
+* Show Selected Features;
+* Show Features visible on map;
+* Show Edited and New Features;
+* Field Filter;
+* Advanced filter (Expression);
 
-.. tip:: **Skip WKT geometry**
+The first four are self explanatory, the two last are expression filters. Field 
+Filter allow user to choose a column name in the list and add a simple form to 
+the right of the dropdown list to filter with a *like* expression parameter. 
+This filter will create an expression filter as an :guilabel:`Advanced filter`.
+The last kind of filter will open an expression window, see :ref:`vector_expressions` 
+for more information.
 
-   If you want to use attribute data in external programs (such as Excel), use the
-   |mActionCopySelected| :sup:`Copy selected rows to clipboard` button.
-   You can copy the information without vector geometries if you deactivate
-   :menuselection:`Settings --> Options -->` Data sources menu |checkbox|
-   :guilabel:`Copy geometry in WKT representation from attribute table`.
+
+Tab/form mode
+...............
+
+By default the attribute window displays a table layout. In some case one 
+should prefer to use a form layout to help edit some features more easily.
+
+You can switch to form layout by clicking in the bottom right, on |mActionOpenForm|
+and switch back to table layout with |mActionOpenTable|.
 
 Zoom to feature
-...................................
+.................
 
 To zoom into a feature, without having to select it, right-click on the feature
 you want to zoom in, within the attribute table, and select :guilabel:`Zoom to feature`.
@@ -1019,7 +1051,7 @@ clipboard, and then paste them into a new layer using
 :menuselection:`New vector layer` or :menuselection:`New memory
 layer`.
 
-This applies to features selected and copied within |qg| and
+This applies to features selected and copied within QGIS and
 also to features from another source defined using well-known text (WKT).
 
 .. index:: Non_Spatial_Attribute_Tables
@@ -1027,7 +1059,7 @@ also to features from another source defined using well-known text (WKT).
 Working with non spatial attribute tables
 .........................................
 
-|qg| allows you also to load non-spatial tables. This currently includes tables
+QGIS allows you also to load non-spatial tables. This currently includes tables
 supported by OGR and delimited text, as well as the PostgreSQL, MSSQL and Oracle provider.
 The tables can be used for field lookups or just generally browsed and edited using the table
 view. When you load the table, you will see it in the legend field. It can be
