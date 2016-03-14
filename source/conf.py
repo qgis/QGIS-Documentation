@@ -560,6 +560,8 @@ rst_epilog = """
    :width: 2em
 .. |mActionAddSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
+.. |mActionAddTable| image:: /static/common/mActionAddTable.png
+   :width: 1.5em
 .. |mActionAddWmsLayer| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
 .. |mActionAlignBottom|  image:: /static/common/mActionAlignBottom.png

@@ -7,24 +7,35 @@ Substitutions
 Usage
 =====
 
-To easier the use of icons from QGIS in a rst document
-substitutions are defined for each in :file:`/source/conf.py` file.
-Thus, when you want to use an icon from QGIS in the documentation
-there is a big chance that there is already a substitution defined
-that can/should be used. If no substitution exists, don't forget to include one
-in the :file:`conf.py` file before using it.
+To easier the use of icons in QGIS manuals, replacements are defined
+for each icon in :file:`/source/conf.py` file at `QGIS-Documentation repository
+<https://github.com/qgis/QGIS>`_ and some of these substitutions are listed below.
+Thus, when you want to use an icon from QGIS application in the documentation
+there is a big chance that there is already a substitution that can/should be used.
 
-You'll also need to pick the icons image file from `QGIS repository <https://github.com/qgis/QGIS>`_
-and especially at https://github.com/qgis/QGIS/tree/master/images/themes/default
-and placed them (in ``.png`` format) inside :file:`/resources/en/docs/common` folder.
-It's strongly advised to keep files naming.
+If no replacement exists:
 
-Below some icons and substitutions defined in conf.py are given.
+* check the documentation repository whether the icon is available in
+  :file:`/resources/en/docs/common` folder. If no image, then you need to find and
+  copy the icon image file from `QGIS repository <https://github.com/qgis/QGIS>`_
+  (often under https://github.com/qgis/QGIS/tree/master/images/themes/default folder)
+  and paste (in ``.png`` format) under :file:`/resources/en/docs/common` folder.
+  For convenience and update, it's advised to keep filename when possible.
+* create the reference to the substitution in the :file:`/source/conf.py`
+  file following the example below:
+
+::
+  
+  .. |split_layer| image:: /static/common/split_layer.png
+     :width: 1.5em
+
+* (optional) add the reference to the icon and its substitution to the list below.
 
 Common Substitutions
 ====================
 
-Can be used/found in many places in manuals
+Below are given some icons and their substitution to use when writing documentation.
+Can be used/found in many places in manuals.
 
 Platform Icons
 ..............
@@ -224,7 +235,7 @@ Icon                            Substitution                        Icon        
 |scale_bar|                     ``|scale_bar|``                     |locale|                        ``|locale|``
 |gps_importer|                  ``|gps_importer|``                  |gpstrack_barchart|             ``|gpstrack_barchart|``
 |gpstrack_polarchart|           ``|gpstrack_polarchart|``           |tracking|                      ``|tracking|``
-|mActionFolder|                 ``|mActionFolder|``                 \                               \
+|mActionFolder|                 ``|mActionFolder|``                 |extents|                       ``|extents|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -270,14 +281,17 @@ Icons used in Composer:
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |mActionNewComposer|            ``|mActionNewComposer|``            |mActionComposerManager|        ``|mActionComposerManager|``
-|mActionSaveAsSVG|              ``|mActionSaveAsSVG|``              |mActionSaveAsPDF|              ``|mActionSaveAsPDF|``
+|mActionDupComposer|            ``|mActionDupComposer|``            \                               \
+|mActionAtlasSettings|          ``|mActionAtlasSettings|``          |mIconAtlas|                    ``|mIconAtlas|``
 |mActionFilePrint|              ``|mActionFilePrint|``              |mActionSaveMapAsImage|         ``|mActionSaveMapAsImage|``
+|mActionSaveAsSVG|              ``|mActionSaveAsSVG|``              |mActionSaveAsPDF|              ``|mActionSaveAsPDF|``
 |mActionAddArrow|               ``|mActionAddArrow|``               |mActionAddBasicShape|          ``|mActionAddBasicShape|``
 |mActionAddMap|                 ``|mActionAddMap|``                 |mActionAddLegend|              ``|mActionAddLegend|``
+|mActionAddHtml|                ``|mActionAddHtml|``                |mActionAddTable|               ``|mActionAddTable|``
 |mActionLabel|                  ``|mActionLabel|``                  |mActionScaleBar|               ``|mActionScaleBar|``
 |mActionSelectPan|              ``|mActionSelectPan|``              |mActionGroupItems|             ``|mActionGroupItems|``
-|mActionRaiseItems|             ``|mActionRaiseItems|``             |mActionLowerItems|             ``|mActionLowerItems|``
 |mActionSelect|                 ``|mActionSelect|``                 |mActionMoveItemContent|        ``|mActionMoveItemContent|``
+|mActionRaiseItems|             ``|mActionRaiseItems|``             |mActionLowerItems|             ``|mActionLowerItems|``
 |mActionMoveItemsToTop|         ``|mActionMoveItemsToTop|``         |mActionMoveItemsToBottom|      ``|mActionMoveItemsToBottom|``
 |mActionAlignLeft|              ``|mActionAlignLeft|``              |mActionAlignRight|             ``|mActionAlignRight|``
 |mActionAlignHCenter|           ``|mActionAlignHCenter|``           |mActionAlignVCenter|           ``|mActionAlignVCenter|``
