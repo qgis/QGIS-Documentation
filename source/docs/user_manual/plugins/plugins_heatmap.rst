@@ -8,7 +8,7 @@ Heatmap Plugin
 ==============
 
 The `Heatmap` plugin uses Kernel Density Estimation to create a density (heatmap)
-raster of an input point vector layer.  The density is calculated based on the
+raster of an input point vector layer. The density is calculated based on the
 number of points in a location, with larger numbers of clustered points resulting
 in larger values. Heatmaps allow easy identification of "hotspots" and
 clustering of points.
@@ -62,7 +62,7 @@ will be available:
   different rates, so a triweight kernel gives features greater weight for distances closer
   to the point then the Epanechnikov kernel does. Consequently, triweight results in "sharper"
   hotspots, and Epanechnikov results in "smoother" hotspots. A number of standard kernel functions
-  are available in |qg|, which are described and illustrated on Wikipedia_.
+  are available in QGIS, which are described and illustrated on Wikipedia_.
 
 * **Decay ratio**: Can be used with Triangular kernels to further control how heat from
   a feature decreases with distance from the feature.
@@ -90,7 +90,7 @@ Tutorial: Creating a Heatmap
 ----------------------------
 
 For the following example, we will use the ``airports`` vector point layer from
-the |qg| sample dataset (see :ref:`label_sampledata`). Another exellent |qg|
+the QGIS sample dataset (see :ref:`label_sampledata`). Another excellent QGIS
 tutorial on making heatmaps can be found at `http://qgis.spatialthoughts.com
 <http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_.
 
@@ -105,7 +105,7 @@ In Figure_Heatmap_1_, the airports of Alaska are shown.
 .. figure:: /static/user_manual/plugins/heatmap_start.png
    :align: center
 
-   Airports of Alaska |nix|
+   Airports of Alaska
 
 
 #. Select the |heatmap| `Heatmap` tool button to open the Heatmap dialog
@@ -128,11 +128,11 @@ In Figure_Heatmap_1_, the airports of Alaska are shown.
 .. figure:: /static/user_manual/plugins/heatmap_dialog.png
    :align: center
 
-   The Heatmap Dialog |nix|
+   The Heatmap Dialog
 
-|qg| will generate the heatmap and add the results to your map window. By default, the heatmap
+QGIS will generate the heatmap and add the results to your map window. By default, the heatmap
 is shaded in greyscale, with lighter areas showing higher concentrations of airports. The heatmap
-can now be styled in |qg| to improve its appearance.
+can now be styled in QGIS to improve its appearance.
 
 .. _figure_heatmap_3:
 
@@ -143,7 +143,7 @@ can now be styled in |qg| to improve its appearance.
 .. figure:: /static/user_manual/plugins/heatmap_loaded_grey.png
    :align: center
 
-   The heatmap after loading looks like a grey surface |nix|
+   The heatmap after loading looks like a grey surface
 
 
 #. Open the properties dialog of the ``heatmap_airports`` layer (select the layer
@@ -167,6 +167,6 @@ The final result is shown in Figure_Heatmap_4_.
 .. figure:: /static/user_manual/plugins/heatmap_loaded_colour.png
    :align: center
 
-   Styled heatmap of airports of Alaska |nix|
+   Styled heatmap of airports of Alaska
 
 .. _Wikipedia: http://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use
