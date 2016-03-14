@@ -241,7 +241,7 @@ Icon                            Substitution                        Icon        
 |mIconExpressionSelect|         ``|mIconExpressionSelect|``         |mActionDeleteSelected|         ``|mActionDeleteSelected|``
 |mActionNewAttribute|           ``|mActionNewAttribute|``           |mActionDeleteAttribute|        ``|mActionDeleteAttribute|``
 |mActionNewTableRow|            ``|mActionNewTableRow|``            |mActionCalculateField|         ``|mActionCalculateField|``
-|mActionDraw|                   ``|mActionDraw|``                   \                               \
+|mActionDraw|                   ``|mActionDraw|``                   |mActionForm|                   ``|mActionForm|``
 ==============================  ==================================  ==============================  ==================================
 
 
