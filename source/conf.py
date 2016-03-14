@@ -675,6 +675,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionFolder| image:: /static/common/mActionFolder.png
    :width: 1.5em
+.. |mActionForm| image:: /static/common/mActionForm.png
+   :width: 1.5em
 .. |mActionFormAnnotation| image:: /static/common/mActionFormAnnotation.png
    :width: 1.5em
 .. |mActionFullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png
