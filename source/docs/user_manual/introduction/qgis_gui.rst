@@ -51,9 +51,9 @@ Menu Bar
 The menu bar provides access to various |qg| features using a standard
 hierarchical menu. The top-level menus and a summary of some of the menu
 options are listed below, together with the associated icons as
-they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in this section are the
-defaults; however, keyboard shortcuts
-can also be configured manually using the :guilabel:`Configure shortcuts` dialog, opened from
+they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in 
+this section are the defaults; however, keyboard shortcuts can also be configured 
+manually using the :guilabel:`Configure shortcuts` dialog, opened from
 :menuselection:`Settings --> Configure Shortcuts...`.
 
 Although most menu options have a corresponding tool and vice-versa, the menus
@@ -382,9 +382,15 @@ Content**, **Expand All** or **Collapse All** and **Remove Layer or Group**.
 
       Layer Tool Bar in Map Legend
 
-The button |mActionShowPresets| allows you to add **Presets** views in the legend. It means that you can choose to display some layer with specific categorization and add this view to the **Presets** list. To add a preset view just click on |mActionShowPresets|, choose *Add Preset...* from the drop down menu and give a name to the preset. After that you will see a list with all the presets that you can recall pressing on the |mActionShowPresets| button. 
+The button |mActionShowPresets| allows you to add **Presets** views in the legend. 
+It means that you can choose to display layers with specific categorization and
+add this view to the **Presets** list. To add a preset view just click on |mActionShowPresets|, 
+choose *Add Preset...* from the drop down menu and give a name to the preset. After that
+you will see a list with all the presets that you can recall when pressing on the 
+|mActionShowPresets| button. 
 
-All the added presets are also present in the map composer in order to allow you to create a map layout based on your specific views (see :ref:`composer_main_properties`).
+All the added presets are also present in the map composer. This then allows you 
+to create a map layout based on your specific views (see :ref:`composer_main_properties`).
 
 
 
@@ -395,9 +401,9 @@ A layer can be selected and dragged up or down in the legend to change the
 Z-ordering. Z-ordering means that layers listed nearer the top of the legend
 are drawn over layers listed lower down in the legend.
 
-.. note:: This behaviour can be overridden by the 'Layer order' panel.
+.. note:: This behavior can be overridden by the 'Layer order' panel.
 
-Layers in the legend window can be organised into groups. There are two ways to
+Layers in the legend window can be organized into groups. There are two ways to
 do this:
 
 #. Press the |mActionFolder| icon to add a new group. Type in a name for 
@@ -540,10 +546,10 @@ changes you make in the legend area.
 .. tip::
    **Zooming the Map with the Mouse Wheel**
 
-   You can use the mouse wheel to zoom in and out on the map. Place the mouse
+   You can use the mouse wheel to zoom in and out of the map. Place the mouse
    cursor inside the map area and roll the wheel forward (away from you) to
    zoom in and backwards (towards you) to zoom out. The zoom is centered on the
-   mouse cursor position. You can customize the behaviour of the
+   mouse cursor position. You can customize the behavior of the
    mouse wheel zoom using the :guilabel:`Map tools` tab under the
    :menuselection:`Settings --> Options` menu.
 
@@ -603,11 +609,12 @@ properties for the current project.
    .. index::
       single:scale calculate
 
-   When you start |qg|, the default units are degrees, and this means that |qg| will interpret any
+   When you start |qg|, the default units are degrees, this means that |qg| will interpret any
    coordinate in your layer as specified in degrees. To get correct scale values, you can
    either change this setting to meters manually in the :guilabel:`General` tab
    under :menuselection:`Settings --> Project Properties`, or you can select a
    project CRS clicking on the |mIconProjectionDisabled| :sup:`Current CRS:` icon in the
    lower right-hand corner of the status bar. In the last case, the units are set to what the
    project projection specifies (e.g., '+units=m').
+
 
