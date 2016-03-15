@@ -28,7 +28,7 @@ Save and Share Layer Properties
 
 When a layer is added to map canvas, QGIS uses by default a random symbol/color
 to render its features. You can however set a default symbol in
-:guilabel:`Project --> Properties --> Default styles` that will be applied
+:menuselection:`Project --> Properties --> Default styles` that will be applied
 to each newly added layer according to its geometry type.
 
 But, most of the time, you'd prefer to have a custom and more complexe style
@@ -894,6 +894,46 @@ the heatmap renderer updates the heatmap style automatically.
 
    Heatmap dialog
 
+.. _2.5_D_rendering:
+
+2.5 D
+.....
+
+Using the :index:`2.5 D` renderer it's possible to create a 2.5 D effect on your layer's
+features. You start by choosing a :guilabel:`Height` value (in map units). For that
+you can use a fixed value, one of your layer's fields, or an expression. You also
+need to choose an :guilabel:`Angle` (in degrees) to recreate the viewer position
+(0 |degrees| means west, growing in counter clock wise). Use advanced configuration options
+to set the :guilabel:`Roof Color` and :guilabel:`Wall Color`. If you would like
+to simulate solar radiation on the features walls, make sure to check the
+|checkbox| :guilabel:`Shade walls based on aspect` option. You can also
+simulate a shadow by setting a :guilabel:`Color` and :guilabel:`Size` (in map
+units).
+
+.. _figure_symbology_9:
+
+.. only:: html
+  
+     **Figure Symbology 9:**
+
+.. figure:: /static/user_manual/working_with_vector/2_5dsymbol.png
+   :align: center
+
+   2.5 D dialog
+
+.. tip:: **Using 2.5 D effect with other renderers**
+
+   Once you have finished setting the basic style on the 2.5 D renderer, you can
+   convert this to another renderer (single, categorized, graduated). The 2.5 D
+   effects will be kept and all other renderer specific options will be
+   available for you to fine tune them (this way you can have for example categorized
+   symbols with a nice 2.5 D representation or add some extra styling to your 2.5 D
+   symbols). To make sure that the shadow and the "building" itself do not interfere
+   with other nearby features, you may need to enable Symbols Levels (
+   :menuselection:`Advanced --> Symbol levels...`).
+   The 2.5 D height and angle values are saved in the layer's variables,
+   so you can edit it afterwards in the variables tab of the layer's properties dialog.
+
 .. _layer_rendering:
 
 Layer rendering
@@ -937,11 +977,11 @@ features of the layer:
   used to control the :index:`layer rendering` is retranscribed in the textbox
   beside |checkbox| :guilabel:`Control feature rendering order` option.
 
-.. _figure_symbology_9:
+.. _figure_symbology_10:
 
 .. only:: html
   
-     **Figure Symbology 9:**
+     **Figure Symbology 10:**
 
 .. figure:: /static/user_manual/working_with_vector/layer_rendering_options.png
    :align: center
