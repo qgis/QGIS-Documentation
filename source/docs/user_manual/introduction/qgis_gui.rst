@@ -51,9 +51,9 @@ Menu Bar
 The menu bar provides access to various |qg| features using a standard
 hierarchical menu. The top-level menus and a summary of some of the menu
 options are listed below, together with the associated icons as
-they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in this section are the
-defaults; however, keyboard shortcuts
-can also be configured manually using the :guilabel:`Configure shortcuts` dialog, opened from
+they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in 
+this section are the defaults; however, keyboard shortcuts can also be configured 
+manually using the :guilabel:`Configure shortcuts` dialog, opened from
 :menuselection:`Settings --> Configure Shortcuts...`.
 
 Although most menu options have a corresponding tool and vice-versa, the menus
@@ -367,17 +367,9 @@ Map Legend
 
 The map legend area lists all the layers in the project. The checkbox in each
 legend entry can be used to show or hide the layer. The Legend toolbar in the 
-map legend area allows you to:
-
-* |mActionAddGroup| **Add** new **group**,
-* |mActionShowPresets| **Manage Visibility** of layers and presets layers combination,
-* |mActionFilterMap| **Filter Legend by Map Content**: only the layers that are set visible and whose
-  features intersects the current map canvas have their style rendered in the map
-  legend. Otherwise, a generic NULL symbol is applied to the layer. This is a
-  convenient way to identify which layers cover your area of interest.
-* |mIconExpressionFilter| **Filter Legend by Expression**
-* |mActionExpandTree| **Expand All** or |mActionCollapseTree| **Collapse All** layers and groups in the map legend
-* and |mActionRemoveLayer| **Remove** the selected **Layer or Group**.
+map legend are list allow you to **Add group**, **Manage Layer Visibility** of 
+all layers or manage preset layers combination, **Filter Legend by Map 
+Content**, **Expand All** or **Collapse All** and **Remove Layer or Group**.
 
 .. _figure_layer_toolbar:
 
@@ -390,9 +382,15 @@ map legend area allows you to:
 
       Layer Tool Bar in Map Legend
 
-The button |mActionShowPresets| allows you to add **Presets** views in the legend. It means that you can choose to display some layer with specific categorization and add this view to the **Presets** list. To add a preset view just click on |mActionShowPresets|, choose *Add Preset...* from the drop down menu and give a name to the preset. After that you will see a list with all the presets that you can recall pressing on the |mActionShowPresets| button. 
+The button |mActionShowPresets| allows you to add **Presets** views in the legend. 
+It means that you can choose to display layers with specific categorization and
+add this view to the **Presets** list. To add a preset view just click on |mActionShowPresets|, 
+choose *Add Preset...* from the drop down menu and give a name to the preset. After that
+you will see a list with all the presets that you can recall when pressing on the 
+|mActionShowPresets| button. 
 
-All the added presets are also present in the map composer in order to allow you to create a map layout based on your specific views (see :ref:`composer_main_properties`).
+All the added presets are also present in the map composer. This then allows you 
+to create a map layout based on your specific views (see :ref:`composer_main_properties`).
 
 
 
@@ -403,9 +401,9 @@ A layer can be selected and dragged up or down in the legend to change the
 Z-ordering. Z-ordering means that layers listed nearer the top of the legend
 are drawn over layers listed lower down in the legend.
 
-.. note:: This behaviour can be overridden by the 'Layer order' panel.
+.. note:: This behavior can be overridden by the 'Layer order' panel.
 
-Layers in the legend window can be organised into groups. There are two ways to
+Layers in the legend window can be organized into groups. There are two ways to
 do this:
 
 #. Press the |mActionFolder| icon to add a new group. Type in a name for 
@@ -548,10 +546,10 @@ changes you make in the legend area.
 .. tip::
    **Zooming the Map with the Mouse Wheel**
 
-   You can use the mouse wheel to zoom in and out on the map. Place the mouse
+   You can use the mouse wheel to zoom in and out of the map. Place the mouse
    cursor inside the map area and roll the wheel forward (away from you) to
    zoom in and backwards (towards you) to zoom out. The zoom is centered on the
-   mouse cursor position. You can customize the behaviour of the
+   mouse cursor position. You can customize the behavior of the
    mouse wheel zoom using the :guilabel:`Map tools` tab under the
    :menuselection:`Settings --> Options` menu.
 
@@ -575,49 +573,34 @@ changes you make in the legend area.
 Status Bar
 ----------
 
-The status bar provides you with general information about the map view,
-and actions processed or available and offers you tools to manage the map view.
+The status bar shows you your current position in map coordinates (e.g.,
+meters or decimal degrees) as the mouse pointer is moved across the map view.
+To the left of the coordinate display in the status bar is a small button that
+will toggle between showing coordinate position or the view extents of the
+map view as you pan and zoom in and out.
 
-On the left side of the status bar, you can get a summary of actions you've done
-(such as selecting features in a layer, removing layer) or a long description
-of the tool you are hovering over (not available for all tools).
-On startup, the bar status also informs you about availability of new or upgradeable
-plugins (if checked in :ref:`Plugin Manager settings <setting_plugins>`).
-
-In case of lengthy operations such as gathering of statistics in raster layers
-or rendering several layers in map view, a progress bar is displayed in the
-status bar to show the current progress of the action.
-
-The |tracking| :guilabel:`Coordinate` option shows the current position of the mouse,
-following it while moving across the map view. You can set the unit (and precision)
-to use in the project properties, General tab.
-Click on the small button at the left of the textbox to toggle between
-the Coordinate option and the |extents| :guilabel:`Extents` option that displays
-in map units, the coordinates of the current lower leftmost and upper rightmost
-points of the map view, as you pan and zoom in and out.
-
-Next to the coordinate display you will find the :guilabel:`Scale` display.
-It shows the scale of the map view. If you zoom in or out, QGIS shows you the
-current scale. There is a scale selector, which allows you to choose among
-:ref:`predefined and custom scales <predefinedscales>` to assign to the map view.
+Next to the coordinate display you will find the scale display. It shows the scale of
+the map view. If you zoom in or out, QGIS shows you the current scale. There is
+a scale selector, which allows you to choose among :ref:`predefined and custom scales
+<predefinedscales>`.
 
 To the right of the scale display you can define a current clockwise rotation for
 your map view in degrees.
 
+A progress bar in the status bar shows the progress of rendering as each layer is
+drawn to the map view. In some cases, such as the gathering of statistics in
+raster layers, the progress bar will be used to show the status of lengthy
+operations.
 
-On the right side of the status bar, there is a small
+If a new plugin or a plugin update is available, you will see a message at the
+far left of the status bar. On the right side of the status bar, there is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
-map view (see section :ref:`redraw_events`).
+map view (see section :ref:`redraw_events` below). The icon |mIconStopRendering|
+immediately stops the current map rendering process.
 
-To the right of the render functions, you find the |mIconProjectionDisabled|
-:sup:`Current CRS:` icon with the EPSG code of the current
-project CRS. Clicking on this lets you :guilabel:`Enable 'on the fly' CRS
-transformation` properties for the current project and apply another CRS to the
-map view. 
-
-Finally, the |mMessageLog| :sup:`Messages` button opens the :guilabel:`Log
-Messages Panel` which informs you on underlying process (QGIS startup, plugins
-loading, processing tools...)
+To the right of the render functions, you find the EPSG code of the current
+project CRS and a projector icon. Clicking on this opens the projection
+properties for the current project.
 
 
 .. tip::
@@ -626,13 +609,11 @@ loading, processing tools...)
    .. index::
       single:scale calculate
 
-   When you start QGIS, the default CRS is ``WGS 84 (epsg 4326)`` and 
-   units are degrees. This means that QGIS will interpret any
-   coordinate in your layer as specified in degrees. To get correct scale values,
-   you can either manually change this setting, e.g. to meters, in the :guilabel:`General`
-   tab under :menuselection:`Project --> Project Properties`, or you can use
-   the |mIconProjectionDisabled| :sup:`Current CRS:` icon seen above. In the latter case,
-   the units are set to what the project projection specifies (e.g., ``+units=us-ft``).
-   
-   Note that CRS choice on startup can be set in :menuselection:`Settings --> Options --> CRS`.
+   When you start |qg|, the default units are degrees, this means that |qg| will interpret any
+   coordinate in your layer as specified in degrees. To get correct scale values, you can
+   either change this setting to meters manually in the :guilabel:`General` tab
+   under :menuselection:`Settings --> Project Properties`, or you can select a
+   project CRS clicking on the |mIconProjectionDisabled| :sup:`Current CRS:` icon in the
+   lower right-hand corner of the status bar. In the last case, the units are set to what the
+   project projection specifies (e.g., '+units=m').
 
