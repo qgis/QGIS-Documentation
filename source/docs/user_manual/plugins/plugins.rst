@@ -17,8 +17,8 @@ You can manage your plugins in the plugin dialog which can be opened with
 :guilabel:`Plugins > Manage and install plugins ...`.
 
 When a plugin needs to be updated, and if plugins settings have been set up 
-accordingly, QGIS main interface could display a blue link in the status bar 
-to tell you that there are some updates for plugins waiting to be applied.
+accordingly, |qg| main interface will display a blue link in the status bar 
+to inform you that there are updates for your plugins waiting to be applied.
 
 .. :index::
     single:plugins;managing
@@ -29,13 +29,13 @@ The Plugins Dialog
 ===================
 
 The menus in the Plugins dialog allow the user to install, uninstall and upgrade plugins in
-different ways. Each plugin have some metadatas displayed in the right panel:
+different ways. Each plugin has some metadata displayed in the right panel:
 
-* information if the plugin is experimental
+* information on whether the plugin is experimental
 * description
 * rating vote(s) (you can vote for your preferred plugin!)
 * tags
-* some useful links as the home page, tracker and code repository
+* some useful links to the home page, tracker and code repository
 * author(s)
 * version available
 
@@ -43,10 +43,11 @@ You can use the filter to find a specific plugin.
 
 |mActionShowPluginManager| :guilabel:`All`
 
-Here, all the available plugins are listed, including both core and external plugins. Use
-**[Upgrade all]** to look for new versions of the plugins. Furthermore, you can use **[Install plugin]**,
-if a plugin is listed but not installed, and **[Uninstall plugin]** as well as **[Reinstall plugin]**, 
-if a plugin is installed. If a plugin is installed, it can be de/activated using the checkbox.
+Here, all the available plugins are listed, including both core and external plugins. 
+Use **[Upgrade all]** to look for new versions of the plugins. Furthermore, 
+you can use **[Install plugin]** if a plugin is listed but not installed.
+ **[Uninstall plugin]** as well as **[Reinstall plugin]**. 
+if a plugin is installed, it can be de/activated using the checkbox.
 
 .. _figure_plugins_1:
 
