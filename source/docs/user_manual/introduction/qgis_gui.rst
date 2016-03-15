@@ -617,4 +617,3 @@ properties for the current project.
    lower right-hand corner of the status bar. In the last case, the units are set to what the
    project projection specifies (e.g., '+units=m').
 
-
