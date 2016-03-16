@@ -4,6 +4,9 @@
 Overview of the Print Composer
 ==============================
 
+.. contents::
+   :local:
+
 Menu and tools in the composer
 -------------------------------
 

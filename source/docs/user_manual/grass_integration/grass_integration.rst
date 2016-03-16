@@ -6,6 +6,9 @@
 GRASS GIS Integration
 *********************
 
+.. contents::
+   :local:
+
 :index:`GRASS` integration provides access to GRASS GIS databases and functionalities
 (see GRASS-PROJECT in :ref:`literature_and_web`). The integration consists of two parts: 
 provider and plugin. The provider allows to browse, manage and visualize GRASS raster 

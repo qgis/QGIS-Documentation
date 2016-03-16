@@ -4,6 +4,9 @@
 Composer Items Common Options
 ==============================
 
+.. contents::
+   :local:
+
 Composer items have a set of common properties you will find on the bottom of 
 the :guilabel:`Item Properties` tab: Position and size, Rotation, Frame,
 Background, Item ID and Rendering (See figure_composer_common_1_).

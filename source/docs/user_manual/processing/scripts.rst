@@ -1,4 +1,7 @@
 
+.. contents::
+   :local:
+
 Writing new Processing algorithms as python scripts
 ---------------------------------------------------
 

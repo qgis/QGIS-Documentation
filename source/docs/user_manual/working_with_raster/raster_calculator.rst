@@ -5,6 +5,9 @@
 Raster Calculator
 =================
 
+.. contents::
+   :local:
+
 .. index:: Raster_Calculator
 
 The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu

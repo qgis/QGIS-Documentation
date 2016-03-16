@@ -1,11 +1,12 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not up-to-date with release
-
 .. _heatmap_plugin:
 
 Heatmap Plugin
 ==============
+
+.. contents::
+   :local:
 
 The `Heatmap` plugin uses Kernel Density Estimation to create a density (heatmap)
 raster of an input point vector layer. The density is calculated based on the

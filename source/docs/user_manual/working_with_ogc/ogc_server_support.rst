@@ -9,6 +9,9 @@
 |qg| as OGC Data Server
 ***********************
 
+.. contents::
+   :local:
+
 |qg| Server is an open source WMS 1.3, WFS 1.0.0 and WCS 1 1.1.1 
 implementation that, in addition, implements advanced cartographic features for 
 thematic mapping. The |qg| Server is a FastCGI/CGI (Common Gateway Interface) 

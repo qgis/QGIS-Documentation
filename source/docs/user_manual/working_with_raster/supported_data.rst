@@ -8,6 +8,9 @@
 Working with Raster Data
 *************************
 
+.. contents::
+   :local:
+
 .. % when the revision of a section has been finalized,
 .. % comment out the following line:
 .. %\updatedisclaimer

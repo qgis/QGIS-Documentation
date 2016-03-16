@@ -5,6 +5,9 @@
 Managing the Composer
 =====================
 
+.. contents::
+   :local:
+
 Composer Menu
 --------------
 With the :menuselection:`Composer --> Save Project` action, you can save 

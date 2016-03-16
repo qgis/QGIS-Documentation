@@ -1,11 +1,12 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
 .. _`georef`:
 
 Georeferencer Plugin
 ====================
+
+.. contents::
+   :local:
 
 The Georeferencer Plugin is a tool for generating world files for rasters. It
 allows you to reference rasters to geographic or projected coordinate systems by
