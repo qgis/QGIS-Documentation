@@ -4,6 +4,9 @@
 Substitutions
 *************
 
+.. contents::
+   :local:
+
 Usage
 =====
 
