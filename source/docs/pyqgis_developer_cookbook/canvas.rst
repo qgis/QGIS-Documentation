@@ -6,6 +6,9 @@
 Using Map Canvas
 ****************
 
+.. contents::
+   :local:
+
 The Map canvas widget is probably the most important widget within QGIS because
 it shows the map composed from overlaid map layers and allows interaction with
 the map and layers. The canvas shows always a part of the map defined by the

@@ -6,6 +6,9 @@
 Map Rendering and Printing
 **************************
 
+.. contents::
+   :local:
+
 There are generally two approaches when input data should be rendered as a map:
 either do it quick way using :class:`QgsMapRenderer` or produce more fine-tuned
 output by composing the map with :class:`QgsComposition` class and friends.

@@ -6,6 +6,9 @@
 Developing Python Plugins
 *************************
 
+.. contents::
+   :local:
+
 It is possible to create plugins in Python programming language. In comparison
 with classical plugins written in C++ these should be easier to write,
 understand, maintain and distribute due the dynamic nature of the Python

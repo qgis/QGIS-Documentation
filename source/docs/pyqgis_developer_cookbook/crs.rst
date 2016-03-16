@@ -4,6 +4,9 @@
 Projections Support
 *******************
 
+.. contents::
+   :local:
+
 .. index:: coordinate reference systems
 
 Coordinate reference systems

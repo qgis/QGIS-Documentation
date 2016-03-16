@@ -2,6 +2,10 @@
 IDE settings for writing and debugging plugins
 **********************************************
 
+.. contents::
+   :local:
+
+
 Although each programmer has his preferred IDE/Text editor, here are some
 recommendations for setting up popular IDE's for writing and debugging QGIS
 Python plugins.

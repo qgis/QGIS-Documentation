@@ -6,6 +6,9 @@
 Using Raster Layers
 *******************
 
+.. contents::
+   :local:
+
 This sections lists various operations you can do with raster layers.
 
 .. index:: raster layers; details
