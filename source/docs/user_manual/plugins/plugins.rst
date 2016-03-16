@@ -5,13 +5,37 @@
 
 .. _plugins:
 
-************
-|qg| Plugins
-************
+*************
+QGIS Plugins
+*************
 
-|qg| has been designed with a plugin architecture. This allows many new
+QGIS has been designed with a plugin architecture. This allows many new
 features and functions to be easily added to the application. Many of the features
-in |qg| are actually implemented as plugins.
+in QGIS are actually implemented as plugins.
+
+Core and External plugins
+=========================
+   
+QGIS plugins are implemented either as **Core Plugins** or **External Plugins**.
+
+:ref:`Core Plugins <core_plugins>` are maintained by the QGIS Development Team and are
+automatically part of every QGIS distribution. They are written in one of two
+languages: C++ or Python.
+
+Most of External Plugins are currently written in Python. They are stored either in the
+'Official' QGIS Repository at http://plugins.qgis.org/plugins/ or in external
+repositories and are maintained by the individual authors. 
+Detailed documentation about the usage, minimum QGIS version, home page, authors,
+and other important information are provided for the plugins in the Official repository.
+For other external repositories, documentation might
+be available with the external plugins themselves. In general, external plugins
+documentation is not included in this manual.
+
+Installed external python plugins are placed under :file:`~/.qgis2/python/plugins`
+folder. Home directory (denoted by above ``~``) on Windows is usually something like :file:`C:\Documents and Settings\(user)` (on Windows XP or earlier) or :file:`C:\Users\(user)`.
+
+Paths to Custom C++ plugins libraries can also be added under 
+:menuselection:`Settings --> Options --> System`.
 
 You can manage your plugins in the plugin dialog which can be opened with 
 :guilabel:`Plugins > Manage and install plugins ...`.
@@ -145,17 +169,3 @@ via the **[Edit...]** button, or completely removed with the **[Delete]** button
 The :guilabel:`Search` function is available in nearly every menu (except |mActionTransformSettings| :guilabel:`Settings`).
 Here, you can look for specific plugins.
 
-.. tip:: **Core and external plugins**
-   
-   |qg| plugins are implemented either as **Core Plugins** or **External Plugins**.
-   **Core Plugins** are maintained by the |qg| Development Team and are
-   automatically part of every |qg| distribution. They are written in one of two
-   languages: C++ or Python.
-   **External Plugins** are currently all written in Python. They are stored in
-   external repositories and are maintained by the individual authors. 
-
-Detailed documentation about the usage, minimum |qg| version, home page, authors,
-and other important information are provided for the 'Official' |qg| Repository
-at http://plugins.qgis.org/plugins/. For other external repositories, documentation might
-be available with the external plugins themselves. In general, it is not included
-in this manual.
