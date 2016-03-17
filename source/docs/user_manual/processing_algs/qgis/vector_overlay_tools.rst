@@ -59,7 +59,7 @@ boundaries of the Difference layer. Input Layer Features that are partially with
 Difference layer feature(s) are split along the boundary of the clip layer 
 feature(s). If any features are selected in the Input and Difference Layers, then 
 only those features are used in the operation. If no features are selected, then 
-the is performed using all features. 
+the operation is performed using all features. 
 
 
 Parameters
