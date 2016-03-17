@@ -46,7 +46,7 @@ You can use the filter to find a specific plugin.
 Here, all the available plugins are listed, including both core and external plugins. 
 Use **[Upgrade all]** to look for new versions of the plugins. Furthermore, 
 you can use **[Install plugin]** if a plugin is listed but not installed.
- **[Uninstall plugin]** as well as **[Reinstall plugin]**. 
+**[Uninstall plugin]** as well as **[Reinstall plugin]**. 
 if a plugin is installed, it can be de/activated using the checkbox.
 
 .. _figure_plugins_1:
