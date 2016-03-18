@@ -6,32 +6,32 @@
 
 
 ***********************
-|qg| as OGC Data Server
+QGIS as OGC Data Server
 ***********************
 
-|qg| Server is an open source WMS 1.3, WFS 1.0.0 and WCS 1 1.1.1 
+QGIS Server is an open source WMS 1.3, WFS 1.0.0 and WCS 1 1.1.1 
 implementation that, in addition, implements advanced cartographic features for 
-thematic mapping. The |qg| Server is a FastCGI/CGI (Common Gateway Interface) 
+thematic mapping. The QGIS Server is a FastCGI/CGI (Common Gateway Interface) 
 application written in C++ that works together with a web server (e.g., Apache, 
 Lighttpd). It has Python plugin support allowing for fast and efficient 
 development and deployment of new features.
-The original development of |qg| Server was funded by the EU projects Orchestra,
+The original development of QGIS Server was funded by the EU projects Orchestra,
 Sany and the city of Uster in Switzerland.
 
 .. index:: SLD, SLD/SE
 .. index:: QGIS_Server, FastCGI, CGI, Common_Gateway_Interface
 
-|qg| Server uses |qg| as back end for the GIS logic and for map rendering. 
+QGIS Server uses QGIS as back end for the GIS logic and for map rendering. 
 Furthermore, the Qt library is used for graphics and for platform-independent 
-C++ programming. In contrast to other WMS software, the |qg| Server uses 
+C++ programming. In contrast to other WMS software, the QGIS Server uses 
 cartographic rules as a configuration language, both for the server 
 configuration and for the user-defined cartographic rules.
 
-As |qg| desktop and |qg| Server use the same visualization libraries, the maps
+As QGIS desktop and QGIS Server use the same visualization libraries, the maps
 that are published on the web look the same as in desktop GIS.
 
 In the following sections, we will provide a sample configuration to set up
-a |qg| Server on Debian/Ubuntu Linux.
+a QGIS Server on Debian/Ubuntu Linux.
 For user contributed installation instructions on other platforms or 
 distributions, we recommend reading one of the following URLs:
 
@@ -42,13 +42,13 @@ distributions, we recommend reading one of the following URLs:
 .. index:: apache, apache2, Debian_Squeeze
 
 
-|qg| Server installation on Debian/Ubuntu
+QGIS Server installation on Debian/Ubuntu
 ================================================================================
 
 At this point, we will give a short and simple sample installation how-to for
 a minimal working configuration using Apache2 on Debian Squeeze (or with 
 negligible variations on Ubuntu 14.04).
-Many other OSs provide packages for |qg| Server, too. If you have to build it 
+Many other OSs provide packages for QGIS Server, too. If you have to build it 
 all from source, please refer to the URLs above.
 
 Firstly, add the following debian GIS repository:
@@ -66,7 +66,7 @@ Firstly, add the following debian GIS repository:
   $ # Update package list
   $ sudo apt-get update && sudo apt-get upgrade
 
-Now, install |qg| Server:
+Now, install QGIS Server:
 
 ::
 
@@ -150,7 +150,7 @@ Test the server with the HelloWorld plugin:
   HelloServer!
 
 
-You can have a look at the default GetCapabilities of the |qg| server at:
+You can have a look at the default GetCapabilities of the QGIS server at:
 :file:`http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
 
 .. tip::
@@ -172,13 +172,13 @@ You can have a look at the default GetCapabilities of the |qg| server at:
 
 .. _`Creating a WMS from a QGIS project`:
 
-Creating a WMS/WFS/WCS server from a |qg| project
+Creating a WMS/WFS/WCS server from a QGIS project
 ======================================================
 
 
-To provide a new |qg| Server WMS, WFS or WCS, we have to create a |qg| project
-file with some data. Here, we use the 'Alaska' shapefile from the |qg| sample
-dataset. Define the colors and styles of the layers in |qg| and the project CRS,
+To provide a new QGIS Server WMS, WFS or WCS, we have to create a QGIS project
+file with some data. Here, we use the 'Alaska' shapefile from the QGIS sample
+dataset. Define the colors and styles of the layers in QGIS and the project CRS,
 if not already defined.
 
 .. _figure_server_2:
@@ -190,7 +190,7 @@ if not already defined.
 .. figure:: /static/user_manual/working_with_ogc/ows_server_definition.png
    :align: center
 
-   Definitions for a |qg| Server WMS/WFS/WCS project (KDE)
+   Definitions for a QGIS Server WMS/WFS/WCS project (KDE)
 
 Then, go to the :guilabel:`OWS Server` menu of the
 :menuselection:`Project --> Project Properties` dialog and provide
@@ -198,12 +198,12 @@ some information about the OWS in the fields under
 :guilabel:`Service Capabilities`.
 This will appear in the GetCapabilities response of the WMS, WFS or WCS.
 If you don't check |checkbox| :guilabel:`Service capabilities`,
-|qg| Server will use the information given in the :file:`wms_metadata.xml` file
+QGIS Server will use the information given in the :file:`wms_metadata.xml` file
 located in the :file:`cgi-bin` folder.
 
 .. warning::
 
- If you're using the |qg| project with styling based on SVG files using
+ If you're using the QGIS project with styling based on SVG files using
  relative paths then you should know that the server considers the path
  relative to its `qgis_mapserv.fcgi` file (not to the `qgs` file).
  So, if you deploy a project on the server and the SVG files are not placed
@@ -221,18 +221,18 @@ the extent advertised in the WMS GetCapabilities response by entering
 the minimum and maximum X and Y values in the fields under
 :guilabel:`Advertised extent`.
 Clicking :guilabel:`Use Current Canvas Extent` sets these values to the
-extent currently displayed in the |qg| map canvas.
+extent currently displayed in the QGIS map canvas.
 By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
-in which coordinate reference systems (CRS) |qg| Server will offer
+in which coordinate reference systems (CRS) QGIS Server will offer
 to render maps.
 Use the |mActionSignPlus| button below to select those CRSs
 from the Coordinate Reference System Selector, or click :guilabel:`Used`
-to add the CRSs used in the |qg| project to the list.
+to add the CRSs used in the QGIS project to the list.
 
 If you have print composers defined in your project, they will be listed in the
 GetCapabilities response, and they can be used by the GetPrint request to
 create prints, using one of the print composer layouts as a template.
-This is a |qg|-specific extension to the WMS 1.3.0 specification.
+This is a QGIS-specific extension to the WMS 1.3.0 specification.
 If you want to exclude any print composer from being published by the WMS,
 check |checkbox| :guilabel:`Exclude composers` and click the
 |mActionSignPlus| button below.
@@ -251,7 +251,7 @@ text or GML format depends the output format chosen for the GetFeatureInfo reque
 
 If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
 This will include in the GetFeatureInfo response the geometries of the
-features in a text format. If you want |qg| Server to advertise specific request URLs
+features in a text format. If you want QGIS Server to advertise specific request URLs
 in the WMS GetCapabilities response, enter the corresponding URL in the
 :guilabel:`Advertised URL` field.
 Furthermore, you can restrict the maximum size of the maps returned by the
@@ -263,7 +263,7 @@ expressions) this will be listed inside the GetFeatureInfo output. If the
 layer uses a Value Map for one of its attributes, this information will also 
 be shown in the GetFeatureInfo output.
 
-|qg| supports the following requests for WMS service:
+QGIS supports the following requests for WMS service:
 
 * GetCapabilities
 * GetMap
@@ -279,10 +279,10 @@ In the :guilabel:`WFS capabilities` area you can select the layers you
 want to publish as WFS, and specify if they will allow update, insert and
 delete operations.
 If you enter a URL in the :guilabel:`Advertised URL` field of the
-:guilabel:`WFS capabilities` section, |qg| Server will advertise this specific
+:guilabel:`WFS capabilities` section, QGIS Server will advertise this specific
 URL in the WFS GetCapabilities response.
 
-|qg| supports the following requests for WFS service:
+QGIS supports the following requests for WFS service:
 
 * GetCapabilities
 * DescribeFeatureType
@@ -294,7 +294,7 @@ WCS capabilities
 
 In the :guilabel:`WCS capabilities` area, you can select the layers that you
 want to publish as WCS. If you enter a URL in the :guilabel:`Advertised URL` 
-field of the :guilabel:`WCS capabilities` section, |qg| Server will advertise 
+field of the :guilabel:`WCS capabilities` section, QGIS Server will advertise 
 this specific URL in the WCS GetCapabilities response.
 
 Now, save the session in a project file :file:`alaska.qgs`. To provide the 
@@ -303,14 +303,14 @@ admin privileges and add the project file :file:`alaska.qgs` and a copy of the
 :file:`qgis_mapserv.fcgi` file - that's all.
 
 Now we test our project WMS, WFS and WCS. Add the WMS, WFS and WCS as described 
-in :ref:`ogc-wms-layers`, :ref:`ogc-wfs` and :ref:`ogc-wcs` to |qg| and load 
+in :ref:`ogc-wms-layers`, :ref:`ogc-wfs` and :ref:`ogc-wcs` to QGIS and load 
 the data. The URL is:
 
 ::
 
  http://localhost/cgi-bin/project/qgis_mapserv.fcgi
 
-|qg| supports the following requests for WCS service:
+QGIS supports the following requests for WCS service:
 
 * GetCapabilities
 * DescribeCoverage
@@ -344,7 +344,7 @@ the path to the SVG image so that it represents a valid relative path.
 Server configuration and supported parameters
 ================================================================================
 
-|qg| Server supports some vendor parameters and requests that greatly enhance the
+QGIS Server supports some vendor parameters and requests that greatly enhance the
 possibilities of customising its behavior. The following paragraphs list the vendor
 parameters and the environment variables supported by the server.
 
@@ -356,10 +356,10 @@ Extra parameters supported by all request types
   client as a file attachment with the specified file name.
 
 * **MAP** parameter: Similar to MapServer, the ``MAP`` parameter can be used to
-  specify the path to the |qg| project file. You can specify an absolute path
+  specify the path to the QGIS project file. You can specify an absolute path
   or a path relative to the location of the server executable
   (:file:`qgis_mapserv.fcgi`).
-  If not specified, |qg| Server searches for .qgs files in the directory where
+  If not specified, QGIS Server searches for .qgs files in the directory where
   the server executable is located.
 
   Example::
@@ -370,8 +370,8 @@ Extra parameters supported by all request types
 ..  note::
 
     You can define a **QGIS_PROJECT_FILE** as an environment variable to tell
-    the server executable where to find the |qg| project file. This variable
-    will be the location where |qg| will look for the project file. If not
+    the server executable where to find the QGIS project file. This variable
+    will be the location where QGIS will look for the project file. If not
     defined it will use the MAP parameter in the request and finally look at
     the server executable directory.
 
@@ -380,7 +380,7 @@ Extra parameters supported by all request types
 Extra parameters supported by the WMS GetMap request
 -----------------------------------------------------
 
-In the WMS GetMap request, |qg| Server accepts a couple of extra
+In the WMS GetMap request, QGIS Server accepts a couple of extra
 parameters in addition to the standard parameters according to the
 OCG WMS 1.3.0 specification:
 
@@ -518,7 +518,7 @@ GetProjectSettings request
 -----------------------------
 
 This request type works similar to **GetCapabilities**, but it is more specific 
-to |qg| Server and allows a client to read additional information which is 
+to QGIS Server and allows a client to read additional information which is 
 not available in the GetCapabilities output:
 
 * initial visibility of layers
@@ -566,7 +566,7 @@ specification:
 .. index::
     pair: logging; QGIS Server
 
-|qg| Server logging
+QGIS Server logging
 ----------------------------------
 
 To log requests sent to the server, set the following environment variables:
@@ -598,8 +598,8 @@ To log requests sent to the server, set the following environment variables:
 Environment variables
 ---------------------------------
 
-You can configure some aspects of |qg| server by setting **environment 
-variables**. For example, to set |qg| server on Apache to use 
+You can configure some aspects of QGIS server by setting **environment 
+variables**. For example, to set QGIS server on Apache to use 
 /path/to/config/QGIS/QGIS2.ini settings file, add to Apache config:
 
 ::
@@ -613,13 +613,13 @@ or, if using fcgi:
   FcgidInitialEnv QGIS_OPTIONS_PATH "/path/to/config/"
 
 
-This is a list of the variables supported by |qg| server:
+This is a list of the variables supported by QGIS server:
 
 * **QGIS_OPTIONS_PATH**: Specifies the path to the directory with settings.
   It works the same way as QGIS application --optionspath option. It is looking
   for settings file in <QGIS_OPTIONS_PATH>/QGIS/QGIS2.ini.
 * **QUERY_STRING**: The query string, normally passed by the web server. This 
-  variable can be useful while testing |qg| server binary from the command line.
+  variable can be useful while testing QGIS server binary from the command line.
 * **QGIS_PROJECT_FILE**: the `.qgs` project file, normally passed as a parameter 
   in the query string, you can also set it as an environment variable (for 
   example by using `mod_rewrite` Apache module).
