@@ -48,7 +48,7 @@ shown in figure_spatial_query_1_.
 * You can |checkbox| :guilabel:`Zoom to item` or display
   |checkbox| :guilabel:`Log messages`.
 * Additionally in :guilabel:`Result Feature ID's` with the options 'Invalid source'
-  and 'Invalid reference' you can have a look at features with geometries errors.
+  and 'Invalid reference' you can have a look at features with geometry errors.
   These features aren't used for the query.
 
 .. _figure_spatial_query_1:
