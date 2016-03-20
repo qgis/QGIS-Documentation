@@ -1128,7 +1128,7 @@ Definition (Relation Manager)
 .............................
 
 The first thing we are going to do is to let QGIS know about the relations between the layer.
-This is done in :menuselection:`Settings -->` :menuselection:`Project Properties`.
+This is done in :menuselection:`Project -->` :menuselection:`Project Properties`.
 Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
 
 * **name** is going to be used as a title. It should be a human readable string, describing, what the relation is used for. We will just call say "Airports" in this case.
