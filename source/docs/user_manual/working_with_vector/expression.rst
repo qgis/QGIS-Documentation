@@ -290,7 +290,7 @@ This group contains functions for handling date and time data.
                 of seconds from an interval
  week           Extracts the week number from a date or datetime, or the number of
                 weeks from an interval
- year           Extracts the year part from a date or datetime, or the number of 
+ year           Extracts the year part from a date or datetime, or the number of
                 years from an interval
 ==============  ===================================================================
 
@@ -468,7 +468,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
  num_rings            Returns the number of rings (including exterior rings)
                       in a polygon or geometry collection, or null if the input
                       geometry is not a polygon or collection
- order_parts          Orders the parts of a MultiGeometry by a given criteria 
+ order_parts          Orders the parts of a MultiGeometry by a given criteria
  overlaps             Tests whether a geometry overlaps another. Returns 1 (true)
                       if the geometries share space, are of the same dimension,
                       but are not completely contained by each other
@@ -651,7 +651,7 @@ To use these functions in an expression, they should be preceded by @ character
  qgis_release_name          Returns the current QGIS release name
  qgis_version               Returns the current QGIS version string
  qgis_version_no            Returns the current QGIS version number
- symbol_angle               Returns the angle of the symbol used to render 
+ symbol_angle               Returns the angle of the symbol used to render
                             the feature (valid for marker symbols only)
  symbol_color               Returns the color of the symbol used to render the feature
  user_account_name          Returns the current user's operating system account name
@@ -708,8 +708,8 @@ This function then can be used with the following expression:
 Your function will be implemented in the :guilabel:`Custom` functions group of
 the :guilabel:`Expression` tab after using the :guilabel:`Run Script` button.
 
-Further information about creating Python code can be found on
-http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
+Further information about creating Python code can be found in the
+:ref:`PyQGIS-Developer-Cookbook`.
 
 The function editor is not only limited to working with the field calculator,
 it can be found whenever you work with expressions.
