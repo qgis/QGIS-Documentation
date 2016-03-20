@@ -5,6 +5,9 @@
 eVis Plugin
 ===========
 
+.. contents::
+   :local:
+
 (This section is derived
 from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) User's Guide. American
 Museum of Natural History, Center for Biodiversity and Conservation. Available

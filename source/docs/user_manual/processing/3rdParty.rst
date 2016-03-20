@@ -5,6 +5,9 @@
 Configuring external applications
 =================================
 
+.. contents::
+   :local:
+
 The processing framework can be extended using additional applications.
 Currently, SAGA, GRASS, OTB (Orfeo Toolbox) and R are supported, along
 with some other command-line applications that provide spatial data analysis

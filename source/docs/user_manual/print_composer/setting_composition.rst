@@ -4,6 +4,9 @@
 General Composition Setup
 ==========================
 
+.. contents::
+   :local:
+
 Page size and settings
 ----------------------
 

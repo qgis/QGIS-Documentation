@@ -6,6 +6,9 @@
 Features
 ********
 
+.. contents::
+   :local:
+
 |qg| offers many common GIS functionalities provided by core features
 and plugins. A short summary of six general categories of features and
 plugins is presented below, followed by first insights into the

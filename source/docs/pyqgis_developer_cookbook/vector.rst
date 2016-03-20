@@ -4,6 +4,9 @@
 Using Vector Layers
 *******************
 
+.. contents::
+   :local:
+
 This section summarizes various actions that can be done with vector layers.
 
 .. index::

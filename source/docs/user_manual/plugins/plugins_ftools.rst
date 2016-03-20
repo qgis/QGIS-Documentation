@@ -1,11 +1,12 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
 .. _ftools:
 
 fTools Plugin
 =============
+
+.. contents::
+   :local:
 
 The goal of the fTools Python plugin is to provide a one-stop resource for many
 common vector-based GIS tasks, without the need for additional software,

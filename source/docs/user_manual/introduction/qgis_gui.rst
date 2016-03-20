@@ -6,6 +6,9 @@
 |qg| GUI
 ********
 
+.. contents::
+   :local:
+
 .. index::
    single:main window
 

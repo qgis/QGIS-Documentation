@@ -4,6 +4,9 @@
 Loading Layers
 **************
 
+.. contents::
+   :local:
+
 Let's open some layers with data. QGIS recognizes vector and raster layers.
 Additionally, custom layer types are available, but we are not going to discuss
 them here.

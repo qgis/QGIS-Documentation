@@ -4,6 +4,9 @@
 Translation Guidelines
 **********************
 
+.. contents::
+   :local:
+
 This manual is aiming to help the translator.
 First the general process of how technically a translation is done 
 is explained. Later the translation is explained from an actual English 

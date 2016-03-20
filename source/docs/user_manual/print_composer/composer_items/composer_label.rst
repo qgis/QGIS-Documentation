@@ -3,6 +3,9 @@
 The Label Item
 ===============
 
+.. contents::
+   :local:
+
 To add a label, click the |mActionLabel| :sup:`Add label` icon, place the element
 with the left mouse button on the Print Composer canvas and position and customize
 its appearance in the label :guilabel:`Item Properties` tab.

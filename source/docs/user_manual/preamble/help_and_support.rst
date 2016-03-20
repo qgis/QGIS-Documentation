@@ -6,6 +6,9 @@
 Help and Support
 ****************
 
+.. contents::
+   :local:
+
 Mailing lists 
 =============
 

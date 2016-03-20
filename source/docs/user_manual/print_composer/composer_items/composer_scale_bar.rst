@@ -6,6 +6,9 @@
 The Scale Bar Item
 ==================
 
+.. contents::
+   :local:
+
 To add a scale bar, click the |mActionScaleBar| :sup:`Add new scalebar` icon, place
 the element with the left mouse button on the Print Composer canvas and position
 and customize the appearance in the scale bar :guilabel:`Item Properties` tab.

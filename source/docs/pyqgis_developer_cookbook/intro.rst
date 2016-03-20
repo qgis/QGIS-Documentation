@@ -4,6 +4,10 @@
 Introduction
 ************
 
+.. contents::
+   :local:
+
+
 This document is intended to work both as a tutorial and a reference guide.
 While it does not list all possible use cases, it should give a good overview
 of the principal functionality.

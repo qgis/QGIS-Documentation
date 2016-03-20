@@ -6,6 +6,9 @@
 Conventions
 ***********
 
+.. contents::
+   :local:
+
 This section describes the uniform styles that will be used throughout
 this manual.
 

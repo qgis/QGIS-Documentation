@@ -2,6 +2,9 @@
 Documentation Guidelines
 ************************
 
+.. contents::
+   :local:
+
 Introduction
 ============
 

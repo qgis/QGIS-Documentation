@@ -9,6 +9,9 @@
 QGIS Plugins
 *************
 
+.. contents::
+   :local:
+
 QGIS has been designed with a plugin architecture. This allows many new
 features and functions to be easily added to the application. Many of the features
 in QGIS are actually implemented as plugins.

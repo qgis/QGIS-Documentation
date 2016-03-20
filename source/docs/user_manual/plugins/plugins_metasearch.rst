@@ -5,6 +5,9 @@
 MetaSearch Catalogue Client
 ===========================
 
+.. contents::
+   :local:
+
 .. image:: /static/user_manual/plugins/metasearch-splash.png
   :scale: 100%
   :alt: MetaSearch

@@ -1,12 +1,13 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not up-to-date with release
-
 .. _general_tools:
 
 *************
 General Tools
 *************
+
+.. contents::
+   :local:
 
 .. _`shortcuts`:
 

@@ -6,6 +6,9 @@
 Working with Projections
 ************************
 
+.. contents::
+   :local:
+
 .. index:: Projections, CRS, Coordinate_Reference_System
 
 |qg| allows users to define a global and project-wide CRS (coordinate

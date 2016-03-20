@@ -2,6 +2,9 @@
 Communicating with the user
 ***************************
 
+.. contents::
+   :local:
+
 This section shows some methods and elements that should be used to communicate
 with the user, in order to keep consistency in the User Interface.
 

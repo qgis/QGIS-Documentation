@@ -6,6 +6,9 @@
 Expressions, Filtering and Calculating Values
 *********************************************
 
+.. contents::
+   :local:
+
 QGIS has some support for parsing of SQL-like expressions. Only a small subset
 of SQL syntax is supported. The expressions can be evaluated either as boolean
 predicates (returning True or False) or as functions (returning a scalar value).

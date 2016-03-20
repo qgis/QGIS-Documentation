@@ -3,7 +3,10 @@
 .. _`processing.modeler`:
 
 The graphical modeler
-==============================
+=====================
+
+.. contents::
+   :local:
 
 The *graphical modeler* allows you to create complex models using a simple and
 easy-to-use interface. When working with a GIS, most analysis operations are not

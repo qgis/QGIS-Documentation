@@ -2,6 +2,9 @@
 Code Snippets
 *************
 
+.. contents::
+   :local:
+
 This section features code snippets to facilitate plugin development.
 
 .. index:: plugins; call method with shortcut

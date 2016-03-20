@@ -6,6 +6,9 @@
 |qg| Browser
 ************
 
+.. contents::
+   :local:
+
 The |qg| Browser is a panel in |qg| that lets you easily navigate in your
 filesystem and manage geodata. You can have access to common vector files (e.g.,
 ESRI shapefiles or MapInfo files), databases (e.g., PostGIS, Oracle, SpatiaLite

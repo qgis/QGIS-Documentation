@@ -7,6 +7,9 @@
 Atlas generation
 ================
 
+.. contents::
+   :local:
+
 The Print Composer includes generation functions that allow you to create map 
 books in an automated way. The concept is to use a coverage layer, which contains 
 geometries and fields. For each geometry in the coverage layer, a new output will 

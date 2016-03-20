@@ -2,6 +2,9 @@
 Releasing your plugin
 *********************
 
+.. contents::
+   :local:
+
 Once your plugin is ready and you think the plugin could be helpful for
 some people, do not hesitate to upload it to :ref:`official_pyqgis_repository`.
 On that page you can find also packaging guidelines about how to prepare the

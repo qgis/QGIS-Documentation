@@ -3,6 +3,9 @@
 The batch processing interface
 =======================================
 
+.. contents::
+   :local:
+
 Introduction
 ------------
 

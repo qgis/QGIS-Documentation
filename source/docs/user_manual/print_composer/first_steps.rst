@@ -3,6 +3,9 @@
 First Steps
 ===========
 
+.. contents::
+   :local:
+
 The Print Composer provides growing layout and printing capabilities. It allows
 you to add elements such as the |qg| map canvas, text labels, images, legends, scale bars, basic
 shapes, arrows, attribute tables and HTML frames. You can size, group, align, position and rotate each

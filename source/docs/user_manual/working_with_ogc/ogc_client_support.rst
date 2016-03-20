@@ -6,6 +6,10 @@
 |qg| as OGC Data Client
 ***********************
 
+.. contents::
+   :local:
+
+
 .. index:: Open_Geospatial_Consortium, OGC
 
 The Open Geospatial Consortium (OGC) is an international organization with membership of more
