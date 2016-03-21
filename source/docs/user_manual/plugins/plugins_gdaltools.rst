@@ -47,6 +47,7 @@ List of GDAL tools
 
 Projections
 ...........
+
 +--------------------------------------------------------+------------------------------------------------------+
 | |gdal_warp| :guilabel:`Warp (Reproject)`               | This utility is an image mosaicing, reprojection and |
 |                                                        | warping utility. The program can reproject to any    |
@@ -72,8 +73,10 @@ Projections
 
 \
 \
+
 Conversion
 ..........
+
 +--------------------------------------------------------+-------------------------------------------------------+
 | |gdal_rasterize| :guilabel:`Rasterize`                 | This program burns vector geometries (points, lines   |
 |                                                        | and polygons) into the raster band(s) of a raster     |
@@ -115,8 +118,10 @@ Conversion
 
 \
 \
+
 Extraction
 ..........
+
 +--------------------------------------------------------+-------------------------------------------------------+
 ||gdal_contour| :guilabel:`Contour`                      | This program generates a vector contour file from the |
 |                                                        | input raster elevation model (DEM).                   |
@@ -131,8 +136,10 @@ Extraction
 
 \
 \
+
 Analysis
 ........
+
 +--------------------------------------------------------+-------------------------------------------------------+
 | |gdal_sieve| :guilabel:`Sieve`                         | This utility removes raster polygons smaller than a   |
 |                                                        | provided threshold size (in pixels) and replaces      |
@@ -181,8 +188,10 @@ Analysis
 
 \
 \
+
 Miscellaneous
 .............
+
 +--------------------------------------------------------+-------------------------------------------------------+
 | |gdal_vrt| :guilabel:`Build Virtual Raster (Catalog)`  | This program builds a VRT (Virtual Dataset) that is a |
 |                                                        | mosaic of the list of input GDAL datasets. See also   |
