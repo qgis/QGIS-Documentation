@@ -38,7 +38,7 @@ This tab contains the following widgets (see  figure_composer_atlas_1_):
   the   (vector) layer containing the features on which to iterate over.
 * An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked,
   will hide   the coverage layer (but not the other ones) during the generation.
-* An optional :guilabel:`Page name` combo box to give a more explicite name to
+* An optional :guilabel:`Page name` combo box to give a more explicit name to
   each feature page(s) when previewing atlas. You can select an attribute of 
   the coverage layer or set an expression. If this option is empty, QGIS will 
   use an internal ID, according to the filter and/or the sort order applied to 
@@ -124,14 +124,14 @@ and select `Landscape` or `Portrait`. We want to set the orientation dynamically
 using an expression depending on the region geometry. 
 Press the |mIconDataDefine| button of field :guilabel:`Orientation`, select 
 :menuselection:`Edit...` so the :guilabel:`Expression string builder` dialog opens. 
-Give following expression:
+Enter the following expression:
 
 .. code::
 
    CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry) 
    THEN 'Landscape' ELSE 'Portrait' END
 
-Now the paper orients itself automatically for each Region you need to reposition 
+Now the paper orients itself automatically. For each Region you need to reposition 
 the location of the composer item as well. For the map item you can 
 use the |mIconDataDefine| button of field :guilabel:`Width` to set it 
 dynamically using following expression: 
@@ -141,7 +141,7 @@ dynamically using following expression:
    (CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry) 
    THEN 297 ELSE 210 END) - 20
 
-Use the |mIconDataDefine| button of field :guilabel:`Heigth` to provide following
+Use the |mIconDataDefine| button of field :guilabel:`Height` to provide following
 expression: 
 
 .. code::
@@ -149,11 +149,11 @@ expression:
    (CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry) 
    THEN 210 ELSE 297 END) - 20
 
-When you want to give a title above map in the center of the page, 
+When you want to give a title above the map in the center of the page, 
 insert a label item above the map. First use the item properties of the label 
 item to set the horizontal alignment to |radiobuttonon| :guilabel:`Center`.
 Next activate from :guilabel:`Reference point` the upper middle checkbox.  
-You can provide following expression for field :guilabel:`X` :
+You can provide the following expression for field :guilabel:`X` :
 
 .. code::
 
@@ -161,13 +161,13 @@ You can provide following expression for field :guilabel:`X` :
    THEN 297 ELSE 210 END) / 2
 
 For all other composer items you can set the position in a similar way so they 
-are correctly positioned when page is automatically rotated in portrait or 
+are correctly positioned when the page is automatically rotated in portrait or 
 landscape.
 
-Information provided is derived from the excellent blog (in English and Portugese) 
+Information provided is derived from the excellent blog (in English and Portuguese) 
 on the Data Defined Override options Multiple_format_map_series_using_QGIS_2.6_ .
 
-This is just one example of how you can use Data Defined Override option.
+This is just one example of how you can use the Data Defined Override option.
 
 .. _atlas_preview:
 
@@ -221,7 +221,7 @@ an image or SVG file.
 
 .. tip:: **Print a specific atlas feature**
   
-  If you want to print or export composition of only one feature of the atlas,
+  If you want to print or export the composition of only one feature of the atlas,
   simply start the preview, select the desired feature in the drop-down list
   and click on :menuselection:`Composer --> Print` (or :menuselection:`export...`
   to any supported file format).
