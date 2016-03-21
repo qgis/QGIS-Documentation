@@ -8,11 +8,6 @@ MetaSearch Catalogue Client
 .. contents::
    :local:
 
-.. image:: /static/user_manual/plugins/metasearch-splash.png
-  :scale: 100%
-  :alt: MetaSearch
-  :align: right
-  :target: https://hub.qgis.org/wiki/quantum-gis/MetaSearch
 
 Introduction
 ------------
@@ -23,10 +18,15 @@ supporting the OGC Catalogue Service for the Web (CSW) standard.
 MetaSearch provides an easy and intuitive approach and user-friendly interface
 to searching metadata catalogues within QGIS.
 
+.. image:: /static/user_manual/plugins/metasearch-splash.png
+  :scale: 100%
+  :alt: MetaSearch
+  :align: right
+
 Installation
 ------------
 
-MetaSearch is included by default with QGIS 2.0 and higher.  All dependencies are
+MetaSearch is included by default with QGIS 2.0 and higher. All dependencies are
 included within MetaSearch.
 
 Install MetaSearch from the QGIS plugin manager, or manually from
@@ -47,7 +47,7 @@ Startup
 ^^^^^^^
 
 To start MetaSearch, click the MetaSearch icon or select Web / MetaSearch / 
-MetaSearch via the QGIS main menu.  The MetaSearch dialog will appear.
+MetaSearch via the QGIS main menu. The MetaSearch dialog will appear.
 The main GUI consists of two tabs: 'Services' and 'Search'.
 
 Managing Catalogue Services
@@ -65,8 +65,8 @@ by pressing 'Add default services' button.
 To all listed Catalogue Service entries, click the dropdown select box.
 
 To add a Catalogue Service entry, click the 'New' button, and enter a Name for
-the service, as well as the URL/endpoint.  Note that only the base URL is
-required (not a full GetCapabilities URL).  Clicking ok will add the service 
+the service, as well as the URL/endpoint. Note that only the base URL is
+required (not a full GetCapabilities URL). Clicking ok will add the service 
 to the list of entries.
 
 To edit an existing Catalogue Service entry, select the entry you would like
@@ -74,11 +74,11 @@ to edit and click the 'Edit' button, and modify the Name or URL values, then
 click ok.
 
 To delete a Catalogue Service entry, select the entry you would like to
-delete and click the 'Delete' button.  You will be asked to confirm deleting
+delete and click the 'Delete' button. You will be asked to confirm deleting
 the entry.
 
-MetaSearch allows for loading and saving connections to an XML file.  This is
-useful when you need to share settings between applications.  Below is an
+MetaSearch allows for loading and saving connections to an XML file. This is
+useful when you need to share settings between applications. Below is an
 example of the XML file format.
 
 .. code-block:: xml
@@ -96,15 +96,15 @@ example of the XML file format.
   </qgsCSWConnections>
 
 
-To load a list of entries, click the 'Load' button.  A new window will appear;
+To load a list of entries, click the 'Load' button. A new window will appear;
 click the 'Browse' button and navigate to the XML file of entries you wish to
-load and click 'Open'.  The list of entries will be displayed.  Select the
+load and click 'Open'. The list of entries will be displayed. Select the
 entries you wish to add from the list and click 'Load'.
 
 The 'Service info' button displays information about the selected Catalogue
 Service such as service identification, service provider and contact
-information.  If you would like to view the raw XML response, click the
-'GetCapabilities response' button.  A separate window will open displaying
+information. If you would like to view the raw XML response, click the
+'GetCapabilities response' button. A separate window will open displaying
 Capabilities XML.
 
 Searching Catalogue Services
@@ -122,16 +122,16 @@ The following search parameters are available:
 
 - **Keywords**: free text search keywords
 - **From**: the Catalogue Service to perform the query against
-- **Bounding box**: the spatial area of interest to filter on.  The default
-  bounding box is the map view / canvas.  Click 'Set global' to do a global
+- **Bounding box**: the spatial area of interest to filter on. The default
+  bounding box is the map view / canvas. Click 'Set global' to do a global
   search, or enter custom values as desired
-- **Records**: the number of records to return when searching.  Default is
+- **Records**: the number of records to return when searching. Default is
   10 records
 
 Clicking the 'Search' button will search the selected Metadata Catalogue.
 Search results are displayed in a list and are sortable by clicking on the
-column title.  You can navigate through search results with the directional
-buttons below the search results.  Clicking the 'View search results as XML'
+column title. You can navigate through search results with the directional
+buttons below the search results. Clicking the 'View search results as XML'
 button opens a window with the service response in raw XML format.
 
 Clicking a result will show the record's abstract in the 'Abstract' window and
@@ -157,9 +157,14 @@ Settings
 
 You can fine tune MetaSearch with the following settings:
 
-- **Connection naming**: when adding an OWS connection (WMS/WMTS|WFS|WCS), the connection is stored with the various QGIS layer provider. Use this setting to set whether to use the name provided from MetaSearch, whether to overwrite or to use a temporary name
-- **Results paging**: when searching metadata catalogues, the number of results to show per page
-- **Timeout**: when searching metadata catalogues, the number of seconds for blocking connection attempt.  Default value is 10
+- **Connection naming**: when adding an OWS connection (WMS/WMTS|WFS|WCS),
+  the connection is stored with the various QGIS layer provider. Use this
+  setting to set whether to use the name provided from MetaSearch,
+  whether to overwrite or to use a temporary name
+- **Results paging**: when searching metadata catalogues, the number of results
+  to show per page
+- **Timeout**: when searching metadata catalogues, the number of seconds for blocking
+  connection attempt. Default value is 10
 
 .. _`CSW (Catalogue Service for the Web)`: http://www.opengeospatial.org/standards/cat
 .. _`OGC (Open Geospatial Consortium)`: http://www.opengeospatial.org
