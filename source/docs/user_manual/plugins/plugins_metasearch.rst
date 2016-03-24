@@ -40,15 +40,16 @@ CSW (Catalogue Service for the Web)
 
 `CSW (Catalogue Service for the Web)`_ is an
 `OGC (Open Geospatial Consortium)`_ specification, that defines common
-interfaces to discover, browse, and query metadata about data, services,
+interfaces to discover, browse and query metadata about data, services,
 and other potential resources.
 
 Startup
 ^^^^^^^
 
-To start MetaSearch, click the MetaSearch icon or select Web / MetaSearch / 
-MetaSearch via the QGIS main menu. The MetaSearch dialog will appear.
-The main GUI consists of two tabs: 'Services' and 'Search'.
+To start MetaSearch, click |metasearch| icon or select :menuselection:`Web -->
+MetaSearch --> MetaSearch` via the QGIS main menu. The MetaSearch dialog will appear.
+The main GUI consists of three tabs: :guilabel:`Services`, :guilabel:`Search` and
+:guilabel:`Settings`.
 
 Managing Catalogue Services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -58,7 +59,7 @@ Managing Catalogue Services
   :alt: Managing Catalogue Services
   :align: right
 
-The 'Services' tab allows the user to manage all available catalogue services.
+The :guilabel:`Services` tab allows the user to manage all available catalogue services.
 MetaSearch provides a default list of Catalogue Services, which can be added
 by pressing 'Add default services' button.
 
@@ -115,7 +116,7 @@ Searching Catalogue Services
   :alt: Searching Catalogue Services
   :align: right
 
-The 'Search' tab allows the user to query Catalogue Services for data and
+The :guilabel:`Search` tab allows the user to query Catalogue Services for data and
 services, set various search parameters and view results.
 
 The following search parameters are available:
@@ -125,8 +126,6 @@ The following search parameters are available:
 - **Bounding box**: the spatial area of interest to filter on. The default
   bounding box is the map view / canvas. Click 'Set global' to do a global
   search, or enter custom values as desired
-- **Records**: the number of records to return when searching. Default is
-  10 records
 
 Clicking the 'Search' button will search the selected Metadata Catalogue.
 Search results are displayed in a list and are sortable by clicking on the
@@ -155,14 +154,14 @@ provides the following options:
 Settings
 ^^^^^^^^
 
-You can fine tune MetaSearch with the following settings:
+You can fine tune MetaSearch with the following :guilabel:`settings`:
 
 - **Connection naming**: when adding an OWS connection (WMS/WMTS|WFS|WCS),
   the connection is stored with the various QGIS layer provider. Use this
   setting to set whether to use the name provided from MetaSearch,
   whether to overwrite or to use a temporary name
 - **Results paging**: when searching metadata catalogues, the number of results
-  to show per page
+  to show per page. Default value is 10
 - **Timeout**: when searching metadata catalogues, the number of seconds for blocking
   connection attempt. Default value is 10
 
