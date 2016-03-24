@@ -13,7 +13,6 @@ is explained. Later the translation is explained from an actual English
 rst document that is translated to Dutch.
 Finally a summary of `Rules of translation <translation_summary>`_ is given.
 
-
 Although these guidelines focus on QGIS documentation, the methods and
 the rules described below are also applicable to QGIS applications and
 website translation.
@@ -35,7 +34,7 @@ language with a translation tool editor.
 When you want to contribute, first get a ``.po`` file and add
 translations for the sentences in the ``.po`` file.
 When you are finished the ``.po`` file is placed back in the right place and
-during the next build the buildscript now creates ``.mo`` files next to
+during the next build the build script now creates ``.mo`` files next to
 the ``.po`` files.
 These ``.mo`` files are actually used by the script to create translated output.
 
@@ -185,7 +184,7 @@ In the menu you see the following buttons which are convenient to use.
 
 * |linguist_done_next| The Translation Done Next button, is the most important
   button. If the item needs translation, you enter a translation in the text
-  field, then hit this button. If the item does not translation just leave the
+  field, then hit this button. If the item does not need translation just leave the
   text field for translation empty and also hit this button which indicates the
   item is done and you continue with the next item.
 
@@ -231,8 +230,8 @@ This sentence contains two rst statements:
 #. ``:sup:`Heatmap```,  the ``:sup:`` statement is a superposition statement
    and prints the following text a bit higher. This is used to show the popup
    texts that appear when you hover above the toolbar item and this may be
-   different when it is actually translated in the QGIS application. In this
-   case it is not!
+   different when it is actually translated in the QGIS application. In the
+   Dutch case it is not!
 
 All other plain text in this sentence can be translated!
 
