@@ -35,7 +35,9 @@ be available with the external plugins themselves. In general, external plugins
 documentation is not included in this manual.
 
 Installed external python plugins are placed under :file:`~/.qgis2/python/plugins`
-folder. Home directory (denoted by above ``~``) on Windows is usually something like :file:`C:\Documents and Settings\(user)` (on Windows XP or earlier) or :file:`C:\Users\(user)`.
+folder. Home directory (denoted by above ``~``) on Windows is usually something
+like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
+or :file:`C:\\Users\\(user)`.
 
 Paths to Custom C++ plugins libraries can also be added under 
 :menuselection:`Settings --> Options --> System`.
@@ -44,8 +46,8 @@ You can manage your plugins in the plugin dialog which can be opened with
 :guilabel:`Plugins > Manage and install plugins ...`.
 
 When a plugin needs to be updated, and if plugins settings have been set up 
-accordingly, QGIS main interface could display a blue link in the status bar 
-to tell you that there are some updates for plugins waiting to be applied.
+accordingly, QGIS main interface will display a blue link in the status bar 
+to inform you that there are updates for your plugins waiting to be applied.
 
 .. :index::
     single:plugins;managing
@@ -56,13 +58,13 @@ The Plugins Dialog
 ===================
 
 The menus in the Plugins dialog allow the user to install, uninstall and upgrade plugins in
-different ways. Each plugin have some metadatas displayed in the right panel:
+different ways. Each plugin has some metadata displayed in the right panel:
 
-* information if the plugin is experimental
+* information on whether the plugin is experimental
 * description
 * rating vote(s) (you can vote for your preferred plugin!)
 * tags
-* some useful links as the home page, tracker and code repository
+* some useful links to the home page, tracker and code repository
 * author(s)
 * version available
 
@@ -70,10 +72,11 @@ You can use the filter to find a specific plugin.
 
 |mActionShowPluginManager| :guilabel:`All`
 
-Here, all the available plugins are listed, including both core and external plugins. Use
-**[Upgrade all]** to look for new versions of the plugins. Furthermore, you can use **[Install plugin]**,
-if a plugin is listed but not installed, and **[Uninstall plugin]** as well as **[Reinstall plugin]**, 
-if a plugin is installed. If a plugin is installed, it can be de/activated using the checkbox.
+Here, all the available plugins are listed, including both core and external plugins. 
+Use **[Upgrade all]** to look for new versions of the plugins. Furthermore, 
+you can use **[Install plugin]** if a plugin is listed but not installed,
+**[Uninstall plugin]** as well as **[Reinstall plugin]** if a plugin is installed.
+An installed plugin can be temporarily de/activated using the checkbox.
 
 .. _figure_plugins_1:
 
@@ -84,13 +87,14 @@ if a plugin is installed. If a plugin is installed, it can be de/activated using
 .. figure:: /static/user_manual/plugins/plugins_all.png
    :align: center
 
-   The |mActionShowPluginManager| :guilabel:`All` menu |nix|
+   The |mActionShowPluginManager| :guilabel:`All` menu
 
 
 |plugin_installed| :guilabel:`Installed`
 
-In this menu, you can find only the installed plugins. The external plugins can be uninstalled and reinstalled
-using the **[Uninstall plugin]** and **[Reinstall plugin]** buttons. You can **[Upgrade all]** here as well.
+In this menu, you can find only the installed plugins. The external plugins
+can be uninstalled and reinstalled using the **[Uninstall plugin]** and
+**[Reinstall plugin]** buttons. You can **[Upgrade all]** here as well.
 
 .. _figure_plugins_2:
 
@@ -101,13 +105,13 @@ using the **[Uninstall plugin]** and **[Reinstall plugin]** buttons. You can **[
 .. figure:: /static/user_manual/plugins/plugins_installed.png
    :align: center
 
-   The |plugin_installed| :guilabel:`Installed` menu |nix|
+   The |plugin_installed| :guilabel:`Installed` menu
 
 
 |plugin| :guilabel:`Not installed`
 
-This menu lists all plugins available that are not installed. You can use the **[Install plugin]** button
-to implement a plugin into |qg|.
+This menu lists all plugins available that are not installed.
+You can use the **[Install plugin]** button to implement a plugin into QGIS.
 
 .. _figure_plugins_3:
 
@@ -118,7 +122,7 @@ to implement a plugin into |qg|.
 .. figure:: /static/user_manual/plugins/plugins_not_installed.png
    :align: center
 
-   The |plugin| :guilabel:`Not installed` menu |nix|
+   The |plugin| :guilabel:`Not installed` menu
 
 
 |plugin_upgrade| :guilabel:`Upgradeable`
@@ -137,7 +141,7 @@ to look for more recent plugin versions. This can be done with the **[Upgrade pl
 .. figure:: /static/user_manual/plugins/plugins_upgradeable.png
    :align: center
 
-   The |plugin_upgrade| :guilabel:`Upgradeable` menu |nix|
+   The |plugin_upgrade| :guilabel:`Upgradeable` menu
 
 .. _setting_plugins:
 
@@ -146,15 +150,16 @@ to look for more recent plugin versions. This can be done with the **[Upgrade pl
 In this menu, you can use the following options:
 
 * |checkbox| :guilabel:`Check for updates on startup`. Whenever a new plugin or
-  a plugin update is available, |qg| will inform you 'every time QGIS starts', 'once a day',
+  a plugin update is available, QGIS will inform you 'every time QGIS starts', 'once a day',
   'every 3 days', 'every week', 'every 2 weeks' or 'every month'.
-* |checkbox| :guilabel:`Show also experimental plugins`. |qg| will show you 
+* |checkbox| :guilabel:`Show also experimental plugins`. QGIS will show you 
   plugins in early stages of development, which are generally unsuitable for production
   use.
 * |checkbox| :guilabel:`Show also deprecated plugins`. These plugins are deprecated
   and generally unsuitable for production use.
 
-To add external author repositories, click **[Add...]** in the :guilabel:`Plugin repositories` section.
+To add external author repositories, click **[Add...]** in the :guilabel:`Plugin
+repositories` section.
 If you do not want one or more of the added repositories, they can be disabled
 via the **[Edit...]** button, or completely removed with the **[Delete]** button.
 
@@ -167,8 +172,9 @@ via the **[Edit...]** button, or completely removed with the **[Delete]** button
 .. figure:: /static/user_manual/plugins/plugins_settings.png
    :align: center
 
-   The |mActionTransformSettings| :guilabel:`Settings` menu |nix|
+   The |mActionTransformSettings| :guilabel:`Settings` menu
 
-The :guilabel:`Search` function is available in nearly every menu (except |mActionTransformSettings| :guilabel:`Settings`).
+The :guilabel:`Search` function is available in nearly every menu
+(except |mActionTransformSettings| :guilabel:`Settings`).
 Here, you can look for specific plugins.
 
