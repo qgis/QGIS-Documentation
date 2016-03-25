@@ -26,7 +26,7 @@ The GDAL Library
 
 The GDAL library consists of a set of command line programs, each with a large
 list of options. Users comfortable with running commands from a terminal may
-prefer the command line, with access to the full set of options. The GDALTools
+prefer the command line, with access to the full set of options. The GDAL Tools
 plugin offers an easy interface to the tools, exposing only the most popular
 options.
 
@@ -72,7 +72,6 @@ Projections
 +--------------------------------------------------------+------------------------------------------------------+
 
 \
-\
 
 Conversion
 ..........
@@ -117,7 +116,6 @@ Conversion
 +--------------------------------------------------------+-------------------------------------------------------+
 
 \
-\
 
 Extraction
 ..........
@@ -134,7 +132,6 @@ Extraction
 |                                                        | http://www.gdal.org/gdal_translate.html.              |
 +--------------------------------------------------------+-------------------------------------------------------+
 
-\
 \
 
 Analysis
@@ -186,7 +183,6 @@ Analysis
 |                                                        | http://www.gdal.org/gdaldem.html.                     |
 +--------------------------------------------------------+-------------------------------------------------------+
 
-\
 \
 
 Miscellaneous
