@@ -3,7 +3,7 @@
 .. _`label_qgismainwindow`:
 
 ********
-|qg| GUI
+QGIS GUI
 ********
 
 .. contents::
@@ -12,9 +12,8 @@
 .. index::
    single:main window
 
-When |qg| starts, you are presented with the GUI as shown in the figure (the numbers 1
-through 5 in yellow circles are
-discussed below).
+When QGIS starts, you are presented with the GUI as shown in the figure (the
+numbers 1 through 5 in yellow circles are discussed below).
 
 .. _fig_startup:
 
@@ -25,13 +24,13 @@ discussed below).
 .. figure:: /static/user_manual/introduction/startup.png
    :align: center
 
-   |qg| GUI with Alaska sample data
+   QGIS GUI with Alaska sample data
 
 .. note::
-   Your window decorations (title bar, etc.) may appear different depending on
-   your operating system and window manager.
+   Your window decorations (title bar, etc.) may appear different depending
+   on your operating system and window manager.
 
-The |qg| GUI is divided into five areas:
+The QGIS GUI is divided into five areas:
 
 #. Menu Bar
 #. Tool Bar
@@ -39,7 +38,7 @@ The |qg| GUI is divided into five areas:
 #. Map View
 #. Status Bar
 
-These five components of the |qg| interface are described in more detail in
+These five components of the QGIS interface are described in more detail in
 the following sections. Two more sections present keyboard shortcuts and
 context help.
 
@@ -51,13 +50,13 @@ Menu Bar
 .. index::
    single:menus
 
-The menu bar provides access to various |qg| features using a standard
+The menu bar provides access to various QGIS features using a standard
 hierarchical menu. The top-level menus and a summary of some of the menu
 options are listed below, together with the associated icons as
-they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in this 
-section are the defaults; however, keyboard shortcuts
-can also be configured manually using the :guilabel:`Configure shortcuts` dialog, 
-opened from :menuselection:`Settings --> Configure Shortcuts...`.
+they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in
+this section are the defaults; however, keyboard shortcuts can also be configured 
+manually using the :guilabel:`Configure shortcuts` dialog, opened from 
+:menuselection:`Settings --> Configure Shortcuts...`.
 
 Although most menu options have a corresponding tool and vice-versa, the menus
 are not organized exactly like the toolbars. The toolbar containing the tool is
@@ -222,7 +221,7 @@ Menu Option                                                             Shortcut
 :guilabel:`Python Console`                                              :kbd:`Ctrl+Alt+P`     \                                    \
 ======================================================================  ====================  ===================================  ===============================
 
-When starting |qg| for the first time not all core plugins are loaded.
+When starting QGIS for the first time not all core plugins are loaded.
 
 Vector
 ......
@@ -238,7 +237,7 @@ Menu Option                                                     Shortcut        
 |management| :menuselection:`Data Management Tools -->`         \                     see :ref:`ftools`                           \
 ==============================================================  ====================  ==========================================  ===============================
 
-When starting |qg| for the first time not all core plugins are loaded.
+When starting QGIS for the first time not all core plugins are loaded.
 
 Raster
 ......
@@ -249,7 +248,7 @@ Menu Option                                                     Shortcut        
 :guilabel:`Raster calculator ...`                               \                     see :ref:`sec_raster_calc`                  \
 ==============================================================  ====================  ==========================================  ===============================
 
-When starting |qg| for the first time not all core plugins are loaded.
+When starting QGIS for the first time not all core plugins are loaded.
 
 Database
 ........
@@ -260,7 +259,7 @@ Menu Option							Shortcut	      Reference                                   Too
 :menuselection:`Database -->`                                   \                     see :ref:`dbmanager`                        :guilabel:`Database`
 ==============================================================  ====================  ==========================================  ===============================
 
-When starting |qg| for the first time not all core plugins are loaded.
+When starting QGIS for the first time not all core plugins are loaded.
 
 
 Web
@@ -272,7 +271,7 @@ Menu Option							Shortcut	      Reference                                   Too
 :guilabel:`Metasearch`                                          \                     see :ref:`metasearch`                       :guilabel:`Web`
 ==============================================================  ====================  ==========================================  ==============================
 
-When starting |qg| for the first time not all core plugins are loaded.
+When starting QGIS for the first time not all core plugins are loaded.
 
 
 Processing
@@ -289,7 +288,7 @@ Menu Option                                                     Shortcut        
 |proc_commander| :guilabel:`Commander`                          :kbd:`Ctrl+Alt+M`     see :ref:`processing.commander`             \
 ==============================================================  ====================  ==========================================  ===============================
 
-When starting |qg| for the first time not all core plugins are loaded.
+When starting QGIS for the first time not all core plugins are loaded.
 
 Help
 ....
@@ -308,8 +307,8 @@ Menu Option                                                     Shortcut        
 |mActionHelpSponsors| :guilabel:`QGIS Sponsors`                 \                     \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
-Please note that for Linux |nix|, the menu bar items listed above are the
-default ones in the KDE window manager. In GNOME, the :menuselection:`Settings` menu
+Please note that for Linux |nix|, the menu bar items listed above are the default
+ones in the KDE window manager. In GNOME, the :menuselection:`Settings` menu
 has different content and its items have to be found here:
 
 +-----------------------------------------------------------------------+------------------------+
@@ -342,7 +341,7 @@ additional tools for interacting with the map. Each toolbar item has pop-up help
 available. Hold your mouse over the item and a short description of the tool's
 purpose will be displayed.
 
-Every menu bar can be moved around according to your needs. Additionally, 
+Every menu bar can be moved around according to your needs. Additionally,
 menu bars can be switched off using the right mouse button context menu, or by
 holding the mouse over the toolbars (read also :ref:`sec_panels_and_toolbars`).
 
@@ -354,10 +353,9 @@ holding the mouse over the toolbars (read also :ref:`sec_panels_and_toolbars`).
 
         If you have accidentally hidden all your toolbars, you can get them
         back by choosing menu option :menuselection:`Settings --> Toolbars -->`.
-        If a toolbar disappears under Windows, which seems to be a problem in
-        |qg| from time to time, you have to remove key
+        If a toolbar disappears under Windows, you have to remove key
         ``\HKEY_CURRENT_USER\Software\QGIS\qgis\UI\state`` in the registry.
-        When you restart |qg|, the key is written again with the default state,
+        When you restart QGIS, the key is written again with the default state,
         and all toolbars are visible again.
 
 .. _`label_legend`:
@@ -369,18 +367,25 @@ Map Legend
    single:legend
 
 The map legend area lists all the layers in the project. The checkbox in each
-legend entry can be used to show or hide the layer. The Legend toolbar in the 
-map legend area allows you to:
+legend entry can be used to show or hide the layer. 
+The Legend toolbar in the map legend area allows you to:
 
-* |mActionAddGroup| **Add** new **group**,
-* |mActionShowPresets| **Manage Visibility** of layers and presets layers combination,
-* |mActionFilterMap| **Filter Legend by Map Content**: only the layers that are set visible and whose
-  features intersects the current map canvas have their style rendered in the map
-  legend. Otherwise, a generic NULL symbol is applied to the layer. This is a
-  convenient way to identify which layers cover your area of interest.
-* |mIconExpressionFilter| **Filter Legend by Expression**
-* |mActionExpandTree| **Expand All** or |mActionCollapseTree| **Collapse All** layers and groups in the map legend
-* and |mActionRemoveLayer| **Remove** the selected **Layer or Group**.
+* |mActionAddGroup| Add new group
+* |mActionShowPresets| :sup:`Manage Visibility`: control visibility of layers and
+  preset layers combination
+* |mActionFilterMap| :sup:`Filter Legend by Map Content`: only the layers that are set
+  visible and whose features intersect the current map canvas have their style
+  rendered in the map legend. Otherwise, a generic NULL symbol is applied to the
+  layer. Based on the layer symbology, this is a convenient way to identify which
+  kind of features from which layers cover your area of interest.
+* |mIconExpressionFilter| :sup:`Filter Legend by Expression`: helps you apply an
+  expression to remove from the selected layer tree styles that have no feature
+  satisfying the condition. This can be used for example to highlight features that are
+  within a given area/feature of another layer.
+  From the drop-down list, you can edit and clear the expression set.
+* |mActionExpandTree| :sup:`Expand All` or |mActionCollapseTree| :sup:`Collapse All`
+  layers and groups in the map legend
+* and |mActionRemoveLayer| :sup:`Remove Layer/Group` currently selected.
 
 .. _figure_layer_toolbar:
 
@@ -388,36 +393,40 @@ map legend area allows you to:
 
    **Figure Layer tools Bar:**
 
-   .. figure:: /static/user_manual/introduction/layer_toobar.png
+   .. figure:: /static/user_manual/introduction/layer_toolbar.png
       :align: center
 
-      Layer Tool Bar in Map Legend
-
-The button |mActionShowPresets| allows you to add **Presets** views in the legend. 
-It means that you can choose to display some layer with specific categorization and 
-add this view to the **Presets** list. To add a preset view just click on |mActionShowPresets|, 
-choose *Add Preset...* from the drop down menu and give a name to the preset. After 
-that you will see a list with all the presets that you can recall pressing on the |mActionShowPresets| button. 
-
-All the added presets are also present in the map composer in order to allow you 
-to create a map layout based on your specific views (see :ref:`composer_main_properties`).
-
+      Layer Toolbar in Map Legend 
 
 
 .. index::
    single:layer visibility
+   
+The button |mActionShowPresets| allows you to add **Presets** views in the legend.
+It means that you can choose to display some layer with specific categorization
+and add this view to the **Presets** list. To add a preset view just click on
+|mActionShowPresets|, choose *Add Preset...* from the drop down menu and give a
+name to the preset. After that you will see a list with all the presets that you 
+can recall pressing on the |mActionShowPresets| button.
+
+All the added presets are also present in the map composer in order to allow you
+to create a map layout based on your specific views (see :ref:`composer_main_properties`).
+
+.. note::
+   Tools to manage the map legend are also available to layout the map
+   and legend items of the print composer
 
 A layer can be selected and dragged up or down in the legend to change the
 Z-ordering. Z-ordering means that layers listed nearer the top of the legend
 are drawn over layers listed lower down in the legend.
 
-.. note:: This behavior can be overridden by the 'Layer order' panel.
+.. note:: This behavior can be overridden by the :ref:`Layer Order <layer_order>` panel.
 
 Layers in the legend window can be organized into groups. There are two ways to
 do this:
 
-#. Press the |mActionFolder| icon to add a new group. Type in a name for 
-   the group and press :kbd:`Enter`. Now click on an existing layer and 
+#. Press the |mActionFolder| icon to add a new group. Type in a name for
+   the group and press :kbd:`Enter`. Now click on an existing layer and
    drag it onto the group.
 #. Select some layers, right click in the legend window and choose
    :guilabel:`Group Selected`. The selected layers will automatically be placed
@@ -501,7 +510,7 @@ Additionally, according to layer position and selection
 ..   *  :menuselection:`Show file groups`
 
 Enabling the **Mutually Exclusive Group** option you can make a group have only
-one layer visible at the same time. 
+one layer visible at the same time.
 Whenever a layer within the group is set visible the others will be toggled not visible.
 
 It is possible to select more than one layer or group at the same time by
@@ -511,6 +520,8 @@ button. You can then move all selected layers to a new group at the same time.
 You may also delete more than one layer or group at once by selecting
 several layers with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
 This way, all selected layers or groups will be removed from the layers list.
+
+.. _layer_order:
 
 Working with the Legend independent layer order
 ...............................................
@@ -541,10 +552,10 @@ Map View
 .. index::`map view`
 
 Also called **Map canvas**, this is the "business end" of QGIS ---
-maps are displayed in this area. The map displayed in this window 
-will depend on the vector and raster layers you have chosen to load 
-(see sections that follow for more information on how to load layers). 
-The map view can be panned, shifting the focus of the map display to 
+maps are displayed in this area. The map displayed in this window
+will depend on the vector and raster layers you have chosen to load
+(see sections that follow for more information on how to load layers).
+The map view can be panned, shifting the focus of the map display to
 another region, and it can be zoomed in and out. Various other operations can be
 performed on the map as described in the toolbar description above. The map
 view and the legend are tightly bound to each other --- the maps in view reflect
@@ -621,7 +632,7 @@ To the right of the render functions, you find the |mIconProjectionDisabled|
 :sup:`Current CRS:` icon with the EPSG code of the current
 project CRS. Clicking on this lets you :guilabel:`Enable 'on the fly' CRS
 transformation` properties for the current project and apply another CRS to the
-map view. 
+map view.
 
 Finally, the |mMessageLog| :sup:`Messages` button opens the :guilabel:`Log
 Messages Panel` which informs you on underlying process (QGIS startup, plugins
@@ -634,12 +645,12 @@ loading, processing tools...)
    .. index::
       single:scale calculate
 
-   When you start QGIS, the default CRS is ``WGS 84 (epsg 4326)`` and 
+   When you start QGIS, the default CRS is ``WGS 84 (epsg 4326)`` and
    units are degrees. This means that QGIS will interpret any
    coordinate in your layer as specified in degrees. To get correct scale values,
    you can either manually change this setting, e.g. to meters, in the :guilabel:`General`
    tab under :menuselection:`Project --> Project Properties`, or you can use
    the |mIconProjectionDisabled| :sup:`Current CRS:` icon seen above. In the latter case,
    the units are set to what the project projection specifies (e.g., ``+units=us-ft``).
-   
+
    Note that CRS choice on startup can be set in :menuselection:`Settings --> Options --> CRS`.
