@@ -5,7 +5,7 @@
 Interpolation Plugin
 ====================
 
-The Interplation plugin can be used to generate a TIN or IDW interpolation of a
+The Interpolation plugin can be used to generate a TIN or IDW interpolation of a
 point vector layer. It is very simple to handle and provides an intuitive graphical
 user interface for creating interpolated raster layers (see Figure_interpolation_1_).
 The plugin requires the following parameters to be specified before running:
@@ -20,7 +20,7 @@ The plugin requires the following parameters to be specified before running:
   stored Z values.
 * **Interpolation Method**: Select the interpolation method. This can be either
   'Triangulated Irregular Network (TIN)' or 'Inverse Distance Weighted (IDW)'.
-  With the TIN method you can create a surface formed by triangles of nearest neighbour points.
+  With the TIN method you can create a surface formed by triangles of nearest neighbor points.
   To do this, circumcircles around selected sample points are created and their intersections are
   connected to a network of non overlapping and as compact as possible triangles.
   The resulting surfaces are not smooth.
