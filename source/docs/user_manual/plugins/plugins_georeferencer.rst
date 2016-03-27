@@ -238,7 +238,7 @@ menu opens the raster properties of the layer that you want to georeference.
 Configure the georeferencer
 ...........................
 
-* You can define whether you want to show GCP coordiniates and/or IDs.
+* You can define whether you want to show GCP coordinates and/or IDs.
 * As residual units, pixels and map units can be chosen.
 * For the PDF report, a left and right margin can be defined and you can also
   set the paper size for the PDF map.
