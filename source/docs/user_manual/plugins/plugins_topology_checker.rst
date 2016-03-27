@@ -40,7 +40,7 @@ On **line layers**, the following rules are available:
 * **Must not have duplicates**: Whenever a line feature is represented twice or more, it will occur in the 'Error' field.
 * **Must not have invalid geometries**: Checks whether the geometries are valid.
 * **Must not have multi-part geometries**: Sometimes, a geometry is actually a collection of simple (single-part) geometries. Such a geometry is called multi-part geometry. If it contains just one type of simple geometry, we call it multi-point, multi-linestring or multi-polygon. All multi-part lines are written into the 'Error' field.
-* **Must not have pseudos**: A line geometry's endpoint should be connected to the endpoints of two other geometries. If the endpoint is connected to only one other geometry's endpoint, the endpoint is called a psuedo node.
+* **Must not have pseudos**: A line geometry's endpoint should be connected to the endpoints of two other geometries. If the endpoint is connected to only one other geometry's endpoint, the endpoint is called a pseudo node.
 
 On **polygon layers**, the following rules are available:
 
