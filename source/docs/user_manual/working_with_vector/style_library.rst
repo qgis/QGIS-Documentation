@@ -10,6 +10,9 @@ The Symbol Library
 
 .. _vector_style_manager:
 
+.. index::
+    single:Style
+
 The Style Manager
 -----------------
 
