@@ -27,8 +27,13 @@ If you are looking for general rules on contributing to QGIS project or managing
 repositories, you may find help at
 `Get Involved in the QGIS Community <http://qgis.org/en/site/getinvolved/index.html>`_.
 
+
+Writing Documentation
+=====================
+
+
 Headlines
-=========
+---------
 
 To each webpage of the documentation corresponds a ``.rst`` file.
 
@@ -55,7 +60,7 @@ section, subsection and minisec.
 
 
 Inline tags
-===========
+-----------
 
 You can use some tags inside the text to emphasize some items.
 
@@ -108,7 +113,7 @@ You can use some tags inside the text to emphasize some items.
 .. _my_anchor:
 
 Label/reference
-===============
+---------------
 
 References are used to place anchors inside the text.
 It then helps you create and call hyperlinks between sections or page.
@@ -120,7 +125,7 @@ The example below creates the anchor of a section (e.g., Label/reference title)
    .. _my_anchor:
 
    Label/reference
-   ===============
+   ---------------
 
 To call the reference in the **same page**, use
 
@@ -164,11 +169,11 @@ see :ref:`Label and reference <my_anchor>` for more information.
 .. _`image`:
 
 Figure and image
-=================
+----------------
 
 
 Pictures
---------
+........
 
 To insert an image, use
 
@@ -183,7 +188,7 @@ which returns
     :width: 10 em
 
 Replacement
------------
+...........
 
 You can put an image inside text or add an alias to use everywhere. To use an image
 inside a paragraph, just create an alias somewhere.
@@ -213,7 +218,7 @@ my paragraph begins here with a nice logo |nice_logo|.
    a list of alias is built and available in :ref:`substitutions` chapter.
 
 Figure
-------
+......
 
 ::
 
@@ -273,7 +278,7 @@ to the caption is lost (it now refers to the place before **Figure Readme 1:**)
 
 
 Tables
-------
+......
 
 To create a simple table
 
@@ -324,7 +329,7 @@ You can reference to it like this my_drawn_table_1_.
 
 
 Index
-=====
+-----
 
 Several index tag exists in RST. To be able to translate the index, it is necessary to
 integrate it into the normal text. In this case use this syntax:
@@ -340,7 +345,7 @@ If the term does not have to be translated, please use this syntax:
    .. index:: WMS, WFS, WCS, CAT, SFS, GML, ...
 
 Footnotes
-=========
+---------
 
 Please note: Footnotes are not recognized by any translation software and
 it is also not converted to pdf format properly.
@@ -356,9 +361,11 @@ Which will point to:
 
  .. [1] Updates of core plugins
 
+Managing Screnshots
+===================
 
 Add new Screenshots
-===================
+-------------------
 
 Here are some hints to create new, nice looking screenshots.
 For the user guide they go into :file:`./resources/en/user_manual/`
@@ -384,10 +391,10 @@ For the user guide they go into :file:`./resources/en/user_manual/`
 
 * save them in png (no jpeg artifacts)
 * the screenshot should show the content according to what is described in the text
-* you can find some prepared |qg| -projects that were used before to create screenshots
+* you can find some prepared QGIS-projects that were used before to create screenshots
   in :file:`./qgis-projects`.
-  This makes it easier to reproduce screenshots for the next version of |qg|.
-  These projects use the |qg| `Sample Data <http://qgis.org/downloads/data/>`_
+  This makes it easier to reproduce screenshots for the next version of QGIS.
+  These projects use the QGIS `Sample Data <http://qgis.org/downloads/data/>`_
   (aka Alaska Dataset), which should be placed in the same folder
   as the QGIS-Documentation Repository.
 * Use the following command to remove the global menu function in Ubuntu
@@ -399,21 +406,21 @@ For the user guide they go into :file:`./resources/en/user_manual/`
 
 
 Translate Screenshots
-=====================
+---------------------
 
 Here are some hints to create screenshots for your translated user guide.
 They will go into :file:`./resources/<your language>/user_manual/`
 
 * same environment for all the screen caps (same OS, same decoration, same font size)
-* use the |qg| -projects included in QGIS-Documentation repository (in :file:`./qgis_projects` ).
+* use the QGIS -projects included in QGIS-Documentation repository (in :file:`./qgis_projects` ).
   These were used to produce the 'original' screenshots in the manual.
-  The |qg| `Sample Data <http://qgis.org/downloads/data/>`_ (aka Alaska Dataset)
+  The QGIS `Sample Data <http://qgis.org/downloads/data/>`_ (aka Alaska Dataset)
   should be placed in the same folder as the QGIS-Documentation Repository.
 * same size as the english 'original' screenshots, otherwise they will be stretched
-  and look ugly. If you need to have a different size due to longuer ui strings,
+  and look ugly. If you need to have a different size due to longer ui strings,
   don't forget to change the dimension in the rst code of your language.
 * reduce the window to the minimal space needed to show the feature
-  (taking the all screen for a small modal window > overkill)
+  (taking all the screen for a small modal window > overkill)
 * the less clutter, the better (no need to activate all the toolbars)
 * don't resize them in an image editor, the size will be set into the rst files
   (downscaling the dimensions without properly upping the resolution > ugly)
@@ -425,7 +432,7 @@ They will go into :file:`./resources/<your language>/user_manual/`
 Documenting Processing algorithms
 =================================
 
-If you want to write documentation for Processing algorithms consider this guidelines:
+If you want to write documentation for Processing algorithms consider these guidelines:
 
 * don't overwrite existing help files by files from other sources (e.g. QGIS
   source tree or Processing-Help repository), this files have different formats
@@ -446,3 +453,146 @@ If you want to write documentation for Processing algorithms consider this guide
 * don't add information vector geometry type in algorithm or parameter description
   without compelling reason as this information already available in parameter
   description
+
+
+Managing your repository
+========================
+
+Given that documentation files are hosted and managed through git process,
+below are given some hints to quickly and safely share your changes.
+
+QGIS-Documentation Clone
+------------------------
+
+First you need to clone the QGIS-Documentation into your github account. Go to
+the [QGIS-Documentation repository](https://github.com/qgis/QGIS-Documentation)
+page and click on the **Fork** button.
+
+Few secondes later, in your github account you can find your QGIS-Documentation
+clone (Here an example of account https://github.com/yjacolin/QGIS-Documentation).
+
+Local repository
+----------------
+
+Now you are ready to get a local clone of **your** QGIS-Documentation repository:
+
+::
+
+  cd ~/Documents/Development/QGIS/
+  git clone git@github.com:yjacolin/QGIS-Documentation.git
+
+The former command line example are for my local QGIS-Documentation repository.
+You should adapt both the path and the repository URL.
+
+Check it:
+
+::
+
+  git remote -v
+  origin  git@github.com:yjacolin/QGIS-Documentation.git (fetch)
+  origin  git@github.com:yjacolin/QGIS-Documentation.git (push)
+  git branch
+  * master
+
+
+* *origin* is the name of the remote repository of your QGIS-Documentation
+  repository.
+* *master* is the default main branch. You should never use it to contribute!
+  **Never!**
+
+You can start to work here but in the long terme process you will get a lot of
+issue when you will push your contribution (called Pull Request in github
+process) as the master branch of the QGIS-Documentation repository will diverge
+from your local/remote repository.
+
+Add another remote repository
+-----------------------------
+
+To avoid problems in the futur, add a new remote repository in your local
+repository. This new remote repository is the QGIS-Documentation repository from
+QGIS project:
+
+::
+
+  git remote add upstream git@github.com:qgis/QGIS-Documentation.git
+  git remote -v
+  origin  git@github.com:yjacolin/QGIS-Documentation.git (fetch)
+  origin  git@github.com:yjacolin/QGIS-Documentation.git (push)
+  upstream        git@github.com:qgis/QGIS-Documentation.git (fetch)
+  upstream        git@github.com:qgis/QGIS-Documentation.git (push)
+
+So now you have the choice between two remote repository:
+
+* *origin* to push your local branch in **your** remote repository
+* *upstream* to merge (if you have right to do so) your contribution to the
+  official one OR to update your master branch of local repository from the
+  master branch of the official repository.
+
+**Note:** *upstream* is just a label, a king of standard name but you can call
+it as you want.
+
+
+Update your master branch
+-------------------------
+
+Before working on a new contribution, you should always update your local master
+branch in your local repository. Just run this command line:
+
+::
+
+  git checkout master # switch to master branch (it is easy to forget this step!)
+  git fetch upstream  # get "information" from upstream repository (aka
+  QGIS-Documentation's QGIS repository)
+  git merge upstream/master # merge update from upstram/master to the current
+  local branch (which should be master, see step 1)
+  git push origin master # update **your** remote repository
+
+
+Now we have a local and remote repository which are both up to date with
+QGIS-Documentation from QGIS organisation. You can start to work on your
+contribution.
+
+Contribute to QGIS
+------------------
+
+Always work on a branch! Always!
+
+::
+
+   git checkout -b myNewBranch # checkout means go to the branch and -b flag creates a new branch if needed
+   git branch
+   master
+   * myNewBranch # * means the current branch
+   vim myFile # here edit your contribution
+   git add myFile
+   git commit
+   git push origin myNewBranch
+
+
+Few words about commit/push commands:
+
+* try to commit only one contribution (atomic change)
+* try to explain carefully what you change in the title of your commit and in
+  the description. The first line is a title and should start by an upper case
+  letter and have 80 caracters length, don't end with a ``.``. Be concise.
+  You description could be longer, end with a ``.`` and you can give much more details.
+* use a ``#`` with a number to refer to an issue. Prefix with ``Fix`` if you fix the
+  ticket: your commit will close the ticket.
+
+Now you can go to your github repository and create a Pull Request (PR). Check
+to create a PR from your branch to the master branch of the official
+QGIS-Documentation repository
+
+Clean-up your local and remote repository
+-----------------------------------------
+
+After your PR has been merge into the official QGIS-Documentation, you car
+delete your branch. If you work a lot this way, in few week you will get a lot
+of unuseful branch. So keep your repository clean this way:
+
+::
+
+  git branch -d myNewBranch # delete local branch
+  git push origin :myNewBranch # push nothing to your myNewBranch in your remote repository (ie remove your remote branch).
+
+And do not forget to update your ``master`` branch in your local repository!
