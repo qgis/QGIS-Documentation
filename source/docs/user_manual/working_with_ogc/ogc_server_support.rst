@@ -6,37 +6,37 @@
 
 
 ***********************
-|qg| as OGC Data Server
+QGIS as OGC Data Server
 ***********************
 
 .. contents::
    :local:
 
-|qg| Server is an open source WMS 1.3, WFS 1.0.0 and WCS 1 1.1.1 
+QGIS Server is an open source WMS 1.3, WFS 1.0.0 and WCS 1 1.1.1 
 implementation that, in addition, implements advanced cartographic features for 
-thematic mapping. The |qg| Server is a FastCGI/CGI (Common Gateway Interface) 
+thematic mapping. The QGIS Server is a FastCGI/CGI (Common Gateway Interface) 
 application written in C++ that works together with a web server (e.g., Apache, 
 Lighttpd). It has Python plugin support allowing for fast and efficient 
 development and deployment of new features.
-The original development of |qg| Server was funded by the EU projects Orchestra,
+The original development of QGIS Server was funded by the EU projects Orchestra,
 Sany and the city of Uster in Switzerland.
 
 .. index:: SLD, SLD/SE
 .. index:: QGIS_Server, FastCGI, CGI, Common_Gateway_Interface
 
-|qg| Server uses |qg| as back end for the GIS logic and for map rendering. 
+QGIS Server uses QGIS as back end for the GIS logic and for map rendering. 
 Furthermore, the Qt library is used for graphics and for platform-independent 
-C++ programming. In contrast to other WMS software, the |qg| Server uses 
+C++ programming. In contrast to other WMS software, the QGIS Server uses 
 cartographic rules as a configuration language, both for the server 
 configuration and for the user-defined cartographic rules.
 
-As |qg| desktop and |qg| Server use the same visualization libraries, the maps
+As QGIS desktop and QGIS Server use the same visualization libraries, the maps
 that are published on the web look the same as in desktop GIS.
 
 In the following sections, we will provide a sample configuration to set up
-a |qg| Server on Debian/Ubuntu Linux.
+a QGIS Server on Debian/Ubuntu Linux.
 For user contributed installation instructions on other platforms or 
-distributions, we recommend to read one of the following URLs:
+distributions, we recommend reading one of the following URLs:
 
 * http://hub.qgis.org/projects/quantum-gis/wiki/QGIS_Server_Tutorial
 * http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/
@@ -45,17 +45,16 @@ distributions, we recommend to read one of the following URLs:
 .. index:: apache, apache2, Debian_Squeeze
 
 
-|qg| Server installation on Debian/Ubuntu
+QGIS Server installation on Debian/Ubuntu
 ================================================================================
 
 At this point, we will give a short and simple sample installation how-to for
 a minimal working configuration using Apache2 on Debian Squeeze (or with 
 negligible variations on Ubuntu 14.04).
-Many other OSs provide packages for |qg| Server, too. If you have to build it 
+Many other OSs provide packages for QGIS Server, too. If you have to build it 
 all from source, please refer to the URLs above.
 
-Firstly, add the following debian GIS repository by adding the following 
-repository:
+Firstly, add the following debian GIS repository:
 
 ::
 
@@ -70,7 +69,7 @@ repository:
   $ # Update package list
   $ sudo apt-get update && sudo apt-get upgrade
 
-Now, install |qg| Server:
+Now, install QGIS Server:
 
 ::
 
@@ -154,7 +153,7 @@ Test the server with the HelloWorld plugin:
   HelloServer!
 
 
-You can have a look at the default GetCapabilities of the |qg| server at:
+You can have a look at the default GetCapabilities of the QGIS server at:
 :file:`http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
 
 .. tip::
@@ -176,13 +175,13 @@ You can have a look at the default GetCapabilities of the |qg| server at:
 
 .. _`Creating a WMS from a QGIS project`:
 
-Creating a WMS/WFS/WCS server from a |qg| project
+Creating a WMS/WFS/WCS server from a QGIS project
 ======================================================
 
 
-To provide a new |qg| Server WMS, WFS or WCS, we have to create a |qg| project
-file with some data. Here, we use the 'Alaska' shapefile from the |qg| sample
-dataset. Define the colors and styles of the layers in |qg| and the project CRS,
+To provide a new QGIS Server WMS, WFS or WCS, we have to create a QGIS project
+file with some data. Here, we use the 'Alaska' shapefile from the QGIS sample
+dataset. Define the colors and styles of the layers in QGIS and the project CRS,
 if not already defined.
 
 .. _figure_server_2:
@@ -194,7 +193,7 @@ if not already defined.
 .. figure:: /static/user_manual/working_with_ogc/ows_server_definition.png
    :align: center
 
-   Definitions for a |qg| Server WMS/WFS/WCS project (KDE)
+   Definitions for a QGIS Server WMS/WFS/WCS project (KDE)
 
 Then, go to the :guilabel:`OWS Server` menu of the
 :menuselection:`Project --> Project Properties` dialog and provide
@@ -202,15 +201,15 @@ some information about the OWS in the fields under
 :guilabel:`Service Capabilities`.
 This will appear in the GetCapabilities response of the WMS, WFS or WCS.
 If you don't check |checkbox| :guilabel:`Service capabilities`,
-|qg| Server will use the information given in the :file:`wms_metadata.xml` file
+QGIS Server will use the information given in the :file:`wms_metadata.xml` file
 located in the :file:`cgi-bin` folder.
 
 .. warning::
 
- If you're using the |qg| project with styling based on SVG files using
+ If you're using the QGIS project with styling based on SVG files using
  relative paths then you should know that the server considers the path
  relative to its `qgis_mapserv.fcgi` file (not to the `qgs` file).
- So, if you deploy on the server a project and the SVG files are not placed
+ So, if you deploy a project on the server and the SVG files are not placed
  accordingly, the output images may not respect the Desktop styling.
  To ensure this doesn't happen, you can simply copy the SVG files relative
  to the `qgis_mapserv.fcgi`. You can also create a symbolic link in the
@@ -225,18 +224,18 @@ the extent advertised in the WMS GetCapabilities response by entering
 the minimum and maximum X and Y values in the fields under
 :guilabel:`Advertised extent`.
 Clicking :guilabel:`Use Current Canvas Extent` sets these values to the
-extent currently displayed in the |qg| map canvas.
+extent currently displayed in the QGIS map canvas.
 By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
-in which coordinate reference systems (CRS) |qg| Server will offer
+in which coordinate reference systems (CRS) QGIS Server will offer
 to render maps.
-Use the |mActionSignPlus| button below to select those CRS
+Use the |mActionSignPlus| button below to select those CRSs
 from the Coordinate Reference System Selector, or click :guilabel:`Used`
-to add the CRS used in the |qg| project to the list.
+to add the CRSs used in the QGIS project to the list.
 
 If you have print composers defined in your project, they will be listed in the
 GetCapabilities response, and they can be used by the GetPrint request to
 create prints, using one of the print composer layouts as a template.
-This is a |qg|-specific extension to the WMS 1.3.0 specification.
+This is a QGIS-specific extension to the WMS 1.3.0 specification.
 If you want to exclude any print composer from being published by the WMS,
 check |checkbox| :guilabel:`Exclude composers` and click the
 |mActionSignPlus| button below.
@@ -248,14 +247,14 @@ WMS, check |checkbox| :guilabel:`Exclude Layers` and click the
 |mActionSignPlus| button below.
 This opens the :guilabel:`Select restricted layers and groups` dialog, which
 allows you to choose the layers and groups that you don't want to be published.
-Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries at once.
+Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries.
 
 You can receive requested GetFeatureInfo as plain text, XML and GML. Default is XML,
 text or GML format depends the output format chosen for the GetFeatureInfo request.
 
 If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
 This will include in the GetFeatureInfo response the geometries of the
-features in a text format. If you want |qg| Server to advertise specific request URLs
+features in a text format. If you want QGIS Server to advertise specific request URLs
 in the WMS GetCapabilities response, enter the corresponding URL in the
 :guilabel:`Advertised URL` field.
 Furthermore, you can restrict the maximum size of the maps returned by the
@@ -264,10 +263,10 @@ fields under :guilabel:`Maximums for GetMap request`.
 
 If one of your layers uses the Map Tip display (i.e. to show text using 
 expressions) this will be listed inside the GetFeatureInfo output. If the 
-layer uses a Value Map for one of his attributes, also this information will 
+layer uses a Value Map for one of its attributes, this information will also 
 be shown in the GetFeatureInfo output.
 
-|qg| support the following request for WMS service:
+QGIS supports the following requests for WMS service:
 
 * GetCapabilities
 * GetMap
@@ -279,14 +278,14 @@ be shown in the GetFeatureInfo output.
 WFS capabilities
 -----------------------------
 
-In the :guilabel:`WFS capabilities` area, you can select the layers that you
-want to publish as WFS, and specify if they will allow the update, insert and
+In the :guilabel:`WFS capabilities` area you can select the layers you
+want to publish as WFS, and specify if they will allow update, insert and
 delete operations.
 If you enter a URL in the :guilabel:`Advertised URL` field of the
-:guilabel:`WFS capabilities` section, |qg| Server will advertise this specific
+:guilabel:`WFS capabilities` section, QGIS Server will advertise this specific
 URL in the WFS GetCapabilities response.
 
-|qg| support the following request for WFS service:
+QGIS supports the following requests for WFS service:
 
 * GetCapabilities
 * DescribeFeatureType
@@ -298,7 +297,7 @@ WCS capabilities
 
 In the :guilabel:`WCS capabilities` area, you can select the layers that you
 want to publish as WCS. If you enter a URL in the :guilabel:`Advertised URL` 
-field of the :guilabel:`WCS capabilities` section, |qg| Server will advertise 
+field of the :guilabel:`WCS capabilities` section, QGIS Server will advertise 
 this specific URL in the WCS GetCapabilities response.
 
 Now, save the session in a project file :file:`alaska.qgs`. To provide the 
@@ -307,14 +306,14 @@ admin privileges and add the project file :file:`alaska.qgs` and a copy of the
 :file:`qgis_mapserv.fcgi` file - that's all.
 
 Now we test our project WMS, WFS and WCS. Add the WMS, WFS and WCS as described 
-in :ref:`ogc-wms-layers`, :ref:`ogc-wfs` and :ref:`ogc-wcs` to |qg| and load 
+in :ref:`ogc-wms-layers`, :ref:`ogc-wfs` and :ref:`ogc-wcs` to QGIS and load 
 the data. The URL is:
 
 ::
 
  http://localhost/cgi-bin/project/qgis_mapserv.fcgi
 
-|qg| support the following request for WCS service:
+QGIS supports the following requests for WCS service:
 
 * GetCapabilities
 * DescribeCoverage
@@ -327,12 +326,12 @@ For vector layers, the :guilabel:`Fields` menu of the
 :menuselection:`Layer --> Properties` dialog allows you to define for each
 attribute if it will be published or not.
 By default, all the attributes are published by your WMS and WFS.
-If you want a specific attribute not to be published, uncheck the corresponding
+If you don't want a specific attribute to be published, uncheck the corresponding
 checkbox in the :guilabel:`WMS` or :guilabel:`WFS` column.
 
 You can overlay watermarks over the maps produced by your WMS by adding text
 annotations or SVG annotations to the project file.
-See section Annotation Tools in :ref:`general_tools` for instructions on 
+See the Annotation Tools section in :ref:`general_tools` for instructions on 
 creating annotations. For annotations to be displayed as watermarks on the WMS 
 output, the :guilabel:`Fixed map position` check box in the 
 :guilabel:`Annotation text` dialog must be unchecked.
@@ -341,15 +340,15 @@ annotation tools is active.
 For SVG annotations, you will need either to set the project to save absolute
 paths (in the :guilabel:`General` menu of the
 :menuselection:`Project --> Project Properties` dialog) or to manually modify
-the path to the SVG image in a way that it represents a valid relative path.
+the path to the SVG image so that it represents a valid relative path.
 
 
 
 Server configuration and supported parameters
 ================================================================================
 
-|qg| Server supports some vendor parameters and requests that greatly enhance the
-possibility to customise it behavior. The following paragraphs list the vendor
+QGIS Server supports some vendor parameters and requests that greatly enhance the
+possibilities of customising its behavior. The following paragraphs list the vendor
 parameters and the environment variables supported by the server.
 
 
@@ -360,10 +359,10 @@ Extra parameters supported by all request types
   client as a file attachment with the specified file name.
 
 * **MAP** parameter: Similar to MapServer, the ``MAP`` parameter can be used to
-  specify the path to the |qg| project file. You can specify an absolute path
+  specify the path to the QGIS project file. You can specify an absolute path
   or a path relative to the location of the server executable
   (:file:`qgis_mapserv.fcgi`).
-  If not specified, |qg| Server searches for .qgs files in the directory where
+  If not specified, QGIS Server searches for .qgs files in the directory where
   the server executable is located.
 
   Example::
@@ -374,17 +373,17 @@ Extra parameters supported by all request types
 ..  note::
 
     You can define a **QGIS_PROJECT_FILE** as an environment variable to tell
-    server executable where to find the |qg| project file. This variable will
-    be the location where |qg| will look for the project file. If not defined
-    it will use the MAP parameter in the request and finally look at the server
-    executable directory.
+    the server executable where to find the QGIS project file. This variable
+    will be the location where QGIS will look for the project file. If not
+    defined it will use the MAP parameter in the request and finally look at
+    the server executable directory.
 
 
 
 Extra parameters supported by the WMS GetMap request
 -----------------------------------------------------
 
-In the WMS GetMap request, |qg| Server accepts a couple of extra
+In the WMS GetMap request, QGIS Server accepts a couple of extra
 parameters in addition to the standard parameters according to the
 OCG WMS 1.3.0 specification:
 
@@ -411,10 +410,10 @@ OCG WMS 1.3.0 specification:
     SQL injections into databases via QGIS server:
 
     Text strings need to be enclosed with quotes (single quotes for strings, 
-    double quote for attributes)
-    A space between each word / special character is mandatory
+    double quotes for attributes)
+    A space between each word / special character is mandatory.
     Allowed Keywords and special characters are 'AND','OR','IN','=','<','>=',
-    '>','>=','!=*,'(',')'
+    '>','>=','!=*,'(',')'.
     Semicolons in string expressions are not allowed
 
     Example::
@@ -423,10 +422,10 @@ OCG WMS 1.3.0 specification:
 
 .. note::
 
-    It is possible to make attribute searches via GetFeatureInfo and leave 
-    away the X/Y parameter if a FILTER is there. QGIS server then returns info 
+    It is possible to make attribute searches via GetFeatureInfo and omit 
+    the X/Y parameter if a FILTER is there. QGIS server then returns info 
     about the matching features and generates a combined bounding box in the 
-    xml output
+    xml output.
 
 * **SELECTION** parameter: (Available in QGIS 1.8 and above)
     Vector features can be selected by passing comma separated lists with 
@@ -441,7 +440,7 @@ GetPrint request
 -----------------
 
 
-QGIS server has the capability to create print composer output as pdf or pixel 
+QGIS server has the capability to create print composer output in pdf or pixel 
 format. Print composer windows in the published project are used as templates. 
 In the GetPrint request, the client has the possibility to specify parameters 
 of the contained composer maps and labels.
@@ -488,14 +487,14 @@ elements:
 
 * **BOXSPACE** space between legend frame and content (mm)
 * **LAYERSPACE** versical space between layers (mm)
-* **LAYERTITLESPACE** vertical space between layer title and following items 
+* **LAYERTITLESPACE** vertical space between layer title and items following 
   (mm)
-* **SYMBOLSPACE** vertical space between symbol and following item (mm)
+* **SYMBOLSPACE** vertical space between symbol and item following (mm)
 * **ICONLABELSPACE** horizontal space between symbol and label text (mm)
 * **SYMBOLWIDTH** width of the symbol preview (mm)
 * **SYMBOLHEIGHT** height of the symbol preview (mm)
 
-These parameters change the font properties for layer titles and item labels
+These parameters change the font properties for layer titles and item labels:
 
 * **LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer title / item text
 * **LAYERFONTBOLD / ITEMFONTBOLD** 'TRUE' to use a bold font
@@ -506,7 +505,7 @@ These parameters change the font properties for layer titles and item labels
   the legend graphics without labels
 
 Contest based legend. These parameters let the client request a legend showing 
-only the symbols for the features falling into the requested area
+only the symbols for the features falling into the requested area:
 
 * **BBOX** the geographical area for which the legend should be built
 * **CRS / SRS** the coordinate reference system adopted to define the BBOX 
@@ -521,8 +520,8 @@ Contest based legend features are based on the
 GetProjectSettings request
 -----------------------------
 
-This request type works similar as **GetCapabilities**, but it is more specific 
-to |qg| Server and allows for a client to read additional information which is 
+This request type works similar to **GetCapabilities**, but it is more specific 
+to QGIS Server and allows a client to read additional information which is 
 not available in the GetCapabilities output:
 
 * initial visibility of layers
@@ -559,24 +558,24 @@ FORMAT_OPTIONS Parameters:
 Extra parameters supported by the WFS GetFeature request
 ---------------------------------------------------------
 
-In the WFS GetFeature request, QGIS Server accepts one extra parameters in 
+In the WFS GetFeature request, QGIS Server accepts one extra parameter in 
 addition to the standard parameters according to the OCG WFS 1.1.0 
 specification:
 
 * **GeometryName** parameter: this parameter can be used to get the *extent* 
   or the *centroid* as the geometry or no geometry if *none* if used (ie 
-  attribut only). Allowed values are *extent*, *centroid* or *none*.
+  attribute only). Allowed values are *extent*, *centroid* or *none*.
 
 .. index::
     pair: logging; QGIS Server
 
-|qg| Server logging
+QGIS Server logging
 ----------------------------------
 
-To log requests send to server, set the following environment variables:
+To log requests sent to the server, set the following environment variables:
 
-* **QGIS_SERVER_LOG_FILE**: Specify path and filename. Make sure that server
-  has proper permissions for writing to file. File should be created 
+* **QGIS_SERVER_LOG_FILE**: Specify path and filename. Make sure that the
+  server has proper permissions for writing to file. File should be created 
   automatically, just send some requests to server. If it's not there, check 
   permissions.
 * **QGIS_SERVER_LOG_LEVEL**: Specify desired log level. Available values are:
@@ -593,7 +592,7 @@ To log requests send to server, set the following environment variables:
 .. note::
 
     * When using Fcgid module use FcgidInitialEnv instead of SetEnv!
-    * Server logging is enabled also if executable is compiled in release mode.
+    * Server logging is also enabled if executable is compiled in release mode.
 
 
 .. index::
@@ -602,8 +601,8 @@ To log requests send to server, set the following environment variables:
 Environment variables
 ---------------------------------
 
-You can configure some aspects of |qg| server by setting **environment 
-variables**. For example, to set |qg| server on Apache to use 
+You can configure some aspects of QGIS server by setting **environment 
+variables**. For example, to set QGIS server on Apache to use 
 /path/to/config/QGIS/QGIS2.ini settings file, add to Apache config:
 
 ::
@@ -617,26 +616,26 @@ or, if using fcgi:
   FcgidInitialEnv QGIS_OPTIONS_PATH "/path/to/config/"
 
 
-This is a list of the variables supported by |qg| server:
+This is a list of the variables supported by QGIS server:
 
-* **QGIS_OPTIONS_PATH**: Specifies the path to directory with settings.
-  It works the same ways as QGIS application --optionspath option. It is looking
+* **QGIS_OPTIONS_PATH**: Specifies the path to the directory with settings.
+  It works the same way as QGIS application --optionspath option. It is looking
   for settings file in <QGIS_OPTIONS_PATH>/QGIS/QGIS2.ini.
-* **QUERY_STRING**: The query string, normally passed by the web server, this 
-  variable can be useful while testing |qg| server binary from the command line
+* **QUERY_STRING**: The query string, normally passed by the web server. This 
+  variable can be useful while testing QGIS server binary from the command line.
 * **QGIS_PROJECT_FILE**: the `.qgs` project file, normally passed as a parameter 
   in the query string, you can also set it as an environment variable (for 
-  example by using `mod_rewrite` Apache module
+  example by using `mod_rewrite` Apache module).
 * **QGIS_SERVER_LOG_FILE**: Specify path and filename. Make sure that server
   has proper permissions for writing to file. File should be created 
   automatically, just send some requests to server. If it's not there, check 
   permissions.
 * **QGIS_SERVER_LOG_LEVEL**: Specify desired log level. Available values are:
-* **MAX_CACHE_LAYERS**: Specify the maximum number o cached layers (default: 
-  100)
+* **MAX_CACHE_LAYERS**: Specify the maximum number of cached layers (default: 
+  100).
 * **DISPLAY**: This is used to pass (fake) X server display number (needed on 
-  Unix-like systems)
+  Unix-like systems).
 * **QGIS_PLUGINPATH**: Useful if you are using Python plugins for the server, 
-  this sets the folder that is searched for Python plugins
+  this sets the folder that is searched for Python plugins.
 
 
