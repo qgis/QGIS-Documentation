@@ -26,7 +26,7 @@ In the :menuselection:`Panels-->` menu, you can switch on and off QGIS widgets.
 The :menuselection:`Toolbars-->` menu provides the possibility to switch on
 and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
 
-Theses menu are in |nix| :menuselection:`Settings` or |win|
+These menus are in |nix| :menuselection:`Settings` or |win|
 :menuselection:`View`.
 
 .. _figure_panels_toolbars:
@@ -43,7 +43,7 @@ Theses menu are in |nix| :menuselection:`Settings` or |win|
 .. index::
    single:Statistic
 
-.. _`statistical summary`:
+.. _`statistical_summary`:
 
 Statistical Summary Panel
 --------------------------
@@ -71,23 +71,22 @@ if the layers in the map overview have been set up for labelling. If you click
 and drag the red rectangle in the overview that shows your current extent, the
 main map view will update accordingly.
 
+
 .. index::
    single:Log messages
 
 Log Messages Panel
 -------------------
 
-It's possible to track the QGIS messages and follow the messages
-that appear in the different tabs during loading and operation.
-
-Log Messages Panel can be display using the most right icon |mMessageLog|
-in the bottom toolbar.
+When loading or processing some operations, you can track and follow messages
+that appear in different tabs using the |mMessageLog| Log Messages Panel.
+It can be activated using the most right icon in the bottom status bar.
 
 Project Properties
 ==================
 
 In the properties window for the project under |nix|
-:menuselection:`Settings --> Project Properties` (kde) or |nix| |win|
+:menuselection:`Settings --> Project Properties` (kde) or |nix| |osx| |win|
 :menuselection:`Project --> Project Properties` (Gnome, OS X or Windows), you
 can set project-specific options.
 
@@ -410,9 +409,12 @@ This menu offers some options regarding the behavior of the :guilabel:`Identify 
 * Define :guilabel:`Decimal places`
 * |checkbox| :guilabel:`Keep base unit` to not automatically convert large numbers
   (e.g., meters to kilometers)
-* :guilabel:`Preferred distance units` |radiobuttonon| ('Meters', 'Feet', 'Nautical Miles', 'Degrees' or 'Map Units' )
-* :guilabel:`Preferred area units` |radiobuttonon| ('Square meters', 'Square feet', 'Square yards', 'Hectares', 'Map Units' ...)
-* :guilabel:`Preferred angle units` |radiobuttonon| ('Degrees', 'Radians', 'Gon/gradians', 'Minutes of arc' ...)
+* :guilabel:`Preferred distance units` |radiobuttonon| ('Meters', 'Feet',
+  'Nautical Miles', 'Degrees' or 'Map Units' )
+* :guilabel:`Preferred area units` |radiobuttonon| ('Square meters', 'Square feet',
+  'Square yards', 'Hectares', 'Map Units' ...)
+* :guilabel:`Preferred angle units` |radiobuttonon| ('Degrees', 'Radians', 'Gon/gradians',
+  'Minutes of arc' ...)
 
 **Panning and zooming**
 
