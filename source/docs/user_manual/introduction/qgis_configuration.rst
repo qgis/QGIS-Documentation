@@ -1,16 +1,16 @@
 |updatedisclaimer|
 
 ******************
-|qg| Configuration
+QGIS Configuration
 ******************
 
 .. contents::
    :local:
 
-|qg| is highly configurable through the :menuselection:`Settings` menu. Choose
+QGIS is highly configurable through the :menuselection:`Settings` menu. Choose
 between Panels, Toolbars, Project Properties, Options and Customization.
 
-.. note:: |qg| follows desktop guidelines for the location of options and project 
+.. note:: QGIS follows desktop guidelines for the location of options and project 
    properties item. Consequently related to the OS you are using, location of some 
    of items described above could be located in the :menuselection:`View` menu 
    (Panels and Toolbars) or in :menuselection:`Project` for Options.
@@ -22,9 +22,9 @@ between Panels, Toolbars, Project Properties, Options and Customization.
 Panels and Toolbars
 ===================
 
-In the :menuselection:`Panels-->` menu, you can switch on and off |qg| widgets.
+In the :menuselection:`Panels-->` menu, you can switch on and off QGIS widgets.
 The :menuselection:`Toolbars-->` menu provides the possibility to switch on
-and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
+and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
 
 .. _figure_panels_toolbars:
 
@@ -42,7 +42,7 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
 
 .. tip:: **Activating the QGIS Overview**
 
-   In |qg|, you can use an overview panel that provides a full extent view of
+   In QGIS, you can use an overview panel that provides a full extent view of
    layers added to it. It can be selected under the menu |nix| :menuselection:`Settings --> Panels` or
    |win| :menuselection:`View --> Panels`. Within the view is a rectangle showing the
    current map extent. This allows you to quickly determine which area of the
@@ -53,7 +53,7 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
 
 .. tip:: **Show Log Messages**
 
-   It's possible to track the |qg| messages. You can activate
+   It's possible to track the QGIS messages. You can activate
    |checkbox| :guilabel:`Log Messages` in the menu
    |nix| :menuselection:`Settings --> Panels` or 
    |win| :menuselection:`View --> Panels` and follow the messages 
@@ -128,7 +128,7 @@ project-specific options.
   There is also an additional section where you can define specific colors for the 
   running project. You can find the added colors in the drop down menu of the color dialog
   window present in each renderer.
-* The tab :guilabel:`OWS Server` allows you to define information about the |qg|
+* The tab :guilabel:`OWS Server` allows you to define information about the QGIS
   Server WMS and WFS capabilities, extent and CRS restrictions.
 * The :guilabel:`Macros` menu is used to edit Python macros for projects. Currently,
   only three macros are available: ``openProject()``, ``saveProject()`` and
@@ -158,7 +158,7 @@ project-specific options.
 Options
 =======
 
-|mActionOptions| Some basic options for |qg| can be selected using the
+|mActionOptions| Some basic options for QGIS can be selected using the
 :guilabel:`Options` dialog. Select the menu option :menuselection:`Settings -->`
 |mActionOptions| :menuselection:`Options`. The tabs where you can customize your
 options are described below.
@@ -237,7 +237,7 @@ source code.
 .. figure:: /static/user_manual/introduction/sys-env-options.png
    :align: center
 
-   System environment variables in |qg|
+   System environment variables in QGIS
 
 
 **Plugin paths**
@@ -286,7 +286,7 @@ Data Sources Menu
   * ‘Load all’: Never prompt, but load all sublayers
 
 * |checkbox| :guilabel:`Ignore shapefile encoding declaration`. If a shapefile
-  has encoding information, this will be ignored by |qg|.
+  has encoding information, this will be ignored by QGIS.
 * |checkbox| :guilabel:`Add PostGIS layers with double click and select in
   extended mode`
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in
@@ -434,7 +434,7 @@ Digitizing Menu
 * |checkbox| :guilabel:`Reuse last entered attribute values`
 * :guilabel:`Validate geometries`. Editing complex lines and polygons with many
   nodes can result in very slow rendering. This is because the default
-  validation procedures in |qg| can take a lot of time. To speed up rendering, it
+  validation procedures in QGIS can take a lot of time. To speed up rendering, it
   is possible to select GEOS geometry validation (starting from GEOS 3.3) or to
   switch it off. GEOS geometry validation is much faster, but the disadvantage
   is that only the first geometry problem will be reported.
@@ -531,7 +531,7 @@ Network Menu
 .. figure:: /static/user_manual/introduction/proxy-settings.png
    :align: center
 
-   Proxy-settings in |qg|
+   Proxy-settings in QGIS
 
 **Cache settings**
 
@@ -566,18 +566,18 @@ http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum.
    error' with the above proxy types, to check to see if they succeed in your case.
 
 You can modify the options according to your needs. Some of the changes may
-require a restart of |qg| before they will be effective.
+require a restart of QGIS before they will be effective.
 
-* |nix| Settings are saved in a text file: :file:`$HOME/.config/QGIS/QGIS2.conf`
-* |osx| You can find your settings in: :file:`$HOME/Library/Preferences/org.qgis.qgis.plist`
-* |win| Settings are stored in the registry under: ``HKEY\CURRENT_USER\Software\QGIS\qgis``
+* Settings are saved in a text file: :file:`$HOME/.config/QGIS/QGIS2.conf`
+* You can find your settings in: :file:`$HOME/Library/Preferences/org.qgis.qgis.plist`
+* Settings are stored in the registry under: ``HKEY\CURRENT_USER\Software\QGIS\qgis``
 
 .. _sec_customization:
 
 Customization
 =============
 
-The customization tool lets you (de)activate almost every element in the |qg|
+The customization tool lets you (de)activate almost every element in the QGIS
 user interface. This can be very useful if you have a lot of plugins
 installed that you never use and that are filling your screen.
 
@@ -592,18 +592,18 @@ installed that you never use and that are filling your screen.
 
    The Customization dialog
 
-|qg| Customization is divided into five groups. In |checkbox| :guilabel:`Menus`,
+QGIS Customization is divided into five groups. In |checkbox| :guilabel:`Menus`,
 you can hide entries in the Menu bar. In |checkbox| :guilabel:`Panels`, you
 find the panel windows. Panel windows are applications that can be started and
-used as a floating, top-level window or embedded to the |qg| main window as a
+used as a floating, top-level window or embedded to the QGIS main window as a
 docked widget (see also :ref:`sec_panels_and_toolbars`). In the |checkbox|
 :guilabel:`Status Bar`, features like the coordinate information can be
 deactivated. In |checkbox| :guilabel:`Toolbars`, you can (de)activate the
-toolbar icons of |qg|, and in |checkbox| :guilabel:`Widgets`, you can (de)activate
+toolbar icons of QGIS, and in |checkbox| :guilabel:`Widgets`, you can (de)activate
 dialogs as well as their buttons.
 
 With |mActionSelect| :sup:`Switch to catching widgets in main application`, you
-can click on elements in |qg| that you want to be hidden and find the corresponding
+can click on elements in QGIS that you want to be hidden and find the corresponding
 entry in Customization (see figure_customization_). You can also save your
 various setups for different use cases as well. Before your changes
-are applied, you need to restart |qg|.
+are applied, you need to restart QGIS.
