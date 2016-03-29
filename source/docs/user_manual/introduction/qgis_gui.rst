@@ -403,11 +403,18 @@ The Legend toolbar in the map legend area allows you to:
    single:layer visibility
    
 The button |mActionShowPresets| allows you to add **Presets** views in the legend.
-It means that you can choose to display some layer with specific categorization
-and add this view to the **Presets** list. To add a preset view just click on
-|mActionShowPresets|, choose *Add Preset...* from the drop down menu and give a
-name to the preset. After that you will see a list with all the presets that you 
-can recall pressing on the |mActionShowPresets| button.
+Presets are a way to save and easily restore a combination of layers with their
+current style. To add a preset view, just set visible the layers you want, with
+their desired symbology, and click on |mActionShowPresets| button.
+Choose :menuselection:`Add Preset...` from the drop-down menu and give a name to the preset.
+The added preset is listed at the bottom of the drop-down menu and is recalled by
+clicking on it.
+
+The :menuselection:`Replace Preset -->` option helps you overwrite a preset content
+with the current map view while the :menuselection:`Remove Current Preset` button
+deletes the active preset.
+
+
 
 All the added presets are also present in the map composer in order to allow you
 to create a map layout based on your specific views (see :ref:`composer_main_properties`).
