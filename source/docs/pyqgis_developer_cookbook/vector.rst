@@ -93,7 +93,7 @@ a :class:`QgsVectorLayer` object
             x = geom.asPolygon()
             numPts = 0
             for ring in x:
-            numPts += len(ring)
+                numPts += len(ring)
             print "Polygon: %d rings with %d points" % (len(x), numPts)
         else:
             print "Unknown"
