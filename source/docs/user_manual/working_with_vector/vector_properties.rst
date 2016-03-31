@@ -1334,7 +1334,7 @@ some descriptive text and the function '$area()' in combination with
 
 :index:`Expression based labelling` is easy to work with. All you have to take care of
 is, that you need to combine all elements (strings, fields and functions) with a
-string concatenation sign '||' and that fields are written in "double quotes"
+concatenation function (e.g., ``concat`` or ``||``) and that fields are written in "double quotes"
 and strings in 'single quotes'. Let's have a look at some examples:
 
 ::
@@ -1345,26 +1345,25 @@ and strings in 'single quotes'. Let's have a look at some examples:
    -> John Smith, Paris
 
    # label based on two fields 'name' and 'place' separated by comma
-   'My name is ' || "name" || 'and I live in ' || "place"
+   concat('My name is ', "name", ' and I live in ', "place")
 
    -> My name is John Smith and I live in Paris
 
-   # label based on two fields 'name' and 'place' with a descriptive text
-   # and a line break (\n)
-   'My name is ' || "name" || '\nI live in ' || "place"
+   # multi-line label based on two fields 'name' and 'place' with a descriptive text
+   concat('My name is ', "name", '\n', 'I live in ', "place")
 
    -> My name is John Smith
       I live in Paris
 
-   # create a multi-line label based on a field and the $area function
-   # to show the place name and its area size based on unit meter.
-   'The area of ' || "place" || 'has a size of ' || $area || 'm²'
+   # label based on a field and the $area function
+   # to show the place name and its area size in a converted unit.
+   'The area of ' || "place" || 'has a size of ' || ($area/10000) || ' ha'
 
-   -> The area of Paris has a size of 105000000 m²
+   -> The area of Paris has a size of 10500 ha
 
    # create a CASE ELSE condition. If the population value in field
    # population is <= 50000 it is a town, otherwise a city.
-   'This place is a ' || CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END
+   concat('This place is a ', CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END)
 
   -> This place is a town
 
