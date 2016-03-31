@@ -1,14 +1,14 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="2.8.1-Wien" minimumScale="-4.65661e-10" maximumScale="1e+08" hasScaleBasedVisibilityFlag="0">
+<qgis version="2.14.1-Essen" minimumScale="-4.65661e-10" maximumScale="1e+08" hasScaleBasedVisibilityFlag="0">
   <pipe>
-    <rasterrenderer opacity="1" alphaBand="0" classificationMax="25.2109" classificationMinMaxOrigin="User" band="1" classificationMin="0" type="singlebandpseudocolor">
+    <rasterrenderer opacity="1" alphaBand="-1" classificationMax="25.2109" classificationMinMaxOrigin="User" band="1" classificationMin="0" type="singlebandpseudocolor">
       <rasterTransparency/>
       <rastershader>
         <colorrampshader colorRampType="INTERPOLATED" clip="0">
           <item alpha="255" value="0" label="Low" color="#d7191c"/>
-          <item alpha="255" value="5" label="5" color="#fdae61"/>
-          <item alpha="255" value="10" label="10" color="#ffffc0"/>
-          <item alpha="255" value="12" label="12" color="#a6d96a"/>
+          <item alpha="255" value="4" label="4" color="#fdae61"/>
+          <item alpha="255" value="6" label="6" color="#ffffc0"/>
+          <item alpha="255" value="8" label="8" color="#a6d96a"/>
           <item alpha="255" value="25.2109" label="High" color="#1a9641"/>
         </colorrampshader>
       </rastershader>
