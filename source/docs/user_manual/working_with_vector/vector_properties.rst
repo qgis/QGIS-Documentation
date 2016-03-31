@@ -1695,7 +1695,20 @@ In this menu, you can also manage the diagram visibility:
 
 * by removing diagrams that overlap others or :guilabel:`Show all diagrams`
   even if they overlap each other
+* by selecting a field with :guilabel:`Data defined visibility` to precisely
+  tune which diagrams should be rendered
 * by setting the :ref:`scale visibility <label_scaledepend>`
+
+.. _figure_diagrams_2:
+
+.. only:: html
+
+   **Figure Diagrams 2:**
+
+.. figure:: /static/user_manual/working_with_vector/diagram_tab_appearance.png
+   :align: center
+
+   Vector properties dialog with diagram menu, Appearance tab
 
 
 Size
@@ -1711,11 +1724,11 @@ You can use :
 
 .. ToDo: better explain the scale behaviour of the different diagram types
 
-.. _figure_diagrams_2:
+.. _figure_diagrams_3:
 
 .. only:: html
 
-   **Figure Diagrams 2:**
+   **Figure Diagrams 3:**
 
 .. figure:: /static/user_manual/working_with_vector/diagram_tab_size.png
    :align: center
@@ -1746,6 +1759,18 @@ and ``Y`` fields with an attribute of the feature.
 The placement of the diagrams can interact with the labeling, so you can
 detect and solve position conflicts between diagrams and labels by setting
 the **Priority** slider or the **z-index** value.
+
+.. _figure_diagrams_4:
+
+.. only:: html
+
+   **Figure Diagrams 4:**
+
+.. figure:: /static/user_manual/working_with_vector/diagram_tab_placement.png
+   :align: center
+
+   Vector properties dialog with diagram menu, Placement tab
+
 
 Options
 -------
@@ -1794,14 +1819,14 @@ Both vector layers are part of the QGIS sample dataset (see section
    the minimum size of the diagrams.
 #. Change the attribute colors by double clicking on the color values in the
    :guilabel:`Assigned attributes` field.
-   Figure_diagrams_3_ gives an idea of the result.
+   Figure_diagrams_5_ gives an idea of the result.
 #. Finally, click **[Ok]**.
 
-.. _figure_diagrams_3:
+.. _figure_diagrams_5:
 
 .. only:: html
 
-   **Figure Diagrams 3:**
+   **Figure Diagrams 5:**
 
 .. figure:: /static/user_manual/working_with_vector/climate_diagram.png
    :align: center
@@ -1818,6 +1843,47 @@ The size and the attributes can also be an expression.
 Use the |expressionEditorOpen| button to add an expression.
 See :ref:`vector_expressions` chapter for more information and example.
 
+Using data-defined override
+---------------------------
+
+As mentioned above, you can use some custom data-defined to tune the diagrams
+rendering:
+
+* position in :guilabel:`Placement` tab by filling ``X`` and ``Y`` fields
+* visibility in :guilabel:`Appearance` tab by filling the ``Visibility`` field
+
+Some tools to manipulate these notions are available through the label toolbar,
+but only if the corresponding data-defined is indicated (otherwise, buttons are
+disabled).
+
+.. _figure_diagrams_6:
+
+.. only:: html
+
+   **Figure Diagrams 6:**
+
+.. figure:: /static/user_manual/working_with_vector/diagram_toolbar.png
+   :align: center
+   :width: 15em
+
+   Diagram/Label toolbar
+
+These tools allow to specifically work on each diagram to:
+
+* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams` that has data-defined
+  position. By clicking or draging an area, you pin diagram(s). If you click or
+  drag an area holding ``Shift``, diagram(s) are unpinned. Finally, you can
+  also click or drag an area holding ``Ctl`` to toggle the pin status of
+  diagram(s).
+* |showPinnedLabels| :sup:`Highlight Pinned Labels and DIagrams`. If the
+  vector layer of the diagram is editable, then the highlighting is green,
+  otherwise it's blue.
+* |moveLabel| :sup:`Move Label And Diagram` that has data-defined
+  position. You just have to drag the diagram to the desired place.
+* |showHideLabels| :sup:`Show/Hide Labels and Diagrams` that has
+  data-defined visbility. If you click or drag an area holding ``Shift``,
+  then diagram(s) are hidden. When a diagram is hidden, you just have to click
+  or drag an area around the feature's point to restore the chart.
 
 Actions Menu
 ============
