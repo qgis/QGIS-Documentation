@@ -21,4 +21,4 @@ Composer Items
    composer_html_frame
    composer_basic_shape
    composer_arrow
-
+   composer_nodes_shape
