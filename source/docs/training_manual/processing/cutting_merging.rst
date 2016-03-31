@@ -48,10 +48,6 @@ Once the layers have been cropped, they can be merged using the GDAL *Merge* alg
 
 .. image:: img/cutting_merging/merge.png
 
-.. warning:: The following paragraph is obsolete.
-
-A cellsize is needed for the merged layer. We will use the same one of the input ones. You do not need to know it in advance before calling the algorithm. Just click on the button in the right--hand size of the text field and you will have a dialog to enter small mathematical formulas, and a list of frequently used values, among them the cellsizes and bounding coordinates of all available layers.
-
 .. note:: You can save time merging first and then cropping, and you will avoid calling the clipping algorithm twice. However, if there are several layers to merge and they have a rather big size, you will end up with a large layer than it can later be difficult to process. In that case, you might have to call the clipping algorithm several times, which might be time consuming, but don't worry, we will soon see that there are some additional tools to automate that operation. In this example, we just have two layers, so you shouldn't worry about that now.
 
 With that, we get the final DEM we want.
@@ -62,10 +58,6 @@ Now it is time to compute the slope layer.
 
 A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm, but the DEM obtained in the last step is not suitable as input, since elevation values are in meters but cellsize is not expressed in meters (the layer uses a CRS with geographic coordinates). A reprojection is needed. To reproject a raster layer, the *Warp (reproject)* algorithm can be used again. We reproject into a CRS with meters as units (e.g. 3857), so we can then correctly calculate the slope, with either SAGA or GDAL.
 
-Here is the reprojected DEM.
-
-.. image:: img/cutting_merging/warpeddem.png
-
 With the new DEM, slope can now be computed.
 
 .. image:: img/cutting_merging/slope.png
@@ -74,7 +66,7 @@ And here is the resulting slope layer.
 
 .. image:: img/cutting_merging/slopereproj.png
 
-The slope produced by the *Slope, Aspect, Curvature* algorithm is expressed in radians, but degrees are a more practical and common unit. The *Metric conversions* algorithm will help us to do the conversion (but in case you didn't know that algorithm existed, you could use the raster calculator that we have already used).
+The slope produced by the *Slope, Aspect, Curvature* algorithm can be expressed in degrees or radians; degrees are a more practical and common unit. In case you calculated it in radians, the *Metric conversions* algorithm will help us to do the conversion (but in case you didn't know that algorithm existed, you could use the raster calculator that we have already used).
 
 .. image:: img/cutting_merging/metricconversions.png
 
@@ -82,4 +74,4 @@ Reprojecting the converted slope layer back with the *Reproject raster layer*, w
 
 .. warning:: todo: Add image
 
-The reprojection processes have caused the final layer to contain data outside the bounding box that we calculated in one of the first steps. This can be solved by clipping it again, as we did to obtain the base DEM.
+The reprojection processes might have caused the final layer to contain data outside the bounding box that we calculated in one of the first steps. This can be solved by clipping it again, as we did to obtain the base DEM.

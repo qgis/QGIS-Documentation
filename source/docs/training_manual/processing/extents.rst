@@ -11,7 +11,7 @@ First, let's open an algorithm that requires an extent to be defined. Open the *
 
 .. image:: img/extents/rasterize.png
 
-All the parameters, except for the last two ones, are used to define which layer is to be rasterized, and configure how the rasterization process should work. The two last parameters, on the other hand, define the characteristics of the output layer. That means that they define the area that is covered (which is not necesarily the same area covered by the input vector layer), and the resolution/cellsize (which cannot be infered from the vector layer, since vector layers do not have a cellsize).
+All the parameters, except for the last two ones, are used to define which layer is to be rasterized, and configure how the rasterization process should work. The two last parameters, on the other hand, define the characteristics of the output layer. That means that they define the area that is covered (which is not necessarily the same area covered by the input vector layer), and the resolution/cellsize (which cannot be infered from the vector layer, since vector layers do not have a cellsize).
 
 The first thing you can do is to type the 4 defining values explained before, separated by commas.
 
