@@ -154,7 +154,9 @@ tags                   False     comma separated list, spaces are allowed inside
 homepage               False     a valid URL pointing to the homepage of your plugin
 repository             True      a valid URL for the source code repository
 tracker                False     a valid URL for tickets and bug reports
-icon                   False     a file name or a relative path (relative to the base folder of the plugin's compressed package)
+icon                   False     a file name or a relative path (relative to
+                                 the base folder of the plugin's compressed
+                                 package) of a web friendly image (PNG, JPEG)
 category               False     one of `Raster`, `Vector`, `Database` and `Web`
 =====================  ========  =======================================
 

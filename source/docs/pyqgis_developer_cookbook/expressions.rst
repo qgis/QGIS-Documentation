@@ -12,6 +12,8 @@ Expressions, Filtering and Calculating Values
 QGIS has some support for parsing of SQL-like expressions. Only a small subset
 of SQL syntax is supported. The expressions can be evaluated either as boolean
 predicates (returning True or False) or as functions (returning a scalar value).
+See :ref:`vector_expressions` in the User Manual for a complete list of available
+functions.
 
 Three basic types are supported:
 
@@ -27,8 +29,9 @@ The following operations are available:
 * unary plus and minus: ``-12``, ``+5``
 * mathematical functions: ``sqrt``, ``sin``, ``cos``, ``tan``, ``asin``,
   ``acos``, ``atan``
+* conversion functions: ``to_int``, ``to_real``, ``to_string``, ``to_date``
 * geometry functions: ``$area``, ``$length``
-* conversion functions: ``to int``, ``to real``, ``to string``
+* geometry handling functions: ``$x``, ``$y``, ``$geometry``, ``num_geometries``, ``centroid``
 
 And the following predicates are supported:
 
