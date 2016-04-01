@@ -3,7 +3,7 @@
 .. _qgis.documentation.whatsnew:
 
 ****************************
-What's new in |qg| |CURRENT|
+What's new in QGIS |version|
 ****************************
 
 This release contains new features and extends the programmatic
