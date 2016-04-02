@@ -265,7 +265,7 @@ Additionally, raster files can be read using the ``readGDAL()`` command instead
 of ``brick()`` by using the ``##usereadgdal``.
 
 If you are an advanced user and do not want |qg| to create the object
-representing the layer, you can use the ``##passfilename`` tag to indicate
+representing the layer, you can use the ``##passfilenames`` tag to indicate
 that you prefer a string with the filename instead. In this case, it is up to you
 to open the file before performing any operation on the data it contains.
 
