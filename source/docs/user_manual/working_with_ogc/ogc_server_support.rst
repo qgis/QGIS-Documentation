@@ -436,6 +436,19 @@ OCG WMS 1.3.0 specification:
         http://myserver.com/cgi/qgis_mapserv.fcgi?REQUEST=GetMap&LAYERS=mylayer1,mylayer2&SELECTION=mylayer1:3,6,9;mylayer2:1,5,6&...
 
 
+GetFeatureInfo request
+----------------------
+
+QGIS server supports the following extra optional parameters to define the tolerance for point, line and polygon layers:
+
+* **FI_POINT_TOLERANCE** parameter: (Available in QGIS 2.10 and above)
+    Tolerance for point layers *GetFeatureInfo* request, in pixels.
+* **FI_LINE_TOLERANCE** parameter: (Available in QGIS 2.10 and above)
+    Tolerance for linestring layers *GetFeatureInfo* request, in pixels.
+* **FI_POLYGON_TOLERANCE** parameter: (Available in QGIS 2.10 and above)
+    Tolerance for polygon layers *GetFeatureInfo* request, in pixels.
+
+
 GetPrint request
 -----------------
 
