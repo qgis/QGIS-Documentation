@@ -453,7 +453,7 @@ First you should create a ``.pro`` file, that is a *project* file that can be
 managed by Qt Linguist.
 
 In this ``.pro`` file you have to specify all the files and forms you want to
-translate. This files is used to set up the localization files and variables.
+translate. This file is used to set up the localization files and variables.
 An example of the pro file is::
 
   FORMS = ../ui/*
@@ -469,7 +469,7 @@ Furthermore, the ``your_plugin.py`` file is the file that *calls* all the menu
 and sub-menus of your plugin in the QGIS toolbar and you want to translate them
 all.
 
-Finally with the *TRANSLATION* variable you can specify the translation languages
+Finally with the *TRANSLATIONS* variable you can specify the translation languages
 you want.
 
 .. warning::
@@ -484,7 +484,7 @@ you want.
 Once you have created the ``.pro`` you are ready to generate the ``.ts`` file(s)
 of the language(s) of your plugin.
 
-Open a terminal, cd in ``your_plugin/i18n`` directory and type::
+Open a terminal, go to ``your_plugin/i18n`` directory and type::
 
   lupdate your_plugin.pro
 
@@ -513,7 +513,7 @@ language (:menuselection:`Settings -> Options -> Language`) and restart QGIS.
 
 You should see your plugin in the correct language.
 
-.. note::
+.. warning::
 
    If you change something in your plugin (new UIs, new menu, etc..) you have to
    **generate again** the update version of both ``.ts`` and ``.qm`` file, so run
