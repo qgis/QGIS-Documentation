@@ -10,9 +10,9 @@ QGIS Configuration
 QGIS is highly configurable through the :menuselection:`Settings` menu. Choose
 between Panels, Toolbars, Project Properties, Options and Customization.
 
-.. note:: QGIS follows desktop guidelines for the location of options and project
-   properties item. Consequently related to the OS you are using, location of some
-   of items described above could be located in the :menuselection:`View` menu
+.. note:: QGIS follows desktop guidelines for the location of options and project 
+   properties item. Consequently related to the OS you are using, location of some 
+   of items described above could be located in the :menuselection:`View` menu 
    (Panels and Toolbars) or in :menuselection:`Project` for Options.
 
 ..  FIXME: please add more introduction here
@@ -26,9 +26,6 @@ In the :menuselection:`Panels-->` menu, you can switch on and off QGIS widgets.
 The :menuselection:`Toolbars-->` menu provides the possibility to switch on
 and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
 
-Theses menu are in |nix| :menuselection:`Settings` or |win|
-:menuselection:`View`.
-
 .. _figure_panels_toolbars:
 
 .. only:: html
@@ -41,60 +38,40 @@ Theses menu are in |nix| :menuselection:`Settings` or |win|
    The Panels and Toolbars menu
 
 .. index::
-   single:Statistic
-
-.. _`statistical summary`:
-
-Statistical Summary Panel
---------------------------
-
-This panel can show some statistics on a specific vector layers. The panel allows
-users to choose:
-
-* the vector layer;
-* the column or the expression;
-* filter statistics to selected features;
-* refresh the informations;
-* the statistics information to display with the bottom right button;
-
-.. index::
    single:Map overview
 
-QGIS Overview Panel
---------------------
+.. tip:: **Activating the QGIS Overview**
 
-In QGIS, you can use an overview panel that provides a full extent view of
-layers added to it. Within the view is a rectangle showing the current map
-extent. This allows you to quickly determine which area of the map you are
-currently viewing. Note that labels are not rendered to the map overview even
-if the layers in the map overview have been set up for labelling. If you click
-and drag the red rectangle in the overview that shows your current extent, the
-main map view will update accordingly.
+   In QGIS, you can use an overview panel that provides a full extent view of
+   layers added to it. It can be selected under the menu |nix| :menuselection:`Settings --> Panels` or
+   |win| :menuselection:`View --> Panels`. Within the view is a rectangle showing the
+   current map extent. This allows you to quickly determine which area of the
+   map you are currently viewing. Note that labels are not rendered to the map
+   overview even if the layers in the map overview have been set up for
+   labelling. If you click and drag the red rectangle in the overview that shows
+   your current extent, the main map view will update accordingly.
 
-.. index::
-   single:Log messages
+.. tip:: **Show Log Messages**
 
-Log Messages Panel
--------------------
+   It's possible to track the QGIS messages. You can activate
+   |checkbox| :guilabel:`Log Messages` in the menu
+   |nix| :menuselection:`Settings --> Panels` or 
+   |win| :menuselection:`View --> Panels` and follow the messages 
+   that appear in the different tabs during loading and operation.
 
-It's possible to track the QGIS messages and follow the messages
-that appear in the different tabs during loading and operation.
-
-Log Messages Panel can be display using the most right icon in the bottom
-toolbar.
 
 Project Properties
 ==================
 
-In the properties window for the project under |nix|
-:menuselection:`Settings --> Project Properties` (kde) or |nix| |win|
-:menuselection:`Project --> Project Properties` (Gnome, OS X or Windows), you
-can set project-specific options.
+In the properties window for the project under |nix| 
+:menuselection:`Settings --> Project Properties` (kde) or |nix| |win| 
+:menuselection:`Project --> Project Properties` (Gnome), you can set 
+project-specific options.
 
 * In the :guilabel:`General` menu, the **general settings** let you:
 
   * give a title to the project beside the project file path
-  * choose the color to use for features when they are selected
+  * choose the color to use for features when they are selected 
   * choose the background color: the color to use for the map canvas
   * set whether the path to layers in the project should be saved as absolute
     (full) or as relative to the project file location. You may prefer
@@ -106,15 +83,15 @@ can set project-specific options.
   Calculating areas and distances is a common need in GIS. However, these values
   are really tied to the underlying projection settings. The **Measurements**
   frame lets you control these parameters. You can indeed choose:
-
-  * the ellipsoid to use: it can be an existing one, a custom one
+  
+  * the ellipsoid to use: it can be an existing one, a custom one 
     (you'll need to set values of the semi-major and semi-minor axis)
     or None/Planimetric.
   * the :guilabel:`units for distance measurements` for length and perimeter and
     the :guilabel:`units for area measurements`. These settings, which default
     to the units set in QGIS options but then overrides it for the current project,
     are used in:
-
+  
     * Attribute table field update bar
     * Field calculator calculations
     * Identify tool derived length, perimeter and area values
@@ -123,7 +100,7 @@ can set project-specific options.
   The **Coordinate display** allows you to choose and customize the format of units
   to use to display the mouse coordinate in the status bar and the derived coordinates
   shown via the identify tool.
-
+  
   Finally, you can define a **project scale** list, which overrides the global
   predefined scales.
 
@@ -137,7 +114,7 @@ can set project-specific options.
    :align: center
 
    General tab of Project Properties dialog
-
+  
 * The :guilabel:`CRS` menu enables you to choose the Coordinate Reference
   System for this project, and to enable on-the-fly re-projection of raster and
   vector layers when displaying layers from a different CRS.
@@ -148,7 +125,7 @@ can set project-specific options.
   drawn when they do not have an existing :file:`.qml` style defined. You can
   also set the default transparency level for new layers and whether symbols
   should have random colors assigned to them.
-  There is also an additional section where you can define specific colors for the
+  There is also an additional section where you can define specific colors for the 
   running project. You can find the added colors in the drop down menu of the color dialog
   window present in each renderer.
 * The tab :guilabel:`OWS Server` allows you to define information about the QGIS
@@ -314,7 +291,7 @@ Data Sources Menu
   extended mode`
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in
   extended mode`
-* |checkbox| :guilabel:`Execute expressions on postgres server-side if
+* |checkbox| :guilabel:`Execute expressions on postgres server-side if 
   possible (Experimental)`
 
 Rendering Menu
@@ -363,9 +340,9 @@ Rendering Menu
 Colors Menu
 ------------
 
-This menu allows you to add some custom color that you can find in each color dialog
-window of the renderers. You will see a set of predefined colors in the tab: you can
-delete or edit all of them. Moreover you can add the color you want and perform some copy
+This menu allows you to add some custom color that you can find in each color dialog 
+window of the renderers. You will see a set of predefined colors in the tab: you can 
+delete or edit all of them. Moreover you can add the color you want and perform some copy 
 and paste operations. Finally you can export the color set as a :file:`gpl` file or import
 them.
 
@@ -400,7 +377,7 @@ This menu offers some options regarding the behavior of the :guilabel:`Identify 
 * :guilabel:`Highlight color` allows you to choose with which color should features being
   identified are to be highlighted.
 * :guilabel:`Buffer` determines a buffer distance
-  to be rendered from the outline of the identify highlight.
+  to be rendered from the outline of the identify highlight. 
 * :guilabel:`Minimum width` determines how thick should
   the outline of a highlighted object be.
 
