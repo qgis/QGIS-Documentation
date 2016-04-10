@@ -634,6 +634,10 @@ Then you can use the :index:`Histogram` tab which shows an interactive histogram
 values from the assigned field or expression. Class breaks can be moved or
 added using the histogram widget.
 
+.. note::
+   You can use Statistical Summary panel to get more information on your
+   vector layer. See :ref:`statistical summary`.
+
 Back to the Classes tab, you can specify the number of classes and also the mode for
 classifying features within the classes (using the Mode list). The available
 modes are:
