@@ -26,6 +26,9 @@ In the :menuselection:`Panels-->` menu, you can switch on and off QGIS widgets.
 The :menuselection:`Toolbars-->` menu provides the possibility to switch on
 and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
 
+Theses menu are in |nix| :menuselection:`Settings` or |win|
+:menuselection:`View`.
+
 .. _figure_panels_toolbars:
 
 .. only:: html
@@ -38,35 +41,55 @@ and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
    The Panels and Toolbars menu
 
 .. index::
+   single:Statistic
+
+.. _`statistical summary`:
+
+Statistical Summary Panel
+--------------------------
+
+This panel can show some statistics on a specific vector layers. The panel
+allows users to choose:
+
+* the vector layer;
+* the column or the expression;
+* filter statistics to selected features;
+* refresh the informations;
+* the statistics information to display with the bottom right button;
+
+.. index::
    single:Map overview
 
-.. tip:: **Activating the QGIS Overview**
+QGIS Overview Panel
+--------------------
 
-   In QGIS, you can use an overview panel that provides a full extent view of
-   layers added to it. It can be selected under the menu |nix| :menuselection:`Settings --> Panels` or
-   |win| :menuselection:`View --> Panels`. Within the view is a rectangle showing the
-   current map extent. This allows you to quickly determine which area of the
-   map you are currently viewing. Note that labels are not rendered to the map
-   overview even if the layers in the map overview have been set up for
-   labelling. If you click and drag the red rectangle in the overview that shows
-   your current extent, the main map view will update accordingly.
+In QGIS, you can use an overview panel that provides a full extent view of
+layers added to it. Within the view is a rectangle showing the current map
+extent. This allows you to quickly determine which area of the map you are
+currently viewing. Note that labels are not rendered to the map overview even
+if the layers in the map overview have been set up for labelling. If you click
+and drag the red rectangle in the overview that shows your current extent, the
+main map view will update accordingly.
 
-.. tip:: **Show Log Messages**
+.. index::
+   single:Log messages
 
-   It's possible to track the QGIS messages. You can activate
-   |checkbox| :guilabel:`Log Messages` in the menu
-   |nix| :menuselection:`Settings --> Panels` or
-   |win| :menuselection:`View --> Panels` and follow the messages
-   that appear in the different tabs during loading and operation.
+Log Messages Panel
+-------------------
 
+It's possible to track the QGIS messages and follow the messages
+that appear in the different tabs during loading and operation.
+ 
+Log Messages Panel can be display using the most right icon in the bottom
+toolbar.
 
 Project Properties
 ==================
 
 In the properties window for the project under |nix|
 :menuselection:`Settings --> Project Properties` (kde) or |nix| |win|
-:menuselection:`Project --> Project Properties` (Gnome), you can set
-project-specific options.
+:menuselection:`Project --> Project Properties` (Gnome, OS X or Windows), you 
+can set project-specific options.
 
 * In the :guilabel:`General` menu, the **general settings** let you:
 
