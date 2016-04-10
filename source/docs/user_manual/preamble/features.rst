@@ -76,7 +76,7 @@ several formats. |qg| offers the following:
 *  DXF-Export tool with enhanced capabilities to export styles and plugins
    to perform CAD-like functions
 
-Analyze data
+Analyse data
 ------------
 
 You can perform spatial data analysis on spatial databases and other
