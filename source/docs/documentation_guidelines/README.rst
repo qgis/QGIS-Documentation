@@ -465,10 +465,10 @@ QGIS-Documentation Clone
 ------------------------
 
 First you need to clone the QGIS-Documentation into your github account. Go to
-the [QGIS-Documentation repository](https://github.com/qgis/QGIS-Documentation)
+the `QGIS-Documentation repository <https://github.com/qgis/QGIS-Documentation>`_
 page and click on the **Fork** button.
 
-Few secondes later, in your github account you can find your QGIS-Documentation
+Few seconds later, in your github account you can find your QGIS-Documentation
 clone (Here an example of account https://github.com/yjacolin/QGIS-Documentation).
 
 Local repository
@@ -478,8 +478,8 @@ Now you are ready to get a local clone of **your** QGIS-Documentation repository
 
 ::
 
-  cd ~/Documents/Development/QGIS/
-  git clone git@github.com:yjacolin/QGIS-Documentation.git
+  $ cd ~/Documents/Development/QGIS/
+  $ git clone git@github.com:yjacolin/QGIS-Documentation.git
 
 The former command line example are for my local QGIS-Documentation repository.
 You should adapt both the path and the repository URL.
@@ -488,10 +488,10 @@ Check it:
 
 ::
 
-  git remote -v
+  $ git remote -v
   origin  git@github.com:yjacolin/QGIS-Documentation.git (fetch)
   origin  git@github.com:yjacolin/QGIS-Documentation.git (push)
-  git branch
+  $ git branch
   * master
 
 
@@ -508,14 +508,14 @@ from your local/remote repository.
 Add another remote repository
 -----------------------------
 
-To avoid problems in the futur, add a new remote repository in your local
-repository. This new remote repository is the QGIS-Documentation repository from
-QGIS project:
+To be able to follow the work in the main project, add a new remote repository
+in your local repository. This new remote repository is the QGIS-Documentation
+repository from QGIS project:
 
 ::
 
-  git remote add upstream git@github.com:qgis/QGIS-Documentation.git
-  git remote -v
+  $ git remote add upstream git@github.com:qgis/QGIS-Documentation.git
+  $ git remote -v
   origin  git@github.com:yjacolin/QGIS-Documentation.git (fetch)
   origin  git@github.com:yjacolin/QGIS-Documentation.git (push)
   upstream        git@github.com:qgis/QGIS-Documentation.git (fetch)
@@ -528,8 +528,8 @@ So now you have the choice between two remote repository:
   official one OR to update your master branch of local repository from the
   master branch of the official repository.
 
-**Note:** *upstream* is just a label, a king of standard name but you can call
-it as you want.
+.. note:: *upstream* is just a label, a kind of standard name but you can call
+   it as you want.
 
 
 Update your master branch
@@ -540,12 +540,12 @@ branch in your local repository. Just run this command line:
 
 ::
 
-  git checkout master # switch to master branch (it is easy to forget this step!)
-  git fetch upstream  # get "information" from upstream repository (aka
-  QGIS-Documentation's QGIS repository)
-  git merge upstream/master # merge update from upstram/master to the current
+  $ git checkout master # switch to master branch (it is easy to forget this step!)
+  $ git fetch upstream  # get "information" from upstream repository (aka
+  qgis/QGIS-Documentation's repository)
+  $ git merge upstream/master # merge update from upstream/master to the current
   local branch (which should be master, see step 1)
-  git push origin master # update **your** remote repository
+  $ git push origin master # update **your** remote repository
 
 
 Now we have a local and remote repository which are both up to date with
@@ -559,14 +559,14 @@ Always work on a branch! Always!
 
 ::
 
-   git checkout -b myNewBranch # checkout means go to the branch and -b flag creates a new branch if needed
-   git branch
+   $ git checkout -b myNewBranch # checkout means go to the branch and -b flag creates a new branch if needed
+   $ git branch
    master
    * myNewBranch # * means the current branch
-   vim myFile # here edit your contribution
-   git add myFile
-   git commit
-   git push origin myNewBranch
+   $ vim myFile # here edit your contribution
+   $ git add myFile
+   $ git commit
+   $ git push origin myNewBranch
 
 
 Few words about commit/push commands:
@@ -575,7 +575,7 @@ Few words about commit/push commands:
 * try to explain carefully what you change in the title of your commit and in
   the description. The first line is a title and should start by an upper case
   letter and have 80 caracters length, don't end with a ``.``. Be concise.
-  You description could be longer, end with a ``.`` and you can give much more details.
+  Your description can be longer, end with a ``.`` and you can give much more details.
 * use a ``#`` with a number to refer to an issue. Prefix with ``Fix`` if you fix the
   ticket: your commit will close the ticket.
 
@@ -586,13 +586,18 @@ QGIS-Documentation repository
 Clean-up your local and remote repository
 -----------------------------------------
 
-After your PR has been merge into the official QGIS-Documentation, you car
-delete your branch. If you work a lot this way, in few week you will get a lot
-of unuseful branch. So keep your repository clean this way:
+After your PR has been merged into the official QGIS-Documentation, you can
+delete your branch. If you work a lot this way, in few weeks you will get a lot
+of unuseful branches. So keep your repository clean this way:
 
 ::
 
-  git branch -d myNewBranch # delete local branch
-  git push origin :myNewBranch # push nothing to your myNewBranch in your remote repository (ie remove your remote branch).
+  $ git branch -d myNewBranch # delete local branch
+  $ git push origin :myNewBranch # push nothing to the myNewBranch in your
+  remote repository (ie remove your remote branch).
 
-And do not forget to update your ``master`` branch in your local repository!
+And do not forget to update the ``master`` branch in your local repository!
+
+.. note:: Some of the actions described above such as creating or deleting
+   branch, modifying or creating new file can also be performed directly from
+   Github web interface on your remote repository.
