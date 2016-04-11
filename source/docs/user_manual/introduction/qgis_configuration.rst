@@ -79,16 +79,16 @@ Log Messages Panel
 
 It's possible to track the QGIS messages and follow the messages
 that appear in the different tabs during loading and operation.
- 
-Log Messages Panel can be display using the most right icon in the bottom
-toolbar.
+
+Log Messages Panel can be display using the most right icon |mMessageLog|
+in the bottom toolbar.
 
 Project Properties
 ==================
 
 In the properties window for the project under |nix|
 :menuselection:`Settings --> Project Properties` (kde) or |nix| |win|
-:menuselection:`Project --> Project Properties` (Gnome, OS X or Windows), you 
+:menuselection:`Project --> Project Properties` (Gnome, OS X or Windows), you
 can set project-specific options.
 
 * In the :guilabel:`General` menu, the **general settings** let you:
