@@ -12,7 +12,8 @@ Usage
 
 To easier the use of icons in QGIS manuals, replacements are defined
 for each icon in :file:`/source/conf.py` file at `QGIS-Documentation repository
-<https://github.com/qgis/QGIS>`_ and some of these substitutions are listed below.
+<https://github.com/qgis/QGIS-Documentation>`_ and some of these substitutions
+are listed below.
 Thus, when you want to use an icon from QGIS application in the documentation
 there is a big chance that there is already a substitution that can/should be used.
 
