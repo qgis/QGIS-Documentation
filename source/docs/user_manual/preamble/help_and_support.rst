@@ -12,7 +12,7 @@ Help and Support
 Mailing lists 
 =============
 
-|qg| is under active development and as such it won't always work like
+QGIS is under active development and as such it won't always work like
 you expect it to. The preferred way to get help is by joining the
 qgis-users mailing list. Your questions will reach a broader audience
 and answers will benefit others.
@@ -20,7 +20,7 @@ and answers will benefit others.
 qgis-users 
 ----------
 
-This mailing list is used for discussion of |qg| in general, as well
+This mailing list is used for discussion of QGIS in general, as well
 as specific questions regarding its installation and use. You can
 subscribe to the qgis-users mailing list by visiting the following
 URL: http://lists.osgeo.org/mailman/listinfo/qgis-user
@@ -30,7 +30,7 @@ fossgis-talk-liste
 
 For the German-speaking audience, the German FOSSGIS e.V. provides the
 fossgis-talk-liste mailing list. This mailing list is used for
-discussion of open-source GIS in general, including |qg|. You can
+discussion of open-source GIS in general, including QGIS. You can
 subscribe to the fossgis-talk-liste mailing list by visiting the
 following URL:
 https://lists.fossgis.de/mailman/listinfo/fossgis-talk-liste
@@ -42,10 +42,18 @@ If you are a developer facing problems of a more technical nature, you
 may want to join the qgis-developer mailing list here:
 http://lists.osgeo.org/mailman/listinfo/qgis-developer
 
+qgis-ux
+-------
+
+A dedicated mailing list where people can chime in and collect and discuss QGIS
+related UX (User Experience) / usability issues.
+
+http://lists.osgeo.org/mailman/listinfo/qgis-ux
+
 qgis-commit 
 -----------
 
-Each time a commit is made to the |qg| code repository, an email is
+Each time a commit is made to the QGIS code repository, an email is
 posted to this list. If you want to be up-to-date with every change to
 the current code base, you can subscribe to this list at:
 http://lists.osgeo.org/mailman/listinfo/qgis-commit
@@ -79,7 +87,7 @@ qgis-tr
 -------
 
 This list deals with the translation efforts. If you like to work on
-the translation of the manuals or the graphical user interface (GUI),
+the translation of the website, manuals or the graphical user interface (GUI),
 this list is a good starting point to ask your questions. You can
 subscribe to this list at:
 http://lists.osgeo.org/mailman/listinfo/qgis-tr
@@ -87,7 +95,7 @@ http://lists.osgeo.org/mailman/listinfo/qgis-tr
 qgis-edu 
 --------
 
-This list deals with |qg| education efforts. If you would like to work
+This list deals with QGIS education efforts. If you would like to work
 on QGIS education materials, this list is a good starting point to ask
 your questions. You can subscribe to this list at:
 http://lists.osgeo.org/mailman/listinfo/qgis-edu
@@ -96,12 +104,12 @@ qgis-psc
 --------
 
 This list is used to discuss Steering Committee issues related to
-overall management and direction of |qg|. You can subscribe to this
+overall management and direction of QGIS. You can subscribe to this
 list at: http://lists.osgeo.org/mailman/listinfo/qgis-psc
 
 You are welcome to subscribe to any of the lists. Please remember to
 contribute to the list by answering questions and sharing your
-experiences.  Note that the qgis-commit and qgis-trac lists are
+experiences. Note that the qgis-commit and qgis-trac lists are
 designed for notification only and are not meant for user postings.
 
 IRC 
@@ -123,7 +131,7 @@ BugTracker
 
 While the qgis-users mailing list is useful for general 'How do I do
 XYZ in QGIS?'-type questions, you may wish to notify us about bugs in
-QGIS.  You can submit bug reports using the QGIS bug tracker at
+QGIS. You can submit bug reports using the QGIS bug tracker at
 http://hub.qgis.org/projects/quantum-gis/issues. When creating a new
 ticket for a bug, please provide an email address where we can contact
 you for additional information.
@@ -142,7 +150,7 @@ The lovely redmine ticketsystem at
 http://hub.qgis.org/wiki/quantum-gis/issues has this type as well.
 Check the ``Patch supplied`` checkbox and attach your patch before
 submitting your bug. One of the developers will review it and apply it
-to |qg|. Please don't be alarmed if your patch is not applied straight
+to QGIS. Please don't be alarmed if your patch is not applied straight
 away -- developers may be tied up with other commitments. 
 
 Note that if you supply a Pull Request, your change would be more 
@@ -151,7 +159,7 @@ likely be merged into the source code!
 Blog 
 ====
 
-The |qg| community also runs a weblog at
+The QGIS community also runs a weblog at
 http://planet.qgis.org/planet/, which has some interesting articles
 for users and developers as well provided by other blogs in the
 community. You are invited to contribute your own QGIS blog!
@@ -159,9 +167,9 @@ community. You are invited to contribute your own QGIS blog!
 Plugins 
 =======
 
-The website http://plugins.qgis.org provides the official |qg| plugins
+The website http://plugins.qgis.org provides the official QGIS plugins
 web portal. Here, you find a list of all stable and experimental QGIS
-plugins available via the 'Official |qg| Plugin Repository'.
+plugins available via the 'Official QGIS Plugin Repository'.
 
 Wiki 
 ====
