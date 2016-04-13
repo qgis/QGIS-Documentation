@@ -732,12 +732,12 @@ The assistant lets you define:
 * the scale method of representation which can be 'Flannery', 'Surface' or 'Radius'
 * The minimum and maximum size of the symbol
 * The range of values to represent: The down pointing arrow helps you
-  fill automatically these fields with the minimum (or zero) and maximum values 
+  fill automatically these fields with the minimum (or zero) and maximum values
   returned by the chosen attribute or the expression applied to your data.
 * An unique size to represent NULL values.
 
 To the right side of the dialog, you can preview the features representation
-within a live-update widget. This representation is added to the layer tree in the 
+within a live-update widget. This representation is added to the layer tree in the
 layer legend and is also used to shape the layer representation in the
 print composer legend item.
 
@@ -751,7 +751,7 @@ The values presented in the varying size assistant above will set the size
 
 A multivariate analysis rendering helps you evaluate the relationship between
 two or more variables e.g., one can be represented by a color ramp while the other is
-represented by a size. 
+represented by a size.
 
 The simplest way to create multivariate analysis in QGIS is to first apply
 a categorized or graduated rendering on a layer, using the same type of symbol
@@ -879,14 +879,14 @@ Heatmap
 With the :index:`Heatmap` renderer you can create live dynamic heatmaps for (multi)point
 layers. You can specify the heatmap radius in pixels, mm or map units, choose and
 edit a color ramp for the heatmap style and use a slider for selecting a trade-off
-between render speed and quality. You can also define a maximum value limit and give a 
+between render speed and quality. You can also define a maximum value limit and give a
 weight to points using a field or an expression. When adding or removing a feature
 the heatmap renderer updates the heatmap style automatically.
 
 .. _figure_symbology_8:
 
 .. only:: html
-  
+
      **Figure Symbology 8:**
 
 .. figure:: /static/user_manual/working_with_vector/heatmap_symbol.png
@@ -913,7 +913,7 @@ units).
 .. _figure_symbology_9:
 
 .. only:: html
-  
+
      **Figure Symbology 9:**
 
 .. figure:: /static/user_manual/working_with_vector/2_5dsymbol.png
@@ -961,18 +961,18 @@ features of the layer:
   You then get the :guilabel:`Define Order` dialog in which you:
 
   * choose a field or build an expression to apply to the layer features
-  * set in which order the fetched features should be sorted, i.e. if you choose 
+  * set in which order the fetched features should be sorted, i.e. if you choose
     **Ascending** order, the features with lower value are rendered under those
     with upper value.
   * define when features returning NULL value should be rendered: **first** or **last**.
 
   You can add several :index:`rules of ordering`. The first rule is applied
   to all the features in the layer, z-ordering them according to the value returned.
-  Then, for each group of features with the same value (including those with 
+  Then, for each group of features with the same value (including those with
   NULL value) and thus same z-level, the next rule is applied to sort its items
   among them.
   And so on...
-  
+
   Once the :guilabel:`Define Order` dialog is applied, a summary of the expression(s)
   used to control the :index:`layer rendering` is retranscribed in the textbox
   beside |checkbox| :guilabel:`Control feature rendering order` option.
@@ -980,7 +980,7 @@ features of the layer:
 .. _figure_symbology_10:
 
 .. only:: html
-  
+
      **Figure Symbology 10:**
 
 .. figure:: /static/user_manual/working_with_vector/layer_rendering_options.png
@@ -1332,10 +1332,17 @@ some descriptive text and the function '$area()' in combination with
 
    Using expressions for labelling
 
-:index:`Expression based labelling` is easy to work with. All you have to take care of
-is, that you need to combine all elements (strings, fields and functions) with a
-concatenation function (e.g., ``concat`` or ``||``) and that fields are written in "double quotes"
-and strings in 'single quotes'. Let's have a look at some examples:
+:index:`Expression based labelling` is easy to work with. All you have to take
+care of is that:
+
+* you need to combine all elements (strings, fields and functions)
+  with a string concatenation function such as ``concat``, ``+`` or ``||``. Be
+  aware that in some situations (null or numeric value involved) not all of
+  these tools will fit your need
+* strings are written in 'single quotes'
+* fields are written in "double quotes" or without any quote.
+
+Let's have a look at some examples:
 
 ::
 
@@ -1344,20 +1351,28 @@ and strings in 'single quotes'. Let's have a look at some examples:
 
    -> John Smith, Paris
 
-   # label based on two fields 'name' and 'place' separated by comma
-   concat('My name is ', "name", ' and I live in ', "place")
+   # label based on two fields 'name' and 'place' with other texts
+   'My name is ' + "name" + 'and I live in ' + "place"
+   'My name is ' || "name" || 'and I live in ' || "place"
+   concat('My name is ', name, ' and I live in ', "place")
 
    -> My name is John Smith and I live in Paris
 
-   # multi-line label based on two fields 'name' and 'place' with a descriptive text
-   concat('My name is ', "name", '\n', 'I live in ', "place")
+   # label based on two fields 'name' and 'place' with other texts
+   # combining different concatenation functions
+   concat('My name is ', name, ' and I live in ' || place)
 
+   -> My name is John Smith and I live in Paris
+   -> My name is John Smith *(if the field 'place' is NULL)*
+
+   # multi-line label based on two fields 'name' and 'place' with a descriptive text
+   concat('My name is ', "name", '\n' , 'I live in ' , "place")
    -> My name is John Smith
       I live in Paris
 
    # label based on a field and the $area function
-   # to show the place name and its area size in a converted unit.
-   'The area of ' || "place" || 'has a size of ' || ($area/10000) || ' ha'
+   # to show the place name and its rounded area size in a converted unit.
+   'The area of ' || "place" || ' has a size of ' || round($area/10000) || ' ha'
 
    -> The area of Paris has a size of 10500 ha
 
@@ -1775,7 +1790,7 @@ choose whether the bar orientation should be 'Up', 'Down', 'Right' and 'Left'.
 .. ToDo: explain the behaviour of this option
 
 .. tip:: **Switch quickly between diagrams**
-  
+
    Given that almost all the settings above are common to the different types of
    diagram, when designing your diagram, you can easily change the diagram type
    and check which one is more appropriate to your data without any loss.
