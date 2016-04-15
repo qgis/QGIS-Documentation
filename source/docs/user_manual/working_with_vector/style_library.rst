@@ -8,6 +8,9 @@ The Symbol Library
 .. contents::
    :local:
 
+.. index::
+    single:Style
+
 .. _vector_style_manager:
 
 The Style Manager

@@ -15,7 +15,8 @@ diagrams), interaction with the mouse (actions, map tips, form design). It also
 provides information about the layer.
 
 To access the :guilabel:`Layer Properties` dialog, double-click on a layer in
-the legend or right-click on the layer and select :menuselection:`Properties` from the pop-up menu.
+the legend or right-click on the layer and select :menuselection:`Properties`
+from the pop-up menu.
 
 
 Special Tools
@@ -635,8 +636,9 @@ values from the assigned field or expression. Class breaks can be moved or
 added using the histogram widget.
 
 .. note::
-   You can use Statistical Summary panel to get more information on your
-   vector layer. See :ref:`statistical summary`.
+
+   You can use Statistical Summary panel to get more information on your vector 
+   layer. See :ref:`statistical_summary`.
 
 Back to the Classes tab, you can specify the number of classes and also the mode for
 classifying features within the classes (using the Mode list). The available
