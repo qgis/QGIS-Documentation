@@ -137,7 +137,7 @@ Icon                            Substitution                        Icon        
 |expandTree|                    ``|expandTree|``                    |collapseTree|                  ``|collapseTree|``
 |expandNewTree|                 ``|expandNewTree|``                 |propertyItem|                  ``|propertyItem|``
 |deselectAll|                   ``|deselectAll|``                   |editCopy|                      ``|editCopy|``
-|filePrint|                     ``|filePrint|``                     \                               \
+|filePrint|                     ``|filePrint|``                     |propertiesWidget|              ``|propertiesWidget|``
 ==============================  ==================================  ==============================  ==================================
 
 
