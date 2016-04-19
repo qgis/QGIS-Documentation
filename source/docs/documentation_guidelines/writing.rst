@@ -471,6 +471,38 @@ page and click on the **Fork** button.
 Few seconds later, in your github account you can find your QGIS-Documentation
 clone (Here an example of account https://github.com/yjacolin/QGIS-Documentation).
 
+From your cloned repository, you can now propose changes to the main documentation.
+Indeed, `GitHub web interface <https://guides.github.com/activities/hello-world/>`_
+offers you ways to easily:
+
+* edit files, preview and commit your changes
+* make a pull request to have your changes inserted in the main repo
+* create or delete branches
+
+.. tip: **Keep using the latest version, easily**
+
+  When you find a page that may need some completion or adjustment, use the ``Fix me``
+  link at the bottom of the page (available for Testing doc). This generates
+  a copy of the main repo's master branch (latest version) into your fork and
+  opens in edit mode the file to update.
+  Just make your changes, commit in the new branch and submit your pull request.
+
+
+However, and despite the tip above, the web interface doesn't offer tools to:
+
+* update your existing branches
+* group your commits and clean your changes history
+* build the documentation to test your changes
+* fix conflicts with the main repo if needed...
+
+You then need to `install git <https://git-scm.com/downloads>`_ on your hard
+drive in order to get access to more advanced and powerful tools and have a
+local copy of the repository. Some basics you may often need are exposed below.
+You'll also find rules to care about even if you opt for the web interface.
+
+In the code samples below, lines beginning with ``$`` show commands you should
+type while ``#`` are comments.
+
 Local repository
 ----------------
 
@@ -540,13 +572,16 @@ branch in your local repository. Just run this command line:
 
 ::
 
-  $ git checkout master # switch to master branch (it is easy to forget this step!)
-  $ git fetch upstream  # get "information" from upstream repository (aka
-  qgis/QGIS-Documentation's repository)
-  $ git merge upstream/master # merge update from upstream/master to the current
-  local branch (which should be master, see step 1)
-  $ git push origin master # update **your** remote repository
-
+  # switch to master branch (it is easy to forget this step!)
+  $ git checkout master
+  # get "information" from upstream repository
+  # (aka qgis/QGIS-Documentation's repository)
+  $ git fetch upstream
+  # merge update from upstream/master to the current local branch
+  # (which should be master, see step 1)
+  $ git merge upstream/master
+  # update **your** remote repository
+  $ git push origin master
 
 Now we have a local and remote repository which are both up to date with
 QGIS-Documentation from QGIS organisation. You can start to work on your
@@ -559,19 +594,26 @@ Always work on a branch! Always!
 
 ::
 
-   $ git checkout -b myNewBranch # checkout means go to the branch and -b flag creates a new branch if needed
+   $ git checkout -b myNewBranch
+   # checkout means go to the branch
+   # and -b flag creates a new branch if needed
    $ git branch
    master
-   * myNewBranch # * means the current branch
-   $ vim myFile # here edit your contribution
+   * myNewBranch
+   # * means the current branch
+   # You can now add your contribution, by editing the concerned file
+   # with any application (in this case, vim is used)
+   $ vim myFile
+   # once done
    $ git add myFile
    $ git commit
+   # send your changes to your remote repository
    $ git push origin myNewBranch
 
 
 Few words about commit/push commands:
 
-* try to commit only one contribution (atomic change)
+* try to commit only one contribution (atomic change) i.e. address only one issue
 * try to explain carefully what you change in the title of your commit and in
   the description. The first line is a title and should start by an upper case
   letter and have 80 caracters length, don't end with a ``.``. Be concise.
@@ -581,7 +623,7 @@ Few words about commit/push commands:
 
 Now you can go to your github repository and create a Pull Request (PR). Check
 to create a PR from your branch to the master branch of the official
-QGIS-Documentation repository
+QGIS-Documentation repository.
 
 Clean-up your local and remote repository
 -----------------------------------------
@@ -592,9 +634,10 @@ of unuseful branches. So keep your repository clean this way:
 
 ::
 
-  $ git branch -d myNewBranch # delete local branch
-  $ git push origin :myNewBranch # push nothing to the myNewBranch in your
-  remote repository (ie remove your remote branch).
+  # delete local branch
+  $ git branch -d myNewBranch
+  # Remove your remote myNewBranch by pushing nothing to it
+  $ git push origin :myNewBranch
 
 And do not forget to update the ``master`` branch in your local repository!
 
