@@ -641,6 +641,3 @@ of unuseful branches. So keep your repository clean this way:
 
 And do not forget to update the ``master`` branch in your local repository!
 
-.. note:: Some of the actions described above such as creating or deleting
-   branch, modifying or creating new file can also be performed directly from
-   Github web interface on your remote repository.
