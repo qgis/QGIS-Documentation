@@ -39,7 +39,7 @@ the Layer Properties dialog. This combobox provides you with functions to create
 load and manage styles.
 
 A style stores any information set in the layer properties dialog to render
-or interact with the features (including symbology, labelling, action, diagram...
+or interact with the features (including symbology, labeling, action, diagram...
 settings).
 Styles can be stored inside the project, in a file (``.qml`` or ``.sld``) or
 in a database (SpatiaLite, PostGIS...). Thanks to layer visibility manager, you can assign
@@ -1000,9 +1000,9 @@ Labels Menu
 ===========
 
 The |mActionLabeling| :sup:`Labels` core application provides smart
-:index:`labelling` for vector point, line and polygon layers, and only requires a
+:index:`labeling` for vector point, line and polygon layers, and only requires a
 few parameters. This application also supports on-the-fly transformed layers.
-The following menus are used to configure the labelling of vector layers:
+The following menus are used to configure the labeling of vector layers:
 
 * Text
 * Formatting
@@ -1013,20 +1013,28 @@ The following menus are used to configure the labelling of vector layers:
 * Rendering
 
 To label a layer start QGIS and load a vector layer. Activate the layer
-in the legend and click on the |mActionLabeling| :sup:`Layer Labelling Options`
-icon in the QGIS toolbar menu.
+in the legend and click on the |mActionLabeling| :sup:`Layer Labeling Options`
+icon in the QGIS toolbar menu or activate the :guilabel:`Labels` tab in the
+layer properties dialog.
 
-The first step is to choose the labelling method from the drop-down list. There
-are four options available: **No labels**, **Show labels for this layer**, **Rule-based
-labelling** and **Discourage other labels from covering features in this layer**.
+The first step is to choose the labeling method from the drop-down list. There
+are four options available:
+
+* **No labels**
+* **Show labels for this layer**
+* :ref:`Rule-based labeling <rule_based_labeling>` 
+* and **Discourage other labels from covering features in this layer**: allows to
+  set a layer as just an obstacle for other layer's labels without rendering any
+  labels of its own.
+  
 Select the **Show labels for this layer** option and then select an attribute
-column to use for labelling from the **Label with** drop-down list. Click
+column to use for labeling from the **Label with** drop-down list. Click
 |mActionmIconExpressionEditorOpen| if you want to define labels based on
-expressions - See labeling_with_expressions_.
+expressions - See :ref:`labeling_with_expressions`.
 
-The following steps describe simple labelling without using the
-:guilabel:`Data defined override` functions,
-which are situated next to the drop-down menus.
+The following steps describe simple labeling without using the
+:guilabel:`Data defined override` functions, which are situated next to
+the drop-down menus - see :ref:`data_defined_labeling` for an use-case.
 
 Text menu
 ---------
@@ -1310,8 +1318,8 @@ QGIS allows to use expressions to label features. Just click the
 |mActionmIconExpressionEditorOpen| icon in the |mActionLabeling| :sup:`Labels`
 menu of the properties dialog. In figure_labels_4_ you see a sample expression
 to label the alaska regions with name and area size, based on the field 'NAME_2',
-some descriptive text and the function '$area()' in combination with
-'format_number()' to make it look nicer.
+some descriptive text and the function ``$area`` in combination with
+``format_number()`` to make it look nicer.
 
 .. _figure_labels_4:
 
@@ -1323,9 +1331,9 @@ some descriptive text and the function '$area()' in combination with
    :align: center
    :width: 30em
 
-   Using expressions for labelling
+   Using expressions for labeling
 
-:index:`Expression based labelling` is easy to work with. All you have to take
+:index:`Expression based labeling` is easy to work with. All you have to take
 care of is that:
 
 * you need to combine all elements (strings, fields and functions)
@@ -1379,10 +1387,12 @@ As you can see in the expression builder, you have hundreds of functions availab
 to create simple and very complex expressions to label your data in QGIS. See
 :ref:`vector_expressions` chapter for more information and examples on expressions.
 
-Using data-defined override for labelling
+.. _data_defined_labeling:
+
+Using data-defined override for labeling
 -----------------------------------------
 
-With the :index:`data-defined override` functions, the settings for the labelling
+With the :index:`data-defined override` functions, the settings for the labeling
 are overridden by entries in the attribute table.
 You can activate and deactivate the function with the right-mouse button.
 Hover over the symbol and you see the information about the data-defined override,
@@ -1411,7 +1421,7 @@ We now describe an example using the data-defined override function for the
 .. figure:: /static/user_manual/working_with_vector/label_data_defined.png
    :align: center
 
-   Labelling of vector polygon layers with data-defined override
+   Labeling of vector polygon layers with data-defined override
 
 
 .. _figure_labels_6:
@@ -1432,10 +1442,10 @@ Rule-based labeling
 
 With :index:`Rule-based labeling` multiple label configurations can be defined
 and applied selectively on the base of expression filters, as in
-:ref:`Rule-based rendering <rule_based_rendering>`
+:ref:`Rule-based rendering <rule_based_rendering>`.
 
 Rules can be set selecting the corresponding option at the top of the
-Labels panel (see figure_labels_7_ )
+Labels panel (see figure_labels_7_ ).
 
 .. _figure_labels_7:
 
@@ -1770,7 +1780,7 @@ According to the layer geometry type, it offers different options for the placem
 The diagram can also be placed using feature data by filling the ``X``
 and ``Y`` fields with an attribute of the feature.
 
-The placement of the diagrams can interact with the labelling, so you can
+The placement of the diagrams can interact with the labeling, so you can
 detect and solve position conflicts between diagrams and labels by setting
 the **Priority** slider or the **z-index** value.
 
