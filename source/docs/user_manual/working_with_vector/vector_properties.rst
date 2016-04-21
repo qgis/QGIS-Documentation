@@ -1037,6 +1037,18 @@ You have the possibility to render the text 'All uppercase', 'All lowercase'
 or 'Capitalize first letter'. Use the :ref:`blend-modes` to create effects
 known from graphics programs.
 
+
+.. _figure_labels_1:
+
+.. only:: html
+
+   **Figure Labels 1:**
+
+.. figure:: /static/user_manual/working_with_vector/label_points.png
+   :align: center
+
+   Smart labeling of vector point layers
+
 Formatting menu
 ---------------
 
@@ -1180,7 +1192,18 @@ Additionally, you can define a :guilabel:`Maximum angle between curved character
 selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
 
 For all three placement options you can set up a minimum distance for repeating
-labels. The distance can be in mm or in map units.
+labels. The distance can be in ``mm`` or in ``map units``.
+
+.. _figure_labels_2:
+
+.. only:: html
+
+   **Figure Labels 2:**
+
+.. figure:: /static/user_manual/working_with_vector/label_line.png
+   :align: center
+
+   Smart labeling of vector line layers
 
 Placement for polygon layers
 ............................
@@ -1201,12 +1224,25 @@ The |radiobuttonoff| :guilabel:`Around centroid` setting places the label at a
 specified distance around the centroid. Again, you can define
 |radiobuttonon| :guilabel:`visible polygon`
 or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
+
 With the |radiobuttonoff| :guilabel:`Using perimeter` settings, you can define a
 position and a distance for the label. For the position,
 |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
 |checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation
 dependent position` are possible. You can specify the distance between the label
 and the polygon outline, as well as the repeat interval for the label.
+
+.. _figure_labels_3:
+
+.. only:: html
+
+   **Figure Labels 3:**
+
+.. figure:: /static/user_manual/working_with_vector/label_area.png
+   :align: center
+
+   Smart labeling of vector polygon layers
+
 
 In the :guilabel:`priority` section you can define the priority with which labels
 are rendered for all three vector layer types (point, line, polygon). This
@@ -1251,7 +1287,7 @@ you can fine tune which labels should be rendered.
 Under :guilabel:`Feature options`, you can choose to :guilabel:`label every
 part of a multi-part feature` and :guilabel:`limit the number of features to be labeled`.
 Both line and polygon layers offer the option to set a minimum size for the
-features to be labeled.
+features to be labeled, using :guilabel:`Suppress labeling of features smaller than`.
 For polygon features, you can also filter the labels to show according to whether they
 completely fit within the feature or not.
 For line features, you can choose to :guilabel:`Merge connected lines
@@ -1262,53 +1298,6 @@ the :guilabel:`Distance` or :guilabel:`Repeat` options in Placement tab.
 Under :guilabel:`Obstacles`, the |checkbox| :guilabel:`Discourage
 labels from covering features` helps you manage covering relation
 between labels and other features.
-
-
-.. features act as obstacles for labels or not .
-
-.. _figure_labels_1:
-
-.. only:: html
-
-   **Figure Labels 1:**
-
-.. figure:: /static/user_manual/working_with_vector/label_points.png
-   :align: center
-
-   Smart labeling of vector point layers
-
-For line layers you can
-:guilabel:`Suppress labelling of features smaller than` a set length.
-
-.. if features act as obstacles for labels or not.
-
-.. _figure_labels_2:
-
-.. only:: html
-
-   **Figure Labels 2:**
-
-.. figure:: /static/user_manual/working_with_vector/label_line.png
-   :align: center
-
-   Smart labeling of vector line layers
-
-For polygon layers you can also use :guilabel:`Suppress labelling of features smaller than` in
-the :guilabel:`Feature options`.
-
-
-.. if features act as obstacles for labels or not
-
-.. _figure_labels_3:
-
-.. only:: html
-
-   **Figure Labels 3:**
-
-.. figure:: /static/user_manual/working_with_vector/label_area.png
-   :align: center
-
-   Smart labelling of vector polygon layers
 
 
 .. _labeling_with_expressions:
@@ -1323,8 +1312,6 @@ menu of the properties dialog. In figure_labels_4_ you see a sample expression
 to label the alaska regions with name and area size, based on the field 'NAME_2',
 some descriptive text and the function '$area()' in combination with
 'format_number()' to make it look nicer.
-
-.. features act as obstacles for labels or not .
 
 .. _figure_labels_4:
 
