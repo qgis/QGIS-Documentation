@@ -1140,14 +1140,14 @@ in a categorized renderer.
 
 By default, placements are prioritised in the following order:
 
-* top right
-* top left
-* bottom right
-* bottom left
-* middle right
-* middle left
-* top, slightly right
-* bottom, slightly left.
+#. top right
+#. top left
+#. bottom right
+#. bottom left
+#. middle right
+#. middle left
+#. top, slightly right
+#. bottom, slightly left.
 
 Placement priority can however be customized or set for an individual
 feature using a data defined list of prioritised positions.
