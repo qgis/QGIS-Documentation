@@ -250,19 +250,23 @@ or at the whole layer level. It adds :index:`paint effects` for customizing the 
 of vector files.
 
 The function is activated by checking the |checkbox| :guilabel:`Draw effects` option
-and clicking the |PaintEffects| :guilabel:`Customize effects` button.
+and clicking the |PaintEffects| :sup:`Customize effects` button.
 The effects include the following categories, with the following options:
 
 * **Blur:** Adds a blur effect on the vector layer. The options that someone can change are the
   :menuselection:`Blur type` (:menuselection:`Stack` or :menuselection:`Gaussian blur`),
   the strength and transparency of the blur effect.
 
-  **Figure Effects 1:**
+  .. _figure_effects_1:
+
+  .. only:: html
+
+     **Figure Effects 1:**
 
   .. figure:: /static/user_manual/working_with_vector/blur.png
      :align: center
 
-  Draw Effects: Blur dialog
+     Draw Effects: Blur dialog
 
 * **Colorize:** This effect can be used by someone who wants to adjust the :menuselection:`brightness`,
   :menuselection:`contrast` and :menuselection:`saturation` levels of the feature. It also offers
@@ -270,7 +274,11 @@ The effects include the following categories, with the following options:
   the :menuselection:`grayscale` effect selected, which actually converts the color of the feature
   to grayscale, based on 3 options: lightness, luminosity and average.
 
-  **Figure Effects 2:**
+  .. _figure_effects_2:
+
+  .. only:: html
+
+     **Figure Effects 2:**
 
   .. figure:: /static/user_manual/working_with_vector/colorise.png
      :align: center
@@ -280,7 +288,11 @@ The effects include the following categories, with the following options:
 * **Source:** Implements the feature in the drawing menu, with its style as selected in the layer properties.
   The transparency of its style can be adjusted.
 
-  **Figure Effects 3:**
+  .. _figure_effects_3:
+
+  .. only:: html
+
+     **Figure Effects 3:**
 
   .. figure:: /static/user_manual/working_with_vector/source.png
      :align: center
@@ -293,7 +305,11 @@ The effects include the following categories, with the following options:
   the source object. :menuselection:`Drop Shadow` also has the option to change the blur radius,
   the transparency and the color of the effect.
 
-  **Figure Effects 4:**
+  .. _figure_effects_4:
+
+  .. only:: html
+
+     **Figure Effects 4:**
 
   .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
      :align: center
@@ -305,7 +321,11 @@ The effects include the following categories, with the following options:
   The latter specifies the proximity from the edge of the feature where you want any blurring to happen.
   Additionally, there are options to customize the color of the glow, with a single color or a color ramp.
 
-  **Figure Effects 5:**
+  .. _figure_effects_5:
+
+  .. only:: html
+
+     **Figure Effects 5:**
 
   .. figure:: /static/user_manual/working_with_vector/inner_glow.png
      :align: center
@@ -316,7 +336,11 @@ The effects include the following categories, with the following options:
   the shadow effect on the inside of the edges of the feature. The available options for customization
   are the same as the :menuselection:`Drop Shadow` effect.
 
-  **Figure Effects 6:**
+  .. _figure_effects_6:
+
+  .. only:: html
+
+     **Figure Effects 6:**
 
   .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
      :align: center
@@ -327,7 +351,11 @@ The effects include the following categories, with the following options:
   the glow effect on the outside of the edges of the feature. The available options for customization
   are the same as the :menuselection:`Inner Glow` effect.
 
-  **Figure Effects 7:**
+  .. _figure_effects_7:
+
+  .. only:: html
+
+     **Figure Effects 7:**
 
   .. figure:: /static/user_manual/working_with_vector/outer_glow.png
      :align: center
@@ -345,7 +373,11 @@ The effects include the following categories, with the following options:
   around its center point and the :menuselection:`Translate` effect changes the position
   of the item based on a distance given on the x and/or the y axis.
 
-  **Figure Effects 8:**
+  .. _figure_effects_8:
+
+  .. only:: html
+
+     **Figure Effects 8:**
 
   .. figure:: /static/user_manual/working_with_vector/transform.png
      :align: center
@@ -354,9 +386,10 @@ The effects include the following categories, with the following options:
 
 In each of the Draw effect types, the :menuselection:`Blend mode` and :menuselection:`Draw mode`
 can be adjusted to match the user needs. The Blend mode follows the same methods as the ones
-included for the layers (link here) and cannot be used for the transform effect.
+included for the layers and cannot be used for the transform effect.
 You can find more information in the :ref:`blend-modes`.
 The Draw mode can apply a render and/or modify mode for each of the effects.
+
 One or more draw effects can be selected at the same time, which can also be
 moved up and down, in order to finally get the desired result.
 
