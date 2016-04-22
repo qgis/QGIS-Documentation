@@ -23,7 +23,7 @@ box with autocompletion where you type the command you want to run.
 
    The QGIS Commander
 
-The Commander is started from the *Analysis* menu or, more practically, by pressing
+The Commander is started from the *Processing* menu or, more practically, by pressing
 :kbd:`Shift + Ctrl + M` (you can change that default keyboard shortcut in the
 QGIS configuration if you prefer a different one). To close it, just press :kbd:`ESC`.
 Apart from executing Processing
