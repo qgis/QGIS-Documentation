@@ -236,6 +236,8 @@ Other basic icons
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
+|arrowDown|                     ``|arrowDown|``                     |arrowUp|                       ``|arrowUp|``     
+|arrowLeft|                     ``|arrowLeft|``                     |arrowRight|                    ``|arrowRight|``     
 |signPlus|                      ``|signPlus|``                      |signMinus|                     ``|signMinus|``
 |projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
@@ -312,14 +314,19 @@ Properties
 
 Icons used in Layer Properties dialog:
 
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|symbology|                     ``|symbology|``                     |diagram|                       ``|diagram|``
-|attributes|                    ``|attributes|``                    |general|                       ``|general|``
-|metadata|                      ``|metadata|``                      |action|                        ``|action|``
-|join|                          ``|join|``                          \                               \
-==============================  ==================================  ==============================  ==================================
+==================================  ======================================  =============================  ================================
+Icon                                Substitution                            Icon                           Substitution
+==================================  ======================================  =============================  ================================
+|symbology|                         ``|symbology|``                         |labels|                       ``|labels|``
+|attributes|                        ``|attributes|``                        |general|                      ``|general|``
+|metadata|                          ``|metadata|``                          |action|                       ``|action|``
+|join|                              ``|join|``                              |diagram|                      ``|diagram|``
+|renderer25dSymbol|                 ``|renderer25dSymbol|``                 |rendererCategorizedSymbol|    ``|rendererCategorizedSymbol|``
+|rendererGraduatedSymbol|           ``|rendererGraduatedSymbol|``           |rendererHeatmapSymbol|        ``|rendererHeatmapSymbol|``
+|rendererInvertedSymbol|            ``|rendererInvertedSymbol|``            |rendererNullSymbol|           ``|rendererNullSymbol|``
+|rendererPointDisplacementSymbol|   ``|rendererPointDisplacementSymbol|``   |rendererRuleBasedSymbol|      ``|rendererRuleBasedSymbol|``         
+|rendererSingleSymbol|              ``|rendererSingleSymbol|``              \                              \
+==================================  ======================================  =============================  ================================
 
 
 Plugin Icons
