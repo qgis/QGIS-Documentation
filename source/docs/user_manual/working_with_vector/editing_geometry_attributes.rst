@@ -829,7 +829,7 @@ To create a new GPX file, you need to load the GPS plugin first. :menuselection:
 |mActionShowPluginManager| :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
 Activate the |checkbox| :guilabel:`GPS Tools` checkbox.
 
-When this plugin is loaded, choose :menuselection:`New -->` |icon_newgpx|
+When this plugin is loaded, choose :menuselection:`New -->` |create_gpx|
 :menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` menu.
 In the :guilabel:`Save new GPX file as` dialog, you can choose where to save the
 new GPX layer.
