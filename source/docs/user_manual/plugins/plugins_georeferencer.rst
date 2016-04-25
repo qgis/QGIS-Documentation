@@ -41,7 +41,7 @@ you can accurately determine coordinates.
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
 | |mActionZoomNext|              | Zoom Next                  | |mActionLinkGeorefToQGis|     | Link Georeferencer to |qg| |
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
-| |mActionLinkQGisToGeoref|      | Link |qg| to Georeferencer | |mActionFullHistogramStretch| | Full histogram stretch     |
+| |mActionLinkQGisToGeoref|      | Link QGIS to Georeferencer | |FullHistogramStretch|        | Full histogram stretch     |
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
 | |mActionLocalHistogramStretch| | Local histogram stretch    |                               |                            |
 +--------------------------------+----------------------------+-------------------------------+----------------------------+

@@ -60,8 +60,7 @@ Menu Items
 =======================  =========================  =====================  =========================
 Icon                     Substitution               Icon                   Substitution
 =======================  =========================  =====================  =========================
-|checkbox|               ``|checkbox|``             \                      \
-|checkbox_checked|       ``|checkbox_checked|``     |checkbox_unchecked|   ``|checkbox_unchecked|``
+|checkbox|               ``|checkbox|``             |checkbox_unchecked|   ``|checkbox_unchecked|``
 |radiobuttonon|          ``|radiobuttonon|``        |radiobuttonoff|       ``|radiobuttonoff|``
 |selectnumber|           ``|selectnumber|``         |selectstring|         ``|selectstring|``
 |browsebutton|           ``|browsebutton|``         |slider|               ``|slider|``
@@ -100,7 +99,7 @@ Manage Layers and overview
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|mActionAddOgrLayer|            ``|mActionAddOgrLayer|``            |mActionAddNonDbLayer|          ``|mActionAddNonDbLayer|``
+|mActionAddOgrLayer|            ``|mActionAddOgrLayer|``            \                               \
 |mActionAddRasterLayer|         ``|mActionAddRasterLayer|``         |mActionAddMssqlLayer|          ``|mActionAddMssqlLayer|``
 |mActionAddLayer|               ``|mActionAddLayer|``               |mActionAddSpatiaLiteLayer|     ``|mActionAddSpatiaLiteLayer|``
 |mActionNewVectorLayer|         ``|mActionNewVectorLayer|``         |mActionRemoveLayer|            ``|mActionRemoveLayer|``
@@ -109,7 +108,7 @@ Icon                            Substitution                        Icon        
 |oracle_raster|                 ``|oracle_raster|``
 |dbmanager|                     ``|dbmanager|``                     |gdal|                          ``|gdal|``
 |mActionInOverview|             ``|mActionInOverview|``             |mActionAddAllToOverview|       ``|mActionAddAllToOverview|``
-|mActionRemoveAllFromOverview|  ``|mActionRemoveAllFromOverview|``  |RemoveAllOVerview|             ``|RemoveAllOVerview|``
+|RemoveAllOverview|             ``|RemoveAllOverview|``             \                               \
 |mActionShowAllLayers|          ``|mActionShowAllLayers|``          |mActionHideAllLayers|          ``|mActionHideAllLayers|``
 |mActionShowPresets|            ``|mActionShowPresets|``            |mIconZip|                      ``|mIconZip|``
 ==============================  ==================================  ==============================  ==================================
@@ -234,6 +233,7 @@ Other basic icons
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
+|mActionSignPlus|               ``|mActionSignPlus|``               |mActionSignMinus|              ``|mActionSignMinus|``
 |mActionProjectProperties|      ``|mActionProjectProperties|``      |mActionOptions|                ``|mActionOptions|``
 |copyright_label|               ``|copyright_label|``               |north_arrow|                   ``|north_arrow|``
 |scale_bar|                     ``|scale_bar|``                     |locale|                        ``|locale|``
@@ -267,7 +267,7 @@ Projections and Georeferencer
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |geographic|                    ``|geographic|``                    |CRS|                           ``|CRS|``
-|mActionCustomProjection|       ``|mActionCustomProjection|``       |mIconNew|                      ``|mIconNew|``
+|mActionCustomProjection|       ``|mActionCustomProjection|``       \                               \
 |mIconProjectionDisabled|       ``|mIconProjectionDisabled|``       |mIconProjectionEnabled|        ``|mIconProjectionEnabled|``
 |georeferencer|                 ``|georeferencer|``                 |pencil|                        ``|pencil|``
 |mActionLinkQGisToGeoref|       ``|mActionLinkQGisToGeoref|``       |mActionLinkGeorefToQGis|       ``|mActionLinkGeorefToQGis|``
@@ -293,14 +293,14 @@ Icon                            Substitution                        Icon        
 |mActionAddMap|                 ``|mActionAddMap|``                 |mActionAddLegend|              ``|mActionAddLegend|``
 |mActionAddHtml|                ``|mActionAddHtml|``                |mActionAddTable|               ``|mActionAddTable|``
 |mActionLabel|                  ``|mActionLabel|``                  |mActionScaleBar|               ``|mActionScaleBar|``
-|mActionSelectPan|              ``|mActionSelectPan|``              |mActionGroupItems|             ``|mActionGroupItems|``
 |mActionSelect|                 ``|mActionSelect|``                 |mActionMoveItemContent|        ``|mActionMoveItemContent|``
 |mActionRaiseItems|             ``|mActionRaiseItems|``             |mActionLowerItems|             ``|mActionLowerItems|``
 |mActionMoveItemsToTop|         ``|mActionMoveItemsToTop|``         |mActionMoveItemsToBottom|      ``|mActionMoveItemsToBottom|``
 |mActionAlignLeft|              ``|mActionAlignLeft|``              |mActionAlignRight|             ``|mActionAlignRight|``
 |mActionAlignHCenter|           ``|mActionAlignHCenter|``           |mActionAlignVCenter|           ``|mActionAlignVCenter|``
 |mActionAlignTop|               ``|mActionAlignTop|``               |mActionAlignBottom|            ``|mActionAlignBottom|``
-|mIconLock|                     ``|mIconLock|``                     \                               \
+|locked|                        ``|locked|``                        |unlocked|                      ``|unlocked|``      
+|mActionGroupItems|             ``|mActionGroupItems|``
 ==============================  ==================================  ==============================  ==================================
 
 Properties
@@ -311,10 +311,10 @@ Icons used in Layer Properties dialog:
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|symbology|                     ``|symbology|``                     |labels|                        ``|labels|``
+|symbology|                     ``|symbology|``                     |diagram|                       ``|diagram|``
 |attributes|                    ``|attributes|``                    |general|                       ``|general|``
 |metadata|                      ``|metadata|``                      |action|                        ``|action|``
-|join|                          ``|join|``                          |diagram|                       ``|diagram|``
+|join|                          ``|join|``                          \                               \
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -335,7 +335,7 @@ Icon                            Substitution                        Icon        
 |mapserver_export|              ``|mapserver_export|``              |mActionExportMapServer|        ``|mActionExportMapServer|``
 |spiticon|                      ``|spiticon|``                      |delimited_text|                ``|delimited_text|``
 |mActionGDALScript|             ``|mActionGDALScript|``             |dxf2shp_converter|             ``|dxf2shp_converter|``
-|spatialquery|                  ``|spatialquery|``                  |selectesubsetlayer|            ``|selectesubsetlayer|``
+|spatialquery|                  ``|spatialquery|``                  |selectsubsetlayer|             ``|selectsubsetlayer|``
 |selectcreatelayer|             ``|selectcreatelayer|``             |metasearch|                    ``|metasearch|``
 |geometrychecker|               ``|geometrychecker|``               |geometrysnapper|               ``|geometrysnapper|``
 |topologychecker|               ``|topologychecker|``

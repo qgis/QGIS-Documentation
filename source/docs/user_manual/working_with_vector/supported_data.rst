@@ -500,7 +500,7 @@ DB Manager plugin and the command line tools shp2pgsql and ogr2ogr.
 DB Manager
 ..........
 
-QGIS comes with a core plugin named |icon_dbmanager| :sup:`DB Manager`. It can
+QGIS comes with a core plugin named |dbmanager| :sup:`DB Manager`. It can
 be used to load shapefiles and other data formats, and it includes support for
 schemas. See section :ref:`dbmanager` for more information.
 
