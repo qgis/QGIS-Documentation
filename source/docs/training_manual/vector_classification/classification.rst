@@ -261,7 +261,7 @@ That's where rule-based classification comes in handy.
 .. image:: /static/training_manual/classification/rule_style_result.png
    :align: center
 
-* Add a new criterion :kbd:`"landuse" != 'residential' AND AREA >= 0.00005`
+* Add a new criterion :kbd:`"landuse" != 'residential' AND "AREA" >= 0.00005`
   and choose a mid-green color.
 * Add another new criterion :kbd:`"name"  =  ' |majorUrbanName| '` and assign it
   a darker grey-blue color in order to indicate the town's importance in the
