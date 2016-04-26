@@ -1356,7 +1356,7 @@ Let's have a look at some examples:
    concat('My name is ', name, ' and I live in ' || place)
 
    -> My name is John Smith and I live in Paris
-   -> My name is John Smith *(if the field 'place' is NULL)*
+   -> My name is John Smith     # if the field 'place' is NULL
 
    # multi-line label based on two fields 'name' and 'place' with a descriptive text
    concat('My name is ', "name", '\n' , 'I live in ' , "place")
