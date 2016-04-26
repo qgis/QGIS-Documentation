@@ -253,15 +253,29 @@ The function is activated by checking the |checkbox| :guilabel:`Draw effects` op
 and clicking the |PaintEffects| :sup:`Customize effects` button.
 The effects include the following categories, with the following options:
 
-* **Blur:** Adds a blur effect on the vector layer. The options that someone can change are the
-  :menuselection:`Blur type` (:menuselection:`Stack` or :menuselection:`Gaussian blur`),
-  the strength and transparency of the blur effect.
+* **Source:** Implements the feature in the drawing menu, with its style as selected in the
+  layer properties. The transparency of its style can be adjusted.
 
   .. _figure_effects_1:
 
   .. only:: html
 
      **Figure Effects 1:**
+
+  .. figure:: /static/user_manual/working_with_vector/source.png
+     :align: center
+
+     Draw Effects: Source dialog
+
+* **Blur:** Adds a blur effect on the vector layer. The options that someone can change are the
+  :menuselection:`Blur type` (:menuselection:`Stack` or :menuselection:`Gaussian blur`),
+  the strength and transparency of the blur effect.
+
+  .. _figure_effects_2:
+
+  .. only:: html
+
+     **Figure Effects 2:**
 
   .. figure:: /static/user_manual/working_with_vector/blur.png
      :align: center
@@ -274,30 +288,16 @@ The effects include the following categories, with the following options:
   the :menuselection:`grayscale` effect selected, which actually converts the color of the feature
   to grayscale, based on 3 options: lightness, luminosity and average.
 
-  .. _figure_effects_2:
-
-  .. only:: html
-
-     **Figure Effects 2:**
-
-  .. figure:: /static/user_manual/working_with_vector/colorise.png
-     :align: center
-
-     Draw Effects: Colorize dialog
-
-* **Source:** Implements the feature in the drawing menu, with its style as selected in the layer properties.
-  The transparency of its style can be adjusted.
-
   .. _figure_effects_3:
 
   .. only:: html
 
      **Figure Effects 3:**
 
-  .. figure:: /static/user_manual/working_with_vector/source.png
+  .. figure:: /static/user_manual/working_with_vector/colorise.png
      :align: center
 
-     Draw Effects: Source dialog
+     Draw Effects: Colorize dialog
 
 * **Drop Shadow:** Using this effect adds a shadow on the feature, which looks like adding an
   extra dimension. This effect can be customized by changing the :menuselection:`offset`
@@ -316,10 +316,9 @@ The effects include the following categories, with the following options:
 
      Draw Effects: Drop Shadow dialog
 
-* **Inner Glow:** Adds a glow effect inside the feature. This effect can be customized by adjusting
-  the :menuselection:`spread` (width) of the glow, or the :menuselection:`Blur radius`.
-  The latter specifies the proximity from the edge of the feature where you want any blurring to happen.
-  Additionally, there are options to customize the color of the glow, with a single color or a color ramp.
+* **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect, but it adds
+  the shadow effect on the inside of the edges of the feature. The available options for customization
+  are the same as the :menuselection:`Drop Shadow` effect.
 
   .. _figure_effects_5:
 
@@ -327,14 +326,15 @@ The effects include the following categories, with the following options:
 
      **Figure Effects 5:**
 
-  .. figure:: /static/user_manual/working_with_vector/inner_glow.png
+  .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
      :align: center
 
-     Draw Effects: Inner Glow dialog
+     Draw Effects: Inner Shadow dialog
 
-* **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect, but it adds
-  the shadow effect on the inside of the edges of the feature. The available options for customization
-  are the same as the :menuselection:`Drop Shadow` effect.
+* **Inner Glow:** Adds a glow effect inside the feature. This effect can be customized by adjusting
+  the :menuselection:`spread` (width) of the glow, or the :menuselection:`Blur radius`.
+  The latter specifies the proximity from the edge of the feature where you want any blurring to happen.
+  Additionally, there are options to customize the color of the glow, with a single color or a color ramp.
 
   .. _figure_effects_6:
 
@@ -342,10 +342,10 @@ The effects include the following categories, with the following options:
 
      **Figure Effects 6:**
 
-  .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
+  .. figure:: /static/user_manual/working_with_vector/inner_glow.png
      :align: center
 
-     Draw Effects: Inner Shadow dialog
+     Draw Effects: Inner Glow dialog
 
 * **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect, but it adds
   the glow effect on the outside of the edges of the feature. The available options for customization
