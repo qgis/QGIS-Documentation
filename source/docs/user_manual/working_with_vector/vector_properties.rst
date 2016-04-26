@@ -364,14 +364,15 @@ The effects include the following categories, with the following options:
 
 * **Transform:** Adds the possibility of transforming the shape of the source feature.
   The first options available for customization are the :menuselection:`Reflect horizontal`
-  and :menuselection:`Reflect horizontal`, which actually create a reflection on the
-  horizontal and/or vertical axes. The 4 other options are the :menuselection:`Shear`,
-  :menuselection:`Scale`, :menuselection:`Rotation` and :menuselection:`Translate` effects.
-  The :menuselection:`Shear` effect slants the feature along the x and/or y axis, the
-  :menuselection:`Scale` enlarges or minimizes the feature along the x and/or y axis,
-  by the percentage given, while the :menuselection:`Rotation` effect turns the feature
-  around its center point and the :menuselection:`Translate` effect changes the position
-  of the item based on a distance given on the x and/or the y axis.
+  and :menuselection:`Reflect vertical`, which actually create a reflection on the
+  horizontal and/or vertical axes. The 4 other options are:
+  
+  * :menuselection:`Shear`: slants the feature along the x and/or y axis
+  * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or y axis
+    by the percentage given
+  * :menuselection:`Rotation`: turns the feature around its center point
+  * and :menuselection:`Translate` changes the position of the item based on a distance
+    given on the x and/or the y axis.
 
   .. _figure_effects_8:
 
