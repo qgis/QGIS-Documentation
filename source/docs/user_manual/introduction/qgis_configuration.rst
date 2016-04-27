@@ -313,8 +313,21 @@ Data Sources Menu
   extended mode`
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in
   extended mode`
-* |checkbox| :guilabel:`Execute expressions on postgres server-side if
-  possible (Experimental)`
+* |checkbox| :guilabel:`Execute expressions on server-side if possible`
+* |checkbox| :guilabel:`create transaction groups automatically whenever possible
+  (Experimental)`. When this mode is turned on, all
+  (postgres) layers from the same database are synchronised in their edit state,
+  i.e. when one layer is put into edit state, all are, when one layer is committed
+  or one layer is rolled back, so are the others. Also, instead of buffering edit
+  changes locally, they are directly sent to a transaction in the database which
+  gets committed when the user clicks save layer.
+
+
+**Hidden Browser Path**
+  
+This widget lists all the folder you chose to hide from the Browser panel.
+Removing a folder from the list will make it available in the Browser panel.
+
 
 Rendering Menu
 --------------
