@@ -387,7 +387,7 @@ in your system and you have configured |qg| properly, so it can find all
 necessary files (command-line tools and libraries).
 
 As in the case of SAGA, OTB binaries are included in the stand-alone installer for
-Windows, but they are not included if you are ruining Linux, so you have to download
+Windows, but they are not included if you are running Linux, so you have to download
 and install the software yourself. Please check the OTB website for more
 information.
 
