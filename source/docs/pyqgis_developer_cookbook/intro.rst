@@ -19,7 +19,7 @@ for using SIP instead of more widely used SWIG is that the whole QGIS code
 depends on Qt libraries. Python bindings for Qt (PyQt) are done also using
 SIP and this allows seamless integration of PyQGIS with PyQt.
 
-There are several ways how to use Python bindings in |qg| desktop, they are covered
+There are several ways how to use Python bindings in QGIS desktop, they are covered
 in detail in the following sections:
 
 * automatically run Python code when QGIS starts
@@ -28,10 +28,10 @@ in detail in the following sections:
 * create custom applications based on QGIS API
 
 
-Python bindings are also available for |qg| Server:
+Python bindings are also available for QGIS Server:
 
-* starting from 2.8 release, Python plugins are also available on |qg| Server (see: `Server Python Plugins <server_plugins>`_)
-* starting from 2.11 version (Master at 2015-08-11), |qg| Server library has Python bindings that can be used to embed |qg| Server into a Python application.
+* starting from 2.8 release, Python plugins are also available on QGIS Server (see: `Server Python Plugins <server_plugins>`_)
+* starting from 2.11 version (Master at 2015-08-11), QGIS Server library has Python bindings that can be used to embed QGIS Server into a Python application.
 
 
 .. index:: API
@@ -142,7 +142,7 @@ instructions.
 
 .. note::
 
-    Python plugins are also available in |qg| server (:ref:`label_qgisserver`),
+    Python plugins are also available in QGIS server (:ref:`label_qgisserver`),
     see :ref:`server_plugins` for further details.
 
 
@@ -167,9 +167,9 @@ incorporated into the application with support for zooming, panning and/or
 any further custom map tools.
 
 PyQGIS custom applications or standalone scripts must be configured to locate
-the |qg| resources such as projection information, providers for reading vector
-and raster layers, etc. |qg| Resources are initialized by adding a few lines to
-the beginning of your application or script. The code to initialize |qg| for
+the QGIS resources such as projection information, providers for reading vector
+and raster layers, etc. QGIS Resources are initialized by adding a few lines to
+the beginning of your application or script. The code to initialize QGIS for
 custom applications and standalone scripts is similar, but examples of each are
 provided below.
 
@@ -181,7 +181,7 @@ will not be able to import the bindings as the script's name will shadow them.
 Using PyQGIS in standalone scripts
 ----------------------------------
 
-To start a standalone script, initialize the |qg| resources at the beginning of
+To start a standalone script, initialize the QGIS resources at the beginning of
 the script similar to the following code:
 
 ::
@@ -210,15 +210,15 @@ system. It is configured in the script by calling the ``setPrefixPath``
 method. The second argument of ``setPrefixPath`` is set to :const:`True`,
 which controls whether the default paths are used.
 
-The |qg| install path varies by platform; the easiest way to find it for your
-your system is to use the :ref:`pythonconsole` from within |qg|
+The QGIS install path varies by platform; the easiest way to find it for your
+your system is to use the :ref:`pythonconsole` from within QGIS
 and look at the output from running ``QgsApplication.prefixPath()``.
 
 After the prefix path is configured, we save a reference to ``QgsApplication``
 in the variable ``qgs``. The second argument is set to ``False``, which
 indicates that we do not plan to use the GUI since we are writing a standalone
-script. With the ``QgsApplication`` configured, we load the |qg| data providers
-and layer registry by calling the ``qgs.initQgis()`` method. With |qg|
+script. With the ``QgsApplication`` configured, we load the QGIS data providers
+and layer registry by calling the ``qgs.initQgis()`` method. With QGIS
 initialized, we are ready to write the rest of the script. Finally, we wrap up
 by calling ``qgs.exitQgis()`` to remove the data providers and layer
 registry from memory.
