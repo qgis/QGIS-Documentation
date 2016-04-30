@@ -1260,19 +1260,21 @@ the :guilabel:`Distance` or :guilabel:`Repeat` options in Placement tab.
 
 
 From the :guilabel:`Obstacles` frame, you can manage the covering relation between
-labels and features. Activate the |checkbox| :guilabel:`Discourage
-labels from covering features` option to decide whether features of the layer
-should act as obstacles for labels or not. Selection of features to use as obstacle
-can be fine tuned using an expression in the data-defined override control next
-to the option.
+labels and features. Activate the |checkbox| :guilabel:`Discourage labels from
+covering features` option to decide whether features of the layer should act as
+obstacles for any label (including labels from other features in the same layer).
+An obstacle is a feature QGIS tries as far as possible to not place labels over.
+Instead of the whole layer, you can define a subset of features to use as obstacles,
+using the |mIconDataDefine| :sup:`data-defined override` control next to the option.
 
-The priority control for obstacles allows you to make labels prefer to overlap
-features from certain layers rather than others. A **Low weight** obstacle priority
-means that features of the layer are less considered as obstacles and 
-thus more likely to be covered by labels. This priority can also be data defined,
-so that certain features are more likely to be covered than others.
+The |slider| priority control slider for obstacles allows you to make labels
+prefer to overlap features from certain layers rather than others.
+A **Low weight** obstacle priority means that features of the layer are less
+considered as obstacles and thus more likely to be covered by labels.
+This priority can also be data-defined, so that within the same layer,
+certain features are more likely to be covered than others.
 
-For polygon layer features, you can choose the type of obstacle features could be
+For polygon layers, you can choose the type of obstacle features could be
 by minimising the labels placement:
 
 * **over the feature's interior**: avoids placing labels over interior of polygon
