@@ -63,8 +63,8 @@ Firstly, add the following debian GIS repository:
   deb-src http://qgis.org/debian trusty main
 
   $ # Add keys
-  $ sudo gpg --recv-key DD45F6C3
-  $ sudo gpg --export --armor DD45F6C3 | sudo apt-key add -
+  $ sudo gpg --keyserver keyserver.ubuntu.com --recv-key 3FF5FFCAD71472C4
+  $ sudo gpg --export --armor 3FF5FFCAD71472C4 | sudo apt-key add -
 
   $ # Update package list
   $ sudo apt-get update && sudo apt-get upgrade
