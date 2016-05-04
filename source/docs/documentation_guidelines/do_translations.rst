@@ -323,17 +323,22 @@ part of it!!
 Summary Rules for translation
 .............................
 
-#. Do not change replacements like ``|checkbox|``, ``|selectstring|``, ``|mActionAddLayer|`` ...
+#. Do not change text between two ``|`` characters like ``|bronze|``, ``|checkbox|``, 
+   ``|labels|``, ``|selectstring|``, ``|mActionAddLayer|`` ... These are special tags
+   used to replace images
 #. Do not change references that start with the tag ``:ref:`` or ``:file:``
-#. Do not change references that end with an underscore like ``figure_1_``
+#. Do not change references that end with an underscore like ``figure_labels_1_``
 #. Do not change the url in hyperlinks, but you may change the external
-   description. Leave the underscore at the end of the hyperlink
-#. Change the contents of ``:index:``, ``:sup:``, ``:guilabel:`` and ``:menuselection:``,
-   Check if/how it is translated in the QGIS Application.
+   description. Leave the underscore at the end of the hyperlink,
+   without additional spacing (``>`_``)
+#. Change the text inside quotes following ``:index:``,
+   ``:sup:``, ``:guilabel:`` and ``:menuselection:`` tags.
+   Check if/how it is translated in the QGIS Application. Do not change the tag itself.
 #. Text between double stars and double quotes often indicate values or
    fieldnames, sometimes they need translation sometimes not.
 #. Be aware to use exactly the same (number of) special characters of the source
-   text such as \`, \``, \*, \**, \::
+   text such as `````, ``````, ``*``, ``**``, ``::``. These contributes to the
+   cosmetics of the information provided
 #. Do not begin nor end the text hold by special characters or tags with a space
 #. Do not end the translated strings with a new paragraph, otherwise the
    text will not be translated during the html generation.
