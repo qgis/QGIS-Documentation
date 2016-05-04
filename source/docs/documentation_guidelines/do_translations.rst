@@ -337,7 +337,7 @@ Summary Rules for translation
 #. Text between double stars and double quotes often indicate values or
    fieldnames, sometimes they need translation sometimes not.
 #. Be aware to use exactly the same (number of) special characters of the source
-   text such as `````, ``````, ``*``, ``**``, ``::``. These contributes to the
+   text such as `````, ``````, ``*``, ``**``, ``::``. These contribute to the
    cosmetics of the information provided
 #. Do not begin nor end the text hold by special characters or tags with a space
 #. Do not end the translated strings with a new paragraph, otherwise the
