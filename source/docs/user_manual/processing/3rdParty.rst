@@ -20,7 +20,7 @@ on them. Once you have correctly configured the system, you will be able to
 execute external algorithms from any component like the toolbox or the
 graphical modeler, just like you do with any other geoalgorithm.
 
-By default, all algorithms that rely on an external appplication not shipped with
+By default, all algorithms that rely on an external application not shipped with
 |qg| are not enabled. You can enable them in the settings dialog.
 Make sure that the corresponding application is already installed in your system.
 
@@ -99,7 +99,7 @@ If you are running Windows, both the stand-alone installer and the OSGeo4W insta
 include SAGA along with |qg|, and the path is automatically configured, so there is
 no need to do anything else.
 
-If you have installed SAGA yourself and your QGIs installer did not include it, the path to the
+If you have installed SAGA yourself and your QGIS installer did not include it, the path to the
 SAGA executable must be configured. To do this, open the
 configuration dialog. In the :guilabel:`SAGA` block, you will find a setting named
 :guilabel:`SAGA Folder`. Enter the path to the folder where SAGA is installed.
@@ -249,7 +249,7 @@ for R commands.
 In the above example, we are declaring an input of type ``vector`` named ``polyg``.
 When executing the algorithm, |qg| will open in R the layer selected by the
 user and store it in a variable also named ``polyg``. So, the name of a parameter
-is also the name of the variable that we can use in R for accesing the value of
+is also the name of the variable that we can use in R for accessing the value of
 that parameter (thus, you should avoid using reserved R words as parameter names).
 
 Spatial elements such as vector and raster layers are read using the ``readOGR()``
@@ -352,7 +352,7 @@ GRASS
 
 Configuring GRASS is not much different from configuring SAGA. First, the path
 to the GRASS folder has to be defined, but only if you are running Windows.
-Additionaly, a shell interpreter (usually :file:`msys.exe`, which can be found
+Additionally, a shell interpreter (usually :file:`msys.exe`, which can be found
 in most GRASS for Windows distributions) has to be defined and its path set up
 as well.
 
@@ -369,7 +369,7 @@ installed, and that it can be run without problem from a console.
 GRASS algorithms use a region for calculations. This region can be defined
 manually using values similar to the ones found in the SAGA configuration, or
 automatically, taking the minimum extent that covers all the input layers used
-to execute the algorithm each time. If the latter approach is the behaviour you prefer, just
+to execute the algorithm each time. If the latter approach is the behavior you prefer, just
 check the :guilabel:`Use min covering region` option in the GRASS configuration
 parameters.
 
@@ -387,7 +387,7 @@ in your system and you have configured |qg| properly, so it can find all
 necessary files (command-line tools and libraries).
 
 As in the case of SAGA, OTB binaries are included in the stand-alone installer for
-Windows, but they are not included if you are runing Linux, so you have to download
+Windows, but they are not included if you are running Linux, so you have to download
 and install the software yourself. Please check the OTB website for more
 information.
 
@@ -409,7 +409,7 @@ TauDEM
 ------
 
 TauDEM (Terrain Analysis Using Digital Elevation Models) is a tools for the
-extraction and analysis of hydrologic information from Digital Elevation Models
+extraction and analysis of hydrological information from Digital Elevation Models
 (DEM). TauDEM can be used from |qg| if you have it installed in your system and
 configured |qg| properly, so it can find all necessary files.
 
@@ -425,7 +425,7 @@ and even allows to use them simultaneously.
 
 .. note::
    While TauDEM Processing provider supports TauDEM 5.0.6, 5.1.2 and 5.2.0 we
-   recomment to use 5.1.2 and/or 5.2.0 as this versions have some new tools
+   recommend to use 5.1.2 and/or 5.2.0 as this versions have some new tools
    available, like Gage Watershed and TWI.
 
 
@@ -453,7 +453,7 @@ to install MPICH or OpenMPI.
 
 Download TauDEM 5.2.0 source code package from `GitHub repository <https://github.com/dtarb/TauDEM/releases>`_
 and extract archive contents. Open terminal and cd into :file:`src` directory inside
-extacted folder. Create build directory and cd into it
+extracted folder. Create build directory and cd into it
 
 ::
 
@@ -480,7 +480,7 @@ When compilation finished install TauDEM tools by running
    :file:`/opt/taudem5.2/bin`.
 
 To use singlefile version --- download source package `here <http://hydrology.usu.edu/taudem/taudem5/TauDEM5PCsrc_512.zip>`_
-and perform abovementioned steps to compile and install it.
+and perform above mentioned steps to compile and install it.
 
 Old TauDEM 5.0.6 also `available <http://hydrology.usu.edu/taudem/taudem5/downloads5.0.html>`_.
 But before compiling this version it is necessary to edit some source files.
@@ -563,7 +563,7 @@ two instances of each tool in toolbox and can use them in your analysis.
 
 **IMPORTANT!** Be careful with developing Processing models using TauDEM. As
 single- and multifile versions have different inputs, model created with
-singlefile algortihms will not work if only multifile algorithms are available.
+singlefile algorithms will not work if only multifile algorithms are available.
 If you plan to share your model please specify which TauDEM version should be
 used or, better, provide two versions of your model: for single- and multifile
 TauDEM.

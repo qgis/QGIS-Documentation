@@ -81,13 +81,13 @@ For most parameters, setting the value is trivial. Just type the value or select
 it from the list of available options, depending on the parameter type.
 
 Filenames for input data objects are introduced directly typing or, more
-conveniently, clicking on the |browsebutton| button on the right hand of the cell, wich will show a context menu with two option: one for selecting from the layers currently opened and another to secet from the filesystem. This second option, when selected, shows a typical file chooser dialog. Multiple files can be selected at once.
+conveniently, clicking on the |browsebutton| button on the right hand of the cell, which will show a context menu with two option: one for selecting from the layers currently opened and another to select from the filesystem. This second option, when selected, shows a typical file chooser dialog. Multiple files can be selected at once.
 If the input parameter represents a single data object and several files are
 selected, each one of them will be put in a separate row, adding new ones if
 needed. If the parameter represents a multiple input, all the selected files will be added
 to a single cell, separated by semicolons (``;``).
 
-Layer identifiers can be directly typed in the parameter teext box. You can enter the full path to a file or the name of a layer that is currently loaded in the current QGIS project. The name of the layer will be automatically resolved to its source path. Notice that, if several layers have the same name, this might cause unexpected results due to ambiguity.
+Layer identifiers can be directly typed in the parameter text box. You can enter the full path to a file or the name of a layer that is currently loaded in the current QGIS project. The name of the layer will be automatically resolved to its source path. Notice that, if several layers have the same name, this might cause unexpected results due to ambiguity.
 
 Output data objects are always saved to a file and, unlike when executing an
 algorithm from the toolbox, saving to a temporary file or database is not permitted. You can
