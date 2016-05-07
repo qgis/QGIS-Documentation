@@ -1337,9 +1337,31 @@ to avoid duplicate labels`, rendering a quite airy map in conjunction with
 the :guilabel:`Distance` or :guilabel:`Repeat` options in Placement tab.
 
 
-Under :guilabel:`Obstacles`, the |checkbox| :guilabel:`Discourage
-labels from covering features` helps you manage covering relation
-between labels and other features.
+From the :guilabel:`Obstacles` frame, you can manage the covering relation between
+labels and features. Activate the |checkbox| :guilabel:`Discourage labels from
+covering features` option to decide whether features of the layer should act as
+obstacles for any label (including labels from other features in the same layer).
+An obstacle is a feature QGIS tries as far as possible to not place labels over.
+Instead of the whole layer, you can define a subset of features to use as obstacles,
+using the |mIconDataDefine| :sup:`data-defined override` control next to the option.
+
+The |slider| priority control slider for obstacles allows you to make labels
+prefer to overlap features from certain layers rather than others.
+A **Low weight** obstacle priority means that features of the layer are less
+considered as obstacles and thus more likely to be covered by labels.
+This priority can also be data-defined, so that within the same layer,
+certain features are more likely to be covered than others.
+
+For polygon layers, you can choose the type of obstacle features could be
+by minimising the labels placement:
+
+* **over the feature's interior**: avoids placing labels over interior of polygon
+  (prefers placing labels totally outside or just slightly inside polygon)
+* or **over the feature's boundary**: avoids placing labels over boundary of polygon
+  (prefers placing labels outside or completely inside the polygon). It can be e.g.
+  useful for regional boundary layers, where the features cover an entire area.
+  In this case it's impossible to avoid placing labels within these features,
+  and it looks much better to avoid placing them over the boundaries between features.
 
 
 .. _labeling_with_expressions:
