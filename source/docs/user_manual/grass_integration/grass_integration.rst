@@ -66,7 +66,7 @@ This section gives an example of how to import raster and vector data into a GRA
    open another instance of the browser (:guilabel:`Browser Panel (2)`) if 
    source data are too far from the mapset in the tree.
 #. Drag a layer and drop it on the target mapset. The imported may take some time for 
-   larger layers, you will see animated icon |mIconImport| in front of new layer item
+   larger layers, you will see animated icon |import| in front of new layer item
    until the import finishes.
    
 Where raster data are in different CRS, they can be reprojected using an :guilabel:`Approximate` 
@@ -76,8 +76,8 @@ is known to GDAL, the source data CRS will be used. You can set these options in
 :guilabel:`Browser` tab in :ref:`grass_options`.
 
 If a source raster has more bands, a new GRASS map is created for each layer with **.<band number>**
-suffix and group of all maps with |mIconRasterGroup| icon is created. External rasters 
-have a different icon |mIconRasterLink|.
+suffix and group of all maps with |rasterGroup| icon is created. External rasters 
+have a different icon |rasterLink|.
 
 .. _managing_grass_data:
 
@@ -231,7 +231,7 @@ install the dataset on your computer (see :ref:`label_sampledata`).
 #. We are using Albers Equal Area Alaska (feet) projection. Since we happen to
    know that it is represented by the EPSG ID 2964, we enter it in the search box.
    (Note: If you want to repeat this process for another :file:`LOCATION` and
-   projection and haven't memorized the EPSG ID, click on the |mIconProjectionEnabled|
+   projection and haven't memorized the EPSG ID, click on the |projectionEnabled|
    :sup:`CRS Status` icon in the lower right-hand corner of the status bar (see
    section :ref:`label_projections`)).
 #. In :guilabel:`Filter`, insert 2964 to select the projection.

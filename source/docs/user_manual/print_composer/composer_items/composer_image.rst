@@ -38,7 +38,7 @@ There are several ways to set the :guilabel:`image source` in the **Main propert
    a remote URL-address to an image.   
 #. From the **Search directories** area you can also select an image from :guilabel:`loading previews ...` 
    to set the image source.
-#. Use the data defined button |mIconDataDefine| to set the image source from a record or using a 
+#. Use the data defined button |dataDefined| to set the image source from a record or using a 
    regular expression.  
   
 With the :guilabel:`Resize mode` option, you can set how the image is displayed when the frame 

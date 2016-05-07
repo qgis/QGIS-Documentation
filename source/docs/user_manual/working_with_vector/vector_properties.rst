@@ -130,8 +130,8 @@ Color Selector
 The :guilabel:`select color` dialog will appear whenever you click
 to choose a :index:`color` - either border or fill color. This dialog
 has four different tabs which allow you to select colors by
-|mIconColorBox| :sup:`color ramp`, |mIconColorWheel| :sup:`color wheel`,
-|mIconColorSwatches| :sup:`color swatches` or |mIconColorPicker| :sup:`color picker`.
+|colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
+|colorSwatches| :sup:`color swatches` or |colorPicker| :sup:`color picker`.
 
 Whatever method you use, the selected color is always described through color
 sliders for HSV  (Hue, Saturation, Value) and RGB (Red, Green, Blue) values.
@@ -153,9 +153,9 @@ you just tweaked into a color slot button.
    Color selector ramp tab
 
 
-With |mIconColorBox| :sup:`color ramp` or with |mIconColorWheel| :sup:`color wheel`,
+With |colorBox| :sup:`color ramp` or with |colorWheel| :sup:`color wheel`,
 you can browse to all possible color combinations.
-There are other possibilities though. By using |mIconColorSwatches| :sup:`color swatches`
+There are other possibilities though. By using |colorSwatches| :sup:`color swatches`
 you can choose from a preselected list. This selected list is
 populated with one of three methods: :guilabel:`Recent colors`,
 :guilabel:`Standard colors` or :guilabel:`Project colors`.
@@ -172,7 +172,7 @@ populated with one of three methods: :guilabel:`Recent colors`,
    Color selector switcher tab
 
 
-Another option is to use the |mIconColorPicker| :sup:`color picker` which allows
+Another option is to use the |colorPicker| :sup:`color picker` which allows
 you to sample a color from under your mouse pointer at any part of
 QGIS or even from another application by pressing the space bar. Please note
 that the color picker is OS dependent and is currently not supported by OSX.
@@ -748,10 +748,10 @@ such representation.
 
 Proportional rendering is done by first applying to the layer the :ref:`single_symbol_renderer`.
 Once you set the symbol, at the upper level of the symbol tree, the
-|mIconDataDefine| :guilabel:`Data-defined override` button available beside
+|dataDefined| :guilabel:`Data-defined override` button available beside
 :guilabel:`Size` or :guilabel:`Width` options (for point or line layers
 respectively) provides tool to create proportional symbology for the layer.
-An assistant is moreover accessible through the |mIconDataDefine| menu
+An assistant is moreover accessible through the |dataDefined| menu
 to help you define size expression.
 
 .. _figure_symbology_4:
@@ -1343,7 +1343,7 @@ covering features` option to decide whether features of the layer should act as
 obstacles for any label (including labels from other features in the same layer).
 An obstacle is a feature QGIS tries as far as possible to not place labels over.
 Instead of the whole layer, you can define a subset of features to use as obstacles,
-using the |mIconDataDefine| :sup:`data-defined override` control next to the option.
+using the |dataDefined| :sup:`data-defined override` control next to the option.
 
 The |slider| priority control slider for obstacles allows you to make labels
 prefer to overlap features from certain layers rather than others.
@@ -1459,7 +1459,7 @@ We now describe an example using the data-defined override function for the
 #. Import :file:`lakes.shp` from the QGIS sample dataset.
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
    and :guilabel:`Placement`. Select |radiobuttonon| :guilabel:`Offset from centroid`.
-#. Look for the :guilabel:`Data defined` entries. Click the |mIconDataDefine| icon
+#. Look for the :guilabel:`Data defined` entries. Click the |dataDefined| icon
    to define the field type for the :guilabel:`Coordinate`. Choose 'xlabel' for X
    and 'ylabel' for Y. The icons are now highlighted in yellow.
 #. Zoom into a lake.

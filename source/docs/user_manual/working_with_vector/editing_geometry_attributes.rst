@@ -891,7 +891,7 @@ following functionality:
 * |mActionNewTableRow| :sup:`Add feature`
 * |mActionDeleteSelected| :sup:`Delete selected features` (also with
   :kbd:`Ctrl+d`)
-* |mIconExpressionSelect| :sup:`Select features using an Expression`
+* |expressionSelect| :sup:`Select features using an Expression`
 * |mActionSelectAll| :sup:`Select all` (also with :kbd:`Ctrl+a`)
 * |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
 * |mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)
@@ -954,9 +954,9 @@ Select the field (column) on which the search should be
 performed from the drop-down menu, and hit the **[Apply]** button. Then, only
 the matching features are shown in the attribute table.
 
-To make a selection, you have to use the |mIconExpressionSelect| :sup:`Select features using an Expression`
+To make a selection, you have to use the |expressionSelect| :sup:`Select features using an Expression`
 icon on top of the attribute table.
-|mIconExpressionSelect| :sup:`Select features using an Expression` allows you
+|expressionSelect| :sup:`Select features using an Expression` allows you
 to define a subset of a table using a :guilabel:`Function List` like in the
 |mActionCalculateField| :sup:`Field Calculator` (see :ref:`vector_field_calculator`).
 The query result can then be saved as a new vector layer.

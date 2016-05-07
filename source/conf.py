@@ -886,35 +886,35 @@ rst_epilog = """
    :width: 1.5em
 .. |mGeorefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
-.. |mIconAtlas|  image:: /static/common/mIconAtlas.png
+.. |atlas|  image:: /static/common/mIconAtlas.png
    :width: 1.5em
-.. |mIconColorBox| image:: /static/common/mIconColorBox.png
+.. |colorBox| image:: /static/common/mIconColorBox.png
    :width: 1.5em
-.. |mIconColorPicker| image:: /static/common/mIconColorPicker.png
+.. |colorPicker| image:: /static/common/mIconColorPicker.png
    :width: 1.5em
-.. |mIconColorSwatches| image:: /static/common/mIconColorSwatches.png
+.. |colorSwatches| image:: /static/common/mIconColorSwatches.png
    :width: 1.5em
-.. |mIconColorWheel| image:: /static/common/mIconColorWheel.png
+.. |colorWheel| image:: /static/common/mIconColorWheel.png
    :width: 1.5em
-.. |mIconDataDefine| image:: /static/common/mIconDataDefine.png
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |mIconExpression| image:: /static/common/mIconExpression.png
+.. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
-.. |mIconExpressionFilter| image:: /static/common/mIconExpressionFilter.png
+.. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
    :width: 1.5em
-.. |mIconExpressionSelect| image:: /static/common/mIconExpressionSelect.png
+.. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
-.. |mIconImport| image:: /static/common/mIconImport.gif
+.. |import| image:: /static/common/mIconImport.gif
    :width: 1.5em
-.. |mIconProjectionDisabled| image:: /static/common/mIconProjectionDisabled.png
+.. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
-.. |mIconProjectionEnabled| image:: /static/common/mIconProjectionEnabled.png
+.. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
-.. |mIconRasterGroup| image:: /static/common/mIconRasterGroup.png
+.. |rasterGroup| image:: /static/common/mIconRasterGroup.png
    :width: 1.5em
-.. |mIconRasterLink| image:: /static/common/mIconRasterLink.png
+.. |rasterLink| image:: /static/common/mIconRasterLink.png
    :width: 1.5em
-.. |mIconZip| image:: /static/common/mIconZip.png
+.. |zip| image:: /static/common/mIconZip.png
    :width: 2em
 .. |mMessageLog| image:: /static/common/mMessageLog.png
    :width: 1.5em

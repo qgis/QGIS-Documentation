@@ -231,7 +231,7 @@ is an expression used inside the label. That would result in the generated atlas
 Data Defined Override Buttons
 -----------------------------
 
-There are several places where you can use a |mIconDataDefine| :sup:`Data Defined
+There are several places where you can use a |dataDefined| :sup:`Data Defined
 Override` button to override the selected setting. These options are particularly
 useful with Atlas Generation.
 
@@ -248,7 +248,7 @@ to optimize the use of paper.
 In the :guilabel:`Composition` you can set the field :guilabel:`Orientation`
 and select `Landscape` or `Portrait`. We want to set the orientation dynamically
 using an expression depending on the region geometry.
-Press the |mIconDataDefine| button of field :guilabel:`Orientation`, select
+Press the |dataDefined| button of field :guilabel:`Orientation`, select
 :menuselection:`Edit...` so the :guilabel:`Expression string builder` dialog opens.
 Enter the following expression:
 
@@ -259,7 +259,7 @@ Enter the following expression:
 
 Now the paper orients itself automatically. For each Region you need to reposition
 the location of the composer item as well. For the map item you can
-use the |mIconDataDefine| button of field :guilabel:`Width` to set it
+use the |dataDefined| button of field :guilabel:`Width` to set it
 dynamically using following expression:
 
 .. code::
@@ -267,7 +267,7 @@ dynamically using following expression:
    (CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry)
    THEN 297 ELSE 210 END) - 20
 
-Use the |mIconDataDefine| button of field :guilabel:`Height` to provide following
+Use the |dataDefined| button of field :guilabel:`Height` to provide following
 expression:
 
 .. code::
@@ -313,7 +313,7 @@ Preview
 
 Once the atlas settings have been configured and composer items (map, table,
 image...) linked to it, you can create a preview of all the pages by clicking
-:menuselection:`Atlas --> Preview Atlas` or |mIconAtlas| :sup:`Preview Atlas` icon.
+:menuselection:`Atlas --> Preview Atlas` or |atlas| :sup:`Preview Atlas` icon.
 You can then use the arrows in the same toolbar to navigate through all the
 features:
 

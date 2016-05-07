@@ -109,7 +109,7 @@ following functionalities (see figure_composer_table_2_):
   * Add a new attribute use the plus button. At the end a new empty row appears and you can 
     select empty cell of the column :guilabel:`Attribute`. You can select a field attribute from 
     the list or you can select to build a new attribute using a regular expression 
-    (|mIconExpression| button). Of course you can modify every already existing attribute 
+    (|expression| button). Of course you can modify every already existing attribute 
     by means of a regular expression.
   * Use the up and down arrows to change the order of the attributes in the table.
   * Select a cell in the Headings column and, to change the heading, just type in a new name.
@@ -155,7 +155,7 @@ You can:
   available when |checkbox| :guilabel:`Generate an atlas` is activated. When activated it will
   show a table with only the features shown on the map of that particular page of the atlas.
 * Activate |checkbox| :guilabel:`Filter with` and provide a filter by typing in the input line 
-  or insert a regular expression using the given |mIconExpression| expression button. 
+  or insert a regular expression using the given |expression| expression button. 
   A few examples of filtering statements you can use when you have loaded the airports 
   layer from the Sample dataset:
 

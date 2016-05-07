@@ -356,7 +356,7 @@ tool:
 To deselect all selected features, click on |mActionDeselectAll| :sup:`Deselect
 Features from All Layers`.
 
-|mIconExpressionSelect| :sup:`Select features using an expression` allows user
+|expressionSelect| :sup:`Select features using an expression` allows user
 to select features using expression dialog. See :ref:`vector_expressions`
 chapter for some example.
 

@@ -24,7 +24,7 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
 #. Start QGIS, select |mActionOptions| :guilabel:`Project Properties` from the
    :guilabel:`Settings` (KDE, Windows) or :guilabel:`File` (Gnome, OSX) menu
    and click on the :guilabel:`Projection` tab. As an alternative, you can also
-   click on the |mIconProjectionEnabled| :sup:`CRS status` icon in the lower
+   click on the |projectionEnabled| :sup:`CRS status` icon in the lower
    right-hand corner of the status bar.
 #. Click on the |checkbox| `Enable on the fly projection` checkbox and select
    a projected coordinate system of your choice (see also :ref:`label_projections`).

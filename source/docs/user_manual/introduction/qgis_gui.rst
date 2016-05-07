@@ -378,7 +378,7 @@ The Legend toolbar in the map legend area allows you to:
   rendered in the map legend. Otherwise, a generic NULL symbol is applied to the
   layer. Based on the layer symbology, this is a convenient way to identify which
   kind of features from which layers cover your area of interest.
-* |mIconExpressionFilter| :sup:`Filter Legend by Expression`: helps you apply an
+* |expressionFilter| :sup:`Filter Legend by Expression`: helps you apply an
   expression to remove from the selected layer tree styles that have no feature
   satisfying the condition. This can be used for example to highlight features that are
   within a given area/feature of another layer.
@@ -635,7 +635,7 @@ On the right side of the status bar, there is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
 map view (see section :ref:`redraw_events`).
 
-To the right of the render functions, you find the |mIconProjectionDisabled|
+To the right of the render functions, you find the |projectionDisabled|
 :sup:`Current CRS:` icon with the EPSG code of the current
 project CRS. Clicking on this lets you :guilabel:`Enable 'on the fly' CRS
 transformation` properties for the current project and apply another CRS to the
@@ -657,7 +657,7 @@ loading, processing tools...)
    coordinate in your layer as specified in degrees. To get correct scale values,
    you can either manually change this setting, e.g. to meters, in the :guilabel:`General`
    tab under :menuselection:`Project --> Project Properties`, or you can use
-   the |mIconProjectionDisabled| :sup:`Current CRS:` icon seen above. In the latter case,
+   the |projectionDisabled| :sup:`Current CRS:` icon seen above. In the latter case,
    the units are set to what the project projection specifies (e.g., ``+units=us-ft``).
 
    Note that CRS choice on startup can be set in :menuselection:`Settings --> Options --> CRS`.

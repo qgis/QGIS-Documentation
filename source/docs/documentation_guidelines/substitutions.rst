@@ -64,7 +64,7 @@ Icon                     Substitution               Icon                   Subst
 |radiobuttonon|          ``|radiobuttonon|``        |radiobuttonoff|       ``|radiobuttonoff|``
 |selectnumber|           ``|selectnumber|``         |selectstring|         ``|selectstring|``
 |browsebutton|           ``|browsebutton|``         |slider|               ``|slider|``
-|mIconDataDefine|        ``|mIconDataDefine|``      \                      \
+|dataDefined|            ``|dataDefined|``          \                      \
 =======================  =========================  =====================  =========================
 
 
@@ -101,7 +101,7 @@ Icon                            Substitution                        Icon        
 |mActionInOverview|             ``|mActionInOverview|``             |mActionAddAllToOverview|       ``|mActionAddAllToOverview|``
 |RemoveAllOverview|             ``|RemoveAllOverview|``             \                               \
 |mActionShowAllLayers|          ``|mActionShowAllLayers|``          |mActionHideAllLayers|          ``|mActionHideAllLayers|``
-|mActionShowPresets|            ``|mActionShowPresets|``            |mIconZip|                      ``|mIconZip|``
+|mActionShowPresets|            ``|mActionShowPresets|``            |zip|                           ``|zip|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -182,7 +182,7 @@ Icon                            Substitution                        Icon        
 |mActionSelectRectangle|        ``|mActionSelectRectangle|``        |mActionSelectPolygon|          ``|mActionSelectPolygon|``
 |mActionSelectFreehand|         ``|mActionSelectFreehand|``         |mActionSelectRadius|           ``|mActionSelectRadius|``
 |mActionSelectAll|              ``|mActionSelectAll|``              |mActionDeselectAll|            ``|mActionDeselectAll|``
-|mIconExpressionSelect|         ``|mIconExpressionSelect|``         \                               \
+|expressionSelect|              ``|expressionSelect|``              \                               \
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -213,8 +213,8 @@ Colors
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|mIconColorBox|                 ``|mIconColorBox|``                 |mIconColorPicker|              ``|mIconColorPicker|``
-|mIconColorSwatches|            ``|mIconColorSwatches|``            |mIconColorWheel|               ``|mIconColorWheel|``
+|colorBox|                      ``|colorBox|``                      |colorPicker|                   ``|colorPicker|``
+|colorSwatches|                 ``|colorSwatches|``                 |colorWheel|                    ``|colorWheel|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -244,7 +244,7 @@ Icon                            Substitution                        Icon        
 |mActionSelectAll|              ``|mActionSelectAll|``              |mActionInvertSelection|        ``|mActionInvertSelection|``
 |PanToSelected|                 ``|PanToSelected|``                 |mActionZoomToSelected|         ``|mActionZoomToSelected|``
 |mActionCopySelected|           ``|mActionCopySelected|``           |mActionEditPaste|              ``|mActionEditPaste|``
-|mIconExpressionSelect|         ``|mIconExpressionSelect|``         |mActionDeleteSelected|         ``|mActionDeleteSelected|``
+|expressionSelect|              ``|expressionSelect|``              |mActionDeleteSelected|         ``|mActionDeleteSelected|``
 |mActionNewAttribute|           ``|mActionNewAttribute|``           |mActionDeleteAttribute|        ``|mActionDeleteAttribute|``
 |mActionNewTableRow|            ``|mActionNewTableRow|``            |mActionCalculateField|         ``|mActionCalculateField|``
 |mActionDraw|                   ``|mActionDraw|``                   |mActionForm|                   ``|mActionForm|``
@@ -259,7 +259,7 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 |geographic|                    ``|geographic|``                    |CRS|                           ``|CRS|``
 |mActionCustomProjection|       ``|mActionCustomProjection|``       \                               \
-|mIconProjectionDisabled|       ``|mIconProjectionDisabled|``       |mIconProjectionEnabled|        ``|mIconProjectionEnabled|``
+|projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
 |georeferencer|                 ``|georeferencer|``                 |pencil|                        ``|pencil|``
 |mActionLinkQGisToGeoref|       ``|mActionLinkQGisToGeoref|``       |mActionLinkGeorefToQGis|       ``|mActionLinkGeorefToQGis|``
 |coordinate_capture|            ``|coordinate_capture|``            |mActionStartGeoref|            ``|mActionStartGeoref|``
@@ -277,7 +277,7 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 |mActionNewComposer|            ``|mActionNewComposer|``            |mActionComposerManager|        ``|mActionComposerManager|``
 |mActionDupComposer|            ``|mActionDupComposer|``            \                               \
-|mActionAtlasSettings|          ``|mActionAtlasSettings|``          |mIconAtlas|                    ``|mIconAtlas|``
+|mActionAtlasSettings|          ``|mActionAtlasSettings|``          |atlas|                         ``|atlas|``
 |mActionFilePrint|              ``|mActionFilePrint|``              |mActionSaveMapAsImage|         ``|mActionSaveMapAsImage|``
 |mActionSaveAsSVG|              ``|mActionSaveAsSVG|``              |mActionSaveAsPDF|              ``|mActionSaveAsPDF|``
 |mActionAddArrow|               ``|mActionAddArrow|``               |mActionAddBasicShape|          ``|mActionAddBasicShape|``

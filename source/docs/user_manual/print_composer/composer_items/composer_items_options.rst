@@ -49,7 +49,7 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
      in the QGIS general options, the color button will update as soon as you
      choose a new color from **Color Dialog** windows. If not, you need to
      close the **Color Dialog**.
-   * The |mIconDataDefine| :sup:`Data defined override` icon next to a field
+   * The |dataDefined| :sup:`Data defined override` icon next to a field
      means that you can associate the field with data in the map item or use
      expressions. These are particularly helpful with atlas generation
      (See :ref:`atlas_data_defined_override`).

@@ -237,7 +237,7 @@ One more thing needs to be done. You need to tell the Atlas tool what map elemen
 
 Now you can use the preview tool for Atlas maps to review what your maps will look like:
 
-* Activate the Atlas previews using the button |mIconAtlas| or if your Atlas toolbar is not visible, via :menuselection:`Atlas --> Preview Atlas`.
+* Activate the Atlas previews using the button |atlas| or if your Atlas toolbar is not visible, via :menuselection:`Atlas --> Preview Atlas`.
 * You can use the arrows in the Atlas tool bar or in the :menuselection:`Atlas` menu to move through maps that will be created.
 
 Note that some of them cover areas that are not interesting. Lets do something about it and save some trees by not printing those useless maps.
