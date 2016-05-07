@@ -180,9 +180,9 @@ can set project-specific options.
 Options
 =======
 
-|mActionOptions| Some basic options for QGIS can be selected using the
+|options| Some basic options for QGIS can be selected using the
 :guilabel:`Options` dialog. Select the menu option :menuselection:`Settings -->`
-|mActionOptions| :menuselection:`Options`. The tabs where you can customize your
+|options| :menuselection:`Options`. The tabs where you can customize your
 options are described below.
 
 General Menu
@@ -276,7 +276,7 @@ Data Sources Menu
 * |checkbox| :guilabel:`Open attribute table in a dock window (QGIS restart
   required)`
 * |checkbox| :guilabel:`Copy geometry in WKT representation from attribute
-  table`. When using |mActionCopySelected| :sup:`Copy selected rows to
+  table`. When using |copySelected| :sup:`Copy selected rows to
   clipboard` from the :guilabel:`Attribute table` dialog, this has the
   result that the coordinates of points or vertices are also copied to the
   clipboard.
@@ -439,8 +439,8 @@ This menu offers some options regarding the behavior of the :guilabel:`Identify 
 
 **Predefined scales**
 
-Here, you find a list of predefined scales. With the |mActionSignPlus|
-and |mActionSignMinus| buttons you can add or remove your personal scales.
+Here, you find a list of predefined scales. With the |signPlus|
+and |signMinus| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you still have
 the possibility to remove your changes and reset to the predefined list.
 
@@ -498,7 +498,7 @@ Digitizing Menu
 
 **Curve offset tool**
 
-The next 3 options refer to the |mActionOffsetCurve| :sup:`Offset Curve` tool
+The next 3 options refer to the |offsetCurve| :sup:`Offset Curve` tool
 in :ref:`sec_advanced_edit`. Through the various settings, it is possible to
 influence the shape of the line offset. These options are possible starting from GEOS 3.3.
 
@@ -640,7 +640,7 @@ deactivated. In |checkbox| :guilabel:`Toolbars`, you can (de)activate the
 toolbar icons of QGIS, and in |checkbox| :guilabel:`Widgets`, you can (de)activate
 dialogs as well as their buttons.
 
-With |mActionSelect| :sup:`Switch to catching widgets in main application`, you
+With |select| :sup:`Switch to catching widgets in main application`, you
 can click on elements in QGIS that you want to be hidden and find the corresponding
 entry in Customization (see figure_customization_). You can also save your
 various setups for different use cases as well. Before your changes

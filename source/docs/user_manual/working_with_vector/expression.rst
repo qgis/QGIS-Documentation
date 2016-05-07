@@ -13,7 +13,7 @@ Expressions
 
 The **Expressions** feature is available from many parts in QGIS. It can be
 accessed using the |expressionSelect| :sup:`Select by expression`, the
-|mActionCalculateField| :sup:`Field calculator` or the
+|calculateField| :sup:`Field calculator` or the
 |dataDefined| :sup:`Data defined override` tool.
 It offers a powerful way to manipulate attribute value or variables in
 order to dynamically change the geometry style, the content or position
@@ -602,7 +602,7 @@ file and other settings.
 It means that some functions may not be available according to the context:
 
 - from the |expressionSelect| :sup:`Select by expression` dialog
-- from the |mActionCalculateField| :sup:`Field calculator` dialog
+- from the |calculateField| :sup:`Field calculator` dialog
 - from the layer properties dialog
 - from the print composer
 

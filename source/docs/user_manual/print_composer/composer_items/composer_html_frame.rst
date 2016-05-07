@@ -11,7 +11,7 @@ The HTML Frame Item
 It is possible to add a frame that displays the contents of a website or even create and style
 your own HTML page and display it!
  
-Click the |mActionAddHtml| :sup:`Add HTML frame` icon, place the element by dragging a 
+Click the |addHtml| :sup:`Add HTML frame` icon, place the element by dragging a 
 rectangle holding down the left mouse button on the Print Composer canvas and position 
 and customize the appearance in the :guilabel:`Item Properties` tab 
 (see figure_composer_html_1_).

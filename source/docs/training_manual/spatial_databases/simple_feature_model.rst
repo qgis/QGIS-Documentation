@@ -134,7 +134,7 @@ performing select queries in the database to see how the data has changed.
 To load a PostGIS layer in QGIS, use the :menuselection:`Layer --> Add PostGIS
 Layers` menu option or toolbar button:
 
-  |mActionAddPostgisLayer|
+  |addPostgisLayer|
 
 This will open the dialog:
 

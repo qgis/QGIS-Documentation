@@ -247,7 +247,7 @@ That's where rule-based classification comes in handy.
 .. image:: /static/training_manual/classification/rule_based_classification.png
    :align: center
 
-* Click the :guilabel:`Add rule` button: |mActionSignPlus|.
+* Click the :guilabel:`Add rule` button: |signPlus|.
 * A new dialog then appears.
 * Click the ellipsis :guilabel:`...` button next to the :guilabel:`Filter` text area.
 * Using the query builder that appears, enter the criterion

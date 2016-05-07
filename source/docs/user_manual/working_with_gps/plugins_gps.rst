@@ -35,7 +35,7 @@ interchange format that can contain any number of waypoints, routes and tracks
 in the same file.
 
 To load a GPX file, you first need to load the plugin.
-:menuselection:`Plugins -->` |mActionShowPluginManager|
+:menuselection:`Plugins -->` |showPluginManager|
 :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
 Activate the |checkbox| :guilabel:`GPS Tools` checkbox. When this plugin
 is loaded, a button with a small handheld GPS device will show up in the

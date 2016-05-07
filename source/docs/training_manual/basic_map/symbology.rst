@@ -135,7 +135,7 @@ Test the effects of this by zooming in and out in your map, noting when the
 .. note::  You can use your mouse wheel to zoom in increments.
    Alternatively, use the zoom tools to zoom to a window:
 
-   |mActionZoomIn| |mActionZoomOut|
+   |zoomIn| |zoomOut|
 
 |moderate| |FA| Adding Symbol Layers
 -------------------------------------------------------------------------------

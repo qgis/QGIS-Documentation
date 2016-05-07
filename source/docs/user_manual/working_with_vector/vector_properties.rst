@@ -434,7 +434,7 @@ Scale dependent visibility
 You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)`
 scale, defining a range of scale in which features will be visible.
 Out of this range, they are hidden.
-The |mActionMapIdentification| :sup:`Set to current canvas scale` button helps
+The |mapIdentification| :sup:`Set to current canvas scale` button helps
 you use the current map canvas scale as boundary of the range visibility.
 
 .. do not change the order of reference-tag and only-tag, this figure has
@@ -590,7 +590,7 @@ an user-defined symbol whose aspect reflects the value of a selected
 feature's attribute. The :guilabel:`Style` menu allows you to select:
 
 
-* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen|
+* The attribute (using the Column listbox or the |expressionEditorOpen|
   :guilabel:`Set column expression` function, see :ref:`vector_expressions` chapter)
 * The symbol (using the :ref:`symbol-selector` dialog) which will be used as default
   for each class
@@ -656,7 +656,7 @@ Also, analogous to the Categorized Renderer, the :guilabel:`Style` tab allows yo
 to select:
 
 
-* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen|
+* The attribute (using the Column listbox or the |expressionEditorOpen|
   :guilabel:`Set column expression` function)
 * The symbol (using the Symbol selector dialog)
 * The legend format and the precision
@@ -724,7 +724,7 @@ the rivers layer of the QGIS sample dataset.
 
    Categorized and graduated thematic maps can be created using the result
    of an expression. In the properties dialog for vector layers, the attribute
-   chooser is extended with a |mActionmIconExpressionEditorOpen|
+   chooser is extended with a |expressionEditorOpen|
    :guilabel:`Set column expression` function.
    So you don't need to write the classification attribute
    to a new column in your attribute table if you want the classification
@@ -767,7 +767,7 @@ to help you define size expression.
 
 The assistant lets you define:
 
-* The attribute to represent, using the Field listbox or the |mActionmIconExpressionEditorOpen|
+* The attribute to represent, using the Field listbox or the |expressionEditorOpen|
   :guilabel:`Set column expression` function (see :ref:`vector_expressions`)
 * the scale method of representation which can be 'Flannery', 'Surface' or 'Radius'
 * The minimum and maximum size of the symbol
@@ -1033,7 +1033,7 @@ features of the layer:
 Labels Menu
 ===========
 
-The |mActionLabeling| :sup:`Labels` core application provides smart
+The |labeling| :sup:`Labels` core application provides smart
 :index:`labeling` for vector point, line and polygon layers, and only requires a
 few parameters. This application also supports on-the-fly transformed layers.
 The following menus are used to configure the labeling of vector layers:
@@ -1047,7 +1047,7 @@ The following menus are used to configure the labeling of vector layers:
 * Rendering
 
 To label a layer start QGIS and load a vector layer. Activate the layer
-in the legend and click on the |mActionLabeling| :sup:`Layer Labeling Options`
+in the legend and click on the |labeling| :sup:`Layer Labeling Options`
 icon in the QGIS toolbar menu or activate the :guilabel:`Labels` tab in the
 layer properties dialog.
 
@@ -1063,7 +1063,7 @@ are four options available:
   
 Select the **Show labels for this layer** option and then select an attribute
 column to use for labeling from the **Label with** drop-down list. Click
-|mActionmIconExpressionEditorOpen| if you want to define labels based on
+|expressionEditorOpen| if you want to define labels based on
 expressions - See :ref:`labeling_with_expressions`.
 
 The following steps describe simple labeling without using the
@@ -1371,7 +1371,7 @@ Define labels based on expressions
 ----------------------------------
 
 QGIS allows to use expressions to label features. Just click the
-|mActionmIconExpressionEditorOpen| icon in the |mActionLabeling| :sup:`Labels`
+|expressionEditorOpen| icon in the |labeling| :sup:`Labels`
 menu of the properties dialog. In figure_labels_4_ you see a sample expression
 to label the alaska regions with name and area size, based on the field 'NAME_2',
 some descriptive text and the function ``$area`` in combination with
@@ -1454,7 +1454,7 @@ You can activate and deactivate the function with the right-mouse button.
 Hover over the symbol and you see the information about the data-defined override,
 including the current definition field.
 We now describe an example using the data-defined override function for the
-|mActionMoveLabel|:sup:`Move label` function (see figure_labels_5_ ).
+|moveLabel|:sup:`Move label` function (see figure_labels_5_ ).
 
 #. Import :file:`lakes.shp` from the QGIS sample dataset.
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
@@ -1463,7 +1463,7 @@ We now describe an example using the data-defined override function for the
    to define the field type for the :guilabel:`Coordinate`. Choose 'xlabel' for X
    and 'ylabel' for Y. The icons are now highlighted in yellow.
 #. Zoom into a lake.
-#. Go to the Label toolbar and click the |mActionMoveLabel| icon.
+#. Go to the Label toolbar and click the |moveLabel| icon.
    Now you can shift the label manually to another position (see figure_labels_6_).
    The new position of the label is saved in the 'xlabel' and 'ylabel' columns
    of the attribute table.
@@ -1537,9 +1537,9 @@ Fields Menu
 ===========
 
 |attributes| Within the :guilabel:`Fields` menu, the field attributes of the
-selected dataset can be manipulated. The buttons |mActionNewAttribute|
-:sup:`New Column` and |mActionDeleteAttribute| :sup:`Delete Column`
-can be used when the dataset is in |mActionToggleEditing| :sup:`Editing mode`.
+selected dataset can be manipulated. The buttons |newAttribute|
+:sup:`New Column` and |deleteAttribute| :sup:`Delete Column`
+can be used when the dataset is in |toggleEditing| :sup:`Editing mode`.
 
 **Edit Widget**
 
@@ -1622,12 +1622,12 @@ objects using the option auto open form when you have objects with many attribut
 You can create an editor with several tabs and named groups to present
 the attribute fields.
 
-Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus|
+Choose 'Drag and drop designer' and an attribute column. Use the |signPlus|
 icon to create a category to insert a tab or a named group (see figure_fields_3_).
 When creating a new category, QGIS will insert a new tab or named group for the
 category in the built-in form.
 The next step will be to assign the relevant fields to a selected category
-with the |mActionArrowRight| icon. You can create more categories and use the
+with the |arrowRight| icon. You can create more categories and use the
 same fields again.
 
 Other options in the dialog are 'Autogenerate' and 'Provide ui-file'.
@@ -1692,7 +1692,7 @@ Joins Menu
 ==========
 
 |join| The :guilabel:`Joins` menu allows you to :index:`join` a loaded attribute
-table to a loaded vector layer. After clicking |mActionSignPlus|, the
+table to a loaded vector layer. After clicking |signPlus|, the
 :guilabel:`Add vector join` dialog appears. As key columns, you have to define a
 :index:`join layer` you want to connect with the target vector layer.
 Then, you have to specify the join field that is common to both the join layer
@@ -1750,7 +1750,7 @@ Attributes
 ----------
 
 :guilabel:`Attributes` defines which variables to display in the diagram.
-Use |mActionSignPlus| :sup:`add item` button to select the desired fields into
+Use |signPlus| :sup:`add item` button to select the desired fields into
 the 'Assigned Attributes' panel. Generated attributes with :ref:`vector_expressions`
 can also be used.
 
@@ -1862,7 +1862,7 @@ text diagram showing temperature data from a climate vector layer.
 Both vector layers are part of the QGIS sample dataset (see section
 :ref:`label_sampledata`).
 
-#. First, click on the |mActionAddOgrLayer| :sup:`Load Vector` icon, browse
+#. First, click on the |addOgrLayer| :sup:`Load Vector` icon, browse
    to the QGIS sample dataset folder, and load the two vector shape layers
    :file:`alaska.shp` and :file:`climate.shp`.
 #. Double click the ``climate`` layer in the map legend to open the
@@ -1875,7 +1875,7 @@ Both vector layers are part of the QGIS sample dataset (see section
 #. In the :guilabel:`Position` tab, placement could be set to 'Around Point'.
 #. In the diagram, we want to display the values of the three columns
    ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. So, in the :guilabel:`Attributes` tab
-   first select ``T_F_JAN`` and click the |mActionSignPlus| button, then repeat with
+   first select ``T_F_JAN`` and click the |signPlus| button, then repeat with
    ``T_F_JUL`` and finally ``T_F_MEAN``.
 #. Now click **[Apply]** to display the diagram in the QGIS main window.
 #. You can adapt the chart size in the :guilabel:`Size` tab. Activate the
@@ -1908,7 +1908,7 @@ to define the position of the diagram.
 You can also set a scale-dependent visibility in the :guilabel:`Appearance` tab.
 
 The size and the attributes can also be an expression.
-Use the |mActionmIconExpressionEditorOpen| button to add an expression.
+Use the |expressionEditorOpen| button to add an expression.
 See :ref:`vector_expressions` chapter for more information and example.
 
 
@@ -2008,9 +2008,9 @@ Using Actions
 
 Actions can be invoked from either the :guilabel:`Identify Results` dialog,
 an :guilabel:`Attribute Table` dialog or from :guilabel:`Run Feature Action`
-(recall that these dialogs can be opened by clicking |mActionIdentify|
-:sup:`Identify Features` or |mActionOpenTable| :sup:`Open Attribute Table` or
-|mAction| :sup:`Run Feature Action`). To invoke an action, right
+(recall that these dialogs can be opened by clicking |identify|
+:sup:`Identify Features` or |openTable| :sup:`Open Attribute Table` or
+|actionRun| :sup:`Run Feature Action`). To invoke an action, right
 click on the record and choose the action from the pop-up menu. Actions are
 listed in the popup menu by the name you assigned when defining the action.
 Click on the action you wish to invoke.
@@ -2189,7 +2189,7 @@ To add a raster (a TIF image in this example), it becomes:
 Display Menu
 ============
 
-|mActionMapTips| This menu is specifically created for :index:`Map Tips`.
+|mapTips| This menu is specifically created for :index:`Map Tips`.
 It includes a nice feature: Map Tip display text in HTML.
 While you can still choose a |radiobuttonoff| :guilabel:`Field` to be displayed
 when hovering over a feature on the map, it is also possible to insert HTML code

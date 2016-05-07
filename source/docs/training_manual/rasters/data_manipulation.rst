@@ -23,7 +23,7 @@ environment.
   :guilabel:`important_roads` layers.
 * Click on the :guilabel:`Load Raster Layer` button:
 
-  |mActionAddRasterLayer|
+  |addRasterLayer|
 
 The :guilabel:`Load Raster Layer` dialog will open. The data for this project
 is in :kbd:`exercise_data/raster`.

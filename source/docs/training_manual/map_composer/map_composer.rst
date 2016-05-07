@@ -55,7 +55,7 @@ yours is as well.
 Now you've got the page layout the way you wanted it, but this page is still
 blank. It clearly lacks a map. Let's fix that!
 
-* Click on the :guilabel:`Add New Map` button: |mActionAddMap|
+* Click on the :guilabel:`Add New Map` button: |addMap|
 
 With this tool activated, you'll be able to place a map on the page.
 
@@ -86,10 +86,10 @@ The map will appear on the page.
 
 * Zoom in and out on the page (but not the map!) by using these buttons:
 
-  |mActionZoomFullExtent| |mActionZoomIn| |mActionZoomOut|
+  |zoomFullExtent| |zoomIn| |zoomOut|
 
 * Zoom and pan the map in the main QGIS window. You can also pan the map using
-  the :guilabel:`Move item content` tool: |mActionMoveItemContent|
+  the :guilabel:`Move item content` tool: |moveItemContent|
 
 When zooming in, the map view will not refresh by itself. This is so that it
 doesn't waste your time redrawing the map while you're zooming the page to
@@ -116,7 +116,7 @@ Now your map is looking good on the page, but your readers/users are not being
 told what's going on yet. They need some context, which is what you'll provide
 for them by adding map elements. First, let's add a title.
 
-* Click on this button: |mActionLabel|
+* Click on this button: |label|
 
 * Click on the page, above the map, and a label will appear at the top of the
   map.
@@ -130,12 +130,12 @@ position the title in the center of the page.
 However, there is also a tool to help position the title relative to the map
 (not the page):
 
-|mActionAlignLeft|
+|alignLeft|
 
 * Click the map to select it.
 * Hold in :kbd:`shift` on your keyboard and click on the label so that both the
   map and the label are selected.
-* Look for the :guilabel:`Align` button |mActionAlignLeft| and click on the
+* Look for the :guilabel:`Align` button |alignLeft| and click on the
   dropdown arrow next to it to reveal the positioning options and click
   :guilabel:`Align center`:
 
@@ -192,7 +192,7 @@ actually mean. In some cases, like the place names, this is quite obvious. In
 other cases, it's more difficult to guess, like the colors of the farms. Let's
 add a new legend.
 
-* Click on this button: |mActionAddLegend|
+* Click on this button: |addLegend|
 
 * Click on the page to place the legend, and move it to where you want it:
 
@@ -208,7 +208,7 @@ Not everything on the legend is necessary, so let's remove some unwanted items.
   :guilabel:`Legend items` panel.
 * Select the :guilabel:`buildings` entry.
 * Delete it from the legend by clicking the :guilabel:`minus` button:
-  |mActionSignMinus|
+  |signMinus|
 
 You can also rename items.
 
@@ -237,8 +237,8 @@ move and resize the legend and or map. This is the result:
 Finally the map is ready for export! You'll see the export buttons near the top
 left corner of the :guilabel:`Composer` window:
 
-  |mActionFilePrint| |mActionSaveMapAsImage| |mActionSaveAsSVG|
-  |mActionSaveAsPDF|
+  |filePrint| |saveMapAsImage| |saveAsSVG|
+  |saveAsPDF|
 
 The button on the left is the :guilabel:`Print` button, which interfaces with
 a printer. Since the printer options will differ depending on the model of
@@ -270,7 +270,7 @@ format.
 
 For our purposes, we're going to use PDF.
 
-* Click the :guilabel:`Export as PDF` button: |mActionSaveAsPDF|
+* Click the :guilabel:`Export as PDF` button: |saveAsPDF|
 
 * Choose a save location and a file name as usual.
 * Click :guilabel:`Save`.

@@ -9,8 +9,8 @@ Getting Started
 .. contents::
    :local:
 
-This chapter gives a quick overview of installing |qg|, some sample data from
-the |qg| web page, and running a first and simple session visualizing raster
+This chapter gives a quick overview of installing QGIS, some sample data from
+the QGIS web page, and running a first and simple session visualizing raster
 and vector layers.
 
 .. _`label_installation`:
@@ -30,8 +30,8 @@ http://download.qgis.org.
 Installation from source
 ........................
 
-If you need to build |qg| from source, please refer to the installation
-instructions. They are distributed with the |qg| source code in a file
+If you need to build QGIS from source, please refer to the installation
+instructions. They are distributed with the QGIS source code in a file
 called :file:`INSTALL`. You can also find them online at
 http://htmlpreview.github.io/?https://raw.github.com/qgis/QGIS/master/doc/INSTALL.html
 
@@ -52,7 +52,7 @@ Sample Data
 .. :index::
     single:data sample
 
-The user guide contains examples based on the |qg| sample dataset.
+The user guide contains examples based on the QGIS sample dataset.
 
 |win| The Windows installer has an option to download the QGIS sample dataset.
 If checked, the data will be downloaded to your :file:`My Documents` folder and
@@ -64,7 +64,7 @@ you may do one of the following:
 * Use GIS data that you already have
 * Download sample data from
   http://qgis.org/downloads/data/qgis_sample_data.zip
-* Uninstall |qg| and reinstall with the data download option checked (only recommended if
+* Uninstall QGIS and reinstall with the data download option checked (only recommended if
   the above solutions are unsuccessful)
 
 |nix| |osx| For GNU/Linux and Mac OS X, there are not yet dataset installation
@@ -75,7 +75,7 @@ on your system.
 
 The Alaska dataset includes all GIS data that are used for examples and
 screenshots in the user guide; it also includes a small GRASS database.
-The projection for the |qg| sample dataset is Alaska Albers Equal Area with
+The projection for the QGIS sample dataset is Alaska Albers Equal Area with
 units feet. The EPSG code is 2964.
 
 ::
@@ -101,7 +101,7 @@ units feet. The EPSG code is 2964.
   PARAMETER["false_northing",0],
   UNIT["us_survey_feet",0.3048006096012192]]
 
-If you intend to use |qg| as a graphical front end for GRASS, you can find a
+If you intend to use QGIS as a graphical front end for GRASS, you can find a
 selection of sample locations (e.g., Spearfish or South Dakota) at the
 official GRASS GIS website, http://grass.osgeo.org/download/sample-data/.
 
@@ -120,10 +120,10 @@ a raster and a vector layer. We will use:
 Start QGIS
 ..........
 
-* |nix| Start |qg| by typing "|qg|" at a command prompt, or if using a
+* |nix| Start QGIS by typing "QGIS" at a command prompt, or if using a
   precompiled binary, by using the Applications menu.
-* |win| Start |qg| using the Start menu or desktop shortcut, or double click on
-  a |qg| project file.
+* |win| Start QGIS using the Start menu or desktop shortcut, or double click on
+  a QGIS project file.
 * |osx| Double click the icon in your Applications folder.
 
 .. _`fig_simple_session`:
@@ -131,18 +131,18 @@ Start QGIS
 .. /static/user_manual/introduction/simple_session.png
    :align: center
 
-   A Simple |qg| Session
+   A Simple QGIS Session
 
 Load raster and vector layers from the sample dataset
 .....................................................
 
-#. Click on the |mActionAddRasterLayer| :sup:`Add Raster Layer` icon.
+#. Click on the |addRasterLayer| :sup:`Add Raster Layer` icon.
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select
    the ERDAS IMG file :file:`landcover.img` and click **[Open]**.
 #. If the file is not listed, check if the :guilabel:`Files of type`
    |selectstring| combo box at the bottom of the dialog is set on the right
    type, in this case **Erdas Imagine Images (\*.img \*.IMG)**.
-#. Now click on the |mActionAddOgrLayer| :sup:`Add Vector Layer` icon.
+#. Now click on the |addOgrLayer| :sup:`Add Vector Layer` icon.
 #. |radiobuttonon| :guilabel:`File` should be selected as :guilabel:`Source Type`
    in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to
    select the vector layer.
@@ -164,29 +164,29 @@ Load raster and vector layers from the sample dataset
    :guilabel:`Draw text buffer` and choosing 3 as buffer size.
 #. Click **[Apply]**. Check if the result looks good, and finally click **[OK]**.
 
-You can see how easy it is to visualize raster and vector layers in |qg|. Let's
+You can see how easy it is to visualize raster and vector layers in QGIS. Let's
 move on to the sections that follow to learn more about the available
 functionality, features and settings, and how to use them.
 
 .. _`label_startingqgis`:
 
-Starting and Stopping |qg|
+Starting and Stopping QGIS
 ==========================
 
-In section :ref:`samplesession` you already learned how to start |qg|. We will
-repeat this here, and you will see that |qg| also provides further command line
+In section :ref:`samplesession` you already learned how to start QGIS. We will
+repeat this here, and you will see that QGIS also provides further command line
 options.
 
-* |nix| Assuming that |qg| is installed in the PATH, you can start |qg|
-  by typing ``qgis`` at a command prompt or by double clicking on the |qg|
+* |nix| Assuming that QGIS is installed in the PATH, you can start QGIS
+  by typing ``qgis`` at a command prompt or by double clicking on the QGIS
   application link (or shortcut) on the desktop or in the Applications menu.
-* |win| Start |qg| using the Start menu or desktop shortcut, or double click on
-  a |qg| project file.
+* |win| Start QGIS using the Start menu or desktop shortcut, or double click on
+  a QGIS project file.
 * |osx| Double click the icon in your Applications folder. If you need to
-  start |qg| in a shell, run
+  start QGIS in a shell, run
   ``/path-to-installation-executable/Contents/MacOS/Qgis``.
 
-To stop |qg|, click the menu option |nix| |win| :menuselection:`File` |osx|
+To stop QGIS, click the menu option |nix| |win| :menuselection:`File` |osx|
 :menuselection:`QGIS --> Quit`, or use the shortcut :kbd:`Ctrl+Q`.
 
 .. _`label_commandline`:
@@ -197,7 +197,7 @@ Command Line Options
 .. index::
    single:command line options
 
-|nix| |qg| supports a number of options when started from the command line. To
+|nix| QGIS supports a number of options when started from the command line. To
 get a list of the options, enter ``qgis --help`` on the command line. The usage
 statement for QGIS is:
 
@@ -236,9 +236,9 @@ statement for QGIS is:
 .. tip::
         **Example Using command line arguments**
 
-        You can start |qg| by specifying one or more data files on the command
+        You can start QGIS by specifying one or more data files on the command
         line. For example, assuming you are in the :file:`qgis_sample_data`
-        directory, you could start |qg| with a vector layer and a raster file
+        directory, you could start QGIS with a vector layer and a raster file
         set to load on startup using the following command:
         ``qgis ./raster/landcover.img ./gml/lakes.gml``
 
@@ -254,14 +254,14 @@ be added after ``--snapshot``.
 
 **Command line option** ``--lang``
 
-Based on your locale, |qg| selects the correct localization. If you would like
+Based on your locale, QGIS selects the correct localization. If you would like
 to change your language, you can specify a language code. For example,
-``--lang=it`` starts |qg| in Italian localization.
+``--lang=it`` starts QGIS in Italian localization.
 
 **Command line option** ``--project``
 
 Starting QGIS with an existing project file is also possible. Just add the
-command line option ``--project`` followed by your project name and |qg| will
+command line option ``--project`` followed by your project name and QGIS will
 open with all layers in the given file loaded.
 
 **Command line option** ``--extent``
@@ -275,7 +275,7 @@ bounding box of your extent in the following order separated by a comma:
 
 **Command line option** ``--nologo``
 
-This command line argument hides the splash screen when you start |qg|.
+This command line argument hides the splash screen when you start QGIS.
 
 **Command line option** ``--noplugins``
 
@@ -295,7 +295,7 @@ at startup.
 **Command line option** ``--optionspath``
 
 You can have multiple configurations and decide which one to use when starting
-|qg| with this option. See :ref:`gui_options` to confirm where the
+QGIS with this option. See :ref:`gui_options` to confirm where the
 operating system saves the settings files. Presently, there is no way to specify
 a file to write settings to; therefore, you can create a copy of
 the original settings file and rename it. The option specifies path to directory 
@@ -310,12 +310,12 @@ use option:
 
 This option is similar to the one above, but furthermore overrides the default
 path for user configuration (:file:`~/.qgis2`) and forces **QSettings** to use
-this directory, too. This allows users to, for instance, carry a |qg| installation on a
+this directory, too. This allows users to, for instance, carry a QGIS installation on a
 flash drive together with all plugins and settings.
 
 **Command line option** ``--code``
 
-This option can be used to run a given python file directly after |qg| has started.
+This option can be used to run a given python file directly after QGIS has started.
 
 For example, when you have a python file named :file:`load_alaska.py` with following content:
 
@@ -327,7 +327,7 @@ For example, when you have a python file named :file:`load_alaska.py` with follo
   iface.addRasterLayer(raster_file, layer_name)
 
 Assuming you are in the directory where the file :file:`load_alaska.py` is located, you 
-can start |qg|, load the raster file :file:`landcover.img` and give the layer the name 
+can start QGIS, load the raster file :file:`landcover.img` and give the layer the name 
 'Alaska' using the following command: 
 ``qgis --code load_alaska.py`` 
 
@@ -340,8 +340,8 @@ The state of your QGIS session is considered a project. QGIS works on one
 project at a time. Settings are considered as being either per-project or as a
 default for new projects (see section :ref:`gui_options`). QGIS can save the
 state of your workspace into a project file using the menu options
-:menuselection:`Project -->` |mActionFileSave| :menuselection:`Save`
-or :menuselection:`Project -->` |mActionFileSaveAs| :menuselection:`Save As...`.
+:menuselection:`Project -->` |fileSave| :menuselection:`Save`
+or :menuselection:`Project -->` |fileSaveAs| :menuselection:`Save As...`.
 If the loaded project file on disk was meanwhile changed, by default, QGIS will
 ask you if you want to overwrite the changes into the project file. This behavior
 is set by checking |checkbox| :guilabel:`Prompt to save project and data source
@@ -349,7 +349,7 @@ changes when required` under :menuselection:`Settings --> Options --> General`
 menu .
 
 Load saved projects into a QGIS session using :menuselection:`Project -->`
-|mActionFileOpen| :menuselection:`Open...`,
+|fileOpen| :menuselection:`Open...`,
 :menuselection:`Project --> New from template` or
 :menuselection:`Project --> Open Recent -->`.
 
@@ -360,7 +360,7 @@ a row opens the selected project.
 If you're willing to create a new project, just add new layers and the list disappears.
 
 If you wish to clear your session and start fresh, choose
-:menuselection:`Project -->` |mActionFileNew| :menuselection:`New`.
+:menuselection:`Project -->` |fileNew| :menuselection:`New`.
 Either of these menu options will prompt you to save the existing project if
 changes have been made since it was opened or last saved.
 
@@ -408,7 +408,7 @@ There are several ways to generate output from your QGIS session. We have
 discussed one already in section :ref:`sec_projects`, saving as a project file.
 Here is a sampling of other ways to produce output files:
 
-* Menu option :menuselection:`Project -->` |mActionSaveMapAsImage| :menuselection:`Save
+* Menu option :menuselection:`Project -->` |saveMapAsImage| :menuselection:`Save
   as Image...` opens a file dialog where you select the name, path and type of
   image (PNG, JPG and many other formats). A world file with extension ``PNGW``
   or ``JPGW`` saved in the same folder georeferences the image.
@@ -416,6 +416,6 @@ Here is a sampling of other ways to produce output files:
   a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
   vector layers you want to export to DXF. Through the 'Symbology mode' symbols
   from the original QGIS Symbology can be exported with high fidelity.
-* Menu option :menuselection:`Project -->` |mActionNewComposer|
+* Menu option :menuselection:`Project -->` |newComposer|
   :menuselection:`New Print Composer...` opens a dialog where you can layout and
   print the current map canvas (see section :ref:`label_printcomposer`).

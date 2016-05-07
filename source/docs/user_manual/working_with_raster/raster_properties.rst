@@ -225,18 +225,18 @@ Three types of color interpolation are available:
 #. Exact
 
 
-In the left block, the button |mActionSignPlus| :sup:`Add values manually` adds a value to the
-individual color table. The button |mActionSignMinus| :sup:`Remove selected row`
+In the left block, the button |signPlus| :sup:`Add values manually` adds a value to the
+individual color table. The button |signMinus| :sup:`Remove selected row`
 deletes a value from the individual color table, and the
-|mActionArrowDown| :sup:`Sort colormap items` button sorts the color table according
+|arrowDown| :sup:`Sort colormap items` button sorts the color table according
 to the pixel values in the value column. Double clicking on the value column lets
 you insert a specific value. Double clicking on the color column opens the dialog
 :guilabel:`Change color`, where you can select a color to apply on that value. Further,
 you can also add labels for each color, but this value won't be displayed when you use the identify
 feature tool.
-You can also click on the button |mActionDraw| :sup:`Load color map from band`,
+You can also click on the button |draw| :sup:`Load color map from band`,
 which tries to load the table from the band (if it has any). And you can use the
-buttons |mActionFileOpen| :sup:`Load color map from file` or |mActionFileSaveAs|
+buttons |fileOpen| :sup:`Load color map from file` or |fileSaveAs|
 :sup:`Export color map to file` to load an existing color table or to save the
 defined color table for other sessions.
 
@@ -326,7 +326,7 @@ to a transparency of 20%. The following steps are necessary:
    from the pop-up menu.
 #. Select the :guilabel:`Transparency` menu.
 #. From the :guilabel:`Transparency band` menu, choose 'None'.
-#. Click the |mActionSignPlus| :sup:`Add values manually`
+#. Click the |signPlus| :sup:`Add values manually`
    button. A new row will appear in the pixel list.
 #. Enter the raster value in the 'From' and 'To' column (we use 0 here), and adjust the transparency to 20%.
 #. Press the **[Apply]** button and have a look at the map.
@@ -334,9 +334,9 @@ to a transparency of 20%. The following steps are necessary:
 You can repeat steps 5 and 6 to adjust more values with custom transparency.
 
 As you can see, it is quite easy to set custom transparency, but it can be
-quite a lot of work. Therefore, you can use the button |mActionFileSave|
+quite a lot of work. Therefore, you can use the button |fileSave|
 :sup:`Export to file` to save your transparency list to a file. The button
-|mActionFileOpen| :sup:`Import from file` loads your transparency settings and
+|fileOpen| :sup:`Import from file` loads your transparency settings and
 applies them to the current raster layer.
 
 
@@ -391,8 +391,8 @@ Histogram Menu
 The :guilabel:`Histogram` menu allows you to view the distribution of the bands
 or colors in your raster. The histogram is generated automatically when you open the
 :guilabel:`Histogram` menu. All existing bands will be displayed together. You can
-save the histogram as an image with the |mActionFileSave| button.
-With the :guilabel:`Visibility` option in the |mAction| :guilabel:`Prefs/Actions` menu,
+save the histogram as an image with the |fileSave| button.
+With the :guilabel:`Visibility` option in the |actionRun| :guilabel:`Prefs/Actions` menu,
 you can display histograms of the individual bands. You will need to select the option
 |radiobuttonoff| :guilabel:`Show selected band`.
 The :guilabel:`Min/max options` allow you to 'Always show min/max markers', to 'Zoom

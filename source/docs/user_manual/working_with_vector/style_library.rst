@@ -47,7 +47,7 @@ according to conditions set. See figure_symbol_2_:
 
 To create a group, right click on an existing group or on the main **Groups**
 directory in the left of the dialog.
-You can also select a group and click the |mActionSignPlus| :sup:`Add Group`
+You can also select a group and click the |signPlus| :sup:`Add Group`
 button. The new group will be a sub-group of the selected one.
 
 Create **Smart Group** is similar to creating group, but instead select
@@ -69,14 +69,14 @@ the entered condition(s) is automatically added to the smart group.
 
 To remove a group or a smart group, right click on the group and select
 :menuselection:`Remove Group` or select it and push
-|mActionSignMinus| :sup:`Remove Group` button.
+|signMinus| :sup:`Remove Group` button.
 
 Unlike the smart groups that automatically fetch their belonged symbols,
 simple groups are filled by the user.
 To add a symbol into a group, you can either right click on a symbol, choose
 :menuselection:`Apply Group` and then the group name. There is a second
 way to add several symbols into a group: just select the group, click
-|mActionChangeLabelProperties| and choose :menuselection:`Group Symbols`. All
+|changeLabelProperties| and choose :menuselection:`Group Symbols`. All
 symbols display a checkbox that allows you to add the symbol into the selected
 groups. When selection is finished, you can click the same button, and
 choose :menuselection:`Finish Grouping`.
@@ -96,11 +96,11 @@ different tabs:
 * **Fill** for surface symbols
 * and `Color Ramp`_
 
-To delete a symbol you no longer need, just select it and click |mActionSignMinus|
+To delete a symbol you no longer need, just select it and click |signMinus|
 :sup:`Remove item` (also available through right-click).
 The symbol will be deleted from the local symbols database.
 
-The symbol list can be modified by adding new symbols with |mActionSignPlus|
+The symbol list can be modified by adding new symbols with |signPlus|
 :sup:`Add item` button or modifying existing ones with |symbologyEdit|
 :sup:`Edit item`.
 See `The Symbol Selector`_ for further information.
@@ -157,7 +157,7 @@ The Color ramp tab in the Style Manager presents different types of
 color ramps you can use to style layers.
 
 To create a custom color ramp, activate the Color ramp tab and click the
-|mActionSignPlus| :sup:`Add item` button. The button reveals a drop-down list to
+|signPlus| :sup:`Add item` button. The button reveals a drop-down list to
 choose the ramp type: Gradient, Random, colorBrewer, or cpt-city.
 
 The first three have options for number of steps and/or multiple stops in
@@ -241,11 +241,11 @@ For each kind of symbols, you will find always the same dialog structure:
 According to the level selected in the symbol tree,
 you'll get enabled different tools at the bottom of the dialog to :
 
-* |mActionSignPlus| add new symbol layer: you can imbricate as many symbols as you want
-* |mActionSignMinus| remove the selected symbol layer
+* |signPlus| add new symbol layer: you can imbricate as many symbols as you want
+* |signMinus| remove the selected symbol layer
 * lock colors of symbol layer: a |locked| locked color stays unchanged when
   user changes the color at the global (or upper) symbol level
-* |mActionDuplicateLayer| duplicate a (group of) symbol layer(s)
+* |duplicateLayer| duplicate a (group of) symbol layer(s)
 * move up or down the symbol layer
 * apply :ref:`special effects <draw_effects>` to the symbol layer
 * save the designed symbol into your symbol library

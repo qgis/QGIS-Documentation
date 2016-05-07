@@ -22,7 +22,7 @@ instruction in the manual.
 
 * Menu Options: :menuselection:`Layer --> Add a Raster Layer` or
   :menuselection:`Settings --> Toolbars --> Digitizing`
-* Tool: |mActionAddRasterLayer| :sup:`Add a Raster Layer`
+* Tool: |addRasterLayer| :sup:`Add a Raster Layer`
 * Button : **\[Save as Default\]**
 * Dialog Box Title: :guilabel:`Layer Properties`
 * Tab: :guilabel:`General`

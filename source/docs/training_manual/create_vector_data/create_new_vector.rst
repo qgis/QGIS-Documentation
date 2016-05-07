@@ -90,7 +90,7 @@ or aerial photography.
 For our example, you'll be using the digitizing approach. Sample raster datasets
 are provided, so you'll need to import them as necessary.
 
-* Click on the :guilabel:`Add Raster Layer` button: |mActionAddRasterLayer|
+* Click on the :guilabel:`Add Raster Layer` button: |addRasterLayer|
 
 * Navigate to :kbd:`exercise_data/raster/`.
 * Select the file :kbd:`3420C_2010_327_RGB_LATLNG.tif`.
@@ -131,13 +131,13 @@ Toolbars --> Digitizing` menu entry.
 As soon as you are in edit mode, you'll see the digitizing tools are now
 active:
 
-  |mActionCapturePolygon| |mActionMoveFeature| |mActionNodeTool|
+  |capturePolygon| |moveFeature| |nodeTool|
 
 Four other relevant buttons are still inactive, but will become active when we
 start interacting with our new data:
 
-  |mActionSaveEdits| |mActionDeleteSelected| |mActionEditCut| |mActionEditCopy|
-  |mActionEditPaste|
+  |saveEdits| |deleteSelected| |editCut| |editCopy|
+  |editPaste|
 
 From left to right on the toolbar, they are:
 

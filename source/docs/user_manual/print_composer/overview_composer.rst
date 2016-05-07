@@ -34,23 +34,23 @@ Sample Session
 Before you start to work with the Print Composer, you need to load some raster
 or vector layers in the QGIS map canvas and adapt their properties to suit your
 own convenience. After everything is rendered and symbolized to your liking,
-click the |mActionNewComposer| :sup:`New Print Composer` icon in the toolbar or
+click the |newComposer| :sup:`New Print Composer` icon in the toolbar or
 choose :menuselection:`File --> New Print Composer`. You will be prompted to
 choose a title for the new Composer.
 
 
 To demonstrate how to create a map please follow the next instructions.
 
-#. On the left side, select the |mActionAddMap| :sup:`Add new map` toolbar button
+#. On the left side, select the |addMap| :sup:`Add new map` toolbar button
    and draw a rectangle on the canvas holding down the left mouse button.
    Inside the drawn rectangle the QGIS map view to the canvas.
-#. Select the |mActionScaleBar| :sup:`Add new scalebar` toolbar button and click
+#. Select the |scaleBar| :sup:`Add new scalebar` toolbar button and click
    with the left mouse button on the Print Composer canvas. A scalebar will be
    added to the canvas.
-#. Select the |mActionAddLegend| :sup:`Add new legend` toolbar button and draw a
+#. Select the |addLegend| :sup:`Add new legend` toolbar button and draw a
    rectangle on the canvas holding down the left mouse button.
    Inside the drawn rectangle the legend will be drawn.
-#. Select the |mActionSelect| :sup:`Select/Move item` icon to select the map on
+#. Select the |select| :sup:`Select/Move item` icon to select the map on
    the canvas and move it a bit.
 #. While the map item is still selected you can also change the size of the map item.
    Click while holding down the left mouse button, in a white little rectangle in one
@@ -61,7 +61,7 @@ To demonstrate how to create a map please follow the next instructions.
 #. Now, you can print or export your print composition to image formats, PDF or to SVG
    with the export tools in Composer menu.
 #. Finally, you can save your print composition within the project file with the
-   |mActionFileSave| :sup:`Save Project` button.
+   |fileSave| :sup:`Save Project` button.
 
 
 You can add multiple elements to the Composer. It is also possible to have more
@@ -80,7 +80,7 @@ The Composer Manager
 
 The Composer Manager is the main window to manage print composers in the project.
 It helps you add new print composer, duplicate an existing one, rename or delete it.
-To open the composer manager dialog, click on the |mActionComposerManager|
+To open the composer manager dialog, click on the |composerManager|
 :sup:`Composer Manager` button in the toolbar or choose :menuselection:`Composer
 --> Composer Manager`. It can also be reached from the main window of QGIS with
 :menuselection:`Project --> Composer Manager`.
@@ -165,7 +165,7 @@ and :guilabel:`Atlas generation`.
   all items will be converted to raster before printing or saving as PostScript or PDF.
   In this tab, you can also customize settings for grid and smart guides.
 * The :guilabel:`Item Properties` tab displays the properties for the selected
-  item. Click the |mActionSelect| :sup:`Select/Move item` icon to select
+  item. Click the |select| :sup:`Select/Move item` icon to select
   an item (e.g., legend, scale bar or label) on the canvas. Then click the
   :guilabel:`Item Properties` tab and customize the settings for the selected
   item.
@@ -197,63 +197,63 @@ Tools
 
 .. _table_composer_1:
 
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| Icon                     | Purpose                               | Icon                       | Purpose                                  |
-+==========================+=======================================+============================+==========================================+
-| |mActionFileSave|        | Save Project                          | |mActionNewComposer|       | New Composer                             |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionDupComposer|     | Duplicate Composer                    | |mActionComposerManager|   | Composer Manager                         |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionFileOpen|        | Load from template                    | |mActionFileSaveAs|        | Save as template                         |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionFilePrint|       | Print or export as PostScript         | |mActionSaveMapAsImage|    | Export to an image format                |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionSaveAsSVG|       | Export print composition to SVG       | |mActionSaveAsPDF|         | Export as PDF                            |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionUndo|            | Revert last change                    | |mActionRedo|              | Restore last change                      |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionZoomFullExtent|  | Zoom to full extent                   | |mActionZoomActual|        | Zoom to 100%                             |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionZoomIn|          | Zoom in                               | |mActionZoomIn|            | Zoom out                                 |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionDraw|            | Refresh View                          |                            |                                          |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionPan|             | Pan                                   | |mActionZoomToSelected|    | Zoom to specific region                  |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionSelect|          | Select/Move item in print composition | |mActionMoveItemContent|   | Move content within an item              |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionAddMap|          | Add new map from QGIS map canvas      | |mActionAddImage|          | Add image to print composition           |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionLabel|           | Add label to print composition        | |mActionAddLegend|         | Add new legend to print composition      |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionScaleBar|        | Add scale bar to print composition    | |mActionAddBasicShape|     | Add basic shape to print composition     |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionAddArrow|        | Add arrow to print composition        | |mActionOpenTable|         | Add attribute table to print composition |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionAddHtml|         | Add an HTML frame                     |                            |                                          |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionGroupItems|      | Group items of print composition      | |mActionUngroupItems|      | Ungroup items of print composition       |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |locked|                 | Lock Selected Items                   | |unlocked|                 | Unlock All items                         |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionRaiseItems|      | Raise selected items                  | |mActionLowerItems|        | Lower selected items                     |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionMoveItemsToTop|  | Move selected items to top            | |mActionMoveItemsToBottom| | Move selected items to bottom            |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionAlignLeft|       | Align selected items left             | |mActionAlignRight|        | Align selected items right               |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionAlignHCenter|    | Align selected items center           | |mActionAlignVCenter|      | Align selected items center vertical     |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionAlignTop|        | Align selected items top              | |mActionAlignBottom|       | Align selected items bottom              |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |atlas|                  | Preview Atlas                         | |mActionAtlasFirst|        | First Feature                            |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionAtlasPrev|       | Previous Feature                      |  |mActionAtlasNext|        | Next Feature                             |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionAtlasLast|       | Last feature                          |  |mActionFilePrint|        | Print Atlas                              |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionSaveMapAsImage|  | Export Atlas as Image                 |  |mActionAtlasSettings|    | Atlas Settings                           |
-+--------------------------+---------------------------------------+----------------------------+------------------------------------------+
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| Icon              | Purpose                               | Icon                | Purpose                                  |
++===================+=======================================+=====================+==========================================+
+| |fileSave|        | Save Project                          | |newComposer|       | New Composer                             |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |dupComposer|     | Duplicate Composer                    | |composerManager|   | Composer Manager                         |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |fileOpen|        | Load from template                    | |fileSaveAs|        | Save as template                         |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |filePrint|       | Print or export as PostScript         | |saveMapAsImage|    | Export to an image format                |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |saveAsSVG|       | Export print composition to SVG       | |saveAsPDF|         | Export as PDF                            |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |undo|            | Revert last change                    | |redo|              | Restore last change                      |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |zoomFullExtent|  | Zoom to full extent                   | |zoomActual|        | Zoom to 100%                             |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |zoomIn|          | Zoom in                               | |zoomIn|            | Zoom out                                 |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |draw|            | Refresh View                          |                     |                                          |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |pan|             | Pan                                   | |zoomToSelected|    | Zoom to specific region                  |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |select|          | Select/Move item in print composition | |moveItemContent|   | Move content within an item              |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |addMap|          | Add new map from QGIS map canvas      | |addImage|          | Add image to print composition           |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |label|           | Add label to print composition        | |addLegend|         | Add new legend to print composition      |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |scaleBar|        | Add scale bar to print composition    | |addBasicShape|     | Add basic shape to print composition     |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |addArrow|        | Add arrow to print composition        | |openTable|         | Add attribute table to print composition |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |addHtml|         | Add an HTML frame                     |                     |                                          |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |groupItems|      | Group items of print composition      | |ungroupItems|      | Ungroup items of print composition       |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |locked|          | Lock Selected Items                   | |unlocked|          | Unlock All items                         |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |raiseItems|      | Raise selected items                  | |lowerItems|        | Lower selected items                     |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |moveItemsToTop|  | Move selected items to top            | |moveItemsToBottom| | Move selected items to bottom            |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |alignLeft|       | Align selected items left             | |alignRight|        | Align selected items right               |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |alignHCenter|    | Align selected items center           | |alignVCenter|      | Align selected items center vertical     |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |alignTop|        | Align selected items top              | |alignBottom|       | Align selected items bottom              |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |atlas|           | Preview Atlas                         | |atlasFirst|        | First Feature                            |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |atlasPrev|       | Previous Feature                      |  |atlasNext|        | Next Feature                             |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |atlasLast|       | Last feature                          |  |filePrint|        | Print Atlas                              |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
+| |saveMapAsImage|  | Export Atlas as Image                 |  |atlasSettings|    | Atlas Settings                           |
++-------------------+---------------------------------------+---------------------+------------------------------------------+
 
 Table Composer 1: Print Composer Tools
 
@@ -264,22 +264,22 @@ With the :menuselection:`Composer --> Save Project` action, you can save
 the project file directly from the print composer window.
 The :menuselection:`Composer` menu also provides actions to:
 
-* Create a new and blank print composer with |mActionNewComposer| :sup:`New Composer...`
-* |mActionDupComposer| :sup:`Duplicate Composer...` : Create a new print composer
+* Create a new and blank print composer with |newComposer| :sup:`New Composer...`
+* |dupComposer| :sup:`Duplicate Composer...` : Create a new print composer
   by duplicating the current one
-* Open the |mActionComposerManager| :sup:`Composer Manager...`
+* Open the |composerManager| :sup:`Composer Manager...`
 * :guilabel:`Print Composers...` : Open an existing print composer
 
-Once the layout is designed, with |mActionFileSaveAs| :sup:`Save as template`
-and |mActionFileOpen| :sup:`Add items from template` icons, you can save
+Once the layout is designed, with |fileSaveAs| :sup:`Save as template`
+and |fileOpen| :sup:`Add items from template` icons, you can save
 the current state of a Print Composer session as a :file:`.qpt` template
 and load its item again in another session.
 
 In the :menuselection:`Composer` menu, there are also powerful ways to share
 geographical information produced with QGIS that can be included in reports or
-published. These tools are |mActionSaveMapAsImage| :sup:`Export as Image...`,
-|mActionSaveAsPDF| :sup:`Export as PDF...`, |mActionSaveAsSVG| :sup:`Export as
-SVG...` and |mActionFilePrint| :sup:`Print...`.
+published. These tools are |saveMapAsImage| :sup:`Export as Image...`,
+|saveAsPDF| :sup:`Export as PDF...`, |saveAsSVG| :sup:`Export as
+SVG...` and |filePrint| :sup:`Print...`.
 
 Settings Menu
 -------------
@@ -322,13 +322,13 @@ Navigation Tools
 
 To navigate in the canvas layout, the Print Composer provides some general tools:
 
-* |mActionZoomIn| :sup:`Zoom In`
-* |mActionZoomOut| :sup:`Zoom Out`
-* |mActionZoomFullExtent| :sup:`Zoom Full`
-* |mActionZoomActual| :sup:`Zoom to 100%`
-* |mActionDraw| :sup:`Refresh view` (if you find the view in an inconsistent state)
-* |mActionPan| :sup:`Pan composer`
-* |mActionZoomToSelected| :sup:`Zoom` (zoom to a specific region of the Composer)
+* |zoomIn| :sup:`Zoom In`
+* |zoomOut| :sup:`Zoom Out`
+* |zoomFullExtent| :sup:`Zoom Full`
+* |zoomActual| :sup:`Zoom to 100%`
+* |draw| :sup:`Refresh view` (if you find the view in an inconsistent state)
+* |pan| :sup:`Pan composer`
+* |zoomToSelected| :sup:`Zoom` (zoom to a specific region of the Composer)
 
 You can change the zoom level also using the mouse wheel or the combo box in the status bar.
 If you need to switch to pan mode while working in the Composer area, you can hold
@@ -458,8 +458,8 @@ Command History Tab: Revert and Restore actions
 During the layout process, it is possible to revert and restore changes.
 This can be done with the revert and restore tools:
 
-* |mActionUndo| :sup:`Revert last change`
-* |mActionRedo| :sup:`Restore last change`
+* |undo| :sup:`Revert last change`
+* |redo| :sup:`Restore last change`
 
 This can also be done by mouse click within the :guilabel:`Command history` tab
 (see figure_composer_1_). The History tab lists the last actions done within the composer.
@@ -491,7 +491,7 @@ Note that a selected row is shown as bold.
 
 For any selected item, you can :
 
-* |mActionShowAllLayers| set it visible or not,
+* |showAllLayers| set it visible or not,
 * |locked| lock or unlock its position,
 * order its Z position. You can move up and down each item in the list with a
   click and drag. The upper item in the list will be brought to the foreground

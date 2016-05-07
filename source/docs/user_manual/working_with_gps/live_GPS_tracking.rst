@@ -14,12 +14,12 @@ left side of the canvas.
 
 There are four possible screens in this GPS tracking window:
 
-* |mActionToggleEditing| GPS position coordinates and an interface for manually entering
+* |toggleEditing| GPS position coordinates and an interface for manually entering
   vertices and features
 * |gpstrack_barchart| GPS signal strength of satellite connections
 * |gpstrack_polarchart| GPS polar screen showing number and polar position of
   satellites
-* |mActionOptions| GPS options screen (see figure_gps_options_)
+* |options| GPS options screen (see figure_gps_options_)
 
 With a plugged-in GPS receiver (has to be supported by your operating system),
 a simple click on **[Connect]** connects the GPS to QGIS. A second click (now
@@ -35,7 +35,7 @@ you first have to configure gpsd properly to connect QGIS to it.
 Position and additional attributes
 ----------------------------------
 
-|mActionToggleEditing| If the GPS is receiving signals from satellites, you will
+|toggleEditing| If the GPS is receiving signals from satellites, you will
 see your position in latitude, longitude and altitude together with additional
 attributes.
 
@@ -89,7 +89,7 @@ ID numbers of the satellites you are receiving signals from.
 GPS options
 -----------
 
-|mActionOptions| In case of connection problems, you can switch between:
+|options| In case of connection problems, you can switch between:
 
 * |radiobuttonon| :guilabel:`Autodetect`
 * |radiobuttonoff| :guilabel:`Internal`
@@ -126,7 +126,7 @@ extent.
 Finally, you can activate |checkbox| :guilabel:`Log file` and define a path
 and a file where log messages about the GPS tracking are logged.
 
-If you want to set a feature manually, you have to go back to |mActionToggleEditing|
+If you want to set a feature manually, you have to go back to |toggleEditing|
 :sup:`Position` and click on **[Add Point]** or **[Add track point]**.
 
 Connect to a Bluetooth GPS for live tracking
@@ -151,7 +151,7 @@ by the Bluetooth properties.
 After the GPS has been recognized, make the pairing for the connection. Usually
 the authorization code is ``0000``.
 
-Now open :guilabel:`GPS information` panel and switch to |mActionOptions| GPS
+Now open :guilabel:`GPS information` panel and switch to |options| GPS
 options screen. Select the COM port assigned to the GPS connection and click
 the **[Connect]**. After a while a cursor indicating your position should
 appear.

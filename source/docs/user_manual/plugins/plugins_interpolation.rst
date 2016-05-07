@@ -30,7 +30,7 @@ The plugin requires the following parameters to be specified before running:
   of the interpolation result can decrease, if the distribution of sample data points is uneven.
   Furthermore, maximum and minimum values in the interpolated surface can only occur at sample data points.
   This often results in small peaks and pits around the sample data points.
-* |mActionOptions| **Configure Interpolation Method**: Configure the interpolation method
+* |options| **Configure Interpolation Method**: Configure the interpolation method
   you have chosen. For the TIN method you can choose between Linear and Clough Toucher
   (cubic) interpolation methods. You can also save the triangulation in shapefile format.
   For IDW interpolation you can set the distance coefficient.

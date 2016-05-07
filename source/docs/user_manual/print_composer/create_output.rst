@@ -37,19 +37,19 @@ without bounding boxes. This can be enabled by deactivating :guilabel:`View -->`
 The Print Composer allows you to create several output formats, and it is possible
 to define the resolution (print quality) and paper size:
 
-* The |mActionFilePrint| :sup:`Print` icon allows you to print the layout to a
+* The |filePrint| :sup:`Print` icon allows you to print the layout to a
   connected printer or a PostScript file, depending on installed printer drivers.
-* The |mActionSaveMapAsImage| :sup:`Export as image` icon exports the Composer
+* The |saveMapAsImage| :sup:`Export as image` icon exports the Composer
   canvas in several image formats, such as PNG, BPM, TIF, JPG,...
-* The |mActionSaveAsSVG| :sup:`Export as SVG` icon saves the Print Composer canvas
+* The |saveAsSVG| :sup:`Export as SVG` icon saves the Print Composer canvas
   as an SVG (Scalable Vector Graphic).
-* The |mActionSaveAsPDF| :sup:`Export as PDF` icon saves the defined Print Composer
+* The |saveAsPDF| :sup:`Export as PDF` icon saves the defined Print Composer
   canvas directly as a PDF.
 
 Image export options
 ====================
 
-Clicking the |mActionSaveMapAsImage| :sup:`Export as image` icon will ask you to
+Clicking the |saveMapAsImage| :sup:`Export as image` icon will ask you to
 enter the filename to use to export composition: in case of multi-page composition,
 each page will be exported to a file with the given name appended with the page
 number.
@@ -86,7 +86,7 @@ the exported image.
 SVG export options
 ==================
 
-With |mActionSaveAsSVG| :sup:`Export as SVG`, you also need to fill the filename
+With |saveAsSVG| :sup:`Export as SVG`, you also need to fill the filename
 (used as a basename for all files in case of multi_page composition) and then
 can apply |checkbox| :guilabel:`Crop to content` option.
 
@@ -109,7 +109,7 @@ The SVG export options dialog allows also to :
 PDF export options
 ==================
 
-The |mActionSaveAsPDF| :sup:`Export as PDF` exports all the composition into a
+The |saveAsPDF| :sup:`Export as PDF` exports all the composition into a
 single PDF file.
 
 If you applied to your composition or any shown layer an advanced effect such as
@@ -317,10 +317,10 @@ image...) linked to it, you can create a preview of all the pages by clicking
 You can then use the arrows in the same toolbar to navigate through all the
 features:
 
-* |mActionAtlasFirst| :sup:`First feature`
-* |mActionAtlasPrev| :sup:`Previous feature`
-* |mActionAtlasNext| :sup:`Next feature`
-* |mActionAtlasLast| :sup:`Last feature`
+* |atlasFirst| :sup:`First feature`
+* |atlasPrev| :sup:`Previous feature`
+* |atlasNext| :sup:`Next feature`
+* |atlasLast| :sup:`Last feature`
 
 You can also use the combo box to directly select and preview a specific feature.
 The combo box shows atlas features name according to the expression set in the

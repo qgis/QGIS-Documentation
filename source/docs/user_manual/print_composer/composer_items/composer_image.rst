@@ -5,7 +5,7 @@
 The Image Item
 ===============
 
-To add an image, click the |mActionAddImage| :sup:`Add image` icon and drag a rectangle onto the Composer
+To add an image, click the |addImage| :sup:`Add image` icon and drag a rectangle onto the Composer
 canvas with the left mouse button. You can then position and customize
 its appearance in the image :guilabel:`Item Properties` tab.
 

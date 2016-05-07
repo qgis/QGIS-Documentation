@@ -10,7 +10,7 @@ The Attribute Table Item
    :local:
 
 It is possible to add parts of a vector attribute table to the Print Composer
-canvas: Click the |mActionOpenTable| :sup:`Add attribute table` icon, click and drag 
+canvas: Click the |openTable| :sup:`Add attribute table` icon, click and drag 
 with the left mouse button on the Print Composer canvas to place and size the item. 
 You can better position and customize its appearance in the :guilabel:`Item Properties` tab.
 

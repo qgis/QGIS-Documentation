@@ -34,7 +34,7 @@ any tables to this database. Let's go ahead and do that.
   new Spatialite layer, or select
   :guilabel:`Layer --> New --> New Spatialite Layer`.
 
-  |mActionNewSpatiaLiteLayer|
+  |newSpatiaLiteLayer|
 
 * Select the database we created in the previous steps in the drop down.
 * Give the layer the name :kbd:`places`.

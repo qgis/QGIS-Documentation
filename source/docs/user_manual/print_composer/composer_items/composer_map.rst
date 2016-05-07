@@ -8,7 +8,7 @@ The Map Item
 .. contents::
    :local:
 
-Click on the |mActionAddMap| :sup:`Add new map` toolbar button in the Print
+Click on the |addMap| :sup:`Add new map` toolbar button in the Print
 Composer toolbar to add the QGIS map canvas. Now, drag a rectangle onto the Composer
 canvas with the left mouse button to add the map. To display the current map, you
 can choose between three different modes in the map :guilabel:`Item Properties`
@@ -24,7 +24,7 @@ tab:
 
 **Cache** is the default preview mode for newly added Print Composer maps.
 
-You can resize the map element by clicking on the |mActionSelect|
+You can resize the map element by clicking on the |select|
 :sup:`Select/Move item` button, selecting the element, and dragging one of the
 blue handles in the corner of the map.  This button also helps to move the map to another place. 
 Select the item and while holding the left mouse button, move to the new place and release the mouse button.
@@ -38,7 +38,7 @@ With the map selected, you can now adapt
 more properties in the map :guilabel:`Item Properties` tab.
 
 To move layers within the map element, select the map element, click the
-|mActionMoveItemContent| :sup:`Move item content` icon and move the layers within
+|moveItemContent| :sup:`Move item content` icon and move the layers within
 the map item frame with the left mouse button.
 
 .. _`composer_main_properties`:
@@ -77,13 +77,13 @@ following functionalities (see figure_composer_map_1_):
   will not appear or be hidden in the map item of the Composer. But style and labels of a 
   locked layer are still refreshed according to the main QGIS interface.
   You can prevent this by using :guilabel:`Lock layer styles for map item`.
-* The |mActionShowPresets| button allows you to add quickly all the presets views you 
+* The |showPresets| button allows you to add quickly all the presets views you 
   have prepared in QGIS. 
-  Clicking on the |mActionShowPresets| button you will see the list of all the preset views: 
+  Clicking on the |showPresets| button you will see the list of all the preset views: 
   just select the preset you want to display. 
   The map canvas will automatically lock the preset layers by enabling the |checkbox| 
   :guilabel:`Lock layers for map item`: if you want to unselect the preset, just uncheck the 
-  |checkbox| and press on the |mActionDraw| button. See :ref:`label_legend` to find out how to 
+  |checkbox| and press on the |draw| button. See :ref:`label_legend` to find out how to 
   create presets views.
 
 Extents

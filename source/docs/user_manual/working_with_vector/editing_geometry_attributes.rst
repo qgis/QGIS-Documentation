@@ -42,10 +42,10 @@ it to an existing vertex and/or segment.
 The snapping tolerance setting affects all tools that work with tolerance.
 
 #. A general, project-wide snapping tolerance can be defined by choosing
-   :menuselection:`Settings -->` |mActionOptions| :menuselection:`Options`.
-   On Mac, go to :menuselection:`QGIS -->` |mActionOptions|
+   :menuselection:`Settings -->` |options| :menuselection:`Options`.
+   On Mac, go to :menuselection:`QGIS -->` |options|
    :menuselection:`Preferences...`. On Linux: :menuselection:`Edit -->`
-   |mActionOptions| :menuselection:`Options`. In the :guilabel:`Digitizing`
+   |options| :menuselection:`Options`. In the :guilabel:`Digitizing`
    tab, you can select between 'to vertex', 'to segment' or 'to vertex and segment'
    as default snap mode. You can also define a default snapping tolerance and
    a search radius for vertex edits. The tolerance can be set either in map
@@ -110,7 +110,7 @@ with a large number of vertices in close proximity. Set search radius too
 small, and it won't find anything to move.
 
 The search radius for vertex edits in layer units can be defined in the
-:guilabel:`Digitizing` tab under :menuselection:`Settings -->` |mActionOptions|
+:guilabel:`Digitizing` tab under :menuselection:`Settings -->` |options|
 :menuselection:`Options`. This is the same place where you define the general, project-
 wide snapping tolerance.
 
@@ -180,32 +180,32 @@ Using the basic digitizing tools, you can perform the following functions:
 
 .. _table_editing:
 
-+-------------------------+----------------------------------+-------------------------+----------------------------------+
-| Icon                    | Purpose                          | Icon                    | Purpose                          |
-+=========================+==================================+=========================+==================================+
-| |mActionAllEdits|       | Current edits                    | |mActionToggleEditing|  | Toggle editing                   |
-+-------------------------+----------------------------------+-------------------------+----------------------------------+
-| |mActionCapturePoint|   | Adding Features: Capture Point   | |mActionCaptureLine|    | Adding Features: Capture Line    |
-+-------------------------+----------------------------------+-------------------------+----------------------------------+
-| |mActionCapturePolygon| | Adding Features: Capture Polygon | |mActionMoveFeature|    | Move Feature                     |
-+-------------------------+----------------------------------+-------------------------+----------------------------------+
-| |mActionNodeTool|       | Node Tool                        | |mActionDeleteSelected| | Delete Selected                  |
-+-------------------------+----------------------------------+-------------------------+----------------------------------+
-| |mActionEditCut|        | Cut Features                     | |mActionEditCopy|       | Copy Features                    |
-+-------------------------+----------------------------------+-------------------------+----------------------------------+
-| |mActionEditPaste|      | Paste Features                   | |mActionSaveEdits|      | Save layer edits                 |
-+-------------------------+----------------------------------+-------------------------+----------------------------------+
++------------------+----------------------------------+--------------------+----------------------------------+
+| Icon             | Purpose                          | Icon               | Purpose                          |
++==================+==================================+====================+==================================+
+| |allEdits|       | Current edits                    | |toggleEditing|    | Toggle editing                   |
++------------------+----------------------------------+--------------------+----------------------------------+
+| |capturePoint|   | Adding Features: Capture Point   | |captureLine|      | Adding Features: Capture Line    |
++------------------+----------------------------------+--------------------+----------------------------------+
+| |capturePolygon| | Adding Features: Capture Polygon | |moveFeature|      | Move Feature                     |
++------------------+----------------------------------+--------------------+----------------------------------+
+| |nodeTool|       | Node Tool                        | |deleteSelected|   | Delete Selected                  |
++------------------+----------------------------------+--------------------+----------------------------------+
+| |editCut|        | Cut Features                     | |editCopy|         | Copy Features                    |
++------------------+----------------------------------+--------------------+----------------------------------+
+| |editPaste|      | Paste Features                   | |saveEdits|        | Save layer edits                 |
++------------------+----------------------------------+--------------------+----------------------------------+
 
 Table Editing: Vector layer basic editing toolbar
 
 Note that while using any of the digitizing tools, you can still :ref:`zoom or pan
 <zoom-pan>` in the map canvas without losing the focus on the tool.
 
-All editing sessions start by choosing the |mActionToggleEditing|
+All editing sessions start by choosing the |toggleEditing|
 :sup:`Toggle editing` option. This can be found in the context menu
 after right clicking on the legend entry for a given layer.
 
-Alternatively, you can use the :index:`Toggle Editing` |mActionToggleEditing|
+Alternatively, you can use the :index:`Toggle Editing` |toggleEditing|
 :sup:`Toggle editing` button from the digitizing toolbar to start or stop the
 editing mode. Once the layer is in edit mode, markers will appear at the
 vertices, and additional tool buttons on the editing toolbar will become
@@ -215,14 +215,14 @@ available.
 
 .. tip:: **Save Regularly**
 
-   Remember to |mActionSaveEdits| :sup:`Save Layer Edits` regularly. This will also
+   Remember to |saveEdits| :sup:`Save Layer Edits` regularly. This will also
    check that your data source can accept all the changes.
 
 Adding Features
 ...............
 
-You can use the |mActionCapturePoint| :sup:`Add Feature`,
-|mActionCaptureLine| :sup:`Add Feature` or |mActionCapturePolygon|
+You can use the |capturePoint| :sup:`Add Feature`,
+|captureLine| :sup:`Add Feature` or |capturePolygon|
 :sup:`Add Feature` icons on the toolbar to put the QGIS cursor into
 digitizing mode.
 
@@ -254,7 +254,7 @@ river in Alaska. In the :guilabel:`Digitizing` menu under the
    Enter Attribute Values Dialog after digitizing a new vector
    feature |nix|
 
-With the |mActionMoveFeature| :sup:`Move Feature(s)` icon on the toolbar, you can
+With the |moveFeature| :sup:`Move Feature(s)` icon on the toolbar, you can
 move existing features.
 
 .. _tip_attributes_types:
@@ -273,11 +273,11 @@ Current Edits
 .............
 
 This feature allows the digitization of multiple layers. Choose
-|mActionFileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you
+|fileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you
 made in multiple layers. You also have the opportunity to
-|mActionRollbackEdits| :guilabel:`Rollback for Selected Layers`, so that the
+|rollbackEdits| :guilabel:`Rollback for Selected Layers`, so that the
 digitization may be withdrawn for all selected layers.
-If you want to stop editing the selected layers, |mActionCancelEdits| :guilabel:`Cancel for Selected Layer(s)`
+If you want to stop editing the selected layers, |cancelEdits| :guilabel:`Cancel for Selected Layer(s)`
 is an easy way.
 
 The same functions are available for editing all layers of the project.
@@ -288,7 +288,7 @@ Node Tool
 .........
 
 For shapefile-based layers as well as SpatialLite, PostgreSQL/PostGIS, MSSQL Spatial, and Oracle Spatial tables, the
-|mActionNodeTool| :sup:`Node Tool` provides manipulation capabilities of
+|nodeTool| :sup:`Node Tool` provides manipulation capabilities of
 feature vertices similar to CAD programs. It is possible to simply select
 multiple vertices at once and to move, add or delete them altogether.
 The node tool also works with 'on the fly' projection turned on, and it supports
@@ -297,7 +297,7 @@ QGIS, persistent, so when some operation is done, selection stays
 active for this feature and tool. If the node tool is unable to find any
 features, a warning will be displayed.
 
-It is important to set the property :menuselection:`Settings -->` |mActionOptions|
+It is important to set the property :menuselection:`Settings -->` |options|
 :menuselection:`Options --> Digitizing -->` :guilabel:`Search Radius:`
 |selectnumber| to a number greater than zero (i.e., 10). Otherwise, QGIS will
 not be able to tell which vertex is being edited.
@@ -308,7 +308,7 @@ not be able to tell which vertex is being edited.
 
    The current version of QGIS supports three kinds of vertex markers:
    'Semi-transparent circle', 'Cross' and 'None'. To change the marker style,
-   choose |mActionOptions| :menuselection:`Options` from the
+   choose |options| :menuselection:`Options` from the
    :menuselection:`Settings` menu, click on the :guilabel:`Digitizing`
    tab and select the appropriate entry.
 
@@ -317,7 +317,7 @@ Basic operations
 
 .. index:: Nodes, Vertices, Vertex
 
-Start by activating the |mActionNodeTool| :sup:`Node Tool` and selecting a
+Start by activating the |nodeTool| :sup:`Node Tool` and selecting a
 feature by clicking on it. Red boxes will appear at each vertex of this feature.
 
 .. Perhaps the error message mentioned below is in fact a bug, in which case the
@@ -340,10 +340,10 @@ feature by clicking on it. Red boxes will appear at each vertex of this feature.
   vertex will appear on the edge, not at the cursor position; therefore, it
   should be moved if necessary.
 * **Deleting vertices**: After selecting vertices for deletion, click the
-  :kbd:`Delete` key. Note that you cannot use the |mActionNodeTool|
+  :kbd:`Delete` key. Note that you cannot use the |nodeTool|
   :sup:`Node Tool` to delete a complete feature; QGIS will ensure it retains
   the minimum number of vertices for the feature type you are working on.
-  To delete a complete feature use the |mActionDeleteSelected|
+  To delete a complete feature use the |deleteSelected|
   :sup:`Delete Selected` tool.
 * **Moving vertices**: Select all the vertices you want to move. Click on
   a selected vertex or edge and drag in the direction you wish to move. All
@@ -359,7 +359,7 @@ Cutting, Copying and Pasting Features
 .....................................
 
 Selected features can be cut, copied and pasted between layers in the same
-QGIS project, as long as destination layers are set to |mActionToggleEditing|
+QGIS project, as long as destination layers are set to |toggleEditing|
 :sup:`Toggle editing` beforehand.
 
 .. index:: CSV, WKT
@@ -382,11 +382,11 @@ As an example, we will copy some lakes to a new layer:
 #. Load or create the layer you want to copy to (target layer)
 #. Start editing for target layer
 #. Make the source layer active by clicking on it in the legend
-#. Use the |mActionSelect| :sup:`Select Single Feature` tool to select the
+#. Use the |select| :sup:`Select Single Feature` tool to select the
    feature(s) on the source layer
-#. Click on the |mActionEditCopy| :sup:`Copy Features` tool
+#. Click on the |editCopy| :sup:`Copy Features` tool
 #. Make the destination layer active by clicking on it in the legend
-#. Click on the |mActionEditPaste| :sup:`Paste Features` tool
+#. Click on the |editPaste| :sup:`Paste Features` tool
 #. Stop editing and save the changes
 
 What happens if the source and target layers have different schemas (field
@@ -420,15 +420,15 @@ Deleting Selected Features
 ..........................
 
 If we want to delete an entire polygon, we can do that by first selecting the
-polygon using the regular |mActionSelect| :sup:`Select Single Feature` tool. You
+polygon using the regular |select| :sup:`Select Single Feature` tool. You
 can select multiple features for deletion. Once you have the selection set,
-use the |mActionDeleteSelected| :sup:`Delete Selected` tool to delete the
+use the |deleteSelected| :sup:`Delete Selected` tool to delete the
 features.
 
-The |mActionEditCut| :sup:`Cut Features` tool on the digitizing toolbar can
+The |editCut| :sup:`Cut Features` tool on the digitizing toolbar can
 also be used to delete features. This effectively deletes the feature but
 also places it on a "spatial clipboard". So, we cut the feature to delete.
-We could then use the |mActionEditPaste| :sup:`Paste Features` tool to put it back,
+We could then use the |editPaste| :sup:`Paste Features` tool to put it back,
 giving us a one-level undo capability. Cut, copy, and paste work on the
 currently selected features, meaning we can operate on more than one at a time.
 
@@ -438,9 +438,9 @@ Saving Edited Layers
 When a layer is in editing mode, any changes remain in the memory of QGIS.
 Therefore, they are not committed/saved immediately to the data source or disk.
 If you want to save edits to the current layer but want to continue editing
-without leaving the editing mode, you can click the |mActionSaveEdits|
+without leaving the editing mode, you can click the |saveEdits|
 :sup:`Save Layer Edits` button. When you turn editing mode off with
-|mActionToggleEditing| :sup:`Toggle editing` (or quit QGIS for that matter),
+|toggleEditing| :sup:`Toggle editing` (or quit QGIS for that matter),
 you are also asked if you want to save your changes or discard them.
 
 If the changes cannot be saved (e.g., disk full, or the attributes have values
@@ -468,25 +468,25 @@ Advanced digitizing
 
 .. _table_advanced_editing:
 
-+----------------------------------+---------------------------------------+-----------------------------+-------------------------+
-| Icon                             | Purpose                               | Icon                        | Purpose                 |
-+==================================+=======================================+=============================+=========================+
-| |mActionUndo|                    | Undo                                  | |mActionRedo|               | Redo                    |
-+----------------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionRotateFeature|           | Rotate Feature(s)                     | |mActionSimplify|           | Simplify Feature        |
-+----------------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionAddRing|                 | Add Ring                              | |mActionAddPart|            | Add Part                |
-+----------------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionFillRing|                | Fill Ring                             | |mActionDeleteRing|         | Delete Ring             |
-+----------------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionDeletePart|              | Delete Part                           | |mActionReshape|            | Reshape Features        |
-+----------------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionOffsetCurve|             | Offset Curve                          | |mActionSplitFeatures|      | Split Features          |
-+----------------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionSplitParts|              | Split Parts                           | |mActionMergeFeatures|      | Merge Selected Features |
-+----------------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionMergeFeatAttributes|     | Merge Attributes of Selected Features | |mActionRotatePointSymbols| | Rotate Point Symbols    |
-+----------------------------------+---------------------------------------+-----------------------------+-------------------------+
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| Icon                      | Purpose                                 | Icon                   | Purpose                 |
++===========================+=========================================+========================+=========================+
+| |undo|                    | Undo                                    | |redo|                 | Redo                    |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |rotateFeature|           | Rotate Feature(s)                       | |simplifyFeatures|     | Simplify Feature        |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |addRing|                 | Add Ring                                | |addPart|              | Add Part                |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |fillRing|                | Fill Ring                               | |deleteRing|           | Delete Ring             |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |deletePart|              | Delete Part                             | |reshape|              | Reshape Features        |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |offsetCurve|             | Offset Curve                            | |splitFeatures|        | Split Features          |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |splitParts|              | Split Parts                             | |mergeFeatures|        | Merge Selected Features |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |mergeFeatAttributes|     | Merge Attributes of Selected Features   | |rotatePointSymbols|   | Rotate Point Symbols    |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
 
 Table Advanced Editing: Vector layer advanced editing toolbar
 
@@ -494,7 +494,7 @@ Table Advanced Editing: Vector layer advanced editing toolbar
 Undo and Redo
 .............
 
-The |mActionUndo| :sup:`Undo` and |mActionRedo| :sup:`Redo` tools allows you
+The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you
 to undo or redo vector editing operations. There is also a dockable
 widget, which shows all operations in the undo/redo history (see
 Figure_edit_3_). This widget is not displayed by default; it can be
@@ -524,8 +524,8 @@ after the selected operation.
 Rotate Feature(s)
 .................
 
-Use |mActionRotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple features
-in the map canvas. Press the |mActionRotateFeature|:sup:`Rotate Feature(s)` icon and then
+Use |rotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple features
+in the map canvas. Press the |rotateFeature|:sup:`Rotate Feature(s)` icon and then
 click on the feature to rotate. Either click on the map to place the rotated feature or
 enter an angle in the user input widget. If you want to rotate several features,
 they shall be selected first.
@@ -540,7 +540,7 @@ in 45 degree steps, which can be modified afterwards in the user input widget.
 Simplify Feature
 ................
 
-The |mActionSimplify| :sup:`Simplify Feature` tool allows you to reduce the
+The |simplifyFeatures| :sup:`Simplify Feature` tool allows you to reduce the
 number of vertices of a feature, as long as the geometry doesn't change. With the
 tool you can also simplify multi-part features.
 First, drag a rectangle over the feature. The vertices will be highlighted in red while the color of the
@@ -554,7 +554,7 @@ So you can go back to the same tolerance the next time when simplifying a featur
 Add Ring
 ........
 
-You can create :index:`ring polygons` using the |mActionAddRing|
+You can create :index:`ring polygons` using the |addRing|
 :sup:`Add Ring` icon in the toolbar. This means that inside an existing area, it
 is possible to digitize further polygons that will occur as a 'hole', so
 only the area between the boundaries of the outer and inner polygons remains
@@ -563,22 +563,22 @@ as a ring polygon.
 Add Part
 ........
 
-You can |mActionAddPart| :sup:`add part` polygons to a selected
+You can |addPart| :sup:`add part` polygons to a selected
 :index:`multipolygon`. The new part polygon must be digitized outside
 the selected multi-polygon.
 
 Fill Ring
 .........
 
-You can use the |mActionFillRing| :sup:`Fill Ring` function to add a ring to
+You can use the |fillRing| :sup:`Fill Ring` function to add a ring to
 a polygon and add a new feature to the layer at the same time. Thus you need not
-first use the |mActionAddRing| :sup:`Add Ring` icon and then the
-|mActionCapturePolygon| :sup:`Add feature` function anymore.
+first use the |addRing| :sup:`Add Ring` icon and then the
+|capturePolygon| :sup:`Add feature` function anymore.
 
 Delete Ring
 ...........
 
-The |mActionDeleteRing| :sup:`Delete Ring` tool allows you to delete ring polygons
+The |deleteRing| :sup:`Delete Ring` tool allows you to delete ring polygons
 inside an existing area. This tool only works with polygon layers. It doesn't
 change anything when it is used on the outer ring of the polygon. This tool
 can be used on polygon and multi-polygon features. Before you select the
@@ -587,7 +587,7 @@ vertices of a ring, adjust the vertex edit tolerance.
 Delete Part
 ...........
 
-The |mActionDeletePart| :sup:`Delete Part` tool allows you to delete parts from
+The |deletePart| :sup:`Delete Part` tool allows you to delete parts from
 multifeatures (e.g., to delete polygons from a multi-polygon feature). It won't
 delete the last part of the feature; this last part will stay untouched. This
 tool works with all multi-part geometries: point, line and polygon. Before you
@@ -596,7 +596,7 @@ select the vertices of a part, adjust the vertex edit tolerance.
 Reshape Features
 ................
 
-You can reshape line and polygon features using the |mActionReshape|
+You can reshape line and polygon features using the |reshape|
 :sup:`Reshape Features` icon on the toolbar. It replaces the line or polygon
 part from the first to the last intersection with the original line. With
 polygons, this can sometimes lead to unintended results. It is mainly useful
@@ -623,15 +623,15 @@ the polygon with a right click.
 Offset Curves
 .............
 
-The |mActionOffsetCurve| :sup:`Offset Curve` tool creates parallel shifts of line layers.
+The |offsetCurve| :sup:`Offset Curve` tool creates parallel shifts of line layers.
 The tool can be applied to the edited layer (the geometries are modified)
 or also to background layers (in which case it creates copies of the lines / rings and adds them to the the edited layer).
 It is thus ideally suited for the creation of distance line layers. The displacement is
 shown at the bottom left of the taskbar.
 
 To create a shift of a line layer, you must first go into editing mode and activate the
-|mActionOffsetCurve| :sup:`Offset Curve` tool. Then click on a feature to shift it.
-Move the mouse and click where wanted or enter the desired distance in the user input widget. Your changes may then be saved with the|mActionSaveEdits|:sup:`Save Layer Edits` tool.
+|offsetCurve| :sup:`Offset Curve` tool. Then click on a feature to shift it.
+Move the mouse and click where wanted or enter the desired distance in the user input widget. Your changes may then be saved with the|saveEdits|:sup:`Save Layer Edits` tool.
 
 QGIS options dialog (Digitizing tab then **Curve offset tools** section) allows
 you to configure some parameters like **Join style**, **Quadrant segments**,
@@ -642,7 +642,7 @@ you to configure some parameters like **Join style**, **Quadrant segments**,
 Split Features
 ..............
 
-You can split features using the |mActionSplitFeatures| :sup:`Split Features`
+You can split features using the |splitFeatures| :sup:`Split Features`
 icon on the toolbar. Just draw a line across the feature you want to split.
 
 .. index:: Merge_Selected_Features
@@ -652,12 +652,12 @@ Split parts
 
 In QGIS it is possible to split the parts of a multi part feature so that the
 number of parts is increased. Just draw a line across the part you want to split using
-the |mActionSplitParts| :sup:`Split Parts` icon.
+the |splitParts| :sup:`Split Parts` icon.
 
 Merge selected features
 .......................
 
-The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows you to merge
+The |mergeFeatures| :sup:`Merge Selected Features` tool allows you to merge
 features. A new dialog will allow you to choose which value to choose between each
 selected features or select a function (Minimum, Maximum, Median, Sum, Skip
 Attribute) to use for each column. If features don't have a common boundaries,
@@ -668,11 +668,11 @@ a multipolygon will be created.
 Merge attributes of selected features
 .....................................
 
-The |mActionMergeFeatAttributes| :sup:`Merge Attributes of Selected Features` tool
+The |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` tool
 allows you to :index:`merge attributes of features` with common boundaries and
 attributes without merging their boundaries.
 First, select several features at once. Then
-press the |mActionMergeFeatAttributes| :sup:`Merge Attributes of Selected Features` button.
+press the |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` button.
 Now QGIS asks you which attributes are to be applied to all selected objects.
 As a result, all selected objects have the same attribute entries.
 
@@ -683,7 +683,7 @@ Rotate Point Symbols
 
 .. % FIXME change, if support in new symbology is available, too
 
-|mActionRotatePointSymbols| :sup:`Rotate Point Symbols` allows you to change the rotation
+|rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to change the rotation
 of point symbols in the map canvas. You must first define a rotation column
 from the attribute table of the point layer in the :guilabel:`Advanced` menu of the
 :guilabel:`Style` menu of the :guilabel:`Layer Properties`. Also, you will need to
@@ -749,7 +749,7 @@ Creating a new Shapefile layer
 ..............................
 
 To create a new shape layer for editing, choose :menuselection:`New -->`
-|mActionNewVectorLayer| :menuselection:`New Shapefile Layer...` from the
+|newVectorLayer| :menuselection:`New Shapefile Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New Vector Layer` dialog will be
 displayed as shown in Figure_edit_5_. Choose the type of layer (point, line or
 polygon) and the CRS (coordinate reference system).
@@ -788,7 +788,7 @@ Creating a new SpatiaLite layer
 ...............................
 
 To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
-|mActionNewSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from the
+|newSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog will
 be displayed as shown in Figure_edit_6_.
 
@@ -826,7 +826,7 @@ Creating a new GPX layer
 .........................
 
 To create a new GPX file, you need to load the GPS plugin first. :menuselection:`Plugins -->`
-|mActionShowPluginManager| :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
+|showPluginManager| :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
 Activate the |checkbox| :guilabel:`GPS Tools` checkbox.
 
 When this plugin is loaded, choose :menuselection:`New -->` |create_gpx|
@@ -860,10 +860,10 @@ selected, moved or even edited.
 
 To open the attribute table for a vector layer, make the layer active by
 clicking on it in the map legend area. Then, from the main
-:menuselection:`Layer` menu, choose |mActionOpenTable| :menuselection:`Open Attribute
+:menuselection:`Layer` menu, choose |openTable| :menuselection:`Open Attribute
 Table`. It is also possible to right click on the layer and choose
-|mActionOpenTable| :menuselection:`Open Attribute Table` from the drop-down menu,
-and to click on the |mActionOpenTable| :guilabel:`Open Attribute Table` button
+|openTable| :menuselection:`Open Attribute Table` from the drop-down menu,
+and to click on the |openTable| :guilabel:`Open Attribute Table` button
 in the Attributes toolbar.
 
 This will open a new window that displays the feature attributes for the
@@ -884,40 +884,40 @@ selected features are shown in the attribute table title.
 The buttons at the top of the attribute table window provide the
 following functionality:
 
-* |mActionToggleEditing| :sup:`Toggle editing mode` to enable editing functionalities
+* |toggleEditing| :sup:`Toggle editing mode` to enable editing functionalities
   (also with :kbd:`Ctrl+e`)
-* |mActionSaveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+s`)
-* |mActionDraw| :sup:`Reload the table`
-* |mActionNewTableRow| :sup:`Add feature`
-* |mActionDeleteSelected| :sup:`Delete selected features` (also with
+* |saveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+s`)
+* |draw| :sup:`Reload the table`
+* |newTableRow| :sup:`Add feature`
+* |deleteSelected| :sup:`Delete selected features` (also with
   :kbd:`Ctrl+d`)
 * |expressionSelect| :sup:`Select features using an Expression`
-* |mActionSelectAll| :sup:`Select all` (also with :kbd:`Ctrl+a`)
-* |mActionInvertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
-* |mActionUnselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)
-* |mActionSelectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+t`)
+* |selectAll| :sup:`Select all` (also with :kbd:`Ctrl+a`)
+* |invertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
+* |unselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)
+* |selectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+t`)
 * |PanToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+p`)
-* |mActionZoomToSelected| :sup:`Zoom map to the selected rows` (also with
+* |zoomToSelected| :sup:`Zoom map to the selected rows` (also with
   :kbd:`Ctrl+j`)
-* |mActionCopySelected| :sup:`Copy selected rows to clipboard` (also with
+* |copySelected| :sup:`Copy selected rows to clipboard` (also with
   :kbd:`Ctrl+c`)
-* |mActionEditPaste| :sup:`Paste from clipboard to a new row` (also with 
+* |editPaste| :sup:`Paste from clipboard to a new row` (also with 
   :kbd:`Ctrl+v`)
-* |mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR
+* |deleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR
   layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+l`)
-* |mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR
+* |newAttribute| :sup:`New Column` for PostGIS layers and for OGR
   layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+w`)
-* |mActionCalculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+i`)
+* |calculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+i`)
 
 Below these buttons is the Field Calculator bar (enabled only in editing mode),
 which allows calculations to be quickly applied to either all or selected features
-attributes in the table. This bar uses the same expressions as the |mActionCalculateField|
+attributes in the table. This bar uses the same expressions as the |calculateField|
 :sup:`Field Calculator` (see :ref:`vector_field_calculator`).
 
 .. tip:: **Skip WKT geometry**
 
    If you want to use attribute data in external programs (such as Excel), use the
-   |mActionCopySelected| :sup:`Copy selected rows to clipboard` button.
+   |copySelected| :sup:`Copy selected rows to clipboard` button.
    You can copy the information without vector geometries if you deactivate
    :menuselection:`Settings --> Options -->` Data sources menu |checkbox|
    :guilabel:`Copy geometry in WKT representation from attribute table`.
@@ -958,7 +958,7 @@ To make a selection, you have to use the |expressionSelect| :sup:`Select feature
 icon on top of the attribute table.
 |expressionSelect| :sup:`Select features using an Expression` allows you
 to define a subset of a table using a :guilabel:`Function List` like in the
-|mActionCalculateField| :sup:`Field Calculator` (see :ref:`vector_field_calculator`).
+|calculateField| :sup:`Field Calculator` (see :ref:`vector_field_calculator`).
 The query result can then be saved as a new vector layer.
 For example, if you want to find regions that are boroughs from :file:`regions.shp`
 of the QGIS sample data, you have to open the :guilabel:`Fields and Values` menu
@@ -1019,8 +1019,8 @@ Tab/form mode
 By default the attribute window displays a table layout. In some case one 
 should prefer to use a form layout to help edit some features more easily.
 
-You can switch to form layout by clicking in the bottom right, on |mActionOpenForm|
-and switch back to table layout with |mActionOpenTable|.
+You can switch to form layout by clicking in the bottom right, on |openForm|
+and switch back to table layout with |openTable|.
 
 Zoom to feature
 .................
@@ -1063,7 +1063,7 @@ QGIS allows you also to load non-spatial tables. This currently includes tables
 supported by OGR and delimited text, as well as the PostgreSQL, MSSQL and Oracle provider.
 The tables can be used for field lookups or just generally browsed and edited using the table
 view. When you load the table, you will see it in the legend field. It can be
-opened with the |mActionOpenTable| :sup:`Open Attribute Table` tool and
+opened with the |openTable| :sup:`Open Attribute Table` tool and
 is then editable like any other layer attribute table.
 
 As an example, you can use columns of the non-spatial table to define attribute
@@ -1174,11 +1174,11 @@ under actions.
 As you can see, the airports assigned to this particular region are all shown in a
 table. And there are also some buttons available. Let's review them shortly
 
-* The |mActionToggleEditing| button is for toggling the edit mode. Be aware that it toggles the edit mode of the airport layer, although we are in the feature form of a feature from the region layer. But the table is representing features of the airport layer.
-* The |mActionSignPlus| button will add a new feature to the airport layer. And it will assign the new airport to the current region by default.
-* The |mActionRemove| button will delete the selected airport permanently.
-* The |mActionLink| symbol will open a new dialog where you can select any existing airport which will then be assigned to the current region. This may be handy if you created the airport on the wrong region by accident.
-* The |mActionUnlink| symbol will unlink the selected airport from the current region, leaving them unassigned (the foreign key is set to NULL) effectively.
+* The |toggleEditing| button is for toggling the edit mode. Be aware that it toggles the edit mode of the airport layer, although we are in the feature form of a feature from the region layer. But the table is representing features of the airport layer.
+* The |signPlus| button will add a new feature to the airport layer. And it will assign the new airport to the current region by default.
+* The |remove| button will delete the selected airport permanently.
+* The |link| symbol will open a new dialog where you can select any existing airport which will then be assigned to the current region. This may be handy if you created the airport on the wrong region by accident.
+* The |unlink| symbol will unlink the selected airport from the current region, leaving them unassigned (the foreign key is set to NULL) effectively.
 * The two buttons to the right switch between table view and form view where the later let's you view all the airports in their respective form.
 
 If you work on the airport table, a new widget type is available which lets you

@@ -37,7 +37,7 @@ Table` all the time.
 * Select the :guilabel:`roads` layer in the :guilabel:`Layers list`.
 * Using the :guilabel:`Identify` tool, click on any street in the map.
 
-  |mActionIdentify|
+  |identify|
 
 Instead of the normal :guilabel:`Identify` dialog, you'll see the now-familiar
 form instead:

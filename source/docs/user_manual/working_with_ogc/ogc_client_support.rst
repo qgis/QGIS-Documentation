@@ -149,7 +149,7 @@ Selecting WMS/WMTS Servers
 
 The first time you use the WMS feature in QGIS, there are no servers defined.
 
-Begin by clicking the |mActionAddWmsLayer| :sup:`Add WMS layer` button on the
+Begin by clicking the |addWmsLayer| :sup:`Add WMS layer` button on the
 toolbar, or selecting :menuselection:`Layer --> Add WMS Layer...`.
 
 The dialog :guilabel:`Add Layer(s) from a Server` for adding layers from
@@ -379,7 +379,7 @@ Using the Identify Tool
 .. index:: WMS_identify
 
 Once you have added a WMS server, and if any layer from a WMS server is queryable,
-you can then use the |mActionIdentify| :sup:`Identify` tool to select a pixel on
+you can then use the |identify| :sup:`Identify` tool to select a pixel on
 the map canvas. A query is made to the WMS server for each selection made.
 The results of the query are returned in plain text. The formatting of this text
 is dependent on the particular WMS server used.
@@ -396,7 +396,7 @@ format may be stored in the project for the layer.
 
 **GML format support**
 
-The |mActionIdentify| :sup:`Identify` tool supports WMS server response
+The |identify| :sup:`Identify` tool supports WMS server response
 (GetFeatureInfo) in GML format (it is called Feature in the QGIS GUI in this context).
 If "Feature" format is supported by the server and selected, results of the Identify
 tool are vector features, as from a regular vector layer. When a single feature
@@ -527,7 +527,7 @@ of QGIS. Some of the more noteworthy exceptions follow.
 
 **Editing WMS Layer Settings**
 
-Once you've completed the |mActionAddWmsLayer| :sup:`Add WMS layer` procedure,
+Once you've completed the |addWmsLayer| :sup:`Add WMS layer` procedure,
 there is no way to change the settings. A work-around is to delete the layer
 completely and start again.
 

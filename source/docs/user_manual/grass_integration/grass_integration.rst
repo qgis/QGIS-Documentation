@@ -102,7 +102,7 @@ Starting the GRASS plugin
 =========================
 
 To use GRASS functionalities in QGIS, you must select and load the GRASS plugin using the 
-Plugin Manager. To do this, go to the menu :menuselection:`Plugins -->` |mActionShowPluginManager|
+Plugin Manager. To do this, go to the menu :menuselection:`Plugins -->` |showPluginManager|
 :menuselection:`Manage Plugins`, select |checkbox| :guilabel:`GRASS` and click
 **[OK]**.
 
@@ -113,7 +113,7 @@ The following main features are provided with the toolbar menu when you start th
 * |grass_close_mapset| :sup:`Close Mapset`
 * |grass_tools| :sup:`Open GRASS Tools`
 * |grass_region| :sup:`Display Current GRASS Region`
-* |mActionOptions| :sup:`GRASS Options`
+* |options| :sup:`GRASS Options`
 
 Opening GRASS mapset
 ====================
@@ -430,19 +430,19 @@ The 'Digitizing Toolbar' has some specific tools when a GRASS layer is edited:
 
 .. _table_grass_digitizing_1:
 
-+-------------------------+---------------------+---------------------------------------------+
-| Icon                    | Tool                | Purpose                                     |
-+=========================+=====================+=============================================+
-| |mActionCapturePoint|   | New Point           | Digitize new point                          |
-+-------------------------+---------------------+---------------------------------------------+
-| |mActionCaptureLine|    | New Line            | Digitize new line                           |
-+-------------------------+---------------------+---------------------------------------------+
-| |mActionCaptureBoundary|| New Boundary        | Digitize new boundary                       |
-+-------------------------+---------------------+---------------------------------------------+
-| |mActionCaptureCentroid|| New Centroid        | Digitize new centroid (label existing area) |
-+-------------------------+---------------------+---------------------------------------------+
-| |mActionCapturePolygon| | New Closed Boundary | Digitize new closed boundary                |
-+-------------------------+---------------------+---------------------------------------------+
++-------------------------+------------------------+---------------------------------------------+
+| Icon                    | Tool                   | Purpose                                     |
++=========================+========================+=============================================+
+| |capturePoint|          | New Point              | Digitize new point                          |
++-------------------------+------------------------+---------------------------------------------+
+| |captureLine|           | New Line               | Digitize new line                           |
++-------------------------+------------------------+---------------------------------------------+
+| |captureBoundary|       | New Boundary           | Digitize new boundary                       |
++-------------------------+------------------------+---------------------------------------------+
+| |captureCentroid|       | New Centroid           | Digitize new centroid (label existing area) |
++-------------------------+------------------------+---------------------------------------------+
+| |capturePolygon|        | New Closed Boundary    | Digitize new closed boundary                |
++-------------------------+------------------------+---------------------------------------------+
 
 
 Table GRASS Digitizing 1: GRASS Digitizing Tools

@@ -90,31 +90,31 @@ Manage Layers and overview
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|mActionAddOgrLayer|            ``|mActionAddOgrLayer|``            \                               \
-|mActionAddRasterLayer|         ``|mActionAddRasterLayer|``         |mActionAddMssqlLayer|          ``|mActionAddMssqlLayer|``
-|mActionAddLayer|               ``|mActionAddLayer|``               |mActionAddSpatiaLiteLayer|     ``|mActionAddSpatiaLiteLayer|``
-|mActionNewVectorLayer|         ``|mActionNewVectorLayer|``         |mActionRemoveLayer|            ``|mActionRemoveLayer|``
-|virtualLayer|                  ``|virtualLayer|``                  |mActionAddWmsLayer|            ``|mActionAddWmsLayer|``
+|addOgrLayer|                   ``|addOgrLayer|``                   \                               \
+|addRasterLayer|                ``|addRasterLayer|``                |addMssqlLayer|                 ``|addMssqlLayer|``
+|addLayer|                      ``|addLayer|``                      |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
+|newVectorLayer|                ``|newVectorLayer|``                |removeLayer|                   ``|removeLayer|``
+|virtualLayer|                  ``|virtualLayer|``                  |addWmsLayer|                   ``|addWmsLayer|``
 |wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
 |oracle_raster|                 ``|oracle_raster|``
 |dbmanager|                     ``|dbmanager|``                     |gdal|                          ``|gdal|``
-|mActionInOverview|             ``|mActionInOverview|``             |mActionAddAllToOverview|       ``|mActionAddAllToOverview|``
+|inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
 |RemoveAllOverview|             ``|RemoveAllOverview|``             \                               \
-|mActionShowAllLayers|          ``|mActionShowAllLayers|``          |mActionHideAllLayers|          ``|mActionHideAllLayers|``
-|mActionShowPresets|            ``|mActionShowPresets|``            |zip|                           ``|zip|``
+|showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
+|showPresets|                   ``|showPresets|``                   |zip|                           ``|zip|``
 ==============================  ==================================  ==============================  ==================================
 
 
 File
 ....
 
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|mActionFileNew|                ``|mActionFileNew|``                |mActionFileOpen|               ``|mActionFileOpen|``
-|mActionFileSave|               ``|mActionFileSave|``               |mActionFileSaveAs|             ``|mActionFileSaveAs|``
-|mActionFileExit|               ``|mActionFileExit|``               \                               \
-==============================  ==================================  ==============================  ==================================
+=======================  ===========================  =======================  ===========================
+Icon                     Substitution                 Icon                     Substitution
+=======================  ===========================  =======================  ===========================
+|fileNew|                ``|fileNew|``                |fileOpen|               ``|fileOpen|``
+|fileSave|               ``|fileSave|``               |fileSaveAs|             ``|fileSaveAs|``
+|fileExit|               ``|fileExit|``               \                        \
+=======================  ===========================  =======================  ===========================
 
 Edit
 ....
@@ -122,10 +122,10 @@ Edit
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|mActionSaveEdits|              ``|mActionSaveEdits|``
-|mActionUndo|                   ``|mActionUndo|``                   |mActionRedo|                   ``|mActionRedo|``
-|mActionEditCopy|               ``|mActionEditCopy|``               |mActionEditPaste|              ``|mActionEditPaste|``
-|mActionEditCut|                ``|mActionEditCut|``
+|saveEdits|                     ``|saveEdits|``
+|undo|                          ``|undo|``                          |redo|                          ``|redo|``
+|editCopy|                      ``|editCopy|``                      |editPaste|                     ``|editPaste|``
+|editCut|                       ``|editCut|``
 ==============================  ==================================  ==============================  ==================================
 
 Identity result
@@ -134,33 +134,33 @@ Identity result
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|mActionExpandTree|             ``|mActionExpandTree|``             |mActionCollapseTree|           ``|mActionCollapseTree|``
-|mActionExpandNewTree|          ``|mActionExpandNewTree|``          |mActionPropertyItem|           ``|mActionPropertyItem|``
-|mActionDeselectAll|            ``|mActionDeselectAll|``            |mActionEditCopy|               ``|mActionEditCopy|``
-|mActionFilePrint|              ``|mActionFilePrint|``              \                               \
+|expandTree|                    ``|expandTree|``                    |collapseTree|                  ``|collapseTree|``
+|expandNewTree|                 ``|expandNewTree|``                 |propertyItem|                  ``|propertyItem|``
+|deselectAll|                   ``|deselectAll|``                   |editCopy|                      ``|editCopy|``
+|filePrint|                     ``|filePrint|``                     \                               \
 ==============================  ==================================  ==============================  ==================================
 
 
 Digitizing and Advanced Digitizing
 ..................................
 
-===================================  ========================================  ====================================  =======================================
-Icon                                 Substitution                              Icon                                  Substitution
-===================================  ========================================  ====================================  =======================================
-|mActionToggleEditing|               ``|mActionToggleEditing|``                |mActionTracing|                      ``|mActionTracing|``
-|mActionCapturePoint|                ``|mActionCapturePoint|``                 |mActionCapturePolygon|               ``|mActionCapturePolygon|``
-|mActionCaptureLine|                 ``|mActionCaptureLine|``
-|mActionCircularStringCurvePoint|    ``|mActionCircularStringCurvePoint|``     |mActionCircularStringRadius|         ``|mActionCircularStringRadius|``
-|mActionNodeTool|                    ``|mActionNodeTool|``                     |mActionMoveFeature|                  ``|mActionMoveFeature|``
-|mActionDeleteSelected|              ``|mActionDeleteSelected|``
-|mActionSimplify|                    ``|mActionSimplify|``                     |mActionReshape|                      ``|mActionReshape|``
-|mActionAddRing|                     ``|mActionAddRing|``                      |mActionAddPart|                      ``|mActionAddPart|``
-|mActionFillRing|                    ``|mActionFillRing|``
-|mActionDeleteRing|                  ``|mActionDeleteRing|``                   |mActionDeletePart|                   ``|mActionDeletePart|``
-|mActionMergeFeatures|               ``|mActionMergeFeatures|``                |mActionMergeFeatAttributes|          ``|mActionMergeFeatAttributes|``
-|mActionSplitFeatures|               ``|mActionSplitFeatures|``                |mActionSplitParts|                   ``|mActionSplitParts|``
-|mActionOffsetCurve|                 ``|mActionOffsetCurve|``                  |mActionRotatePointSymbols|           ``|mActionRotatePointSymbols|``
-===================================  ========================================  ====================================  =======================================
+============================  =================================  =============================  ================================
+Icon                          Substitution                       Icon                           Substitution
+============================  =================================  =============================  ================================
+|toggleEditing|               ``|toggleEditing|``                |tracing|                      ``|tracing|``
+|capturePoint|                ``|capturePoint|``                 |capturePolygon|               ``|capturePolygon|``
+|captureLine|                 ``|captureLine|``
+|circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
+|nodeTool|                    ``|nodeTool|``                     |moveFeature|                  ``|moveFeature|``
+|deleteSelected|              ``|deleteSelected|``
+|simplifyFeatures|            ``|simplifyFeatures|``             |reshape|                      ``|reshape|``
+|addRing|                     ``|addRing|``                      |addPart|                      ``|addPart|``
+|fillRing|                    ``|fillRing|``
+|deleteRing|                  ``|deleteRing|``                   |deletePart|                   ``|deletePart|``
+|mergeFeatures|               ``|mergeFeatures|``                |mergeFeatAttributes|          ``|mergeFeatAttributes|``
+|splitFeatures|               ``|splitFeatures|``                |splitParts|                   ``|splitParts|``
+|offsetCurve|                 ``|offsetCurve|``                  |rotatePointSymbols|           ``|rotatePointSymbols|``
+============================  =================================  =============================  ================================
 
 
 Map Navigation and attributes
@@ -169,19 +169,19 @@ Map Navigation and attributes
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|mActionPan|                    ``|mActionPan|``                    |PanToSelected|                 ``|PanToSelected|``
-|mActionZoomIn|                 ``|mActionZoomIn|``                 |mActionZoomOut|                ``|mActionZoomOut|``
-|mActionZoomActual|             ``|mActionZoomActual|``             |mActionZoomFullExtent|         ``|mActionZoomFullExtent|``
-|mActionZoomToLayer|            ``|mActionZoomToLayer|``            |mActionZoomToSelected|         ``|mActionZoomToSelected|``
-|mActionZoomLast|               ``|mActionZoomLast|``               |mActionZoomNext|               ``|mActionZoomNext|``
-|mActionTouch|                  ``|mActionTouch|``                  |mActionDraw|                   ``|mActionDraw|``
-|mActionIdentify|               ``|mActionIdentify|``               |mActionMapTips|                ``|mActionMapTips|``
-|mActionShowBookmarks|          ``|mActionShowBookmarks|``          |mActionNewBookmark|            ``|mActionNewBookmark|``
-|mActionMeasure|                ``|mActionMeasure|``                |mActionMeasureArea|            ``|mActionMeasureArea|``
-|mActionMeasureAngle|           ``|mActionMeasureAngle|``           \                               \
-|mActionSelectRectangle|        ``|mActionSelectRectangle|``        |mActionSelectPolygon|          ``|mActionSelectPolygon|``
-|mActionSelectFreehand|         ``|mActionSelectFreehand|``         |mActionSelectRadius|           ``|mActionSelectRadius|``
-|mActionSelectAll|              ``|mActionSelectAll|``              |mActionDeselectAll|            ``|mActionDeselectAll|``
+|pan|                           ``|pan|``                           |PanToSelected|                 ``|PanToSelected|``
+|zoomIn|                        ``|zoomIn|``                        |zoomOut|                       ``|zoomOut|``
+|zoomActual|                    ``|zoomActual|``                    |zoomFullExtent|                ``|zoomFullExtent|``
+|zoomToLayer|                   ``|zoomToLayer|``                   |zoomToSelected|                ``|zoomToSelected|``
+|zoomLast|                      ``|zoomLast|``                      |zoomNext|                      ``|zoomNext|``
+|touch|                         ``|touch|``                         |draw|                          ``|draw|``
+|identify|                      ``|identify|``                      |mapTips|                       ``|mapTips|``
+|showBookmarks|                 ``|showBookmarks|``                 |newBookmark|                   ``|newBookmark|``
+|measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
+|measureAngle|                  ``|measureAngle|``                  \                               \
+|selectRectangle|               ``|selectRectangle|``               |selectPolygon|                 ``|selectPolygon|``
+|selectFreehand|                ``|selectFreehand|``                |selectRadius|                  ``|selectRadius|``
+|selectAll|                     ``|selectAll|``                     |deselectAll|                   ``|deselectAll|``
 |expressionSelect|              ``|expressionSelect|``              \                               \
 ==============================  ==================================  ==============================  ==================================
 
@@ -189,33 +189,35 @@ Icon                            Substitution                        Icon        
 labels
 ......
 
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|mActionLabeling|               ``|mActionLabeling|``               |mActionTextAnnotation|         ``|mActionTextAnnotation|``
-|mActionAnnotation|             ``|mActionAnnotation|``             |mActionFormAnnotation|         ``|mActionFormAnnotation|``
-==============================  ==================================  ==============================  ==================================
+=======================  ===========================  =======================  ===========================
+Icon                     Substitution                 Icon                     Substitution
+=======================  ===========================  =======================  ===========================
+|label                   ``|labeling|``               |textAnnotation|         ``|textAnnotation|``
+|annotation|             ``|annotation|``             |formAnnotation|         ``|formAnnotation|``
+=======================  ===========================  =======================  ===========================
+
 
 help
 ....
 
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|mActionHelpContents|           ``|mActionHelpContents|``           |mActionQgisHomePage|           ``|mActionQgisHomePage|``
-|mActionCheckQgisVersion|       ``|mActionCheckQgisVersion|``       |mActionHelpAbout|              ``|mActionHelpAbout|``
-|mActionHelpSponsors|           ``|mActionHelpSponsors|``           |mActionContextHelp|            ``|mActionContextHelp|``
-==============================  ==================================  ==============================  ==================================
+=======================  ===========================  =======================  ===========================
+Icon                     Substitution                 Icon                     Substitution
+=======================  ===========================  =======================  ===========================
+|helpContents|           ``|helpContents|``           |qgisHomePage|           ``|qgisHomePage|``
+|checkQgisVersion|       ``|checkQgisVersion|``       |helpAbout|              ``|helpAbout|``
+|helpSponsors|           ``|helpSponsors|``           |contextHelp|            ``|contextHelp|``
+=======================  ===========================  =======================  ===========================
+
 
 Colors
 ......
 
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|colorBox|                      ``|colorBox|``                      |colorPicker|                   ``|colorPicker|``
-|colorSwatches|                 ``|colorSwatches|``                 |colorWheel|                    ``|colorWheel|``
-==============================  ==================================  ==============================  ==================================
+=======================  ===========================  =======================  ===========================
+Icon                     Substitution                 Icon                     Substitution
+=======================  ===========================  =======================  ===========================
+|colorBox|               ``|colorBox|``               |colorPicker|            ``|colorPicker|``
+|colorSwatches|          ``|colorSwatches|``          |colorWheel|             ``|colorWheel|``
+=======================  ===========================  =======================  ===========================
 
 
 Other basic icons
@@ -224,31 +226,31 @@ Other basic icons
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|mActionSignPlus|               ``|mActionSignPlus|``               |mActionSignMinus|              ``|mActionSignMinus|``
-|mActionProjectProperties|      ``|mActionProjectProperties|``      |mActionOptions|                ``|mActionOptions|``
+|signPlus|                      ``|signPlus|``                      |signMinus|                     ``|signMinus|``
+|projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
 |copyright_label|               ``|copyright_label|``               |north_arrow|                   ``|north_arrow|``
 |scale_bar|                     ``|scale_bar|``                     |locale|                        ``|locale|``
 |gps_importer|                  ``|gps_importer|``                  |gpstrack_barchart|             ``|gpstrack_barchart|``
 |gpstrack_polarchart|           ``|gpstrack_polarchart|``           |tracking|                      ``|tracking|``
-|mActionFolder|                 ``|mActionFolder|``                 |extents|                       ``|extents|``
+|folder|                        ``|folder|``                        |extents|                       ``|extents|``
 ==============================  ==================================  ==============================  ==================================
 
 
 Attribute Table
 ===============
 
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|mActionOpenTable|              ``|mActionOpenTable|``              |mActionSelectedToTop|          ``|mActionSelectedToTop|``
-|mActionSelectAll|              ``|mActionSelectAll|``              |mActionInvertSelection|        ``|mActionInvertSelection|``
-|PanToSelected|                 ``|PanToSelected|``                 |mActionZoomToSelected|         ``|mActionZoomToSelected|``
-|mActionCopySelected|           ``|mActionCopySelected|``           |mActionEditPaste|              ``|mActionEditPaste|``
-|expressionSelect|              ``|expressionSelect|``              |mActionDeleteSelected|         ``|mActionDeleteSelected|``
-|mActionNewAttribute|           ``|mActionNewAttribute|``           |mActionDeleteAttribute|        ``|mActionDeleteAttribute|``
-|mActionNewTableRow|            ``|mActionNewTableRow|``            |mActionCalculateField|         ``|mActionCalculateField|``
-|mActionDraw|                   ``|mActionDraw|``                   |mActionForm|                   ``|mActionForm|``
-==============================  ==================================  ==============================  ==================================
+=======================  ===========================  =======================  ===========================
+Icon                     Substitution                 Icon                     Substitution
+=======================  ===========================  =======================  ===========================
+|openTable|              ``|openTable|``              |selectedToTop|          ``|selectedToTop|``
+|selectAll|              ``|selectAll|``              |invertSelection|        ``|invertSelection|``
+|PanToSelected|          ``|PanToSelected|``          |zoomToSelected|         ``|zoomToSelected|``
+|copySelected|           ``|copySelected|``           |editPaste|              ``|editPaste|``
+|expressionSelect|       ``|expressionSelect|``       |deleteSelected|         ``|deleteSelected|``
+|newAttribute|           ``|newAttribute|``           |deleteAttribute|        ``|deleteAttribute|``
+|newTableRow|            ``|newTableRow|``            |calculateField|         ``|calculateField|``
+|draw|                   ``|draw|``                   |form|                   ``|form|``
+=======================  ===========================  =======================  ===========================
 
 
 Projections and Georeferencer
@@ -258,11 +260,11 @@ Projections and Georeferencer
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |geographic|                    ``|geographic|``                    |CRS|                           ``|CRS|``
-|mActionCustomProjection|       ``|mActionCustomProjection|``       \                               \
+|customProjection|              ``|customProjection|``              \                               \
 |projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
 |georeferencer|                 ``|georeferencer|``                 |pencil|                        ``|pencil|``
-|mActionLinkQGisToGeoref|       ``|mActionLinkQGisToGeoref|``       |mActionLinkGeorefToQGis|       ``|mActionLinkGeorefToQGis|``
-|coordinate_capture|            ``|coordinate_capture|``            |mActionStartGeoref|            ``|mActionStartGeoref|``
+|linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
+|coordinate_capture|            ``|coordinate_capture|``            |startGeoref|                   ``|startGeoref|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -272,27 +274,27 @@ Composer Icons
 
 Icons used in Composer:
 
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|mActionNewComposer|            ``|mActionNewComposer|``            |mActionComposerManager|        ``|mActionComposerManager|``
-|mActionDupComposer|            ``|mActionDupComposer|``            \                               \
-|mActionAtlasSettings|          ``|mActionAtlasSettings|``          |atlas|                         ``|atlas|``
-|mActionFilePrint|              ``|mActionFilePrint|``              |mActionSaveMapAsImage|         ``|mActionSaveMapAsImage|``
-|mActionSaveAsSVG|              ``|mActionSaveAsSVG|``              |mActionSaveAsPDF|              ``|mActionSaveAsPDF|``
-|mActionAddArrow|               ``|mActionAddArrow|``               |mActionAddBasicShape|          ``|mActionAddBasicShape|``
-|mActionAddMap|                 ``|mActionAddMap|``                 |mActionAddLegend|              ``|mActionAddLegend|``
-|mActionAddHtml|                ``|mActionAddHtml|``                |mActionAddTable|               ``|mActionAddTable|``
-|mActionLabel|                  ``|mActionLabel|``                  |mActionScaleBar|               ``|mActionScaleBar|``
-|mActionSelect|                 ``|mActionSelect|``                 |mActionMoveItemContent|        ``|mActionMoveItemContent|``
-|mActionRaiseItems|             ``|mActionRaiseItems|``             |mActionLowerItems|             ``|mActionLowerItems|``
-|mActionMoveItemsToTop|         ``|mActionMoveItemsToTop|``         |mActionMoveItemsToBottom|      ``|mActionMoveItemsToBottom|``
-|mActionAlignLeft|              ``|mActionAlignLeft|``              |mActionAlignRight|             ``|mActionAlignRight|``
-|mActionAlignHCenter|           ``|mActionAlignHCenter|``           |mActionAlignVCenter|           ``|mActionAlignVCenter|``
-|mActionAlignTop|               ``|mActionAlignTop|``               |mActionAlignBottom|            ``|mActionAlignBottom|``
-|locked|                        ``|locked|``                        |unlocked|                      ``|unlocked|``      
-|mActionGroupItems|             ``|mActionGroupItems|``
-==============================  ==================================  ==============================  ==================================
+=======================  ===========================  =======================  ===========================
+Icon                     Substitution                 Icon                     Substitution
+=======================  ===========================  =======================  ===========================
+|newComposer|            ``|newComposer|``            |composerManager|        ``|composerManager|``
+|dupComposer|            ``|dupComposer|``            \                        \
+|atlasSettings|          ``|atlasSettings|``          |atlas|                  ``|atlas|``
+|filePrint|              ``|filePrint|``              |saveMapAsImage|         ``|saveMapAsImage|``
+|saveAsSVG|              ``|saveAsSVG|``              |saveAsPDF|              ``|saveAsPDF|``
+|addArrow|               ``|addArrow|``               |addBasicShape|          ``|addBasicShape|``
+|addMap|                 ``|addMap|``                 |addLegend|              ``|addLegend|``
+|addHtml|                ``|addHtml|``                |addTable|               ``|addTable|``
+|label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``
+|select|                 ``|select|``                 |moveItemContent|        ``|moveItemContent|``
+|raiseItems|             ``|raiseItems|``             |lowerItems|             ``|lowerItems|``
+|moveItemsToTop|         ``|moveItemsToTop|``         |moveItemsToBottom|      ``|moveItemsToBottom|``
+|alignLeft|              ``|alignLeft|``              |alignRight|             ``|alignRight|``
+|alignHCenter|           ``|alignHCenter|``           |alignVCenter|           ``|alignVCenter|``
+|alignTop|               ``|alignTop|``               |alignBottom|            ``|alignBottom|``
+|locked|                 ``|locked|``                 |unlocked|               ``|unlocked|``      
+|groupItems|             ``|groupItems|``
+=======================  ===========================  =======================  ===========================
 
 Properties
 ==========
@@ -320,12 +322,12 @@ Standard provided with basic install, but not loaded with initial install
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|mActionShowPluginManager|      ``|mActionShowPluginManager|``      |plugin_installer|              ``|plugin_installer|``
+|showPluginManager|             ``|showPluginManager|``             |plugin_installer|              ``|plugin_installer|``
 |offline_editing_copy|          ``|offline_editing_copy|``          |offline_editing_sync|          ``|offline_editing_sync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
-|mapserver_export|              ``|mapserver_export|``              |mActionExportMapServer|        ``|mActionExportMapServer|``
+|mapserver_export|              ``|mapserver_export|``              |exportMapServer|               ``|exportMapServer|``
 |spiticon|                      ``|spiticon|``                      |delimited_text|                ``|delimited_text|``
-|mActionGDALScript|             ``|mActionGDALScript|``             |dxf2shp_converter|             ``|dxf2shp_converter|``
+|GDALScript|                    ``|GDALScript|``                    |dxf2shp_converter|             ``|dxf2shp_converter|``
 |spatialquery|                  ``|spatialquery|``                  |selectsubsetlayer|             ``|selectsubsetlayer|``
 |selectcreatelayer|             ``|selectcreatelayer|``             |metasearch|                    ``|metasearch|``
 |geometrychecker|               ``|geometrychecker|``               |geometrysnapper|               ``|geometrysnapper|``
