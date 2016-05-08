@@ -39,7 +39,7 @@ you can accurately determine coordinates.
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
 | |mActionZoomToLayer|           | Zoom To Layer              | |mActionZoomLast|             | Zoom Last                  |
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
-| |mActionZoomNext|              | Zoom Next                  | |mActionLinkGeorefToQGis|     | Link Georeferencer to |qg| |
+| |mActionZoomNext|              | Zoom Next                  | |mActionLinkGeorefToQGis|     | Link Georeferencer to QGIS |
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
 | |mActionLinkQGisToGeoref|      | Link QGIS to Georeferencer | |FullHistogramStretch|        | Full histogram stretch     |
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
@@ -61,7 +61,7 @@ alternative procedures can be used:
   that contain the same objects/features that you have on the image that you want
   to georeference and with the projection that you want for your image. In this case,
   you can enter the coordinates by clicking on the reference dataset loaded in the
-  |qg| map canvas.
+  QGIS map canvas.
 
 The usual procedure for georeferencing an image involves selecting multiple
 points on the raster, specifying their coordinates, and choosing a relevant
@@ -69,9 +69,9 @@ transformation type. Based on the input parameters and data, the plugin will
 compute the world file parameters. The more coordinates you provide, the better
 the result will be.
 
-The first step is to start |qg|, load the Georeferencer Plugin (see
+The first step is to start QGIS, load the Georeferencer Plugin (see
 :ref:`managing_plugins`) and click on :menuselection:`Raster --> Georeferencer`
-, which appears in the |qg| menu bar. The Georeferencer Plugin dialog
+, which appears in the QGIS menu bar. The Georeferencer Plugin dialog
 appears as shown in figure_georeferencer_1_.
 
 For this example, we are using a topo sheet of South Dakota from SDGS. It can
@@ -108,7 +108,7 @@ Entering ground control points (GCPs)
      manually.
    - Click on a point in the raster image and choose the |pencil|
      :sup:`From map canvas` button to add the X and Y coordinates with the help of a
-     georeferenced map already loaded in the |qg| map canvas.
+     georeferenced map already loaded in the QGIS map canvas.
    - With the |mActionMoveGCPPoint| button, you can move the GCPs in both windows,
      if they are at the wrong place.
 
@@ -227,7 +227,7 @@ raster.
   if pixels with the value 0 shall be visualized transparent. In our example
   toposheet, all white areas would be transparent.
 * Finally, |checkbox| :guilabel:`Load in QGIS when done` loads the output raster
-  automatically into the |qg| map canvas when the transformation is done.
+  automatically into the QGIS map canvas when the transformation is done.
 
 Show and adapt raster properties
 ................................

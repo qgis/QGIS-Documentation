@@ -69,13 +69,13 @@ Style Menu
 Band rendering
 ..............
 
-|qg| offers four different :guilabel:`Render types`. The renderer chosen is dependent on the
+QGIS offers four different :guilabel:`Render types`. The renderer chosen is dependent on the
 data type.
 
 #. Multiband color - if the file comes as a multiband with several bands (e.g., used with a satellite image
    with several bands)
 #. Paletted - if a single band file comes with an indexed palette (e.g., used with a digital topographic map)
-#. Singleband gray - (one band of) the image will be rendered as gray; |qg| will choose this renderer
+#. Singleband gray - (one band of) the image will be rendered as gray; QGIS will choose this renderer
    if the file has neither multibands nor an indexed palette nor a continuous palette
    (e.g., used with a shaded relief map)
 #. Singleband pseudocolor - this renderer is possible for files with a continuous palette,
@@ -105,7 +105,7 @@ choose several :guilabel:`Contrast enhancement` methods: 'No enhancement', 'Stre
 This selection offers you a wide range of options to modify the appearance
 of your raster layer. First of all, you have to get the data range from your
 image. This can be done by choosing the :guilabel:`Extent` and pressing
-**[Load]**. |qg| can |radiobuttonon| :guilabel:`Estimate (faster)` the
+**[Load]**. QGIS can |radiobuttonon| :guilabel:`Estimate (faster)` the
 :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 |radiobuttonoff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
 
@@ -114,8 +114,8 @@ A lot of images have a few very low and high data. These outliers can be elimina
 using the |radiobuttonon| :guilabel:`Cumulative count cut` setting. The standard data range is set
 from 2% to 98% of the data values and can be adapted manually. With this
 setting, the gray character of the image can disappear.
-With the scaling option |radiobuttonoff| :guilabel:`Min/max`, |qg| creates a color table with all of
-the data included in the original image (e.g., |qg| creates a color table
+With the scaling option |radiobuttonoff| :guilabel:`Min/max`, QGIS creates a color table with all of
+the data included in the original image (e.g., QGIS creates a color table
 with 256 values, given the fact that you have 8 bit bands).
 You can also calculate your color table using the |radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber|.
 Then, only the values within the standard deviation or within multiple standard deviations
@@ -138,7 +138,7 @@ All calculations can also be made for the |radiobuttonoff| :guilabel:`Current` e
 This is the standard render option for singleband files that already include a color table,
 where each pixel value is assigned to a certain color. In that case, the palette is
 rendered automatically. If you want to change colors assigned to certain values, just double-click
-on the color and the :guilabel:`Select color` dialog appears. Also, in |qg| 2.2. it's now possible
+on the color and the :guilabel:`Select color` dialog appears. Also, in QGIS it's possible
 to assign a label to the color values. The label appears in the legend of the raster layer then.
 
 .. _figure_raster_3:
@@ -159,7 +159,7 @@ to assign a label to the color values. The label appears in the legend of the ra
 .. note::
    When adding GRASS rasters, the option *Contrast enhancement* will always be
    set automatically to *stretch to min max*, regardless of if this is set to another value
-   in the |qg| general options.
+   in the QGIS general options.
 
 
 **Singleband gray**
@@ -167,7 +167,7 @@ to assign a label to the color values. The label appears in the legend of the ra
 This renderer allows you to render a single band layer with a :guilabel:`Color gradient`:
 'Black to white' or 'White to black'. You can define a :guilabel:`Min`
 and a :guilabel:`Max` value by choosing the :guilabel:`Extent` first and
-then pressing **[Load]**.  |qg| can |radiobuttonon| :guilabel:`Estimate (faster)` the
+then pressing **[Load]**.  QGIS can |radiobuttonon| :guilabel:`Estimate (faster)` the
 :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 |radiobuttonoff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
 
@@ -246,15 +246,15 @@ categorized color maps. For the :guilabel:`Classification mode` |selectstring| '
 you only need to select the :guilabel:`number of classes`
 |selectnumber| and press the button :guilabel:`Classify`. You can invert the colors
 of the color map by clicking the |checkbox| :guilabel:`Invert`
-checkbox. In the case of the :guilabel:`Mode` |selectstring| 'Continous', |qg| creates
+checkbox. In the case of the :guilabel:`Mode` |selectstring| 'Continous', QGIS creates
 classes automatically depending on the :guilabel:`Min` and :guilabel:`Max`.
 Defining :guilabel:`Min/Max` values can be done with the help of the :guilabel:`Load min/max values` section.
 A lot of images have a few very low and high data. These outliers can be eliminated
 using the |radiobuttonon| :guilabel:`Cumulative count cut` setting. The standard data range is set
 from 2% to 98% of the data values and can be adapted manually. With this
 setting, the gray character of the image can disappear.
-With the scaling option |radiobuttonoff| :guilabel:`Min/max`, |qg| creates a color table with all of
-the data included in the original image (e.g., |qg| creates a color table
+With the scaling option |radiobuttonoff| :guilabel:`Min/max`, QGIS creates a color table with all of
+the data included in the original image (e.g., QGIS creates a color table
 with 256 values, given the fact that you have 8 bit bands).
 You can also calculate your color table using the |radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber|.
 Then, only the values within the standard deviation or within multiple standard deviations
@@ -303,7 +303,7 @@ topographic raster maps.
 Transparency Menu
 -----------------
 
-|qg| has the ability to display each raster layer at a different transparency level.
+QGIS has the ability to display each raster layer at a different transparency level.
 Use the transparency slider |slider| to indicate to what extent the underlying layers
 (if any) should be visible though the current raster layer. This is very useful
 if you like to overlay more than one raster layer (e.g., a shaded relief map
@@ -345,9 +345,9 @@ applies them to the current raster layer.
 Pyramids Menu
 -------------
 
-Large resolution raster layers can slow navigation in |qg|. By creating lower
+Large resolution raster layers can slow navigation in QGIS. By creating lower
 resolution copies of the data (pyramids), performance can be considerably
-improved, as |qg| selects the most suitable resolution to use depending on the
+improved, as QGIS selects the most suitable resolution to use depending on the
 level of zoom.
 
 You must have write access in the directory where the original data is stored
@@ -363,7 +363,7 @@ Several resampling methods can be used to calculate the pyramids:
 * None
 
 If you choose 'Internal (if possible)' from the :guilabel:`Overview format` menu,
-|qg| tries to build pyramids internally. You can also choose 'External' and
+QGIS tries to build pyramids internally. You can also choose 'External' and
 'External (Erdas Imagine)'.
 
 .. _figure_raster_7:

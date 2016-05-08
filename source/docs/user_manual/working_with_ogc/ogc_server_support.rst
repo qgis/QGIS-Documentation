@@ -193,7 +193,7 @@ if not already defined.
 .. figure:: /static/user_manual/working_with_ogc/ows_server_definition.png
    :align: center
 
-   Definitions for a QGIS Server WMS/WFS/WCS project (KDE)
+   Definitions for a QGIS Server WMS/WFS/WCS project
 
 Then, go to the :guilabel:`OWS Server` menu of the
 :menuselection:`Project --> Project Properties` dialog and provide

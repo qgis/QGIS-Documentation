@@ -11,7 +11,7 @@ Expressions
 .. contents::
    :local:
 
-The **Expressions** feature is available from many parts in |qg|. It can be
+The **Expressions** feature is available from many parts in QGIS. It can be
 accessed using the |mIconExpressionSelect| :sup:`Select by expression`, the
 |mActionCalculateField| :sup:`Field calculator` or the
 |mIconDataDefine| :sup:`Data defined override` tool.
@@ -42,7 +42,7 @@ Functions List
 .. figure:: /static/user_manual/working_with_vector/function_list.png
    :align: center
 
-   The Expression tab |nix|
+   The Expression tab
 
 The **Expression** tab contains functions as well as layer's fields and values.
 It contains widgets to:
@@ -677,7 +677,7 @@ functions in a comfortable way.
 .. figure:: /static/user_manual/working_with_vector/function_editor.png
    :align: center
 
-   The Function Editor tab |nix|
+   The Function Editor tab
 
 The function editor will create new Python files in :file:`.qgis2\\python\\expressions`
 folder and will auto load all functions defined when starting QGIS. Be aware

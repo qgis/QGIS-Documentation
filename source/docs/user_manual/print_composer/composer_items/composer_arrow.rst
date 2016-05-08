@@ -17,7 +17,7 @@ of exactly 45\ |degrees| .
 
 The arrow item can be used to add a line or a simple arrow that can be used, for example, to 
 show the relation between other print composer items. To create a north arrow, the image item should 
-be considered first. |qg| has a set of North arrows in SVG format. Furthermore you can connect 
+be considered first. QGIS has a set of North arrows in SVG format. Furthermore you can connect 
 an image item with a map so it can rotate automatically with the map (see :ref:`image_item`).
 
 .. _figure_composer_arrow:
@@ -29,7 +29,7 @@ an image item with a map so it can rotate automatically with the map (see :ref:`
 .. figure:: /static/user_manual/print_composer/arrow_properties.png
    :align: center
 
-   Arrow Item properties Tab |nix|
+   Arrow Item properties Tab
 
 Item Properties
 ---------------

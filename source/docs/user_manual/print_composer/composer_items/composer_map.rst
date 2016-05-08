@@ -9,7 +9,7 @@ The Map Item
    :local:
 
 Click on the |mActionAddMap| :sup:`Add new map` toolbar button in the Print
-Composer toolbar to add the |qg| map canvas. Now, drag a rectangle onto the Composer
+Composer toolbar to add the QGIS map canvas. Now, drag a rectangle onto the Composer
 canvas with the left mouse button to add the map. To display the current map, you
 can choose between three different modes in the map :guilabel:`Item Properties`
 tab:
@@ -58,10 +58,10 @@ following functionalities (see figure_composer_map_1_):
 .. figure:: /static/user_manual/print_composer/map_mainproperties.png
    :align: center
    
-   Map Item properties Tab |nix|
+   Map Item properties Tab
 
 * The **Preview** area allows you to define the preview modes 'Rectangle', 'Cache'
-  and 'Render', as described above. If you change the view on the |qg| map canvas by changing
+  and 'Render', as described above. If you change the view on the QGIS map canvas by changing
   vector or raster properties, you can update the Print Composer view by selecting the
   map element in the Print Composer and clicking the **[Update preview]** button.
 * The field :guilabel:`Scale` |selectnumber| sets a manual scale.
@@ -70,12 +70,12 @@ following functionalities (see figure_composer_map_1_):
   here. Note that a correct coordinate frame can only be added with the default value 0 and that 
   once you defined a :guilabel:`Map rotation` it currently cannot be changed.
 * |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed 
-  on the map canvas in the main |qg| window.
+  on the map canvas in the main QGIS window.
 * You can choose to lock the layers shown on a map item. Check |checkbox| 
   :guilabel:`Lock layers for map item`. 
-  After this is checked, any layer that would be displayed or hidden in the main |qg| window 
+  After this is checked, any layer that would be displayed or hidden in the main QGIS window 
   will not appear or be hidden in the map item of the Composer. But style and labels of a 
-  locked layer are still refreshed according to the main |qg| interface.
+  locked layer are still refreshed according to the main QGIS interface.
   You can prevent this by using :guilabel:`Lock layer styles for map item`.
 * The |mActionShowPresets| button allows you to add quickly all the presets views you 
   have prepared in QGIS. 
@@ -101,16 +101,16 @@ functionalities (see figure_composer_map_2_):
 .. figure:: /static/user_manual/print_composer/map_extents.png
    :align: center
 
-   Map Extents Dialog |nix|
+   Map Extents Dialog
 
 * The **Map extents** area allows you to specify the map extent using X and Y min/max
   values and by clicking the **[Set to map canvas extent]** button. This button sets 
   the map extent of the composer map item to the extent of the current map view in the 
-  main |qg| application. The button **[View extent in map canvas]** does exactly the 
+  main QGIS application. The button **[View extent in map canvas]** does exactly the 
   opposite, it updates the extent of the map view in the QGIS application to the extent
   of the composer map item. 
 
-If you change the view on the |qg| map canvas by changing
+If you change the view on the QGIS map canvas by changing
 vector or raster properties, you can update the Print Composer view by selecting
 the map element in the Print Composer and clicking the **[Update preview]** button
 in the map :guilabel:`Item Properties` tab (see figure_composer_map_1_).
@@ -138,7 +138,7 @@ When you double click on the added grid you can give it another name.
 .. figure:: /static/user_manual/print_composer/map_grids.png
    :align: center
 
-   Map Grids Dialog |nix|
+   Map Grids Dialog
 
 After you have added a grid, you can activate the checkbox |checkbox| :guilabel:`Draw grid` to overlay a grid onto the
 map element. Expand this option to provide a lot of configuration options, see Figure_composer_map_4_.
@@ -152,7 +152,7 @@ map element. Expand this option to provide a lot of configuration options, see F
 .. figure:: /static/user_manual/print_composer/map_draw_grid.png
    :align: center
 
-   Draw Grid Dialog |nix|
+   Draw Grid Dialog
 
 As grid type, you can specify to use a 'Solid', 'Cross', 'Markers' or 'Frame and annotations only'.
 'Frame and annotations only' is especially useful when working with rotated maps or reprojected
@@ -170,7 +170,7 @@ and the width used for the cross or line grid type.
 .. figure:: /static/user_manual/print_composer/map_grid_frame.png
    :align: center
 
-   Grid Frame Dialog |nix|
+   Grid Frame Dialog
 
 * There are different options to style the frame that holds the map. Following options are 
   available: No Frame, Zebra, Interior ticks, Exterior ticks, Interior and Exterior ticks and Lineborder.
@@ -200,7 +200,7 @@ and the width used for the cross or line grid type.
 .. figure:: /static/user_manual/print_composer/map_grid_draw_coordinates.png
    :align: center
 
-   Grid Draw Coordinates dialog |nix|
+   Grid Draw Coordinates dialog
 
 
 Overviews
@@ -218,7 +218,7 @@ following functionalities:
 .. figure:: /static/user_manual/print_composer/map_overview.png
    :align: center
 
-   Map Overviews Dialog |nix|
+   Map Overviews Dialog
 
 You can choose to create an overview map, which shows the extents of the other map(s) 
 that are available in the composer. First you need to create the map(s) you want to 

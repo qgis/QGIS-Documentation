@@ -64,7 +64,7 @@ Parameters
   Default: *0*
 
 ``Input layer`` [vector: any]
-  Any OGR-supported vector layer loaded into the |qg| map canvas.
+  Any OGR-supported vector layer loaded into the QGIS map canvas.
 
 ``Output geometry type`` [selection]
   Defines the output geometry type. By default this is Polygon.

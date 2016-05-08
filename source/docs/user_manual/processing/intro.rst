@@ -5,8 +5,8 @@
 Introduction
 ============
 
-This chapter introduces the |qg| processing framework, a geoprocessing environment
-that can be used to call native and third-party algorithms from |qg|, making your
+This chapter introduces the QGIS processing framework, a geoprocessing environment
+that can be used to call native and third-party algorithms from QGIS, making your
 spatial analysis tasks more productive and easy to accomplish.
 
 In the following sections, we will review how to use the graphical elements of
@@ -16,7 +16,8 @@ There are four basic elements in the framework GUI, which are used to run
 algorithms for different purposes. Choosing one tool or another will depend on
 the kind of analysis that is to be performed and the particular characteristics
 of each user and project. All of them (except for the batch processing interface,
-which is called from the toolbox or the algorithm execution dialog, as we will see) can be accessed from the
+which is called from the toolbox or the algorithm execution dialog, as we will see)
+can be accessed from the
 :menuselection:`Processing` menu item. (You will see more than four entries. The
 remaining ones are not used to execute algorithms and will be explained later in
 this chapter.)
@@ -33,7 +34,7 @@ this chapter.)
 .. figure:: /static/user_manual/processing/toolbox.png
    :align: center
 
-   Processing Toolbox |win|
+   Processing Toolbox
 
 * The graphical modeler. Several algorithms can be combined graphically
   using the modeler to define a workflow, creating a single process that involves
@@ -48,7 +49,7 @@ this chapter.)
 .. figure:: /static/user_manual/processing/models.png
    :align: center
 
-   Processing Modeler |win|
+   Processing Modeler
 
 * The history manager. All actions performed using any of the
   aforementioned elements are stored in a history file and can be later easily
@@ -63,7 +64,7 @@ this chapter.)
 .. figure:: /static/user_manual/processing/history.png
    :align: center
 
-   Processing History |win|
+   Processing History
 
 * The batch processing interface. This interface allows you to
   execute batch processes and automate the execution of a single algorithm on
@@ -79,6 +80,6 @@ this chapter.)
 .. figure:: /static/user_manual/processing/batch_processing.png
    :align: center
 
-   Batch Processing interface |win|
+   Batch Processing interface
 
 In the following sections, we will review each one of these elements in detail.

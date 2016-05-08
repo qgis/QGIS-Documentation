@@ -26,7 +26,7 @@ functionalities (see figure_composer_legend_1_):
 .. figure:: /static/user_manual/print_composer/legend_properties.png
    :align: center
 
-   Legend Item properties Tab |nix|
+   Legend Item properties Tab
 
 Main properties
 ---------------
@@ -43,7 +43,7 @@ provides the following functionalities (see figure_composer_legend_2_):
 .. figure:: /static/user_manual/print_composer/legend_mainproperties.png
    :align: center
 
-   Legend Main properties Dialog |nix|
+   Legend Main properties Dialog
 
 In Main properties you can:
 
@@ -69,7 +69,7 @@ provides the following functionalities (see figure_composer_legend_3_):
 .. figure:: /static/user_manual/print_composer/legend_items.png
    :align: center
 
-   Legend Legend Items Dialog |nix|
+   Legend Legend Items Dialog
 
 * The legend will be updated automatically if |checkbox| :guilabel:`Auto-update` is checked.
   When :guilabel:`Auto-update` is unchecked this will give you more control over the legend items.
@@ -87,7 +87,7 @@ provides the following functionalities (see figure_composer_legend_3_):
   * Use the **[filter]** button to filter the legend by map content, only the 
     legend items visible in the map will be listed in the legend.
 
-  After changing the symbology in the |qg| main window, you can click on **[Update All]** to 
+  After changing the symbology in the QGIS main window, you can click on **[Update All]** to 
   adapt the changes in the legend element of the Print Composer. 
 
 
@@ -108,7 +108,7 @@ The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
 .. figure:: /static/user_manual/print_composer/legend_fonts.png
    :align: center
 
-   Legend Fonts, Columns and Symbol Dialogs |nix|
+   Legend Fonts, Columns and Symbol Dialogs
 
 * You can change the font of the legend title, group, subgroup and item (layer) in the legend item. 
   Click on a category button to open a **Select font** dialog.
@@ -141,7 +141,7 @@ figure_composer_legend_5_):
 .. figure:: /static/user_manual/print_composer/legend_wms.png
    :align: center
 
-   WMS LegendGraphic and Spacing Dialogs |nix|
+   WMS LegendGraphic and Spacing Dialogs
 
 When you have added a WMS layer and you insert a legend composer item, a request 
 will be sent to the WMS server to provide a WMS legend. This Legend will only be 
