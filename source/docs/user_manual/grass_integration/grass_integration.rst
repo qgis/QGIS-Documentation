@@ -76,7 +76,7 @@ is known to GDAL, the source data CRS will be used. You can set these options in
 :guilabel:`Browser` tab in :ref:`grass_options`.
 
 If a source raster has more bands, a new GRASS map is created for each layer with **.<band number>**
-suffix and group of all maps with |rasterGroup| icon is created. External rasters 
+suffix and group of all maps with |raster_group| icon is created. External rasters 
 have a different icon |rasterLink|.
 
 .. _managing_grass_data:

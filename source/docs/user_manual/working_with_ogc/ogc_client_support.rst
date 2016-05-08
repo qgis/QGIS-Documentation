@@ -149,7 +149,7 @@ Selecting WMS/WMTS Servers
 
 The first time you use the WMS feature in QGIS, there are no servers defined.
 
-Begin by clicking the |addWmsLayer| :sup:`Add WMS layer` button on the
+Begin by clicking the |wms| :sup:`Add WMS layer` button on the
 toolbar, or selecting :menuselection:`Layer --> Add WMS Layer...`.
 
 The dialog :guilabel:`Add Layer(s) from a Server` for adding layers from
@@ -527,7 +527,7 @@ of QGIS. Some of the more noteworthy exceptions follow.
 
 **Editing WMS Layer Settings**
 
-Once you've completed the |addWmsLayer| :sup:`Add WMS layer` procedure,
+Once you've completed the |wms| :sup:`Add WMS layer` procedure,
 there is no way to change the settings. A work-around is to delete the layer
 completely and start again.
 

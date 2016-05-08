@@ -896,7 +896,7 @@ following functionality:
 * |invertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
 * |unselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)
 * |selectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+t`)
-* |PanToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+p`)
+* |panToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+p`)
 * |zoomToSelected| :sup:`Zoom map to the selected rows` (also with
   :kbd:`Ctrl+j`)
 * |copySelected| :sup:`Copy selected rows to clipboard` (also with

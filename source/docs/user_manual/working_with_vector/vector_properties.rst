@@ -244,13 +244,13 @@ Draw effects
 
 Still in order to improve layer rendering and avoid (or at least reduce)
 the resort to other software for final rendering of maps, QGIS provides another
-powerful function: the |PaintEffects| :guilabel:`Draw Effects` tool.
+powerful function: the |paintEffects| :guilabel:`Draw Effects` tool.
 This option can be applied either at the feature level while shaping the symbol
 or at the whole layer level. It adds :index:`paint effects` for customizing the visualization
 of vector files.
 
 The function is activated by checking the |checkbox| :guilabel:`Draw effects` option
-and clicking the |PaintEffects| :sup:`Customize effects` button.
+and clicking the |paintEffects| :sup:`Customize effects` button.
 The effects include the following categories, with the following options:
 
 * **Source:** Implements the feature in the drawing menu, with its style as selected in the

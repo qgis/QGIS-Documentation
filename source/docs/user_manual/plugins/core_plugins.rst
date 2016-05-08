@@ -23,9 +23,9 @@ Icon                    Plugin                        Description               
 |dxf2shp_converter|     DXF2Shape Converter           Converts from DXF to SHP file format                    :ref:`dxf2shape`
 |event_id|              eVis                          Event Visualization Tool                                :ref:`evis`
 |ftools|                fTools                        A suite of vector tools                                 :ref:`ftools`
-|raster-info|           GDAL Tools                    GDAL raster functionality                               :ref:`label_plugingdaltools`
-|geometrychecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
-|geometrysnapper|       Geometry Snapper              Snap geometries to a reference layer                    :ref:`geometry_snapper`
+|raster_info|           GDAL Tools                    GDAL raster functionality                               :ref:`label_plugingdaltools`
+|geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
+|geometrySnapper|       Geometry Snapper              Snap geometries to a reference layer                    :ref:`geometry_snapper`
 |mGeorefRun|            Georeferencer GDAL            Georeference rasters with GDAL                          :ref:`georef`
 |gps_importer|          GPS Tools                     Tools for loading and importing GPS data                :ref:`plugin_gps`
 |grass|                 GRASS                         GRASS functionality                                     :ref:`sec_grass`
@@ -40,5 +40,5 @@ Icon                    Plugin                        Description               
 |roadgraph|             Road Graph plugin             Shortest path analysis                                  :ref:`roadgraph`
 |spatialquery|          Spatial Query                 Spatial queries on vectors                              :ref:`spatial_query`
 |topologychecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
-|raster-stats|          Zonal Statistics              Calculate raster statistics for vector polygons         :ref:`zonal_statistics`
+|raster_stats|          Zonal Statistics              Calculate raster statistics for vector polygons         :ref:`zonal_statistics`
 ======================  ============================  ======================================================  ===============================

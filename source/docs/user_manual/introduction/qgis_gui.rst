@@ -139,7 +139,7 @@ View
 Menu Option                                              Shortcut              Reference                                   Toolbar
 =======================================================  ====================  ==========================================  ===============================
 |pan| :guilabel:`Pan Map`                                \                     \                                           :guilabel:`Map Navigation`
-|PanToSelected| :guilabel:`Pan Map to Selection`         \                     \                                           :guilabel:`Map Navigation`
+|panToSelected| :guilabel:`Pan Map to Selection`         \                     \                                           :guilabel:`Map Navigation`
 |zoomIn| :guilabel:`Zoom In`                             :kbd:`Ctrl++`         \                                           :guilabel:`Map Navigation`
 |zoomOut| :guilabel:`Zoom Out`                           :kbd:`Ctrl+-`         \                                           :guilabel:`Map Navigation`
 :menuselection:`Select -->`                              \                     see :ref:`sec_selection`                    :guilabel:`Attributes`
@@ -190,7 +190,7 @@ Menu Option                                                   Shortcut          
 |labeling| :guilabel:`Labeling`                               \                     see :ref:`vector_labels_tab`                \
 |inOverview| :guilabel:`Add to Overview`                      :kbd:`Ctrl+Shift+O`   \                                           :guilabel:`Manage Layers`
 |addAllToOverview| :guilabel:`Add All To Overview`            \                     \                                           \
-|RemoveAllOverview| :guilabel:`Remove All From Overview`      \                     \                                           \
+|removeAllOVerview| :guilabel:`Remove All From Overview`      \                     \                                           \
 |showAllLayers| :guilabel:`Show All Layers`                   :kbd:`Ctrl+Shift+U`   \                                           :guilabel:`Manage Layers`
 |hideAllLayers| :guilabel:`Hide All Layers`                   :kbd:`Ctrl+Shift+H`   \                                           :guilabel:`Manage Layers`
 |showAllLayers| :guilabel:`Show selected Layers`              \                     \                                           \

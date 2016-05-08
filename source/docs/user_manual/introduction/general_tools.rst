@@ -590,7 +590,7 @@ To add a scale bar:
 #. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
 #. Choose the style from the :guilabel:`Scale bar style` |selectstring|
    combo box.
-#. Select the color for the bar :guilabel:`Color of bar` |selectcolor| or use
+#. Select the color for the bar :guilabel:`Color of bar` |selectColor| or use
    the default black color.
 #. Set the :guilabel:`Size of bar` |selectnumber|.
 #. Optionally, check |checkbox| :guilabel:`Automatically snap to round number

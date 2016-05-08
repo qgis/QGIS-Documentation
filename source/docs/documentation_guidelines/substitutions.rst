@@ -74,7 +74,7 @@ Menu items not used much
 ==============  =================
 Icon            Substitution
 ==============  =================
-|selectcolor|   ``|selectcolor|``
+|selectColor|   ``|selectColor|``
 |inputtext|     ``|inputtext|``
 |tab|           ``|tab|``
 |degrees|       ``|degrees|``
@@ -94,12 +94,12 @@ Icon                            Substitution                        Icon        
 |addRasterLayer|                ``|addRasterLayer|``                |addMssqlLayer|                 ``|addMssqlLayer|``
 |addLayer|                      ``|addLayer|``                      |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
 |newVectorLayer|                ``|newVectorLayer|``                |removeLayer|                   ``|removeLayer|``
-|virtualLayer|                  ``|virtualLayer|``                  |addWmsLayer|                   ``|addWmsLayer|``
+|virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
 |wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
 |oracle_raster|                 ``|oracle_raster|``
 |dbmanager|                     ``|dbmanager|``                     |gdal|                          ``|gdal|``
 |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
-|RemoveAllOverview|             ``|RemoveAllOverview|``             \                               \
+|removeAllOVerview|             ``|removeAllOVerview|``             \                               \
 |showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
 |showPresets|                   ``|showPresets|``                   |zip|                           ``|zip|``
 ==============================  ==================================  ==============================  ==================================
@@ -169,7 +169,7 @@ Map Navigation and attributes
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|pan|                           ``|pan|``                           |PanToSelected|                 ``|PanToSelected|``
+|pan|                           ``|pan|``                           |panToSelected|                 ``|panToSelected|``
 |zoomIn|                        ``|zoomIn|``                        |zoomOut|                       ``|zoomOut|``
 |zoomActual|                    ``|zoomActual|``                    |zoomFullExtent|                ``|zoomFullExtent|``
 |zoomToLayer|                   ``|zoomToLayer|``                   |zoomToSelected|                ``|zoomToSelected|``
@@ -186,28 +186,26 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 
 
-labels
+Labels
 ......
 
 =======================  ===========================  =======================  ===========================
 Icon                     Substitution                 Icon                     Substitution
 =======================  ===========================  =======================  ===========================
-|label                   ``|labeling|``               |textAnnotation|         ``|textAnnotation|``
+|labeling|               ``|labeling|``               |textAnnotation|         ``|textAnnotation|``
 |annotation|             ``|annotation|``             |formAnnotation|         ``|formAnnotation|``
 =======================  ===========================  =======================  ===========================
 
-
-help
+Help
 ....
 
-=======================  ===========================  =======================  ===========================
+=======================  ===========================  =======================  ==================================
 Icon                     Substitution                 Icon                     Substitution
-=======================  ===========================  =======================  ===========================
+=======================  ===========================  =======================  ==================================
 |helpContents|           ``|helpContents|``           |qgisHomePage|           ``|qgisHomePage|``
 |checkQgisVersion|       ``|checkQgisVersion|``       |helpAbout|              ``|helpAbout|``
 |helpSponsors|           ``|helpSponsors|``           |contextHelp|            ``|contextHelp|``
-=======================  ===========================  =======================  ===========================
-
+=======================  ===========================  =======================  ==================================
 
 Colors
 ......
@@ -244,7 +242,7 @@ Icon                     Substitution                 Icon                     S
 =======================  ===========================  =======================  ===========================
 |openTable|              ``|openTable|``              |selectedToTop|          ``|selectedToTop|``
 |selectAll|              ``|selectAll|``              |invertSelection|        ``|invertSelection|``
-|PanToSelected|          ``|PanToSelected|``          |zoomToSelected|         ``|zoomToSelected|``
+|panToSelected|          ``|panToSelected|``          |zoomToSelected|         ``|zoomToSelected|``
 |copySelected|           ``|copySelected|``           |editPaste|              ``|editPaste|``
 |expressionSelect|       ``|expressionSelect|``       |deleteSelected|         ``|deleteSelected|``
 |newAttribute|           ``|newAttribute|``           |deleteAttribute|        ``|deleteAttribute|``
@@ -327,10 +325,10 @@ Icon                            Substitution                        Icon        
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |mapserver_export|              ``|mapserver_export|``              |exportMapServer|               ``|exportMapServer|``
 |spiticon|                      ``|spiticon|``                      |delimited_text|                ``|delimited_text|``
-|GDALScript|                    ``|GDALScript|``                    |dxf2shp_converter|             ``|dxf2shp_converter|``
+|gdal_script|                   ``|gdal_script|``                   |dxf2shp_converter|             ``|dxf2shp_converter|``
 |spatialquery|                  ``|spatialquery|``                  |selectsubsetlayer|             ``|selectsubsetlayer|``
-|selectcreatelayer|             ``|selectcreatelayer|``             |metasearch|                    ``|metasearch|``
-|geometrychecker|               ``|geometrychecker|``               |geometrysnapper|               ``|geometrysnapper|``
+|selectCreateLayer|             ``|selectCreateLayer|``             |metasearch|                    ``|metasearch|``
+|geometryChecker|               ``|geometryChecker|``               |geometrySnapper|               ``|geometrySnapper|``
 |topologychecker|               ``|topologychecker|``
 ==============================  ==================================  ==============================  ==================================
 
@@ -399,9 +397,9 @@ Raster related
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|fullCumulativeStretch|         ``|fullCumulativeStretch|``         |FullHistogramStretch|          ``|FullHistogramStretch|``
-|ShowRasterCalculator|          ``|ShowRasterCalculator|``          |raster-stats|                  ``|raster-stats|``
-|raster-interpolate|            ``|raster-interpolate|``            |raster-info|                   ``|raster-info|``
+|fullCumulativeStretch|         ``|fullCumulativeStretch|``         |fullHistogramStretch|          ``|fullHistogramStretch|``
+|ShowRasterCalculator|          ``|ShowRasterCalculator|``          |raster_stats|                  ``|raster_stats|``
+|raster_interpolate|            ``|raster_interpolate|``            |raster_info|                   ``|raster_info|``
 |raster_terrain|                ``|raster_terrain|``                |heatmap|                       ``|heatmap|``
 ==============================  ==================================  ==============================  ==================================
 

@@ -66,7 +66,7 @@ Using the plugin
 #. Start QGIS and load a point vector layer (e.g., :file:`elevp.csv`).
 #. Load the Interpolation plugin in the Plugin Manager (see
    :ref:`managing_plugins`) and click on the :menuselection:`Raster -->
-   Interpolation -->` |raster-interpolate| :guilabel:`Interpolation`
+   Interpolation -->` |raster_interpolate| :guilabel:`Interpolation`
    menu, which appears in the QGIS menu bar. The Interpolation plugin dialog
    appears as shown in Figure_interpolation_1_.
 #. Select an input layer (e.g., :guilabel:`elevp` |selectstring|) and column

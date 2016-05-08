@@ -100,7 +100,7 @@ Conversion
 |                                                        | pixels in the process. For more information you can   |
 |                                                        | read on http://www.gdal.org/gdal_translate.html.      |
 +--------------------------------------------------------+-------------------------------------------------------+
-| |gdal_raster-rgb| :guilabel:`RGB to PCT`               | This utility will compute an optimal pseudocolor      |
+| |gdal_raster_rgb| :guilabel:`RGB to PCT`               | This utility will compute an optimal pseudocolor      |
 |                                                        | table for a given RGB image using a median cut        |
 |                                                        | algorithm on a downsampled RGB histogram. Then it     |
 |                                                        | converts the image into a pseudocolored image using   |
@@ -109,7 +109,7 @@ Conversion
 |                                                        | maximize output image visual quality. The utility is  |
 |                                                        | also described at http://www.gdal.org/rgb2pct.html.   |
 +--------------------------------------------------------+-------------------------------------------------------+
-| |gdal_raster-rgb| :guilabel:`PCT to RGB`               | This utility will convert a pseudocolor band on the   |
+| |gdal_raster_rgb| :guilabel:`PCT to RGB`               | This utility will convert a pseudocolor band on the   |
 |                                                        | input file into an output RGB file of the desired     |
 |                                                        | format. For more information, see                     |
 |                                                        | http://www.gdal.org/pct2rgb.html.                     |
@@ -126,7 +126,7 @@ Extraction
 |                                                        | On http://www.gdal.org/gdal_contour.html, you can find|
 |                                                        | more information.                                     |
 +--------------------------------------------------------+-------------------------------------------------------+
-||gdal_raster-clip| :guilabel:`Clipper`                  | This utility allows you to clip (extract subset)      |
+||gdal_raster_clip| :guilabel:`Clipper`                  | This utility allows you to clip (extract subset)      |
 |                                                        | rasters using selected extent or based on mask layer  |
 |                                                        | bounds. More information can be found at              |
 |                                                        | http://www.gdal.org/gdal_translate.html.              |
@@ -201,12 +201,12 @@ Miscellaneous
 |                                                        | earlier ones. The utility is also described at        |
 |                                                        | http://www.gdal.org/gdal_merge.html.                  |
 +--------------------------------------------------------+-------------------------------------------------------+
-| |raster-info| :guilabel:`Information`                  | This utility lists various information about a        |
+| |raster_info| :guilabel:`Information`                  | This utility lists various information about a        |
 |                                                        | GDAL-supported raster dataset.                        |
 |                                                        | On http://www.gdal.org/gdalinfo.html, you can find    |
 |                                                        | more information.                                     |
 +--------------------------------------------------------+-------------------------------------------------------+
-| |gdal_raster-overview| :guilabel:`Build Overviews`     | The gdaladdo utility can be used to build or rebuild  |
+| |gdal_raster_overview| :guilabel:`Build Overviews`     | The gdaladdo utility can be used to build or rebuild  |
 |                                                        | overview images for most supported file formats with  |
 |                                                        | one of several downsampling algorithms. For more      |
 |                                                        | information, see http://www.gdal.org/gdaladdo.html.   |

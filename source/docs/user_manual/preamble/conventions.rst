@@ -32,7 +32,7 @@ instruction in the manual.
 * Select a number: |selectnumber|
 * Select a string: |selectstring|
 * Browse for a file: |browsebutton|
-* Select a color: |selectcolor|
+* Select a color: |selectColor|
 * Slider: |slider|
 * Input Text: |inputtext|
 

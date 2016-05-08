@@ -41,7 +41,7 @@ Now you get a list of feature IDs from the query and you have several options, a
 shown in figure_spatial_query_1_.
 
 * Click on |selectsubsetlayer| :sup:`Create layer with list of items`.
-* Select an ID from the list and click on |selectcreatelayer|
+* Select an ID from the list and click on |selectCreateLayer|
   :sup:`Create layer with selected`.
 * Select 'Remove from current selection' in the field
   :guilabel:`And use the result to` |selectstring|.

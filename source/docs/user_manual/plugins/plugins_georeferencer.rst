@@ -26,7 +26,7 @@ you can accurately determine coordinates.
 +================================+==============================+===============================+============================+
 | |addRasterLayer|               | Open raster                  | |startGeoref|                 | Start georeferencing       |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |GDALScript|                   | Generate GDAL Script         | |loadGCPpoints|               | Load GCP Points            |
+| |gdal_script|                  | Generate GDAL Script         | |loadGCPpoints|               | Load GCP Points            |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | |saveGCPpointsAs|              | Save GCP Points As           | |transformSettings|           | Transformation settings    |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
@@ -40,7 +40,7 @@ you can accurately determine coordinates.
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | |zoomNext|                     | Zoom Next                    | |linkGeorefToQGis|            | Link Georeferencer to QGIS |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |linkQGisToGeoref|             | Link QGIS to Georeferencer   | |FullHistogramStretch|        | Full histogram stretch     |
+| |linkQGisToGeoref|             | Link QGIS to Georeferencer   | |fullHistogramStretch|        | Full histogram stretch     |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | |localHistogramStretch|        | Local histogram stretch      |                               |                            |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
