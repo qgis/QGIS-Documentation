@@ -79,7 +79,7 @@ Log Messages Panel
 -------------------
 
 When loading or processing some operations, you can track and follow messages
-that appear in different tabs using the |mMessageLog| Log Messages Panel.
+that appear in different tabs using the |messageLog| Log Messages Panel.
 It can be activated using the most right icon in the bottom status bar.
 
 Project Properties
@@ -190,14 +190,14 @@ General Menu
 
 **Application**
 
-* Select the :guilabel:`Style (QGIS restart required)` |selectstring| and choose
+* Select the :guilabel:`Style (QGIS restart required)` |selectString| and choose
   between 'Oxygen','Windows','Motif','CDE', 'Plastique' and  'Cleanlooks' (|nix|).
-* Define the :guilabel:`Icon theme` |selectstring|. Currently only 'default' is
+* Define the :guilabel:`Icon theme` |selectString|. Currently only 'default' is
   possible.
-* Define the :guilabel:`Icon size` |selectstring|.
-* Define the :guilabel:`Font`. Choose between |radiobuttonon|
+* Define the :guilabel:`Icon size` |selectString|.
+* Define the :guilabel:`Font`. Choose between |radioButtonOn|
   :guilabel:`Qt default` and a user-defined font.
-* Change the :guilabel:`Timeout for timed messages or dialogs` |selectstring|.
+* Change the :guilabel:`Timeout for timed messages or dialogs` |selectString|.
 * |checkbox| :guilabel:`Hide splash screen at startup`
 * |checkbox| :guilabel:`Show tips at startup`
 * |checkbox| :guilabel:`Bold group box titles`
@@ -209,8 +209,8 @@ General Menu
 
 **Project files**
 
-* :guilabel:`Open project on launch` |selectstring| (choose between 'New',
-  'Most recent' and 'Specific'). When choosing 'Specific' use the |browsebutton|
+* :guilabel:`Open project on launch` |selectString| (choose between 'New',
+  'Most recent' and 'Specific'). When choosing 'Specific' use the |browseButton|
   to define a project.
 * |checkbox| :guilabel:`Create new project from default project`. You have the
   possibility to press on :guilabel:`Set current project as default` or on
@@ -224,7 +224,7 @@ General Menu
 * |checkbox| :guilabel:`Prompt for confirmation when a layer is to be removed`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
   version of QGIS`
-* :guilabel:`Enable macros` |selectstring|. This option was created to handle
+* :guilabel:`Enable macros` |selectString|. This option was created to handle
   macros that are written to perform an action on project events. You can
   choose between 'Never', 'Ask', 'For this session only' and
   'Always (not recommended)'.
@@ -280,10 +280,10 @@ Data Sources Menu
   clipboard` from the :guilabel:`Attribute table` dialog, this has the
   result that the coordinates of points or vertices are also copied to the
   clipboard.
-* :guilabel:`Attribute table behavior` |selectstring|. There are three
+* :guilabel:`Attribute table behavior` |selectString|. There are three
   possibilities: 'Show all features', 'Show selected features' and 'Show
   features visible on map'.
-* :guilabel:`Attribute table row cache` |selectnumber|. This row cache makes
+* :guilabel:`Attribute table row cache` |selectNumber|. This row cache makes
   it possible to save the last loaded N attribute rows so that working with the
   attribute table will be quicker. The cache will be deleted when closing the
   attribute table.
@@ -292,10 +292,10 @@ Data Sources Menu
 
 **Data source handling**
 
-* :guilabel:`Scan for valid items in the browser dock` |selectstring|. You can
+* :guilabel:`Scan for valid items in the browser dock` |selectString|. You can
   choose between 'Check extension' and 'Check file contents'.
 * :guilabel:`Scan for contents of compressed files (.zip) in browser dock`
-  |selectstring|. 'No', 'Basic scan' and 'Full scan' are possible.
+  |selectString|. 'No', 'Basic scan' and 'Full scan' are possible.
 * :guilabel:`Prompt for raster sublayers when opening`. Some rasters support
   sublayers --- they are called subdatasets in GDAL. An example is netCDF files
   --- if there are many netCDF variables, GDAL sees every variable as a
@@ -356,14 +356,14 @@ Rendering Menu
 
 *Contrast enhancement*
 
-* :guilabel:`Single band gray` |selectstring|. A single band gray can have
+* :guilabel:`Single band gray` |selectString|. A single band gray can have
   'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and also
   'Clip to MinMax'.
-* :guilabel:`Multi band color (byte/band)` |selectstring|. Options are 'No stretch',
+* :guilabel:`Multi band color (byte/band)` |selectString|. Options are 'No stretch',
   'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
-* :guilabel:`Multi band color (>byte/band)` |selectstring|. Options are 'No stretch',
+* :guilabel:`Multi band color (>byte/band)` |selectString|. Options are 'No stretch',
   'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
-* :guilabel:`Limits (minimum/maximum)` |selectstring|. Options are
+* :guilabel:`Limits (minimum/maximum)` |selectString|. Options are
   'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'.
 * :guilabel:`Cumulative pixel count cut limits`
 * :guilabel:`Standard deviation multiplier`
@@ -391,7 +391,7 @@ Canvas and Legend Menu
 
 **Layer legend**
 
-* :guilabel:`Double click action in legend` |selectstring|. You can either
+* :guilabel:`Double click action in legend` |selectString|. You can either
   'Open layer properties' or 'Open attribute table' with the double click.
 * The following :guilabel:`Legend item styles` are possible:
 
@@ -422,16 +422,16 @@ This menu offers some options regarding the behavior of the :guilabel:`Identify 
 * Define :guilabel:`Decimal places`
 * |checkbox| :guilabel:`Keep base unit` to not automatically convert large numbers
   (e.g., meters to kilometers)
-* :guilabel:`Preferred distance units` |radiobuttonon| ('Meters', 'Feet',
+* :guilabel:`Preferred distance units` |radioButtonOn| ('Meters', 'Feet',
   'Nautical Miles', 'Degrees' or 'Map Units' )
-* :guilabel:`Preferred area units` |radiobuttonon| ('Square meters', 'Square feet',
+* :guilabel:`Preferred area units` |radioButtonOn| ('Square meters', 'Square feet',
   'Square yards', 'Hectares', 'Map Units' ...)
-* :guilabel:`Preferred angle units` |radiobuttonon| ('Degrees', 'Radians', 'Gon/gradians',
+* :guilabel:`Preferred angle units` |radioButtonOn| ('Degrees', 'Radians', 'Gon/gradians',
   'Minutes of arc' ...)
 
 **Panning and zooming**
 
-* Define :guilabel:`Mouse wheel action` |selectstring| ('Zoom', 'Zoom and recenter',
+* Define :guilabel:`Mouse wheel action` |selectString| ('Zoom', 'Zoom and recenter',
   'Zoom to mouse cursor', 'Nothing')
 * Define :guilabel:`Zoom factor` for wheel mouse
 
@@ -453,14 +453,14 @@ You can define the :guilabel:`Default font` here.
 
 **Grid appearance**
 
-* Define the :guilabel:`Grid style` |selectstring| ('Solid', 'Dots', 'Crosses')
+* Define the :guilabel:`Grid style` |selectString| ('Solid', 'Dots', 'Crosses')
 * Define the :guilabel:`Grid color`
 
 **Grid and guide defaults**
 
-* Define the :guilabel:`Grid spacing` |selectnumber|
-* Define the :guilabel:`Grid offset` |selectnumber| for x and y
-* Define the :guilabel:`Snap tolerance` |selectnumber|
+* Define the :guilabel:`Grid spacing` |selectNumber|
+* Define the :guilabel:`Grid offset` |selectNumber| for x and y
+* Define the :guilabel:`Snap tolerance` |selectNumber|
 
 
 Digitizing Menu
@@ -484,7 +484,7 @@ Digitizing Menu
 **Snapping**
 
 * |checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart required)`
-* Define :guilabel:`Default snap mode` |selectstring| ('To vertex', 'To segment',
+* Define :guilabel:`Default snap mode` |selectString| ('To vertex', 'To segment',
   'To vertex and segment', 'Off')
 * Define :guilabel:`Default snapping tolerance` in map units or pixels
 * Define the :guilabel:`Search radius for vertex edits` in map units or pixels
@@ -492,7 +492,7 @@ Digitizing Menu
 **Vertex markers**
 
 * |checkbox| :guilabel:`Show markers only for selected features`
-* Define vertex :guilabel:`Marker style` |selectstring| ('Cross' (default), 'Semi
+* Define vertex :guilabel:`Marker style` |selectString| ('Cross' (default), 'Semi
   transparent circle' or 'None')
 * Define vertex :guilabel:`Marker size`
 
@@ -519,10 +519,10 @@ CRS Menu
 
 **Default CRS for new projects**
 
-* |radiobuttonoff| :guilabel:`Don't enable 'on the fly' reprojection`
-* |radiobuttonon| :guilabel:`Automatically enable 'on the fly' reprojection if
+* |radioButtonOff| :guilabel:`Don't enable 'on the fly' reprojection`
+* |radioButtonOn| :guilabel:`Automatically enable 'on the fly' reprojection if
   layers have different CRS`
-* |radiobuttonoff| :guilabel:`Enable 'on the fly' reprojection by default`
+* |radioButtonOff| :guilabel:`Enable 'on the fly' reprojection by default`
 * Select a CRS and :guilabel:`Always start new projects with this CRS`
 
 **CRS for new layers**
@@ -530,9 +530,9 @@ CRS Menu
 This area allows you to define the action to take when a new layer is created, or when
 a layer without a CRS is loaded.
 
-* |radiobuttonon| :guilabel:`Prompt for CRS`
-* |radiobuttonoff| :guilabel:`Use project CRS`
-* |radiobuttonoff| :guilabel:`Use default CRS`
+* |radioButtonOn| :guilabel:`Prompt for CRS`
+* |radioButtonOff| :guilabel:`Use project CRS`
+* |radioButtonOff| :guilabel:`Use default CRS`
 
 **Default datum transformations**
 
@@ -577,7 +577,7 @@ Define the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
 
 * |checkbox| :guilabel:`Use proxy for web access` and define 'Host', 'Port', 'User',
   and 'Password'.
-* Set the :guilabel:`Proxy type` |selectstring| according to your needs.
+* Set the :guilabel:`Proxy type` |selectString| according to your needs.
 
   * :menuselection:`Default Proxy`: Proxy is determined based on the application
     proxy set using

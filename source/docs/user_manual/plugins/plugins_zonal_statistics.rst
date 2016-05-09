@@ -5,7 +5,7 @@
 Zonal Statistics Plugin
 =======================
 
-With the |raster_stats| :guilabel:`Zonal statistics` plugin, you can analyze
+With the |rasterStats| :guilabel:`Zonal statistics` plugin, you can analyze
 the results of a thematic classification. It allows you to calculate several values
 of the pixels of a raster layer with the help of a polygonal vector layer (see
 figure_zonal_statistics_). Choosing a color band, the plugin generates output

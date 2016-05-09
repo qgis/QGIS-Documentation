@@ -160,7 +160,7 @@ This tab contains the following widgets (see  figure_composer_atlas_1_):
 
 * |checkbox| :guilabel:`Generate an atlas`, which enables or disables the atlas
   generation.
-* A :guilabel:`Coverage layer` |selectstring| combo box that allows you to choose
+* A :guilabel:`Coverage layer` |selectString| combo box that allows you to choose
   the   (vector) layer containing the features on which to iterate over.
 * An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked,
   will hide   the coverage layer (but not the other ones) during the generation.
@@ -196,14 +196,14 @@ item, you need to check |checkbox|:guilabel:`Controlled by Atlas` under the item
 properties of the map item.
 Once checked, you can set:
 
-* A radiobutton |radiobuttonon| :guilabel:`Margin around feature` that allows you to select
+* A radiobutton |radioButtonOn| :guilabel:`Margin around feature` that allows you to select
   the amount of space added around each geometry within the allocated map.
   Its value is meaningful only when using the auto-scaling mode.
-* A |radiobuttonoff| :guilabel:`Predefined scale` (best fit). It will use the best
+* A |radioButtonOff| :guilabel:`Predefined scale` (best fit). It will use the best
   fitting option from the list of predefined scales in your project properties settings
   (see :guilabel:`Project --> Project Properties --> General --> Project Scales`
   to configure these predefined scales).
-* A |radiobuttonoff| :guilabel:`Fixed scale` that allows you to toggle between
+* A |radioButtonOff| :guilabel:`Fixed scale` that allows you to toggle between
   auto-scale and fixed-scale mode.
   In fixed-scale mode, the map will only be translated for each geometry to be centered.
   In auto-scale mode, the map's extents are computed in such a way that
@@ -277,7 +277,7 @@ expression:
 
 When you want to give a title above the map in the center of the page,
 insert a label item above the map. First use the item properties of the label
-item to set the horizontal alignment to |radiobuttonon| :guilabel:`Center`.
+item to set the horizontal alignment to |radioButtonOn| :guilabel:`Center`.
 Next activate from :guilabel:`Reference point` the upper middle checkbox.
 You can provide the following expression for field :guilabel:`X` :
 

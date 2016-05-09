@@ -64,8 +64,8 @@ following functionalities (see figure_composer_map_1_):
   and 'Render', as described above. If you change the view on the QGIS map canvas by changing
   vector or raster properties, you can update the Print Composer view by selecting the
   map element in the Print Composer and clicking the **[Update preview]** button.
-* The field :guilabel:`Scale` |selectnumber| sets a manual scale.
-* The field :guilabel:`Map rotation` |selectnumber| allows you to
+* The field :guilabel:`Scale` |selectNumber| sets a manual scale.
+* The field :guilabel:`Map rotation` |selectNumber| allows you to
   rotate the map element content clockwise in degrees. The rotation of the map view can be imitated
   here. Note that a correct coordinate frame can only be added with the default value 0 and that 
   once you defined a :guilabel:`Map rotation` it currently cannot be changed.

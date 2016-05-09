@@ -3,7 +3,7 @@ Map Production
 **************
 
 +-------------------+-------------+---------------------------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | Understanding of map production for spatial data                                |
+| |gentleLogo|      | Objectives: | Understanding of map production for spatial data                                |
 +                   +-------------+---------------------------------------------------------------------------------+
 |                   | Keywords:   | Map production, map layout, scale bar, north arrow, legend, map body, map unit  |
 +-------------------+-------------+---------------------------------------------------------------------------------+

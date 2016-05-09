@@ -4,7 +4,7 @@ Coordinate Reference Systems
 ****************************
 
 +-------------------+-------------+------------------------------------------------------------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | Understanding of Coordinate Reference Systems.                                                                   |
+| |gentleLogo|      | Objectives: | Understanding of Coordinate Reference Systems.                                                                   |
 +                   +-------------+------------------------------------------------------------------------------------------------------------------+
 |                   | Keywords:   | Coordinate Reference System (CRS), Map Projection, On the Fly Projection, Latitude, Longitude, Northing, Easting |
 +-------------------+-------------+------------------------------------------------------------------------------------------------------------------+

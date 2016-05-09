@@ -504,7 +504,7 @@ annotations to the map canvas.
 Copyright Label
 ---------------
 
-|copyright_label| :sup:`Copyright label` adds a copyright label using the text
+|copyrightLabel| :sup:`Copyright label` adds a copyright label using the text
 you prefer to the map.
 
 .. _figure_decorations_2:
@@ -525,7 +525,7 @@ you prefer to the map.
 #. Enter the text you want to place on the map. You can use HTML as
    shown in the example.
 #. Choose the placement of the label from the :guilabel:`Placement`
-   |selectstring| combo box.
+   |selectString| combo box.
 #. You can refine the placement of the item by setting a Horizontal and/or Vertical
    `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
    **Pixels** or set as **Percentage** of the width or height of the map canvas.
@@ -538,7 +538,7 @@ followed by the date in the lower right-hand corner of the map canvas.
 North Arrow
 -----------
 
-|north_arrow| :sup:`North Arrow` places a simple north arrow on the map canvas.
+|northArrow| :sup:`North Arrow` places a simple north arrow on the map canvas.
 Currently, there is only one style available. You can adjust the angle of the
 arrow or let QGIS set the direction automatically.
 If you choose to let QGIS determine the direction, it makes its best guess
@@ -564,7 +564,7 @@ You can refine the placement of the arrow by setting a Horizontal and/or Vertica
 Scale Bar
 ---------
 
-|scale_bar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
+|scaleBar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
 can control the style and placement, as well as the labelling of the bar.
 
 .. _figure_decorations_4:
@@ -588,14 +588,14 @@ To add a scale bar:
 #. Select from menu :menuselection:`View --> Decorations --> Scale Bar`.
    The dialog starts (see figure_decorations_4_).
 #. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
-#. Choose the style from the :guilabel:`Scale bar style` |selectstring|
+#. Choose the style from the :guilabel:`Scale bar style` |selectString|
    combo box.
 #. Select the color for the bar :guilabel:`Color of bar` |selectColor| or use
    the default black color.
-#. Set the :guilabel:`Size of bar` |selectnumber|.
+#. Set the :guilabel:`Size of bar` |selectNumber|.
 #. Optionally, check |checkbox| :guilabel:`Automatically snap to round number
    on resize` to display values easy-to-read.
-#. Choose the placement from the :guilabel:`Placement` |selectstring| combo box.
+#. Choose the placement from the :guilabel:`Placement` |selectString| combo box.
 #. You can refine the placement of the item by setting a Horizontal and/or Vertical
    `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
    **Pixels** or set as **Percentage** of the width or height of the map canvas.
@@ -750,7 +750,7 @@ Embedding layers
 The following dialog allows you to embed layers from other projects. Here is a
 small example:
 
-#. Press |browsebutton| to look for a project from the Alaska dataset.
+#. Press |browseButton| to look for a project from the Alaska dataset.
 #. Select the project file :file:`relations.qgs`. You can see the content of the
    project (see figure_embed_dialog_).
 #. Press :kbd:`Ctrl` and click on the layers :file:`airports` and

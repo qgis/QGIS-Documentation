@@ -74,11 +74,11 @@ This will bring up a new window (see figure_vector_1_).
 
    Add Vector Layer Dialog
 
-From the available options check |radiobuttonon| :guilabel:`File`. Click on
+From the available options check |radioButtonOn| :guilabel:`File`. Click on
 **[Browse]**. That will bring up a standard open file dialog
 (see figure_vector_2_), which allows you to navigate the file system and load a
 shapefile or other supported data source. The selection box :guilabel:`Filter`
-|selectstring| allows you to preselect some OGR-supported file formats.
+|selectString| allows you to preselect some OGR-supported file formats.
 
 You can also select the encoding for the shapefile if desired.
 
@@ -171,7 +171,7 @@ Loading a MapInfo Layer
 
 |addOgrLayer| To load a MapInfo layer, click on the |addOgrLayer|
 :sup:`Add Vector Layer` toolbar button; or type :kbd:`Ctrl+Shift+V`, change the
-file type filter :guilabel:`Files of type` |selectstring|: to
+file type filter :guilabel:`Files of type` |selectString|: to
 'Mapinfo File [OGR] (\*.mif \*.tab \*.MIF \*.TAB)' and select the MapInfo layer you
 want to load.
 
@@ -184,8 +184,8 @@ Loading an ArcInfo Binary Coverage
 |addOgrLayer| To load an ArcInfo Binary Coverage, click on the
 |addOgrLayer| :sup:`Add Vector Layer` toolbar button or press
 :kbd:`Ctrl+Shift+V` to open the :guilabel:`Add Vector Layer` dialog. Select
-|radiobuttonon| :guilabel:`Directory` as :guilabel:`Source type`. Change the
-file type filter :guilabel:`Files of type` |selectstring| to
+|radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`. Change the
+file type filter :guilabel:`Files of type` |selectString| to
 'Arc/Info Binary Coverage'. Navigate to the directory that contains the
 coverage file, and select it.
 
@@ -247,7 +247,7 @@ Some items to note about the text file:
 Loading a delimited text file
 .............................
 
-Click the toolbar icon |delimited_text| :sup:`Add Delimited Text Layer` in the
+Click the toolbar icon |delimitedText| :sup:`Add Delimited Text Layer` in the
 :guilabel:`Manage layers` toolbar to open the :guilabel:`Create a Layer from a
 Delimited Text File` dialog, as shown in figure_delimited_text_1_.
 
@@ -266,14 +266,14 @@ First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
 by clicking on the **[Browse]** button. Once the file is selected, QGIS
 attempts to parse the file with the most recently used delimiter. To enable QGIS to properly parse the
 file, it is important to select the correct delimiter. You can specify a
-delimiter by activating |radiobuttonon| :guilabel:`Custom delimiters`, or by activating
-|radiobuttonon| :guilabel:`Regular expression delimiter` and entering
+delimiter by activating |radioButtonOn| :guilabel:`Custom delimiters`, or by activating
+|radioButtonOn| :guilabel:`Regular expression delimiter` and entering
 text into the :guilabel:`Expression` field. For example, to
 change the delimiter to tab, use ``\t`` (this is a regular expression for the
 tab character).
 
 Once the file is parsed, set :guilabel:`Geometry definition` to
-|radiobuttonon|:guilabel:`Point coordinates` and choose the ``X`` and ``Y``
+|radioButtonOn|:guilabel:`Point coordinates` and choose the ``X`` and ``Y``
 fields from the dropdown lists. If the coordinates are defined as
 degrees/minutes/seconds, activate the |checkbox| :guilabel:`DMS coordinates`
 checkbox.
@@ -288,10 +288,10 @@ to |checkbox| :guilabel:`Discard empty fields`. If necessary, you can force a co
 to be the decimal separator by activating |checkbox| :guilabel:`Decimal separator is
 comma`.
 
-If spatial information is represented by WKT, activate the |radiobuttonon|
+If spatial information is represented by WKT, activate the |radioButtonOn|
 :guilabel:`Well Known Text` option and select the field with the WKT definition for
 point, line or polygon objects. If the file contains non-spatial data, activate
-|radiobuttonon| :guilabel:`No geometry (attribute only table)` and it will be
+|radioButtonOn| :guilabel:`No geometry (attribute only table)` and it will be
 loaded as an ordinal table.
 
 Additionally, you can enable:
@@ -360,7 +360,7 @@ clicking on the |addPostgisLayer| :sup:`Add PostGIS Layer` toolbar
 button, selecting the |addPostgisLayer| :menuselection:`Add PostGIS Layer...`
 option from the :menuselection:`Layer` menu, or typing :kbd:`Ctrl+Shift+D`. You
 can also open the :guilabel:`Add Vector Layer` dialog and select
-|radiobuttonon| :guilabel:`Database`. The :guilabel:`Add PostGIS Table(s)`
+|radioButtonOn| :guilabel:`Database`. The :guilabel:`Add PostGIS Table(s)`
 dialog will be displayed. To access the connection manager, click on the
 **[New]** button to display the :guilabel:`Create a New PostGIS Connection`
 dialog. The parameters required for a connection are:
@@ -500,7 +500,7 @@ DB Manager plugin and the command line tools shp2pgsql and ogr2ogr.
 DB Manager
 ..........
 
-QGIS comes with a core plugin named |dbmanager| :sup:`DB Manager`. It can
+QGIS comes with a core plugin named |dbManager| :sup:`DB Manager`. It can
 be used to load shapefiles and other data formats, and it includes support for
 schemas. See section :ref:`dbmanager` for more information.
 

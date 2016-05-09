@@ -105,25 +105,25 @@ choose several :guilabel:`Contrast enhancement` methods: 'No enhancement', 'Stre
 This selection offers you a wide range of options to modify the appearance
 of your raster layer. First of all, you have to get the data range from your
 image. This can be done by choosing the :guilabel:`Extent` and pressing
-**[Load]**. QGIS can |radiobuttonon| :guilabel:`Estimate (faster)` the
+**[Load]**. QGIS can |radioButtonOn| :guilabel:`Estimate (faster)` the
 :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
-|radiobuttonoff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
+|radioButtonOff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
 
 Now you can scale the colors with the help of the :guilabel:`Load min/max values` section.
 A lot of images have a few very low and high data. These outliers can be eliminated
-using the |radiobuttonon| :guilabel:`Cumulative count cut` setting. The standard data range is set
+using the |radioButtonOn| :guilabel:`Cumulative count cut` setting. The standard data range is set
 from 2% to 98% of the data values and can be adapted manually. With this
 setting, the gray character of the image can disappear.
-With the scaling option |radiobuttonoff| :guilabel:`Min/max`, QGIS creates a color table with all of
+With the scaling option |radioButtonOff| :guilabel:`Min/max`, QGIS creates a color table with all of
 the data included in the original image (e.g., QGIS creates a color table
 with 256 values, given the fact that you have 8 bit bands).
-You can also calculate your color table using the |radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber|.
+You can also calculate your color table using the |radioButtonOff| :guilabel:`Mean +/- standard deviation x` |selectNumber|.
 Then, only the values within the standard deviation or within multiple standard deviations
 are considered for the color table. This is useful when you have one or two cells
 with abnormally high values in a raster grid that are having a negative impact on
 the rendering of the raster.
 
-All calculations can also be made for the |radiobuttonoff| :guilabel:`Current` extent.
+All calculations can also be made for the |radioButtonOff| :guilabel:`Current` extent.
 
 
 .. tip:: **Viewing a Single Band of a Multiband Raster**
@@ -167,9 +167,9 @@ to assign a label to the color values. The label appears in the legend of the ra
 This renderer allows you to render a single band layer with a :guilabel:`Color gradient`:
 'Black to white' or 'White to black'. You can define a :guilabel:`Min`
 and a :guilabel:`Max` value by choosing the :guilabel:`Extent` first and
-then pressing **[Load]**.  QGIS can |radiobuttonon| :guilabel:`Estimate (faster)` the
+then pressing **[Load]**. QGIS can |radioButtonOn| :guilabel:`Estimate (faster)` the
 :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
-|radiobuttonoff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
+|radioButtonOff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
 
 .. _figure_raster_4:
 
@@ -184,11 +184,11 @@ then pressing **[Load]**.  QGIS can |radiobuttonon| :guilabel:`Estimate (faster)
 
 
 With the :guilabel:`Load min/max values` section, scaling of the color table
-is possible. Outliers can be eliminated using the |radiobuttonon| :guilabel:`Cumulative count cut` setting.
+is possible. Outliers can be eliminated using the |radioButtonOn| :guilabel:`Cumulative count cut` setting.
 The standard data range is set from 2% to 98% of the data values and can
 be adapted manually. With this setting, the gray character of the image can disappear.
-Further settings can be made with |radiobuttonoff| :guilabel:`Min/max` and
-|radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber|.
+Further settings can be made with |radioButtonOff| :guilabel:`Min/max` and
+|radioButtonOff| :guilabel:`Mean +/- standard deviation x` |selectNumber|.
 While the first one creates a color table with all of the data included in the
 original image, the second creates a color table that only considers values
 within the standard deviation or within multiple standard deviations.
@@ -242,21 +242,21 @@ defined color table for other sessions.
 
 
 In the right block, :guilabel:`Generate new color map` allows you to create newly
-categorized color maps. For the :guilabel:`Classification mode` |selectstring| 'Equal interval',
+categorized color maps. For the :guilabel:`Classification mode` |selectString| 'Equal interval',
 you only need to select the :guilabel:`number of classes`
-|selectnumber| and press the button :guilabel:`Classify`. You can invert the colors
+|selectNumber| and press the button :guilabel:`Classify`. You can invert the colors
 of the color map by clicking the |checkbox| :guilabel:`Invert`
-checkbox. In the case of the :guilabel:`Mode` |selectstring| 'Continous', QGIS creates
+checkbox. In the case of the :guilabel:`Mode` |selectString| 'Continous', QGIS creates
 classes automatically depending on the :guilabel:`Min` and :guilabel:`Max`.
 Defining :guilabel:`Min/Max` values can be done with the help of the :guilabel:`Load min/max values` section.
 A lot of images have a few very low and high data. These outliers can be eliminated
-using the |radiobuttonon| :guilabel:`Cumulative count cut` setting. The standard data range is set
+using the |radioButtonOn| :guilabel:`Cumulative count cut` setting. The standard data range is set
 from 2% to 98% of the data values and can be adapted manually. With this
 setting, the gray character of the image can disappear.
-With the scaling option |radiobuttonoff| :guilabel:`Min/max`, QGIS creates a color table with all of
+With the scaling option |radioButtonOff| :guilabel:`Min/max`, QGIS creates a color table with all of
 the data included in the original image (e.g., QGIS creates a color table
 with 256 values, given the fact that you have 8 bit bands).
-You can also calculate your color table using the |radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber|.
+You can also calculate your color table using the |radioButtonOff| :guilabel:`Mean +/- standard deviation x` |selectNumber|.
 Then, only the values within the standard deviation or within multiple standard deviations
 are considered for the color table.
 
@@ -394,7 +394,7 @@ or colors in your raster. The histogram is generated automatically when you open
 save the histogram as an image with the |fileSave| button.
 With the :guilabel:`Visibility` option in the |actionRun| :guilabel:`Prefs/Actions` menu,
 you can display histograms of the individual bands. You will need to select the option
-|radiobuttonoff| :guilabel:`Show selected band`.
+|radioButtonOff| :guilabel:`Show selected band`.
 The :guilabel:`Min/max options` allow you to 'Always show min/max markers', to 'Zoom
 to min/max' and to 'Update style to min/max'.
 With the :guilabel:`Actions` option, you can 'Reset' and 'Recompute histogram' after

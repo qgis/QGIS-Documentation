@@ -115,7 +115,7 @@ The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
 * You provide the labels with a **Color** using the advanced color picker, however the selected 
   color will be given to all font items in the legend..
 * Legend items can be arranged over several columns. Set the number of columns in 
-  the :guilabel:`Count` |selectnumber| field.
+  the :guilabel:`Count` |selectNumber| field.
 
   * |checkbox| :guilabel:`Equal column widths` sets how legend columns should be adjusted.
   * The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer 

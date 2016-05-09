@@ -280,12 +280,12 @@ Processing
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-|proc_toolbox| :guilabel:`Toolbox`                              \                     see :ref:`processing.toolbox`               \
-|proc_model| :guilabel:`Graphical Modeler ...`                  \                     see :ref:`processing.modeler`               \
-|proc_history| :guilabel:`History and log ...`                  \                     see :ref:`processing.history`               \
-|proc_option| :guilabel:`Options ...`                           \                     see :ref:`processing.options`               \
-|proc_result| :guilabel:`Results viewer ...`                    \                     see :ref:`processing.results`               \
-|proc_commander| :guilabel:`Commander`                          :kbd:`Ctrl+Alt+M`     see :ref:`processing.commander`             \
+|processingToolbox| :guilabel:`Toolbox`                         \                     see :ref:`processing.toolbox`               \
+|processingModel| :guilabel:`Graphical Modeler ...`             \                     see :ref:`processing.modeler`               \
+|processingHistory| :guilabel:`History and log ...`             \                     see :ref:`processing.history`               \
+|processingOption| :guilabel:`Options ...`                      \                     see :ref:`processing.options`               \
+|processingResult| :guilabel:`Results viewer ...`               \                     see :ref:`processing.results`               \
+|processingCommander| :guilabel:`Commander`                     :kbd:`Ctrl+Alt+M`     see :ref:`processing.commander`             \
 ==============================================================  ====================  ==========================================  ===============================
 
 When starting QGIS for the first time not all core plugins are loaded.
@@ -480,7 +480,7 @@ Additionally, according to layer position and selection
 * |zoomToLayer| :menuselection:`Zoom to Layer`
 * :menuselection:`Show in overview`
 * |removeLayer| :menuselection:`Remove`
-* |duplicateLayer|:menuselection:`Duplicate`
+* |duplicateLayer| :menuselection:`Duplicate`
 * :menuselection:`Set Layer Scale Visibility`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
@@ -641,7 +641,7 @@ project CRS. Clicking on this lets you :guilabel:`Enable 'on the fly' CRS
 transformation` properties for the current project and apply another CRS to the
 map view.
 
-Finally, the |mMessageLog| :sup:`Messages` button opens the :guilabel:`Log
+Finally, the |messageLog| :sup:`Messages` button opens the :guilabel:`Log
 Messages Panel` which informs you on underlying process (QGIS startup, plugins
 loading, processing tools...)
 

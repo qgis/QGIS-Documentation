@@ -5,7 +5,7 @@ Topology
 ********
 
 +-------------------+-------------+------------------------------------------------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | Understanding topology in vector data                                                                |
+| |gentleLogo|      | Objectives: | Understanding topology in vector data                                                                |
 +                   +-------------+------------------------------------------------------------------------------------------------------+
 |                   | Keywords:   | Vector, topology, topology rules, topology errors, search radius, snapping distance, simple feature  |
 +-------------------+-------------+------------------------------------------------------------------------------------------------------+

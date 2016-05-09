@@ -140,14 +140,14 @@ Load raster and vector layers from the sample dataset
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select
    the ERDAS IMG file :file:`landcover.img` and click **[Open]**.
 #. If the file is not listed, check if the :guilabel:`Files of type`
-   |selectstring| combo box at the bottom of the dialog is set on the right
+   |selectString| combo box at the bottom of the dialog is set on the right
    type, in this case **Erdas Imagine Images (\*.img \*.IMG)**.
 #. Now click on the |addOgrLayer| :sup:`Add Vector Layer` icon.
-#. |radiobuttonon| :guilabel:`File` should be selected as :guilabel:`Source Type`
+#. |radioButtonOn| :guilabel:`File` should be selected as :guilabel:`Source Type`
    in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to
    select the vector layer.
 #. Browse to the folder :file:`qgis_sample_data/gml/`, select **Geography Markup
-   Language [GML] [OGR] (*.gml *.GML)** from the :guilabel:`Filter` |selectstring| 
+   Language [GML] [OGR] (*.gml *.GML)** from the :guilabel:`Filter` |selectString| 
    combo box, then select the GML file :file:`lakes.gml` and
    click **[Open]**. In the :guilabel:`Add vector layer` dialog, click **[OK]**.
    The :guilabel:`Coordinate Reference System Selector` dialog opens with 

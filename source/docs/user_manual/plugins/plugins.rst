@@ -90,7 +90,7 @@ An installed plugin can be temporarily de/activated using the checkbox.
    The |showPluginManager| :guilabel:`All` menu
 
 
-|plugin_installed| :guilabel:`Installed`
+|pluginInstalled| :guilabel:`Installed`
 
 In this menu, you can find only the installed plugins. The external plugins
 can be uninstalled and reinstalled using the **[Uninstall plugin]** and
@@ -105,7 +105,7 @@ can be uninstalled and reinstalled using the **[Uninstall plugin]** and
 .. figure:: /static/user_manual/plugins/plugins_installed.png
    :align: center
 
-   The |plugin_installed| :guilabel:`Installed` menu
+   The |pluginInstalled| :guilabel:`Installed` menu
 
 
 |plugin| :guilabel:`Not installed`
@@ -125,7 +125,7 @@ You can use the **[Install plugin]** button to implement a plugin into QGIS.
    The |plugin| :guilabel:`Not installed` menu
 
 
-|plugin_upgrade| :guilabel:`Upgradeable`
+|pluginUpgrade| :guilabel:`Upgradeable`
 
 If you activated |checkbox| :guilabel:`Show also experimental plugins` in the
 |transformSettings| :guilabel:`Settings` menu, you can use this menu
@@ -141,7 +141,7 @@ to look for more recent plugin versions. This can be done with the **[Upgrade pl
 .. figure:: /static/user_manual/plugins/plugins_upgradeable.png
    :align: center
 
-   The |plugin_upgrade| :guilabel:`Upgradeable` menu
+   The |pluginUpgrade| :guilabel:`Upgradeable` menu
 
 .. _setting_plugins:
 

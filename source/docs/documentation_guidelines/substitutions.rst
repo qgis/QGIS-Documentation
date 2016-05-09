@@ -26,11 +26,11 @@ If no replacement exists:
   and paste (in ``.png`` format) under :file:`/resources/en/docs/common` folder.
   For convenience and update, it's advised to keep filename when possible.
 * create the reference to the substitution in the :file:`/source/conf.py`
-  file following the example below:
+  file following the example below. The replacement text should be in camelCase:
 
 ::
   
-  .. |split_layer| image:: /static/common/split_layer.png
+  .. |splitLayer| image:: /static/common/split_layer.png
      :width: 1.5em
 
 * (optional) add the reference to the icon and its substitution to the list below.
@@ -60,10 +60,10 @@ Menu Items
 =======================  =========================  =====================  =========================
 Icon                     Substitution               Icon                   Substitution
 =======================  =========================  =====================  =========================
-|checkbox|               ``|checkbox|``             |checkbox_unchecked|   ``|checkbox_unchecked|``
-|radiobuttonon|          ``|radiobuttonon|``        |radiobuttonoff|       ``|radiobuttonoff|``
-|selectnumber|           ``|selectnumber|``         |selectstring|         ``|selectstring|``
-|browsebutton|           ``|browsebutton|``         |slider|               ``|slider|``
+|checkbox|               ``|checkbox|``             |unchecked|            ``|unchecked|``
+|radioButtonOn|          ``|radioButtonOn|``        |radioButtonOff|       ``|radioButtonOff|``
+|selectNumber|           ``|selectNumber|``         |selectString|         ``|selectString|``
+|browseButton|           ``|browseButton|``         |slider|               ``|slider|``
 |dataDefined|            ``|dataDefined|``          \                      \
 =======================  =========================  =====================  =========================
 
@@ -75,7 +75,7 @@ Menu items not used much
 Icon            Substitution
 ==============  =================
 |selectColor|   ``|selectColor|``
-|inputtext|     ``|inputtext|``
+|inputText|     ``|inputText|``
 |tab|           ``|tab|``
 |degrees|       ``|degrees|``
 ==============  =================
@@ -96,8 +96,8 @@ Icon                            Substitution                        Icon        
 |newVectorLayer|                ``|newVectorLayer|``                |removeLayer|                   ``|removeLayer|``
 |virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
 |wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
-|oracle_raster|                 ``|oracle_raster|``
-|dbmanager|                     ``|dbmanager|``                     |gdal|                          ``|gdal|``
+|oracleRaster|                  ``|oracleRaster|``
+|dbManager|                     ``|dbManager|``                     |gdal|                          ``|gdal|``
 |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
 |removeAllOVerview|             ``|removeAllOVerview|``             \                               \
 |showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
@@ -226,10 +226,10 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 |signPlus|                      ``|signPlus|``                      |signMinus|                     ``|signMinus|``
 |projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
-|copyright_label|               ``|copyright_label|``               |north_arrow|                   ``|north_arrow|``
-|scale_bar|                     ``|scale_bar|``                     |locale|                        ``|locale|``
-|gps_importer|                  ``|gps_importer|``                  |gpstrack_barchart|             ``|gpstrack_barchart|``
-|gpstrack_polarchart|           ``|gpstrack_polarchart|``           |tracking|                      ``|tracking|``
+|copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
+|scaleBar|                      ``|scaleBar|``                      |locale|                        ``|locale|``
+|gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
+|gpsTrackPolarChart|            ``|gpsTrackPolarChart|``            |tracking|                      ``|tracking|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
 ==============================  ==================================  ==============================  ==================================
 
@@ -257,12 +257,12 @@ Projections and Georeferencer
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|geographic|                    ``|geographic|``                    |CRS|                           ``|CRS|``
+|geographic|                    ``|geographic|``                    |crs|                           ``|crs|``
 |customProjection|              ``|customProjection|``              \                               \
 |projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
 |georeferencer|                 ``|georeferencer|``                 |pencil|                        ``|pencil|``
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
-|coordinate_capture|            ``|coordinate_capture|``            |startGeoref|                   ``|startGeoref|``
+|coordinateCapture|             ``|coordinateCapture|``             |startGeoref|                   ``|startGeoref|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -276,7 +276,7 @@ Icons used in Composer:
 Icon                     Substitution                 Icon                     Substitution
 =======================  ===========================  =======================  ===========================
 |newComposer|            ``|newComposer|``            |composerManager|        ``|composerManager|``
-|dupComposer|            ``|dupComposer|``            \                        \
+|duplicateComposer|      ``|duplicateComposer|``      \                        \
 |atlasSettings|          ``|atlasSettings|``          |atlas|                  ``|atlas|``
 |filePrint|              ``|filePrint|``              |saveMapAsImage|         ``|saveMapAsImage|``
 |saveAsSVG|              ``|saveAsSVG|``              |saveAsPDF|              ``|saveAsPDF|``
@@ -320,13 +320,13 @@ Standard provided with basic install, but not loaded with initial install
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|showPluginManager|             ``|showPluginManager|``             |plugin_installer|              ``|plugin_installer|``
-|offline_editing_copy|          ``|offline_editing_copy|``          |offline_editing_sync|          ``|offline_editing_sync|``
+|showPluginManager|             ``|showPluginManager|``             |pluginInstaller|               ``|pluginInstaller|``
+|offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
-|mapserver_export|              ``|mapserver_export|``              |exportMapServer|               ``|exportMapServer|``
-|spiticon|                      ``|spiticon|``                      |delimited_text|                ``|delimited_text|``
-|gdal_script|                   ``|gdal_script|``                   |dxf2shp_converter|             ``|dxf2shp_converter|``
-|spatialquery|                  ``|spatialquery|``                  |selectsubsetlayer|             ``|selectsubsetlayer|``
+|mapserverExport|               ``|mapserverExport|``               |exportMapServer|               ``|exportMapServer|``
+|spit|                          ``|spit|``                          |delimitedText|                 ``|delimitedText|``
+|gdalScript|                    ``|gdalScript|``                    |dxf2shpConverter|              ``|dxf2shpConverter|``
+|spatialQuery|                  ``|spatialQuery|``                  |selectSubsetLayer|             ``|selectSubsetLayer|``
 |selectCreateLayer|             ``|selectCreateLayer|``             |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |geometrySnapper|               ``|geometrySnapper|``
 |topologychecker|               ``|topologychecker|``
@@ -341,24 +341,24 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 |ftools|                        ``|ftools|``                        \                               \
 |matrix|                        ``|matrix|``                        |unique|                        ``|unique|``
-|sum_lines|                     ``|sum_lines|``                     |sum_points|                    ``|sum_points|``
-|basic_statistics|              ``|basic_statistics|``              |neighbor|                      ``|neighbor|``
+|sumLines|                      ``|sumLines|``                      |sumPoints|                     ``|sumPoints|``
+|basicStatistics|               ``|basicStatistics|``               |neighbor|                      ``|neighbor|``
 |mean|                          ``|mean|``                          |intersections|                 ``|intersections|``
-|random_selection|              ``|random_selection|``              |sub_selection|                 ``|sub_selection|``
-|random_points|                 ``|random_points|``                 \                               \
-|regular_points|                ``|regular_points|``                |vector_grid|                   ``|vector_grid|``
-|select_location|               ``|select_location|``               |layer_extent|                  ``|layer_extent|``
-|convex_hull|                   ``|convex_hull|``                   |buffer|                        ``|buffer|``
+|randomSelection|               ``|randomSelection|``               |subSelection|                  ``|subSelection|``
+|randomPoints|                  ``|randomPoints|``                  \                                \
+|regularPoints|                 ``|regularPoints|``                 |vectorGrid|                    ``|vectorGrid|``
+|selectLocation|                ``|selectLocation|``                |layerExtent|                   ``|layerExtent|``
+|convexHull|                    ``|convexHull|``                    |buffer|                        ``|buffer|``
 |intersect|                     ``|intersect|``                     |union|                         ``|union|``
-|sym_difference|                ``|sym_difference|``                |clip|                          ``|clip|``
+|symDifference|                 ``|symDifference|``                 |clip|                          ``|clip|``
 |difference|                    ``|difference|``                    |dissolve|                      ``|dissolve|``
-|check_geometry|                ``|check_geometry|``                |export_geometry|               ``|export_geometry|``
+|checkGeometry|                 ``|checkGeometry|``                 |exportGeometry|                ``|exportGeometry|``
 |delaunay|                      ``|delaunay|``                      |centroids|                     ``|centroids|``
-|simplify|                      ``|simplify|``                      |join_location|                 ``|join_location|``
-|multi_to_single|               ``|multi_to_single|``               |single_to_multi|               ``|single_to_multi|``
-|to_lines|                      ``|to_lines|``                      |extract_nodes|                 ``|extract_nodes|``
-|export_projection|             ``|export_projection|``             |define_projection|             ``|define_projection|``
-|split_layer|                   ``|split_layer|``                   |merge_shapes|                  ``|merge_shapes|``
+|simplify|                      ``|simplify|``                      |joinLocation|                  ``|joinLocation|``
+|multiToSingle|                 ``|multiToSingle|``                 |singleToMulti|                 ``|singleToMulti|``
+|toLines|                       ``|toLines|``                       |extractNodes|                  ``|extractNodes|``
+|exportProjection|              ``|exportProjection|``              |defineProjection|              ``|defineProjection|``
+|splitLayer|                    ``|splitLayer|``                    |mergeShapes|                   ``|mergeShapes|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -369,27 +369,27 @@ Grass integration
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |grass|                         ``|grass|``                         \                               \
-|grass_tools|                   ``|grass_tools|``                   |grass_new_mapset|              ``|grass_new_mapset|``
-|grass_open_mapset|             ``|grass_open_mapset|``             |grass_close_mapset|            ``|grass_close_mapset|``
-|grass_region|                  ``|grass_region|``                  |grass_set_region|              ``|grass_set_region|``
+|grassTools|                    ``|grassTools|``                    |grassNewMapset|                ``|grassNewMapset|``
+|grassOpenMapset|               ``|grassOpenMapset|``               |grassCloseMapset|              ``|grassCloseMapset|``
+|grassRegion|                   ``|grassRegion|``                   |grassSetRegion|                ``|grassSetRegion|``
 ==============================  ==================================  ==============================  ==================================
 
 OpenStreetMap
 .............
 
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|osm_load|                      ``|osm_load|``                      |osm_download|                  ``|osm_download|``
-|osm_featureManager|            ``|osm_featureManager|``            |osm_identify|                  ``|osm_identify|``
-|osm_import|                    ``|osm_import|``                    |osm_save|                      ``|osm_save|``
-|osm_createPoint|               ``|osm_createPoint|``               |osm_createLine|                ``|osm_createLine|``
-|osm_createPolygon|             ``|osm_createPolygon|``             \                               \
-|osm_move|                      ``|osm_move|``                      |osm_removeFeat|                ``|osm_removeFeat|``
-|osm_createRelation|            ``|osm_createRelation|``            |osm_addRelation|               ``|osm_addRelation|``
-|osm_editRelation|              ``|osm_editRelation|``              |osm_generateTags|              ``|osm_generateTags|``
-|osm_questionMark|              ``|osm_questionMark|``              \                               \
-==============================  ==================================  ==============================  ==================================
+=============================  =================================  =============================  ==================================
+Icon                            Substitution                      Icon                           Substitution
+=============================  =================================  =============================  ==================================
+|osmLoad|                      ``|osmLoad|``                      |osmDownload|                  ``|osmDownload|``
+|osmFeatureManager|            ``|osmFeatureManager|``            |osmIdentify|                  ``|osmIdentify|``
+|osmImport|                    ``|osmImport|``                    |osmSave|                      ``|osmSave|``
+|osmCreatePoint|               ``|osmCreatePoint|``               |osmCreateLine|                ``|osmCreateLine|``
+|osmCreatePolygon|             ``|osmCreatePolygon|``             \                               \
+|osmMove|                      ``|osmMove|``                      |osmRemoveFeat|                ``|osmRemoveFeat|``
+|osmCreateRelation|            ``|osmCreateRelation|``            |osmAddRelation|               ``|osmAddRelation|``
+|osmEditRelation|              ``|osmEditRelation|``              |osmGenerateTags|              ``|osmGenerateTags|``
+|osmQuestionMark|              ``|osmQuestionMark|``              \                               \
+=============================  =================================  =============================  ==================================
 
 Raster related
 ..............
@@ -398,9 +398,9 @@ Raster related
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |fullCumulativeStretch|         ``|fullCumulativeStretch|``         |fullHistogramStretch|          ``|fullHistogramStretch|``
-|ShowRasterCalculator|          ``|ShowRasterCalculator|``          |raster_stats|                  ``|raster_stats|``
-|raster_interpolate|            ``|raster_interpolate|``            |raster_info|                   ``|raster_info|``
-|raster_terrain|                ``|raster_terrain|``                |heatmap|                       ``|heatmap|``
+|ShowRasterCalculator|          ``|ShowRasterCalculator|``          |rasterStats|                   ``|rasterStats|``
+|rasterInterpolate|             ``|rasterInterpolate|``             |rasterInfo|                    ``|rasterInfo|``
+|rasterTerrain|                 ``|rasterTerrain|``                 |heatmap|                       ``|heatmap|``
 ==============================  ==================================  ==============================  ==================================
 
 eVis plugin
@@ -409,6 +409,6 @@ eVis plugin
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|event_browser|                 ``|event_browser|``                 |event_id|                      ``|event_id|``
-|evis_connect|                  ``|evis_connect|``                  |evis_file|                     ``|evis_file|``
+|eventBrowser|                  ``|eventBrowser|``                  |eventId|                       ``|eventId|``
+|evisConnect|                   ``|evisConnect|``                   |evisFile|                      ``|evisFile|``
 ==============================  ==================================  ==============================  ==================================

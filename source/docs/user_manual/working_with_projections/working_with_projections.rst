@@ -81,9 +81,9 @@ responds to these layers. This can be done globally or project-wide in the
 
 The options shown in figure_projection_1_ are:
 
-* |radiobuttonon| :guilabel:`Prompt for CRS`
-* |radiobuttonoff| :guilabel:`Use project CRS`
-* |radiobuttonoff| :guilabel:`Use default CRS displayed below`
+* |radioButtonOn| :guilabel:`Prompt for CRS`
+* |radioButtonOff| :guilabel:`Use project CRS`
+* |radioButtonOff| :guilabel:`Use default CRS displayed below`
 
 If you want to define the coordinate reference system for a certain layer
 without CRS information, you can also do that in the :guilabel:`General` tab
@@ -236,7 +236,7 @@ QGIS uses a default transformation.
 In the :guilabel:`CRS` tab under :menuselection:`Settings -->` |options|
 :guilabel:`Options` you can:
 
-* set QGIS to ask you when it needs define a transformation using |radiobuttonon|
+* set QGIS to ask you when it needs define a transformation using |radioButtonOn|
   :guilabel:`Ask for datum transformation when no default is defined`
 * edit a list of user defaults for transformations.
 
@@ -244,4 +244,4 @@ QGIS asks which transformation to use by opening a dialogue box
 displaying PROJ.4 text describing the source and destination
 transforms. Further information may be found by hovering over a
 transform. User defaults can be saved by selecting
-|radiobuttonon| :guilabel:`Remember selection`.
+|radioButtonOn| :guilabel:`Remember selection`.

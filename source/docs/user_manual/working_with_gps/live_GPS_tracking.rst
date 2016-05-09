@@ -16,8 +16,8 @@ There are four possible screens in this GPS tracking window:
 
 * |toggleEditing| GPS position coordinates and an interface for manually entering
   vertices and features
-* |gpstrack_barchart| GPS signal strength of satellite connections
-* |gpstrack_polarchart| GPS polar screen showing number and polar position of
+* |gpsTrackBarChart| GPS signal strength of satellite connections
+* |gpsTrackPolarChart| GPS polar screen showing number and polar position of
   satellites
 * |options| GPS options screen (see figure_gps_options_)
 
@@ -53,7 +53,7 @@ attributes.
 GPS signal strength
 -------------------
 
-|gpstrack_barchart| Here, you can see the signal strength of the satellites you
+|gpsTrackBarChart| Here, you can see the signal strength of the satellites you
 are receiving signals from.
 
 .. _figure_gps_strength:
@@ -71,7 +71,7 @@ are receiving signals from.
 GPS polar window
 ----------------
 
-|gpstrack_polarchart| If you want to know where in the sky all the connected
+|gpsTrackPolarChart| If you want to know where in the sky all the connected
 satellites are, you have to switch to the polar screen. You can also see the
 ID numbers of the satellites you are receiving signals from.
 
@@ -91,10 +91,10 @@ GPS options
 
 |options| In case of connection problems, you can switch between:
 
-* |radiobuttonon| :guilabel:`Autodetect`
-* |radiobuttonoff| :guilabel:`Internal`
-* |radiobuttonoff| :guilabel:`Serial device`
-* |radiobuttonoff| :guilabel:`gpsd` (selecting the Host, Port and Device your
+* |radioButtonOn| :guilabel:`Autodetect`
+* |radioButtonOff| :guilabel:`Internal`
+* |radioButtonOff| :guilabel:`Serial device`
+* |radioButtonOff| :guilabel:`gpsd` (selecting the Host, Port and Device your
   GPS is connected to)
 
 A click on **[Connect]** again initiates the connection to the GPS receiver.
@@ -118,7 +118,7 @@ and color.
 Activating |checkbox| :guilabel:`Cursor`, you can use a slider |slider| to shrink
 and grow the position cursor on the canvas.
 
-Activating |radiobuttonon| :guilabel:`Map centering` allows you to decide in which
+Activating |radioButtonOn| :guilabel:`Map centering` allows you to decide in which
 way the canvas will be updated. This includes 'always', 'when leaving', if your
 recorded coordinates start to move out of the canvas, or 'never', to keep map
 extent.
@@ -172,7 +172,7 @@ Easiest way to make it work is to use a middleware (freeware, not open) called
 
 Launch the program, make it scan for GPS devices (works for both USB and BT
 ones) and then in QGIS just click **[Connect]** in the Live tracking panel
-using the |radiobuttonon| :guilabel:`Autodetect` mode.
+using the |radioButtonOn| :guilabel:`Autodetect` mode.
 
 Ubuntu/Mint GNU/Linux
 .....................
@@ -211,7 +211,7 @@ MS Windows
 ..........
 
 The live tracking works for both USB and BT modes, by using GPSGate or even
-without it, just use the |radiobuttonon| :guilabel:`Autodetect` mode, or point
+without it, just use the |radioButtonOn| :guilabel:`Autodetect` mode, or point
 the tool the right port.
 
 

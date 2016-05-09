@@ -58,7 +58,7 @@ several styles to the same layer but only one can be active at the same time.
 
 By default, the style applied to a loaded layer is named ``default``.
 Once you have got the ideal and appropriate rendering for your layer,
-you can save it by clicking the |selectstring| :menuselection:`Style` combobox and choose:
+you can save it by clicking the |selectString| :menuselection:`Style` combobox and choose:
 
 * **Rename Current**: The active style gets renamed and updated with the current options
 * **Add**: A new style is created using the current options.
@@ -78,7 +78,7 @@ complexe projects with few layers (no need to duplicate any layer in the map leg
 While these styles are saved inside the project and can be copied and pasted from
 layer to layer in the project, it's also possible to save them outside the project
 so that they can be loaded in another project.
-Clicking the |selectstring| :menuselection:`Style --> Save Style`
+Clicking the |selectString| :menuselection:`Style --> Save Style`
 saves the symbol as a QGIS layer style file (``.qml``) or SLD file (``.sld``).
 SLDs can be exported from any type of renderer -- single symbol,
 categorized, graduated or rule-based -- but when importing an SLD, either a
@@ -820,7 +820,7 @@ if you want to enable symbol levels or use only the first-matched rule.
 
 To :index:`create a rule`, activate an existing row by double-clicking on it, or
 click on '+' and click on the new rule. In the :guilabel:`Rule properties` dialog,
-you can define a label for the rule. Press the |browsebutton| button to open the
+you can define a label for the rule. Press the |browseButton| button to open the
 expression string builder.
 In the **Function List**, click on :guilabel:`Fields and Values` to view all
 attributes of the attribute table to be searched.
@@ -997,7 +997,7 @@ features of the layer:
 
 * :guilabel:`Control feature rendering order` allows you, using features
   attributes, to define the :index:`z-order` in which they shall be rendered.
-  Activate the checkbox and click on the |browsebutton| button beside.
+  Activate the checkbox and click on the |browseButton| button beside.
   You then get the :guilabel:`Define Order` dialog in which you:
 
   * choose a field or build an expression to apply to the layer features
@@ -1183,7 +1183,7 @@ vector layer, namely point, line or polygon.
 Placement for point layers
 ..........................
 
-With the |radiobuttonon| :guilabel:`Cartographic` placement mode,
+With the |radioButtonOn| :guilabel:`Cartographic` placement mode,
 point labels are generated with best visual relationship with the point feature,
 following ideal cartographic placement rules. Labels can be placed
 at a set :guilabel:`Distance` either from the point feature itself
@@ -1208,11 +1208,11 @@ feature using a data defined list of prioritised positions.
 This also allows only certain placements to be used, so eg
 for coastal features you can prevent labels being placed over the land.
 
-The |radiobuttonon| :guilabel:`Around point` setting places the label in an equal
+The |radioButtonOn| :guilabel:`Around point` setting places the label in an equal
 radius (set in :guilabel:`Distance`) circle around the feature. The placement of
 the label can even be constrained using the :guilabel:`Quadrant` option.
 
-In the |radiobuttonon| :guilabel:`Offset from point` placement, labels are placed
+In the |radioButtonOn| :guilabel:`Offset from point` placement, labels are placed
 at a fixed offset from the point feature.
 You can select the :guilabel:`Quadrant` in which to place your label. You are also
 able to set the X and Y offset distances between the points and their labels
@@ -1222,16 +1222,16 @@ Thus, placement in a selected quadrant with a defined rotation is possible.
 Placement for line layers
 .........................
 
-Label options for line layers include |radiobuttonon| :guilabel:`Parallel`,
-|radiobuttonoff| :guilabel:`Curved` or |radiobuttonoff| :guilabel:`Horizontal`.
-For the |radiobuttonon| :guilabel:`Parallel` and
-|radiobuttonoff| :guilabel:`Curved` options, you can set the position to
+Label options for line layers include |radioButtonOn| :guilabel:`Parallel`,
+|radioButtonOff| :guilabel:`Curved` or |radioButtonOff| :guilabel:`Horizontal`.
+For the |radioButtonOn| :guilabel:`Parallel` and
+|radioButtonOff| :guilabel:`Curved` options, you can set the position to
 |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line` and
 |checkbox| :guilabel:`Below line`. It's possible to select several options at once.
 In that case, QGIS will look for the optimal label position. For Parallel and
 curved placement you can also use the line orientation for the position of the label.
 Additionally, you can define a :guilabel:`Maximum angle between curved characters` when
-selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
+selecting the |radioButtonOff| :guilabel:`Curved` option (see Figure_labels_2_ ).
 
 For all three placement options you can set up a minimum distance for repeating
 labels. The distance can be in ``mm`` or in ``map units``.
@@ -1251,23 +1251,23 @@ Placement for polygon layers
 ............................
 
 You can choose one of the following options for placing labels in polygons:
-|radiobuttonon| :guilabel:`Offset from centroid`, |radiobuttonoff| :guilabel:`Horizontal
-(slow)`, |radiobuttonoff| :guilabel:`Around centroid`,
-|radiobuttonoff| :guilabel:`Free` and
-|radiobuttonoff| :guilabel:`Using perimeter`.
+|radioButtonOn| :guilabel:`Offset from centroid`, |radioButtonOff| :guilabel:`Horizontal
+(slow)`, |radioButtonOff| :guilabel:`Around centroid`,
+|radioButtonOff| :guilabel:`Free` and
+|radioButtonOff| :guilabel:`Using perimeter`.
 
-In the |radiobuttonon| :guilabel:`Offset from centroid` settings you can specify
-if the centroid is of the |radiobuttonon| :guilabel:`visible polygon` or
-|radiobuttonoff| :guilabel:`whole polygon`. That means that either the centroid
+In the |radioButtonOn| :guilabel:`Offset from centroid` settings you can specify
+if the centroid is of the |radioButtonOn| :guilabel:`visible polygon` or
+|radioButtonOff| :guilabel:`whole polygon`. That means that either the centroid
 is used for the polygon you can see on the map or the centroid is determined for
 the whole polygon, no matter if you can see the whole feature on the map.
 You can place your label within a specific quadrant, and define offset and rotation.
-The |radiobuttonoff| :guilabel:`Around centroid` setting places the label at a
+The |radioButtonOff| :guilabel:`Around centroid` setting places the label at a
 specified distance around the centroid. Again, you can define
-|radiobuttonon| :guilabel:`visible polygon`
-or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
+|radioButtonOn| :guilabel:`visible polygon`
+or |radioButtonOff| :guilabel:`whole polygon` for the centroid.
 
-With the |radiobuttonoff| :guilabel:`Using perimeter` settings, you can define a
+With the |radioButtonOff| :guilabel:`Using perimeter` settings, you can define a
 position and a distance for the label. For the position,
 |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
 |checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation
@@ -1458,7 +1458,7 @@ We now describe an example using the data-defined override function for the
 
 #. Import :file:`lakes.shp` from the QGIS sample dataset.
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
-   and :guilabel:`Placement`. Select |radiobuttonon| :guilabel:`Offset from centroid`.
+   and :guilabel:`Placement`. Select |radioButtonOn| :guilabel:`Offset from centroid`.
 #. Look for the :guilabel:`Data defined` entries. Click the |dataDefined| icon
    to define the field type for the :guilabel:`Coordinate`. Choose 'xlabel' for X
    and 'ylabel' for Y. The icons are now highlighted in yellow.
@@ -1868,7 +1868,7 @@ Both vector layers are part of the QGIS sample dataset (see section
 #. Double click the ``climate`` layer in the map legend to open the
    :guilabel:`Layer Properties` dialog.
 #. Click on the :guilabel:`Diagrams` menu, activate |checkbox| :guilabel:`Show
-   diagrams for this layer`, and from the :guilabel:`Diagram type` |selectstring|
+   diagrams for this layer`, and from the :guilabel:`Diagram type` |selectString|
    combo box, select 'Text diagram'.
 #. In the :guilabel:`Appearance` tab, we choose a light blue as background color,
    and in the :guilabel:`Size` tab, we set a fixed size to 18 mm.
@@ -1879,7 +1879,7 @@ Both vector layers are part of the QGIS sample dataset (see section
    ``T_F_JUL`` and finally ``T_F_MEAN``.
 #. Now click **[Apply]** to display the diagram in the QGIS main window.
 #. You can adapt the chart size in the :guilabel:`Size` tab. Activate the
-   |radiobuttonon| :guilabel:`Scaled size` and set the size of the diagrams on
+   |radioButtonOn| :guilabel:`Scaled size` and set the size of the diagrams on
    the basis of the :guilabel:`maximum value` of an attribute and the
    :guilabel:`Size` option.
    If the diagrams appear too small on the screen, you can activate the
@@ -2191,7 +2191,7 @@ Display Menu
 
 |mapTips| This menu is specifically created for :index:`Map Tips`.
 It includes a nice feature: Map Tip display text in HTML.
-While you can still choose a |radiobuttonoff| :guilabel:`Field` to be displayed
+While you can still choose a |radioButtonOff| :guilabel:`Field` to be displayed
 when hovering over a feature on the map, it is also possible to insert HTML code
 that creates a complex display when hovering over a feature.
 To activate Map Tips, select the menu option :menuselection:`View --> Map Tips`.

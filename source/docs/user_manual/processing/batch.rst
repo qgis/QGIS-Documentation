@@ -83,7 +83,7 @@ For most parameters, setting the value is trivial. Just type the value or select
 it from the list of available options, depending on the parameter type.
 
 Filenames for input data objects are introduced directly typing or, more
-conveniently, clicking on the |browsebutton| button on the right hand of the cell,
+conveniently, clicking on the |browseButton| button on the right hand of the cell,
 which will show a context menu with two option: one for selecting from the layers
 currently opened and another to select from the filesystem. This second option,
 when selected, shows a typical file chooser dialog. Multiple files can be

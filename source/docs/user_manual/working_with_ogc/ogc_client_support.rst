@@ -194,7 +194,7 @@ internet, you can add your proxy server in the options. Choose
 :menuselection:`Settings --> Options` and click on the :guilabel:`Network & Proxy` tab.
 There, you can add your proxy settings and enable them by setting |checkbox|
 :guilabel:`Use proxy for web access`. Make sure that you select the correct
-proxy type from the :guilabel:`Proxy type` |selectstring| drop-down menu.
+proxy type from the :guilabel:`Proxy type` |selectString| drop-down menu.
 
 Once the new WMS server connection has been created, it will be preserved for
 future QGIS sessions.
@@ -602,7 +602,7 @@ The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
 #. Enter the URL (see above).
 #. Click **[OK]**.
 #. Choose 'DM Solutions' from the :guilabel:`Server Connections`
-   |selectstring| drop-down list.
+   |selectString| drop-down list.
 #. Click **[Connect]**.
 #. Wait for the list of layers to be populated.
 #. Select the :guilabel:`Parks` layer in the list.

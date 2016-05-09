@@ -31,7 +31,7 @@ The image :guilabel:`Item Properties` tab provides the following functionalities
 You first have to select the image you want to display. 
 There are several ways to set the :guilabel:`image source` in the **Main properties** area. 
 
-#. Use the browse button |browsebutton| of :guilabel:`image source` to select a file on your 
+#. Use the browse button |browseButton| of :guilabel:`image source` to select a file on your 
    computer using the browse dialog. The browser will start in the SVG-libraries provided with QGIS.
    Besides :file:`SVG`, you can also select other image formats like :file:`.png` or :file:`.jpg`.
 #. You can enter the source directly in the :guilabel:`image source` text field. You can even provide
@@ -69,7 +69,7 @@ rotation of the image (i.e., a rotated north arrow) with the rotation applied to
 the selected map item.
 
 It is also possible to select a north arrow directly. If you first select a north arrow image from 
-**Search directories** and then use the browse button |browsebutton| of the field :guilabel:`Image source`, 
+**Search directories** and then use the browse button |browseButton| of the field :guilabel:`Image source`, 
 you can now select one of the north arrow from the list as displayed in figure_composer_image_2_. 
 
 .. note:: 

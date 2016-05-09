@@ -299,7 +299,7 @@ features, a warning will be displayed.
 
 It is important to set the property :menuselection:`Settings -->` |options|
 :menuselection:`Options --> Digitizing -->` :guilabel:`Search Radius:`
-|selectnumber| to a number greater than zero (i.e., 10). Otherwise, QGIS will
+|selectNumber| to a number greater than zero (i.e., 10). Otherwise, QGIS will
 not be able to tell which vertex is being edited.
 
 .. _tip_vertex_markers:
@@ -771,8 +771,8 @@ with X,Y,Z coordinates).
 To complete the creation of the new shapefile layer, add the desired attributes
 by clicking on the **[Add to attributes list]** button and specifying a name and type for the
 attribute. A first 'id' column is added as default but can be removed, if not
-wanted. Only :guilabel:`Type: real` |selectstring|, :guilabel:`Type: integer`
-|selectstring|, :guilabel:`Type: string` |selectstring| and :guilabel:`Type:date` |selectstring|
+wanted. Only :guilabel:`Type: real` |selectString|, :guilabel:`Type: integer`
+|selectString|, :guilabel:`Type: string` |selectString| and :guilabel:`Type:date` |selectString|
 attributes are supported. Additionally and according to the attribute type, you can also define
 the width and precision of the new attribute column. Once you are happy with
 the attributes, click **[OK]** and provide a name for the shapefile. QGIS will
@@ -804,7 +804,7 @@ be displayed as shown in Figure_edit_6_.
    Creating a New SpatiaLite layer Dialog |nix|
 
 The first step is to select an existing SpatiaLite database or to create a new
-SpatiaLite database. This can be done with the browse button |browsebutton| to
+SpatiaLite database. This can be done with the browse button |browseButton| to
 the right of the database field. Then, add a name for the new layer, define
 the layer type, and specify the coordinate reference system with **[Specify CRS]**.
 If desired, you can select |checkbox| :guilabel:`Create an autoincrementing primary key`.
@@ -829,7 +829,7 @@ To create a new GPX file, you need to load the GPS plugin first. :menuselection:
 |showPluginManager| :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
 Activate the |checkbox| :guilabel:`GPS Tools` checkbox.
 
-When this plugin is loaded, choose :menuselection:`New -->` |create_gpx|
+When this plugin is loaded, choose :menuselection:`New -->` |createGPX|
 :menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` menu.
 In the :guilabel:`Save new GPX file as` dialog, you can choose where to save the
 new GPX layer.
@@ -841,9 +841,9 @@ Creating a new Temporary Scratch Layer
 ......................................
 
 Empty, editable memory layers can be defined using :menuselection:`Layer --> Create Layer --> New Temporary Scratch Layer`.
-Here you can even create |radiobuttonoff| :guilabel:`Multipoint`, |radiobuttonoff|:guilabel:`Multiline`
-and |radiobuttonoff|:guilabel:`Multipolygon` Layers beneath |radiobuttonon|:guilabel:`Point`,
-|radiobuttonoff|:guilabel:`Line` and |radiobuttonoff|:guilabel:`Polygon` Layers.
+Here you can even create |radioButtonOff| :guilabel:`Multipoint`, |radioButtonOff|:guilabel:`Multiline`
+and |radioButtonOff|:guilabel:`Multipolygon` Layers beneath |radioButtonOn|:guilabel:`Point`,
+|radioButtonOff|:guilabel:`Line` and |radioButtonOff|:guilabel:`Polygon` Layers.
 Temporary Scratch Layers are not saved and will be discarded when QGIS is closed.
 See also paste_into_layer_ .
 

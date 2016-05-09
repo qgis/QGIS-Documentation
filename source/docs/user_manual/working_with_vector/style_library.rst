@@ -249,7 +249,7 @@ you'll get enabled different tools at the bottom of the dialog to :
 * move up or down the symbol layer
 * apply :ref:`special effects <draw_effects>` to the symbol layer
 * save the designed symbol into your symbol library
-* or choose in the :guilabel:`Advanced` |selectstring| drop-down list, to
+* or choose in the :guilabel:`Advanced` |selectString| drop-down list, to
   **clip features to canvas extent**.
 
 .. Fix Me: What does advanced "clip features to canvas" option mean for the symbol?
@@ -359,8 +359,8 @@ Options include (data defined) file name, opacity, image size (in pixels, mm or 
 coordinate mode (feature or view) and rotation.
 
 'Gradient Fill' :guilabel:`Symbol layer type` allows you to select
-between a |radiobuttonon| :guilabel:`Two color`
-and |radiobuttonoff| :guilabel:`Color ramp` setting. You can use the
+between a |radioButtonOn| :guilabel:`Two color`
+and |radioButtonOff| :guilabel:`Color ramp` setting. You can use the
 |checkbox| :guilabel:`Feature centroid` as :guilabel:`Referencepoint`.
 All fills 'Gradient Fill` :guilabel:`Symbol layer type` is also
 available through the :guilabel:`Symbol` menu of the Categorized and
