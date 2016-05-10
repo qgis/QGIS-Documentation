@@ -1,11 +1,12 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
 .. _ftools:
 
 fTools Plugin
 =============
+
+.. contents::
+   :local:
 
 The goal of the fTools Python plugin is to provide a one-stop resource for many
 common vector-based GIS tasks, without the need for additional software,
@@ -145,7 +146,7 @@ Geoprocessing tools
 |                     |                 | single feature.                      |
 +---------------------+-----------------+--------------------------------------+
 | |eliminate|         | Eliminate sliver| Merges selected features with the    |
-|                     | polygons        | neighbouring polygon with the        |
+|                     | polygons        | neighboring polygon with the         |
 |                     |                 | largest area or largest common       |
 |                     |                 | boundary.                            |
 +---------------------+-----------------+--------------------------------------+
@@ -164,7 +165,7 @@ Geometry tools
 |                     |                 | Change the Validate geometries value.| 
 |                     |                 | There is two engines: QGIS and GEOS  |
 |                     |                 | which have pretty different          |
-|                     |                 | behaviour. Another tools exists which|
+|                     |                 | behavior. Another tools exists which |
 |                     |                 | shows different result as well:      |
 |                     |                 | Topology Checker plugin and 'must not|
 |                     |                 | have invalid geometries' rule.       |

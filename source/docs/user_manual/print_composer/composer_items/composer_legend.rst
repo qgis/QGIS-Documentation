@@ -6,6 +6,9 @@
 The Legend Item
 ================
 
+.. contents::
+   :local:
+
 To add a map legend, click the |mActionAddLegend| :sup:`Add new legend` icon,
 place the element with the left mouse button on the Print Composer canvas and
 position and customize the appearance in the legend :guilabel:`Item Properties`

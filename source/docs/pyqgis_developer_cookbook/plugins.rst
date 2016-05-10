@@ -6,6 +6,9 @@
 Developing Python Plugins
 *************************
 
+.. contents::
+   :local:
+
 It is possible to create plugins in Python programming language. In comparison
 with classical plugins written in C++ these should be easier to write,
 understand, maintain and distribute due the dynamic nature of the Python
@@ -89,7 +92,7 @@ What is the meaning of the files:
   Python.
 * :file:`form.ui` = The GUI created by Qt Designer.
 * :file:`form.py` = The translation of the form.ui described above to Python.
-* :file:`metadata.txt` = Required for QGIS >= 1.8.0. Containts general info,
+* :file:`metadata.txt` = Required for QGIS >= 1.8.0. Contains general info,
   version, name and some other metadata used by plugins website and plugin
   infrastructure. Since QGIS 2.0 the metadata from :file:`__init__.py` are not
   accepted anymore and the :file:`metadata.txt` is required.
@@ -129,7 +132,7 @@ right place to put this information.
 
 
 .. important::
-    All metadata must be in UTF-8 encoding.
+   All metadata must be in UTF-8 encoding.
 
 .. _plugin_metadata_table:
 
@@ -151,7 +154,9 @@ tags                   False     comma separated list, spaces are allowed inside
 homepage               False     a valid URL pointing to the homepage of your plugin
 repository             True      a valid URL for the source code repository
 tracker                False     a valid URL for tickets and bug reports
-icon                   False     a file name or a relative path (relative to the base folder of the plugin's compressed package)
+icon                   False     a file name or a relative path (relative to
+                                 the base folder of the plugin's compressed
+                                 package) of a web friendly image (PNG, JPEG)
 category               False     one of `Raster`, `Vector`, `Database` and `Web`
 =====================  ========  =======================================
 
@@ -230,6 +235,7 @@ An example for this metadata.txt
 
 __init__.py
 -----------
+
 This file is required by Python's import system. Also, QGIS requires that this
 file contains a :func:`classFactory()` function, which is called when the
 plugin gets loaded to QGIS. It receives reference to instance of
@@ -370,15 +376,15 @@ done with :command:`pyrcc4` command:
 ::
 
   pyrcc4 -o resources.py resources.qrc
-  
+
 .. note::
 
-    In Windows environments, attempting to run the :command:`pyrcc4` from 
-    Command Prompt or Powershell will probably result in the error "Windows 
-    cannot access the specified device, path, or file [...]".  The easiest 
-    solution is probably to use the OSGeo4W Shell but if you are comfortable 
-    modifying the PATH environment variable or specifiying the path to the 
-    executable explicitly you should be able to find it at 
+    In Windows environments, attempting to run the :command:`pyrcc4` from
+    Command Prompt or Powershell will probably result in the error "Windows
+    cannot access the specified device, path, or file [...]".  The easiest
+    solution is probably to use the OSGeo4W Shell but if you are comfortable
+    modifying the PATH environment variable or specifiying the path to the
+    executable explicitly you should be able to find it at
     :file:`<Your QGIS Install Directory>\bin\pyrcc4.exe`.
 
 And that's all... nothing complicated :)
@@ -414,3 +420,101 @@ and section, which is the name of an html anchor tag in the document
 on which the browser will be positioned.
 
 .. index:: plugins; code snippets
+
+Translation
+===========
+
+With a few steps you can set up the environment for the plugin localization so
+that depending on the locale settings of your computer the plugin will be loaded
+in different languages.
+
+Software requirements
+---------------------
+
+The easiest way to create and manage all the translation files is to install
+`Qt Linguist <http://doc.qt.io/qt-4.8/linguist-manual.html>`_.
+In a Linux like environment you can install it typing::
+
+  sudo apt-get install qt4-dev-tools
+
+
+Files and directory
+-------------------
+
+When you create the plugin you will find the ``i18n`` folder within the main
+plugin directory.
+
+**All the translation files have to be within this directory.**
+
+.pro file
+.........
+
+First you should create a ``.pro`` file, that is a *project* file that can be
+managed by Qt Linguist.
+
+In this ``.pro`` file you have to specify all the files and forms you want to
+translate. This file is used to set up the localization files and variables.
+An example of the pro file is::
+
+  FORMS = ../ui/*
+
+  SOURCES = ../your_plugin.py
+
+  TRANSLATIONS = your_plugin_it.ts
+
+In this particular case all your UIs are placed in the ``../ui`` folder and you
+want to translate all of them.
+
+Furthermore, the ``your_plugin.py`` file is the file that *calls* all the menu
+and sub-menus of your plugin in the QGIS toolbar and you want to translate them
+all.
+
+Finally with the *TRANSLATIONS* variable you can specify the translation languages
+you want.
+
+.. warning::
+
+   Be sure to name the ``ts`` file like ``your_plugin_`` + ``language`` + ``.ts``
+   otherwise the language loading will fail! Use 2 letters shortcut for the
+   language (**it** for Italian, **de** for German, etc...)
+
+.ts file
+........
+
+Once you have created the ``.pro`` you are ready to generate the ``.ts`` file(s)
+of the language(s) of your plugin.
+
+Open a terminal, go to ``your_plugin/i18n`` directory and type::
+
+  lupdate your_plugin.pro
+
+you should see the ``your_plugin_language.ts`` file(s).
+
+Open the ``.ts`` file with **Qt Linguist** and start to translate.
+
+.qm file
+........
+
+When you finish to translate your plugin (if some strings are not completed the
+source language for those strings will be used) you have to create the ``.qm``
+file (the compiled ``.ts`` file that will be used by QGIS).
+
+Just open a terminal cd in ``your_plugin/i18n`` directory and type::
+
+  lrelease your_plugin.ts
+
+now, in the ``i18n`` directory you will see the ``your_plugin.qm`` file(s).
+
+Load the plugin
+---------------
+
+In order to see the translation of your plugin just open QGIS, change the
+language (:menuselection:`Settings -> Options -> Language`) and restart QGIS.
+
+You should see your plugin in the correct language.
+
+.. warning::
+
+   If you change something in your plugin (new UIs, new menu, etc..) you have to
+   **generate again** the update version of both ``.ts`` and ``.qm`` file, so run
+   again the command of above.

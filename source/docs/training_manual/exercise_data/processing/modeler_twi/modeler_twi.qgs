@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.8.2-Wien">
+<qgis projectname="" version="2.14.1-Essen">
   <title></title>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
@@ -30,11 +30,11 @@
         <geographicflag>false</geographicflag>
       </spatialrefsys>
     </destinationsrs>
+    <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
       <layer_coordinate_transform destAuthId="EPSG:23030" srcAuthId="EPSG:23030" srcDatumTransform="-1" destDatumTransform="-1" layerid="dem2520130804190835549"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
-  <visibility-presets/>
   <layer-tree-canvas>
     <custom-order enabled="0">
       <item>dem2520130804190835549</item>
@@ -47,10 +47,11 @@
       </filegroup>
     </legendlayer>
   </legend>
-  <projectlayers layercount="1">
+  <projectlayers>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <id>dem2520130804190835549</id>
       <datasource>./dem25.tif</datasource>
+      <shortname></shortname>
       <title></title>
       <abstract></abstract>
       <keywordList>
@@ -179,6 +180,11 @@
     </DefaultStyles>
     <WMSFees type="QString"></WMSFees>
     <WMSImageQuality type="int">90</WMSImageQuality>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString"></AreaUnits>
+    </Measurement>
     <WMSUrl type="QString"></WMSUrl>
   </properties>
+  <visibility-presets/>
 </qgis>

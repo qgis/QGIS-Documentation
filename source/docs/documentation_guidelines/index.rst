@@ -5,8 +5,8 @@ Documentation Guidelines
 ========================
 
 .. toctree::
-	:maxdepth: 2
+   :maxdepth: 2
 
-	README
-        substitutions
-	do_translations
+   writing
+   do_translations
+   substitutions

@@ -7,6 +7,9 @@
 Virtual layers
 ==============
 
+.. contents::
+   :local:
+
 A special kind of vector layer allows you to define a layer as the result of an
 advanced query, using the SQL language on any number of other vector layers that
 QGIS is able to open. These layers are called virtual layers: they do not carry

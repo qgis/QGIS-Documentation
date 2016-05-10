@@ -5,6 +5,9 @@
 The history manager
 ============================
 
+.. contents::
+   :local:
+
 The processing history
 ------------------------
 

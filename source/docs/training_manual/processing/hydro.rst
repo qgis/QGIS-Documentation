@@ -4,16 +4,13 @@ Hydrological analysis
 
 .. note:: In this lesson we will perform some hydrological analysis. This analysis will be used in some of the following lessons, as it constitutes a very good example of an analysis workflow, and we will use it to demonstrate some advanced features.
 
-
 In this lesson, we are going to do some hydrological analysis. Starting with a DEM, we are going to extract a channel network, delineate watersheds and calculate some statistics. 
-
 
 The first thing is to load the project with the lesson data, which just contains a DEM.
 
 .. image:: img/hydro/dem.png
 
-
-The first module to execute is *Catchment area* (in SAGA >=2.2 it is called *Flow accumulation (Top Down)*). You can use anyone of  the others named *Catchment area*. They have different algorithms underneath, but the results are basically the same.
+The first module to execute is *Catchment area* (in some SAGA versions it is called *Flow accumulation (Top Down)*). You can use anyone of  the others named *Catchment area*. They have different algorithms underneath, but the results are basically the same.
 
 Select the DEM in the *Elevation* field, and leave the default values for the rest of parameters.
 
@@ -63,7 +60,7 @@ This is a raster result. You can vectorise it using the *Vectorising grid classe
 
 Now, let's try to compute statistics about the elevation values in one of the subbasins. The idea is to have a layer that just represents the elevation within that subbasin and then pass it to the module that calculates those statistics.
 
-First, let's clip the original DEM with the polygon representing a subbasin. We will use the *Clip grid with polygon* algorithm. If we select a single subbasin polygon and then call the clipping algorithm, we can clip the DEM to the area covered by that polygon, since the algorithm is aware of the selection.
+First, let's clip the original DEM with the polygon representing a subbasin. We will use the *Clip raster with polygon* algorithm. If we select a single subbasin polygon and then call the clipping algorithm, we can clip the DEM to the area covered by that polygon, since the algorithm is aware of the selection.
 
 Select a polygon,
 
@@ -78,7 +75,6 @@ The element selected in the input field is, or course, the DEM we want to clip.
 You will get something like this.
 
 .. image:: img/hydro/clippeddem.png 
-
 
 This layer is ready to be used in the *Raster layer statistics* algorithm.
 

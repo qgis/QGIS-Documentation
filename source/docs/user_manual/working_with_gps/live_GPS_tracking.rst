@@ -5,6 +5,9 @@
 Live GPS tracking
 ==================
 
+.. contents::
+   :local:
+
 To activate live GPS tracking in |qg|, you need to select :menuselection:`Settings --> Panels`
 |checkbox| :guilabel:`GPS information`. You will get a new docked window on the
 left side of the canvas.

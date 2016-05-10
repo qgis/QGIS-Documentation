@@ -33,7 +33,7 @@ Since only selected features are used, only the selected polygon will be used to
 
 Doing this for all the watersheds will produce the result we are looking for, but it doesn't look like a very practical way of doing it. Instead, let's see how to automate that *select and crop* routine.
 
-First of all, remove the previous selection, so all polygons will be used again. Now open the *Clip grid with polygon* algorithm and select the same inputs as before, but this time click on the button that you will find in the right--hand side of the vector layer input where you have selected the watersheds layer.
+First of all, remove the previous selection, so all polygons will be used again. Now open the *Clip raster with polygon* algorithm and select the same inputs as before, but this time click on the button that you will find in the right--hand side of the vector layer input where you have selected the watersheds layer.
 
 .. image:: img/iterative/iterate_button.png
 

@@ -5,6 +5,9 @@
 The HTML Frame Item
 ====================
 
+.. contents::
+   :local:
+
 It is possible to add a frame that displays the contents of a website or even create and style
 your own HTML page and display it!
  

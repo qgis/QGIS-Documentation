@@ -1,12 +1,13 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not up-to-date with release
-
 .. _general_tools:
 
 *************
 General Tools
 *************
+
+.. contents::
+   :local:
 
 .. _`shortcuts`:
 
@@ -749,7 +750,7 @@ Embedding layers
 The following dialog allows you to embed layers from other projects. Here is a
 small example:
 
-#. Press |browsebutton| to look for another project from the Alaska dataset.
+#. Press |browsebutton| to look for a project from the Alaska dataset.
 #. Select the project file :file:`relations.qgs`. You can see the content of the
    project (see figure_embed_dialog_).
 #. Press :kbd:`Ctrl` and click on the layers :file:`airports` and

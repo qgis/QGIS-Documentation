@@ -5,6 +5,9 @@
 GPS Plugin
 ==========
 
+.. contents::
+   :local:
+
 .. _`whatsgps`:
 
 What is GPS?

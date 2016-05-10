@@ -5,6 +5,9 @@
 The Arrow Item
 ===============
 
+.. contents::
+   :local:
+
 To add an arrow, click the |mActionAddArrow| :sup:`Add Arrow` icon, place the element holding 
 down the left mouse button and drag a line to draw the arrow on the Print Composer canvas and 
 position and customize the appearance in the scale bar :guilabel:`Item Properties` tab.

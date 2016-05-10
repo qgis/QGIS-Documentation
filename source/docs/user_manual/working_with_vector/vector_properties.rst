@@ -15,7 +15,8 @@ diagrams), interaction with the mouse (actions, map tips, form design). It also
 provides information about the layer.
 
 To access the :guilabel:`Layer Properties` dialog, double-click on a layer in
-the legend or right-click on the layer and select :menuselection:`Properties` from the pop-up menu.
+the legend or right-click on the layer and select :menuselection:`Properties`
+from the pop-up menu.
 
 
 Special Tools
@@ -28,7 +29,7 @@ Save and Share Layer Properties
 
 When a layer is added to map canvas, QGIS uses by default a random symbol/color
 to render its features. You can however set a default symbol in
-:guilabel:`Project --> Properties --> Default styles` that will be applied
+:menuselection:`Project --> Properties --> Default styles` that will be applied
 to each newly added layer according to its geometry type.
 
 But, most of the time, you'd prefer to have a custom and more complexe style
@@ -38,7 +39,7 @@ the Layer Properties dialog. This combobox provides you with functions to create
 load and manage styles.
 
 A style stores any information set in the layer properties dialog to render
-or interact with the features (including symbology, labelling, action, diagram...
+or interact with the features (including symbology, labeling, action, diagram...
 settings).
 Styles can be stored inside the project, in a file (``.qml`` or ``.sld``) or
 in a database (SpatiaLite, PostGIS...). Thanks to layer visibility manager, you can assign
@@ -249,19 +250,37 @@ or at the whole layer level. It adds :index:`paint effects` for customizing the 
 of vector files.
 
 The function is activated by checking the |checkbox| :guilabel:`Draw effects` option
-and clicking the |PaintEffects| :guilabel:`Customize effects` button.
+and clicking the |PaintEffects| :sup:`Customize effects` button.
 The effects include the following categories, with the following options:
+
+* **Source:** Implements the feature in the drawing menu, with its style as selected in the
+  layer properties. The transparency of its style can be adjusted.
+
+  .. _figure_effects_1:
+
+  .. only:: html
+
+     **Figure Effects 1:**
+
+  .. figure:: /static/user_manual/working_with_vector/source.png
+     :align: center
+
+     Draw Effects: Source dialog
 
 * **Blur:** Adds a blur effect on the vector layer. The options that someone can change are the
   :menuselection:`Blur type` (:menuselection:`Stack` or :menuselection:`Gaussian blur`),
   the strength and transparency of the blur effect.
 
-  **Figure Effects 1:**
+  .. _figure_effects_2:
+
+  .. only:: html
+
+     **Figure Effects 2:**
 
   .. figure:: /static/user_manual/working_with_vector/blur.png
      :align: center
 
-  Draw Effects: Blur dialog
+     Draw Effects: Blur dialog
 
 * **Colorize:** This effect can be used by someone who wants to adjust the :menuselection:`brightness`,
   :menuselection:`contrast` and :menuselection:`saturation` levels of the feature. It also offers
@@ -269,22 +288,16 @@ The effects include the following categories, with the following options:
   the :menuselection:`grayscale` effect selected, which actually converts the color of the feature
   to grayscale, based on 3 options: lightness, luminosity and average.
 
-  **Figure Effects 2:**
+  .. _figure_effects_3:
+
+  .. only:: html
+
+     **Figure Effects 3:**
 
   .. figure:: /static/user_manual/working_with_vector/colorise.png
      :align: center
 
      Draw Effects: Colorize dialog
-
-* **Source:** Implements the feature in the drawing menu, with its style as selected in the layer properties.
-  The transparency of its style can be adjusted.
-
-  **Figure Effects 3:**
-
-  .. figure:: /static/user_manual/working_with_vector/source.png
-     :align: center
-
-     Draw Effects: Source dialog
 
 * **Drop Shadow:** Using this effect adds a shadow on the feature, which looks like adding an
   extra dimension. This effect can be customized by changing the :menuselection:`offset`
@@ -292,41 +305,57 @@ The effects include the following categories, with the following options:
   the source object. :menuselection:`Drop Shadow` also has the option to change the blur radius,
   the transparency and the color of the effect.
 
-  **Figure Effects 4:**
+  .. _figure_effects_4:
+
+  .. only:: html
+
+     **Figure Effects 4:**
 
   .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
      :align: center
 
      Draw Effects: Drop Shadow dialog
 
-* **Inner Glow:** Adds a glow effect inside the feature. This effect can be customized by adjusting
-  the :menuselection:`spread` (width) of the glow, or the :menuselection:`Blur radius`.
-  The latter specifies the proximity from the edge of the feature where you want any blurring to happen.
-  Additionally, there are options to customize the color of the glow, with a single color or a color ramp.
-
-  **Figure Effects 5:**
-
-  .. figure:: /static/user_manual/working_with_vector/inner_glow.png
-     :align: center
-
-     Draw Effects: Inner Glow dialog
-
 * **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect, but it adds
   the shadow effect on the inside of the edges of the feature. The available options for customization
   are the same as the :menuselection:`Drop Shadow` effect.
 
-  **Figure Effects 6:**
+  .. _figure_effects_5:
+
+  .. only:: html
+
+     **Figure Effects 5:**
 
   .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
      :align: center
 
      Draw Effects: Inner Shadow dialog
 
+* **Inner Glow:** Adds a glow effect inside the feature. This effect can be customized by adjusting
+  the :menuselection:`spread` (width) of the glow, or the :menuselection:`Blur radius`.
+  The latter specifies the proximity from the edge of the feature where you want any blurring to happen.
+  Additionally, there are options to customize the color of the glow, with a single color or a color ramp.
+
+  .. _figure_effects_6:
+
+  .. only:: html
+
+     **Figure Effects 6:**
+
+  .. figure:: /static/user_manual/working_with_vector/inner_glow.png
+     :align: center
+
+     Draw Effects: Inner Glow dialog
+
 * **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect, but it adds
   the glow effect on the outside of the edges of the feature. The available options for customization
   are the same as the :menuselection:`Inner Glow` effect.
 
-  **Figure Effects 7:**
+  .. _figure_effects_7:
+
+  .. only:: html
+
+     **Figure Effects 7:**
 
   .. figure:: /static/user_manual/working_with_vector/outer_glow.png
      :align: center
@@ -335,16 +364,21 @@ The effects include the following categories, with the following options:
 
 * **Transform:** Adds the possibility of transforming the shape of the source feature.
   The first options available for customization are the :menuselection:`Reflect horizontal`
-  and :menuselection:`Reflect horizontal`, which actually create a reflection on the
-  horizontal and/or vertical axes. The 4 other options are the :menuselection:`Shear`,
-  :menuselection:`Scale`, :menuselection:`Rotation` and :menuselection:`Translate` effects.
-  The :menuselection:`Shear` effect slants the feature along the x and/or y axis, the
-  :menuselection:`Scale` enlarges or minimizes the feature along the x and/or y axis,
-  by the percentage given, while the :menuselection:`Rotation` effect turns the feature
-  around its center point and the :menuselection:`Translate` effect changes the position
-  of the item based on a distance given on the x and/or the y axis.
+  and :menuselection:`Reflect vertical`, which actually create a reflection on the
+  horizontal and/or vertical axes. The 4 other options are:
+  
+  * :menuselection:`Shear`: slants the feature along the x and/or y axis
+  * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or y axis
+    by the percentage given
+  * :menuselection:`Rotation`: turns the feature around its center point
+  * and :menuselection:`Translate` changes the position of the item based on a distance
+    given on the x and/or the y axis.
 
-  **Figure Effects 8:**
+  .. _figure_effects_8:
+
+  .. only:: html
+
+     **Figure Effects 8:**
 
   .. figure:: /static/user_manual/working_with_vector/transform.png
      :align: center
@@ -353,9 +387,10 @@ The effects include the following categories, with the following options:
 
 In each of the Draw effect types, the :menuselection:`Blend mode` and :menuselection:`Draw mode`
 can be adjusted to match the user needs. The Blend mode follows the same methods as the ones
-included for the layers (link here) and cannot be used for the transform effect.
+included for the layers and cannot be used for the transform effect.
 You can find more information in the :ref:`blend-modes`.
 The Draw mode can apply a render and/or modify mode for each of the effects.
+
 One or more draw effects can be selected at the same time, which can also be
 moved up and down, in order to finally get the desired result.
 
@@ -634,6 +669,11 @@ Then you can use the :index:`Histogram` tab which shows an interactive histogram
 values from the assigned field or expression. Class breaks can be moved or
 added using the histogram widget.
 
+.. note::
+
+   You can use Statistical Summary panel to get more information on your vector 
+   layer. See :ref:`statistical_summary`.
+
 Back to the Classes tab, you can specify the number of classes and also the mode for
 classifying features within the classes (using the Mode list). The available
 modes are:
@@ -732,12 +772,12 @@ The assistant lets you define:
 * the scale method of representation which can be 'Flannery', 'Surface' or 'Radius'
 * The minimum and maximum size of the symbol
 * The range of values to represent: The down pointing arrow helps you
-  fill automatically these fields with the minimum (or zero) and maximum values 
+  fill automatically these fields with the minimum (or zero) and maximum values
   returned by the chosen attribute or the expression applied to your data.
 * An unique size to represent NULL values.
 
 To the right side of the dialog, you can preview the features representation
-within a live-update widget. This representation is added to the layer tree in the 
+within a live-update widget. This representation is added to the layer tree in the
 layer legend and is also used to shape the layer representation in the
 print composer legend item.
 
@@ -751,7 +791,7 @@ The values presented in the varying size assistant above will set the size
 
 A multivariate analysis rendering helps you evaluate the relationship between
 two or more variables e.g., one can be represented by a color ramp while the other is
-represented by a size. 
+represented by a size.
 
 The simplest way to create multivariate analysis in QGIS is to first apply
 a categorized or graduated rendering on a layer, using the same type of symbol
@@ -877,10 +917,62 @@ Heatmap
 .......
 
 With the :index:`Heatmap` renderer you can create live dynamic heatmaps for (multi)point
-layers. You can specify the heatmap radius in pixels, mm or map units, choose
-a color ramp for the heatmap style and use a slider for selecting a trade-off
-between render speed and quality. When adding or removing a feature the heatmap
-renderer updates the heatmap style automatically.
+layers. You can specify the heatmap radius in pixels, mm or map units, choose and
+edit a color ramp for the heatmap style and use a slider for selecting a trade-off
+between render speed and quality. You can also define a maximum value limit and give a
+weight to points using a field or an expression. When adding or removing a feature
+the heatmap renderer updates the heatmap style automatically.
+
+.. _figure_symbology_8:
+
+.. only:: html
+
+     **Figure Symbology 8:**
+
+.. figure:: /static/user_manual/working_with_vector/heatmap_symbol.png
+   :align: center
+
+   Heatmap dialog
+
+.. _2.5_D_rendering:
+
+2.5 D
+.....
+
+Using the :index:`2.5 D` renderer it's possible to create a 2.5 D effect on your layer's
+features. You start by choosing a :guilabel:`Height` value (in map units). For that
+you can use a fixed value, one of your layer's fields, or an expression. You also
+need to choose an :guilabel:`Angle` (in degrees) to recreate the viewer position
+(0 |degrees| means west, growing in counter clock wise). Use advanced configuration options
+to set the :guilabel:`Roof Color` and :guilabel:`Wall Color`. If you would like
+to simulate solar radiation on the features walls, make sure to check the
+|checkbox| :guilabel:`Shade walls based on aspect` option. You can also
+simulate a shadow by setting a :guilabel:`Color` and :guilabel:`Size` (in map
+units).
+
+.. _figure_symbology_9:
+
+.. only:: html
+
+     **Figure Symbology 9:**
+
+.. figure:: /static/user_manual/working_with_vector/2_5dsymbol.png
+   :align: center
+
+   2.5 D dialog
+
+.. tip:: **Using 2.5 D effect with other renderers**
+
+   Once you have finished setting the basic style on the 2.5 D renderer, you can
+   convert this to another renderer (single, categorized, graduated). The 2.5 D
+   effects will be kept and all other renderer specific options will be
+   available for you to fine tune them (this way you can have for example categorized
+   symbols with a nice 2.5 D representation or add some extra styling to your 2.5 D
+   symbols). To make sure that the shadow and the "building" itself do not interfere
+   with other nearby features, you may need to enable Symbols Levels (
+   :menuselection:`Advanced --> Symbol levels...`).
+   The 2.5 D height and angle values are saved in the layer's variables,
+   so you can edit it afterwards in the variables tab of the layer's properties dialog.
 
 .. _layer_rendering:
 
@@ -906,24 +998,35 @@ features of the layer:
 * :guilabel:`Control feature rendering order` allows you, using features
   attributes, to define the :index:`z-order` in which they shall be rendered.
   Activate the checkbox and click on the |browsebutton| button beside.
-  You then get the :guilabel`Define Order` dialog in which you:
+  You then get the :guilabel:`Define Order` dialog in which you:
 
   * choose a field or build an expression to apply to the layer features
-  * set in which order the fetched features should be sorted, i.e. if you choose 
+  * set in which order the fetched features should be sorted, i.e. if you choose
     **Ascending** order, the features with lower value are rendered under those
     with upper value.
   * define when features returning NULL value should be rendered: **first** or **last**.
 
   You can add several :index:`rules of ordering`. The first rule is applied
   to all the features in the layer, z-ordering them according to the value returned.
-  Then, for each group of features with the same value (including those with 
+  Then, for each group of features with the same value (including those with
   NULL value) and thus same z-level, the next rule is applied to sort its items
   among them.
   And so on...
-  
-  Once the :guilabel`Define Order` dialog is applied, a summary of the expression(s)
+
+  Once the :guilabel:`Define Order` dialog is applied, a summary of the expression(s)
   used to control the :index:`layer rendering` is retranscribed in the textbox
-  beside |checkbox| :guilabel:`Control feature rendering order` option. 
+  beside |checkbox| :guilabel:`Control feature rendering order` option.
+
+.. _figure_symbology_10:
+
+.. only:: html
+
+     **Figure Symbology 10:**
+
+.. figure:: /static/user_manual/working_with_vector/layer_rendering_options.png
+   :align: center
+
+   Layer rendering options
 
 .. _vector_labels_tab:
 
@@ -931,9 +1034,9 @@ Labels Menu
 ===========
 
 The |mActionLabeling| :sup:`Labels` core application provides smart
-:index:`labelling` for vector point, line and polygon layers, and only requires a
+:index:`labeling` for vector point, line and polygon layers, and only requires a
 few parameters. This application also supports on-the-fly transformed layers.
-The following menus are used to configure the labelling of vector layers:
+The following menus are used to configure the labeling of vector layers:
 
 * Text
 * Formatting
@@ -944,20 +1047,28 @@ The following menus are used to configure the labelling of vector layers:
 * Rendering
 
 To label a layer start QGIS and load a vector layer. Activate the layer
-in the legend and click on the |mActionLabeling| :sup:`Layer Labelling Options`
-icon in the QGIS toolbar menu.
+in the legend and click on the |mActionLabeling| :sup:`Layer Labeling Options`
+icon in the QGIS toolbar menu or activate the :guilabel:`Labels` tab in the
+layer properties dialog.
 
-The first step is to choose the labelling method from the drop-down list. There
-are four options available: **No labels**, **Show labels for this layer**, **Rule-based
-labelling** and **Discourage other labels from covering features in this layer**.
+The first step is to choose the labeling method from the drop-down list. There
+are four options available:
+
+* **No labels**
+* **Show labels for this layer**
+* :ref:`Rule-based labeling <rule_based_labeling>` 
+* and **Discourage other labels from covering features in this layer**: allows to
+  set a layer as just an obstacle for other layer's labels without rendering any
+  labels of its own.
+  
 Select the **Show labels for this layer** option and then select an attribute
-column to use for labelling from the **Label with** drop-down list. Click
+column to use for labeling from the **Label with** drop-down list. Click
 |mActionmIconExpressionEditorOpen| if you want to define labels based on
-expressions - See labeling_with_expressions_.
+expressions - See :ref:`labeling_with_expressions`.
 
-The following steps describe simple labelling without using the
-:guilabel:`Data defined override` functions,
-which are situated next to the drop-down menus.
+The following steps describe simple labeling without using the
+:guilabel:`Data defined override` functions, which are situated next to
+the drop-down menus - see :ref:`data_defined_labeling` for an use-case.
 
 Text menu
 ---------
@@ -967,6 +1078,18 @@ Use the :guilabel:`Type case` option to influence the text rendering.
 You have the possibility to render the text 'All uppercase', 'All lowercase'
 or 'Capitalize first letter'. Use the :ref:`blend-modes` to create effects
 known from graphics programs.
+
+
+.. _figure_labels_1:
+
+.. only:: html
+
+   **Figure Labels 1:**
+
+.. figure:: /static/user_manual/working_with_vector/label_points.png
+   :align: center
+
+   Smart labeling of vector point layers
 
 Formatting menu
 ---------------
@@ -1071,14 +1194,14 @@ in a categorized renderer.
 
 By default, placements are prioritised in the following order:
 
-* top right
-* top left
-* bottom right
-* bottom left
-* middle right
-* middle left
-* top, slightly right
-* bottom, slightly left.
+#. top right
+#. top left
+#. bottom right
+#. bottom left
+#. middle right
+#. middle left
+#. top, slightly right
+#. bottom, slightly left.
 
 Placement priority can however be customized or set for an individual
 feature using a data defined list of prioritised positions.
@@ -1111,7 +1234,18 @@ Additionally, you can define a :guilabel:`Maximum angle between curved character
 selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
 
 For all three placement options you can set up a minimum distance for repeating
-labels. The distance can be in mm or in map units.
+labels. The distance can be in ``mm`` or in ``map units``.
+
+.. _figure_labels_2:
+
+.. only:: html
+
+   **Figure Labels 2:**
+
+.. figure:: /static/user_manual/working_with_vector/label_line.png
+   :align: center
+
+   Smart labeling of vector line layers
 
 Placement for polygon layers
 ............................
@@ -1132,12 +1266,25 @@ The |radiobuttonoff| :guilabel:`Around centroid` setting places the label at a
 specified distance around the centroid. Again, you can define
 |radiobuttonon| :guilabel:`visible polygon`
 or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
+
 With the |radiobuttonoff| :guilabel:`Using perimeter` settings, you can define a
 position and a distance for the label. For the position,
 |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
 |checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation
 dependent position` are possible. You can specify the distance between the label
 and the polygon outline, as well as the repeat interval for the label.
+
+.. _figure_labels_3:
+
+.. only:: html
+
+   **Figure Labels 3:**
+
+.. figure:: /static/user_manual/working_with_vector/label_area.png
+   :align: center
+
+   Smart labeling of vector polygon layers
+
 
 In the :guilabel:`priority` section you can define the priority with which labels
 are rendered for all three vector layer types (point, line, polygon). This
@@ -1182,7 +1329,7 @@ you can fine tune which labels should be rendered.
 Under :guilabel:`Feature options`, you can choose to :guilabel:`label every
 part of a multi-part feature` and :guilabel:`limit the number of features to be labeled`.
 Both line and polygon layers offer the option to set a minimum size for the
-features to be labeled.
+features to be labeled, using :guilabel:`Suppress labeling of features smaller than`.
 For polygon features, you can also filter the labels to show according to whether they
 completely fit within the feature or not.
 For line features, you can choose to :guilabel:`Merge connected lines
@@ -1190,56 +1337,31 @@ to avoid duplicate labels`, rendering a quite airy map in conjunction with
 the :guilabel:`Distance` or :guilabel:`Repeat` options in Placement tab.
 
 
-Under :guilabel:`Obstacles`, the |checkbox| :guilabel:`Discourage
-labels from covering features` helps you manage covering relation
-between labels and other features.
+From the :guilabel:`Obstacles` frame, you can manage the covering relation between
+labels and features. Activate the |checkbox| :guilabel:`Discourage labels from
+covering features` option to decide whether features of the layer should act as
+obstacles for any label (including labels from other features in the same layer).
+An obstacle is a feature QGIS tries as far as possible to not place labels over.
+Instead of the whole layer, you can define a subset of features to use as obstacles,
+using the |mIconDataDefine| :sup:`data-defined override` control next to the option.
 
+The |slider| priority control slider for obstacles allows you to make labels
+prefer to overlap features from certain layers rather than others.
+A **Low weight** obstacle priority means that features of the layer are less
+considered as obstacles and thus more likely to be covered by labels.
+This priority can also be data-defined, so that within the same layer,
+certain features are more likely to be covered than others.
 
-.. features act as obstacles for labels or not .
+For polygon layers, you can choose the type of obstacle features could be
+by minimising the labels placement:
 
-.. _figure_labels_1:
-
-.. only:: html
-
-   **Figure Labels 1:**
-
-.. figure:: /static/user_manual/working_with_vector/label_points.png
-   :align: center
-
-   Smart labeling of vector point layers
-
-For line layers you can
-:guilabel:`Suppress labelling of features smaller than` a set length.
-
-.. if features act as obstacles for labels or not.
-
-.. _figure_labels_2:
-
-.. only:: html
-
-   **Figure Labels 2:**
-
-.. figure:: /static/user_manual/working_with_vector/label_line.png
-   :align: center
-
-   Smart labeling of vector line layers
-
-For polygon layers you can also use :guilabel:`Suppress labelling of features smaller than` in
-the :guilabel:`Feature options`.
-
-
-.. if features act as obstacles for labels or not
-
-.. _figure_labels_3:
-
-.. only:: html
-
-   **Figure Labels 3:**
-
-.. figure:: /static/user_manual/working_with_vector/label_area.png
-   :align: center
-
-   Smart labelling of vector polygon layers
+* **over the feature's interior**: avoids placing labels over interior of polygon
+  (prefers placing labels totally outside or just slightly inside polygon)
+* or **over the feature's boundary**: avoids placing labels over boundary of polygon
+  (prefers placing labels outside or completely inside the polygon). It can be e.g.
+  useful for regional boundary layers, where the features cover an entire area.
+  In this case it's impossible to avoid placing labels within these features,
+  and it looks much better to avoid placing them over the boundaries between features.
 
 
 .. _labeling_with_expressions:
@@ -1252,10 +1374,8 @@ QGIS allows to use expressions to label features. Just click the
 |mActionmIconExpressionEditorOpen| icon in the |mActionLabeling| :sup:`Labels`
 menu of the properties dialog. In figure_labels_4_ you see a sample expression
 to label the alaska regions with name and area size, based on the field 'NAME_2',
-some descriptive text and the function '$area()' in combination with
-'format_number()' to make it look nicer.
-
-.. features act as obstacles for labels or not .
+some descriptive text and the function ``$area`` in combination with
+``format_number()`` to make it look nicer.
 
 .. _figure_labels_4:
 
@@ -1267,12 +1387,19 @@ some descriptive text and the function '$area()' in combination with
    :align: center
    :width: 30em
 
-   Using expressions for labelling
+   Using expressions for labeling
 
-:index:`Expression based labelling` is easy to work with. All you have to take care of
-is, that you need to combine all elements (strings, fields and functions) with a
-string concatenation sign '||' and that fields are written in "double quotes"
-and strings in 'single quotes'. Let's have a look at some examples:
+:index:`Expression based labeling` is easy to work with. All you have to take
+care of is that:
+
+* you need to combine all elements (strings, fields and functions)
+  with a string concatenation function such as ``concat``, ``+`` or ``||``. Be
+  aware that in some situations (null or numeric value involved) not all of
+  these tools will fit your need
+* strings are written in 'single quotes'
+* fields are written in "double quotes" or without any quote.
+
+Let's have a look at some examples:
 
 ::
 
@@ -1281,27 +1408,34 @@ and strings in 'single quotes'. Let's have a look at some examples:
 
    -> John Smith, Paris
 
-   # label based on two fields 'name' and 'place' separated by comma
+   # label based on two fields 'name' and 'place' with other texts
+   'My name is ' + "name" + 'and I live in ' + "place"
    'My name is ' || "name" || 'and I live in ' || "place"
+   concat('My name is ', name, ' and I live in ', "place")
 
    -> My name is John Smith and I live in Paris
 
-   # label based on two fields 'name' and 'place' with a descriptive text
-   # and a line break (\n)
-   'My name is ' || "name" || '\nI live in ' || "place"
+   # label based on two fields 'name' and 'place' with other texts
+   # combining different concatenation functions
+   concat('My name is ', name, ' and I live in ' || place)
 
+   -> My name is John Smith and I live in Paris
+   -> My name is John Smith     # if the field 'place' is NULL
+
+   # multi-line label based on two fields 'name' and 'place' with a descriptive text
+   concat('My name is ', "name", '\n' , 'I live in ' , "place")
    -> My name is John Smith
       I live in Paris
 
-   # create a multi-line label based on a field and the $area function
-   # to show the place name and its area size based on unit meter.
-   'The area of ' || "place" || 'has a size of ' || $area || 'm²'
+   # label based on a field and the $area function
+   # to show the place name and its rounded area size in a converted unit.
+   'The area of ' || "place" || ' has a size of ' || round($area/10000) || ' ha'
 
-   -> The area of Paris has a size of 105000000 m²
+   -> The area of Paris has a size of 10500 ha
 
    # create a CASE ELSE condition. If the population value in field
    # population is <= 50000 it is a town, otherwise a city.
-   'This place is a ' || CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END
+   concat('This place is a ', CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END)
 
   -> This place is a town
 
@@ -1309,10 +1443,12 @@ As you can see in the expression builder, you have hundreds of functions availab
 to create simple and very complex expressions to label your data in QGIS. See
 :ref:`vector_expressions` chapter for more information and examples on expressions.
 
-Using data-defined override for labelling
+.. _data_defined_labeling:
+
+Using data-defined override for labeling
 -----------------------------------------
 
-With the :index:`data-defined override` functions, the settings for the labelling
+With the :index:`data-defined override` functions, the settings for the labeling
 are overridden by entries in the attribute table.
 You can activate and deactivate the function with the right-mouse button.
 Hover over the symbol and you see the information about the data-defined override,
@@ -1341,7 +1477,7 @@ We now describe an example using the data-defined override function for the
 .. figure:: /static/user_manual/working_with_vector/label_data_defined.png
    :align: center
 
-   Labelling of vector polygon layers with data-defined override
+   Labeling of vector polygon layers with data-defined override
 
 
 .. _figure_labels_6:
@@ -1362,10 +1498,10 @@ Rule-based labeling
 
 With :index:`Rule-based labeling` multiple label configurations can be defined
 and applied selectively on the base of expression filters, as in
-:ref:`Rule-based rendering <rule_based_rendering>`
+:ref:`Rule-based rendering <rule_based_rendering>`.
 
 Rules can be set selecting the corresponding option at the top of the
-Labels panel (see figure_labels_7_ )
+Labels panel (see figure_labels_7_ ).
 
 .. _figure_labels_7:
 
@@ -1680,10 +1816,10 @@ You can use :
    Vector properties dialog with diagram menu, Size tab
 
 
-Position
---------
+Placement
+---------
 
-:guilabel:`Position` helps to define diagram placement.
+:guilabel:`Placement` helps to define diagram position.
 According to the layer geometry type, it offers different options for the placement:
 
 * 'Over the point' or 'Around  the point' for point geometry.
@@ -1700,9 +1836,9 @@ According to the layer geometry type, it offers different options for the placem
 The diagram can also be placed using feature data by filling the ``X``
 and ``Y`` fields with an attribute of the feature.
 
-The placement of the diagrams can interact with the labelling, so you can
+The placement of the diagrams can interact with the labeling, so you can
 detect and solve position conflicts between diagrams and labels by setting
-the **Priority** slider.
+the **Priority** slider or the **z-index** value.
 
 Options
 -------
@@ -1712,10 +1848,11 @@ choose whether the bar orientation should be 'Up', 'Down', 'Right' and 'Left'.
 
 .. ToDo: explain the behaviour of this option
 
-.. note::
-  Given that almost all the settings above are common to the different types of
-  diagram, when designing your diagram, you can switch between them to check
-  which one is more appropriate to your data without any loss.
+.. tip:: **Switch quickly between diagrams**
+
+   Given that almost all the settings above are common to the different types of
+   diagram, when designing your diagram, you can easily change the diagram type
+   and check which one is more appropriate to your data without any loss.
 
 Case Study
 ----------

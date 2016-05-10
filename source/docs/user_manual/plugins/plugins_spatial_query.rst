@@ -27,11 +27,11 @@ Using the plugin
 As an example, we want to find regions in the Alaska dataset that contain airports.
 The following steps are necessary:
 
-#. Start |qg| and load the vector layers :file:`regions.shp` and
+#. Start QGIS and load the vector layers :file:`regions.shp` and
    :file:`airports.shp`.
 #. Load the Spatial Query plugin in the Plugin Manager (see
    :ref:`managing_plugins`) and click on the |spatialquery|
-   :sup:`Spatial Query` icon, which appears in the |qg| toolbar menu. The plugin
+   :sup:`Spatial Query` icon, which appears in the QGIS toolbar menu. The plugin
    dialog appears.
 #. Select the layer ``regions`` as the source layer and ``airports`` as the reference feature
    layer.
@@ -40,7 +40,7 @@ The following steps are necessary:
 Now you get a list of feature IDs from the query and you have several options, as
 shown in figure_spatial_query_1_.
 
-* Click on |selectesubsetlayer| :sup:`Create layer with list of items`.
+* Click on |selectsubsetlayer| :sup:`Create layer with list of items`.
 * Select an ID from the list and click on |selectcreatelayer|
   :sup:`Create layer with selected`.
 * Select 'Remove from current selection' in the field
@@ -48,7 +48,7 @@ shown in figure_spatial_query_1_.
 * You can |checkbox| :guilabel:`Zoom to item` or display
   |checkbox| :guilabel:`Log messages`.
 * Additionally in :guilabel:`Result Feature ID's` with the options 'Invalid source'
-  and 'Invalid reference' you can have a look at features with geometries errors.
+  and 'Invalid reference' you can have a look at features with geometry errors.
   These features aren't used for the query.
 
 .. _figure_spatial_query_1:
@@ -60,4 +60,4 @@ shown in figure_spatial_query_1_.
 .. figure:: /static/user_manual/plugins/spatial_query_sample.png
    :align: center
 
-   Spatial Query analysis - regions contain airports |nix|
+   Spatial Query analysis - regions contain airports

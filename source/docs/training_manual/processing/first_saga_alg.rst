@@ -49,6 +49,8 @@ Open the *Create graticule* algorithm and use the following values.
 
 We are using  width and height values that is larger than the specified extent, so SAGA cannot produce any output. In other words, the parameter values are wrong, but they are not checked until SAGA gets them and tries to create the graticule. Since it cannot create it, it will not produce the expected layer, and you will see the error message shown above.
 
+.. note:: In SAGA >= 2.2.3, the command will adjust automatically wrong input data, so you'll not get an error. To provoke an error, use negative values for division.
+
 Understanding this kind of problems will help you solve them and find an explanation to what is happening. As you can see in the error message, a test is performed to check that the connection with SAGA is working correctly, indicating you that there might be a problem in how the algorithm was executed. This applies not only to SAGA, but also to other external applications as well.
 
 In the next lesson we will introduce the processing log, where information about commands run by geoalgorithms is kept, and you will see how to get more detail when issues like this appear.

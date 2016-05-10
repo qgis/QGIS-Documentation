@@ -474,8 +474,8 @@ can make sense to disable this option when you use expensive views.
 .. tip:: **Backup of PostGIS database with layers saved by QGIS**
 
    If you want to make a backup of your PostGIS database using the :file:`pg_dump` and 
-   :file:`pg_restore` commands the default layer styles as saved by QGIS are failing to
-   restore afterwards. You need to set the XML option to :file:`DOCUMENT` and the
+   :file:`pg_restore` commands, and the default layer styles as saved by QGIS fail to
+   restore afterwards, you need to set the XML option to :file:`DOCUMENT` and the
    restore will work.
 
 
@@ -500,7 +500,7 @@ DB Manager plugin and the command line tools shp2pgsql and ogr2ogr.
 DB Manager
 ..........
 
-QGIS comes with a core plugin named |icon_dbmanager| :sup:`DB Manager`. It can
+QGIS comes with a core plugin named |dbmanager| :sup:`DB Manager`. It can
 be used to load shapefiles and other data formats, and it includes support for
 schemas. See section :ref:`dbmanager` for more information.
 

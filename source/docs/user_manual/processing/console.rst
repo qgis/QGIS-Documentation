@@ -3,6 +3,9 @@
 Using processing algorithms from the console
 ==============================================
 
+.. contents::
+   :local:
+
 The console allows advanced users to increase their productivity and perform
 complex operations that cannot be performed using any of the other GUI elements of
 the processing framework. Models involving several algorithms can be defined using the

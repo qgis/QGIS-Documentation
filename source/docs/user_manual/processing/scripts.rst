@@ -1,4 +1,7 @@
 
+.. contents::
+   :local:
+
 Writing new Processing algorithms as python scripts
 ---------------------------------------------------
 
@@ -12,7 +15,7 @@ you open the save file dialog), with :file:`.py` extension, will automatically
 create the corresponding algorithm.
 
 The name of the algorithm (the one you will see in the toolbox) is created from
-the filename, removing its extension and replacing low hyphens with blank spaces.
+the filename, removing its extension and replacing underscores with blank spaces.
 
 Let's have the following code, which calculates the Topographic Wetness Index
 (TWI) directly from a DEM
@@ -30,7 +33,7 @@ Let's have the following code, which calculates the Topographic Wetness Index
 
 As you can see, it involves 3 algorithms, all of them coming from SAGA. The last
 one of them calculates the TWI, but it needs a slope layer and a flow accumulation
-layer. We do not have these ones, but since we have the DEM, we can calculate them
+layer. We do not have these, but since we have the DEM, we can calculate them by
 calling the corresponding SAGA algorithms.
 
 The part of the code where this processing takes place is not difficult to
@@ -46,7 +49,7 @@ following structure
 
     [parameter_name]=[parameter_type] [optional_values]
 
-Here is a list of all the parameter types that are supported in processign scripts,
+Here is a list of all the parameter types that are supported in processing scripts,
 their syntax and some examples.
 
 * ``raster``. A raster layer
@@ -82,8 +85,8 @@ The parameter name is the name that will be shown to the user when executing the
 algorithm, and also the variable name to use in the script code. The value entered
 by the user for that parameter will be assigned to a variable with that name.
 
-When showing the name of the parameter to the user, the name will be edited it to
-improve its appearance, replacing low hyphens with spaces. So, for instance,
+When showing the name of the parameter to the user, the name will be edited to
+improve its appearance, replacing underscores with spaces. So, for instance,
 if you want the user to see a parameter named ``A numerical value``, you can use
 the variable name ``A_numerical_value``.
 
@@ -162,14 +165,14 @@ Documenting your scripts
 As in the case of models, you can create additional documentation for your script,
 to explain what they do and how to use them. In the script editing dialog you will
 find a **[Edit script help]** button. Click on it and it will take you to the help
-editing dialog. Check the chapter about the graphical modeler to know more about
+editing dialog. Check the chapter about the graphical modeler to find out more about
 this dialog and how to use it.
 
 Help files are saved in the same folder as the script itself, adding the
-:file:`.help` extension to the filename. Notice that you can edit your script's
+:file:`.help` extension to the filename. Note that you can edit your script's
 help before saving it for the first time. If you later close the script editing
 dialog without saving the script (i.e. you discard it), the help content you
-wrote will be lost. If your script was already saved and is associated to a
+wrote will be lost. If your script was already saved and is associated with a
 filename, saving is done automatically.
 
 

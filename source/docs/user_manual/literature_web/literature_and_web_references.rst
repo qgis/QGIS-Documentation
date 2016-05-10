@@ -5,6 +5,7 @@
 *******************************
 Literature and Web References
 *******************************
+
 GDAL-SOFTWARE-SUITE. Geospatial data abstraction library. http://www.gdal.org, 2013.
 
 GRASS-PROJECT. Geographic ressource analysis support system. http://grass.osgeo.org , 2013.

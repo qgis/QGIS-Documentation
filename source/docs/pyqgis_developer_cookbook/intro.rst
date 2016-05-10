@@ -4,6 +4,10 @@
 Introduction
 ************
 
+.. contents::
+   :local:
+
+
 This document is intended to work both as a tutorial and a reference guide.
 While it does not list all possible use cases, it should give a good overview
 of the principal functionality.
@@ -15,7 +19,7 @@ for using SIP instead of more widely used SWIG is that the whole QGIS code
 depends on Qt libraries. Python bindings for Qt (PyQt) are done also using
 SIP and this allows seamless integration of PyQGIS with PyQt.
 
-There are several ways how to use Python bindings in |qg| desktop, they are covered
+There are several ways how to use Python bindings in QGIS desktop, they are covered
 in detail in the following sections:
 
 * automatically run Python code when QGIS starts
@@ -24,10 +28,10 @@ in detail in the following sections:
 * create custom applications based on QGIS API
 
 
-Python bindings are also available for |qg| Server:
+Python bindings are also available for QGIS Server:
 
-* starting from 2.8 release, Python plugins are also available on |qg| Server (see: `Server Python Plugins <server_plugins>`_)
-* starting from 2.11 version (Master at 2015-08-11), |qg| Server library has Python bindings that can be used to embed |qg| Server into a Python application.
+* starting from 2.8 release, Python plugins are also available on QGIS Server (see: `Server Python Plugins <server_plugins>`_)
+* starting from 2.11 version (Master at 2015-08-11), QGIS Server library has Python bindings that can be used to embed QGIS Server into a Python application.
 
 
 .. index:: API
@@ -80,6 +84,8 @@ it is executed by the embedded Python interpreter.
 
 .. index::
   pair: Python; console
+
+.. _pythonconsole:
 
 Python Console
 ==============
@@ -136,12 +142,12 @@ instructions.
 
 .. note::
 
-    Python plugins are also available in |qg| server (:ref:`label_qgisserver`),
+    Python plugins are also available in QGIS server (:ref:`label_qgisserver`),
     see :ref:`server_plugins` for further details.
 
 
 .. index::
-  pair: Python; custom applications
+  pair: Python; custom applications; standalone scripts
 
 .. _pythonapplications:
 
@@ -160,37 +166,96 @@ components, most notably the map canvas widget that can be very easily
 incorporated into the application with support for zooming, panning and/or
 any further custom map tools.
 
-
-Using PyQGIS in custom application
-----------------------------------
+PyQGIS custom applications or standalone scripts must be configured to locate
+the QGIS resources such as projection information, providers for reading vector
+and raster layers, etc. QGIS Resources are initialized by adding a few lines to
+the beginning of your application or script. The code to initialize QGIS for
+custom applications and standalone scripts is similar, but examples of each are
+provided below.
 
 Note: do *not* use :file:`qgis.py` as a name for your test script --- Python
 will not be able to import the bindings as the script's name will shadow them.
 
-First of all you have to import qgis module, set QGIS path where to search
-for resources --- database of projections, providers etc. When you set
-prefix path with second argument set as :const:`True`, QGIS will initialize
-all paths with standard dir under the prefix directory. Calling :func:`initQgis`
-function is important to let QGIS search for the available providers.
+.. _standalonescript:
+
+Using PyQGIS in standalone scripts
+----------------------------------
+
+To start a standalone script, initialize the QGIS resources at the beginning of
+the script similar to the following code:
 
 ::
 
   from qgis.core import *
 
-  # supply path to where is your qgis installed
+  # supply path to qgis install location
   QgsApplication.setPrefixPath("/path/to/qgis/installation", True)
 
+  # create a reference to the QgsApplication, setting the
+  # second argument to False disables the GUI
+  qgs = QgsApplication([], False)
+
   # load providers
-  QgsApplication.initQgis()
+  qgs.initQgis()
+
+  # Write your code here to load some layers, use processing algorithms, etc.
+
+  # When your script is complete, call exitQgis() to remove the provider and
+  # layer registries from memory
+  qgs.exitQgis()
+
+We begin by importing the :mod:`qgis.core` module and then configuring the
+prefix path. The prefix path is the location where QGIS is installed on your
+system. It is configured in the script by calling the ``setPrefixPath``
+method. The second argument of ``setPrefixPath`` is set to :const:`True`,
+which controls whether the default paths are used.
+
+The QGIS install path varies by platform; the easiest way to find it for your
+your system is to use the :ref:`pythonconsole` from within QGIS
+and look at the output from running ``QgsApplication.prefixPath()``.
+
+After the prefix path is configured, we save a reference to ``QgsApplication``
+in the variable ``qgs``. The second argument is set to ``False``, which
+indicates that we do not plan to use the GUI since we are writing a standalone
+script. With the ``QgsApplication`` configured, we load the QGIS data providers
+and layer registry by calling the ``qgs.initQgis()`` method. With QGIS
+initialized, we are ready to write the rest of the script. Finally, we wrap up
+by calling ``qgs.exitQgis()`` to remove the data providers and layer
+registry from memory.
+
+
+Using PyQGIS in custom applications
+-----------------------------------
+
+The only difference between :ref:`standalonescript` and a custom PyQGIS
+application is the second argument when instantiating the ``QgsApplication``.
+Pass :const:`True` instead of ``False`` to indicate that we plan to use a GUI.
+
+::
+
+  from qgis.core import *
+
+  # supply path to qgis install location
+  QgsApplication.setPrefixPath("/path/to/qgis/installation", True)
+
+  # create a reference to the QgsApplication
+  # setting the second argument to True enables the GUI, which we need to do
+  # since this is a custom application
+  qgs = QgsApplication([], True)
+
+  # load providers
+  qgs.initQgis()
+
+  # Write your code here to load some layers, use processing algorithms, etc.
+
+  # When your script is complete, call exitQgis() to remove the provider and
+  # layer registries from memory
+  qgs.exitQgis()
+
 
 Now you can work with QGIS API --- load layers and do some processing or fire
 up a GUI with a map canvas. The possibilities are endless :-)
 
-When you are done with using QGIS library, call :func:`exitQgis` to make
-sure that everything is cleaned up (e.g. clear map layer registry and
-delete layers)::
-
-  QgsApplication.exitQgis()
 
 .. index::
   pair: custom applications; running

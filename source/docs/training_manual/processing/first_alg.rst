@@ -30,7 +30,7 @@ match any of the supported ones, a default extension (usually ``.dbf`` for table
 
 In all the exercises in this guide, we will be saving results to a temporary file, since there is no need to save them for a later use. Feel free to save them to a permament location if you want to.
 
-Notice that temporary files are deleted once you close QGIS. If you create a project with an output that was saved as a temporary output, QGIS will complain when you try to open back the project later, since that output file will not exist.
+.. warning:: Temporary files are deleted once you close QGIS. If you create a project with an output that was saved as a temporary output, QGIS will complain when you try to open back the project later, since that output file will not exist.
 
 Once you have configured the algorithm dialog, press *Run* to run the algorithm.
 

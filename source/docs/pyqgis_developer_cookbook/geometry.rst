@@ -6,6 +6,9 @@
 Geometry Handling
 *****************
 
+.. contents::
+   :local:
+
 Points, linestrings and polygons that represent a spatial feature are commonly
 referred to as geometries. In QGIS they are represented with the
 :class:`QgsGeometry` class. All possible geometry types are nicely shown in

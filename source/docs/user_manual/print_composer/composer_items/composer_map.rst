@@ -5,6 +5,9 @@
 The Map Item
 =============
 
+.. contents::
+   :local:
+
 Click on the |mActionAddMap| :sup:`Add new map` toolbar button in the Print
 Composer toolbar to add the |qg| map canvas. Now, drag a rectangle onto the Composer
 canvas with the left mouse button to add the map. To display the current map, you

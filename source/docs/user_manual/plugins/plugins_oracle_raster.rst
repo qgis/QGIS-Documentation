@@ -5,6 +5,9 @@
 Oracle Spatial GeoRaster Plugin
 ===============================
 
+.. contents::
+   :local:
+
 In Oracle databases, raster data can be stored in SDO_GEORASTER objects available
 with the Oracle Spatial extension. In |qg|, the |oracle_raster|
 :sup:`Oracle Spatial GeoRaster` plugin is supported by GDAL and depends on Oracle's

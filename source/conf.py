@@ -235,8 +235,6 @@ rst_epilog = """
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |checkbox_checked| image:: /static/common/checkbox.png
-   :width: 1.3em
 .. |checkbox_unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
 .. |check_geometry| image::  /static/common/check_geometry.png
@@ -336,8 +334,6 @@ rst_epilog = """
    :width: 1.5em
 .. |gdal_dem| image:: /static/common/gdal_dem.png
    :width: 1.5em
-.. |gdal_edit| image:: /static/common/edit.png
-   :width: 1.5em
 .. |gdal_extract_projection| image:: /static/common/projection-export.png
    :width: 1.5em
 .. |gdal_fillnodata| image:: /static/common/fillnodata.png
@@ -391,8 +387,6 @@ rst_epilog = """
    :width: 1.5em
 .. |georeferencer| image:: /static/common/georeferencer.png
    :width: 1.5em
-.. |geRasterometry| image:: /static/common/geometry.png
-   :width: 1.5em
 .. |gps_importer| image:: /static/common/gps_importer.png
    :width: 1.5em
 .. |gpstrack_barchart| image:: /static/common/gpstrack_barchart.png
@@ -413,9 +407,9 @@ rst_epilog = """
    :width: 1.5em
 .. |grass_region| image:: /static/common/grass_region.png
    :width: 1.5em
-.. |grass_set_region| image:: /static/common/grass_set_region.png
-   :width: 1.5em
 .. |grass_region_edit| image:: /static/common/grass_region_edit.png
+   :width: 1.5em
+.. |grass_set_region| image:: /static/common/grass_set_region.png
    :width: 1.5em
 .. |grass_tools| image:: /static/common/grass_tools.png
    :width: 1.5em
@@ -489,12 +483,6 @@ rst_epilog = """
    :width: 1.5em
 .. |iconSettingsConsole|  image:: /static/common/iconSettingsConsole.png
    :width: 1.5em
-.. |icon_newgpx| image:: /static/common/create_gpx.png
-   :width: 1.5em
-.. |icon_dbmanager| image:: /static/common/dbmanager.png
-   :width: 1.5em
-.. |icon_zonal_statistics| image:: /static/common/raster-stats.png
-   :width: 1.5em
 .. |import_gpx| image:: /static/common/import_gpx.png
    :width: 1.5em
 .. |inputtext| image:: /static/common/inputtext.png
@@ -508,8 +496,10 @@ rst_epilog = """
    :width: 2em
 .. |join_location| image:: /static/common/join_location.png
    :width: 1.5em
-.. |labels| image:: /static/common/labels.png
-   :width: 2em
+.. |labelingObstacle| image:: /static/common/labelingObstacle.png
+   :width: 1.5em
+.. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
+   :width: 1.5em
 .. |layer_extent| image:: /static/common/layer_extent.png
    :width: 1.5em
 .. |locale| image:: /static/common/locale.png
@@ -546,8 +536,6 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
    :width: 1.5em
-.. |mActionAddNonDbLayer| image:: /static/common/mActionAddNonDbLayer.png
-   :width: 1.5em
 .. |mActionAddOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
 .. |mActionAddOracleLayer| image:: /static/common/mActionAddOracleLayer.png
@@ -561,6 +549,8 @@ rst_epilog = """
 .. |mActionAddRing| image:: /static/common/mActionAddRing.png
    :width: 2em
 .. |mActionAddSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
+.. |mActionAddTable| image:: /static/common/mActionAddTable.png
    :width: 1.5em
 .. |mActionAddWmsLayer| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
@@ -598,9 +588,9 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAtlasSettings|  image:: /static/common/mActionAtlasSettings.png
    :width: 1.5em
-.. |mActionCancelEdits| image:: /static/common/mActionCancelEdits.png
-   :width: 1.5em
 .. |mActionCalculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
+.. |mActionCancelEdits| image:: /static/common/mActionCancelEdits.png
    :width: 1.5em
 .. |mActionCaptureBoundary| image:: /static/common/mActionCaptureBoundary.png
    :width: 1.5em
@@ -675,11 +665,13 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionFilter| image:: /static/common/mActionFilter.png
    :width: 1.5em
+.. |mActionFilterMap| image:: /static/common/mActionFilterMap.png
+   :width: 1.5em
 .. |mActionFolder| image:: /static/common/mActionFolder.png
    :width: 1.5em
-.. |mActionFormAnnotation| image:: /static/common/mActionFormAnnotation.png
+.. |mActionForm| image:: /static/common/mActionForm.png
    :width: 1.5em
-.. |mActionFullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png
+.. |mActionFormAnnotation| image:: /static/common/mActionFormAnnotation.png
    :width: 1.5em
 .. |mActionGDALScript| image:: /static/common/mActionGDALScript.png
    :width: 1.5em
@@ -703,7 +695,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionLabel| image:: /static/common/mActionLabel.png
    :width: 1.5em
-.. |mActionLabeling| image:: /static/common/mActionLabeling.png
+.. |mActionLabeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |mActionLink| image:: /static/common/mActionLink.png
    :width: 1.5em
@@ -759,7 +751,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionOffsetCurve| image:: /static/common/mActionOffsetCurve.png
    :width: 1.5em
-.. |mActionOpenRaster| image:: /static/common/mActionOpenRaster.png
+.. |mActionOpenForm| image:: /static/common/mActionOpenForm.png
    :width: 1.5em
 .. |mActionOpenTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
@@ -781,8 +773,6 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionRemove| image:: /static/common/mActionRemove.png
    :width: 1.5em
-.. |mActionRemoveAllFromOverview| image:: /static/common/mActionRemoveAllFromOverview.png
-   :width: 1.5em
 .. |mActionRemoveLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
 .. |mActionReshape| image:: /static/common/mActionReshape.png
@@ -801,6 +791,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionSaveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
+.. |mActionSaveAllEdits| image:: /static/common/mActionSaveAllEdits.png
+   :width: 1.5em
 .. |mActionSaveGCPpointsAs| image:: /static/common/mActionSaveGCPpointsAs.png
    :width: 1.5em
 .. |mActionSaveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
@@ -811,17 +803,15 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionSelectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
-.. |mActionSelectFreehand| image:: /static/common/mActionSelectFreehand.png
+.. |mActionSelectedToTop| image:: /static/common/mActionSelectedToTop.png
    :width: 1.5em
-.. |mActionSelectPan| image:: /static/common/mActionSelectPan.png
+.. |mActionSelectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
 .. |mActionSelectPolygon| image:: /static/common/mActionSelectPolygon.png
    :width: 1.5em
 .. |mActionSelectRadius| image:: /static/common/mActionSelectRadius.png
    :width: 1.5em
 .. |mActionSelectRectangle| image:: /static/common/mActionSelectRectangle.png
-   :width: 1.5em
-.. |mActionSelectedToTop| image:: /static/common/mActionSelectedToTop.png
    :width: 1.5em
 .. |mActionShowAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
@@ -837,7 +827,7 @@ rst_epilog = """
    :width: 2.5em
 .. |mActionSignMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
-.. |mActionSignPlus| image:: /static/common/mActionSignPlus.png
+.. |mActionSignPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |mActionSimplify| image:: /static/common/mActionSimplify.png
    :width: 2em
@@ -914,13 +904,11 @@ rst_epilog = """
    :width: 1.5em 
 .. |mIconExpression| image:: /static/common/mIconExpression.png
    :width: 1.5em
+.. |mIconExpressionFilter| image:: /static/common/mIconExpressionFilter.png
+   :width: 1.5em
 .. |mIconExpressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
 .. |mIconImport| image:: /static/common/mIconImport.gif
-   :width: 1.5em
-.. |mIconLock|  image:: /static/common/mIconLock.png
-   :width: 1.5em
-.. |mIconNew| image:: /static/common/mIconNew.png
    :width: 1.5em
 .. |mIconProjectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
@@ -929,8 +917,6 @@ rst_epilog = """
 .. |mIconRasterGroup| image:: /static/common/mIconRasterGroup.png
    :width: 1.5em
 .. |mIconRasterLink| image:: /static/common/mIconRasterLink.png
-   :width: 1.5em
-.. |mIconStopRendering| image:: /static/common/mIconStopRendering.png
    :width: 1.5em
 .. |mIconZip| image:: /static/common/mIconZip.png
    :width: 2em
@@ -992,6 +978,8 @@ rst_epilog = """
    :width: 1.5em
 .. |plugin| image:: /static/common/plugin.png
    :width: 1.5em
+.. |pluginExperimental| image:: /static/common/pluginExperimental.png
+   :width: 1.5em
 .. |plugin_installed| image:: /static/common/plugin-installed.png
    :width: 1.5em
 .. |plugin_installer| image:: /static/common/plugin_installer.png
@@ -1011,8 +999,8 @@ rst_epilog = """
 .. |proc_toolbox| image:: /static/common/alg.png
    :width: 1.5em
 .. |qgissplash| image:: /static/common/splash.png
-.. |radiobuttonon| image:: /static/common/radiobuttonon.png
 .. |radiobuttonoff| image:: /static/common/radiobuttonoff.png
+.. |radiobuttonon| image:: /static/common/radiobuttonon.png
 .. |random_points| image:: /static/common/random_points.png
    :width: 1.5em
 .. |random_selection| image:: /static/common/random_selection.png
@@ -1029,6 +1017,8 @@ rst_epilog = """
    :width: 1.5em
 .. |RemoveAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
+.. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
 .. |roadgraph| image:: /static/common/roadgraph.png
    :width: 1.5em
 .. |sampling| image:: /static/common/sampling.png
@@ -1042,9 +1032,11 @@ rst_epilog = """
    :width: 2.8em
 .. |selectstring| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |selectesubsetlayer| image:: /static/common/selectesubsetlayer.png
+.. |selectsubsetlayer| image:: /static/common/selectsubsetlayer.png
    :width: 1.5em
 .. |select_location| image:: /static/common/select_location.png
+   :width: 1.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |sharing| image:: /static/common/mActionSharing.png
    :width: 1.5em

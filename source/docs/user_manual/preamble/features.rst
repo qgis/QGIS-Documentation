@@ -6,6 +6,9 @@
 Features
 ********
 
+.. contents::
+   :local:
+
 |qg| offers many common GIS functionalities provided by core features
 and plugins. A short summary of six general categories of features and
 plugins is presented below, followed by first insights into the
@@ -73,7 +76,7 @@ several formats. |qg| offers the following:
 *  DXF-Export tool with enhanced capabilities to export styles and plugins
    to perform CAD-like functions
 
-Analyse data
+Analyze data
 ------------
 
 You can perform spatial data analysis on spatial databases and other

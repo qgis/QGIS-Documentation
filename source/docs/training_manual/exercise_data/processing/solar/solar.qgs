@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.8.2-Wien">
+<qgis projectname="" version="2.14.1-Essen">
   <title></title>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
@@ -30,12 +30,12 @@
         <geographicflag>false</geographicflag>
       </spatialrefsys>
     </destinationsrs>
+    <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
       <layer_coordinate_transform destAuthId="EPSG:3003" srcAuthId="EPSG:102091" srcDatumTransform="-1" destDatumTransform="-1" layerid="Output_vector_layer20140417182814426"/>
       <layer_coordinate_transform destAuthId="EPSG:3003" srcAuthId="EPSG:3003" srcDatumTransform="-1" destDatumTransform="-1" layerid="dem20140417180359628"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
-  <visibility-presets/>
   <layer-tree-canvas>
     <custom-order enabled="0">
       <item>dem20140417180359628</item>
@@ -48,10 +48,11 @@
       </filegroup>
     </legendlayer>
   </legend>
-  <projectlayers layercount="1">
+  <projectlayers>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <id>dem20140417180359628</id>
       <datasource>./dem.tif</datasource>
+      <shortname></shortname>
       <title></title>
       <abstract></abstract>
       <keywordList>
@@ -148,6 +149,10 @@
     </maplayer>
   </projectlayers>
   <properties>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString"></AreaUnits>
+    </Measurement>
     <SemiAutomaticClassificationPlugin>
       <bandSetPresent type="QString">No</bandSetPresent>
       <bndSetWvLn type="QString">[]</bndSetWvLn>
@@ -180,4 +185,5 @@
       <filterByMap type="bool">false</filterByMap>
     </Legend>
   </properties>
+  <visibility-presets/>
 </qgis>

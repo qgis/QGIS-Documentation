@@ -5,6 +5,9 @@
 The toolbox
 ============
 
+.. contents::
+   :local:
+
 The *Toolbox* is the main element of the processing GUI, and the one that you are
 more likely to use in your daily work. It shows the list of all available
 algorithms grouped in different blocks, and it is the access point to run them,

@@ -1,11 +1,12 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
 .. _`georef`:
 
 Georeferencer Plugin
 ====================
+
+.. contents::
+   :local:
 
 The Georeferencer Plugin is a tool for generating world files for rasters. It
 allows you to reference rasters to geographic or projected coordinate systems by
@@ -40,7 +41,7 @@ you can accurately determine coordinates.
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
 | |mActionZoomNext|              | Zoom Next                  | |mActionLinkGeorefToQGis|     | Link Georeferencer to |qg| |
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
-| |mActionLinkQGisToGeoref|      | Link |qg| to Georeferencer | |mActionFullHistogramStretch| | Full histogram stretch     |
+| |mActionLinkQGisToGeoref|      | Link QGIS to Georeferencer | |FullHistogramStretch|        | Full histogram stretch     |
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
 | |mActionLocalHistogramStretch| | Local histogram stretch    |                               |                            |
 +--------------------------------+----------------------------+-------------------------------+----------------------------+
@@ -237,7 +238,7 @@ menu opens the raster properties of the layer that you want to georeference.
 Configure the georeferencer
 ...........................
 
-* You can define whether you want to show GCP coordiniates and/or IDs.
+* You can define whether you want to show GCP coordinates and/or IDs.
 * As residual units, pixels and map units can be chosen.
 * For the PDF report, a left and right margin can be defined and you can also
   set the paper size for the PDF map.
