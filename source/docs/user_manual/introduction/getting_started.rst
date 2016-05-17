@@ -120,11 +120,16 @@ a raster and a vector layer. We will use:
 Start QGIS
 ..........
 
-* |nix| Start QGIS by typing "QGIS" at a command prompt, or if using a
-  precompiled binary, by using the Applications menu.
-* |win| Start QGIS using the Start menu or desktop shortcut, or double click on
-  a QGIS project file.
-* |osx| Double click the icon in your Applications folder.
+Starting QGIS is done as you usually do for any other application on your
+platform. It means that you can launch QGIS by:
+
+* typing ``qgis`` at a command prompt, assuming that QGIS is added to your PATH
+  or you're in its installation folder
+* using |nix| the Applications menu if using a precompiled binary,
+  |win| the Start menu or |osx| the Dock
+* double clicking the icon in your Applications folder or desktop shortcut
+* double clicking an existing QGIS project (``.qgs``) file. Note that this will
+  also open the project
 
 .. _`fig_simple_session`:
 
@@ -147,20 +152,20 @@ Load raster and vector layers from the sample dataset
    in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to
    select the vector layer.
 #. Browse to the folder :file:`qgis_sample_data/gml/`, select **Geography Markup
-   Language [GML] [OGR] (*.gml *.GML)** from the :guilabel:`Filter` |selectString| 
+   Language [GML] [OGR] (*.gml *.GML)** from the :guilabel:`Filter` |selectstring|
    combo box, then select the GML file :file:`lakes.gml` and
    click **[Open]**. In the :guilabel:`Add vector layer` dialog, click **[OK]**.
-   The :guilabel:`Coordinate Reference System Selector` dialog opens with 
-   :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**. 
+   The :guilabel:`Coordinate Reference System Selector` dialog opens with
+   :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**.
 #. Zoom in a bit to your favourite area with some lakes.
 #. Double click the :file:`lakes` layer in the map legend to open the
    :guilabel:`Properties` dialog.
 #. Click on the :guilabel:`Style` tab and select a blue as fill color.
 #. Click on the :guilabel:`Labels` tab and select :guilabel:`Show labels for
-   this layer` in the drop-down menu to enable labelling. Then from the
-   :guilabel:`Label with` list, choose the "NAMES" field as the field containing labels.
+   this layer` in the drop-down menu to enable labeling. Then from the
+   :guilabel:`Label with` list, choose the ``NAMES`` field as the field containing labels.
 #. To improve readability of labels, you can add a white buffer around them
-   by clicking "Buffer" in the list on the left, checking |checkbox|
+   by clicking :guilabel:`Buffer` in the list on the left, checking |checkbox|
    :guilabel:`Draw text buffer` and choosing 3 as buffer size.
 #. Click **[Apply]**. Check if the result looks good, and finally click **[OK]**.
 
@@ -173,21 +178,15 @@ functionality, features and settings, and how to use them.
 Starting and Stopping QGIS
 ==========================
 
-In section :ref:`samplesession` you already learned how to start QGIS. We will
-repeat this here, and you will see that QGIS also provides further command line
-options.
+In section :ref:`samplesession` you already learned how to start QGIS.
+You will see that QGIS also provides further command line options.
 
-* |nix| Assuming that QGIS is installed in the PATH, you can start QGIS
-  by typing ``qgis`` at a command prompt or by double clicking on the QGIS
-  application link (or shortcut) on the desktop or in the Applications menu.
-* |win| Start QGIS using the Start menu or desktop shortcut, or double click on
-  a QGIS project file.
-* |osx| Double click the icon in your Applications folder. If you need to
-  start QGIS in a shell, run
-  ``/path-to-installation-executable/Contents/MacOS/Qgis``.
+To stop QGIS, click:
 
-To stop QGIS, click the menu option |nix| |win| :menuselection:`File` |osx|
-:menuselection:`QGIS --> Quit`, or use the shortcut :kbd:`Ctrl+Q`.
+* |nix| |win| the menu option :menuselection:`Project --> Exit QGIS` or use the shortcut
+  :kbd:`Ctrl+Q`
+* |osx| :menuselection:`QGIS --> Quit QGIS`, or use the shortcut :kbd:`Cmd+Q`
+* or use the red cross at the right top corner of the main interface of the application.
 
 .. _`label_commandline`:
 
@@ -197,7 +196,7 @@ Command Line Options
 .. index::
    single:command line options
 
-|nix| QGIS supports a number of options when started from the command line. To
+QGIS supports a number of options when started from the command line. To
 get a list of the options, enter ``qgis --help`` on the command line. The usage
 statement for QGIS is:
 
@@ -226,8 +225,8 @@ statement for QGIS is:
 
   FILE:
     Files specified on the command line can include rasters,
-    vectors, and QGIS project files (.qgs): 
-     1. Rasters - supported formats include GeoTiff, DEM 
+    vectors, and QGIS project files (.qgs):
+     1. Rasters - supported formats include GeoTiff, DEM
         and others supported by GDAL
      2. Vectors - supported formats include ESRI Shapefiles
         and others supported by OGR and PostgreSQL layers using
@@ -256,7 +255,7 @@ be added after ``--snapshot``.
 
 Based on your locale, QGIS selects the correct localization. If you would like
 to change your language, you can specify a language code. For example,
-``--lang=it`` starts QGIS in Italian localization.
+``qgis --lang it`` starts QGIS in Italian localization.
 
 **Command line option** ``--project``
 
@@ -284,7 +283,7 @@ start-up with this option. They will still be available from the Plugins Manager
 
 **Command line option** ``--customizationfile``
 
-Using this command line argument, you can define a GUI customization file, that will 
+Using this command line argument, you can define a GUI customization file, that will
 be used at startup.
 
 **Command line option** ``--nocustomization``
@@ -298,8 +297,8 @@ You can have multiple configurations and decide which one to use when starting
 QGIS with this option. See :ref:`gui_options` to confirm where the
 operating system saves the settings files. Presently, there is no way to specify
 a file to write settings to; therefore, you can create a copy of
-the original settings file and rename it. The option specifies path to directory 
-with settings. For example, to use :file:`/path/to/config/QGIS/QGIS2.ini` settings file, 
+the original settings file and rename it. The option specifies path to directory
+with settings. For example, to use :file:`/path/to/config/QGIS/QGIS2.ini` settings file,
 use option:
 
 ::
@@ -326,10 +325,10 @@ For example, when you have a python file named :file:`load_alaska.py` with follo
   layer_name = "Alaska"
   iface.addRasterLayer(raster_file, layer_name)
 
-Assuming you are in the directory where the file :file:`load_alaska.py` is located, you 
-can start QGIS, load the raster file :file:`landcover.img` and give the layer the name 
-'Alaska' using the following command: 
-``qgis --code load_alaska.py`` 
+Assuming you are in the directory where the file :file:`load_alaska.py` is located, you
+can start QGIS, load the raster file :file:`landcover.img` and give the layer the name
+'Alaska' using the following command:
+``qgis --code load_alaska.py``
 
 .. _sec_projects:
 
