@@ -336,19 +336,28 @@ can start |qg|, load the raster file :file:`landcover.img` and give the layer th
 Projects
 ========
 
-The state of your |qg| session is considered a project. |qg| works on one
+The state of your QGIS session is considered a project. QGIS works on one
 project at a time. Settings are considered as being either per-project or as a
-default for new projects (see section :ref:`gui_options`). |qg| can save the
+default for new projects (see section :ref:`gui_options`). QGIS can save the
 state of your workspace into a project file using the menu options
 :menuselection:`Project -->` |mActionFileSave| :menuselection:`Save`
 or :menuselection:`Project -->` |mActionFileSaveAs| :menuselection:`Save As...`.
-If the loaded project file on disk was meanwhile changed, |qg| will ask you if
-you want to overwrite the changes into the project file.
+If the loaded project file on disk was meanwhile changed, by default, QGIS will
+ask you if you want to overwrite the changes into the project file. This behavior
+is set by checking |checkbox| :guilabel:`Prompt to save project and data source
+changes when required` under :menuselection:`Settings --> Options --> General`
+menu .
 
-Load saved projects into a |qg| session using :menuselection:`Project -->`
+Load saved projects into a QGIS session using :menuselection:`Project -->`
 |mActionFileOpen| :menuselection:`Open...`,
 :menuselection:`Project --> New from template` or
 :menuselection:`Project --> Open Recent -->`.
+
+At startup, a list of screenshot with the name and path of each of the most recent
+projects (up to ten) is shown instead of a white and empty map canvas. This is
+a handy and quicker way to remember what a project was about and double-click
+a row opens the selected project.
+If you're willing to create a new project, just add new layers and the list disappears.
 
 If you wish to clear your session and start fresh, choose
 :menuselection:`Project -->` |mActionFileNew| :menuselection:`New`.
@@ -375,19 +384,15 @@ The kinds of information saved in a project file include:
 
 
 The project file is saved in XML format, so it is possible to edit the file
-outside |qg| if you know what you are doing. The file format has been updated several
-times compared with earlier |qg| versions. Project files from older |qg| versions
+outside QGIS if you know what you are doing. The file format has been updated several
+times compared with earlier QGIS versions. Project files from older QGIS versions
 may not work properly any more. To be made aware of this, in the
-:guilabel:`General` tab under :menuselection:`Settings --> Options` you can
-select:
+:guilabel:`General` tab under :menuselection:`Settings --> Options` you should
+tick |checkbox| :guilabel:`Warn when opening a project file saved with an older
+version of QGIS`.
 
-* |checkbox| :guilabel:`Prompt to save project and data source changes when
-  required`
-* |checkbox| :guilabel:`Warn when opening a project file saved with an older
-  version of QGIS`
-
-Whenever you save a project in QGIS a backup of the project file is made with the 
-extension ``.qgs~``. 
+Whenever you save a project in QGIS a backup of the project file is made with the
+extension ``.qgs~``.
 
 .. _`sec_output`:
 
@@ -399,18 +404,18 @@ Output
 .. index::
    single:print composer quick print
 
-There are several ways to generate output from your |qg| session. We have
+There are several ways to generate output from your QGIS session. We have
 discussed one already in section :ref:`sec_projects`, saving as a project file.
 Here is a sampling of other ways to produce output files:
 
-* Menu option :menuselection:`Project -->` |mActionSaveMapAsImage| :sup:`Save
-  as Image` opens a file dialog where you select the name, path and type of
+* Menu option :menuselection:`Project -->` |mActionSaveMapAsImage| :menuselection:`Save
+  as Image...` opens a file dialog where you select the name, path and type of
   image (PNG, JPG and many other formats). A world file with extension ``PNGW``
   or ``JPGW`` saved in the same folder georeferences the image.
-* Menu option :menuselection:`Project -->` :guilabel:`DXF Export ...` opens
+* Menu option :menuselection:`Project --> DXF Export...` opens
   a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
   vector layers you want to export to DXF. Through the 'Symbology mode' symbols
   from the original QGIS Symbology can be exported with high fidelity.
 * Menu option :menuselection:`Project -->` |mActionNewComposer|
-  :menuselection:`New Print Composer` opens a dialog where you can layout and
+  :menuselection:`New Print Composer...` opens a dialog where you can layout and
   print the current map canvas (see section :ref:`label_printcomposer`).
