@@ -233,7 +233,7 @@ from the Coordinate Reference System Selector, or click :guilabel:`Used`
 to add the CRSs used in the QGIS project to the list.
 
 If you have print composers defined in your project, they will be listed in the
-GetCapabilities response, and they can be used by the GetPrint request to
+`GetProjectSettings` response, and they can be used by the GetPrint request to
 create prints, using one of the print composer layouts as a template.
 This is a QGIS-specific extension to the WMS 1.3.0 specification.
 If you want to exclude any print composer from being published by the WMS,
