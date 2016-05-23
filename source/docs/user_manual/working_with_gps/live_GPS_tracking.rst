@@ -8,7 +8,7 @@ Live GPS tracking
 .. contents::
    :local:
 
-To activate live GPS tracking in |qg|, you need to select :menuselection:`Settings --> Panels`
+To activate live GPS tracking in QGIS, you need to select :menuselection:`Settings --> Panels`
 |checkbox| :guilabel:`GPS information`. You will get a new docked window on the
 left side of the canvas.
 
@@ -22,10 +22,10 @@ There are four possible screens in this GPS tracking window:
 * |mActionOptions| GPS options screen (see figure_gps_options_)
 
 With a plugged-in GPS receiver (has to be supported by your operating system),
-a simple click on **[Connect]** connects the GPS to |qg|. A second click (now
+a simple click on **[Connect]** connects the GPS to QGIS. A second click (now
 on **[Disconnect]**) disconnects the GPS receiver from your computer. For GNU/Linux,
 gpsd support is integrated to support connection to most GPS receivers. Therefore,
-you first have to configure gpsd properly to connect |qg| to it.
+you first have to configure gpsd properly to connect QGIS to it.
 
 .. warning::
    If you want to record your position to the canvas, you have to create a new

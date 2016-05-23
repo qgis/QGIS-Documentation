@@ -3,7 +3,7 @@
 .. _label_processing:
 
 ***************************
-|qg| processing framework
+QGIS processing framework
 ***************************
 
 .. toctree::

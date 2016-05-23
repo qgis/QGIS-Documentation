@@ -46,7 +46,7 @@ Text or Keyboard Conventions
 This manual also includes styles related to text, keyboard commands
 and coding to indicate different entities, such as classes or
 methods. These styles do not correspond to the actual appearance of
-any text or coding within |qg|.
+any text or coding within QGIS.
 
 .. Use for all urls. Otherwise, it is not clickable in the document.
 
@@ -77,7 +77,7 @@ GUI sequences and small amounts of text may be formatted inline: Click
 |nix| |win| :menuselection:`File` |osx| :menuselection:`QGIS --> Quit
 to close QGIS`. This indicates that on Linux, Unix and Windows
 platforms, you should click the File menu first, then Quit, while on
-Macintosh OS X platforms, you should click the |qg| menu first, then
+Macintosh OS X platforms, you should click the QGIS menu first, then
 Quit.
 
 Larger amounts of text may be formatted as a list:

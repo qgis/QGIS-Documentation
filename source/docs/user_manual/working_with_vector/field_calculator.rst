@@ -58,7 +58,7 @@ be added or update an existing field.
 .. figure:: /static/user_manual/working_with_vector/fieldcalculator.png
    :align: center
 
-   Field Calculator |nix|
+   Field Calculator
 
 If you choose to add a new field, you need to enter a field name, a field type
 (integer, real or string), the total field width, and the field precision (see
@@ -67,9 +67,9 @@ precision of 3, it means you have 6 digits before the dot, then the dot and anot
 3 digits for the precision.
 
 A short example illustrates how field calculator works when using the :guilabel:`Expression` tab.
-We want to calculate the length in km of the ``railroads`` layer from the |qg| sample dataset:
+We want to calculate the length in km of the ``railroads`` layer from the QGIS sample dataset:
 
-#. Load the shapefile :file:`railroads.shp` in |qg| and press |mActionOpenTable|
+#. Load the shapefile :file:`railroads.shp` in QGIS and press |mActionOpenTable|
    :sup:`Open Attribute Table`.
 #. Click on |mActionToggleEditing| :sup:`Toggle editing mode` and open the
    |mActionCalculateField| :sup:`Field Calculator` dialog.

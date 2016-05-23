@@ -9,10 +9,10 @@ Preamble
 ********
 
 This document is the original user guide of the described software
-|qg|. The software and hardware described in this document are in most
+QGIS. The software and hardware described in this document are in most
 cases registered trademarks and are therefore subject to legal
-requirements. |qg| is subject to the GNU General Public License. Find
-more information on the |qg| homepage, http://www.qgis.org.
+requirements. QGIS is subject to the GNU General Public License. Find
+more information on the QGIS homepage, http://www.qgis.org.
 
 The details, data, and results in this document have been written and
 verified to the best of the knowledge and responsibility of the
@@ -29,7 +29,7 @@ as reST source code via `github
 <https://github.com/qgis/QGIS-Documentation>`_ and online as HTML and
 PDF via http://www.qgis.org/en/docs/. Translated versions of this
 document can be downloaded in several formats via the documentation
-area of the |qg| project as well. For more information about
+area of the QGIS project as well. For more information about
 contributing to this document and about translating it, please visit
 http://www.qgis.org/wiki/.
 
@@ -60,7 +60,7 @@ form, the browser displays and handles both identically.
 +--------------------+---------------------+----------------------+----------------------+----------------------+
 
 
-Copyright (c) 2004 - 2014 |qg| Development Team
+Copyright (c) 2004 - 2014 QGIS Development Team
 
 **Internet:** http://www.qgis.org
 

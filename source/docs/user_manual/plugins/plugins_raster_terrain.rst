@@ -43,7 +43,7 @@ Description of the analysis:
 Using the plugin
 ----------------
 
-#. Start |qg| and load the :file:`gtopo30` raster layer from the GRASS sample
+#. Start QGIS and load the :file:`gtopo30` raster layer from the GRASS sample
    location.
 #. Load the Raster Terrain Analysis plugin in the Plugin Manager (see
    :ref:`managing_plugins`).

@@ -67,16 +67,6 @@ Icon                     Substitution               Icon                   Subst
 |mIconDataDefine|        ``|mIconDataDefine|``      \                      \
 =======================  =========================  =====================  =========================
 
-Words and symbols
-.................
-
-==========  ================
-Icon        Substitution
-==========  ================
-|QG|        ``|QG|``
-|degrees|   ``|degrees|``
-==========  ================
-
 
 Menu items not used much
 ........................
@@ -87,6 +77,7 @@ Icon            Substitution
 |selectcolor|   ``|selectcolor|``
 |inputtext|     ``|inputtext|``
 |tab|           ``|tab|``
+|degrees|       ``|degrees|``
 ==============  =================
 
 
