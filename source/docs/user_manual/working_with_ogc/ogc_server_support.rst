@@ -461,7 +461,7 @@ of the contained composer maps and labels.
 
 Example:
 
-The published project has two composer maps. In the GetCapabilities response, 
+The published project has two composer maps. In the `GetProjectSettings` response, 
 they are listed as possible print templates::
 
     <WMS_Capabilities>
