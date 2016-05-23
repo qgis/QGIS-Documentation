@@ -73,12 +73,17 @@ You can use some tags inside the text to emphasize some items.
      :menuselection:`menu --> submenu`
 
 * **Dialog and Tab title**: Labels presented as part of an interactive user interface
-  including button labels, window titles, field names, menu and menu selection names,
-  and even values in selection lists.
+  including window title, tab title and option labels.
 
   ::
 
      :guilabel:`title`
+
+* **Button labels**
+
+  ::
+
+     **[Apply]**
 
 * **Filename or directory**
 
@@ -86,7 +91,7 @@ You can use some tags inside the text to emphasize some items.
 
      :file:`README.rst`
 
-* **Icon with popup text belonging to Icon**:
+* **Icon with popup text belonging to Icon**
 
   ::
 

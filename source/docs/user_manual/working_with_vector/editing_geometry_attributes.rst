@@ -547,7 +547,7 @@ First, drag a rectangle over the feature. The vertices will be highlighted in re
 feature will change and a dialog where you can define a tolerance in map units or pixels
 will appear. QGIS calculates the amount of vertices that can be deleted while maintaining the
 geometry using the given tolerance. The higher the tolerance is the more vertices can be deleted. After
-gaining the statistics about the simplification just klick the :guilabel:`OK` button.
+gaining the statistics about the simplification just click the **[OK]** button.
 The tolerance you used will be saved when leaving a project or when leaving an edit session.
 So you can go back to the same tolerance the next time when simplifying a feature.
 
