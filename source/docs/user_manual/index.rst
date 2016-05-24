@@ -26,6 +26,7 @@ QGIS User Guide
     working_with_raster/index
     working_with_ogc/index
     working_with_gps/index
+    auth_system/auth_index
     grass_integration/grass_integration
     processing/index
     processing_algs/index
