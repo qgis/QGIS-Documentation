@@ -199,6 +199,24 @@ html_show_copyright = False
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'QGISWebsitedoc'
 
+latex_elements = {
+# added by mkuhn: see https://travis-ci.org/QGEP/docs/builds/78364932#L3944
+# The paper size ('letterpaper' or 'a4paper').
+ 'papersize': 'a4paper',
+
+  # The font size ('10pt', '11pt' or '12pt').
+  #'pointsize': '10pt',
+
+  # Additional stuff for the LaTeX preamble.
+  'preamble': u'''\\usepackage{combelow}
+    \\usepackage{newunicodechar}
+    \\newunicodechar{Ș}{\\cb{S}}
+    \\newunicodechar{ș}{\\cb{s}}
+    \\newunicodechar{Ț}{\\cb{T}}
+    \\newunicodechar{ț}{\\cb{t}}
+    '''
+}
+
 rst_prolog = """
 .. role:: disclaimer
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.8 for QGIS 2.8 docs and translations.`
