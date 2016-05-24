@@ -100,10 +100,10 @@ Sphinx intl extention ( https://pypi.python.org/pypi/sphinx-intl )::
 
     pip install sphinx-intl
 
-Then build::
+Then build:
 
-    make html (to build the english language)
-    make LANG=nl html (to build the dutch version)
+    * ``make html`` to build the english language
+    * ``make LANG=nl html`` to build the dutch version
 
 If you want add the QGIS-Documentation docs into the build, you either need to manually copy the sources, resources 
 and po files into the website project. Or use the fullhtml target of make (which will checkout the 2.0 branch)::
@@ -123,6 +123,18 @@ To add a new language (the scripts will need some directory structure)::
     make createlang LANG=xx
 
 See the website in action: http://www.qgis.org
+
+Building PDF
+^^^^^^^^^^^^
+
+You will need to install **texi2pdf** by doing:
+
+* ``sudo apt-get install texinfo`` on Debian based systems
+* ``sudo yum install texinfo-tex`` on Fedora based systems
+
+Alike the html build command, you need to run make with the option to build pdf (pdf also builds the html output):
+
+``make LANG=xx pdf``
 
 
 Building the Documentation using Docker

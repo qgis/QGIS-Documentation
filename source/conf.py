@@ -200,7 +200,6 @@ html_show_copyright = False
 htmlhelp_basename = 'QGISWebsitedoc'
 
 latex_elements = {
-# added by mkuhn: see https://travis-ci.org/QGEP/docs/builds/78364932#L3944
 # The paper size ('letterpaper' or 'a4paper').
  'papersize': 'a4paper',
 
