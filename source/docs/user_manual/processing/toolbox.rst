@@ -27,9 +27,9 @@ of the same algorithm on different sets of inputs.
 
 The toolbox contains all the available algorithms, divided into so-called "Providers".
 
-Providers can be (de)activated in the settings dialog. 
+Providers can be (de)activated in the settings dialog.
 A label in the bottom part of the toolbox will remind you of that whenever there
-are inactive providers. Use the link in the label to open the settings window and 
+are inactive providers. Use the link in the label to open the settings window and
 set up providers. We will discuss the settings dialog later in this manual.
 
 By default only, providers that do not rely on third-party applications (that is, those that
@@ -97,7 +97,7 @@ This dialog is used to set the input values that the algorithm needs to be
 executed. It shows a list of input values and configuration parameters to
 be set. It of course has a different content, depending on the requirements of
 the algorithm to be executed, and is created automatically based on those
-requirements. 
+requirements.
 
 Although the number and type of parameters depend on the characteristics of the
 algorithm, the structure is similar for all of them. The parameters found in the
@@ -179,7 +179,7 @@ processed separately.
 
   .. figure:: /static/user_manual/processing/extent.png
      :align: center
-     
+
      Extent selector
 
   If you select the first option, you will see a window like the next one.
@@ -257,8 +257,8 @@ algorithm, which will help you understand its purpose and its basic ideas.
 If such a description is not available, the description panel will not be shown.
 
 Some algorithms might have a more detailed help file, which might include description
-of every parameter it uses, or examples. In that case, you will find a **[Help]**
-tab in the  parameters dialog.  
+of every parameter it uses, or examples. In that case, you will
+find a :guilabel:`Help` tab in the  parameters dialog.
 
 
 A note on projections
@@ -324,7 +324,7 @@ just select the corresponding file extension (or add it, if you are directly typ
 the file path instead). If the extension of the file path you entered does not
 match any of the supported formats, a default extension will be
 appended to the file path, and the file format corresponding to that extension will
-be used to save the layer or table. Default extensions are :file:`.dbf`` for
+be used to save the layer or table. Default extensions are :file:`.dbf` for
 tables, :file:`.tif` for raster layers and :file:`.shp` for vector layers. These
 can be modified in the setting dialog, selecting any other of the formats supported by QGIS.
 
@@ -401,7 +401,7 @@ next.
 .. figure:: /static/user_manual/processing/rendering_styles.png
    :align: center
 
-   Rendering Styles |win|
+   Rendering Styles
 
 Select the style file (:file:`.qml`) that you want for each output and press
 **[OK]**.
