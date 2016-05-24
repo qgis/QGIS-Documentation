@@ -493,7 +493,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
                       point in common, but their interiors do not intersect
  transform            Returns the geometry transformed from the source CRS to
                       the destination CRS
- translate            Returns a translated version of a geometry.Calculations
+ translate            Returns a translated version of a geometry. Calculations
                       are in the Spatial Reference System of this geometry
  union                Returns a geometry that represents the point set union of
                       the geometries
@@ -514,6 +514,15 @@ This group contains functions that operate on geometry objects (e.g., length, ar
  z                    Returns the z coordinate of a point geometry
 ====================  =========================================================
 
+**Some examples:**
+
+* Return the x coordinate of the current feature's centroid::
+
+    x($geometry)
+
+* Send back a value according to feature's area::
+
+    CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
 
 Record Functions
 -----------------
@@ -538,6 +547,17 @@ This group contains functions that operate on record identifiers.
  uuid                Generates a Universally Unique Identifier (UUID)
                      for each row. Each UUID is 38 characters long
 ===================  ==========================================================
+
+**Some examples:**
+
+* Return the first feature in layer "LayerA" whose field "id" has the same value
+  as the field "name" of the current feature (a kind of jointure)::
+
+    get_feature( 'layerA', 'id', attribute( $currentfeature, 'name') )
+
+* Calculate the area of the joined feature from the previous example::
+
+    area( geometry( get_feature( 'layerA', 'id', attribute( $currentfeature, 'name') ) ) )
 
 
 String Functions
