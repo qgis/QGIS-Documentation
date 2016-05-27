@@ -242,19 +242,22 @@ you may previously only know from graphics programs:
 Draw effects
 ------------
 
-Still in order to improve layer rendering and avoid (or at least reduce)
+In order to improve layer rendering and avoid (or at least reduce)
 the resort to other software for final rendering of maps, QGIS provides another
-powerful function: the |paintEffects| :guilabel:`Draw Effects` tool.
-This option can be applied either at the feature level while shaping the symbol
-or at the whole layer level. It adds :index:`paint effects` for customizing the visualization
-of vector files.
+powerful functionality: the |paintEffects| :guilabel:`Draw Effects` options,
+which adds :index:`paint effects` for customizing the visualization of vector
+layers.
 
-The function is activated by checking the |checkbox| :guilabel:`Draw effects` option
-and clicking the |paintEffects| :sup:`Customize effects` button.
-The effects include the following categories, with the following options:
+The options are available at the whole layer level (in the :guilabel:`Layer rendering`
+group) and at feature level (in each symbol layer), and you can even combine
+both.
 
-* **Source:** Implements the feature in the drawing menu, with its style as selected in the
-  layer properties. The transparency of its style can be adjusted.
+The effects can be activated by checking the |checkbox| :guilabel:`Draw effects` option
+and clicking the |paintEffects| :sup:`Customize effects` button, that will open
+the :guilabel:`Effect Properties` Dialog (see figure_effects_1). The following effect types are available:
+
+* **Source:** Draws the feature's original style according to the
+  configuration of the layer's properties. The transparency of its style can be adjusted.
 
   .. _figure_effects_1:
 
@@ -282,11 +285,14 @@ The effects include the following categories, with the following options:
 
      Draw Effects: Blur dialog
 
-* **Colorize:** This effect can be used by someone who wants to adjust the :menuselection:`brightness`,
-  :menuselection:`contrast` and :menuselection:`saturation` levels of the feature. It also offers
-  the option to overlay another color and mix it with the feature's current one. By default,
-  the :menuselection:`grayscale` effect selected, which actually converts the color of the feature
-  to grayscale, based on 3 options: lightness, luminosity and average.
+* **Colorize:** This effect can be used to make a version of the style using one
+  single hue. The base will always be a grayscale version of the symbol and you
+  can use the |selectString| :guilabel:`Grayscale` to select how to create it
+  (options are: 'lightness', 'luminosity' and 'average'). If |checkbox|
+  :guilabel:`Colorise` is selected, it will be possible to mix another color
+  and choose how strong it should be. You can also control the
+  :guilabel:`Brightness`, :guilabel:`contrast` and
+  :guilabel:`saturation` levels of the resulting symbol.
 
   .. _figure_effects_3:
 
@@ -362,14 +368,14 @@ The effects include the following categories, with the following options:
 
      Draw Effects: Outer Glow dialog
 
-* **Transform:** Adds the possibility of transforming the shape of the source feature.
+* **Transform:** Adds the possibility of transforming the shape of the symbol.
   The first options available for customization are the :menuselection:`Reflect horizontal`
   and :menuselection:`Reflect vertical`, which actually create a reflection on the
   horizontal and/or vertical axes. The 4 other options are:
   
   * :menuselection:`Shear`: slants the feature along the x and/or y axis
   * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or y axis
-    by the percentage given
+    by the given percentage
   * :menuselection:`Rotation`: turns the feature around its center point
   * and :menuselection:`Translate` changes the position of the item based on a distance
     given on the x and/or the y axis.
@@ -385,14 +391,28 @@ The effects include the following categories, with the following options:
 
      Draw Effects: Transform dialog
 
-In each of the Draw effect types, the :menuselection:`Blend mode` and :menuselection:`Draw mode`
-can be adjusted to match the user needs. The Blend mode follows the same methods as the ones
-included for the layers and cannot be used for the transform effect.
-You can find more information in the :ref:`blend-modes`.
-The Draw mode can apply a render and/or modify mode for each of the effects.
+There are some common options available for all draw effect types.
+:guilabel:`Transparency` and :guilabel:`Blend mode` options work similar
+to the ones described in :ref:`layer_rendering` and can be used in all draw
+effects except for the transform one.
 
-One or more draw effects can be selected at the same time, which can also be
-moved up and down, in order to finally get the desired result.
+One or more draw effects can used at the same time. You activate/deactivate an effect
+using its checkbox in the effects list. You can change the selected effect type by 
+using the |selectstring| :guilabel:`Effect type` option. You can reorder the effects 
+using |arrowUp| :sup:`Move up` and |arrowDown| :sup:`Move down`
+buttons, and also add/remove effects using the |signPlus| :sup:`Add effect`
+and |signMinus| :sup:`Remove effect` buttons.
+  
+There is also a |selectString| :guilabel:`Draw mode` option available for 
+every draw effect, and you can choose whether to render and/or to modify the
+symbol. Effects render from top to bottom.'Render only' mode means that the
+effect will be visible while the 'Modify only' mode means that the effect will
+not be visible but the changes that it applies will be passed to the next effect
+(the one immediately below). The 'Render and Modify' mode will make the
+effect visible and pass any changes to the next effect. If the effect is in the
+top of the effects list or if the immediately above effect is not in modify
+mode, then it will use the original source symbol from the layers properties
+(similar to source).
 
 .. _data_def:
 
