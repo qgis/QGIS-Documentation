@@ -621,6 +621,34 @@ To log requests sent to the server, set the following environment variables:
 .. index::
     pair: environment; QGIS Server
 
+Short name for layers, groups and project
+-----------------------------------------
+
+A number of elements have both a ``<Name>`` and a ``<Title>``.
+The **Name** is a text string used for machine-to-machine
+communication while the **Title** is for the benefit of humans.
+
+For example, a dataset might have the descriptive Title
+“Maximum Atmospheric Temperature” and be requested using the abbreviated 
+Name “ATMAX”. User can already set title for layers, groups and project.
+
+OWS name is based on the name used in layer tree. This name is more a label
+for humans than a name for machine-to-machine communication.
+
+QGIS Server supports:
+
+* short name line edits to layers properties
+* WMS data dialog to layer tree group (short name, title, abstract)
+* short name line edits to project properties- add a regexp validator
+  ``"^[A-Za-z][A-Za-z0-9\._-]*"`` to short name line edit accessible through a
+  static method
+* add a regexp validator ``"^[A-Za-z][A-Za-z0-9\._-]*"`` to short name line
+  edit accessible through a static method
+* add a ``TreeName`` element in the ``fullProjectSettings``
+
+If a short name has been set for layers, groups and project it is used by
+QGIS Sever as the layer name.
+
 Environment variables
 ---------------------------------
 
