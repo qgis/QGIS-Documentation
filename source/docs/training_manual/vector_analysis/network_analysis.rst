@@ -182,7 +182,7 @@ the features, or set the :guilabel:`Topology tolerance` in the plugin's
 settings. If they're passing over each other without intersecting, use
 the :guilabel:`Split features` tool to "split" roads at their intersections:
 
-|mActionSplitFeatures|
+|splitFeatures|
 
 Remember that the :guilabel:`Split features` tool only works in edit mode on
 selected features, though!

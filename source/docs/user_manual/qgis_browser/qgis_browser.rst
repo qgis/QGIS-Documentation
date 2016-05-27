@@ -35,7 +35,7 @@ to get your data into the map view and the map legend.
 #. Press the left mouse button, then drag and drop the files into the map canvas.
 #. Right-click on a layer and choose :guilabel:`Set project CRS from layer`.
    For more information see :ref:`label_projections`.
-#. Click on |mActionZoomFullExtent| :sup:`Zoom Full` to make the layers
+#. Click on |zoomFullExtent| :sup:`Zoom Full` to make the layers
    visible.
    
 There is a second browser available under :menuselection:`Settings --> Panels`.
@@ -48,7 +48,7 @@ This is handy when you need to move files or layers between locations.
 #. Navigate to the :guilabel:`Browser (2)` tab and browse for a shapefile in
    your file system.
 #. Select a file with the left mouse button. Now you can use the
-   |mActionAdd|:sup:`Add Selected Layers` icon to add it into the current project.
+   |add|:sup:`Add Selected Layers` icon to add it into the current project.
 
 .. _figure_browser_panels:
 
@@ -68,7 +68,7 @@ extent and CRS, it will be visualized. If the file has another CRS and layer
 extent, you must first right-click on the layer and choose
 :guilabel:`Set Project CRS from Layer`. Then choose :guilabel:`Zoom to Layer Extent`.
 
-The |mActionFilter|:sup:`Filter browser` function allows you to search for
+The |filter|:sup:`Filter browser` function allows you to search for
 specific data. Enter a search word or wildcard and the browser will show
 only matching filenames or parent folders -- other data or folders
 won't be displayed. See the Browser Panel(2) example on the _figure_browser_panels.

@@ -63,9 +63,9 @@ or in an appropriate world file to properly display the data.
 Loading raster data in QGIS
 ===========================
 
-Raster layers are loaded either by clicking on the |mActionAddRasterLayer|
+Raster layers are loaded either by clicking on the |addRasterLayer|
 :sup:`Add Raster Layer` icon or by selecting the :menuselection:`Layer -->`
-|mActionAddRasterLayer| :guilabel:`Add Raster Layer` menu option. More than one
+|addRasterLayer| :guilabel:`Add Raster Layer` menu option. More than one
 layer can be loaded at the same time by holding down the :kbd:`Ctrl` or
 :kbd:`Shift` key and clicking on multiple items in the
 :guilabel:`Open a GDAL Supported Raster Data Source` dialog.

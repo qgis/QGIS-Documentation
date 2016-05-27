@@ -196,8 +196,8 @@ Zooming and Panning
 
 QGIS provides tools to zoom and pan to your area of interest.
 
-Apart from using the |mActionPan| :sup:`pan` and |mActionZoomIn|
-:sup:`zoom-in` / |mActionZoomOut| :sup:`zoom-out` icons on the toolbar
+Apart from using the |pan| :sup:`pan` and |zoomIn|
+:sup:`zoom-in` / |zoomOut| :sup:`zoom-out` icons on the toolbar
 with the mouse, navigating can also be done with the mouse wheel, spacebar
 and the arrow keys.
 
@@ -210,7 +210,7 @@ For zooming, place the mouse cursor inside the map area and roll it forward
 (away from you) to zoom in and backwards (towards you) to zoom out. The mouse
 cursor position will be the center of the zoomed area of interest. You can
 customize the behavior of the mouse wheel zoom using the :guilabel:`Map tools`
-tab under the :menuselection:`Settings -->` |mActionOptions|
+tab under the :menuselection:`Settings -->` |options|
 :menuselection:`Options` menu.
 
 Panning with the arrow keys
@@ -235,8 +235,8 @@ Measuring
 
 QGIS provides four means of measuring geometries:
 
-* the interactive measurement tools |mActionMeasure|,
-* measuring in the |mActionCalculateField| :sup:`Field Calculator`,
+* the interactive measurement tools |measure|,
+* measuring in the |calculateField| :sup:`Field Calculator`,
 * derived measures in the :ref:`identify` tool,
 * and a vector analysis tool: :menuselection:`Vector --> Geometry Tools -->
   Export/Add Geometry Columns`
@@ -269,7 +269,7 @@ Measure length, areas and angles interactive
 All measuring modules use the snapping settings from the digitizing module.
 This is useful, if you want to measure along lines or areas in vector layers.
 
-To select a measuring tool, click on |mActionMeasure| and select the tool you want
+To select a measuring tool, click on |measure| and select the tool you want
 to use.
 
 .. index::
@@ -279,7 +279,7 @@ to use.
 .. index::
    single:measure;angles
 
-By default, |mActionMeasure| :sup:`Measure Line`: QGIS measures real distances
+By default, |measure| :sup:`Measure Line`: QGIS measures real distances
 between given points according to a defined ellipsoid. You can define a rubberband
 color and your preferred measurement units (meters or feet) and angle units
 (degrees, radians and gon) in the menu option
@@ -303,7 +303,7 @@ used during measurement calculations.
 
    Measure Distance
 
-|mActionMeasureArea| :sup:`Measure Area`: Areas can also be measured. In the
+|measureArea| :sup:`Measure Area`: Areas can also be measured. In the
 measure window, the accumulated area size appears. In addition, the measuring
 tool will snap to the currently selected layer, provided that layer has its
 snapping tolerance set (see section :ref:`snapping_tolerance`). So, if you want
@@ -322,7 +322,7 @@ tools, each mouse click (within the tolerance setting) will snap to that layer.
 
    Measure Area
 
-|mActionMeasureAngle| :sup:`Measure Angle`: You can also measure angles. The
+|measureAngle| :sup:`Measure Angle`: You can also measure angles. The
 cursor becomes cross-shaped. Click to draw the first segment of the angle you
 wish to measure, then move the cursor to draw the desired angle. The measure
 is displayed in a pop-up dialog.
@@ -344,19 +344,19 @@ Select and deselect features
 ============================
 
 The QGIS toolbar provides several tools to select features in the map canvas.
-To select one or several features, just click on |mActionSelect| and select your
+To select one or several features, just click on |select| and select your
 tool:
 
-* |mActionSelectRectangle| :sup:`Select Features by area or single click` to
+* |selectRectangle| :sup:`Select Features by area or single click` to
   select feature(s) either by simple click or by rectangle
-* |mActionSelectPolygon| :sup:`Select Features by Polygon`
-* |mActionSelectFreehand| :sup:`Select Features by Freehand`
-* |mActionSelectRadius| :sup:`Select Features by Radius`
+* |selectPolygon| :sup:`Select Features by Polygon`
+* |selectFreehand| :sup:`Select Features by Freehand`
+* |selectRadius| :sup:`Select Features by Radius`
 
-To deselect all selected features, click on |mActionDeselectAll| :sup:`Deselect
+To deselect all selected features, click on |deselectAll| :sup:`Deselect
 Features from All Layers`.
 
-|mIconExpressionSelect| :sup:`Select features using an expression` allows user
+|expressionSelect| :sup:`Select features using an expression` allows user
 to select features using expression dialog. See :ref:`vector_expressions`
 chapter for some example.
 
@@ -374,10 +374,10 @@ Identify features
 
 The Identify tool allows you to interact with the map canvas and get information
 on features in a pop-up window. To identify features, use :menuselection:`View --> Identify
-features` or press :kbd:`Ctrl + Shift + I`, or click the |mActionIdentify|
+features` or press :kbd:`Ctrl + Shift + I`, or click the |identify|
 :sup:`Identify features` icon on the Attributes toolbar.
 
-QGIS offers two ways to identify features with the |mActionIdentify|
+QGIS offers two ways to identify features with the |identify|
 :sup:`Identify features` tool:
 
 * **left click** will identify features according to the mode set in the
@@ -418,14 +418,14 @@ display three kinds of information:
 
 At the top of the window, you have seven icons:
 
-* |mActionExpandTree| :sup:`Expand tree`
-* |mActionCollapseTree| :sup:`Collapse tree`
-* |mActionExpandNewTree| :sup:`Default behavior` to define whether next
+* |expandTree| :sup:`Expand tree`
+* |collapseTree| :sup:`Collapse tree`
+* |expandNewTree| :sup:`Default behavior` to define whether next
   identified features information should be collapsed or expanded
-* |mActionPropertyItem| :sup:`View the feature form`
-* |mActionDeselectAll| :sup:`Clear Results`
-* |mActionEditCopy| :sup:`Copy selected feature to clipboard`
-* |mActionFilePrint| :sup:`Print selected HTML response`
+* |propertyItem| :sup:`View the feature form`
+* |deselectAll| :sup:`Clear Results`
+* |editCopy| :sup:`Copy selected feature to clipboard`
+* |filePrint| :sup:`Print selected HTML response`
 
 At the bottom of the window, you have the :guilabel:`Mode` and :guilabel:`View`
 comboboxes.
@@ -504,7 +504,7 @@ annotations to the map canvas.
 Copyright Label
 ---------------
 
-|copyright_label| :sup:`Copyright label` adds a copyright label using the text
+|copyrightLabel| :sup:`Copyright label` adds a copyright label using the text
 you prefer to the map.
 
 .. _figure_decorations_2:
@@ -525,7 +525,7 @@ you prefer to the map.
 #. Enter the text you want to place on the map. You can use HTML as
    shown in the example.
 #. Choose the placement of the label from the :guilabel:`Placement`
-   |selectstring| combo box.
+   |selectString| combo box.
 #. You can refine the placement of the item by setting a Horizontal and/or Vertical
    `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
    **Pixels** or set as **Percentage** of the width or height of the map canvas.
@@ -538,7 +538,7 @@ followed by the date in the lower right-hand corner of the map canvas.
 North Arrow
 -----------
 
-|north_arrow| :sup:`North Arrow` places a simple north arrow on the map canvas.
+|northArrow| :sup:`North Arrow` places a simple north arrow on the map canvas.
 Currently, there is only one style available. You can adjust the angle of the
 arrow or let QGIS set the direction automatically.
 If you choose to let QGIS determine the direction, it makes its best guess
@@ -564,7 +564,7 @@ You can refine the placement of the arrow by setting a Horizontal and/or Vertica
 Scale Bar
 ---------
 
-|scale_bar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
+|scaleBar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
 can control the style and placement, as well as the labelling of the bar.
 
 .. _figure_decorations_4:
@@ -588,14 +588,14 @@ To add a scale bar:
 #. Select from menu :menuselection:`View --> Decorations --> Scale Bar`.
    The dialog starts (see figure_decorations_4_).
 #. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
-#. Choose the style from the :guilabel:`Scale bar style` |selectstring|
+#. Choose the style from the :guilabel:`Scale bar style` |selectString|
    combo box.
-#. Select the color for the bar :guilabel:`Color of bar` |selectcolor| or use
+#. Select the color for the bar :guilabel:`Color of bar` |selectColor| or use
    the default black color.
-#. Set the :guilabel:`Size of bar` |selectnumber|.
+#. Set the :guilabel:`Size of bar` |selectNumber|.
 #. Optionally, check |checkbox| :guilabel:`Automatically snap to round number
    on resize` to display values easy-to-read.
-#. Choose the placement from the :guilabel:`Placement` |selectstring| combo box.
+#. Choose the placement from the :guilabel:`Placement` |selectString| combo box.
 #. You can refine the placement of the item by setting a Horizontal and/or Vertical
    `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
    **Pixels** or set as **Percentage** of the width or height of the map canvas.
@@ -618,7 +618,7 @@ To add a scale bar:
 Annotation Tools
 ================
 
-The |mActionTextAnnotation| :sup:`Text Annotation` tool in the attribute
+The |textAnnotation| :sup:`Text Annotation` tool in the attribute
 toolbar provides the possibility to place formatted text in a balloon on the
 QGIS map canvas. Use the :guilabel:`Text Annotation` tool and click into the
 map canvas.
@@ -642,13 +642,13 @@ map). The item can be moved by map position (by dragging the map marker) or by
 moving only the balloon. The icons are part of the GIS theme, and they are used
 by default in the other themes, too.
 
-The |mActionAnnotation| :sup:`Move Annotation` tool allows you to move the
+The |annotation| :sup:`Move Annotation` tool allows you to move the
 annotation on the map canvas.
 
 Html annotations
 ----------------
 
-The |mActionFormAnnotation| :sup:`Html Annotation` tools in the attribute
+The |formAnnotation| :sup:`Html Annotation` tools in the attribute
 toolbar provides the possibility to place the content of an html file in a
 balloon on the QGIS map canvas. Using the :guilabel:`Html Annotation` tool,
 click into the map canvas and add the path to the html file into the dialog.
@@ -656,7 +656,7 @@ click into the map canvas and add the path to the html file into the dialog.
 SVG annotations
 ---------------
 
-The |mActionSaveAsSVG| :sup:`SVG Annotation` tool in the attribute toolbar
+The |saveAsSVG| :sup:`SVG Annotation` tool in the attribute toolbar
 provides the possibility to place an SVG symbol in a balloon on the QGIS map
 canvas. Using the :guilabel:`SVG Annotation` tool, click into the map canvas and
 add the path to the SVG file into the dialog.
@@ -668,7 +668,7 @@ Form annotations
 .. index::`form annotation|\see{annotations}`
 
 Additionally, you can also create your own annotation forms. The
-|mActionFormAnnotation| :sup:`Form Annotation` tool is useful to display
+|formAnnotation| :sup:`Form Annotation` tool is useful to display
 attributes of a vector layer in a customized Qt Designer form (see
 figure_custom_annotation_). This is similar to the designer forms for the
 :guilabel:`Identify features` tool, but displayed in an annotation item.
@@ -750,7 +750,7 @@ Embedding layers
 The following dialog allows you to embed layers from other projects. Here is a
 small example:
 
-#. Press |browsebutton| to look for a project from the Alaska dataset.
+#. Press |browseButton| to look for a project from the Alaska dataset.
 #. Select the project file :file:`relations.qgs`. You can see the content of the
    project (see figure_embed_dialog_).
 #. Press :kbd:`Ctrl` and click on the layers :file:`airports` and
@@ -774,4 +774,4 @@ style and labeling.
 Removing embedded layers
 ------------------------
 
-Right-click on the embedded layer and choose |mActionRemoveLayer| :sup:`Remove`.
+Right-click on the embedded layer and choose |removeLayer| :sup:`Remove`.

@@ -100,15 +100,15 @@ the coming days.
 
 Try to find each of these tools on your screen. What is their purpose?
 
-1. |mActionFileSaveAs|
+1. |fileSaveAs|
 
-2. |mActionZoomToLayer|
+2. |zoomToLayer|
 
-3. |mActionWhatsThis|
+3. |whatsThis|
 
 4. .. image:: /static/training_manual/interface/toggle_render.png
 
-5. |mActionMeasure|
+5. |measure|
 
 .. note:: If any of these tools is not visible on the screen, try enabling
    some toolbars that are currently hidden. Also keep in mind that if there

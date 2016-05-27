@@ -35,7 +35,7 @@ The dialog has the following options:
 
 * **Input point layer**: Lists all the vector point layers in the current project
   and is used to select the layer to be analysed.
-* **Output raster**: Allows you to use the |browsebutton| button to select the folder and
+* **Output raster**: Allows you to use the |browseButton| button to select the folder and
   filename for the output raster the Heatmap plugin generates. A file extension
   is not required.
 * **Output format**: Selects the output format. Although all formats supported
@@ -111,9 +111,9 @@ In Figure_Heatmap_1_, the airports of Alaska are shown.
 
 #. Select the |heatmap| `Heatmap` tool button to open the Heatmap dialog
    (see Figure_Heatmap_2_).
-#. In the :guilabel:`Input point layer` |selectstring| field, select ``airports``
+#. In the :guilabel:`Input point layer` |selectString| field, select ``airports``
    from the list of point layers loaded in the current project.
-#. Specify an output filename by clicking the |browsebutton| button next to the
+#. Specify an output filename by clicking the |browseButton| button next to the
    :guilabel:`Output raster` field. Enter the filename ``heatmap_airports`` (no
    file extension is necessary).
 #. Leave the :guilabel:`Output format` as the default format, ``GeoTIFF``.
@@ -151,8 +151,8 @@ can now be styled in QGIS to improve its appearance.
    ``heatmap_airports``, open the context menu with the right mouse button and select
    :guilabel:`Properties`).
 #. Select the :guilabel:`Style` tab.
-#. Change the :guilabel:`Render type` |selectstring| to 'Singleband pseudocolor'.
-#. Select a suitable :guilabel:`Color map` |selectstring|, for instance ``YlOrRed``.
+#. Change the :guilabel:`Render type` |selectString| to 'Singleband pseudocolor'.
+#. Select a suitable :guilabel:`Color map` |selectString|, for instance ``YlOrRed``.
 #. Click the **[Load]** button to fetch the minimum and maximum values from the raster,
    then click the **[Classify]** button.
 #. Press **[OK]** to update the layer.

@@ -10,7 +10,7 @@ Field Calculator
 .. contents::
    :local:
 
-The |mActionCalculateField| :sup:`Field Calculator` button in the attribute
+The |calculateField| :sup:`Field Calculator` button in the attribute
 table allows you to perform calculations on the basis of existing attribute values or
 defined functions, for instance, to calculate length or area of geometry features. The
 results can be written to a new attribute field, a virtual field, or 
@@ -69,10 +69,10 @@ precision of 3, it means you have 6 digits before the dot, then the dot and anot
 A short example illustrates how field calculator works when using the :guilabel:`Expression` tab.
 We want to calculate the length in km of the ``railroads`` layer from the QGIS sample dataset:
 
-#. Load the shapefile :file:`railroads.shp` in QGIS and press |mActionOpenTable|
+#. Load the shapefile :file:`railroads.shp` in QGIS and press |openTable|
    :sup:`Open Attribute Table`.
-#. Click on |mActionToggleEditing| :sup:`Toggle editing mode` and open the
-   |mActionCalculateField| :sup:`Field Calculator` dialog.
+#. Click on |toggleEditing| :sup:`Toggle editing mode` and open the
+   |calculateField| :sup:`Field Calculator` dialog.
 #. Select the |checkbox| :guilabel:`Create a new field` checkbox to save the
    calculations into a new field.
 #. Add ``length`` as Output field name and ``real`` as Output field type, and

@@ -129,7 +129,7 @@ Now we will test the new Action:
 * Find the :guilabel:`Run feature action` button (on the same toolbar as the
   :guilabel:`Open Attribute Table` button):
 
-  |mAction|
+  |actionRun|
 
 * Click on the down arrow to the right of this button. There's only one action
   defined for this layer so far, which is the one you just created.

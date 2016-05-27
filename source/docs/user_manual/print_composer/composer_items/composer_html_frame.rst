@@ -11,7 +11,7 @@ The HTML Frame Item
 It is possible to add a frame that displays the contents of a website or even create and style
 your own HTML page and display it!
  
-Click the |mActionAddHtml| :sup:`Add HTML frame` icon, place the element by dragging a 
+Click the |addHtml| :sup:`Add HTML frame` icon, place the element by dragging a 
 rectangle holding down the left mouse button on the Print Composer canvas and position 
 and customize the appearance in the :guilabel:`Item Properties` tab 
 (see figure_composer_html_1_).
@@ -49,7 +49,7 @@ provides the following functionalities (see figure_composer_html_2_):
    HTML frame, the HTML Source properties |nix|
 
 * In :guilabel:`URL` you can enter the URL of a webpage you copied from your internet 
-  browser or select an HTML file using the browse button |browsebutton|. There is also the 
+  browser or select an HTML file using the browse button |browseButton|. There is also the 
   option to use the Data defined override button, to provide an URL from the contents of an 
   attribute field of a table or using a regular expression. 
 * In :guilabel:`Source` you can enter text in the textbox with some HTML tags or provide a full 

@@ -5,7 +5,7 @@
 The Image Item
 ===============
 
-To add an image, click the |mActionAddImage| :sup:`Add image` icon and drag a rectangle onto the Composer
+To add an image, click the |addImage| :sup:`Add image` icon and drag a rectangle onto the Composer
 canvas with the left mouse button. You can then position and customize
 its appearance in the image :guilabel:`Item Properties` tab.
 
@@ -31,14 +31,14 @@ The image :guilabel:`Item Properties` tab provides the following functionalities
 You first have to select the image you want to display. 
 There are several ways to set the :guilabel:`image source` in the **Main properties** area. 
 
-#. Use the browse button |browsebutton| of :guilabel:`image source` to select a file on your 
+#. Use the browse button |browseButton| of :guilabel:`image source` to select a file on your 
    computer using the browse dialog. The browser will start in the SVG-libraries provided with QGIS.
    Besides :file:`SVG`, you can also select other image formats like :file:`.png` or :file:`.jpg`.
 #. You can enter the source directly in the :guilabel:`image source` text field. You can even provide
    a remote URL-address to an image.   
 #. From the **Search directories** area you can also select an image from :guilabel:`loading previews ...` 
    to set the image source.
-#. Use the data defined button |mIconDataDefine| to set the image source from a record or using a 
+#. Use the data defined button |dataDefined| to set the image source from a record or using a 
    regular expression.  
   
 With the :guilabel:`Resize mode` option, you can set how the image is displayed when the frame 
@@ -69,7 +69,7 @@ rotation of the image (i.e., a rotated north arrow) with the rotation applied to
 the selected map item.
 
 It is also possible to select a north arrow directly. If you first select a north arrow image from 
-**Search directories** and then use the browse button |browsebutton| of the field :guilabel:`Image source`, 
+**Search directories** and then use the browse button |browseButton| of the field :guilabel:`Image source`, 
 you can now select one of the north arrow from the list as displayed in figure_composer_image_2_. 
 
 .. note:: 

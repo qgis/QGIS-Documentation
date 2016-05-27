@@ -35,21 +35,21 @@ interchange format that can contain any number of waypoints, routes and tracks
 in the same file.
 
 To load a GPX file, you first need to load the plugin.
-:menuselection:`Plugins -->` |mActionShowPluginManager|
+:menuselection:`Plugins -->` |showPluginManager|
 :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
 Activate the |checkbox| :guilabel:`GPS Tools` checkbox. When this plugin
 is loaded, a button with a small handheld GPS device will show up in the
 toolbar and in :menuselection:`Layer --> Create Layer -->` :
 
-* |import_gpx| :sup:`GPS Tools`
-* |create_gpx| :guilabel:`Create new GPX Layer`
+* |importGPX| :sup:`GPS Tools`
+* |createGPX| :guilabel:`Create new GPX Layer`
 
 For working with GPS data, we provide an example GPX file available in the QGIS
 sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See section
 :ref:`label_sampledata` for more information about the sample data.
 
 #. Select :menuselection:`Vector --> GPS --> GPS Tools` or click the
-   |import_gpx| :sup:`GPS Tools` icon in the toolbar and open the
+   |importGPX| :sup:`GPS Tools` icon in the toolbar and open the
    :guilabel:`Load GPX file` tab (see figure_GPS_1_).
 #. Browse to the folder :file:`qgis_sample_data/gps/`, select the GPX file
    :file:`national_monuments.gpx` and click **[Open]**.

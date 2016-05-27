@@ -12,9 +12,9 @@ Expressions
    :local:
 
 The **Expressions** feature is available from many parts in QGIS. It can be
-accessed using the |mIconExpressionSelect| :sup:`Select by expression`, the
-|mActionCalculateField| :sup:`Field calculator` or the
-|mIconDataDefine| :sup:`Data defined override` tool.
+accessed using the |expressionSelect| :sup:`Select by expression`, the
+|calculateField| :sup:`Field calculator` or the
+|dataDefined| :sup:`Data defined override` tool.
 It offers a powerful way to manipulate attribute value or variables in
 order to dynamically change the geometry style, the content or position
 of the label, the value for diagram, the height of a composer item,
@@ -621,8 +621,8 @@ This group contains dynamic variables related to the application, the project
 file and other settings.
 It means that some functions may not be available according to the context:
 
-- from the |mIconExpressionSelect| :sup:`Select by expression` dialog
-- from the |mActionCalculateField| :sup:`Field calculator` dialog
+- from the |expressionSelect| :sup:`Select by expression` dialog
+- from the |calculateField| :sup:`Field calculator` dialog
 - from the layer properties dialog
 - from the print composer
 

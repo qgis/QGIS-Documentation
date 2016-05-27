@@ -14,7 +14,7 @@ The plugin requires the following parameters to be specified before running:
   loaded point layers. If several layers are specified, then data from all layers
   is used for interpolation. Note: It is possible to insert lines or polygons as
   constraints for the triangulation, by specifying either "points", "structure
-  lines" or "break lines" in the :guilabel:`Type` |selectstring| combo box.
+  lines" or "break lines" in the :guilabel:`Type` |selectString| combo box.
 * **Interpolation attribute**: Select the attribute column to be used for interpolation
   or enable the |checkbox| :guilabel:`Use Z-Coordinate` checkbox to use the layer's
   stored Z values.
@@ -30,7 +30,7 @@ The plugin requires the following parameters to be specified before running:
   of the interpolation result can decrease, if the distribution of sample data points is uneven.
   Furthermore, maximum and minimum values in the interpolated surface can only occur at sample data points.
   This often results in small peaks and pits around the sample data points.
-* |mActionOptions| **Configure Interpolation Method**: Configure the interpolation method
+* |options| **Configure Interpolation Method**: Configure the interpolation method
   you have chosen. For the TIN method you can choose between Linear and Clough Toucher
   (cubic) interpolation methods. You can also save the triangulation in shapefile format.
   For IDW interpolation you can set the distance coefficient.
@@ -66,10 +66,10 @@ Using the plugin
 #. Start QGIS and load a point vector layer (e.g., :file:`elevp.csv`).
 #. Load the Interpolation plugin in the Plugin Manager (see
    :ref:`managing_plugins`) and click on the :menuselection:`Raster -->
-   Interpolation -->` |raster-interpolate| :guilabel:`Interpolation`
+   Interpolation -->` |rasterInterpolate| :guilabel:`Interpolation`
    menu, which appears in the QGIS menu bar. The Interpolation plugin dialog
    appears as shown in Figure_interpolation_1_.
-#. Select an input layer (e.g., :guilabel:`elevp` |selectstring|) and column
+#. Select an input layer (e.g., :guilabel:`elevp` |selectString|) and column
    (e.g., ``ELEV``) for interpolation.
 #. Select an interpolation method (e.g., 'Triangulated Irregular Network (TIN)'),
    and specify a cell size of 5000 as well as the raster output filename (e.g.,

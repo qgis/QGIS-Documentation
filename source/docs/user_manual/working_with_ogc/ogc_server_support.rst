@@ -228,7 +228,7 @@ extent currently displayed in the QGIS map canvas.
 By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
 in which coordinate reference systems (CRS) QGIS Server will offer
 to render maps.
-Use the |mActionSignPlus| button below to select those CRSs
+Use the |signPlus| button below to select those CRSs
 from the Coordinate Reference System Selector, or click :guilabel:`Used`
 to add the CRSs used in the QGIS project to the list.
 
@@ -238,13 +238,13 @@ create prints, using one of the print composer layouts as a template.
 This is a QGIS-specific extension to the WMS 1.3.0 specification.
 If you want to exclude any print composer from being published by the WMS,
 check |checkbox| :guilabel:`Exclude composers` and click the
-|mActionSignPlus| button below.
+|signPlus| button below.
 Then, select a print composer from the :guilabel:`Select print composer` dialog
 in order to add it to the excluded composers list.
 
 If you want to exclude any layer or layer group from being published by the
 WMS, check |checkbox| :guilabel:`Exclude Layers` and click the
-|mActionSignPlus| button below.
+|signPlus| button below.
 This opens the :guilabel:`Select restricted layers and groups` dialog, which
 allows you to choose the layers and groups that you don't want to be published.
 Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries.

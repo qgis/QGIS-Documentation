@@ -6,7 +6,7 @@ The Label Item
 .. contents::
    :local:
 
-To add a label, click the |mActionLabel| :sup:`Add label` icon, place the element
+To add a label, click the |label| :sup:`Add label` icon, place the element
 with the left mouse button on the Print Composer canvas and position and customize
 its appearance in the label :guilabel:`Item Properties` tab.
 
@@ -46,7 +46,7 @@ Appearance
   the bounds of the label e.g. to align label items with other items. In this case you have to
   use negative values for the margin. 
 * Using the :guilabel:`Alignment` is another way to position your label. Note that when e.g. using
-  the :guilabel:`Horizontal alignment` in |radiobuttonon|:guilabel:`Center` Position the 
+  the :guilabel:`Horizontal alignment` in |radioButtonOn|:guilabel:`Center` Position the 
   :guilabel:`Horizontal margin` feature is disabled.
 
 

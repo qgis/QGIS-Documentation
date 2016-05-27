@@ -9,7 +9,7 @@ The Legend Item
 .. contents::
    :local:
 
-To add a map legend, click the |mActionAddLegend| :sup:`Add new legend` icon,
+To add a map legend, click the |addLegend| :sup:`Add new legend` icon,
 place the element with the left mouse button on the Print Composer canvas and
 position and customize the appearance in the legend :guilabel:`Item Properties`
 tab.
@@ -115,7 +115,7 @@ The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
 * You provide the labels with a **Color** using the advanced color picker, however the selected 
   color will be given to all font items in the legend..
 * Legend items can be arranged over several columns. Set the number of columns in 
-  the :guilabel:`Count` |selectnumber| field.
+  the :guilabel:`Count` |selectNumber| field.
 
   * |checkbox| :guilabel:`Equal column widths` sets how legend columns should be adjusted.
   * The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer 

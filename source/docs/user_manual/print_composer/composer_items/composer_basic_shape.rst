@@ -4,7 +4,7 @@
 The Basic Shape Items
 =====================
 
-To add a basic shape (ellipse, rectangle, triangle), click the |mActionAddBasicShape| :sup:`Add basic shape` icon,  place the element holding down the left mouse. Customize the 
+To add a basic shape (ellipse, rectangle, triangle), click the |addBasicShape| :sup:`Add basic shape` icon,  place the element holding down the left mouse. Customize the 
 appearance in the :guilabel:`Item Properties` tab. 
 
 When you also hold down the :kbd:`Shift` key while placing the basic shape you can create a perfect square, 

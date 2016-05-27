@@ -324,7 +324,7 @@ Summary Rules for translation
 .............................
 
 #. Do not change text between two ``|`` characters like ``|bronze|``, ``|checkbox|``, 
-   ``|labels|``, ``|selectstring|``, ``|mActionAddLayer|`` ... These are special tags
+   ``|labels|``, ``|selectString|``, ``|addLayer|`` ... These are special tags
    used to replace images
 #. Do not change references that start with the tag ``:ref:`` or ``:file:``
 #. Do not change references that end with an underscore like ``figure_labels_1_``

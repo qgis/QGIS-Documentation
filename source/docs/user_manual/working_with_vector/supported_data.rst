@@ -59,7 +59,7 @@ http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 Loading a Shapefile
 ...................
 
-To :index:`load a shapefile`, start QGIS and click on the |mActionAddOgrLayer|
+To :index:`load a shapefile`, start QGIS and click on the |addOgrLayer|
 :sup:`Add Vector Layer` toolbar button, or simply press :kbd:`Ctrl+Shift+V`.
 This will bring up a new window (see figure_vector_1_).
 
@@ -74,11 +74,11 @@ This will bring up a new window (see figure_vector_1_).
 
    Add Vector Layer Dialog
 
-From the available options check |radiobuttonon| :guilabel:`File`. Click on
+From the available options check |radioButtonOn| :guilabel:`File`. Click on
 **[Browse]**. That will bring up a standard open file dialog
 (see figure_vector_2_), which allows you to navigate the file system and load a
 shapefile or other supported data source. The selection box :guilabel:`Filter`
-|selectstring| allows you to preselect some OGR-supported file formats.
+|selectString| allows you to preselect some OGR-supported file formats.
 
 You can also select the encoding for the shapefile if desired.
 
@@ -139,7 +139,7 @@ Spatial indexes used by QGIS have a :file:`.qix` extension.
 
 Use these steps to create the index:
 
-*  Load a shapefile by clicking on the |mActionAddOgrLayer| :sup:`Add Vector Layer`
+*  Load a shapefile by clicking on the |addOgrLayer| :sup:`Add Vector Layer`
    toolbar button or pressing :kbd:`Ctrl+Shift+V`.
 *  Open the :guilabel:`Layer Properties` dialog by double-clicking on the
    shapefile name in the legend or by right-clicking and choosing
@@ -169,9 +169,9 @@ file, it will be used instead of the :file:`.prj`.
 Loading a MapInfo Layer
 -----------------------
 
-|mActionAddOgrLayer| To load a MapInfo layer, click on the |mActionAddOgrLayer|
+|addOgrLayer| To load a MapInfo layer, click on the |addOgrLayer|
 :sup:`Add Vector Layer` toolbar button; or type :kbd:`Ctrl+Shift+V`, change the
-file type filter :guilabel:`Files of type` |selectstring|: to
+file type filter :guilabel:`Files of type` |selectString|: to
 'Mapinfo File [OGR] (\*.mif \*.tab \*.MIF \*.TAB)' and select the MapInfo layer you
 want to load.
 
@@ -181,11 +181,11 @@ want to load.
 Loading an ArcInfo Binary Coverage
 ----------------------------------
 
-|mActionAddOgrLayer| To load an ArcInfo Binary Coverage, click on the
-|mActionAddOgrLayer| :sup:`Add Vector Layer` toolbar button or press
+|addOgrLayer| To load an ArcInfo Binary Coverage, click on the
+|addOgrLayer| :sup:`Add Vector Layer` toolbar button or press
 :kbd:`Ctrl+Shift+V` to open the :guilabel:`Add Vector Layer` dialog. Select
-|radiobuttonon| :guilabel:`Directory` as :guilabel:`Source type`. Change the
-file type filter :guilabel:`Files of type` |selectstring| to
+|radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`. Change the
+file type filter :guilabel:`Files of type` |selectString| to
 'Arc/Info Binary Coverage'. Navigate to the directory that contains the
 coverage file, and select it.
 
@@ -247,7 +247,7 @@ Some items to note about the text file:
 Loading a delimited text file
 .............................
 
-Click the toolbar icon |delimited_text| :sup:`Add Delimited Text Layer` in the
+Click the toolbar icon |delimitedText| :sup:`Add Delimited Text Layer` in the
 :guilabel:`Manage layers` toolbar to open the :guilabel:`Create a Layer from a
 Delimited Text File` dialog, as shown in figure_delimited_text_1_.
 
@@ -266,14 +266,14 @@ First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
 by clicking on the **[Browse]** button. Once the file is selected, QGIS
 attempts to parse the file with the most recently used delimiter. To enable QGIS to properly parse the
 file, it is important to select the correct delimiter. You can specify a
-delimiter by activating |radiobuttonon| :guilabel:`Custom delimiters`, or by activating
-|radiobuttonon| :guilabel:`Regular expression delimiter` and entering
+delimiter by activating |radioButtonOn| :guilabel:`Custom delimiters`, or by activating
+|radioButtonOn| :guilabel:`Regular expression delimiter` and entering
 text into the :guilabel:`Expression` field. For example, to
 change the delimiter to tab, use ``\t`` (this is a regular expression for the
 tab character).
 
 Once the file is parsed, set :guilabel:`Geometry definition` to
-|radiobuttonon|:guilabel:`Point coordinates` and choose the ``X`` and ``Y``
+|radioButtonOn|:guilabel:`Point coordinates` and choose the ``X`` and ``Y``
 fields from the dropdown lists. If the coordinates are defined as
 degrees/minutes/seconds, activate the |checkbox| :guilabel:`DMS coordinates`
 checkbox.
@@ -288,10 +288,10 @@ to |checkbox| :guilabel:`Discard empty fields`. If necessary, you can force a co
 to be the decimal separator by activating |checkbox| :guilabel:`Decimal separator is
 comma`.
 
-If spatial information is represented by WKT, activate the |radiobuttonon|
+If spatial information is represented by WKT, activate the |radioButtonOn|
 :guilabel:`Well Known Text` option and select the field with the WKT definition for
 point, line or polygon objects. If the file contains non-spatial data, activate
-|radiobuttonon| :guilabel:`No geometry (attribute only table)` and it will be
+|radioButtonOn| :guilabel:`No geometry (attribute only table)` and it will be
 loaded as an ordinal table.
 
 Additionally, you can enable:
@@ -333,9 +333,9 @@ QGIS integrates OpenStreetMap import as a core functionality.
   SpatiaLite` then allows you to open the database connection, select the type
   of data you want (points, lines, or polygons) and choose tags to import.
   This creates a SpatiaLite geometry layer that you can add to your
-  project by clicking on the |mActionAddSpatiaLiteLayer|
+  project by clicking on the |addSpatiaLiteLayer|
   :sup:`Add SpatiaLite Layer` toolbar button or by selecting the
-  |mActionAddSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option
+  |addSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option
   from the :menuselection:`Layer` menu (see section :ref:`label_spatialite`).
 
 .. index:: PostGIS, PostgreSQL
@@ -354,13 +354,13 @@ with OGR layers in QGIS.
 Creating a stored Connection
 ............................
 
-|mActionAddPostgisLayer| The first time you use a PostGIS data source, you must
+|addPostgisLayer| The first time you use a PostGIS data source, you must
 create a connection to the PostgreSQL database that contains the data. Begin by
-clicking on the |mActionAddPostgisLayer| :sup:`Add PostGIS Layer` toolbar
-button, selecting the |mActionAddPostgisLayer| :menuselection:`Add PostGIS Layer...`
+clicking on the |addPostgisLayer| :sup:`Add PostGIS Layer` toolbar
+button, selecting the |addPostgisLayer| :menuselection:`Add PostGIS Layer...`
 option from the :menuselection:`Layer` menu, or typing :kbd:`Ctrl+Shift+D`. You
 can also open the :guilabel:`Add Vector Layer` dialog and select
-|radiobuttonon| :guilabel:`Database`. The :guilabel:`Add PostGIS Table(s)`
+|radioButtonOn| :guilabel:`Database`. The :guilabel:`Add PostGIS Table(s)`
 dialog will be displayed. To access the connection manager, click on the
 **[New]** button to display the :guilabel:`Create a New PostGIS Connection`
 dialog. The parameters required for a connection are:
@@ -405,7 +405,7 @@ by clicking on the **[Test Connect]** button.
 Loading a PostGIS Layer
 .......................
 
-|mActionAddPostgisLayer| Once you have one or more connections defined, you can
+|addPostgisLayer| Once you have one or more connections defined, you can
 load layers from the PostgreSQL database. Of course, this requires having data in
 PostgreSQL. See section :ref:`vector_import_data_in_postgis` for a discussion on
 importing data into the database.
@@ -413,7 +413,7 @@ importing data into the database.
 To load a layer from PostGIS, perform the following steps:
 
 *  If the :guilabel:`Add PostGIS layers` dialog is not already open,
-   selecting the |mActionAddPostgisLayer| :menuselection:`Add PostGIS Layer...`
+   selecting the |addPostgisLayer| :menuselection:`Add PostGIS Layer...`
    option from the :menuselection:`Layer` menu or typing :kbd:`Ctrl+Shift+D`
    opens the dialog.
 *  Choose the connection from the drop-down list and click **[Connect]**.
@@ -500,7 +500,7 @@ DB Manager plugin and the command line tools shp2pgsql and ogr2ogr.
 DB Manager
 ..........
 
-QGIS comes with a core plugin named |dbmanager| :sup:`DB Manager`. It can
+QGIS comes with a core plugin named |dbManager| :sup:`DB Manager`. It can
 be used to load shapefiles and other data formats, and it includes support for
 schemas. See section :ref:`dbmanager` for more information.
 
@@ -673,10 +673,10 @@ Usage
 SpatiaLite Layers
 -----------------
 
-|mActionAddSpatiaLiteLayer| The first time you load data from a SpatiaLite
-database, begin by clicking on the |mActionAddSpatiaLiteLayer|
+|addSpatiaLiteLayer| The first time you load data from a SpatiaLite
+database, begin by clicking on the |addSpatiaLiteLayer|
 :sup:`Add SpatiaLite Layer` toolbar button, or by selecting the
-|mActionAddSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option
+|addSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option
 from the :menuselection:`Layer` menu, or by typing :kbd:`Ctrl+Shift+L`.
 This will bring up a window that will allow you either to connect to a
 SpatiaLite database already known to QGIS, which you can choose from the
@@ -715,10 +715,10 @@ If you want to create a new SpatiaLite layer, please refer to section
 MSSQL Spatial Layers
 --------------------
 
-|mActionAddMssqlLayer| QGIS also provides native MS SQL 2008 support. The first
+|addMssqlLayer| QGIS also provides native MS SQL 2008 support. The first
 time you load MSSQL Spatial data, begin by clicking on the
-|mActionAddMssqlLayer| :sup:`Add MSSQL Spatial Layer` toolbar button or by
-selecting the |mActionAddMssqlLayer| :menuselection:`Add MSSQL Spatial Layer...`
+|addMssqlLayer| :sup:`Add MSSQL Spatial Layer` toolbar button or by
+selecting the |addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer...`
 option from the :menuselection:`Layer` menu, or by typing :kbd:`Ctrl+Shift+M`.
 
 .. _label_oracle_spatial:
@@ -734,10 +734,10 @@ support for such layers.
 Creating a stored Connection
 ............................
 
-|mActionAddOracleLayer| The first time you use an Oracle Spatial data source,
+|addOracleLayer| The first time you use an Oracle Spatial data source,
 you must create a connection to the database that contains the data. Begin by
-clicking on the |mActionAddOracleLayer| :sup:`Add Oracle Spatial Layer` toolbar
-button, selecting the |mActionAddOracleLayer| :menuselection:`Add Oracle
+clicking on the |addOracleLayer| :sup:`Add Oracle Spatial Layer` toolbar
+button, selecting the |addOracleLayer| :menuselection:`Add Oracle
 Spatial Layer...` option from the :menuselection:`Layer` menu, or typing
 :kbd:`Ctrl+Shift+O`. To access the connection manager, click on the **[New]**
 button to display the :guilabel:`Create a New Oracle Spatial Connection` dialog.
@@ -798,14 +798,14 @@ clicking on the **[Test Connect]** button.
 Loading an Oracle Spatial Layer
 ................................
 
-|mActionAddOracleLayer| Once you have one or more connections defined, you can
+|addOracleLayer| Once you have one or more connections defined, you can
 load layers from the Oracle database. Of course, this requires having data in
 Oracle.
 
 To load a layer from Oracle Spatial, perform the following steps:
 
 *  If the :guilabel:`Add Oracle Spatial layers` dialog is not already open,
-   click on the |mActionAddOracleLayer| :sup:`Add Oracle Spatial Layer` toolbar
+   click on the |addOracleLayer| :sup:`Add Oracle Spatial Layer` toolbar
    button.
 *  Choose the connection from the drop-down list and click **[Connect]**.
 *  Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`.

@@ -28,7 +28,7 @@ Let's get started right away!
 
 * Open QGIS. You will have a new, blank map.
 
-* Look for the :guilabel:`Add Vector Layer` button: |mActionNewVectorLayer|
+* Look for the :guilabel:`Add Vector Layer` button: |newVectorLayer|
 
 * Click on it to open the following dialog:
 
@@ -44,7 +44,7 @@ Let's get started right away!
 Congratulations! You now have a basic map. Now would be a good time to save
 your work.
 
-* Click on the :guilabel:`Save As` button: |mActionFileSaveAs|
+* Click on the :guilabel:`Save As` button: |fileSaveAs|
 
 
 * Save the map under :kbd:`exercise_data/` and call it :kbd:`basic_map.qgs`.

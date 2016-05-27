@@ -22,19 +22,19 @@ instruction in the manual.
 
 * Menu Options: :menuselection:`Layer --> Add a Raster Layer` or
   :menuselection:`Settings --> Toolbars --> Digitizing`
-* Tool: |mActionAddRasterLayer| :sup:`Add a Raster Layer`
+* Tool: |addRasterLayer| :sup:`Add a Raster Layer`
 * Button : **\[Save as Default\]**
 * Dialog Box Title: :guilabel:`Layer Properties`
 * Tab: :guilabel:`General`
 * Checkbox: |checkbox| :guilabel:`Render`
-* Radio Button: |radiobuttonon| :guilabel:`Postgis SRID`
-  |radiobuttonoff| :guilabel:`EPSG ID`
-* Select a number: |selectnumber|
-* Select a string: |selectstring|
-* Browse for a file: |browsebutton|
-* Select a color: |selectcolor|
+* Radio Button: |radioButtonOn| :guilabel:`Postgis SRID`
+  |radioButtonOff| :guilabel:`EPSG ID`
+* Select a number: |selectNumber|
+* Select a string: |selectString|
+* Browse for a file: |browseButton|
+* Select a color: |selectColor|
 * Slider: |slider|
-* Input Text: |inputtext|
+* Input Text: |inputText|
 
 .. * Toolbox : \toolboxtwo{nviz}{nviz - Open 3D-View in NVIZ}
 

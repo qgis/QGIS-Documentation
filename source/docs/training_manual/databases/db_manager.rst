@@ -16,7 +16,7 @@ You should first open the DB Manager interface by selecting
 :guilabel:`Database --> DB Manager --> DB Manager` on the menu or by selecting
 the DB Manager icon on the toolbar.
 
-    |dbmanager|
+    |dbManager|
 
 You should already see the previous connections we have configured and be able
 to expand the :kbd:`myPG` section and its :kbd:`public` schema to see the
