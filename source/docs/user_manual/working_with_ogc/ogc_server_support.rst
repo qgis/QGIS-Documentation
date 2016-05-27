@@ -12,11 +12,11 @@ QGIS as OGC Data Server
 .. contents::
    :local:
 
-QGIS Server is an open source WMS 1.3, WFS 1.0.0 and WCS 1 1.1.1 
-implementation that, in addition, implements advanced cartographic features for 
-thematic mapping. The QGIS Server is a FastCGI/CGI (Common Gateway Interface) 
-application written in C++ that works together with a web server (e.g., Apache, 
-Lighttpd). It has Python plugin support allowing for fast and efficient 
+QGIS Server is an open source WMS 1.3, WFS 1.0.0 and WCS 1 1.1.1
+implementation that, in addition, implements advanced cartographic features for
+thematic mapping. The QGIS Server is a FastCGI/CGI (Common Gateway Interface)
+application written in C++ that works together with a web server (e.g., Apache,
+Lighttpd). It has Python plugin support allowing for fast and efficient
 development and deployment of new features.
 The original development of QGIS Server was funded by the EU projects Orchestra,
 Sany and the city of Uster in Switzerland.
@@ -24,10 +24,10 @@ Sany and the city of Uster in Switzerland.
 .. index:: SLD, SLD/SE
 .. index:: QGIS_Server, FastCGI, CGI, Common_Gateway_Interface
 
-QGIS Server uses QGIS as back end for the GIS logic and for map rendering. 
-Furthermore, the Qt library is used for graphics and for platform-independent 
-C++ programming. In contrast to other WMS software, the QGIS Server uses 
-cartographic rules as a configuration language, both for the server 
+QGIS Server uses QGIS as back end for the GIS logic and for map rendering.
+Furthermore, the Qt library is used for graphics and for platform-independent
+C++ programming. In contrast to other WMS software, the QGIS Server uses
+cartographic rules as a configuration language, both for the server
 configuration and for the user-defined cartographic rules.
 
 As QGIS desktop and QGIS Server use the same visualization libraries, the maps
@@ -35,7 +35,7 @@ that are published on the web look the same as in desktop GIS.
 
 In the following sections, we will provide a sample configuration to set up
 a QGIS Server on Debian/Ubuntu Linux.
-For user contributed installation instructions on other platforms or 
+For user contributed installation instructions on other platforms or
 distributions, we recommend reading one of the following URLs:
 
 * http://hub.qgis.org/projects/quantum-gis/wiki/QGIS_Server_Tutorial
@@ -49,9 +49,9 @@ QGIS Server installation on Debian/Ubuntu
 ================================================================================
 
 At this point, we will give a short and simple sample installation how-to for
-a minimal working configuration using Apache2 on Debian Squeeze (or with 
+a minimal working configuration using Apache2 on Debian Squeeze (or with
 negligible variations on Ubuntu 14.04).
-Many other OSs provide packages for QGIS Server, too. If you have to build it 
+Many other OSs provide packages for QGIS Server, too. If you have to build it
 all from source, please refer to the URLs above.
 
 Firstly, add the following debian GIS repository:
@@ -75,8 +75,8 @@ Now, install QGIS Server:
 
   $ sudo apt-get install qgis-server python-qgis
 
-Installation of a HelloWorld example plugin for testing the servers. You create 
-a directory to hold server plugins. This will be specified in the virtual host 
+Installation of a HelloWorld example plugin for testing the servers. You create
+a directory to hold server plugins. This will be specified in the virtual host
 configuration and passed on to the server through an environment variable:
 
 ::
@@ -89,7 +89,7 @@ configuration and passed on to the server through an environment variable:
   $ sudo unzip master.zip
   $ sudo mv qgis-helloserver-master HelloServer
 
-Install the Apache server in a separate virtual host listening on port 80. 
+Install the Apache server in a separate virtual host listening on port 80.
 Enable the rewrite module to pass HTTP BASIC auth headers:
 
 ::
@@ -99,7 +99,7 @@ Enable the rewrite module to pass HTTP BASIC auth headers:
   Listen 80
   $ sudo a2enconf qgis-server-port
 
-This is the virtual host configuration, stored in 
+This is the virtual host configuration, stored in
 :file:`/etc/apache2/sites-available/001-qgis-server.conf` :
 
 ::
@@ -158,8 +158,8 @@ You can have a look at the default GetCapabilities of the QGIS server at:
 
 .. tip::
 
-   If you work with a feature that has many nodes then modifying and adding a 
-   new feature will fail. In this case it is possible to insert the following 
+   If you work with a feature that has many nodes then modifying and adding a
+   new feature will fail. In this case it is possible to insert the following
    code into the :file:`001-qgis-server.conf` file:
    ::
 
@@ -261,9 +261,9 @@ Furthermore, you can restrict the maximum size of the maps returned by the
 GetMap request by entering the maximum width and height into the respective
 fields under :guilabel:`Maximums for GetMap request`.
 
-If one of your layers uses the Map Tip display (i.e. to show text using 
-expressions) this will be listed inside the GetFeatureInfo output. If the 
-layer uses a Value Map for one of its attributes, this information will also 
+If one of your layers uses the Map Tip display (i.e. to show text using
+expressions) this will be listed inside the GetFeatureInfo output. If the
+layer uses a Value Map for one of its attributes, this information will also
 be shown in the GetFeatureInfo output.
 
 QGIS supports the following requests for WMS service:
@@ -296,17 +296,17 @@ WCS capabilities
 ------------------------------
 
 In the :guilabel:`WCS capabilities` area, you can select the layers that you
-want to publish as WCS. If you enter a URL in the :guilabel:`Advertised URL` 
-field of the :guilabel:`WCS capabilities` section, QGIS Server will advertise 
+want to publish as WCS. If you enter a URL in the :guilabel:`Advertised URL`
+field of the :guilabel:`WCS capabilities` section, QGIS Server will advertise
 this specific URL in the WCS GetCapabilities response.
 
-Now, save the session in a project file :file:`alaska.qgs`. To provide the 
-project as a WMS/WFS, we create a new folder ``/usr/lib/cgi-bin/project`` with 
-admin privileges and add the project file :file:`alaska.qgs` and a copy of the 
+Now, save the session in a project file :file:`alaska.qgs`. To provide the
+project as a WMS/WFS, we create a new folder ``/usr/lib/cgi-bin/project`` with
+admin privileges and add the project file :file:`alaska.qgs` and a copy of the
 :file:`qgis_mapserv.fcgi` file - that's all.
 
-Now we test our project WMS, WFS and WCS. Add the WMS, WFS and WCS as described 
-in :ref:`ogc-wms-layers`, :ref:`ogc-wfs` and :ref:`ogc-wcs` to QGIS and load 
+Now we test our project WMS, WFS and WCS. Add the WMS, WFS and WCS as described
+in :ref:`ogc-wms-layers`, :ref:`ogc-wfs` and :ref:`ogc-wcs` to QGIS and load
 the data. The URL is:
 
 ::
@@ -331,9 +331,9 @@ checkbox in the :guilabel:`WMS` or :guilabel:`WFS` column.
 
 You can overlay watermarks over the maps produced by your WMS by adding text
 annotations or SVG annotations to the project file.
-See the Annotation Tools section in :ref:`general_tools` for instructions on 
-creating annotations. For annotations to be displayed as watermarks on the WMS 
-output, the :guilabel:`Fixed map position` check box in the 
+See the Annotation Tools section in :ref:`general_tools` for instructions on
+creating annotations. For annotations to be displayed as watermarks on the WMS
+output, the :guilabel:`Fixed map position` check box in the
 :guilabel:`Annotation text` dialog must be unchecked.
 This can be accessed by double clicking the annotation while one of the
 annotation tools is active.
@@ -355,7 +355,7 @@ parameters and the environment variables supported by the server.
 Extra parameters supported by all request types
 --------------------------------------------------
 
-* **FILE_NAME** parameter: if set, the server response will be sent to the 
+* **FILE_NAME** parameter: if set, the server response will be sent to the
   client as a file attachment with the specified file name.
 
 * **MAP** parameter: Similar to MapServer, the ``MAP`` parameter can be used to
@@ -409,7 +409,7 @@ OCG WMS 1.3.0 specification:
     as for the QGIS subset string. However, there are some restrictions to avoid
     SQL injections into databases via QGIS server:
 
-    Text strings need to be enclosed with quotes (single quotes for strings, 
+    Text strings need to be enclosed with quotes (single quotes for strings,
     double quotes for attributes)
     A space between each word / special character is mandatory.
     Allowed Keywords and special characters are 'AND','OR','IN','=','<','>=',
@@ -422,13 +422,13 @@ OCG WMS 1.3.0 specification:
 
 .. note::
 
-    It is possible to make attribute searches via GetFeatureInfo and omit 
-    the X/Y parameter if a FILTER is there. QGIS server then returns info 
-    about the matching features and generates a combined bounding box in the 
+    It is possible to make attribute searches via GetFeatureInfo and omit
+    the X/Y parameter if a FILTER is there. QGIS server then returns info
+    about the matching features and generates a combined bounding box in the
     xml output.
 
 * **SELECTION** parameter: (Available in QGIS 1.8 and above)
-    Vector features can be selected by passing comma separated lists with 
+    Vector features can be selected by passing comma separated lists with
     feature ids in GetMap and GetPrint.
 
     Example::
@@ -439,29 +439,29 @@ OCG WMS 1.3.0 specification:
 Extra parameters supported by the WMS GetFeatureInfo request
 ------------------------------------------------------------
 
-QGIS Server WMS GetFeatureInfo requests supports the following extra optional parameters to 
+QGIS Server WMS GetFeatureInfo requests supports the following extra optional parameters to
 define the tolerance for point, line and polygon layers:
 
-* **FI_POINT_TOLERANCE** parameter: (Available in QGIS 2.10 and above)
-    Tolerance for point layers *GetFeatureInfo* request, in pixels.
-* **FI_LINE_TOLERANCE** parameter: (Available in QGIS 2.10 and above)
-    Tolerance for linestring layers *GetFeatureInfo* request, in pixels.
-* **FI_POLYGON_TOLERANCE** parameter: (Available in QGIS 2.10 and above)
-    Tolerance for polygon layers *GetFeatureInfo* request, in pixels.
+* **FI_POINT_TOLERANCE** parameter: Tolerance for point layers
+  *GetFeatureInfo* request, in pixels.
+* **FI_LINE_TOLERANCE** parameter: Tolerance for linestring layers
+  *GetFeatureInfo* request, in pixels.
+* **FI_POLYGON_TOLERANCE** parameter: Tolerance for polygon layers
+  *GetFeatureInfo* request, in pixels.
 
 
 GetPrint request
 -----------------
 
 
-QGIS server has the capability to create print composer output in pdf or pixel 
-format. Print composer windows in the published project are used as templates. 
-In the GetPrint request, the client has the possibility to specify parameters 
+QGIS server has the capability to create print composer output in pdf or pixel
+format. Print composer windows in the published project are used as templates.
+In the GetPrint request, the client has the possibility to specify parameters
 of the contained composer maps and labels.
 
 Example:
 
-The published project has two composer maps. In the `GetProjectSettings` response, 
+The published project has two composer maps. In the `GetProjectSettings` response,
 they are listed as possible print templates::
 
     <WMS_Capabilities>
@@ -480,15 +480,15 @@ The client has now the information to request a print output::
 
 Parameters in the GetPrint request are:
 
-* <map_id>:EXTENT gives the extent for a composer map as xmin,ymin,xmax,ymax.
-* <map_id>:ROTATION map rotation in degrees
-* <map_id>:GRID_INTERVAL_X, <map_id>:GRID_INTERVAL_Y Grid line density for a 
+* **<map_id>:EXTENT** gives the extent for a composer map as xmin,ymin,xmax,ymax.
+* **<map_id>:ROTATION** map rotation in degrees
+* **<map_id>:GRID_INTERVAL_X**, **<map_id>:GRID_INTERVAL_Y** Grid line density for a
   composer map in x- and y-direction
-* <map_id>:SCALE Sets a mapscale to a composer map. This is useful to ensure 
-  scale based visibility of layers and labels even if client and server may 
+* **<map_id>:SCALE** Sets a mapscale to a composer map. This is useful to ensure
+  scale based visibility of layers and labels even if client and server may
   have different algorithms to calculate the scale denominator
-* <map_id>:LAYERS, <map_id>:STYLES possibility to give layer and styles list 
-  for composer map (useful in case of overview maps which should have only a 
+* **<map_id>:LAYERS**, **<map_id>:STYLES** possibility to give layer and styles list
+  for composer map (useful in case of overview maps which should have only a
   subset of layers)
 
 
@@ -496,12 +496,12 @@ GetLegendGraphics request
 ---------------------------
 
 
-Several additional parameters are available to change the size of the legend 
+Several additional parameters are available to change the size of the legend
 elements:
 
 * **BOXSPACE** space between legend frame and content (mm)
 * **LAYERSPACE** versical space between layers (mm)
-* **LAYERTITLESPACE** vertical space between layer title and items following 
+* **LAYERTITLESPACE** vertical space between layer title and items following
   (mm)
 * **SYMBOLSPACE** vertical space between symbol and item following (mm)
 * **ICONLABELSPACE** horizontal space between symbol and label text (mm)
@@ -515,27 +515,27 @@ These parameters change the font properties for layer titles and item labels:
 * **LAYERFONTSIZE / ITEMFONTSIZE** Font size in point
 * **LAYERFONTITALIC / ITEMFONTITALIC** 'TRUE' to use italic font
 * **LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. #FF0000 for red)
-* **LAYERTITLE / RULELABEL** (from QGIS 2.4) set them to 'FALSE' to get only 
+* **LAYERTITLE / RULELABEL** (from QGIS 2.4) set them to 'FALSE' to get only
   the legend graphics without labels
 
-Contest based legend. These parameters let the client request a legend showing 
+Contest based legend. These parameters let the client request a legend showing
 only the symbols for the features falling into the requested area:
 
 * **BBOX** the geographical area for which the legend should be built
-* **CRS / SRS** the coordinate reference system adopted to define the BBOX 
+* **CRS / SRS** the coordinate reference system adopted to define the BBOX
   coordinates
-* **WIDTH / HEIGHT** if set these should match those defined for the GetMap 
-  request, to let QGIS Server scale symbols according to the map view image 
+* **WIDTH / HEIGHT** if set these should match those defined for the GetMap
+  request, to let QGIS Server scale symbols according to the map view image
   size.
 
-Contest based legend features are based on the 
+Contest based legend features are based on the
 `UMN MapServer implementation: <http://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
 
 GetProjectSettings request
 -----------------------------
 
-This request type works similar to **GetCapabilities**, but it is more specific 
-to QGIS Server and allows a client to read additional information which is 
+This request type works similar to **GetCapabilities**, but it is more specific
+to QGIS Server and allows a client to read additional information which is
 not available in the GetCapabilities output:
 
 * initial visibility of layers
@@ -547,9 +547,9 @@ not available in the GetCapabilities output:
 DXF Export
 ------------
 
-Starting with QGIS 2.11 (QGIS master as of 2015-07) it is now possible to 
-export layers in the DXF format using the GetMap Request. Only layers that 
-have read access in the WFS service are exported in the DXF format. Here is a 
+Starting with QGIS 2.11 (QGIS master as of 2015-07) it is now possible to
+export layers in the DXF format using the GetMap Request. Only layers that
+have read access in the WFS service are exported in the DXF format. Here is a
 valid REQUEST and a documentation of the available parameters::
 
     http://your.server.address/wms/liegenschaftsentwaesserung/abwasser_werkplan?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=Haltungen,Normschacht,Spezialbauwerke&STYLES=&CRS=EPSG%3A21781&BBOX=696136.28844801,245797.12108743,696318.91114315,245939.25832905&WIDTH=1042&HEIGHT=811&FORMAT=application/dxf&FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=werkplan_abwasser.dxf
@@ -562,35 +562,35 @@ Parameters:
 
 FORMAT_OPTIONS Parameters:
 
-* SCALE:scale to be used for symbology rules, filters and styles (not an 
+* **SCALE:scale** to be used for symbology rules, filters and styles (not an
   actual scaling of the data - data remains in the original scale)
-* MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY corresponds to the 
+* **MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY** corresponds to the
   three export options offered in the QGIS Desktop DXF export dialogue
-* LAYERSATTRIBUTES:yourcolumn_with_values_to_be_used_for_dxf_layernames - if 
+* **LAYERSATTRIBUTES:yourcolumn_with_values_to_be_used_for_dxf_layernames** - if
   not specified, the original QGIS layer names are used
 
 Extra parameters supported by the WFS GetFeature request
 ---------------------------------------------------------
 
-In the WFS GetFeature request, QGIS Server accepts one extra parameter in 
-addition to the standard parameters according to the OCG WFS 1.1.0 
+In the WFS GetFeature request, QGIS Server accepts one extra parameter in
+addition to the standard parameters according to the OCG WFS 1.1.0
 specification:
 
-* **GeometryName** parameter: this parameter can be used to get the *extent* 
-  or the *centroid* as the geometry or no geometry if *none* if used (ie 
+* **GeometryName** parameter: this parameter can be used to get the *extent*
+  or the *centroid* as the geometry or no geometry if *none* if used (ie
   attribute only). Allowed values are *extent*, *centroid* or *none*.
 
 .. index::
     pair: logging; QGIS Server
 
 QGIS Server logging
-----------------------------------
+---------------------
 
 To log requests sent to the server, set the following environment variables:
 
 * **QGIS_SERVER_LOG_FILE**: Specify path and filename. Make sure that the
-  server has proper permissions for writing to file. File should be created 
-  automatically, just send some requests to server. If it's not there, check 
+  server has proper permissions for writing to file. File should be created
+  automatically, just send some requests to server. If it's not there, check
   permissions.
 * **QGIS_SERVER_LOG_LEVEL**: Specify desired log level. Available values are:
 
@@ -615,8 +615,8 @@ To log requests sent to the server, set the following environment variables:
 Environment variables
 ---------------------------------
 
-You can configure some aspects of QGIS server by setting **environment 
-variables**. For example, to set QGIS server on Apache to use 
+You can configure some aspects of QGIS server by setting **environment
+variables**. For example, to set QGIS server on Apache to use
 /path/to/config/QGIS/QGIS2.ini settings file, add to Apache config:
 
 ::
@@ -635,21 +635,21 @@ This is a list of the variables supported by QGIS server:
 * **QGIS_OPTIONS_PATH**: Specifies the path to the directory with settings.
   It works the same way as QGIS application --optionspath option. It is looking
   for settings file in <QGIS_OPTIONS_PATH>/QGIS/QGIS2.ini.
-* **QUERY_STRING**: The query string, normally passed by the web server. This 
+* **QUERY_STRING**: The query string, normally passed by the web server. This
   variable can be useful while testing QGIS server binary from the command line.
-* **QGIS_PROJECT_FILE**: the `.qgs` project file, normally passed as a parameter 
-  in the query string, you can also set it as an environment variable (for 
+* **QGIS_PROJECT_FILE**: the `.qgs` project file, normally passed as a parameter
+  in the query string, you can also set it as an environment variable (for
   example by using `mod_rewrite` Apache module).
 * **QGIS_SERVER_LOG_FILE**: Specify path and filename. Make sure that server
-  has proper permissions for writing to file. File should be created 
-  automatically, just send some requests to server. If it's not there, check 
+  has proper permissions for writing to file. File should be created
+  automatically, just send some requests to server. If it's not there, check
   permissions.
 * **QGIS_SERVER_LOG_LEVEL**: Specify desired log level. Available values are:
-* **MAX_CACHE_LAYERS**: Specify the maximum number of cached layers (default: 
+* **MAX_CACHE_LAYERS**: Specify the maximum number of cached layers (default:
   100).
-* **DISPLAY**: This is used to pass (fake) X server display number (needed on 
+* **DISPLAY**: This is used to pass (fake) X server display number (needed on
   Unix-like systems).
-* **QGIS_PLUGINPATH**: Useful if you are using Python plugins for the server, 
+* **QGIS_PLUGINPATH**: Useful if you are using Python plugins for the server,
   this sets the folder that is searched for Python plugins.
 
 
