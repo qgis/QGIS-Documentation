@@ -556,10 +556,9 @@ not available in the GetCapabilities output:
 DXF Export
 ------------
 
-Starting with QGIS 2.11 (QGIS master as of 2015-07) it is now possible to
-export layers in the DXF format using the GetMap Request. Only layers that
-have read access in the WFS service are exported in the DXF format. Here is a
-valid REQUEST and a documentation of the available parameters::
+It is possible to export layers in the DXF format using the GetMap Request. Only
+layers that have read access in the WFS service are exported in the DXF format.
+Here is a valid REQUEST and a documentation of the available parameters::
 
     http://your.server.address/wms/liegenschaftsentwaesserung/abwasser_werkplan?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=Haltungen,Normschacht,Spezialbauwerke&STYLES=&CRS=EPSG%3A21781&BBOX=696136.28844801,245797.12108743,696318.91114315,245939.25832905&WIDTH=1042&HEIGHT=811&FORMAT=application/dxf&FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=werkplan_abwasser.dxf
 
@@ -629,7 +628,7 @@ The **Name** is a text string used for machine-to-machine
 communication while the **Title** is for the benefit of humans.
 
 For example, a dataset might have the descriptive Title
-“Maximum Atmospheric Temperature” and be requested using the abbreviated 
+“Maximum Atmospheric Temperature” and be requested using the abbreviated
 Name “ATMAX”. User can already set title for layers, groups and project.
 
 OWS name is based on the name used in layer tree. This name is more a label
