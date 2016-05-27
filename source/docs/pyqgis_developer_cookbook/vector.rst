@@ -1114,7 +1114,7 @@ first symbol
       else:
         self.r = renderer
       # setup UI
-      self.btn1 = QgsColorButtonV2("Color 1")
+      self.btn1 = QgsColorButtonV2()
       self.btn1.setColor(self.r.syms[0].color())
       self.vbox = QVBoxLayout()
       self.vbox.addWidget(self.btn1)
