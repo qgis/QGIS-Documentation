@@ -73,6 +73,14 @@ WMS layers can be added quite simply, as long as you know the URL to access
 the WMS server, you have a serviceable connection to that server, and the
 server understands HTTP as the data transport mechanism.
 
+Additionally, QGIS will cache your WMS responses (i.e. images) for 24h as long
+as the GetCapabilities request is not triggered. The GetCapabilities request is
+triggered everytime the **[Connect]** button in the **[Add layer(s) from WMS(T)S Server]** 
+dialog is used to retrieve the WMS server capabilities. This is an automatic 
+feature meant to optimize project loading time. If a project is saved with a WMS layer, 
+the corresponding WMS tiles will be loaded from the cache the next time the project is opened
+as long as they are no older than 24H.
+
 Overview of WMTS Support
 ------------------------
 
