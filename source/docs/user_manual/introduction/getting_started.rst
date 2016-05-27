@@ -11,7 +11,7 @@ Getting Started
 
 This chapter gives a quick overview of installing |qg|, some sample data from
 the |qg| web page, and running a first and simple session visualizing raster
-and vector layers.
+and vector layers. test
 
 .. _`label_installation`:
 
