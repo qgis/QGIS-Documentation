@@ -32,6 +32,12 @@ Separated data (CSV). Many of the features available in QGIS work the same,
 regardless of the vector data source. This is by design, and it includes the
 identify, select, labelling and attributes functions.
 
+.. note::
+
+   QGIS supports (multi)point, (multi)line, (multi)polygon, CircularString,
+   CompoundCurve, CurvePolygon, MultiCurve, MultiSurface feature types, all
+   with Z and/or M values.
+
 .. index:: ESRI, Shapefile, OGR
 .. _vector_shapefiles:
 
@@ -473,7 +479,7 @@ can make sense to disable this option when you use expensive views.
 
 .. tip:: **Backup of PostGIS database with layers saved by QGIS**
 
-   If you want to make a backup of your PostGIS database using the :file:`pg_dump` and 
+   If you want to make a backup of your PostGIS database using the :file:`pg_dump` and
    :file:`pg_restore` commands, and the default layer styles as saved by QGIS fail to
    restore afterwards, you need to set the XML option to :file:`DOCUMENT` and the
    restore will work.
@@ -482,9 +488,9 @@ can make sense to disable this option when you use expensive views.
 .. %FIXME: Add missing information
 .. % When dealing with views, QGIS parses the view definition and
 
-QGIS allows to filter features already on server side. Check the 
-|checkbox| :guilabel:`Execute expressions on postgres server-side if 
-possible (Experimental)` checkbox to do so. Only supported expressions will be 
+QGIS allows to filter features already on server side. Check the
+|checkbox| :guilabel:`Execute expressions on postgres server-side if
+possible (Experimental)` checkbox to do so. Only supported expressions will be
 sent to the database. Expressions using unsupported operators or functions will
 gracefully fallback to local evaluation.
 
