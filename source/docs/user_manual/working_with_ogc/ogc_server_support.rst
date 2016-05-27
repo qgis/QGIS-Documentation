@@ -319,6 +319,15 @@ QGIS supports the following requests for WCS service:
 * DescribeCoverage
 * GetCoverage
 
+GetCapabilities Caching
+-----------------------
+
+In order to improve response time, QGIS Server caches the responses to the ``GetCapabilities`` requests.
+When such a request comes, QGIS Server is caching the response and marking the cache valid.
+At the same time, it watches if the project file changes.
+If the project is changed then the cache is marked as invalid and QGIS Server waits for a new request in order to recreate the cache.
+
+
 Fine tuning your OWS
 --------------------------------------
 
