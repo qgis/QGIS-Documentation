@@ -73,6 +73,9 @@ WMS layers can be added quite simply, as long as you know the URL to access
 the WMS server, you have a serviceable connection to that server, and the
 server understands HTTP as the data transport mechanism.
 
+Addicionally, QGIS will cache your WMS requests (i.e. images) for 24h. 
+This is an automatic feature meant to optimize WMS loading times.
+
 Overview of WMTS Support
 ------------------------
 
