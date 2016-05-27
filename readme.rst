@@ -162,7 +162,7 @@ to create your local docker image.
 - then you can go to your local QGIS-Documentation repository to build the doc::
 
    cd QGIS-Documentation/
-   docker-run.sh LANG=fr html
+   ./docker-run.sh LANG=fr html
 
 Building the Documentation using Paver
 --------------------------------------
