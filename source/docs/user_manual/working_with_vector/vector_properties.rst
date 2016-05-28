@@ -196,6 +196,15 @@ that the color picker is OS dependent and is currently not supported by OSX.
 
    Quick color selector menu
 
+
+.. tip:: **edit style directly from layer panel**
+
+   If you have a categorized layer in your **Layers Panel** you can quickly
+   change the style of the categories by right-clicking on
+   a categorie and choose the style you prefer from a |colorWheel|
+   :sup:`color wheel` menu.
+   This is more convenient than accessing the layer properties.
+
 .. _data-defined:
 
 Data-defined setup
