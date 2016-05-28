@@ -229,6 +229,9 @@ polygon. Curve can be setup either by the next vertex iwith
 |circularStringCurvePoint| :sup:`Add circular string` or with a radius
 |circularStringRadius| :sup:`Add circular string by radius`.
 
+.. note:: You can enabled the :guilabel:`Vertex Editor` panel to select more
+   easily a node in the circular string.
+
 For each feature, you first digitize the geometry, then enter its attributes.
 To digitize the geometry, left-click on the map area to create the first
 point of your new feature.
