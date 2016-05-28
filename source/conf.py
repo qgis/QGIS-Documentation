@@ -891,6 +891,8 @@ rst_epilog = """
    :width: 1.5em
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
+.. |propertiesWidget| image:: /static/common/mActionPropertiesWidget.png
+   :width: 1.5em
 .. |propertyItem| image:: /static/common/mActionPropertyItem.png
    :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
