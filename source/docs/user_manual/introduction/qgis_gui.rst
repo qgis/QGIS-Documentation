@@ -34,7 +34,7 @@ The QGIS GUI is divided into five areas:
 
 #. Menu Bar
 #. Tool Bar
-#. Map Legend
+#. Layers Panel
 #. Map View
 #. Status Bar
 
@@ -54,8 +54,8 @@ The menu bar provides access to various QGIS features using a standard
 hierarchical menu. The top-level menus and a summary of some of the menu
 options are listed below, together with the associated icons as
 they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in
-this section are the defaults; however, keyboard shortcuts can also be configured 
-manually using the :guilabel:`Configure shortcuts` dialog, opened from 
+this section are the defaults; however, keyboard shortcuts can also be configured
+manually using the :guilabel:`Configure shortcuts` dialog, opened from
 :menuselection:`Settings --> Configure Shortcuts...`.
 
 Although most menu options have a corresponding tool and vice-versa, the menus
@@ -360,22 +360,22 @@ holding the mouse over the toolbars (read also :ref:`sec_panels_and_toolbars`).
 
 .. _`label_legend`:
 
-Map Legend
-----------
+Layers Panel
+------------
 
 .. index::
    single:legend
 
-The map legend area lists all the layers in the project. The checkbox in each
-legend entry can be used to show or hide the layer. 
-The Legend toolbar in the map legend area allows you to:
+The layers panel lists all the layers in the project. The checkbox in each
+legend entry can be used to show or hide the layer. The toolbar in the layers
+panel allows you to:
 
 * |addGroup| Add new group
 * |showPresets| :sup:`Manage Visibility`: control visibility of layers and
   preset layers combination
 * |filterMap| :sup:`Filter Legend by Map Content`: only the layers that are set
   visible and whose features intersect the current map canvas have their style
-  rendered in the map legend. Otherwise, a generic NULL symbol is applied to the
+  rendered in the layers panel. Otherwise, a generic NULL symbol is applied to the
   layer. Based on the layer symbology, this is a convenient way to identify which
   kind of features from which layers cover your area of interest.
 * |expressionFilter| :sup:`Filter Legend by Expression`: helps you apply an
@@ -384,7 +384,7 @@ The Legend toolbar in the map legend area allows you to:
   within a given area/feature of another layer.
   From the drop-down list, you can edit and clear the expression set.
 * |expandTree| :sup:`Expand All` or |collapseTree| :sup:`Collapse All`
-  layers and groups in the map legend
+  layers and groups in the layers panel.
 * and |removeLayer| :sup:`Remove Layer/Group` currently selected.
 
 .. _figure_layer_toolbar:
@@ -396,12 +396,12 @@ The Legend toolbar in the map legend area allows you to:
    .. figure:: /static/user_manual/introduction/layer_toolbar.png
       :align: center
 
-      Layer Toolbar in Map Legend 
+      Layer Toolbar in Layers Panel
 
 
 .. index::
    single:layer visibility
-   
+
 The button |showPresets| allows you to add **Presets** views in the legend.
 Presets are a way to save and easily restore a combination of layers with their
 current style. To add a preset view, just set visible the layers you want, with
@@ -414,13 +414,11 @@ The :menuselection:`Replace Preset -->` option helps you overwrite a preset cont
 with the current map view while the :menuselection:`Remove Current Preset` button
 deletes the active preset.
 
-
-
 All the added presets are also present in the map composer in order to allow you
 to create a map layout based on your specific views (see :ref:`composer_main_properties`).
 
 .. note::
-   Tools to manage the map legend are also available to layout the map
+   Tools to manage the layers panel are also available to layout the map
    and legend items of the print composer
 
 A layer can be selected and dragged up or down in the legend to change the
@@ -533,12 +531,13 @@ This way, all selected layers or groups will be removed from the layers list.
 Working with the Legend independent layer order
 ...............................................
 
-There is a panel that allows you to define an independent drawing order for the map legend.
-You can activate it in the menu :menuselection:`Settings --> Panels --> Layer
-order`. This feature allows you to, for instance, order your layers in order of importance,
-but still display them in the correct order (see figure_layer_order_).
-Checking the |checkbox| :guilabel:`Control rendering order` box underneath the
-list of layers will cause a revert to default behavior.
+There is a panel that allows you to define an independent drawing order for
+the layers panel. You can activate it in the menu
+:menuselection:`Settings --> Panels --> Layer order`. This feature allows you
+to, for instance, order your layers in order of importance, but still display
+them in the correct order (see figure_layer_order_). Checking the |checkbox|
+:guilabel:`Control rendering order` box underneath the list of layers will
+cause a revert to default behavior.
 
 .. _figure_layer_order:
 
