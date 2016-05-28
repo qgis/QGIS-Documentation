@@ -196,6 +196,34 @@ that the color picker is OS dependent and is currently not supported by OSX.
 
    Quick color selector menu
 
+.. _data-defined:
+
+Data-defined setup
+-------------------
+
+In some part of the vector layer properties you can find an icon |dataDefined|
+:sup:`data defined override`. This tool allows you to link the parameter
+besides to a field in the attribute table and, so, to change the value of the
+parameter in a dynamic way.
+
+The dropdown list shows:
+
+* a :guilabel:`Description ...` that indicates if it is enabled, which input
+  expected, valid input type and the current definition,
+* an entry to list the :guilabel:`Field type` available,
+* an entry to list the :guilabel:`Variable` available,
+* :guilabel:`Edit ...` button which open the expression window,
+* :guilabel:`Paste` and :guilabel:`Copy` buttons,
+* :guilabel:`Clear` button to remove the setup.
+
+When the data-defined is setup correctly the icon is yellow, if it is broken,
+the icon is red.
+
+Parameters that can be used with data-defined tools:
+
+* Style and symbols parameters
+* Labels parameters
+* Composer parameters
 
 .. _blend-modes:
 
@@ -372,7 +400,7 @@ the :guilabel:`Effect Properties` Dialog (see figure_effects_1). The following e
   The first options available for customization are the :menuselection:`Reflect horizontal`
   and :menuselection:`Reflect vertical`, which actually create a reflection on the
   horizontal and/or vertical axes. The 4 other options are:
-  
+
   * :menuselection:`Shear`: slants the feature along the x and/or y axis
   * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or y axis
     by the given percentage
@@ -691,7 +719,7 @@ added using the histogram widget.
 
 .. note::
 
-   You can use Statistical Summary panel to get more information on your vector 
+   You can use Statistical Summary panel to get more information on your vector
    layer. See :ref:`statistical_summary`.
 
 Back to the Classes tab, you can specify the number of classes and also the mode for
@@ -1076,11 +1104,11 @@ are four options available:
 
 * **No labels**
 * **Show labels for this layer**
-* :ref:`Rule-based labeling <rule_based_labeling>` 
+* :ref:`Rule-based labeling <rule_based_labeling>`
 * and **Discourage other labels from covering features in this layer**: allows to
   set a layer as just an obstacle for other layer's labels without rendering any
   labels of its own.
-  
+
 Select the **Show labels for this layer** option and then select an attribute
 column to use for labeling from the **Label with** drop-down list. Click
 |expressionEditorOpen| if you want to define labels based on
