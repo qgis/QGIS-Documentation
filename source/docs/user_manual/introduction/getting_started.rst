@@ -28,7 +28,7 @@ Get the latest information on binary packages at the QGIS website at
 http://download.qgis.org.
 
 Installation from source
-........................
+------------------------
 
 If you need to build QGIS from source, please refer to the installation
 instructions. They are distributed with the QGIS source code in a file
@@ -36,7 +36,7 @@ called :file:`INSTALL`. You can also find them online at
 http://htmlpreview.github.io/?https://raw.github.com/qgis/QGIS/master/doc/INSTALL.html
 
 Installation on external media
-..............................
+-------------------------------
 
 QGIS allows you to define a ``--configpath`` option that overrides the default
 path for user configuration (e.g., :file:`~/.qgis2` under Linux) and forces
@@ -47,7 +47,7 @@ See section :ref:`env_options` for additional information.
 .. _label_sampledata:
 
 Sample Data
-============
+-----------
 
 .. :index::
     single:data sample
@@ -105,21 +105,13 @@ If you intend to use QGIS as a graphical front end for GRASS, you can find a
 selection of sample locations (e.g., Spearfish or South Dakota) at the
 official GRASS GIS website, http://grass.osgeo.org/download/sample-data/.
 
-.. _samplesession:
-
-Sample Session
+Launching QGIS
 ==============
 
-Now that you have QGIS installed and a sample dataset available, we would
-like to demonstrate a short and simple QGIS sample session. We will visualize
-a raster and a vector layer. We will use:
+.. _`label_startingqgis`:
 
-* the :file:`landcover` raster layer i.e., :file:`qgis_sample_data/raster/landcover.img`
-* and the :file:`lakes` vector layer i.e., :file:`qgis_sample_data/gml/lakes.gml`.
-
-Start QGIS
-..........
-
+Starting and Stopping QGIS
+--------------------------
 Starting QGIS is done as you usually do for any other application on your
 platform. It means that you can launch QGIS by:
 
@@ -131,55 +123,6 @@ platform. It means that you can launch QGIS by:
 * double clicking an existing QGIS project (``.qgs``) file. Note that this will
   also open the project
 
-.. _`fig_simple_session`:
-
-.. /static/user_manual/introduction/simple_session.png
-   :align: center
-
-   A Simple QGIS Session
-
-Load raster and vector layers from the sample dataset
-.....................................................
-
-#. Click on the |addRasterLayer| :sup:`Add Raster Layer` icon.
-#. Browse to the folder :file:`qgis_sample_data/raster/`, select
-   the ERDAS IMG file :file:`landcover.img` and click **[Open]**.
-#. If the file is not listed, check if the :guilabel:`Files of type`
-   |selectString| combo box at the bottom of the dialog is set on the right
-   type, in this case **Erdas Imagine Images (\*.img \*.IMG)**.
-#. Now click on the |addOgrLayer| :sup:`Add Vector Layer` icon.
-#. |radioButtonOn| :guilabel:`File` should be selected as :guilabel:`Source Type`
-   in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to
-   select the vector layer.
-#. Browse to the folder :file:`qgis_sample_data/gml/`, select **Geography Markup
-   Language [GML] [OGR] (*.gml *.GML)** from the :guilabel:`Filter` |selectstring|
-   combo box, then select the GML file :file:`lakes.gml` and
-   click **[Open]**. In the :guilabel:`Add vector layer` dialog, click **[OK]**.
-   The :guilabel:`Coordinate Reference System Selector` dialog opens with
-   :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**.
-#. Zoom in a bit to your favourite area with some lakes.
-#. Double click the :file:`lakes` layer in the map legend to open the
-   :guilabel:`Properties` dialog.
-#. Click on the :guilabel:`Style` tab and select a blue as fill color.
-#. Click on the :guilabel:`Labels` tab and select :guilabel:`Show labels for
-   this layer` in the drop-down menu to enable labeling. Then from the
-   :guilabel:`Label with` list, choose the ``NAMES`` field as the field containing labels.
-#. To improve readability of labels, you can add a white buffer around them
-   by clicking :guilabel:`Buffer` in the list on the left, checking |checkbox|
-   :guilabel:`Draw text buffer` and choosing 3 as buffer size.
-#. Click **[Apply]**. Check if the result looks good, and finally click **[OK]**.
-
-You can see how easy it is to visualize raster and vector layers in QGIS. Let's
-move on to the sections that follow to learn more about the available
-functionality, features and settings, and how to use them.
-
-.. _`label_startingqgis`:
-
-Starting and Stopping QGIS
-==========================
-
-In section :ref:`samplesession` you already learned how to start QGIS.
-You will see that QGIS also provides further command line options.
 
 To stop QGIS, click:
 
@@ -191,10 +134,13 @@ To stop QGIS, click:
 .. _`label_commandline`:
 
 Command Line Options
-====================
+--------------------
 
 .. index::
    single:command line options
+
+In previous section you learned how to start QGIS.
+You will see that QGIS also provides further command line options.
 
 QGIS supports a number of options when started from the command line. To
 get a list of the options, enter ``qgis --help`` on the command line. The usage
@@ -329,6 +275,52 @@ Assuming you are in the directory where the file :file:`load_alaska.py` is locat
 can start QGIS, load the raster file :file:`landcover.img` and give the layer the name
 'Alaska' using the following command:
 ``qgis --code load_alaska.py``
+
+.. _samplesession:
+
+Sample Session: Load raster and vector layers
+==============================================
+
+Now that you have QGIS installed and a sample dataset available, we would
+like to demonstrate a short and simple QGIS sample session. We will visualize
+a raster and a vector layer. We will use:
+
+* the :file:`landcover` raster layer i.e., :file:`qgis_sample_data/raster/landcover.img`
+* and the :file:`lakes` vector layer i.e., :file:`qgis_sample_data/gml/lakes.gml`.
+
+
+#. Start QGIS as seen in :ref:`label_startingqgis`
+#. Click on the |addRasterLayer| :sup:`Add Raster Layer` icon.
+#. Browse to the folder :file:`qgis_sample_data/raster/`, select
+   the ERDAS IMG file :file:`landcover.img` and click **[Open]**.
+#. If the file is not listed, check if the :guilabel:`Files of type`
+   |selectString| combo box at the bottom of the dialog is set on the right
+   type, in this case **Erdas Imagine Images (\*.img \*.IMG)**.
+#. Now click on the |addOgrLayer| :sup:`Add Vector Layer` icon.
+#. |radioButtonOn| :guilabel:`File` should be selected as :guilabel:`Source Type`
+   in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to
+   select the vector layer.
+#. Browse to the folder :file:`qgis_sample_data/gml/`, select **Geography Markup
+   Language [GML] [OGR] (*.gml *.GML)** from the :guilabel:`Filter` |selectstring|
+   combo box, then select the GML file :file:`lakes.gml` and
+   click **[Open]**. In the :guilabel:`Add vector layer` dialog, click **[OK]**.
+   The :guilabel:`Coordinate Reference System Selector` dialog opens with
+   :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**.
+#. Zoom in a bit to your favourite area with some lakes.
+#. Double click the :file:`lakes` layer in the map legend to open the
+   :guilabel:`Properties` dialog.
+#. Click on the :guilabel:`Style` tab and select a blue as fill color.
+#. Click on the :guilabel:`Labels` tab and select :guilabel:`Show labels for
+   this layer` in the drop-down menu to enable labeling. Then from the
+   :guilabel:`Label with` list, choose the ``NAMES`` field as the field containing labels.
+#. To improve readability of labels, you can add a white buffer around them
+   by clicking :guilabel:`Buffer` in the list on the left, checking |checkbox|
+   :guilabel:`Draw text buffer` and choosing 3 as buffer size.
+#. Click **[Apply]**. Check if the result looks good, and finally click **[OK]**.
+
+You can see how easy it is to visualize raster and vector layers in QGIS. Let's
+move on to the sections that follow to learn more about the available
+functionality, features and settings, and how to use them.
 
 .. _sec_projects:
 
