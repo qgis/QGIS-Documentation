@@ -20,6 +20,31 @@ order to dynamically change the geometry style, the content or position
 of the label, the value for diagram, the height of a composer item,
 select some feature, create virtual column ...
 
+Regardless of the context where they are used, expressions are build from the 
+layer data and prebuild or user defined functions. 
+
+**Some examples:**
+
+*	From Field Calculator, update the column pop_density from existing total_pop and area_km2 columns ::
+
+    "total_pop" / "area_km2"
+
+*	Update the column density_level with categories according to the pop_density values ::
+
+    CASE WHEN "pop_dens" < 50 THEN 'Low population density' 
+		  WHEN "pop_dens" >= 50 and "pop_dens" < 150 THEN 'Medium population density'
+		  WHEN "pop_dens" >= 150 THEN 'High population density'
+    END
+
+When in Rule-based style, expressions can be used to fine tune under which conditions a 
+style is to be applied. This is especially useful to style layers according to two or more criteria.
+
+*	Apply a given style to all the features representing areas of “High population density” and  whose average house price is higher than 10000€ per square metre ::
+
+    "pop_dens" = 'High population density' and "price_m2" > 10000
+    
+Likewise, the previous expression could also be used to define which features should be labeled.
+
 The **Expressions** feature offers access to the:
 
 - :guilabel:`Expression` tab which lists functions to use
@@ -299,7 +324,6 @@ This group contains functions for handling date and time data.
 * Get the month and the year of today in the format "10/2014" ::
 
     month(now()) || '/' || year(now())
-
 
 Fields and Values
 ------------------
