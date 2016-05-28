@@ -327,8 +327,25 @@ To navigate in the canvas layout, the Print Composer provides some general tools
 * |zoomFullExtent| :sup:`Zoom Full`
 * |zoomActual| :sup:`Zoom to 100%`
 * |draw| :sup:`Refresh view` (if you find the view in an inconsistent state)
-* |pan| :sup:`Pan composer`
-* |zoomToSelected| :sup:`Zoom` (zoom to a specific region of the Composer)
+* `Show Grid` behind items.
+* `Snap Grid` to snap items on the grid.
+* `Show Guides` to help user to align items. These are red line that you can
+  click in the rule (above or at the left side of the layout) and drag and drop
+  to the desired location.
+* `Snap Guides` allow user to snap items on guides.
+* `Smart Guides` are dynamic guides between items.
+* `Clear Guides` to remove all current guides.
+* `Show Bounding box` around the items.
+* `Show Rules` around the layout.
+* `Show Pages` or set up pages to transparent. Often composer is used
+  to create non-print layouts, e.g. for inclusion in presentations or other
+  documents, and it's desirable to export the composition using a totally
+  transparent background. It's sometimes referred to as "infinite canvas" in
+  other editing packages.
+* `Toggle Full Screen` make the composer window to full screen.
+* `Hide Panels` hide/shows the right panel
+* `Panels` lists all panels available to hide/show them.
+* `Toolbars` same as above for toolbars.
 
 You can change the zoom level also using the mouse wheel or the combo box in the status bar.
 If you need to switch to pan mode while working in the Composer area, you can hold
