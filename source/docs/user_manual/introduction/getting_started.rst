@@ -153,21 +153,30 @@ statement for QGIS is:
   QGIS is a user friendly Open Source Geographic Information System.
   Usage: /usr/bin/qgis.bin [OPTION] [FILE]
   OPTION:
-	[--snapshot filename]	emit snapshot of loaded datasets to given file
-	[--width width]	width of snapshot to emit
-	[--height height]	height of snapshot to emit
-	[--lang language]	use language for interface text
-	[--project projectfile]	load the given QGIS project
-	[--extent xmin,ymin,xmax,ymax]	set initial map extent
-	[--nologo]	hide splash screen
-	[--noplugins]	don't restore plugins on startup
-	[--nocustomization]	don't apply GUI customization
-	[--customizationfile]	use the given ini file as GUI customization
-	[--optionspath path]	use the given QSettings path
-	[--configpath path]	use the given path for all user configuration
-	[--code path]	run the given python file on load
-	[--defaultui]	start by resetting user ui settings to default
-	[--help]		this text
+    [--snapshot filename]   emit snapshot of loaded datasets to given file
+    [--width width] width of snapshot to emit
+    [--height height]       height of snapshot to emit
+    [--lang language]       use language for interface text
+    [--project projectfile] load the given QGIS project
+    [--extent xmin,ymin,xmax,ymax]  set initial map extent
+    [--nologo]      hide splash screen
+    [--noversioncheck]      don't check for new version of QGIS at startup
+    [--noplugins]   don't restore plugins on startup
+    [--nocustomization]     don't apply GUI customization
+    [--customizationfile]   use the given ini file as GUI customization
+    [--optionspath path]    use the given QSettings path
+    [--configpath path]     use the given path for all user configuration
+    [--authdbdirectory path] use the given directory for authentication database
+    [--code path]   run the given python file on load
+    [--defaultui]   start by resetting user ui settings to default
+    [--dxf-export filename.dxf]     emit dxf output of loaded datasets to given file
+    [--dxf-extent xmin,ymin,xmax,ymax]      set extent to export to dxf
+    [--dxf-symbology-mode none|symbollayer|feature] symbology mode for dxf output
+    [--dxf-scale-denom scale]       scale for dxf output
+    [--dxf-encoding encoding]       encoding to use for dxf output
+    [--dxf-preset visiblity-preset] layer visibility preset to use for dxf output
+    [--help]                this text
+    [--]            treat all following arguments as FILEs
 
   FILE:
     Files specified on the command line can include rasters,
@@ -275,6 +284,21 @@ Assuming you are in the directory where the file :file:`load_alaska.py` is locat
 can start QGIS, load the raster file :file:`landcover.img` and give the layer the name
 'Alaska' using the following command:
 ``qgis --code load_alaska.py``
+
+
+**Command line options** ``--dxf-*``
+
+These options can be used to export QGIS project into a DXF file. Several
+options are available:
+
+* *--dxf-export*: the DXF filename into which to export the layers;
+* *--dxf-extent*: the extent of the final DXF file;
+* *--dxf-symbology-mode*: several values can be used here: none (no symbology),
+  symbollayer (Symbol layer symbology), feature (feature symbology);
+* *--dxf-scale-deno*: the scale denominator of the symbology;
+* *--dxf-encoding*: the file encoding;
+* *--dxf-preset*: choose a visibility preset. These presets are defined in the
+  layer tree, see :ref:`label_legend`.
 
 .. _samplesession:
 
