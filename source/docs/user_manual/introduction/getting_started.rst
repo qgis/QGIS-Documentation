@@ -231,6 +231,10 @@ bounding box of your extent in the following order separated by a comma:
 
 This command line argument hides the splash screen when you start QGIS.
 
+**command line option** ``--noversioncheck``
+
+Don't check for new version of QGIS at startup.
+
 **Command line option** ``--noplugins``
 
 If you have trouble at start-up with plugins, you can avoid loading them at
@@ -266,6 +270,11 @@ This option is similar to the one above, but furthermore overrides the default
 path for user configuration (:file:`~/.qgis2`) and forces **QSettings** to use
 this directory, too. This allows users to, for instance, carry a QGIS installation on a
 flash drive together with all plugins and settings.
+
+**Command line option** ``--authdbdirectory``
+
+Again, this option is similar to the one above but define the path to the
+directory where the authentication database will be stored.
 
 **Command line option** ``--code``
 
