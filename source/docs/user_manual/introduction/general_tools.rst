@@ -775,3 +775,34 @@ Removing embedded layers
 ------------------------
 
 Right-click on the embedded layer and choose |removeLayer| :sup:`Remove`.
+
+.. _data_defined:
+
+Data-defined setup
+===================
+
+In some part of the vector layer properties or the composer layout items
+settings you can find an icon |dataDefined| :sup:`data defined override`.
+This tool allows you to link the parameter besides to a field in the
+attribute table and, so, to change the value of the parameter in a dynamic way.
+
+The dropdown list shows:
+
+* a :guilabel:`Description ...` that indicates if it is enabled, which input
+  expected, valid input type and the current definition,
+* an entry to list the :guilabel:`Field type` available,
+* an entry to list the :guilabel:`Variable` available,
+* :guilabel:`Edit ...` button which open the expression window,
+* :guilabel:`Paste` and :guilabel:`Copy` buttons,
+* :guilabel:`Clear` button to remove the setup.
+
+When the data-defined is setup correctly the icon is yellow, if it is broken,
+the icon is red.
+
+Parameters that can be used with data-defined tools:
+
+* Style and symbols parameters
+* Labels parameters
+* Composer parameters
+
+
