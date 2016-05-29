@@ -42,6 +42,7 @@ whose average house price is higher than 10000€ per square metre::
 
     "pop_dens" = 'High population density' and "price_m2" > 10000
     
+    
 Likewise, the previous expression could also be used to define which features should be labeled.
 
 The **Expressions** feature offers access to the:
