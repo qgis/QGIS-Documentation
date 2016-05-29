@@ -29,7 +29,7 @@ If no replacement exists:
   file following the example below. The replacement text should be in camelCase:
 
 ::
-  
+
   .. |splitLayer| image:: /static/common/split_layer.png
      :width: 1.5em
 
@@ -237,18 +237,19 @@ Icon                            Substitution                        Icon        
 Attribute Table
 ===============
 
-=======================  ===========================  =======================  ===========================
-Icon                     Substitution                 Icon                     Substitution
-=======================  ===========================  =======================  ===========================
-|openTable|              ``|openTable|``              |selectedToTop|          ``|selectedToTop|``
-|selectAll|              ``|selectAll|``              |invertSelection|        ``|invertSelection|``
-|panToSelected|          ``|panToSelected|``          |zoomToSelected|         ``|zoomToSelected|``
-|copySelected|           ``|copySelected|``           |editPaste|              ``|editPaste|``
-|expressionSelect|       ``|expressionSelect|``       |deleteSelected|         ``|deleteSelected|``
-|newAttribute|           ``|newAttribute|``           |deleteAttribute|        ``|deleteAttribute|``
-|newTableRow|            ``|newTableRow|``            |calculateField|         ``|calculateField|``
-|draw|                   ``|draw|``                   |form|                   ``|form|``
-=======================  ===========================  =======================  ===========================
+============================ ===============================  =======================  ===========================
+Icon                         Substitution                     Icon                     Substitution
+============================ ===============================  =======================  ===========================
+|openTable|                  ``|openTable|``                  |selectedToTop|          ``|selectedToTop|``
+|selectAll|                  ``|selectAll|``                  |invertSelection|        ``|invertSelection|``
+|panToSelected|              ``|panToSelected|``              |zoomToSelected|         ``|zoomToSelected|``
+|copySelected|               ``|copySelected|``               |editPaste|              ``|editPaste|``
+|expressionSelect|           ``|expressionSelect|``           |deleteSelected|         ``|deleteSelected|``
+|newAttribute|               ``|newAttribute|``               |deleteAttribute|        ``|deleteAttribute|``
+|newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
+|draw|                       ``|draw|``                       |form|                   ``|form|``
+|rendererCategorizedSymbol|  ``|rendererCategorizedSymbol|``  \                        \
+============================ ===============================  =======================  ===========================
 
 
 Projections and Georeferencer
@@ -290,7 +291,7 @@ Icon                     Substitution                 Icon                     S
 |alignLeft|              ``|alignLeft|``              |alignRight|             ``|alignRight|``
 |alignHCenter|           ``|alignHCenter|``           |alignVCenter|           ``|alignVCenter|``
 |alignTop|               ``|alignTop|``               |alignBottom|            ``|alignBottom|``
-|locked|                 ``|locked|``                 |unlocked|               ``|unlocked|``      
+|locked|                 ``|locked|``                 |unlocked|               ``|unlocked|``
 |groupItems|             ``|groupItems|``
 =======================  ===========================  =======================  ===========================
 

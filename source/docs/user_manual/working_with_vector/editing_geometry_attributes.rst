@@ -1012,8 +1012,8 @@ filter:
 * Advanced filter (Expression);
 
 The first four are self explanatory, the two last are expression filters. Field
-Filter allow user to choose a column name in the list and add a simple form to
-the right of the dropdown list to filter with a *like* expression parameter.
+Filter allows user to choose a column name in the list and add a simple form to
+the right of the drop-down list to filter with a *like* expression parameter.
 This filter will create an expression filter as an :guilabel:`Advanced filter`.
 The last kind of filter will open an expression window, see :ref:`vector_expressions`
 for more information.
@@ -1076,6 +1076,33 @@ As an example, you can use columns of the non-spatial table to define attribute
 values, or a range of values that are allowed, to be added to a specific vector
 layer during digitizing. Have a closer look at the edit widget in section
 :ref:`vector_attributes_menu` to find out more.
+
+
+.. index:: conditional_formatting
+
+Conditional formatting of Table Cells
+......................................
+
+You can enable the conditional formatting panel clicking on
+|rendererCategorizedSymbol| at the top right of the attributes window in table
+wiew, not in form mode.
+
+The new panel allows user to add new rules for conditional formatting of field
+or full row in regard of the expression on field. Adding new rule open a form
+to define:
+
+* the name of the rule,
+* a condition from expression window,
+* a preset formatting
+* some other parameters to improve, change or setup the formatting:
+
+  * background and text colors,
+  * use of icon,
+  * bold, italic underline, or strikeout,
+  * text field,
+  * font.
+
+.. TODO: Screenshot!
 
 .. index:: Relations
 .. _vector_relations:
