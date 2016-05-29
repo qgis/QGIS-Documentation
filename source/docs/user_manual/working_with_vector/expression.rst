@@ -34,6 +34,7 @@ select some feature, create virtual column ...
 		  WHEN "pop_dens" >= 150 THEN 'High population density'
     END
 
+
 When in Rule-based style, expressions can be used to fine tune under which conditions a 
 style is to be applied. This is especially useful to style layers according to two or more criteria.
 
