@@ -13,7 +13,7 @@
    :local:
 
 Figure_composer_output_1_ shows the Print Composer with an example print layout,
-including each type of map item described in the next section.
+including each type of map item described in the previous section.
 
 .. _figure_composer_output_1:
 
@@ -46,8 +46,8 @@ to define the resolution (print quality) and paper size:
 * The |saveAsPDF| :sup:`Export as PDF` icon saves the defined Print Composer
   canvas directly as a PDF.
 
-Image export options
-====================
+Export as Image
+================
 
 Clicking the |saveMapAsImage| :sup:`Export as image` icon will ask you to
 enter the filename to use to export composition: in case of multi-page composition,
@@ -56,6 +56,8 @@ number.
 
 You can then override the print resolution (set in Composition tab) and resize
 exported image dimensions.
+
+.. _crop_to_content:
 
 By checking |checkbox| :guilabel:`Crop to content` option, the images output by
 composer will include only the area of the composition with content.
@@ -77,22 +79,27 @@ include the area of that page with items.
 
    Image Export Options
 
-If you need to export your layout as a **georeferenced image** (i.e., to load back
-inside a ), you need to enable this feature under the Composition tab. Check
-|checkbox| :guilabel:`World file on` and choose the map item to use.
+If you need to export your layout as a **georeferenced image** (e.g., to share
+with other projects), you need to enable this feature under the Composition tab.
+Check |checkbox| :guilabel:`World file on` and choose the map item to use.
 With this option, the 'Export as image' action will create a world file along
 the exported image.
 
-SVG export options
-==================
+.. note::
+
+   Exporting big rasters can sometimes fail, even if there seems to be
+   enough memory. This is a problem with the underlying Qt management of rasters.
+
+Export as SVG 
+==============
 
 With |saveAsSVG| :sup:`Export as SVG`, you also need to fill the filename
 (used as a basename for all files in case of multi_page composition) and then
-can apply |checkbox| :guilabel:`Crop to content` option.
+can apply |checkbox| :guilabel:`Crop to content` :ref:`option <crop_to_content>`.
 
 The SVG export options dialog allows also to :
 
-* export map layers as svg groups
+* :guilabel:`export map layers as svg groups`:
 * render map labels as outlines
 
 .. _figure_composer_output_3:
@@ -106,8 +113,14 @@ The SVG export options dialog allows also to :
 
    SVG Export Options
 
-PDF export options
-==================
+.. note::
+
+   Currently, the SVG output is very basic. This is not a QGIS problem, but a
+   problem with the underlying Qt library. This will hopefully be sorted out
+   in future versions.
+
+Export as PDF
+==============
 
 The |saveAsPDF| :sup:`Export as PDF` exports all the composition into a
 single PDF file.
@@ -120,21 +133,13 @@ but rasterize the composition. Note that the :guilabel:`Force layer to render
 as raster` in the Rendering tab of Layer Properties is a layer-level alternative
 that avoids global composition rasterization.
 
-.. note::
-
-   * Currently, the SVG output is very basic. This is not a QGIS problem, but a
-     problem with the underlying Qt library. This will hopefully be sorted out
-     in future versions.
-   * Exporting big rasters can sometimes fail, even if there seems to be
-     enough memory. This is also a problem with the underlying Qt management
-     of rasters.
 
 .. index:: Atlas_Generation
 
 .. _atlas_generation:
 
-Atlas generation
-=================
+Generate an Atlas
+==================
 
 The Print Composer includes generation functions that allow you to create map
 books in an automated way. The concept is to use a coverage layer, which contains
@@ -196,7 +201,7 @@ item, you need to check |checkbox|:guilabel:`Controlled by Atlas` under the item
 properties of the map item.
 Once checked, you can set:
 
-* A radiobutton |radioButtonOn| :guilabel:`Margin around feature` that allows you to select
+* A |radiobuttonon| :guilabel:`Margin around feature` that allows you to select
   the amount of space added around each geometry within the allocated map.
   Its value is meaningful only when using the auto-scaling mode.
 * A |radioButtonOff| :guilabel:`Predefined scale` (best fit). It will use the best
@@ -213,6 +218,8 @@ Labels
 ------
 
 In order to adapt labels to the feature the atlas plugin iterates over, you can include expressions.
+What you should take care of is to place expression part (including functions, fields or variables)
+between ``[%`` and ``%]``.
 For example, for a city layer with fields CITY_NAME and ZIPCODE, you could insert this:
 
 .. code::
@@ -220,10 +227,17 @@ For example, for a city layer with fields CITY_NAME and ZIPCODE, you could inser
    The area of [% upper(CITY_NAME) || ',' || ZIPCODE || ' is '
    format_number($area/1000000,2) %] km2
 
-The information `[% upper(CITY_NAME) || ',' || ZIPCODE || ' is ' format_number($area/1000000,2) %]`
-is an expression used inside the label. That would result in the generated atlas as:
+or, another combination:
 
-`The area of PARIS,75001 is 1.94 km2`
+.. code::
+
+   The area of [% upper(CITY_NAME)%],[%ZIPCODE%] is 
+   [%format_number($area/1000000,2) %] km2
+
+The information ``[% upper(CITY_NAME) || ',' || ZIPCODE || ' is ' format_number($area/1000000,2) %]``
+is an expression used inside the label. both expressions would result in the generated atlas as::
+
+  The area of PARIS,75001 is 1.94 km2
 
 
 .. _atlas_data_defined_override:
@@ -297,8 +311,8 @@ This is just one example of how you can use the Data Defined Override option.
 
 .. _atlas_preview:
 
-Preview
--------
+Preview and generate
+--------------------
 
 .. _figure_composer_atlas_2:
 
@@ -326,8 +340,6 @@ You can also use the combo box to directly select and preview a specific feature
 The combo box shows atlas features name according to the expression set in the
 atlas :guilabel:`Page name` option.
 
-Generation
-----------
 
 As for simple compositions, an atlas can be generated in different ways (see
 :ref:`create-output` for more information). Instead of :menuselection:`Composer`
