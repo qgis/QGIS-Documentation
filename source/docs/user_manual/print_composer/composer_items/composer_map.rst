@@ -84,8 +84,18 @@ following functionalities (see figure_composer_map_1_):
   just select the preset you want to display.
   The map canvas will automatically lock the preset layers by enabling the |checkbox|
   :guilabel:`Lock layers for map item`: if you want to unselect the preset, just uncheck the
-  |checkbox| and press on the |draw| button. See :ref:`label_legend` to find out how to
+  |checkbox| and press the |draw| button. See :ref:`label_legend` to find out how to
   create presets views.
+
+  Locked layers in the map can also be :ref:`data-defined <data-defined>`, using
+  the |dataDefined|  icon beside the option. When used, this overrides the
+  selection set in the drop-down list. You need to pass a list of layers separated
+  by ``|`` character.
+  The following example locks the map item to use only layers ``layer 1`` and
+  ``layer 2``::
+  
+    concat ('layer 1', '|', 'layer 2')
+
 
 Extents
 -------
