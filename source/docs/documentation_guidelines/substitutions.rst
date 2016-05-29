@@ -237,18 +237,19 @@ Icon                            Substitution                        Icon        
 Attribute Table
 ===============
 
-=======================  ===========================  =======================  ===========================
-Icon                     Substitution                 Icon                     Substitution
-=======================  ===========================  =======================  ===========================
-|openTable|              ``|openTable|``              |selectedToTop|          ``|selectedToTop|``
-|selectAll|              ``|selectAll|``              |invertSelection|        ``|invertSelection|``
-|panToSelected|          ``|panToSelected|``          |zoomToSelected|         ``|zoomToSelected|``
-|copySelected|           ``|copySelected|``           |editPaste|              ``|editPaste|``
-|expressionSelect|       ``|expressionSelect|``       |deleteSelected|         ``|deleteSelected|``
-|newAttribute|           ``|newAttribute|``           |deleteAttribute|        ``|deleteAttribute|``
-|newTableRow|            ``|newTableRow|``            |calculateField|         ``|calculateField|``
-|draw|                   ``|draw|``                   |form|                   ``|form|``
-=======================  ===========================  =======================  ===========================
+============================ ===============================  =======================  ===========================
+Icon                         Substitution                     Icon                     Substitution
+===========================  ===============================  =======================  ===========================
+|openTable|                  ``|openTable|``                  |selectedToTop|          ``|selectedToTop|``
+|selectAll|                  ``|selectAll|``                  |invertSelection|        ``|invertSelection|``
+|panToSelected|              ``|panToSelected|``              |zoomToSelected|         ``|zoomToSelected|``
+|copySelected|               ``|copySelected|``               |editPaste|              ``|editPaste|``
+|expressionSelect|           ``|expressionSelect|``           |deleteSelected|         ``|deleteSelected|``
+|newAttribute|               ``|newAttribute|``               |deleteAttribute|        ``|deleteAttribute|``
+|newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
+|draw|                       ``|draw|``                       |form|                   ``|form|``
+|rendererCategorizedSymbol|  ``|rendererCategorizedSymbol|``  \                        \
+===========================  ===============================  =======================  ===========================
 
 
 Projections and Georeferencer
