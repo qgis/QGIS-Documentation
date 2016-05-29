@@ -15,21 +15,19 @@ The **Expressions** feature is available from many parts in QGIS. It can be
 accessed using the |expressionSelect| :sup:`Select by expression`, the
 |calculateField| :sup:`Field calculator` or the
 |dataDefined| :sup:`Data defined override` tool.
+Expressions are build from the layer data and prebuild or user defined functions. 
 It offers a powerful way to manipulate attribute value or variables in
 order to dynamically change the geometry style, the content or position
 of the label, the value for diagram, the height of a composer item,
 select some feature, create virtual column ...
 
-Regardless of the context where they are used, expressions are build from the 
-layer data and prebuild or user defined functions. 
-
 **Some examples:**
 
-*	From Field Calculator, update the column pop_density from existing total_pop and area_km2 columns ::
+* From Field Calculator, update the column pop_density from existing total_pop and area_km2 columns::
 
     "total_pop" / "area_km2"
 
-*	Update the column density_level with categories according to the pop_density values ::
+* Update the column density_level with categories according to the pop_density values::
 
     CASE WHEN "pop_dens" < 50 THEN 'Low population density' 
 		  WHEN "pop_dens" >= 50 and "pop_dens" < 150 THEN 'Medium population density'
@@ -39,7 +37,8 @@ layer data and prebuild or user defined functions.
 When in Rule-based style, expressions can be used to fine tune under which conditions a 
 style is to be applied. This is especially useful to style layers according to two or more criteria.
 
-*	Apply a given style to all the features representing areas of “High population density” and  whose average house price is higher than 10000€ per square metre ::
+* Apply a given style to all the features representing areas of “High population density” and  
+whose average house price is higher than 10000€ per square metre::
 
     "pop_dens" = 'High population density' and "price_m2" > 10000
     
