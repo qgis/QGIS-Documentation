@@ -332,9 +332,9 @@ To navigate in the canvas layout, the Print Composer provides some general tools
 * `Show Guides` to help user to align items. These are red line that you can
   click in the rule (above or at the left side of the layout) and drag and drop
   to the desired location.
-* `Snap Guides` uses composer items as guides to dynamically snap to as user
-  moves or reshapes item,
-* `Smart Guides` are dynamic guides between items.
+* `Snap Guides`: allows user to snap items to the guides,
+* `Smart Guides`: uses other composer items as guides to dynamically snap to as user
+  moves or reshapes an item.
 * `Clear Guides` to remove all current guides.
 * `Show Bounding box` around the items.
 * `Show Rules` around the layout.
