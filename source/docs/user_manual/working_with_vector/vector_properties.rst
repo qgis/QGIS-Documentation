@@ -199,11 +199,13 @@ that the color picker is OS dependent and is currently not supported by OSX.
 
 .. tip:: **edit style directly from layer panel**
 
-   If you have a categorized layer in your **Layers Panel** you can quickly
-   change the style of the categories by right-clicking on
-   a categorie and choose the style you prefer from a |colorWheel|
-   :sup:`color wheel` menu.
-   This is more convenient than accessing the layer properties.
+   If in your **Layers Panel** you have layers with categories 
+   defined trhough categorized, graduaded or rule based style mode,
+   you can quickly change the style of the categories by right-clicking 
+   on a category and choose the style you prefer from a |colorWheel|
+   :sup:`color wheel` menu. Right Clicking on a category will also give
+   you access to the options **Hide all items**, **Show all items** **and Edit symbol**
+   
 
 .. _data-defined:
 
