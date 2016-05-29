@@ -901,7 +901,6 @@ and the polygon outline, as well as the repeat interval for the label.
 
    Smart labeling of vector polygon layers
 
-
 In the :guilabel:`priority` section you can define the priority with which labels
 are rendered for all three vector layer types (point, line, polygon). This
 placement option interact with labels of the other vector layers in the map
