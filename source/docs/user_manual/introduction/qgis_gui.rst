@@ -245,10 +245,12 @@ Raster
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:guilabel:`Raster calculator ...`                               \                     see :ref:`sec_raster_calc`                  \
+:guilabel:`Raster calculator ...`                               \                     see :ref:`label_raster_calc`                \
+:guilabel:`Align Raster ...`                                    \                     see :ref:`label_raster_align`               \
 ==============================================================  ====================  ==========================================  ===============================
 
 When starting QGIS for the first time not all core plugins are loaded.
+
 
 Database
 ........
