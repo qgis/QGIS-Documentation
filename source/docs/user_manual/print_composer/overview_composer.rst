@@ -218,7 +218,7 @@ Tools
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
 | |draw|                | Refresh View                          |                     |                                          |
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |pan|                 | Pan                                   | |zoomToSelected|    | Zoom to specific region                  |
+| |pan|                 | Pan                                   | |zoomToArea|        | Zoom to specific region                  |
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
 | |select|              | Select/Move item in print composition | |moveItemContent|   | Move content within an item              |
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
@@ -332,7 +332,8 @@ To navigate in the canvas layout, the Print Composer provides some general tools
 * `Show Guides` to help user to align items. These are red line that you can
   click in the rule (above or at the left side of the layout) and drag and drop
   to the desired location.
-* `Snap Guides` allow user to snap items on guides.
+* `Snap Guides` uses composer items as guides to dynamically snap to as user
+  moves or reshapes item,
 * `Smart Guides` are dynamic guides between items.
 * `Clear Guides` to remove all current guides.
 * `Show Bounding box` around the items.
@@ -342,8 +343,8 @@ To navigate in the canvas layout, the Print Composer provides some general tools
   documents, and it's desirable to export the composition using a totally
   transparent background. It's sometimes referred to as "infinite canvas" in
   other editing packages.
-* `Toggle Full Screen` make the composer window to full screen.
-* `Hide Panels` hide/shows the right panel
+* `Toggle Full Screen` makes the composer window to full screen.
+* `Hide Panels` hides/shows the right panel
 * `Panels` lists all panels available to hide/show them.
 * `Toolbars` same as above for toolbars.
 

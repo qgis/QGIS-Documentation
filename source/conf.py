@@ -1099,11 +1099,12 @@ rst_epilog = """
    :width: 1.5em
 .. |zoomOut| image:: /static/common/mActionZoomOut.png
    :width: 1.5em
+.. |zoomToArea| image:: /static/common/mActionZoomToArea.png
+   :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
-
 
 .. |basic| image:: /static/training_manual/global/basic.png
 .. |moderate| image:: /static/training_manual/global/moderate.png
