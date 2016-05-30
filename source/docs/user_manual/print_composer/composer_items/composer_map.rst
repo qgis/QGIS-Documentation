@@ -92,8 +92,8 @@ following functionalities (see figure_composer_map_1_):
   selection set in the drop-down list. You need to pass a list of layers separated
   by ``|`` character.
   The following example locks the map item to use only layers ``layer 1`` and
-  ``layer 2``::
-
+  ``layer 2``:
+  
     concat ('layer 1', '|', 'layer 2')
 
 
