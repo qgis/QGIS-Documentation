@@ -92,7 +92,7 @@ following functionalities (see figure_composer_map_1_):
   selection set in the drop-down list. You need to pass a list of layers separated
   by ``|`` character.
   The following example locks the map item to use only layers ``layer 1`` and
-  ``layer 2``:
+  ``layer 2``::
   
     concat ('layer 1', '|', 'layer 2')
 
@@ -151,8 +151,9 @@ When you double click on the added grid you can give it another name.
 
    Map Grids Dialog
 
-After you have added a grid, you can activate the checkbox |checkbox| :guilabel:`Draw grid` to overlay a grid onto the
-map element. Expand this option to provide a lot of configuration options, see Figure_composer_map_4_.
+After you have added a grid, you can activate the checkbox |checkbox|
+:guilabel:`Draw grid` to overlay a grid onto the map element. Expand this option to provide
+a lot of configuration options, see Figure_composer_map_4_.
 
 .. _Figure_composer_map_4:
 
@@ -200,8 +201,8 @@ and the width used for the cross or line grid type.
   or disable(none). This is useful when the map is rotated. The annotation can be drawn inside or
   outside the map frame. The annotation direction can be defined as horizontal,
   vertical ascending or vertical descending.
-  Finally, you can define the annotation font, the annotation font color, the annotation distance from the map frame
-  and the precision of the drawn coordinates.
+  Finally, you can define the annotation font, the annotation font color, the annotation
+  distance from the map frame and the precision of the drawn coordinates.
 
 .. _Figure_composer_map_6:
 
