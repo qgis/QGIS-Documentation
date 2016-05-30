@@ -18,439 +18,7 @@ To access the :guilabel:`Layer Properties` dialog, double-click on a layer in
 the legend or right-click on the layer and select :menuselection:`Properties`
 from the pop-up menu.
 
-
-Special Tools
-=============
-
-.. _save_layer_property:
-
-Save and Share Layer Properties
--------------------------------
-
-When a layer is added to map canvas, QGIS uses by default a random symbol/color
-to render its features. You can however set a default symbol in
-:menuselection:`Project --> Properties --> Default styles` that will be applied
-to each newly added layer according to its geometry type.
-
-But, most of the time, you'd prefer to have a custom and more complexe style
-that can be applied automatically or manually (with less efforts) to the layers.
-You can achieve this goal using the :menuselection:`Style` combobox at the bottom of
-the Layer Properties dialog. This combobox provides you with functions to create,
-load and manage styles.
-
-A style stores any information set in the layer properties dialog to render
-or interact with the features (including symbology, labeling, action, diagram...
-settings).
-Styles can be stored inside the project, in a file (``.qml`` or ``.sld``) or
-in a database (SpatiaLite, PostGIS...). Thanks to layer visibility manager, you can assign
-several styles to the same layer but only one can be active at the same time.
-
-.. only:: html
-
-   **Figure Vector Properties 10:**
-
-.. _figure_vector_properties_10:
-
-.. figure:: /static/user_manual/working_with_vector/style_combobox.png
-   :align: center
-
-   Style combobox options
-
-By default, the style applied to a loaded layer is named ``default``.
-Once you have got the ideal and appropriate rendering for your layer,
-you can save it by clicking the |selectString| :menuselection:`Style` combobox and choose:
-
-* **Rename Current**: The active style gets renamed and updated with the current options
-* **Add**: A new style is created using the current options.
-
-At the bottom of the Style drop-down list, you see the styles set
-for the layer and the active one is checked.
-Once you have more than one style defined for a layer, a **Remove Current** option
-can help you delete those you no more want.
-
-Note that each time you validate the layer properties dialog, the active style
-is updated with the changes you've done.
-
-You can create as many styles as you wish for each layer.
-Combined to layer visibility preset, this offers a quick and powerful way to manage
-complexe projects with few layers (no need to duplicate any layer in the map legend).
-
-While these styles are saved inside the project and can be copied and pasted from
-layer to layer in the project, it's also possible to save them outside the project
-so that they can be loaded in another project.
-Clicking the |selectString| :menuselection:`Style --> Save Style`
-saves the symbol as a QGIS layer style file (``.qml``) or SLD file (``.sld``).
-SLDs can be exported from any type of renderer -- single symbol,
-categorized, graduated or rule-based -- but when importing an SLD, either a
-single symbol or rule-based renderer is created.
-That means that categorized or graduated styles are converted to rule-based.
-If you want to preserve those renderers, you have to stick to the QML format.
-On the other hand, it can be very handy sometimes to have this easy way of
-converting styles to rule-based.
-
-If the datasource of the layer is a database (PostGIS or Spatialite for example),
-you can also save your layer style inside a table of the database. Just click on
-:menuselection:`Save Style` combobox and choose **Save in database** item then fill in
-the dialog to define a style name, add a description, an ui file if applicable
-and check if the style is the default style. You can add several style in the database.
-However each table can have only one default style.
-
-.. ToDo:
-   It might be interesting to explain the difference between *local database*
-   and *datasource database* proposed as options when saving or loading style from DB
-
-   It might also be nice to add the tip about restoring style table while
-   restoring a database
-
-When loading a layer in QGIS, if a default style already exists for this layer,
-QGIS will load the layer and its style. After you modified the layer style,
-you can **Save as Default**, creating a new style that becomes the default one
-or **Restore Default** style if you're not satisfied.
-
-.. only:: html
-
-   **Figure Vector Properties 2:**
-
-.. _figure_vector_properties_2:
-
-.. figure:: /static/user_manual/working_with_vector/save_style_database.png
-   :align: center
-
-   Save Style in database Dialog
-
-
-From many parts of the layer properties dialog (and also from many other dialogs),
-there are some features you'll often encounter. Some of them are presented below.
-
-.. _color-selector:
-
-Color Selector
---------------
-
-The :guilabel:`select color` dialog will appear whenever you click
-to choose a :index:`color` - either border or fill color. This dialog
-has four different tabs which allow you to select colors by
-|colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
-|colorSwatches| :sup:`color swatches` or |colorPicker| :sup:`color picker`.
-
-Whatever method you use, the selected color is always described through color
-sliders for HSV  (Hue, Saturation, Value) and RGB (Red, Green, Blue) values.
-There is also an :guilabel:`opacity` slider to set transparency level.
-On the lower left part of the dialog you can see a comparison between the
-:guilabel:`current` and the :guilabel:`new` color you are presently
-selecting and on the lower right part you have the option to add the color
-you just tweaked into a color slot button.
-
-.. _figure_color_selector_1:
-
-.. only:: html
-
-   **Figure color selector 1:**
-
-.. figure:: /static/user_manual/working_with_vector/color_selector_ramp.png
-   :align: center
-
-   Color selector ramp tab
-
-
-With |colorBox| :sup:`color ramp` or with |colorWheel| :sup:`color wheel`,
-you can browse to all possible color combinations.
-There are other possibilities though. By using |colorSwatches| :sup:`color swatches`
-you can choose from a preselected list. This selected list is
-populated with one of three methods: :guilabel:`Recent colors`,
-:guilabel:`Standard colors` or :guilabel:`Project colors`.
-
-.. _figure_color_selector_2:
-
-.. only:: html
-
-   **Figure color selector 2:**
-
-.. figure:: /static/user_manual/working_with_vector/color_selector_recent_colors.png
-   :align: center
-
-   Color selector switcher tab
-
-
-Another option is to use the |colorPicker| :sup:`color picker` which allows
-you to sample a color from under your mouse pointer at any part of
-QGIS or even from another application by pressing the space bar. Please note
-that the color picker is OS dependent and is currently not supported by OSX.
-
-.. _tip_quick_color_picker_+_copy/paste_colors:
-
-.. tip:: **quick color picker + copy/paste colors**
-
-   You can quickly choose from :guilabel:`Recent colors`, from :guilabel:`Standard colors`
-   or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking
-   the drop-down arrow that follows a current color box.
-
-.. _figure_color_selector_3:
-
-.. only:: html
-
-   **Figure color selector 3:**
-
-.. figure:: /static/user_manual/working_with_vector/quick_color_selector.png
-   :align: center
-
-   Quick color selector menu
-
-.. _data-defined:
-
-Data-defined setup
--------------------
-
-In some part of the vector layer properties you can find an icon |dataDefined|
-:sup:`data defined override`. This tool allows you to link the parameter
-besides to a field in the attribute table and, so, to change the value of the
-parameter in a dynamic way.
-
-The dropdown list shows:
-
-* a :guilabel:`Description ...` that indicates if it is enabled, which input
-  expected, valid input type and the current definition,
-* an entry to list the :guilabel:`Field type` available,
-* an entry to list the :guilabel:`Variable` available,
-* :guilabel:`Edit ...` button which open the expression window,
-* :guilabel:`Paste` and :guilabel:`Copy` buttons,
-* :guilabel:`Clear` button to remove the setup.
-
-When the data-defined is setup correctly the icon is yellow, if it is broken,
-the icon is red.
-
-Parameters that can be used with data-defined tools:
-
-* Style and symbols parameters
-* Labels parameters
-* Composer parameters
-
-.. _blend-modes:
-
-Blending Modes
---------------
-
-QGIS offers different options for special :index:`rendering effects` with these tools that
-you may previously only know from graphics programs:
-
-* **Normal**: This is the standard blend mode, which uses the alpha channel of the top
-  pixel to blend with the pixel beneath it. The colors aren't mixed.
-* **Lighten**: This selects the maximum of each component from the foreground and
-  background pixels. Be aware that the results tend to be jagged and harsh.
-* **Screen**: Light pixels from the source are painted over the destination, while
-  dark pixels are not. This mode is most useful for mixing the texture of one layer
-  with another layer (e.g., you can use a hillshade to texture another layer).
-* **Dodge**: Dodge will brighten and saturate underlying pixels based on the lightness
-  of the top pixel. So, brighter top pixels cause the saturation and brightness of
-  the underlying pixels to increase. This works best if the top pixels aren't too
-  bright; otherwise the effect is too extreme.
-* **Addition**: This blend mode simply adds pixel values of one layer with the other.
-  In case of values above one (in the case of RGB), white is displayed.
-  This mode is suitable for highlighting features.
-* **Darken**: This creates a resultant pixel that retains the smallest components of the
-  foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
-* **Multiply**: Here, the numbers for each pixel of the top layer are multiplied with
-  the corresponding pixels for the bottom layer. The results are darker pictures.
-* **Burn**: Darker colors in the top layer cause the underlying layers to darken.
-  Burn can be used to tweak and colorise underlying layers.
-* **Overlay**: This mode combines the multiply and screen blending modes.
-  In the resulting picture, light parts become lighter and dark parts become darker.
-* Soft light: This is very similar to overlay, but instead of using multiply/screen
-  it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
-* **Hard light**: Hard light is also very similar to the overlay mode. It's supposed
-  to emulate projecting a very intense light onto an image.
-* **Difference**: Difference subtracts the top pixel from the bottom pixel, or the other
-  way around, to always get a positive value. Blending with black produces no change,
-  as the difference with all colors is zero.
-* **Subtract**: This blend mode simply subtracts pixel values of one layer from the other.
-  In case of negative values, black is displayed.
-
-.. _draw_effects:
-
-Draw effects
-------------
-
-In order to improve layer rendering and avoid (or at least reduce)
-the resort to other software for final rendering of maps, QGIS provides another
-powerful functionality: the |paintEffects| :guilabel:`Draw Effects` options,
-which adds :index:`paint effects` for customizing the visualization of vector
-layers.
-
-The options are available at the whole layer level (in the :guilabel:`Layer rendering`
-group) and at feature level (in each symbol layer), and you can even combine
-both.
-
-The effects can be activated by checking the |checkbox| :guilabel:`Draw effects` option
-and clicking the |paintEffects| :sup:`Customize effects` button, that will open
-the :guilabel:`Effect Properties` Dialog (see figure_effects_1). The following effect types are available:
-
-* **Source:** Draws the feature's original style according to the
-  configuration of the layer's properties. The transparency of its style can be adjusted.
-
-  .. _figure_effects_1:
-
-  .. only:: html
-
-     **Figure Effects 1:**
-
-  .. figure:: /static/user_manual/working_with_vector/source.png
-     :align: center
-
-     Draw Effects: Source dialog
-
-* **Blur:** Adds a blur effect on the vector layer. The options that someone can change are the
-  :menuselection:`Blur type` (:menuselection:`Stack` or :menuselection:`Gaussian blur`),
-  the strength and transparency of the blur effect.
-
-  .. _figure_effects_2:
-
-  .. only:: html
-
-     **Figure Effects 2:**
-
-  .. figure:: /static/user_manual/working_with_vector/blur.png
-     :align: center
-
-     Draw Effects: Blur dialog
-
-* **Colorize:** This effect can be used to make a version of the style using one
-  single hue. The base will always be a grayscale version of the symbol and you
-  can use the |selectString| :guilabel:`Grayscale` to select how to create it
-  (options are: 'lightness', 'luminosity' and 'average'). If |checkbox|
-  :guilabel:`Colorise` is selected, it will be possible to mix another color
-  and choose how strong it should be. You can also control the
-  :guilabel:`Brightness`, :guilabel:`contrast` and
-  :guilabel:`saturation` levels of the resulting symbol.
-
-  .. _figure_effects_3:
-
-  .. only:: html
-
-     **Figure Effects 3:**
-
-  .. figure:: /static/user_manual/working_with_vector/colorise.png
-     :align: center
-
-     Draw Effects: Colorize dialog
-
-* **Drop Shadow:** Using this effect adds a shadow on the feature, which looks like adding an
-  extra dimension. This effect can be customized by changing the :menuselection:`offset`
-  degrees and radius, determining where the shadow shifts towards to and the proximity to
-  the source object. :menuselection:`Drop Shadow` also has the option to change the blur radius,
-  the transparency and the color of the effect.
-
-  .. _figure_effects_4:
-
-  .. only:: html
-
-     **Figure Effects 4:**
-
-  .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
-     :align: center
-
-     Draw Effects: Drop Shadow dialog
-
-* **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect, but it adds
-  the shadow effect on the inside of the edges of the feature. The available options for customization
-  are the same as the :menuselection:`Drop Shadow` effect.
-
-  .. _figure_effects_5:
-
-  .. only:: html
-
-     **Figure Effects 5:**
-
-  .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
-     :align: center
-
-     Draw Effects: Inner Shadow dialog
-
-* **Inner Glow:** Adds a glow effect inside the feature. This effect can be customized by adjusting
-  the :menuselection:`spread` (width) of the glow, or the :menuselection:`Blur radius`.
-  The latter specifies the proximity from the edge of the feature where you want any blurring to happen.
-  Additionally, there are options to customize the color of the glow, with a single color or a color ramp.
-
-  .. _figure_effects_6:
-
-  .. only:: html
-
-     **Figure Effects 6:**
-
-  .. figure:: /static/user_manual/working_with_vector/inner_glow.png
-     :align: center
-
-     Draw Effects: Inner Glow dialog
-
-* **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect, but it adds
-  the glow effect on the outside of the edges of the feature. The available options for customization
-  are the same as the :menuselection:`Inner Glow` effect.
-
-  .. _figure_effects_7:
-
-  .. only:: html
-
-     **Figure Effects 7:**
-
-  .. figure:: /static/user_manual/working_with_vector/outer_glow.png
-     :align: center
-
-     Draw Effects: Outer Glow dialog
-
-* **Transform:** Adds the possibility of transforming the shape of the symbol.
-  The first options available for customization are the :menuselection:`Reflect horizontal`
-  and :menuselection:`Reflect vertical`, which actually create a reflection on the
-  horizontal and/or vertical axes. The 4 other options are:
-
-  * :menuselection:`Shear`: slants the feature along the x and/or y axis
-  * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or y axis
-    by the given percentage
-  * :menuselection:`Rotation`: turns the feature around its center point
-  * and :menuselection:`Translate` changes the position of the item based on a distance
-    given on the x and/or the y axis.
-
-  .. _figure_effects_8:
-
-  .. only:: html
-
-     **Figure Effects 8:**
-
-  .. figure:: /static/user_manual/working_with_vector/transform.png
-     :align: center
-
-     Draw Effects: Transform dialog
-
-There are some common options available for all draw effect types.
-:guilabel:`Transparency` and :guilabel:`Blend mode` options work similar
-to the ones described in :ref:`layer_rendering` and can be used in all draw
-effects except for the transform one.
-
-One or more draw effects can used at the same time. You activate/deactivate an effect
-using its checkbox in the effects list. You can change the selected effect type by 
-using the |selectstring| :guilabel:`Effect type` option. You can reorder the effects 
-using |arrowUp| :sup:`Move up` and |arrowDown| :sup:`Move down`
-buttons, and also add/remove effects using the |signPlus| :sup:`Add effect`
-and |signMinus| :sup:`Remove effect` buttons.
-  
-There is also a |selectString| :guilabel:`Draw mode` option available for 
-every draw effect, and you can choose whether to render and/or to modify the
-symbol. Effects render from top to bottom.'Render only' mode means that the
-effect will be visible while the 'Modify only' mode means that the effect will
-not be visible but the changes that it applies will be passed to the next effect
-(the one immediately below). The 'Render and Modify' mode will make the
-effect visible and pass any changes to the next effect. If the effect is in the
-top of the effects list or if the immediately above effect is not in modify
-mode, then it will use the original source symbol from the layers properties
-(similar to source).
-
-.. _data_def:
-
-..
-  Data-Defined Override
-  ---------------------
-
-
 .. _vectorgeneralmenu:
-
 
 General Menu
 ============
@@ -2365,3 +1933,429 @@ of the image. Currently png, jpg and jpeg image formats are supported.
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/
+
+Others Settings
+===============
+
+.. _save_layer_property:
+
+Save and Share Layer Properties
+-------------------------------
+
+When a layer is added to map canvas, QGIS uses by default a random symbol/color
+to render its features. You can however set a default symbol in
+:menuselection:`Project --> Properties --> Default styles` that will be applied
+to each newly added layer according to its geometry type.
+
+But, most of the time, you'd prefer to have a custom and more complexe style
+that can be applied automatically or manually (with less efforts) to the layers.
+You can achieve this goal using the :menuselection:`Style` combobox at the bottom of
+the Layer Properties dialog. This combobox provides you with functions to create,
+load and manage styles.
+
+A style stores any information set in the layer properties dialog to render
+or interact with the features (including symbology, labeling, action, diagram...
+settings).
+Styles can be stored inside the project, in a file (``.qml`` or ``.sld``) or
+in a database (SpatiaLite, PostGIS...). Thanks to layer visibility manager, you can assign
+several styles to the same layer but only one can be active at the same time.
+
+.. only:: html
+
+   **Figure Vector Properties 10:**
+
+.. _figure_vector_properties_10:
+
+.. figure:: /static/user_manual/working_with_vector/style_combobox.png
+   :align: center
+
+   Style combobox options
+
+By default, the style applied to a loaded layer is named ``default``.
+Once you have got the ideal and appropriate rendering for your layer,
+you can save it by clicking the |selectString| :menuselection:`Style` combobox and choose:
+
+* **Rename Current**: The active style gets renamed and updated with the current options
+* **Add**: A new style is created using the current options.
+
+At the bottom of the Style drop-down list, you see the styles set
+for the layer and the active one is checked.
+Once you have more than one style defined for a layer, a **Remove Current** option
+can help you delete those you no more want.
+
+Note that each time you validate the layer properties dialog, the active style
+is updated with the changes you've done.
+
+You can create as many styles as you wish for each layer.
+Combined to layer visibility preset, this offers a quick and powerful way to manage
+complexe projects with few layers (no need to duplicate any layer in the map legend).
+
+While these styles are saved inside the project and can be copied and pasted from
+layer to layer in the project, it's also possible to save them outside the project
+so that they can be loaded in another project.
+Clicking the |selectString| :menuselection:`Style --> Save Style`
+saves the symbol as a QGIS layer style file (``.qml``) or SLD file (``.sld``).
+SLDs can be exported from any type of renderer -- single symbol,
+categorized, graduated or rule-based -- but when importing an SLD, either a
+single symbol or rule-based renderer is created.
+That means that categorized or graduated styles are converted to rule-based.
+If you want to preserve those renderers, you have to stick to the QML format.
+On the other hand, it can be very handy sometimes to have this easy way of
+converting styles to rule-based.
+
+If the datasource of the layer is a database (PostGIS or Spatialite for example),
+you can also save your layer style inside a table of the database. Just click on
+:menuselection:`Save Style` combobox and choose **Save in database** item then fill in
+the dialog to define a style name, add a description, an ui file if applicable
+and check if the style is the default style. You can add several style in the database.
+However each table can have only one default style.
+
+.. ToDo:
+   It might be interesting to explain the difference between *local database*
+   and *datasource database* proposed as options when saving or loading style from DB
+
+   It might also be nice to add the tip about restoring style table while
+   restoring a database
+
+When loading a layer in QGIS, if a default style already exists for this layer,
+QGIS will load the layer and its style. After you modified the layer style,
+you can **Save as Default**, creating a new style that becomes the default one
+or **Restore Default** style if you're not satisfied.
+
+.. only:: html
+
+   **Figure Vector Properties 2:**
+
+.. _figure_vector_properties_2:
+
+.. figure:: /static/user_manual/working_with_vector/save_style_database.png
+   :align: center
+
+   Save Style in database Dialog
+
+
+From many parts of the layer properties dialog (and also from many other dialogs),
+there are some features you'll often encounter. Some of them are presented below.
+
+.. _color-selector:
+
+Color Selector
+--------------
+
+The :guilabel:`select color` dialog will appear whenever you click
+to choose a :index:`color` - either border or fill color. This dialog
+has four different tabs which allow you to select colors by
+|colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
+|colorSwatches| :sup:`color swatches` or |colorPicker| :sup:`color picker`.
+
+Whatever method you use, the selected color is always described through color
+sliders for HSV  (Hue, Saturation, Value) and RGB (Red, Green, Blue) values.
+There is also an :guilabel:`opacity` slider to set transparency level.
+On the lower left part of the dialog you can see a comparison between the
+:guilabel:`current` and the :guilabel:`new` color you are presently
+selecting and on the lower right part you have the option to add the color
+you just tweaked into a color slot button.
+
+.. _figure_color_selector_1:
+
+.. only:: html
+
+   **Figure color selector 1:**
+
+.. figure:: /static/user_manual/working_with_vector/color_selector_ramp.png
+   :align: center
+
+   Color selector ramp tab
+
+
+With |colorBox| :sup:`color ramp` or with |colorWheel| :sup:`color wheel`,
+you can browse to all possible color combinations.
+There are other possibilities though. By using |colorSwatches| :sup:`color swatches`
+you can choose from a preselected list. This selected list is
+populated with one of three methods: :guilabel:`Recent colors`,
+:guilabel:`Standard colors` or :guilabel:`Project colors`.
+
+.. _figure_color_selector_2:
+
+.. only:: html
+
+   **Figure color selector 2:**
+
+.. figure:: /static/user_manual/working_with_vector/color_selector_recent_colors.png
+   :align: center
+
+   Color selector switcher tab
+
+
+Another option is to use the |colorPicker| :sup:`color picker` which allows
+you to sample a color from under your mouse pointer at any part of
+QGIS or even from another application by pressing the space bar. Please note
+that the color picker is OS dependent and is currently not supported by OSX.
+
+.. _tip_quick_color_picker_+_copy/paste_colors:
+
+.. tip:: **quick color picker + copy/paste colors**
+
+   You can quickly choose from :guilabel:`Recent colors`, from :guilabel:`Standard colors`
+   or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking
+   the drop-down arrow that follows a current color box.
+
+.. _figure_color_selector_3:
+
+.. only:: html
+
+   **Figure color selector 3:**
+
+.. figure:: /static/user_manual/working_with_vector/quick_color_selector.png
+   :align: center
+
+   Quick color selector menu
+
+.. _data_defined:
+
+Data-Defined Override
+---------------------
+
+In some part of the vector layer properties you can find an icon |dataDefined|
+:sup:`data defined override`. This tool allows you to link the parameter
+besides to a field in the attribute table and, so, to change the value of the
+parameter in a dynamic way.
+
+The dropdown list shows:
+
+* a :guilabel:`Description ...` that indicates if it is enabled, which input
+  expected, valid input type and the current definition,
+* an entry to list the :guilabel:`Field type` available,
+* an entry to list the :guilabel:`Variable` available,
+* :guilabel:`Edit ...` button which open the expression window,
+* :guilabel:`Paste` and :guilabel:`Copy` buttons,
+* :guilabel:`Clear` button to remove the setup.
+
+When the data-defined is setup correctly the icon is yellow, if it is broken,
+the icon is red.
+
+Parameters that can be used with data-defined tools:
+
+* Style and symbols parameters
+* Labels parameters
+* Composer parameters
+
+.. _blend-modes:
+
+Blending Modes
+--------------
+
+QGIS offers different options for special :index:`rendering effects` with these tools that
+you may previously only know from graphics programs:
+
+* **Normal**: This is the standard blend mode, which uses the alpha channel of the top
+  pixel to blend with the pixel beneath it. The colors aren't mixed.
+* **Lighten**: This selects the maximum of each component from the foreground and
+  background pixels. Be aware that the results tend to be jagged and harsh.
+* **Screen**: Light pixels from the source are painted over the destination, while
+  dark pixels are not. This mode is most useful for mixing the texture of one layer
+  with another layer (e.g., you can use a hillshade to texture another layer).
+* **Dodge**: Dodge will brighten and saturate underlying pixels based on the lightness
+  of the top pixel. So, brighter top pixels cause the saturation and brightness of
+  the underlying pixels to increase. This works best if the top pixels aren't too
+  bright; otherwise the effect is too extreme.
+* **Addition**: This blend mode simply adds pixel values of one layer with the other.
+  In case of values above one (in the case of RGB), white is displayed.
+  This mode is suitable for highlighting features.
+* **Darken**: This creates a resultant pixel that retains the smallest components of the
+  foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
+* **Multiply**: Here, the numbers for each pixel of the top layer are multiplied with
+  the corresponding pixels for the bottom layer. The results are darker pictures.
+* **Burn**: Darker colors in the top layer cause the underlying layers to darken.
+  Burn can be used to tweak and colorise underlying layers.
+* **Overlay**: This mode combines the multiply and screen blending modes.
+  In the resulting picture, light parts become lighter and dark parts become darker.
+* Soft light: This is very similar to overlay, but instead of using multiply/screen
+  it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
+* **Hard light**: Hard light is also very similar to the overlay mode. It's supposed
+  to emulate projecting a very intense light onto an image.
+* **Difference**: Difference subtracts the top pixel from the bottom pixel, or the other
+  way around, to always get a positive value. Blending with black produces no change,
+  as the difference with all colors is zero.
+* **Subtract**: This blend mode simply subtracts pixel values of one layer from the other.
+  In case of negative values, black is displayed.
+
+.. _draw_effects:
+
+Draw effects
+------------
+
+In order to improve layer rendering and avoid (or at least reduce)
+the resort to other software for final rendering of maps, QGIS provides another
+powerful functionality: the |paintEffects| :guilabel:`Draw Effects` options,
+which adds :index:`paint effects` for customizing the visualization of vector
+layers.
+
+The options are available at the whole layer level (in the :guilabel:`Layer rendering`
+group) and at feature level (in each symbol layer), and you can even combine
+both.
+
+The effects can be activated by checking the |checkbox| :guilabel:`Draw effects` option
+and clicking the |paintEffects| :sup:`Customize effects` button, that will open
+the :guilabel:`Effect Properties` Dialog (see figure_effects_1). The following effect types are available:
+
+* **Source:** Draws the feature's original style according to the
+  configuration of the layer's properties. The transparency of its style can be adjusted.
+
+  .. _figure_effects_1:
+
+  .. only:: html
+
+     **Figure Effects 1:**
+
+  .. figure:: /static/user_manual/working_with_vector/source.png
+     :align: center
+
+     Draw Effects: Source dialog
+
+* **Blur:** Adds a blur effect on the vector layer. The options that someone can change are the
+  :menuselection:`Blur type` (:menuselection:`Stack` or :menuselection:`Gaussian blur`),
+  the strength and transparency of the blur effect.
+
+  .. _figure_effects_2:
+
+  .. only:: html
+
+     **Figure Effects 2:**
+
+  .. figure:: /static/user_manual/working_with_vector/blur.png
+     :align: center
+
+     Draw Effects: Blur dialog
+
+* **Colorize:** This effect can be used to make a version of the style using one
+  single hue. The base will always be a grayscale version of the symbol and you
+  can use the |selectString| :guilabel:`Grayscale` to select how to create it
+  (options are: 'lightness', 'luminosity' and 'average'). If |checkbox|
+  :guilabel:`Colorise` is selected, it will be possible to mix another color
+  and choose how strong it should be. You can also control the
+  :guilabel:`Brightness`, :guilabel:`contrast` and
+  :guilabel:`saturation` levels of the resulting symbol.
+
+  .. _figure_effects_3:
+
+  .. only:: html
+
+     **Figure Effects 3:**
+
+  .. figure:: /static/user_manual/working_with_vector/colorise.png
+     :align: center
+
+     Draw Effects: Colorize dialog
+
+* **Drop Shadow:** Using this effect adds a shadow on the feature, which looks like adding an
+  extra dimension. This effect can be customized by changing the :menuselection:`offset`
+  degrees and radius, determining where the shadow shifts towards to and the proximity to
+  the source object. :menuselection:`Drop Shadow` also has the option to change the blur radius,
+  the transparency and the color of the effect.
+
+  .. _figure_effects_4:
+
+  .. only:: html
+
+     **Figure Effects 4:**
+
+  .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
+     :align: center
+
+     Draw Effects: Drop Shadow dialog
+
+* **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect, but it adds
+  the shadow effect on the inside of the edges of the feature. The available options for customization
+  are the same as the :menuselection:`Drop Shadow` effect.
+
+  .. _figure_effects_5:
+
+  .. only:: html
+
+     **Figure Effects 5:**
+
+  .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
+     :align: center
+
+     Draw Effects: Inner Shadow dialog
+
+* **Inner Glow:** Adds a glow effect inside the feature. This effect can be customized by adjusting
+  the :menuselection:`spread` (width) of the glow, or the :menuselection:`Blur radius`.
+  The latter specifies the proximity from the edge of the feature where you want any blurring to happen.
+  Additionally, there are options to customize the color of the glow, with a single color or a color ramp.
+
+  .. _figure_effects_6:
+
+  .. only:: html
+
+     **Figure Effects 6:**
+
+  .. figure:: /static/user_manual/working_with_vector/inner_glow.png
+     :align: center
+
+     Draw Effects: Inner Glow dialog
+
+* **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect, but it adds
+  the glow effect on the outside of the edges of the feature. The available options for customization
+  are the same as the :menuselection:`Inner Glow` effect.
+
+  .. _figure_effects_7:
+
+  .. only:: html
+
+     **Figure Effects 7:**
+
+  .. figure:: /static/user_manual/working_with_vector/outer_glow.png
+     :align: center
+
+     Draw Effects: Outer Glow dialog
+
+* **Transform:** Adds the possibility of transforming the shape of the symbol.
+  The first options available for customization are the :menuselection:`Reflect horizontal`
+  and :menuselection:`Reflect vertical`, which actually create a reflection on the
+  horizontal and/or vertical axes. The 4 other options are:
+
+  * :menuselection:`Shear`: slants the feature along the x and/or y axis
+  * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or y axis
+    by the given percentage
+  * :menuselection:`Rotation`: turns the feature around its center point
+  * and :menuselection:`Translate` changes the position of the item based on a distance
+    given on the x and/or the y axis.
+
+  .. _figure_effects_8:
+
+  .. only:: html
+
+     **Figure Effects 8:**
+
+  .. figure:: /static/user_manual/working_with_vector/transform.png
+     :align: center
+
+     Draw Effects: Transform dialog
+
+There are some common options available for all draw effect types.
+:guilabel:`Transparency` and :guilabel:`Blend mode` options work similar
+to the ones described in :ref:`layer_rendering` and can be used in all draw
+effects except for the transform one.
+
+One or more draw effects can used at the same time. You activate/deactivate an effect
+using its checkbox in the effects list. You can change the selected effect type by
+using the |selectstring| :guilabel:`Effect type` option. You can reorder the effects
+using |arrowUp| :sup:`Move up` and |arrowDown| :sup:`Move down`
+buttons, and also add/remove effects using the |signPlus| :sup:`Add effect`
+and |signMinus| :sup:`Remove effect` buttons.
+
+There is also a |selectString| :guilabel:`Draw mode` option available for
+every draw effect, and you can choose whether to render and/or to modify the
+symbol. Effects render from top to bottom.'Render only' mode means that the
+effect will be visible while the 'Modify only' mode means that the effect will
+not be visible but the changes that it applies will be passed to the next effect
+(the one immediately below). The 'Render and Modify' mode will make the
+effect visible and pass any changes to the next effect. If the effect is in the
+top of the effects list or if the immediately above effect is not in modify
+mode, then it will use the original source symbol from the layers properties
+(similar to source).
+
+
+
