@@ -1,4 +1,4 @@
-.. _vector:
+.. _processing_plugin:
 
 ****************************
 Writing a Processing plugin
