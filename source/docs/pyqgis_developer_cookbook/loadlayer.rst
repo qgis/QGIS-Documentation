@@ -50,15 +50,15 @@ providers:
 * OGR library (shapefiles and many other file formats) --- data source is the
   path to the file:
 
-    * for shapefile::
+  * for shapefile::
 
-        vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
+     vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
 
 
-    * for dxf (note the internal options in data source uri)::
+  * for dxf (note the internal options in data source uri)::
 
-        uri = "/path/to/dxffile/file.dxf|layername=entities|geometrytype=Point"
-        vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
+     uri = "/path/to/dxffile/file.dxf|layername=entities|geometrytype=Point"
+     vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
 
 
 .. index::
