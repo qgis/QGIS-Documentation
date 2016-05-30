@@ -25,6 +25,7 @@ PyQGIS Developer Cookbook
    compatibility
    releasing
    snippets
+   processing
    network_analysis
    server
 
