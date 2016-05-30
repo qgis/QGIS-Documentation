@@ -31,7 +31,8 @@ provider. Layer's name is used in the layer list widget. It is important to
 check whether the layer has been loaded successfully. If it was not, an invalid
 layer instance is returned.
 
-The quickest way to open and display a vector layer in QGIS is the addVectorLayer function of the :class:`QgisInterface`:
+The quickest way to open and display a vector layer in QGIS is the addVectorLayer
+function of the :class:`QgisInterface`:
 
 ::
 
@@ -39,7 +40,9 @@ The quickest way to open and display a vector layer in QGIS is the addVectorLaye
   if not layer:
     print "Layer failed to load!"
 
-This creates a new layer and adds it to the map layer registry (making it appear in the layer list) in one step. The function returns the layer instance or `None` if the layer couldn't be loaded.
+This creates a new layer and adds it to the map layer registry (making it appear
+in the layer list) in one step. The function returns the layer instance or `None`
+if the layer couldn't be loaded.
 
 The following list shows how to access various data sources using vector data
 providers:
@@ -172,9 +175,9 @@ providers:
     You can change the data source of an existing layer by calling :func:`setDataSource()`
     on a :class:`QgsVectorLayer` instance, as in the following example: ::
 
-        # layer is a vector layer, uri is a QgsDataSourceURI instance
-        layer.setDataSource(uri.uri(), "layer name you like", "postgres")
-        
+      # layer is a vector layer, uri is a QgsDataSourceURI instance
+      layer.setDataSource(uri.uri(), "layer name you like", "postgres")
+
 
 Raster Layers
 =============
@@ -196,13 +199,15 @@ by default). To load a raster from a file, specify its file name and base name:
 .. index::
   pair: loading; WMS raster
 
-Similarly to vector layers, raster layers can be loaded using the addRasterLayer function of the :class:`QgisInterface`:
+Similarly to vector layers, raster layers can be loaded using the addRasterLayer
+function of the :class:`QgisInterface`:
 
 ::
 
   iface.addRasterLayer("/path/to/raster/file.tif", "layer name you like")
 
-This creates a new layer and adds it to the map layer registry (making it appear in the layer list) in one step.
+This creates a new layer and adds it to the map layer registry (making it appear
+in the layer list) in one step.
 
 Raster layers can also be created from a WCS service:
 
