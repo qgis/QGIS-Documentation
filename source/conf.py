@@ -928,6 +928,8 @@ rst_epilog = """
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
+.. |rendererCategorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
+   :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
