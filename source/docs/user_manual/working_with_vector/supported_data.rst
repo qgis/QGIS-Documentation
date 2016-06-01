@@ -38,6 +38,11 @@ identify, select, labelling and attributes functions.
    CompoundCurve, CurvePolygon, MultiCurve, MultiSurface feature types, all
    with Z and/or M values.
 
+   You should note also that some driver doesn't support some of this feature
+   types like CircularString, CompoundCurve, CurvePolygon, MultiCurve,
+   MultiSurface feature type. QGIS will convert them to (multi)polygon feature.
+
+
 .. index:: ESRI, Shapefile, OGR
 .. _vector_shapefiles:
 
