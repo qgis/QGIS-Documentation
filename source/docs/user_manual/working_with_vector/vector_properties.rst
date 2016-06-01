@@ -148,6 +148,19 @@ symbolizing your vector data.
 You can use tools that are common to all vector data, as well as special symbolizing
 tools that were designed for the different kinds of vector data.
 
+.. tip:: **Export vector symbology**
+
+   You have the option to export vector symbology from QGIS into Google \*.kml,
+   \*.dxf and MapInfo \*.tab files. Just open the right mouse menu of the layer
+   and click on :menuselection:`Save As...` to specify the name
+   of the output file and its format.
+   In the dialog, use the :menuselection:`Symbology export` menu to save the symbology
+   either as :menuselection:`Feature symbology -->` or as :menuselection:`Symbol
+   layer symbology -->`.
+   If you have used symbol layers, it is recommended to use the second setting.
+
+.. ToDo: add information about the export options
+
 Features rendering
 ------------------
 
@@ -470,9 +483,10 @@ for the rivers layer of the QGIS sample dataset.
 Point displacement
 ..................
 
-The :index:`Point Displacement` renderer works to visualize all features of a point layer,
-even if they have the same location. To do this, the symbols of the points are
-placed on a displacement circle around a center symbol.
+The :index:`Point Displacement` renderer works to visualize all features of a
+point layer, even if they have the same location. To do this, the symbols of
+the points are placed on a displacement circle around one center symbol or on
+several concentric circles.
 
 .. _figure_symbology_6:
 
@@ -485,19 +499,9 @@ placed on a displacement circle around a center symbol.
 
    Point displacement dialog
 
-.. tip:: **Export vector symbology**
-
-   You have the option to export vector symbology from QGIS into Google \*.kml,
-   \*.dxf and MapInfo \*.tab files. Just open the right mouse menu of the layer
-   and click on :menuselection:`Save As...` to specify the name
-   of the output file and its format.
-   In the dialog, use the :menuselection:`Symbology export` menu to save the symbology
-   either as :menuselection:`Feature symbology -->` or as :menuselection:`Symbol
-   layer symbology -->`.
-   If you have used symbol layers, it is recommended to use the second setting.
-
-.. ToDo: add information about the export options
-
+.. note:: You can still render features with other renderer like Graduaded,
+   Categorized, or Rule-Based renderer using the `Renderer` dropdown list then
+   the `Renderer Settings ...` button.
 
 .. index:: Inverted_Polygon_Renderer
 
@@ -899,7 +903,6 @@ and the polygon outline, as well as the repeat interval for the label.
    :align: center
 
    Smart labeling of vector polygon layers
-
 
 In the :guilabel:`priority` section you can define the priority with which labels
 are rendered for all three vector layer types (point, line, polygon). This
