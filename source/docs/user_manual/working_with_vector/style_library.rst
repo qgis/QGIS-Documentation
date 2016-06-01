@@ -304,9 +304,10 @@ Line marker symbols have only two symbol layer types:
 * Simple line (default)
 
 The default symbol layer type draws a simple line whereas the other display a
-marker point regularly on the line. You can choose different location vertex,
-interval or central point. Marker line can have offset along the line or offset
-line. Finally, :guilabel:`rotation` allows you to change the orientation of the
+marker point regularly on the line. You can choose different location: vertex,
+last and first vertex, interval, central point or on every curve point. Marker
+line can have offset along the line or offset line. Finally,
+:guilabel:`rotation` allows you to change the orientation of the
 symbol.
 
 The following settings are available:

@@ -346,7 +346,6 @@ the rivers layer of the QGIS sample dataset.
    to a new column in your attribute table if you want the classification
    attribute to be a composite of multiple fields, or a formula of some sort.
 
-
 .. index:: proportional_symbol, multivariate_analysis
 
 Proportional Symbol and Multivariate Analysis
