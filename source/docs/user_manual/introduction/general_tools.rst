@@ -778,28 +778,33 @@ Right-click on the embedded layer and choose |removeLayer| :sup:`Remove`.
 
 .. _data_defined:
 
-Data-defined setup
-===================
+Data defined override setup
+===========================
 
-In some part of the vector layer properties or the composer layout items
-settings you can find an icon |dataDefined| :sup:`data defined override`.
-This tool allows you to link the parameter besides to a field in the
-attribute table and, so, to change the value of the parameter in a dynamic way.
+Beside many options in the vector layer properties dialog or settings in the print
+composer, you can find a |dataDefined| :sup:`Data defined override` icon.
+Thanks to :ref:`expressions <vector_expressions>` based on layer attributes or item
+settings, prebuild or custom functions and variables, this tool allows you to set
+dynamic value for the concerned parameter. When enabled, the value returned by
+this widget is applied to the parameter regardless its normal value (checkbox,
+textbox, slider...).
 
-The dropdown list shows:
+.. ToDo: Add above a hyperlink to variables section once written
+
+Clicking the |dataDefined| :sup:`Data defined override` icon shows:
 
 * a :guilabel:`Description ...` that indicates if it is enabled, which input
   expected, valid input type and the current definition,
 * an entry to list the :guilabel:`Field type` available,
 * an entry to list the :guilabel:`Variable` available,
-* :guilabel:`Edit ...` button which open the expression window,
+* :guilabel:`Edit ...` button to create or edit the expression to use,
 * :guilabel:`Paste` and :guilabel:`Copy` buttons,
 * :guilabel:`Clear` button to remove the setup.
 
-When the data-defined is setup correctly the icon is yellow, if it is broken,
-the icon is red.
+When the :index:`data-defined override` option is setup correctly the icon is yellow,
+if it is broken, the icon is red.
 
-Parameters that can be used with data-defined tools:
+Parameters that can be used with data-defined tools are:
 
 * Style and symbols parameters
 * Labels parameters
