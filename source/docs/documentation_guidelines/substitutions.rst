@@ -399,7 +399,7 @@ Raster related
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |fullCumulativeStretch|         ``|fullCumulativeStretch|``         |fullHistogramStretch|          ``|fullHistogramStretch|``
-|ShowRasterCalculator|          ``|ShowRasterCalculator|``          |rasterStats|                   ``|rasterStats|``
+|showRasterCalculator|          ``|showRasterCalculator|``          |rasterStats|                   ``|rasterStats|``
 |rasterInterpolate|             ``|rasterInterpolate|``             |rasterInfo|                    ``|rasterInfo|``
 |rasterTerrain|                 ``|rasterTerrain|``                 |heatmap|                       ``|heatmap|``
 ==============================  ==================================  ==============================  ==================================
