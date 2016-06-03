@@ -499,9 +499,9 @@ several concentric circles.
 
    Point displacement dialog
 
-.. note:: You can still render features with other renderer like Graduaded,
-   Categorized, or Rule-Based renderer using the `Renderer` dropdown list then
-   the `Renderer Settings ...` button.
+.. note:: You can still render features with other renderer like Single symbol, Graduated,
+   Categorized or Rule-Based renderer using the :guilabel:`Renderer` drop-down
+   list then the :guilabel:`Renderer Settings...` button.
 
 .. index:: Inverted_Polygon_Renderer
 
@@ -509,8 +509,8 @@ Inverted Polygon
 ................
 
 The :index:`Inverted Polygon` renderer allows user to define a symbol to fill in
-outside of the layer's polygons. As before you can select subrenderers.
-These subrenderers are the same as for the main renderers.
+outside of the layer's polygons. As above you can select subrenderers, namely
+Single symbol, Graduated, Categorized, Rule-Based or 2.5 D renderer.
 
 .. _figure_symbology_7:
 
@@ -717,8 +717,8 @@ In the :guilabel:`Formatting` menu, you can define a character for a line break
 in the labels with the 'Wrap on character' function. You can format the
 :guilabel:`Line Height` and the alignment. For the latter typical values are
 available plus *Follow label placement*. When set to this mode, text alignment
-for labels will be dependant on the final placement of the label relative to the
-point. Eg, if the label is placed to the left of the point then the label will
+for labels will be dependent on the final placement of the label relative to the
+point. E.g., if the label is placed to the left of the point then the label will
 be right aligned, and if it is placed to the right of the point then the label
 will be left aligned.
 
@@ -824,7 +824,7 @@ By default, placements are prioritised in the following order:
 
 Placement priority can however be customized or set for an individual
 feature using a data defined list of prioritised positions.
-This also allows only certain placements to be used, so eg
+This also allows only certain placements to be used, so e.g.
 for coastal features you can prevent labels being placed over the land.
 
 The |radioButtonOn| :guilabel:`Around point` setting places the label in an equal
@@ -1221,7 +1221,7 @@ widgets. These widgets are:
   select layer, key column and value column. Several options are available to
   change the standard behaviours: allow null value, order by value, allow
   multiple selections and use of autocompleter. The forms will display either
-  a dropdown list or a line edit field when completer checkbox is enabled.
+  a drop-down list or a line edit field when completer checkbox is enabled.
 * **Webview**: Field contains a URL. The width and height of the field is variable.
 
 .. note::
@@ -1913,7 +1913,7 @@ catalogue. This information will be saved in the QGIS project file for subsequen
 sessions and will be used for QGIS server.
 
 In the :guilabel:`LegendUrl` section, you can provide the url of a legend image in the url
-field. You can use the Format drop down option to apply the appropriate format
+field. You can use the Format drop-down option to apply the appropriate format
 of the image. Currently png, jpg and jpeg image formats are supported.
 
 .. _figure_metadata_vect:
