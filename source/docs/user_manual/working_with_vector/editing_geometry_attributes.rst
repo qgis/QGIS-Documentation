@@ -989,8 +989,8 @@ To show selected records only, use :guilabel:`Show Selected Features` from the m
 at the bottom left. See next section for more information on filter feature.
 
 The field calculator bar allows you to make calculations on the selected rows only.
-For example, you can alter the number of the ID field of the file:`regions.shp` with
-the expression
+For example, you can alter the number of the ID field of the layer :file:`regions.shp`
+with the expression
 
 ::
 
