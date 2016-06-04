@@ -399,6 +399,14 @@ rst_epilog = """
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
+.. |dataDefineError| image:: /static/common/mIconDataDefineError.png
+   :width: 1.5em
+.. |dataDefineExpressionError| image:: /static/common/mIconDataDefineExpressionError.png
+   :width: 1.5em
+.. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
+   :width: 1.5em
+.. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
+   :width: 1.5em
 .. |dateEdit|  image:: /static/common/dateedit.png
    :width: 1.5em
 .. |dateTimeEdit|  image:: /static/common/datetimeedit.png
