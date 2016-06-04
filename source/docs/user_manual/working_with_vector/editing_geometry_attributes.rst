@@ -885,7 +885,7 @@ selected features are shown in the attribute table title.
 .. figure:: /static/user_manual/working_with_vector/vectorAttributeTable.png
    :align: center
 
-   Attribute Table for regions layer |nix|
+   Attribute Table for regions layer
 
 The buttons at the top of the attribute table window provide the
 following functionality:
@@ -1083,9 +1083,9 @@ layer during digitizing. Have a closer look at the edit widget in section
 Conditional formatting of Table Cells
 ......................................
 
-You can enable the conditional formatting panel clicking on
+You can enable the :index:`conditional formatting` panel clicking on
 |rendererCategorizedSymbol| at the top right of the attributes window in table
-wiew, not in form mode.
+view (not available in form view).
 
 The new panel allows user to add new rules for conditional formatting of field
 or full row in regard of the expression on field. Adding new rule open a form
@@ -1102,7 +1102,18 @@ to define:
   * text field,
   * font.
 
-.. TODO: Screenshot!
+.. _figure_attributes_2:
+
+.. only:: html
+
+   **Figure Attributes 2:**
+
+.. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
+
+   :align: center
+
+   Conditional Formatting of an attribute table
+
 
 .. index:: Relations
 .. _vector_relations:
@@ -1134,7 +1145,7 @@ relation using foreign keys, because there are several airports in most regions.
 .. figure:: /static/user_manual/working_with_vector/relations1.png
    :align: center
 
-   Alaska region with airports |nix|
+   Alaska region with airports
 
 In addition to the already existing attributes in the airports attribute table
 another field fk_region which acts as a foreign key (if you have a database, you will
@@ -1164,12 +1175,19 @@ The first thing we are going to do is to let QGIS know about the relations betwe
 This is done in :menuselection:`Project --> Project Properties`.
 Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
 
-* **name** is going to be used as a title. It should be a human readable string, describing, what the relation is used for. We will just call say "Airports" in this case.
-* **referencing layer** is the one with the foreign key field on it. In our case this is the airports layer
-* **referencing field** will say, which field points to the other layer so this is fk_region in this case
-* **referenced layer** is the one with the primary key, pointed to, so here it is the regions layer
+* **name** is going to be used as a title. It should be a human readable string,
+  describing, what the relation is used for. We will just call say "Airports" in this case.
+* **referencing layer** is the one with the foreign key field on it. In our case
+  this is the airports layer
+* **referencing field** will say, which field points to the other layer so this
+  is fk_region in this case
+* **referenced layer** is the one with the primary key, pointed to, so here it
+  is the regions layer
 * **referenced field** is the primary key of the referenced layer so it is ID
-* **id** will be used for internal purposes and has to be unique. You may need it to build custom forms once this is supported. If you leave it empty, one will be generated for you but you can assign one yourself to get one that is easier to handle.
+* **id** will be used for internal purposes and has to be unique. You may need
+  it to build custom forms once this is supported. If you leave it empty, one
+  will be generated for you but you can assign one yourself to get one that is
+  easier to handle.
 
 .. _figure_relations_2:
 
@@ -1180,7 +1198,7 @@ Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
 .. figure:: /static/user_manual/working_with_vector/relations2.png
    :align: center
 
-   Relation Manager |nix|
+   Relation Manager
 
 
 Forms
@@ -1202,23 +1220,31 @@ under actions.
 .. figure:: /static/user_manual/working_with_vector/relations3.png
    :align: center
 
-   Identification dialog regions with relation to airports |nix|
+   Identification dialog regions with relation to airports
 
 As you can see, the airports assigned to this particular region are all shown in a
 table. And there are also some buttons available. Let's review them shortly
 
-* The |toggleEditing| button is for toggling the edit mode. Be aware that it toggles the edit mode of the airport layer, although we are in the feature form of a feature from the region layer. But the table is representing features of the airport layer.
-* The |signPlus| button will add a new feature to the airport layer. And it will assign the new airport to the current region by default.
+* The |toggleEditing| button is for toggling the edit mode. Be aware that it
+  toggles the edit mode of the airport layer, although we are in the feature
+  form of a feature from the region layer. But the table is representing features
+  of the airport layer.
+* The |signPlus| button will add a new feature to the airport layer. And it will
+  assign the new airport to the current region by default.
 * The |remove| button will delete the selected airport permanently.
-* The |link| symbol will open a new dialog where you can select any existing airport which will then be assigned to the current region. This may be handy if you created the airport on the wrong region by accident.
-* The |unlink| symbol will unlink the selected airport from the current region, leaving them unassigned (the foreign key is set to NULL) effectively.
-* The two buttons to the right switch between table view and form view where the later let's you view all the airports in their respective form.
+* The |link| symbol will open a new dialog where you can select any existing
+  airport which will then be assigned to the current region. This may be handy
+  if you created the airport on the wrong region by accident.
+* The |unlink| symbol will unlink the selected airport from the current region,
+  leaving them unassigned (the foreign key is set to NULL) effectively.
+* The two buttons to the right switch between table view and form view where
+  the later let's you view all the airports in their respective form.
 
 If you work on the airport table, a new widget type is available which lets you
 embed the feature form of the referenced region on the feature form of the airports.
 It can be used when you open the layer properties of the airports table, switch to
-the :menuselection:`Fields` menu and change the widget type of the foreign key field 'fk_region' to
-Relation Reference.
+the :menuselection:`Fields` menu and change the widget type of the foreign key
+field 'fk_region' to Relation Reference.
 
 If you look at the feature dialog now, you will see, that the form of the region
 is embedded inside the airports form and will even have a combobox, which allows you
@@ -1233,4 +1259,4 @@ to assign the current airport to another region.
 .. figure:: /static/user_manual/working_with_vector/relations4.png
    :align: center
 
-   Identification dialog airport with relation to regions |nix|
+   Identification dialog airport with relation to regions
