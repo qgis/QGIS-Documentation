@@ -451,70 +451,37 @@ selected legend item is a raster or a vector layer. For GRASS vector layers,
 |toggleEditing| :sup:`Toggle editing` is not available. See section
 :ref:`grass_digitizing` for information on editing GRASS vector layers.
 
-**Right mouse button menu for raster layers**
+Below are listed available options in context menu depending on the selected item
 
-* |zoomToLayer| :menuselection:`Zoom to Layer`
-* :menuselection:`Show in overview`
-* |zoomActual| :menuselection:`Zoom to Native Resolution (100%)`
-* :menuselection:`Stretch Using Current Extent`
-* |removeLayer| :menuselection:`Remove`
-* |duplicateLayer| :menuselection:`Duplicate`
-* :menuselection:`Set Layer Scale Visibility`
-* :menuselection:`Set Layer CRS`
-* :menuselection:`Set Project CRS from Layer`
-* :menuselection:`Styles -->`
-* :menuselection:`Save as ...`
-* :menuselection:`Save As Layer Definition File ...`
-* :menuselection:`Properties`
-* :menuselection:`Rename`
+================================================================  =====================  ===================== ===============
+Option                                                            Vector Layer           Raster Layer          Group
+================================================================  =====================  ===================== ===============
+|zoomToLayer| :menuselection:`Zoom to Layer/Group`                |checkbox|             |checkbox|            |checkbox|
+:menuselection:`Show in overview`                                 |checkbox|             |checkbox|            \
+|zoomActual| :menuselection:`Zoom to Native Resolution (100%)`    \                      |checkbox|            \
+:menuselection:`Stretch Using Current Extent`                     \                      |checkbox|            \
+|removeLayer| :menuselection:`Remove`                             |checkbox|             |checkbox|            |checkbox|
+|duplicateLayer| :menuselection:`Duplicate`                       |checkbox|             |checkbox|            \
+:menuselection:`Set Layer Scale Visibility`                       |checkbox|             |checkbox|            \
+:menuselection:`Set Layer/Group CRS`                              |checkbox|             |checkbox|            |checkbox|
+:menuselection:`Set Project CRS from Layer`                       |checkbox|             |checkbox|            \
+:menuselection:`Styles -->`                                       |checkbox|             |checkbox|            \
+|openTable|:menuselection:`Open Attribute Table`                  |checkbox|             \                     \
+|toggleEditing|:menuselection:`Toggle Editing`                    |checkbox|             \                     \
+:menuselection:`Save as ...`                                      |checkbox|             |checkbox|            \
+:menuselection:`Save As Layer Definition File...`                 |checkbox|             |checkbox|            |checkbox|
+:menuselection:`Filter`                                           |checkbox|             \                     \
+:menuselection:`Show Feature Count`                               |checkbox|             \                     \
+:menuselection:`Properties`                                       |checkbox|             |checkbox|            \
+:menuselection:`Move to Top-level`                                |checkbox|             |checkbox|            \
+:menuselection:`Rename`                                           |checkbox|             |checkbox|            |checkbox|
+:menuselection:`Group Selected`                                   |checkbox|             |checkbox|            \
+:menuselection:`Properties`                                       |checkbox|             |checkbox|            \
+:menuselection:`Set Group WMS Data`                               \                      \                     |checkbox|
+:menuselection:`Mutually Exclusive Group`                         \                      \                     |checkbox|
+|addGroup| :menuselection:`Add Group`                             \                      \                     |checkbox|
+================================================================  =====================  ===================== ===============
 
-Additionally, according to layer position and selection
-
-* :menuselection:`Move to Top-level`
-* :menuselection:`Group Selected`
-
-..   * :menuselection:`Show file groups`
-
-**Right mouse button menu for vector layers**
-
-* |zoomToLayer| :menuselection:`Zoom to Layer`
-* :menuselection:`Show in overview`
-* |removeLayer| :menuselection:`Remove`
-* |duplicateLayer| :menuselection:`Duplicate`
-* :menuselection:`Set Layer Scale Visibility`
-* :menuselection:`Set Layer CRS`
-* :menuselection:`Set Project CRS from Layer`
-* :menuselection:`Styles -->`
-* :menuselection:`Open Attribute Table`
-* |toggleEditing| :menuselection:`Toggle Editing` (not available for GRASS layers)
-* :menuselection:`Save As ...`
-* :menuselection:`Save As Layer Definition Style`
-* :menuselection:`Filter...`
-* :menuselection:`Show Feature Count`
-* :menuselection:`Properties`
-* :menuselection:`Rename`
-
-Additionally, according to layer position and selection
-
-* :menuselection:`Move to Top-level`
-* :menuselection:`Group Selected`
-
-..   * :menuselection:`Show file groups`
-
-**Right mouse button menu for layer groups**
-
-* |zoomToLayer| :menuselection:`Zoom to Group`
-* |removeLayer| :menuselection:`Remove`
-* :menuselection:`Set Group CRS`
-* :menuselection:`Rename`
-* :menuselection:`Set Group WMS Data`
-* :menuselection:`Mutually Exclusive Group`
-* :menuselection:`Save As Layer Definition File`
-* |addGroup| :menuselection:`Add Group`
-
-..   Additionally, according to position
-
-..   *  :menuselection:`Show file groups`
 
 Enabling the **Mutually Exclusive Group** option you can make a group have only
 one layer visible at the same time.
