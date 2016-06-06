@@ -43,7 +43,7 @@ and do the rendering
   render.setLayerSet(lst)
 
   # set extent
-  rect = QgsRect(render.fullExtent())
+  rect = QgsRectangle(render.fullExtent())
   rect.scale(1.1)
   render.setExtent(rect)
 
