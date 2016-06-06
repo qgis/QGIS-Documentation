@@ -451,13 +451,13 @@ selected legend item is a raster or a vector layer. For GRASS vector layers,
 |toggleEditing| :sup:`Toggle editing` is not available. See section
 :ref:`grass_digitizing` for information on editing GRASS vector layers.
 
-Below are listed available options in context menu depending on the selected item
+Below are listed available options in context menu depending on the selected item.
 
 ================================================================  =====================  ===================== ===============
 Option                                                            Vector Layer           Raster Layer          Group
 ================================================================  =====================  ===================== ===============
 |zoomToLayer| :menuselection:`Zoom to Layer/Group`                |checkbox|             |checkbox|            |checkbox|
-:menuselection:`Show in overview`                                 |checkbox|             |checkbox|            \
+|unchecked| :menuselection:`Show in Overview`                     |checkbox|             |checkbox|            \
 |zoomActual| :menuselection:`Zoom to Native Resolution (100%)`    \                      |checkbox|            \
 :menuselection:`Stretch Using Current Extent`                     \                      |checkbox|            \
 |removeLayer| :menuselection:`Remove`                             |checkbox|             |checkbox|            |checkbox|
@@ -466,19 +466,23 @@ Option                                                            Vector Layer  
 :menuselection:`Set Layer/Group CRS`                              |checkbox|             |checkbox|            |checkbox|
 :menuselection:`Set Project CRS from Layer`                       |checkbox|             |checkbox|            \
 :menuselection:`Styles -->`                                       |checkbox|             |checkbox|            \
-|openTable|:menuselection:`Open Attribute Table`                  |checkbox|             \                     \
-|toggleEditing|:menuselection:`Toggle Editing`                    |checkbox|             \                     \
-:menuselection:`Save as ...`                                      |checkbox|             |checkbox|            \
+:menuselection:`Copy Style`                                       |checkbox|             |checkbox|            \
+:menuselection:`Paste Style`                                      |checkbox|             |checkbox|            |checkbox|
+|openTable| :menuselection:`Open Attribute Table`                 |checkbox|             \                     \
+|toggleEditing| :menuselection:`Toggle Editing`                   |checkbox|             \                     \
+|allEdits| :menuselection:`Current Edits -->`                     |checkbox|             \                     \
+                                                                  (in Edit mode)                                     
+:menuselection:`Save As...`                                       |checkbox|             |checkbox|            \
 :menuselection:`Save As Layer Definition File...`                 |checkbox|             |checkbox|            |checkbox|
 :menuselection:`Filter`                                           |checkbox|             \                     \
-:menuselection:`Show Feature Count`                               |checkbox|             \                     \
+|unchecked| :menuselection:`Show Feature Count`                   |checkbox|             \                     \
 :menuselection:`Properties`                                       |checkbox|             |checkbox|            \
 :menuselection:`Move to Top-level`                                |checkbox|             |checkbox|            \
 :menuselection:`Rename`                                           |checkbox|             |checkbox|            |checkbox|
 :menuselection:`Group Selected`                                   |checkbox|             |checkbox|            \
 :menuselection:`Properties`                                       |checkbox|             |checkbox|            \
 :menuselection:`Set Group WMS Data`                               \                      \                     |checkbox|
-:menuselection:`Mutually Exclusive Group`                         \                      \                     |checkbox|
+|unchecked| :menuselection:`Mutually Exclusive Group`             \                      \                     |checkbox|
 |addGroup| :menuselection:`Add Group`                             \                      \                     |checkbox|
 ================================================================  =====================  ===================== ===============
 
@@ -492,8 +496,43 @@ holding down the :kbd:`Ctrl` key while selecting the layers with the left mouse
 button. You can then move all selected layers to a new group at the same time.
 
 You may also delete more than one layer or group at once by selecting
-several layers with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
+several items with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
 This way, all selected layers or groups will be removed from the layers list.
+
+.. index:: Style
+
+.. _editing_style_layer:
+
+Editing vector layer style
+............................
+
+From the Layers panel, you have shortcuts to easily and quickly edit the layer
+rendering.
+Right-click on a vector layer and select :guilabel:`Styles -->` in the list
+in order to:
+
+* see the currently applied :ref:`styles <manage_custom_style>` to the layer. In
+  case you defined many styles for the layer, you can switch from one to another
+  and have your layer rendering automatically updated in the map canvas.
+* copy the current style, and when applicable, paste a copied style from another layer
+* rename the current style, add a new one (which is actually a copy of the current
+  one) or delete the current style (when multiple styles available).
+
+.. note:: The previous options are also available for raster layer.
+
+Whether the features in the vector layer have all the same unique symbol or they are
+classified (in that case, the layer is displayed in a tree structure with each class
+as sub-item), the following options are available at layer level or class level:
+
+* a :guilabel:`Edit Symbol...` button to open the :ref:`symbol-selector` dialog and
+  update any property (symbol, size, color...) of the layer or feature symbol.
+  Double-clicking on a feature does also open the :guilabel:`Symbol Selector` dialog.
+* a :ref:`color-selector` widget with a **Color Wheel** from which you can click a
+  color and have it automatically update the symbol fill color. For convenience,
+  **Recent colors** are available at the bottom of the color wheel. 
+* a |showAllLayers| :guilabel:`Show All Items` and |hideAllLayers| :guilabel:`Hide All
+  Items` to toggle on or off the visibility of all the classes of features. This avoids
+  (un)checking items one by one.
 
 .. tip:: **Quickly share a layer style**
 
@@ -502,6 +541,7 @@ This way, all selected layers or groups will be removed from the layers list.
     are of the same type (vector vs raster) as the original layer and,
     in case of vector, have the same geometry type (point, line or polygon).
 
+ 
 .. _layer_order:
 
 Working with the Legend independent layer order
