@@ -4,7 +4,7 @@ QGIS Testing Documentation
 .. image:: https://travis-ci.org/qgis/QGIS-Documentation.svg?branch=master
     :target: https://travis-ci.org/qgis/QGIS-Documentation
 
-QGIS Testing Documentation is build from corresponding branche and NOT translated.
+QGIS Testing Documentation is build from corresponding branch and NOT translated.
 
 Only the current stable branch is available for translation.
 
@@ -28,7 +28,7 @@ Documentation is static generated website using Sphinx (http://sphinx-doc.org/),
 based on restructured text sources (rst: http://docutils.sourceforge.net/rst.html)
 and html (jinja2) templates.
 
-Most sources are in source/docs. Only frontpage and landingpages are in theme/qgis-theme
+Most sources are in source/docs. Only frontpage and landing pages are in theme/qgis-theme
 
 Styling is in theme/qgis-theme. This theme is used for website and documentation builds. 
 The Website version is the canonical one.
@@ -102,11 +102,12 @@ Sphinx intl extention ( https://pypi.python.org/pypi/sphinx-intl )::
 
 Then build:
 
-    * ``make html`` to build the english language
-    * ``make LANG=nl html`` to build the dutch version
+* ``make html`` to build the english language
+* ``make LANG=nl html`` to build the dutch version
 
-If you want add the QGIS-Documentation docs into the build, you either need to manually copy the sources, resources 
-and po files into the website project. Or use the fullhtml target of make (which will checkout the 2.0 branch)::
+If you want add the QGIS-Documentation docs into the build, you either need
+to manually copy the sources, resources and po files into the website project.
+Or use the fullhtml target of make (which will checkout the branch)::
 
     # to build english:
     make fullhtml
@@ -132,7 +133,8 @@ You will need to install **texi2pdf** by doing:
 * ``sudo apt-get install texinfo`` on Debian based systems
 * ``sudo yum install texinfo-tex`` on Fedora based systems
 
-Alike the html build command, you need to run make with the option to build pdf (pdf also builds the html output):
+Alike the html build command, you need to run make with the option to build pdf
+(pdf also builds the html output):
 
 ``make LANG=xx pdf``
 
@@ -212,7 +214,8 @@ On linux, install with::
 On Windows, you should download it from: http://files.transifex.com/transifex-client/0.10/tx.exe
 see http://support.transifex.com/customer/portal/articles/998120-client-on-windows	
 
-To make tx.exe usable in the paver script, either put it IN this directory next to the pavement.py file, OR add it to your PATH
+To make tx.exe usable in the paver script, either put it IN this directory
+next to the pavement.py file, OR add it to your PATH
 
 IMPORTANT: to be able to pull from transifex.com, you will need a credentials file. 
 This file should be named: ``.transifexrc`` and easiest is to put it in your home dir C:/users/you. 
@@ -226,7 +229,8 @@ The file should contain this::
 	token = 
 	username = yourtransifexusername
 
-With a working tx and a .transifexrc, you should be able to build for example the german version of docs via::	
+With a working tx and a .transifexrc, you should be able to build
+for example the german version of docs via::	
 
         # german:
         paver html -l de
@@ -235,7 +239,8 @@ During the build you will see this command::
 
 	tx pull --minimum-perc=1 --skip -f -l de
 	
-This will pull all german po files from transifex (based on the .tx/config file in the root of this project)
+This will pull all german po files from transifex (based on the
+.tx/config file in the root of this project)
 
 
 Translating the english QGIS Documentation
