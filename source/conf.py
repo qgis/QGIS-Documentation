@@ -399,6 +399,14 @@ rst_epilog = """
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
+.. |dataDefineError| image:: /static/common/mIconDataDefineError.png
+   :width: 1.5em
+.. |dataDefineExpressionError| image:: /static/common/mIconDataDefineExpressionError.png
+   :width: 1.5em
+.. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
+   :width: 1.5em
+.. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
+   :width: 1.5em
 .. |dateEdit|  image:: /static/common/dateedit.png
    :width: 1.5em
 .. |dateTimeEdit|  image:: /static/common/datetimeedit.png
@@ -989,8 +997,6 @@ rst_epilog = """
    :width: 1.5em
 .. |sharing| image:: /static/common/mActionSharing.png
    :width: 1.5em
-.. |ShowRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
-   :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
 .. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
@@ -1002,7 +1008,9 @@ rst_epilog = """
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
 .. |showPresets| image:: /static/common/mActionShowPresets.png
-   :width: 2.5em
+   :width: 1.5em
+.. |showRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
+   :width: 1.5em
 .. |singleToMulti| image:: /static/common/single_to_multi.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png

@@ -64,7 +64,6 @@ Icon                     Substitution               Icon                   Subst
 |radioButtonOn|          ``|radioButtonOn|``        |radioButtonOff|       ``|radioButtonOff|``
 |selectNumber|           ``|selectNumber|``         |selectString|         ``|selectString|``
 |browseButton|           ``|browseButton|``         |slider|               ``|slider|``
-|dataDefined|            ``|dataDefined|``          \                      \
 =======================  =========================  =====================  =========================
 
 
@@ -179,10 +178,23 @@ Icon                            Substitution                        Icon        
 |showBookmarks|                 ``|showBookmarks|``                 |newBookmark|                   ``|newBookmark|``
 |measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
 |measureAngle|                  ``|measureAngle|``                  \                               \
+==============================  ==================================  ==============================  ==================================
+
+Selection and Expressions
+.........................
+
+==============================  ==================================  ==============================  ==================================
+Icon                            Substitution                        Icon                            Substitution
+==============================  ==================================  ==============================  ==================================
 |selectRectangle|               ``|selectRectangle|``               |selectPolygon|                 ``|selectPolygon|``
 |selectFreehand|                ``|selectFreehand|``                |selectRadius|                  ``|selectRadius|``
 |selectAll|                     ``|selectAll|``                     |deselectAll|                   ``|deselectAll|``
-|expressionSelect|              ``|expressionSelect|``              \                               \
+|invertSelection|               ``|invertSelection|``               |expressionSelect|              ``|expressionSelect|``
+|dataDefined|                   ``|dataDefined|``                   \                               \
+|dataDefineOn|                  ``|dataDefineOn|``                  |dataDefineExpressionOn|        ``|dataDefineExpressionOn|``
+|dataDefineError|               ``|dataDefineError|``               |dataDefineExpressionError|     ``|dataDefineExpressionError|``
+|expression|                    ``|expression|``                    |expressionFilter|              ``|expressionFilter|``
+|filter|                        ``|filter|``                        |filterMap|                     ``|filterMap|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -399,7 +411,7 @@ Raster related
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |fullCumulativeStretch|         ``|fullCumulativeStretch|``         |fullHistogramStretch|          ``|fullHistogramStretch|``
-|ShowRasterCalculator|          ``|ShowRasterCalculator|``          |rasterStats|                   ``|rasterStats|``
+|showRasterCalculator|          ``|showRasterCalculator|``          |rasterStats|                   ``|rasterStats|``
 |rasterInterpolate|             ``|rasterInterpolate|``             |rasterInfo|                    ``|rasterInfo|``
 |rasterTerrain|                 ``|rasterTerrain|``                 |heatmap|                       ``|heatmap|``
 ==============================  ==================================  ==============================  ==================================
