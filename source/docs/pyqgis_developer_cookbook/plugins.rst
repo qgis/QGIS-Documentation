@@ -385,7 +385,7 @@ done with :command:`pyrcc4` command:
     solution is probably to use the OSGeo4W Shell but if you are comfortable
     modifying the PATH environment variable or specifiying the path to the
     executable explicitly you should be able to find it at
-    :file:`<Your QGIS Install Directory>\bin\pyrcc4.exe`.
+    :file:`<Your QGIS Install Directory>\\bin\\pyrcc4.exe`.
 
 And that's all... nothing complicated :)
 
