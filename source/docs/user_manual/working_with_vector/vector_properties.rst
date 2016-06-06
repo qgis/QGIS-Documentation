@@ -1233,6 +1233,15 @@ widgets. These widgets are:
    described widgets.
    See http://blog.vitu.ch/10142013-1847/write-your-own-qgis-form-elements
 
+.. tip:: **Relative Path in widgets**
+ 
+   If the path which is selected with the file browser is located in the same
+   directory as the .qgs project file or below, paths are converted to
+   relative
+   paths. This increases portability of a qgs project with multimedia
+   information attached.
+   This is enabled only for File Name, Photo and Web View at this
+   moment.
 
 With the **Attribute editor layout**, you can now define :index:`built-in forms`
 (see figure_fields_2_). This is useful for data entry jobs or to identify
