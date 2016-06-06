@@ -1109,7 +1109,6 @@ to define:
    **Figure Attributes 2:**
 
 .. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
-
    :align: center
 
    Conditional Formatting of an attribute table
