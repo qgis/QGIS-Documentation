@@ -259,8 +259,8 @@ Create some :class:`QgsFeature` instances and pass a list of them to provider's
 :func:`addFeatures` method. It will return two values: result (true/false) and
 list of added features (their ID is set by the data store).
 
-To set up the attributes you can either intialize the feature passing a
-:class:`QgsFiels` instance or call :func:`initAttributes` passing
+To set up the attributes you can either initialize the feature passing a
+:class:`QgsFields` instance or call :func:`initAttributes` passing
 the number of fields you want to be added.
 
 ::
