@@ -20,8 +20,9 @@ SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
 
 .. tip:: **Concurrent Edits**
 
-   This version of QGIS does not track if somebody else is editing a feature
-   at the same time as you are. The last person to save their edits wins.
+   This version of QGIS does not track if somebody else is editing the same feature
+   at the same time as you are. The last person to save its edits wins.
+
 
 .. index:: Snapping, Snapping_Tolerance
 
@@ -30,14 +31,17 @@ SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
 Setting the Snapping Tolerance and Search Radius
 ================================================
 
-Before we can edit vertices, we must set the snapping tolerance and search
-radius to a value that allows us an optimal editing of the vector layer
-geometries.
+For an optimal and accurate edit of the vector layer geometries, we need to set
+an appropriate value of snapping tolerance and search radius for features vertices.
+
+.. % FIXME Different menus are used below to identify "Options"/"Snapping Options" sub-menu (Settings, Edit, File). Would be nice to check what is correct according to OS.
+   File menu no longer exists if I'm not wrong (replaced by Project). On Windows, all is in the Settings menu. What about other platforms? Inputs are welcome.
+   
 
 Snapping tolerance
 ------------------
 
-Snapping tolerance is the distance QGIS uses to ``search`` for the closest
+:index:`Snapping tolerance` is the distance QGIS uses to ``search`` for the closest
 vertex and/or segment you are trying to connect to when you set a new vertex or
 move an existing vertex. If you aren't within the snapping tolerance, QGIS
 will leave the vertex where you release the mouse button, instead of snapping
@@ -56,20 +60,26 @@ The snapping tolerance setting affects all tools that work with tolerance.
    tolerance doesn't have to be changed after zoom operations. In our small
    digitizing project (working with the Alaska dataset), we define the
    snapping units in feet. Your results may vary, but something on the order
-   of 300 ft at a scale of 1:10000 should be a reasonable
-   setting.
-#. A layer-based snapping tolerance can be defined by choosing
+   of 300 ft at a scale of 1:10000 should be a reasonable setting.
+#. A layer-based snapping tolerance that overrides the global snapping option
+   set in the Digitizing tab can be defined by choosing
    :menuselection:`Settings -->` (or :menuselection:`File -->`)
-   :menuselection:`Snapping options...` to enable and adjust snapping mode
-   and tolerance on a layer basis (see figure_edit_1_ ).
+   :menuselection:`Snapping options...`. It enables and adjusts snapping mode
+   and tolerance on a layer basis (see figure_edit_1_ ). This dialog offers
+   three different modes to select the layer(s) to snap to:
+   
+   * :guilabel:`Current layer`: only the active layer is used, a convenient way
+     to ensure topology within the layer being edited
+   * :guilabel:`All layers`: a quick and simple setting for all visible layers
+     in the project so that the pointer snaps to all vertices and/or segments.
+     In most cases it is sufficient to use this snapping mode.
+   * :guilabel:`Advanced`: if you need to edit a layer and snap its vertices to another
+     layer, ensure the target layer is checked and increase the snapping tolerance
+     to a greater value. Furthermore, snapping will never occur to a layer that
+     is not checked in the snapping options dialog, regardless of the global
+     snapping tolerance. So be sure to mark the checkbox for those layers that
+     you need to snap to.
 
-Note that this layer-based snapping overrides the global snapping option
-set in the Digitizing tab. So, if you need to edit one layer and snap its
-vertices to another layer, then enable snapping only on the ``snap to``
-layer, then decrease the global snapping tolerance to a smaller value.
-Furthermore, snapping will never occur to a layer that is not checked in
-the snapping options dialog, regardless of the global snapping tolerance.
-So be sure to mark the checkbox for those layers that you need to snap to.
 
 .. _figure_edit_1:
 
@@ -80,32 +90,29 @@ So be sure to mark the checkbox for those layers that you need to snap to.
 .. figure:: /static/user_manual/working_with_vector/editProjectSnapping.png
    :align: center
 
-   Edit snapping options on a layer basis (Advanced mode) |nix|
+   Edit snapping options on a layer basis (Advanced mode)
+
+.. tip:: **Control the list of layers to snap**
+
+   The :guilabel:`Snapping Options` dialog is by default populated with parameters
+   (mode, tolerance, units) set in the global :guilabel:`Digitizing` tab.
+   To avoid layers being checked by default in the **Advanced** mode and hence
+   set snappable, define the :guilabel:`Default Snap mode` to ``Off``.
+
+Snapping tolerance can be set in ``pixels`` or ``map units`` (the units of the
+map view). While in the **Advanced** layer selection mode, it is possible to use
+a snapping tolerance that refers to ``layer units``, the units of the reprojected
+layer when 'on-the-fly' CRS transformation is on.
+
 
 .. index:: Search_Radius
-
-The :guilabel:`Snapping options` enables you to make a quick and simple general setting
-for all layers in the project so that the pointer snaps to all existing vertices and/or
-segments when using the 'All layers' snapping mode. In most cases it is sufficient to use
-this snapping mode.
-
-It is important to consider that the per-layer tolerance in
-'map units' was actually in layer units. So if working with a layer in
-WGS84 reprojected to UTM, setting tolerance to 1 map unit (i.e. 1 meter)
-wouldn't work correctly because the units would be actually degrees. So now
-the 'map units' has been relabeled to 'layer units' and the new entry 'map
-units' operates with units of the map view. While working with 'on-the-fly' CRS transformation
-it is now possible to use a snapping tolerance that refers to either the units of the reprojected
-layer (setting 'layer units') or the units of the map view (setting 'map units').
-
 
 Search radius
 --------------
 
-Search radius is the distance QGIS uses to ``search`` for the closest vertex
-you are trying to move when you click on the map. If you aren't within the
-search radius, QGIS won't find and select any vertex for editing, and it will
-pop up an annoying warning to that effect.
+:index:`Search radius` is the distance QGIS uses to ``search`` for the closest vertex
+you are trying to select when you click on the map. If you aren't within the
+search radius, QGIS won't find and select any vertex for editing.
 Snap tolerance and search radius are set in map units or pixels, so you may
 find you need to experiment to get them set right. If you specify too big of
 a tolerance, QGIS may snap to the wrong vertex, especially if you are dealing
@@ -114,8 +121,8 @@ small, and it won't find anything to move.
 
 The search radius for vertex edits in layer units can be defined in the
 :guilabel:`Digitizing` tab under :menuselection:`Settings -->` |options|
-:menuselection:`Options`. This is the same place where you define the general, project-
-wide snapping tolerance.
+:menuselection:`Options`. This is the same place where you define the general,
+project-wide snapping tolerance.
 
 
 .. Index:: Topological_Editing
@@ -126,9 +133,9 @@ Topological editing
 Besides layer-based snapping options, you can also define topological
 functionalities in the :guilabel:`Snapping options...` dialog in the
 :menuselection:`Settings` (or :menuselection:`File`) menu. Here, you can
-define |checkbox| :guilabel:`Enable topological editing`,
-and/or for polygon layers, you can activate the column |checkbox|
-:guilabel:`Avoid Int.`, which avoids intersection of new polygons.
+define |checkbox| :guilabel:`Enable topological editing`, and/or for polygon
+layers, activate the |checkbox| :guilabel:`Avoid Intersections` option.
+
 
 .. index:: Shared_Polygon_Boundaries
 
@@ -136,22 +143,33 @@ Enable topological editing
 --------------------------
 
 The option |checkbox| :guilabel:`Enable topological editing` is for editing
-and maintaining common boundaries in polygon mosaics. QGIS 'detects' a
-shared boundary in a polygon mosaic, so you only have to move the vertex
-once, and QGIS will take care of updating the other boundary.
+and maintaining common boundaries in features mosaics. QGIS 'detects'
+shared boundary by the features, so you only have to move a common vertex/segment
+once, and QGIS will take care of updating the neighboring features.
 
 .. Index:: Avoid_Intersections_Of_Polygons
 
 Avoid intersections of new polygons
 -----------------------------------
 
-The second topological option in the |checkbox| :guilabel:`Avoid Int.`
-column, called :guilabel:`Avoid intersections of new polygons`, avoids
-overlaps in polygon mosaics. It is for quicker digitizing of adjacent
+A second topological option called |checkbox| :guilabel:`Avoid intersections`
+prevents you to draw new features that overlap an existing one.
+It is for quicker digitizing of adjacent
 polygons. If you already have one polygon, it is possible with this option
 to digitize the second one such that both intersect, and QGIS then cuts the
-second polygon to the common boundary. The advantage is that you don't
-have to digitize all vertices of the common boundary.
+second polygon to the boundary of the existing one. The advantage is that you
+don't have to digitize all vertices of the common boundary.
+
+.. note:: If the new geometry is totally covered by existing ones, it gets cleared
+   and the new feature will have no geometry when allowed by the provider, otherwise
+   saving modifications will make QGIS pop-up an error message.
+
+.. warning:: **Use cautiously the** :guilabel:`Avoid Intersections` **option**
+
+   Because the option cuts or clears geometry of any overlaping feature from
+   any polygon layer, do not forget to uncheck this option once you no longer
+   need it otherwise, you can get unexpected geometries.
+
 
 .. Index:: Snapping_On_Intersections
 
