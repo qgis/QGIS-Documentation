@@ -495,6 +495,13 @@ You may also delete more than one layer or group at once by selecting
 several layers with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
 This way, all selected layers or groups will be removed from the layers list.
 
+.. tip:: **Quickly share a layer style**
+
+    From the context menu, copy the style of a layer and paste it to a group
+    or a selection of layers: the style is applied to all the layers that
+    are of the same type (vector vs raster) as the original layer and,
+    in case of vector, have the same geometry type (point, line or polygon).
+
 .. _layer_order:
 
 Working with the Legend independent layer order
