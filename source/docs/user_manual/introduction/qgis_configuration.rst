@@ -615,9 +615,12 @@ require a restart of QGIS before they will be effective.
 Customization
 =============
 
-The customization tool lets you (de)activate almost every element in the QGIS
-user interface. This can be very useful if you have a lot of plugins
-installed that you never use and that are filling your screen.
+The :index:`customization` dialog lets you (de)activate almost every element in the QGIS
+user interface. This can be very useful if you want to provide your end-users with a
+'light' version of QGIS, containing only the icons, menus or panels they need.
+
+.. note::
+   Before your changes are applied, you need to restart QGIS.
 
 .. _figure_customization:
 
@@ -630,18 +633,41 @@ installed that you never use and that are filling your screen.
 
    The Customization dialog
 
-QGIS Customization is divided into five groups. In |checkbox| :guilabel:`Menus`,
-you can hide entries in the Menu bar. In |checkbox| :guilabel:`Panels`, you
-find the panel windows. Panel windows are applications that can be started and
-used as a floating, top-level window or embedded to the QGIS main window as a
-docked widget (see also :ref:`sec_panels_and_toolbars`). In the |checkbox|
-:guilabel:`Status Bar`, features like the coordinate information can be
-deactivated. In |checkbox| :guilabel:`Toolbars`, you can (de)activate the
-toolbar icons of QGIS, and in |checkbox| :guilabel:`Widgets`, you can (de)activate
-dialogs as well as their buttons.
+Ticking the |checkbox| :guilabel:`Enable customization` checkbox is the first step
+on the way to QGIS customization. This enables the toolbar and the widget
+panel from which you can uncheck and thus disable some GUI items.
+
+The configurable item can be:
+
+* a **Menu** or some of its sub-menus from the :ref:`label_menubar`
+* a whole **Panel** (see :ref:`sec_panels_and_toolbars`)
+* the **Status bar** described in :ref:`label_statusbar` or some of its items
+* a **Toolbar**: the whole bar or some of its icons
+* or any **widget** from any dialog in QGIS: label, button, combobox...
 
 With |select| :sup:`Switch to catching widgets in main application`, you
-can click on elements in QGIS that you want to be hidden and find the corresponding
-entry in Customization (see figure_customization_). You can also save your
-various setups for different use cases as well. Before your changes
-are applied, you need to restart QGIS.
+can click on an item in QGIS interface that you want to be hidden and
+QGIS automatically unchecks the corresponding entry in the Customization dialog.
+
+Once you setup your configuration, click **[Apply]** or **[Ok]** to validate your
+changes. This configuration becomes the one used by default by QGIS at the next startup.
+
+The modifications can also be saved in a ``.ini`` file using |fileSave|
+:sup:`Save To File` button. This is a handy way to share a common QGIS
+interface among multiple users. Just click on |fileOpen| :sup:`Load from File`
+from the destination computer in order to import the ``.ini`` file.
+You can also run :ref:`command line tools <custom_commandline>` and save various
+setups for different use cases as well.
+
+.. tip:: **Easily restore predefined QGIS**
+
+   The initial QGIS GUI configuration can be restored by one of the methods below:
+
+   * unchecking |checkbox| :guilabel:`Enable customization` option in the
+     Customization dialog or click the |selectAllTree| :sup:`Check All` button
+   * pressing the **[Reset]** button in the **QSettings** frame under
+     :menuselection:`Settings --> Options... --> System` menu
+   * launching QGIS at a command prompt with the following command line
+     ``qgis --nocustomization``
+   * setting to ``false`` the value of :guilabel:`UI --> Customization --> Enabled` variable
+     under :menuselection:`Settings --> Options... --> Advanced` menu.
