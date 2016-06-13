@@ -521,9 +521,14 @@ It shows the scale of the map view. If you zoom in or out, QGIS shows you the
 current scale. There is a scale selector, which allows you to choose among
 :ref:`predefined and custom scales <predefinedscales>` to assign to the map view.
 
-To the right of the scale display you can define a current clockwise rotation for
-your map view in degrees.
+On the right side of the scale display you can define a current clockwise
+magnification level for your map view. The level is expressed as a percentage.
+If the :guilabel:`Magnifier` has a level of 100%, then the current map is not
+magnified. A default value for this level is available within
+:menuselection:`Settings --> Options --> Rendering --> Rendering behaviour`.
 
+To the right of the magnifier tool you can define a current clockwise rotation for
+your map view in degrees.
 
 On the right side of the status bar, there is a small
 checkbox which can be used to temporarily prevent layers being rendered to the

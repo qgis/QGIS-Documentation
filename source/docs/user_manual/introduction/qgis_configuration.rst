@@ -172,6 +172,17 @@ Removing a folder from the list will make it available in the Browser panel.
 Rendering Tab
 --------------
 
+.. _figure_rendering_menu:
+
+.. only:: html
+
+   **Figure Rendering Menu:**
+
+.. figure:: /static/user_manual/introduction/rendering_menu.png
+   :align: center
+
+   Rendering tab of Project Properties dialog
+
 **Rendering behavior**
 
 * |checkbox| :guilabel:`By default new layers added to the map should be displayed`
@@ -183,6 +194,7 @@ Rendering Tab
 * :guilabel:`Simplification threshold`
 * |checkbox| :guilabel:`Simplify on provider side if possible`
 * :guilabel:`Maximum scale at which the layer should be simplified`
+* |doublespinbox| :guilabel:`Magnification level`
 
 **Rendering quality**
 
