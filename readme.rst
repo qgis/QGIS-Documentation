@@ -4,7 +4,7 @@ QGIS Testing Documentation
 .. image:: https://travis-ci.org/qgis/QGIS-Documentation.svg?branch=master
     :target: https://travis-ci.org/qgis/QGIS-Documentation
 
-QGIS Testing Documentation is build from corresponding branch and NOT translated.
+QGIS Testing Documentation is built from corresponding branch and NOT translated.
 
 Only the current stable branch is available for translation.
 
