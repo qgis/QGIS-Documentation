@@ -13,7 +13,7 @@
    style_library
    vector_properties
    expression
+   attribute_table
    editing_geometry_attributes
    virtual_layers
-   field_calculator
 
