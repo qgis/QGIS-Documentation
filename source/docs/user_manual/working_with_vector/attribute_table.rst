@@ -23,7 +23,9 @@ in the Attributes toolbar.
 
 This will open a new window that displays the feature attributes for the
 layer (figure_attributes_1_). The number of features and the number of
-selected features are shown in the attribute table title.
+selected features are shown in the attribute table title.  Columm widths can be 
+changed by dragging the boundary on the right of the column heading, resized column 
+widths are maintained for a layer, and restored when next opening the attribute table.
 
 .. _figure_attributes_1:
 
