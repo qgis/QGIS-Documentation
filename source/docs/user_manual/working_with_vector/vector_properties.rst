@@ -1945,13 +1945,11 @@ of the image. Currently png, jpg and jpeg image formats are supported.
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/
 
-Others Settings
-===============
 
 .. _save_layer_property:
 
 Save and Share Layer Properties
--------------------------------
+================================
 
 When a layer is added to map canvas, QGIS uses by default a random symbol/color
 to render its features. You can however set a default symbol in
@@ -2045,122 +2043,11 @@ or **Restore Default** style if you're not satisfied.
    Save Style in database Dialog
 
 
+Others Settings
+===============
+
 From many parts of the layer properties dialog (and also from many other dialogs),
 there are some features you'll often encounter. Some of them are presented below.
-
-.. _color-selector:
-
-Color Selector
---------------
-
-The :guilabel:`select color` dialog will appear whenever you click
-to choose a :index:`color` - either border or fill color. This dialog
-has four different tabs which allow you to select colors by
-|colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
-|colorSwatches| :sup:`color swatches` or |colorPicker| :sup:`color picker`.
-
-Whatever method you use, the selected color is always described through color
-sliders for HSV  (Hue, Saturation, Value) and RGB (Red, Green, Blue) values.
-There is also an :guilabel:`opacity` slider to set transparency level.
-On the lower left part of the dialog you can see a comparison between the
-:guilabel:`current` and the :guilabel:`new` color you are presently
-selecting and on the lower right part you have the option to add the color
-you just tweaked into a color slot button.
-
-.. _figure_color_selector_1:
-
-.. only:: html
-
-   **Figure color selector 1:**
-
-.. figure:: /static/user_manual/working_with_vector/color_selector_ramp.png
-   :align: center
-
-   Color selector ramp tab
-
-
-With |colorBox| :sup:`color ramp` or with |colorWheel| :sup:`color wheel`,
-you can browse to all possible color combinations.
-There are other possibilities though. By using |colorSwatches| :sup:`color swatches`
-you can choose from a preselected list. This selected list is
-populated with one of three methods: :guilabel:`Recent colors`,
-:guilabel:`Standard colors` or :guilabel:`Project colors`.
-
-.. _figure_color_selector_2:
-
-.. only:: html
-
-   **Figure color selector 2:**
-
-.. figure:: /static/user_manual/working_with_vector/color_selector_recent_colors.png
-   :align: center
-
-   Color selector switcher tab
-
-
-Another option is to use the |colorPicker| :sup:`color picker` which allows
-you to sample a color from under your mouse pointer at any part of
-QGIS or even from another application by pressing the space bar. Please note
-that the color picker is OS dependent and is currently not supported by OSX.
-
-.. _tip_quick_color_picker_+_copy/paste_colors:
-
-.. tip:: **quick color picker + copy/paste colors**
-
-   You can quickly choose from :guilabel:`Recent colors`, from :guilabel:`Standard colors`
-   or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking
-   the drop-down arrow that follows a current color box.
-
-.. _figure_color_selector_3:
-
-.. only:: html
-
-   **Figure color selector 3:**
-
-.. figure:: /static/user_manual/working_with_vector/quick_color_selector.png
-   :align: center
-
-   Quick color selector menu
-
-.. _blend-modes:
-
-Blending Modes
---------------
-
-QGIS offers different options for special :index:`rendering effects` with these tools that
-you may previously only know from graphics programs:
-
-* **Normal**: This is the standard blend mode, which uses the alpha channel of the top
-  pixel to blend with the pixel beneath it. The colors aren't mixed.
-* **Lighten**: This selects the maximum of each component from the foreground and
-  background pixels. Be aware that the results tend to be jagged and harsh.
-* **Screen**: Light pixels from the source are painted over the destination, while
-  dark pixels are not. This mode is most useful for mixing the texture of one layer
-  with another layer (e.g., you can use a hillshade to texture another layer).
-* **Dodge**: Dodge will brighten and saturate underlying pixels based on the lightness
-  of the top pixel. So, brighter top pixels cause the saturation and brightness of
-  the underlying pixels to increase. This works best if the top pixels aren't too
-  bright; otherwise the effect is too extreme.
-* **Addition**: This blend mode simply adds pixel values of one layer with the other.
-  In case of values above one (in the case of RGB), white is displayed.
-  This mode is suitable for highlighting features.
-* **Darken**: This creates a resultant pixel that retains the smallest components of the
-  foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
-* **Multiply**: Here, the numbers for each pixel of the top layer are multiplied with
-  the corresponding pixels for the bottom layer. The results are darker pictures.
-* **Burn**: Darker colors in the top layer cause the underlying layers to darken.
-  Burn can be used to tweak and colorise underlying layers.
-* **Overlay**: This mode combines the multiply and screen blending modes.
-  In the resulting picture, light parts become lighter and dark parts become darker.
-* Soft light: This is very similar to overlay, but instead of using multiply/screen
-  it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
-* **Hard light**: Hard light is also very similar to the overlay mode. It's supposed
-  to emulate projecting a very intense light onto an image.
-* **Difference**: Difference subtracts the top pixel from the bottom pixel, or the other
-  way around, to always get a positive value. Blending with black produces no change,
-  as the difference with all colors is zero.
-* **Subtract**: This blend mode simply subtracts pixel values of one layer from the other.
-  In case of negative values, black is displayed.
 
 .. _draw_effects:
 
@@ -2338,6 +2225,4 @@ effect visible and pass any changes to the next effect. If the effect is in the
 top of the effects list or if the immediately above effect is not in modify
 mode, then it will use the original source symbol from the layers properties
 (similar to source).
-
-
 
