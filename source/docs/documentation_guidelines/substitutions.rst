@@ -191,11 +191,12 @@ Icon                            Substitution                        Icon        
 |selectFreehand|                ``|selectFreehand|``                |selectRadius|                  ``|selectRadius|``
 |selectAll|                     ``|selectAll|``                     |deselectAll|                   ``|deselectAll|``
 |invertSelection|               ``|invertSelection|``               |expressionSelect|              ``|expressionSelect|``
-|dataDefined|                   ``|dataDefined|``                   \                               \
+|selectAllTree|                 ``|selectAllTree|``                 |select|                        ``|select|``                
+|dataDefined|                   ``|dataDefined|``                   |expression|                    ``|expression|``
 |dataDefineOn|                  ``|dataDefineOn|``                  |dataDefineExpressionOn|        ``|dataDefineExpressionOn|``
 |dataDefineError|               ``|dataDefineError|``               |dataDefineExpressionError|     ``|dataDefineExpressionError|``
-|expression|                    ``|expression|``                    |expressionFilter|              ``|expressionFilter|``
-|filter|                        ``|filter|``                        |filterMap|                     ``|filterMap|``
+|filter|                        ``|filter|``                        |expressionFilter|              ``|expressionFilter|``
+|filterMap|                     ``|filterMap|``
 ==============================  ==================================  ==============================  ==================================
 
 
