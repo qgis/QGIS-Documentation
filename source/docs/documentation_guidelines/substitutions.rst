@@ -318,7 +318,7 @@ Icons used in Layer Properties dialog:
 ==================================  ======================================  =============================  ================================
 Icon                                Substitution                            Icon                           Substitution
 ==================================  ======================================  =============================  ================================
-|symbology|                         ``|symbology|``                         |labels|                       ``|labels|``
+|symbology|                         ``|symbology|``                         |labeling|                     ``|labeling|``
 |attributes|                        ``|attributes|``                        |general|                      ``|general|``
 |metadata|                          ``|metadata|``                          |action|                       ``|action|``
 |join|                              ``|join|``                              |diagram|                      ``|diagram|``
