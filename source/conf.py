@@ -236,6 +236,8 @@ rst_epilog = """
 
 .. |degrees| unicode:: 0x00B0
    :ltrim:
+.. |25dSymbol| image:: /static/common/renderer25dSymbol.png
+   :width: 1.5em
 .. |action| image:: /static/common/action.png
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png
@@ -345,6 +347,8 @@ rst_epilog = """
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
+   :width: 1.5em
+.. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
    :width: 1.5em
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
@@ -605,6 +609,8 @@ rst_epilog = """
    :width: 1.5em
 .. |gpsTrackPolarChart| image:: /static/common/gpstrack_polarchart.png
    :width: 1.5em
+.. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
+   :width: 1.5em
 .. |graphicsView|  image:: /static/common/graphicsview.png
    :width: 1.5em
 .. |grass| image:: /static/common/grasslogo.png
@@ -632,6 +638,8 @@ rst_epilog = """
 .. |groupItems| image:: /static/common/mActionGroupItems.png
    :width: 1.5em
 .. |heatmap| image:: /static/common/heatmap.png
+   :width: 1.5em
+.. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
    :width: 1.5em
 .. |helpAbout| image:: /static/common/mActionHelpAbout.png
    :width: 1.5em
@@ -719,6 +727,8 @@ rst_epilog = """
 .. |intersect| image:: /static/common/intersect.png
    :width: 1.5em
 .. |intersections| image:: /static/common/intersections.png
+   :width: 1.5em
+.. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
@@ -813,6 +823,8 @@ rst_epilog = """
    :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
+.. |nullSymbol| image:: /static/common/rendererNullSymbol.png
+   :width: 1.5em
 .. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
    :width: 1.5em
 .. |offlineEditingSync| image:: /static/common/offline_editing_sync.png
@@ -883,6 +895,8 @@ rst_epilog = """
    :width: 1.5em
 .. |pluginUpgrade| image:: /static/common/plugin-upgrade.png
    :width: 1.5em
+.. |pointDisplacementSymbol| image:: /static/common/rendererPointDisplacementSymbol.png
+   :width: 1.5em
 .. |processingCommander| image:: /static/common/commander.png
    :width: 1.5em
 .. |processingHistory| image:: /static/common/history.png
@@ -938,25 +952,7 @@ rst_epilog = """
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
-.. |renderer25dSymbol| image:: /static/common/renderer25dSymbol.png
-   :width: 1.5em
 .. |rendererAttributeTable| image:: /static/common/rendererCategorizedSymbolOld.png
-   :width: 1.5em
-.. |rendererCategorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
-   :width: 1.5em
-.. |rendererGraduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
-   :width: 1.5em
-.. |rendererHeatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
-   :width: 1.5em
-.. |rendererInvertedSymbol| image:: /static/common/rendererInvertedSymbol.png
-   :width: 1.5em
-.. |rendererNullSymbol| image:: /static/common/rendererNullSymbol.png
-   :width: 1.5em
-.. |rendererPointDisplacementSymbol| image:: /static/common/rendererPointDisplacementSymbol.png
-   :width: 1.5em
-.. |rendererRuleBasedSymbol| image:: /static/common/rendererRuleBasedSymbol.png
-   :width: 1.5em
-.. |rendererSingleSymbol| image:: /static/common/rendererSingleSymbol.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
@@ -971,6 +967,8 @@ rst_epilog = """
 .. |rotateLabel| image:: /static/common/mActionRotateLabel.png
    :width: 1.5em
 .. |rotatePointSymbols| image:: /static/common/mActionRotatePointSymbols.png
+   :width: 1.5em
+.. |ruleBasedSymbol| image:: /static/common/rendererRuleBasedSymbol.png
    :width: 1.5em
 .. |sampling| image:: /static/common/sampling.png
    :width: 1.5em
@@ -1041,6 +1039,8 @@ rst_epilog = """
    :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
    :width: 2em
+.. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
+   :width: 1.5em
 .. |slider| image:: /static/common/slider.png
 .. |spatialQuery| image:: /static/common/spatialquery.png
    :width: 1.5em

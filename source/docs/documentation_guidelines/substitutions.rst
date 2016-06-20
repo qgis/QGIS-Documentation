@@ -322,11 +322,11 @@ Icon                                Substitution                            Icon
 |attributes|                        ``|attributes|``                        |general|                      ``|general|``
 |metadata|                          ``|metadata|``                          |action|                       ``|action|``
 |join|                              ``|join|``                              |diagram|                      ``|diagram|``
-|renderer25dSymbol|                 ``|renderer25dSymbol|``                 |rendererCategorizedSymbol|    ``|rendererCategorizedSymbol|``
-|rendererGraduatedSymbol|           ``|rendererGraduatedSymbol|``           |rendererHeatmapSymbol|        ``|rendererHeatmapSymbol|``
-|rendererInvertedSymbol|            ``|rendererInvertedSymbol|``            |rendererNullSymbol|           ``|rendererNullSymbol|``
-|rendererPointDisplacementSymbol|   ``|rendererPointDisplacementSymbol|``   |rendererRuleBasedSymbol|      ``|rendererRuleBasedSymbol|``         
-|rendererSingleSymbol|              ``|rendererSingleSymbol|``              \                              \
+|25dSymbol|                         ``|25dSymbol|``                         |categorizedSymbol|            ``|categorizedSymbol|``
+|graduatedSymbol|                   ``|graduatedSymbol|``                   |heatmapSymbol|                ``|heatmapSymbol|``
+|invertedSymbol|                    ``|invertedSymbol|``                    |nullSymbol|                   ``|nullSymbol|``
+|pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |ruleBasedSymbol|              ``|ruleBasedSymbol|``
+|singleSymbol|                      ``|singleSymbol|``                      \                              \
 ==================================  ======================================  =============================  ================================
 
 
