@@ -480,6 +480,8 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | Icon                      | Purpose                                 | Icon                   | Purpose                 |
 +===========================+=========================================+========================+=========================+
+| |cad|                     | Enable Advanced Digitizing Tools        | |tracing|              | Enable Tracing          |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |undo|                    | Undo                                    | |redo|                 | Redo                    |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |rotateFeature|           | Rotate Feature(s)                       | |simplifyFeatures|     | Simplify Feature        |
@@ -500,6 +502,8 @@ Advanced digitizing
 Table Advanced Editing: Vector layer advanced editing toolbar
 
 
+.. index:: Undo_Redo
+
 Undo and Redo
 -------------
 
@@ -519,22 +523,26 @@ checkbox. Undo/Redo is however active, even if the widget is not displayed.
 .. figure:: /static/user_manual/working_with_vector/redo_undo.png
    :align: center
 
-   Redo and Undo digitizing steps |nix|
+   Redo and Undo digitizing steps
 
-When Undo is hit, the state of all features and attributes are reverted to
+When Undo is hit or :kbd:`Ctrl+z` (or :kbd:`Cmd+z`) pressed, the state of all
+features and attributes are reverted to
 the state before the reverted operation happened. Changes other than normal
-vector editing operations (for example, changes done by a plugin), may or may
+vector editing operations (for example, changes done by a plugin) may or may
 not be reverted, depending on how the changes were performed.
 
 To use the undo/redo history widget, simply click to select an operation in
 the history list. All features will be reverted to the state they were in
 after the selected operation.
 
+
+.. index:: Rotate_Feature
+
 Rotate Feature(s)
 -----------------
 
-Use |rotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple features
-in the map canvas. Press the |rotateFeature|:sup:`Rotate Feature(s)` icon and then
+Use |rotateFeature| :sup:`Rotate Feature(s)` to rotate one or multiple features
+in the map canvas. Press the |rotateFeature| :sup:`Rotate Feature(s)` icon and then
 click on the feature to rotate. Either click on the map to place the rotated feature or
 enter an angle in the user input widget. If you want to rotate several features,
 they shall be selected first.
@@ -546,19 +554,65 @@ hold the :kbd:`Ctrl` button  and click on the map to place it.
 If you hold :kbd:`Shift` before clicking on the map, the rotation will be done
 in 45 degree steps, which can be modified afterwards in the user input widget.
 
+To abort feature rotation, you need to click on |rotateFeature| :sup:`Rotate
+Feature(s)` icon.
+
+.. index:: Simplify_Feature
+
 Simplify Feature
 ----------------
 
 The |simplifyFeatures| :sup:`Simplify Feature` tool allows you to reduce the
-number of vertices of a feature, as long as the geometry doesn't change. With the
-tool you can also simplify multi-part features.
-First, drag a rectangle over the feature. The vertices will be highlighted in red while the color of the
-feature will change and a dialog where you can define a tolerance in map units or pixels
-will appear. QGIS calculates the amount of vertices that can be deleted while maintaining the
-geometry using the given tolerance. The higher the tolerance is the more vertices can be deleted. After
-gaining the statistics about the simplification just click the **[OK]** button.
+number of vertices of a feature, as long as the geometry remains valid. With the
+tool you can also simplify many features at once or multi-part features.
+
+First, click on the feature or drag a rectangle over the features. A dialog where
+you can define a tolerance in ``map units``, ``layer units`` or ``pixels`` pops up
+and a colored and simplified copy of the feature(s), using the given tolerance,
+appears over them. QGIS calculates the amount of vertices that can be deleted
+while maintaining the geometry.
+The higher the tolerance is the more vertices can be deleted. When the expected
+geometry fits your needs just click the **[OK]** button.
 The tolerance you used will be saved when leaving a project or when leaving an edit session.
 So you can go back to the same tolerance the next time when simplifying a feature.
+
+To abort feature simplification, you need to click on |simplifyFeatures|
+:sup:`Simplify Feature` icon.
+
+.. note:: unlike the feature simplification option in :menuselection:`Settings -->
+   Options --> Rendering` menu which simplifies the geometry just for rendering,
+   the |simplifyFeatures| :sup:`Simplify Feature` tool really modifies feature's
+   geometry in data source.
+   
+   
+.. index:: Add_Part
+
+Add Part
+--------
+
+You can |addPart| :sup:`Add Part` to a selected feature generating a
+:index:`multipoint`, :index:`multiline` or :index:`multipolygon` feature. The
+new part must be digitized outside the existing one which should be selected
+beforehand.
+
+The |addPart| :sup:`Add Part` can also be used to add a geometry to a :index:`geometryless
+feature`. First, select the feature in the attribute table and digitize the new geometry
+with the :index:`Add Part`tool.
+
+
+.. index:: Delete_Part
+
+Delete Part
+-----------
+
+The |deletePart| :sup:`Delete Part` tool allows you to :index:`delete parts` from
+multifeatures (e.g., to delete polygons from a multi-polygon feature). This
+tool works with all multi-part geometries: point, line and polygon. Furthermore,
+it can be used to totally remove the geometric component of a feature.
+To delete a part, simply click within the target part.
+
+
+.. index:: Add_Ring
 
 Add Ring
 --------
@@ -569,38 +623,34 @@ is possible to digitize further polygons that will occur as a 'hole', so
 only the area between the boundaries of the outer and inner polygons remains
 as a ring polygon.
 
-Add Part
---------
+.. FixMe: I think this tool should behave as below
+.. Like many digitizing tools, the |addRing| :sup:`Add Ring` tool adds ring to all
+.. selected features if any, otherwise all overlapping features are pierced.
 
-You can |addPart| :sup:`add part` polygons to a selected
-:index:`multipolygon`. The new part polygon must be digitized outside
-the selected multi-polygon.
+
+.. index:: Fill_Ring
 
 Fill Ring
 ---------
 
 You can use the |fillRing| :sup:`Fill Ring` function to add a ring to
-a polygon and add a new feature to the layer at the same time. Thus you need not
+a polygon and add a new feature to the layer at the same time. Using this tool,
+you simply have to digitize a polygon within an existing one. Thus you need not
 first use the |addRing| :sup:`Add Ring` icon and then the
 |capturePolygon| :sup:`Add feature` function anymore.
+
+
+.. index:: Delete_Ring
 
 Delete Ring
 -----------
 
-The |deleteRing| :sup:`Delete Ring` tool allows you to delete ring polygons
-inside an existing area. This tool only works with polygon layers. It doesn't
-change anything when it is used on the outer ring of the polygon. This tool
-can be used on polygon and multi-polygon features. Before you select the
-vertices of a ring, adjust the vertex edit tolerance.
+The |deleteRing| :sup:`Delete Ring` tool allows you to delete rings within
+an existing polygon, by clicking inside the hole. This tool only works with
+polygon and multi-polygon features. It doesn't
+change anything when it is used on the outer ring of the polygon.
 
-Delete Part
------------
-
-The |deletePart| :sup:`Delete Part` tool allows you to delete parts from
-multifeatures (e.g., to delete polygons from a multi-polygon feature). It won't
-delete the last part of the feature; this last part will stay untouched. This
-tool works with all multi-part geometries: point, line and polygon. Before you
-select the vertices of a part, adjust the vertex edit tolerance.
+.. index:: Reshape_Feature
 
 Reshape Features
 ----------------
@@ -629,22 +679,27 @@ the polygon with a right click.
    something to consider.
 
 
+.. index:: Offset_Curves
+
 Offset Curves
 -------------
 
 The |offsetCurve| :sup:`Offset Curve` tool creates parallel shifts of line layers.
 The tool can be applied to the edited layer (the geometries are modified)
-or also to background layers (in which case it creates copies of the lines / rings and adds them to the the edited layer).
-It is thus ideally suited for the creation of distance line layers. The displacement is
-shown at the bottom left of the taskbar.
+or also to background layers (in which case it creates copies of the lines /
+rings and adds them to the edited layer).
+It is thus ideally suited for the creation of distance line layers.
+The :guilabel:`User Input` dialog pops-up, showing the displacement distance.
 
 To create a shift of a line layer, you must first go into editing mode and activate the
 |offsetCurve| :sup:`Offset Curve` tool. Then click on a feature to shift it.
-Move the mouse and click where wanted or enter the desired distance in the user input widget. Your changes may then be saved with the|saveEdits|:sup:`Save Layer Edits` tool.
+Move the mouse and click where wanted or enter the desired distance in the user
+input widget. Your changes may then be saved with the |saveEdits| :sup:`Save Layer Edits` tool.
 
 QGIS options dialog (Digitizing tab then **Curve offset tools** section) allows
 you to configure some parameters like **Join style**, **Quadrant segments**,
 **Miter limit**.
+
 
 .. index:: Split_Features
 
@@ -654,7 +709,8 @@ Split Features
 You can split features using the |splitFeatures| :sup:`Split Features`
 icon on the toolbar. Just draw a line across the feature you want to split.
 
-.. index:: Merge_Selected_Features
+
+.. index:: Split_Parts
 
 Split parts
 -----------
@@ -662,6 +718,9 @@ Split parts
 In QGIS it is possible to split the parts of a multi part feature so that the
 number of parts is increased. Just draw a line across the part you want to split using
 the |splitParts| :sup:`Split Parts` icon.
+
+
+.. index:: Merge_Selected_Features
 
 Merge selected features
 -----------------------
@@ -672,18 +731,19 @@ selected features or select a function (Minimum, Maximum, Median, Sum, Skip
 Attribute) to use for each column. If features don't have a common boundaries,
 a multipolygon will be created.
 
+
 .. index:: Merge_Attributes_of_Selected_Features
 
 Merge attributes of selected features
 -------------------------------------
 
 The |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` tool
-allows you to :index:`merge attributes of features` with common boundaries and
-attributes without merging their boundaries.
-First, select several features at once. Then
+allows you to apply same attributes to features without merging their boundaries.
+First, select several features. Then
 press the |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` button.
 Now QGIS asks you which attributes are to be applied to all selected objects.
 As a result, all selected objects have the same attribute entries.
+
 
 .. index:: Rotate_Point_symbols
 
@@ -709,7 +769,7 @@ Without these settings, the tool is inactive.
 .. figure:: /static/user_manual/working_with_vector/rotatepointsymbol.png
    :align: center
 
-   Rotate Point Symbols |nix|
+   Rotate Point Symbols
 
 To change the rotation, select a point feature in the map canvas and rotate
 it, holding the left mouse button pressed. A red arrow with the rotation value
@@ -719,6 +779,7 @@ button again, the value will be updated in the attribute table.
 .. note::
    If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15
    degree steps.
+
 
 The Advanced Digitizing panel
 =============================
@@ -739,7 +800,7 @@ make a precise definition for your new geometry.
 
    The Advanced Digitizing panel
 
-The tools are not enabled if the map view is in geographic coordinates.
+.. note:: The tools are not enabled if the map view is in geographic coordinates.
 
 
 .. index:: Create_New_Layers, New_Shapefile_Layer, New_SpatiaLite_Layer, New_GPX_Layer
@@ -750,7 +811,8 @@ Creating new Vector layers
 ==========================
 
 QGIS allows you to create new shapefile layers, new SpatiaLite layers, new
-GPX layers and New Temporary Scratch Layers. Creation of a new GRASS layer is supported within the GRASS plugin.
+GPX layers and New Temporary Scratch Layers. Creation of a new GRASS layer
+is supported within the GRASS plugin.
 Please refer to section :ref:`creating_new_grass_vectors` for more information
 on creating GRASS vector layers.
 
@@ -775,7 +837,7 @@ with X,Y,Z coordinates).
 .. figure:: /static/user_manual/working_with_vector/editNewVector.png
    :align: center
 
-   Creating a new Shapefile layer Dialog |nix|
+   Creating a new Shapefile layer Dialog
 
 To complete the creation of the new shapefile layer, add the desired attributes
 by clicking on the **[Add to attributes list]** button and specifying a name and type for the
@@ -810,7 +872,7 @@ be displayed as shown in Figure_edit_6_.
 .. figure:: /static/user_manual/working_with_vector/editNewSpatialite.png
    :align: center
 
-   Creating a New SpatiaLite layer Dialog |nix|
+   Creating a New SpatiaLite layer Dialog
 
 The first step is to select an existing SpatiaLite database or to create a new
 SpatiaLite database. This can be done with the browse button |browseButton| to
