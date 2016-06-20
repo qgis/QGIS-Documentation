@@ -328,6 +328,8 @@ rst_epilog = """
    :width: 2.3em
 .. |buffer| image:: /static/common/buffer.png
    :width: 1.5em
+.. |cad| image:: /static/common/cad.png
+   :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |calendarWidget| image:: /static/common/calendarwidget.png
@@ -936,7 +938,25 @@ rst_epilog = """
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
+.. |renderer25dSymbol| image:: /static/common/renderer25dSymbol.png
+   :width: 1.5em
+.. |rendererAttributeTable| image:: /static/common/rendererCategorizedSymbolOld.png
+   :width: 1.5em
 .. |rendererCategorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
+   :width: 1.5em
+.. |rendererGraduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
+   :width: 1.5em
+.. |rendererHeatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
+   :width: 1.5em
+.. |rendererInvertedSymbol| image:: /static/common/rendererInvertedSymbol.png
+   :width: 1.5em
+.. |rendererNullSymbol| image:: /static/common/rendererNullSymbol.png
+   :width: 1.5em
+.. |rendererPointDisplacementSymbol| image:: /static/common/rendererPointDisplacementSymbol.png
+   :width: 1.5em
+.. |rendererRuleBasedSymbol| image:: /static/common/rendererRuleBasedSymbol.png
+   :width: 1.5em
+.. |rendererSingleSymbol| image:: /static/common/rendererSingleSymbol.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em

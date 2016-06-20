@@ -326,7 +326,7 @@ Conditional formatting of Table Cells
 =====================================
 
 You can enable the :index:`conditional formatting` panel clicking on
-|rendererCategorizedSymbol| at the top right of the attributes window in table
+|rendererAttributeTable| at the top right of the attributes window in table
 view (not available in form view).
 
 The new panel allows user to add new rules for conditional formatting of field

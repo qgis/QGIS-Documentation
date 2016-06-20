@@ -146,7 +146,8 @@ Digitizing and Advanced Digitizing
 ============================  =================================  =============================  ================================
 Icon                          Substitution                       Icon                           Substitution
 ============================  =================================  =============================  ================================
-|toggleEditing|               ``|toggleEditing|``                |tracing|                      ``|tracing|``
+|cad|                         ``|cad|``                          |tracing|                      ``|tracing|``
+|toggleEditing|               ``|toggleEditing|``                |allEdits|                     ``|allEdits|``
 |capturePoint|                ``|capturePoint|``                 |capturePolygon|               ``|capturePolygon|``
 |captureLine|                 ``|captureLine|``
 |circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
@@ -236,6 +237,8 @@ Other basic icons
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
+|arrowDown|                     ``|arrowDown|``                     |arrowUp|                       ``|arrowUp|``     
+|arrowLeft|                     ``|arrowLeft|``                     |arrowRight|                    ``|arrowRight|``     
 |signPlus|                      ``|signPlus|``                      |signMinus|                     ``|signMinus|``
 |projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
@@ -260,7 +263,7 @@ Icon                         Substitution                     Icon              
 |newAttribute|               ``|newAttribute|``               |deleteAttribute|        ``|deleteAttribute|``
 |newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
 |draw|                       ``|draw|``                       |form|                   ``|form|``
-|rendererCategorizedSymbol|  ``|rendererCategorizedSymbol|``  \                        \
+|rendererAttributeTable|     ``|rendererAttributeTable|``     \                        \
 ============================ ===============================  =======================  ===========================
 
 
@@ -312,14 +315,19 @@ Properties
 
 Icons used in Layer Properties dialog:
 
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|symbology|                     ``|symbology|``                     |diagram|                       ``|diagram|``
-|attributes|                    ``|attributes|``                    |general|                       ``|general|``
-|metadata|                      ``|metadata|``                      |action|                        ``|action|``
-|join|                          ``|join|``                          \                               \
-==============================  ==================================  ==============================  ==================================
+==================================  ======================================  =============================  ================================
+Icon                                Substitution                            Icon                           Substitution
+==================================  ======================================  =============================  ================================
+|symbology|                         ``|symbology|``                         |labeling|                     ``|labeling|``
+|attributes|                        ``|attributes|``                        |general|                      ``|general|``
+|metadata|                          ``|metadata|``                          |action|                       ``|action|``
+|join|                              ``|join|``                              |diagram|                      ``|diagram|``
+|renderer25dSymbol|                 ``|renderer25dSymbol|``                 |rendererCategorizedSymbol|    ``|rendererCategorizedSymbol|``
+|rendererGraduatedSymbol|           ``|rendererGraduatedSymbol|``           |rendererHeatmapSymbol|        ``|rendererHeatmapSymbol|``
+|rendererInvertedSymbol|            ``|rendererInvertedSymbol|``            |rendererNullSymbol|           ``|rendererNullSymbol|``
+|rendererPointDisplacementSymbol|   ``|rendererPointDisplacementSymbol|``   |rendererRuleBasedSymbol|      ``|rendererRuleBasedSymbol|``         
+|rendererSingleSymbol|              ``|rendererSingleSymbol|``              \                              \
+==================================  ======================================  =============================  ================================
 
 
 Plugin Icons
