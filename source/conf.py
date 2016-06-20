@@ -328,6 +328,8 @@ rst_epilog = """
    :width: 2.3em
 .. |buffer| image:: /static/common/buffer.png
    :width: 1.5em
+.. |cad| image:: /static/common/cad.png
+   :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |calendarWidget| image:: /static/common/calendarwidget.png

@@ -146,7 +146,8 @@ Digitizing and Advanced Digitizing
 ============================  =================================  =============================  ================================
 Icon                          Substitution                       Icon                           Substitution
 ============================  =================================  =============================  ================================
-|toggleEditing|               ``|toggleEditing|``                |tracing|                      ``|tracing|``
+|cad|                         ``|cad|``                          |tracing|                      ``|tracing|``
+|toggleEditing|               ``|toggleEditing|``                |allEdits|                     ``|allEdits|``
 |capturePoint|                ``|capturePoint|``                 |capturePolygon|               ``|capturePolygon|``
 |captureLine|                 ``|captureLine|``
 |circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
