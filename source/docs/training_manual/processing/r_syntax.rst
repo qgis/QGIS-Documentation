@@ -11,20 +11,20 @@ Inputs
 ------
 Before you specify teh inputs you can also set the algorithm group in which your script will be put. If the group already exists, the algorithm will be added to the other, else a new group will be automatically created:
 
-  1. group creation, ``##My Group=group``
+1. group creation, ``##My Group=group``
 
 Then you have to specify the all the input types and eventually the additional parameters. You can have different inputs:
 
-  1. vector, ``##Layer = vector``
-  2. vector Field, ``##F = Field Layer`` (where Layer is the name of the input Layer)
-  3. table, ``##Layer = raster``
-  4. number, ``##Num = number``
-  5. string, ``##Str = string``
-  6. boolean, ``##Bol = boolean``
+1. vector, ``##Layer = vector``
+2. vector Field, ``##F = Field Layer`` (where Layer is the name of the input Layer)
+3. table, ``##Layer = raster``
+4. number, ``##Num = number``
+5. string, ``##Str = string``
+6. boolean, ``##Bol = boolean``
 
 you can also have a dropdown menu with all the parameters you want; the items must be separated with semi columns ``;``:
 
-  7. ``##type=selection point;lines;point+lines``
+7. ``##type=selection point;lines;point+lines``
 
 Outputs
 -------
