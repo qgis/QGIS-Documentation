@@ -262,7 +262,7 @@ Icon                         Substitution                     Icon              
 |newAttribute|               ``|newAttribute|``               |deleteAttribute|        ``|deleteAttribute|``
 |newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
 |draw|                       ``|draw|``                       |form|                   ``|form|``
-|rendererCategorizedSymbol|  ``|rendererCategorizedSymbol|``  \                        \
+|rendererAttributeTable|     ``|rendererAttributeTable|``     \                        \
 ============================ ===============================  =======================  ===========================
 
 

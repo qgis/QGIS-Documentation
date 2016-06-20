@@ -938,6 +938,8 @@ rst_epilog = """
    :width: 1.5em
 .. |renderer25dSymbol| image:: /static/common/renderer25dSymbol.png
    :width: 1.5em
+.. |rendererAttributeTable| image:: /static/common/rendererCategorizedSymbolOld.png
+   :width: 1.5em
 .. |rendererCategorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
    :width: 1.5em
 .. |rendererGraduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
