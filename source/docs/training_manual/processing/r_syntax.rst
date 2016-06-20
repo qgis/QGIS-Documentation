@@ -17,14 +17,14 @@ Then you have to specify the all the input types and eventually the additional p
 
 1. vector, ``##Layer = vector``
 2. vector Field, ``##F = Field Layer`` (where Layer is the name of the input Layer)
-2. table, ``##Layer = raster``
-3. number, ``##Num = number``
-4. string, ``##Str = string``
-5. boolean, ``##Bol = boolean``
+3. table, ``##Layer = raster``
+4. number, ``##Num = number``
+5. string, ``##Str = string``
+6. boolean, ``##Bol = boolean``
 
 you can also have a dropdown menu with all the parameters you want; the items must be separated with semi columns ``;``:
 
-6. ``##type=selection point;lines;point+lines``
+7. ``##type=selection point;lines;point+lines``
 
 Outputs
 -------
@@ -41,25 +41,24 @@ Script body
 -----------
 The script body follows an R style syntax and the **Log** panel can help you if something went wrong with your script.
 
-**Remember** that in the script you have to load all the additional libraries:
+**Remember** that in the script you have to load all the additional libraries::
 
-```
-library(sp)
-```
+  library(sp)
+
 
 Example with vector output
 **************************
-Let's take an algorithm from the online collection that creates random points from the extend of an input layer.
+Let's take an algorithm from the online collection that creates random points from the extend of an input layer::
 
-```
-##Point pattern analysis=group
-##Layer=vector
-##Size=number 10
-##Output= output vector
-library(sp)
-pts=spsample(Layer,Size,type="random")
-Output=SpatialPointsDataFrame(pts, as.data.frame(pts))
-```
+
+  ##Point pattern analysis=group
+  ##Layer=vector
+  ##Size=number 10
+  ##Output= output vector
+  library(sp)
+  pts=spsample(Layer,Size,type="random")
+  Output=SpatialPointsDataFrame(pts, as.data.frame(pts))
+
 
 and get through the lines:
 
@@ -78,23 +77,23 @@ That's it! Just run the algorithm with a vector layer you have in the QGIS Legen
 
 Example with raster output
 **************************
-The following script will perform a basic ordinary kriging and will create a raster map of the interpolated values:
+The following script will perform a basic ordinary kriging and will create a raster map of the interpolated values::
 
-```
-##Basic statistics=group
-##Layer=vector
-##Field=Field Layer
-##Output=output raster
-require("automap")
-require("sp")
-require("raster")
-table=as.data.frame(Layer)
-coordinates(table)= ~coords.x1+coords.x2
-c = Layer[[Field]]
-kriging_result = autoKrige(c~1, table)
-prediction = raster(kriging_result$krige_output)
-Output<-prediction
-```
+
+  ##Basic statistics=group
+  ##Layer=vector
+  ##Field=Field Layer
+  ##Output=output raster
+  require("automap")
+  require("sp")
+  require("raster")
+  table=as.data.frame(Layer)
+  coordinates(table)= ~coords.x1+coords.x2
+  c = Layer[[Field]]
+  kriging_result = autoKrige(c~1, table)
+  prediction = raster(kriging_result$krige_output)
+  Output<-prediction
+
 
 from a vector and its field in input the algorithm will use the ``autoKrige`` function of the ``automap`` R package and it will first calculate the kriging model and then create a raster.
 
@@ -104,26 +103,26 @@ The raster is created with the ``raster`` function of the raster R package.
 Example with table output
 *************************
 Let's edit the ``Summary Statistics`` algorithm so that the output is a table file (csv).
-The script body is the following:
 
-```
-##Basic statistics=group
-##Layer=vector
-##Field=Field Layer
-##Stat=Output table
-Summary_statistics<-data.frame(rbind(
-sum(Layer[[Field]]),
-length(Layer[[Field]]),
-length(unique(Layer[[Field]])),
-min(Layer[[Field]]),
-max(Layer[[Field]]),
-max(Layer[[Field]])-min(Layer[[Field]]),
-mean(Layer[[Field]]),
-median(Layer[[Field]]),
-sd(Layer[[Field]])),row.names=c("Sum:","Count:","Unique values:","Minimum value:","Maximum value:","Range:","Mean value:","Median value:","Standard deviation:"))
-colnames(Summary_statistics)<-c(Field)
-Stat<-Summary_statistics
-```
+The script body is the following::
+
+  ##Basic statistics=group
+  ##Layer=vector
+  ##Field=Field Layer
+  ##Stat=Output table
+  Summary_statistics<-data.frame(rbind(
+  sum(Layer[[Field]]),
+  length(Layer[[Field]]),
+  length(unique(Layer[[Field]])),
+  min(Layer[[Field]]),
+  max(Layer[[Field]]),
+  max(Layer[[Field]])-min(Layer[[Field]]),
+  mean(Layer[[Field]]),
+  median(Layer[[Field]]),
+  sd(Layer[[Field]])),row.names=c("Sum:","Count:","Unique values:","Minimum value:","Maximum value:","Range:","Mean value:","Median value:","Standard deviation:"))
+  colnames(Summary_statistics)<-c(Field)
+  Stat<-Summary_statistics
+
 
 The third line specifies the **Vector Field** in input and the fourth line tells the algorithm that the output should be a table.
 
@@ -131,25 +130,24 @@ The last line will take the ``Stat`` object created in the script and convert it
 
 Example with console output
 ***************************
-We can take the previous example and instead of creating a table, print the result in the **Result Viewer**.
+We can take the previous example and instead of creating a table, print the result in the **Result Viewer**::
 
-```
-##Basic statistics=group
-##Layer=vector
-##Field=Field Layer
-Summary_statistics<-data.frame(rbind(
-sum(Layer[[Field]]),
-length(Layer[[Field]]),
-length(unique(Layer[[Field]])),
-min(Layer[[Field]]),
-max(Layer[[Field]]),
-max(Layer[[Field]])-min(Layer[[Field]]),
-mean(Layer[[Field]]),
-median(Layer[[Field]]),
-sd(Layer[[Field]])),row.names=c("Sum:","Count:","Unique values:","Minimum value:","Maximum value:","Range:","Mean value:","Median value:","Standard deviation:"))
-colnames(Summary_statistics)<-c(Field)
->Summary_statistics
-```
+  ##Basic statistics=group
+  ##Layer=vector
+  ##Field=Field Layer
+  Summary_statistics<-data.frame(rbind(
+  sum(Layer[[Field]]),
+  length(Layer[[Field]]),
+  length(unique(Layer[[Field]])),
+  min(Layer[[Field]]),
+  max(Layer[[Field]]),
+  max(Layer[[Field]])-min(Layer[[Field]]),
+  mean(Layer[[Field]]),
+  median(Layer[[Field]]),
+  sd(Layer[[Field]])),row.names=c("Sum:","Count:","Unique values:","Minimum value:","Maximum value:","Range:","Mean value:","Median value:","Standard deviation:"))
+  colnames(Summary_statistics)<-c(Field)
+  >Summary_statistics
+
 
 The script is exactly the same of above with just 2 edits:
 
@@ -159,16 +157,16 @@ The script is exactly the same of above with just 2 edits:
 
 Example with plot
 *****************
-Creating plots is very simple. You have to use the ``##showplot`` parameter as the following script shows:
+Creating plots is very simple. You have to use the ``##showplot`` parameter as the following script shows::
 
-```
-##Basic statistics=group
-##Layer=vector
-##Field=Field Layer
-##showplots
-qqnorm(Layer[[Field]])
-qqline(Layer[[Field]])
-```
+
+  ##Basic statistics=group
+  ##Layer=vector
+  ##Field=Field Layer
+  ##showplots
+  qqnorm(Layer[[Field]])
+  qqline(Layer[[Field]])
+
 
 the script takes a field of the vector layer in input and creates a *QQ Plot* to test the normality of the distribution.
 
