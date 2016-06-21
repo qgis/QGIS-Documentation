@@ -992,6 +992,8 @@ rst_epilog = """
    :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
+.. |selectAllTree| image:: /static/common/mActionSelectAllTree.png
+   :width: 1.5em
 .. |selectColor| image:: /static/common/selectcolor.png
 .. |selectCreateLayer| image:: /static/common/selectcreatelayer.png
    :width: 1.5em
