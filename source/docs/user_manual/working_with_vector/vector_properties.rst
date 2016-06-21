@@ -147,7 +147,7 @@ The :index:`Style` menu provides you with a comprehensive tool for rendering and
 symbolizing your vector data.
 You can use tools that are common to all vector data, as well as special symbolizing
 tools that were designed for the different kinds of vector data. However all types share
-the following dialog structure: in the upper part, you have widget that help you
+the following dialog structure: in the upper part, you have a widget that helps you
 prepare the classification and the symbol to use for features
 and at the bottom the :ref:`layer_rendering` widget.
 
