@@ -1951,12 +1951,17 @@ of the image. Currently png, jpg and jpeg image formats are supported.
 Save and Share Layer Properties
 ================================
 
+.. _manage_custom_style:
+
+Managing Custom Styles
+-----------------------
+
 When a layer is added to map canvas, QGIS uses by default a random symbol/color
 to render its features. You can however set a default symbol in
 :menuselection:`Project --> Properties --> Default styles` that will be applied
 to each newly added layer according to its geometry type.
 
-But, most of the time, you'd prefer to have a custom and more complexe style
+But, most of the time, you'd prefer to have a custom and more complex style
 that can be applied automatically or manually (with less efforts) to the layers.
 You can achieve this goal using the :menuselection:`Style` combobox at the bottom of
 the Layer Properties dialog. This combobox provides you with functions to create,
@@ -1965,9 +1970,6 @@ load and manage styles.
 A style stores any information set in the layer properties dialog to render
 or interact with the features (including symbology, labeling, action, diagram...
 settings).
-Styles can be stored inside the project, in a file (``.qml`` or ``.sld``) or
-in a database (SpatiaLite, PostGIS...). Thanks to layer visibility manager, you can assign
-several styles to the same layer but only one can be active at the same time.
 
 .. only:: html
 
@@ -1990,14 +1992,20 @@ you can save it by clicking the |selectString| :menuselection:`Style` combobox a
 At the bottom of the Style drop-down list, you see the styles set
 for the layer and the active one is checked.
 Once you have more than one style defined for a layer, a **Remove Current** option
-can help you delete those you no more want.
+can help you delete those you no longer want.
 
 Note that each time you validate the layer properties dialog, the active style
 is updated with the changes you've done.
 
-You can create as many styles as you wish for each layer.
+You can create as many styles as you wish for a layer but only one can be active
+at a time.
 Combined to layer visibility preset, this offers a quick and powerful way to manage
-complexe projects with few layers (no need to duplicate any layer in the map legend).
+complex projects with few layers (no need to duplicate any layer in the map legend).
+
+.. _store_style:
+
+Storing Style in a File or a Database
+--------------------------------------
 
 While these styles are saved inside the project and can be copied and pasted from
 layer to layer in the project, it's also possible to save them outside the project
