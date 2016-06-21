@@ -704,7 +704,7 @@ right clicking the layer in the legend. Then, click on :menuselection:`Save as..
 define the name of the output file, and select 'SpatiaLite' as format and the CRS.
 Also, you can select 'SQLite' as format and then add ``SPATIALITE=YES`` in the
 OGR data source creation option field. This tells OGR to create a SpatiaLite
-database. See also http://www.gdal.org/ogr/drv_sqlite.html.
+database. See :ref:`general_saveas` and http://www.gdal.org/ogr/drv_sqlite.html.
 
 QGIS also supports editable views in SpatiaLite.
 
