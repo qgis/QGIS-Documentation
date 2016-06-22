@@ -240,6 +240,8 @@ Don't check for new version of QGIS at startup.
 If you have trouble at start-up with plugins, you can avoid loading them at
 start-up with this option. They will still be available from the Plugins Manager afterwards.
 
+.. _custom_commandline:
+
 **Command line option** ``--customizationfile``
 
 Using this command line argument, you can define a GUI customization file, that will

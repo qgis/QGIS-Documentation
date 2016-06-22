@@ -525,14 +525,19 @@ Then follows all the other information about the feature.
 This window can be customized to display custom fields, but by default it will
 display three kinds of information:
 
-* Actions: Actions can be added to the identify feature windows. The action is run by clicking
-  on the action label. By default, only one action is added,
-  namely view feature form for editing. You can define more actions in the layer's
-  properties dialog.
-* Derived: This information is calculated or derived from other information.
-  This includes the X and Y values of the clicked coordinate, the area and perimeter in map units
-  for polygons, the length in map units for lines, and the feature ids.
-* Data attributes: This is the list of attribute fields and values for the feature that has been clicked.
+* **Actions**: :index:`Actions` can be added to the identify feature windows.
+  The action is run by clicking on the action label. By default, only one action
+  is added, namely ``view feature form`` for editing. You can define more actions
+  in the layer's properties dialog.
+* **Derived**: This information is calculated or derived from other information.
+  This includes the feature id, its length or perimeter and area in map units depending
+  on its geometry, the count of spatial parts and the number of the clicked part in case
+  of multi-geometry, the count of vertices in the feature and the number of the closest
+  one to the point clicked.
+  It also reports the X and Y (and Z/M if available) coordinate values of both clicked point
+  and feature closest vertex.
+* **Data attributes**: This is the list of attribute fields and values for the feature that
+  has been clicked.
 
 .. _figure_identify:
 

@@ -11,14 +11,45 @@ Expressions
 .. contents::
    :local:
 
-The **Expressions** feature is available from many parts in QGIS. It can be
-accessed using the |expressionSelect| :sup:`Select by expression`, the
-|calculateField| :sup:`Field calculator` or the
+The :index:`Expressions` feature is available from many parts in QGIS. It can be
+accessed using the |expression| :sup:`Expression Builder`, the
+|expressionSelect| :sup:`Select By Expression...`, the :guilabel:`Geometry generator`
+symbol layer option, the |calculateField| :sup:`Field calculator` or the
 |dataDefined| :sup:`Data defined override` tool.
-It offers a powerful way to manipulate attribute value or variables in
+Based on layer data and prebuilt or user defined functions,
+it offers a powerful way to manipulate attribute value, geometry and variables in
 order to dynamically change the geometry style, the content or position
 of the label, the value for diagram, the height of a composer item,
-select some feature, create virtual column ...
+select some features, create virtual field ...
+
+**Some examples:**
+
+* From Field Calculator, calculate a "pop_density" field using existing "total_pop"
+  and "area_km2" fields::
+
+    "total_pop" / "area_km2"
+
+* Update the field "density_level" with categories according to the "pop_density" values::
+
+    CASE WHEN "pop_density" < 50 THEN 'Low population density'
+         WHEN "pop_density" >= 50 and "pop_density" < 150 THEN 'Medium population density'
+         WHEN "pop_density" >= 150 THEN 'High population density'
+    END
+
+* Apply a categorized style to all the features according to whether their average house
+  price is smaller or higher than 10000€ per square metre::
+  
+    "price_m2" > 10000
+
+* Using the "Select By Expression..." tool, select all the features representing
+  areas of “High population density” and whose average house price is higher than
+  10000€ per square metre::
+
+    "density_level" = 'High population density' and "price_m2" > 10000
+
+Likewise, the previous expression could also be used to define which features
+should be labeled or shown in the map. Using expressions offers you a lot of
+possibilities.
 
 The **Expressions** feature offers access to the:
 
@@ -200,7 +231,7 @@ This group contains math functions (e.g., square root, sin and cos).
  scale_linear       Transforms a given value from an input domain
                     to an output range using linear interpolation
  sin                Returns the sine of an angle
- sqrt(a)            Returns the square root of a value
+ sqrt               Returns the square root of a value
  tan                Returns the tangent of an angle
 ==================  ===========================================================
 
@@ -299,7 +330,6 @@ This group contains functions for handling date and time data.
 * Get the month and the year of today in the format "10/2014" ::
 
     month(now()) || '/' || year(now())
-
 
 Fields and Values
 ------------------
