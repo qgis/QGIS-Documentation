@@ -156,7 +156,7 @@ Now you can add the body of the function:
 
     pts=spsample(Layer,Size,type="random")
 
-this way the function takes the extent of the *Layer*, the number of points is taken from the *Size* parameter and the type po point generation is *random*
+this way the function takes the extent of the *Layer*, the number of points is taken from the *Size* parameter and the point generation is *random*
 
 2. Write the line that contains the parameters of the output::
 
