@@ -72,11 +72,11 @@ exclude_patterns = ['../output', "../i18n", "../resources", "../scripts"]
 # uncomment to exclude the user manual from build
 #exclude_patterns += ['docs/user_manual/*']
 # uncomment to exclude training manual from build
-exclude_patterns += ['docs/training_manual/*']
+#exclude_patterns += ['docs/training_manual/*']
 # uncomment to exclude doc guides from build
 #exclude_patterns += ['docs/documentation_guidelines/*']
 # uncomment to exclude gentle intro  from build
-exclude_patterns += ['docs/gentle_gis_introduction/*']
+#exclude_patterns += ['docs/gentle_gis_introduction/*']
 # uncomment to exclude pyqgis dev book from build
 #exclude_patterns += ['docs/pyqgis_developer_cookbook/*']
 
