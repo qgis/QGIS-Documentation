@@ -1,3 +1,5 @@
+.. _r-syntax:
+
 R Synatax in Processing scripts
 ===============================
 

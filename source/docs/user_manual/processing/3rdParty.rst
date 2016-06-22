@@ -243,7 +243,7 @@ QGIS the inputs of the algorithm described in the file and the outputs that
 it will generate. They work with exactly the same syntax as the Processing scripts
 that we have already seen, so they will not be described here again.
 
-Please have a look at the `R Intro <http://docs.qgis.org/testing/en/docs/training_manual/processing/r_intro.html>`_ and the `R Syntax <http://docs.qgis.org/testing/en/docs/training_manual/processing/r_syntax.html>`_ Training Manual Chapters to have more information on how to write your own R scripts-
+Please have a look at the `R Intro :ref:`r-intro` and the `R Syntax :ref:`r-syntax` Training Manual Chapters to have more information on how to write your own R scripts-
 
 When you declare an input parameter, QGIS uses that information for two
 things: creating the user interface to ask the user for the value of that
