@@ -161,6 +161,13 @@ tools that were designed for the different kinds of vector data.
 
 .. ToDo: add information about the export options
 
+.. tip:: **Change the features display from legend**
+   
+   You can open the symbol editor dialog by double-clicking on the legend. If you
+   do a right-clic on the legend a contextual menu allow user to change the color, 
+   open the :menuselection`Edit symbol ...` or show/hide all features in this
+   class.
+
 Features rendering
 ------------------
 
