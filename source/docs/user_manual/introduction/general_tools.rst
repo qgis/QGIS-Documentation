@@ -936,7 +936,8 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows:
 * :guilabel:`Clear` button to remove the setup.
 
 When the :index:`data-defined override` option is setup correctly the icon is yellow,
-if it is broken, the icon is red.
+|dataDefineOn| or |dataDefineExpressionOn| if it is broken, the icon is red, 
+|dataDefineError| or |dataDefineExpressionError|.
 
 Parameters that can be used with data-defined tools are:
 
