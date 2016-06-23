@@ -589,7 +589,11 @@ over a network. You can improve the drawing performance of PostgreSQL layers by
 ensuring that a :index:`PostGIS spatial index` exists on each layer in the
 database. PostGIS supports creation of a :index:`GiST (Generalized Search Tree)
 index` to speed up spatial searches of the data (GiST index information is taken
-from the PostGIS documentation available at http://postgis.refractions.net).
+from the PostGIS documentation available at http://postgis.net).
+
+.. tip:: You can use the DBManager to create an index to your layer. You should
+   first select the layer and click on :menuselection:`Table > Edit table`, go to
+   :menuselection:`Indexes` tab and click on **[Add spatial index]**.
 
 The syntax for creating a GiST index is:
 ::
