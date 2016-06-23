@@ -146,7 +146,10 @@ Style Menu
 The :index:`Style` menu provides you with a comprehensive tool for rendering and
 symbolizing your vector data.
 You can use tools that are common to all vector data, as well as special symbolizing
-tools that were designed for the different kinds of vector data.
+tools that were designed for the different kinds of vector data. However all types share
+the following dialog structure: in the upper part, you have a widget that helps you
+prepare the classification and the symbol to use for features
+and at the bottom the :ref:`layer_rendering` widget.
 
 .. tip:: **Export vector symbology**
 
@@ -165,20 +168,24 @@ Features rendering
 ------------------
 
 The renderer is responsible for drawing a feature together with the correct
-symbol. There are four types of renderers: single symbol, categorized, graduated
-and rule-based.
+symbol. Regardless layer geometry type, there are four types of renderers:
+single symbol, categorized, graduated and rule-based. For point layers, there are
+a point displacement and a heatmap renderers available while polygon layers can
+also be rendered with the inverted renderer.
+
 There is no continuous color renderer, because it is in fact only a special case
 of the graduated renderer. The categorized and graduated renderers can be created
 by specifying a symbol and a color ramp - they will set the colors for symbols
-appropriately. For point layers, there is a point displacement renderer available.
+appropriately. 
 For each data type (points, lines and polygons), vector symbol layer types are available.
-Depending on the chosen renderer, the :guilabel:`Style` menu provides different
-additional sections.
+Depending on the chosen renderer, the dialog provides different additional sections.
 
-If you change the renderer type when setting the style of a vector layer the settings
-you made for the symbol will be maintained. Be aware that this procedure only works
-for one change. If you repeat changing the renderer type the settings for the symbol
-will get lost.
+.. note::
+
+   If you change the renderer type when setting the style of a vector layer the settings
+   you made for the symbol will be maintained. Be aware that this procedure only works
+   for one change. If you repeat changing the renderer type the settings for the symbol
+   will get lost.
 
 .. index:: Single_Symbol_Renderer, Renderer_Single_Symbol
 
@@ -187,12 +194,9 @@ will get lost.
 Single Symbol Renderer
 ......................
 
-The :index:`Single Symbol` Renderer is used to render all features of the layer using
-a single user-defined symbol. The properties, which can be adjusted in the
-:guilabel:`Style` menu, depend partially on the type of layer, but all types share
-the following dialog structure: in the upper part, you have panels that help you
-prepare the symbol to use (see :ref:`symbol-selector` for further information),
-and at the bottom the :ref:`layer_rendering` widget.
+The |singleSymbol| :guilabel:`Single Symbol` Renderer is used to render
+all features of the layer using a single user-defined symbol.
+See :ref:`symbol-selector` for further information about symbol representation.
 
 
 .. _figure_symbology_1:
@@ -207,17 +211,15 @@ and at the bottom the :ref:`layer_rendering` widget.
    Single symbol line properties
 
 
-
 .. index:: Categorized_Renderer, Renderer_Categorized
-
 
 Categorized Renderer
 ....................
 
-The :index:`Categorized Renderer` is used to render all features from a layer, using
-an user-defined symbol whose aspect reflects the value of a selected
-feature's attribute. The :guilabel:`Style` menu allows you to select:
-
+The |categorizedSymbol| :guilabel:`Categorized Renderer` is used to render
+all features from a layer, using an user-defined symbol whose aspect reflects
+the value of a selected feature's attribute. The :index:`Categorized` menu allows
+you to select:
 
 * The attribute (using the Column listbox or the |expressionEditorOpen|
   :guilabel:`Set column expression` function, see :ref:`vector_expressions` chapter)
@@ -272,18 +274,14 @@ for the rivers layer of the QGIS sample dataset.
 Graduated Renderer
 ..................
 
+The |graduatedSymbol| :guilabel:`Graduated Renderer` is used to render
+all the features from a layer, using an user-defined symbol whose color or size
+reflects the assignment of a selected feature's attribute to a class.
 
-The :index:`Graduated Renderer` is used to render all the features from a layer,
-using an user-defined symbol whose color or size reflects the assignment of a
-selected feature's attribute to a class.
-
-
-Like the Categorized Renderer, the Graduated Renderer allows you
+Like the Categorized Renderer, the :index:`Graduated Renderer` allows you
 to define rotation and size scale from specified columns.
 
-Also, analogous to the Categorized Renderer, the :guilabel:`Style` tab allows you
-to select:
-
+Also, analogous to the Categorized Renderer, it allows you to select:
 
 * The attribute (using the Column listbox or the |expressionEditorOpen|
   :guilabel:`Set column expression` function)
@@ -292,7 +290,6 @@ to select:
 * The method to use to change the symbol: color or size
 * The colors (using the color Ramp list) if the color method is selected
 * The size (using the size domain and its unit
-
 
 Then you can use the :index:`Histogram` tab which shows an interactive histogram of the
 values from the assigned field or expression. Class breaks can be moved or
@@ -320,7 +317,6 @@ modes are:
   are 1, 2 or 5 times a power of 10. (based on pretty from the R statistical
   environment http://astrostatistics.psu.edu/datasets/R/html/base/html/pretty.html)
 
-
 The listbox in the center part of the :guilabel:`Style` menu lists the classes
 together with their ranges, labels and symbols that will be rendered.
 
@@ -336,7 +332,6 @@ transparency**, **Change output unit**, **Change symbol width**.
 The example in figure_symbology_3_ shows the graduated rendering dialog for
 the rivers layer of the QGIS sample dataset.
 
-
 .. _figure_symbology_3:
 
 .. only:: html
@@ -347,7 +342,6 @@ the rivers layer of the QGIS sample dataset.
    :align: center
 
    Graduated Symbolizing options
-
 
 .. tip:: **Thematic maps using an expression**
 
@@ -432,7 +426,6 @@ Like the proportional symbol, the size-related symbol is added to the layer tree
 at the top of the categorized or graduated classes symbols. And both representation
 are also available in the print composer legend item.
 
-
 .. Index:: Rule-based_Rendering, Rendering_Rule-based
 
 .. _rule_based_rendering:
@@ -440,8 +433,9 @@ are also available in the print composer legend item.
 Rule-based rendering
 ....................
 
-The :index:`Rule-based Renderer` is used to render all the features from a layer,
-using rule based symbols whose aspect reflects the assignment of a selected
+The |ruleBasedSymbol| :guilabel:`Rule-based Renderer` is used to render
+all the features from a layer,
+using :index:`rule-based` symbols whose aspect reflects the assignment of a selected
 feature's attribute to a class. The rules are based on SQL statements.
 The dialog allows rule grouping by filter or scale, and you can decide
 if you want to enable symbol levels or use only the first-matched rule.
@@ -483,10 +477,10 @@ for the rivers layer of the QGIS sample dataset.
 Point displacement
 ..................
 
-The :index:`Point Displacement` renderer works to visualize all features of a
-point layer, even if they have the same location. To do this, the symbols of
-the points are placed on a displacement circle around one center symbol or on
-several concentric circles.
+The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
+works to visualize all features of a point layer, even if they have the same location.
+To do this, the symbols of the points are placed on a :index:`displacement circle`
+around one center symbol or on several concentric circles.
 
 .. _figure_symbology_6:
 
@@ -508,7 +502,8 @@ several concentric circles.
 Inverted Polygon
 ................
 
-The :index:`Inverted Polygon` renderer allows user to define a symbol to fill in
+The |invertedSymbol| :guilabel:`Inverted Polygon` renderer allows user
+to define a symbol to fill in
 outside of the layer's polygons. As above you can select subrenderers, namely
 Single symbol, Graduated, Categorized, Rule-Based or 2.5 D renderer.
 
@@ -535,8 +530,9 @@ Single symbol, Graduated, Categorized, Rule-Based or 2.5 D renderer.
 Heatmap
 .......
 
-With the :index:`Heatmap` renderer you can create live dynamic heatmaps for (multi)point
-layers. You can specify the heatmap radius in pixels, mm or map units, choose and
+With the |heatmapSymbol| :guilabel:`Heatmap` renderer you can create live
+dynamic heatmaps for (multi)point layers.
+You can specify the :index:`heatmap` radius in pixels, mm or map units, choose and
 edit a color ramp for the heatmap style and use a slider for selecting a trade-off
 between render speed and quality. You can also define a maximum value limit and give a
 weight to points using a field or an expression. When adding or removing a feature
@@ -558,8 +554,9 @@ the heatmap renderer updates the heatmap style automatically.
 2.5 D
 .....
 
-Using the :index:`2.5 D` renderer it's possible to create a 2.5 D effect on your layer's
-features. You start by choosing a :guilabel:`Height` value (in map units). For that
+Using the |25dSymbol| :guilabel:`2.5 D` renderer it's possible to create
+a :index:`2.5 D` effect on your layer's features.
+You start by choosing a :guilabel:`Height` value (in map units). For that
 you can use a fixed value, one of your layer's fields, or an expression. You also
 need to choose an :guilabel:`Angle` (in degrees) to recreate the viewer position
 (0 |degrees| means west, growing in counter clock wise). Use advanced configuration options
