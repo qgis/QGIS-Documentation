@@ -227,7 +227,7 @@ you just tweaked into a color slot button.
    Check the :guilabel:`Use live-updating color chooser dialogs` option in
    the General Settings to have the color applied to your items as you change
    color parameters in the QGIS custom color chooser dialog.
-   
+
 With |colorBox| :sup:`color ramp` or with |colorWheel| :sup:`color wheel`,
 you can browse to all possible color combinations.
 There are other possibilities though. By using |colorSwatches| :sup:`color swatches`
@@ -944,4 +944,19 @@ Parameters that can be used with data-defined tools are:
 * Labels parameters
 * Composer parameters
 
+.. _authentication:
+
+Authentication
+==============
+
+QGIS has facility to store/retrieve authentication credentials
+in a secure manner. Users can save credentials securely in
+connection profiles and encrypt their passowrd in their project files.
+
+A master password should be set up when adding a new authentication definition.
+
+.. todo: 
+    * Add information where settings files are saved, 
+    * authentication options,
+    * Authentication Methods Plugins
 

@@ -163,6 +163,12 @@ repositories` section.
 If you do not want one or more of the added repositories, they can be disabled
 via the **[Edit...]** button, or completely removed with the **[Delete]** button.
 
+Note that you can use an authentication (basic authentication, PKI) to access
+to a plugin repository. The default QGIS repository is an open repository and
+you don't need any authentication. You should deploy your own plugin
+repository. You can get more information on QGIS authentication support in
+:ref:`authentication` chapter.
+
 .. _figure_plugins_5:
 
 .. only:: html
@@ -177,4 +183,5 @@ via the **[Edit...]** button, or completely removed with the **[Delete]** button
 The :guilabel:`Search` function is available in nearly every menu
 (except |transformSettings| :guilabel:`Settings`).
 Here, you can look for specific plugins.
+
 
