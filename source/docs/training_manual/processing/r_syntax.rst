@@ -1,5 +1,7 @@
-R Synatax in Processing scripts
-===============================
+.. _r-syntax:
+
+R Syntax in Processing scripts
+==============================
 
 Module contributed by Matteo Ghetta
 

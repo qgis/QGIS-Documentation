@@ -1,7 +1,9 @@
+.. _r-intro:
+
 Use R scripts in Processing
 ===========================
 
-Module contributed by Matteo Ghetta - `Dropcode <www.dropcode.weebly.com>`_ 
+Module contributed by Matteo Ghetta - `Dropcode <www.dropcode.weebly.com>`_
 
 Processing allows to write and run R scripts inside QGIS.
 
@@ -34,14 +36,14 @@ Open the :file:`r_intro.qps` QGIS project.
 
 Script parameters
 --------------------
-Open the editor and start writing at the beginning of it. 
+Open the editor and start writing at the beginning of it.
 
 You **must** specify some parameters **before** the script body:
 
 1. the name of the group in which you want to put your script::
 
     ##plots=group
-    
+
 so you will find your script in the **plots** group in the Processing toolbox.
 
 2. you have to tell Processing that you want to display a plot (just in this example)::
@@ -127,23 +129,23 @@ Script parameters
 
 As before we have to set some parameters before the script body:
 
-1. specify the the name of the group in which you want to put your script, for example *Point pattern analysis*:: 
+1. specify the the name of the group in which you want to put your script, for example *Point pattern analysis*::
 
     ##Point pattern analysis=group
-    
+
 2. set the layer that will contain the random points::
 
     ##Layer=vector
-    
+
 3. set the number of points that are going to be created::
 
     ##Size=number 10
-    
+
 .. note:: 10 is going to be the default value. You can change this number or you can leave the parameter without a default number
 
 4. specify that the output is a vector layer::
 
-    ##Output= output vector 
+    ##Output= output vector
 
 Script body
 -------------
@@ -153,18 +155,18 @@ Now you can add the body of the function:
 1. run the ``spsample`` function::
 
     pts=spsample(Layer,Size,type="random")
-    
-this way the function takes the extent of the *Layer*, the number of points is taken from the *Size* parameter and the type po point generation is *random*
 
-2. Write the line that contains the parameters of the output:: 
+this way the function takes the extent of the *Layer*, the number of points is taken from the *Size* parameter and the point generation is *random*
+
+2. Write the line that contains the parameters of the output::
 
     Output=SpatialPointsDataFrame(pts, as.data.frame(pts))
-    
+
 The final script should look like:
 
 .. image:: img/r_intro/r_intro_8.png
 
-Save it and run it, clicking on the running button. 
+Save it and run it, clicking on the running button.
 
 In the new window type in the right parameters:
 
