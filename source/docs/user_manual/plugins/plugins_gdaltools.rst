@@ -5,8 +5,10 @@
 GDAL Tools Plugin
 =================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 .. _`whatsgdal`:
 

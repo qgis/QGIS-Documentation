@@ -3,8 +3,10 @@
 The batch processing interface
 ===============================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Introduction
 ------------

@@ -6,8 +6,10 @@
 Working with Projections
 ************************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 .. index:: Projections, CRS, Coordinate_Reference_System
 

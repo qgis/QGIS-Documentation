@@ -6,8 +6,10 @@
 General Tools
 *************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 .. _`shortcuts`:
 

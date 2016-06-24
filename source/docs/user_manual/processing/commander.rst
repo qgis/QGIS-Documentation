@@ -5,8 +5,10 @@
 The QGIS Commander
 ======================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Processing includes a practical tool that allows you to run algorithms without
 having to use the toolbox, but just by typing the name of the algorithm you want to

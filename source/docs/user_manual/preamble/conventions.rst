@@ -6,13 +6,15 @@
 Conventions
 ***********
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 This section describes the uniform styles that will be used throughout
 this manual.
 
-GUI Conventions 
+GUI Conventions
 ---------------
 
 The GUI convention styles are intended to mimic the appearance of the
@@ -40,7 +42,7 @@ instruction in the manual.
 
 A shadow indicates a clickable GUI component.
 
-Text or Keyboard Conventions 
+Text or Keyboard Conventions
 ----------------------------
 
 This manual also includes styles related to text, keyboard commands
@@ -70,7 +72,7 @@ Lines of code are indicated by a fixed-width font:
     PROJCS["NAD_1927_Albers",
       GEOGCS["GCS_North_American_1927",
 
-Platform-specific instructions 
+Platform-specific instructions
 ------------------------------
 
 GUI sequences and small amounts of text may be formatted inline: Click

@@ -5,8 +5,10 @@
 Georeferencer Plugin
 ====================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The Georeferencer Plugin is a tool for generating world files for rasters. It
 allows you to reference rasters to geographic or projected coordinate systems by

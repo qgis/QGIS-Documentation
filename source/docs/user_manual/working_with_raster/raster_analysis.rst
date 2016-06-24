@@ -5,8 +5,10 @@
 Raster Analysis
 ================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 .. _label_raster_calc:
 

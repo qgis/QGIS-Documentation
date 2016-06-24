@@ -6,8 +6,10 @@
 QGIS GUI
 ********
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 .. index::
    single:main window

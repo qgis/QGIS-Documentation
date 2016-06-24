@@ -8,8 +8,10 @@
 Expressions
 ************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The :index:`Expressions` feature is available from many parts in QGIS. It can be
 accessed using the |expression| :sup:`Expression Builder`, the

@@ -1,13 +1,15 @@
 |updatedisclaimer|
-  
-.. index:: 
+
+.. index::
    single: legend_composer; Map_Legend
 
 The Legend Item
 ================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 To add a map legend, click the |addLegend| :sup:`Add new legend` icon,
 place the element with the left mouse button on the Print Composer canvas and
@@ -49,7 +51,7 @@ In Main properties you can:
 
 * Change the title of the legend.
 * Set the title alignment to Left, Center or Right.
-* You can choose which :guilabel:`Map` item the current legend will refer to 
+* You can choose which :guilabel:`Map` item the current legend will refer to
   in the select list.
 * You can wrap the text of the legend title on a given character.
 
@@ -76,27 +78,27 @@ provides the following functionalities (see figure_composer_legend_3_):
   The icons below the legend items list will be activated.
 * The legend items window lists all legend items and allows you to change item order,
   group layers, remove and restore items in the list, edit layer names and add a filter.
-  
+
   * The item order can be changed using the **[Up]** and **[Down]** buttons or with 'drag-and-drop'
     functionality. The order can not be changed for WMS legend graphics.
   * Use the **[Add group]** button to add a legend group.
   * Use the **[plus]** and **[minus]** button to add or remove layers.
-  * The **[Edit]** button is used to edit the layer, groupname or title. 
+  * The **[Edit]** button is used to edit the layer, groupname or title.
     First you need to select the legend item.
   * The **[Sigma]** button adds a feature count for each vector layer.
-  * Use the **[filter]** button to filter the legend by map content, only the 
+  * Use the **[filter]** button to filter the legend by map content, only the
     legend items visible in the map will be listed in the legend.
 
-  After changing the symbology in the QGIS main window, you can click on **[Update All]** to 
-  adapt the changes in the legend element of the Print Composer. 
+  After changing the symbology in the QGIS main window, you can click on **[Update All]** to
+  adapt the changes in the legend element of the Print Composer.
 
 
 
 Fonts, Columns, Symbol
 ----------------------
 
-The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the legend 
-:guilabel:`Item Properties` tab provide the following functionalities 
+The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the legend
+:guilabel:`Item Properties` tab provide the following functionalities
 (see figure_composer_legend_4_):
 
 .. _Figure_composer_legend_4:
@@ -110,26 +112,26 @@ The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
 
    Legend Fonts, Columns and Symbol Dialogs
 
-* You can change the font of the legend title, group, subgroup and item (layer) in the legend item. 
+* You can change the font of the legend title, group, subgroup and item (layer) in the legend item.
   Click on a category button to open a **Select font** dialog.
-* You provide the labels with a **Color** using the advanced color picker, however the selected 
+* You provide the labels with a **Color** using the advanced color picker, however the selected
   color will be given to all font items in the legend..
-* Legend items can be arranged over several columns. Set the number of columns in 
+* Legend items can be arranged over several columns. Set the number of columns in
   the :guilabel:`Count` |selectNumber| field.
 
   * |checkbox| :guilabel:`Equal column widths` sets how legend columns should be adjusted.
-  * The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer 
+  * The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer
     legend to be divided between columns.
 
-* You can also change the width and height of the legend symbol,set a color and 
+* You can also change the width and height of the legend symbol,set a color and
   a thickness in case of raster layer symbol.
 
 
 WMS LegendGraphic and Spacing
 ------------------------------
 
-The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` dialogs of the legend 
-:guilabel:`Item Properties` tab provide the following functionalities (see 
+The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` dialogs of the legend
+:guilabel:`Item Properties` tab provide the following functionalities (see
 figure_composer_legend_5_):
 
 .. _Figure_composer_legend_5:
@@ -143,14 +145,14 @@ figure_composer_legend_5_):
 
    WMS LegendGraphic and Spacing Dialogs
 
-When you have added a WMS layer and you insert a legend composer item, a request 
-will be sent to the WMS server to provide a WMS legend. This Legend will only be 
-shown if the WMS server provides the GetLegendGraphic capability. 
+When you have added a WMS layer and you insert a legend composer item, a request
+will be sent to the WMS server to provide a WMS legend. This Legend will only be
+shown if the WMS server provides the GetLegendGraphic capability.
 The WMS legend content will be provided as a raster image.
 
-:guilabel:`WMS LegendGraphic` is used to be able to adjust the :guilabel:`Legend width` 
+:guilabel:`WMS LegendGraphic` is used to be able to adjust the :guilabel:`Legend width`
 and the :guilabel:`Legend height` of the WMS legend raster image.
 
-Spacing around title, group, subgroup, symbol, icon label, box space 
+Spacing around title, group, subgroup, symbol, icon label, box space
 or column space can be customized through this dialog.
 

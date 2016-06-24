@@ -6,8 +6,10 @@
 The Vector Properties Dialog
 *****************************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The :guilabel:`Layer Properties` dialog for a vector layer provides general
 settings to manage appearance of layer features in the map (symbology, labeling,

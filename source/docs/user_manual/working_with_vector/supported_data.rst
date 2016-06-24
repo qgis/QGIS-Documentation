@@ -3,8 +3,10 @@
 Supported Data Formats
 ======================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 QGIS uses the OGR library to read and write vector data formats,
 including ESRI shapefiles, MapInfo and MicroStation file formats, AutoCAD DXF,

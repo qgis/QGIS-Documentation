@@ -9,8 +9,10 @@
 QGIS Plugins
 *************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 QGIS has been designed with a plugin architecture. This allows many new
 features and functions to be easily added to the application. Many of the features
@@ -18,7 +20,7 @@ in QGIS are actually implemented as plugins.
 
 Core and External plugins
 =========================
-   
+
 QGIS plugins are implemented either as **Core Plugins** or **External Plugins**.
 
 :ref:`Core Plugins <core_plugins>` are maintained by the QGIS Development Team and are
@@ -27,7 +29,7 @@ languages: C++ or Python.
 
 Most of External Plugins are currently written in Python. They are stored either in the
 'Official' QGIS Repository at http://plugins.qgis.org/plugins/ or in external
-repositories and are maintained by the individual authors. 
+repositories and are maintained by the individual authors.
 Detailed documentation about the usage, minimum QGIS version, home page, authors,
 and other important information are provided for the plugins in the Official repository.
 For other external repositories, documentation might
@@ -39,14 +41,14 @@ folder. Home directory (denoted by above ``~``) on Windows is usually something
 like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
 or :file:`C:\\Users\\(user)`.
 
-Paths to Custom C++ plugins libraries can also be added under 
+Paths to Custom C++ plugins libraries can also be added under
 :menuselection:`Settings --> Options --> System`.
 
-You can manage your plugins in the plugin dialog which can be opened with 
+You can manage your plugins in the plugin dialog which can be opened with
 :guilabel:`Plugins > Manage and install plugins ...`.
 
-When a plugin needs to be updated, and if plugins settings have been set up 
-accordingly, QGIS main interface will display a blue link in the status bar 
+When a plugin needs to be updated, and if plugins settings have been set up
+accordingly, QGIS main interface will display a blue link in the status bar
 to inform you that there are updates for your plugins waiting to be applied.
 
 .. :index::
@@ -54,7 +56,7 @@ to inform you that there are updates for your plugins waiting to be applied.
 
 .. _managing_plugins:
 
-The Plugins Dialog 
+The Plugins Dialog
 ===================
 
 The menus in the Plugins dialog allow the user to install, uninstall and upgrade plugins in
@@ -72,8 +74,8 @@ You can use the filter to find a specific plugin.
 
 |showPluginManager| :guilabel:`All`
 
-Here, all the available plugins are listed, including both core and external plugins. 
-Use **[Upgrade all]** to look for new versions of the plugins. Furthermore, 
+Here, all the available plugins are listed, including both core and external plugins.
+Use **[Upgrade all]** to look for new versions of the plugins. Furthermore,
 you can use **[Install plugin]** if a plugin is listed but not installed,
 **[Uninstall plugin]** as well as **[Reinstall plugin]** if a plugin is installed.
 An installed plugin can be temporarily de/activated using the checkbox.
@@ -129,7 +131,7 @@ You can use the **[Install plugin]** button to implement a plugin into QGIS.
 
 If you activated |checkbox| :guilabel:`Show also experimental plugins` in the
 |transformSettings| :guilabel:`Settings` menu, you can use this menu
-to look for more recent plugin versions. This can be done with the **[Upgrade plugin]** or 
+to look for more recent plugin versions. This can be done with the **[Upgrade plugin]** or
 **[Upgrade all]** buttons.
 
 .. _figure_plugins_4:
@@ -145,14 +147,14 @@ to look for more recent plugin versions. This can be done with the **[Upgrade pl
 
 .. _setting_plugins:
 
-|transformSettings| :guilabel:`Settings` 
+|transformSettings| :guilabel:`Settings`
 
 In this menu, you can use the following options:
 
 * |checkbox| :guilabel:`Check for updates on startup`. Whenever a new plugin or
   a plugin update is available, QGIS will inform you 'every time QGIS starts', 'once a day',
   'every 3 days', 'every week', 'every 2 weeks' or 'every month'.
-* |checkbox| :guilabel:`Show also experimental plugins`. QGIS will show you 
+* |checkbox| :guilabel:`Show also experimental plugins`. QGIS will show you
   plugins in early stages of development, which are generally unsuitable for production
   use.
 * |checkbox| :guilabel:`Show also deprecated plugins`. These plugins are deprecated

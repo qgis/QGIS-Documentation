@@ -5,8 +5,10 @@
 The Map Item
 =============
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Click on the |addMap| :sup:`Add new map` toolbar button in the Print
 Composer toolbar to add the QGIS map canvas. Now, drag a rectangle onto the Composer
@@ -93,7 +95,7 @@ following functionalities (see figure_composer_map_1_):
   by ``|`` character.
   The following example locks the map item to use only layers ``layer 1`` and
   ``layer 2``::
-  
+
     concat ('layer 1', '|', 'layer 2')
 
 
