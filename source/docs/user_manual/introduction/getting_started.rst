@@ -6,8 +6,10 @@
 Getting Started
 ***************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 This chapter gives a quick overview of installing QGIS, some sample data from
 the QGIS web page, and running a first and simple session visualizing raster

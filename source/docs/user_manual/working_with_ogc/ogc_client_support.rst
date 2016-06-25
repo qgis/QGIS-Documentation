@@ -6,8 +6,10 @@
 QGIS as OGC Data Client
 ***********************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 
 .. index:: Open_Geospatial_Consortium, OGC

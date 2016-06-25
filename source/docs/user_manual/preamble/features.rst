@@ -6,8 +6,10 @@
 Features
 ********
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 QGIS offers many common GIS functionalities provided by core features
 and plugins. A short summary of six general categories of features and

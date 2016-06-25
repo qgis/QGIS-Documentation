@@ -5,8 +5,10 @@
 The toolbox
 ============
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The *Toolbox* is the main element of the processing GUI, and the one that you are
 more likely to use in your daily work. It shows the list of all available

@@ -4,8 +4,10 @@
 Composer Items Common Options
 ==============================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Composer items have a set of common properties you will find on the bottom of
 the :guilabel:`Item Properties` tab: Position and size, Rotation, Frame,

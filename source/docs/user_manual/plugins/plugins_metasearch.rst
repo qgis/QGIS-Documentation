@@ -5,8 +5,10 @@
 MetaSearch Catalogue Client
 ===========================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 
 Introduction

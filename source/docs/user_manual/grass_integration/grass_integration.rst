@@ -6,33 +6,35 @@
 GRASS GIS Integration
 *********************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 :index:`GRASS` integration provides access to GRASS GIS databases and functionalities
-(see GRASS-PROJECT in :ref:`literature_and_web`). The integration consists of two parts: 
-provider and plugin. The provider allows to browse, manage and visualize GRASS raster 
-and vector layers. The plugin can be used to create new GRASS locations and mapsets, 
-change GRASS region, create and edit vector layers and analyze GRASS 2-D and 3-D data 
-with more than 400 GRASS modules. In this section, we'll introduce the provider and plugin 
-functionalities and give some examples of managing and working with GRASS data. 
+(see GRASS-PROJECT in :ref:`literature_and_web`). The integration consists of two parts:
+provider and plugin. The provider allows to browse, manage and visualize GRASS raster
+and vector layers. The plugin can be used to create new GRASS locations and mapsets,
+change GRASS region, create and edit vector layers and analyze GRASS 2-D and 3-D data
+with more than 400 GRASS modules. In this section, we'll introduce the provider and plugin
+functionalities and give some examples of managing and working with GRASS data.
 
 The provider supports GRASS version 6 and 7, the plugin supports GRASS 6 and 7
-(starting from QGIS 2.12). QGIS distribution may contain provider/plugin for either 
-GRASS 6 or GRASS 7 or for both versions at the same time 
-(binaries have different file names). Only one version of the provider/plugin may be 
+(starting from QGIS 2.12). QGIS distribution may contain provider/plugin for either
+GRASS 6 or GRASS 7 or for both versions at the same time
+(binaries have different file names). Only one version of the provider/plugin may be
 loaded on runtime however.
 
 Demo dataset
 ============
 
-As an example, we will use the QGIS Alaska dataset (see section :ref:`label_sampledata`). 
-It includes a small sample GRASS :file:`LOCATION` with three vector layers and one 
-raster elevation map. Create a new folder called :file:`grassdata`, download 
-the QGIS 'Alaska' dataset :file:`qgis\_sample\_data.zip` from 
+As an example, we will use the QGIS Alaska dataset (see section :ref:`label_sampledata`).
+It includes a small sample GRASS :file:`LOCATION` with three vector layers and one
+raster elevation map. Create a new folder called :file:`grassdata`, download
+the QGIS 'Alaska' dataset :file:`qgis\_sample\_data.zip` from
 http://download.osgeo.org/qgis/data/ and unzip the file into :file:`grassdata`.
 
-More sample GRASS :file:`LOCATIONs` are available at the GRASS website at 
+More sample GRASS :file:`LOCATIONs` are available at the GRASS website at
 http://grass.osgeo.org/download/sample-data/.
 
 .. _sec_load_grassdata:
@@ -40,18 +42,18 @@ http://grass.osgeo.org/download/sample-data/.
 Loading GRASS raster and vector layers
 ======================================
 
-If the provider is loaded in QGIS, the location item with GRASS |grassLocation| 
+If the provider is loaded in QGIS, the location item with GRASS |grassLocation|
 icon is added in the browser tree under each folder item which contains GRASS location.
-Go to the folder :file:`grassdata` and expand location :file:`alaska` and 
+Go to the folder :file:`grassdata` and expand location :file:`alaska` and
 mapset :file:`demo`.
 
-You can load GRASS raster and vector layers like any other layer from the browser either 
+You can load GRASS raster and vector layers like any other layer from the browser either
 by double click on layer item or by dragging and dropping to map canvas or legend.
 
 .. tip:: **GRASS Data Loading**
 
-   If you don't see GRASS location item, verify in 
-   :menuselection:`Help -->` :menuselection:`About` :guilabel:`Providers` if 
+   If you don't see GRASS location item, verify in
+   :menuselection:`Help -->` :menuselection:`About` :guilabel:`Providers` if
    GRASS vector provider is loaded.
 
 .. _import_data_dnd:
@@ -59,24 +61,24 @@ by double click on layer item or by dragging and dropping to map canvas or legen
 Importing data into a GRASS LOCATION via drag and drop
 ======================================================
 
-This section gives an example of how to import raster and vector data into a GRASS mapset. 
+This section gives an example of how to import raster and vector data into a GRASS mapset.
 
 #. In QGIS browser navigate to the mapset you want to import data into.
-#. In QGIS browser find a layer you want to import to GRASS, note that you can 
-   open another instance of the browser (:guilabel:`Browser Panel (2)`) if 
+#. In QGIS browser find a layer you want to import to GRASS, note that you can
+   open another instance of the browser (:guilabel:`Browser Panel (2)`) if
    source data are too far from the mapset in the tree.
-#. Drag a layer and drop it on the target mapset. The imported may take some time for 
+#. Drag a layer and drop it on the target mapset. The imported may take some time for
    larger layers, you will see animated icon |import| in front of new layer item
    until the import finishes.
-   
-Where raster data are in different CRS, they can be reprojected using an :guilabel:`Approximate` 
-(fast) or :guilabel:`Exact` (precise) transformation. If a link to the source raster 
-is created (using r.external), the source data are in the same CRS and the format 
-is known to GDAL, the source data CRS will be used. You can set these options in the 
+
+Where raster data are in different CRS, they can be reprojected using an :guilabel:`Approximate`
+(fast) or :guilabel:`Exact` (precise) transformation. If a link to the source raster
+is created (using r.external), the source data are in the same CRS and the format
+is known to GDAL, the source data CRS will be used. You can set these options in the
 :guilabel:`Browser` tab in :ref:`grass_options`.
 
 If a source raster has more bands, a new GRASS map is created for each layer with **.<band number>**
-suffix and group of all maps with |rasterGroup| icon is created. External rasters 
+suffix and group of all maps with |rasterGroup| icon is created. External rasters
 have a different icon |rasterLink|.
 
 .. _managing_grass_data:
@@ -93,7 +95,7 @@ Managing GRASS data in QGIS browser
 GRASS Options
 =============
 
-GRASS options may be set in :guilabel:`GRASS Options` dialog, which can be opened by right 
+GRASS options may be set in :guilabel:`GRASS Options` dialog, which can be opened by right
 clicking on the location or mapset item in the browser and then choosing :guilabel:`GRASS Options`.
 
 .. _sec_starting_grass:
@@ -101,7 +103,7 @@ clicking on the location or mapset item in the browser and then choosing :guilab
 Starting the GRASS plugin
 =========================
 
-To use GRASS functionalities in QGIS, you must select and load the GRASS plugin using the 
+To use GRASS functionalities in QGIS, you must select and load the GRASS plugin using the
 Plugin Manager. To do this, go to the menu :menuselection:`Plugins -->` |showPluginManager|
 :menuselection:`Manage Plugins`, select |checkbox| :guilabel:`GRASS` and click
 **[OK]**.
@@ -136,10 +138,10 @@ by its coordinate system, map projection and geographical boundaries. Each
 :file:`LOCATION`) that are used to subdivide the project into different topics or
 subregions, or as workspaces for individual team members (see Neteler & Mitasova
 2008 in :ref:`literature_and_web`). In order to analyse vector and raster layers
-with GRASS modules, you generally have to import them into a GRASS :file:`LOCATION`. 
+with GRASS modules, you generally have to import them into a GRASS :file:`LOCATION`.
 (This is not strictly true -- with the GRASS modules :file:`r.external` and :file:`v.external`
 you can create read-only links to external GDAL/OGR-supported datasets without
-importing them. This is not the usual way for beginners to work with GRASS, therefore 
+importing them. This is not the usual way for beginners to work with GRASS, therefore
 this functionality will not be described here.)
 
 .. _figure_grass_location_1:
@@ -158,11 +160,11 @@ this functionality will not be described here.)
 Importing data into a GRASS LOCATION
 ====================================
 
-See section :ref:`import_data_dnd` to find how data can be easily imported 
+See section :ref:`import_data_dnd` to find how data can be easily imported
 by dragging and dropping in the browser.
 
 This section gives an example of how to import raster and vector data into the
-'alaska' GRASS :file:`LOCATION` provided by the QGIS 'Alaska' dataset in traditional 
+'alaska' GRASS :file:`LOCATION` provided by the QGIS 'Alaska' dataset in traditional
 way, using standard GRASS modules.
 Therefore, we use the landcover raster map :file:`landcover.img` and the vector GML
 file :file:`lakes.gml` from the QGIS 'Alaska' dataset (see :ref:`label_sampledata`).
@@ -208,9 +210,9 @@ Creating a new GRASS LOCATION
 -----------------------------
 
 As an example, here is the sample GRASS :file:`LOCATION alaska`, which is
-projected in the Albers Equal Area projection using feet as units. 
-This sample GRASS :file:`LOCATION alaska` will be used for all examples and 
-exercises in the following GRASS-related sections. It is useful to download and 
+projected in the Albers Equal Area projection using feet as units.
+This sample GRASS :file:`LOCATION alaska` will be used for all examples and
+exercises in the following GRASS-related sections. It is useful to download and
 install the dataset on your computer (see :ref:`label_sampledata`).
 
 #. Start QGIS and make sure the GRASS plugin is loaded.
@@ -277,9 +279,9 @@ section :ref:`label_vectmodel`.
 Adding a new MAPSET
 -------------------
 
-A user has write access only to a GRASS :file:`MAPSET` which he or she created. This 
+A user has write access only to a GRASS :file:`MAPSET` which he or she created. This
 means that besides access to your own :file:`MAPSET`, you can read maps in other users'
-:file:`MAPSETs` (and they can read yours), but you can modify or remove only the maps in 
+:file:`MAPSETs` (and they can read yours), but you can modify or remove only the maps in
 your own :file:`MAPSET`.
 
 All :file:`MAPSETs` include a :file:`WIND` file that stores the current boundary
@@ -327,7 +329,7 @@ different layers.)
 It is possible to store several 'layers' in one vector dataset. For example,
 fields, forests and lakes can be stored in one vector. An adjacent forest and lake
 can share the same boundary, but they have separate attribute tables. It is also
-possible to attach attributes to boundaries. An example might be the case where the boundary 
+possible to attach attributes to boundaries. An example might be the case where the boundary
 between a lake and a forest is a road, so it can have a different attribute table.
 
 The 'layer' of the feature is defined by the 'layer' inside GRASS. 'Layer' is the
@@ -365,7 +367,7 @@ used as the link to one key column in the database table.
 Creating a new GRASS vector layer
 =================================
 
-To create a new GRASS vector layer, select one of following items from mapset context 
+To create a new GRASS vector layer, select one of following items from mapset context
 menu in the browser:
 
 * New Point Layer
@@ -373,9 +375,9 @@ menu in the browser:
 * New Polygon Layer
 
 and enter a name in the dialog. A new vector map will be created and layer will be added
-to canvas and editing started. Selecting type of the layer does not restrict geometry 
-types which can be digitized in the vector map. In GRASS, it is possible to organize all sorts 
-of geometry types (point, line and polygon) in one vector map. The type is only used to add 
+to canvas and editing started. Selecting type of the layer does not restrict geometry
+types which can be digitized in the vector map. In GRASS, it is possible to organize all sorts
+of geometry types (point, line and polygon) in one vector map. The type is only used to add
 the layer to the canvas, because QGIS requires a layer to have a specific type.
 
 It is also possible to add layers to existing vector maps selecting one of the items
@@ -395,35 +397,35 @@ Digitizing and editing a GRASS vector layer
 .. index::
    single:GRASS;digitizing tools
 
-GRASS vector layers can be digitized using the standard QGIS digitizing tools. 
-There are however some particularities, which you should know about, due to 
+GRASS vector layers can be digitized using the standard QGIS digitizing tools.
+There are however some particularities, which you should know about, due to
 
 * GRASS topological model versus QGIS simple feature
 * complexity of GRASS model
-  
+
   * multiple layers in single maps
   * multiple geometry types in single map
   * geometry sharing by multiple features from multiple layers
 
 The particularities are discussed in the following sections.
-    
+
 **Save, discard changes, undo, redo**
 
 .. warning:: All the changes done during editing are immediately written to vector map and related attribute tables.
 
-Changes are written after each operation, it is however, possible to do undo/redo 
+Changes are written after each operation, it is however, possible to do undo/redo
 or discard all changes when closing editing. If undo or discard changes is used, original state
-is rewritten in vector map and attribute tables. 
+is rewritten in vector map and attribute tables.
 
 There are two main reasons for this behaviour:
 
 * It is the nature of GRASS vectors coming from conviction that user wants to do what he is
-  doing and it is better to have data saved when the work is suddenly interrupted (for example, 
+  doing and it is better to have data saved when the work is suddenly interrupted (for example,
   blackout)
 * Necessity for effective editing of topological data is visualized information about topological
-  correctness, such information can only be acquired from GRASS vector map if changes are 
+  correctness, such information can only be acquired from GRASS vector map if changes are
   written to the map.
-    
+
 **Toolbar**
 
 The 'Digitizing Toolbar' has some specific tools when a GRASS layer is edited:
@@ -454,15 +456,15 @@ Table GRASS Digitizing 1: GRASS Digitizing Tools
    The reason for this is that a topological vector model links the attribute information of
    a polygon always to the centroid and not to the boundary.
 
-   
+
 **Category**
 
 Category, often called cat, is sort of ID. The name comes from times when GRASS vectors
 had only singly attribute "category". Category is used as a link between geometry and attributes.
 A single geometry may have multiple categories and thus represent multiple features in different
 layers. Currently it is possible to assign only one category per layer using QGIS editing tools.
-New features have automatically assigned new unique category, except boundaries. 
-Boundaries usually only form areas and do not represent linear features, it is however 
+New features have automatically assigned new unique category, except boundaries.
+Boundaries usually only form areas and do not represent linear features, it is however
 possible to define attributes for a boundary later, for example in different layer.
 
 New categories are always created only in currently being edited layer.
@@ -474,17 +476,17 @@ even from different layers, may be deleted.
 **Attributes**
 
 Attributes of currently edited layer can only be modified. If the vector map contains more layers,
-features of other layers will have all attributes set to '<not editable (layer #)>' to warn you that 
+features of other layers will have all attributes set to '<not editable (layer #)>' to warn you that
 such attribute is not editable. The reason is, that other layers may have and usually have different
 set of fields while QGIS only supports one fixed set of fields per layer.
 
-If a geometry primitive does not have a category assigned, a new unique category is automatically 
+If a geometry primitive does not have a category assigned, a new unique category is automatically
 assigned and new record in attribute table is created when an attribute of that geometry is changed.
 
 .. tip::
 
-   If you want to do bulk update of attributes in table, for example using 'Field Calculator' 
-   (:ref:`vector_field_calculator`), and there are features without category which you don't want 
+   If you want to do bulk update of attributes in table, for example using 'Field Calculator'
+   (:ref:`vector_field_calculator`), and there are features without category which you don't want
    to update (typically boundaries), you can filter them out by setting 'Advanced Filter' to ``cat is not null``.
 
 
@@ -492,46 +494,46 @@ assigned and new record in attribute table is created when an attribute of that 
 
 .. index::
    single:GRASS;style
-   
-The topological symbology is essential for effective editing of topological data. When editing 
+
+The topological symbology is essential for effective editing of topological data. When editing
 starts, a specialized 'GRASS Edit' renderer is set on the layer automatically and original renderer
 is restored when editing is closed. The style may be customized in layer properties 'Style' tab.
-The style can also be stored in project file or in separate file as any other style. 
-If you customize the style, do not change its name, because it is used to reset the style 
+The style can also be stored in project file or in separate file as any other style.
+If you customize the style, do not change its name, because it is used to reset the style
 when editing is started again.
 
-.. tip::  Do not save project file when the layer is edited, the layer would be stored with 
+.. tip::  Do not save project file when the layer is edited, the layer would be stored with
    'Edit Style' which has no meaning if layer is not edited.
 
-The style is based on topological information which is temporarily added to attribute table 
+The style is based on topological information which is temporarily added to attribute table
 as field 'topo_symbol'. The field is automatically removed when editing is closed.
 
-.. tip::  Do not remove 'topo_symbol' field from attribute table, that would make features 
+.. tip::  Do not remove 'topo_symbol' field from attribute table, that would make features
    invisible because the renderer is based on that column.
 
 
 **Snapping**
- 
-To form an area, vertices of connected boundaries must have **exactly** the same coordinates. 
-This can be achieved using snapping tool only if canvas and vector map have the same CRS. 
-Otherwise, due conversion from map coordinates to canvas and back, the coordinate may become 
+
+To form an area, vertices of connected boundaries must have **exactly** the same coordinates.
+This can be achieved using snapping tool only if canvas and vector map have the same CRS.
+Otherwise, due conversion from map coordinates to canvas and back, the coordinate may become
 slightly different due to representation error and CRS transformations.
-   
+
 .. tip:: Use layer's CRS also for canvas when editing.
 
 
 **Limitations**
 
-Simultaneous editing of multiple layers within the same vector at the same time is not 
-supported. This is mainly due to the impossibility of handling multiple undo stacks for 
+Simultaneous editing of multiple layers within the same vector at the same time is not
+supported. This is mainly due to the impossibility of handling multiple undo stacks for
 a single data source.
 
-|nix| |osx| On Linux and Mac OSX only one GRASS layer can be edited at time. This is 
-due to a bug in GRASS which does not allow to close database drivers in random order. 
+|nix| |osx| On Linux and Mac OSX only one GRASS layer can be edited at time. This is
+due to a bug in GRASS which does not allow to close database drivers in random order.
 This is being solved with GRASS developers.
 
 
-.. tip:: **GRASS Edit Permissions** 
+.. tip:: **GRASS Edit Permissions**
 
    You must be the owner of the GRASS :file:`MAPSET` you want to edit. It is
    impossible to edit data layers in a :file:`MAPSET` that is not yours, even
@@ -560,8 +562,8 @@ canvas using the |grassRegion| :sup:`Display current GRASS region` button.
    single:GRASS;region display
 
 The region can be modified in 'Region' tab in 'GRASS Tolls' dock widget.
-Type in the new region bounds and resolution, and click **[Apply]**. 
-If you click on **[Select the extent by dragging on canvas]** you can select 
+Type in the new region bounds and resolution, and click **[Apply]**.
+If you click on **[Select the extent by dragging on canvas]** you can select
 a new region interactively with your mouse on the QGIS canvas dragging a rectangle.
 
 .. index::

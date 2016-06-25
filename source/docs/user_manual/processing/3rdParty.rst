@@ -5,8 +5,10 @@
 Configuring external applications
 =================================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The processing framework can be extended using additional applications.
 Currently, SAGA, GRASS, OTB (Orfeo Toolbox) and R are supported, along

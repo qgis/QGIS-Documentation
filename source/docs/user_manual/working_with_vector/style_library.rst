@@ -5,8 +5,10 @@
 The Symbol Library
 ==================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 .. index::
     single:Style

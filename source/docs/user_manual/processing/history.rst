@@ -5,8 +5,10 @@
 The history manager
 ============================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The processing history
 ------------------------

@@ -4,8 +4,10 @@
 QGIS Configuration
 ******************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 QGIS is highly configurable through the :menuselection:`Settings` menu. Choose
 between Panels, Toolbars, Project Properties, Options and Customization.

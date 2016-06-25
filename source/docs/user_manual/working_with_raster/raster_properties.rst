@@ -3,8 +3,10 @@
 Raster Properties Dialog
 ========================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 To view and set the properties for a raster layer, double click on the layer name
 in the map legend, or right click on the layer name and choose :guilabel:`Properties`
@@ -41,13 +43,13 @@ Layer Info
 
 The :guilabel:`General` menu displays basic information about the selected raster,
 including the layer source path, the display name in the legend (which can be
-modified), and the number of columns, rows and no-data values of the raster. 
+modified), and the number of columns, rows and no-data values of the raster.
 
 Coordinate reference system
 ...........................
 
-Here, you find the coordinate reference system (CRS) information printed as a 
-PROJ.4 string. If this setting is not correct, it can be modified by clicking 
+Here, you find the coordinate reference system (CRS) information printed as a
+PROJ.4 string. If this setting is not correct, it can be modified by clicking
 the **[Specify]** button.
 
 Scale Dependent visibility

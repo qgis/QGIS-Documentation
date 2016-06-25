@@ -5,8 +5,10 @@
  Working with the Attribute Table
 **********************************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The :index:`attribute table` displays features of a selected layer. Each row
 in the table represents one map feature, and each column contains a particular
@@ -216,8 +218,10 @@ also to features from another source defined using well-known text (WKT).
 Editing attribute values
 =========================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The |calculateField| :sup:`Field Calculator` button in the attribute
 table allows you to perform calculations on the basis of existing attribute values or
