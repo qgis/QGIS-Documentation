@@ -51,7 +51,7 @@ Input parameters
 | folder         | F = folder                       | path of the folder chosen, e.g. "/home/matteo/Downloads"                      |
 +----------------+----------------------------------+-------------------------------------------------------------------------------+
 
-Any of the input could be also **OPTIONAL**, that means that you have a handy way to tell the script to ignore this paramete
+Any of the input could be also **OPTIONAL**, that means that you have a handy way to tell the script to ignore this parameter.
 
 In order to set an input as optional, you just have to add the string ``optional`` **before** the input, e.g::
 
