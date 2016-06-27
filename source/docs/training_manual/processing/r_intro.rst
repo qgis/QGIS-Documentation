@@ -3,7 +3,7 @@
 Use R scripts in Processing
 ===========================
 
-Module contributed by Matteo Ghetta - `Dropcode <www.dropcode.weebly.com>`_
+Module contributed by Matteo Ghetta - founded by `Scuola Superiore Sant'Anna <http://www.sssup.it/landlab>`_
 
 Processing allows to write and run R scripts inside QGIS.
 
