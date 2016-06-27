@@ -48,7 +48,7 @@ distributions, we recommend reading one of the following URLs:
 
 
 QGIS Server installation on Debian/Ubuntu
-================================================================================
+===========================================
 
 At this point, we will give a short and simple sample installation how-to for
 a minimal working configuration using Apache2 on Debian Squeeze (or with
@@ -170,16 +170,10 @@ You can have a look at the default GetCapabilities of the QGIS server at:
      FcgidConnectTimeout 60
      </IfModule>
 
-
-
-
-
-
 .. _`Creating a WMS from a QGIS project`:
 
 Creating a WMS/WFS/WCS server from a QGIS project
-======================================================
-
+===================================================
 
 To provide a new QGIS Server WMS, WFS or WCS, we have to create a QGIS project
 file with some data. Here, we use the 'Alaska' shapefile from the QGIS sample
@@ -219,7 +213,7 @@ located in the :file:`cgi-bin` folder.
  the SVG files (on Linux/Unix).
 
 WMS capabilities
-------------------------------
+-------------------
 
 In the :guilabel:`WMS capabilities` section, you can define
 the extent advertised in the WMS GetCapabilities response by entering
@@ -278,7 +272,7 @@ QGIS supports the following requests for WMS service:
 * GetStyles (custom QGIS profile)
 
 WFS capabilities
------------------------------
+------------------
 
 In the :guilabel:`WFS capabilities` area you can select the layers you
 want to publish as WFS, and specify if they will allow update, insert and
@@ -295,7 +289,7 @@ QGIS supports the following requests for WFS service:
 * Transaction
 
 WCS capabilities
-------------------------------
+------------------
 
 In the :guilabel:`WCS capabilities` area, you can select the layers that you
 want to publish as WCS. If you enter a URL in the :guilabel:`Advertised URL`
@@ -331,7 +325,7 @@ If the project is changed then the cache is marked as invalid and QGIS Server wa
 
 
 Fine tuning your OWS
---------------------------------------
+----------------------
 
 For vector layers, the :guilabel:`Fields` menu of the
 :menuselection:`Layer --> Properties` dialog allows you to define for each
@@ -356,7 +350,7 @@ the path to the SVG image so that it represents a valid relative path.
 
 
 Server configuration and supported parameters
-================================================================================
+===============================================
 
 QGIS Server supports some vendor parameters and requests that greatly enhance the
 possibilities of customising its behavior. The following paragraphs list the vendor
@@ -364,7 +358,7 @@ parameters and the environment variables supported by the server.
 
 
 Extra parameters supported by all request types
---------------------------------------------------
+-------------------------------------------------
 
 * **FILE_NAME** parameter: if set, the server response will be sent to the
   client as a file attachment with the specified file name.
@@ -582,13 +576,19 @@ FORMAT_OPTIONS Parameters:
 Extra parameters supported by the WFS GetFeature request
 ---------------------------------------------------------
 
-In the WFS GetFeature request, QGIS Server accepts one extra parameter in
+In the WFS GetFeature request, QGIS Server accepts two extra parameters in
 addition to the standard parameters according to the OCG WFS 1.1.0
 specification:
 
 * **GeometryName** parameter: this parameter can be used to get the *extent*
   or the *centroid* as the geometry or no geometry if *none* if used (ie
   attribute only). Allowed values are *extent*, *centroid* or *none*.
+* **StartIndex** parameter: STARTINDEX is standard in WFS 2.0, but it's an
+  extension for WFS 1.0 which is the only version implemented in QGIS Server.
+  STARTINDEX can be used to skip some features in the result set and in
+  combination with MAXFEATURES will provide for the ability to use WFS
+  GetFeature to page through results. Note that STARTINDEX=0 means start with
+  the first feature, skipping none.
 
 .. index::
     pair: logging; QGIS Server
