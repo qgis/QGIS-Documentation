@@ -62,7 +62,7 @@ In order to set an input as optional, you just have to add the string ``optional
 
 Output parameters
 -----------------
-Output parameters takes the **Input** names you gave at the beginning of the script and write the object you want.
+Output parameters take the **Input** names you gave at the beginning of the script and write the object you want.
 
 +----------------+----------------------------------+
 | Parameter      | Syntax example                   |
