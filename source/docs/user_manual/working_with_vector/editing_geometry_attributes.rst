@@ -341,7 +341,7 @@ feature by clicking on it. Red boxes will appear at each vertex of this feature.
   by clicking and dragging a rectangle around some vertices. When a vertex
   is selected, its color changes to blue. To add more vertices to the current
   selection, hold down the :kbd:`Ctrl` key while clicking. Hold down
-  :kbd:`Ctrl` or :kbd:`Shift` when clicking to toggle the selection state of
+  :kbd:`Ctrl` when clicking to toggle the selection state of
   vertices (vertices that are currently unselected will be selected as usual,
   but also vertices that are already selected will become unselected).
 * **Adding vertices**: To add a vertex, simply double click near an edge and
