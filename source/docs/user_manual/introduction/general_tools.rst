@@ -952,11 +952,14 @@ Parameters that can be used with data-defined tools are:
 Authentication
 ==============
 
-QGIS has facility to store/retrieve authentication credentials
-in a secure manner. Users can save credentials securely in
-connection profiles and encrypt their passowrd in their project files.
+QGIS has facility to store/retrieve authentication credentials in a secure
+manner. Users can securely save credentials into authentication configurations,
+which are stored in a portable database, can be applied to server or database
+connections, and safely referenced by their ID tokens in project or settings
+files.
 
-A master password should be set up when adding a new authentication definition.
+A master password needs to be set up when initializing the authentication
+system and its portable database.
 
 .. todo:
     * Add information where settings files are saved,
