@@ -936,7 +936,7 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows:
 * :guilabel:`Clear` button to remove the setup.
 
 When the :index:`data-defined override` option is setup correctly the icon is yellow,
-|dataDefineOn| or |dataDefineExpressionOn| if it is broken, the icon is red, 
+|dataDefineOn| or |dataDefineExpressionOn| if it is broken, the icon is red,
 |dataDefineError| or |dataDefineExpressionError|.
 
 Parameters that can be used with data-defined tools are:
@@ -950,14 +950,17 @@ Parameters that can be used with data-defined tools are:
 Authentication
 ==============
 
-QGIS has facility to store/retrieve authentication credentials
-in a secure manner. Users can save credentials securely in
-connection profiles and encrypt their passowrd in their project files.
+QGIS has facility to store/retrieve authentication credentials in a secure
+manner. Users can securely save credentials into authentication configurations,
+which are stored in a portable database, can be applied to server or database
+connections, and safely referenced by their ID tokens in project or settings
+files.
 
-A master password should be set up when adding a new authentication definition.
+A master password needs to be set up when initializing the authentication
+system and its portable database.
 
-.. todo: 
-    * Add information where settings files are saved, 
+.. todo:
+    * Add information where settings files are saved,
     * authentication options,
     * Authentication Methods Plugins
 
