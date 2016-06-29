@@ -1023,6 +1023,49 @@ However, some parameters are specific to raster and vector formats:
 .. note:: **Note:** *OGR Feature Styles* are a way to store style directly in
    the data as a hidden attribute. Only some format can handle this kind of
    information. KML, DXF and TAB files format are such format. For advanced
-   user, you can read the `OGR Feature Styles specification 
+   user, you can read the `OGR Feature Styles specification
    <http://www.gdal.org/ogr_feature_style.html>`_ document.
+
+.. index:: variable, variables
+
+.. _`general_tools_variables`:
+
+Use of variables for dynamic content
+====================================
+
+You can define custom variables for use in :index:`expressions`. Variables can
+be defined at the application global level, project level, layer level and
+composition level. Just like CSS cascading rules, variables can be overwritten
+- eg, a project level variable will overwrite any application level variables
+set. You can use these variables to build text strings or other custom
+expressions using @ caracter before the variable name. For example in composer 
+creating a label with this content::
+
+  This map was made using QGIS [% @qgis_version %]. The project file for this map
+  is:  [% @project_path %]
+
+Will render the label like this::
+
+  This map was made using QGIS |CURRENT|. The project file for this map is:
+  /gis/qgis-user-conference-2015.qgs
+
+You can manage global variables from the :menuselection:`Settings -> Options` menu,
+and project level variables from Project properties (including adding your own
+custom variables).
+
+.. _figure_variables_dialog:
+
+.. only:: html
+
+   **Figure Variables dialog 2:**
+
+.. figure:: /static/user_manual/introduction/options_variables.png
+   :align: center
+
+   Edit variable at the project level
+
+.. note:: you can read more information and find examples here `Exploring variables
+   in QGIS 2.12, part 1 <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/>`_,
+   `part 2 <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/>`_
+   and `part 3 <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_.
 
