@@ -40,41 +40,20 @@ identify, select, labelling and attributes functions.
    CompoundCurve, CurvePolygon, MultiCurve, MultiSurface feature types, all
    with Z and/or M values.
 
-   You should note also that some driver doesn't support some of this feature
+   You should note also that some driver doesn't support some of these feature
    types like CircularString, CompoundCurve, CurvePolygon, MultiCurve,
    MultiSurface feature type. QGIS will convert them to (multi)polygon feature.
 
+.. index:: MapInfo, vector file, load a shapefile, Shapefile
+.. _vector_loading_file:
 
-.. index:: ESRI, Shapefile, OGR
-.. _vector_shapefiles:
+Loading a layer from a file
+---------------------------
 
-ESRI Shapefiles
----------------
-
-The standard vector file format used in QGIS is the ESRI shapefile. Support is
-provided by the :index:`OGR Simple Feature Library` (http://www.gdal.org/ogr/).
-
-A shapefile actually consists of several files. The following three are
-required:
-
-#. :file:`.shp` file containing the feature geometries
-#. :file:`.dbf` file containing the attributes in dBase format
-#. :file:`.shx` index file
-
-Shapefiles also can include a file with a :file:`.prj` suffix, which contains
-the projection information. While it is very useful to have a projection file,
-it is not mandatory. A shapefile dataset can contain additional files. For
-further details, see the ESRI technical specification at
-http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
-
-.. _vector_load_shapefile:
-
-Loading a Shapefile
-...................
-
-To :index:`load a shapefile`, start QGIS and click on the |addOgrLayer|
-:sup:`Add Vector Layer` toolbar button, or simply press :kbd:`Ctrl+Shift+V`.
-This will bring up a new window (see figure_vector_1_).
+|addOgrLayer| To load a layer from a file (like a Shapefile, a Mapinfo or a dxf
+layer), click on the |addOgrLayer| :sup:`Add Vector Layer` toolbar button; or
+type :kbd:`Ctrl+Shift+V`. This will bring up a new window (see
+figure_vector_1_).
 
 .. _figure_vector_1:
 
@@ -93,7 +72,7 @@ From the available options check |radioButtonOn| :guilabel:`File`. Click on
 shapefile or other supported data source. The selection box :guilabel:`Filter`
 |selectString| allows you to preselect some OGR-supported file formats.
 
-You can also select the encoding for the shapefile if desired.
+You can also select the encoding for the file if desired.
 
 .. _figure_vector_2:
 
@@ -106,7 +85,7 @@ You can also select the encoding for the shapefile if desired.
 
    Open an OGR Supported Vector Layer Dialog
 
-Selecting a shapefile from the list and clicking **[Open]** loads it into QGIS.
+Selecting a file from the list and clicking **[Open]** loads it into QGIS.
 Figure_vector_3_ shows QGIS after loading the :file:`alaska.shp` file.
 
 .. _figure_vector_3:
@@ -125,7 +104,7 @@ Figure_vector_3_ shows QGIS after loading the :file:`alaska.shp` file.
    When you add a layer to the map, it is assigned a random color. When adding
    more than one layer at a time, different colors are assigned to each layer.
 
-Once a shapefile is loaded, you can zoom around it using the map navigation tools.
+Once a file is loaded, you can zoom around it using the map navigation tools.
 To change the style of a layer, open the :guilabel:`Layer Properties` dialog
 by double clicking on the layer name or by right-clicking on the name in the
 legend and choosing :menuselection:`Properties` from the context menu. See
@@ -143,8 +122,56 @@ vector layers.
    and press :kbd:`Enter`. Then you can navigate to external drives and network
    mounts.
 
-Improving Performance for Shapefiles
-....................................
+.. note:: DXF files containing several geometry types (point, line and/or
+   polygon), the name of the layer will be made from *<filename.dxf> entities
+   <geometry type>*.
+
+.. note:: You can also drag and drop the file(s) into the :guilabel:`Layers
+   Panel` from either the files browser or the QGIS Browser panel. If the layer
+   contains several geometry types, a new windows will ask you to select the
+   sublayer. This often occurs with GPX, Mapinfo or DXF files format.
+
+.. index:: ArcInfo Binary Coverage, Tiger Format, UK_National Transfer Format, US Census Bureau
+.. _vector_loading_directory_based_layer:
+
+Loading specific directory based layer
+......................................
+
+|addOgrLayer| To load some specific format like ArcInfo Binary Coverage, UK.
+National Transfer Format, as well as the raw TIGER format of the US Census
+Bureau or OpenfileGDB, click on the |addOgrLayer| :sup:`Add Vector Layer`
+toolbar button or press :kbd:`Ctrl+Shift+V` to open the
+:guilabel:`Add Vector Layer` dialog. Select |radioButtonOn|
+:guilabel:`Directory` as :guilabel:`Source type`. Change the file type filter
+:guilabel:`Files of type` |selectString| to the format you want to open, for
+example 'Arc/Info Binary Coverage'. Navigate to the directory that contains the
+coverage file or the file, and select it.
+
+.. index:: ESRI, Shapefile, OGR
+.. _vector_shapefiles:
+
+ESRI Shapefiles
+................
+
+The ESRI shapefile is still one of the most used vector file format in QGIS.
+However, this file format has some limitation that some other file format have
+not (like Geopackage, spatialite). Support is provided by the
+:index:`OGR Simple Feature Library` (http://www.gdal.org/ogr/).
+
+A shapefile actually consists of several files. The following three are
+required:
+
+#. :file:`.shp` file containing the feature geometries
+#. :file:`.dbf` file containing the attributes in dBase format
+#. :file:`.shx` index file
+
+Shapefiles also can include a file with a :file:`.prj` suffix, which contains
+the projection information. While it is very useful to have a projection file,
+it is not mandatory. A shapefile dataset can contain additional files. For
+further details, see the ESRI technical specification at
+http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
+
+**Improving Performance for Shapefiles**
 
 To improve the performance of drawing a shapefile, you can create a spatial
 index. A spatial index will improve the speed of both zooming and panning.
@@ -159,8 +186,7 @@ Use these steps to create the index:
    :menuselection:`Properties` from the context menu.
 *  In the :guilabel:`General` tab, click the **[Create Spatial Index]** button.
 
-Problem loading a shape .prj file
-.................................
+**Problem loading a shape .prj file**
 
 If you load a shapefile with a :file:`.prj` file and QGIS is not able to read the
 coordinate reference system from that file, you will need to define the proper
@@ -175,35 +201,6 @@ projection files are created: a :file:`.prj` file with limited projection
 parameters, compatible with ESRI software, and a :file:`.qpj` file, providing
 the complete parameters of the used CRS. Whenever QGIS finds a :file:`.qpj`
 file, it will be used instead of the :file:`.prj`.
-
-.. index:: MapInfo
-.. _vector_loading_mapinfo:
-
-Loading a MapInfo Layer
------------------------
-
-|addOgrLayer| To load a MapInfo layer, click on the |addOgrLayer|
-:sup:`Add Vector Layer` toolbar button; or type :kbd:`Ctrl+Shift+V`, change the
-file type filter :guilabel:`Files of type` |selectString|: to
-'Mapinfo File [OGR] (\*.mif \*.tab \*.MIF \*.TAB)' and select the MapInfo layer you
-want to load.
-
-.. index:: ArcInfo_Binary_Coverage, Tiger_Format, UK_National_Transfer_Format, US_Census_Bureau
-.. _vector_loading_arcinfo_coverage:
-
-Loading an ArcInfo Binary Coverage
-----------------------------------
-
-|addOgrLayer| To load an ArcInfo Binary Coverage, click on the
-|addOgrLayer| :sup:`Add Vector Layer` toolbar button or press
-:kbd:`Ctrl+Shift+V` to open the :guilabel:`Add Vector Layer` dialog. Select
-|radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`. Change the
-file type filter :guilabel:`Files of type` |selectString| to
-'Arc/Info Binary Coverage'. Navigate to the directory that contains the
-coverage file, and select it.
-
-Similarly, you can load directory-based vector files in the UK National Transfer
-Format, as well as the raw TIGER Format of the US Census Bureau.
 
 .. index:: CSV, Comma Separated Values
 .. _vector_csv:
