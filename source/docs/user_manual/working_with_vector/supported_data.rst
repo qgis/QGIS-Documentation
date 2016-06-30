@@ -413,15 +413,16 @@ Optionally, you can activate the following checkboxes:
 Once all parameters and options are set, you can test the connection
 by clicking on the **[Test Connect]** button.
 
-**Note on :guilabel:`Use estimated table metadata`:** When initializing layers,
-various queries may be needed to establish the characteristics of the
-geometries stored in the database table. When this option is checked, these
-queries examine only a sample of the rows and use the table statistics, rather
-than the entire table. This can drastically speed up operations on large
-datasets, but may result in incorrect characterization of layers (eg. the
-feature count of filtered layers will not be accurately determined) and may
-even cause strange behaviour in case columns that are supposed to be unique
-actually are not.
+.. tip:: **Use estimated table metadata to speed up operations**
+
+   When initializing layers, various queries may be needed to establish the
+   characteristics of the geometries stored in the database table. When the
+   :guilabel:`Use estimated table metadata` option is checked, these queries
+   examine only a sample of the rows and use the table statistics, rather than
+   the entire table. This can drastically speed up operations on large datasets,
+   but may result in incorrect characterization of layers (eg. the feature count
+   of filtered layers will not be accurately determined) and may even cause strange
+   behaviour in case columns that are supposed to be unique actually are not.
 
 .. _vector_loading_postgis:
 
