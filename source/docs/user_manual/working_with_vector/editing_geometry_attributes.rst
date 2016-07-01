@@ -502,7 +502,9 @@ Advanced digitizing
 Table Advanced Editing: Vector layer advanced editing toolbar
 
 
-.. index:: Undo_Redo
+.. index::
+   single: Digitizing; Undo
+   single: Digitizing; Redo
 
 Undo and Redo
 -------------
@@ -536,7 +538,8 @@ the history list. All features will be reverted to the state they were in
 after the selected operation.
 
 
-.. index:: Rotate_Feature
+.. index::
+   single: Digitizing; Rotate Feature
 
 Rotate Feature(s)
 -----------------
@@ -557,7 +560,8 @@ in 45 degree steps, which can be modified afterwards in the user input widget.
 To abort feature rotation, you need to click on |rotateFeature| :sup:`Rotate
 Feature(s)` icon.
 
-.. index:: Simplify_Feature
+.. index::
+   single: Digitizing; Simplify Feature
 
 Simplify Feature
 ----------------
@@ -585,7 +589,8 @@ To abort feature simplification, you need to click on |simplifyFeatures|
    geometry in data source.
    
    
-.. index:: Add_Part
+.. index::
+   single: Digitizing; Add Part
 
 Add Part
 --------
@@ -597,10 +602,11 @@ beforehand.
 
 The |addPart| :sup:`Add Part` can also be used to add a geometry to a :index:`geometryless
 feature`. First, select the feature in the attribute table and digitize the new geometry
-with the :index:`Add Part`tool.
+with the :index:`Add Part` tool.
 
 
-.. index:: Delete_Part
+.. index::
+   single: Digitizing; Delete Part
 
 Delete Part
 -----------
@@ -612,7 +618,8 @@ it can be used to totally remove the geometric component of a feature.
 To delete a part, simply click within the target part.
 
 
-.. index:: Add_Ring
+.. index::
+   single: Digitizing; Add Ring
 
 Add Ring
 --------
@@ -628,7 +635,8 @@ as a ring polygon.
 .. selected features if any, otherwise all overlapping features are pierced.
 
 
-.. index:: Fill_Ring
+.. index::
+   single: Digitizing; Fill Ring
 
 Fill Ring
 ---------
@@ -640,7 +648,8 @@ first use the |addRing| :sup:`Add Ring` icon and then the
 |capturePolygon| :sup:`Add feature` function anymore.
 
 
-.. index:: Delete_Ring
+.. index::
+   single: Digitizing; Delete Ring
 
 Delete Ring
 -----------
@@ -650,7 +659,8 @@ an existing polygon, by clicking inside the hole. This tool only works with
 polygon and multi-polygon features. It doesn't
 change anything when it is used on the outer ring of the polygon.
 
-.. index:: Reshape_Feature
+.. index::
+   single: Digitizing; Reshape Feature
 
 Reshape Features
 ----------------
@@ -679,7 +689,8 @@ the polygon with a right click.
    something to consider.
 
 
-.. index:: Offset_Curves
+.. index::
+   single: Digitizing; Offset Curves
 
 Offset Curves
 -------------
@@ -701,7 +712,8 @@ you to configure some parameters like **Join style**, **Quadrant segments**,
 **Miter limit**.
 
 
-.. index:: Split_Features
+.. index::
+   single: Digitizing; Split Features
 
 Split Features
 --------------
@@ -710,7 +722,8 @@ You can split features using the |splitFeatures| :sup:`Split Features`
 icon on the toolbar. Just draw a line across the feature you want to split.
 
 
-.. index:: Split_Parts
+.. index::
+   single: Digitizing; Split Parts
 
 Split parts
 -----------
@@ -720,7 +733,8 @@ number of parts is increased. Just draw a line across the part you want to split
 the |splitParts| :sup:`Split Parts` icon.
 
 
-.. index:: Merge_Selected_Features
+.. index::
+   single: Digitizing; Merge Selected Features
 
 Merge selected features
 -----------------------
@@ -732,7 +746,8 @@ Attribute) to use for each column. If features don't have a common boundaries,
 a multipolygon will be created.
 
 
-.. index:: Merge_Attributes_of_Selected_Features
+.. index::
+   single: Digitizing; Merge Attributes
 
 Merge attributes of selected features
 -------------------------------------
@@ -745,7 +760,8 @@ Now QGIS asks you which attributes are to be applied to all selected objects.
 As a result, all selected objects have the same attribute entries.
 
 
-.. index:: Rotate_Point_symbols
+.. index::
+   single: Digitizing; Rotate Point Symbols
 
 Rotate Point Symbols
 --------------------
@@ -780,6 +796,8 @@ button again, the value will be updated in the attribute table.
    If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15
    degree steps.
 
+.. index::
+   single: Digitizing; Advanced panel
 
 The Advanced Digitizing panel
 =============================
