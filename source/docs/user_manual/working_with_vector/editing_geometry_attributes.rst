@@ -256,15 +256,13 @@ To digitize the geometry, left-click on the map area to create the first
 point of your new feature.
 
 For linear or curved geometries, keep on left-clicking for each additional
-point you wish to capture or use automatic tracing capability to accelerate
-the digitization. You can switch back and forth between linear 
+point you wish to capture or use :ref:`automatic tracing <tracing>` capability
+to accelerate the digitization. You can switch back and forth between linear
 :guilabel:`Add feature` tool and curved :guilabel:`Add circular string...` tools
 to create compound curved geometry. Pressing :kbd:`Delete` or :kbd:`Backspace` key
 reverts the last node you add. When you have finished adding points, right-click
 anywhere on the map area to confirm you have finished entering the geometry of
 that feature.
-
-..  ToDo: add a reference to directly link to the tracing section when available
 
 .. note:: **Curved geometries are stored as such only in compatible data provider**
 
@@ -853,6 +851,48 @@ button again, the value will be updated in the attribute table.
 .. note::
    If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15
    degree steps.
+
+
+.. index:: 
+   single: Digitizing; Automatic tracing
+
+.. _tracing:
+
+Automatic Tracing
+-----------------
+
+Usually, when using capturing map tools (add feature, add part, add ring, reshape
+and split), you need to click each vertex of the feature.
+
+Using the automatic tracing mode you can speed up the digitization process.
+Enable the |tracing| :sup:`Tracing` tool by pushing the icon or pressing
+:kbd:`t` key and :ref:`snap to <snapping_tolerance>` a vertex or segment of a
+feature you want to trace along. Move the mouse over another vertex or segment
+you'd like to snap and instead of an usual straight line, the digitizing rubber
+band represents a path from the last point you snapped to the current position.
+QGIS actually uses the underlying features topology to build the shortest path
+between the two points. Click and QGIS places the intermediate vertices following
+the path. You no longer need to manually place all the vertices during digitization.
+
+Tracing requires snapping to be activated in traceable layers to build the path.
+You should also snap to an existing vertex or segment while digitizing and ensure
+that the two nodes are topologically connectable following existing features,
+otherwise QGIS is unable to connect them and thus traces a single straight line.
+
+
+.. note:: **Adjust map scale or snapping settings for an optimal tracing**
+   
+   If there are too many features in map display, tracing is disabled to avoid
+   potentially long tracing structure preparation and large memory overhead.
+   After zooming in or disabling some layers the tracing is enabled again.
+
+.. tip:: **Quickly enable or disable automatic tracing by pressing** :kbd:`t` **key**
+
+   By pressing :kbd:`t` key, tracing can be enabled/disabled anytime even while
+   digitizing one feature, so it is possible to digitize some parts of the feature
+   with tracing enabled and other parts with tracing disabled.
+   Tools behave as usual when tracing is disabled.
+
 
 .. index::
    single: Digitizing; Advanced panel
