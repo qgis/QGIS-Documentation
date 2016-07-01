@@ -24,7 +24,8 @@ SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
    at the same time as you are. The last person to save its edits wins.
 
 
-.. index:: Snapping, Snapping_Tolerance
+.. index:: Snapping
+   single: Digitizing; Snapping
 
 .. _`snapping_tolerance`:
 
@@ -34,9 +35,8 @@ Setting the Snapping Tolerance and Search Radius
 For an optimal and accurate edit of the vector layer geometries, we need to set
 an appropriate value of snapping tolerance and search radius for features vertices.
 
-.. % FIXME Different menus are used below to identify "Options"/"Snapping Options" sub-menu (Settings, Edit, File). Would be nice to check what is correct according to OS.
-   File menu no longer exists if I'm not wrong (replaced by Project). On Windows, all is in the Settings menu. What about other platforms? Inputs are welcome.
-   
+
+.. index:: Snapping Tolerance
 
 Snapping tolerance
 ------------------
@@ -49,11 +49,9 @@ it to an existing vertex and/or segment.
 The snapping tolerance setting affects all tools that work with tolerance.
 
 #. A general, project-wide snapping tolerance can be defined by choosing
-   :menuselection:`Settings -->` |options| :menuselection:`Options`.
-   On Mac, go to :menuselection:`QGIS -->` |options|
-   :menuselection:`Preferences...`. On Linux: :menuselection:`Edit -->`
-   |options| :menuselection:`Options`. In the :guilabel:`Digitizing`
-   tab, you can select between 'to vertex', 'to segment' or 'to vertex and segment'
+   :menuselection:`Settings -->` |options| :menuselection:`Options...`, 
+   :guilabel:`Digitizing` tab.
+   You can select between 'To vertex', 'To segment' or 'To vertex and segment'
    as default snap mode. You can also define a default snapping tolerance and
    a search radius for vertex edits. The tolerance can be set either in map
    units or in pixels. The advantage of choosing pixels is that the snapping
@@ -61,10 +59,9 @@ The snapping tolerance setting affects all tools that work with tolerance.
    digitizing project (working with the Alaska dataset), we define the
    snapping units in feet. Your results may vary, but something on the order
    of 300 ft at a scale of 1:10000 should be a reasonable setting.
-#. A layer-based snapping tolerance that overrides the global snapping option
-   set in the Digitizing tab can be defined by choosing
-   :menuselection:`Settings -->` (or :menuselection:`File -->`)
-   :menuselection:`Snapping options...`. It enables and adjusts snapping mode
+#. A layer-based snapping tolerance that overrides the global snapping options
+   can be defined by choosing :menuselection:`Settings --> Snapping options`. 
+   It enables and adjusts snapping mode
    and tolerance on a layer basis (see figure_edit_1_ ). This dialog offers
    three different modes to select the layer(s) to snap to:
    
@@ -105,7 +102,7 @@ a snapping tolerance that refers to ``layer units``, the units of the reprojecte
 layer when 'on-the-fly' CRS transformation is on.
 
 
-.. index:: Search_Radius
+.. index:: Search Radius
 
 Search radius
 --------------
@@ -125,7 +122,7 @@ The search radius for vertex edits in layer units can be defined in the
 project-wide snapping tolerance.
 
 
-.. Index:: Topological_Editing
+.. Index:: Topological Editing
 
 Topological editing
 ===================
@@ -137,7 +134,7 @@ define |checkbox| :guilabel:`Enable topological editing`, and/or for polygon
 layers, activate the |checkbox| :guilabel:`Avoid Intersections` option.
 
 
-.. index:: Shared_Polygon_Boundaries
+.. index:: Shared Polygon Boundaries
 
 Enable topological editing
 --------------------------
@@ -147,7 +144,7 @@ and maintaining common boundaries in features mosaics. QGIS 'detects'
 shared boundary by the features, so you only have to move a common vertex/segment
 once, and QGIS will take care of updating the neighboring features.
 
-.. Index:: Avoid_Intersections_Of_Polygons
+.. Index:: Avoid Intersections
 
 Avoid intersections of new polygons
 -----------------------------------
@@ -171,7 +168,7 @@ don't have to digitize all vertices of the common boundary.
    need it otherwise, you can get unexpected geometries.
 
 
-.. Index:: Snapping_On_Intersections
+.. Index:: Snapping On Intersections
 
 Enable snapping on intersections
 ---------------------------------
