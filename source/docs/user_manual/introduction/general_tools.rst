@@ -495,6 +495,43 @@ Users can save selected features into a **New Memory Vector Layer** or a
 **New Vector Layer** using :menuselection:`Edit --> Copy Features` and
 :menuselection:`Edit --> Paste Features as` in the wanted format.
 
+.. _data_defined:
+
+Data defined override setup
+===========================
+
+Beside many options in the vector layer properties dialog or settings in the print
+composer, you can find a |dataDefined| :sup:`Data defined override` icon.
+Thanks to :ref:`expressions <vector_expressions>` based on layer attributes or item
+settings, prebuild or custom functions and variables, this tool allows you to set
+dynamic value for the concerned parameter. When enabled, the value returned by
+this widget is applied to the parameter regardless its normal value (checkbox,
+textbox, slider...).
+
+.. ToDo: Add above a hyperlink to variables section once written
+
+Clicking the |dataDefined| :sup:`Data defined override` icon shows:
+
+* a :guilabel:`Description ...` that indicates if it is enabled, which input
+  expected, valid input type and the current definition,
+* an entry to list the :guilabel:`Field type` available,
+* an entry to list the :guilabel:`Variable` available,
+* :guilabel:`Edit ...` button to create or edit the expression to use,
+* :guilabel:`Paste` and :guilabel:`Copy` buttons,
+* :guilabel:`Clear` button to remove the setup.
+
+When the :index:`data-defined override` option is setup correctly the icon is yellow
+|dataDefineOn| or |dataDefineExpressionOn|; if it is broken, the icon is red 
+|dataDefineError| or |dataDefineExpressionError|.
+
+
+Parameters that can be used with data-defined tools are:
+
+* Style and symbols parameters
+* Labels parameters
+* Composer parameters
+
+
 .. _`identify`:
 
 Identify features
@@ -602,149 +639,6 @@ example, from the context menu you can:
 * Layer properties: Open layer properties window
 * Expand all
 * Collapse all
-
-.. _decorations:
-
-Decorations
-===========
-
-The Decorations of QGIS include the Grid, the Copyright Label, the North Arrow
-and the Scale Bar. They are used to 'decorate' the map by adding cartographic
-elements.
-
-Grid
-----
-
-|transformed| :sup:`Grid` allows you to add a coordinate grid and coordinate
-annotations to the map canvas.
-
-.. _figure_decorations_1:
-
-.. only:: html
-
-   **Figure Decorations 1:**
-
-.. figure:: /static/user_manual/introduction/grid_dialog.png
-   :align: center
-
-   The Grid Dialog
-
-#. Select from menu :menuselection:`View --> Decorations --> Grid`.
-   The dialog starts (see figure_decorations_1_).
-#. Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid
-   definitions according to the layers loaded in the map canvas.
-#. Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
-   annotation definitions according to the layers loaded in the map canvas.
-#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
-
-Copyright Label
----------------
-
-|copyrightLabel| :sup:`Copyright label` adds a copyright label using the text
-you prefer to the map.
-
-.. _figure_decorations_2:
-
-.. only:: html
-
-   **Figure Decorations 2:**
-
-.. figure:: /static/user_manual/introduction/copyright.png
-   :align: center
-
-   The Copyright Dialog
-
-#. Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
-   The dialog starts (see figure_decorations_2_).
-#. Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is
-   checked.
-#. Enter the text you want to place on the map. You can use HTML as
-   shown in the example.
-#. Choose the placement of the label from the :guilabel:`Placement`
-   |selectString| combo box.
-#. You can refine the placement of the item by setting a Horizontal and/or Vertical
-   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
-   **Pixels** or set as **Percentage** of the width or height of the map canvas.
-#. You can change the color to apply.
-#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
-
-In the example above, which is the default, QGIS places a copyright symbol
-followed by the date in the lower right-hand corner of the map canvas.
-
-North Arrow
------------
-
-|northArrow| :sup:`North Arrow` places a simple north arrow on the map canvas.
-Currently, there is only one style available. You can adjust the angle of the
-arrow or let QGIS set the direction automatically.
-If you choose to let QGIS determine the direction, it makes its best guess
-as to how the arrow should be oriented.
-For placement of the arrow, you have four options, corresponding to
-the four corners of the map canvas.
-You can refine the placement of the arrow by setting a Horizontal and/or Vertical
-`Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
-**Pixels** or set as **Percentage** of the width or height of the map canvas.
-
-.. _figure_decorations_3:
-
-.. only:: html
-
-   **Figure Decorations 3:**
-
-.. figure:: /static/user_manual/introduction/north_arrow_dialog.png
-   :align: center
-
-   The North Arrow Dialog
-
-
-Scale Bar
----------
-
-|scaleBar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
-can control the style and placement, as well as the labelling of the bar.
-
-.. _figure_decorations_4:
-
-.. only:: html
-
-   **Figure Decorations 4:**
-
-.. figure:: /static/user_manual/introduction/scale_bar_dialog.png
-   :align: center
-
-   The Scale Bar Dialog
-
-QGIS only supports displaying the scale in the same units as your map frame.
-So if the units of your layers are in meters, you can't create a scale bar in
-feet. Likewise, if you are using decimal degrees, you can't create a scale
-bar to display distance in meters.
-
-To add a scale bar:
-
-#. Select from menu :menuselection:`View --> Decorations --> Scale Bar`.
-   The dialog starts (see figure_decorations_4_).
-#. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
-#. Choose the style from the :guilabel:`Scale bar style` |selectString|
-   combo box.
-#. Select the color for the bar :guilabel:`Color of bar` |selectColor| or use
-   the default black color.
-#. Set the :guilabel:`Size of bar` |selectNumber|.
-#. Optionally, check |checkbox| :guilabel:`Automatically snap to round number
-   on resize` to display values easy-to-read.
-#. Choose the placement from the :guilabel:`Placement` |selectString| combo box.
-#. You can refine the placement of the item by setting a Horizontal and/or Vertical
-   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
-   **Pixels** or set as **Percentage** of the width or height of the map canvas.
-#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
-
-
-.. tip::
-
-   **Settings of Decorations**
-
-   When you save a :file:`.qgs` project, any changes you have made to Grid,
-   North Arrow, Scale Bar and Copyright will be saved in the project and restored
-   the next time you load the project.
 
 .. _sec_annotations:
 
@@ -912,40 +806,149 @@ Removing embedded layers
 
 Right-click on the embedded layer and choose |removeLayer| :sup:`Remove`.
 
-.. _data_defined:
 
-Data defined override setup
-===========================
+.. _decorations:
 
-Beside many options in the vector layer properties dialog or settings in the print
-composer, you can find a |dataDefined| :sup:`Data defined override` icon.
-Thanks to :ref:`expressions <vector_expressions>` based on layer attributes or item
-settings, prebuild or custom functions and variables, this tool allows you to set
-dynamic value for the concerned parameter. When enabled, the value returned by
-this widget is applied to the parameter regardless its normal value (checkbox,
-textbox, slider...).
+Decorations
+===========
 
-.. ToDo: Add above a hyperlink to variables section once written
+The Decorations of QGIS include the Grid, the Copyright Label, the North Arrow
+and the Scale Bar. They are used to 'decorate' the map by adding cartographic
+elements.
 
-Clicking the |dataDefined| :sup:`Data defined override` icon shows:
+Grid
+----
 
-* a :guilabel:`Description ...` that indicates if it is enabled, which input
-  expected, valid input type and the current definition,
-* an entry to list the :guilabel:`Field type` available,
-* an entry to list the :guilabel:`Variable` available,
-* :guilabel:`Edit ...` button to create or edit the expression to use,
-* :guilabel:`Paste` and :guilabel:`Copy` buttons,
-* :guilabel:`Clear` button to remove the setup.
+|transformed| :sup:`Grid` allows you to add a coordinate grid and coordinate
+annotations to the map canvas.
 
-When the :index:`data-defined override` option is setup correctly the icon is yellow,
-|dataDefineOn| or |dataDefineExpressionOn| if it is broken, the icon is red,
-|dataDefineError| or |dataDefineExpressionError|.
+.. _figure_decorations_1:
 
-Parameters that can be used with data-defined tools are:
+.. only:: html
 
-* Style and symbols parameters
-* Labels parameters
-* Composer parameters
+   **Figure Decorations 1:**
+
+.. figure:: /static/user_manual/introduction/grid_dialog.png
+   :align: center
+
+   The Grid Dialog
+
+#. Select from menu :menuselection:`View --> Decorations --> Grid`.
+   The dialog starts (see figure_decorations_1_).
+#. Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid
+   definitions according to the layers loaded in the map canvas.
+#. Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
+   annotation definitions according to the layers loaded in the map canvas.
+#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
+
+Copyright Label
+---------------
+
+|copyrightLabel| :sup:`Copyright label` adds a copyright label using the text
+you prefer to the map.
+
+.. _figure_decorations_2:
+
+.. only:: html
+
+   **Figure Decorations 2:**
+
+.. figure:: /static/user_manual/introduction/copyright.png
+   :align: center
+
+   The Copyright Dialog
+
+#. Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
+   The dialog starts (see figure_decorations_2_).
+#. Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is
+   checked.
+#. Enter the text you want to place on the map. You can use HTML as
+   shown in the example.
+#. Choose the placement of the label from the :guilabel:`Placement`
+   |selectString| combo box.
+#. You can refine the placement of the item by setting a Horizontal and/or Vertical
+   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
+   **Pixels** or set as **Percentage** of the width or height of the map canvas.
+#. You can change the color to apply.
+#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
+
+In the example above, which is the default, QGIS places a copyright symbol
+followed by the date in the lower right-hand corner of the map canvas.
+
+North Arrow
+-----------
+
+|northArrow| :sup:`North Arrow` places a simple north arrow on the map canvas.
+Currently, there is only one style available. You can adjust the angle of the
+arrow or let QGIS set the direction automatically.
+If you choose to let QGIS determine the direction, it makes its best guess
+as to how the arrow should be oriented.
+For placement of the arrow, you have four options, corresponding to
+the four corners of the map canvas.
+You can refine the placement of the arrow by setting a Horizontal and/or Vertical
+`Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
+**Pixels** or set as **Percentage** of the width or height of the map canvas.
+
+.. _figure_decorations_3:
+
+.. only:: html
+
+   **Figure Decorations 3:**
+
+.. figure:: /static/user_manual/introduction/north_arrow_dialog.png
+   :align: center
+
+   The North Arrow Dialog
+
+
+Scale Bar
+---------
+
+|scaleBar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
+can control the style and placement, as well as the labelling of the bar.
+
+.. _figure_decorations_4:
+
+.. only:: html
+
+   **Figure Decorations 4:**
+
+.. figure:: /static/user_manual/introduction/scale_bar_dialog.png
+   :align: center
+
+   The Scale Bar Dialog
+
+QGIS only supports displaying the scale in the same units as your map frame.
+So if the units of your layers are in meters, you can't create a scale bar in
+feet. Likewise, if you are using decimal degrees, you can't create a scale
+bar to display distance in meters.
+
+To add a scale bar:
+
+#. Select from menu :menuselection:`View --> Decorations --> Scale Bar`.
+   The dialog starts (see figure_decorations_4_).
+#. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
+#. Choose the style from the :guilabel:`Scale bar style` |selectString|
+   combo box.
+#. Select the color for the bar :guilabel:`Color of bar` |selectColor| or use
+   the default black color.
+#. Set the :guilabel:`Size of bar` |selectNumber|.
+#. Optionally, check |checkbox| :guilabel:`Automatically snap to round number
+   on resize` to display values easy-to-read.
+#. Choose the placement from the :guilabel:`Placement` |selectString| combo box.
+#. You can refine the placement of the item by setting a Horizontal and/or Vertical
+   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
+   **Pixels** or set as **Percentage** of the width or height of the map canvas.
+#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
+
+
+.. tip::
+
+   **Settings of Decorations**
+
+   When you save a :file:`.qgs` project, any changes you have made to Grid,
+   North Arrow, Scale Bar and Copyright will be saved in the project and restored
+   the next time you load the project.
 
 .. _authentication:
 
@@ -956,15 +959,10 @@ QGIS has facility to store/retrieve authentication credentials in a secure
 manner. Users can securely save credentials into authentication configurations,
 which are stored in a portable database, can be applied to server or database
 connections, and safely referenced by their ID tokens in project or settings
-files.
+files. For more information see :ref:`authentication_index`.
 
 A master password needs to be set up when initializing the authentication
 system and its portable database.
-
-.. todo:
-    * Add information where settings files are saved,
-    * authentication options,
-    * Authentication Methods Plugins
 
 .. _general_saveas:
 

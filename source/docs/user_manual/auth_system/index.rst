@@ -1,6 +1,6 @@
 |updatedisclaimer|
 
-.. _qgis.manual.introduction.index:
+.. _authentication_index:
 
 =====================
 Authentication System
