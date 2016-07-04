@@ -66,6 +66,11 @@ listed after each menu option as a checkbox entry. Some menu options only
 appear if the corresponding plugin is loaded. For more information about tools
 and toolbars, see section :ref:`label_toolbars`.
 
+.. note:: QGIS is a cross-platform application meaning that though it provides you
+   with the same tools, they may be placed in different menus according to the
+   operating system specification. The lists below show the most common location
+   and precise when there is a variation.
+
 Project
 ........
 
@@ -74,18 +79,21 @@ Menu Option                                              Shortcut              R
 =======================================================  ====================  ==========================================  ===============================
 |fileNew| :guilabel:`New`                                :kbd:`Ctrl+N`         see :ref:`sec_projects`                     :guilabel:`Project`
 |fileOpen| :guilabel:`Open`                              :kbd:`Ctrl+O`         see :ref:`sec_projects`                     :guilabel:`Project`
-:menuselection:`New from template -->`                   \                     see :ref:`sec_projects`                     :guilabel:`Project`
-:menuselection:`Open Recent  -->`                        \                     see :ref:`sec_projects`                     \
+:menuselection:`New from template -->`                   \                     see :ref:`sec_projects`                     \
+:menuselection:`Open Recent -->`                         \                     see :ref:`sec_projects`                     \
 |fileSave| :guilabel:`Save`                              :kbd:`Ctrl+S`         see :ref:`sec_projects`                     :guilabel:`Project`
 |fileSaveAs| :guilabel:`Save As...`                      :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`Project`
 |saveMapAsImage| :guilabel:`Save as Image...`            \                     see :ref:`sec_output`                       \
-:guilabel:`DXF Export ...`                               \                     see :ref:`sec_output`                       \
-|projectProperties| :guilabel:`Project Properties ...`   :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \
+:guilabel:`DXF Export...`                                \                     see :ref:`sec_output`                       \
+|projectProperties| :guilabel:`Project Properties...`    :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \
 |newComposer| :guilabel:`New Print Composer`             :kbd:`Ctrl+P`         see :ref:`label_printcomposer`              :guilabel:`Project`
-|composerManager| :guilabel:`Composer manager ...`       \                     see :ref:`label_printcomposer`              :guilabel:`Project`
+|composerManager| :guilabel:`Composer manager...`        \                     see :ref:`label_printcomposer`              :guilabel:`Project`
 :menuselection:`Print Composers -->`                     \                     see :ref:`label_printcomposer`              \
 |fileExit| :guilabel:`Exit QGIS`                         :kbd:`Ctrl+Q`         \                                           \
 =======================================================  ====================  ==========================================  ===============================
+
+Under |osx| Mac OSX, the :guilabel:`Exit QGIS` command corresponds to
+:menuselection:`QGIS --> Quit QGIS` (:kbd:`Cmd+Q`).
 
 Edit
 ....
@@ -102,7 +110,7 @@ Menu Option                                                           Shortcut  
 |capturePoint| :guilabel:`Add Feature`                                :kbd:`Ctrl+.`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |moveFeature| :guilabel:`Move Feature(s)`                             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |deleteSelected| :guilabel:`Delete Selected`                          \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|rotatePointSymbols| :guilabel:`Rotate Feature(s)`                    \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|rotateFeature| :guilabel:`Rotate Feature(s)`                         \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |simplifyFeatures| :guilabel:`Simplify Feature`                       \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |addRing| :guilabel:`Add Ring`                                        \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |addPart| :guilabel:`Add Part`                                        \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
@@ -140,13 +148,14 @@ View
 =======================================================  ====================  ==========================================  ===============================
 Menu Option                                              Shortcut              Reference                                   Toolbar
 =======================================================  ====================  ==========================================  ===============================
-|pan| :guilabel:`Pan Map`                                \                     \                                           :guilabel:`Map Navigation`
+|pan| :guilabel:`Pan Map`                                \                     see :ref:`zoom_pan`                         :guilabel:`Map Navigation`
 |panToSelected| :guilabel:`Pan Map to Selection`         \                     \                                           :guilabel:`Map Navigation`
-|zoomIn| :guilabel:`Zoom In`                             :kbd:`Ctrl++`         \                                           :guilabel:`Map Navigation`
-|zoomOut| :guilabel:`Zoom Out`                           :kbd:`Ctrl+-`         \                                           :guilabel:`Map Navigation`
+|zoomIn| :guilabel:`Zoom In`                             :kbd:`Ctrl++`         see :ref:`zoom_pan`                         :guilabel:`Map Navigation`
+|zoomOut| :guilabel:`Zoom Out`                           :kbd:`Ctrl+-`         see :ref:`zoom_pan`                         :guilabel:`Map Navigation`
 :menuselection:`Select -->`                              \                     see :ref:`sec_selection`                    :guilabel:`Attributes`
-|identify| :guilabel:`Identify Features`                 :kbd:`Ctrl+Shift+I`   \                                           :guilabel:`Attributes`
+|identify| :guilabel:`Identify Features`                 :kbd:`Ctrl+Shift+I`   see :ref:`identify`                         :guilabel:`Attributes`
 :menuselection:`Measure -->`                             \                     see :ref:`sec_measure`                      :guilabel:`Attributes`
+|sum| :guilabel:`Statistical Summary`                    \                     see :ref:`statistical_summary`              :guilabel:`Attributes`
 |zoomFullExtent| :guilabel:`Zoom Full`                   :kbd:`Ctrl+Shift+F`   \                                           :guilabel:`Map Navigation`
 |zoomToLayer| :guilabel:`Zoom To Layer`                  \                     \                                           :guilabel:`Map Navigation`
 |zoomToSelected| :guilabel:`Zoom To Selection`           :kbd:`Ctrl+J`         \                                           :guilabel:`Map Navigation`
@@ -164,6 +173,11 @@ Menu Option                                              Shortcut              R
 :guilabel:`Toggle Full Screen Mode`                      :kbd:`F11`            \                                           \
 =======================================================  ====================  ==========================================  ===============================
 
+Under |nix| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
+and :guilabel:`Toggle Full Screen Mode` are rather placed in :menuselection:`Settings`
+menu.
+:menuselection:`Preview mode -->` is not available under |osx| Mac OS X.
+
 Layer
 .....
 
@@ -171,17 +185,17 @@ Layer
 Menu Option                                                   Shortcut              Reference                                   Toolbar
 ============================================================  ====================  ==========================================  ===============================
 :menuselection:`Create Layer -->`                             \                     see :ref:`sec_create_vector`                :guilabel:`Manage Layers`
-:menuselection:`Add Layer -->`                                \                     \                                           :guilabel:`Manage Layers`
-:guilabel:`Embed Layers and Groups ...`                       \                     see :ref:`nesting_projects`                 \
-:guilabel:`Add from Layer Definition File ...`                \                     \                                           \
-|editCopy| :guilabel:`Copy style`                             \                     see :ref:`vector_style_menu`                \
-|editPaste| :guilabel:`Paste style`                           \                     see :ref:`vector_style_menu`                \
+:menuselection:`Add Layer -->`                                \                     see :ref:`supported_format`                 :guilabel:`Manage Layers`
+:guilabel:`Embed Layers and Groups...`                        \                     see :ref:`nesting_projects`                 \
+:guilabel:`Add from Layer Definition File...`                 \                     \                                           \
+|editCopy| :guilabel:`Copy style`                             \                     see :ref:`save_layer_property`              \
+|editPaste| :guilabel:`Paste style`                           \                     see :ref:`save_layer_property`              \
 |openTable| :guilabel:`Open Attribute Table`                  \                     see :ref:`sec_attribute_table`              :guilabel:`Attributes`
 |toggleEditing| :guilabel:`Toggle Editing`                    \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |fileSave| :guilabel:`Save Layer Edits`                       \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |allEdits| :menuselection:`Current Edits -->`                 \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-:menuselection:`Save as...`                                   \                     \                                           \
-:menuselection:`Save as layer definition file...`             \                     \                                           \
+:menuselection:`Save As...`                                   \                     see :ref:`general_saveas`                   \
+:menuselection:`Save As Layer Definition File...`             \                     \                                           \
 |removeLayer| :guilabel:`Remove Layer/Group`                  :kbd:`Ctrl+D`         \                                           \
 |duplicateLayer| :guilabel:`Duplicate Layers (s)`             \                     \                                           \
 :guilabel:`Set Scale Visibility of Layers`                    \                     \                                           \
@@ -205,13 +219,17 @@ Settings
 =======================================================  ====================  ==========================================  ===============================
 Menu Option                                              Shortcut              Reference                                   Toolbar
 =======================================================  ====================  ==========================================  ===============================
-|customProjection| :guilabel:`Custom CRS ...`            \                     see :ref:`sec_custom_projections`           \
+|customProjection| :guilabel:`Custom CRS...`             \                     see :ref:`sec_custom_projections`           \
 :guilabel:`Style Manager...`                             \                     see :ref:`vector_style_manager`             \
-|options| :guilabel:`Configure shortcuts ...`            \                     \                                           \
-|options| :guilabel:`Customization ...`                  \                     see :ref:`sec_customization`                \
-|options| :guilabel:`Options ...`                        \                     see :ref:`gui_options`                      \
-:guilabel:`Snapping Options ...`                         \                     see :ref:`snapping_tolerance`               \
+|options| :guilabel:`Configure shortcuts...`             \                     \                                           \
+|options| :guilabel:`Customization...`                   \                     see :ref:`sec_customization`                \
+|options| :guilabel:`Options...`                         \                     see :ref:`gui_options`                      \
+:guilabel:`Snapping Options...`                          \                     see :ref:`snapping_tolerance`               \
 =======================================================  ====================  ==========================================  ===============================
+
+Under |nix| Linux KDE, you'll find more tools in :menuselection:`Settings`
+menu such as :guilabel:`Project Properties`, :menuselection:`Panels -->`,
+:menuselection:`Toolbars -->` and :guilabel:`Toggle Full Screen Mode`.
 
 Plugins
 .......
@@ -219,7 +237,7 @@ Plugins
 ======================================================================  ====================  ===================================  ===============================
 Menu Option                                                             Shortcut              Reference                            Toolbar
 ======================================================================  ====================  ===================================  ===============================
-|showPluginManager| :guilabel:`Manage and Install Plugins ...`          \                     see :ref:`managing_plugins`          \
+|showPluginManager| :guilabel:`Manage and Install Plugins...`           \                     see :ref:`managing_plugins`          \
 :guilabel:`Python Console`                                              :kbd:`Ctrl+Alt+P`     \                                    \
 ======================================================================  ====================  ===================================  ===============================
 
@@ -247,8 +265,8 @@ Raster
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:guilabel:`Raster calculator ...`                               \                     see :ref:`label_raster_calc`                \
-:guilabel:`Align Raster ...`                                    \                     see :ref:`label_raster_align`               \
+:guilabel:`Raster calculator...`                                \                     see :ref:`label_raster_calc`                \
+:guilabel:`Align Raster...`                                     \                     see :ref:`label_raster_align`               \
 ==============================================================  ====================  ==========================================  ===============================
 
 When starting QGIS for the first time not all core plugins are loaded.
@@ -285,10 +303,10 @@ Processing
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 |processingToolbox| :guilabel:`Toolbox`                         \                     see :ref:`processing.toolbox`               \
-|processingModel| :guilabel:`Graphical Modeler ...`             \                     see :ref:`processing.modeler`               \
-|processingHistory| :guilabel:`History and log ...`             \                     see :ref:`processing.history`               \
-|processingOption| :guilabel:`Options ...`                      \                     see :ref:`processing.options`               \
-|processingResult| :guilabel:`Results viewer ...`               \                     see :ref:`processing.results`               \
+|processingModel| :guilabel:`Graphical Modeler...`              \                     see :ref:`processing.modeler`               \
+|processingHistory| :guilabel:`History and log...`              \                     see :ref:`processing.history`               \
+|processingOption| :guilabel:`Options...`                       \                     see :ref:`processing.options`               \
+|processingResult| :guilabel:`Results viewer...`                \                     see :ref:`processing.results`               \
 |processingCommander| :guilabel:`Commander`                     :kbd:`Ctrl+Alt+M`     see :ref:`processing.commander`             \
 ==============================================================  ====================  ==========================================  ===============================
 
@@ -297,40 +315,41 @@ When starting QGIS for the first time not all core plugins are loaded.
 Help
 ....
 
-=======================================================  ====================  ==========================================  ===============================
-Menu Option                                              Shortcut              Reference                                   Toolbar
-=======================================================  ====================  ==========================================  ===============================
-|helpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                                           :guilabel:`Help`
-|whatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
-:guilabel:`API Documentation`                            \                     \                                           \
-:guilabel:`Report an Issue`                              \                     \                                           \
-:guilabel:`Need commercial support?`                     \                     \                                           \
-|qgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`         \                                           \
-|checkQgisVersion| :guilabel:`Check QGIS Version`        \                     \                                           \
-|helpAbout| :guilabel:`About`                            \                     \                                           \
-|helpSponsors| :guilabel:`QGIS Sponsors`                 \                     \                                           \
-=======================================================  ====================  ==========================================  ===============================
+=======================================================  ====================  ===========================  ========================
+Menu Option                                              Shortcut              Reference                    Toolbar
+=======================================================  ====================  ===========================  ========================
+|helpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                            :guilabel:`Help`
+|whatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`       \                            :guilabel:`Help`
+:guilabel:`API Documentation`                            \                     \                            \
+:guilabel:`Report an Issue`                              \                     \                            \
+:guilabel:`Need commercial support?`                     \                     \                            \
+|qgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`         \                            \
+|checkQgisVersion| :guilabel:`Check QGIS Version`        \                     \                            \
+|helpAbout| :guilabel:`About`                            \                     \                            \
+|helpSponsors| :guilabel:`QGIS Sponsors`                 \                     \                            \
+=======================================================  ====================  ===========================  ========================
 
-Please note that for Linux |nix|, the menu bar items listed above are the default
-ones in the KDE window manager. In GNOME, the :menuselection:`Settings` menu
-has different content and its items have to be found here:
+QGIS
+....
 
-+-------------------------------------------------------------+------------------------+
-| |customProjection| :guilabel:`Custom CRS`                   | :guilabel:`Edit`       |
-+-------------------------------------------------------------+------------------------+
-| :guilabel:`Style Manager`                                   | :guilabel:`Edit`       |
-+-------------------------------------------------------------+------------------------+
-| |options| :guilabel:`Configure Shortcuts`                   | :guilabel:`Edit`       |
-+-------------------------------------------------------------+------------------------+
-| |options| :guilabel:`Customization`                         | :guilabel:`Edit`       |
-+-------------------------------------------------------------+------------------------+
-| |options| :guilabel:`Options`                               | :guilabel:`Edit`       |
-+-------------------------------------------------------------+------------------------+
-| :menuselection:`Snapping Options ...`                       | :guilabel:`Edit`       |
-+-------------------------------------------------------------+------------------------+
+This menu is only available under |osx| Mac OS X and contains some OS related
+commands.
 
+================================  ====================  =========================
+Menu Option                       Shortcut              Reference                      
+================================  ====================  =========================
+:guilabel:`Preferences`           \                     \
+:guilabel:`About QGIS`            \                     \
+:guilabel:`Hide QGIS`             \                     \
+:guilabel:`Show All`              \                     \
+:guilabel:`Hide Others`           \                     \ 
+:guilabel:`Quit QGIS`             :kbd:`Cmd+Q`          \
+================================  ====================  =========================
 
-.. See Appendix :ref:`app_menu` for complete descriptions of the menu items.
+:guilabel:`Preferences` and :guilabel:`About QGIS` are the same commands as
+:menuselection:`Settings --> Options` and :menuselection:`Help --> About`.
+:guilabel:`Quit QGIS` corresponds to :menuselection:`Project --> Exit QGIS`
+under the other platforms.
 
 .. _`label_toolbars`:
 
@@ -581,7 +600,7 @@ will depend on the vector and raster layers you have chosen to load
 (see sections that follow for more information on how to load layers).
 The map view can be panned, shifting the focus of the map display to
 another region, and it can be zoomed in and out. Various other operations can be
-performed on the map as described in the toolbar description above. The map
+performed on the map as described in the label_toolbars_ description above. The map
 view and the legend are tightly bound to each other --- the maps in view reflect
 changes you make in the legend area.
 

@@ -1,5 +1,7 @@
 |updatedisclaimer|
 
+.. _supported_format:
+
 Supported Data Formats
 ======================
 
