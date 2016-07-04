@@ -211,17 +211,13 @@ layer`.
 This applies to features selected and copied within QGIS and
 also to features from another source defined using well-known text (WKT).
 
-.. index:: Field_Calculator, Calculator_Field, Derived_Fields
+.. index:: Field Calculator, Calculator Field, Derived Fields, Virtual Fields
 
 .. _calculate_fields_values:
 
 Editing attribute values
 =========================
 
-.. only:: html
-
-   .. contents::
-      :local:
 
 The |calculateField| :sup:`Field Calculator` button in the attribute
 table allows you to perform calculations on the basis of existing attribute values or
