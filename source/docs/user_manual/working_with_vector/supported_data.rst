@@ -255,6 +255,24 @@ Some items to note about the text file:
 #. The X coordinates are contained in the ``X`` field.
 #. The Y coordinates are contained in the ``Y`` field.
 
+Others valuable informations for advanced users
+...............................................
+
+Features with curved geometries (CircularString, CurvePolygon and CompoundCurve) are
+supported. Here are three examples of such geometry types as a delimited text
+with WKT geometries::
+
+  Label;WKT_geom
+  CircularString;CIRCULARSTRING(268 415,227 505,227 406)
+  CurvePolygon;CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))
+  CompoundCurve;COMPOUNDCURVE((5 3, 5 13), CIRCULARSTRING(5 13, 7 15,
+    9 13), (9 13, 9 3), CIRCULARSTRING(9 3, 7 1, 5 3))
+
+Delimited Text supports also Z and M coordinates in geometries::
+
+   LINESTRINGM(10.0 20.0 30.0, 11.0 21.0 31.0)
+
+
 .. _vector_loading_csv:
 
 Loading a delimited text file
@@ -317,7 +335,7 @@ Additionally, you can enable:
 
 .. index:: OSM, OpenStreetMap
 
-.. _vactor_osm:
+.. _vector_osm:
 
 OpenStreetMap data
 ------------------
