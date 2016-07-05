@@ -356,7 +356,8 @@ holding the mouse over the toolbars (read also :ref:`sec_panels_and_toolbars`).
         **Restoring toolbars**
 
         If you have accidentally hidden a toolbar, you can get it
-        back by choosing menu option :menuselection:`View --> Toolbars -->`.
+        back by choosing menu option :menuselection:`View --> Toolbars -->`
+        (or |nix| :menuselection:`Settings --> Toolbars -->`).
         If for some reason a toolbar (or any other widget) totally disappears
         from the interface, you'll find tips to get it back at :ref:`restoring
         initial GUI <tip_restoring_configuration>`.
