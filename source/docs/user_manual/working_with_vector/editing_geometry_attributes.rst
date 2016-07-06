@@ -162,6 +162,11 @@ Another option is to use |checkbox| :guilabel:`Enable snapping on intersection`.
 It allows you to snap on an intersection of background layers, even if there's no vertex on
 the intersection.
 
+Geometry Checker
+-----------------
+
+A core plugin can help the user to find the geometry invalidity. You can find
+more information on these plugins at :ref:`geometry_checker`.
 
 .. index:: Digitizing
 
