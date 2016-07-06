@@ -20,6 +20,16 @@ To access the :guilabel:`Layer Properties` dialog, double-click on a layer in
 the legend or right-click on the layer and select :menuselection:`Properties`
 from the pop-up menu.
 
+.. tip:: **Switch quickly between different layer representations**
+
+   Using the :menuselection:`Styles --> Add` combobox at the bottom of the
+   :guilabel:`Layer Properties` dialog, you can save as many combinations of
+   layer properties settings (symbology, labeling, diagram, fields form, actions...)
+   as you want. Then, simply switch between styles from the context menu of
+   the layer in :guilabel:`Layers Panel` to automatically get different
+   representations of your data.
+
+
 .. _vectorgeneralmenu:
 
 General Menu
@@ -170,7 +180,7 @@ Features rendering
 ------------------
 
 The renderer is responsible for drawing a feature together with the correct
-symbol. Regardless layer geometry type, there are four types of renderers:
+symbol. Regardless layer geometry type, there are four common types of renderers:
 single symbol, categorized, graduated and rule-based. For point layers, there are
 a point displacement and a heatmap renderers available while polygon layers can
 also be rendered with the inverted renderer.
@@ -189,7 +199,7 @@ Depending on the chosen renderer, the dialog provides different additional secti
    for one change. If you repeat changing the renderer type the settings for the symbol
    will get lost.
 
-.. index:: Single_Symbol_Renderer, Renderer_Single_Symbol
+.. index:: Single Symbol Renderer
 
 .. _single_symbol_renderer:
 
@@ -212,7 +222,7 @@ See :ref:`symbol-selector` for further information about symbol representation.
 
    Single symbol line properties
 
-.. tip:: **edit style directly from layer panel**
+.. tip:: **edit symbol directly from layer panel**
 
    If in your **Layers Panel** you have layers with categories defined through
    categorized, graduated or rule-based style mode, you can quickly change the
@@ -221,7 +231,7 @@ See :ref:`symbol-selector` for further information about symbol representation.
    Right-clicking on a category will also give you access to the options **Hide
    all items**, **Show all items** **and Edit symbol**.
 
-.. index:: Categorized_Renderer, Renderer_Categorized
+.. index:: Categorized Renderer
 
 Categorized Renderer
 ....................
@@ -278,8 +288,8 @@ for the rivers layer of the QGIS sample dataset.
    *Style Manager*. *Match to symbols from file* match category name to a
    symbol name from an external file.
 
-.. index:: Graduated_Renderer, Renderer_Graduated
-.. index:: Natural_Breaks_(Jenks), Pretty_Breaks, Equal_Interval, Quantile
+.. index:: Graduated Renderer
+.. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile
 
 Graduated Renderer
 ..................
@@ -363,12 +373,12 @@ the rivers layer of the QGIS sample dataset.
    to a new column in your attribute table if you want the classification
    attribute to be a composite of multiple fields, or a formula of some sort.
 
-.. index:: proportional_symbol, multivariate_analysis
+.. index:: Proportional symbol, Multivariate analysis, Size assistant
 
 Proportional Symbol and Multivariate Analysis
 .............................................
 
-:index:`Proportional Symbol` and :index:`Multivariate Analysis` are not
+Proportional Symbol and Multivariate Analysis are not
 rendering types available from the Style rendering drop-down list.
 However with the **Size Assistant** options applied over any of the previous
 rendering options, QGIS allows you to display your point and line data with
@@ -436,7 +446,7 @@ Like the proportional symbol, the size-related symbol is added to the layer tree
 at the top of the categorized or graduated classes symbols. And both representation
 are also available in the print composer legend item.
 
-.. Index:: Rule-based_Rendering, Rendering_Rule-based
+.. Index:: Rule-based Rendering
 
 .. _rule_based_rendering:
 
@@ -481,8 +491,8 @@ for the rivers layer of the QGIS sample dataset.
 
    Rule-based Symbolizing options
 
-.. index:: Point_Displacement_Renderer, Renderer_Point_Displacement
-.. index:: Displacement_plugin
+.. index:: Point Displacement Renderer
+.. index:: Displacement plugin
 
 Point displacement
 ..................
@@ -507,7 +517,7 @@ around one center symbol or on several concentric circles.
    Categorized or Rule-Based renderer using the :guilabel:`Renderer` drop-down
    list then the :guilabel:`Renderer Settings...` button.
 
-.. index:: Inverted_Polygon_Renderer
+.. index:: Inverted Polygon Renderer
 
 Inverted Polygon
 ................
@@ -527,13 +537,6 @@ Single symbol, Graduated, Categorized, Rule-Based or 2.5 D renderer.
    :align: center
 
    Inverted Polygon dialog
-
-.. tip:: **Switch quickly between styles**
-
-   Once you created one of the above mentioned styles you can right-click on the
-   layer and choose :menuselection:`Styles --> Add` to save your style. Now you
-   can easily switch between styles you created using the
-   :menuselection:`Styles -->` menu again.
 
 .. index:: Heatmap Renderer
 
@@ -558,6 +561,8 @@ the heatmap renderer updates the heatmap style automatically.
    :align: center
 
    Heatmap dialog
+
+.. index:: 2.5 D Rendering
 
 .. _2.5_D_rendering:
 
@@ -618,7 +623,7 @@ features of the layer:
   previously only know from graphics programs. The pixels of your overlaying and
   underlaying layers are mixed through the settings described in :ref:`blend-modes`.
 
-* apply :ref:`paint effects <draw_effects>` on all the layer features with the
+* Apply :ref:`paint effects <draw_effects>` on all the layer features with the
   :guilabel:`Draw Effects` button.
 
 * :guilabel:`Control feature rendering order` allows you, using features
@@ -1580,7 +1585,7 @@ There are several examples included in the dialog. You can load them by clicking
 on **[Add default actions]**. One example is performing a search based on an
 attribute value. This concept is used in the following discussion.
 
-.. index:: Actions, Attribute_Actions
+.. index:: Actions, Attribute Actions
 
 Defining Actions
 ----------------
@@ -1953,6 +1958,7 @@ of the image. Currently png, jpg and jpeg image formats are supported.
    http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/
 
 
+.. index:: Save properties, Save style, QML
 .. _save_layer_property:
 
 Save and Share Layer Properties
@@ -2009,6 +2015,11 @@ at a time.
 Combined to layer visibility preset, this offers a quick and powerful way to manage
 complex projects with few layers (no need to duplicate any layer in the map legend).
 
+.. tip:: **Manage styles from layer context menu**
+
+   Right-click on the layer in :guilabel:`Layers Panel` to add, rename
+   or remove layer style. You can also edit feature symbols.
+
 .. _store_style:
 
 Storing Style in a File or a Database
@@ -2057,6 +2068,14 @@ or **Restore Default** style if you're not satisfied.
 
    Save Style in database Dialog
 
+.. tip:: **Quickly share a layer style within the project**
+
+   You can also share layer style within a project without importing a file or
+   database style: right-click on the layer in the :guilabel:`Layers Panel` and,
+   from the :guilabel:`Styles` combobox , copy the style of a layer and paste it
+   to a group or a selection of layers: the style is applied to all the layers
+   that are of the same type (vector vs raster) as the original layer and, in
+   case of vector, have the same geometry type (point, line or polygon).
 
 Others Settings
 ===============
