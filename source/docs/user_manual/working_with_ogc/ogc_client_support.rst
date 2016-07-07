@@ -215,6 +215,15 @@ future QGIS sessions.
    For example, you shouldn't have fragments such as ``request=GetCapabilities``
    or ``version=1.0.0`` in your URL.
 
+.. warning::
+
+   Entering **username** and **password** in the :guilabel:`Authentication` tab 
+   will keep unprotected credentials in the connection configuration. Those
+   **credentials will be visible** if, for instance, you shared the project file
+   with someone. Therefore, it's advisable to save your credentials in a
+   *Authentication configuration* instead (:guilabel:`configurations` tab). 
+   See ref:`authentication_index` for more details.
+
 .. _`ogc-wms-layers`:
 
 Loading WMS/WMTS Layers
@@ -586,6 +595,15 @@ network settings (especially proxy). It is also possible to select cache mode
 ('always cache', 'prefer cache', 'prefer network', 'always network'), and the provider also
 supports selection of time position, if temporal domain is offered by the server.
 
+.. warning::
+
+   Entering **username** and **password** in the :guilabel:`Authentication` tab 
+   will keep unprotected credentials in the connection configuration. Those
+   **credentials will be visible** if, for instance, you shared the project file
+   with someone. Therefore, it's advisable to save your credentials in a
+   *Authentication configuration* instead (:guilabel:`configurations` tab). 
+   See ref:`authentication_index` for more details.
+
 .. _`ogc-wfs`:
 
 WFS and WFS-T Client
@@ -619,6 +637,15 @@ The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
 #. Click **[Apply]** to add the layer to the map.
 
 Note that any proxy settings you may have set in your preferences are also recognized.
+
+.. warning::
+
+   Entering **username** and **password** in the :guilabel:`Authentication` tab 
+   will keep unprotected credentials in the connection configuration. Those
+   **credentials will be visible** if, for instance, you shared the project file
+   with someone. Therefore, it's advisable to save your credentials in a
+   *Authentication configuration* instead (:guilabel:`configurations` tab). 
+   See ref:`authentication_index` for more details.
 
 .. _figure_OGC_3:
 
