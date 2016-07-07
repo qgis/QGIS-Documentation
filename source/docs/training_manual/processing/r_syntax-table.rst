@@ -2,7 +2,7 @@
 
 R Syntax Summary table for Processing
 =====================================
-Module contributed by Matteo Ghetta - founded by `Scuola Superiore Sant'Anna <http://www.sssup.it/landlab>`_
+Module contributed by Matteo Ghetta - founded by `Scuola Superiore Sant'Anna - FREEWAT project <http://www.freewat.eu>`_
 
 Processing allows a lot of different input and output parameter that can be used in the script body.
 Here a summary table:

@@ -2,8 +2,7 @@
 
 Use R scripts in Processing
 ===========================
-
-Module contributed by Matteo Ghetta - founded by `Scuola Superiore Sant'Anna <http://www.sssup.it/landlab>`_
+Module contributed by Matteo Ghetta - founded by `Scuola Superiore Sant'Anna - FREEWAT project <http://www.freewat.eu>`_
 
 Processing allows to write and run R scripts inside QGIS.
 

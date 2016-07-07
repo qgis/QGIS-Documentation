@@ -2,7 +2,7 @@
 
 R Syntax in Processing scripts
 ==============================
-Module contributed by Matteo Ghetta - founded by `Scuola Superiore Sant'Anna <http://www.sssup.it/landlab>`_
+Module contributed by Matteo Ghetta - founded by `Scuola Superiore Sant'Anna - FREEWAT project <http://www.freewat.eu>`_
 
 Writing R scripts in Processing could be quite tricky because of the syntax that has to be adopted.
 
