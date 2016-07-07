@@ -5,8 +5,10 @@
 Heatmap Plugin
 ==============
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The `Heatmap` plugin uses Kernel Density Estimation to create a density (heatmap)
 raster of an input point vector layer. The density is calculated based on the

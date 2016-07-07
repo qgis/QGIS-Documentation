@@ -9,8 +9,10 @@
  Creating an Output
 ********************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Figure_composer_output_1_ shows the Print Composer with an example print layout,
 including each type of map item described in the previous section.
@@ -90,7 +92,7 @@ the exported image.
    Exporting big rasters can sometimes fail, even if there seems to be
    enough memory. This is a problem with the underlying Qt management of rasters.
 
-Export as SVG 
+Export as SVG
 ==============
 
 With |saveAsSVG| :sup:`Export as SVG`, you also need to fill the filename
@@ -231,7 +233,7 @@ or, another combination:
 
 .. code::
 
-   The area of [% upper(CITY_NAME)%],[%ZIPCODE%] is 
+   The area of [% upper(CITY_NAME)%],[%ZIPCODE%] is
    [%format_number($area/1000000,2) %] km2
 
 The information ``[% upper(CITY_NAME) || ',' || ZIPCODE || ' is ' format_number($area/1000000,2) %]``

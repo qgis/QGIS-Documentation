@@ -1,10 +1,13 @@
 |updatedisclaimer|
 
-Editing
-=======
+*********
+ Editing
+*********
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 QGIS supports various capabilities for :index:`editing` OGR,
 SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
@@ -25,14 +28,14 @@ SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
 .. _`snapping_tolerance`:
 
 Setting the Snapping Tolerance and Search Radius
-------------------------------------------------
+================================================
 
 Before we can edit vertices, we must set the snapping tolerance and search
 radius to a value that allows us an optimal editing of the vector layer
 geometries.
 
 Snapping tolerance
-..................
+------------------
 
 Snapping tolerance is the distance QGIS uses to ``search`` for the closest
 vertex and/or segment you are trying to connect to when you set a new vertex or
@@ -97,7 +100,7 @@ layer (setting 'layer units') or the units of the map view (setting 'map units')
 
 
 Search radius
-.............
+--------------
 
 Search radius is the distance QGIS uses to ``search`` for the closest vertex
 you are trying to move when you click on the map. If you aren't within the
@@ -118,7 +121,7 @@ wide snapping tolerance.
 .. Index:: Topological_Editing
 
 Topological editing
--------------------
+===================
 
 Besides layer-based snapping options, you can also define topological
 functionalities in the :guilabel:`Snapping options...` dialog in the
@@ -130,7 +133,7 @@ and/or for polygon layers, you can activate the column |checkbox|
 .. index:: Shared_Polygon_Boundaries
 
 Enable topological editing
-..........................
+--------------------------
 
 The option |checkbox| :guilabel:`Enable topological editing` is for editing
 and maintaining common boundaries in polygon mosaics. QGIS 'detects' a
@@ -140,7 +143,7 @@ once, and QGIS will take care of updating the other boundary.
 .. Index:: Avoid_Intersections_Of_Polygons
 
 Avoid intersections of new polygons
-...................................
+-----------------------------------
 
 The second topological option in the |checkbox| :guilabel:`Avoid Int.`
 column, called :guilabel:`Avoid intersections of new polygons`, avoids
@@ -153,7 +156,7 @@ have to digitize all vertices of the common boundary.
 .. Index:: Snapping_On_Intersections
 
 Enable snapping on intersections
-.................................
+---------------------------------
 
 Another option is to use |checkbox| :guilabel:`Enable snapping on intersection`.
 It allows you to snap on an intersection of background layers, even if there's no vertex on
@@ -165,7 +168,7 @@ the intersection.
 .. _sec_edit_existing_layer:
 
 Digitizing an existing layer
-----------------------------
+============================
 
 By default, QGIS loads layers read-only. This is a safeguard to avoid
 accidentally editing a layer if there is a slip of the mouse.
@@ -219,7 +222,7 @@ available.
    check that your data source can accept all the changes.
 
 Adding Features
-...............
+---------------
 
 You can use the |capturePoint| :sup:`Add Feature`,
 |captureLine| :sup:`Add Feature` or |capturePolygon|
@@ -276,7 +279,7 @@ move existing features.
 .. index:: Current_Edits
 
 Current Edits
-.............
+-------------
 
 This feature allows the digitization of multiple layers. Choose
 |fileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you
@@ -291,7 +294,7 @@ The same functions are available for editing all layers of the project.
 .. index:: Node_Tool
 
 Node Tool
-.........
+---------
 
 For shapefile-based layers as well as SpatialLite, PostgreSQL/PostGIS, MSSQL Spatial, and Oracle Spatial tables, the
 |nodeTool| :sup:`Node Tool` provides manipulation capabilities of
@@ -319,7 +322,7 @@ not be able to tell which vertex is being edited.
    tab and select the appropriate entry.
 
 Basic operations
-................
+----------------
 
 .. index:: Nodes, Vertices, Vertex
 
@@ -338,7 +341,7 @@ feature by clicking on it. Red boxes will appear at each vertex of this feature.
   by clicking and dragging a rectangle around some vertices. When a vertex
   is selected, its color changes to blue. To add more vertices to the current
   selection, hold down the :kbd:`Ctrl` key while clicking. Hold down
-  :kbd:`Ctrl` or :kbd:`Shift` when clicking to toggle the selection state of
+  :kbd:`Ctrl` when clicking to toggle the selection state of
   vertices (vertices that are currently unselected will be selected as usual,
   but also vertices that are already selected will become unselected).
 * **Adding vertices**: To add a vertex, simply double click near an edge and
@@ -362,7 +365,7 @@ this is turned on. On-the-fly projection is also supported, and the node
 tool provides tooltips to identify a vertex by hovering the pointer over it.
 
 Cutting, Copying and Pasting Features
-.....................................
+-------------------------------------
 
 Selected features can be cut, copied and pasted between layers in the same
 QGIS project, as long as destination layers are set to |toggleEditing|
@@ -423,7 +426,7 @@ make sure the schemas match.
    and integer fields to dynamically accommodate for the length of the data to be inserted.
 
 Deleting Selected Features
-..........................
+--------------------------
 
 If we want to delete an entire polygon, we can do that by first selecting the
 polygon using the regular |select| :sup:`Select Single Feature` tool. You
@@ -439,7 +442,7 @@ giving us a one-level undo capability. Cut, copy, and paste work on the
 currently selected features, meaning we can operate on more than one at a time.
 
 Saving Edited Layers
-....................
+--------------------
 
 When a layer is in editing mode, any changes remain in the memory of QGIS.
 Therefore, they are not committed/saved immediately to the data source or disk.
@@ -464,7 +467,7 @@ you to adjust your edits and try again.
 .. _sec_advanced_edit:
 
 Advanced digitizing
--------------------
+===================
 
 .. following provides space between header and table!!
 
@@ -498,7 +501,7 @@ Table Advanced Editing: Vector layer advanced editing toolbar
 
 
 Undo and Redo
-.............
+-------------
 
 The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you
 to undo or redo vector editing operations. There is also a dockable
@@ -528,7 +531,7 @@ the history list. All features will be reverted to the state they were in
 after the selected operation.
 
 Rotate Feature(s)
-.................
+-----------------
 
 Use |rotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple features
 in the map canvas. Press the |rotateFeature|:sup:`Rotate Feature(s)` icon and then
@@ -544,7 +547,7 @@ If you hold :kbd:`Shift` before clicking on the map, the rotation will be done
 in 45 degree steps, which can be modified afterwards in the user input widget.
 
 Simplify Feature
-................
+----------------
 
 The |simplifyFeatures| :sup:`Simplify Feature` tool allows you to reduce the
 number of vertices of a feature, as long as the geometry doesn't change. With the
@@ -558,7 +561,7 @@ The tolerance you used will be saved when leaving a project or when leaving an e
 So you can go back to the same tolerance the next time when simplifying a feature.
 
 Add Ring
-........
+--------
 
 You can create :index:`ring polygons` using the |addRing|
 :sup:`Add Ring` icon in the toolbar. This means that inside an existing area, it
@@ -567,14 +570,14 @@ only the area between the boundaries of the outer and inner polygons remains
 as a ring polygon.
 
 Add Part
-........
+--------
 
 You can |addPart| :sup:`add part` polygons to a selected
 :index:`multipolygon`. The new part polygon must be digitized outside
 the selected multi-polygon.
 
 Fill Ring
-.........
+---------
 
 You can use the |fillRing| :sup:`Fill Ring` function to add a ring to
 a polygon and add a new feature to the layer at the same time. Thus you need not
@@ -582,7 +585,7 @@ first use the |addRing| :sup:`Add Ring` icon and then the
 |capturePolygon| :sup:`Add feature` function anymore.
 
 Delete Ring
-...........
+-----------
 
 The |deleteRing| :sup:`Delete Ring` tool allows you to delete ring polygons
 inside an existing area. This tool only works with polygon layers. It doesn't
@@ -591,7 +594,7 @@ can be used on polygon and multi-polygon features. Before you select the
 vertices of a ring, adjust the vertex edit tolerance.
 
 Delete Part
-...........
+-----------
 
 The |deletePart| :sup:`Delete Part` tool allows you to delete parts from
 multifeatures (e.g., to delete polygons from a multi-polygon feature). It won't
@@ -600,7 +603,7 @@ tool works with all multi-part geometries: point, line and polygon. Before you
 select the vertices of a part, adjust the vertex edit tolerance.
 
 Reshape Features
-................
+----------------
 
 You can reshape line and polygon features using the |reshape|
 :sup:`Reshape Features` icon on the toolbar. It replaces the line or polygon
@@ -627,7 +630,7 @@ the polygon with a right click.
 
 
 Offset Curves
-.............
+-------------
 
 The |offsetCurve| :sup:`Offset Curve` tool creates parallel shifts of line layers.
 The tool can be applied to the edited layer (the geometries are modified)
@@ -646,7 +649,7 @@ you to configure some parameters like **Join style**, **Quadrant segments**,
 .. index:: Split_Features
 
 Split Features
-..............
+--------------
 
 You can split features using the |splitFeatures| :sup:`Split Features`
 icon on the toolbar. Just draw a line across the feature you want to split.
@@ -654,14 +657,14 @@ icon on the toolbar. Just draw a line across the feature you want to split.
 .. index:: Merge_Selected_Features
 
 Split parts
-...........
+-----------
 
 In QGIS it is possible to split the parts of a multi part feature so that the
 number of parts is increased. Just draw a line across the part you want to split using
 the |splitParts| :sup:`Split Parts` icon.
 
 Merge selected features
-.......................
+-----------------------
 
 The |mergeFeatures| :sup:`Merge Selected Features` tool allows you to merge
 features. A new dialog will allow you to choose which value to choose between each
@@ -672,7 +675,7 @@ a multipolygon will be created.
 .. index:: Merge_Attributes_of_Selected_Features
 
 Merge attributes of selected features
-.....................................
+-------------------------------------
 
 The |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` tool
 allows you to :index:`merge attributes of features` with common boundaries and
@@ -685,7 +688,7 @@ As a result, all selected objects have the same attribute entries.
 .. index:: Rotate_Point_symbols
 
 Rotate Point Symbols
-....................
+--------------------
 
 .. % FIXME change, if support in new symbology is available, too
 
@@ -718,7 +721,7 @@ button again, the value will be updated in the attribute table.
    degree steps.
 
 The Advanced Digitizing panel
------------------------------
+=============================
 
 When capturing new geometries or geometry parts you also have the possibility to use
 the Advanced Digitizing panel. You can digitize lines exactly parallel or at a specific angle
@@ -744,7 +747,7 @@ The tools are not enabled if the map view is in geographic coordinates.
 .. _sec_create_vector:
 
 Creating new Vector layers
---------------------------
+==========================
 
 QGIS allows you to create new shapefile layers, new SpatiaLite layers, new
 GPX layers and New Temporary Scratch Layers. Creation of a new GRASS layer is supported within the GRASS plugin.
@@ -752,7 +755,7 @@ Please refer to section :ref:`creating_new_grass_vectors` for more information
 on creating GRASS vector layers.
 
 Creating a new Shapefile layer
-..............................
+------------------------------
 
 To create a new shape layer for editing, choose :menuselection:`New -->`
 |newVectorLayer| :menuselection:`New Shapefile Layer...` from the
@@ -791,7 +794,7 @@ same way as described in section :ref:`sec_edit_existing_layer` above.
 .. _vector_create_spatialite:
 
 Creating a new SpatiaLite layer
-...............................
+-------------------------------
 
 To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
 |newSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from the
@@ -829,7 +832,7 @@ Further management of SpatiaLite layers can be done with the DB Manager. See
 .. _vector_create_gpx:
 
 Creating a new GPX layer
-.........................
+-------------------------
 
 To create a new GPX file, you need to load the GPS plugin first. :menuselection:`Plugins -->`
 |showPluginManager| :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
@@ -844,7 +847,7 @@ new GPX layer.
 .. _vector_new_scratch_layer:
 
 Creating a new Temporary Scratch Layer
-......................................
+--------------------------------------
 
 Empty, editable memory layers can be defined using :menuselection:`Layer -->
 Create Layer --> New Temporary Scratch Layer`. Here you can even create

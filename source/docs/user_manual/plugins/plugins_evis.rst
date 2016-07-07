@@ -5,8 +5,10 @@
 eVis Plugin
 ===========
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 (This section is derived
 from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) User's Guide. American
@@ -14,7 +16,7 @@ Museum of Natural History, Center for Biodiversity and Conservation. Available
 from http://biodiversityinformatics.amnh.org/, and released under the GNU FDL.)
 
 The Biodiversity Informatics Facility at the American Museum of Natural History's
-(AMNH) Center for Biodiversity and Conservation (CBC) 
+(AMNH) Center for Biodiversity and Conservation (CBC)
 has developed the Event Visualization Tool (eVis), another software tool to add
 to the suite of conservation monitoring and decision support tools for guiding
 protected area and landscape planning. This plugin enables users to easily link

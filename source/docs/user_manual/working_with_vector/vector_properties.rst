@@ -6,8 +6,10 @@
 The Vector Properties Dialog
 *****************************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The :guilabel:`Layer Properties` dialog for a vector layer provides general
 settings to manage appearance of layer features in the map (symbology, labeling,
@@ -210,6 +212,14 @@ See :ref:`symbol-selector` for further information about symbol representation.
 
    Single symbol line properties
 
+.. tip:: **edit style directly from layer panel**
+
+   If in your **Layers Panel** you have layers with categories defined through
+   categorized, graduated or rule-based style mode, you can quickly change the
+   fill color of the symbol of the categories by right-clicking on a category
+   and choose the color you prefer from a |colorWheel| :sup:`color wheel` menu.
+   Right-clicking on a category will also give you access to the options **Hide
+   all items**, **Show all items** **and Edit symbol**.
 
 .. index:: Categorized_Renderer, Renderer_Categorized
 

@@ -5,8 +5,10 @@
 GPS Plugin
 ==========
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 .. _`whatsgps`:
 

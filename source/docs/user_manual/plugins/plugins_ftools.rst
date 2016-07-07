@@ -5,8 +5,10 @@
 fTools Plugin
 =============
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The goal of the fTools Python plugin is to provide a one-stop resource for many
 common vector-based GIS tasks, without the need for additional software,

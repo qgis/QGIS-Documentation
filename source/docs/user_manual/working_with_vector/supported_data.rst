@@ -3,8 +3,10 @@
 Supported Data Formats
 ======================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 QGIS uses the OGR library to read and write vector data formats,
 including ESRI shapefiles, MapInfo and MicroStation file formats, AutoCAD DXF,
@@ -253,6 +255,24 @@ Some items to note about the text file:
 #. The X coordinates are contained in the ``X`` field.
 #. The Y coordinates are contained in the ``Y`` field.
 
+Others valuable informations for advanced users
+...............................................
+
+Features with curved geometries (CircularString, CurvePolygon and CompoundCurve) are
+supported. Here are three examples of such geometry types as a delimited text
+with WKT geometries::
+
+  Label;WKT_geom
+  CircularString;CIRCULARSTRING(268 415,227 505,227 406)
+  CurvePolygon;CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))
+  CompoundCurve;COMPOUNDCURVE((5 3, 5 13), CIRCULARSTRING(5 13, 7 15,
+    9 13), (9 13, 9 3), CIRCULARSTRING(9 3, 7 1, 5 3))
+
+Delimited Text supports also Z and M coordinates in geometries::
+
+   LINESTRINGM(10.0 20.0 30.0, 11.0 21.0 31.0)
+
+
 .. _vector_loading_csv:
 
 Loading a delimited text file
@@ -315,7 +335,7 @@ Additionally, you can enable:
 
 .. index:: OSM, OpenStreetMap
 
-.. _vactor_osm:
+.. _vector_osm:
 
 OpenStreetMap data
 ------------------
@@ -410,6 +430,17 @@ Optionally, you can activate the following checkboxes:
 
 Once all parameters and options are set, you can test the connection
 by clicking on the **[Test Connect]** button.
+
+.. tip:: **Use estimated table metadata to speed up operations**
+
+   When initializing layers, various queries may be needed to establish the
+   characteristics of the geometries stored in the database table. When the
+   :guilabel:`Use estimated table metadata` option is checked, these queries
+   examine only a sample of the rows and use the table statistics, rather than
+   the entire table. This can drastically speed up operations on large datasets,
+   but may result in incorrect characterization of layers (eg. the feature count
+   of filtered layers will not be accurately determined) and may even cause strange
+   behaviour in case columns that are supposed to be unique actually are not.
 
 .. _vector_loading_postgis:
 
@@ -704,7 +735,7 @@ right clicking the layer in the legend. Then, click on :menuselection:`Save as..
 define the name of the output file, and select 'SpatiaLite' as format and the CRS.
 Also, you can select 'SQLite' as format and then add ``SPATIALITE=YES`` in the
 OGR data source creation option field. This tells OGR to create a SpatiaLite
-database. See also http://www.gdal.org/ogr/drv_sqlite.html.
+database. See :ref:`general_saveas` and http://www.gdal.org/ogr/drv_sqlite.html.
 
 QGIS also supports editable views in SpatiaLite.
 

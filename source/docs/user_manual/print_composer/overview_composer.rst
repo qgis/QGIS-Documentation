@@ -6,9 +6,10 @@
  Overview of the Print Composer
 ********************************
 
-.. contents::
-   :local:
+.. only:: html
 
+   .. contents::
+      :local:
 
 The Print Composer provides growing layout and printing capabilities. It allows
 you to add elements such as the QGIS map canvas, text labels, images, legends,

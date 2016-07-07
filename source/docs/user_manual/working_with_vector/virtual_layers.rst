@@ -7,8 +7,10 @@
 Virtual layers
 ==============
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 A special kind of vector layer allows you to define a layer as the result of an
 advanced query, using the SQL language on any number of other vector layers that

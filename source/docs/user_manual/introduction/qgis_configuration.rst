@@ -4,8 +4,10 @@
 QGIS Configuration
 ******************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 QGIS is highly configurable through the :menuselection:`Settings` menu. Choose
 between Panels, Toolbars, Project Properties, Options and Customization.
@@ -659,6 +661,8 @@ from the destination computer in order to import the ``.ini`` file.
 You can also run :ref:`command line tools <custom_commandline>` and save various
 setups for different use cases as well.
 
+.. _tip_restoring_configuration:
+
 .. tip:: **Easily restore predefined QGIS**
 
    The initial QGIS GUI configuration can be restored by one of the methods below:
@@ -666,8 +670,11 @@ setups for different use cases as well.
    * unchecking |checkbox| :guilabel:`Enable customization` option in the
      Customization dialog or click the |selectAllTree| :sup:`Check All` button
    * pressing the **[Reset]** button in the **QSettings** frame under
-     :menuselection:`Settings --> Options... --> System` menu
+     :menuselection:`Settings --> Options` menu, :guilabel:`System` tab
    * launching QGIS at a command prompt with the following command line
      ``qgis --nocustomization``
-   * setting to ``false`` the value of :guilabel:`UI --> Customization --> Enabled` variable
-     under :menuselection:`Settings --> Options... --> Advanced` menu.
+   * setting to ``false`` the value of :guilabel:`UI --> Customization --> Enabled`
+     variable under :menuselection:`Settings --> Options` menu, :guilabel:`Advanced` tab.
+
+   In most cases, you need to restart QGIS in order to have the change applied.
+     
