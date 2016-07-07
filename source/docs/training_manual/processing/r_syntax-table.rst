@@ -51,7 +51,6 @@ Input parameters
 +----------------+----------------------------------+-------------------------------------------------------------------------------+
 
 Any of the input could be also **OPTIONAL**, that means that you have a handy way to tell the script to ignore this parameter.
->>>>>>> upstream/master
 
 In order to set an input as optional, you just have to add the string ``optional`` **before** the input, e.g::
 
