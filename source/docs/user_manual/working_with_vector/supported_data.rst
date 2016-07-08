@@ -825,7 +825,7 @@ Optionally, you can activate following checkboxes:
 *  |checkbox| :guilabel:`Only existing geometry types` Only list the existing
    geometry types and don't offer to add others.
 
-.. warning:
+.. warning::
 
    In the :guilabel:`Authentication` tab, saving **username** and **password** 
    will keep unprotected credentials in the connection configuration. Those
