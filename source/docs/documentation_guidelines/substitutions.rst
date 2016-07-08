@@ -151,8 +151,8 @@ Icon                          Substitution                       Icon           
 |capturePoint|                ``|capturePoint|``                 |capturePolygon|               ``|capturePolygon|``
 |captureLine|                 ``|captureLine|``
 |circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
-|nodeTool|                    ``|nodeTool|``                     |moveFeature|                  ``|moveFeature|``
-|deleteSelected|              ``|deleteSelected|``
+|nodeTool|                    ``|nodeTool|``                     |deleteSelected|               ``|deleteSelected|``
+|moveFeature|                 ``|moveFeature|``                  |rotateFeature|                ``|rotateFeature|``
 |simplifyFeatures|            ``|simplifyFeatures|``             |reshape|                      ``|reshape|``
 |addRing|                     ``|addRing|``                      |addPart|                      ``|addPart|``
 |fillRing|                    ``|fillRing|``
@@ -247,6 +247,7 @@ Icon                            Substitution                        Icon        
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
 |gpsTrackPolarChart|            ``|gpsTrackPolarChart|``            |tracking|                      ``|tracking|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
+|sum|                           ``|sum|``
 ==============================  ==================================  ==============================  ==================================
 
 
