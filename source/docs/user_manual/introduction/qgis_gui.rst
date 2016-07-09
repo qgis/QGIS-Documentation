@@ -36,7 +36,7 @@ The QGIS GUI is divided into five areas:
 
 #. Menu Bar
 #. Tool Bar
-#. Layers Panel
+#. Panels
 #. Map View
 #. Status Bar
 
@@ -47,7 +47,7 @@ context help.
 .. _label_menubar:
 
 Menu Bar
---------
+========
 
 .. index::
    single:menus
@@ -67,7 +67,7 @@ appear if the corresponding plugin is loaded. For more information about tools
 and toolbars, see section :ref:`label_toolbars`.
 
 Project
-........
+-------
 
 =======================================================  ====================  ==========================================  ===============================
 Menu Option                                              Shortcut              Reference                                   Toolbar
@@ -88,7 +88,7 @@ Menu Option                                              Shortcut              R
 =======================================================  ====================  ==========================================  ===============================
 
 Edit
-....
+----
 
 ====================================================================  ====================  ==========================================  ===============================
 Menu Option                                                           Shortcut              Reference                                   Toolbar
@@ -124,7 +124,7 @@ you will enable the ``Add Feature`` icon in the :menuselection:`Edit` menu
 depending on the layer type (point, line or polygon).
 
 Edit (extra)
-............
+------------
 
 =======================================================  ====================  ==========================================  ===============================
 Menu Option                                              Shortcut              Reference                                   Toolbar
@@ -135,7 +135,7 @@ Menu Option                                              Shortcut              R
 =======================================================  ====================  ==========================================  ===============================
 
 View
-....
+----
 
 =======================================================  ====================  ==========================================  ===============================
 Menu Option                                              Shortcut              Reference                                   Toolbar
@@ -165,7 +165,7 @@ Menu Option                                              Shortcut              R
 =======================================================  ====================  ==========================================  ===============================
 
 Layer
-.....
+-----
 
 ============================================================  ====================  ==========================================  ===============================
 Menu Option                                                   Shortcut              Reference                                   Toolbar
@@ -200,7 +200,7 @@ Menu Option                                                   Shortcut          
 ============================================================  ====================  ==========================================  ===============================
 
 Settings
-........
+--------
 
 =======================================================  ====================  ==========================================  ===============================
 Menu Option                                              Shortcut              Reference                                   Toolbar
@@ -214,7 +214,7 @@ Menu Option                                              Shortcut              R
 =======================================================  ====================  ==========================================  ===============================
 
 Plugins
-.......
+-------
 
 ======================================================================  ====================  ===================================  ===============================
 Menu Option                                                             Shortcut              Reference                            Toolbar
@@ -226,7 +226,7 @@ Menu Option                                                             Shortcut
 When starting QGIS for the first time not all core plugins are loaded.
 
 Vector
-......
+------
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
@@ -242,7 +242,7 @@ Menu Option                                                     Shortcut        
 When starting QGIS for the first time not all core plugins are loaded.
 
 Raster
-......
+------
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
@@ -255,7 +255,7 @@ When starting QGIS for the first time not all core plugins are loaded.
 
 
 Database
-........
+--------
 
 ===============================================  ====================  ==========================================  ===============================
 Menu Option                                      Shortcut              Reference                                   Toolbar
@@ -267,7 +267,7 @@ When starting QGIS for the first time not all core plugins are loaded.
 
 
 Web
-...
+---
 
 ===============================================  ====================  ==========================================  ===============================
 Menu Option                                      Shortcut              Reference                                   Toolbar
@@ -279,7 +279,7 @@ When starting QGIS for the first time not all core plugins are loaded.
 
 
 Processing
-..........
+----------
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
@@ -295,7 +295,7 @@ Menu Option                                                     Shortcut        
 When starting QGIS for the first time not all core plugins are loaded.
 
 Help
-....
+----
 
 =======================================================  ====================  ==========================================  ===============================
 Menu Option                                              Shortcut              Reference                                   Toolbar
@@ -332,6 +332,29 @@ has different content and its items have to be found here:
 
 .. See Appendix :ref:`app_menu` for complete descriptions of the menu items.
 
+.. _sec_panels_and_toolbars:
+
+Panels and Toolbars
+===================
+
+In the :menuselection:`Panels-->` menu, you can switch on and off QGIS widgets.
+The :menuselection:`Toolbars-->` menu provides the possibility to switch on
+and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
+
+These menus are in |nix| :menuselection:`Settings` or |win|
+:menuselection:`View`.
+
+.. _figure_panels_toolbars:
+
+.. only:: html
+
+   **Figure Panels and Toolbars:**
+
+.. figure:: /static/user_manual/introduction/panels_and_toolbars.png
+   :align: center
+
+   The Panels and Toolbars menu
+
 .. _`label_toolbars`:
 
 Toolbar
@@ -345,22 +368,21 @@ additional tools for interacting with the map. Each toolbar item has pop-up help
 available. Hold your mouse over the item and a short description of the tool's
 purpose will be displayed.
 
-Every menu bar can be moved around according to your needs. Additionally,
-menu bars can be switched off using the right mouse button context menu, or by
-holding the mouse over the toolbars (read also :ref:`sec_panels_and_toolbars`).
+Every toolbar can be moved around according to your needs. Additionally,
+they can be switched off using the right mouse button context menu, or by
+holding the mouse over the toolbars.
 
 .. index::
    single:layout toolbars
 
-.. tip::
-        **Restoring toolbars**
+.. tip:: **Restoring toolbars**
 
-        If you have accidentally hidden a toolbar, you can get it
-        back by choosing menu option :menuselection:`View --> Toolbars -->`
-        (or |nix| :menuselection:`Settings --> Toolbars -->`).
-        If for some reason a toolbar (or any other widget) totally disappears
-        from the interface, you'll find tips to get it back at :ref:`restoring
-        initial GUI <tip_restoring_configuration>`.
+   If you have accidentally hidden a toolbar, you can get it
+   back by choosing menu option :menuselection:`View --> Toolbars -->`
+   (or |nix| :menuselection:`Settings --> Toolbars -->`).
+   If for some reason a toolbar (or any other widget) totally disappears
+   from the interface, you'll find tips to get it back at :ref:`restoring
+   initial GUI <tip_restoring_configuration>`.
 
 .. _`label_legend`:
 
@@ -473,7 +495,7 @@ Option                                                            Vector Layer  
 |openTable| :menuselection:`Open Attribute Table`                 |checkbox|             \                     \
 |toggleEditing| :menuselection:`Toggle Editing`                   |checkbox|             \                     \
 |allEdits| :menuselection:`Current Edits -->`                     |checkbox|             \                     \
-                                                                  (in Edit mode)                                     
+                                                                  (in Edit mode)
 :menuselection:`Save As...`                                       |checkbox|             |checkbox|            \
 :menuselection:`Save As Layer Definition File...`                 |checkbox|             |checkbox|            |checkbox|
 :menuselection:`Filter`                                           |checkbox|             \                     \
@@ -531,7 +553,7 @@ as sub-item), the following options are available at layer level or class level:
   Double-clicking on a feature does also open the :guilabel:`Symbol Selector` dialog.
 * a :ref:`color-selector` widget with a **Color Wheel** from which you can click a
   color and have it automatically update the symbol fill color. For convenience,
-  **Recent colors** are available at the bottom of the color wheel. 
+  **Recent colors** are available at the bottom of the color wheel.
 * a |showAllLayers| :guilabel:`Show All Items` and |hideAllLayers| :guilabel:`Hide All
   Items` to toggle on or off the visibility of all the classes of features. This avoids
   (un)checking items one by one.
@@ -543,15 +565,15 @@ as sub-item), the following options are available at layer level or class level:
     are of the same type (vector vs raster) as the original layer and,
     in case of vector, have the same geometry type (point, line or polygon).
 
- 
+
 .. _layer_order:
 
 Working with the Legend independent layer order
-...............................................
+-----------------------------------------------
 
 There is a panel that allows you to define an independent drawing order for
 the layers panel. You can activate it in the menu
-:menuselection:`Settings --> Panels --> Layer order`. This feature allows you
+:menuselection:`Settings --> Panels --> Layer Order Panel`. This feature allows you
 to, for instance, order your layers in order of importance, but still display
 them in the correct order (see figure_layer_order_). Checking the |checkbox|
 :guilabel:`Control rendering order` box underneath the list of layers will
@@ -568,10 +590,52 @@ cause a revert to default behavior.
 
     Define a legend independent layer order
 
+.. index::
+   single:Statistic
+
+.. _`statistical_summary`:
+
+Statistical Summary Panel
+--------------------------
+
+This panel can show some statistics on a specific vector layers. The panel
+allows users to choose:
+
+* the vector layer;
+* the column or the expression;
+* filter statistics to selected features;
+* refresh the informations;
+* the statistics information to display with the bottom right button;
+
+.. index::
+   single:Map overview
+
+QGIS Overview Panel
+--------------------
+
+In QGIS, you can use an overview panel that provides a full extent view of
+layers added to it. Within the view is a rectangle showing the current map
+extent. This allows you to quickly determine which area of the map you are
+currently viewing. Note that labels are not rendered to the map overview even
+if the layers in the map overview have been set up for labelling. If you click
+and drag the red rectangle in the overview that shows your current extent, the
+main map view will update accordingly.
+
+
+.. index::
+   single:Log messages
+
+Log Messages Panel
+-------------------
+
+When loading or processing some operations, you can track and follow messages
+that appear in different tabs using the |messageLog| Log Messages Panel.
+It can be activated using the most right icon in the bottom status bar.
+
 .. _`label_mapview`:
 
 Map View
---------
+========
 
 .. index::`map view`
 
@@ -602,7 +666,7 @@ changes you make in the legend area.
    **Panning the Map with the Arrow Keys and Space Bar**
 
    .. index::
-      single:pan arrow keys
+      single: pan arrow keys
 
    You can use the arrow keys to pan the map. Place the mouse cursor inside
    the map area and click on the right arrow key to pan east, left arrow key to
@@ -616,7 +680,7 @@ changes you make in the legend area.
 .. _`label_statusbar`:
 
 Status Bar
-----------
+==========
 
 The status bar provides you with general information about the map view,
 and actions processed or available and offers you tools to manage the map view.

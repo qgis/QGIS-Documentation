@@ -10,79 +10,15 @@ QGIS Configuration
       :local:
 
 QGIS is highly configurable through the :menuselection:`Settings` menu. Choose
-between Panels, Toolbars, Project Properties, Options and Customization.
+between Project Properties, Options and Customization.
 
 .. note:: QGIS follows desktop guidelines for the location of options and project
    properties item. Consequently related to the OS you are using, location of some
-   of items described above could be located in the :menuselection:`View` menu
-   (Panels and Toolbars) or in :menuselection:`Project` for Options.
+   of items described below could be in the :menuselection:`Project`
+   or the :menuselection:`Settings` menu.
 
 ..  FIXME: please add more introduction here
 
-.. _sec_panels_and_toolbars:
-
-Panels and Toolbars
-===================
-
-In the :menuselection:`Panels-->` menu, you can switch on and off QGIS widgets.
-The :menuselection:`Toolbars-->` menu provides the possibility to switch on
-and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
-
-These menus are in |nix| :menuselection:`Settings` or |win|
-:menuselection:`View`.
-
-.. _figure_panels_toolbars:
-
-.. only:: html
-
-   **Figure Panels and Toolbars:**
-
-.. figure:: /static/user_manual/introduction/panels_and_toolbars.png
-   :align: center
-
-   The Panels and Toolbars menu
-
-.. index::
-   single:Statistic
-
-.. _`statistical_summary`:
-
-Statistical Summary Panel
---------------------------
-
-This panel can show some statistics on a specific vector layers. The panel
-allows users to choose:
-
-* the vector layer;
-* the column or the expression;
-* filter statistics to selected features;
-* refresh the informations;
-* the statistics information to display with the bottom right button;
-
-.. index::
-   single:Map overview
-
-QGIS Overview Panel
---------------------
-
-In QGIS, you can use an overview panel that provides a full extent view of
-layers added to it. Within the view is a rectangle showing the current map
-extent. This allows you to quickly determine which area of the map you are
-currently viewing. Note that labels are not rendered to the map overview even
-if the layers in the map overview have been set up for labelling. If you click
-and drag the red rectangle in the overview that shows your current extent, the
-main map view will update accordingly.
-
-
-.. index::
-   single:Log messages
-
-Log Messages Panel
--------------------
-
-When loading or processing some operations, you can track and follow messages
-that appear in different tabs using the |messageLog| Log Messages Panel.
-It can be activated using the most right icon in the bottom status bar.
 
 Project Properties
 ==================
