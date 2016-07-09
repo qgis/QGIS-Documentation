@@ -179,40 +179,42 @@ not read-only).
 In general, tools for editing vector layers are divided into a digitizing and an advanced
 digitizing toolbar, described in section :ref:`sec_advanced_edit`. You can
 select and unselect both under :menuselection:`View --> Toolbars -->`.
-Using the basic digitizing tools, you can perform the following functions:
+Using the basic :index:`digitizing tools`, you can perform the following functions:
+
 
 .. _table_editing:
 
-+------------------+----------------------------------+--------------------+----------------------------------+
-| Icon             | Purpose                          | Icon               | Purpose                          |
-+==================+==================================+====================+==================================+
-| |allEdits|       | Current edits                    | |toggleEditing|    | Toggle editing                   |
-+------------------+----------------------------------+--------------------+----------------------------------+
-| |capturePoint|   | Adding Features: Capture Point   | |captureLine|      | Adding Features: Capture Line    |
-+------------------+----------------------------------+--------------------+----------------------------------+
-| |capturePolygon| | Adding Features: Capture Polygon | |moveFeature|      | Move Feature                     |
-+------------------+----------------------------------+--------------------+----------------------------------+
-| |nodeTool|       | Node Tool                        | |deleteSelected|   | Delete Selected                  |
-+------------------+----------------------------------+--------------------+----------------------------------+
-| |editCut|        | Cut Features                     | |editCopy|         | Copy Features                    |
-+------------------+----------------------------------+--------------------+----------------------------------+
-| |editPaste|      | Paste Features                   | |saveEdits|        | Save layer edits                 |
-+------------------+----------------------------------+--------------------+----------------------------------+
++------------------------------+-----------------------------------+--------------------------+----------------------------------+
+| Icon                         | Purpose                           | Icon                     | Purpose                          |
++==============================+===================================+==========================+==================================+
+| |allEdits|                   | Current edits                     | |toggleEditing|          | Toggle editing                   |
++------------------------------+-----------------------------------+--------------------------+----------------------------------+
+| |capturePoint|               | Add Feature: Capture Point        | |captureLine|            | Add Feature: Capture Line        |
++------------------------------+-----------------------------------+--------------------------+----------------------------------+
+| |capturePolygon|             | Add Feature: Capture Polygon      | |moveFeature|            | Move Feature                     |
++------------------------------+-----------------------------------+--------------------------+----------------------------------+
+| |circularStringCurvePoint|   | Add Circular String               | |circularStringRadius|   | Add Circular String By Radius    |
++------------------------------+-----------------------------------+--------------------------+----------------------------------+
+| |nodeTool|                   | Node Tool                         | |deleteSelected|         | Delete Selected                  |
++------------------------------+-----------------------------------+--------------------------+----------------------------------+
+| |editCut|                    | Cut Features                      | |editCopy|               | Copy Features                    |
++------------------------------+-----------------------------------+--------------------------+----------------------------------+
+| |editPaste|                  | Paste Features                    | |saveEdits|              | Save layer edits                 |
++------------------------------+-----------------------------------+--------------------------+----------------------------------+
 
 Table Editing: Vector layer basic editing toolbar
 
 Note that while using any of the digitizing tools, you can still :ref:`zoom or pan
 <zoom-pan>` in the map canvas without losing the focus on the tool.
 
-All editing sessions start by choosing the |toggleEditing|
-:sup:`Toggle editing` option. This can be found in the context menu
-after right clicking on the legend entry for a given layer.
+All :index:`editing` sessions start by choosing the |toggleEditing| :sup:`Toggle editing`
+option found in the context menu of a given layer, from the attribute table dialog, the
+digitizing toolbar or the :menuselection:`Edit` menu.
 
-Alternatively, you can use the :index:`Toggle Editing` |toggleEditing|
-:sup:`Toggle editing` button from the digitizing toolbar to start or stop the
-editing mode. Once the layer is in edit mode, markers will appear at the
-vertices, and additional tool buttons on the editing toolbar will become
-available.
+Once the layer is in edit mode, additional tool buttons on the editing toolbar
+will become available and markers will appear at the vertices of all features
+unless :guilabel:`Show markers only for selected features` option under
+:menuselection:`Settings --> Options... --> Digitizing` menu is checked.
 
 .. _tip_save_regularly:
 
@@ -227,29 +229,55 @@ Adding Features
 You can use the |capturePoint| :sup:`Add Feature`,
 |captureLine| :sup:`Add Feature` or |capturePolygon|
 :sup:`Add Feature` icons on the toolbar to add new feature (point, line and
-polygon into the current layer. The next button allow users to add curved
-polygon. Curve can be setup either by the next vertex iwith
-|circularStringCurvePoint| :sup:`Add circular string` or with a radius
-|circularStringRadius| :sup:`Add circular string by radius`.
+polygon) into the current layer.
 
-.. note:: You can enabled the :guilabel:`Vertex Editor` panel to select more
-   easily a node in the circular string.
+The next buttons |circularStringCurvePoint| :sup:`Add circular string` or
+|circularStringRadius| :sup:`Add circular string by radius` allow users to add
+line or polygon features with a circular geometry. 
 
-For each feature, you first digitize the geometry, then enter its attributes.
+To :index:`create features` with these tools, you first digitize the geometry
+then enter its attributes.
 To digitize the geometry, left-click on the map area to create the first
 point of your new feature.
 
-For lines, polygons and circular string, keep on left-clicking for each additional
-point you wish to capture. When you have finished adding points, right-click
+For linear or curved geometries, keep on left-clicking for each additional
+point you wish to capture or use automatic tracing capability to accelerate
+the digitization. You can switch back and forth between linear 
+:guilabel:`Add feature` tool and curved :guilabel:`Add circular string...` tools
+to create compound curved geometry. Pressing :kbd:`Delete` or :kbd:`Backspace` key
+reverts the last node you add. When you have finished adding points, right-click
 anywhere on the map area to confirm you have finished entering the geometry of
 that feature.
 
+..  ToDo: add a reference to directly link to the tracing section when available
+
+.. note:: **Curved geometries are stored as such only in compatible data provider**
+
+   Although QGIS allows to digitize curved geometries within any editable
+   data format, you need to be using a data provider (e.g. PostGIS, GML or WFS)
+   that supports curves to have features stored as curved, otherwise QGIS
+   segmentizes the circular arcs. The memory layer provider also supports curves.
+
+.. index:: Rubber band
+
+.. tip:: **Customize the digitizing rubber band**
+
+   While capturing polygon, the by-default red rubber band can hide underlying
+   features or places you'd like to capture a point. This can be fixed by setting
+   a lower opacity (or alpha channel) to the rubber band's :guilabel:`Fill Color`
+   in :menuselection:`Settings --> Options --> Digitizing` menu.
+   You can also avoid the use of the rubber band by checking :guilabel:`Don't
+   update rubber band during node editing`.
+
 The attribute window will appear, allowing you to enter the information for
 the new feature. Figure_edit_2_ shows setting attributes for a fictitious new
-river in Alaska. In the :guilabel:`Digitizing` menu under the
-:menuselection:`Settings --> Options` menu, you can also activate |checkbox|
-:guilabel:`Suppress attributes pop-up windows after each created feature` and
-|checkbox| :guilabel:`Reuse last entered attribute values`.
+river in Alaska. However, in the :guilabel:`Digitizing` menu under the
+:menuselection:`Settings --> Options` menu, you can also activate:
+
+* |checkbox| :guilabel:`Suppress attributes pop-up windows after each created
+  feature` to avoid the form opening
+* or |checkbox| :guilabel:`Reuse last entered attribute values` to have fields
+  automatically filled at the opening of the form and just have to type changing values.
 
 .. _figure_edit_2:
 
@@ -260,56 +288,31 @@ river in Alaska. In the :guilabel:`Digitizing` menu under the
 .. figure:: /static/user_manual/working_with_vector/editDigitizing.png
    :align: center
 
-   Enter Attribute Values Dialog after digitizing a new vector
-   feature |nix|
+   Enter Attribute Values Dialog after digitizing a new vector feature
 
 With the |moveFeature| :sup:`Move Feature(s)` icon on the toolbar, you can
 move existing features.
 
-.. _tip_attributes_types:
-
-.. tip:: **Attribute Value Types**
-
-   For editing, the attribute types are validated during
-   entry. Because of this, it is not possible to enter a number into
-   a text column in the dialog :guilabel:`Enter Attribute Values` or vice
-   versa. If you need to do so, you should edit the attributes in a second
-   step within the :guilabel:`Attribute table` dialog.
-
-.. index:: Current_Edits
-
-Current Edits
--------------
-
-This feature allows the digitization of multiple layers. Choose
-|fileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you
-made in multiple layers. You also have the opportunity to
-|rollbackEdits| :guilabel:`Rollback for Selected Layers`, so that the
-digitization may be withdrawn for all selected layers.
-If you want to stop editing the selected layers, |cancelEdits| :guilabel:`Cancel for Selected Layer(s)`
-is an easy way.
-
-The same functions are available for editing all layers of the project.
 
 .. index:: Node_Tool
 
 Node Tool
 ---------
 
-For shapefile-based layers as well as SpatialLite, PostgreSQL/PostGIS, MSSQL Spatial, and Oracle Spatial tables, the
+For shapefile-based or MapInfo layers as well as SpatiaLite, PostgreSQL/PostGIS,
+MSSQL Spatial, and Oracle Spatial tables, the
 |nodeTool| :sup:`Node Tool` provides manipulation capabilities of
 feature vertices similar to CAD programs. It is possible to simply select
 multiple vertices at once and to move, add or delete them altogether.
-The node tool also works with 'on the fly' projection turned on, and it supports
+The node tool also works with 'on the fly' projection turned on and supports
 the topological editing feature. This tool is, unlike other tools in
 QGIS, persistent, so when some operation is done, selection stays
-active for this feature and tool. If the node tool is unable to find any
-features, a warning will be displayed.
+active for this feature and tool.
 
 It is important to set the property :menuselection:`Settings -->` |options|
 :menuselection:`Options --> Digitizing -->` :guilabel:`Search Radius:`
-|selectNumber| to a number greater than zero (i.e., 10). Otherwise, QGIS will
-not be able to tell which vertex is being edited.
+|selectNumber| to a number greater than zero. Otherwise, QGIS will
+not be able to tell which vertex is being edited and will display a warning.
 
 .. _tip_vertex_markers:
 
@@ -322,18 +325,12 @@ not be able to tell which vertex is being edited.
    tab and select the appropriate entry.
 
 Basic operations
-----------------
+................
 
 .. index:: Nodes, Vertices, Vertex
 
 Start by activating the |nodeTool| :sup:`Node Tool` and selecting a
 feature by clicking on it. Red boxes will appear at each vertex of this feature.
-
-.. Perhaps the error message mentioned below is in fact a bug, in which case the
-.. bug should be fixed rather than including this note Note that to select a
-.. polygon you must click one of its vertices or edges; clicking inside it will
-.. produce an error message. Once a feature is selected the following
-.. functionalities are available:
 
 
 * **Selecting vertices**: You can select vertices by clicking on them one
@@ -348,21 +345,41 @@ feature by clicking on it. Red boxes will appear at each vertex of this feature.
   a new vertex will appear on the edge near to the cursor. Note that the
   vertex will appear on the edge, not at the cursor position; therefore, it
   should be moved if necessary.
-* **Deleting vertices**: After selecting vertices for deletion, click the
-  :kbd:`Delete` key. Note that you cannot use the |nodeTool|
-  :sup:`Node Tool` to delete a complete feature; QGIS will ensure it retains
-  the minimum number of vertices for the feature type you are working on.
-  To delete a complete feature use the |deleteSelected|
-  :sup:`Delete Selected` tool.
-* **Moving vertices**: Select all the vertices you want to move. Click on
+* **Deleting vertices**: Select the vertices and click the
+  :kbd:`Delete` key. Deleting all the vertices of a feature generates, if
+  compatible with the datasource, a :index:`geometryless feature`. Note that
+  this doesn't delete the complete feature, just the geometry part;
+  To delete a complete feature use the |deleteSelected| :sup:`Delete Selected` tool.
+* **Moving vertices**: Select all the vertices you want to move, click on
   a selected vertex or edge and drag in the direction you wish to move. All
   the selected vertices will move together. If snapping is enabled, the whole
   selection can jump to the nearest vertex or line.
 
 Each change made with the node tool is stored as a separate entry in the
-Undo dialog. Remember that all operations support topological editing when
+:guilabel:`Undo` dialog. Remember that all operations support topological editing when
 this is turned on. On-the-fly projection is also supported, and the node
 tool provides tooltips to identify a vertex by hovering the pointer over it.
+
+.. _move_all_vertex:
+
+.. tip:: **Move features with precision**
+
+   The |moveFeature| :guilabel:`Move Feature` tool doesn't currently allow to
+   snap features while moving. Using the |nodeTool| :sup:`Node Tool`, select ALL
+   the vertices of the feature, click a vertex, drag and snap it to a target vertex:
+   the whole feature is moved and snapped to the other feature.
+
+The Vertex Editor
+..................
+
+With activating the :guilabel:`Node Tool` on a feature, QGIS opens the
+:guilabel:`Vertex Editor` panel listing all the vertices of the feature with
+their x, y (z, m if applicable) coordinates and r (for the radius, in case of
+circular geometry). Simply select a row in the table does select the corresponding
+vertex in the map canvas, and vice versa. Simply change a coordinate in the table
+and your vertex position is updated. You can also select multiple rows and delete
+them altogether.
+
 
 Cutting, Copying and Pasting Features
 -------------------------------------
@@ -371,14 +388,24 @@ Selected features can be cut, copied and pasted between layers in the same
 QGIS project, as long as destination layers are set to |toggleEditing|
 :sup:`Toggle editing` beforehand.
 
+.. index:: polygon_to_line; line_to_polygon
+
+.. _tip_polygon_to_line:
+
+.. tip:: **Transform polygon into line and vice-versa using copy/paste**
+
+   Copy a line feature and paste it in a polygon layer: QGIS pastes in the target
+   layer a polygon whose boundary corresponds to the closed geometry of the line
+   feature. This is a quick way to generate different geometries of the same data.
+
 .. index:: CSV, WKT
 
 Features can also be pasted to external applications as text. That is, the
 features are represented in CSV format, with the geometry data appearing in
-the OGC Well-Known Text (WKT) format.
+the OGC Well-Known Text (WKT) format. WKT features from outside QGIS can also be
+pasted to a layer within QGIS. 
 
-However, in this version of QGIS, text features from outside QGIS cannot be
-pasted to a layer within QGIS. When would the copy and paste function come
+When would the copy and paste function come
 in handy? Well, it turns out that you can edit more than one layer at a time
 and copy/paste features between layers. Why would we want to do this? Say
 we need to do some work on a new layer but only need one or two lakes, not
@@ -391,8 +418,8 @@ As an example, we will copy some lakes to a new layer:
 #. Load or create the layer you want to copy to (target layer)
 #. Start editing for target layer
 #. Make the source layer active by clicking on it in the legend
-#. Use the |select| :sup:`Select Single Feature` tool to select the
-   feature(s) on the source layer
+#. Use the |selectRectangle| :sup:`Select Features by area or single click`
+   tool to select the feature(s) on the source layer
 #. Click on the |editCopy| :sup:`Copy Features` tool
 #. Make the destination layer active by clicking on it in the legend
 #. Click on the |editPaste| :sup:`Paste Features` tool
@@ -407,7 +434,7 @@ make sure the schemas match.
 
 .. _tip_projections_and_pasting:
 
-.. tip:: **Congruency of Pasted Features**
+.. note:: **Congruency of Pasted Features**
 
    If your source and destination layers use the same projection, then the
    pasted features will have geometry identical to the source layer. However,
@@ -428,11 +455,12 @@ make sure the schemas match.
 Deleting Selected Features
 --------------------------
 
-If we want to delete an entire polygon, we can do that by first selecting the
-polygon using the regular |select| :sup:`Select Single Feature` tool. You
-can select multiple features for deletion. Once you have the selection set,
-use the |deleteSelected| :sup:`Delete Selected` tool to delete the
-features.
+If we want to delete an entire feature (attribute and geometry), we can do that
+by first selecting the geometry using the regular |selectRectangle| :sup:`Select
+Features by area or single click` tool. Selection can also be done from the attribute
+table. Once you have the selection set, press :kbd:`Delete` or :kbd:`Backspace`
+key or use the |deleteSelected| :sup:`Delete Selected` tool to delete the
+features. Multiple selected features can be deleted at once. 
 
 The |editCut| :sup:`Cut Features` tool on the digitizing toolbar can
 also be used to delete features. This effectively deletes the feature but
@@ -463,6 +491,21 @@ you to adjust your edits and try again.
    It is always a good idea to back up your data source before you start
    editing. While the authors of QGIS have made every effort to preserve the
    integrity of your data, we offer no warranty in this regard.
+
+.. index:: Current_Edits
+
+Saving multiple layers at once
+...............................
+
+This feature allows the digitization of multiple layers. Choose
+|fileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you
+made in multiple layers. You also have the opportunity to
+|rollbackEdits| :guilabel:`Rollback for Selected Layers`, so that the
+digitization may be withdrawn for all selected layers.
+If you want to stop editing the selected layers, |cancelEdits| :guilabel:`Cancel
+for Selected Layer(s)` is an easy way.
+
+The same functions are available for editing all layers of the project.
 
 .. _sec_advanced_edit:
 
