@@ -1,20 +1,28 @@
 .. _r-syntax:
 
+*******************************
 R Syntax in Processing scripts
-==============================
-Module contributed by Matteo Ghetta - founded by `Scuola Superiore Sant'Anna <http://www.sssup.it/landlab>`_
+*******************************
 
-Writing R scripts in Processing could be quite tricky because of the syntax that has to be adopted.
+Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna -
+FREEWAT project <http://www.freewat.eu>`_
+
+Writing R scripts in Processing could be quite tricky because of the syntax that
+has to be adopted.
 
 Each script starts with the **Input** and **Output** preceded with ``##``.
 
 Inputs
-------
-Before you specify teh inputs you can also set the algorithm group in which your script will be put. If the group already exists, the algorithm will be added to the other, else a new group will be automatically created:
+======
+
+Before you specify teh inputs you can also set the algorithm group in which your
+script will be put. If the group already exists, the algorithm will be added to
+the other, else a new group will be automatically created:
 
 1. group creation, ``##My Group=group``
 
-Then you have to specify the all the input types and eventually the additional parameters. You can have different inputs:
+Then you have to specify the all the input types and eventually the additional
+parameters. You can have different inputs:
 
 1. vector, ``##Layer = vector``
 2. vector Field, ``##F = Field Layer`` (where Layer is the name of the input Layer)
@@ -23,24 +31,28 @@ Then you have to specify the all the input types and eventually the additional p
 5. string, ``##Str = string``
 6. boolean, ``##Bol = boolean``
 
-you can also have a dropdown menu with all the parameters you want; the items must be separated with semi columns ``;``:
+you can also have a dropdown menu with all the parameters you want; the items
+must be separated with semi columns ``;``:
 
 7. ``##type=selection point;lines;point+lines``
 
 Outputs
--------
+=======
 As for the inputs, each output has to be defined at the beginning of the script:
 
 1. vector, ``##output= output vector``
 2. raster, ``##output= output raster``
 3. table, ``##output= output raster``
 4. plots, ``##showplot``
-5. R output in the *Result Viewer*, just put **inside** the script ``>`` **before** the output you want to display
+5. R output in the *Result Viewer*, just put **inside** the script ``>``
+   **before** the output you want to display
 
 
 Script body
------------
-The script body follows an R style syntax and the **Log** panel can help you if something went wrong with your script.
+===========
+
+The script body follows an R style syntax and the **Log** panel can help you if
+something went wrong with your script.
 
 **Remember** that in the script you have to load all the additional libraries::
 
@@ -48,8 +60,10 @@ The script body follows an R style syntax and the **Log** panel can help you if 
 
 
 Example with vector output
-**************************
-Let's take an algorithm from the online collection that creates random points from the extend of an input layer::
+--------------------------
+
+Let's take an algorithm from the online collection that creates random points from
+the extend of an input layer::
 
 
   ##Point pattern analysis=group
@@ -68,17 +82,21 @@ and get through the lines:
 3. ``Size`` is the **numerical** parameter with a default value of 10
 4. ``Output`` is the **vector** layer that will be created by the algorithm
 
-5. ``library(sp)`` loads the **sp** library (that should be already installed in your computer and that installation has to be made **in R**)
+5. ``library(sp)`` loads the **sp** library (that should be already installed in
+   your computer and that installation has to be made **in R**)
 
 6. call the ``spsample`` function of the ``sp`` library and pass to it all the input defined above
 7. create the output vector with the ``SpatialPointsDataFrame`` function
 
-That's it! Just run the algorithm with a vector layer you have in the QGIS Legend, choose a number of the random point and you will get them in the QGIS Map Canvas.
+That's it! Just run the algorithm with a vector layer you have in the QGIS Legend,
+choose a number of the random point and you will get them in the QGIS Map Canvas.
 
 
 Example with raster output
-**************************
-The following script will perform a basic ordinary kriging and will create a raster map of the interpolated values::
+--------------------------
+
+The following script will perform a basic ordinary kriging and will create a raster
+map of the interpolated values::
 
 
   ##Basic statistics=group
@@ -96,13 +114,16 @@ The following script will perform a basic ordinary kriging and will create a ras
   Output<-prediction
 
 
-from a vector and its field in input the algorithm will use the ``autoKrige`` function of the ``automap`` R package and it will first calculate the kriging model and then create a raster.
+from a vector and its field in input the algorithm will use the ``autoKrige``
+function of the ``automap`` R package and it will first calculate the kriging
+model and then create a raster.
 
 The raster is created with the ``raster`` function of the raster R package.
 
 
 Example with table output
-*************************
+-------------------------
+
 Let's edit the ``Summary Statistics`` algorithm so that the output is a table file (csv).
 
 The script body is the following::
@@ -125,13 +146,17 @@ The script body is the following::
   Stat<-Summary_statistics
 
 
-The third line specifies the **Vector Field** in input and the fourth line tells the algorithm that the output should be a table.
+The third line specifies the **Vector Field** in input and the fourth line tells
+the algorithm that the output should be a table.
 
-The last line will take the ``Stat`` object created in the script and convert it into a ``csv`` table.
+The last line will take the ``Stat`` object created in the script and convert it
+into a ``csv`` table.
 
 Example with console output
-***************************
-We can take the previous example and instead of creating a table, print the result in the **Result Viewer**::
+---------------------------
+
+We can take the previous example and instead of creating a table, print the result
+in the **Result Viewer**::
 
   ##Basic statistics=group
   ##Layer=vector
@@ -152,13 +177,15 @@ We can take the previous example and instead of creating a table, print the resu
 
 The script is exactly the same of above with just 2 edits:
 
-1. no more output specified (the fourth line has been removed)
-2. the last line begins with ``>`` that tells Processing to print the object in the result viewer
+#. no more output specified (the fourth line has been removed)
+#. the last line begins with ``>`` that tells Processing to print the object
+   in the result viewer
 
 
 Example with plot
-*****************
-Creating plots is very simple. You have to use the ``##showplot`` parameter as the following script shows::
+-----------------
+Creating plots is very simple. You have to use the ``##showplot`` parameter as
+the following script shows::
 
 
   ##Basic statistics=group
@@ -169,6 +196,7 @@ Creating plots is very simple. You have to use the ``##showplot`` parameter as t
   qqline(Layer[[Field]])
 
 
-the script takes a field of the vector layer in input and creates a *QQ Plot* to test the normality of the distribution.
+the script takes a field of the vector layer in input and creates a *QQ Plot* to
+test the normality of the distribution.
 
 The plot is automatically added to the *Result Viewer* of Processing.

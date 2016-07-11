@@ -355,12 +355,12 @@ holding the mouse over the toolbars (read also :ref:`sec_panels_and_toolbars`).
 .. tip::
         **Restoring toolbars**
 
-        If you have accidentally hidden all your toolbars, you can get them
-        back by choosing menu option :menuselection:`Settings --> Toolbars -->`.
-        If a toolbar disappears under Windows, you have to remove key
-        ``\HKEY_CURRENT_USER\Software\QGIS\qgis\UI\state`` in the registry.
-        When you restart QGIS, the key is written again with the default state,
-        and all toolbars are visible again.
+        If you have accidentally hidden a toolbar, you can get it
+        back by choosing menu option :menuselection:`View --> Toolbars -->`
+        (or |nix| :menuselection:`Settings --> Toolbars -->`).
+        If for some reason a toolbar (or any other widget) totally disappears
+        from the interface, you'll find tips to get it back at :ref:`restoring
+        initial GUI <tip_restoring_configuration>`.
 
 .. _`label_legend`:
 

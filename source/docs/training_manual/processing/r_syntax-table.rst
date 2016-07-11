@@ -1,15 +1,18 @@
 .. _r-syntax-table:
 
+**************************************
 R Syntax Summary table for Processing
-=====================================
+**************************************
 
-Module contributed by Matteo Ghetta - founded by `Scuola Superiore Sant'Anna <http://www.sssup.it/landlab>`_
+Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna -
+FREEWAT project <http://www.freewat.eu>`_
 
-Processing allows a lot of different input and output parameter that can be used in the script body.
+Processing allows a lot of different input and output parameter that can be used
+in the script body.
 Here a summary table:
 
 Input parameters
-----------------
+================
 
 +----------------+----------------------------------+-------------------------------------------------------------------------------+
 | Parameter      | Syntax example                   | Returning objects                                                             |
@@ -51,9 +54,11 @@ Input parameters
 | folder         | F = folder                       | path of the folder chosen, e.g. "/home/matteo/Downloads"                      |
 +----------------+----------------------------------+-------------------------------------------------------------------------------+
 
-Any of the input could be also **OPTIONAL**, that means that you have a handy way to tell the script to ignore this parameter.
+Any of the input could be also **OPTIONAL**, that means that you have a handy
+way to tell the script to ignore this parameter.
 
-In order to set an input as optional, you just have to add the string ``optional`` **before** the input, e.g::
+In order to set an input as optional, you just have to add the string ``optional``
+**before** the input, e.g::
 
   ##Layer = vector
   ##Field1 = Field Layer
@@ -61,8 +66,11 @@ In order to set an input as optional, you just have to add the string ``optional
 
 
 Output parameters
------------------
-Output parameters take the **Input** names you gave at the beginning of the script and write the object you want.
+=================
+
+Output parameters take the **Input** names you gave at the beginning of the script
+and write the object you want.
+
 
 +----------------+----------------------------------+
 | Parameter      | Syntax example                   |
@@ -76,9 +84,13 @@ Output parameters take the **Input** names you gave at the beginning of the scri
 | file           | Output = output file             |
 +----------------+----------------------------------+
 
-.. note:: for the plot input type, you can save the plot as ``png`` directly from the *Processing Result Viewer* or you can choose to save the plot directly from the algorithm interface.
+.. note:: for the plot input type, you can save the plot as ``png`` directly from
+   the *Processing Result Viewer* or you can choose to save the plot directly
+   from the algorithm interface.
 
 
 Examples
---------
-In order to better understand all the input and output parameters, please have a look at the :ref:`R Syntax chapter <r-syntax>`.
+========
+
+In order to better understand all the input and output parameters, please have a
+look at the :ref:`R Syntax chapter <r-syntax>`.

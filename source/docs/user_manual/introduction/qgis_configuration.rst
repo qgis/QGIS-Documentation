@@ -549,6 +549,13 @@ Locale Menu
 * |checkbox| :guilabel:`Overwrite system locale` and :guilabel:`Locale to use instead`
 * Information about active system locale
 
+Authentication
+--------------
+
+In the :guilabel:`Authentication` tab you can set authentication configurations
+and manage PKI certificates. See :ref:`authentication_index` for more
+details.
+
 Network Menu
 ------------
 
@@ -661,6 +668,8 @@ from the destination computer in order to import the ``.ini`` file.
 You can also run :ref:`command line tools <custom_commandline>` and save various
 setups for different use cases as well.
 
+.. _tip_restoring_configuration:
+
 .. tip:: **Easily restore predefined QGIS**
 
    The initial QGIS GUI configuration can be restored by one of the methods below:
@@ -668,8 +677,11 @@ setups for different use cases as well.
    * unchecking |checkbox| :guilabel:`Enable customization` option in the
      Customization dialog or click the |selectAllTree| :sup:`Check All` button
    * pressing the **[Reset]** button in the **QSettings** frame under
-     :menuselection:`Settings --> Options... --> System` menu
+     :menuselection:`Settings --> Options` menu, :guilabel:`System` tab
    * launching QGIS at a command prompt with the following command line
      ``qgis --nocustomization``
-   * setting to ``false`` the value of :guilabel:`UI --> Customization --> Enabled` variable
-     under :menuselection:`Settings --> Options... --> Advanced` menu.
+   * setting to ``false`` the value of :guilabel:`UI --> Customization --> Enabled`
+     variable under :menuselection:`Settings --> Options` menu, :guilabel:`Advanced` tab.
+
+   In most cases, you need to restart QGIS in order to have the change applied.
+     
