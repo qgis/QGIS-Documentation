@@ -2058,12 +2058,10 @@ or **Restore Default** style if you're not satisfied.
    Save Style in database Dialog
 
 
-Others Settings
+Other Setting
 ===============
 
-From many parts of the layer properties dialog (and also from many other dialogs),
-there are some features you'll often encounter. Some of them are presented below.
-
+.. index:: Paint effects
 .. _draw_effects:
 
 Draw effects
@@ -2072,16 +2070,17 @@ Draw effects
 In order to improve layer rendering and avoid (or at least reduce)
 the resort to other software for final rendering of maps, QGIS provides another
 powerful functionality: the |paintEffects| :guilabel:`Draw Effects` options,
-which adds :index:`paint effects` for customizing the visualization of vector
-layers.
+which adds paint effects for customizing the visualization of vector layers.
 
-The options are available at the whole layer level (in the :guilabel:`Layer rendering`
-group) and at feature level (in each symbol layer), and you can even combine
-both.
+The option is available in the :guilabel:`Layer Properties --> Style` dialog,
+under the :ref:`Layer rendering <layer_rendering>` group (applying to the whole
+layer) or in :ref:`symbol layer properties <symbol-selector>` (applying
+to corresponding features). You can combine both usage.
 
-The effects can be activated by checking the |checkbox| :guilabel:`Draw effects` option
+Paint effects can be activated by checking the |checkbox| :guilabel:`Draw effects` option
 and clicking the |paintEffects| :sup:`Customize effects` button, that will open
-the :guilabel:`Effect Properties` Dialog (see figure_effects_1). The following effect types are available:
+the :guilabel:`Effect Properties` Dialog (see figure_effects_1_). The following
+effect types, with custom options are available:
 
 * **Source:** Draws the feature's original style according to the
   configuration of the layer's properties. The transparency of its style can be adjusted.
