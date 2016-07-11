@@ -530,7 +530,7 @@ the legend at full resolution.
 
 In the print composer, the legend will be integrated at it's original (downloaded)
 dimension. Resolution of the legend graphic can be set in the item properties
-under Legend -> WMS LegendGraphic to match your printing requirements
+under :guilabel:`Legend --> WMS LegendGraphic` to match your printing requirements
 
 The legend will display contextual information based on your current scale. The
 WMS legend will be shown only if the WMS server has GetLegendGraphic capability

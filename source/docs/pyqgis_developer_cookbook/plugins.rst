@@ -509,7 +509,7 @@ Load the plugin
 ---------------
 
 In order to see the translation of your plugin just open QGIS, change the
-language (:menuselection:`Settings -> Options -> Language`) and restart QGIS.
+language (:menuselection:`Settings --> Options --> Language`) and restart QGIS.
 
 You should see your plugin in the correct language.
 

@@ -105,7 +105,7 @@ that means:
 
 All rasters will be saved in another files.
 
-First, open the tools from :menuselection:`Raster -> Align Raster...` and click
+First, open the tools from :menuselection:`Raster --> Align Raster...` and click
 on the |signPlus| :sup:`Add new raster` button to choose one existing raster in
 QGIS. Select an output file to save the raster after the alignment, the
 resampling method and if the tools need to `Rescale values according to the

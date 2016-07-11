@@ -58,12 +58,12 @@ data from OSM using QGIS' built-in OSM download tool.
 -------------------------------------------------------------------------------
 
 * Start a new QGIS project.
-* Use the OpenStreetMap data download tool found in the :guilabel:`Vector` ->
-  :guilabel:`OpenStreetMap` menu to download the data for your chosen region.
+* Use the OpenStreetMap data download tool found in the :menuselection:`Vector -->
+  OpenStreetMap` menu to download the data for your chosen region.
 * Save the data as :kbd:`osm_data.osm` in your :kbd:`exercise_data` folder.
 
 * Note that the :guilabel:`osm` format is a type of vector data. Add this data as a vector
-  layer as usually :guilabel:`Layer` -> :guilabel:`Add vector layer...`,
+  layer as usually :menuselection:`Layer --> Add vector layer...`,
   browse to the new :kbd:`osm_data.osm` file you just downloaded. You may need to
   select :guilabel:`Show All Files` as the file format.
 * Select :kbd:`osm_data.osm` and click :guilabel:`Open`
