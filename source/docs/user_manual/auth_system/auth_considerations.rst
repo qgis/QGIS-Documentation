@@ -12,8 +12,8 @@ plugin or standalone app that gains access to authentication credentials.
 The quick solution for initial release of feature is to just not include most
 PyQGIS bindings for the authentication system.
 
-Another simple, though not robust, fix is to add a combobox in Options ->
-Authentication (defaults to "never"):
+Another simple, though not robust, fix is to add a combobox in :menuselection:`Settings
+--> Options --> Authentication` (defaults to "never"):
 
 ::
 

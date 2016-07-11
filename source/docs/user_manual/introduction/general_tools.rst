@@ -970,11 +970,11 @@ Save layer into file
 =====================
 
 Layers (raster or vector) can be saved in another format with the
-:guilabel:`save as ...` feature in the layer contextual menu (by right-clicking
-in the layer in the layer tree) or in the :menuselection:`Layer -> Save As ...`
+:guilabel:`Save As...` feature in the layer contextual menu (by right-clicking
+in the layer in the layer tree) or in the :menuselection:`Layer --> Save As...`
 menu.
 
-The :guilabel:`save as` dialog shows several parameters to change the behaviour
+The :guilabel:`Save As` dialog shows several parameters to change the behaviour
 when saving the layer. Common parameters (raster and vector) are:
 
 * Format
