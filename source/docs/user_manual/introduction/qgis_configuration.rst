@@ -549,6 +549,13 @@ Locale Menu
 * |checkbox| :guilabel:`Overwrite system locale` and :guilabel:`Locale to use instead`
 * Information about active system locale
 
+Authentication
+--------------
+
+In the :guilabel:`Authentication` tab you can set authentication configurations
+and manage PKI certificates. See :ref:`authentication_index` for more
+details.
+
 Network Menu
 ------------
 

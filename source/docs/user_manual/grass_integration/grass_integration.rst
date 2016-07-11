@@ -217,7 +217,7 @@ install the dataset on your computer (see :ref:`label_sampledata`).
 
 #. Start QGIS and make sure the GRASS plugin is loaded.
 #. Visualize the :file:`alaska.shp` shapefile (see section
-   :ref:`vector_load_shapefile`) from the QGIS Alaska dataset (see :ref:`label_sampledata`).
+   :ref:`vector_loading_file`) from the QGIS Alaska dataset (see :ref:`label_sampledata`).
 #. In the GRASS toolbar, click on the |grassNewMapset| :sup:`New mapset` icon
    to bring up the :guilabel:`MAPSET` wizard.
 #. Select an existing GRASS database (GISDBASE) folder :file:`grassdata`, or create

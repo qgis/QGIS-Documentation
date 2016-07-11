@@ -959,15 +959,10 @@ QGIS has facility to store/retrieve authentication credentials in a secure
 manner. Users can securely save credentials into authentication configurations,
 which are stored in a portable database, can be applied to server or database
 connections, and safely referenced by their ID tokens in project or settings
-files.
+files. For more information see :ref:`authentication_index`.
 
 A master password needs to be set up when initializing the authentication
 system and its portable database.
-
-.. todo:
-    * Add information where settings files are saved,
-    * authentication options,
-    * Authentication Methods Plugins
 
 .. _general_saveas:
 
@@ -975,11 +970,11 @@ Save layer into file
 =====================
 
 Layers (raster or vector) can be saved in another format with the
-:guilabel:`save as ...` feature in the layer contextual menu (by right-clicking
-in the layer in the layer tree) or in the :menuselection:`Layer -> Save As ...`
+:guilabel:`Save As...` feature in the layer contextual menu (by right-clicking
+in the layer in the layer tree) or in the :menuselection:`Layer --> Save As...`
 menu.
 
-The :guilabel:`save as` dialog shows several parameters to change the behaviour
+The :guilabel:`Save As` dialog shows several parameters to change the behaviour
 when saving the layer. Common parameters (raster and vector) are:
 
 * Format
