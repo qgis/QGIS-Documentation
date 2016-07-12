@@ -233,6 +233,8 @@ See :ref:`symbol-selector` for further information about symbol representation.
 
 .. index:: Categorized Renderer
 
+.. _categorized_rendered:
+
 Categorized Renderer
 ....................
 
@@ -290,6 +292,8 @@ for the rivers layer of the QGIS sample dataset.
 
 .. index:: Graduated Renderer
 .. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile
+
+.. _graduated_renderer:
 
 Graduated Renderer
 ..................
@@ -374,6 +378,8 @@ the rivers layer of the QGIS sample dataset.
    attribute to be a composite of multiple fields, or a formula of some sort.
 
 .. index:: Proportional symbol, Multivariate analysis, Size assistant
+
+.. _proportional_symbols:
 
 Proportional Symbol and Multivariate Analysis
 .............................................
@@ -494,6 +500,8 @@ for the rivers layer of the QGIS sample dataset.
 .. index:: Point Displacement Renderer
 .. index:: Displacement plugin
 
+.. _point_displacement:
+
 Point displacement
 ..................
 
@@ -541,6 +549,8 @@ Single symbol, Graduated, Categorized, Rule-Based or 2.5 D renderer.
    Inverted Polygon dialog
 
 .. index:: Heatmap Renderer
+
+.. _heatmap:
 
 Heatmap
 .......
@@ -607,6 +617,8 @@ units).
    The 2.5 D height and angle values are saved in the layer's variables,
    so you can edit it afterwards in the variables tab of the layer's properties dialog.
 
+.. _layer_rendering:
+
 Layer rendering
 ---------------
 
@@ -652,7 +664,7 @@ features of the layer:
 
 .. only:: html
 
-   >**Figure Layer Rendering 1:**
+   **Figure Layer Rendering 1:**
 
 .. figure:: /static/user_manual/working_with_vector/layer_rendering_options.png
    :align: center
@@ -669,13 +681,15 @@ Other Settings
 Symbols levels
 ..............
 
-For renderers that allow stacked symbol layers (for example, 
-:ref:`single_symbol_renderer`, :ref:`inverted_polygon_renderer` and
-:ref:`rule_based_rendering`) there is an option to control the rendering order
-of each symbol's levels.
+For renderers that allow stacked symbol layers (only heatmap doesn't) there is
+an option to control the rendering order of each symbol's levels.
 
-You can access it by clicking the **[Advanced]** button below the saved symbols
-list and choosing :guilabel:`Symbol levels`.
+For most of the renderers, you can access the Symbols levels option by clicking
+the **[Advanced]** button below the saved symbols list and choosing
+:guilabel:`Symbol levels`. For the :ref:`rule_based_rendering` the option is
+directly available through **[Symbols levels]** button, while for
+:ref:`point_displacement` renderer the same button is inside the
+:guilabel:`Rendering settings` dialog.
 
 To activate symbols levels, select the |checkbox| :guilabel:`Enable symbol
 levels`. Each row will show up a small sample of the combined symbol, its label
@@ -891,8 +905,6 @@ effect visible and pass any changes to the next effect. If the effect is in the
 top of the effects list or if the immediately above effect is not in modify
 mode, then it will use the original source symbol from the layers properties
 (similar to source).
-
-.. _layer_rendering:
 
 .. _vector_labels_tab:
 
