@@ -519,6 +519,8 @@ around one center symbol or on several concentric circles.
 
 .. index:: Inverted Polygon Renderer
 
+.. _inverted_polygon_renderer:
+
 Inverted Polygon
 ................
 
@@ -539,6 +541,8 @@ Single symbol, Graduated, Categorized, Rule-Based or 2.5 D renderer.
    Inverted Polygon dialog
 
 .. index:: Heatmap Renderer
+
+.. _heatmap:
 
 Heatmap
 .......
