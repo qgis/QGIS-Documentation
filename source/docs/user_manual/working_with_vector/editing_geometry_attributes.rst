@@ -398,6 +398,17 @@ vertex in the map canvas, and vice versa. Simply change a coordinate in the tabl
 and your vertex position is updated. You can also select multiple rows and delete
 them altogether.
 
+.. _figure_edit_3:
+
+.. only:: html
+
+   **Figure Edit 3:**
+
+.. figure:: /static/user_manual/working_with_vector/vertex_editor_panel.png
+   :align: center
+
+   Vertex editor panel showing selected nodes
+
 
 Cutting, Copying and Pasting Features
 -------------------------------------
@@ -573,15 +584,15 @@ Undo and Redo
 The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you
 to undo or redo vector editing operations. There is also a dockable
 widget, which shows all operations in the undo/redo history (see
-Figure_edit_3_). This widget is not displayed by default; it can be
+Figure_edit_4_). This widget is not displayed by default; it can be
 displayed by right clicking on the toolbar and activating the Undo/Redo
 checkbox. Undo/Redo is however active, even if the widget is not displayed.
 
-.. _figure_edit_3:
+.. _figure_edit_4:
 
 .. only:: html
 
-   **Figure Edit 3:**
+   **Figure Edit 4:**
 
 .. figure:: /static/user_manual/working_with_vector/redo_undo.png
    :align: center
@@ -837,11 +848,11 @@ go into the 'SVG marker' and choose :guilabel:`Data defined properties ...`.
 Activate |checkbox| :guilabel:`Angle` and choose 'rotation' as field.
 Without these settings, the tool is inactive.
 
-.. _figure_edit_4:
+.. _figure_edit_5:
 
 .. only:: html
 
-   **Figure Edit 4:**
+   **Figure Edit 5:**
 
 .. figure:: /static/user_manual/working_with_vector/rotatepointsymbol.png
    :align: center
@@ -850,7 +861,7 @@ Without these settings, the tool is inactive.
 
 To change the rotation, select a point feature in the map canvas and rotate
 it, holding the left mouse button pressed. A red arrow with the rotation value
-will be visualized (see Figure_edit_4_). When you release the left mouse
+will be visualized (see Figure_edit_5_). When you release the left mouse
 button again, the value will be updated in the attribute table.
 
 .. note::
@@ -943,17 +954,17 @@ Creating a new Shapefile layer
 To create a new shape layer for editing, choose :menuselection:`New -->`
 |newVectorLayer| :menuselection:`New Shapefile Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New Vector Layer` dialog will be
-displayed as shown in Figure_edit_5_. Choose the type of layer (point, line or
+displayed as shown in Figure_edit_6_. Choose the type of layer (point, line or
 polygon) and the CRS (coordinate reference system).
 
 Note that QGIS does not yet support creation of 2.5D features (i.e., features
 with X,Y,Z coordinates).
 
-.. _figure_edit_5:
+.. _figure_edit_6:
 
 .. only:: html
 
-   **Figure Edit 5:**
+   **Figure Edit 6:**
 
 .. figure:: /static/user_manual/working_with_vector/editNewVector.png
    :align: center
@@ -982,13 +993,13 @@ Creating a new SpatiaLite layer
 To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
 |newSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog will
-be displayed as shown in Figure_edit_6_.
+be displayed as shown in Figure_edit_7_.
 
-.. _figure_edit_6:
+.. _figure_edit_7:
 
 .. only:: html
 
-   **Figure Edit 6:**
+   **Figure Edit 7:**
 
 .. figure:: /static/user_manual/working_with_vector/editNewSpatialite.png
    :align: center
