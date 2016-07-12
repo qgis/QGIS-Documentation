@@ -49,7 +49,7 @@ it to an existing vertex and/or segment.
 The snapping tolerance setting affects all tools that work with tolerance.
 
 #. A general, project-wide snapping tolerance can be defined by choosing
-   :menuselection:`Settings -->` |options| :menuselection:`Options...`, 
+   :menuselection:`Settings -->` |options| :menuselection:`Options...`,
    :guilabel:`Digitizing` tab.
    You can select between 'To vertex', 'To segment' or 'To vertex and segment'
    as default snap mode. You can also define a default snapping tolerance and
@@ -60,11 +60,11 @@ The snapping tolerance setting affects all tools that work with tolerance.
    snapping units in feet. Your results may vary, but something on the order
    of 300 ft at a scale of 1:10000 should be a reasonable setting.
 #. A layer-based snapping tolerance that overrides the global snapping options
-   can be defined by choosing :menuselection:`Settings --> Snapping options`. 
+   can be defined by choosing :menuselection:`Settings --> Snapping options`.
    It enables and adjusts snapping mode
    and tolerance on a layer basis (see figure_edit_1_ ). This dialog offers
    three different modes to select the layer(s) to snap to:
-   
+
    * :guilabel:`Current layer`: only the active layer is used, a convenient way
      to ensure topology within the layer being edited
    * :guilabel:`All layers`: a quick and simple setting for all visible layers
@@ -177,6 +177,11 @@ Another option is to use |checkbox| :guilabel:`Enable snapping on intersection`.
 It allows you to snap on an intersection of background layers, even if there's no vertex on
 the intersection.
 
+Geometry Checker
+-----------------
+
+A core plugin can help the user to find the geometry invalidity. You can find
+more information on this plugin at :ref:`geometry_checker`.
 
 .. index:: Digitizing
 
@@ -248,7 +253,7 @@ polygon) into the current layer.
 
 The next buttons |circularStringCurvePoint| :sup:`Add circular string` or
 |circularStringRadius| :sup:`Add circular string by radius` allow users to add
-line or polygon features with a circular geometry. 
+line or polygon features with a circular geometry.
 
 To :index:`create features` with these tools, you first digitize the geometry
 then enter its attributes.
@@ -416,7 +421,7 @@ QGIS project, as long as destination layers are set to |toggleEditing|
 Features can also be pasted to external applications as text. That is, the
 features are represented in CSV format, with the geometry data appearing in
 the OGC Well-Known Text (WKT) format. WKT features from outside QGIS can also be
-pasted to a layer within QGIS. 
+pasted to a layer within QGIS.
 
 When would the copy and paste function come
 in handy? Well, it turns out that you can edit more than one layer at a time
@@ -473,7 +478,7 @@ by first selecting the geometry using the regular |selectRectangle| :sup:`Select
 Features by area or single click` tool. Selection can also be done from the attribute
 table. Once you have the selection set, press :kbd:`Delete` or :kbd:`Backspace`
 key or use the |deleteSelected| :sup:`Delete Selected` tool to delete the
-features. Multiple selected features can be deleted at once. 
+features. Multiple selected features can be deleted at once.
 
 The |editCut| :sup:`Cut Features` tool on the digitizing toolbar can
 also be used to delete features. This effectively deletes the feature but
@@ -643,8 +648,8 @@ To abort feature simplification, you need to click on |simplifyFeatures|
    Options --> Rendering` menu which simplifies the geometry just for rendering,
    the |simplifyFeatures| :sup:`Simplify Feature` tool really modifies feature's
    geometry in data source.
-   
-   
+
+
 .. index::
    single: Digitizing; Add Part
 
@@ -853,7 +858,7 @@ button again, the value will be updated in the attribute table.
    degree steps.
 
 
-.. index:: 
+.. index::
    single: Digitizing; Automatic tracing
 
 .. _tracing:
@@ -881,7 +886,7 @@ otherwise QGIS is unable to connect them and thus traces a single straight line.
 
 
 .. note:: **Adjust map scale or snapping settings for an optimal tracing**
-   
+
    If there are too many features in map display, tracing is disabled to avoid
    potentially long tracing structure preparation and large memory overhead.
    After zooming in or disabling some layers the tracing is enabled again.
