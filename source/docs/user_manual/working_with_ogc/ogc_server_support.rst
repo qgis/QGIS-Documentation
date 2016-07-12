@@ -567,11 +567,13 @@ Parameters:
 FORMAT_OPTIONS Parameters:
 
 * **SCALE:scale** to be used for symbology rules, filters and styles (not an
-  actual scaling of the data - data remains in the original scale)
+  actual scaling of the data - data remains in the original scale).
 * **MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY** corresponds to the
-  three export options offered in the QGIS Desktop DXF export dialogue
+  three export options offered in the QGIS Desktop DXF export dialog.
 * **LAYERSATTRIBUTES:yourcolumn_with_values_to_be_used_for_dxf_layernames** - if
-  not specified, the original QGIS layer names are used
+  not specified, the original QGIS layer names are used.
+* **USE_TITLE_AS_LAYERNAME** if enabled, the title of the layer will be used as
+  layer name.
 
 Extra parameters supported by the WFS GetFeature request
 ---------------------------------------------------------
