@@ -605,6 +605,55 @@ units).
    The 2.5 D height and angle values are saved in the layer's variables,
    so you can edit it afterwards in the variables tab of the layer's properties dialog.
 
+.. _Symbols_levels:
+
+Symbols levels
+..............
+
+For renderers that allow stacked symbol layers (for example, 
+:ref:`single_symbol_renderer`, :ref:`inverted_polygon_renderer` and
+:ref:`rule_based_rendering`) there is an option to control the rendering order
+of each symbol level.
+
+You can access it by clicking the **[Advanced]** button below the saved symbols
+list and choosing :guilabel:`Symbol levels`.
+
+To activate symbols levels, select the |checkbox| :guilabel:`Enable symbol
+levels`. Each row will show up a small sample of the combined symbol, its label
+and the individual symbols layer divided into columns with a number next to it.
+The numbers represent the rendering order level in which the symbol layer
+will be drawn. Lower values levels are drawn first, staying at the bottom, while
+higher values are drawn last, on top of the others.
+
+.. _figure_symbology_10:
+
+.. only:: html
+
+     **Figure Symbology 10:**
+
+.. figure:: /static/user_manual/working_with_vector/symbol_levels.png
+   :align: center
+
+   Symbol levels dialog
+
+.. note::
+
+   If symbols levels are deactivated, the complete symbols will be drawn
+   according to their respective features order. Overlapping symbols will
+   simply ofuscate to other below. Besides, similar symbols won't "merge" with 
+   each other.
+
+.. _figure_symbology_11:
+
+.. only:: html
+
+     **Figure Symbology 11:**
+
+.. figure:: /static/user_manual/working_with_vector/symbol_levels_examples.png
+   :align: center
+
+   Symbol levels activated (A) and deactivated (B) difference
+
 .. _layer_rendering:
 
 Layer rendering
@@ -648,11 +697,11 @@ features of the layer:
   used to control the :index:`layer rendering` is retranscribed in the textbox
   beside |checkbox| :guilabel:`Control feature rendering order` option.
 
-.. _figure_symbology_10:
+.. _figure_symbology_12:
 
 .. only:: html
 
-     **Figure Symbology 10:**
+     **Figure Symbology 12:**
 
 .. figure:: /static/user_manual/working_with_vector/layer_rendering_options.png
    :align: center
