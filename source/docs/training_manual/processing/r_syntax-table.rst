@@ -4,8 +4,7 @@
 R Syntax Summary table for Processing
 **************************************
 
-Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna -
-FREEWAT project <http://www.freewat.eu>`_
+Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
 
 Processing allows a lot of different input and output parameter that can be used
 in the script body.
