@@ -519,6 +519,8 @@ around one center symbol or on several concentric circles.
 
 .. index:: Inverted Polygon Renderer
 
+.. _inverted_polygon_renderer:
+
 Inverted Polygon
 ................
 
@@ -605,6 +607,8 @@ units).
    The 2.5 D height and angle values are saved in the layer's variables,
    so you can edit it afterwards in the variables tab of the layer's properties dialog.
 
+.. index:: Symbols levels
+
 .. _Symbols_levels:
 
 Symbols levels
@@ -613,7 +617,7 @@ Symbols levels
 For renderers that allow stacked symbol layers (for example, 
 :ref:`single_symbol_renderer`, :ref:`inverted_polygon_renderer` and
 :ref:`rule_based_rendering`) there is an option to control the rendering order
-of each symbol level.
+of each symbol's levels.
 
 You can access it by clicking the **[Advanced]** button below the saved symbols
 list and choosing :guilabel:`Symbol levels`.
@@ -640,7 +644,7 @@ higher values are drawn last, on top of the others.
 
    If symbols levels are deactivated, the complete symbols will be drawn
    according to their respective features order. Overlapping symbols will
-   simply ofuscate to other below. Besides, similar symbols won't "merge" with 
+   simply obfuscate to other below. Besides, similar symbols won't "merge" with 
    each other.
 
 .. _figure_symbology_11:
