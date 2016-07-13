@@ -35,7 +35,7 @@ numbers 1 through 5 in yellow circles are discussed below).
 The QGIS GUI is divided into five areas:
 
 #. Menu Bar
-#. Tool Bar
+#. Toolbars
 #. Panels
 #. Map View
 #. Status Bar
@@ -339,15 +339,17 @@ Panels and Toolbars
 
 From the :menuselection:`View` menu (:menuselection:`Settings` under KDE), you can
 switch on and off QGIS widgets (:menuselection:`Panels -->`) or toolbars
-(:menuselection:`Toolbars -->`). You can also (de)activate any of them by
+(:menuselection:`Toolbars -->`). You can (de)activate any of them by
 right-clicking the menu bar or a toolbar and choose the item you want.
+Each panel or toolbar can be moved and placed wherever you feel comfortable
+with in QGIS interface.
 The list can also be extended with the activation of :ref:`Core or external
 plugins <plugins>`.
 
 .. _`label_toolbars`:
 
-Toolbar
--------
+Toolbars
+--------
 
 .. index::
    single:toolbar
@@ -379,7 +381,7 @@ holding the mouse over the toolbars.
 
    If you have accidentally hidden a toolbar, you can get it
    back by choosing menu option :menuselection:`View --> Toolbars -->`
-   (or |nix| :menuselection:`Settings --> Toolbars -->`).
+   (or :menuselection:`Settings --> Toolbars -->` under Linux KDE).
    If for some reason a toolbar (or any other widget) totally disappears
    from the interface, you'll find tips to get it back at :ref:`restoring
    initial GUI <tip_restoring_configuration>`.
