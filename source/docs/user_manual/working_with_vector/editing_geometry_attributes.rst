@@ -612,6 +612,7 @@ after the selected operation.
 
 .. index::
    single: Digitizing; Rotate Feature
+.. _rotate_feature:
 
 Rotate Feature(s)
 -----------------
@@ -912,6 +913,7 @@ otherwise QGIS is unable to connect them and thus traces a single straight line.
 
 .. index::
    single: Digitizing; Advanced panel
+.. _advanced_digitizing_panel:
 
 The Advanced Digitizing panel
 =============================
