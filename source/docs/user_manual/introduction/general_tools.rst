@@ -320,7 +320,7 @@ on layers, on features but also on print composer items:
 
 .. index:: Zoom_In Zoom_Out, Pan, Map_Navigation
 
-.. _zoom-pan:
+.. _zoom_pan:
 
 Zooming and Panning
 ====================

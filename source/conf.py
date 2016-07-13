@@ -1057,6 +1057,8 @@ rst_epilog = """
    :width: 1.5em
 .. |subSelection| image:: /static/common/sub_selection.png
    :width: 1.5em
+.. |sum| image:: /static/common/mActionSum.png
+   :width: 1.5em
 .. |sumLines| image:: /static/common/sum_lines.png
    :width: 1.5em
 .. |sumPoints| image:: /static/common/sum_points.png
