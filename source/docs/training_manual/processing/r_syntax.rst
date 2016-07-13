@@ -4,8 +4,7 @@
 R Syntax in Processing scripts
 *******************************
 
-Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna -
-FREEWAT project <http://www.freewat.eu>`_
+Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
 
 Writing R scripts in Processing could be quite tricky because of the syntax that
 has to be adopted.
