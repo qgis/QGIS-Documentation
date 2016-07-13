@@ -337,23 +337,12 @@ has different content and its items have to be found here:
 Panels and Toolbars
 ===================
 
-In the :menuselection:`Panels-->` menu, you can switch on and off QGIS widgets.
-The :menuselection:`Toolbars-->` menu provides the possibility to switch on
-and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
-
-These menus are in |nix| :menuselection:`Settings` or |win|
-:menuselection:`View`.
-
-.. _figure_panels_toolbars:
-
-.. only:: html
-
-   **Figure Panels and Toolbars:**
-
-.. figure:: /static/user_manual/introduction/panels_and_toolbars.png
-   :align: center
-
-   The Panels and Toolbars menu
+From the :menuselection:`View` menu (:menuselection:`Settings` under KDE), you can
+switch on and off QGIS widgets (:menuselection:`Panels -->`) or toolbars
+(:menuselection:`Toolbars -->`). You can also (de)activate any of them by
+right-clicking the menu bar or a toolbar and choose the item you want.
+The list can also be extended with the activation of :ref:`Core or external
+plugins <plugins>`.
 
 .. _`label_toolbars`:
 
@@ -372,6 +361,17 @@ Every toolbar can be moved around according to your needs. Additionally,
 they can be switched off using the right mouse button context menu, or by
 holding the mouse over the toolbars.
 
+.. _figure_toolbars:
+
+.. only:: html
+
+   **Figure Toolbars:**
+
+.. figure:: /static/user_manual/introduction/toolbars.png
+   :align: center
+
+   The Toolbars menu
+
 .. index::
    single:layout toolbars
 
@@ -384,10 +384,38 @@ holding the mouse over the toolbars.
    from the interface, you'll find tips to get it back at :ref:`restoring
    initial GUI <tip_restoring_configuration>`.
 
+Panels
+------
+
+QGIS provides by default many panels to work with.
+
+
+.. _figure_panels:
+
+.. only:: html
+
+   **Figure Panels:**
+
+.. figure:: /static/user_manual/introduction/panels.png
+   :align: center
+
+   The Panels menu
+
+Some of these panels are described
+below while others may be found in different parts of the document, namely:
+
+* the :ref:`Browser Panel <label_qgis_browser>`
+* the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
+* the :ref:`Spatial Bookmarks Panel <sec_bookmarks>`
+* the :ref:`GPS Information Panel <sec_gpstracking>`
+* the :ref:`Tile Scale Panel <tilesets>`
+* the :ref:`Identify Panel <identify>`
+* the :ref:`User Input Panel <rotate_feature>`
+
 .. _`label_legend`:
 
 Layers Panel
-------------
+............
 
 .. index::
    single:legend
@@ -528,7 +556,7 @@ This way, all selected layers or groups will be removed from the layers list.
 .. _editing_style_layer:
 
 Editing vector layer style
-............................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 From the Layers panel, you have shortcuts to easily and quickly edit the layer
 rendering.
@@ -569,7 +597,7 @@ as sub-item), the following options are available at layer level or class level:
 .. _layer_order:
 
 Working with the Legend independent layer order
------------------------------------------------
+...............................................
 
 There is a panel that allows you to define an independent drawing order for
 the layers panel. You can activate it in the menu
@@ -596,7 +624,7 @@ cause a revert to default behavior.
 .. _`statistical_summary`:
 
 Statistical Summary Panel
---------------------------
+..........................
 
 This panel can show some statistics on a specific vector layers. The panel
 allows users to choose:
@@ -611,7 +639,7 @@ allows users to choose:
    single:Map overview
 
 QGIS Overview Panel
---------------------
+...................
 
 In QGIS, you can use an overview panel that provides a full extent view of
 layers added to it. Within the view is a rectangle showing the current map
@@ -626,11 +654,20 @@ main map view will update accordingly.
    single:Log messages
 
 Log Messages Panel
--------------------
+..................
 
 When loading or processing some operations, you can track and follow messages
 that appear in different tabs using the |messageLog| Log Messages Panel.
 It can be activated using the most right icon in the bottom status bar.
+
+
+.. index:: Undo, Redo
+
+Undo/Redo Panel
+..................
+
+For each layer being edited, this panel shows the list of actions done, allowing
+to quickly undo a set of actions by simply selecting the action listed above.
 
 .. _`label_mapview`:
 

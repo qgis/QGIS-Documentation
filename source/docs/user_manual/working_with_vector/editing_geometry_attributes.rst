@@ -598,6 +598,7 @@ after the selected operation.
 
 .. index::
    single: Digitizing; Rotate Feature
+.. _rotate_feature:
 
 Rotate Feature(s)
 -----------------
@@ -856,6 +857,7 @@ button again, the value will be updated in the attribute table.
 
 .. index::
    single: Digitizing; Advanced panel
+.. _advanced_digitizing_panel:
 
 The Advanced Digitizing panel
 =============================
