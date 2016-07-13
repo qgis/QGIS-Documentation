@@ -67,6 +67,19 @@ The *Geometry Checker Plugin* can find the following errors:
 * Overlaps: polygon overlapping,
 * Gaps: gaps between polygons
 
+The following figure shows the different checks made by the plugin.
+
+.. _figure_geometry_checker_2:
+
+.. only:: html
+
+   **Figure The Differents checks supported by the plugin**
+
+.. figure:: /static/user_manual/plugins/geometry_checker_scheme.png
+   :align: center
+
+   The Differents checks supported by the plugin
+
 You can select a row to see the localisation of the error. You can change this
 behaviour by selecting another action between :guilabel:`error` (default),
 :guilabel:`Feature`, :guilabel:`Don't move`, and |checkbox| `Highlight contour
