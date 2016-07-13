@@ -521,7 +521,7 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows:
 * :guilabel:`Clear` button to remove the setup.
 
 When the :index:`data-defined override` option is setup correctly the icon is yellow
-|dataDefineOn| or |dataDefineExpressionOn|; if it is broken, the icon is red 
+|dataDefineOn| or |dataDefineExpressionOn|; if it is broken, the icon is red
 |dataDefineError| or |dataDefineExpressionError|.
 
 
@@ -1018,11 +1018,23 @@ However, some parameters are specific to raster and vector formats:
       geometry column to an attribute table, remove the geometry column of
       a spatial layer.
 
-.. note:: **Note:** *OGR Feature Styles* are a way to store style directly in
+.. note:: *OGR Feature Styles* are a way to store style directly in
    the data as a hidden attribute. Only some format can handle this kind of
    information. KML, DXF and TAB files format are such format. For advanced
    user, you can read the `OGR Feature Styles specification
    <http://www.gdal.org/ogr_feature_style.html>`_ document.
+
+
+.. note:: **About DXF files**
+
+   Vector layers can be exported to DXF files using another tool, the
+   :guilabel:`DXF Export ...` in :menuselection:`Project`. The windows allow the
+   user to choose the layer file, the symbology mode (see the note above), the
+   symbology scale, the encoding, the visibility preset and the layers to include
+   in the DXF file.
+
+   As an option, you can |checkbox| :guilabel:`Use the layer title as name if
+   set` or :guilabel:`Export features intersecting the current map extent`.
 
 .. index:: variable, variables
 
@@ -1036,7 +1048,7 @@ be defined at the application global level, project level, layer level and
 composition level. Just like CSS cascading rules, variables can be overwritten
 - eg, a project level variable will overwrite any application level variables
 set. You can use these variables to build text strings or other custom
-expressions using @ caracter before the variable name. For example in composer 
+expressions using @ character before the variable name. For example in composer
 creating a label with this content::
 
   This map was made using QGIS [% @qgis_version %]. The project file for this map
