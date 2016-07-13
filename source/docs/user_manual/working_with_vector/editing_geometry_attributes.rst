@@ -225,7 +225,7 @@ Using the basic :index:`digitizing tools`, you can perform the following functio
 Table Editing: Vector layer basic editing toolbar
 
 Note that while using any of the digitizing tools, you can still :ref:`zoom or pan
-<zoom-pan>` in the map canvas without losing the focus on the tool.
+<zoom_pan>` in the map canvas without losing the focus on the tool.
 
 All :index:`editing` sessions start by choosing the |toggleEditing| :sup:`Toggle editing`
 option found in the context menu of a given layer, from the attribute table dialog, the

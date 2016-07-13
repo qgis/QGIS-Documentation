@@ -233,6 +233,8 @@ See :ref:`symbol-selector` for further information about symbol representation.
 
 .. index:: Categorized Renderer
 
+.. _categorized_rendered:
+
 Categorized Renderer
 ....................
 
@@ -290,6 +292,8 @@ for the rivers layer of the QGIS sample dataset.
 
 .. index:: Graduated Renderer
 .. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile
+
+.. _graduated_renderer:
 
 Graduated Renderer
 ..................
@@ -374,6 +378,8 @@ the rivers layer of the QGIS sample dataset.
    attribute to be a composite of multiple fields, or a formula of some sort.
 
 .. index:: Proportional symbol, Multivariate analysis, Size assistant
+
+.. _proportional_symbols:
 
 Proportional Symbol and Multivariate Analysis
 .............................................
@@ -493,6 +499,8 @@ for the rivers layer of the QGIS sample dataset.
 
 .. index:: Point Displacement Renderer
 .. index:: Displacement plugin
+
+.. _point_displacement:
 
 Point displacement
 ..................
@@ -652,16 +660,251 @@ features of the layer:
   used to control the :index:`layer rendering` is retranscribed in the textbox
   beside |checkbox| :guilabel:`Control feature rendering order` option.
 
-.. _figure_symbology_10:
+.. _figure_layer_rendering_1:
 
 .. only:: html
 
-     **Figure Symbology 10:**
+   **Figure Layer Rendering 1:**
 
 .. figure:: /static/user_manual/working_with_vector/layer_rendering_options.png
    :align: center
 
    Layer rendering options
+
+Other Settings
+--------------
+
+.. index:: Symbols levels
+
+.. _Symbols_levels:
+
+Symbols levels
+..............
+
+For renderers that allow stacked symbol layers (only heatmap doesn't) there is
+an option to control the rendering order of each symbol's levels.
+
+For most of the renderers, you can access the Symbols levels option by clicking
+the **[Advanced]** button below the saved symbols list and choosing
+:guilabel:`Symbol levels`. For the :ref:`rule_based_rendering` the option is
+directly available through **[Symbols levels]** button, while for
+:ref:`point_displacement` renderer the same button is inside the
+:guilabel:`Rendering settings` dialog.
+
+To activate symbols levels, select the |checkbox| :guilabel:`Enable symbol
+levels`. Each row will show up a small sample of the combined symbol, its label
+and the individual symbols layer divided into columns with a number next to it.
+The numbers represent the rendering order level in which the symbol layer
+will be drawn. Lower values levels are drawn first, staying at the bottom, while
+higher values are drawn last, on top of the others.
+
+.. _figure_symbol_levels_1:
+
+.. only:: html
+
+     **Figure Symbols levels 1:**
+
+.. figure:: /static/user_manual/working_with_vector/symbol_levels.png
+   :align: center
+
+   Symbol levels dialog
+
+.. note::
+
+   If symbols levels are deactivated, the complete symbols will be drawn
+   according to their respective features order. Overlapping symbols will
+   simply obfuscate to other below. Besides, similar symbols won't "merge" with 
+   each other.
+
+.. _figure_symbol_levels_2:
+
+.. only:: html
+
+     **Figure Symbols levels 2:**
+
+.. figure:: /static/user_manual/working_with_vector/symbol_levels_examples.png
+   :align: center
+
+   Symbol levels activated (A) and deactivated (B) difference
+
+.. index:: Paint effects
+.. _draw_effects:
+
+Draw effects
+............
+
+In order to improve layer rendering and avoid (or at least reduce)
+the resort to other software for final rendering of maps, QGIS provides another
+powerful functionality: the |paintEffects| :guilabel:`Draw Effects` options,
+which adds paint effects for customizing the visualization of vector layers.
+
+The option is available in the :guilabel:`Layer Properties --> Style` dialog,
+under the :ref:`Layer rendering <layer_rendering>` group (applying to the whole
+layer) or in :ref:`symbol layer properties <symbol-selector>` (applying
+to corresponding features). You can combine both usage.
+
+Paint effects can be activated by checking the |checkbox| :guilabel:`Draw effects` option
+and clicking the |paintEffects| :sup:`Customize effects` button, that will open
+the :guilabel:`Effect Properties` Dialog (see figure_effects_1_). The following
+effect types, with custom options are available:
+
+* **Source:** Draws the feature's original style according to the
+  configuration of the layer's properties. The transparency of its style can be adjusted.
+
+  .. _figure_effects_1:
+
+  .. only:: html
+
+     **Figure Effects 1:**
+
+  .. figure:: /static/user_manual/working_with_vector/source.png
+     :align: center
+
+     Draw Effects: Source dialog
+
+* **Blur:** Adds a blur effect on the vector layer. The options that someone can change are the
+  :menuselection:`Blur type` (:menuselection:`Stack` or :menuselection:`Gaussian blur`),
+  the strength and transparency of the blur effect.
+
+  .. _figure_effects_2:
+
+  .. only:: html
+
+     **Figure Effects 2:**
+
+  .. figure:: /static/user_manual/working_with_vector/blur.png
+     :align: center
+
+     Draw Effects: Blur dialog
+
+* **Colorize:** This effect can be used to make a version of the style using one
+  single hue. The base will always be a grayscale version of the symbol and you
+  can use the |selectString| :guilabel:`Grayscale` to select how to create it
+  (options are: 'lightness', 'luminosity' and 'average'). If |checkbox|
+  :guilabel:`Colorise` is selected, it will be possible to mix another color
+  and choose how strong it should be. You can also control the
+  :guilabel:`Brightness`, :guilabel:`contrast` and
+  :guilabel:`saturation` levels of the resulting symbol.
+
+  .. _figure_effects_3:
+
+  .. only:: html
+
+     **Figure Effects 3:**
+
+  .. figure:: /static/user_manual/working_with_vector/colorise.png
+     :align: center
+
+     Draw Effects: Colorize dialog
+
+* **Drop Shadow:** Using this effect adds a shadow on the feature, which looks like adding an
+  extra dimension. This effect can be customized by changing the :menuselection:`offset`
+  degrees and radius, determining where the shadow shifts towards to and the proximity to
+  the source object. :menuselection:`Drop Shadow` also has the option to change the blur radius,
+  the transparency and the color of the effect.
+
+  .. _figure_effects_4:
+
+  .. only:: html
+
+     **Figure Effects 4:**
+
+  .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
+     :align: center
+
+     Draw Effects: Drop Shadow dialog
+
+* **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect, but it adds
+  the shadow effect on the inside of the edges of the feature. The available options for customization
+  are the same as the :menuselection:`Drop Shadow` effect.
+
+  .. _figure_effects_5:
+
+  .. only:: html
+
+     **Figure Effects 5:**
+
+  .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
+     :align: center
+
+     Draw Effects: Inner Shadow dialog
+
+* **Inner Glow:** Adds a glow effect inside the feature. This effect can be customized by adjusting
+  the :menuselection:`spread` (width) of the glow, or the :menuselection:`Blur radius`.
+  The latter specifies the proximity from the edge of the feature where you want any blurring to happen.
+  Additionally, there are options to customize the color of the glow, with a single color or a color ramp.
+
+  .. _figure_effects_6:
+
+  .. only:: html
+
+     **Figure Effects 6:**
+
+  .. figure:: /static/user_manual/working_with_vector/inner_glow.png
+     :align: center
+
+     Draw Effects: Inner Glow dialog
+
+* **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect, but it adds
+  the glow effect on the outside of the edges of the feature. The available options for customization
+  are the same as the :menuselection:`Inner Glow` effect.
+
+  .. _figure_effects_7:
+
+  .. only:: html
+
+     **Figure Effects 7:**
+
+  .. figure:: /static/user_manual/working_with_vector/outer_glow.png
+     :align: center
+
+     Draw Effects: Outer Glow dialog
+
+* **Transform:** Adds the possibility of transforming the shape of the symbol.
+  The first options available for customization are the :menuselection:`Reflect horizontal`
+  and :menuselection:`Reflect vertical`, which actually create a reflection on the
+  horizontal and/or vertical axes. The 4 other options are:
+
+  * :menuselection:`Shear`: slants the feature along the x and/or y axis
+  * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or y axis
+    by the given percentage
+  * :menuselection:`Rotation`: turns the feature around its center point
+  * and :menuselection:`Translate` changes the position of the item based on a distance
+    given on the x and/or the y axis.
+
+  .. _figure_effects_8:
+
+  .. only:: html
+
+     **Figure Effects 8:**
+
+  .. figure:: /static/user_manual/working_with_vector/transform.png
+     :align: center
+
+     Draw Effects: Transform dialog
+
+There are some common options available for all draw effect types.
+:guilabel:`Transparency` and :guilabel:`Blend mode` options work similar
+to the ones described in :ref:`layer_rendering` and can be used in all draw
+effects except for the transform one.
+
+One or more draw effects can used at the same time. You activate/deactivate an effect
+using its checkbox in the effects list. You can change the selected effect type by
+using the |selectstring| :guilabel:`Effect type` option. You can reorder the effects
+using |arrowUp| :sup:`Move up` and |arrowDown| :sup:`Move down`
+buttons, and also add/remove effects using the |signPlus| :sup:`Add effect`
+and |signMinus| :sup:`Remove effect` buttons.
+
+There is also a |selectString| :guilabel:`Draw mode` option available for
+every draw effect, and you can choose whether to render and/or to modify the
+symbol. Effects render from top to bottom.'Render only' mode means that the
+effect will be visible while the 'Modify only' mode means that the effect will
+not be visible but the changes that it applies will be passed to the next effect
+(the one immediately below). The 'Render and Modify' mode will make the
+effect visible and pass any changes to the next effect. If the effect is in the
+top of the effects list or if the immediately above effect is not in modify
+mode, then it will use the original source symbol from the layers properties
+(similar to source).
 
 .. _vector_labels_tab:
 
@@ -2080,186 +2323,4 @@ or **Restore Default** style if you're not satisfied.
    to a group or a selection of layers: the style is applied to all the layers
    that are of the same type (vector vs raster) as the original layer and, in
    case of vector, have the same geometry type (point, line or polygon).
-
-Other Setting
-===============
-
-.. index:: Paint effects
-.. _draw_effects:
-
-Draw effects
-------------
-
-In order to improve layer rendering and avoid (or at least reduce)
-the resort to other software for final rendering of maps, QGIS provides another
-powerful functionality: the |paintEffects| :guilabel:`Draw Effects` options,
-which adds paint effects for customizing the visualization of vector layers.
-
-The option is available in the :guilabel:`Layer Properties --> Style` dialog,
-under the :ref:`Layer rendering <layer_rendering>` group (applying to the whole
-layer) or in :ref:`symbol layer properties <symbol-selector>` (applying
-to corresponding features). You can combine both usage.
-
-Paint effects can be activated by checking the |checkbox| :guilabel:`Draw effects` option
-and clicking the |paintEffects| :sup:`Customize effects` button, that will open
-the :guilabel:`Effect Properties` Dialog (see figure_effects_1_). The following
-effect types, with custom options are available:
-
-* **Source:** Draws the feature's original style according to the
-  configuration of the layer's properties. The transparency of its style can be adjusted.
-
-  .. _figure_effects_1:
-
-  .. only:: html
-
-     **Figure Effects 1:**
-
-  .. figure:: /static/user_manual/working_with_vector/source.png
-     :align: center
-
-     Draw Effects: Source dialog
-
-* **Blur:** Adds a blur effect on the vector layer. The options that someone can change are the
-  :menuselection:`Blur type` (:menuselection:`Stack` or :menuselection:`Gaussian blur`),
-  the strength and transparency of the blur effect.
-
-  .. _figure_effects_2:
-
-  .. only:: html
-
-     **Figure Effects 2:**
-
-  .. figure:: /static/user_manual/working_with_vector/blur.png
-     :align: center
-
-     Draw Effects: Blur dialog
-
-* **Colorize:** This effect can be used to make a version of the style using one
-  single hue. The base will always be a grayscale version of the symbol and you
-  can use the |selectString| :guilabel:`Grayscale` to select how to create it
-  (options are: 'lightness', 'luminosity' and 'average'). If |checkbox|
-  :guilabel:`Colorise` is selected, it will be possible to mix another color
-  and choose how strong it should be. You can also control the
-  :guilabel:`Brightness`, :guilabel:`contrast` and
-  :guilabel:`saturation` levels of the resulting symbol.
-
-  .. _figure_effects_3:
-
-  .. only:: html
-
-     **Figure Effects 3:**
-
-  .. figure:: /static/user_manual/working_with_vector/colorise.png
-     :align: center
-
-     Draw Effects: Colorize dialog
-
-* **Drop Shadow:** Using this effect adds a shadow on the feature, which looks like adding an
-  extra dimension. This effect can be customized by changing the :menuselection:`offset`
-  degrees and radius, determining where the shadow shifts towards to and the proximity to
-  the source object. :menuselection:`Drop Shadow` also has the option to change the blur radius,
-  the transparency and the color of the effect.
-
-  .. _figure_effects_4:
-
-  .. only:: html
-
-     **Figure Effects 4:**
-
-  .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
-     :align: center
-
-     Draw Effects: Drop Shadow dialog
-
-* **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect, but it adds
-  the shadow effect on the inside of the edges of the feature. The available options for customization
-  are the same as the :menuselection:`Drop Shadow` effect.
-
-  .. _figure_effects_5:
-
-  .. only:: html
-
-     **Figure Effects 5:**
-
-  .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
-     :align: center
-
-     Draw Effects: Inner Shadow dialog
-
-* **Inner Glow:** Adds a glow effect inside the feature. This effect can be customized by adjusting
-  the :menuselection:`spread` (width) of the glow, or the :menuselection:`Blur radius`.
-  The latter specifies the proximity from the edge of the feature where you want any blurring to happen.
-  Additionally, there are options to customize the color of the glow, with a single color or a color ramp.
-
-  .. _figure_effects_6:
-
-  .. only:: html
-
-     **Figure Effects 6:**
-
-  .. figure:: /static/user_manual/working_with_vector/inner_glow.png
-     :align: center
-
-     Draw Effects: Inner Glow dialog
-
-* **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect, but it adds
-  the glow effect on the outside of the edges of the feature. The available options for customization
-  are the same as the :menuselection:`Inner Glow` effect.
-
-  .. _figure_effects_7:
-
-  .. only:: html
-
-     **Figure Effects 7:**
-
-  .. figure:: /static/user_manual/working_with_vector/outer_glow.png
-     :align: center
-
-     Draw Effects: Outer Glow dialog
-
-* **Transform:** Adds the possibility of transforming the shape of the symbol.
-  The first options available for customization are the :menuselection:`Reflect horizontal`
-  and :menuselection:`Reflect vertical`, which actually create a reflection on the
-  horizontal and/or vertical axes. The 4 other options are:
-
-  * :menuselection:`Shear`: slants the feature along the x and/or y axis
-  * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or y axis
-    by the given percentage
-  * :menuselection:`Rotation`: turns the feature around its center point
-  * and :menuselection:`Translate` changes the position of the item based on a distance
-    given on the x and/or the y axis.
-
-  .. _figure_effects_8:
-
-  .. only:: html
-
-     **Figure Effects 8:**
-
-  .. figure:: /static/user_manual/working_with_vector/transform.png
-     :align: center
-
-     Draw Effects: Transform dialog
-
-There are some common options available for all draw effect types.
-:guilabel:`Transparency` and :guilabel:`Blend mode` options work similar
-to the ones described in :ref:`layer_rendering` and can be used in all draw
-effects except for the transform one.
-
-One or more draw effects can used at the same time. You activate/deactivate an effect
-using its checkbox in the effects list. You can change the selected effect type by
-using the |selectstring| :guilabel:`Effect type` option. You can reorder the effects
-using |arrowUp| :sup:`Move up` and |arrowDown| :sup:`Move down`
-buttons, and also add/remove effects using the |signPlus| :sup:`Add effect`
-and |signMinus| :sup:`Remove effect` buttons.
-
-There is also a |selectString| :guilabel:`Draw mode` option available for
-every draw effect, and you can choose whether to render and/or to modify the
-symbol. Effects render from top to bottom.'Render only' mode means that the
-effect will be visible while the 'Modify only' mode means that the effect will
-not be visible but the changes that it applies will be passed to the next effect
-(the one immediately below). The 'Render and Modify' mode will make the
-effect visible and pass any changes to the next effect. If the effect is in the
-top of the effects list or if the immediately above effect is not in modify
-mode, then it will use the original source symbol from the layers properties
-(similar to source).
 
