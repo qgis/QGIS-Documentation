@@ -322,9 +322,8 @@ section {
   margin: 0;
 }
 div.related {
-  /*display: none;*/
-  /* NOTE: for website: NO related bar, for docs: YES related bar! */
-
+  display: block;
+  /* NOTE: for website: NO (none) related bar, for docs: YES (block) related bar! */
   padding-top: 10px;
 }
 /*
@@ -341,9 +340,7 @@ div.section:before {
   height: 60px;
   /*margin: -60px 0 0 0;*/
   /*nice hack, but this breaks responsiveness for related bar*/
-
   /*this is working for non frontpages*/
-
 }
 /* span achors are a little more difficult,
 these are for internal refs, eg: en/docs/user_manual/working_with_vector/editing_geometry_attributes.html#sec-advanced-edit
@@ -823,9 +820,8 @@ section.menu nav.subnav ul li a:hover {
 }
 /* color for qgis version disclaimer (used when files need to be revised) */
 .disclaimer {
-  display: block;
+  /*display: none;*/
   /* only to be make visible in testing */
-
   color: black;
   margin-top: 17px;
   padding: 9px 30px 14px 50px;
@@ -879,7 +875,7 @@ section.menu nav.subnav ul li a:hover {
 }
 .admonition p img,
 .bordered-block p img {
-  float: left;
+  /*float: left;*/
   margin: 0 15px 0 0;
 }
 .guilabel {
