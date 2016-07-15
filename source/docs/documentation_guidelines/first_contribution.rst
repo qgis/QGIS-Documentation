@@ -15,7 +15,7 @@ Now that you know the :ref:`rules <writing_doc_guidelines>` to follow to write a
 clean doc for QGIS, let's dive in the process of production of this documentation
 and how quickly and safely share your changes with the community.
 
-Assuming you already have a `GitHub account <https://github.com/join>`,
+Assuming you already have a `GitHub account <https://github.com/join>`_,
 you first need to clone the source files of the documentation in order to have
 your own copy you can work on: go to the `QGIS-Documentation repository
 <https://github.com/qgis/QGIS-Documentation>`_ page (for convenience, this repository
