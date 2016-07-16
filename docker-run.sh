@@ -6,5 +6,5 @@
 
 cp ~/.transifexrc .
 pwd=$(pwd)
-docker run -v $pwd:/build -w="/build" --rm=true --name="qgis_docs_master_build" qgis/sphinx_pdf make $@
+docker run -v $pwd:/build -w="/build" --rm=true --name="qgis_docs_214_build" qgis/sphinx_pdf make $@
 rm -rf .transifexrc
