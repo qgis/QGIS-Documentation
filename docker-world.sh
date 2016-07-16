@@ -30,8 +30,8 @@ for LANG in en
     # we changed source/conf.py during build (exclude processing algs for pdf (see Makefile)
     # let's get a fresh checkout of source/conf.py
     git checkout source/conf.py
-    time rsync -hvrzc -e ssh --progress output/pdf/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation/live/html/pdf
-    time rsync -hvrzc -e ssh --progress output/html/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation/live/html
+    time rsync -hvrzc -e ssh --progress output/pdf/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.14/live/html/pdf
+    time rsync -hvrzc -e ssh --progress output/html/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.14/live/html
   done
 
 now=`date`
