@@ -15,7 +15,7 @@ msgstr ""
 msgid "Geometry Handling"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:13
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:16
 msgid ""
 "Points, linestrings and polygons that represent a spatial feature are "
 "commonly referred to as geometries. In QGIS they are represented with the "
@@ -24,7 +24,7 @@ msgid ""
 "<http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:18
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:21
 msgid ""
 "Sometimes one geometry is actually a collection of simple (single-part) "
 "geometries. Such a geometry is called a multi-part geometry. If it contains "
@@ -33,30 +33,26 @@ msgid ""
 "be represented as a multi-polygon."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:24
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:27
 msgid ""
 "The coordinates of geometries can be in any coordinate reference system "
 "(CRS). When fetching features from a layer, associated geometries will have "
 "coordinates in CRS of the layer."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:31
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:34
 msgid "Geometry Construction"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:33
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:36
 msgid "There are several options for creating a geometry:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:35
-msgid "from coordinates::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:42
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:46
 msgid "Coordinates are given using :class:`QgsPoint` class."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:44
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:48
 msgid ""
 "Polyline (Linestring) is represented by a list of points. Polygon is "
 "represented by a list of linear rings (i.e. closed linestrings). First ring "
@@ -64,61 +60,34 @@ msgid ""
 "polygon."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:48
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:52
 msgid ""
 "Multi-part geometries go one level further: multi-point is a list of points,"
 " multi-linestring is a list of linestrings and multi-polygon is a list of "
 "polygons."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:52
-msgid "from well-known text (WKT)::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:56
-msgid "from well-known binary (WKB)::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:65
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:73
 msgid "Access to Geometry"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:67
-msgid ""
-"First, you should find out geometry type, :func:`wkbType` method is the one "
-"to use --- it returns a value from QGis.WkbType enumeration::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:79
-msgid ""
-"As an alternative, one can use :func:`type` method which returns a value "
-"from QGis.GeometryType enumeration. There is also a helper function "
-":func:`isMultipart` to find out whether a geometry is multipart or not."
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:83
-msgid ""
-"To extract information from geometry there are accessor functions for every "
-"vector type. How to use accessors::"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:93
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:105
 msgid ""
 "Note: the tuples (x,y) are not real tuples, they are :class:`QgsPoint` "
 "objects, the values are accessible with :func:`x` and :func:`y` methods."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:96
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:108
 msgid ""
 "For multipart geometries there are similar accessor functions: "
 ":func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:102
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:114
 msgid "Geometry Predicates and Operations"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:104
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:116
 msgid ""
 "QGIS uses GEOS library for advanced geometry operations such as geometry "
 "predicates (:func:`contains`, :func:`intersects`, ...) and set operations "
@@ -127,14 +96,7 @@ msgid ""
 "(for polygons and lines)"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:108
-msgid ""
-"Here you have a small example that combines iterating over the features in a"
-" given layer and perfoming some geometric computations based on their "
-"geometries."
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:120
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:135
 msgid ""
 "Areas and perimeters don't take CRS into account when computed using these "
 "methods from the :class:`QgsGeometry` class. For a more powerful area and "
@@ -144,38 +106,17 @@ msgid ""
 "parameters are used for calculations."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:129
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:149
 msgid ""
 "You can find many example of algorithms that are included in QGIS and use "
 "these methods to analyze and transform vector data. Here are some links to "
 "the code of a few of them."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:131
-msgid ""
-"Geometry transformation: `Reproject algorithm <https://raw.github.com/qgis"
-"/Quantum-GIS/release-"
-"2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:132
-msgid ""
-"Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix"
-" algorithm <https://raw.github.com/qgis/Quantum-GIS/release-"
-"2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
-msgstr ""
-
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:133
-msgid ""
-"`Multi-part to single-part algorithm <https://raw.github.com/qgis/Quantum-"
-"GIS/release-"
-"2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
-msgstr ""
-
 #: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:5
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:28
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:62
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:99
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:31
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:70
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:111
 msgid "geometry"
 msgstr ""
 
@@ -183,14 +124,126 @@ msgstr ""
 msgid "handling"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:28
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:31
 msgid "construction"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:62
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:70
 msgid "access to"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:99
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:111
 msgid "predicates and operations"
 msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:38
+msgid "from coordinates"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:56
+msgid "from well-known text (WKT)"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:62
+msgid "from well-known binary (WKB)"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:75
+msgid ""
+"First, you should find out geometry type, :func:`wkbType` method is the one "
+"to use --- it returns a value from ``QGis.WkbType`` enumeration"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:89
+msgid ""
+"As an alternative, one can use :func:`type` method which returns a value "
+"from ``QGis.GeometryType`` enumeration. There is also a helper function "
+":func:`isMultipart` to find out whether a geometry is multipart or not."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:93
+msgid ""
+"To extract information from geometry there are accessor functions for every "
+"vector type. How to use accessors"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:122
+msgid ""
+"Here you have a small example that combines iterating over the features in a"
+" given layer and performing some geometric computations based on their "
+"geometries."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:153
+msgid "Additional information can be found in following sources:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:155
+msgid ""
+"Geometry transformation: `Reproject algorithm "
+"<https://raw.github.com/qgis/QGIS/release-"
+"2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:156
+msgid ""
+"Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix"
+" algorithm <https://raw.github.com/qgis/QGIS/release-"
+"2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:157
+msgid ""
+"`Multi-part to single-part algorithm <https://raw.github.com/qgis/QGIS"
+"/release-"
+"2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
+msgstr ""
+
+#~ msgid "from coordinates::"
+#~ msgstr ""
+
+#~ msgid "from well-known text (WKT)::"
+#~ msgstr ""
+
+#~ msgid "from well-known binary (WKB)::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First, you should find out geometry type, :func:`wkbType` method is the one "
+#~ "to use --- it returns a value from QGis.WkbType enumeration::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As an alternative, one can use :func:`type` method which returns a value "
+#~ "from QGis.GeometryType enumeration. There is also a helper function "
+#~ ":func:`isMultipart` to find out whether a geometry is multipart or not."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To extract information from geometry there are accessor functions for every "
+#~ "vector type. How to use accessors::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here you have a small example that combines iterating over the features in a"
+#~ " given layer and perfoming some geometric computations based on their "
+#~ "geometries."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Geometry transformation: `Reproject algorithm <https://raw.github.com/qgis"
+#~ "/Quantum-GIS/release-"
+#~ "2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix"
+#~ " algorithm <https://raw.github.com/qgis/Quantum-GIS/release-"
+#~ "2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Multi-part to single-part algorithm <https://raw.github.com/qgis/Quantum-"
+#~ "GIS/release-"
+#~ "2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
+#~ msgstr ""
