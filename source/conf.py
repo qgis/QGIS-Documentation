@@ -530,7 +530,7 @@ rst_epilog = """
    :width: 1.5em
 .. |frame|  image:: /static/common/frame.png
    :width: 1.5em
-.. |mActionAddDb2xLayer| image:: /static/common/mActionAddDb2Layer.png
+.. |mActionAddDb2Layer| image:: /static/common/mActionAddDb2Layer.png
    :width: 1.5em 
 .. |ftools| image:: /static/common/ftools_logo.png
    :width: 1.5em
