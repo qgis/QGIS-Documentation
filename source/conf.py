@@ -1420,4 +1420,3 @@ nitpick_ignore = [('py:class', 'QAction'),
                   ('py:mod', 'qgis.gui'),
                   ('py:mod', 'qgis.utils'),
                   ]
-exclude_patterns += ['docs/user_manual/processing_algs/*']
