@@ -179,14 +179,14 @@ full:
 		echo; \
 	elif [ $(LANG) = "zh_CN" ]; then \
 		echo; \
-		echo Pulling zh_Hans from transifex but renaming it to zh_CN; \
+		echo Pulling zh-Hans from transifex but renaming it to zh_CN; \
 		tx pull --minimum-perc=1 --skip -f -l zh-Hans; \
-		mv i18n/zh_Hans i18n/zh_CN; \
+		mv i18n/zh-Hans i18n/zh_CN; \
 	elif [ $(LANG) = "zh_TW" ]; then \
 		echo; \
-		echo Pulling zh_Hant from transifex but renaming it to zh_TW; \
-		tx pull --minimum-perc=1 --skip -f -l zh-Hant; \
-		mv i18n/zh_Hant i18n/zh_TW; \
+		echo Pulling zh-Hant from transifex but renaming it to zh_TW; \
+		echo tx pull --minimum-perc=1 --skip -f -l zh-Hant; \
+		mv i18n/zh-Hant i18n/zh_TW; \
 	else \
 		echo; \
 		echo Pulling $$LANG from transifex; \
