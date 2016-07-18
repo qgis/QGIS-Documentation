@@ -912,7 +912,7 @@ rst_epilog = """
 .. |processingToolbox| image:: /static/common/alg.png
    :width: 1.5em
 .. |mIconDb2| image:: /static/common/mIconDb2.png
-   :width: 1.5em    
+   :width: 1.5em
 .. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
