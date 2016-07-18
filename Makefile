@@ -181,7 +181,7 @@ full:
 		# --minimum-perc=1 so only files which have at least 1% translation are pulled \
 		# -f to force, --skip to not stop with errors \
 		# -l lang \
-		echo tx pull --minimum-perc=1 --skip -f -l $$LANG; \
+		tx pull --minimum-perc=1 --skip -f -l $$LANG; \
         fi
 	make pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf
