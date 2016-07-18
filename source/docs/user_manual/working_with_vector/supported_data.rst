@@ -37,6 +37,7 @@ regardless of the vector data source. This is by design, and it includes the
 identify, select, labelling and attributes functions.
 
 .. note::
+<<<<<<< HEAD
 
    QGIS supports (multi)point, (multi)line, (multi)polygon, CircularString,
    CompoundCurve, CurvePolygon, MultiCurve, MultiSurface feature types, all
@@ -52,6 +53,23 @@ identify, select, labelling and attributes functions.
 Loading a layer from a file
 ---------------------------
 
+=======
+
+   QGIS supports (multi)point, (multi)line, (multi)polygon, CircularString,
+   CompoundCurve, CurvePolygon, MultiCurve, MultiSurface feature types, all
+   with Z and/or M values.
+
+   You should note also that some driver doesn't support some of these feature
+   types like CircularString, CompoundCurve, CurvePolygon, MultiCurve,
+   MultiSurface feature type. QGIS will convert them to (multi)polygon feature.
+
+.. index:: MapInfo, vector file, load a shapefile, Shapefile
+.. _vector_loading_file:
+
+Loading a layer from a file
+---------------------------
+
+>>>>>>> master
 |addOgrLayer| To load a layer from a file (like a Shapefile, a Mapinfo or a dxf
 layer), click on the |addOgrLayer| :sup:`Add Vector Layer` toolbar button; or
 type :kbd:`Ctrl+Shift+V`. This will bring up a new window (see
