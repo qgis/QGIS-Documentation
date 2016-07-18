@@ -1,12 +1,15 @@
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Writing new Processing algorithms as python scripts
 ---------------------------------------------------
 
 You can create your own algorithms by writing the corresponding Python code and
-adding a few extra lines to supply additional information needed to define the semantics of the algorithm.
+adding a few extra lines to supply additional information needed to define the
+semantics of the algorithm.
 You can find a :guilabel:`Create new script` menu under the :guilabel:`Tools`
 group in the :guilabel:`Script` algorithms block of the toolbox. Double-click on
 it to open the script edition dialog. That's where you should type your code.
@@ -91,7 +94,7 @@ if you want the user to see a parameter named ``A numerical value``, you can use
 the variable name ``A_numerical_value``.
 
 Layers and tables values are strings containing the filepath of the corresponding
-object. To turn them into a |qg| object, you can use the ``processing.getObjectFromUri()``
+object. To turn them into a QGIS object, you can use the ``processing.getObjectFromUri()``
 function. Multiple inputs also have a string value, which contains the filepaths
 to all selected objects, separated by semicolons (``;``).
 
@@ -113,12 +116,17 @@ output filename.
 In addition to the tags for parameters and outputs, you can also define the group
 under which the algorithm will be shown, using the ``group`` tag.
 
-The last tag that you can use in your script header is ``##nomodeler``. Use that when you do not want your algorithm to be shown in the modeler window. This should be used for algorithms that do not have a clear syntax (for instance, if the number of layers to be created is not known in advance, at design time), which make them unsuitable for the graphical modeler
+The last tag that you can use in your script header is ``##nomodeler``.
+Use that when you do not want your algorithm to be shown in the modeler window.
+This should be used for algorithms that do not have a clear syntax (for instance,
+if the number of layers to be created is not known in advance, at design time),
+which make them unsuitable for the graphical modeler
 
 Handing data produced by the algorithm
 --------------------------------------
 
-When you declare an output representing a layer (raster, vector or table), the algorithm will try to add it to |qg| once it
+When you declare an output representing a layer (raster, vector or table),
+the algorithm will try to add it to QGIS once it
 is finished. That is the reason why, although the ``runalg()`` method does not
 load the layers it produces, the final *TWI* layer will be loaded, since it is saved
 to the file entered by the user, which is the value of the corresponding output.
@@ -153,10 +161,15 @@ user. You have a global named ``progress`` available, with two available methods
 ``setText(text)`` and ``setPercentage(percent)`` to modify the progress text and
 the progress bar.
 
-If you have to provide some information to the user, not related to the progress of the algorithm, you can use the
+If you have to provide some information to the user, not related to the progress of
+the algorithm, you can use the
 ``setInfo(text)`` method, also from the ``progress`` object.
 
-If your script has some problem, the correct way of propagating it is to raise an exception of type ``GeoAlgorithmExecutionException()``. You can pass a message as argument to the constructor of the exception. Processing will take care of handling it and communicating with the user, depending on where the algorithm is being executed from (toolbox, modeler, Python console...)
+If your script has some problem, the correct way of propagating it is to raise
+an exception of type ``GeoAlgorithmExecutionException()``. You can pass a message
+as argument to the constructor of the exception. Processing will take care of
+handling it and communicating with the user, depending on where the algorithm
+is being executed from (toolbox, modeler, Python console...)
 
 
 Documenting your scripts
@@ -195,12 +208,22 @@ its code or just to see it.
 Best practices for writing script algorithms
 --------------------------------------------
 
-Here's a quick summary of ideas to consider when creating your script algorithms and, especially, if you want to share with other QGIS users. Following these simple rules will ensure consistency across the different Processing elements such as the toolbox, the modeler or the batch processing interface.
+Here's a quick summary of ideas to consider when creating your script algorithms
+and, especially, if you want to share with other QGIS users. Following these
+simple rules will ensure consistency across the different Processing elements
+such as the toolbox, the modeler or the batch processing interface.
 
 - Do not load resulting layers. Let Processing handle your results and load your layers if needed.
-- Always declare the outputs your algorithm creates. Avoid things such as declaring one output and then using the destination filename set for that output to create a collection of them. That will break the correct semantics of the algorithm and make it impossible to use it safely in the modeler. If you have to write an algorithm like that, make sure you add the ``##nomodeler`` tag.
-- Do not show message boxes or use any GUI element from the script. If you want to communicate with the user, use the ``setInfo()`` method or throw an ``GeoAlgorithmExecutionException``
-- As a rule of thumb, do not forget that your algorithm might be executed in a context other than the Processing toolbox.
+- Always declare the outputs your algorithm creates. Avoid things such as
+  declaring one output and then using the destination filename set for that
+  output to create a collection of them. That will break the correct semantics
+  of the algorithm and make it impossible to use it safely in the modeler. If 
+  you have to write an algorithm like that, make sure you add the ``##nomodeler`` tag.
+- Do not show message boxes or use any GUI element from the script. If you want
+  to communicate with the user, use the ``setInfo()`` method or throw an
+  ``GeoAlgorithmExecutionException``
+- As a rule of thumb, do not forget that your algorithm might be executed in a
+  context other than the Processing toolbox.
 
 
 Pre- and post-execution script hooks

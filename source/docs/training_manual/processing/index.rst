@@ -15,19 +15,19 @@ Contents:
 
    intro
    warning
-   set_up   
+   set_up
    first_alg
    second_alg
-   crs   
-   selection   
+   crs
+   selection
    first_saga_alg
    log
-   no_data   
+   no_data
    vector_calculator
    extents
    html
    john_snow
-   cutting_merging   
+   cutting_merging
    hydro
    modeler_twi
    modeler_hydro
@@ -44,6 +44,6 @@ Contents:
    generalize
    solar
    r_intro
+   r_syntax
+   r_syntax-table
    geomorpho
-
-

@@ -4,8 +4,10 @@
 Composer Items Common Options
 ==============================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Composer items have a set of common properties you will find on the bottom of
 the :guilabel:`Item Properties` tab: Position and size, Rotation, Frame,
@@ -49,7 +51,7 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
      in the QGIS general options, the color button will update as soon as you
      choose a new color from **Color Dialog** windows. If not, you need to
      close the **Color Dialog**.
-   * The |mIconDataDefine| :sup:`Data defined override` icon next to a field
+   * The |dataDefined| :sup:`Data defined override` icon next to a field
      means that you can associate the field with data in the map item or use
      expressions. These are particularly helpful with atlas generation
      (See :ref:`atlas_data_defined_override`).
@@ -93,7 +95,7 @@ Size and position
 ------------------
 
 Each item inside the Composer can be moved and resized to create a perfect layout.
-For both operations the first step is to activate the |mActionSelect| :sup:`Select/Move item` tool
+For both operations the first step is to activate the |select| :sup:`Select/Move item` tool
 and to click on the item; you can then move it using the mouse while holding the left button.
 If you need to constrain the movements to the horizontal or the vertical axis, just hold
 the :kbd:`Shift` button on the keyboard while moving the mouse.
@@ -111,7 +113,7 @@ click on the ruler, level with the guide and drag it to a new
 position. To delete a guide move it off the canvas. If you need to disable the
 snap on the fly, hold :kbd:`Ctrl` while moving the mouse.
 
-You can choose multiple items with the |mActionSelect| :sup:`Select/Move item` button.
+You can choose multiple items with the |select| :sup:`Select/Move item` button.
 Just hold the :kbd:`Shift` button and click on all the items you need.
 You can then resize/move this group like a single item.
 
@@ -134,7 +136,7 @@ to clear all selections or to invert the current selection.
 Alignment
 ----------
 
-Raising or lowering the visual hierarchy for elements are inside the |mActionRaiseItems|
+Raising or lowering the visual hierarchy for elements are inside the |raiseItems|
 :sup:`Raise selected items` pull-down menu. Choose an element on the Print Composer
 canvas and select the matching functionality to raise or lower the selected
 element compared to the other elements. This order is
@@ -153,7 +155,7 @@ in this list.
 
    Alignment helper lines in the Print Composer
 
-There are several alignment options available within the |mActionAlignLeft|
+There are several alignment options available within the |alignLeft|
 :sup:`Align selected items` pull-down menu (see figure_composer_common_3_). To use an
 alignment function, you first select the elements then click on the
 matching alignment icon. All selected elements will then be aligned to their common bounding box.

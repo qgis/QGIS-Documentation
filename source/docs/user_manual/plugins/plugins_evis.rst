@@ -5,8 +5,10 @@
 eVis Plugin
 ===========
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 (This section is derived
 from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) User's Guide. American
@@ -14,14 +16,14 @@ Museum of Natural History, Center for Biodiversity and Conservation. Available
 from http://biodiversityinformatics.amnh.org/, and released under the GNU FDL.)
 
 The Biodiversity Informatics Facility at the American Museum of Natural History's
-(AMNH) Center for Biodiversity and Conservation (CBC) 
+(AMNH) Center for Biodiversity and Conservation (CBC)
 has developed the Event Visualization Tool (eVis), another software tool to add
 to the suite of conservation monitoring and decision support tools for guiding
 protected area and landscape planning. This plugin enables users to easily link
 geocoded (i.e., referenced with latitude and longitude or X and Y coordinates)
-photographs, and other supporting documents, to vector data in |qg|.
+photographs, and other supporting documents, to vector data in QGIS.
 
-eVis is now automatically installed and enabled in new versions of |qg|, and as
+eVis is now automatically installed and enabled in new versions of QGIS, and as
 with all plugins, it can be disabled and enabled using the Plugin Manager
 (see :ref:`managing_plugins`).
 
@@ -36,13 +38,13 @@ Event Browser
 -------------
 
 The Event Browser module provides the functionality to display geocoded
-photographs that are linked to vector features displayed in the |qg| map window.
-Point data, for example, can be from a vector file that can be input using |qg|
+photographs that are linked to vector features displayed in the QGIS map window.
+Point data, for example, can be from a vector file that can be input using QGIS
 or it can be from the result of a database query. The vector feature must have
 attribute information associated with it to describe the location and name of
 the file containing the photograph and, optionally, the compass direction the
 camera was pointed when the image was acquired. Your vector layer must be loaded
-into |qg| before running the Event Browser.
+into QGIS before running the Event Browser.
 
 .. _`evis_launch_browser`:
 
@@ -125,8 +127,8 @@ B. **Compass bearing**: A drop-down list to specify the attribute
    click the checkbox below the drop-down menu title.
 C. **Compass offset**: Compass offsets can be used to compensate for
    declination (to adjust bearings collected using magnetic bearings to true north
-   bearings). Click the |radiobuttonon| :guilabel:`Manual` radio button to enter
-   the offset in the text box or click the |radiobuttonon|
+   bearings). Click the |radioButtonOn| :guilabel:`Manual` radio button to enter
+   the offset in the text box or click the |radioButtonOn|
    :guilabel:`From Attribute` radio button to select the attribute field
    containing the offsets. For both of these options, east declinations should
    be entered using positive values, and west declinations should use negative
@@ -255,10 +257,10 @@ Event ID Tool
 -------------
 
 The 'Event ID' module allows you to display a photograph by clicking on a feature
-displayed in the |qg| map window. The vector feature must have attribute
+displayed in the QGIS map window. The vector feature must have attribute
 information associated with it to describe the location and name of the file
 containing the photograph and, optionally, the compass direction the camera was
-pointed when the image was acquired. This layer must be loaded into |qg| before
+pointed when the image was acquired. This layer must be loaded into QGIS before
 running the 'Event ID' tool.
 
 .. _`evis_launch_id`:
@@ -266,13 +268,13 @@ running the 'Event ID' tool.
 Launch the Event ID module
 ..........................
 
-To launch the 'Event ID' module, either click on the |event_id| :sup:`Event ID`
+To launch the 'Event ID' module, either click on the |eventId| :sup:`Event ID`
 icon or click on :menuselection:`Database --> eVis --> Event ID Tool`. This will
 cause the cursor to change to an arrow with an 'i' on top of it signifying that
 the ID tool is active.
 
 To view the photographs linked to vector features in the active vector layer
-displayed in the |qg| map window, move the Event ID cursor over the feature and
+displayed in the QGIS map window, move the Event ID cursor over the feature and
 then click the mouse. After clicking on the feature, the :guilabel:`Event
 Browser` window is opened and the photographs on or near the clicked locality are
 available for display in the browser. If more than one photograph is available,
@@ -299,7 +301,7 @@ Launch the Database Connection module
 .....................................
 
 To launch the 'Database Connection' module, either click on the appropriate icon
-|evis_connect| :sup:`eVis Database Connection` or click on :menuselection:`Database -->
+|evisConnect| :sup:`eVis Database Connection` or click on :menuselection:`Database -->
 eVis --> Database Connection`. This will launch the :guilabel:`Database Connection`
 window. The window has three tabs: :guilabel:`Predefined Queries`,
 :guilabel:`Database Connection`, and :guilabel:`SQL Query`. The :guilabel:`Output
@@ -312,7 +314,7 @@ Connect to a database
 .....................
 
 Click on the :guilabel:`Database Connection` tab to open the database
-connection interface. Next, use the :menuselection:`Database Type` |selectstring|
+connection interface. Next, use the :menuselection:`Database Type` |selectString|
 combo box to select the type of database that you want to connect to. If a
 password or username is required, that information can be entered in the
 :guilabel:`Username` and :guilabel:`Password` textboxes.
@@ -366,7 +368,7 @@ Running SQL queries
 ...................
 
 SQL queries are used to extract information from a database or ODBC resource.
-In eVis, the output from these queries is a vector layer added to the |qg| map
+In eVis, the output from these queries is a vector layer added to the QGIS map
 window. Click on the :guilabel:`SQL Query` tab to display the SQL query
 interface. SQL commands can be entered in this text window. A helpful tutorial
 on SQL commands is available at http://www.w3schools.com/sql. For example, to
@@ -401,14 +403,14 @@ C. **Console Window**: The console window where messages related to processing
 D. **Help**: Displays the online help.
 E. **OK**: Closes the main :guilabel:`Database Connection` window.
 
-Use the :guilabel:`X Coordinate` |selectstring| and :guilabel:`Y Coordinate`
-|selectstring| combo boxes to select the fields from the database that stores the
+Use the :guilabel:`X Coordinate` |selectString| and :guilabel:`Y Coordinate`
+|selectString| combo boxes to select the fields from the database that stores the
 ``X`` (or longitude) and ``Y`` (or latitude) coordinates. Clicking on the **[OK]**
 button causes the vector layer created from the SQL query to be displayed in the
-|qg| map window.
+QGIS map window.
 
-To save this vector file for future use, you can use the |qg| 'Save as...'
-command that is accessed by right-clicking on the layer name in the |qg| map
+To save this vector file for future use, you can use the QGIS 'Save as...'
+command that is accessed by right-clicking on the layer name in the QGIS map
 legend and then selecting 'Save as...'
 
 .. tip:: **Creating a vector layer from a Microsoft Excel Worksheet**
@@ -417,7 +419,7 @@ legend and then selecting 'Save as...'
    that unwanted zeros ("0") have been inserted in the attribute table rows
    beneath valid data. This can be caused by deleting the values for these cells
    in Excel using the :kbd:`Backspace` key. To correct this problem, you need to
-   open the Excel file (you'll need to close |qg| if you are connected
+   open the Excel file (you'll need to close QGIS if you are connected
    to the file, to allow you to edit the file) and then use
    :menuselection:`Edit --> Delete` to remove the blank rows from the file. To
    avoid this problem, you can simply delete several rows in the Excel Worksheet
@@ -434,11 +436,11 @@ format in a file. This is particularly helpful if you are not familiar with SQL
 commands. Click on the :guilabel:`Predefined Queries` tab to display the
 predefined query interface.
 
-To load a set of predefined queries, click on the |evis_file| :sup:`Open File`
+To load a set of predefined queries, click on the |evisFile| :sup:`Open File`
 icon. This opens the :guilabel:`Open File` window, which is used to locate the file
 containing the SQL queries. When the queries are loaded, their titles as
 defined in the XML file will appear in the drop-down menu located just below
-the |evis_file| :sup:`Open File` icon. The full description of the query is
+the |evisFile| :sup:`Open File` icon. The full description of the query is
 displayed in the text window under the drop-down menu.
 
 Select the query you want to run from the drop-down menu and then click on the

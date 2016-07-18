@@ -6,8 +6,10 @@
 QGIS as OGC Data Client
 ***********************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 
 .. index:: Open_Geospatial_Consortium, OGC
@@ -72,6 +74,14 @@ own interpretation of the WMS standard.
 WMS layers can be added quite simply, as long as you know the URL to access
 the WMS server, you have a serviceable connection to that server, and the
 server understands HTTP as the data transport mechanism.
+
+Additionally, QGIS will cache your WMS responses (i.e. images) for 24h as long
+as the GetCapabilities request is not triggered. The GetCapabilities request is
+triggered everytime the **[Connect]** button in the **[Add layer(s) from WMS(T)S Server]** 
+dialog is used to retrieve the WMS server capabilities. This is an automatic 
+feature meant to optimize project loading time. If a project is saved with a WMS layer, 
+the corresponding WMS tiles will be loaded from the cache the next time the project is opened
+as long as they are no older than 24H.
 
 Overview of WMTS Support
 ------------------------
@@ -149,7 +159,7 @@ Selecting WMS/WMTS Servers
 
 The first time you use the WMS feature in QGIS, there are no servers defined.
 
-Begin by clicking the |mActionAddWmsLayer| :sup:`Add WMS layer` button on the
+Begin by clicking the |wms| :sup:`Add WMS layer` button on the
 toolbar, or selecting :menuselection:`Layer --> Add WMS Layer...`.
 
 The dialog :guilabel:`Add Layer(s) from a Server` for adding layers from
@@ -194,7 +204,7 @@ internet, you can add your proxy server in the options. Choose
 :menuselection:`Settings --> Options` and click on the :guilabel:`Network & Proxy` tab.
 There, you can add your proxy settings and enable them by setting |checkbox|
 :guilabel:`Use proxy for web access`. Make sure that you select the correct
-proxy type from the :guilabel:`Proxy type` |selectstring| drop-down menu.
+proxy type from the :guilabel:`Proxy type` |selectString| drop-down menu.
 
 Once the new WMS server connection has been created, it will be preserved for
 future QGIS sessions.
@@ -204,6 +214,15 @@ future QGIS sessions.
    Be sure, when entering the WMS server URL, that you have the base URL only.
    For example, you shouldn't have fragments such as ``request=GetCapabilities``
    or ``version=1.0.0`` in your URL.
+
+.. warning::
+
+   Entering **username** and **password** in the :guilabel:`Authentication` tab 
+   will keep unprotected credentials in the connection configuration. Those
+   **credentials will be visible** if, for instance, you shared the project file
+   with someone. Therefore, it's advisable to save your credentials in a
+   *Authentication configuration* instead (:guilabel:`configurations` tab). 
+   See ref:`authentication_index` for more details.
 
 .. _`ogc-wms-layers`:
 
@@ -379,7 +398,7 @@ Using the Identify Tool
 .. index:: WMS_identify
 
 Once you have added a WMS server, and if any layer from a WMS server is queryable,
-you can then use the |mActionIdentify| :sup:`Identify` tool to select a pixel on
+you can then use the |identify| :sup:`Identify` tool to select a pixel on
 the map canvas. A query is made to the WMS server for each selection made.
 The results of the query are returned in plain text. The formatting of this text
 is dependent on the particular WMS server used.
@@ -396,7 +415,7 @@ format may be stored in the project for the layer.
 
 **GML format support**
 
-The |mActionIdentify| :sup:`Identify` tool supports WMS server response
+The |identify| :sup:`Identify` tool supports WMS server response
 (GetFeatureInfo) in GML format (it is called Feature in the QGIS GUI in this context).
 If "Feature" format is supported by the server and selected, results of the Identify
 tool are vector features, as from a regular vector layer. When a single feature
@@ -511,7 +530,7 @@ the legend at full resolution.
 
 In the print composer, the legend will be integrated at it's original (downloaded)
 dimension. Resolution of the legend graphic can be set in the item properties
-under Legend -> WMS LegendGraphic to match your printing requirements
+under :guilabel:`Legend --> WMS LegendGraphic` to match your printing requirements
 
 The legend will display contextual information based on your current scale. The
 WMS legend will be shown only if the WMS server has GetLegendGraphic capability
@@ -527,7 +546,7 @@ of QGIS. Some of the more noteworthy exceptions follow.
 
 **Editing WMS Layer Settings**
 
-Once you've completed the |mActionAddWmsLayer| :sup:`Add WMS layer` procedure,
+Once you've completed the |wms| :sup:`Add WMS layer` procedure,
 there is no way to change the settings. A work-around is to delete the layer
 completely and start again.
 
@@ -576,6 +595,15 @@ network settings (especially proxy). It is also possible to select cache mode
 ('always cache', 'prefer cache', 'prefer network', 'always network'), and the provider also
 supports selection of time position, if temporal domain is offered by the server.
 
+.. warning::
+
+   Entering **username** and **password** in the :guilabel:`Authentication` tab 
+   will keep unprotected credentials in the connection configuration. Those
+   **credentials will be visible** if, for instance, you shared the project file
+   with someone. Therefore, it's advisable to save your credentials in a
+   *Authentication configuration* instead (:guilabel:`configurations` tab). 
+   See ref:`authentication_index` for more details.
+
 .. _`ogc-wfs`:
 
 WFS and WFS-T Client
@@ -602,13 +630,22 @@ The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
 #. Enter the URL (see above).
 #. Click **[OK]**.
 #. Choose 'DM Solutions' from the :guilabel:`Server Connections`
-   |selectstring| drop-down list.
+   |selectString| drop-down list.
 #. Click **[Connect]**.
 #. Wait for the list of layers to be populated.
 #. Select the :guilabel:`Parks` layer in the list.
 #. Click **[Apply]** to add the layer to the map.
 
 Note that any proxy settings you may have set in your preferences are also recognized.
+
+.. warning::
+
+   Entering **username** and **password** in the :guilabel:`Authentication` tab 
+   will keep unprotected credentials in the connection configuration. Those
+   **credentials will be visible** if, for instance, you shared the project file
+   with someone. Therefore, it's advisable to save your credentials in a
+   *Authentication configuration* instead (:guilabel:`configurations` tab). 
+   See ref:`authentication_index` for more details.
 
 .. _figure_OGC_3:
 

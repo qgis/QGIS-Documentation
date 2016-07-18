@@ -23,7 +23,7 @@ suitable plots.
   dataset.
 * If you are missing some layers, you should find them in
   :kbd:`exercise_data/residential_development/`
-* Use the :guilabel:`Intersect` tool (:guilabel:`Vector -> Geoprocessing Tools`)
+* Use the :guilabel:`Intersect` tool (:guilabel:`Vector --> Geoprocessing Tools`)
   to create a new vector layer called :kbd:`new_solution.shp` which contains
   only those buildings which intersect the :kbd:`suitable_terrain` layer.
 

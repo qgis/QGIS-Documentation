@@ -5,7 +5,7 @@ Vector Data
 ***********
 
 +-------------------+-------------+--------------------------------------------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | Understanding of vector data models as used in GIS.                                              |
+| |gentleLogo|      | Objectives: | Understanding of vector data models as used in GIS.                                              |
 +                   +-------------+--------------------------------------------------------------------------------------------------+
 |                   | Keywords:   | Vector, Point, Polyline, Polygon, Vertex, Geometry, Scale, Data Quality, Symbology, Data Sources |
 +-------------------+-------------+--------------------------------------------------------------------------------------------------+

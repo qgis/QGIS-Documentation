@@ -4,83 +4,21 @@
 QGIS Configuration
 ******************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 QGIS is highly configurable through the :menuselection:`Settings` menu. Choose
-between Panels, Toolbars, Project Properties, Options and Customization.
+between Project Properties, Options and Customization.
 
 .. note:: QGIS follows desktop guidelines for the location of options and project
    properties item. Consequently related to the OS you are using, location of some
-   of items described above could be located in the :menuselection:`View` menu
-   (Panels and Toolbars) or in :menuselection:`Project` for Options.
+   of items described below could be in the :menuselection:`Project`
+   or the :menuselection:`Settings` menu.
 
 ..  FIXME: please add more introduction here
 
-.. _sec_panels_and_toolbars:
-
-Panels and Toolbars
-===================
-
-In the :menuselection:`Panels-->` menu, you can switch on and off QGIS widgets.
-The :menuselection:`Toolbars-->` menu provides the possibility to switch on
-and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
-
-These menus are in |nix| :menuselection:`Settings` or |win|
-:menuselection:`View`.
-
-.. _figure_panels_toolbars:
-
-.. only:: html
-
-   **Figure Panels and Toolbars:**
-
-.. figure:: /static/user_manual/introduction/panels_and_toolbars.png
-   :align: center
-
-   The Panels and Toolbars menu
-
-.. index::
-   single:Statistic
-
-.. _`statistical_summary`:
-
-Statistical Summary Panel
---------------------------
-
-This panel can show some statistics on a specific vector layers. The panel
-allows users to choose:
-
-* the vector layer;
-* the column or the expression;
-* filter statistics to selected features;
-* refresh the informations;
-* the statistics information to display with the bottom right button;
-
-.. index::
-   single:Map overview
-
-QGIS Overview Panel
---------------------
-
-In QGIS, you can use an overview panel that provides a full extent view of
-layers added to it. Within the view is a rectangle showing the current map
-extent. This allows you to quickly determine which area of the map you are
-currently viewing. Note that labels are not rendered to the map overview even
-if the layers in the map overview have been set up for labelling. If you click
-and drag the red rectangle in the overview that shows your current extent, the
-main map view will update accordingly.
-
-
-.. index::
-   single:Log messages
-
-Log Messages Panel
--------------------
-
-When loading or processing some operations, you can track and follow messages
-that appear in different tabs using the |mMessageLog| Log Messages Panel.
-It can be activated using the most right icon in the bottom status bar.
 
 Project Properties
 ==================
@@ -180,9 +118,9 @@ can set project-specific options.
 Options
 =======
 
-|mActionOptions| Some basic options for QGIS can be selected using the
+|options| Some basic options for QGIS can be selected using the
 :guilabel:`Options` dialog. Select the menu option :menuselection:`Settings -->`
-|mActionOptions| :menuselection:`Options`. The tabs where you can customize your
+|options| :menuselection:`Options`. The tabs where you can customize your
 options are described below.
 
 General Menu
@@ -190,14 +128,14 @@ General Menu
 
 **Application**
 
-* Select the :guilabel:`Style (QGIS restart required)` |selectstring| and choose
+* Select the :guilabel:`Style (QGIS restart required)` |selectString| and choose
   between 'Oxygen','Windows','Motif','CDE', 'Plastique' and  'Cleanlooks' (|nix|).
-* Define the :guilabel:`Icon theme` |selectstring|. Currently only 'default' is
+* Define the :guilabel:`Icon theme` |selectString|. Currently only 'default' is
   possible.
-* Define the :guilabel:`Icon size` |selectstring|.
-* Define the :guilabel:`Font`. Choose between |radiobuttonon|
+* Define the :guilabel:`Icon size` |selectString|.
+* Define the :guilabel:`Font`. Choose between |radioButtonOn|
   :guilabel:`Qt default` and a user-defined font.
-* Change the :guilabel:`Timeout for timed messages or dialogs` |selectstring|.
+* Change the :guilabel:`Timeout for timed messages or dialogs` |selectString|.
 * |checkbox| :guilabel:`Hide splash screen at startup`
 * |checkbox| :guilabel:`Show tips at startup`
 * |checkbox| :guilabel:`Bold group box titles`
@@ -209,8 +147,8 @@ General Menu
 
 **Project files**
 
-* :guilabel:`Open project on launch` |selectstring| (choose between 'New',
-  'Most recent' and 'Specific'). When choosing 'Specific' use the |browsebutton|
+* :guilabel:`Open project on launch` |selectString| (choose between 'New',
+  'Most recent' and 'Specific'). When choosing 'Specific' use the |browseButton|
   to define a project.
 * |checkbox| :guilabel:`Create new project from default project`. You have the
   possibility to press on :guilabel:`Set current project as default` or on
@@ -224,7 +162,7 @@ General Menu
 * |checkbox| :guilabel:`Prompt for confirmation when a layer is to be removed`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
   version of QGIS`
-* :guilabel:`Enable macros` |selectstring|. This option was created to handle
+* :guilabel:`Enable macros` |selectString|. This option was created to handle
   macros that are written to perform an action on project events. You can
   choose between 'Never', 'Ask', 'For this session only' and
   'Always (not recommended)'.
@@ -276,14 +214,14 @@ Data Sources Menu
 * |checkbox| :guilabel:`Open attribute table in a dock window (QGIS restart
   required)`
 * |checkbox| :guilabel:`Copy geometry in WKT representation from attribute
-  table`. When using |mActionCopySelected| :sup:`Copy selected rows to
+  table`. When using |copySelected| :sup:`Copy selected rows to
   clipboard` from the :guilabel:`Attribute table` dialog, this has the
   result that the coordinates of points or vertices are also copied to the
   clipboard.
-* :guilabel:`Attribute table behavior` |selectstring|. There are three
+* :guilabel:`Attribute table behavior` |selectString|. There are three
   possibilities: 'Show all features', 'Show selected features' and 'Show
   features visible on map'.
-* :guilabel:`Attribute table row cache` |selectnumber|. This row cache makes
+* :guilabel:`Attribute table row cache` |selectNumber|. This row cache makes
   it possible to save the last loaded N attribute rows so that working with the
   attribute table will be quicker. The cache will be deleted when closing the
   attribute table.
@@ -292,10 +230,10 @@ Data Sources Menu
 
 **Data source handling**
 
-* :guilabel:`Scan for valid items in the browser dock` |selectstring|. You can
+* :guilabel:`Scan for valid items in the browser dock` |selectString|. You can
   choose between 'Check extension' and 'Check file contents'.
 * :guilabel:`Scan for contents of compressed files (.zip) in browser dock`
-  |selectstring|. 'No', 'Basic scan' and 'Full scan' are possible.
+  |selectString|. 'No', 'Basic scan' and 'Full scan' are possible.
 * :guilabel:`Prompt for raster sublayers when opening`. Some rasters support
   sublayers --- they are called subdatasets in GDAL. An example is netCDF files
   --- if there are many netCDF variables, GDAL sees every variable as a
@@ -356,14 +294,14 @@ Rendering Menu
 
 *Contrast enhancement*
 
-* :guilabel:`Single band gray` |selectstring|. A single band gray can have
+* :guilabel:`Single band gray` |selectString|. A single band gray can have
   'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and also
   'Clip to MinMax'.
-* :guilabel:`Multi band color (byte/band)` |selectstring|. Options are 'No stretch',
+* :guilabel:`Multi band color (byte/band)` |selectString|. Options are 'No stretch',
   'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
-* :guilabel:`Multi band color (>byte/band)` |selectstring|. Options are 'No stretch',
+* :guilabel:`Multi band color (>byte/band)` |selectString|. Options are 'No stretch',
   'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
-* :guilabel:`Limits (minimum/maximum)` |selectstring|. Options are
+* :guilabel:`Limits (minimum/maximum)` |selectString|. Options are
   'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'.
 * :guilabel:`Cumulative pixel count cut limits`
 * :guilabel:`Standard deviation multiplier`
@@ -391,7 +329,7 @@ Canvas and Legend Menu
 
 **Layer legend**
 
-* :guilabel:`Double click action in legend` |selectstring|. You can either
+* :guilabel:`Double click action in legend` |selectString|. You can either
   'Open layer properties' or 'Open attribute table' with the double click.
 * The following :guilabel:`Legend item styles` are possible:
 
@@ -422,16 +360,16 @@ This menu offers some options regarding the behavior of the :guilabel:`Identify 
 * Define :guilabel:`Decimal places`
 * |checkbox| :guilabel:`Keep base unit` to not automatically convert large numbers
   (e.g., meters to kilometers)
-* :guilabel:`Preferred distance units` |radiobuttonon| ('Meters', 'Feet',
+* :guilabel:`Preferred distance units` |radioButtonOn| ('Meters', 'Feet',
   'Nautical Miles', 'Degrees' or 'Map Units' )
-* :guilabel:`Preferred area units` |radiobuttonon| ('Square meters', 'Square feet',
+* :guilabel:`Preferred area units` |radioButtonOn| ('Square meters', 'Square feet',
   'Square yards', 'Hectares', 'Map Units' ...)
-* :guilabel:`Preferred angle units` |radiobuttonon| ('Degrees', 'Radians', 'Gon/gradians',
+* :guilabel:`Preferred angle units` |radioButtonOn| ('Degrees', 'Radians', 'Gon/gradians',
   'Minutes of arc' ...)
 
 **Panning and zooming**
 
-* Define :guilabel:`Mouse wheel action` |selectstring| ('Zoom', 'Zoom and recenter',
+* Define :guilabel:`Mouse wheel action` |selectString| ('Zoom', 'Zoom and recenter',
   'Zoom to mouse cursor', 'Nothing')
 * Define :guilabel:`Zoom factor` for wheel mouse
 
@@ -439,8 +377,8 @@ This menu offers some options regarding the behavior of the :guilabel:`Identify 
 
 **Predefined scales**
 
-Here, you find a list of predefined scales. With the |mActionSignPlus|
-and |mActionSignMinus| buttons you can add or remove your personal scales.
+Here, you find a list of predefined scales. With the |signPlus|
+and |signMinus| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you still have
 the possibility to remove your changes and reset to the predefined list.
 
@@ -453,14 +391,14 @@ You can define the :guilabel:`Default font` here.
 
 **Grid appearance**
 
-* Define the :guilabel:`Grid style` |selectstring| ('Solid', 'Dots', 'Crosses')
+* Define the :guilabel:`Grid style` |selectString| ('Solid', 'Dots', 'Crosses')
 * Define the :guilabel:`Grid color`
 
 **Grid and guide defaults**
 
-* Define the :guilabel:`Grid spacing` |selectnumber|
-* Define the :guilabel:`Grid offset` |selectnumber| for x and y
-* Define the :guilabel:`Snap tolerance` |selectnumber|
+* Define the :guilabel:`Grid spacing` |selectNumber|
+* Define the :guilabel:`Grid offset` |selectNumber| for x and y
+* Define the :guilabel:`Snap tolerance` |selectNumber|
 
 
 Digitizing Menu
@@ -484,7 +422,7 @@ Digitizing Menu
 **Snapping**
 
 * |checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart required)`
-* Define :guilabel:`Default snap mode` |selectstring| ('To vertex', 'To segment',
+* Define :guilabel:`Default snap mode` |selectString| ('To vertex', 'To segment',
   'To vertex and segment', 'Off')
 * Define :guilabel:`Default snapping tolerance` in map units or pixels
 * Define the :guilabel:`Search radius for vertex edits` in map units or pixels
@@ -492,13 +430,13 @@ Digitizing Menu
 **Vertex markers**
 
 * |checkbox| :guilabel:`Show markers only for selected features`
-* Define vertex :guilabel:`Marker style` |selectstring| ('Cross' (default), 'Semi
+* Define vertex :guilabel:`Marker style` |selectString| ('Cross' (default), 'Semi
   transparent circle' or 'None')
 * Define vertex :guilabel:`Marker size`
 
 **Curve offset tool**
 
-The next 3 options refer to the |mActionOffsetCurve| :sup:`Offset Curve` tool
+The next 3 options refer to the |offsetCurve| :sup:`Offset Curve` tool
 in :ref:`sec_advanced_edit`. Through the various settings, it is possible to
 influence the shape of the line offset. These options are possible starting from GEOS 3.3.
 
@@ -519,10 +457,10 @@ CRS Menu
 
 **Default CRS for new projects**
 
-* |radiobuttonoff| :guilabel:`Don't enable 'on the fly' reprojection`
-* |radiobuttonon| :guilabel:`Automatically enable 'on the fly' reprojection if
+* |radioButtonOff| :guilabel:`Don't enable 'on the fly' reprojection`
+* |radioButtonOn| :guilabel:`Automatically enable 'on the fly' reprojection if
   layers have different CRS`
-* |radiobuttonoff| :guilabel:`Enable 'on the fly' reprojection by default`
+* |radioButtonOff| :guilabel:`Enable 'on the fly' reprojection by default`
 * Select a CRS and :guilabel:`Always start new projects with this CRS`
 
 **CRS for new layers**
@@ -530,9 +468,9 @@ CRS Menu
 This area allows you to define the action to take when a new layer is created, or when
 a layer without a CRS is loaded.
 
-* |radiobuttonon| :guilabel:`Prompt for CRS`
-* |radiobuttonoff| :guilabel:`Use project CRS`
-* |radiobuttonoff| :guilabel:`Use default CRS`
+* |radioButtonOn| :guilabel:`Prompt for CRS`
+* |radioButtonOff| :guilabel:`Use project CRS`
+* |radioButtonOff| :guilabel:`Use default CRS`
 
 **Default datum transformations**
 
@@ -546,6 +484,13 @@ Locale Menu
 
 * |checkbox| :guilabel:`Overwrite system locale` and :guilabel:`Locale to use instead`
 * Information about active system locale
+
+Authentication
+--------------
+
+In the :guilabel:`Authentication` tab you can set authentication configurations
+and manage PKI certificates. See :ref:`authentication_index` for more
+details.
 
 Network Menu
 ------------
@@ -577,7 +522,7 @@ Define the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
 
 * |checkbox| :guilabel:`Use proxy for web access` and define 'Host', 'Port', 'User',
   and 'Password'.
-* Set the :guilabel:`Proxy type` |selectstring| according to your needs.
+* Set the :guilabel:`Proxy type` |selectString| according to your needs.
 
   * :menuselection:`Default Proxy`: Proxy is determined based on the application
     proxy set using
@@ -615,9 +560,12 @@ require a restart of QGIS before they will be effective.
 Customization
 =============
 
-The customization tool lets you (de)activate almost every element in the QGIS
-user interface. This can be very useful if you have a lot of plugins
-installed that you never use and that are filling your screen.
+The :index:`customization` dialog lets you (de)activate almost every element in the QGIS
+user interface. This can be very useful if you want to provide your end-users with a
+'light' version of QGIS, containing only the icons, menus or panels they need.
+
+.. note::
+   Before your changes are applied, you need to restart QGIS.
 
 .. _figure_customization:
 
@@ -630,18 +578,46 @@ installed that you never use and that are filling your screen.
 
    The Customization dialog
 
-QGIS Customization is divided into five groups. In |checkbox| :guilabel:`Menus`,
-you can hide entries in the Menu bar. In |checkbox| :guilabel:`Panels`, you
-find the panel windows. Panel windows are applications that can be started and
-used as a floating, top-level window or embedded to the QGIS main window as a
-docked widget (see also :ref:`sec_panels_and_toolbars`). In the |checkbox|
-:guilabel:`Status Bar`, features like the coordinate information can be
-deactivated. In |checkbox| :guilabel:`Toolbars`, you can (de)activate the
-toolbar icons of QGIS, and in |checkbox| :guilabel:`Widgets`, you can (de)activate
-dialogs as well as their buttons.
+Ticking the |checkbox| :guilabel:`Enable customization` checkbox is the first step
+on the way to QGIS customization. This enables the toolbar and the widget
+panel from which you can uncheck and thus disable some GUI items.
 
-With |mActionSelect| :sup:`Switch to catching widgets in main application`, you
-can click on elements in QGIS that you want to be hidden and find the corresponding
-entry in Customization (see figure_customization_). You can also save your
-various setups for different use cases as well. Before your changes
-are applied, you need to restart QGIS.
+The configurable item can be:
+
+* a **Menu** or some of its sub-menus from the :ref:`label_menubar`
+* a whole **Panel** (see :ref:`sec_panels_and_toolbars`)
+* the **Status bar** described in :ref:`label_statusbar` or some of its items
+* a **Toolbar**: the whole bar or some of its icons
+* or any **widget** from any dialog in QGIS: label, button, combobox...
+
+With |select| :sup:`Switch to catching widgets in main application`, you
+can click on an item in QGIS interface that you want to be hidden and
+QGIS automatically unchecks the corresponding entry in the Customization dialog.
+
+Once you setup your configuration, click **[Apply]** or **[Ok]** to validate your
+changes. This configuration becomes the one used by default by QGIS at the next startup.
+
+The modifications can also be saved in a ``.ini`` file using |fileSave|
+:sup:`Save To File` button. This is a handy way to share a common QGIS
+interface among multiple users. Just click on |fileOpen| :sup:`Load from File`
+from the destination computer in order to import the ``.ini`` file.
+You can also run :ref:`command line tools <custom_commandline>` and save various
+setups for different use cases as well.
+
+.. _tip_restoring_configuration:
+
+.. tip:: **Easily restore predefined QGIS**
+
+   The initial QGIS GUI configuration can be restored by one of the methods below:
+
+   * unchecking |checkbox| :guilabel:`Enable customization` option in the
+     Customization dialog or click the |selectAllTree| :sup:`Check All` button
+   * pressing the **[Reset]** button in the **QSettings** frame under
+     :menuselection:`Settings --> Options` menu, :guilabel:`System` tab
+   * launching QGIS at a command prompt with the following command line
+     ``qgis --nocustomization``
+   * setting to ``false`` the value of :guilabel:`UI --> Customization --> Enabled`
+     variable under :menuselection:`Settings --> Options` menu, :guilabel:`Advanced` tab.
+
+   In most cases, you need to restart QGIS in order to have the change applied.
+     

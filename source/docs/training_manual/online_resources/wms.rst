@@ -32,7 +32,7 @@ this example, we used a new map and loaded the original :guilabel:`places` and
   don't worry: we'll fix that later.
 * To add WMS layers, click on the :guilabel:`Add WMS Layer` button:
 
-  |mActionAddWmsLayer|
+  |wms|
 
 Remember how you connected to a SpatiaLite database at the beginning of the
 course. The :guilabel:`landuse`, :guilabel:`places`, and :guilabel:`water` layers

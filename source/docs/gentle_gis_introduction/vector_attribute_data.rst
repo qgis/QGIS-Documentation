@@ -5,7 +5,7 @@ Vector Attribute Data
 *********************
 
 +-------------------+-------------+---------------------------------------------------------------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | In this topic we describe how attribute data are associated with vector features and can be used to symbolise data. |
+| |gentleLogo|      | Objectives: | In this topic we describe how attribute data are associated with vector features and can be used to symbolise data. |
 +                   +-------------+---------------------------------------------------------------------------------------------------------------------+
 |                   | Keywords:   | Attribute, database, fields, data, vector, symbology                                                                |
 +-------------------+-------------+---------------------------------------------------------------------------------------------------------------------+

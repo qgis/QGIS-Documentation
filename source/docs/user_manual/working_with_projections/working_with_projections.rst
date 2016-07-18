@@ -6,8 +6,10 @@
 Working with Projections
 ************************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 .. index:: Projections, CRS, Coordinate_Reference_System
 
@@ -46,7 +48,7 @@ shapefile and a :file:`.prj` extension. For example, a shapefile named
 :file:`alaska.prj`.
 
 Whenever you select a new CRS, the layer units will automatically be
-changed in the :guilabel:`General` tab of the |mActionOptions|
+changed in the :guilabel:`General` tab of the |options|
 :guilabel:`Project Properties` dialog under the :guilabel:`Project` (Gnome,
 OS X) or :guilabel:`Settings` (KDE, Windows) menu.
 
@@ -76,14 +78,14 @@ sessions.
 
 When you use layers that do not have a CRS, you need to define how QGIS
 responds to these layers. This can be done globally or project-wide in the
-:guilabel:`CRS` tab under :menuselection:`Settings -->` |mActionOptions|
+:guilabel:`CRS` tab under :menuselection:`Settings -->` |options|
 :guilabel:`Options`.
 
 The options shown in figure_projection_1_ are:
 
-* |radiobuttonon| :guilabel:`Prompt for CRS`
-* |radiobuttonoff| :guilabel:`Use project CRS`
-* |radiobuttonoff| :guilabel:`Use default CRS displayed below`
+* |radioButtonOn| :guilabel:`Prompt for CRS`
+* |radioButtonOff| :guilabel:`Use project CRS`
+* |radioButtonOff| :guilabel:`Use default CRS displayed below`
 
 If you want to define the coordinate reference system for a certain layer
 without CRS information, you can also do that in the :guilabel:`General` tab
@@ -105,12 +107,12 @@ Define On The Fly (OTF) Reprojection
 QGIS supports OTF reprojection for both raster and vector data. However, OTF is
 not activated by default. To use OTF projection, you must activate the
 |checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox in the
-:guilabel:`CRS` tab of the |mActionProjectProperties| :menuselection:`Project
+:guilabel:`CRS` tab of the |projectProperties| :menuselection:`Project
 Properties` dialog.
 
 **There are three ways to do this:**
 
-#. Select |mActionOptions| :menuselection:`Project Properties` from the
+#. Select |options| :menuselection:`Project Properties` from the
    :menuselection:`Project` (Gnome, OSX) or :menuselection:`Settings` (KDE,
    Windows) menu.
 #. Click on the |geographic| :sup:`CRS status` icon in the lower right-hand
@@ -178,7 +180,7 @@ Custom Coordinate Reference System
 .. index:: Custom_CRS
 
 If QGIS does not provide the coordinate reference system you need, you can
-define a custom CRS. To define a CRS, select |mActionCustomProjection|
+define a custom CRS. To define a CRS, select |customProjection|
 :guilabel:`Custom CRS...` from the :menuselection:`Settings` menu. Custom CRSs
 are stored in your QGIS user database. In addition to your custom CRSs, this
 database also contains your spatial bookmarks and other custom data.
@@ -212,7 +214,7 @@ only two parameters to define a user CRS:
 #. A descriptive name
 #. The cartographic parameters in PROJ.4 format
 
-To create a new CRS, click the |mActionSignPlus| :sup:`Add new CRS` button and
+To create a new CRS, click the |signPlus| :sup:`Add new CRS` button and
 enter a descriptive name and the CRS parameters.
 
 Note that the :guilabel:`Parameters` must begin with a ``+proj=`` block,
@@ -233,10 +235,10 @@ QGIS uses WGS84. For some CRS there are a number of transforms
 available. QGIS allows you to define the transformation used otherwise
 QGIS uses a default transformation.
 
-In the :guilabel:`CRS` tab under :menuselection:`Settings -->` |mActionOptions|
+In the :guilabel:`CRS` tab under :menuselection:`Settings -->` |options|
 :guilabel:`Options` you can:
 
-* set QGIS to ask you when it needs define a transformation using |radiobuttonon|
+* set QGIS to ask you when it needs define a transformation using |radioButtonOn|
   :guilabel:`Ask for datum transformation when no default is defined`
 * edit a list of user defaults for transformations.
 
@@ -244,4 +246,4 @@ QGIS asks which transformation to use by opening a dialogue box
 displaying PROJ.4 text describing the source and destination
 transforms. Further information may be found by hovering over a
 transform. User defaults can be saved by selecting
-|radiobuttonon| :guilabel:`Remember selection`.
+|radioButtonOn| :guilabel:`Remember selection`.

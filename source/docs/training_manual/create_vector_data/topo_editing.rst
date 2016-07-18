@@ -49,7 +49,7 @@ farm and the existing farms adjacent to it.
 
 * Note the undo/redo tools in the :guilabel:`Advanced Digitizing` toolbar:
 
-  |mActionRedo| |mActionUndo|
+  |redo| |undo|
 
 
 |moderate| |FA| Correct Topological Features
@@ -97,7 +97,7 @@ Don't worry if you have joined more, less or different areas of forest.
 
 This is the :guilabel:`Simplify Feature` tool:
 
-  |mActionSimplify|
+  |simplifyFeatures|
 
 * Click on it to activate it.
 * Click on one of the areas which you joined using either the
@@ -130,7 +130,7 @@ change.
 
 This is the :guilabel:`Add Ring` tool:
 
- |mActionAddRing|
+ |addRing|
 
 It allows you to take a hole out of a feature, as long as the hole is bounded
 on all side by the feature. For example, if you've digitized the outer
@@ -147,7 +147,7 @@ boundaries.
   middle of the |largeLandUseArea|.
 * Delete your new feature by using the :guilabel:`Delete Ring` tool:
 
-  |mActionDeleteRing|
+  |deleteRing|
 
 .. Note:: You need to select a corner of the ring in order to delete it.
 
@@ -161,7 +161,7 @@ boundaries.
 
 This is the :guilabel:`Add Part` tool:
 
-  |mActionAddPart|
+  |addPart|
 
 It allows you to create an extra part of the feature, not directly connected to
 the main feature. For example, if you've digitized the boundaries of mainland
@@ -171,13 +171,13 @@ this tool to create them.
 * To use this tool, you must first select the polygon to which you wish to add
   the part by using the :guilabel:`Select Single Feature` tool:
 
-  |mActionSelect|
+  |select|
 
 * Now try using the :guilabel:`Add Part` tool to add an outlying area to the
   |largeLandUseArea|.
 * Delete your new feature by using the :guilabel:`Delete Part` tool:
 
-  |mActionDeletePart|
+  |deletePart|
 
 .. Note:: You need to select a corner of the part in order to delete it.
 
@@ -188,7 +188,7 @@ this tool to create them.
 
 This is the :guilabel:`Reshape Features` tool:
 
-  |mActionReshape|
+  |reshape|
 
 It can add a bump to an existing feature. With this tool selected:
 
@@ -228,7 +228,7 @@ The :guilabel:`Split Features` tool is similar to how you took part of the farm
 away, except that it doesn't delete either of the two parts. Instead, it keeps
 them both.
 
-  |mActionSplitFeatures|
+  |splitFeatures|
 
 * First, re-enable snapping for the :guilabel:`landuse` layer.
 

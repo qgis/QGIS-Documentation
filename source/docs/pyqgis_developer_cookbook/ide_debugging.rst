@@ -75,8 +75,8 @@ Installation
 
 To use Eclipse, make sure you have installed the following
 
-* Eclipse
-* Aptana Eclipse Plugin or PyDev
+* `Eclipse <https://eclipse.org>`_
+* `Aptana Eclipse Plugin <http://www.aptana.com/products/studio3/success_plugin.html>`_ or `PyDev <http://www.pydev.org>`_
 * QGIS 2.x
 
 Preparing QGIS

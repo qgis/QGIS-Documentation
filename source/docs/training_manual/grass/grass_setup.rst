@@ -29,7 +29,7 @@ data you want to use into a GRASS database.
 
 * Click on the :guilabel:`New mapset` button:
 
-  |grass_new_mapset|
+  |grassNewMapset|
 
   You'll see a dialog explaining the structure of a GRASS mapset.
 
@@ -84,7 +84,7 @@ two-step process.
   :kbd:`exercise_data/epsg4326/`) for now.
 * As soon as it's loaded, click on the :guilabel:`GRASS Tools` button:
 
-  |grass_tools|
+  |grassTools|
 
 * In the new dialog, select :guilabel:`Modules list`.
 * Find the vector import tool by entering the term :kbd:`v.in.ogr.qgis` in the

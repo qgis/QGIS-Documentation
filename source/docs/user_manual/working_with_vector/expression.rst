@@ -8,17 +8,50 @@
 Expressions
 ************
 
-.. contents::
-   :local:
+.. only:: html
 
-The **Expressions** feature is available from many parts in |qg|. It can be
-accessed using the |mIconExpressionSelect| :sup:`Select by expression`, the
-|mActionCalculateField| :sup:`Field calculator` or the
-|mIconDataDefine| :sup:`Data defined override` tool.
-It offers a powerful way to manipulate attribute value or variables in
+   .. contents::
+      :local:
+
+The :index:`Expressions` feature is available from many parts in QGIS. It can be
+accessed using the |expression| :sup:`Expression Builder`, the
+|expressionSelect| :sup:`Select By Expression...`, the :guilabel:`Geometry generator`
+symbol layer option, the |calculateField| :sup:`Field calculator` or the
+|dataDefined| :sup:`Data defined override` tool.
+Based on layer data and prebuilt or user defined functions,
+it offers a powerful way to manipulate attribute value, geometry and variables in
 order to dynamically change the geometry style, the content or position
 of the label, the value for diagram, the height of a composer item,
-select some feature, create virtual column ...
+select some features, create virtual field ...
+
+**Some examples:**
+
+* From Field Calculator, calculate a "pop_density" field using existing "total_pop"
+  and "area_km2" fields::
+
+    "total_pop" / "area_km2"
+
+* Update the field "density_level" with categories according to the "pop_density" values::
+
+    CASE WHEN "pop_density" < 50 THEN 'Low population density'
+         WHEN "pop_density" >= 50 and "pop_density" < 150 THEN 'Medium population density'
+         WHEN "pop_density" >= 150 THEN 'High population density'
+    END
+
+* Apply a categorized style to all the features according to whether their average house
+  price is smaller or higher than 10000€ per square metre::
+  
+    "price_m2" > 10000
+
+* Using the "Select By Expression..." tool, select all the features representing
+  areas of “High population density” and whose average house price is higher than
+  10000€ per square metre::
+
+    "density_level" = 'High population density' and "price_m2" > 10000
+
+Likewise, the previous expression could also be used to define which features
+should be labeled or shown in the map. Using expressions offers you a lot of
+possibilities.
 
 The **Expressions** feature offers access to the:
 
@@ -42,7 +75,7 @@ Functions List
 .. figure:: /static/user_manual/working_with_vector/function_list.png
    :align: center
 
-   The Expression tab |nix|
+   The Expression tab
 
 The **Expression** tab contains functions as well as layer's fields and values.
 It contains widgets to:
@@ -200,7 +233,7 @@ This group contains math functions (e.g., square root, sin and cos).
  scale_linear       Transforms a given value from an input domain
                     to an output range using linear interpolation
  sin                Returns the sine of an angle
- sqrt(a)            Returns the square root of a value
+ sqrt               Returns the square root of a value
  tan                Returns the tangent of an angle
 ==================  ===========================================================
 
@@ -299,7 +332,6 @@ This group contains functions for handling date and time data.
 * Get the month and the year of today in the format "10/2014" ::
 
     month(now()) || '/' || year(now())
-
 
 Fields and Values
 ------------------
@@ -493,7 +525,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
                       point in common, but their interiors do not intersect
  transform            Returns the geometry transformed from the source CRS to
                       the destination CRS
- translate            Returns a translated version of a geometry.Calculations
+ translate            Returns a translated version of a geometry. Calculations
                       are in the Spatial Reference System of this geometry
  union                Returns a geometry that represents the point set union of
                       the geometries
@@ -514,6 +546,15 @@ This group contains functions that operate on geometry objects (e.g., length, ar
  z                    Returns the z coordinate of a point geometry
 ====================  =========================================================
 
+**Some examples:**
+
+* Return the x coordinate of the current feature's centroid::
+
+    x($geometry)
+
+* Send back a value according to feature's area::
+
+    CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
 
 Record Functions
 -----------------
@@ -538,6 +579,17 @@ This group contains functions that operate on record identifiers.
  uuid                Generates a Universally Unique Identifier (UUID)
                      for each row. Each UUID is 38 characters long
 ===================  ==========================================================
+
+**Some examples:**
+
+* Return the first feature in layer "LayerA" whose field "id" has the same value
+  as the field "name" of the current feature (a kind of jointure)::
+
+    get_feature( 'layerA', 'id', attribute( $currentfeature, 'name') )
+
+* Calculate the area of the joined feature from the previous example::
+
+    area( geometry( get_feature( 'layerA', 'id', attribute( $currentfeature, 'name') ) ) )
 
 
 String Functions
@@ -601,8 +653,8 @@ This group contains dynamic variables related to the application, the project
 file and other settings.
 It means that some functions may not be available according to the context:
 
-- from the |mIconExpressionSelect| :sup:`Select by expression` dialog
-- from the |mActionCalculateField| :sup:`Field calculator` dialog
+- from the |expressionSelect| :sup:`Select by expression` dialog
+- from the |calculateField| :sup:`Field calculator` dialog
 - from the layer properties dialog
 - from the print composer
 
@@ -677,7 +729,7 @@ functions in a comfortable way.
 .. figure:: /static/user_manual/working_with_vector/function_editor.png
    :align: center
 
-   The Function Editor tab |nix|
+   The Function Editor tab
 
 The function editor will create new Python files in :file:`.qgis2\\python\\expressions`
 folder and will auto load all functions defined when starting QGIS. Be aware

@@ -9,7 +9,7 @@ QGIS Server Python Plugins
 .. contents::
    :local:
 
-Python plugins can also run on |qg| Server (see: :ref:`label_qgisserver`): by using the
+Python plugins can also run on QGIS Server (see: :ref:`label_qgisserver`): by using the
 *server interface* (:class:`QgsServerInterface`) a Python plugin running on the
 server can alter the behavior of existing core services (**WMS**, **WFS** etc.).
 
@@ -94,13 +94,13 @@ This approach basically works but it is not very "pythonic": a better approach w
 Writing a server plugin
 =======================
 
-A server plugins is just a standard |qg| Python plugin as described in
+A server plugins is just a standard QGIS Python plugin as described in
 :ref:`developing_plugins`, that just provides an additional (or alternative)
-interface: a typical |qg| desktop plugin has access to |qg| application
+interface: a typical QGIS desktop plugin has access to QGIS application
 through the :class:`QgisInterface` instance, a server plugin has also
 access to a :class:`QgsServerInterface`.
 
-To tell |qg| Server that a plugin has a server interface, a special
+To tell QGIS Server that a plugin has a server interface, a special
 metadata entry is needed (in `metadata.txt`) ::
 
     server=True
@@ -125,9 +125,9 @@ Here's the directory structure of our example server plugin
 
 __init__.py
 -----------
-This file is required by Python's import system. Also, |qg| Server requires that this
+This file is required by Python's import system. Also, QGIS Server requires that this
 file contains a :func:`serverClassFactory()` function, which is called when the
-plugin gets loaded into |qg| Server when the server starts. It receives reference to instance of
+plugin gets loaded into QGIS Server when the server starts. It receives reference to instance of
 :class:`QgsServerInterface` and must return instance of your plugin's class.
 This is how the example plugin `__init__.py` looks like::
 
@@ -301,9 +301,9 @@ Here's the directory structure of our example server plugin::
 __init__.py
 -----------
 
-This file is required by Python's import system. As for all |qg| server plugins, this
+This file is required by Python's import system. As for all QGIS server plugins, this
 file contains a :func:`serverClassFactory()` function, which is called when the
-plugin gets loaded into |qg| Server when the server starts. It receives reference to instance of
+plugin gets loaded into QGIS Server when the server starts. It receives reference to instance of
 :class:`QgsServerInterface` and must return instance of your plugin's class.
 This is how the example plugin `__init__.py` looks like:
 

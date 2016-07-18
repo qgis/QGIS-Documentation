@@ -5,18 +5,20 @@
 fTools Plugin
 =============
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The goal of the fTools Python plugin is to provide a one-stop resource for many
 common vector-based GIS tasks, without the need for additional software,
 libraries, or complex work-arounds. It provides a growing suite of spatial data
 management and analysis functions that are both fast and functional.
 
-fTools is now automatically installed and enabled in new versions of |qg|, and
+fTools is now automatically installed and enabled in new versions of QGIS, and
 as with all plugins, it can be disabled and enabled using the Plugin Manager
 (see :ref:`managing_plugins`). When enabled, the fTools plugin adds a
-:menuselection:`Vector` menu to |qg|, providing functions ranging from Analysis
+:menuselection:`Vector` menu to QGIS, providing functions ranging from Analysis
 and Research Tools to Geometry and Geoprocessing Tools, as well as several useful
 Data Management Tools.
 
@@ -39,18 +41,18 @@ Analysis tools
 |                     |                 | distances. Can limit distances to    |
 |                     |                 | the k nearest features.              |
 +---------------------+-----------------+--------------------------------------+
-| |sum_lines|         | Sum line length | Calculate the total sum of line      |
+| |sumLines|          | Sum line length | Calculate the total sum of line      |
 |                     |                 | lengths for each polygon of a polygon|
 |                     |                 | vector layer.                        |
 +---------------------+-----------------+--------------------------------------+
-| |sum_points|        | Points in       | Count the number of points that occur|
+| |sumPoints|         | Points in       | Count the number of points that occur|
 |                     | polygon         | in each polygon of an input polygon  |
 |                     |                 | vector layer.                        |
 +---------------------+-----------------+--------------------------------------+
 | |unique|            | List unique     | List all unique values in an input   |
 |                     | values          | vector layer field.                  |
 +---------------------+-----------------+--------------------------------------+
-| |basic_statistics|  | Basic statistics| Compute basic statistics (mean, std  |
+| |basicStatistics|   | Basic statistics| Compute basic statistics (mean, std  |
 |                     |                 | dev, N, sum, CV) on an input field.  |
 +---------------------+-----------------+--------------------------------------+
 | |neighbor|          | Nearest         | Compute nearest neighbor statistics  |
@@ -80,28 +82,28 @@ Research tools
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
-| |random_selection|  | Random selection| Randomly select n number of features,|
+| |randomSelection|   | Random selection| Randomly select n number of features,|
 |                     |                 | or n percentage of features.         |
 +---------------------+-----------------+--------------------------------------+
-| |sub_selection|     | Random selection| Randomly select features within      |
+| |subSelection|      | Random selection| Randomly select features within      |
 |                     | within subsets  | subsets based on a unique ID field.  |
 +---------------------+-----------------+--------------------------------------+
-| |random_points|     | Random points   | Generate pseudo-random points over a |
+| |randomPoints|      | Random points   | Generate pseudo-random points over a |
 |                     |                 | given input layer.                   |
 +---------------------+-----------------+--------------------------------------+
-| |regular_points|    | Regular points  | Generate a regular grid of points    |
+| |regularPoints|     | Regular points  | Generate a regular grid of points    |
 |                     |                 | over a specified region and export   |
 |                     |                 | them as a point shapefile.           |
 +---------------------+-----------------+--------------------------------------+
-| |vector_grid|       | Vector grid     | Generate a line or polygon grid      |
+| |vectorGrid|        | Vector grid     | Generate a line or polygon grid      |
 |                     |                 | based on user-specified grid spacing.|
 +---------------------+-----------------+--------------------------------------+
-| |select_location|   | Select by       | Select features based on their       |
+| |selectLocation|    | Select by       | Select features based on their       |
 |                     | location        | location relative to another layer   |
 |                     |                 | to form a new selection, or add or   |
 |                     |                 | subtract from the current selection. |
 +---------------------+-----------------+--------------------------------------+
-| |layer_extent|      | Polygon from    | Create a single rectangular          |
+| |layerExtent|       | Polygon from    | Create a single rectangular          |
 |                     | layer extent    | polygon layer from the extent of an  |
 |                     |                 | input raster or vector layer.        |
 +---------------------+-----------------+--------------------------------------+
@@ -113,7 +115,7 @@ Geoprocessing tools
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
-| |convex_hull|       | Convex hull(s)  | Create minimum convex hull(s) for an |
+| |convexHull|        | Convex hull(s)  | Create minimum convex hull(s) for an |
 |                     |                 | input layer, or based on an ID field.|
 +---------------------+-----------------+--------------------------------------+
 | |buffer|            | Buffer(s)       | Create buffer(s) around features     |
@@ -127,7 +129,7 @@ Geoprocessing tools
 |                     |                 | contains intersecting and            |
 |                     |                 | non-intersecting areas.              |
 +---------------------+-----------------+--------------------------------------+
-| |sym_difference|    | Symmetrical     | Overlay layers such that output      |
+| |symDifference|     | Symmetrical     | Overlay layers such that output      |
 |                     | difference      | contains those areas of the input    |
 |                     |                 | and difference layers that do not    |
 |                     |                 | intersect.                           |
@@ -158,7 +160,7 @@ Geometry tools
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
-| |check_geometry|    | Check geometry  | Check polygons for intersections,    |
+| |checkGeometry|     | Check geometry  | Check polygons for intersections,    |
 |                     | validity        | closed holes, and fix node ordering. |
 |                     |                 | You can choose the engine used by the|
 |                     |                 | in the options dialog, digitizing tab|
@@ -170,7 +172,7 @@ Geometry tools
 |                     |                 | Topology Checker plugin and 'must not|
 |                     |                 | have invalid geometries' rule.       |
 +---------------------+-----------------+--------------------------------------+
-| |export_geometry|   | Export/Add      | Add vector layer geometry info to    |
+| |exportGeometry|    | Export/Add      | Add vector layer geometry info to    |
 |                     | geometry columns| point (XCOORD, YCOORD), line         |
 |                     |                 | (LENGTH), or polygon (AREA,          |
 |                     |                 | PERIMETER) layer.                    |
@@ -192,23 +194,23 @@ Geometry tools
 |                     | Densify         | Densify lines or polygons by adding  |
 |                     | geometry        | vertices.                            |
 +---------------------+-----------------+--------------------------------------+
-| |multi_to_single|   | Multipart to    | Convert multipart features to        |
+| |multiToSingle|     | Multipart to    | Convert multipart features to        |
 |                     | singleparts     | multiple singlepart features.        |
 |                     |                 | Creates simple polygons and lines.   |
 +---------------------+-----------------+--------------------------------------+
-| |single_to_multi|   | Singleparts to  | Merge multiple features to a single  |
+| |singleToMulti|     | Singleparts to  | Merge multiple features to a single  |
 |                     | multipart       | multipart feature based on a unique  |
 |                     |                 | ID field.                            |
 +---------------------+-----------------+--------------------------------------+
-| |to_lines|          | Polygons to     | Convert polygons to lines, multipart |
+| |toLines|           | Polygons to     | Convert polygons to lines, multipart |
 |                     | lines           | polygons to multiple singlepart      |
 |                     |                 | lines.                               |
 +---------------------+-----------------+--------------------------------------+
-| |to_lines|          | Lines to        | Convert lines to polygons, multipart |
+| |toLines|           | Lines to        | Convert lines to polygons, multipart |
 |                     | polygons        | lines to multiple singlepart         |
 |                     |                 | polygons.                            |
 +---------------------+-----------------+--------------------------------------+
-| |extract_nodes|     | Extract nodes   | Extract nodes from line and polygon  |
+| |extractNodes|      | Extract nodes   | Extract nodes from line and polygon  |
 |                     |                 | layers and output them as points.    |
 +---------------------+-----------------+--------------------------------------+
 
@@ -227,20 +229,20 @@ Data management tools
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
-| |define_projection| | Define current  | Specify the CRS for shapefiles whose |
+| |defineProjection|  | Define current  | Specify the CRS for shapefiles whose |
 |                     | projection      | CRS has not been defined.            |
 +---------------------+-----------------+--------------------------------------+
-| |join_location|     | Join attributes | Join additional attributes to vector |
+| |joinLocation|      | Join attributes | Join additional attributes to vector |
 |                     | by location     | layer based on spatial relationship. |
 |                     |                 | Attributes from one vector layer are |
 |                     |                 | appended to the attribute table of   |
 |                     |                 | another layer and exported as a      |
 |                     |                 | shapefile.                           |
 +---------------------+-----------------+--------------------------------------+
-| |split_layer|       | Split vector    | Split input layer into multiple      |
+| |splitLayer|        | Split vector    | Split input layer into multiple      |
 |                     | layer           | separate layers based on input field.|
 +---------------------+-----------------+--------------------------------------+
-| |merge_shapes|      | Merge shapefiles| Merge several shapefiles within a    |
+| |mergeShapes|       | Merge shapefiles| Merge several shapefiles within a    |
 |                     | to one          | folder into a new shapefile based on |
 |                     |                 | the layer type (point, line, area).  |
 +---------------------+-----------------+--------------------------------------+

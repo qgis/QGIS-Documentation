@@ -29,7 +29,7 @@ set to the whole extent of South Africa, as you set it up before.
 
 * To redefine the extent to cover only our raster dataset, click this button:
 
-  |grass_region_edit|
+  |grassRegionEdit|
 
 When this tool is activated, your cursor will turn into a cross when over the
 QGIS map canvas.

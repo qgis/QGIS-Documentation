@@ -34,7 +34,7 @@ water, such as streams and rivers.
 
 * Open a new QGIS project
 * In the :guilabel:`Vector` menu dropdown, select
-  :guilabel:`OpenStreetMap -> Download Data`. You can then manually enter the
+  :guilabel:`OpenStreetMap --> Download Data`. You can then manually enter the
   co-ordinates of the region you wish to use, or you can use an existing layer
   to set the co-ordinates.
 * Choose a location to save the resulting .osm file and click :guilabel:`Ok`:

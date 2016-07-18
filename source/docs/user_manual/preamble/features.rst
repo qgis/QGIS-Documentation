@@ -6,10 +6,12 @@
 Features
 ********
 
-.. contents::
-   :local:
+.. only:: html
 
-|qg| offers many common GIS functionalities provided by core features
+   .. contents::
+      :local:
+
+QGIS offers many common GIS functionalities provided by core features
 and plugins. A short summary of six general categories of features and
 plugins is presented below, followed by first insights into the
 integrated Python console.
@@ -40,7 +42,7 @@ Explore data and compose maps
 You can compose maps and interactively explore spatial data with a
 friendly GUI. The many helpful tools available in the GUI include:
 
-*  |qg| browser
+*  QGIS browser
 *  On-the-fly reprojection
 *  DB Manager
 *  Map composer
@@ -59,7 +61,7 @@ Create, edit, manage and export data
 ------------------------------------
 
 You can create, edit, manage and export vector and raster layers in
-several formats. |qg| offers the following:
+several formats. QGIS offers the following:
 
 *  Digitizing tools for OGR-supported formats and GRASS vector layers
 *  Ability to create and edit shapefiles and GRASS vector layers
@@ -80,27 +82,27 @@ Analyze data
 ------------
 
 You can perform spatial data analysis on spatial databases and other
-OGR- supported formats. |qg| currently offers vector analysis,
+OGR- supported formats. QGIS currently offers vector analysis,
 sampling, geoprocessing, geometry and database management tools. You
 can also use the integrated GRASS tools, which include the complete
 GRASS functionality of more than 400 modules. (See section
 :ref:`sec_grass`.) Or, you can work with the Processing Plugin, which
 provides a powerful geospatial analysis framework to call native and
-third-party algorithms from |qg|, such as GDAL, SAGA, GRASS, fTools
+third-party algorithms from QGIS, such as GDAL, SAGA, GRASS, fTools
 and more. (See section :ref:`sec_processing_intro`.)
 
 Publish maps on the Internet
 ----------------------------
 
-|qg| can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as
+QGIS can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as
 a WMS, WCS or WFS server. (See section :ref:`sec_ogc`.) Additionally,
 you can publish your data on the Internet using a webserver with UMN
 MapServer or GeoServer installed.
 
-Extend |qg| functionality through plugins
+Extend QGIS functionality through plugins
 -----------------------------------------
 
-|qg| can be adapted to your special needs with the extensible plugin
+QGIS can be adapted to your special needs with the extensible plugin
 architecture and libraries that can be used to create plugins. You can
 even create new applications with C++ or Python!
 
@@ -114,7 +116,7 @@ Core plugins include:
 #.  Dxf2Shp Converter (Convert DXF files to shapefiles)
 #.  eVIS (Visualize events)
 #.  fTools (Analyze and manage vector data)
-#.  GDALTools (Integrate GDAL Tools into |qg|)
+#.  GDALTools (Integrate GDAL Tools into QGIS)
 #.  Georeferencer GDAL (Add projection information to rasters using GDAL)
 #.  GPS Tools (Load and import GPS data)
 #.  GRASS (Integrate GRASS GIS)
@@ -135,7 +137,7 @@ Core plugins include:
 External Python Plugins
 .......................
 
-|qg| offers a growing number of external Python plugins that are
+QGIS offers a growing number of external Python plugins that are
 provided by the community. These plugins reside in the official
 Plugins Repository and can be easily installed using the Python Plugin
 Installer. See Section :ref:`managing_plugins`.
@@ -146,15 +148,15 @@ Python Console
 For scripting, it is possible to take advantage of an integrated
 Python console, which can be opened from menu: :menuselection:`Plugins
 --> Python Console`. The console opens as a non-modal utility
-window. For interaction with the |qg| environment, there is the
+window. For interaction with the QGIS environment, there is the
 :data:`qgis.utils.iface` variable, which is an instance of
 :class:`QgsInterface`. This interface allows access to the map canvas,
-menus, toolbars and other parts of the |qg| application. You can create
-a script, then drag and drop it into the |qg| window and it will be
+menus, toolbars and other parts of the QGIS application. You can create
+a script, then drag and drop it into the QGIS window and it will be
 executed automatically.
 
 For further information about working with the Python console and
-programming |qg| plugins and applications, please refer to
+programming QGIS plugins and applications, please refer to
 :ref:`PyQGIS-Developer-Cookbook`.
 
 Known Issues

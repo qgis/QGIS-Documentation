@@ -5,7 +5,7 @@
 Road Graph Plugin
 =================
 
-The Road Graph Plugin is a C++ plugin for |qg| that calculates the shortest path
+The Road Graph Plugin is a C++ plugin for QGIS that calculates the shortest path
 between two points on any polyline layer and plots this path over the road network.
 
 .. _figure_road_graph_1:
@@ -17,7 +17,7 @@ between two points on any polyline layer and plots this path over the road netwo
 .. figure:: /static/user_manual/plugins/roadgraph_sample.png
    :align: center
 
-   Road Graph Plugin |nix|
+   Road Graph Plugin
 
 Main features:
 
@@ -27,7 +27,7 @@ Main features:
 * Highlights roads directions (this is slow and used mainly for debug purposes
   and for the settings testing).
 
-As a roads layer, you can use any polyline vector layer in any |qg|-supported
+As a roads layer, you can use any polyline vector layer in any QGIS-supported
 format. Two lines with a common point are considered connected. Please note, it
 is required to use layer CRS as project CRS while editing a roads layer. This is
 due to the fact that recalculation of the coordinates between different CRSs
@@ -47,7 +47,7 @@ Using the plugin
 ----------------
 
 After plugin activation, you will see an additional panel on the left side of
-the main |qg| window. Now, enter some parameters into the :guilabel:`Road graph
+the main QGIS window. Now, enter some parameters into the :guilabel:`Road graph
 plugin settings` dialog in the :menuselection:`Vector --> Road Graph` menu
 (see figure_road_graph_2_).
 
@@ -60,7 +60,7 @@ plugin settings` dialog in the :menuselection:`Vector --> Road Graph` menu
 .. figure:: /static/user_manual/plugins/roadgraph_plugin_settings.png
    :align: center
 
-   Road graph plugin settings |nix|
+   Road graph plugin settings
 
 After setting the :guilabel:`Time unit`, :guilabel:`Distance unit` and
 :guilabel:`Topology tolerance`, you can choose the vector layer in the

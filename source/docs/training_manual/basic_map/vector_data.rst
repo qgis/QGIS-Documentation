@@ -72,7 +72,7 @@ Microsoft Access. GIS applications can also make use of databases. GIS-specific
 DBMSes (such as PostGIS) have extra functions, because they need to handle
 spatial data.
 
-* Click on this icon: |mActionAddSpatiaLiteLayer|
+* Click on this icon: |addSpatiaLiteLayer|
 
 (If you're sure you can't see it at all, check that the :guilabel:`Manage
 Layers` toolbar is enabled.)

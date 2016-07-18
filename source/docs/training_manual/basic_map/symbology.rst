@@ -135,7 +135,7 @@ Test the effects of this by zooming in and out in your map, noting when the
 .. note::  You can use your mouse wheel to zoom in increments.
    Alternatively, use the zoom tools to zoom to a window:
 
-   |mActionZoomIn| |mActionZoomOut|
+   |zoomIn| |zoomOut|
 
 |moderate| |FA| Adding Symbol Layers
 -------------------------------------------------------------------------------
@@ -231,7 +231,7 @@ control the order in which the different symbol layers are rendered.
 
 To change the order of the symbol layers, select the :guilabel:`Line` layer in
 the :guilabel:`Symbol layers` panel, then click
-:guilabel:`Advanced -> Symbol levels...` in the
+:guilabel:`Advanced --> Symbol levels...` in the
 bottom right-hand corner of the window. This will open a dialog like this:
 
 .. image:: /static/training_manual/symbology/symbol_levels_dialog.png
@@ -278,7 +278,7 @@ replacing will be lost.
 
 The roads must be narrow and mid-gray, with a thin, pale yellow outline. Remember
 that you may need to change the layer rendering order via the
-:menuselection:`Advanced -> Symbol levels...` dialog.
+:menuselection:`Advanced --> Symbol levels...` dialog.
 
 .. image:: /static/training_manual/symbology/target_road_symbology.png
    :align: center
@@ -372,7 +372,7 @@ To see the various options available for line data:
 
 
 * Ensure that the symbol levels are correct (via the
-  :guilabel:`Advanced -> Symbol levels` dialog we used earlier) before applying
+  :guilabel:`Advanced --> Symbol levels` dialog we used earlier) before applying
   the style.
 
 

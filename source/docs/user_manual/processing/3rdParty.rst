@@ -5,8 +5,10 @@
 Configuring external applications
 =================================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The processing framework can be extended using additional applications.
 Currently, SAGA, GRASS, OTB (Orfeo Toolbox) and R are supported, along
@@ -205,6 +207,8 @@ where your R binaries are located. You can do this using the :guilabel:`R folder
 entry in the processing configuration dialog. Once you have set that parameter,
 you can start creating and executing your own R scripts.
 
+.. note:: for **Windows** user, usually the R executable file is in the ``C:\Program Files\R\R-3.2``, be aware not to use ``C:\Program Files\R\R-3.2\bin``!
+
 Once again, this is different in Linux, and you just have to make sure that the
 R folder is included in the PATH environment variable. If you can start R just
 typing ``R`` in a console, then you are ready to go.
@@ -240,6 +244,8 @@ The first lines, which start with a double Python comment sign (``##``), tell
 QGIS the inputs of the algorithm described in the file and the outputs that
 it will generate. They work with exactly the same syntax as the Processing scripts
 that we have already seen, so they will not be described here again.
+
+Please have a look at the :ref:`R Intro <r-intro>` and the :ref:`R Syntax <r-syntax>` Training Manual Chapters to have more information on how to write your own R scripts-
 
 When you declare an input parameter, QGIS uses that information for two
 things: creating the user interface to ask the user for the value of that

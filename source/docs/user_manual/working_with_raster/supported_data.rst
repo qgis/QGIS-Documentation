@@ -8,8 +8,10 @@
 Working with Raster Data
 *************************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 .. % when the revision of a section has been finalized,
 .. % comment out the following line:
@@ -17,22 +19,22 @@ Working with Raster Data
 
 
 This section describes how to visualize and set raster layer properties.
-|qg| uses the :index:`GDAL` library to read and write raster data formats,
+QGIS uses the :index:`GDAL` library to read and write raster data formats,
 including ArcInfo Binary Grid, ArcInfo ASCII Grid, GeoTIFF, ERDAS IMAGINE,
-and many more. GRASS raster support is supplied by a native |qg| data provider
+and many more. GRASS raster support is supplied by a native QGIS data provider
 plugin. The raster data can also be loaded in read mode from zip and gzip
-archives into |qg|.
+archives into QGIS.
 
 As of the date of this document, more than 100 raster formats are supported by the
 GDAL library (see GDAL-SOFTWARE-SUITE in :ref:`literature_and_web`). A complete
 list is available at http://www.gdal.org/formats_list.html.
 
 .. note::
-   Not all of the listed formats may work in |qg| for various reasons. For example,
+   Not all of the listed formats may work in QGIS for various reasons. For example,
    some require external commercial libraries, or the GDAL installation of your OS
    may not have been built to support the format you want to use. Only those formats that
    have been well tested will appear in the list of file types when loading a
-   raster into |qg|. Other untested formats can be loaded by selecting the
+   raster into QGIS. Other untested formats can be loaded by selecting the
    ``[GDAL] All files (*)`` filter.
 
 Working with GRASS raster data is described in section :ref:`sec_grass`.
@@ -43,29 +45,29 @@ What is raster data?
 
 Raster data in GIS are matrices of discrete cells that represent features on,
 above or below the earth's surface. Each cell in the raster grid is the same
-size, and cells are usually rectangular (in |qg| they will always be
+size, and cells are usually rectangular (in QGIS they will always be
 rectangular). Typical raster datasets include remote sensing data, such as
 aerial photography, or satellite imagery and modelled data, such as an elevation
 matrix.
 
 Unlike vector data, raster data typically do not have an associated database
 record for each cell. They are geocoded by pixel resolution and the x/y
-coordinate of a corner pixel of the raster layer. This allows |qg| to position
+coordinate of a corner pixel of the raster layer. This allows QGIS to position
 the data correctly in the map canvas.
 
-|qg| makes use of georeference information inside the raster layer (e.g., :index:`GeoTiff`)
+QGIS makes use of georeference information inside the raster layer (e.g., :index:`GeoTiff`)
 or in an appropriate world file to properly display the data.
 
 .. index:: loading_raster
 
 .. _load_raster:
 
-Loading raster data in |qg|
+Loading raster data in QGIS
 ===========================
 
-Raster layers are loaded either by clicking on the |mActionAddRasterLayer|
+Raster layers are loaded either by clicking on the |addRasterLayer|
 :sup:`Add Raster Layer` icon or by selecting the :menuselection:`Layer -->`
-|mActionAddRasterLayer| :guilabel:`Add Raster Layer` menu option. More than one
+|addRasterLayer| :guilabel:`Add Raster Layer` menu option. More than one
 layer can be loaded at the same time by holding down the :kbd:`Ctrl` or
 :kbd:`Shift` key and clicking on multiple items in the
 :guilabel:`Open a GDAL Supported Raster Data Source` dialog.

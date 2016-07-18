@@ -1,12 +1,19 @@
 |updatedisclaimer|
 
-.. _sec_raster_calc:
+.. _sec_raster_analysis:
+
+Raster Analysis
+================
+
+.. only:: html
+
+   .. contents::
+      :local:
+
+.. _label_raster_calc:
 
 Raster Calculator
-=================
-
-.. contents::
-   :local:
+*****************
 
 .. index:: Raster_Calculator
 
@@ -73,13 +80,48 @@ In other words, for every cell greater than or equal to 0, set its value to 1. O
 it to 0. This creates the mask on the fly.
 
 
-If you want to classify a raster -- say, for instance into two elevation classes, you can 
+If you want to classify a raster -- say, for instance into two elevation classes, you can
 use the following expression to create a raster with two values 1 and 2 in one step.
 
 ::
 
   ("elevation@1" < 50) * 1 + ("elevation@1" >= 50) * 2
 
-In other words, for every cell less than 50 set its value to 1. For every cell greater than or 
+In other words, for every cell less than 50 set its value to 1. For every cell greater than or
 equal 50 set its value to 2.
 
+.. _label_raster_align:
+
+Raster Alignment
+*****************
+
+This tool is able to take several rasters as input and to align them perfectly,
+that means:
+
+* reproject to the same CRS,
+* resample to the same cell size and offset in the grid,
+* clip to a region of interest,
+* rescale values when required.
+
+All rasters will be saved in another files.
+
+First, open the tools from :menuselection:`Raster --> Align Raster...` and click
+on the |signPlus| :sup:`Add new raster` button to choose one existing raster in
+QGIS. Select an output file to save the raster after the alignment, the
+resampling method and if the tools need to `Rescale values according to the
+cell size`. You can |symbologyEdit| :sup:`Edit file settings` and |signMinus|
+:sup:`Remove an existing file` from the list.
+
+.. todo: add screenshot
+
+Then in the main `Align raster` window, you can choose one or more options:
+
+* Select the `Reference Layer`,
+* Transform into a new `CRS`,
+* Setup a different `Cell size`,
+* Setup a different `Grid Offset`,
+* `Clip to Extent`,
+* `Output Size`,
+* `Add aligned raster to the map canvas`.
+
+.. todo: add screenshot

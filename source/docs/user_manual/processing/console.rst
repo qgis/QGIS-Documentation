@@ -3,8 +3,10 @@
 Using processing algorithms from the console
 ==============================================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The console allows advanced users to increase their productivity and perform
 complex operations that cannot be performed using any of the other GUI elements of
@@ -12,10 +14,10 @@ the processing framework. Models involving several algorithms can be defined usi
 command-line interface, and additional operations such as loops and conditional
 sentences can be added to create more flexible and powerful workflows.
 
-There is not a processing console in |qg|, but all processing commands are available
-instead from the |qg| built-in Python console. That means that you can incorporate
+There is not a processing console in QGIS, but all processing commands are available
+instead from the QGIS built-in Python console. That means that you can incorporate
 those commands into your console work and connect processing algorithms to all the
-other features (including methods from the |qg| API) available from there.
+other features (including methods from the QGIS API) available from there.
 
 The code that you can execute from the Python console, even if it does not call
 any specific processing method, can be converted into a new algorithm that you can
@@ -23,7 +25,7 @@ later call from the toolbox, the graphical modeler or any other component,
 just like you do with any other algorithm. In fact, some algorithms that
 you can find in the toolbox are simple scripts.
 
-In this section, we will see how to use processing algorithms from the |qg| Python console,
+In this section, we will see how to use processing algorithms from the QGIS Python console,
 and also how to write algorithms using Python.
 
 Calling algorithms from the Python console
@@ -135,9 +137,9 @@ Depending on the type of parameter, values are introduced differently. The next
 list gives a quick review of how to introduce values for each type of input parameter:
 
 * Raster Layer, Vector Layer or Table. Simply use a string with the name that
-  identifies the data object to use (the name it has in the |qg| Table of
+  identifies the data object to use (the name it has in the QGIS Table of
   Contents) or a filename (if the corresponding layer is not opened, it will be
-  opened but not added to the map canvas). If you have an instance of a |qg|
+  opened but not added to the map canvas). If you have an instance of a QGIS
   object representing the layer, you can also pass it as parameter. If the input
   is optional and you do not want to use any data object, use ``None``.
 * Selection. If an algorithm has a selection parameter, the value of that
@@ -187,7 +189,7 @@ appended to the given file path.
 Unlike when an algorithm is executed from the toolbox, outputs are not added to
 the map canvas if you execute that same algorithm from the Python console. If you
 want to add an output to the map canvas, you have to do it yourself after running the
-algorithm. To do so, you can use |qg| API commands, or, even easier, use one of
+algorithm. To do so, you can use QGIS API commands, or, even easier, use one of
 the handy methods provided for such tasks.
 
 The ``runalg`` method returns a dictionary with the output names (the
@@ -201,16 +203,16 @@ Additional functions for handling data
 Apart from the functions used to call algorithms, importing the
 ``processing`` package will also import some additional functions that make it
 easier to work with data, particularly vector data. They are just convenience
-functions that wrap some functionality from the |qg| API, usually with a less
+functions that wrap some functionality from the QGIS API, usually with a less
 complex syntax. These functions should be used when developing new algorithms,
 as they make it easier to operate with input data.
 
 Below is a list of some of these commands. More information can be found in the
 classes under the ``processing/tools`` package, and also in the example scripts
-provided with |qg|.
+provided with QGIS.
 
-* ``getObject(obj)``: Returns a |qg| object (a layer or table) from the passed
-  object, which can be a filename or the name of the object in the |qg| Layers List
+* ``getObject(obj)``: Returns a QGIS object (a layer or table) from the passed
+  object, which can be a filename or the name of the object in the QGIS Layers List
 * ``values(layer, fields)``: Returns the values in the attributes table of a
   vector layer, for the passed fields. Fields can be passed as field names or as
   zero-based field indices. Returns a dict of lists, with the passed field
@@ -299,7 +301,7 @@ if you want the user to see a parameter named ``A numerical value``, you can use
 the variable name ``A_numerical_value``.
 
 Layers and table values are strings containing the file path of the corresponding
-object. To turn them into a |qg| object, you can use the ``processing.getObjectFromUri()``
+object. To turn them into a QGIS object, you can use the ``processing.getObjectFromUri()``
 function. Multiple inputs also have a string value, which contains the file paths
 to all selected object, separated by semicolons (``;``).
 
@@ -317,9 +319,10 @@ The value assigned to the output variables is always a string with a file path.
 It will correspond to a temporary file path in case the user has not entered any
 output filename.
 
-When you declare an output, the algorithm will try to add it to |qg| once it
+When you declare an output, the algorithm will try to add it to QGIS once it
 is finished. That is why, although the ``runalg()`` method does not
-load the layers it produces, the final TWI layer will be loaded (using the case of our previous example), since it is saved
+load the layers it produces, the final TWI layer will be loaded (using the case
+of our previous example), since it is saved
 to the file entered by the user, which is the value of the corresponding output.
 
 Do not use the ``load()`` method in your script algorithms, just when working

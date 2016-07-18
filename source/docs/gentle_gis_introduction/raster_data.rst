@@ -4,7 +4,7 @@ Raster Data
 ***********
 
 +-------------------+-------------+-----------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | Understand what raster data is and how it can be used in a GIS. |
+| |gentleLogo|      | Objectives: | Understand what raster data is and how it can be used in a GIS. |
 +                   +-------------+-----------------------------------------------------------------+
 |                   | Keywords:   | Raster, Pixel, Remote Sensing, Satellite, Image, Georeference   |
 +-------------------+-------------+-----------------------------------------------------------------+

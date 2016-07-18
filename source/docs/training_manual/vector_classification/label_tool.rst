@@ -24,7 +24,7 @@ been activated.
   doesn't, click on the :guilabel:`Label` item, and it will be activated.
 * Click on the :guilabel:`places` layer in the :guilabel:`Layers list`, so that
   it is highlighted.
-* Click on the following toolbar button: |mActionLabeling|
+* Click on the following toolbar button: |labeling|
 
 This gives you the :guilabel:`Layer labeling settings` dialog.
 
@@ -307,9 +307,9 @@ position, and other properties of a label (if you have attribute fields
 allocated for the purpose), then edit these properties using the tools adjacent
 to the main :guilabel:`Label tool`:
 
-|mActionLabeling| |mActionShowPinnedLabels| |mActionPinLabels|
-|mActionShowHideLabels| |mActionMoveLabel| |mActionRotateLabel|
-|mActionChangeLabelProperties|
+|labeling| |showPinnedLabels| |pinLabels|
+|showHideLabels| |moveLabel| |rotateLabel|
+|changeLabelProperties|
 
 (These tools will be active if the required attribute fields exist and you are
 in edit mode.)

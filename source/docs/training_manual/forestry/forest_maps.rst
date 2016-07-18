@@ -54,7 +54,7 @@ You need to activate the use of the grid:
 
 Now you can start to add elements to your map canvas. Add first a map element so you can review how it looks as you will be making changes in the layers symbology:
 
-* Click on the :guilabel:`Add New Map` button: |mActionAddMap|.
+* Click on the :guilabel:`Add New Map` button: |addMap|.
 * Click and drag a box on the canvas so that the map occupies most of it.
 
 .. image:: /static/training_manual/forestry/composer_1.png
@@ -84,7 +84,7 @@ The current styling of the sample plots is not the best, but how does it look in
 While during the last exercises, the white buffer was OK on top of the aerial image, now that the background image is mostly white you barely can see the labels. You can also check how it looks like on the composer:
 
 * Go to the :guilabel:`Print Composer` window.
-* Use the |mActionSelect| button to select the map element in the composer.
+* Use the |select| button to select the map element in the composer.
 * Go to the :guilabel:`Item properties` tab.
 * Under :guilabel:`Extents` click on :guilabel:`Set to map canvas extent`.
 * If you need to refresh the element, under :guilabel:`Main properties` click on the :guilabel:`Update preview`.
@@ -163,7 +163,7 @@ Now your overview map is more what you expected and its view will not change any
 * Go to the map window again and select the layers you want to be visible (:kbd:`systematic_plots_clip`, :kbd:`forest_stands_2012 copy` and :kbd:`Basic_map`).
 * Zoom again to have only a few lines of sample plots visible.
 * Go back to the :guilabel:`Print composer` window.
-* Select the bigger map in your composer (|mActionSelect|).
+* Select the bigger map in your composer (|select|).
 * In :guilabel:`Item properties` click on :guilabel:`Update preview` and :guilabel:`Set to map canvas extent`.
 
 Notice that only the bigger map is displaying the current map view, and the small overview map is keeping the same view you had when you locked it.
@@ -177,7 +177,7 @@ Your template map is almost ready. Add now two text boxes below the map, one con
 
 You can also add a North arrow to the overview map:
 
-* Use the :guilabel:`Add image` tool, |mActionAddImage|.
+* Use the :guilabel:`Add image` tool, |addImage|.
 * Click at the upper right corner of the overview map.
 * In :guilabel:`Item properties` open :guilabel:`Search directories` and browse for an arrow image.
 * Under :guilabel:`Image rotation`, check the :guilabel:`Sync with map` and select :kbd:`Map 1` (the overview map).
@@ -237,7 +237,7 @@ One more thing needs to be done. You need to tell the Atlas tool what map elemen
 
 Now you can use the preview tool for Atlas maps to review what your maps will look like:
 
-* Activate the Atlas previews using the button |mIconAtlas| or if your Atlas toolbar is not visible, via :menuselection:`Atlas --> Preview Atlas`.
+* Activate the Atlas previews using the button |atlas| or if your Atlas toolbar is not visible, via :menuselection:`Atlas --> Preview Atlas`.
 * You can use the arrows in the Atlas tool bar or in the :menuselection:`Atlas` menu to move through maps that will be created.
 
 Note that some of them cover areas that are not interesting. Lets do something about it and save some trees by not printing those useless maps.
@@ -262,7 +262,7 @@ The coverage layer you are using does not yet have useful information that you c
 
 * Open the :guilabel:`Attribute table` for the :kbd:`atlas_coverage` layer.
 * Enable editing.
-* Use the |mActionCalculateField| calculator to create and populate the following two fields.
+* Use the |calculateField| calculator to create and populate the following two fields.
 * Create a field named :kbd:`Zone` and type :kbd:`Whole number (integer)`.
 * In the :guilabel:`Expression` box write/copy/construct :kbd:`$rownum`.
 * Create another field named :kbd:`Remarks`, of type :kbd:`Text (string)` and a width of :kbd:`255`.

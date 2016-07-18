@@ -6,13 +6,15 @@
 Conventions
 ***********
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 This section describes the uniform styles that will be used throughout
 this manual.
 
-GUI Conventions 
+GUI Conventions
 ---------------
 
 The GUI convention styles are intended to mimic the appearance of the
@@ -22,31 +24,31 @@ instruction in the manual.
 
 * Menu Options: :menuselection:`Layer --> Add a Raster Layer` or
   :menuselection:`Settings --> Toolbars --> Digitizing`
-* Tool: |mActionAddRasterLayer| :sup:`Add a Raster Layer`
+* Tool: |addRasterLayer| :sup:`Add a Raster Layer`
 * Button : **\[Save as Default\]**
 * Dialog Box Title: :guilabel:`Layer Properties`
 * Tab: :guilabel:`General`
 * Checkbox: |checkbox| :guilabel:`Render`
-* Radio Button: |radiobuttonon| :guilabel:`Postgis SRID`
-  |radiobuttonoff| :guilabel:`EPSG ID`
-* Select a number: |selectnumber|
-* Select a string: |selectstring|
-* Browse for a file: |browsebutton|
-* Select a color: |selectcolor|
+* Radio Button: |radioButtonOn| :guilabel:`Postgis SRID`
+  |radioButtonOff| :guilabel:`EPSG ID`
+* Select a number: |selectNumber|
+* Select a string: |selectString|
+* Browse for a file: |browseButton|
+* Select a color: |selectColor|
 * Slider: |slider|
-* Input Text: |inputtext|
+* Input Text: |inputText|
 
 .. * Toolbox : \toolboxtwo{nviz}{nviz - Open 3D-View in NVIZ}
 
 A shadow indicates a clickable GUI component.
 
-Text or Keyboard Conventions 
+Text or Keyboard Conventions
 ----------------------------
 
 This manual also includes styles related to text, keyboard commands
 and coding to indicate different entities, such as classes or
 methods. These styles do not correspond to the actual appearance of
-any text or coding within |qg|.
+any text or coding within QGIS.
 
 .. Use for all urls. Otherwise, it is not clickable in the document.
 
@@ -70,14 +72,14 @@ Lines of code are indicated by a fixed-width font:
     PROJCS["NAD_1927_Albers",
       GEOGCS["GCS_North_American_1927",
 
-Platform-specific instructions 
+Platform-specific instructions
 ------------------------------
 
 GUI sequences and small amounts of text may be formatted inline: Click
 |nix| |win| :menuselection:`File` |osx| :menuselection:`QGIS --> Quit
 to close QGIS`. This indicates that on Linux, Unix and Windows
 platforms, you should click the File menu first, then Quit, while on
-Macintosh OS X platforms, you should click the |qg| menu first, then
+Macintosh OS X platforms, you should click the QGIS menu first, then
 Quit.
 
 Larger amounts of text may be formatted as a list:

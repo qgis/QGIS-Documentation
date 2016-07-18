@@ -19,12 +19,12 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
 .. figure:: /static/user_manual/plugins/coordinate_capture_dialog.png
    :align: center
 
-   Coordinate Capture Plugin |nix|
+   Coordinate Capture Plugin
 
-#. Start |qg|, select |mActionOptions| :guilabel:`Project Properties` from the
+#. Start QGIS, select |options| :guilabel:`Project Properties` from the
    :guilabel:`Settings` (KDE, Windows) or :guilabel:`File` (Gnome, OSX) menu
    and click on the :guilabel:`Projection` tab. As an alternative, you can also
-   click on the |mIconProjectionEnabled| :sup:`CRS status` icon in the lower
+   click on the |projectionEnabled| :sup:`CRS status` icon in the lower
    right-hand corner of the status bar.
 #. Click on the |checkbox| `Enable on the fly projection` checkbox and select
    a projected coordinate system of your choice (see also :ref:`label_projections`).

@@ -5,7 +5,7 @@
 Raster Terrain Analysis Plugin
 ==============================
 
-|dem_analysis| The Raster Terrain Analysis Plugin can be used to calculate the
+|demAnalysis| The Raster Terrain Analysis Plugin can be used to calculate the
 slope, aspect, hillshade, ruggedness index and relief for digital elevation
 models (DEM). It is very simple to handle and provides an intuitive graphical
 user interface for creating new raster layers (see Figure_raster_terrain_1_).
@@ -43,7 +43,7 @@ Description of the analysis:
 Using the plugin
 ----------------
 
-#. Start |qg| and load the :file:`gtopo30` raster layer from the GRASS sample
+#. Start QGIS and load the :file:`gtopo30` raster layer from the GRASS sample
    location.
 #. Load the Raster Terrain Analysis plugin in the Plugin Manager (see
    :ref:`managing_plugins`).
