@@ -175,14 +175,18 @@ pdf: html
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf
 
 full:  
-	@-if [ $(LANG) != "en" ]; then \
+	@-if [ $(LANG) = "en" ]; then \
+		echo; \
+	elif [ $(LANG) = "zh_CN" ]; then \
+		echo; \
+		echo Pulling zh_Hans from transifex but renaming it to zh_CN; \
+		tx pull --minimum-perc=1 --skip -f -l zh_Hans; \
+		mv i18n/zh_Hans i18n/zh_CN; \
+	else \
 		echo; \
 		echo Pulling $$LANG from transifex; \
-		# --minimum-perc=1 so only files which have at least 1% translation are pulled \
-		# -f to force, --skip to not stop with errors \
-		# -l lang \
 		tx pull --minimum-perc=1 --skip -f -l $$LANG; \
-        fi
+	fi
 	make pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf
