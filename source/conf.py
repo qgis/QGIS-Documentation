@@ -528,10 +528,10 @@ rst_epilog = """
    :width: 1.5em
 .. |formAnnotation| image:: /static/common/mActionFormAnnotation.png
    :width: 1.5em
-.. |frame|  image:: /static/common/frame.png
-   :width: 1.5em
 .. |mActionAddDb2Layer| image:: /static/common/mActionAddDb2Layer.png
    :width: 1.5em 
+.. |frame|  image:: /static/common/frame.png
+   :width: 1.5em
 .. |ftools| image:: /static/common/ftools_logo.png
    :width: 1.5em
 .. |fullCumulativeStretch| image:: /static/common/mActionFullCumulativeCutStretch.png
@@ -911,15 +911,11 @@ rst_epilog = """
    :width: 1.5em
 .. |processingToolbox| image:: /static/common/alg.png
    :width: 1.5em
+.. |mIconDb2| image:: /static/common/mIconDb2.png
+   :width: 1.5em    
 .. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
-<<<<<<< HEAD
-.. |mIconDb2| image:: /static/common/mIconDb2.png
-   :width: 1.5em 
-.. |mIconExpression| image:: /static/common/mIconExpression.png
-=======
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
->>>>>>> master
    :width: 1.5em
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
