@@ -175,14 +175,14 @@ pdf: html
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf
 
 full:  
-#	@-if [ $(LANG) != "en" ]; then \
-#		echo; \
-#		echo Pulling $$LANG from transifex; \
-#		# --minimum-perc=1 so only files which have at least 1% translation are pulled \
-#		# -f to force, --skip to not stop with errors \
-#		# -l lang \
-#		echo tx pull --minimum-perc=1 --skip -f -l $$LANG; \
-#        fi
+	@-if [ $(LANG) != "en" ]; then \
+		echo; \
+		echo Pulling $$LANG from transifex; \
+		# --minimum-perc=1 so only files which have at least 1% translation are pulled \
+		# -f to force, --skip to not stop with errors \
+		# -l lang \
+		echo tx pull --minimum-perc=1 --skip -f -l $$LANG; \
+        fi
 	make pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf
@@ -218,10 +218,12 @@ gettext:
 # the english source resources
 # 1) make springclean (removing all building cruft)
 # 2) make pretranslate (getting all strings from sources and create new pot files)
-# 3) tx push -fs --no-interactive (push the source (-f) files forcing (-f) overwriting the ones their without asking (--no-interactive)
+# 3) run scripts/create_transifex_resources.sh to renew .tx/config (first clear all entries from it)
+# 4) tx push -fs --no-interactive (push the source (-f) files forcing (-f) overwriting the ones their without asking (--no-interactive)
 #
 # SHOULD NOT BE DONE ON TESTING/MASTER BRANCH! ONLY ON STABLE==TRANSLATING BRANCH
 #transifex_push:
 #	make springclean
 #	make pretranslate
+#	scripts/create_transifex_resources.sh
 #	tx push -f -s --no-interactive
