@@ -250,6 +250,8 @@ rst_epilog = """
    :width: 1.5em
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
+.. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
+   :width: 1.5em    
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
 .. |addGCPPoint| image:: /static/common/mActionAddGCPPoint.png
@@ -417,6 +419,8 @@ rst_epilog = """
    :width: 1.5em
 .. |dateTimeEdit|  image:: /static/common/datetimeedit.png
    :width: 1.5em
+.. |db2| image:: /static/common/mIconDb2.png
+   :width: 1.5em   
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |defineProjection| image:: /static/common/define_projection.png
@@ -528,8 +532,6 @@ rst_epilog = """
    :width: 1.5em
 .. |formAnnotation| image:: /static/common/mActionFormAnnotation.png
    :width: 1.5em
-.. |mActionAddDb2Layer| image:: /static/common/mActionAddDb2Layer.png
-   :width: 1.5em 
 .. |frame|  image:: /static/common/frame.png
    :width: 1.5em
 .. |ftools| image:: /static/common/ftools_logo.png
@@ -910,8 +912,6 @@ rst_epilog = """
 .. |processingResult| image:: /static/common/results.png
    :width: 1.5em
 .. |processingToolbox| image:: /static/common/alg.png
-   :width: 1.5em
-.. |mIconDb2| image:: /static/common/mIconDb2.png
    :width: 1.5em
 .. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em

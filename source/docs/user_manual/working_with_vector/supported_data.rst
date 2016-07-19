@@ -888,18 +888,21 @@ DB2 Spatial Layers
 
 IBM DB2 for Linux, Unix and Windows (DB2 LUW), IBM DB2 for z/OS (mainframe) 
 and IBM DashDB products allow
-users to store and analyze spatial data in relational table columns.
+users to store and analyse spatial data in relational table columns.
 The DB2 provider for QGIS supports the full range of visualization, analysis
-and manipulation of spatial data in both of these databases.
+and manipulation of spatial data in these databases.
 
-.. _DB2 z/OS KnowledgeCenter: https://www-01.ibm.com/support/knowledgecenter/SSEPEK_11.0.0/com.ibm.db2z11.doc.spatl/src/spatl/dasz_spatl.dita?lang=en
-.. _DB2 LUW KnowledgeCenter: http://www.ibm.com/support/knowledgecenter/SSEPGG_10.5.0/com.ibm.db2.luw.kc.doc/welcome.html
+.. _DB2 z/OS KnowledgeCenter: https://www.ibm.com/support/knowledgecenter/en/SSEPEK_11.0.0/spatl/src/tpc/spatl_db2sb03.html
+.. _DB2 LUW KnowledgeCenter: http://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.spatial.topics.doc/doc/db2sb03.html
+.. _DB2 DashDB KnowledgeCenter: https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.db2.luw.spatial.topics.doc/doc/csbp1001.html
 .. _DB2 Spatial Tutorial: https://www.ibm.com/developerworks/data/tutorials/dm-1202db2spatialdata1/
 
 User documentation on these capabilities can be found at the
 `DB2 z/OS KnowledgeCenter`_
-and at the
-`DB2 LUW KnowledgeCenter`_.
+,
+`DB2 LUW KnowledgeCenter`_ 
+and
+`DB2 DashDB KnowledgeCenter`_.
 
 For more information about working with the DB2 spatial capabilities, check out
 the `DB2 Spatial Tutorial`_ on IBM DeveloperWorks.
@@ -932,25 +935,22 @@ This can be done by creating a batch file like the following with the name **db2
 Creating a stored Connection
 ............................
 
-|mActionAddDb2Layer| The DB2 provider uses ODBC to connect to a DB2 database.
-Windows includes ODBC by default. On Linux and UNIX systems the **unixodbc** package needs to be
-installed.
-You also need the DB2 Data Server Client installed on the system where you will
-be using QGIS.
+|addDb2Layer| The DB2 provider uses ODBC to connect to a DB2 database.
+Windows includes ODBC by default.
 
 The first time you use an DB2 Spatial data source,
 you must create a connection to the database that contains the data. 
 A connection can be created by:
 
-* Right-clicking on  |mIconDb2| :menuselection:`DB2` in the browser tree 
+* Right-clicking on  |db2| :menuselection:`DB2` in the QGIS Browser panel 
   and selecting :menuselection:`New connection`
   
 or  
   
-* Selecting the |mActionAddDb2Layer| :menuselection:`Add DB2
+* Selecting the |addDb2Layer| :menuselection:`Add DB2
   Spatial Layer...` option from the :menuselection:`Layer` menu.
   To access the connection manager, click on the **[New]**
-  button to display the :guilabel:`Create a New DB2 Spatial Connection` dialog.
+  button to display the :guilabel:`Create a New DB2 Connection` dialog.
 
 The connection can be specified using either a Service/DSN name defined to ODBC
 or using the driver, host and port information.
@@ -974,42 +974,29 @@ A driver / host / host connection requires in addition:
 * **DB2 Port**: Port number the DB2 database server listens on. The default
   DB2 LUW port is 50000. The default DB2 z/OS port is 446.
 
-Security and authentication
-...........................
+.. warning::
 
-The user name and password can be provided in a number of different ways.
-If you don't provide a user name and/or password, the provider will prompt for
-this information the first time a connection is made in a session.
-
-The **Authentication** and **Configurations** tabs in the DB2 Connection
-dialog allow you to provide user name and password information that can be used
-to test the connection and that can be saved for use in a new QGIS session.
-
-If you specify the saving of user name and password under the **Authentication**
-tab, this information will be stored in plain text which may have security concerns.  
-  
-The **Configurations** tab allows you to create a `configuration` which saves
-the user name and password in encrypted form so that it is not visible.
-You need to first specify a `master` password which will be used to decrypt
-the saved information. This password is specific to the particular QGIS installation
-and is not retrievable if lost.
-You then specify a name to associate this `configuration` with a particular
-database connection.
+   In the :guilabel:`Authentication` tab, saving **username** and **password** 
+   will keep unprotected credentials in the connection configuration. Those
+   **credentials will be visible** if, for instance, you shared the project file
+   with someone. Therefore, it's advisable to save your credentials in a
+   *Authentication configuration* instead (:guilabel:`configurations` tab). 
+   See ref:`authentication_index` for more details.
 
 Once all parameters and options are set, you can test the connection by
-clicking on the **[Test Connection]** button.
+clicking on the **[Test connection]** button.
 
 Loading a DB2 Spatial Layer
 ................................
 
-|mActionAddDb2Layer| Once you have one or more connections defined, you can
+|addDb2Layer| Once you have one or more connections defined, you can
 load layers from the DB2 database. A DB2 Spatial layer is defined by a row in the
 **DB2GSE.ST_GEOMETRY_COLUMNS** view. 
 
 To load a layer from DB2 Spatial, perform the following steps:
 
 *  If the :guilabel:`Add DB2 Spatial layers` dialog is not already open,
-   click on the |mActionAddDb2Layer| :sup:`Add DB2 Spatial Layer` toolbar
+   click on the |addDb2Layer| :sup:`Add DB2 Spatial Layer` toolbar
    button.
 *  Choose the connection from the drop-down list and click **[Connect]**.
 *  Optionally, use some |checkbox| :guilabel:`Search Options` to define
@@ -1018,18 +1005,21 @@ To load a layer from DB2 Spatial, perform the following steps:
 *  Find the layer(s) you wish to add in the list of available layers.
 *  Select it by clicking on it. You can select multiple layers by holding
    down the :kbd:`Shift` key while clicking. See section
-   :ref:`vector_query_builder` for information on using the DB2
+   :ref:`vector_query_builder` for information on using the
    Query Builder to further define the layer.
 *  Click on the **[Add]** button to add the layer to the map.
 
-Or more simply, expand the |mIconDb2| :menuselection:`DB2` connection in the browser tree
+Or more simply, expand the |db2| :menuselection:`DB2` connection in the QGIS Browser panel
 and double-click the name of the layer.
 
-In order to work effectively with DB2 spatial tables in QGIS, it is important that
-tables have an INTEGER or BIGINT column defined as PRIMARY KEY and if new features
-are going to be added, this column should also have the GENERATED characteristic.
+.. note:: 
 
-It is also helpful for the spatial column to be registered with a specific spatial
-reference identifier (most often 4326 for WGS84 coordinates). 
-A spatial column can be registered by calling the ST_Register_Spatial_Column stored
-procedure.   
+  In order to work effectively with DB2 spatial tables in QGIS, it is important that
+  tables have an INTEGER or BIGINT column defined as PRIMARY KEY and if new features
+  are going to be added, this column should also have the GENERATED characteristic.
+
+  It is also helpful for the spatial column to be registered with a specific spatial
+  reference identifier (most often 4326 for WGS84 coordinates). 
+  A spatial column can be registered by calling the ST_Register_Spatial_Column stored
+  procedure.   
+
