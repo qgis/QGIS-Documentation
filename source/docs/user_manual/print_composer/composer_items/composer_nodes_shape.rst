@@ -19,7 +19,7 @@ tab.
 .. figure:: /static/user_manual/print_composer/shape_nodes_properties.png
    :align: center
 
-   Nodes Shape Item properties Tab |nix|
+   Nodes Shape Item properties Tab
 
 You can set the style of the shape using the advanced symbol style dialog
 available thanks to the **[Change ...]** button in :guilabel:`Main properties`.
