@@ -187,6 +187,23 @@ Zoom to feature
 To zoom into a feature, without having to select it, right-click on the feature
 you want to zoom in, within the attribute table, and select :guilabel:`Zoom to feature`.
 
+Copy cell content
+=================
+
+To copy the content of a cell in the clipboard, right-click on the feature within
+the attribute table and select :guilabel:`Copy cell content`.
+
+.. _figure_attributes_2:
+
+.. only:: html
+
+   **Figure Attributes 2:**
+
+.. figure:: /static/user_manual/working_with_vector/copyCellContent.png
+    :align: center
+
+    Copy cell content button
+
 Save selected features as new layer
 ===================================
 
@@ -268,11 +285,11 @@ To use the field calculator dialog, you first must select whether you want to on
 update selected features, create a new attribute field where the results of the
 calculation will be added or update an existing field.
 
-.. _figure_attributes_2:
+.. _figure_attributes_3:
 
 .. only:: html
 
-   **Figure Attributes 2:**
+   **Figure Attributes 3:**
 
 .. figure:: /static/user_manual/working_with_vector/fieldcalculator.png
    :align: center
@@ -281,7 +298,7 @@ calculation will be added or update an existing field.
 
 If you choose to add a new field, you need to enter a field name, a field type
 (integer, real or string), the total field width, and the field precision (see
-figure_attributes_2_). For example, if you choose a field width of 10 and a field
+figure_attributes_3_). For example, if you choose a field width of 10 and a field
 precision of 3, it means you have 6 digits before the dot, then the dot and another
 3 digits for the precision.
 
@@ -346,11 +363,11 @@ to define:
   * text field,
   * font.
 
-.. _figure_attributes_3:
+.. _figure_attributes_4:
 
 .. only:: html
 
-   **Figure Attributes 3:**
+   **Figure Attributes 4:**
 
 .. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
    :align: center
