@@ -33,6 +33,7 @@ Contents:
    modeler_hydro
    modeler_hydro_calculator
    modeler_hydro_twi
+   modeler_only
    interpolation
    interpolation_cross
    iterative
