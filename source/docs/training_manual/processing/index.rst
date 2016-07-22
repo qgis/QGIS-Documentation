@@ -40,6 +40,7 @@ Contents:
    iterative_model
    batch_conversion
    batch_modeler
+   hooks
    more_backends
    interp_contour
    generalize
