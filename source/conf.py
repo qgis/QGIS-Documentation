@@ -270,6 +270,8 @@ rst_epilog = """
    :width: 1.5em
 .. |addMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
    :width: 1.5em
+.. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
+   :width: 1.5em
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
 .. |addOracleLayer| image:: /static/common/mActionAddOracleLayer.png
@@ -472,6 +474,8 @@ rst_epilog = """
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
