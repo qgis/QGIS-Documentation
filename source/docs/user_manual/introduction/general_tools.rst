@@ -744,6 +744,7 @@ To create a bookmark:
 #. Select the menu option :menuselection:`View --> New Bookmark` or press
    :kbd:`Ctrl-B`. The Spatial Bookmark panel opens with the newly created bookmark.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
+#. Check the "In Project" box if you wish to save the bookmark in the project file.
 #. Press :kbd:`Enter` to add the bookmark or click elsewhere.
 
 Note that you can have multiple bookmarks with the same name.
