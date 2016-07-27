@@ -3,15 +3,15 @@
 Shape Items
 ===========
 
-.. _arrow_item:
-
-The Arrow Item
---------------
-
 .. only:: html
 
    .. contents::
       :local:
+
+.. _arrow_item:
+
+The Arrow Item
+--------------
 
 To add an arrow, click the |addArrow| :sup:`Add Arrow` icon, place the element holding
 down the left mouse button and drag a line to draw the arrow on the Print Composer canvas and
@@ -37,7 +37,7 @@ an image item with a map so it can rotate automatically with the map (see :ref:`
    Arrow Item properties Tab
 
 Item Properties
-~~~~~~~~~~~~~~~
+...............
 
 The :guilabel:`Arrow` item properties tab allows you to configure an arrow item.
 
@@ -47,7 +47,8 @@ In :guilabel:`Arrows markers` you can select one of three radio buttons.
 
 * :guilabel:`Default`: To draw a regular arrow, gives you options to style the arrow head
 * :guilabel:`None`: To draw a line without arrow head
-* :guilabel:`SVG Marker`: To draw a line with an SVG :guilabel:`Start marker` and/or :guilabel:`End marker`
+* :guilabel:`SVG Marker`: To draw a line with an SVG :guilabel:`Start marker`
+  and/or :guilabel:`End marker`
 
 For :guilabel:`Default` Arrow marker you can use following options to style the arrow head.
 
@@ -62,13 +63,14 @@ For :guilabel:`SVG Marker` you can use following options.
 * :guilabel:`End marker`: Choose an SVG image to draw at the end of the line
 * :guilabel:`Arrow head width`: Set the size of Start and/or End marker
 
-SVG images are automatically rotated with the line. The color of the SVG image can not be changed.
+SVG images are automatically rotated with the line.
 
 The Basic Shape Items
 ---------------------
 
-To add a basic shape (ellipse, rectangle, triangle), click the |addBasicShape| :sup:`Add basic shape` icon,  place the element holding down the left mouse. Customize the
-appearance in the :guilabel:`Item Properties` tab.
+To add a basic shape (ellipse, rectangle, triangle), click the |addBasicShape|
+:sup:`Add basic shape` icon,  place the element holding down the left mouse.
+Customize the appearance in the :guilabel:`Item Properties` tab.
 
 When you also hold down the :kbd:`Shift` key while placing the basic shape you can create a perfect square,
 circle or triangle.
@@ -82,7 +84,7 @@ circle or triangle.
 .. figure:: /static/user_manual/print_composer/shape_properties.png
    :align: center
 
-   Shape Item properties Tab |nix|
+   Shape Item properties Tab
 
 The :guilabel:`Shape` item properties tab allows you to select if you want to draw an ellipse,
 rectangle or triangle inside the given frame.
@@ -98,10 +100,15 @@ For the rectangle shape, you can set the value of the corner radius to round of 
 The Node-Based Shape Items
 --------------------------
 
-To add a node-based shape (polygon or polyline), click the
-|addNodesShape| :sup:`Add nodes item` icon. Then perform a left click to
-add a node to your current shape. When you're done, a simple right click
-terminates the shape. Customize the appareance in the :guilabel:`Item Properties`
+While arrow and basic shape items offer you simple and predefined geometric item to use,
+a node-based shape (polygon or polyline) helps you create a custom and more advanced
+geometric item. You can add as many lines or sides as you want to the item and
+independently and directly interact with each of its vertices.
+
+To add a node-based shape, click the
+|addNodesShape| :sup:`Add nodes item` icon. Then perform left clicks to
+add nodes to your current shape. When you're done, a simple right click
+terminates the shape. Customize the appearance in the :guilabel:`Item Properties`
 tab.
 
 .. _figure_composer_nodes_shape:
@@ -121,8 +128,8 @@ available thanks to the **[Change ...]** button in :guilabel:`Main properties`.
 A specific tool is provided to edit node-based shapes through
 |editNodesShape| :sup:`Edit Nodes Item`. Within this mode, you can select
 a node by clicking on it (a marker is displayed on the selected node). A
-selected node can be moved either by draging it or by using the arrow keys.
+selected node can be moved either by dragging it or by using the arrow keys.
 Moreover, in this mode, you are able to add nodes to an existing shape. You
 just have to do a left click near a segment and if you are not too far from the
 shape, a node is added. Finally, you can remove the currently selected node by
-hiting the **DEL** key.
+hitting the :kbd:`DEL` key.
