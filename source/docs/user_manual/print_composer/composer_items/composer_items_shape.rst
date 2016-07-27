@@ -8,6 +8,8 @@ Shape Items
    .. contents::
       :local:
 
+.. index:: 
+   single: Composer Item; Arrow
 .. _arrow_item:
 
 The Arrow Item
@@ -65,6 +67,10 @@ For :guilabel:`SVG Marker` you can use following options.
 
 SVG images are automatically rotated with the line.
 
+.. index:: 
+   single: Composer Item; Basic Shape
+.. _basic_shape_item:
+
 The Basic Shape Items
 ---------------------
 
@@ -96,6 +102,10 @@ For the rectangle shape, you can set the value of the corner radius to round of 
 
 .. note::
    Unlike other items, you can not style the frame or the background color of the frame.
+
+.. index:: 
+   single: Composer Item; Node-Based Shape
+.. _node_based_shape_item:
 
 The Node-Based Shape Items
 --------------------------
