@@ -53,7 +53,7 @@ by double click on layer item or by dragging and dropping to map canvas or legen
 .. tip:: **GRASS Data Loading**
 
    If you don't see GRASS location item, verify in
-   :menuselection:`Help -->` :menuselection:`About` :guilabel:`Providers` if
+   :menuselection:`Help --> About --> Providers` if
    GRASS vector provider is loaded.
 
 .. _import_data_dnd:
@@ -105,7 +105,7 @@ Starting the GRASS plugin
 
 To use GRASS functionalities in QGIS, you must select and load the GRASS plugin using the
 Plugin Manager. To do this, go to the menu :menuselection:`Plugins -->` |showPluginManager|
-:menuselection:`Manage Plugins`, select |checkbox| :guilabel:`GRASS` and click
+:menuselection:`Manage and Install Plugins...`, select |checkbox| :guilabel:`GRASS` and click
 **[OK]**.
 
 The following main features are provided with the toolbar menu when you start the GRASS plugin:
@@ -596,7 +596,7 @@ need to be written to the currently selected :file:`LOCATION` and :file:`MAPSET`
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_moduletree.png
    :align: center
 
-   GRASS Toolbox and Module Tree |nix|
+   GRASS Toolbox and Module Tree
 
 .. _grass_modules:
 
@@ -637,7 +637,7 @@ further module-specific parameters to run the module.
 .. figure:: /static/user_manual/grass_integration/grass_module_option.png
    :align: center
 
-   GRASS Toolbox Module Options |nix|
+   GRASS Toolbox Module Options
 
 The provided module parameters are often not complete to keep the dialog simple.
 If you want to use further module parameters and flags, you need to start the
@@ -661,7 +661,7 @@ to switch to the GRASS shell.
 .. figure:: /static/user_manual/grass_integration/grass_module_output.png
    :align: center
 
-   GRASS Toolbox Module Output |nix|
+   GRASS Toolbox Module Output
 
 The :guilabel:`Output` tab provides information about the output status of the
 module. When you click the **[Run]** button, the module switches to the
@@ -679,7 +679,7 @@ all works well, you will finally see a ``Successfully finished`` message.
 .. figure:: /static/user_manual/grass_integration/grass_module_manual.png
    :align: center
 
-   GRASS Toolbox Module Manual |nix|
+   GRASS Toolbox Module Manual
 
 The :guilabel:`Manual` tab shows the HTML help page of the GRASS module. You can
 use it to check further module parameters and flags or to get a deeper knowledge
@@ -774,7 +774,7 @@ causing it to load even more slowly.
    :align: center
    :width: 35em
 
-   GRASS module v.generalize to smooth a vector map |nix|
+   GRASS module v.generalize to smooth a vector map
 
 .. index::
    single:GRASS;toolbox
@@ -833,7 +833,7 @@ parameters. This example demonstrates the use of an additional option in the
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shell.png
    :align: center
 
-   The GRASS shell, r.shaded.relief module |nix|
+   The GRASS shell, r.shaded.relief module
 
 The module **r.shaded.relief** can take a parameter ``zmult``, which multiplies
 the elevation values relative to the X-Y coordinate units so that the hillshade
@@ -860,7 +860,7 @@ effect is even more pronounced.
    :align: center
    :width: 35em
 
-   Displaying shaded relief created with the GRASS module r.shaded.relief |nix|
+   Displaying shaded relief created with the GRASS module r.shaded.relief
 
 
 Raster statistics in a vector map
