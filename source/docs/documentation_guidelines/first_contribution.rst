@@ -84,7 +84,7 @@ Alternative 1: Picking an issue in the list
 #. Validate your changes by filling the :guilabel:`Commit Changes` frame and
    commit directly to your branch.
 #. Redo the previous steps for any other file that needs to be updated to fix
-   fix the issue.
+   the issue.
 
 
 Alternative 2: Using the ``Fix Me`` shortcut
