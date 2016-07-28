@@ -19,6 +19,4 @@ Composer Items
    composer_attribute_table
    composer_image
    composer_html_frame
-   composer_basic_shape
-   composer_arrow
-
+   composer_items_shape
