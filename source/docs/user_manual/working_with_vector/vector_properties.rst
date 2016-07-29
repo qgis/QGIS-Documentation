@@ -231,6 +231,27 @@ See :ref:`symbol-selector` for further information about symbol representation.
    Right-clicking on a category will also give you access to the options **Hide
    all items**, **Show all items** **and Edit symbol**.
 
+.. index:: No Symbols Renderer
+
+.. _no_symbol_renderer:
+
+No Symbols Renderer
+......................
+
+The |nullSymbol| :guilabel:`No Symbols` renderer is a special use case of the
+Single Symbol renderer as it applies the same rendering to all features.
+Using this renderer, no symbol will be drawn for features,
+but labeling, diagrams and other non-symbol parts will still be shown.
+
+Selections can still be made on the layer in the canvas and selected
+features will be rendered with a default symbol. Features being edited
+will also be shown.
+
+This is intended as a handy shortcut for layers which you only want
+to show labels or diagrams for, and avoids the need to render
+symbols with totally transparent fill/border to achieve this.
+
+
 .. index:: Categorized Renderer
 
 .. _categorized_rendered:

@@ -250,6 +250,8 @@ rst_epilog = """
    :width: 1.5em
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
+.. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
+   :width: 1.5em    
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
 .. |addGCPPoint| image:: /static/common/mActionAddGCPPoint.png
@@ -267,6 +269,8 @@ rst_epilog = """
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
 .. |addMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
+   :width: 1.5em
+.. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
    :width: 1.5em
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
@@ -417,6 +421,8 @@ rst_epilog = """
    :width: 1.5em
 .. |dateTimeEdit|  image:: /static/common/datetimeedit.png
    :width: 1.5em
+.. |db2| image:: /static/common/mIconDb2.png
+   :width: 1.5em   
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |defineProjection| image:: /static/common/define_projection.png
@@ -468,6 +474,8 @@ rst_epilog = """
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em

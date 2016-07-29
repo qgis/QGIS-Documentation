@@ -165,7 +165,31 @@ Currently supported items are:
 
 * arrow
 * picture
-* shape
+* basic shape
+* nodes based shape
+
+  ::
+
+    polygon = QPolygonF()
+    polygon.append(QPointF(0.0, 0.0))
+    polygon.append(QPointF(100.0, 0.0))
+    polygon.append(QPointF(200.0, 100.0))
+    polygon.append(QPointF(100.0, 200.0))
+
+    composerPolygon = QgsComposerPolygon(polygon, c)
+    c.addItem(composerPolygon)
+
+    props = {}
+    props["color"] = "green"
+    props["style"] = "solid"
+    props["style_border"] = "solid"
+    props["color_border"] = "black"
+    props["width_border"] = "10.0"
+    props["joinstyle"] = "miter"
+
+    style = QgsFillSymbolV2.createSimple(props)
+    composerPolygon.setPolygonStyleSymbol(style)
+
 * table
 
 By default the newly created composer items have zero position (top left corner

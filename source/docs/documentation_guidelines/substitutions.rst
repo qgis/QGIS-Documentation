@@ -299,6 +299,7 @@ Icon                     Substitution                 Icon                     S
 |filePrint|              ``|filePrint|``              |saveMapAsImage|         ``|saveMapAsImage|``
 |saveAsSVG|              ``|saveAsSVG|``              |saveAsPDF|              ``|saveAsPDF|``
 |addArrow|               ``|addArrow|``               |addBasicShape|          ``|addBasicShape|``
+|addNodesShape|          ``|addNodesShape|``          |editNodesShape|         ``|editNodesShape|``
 |addMap|                 ``|addMap|``                 |addLegend|              ``|addLegend|``
 |addHtml|                ``|addHtml|``                |addTable|               ``|addTable|``
 |label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``

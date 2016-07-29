@@ -155,6 +155,7 @@
 |mActionAddAllToOverview|
 |mActionAddArrow|
 |mActionAddBasicShape|
+|mActionAddDb2Layer|
 |mActionAddDelimitedTextLayer|
 |mActionAddGCPPoint|
 |mActionAddHtml|
@@ -340,6 +341,7 @@
 |mIconColorSwatches|
 |mIconColorWheel|
 |mIconDataDefine|
+|mIconDb2|
 |mIconExpression|
 |mIconExpressionSelect|
 |mIconImport|

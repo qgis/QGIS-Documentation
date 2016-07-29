@@ -33,12 +33,14 @@ Contents:
    modeler_hydro
    modeler_hydro_calculator
    modeler_hydro_twi
+   modeler_only
    interpolation
    interpolation_cross
    iterative
    iterative_model
    batch_conversion
    batch_modeler
+   hooks
    more_backends
    interp_contour
    generalize
