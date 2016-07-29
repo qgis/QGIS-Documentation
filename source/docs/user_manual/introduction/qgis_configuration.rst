@@ -112,6 +112,21 @@ can set project-specific options.
   and opening its form) will list the related entities. This provides a powerful
   way to express e.g. the inspection history on a length of pipeline or road segment.
   You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+* In the :guilabel:`Data Sources` menu, you can:
+
+  * |checkbox| :guilabel:`Evaluate default values on provider side`: when adding
+    new features in a PostGreSQL table, default values fields are already filled
+    in the :guilabel:`Add Feature` form and not only at the commit moment.
+  * |checkbox| :guilabel:`Automatically create transaction groups where possible`:
+    When this mode is turned on, all
+    (postgres) layers from the same database are synchronised in their edit state,
+    i.e. when one layer is put into edit state, all are, when one layer is committed
+    or one layer is rolled back, so are the others. Also, instead of buffering edit
+    changes locally, they are directly sent to a transaction in the database which
+    gets committed when the user clicks save layer.
+    Note that you can (de)activate this option only if no layer is being edited
+    in the project.
+
 
 .. _gui_options:
 
@@ -252,13 +267,6 @@ Data Sources Menu
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in
   extended mode`
 * |checkbox| :guilabel:`Execute expressions on server-side if possible`
-* |checkbox| :guilabel:`create transaction groups automatically whenever possible
-  (Experimental)`. When this mode is turned on, all
-  (postgres) layers from the same database are synchronised in their edit state,
-  i.e. when one layer is put into edit state, all are, when one layer is committed
-  or one layer is rolled back, so are the others. Also, instead of buffering edit
-  changes locally, they are directly sent to a transaction in the database which
-  gets committed when the user clicks save layer.
 
 
 **Hidden Browser Path**
