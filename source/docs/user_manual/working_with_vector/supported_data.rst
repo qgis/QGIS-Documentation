@@ -255,7 +255,7 @@ Some items to note about the text file:
 #. The X coordinates are contained in the ``X`` field.
 #. The Y coordinates are contained in the ``Y`` field.
 
-.. csvt_files:
+.. _csvt_files:
 
 CSVT Files
 ..........
