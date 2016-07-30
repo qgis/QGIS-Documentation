@@ -231,6 +231,7 @@ first check that the file meets the following requirements:
    can have any name.
 #. The X and Y coordinates (if geometry is defined by coordinates) must be
    specified as numbers. The coordinate system is not important.
+#. If you have any data that is not a string (text) and the file is a CSV file, you must have a CSVT file (see section :ref:`csvt_files`).  
 
 As an example of a valid text file, we import the elevation point data file
 :file:`elevp.csv` that comes with the QGIS sample dataset (see section
@@ -253,6 +254,37 @@ Some items to note about the text file:
 #. No quotes (``"``) are used to delimit text fields.
 #. The X coordinates are contained in the ``X`` field.
 #. The Y coordinates are contained in the ``Y`` field.
+
+.. csvt_files:
+
+CSVT Files
+..........
+
+When loading CSV files, the OGR driver assumes all fields are strings (i.e. text) unless 
+it is told otherwise. You can create a CSVT file to tell OGR (and QGIS) what data type
+the different columns are:
+
+
+.. csvt-table:: 
+    :header: "Type", "Name", "Example"
+    
+    "Whole number", "Integer", 4
+    "Decimal number", "Real", 3.456
+    "Date", "Date (YYYY-MM-DD)", 2016-07-28
+    "Time", "Time (HH:MM:SS+nn)", 18:33:12+00
+    "Date & Time", "DateTime (YYYY-MM-DD HH:MM:SS+nn)", 2016-07-28 18:33:12+00
+
+The CSVT file is a ONE line plain text file with the data types in quotes an separated by commas, e.g.:: 
+
+"Integer","Real","String"
+
+You can even specify width and precision of each column, e.g.::
+
+"Integer(6)","Real(5.5)","String(22)"
+
+This file is saved in the same folder as the CSV file, with the same name, but .csvt as the extension.
+
+*Thanks to Anita Graser (https://anitagraser.com/2011/03/07/how-to-specify-data-types-of-csv-columns-for-use-in-qgis/) for the content for this section.*
 
 Others valuable informations for advanced users
 ...............................................
@@ -760,7 +792,7 @@ If you want to create a new SpatiaLite layer, please refer to section
 MSSQL Spatial Layers
 --------------------
 
-|addMssqlLayer| QGIS also provides native MS SQL support. The first
+|addMssqlLayer| QGIS also provides native MS SQL 2008 support. The first
 time you load MSSQL Spatial data, begin by clicking on the
 |addMssqlLayer| :sup:`Add MSSQL Spatial Layer` toolbar button or by
 selecting the |addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer...`
