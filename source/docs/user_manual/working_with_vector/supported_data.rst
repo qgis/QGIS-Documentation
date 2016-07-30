@@ -265,7 +265,7 @@ it is told otherwise. You can create a CSVT file to tell OGR (and QGIS) what dat
 the different columns are:
 
 
-.. csvt-table:: 
+.. csv-table:: 
     :header: "Type", "Name", "Example"
     
     "Whole number", "Integer", 4
