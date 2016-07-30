@@ -792,7 +792,7 @@ If you want to create a new SpatiaLite layer, please refer to section
 MSSQL Spatial Layers
 --------------------
 
-|addMssqlLayer| QGIS also provides native MS SQL 2008 support. The first
+|addMssqlLayer| QGIS also provides native MS SQL support. The first
 time you load MSSQL Spatial data, begin by clicking on the
 |addMssqlLayer| :sup:`Add MSSQL Spatial Layer` toolbar button or by
 selecting the |addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer...`
