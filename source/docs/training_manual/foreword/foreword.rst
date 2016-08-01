@@ -109,7 +109,7 @@ Data
 ----
 
 .. note:: The sample data used throughout the manual can be downloaded here:
-   https://github.com/qgis/QGIS-Training-Data/archive/QGIS-2.14-Training-Data.zip
+   https://github.com/ghtmtt/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip
 
 The sample data that accompanies this resource is freely available and comes
 from the following sources:
