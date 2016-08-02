@@ -26,24 +26,22 @@ Obviously it would be nice to be able to do this while looking at the map,
 rather than needing to search for a specific street in the :guilabel:`Attribute
 Table` all the time.
 
-* Go to the :menuselection:`Settings --> Options` menu.
-* In the dialog that appears, select the :guilabel:`Map Tools` tab.
-* Check the :guilabel:`Open feature form ...` checkbox:
-
-.. image:: /static/training_manual/create_vector_data/open_feature_form.png
-   :align: center
-
-* Click :guilabel:`Ok`.
 * Select the :guilabel:`roads` layer in the :guilabel:`Layers list`.
 * Using the :guilabel:`Identify` tool, click on any street in the map.
 
   |identify|
 
-Instead of the normal :guilabel:`Identify` dialog, you'll see the now-familiar
-form instead:
+* The :guilabel:`Identify Results` panel opens and shows in a tree view
+  the fields values and other general information about the clicked feature.
+* At the bottom of the panel, Check the :guilabel:`Auto open form` checkbox
+* Now, click again on any street in the map. Along the previous
+  :guilabel:`Identify Results` dialog, you'll see the now-familiar form:
 
-.. image:: /static/training_manual/create_vector_data/roads_form.png
-   :align: center
+  .. image:: /static/training_manual/create_vector_data/roads_form.png
+     :align: center
+
+* Each time you click on a single feature with the :guilabel:`Identify` tool,
+  its form pops-up unless the :guilabel:`Auto open form` is unchecked.
 
 |basic| |TY| Using the Form to Edit Values
 -------------------------------------------------------------------------------
