@@ -11,10 +11,9 @@ interface over previous versions. We recommend that you use this version over
 previous releases.
 
 This release includes hundreds of bug fixes and many new features and
-enhancements over QGIS 2.8 that will be described in this manual. You may also
+enhancements over `QGIS 2.14 <http://docs.qgis.org/2.14/en/docs/>`_
+that will be described in this manual. You may also
 review the visual changelog at:
 
-* http://qgis.org/en/site/forusers/visualchangelog210/index.html
-* http://qgis.org/en/site/forusers/visualchangelog212/index.html
-* http://qgis.org/en/site/forusers/visualchangelog214/index.html
+* http://qgis.org/en/site/forusers/visualchangelog216/index.html
 
