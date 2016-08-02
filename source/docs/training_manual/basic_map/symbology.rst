@@ -416,7 +416,7 @@ that make up the texture.
 -------------------------------------------------------------------------------
 
 .. note::  To do this exercise, you will need to have the free vector editing
-   software Inkscape installed.
+   software `Inkscape <https://inkscape.org/>`_ installed.
 
 * Start the Inkscape program.
 
