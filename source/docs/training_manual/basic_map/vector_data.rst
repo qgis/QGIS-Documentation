@@ -51,7 +51,8 @@ most GIS software can read them.
 Refer back to the introductory exercise in the previous section for
 instructions on how to add vector layers.
 
-Load the data sets into your map following the same method:
+Load the data sets from the :file:`epsg4326` folder into your map following the
+same method:
 
 * "places"
 * "water"
@@ -80,11 +81,11 @@ Layers` toolbar is enabled.)
 It will give you a new dialog. In this dialog:
 
 * Click the :guilabel:`New` button.
-* In the same folder as the other data, you should find the file
-  :guilabel:`landuse.sqlite`. Select it and click :guilabel:`Open`.
+* In the same :file:`epsg4326` folder, you should find the file
+  :file:`landuse.sqlite`. Select it and click :guilabel:`Open`.
 
 You will now see the first dialog again. Notice that the dropdown select above
-the three buttons now reads "land_use.db@...", followed by the path of the
+the three buttons now reads "landuse.sqlite@...", followed by the path of the
 database file on your computer.
 
 * Click the :guilabel:`Connect` button. You should see this in the previously
