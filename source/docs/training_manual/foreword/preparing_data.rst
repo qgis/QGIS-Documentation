@@ -51,7 +51,7 @@ water, such as streams and rivers.
 .. image:: /static/training_manual/foreword/select_osm_layers.png
    :align: center
 
-This will load four layers into your map which relate to OSM's naming
+This will load three layers into your map which relate to OSM's naming
 conventions (you may need to zoom in/out to see the vector data).
 
 .. image:: /static/training_manual/foreword/osm_data_loaded.png
