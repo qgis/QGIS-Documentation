@@ -65,7 +65,9 @@ For :guilabel:`SVG Marker` you can use following options.
 * :guilabel:`End marker`: Choose an SVG image to draw at the end of the line
 * :guilabel:`Arrow head width`: Set the size of Start and/or End marker
 
-SVG images are automatically rotated with the line.
+SVG images are automatically rotated with the line. Outline and fill colors of QGIS
+predefined SVG images can be changed using the corresponding options. Custom SVG
+may require some tags following this :ref:`instruction <parameterized_svg>`.
 
 .. index:: 
    single: Composer Item; Basic Shape
