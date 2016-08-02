@@ -28,7 +28,7 @@ In the properties window for the project under |nix|
 :menuselection:`Project --> Project Properties` (Gnome, OS X or Windows), you
 can set project-specific options.
 
-* In the :guilabel:`General` menu, the **general settings** let you:
+* In the :guilabel:`General` tab, the **general settings** let you:
 
   * give a title to the project beside the project file path
   * choose the color to use for features when they are selected
@@ -64,24 +64,24 @@ can set project-specific options.
   Finally, you can define a **project scale** list, which overrides the global
   predefined scales.
 
-.. _figure_general_menu:
+.. _figure_general_tab:
 
 .. only:: html
 
-   **Figure General Menu:**
+   **Figure General Tab:**
 
 .. figure:: /static/user_manual/introduction/project_general.png
    :align: center
 
    General tab of Project Properties dialog
 
-* The :guilabel:`CRS` menu enables you to choose the Coordinate Reference
+* The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
   System for this project, and to enable on-the-fly re-projection of raster and
   vector layers when displaying layers from a different CRS.
-* With the :guilabel:`Identify layers` menu, you set (or disable) which
+* With the :guilabel:`Identify layers` tab, you set (or disable) which
   layers will respond to the :ref:`identify tool <identify>`. By default, layers
   are set queryable.
-* The :guilabel:`Default Styles` menu lets you control how new layers will be
+* The :guilabel:`Default Styles` tab lets you control how new layers will be
   drawn when they do not have an existing :file:`.qml` style defined. You can
   also set the default transparency level for new layers and whether symbols
   should have random colors assigned to them.
@@ -90,15 +90,15 @@ can set project-specific options.
   window present in each renderer.
 * The tab :guilabel:`OWS Server` allows you to define information about the QGIS
   Server WMS and WFS capabilities, extent and CRS restrictions.
-* The :guilabel:`Macros` menu is used to edit Python macros for projects. Currently,
+* The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
   only three macros are available: ``openProject()``, ``saveProject()`` and
   ``closeProject()``.
 
-.. _figure_macro_menu:
+.. _figure_macro_tab:
 
 .. only:: html
 
-   **Figure Macro Menu:**
+   **Figure Macro Tab:**
 
 .. figure:: /static/user_manual/introduction/macro.png
    :align: center
@@ -106,13 +106,13 @@ can set project-specific options.
    Macro settings in QGIS
 
 
-* The :guilabel:`Relations` menu is used to define 1:n relations. The relations
+* The :guilabel:`Relations` tab is used to define 1:n relations. The relations
   are defined in the project properties dialog. Once relations exist for a layer,
   a new user interface element in the form view (e.g. when identifying a feature
   and opening its form) will list the related entities. This provides a powerful
   way to express e.g. the inspection history on a length of pipeline or road segment.
   You can find out more about 1:n relations support in Section :ref:`vector_relations`.
-* In the :guilabel:`Data Sources` menu, you can:
+* In the :guilabel:`Data Sources` tab, you can:
 
   * |checkbox| :guilabel:`Evaluate default values on provider side`: when adding
     new features in a PostGreSQL table, default values fields are already filled
@@ -138,7 +138,7 @@ Options
 |options| :menuselection:`Options`. The tabs where you can customize your
 options are described below.
 
-General Menu
+General Tab
 -------------
 
 **Application**
@@ -184,7 +184,7 @@ General Menu
 
 .. _`env_options`:
 
-System Menu
+System Tab
 -----------
 
 **Environment**
@@ -221,7 +221,7 @@ source code.
 plugin libraries`
 
 
-Data Sources Menu
+Data Sources Tab
 -----------------
 
 **Feature attributes and table**
@@ -275,7 +275,7 @@ This widget lists all the folder you chose to hide from the Browser panel.
 Removing a folder from the list will make it available in the Browser panel.
 
 
-Rendering Menu
+Rendering Tab
 --------------
 
 **Rendering behavior**
@@ -318,7 +318,7 @@ Rendering Menu
 
 * |checkbox| :guilabel:`Map canvas refresh`
 
-Colors Menu
+Colors Tab
 ------------
 
 This menu allows you to add some custom color that you can find in each color dialog
@@ -328,7 +328,7 @@ and paste operations. Finally you can export the color set as a :file:`gpl` file
 them.
 
 
-Canvas and Legend Menu
+Canvas and Legend Tab
 ----------------------
 
 **Default map appearance (overridden by project properties)**
@@ -347,10 +347,10 @@ Canvas and Legend Menu
   * |checkbox| :guilabel:`Display classification attribute names`
   * |checkbox| :guilabel:`Create raster icons (may be slow)`
 
-Map tools Menu
+Map tools Tab
 --------------
 
-This menu offers some options regarding the behavior of the :guilabel:`Identify tool`.
+This tab offers some options regarding the behavior of the :guilabel:`Identify tool`.
 
 * :guilabel:`Search radius for identifying and displaying map tips` is a tolerance factor
   expressed as a percentage of the map width. This means the identify tool will depict results
@@ -390,7 +390,7 @@ and |signMinus| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you still have
 the possibility to remove your changes and reset to the predefined list.
 
-Composer Menu
+Composer Tab
 -------------
 
 **Composition defaults**
@@ -409,7 +409,7 @@ You can define the :guilabel:`Default font` here.
 * Define the :guilabel:`Snap tolerance` |selectNumber|
 
 
-Digitizing Menu
+Digitizing Tab
 ---------------
 
 **Feature creation**
@@ -452,7 +452,7 @@ influence the shape of the line offset. These options are possible starting from
 * :guilabel:`Quadrant segments`
 * :guilabel:`Miter limit`
 
-GDAL Menu
+GDAL Tab
 ---------
 
 GDAL is a data exchange library for raster files. In this tab, you can
@@ -460,7 +460,7 @@ GDAL is a data exchange library for raster files. In this tab, you can
 raster formats. Define which GDAL driver is to be used for a raster format, as in
 some cases more than one GDAL driver is available.
 
-CRS Menu
+CRS Tab
 --------
 
 **Default CRS for new projects**
@@ -487,20 +487,20 @@ a layer without a CRS is loaded.
   of the transformation in the window below. You can find information about 'Source CRS'
   and 'Destination CRS' as well as 'Source datum transform' and 'Destination datum transform'.
 
-Locale Menu
+Locale Tab
 -----------
 
 * |checkbox| :guilabel:`Overwrite system locale` and :guilabel:`Locale to use instead`
 * Information about active system locale
 
-Authentication
---------------
+Authentication Tab
+-------------------
 
 In the :guilabel:`Authentication` tab you can set authentication configurations
 and manage PKI certificates. See :ref:`authentication_index` for more
 details.
 
-Network Menu
+Network Tab
 ------------
 
 **General**
