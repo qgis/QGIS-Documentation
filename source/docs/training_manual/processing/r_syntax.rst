@@ -20,7 +20,7 @@ the other, else a new group will be automatically created:
 
 1. group creation, ``##My Group=group``
 
-Then you have to specify the all the input types and eventually the additional
+Then you have to specify all the input types and eventually the additional
 parameters. You can have different inputs:
 
 1. vector, ``##Layer = vector``
@@ -62,7 +62,7 @@ Example with vector output
 --------------------------
 
 Let's take an algorithm from the online collection that creates random points from
-the extend of an input layer::
+the extent of an input layer::
 
 
   ##Point pattern analysis=group
@@ -84,7 +84,7 @@ and get through the lines:
 5. ``library(sp)`` loads the **sp** library (that should be already installed in
    your computer and that installation has to be made **in R**)
 
-6. call the ``spsample`` function of the ``sp`` library and pass to it all the input defined above
+6. call the ``spsample`` function of the ``sp`` library and pass it to all the input defined above
 7. create the output vector with the ``SpatialPointsDataFrame`` function
 
 That's it! Just run the algorithm with a vector layer you have in the QGIS Legend,
