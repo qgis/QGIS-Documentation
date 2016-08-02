@@ -443,45 +443,57 @@ First, we'll change the canvas to a size appropriate for a small texture.
    :align: center
 
 * Click and drag on the page to draw an ellipse. To make the ellipse turn into
-  a circle, hold the :kbd:`ctrl` button while you're drawing it.
+  a circle, hold the :kbd:`Ctrl` button while you're drawing it.
 * Right-click on the circle you just created and open its :guilabel:`Fill and
-  Stroke`:
+  Stroke` options. You can modify its rendering, such as:
 
-* Change the :guilabel:`Fill` to a pale grey-blue, the :guilabel:`Stroke paint`
-  to a darker color and the :guilabel:`Stroke style` to a thinner thickness:
+  * Change the :guilabel:`Fill` color to a somehow pale grey-blue,
+  * Assign to the border a darker color in :guilabel:`Stroke paint` tab,
+  * And reduce the border thickness under :guilabel:`Stroke style` tab.
 
 .. image:: /static/training_manual/symbology/inkscape_stroke_fill.png
    :align: center
 
-* Draw a line using the :guilabel:`Line` tool:
+* Draw a line using the :guilabel:`Pencil` tool:
 
-* Click once to start the line. Hold :kbd:`ctrl` to make it snap to increments
-  of 15 degrees.
-* Click once to end the line segment, then right-click to finalize the line.
-* Change its color and width to match the circle's stroke and move it around as
-  necessary, so that you end up with a symbol like this one:
+  * Click once to start the line. Hold :kbd:`ctrl` to make it snap to increments
+    of 15 degrees.
+  * Move the pointer horizontally and place a point with a simple click.
+  * Click and snap to the vertex of the line and trace a vertical line, ended
+    by a simple click.
+  * Now join the two end vertices. 
+  * Change the color and width of the triangle symbol to match the circle's stroke
+    and move it around as necessary, so that you end up with a symbol like this one:
 
 .. image:: /static/training_manual/symbology/inkscape_final_symbol.png
    :align: center
 
-* Save it as :guilabel:`landuse_symbol` under the directory that the course is
-  in, under :kbd:`exercise_data/symbols`, as an SVG file.
+* If the symbol you get satisfies you, then save it as :guilabel:`landuse_symbol`
+  under the directory that the course is in, under :kbd:`exercise_data/symbols`,
+  as SVG file.
 
 In QGIS:
 
-* Open the :guilabel:`Layer Properties` for the :guilabel:`landuse` layer.
-* Change the symbol structure to the following and find your SVG image via the
-  :guilabel:`Browse` button:
+* Open the :guilabel:`Layer Properties` for the :file:`landuse` layer.
+* In the :guilabel:`Style` tab, change the symbol structure by selecting ``SVG Fill``
+  as :guilabel:`Symbol Layer Type` option, as shown below.
+* Click the |browseButton| :guilabel:`Browse` button to select your SVG image.
+  It's added to the symbol tree and you can now customize its different
+  characteristics (colors, angle, effects, units...).
+
 
 .. image:: /static/training_manual/symbology/svg_symbol_settings.png
    :align: center
 
-You may also wish to update the svg layer's border:
+You may also wish to update the svg layer's border (see below):
 
 .. image:: /static/training_manual/symbology/svg_layer_border.png
    :align: center
 
-Your landuse layer should now have a texture like the one on this map:
+Once you validate the dialog, features in :file:`landuse` layer should now
+be covered by a set of symbols, showing a texture like the one on the
+following map. If textures are not visible, you may need to zoom in the map
+canvas or set in the layer properties a bigger :guilabel:`Texture width`.
 
 .. image:: /static/training_manual/symbology/svg_symbol_result.png
    :align: center
