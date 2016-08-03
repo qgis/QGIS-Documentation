@@ -39,6 +39,8 @@ water, such as streams and rivers.
   to set the co-ordinates.
 * Choose a location to save the resulting .osm file and click :guilabel:`Ok`:
 
+.. _set_osm_region:
+
 .. image:: /static/training_manual/foreword/set_osm_region.png
    :align: center
 
@@ -155,12 +157,17 @@ For Module 6 (Creating Vector Data) and Module 8 (Rasters), you'll also need
 raster images (SRTM DEM) which cover the region you have selected for your
 course.
 
-SRTM DEM can be downloaded from the CGIAR-CGI: http://srtm.csi.cgiar.org/
+The CGIAR-CGI (http://srtm.csi.cgiar.org/) provides some SRTM DEM you can download
+from http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp.
 
 You'll need images which cover the entire region you have chosen to use.
+If you kept same data as the training manual, you can use the extent shown
+in the set_osm_region_ figure above, otherwise adapt your extent.
+Keep the :file:`GeoTiff` format. Once the form is filled, click on the
+:guilabel:`Click here to Begin Search >>` button and download the file(s).
 
 Once you have downloaded the required file(s), they should be saved in the
-"exercise_data" directory under "raster/SRTM/".
+:file:`exercise_data` directory, under :file:`raster/SRTM` subfolders.
 
 |hard| |TY| Create imagery tiff Files
 --------------------------------------------------------------------------------
