@@ -1864,7 +1864,6 @@ disabled).
 
 .. figure:: /static/user_manual/working_with_vector/diagram_toolbar.png
    :align: center
-   :width: 15em
 
    Diagram/Label toolbar
 
