@@ -1871,8 +1871,8 @@ These tools allow to specifically work on each diagram to:
 
 * |pinLabels| :sup:`Pin/Unpin Labels And Diagrams` that has data-defined
   position. By clicking or draging an area, you pin diagram(s). If you click or
-  drag an area holding ``Shift``, diagram(s) are unpinned. Finally, you can
-  also click or drag an area holding ``Ctl`` to toggle the pin status of
+  drag an area holding :kbd:`Shift`, diagram(s) are unpinned. Finally, you can
+  also click or drag an area holding :kbd:`Ctrl` to toggle the pin status of
   diagram(s).
 * |showPinnedLabels| :sup:`Highlight Pinned Labels and DIagrams`. If the
   vector layer of the diagram is editable, then the highlighting is green,
@@ -1880,7 +1880,7 @@ These tools allow to specifically work on each diagram to:
 * |moveLabel| :sup:`Move Label And Diagram` that has data-defined
   position. You just have to drag the diagram to the desired place.
 * |showHideLabels| :sup:`Show/Hide Labels and Diagrams` that has
-  data-defined visbility. If you click or drag an area holding ``Shift``,
+  data-defined visbility. If you click or drag an area holding :kbd:`Shift`,
   then diagram(s) are hidden. When a diagram is hidden, you just have to click
   or drag an area around the feature's point to restore the chart.
 
