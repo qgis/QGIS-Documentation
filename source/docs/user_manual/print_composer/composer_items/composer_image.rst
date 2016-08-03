@@ -63,6 +63,8 @@ The **Search directories** area allows you to add and remove directories with im
 to the picture database. A preview of the pictures found in the selected directories is shown in a
 pane and can be used to select and set the image source.
 
+.. _parameterized_svg:
+
 It is possible to change SVG fill/outline color and outline width when using
 parameterized SVG files such as those included with QGIS. If you add a SVG file
 you should add the following tags in order to add support for transparency:
