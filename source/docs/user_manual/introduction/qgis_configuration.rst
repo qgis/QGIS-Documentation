@@ -114,9 +114,11 @@ can set project-specific options.
   You can find out more about 1:n relations support in Section :ref:`vector_relations`.
 * In the :guilabel:`Data Sources` tab, you can:
 
-  * |checkbox| :guilabel:`Evaluate default values on provider side`: when adding
-    new features in a PostGreSQL table, default values fields are already filled
-    in the :guilabel:`Add Feature` form and not only at the commit moment.
+  * |checkbox| :guilabel:`Evaluate default values on provider side`: When adding
+    new features in a PostGreSQL table, fields with default value constraint are
+    evaluated and populated at the form opening, and not at the commit moment.
+    This means that instead of an expression like ``nextval('serial')``, the field
+    in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
   * |checkbox| :guilabel:`Automatically create transaction groups where possible`:
     When this mode is turned on, all
     (postgres) layers from the same database are synchronised in their edit state,
