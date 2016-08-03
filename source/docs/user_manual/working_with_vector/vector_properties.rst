@@ -1874,12 +1874,12 @@ These tools allow to specifically work on each diagram to:
   drag an area holding :kbd:`Shift`, diagram(s) are unpinned. Finally, you can
   also click or drag an area holding :kbd:`Ctrl` to toggle the pin status of
   diagram(s).
-* |showPinnedLabels| :sup:`Highlight Pinned Labels and DIagrams`. If the
+* |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
   vector layer of the diagram is editable, then the highlighting is green,
   otherwise it's blue.
 * |moveLabel| :sup:`Move Label And Diagram` that has data-defined
   position. You just have to drag the diagram to the desired place.
-* |showHideLabels| :sup:`Show/Hide Labels and Diagrams` that has
+* |showHideLabels| :sup:`Show/Hide Labels And Diagrams` that has
   data-defined visbility. If you click or drag an area holding :kbd:`Shift`,
   then diagram(s) are hidden. When a diagram is hidden, you just have to click
   or drag an area around the feature's point to restore the chart.
