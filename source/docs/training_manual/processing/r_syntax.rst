@@ -42,7 +42,7 @@ As for the inputs, each output has to be defined at the beginning of the script:
 1. vector, ``##output= output vector``
 2. raster, ``##output= output raster``
 3. table, ``##output= output raster``
-4. plots, ``##showplot``
+4. plots, ``##showplots``
 5. R output in the *Result Viewer*, just put **inside** the script ``>``
    **before** the output you want to display
 
@@ -183,7 +183,7 @@ The script is exactly the same of above with just 2 edits:
 
 Example with plot
 -----------------
-Creating plots is very simple. You have to use the ``##showplot`` parameter as
+Creating plots is very simple. You have to use the ``##showplots`` parameter as
 the following script shows::
 
 
