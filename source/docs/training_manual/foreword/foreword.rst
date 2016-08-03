@@ -30,13 +30,13 @@ License
 
 .. image:: /static/training_manual/license.png
 
-The Free Quantum GIS Training Manual by Linfiniti Consulting CC. is based on 
-an earlier version from Linfiniti and is licensed under a 
+The Free Quantum GIS Training Manual by Linfiniti Consulting CC. is based on
+an earlier version from Linfiniti and is licensed under a
 `Creative Commons Attribution 4.0 International <http://creativecommons.org/licenses/by/4.0/>`_.
 Permissions beyond the scope of this license may be available at below.
 
 We have published this QGIS training manual under a liberal license that allows
-you to freely copy, modify and redistribute this work. A complete copy of the 
+you to freely copy, modify and redistribute this work. A complete copy of the
 license is available at the end of this document. In simple terms, the usage
 guidelines are as follows:
 
@@ -47,9 +47,9 @@ guidelines are as follows:
 * If you add a substantive portion to the work and contribute it back to the
   project (at least one complete module) you may add your name to the end of
   the authors list for this document (which will appear on the front page)
-* If you contribute minor changes and corrections you may add yourself to the 
+* If you contribute minor changes and corrections you may add yourself to the
   contributors list below.
-* If you translate this document in its entirety, you may add your name to the 
+* If you translate this document in its entirety, you may add your name to the
   authors list in the form "Translated by Joe Bloggs".
 * If you sponsor a module or lesson, you may request the author to include an
   acknowledgement in the beginning of each lesson contributed, e.g.:
@@ -109,7 +109,7 @@ Data
 ----
 
 .. note:: The sample data used throughout the manual can be downloaded here:
-   http://qgis.org/downloads/data/training_manual_exercise_data.zip
+   https://github.com/ghtmtt/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip
 
 The sample data that accompanies this resource is freely available and comes
 from the following sources:
