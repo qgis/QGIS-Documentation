@@ -260,8 +260,8 @@ The other two options are more common.
 
 If you're sending the map to a cartographer (who may want to edit the map for
 publication), it's best to export as an SVG. SVG stands for "Scalable Vector
-Graphic", and can be imported to programs like Inkscape or other vector image
-editing software.
+Graphic", and can be imported to programs like `Inkscape <https://inkscape.org/>`_
+or other vector image editing software.
 
 If you need to send the map to a client, it's most common to use a PDF, because
 it's easier to set up printing options for a PDF. Some cartographers may prefer
