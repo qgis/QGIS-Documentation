@@ -4,15 +4,15 @@
 Use R scripts in Processing
 ****************************
 
-Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
+Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna
+<http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
 
 Processing allows to write and run R scripts inside QGIS.
 
 .. warning:: R has to be installed on your computer and the PATH has to correctly
    set up. Moreover Processing just calls the external R packages, it is not able
    to install them. So be sure to install external packages directly in R. See the related
-   `chapter <http://docs.qgis.org/testing/en/docs/user_manual/processing/3rdParty.html#r-creating-r-scripts>`_ 
-   in the training manual.
+   :ref:`chapter <creating_r_scripts>` in the user manual.
 
 .. note:: If you have some *packages* problem, maybe it is related to missing
    *mandatory* packages required by Processing, like ``sp``, ``rgdal`` and ``raster``.
@@ -40,7 +40,7 @@ Creating plots
 
 In this tutorial we are going to create a **boxplot** of a vector layer field.
 
-Open the :file:`r_intro.qps` QGIS project.
+Open the :file:`r_intro.qgs` QGIS project.
 
 
 Script parameters
