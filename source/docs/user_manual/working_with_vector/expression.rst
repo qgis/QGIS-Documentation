@@ -601,6 +601,7 @@ This group contains functions that operate on strings
 ============================  ====================================================
  Function                     Description
 ============================  ====================================================
+ char                         Returns the character associated with a unicode code
  concat                       Concatenates several strings to one
  format                       Formats a string using supplied arguments
  format_date                  Formats a date type or string into a custom string format
