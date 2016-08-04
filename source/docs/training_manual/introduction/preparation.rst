@@ -8,7 +8,7 @@ exercises.
 
 .. note::  Before starting this exercise, QGIS must be installed on your
    computer. Also, download the ``training_manual_exercise_data.zip`` file
-   from the `QGIS data downloads area <http://qgis.org/downloads/data/>`_.
+   from the `QGIS data downloads area <https://github.com/qgis/QGIS-Training-Data/archive/master.zip>`_.
 
 Launch QGIS from its desktop shortcut, menu item, etc., depending on how you
 configured its installation.
