@@ -279,7 +279,7 @@ then click the mouse. After clicking on the feature, the :guilabel:`Event
 Browser` window is opened and the photographs on or near the clicked locality are
 available for display in the browser. If more than one photograph is available,
 you can cycle through the different features using the **[Previous]** and
-**[Next]** buttons. The other controls are described in the ref:`evis_browser`
+**[Next]** buttons. The other controls are described in the :ref:`evis_browser`
 section of this guide.
 
 .. _`evis_database`:
