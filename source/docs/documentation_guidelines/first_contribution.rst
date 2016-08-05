@@ -328,8 +328,8 @@ of unuseful branches. So keep your repository clean this way:
 And do not forget to update the ``master`` branch in your local repository!
 
 
-Update other brances
-....................
+Update other branches
+.....................
 If you want to update other branches of the documentation, for example, if you
 want to enhance the documentation of the LTR manual instead of the master one,
 you can easily do that by changing the branch to the correct version.
