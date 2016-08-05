@@ -2328,25 +2328,25 @@ settings).
 
    Style combobox options
 
-By default, the style applied to a loaded layer is named ``default``.
-Once you have got the ideal and appropriate rendering for your layer,
-you can save it by clicking the |selectString| :menuselection:`Style` combobox and choose:
+By default, the style applied to a loaded layer is named ``default``. Once you
+have got the ideal and appropriate rendering for your layer, you can save it by
+clicking the |selectString| :menuselection:`Style` combobox and choose:
 
 * **Rename Current**: The active style gets renamed and updated with the current options
-* **Add**: A new style is created using the current options.
+* **Add**: A new style is created using the current options. By default, it will be saved
+  in the QGIS project file. See below to save the style in a database.
 
-At the bottom of the Style drop-down list, you see the styles set
-for the layer and the active one is checked.
-Once you have more than one style defined for a layer, a **Remove Current** option
-can help you delete those you no longer want.
+At the bottom of the Style drop-down list, you see the styles set for the layer
+and the active one is checked. Once you have more than one style defined for a
+layer, a **Remove Current** option can help you delete those you no longer want.
 
 Note that each time you validate the layer properties dialog, the active style
 is updated with the changes you've done.
 
 You can create as many styles as you wish for a layer but only one can be active
-at a time.
-Combined to layer visibility preset, this offers a quick and powerful way to manage
-complex projects with few layers (no need to duplicate any layer in the map legend).
+at a time. Combined to layer visibility preset, this offers a quick and powerful
+way to manage complex projects with few layers (no need to duplicate any layer in
+the map legend).
 
 .. tip:: **Manage styles from layer context menu**
 
@@ -2372,30 +2372,33 @@ On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
 
 If the datasource of the layer is a database (PostGIS, MSSQL, Oracle or Spatialite),
-you can also save your layer style inside a table of the database. Just click on
-:menuselection:`Save Style` combobox and choose **Save in database** item then fill in
-the dialog to define a style name, add a description, an ui file if applicable
-and check if the style is the default style. You can add several style in the database.
-However each table can have only one default style.
+you can also save your layer style inside a table (named `layer_styles`) of the
+database. Just click on :menuselection:`Save Style` combobox and choose **Save
+in database** item then fill in the dialog to define a style name, add a
+description, an ui file if applicable and check if the style is the default style.
+You can add several style in the database. However each table can have only one
+default style.
 
-.. note:: **local database** vs **datasource database**
+.. note:: You can only save your style in database if the layer come from such
+   database. You can't mix databases (layer in Oracle and style in MSSQL for
+   instance).
 
-   It exists two kind of database in the database ecosystem: local database and
-   datasource database. Local database is file-based database, like
-   Spatialite, and is easier to use and manage. However only one user can edit
-   the database information at the same time. Datasource database is service-
-   based database and should be hosted somewhere (either in your computer or in
-   a remote server). It is more complexe to manage however several users can edit
-   the same table at the same time.
+.. note:: **Restore and Save default style**
 
-   So local database is easier to share with other users in an external
-   organisation or with remote users who can't have access to a service based
-   database due to restriction access. Datasource database is easier to share
-   styles within an organisation and allows several users to share their styles
-   from a common location.
+   You can save the current style as the default style for the layer or
+   overwrite the current style by the default one for current layer.
 
-.. ToDo: It might also be nice to add the tip about restoring style table while
-   restoring a database
+   Interface could ask you from which (or to which) database you want to take
+   (or save) the default style in case a database is used. For
+   instance, if layer comes from PostgreSQL database, you can save the style
+   in this database. You can restore the default style either from this
+   database or from the local database.
+
+   Local database is a SQLite database in the :file:`~/.qgis2/` directory
+   (where QGIS stores its local settings).
+
+See also the tip in :ref:`sec_postgis_details` for more information on backup
+of PostGIS database with layers and styles saved by QGIS.
 
 When loading a layer in QGIS, if a default style already exists for this layer,
 QGIS will load the layer and its style. After you modified the layer style,
