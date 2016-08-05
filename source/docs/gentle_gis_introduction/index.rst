@@ -1,4 +1,6 @@
 
+.. _gentle_introduction_gis:
+
 ============================
 A Gentle Introduction to GIS
 ============================
