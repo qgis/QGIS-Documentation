@@ -188,7 +188,7 @@ also be rendered with the inverted renderer.
 There is no continuous color renderer, because it is in fact only a special case
 of the graduated renderer. The categorized and graduated renderers can be created
 by specifying a symbol and a color ramp - they will set the colors for symbols
-appropriately. 
+appropriately.
 For each data type (points, lines and polygons), vector symbol layer types are available.
 Depending on the chosen renderer, the dialog provides different additional sections.
 
@@ -734,7 +734,7 @@ higher values are drawn last, on top of the others.
 
    If symbols levels are deactivated, the complete symbols will be drawn
    according to their respective features order. Overlapping symbols will
-   simply obfuscate to other below. Besides, similar symbols won't "merge" with 
+   simply obfuscate to other below. Besides, similar symbols won't "merge" with
    each other.
 
 .. _figure_symbol_levels_2:
@@ -1514,7 +1514,7 @@ widgets. These widgets are:
    See http://blog.vitu.ch/10142013-1847/write-your-own-qgis-form-elements
 
 .. tip:: **Relative Path in widgets**
- 
+
    If the path which is selected with the file browser is located in the same
    directory as the .qgs project file or below, paths are converted to
    relative
@@ -2371,18 +2371,30 @@ If you want to preserve those renderers, you have to stick to the QML format.
 On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
 
-If the datasource of the layer is a database (PostGIS or Spatialite for example),
+If the datasource of the layer is a database (PostGIS, MSSQL, Oracle or Spatialite),
 you can also save your layer style inside a table of the database. Just click on
 :menuselection:`Save Style` combobox and choose **Save in database** item then fill in
 the dialog to define a style name, add a description, an ui file if applicable
 and check if the style is the default style. You can add several style in the database.
 However each table can have only one default style.
 
-.. ToDo:
-   It might be interesting to explain the difference between *local database*
-   and *datasource database* proposed as options when saving or loading style from DB
+.. note:: **local database** vs **datasource database**
 
-   It might also be nice to add the tip about restoring style table while
+   It exists two kind of database in the database ecosystem: local database and
+   datasource database. Local database is file-based database, like
+   Spatialite, and is easier to use and manage. However only one user can edit
+   the database information at the same time. Datasource database is service-
+   based database and should be hosted somewhere (either in your computer or in
+   a remote server). It is more complexe to manage however several users can edit
+   the same table at the same time.
+
+   So local database is easier to share with other users in an external
+   organisation or with remote users who can't have access to a service based
+   database due to restriction access. Datasource database is easier to share
+   styles within an organisation and allows several users to share their styles
+   from a common location.
+
+.. ToDo: It might also be nice to add the tip about restoring style table while
    restoring a database
 
 When loading a layer in QGIS, if a default style already exists for this layer,
