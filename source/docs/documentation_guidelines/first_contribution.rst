@@ -378,11 +378,11 @@ fetch and merge the branches:
 
 ::
 
-# switch to manual_en_2.14 branch
-$ git checkout manual_en_2.14
-# fetch all the new commits
-$ git fetch upstream
-# merge update from upstream/manual_en_2.14 to the current local branch
-$ git merge upstream/manual_en_2.14
-# update **your** remote repository
-$ git push origin manual_en_2.14
+  # switch to manual_en_2.14 branch
+  $ git checkout manual_en_2.14
+  # fetch all the new commits
+  $ git fetch upstream
+  # merge update from upstream/manual_en_2.14 to the current local branch
+  $ git merge upstream/manual_en_2.14
+  # update **your** remote repository
+  $ git push origin manual_en_2.14
