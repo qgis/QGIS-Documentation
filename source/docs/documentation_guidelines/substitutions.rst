@@ -191,12 +191,12 @@ Icon                            Substitution                        Icon        
 |selectFreehand|                ``|selectFreehand|``                |selectRadius|                  ``|selectRadius|``
 |selectAll|                     ``|selectAll|``                     |deselectAll|                   ``|deselectAll|``
 |invertSelection|               ``|invertSelection|``               |expressionSelect|              ``|expressionSelect|``
-|selectAllTree|                 ``|selectAllTree|``                 |select|                        ``|select|``                
-|dataDefined|                   ``|dataDefined|``                   |expression|                    ``|expression|``
-|dataDefineOn|                  ``|dataDefineOn|``                  |dataDefineExpressionOn|        ``|dataDefineExpressionOn|``
-|dataDefineError|               ``|dataDefineError|``               |dataDefineExpressionError|     ``|dataDefineExpressionError|``
-|filter|                        ``|filter|``                        |expressionFilter|              ``|expressionFilter|``
-|filterMap|                     ``|filterMap|``
+|selectAllTree|                 ``|selectAllTree|``                 |select|                        ``|select|``
+|formSelect|                    ``|formSelect|``                    |dataDefined|                   ``|dataDefined|``
+|expression|                    ``|expression|``                    |dataDefineOn|                  ``|dataDefineOn|``
+|dataDefineExpressionOn|        ``|dataDefineExpressionOn|``        |dataDefineError|               ``|dataDefineError|``
+|dataDefineExpressionError|     ``|dataDefineExpressionError|``     |filter|                        ``|filter|``
+|expressionFilter|              ``|expressionFilter|``              |filterMap|                     ``|filterMap|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -238,8 +238,8 @@ Other basic icons
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|arrowDown|                     ``|arrowDown|``                     |arrowUp|                       ``|arrowUp|``     
-|arrowLeft|                     ``|arrowLeft|``                     |arrowRight|                    ``|arrowRight|``     
+|arrowDown|                     ``|arrowDown|``                     |arrowUp|                       ``|arrowUp|``
+|arrowLeft|                     ``|arrowLeft|``                     |arrowRight|                    ``|arrowRight|``
 |signPlus|                      ``|signPlus|``                      |signMinus|                     ``|signMinus|``
 |projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``

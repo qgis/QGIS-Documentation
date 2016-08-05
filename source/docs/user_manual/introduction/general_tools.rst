@@ -469,6 +469,12 @@ is displayed in a pop-up dialog.
 
    Measure Angle
 
+.. index::
+   single: Select
+   single: Select; All, Select; Invert, Select; Expression, Select; Form
+   single: Select; Polygon, Select; Freehand, Select; Rectangle, Select; Radius
+   pair: Select; Deselect
+
 .. _`sec_selection`:
 
 Select and deselect features
@@ -484,16 +490,53 @@ tool:
 * |selectFreehand| :sup:`Select Features by Freehand`
 * |selectRadius| :sup:`Select Features by Radius`
 
-To deselect all selected features, click on |deselectAll| :sup:`Deselect
-Features from All Layers`.
+If you want to select from attribute table, you can choose one of these tools
+(note that attribute table and map canvas show the same information, so if you
+select one feature in attribute table, it will be selected in map canvas also):
 
-|expressionSelect| :sup:`Select features using an expression` allows user
-to select features using expression dialog. See :ref:`vector_expressions`
-chapter for some example.
+* |expressionSelect| :sup:`Select By Expression...` allows user to select
+  features using expression dialog. See :ref:`vector_expressions` chapter for
+  some example.
+* |formSelect| :sup:`Select Features By Value...` or press :kbd:`F3`
+* |deselectAll| :sup:`Deselect Features from All Layers` or press
+  :kbd:`Ctrl+Shift+A` to deselect all selected features in all layers.
+* |selectAll| :sup:`Select All Features` or press :kbd:`Ctrl+A` to select all
+  features in the current layer.
+* |invertSelection| :sup:`Invert Feature Selection` to invert the selection in
+  the current layer.
+
+.. note:: The :menuselection:`View --> Select` menu list the same possibilities.
 
 Users can save selected features into a **New Memory Vector Layer** or a
 **New Vector Layer** using :menuselection:`Edit --> Copy Features` and
 :menuselection:`Edit --> Paste Features as` in the wanted format.
+
+.. index:: Select; By Value
+
+About Select Features By Value
+-------------------------------
+
+This feature opens a window to allow the user to choose for each column of the 
+attribute table which value to look for, if the search should be case sensitive
+and the operation that should be used. Operation can be one of:
+
+* :guilabel:`Exclude field`,
+* :guilabel:`Equal to (=)`,
+* :guilabel:`Not equal to`,
+* :guilabel:`Greater than (>)` (only for fields of integer or decimal type),
+* :guilabel:`Less than (<)` (only for fields of integer or decimal type),
+* :guilabel:`Greater than or equal to (>=)` (only for fields of integer
+  or decimal type),
+* :guilabel:`Less than or equal to (<=)` (only for fields of integer or
+  decimal type),
+* :guilabel:`Contains` (only for fields of type string),
+* :guilabel:`Not contains` (only for fields of type string),
+* :guilabel:`is missing (null)`,
+* :guilabel:`is not missing (null)`
+
+The window allows user to :guilabel:`Reset form` or to :guilabel:`Select
+features`, :guilabel:`Add to current selection`, :guilabel:`Filter current
+selection`, :guilabel:`Remove from current selection`.
 
 .. _data_defined:
 

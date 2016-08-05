@@ -536,6 +536,8 @@ rst_epilog = """
    :width: 1.5em
 .. |formAnnotation| image:: /static/common/mActionFormAnnotation.png
    :width: 1.5em
+.. |formSelect| image:: /static/common/mIconFormSelect.png
+   :width: 1.5em
 .. |frame|  image:: /static/common/frame.png
    :width: 1.5em
 .. |ftools| image:: /static/common/ftools_logo.png
