@@ -210,7 +210,7 @@ entry in the processing configuration dialog. Once you have set that parameter,
 you can start creating and executing your own R scripts.
 
 .. note:: for **Windows** user, usually the R executable file is in the
-   ``C:\Program Files\R\R-3.2`` folder.  Add just the folder and **NOT** the the
+   :file:`C:\Program Files\R\R-3.2` folder.  Add just the folder and **NOT** the
    binary!
 
 Once again, this is different in Linux, and you just have to make sure that the
@@ -302,7 +302,7 @@ explicitly into a ``SpatialPointsDataFrame`` object, since it is itself an objec
 of class ``ppp``, which is not a suitable class to be returned to QGIS.
 
 If your algorithm generates raster layers, the way they are saved will depend on
-whether or not you have used the ``##dontuserasterpackage`` option. In you have
+whether or not you have used the ``##dontuserasterpackage`` option. If you have
 used it, layers are saved using the ``writeGDAL()`` method. If not, the
 ``writeRaster()`` method from the ``raster`` package will be used.
 
@@ -353,7 +353,7 @@ own scripts.
    additional libraries that you might need have to be explicitly loaded by typing,
    ``library(ggplot2)``. If the package is not already installed on your machine,
    Processing will download and install it. In this way the package will be also
-   available in R Standalone. **Be aware** that if the package has so be downloaded,
+   available in R Standalone. **Be aware** that if the package has to be downloaded,
    the first time you run the script it might take a long time.
 
 GRASS
