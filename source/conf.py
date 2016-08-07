@@ -391,6 +391,8 @@ rst_epilog = """
    :width: 1.5em
 .. |composerManager| image:: /static/common/mActionComposerManager.png
    :width: 1.5em
+.. |conditionalFormatting| image:: /static/common/mActionConditionalFormatting.png
+   :width: 1.5em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
 .. |convexHull| image:: /static/common/convex_hull.png
@@ -534,11 +536,11 @@ rst_epilog = """
    :width: 1.5em
 .. |fontComboBox|  image:: /static/common/fontcombobox.png
    :width: 1.5em
-.. |form| image:: /static/common/mActionForm.png
-   :width: 1.5em
 .. |formAnnotation| image:: /static/common/mActionFormAnnotation.png
    :width: 1.5em
 .. |formSelect| image:: /static/common/mIconFormSelect.png
+   :width: 1.5em
+.. |formView| image:: /static/common/mActionFormView.png
    :width: 1.5em
 .. |frame|  image:: /static/common/frame.png
    :width: 1.5em
@@ -815,6 +817,8 @@ rst_epilog = """
    :width: 1.5em
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
+.. |multiEdit| image:: /static/common/mActionMultiEdit.png
+   :width: 1.5em
 .. |multiToSingle| image:: /static/common/multi_to_single.png
    :width: 1.5em
 .. |neighbor| image:: /static/common/neighbour.png
@@ -842,8 +846,6 @@ rst_epilog = """
 .. |offlineEditingSync| image:: /static/common/offline_editing_sync.png
    :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
-   :width: 1.5em
-.. |openForm| image:: /static/common/mActionOpenForm.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
@@ -963,8 +965,6 @@ rst_epilog = """
 .. |removeAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
-   :width: 1.5em
-.. |rendererAttributeTable| image:: /static/common/rendererCategorizedSymbolOld.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em

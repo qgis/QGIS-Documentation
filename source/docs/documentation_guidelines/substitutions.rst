@@ -265,8 +265,8 @@ Icon                         Substitution                     Icon              
 |expressionSelect|           ``|expressionSelect|``           |deleteSelected|         ``|deleteSelected|``
 |newAttribute|               ``|newAttribute|``               |deleteAttribute|        ``|deleteAttribute|``
 |newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
-|draw|                       ``|draw|``                       |form|                   ``|form|``
-|rendererAttributeTable|     ``|rendererAttributeTable|``     \                        \
+|draw|                       ``|draw|``                       |formView|               ``|formView|``
+|conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|              ``|multiEdit|``
 ============================ ===============================  =======================  ===========================
 
 

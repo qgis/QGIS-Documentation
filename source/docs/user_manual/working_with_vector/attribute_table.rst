@@ -178,7 +178,7 @@ Tab/form mode
 By default the attribute window displays a table layout. In some case one
 should prefer to use a form layout to help edit some features more easily.
 
-You can switch to form layout by clicking in the bottom right, on |openForm|
+You can switch to form layout by clicking in the bottom right, on |formView|
 and switch back to table layout with |openTable|.
 
 Zoom to feature
@@ -345,7 +345,7 @@ Conditional formatting of Table Cells
 =====================================
 
 You can enable the :index:`conditional formatting` panel clicking on
-|rendererAttributeTable| at the top right of the attributes window in table
+|conditionalFormatting| at the top right of the attributes window in table
 view (not available in form view).
 
 The new panel allows user to add new rules for conditional formatting of field
