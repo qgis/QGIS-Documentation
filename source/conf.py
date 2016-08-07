@@ -244,7 +244,11 @@ rst_epilog = """
    :width: 1.5em
 .. |add| image:: /static/common/mActionAdd.png
    :width: 1.5em
+.. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png
+   :width: 1.5em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
+   :width: 1.5em
+.. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
    :width: 1.5em
 .. |addArrow| image:: /static/common/mActionAddArrow.png
    :width: 1.5em
@@ -406,6 +410,8 @@ rst_epilog = """
 .. |crs| image:: /static/common/CRS.png
    :width: 1.5em
 .. |createGPX| image:: /static/common/create_gpx.png
+   :width: 1.5em
+.. |createMemory| image:: /static/common/mActionCreateMemory.png
    :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
@@ -828,6 +834,8 @@ rst_epilog = """
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
 .. |newComposer| image:: /static/common/mActionNewComposer.png
+   :width: 1.5em
+.. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
 .. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em

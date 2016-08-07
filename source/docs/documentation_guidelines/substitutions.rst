@@ -89,20 +89,22 @@ Manage Layers and overview
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|addOgrLayer|                   ``|addOgrLayer|``                   \                               \
+|addOgrLayer|                   ``|addOgrLayer|``                   |addDb2Layer|                   ``|addDb2Layer|``
 |addRasterLayer|                ``|addRasterLayer|``                |addMssqlLayer|                 ``|addMssqlLayer|``
-|addLayer|                      ``|addLayer|``                      |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
-|newVectorLayer|                ``|newVectorLayer|``                |removeLayer|                   ``|removeLayer|``
+|addDelimitedTextLayer|         ``|addDelimitedTextLayer|``         |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
+|addPostgisLayer|               ``|addPostgisLayer|``               |addOracleLayer|                ``|addOracleLayer|``
+|addAfsLayer|                   ``|addAfsLayer|``                   |addAmsLayer|                   ``|addAmsLayer|``
 |virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
 |wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
-|oracleRaster|                  ``|oracleRaster|``
+|newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
+|newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
 |dbManager|                     ``|dbManager|``                     |gdal|                          ``|gdal|``
 |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
-|removeAllOVerview|             ``|removeAllOVerview|``             \                               \
+|removeAllOVerview|             ``|removeAllOVerview|``             |removeLayer|                   ``|removeLayer|``
 |showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
 |showPresets|                   ``|showPresets|``                   |zip|                           ``|zip|``
+|addLayer|                      ``|addLayer|``                      \                               \
 ==============================  ==================================  ==============================  ==================================
-
 
 File
 ....
@@ -354,7 +356,7 @@ Icon                            Substitution                        Icon        
 |spatialQuery|                  ``|spatialQuery|``                  |selectSubsetLayer|             ``|selectSubsetLayer|``
 |selectCreateLayer|             ``|selectCreateLayer|``             |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |geometrySnapper|               ``|geometrySnapper|``
-|topologychecker|               ``|topologychecker|``
+|topologychecker|               ``|topologychecker|``               |oracleRaster|                  ``|oracleRaster|``
 ==============================  ==================================  ==============================  ==================================
 
 
