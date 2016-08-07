@@ -447,6 +447,8 @@ rst_epilog = """
    :width: 1.5em
 .. |diagram| image:: /static/common/diagram.png
    :width: 2em
+.. |diagramProperties| image:: /static/common/mActionDiagramProperties.png
+   :width: 1.5em
 .. |dial| image:: /static/common/dial.png
    :width: 1.5em
 .. |dialogButtonBox|  image:: /static/common/dialogbuttonbox.png
