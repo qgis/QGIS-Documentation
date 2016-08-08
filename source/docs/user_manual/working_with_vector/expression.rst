@@ -278,7 +278,7 @@ This group contains functions which aggregate values over layers and fields.
 
 **Examples:**
 
-* Return the maximum of the “passengers” field from features in the layer
+* Return the maximum of the "passengers" field from features in the layer
   grouped by "station_class" field::
  
    maximum("passengers", group_by:="station_class")
@@ -288,7 +288,7 @@ This group contains functions which aggregate values over layers and fields.
 
    aggregate('rail_stations','sum',"passengers", intersects(@atlas_geometry, $geometry))
 
-* Return the mean of the “field_from_related_table” field for all matching
+* Return the mean of the "field_from_related_table" field for all matching
   child features using the 'my_relation' relation from the layer::
 
    aggregate_relation('my_relation', 'mean', "field_from_related_table")
