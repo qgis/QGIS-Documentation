@@ -55,10 +55,21 @@ possibilities.
 
 The **Expressions** feature offers access to the:
 
-- :guilabel:`Expression` tab which lists functions to use
-- :guilabel:`Function Editor` tab which helps to create custom functions
+* :guilabel:`Expression` tab which lists functions to use
+* :guilabel:`Function Editor` tab which helps to create custom functions
   to use in the expressions.
 
+.. index:: 
+   single: Expression; Named parameters, Function; Named parameters
+
+.. tip:: **Use named parameters to improve the expression reading**
+
+  Some functions requiere many parameters to be set. The expression engine supports the
+  use of named parameters. This means that instead of writing the cryptic expression
+  ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, value:=2, max:=9)``. This also allows
+  arguments to be switched, e.g. ``clamp( value:=2, max:=9, min:=1)``. Using named parameters
+  helps clarify what the arguments for an expression function refer to, which is helpful
+  when you are trying to interpret an expression at a later date!
 
 .. _functions_list:
 
