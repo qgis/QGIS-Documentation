@@ -160,8 +160,8 @@ Limitations for multi-band layers
 Unlike QGIS, SAGA has no support for multi-band layers. If you want to use a
 multiband layer (such as an RGB or multispectral image), you first have to split
 it into single-banded images. To do so, you can use the 'SAGA/Grid - Tools/Split
-RGB image' algorithm (which creates three images from an RGB image) or the 'SAGA/Grid - Tools/Extract band'
-algorithm (to extract a single band).
+RGB image' algorithm (which creates three images from an RGB image) or the 'SAGA/Grid
+- Tools/Extract band' algorithm (to extract a single band).
 
 Limitations in cell size
 .........................
@@ -192,6 +192,8 @@ Most other providers that use an external application and call it through the
 command-line have similar options, so you will find them as well in other places
 in the processing settings list.
 
+.. _creating_r_scripts:
+
 R. Creating R scripts
 ---------------------
 
@@ -207,7 +209,8 @@ where your R binaries are located. You can do this using the :guilabel:`R folder
 entry in the processing configuration dialog. Once you have set that parameter,
 you can start creating and executing your own R scripts.
 
-.. note:: for **Windows** user, usually the R executable file is in the ``C:\Program Files\R\R-3.2``, be aware not to use ``C:\Program Files\R\R-3.2\bin``!
+.. note:: for **Windows** user, usually the R executable file is in the
+   ``C:\Program Files\R\R-3.2``, be aware not to use ``C:\Program Files\R\R-3.2\bin``!
 
 Once again, this is different in Linux, and you just have to make sure that the
 R folder is included in the PATH environment variable. If you can start R just
@@ -245,7 +248,8 @@ QGIS the inputs of the algorithm described in the file and the outputs that
 it will generate. They work with exactly the same syntax as the Processing scripts
 that we have already seen, so they will not be described here again.
 
-Please have a look at the :ref:`R Intro <r-intro>` and the :ref:`R Syntax <r-syntax>` Training Manual Chapters to have more information on how to write your own R scripts-
+Please have a look at the :ref:`R Intro <r-intro>` and the :ref:`R Syntax <r-syntax>`
+Training Manual Chapters to have more information on how to write your own R scripts-
 
 When you declare an input parameter, QGIS uses that information for two
 things: creating the user interface to ask the user for the value of that

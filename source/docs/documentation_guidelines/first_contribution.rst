@@ -84,7 +84,7 @@ Alternative 1: Picking an issue in the list
 #. Validate your changes by filling the :guilabel:`Commit Changes` frame and
    commit directly to your branch.
 #. Redo the previous steps for any other file that needs to be updated to fix
-   fix the issue.
+   the issue.
 
 
 Alternative 2: Using the ``Fix Me`` shortcut
@@ -192,6 +192,11 @@ Now you are ready to get a local clone of **your** QGIS-Documentation repository
 The former command line is simply an example.
 You should adapt both the path and the repository URL, replacing ``<YourName>``
 with your real name.
+
+.. tip:: **Permission denied (publickey) error?**
+
+   If you get a Permission denied (publickey) error, there may be a problem with 
+   your SSH key. See `GitHub help <https://help.github.com/articles/error-permission-denied-publickey/>`_ for details. 
 
 Check it:
 
