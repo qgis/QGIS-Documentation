@@ -4,8 +4,8 @@ Foreword
 Background
 ----------
 
-In 2008 we launched the `Gentle Introduction to GIS
-<http://docs.qgis.org/testing/en/docs/gentle_gis_introduction/>`_, a completely free, open content resource for
+In 2008 we launched the :ref:`Gentle Introduction to GIS
+<gentle_introduction_gis>`, a completely free, open content resource for
 people who want to learn about GIS without being overloaded with jargon and new
 terminology. It was sponsored by the South African government and has been a
 phenomenal success, with people all over the world writing to us to tell us how
