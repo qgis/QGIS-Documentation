@@ -831,7 +831,7 @@ Optionally, you can activate following checkboxes:
    **credentials will be visible** if, for instance, you shared the project file
    with someone. Therefore, it's advisable to save your credentials in a
    *Authentication configuration* instead (:guilabel:`configurations` tab). 
-   See ref:`authentication_index` for more details.
+   See :ref:`authentication_index` for more details.
 
 Once all parameters and options are set, you can test the connection by
 clicking on the **[Test Connect]** button.
@@ -981,7 +981,7 @@ A driver / host / host connection requires in addition:
    **credentials will be visible** if, for instance, you shared the project file
    with someone. Therefore, it's advisable to save your credentials in a
    *Authentication configuration* instead (:guilabel:`configurations` tab). 
-   See ref:`authentication_index` for more details.
+   See :ref:`authentication_index` for more details.
 
 Once all parameters and options are set, you can test the connection by
 clicking on the **[Test connection]** button.
