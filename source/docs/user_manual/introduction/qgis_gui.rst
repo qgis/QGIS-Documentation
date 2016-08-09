@@ -654,8 +654,11 @@ allows users to choose:
 * the column or the expression;
 * filter statistics to selected features;
 * refresh the informations;
-* the statistics information to display with the bottom right button;
+* the statistics information to display with the bottom right button.
 
+.. note:: The list of shown statistics depends on the type of the values (numeric,
+   string or date) returned by the selected field or the entered expression.
+  
 .. index::
    single:Map overview
 
