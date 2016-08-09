@@ -248,8 +248,11 @@ So now you have the choice between two remote repository:
    it as you want.
 
 
-Update your master branch
-..........................
+Update your base branch
+"""""""""""""""""""""""
+
+For released doc (master branch)
+................................
 
 Before working on a new contribution, you should always update your local master
 branch in your local repository. Just run this command line:
@@ -270,6 +273,8 @@ branch in your local repository. Just run this command line:
 Now we have a local and remote repository which are both up to date with
 QGIS-Documentation from QGIS organisation. You can start to work on your
 contribution.
+
+.. _contribute:
 
 Contribute to QGIS
 ...................
@@ -309,6 +314,68 @@ Now you can go to your github repository and create a Pull Request. Check
 to create a PR from your branch to the master branch of the official
 QGIS-Documentation repository.
 
+
+For released doc (manual_en_ branch)
+....................................
+If you want to update other branches of the documentation, for example, if you
+want to fix the documentation of the LTR manual instead of the Testing one,
+you can easily do that by changing the branch to the correct version.
+
+When you clone the repository (see :ref:`local_repository`), your clone has all
+the branches of the upstream repository.
+Mostly every QGIS release has its own documentation branch, so the first thing
+you should do is to change the branch and update it with that one of the correct
+version:
+
+::
+
+  # change branch e.g. for 2.14 LTR
+  $ git checkout manual_en_2.14
+  # synchronize the local branch with the correct remote one
+  $ git fetch upstream manual_en_2.14
+  # merge update from upstream/manual_en_2.14 to the current local branch
+  $ git merge upstream/manual_en_2.14
+
+In this way your local branch for the 2.14 version will be update with that one
+of the official upstream repository.
+
+Now, as described in the :ref:`contribute` section, start a new branch from **here**,
+add your file and commit them to your forked repository:
+
+::
+
+  # create a new branch from manual_en_2.14
+  $ git checkout -b new_feature
+  $ vim new_file
+  $ git add .
+  $ git commit -m "new file added"
+  # push your changes to the right branch
+  $ git push origin manual_en_2.14
+
+Once you have pushed the changes to your forked repository you can start a pull
+request. **Be sure to start a new pull request by comparing your new branch to
+the correct one of the upstream repository!**, that is, create a pull request
+and compare you branch to the ``manual_en_2.14`` one (in this example).
+
+Once your pull request has been accepted, you can delete both the local and
+remote branch as described here :ref:`clean_up`.
+
+If you want to update your forked ``origin/manual_en_2.14`` branch with the
+upstream ``upstream/manual_en_2.14`` one, just checkout the correct branch and
+fetch and merge the branches:
+
+::
+
+  # switch to manual_en_2.14 branch
+  $ git checkout manual_en_2.14
+  # fetch all the new commits
+  $ git fetch upstream manual_en_2.14
+  # merge update from upstream/manual_en_2.14 to the current local branch
+  $ git merge upstream/manual_en_2.14
+  # update **your** remote repository
+  $ git push origin manual_en_2.14
+
+
 .. _clean_up:
 
 Clean-up your local and remote repository
@@ -326,63 +393,3 @@ of unuseful branches. So keep your repository clean this way:
   $ git push origin :myNewBranch
 
 And do not forget to update the ``master`` branch in your local repository!
-
-
-Update other branches
-.....................
-If you want to update other branches of the documentation, for example, if you
-want to enhance the documentation of the LTR manual instead of the master one,
-you can easily do that by changing the branch to the correct version.
-
-When you clone the repository (see :ref:`local_repository`), your clone has all
-the branches of the upstream repository.
-Mostly all the QGIS release has its own documentation branch, so the first thing
-you should do is to change the branch and update it with that one of the correct
-version:
-
-::
-
-  # change branch e.g. for 2.14 LTR
-  $ git checkout manual_en_2.14
-  # synchronize the branch
-  $ git fetch upstream
-  $ git merge upstream/manual_en_2.14
-
-In this way your local branch for the 2.14 version will be update with that one
-of the official upstream repository.
-
-Now, as usual, start a new branch from **here**, add your file and commit them
-to your forked repository:
-
-::
-
-  # create a new branch from manual_en_2.14
-  $ git checkout -b new_feature
-  $ vim new_file
-  $ git add.
-  $ git commit -m "new file added"
-  # push your changes to the right branch
-  $ git push origin manual_en_2.14
-
-Once you have pushed the changes to your forked repository you can start a pull
-request. **Be sure to start a new pull request by comparing your new branch to
-the correct one of the upstream repository!**, that is, create a pull request
-and compare you branch to the manual_en_2.14 one (in this example).
-
-Once your pull request has been accepted, you can delete both the local and
-remote branch as described here :ref:`clean_up`.
-
-If you want to update your forked `origin/manual_en_2.14` branch with the
-upstream `upstream/manual_en_2.14` one, just checkout the correct branch and
-fetch and merge the branches:
-
-::
-
-  # switch to manual_en_2.14 branch
-  $ git checkout manual_en_2.14
-  # fetch all the new commits
-  $ git fetch upstream
-  # merge update from upstream/manual_en_2.14 to the current local branch
-  $ git merge upstream/manual_en_2.14
-  # update **your** remote repository
-  $ git push origin manual_en_2.14
