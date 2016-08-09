@@ -43,30 +43,51 @@ widths are maintained for a layer, and restored when next opening the attribute 
 The buttons at the top of the attribute table window provide the
 following functionality:
 
-* |toggleEditing| :sup:`Toggle editing mode` to enable editing functionalities
-  (also with :kbd:`Ctrl+e`)
-* |saveEdits| :sup:`Save Edits` (also with :kbd:`Ctrl+s`)
-* |draw| :sup:`Reload the table`
-* |newTableRow| :sup:`Add feature`
-* |deleteSelected| :sup:`Delete selected features` (also with
-  :kbd:`Ctrl+d`)
-* |expressionSelect| :sup:`Select features using an Expression`
-* |selectAll| :sup:`Select all` (also with :kbd:`Ctrl+a`)
-* |invertSelection| :sup:`Invert selection` (also with :kbd:`Ctrl+r`)
-* |unselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)
-* |selectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+t`)
-* |panToSelected| :sup:`Pan map to the selected rows` (also with :kbd:`Ctrl+p`)
-* |zoomToSelected| :sup:`Zoom map to the selected rows` (also with
-  :kbd:`Ctrl+j`)
-* |copySelected| :sup:`Copy selected rows to clipboard` (also with
-  :kbd:`Ctrl+c`)
-* |editPaste| :sup:`Paste from clipboard to a new row` (also with
-  :kbd:`Ctrl+v`)
-* |deleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR
-  layers with GDAL version >= 1.9 (also with :kbd:`Ctrl+l`)
-* |newAttribute| :sup:`New Column` for PostGIS layers and for OGR
-  layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+w`)
-* |calculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+i`)
+.. _table_attribute_1:
+
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| Icon                    | Label                               | Purpose                                    | Default Shortcut    |
++=========================+=====================================+============================================+=====================+
+| |toggleEditing|         | Toggle editing mode                 | Enable editing functionalities             | :kbd:`Ctrl+E`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |saveEdits|             | Save Edits                          | Save current modifications                 | :kbd:`Ctrl+S`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |draw|                  | Reload the table                    |                                            |                     |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |newTableRow|           | Add feature                         | Add new geometryless feature               |                     |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |deleteSelected|        | Delete selected features            | Remove selected features from the layer    |                     |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |expressionSelect|      | Select features using an Expression |                                            |                     |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |selectAll|             | Select All                          | Select all features in the layer           | :kbd:`Ctrl+A`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |invertSelection|       | Invert selection                    | Invert the current selection in the layer  | :kbd:`Ctrl+R`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |unselectAttributes|    | Deselect all                        | Deselect selected features in the layer    | :kbd:`Ctrl+Shift+A` |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |filterMap|             | Filter/Select features using form   |                                            | :kbd:`Ctrl+F`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |selectedToTop|         | Move selected to top                | Move selected rows to the top of the table |                     |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |panToSelected|         | Pan map to the selected rows        |                                            | :kbd:`Ctrl+P`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |zoomToSelected|        | Zoom map to the selected rows       |                                            | :kbd:`Ctrl+J`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |copySelected|          | Copy selected rows to clipboard     |                                            | :kbd:`Ctrl+C`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |editPaste|             | Paste features from clipboard       | Insert new features from copied ones       | :kbd:`Ctrl+V`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |newAttribute|          | New field                           | Available for PostGIS layers and           | :kbd:`Ctrl+W`       |
+|                         |                                     | for OGR layers with GDAL version >= 1.9    |                     | 
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |deleteAttribute|       | Delete field                        | Available for PostGIS layers and           | :kbd:`Ctrl+L`       |
+|                         |                                     | for OGR layers with GDAL version >= 1.9    |                     |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |calculateField|        | Open field calculator               | Update field for many features in a row    | :kbd:`Ctrl+I`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+
+Table Attribute 1: Available Tools
 
 Below these buttons is the Field Calculator bar (enabled only in editing mode),
 which allows calculations to be quickly applied to either all or selected features
