@@ -612,12 +612,17 @@ display three kinds of information:
   is added, namely ``view feature form`` for editing. You can define more actions
   in the layer's properties dialog.
 * **Derived**: This information is calculated or derived from other information.
-  This includes the feature id, its length or perimeter and area in map units depending
-  on its geometry, the count of spatial parts and the number of the clicked part in case
-  of multi-geometry, the count of vertices in the feature and the number of the closest
-  one to the point clicked.
-  It also reports the X and Y (and Z/M if available) coordinate values of both clicked point
-  and feature closest vertex.
+  This includes:
+  
+  * general information about the feature and its geometry: feature id, length or perimeter
+    and area in map units depending on its geometry, the count of spatial parts and
+    the number of the clicked part in case of multi-geometry, the count of vertices in
+    the feature and the number of the closest one to the point clicked
+  * coordinates information: the X and Y (and Z/M if available) coordinate values of the
+    clicked point, the feature closest vertex and its first and last vertices.
+    In case you click on a curved line using the info tool, QGIS will also display the
+    radius of that section in the panel result.
+    
 * **Data attributes**: This is the list of attribute fields and values for the feature that
   has been clicked.
 
