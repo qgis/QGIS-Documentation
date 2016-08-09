@@ -210,7 +210,7 @@ entry in the processing configuration dialog. Once you have set that parameter,
 you can start creating and executing your own R scripts.
 
 .. note:: for **Windows** user, usually the R executable file is in the
-   :file:`C:\Program Files\R\R-3.2` folder.  Add just the folder and **NOT** the
+   :file:`C:\Program Files\R\R-3.2` folder. Add just the folder and **NOT** the
    binary!
 
 Once again, this is different in Linux, and you just have to make sure that the
