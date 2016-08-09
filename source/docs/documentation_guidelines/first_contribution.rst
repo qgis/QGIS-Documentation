@@ -37,12 +37,12 @@ as many branches as you want.
    By convention, avoid making changes in your ``master`` branch except merging
    the modifications from the ``master`` branch of ``qgis/QGIS-Documentation``
    (called ``qgis:master``). And use it as model to create new branches for a
-   lean history and snapshot.
+   clean history and snapshot.
 
 There are different ways to contribute to QGIS documentation. Though we expose
 them below separately, they are not mutually exclusive, meaning that you can, at
 any moment, switch from one process to another without any harm because they
-follow this scheme:
+both follow the scheme below:
 
 #. Do your modifications in an ad'hoc branch of your repository
 #. Publish your changes and ask for merging in the main doc through a pull request (PR)
