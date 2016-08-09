@@ -249,10 +249,10 @@ So now you have the choice between two remote repository:
 
 
 Update your base branch
-"""""""""""""""""""""""
+.......................
 
 For released doc (master branch)
-................................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Before working on a new contribution, you should always update your local master
 branch in your local repository. Just run this command line:
@@ -277,7 +277,7 @@ contribution.
 .. _contribute:
 
 Contribute to QGIS
-...................
+^^^^^^^^^^^^^^^^^^
 
 Always work on a branch! Always!
 
@@ -316,7 +316,7 @@ QGIS-Documentation repository.
 
 
 For released doc (manual_en_ branch)
-....................................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If you want to update other branches of the documentation, for example, if you
 want to fix the documentation of the LTR manual instead of the Testing one,
 you can easily do that by changing the branch to the correct version.
