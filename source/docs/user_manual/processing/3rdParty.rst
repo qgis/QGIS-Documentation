@@ -210,7 +210,8 @@ entry in the processing configuration dialog. Once you have set that parameter,
 you can start creating and executing your own R scripts.
 
 .. note:: for **Windows** user, usually the R executable file is in the
-   ``C:\Program Files\R\R-3.2``, be aware not to use ``C:\Program Files\R\R-3.2\bin``!
+   :file:`C:\Program Files\R\R-3.2` folder. Add just the folder and **NOT** the
+   binary!
 
 Once again, this is different in Linux, and you just have to make sure that the
 R folder is included in the PATH environment variable. If you can start R just
@@ -301,11 +302,11 @@ explicitly into a ``SpatialPointsDataFrame`` object, since it is itself an objec
 of class ``ppp``, which is not a suitable class to be returned to QGIS.
 
 If your algorithm generates raster layers, the way they are saved will depend on
-whether or not you have used the ``#dontuserasterpackage`` option. In you have
+whether or not you have used the ``##dontuserasterpackage`` option. If you have
 used it, layers are saved using the ``writeGDAL()`` method. If not, the
 ``writeRaster()`` method from the ``raster`` package will be used.
 
-If you have used the ``#passfilename`` option, outputs are generated using the
+If you have used the ``##passfilenames`` option, outputs are generated using the
 ``raster`` package (with ``writeRaster()``), even though it is not used for the
 inputs.
 
@@ -346,16 +347,14 @@ own scripts.
 
 .. note::
 
-   ``rgdal`` and ``maptools`` libraries are loaded by default, so you do not have
+   ``rgdal`` and ``raster`` libraries are loaded by default, so you do not have
    to add the corresponding ``library()`` commands (you just have to make sure
    that those two packages are installed in your R distribution). However, other
-   additional libraries that you might need have to be explicitly loaded. Just
-   add the necessary commands at the beginning of your script. You also have to
-   make sure that the corresponding packages are installed in the R distribution
-   used by QGIS. The processing framework will not take care of any package installation. If you
-   run a script that requires a package that is not installed, the execution will fail, and
-   Processing will try to detect which packages are missing. You must install those
-   missing libraries manually before you can run the algorithm.
+   additional libraries that you might need have to be explicitly loaded by typing,
+   ``library(ggplot2)``. If the package is not already installed on your machine,
+   Processing will download and install it. In this way the package will be also
+   available in R Standalone. **Be aware** that if the package has to be downloaded,
+   the first time you run the script it might take a long time.
 
 GRASS
 -----
