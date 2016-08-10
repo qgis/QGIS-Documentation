@@ -60,6 +60,8 @@ section, subsection and minisec.
    Minisec
    .......
 
+   Subminisec
+   ^^^^^^^^^^
 
 Inline tags
 -----------
