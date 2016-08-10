@@ -103,7 +103,7 @@ The :guilabel:`Customs` group lists the functions created or imported by the use
 There are many other groups, listed below.
 
 
-.. index:: Field_Calculator_Functions
+.. index:: Field Calculator Functions
 
 
 Operators
@@ -238,6 +238,66 @@ This group contains math functions (e.g., square root, sin and cos).
 ==================  ===========================================================
 
 
+Aggregates
+----------
+
+This group contains functions which aggregate values over layers and fields.
+
+===================  ===========================================================
+ Function            Description
+===================  ===========================================================
+ aggregate           Returns an aggregate value calculated using features from
+                     another layer
+ concatenate         Returns the all aggregated strings from a field or expression
+                     joined by a delimiter
+ count               Returns the count of matching features
+ count_distinct      Returns the count of distinct values
+ count_missing       Returns the count of missing (null) values
+ iqr                 Returns the calculated inter quartile range from a field
+                     or expression
+ majority            Returns the aggregate majority of values (most commonly
+                     occurring value) from a field or expression
+ max_length          Returns the maximum length of strings from a field or expression
+ maximum             Returns the aggregate maximum value from a field or expression
+ mean                Returns the aggregate mean value from a field or expression
+ median              Returns the aggregate median value from a field or expression
+ min_length          Returns the minimum length of strings from a field or expression
+ minimum             Returns the aggregate minimum value from a field or expression
+ minority            Returns the aggregate minority of values (least commonly
+                     occurring value) from a field or expression
+ q1                  Returns the calculated first quartile from a field or expression
+ q3                  Returns the calculated third quartile from a field or expression
+ range               Returns the aggregate range of values (maximum - minimum)
+                     from a field or expression
+ relation_aggregate  Returns an aggregate value calculated using all matching child
+                     features from a layer relation
+ stdev               Returns the aggregate standard deviation value from a field
+                     or expression
+ sum                 Returns the aggregate summed value from a field or expression
+===================  ===========================================================
+
+**Examples:**
+
+* Return the maximum of the "passengers" field from features in the layer
+  grouped by "station_class" field::
+ 
+   maximum("passengers", group_by:="station_class")
+    
+* Calculate the total number of passengers for the stations inside the current
+  atlas feature::
+
+   aggregate('rail_stations','sum',"passengers", intersects(@atlas_geometry, $geometry))
+
+* Return the mean of the "field_from_related_table" field for all matching
+  child features using the 'my_relation' relation from the layer::
+
+   aggregate_relation('my_relation', 'mean', "field_from_related_table")
+
+  or::
+  
+   aggregate_relation(relation:='my_relation', calculation := 'mean', expression := "field_from_related_table")
+
+
 Color Functions
 ----------------
 
@@ -329,7 +389,7 @@ This group contains functions for handling date and time data.
 
 **Some example:**
 
-* Get the month and the year of today in the format "10/2014" ::
+* Get the month and the year of today in the format "10/2014"::
 
     month(now()) || '/' || year(now())
 
