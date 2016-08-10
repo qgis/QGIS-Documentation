@@ -115,6 +115,15 @@ Or use the fullhtml target of make (which will checkout the branch)::
     # to build eg dutch:
     make LANG=nl fullhtml
 
+Trying to build a fullhtml you might get an Exception: No user credentials found for host https://www.transifex.com.
+To fix this, add a ~/.transifexrc file stored in the user's home directory with following information.
+
+    [https://www.transifex.com]
+    username = user
+    token =
+    password = p@ssw0rd
+    hostname = https://www.transifex.com
+
 To gather new strings in a pot (.po) file for your language, and merge them with 
 existing translations in the po files (normally to be run by your language maintainer)::
 
