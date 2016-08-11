@@ -66,7 +66,7 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |invertSelection|       | Invert selection                    | Invert the current selection in the layer  | :kbd:`Ctrl+R`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |unselectAttributes|    | Deselect all                        | Deselect selected features in the layer    | :kbd:`Ctrl+Shift+A` |
+| |deselectAll|           | Deselect all                        | Deselect all features in the current layer | :kbd:`Ctrl+Shift+A` |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |filterMap|             | Filter/Select features using form   |                                            | :kbd:`Ctrl+F`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+

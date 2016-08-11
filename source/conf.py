@@ -1123,8 +1123,6 @@ rst_epilog = """
    :width: 1.5em
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
-.. |unselectAttributes| image:: /static/common/mActionUnselectAttributes.png
-   :width: 1.5em
 .. |user|  image:: /static/common/user.png
    :width: 1.5em
 .. |vectorGrid| image:: /static/common/vector_grid.png
