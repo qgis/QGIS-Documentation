@@ -733,15 +733,19 @@ polygon and multi-polygon features. It doesn't
 change anything when it is used on the outer ring of the polygon.
 
 .. index::
-   single: Digitizing; Reshape Feature
+   single: Digitizing; Reshape Feature, Digitizing; Extend lines
 
 Reshape Features
 ----------------
 
 You can reshape line and polygon features using the |reshape|
 :sup:`Reshape Features` icon on the toolbar. It replaces the line or polygon
-part from the first to the last intersection with the original line. With
-polygons, this can sometimes lead to unintended results. It is mainly useful
+part from the first to the last intersection with the original line. The
+|reshape| :sup:`Reshape Features` tool also helps you extend linestring
+geometries: simply begin or end the reshape line at either the first or last
+point of the existing line.
+
+With polygons, reshaping can sometimes lead to unintended results. It is mainly useful
 to replace smaller parts of a polygon, not for major overhauls, and the reshape
 line is not allowed to cross several polygon rings, as this would generate an
 invalid polygon.
