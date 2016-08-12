@@ -398,6 +398,7 @@ dialog. The parameters required for a connection are:
 * **Name**: A name for this connection. It can be the same as *Database*.
 * **Service**: Service parameter to be used alternatively to hostname/port (and
   potentially database). This can be defined in :file:`pg_service.conf`.
+  Check the :ref:`pg-service-file` section for more details.
 * **Host**: Name of the database host. This must be a resolvable host name
   such as would be used to open a telnet connection or ping the host. If the
   database is on the same computer as QGIS, simply enter *'localhost'* here.
@@ -478,6 +479,76 @@ To load a layer from PostGIS, perform the following steps:
    entry in the geometry_columns table. This includes both tables and views.
    Defining a spatial view provides a powerful means to visualize your data.
    Refer to your PostgreSQL manual for information on creating views.
+
+.. _pg-service-file:
+
+Service connection file
+^^^^^^^^^^^^^^^^^^^^^^^
+
+The service connection file allows PostgreSQL connection parameters to be
+associated with a single service name. That service name can then be specified
+by a client and the associated settings will be used.
+
+It's called ``.pg_service.conf`` under \*nix systems (GNU/Linux, macOS etc.) and
+``pg_service.conf`` on Windows.
+
+The service file looks like::
+
+ [water_service]
+ host=192.168.0.45
+ port=5433
+ dbname=gisdb
+ user=paul
+ password=paulspass
+
+ [wastewater_service]
+ host=dbserver.com
+ dbname=water
+ user=waterpass
+
+.. note:: There are two services in the above example: ``water_service``
+  and ``wastewater_service``. You can use these to connect from QGIS,
+  pgAdmin etc. by specifying only the name of the service you want to
+  connect to (without the brackets) in their add connection tab.
+  If you want to use the services under ``psql`` you need to do something
+  like ``export PGSERVICE=water_service``.
+
+.. note:: You can find all the parameters `here <https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
+
+.. note:: If you don't want to save the passwords in the service file you can
+  use of the `.pg_pass <https://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
+  option.
+
+
+On \*nix operating systems (GNU/Linux, macOS etc.) you can save the
+:file:`pg_service.conf` file in the user's home directory and
+the PostgreSQL clients will automatically be aware of it.
+For example, if the logged user is ``web``, :file:`pg_service.conf` should
+be saved in the ``/home/web/`` directory in order to directly work (without
+specifying any other environment variables).
+
+You can specify the location of the service file by creating a ``PGSERVICEFILE``
+environment variable (e.g. run the ``export PGSERVICEFILE=/home/web/.pg_service.conf``
+command under your \*nix OS to temporarily set the ``PGSERVICEFILE`` variable)
+
+You can also make the service file available system-wide (all users) either by
+placing it at ``pg_config --sysconfdir``**/.pg_service.conf**  or by adding the
+``PGSYSCONFDIR`` environment variable to specify the directory containing
+the service file. If service definitions with the same name exist in the user
+and the system file, the user file takes precedence.
+
+.. note::
+
+ There are some caveats under Windows:
+
+ * The service file should be saved as ``pg_service.conf``
+   and not as ``.pg_service.conf``.
+ * The service file should be saved in Unix format in order to work.
+   One way to do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_
+   and ``Edit -> EOL Conversion -> UNIX Format -> File save``.
+ * After adding an environment variable you may also need to restart
+   the computer.
+
 
 .. _sec_postgis_details:
 
