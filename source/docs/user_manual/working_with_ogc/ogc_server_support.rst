@@ -595,6 +595,8 @@ specification:
 .. index::
     pair: logging; QGIS Server
 
+.. _qgis-server-logging:
+
 QGIS Server logging
 ---------------------
 
@@ -684,7 +686,7 @@ This is a list of the variables supported by QGIS server:
   has proper permissions for writing to file. File should be created
   automatically, just send some requests to server. If it's not there, check
   permissions.
-* **QGIS_SERVER_LOG_LEVEL**: Specify desired log level. Available values are:
+* **QGIS_SERVER_LOG_LEVEL**: Specifies desired log level. See :ref:`qgis-server-logging`
 * **MAX_CACHE_LAYERS**: Specify the maximum number of cached layers (default:
   100).
 * **DISPLAY**: This is used to pass (fake) X server display number (needed on
