@@ -330,22 +330,21 @@ QGIS provides tools to zoom and pan to your area of interest.
 Apart from using the |pan| :sup:`pan` and |zoomIn|
 :sup:`zoom-in` / |zoomOut| :sup:`zoom-out` icons on the toolbar
 with the mouse, navigating can also be done with the mouse wheel, spacebar
-and the arrow keys.
+and the arrow keys. A :guilabel:`Zoom factor` can be set under the
+:menuselection:`Settings -->` |options| :menuselection:`Options --> Map tools`
+menu to define the scale behavior while zooming.
 
-Zooming and panning with the mouse wheel
-----------------------------------------
+With the mouse wheel
+--------------------
 
-You can press the mouse wheel to pan inside of the main
-window, and you can roll the mouse wheel to zoom in and out on the map.
-For zooming, place the mouse cursor inside the map area and roll it forward
-(away from you) to zoom in and backwards (towards you) to zoom out. The mouse
-cursor position will be the center of the zoomed area of interest. You can
-customize the behavior of the mouse wheel zoom using the :guilabel:`Map tools`
-tab under the :menuselection:`Settings -->` |options|
-:menuselection:`Options` menu.
+You can press the mouse wheel to pan inside of the main window (on macOS,
+you may need to hold :kbd:`cmd` key).
+You can roll the mouse wheel to zoom in and out on the map; the mouse
+cursor position will be the center of the zoomed area of interest.
+Holding down :kbd:`Ctrl` while rolling the mouse wheel results in a finer zoom.
 
-Panning with the arrow keys
----------------------------
+With the arrow keys
+-------------------
 
 Panning the map is possible with the arrow keys.
 Place the mouse cursor inside the map area, and click on the right arrow key
@@ -354,7 +353,15 @@ arrow key to pan south.
 
 You can also use the space bar to temporarily cause mouse movements to pan
 the map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause
-the map display to zoom in or out.
+the map display to zoom in or out following the zoom factor set. Pressing
+:kbd:`Ctrl +` or :kbd:`Ctrl -` also performs an immediate zoom in/out
+on the map canvas.
+
+When certain map tools are active (Identify, Measure...), you can perform a zoom by
+holding down :kbd:`Shift` and dragging a rectangle on the map to zoom to that area.
+This is enabled for the map tools which are not selection tools (since they
+use :kbd:`Shift` for adding to selection) nor edit tools.
+
 
 .. _`sec_measure`:
 
