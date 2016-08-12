@@ -109,6 +109,7 @@ click the "Fix Me" link at the bottom of the page to open its source file in Edi
    are done, you need to check |radioButtonOn| :guilabel:`Create a new branch for
    this commit and start a pull request` and avoid modifying ``master``.
 
+.. _sharing_changes:
 
 Share your changes via Pull Request
 ...................................
@@ -179,6 +180,8 @@ You'll also find rules to care about even if you opt for the web interface.
 In the code samples below, lines beginning with ``$`` show commands you should
 type while ``#`` are comments.
 
+.. _local_repository:
+
 Local repository
 ................
 
@@ -195,8 +198,8 @@ with your real name.
 
 .. tip:: **Permission denied (publickey) error?**
 
-   If you get a Permission denied (publickey) error, there may be a problem with 
-   your SSH key. See `GitHub help <https://help.github.com/articles/error-permission-denied-publickey/>`_ for details. 
+   If you get a Permission denied (publickey) error, there may be a problem with
+   your SSH key. See `GitHub help <https://help.github.com/articles/error-permission-denied-publickey/>`_ for details.
 
 Check it:
 
@@ -246,8 +249,11 @@ So now you have the choice between two remote repository:
    it as you want.
 
 
-Update your master branch
-..........................
+Update your base branch
+.......................
+
+For testing doc (``master`` branch)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Before working on a new contribution, you should always update your local master
 branch in your local repository. Just run this command line:
@@ -256,42 +262,69 @@ branch in your local repository. Just run this command line:
 
   # switch to master branch (it is easy to forget this step!)
   $ git checkout master
-  # get "information" from upstream repository
+  # get "information" from the master branch in upstream repository
   # (aka qgis/QGIS-Documentation's repository)
-  $ git fetch upstream
+  $ git fetch upstream master
   # merge update from upstream/master to the current local branch
   # (which should be master, see step 1)
   $ git merge upstream/master
   # update **your** remote repository
   $ git push origin master
 
-Now we have a local and remote repository which are both up to date with
+Now you have a local and remote repositories which have both ``master`` branch up to date with
 QGIS-Documentation from QGIS organisation. You can start to work on your
 contribution.
 
-Contribute to QGIS
-...................
+For released doc (``manual_en_`` branch)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Always work on a branch! Always!
+Along the testing documentation, we continue to fix issues in QGIS |current| doc,
+meaning that you can also contribute to it. Following the previous section sample code,
+you can easily do that by selecting the corresponding branch.
+
+When you clone the repository (see :ref:`local_repository`), your clone has all
+the branches of the upstream repository.
+As above, you need to ensure your branch is up to date with the upstream's:
+
+::
+
+  # change branch e.g. for 2.14 LTR
+  $ git checkout manual_en_2.14
+  # synchronize the local branch with the correct remote one
+  $ git fetch upstream manual_en_2.14
+  # merge update from upstream/manual_en_2.14 to the current local branch
+  $ git merge upstream/manual_en_2.14
+  # update **your** remote repository
+  $ git push origin manual_en_2.14
+
+In this way your local and remote branches for the 2.14 version are up to date
+with the one of the official upstream repository.
+
+.. _contribute:
+
+Contribute to your production branch
+.....................................
+
+Now that your base branch is updated, you need to create a dedicated branch
+in which you add your contribution. Always work on a branch other than the
+base branch! Always!
 
 ::
 
    $ git checkout -b myNewBranch
    # checkout means go to the branch
-   # and -b flag creates a new branch if needed
+   # and -b flag creates a new branch if needed, based on current branch
    $ git branch
    master
+   manual_en_2.14
    * myNewBranch
-   # * means the current branch
+   # a list of existing branch where * means the current branch
    # You can now add your contribution, by editing the concerned file
    # with any application (in this case, vim is used)
    $ vim myFile
    # once done
    $ git add myFile
    $ git commit
-   # send your changes to your remote repository
-   $ git push origin myNewBranch
-
 
 Few words about commit/push commands:
 
@@ -303,9 +336,21 @@ Few words about commit/push commands:
 * use a ``#`` with a number to refer to an issue. Prefix with ``Fix`` if you fix the
   ticket: your commit will close the ticket.
 
-Now you can go to your github repository and create a Pull Request. Check
-to create a PR from your branch to the master branch of the official
-QGIS-Documentation repository.
+Now that your changes are saved and committed in your local branch,
+you need to send them to your remote repository in order to create pull request::
+
+   $ git push origin myNewBranch
+
+
+Share your Changes
+..................
+
+Now you can go to your github repository and :ref:`create a Pull Request
+<sharing_changes>` as exposed in a previous section.
+Ensure you create a PR from your branch to the remote branch you are targetting
+in the official QGIS-Documentation repository.
+
+.. _clean_up:
 
 Clean-up your local and remote repository
 .........................................
@@ -322,4 +367,3 @@ of unuseful branches. So keep your repository clean this way:
   $ git push origin :myNewBranch
 
 And do not forget to update the ``master`` branch in your local repository!
-
