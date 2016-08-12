@@ -149,7 +149,7 @@ as for bugs. Please make sure to select the type ``Feature``.
 If you have found a bug and fixed it yourself, you can submit either a
 Pull Request on the Github QGIS Project (prefered) or a patch also.
 The lovely redmine ticketsystem at
-http://hub.qgis.org/wiki/quantum-gis/issues has this type as well.
+http://hub.qgis.org/projects/quantum-gis/issues has this type as well.
 Check the ``Patch supplied`` checkbox and attach your patch before
 submitting your bug. One of the developers will review it and apply it
 to QGIS. Please don't be alarmed if your patch is not applied straight
