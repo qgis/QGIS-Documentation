@@ -238,6 +238,8 @@ Data Sources Tab
 * :guilabel:`Attribute table behavior` |selectString|. There are three
   possibilities: 'Show all features', 'Show selected features' and 'Show
   features visible on map'.
+* :guilabel:`Default view`: define the view mode of the attribute table at every
+  opening. It can be 'Remember last view', 'Table view' or 'Form view'.
 * :guilabel:`Attribute table row cache` |selectNumber|. This row cache makes
   it possible to save the last loaded N attribute rows so that working with the
   attribute table will be quicker. The cache will be deleted when closing the

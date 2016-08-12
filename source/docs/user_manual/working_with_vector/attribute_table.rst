@@ -1,4 +1,4 @@
-.. index:: Work_with_Attribute_Table
+.. index:: Attribute table
 .. _sec_attribute_table:
 
 **********************************
@@ -10,7 +10,7 @@
    .. contents::
       :local:
 
-The :index:`attribute table` displays features of a selected layer. Each row
+The attribute table displays information on features of a selected layer. Each row
 in the table represents one map feature, and each column contains a particular
 piece of information about the feature. Features in the table can be searched,
 selected, moved or even edited.
@@ -172,14 +172,17 @@ The last kind of filter will open an expression window, see :ref:`vector_express
 for more information.
 
 
-Tab/form mode
-=============
+Table/form mode
+===============
 
-By default the attribute window displays a table layout. In some case one
-should prefer to use a form layout to help edit some features more easily.
+QGIS provides two mode views to easily manipulate data in the attribute table:
+the |openTable| Table view and the |formView| Form view. You can switch from
+one to other by clicking the convenient icon at the bottom right of the dialog.
 
-You can switch to form layout by clicking in the bottom right, on |formView|
-and switch back to table layout with |openTable|.
+You can also specify the default mode view at the opening of the attribute table
+in :menuselection:`Settings --> Options --> Data Sources` menu, :guilabel:`Default
+view` option. It can be 'Remember last view', 'Table view' or 'Form view'.
+
 
 Zoom to feature
 ===============
