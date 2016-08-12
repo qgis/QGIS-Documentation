@@ -290,7 +290,7 @@ As above, you need to ensure your branch is up to date with the upstream's:
 
   # change branch e.g. for 2.14 LTR
   $ git checkout manual_en_2.14
-  # synchronize the local branch with the correct remote one
+  # get "information" from the manual_en_2.14 branch in upstream repository
   $ git fetch upstream manual_en_2.14
   # merge update from upstream/manual_en_2.14 to the current local branch
   $ git merge upstream/manual_en_2.14
