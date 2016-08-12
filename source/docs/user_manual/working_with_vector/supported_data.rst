@@ -489,8 +489,8 @@ The service connection file allows PostgreSQL connection parameters to be
 associated with a single service name. That service name can then be specified
 by a client and the associated settings will be used.
 
-It's called ``.pg_service.conf`` under \*nix systems (GNU/Linux, macOS etc.) and
-``pg_service.conf`` on Windows.
+It's called :file:`.pg_service.conf` under \*nix systems (GNU/Linux, macOS etc.) and
+:file:`pg_service.conf` on Windows.
 
 The service file looks like::
 
@@ -509,22 +509,22 @@ The service file looks like::
 .. note:: There are two services in the above example: ``water_service``
   and ``wastewater_service``. You can use these to connect from QGIS,
   pgAdmin etc. by specifying only the name of the service you want to
-  connect to (without the brackets) in their add connection tab.
-  If you want to use the services under ``psql`` you need to do something
-  like ``export PGSERVICE=water_service``.
+  connect to (without the enclosing brackets).
+  If you want to use the service with ``psql`` you need to do something
+  like ``export PGSERVICE=water_service`` before doing your psql commands.
 
 .. note:: You can find all the parameters `here <https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
 
 .. note:: If you don't want to save the passwords in the service file you can
-  use of the `.pg_pass <https://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
+  use the `.pg_pass <https://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
   option.
 
 
 On \*nix operating systems (GNU/Linux, macOS etc.) you can save the
-:file:`pg_service.conf` file in the user's home directory and
+:file:`.pg_service.conf` file in the user's home directory and
 the PostgreSQL clients will automatically be aware of it.
-For example, if the logged user is ``web``, :file:`pg_service.conf` should
-be saved in the ``/home/web/`` directory in order to directly work (without
+For example, if the logged user is ``web``, :file:`.pg_service.conf` should
+be saved in the :file:`/home/web/` directory in order to directly work (without
 specifying any other environment variables).
 
 You can specify the location of the service file by creating a ``PGSERVICEFILE``
@@ -537,12 +537,12 @@ placing it at ``pg_config --sysconfdir``**/.pg_service.conf**  or by adding the
 the service file. If service definitions with the same name exist in the user
 and the system file, the user file takes precedence.
 
-.. note::
+.. warning::
 
  There are some caveats under Windows:
 
- * The service file should be saved as ``pg_service.conf``
-   and not as ``.pg_service.conf``.
+ * The service file should be saved as :file:`pg_service.conf`
+   and not as :file:`.pg_service.conf`.
  * The service file should be saved in Unix format in order to work.
    One way to do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_
    and ``Edit -> EOL Conversion -> UNIX Format -> File save``.
