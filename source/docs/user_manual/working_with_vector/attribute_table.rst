@@ -25,7 +25,7 @@ in the Attributes toolbar.
 
 This will open a new window that displays the feature attributes for the
 layer (figure_attributes_1_). The number of features and the number of
-selected features are shown in the attribute table title.  Columm widths can be 
+selected features are shown in the attribute table title. Columm widths can be 
 changed by dragging the boundary on the right of the column heading, resized column 
 widths are maintained for a layer, and restored when next opening the attribute table.
 
@@ -68,21 +68,22 @@ following functionality:
   layers with GDAL version >= 1.6 (also with :kbd:`Ctrl+w`)
 * |calculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+i`)
 
-Below these buttons is the Field Calculator bar (enabled only in editing mode),
-which allows calculations to be quickly applied to either all or selected features
-attributes in the table. This bar uses the same expressions as the |calculateField|
-:sup:`Field Calculator` (see :ref:`vector_field_calculator`).
+Below these buttons is the Quick Field Calculation bar (enabled only in
+:ref:`edit mode <sec_edit_existing_layer>`), which allows to quickly apply
+calculations to all or part of the features in the layer. This bar uses the same
+:ref:`expressions <vector_expressions>` as the |calculateField| :sup:`Field
+Calculator` (see :ref:`calculate_fields_values`).
 
 .. tip:: **Skip WKT geometry**
 
    If you want to use attribute data in external programs (such as Excel), use the
    |copySelected| :sup:`Copy selected rows to clipboard` button.
-   You can copy the information without vector geometries if you deactivate
-   :menuselection:`Settings --> Options -->` Data sources menu |checkbox|
-   :guilabel:`Copy geometry in WKT representation from attribute table`.
+   You can copy the information without vector geometries if you deactivate the
+   |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
+   option in :menuselection:`Settings --> Options --> Data Sources` menu.
 
 
-.. index:: Attribute_Table_Selection
+.. index:: Attribute Table Selection
 
 Selecting features in an attribute table
 =========================================
@@ -230,13 +231,24 @@ layer`.
 This applies to features selected and copied within QGIS and
 also to features from another source defined using well-known text (WKT).
 
-.. index:: Field Calculator, Calculator Field, Derived Fields, Virtual Fields
-
+.. index:: Field Calculator, Derived Fields, Virtual Fields
 .. _calculate_fields_values:
 
 Editing attribute values
 =========================
 
+Editing attribute values can be done by:
+
+* typing the new value directly in the cell, whether the attribute table is in
+  table or form view. Changes can hence be done cell by cell, feature by feature;
+* using the field calculator: update in a row a field that may already exist or to be
+  created but for multiple features; 
+* or using the quick field calculation bar: same as above but for only existing field.
+
+.. _vector_field_calculator:
+
+Field Calculator
+----------------
 
 The |calculateField| :sup:`Field Calculator` button in the attribute
 table allows you to perform calculations on the basis of existing attribute values or
@@ -244,39 +256,11 @@ defined functions, for instance, to calculate length or area of geometry feature
 results can be written to a new attribute field, a virtual field, or
 they can be used to update values in an existing field.
 
-A :index:`virtual field` is a field based on an expression calculated on the fly,
-meaning that its value is automatically updated as soon as the underlying parameter
-changes. The expression is set once; you no longer need to recalculate the field
-each time underlying values change.
-For example, you may want to use a virtual field if you need area to be evaluated
-as you digitize features or to automatically calculate a duration between dates
-that may change (e.g., using ``now()`` function).
-
-.. note:: **Use of Virtual Fields**
-
-   * Virtual fields are not permanent in the layer attributes, meaning that
-     they're only saved and available in the project file they've been created.
-   * A field can be set virtual only at its creation and the expression used
-     can't be changed later: you'll need to delete and recreate that field.
-
 The :index:`field calculator` is available on any layer that supports edit.
 When you click on the field calculator icon the dialog opens (see
-figure_attributes_2_). If the layer is not in edit mode, a warning is
+figure_attributes_3_). If the layer is not in edit mode, a warning is
 displayed and using the field calculator will cause the layer to be put in
 edit mode before the calculation is made.
-
-The quick field calculation bar on top of the attribute table is only
-visible if the layer is in edit mode.
-
-In quick field :index:`calculation bar`, you first select the existing field name
-then open the expression dialog to create your expression or write it directly
-in the field then click on **[Update All]**, **[Update Selected]** or
-**[Update Filtered]** button according to your need.
-
-.. _vector_field_calculator:
-
-Field Calculator
-----------------
 
 Based on the :ref:`Expression Builder <functions_list>` dialog, the field calculator
 dialog offers a complete interface to define an expression and apply it to an
@@ -297,8 +281,8 @@ calculation will be added or update an existing field.
    Field Calculator
 
 If you choose to add a new field, you need to enter a field name, a field type
-(integer, real or string), the total field width, and the field precision (see
-figure_attributes_3_). For example, if you choose a field width of 10 and a field
+(integer, real, date or string) and if needed, the total field length and the
+field precision. For example, if you choose a field length of 10 and a field
 precision of 3, it means you have 6 digits before the dot, then the dot and another
 3 digits for the precision.
 
@@ -313,15 +297,53 @@ A short example illustrates how field calculator works when using the
 #. Select the |checkbox| :guilabel:`Create a new field` checkbox to save the
    calculations into a new field.
 #. Add ``length`` as Output field name and ``real`` as Output field type, and
-   define Output field width to be 10 and Precision, 3.
+   define Output field length to be 10 and Precision, 3.
 #. Now double click on function ``$length`` in the :guilabel:`Geometry` group
    to add it into the Field calculator expression box.
 #. Complete the expression by typing ``/ 1000`` in the Field calculator
    expression box and click **[Ok]**.
 #. You can now find a new field ``length`` in the attribute table.
 
+.. _quick_field_calculation_bar:
 
-.. index:: Non_Spatial_Attribute_Tables
+The Quick Field Calculation Bar
+-------------------------------
+
+While Field calculator is always available, the quick field calculation bar on top
+of the attribute table is only visible if the layer is in edit mode. Thanks to the
+expression engine, it offers a quicker access to edit an already existing field.
+
+In quick field :index:`calculation bar`, you simply need to:
+
+* select the existing field name in the drop-down list
+* fill the textbox with an expression you directly write or build using the |expression|
+  expression button
+* and click on **[Update All]**, **[Update Selected]** or **[Update Filtered]** button
+  according to your need.
+
+.. _virtual_field:
+
+Create a Virtual Field
+-----------------------
+
+A :index:`virtual field` is a field based on an expression calculated on the fly,
+meaning that its value is automatically updated as soon as the underlying parameter
+changes. The expression is set once; you no longer need to recalculate the field
+each time underlying values change.
+For example, you may want to use a virtual field if you need area to be evaluated
+as you digitize features or to automatically calculate a duration between dates
+that may change (e.g., using ``now()`` function).
+
+.. note:: **Use of Virtual Fields**
+
+   * Virtual fields are not permanent in the layer attributes, meaning that
+     they're only saved and available in the project file they've been created.
+   * A field can be set virtual only at its creation and the expression used
+     can't be changed later: you'll need to delete and recreate that field.
+
+
+.. index:: Non Spatial Attribute Tables, Geometryless Data
+.. _non_spatial_attribute_tables:
 
 Working with non spatial attribute tables
 =========================================
@@ -339,7 +361,8 @@ layer during digitizing. Have a closer look at the edit widget in section
 :ref:`vector_attributes_menu` to find out more.
 
 
-.. index:: conditional_formatting
+.. index:: Conditional Formatting
+.. _conditional_formatting:
 
 Conditional formatting of Table Cells
 =====================================
