@@ -644,6 +644,18 @@ QGIS Server supports:
 
 * short name line edits to layers properties
 * WMS data dialog to layer tree group (short name, title, abstract)
+  By right clicking on a layer group and selecting the :guilabel:`Set Group WMS data` option you will get:
+
+  .. _set_group_wms_data:
+
+  .. only:: html
+
+     **Figure set group wms data:**
+
+  .. figure:: /static/user_manual/working_with_ogc/set_group_wms_data.png
+     :align: center
+  
+  
 * short name line edits to project properties- add a regexp validator
   ``"^[A-Za-z][A-Za-z0-9\._-]*"`` to short name line edit accessible through a
   static method
