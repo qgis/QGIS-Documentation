@@ -780,8 +780,9 @@ Spatial Bookmarks
    single:spatial bookmarks;see bookmarks
 
 Spatial Bookmarks allow you to "bookmark" a geographic location and return to
-it later. Bookmarks are saved on the computer, meaning that they are available
-from any project in the same computer.
+it later. By default, bookmarks are saved on the computer, meaning that they are available
+from any project in the same computer. If you wish to store the bookmark in the project 
+file (:file:`.qgs`) then you can do this by selecting the :guilabel:`In Project` checkbox.  
 
 Creating a Bookmark
 -------------------
@@ -792,6 +793,7 @@ To create a bookmark:
 #. Select the menu option :menuselection:`View --> New Bookmark` or press
    :kbd:`Ctrl-B`. The Spatial Bookmark panel opens with the newly created bookmark.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
+#. Check the :guilabel:`In Project` box if you wish to save the bookmark in the project file.
 #. Press :kbd:`Enter` to add the bookmark or click elsewhere.
 
 Note that you can have multiple bookmarks with the same name.
