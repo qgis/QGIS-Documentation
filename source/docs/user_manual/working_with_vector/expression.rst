@@ -579,6 +579,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
                       Calculations are in the Spatial Reference System of this geometry
  point_n              Returns a specific node from a geometry
  point_on_surface     Returns a point guaranteed to lie on the surface of a geometry
+ project              Returns a point projected from a start point using a distance
+                      and bearing (azimuth) in radians.
  relate               Tests or returns the Dimensional Extended 9 Intersection
                       Model (DE-9IM) representation of the relationship between
                       two geometries
