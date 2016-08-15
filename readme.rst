@@ -106,15 +106,19 @@ Then build:
 * ``make html`` to build the english language
 * ``make LANG=nl html`` to build the dutch version
 
-**Tip**
+Speed up the documentation build
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Running ``make html`` generates **from stratch** the full english documentation.
 You can see from the output that after it removes the content from static it runs the
 ``sphinx-build -nW -b html -d output/doctrees  -D language=en -A language=en source output/html/en`` command.
 If you change something in the documentation source and you want to preview the changes you shouldn't reuse
 ``make html`` command as it will fully rebuild everything. This takes a lot of time.
-It's far better to use the ``sphinx-build`` command so it only builds the parts from the files that have been changed.
-This ensures a very short build time (seconds).
+It's far better to use the ``sphinx-build`` command so it only builds the parts from the files that have been
+changed. This ensures a very short build time (several seconds). Pay attention that if you add images in the
+``resources`` directory they won't be copied  into the ``static`` directory if you don't use the ``make``
+command. This means that your ``sphinx-build`` command won't find the new images. If you still want to build
+fast you should copy the new images from ``resources`` to their correspondant location under ``static``.
 Keep in mind that different options of the ``make`` command (presented down the page) are outputting different
 ``sphinx-build`` commands.
 
