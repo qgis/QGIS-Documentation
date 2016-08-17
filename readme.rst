@@ -319,6 +319,11 @@ Manual and Application Translations
     * Contributor : Alexandre Neto < senhor.neto[at]gmail.com >
     * Contributor : Zara Teixeira < zarafani[at]gmail.com >
 
+  * Romanian Team Lead: Sorin Călinică < sorin.calinica[at]gmail.com >, Tudor Bărăscu < tudor.barascu[at]qtibia.ro >
+    
+    * Contributor: Georgiana Ioanovici
+    * Contributor: Alex Bădescu
+
   * Russian Team Lead: Alex Bruy < alexander.bruy[at]gmail.com >
   
   * Spanish Team Lead : Carlos Dávila < cdavilam[at]orangecorreo.es >
@@ -342,3 +347,8 @@ Team Lead) and supported by numerous contributors.
 * Russian Translation
 
   * Contributor: Alexander Bruy  <alexander.bruy[at]gmail.com>
+
+* Romanian Translation
+
+  * Contributor: Sorin Călinică < sorin.calinica[at]gmail.com >
+  * Contributor: Tudor Bărăscu < tudor.barascu[at]qtibia.ro >
