@@ -182,6 +182,7 @@ This is an installation how-to for QGIS Server on Windows (Server 2008 / 2012 R2
 * Download :file:`httpd-....-win64.zip` and :file:`mod_fcgid-...-win64.zip` from http://www.apachelounge.com/download/VC10/, unzip the files
 * Copy the folder :file:`Apache24` to your place of choice and then :file:`mod_fcgid.so` into :file:`Apache24/modules`
 * Open :file:`Apache24/conf/httpd.conf` in a text editor and add the following lines to the end of it (make sure the paths are correct):
+
 ::
 
     LoadModule fcgid_module modules/mod_fcgid.so
@@ -196,16 +197,20 @@ This is an installation how-to for QGIS Server on Windows (Server 2008 / 2012 R2
     	Options ExecCGI
 	Require all granted
     </Directory>
+    
 * Start a command-line, cd to :file:`Apache24/bin` and type in
+
 ::
 
     httpd.exe
 * Start your favorite browser and go to the following page to see an example *getCapabilities*-response
+
 ::
 
     http://localhost/qgis/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 * To run Apache as a Windows-Service, cd to :file:`Apache24/bin` and type in
+
 ::
 
     httpd.exe -k install
