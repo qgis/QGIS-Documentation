@@ -178,7 +178,7 @@ This is an installation how-to for QGIS Server on Windows (Server 2008 / 2012 R2
 
 * Start the *OSGeo4W64* installer, click **[Advanced Install]** (use the default-values afterwards) and install **qgis** and **qgis-server**
 * Copy all :file:`.dll-files` from :file:`OSGeo4W64/bin` to :file:`OSGeo4W64/apps/qgis/bin`
-* Copy all :file:`.py-files` and the folder named *encodings* from :file:`OSGeo4W64/apps/Python27/Lib` to :file:`OSGEO4W64/apps/qgis/bin`
+* Copy all :file:`.py-files` and the folder named *encodings* from :file:`OSGeo4W64/apps/Python27/Lib` to :file:`OSGeo4W64/apps/qgis/bin`
 * Download :file:`httpd-....-win64.zip` and :file:`mod_fcgid-...-win64.zip` from http://www.apachelounge.com/download/VC10/, unzip the files
 * Copy the folder :file:`Apache24` to your place of choice and then :file:`mod_fcgid.so` into :file:`Apache24/modules`
 * Open :file:`Apache24/conf/httpd.conf` in a text editor and add the following lines to the end of it (make sure the paths are correct):
