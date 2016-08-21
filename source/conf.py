@@ -232,7 +232,7 @@ rst_epilog = """
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
-.. |CURRENT| replace:: 2.8
+.. |CURRENT| replace:: 2.14
 
 .. |degrees| unicode:: 0x00B0
    :ltrim:
