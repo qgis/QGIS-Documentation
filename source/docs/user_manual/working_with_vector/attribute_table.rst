@@ -25,8 +25,8 @@ in the Attributes toolbar.
 
 This will open a new window that displays the feature attributes for the
 layer (figure_attributes_1_). The number of features and the number of
-selected features are shown in the attribute table title. Columm widths can be 
-changed by dragging the boundary on the right of the column heading, resized column 
+selected features are shown in the attribute table title. Columm widths can be
+changed by dragging the boundary on the right of the column heading, resized column
 widths are maintained for a layer, and restored when next opening the attribute table.
 
 .. _figure_attributes_1:
@@ -83,7 +83,21 @@ Calculator` (see :ref:`calculate_fields_values`).
    option in :menuselection:`Settings --> Options --> Data Sources` menu.
 
 
-.. index:: Attribute Table Selection
+.. index::
+   pair: Attributes; Columns
+
+You can hide columns or change their width (either setting the width or with
+the :guilabel:`Autosize` setting) by right-clicking in the table header. To
+change several columns behavior at once, unhide a column or change the order of
+the columns, choose :guilabel:`Organize columns ...`. In this dialog, you can
+also add a new :guilabel:`Actions` column that adds a dropdown or button list of
+actions for each row, see :ref:`actions_menu` for more information about actions.
+Finally, one can choose to sort the rows with the :guilabel:`sort` and write an
+expression, e.g. to sort the row in regards of multi-column you can write
+`concat(col0, col1)`.
+
+.. index::
+   pair: Attributes; Selection
 
 Selecting features in an attribute table
 =========================================
@@ -242,7 +256,7 @@ Editing attribute values can be done by:
 * typing the new value directly in the cell, whether the attribute table is in
   table or form view. Changes can hence be done cell by cell, feature by feature;
 * using the field calculator: update in a row a field that may already exist or to be
-  created but for multiple features; 
+  created but for multiple features;
 * or using the quick field calculation bar: same as above but for only existing field.
 
 .. _vector_field_calculator:
