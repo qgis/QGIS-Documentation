@@ -162,8 +162,10 @@ request.
    and everybody can look or comment it.
 #. That will trigger a `Travis CI build <https://travis-ci.org/qgis/QGIS-Documentation>`_
    automatically checking if your contribution doesn't contain a build error.
-   You'll need to fix any reported error or warning in order to have your changes
-   committed in the repository.
+   In case of error, a red cross appears along your commit. Simply click on it
+   on or `Details` in the summary section at the bottom of the page to have
+   details on the error. You'll need to fix any reported error or warning
+   before your changes are committed in the repository.
 
     .. %ToDo: The FAQ could add information on Travis error and common fixes.
 
