@@ -739,25 +739,27 @@ Reshape Features
 ----------------
 
 You can reshape line and polygon features using the |reshape|
-:sup:`Reshape Features` icon on the toolbar. It replaces the line or polygon
+:sup:`Reshape Features` icon on the toolbar. For lines, it replaces the line
 part from the first to the last intersection with the original line. The
 |reshape| :sup:`Reshape Features` tool also helps you extend linestring
 geometries: simply begin or end the reshape line at either the first or last
 point of the existing line.
 
+
+You can also edit the boundary of a polygon with this tool. First,
+click in the inner area of the polygon next to the point where you want to
+add a new vertex. Then, cross the boundary and add the vertices outside the
+polygon. To finish, right-click in the inner area of the polygon. The tool
+will automatically add a node where the new line crosses the border. The area of
+the polygon is expanded with the area you draw.
+It is also possible to remove part of the area from the polygon, starting the new
+line outside the polygon, adding vertices inside, and ending the line outside
+the polygon with a right click.
+
 With polygons, reshaping can sometimes lead to unintended results. It is mainly useful
 to replace smaller parts of a polygon, not for major overhauls, and the reshape
 line is not allowed to cross several polygon rings, as this would generate an
 invalid polygon.
-
-For example, you can edit the boundary of a polygon with this tool. First,
-click in the inner area of the polygon next to the point where you want to
-add a new vertex. Then, cross the boundary and add the vertices outside the
-polygon. To finish, right-click in the inner area of the polygon. The tool
-will automatically add a node where the new line crosses the border. It is
-also possible to remove part of the area from the polygon, starting the new
-line outside the polygon, adding vertices inside, and ending the line outside
-the polygon with a right click.
 
 .. note::
    The reshape tool may alter the starting position of a polygon ring or a
