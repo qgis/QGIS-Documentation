@@ -228,7 +228,7 @@ know what layers you want:
 
 ::
 
-    urlWithParams = 'url=http://wms.jpl.nasa.gov/wms.cgi&layers=global_mosaic&styles=pseudo&format=image/jpeg&crs=EPSG:4326'
+    urlWithParams = 'url=http://irs.gis-lab.info/?layers=landsat&styles=&format=image/jpeg&crs=EPSG:4326'
     rlayer = QgsRasterLayer(urlWithParams, 'some layer name', 'wms')
     if not rlayer.isValid():
       print "Layer failed to load!"
