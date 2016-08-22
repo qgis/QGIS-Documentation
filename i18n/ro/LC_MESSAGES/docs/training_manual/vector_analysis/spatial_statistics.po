@@ -1,0 +1,888 @@
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2016-07-22 05:42+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:6
+msgid "|LS| Spatial Statistics"
+msgstr "|LS| Statistici Spațiale"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:8
+msgid ""
+"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr "Lecția a fost dezvoltată de Linfiniti și S Motala (Cape Peninsula University of Technology"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:11
+msgid ""
+"Spatial statistics allow you to analyze and understand what is going on in a"
+" given vector dataset. QGIS includes several standard tools for statistical "
+"analysis which prove useful in this regard."
+msgstr "Statisticile spațiale vă permit să analizați și să înțelegeți ce se întâmplă într-un anumit set de date. QGIS include mai multe instrumente standard de analiză statistică, care se dovedesc utile în acest sens."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:15
+msgid ""
+"**The goal for this lesson:** To know how to use QGIS' spatial statistics "
+"tools."
+msgstr "**Scopul acestei lecții:** De a afla cum se pot utiliza instrumentele de statistici spațiale QGIS."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:19
+msgid "|basic| |FA| Create a Test Dataset"
+msgstr "|basic| |FA| Crearea unui Set de Date de Test"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:21
+msgid ""
+"In order to get a point dataset to work with, we'll create a random set of "
+"points."
+msgstr "În scopul de obținerii unui set de date pentru a lucra cu el, vom crea un set de puncte aleatorii."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:24
+msgid ""
+"To do so, you'll need a polygon dataset defining the extents of the area you"
+" want to create the points in."
+msgstr "Pentru a face acest lucru, veți avea nevoie de un set de date poligonale, care definește extinderea zonei în care doriți să creați punctele."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:27
+msgid "We'll use the area covered by streets."
+msgstr "Vom folosi aria acoperită de străzi."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:29
+msgid "Create a new empty map."
+msgstr "Creați o nouă hartă albă."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:30
+msgid ""
+"Add your :kbd:`roads_34S` layer, as well as the |srtmFileName| raster "
+"(elevation data) found in :kbd:`exercise_data/raster/SRTM/`."
+msgstr "Adăugați stratul dvs. :kbd:`roads_34S`, la fel ca și rasterul |srtmFileName| (datele de elevatie) găsite în :kbd:`exercise_data/raster/SRTM/`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:34
+msgid ""
+"You might find that your SRTM DEM layer has a different CRS to that of the "
+"roads layer. If so, you can reproject either the roads or DEM layer using "
+"techniques learnt earlier in this module."
+msgstr "Stratul dvs. DEM SRTM este posibil să aibă un alt CRS decât cel al stratului drumurilor. Dacă este așa, atunci puteți reproiecta fie stratul drumurilor, fie pe cel al DEM-ului, folosind tehnicile învățate mai devreme în acest modul."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:38
+msgid ""
+"Use the :guilabel:`Convex hull(s)` tool (available under "
+":menuselection:`Vector --> Geoprocessing Tools`) to generate an area "
+"enclosing all the roads:"
+msgstr "Folosiți instrumentul :guilabel:`Convex hull(s)` (disponibil în :menuselection:`Vector --> Geoprocessing Tools`) pentru a genera o zonă care să includă toate drumurile:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:45
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`roads_hull.shp`."
+msgstr "Salvați rezultatul în :kbd:`exercise_data/spatial_statistics/`, sub denumirea :kbd:`roads_hull.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:47
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:60
+msgid ""
+"Check :guilabel:`Add result to canvas` option to add the output to the TOC "
+"(:guilabel:`Layers list`)."
+msgstr "Bifați opțiunea de :guilabel:`Adăugare rezultat la canevas` pentru a adăuga rezultatul la Cuprins (:guilabel:`Lista straturilor`)."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:50
+msgid "Creating random points"
+msgstr "Crearea de puncte aleatorii"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:52
+msgid ""
+"Create random points in this area using the tool at :menuselection:`Vector "
+"--> Research Tools --> Random points`:"
+msgstr "Crearea de puncte aleatorii în această arie, prin utilizarea instrumentului :menuselection:`Vector --> Research Tools --> Random points`:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:58
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`random_points.shp`."
+msgstr "Salvați rezultatul în :kbd:`exercise_data/spatial_statistics/`, sub denumirea :kbd:`random_points.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:66
+msgid "Sampling the data"
+msgstr "Eșantionarea datelor"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:68
+msgid ""
+"To create a sample dataset from the raster, you'll need to use the "
+":guilabel:`Point sampling tool` plugin."
+msgstr "Pentru a crea un set de eșantion de date raster, va trebui să utilizați plugin-ul  :guilabel:`Point sampling tool`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:70
+msgid "Refer ahead to the module on plugins if necessary."
+msgstr "Căutați mai întâi modulul în plugin-uri, dacă este necesar."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:71
+msgid ""
+"Search for the phrase :kbd:`point sampling` in the :guilabel:`Plugin --> "
+"Manage and Install Plugins...` and you will find the plugin."
+msgstr "Căutați fraza :kbd:`point sampling` în :guilabel:`Plugin --> Manage and Install Plugins...` apoi veți găsi plugin-ul."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:73
+msgid ""
+"As soon as it has been activated with the :guilabel:`Plugin Manager`, you "
+"will find the tool under :menuselection:`Plugins --> Analyses --> Point "
+"sampling tool`:"
+msgstr "O dată ce ați activat :guilabel:`Managerul de Plugin-uri`, veți găsi instrumentul sub :menuselection:`Plugins --> Analyses --> Point sampling tool`:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:80
+msgid ""
+"Select :guilabel:`random_points` as the layer containing sampling points, "
+"and the SRTM raster as the band to get values from."
+msgstr "Alegeți :guilabel:`random_points` ca fiind stratul care conține punctele de prelevare, precum și rasterul SRTM ca fiind banda din care se vor obține valorile."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:82
+msgid "Make sure that \"Add created layer to the TOC\" is checked."
+msgstr "Asigurați-vă că ați bifat \"Add created layer to the TOC\"."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:83
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`random_samples.shp`."
+msgstr "Salvați rezultatul în :kbd:`exercise_data/spatial_statistics/`, sub denumirea :kbd:`random_samples.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:86
+msgid ""
+"Now you can check the sampled data from the raster file in the attributes "
+"table of the :guilabel:`random_samples` layer, they will be in a column "
+"named |srtmFileName|."
+msgstr "Acum puteți verifica datele eșantion din fișierul raster în tabelul de atribute al stratului :guilabel:`random_samples`, acestea aflându-se în coloana denumită |srtmFileName|."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:90
+msgid "A possible sample layer is shown here:"
+msgstr "Un posibil strat eșantion este prezentat aici:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:95
+msgid ""
+"The sample points are classified by their value such that darker points are "
+"at a lower altitude."
+msgstr "Punctele eșantion sunt clasificate în funcție de valorile lor, astfel că punctele mai întunecate sunt situate la o altitudine joasă."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:98
+msgid ""
+"You'll be using this sample layer for the rest of the statistical exercises."
+msgstr "Veți folosi acest strat eșantion pentru restul exercițiilor statistice."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:101
+msgid "|basic| |FA| Basic Statistics"
+msgstr "|basic| |FA| Statistici de Bază"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:103
+msgid "Now get the basic statistics for this layer."
+msgstr "Obține statisticile de bază pentru acest strat."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:105
+msgid ""
+"Click on the :menuselection:`Vector --> Analysis Tools --> Basic statistics`"
+" menu entry."
+msgstr "Faceți clic pe elementul de meniu :menuselection:`Vector --> Analysis Tools --> Basic statistics`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:107
+msgid ""
+"In the dialog that appears, specify the :guilabel:`random_samples` layer as "
+"the source."
+msgstr "În caseta de dialog care apare, specificați stratul :guilabel:`random_samples` ca și sursă."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:109
+msgid ""
+"Make sure that the :menuselection:`Target field` is set to |srtmFileName| "
+"which is the field you will calculate statistics for."
+msgstr "Asigurați-vă că :menuselection:`Target field` este setat la |srtmFileName|, care este câmpul pentru care veți calcula statisticile."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:111
+msgid "Click :guilabel:`OK`. You'll get results like this:"
+msgstr "Faceți clic pe :guilabel:`Ok`. Veți obține rezultate ca acesta:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:116
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:205
+msgid ""
+"You can copy and paste the results into a spreadsheet. The data uses a "
+"(colon :kbd:`:`) separator."
+msgstr "Puteți copia și lipi rezultatele într-o foaie de calcul. Datele folosesc un separator (două puncte :kbd:`:`)."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:122
+msgid "Close the plugin dialog when done."
+msgstr "Închideți dialogul plugin-ului, după încheiere."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:124
+msgid "To understand the statistics above, refer to this definition list:"
+msgstr "Pentru a înțelege statisticile de mai sus, consultați această listă cu definiții:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:128
+msgid "Mean"
+msgstr "Media"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:127
+msgid ""
+"The mean (average) value is simply the sum of the values divided by the "
+"amount of values."
+msgstr "Valoarea medie (medie) valoarea reprezintă pur și simplu suma valorilor împărțită la cantitatea de valori."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:133
+msgid "StdDev"
+msgstr "StdDev"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid ""
+"The standard deviation. Gives an indication of how closely the values are "
+"clustered around the mean. The smaller the standard deviation, the closer "
+"values tend to be to the mean."
+msgstr "Abaterea standard. Oferă o indicație despre cât de strâns sunt grupate valorile în jurul mediei. Cu cât este mai mică deviația standard, cu atât mai apropiată tinde să fie media."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:136
+msgid "Sum"
+msgstr "Sum"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:136
+msgid "All the values added together."
+msgstr "Toate valorile adunate."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:139
+msgid "Min"
+msgstr "Min"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:139
+msgid "The minimum value."
+msgstr "Valoarea minimă."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:142
+msgid "Max"
+msgstr "Max"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:142
+msgid "The maximum value."
+msgstr "Valoarea maximă."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:145
+msgid "N"
+msgstr "N"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:145
+msgid "The amount of samples/values."
+msgstr "Cantitatea de eșantioane/valori."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:149
+msgid "CV"
+msgstr "CV"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:148
+msgid ""
+"The `spatial <http://en.wikipedia.org/wiki/Spatial_covariance>`_ `covariance"
+" <http://en.wikipedia.org/wiki/Covariance>`_ of the dataset."
+msgstr "`Covarianța <http://en.wikipedia.org/wiki/Covariance>`_  `spațială <http://en.wikipedia.org/wiki/Spatial_covariance>`_ a setului de date."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:154
+msgid "Number of unique values"
+msgstr "Numărul de valori unice"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:152
+msgid ""
+"The number of values that are unique across this dataset. If there are 90 "
+"unique values in a dataset with N=100, then the 10 remaining values are the "
+"same as one or more of each other."
+msgstr "Numărul de valori, care sunt unice în acest set de date. Dacă există 90 de valori unice într-un set de date cu N = 100, atunci cele 10 valori rămase pot fi identice între ele."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:157
+msgid "Range"
+msgstr "Intervalul"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:157
+msgid "The difference between the minimum and maximum values."
+msgstr "Diferența dintre valorile minime și maxime."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "Median"
+msgstr "Mediana"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:160
+msgid ""
+"If you arrange all the values from least to greatest, the middle value (or "
+"the average of the two middle values, if N is an even number) is the median "
+"of the values."
+msgstr "Dacă aranjați toate valorile de la cea mai mică la cea mai mare, valoarea de mijloc (sau media celor două valori de mijloc, în cazul în care N este un număr par) este mediana valorilor."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "|basic| |FA| Compute a Distance Matrix"
+msgstr "|basic| |FA| Calculul unei Matrici a Distanțelor"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:167
+msgid ""
+"Create a new point layer in the same projection as the other datasets "
+"(|localCRS|)."
+msgstr "Creați un strat nou, de tip punct, în aceeași proiecție ca și alte seturi de date (|localCRS|)."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:169
+msgid ""
+"Enter edit mode and digitize three point somewhere among the other points."
+msgstr "Intrațibîn modul de editare și digitizați trei puncte, undeva printre celelalte."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:170
+msgid ""
+"Alternatively, use the same random point generation method as before, but "
+"specify only three points."
+msgstr "Ca o alternativă, utilizați aceeași metodă de generare a punctelor aleatorii la fel ca înainte, însă specificați doar trei puncte."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:172
+msgid "Save your new layer as :kbd:`distance_points.shp`."
+msgstr "Salvați noul strat ca și :kbd:`distance_points.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:174
+msgid "To generate a distance matrix using these points:"
+msgstr "Pentru a genera o matrice a distanțelor folosind aceste puncte:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:176
+msgid ""
+"Open the tool :menuselection:`Vector --> Analysis Tools --> Distance "
+"matrix`."
+msgstr "Deschideți instrumentul :menuselection:`Vector --> Analysis Tools --> Distance matrix`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:177
+msgid ""
+"Select the :guilabel:`distance_points` layer as the input layer, and the "
+":guilabel:`random_samples` layer as the target layer."
+msgstr "Selectați stratul :guilabel:`distance_points` ca și sursă, apoi stratul :guilabel:`random_samples` ca destinație."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:179
+msgid "Set it up like this:"
+msgstr "Setați-l astfel:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:184
+msgid "Save the result as :kbd:`distance_matrix.csv`."
+msgstr "Salvați rezultatul ca și :kbd:`distance_matrix.csv`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:185
+msgid "Click :guilabel:`OK` to generate the distance matrix."
+msgstr "Clic pe :guilabel:`OK`, pentru a genera matricea distanțelor."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:186
+msgid ""
+"Open it in a spreadsheet program to see the results. Here is an example:"
+msgstr "Deschideți-l într-un program de calcul tabelar pentru a vedea rezultatele. Iată un exemplu:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:192
+msgid "|basic| |FA| Nearest Neighbor Analysis"
+msgstr "|basic| |FA| Analiza Celui Mai Apropiat Vecin"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:194
+msgid "To do a nearest neighbor analysis:"
+msgstr "Pentru a face o analiză a celui mai apropiat vecin:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:196
+msgid ""
+"Click on the menu item :menuselection:`Vector --> Analysis Tools --> Nearest"
+" neighbor analysis`."
+msgstr "Faceți clic pe elementul de meniu :menuselection:`Vector --> Analysis Tools --> Nearest neighbor analysis`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:198
+msgid ""
+"In the dialog that appears, select the :guilabel:`random_samples` layer and "
+"click :guilabel:`OK`."
+msgstr "În caseta de dialog care apare, specificați stratul :guilabel:`random_samples`, apoi faceți clic pe :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:200
+msgid "The results will appear in the dialog's text window, for example:"
+msgstr "Rezultatele vor apărea în textul ferestrei de dialog, de exemplu:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:209
+msgid "|basic| |FA| Mean Coordinates"
+msgstr "|basic| |FA| Coordonatele Medii"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:211
+msgid "To get the mean coordinates of a dataset:"
+msgstr "Pentru a obține coordonatele medii ale unui set de date:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:213
+msgid ""
+"Click on the :menuselection:`Vector --> Analysis Tools --> Mean "
+"coordinate(s)` menu item."
+msgstr "Clic pe elementul de meniu :menuselection:`Vector --> Analysis Tools --> Mean coordinate(s)`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:215
+msgid ""
+"In the dialog that appears, specify :guilabel:`random_samples` as the input "
+"layer, but leave the optional choices unchanged."
+msgstr "În caseta de dialog care apare, specificați stratul :guilabel:`random_samples` ca și intrare, dar lăsați alegerile opționale neschimbate."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:217
+msgid "Specify the output layer as :kbd:`mean_coords.shp`."
+msgstr "Specificați stratul de ieșire :kbd:`mean_coords.shp`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:218
+msgid "Click :guilabel:`OK`."
+msgstr "Clic pe :guilabel:`OK`"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:219
+msgid "Add the layer to the :guilabel:`Layers list` when prompted."
+msgstr "Adăugați stratul la :guilabel:`Lista straturilor`, atunci când vi se cere."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:221
+msgid ""
+"Let's compare this to the central coordinate of the polygon that was used to"
+" create the random sample."
+msgstr "Haideți să-l comparăm cu coordonatele centrale ale poligonului care a fost folosit pentru a crea eșantionul aleator."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:224
+msgid ""
+"Click on the :menuselection:`Vector --> Geometry Tools --> Polygon "
+"centroids` menu item."
+msgstr "Faceți clic pe elementul de meniu :menuselection:`Vector --> Geometry Tools --> Polygon centroids` menu item."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:226
+msgid ""
+"In the dialog that appears, select :guilabel:`roads_hull` as the input "
+"layer."
+msgstr "În caseta de dialog care apare, selectați stratul :guilabel:`roads_hull` ca intrare."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:227
+msgid "Save the result as :kbd:`center_point`."
+msgstr "Salvați rezultatul ca și :kbd:`center_point`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:228
+msgid "Add it to the :guilabel:`Layers list` when prompted."
+msgstr "Adăugați-l în :guilabel:`Lista straturilor`, atunci când vi se cere."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:230
+msgid ""
+"As you can see from the example below, the mean coordinates and the center "
+"of the study area (in orange) don't necessarily coincide:"
+msgstr "După cum puteți vedea din exemplul de mai jos, coordonatele medii și centrul zonei de studiu (în portocaliu) nu coincid în mod necesar:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:237
+msgid "|basic| |FA| Image Histograms"
+msgstr "|basic| |FA| Histogramele de tip Imagine"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:239
+msgid ""
+"The histogram of a dataset shows the distribution of its values. The "
+"simplest way to demonstrate this in QGIS is via the image histogram, "
+"available in the :guilabel:`Layer Properties` dialog of any image layer."
+msgstr "Histograma unui set de date arată distribuția valorilor sale. Cel mai simplu mod de a demonstra acest lucru în QGIS este prin histograma imaginii, disponibilă în dialogul :guilabel:`Layer Properties` al oricărui strat de imagine."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:243
+msgid "In your :guilabel:`Layers list`, right-click on the SRTM DEM layer."
+msgstr "În :guilabel:`Lista straturilor` faceți clic-dreapta pe stratul SRTM DEM."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:244
+msgid "Select :menuselection:`Properties`."
+msgstr "Selectați :menuselection:`Proprietăți`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:245
+msgid ""
+"Choose the tab :guilabel:`Histogram`. You may need to click on the "
+":guilabel:`Compute Histogram` button to generate the graphic. You will see a"
+" graph describing the frequency of values in the image."
+msgstr "Alegeți fila :guilabel:`Histogram`. Poate fi necesar să faceți clic pe butonul :guilabel:`Compute Histogram` pentru a genera graficul. Veți vedea un grafic care descrie frecvența valorilor din imagine."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:248
+msgid "You can export it as an image:"
+msgstr "O puteți exporta ca o imagine:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:253
+msgid ""
+"Select the :guilabel:`Metadata` tab, you can see more detailed information "
+"inside the :guilabel:`Properties` box."
+msgstr "Selectând fila :guilabel:`Metadatelor`, puteți vedea informații mai detaliate în interiorul casetei :guilabel:`Properties`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:256
+msgid ""
+"The mean value is :kbd:`332.8`, and the maximum value is :kbd:`1699`! But "
+"those values don't show up on the histogram. Why not? It's because there are"
+" so few of them, compared to the abundance of pixels with values below the "
+"mean. That's also why the histogram extends so far to the right, even though"
+" there is no visible red line marking the frequency of values higher than "
+"about :kbd:`250`."
+msgstr "Valoarea medie este :kbd:`332.8`, iar valoarea maximă este :kbd:`1699`! Dar aceste valori nu apar pe histogramă. Oare de ce? Din cauză că sunt atât de puține, comparativ cu abundența de pixeli cu valori sub medie. Acesta este motivul pentru care histograma se extinde mult spre dreapta, chiar dacă nu este vizibilă linia roșie care marchează valori de frecvență mai mari de :kbd:`250`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:262
+msgid ""
+"Therefore, keep in mind that a histogram shows you the distribution of "
+"values, and not all values are necessarily visible on the graph."
+msgstr "Prin urmare, rețineți că o histogramă vă arată distribuția valorilor, dar nu toate valorile sunt în mod necesar vizibile pe grafic."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:265
+msgid "(You may now close :guilabel:`Layer Properties`.)"
+msgstr "(Acum puteți închide :guilabel:`Stratul Proprietăților`.)"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:268
+msgid "|basic| |FA| Spatial Interpolation"
+msgstr "|basic| |FA| Interpolarea Spațială"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:270
+msgid ""
+"Let's say you have a collection of sample points from which you would like "
+"to extrapolate data. For example, you might have access to the "
+":guilabel:`random_samples` dataset we created earlier, and would like to "
+"have some idea of what the terrain looks like."
+msgstr "Să presupunem că aveți o colecție de puncte de eșantionare din care ați dori să extrapolați datele. De exemplu, ați putea avea acces la setul de date :guilabel:`random_samples` pe care l-am creat mai devreme, și să vă faceți o idee despre cum ar arăta terenul."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:275
+msgid ""
+"To start, launch the :guilabel:`Grid (Interpolation)` tool by clicking on "
+"the :menuselection:`Raster --> Analysis --> Grid (Interpolation)` menu item."
+msgstr "Pentru a începe, utilizați instrumentul :guilabel:`Grid (Interpolation)`, prin efectuarea unui clic pe elementul de meniu :menuselection:`Raster --> Analysis --> Grid (Interpolation)`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:278
+msgid "In the :guilabel:`Input file` field, select :kbd:`random_samples`."
+msgstr "În câmpul :guilabel:`Input file` field, selectați :kbd:`random_samples`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:279
+msgid ""
+"Check the :guilabel:`Z Field` box, and select the field :kbd:`srtm_41_19`."
+msgstr "Bifați caseta :guilabel:`Z Field`, apoi selectați câmpul :kbd:`srtm_41_19`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:280
+msgid ""
+"Set the :guilabel:`Output file` location to "
+":kbd:`exercise_data/spatial_statistics/interpolation.tif`."
+msgstr "Setați locația :guilabel:`Fișierului de ieșire` la :kbd:`exercise_data/spatial_statistics/interpolation.tif`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:282
+msgid ""
+"Check the :guilabel:`Algorithm` box and select :guilabel:`Inverse distance "
+"to a power`."
+msgstr "Bifați caseta :guilabel:`Algorithm`, apoi selectați :guilabel:`Inverse distance to a power`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:284
+msgid ""
+"Set the :guilabel:`Power` to :kbd:`5.0` and the :guilabel:`Smoothing` to "
+":kbd:`2.0`. Leave the other values as-is."
+msgstr "Setați :guilabel:`Power` la :kbd:`5.0` și :guilabel:`Smoothing` la :kbd:`2.0`. Lăsați celelalte valori așa cum sunt."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:286
+msgid ""
+"Check the :guilabel:`Load into canvas when finished` box and click "
+":guilabel:`OK`."
+msgstr "Bifaţi caseta :guilabel:`Load into canvas when finished`, apoi faceți clic pe :guilabel:`OK`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:288
+msgid ""
+"When it's done, click :guilabel:`OK` on the dialog that says :kbd:`Process "
+"completed`, click :guilabel:`OK` on the dialog showing feedback information "
+"(if it has appeared), and click :guilabel:`Close` on the :guilabel:`Grid "
+"(Interpolation)` dialog."
+msgstr "Când ați terminat, faceți clic pe :guilabel:`OK`, în dialogul care spune că :kbd:`Procesul s-a încheiat`, faceți clic pe :guilabel:`OK`, în dialogul care arată informația returnată (dacă aceasta apare), și în final faceți clic pe :guilabel:`Close` în dialogul de :guilabel:`(Interpolare) Grilă`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:293
+msgid ""
+"Here's a comparison of the original dataset (left) to the one constructed "
+"from our sample points (right). Yours may look different due to the random "
+"nature of the location of the sample points."
+msgstr "Iată o comparație a setului de date original (stânga) cu cel construit din eșantionul nostru de puncte (dreapta). Al dvs. poate să arate diferit, din cauza naturii aleatorii a locației punctelor de eșantionare."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:300
+msgid ""
+"As you can see, 100 sample points aren't really enough to get a detailed "
+"impression of the terrain. It gives a very general idea, but it can be "
+"misleading as well. For example, in the image above, it is not clear that "
+"there is a high, unbroken mountain running from east to west; rather, the "
+"image seems to show a valley, with high peaks to the west. Just using visual"
+" inspection, we can see that the sample dataset is not representative of the"
+" terrain."
+msgstr "După cum puteți vedea, un eșantion compus din 100 puncte nu este cu adevărat suficient pentru a obține o imagine detaliată a terenului. El oferă doar o idee foarte generală, care, însă, poate fi înșelătoare. De exemplu, în imaginea de mai sus, nu este clar dacă există un munte masiv, neîntrerupt, întinzându-se de la est la vest; mai degrabă, imaginea pare să arate o vale, cu vârfuri înalte la vest. Folosind doar inspecția vizuală, observăm că setul de date eșantion nu este reprezentativ pentru teren."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:308
+msgid "|moderate| |TY|"
+msgstr "|moderate| |TY|"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:310
+msgid ""
+"Use the processes shown above to create a new set of :kbd:`1000` random "
+"points."
+msgstr "Utilizați procedeele prezentate mai sus pentru a crea un nou set de :kbd:`1000` de puncte aleatorii."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:311
+msgid "Use these points to sample the original DEM."
+msgstr "Folosiți aceste puncte pentru a eșantiona DEM-ul original."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:312
+msgid ""
+"Use the :guilabel:`Grid (Interpolation)` tool on this new dataset as above."
+msgstr "Aplicați instrumentul de :guilabel:`(Interpolare) Grilă` pe acest nou set de date, ca mai sus."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:313
+msgid ""
+"Set the output filename to :kbd:`interpolation_1000.tif`, with "
+":guilabel:`Power` and :guilabel:`Smoothing` set to :kbd:`5.0` and "
+":kbd:`2.0`, respectively."
+msgstr "Setați numele fișierului de ieșire la :kbd:`interpolation_1000.tif`, având :guilabel:`Power` și :guilabel:`Smoothing` setate la :kbd:`5.0` și respectiv :kbd:`2.0`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:317
+msgid ""
+"The results (depending on the positioning of your random points) will look "
+"more or less like this:"
+msgstr "Rezultatele (în funcție de poziționarea punctelor aleatorii) va arata mai mult, sau mai puțin, ca aceasta:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:323
+msgid ""
+"The border shows the :guilabel:`roads_hull` layer (which represents the "
+"boundary of the random sample points) to explain the sudden lack of detail "
+"beyond its edges. This is a much better representation of the terrain, due "
+"to the much greater density of sample points."
+msgstr "Bordura din jurul stratului :guilabel:`roads_hull` (care reprezintă limita punctelor aleatorii de eșantionare), explică lipsa bruscă a detaliilor dincolo de marginile sale. Aceasta este o reprezentare a terenului mult mai bună, ca urmare a ridicatei densități de puncte eșantion."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:328
+msgid ""
+"Here is an example of what it looks like with :kbd:`10 000` sample points:"
+msgstr "Aici este un exemplu despre cum arată cu :kbd:`10 000` de puncte eșantion:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:333
+msgid ""
+"It's not recommended that you try doing this with 10 000 sample points if "
+"you are not working on a fast computer, as the size of the sample dataset "
+"requires a lot of processing time."
+msgstr "Nu se recomandă să încercați cu 10 000 de puncte de eșantionare dacă nu lucrați pe un computer rapid, deoarece mărimea setului de date eșantion determină timpul de procesare."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:338
+msgid "|moderate| |FA| Additional Spatial Analysis Tools"
+msgstr "|moderate| |FA| Instrumente Adiționale de Analiză Spațială"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:340
+msgid ""
+"Originally a separate project and then accessible as a plugin, the SEXTANTE "
+"software has been added to QGIS as a core function from version 2.0. You can"
+" find it as a new QGIS menu with its new name :menuselection:`Processing` "
+"from where you can access a rich toolbox of spatial analysis tools allows "
+"you to access various plugin tools from within a single interface."
+msgstr "Inițial, un proiect separat și apoi accesibil sub formă de plugin, soft-ul SEXTANTE a fost adăugat la QGIS ca o funcție de bază începând cu versiunea 2.0. Îl puteți găsi într-un nou meniu din QGIS, sub numele :menuselection:`Processing`, care oferă un bogat set de instrumente de analiză spațială, alături de diverse plugin-uri, toate fiind accesibile din interiorul unei singure interfețe."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:346
+msgid ""
+"Activate this set of tools by enabling the :menuselection:`Processing --> "
+"Toolbox` menu entry. The toolbox looks like this:"
+msgstr "Activați acest set de instrumente, prin accesarea elementului de meniu :menuselection:`Processing --> Toolbox` menu entry. Setul de instrumente arată astfel:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:352
+msgid ""
+"You will probably see it docked in QGIS to the right of the map. Note that "
+"the tools listed here are links to the actual tools. Some of them are "
+"SEXTANTE's own algorithms and others are links to tools that are accessed "
+"from external applications such as GRASS, SAGA or the Orfeo Toolbox. This "
+"external applications are installed with QGIS so you are already able to "
+"make use of them. In case you need to change the configuration of the "
+"Processing tools or, for example, you need to update to a new version of one"
+" of the external applications, you can access its setting from "
+":menuselection:`Processing --> Options and configurations`."
+msgstr "Îl veți vedea, probabil, andocat în QGIS, în dreapta hărții. Rețineți că instrumentele enumerate aici sunt link-uri către instrumente reale. Unele dintre ele reprezintă algoritmi proprii SEXTANTE, iar altele reprezintă trimiteri către instrumente accesate din aplicații externe, cum ar fi GRASS, SAGA sau Orfeo Toolbox. Aceste aplicații externe sunt instalate o dată cu QGIS, astfel că sunteți deja în măsură să faceți uz de ele. În cazul în care trebuie să schimbați configurația instrumentelor Processing sau când, de exemplu, trebuie să treceți la o nouă versiune a uneia dintre aplicațiile externe, puteți accesa setările sale din :menuselection:`Processing --> Options and configurations`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:364
+msgid "|moderate| |FA| Spatial Point Pattern Analysis"
+msgstr "|moderate| |FA| Analiza Modelului de Puncte Spațiale"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:366
+msgid ""
+"For a simple indication of the spatial distribution of points in the "
+":guilabel:`random_samples` dataset, we can make use of SAGA's "
+":guilabel:`Spatial Point Pattern Analysis` tool via the "
+":guilabel:`Processing Toolbox` you just opened."
+msgstr "Pentru o indicație simplă a distribuției spațiale a punctelor în setul de date :guilabel:`random_samples`, putem folosi instrumentul :guilabel:`Spatial Point Pattern Analysis` din SAGA, prin intermediul :guilabel:`Instrumentarului Processing` pe care tocmai l-ați deschis."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:371
+msgid ""
+"In the :guilabel:`Processing Toolbox`, search for this tool  "
+":guilabel:`Spatial Point Pattern Analysis`."
+msgstr "În :guilabel:`Processing Toolbox`, căutați instrumentul :guilabel:`Spatial Point Pattern Analysis`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:373
+msgid "Double-click on it to open its dialog."
+msgstr "Dublu-clic pe el pentru a-i deschide dialogul."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:376
+msgid "Installing SAGA"
+msgstr "Instalarea SAGA"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:378
+msgid ""
+"If SAGA is not installed on your system, the plugin's dialog will inform you"
+" that the dependency is missing. If this is not the case, you can skip these"
+" steps."
+msgstr "Dacă SAGA nu este instalat pe sistemul dvs., dialogul plugin-ului vă va informa că dependența lipsește. Dacă nu vă aflați în acest caz, puteți sări peste acești pași."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:383
+msgid "On Windows"
+msgstr "Pe Windows"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:385
+msgid ""
+"Included in your course materials you will find the SAGA installer for "
+"Windows."
+msgstr "Inclus în materialele dvs. de curs, veți găsi programul de instalare al aplicației SAGA pentru Windows."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:387
+msgid ""
+"Start the program and follow its instructions to install SAGA on your "
+"Windows system. Take note of the path you are installing it under!"
+msgstr "Porniți programul și urmați instrucțiunile sale pentru a instala SAGA pe sistemul dvs. Windows. Notați calea de instalare!"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:390
+msgid ""
+"Once you have installed SAGA, you'll need to configure SEXTANTE to find the "
+"path it was installed under."
+msgstr "O dată ce ați instalat SAGA, va trebui să specificați calea sa de instalare în SEXTANTE."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:393
+msgid ""
+"Click on the menu entry :menuselection:`Analysis --> SAGA options and "
+"configuration`."
+msgstr "Faceți clic pe elementul de meniu :menuselection:`Analysis --> SAGA options and configuration`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:395
+msgid ""
+"In the dialog that appears, expand the :guilabel:`SAGA` item and look for "
+":guilabel:`SAGA folder`. Its value will be blank."
+msgstr "În caseta de dialog care apare, expandați elementul :guilabel:`SAGA`, apoi căutați :guilabel:`folderul SAGA`. Valoarea sa va fi albă."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:397
+msgid "In this space, insert the path where you installed SAGA."
+msgstr "În acest spațiu, introduceți calea în care ați instalat SAGA."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:400
+msgid "On Ubuntu"
+msgstr "Pe Ubuntu"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:402
+msgid ""
+"Search for :guilabel:`SAGA GIS` in the :guilabel:`Software Center`, or enter"
+" the phrase :kbd:`sudo apt-get install saga-gis` in your terminal. (You may "
+"first need to add a SAGA repository to your sources.)"
+msgstr "Căutați :guilabel:`SAGA GIS` în :guilabel:`Software Center`, sau introduceți fraza  :kbd:`sudo apt-get install saga-gis` în terminalul dvs. (Este posibil să trebuiască mai întâi să adăugați un depozit SAGA la sursele dvs.)"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:405
+msgid ""
+"QGIS will find SAGA automatically, although you may need to restart QGIS if "
+"it doesn't work straight away."
+msgstr "QGIS va găsi SAGA automat, deși ar putea fi necesar să reporniți QGIS în cazul în care nu funcționează imediat."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:409
+msgid "On Mac"
+msgstr "Pe Mac"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:411
+msgid "Homebrew users can install SAGA with this command:"
+msgstr "Utilizatorii Homebrew pot instala SAGA cu această comandă:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:413
+msgid "brew install saga-core"
+msgstr "brew install saga-core"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:415
+msgid "If you do not use Homebrew, please follow the instructions here:"
+msgstr "Dacă nu utilizați Homebrew, vă rugăm să urmați instrucțiunile de aici:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:417
+msgid ""
+"http://sourceforge.net/apps/trac/saga-"
+"gis/wiki/Compiling%20SAGA%20on%20Mac%20OS%20X"
+msgstr "http://sourceforge.net/apps/trac/saga-gis/wiki/Compiling%20SAGA%20on%20Mac%20OS%20X"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:420
+msgid "After installing"
+msgstr "După instalare"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:422
+msgid ""
+"Now that you have installed and configured SAGA, its functions will become "
+"accessible to you."
+msgstr "Acum, că ați instalat și configurat SAGA, funcțiile sale vor deveni accesibile pentru dvs."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:426
+msgid "Using SAGA"
+msgstr "Folosirea SAGA"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:428
+msgid "Open the SAGA dialog."
+msgstr "Deschideți fereastra de dialog SAGA."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:429
+msgid "SAGA produces three outputs, and so will require three output paths."
+msgstr "SAGA produce trei ieșiri, așa că va fi nevoie de trei căi de ieșire."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:430
+msgid ""
+"Save these three outputs under :kbd:`exercise_data/spatial_statistics/`, "
+"using whatever file names you find appropriate."
+msgstr "Salvați aceste trei ieșiri în :kbd:`exercise_data/spatial_statistics/`, folosind orice  nume de fișier pe care îl veți considera adecvat."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:436
+msgid ""
+"The output will look like this (the symbology was changed for this example):"
+msgstr "Ieșirea va arata astfel (simbolistica a fost schimbată pentru acest exemplu):"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:441
+msgid ""
+"The red dot is the mean center; the large circle is the standard distance, "
+"which gives an indication of how closely the points are distributed around "
+"the mean center; and the rectangle is the bounding box, describing the "
+"smallest possible rectangle which will still enclose all the points."
+msgstr "Punctul roșu reprezintă centrul mediei; cercul mare este distanța standard, care oferă indicații despre cât de strâns sunt distribuite punctele în jurul centrului mediei; iar dreptunghiul reprezintă caseta de încadrare, care descrie cel mai mic dreptunghi posibil care include toate punctele."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:447
+msgid "|moderate| |FA| Minimum Distance Analysis"
+msgstr "|moderate| |FA| Analiza Distanței Minime"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:449
+msgid ""
+"Often, the output of an algorithm will not be a shapefile, but rather a "
+"table summarizing the statistical properties of a dataset. One of these is "
+"the :guilabel:`Minimum Distance Analysis` tool."
+msgstr "De multe ori, ieșirea unui algoritm nu va fi un fișier shape, ci mai degrabă un tabel care rezumă proprietățile statistice ale un set de date. Un astfel de exemplu este instrumentul :guilabel:`Minimum Distance Analysis`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:453
+msgid ""
+"Find this tool in the :guilabel:`Processing Toolbox` as :guilabel:`Minimum "
+"Distance Analysis`."
+msgstr "Găsiți acest instrument în :guilabel:`Processing Toolbox` ca :guilabel:`Analiza Distanței Minime`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:456
+msgid ""
+"It does not require any other input besides specifying the vector point "
+"dataset to be analyzed."
+msgstr "Nu este nevoie de nici o altă intrare, în afară de specificarea setului vectorial de date de tip punct, de analizat."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:459
+msgid "Choose the :guilabel:`random_points` dataset."
+msgstr "Alegeți setul de date :guilabel:`random_points`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:460
+msgid ""
+"Click :guilabel:`OK`. On completion, a DBF table will appear in the "
+":guilabel:`Layers list`."
+msgstr "Faceți clic pe:guilabel:`OK`. La finalizare, un tabel DBF va apărea în :guilabel:`Lista straturilor`."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:462
+msgid ""
+"Select it, then open its attribute table. Although the figures may vary, "
+"your results will be in this format:"
+msgstr "Selectați-l, apoi deschideți tabelul de atribute. Deși cifrele pot varia, rezultatele vor fi în acest format:"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:469
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:471
+msgid ""
+"QGIS allows many possibilities for analyzing the spatial statistical "
+"properties of datasets."
+msgstr "QGIS oferă multe posibilități de analiză a proprietăților statistice spațiale pentru seturile de date."
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:475
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/vector_analysis/spatial_statistics.rst:477
+msgid ""
+"Now that we've covered vector analysis, why not see what can be done with "
+"rasters? That's what we'll do in the next module!"
+msgstr "Acum, că am acoperit analiza vectorială, de ce să nu vedem și ce se poate face cu rasterele? Asta e ceea ce vom face în modulul următor!"

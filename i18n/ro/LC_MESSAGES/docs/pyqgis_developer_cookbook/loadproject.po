@@ -1,0 +1,65 @@
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2016-08-17 14:53+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:9
+msgid "Loading Projects"
+msgstr "Încărcarea proiectelor"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:11
+msgid ""
+"Sometimes you need to load an existing project from a plugin or (more often)"
+" when developing a stand-alone QGIS Python application (see: "
+":ref:`pythonapplications`)."
+msgstr "Uneori trebuie să încărcați un proiect existent dintr-un plugin, sau (mai des) atunci când dezvoltați o aplicație QGIS independentă în Python (v.: :ref:`pythonapplications`)."
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:18
+msgid ""
+"To load a project into the current QGIS application you need a "
+":class:`QgsProject` :func:`instance()` object and call its :func:`read()` "
+"method passing to it a :class:`QFileInfo` object that contains the path from"
+" where the project will be loaded::"
+msgstr "Pentru a încărca un proiect în aplicația QGIS curentă aveți nevoie de obiectul :class:`QgsProject` :func:`instance()`, căruia să-i apelați metoda :func:`read()`, și să o transferați obiectului :class:`QFileInfo`, care conține calea de unde va fi încărcat proiectul::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:38
+msgid ""
+"In case you need to make some modifications to the project (for example add "
+"or remove some layers) and save your changes, you can call the "
+":func:`write()` method of your project instance. The :func:`write()` method "
+"also accepts an optional :class:`QFileInfo` that allows you to specify a "
+"path where the project will be saved::"
+msgstr "În cazul în care trebuie să faceți unele modificări la proiect (de exemplu, să adăugați sau să eliminați unele straturi), apoi să salvați modificările, puteți apela metoda :func:`write()` asupra instanței proiectului. De asemenea, metoda :func:`write()` acceptă :class:`QFileInfo`, opțional, care vă permite să specificați o cale în care va fi salvat proiectul::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:48
+msgid ""
+"Both :func:`read()` and :func:`write()` funtions return a boolean value that"
+" you can use to check if the operation was successful."
+msgstr "Ambele funcții, :func:`read()` și :func:`write()`, returnează o valoare booleană, pe care o puteți folosi pentru a verifica dacă operația a avut succes."
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:53
+msgid ""
+"If you are writing a QGIS standalone application, in order to synchronise "
+"the loaded project with the canvas you need to instanciate a "
+":class:`QgsLayerTreeMapCanvasBridge` as in the example below::"
+msgstr "Dacă scrieți o aplicație QGIS de sine stătătoare, în scopul sincronizării proiectului încărcat în canevas, trebuie să instanțiați o clasă :class:`QgsLayerTreeMapCanvasBridge`, ca în exemplul de mai jos::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:15
+msgid "projects"
+msgstr "proiecte"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:15
+msgid "loading"
+msgstr "încărcare"

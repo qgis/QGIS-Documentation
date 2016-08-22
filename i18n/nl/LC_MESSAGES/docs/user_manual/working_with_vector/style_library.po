@@ -1,0 +1,663 @@
+# 
+# Translators:
+# Dick Groskamp, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2016-08-20 11:50+0000\n"
+"Last-Translator: Dick Groskamp\n"
+"Language-Team: Dutch (http://www.transifex.com/qgis/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:5
+msgid "|updatedisclaimer|"
+msgstr "|updatedisclaimer|"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:10
+msgid "The Symbol Library"
+msgstr "De Symboolbibliotheek "
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:23
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:43
+msgid "The Style Manager"
+msgstr "De Stijl manager"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:25
+msgid ""
+"The Symbol Library is the place where users can manage and create generic "
+"symbols to be used in several QGIS projects. You can open it with the "
+":menuselection:`Settings --> Style Manager` or from the **Style** tab in the"
+" vector layer's :menuselection:`Properties`. It allows users to:"
+msgstr "De Symboolbibliotheek is de plaats waar gebruikers algemene symbolen kunnen maken en beheren om te worden gebruikt in verscheidene projecten van QGIS. U kunt het openen met :menuselection:`Extra --> Stijl-manager` of vanuit de tab **Stijl** in het menu :menuselection:`Laag-eigenschappen` van de vectorlaag. Het stelt gebruikers in staat om:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:30
+msgid "create, edit and remove symbols"
+msgstr "symbolen maken, bewerken en verwijderen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:31
+msgid "organize symbols in custom groups"
+msgstr "symbolen te organiseren in aangepaste groepen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:32
+msgid "export and import symbols."
+msgstr "symbolen te im- en exporteren "
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:47
+msgid "Groups and smart groups"
+msgstr "Groepen en slimme groepen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:49
+msgid ""
+"You can organize symbols into different categories. These categories, listed"
+" in the panel at the left, can be static (called **Group**) or dynamic "
+"(named **Smart Group**). A group is smart when its symbols are dynamically "
+"fetched according to conditions set. See figure_symbol_2_:"
+msgstr "U kunt symbolen organiseren in verschillende categorieën. Deze categorieën, vermeld in het paneel links, kunnen statisch zijn (**Groep** genaamd) of dynamisch (**Slimme groep** genaamd). Een groep is slim wanneer zijn symbolen dynamisch worden opgehaald overeenkomstig de ingestelde voorwaarden. Zie figure_symbol_2_:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:54
+msgid ""
+"To create a group, right click on an existing group or on the main "
+"**Groups** directory in the left of the dialog. You can also select a group "
+"and click the |signPlus| :sup:`Add Group` button. The new group will be a "
+"sub-group of the selected one."
+msgstr "Klik met rechts op een bestaande groep of op de hoofdmap **Groepen** in het linker gedeelte van het dialoogvenster om een groep te maken. U kunt ook een groep selecteren en op de knop |signPlus| :sup:`Groep toevoegen` klikken. De nieuwe groep zal een subgroep zijn van de geselecteerde."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:59
+msgid ""
+"Create **Smart Group** is similar to creating group, but instead select "
+"**Smart Groups**. The dialog box allows user to choose the expression to "
+"select symbols in order to appear in the smart group (contains some tags, "
+"member of a group, have a string in its name, etc.). Any symbol that "
+"satisfies the entered condition(s) is automatically added to the smart "
+"group."
+msgstr "Het maken van **Slimme Symbolen** is soortgelijk aan het maken van een groep, maar selecteer in plaats daarvan **Slimme groepen**. Het dialoogvenster stelt de gebruiker in staat de expressie te kiezen om symbolen te selecteren die moeten verschijnen in de slimme groep (bevat enkele tags, lid van een groep, heeft een tekenreeks in zijn naam, etc.) Elk symbool dat voldoet aan de ingevoerde voorwaarde(n) wordt automatisch toegevoegd aan de slimme groep."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:74
+msgid "Creating a Smart Group"
+msgstr "Een slimme groep maken"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:76
+msgid ""
+"To remove a group or a smart group, right click on the group and select "
+":menuselection:`Remove Group` or select it and push |signMinus| :sup:`Remove"
+" Group` button."
+msgstr "Klik met rechts op de groep en selecteer :menuselection:`Groep verwijderen` of selecteer hem en druk op de knop |signMinus| :sup:`Groep verwijderen` om een groep of slimme groep te verwijderen."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:80
+msgid ""
+"Unlike the smart groups that automatically fetch their belonged symbols, "
+"simple groups are filled by the user. To add a symbol into a group, you can "
+"either right click on a symbol, choose :menuselection:`Apply Group` and then"
+" the group name. There is a second way to add several symbols into a group: "
+"just select the group, click |changeLabelProperties| and choose "
+":menuselection:`Group Symbols`. All symbols display a checkbox that allows "
+"you to add the symbol into the selected groups. When selection is finished, "
+"you can click the same button, and choose :menuselection:`Finish Grouping`."
+msgstr "Anders dan de slimme groepen die automatisch de daartoe behorende symbolen ophalen, worden eenvoudige groepen gevuld door de gebruiker. U kunt ofwel met rechts klikken op een symbool en dan :menuselection:`Groep toepassen` en dan de naam van de groep ervoor toevoegen om een symbool toe te voegen aan een groep. Er bestaat een tweede manier om verscheidene symbolen aan een groep toe te voegen: selecteer een groep en klik op |changeLabelProperties| en kies :menuselection:`Symbolen groeperen`. Alle symbolen geven een keuzevak weer dat u in staat stelt het symbool toe te voegen aan de geselecteerde groepen. U kunt, indien voltooid, klikken op dezelfde knop en kiezen :menuselection:`Groeperen voltooien`."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:90
+msgid ""
+"All the symbols that are not placed under a custom group belong to a default"
+" group named **Ungrouped**."
+msgstr "Alle symbolen die niet zijn geplaatst onder een aangepaste groep behoren tot de standaard groep, genaamd **Niet gegroepeerd**."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:94
+msgid "Add, Edit, Remove Symbol"
+msgstr "Symbool toevoegen, bewerken, verwijderen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:96
+msgid ""
+"Selecting a group returns in the right panel, if applicable, the list of "
+"symbols of the group (including its subgroups). These symbols are organized "
+"in four different tabs:"
+msgstr "Selecteren van een groep geeft in het paneel rechts, indien van toepassing, de lijst met symbolen van de groep (inclusief de subgroepen). Deze symbolen zijn georganiseerd op vier verschillende tabs:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:100
+msgid "**Marker** for point symbols"
+msgstr "**Markering** voor puntsymbolen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:101
+msgid "**Line** for linear symbols"
+msgstr "**Lijn** voor lineaire symbolen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:102
+msgid "**Fill** for surface symbols"
+msgstr "**Vulling** voor symbolen voor oppervlakten"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:103
+msgid "and `Color Ramp`_"
+msgstr "en `Kleurverloop`_"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:105
+msgid ""
+"To delete a symbol you no longer need, just select it and click |signMinus| "
+":sup:`Remove item` (also available through right-click). The symbol will be "
+"deleted from the local symbols database."
+msgstr "Selecteer, om een symbool te verwijderen dat u niet langer nodig hebt, het eenvoudigweg en klik op |signMinus| :sup:`Item verwijderen` (ook beschikbaar bij klikken met rechts). Het symbool zal wordne verwijderd uit de lokale database voor symbolen."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:109
+msgid ""
+"The symbol list can be modified by adding new symbols with |signPlus| "
+":sup:`Add item` button or modifying existing ones with |symbologyEdit| "
+":sup:`Edit item`. See `The Symbol Selector`_ for further information."
+msgstr "De lijst met symbolen kan worden aangepast door nieuwe symbolen toe te voegen met de knop |signPlus| :sup:`Item toevoegen` of het aanpassen van bestaande met |symbologyEdit| :sup:`Item bewerken`. Bekijk `Symbolen selecteren`_ voor meer informatie."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:115
+msgid "Share symbols"
+msgstr "Symbolen delen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:117
+msgid ""
+"The |sharing| :sup:`Share item` tool, at the right bottom of the Style "
+"Library dialog, offers options to easily share symbols with others: users "
+"can indeed export their symbols and import symbols to their library."
+msgstr "Het gereedschap |sharing| :sup:`Item delen`, aan de rechter onderzijde van het dialoogvenster Stijl manager, biedt opties om symbolen eenvoudig te delen met anderen: gebruikers kunnen inderdaad hun symbolen exporteren en symbolen in hun bibliotheek importeren."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:121
+msgid "**Exporting symbols**"
+msgstr "**Symbolen exporteren**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:123
+msgid ""
+"You can export the selected symbols to PNG, SVG or XML file formats. "
+"Exporting to PNG or SVG (both not available for color ramp symbols) creates "
+"a file for each selected symbol, and the SVG folder can be added to SVG "
+"Paths in :menuselection:`Settings --> Options` to e.g. share these symbols "
+"on a network. The XML format generates a single file containing all the "
+"selected symbols. This file can then be imported in another user's style "
+"library."
+msgstr "U kunt de geselecteerde symbolen exporteren naar bestandsindelingen PNG, SVG of XML. Exporteren naar PNG of SVG (beide niet beschikbaar voor symbolen van kleurverloop) maakt een bestand voor elk geselecteerd symbool, en de map SVG kan worden toegevoegd aan de paden voor SVG in :menuselection:`Extra --> Opties` om bijvoorbeeld deze symbolen te delen over een netwerk. De indeling XML genereert één enkel bestand dat alle geselecteerde symbolen bevat. Dit bestand kan dan worden geïmporteerd in de stijlbibliotheek van een andere gebruiker."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:130
+msgid "**Importing symbols**"
+msgstr "**Symbolen importeren**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:132
+msgid ""
+"You can extend your symbols library by importing new symbols. Just select "
+"|sharing| :menuselection:`Import` from the drop-down list at the right "
+"bottom of the dialog. In the new dialog, you'll need to :"
+msgstr "U kunt uw bibliotheek van symbolen uitbreiden door het importeren van nieuwe symbolen. Selecteer eenvoudigweg |sharing| :menuselection:`Importeren` uit de keuzelijst aan de rechter onderzijde van het dialoogvenster. In het nieuwe dialoogvenster dient u:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:136
+msgid ""
+"indicate the source of the symbols (it can be a ``.xml`` file on the disk or"
+" an url),"
+msgstr "de bron van de symbolen aan te geven (het mag een ``.xml``-bestand op de schijf zijn, of een URL),"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:137
+msgid "give the name of the group under which the symbols will be put"
+msgstr "de naam van de groep op te geven waaronder u de symbolen wilt plaatsen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:138
+msgid "select the symbols you want to add to your library"
+msgstr "de symbolen te selecteren die u wilt toevoegen aan uw bibliotheek"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:139
+msgid "and press **Import**."
+msgstr "en te drukken op **Importeren**."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:141
+msgid ""
+"Note that import and export options are also available through right-click."
+msgstr "Onthoud dat de opties voor im- en exporteren ook beschikbaar zijn door met rechts te klikken."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:152
+msgid "Importing symbols"
+msgstr "Symbolen importeren"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:158
+msgid "Color Ramp"
+msgstr "Kleurverloop"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:162
+msgid ""
+"The Color ramp tab in the Style Manager presents different types of color "
+"ramps you can use to style layers."
+msgstr "De tab Kleurverloop in de Stijl manager geeft verschillende typen kleurverlopen weer die u kunt gebruiken om lagen op te maken."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:165
+msgid ""
+"To create a custom color ramp, activate the Color ramp tab and click the "
+"|signPlus| :sup:`Add item` button. The button reveals a drop-down list to "
+"choose the ramp type: Gradient, Random, colorBrewer, or cpt-city."
+msgstr "Activeer, om een aangepast kleurverloop te maken, de tab Kleurverloop en klik op de knop |signPlus| :sup:`Item toevoegen`. De knop onthult een keuzelijst om het type verloop te kiezen: Gradient, Random, colorBrewer, of cpt-city."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:169
+msgid ""
+"The first three have options for number of steps and/or multiple stops in "
+"the color ramp. You can use the |checkbox| :guilabel:`Invert` option while "
+"classifying the data with a color ramp. See figure_symbol_4_ for an example "
+"of custom color ramp and figure_symbol_4a_ for the cpt-city dialog."
+msgstr "De eerste drie hebben opties om het aantal stappen en/of meerdere 'stops' in het kleurverloop op te nemen. U kunt het keuzevak |checkbox| :guilabel:`Inverteren` gebruiken tijdens het classificeren van de gegevens met een kleurverloop. Zie figure_symbol_4_ dat een voorbeeld toont van een aangepast kleurverloop en figure_symbol_4a_ voor het dialoogvenster cpt-city."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:184
+msgid "Example of custom gradient color ramp with multiple stops"
+msgstr "Voorbeeld van een aangepast gradiënt kleurverloop met meerdere stops"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:186
+msgid ""
+"The cpt-city option opens a new dialog with hundreds of themes included 'out"
+" of the box'."
+msgstr "De optie cpt-city opent een nieuw dialoogvenster met daarin honderden thema's 'out of the box'."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:197
+msgid "cpt-city dialog with hundreds of color ramps"
+msgstr "Dialoogvenster cpt-city met honderden kleurverlopen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:203
+msgid "The symbol Selector"
+msgstr "Symbool selecteren"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:205
+msgid ""
+"The Symbol selector is the main dialog to design a symbol. You can create or"
+" edit Marker, Line or Fill Symbols."
+msgstr "Symbool selecteren is het hoofddialoogvenster om een symbool te ontwerpen. U kunt symbolen Markering, Lijn of Vulling maken of bewerken."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:217
+msgid "Designing a Marker symbol"
+msgstr "Een markeringssymbool ontwerpen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:220
+msgid ""
+"For each kind of symbols, you will find always the same dialog structure:"
+msgstr "Voor elke soort symbolen zult u altijd dezelfde structuur in het dialoogvenster vinden:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:222
+msgid ""
+"at the top left side a dynamic symbol representation, updated as soon as "
+"symbol properties evolve"
+msgstr "linksboven een weergave van het dynamische symbool, bijgewerkt zodra de eigenschappen van het symbool wijzigen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:224
+msgid ""
+"under the symbol representation, the symbol tree shows symbol layers that "
+"are combined afterwards to shape a new global symbol. A symbol can consist "
+"of several :guilabel:`Symbol layers`. Settings will be shown later in this "
+"chapter."
+msgstr "onder de weergave van het symbool, geeft de boom van symbolen de symboollagen weer die later gecombineerd worden om een nieuw globaal symbool vorm te geven. Een symbool kan bestaan uit meerdere :guilabel:`Symboollagen`. De instellingen worden later in dit hoofdstuk weergegeven."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:228
+msgid ""
+"at the right you can setup some parameters that apply to the global symbol:"
+msgstr "rechts kunt u enkele parameters instellen die van toepassing zijn voor het globale symbool:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:230
+msgid "**unit**: it can be millimeter, pixel or map unit"
+msgstr "**eenheid**: kan zijn millimeter, pixel of kaarteenheid"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:231
+msgid "**transparency**"
+msgstr "**Transparantie**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:232
+msgid ""
+"**color**: when this parameter is changed by the user, its value is echoed "
+"to all unlocked sub-symbols color"
+msgstr "**kleur**: als deze parameter door de gebruiker wordt gewijzigd, wordt de waarde doorgegeven aan alle niet vastgezette kleuren van sub-symbolen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:234
+msgid "**size** and **rotation** for marker symbol"
+msgstr "**grootte** en **rotatie** voor markeringssymbool"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:235
+msgid "**width** for line symbol"
+msgstr "**breedte** voor lijnsymbool"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:237
+msgid ""
+"Note that the :guilabel:`Data-defined override` button beside the last "
+"layer-related parameters is inactive until the symbol is applied to a layer."
+" Once the symbol is connected to a layer, this button offers access to the "
+":ref:`size assistant <size_assistant>` dialog which helps to create "
+"proportional or multivariate analysis rendering."
+msgstr "Onthoud dat de knop :guilabel:`Data-bepaalde override` naast de laatste laag-gerelateerde parameters inactief is totdat het symbool wordt toegepast op een laag. Als het symbool eenmaal is verbonden met een laag, biedt deze knop toegang tot het dialoogvenster :ref:`Assistent Grootte <size_assistant>` dat nuttig is om proportionele of multivariatie analyse renderen te maken."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:243
+msgid ""
+"under these parameters are displayed items of the symbols library you can "
+"choose from. This list of symbols can be filtered by selecting a group in "
+"the drop-down list just above."
+msgstr "onder deze parameters worden items weergegeven uit de bibliotheek met symbolen waaruit u kunt kiezen. Deze lijst van symbolen kan worden gefilterd door een groep te selecteren in de keuzelijst er net boven."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:247
+msgid ""
+"According to the level selected in the symbol tree, you'll get enabled "
+"different tools at the bottom of the dialog to :"
+msgstr "Overeenkomstig het in de boom van symbolen geselecteerde niveau zult u aan de onderzijde van het dialoogvenster verschillende gereedschappen krijgen geactiveerd om :"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:250
+msgid ""
+"|signPlus| add new symbol layer: you can imbricate as many symbols as you "
+"want"
+msgstr "|signPlus| een nieuwe symboollaag toe te voegen: u mag net zoveel symbolen over elkaar leggen als u wilt"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:251
+msgid "|signMinus| remove the selected symbol layer"
+msgstr "|signMinus| de geselecteerde symboollaag te verwijderen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:252
+msgid ""
+"lock colors of symbol layer: a |locked| locked color stays unchanged when "
+"user changes the color at the global (or upper) symbol level"
+msgstr "kleuren van een symboollaag vast te zetten: een |locked| vastgezette kleur blijft ongewijzigd als de gebruiker de kleur wijzigt van het globale (of bovengelegen) niveau van symbolen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:254
+msgid "|duplicateLayer| duplicate a (group of) symbol layer(s)"
+msgstr "|duplicateLayer| een (groep van) symboollaag(lagen) te dupliceren"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:255
+msgid "move up or down the symbol layer"
+msgstr "de symboollaag naar boven of beneden te verplaatsen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:256
+msgid "apply :ref:`special effects <draw_effects>` to the symbol layer"
+msgstr ":ref:`speciale effecten <draw_effects>` toe te passen op de symboollaag"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:257
+msgid "save the designed symbol into your symbol library"
+msgstr "het ontworpen symbool op te slaan in uw symboolbibliotheek"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:258
+msgid ""
+"or choose in the :guilabel:`Advanced` |selectString| drop-down list, to "
+"**clip features to canvas extent**."
+msgstr "of te kiezen in de keuzelijst :guilabel:`Geavanceerd` |selectString|, om **objecten te clippen naar kaartbereik**."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:265
+msgid ""
+"Note that once you have set the size in the lower levels of the "
+":guilabel:`Symbol layers` dialog, the size of the whole symbol can be "
+"changed with the :guilabel:`Size` (for marker symbol) or the "
+":guilabel:`Width` (for line symbol) menu in the first level again. The size "
+"of the lower levels changes accordingly, while the size ratio is maintained."
+msgstr "Onthoud dat als u eenmaal de grootte heeft ingesteld in de onderste niveaus van het dialoogvenster :guilabel:`Symboollagen`, de grootte van het gehele symbool opnieuw kan worden gewijzigd met het menu :guilabel:`Grootte` (voor symbool voor markering) of :guilabel:`Breedte` (voor lijnsymbool) in het eerste niveau. De grootten van de onderste niveaus wijzigen overeenkomstig, terwijl de verhoudingen blijven behouden."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:271
+msgid ""
+"More detailed settings can be made when clicking on the lower level in the "
+"Symbol tree. You can change each :guilabel:`Symbol layers` properties and "
+"according to the symbol type, you get different settings."
+msgstr "Meer gedetailleerde instellingen kunnen gemaakt worden door te klikken op het lagere niveau in de boom van Symbolen. U kunt alle eigenschappen van :guilabel:`Symboollagen` wijzigen en, afhankelijk van het type symbool, krijgt u verschillende instellingen:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:280
+msgid "Marker Symbols"
+msgstr "Markeringssymbool"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:282
+msgid "Marker symbols have several symbol layer types:"
+msgstr "Markeringssymbolen hebben verscheidene typen symboollagen:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:284
+msgid "Ellipse marker"
+msgstr "Ellips-markering"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:285
+msgid "Font marker"
+msgstr "Lettertype-markering"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:286
+msgid "Simple marker (default)"
+msgstr "Eenvoudige markering (standaard)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:287
+msgid "SVG marker"
+msgstr "SVG-markering"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:288
+msgid "Vector Field marker"
+msgstr "Vectorveld-markering"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:290
+msgid "For each marker symbol, you can set the following properties:"
+msgstr "Voor elk symbool voor markering kunt u de volgende eigenschappen gebruiken:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:292
+msgid ""
+":guilabel:`Symbol layer type`: You have the option to use Ellipse markers, "
+"Font markers, Simple markers, SVG markers and Vector Field markers."
+msgstr ":guilabel:`Symboollaagtypen`: U heeft de mogelijkheid om Ellips-markering, lettertype-markering, eenvoudige markering, SVG-markering of  vectorveld-markering te gebruiken."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:294
+msgid ":guilabel:`colors`"
+msgstr ":guilabel:`Kleuren`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:295
+msgid ":guilabel:`Size`"
+msgstr ":guilabel:`Grootte`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:296
+msgid ":guilabel:`Outline style`"
+msgstr ":guilabel:`Lijnstijl`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:297
+msgid ":guilabel:`Outline width`"
+msgstr ":guilabel:`Lijndikte`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:298
+msgid ":guilabel:`Angle`"
+msgstr ":guilabel:`Hoek`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:299
+msgid ""
+":guilabel:`Offset X,Y`: You can shift the symbol in the x- or y-direction."
+msgstr ":guilabel:`Verspring X,Y`: U kunt het symbool verschuiven in de richting X of Y."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:300
+msgid ":guilabel:`Anchor point`"
+msgstr ":guilabel:`Ankerpunt`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:301
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:329
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:355
+msgid ":guilabel:`Data defined properties ...`"
+msgstr ":guilabel:`Data-bepaalde eigenschappen ...`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:305
+msgid "Line Symbols"
+msgstr "Lijn-symbolen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:307
+msgid "Line marker symbols have only two symbol layer types:"
+msgstr "Lijn-markeringssymbolen hebben slechts twee typen symboollagen:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:309
+msgid "Marker line"
+msgstr "Markeringslijn"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:310
+msgid "Simple line (default)"
+msgstr "Eenvoudige lijn (standaard)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:312
+msgid ""
+"The default symbol layer type draws a simple line whereas the other display "
+"a marker point regularly on the line. You can choose different location: "
+"vertex, last and first vertex, interval, central point or on every curve "
+"point. Marker line can have offset along the line or offset line. Finally, "
+":guilabel:`rotation` allows you to change the orientation of the symbol."
+msgstr "Het standaard type symboollaag tekent een eenvoudige lijn terwijl de andere een regelmatig markeringspunt weergeeft op de lijn. U kunt kiezen tussen verschillende locatiepunten, eerste en laatste punt, interval, centraal punt of op elk boogpunt. Markeringslijn mag een verschuiving langs de lijn hebben of de lijn verschuiven. Tenslotte stelt :guilabel:`Markering roteren` u in staat de oriëntatie van het symbool te wijzigen."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:319
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:348
+msgid "The following settings are available:"
+msgstr "De volgende instellingen zijn beschikbaar:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:321
+msgid ":guilabel:`colour`"
+msgstr ":guilabel:`Kleur`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:322
+msgid ":guilabel:`Pen width`"
+msgstr ":guilabel:`Pendikte`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:323
+msgid ":guilabel:`Offset`"
+msgstr ":guilabel:`Verspringing`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:324
+msgid ":guilabel:`Pen style`"
+msgstr ":guilabel:`Penstijl`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:325
+msgid ":guilabel:`Join style`"
+msgstr ":guilabel:`Verbindingsstijl`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:326
+msgid ":guilabel:`Cap style`"
+msgstr ":guilabel:`Eindstijl`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:327
+msgid "|checkbox| :guilabel:`Use custom dash pattern`"
+msgstr "|checkbox| :guilabel:`Aangepast streepjespatroon gebruiken`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:328
+msgid ":guilabel:`Dash pattern unit`"
+msgstr ":guilabel:`Eenheid streepjespatroon`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:333
+msgid "Polygon Symbols"
+msgstr "Polygoon symbolen "
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:335
+msgid "Polygon marker symbols have also several symbol layer types:"
+msgstr "Polygoon-markeringssymbolen hebben ook verscheidene typen symboollagen:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:337
+msgid "Centroid fill"
+msgstr "Vulling centroïde"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:338
+msgid "Gradient fill"
+msgstr "Geleidelijke vulling"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:339
+msgid "Line pattern fill"
+msgstr "Lijnpatroonvulling"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:340
+msgid "Point pattern fill"
+msgstr "Puntpatroonvulling"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:341
+msgid "Raster image fill"
+msgstr "Vulling rasterafbeelding"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:342
+msgid "SVG fill"
+msgstr "SVG-vulling"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:343
+msgid "Shapeburst fill"
+msgstr "Shapeburst vulling"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:344
+msgid "Simple fill (default)"
+msgstr "Eenvoudige vulling (standaard)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:345
+msgid "Outline: Marker line (same as line marker)"
+msgstr "Rand: Markeringslijn (hetzelfde als lijnmarkering)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:346
+msgid "Outline: simple line (same as line marker)"
+msgstr "Rand: eenvoudige lijn (hetzelfde als lijnmarkering)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:350
+msgid ":guilabel:`Colors` for the border and the fill."
+msgstr ":guilabel:`Twee kleuren` voor de rand en de vulling."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:351
+msgid ":guilabel:`Fill style`"
+msgstr ":guilabel:`Vullingstijl`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:352
+msgid ":guilabel:`Border style`"
+msgstr ":guilabel:`Randstijl`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:353
+msgid ":guilabel:`Border width`"
+msgstr ":guilabel:`Randbreedte`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:354
+msgid ":guilabel:`Offset X,Y`"
+msgstr ":guilabel:`Verspring X,Y`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:357
+msgid ""
+"Using the color combo box, you can drag and drop color for one color button "
+"to another button, copy-paste color, pick color from somewhere, choose a "
+"color from the palette or from  recent or standard color. The combo box "
+"allows you to fill in the feature with transparency. You can also just click"
+" the button to open the palette dialog. Note that you can import color from "
+"some external software like GIMP."
+msgstr "Met behulp van het combinatievak voor de kleuren kunt u een kleur van de ene knop naar de andere slepen en neerzetten, kleuren kopiëren en plakken, een kleur ergens uitkiezen, een kleur uit het palet kiezen van standaard of recente of standaard kleuren. Het combinatievak stelt u in staat het object te vullen met transparantie. U kunt ook eenvoudigweg klikken op de knop om het dialoogvenster Palet te openen. Onthoud dat u kleuren kunt importeren vanuit enkele externe software, zoals GIMP."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:364
+msgid ""
+"With the 'Raster image fill' you can fill polygons with a tiled raster "
+"image. Options include (data defined) file name, opacity, image size (in "
+"pixels, mm or map units), coordinate mode (feature or view) and rotation."
+msgstr "Met de 'Vulling rasterafbeelding' kunt u polygonen vullen met een getegelde rasterafbeelding. Opties omvatten (gegevens gedefinieerde) bestandsnaam, doorzicht, grootte afbeelding (in pixels, mm of kaarteenheden), modus coördinaten (object of  weergave), en rotatie."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:368
+msgid ""
+"'Gradient Fill' :guilabel:`Symbol layer type` allows you to select between a"
+" |radioButtonOn| :guilabel:`Two color` and |radioButtonOff| :guilabel:`Color"
+" ramp` setting. You can use the |checkbox| :guilabel:`Feature centroid` as "
+":guilabel:`Referencepoint`. All fills 'Gradient Fill` :guilabel:`Symbol "
+"layer type` is also available through the :guilabel:`Symbol` menu of the "
+"Categorized and Graduated Renderer and through the :guilabel:`Rule "
+"properties` menu of the Rule-based renderer."
+msgstr "'Geleidelijke vulling' :guilabel:`Symboollaagtype` stelt u in staat om te selecteren tussen de instellingen |radioButtonOn| :guilabel:`Twee kleuren` en |radioButtonOff| :guilabel:`Kleurverloop`. U kunt |checkbox| :guilabel:`Objectcentrum` gebruiken als :guilabel:`Referentiepunt`. Alle vullingen 'Geleidelijke vulling` :guilabel:`Symboollaagtype` zijn ook beschikbaar via het menu :guilabel:`Symbool` van de renderers Categorieën en Gradueel en via het menu :guilabel:`Regeleigenschappen` van de renderer Regel-gebaseerd."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:377
+msgid ""
+"Other possibility is to choose a 'shapeburst fill' which is a buffered "
+"gradient fill, where a gradient is drawn from the boundary of a polygon "
+"towards the polygon's centre. Configurable parameters include distance from "
+"the boundary to shade, use of color ramps or simple two color gradients, "
+"optional blurring of the fill and offsets."
+msgstr "Een andere mogelijkheid is een 'shapeburst fill' te kiezen wat een gebufferde geleidelijke vulling is die wordt getekend vanaf de rand van een polygoon naar het centrum van de polygoon. Configurabele parameters bevatten afstand vanaf de rand te bedekken, kleurverlopen gebruiken of eenvoudige kleurverlopen met twee kleuren, optioneel vervangen van de vulling en verschuivingen."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:383
+msgid ""
+"It is possible to only draw polygon borders inside the polygon. Using "
+"'Outline: Simple line' select |checkbox| :guilabel:`Draw line only inside "
+"polygon`."
+msgstr "Het is mogelijk om alleen randen voor polygonen te tekenen binnen de polygoon. Gebruik 'Rand: Doorgetrokken lijn' selecteer |checkbox| :guilabel:`Teken lijn alleen binnen polygoon`."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:387
+msgid ""
+"**Note:** When geometry type is polygon, you can choose to disable the "
+"automatic clipping of lines/polygons to the canvas extent. In some cases "
+"this clipping results in unfavourable symbology (eg centroid fills where the"
+" centroid must always be the actual feature's centroid)."
+msgstr "**Opmerking:** Wanneer het type polygoon is kunt u er voor kiezen het automatisch afsnijden van lijnen/polygonen naar het kaartbereik uit te schakelen. In sommige gevallen resulteert dit afsnijden in niet gewenste symbologie (bijv. zwaartepuntvullingen waarbij het zwaartepunt altijd het actuele zwaartepunt van het object moet zijn)."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:17
+msgid "Style"
+msgstr "Stijl"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:160
+msgid "color_Ramp"
+msgstr "Kleurverlopen"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:160
+msgid "Gradient_color_Ramp"
+msgstr "Kleurverloop_Kleur_balk"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:160
+msgid "colorBrewer"
+msgstr "colorBrewer"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:160
+msgid "Custom_color_Ramp"
+msgstr "Aangepaste_Kleur_balk"

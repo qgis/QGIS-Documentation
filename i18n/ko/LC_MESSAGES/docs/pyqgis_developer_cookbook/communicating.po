@@ -1,0 +1,168 @@
+# 
+# Translators:
+# BJ Jang <jangbi882@gmail.com>, 2015
+# Kwon.Yongchan <ruvyn@naver.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2015-11-07 13:15+0000\n"
+"Last-Translator: BJ Jang <jangbi882@gmail.com>\n"
+"Language-Team: Korean (http://www.transifex.com/qgis/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:7
+msgid "Communicating with the user"
+msgstr "사용자에게 정보 전달하기"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:12
+msgid ""
+"This section shows some methods and elements that should be used to "
+"communicate with the user, in order to keep consistency in the User "
+"Interface."
+msgstr "이 장에서는 사용자 인터페이스에서 일관성을 유지하기 위해 이용해야 하는 몇몇 메소드 및 요소들에 대해 설명합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:35
+msgid "QGIS Message bar"
+msgstr "QGIS 메시지 바"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:48
+msgid "QGIS Message bar with timer"
+msgstr "타이머를 적용한 QGIS 메시지 바"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:58
+msgid "QGIS Message bar (info)"
+msgstr "QGIS 메시지 바 (정보)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:60
+msgid ""
+"Widgets can be added to the message bar, like for instance a button to show "
+"more info"
+msgstr "추가적인 정보 표시를 위한 버튼 등의 위젯을 메시지 바에 추가할 수도 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:80
+msgid "QGIS Message bar with a button"
+msgstr "버튼이 들어간 QGIS 메시지 바"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:106
+msgid "QGIS Message bar in custom dialog"
+msgstr "사용자 지정 대화창 내부의 QGIS 메시지 바"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:110
+msgid "Showing progress"
+msgstr "진행률 표시"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:112
+msgid ""
+"Progress bars can also be put in the QGIS message bar, since, as we have "
+"seen, it accepts widgets. Here is an example that you can try in the "
+"console."
+msgstr "앞에서 배웠듯이 QGIS 메시지 바에 위젯을 추가할 수 있으므로, 진행률(progress) 막대도 추가할 수 있습니다. 다음은 여러분이 콘솔에서 실행해볼 수 있는 예시 코드입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:145
+msgid "Logging"
+msgstr "로그 기록"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:147
+msgid ""
+"You can use the QGIS logging system to log all the information that you want"
+" to save about the execution of your code."
+msgstr "QGIS의 로그 기록 시스템을 이용하면 여러분의 코드 실행에 대해 저장하고자 하는 모든 정보를 로그에 기록할 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:16
+msgid "Showing messages. The :class:`QgsMessageBar` class"
+msgstr "메시지 표시: :class:`QgsMessageBar` 클래스"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:18
+msgid ""
+"Using message boxes can be a bad idea from a user experience point of view. "
+"For showing a small info line or a warning/error messages, the QGIS message "
+"bar is usually a better option."
+msgstr "메시지 상자를 이용하는 것은 사용자 경험이라는 관점에서 그리 좋은 생각이 아닙니다. 짧은 정보 또는 경고/오류 메시지를 표출하는 데에는 QGIS 메시지 바를 이용하는 편이 더 낫습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:22
+msgid ""
+"Using the reference to the QGIS interface object, you can show a message in "
+"the message bar with the following code"
+msgstr "QGIS 인터페이스 오브젝트의 참조(reference)를 사용하면, 다음 코드를 통해 메시지 바에 메시지를 표시할 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:37
+msgid "You can set a duration to show it for a limited time"
+msgstr "지속 시간(``duration``)을 설정해서 제한된 시간 동안 메시지를 표출할 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:50
+msgid ""
+"The examples above show an error bar, but the ``level`` parameter can be "
+"used to creating warning messages or info messages, using the "
+"``QgsMessageBar.WARNING`` and ``QgsMessageBar.INFO`` constants respectively."
+msgstr "앞의 예시들은 오류 메시지를 표출하지만, ``level`` 파라미터에 ``QgsMessageBar.WARNING`` 이나 ``QgsMessageBar.INFO`` 상수를 각각 사용하면 경고 또는 정보 메시지를 생성할 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:82
+msgid ""
+"You can even use a message bar in your own dialog so you don't have to show "
+"a message box, or if it doesn't make sense to show it in the main QGIS "
+"window"
+msgstr "별도의 메시지 상자가 필요 없거나 QGIS 메인 창에 메시지를 표시할 이유가 없을 경우, 사용자의 대화창에 메시지 바를 표시할 수도 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:131
+msgid ""
+"Also, you can use the built-in status bar to report progress, as in the next"
+" example"
+msgstr "또한, 다음 예시 코드처럼 내장된 상태 바(status bar)가 진행률을 표출하도록 할 수도 있습니다."
+
+#~ msgid "Showing messages. The QgsMessageBar class."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Using mesages boxes can be a bad idea from a user experience point of view. "
+#~ "For showing a small info line or a warning/error messages, the QGIS message "
+#~ "bar is usually a better option"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Using the reference to the QGIS interface object, you can show a message in "
+#~ "the message bar with the following code."
+#~ msgstr ""
+
+#~ msgid "You can set a duration to show it for a limited time."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The examples above show an error bar, but the ``level`` parameter can be "
+#~ "used to creating warning messages or info messages, using the "
+#~ "``QgsMessageBar.WARNING`` and ``QgsMessageBar.INFO`` constants repectively."
+#~ msgstr ""
+
+#~ msgid "QGIS Message bar (warning)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can even use a message bar in your own dialog so you don't have to show "
+#~ "a message box, or if it doesn't make sense to show it in the main QGIS "
+#~ "window."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Also, you can use the built-in status bar to report progress, as in the next"
+#~ " example."
+#~ msgstr ""
+
+#~ msgid "::"
+#~ msgstr ""
+
+#~ msgid "count = layers.featureCount() for i, feature in enumerate(features):"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "#do something time-consuming here ... percent = i / float(count) * 100 "
+#~ "iface.mainWindow().statusBar().showMessage(\"Processed {} "
+#~ "%\".format(int(percent)))"
+#~ msgstr ""
+
+#~ msgid "iface.mainWindow().statusBar().clearMessage()"
+#~ msgstr ""

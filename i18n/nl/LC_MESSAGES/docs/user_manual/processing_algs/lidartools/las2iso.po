@@ -1,0 +1,189 @@
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>, 2016\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:6
+msgid "las2iso"
+msgstr "las2iso"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:11
+msgid ""
+"This tool turns point clouds (up to 20 million per file) into iso-contour "
+"lines by creating a temporary Delaunay triangulation on which the contours "
+"are then traced. For more info see the `las2iso "
+"<http://rapidlasso.com/las2iso>`_ page and its online `README "
+"<http://lastools.org/download/las2iso_README.txt>`_ file."
+msgstr ""
+"Dit gereedschap zet puntwolken (tot wel 20 miljoen per bestand) om naar iso-"
+"contourlijnen via een tijdelijke Delaunay-triangulatie waarop dan de "
+"contourlijnen worden getraceerd. Bekijk, voor meer info, de pagina `las2iso "
+"<http://rapidlasso.com/las2iso>`_ en zijn online bestand `README "
+"<http://lastools.org/download/las2iso_README.txt>`_."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:14
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:19
+msgid "``verbose`` [boolean]"
+msgstr "``verbose`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:17
+msgid "Generates more textual control output to the console."
+msgstr "Genereert meer tekstuele uitvoer voor beheer naar het scherm."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:19
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:24
+msgid "Default: *False*"
+msgstr "Standaard: *False*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:24
+msgid "``open LAStools GUI`` [boolean]"
+msgstr "``open LAStools GUI`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:22
+msgid "Starts the GUI of LAStools with pre-populated input files."
+msgstr "Start de GUI van LAStools met vooraf ingevulde invoerbestanden."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:27
+msgid "``input LAS/LAZ file`` [points]"
+msgstr "``input LAS/LAZ file`` [points]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:27
+msgid "The file containing the points to be rastered in LAS/LAZ format."
+msgstr ""
+"Het bestand, dat de punten bevat die moeten worden gerasterd, in de indeling"
+" LAS/LAZ."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:32
+msgid "``smooth`` [integer]"
+msgstr "``onderliggende TIN glad maken`` [geheel getal]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:30
+msgid ""
+"Specifies if and with how many passes the temporary TIN should be smoothed."
+msgstr ""
+"Specificeert of en met hoeveel doorgangen het tijdelijke TIN zou moeten "
+"worden glad gemaakt."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:32
+msgid "Default: *0*"
+msgstr "Standaard: *0*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:37
+msgid "``extract isoline with spacing of`` [number]"
+msgstr "``isolijn uitnemen met een afstand van`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:35
+msgid "Specifies spacing at which iso-contour lines are getting extracted."
+msgstr ""
+"Specificeert de afstand waarop iso-contourlijnen zullen worden uitgenomen."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:37
+msgid "Default: *10.0*"
+msgstr "Standaard: *10.0*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:42
+msgid "``clean isolines shorter than`` [number]"
+msgstr "``isolijnen korter dan - opschonen`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:40
+msgid "Omits iso-contour lines that are shorter than the specified length."
+msgstr ""
+"Laat iso-contourlijnen weg die korter zijn dan de gespecificeerde lengte."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:42
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:47
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:52
+msgid "Default: *0.0*"
+msgstr "Standaard: *0.0*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:47
+msgid "``simplify segments shorter than`` [number]"
+msgstr "``segmenten korter dan - vereenvoudigen`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:45
+msgid ""
+"Rudimentary simplification of iso-contour line segments that are shorter "
+"than the specified length."
+msgstr ""
+"Rudimentaire vereenvoudiging van segmenten van  iso-contourlijnen die korter"
+" zijn dan de gespecificeerde lengte."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:52
+msgid "``simplify segment pairs with area less than`` [number]"
+msgstr "``segmentparen met een gebied kleiner dan - vereenvoudigen`` [getal]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:50
+msgid ""
+"Rudimentary simplification of bumps formed by consecutive line segments "
+"whose area is smaller than the specified size."
+msgstr ""
+"Rudimentaire vereenvoudiging van bulten die worden gevormd door "
+"opeenvolgende lijnsegmenten waarvan het gebied kleiner is dan de "
+"gespecificeerde grootte."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:57
+msgid "``additional command line parameter(s)`` [string]"
+msgstr "``additional command line parameter(s)`` [string]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:55
+msgid ""
+"Specifies other command-line switches not available via this menu but known "
+"to the (advanced) LAStools user."
+msgstr ""
+"Specificeert andere schakelaars voor de opdrachtregel die niet beschikbaar "
+"zijn via dit menu, maar bekend zijn bij de (gevorderde) gebruiker van "
+"LAStools."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:57
+msgid "Default: *---*"
+msgstr "Standaard: *---*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:60
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:63
+msgid "``Output vector file`` [raster]"
+msgstr "``Output vector file`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:63
+msgid ""
+"Specifies where the output vector is stored. Use SHP or WKT output files. If"
+" your input LiDAR file is in geographic coordinates (long/lat) or has geo-"
+"referencing information (but only then) you can also create a KML output "
+"file."
+msgstr ""
+"Specificeert waar de uitvoer vector moet worden opgeslagen. Gebruik SHP of "
+"WKT uitvoerbestanden. Als uw invoer LiDAR-bestand in geografische "
+"coördinaten staat (long/lat) of informatie voor geoverwijzingen bevat (maar "
+"alleen dan) kunt u ook een KML-uitvoerbestand maken."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:66
+msgid "Console usage"
+msgstr "Gebruik van console"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:72
+msgid ""
+"See also the `las2iso <http://rapidlasso.com/las2iso>`_ page and its online "
+"`README <http://lastools.org/download/las2iso_README.txt>`_ file."
+msgstr ""
+"Bekijk ook de pagina `las2iso <http://rapidlasso.com/las2iso>`_ en zijn "
+"online bestand `README <http://lastools.org/download/las2iso_README.txt>`_."

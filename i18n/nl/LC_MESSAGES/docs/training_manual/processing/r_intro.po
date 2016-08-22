@@ -1,0 +1,330 @@
+# 
+# Translators:
+# Dick Groskamp, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2016-07-18 09:43+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Dutch (http://www.transifex.com/qgis/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:9
+msgid "Use R scripts in Processing"
+msgstr "Scripts van R gebruiken in Processing"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:11
+msgid ""
+"Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-"
+"water-management>`_"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:13
+msgid "Processing allows to write and run R scripts inside QGIS."
+msgstr "Processing maakt het mogelijk scripts voor R  te schrijven en uit te voeren binnen QGIS."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:15
+msgid ""
+"R has to be installed on your computer and the PATH has to correctly set up."
+" Moreover Processing just calls the external R packages, it is not able to "
+"install them. So be sure to install external packages directly in R. See the"
+" related `chapter "
+"<http://docs.qgis.org/testing/en/docs/user_manual/processing/3rdParty.html#r-creating-r-scripts>`_"
+" in the training manual."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:21
+msgid ""
+"If you have some *packages* problem, maybe it is related to missing "
+"*mandatory* packages required by Processing, like ``sp``, ``rgdal`` and "
+"``raster``."
+msgstr "Als u enkele problemen met *pakketten* heeft, is dat misschien gerelateerd aan ontbrekende *voorgeschreven* pakketten die zijn vereist door Processing, zoals ``sp``, ``rgdal`` en ``raster``."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:25
+msgid "Adding scripts"
+msgstr "Scripts toevoegen"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:27
+msgid ""
+"Adding a script is very simple. Open the Processing toolbox and just click "
+"on the :menuselection:`R --> Tools --> Create new R script`."
+msgstr "Toevoegen van een script is erg eenvoudig. Open de Toolbox van Processing en klik eenvoudigweg op :menuselection:`R --> Gereedschap --> Nieuw R script maken`."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:32
+msgid ""
+"If you cannot see R in Processing, you have to activate it in "
+":menuselection:`Processing --> Options --> Providers`"
+msgstr "Indien u R niet ziet in Processing, dient u het te activeren via :menuselection:`Processing --> Opties --> Providers`"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:35
+msgid ""
+"It opens a *script editor window* in which you have to specify some "
+"parameters before you can add the script body."
+msgstr "Het opent een *venster voor bewerken van scripts* waarin u enkele parameters moet specificeren vóórdat u de tekst va het script kunt toevoegen."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:43
+msgid "Creating plots"
+msgstr "Plots maken"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:45
+msgid ""
+"In this tutorial we are going to create a **boxplot** of a vector layer "
+"field."
+msgstr "In deze handleiding gaan we een **boxplot** maken van een veld van een vectorlaag."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:47
+msgid "Open the :file:`r_intro.qps` QGIS project."
+msgstr "Open het project van QGIS :file:`r_intro.qps`."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:51
+#: ../../source/docs/training_manual/processing/r_intro.rst:152
+msgid "Script parameters"
+msgstr "Parameters voor scripts"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:53
+msgid "Open the editor and start writing at the beginning of it."
+msgstr "Open de bewerker en begin met het schrijven aan het begin ervan."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:55
+msgid "You **must** specify some parameters **before** the script body:"
+msgstr "U **moet** enkele parameters specificeren **vóór** de tekst van het script:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:57
+msgid "the name of the group in which you want to put your script::"
+msgstr "de naam van de groep waarin u uw script wilt plaatsen::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:61
+msgid ""
+"so you will find your script in the **plots** group in the Processing "
+"toolbox."
+msgstr "zo zult u uw script terugvinden in de groep **plots** in de Toolbox van Processing."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:63
+msgid ""
+"you have to tell Processing that you want to display a plot (just in this "
+"example)::"
+msgstr "u moet Processing vertellen dat u een plot wilt weergeven (slechts voor dit voorbeeld)::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:67
+msgid "this way in the **Result Viewer** of Processing you'll see the plot."
+msgstr "op deze manier zult het plot zien in de **Resultaten viewer** van Processing."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:69
+msgid ""
+"You need also to tell Processing with which kind of data you are working "
+"with. In this example we want to create a plot from a field of a vector "
+"layer::"
+msgstr "U dient Processing ook te vertellen met welke soort gegevens u werkt. In dit voorbeeld willen we een plot maken uit een veld van een vectorlaag::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:74
+msgid ""
+"Processing knows now that the input is a vector. The name *Layer* is not "
+"important, what matters is the **vector** parameter."
+msgstr "Processing weet nu dat de invoer een vector is. De naam *Laag* is niet belangrijk, wat van belang is is de parameter **vector**."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:77
+msgid ""
+"Finally, you have to specify the input field of the vector layer you want to"
+" plot::"
+msgstr "Tenslotte moet u het invoerveld van de vectorlaag specificeren die u wilt plotten::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:81
+msgid "So Processing knows that you have called **X** the **Field Layer**."
+msgstr "Zo weet Processing dat u **X** de **Veldlaag** heeft genoemd."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:84
+#: ../../source/docs/training_manual/processing/r_intro.rst:176
+msgid "Script body"
+msgstr "Tekst van het script"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:86
+msgid ""
+"Now that you have set up the *heading* of the script you can add the "
+"function::"
+msgstr "Nu u de *kop* van het script heeft ingesteld kunt u de functie toevoegen::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:90
+msgid ""
+"Notice that **boxplot** is the name of the R function itself that calls "
+"**Layer** as dataset and **X** as the field of the dataset."
+msgstr "Onthoud dat **boxplot** de naam van de functie van R zelf is die **Laag** aanroept als gegevensset en **X** als veld voor de gegevensset."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:93
+msgid "The parameter **X** is within a double square bracket ``[[]]``"
+msgstr "De parameter **X** staat binnen dubbele vierkante haken ``[[]]``"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:95
+msgid "The final script looks like this::"
+msgstr "Het uiteindelijke script ziet er als volgt uit::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:105
+msgid ""
+"Save the script in the default path suggested by Processing. The name you "
+"choose will be the same as the name of the script you'll find in the "
+"Processing toolbox."
+msgstr "Sla het script op in het standaard pad dat wordt voorgesteld door Processing. De naam die u kiest zal hetzelfde zijn als de naam van het script dat u terugvindt in de Toolbox van Processing."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:108
+msgid ""
+"You can save the script in other paths, but Processing isn't able to upload "
+"them automatically and you have to upload all the scripts manually"
+msgstr "U kunt het script opslaan in ene ander pad, maar Processing is dan niet in staat om ze automatisch te uploaden en dient u alle scripts handmatig te uploaden."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:111
+msgid "Now just run it using the button on the top of the editor window:"
+msgstr "Voer het nu eenvoudigweg uit met behulp van de knop aan de bovenzijde van het venster van de bewerker:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:115
+msgid ""
+"Otherwise, once the editor window has been closed, use the text box of "
+"Processing to find your script:"
+msgstr "Gebruik anders, als het venster van de bewerker eenmaal is gesloten, het tekstvak van Processing om uw script te zoeken:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:120
+msgid ""
+"You are now able to fill the parameters required in the Processing algorithm"
+" window:"
+msgstr "U kunt nu de vereiste parameters invoeren in het venster Algoritme van Processing:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:122
+msgid "as **Layer** choose the *sample points* one"
+msgstr "kies als **Laag** de *sample points*"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:123
+msgid "fill the **X** field with the **value** parameter"
+msgstr "vul het veld **X** met de parameter **value**"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:125
+msgid "Click on **Run**."
+msgstr "Klik op **Run**."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:129
+msgid ""
+"The **Result window** should be automatically opened, if not, just click on "
+":menuselection:`Processing --> Result Viewer...`."
+msgstr "Het **venster Resultaten** zou automatisch moeten worden geopend, indien niet, klik eenvoudigweg op :menuselection:`Processing --> Resultaten bekijken...`."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:132
+msgid "This is the final result you'll see:"
+msgstr "Dit is het uiteindelijke resultaat dat u zult zien:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:136
+msgid "You can open, copy and save the image by right clicking on the plot"
+msgstr "U kunt de afbeelding openen, kopiëren en opslaan door met rechts te klikken op het plot"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:139
+msgid "Create a vector"
+msgstr "Een vector maken"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:141
+msgid ""
+"With an R script you can also create a vector and automatically load it in "
+"QGIS."
+msgstr "Met een script in R kunt u ook een vector maken en die automatisch laden in QGIS."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:143
+msgid ""
+"The following example has been taken from the ``Random sampling grid`` "
+"script that you can download from the online collection :menuselection:`R "
+"--> Tools --> Download R scripts from the on-line collection`."
+msgstr "Het volgende voorbeeld komt uit het script ``Random sampling grid`` dat u kunt downloaden vanuit de verzameling online :menuselection:`R --> Tools --> Download R scripts from the on-line collection`."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:147
+msgid ""
+"The aim of this exercise is to create a random point vector in a layer "
+"extent using the ``spsample`` function of the ``sp`` package."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:154
+msgid "As before we have to set some parameters before the script body:"
+msgstr "Net als eerder moeten we, vóór de tekst van het script, enkele parameters instellen:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:156
+msgid ""
+"specify the name of the group in which you want to put your script, for "
+"example *Point pattern analysis*::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:160
+msgid "set the layer that will contain the random points::"
+msgstr "stel de laag in die de willekeurige punten zal bevatten::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:164
+msgid "set the number of points that are going to be created::"
+msgstr "stel het aantal punten in dat moet worden gemaakt::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:168
+msgid ""
+"10 is going to be the default value. You can change this number or you can "
+"leave the parameter without a default number"
+msgstr "10 zal de standaard waarde zijn. U kunt dit getal wijzigen of u kunt de parameter zonder standaard nummer laten"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:171
+msgid "specify that the output is a vector layer::"
+msgstr "specificeer dat de uitvoer een vectorlaag is::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:178
+msgid "Now you can add the body of the function:"
+msgstr "Nu kunt u de tekst van de functie toevoegen:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:180
+msgid "run the ``spsample`` function::"
+msgstr "voer de functie ``spsample`` uit::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:184
+msgid ""
+"this way the function takes the extent of the *Layer*, the number of points "
+"is taken from the *Size* parameter and the point generation is *random*"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:187
+msgid "Write the line that contains the parameters of the output::"
+msgstr "Schrijf de regel die de parameters voor de uitvoer bevat::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:191
+msgid "The final script should look like:"
+msgstr "Het uiteindelijke script zou er als volgt uit moeten zien::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:195
+msgid "Save it and run it, clicking on the running button."
+msgstr "Sla het op en voer het uit door te klikken op de knop voor uitvoeren."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:197
+msgid "In the new window type in the right parameters:"
+msgstr "Typ in het nieuwe venster de juiste parameters in:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:201
+msgid "and click on run."
+msgstr "en klik op Run."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:203
+msgid "Resulting points will be displayed in the map canvas"
+msgstr "De resulterende punten zullen wordne weergegeven in het kaartvenster"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:209
+msgid "R - Processing syntax"
+msgstr "R - Processing syntaxis"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:211
+msgid ""
+"Beware that Processing uses some special syntax to get the results out of R:"
+msgstr "Onthoud dat Processing soms speciale syntaxis gebruikt om de resultaten uit R te verkrijgen:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:213
+msgid ""
+"``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means the "
+"result should be sent to R output (Result viewer)"
+msgstr "``>`` vóór uw opdracht, zoals in\n``>lillie.test(Layer[[Field]])`` betekent dat het resultaat moet wordne verzonden naar uitvoer voor R (Resultaten bekijken)"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:215
+msgid ""
+"``+`` after a plot to call overlay plots. For example ``plot(Layer[[X]], "
+"Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"
+msgstr "``+`` na een plot om overliggende plots aan te roepen. Bijvoorbeeld ``plot(Layer[[X]], Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"

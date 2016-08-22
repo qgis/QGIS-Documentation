@@ -1,0 +1,255 @@
+# 
+# Translators:
+# Armando Vulcano Junior <vulcano@uol.com.br>, 2015
+# Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2014
+# Narcélio de Sá <narceliosapereira@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2015-12-10 17:09+0000\n"
+"Last-Translator: Armando Vulcano Junior <vulcano@uol.com.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/qgis/qgis-documentation/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:11
+msgid "Geometry Handling"
+msgstr "Manipulação Geométrica"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:16
+msgid ""
+"Points, linestrings and polygons that represent a spatial feature are "
+"commonly referred to as geometries. In QGIS they are represented with the "
+":class:`QgsGeometry` class. All possible geometry types are nicely shown in "
+"`JTS discussion page "
+"<http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_."
+msgstr "Pontos, cadeias lineares e polígonos que representam uma característica espacial são comumente referido como geometrias. Em QGIS eles são representados com a classe : class :class:`QgsGeometry`. Todos os tipos possíveis de geometria são mostrados na página de discussão `JTS discussion page <http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:21
+msgid ""
+"Sometimes one geometry is actually a collection of simple (single-part) "
+"geometries. Such a geometry is called a multi-part geometry. If it contains "
+"just one type of simple geometry, we call it multi-point, multi-linestring "
+"or multi-polygon. For example, a country consisting of multiple islands can "
+"be represented as a multi-polygon."
+msgstr "Às vezes, uma geometria é realmente uma coleção dex simples geometrias (single-part). Tal geometria é chamada de geometria de várias partes. Se ele contém apenas um tipo de simples geometria, podemos chamar de multi-ponto, multi-cadeia linear ou multi-polígono. Por exemplo, um país que consiste de múltiplas ilhas pode ser representado como um sistema multi-polígono."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:27
+msgid ""
+"The coordinates of geometries can be in any coordinate reference system "
+"(CRS). When fetching features from a layer, associated geometries will have "
+"coordinates in CRS of the layer."
+msgstr "As coordenadas de geometrias podem estar em qualquer sistema de referência de coordenadas (SRC). Ao buscar feições a partir de uma camada, geometrias associadas terão coordenadas no SRC da camada."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:34
+msgid "Geometry Construction"
+msgstr "Construção de Geométria"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:36
+msgid "There are several options for creating a geometry:"
+msgstr "Existem várias opções para criar uma geometria:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:46
+msgid "Coordinates are given using :class:`QgsPoint` class."
+msgstr "As coordenadas são dadas usando a classe :class:`QgsPoint`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:48
+msgid ""
+"Polyline (Linestring) is represented by a list of points. Polygon is "
+"represented by a list of linear rings (i.e. closed linestrings). First ring "
+"is outer ring (boundary), optional subsequent rings are holes in the "
+"polygon."
+msgstr "Polyline (Cadeia Linear) é representado por uma lista de pontos. Polígono é representado por uma lista de anéis lineares (ou seja, cadeias lineares fechada). Primeiro anel é o anel exterior (fronteira), anéis subsequentes opcionais são buracos no polígono."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:52
+msgid ""
+"Multi-part geometries go one level further: multi-point is a list of points,"
+" multi-linestring is a list of linestrings and multi-polygon is a list of "
+"polygons."
+msgstr "Geometrias multi-parte passam para um nível maior: multi-ponto é uma lista de pontos, multi-cadeia linear é uma lista de cadeias lineares e multi-polígono é uma lista de polígonos."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:73
+msgid "Access to Geometry"
+msgstr "Acesso a Geometria"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:105
+msgid ""
+"Note: the tuples (x,y) are not real tuples, they are :class:`QgsPoint` "
+"objects, the values are accessible with :func:`x` and :func:`y` methods."
+msgstr "Note: as variáveis (x, y) não são variáveis reais, elas são objetos :class:`QgsPoint` , os valores são acessíveis com:os metódos: :func:`x` and :func:`y`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:108
+msgid ""
+"For multipart geometries there are similar accessor functions: "
+":func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`."
+msgstr "Para geometrias de multi-partes existem funções de acesso similares: :func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:114
+msgid "Geometry Predicates and Operations"
+msgstr "Operações e Predicados Geométricos"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:116
+msgid ""
+"QGIS uses GEOS library for advanced geometry operations such as geometry "
+"predicates (:func:`contains`, :func:`intersects`, ...) and set operations "
+"(:func:`union`, :func:`difference`, ...). It can also compute geometric "
+"properties of geometries, such as area (in the case of polygons) or lengths "
+"(for polygons and lines)"
+msgstr "QGIS usa biblioteca GEOS para operações avançadas de geometria como predicados geométrico (:func:`contains`, :func:`intersects`, ...)  e operações de conjunto (:func:`union`, :func:`difference`, ...). Também podem calcular propriedades geométricas das geometrias, tais como a área (no caso de polígonos) ou comprimentos (para polígonos e linhas)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:135
+msgid ""
+"Areas and perimeters don't take CRS into account when computed using these "
+"methods from the :class:`QgsGeometry` class. For a more powerful area and "
+"distance calculation, the :class:`QgsDistanceArea` class can be used. If "
+"projections are turned off, calculations will be planar, otherwise they'll "
+"be done on the ellipsoid. When an ellipsoid is not set explicitly, WGS84 "
+"parameters are used for calculations."
+msgstr "Áreas e perímetros não levam em conta CRS quando calculado usando esses métodos da classe : :class:`QgsGeometry`. Para um cálculo de área e distância mais poderoso, a classe :class:`QgsDistanceArea` pode ser usada. Se as projeções estão desligadas, os cálculos serão planos, caso contrário, eles vão ser feitas no elipsóide. Quando um elipsóide não é definido explicitamente, os parâmetros de WGS84 são utilizados para os cálculos."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:149
+msgid ""
+"You can find many example of algorithms that are included in QGIS and use "
+"these methods to analyze and transform vector data. Here are some links to "
+"the code of a few of them."
+msgstr "Você pode encontrar muitos exemplo de algoritmos que estão incluídos no QGIS e usar esses métodos para analisar e transformar dados vetoriais. Aqui estão alguns links para o código de alguns deles."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:31
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:70
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:111
+msgid "geometry"
+msgstr "geometria"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:5
+msgid "handling"
+msgstr "manipulação"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:31
+msgid "construction"
+msgstr "construção"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:70
+msgid "access to"
+msgstr "para acesso"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:111
+msgid "predicates and operations"
+msgstr "predicados e operações"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:38
+msgid "from coordinates"
+msgstr "a partir das coordenadas"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:56
+msgid "from well-known text (WKT)"
+msgstr "a partir de textos conhecidos (WKT)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:62
+msgid "from well-known binary (WKB)"
+msgstr "a partir de binários conhecidos (WKB)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:75
+msgid ""
+"First, you should find out geometry type, :func:`wkbType` method is the one "
+"to use --- it returns a value from ``QGis.WkbType`` enumeration"
+msgstr "Primeiro, você deve descobrir o tipo de geometria, :func:`wkbType` é o método único a usar --- ele retorna um valor de enumeração do ``QGis.WkbType``"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:89
+msgid ""
+"As an alternative, one can use :func:`type` method which returns a value "
+"from ``QGis.GeometryType`` enumeration. There is also a helper function "
+":func:`isMultipart` to find out whether a geometry is multipart or not."
+msgstr "Como alternativa, pode-se usar o método :func:`type` que retorna um valor de enumeração ``QGis.GeometryType``. Há também uma função de ajuda : :func:`isMultipart` para descobrir se uma geometria é multi-parte ou não."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:93
+msgid ""
+"To extract information from geometry there are accessor functions for every "
+"vector type. How to use accessors"
+msgstr "Para extrair informações de geometria existem funções de acesso para cada tipo de vetor. Como usar acessores"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:122
+msgid ""
+"Here you have a small example that combines iterating over the features in a"
+" given layer and performing some geometric computations based on their "
+"geometries."
+msgstr "Aqui você tem um pequeno exemplo que combina a iteração sobre as caracteríticas em uma determinada camada e executando alguns cálculos geométricos com base em suas geometrias."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:153
+msgid "Additional information can be found in following sources:"
+msgstr "Informação adicional pode ser encontada nas seguintes fontes:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:155
+msgid ""
+"Geometry transformation: `Reproject algorithm "
+"<https://raw.github.com/qgis/QGIS/release-"
+"2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
+msgstr "Transformação Geométrica: `Reproject algorithm <https://raw.github.com/qgis/QGIS/release-2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:156
+msgid ""
+"Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix"
+" algorithm <https://raw.github.com/qgis/QGIS/release-"
+"2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
+msgstr "Distancia e área usando a classe :class:`QgsDistanceArea`: `Distance matrix algorithm <https://raw.github.com/qgis/QGIS/release-2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:157
+msgid ""
+"`Multi-part to single-part algorithm <https://raw.github.com/qgis/QGIS"
+"/release-"
+"2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
+msgstr "Algoritmos de Multi-partes para Partes-simples <https://raw.github.com/qgis/QGIS/release-2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
+
+#~ msgid "from coordinates::"
+#~ msgstr ""
+
+#~ msgid "from well-known text (WKT)::"
+#~ msgstr ""
+
+#~ msgid "from well-known binary (WKB)::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First, you should find out geometry type, :func:`wkbType` method is the one "
+#~ "to use --- it returns a value from QGis.WkbType enumeration::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As an alternative, one can use :func:`type` method which returns a value "
+#~ "from QGis.GeometryType enumeration. There is also a helper function "
+#~ ":func:`isMultipart` to find out whether a geometry is multipart or not."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To extract information from geometry there are accessor functions for every "
+#~ "vector type. How to use accessors::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here you have a small example that combines iterating over the features in a"
+#~ " given layer and perfoming some geometric computations based on their "
+#~ "geometries."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Geometry transformation: `Reproject algorithm <https://raw.github.com/qgis"
+#~ "/Quantum-GIS/release-"
+#~ "2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix"
+#~ " algorithm <https://raw.github.com/qgis/Quantum-GIS/release-"
+#~ "2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Multi-part to single-part algorithm <https://raw.github.com/qgis/Quantum-"
+#~ "GIS/release-"
+#~ "2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
+#~ msgstr ""

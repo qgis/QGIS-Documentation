@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-10 23:17\n"
+"PO-Revision-Date: 2016-07-18 09:30+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/qgis/qgis-documentation/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# 331504d9da744dcdb7906c45e50830aa
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:5
+msgid "|updatedisclaimer|"
+msgstr "|updatedisclaimer|"
+
+# 4a06f75500de45e2ab2ec62df35b4fef
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:10
+msgid "Raster Analysis"
+msgstr "Análise Raster"
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:20
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:38
+msgid "Raster Calculator"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:24
+msgid ""
+"The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu "
+"allows you to perform calculations on the basis of existing raster pixel "
+"values (see figure_raster_10_). The results are written to a new raster "
+"layer with a GDAL-supported format."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:41
+msgid ""
+"The **Raster bands** list contains all loaded raster layers that can be "
+"used. To add a raster to the raster calculator expression field, double "
+"click its name in the Fields list. You can then use the operators to "
+"construct calculation expressions, or you can just type them into the box."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:46
+msgid ""
+"In the **Result layer** section, you will need to define an output layer. "
+"You can then define the extent of the calculation area based on an input "
+"raster layer, or based on X,Y coordinates and on columns and rows, to set "
+"the resolution of the output layer. If the input layer has a different "
+"resolution, the values will be resampled with the nearest neighbor "
+"algorithm."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:52
+msgid ""
+"The **Operators** section contains all available operators. To add an "
+"operator to the raster calculator expression box, click the appropriate "
+"button. Mathematical calculations (``+``, ``-``, ``*``, ... ) and "
+"trigonometric functions (``sin``, ``cos``, ``tan``, ... ) are available. "
+"Stay tuned for more operators to come!"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:57
+msgid ""
+"With the |checkbox| :guilabel:`Add result to project` checkbox, the result "
+"layer will automatically be added to the legend area and can be visualized."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:62
+msgid "Examples"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:64
+msgid "**Convert elevation values from meters to feet**"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:66
+msgid ""
+"Creating an elevation raster in feet from a raster in meters, you need to "
+"use the conversion factor for meters to feet: 3.28. The expression is:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:73
+msgid "**Using a mask**"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:75
+msgid ""
+"If you want to mask out parts of a raster -- say, for instance, because you "
+"are only interested in elevations above 0 meters -- you can use the "
+"following expression to create a mask and apply the result to a raster in "
+"one step."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:83
+msgid ""
+"In other words, for every cell greater than or equal to 0, set its value to "
+"1. Otherwise set it to 0. This creates the mask on the fly."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:87
+msgid ""
+"If you want to classify a raster -- say, for instance into two elevation "
+"classes, you can use the following expression to create a raster with two "
+"values 1 and 2 in one step."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:94
+msgid ""
+"In other words, for every cell less than 50 set its value to 1. For every "
+"cell greater than or equal 50 set its value to 2."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:100
+msgid "Raster Alignment"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:102
+msgid ""
+"This tool is able to take several rasters as input and to align them "
+"perfectly, that means:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:105
+msgid "reproject to the same CRS,"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:106
+msgid "resample to the same cell size and offset in the grid,"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:107
+msgid "clip to a region of interest,"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:108
+msgid "rescale values when required."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:110
+msgid "All rasters will be saved in another files."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:112
+msgid ""
+"First, open the tools from :menuselection:`Raster --> Align Raster...` and "
+"click on the |signPlus| :sup:`Add new raster` button to choose one existing "
+"raster in QGIS. Select an output file to save the raster after the "
+"alignment, the resampling method and if the tools need to `Rescale values "
+"according to the cell size`. You can |symbologyEdit| :sup:`Edit file "
+"settings` and |signMinus| :sup:`Remove an existing file` from the list."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:121
+msgid ""
+"Then in the main `Align raster` window, you can choose one or more options:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:123
+msgid "Select the `Reference Layer`,"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:124
+msgid "Transform into a new `CRS`,"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:125
+msgid "Setup a different `Cell size`,"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:126
+msgid "Setup a different `Grid Offset`,"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:127
+msgid "`Clip to Extent`,"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:128
+msgid "`Output Size`,"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:129
+msgid "`Add aligned raster to the map canvas`."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_analysis.rst:22
+msgid "Raster_Calculator"
+msgstr ""
+
+#~ msgid ""
+#~ "Apart from the raster calculator, additional raster analysis in |qg| 1.7 is "
+#~ "provided by the GDALTools core plugin. Please refer to section "
+#~ ":ref:`label_plugingdaltools` for more information."
+#~ msgstr ""

@@ -1,0 +1,331 @@
+# 
+# Translators:
+# Ioana Dicu <ioana.dicov@gmail.com>, 2015
+# Sorin Călinică <scalinica@gmail.com>, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2016-07-24 19:23+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:9
+msgid "Use R scripts in Processing"
+msgstr "Utilizarea script-urilor R în cadrul procesării"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:11
+msgid ""
+"Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-"
+"water-management>`_"
+msgstr "Modulul a fost dezvoltat de Matteo Ghetta - finanțat de `Școala Superioară Sfânta Anna <http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:13
+msgid "Processing allows to write and run R scripts inside QGIS."
+msgstr "Procesarea permite editarea si executarea script-urilor R în cadrul QGIS."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:15
+msgid ""
+"R has to be installed on your computer and the PATH has to correctly set up."
+" Moreover Processing just calls the external R packages, it is not able to "
+"install them. So be sure to install external packages directly in R. See the"
+" related `chapter "
+"<http://docs.qgis.org/testing/en/docs/user_manual/processing/3rdParty.html#r-creating-r-scripts>`_"
+" in the training manual."
+msgstr "R trebuie instalat în computer, iar directorul trebuie să fie corect setat. Mai mult decât atat, Processing solicită o serie de pachete externe implementate în R, acestea neinstalându-se automat. Asigurați-vă că ați instalat acele pachete direct în R. Pentru mai mult informații puteți consulta `capitolul <http://docs.qgis.org/testing/en/docs/user_manual/processing/3rdParty.html#r-creating-r-scripts>`_ din manualul de instruire."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:21
+msgid ""
+"If you have some *packages* problem, maybe it is related to missing "
+"*mandatory* packages required by Processing, like ``sp``, ``rgdal`` and "
+"``raster``."
+msgstr "Dacă întâmpinați probleme cu unele *pachete*, probabil că nu le-ați încărcat pe cele *obligatorii*, cum ar fi ``sp``, ``rgdal`` si ``raster``."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:25
+msgid "Adding scripts"
+msgstr "Adăugarea script-urilor"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:27
+msgid ""
+"Adding a script is very simple. Open the Processing toolbox and just click "
+"on the :menuselection:`R --> Tools --> Create new R script`."
+msgstr "Adăugarea unui script este foarte simplă. Deschideți Setul de instrumente pentru procesare și dați click pe :menuselection:`R --> Instrumente --> Creați un nou script R`."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:32
+msgid ""
+"If you cannot see R in Processing, you have to activate it in "
+":menuselection:`Processing --> Options --> Providers`"
+msgstr "Dacă nu puteți vizualiza R în Processing, trebuie să îl activați din :menuselection:`Processing --> Opțiuni --> Furnizori`"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:35
+msgid ""
+"It opens a *script editor window* in which you have to specify some "
+"parameters before you can add the script body."
+msgstr "Se va deschide o *fereastră de editare a scriptului* în care va trebui să specificați o serie de parametri, înainte de a putea adăuga corpul scriptului. "
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:43
+msgid "Creating plots"
+msgstr "Crearea diagramelor"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:45
+msgid ""
+"In this tutorial we are going to create a **boxplot** of a vector layer "
+"field."
+msgstr "În cadrul acestui tutorial vom crea o diagramă de tip **boxplot** pentru un câmp al unui strat vectorial."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:47
+msgid "Open the :file:`r_intro.qps` QGIS project."
+msgstr "Deschideți proiectul QGIS :file:`r_intro.qps`."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:51
+#: ../../source/docs/training_manual/processing/r_intro.rst:152
+msgid "Script parameters"
+msgstr "Parametrii scriptului"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:53
+msgid "Open the editor and start writing at the beginning of it."
+msgstr "Deschideți editorul și începeți să scrieți."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:55
+msgid "You **must** specify some parameters **before** the script body:"
+msgstr "Va **trebui** să specificați câțiva parametri **înaintea** editării scriptului:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:57
+msgid "the name of the group in which you want to put your script::"
+msgstr "numele grupului în care doriți să puneți scriptul::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:61
+msgid ""
+"so you will find your script in the **plots** group in the Processing "
+"toolbox."
+msgstr "așadar, veți găsi scriptul în grupul intitulat **plots** din cadrul Instrumentelor Processing."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:63
+msgid ""
+"you have to tell Processing that you want to display a plot (just in this "
+"example)::"
+msgstr "va trebui să specificați faptul că doriți să vizualizați diagrama (la fel ca în acest exemplu)::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:67
+msgid "this way in the **Result Viewer** of Processing you'll see the plot."
+msgstr "diagrama va putea fi observată cu ajutorul comenzii **Vizualizarea Rezultatelor**."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:69
+msgid ""
+"You need also to tell Processing with which kind of data you are working "
+"with. In this example we want to create a plot from a field of a vector "
+"layer::"
+msgstr "De asemenea, va trebui să specificați tipul de date cu care veți lucra. În acest exemplu, dorim să creăm o diagramă utilizând un câmp din baza de date atașată vectorului::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:74
+msgid ""
+"Processing knows now that the input is a vector. The name *Layer* is not "
+"important, what matters is the **vector** parameter."
+msgstr "Processing recunoaște faptul că datele introduse sunt în format vectorial. Numele *layer* nu este important, ci faptul că parametrul introdus este de tip **vector**"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:77
+msgid ""
+"Finally, you have to specify the input field of the vector layer you want to"
+" plot::"
+msgstr "În cele din urmă, va trebui să specificați câmpul de intrare al vectorului pentru care doriți să realizați diagrama::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:81
+msgid "So Processing knows that you have called **X** the **Field Layer**."
+msgstr "Așadar, Processing recunoaște faptul că ați atribuit numele **X** **Câmpului Stratului**."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:84
+#: ../../source/docs/training_manual/processing/r_intro.rst:176
+msgid "Script body"
+msgstr "Corpul scriptului"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:86
+msgid ""
+"Now that you have set up the *heading* of the script you can add the "
+"function::"
+msgstr "O dată ce partea introductivă a scriptului a fost setată, puteți adăuga o funcție::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:90
+msgid ""
+"Notice that **boxplot** is the name of the R function itself that calls "
+"**Layer** as dataset and **X** as the field of the dataset."
+msgstr "Remarcați faptul că **boxplot** este numele funcției R, care folosește un **Strat** pentru setul de date și pe **X** ca și câmp al acelui set de date."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:93
+msgid "The parameter **X** is within a double square bracket ``[[]]``"
+msgstr "Parametrul **X** este încadrat în paranteze pătrate duble ``[[]]``"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:95
+msgid "The final script looks like this::"
+msgstr "Scriptul final va trebui să arate astfel::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:105
+msgid ""
+"Save the script in the default path suggested by Processing. The name you "
+"choose will be the same as the name of the script you'll find in the "
+"Processing toolbox."
+msgstr "Salvați scriptul în calea implicită, propusă de Procesing. Numele pe care îl alegeți va fi similar cu numele script-ului pe care îl veți găsi în caseta instrumentelor Processing."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:108
+msgid ""
+"You can save the script in other paths, but Processing isn't able to upload "
+"them automatically and you have to upload all the scripts manually"
+msgstr "Puteți salva scriptul în alte căi, dar Processing nu este în măsură să le încarce automat, așa că va trebui să încărcați toate script-urile manual"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:111
+msgid "Now just run it using the button on the top of the editor window:"
+msgstr "Acum, doar rulați-l, folosind butonul din partea de sus a ferestrei editorului:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:115
+msgid ""
+"Otherwise, once the editor window has been closed, use the text box of "
+"Processing to find your script:"
+msgstr "În caz contrar, o dată ce fereastra de editare a fost închisă, utilizați caseta de text din Processing pentru a găsi script-ul:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:120
+msgid ""
+"You are now able to fill the parameters required in the Processing algorithm"
+" window:"
+msgstr "Acum aveți posibilitatea de a completa parametrii necesari în fereastra algoritmului Processing:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:122
+msgid "as **Layer** choose the *sample points* one"
+msgstr "ca și **Strat** alegeți-l pe cel cu *puncte eșantion*"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:123
+msgid "fill the **X** field with the **value** parameter"
+msgstr "umpleți câmpul **X** cu parametrul **valoare**"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:125
+msgid "Click on **Run**."
+msgstr "Efectuați clic pe **Executare**."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:129
+msgid ""
+"The **Result window** should be automatically opened, if not, just click on "
+":menuselection:`Processing --> Result Viewer...`."
+msgstr "**Fereastra rezultatelor** ar trebui să fie deschisă în mod automat, dacă nu, doar faceți clic pe :menuselection:`Processing --> Result Viewer...`."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:132
+msgid "This is the final result you'll see:"
+msgstr "Acesta este rezultatul final pe care îl veți vedea:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:136
+msgid "You can open, copy and save the image by right clicking on the plot"
+msgstr "Puteți deschide, copia și salva imaginea, printr-un clic dreapta pe diagramă"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:139
+msgid "Create a vector"
+msgstr "Crearea unui vector"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:141
+msgid ""
+"With an R script you can also create a vector and automatically load it in "
+"QGIS."
+msgstr "De asemenea, cu ajutorul unui script R, puteți crea, un vector și să-l încărcați în mod automat în QGIS. "
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:143
+msgid ""
+"The following example has been taken from the ``Random sampling grid`` "
+"script that you can download from the online collection :menuselection:`R "
+"--> Tools --> Download R scripts from the on-line collection`."
+msgstr "Exemplul următor a fost luat din scriptul ``Rețelei de eșantionare aleatoare``, care poate fi descărcat din colecția online :menuselection:`R --> Tools --> Download R scripts from the on-line collection`."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:147
+msgid ""
+"The aim of this exercise is to create a random point vector in a layer "
+"extent using the ``spsample`` function of the ``sp`` package."
+msgstr "Scopul acestui exercițiu este de a crea un punct vectorial aleatoriu într-o extindere a stratului, folosind funcția ``spsample`` din pachetul ``sp``."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:154
+msgid "As before we have to set some parameters before the script body:"
+msgstr "Ca și mai înainte, avem de stabilit câțiva parametri la începutul script-ului:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:156
+msgid ""
+"specify the name of the group in which you want to put your script, for "
+"example *Point pattern analysis*::"
+msgstr "specificați numele grupului în care doriți să puneți script-ul dvs., de exemplu, *Analiza modelului punctelor*::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:160
+msgid "set the layer that will contain the random points::"
+msgstr "stabiliți stratul care va conține punctele aleatoare::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:164
+msgid "set the number of points that are going to be created::"
+msgstr "stabiliți numărul de puncte care vor fi create::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:168
+msgid ""
+"10 is going to be the default value. You can change this number or you can "
+"leave the parameter without a default number"
+msgstr "10 va fi valoarea automat desemnată. Puteți schimba acest număr sau puteți lăsa parametrul fără un număr implicit"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:171
+msgid "specify that the output is a vector layer::"
+msgstr "specificați faptul că rezultatul este un strat vectorial::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:178
+msgid "Now you can add the body of the function:"
+msgstr "Acum puteți adăuga corpul funcției:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:180
+msgid "run the ``spsample`` function::"
+msgstr "rulați funcția ``spsample``::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:184
+msgid ""
+"this way the function takes the extent of the *Layer*, the number of points "
+"is taken from the *Size* parameter and the point generation is *random*"
+msgstr "în acest fel, funcția preia extinderea *Stratului*, numărul de puncte este luat din parametrul *Dimensiune*, iar generarea punctului este *aleatoare*"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:187
+msgid "Write the line that contains the parameters of the output::"
+msgstr "Scrieți linia care conține parametrii de ieșire::"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:191
+msgid "The final script should look like:"
+msgstr "Scriptul final ar trebui să arate astfel:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:195
+msgid "Save it and run it, clicking on the running button."
+msgstr "Salvați-l și rulați-l, făcând clic pe butonul de rulare."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:197
+msgid "In the new window type in the right parameters:"
+msgstr "În noul tip de fereastră scrieți parametrii potriviți:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:201
+msgid "and click on run."
+msgstr "apoi faceți clic pe rulare."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:203
+msgid "Resulting points will be displayed in the map canvas"
+msgstr "Punctele rezultate vor fi afișate în canevasul hărții"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:209
+msgid "R - Processing syntax"
+msgstr "Sintaxa limbajului R din Processing"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:211
+msgid ""
+"Beware that Processing uses some special syntax to get the results out of R:"
+msgstr "Luați aminte că Processing utilizează o sintaxă specială pentru a obține rezultatele în afara R:"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:213
+msgid ""
+"``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means the "
+"result should be sent to R output (Result viewer)"
+msgstr "``>`` înainte de comanda dvs., ca în ``>lillie.test(Layer[[Field]])`` denotă că rezultatul ar trebui să fie trimis la ieșirea R (Vizualizatorul de rezultate)"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:215
+msgid ""
+"``+`` after a plot to call overlay plots. For example ``plot(Layer[[X]], "
+"Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"
+msgstr "``+`` după o plotare, pentru a suprapune plotările. De exemplu ``plot(Layer[[X]], Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"

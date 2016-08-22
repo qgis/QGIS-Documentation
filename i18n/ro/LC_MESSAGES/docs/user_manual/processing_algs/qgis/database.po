@@ -1,0 +1,221 @@
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2016-07-25 16:30+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:5
+msgid "|updatedisclaimer|"
+msgstr "|updatedisclaimer|"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:8
+msgid "Database"
+msgstr "Baza de date"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:11
+msgid "Import into PostGIS"
+msgstr "Importul în PostGIS"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:14
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:100
+msgid "Description"
+msgstr "Descriere"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:16
+msgid ""
+"Imports a vector layer currently loaded in QGIS into a PostGIS database. "
+"Prior to this a connection between QGIS and the PostGIS database has to be "
+"created (for example with the DB Manager)."
+msgstr "Importă straturile vectoriale existente, din QGIS, într-o bază de date PostGIS. Mai întâi, trebuie să fie creată o conexiune între QGIS și baza de date PostGIS (de exemplu, cu DB Manager)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:21
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:105
+msgid "Parameters"
+msgstr "Parametri"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:24
+msgid "``Layer to import`` [vector: any]"
+msgstr "``Stratul de importat`` [vector: oricare]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:24
+msgid "Existing vector layer in QGIS."
+msgstr "Stratul vectorial existent în QGIS."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:33
+msgid "``Database (connection name)`` [selection]"
+msgstr "``Bază de Date (numele conexiunii)`` [selecție]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:27
+msgid "Name of the database connection (not the database name)."
+msgstr "Numele conexiunii la baza de date (nu cel al bazei de date)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:29
+msgid "Options:"
+msgstr "Opţiuni:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:31
+msgid "0 --- local"
+msgstr "0 --- local"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:33
+msgid "Default: *0*"
+msgstr "Implicit: *0*"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:39
+msgid "``Schema (schema name)`` [string]"
+msgstr "``Schema (numele schemei)`` [șir]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:36
+msgid ""
+"An existing schema of the selected database can be chosen. By default this "
+"is the 'public' schema."
+msgstr "O schemă existentă a bazei de date, selectată din cele care pot fi alese. În mod implicit, aceasta este schema 'public'."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:39
+msgid "Default: *public*"
+msgstr "Implicit: *public*"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:45
+msgid "``Table to import to (leave blank to use layer name)`` [string]"
+msgstr "``Tabela de import (lăsați necompletat pentru a se utiliza numele stratului)`` [șir]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:42
+msgid ""
+"Defines a table name for the imported vector file. By default the name of "
+"the vector file is chosen."
+msgstr "Definește un nume de tabelă pentru fișierul vectorial importat. În mod implicit,  este ales numele fișierului vectorial."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:45
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:112
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:117
+msgid "Default: *(not set)*"
+msgstr "Implicit: *(nesetat)*"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:50
+msgid "``Primary key field`` [tablefield: any]"
+msgstr "``Câmpul cheii primare`` [tablefield: oricare]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:48
+msgid "Optional."
+msgstr "Opțional."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:50
+msgid "Sets the primary key field from an existing field in the vector layer."
+msgstr "Setează câmpul cheii primare dintr-un câmp existent al unui strat vectorial."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:56
+msgid "``Geometry column`` [string]"
+msgstr "``Coloana de geometrie`` [șir]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:53
+msgid ""
+"Defines the name of the geometry column in the new PostGIS table. Geometry "
+"information for the features is stored in this column."
+msgstr "Definește numele coloanei geometriei din noul tabel PostGIS. Date de geometrie ale entităților sunt stocate în această coloană."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:56
+msgid "Default: *geom*"
+msgstr "Implicit: *geom*"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:61
+msgid "``Overwrite`` [boolean]"
+msgstr "``Suprascriere`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:59
+msgid "Overwrites existing tables having the same name."
+msgstr "Suprascrie tabelele existente care au același nume."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:61
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:67
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:74
+msgid "Default: *True*"
+msgstr "Implicit: *True*"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:67
+msgid "``Create spatial index`` [boolean]"
+msgstr "``Creare index spațial`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:64
+msgid ""
+"Specify whether to create a spatial index or not. By default a spatial index"
+" is created."
+msgstr "Stabilește dacă se va crea un indice spațial sau nu. În mod implicit, este creat un index spațial."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:74
+msgid "``Convert field names to lowercase`` [boolean]"
+msgstr "``Conversie în minuscule a numelor de câmpuri`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:70
+msgid ""
+"If activated this prevents the field names of the input vector layer from "
+"being converted to lowercase. By default field names will be lowercase after"
+" the import."
+msgstr "Dacă se activează, acest lucru previne conversia în litere mici a numelor câmpurilor din stratul vectorial de intrare. În mod implicit, numele câmpurilor vor fi scrise cu minuscule după import."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:81
+msgid "``Drop length constraints on character fields`` [boolean]"
+msgstr "``Anulare constrângeri de lungime pentru câmpurile de caractere`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:77
+msgid ""
+"Specify whether the length constraints on character fields should be dropped"
+" or not. By default the length constraints are applied."
+msgstr "Stabilește dacă vor fi constrângeri de lungime pentru caracterele câmpurilor. În mod implicit, sunt aplicate constrângeri de lungime."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:81
+msgid "Default: *False*"
+msgstr "Implicit: *False*"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:84
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:120
+msgid "Outputs"
+msgstr "Rezultat"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:87
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:123
+msgid "Console usage"
+msgstr "Utilizarea consolei"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:94
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:130
+msgid "See also"
+msgstr "Vedeți și"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:97
+msgid "PostGIS execute SQL"
+msgstr "Comenzi SQL executate de PostGIS"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:102
+msgid ""
+"Allows a SQL database query to be performed on a PostGIS database connected "
+"to QGIS."
+msgstr "Face posibilă executarea unei interogări SQL într-o bază de date PostGIS, conectată la QGIS."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:112
+msgid "``Database`` [string]"
+msgstr "``Baza de date`` [șir]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:108
+msgid ""
+"Name of the database, not the connection name. By default you don't have to "
+"fill in the name, the current database connection will be chosen."
+msgstr "Numele bazei de date, nu cel al conexiunii. Nu trebuie să completați numele, conexiunea curentă a bazei de date fiind aleasă în mod implicit."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:117
+msgid "``SQL query`` [string]"
+msgstr "``Interogare SQL`` [șir]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:115
+msgid "Defines the SQL query, for example 'create schema test;'."
+msgstr "Definește interogarea SQL, de exemplu, 'create schema test;'."

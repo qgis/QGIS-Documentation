@@ -1,0 +1,774 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# 
+# Translators:
+# Pedro Filipe Alves Ribeiro <pedrib.stt@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2016-07-18 09:38+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Portuguese (Portugal) (http://www.transifex.com/qgis/qgis-documentation/language/pt_PT/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# 40838fab4f6c4e689989a7e03f5fcabb
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:9
+msgid "Vector Data"
+msgstr "Dados Vectoriais"
+
+# 3095ad9c1cab4b358f5d6c888c7ca893
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:12
+msgid "Objectives:"
+msgstr "Objectivos:"
+
+# 3b215ac21ad743c98efc1dd4c23967d1
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:12
+msgid "Understanding of vector data models as used in GIS."
+msgstr "Compreender a utilização de modelos de dados vectoriais em ambiente SIG"
+
+# fe37e155f9db4ddf9b480e4f744bf9ed
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:14
+msgid "Keywords:"
+msgstr "Palavras Chave:"
+
+# 7dc0db8a6ca643d4b063e4789bfd974e
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:14
+msgid ""
+"Vector, Point, Polyline, Polygon, Vertex, Geometry, Scale, Data Quality, "
+"Symbology, Data Sources"
+msgstr "Vetor, Ponto, Polilinha, Vértice, Geometria, Escala, Qualidade dos dados, Simbologia, Origem dos dados"
+
+# bcb69c7f3e4e4ab2bde4156097c4a729
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:18
+msgid "Overview"
+msgstr "Resumo"
+
+# dcd3901b02a94b10bf445d1b2890c47f
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:20
+msgid ""
+"**Vector** data provide a way to represent real world **features** within "
+"the GIS environment. A feature is anything you can see on the landscape. "
+"Imagine you are standing on the top of a hill. Looking down you can see "
+"houses, roads, trees, rivers, and so on (see figure_landscape_). Each one of"
+" these things would be a **feature** when we represent them in a GIS "
+"Application. Vector features have **attributes**, which consist of text or "
+"numerical information that **describe** the features."
+msgstr "A representação vectorial de dados oferece uma forma de descrever  elementos do mundo real em ambiente SIG. Uma **entidade** é qualquer elemento de características distintivas observável na paisagem. Imagine-se no topo de uma colina. Ao olhar para baixo poderá ver casas, estradas, árvores, rios, etc. (ver figure_landscape_). Cada um destes elementos tornar-se-á uma **entidade** quando for representado numa aplicação SIG. As entidades vectoriais possuem **atributos** que consistem na informação alfanumérica utilizada na sua descrição."
+
+# 9e2cd623b27d400eb4a62c28a0f67aef
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:38
+msgid ""
+"Looking over a landscape you can see the main features, such as roads, "
+"houses and trees."
+msgstr "Ao observar uma paisagem poderá identificar as suas entidades principais tais como: estradas, casas e árvores."
+
+# 8f3175ba2fcd43418f21fbe937ffffd6
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:41
+msgid ""
+"A vector feature has its shape represented using **geometry**. The geometry "
+"is made up of one or more interconnected **vertices**. A vertex describes a "
+"position in space using an **X**, **Y** and optionally **z** axis. "
+"Geometries which have vertices with a ``Z`` axis are often referred to as "
+"**2.5D** since they describe height or depth at each vertex, but not both."
+msgstr "A forma ou feitio de uma entidade vectorial é descrita através de uma **geometria**. Uma **geometria** consiste em um ou mais **vértices** interligados. Cada **vértice** define uma posição no plano cartesiano  através de um par de coordenadas **X**, **Y**. **Geometrias** em que uma terceira coordenada, **Z**, defina a posição de um vértice no espaço, designam-se **2.5D**, uma vez que lhe conferem altura ou profundidade mas não ambas."
+
+# cbb4714d11974ae980baf8e0cec86985
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:64
+msgid ""
+"A point feature is described by its X, Y and optionally Z coordinate. The "
+"point attributes describe the point e.g. if it is a tree or a lamp post."
+msgstr "Uma entidade ponto é descrita pelas suas coordenadas X, Y (e opcionalmente, Z) e pelos seus atributos. Estes últimos indicam-nos, p. ex., se o ponto se refere a uma árvore ou a um poste de iluminação pública."
+
+# 1778f98b39bc473bb37f9ef471573e69
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:77
+msgid ""
+"A polyline is a sequence of joined vertices. Each vertex has an X, Y (and "
+"optionally Z) coordinate. Attributes describe the polyline."
+msgstr "Uma polilinha é uma sequência de vértices interligados. Cada vértice está definido pelas suas coordenadas X, Y (e opcionalmente, Z) e pelos seus atributos."
+
+# 871921abc24d4cbaa53f31b5219daecc
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:90
+msgid ""
+"A polygon, like a polyline, is a sequence of vertices. However in a polygon,"
+" the first and last vertices are always at the same position."
+msgstr "Tal como uma polilinha, um polígono consiste numa sequência de vértices. Todavia, num polígono, o primeiro e último vértices ocupam sempre a mesma posição."
+
+# 16af75c450844166a51d00df59654eb7
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:93
+msgid ""
+"Looking back at the picture of a landscape we showed you further up, you "
+"should be able to see the different types of features in the way that a GIS "
+"represents them now (see illustration figure_geometry_landscape_)."
+msgstr "Reportando-se à figura da paisagem exibida anteriormente, deveria ser-lhe agora possível observar como os diferentes tipos de elementos aparecem representados em entidades SIG (ver ilustração figure_geometry_landscape_)"
+
+# 519858dd7f6c4342b765f3c4f65199f6
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:107
+msgid ""
+"Landscape features as we would present them in a GIS. Rivers (blue) and "
+"roads (green) can be represented as lines, trees as points (red) and houses "
+"as polygons (white)."
+msgstr "Entidades da paisagem conforme representadas em ambiente SIG. Rios (a azul) e estradas (a verde) podem representar-se como linhas, árvores como pontos (a vermelho) e casas como polígonos (a branco)."
+
+# bbb25674e284465e80c7c9cae2293abc
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:112
+msgid "Point features in detail"
+msgstr "Entidades Ponto - Detalhes"
+
+# 3a0e9d9117a743e395543db749cf133f
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:114
+msgid ""
+"The first thing we need to realise when talking about point features is that"
+" what we describe as a point in GIS is a matter of opinion, and often "
+"dependent on scale. let's look at cities for example. If you have a small "
+"scale map (which covers a large area), it may make sense to represent a city"
+" using a point feature. However as you zoom in to the map, moving towards a "
+"larger scale, it makes more sense to show the city limits as a polygon."
+msgstr "A primeira ideia a reter quando nos referimos a entidades ponto é a de que a descrição de um ponto num SIG é subjectiva e frequentemente dependente da escala. Tomemos o exemplo das cidades: se a escala do nosso mapa é pequena (grande área de cobertura), poderá fazer sentido representar uma cidade utilizando uma entidade ponto. Porém, se aumentarmos a escala de visualização, será mais adequado exibir a mesma cidade através de uma entidade polígono."
+
+# 5efdc102ce5e45b7bf4f0d1ae1831e4c
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:121
+msgid ""
+"When you choose to use points to represent a feature is mostly a matter of "
+"scale (how far away are you from the feature), convenience (it takes less "
+"time and effort to create point features than polygon features), and the "
+"type of feature (some things like telephone poles just don't make sense to "
+"be stored as polygons)."
+msgstr "Escolher representar uma entidade como um ponto é principalmente uma questão de escala (de visualização adoptada pelo utilizador), de conveniência (as entidades ponto são mais fáceis e rápidas de criar que as entidades polígono) e do tipo de entidade a representar (não é razoável representar postes telefónicos como entidades do tipo polígono)."
+
+# bc428ad96675404f8a114850f7cb524d
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:138
+msgid ""
+"Since we know the earth is not flat, it is often useful to add a Z value to "
+"a point feature. This describes how high above sea level you are."
+msgstr "Dado que a superfície terrestre não é plana mas rica em acidentes topográficos, torna-se muitas vezes útil adicionar uma coordenada Z à descrição da entidade ponto. Este valor é uma medida da altura desta entidade relativamente ao nível médio das águas do mar."
+
+# 4a0b208686a0428a87ccac300c56a15c
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:142
+msgid "Polyline features in detail"
+msgstr "Entidades Polilinha - Detalhes"
+
+# 97c09cb718244e6d9fdc03e6ae67bd31
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:149
+msgid ""
+"A polyline is used to show the geometry of **linear features** such as "
+"roads, rivers, contours, footpaths, flight paths and so on. Sometimes we "
+"have special rules for polylines in addition to their basic geometry. For "
+"example contour lines may touch (e.g. at a cliff face) but should never "
+"cross over each other. Similarly, polylines used to store a road network "
+"should be connected at intersections. In some GIS applications you can set "
+"these special rules for a feature type (e.g. roads) and the GIS will ensure "
+"that these polylines always comply to these rules."
+msgstr "A geometria de **entidades lineares** tais como estradas, rios, curvas de nível, caminhos pedonais, rotas aéreas, etc., é exibida através de  polilinhas. A esta geometria básica torna-se por vezes necessário associar regras especiais. As curvas de nível, por exemplo, podem tocar-se (casos onde o terreno é escarpado) mas nunca cruzar-se. De maneira idêntica, as polilinhas utilizadas para armazenar uma rede de estradas devem estar ligadas nos respectivos cruzamentos e/ou entroncamentos. Em algumas aplicações SIG, estas regras podem definir-se de acordo com o tipo de entidade a representar (p.ex. estradas) e o sistema garantirá assim que essas polilinhas respeitem sempre essa definição."
+
+# e241e63c3bca433891c6de3fa2ddb92f
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:174
+msgid ""
+"Polylines viewed at a smaller scale (1:20 000 to the left) may appear smooth"
+" and curved. When zoomed in to a larger scale (1:500 to the right) polylines"
+" may look very angular."
+msgstr "Quando visualizadas a escalas pequenas (1:20 000, do lado esquerdo) as polilinhas podem aparentar um contorno curvilíneo suave. Quando visualizadas a escalas grandes (1:500, do lado direito) tomam frequentemente um aspecto segmentado anguloso."
+
+# fe709652c00e4e318dbeaf228f27982f
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:178
+msgid ""
+"The **attributes** of a polyline decribe its properties or characteristics. "
+"For example a road polyline may have attributes that describe whether it is "
+"surfaced with gravel or tar, how many lanes it has, whether it is a one way "
+"street, and so on. The GIS can use these attributes to symbolise the "
+"polyline feature with a suitable colour or line style."
+msgstr "Os **atributos** de uma polilinha descrevem as suas propriedades ou características. Uma polilinha que represente uma estrada, p. ex., pode ter atributos que descrevam o material com que foi pavimentada (gravilha, asfalto, ... ), o número de vias que possui, se se trata de uma rua de sentido único e assim por diante. Um SIG pode utilizar estes atributos para exibir aquela entidade polilinha com cores ou estilos de linha diferenciados."
+
+# 8bc301a841ea4382b2a6dff519b44d4a
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:185
+msgid "Polygon features in detail"
+msgstr "Entidades Polígono - Detalhes"
+
+# bd407a8476ec476392dc4837319d4884
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:187
+msgid ""
+"Polygon features are **enclosed areas** like dams, islands, country "
+"boundaries and so on. Like polyline features, polygons are created from a "
+"series of vertices that are connected with a continuous line. However "
+"because a polygon always describes an enclosed area, the first and last "
+"vertices should always be at the same place! Polygons often have **shared "
+"geometry** –-- boundaries that are in common with a neighbouring polygon. "
+"Many GIS applications have the capability to ensure that the boundaries of "
+"neighbouring polygons exactly coincide. We will explore this in the "
+":ref:`gentle_gis_topology` topic later in this tutorial."
+msgstr "As entidades polígono são **áreas fechadas** tais como barragens; ilhas, fronteiras de países, etc.. À semelhança das entidade polilinha, os polígonos criam-se à custa de vértices interligados por uma linha contínua. Todavia, uma vez que um polígono descreve sempre uma área fechada, os seus primeiro e último vértices devem sempre ocupar a mesma posição! Os polígonos possuem frequentemente **geometria partilhada** isto é, contornos ou fronteiras comuns a polígonos vizinhos. Muitas aplicações SIG tem a capacidade de assegurar automaticamente a coincidência entre contornos de polígonos contíguos. Um pouco mais à frente, no tópico :ref:`gentle_gis_topology` veremos este assunto desenvolvido."
+
+# 449e579d6a16496d8aa5936aeb6c3c6b
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:196
+msgid ""
+"As with points and polylines, polygons have **attributes**. The attributes "
+"describe each polygon. For example a dam may have attributes for depth and "
+"water quality."
+msgstr "Da mesma forma que os pontos e as polilinhas, os polígonos também tem **atributos**. Os atributos descrevem cada polígono. Por exemplo, uma barragem pode ter atributos com informações sobre a profundidade e a qualidade da água."
+
+# f71c882c127a41589e09a5ee24155dd3
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:201
+msgid "Vector data in layers"
+msgstr "Dados vectoriais - Camadas"
+
+# 297dbe2d50344483b1702eba6bea2226
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:203
+msgid ""
+"Now that we have described what vector data is, let's look at how vector "
+"data is managed and used in a GIS environment. Most GIS applications group "
+"vector features into **layers**. Features in a layer have the the same "
+"geometry type (e.g. they will all be points) and the same kinds of "
+"attributes (e.g. information about what species a tree is for a trees "
+"layer). For example if you have recorded the positions of all the footpaths "
+"in your school, they will usually be stored together on the computer hard "
+"disk and shown in the GIS as a single layer. This is convenient because it "
+"allows you to hide or show all of the features for that layer in your GIS "
+"application with a single mouse click."
+msgstr "Depois de descrevermos os dados vectoriais, vamos perceber como são geridos e utilizados em ambiente SIG. A maioria das aplicações SIG agrupa as entidades vectoriais por **camadas**. As entidades pertencentes a uma camada possuem o mesmo tipo de geometria (p. ex. são todas pontos) e os mesmo tipo de atributos (p. ex. numa camada de árvores, guardam informação sobre qual a espécie a que cada árvore pertence). O levantamento de todos os percursos pedonais de uma escola é provavelmente armazenado em conjunto no disco rígido do computador e exibido no SIG como uma única camada. Isto é conveniente porque vai permitir, com um único toque de rato, mostrar ou esconder, na janela de visualização, todas as entidades dessa camada."
+
+# 3a950e02957f493483b8e7e5f1798d0a
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:214
+msgid "Editing vector data"
+msgstr "Dados Vectoriais - Edição"
+
+# 73164678b03f47d5ac1d14ea844bb0af
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:216
+msgid ""
+"The GIS application will allow you to create and modify the geometry data in"
+" a layer --– a process called **digitising** –-- which we will look at more "
+"closely in a later tutorial. If a layer contains polygons (e.g. farm dams), "
+"the GIS application will only allow you to create new polygons in that "
+"layer. Similarly if you want to change the shape of a feature, the "
+"application will only allow you to do it if the changed shape is correct. "
+"For example it won't allow you to edit a line in such a way that it has only"
+" one vertex –-- remember in our discussion of lines above that all lines "
+"must have at least two vertices."
+msgstr "Uma aplicação SIG permite criar e modificar os dados das geometrias presentes numa camada através de um processo designado **digitalização** de que falaremos com mais detalhe num tutorial avançado. Se uma dada camada contêm polígonos (p. ex. charcos de água), a aplicação SIG permitirá aí a criação de apenas outros polígonos. De maneira idêntica, se se desejar modificar a forma de uma entidade, a aplicação só o permitirá na medida em que a forma resultante seja a correcta. Exemplificando: a aplicação não permitirá editar uma linha de tal forma que o resultado seja apenas um vértice (relembrar, na discussão anterior sobre linhas, o facto de todas estas terem obrigatoriamente pelo menos dois vértices)"
+
+# e358a2672c2b405a98123bd87fec6088
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:225
+msgid ""
+"Creating and editing vector data is an important function of a GIS since it "
+"is one of the main ways in which you can create personal data for things you"
+" are interested in. Say for example you are monitoring pollution in a river."
+" You could use the GIS to digitise all outfalls for storm water drains (as "
+"point features). You could also digitise the river itself (as a polyline "
+"feature). Finally you could take readings of pH levels along the course of "
+"the river and digitise the places where you made these readings (as a point "
+"layer)."
+msgstr "A criação e edição de dados vectoriais são funções importantes de um SIG uma vez que constituem uma das principais formas de associarmos dados personalizados às entidades que nos interessa caracterizar. Digamos que estamos interessados em monitorizar poluentes num rio. Podemos utilizar o SIG para digitalizar ou vectorizar (como entidades ponto) todos os emissários de redes de drenagem pluvial encontrados ao longo do seu curso. Podemos inclusivamente vectorizar o rio (como uma entidade polilinha) e finalmente associar leituras dos níveis de pH, aos locais onde foram realizadas (vectorizando esses locais numa camada de entidades ponto)."
+
+# 1ec0ae72457e46ac84c3599aed5fac25
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:233
+msgid ""
+"As well as creating your own data, there is a lot of free vector data that "
+"you can obtain and use. For example, you can obtain vector data that appears"
+" on the 1:50 000 map sheets from the Chief Directorate: Surveys and Mapping."
+msgstr "Além de toda a informação que podemos criar, existem também muitos dados vectoriais de utilização livre e gratuita. Podemos p. ex. obter dados vectoriais das folhas da carta 1:50 000 do Instituto Cartográfico Nacional Sul-Africano."
+
+# d015a381fb3d483ba3b67b01aaa0ae74
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:238
+msgid "Scale and vector data"
+msgstr "Dados Vectoriais e Escala"
+
+# 0bbdb278421545598c751d3cd48ca291
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:264
+msgid ""
+"Vector data (red lines) that was digitised from a small scale (1:1000 000) "
+"map."
+msgstr "Dados vectoriais (linhas vermelhas) digitalizados a partir de uma carta de pequena escala (1:1 000 000)."
+
+# 3eb91b0d45da45fc9d1555d90271ecf7
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:276
+msgid ""
+"Vector data (green lines) that was digitised from a large scale (1:50 000) "
+"map."
+msgstr "Dados vectoriais (linhas verdes) digitalizados a partir de um mapa de grande escala (1:50 000)."
+
+# 0e505eb2e0c149b18807c6c506ddffd5
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:279
+msgid "Symbology"
+msgstr "Simbologia"
+
+# b90b41f096284b6591ca4a13d3f14fe0
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:301
+msgid ""
+"In the GIS, you can use a panel (like the one above) to adjust how features "
+"in your layer should be drawn."
+msgstr "Em ambiente SIG podemos utilizar um painel (como o apresentado em cima) para definir a forma como as entidades de uma camada devem ser exibidas."
+
+# 327d2c7aafd04a079413b89fa42bcbef
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:314
+msgid ""
+"When a layer (for example the trees layer above) is first loaded, a GIS "
+"application will give it a generic symbol."
+msgstr "Quando uma camada (p. ex. a camada de árvores acima) é carregada no SIG pela primeira vez, esta aplicação atribui-lhe um símbolo genérico."
+
+# 4bce3b3c112849618a6608263dc33657
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:327
+msgid ""
+"After making our adjustments it is much easier to see that our points "
+"represent trees."
+msgstr "Depois de fazermos alguns ajustamentos torna-se mais fácil de perceber que os nossos pontos representam árvores."
+
+# 036ae53bbec44f548ac259941ccadd8f
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:330
+msgid ""
+"Symbology is a powerful feature, making maps come to life and the data in "
+"your GIS easier to understand. In the topic that follows "
+"(:ref:`gentle_gis_attributes`) we will explore more deeply how symbology can"
+" help the user to understand vector data."
+msgstr "A simbologia é uma característica poderosa de um SIG, tornando os mapas mais apelativos e os dados mais fáceis de interpretar. No tópico que se segue (:ref:`gentle_gis_attributes`) iremos explorar em maior profundidade o modo como a simbologia pode auxiliar um utilizador a compreender dados vectoriais."
+
+# 2b768c7033264aa39b78b26637ec220f
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:336
+msgid "What can we do with vector data in a GIS?"
+msgstr "Num SIG, que é possível fazermos com dados vectoriais?"
+
+# a84fd684126d4cac90ba2de330520768
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:338
+msgid ""
+"At the simplest level we can use vector data in a GIS Application in much "
+"the same way you would use a normal topographic map. The real power of GIS "
+"starts to show itself when you start to ask questions like 'which houses are"
+" within the 100 year flood level of a river?'; 'where is the best place to "
+"put a hospital so that it is easily accessible to as many people as "
+"possible?'; 'which learners live in a particular suburb?'. A GIS is a great "
+"tool for answering these types of questions with the help of vector data. "
+"Generally we refer to the process of answering these types of questions as "
+"**spatial analysis**. In later topics of this tutorial we will look at "
+"spatial analysis in more detail."
+msgstr "Em termos simples, numa aplicação SIG, podemos utilizar dados vectoriais da mesma maneira que utilizaríamos os dados analógicos de um mapa topográfico. O verdadeiro poder do SIG começa a revelar-se quando se colocam questões tais como: \"Quantas casas se encontram abrangidas pelo leito de inundação da 'cheia centenária' de um rio?\" ou \"Qual o melhor local para se construir um hospital garantindo a acessibilidade do maior número possível de utentes?\". Ou ainda: \"Quantos alunos vivem num dado bairro?\". Um SIG, apoiado na utilização de dados vectoriais, torna-se uma excelente ferramenta para responder a este tipo de questões. Geralmente, este processo de resposta designa-se por **análise espacial**. Nalguns tópicos mais adiante este assunto será abordado com maior detalhe. "
+
+# 6c477961269941ed802afc3654864b6e
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:349
+msgid "Common problems with vector data"
+msgstr "Dados vectoriais - Problemas comuns"
+
+# 0aa5bbf77df640b695cee4852bc00334
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:351
+msgid ""
+"Working with vector data does have some problems. We already mentioned the "
+"issues that can arise with vectors captured at different scales. Vector data"
+" also needs a lot of work and maintenance to ensure that it is accurate and "
+"reliable. Inaccurate vector data can occur when the instruments used to "
+"capture the data are not properly set up, when the people capturing the data"
+" aren't being careful, when time or money don't allow for enough detail in "
+"the collection process, and so on."
+msgstr "Trabalhar com dados vectoriais acarreta alguns problemas. Já mencionámos as questões que se podem levantar com vectores obtidos em diferentes escalas. A precisão e fiabilidade desses dados só se garantem à custa de trabalho e manutenção. Os dados vectoriais podem sofrer imprecisões quando os aparelhos utilizados na sua recolha não são devidamente operados ou calibrados ou quando os recursos empregues (prazos ou orçamentos) não permitem desenvolver o processo de recolha com o rigor suficiente."
+
+# f8b2d26156554923bdef6f2fe4733115
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:359
+msgid ""
+"If you have poor quality vector data, you can often detect this when viewing"
+" the data in a GIS. For example **slivers** can occur when the edges of two "
+"polygon areas don't meet properly (see figure_vector_slivers_)."
+msgstr "Num SIG consegue-se muitas vezes avaliar a qualidade dos dados vectoriais. Isto acontece quando por exemplo, entre dois polígonos, se verifica a existência de uma **fresta** ou seja quando fronteiras comuns não coincidem (ver figure_vector_slivers_)."
+
+# 50d9b68b058e4e62b9db81c7082aa0a6
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:373
+msgid ""
+"Slivers occur when the vertices of two polygons do not match up on their "
+"borders. At a small scale (e.g. 1 on left) you may not be able to see these "
+"errors. At a large scale they are visible as thin strips between two "
+"polygons (2 on right)."
+msgstr "As frestas ocorrem quando os vértices de dois polígonos não se encontram sobre as suas fronteiras. A uma escala pequena (p. ex. 1, do lado esquerdo) talvez não se consigam distinguir esses erros. Numa escala grande porém, eles aparecem como faixas estreitas compreendidas entre cada polígono (2, do lado direito). "
+
+# 903697639777471486b6355d6cac45a2
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:378
+msgid ""
+"**Overshoots** can occur when a line feature such as a road does not meet "
+"another road exactly at an intersection. **Undershoots** can occur when a "
+"line feature (e.g. a river) does not exactly meet another feature to which "
+"it should be connected. Figure figure_vector_overshoots_ demonstrates what "
+"undershoots and overshoots look like."
+msgstr "As transposições ocorrem quando uma entidade linha (p. ex. uma estrada) que queremos ligar a uma outra, a intercepta, ultrapassando-a, sem entroncar perfeitamente nela. [a rever] As suspensões ocorrem quando uma entidade linha (p. ex. um rio) não chega a entroncar perfeitamente noutra à qual desejaríamos que se ligasse. [idem] A figura figure_vector_overshoots_ ilustra os conceitos de transposição e suspensão."
+
+# 7b7d7267b1cb427abf0c6ad9ec7fb7ec
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:394
+msgid ""
+"Undershoots (1) occur when digitised vector lines that should connect to "
+"each other don’t quite touch. Overshoots (2) happen if a line ends beyond "
+"the line it should connect to."
+msgstr "A  suspensão (1) ocorre quando linhas vectorizadas que deviam ligar-se uma à outra não entram efectivamente em contacto. A transposição (2) ocorre quando uma linha termina para além da outra à qual se deveria ligar. "
+
+# a735ca368d134c76afe1ef59f32c9c8b
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:398
+msgid ""
+"Because of these types of errors, it is very important to digitise data "
+"carefully and accurately. In the upcoming topic on **topology**, we will "
+"examine some of these types of errors in more detail."
+msgstr "Em face do erros que podem ocorrer, é muito importante vectorizar os dados de forma cuidadosa e precisa. No próximo tópico, Topologia, examinaremos alguns destes erros ao pormenor."
+
+# 5081f93a94d344c3b779624c70b2bc5e
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:403
+msgid "What have we learned?"
+msgstr "O que é que aprendemos até aqui?"
+
+# 11028c4f5663442dbe77653e2d6bc209
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:405
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Vamos sintetizar os assuntos abrangidos por esta ficha de trabalho:"
+
+# 7007a8c0096f4775b670ac0cd56de860
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:407
+msgid "**Vector data** is used to represent real world **features** in a GIS."
+msgstr "Num SIG, os **dados vectoriais** são utilizados para representar elementos do mundo real (a essa representação chamámos entidade)."
+
+# a2944864565e488db9b73f08cf3e534b
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:408
+msgid ""
+"A vector feature can have a **geometry** type of **point**, **line** or a "
+"**polygon**."
+msgstr "Uma entidade vectorial pode ter um **geometria** do tipo **ponto**, **linha**/**polilinha** ou **polígono**."
+
+# cc83dae3830c43d3912b8085c003728d
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:410
+msgid "Each vector feature has **attribute data** that describes it."
+msgstr "Cada entidade vectorial possuí **atributos** alfanuméricos que a descrevem."
+
+# 5c6ab7620c3040d9bae087dbc3bf0c6a
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:411
+msgid "Feature geometry is described in terms of **vertices.**"
+msgstr "A geometria das entidades é descrita à custa de **vértices**."
+
+# 213c6356a1ab44c7aec7adcaab13a2e8
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:412
+msgid ""
+"Point geometries are made up of a **single vertex** (X,Y and optionally Z)."
+msgstr "A geometria do ponto constitui-se de um **vértice único** (de coordenadas X, Y e opcionalmente Z)."
+
+# 91c39088b8db4c0d92838240724bf2db
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:413
+msgid ""
+"Polyline geometries are made up of **two or more** vertices forming a "
+"connected line."
+msgstr "A geometria da polilinha constitui-se de **dois ou mais** vértices interligados por uma linha. "
+
+# f30d19d00a16450687bb9067a9151887
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:415
+msgid ""
+"Polygon geometries are made up of **at least four vertices** forming an "
+"enclosed area. The first and last vertices are always in the same place."
+msgstr "A geometria do polígono constitui-se de **pelo menos quatro vértices** que dão forma a uma área fechada. A posição do primeiro e último vértices tem obrigatoriamente de coincidir."
+
+# 187d1a2ef4dd4628a74ac275ae7aeb10
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:417
+msgid ""
+"Choosing which geometry type to use depends on scale, convenience and what "
+"you want to do with the data in the GIS."
+msgstr "A escolha do tipo de geometria a utilizar depende da escala de visualização, da conveniência e do fim a que se destinam os dados que armazenamos no SIG."
+
+# 3bf231ae3564486583b022f3671e8cca
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:419
+msgid ""
+"Most GIS applications do not allow you to mix more than one geometry type in"
+" a single layer."
+msgstr "A maioria das aplicações SIG não permite combinar geometrias de diferentes tipos numa mesma camada."
+
+# d3ab5491a9584ca4a108a7a3e5afa53c
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:421
+msgid ""
+"Digitising is the process of creating digital vector data by drawing it in a"
+" GIS application."
+msgstr "A vectorização é o processo de delinear, numa aplicação SIG, dados vectoriais. [Os dados vectoriais resultam da representação digital (por oposição a analógica) de elementos do mundo real.]"
+
+# c16cc0af871744d9b26e16f095b3603e
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:423
+msgid ""
+"Vector data can have quality issues such as **undershoots**, **overshoots** "
+"and **slivers** which you need to be aware of."
+msgstr "Os dados vectoriais podem ver a sua qualidade afectada por erros aos quais precisamos de estar atentos: **suspensões**, **transposições** e **frestas**. "
+
+# aa3f2061f5ee4745b19bdd1b528fbf21
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:425
+msgid ""
+"Vector data can be used for **spatial analysis** in a GIS application, for "
+"example to find the nearest hospital to a school."
+msgstr "Numa aplicação SIG, os dados vectoriais podem ser utilizados em **análise espacial** para, por exemplo, encontrar o hospital mais próximo de uma determinada escola."
+
+# 22a604694d77437ebf6aafa43d8e1113
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:428
+msgid ""
+"We have summarised the GIS Vector Data concept in Figure "
+"figure_vector_summary_."
+msgstr "Sintetizamos o conceito de Dados Vectoriais SIG na figura figure_vector_summary_."
+
+# 5838676daa8e4932821d1cdaa01f05eb
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:440
+msgid "This diagram shows how GIS applications deal with vector data."
+msgstr "Este diagrama mostra como as aplicações SIG lidam com os dados vectoriais."
+
+# ba8979dae74e454895b7c0cadc8a3c40
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:443
+msgid "Now you try!"
+msgstr "Agora vamos experimentar!"
+
+# 127f7e6a8adc47d4af5614dc9eecaf01
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:445
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Aqui estão algumas ideias para experimentarem com os vossos alunos:"
+
+# b723c6caf55646ca800d20f471f78b61
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:447
+msgid ""
+"Using a copy of a toposheet map for your local area (like the one shown in "
+"figure_sample_map_), see if your learners can identify examples of the "
+"different types of vector data by highlighting them on the map."
+msgstr "Usando uma cópia de um mapa topográfico da vossa região (como o apresentado na figure_sample_map_), vejam se os vossos alunos conseguem identificar e assinalar exemplos de diferentes tipos de dados vectoriais. "
+
+# 1b561d54f7504c1284fb1a3a9215709d
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:450
+msgid ""
+"Think of how you would create vector features in a GIS to represent real "
+"world features on your school grounds. Create a table of different features "
+"in and around your school and then task your learners to decide whether they"
+" would be best represented in the GIS as a point, line or polygon. See "
+"table_vector_1_ for an example."
+msgstr "Pensem na forma de criar num SIG, entidades vectoriais que representem elementos do mundo real presentes nos terrenos da vossa escola. Elaborem uma tabela com esses elementos e atribuam aos alunos a tarefa de decidir qual a tipo de entidade que melhor se adequa à sua representação: ponto, linha/polilinha ou polígono. Ver como exemplo a tabela table_vector_1_."
+
+# 9dc92982c5a44d0fa0bfa42a0a1a4d50
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:466
+msgid ""
+"Can you identify two point features and one polygon feature on this map?"
+msgstr "Consegue identificar duas entidades ponto e uma entidade polígono neste mapa?"
+
+# 9d214a02badb4a50b98346e70bee8c5e
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:472
+msgid "Real world feature"
+msgstr "Entidade do mundo real"
+
+# 6a5dd9a49da14e1b9f9c7445caaff3aa
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:472
+msgid "Suitable Geometry Type"
+msgstr "Tipo de geometria adequado"
+
+# 90d8937cff334ca688b9b20e23c5138c
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:474
+msgid "The school flagpole"
+msgstr "Mastro da bandeira da escola"
+
+# 78c3e911436f425ebb1f50117bab4a07
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:476
+msgid "The soccer field"
+msgstr "Campo de futebol"
+
+# b840cb2d3f444129aaa66f2d4109cced
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:478
+msgid "The footpaths in and around the school"
+msgstr "Percursos pedonais dentro e ao redor da escola."
+
+# 4771b2a0e7b74dc29f39b0314475002b
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:480
+msgid "Places where taps are located"
+msgstr "Localização dos bebedouros"
+
+# fc31bd98664d4aedb2450d73ec723c4a
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:482
+msgid "Etc."
+msgstr "Etc."
+
+# ad96731d42134fc6bed3019dad20c4d0
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:485
+msgid ""
+"Table Vector 1: Create a table like this (leaving the geometry type column "
+"empty) and ask your learners to decide on suitable geometry types."
+msgstr "Tabela Vectorial 1: Crie uma tabela como esta (sem preencher a coluna relativa ao tipo de geometria) e peça aos alunos que escolham o tipo de geometria mais adequado."
+
+# bcc989aff64a488782053f863096d158
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:489
+msgid "Something to think about"
+msgstr "Parar para pensar"
+
+# 493f5837b6ed4ece803122c8eb9fb448
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:491
+msgid ""
+"If you don't have a computer available, you can use a toposheet and "
+"transparency sheets to show your learners about vector data."
+msgstr "Se não tem computador disponível, pode usar um mapa topográfico e uma folha de acetato (ou outra transparência) para ilustrar o conceito de dados vectoriais. "
+
+# 34c0e7a2531e433bb7ea5de13c879c21
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:495
+msgid "Further reading"
+msgstr "Leitura adicional"
+
+# 17a9551fa82b459cb24e40143fabe54d
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:497
+msgid ""
+"The QGIS User Guide also has more detailed information on working with "
+"vector data in QGIS."
+msgstr "O Guia do Utilizador QGIS contêm informação mais detalhada sobre manipulação de dados vectoriais."
+
+# c90464f48aec4b83b75e084551506da1
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:501
+msgid "What's next?"
+msgstr "E a seguir?"
+
+# 1bfe1e63149640f78bc0e3beb511434a
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:503
+msgid ""
+"In the section that follows we will take a closer look at **attribute data**"
+" to see how it can be used to describe vector features."
+msgstr "Na secção que se segue lançaremos um olhar mais atento aos **dados dos atributos** para ver como podem ser utilizados na descrição das entidades vectoriais."
+
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:47
+msgid ""
+"When a feature's geometry consists of only a single vertex, it is referred "
+"to as a **point** feature (see illustration figure_geometry_point_). Where "
+"the geometry consists of two or more vertices and the first and last vertex "
+"are not equal, a **polyline** feature is formed (see illustration "
+"figure_geometry_polyline_). Where three or more vertices are present, and "
+"the last vertex is equal to the first, an enclosed **polygon** feature is "
+"formed (see illustration figure_geometry_polygon_)."
+msgstr "Quando a geometria de uma entidade consiste em apenas um vértice, é designada como entidade **ponto** (ver ilustração figure_geometry_point_). Quando a geometria consiste em dois ou mais vértices e quando a posição do primeiro não coincide com a do último, trata-se de uma entidade **polilinha** (ver ilustração figure_geometry_polyline_). Quando três ou mais vértices [incoerente com o exposto no nº58] estão presentes e a posição do último coincide com a posição do primeiro, está-se na presença de uma entidade **polígono** (ver ilustração figure_geometry_polygon_)."
+
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:126
+msgid ""
+"As we show in illustration figure_geometry_point_, a point feature has an X,"
+" Y and optionally, Z value. The X and Y values will depend on the "
+"**Coordinate Reference System** (CRS) being used. We are going to go into "
+"more detail about Coordinate Reference Systems in a later tutorial. For now "
+"let's simply say that a CRS is a way to accurately describe where a "
+"particular place is on the earth's surface. One of the most common reference"
+" systems is **Longitude and Latitude**. Lines of Longitude run from the "
+"North Pole to the South Pole. Lines of Latitude run from the East to West. "
+"You can describe precisely where you are at any place on the earth by giving"
+" someone your Longitude (X) and Latitude (Y). If you make a similar "
+"measurement for a tree or a telephone pole and marked it on a map, you will "
+"have created a point feature."
+msgstr "Conforme mostramos na figura figure_geometry_point_, uma entidade ponto possuí coordenadas X, Y e opcionalmente Z. Essas coordenadas dependem do **Sistema de Referência Coordenado** (SRC) utilizado. Os Sistemas de Referência Coordenados [J.A. Torres] serão abordados em maior detalhe num tutorial posterior. Por agora digamos simplesmente que um SRC é um meio de descrever com precisão a localização de um ponto na superfície da terra. Um dos sistemas de referência mais comuns é o **longitude e latitude** [sistema de coordenadas geográficas]. As linhas de longitude assumem uma direcção Norte - Sul (unindo os pólos), perpendicular ao equador. As linhas de latitude assumem uma direcção Este - Oeste,  paralela ao equador. Pode descrever com rigor a posição de qualquer local da terra em que se encontre se conhecer a sua longitude (X) e latitude (Y). De maneira análoga, se conhecer as coordenadas de qualquer árvore ou poste telefónico, poderá assinalá-los num mapa e criar assim uma entidade ponto."
+
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:144
+msgid ""
+"Where a point feature is a single vertex, **a polyline has two or more "
+"vertices**. The polyline is a continuous path drawn through each vertex, as "
+"shown in figure_geometry_polyline_. When two vertices are joined, a line is "
+"created. When more than two are joined, they form a 'line of lines', or "
+"**polyline**."
+msgstr "Enquanto que uma entidade ponto é constituída por apenas um vértice,    **uma polilinha possui dois ou mais vértices**. Uma polilinha é uma linha continua que interliga cada um dos seus vértices conforme é ilustrado na figura figure_geometry_polyline_. Quando se ligam dois vértices é criada uma linha. Quando se ligam mais do que dois, estes formam uma 'linha de linhas' ou **polilinha**."
+
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:158
+msgid ""
+"If a curved polyline has very large distances between vertices, it may "
+"appear **angular** or jagged, depending on the scale at which it is viewed "
+"(see figure_polyline_jagged_). Because of this it is important that "
+"polylines are digitised (captured into the computer) with distances between "
+"vertices that are small enough for the scale at which you want to use the "
+"data."
+msgstr "Quando se pretende criar uma polilinha de aspecto arredondado é importante escolher o número de vértices a utilizar. Em certas escalas de visualização, vértices a menos (ou grandes distâncias entre vértices) podem resultar, ao invés, numa polilinha de aspecto anguloso ou recortado (ver figura figure_polyline_jagged_). Por esta razão é conveniente que as polilinhas sejam vectorizadas (registadas no computador) com distâncias entre vértices suficientemente pequenas que possibilitem, na escala de visualização escolhida, exibir o aspecto curvo desejado."
+
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:240
+msgid ""
+"Map **scale** is an important issue to consider when working with vector "
+"data in a GIS. When data is captured, it is usually digitised from existing "
+"maps, or by taking information from surveyor records and global positioning "
+"system devices. Maps have different scales, so if you import vector data "
+"from a map into a GIS environment (for example by digitising paper maps), "
+"the digital vector data will have the same scale issues as the original map."
+" This effect can be seen in illustrations figure_vector_small_scale_ and "
+"figure_vector_large_scale_. Many issues can arise from making a poor choice "
+"of map scale. For example using the vector data in illustration "
+"figure_vector_small_scale_ to plan a wetland conservation area could result "
+"in important parts of the wetland being left out of the reserve! On the "
+"other hand if you are trying to create a regional map, using data captured "
+"at 1:1000 000 might be just fine and will save you a lot of time and effort "
+"capturing the data."
+msgstr "A **escala** de um mapa é uma questão importante a considerar num SIG quando se trabalha com dados vectoriais. Os dados registados são geralmente obtidos à custa da vectorização de mapas existentes, de levantamentos topográficos (clássicos ou com recurso a sistemas de posicionamento global). Ao importar dados vectoriais de um mapa para um ambiente SIG (p. ex. através da digitalização de mapas em formato de papel), os dados digitais obtidos sofrerão dos mesmos problemas de escala do mapa analógico inicial. Estes efeitos podem apreciar-se nas ilustrações figure_vector_small_scale_ and figure_vector_large_scale_. A escolha de uma escala de representação errada pode levantar muitos problemas. Por exemplo, a utilização dos dados vectoriais da ilustração figure_vector_small_scale_ no planeamento de uma área de protecção ambiental de terrenos alagadiços pode levar a que porções  importantes dos terrenos não sejam integradas na zona de protecção! Por outro lado se o objectivo é a criação de um mapa regional, a utilização de dados obtidos para uma escala 1:1 000 000 pode bem ser suficiente e permitir poupar no processo da sua recolha, tempo e esforço consideráveis."
+
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:281
+msgid ""
+"When you add vector layers to the map view in a GIS application, they will "
+"be drawn with random colours and basic symbols. One of the great advantages "
+"of using a GIS is that you can create personalised maps very easily. The GIS"
+" program will let you choose colours to suite the feature type (e.g. you can"
+" tell it to draw a water bodies vector layer in blue). The GIS will also let"
+" you adjust the symbol used. So if you have a trees point layer, you can "
+"show each tree position with a small picture of a tree, rather than the "
+"basic circle marker that the GIS uses when you first load the layer (see "
+"illustrations figure_vector_symbology_, figure_generic_symbology_ and "
+"figure_custom_symbology_)."
+msgstr "Quando adiciona camadas vectoriais à janela de visualização de uma aplicação SIG, estas serão exibidas com cores aleatórias e símbolos básicos. Uma das grandes vantagens da utilização de um SIG é a facilidade de criação de mapas personalizados. O programa deixa-lo-á escolher cores adequadas ao tipo de entidade (p. ex. poderá pedir-lhe que desenhe os corpos de água numa camada vectorial de cor azul). O SIG permitir-lhe-á também substituir o símbolo utilizado, de tal forma que se tiver uma camada de árvores de tipo ponto poderá assinalar a posição de cada uma delas através de uma pequena foto e não através do marcador circular básico que o SIG habitualmente utiliza quando a camada é carregada pela primeira vez (ver ilustrações figure_vector_symbology_, figure_generic_symbology_ and figure_custom_symbology_)."
+
+#: ../../source/docs/gentle_gis_introduction/vector_data.rst:12
+msgid "|gentleLogo|"
+msgstr ""
+
+#~ msgid "|gentlelogo|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When a feature's geometry consists of only a single vertex, it is referred "
+#~ "to as a **point** feature (see Illustration figure_geometry_point_). Where "
+#~ "the geometry consists of two or more vertices and the first and last vertex "
+#~ "are not equal, a **polyline** feature is formed (see illustration "
+#~ "figure_geometry_polyline_). Where four or more vertices are present, and the"
+#~ " last vertex is equal to the first, an enclosed **polygon** feature is "
+#~ "formed (see illustration figure_geometry_polygon_)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As we show in Illustration figure_geometry_point_, a point feature has an X,"
+#~ " Y and optionally, Z value. The X and Y values will depend on the "
+#~ "**Coordinate Reference System** (CRS) being used. We are going to go into "
+#~ "more detail about Coordinate Reference Systems in a later tutorial. For now "
+#~ "let's simply say that a CRS is a way to accurately describe where a "
+#~ "particular place is on the earth's surface. One of the most common reference"
+#~ " systems is **Longitude and Latitude**. Lines of Longitude run from the "
+#~ "North Pole to the South Pole. Lines of Latitude run from the East to West. "
+#~ "You can describe precisely where you are at any place on the earth by giving"
+#~ " someone your Longitude (X) and Latitude (Y). If you make a similar "
+#~ "measurement for a tree or a telephone pole and marked it on a map, you will "
+#~ "have created a point feature."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Where a point feature is a single vertex, **a polyline has two or more "
+#~ "vertices**. The polyline is a continuous path drawn through each vertex, as "
+#~ "shown in figure_geometry_polyline_). When two vertices are joined, a line is"
+#~ " created. When more than two are joined, they form a 'line of lines', or "
+#~ "**polyline**."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If a curved polyline has very large distances between vertices, it may "
+#~ "appear **angular** or jagged, depending on the scale at which it is viewed "
+#~ "(see  ). Because of this it is important that polylines are digitised "
+#~ "(captured into the computer) with distances between vertices that are small "
+#~ "enough for the scale at which you want to use the data."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Map **scale** is an important issue to consider when working with vector "
+#~ "data in a GIS. When data is captured, it is usually digitised from existing "
+#~ "maps, or by taking information from surveyor records and global positioning "
+#~ "system devices. Maps have different scales, so if you import vector data "
+#~ "from a map into a GIS environment (for example by digitising paper maps), "
+#~ "the digital vector data will have the same scale issues as the original map."
+#~ " This effect can be seen in Illustrations figure_vector_small_scale_ and "
+#~ "figure_vector_large_scale_. Many issues can arise from making a poor choice "
+#~ "of map scale. For example using the vector data in Illustration "
+#~ "figure_vector_small_scale_ to plan a wetland conservation area could result "
+#~ "in important parts of the wetland being left out of the reserve! On the "
+#~ "other hand if you are trying to create a regional map, using data captured "
+#~ "at 1:1000 000 might be just fine and will save you a lot of time and effort "
+#~ "capturing the data."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you add vector layers to the map view in a GIS application, they will "
+#~ "be drawn with random colours and basic symbols. One of the great advantages "
+#~ "of using a GIS is that you can create personalised maps very easily. The GIS"
+#~ " program will let you choose colours to suite the feature type (e.g. you can"
+#~ " tell it to draw a water bodies vector layer in blue). The GIS will also let"
+#~ " you adjust the symbol used. So if you have a trees point layer, you can "
+#~ "show each tree position with a small picture of a tree, rather than the "
+#~ "basic circle marker that the GIS uses when you first load the layer (see "
+#~ "Illustrations figure_vector_symbology_, figure_generic_symbology_ and "
+#~ "figure_custom_symbology_)."
+#~ msgstr ""

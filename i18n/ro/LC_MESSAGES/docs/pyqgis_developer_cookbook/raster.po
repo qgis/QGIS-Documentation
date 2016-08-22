@@ -1,0 +1,447 @@
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2014-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2016-08-17 15:35+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:11
+msgid "Using Raster Layers"
+msgstr "Utilizarea straturilor raster"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:16
+msgid "This sections lists various operations you can do with raster layers."
+msgstr "Această secțiune enumeră diverse operațiuni pe care le puteți efectua cu straturile raster."
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:21
+msgid "Layer Details"
+msgstr "Detaliile stratului"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:70
+msgid ""
+"Single band raster layers can be drawn either in gray colors (low values = "
+"black, high values = white) or with a pseudocolor algorithm that assigns "
+"colors for values from the single band. Single band rasters with a palette "
+"can be additionally drawn using their palette. Multiband layers are "
+"typically drawn by mapping the bands to RGB colors. Other possibility is to "
+"use just one band for gray or pseudocolor drawing."
+msgstr "Straturile cu o singură bandă raster pot fi desenate fie în nuanțe de gri (valori mici = negru, valori ridicate = alb), sau cu un algoritm cu pseudoculori, care atribuie culori valorilor din banda singulară. Rasterele cu o singură bandă pot fi desenate folosindu-se propria paletă. Straturile multibandă sunt, de obicei, desenate prin maparea benzilor la culori RGB. Altă posibilitate este de a utiliza doar o singură bandă pentru desenarea în tonuri de gri sau cu pseudoculori."
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:77
+msgid ""
+"The following sections explain how to query and modify the layer drawing "
+"style. After doing the changes, you might want to force update of map "
+"canvas, see :ref:`refresh-layer`."
+msgstr "Următoarele secțiuni explică modul în care se poate interoga și modifica stilul de desenare al stratului. După efectuarea schimbărilor, ați putea forța actualizarea suprafeței hărții; a se vedea :ref:`refresh-layer`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:87
+msgid "Single Band Rasters"
+msgstr "Rastere cu o singură bandă"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:106
+msgid ""
+"linear (``INTERPOLATED``): resulting color is linearly interpolated from the"
+" color map entries above and below the actual pixel value"
+msgstr "liniar (``INTERPOLAT`` ): culoarea rezultată fiind interpolată liniar, de la intrările hărții de culori, în sus sau în jos față de valoarea înscrisă în harta de culori"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:108
+msgid ""
+"discrete (``DISCRETE``): color is used from the color map entry with equal "
+"or higher value"
+msgstr "discret (``DISCRET``): culorile folosite fiind cele cu o valoare egală sau mai mare față de cele din harta de culori"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:110
+msgid ""
+"exact (``EXACT``): color is not interpolated, only the pixels with value "
+"equal to color map entries are drawn"
+msgstr "exact (``EXACT``): culoarea nu este interpolată, desenându-se doar pixelii cu o valoare egală cu cea introdusă în harta de culori"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:124
+msgid "Multi Band Rasters"
+msgstr "Rastere multibandă"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:143
+msgid "Refreshing Layers"
+msgstr "Recitirea straturilor"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:154
+msgid ""
+"The first call will ensure that the cached image of rendered layer is erased"
+" in case render caching is turned on. This functionality is available from "
+"QGIS 1.4, in previous versions this function does not exist --- to make sure"
+" that the code works with all versions of QGIS, we first check whether the "
+"method exists."
+msgstr "Primul apel garantează că imaginea din cache a stratului este ștearsă în cazul în care cache-ul este activat. Această funcționalitate este disponibilă începând de la QGIS 1.4, în versiunile anterioare această funcție neexistând --- pentru a fi siguri de cod, că funcționează cu toate versiunile de QGIS, vom verifica în primul rând dacă metoda există."
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:160
+msgid ""
+"The second call emits signal that will force any map canvas containing the "
+"layer to issue a refresh."
+msgstr "Al doilea apel emite semnalul care va forța orice suport de hartă, care conține stratul, să emită o reîmprospătare."
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:184
+msgid "Query Values"
+msgstr "Interogarea valorilor"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:7
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:18
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:46
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:137
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:180
+msgid "raster layers"
+msgstr "straturi raster"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:7
+msgid "using"
+msgstr "folosind"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:18
+msgid "details"
+msgstr "detalii"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:84
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:121
+msgid "rasters"
+msgstr "rastere"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:84
+msgid "single band"
+msgstr "simplă bandă"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:121
+msgid "multi band"
+msgstr "multibandă"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:137
+msgid "refreshing"
+msgstr "recitire"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:180
+msgid "querying"
+msgstr "interogare"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:23
+msgid ""
+"A raster layer consists of one or more raster bands --- it is referred to as"
+" either single band or multi band raster. One band represents a matrix of "
+"values. Usual color image (e.g. aerial photo) is a raster consisting of red,"
+" blue and green band. Single band layers typically represent either "
+"continuous variables (e.g. elevation) or discrete variables (e.g. land use)."
+" In some cases, a raster layer comes with a palette and raster values refer "
+"to colors stored in the palette::"
+msgstr "Un strat raster constă într-una sau mai multe benzi raster - cu referire la rastere cu o singură bandă sau multibandă. O bandă reprezintă o matrice de valori. Imaginea color obișnuită (cum ar fi o fotografie aeriană) este un format raster cu o bandă roșie, una albastră și una verde. Straturile cu bandă unică reprezintă, de obicei, fie variabile continue (de exemplu, elevația) fie variabile discrete (cum ar fi utilizarea terenului). În unele cazuri, un strat raster vine cu o paletă, iar valorile rasterului fac referire la culorile stocate în paletă::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:49
+msgid "Renderer"
+msgstr "Render"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:51
+msgid ""
+"When a raster layer is loaded, it gets a default renderer based on its type."
+" It can be altered either in raster layer properties or programmatically."
+msgstr "Când un strat raster este încărcat, în funcție de tipul său, va moșteni un stil de desenare implicit. Acesta poate fi modificat, fie prin modificarea manuală a proprietăților rasterului, fie programatic."
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:54
+msgid "To query the current renderer::"
+msgstr "Pentru a interoga renderul curent::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:61
+msgid ""
+"To set a renderer use :func:`setRenderer` method of :class:`QgsRasterLayer`."
+" There are several available renderer classes (derived from "
+":class:`QgsRasterRenderer`):"
+msgstr "Pentru a seta un render folosiți metoda :func:`setRenderer` a clasei :class:`QgsRasterLayer`. Există mai multe clase de renderer disponibile (derivate din :class:`QgsRasterRenderer`):"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:64
+msgid "QgsMultiBandColorRenderer"
+msgstr "QgsMultiBandColorRenderer"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:65
+msgid "QgsPalettedRasterRenderer"
+msgstr "QgsPalettedRasterRenderer"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:66
+msgid "QgsSingleBandColorDataRenderer"
+msgstr "QgsSingleBandColorDataRenderer"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:67
+msgid "QgsSingleBandGrayRenderer"
+msgstr "QgsSingleBandGrayRenderer"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:68
+msgid "QgsSingleBandPseudoColorRenderer"
+msgstr "QgsSingleBandPseudoColorRenderer"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:82
+msgid "**TODO:**"
+msgstr "**DE EFECTUAT:**"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:82
+msgid ""
+"contrast enhancements, transparency (no data), user defined min/max, band "
+"statistics"
+msgstr "îmbunătățiri de contrast, de transparență (date nule), min/max definit de utilizator, statistici bandă"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:89
+msgid ""
+"Let's say we want to render our raster layer (assuming one band only) with "
+"colors ranging from green to yellow (for pixel values from 0 to 255). In the"
+" first stage we will prepare ``QgsRasterShader`` object and configure its "
+"shader function:"
+msgstr "Să presupunem că vrem să randăm stratul raster (presupunând că are o singură bandă), folosind culori care variază de la verde la galben (pentru valori ale pixelilor de la 0 la 255). În prima etapă, vom pregăti obiectul ``QgsRasterShader`` și îi vom configura funcția de nuanțare:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:102
+msgid ""
+"The shader maps the colors as specified by its color map. The color map is "
+"provided as a list of items with pixel value and its associated color. There"
+" are three modes of interpolation of values:"
+msgstr "Nuanțatorul mapează culorile hărții, așa cum este specificat în harta sa de culori. Harta de culoare reprezintă o listă de elemente cu valorile pixelilor și culoarea asociată acestora.Există trei moduri de interpolare a valorilor:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:113
+msgid ""
+"In the second step we will associate this shader with the raster layer::"
+msgstr "În a doua etapă, vom asocia acest nuanțator cu stratul raster::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:118
+msgid ""
+"The number 1 in the code above is band number (raster bands are indexed from"
+" one)."
+msgstr "Numărul 1 din codul de mai sus reprezintă numărul benzii (benzile raster sunt indexate începând de la unu)."
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:126
+msgid ""
+"By default, QGIS maps the first three bands to red, green and blue values to"
+" create a color image (this is the ``MultiBandColor`` drawing style. In some"
+" cases you might want to override these setting. The following code "
+"interchanges red band (1) and green band (2)::"
+msgstr "În mod implicit, QGIS mapează primele trei benzi la valori de roșu, verde și albastru, pentru a crea o imagine color (desenată în stilul ``MultiBandColor``. În unele cazuri, ați putea dori să suprascrieți aceste setări. Următorul cod inversează banda roșie (1) cu cea verde (2)::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:134
+msgid ""
+"In case only one band is necessary for visualization of the raster, single "
+"band drawing can be chosen --- either gray levels or pseudocolor."
+msgstr "Atunci când este necesară doar o singură bandă pentru vizualizarea raster, poate fi aleasă desenarea unei singure benzi --- cu tonuri de gri sau cu pseudoculori."
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:145
+msgid ""
+"If you do change layer symbology and would like ensure that the changes are "
+"immediately visible to the user, call these methods"
+msgstr "Dacă schimbați simbologia stratului și ați vrea  să vă asigurați că schimbările sunt imediat vizibile pentru utilizator, puteți apela aceste metode"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:163
+msgid ""
+"With WMS raster layers, these commands do not work. In this case, you have "
+"to do it explicitly"
+msgstr "Aceste comenzi nu funcționează în cazul straturilor raster WMS. În acest caz, trebuie să specificați în mod explicit"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:171
+msgid ""
+"In case you have changed layer symbology (see sections about raster and "
+"vector layers on how to do that), you might want to force QGIS to update the"
+" layer symbology in the layer list (legend) widget. This can be done as "
+"follows (``iface`` is an instance of :class:`QgisInterface`)"
+msgstr "În cazul în care s-a schimbat simbologia stratului (a se vedea secțiunea despre straturile raster și cele vectoriale cu privire la modul cum se face acest lucru), ați putea forța QGIS să actualizeze simbologia din lista straturilor (legendă). Acest lucru poate fi realizat după cum urmează (``iface``  este o instanță a :class:`QgisInterface`)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:186
+msgid ""
+"To do a query on value of bands of raster layer at some specified point"
+msgstr "Pentru a face, la un moment dat, o interogare asupra valorilor din benzile stratului raster"
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:195
+msgid ""
+"The ``results`` method in this case returns a dictionary, with band indices "
+"as keys, and band values as values."
+msgstr "În acest caz, metoda ``results`` returnează un dicționar, cu indicii benzii ca și chei, și valorile benzii ca valori."
+
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:46
+msgid "renderer"
+msgstr "render"
+
+#~ msgid ""
+#~ "A raster layer consists of one or more raster bands - it is referred to as "
+#~ "either single band or multi band raster. One band represents a matrix of "
+#~ "values. Usual color image (e.g. aerial photo) is a raster consisting of red,"
+#~ " blue and green band. Single band layers typically represent either "
+#~ "continuous variables (e.g. elevation) or discrete variables (e.g. land use)."
+#~ " In some cases, a raster layer comes with a palette and raster values refer "
+#~ "to colors stored in the palette."
+#~ msgstr ""
+
+#~ msgid "Drawing Style"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When a raster layer is loaded, it gets a default drawing style based on its "
+#~ "type. It can be altered either in raster layer properties or "
+#~ "programmatically. The following drawing styles exist:"
+#~ msgstr ""
+
+#~ msgid "Index"
+#~ msgstr ""
+
+#~ msgid "Constant: QgsRasterLater.X"
+#~ msgstr ""
+
+#~ msgid "Comment"
+#~ msgstr ""
+
+#~ msgid "1"
+#~ msgstr ""
+
+#~ msgid "SingleBandGray"
+#~ msgstr ""
+
+#~ msgid "Single band image drawn as a range of gray colors"
+#~ msgstr ""
+
+#~ msgid "2"
+#~ msgstr ""
+
+#~ msgid "SingleBandPseudoColor"
+#~ msgstr ""
+
+#~ msgid "Single band image drawn using a pseudocolor algorithm"
+#~ msgstr ""
+
+#~ msgid "3"
+#~ msgstr ""
+
+#~ msgid "PalettedColor"
+#~ msgstr ""
+
+#~ msgid "\"Palette\" image drawn using color table"
+#~ msgstr ""
+
+#~ msgid "4"
+#~ msgstr ""
+
+#~ msgid "PalettedSingleBandGray"
+#~ msgstr ""
+
+#~ msgid "\"Palette\" layer drawn in gray scale"
+#~ msgstr ""
+
+#~ msgid "5"
+#~ msgstr ""
+
+#~ msgid "PalettedSingleBandPseudoColor"
+#~ msgstr ""
+
+#~ msgid "\"Palette\" layerdrawn using a pseudocolor algorithm"
+#~ msgstr ""
+
+#~ msgid "7"
+#~ msgstr ""
+
+#~ msgid "MultiBandSingleBandGray"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Layer containing 2 or more bands, but a single band drawn as a range of gray"
+#~ " colors"
+#~ msgstr ""
+
+#~ msgid "8"
+#~ msgstr ""
+
+#~ msgid "MultiBandSingleBandPseudoColor"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Layer containing 2 or more bands, but a single band drawn using a "
+#~ "pseudocolor algorithm"
+#~ msgstr ""
+
+#~ msgid "9"
+#~ msgstr ""
+
+#~ msgid "MultiBandColor"
+#~ msgstr ""
+
+#~ msgid "Layer containing 2 or more bands, mapped to RGB color space."
+#~ msgstr ""
+
+#~ msgid "To query the current drawing style:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**TODO:** contrast enhancements, transparency (no data), user defined "
+#~ "min/max, band statistics"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "They are rendered in gray colors by default. To change the drawing style to "
+#~ "pseudocolor:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ``PseudoColorShader`` is a basic shader that highlighs low values in "
+#~ "blue and high values in red. Another, ``FreakOutShader`` uses more fancy "
+#~ "colors and according to the documentation, it will frighten your granny and "
+#~ "make your dogs howl."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There is also ``ColorRampShader`` which maps the colors as specified by its "
+#~ "color map. It has three modes of interpolation of values:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To set an interpolated color ramp shader ranging from green to yellow color "
+#~ "(for pixel values from 0 to 255)::"
+#~ msgstr ""
+
+#~ msgid "To return back to default gray levels, use:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default, QGIS maps the first three bands to red, green and blue values to"
+#~ " create a color image (this is the ``MultiBandColor`` drawing style. In some"
+#~ " cases you might want to override these setting. The following code "
+#~ "interchanges red band (1) and green band (2):"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In case only one band is necessary for visualization of the raster, single "
+#~ "band drawing can be chosen --- either gray levels or pseudocolor, see "
+#~ "previous section::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you do change layer symbology and would like ensure that the changes are "
+#~ "immediately visible to the user, call these methods::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "With WMS raster layers, these commands do not work. In this case, you have "
+#~ "to do it explicitily::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In case you have changed layer symbology (see sections about raster and "
+#~ "vector layers on how to do that), you might want to force QGIS to update the"
+#~ " layer symbology in the layer list (legend) widget. This can be done as "
+#~ "follows (``iface`` is an instance of QgisInterface)::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To do a query on value of bands of raster layer at some specified point::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ``results`` method in this case returs a dictionary, with band indices "
+#~ "as keys, and band values as values."
+#~ msgstr ""
+
+#~ msgid "drawing style"
+#~ msgstr ""

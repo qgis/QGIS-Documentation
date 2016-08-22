@@ -1,0 +1,348 @@
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>, 2016\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:9
+msgid "R Syntax in Processing scripts"
+msgstr "Syntaxis voor R in scripts voor Processing"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:11
+msgid ""
+"Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-"
+"water-management>`_"
+msgstr ""
+"Module bijgedragen door Matteo Ghetta - mogelijk gemaakt door `Scuola "
+"Superiore Sant'Anna <http://www.santannapisa.it/it/istituto/scienze-della-"
+"vita/agricultural-water-management>`_"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:13
+msgid ""
+"Writing R scripts in Processing could be quite tricky because of the syntax "
+"that has to be adopted."
+msgstr ""
+"Schrijven van scripts voor R in Processing kan behoorlijk ingewikkeld zijn "
+"vanwege de syntaxis die moet worden gebruikt."
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:16
+msgid ""
+"Each script starts with the **Input** and **Output** preceded with ``##``."
+msgstr ""
+"Elk script begint met de **Input** en de **Output** voorafgegaan door "
+"``##``."
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:19
+msgid "Inputs"
+msgstr "Invoer"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:21
+msgid ""
+"Before you specify teh inputs you can also set the algorithm group in which "
+"your script will be put. If the group already exists, the algorithm will be "
+"added to the other, else a new group will be automatically created:"
+msgstr ""
+"Vóórdat u de invoer specificeert kunt u de groep algoritmen instellen waarin"
+" u het script wilt plaatsen. Als de groep al bestaat zal het algoritme aan "
+"die groep wordne toegevoegd, anders zal automatisch een nieuwe groep worden "
+"gemaakt:"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:25
+msgid "group creation, ``##My Group=group``"
+msgstr "maken van een groep, ``##My Group=group``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:27
+msgid ""
+"Then you have to specify the all the input types and eventually the "
+"additional parameters. You can have different inputs:"
+msgstr ""
+"daarna dient u alle typen invoer te specificeren en eventueel de aanvullende"
+" parameters. U kunt verschillende invoer hebben:"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:30
+msgid "vector, ``##Layer = vector``"
+msgstr "vector, ``##Layer = vector``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:31
+msgid ""
+"vector Field, ``##F = Field Layer`` (where Layer is the name of the input "
+"Layer)"
+msgstr ""
+"vector Field, ``##F = Field Layer`` (waar Layer de naam van de invoerlaag "
+"is)"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:32
+msgid "table, ``##Layer = raster``"
+msgstr "table, ``##Layer = raster``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:33
+msgid "number, ``##Num = number``"
+msgstr "number, ``##Num = number``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:34
+msgid "string, ``##Str = string``"
+msgstr "string, ``##Str = string``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:35
+msgid "boolean, ``##Bol = boolean``"
+msgstr "boolean, ``##Bol = boolean``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:37
+msgid ""
+"you can also have a dropdown menu with all the parameters you want; the "
+"items must be separated with semi columns ``;``:"
+msgstr ""
+"u kunt ook een keuzelijst hebben waarin alle parameters zijn opgenomen die u"
+" wilt, de items moeten zijn gecsheiden door puntkomma's ``;``:"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:40
+msgid "``##type=selection point;lines;point+lines``"
+msgstr "``##type=selection point;lines;point+lines``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:43
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:44
+msgid ""
+"As for the inputs, each output has to be defined at the beginning of the "
+"script:"
+msgstr ""
+"Net als voor de invoer dient elke uitvoer te worden gedefinieerd aan het "
+"begin van het script:"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:46
+msgid "vector, ``##output= output vector``"
+msgstr "vector, ``##output= output vector``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:47
+msgid "raster, ``##output= output raster``"
+msgstr "raster, ``##output= output raster``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:48
+msgid "table, ``##output= output raster``"
+msgstr "table, ``##output= output raster``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:49
+msgid "plots, ``##showplot``"
+msgstr "plots, ``##showplot``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:50
+msgid ""
+"R output in the *Result Viewer*, just put **inside** the script ``>`` "
+"**before** the output you want to display"
+msgstr ""
+"Uitvoer voor R in *Resultaten bekijken*, plaats eenvoudigweg **binnen** het "
+"script ``>`` **vóór** de uitvoer die u wilt weergeven"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:55
+msgid "Script body"
+msgstr "Tekst van het script"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:57
+msgid ""
+"The script body follows an R style syntax and the **Log** panel can help you"
+" if something went wrong with your script."
+msgstr ""
+"De tekst van het script volgt een syntaxis in de stijl van R en het paneel "
+"**Log** kan u helpen als er iets mis ging met uw script."
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:60
+msgid ""
+"**Remember** that in the script you have to load all the additional "
+"libraries::"
+msgstr ""
+"**Onthoud** dat in het script dat u heeft u alle aanvullende bibliotheken "
+"moet laden::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:66
+msgid "Example with vector output"
+msgstr "Voorbeeld met uitvoer als vector"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:68
+msgid ""
+"Let's take an algorithm from the online collection that creates random "
+"points from the extend of an input layer::"
+msgstr ""
+"Laten we een algoritme nemen uit de online collectie dat willekeurige punten"
+" maakt uit het bereik van een invoerlaag::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:81
+msgid "and get through the lines:"
+msgstr "en dan gaan we door de regels:"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:83
+msgid "``Point pattern analysis`` is the group of the algorithm"
+msgstr "``Point pattern analysis`` is de groep van het algoritme"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:84
+msgid "``Layer`` is the input **vector** layer"
+msgstr "``Layer`` is de invoer **vector**laag"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:85
+msgid "``Size`` is the **numerical** parameter with a default value of 10"
+msgstr ""
+"``Size`` is de **numerieke** parameter met een standaard waarde van 10"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:86
+msgid ""
+"``Output`` is the **vector** layer that will be created by the algorithm"
+msgstr ""
+"``Output`` is de **vector**laag die zal wordne gemaakt door het algoritme"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:88
+msgid ""
+"``library(sp)`` loads the **sp** library (that should be already installed "
+"in your computer and that installation has to be made **in R**)"
+msgstr ""
+"``library(sp)`` laadt de bibliotheek **sp** (die al op uw computer zou "
+"moeten zijn geïnstalleerd en welke installatie **in R** zou moeten zijn)"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:91
+msgid ""
+"call the ``spsample`` function of the ``sp`` library and pass to it all the "
+"input defined above"
+msgstr ""
+"roep de functie ``spsample`` aan van de bibliotheek ``sp`` en geef die door "
+"aan alle hierboven gedefinieerde invoer"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:92
+msgid "create the output vector with the ``SpatialPointsDataFrame`` function"
+msgstr "maak de vector uitvoer met de functie ``SpatialPointsDataFrame``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:94
+msgid ""
+"That's it! Just run the algorithm with a vector layer you have in the QGIS "
+"Legend, choose a number of the random point and you will get them in the "
+"QGIS Map Canvas."
+msgstr ""
+"Dat is alles! Voer eenvoudigweg het algoritme uit met een vectorlaag die "
+"aanwezig is in de legenda van QGIS, kies een getal voor de willekeurige "
+"punten en u zult ze in het kaartvenster van QGIS zien."
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:99
+msgid "Example with raster output"
+msgstr "Voorbeeld met uitvoer als raster"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:101
+msgid ""
+"The following script will perform a basic ordinary kriging and will create a"
+" raster map of the interpolated values::"
+msgstr ""
+"Het volgende script zal een basale ordinary Kriging uitvoeren en zal een "
+"ratsrkaart maken van de geïnterpoleerde waarden::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:120
+msgid ""
+"from a vector and its field in input the algorithm will use the "
+"``autoKrige`` function of the ``automap`` R package and it will first "
+"calculate the kriging model and then create a raster."
+msgstr ""
+"vanuit een vector en het veld daarvan in invoer zal het algoritme de functie"
+" ``autoKrige`` van het R-pakket ``automap`` gebruiken en zal het eerst het "
+"model Kriging berekenen en dan een raster maken."
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:124
+msgid ""
+"The raster is created with the ``raster`` function of the raster R package."
+msgstr ""
+"Het raster wordt gemaakt met de functie ``raster`` van het raster R-pakket."
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:128
+msgid "Example with table output"
+msgstr "Voorbeeld met uitvoer als tabel"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:130
+msgid ""
+"Let's edit the ``Summary Statistics`` algorithm so that the output is a "
+"table file (csv)."
+msgstr ""
+"Laten we het algoritme ``Summary Statistics`` bewerken zodat de uitvoer een "
+"tabelbestand (csv) is."
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:132
+msgid "The script body is the following::"
+msgstr "De tekst vor het script is het volgende::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:152
+msgid ""
+"The third line specifies the **Vector Field** in input and the fourth line "
+"tells the algorithm that the output should be a table."
+msgstr ""
+"De derde regel specificeert het **Vector Field** in invoer en de vierde "
+"regel vertelt het algoritme dat de uitvoer een tabel zou moeten zijn."
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:155
+msgid ""
+"The last line will take the ``Stat`` object created in the script and "
+"convert it into a ``csv`` table."
+msgstr ""
+"De laatste regel zal het object ``Stat`` , gemaakt in het script, nemen en "
+"het naar een ``csv``-tabel converteren."
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:159
+msgid "Example with console output"
+msgstr "Voorbeeld met uitvoer naar het scherm"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:161
+msgid ""
+"We can take the previous example and instead of creating a table, print the "
+"result in the **Result Viewer**::"
+msgstr ""
+"We kunnen het voorgaande voorbeeld nemen en in plaats van een tabel te "
+"maken, het resultaat afdrukken in **Resultaten bekijken**::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:181
+msgid "The script is exactly the same of above with just 2 edits:"
+msgstr ""
+"Het script is exact hetzelfde als hierboven met slechts 2 bewerkingen:"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:183
+msgid "no more output specified (the fourth line has been removed)"
+msgstr ""
+"er wordt geen uitvoer meer gespecificeerd (de vierde regel is verwijderd)"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:184
+msgid ""
+"the last line begins with ``>`` that tells Processing to print the object in"
+" the result viewer"
+msgstr ""
+"de laatste regel begint met ``>`` wat Processing vertelt om het object af te"
+" drukken in Identficatieresultaten"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:189
+msgid "Example with plot"
+msgstr "Voorbeeld met plot"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:190
+msgid ""
+"Creating plots is very simple. You have to use the ``##showplot`` parameter "
+"as the following script shows::"
+msgstr ""
+"het maken van plots is erg eenvoudig. U moet de parameter ``##showplot`` "
+"gebruiken, zoals in het volgende script is weergegeven::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:202
+msgid ""
+"the script takes a field of the vector layer in input and creates a *QQ "
+"Plot* to test the normality of the distribution."
+msgstr ""
+"het script neemt een veld van de vectorlaag in invoer en maakt een *QQ Plot*"
+" om de normaliteit van de verdeling te testen."
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:205
+msgid "The plot is automatically added to the *Result Viewer* of Processing."
+msgstr ""
+"Het plot wordt automatisch toegevoegd aan *Resultaten bekijken* van "
+"Processing."

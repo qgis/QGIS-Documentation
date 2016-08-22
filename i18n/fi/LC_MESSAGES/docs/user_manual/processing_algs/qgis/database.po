@@ -1,0 +1,220 @@
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2016-07-18 09:32+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Finnish (http://www.transifex.com/qgis/qgis-documentation/language/fi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:5
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:8
+msgid "Database"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:11
+msgid "Import into PostGIS"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:14
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:100
+msgid "Description"
+msgstr "Kuvaus"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:16
+msgid ""
+"Imports a vector layer currently loaded in QGIS into a PostGIS database. "
+"Prior to this a connection between QGIS and the PostGIS database has to be "
+"created (for example with the DB Manager)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:21
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:105
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:24
+msgid "``Layer to import`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:24
+msgid "Existing vector layer in QGIS."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:33
+msgid "``Database (connection name)`` [selection]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:27
+msgid "Name of the database connection (not the database name)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:29
+msgid "Options:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:31
+msgid "0 --- local"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:33
+msgid "Default: *0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:39
+msgid "``Schema (schema name)`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:36
+msgid ""
+"An existing schema of the selected database can be chosen. By default this "
+"is the 'public' schema."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:39
+msgid "Default: *public*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:45
+msgid "``Table to import to (leave blank to use layer name)`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:42
+msgid ""
+"Defines a table name for the imported vector file. By default the name of "
+"the vector file is chosen."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:45
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:112
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:117
+msgid "Default: *(not set)*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:50
+msgid "``Primary key field`` [tablefield: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:48
+msgid "Optional."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:50
+msgid "Sets the primary key field from an existing field in the vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:56
+msgid "``Geometry column`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:53
+msgid ""
+"Defines the name of the geometry column in the new PostGIS table. Geometry "
+"information for the features is stored in this column."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:56
+msgid "Default: *geom*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:61
+msgid "``Overwrite`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:59
+msgid "Overwrites existing tables having the same name."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:61
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:67
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:74
+msgid "Default: *True*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:67
+msgid "``Create spatial index`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:64
+msgid ""
+"Specify whether to create a spatial index or not. By default a spatial index"
+" is created."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:74
+msgid "``Convert field names to lowercase`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:70
+msgid ""
+"If activated this prevents the field names of the input vector layer from "
+"being converted to lowercase. By default field names will be lowercase after"
+" the import."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:81
+msgid "``Drop length constraints on character fields`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:77
+msgid ""
+"Specify whether the length constraints on character fields should be dropped"
+" or not. By default the length constraints are applied."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:81
+msgid "Default: *False*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:84
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:120
+msgid "Outputs"
+msgstr "Tulokset"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:87
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:123
+msgid "Console usage"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:94
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:130
+msgid "See also"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:97
+msgid "PostGIS execute SQL"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:102
+msgid ""
+"Allows a SQL database query to be performed on a PostGIS database connected "
+"to QGIS."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:112
+msgid "``Database`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:108
+msgid ""
+"Name of the database, not the connection name. By default you don't have to "
+"fill in the name, the current database connection will be chosen."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:117
+msgid "``SQL query`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:115
+msgid "Defines the SQL query, for example 'create schema test;'."
+msgstr ""

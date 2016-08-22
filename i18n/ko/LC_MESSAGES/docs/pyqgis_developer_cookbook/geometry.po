@@ -1,0 +1,254 @@
+# 
+# Translators:
+# BJ Jang <jangbi882@gmail.com>, 2015
+# Kwon.Yongchan <ruvyn@naver.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2015-11-06 11:35+0000\n"
+"Last-Translator: BJ Jang <jangbi882@gmail.com>\n"
+"Language-Team: Korean (http://www.transifex.com/qgis/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:11
+msgid "Geometry Handling"
+msgstr "도형 다루기"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:16
+msgid ""
+"Points, linestrings and polygons that represent a spatial feature are "
+"commonly referred to as geometries. In QGIS they are represented with the "
+":class:`QgsGeometry` class. All possible geometry types are nicely shown in "
+"`JTS discussion page "
+"<http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_."
+msgstr "공간 피처를 표현하는 포인트, 라인스트링, 폴리곤을 흔히 도형라고 합니다. QGIS는 이들을 :class:`QgsGeometry` 클래스로 표현합니다. `JTS discussion page <http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_ 에 사용 가능한 모든 도형 유형이 잘 정리돼 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:21
+msgid ""
+"Sometimes one geometry is actually a collection of simple (single-part) "
+"geometries. Such a geometry is called a multi-part geometry. If it contains "
+"just one type of simple geometry, we call it multi-point, multi-linestring "
+"or multi-polygon. For example, a country consisting of multiple islands can "
+"be represented as a multi-polygon."
+msgstr "도형 한 개가 실제로는 단순(단일 영역, single-part) 도형의 집합인 경우가 종종 있습니다. 이런 도형을 다중 영역(multi-part) 도형이라고 합니다. 다중 영역 도형이 한 가지 유형의 단순 도형으로만 이루어져 있을 경우 다중 포인트, 다중 라인스트링, 다중 폴리곤이라 부릅니다. 예를 들어 여러 개의 섬으로 이루어진 국가라면 다중 폴리곤으로 표현할 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:27
+msgid ""
+"The coordinates of geometries can be in any coordinate reference system "
+"(CRS). When fetching features from a layer, associated geometries will have "
+"coordinates in CRS of the layer."
+msgstr "도형의 좌표는 어떤 좌표계(CRS)라도 될 수 있습니다. 레이어에서 피처를 불러올 때, 해당 도형은 레이어의 좌표계를 따르는 좌표를 가지게 될 겁니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:34
+msgid "Geometry Construction"
+msgstr "도형 작성"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:36
+msgid "There are several options for creating a geometry:"
+msgstr "도형을 생성하는 데에는 몇 가지 옵션이 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:46
+msgid "Coordinates are given using :class:`QgsPoint` class."
+msgstr ":class:`QgsPoint` 클래스를 통해 좌표를 부여합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:48
+msgid ""
+"Polyline (Linestring) is represented by a list of points. Polygon is "
+"represented by a list of linear rings (i.e. closed linestrings). First ring "
+"is outer ring (boundary), optional subsequent rings are holes in the "
+"polygon."
+msgstr "폴리라인(라인스트링)은 포인트 목록으로 표현됩니다. 폴리곤은 선형 폐곡선(예를 들면 닫힌 라인스트링) 목록으로 표현됩니다. 첫 번째 폐곡선은 외곽(경계선)이고, 있을 수도 없을 수도 있는 다음 폐곡선은 폴리곤 내부에 있는 구멍입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:52
+msgid ""
+"Multi-part geometries go one level further: multi-point is a list of points,"
+" multi-linestring is a list of linestrings and multi-polygon is a list of "
+"polygons."
+msgstr "다중 영역 도형은 한 단계 심화됩니다. 다중 포인트는 포인트의 목록, 다중 라인스트링은 라인스트링의 목록, 다중 폴리곤은 폴리곤의 목록입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:73
+msgid "Access to Geometry"
+msgstr "도형에 접근"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:105
+msgid ""
+"Note: the tuples (x,y) are not real tuples, they are :class:`QgsPoint` "
+"objects, the values are accessible with :func:`x` and :func:`y` methods."
+msgstr "주석: 튜플로 보이는 (x,y)는 진짜 튜플이 아니라 :class:`QgsPoint` 클래스의 오브젝트이며, :func:`x` 및 :func:`y` 메소드를 통해 좌표에 접근할 수 있습니다. 튜플은 파이썬에서 괄호로 묶여진 값을 이르는 용어입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:108
+msgid ""
+"For multipart geometries there are similar accessor functions: "
+":func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`."
+msgstr "다중 영역 도형의 경우 비슷한 접근자 함수인 :func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()` 이 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:114
+msgid "Geometry Predicates and Operations"
+msgstr "도형 관계계산 및 연산"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:116
+msgid ""
+"QGIS uses GEOS library for advanced geometry operations such as geometry "
+"predicates (:func:`contains`, :func:`intersects`, ...) and set operations "
+"(:func:`union`, :func:`difference`, ...). It can also compute geometric "
+"properties of geometries, such as area (in the case of polygons) or lengths "
+"(for polygons and lines)"
+msgstr "QGIS는 도형 관계계산(:func:`contains`, :func:`intersects` 등) 및 연산(:func:`union`, :func:`difference` 등)과 같은 고급 도형 작업에 GEOS 라이브러리를 이용합니다. 이 라이브러리는 면적(폴리곤의 경우) 또는 길이(폴리곤 및 라인의 경우)와 같은 도형의 기하학적 속성도 계산할 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:135
+msgid ""
+"Areas and perimeters don't take CRS into account when computed using these "
+"methods from the :class:`QgsGeometry` class. For a more powerful area and "
+"distance calculation, the :class:`QgsDistanceArea` class can be used. If "
+"projections are turned off, calculations will be planar, otherwise they'll "
+"be done on the ellipsoid. When an ellipsoid is not set explicitly, WGS84 "
+"parameters are used for calculations."
+msgstr ":class:`QgsGeometry` 클래스가 이런 메소드로 면적 및 둘레를 계산할 때 좌표계를 고려하지는 않습니다. 더 강력한 면적 및 거리 계산을 원한다면 :class:`QgsDistanceArea` 클래스를 사용할 수 있습니다. 투영이 비활성화되어 있다면 평면 상에서 계산이 이루어지고, 반대의 경우 타원체 상에서 이루어질 것입니다. 타원체를 명확히 설정하지 않는다면 계산에 WGS84 파라미터를 쓰게 됩니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:149
+msgid ""
+"You can find many example of algorithms that are included in QGIS and use "
+"these methods to analyze and transform vector data. Here are some links to "
+"the code of a few of them."
+msgstr "QGIS에 포함되어 있는, 벡터 데이터를 분석하고 변환하는 데 사용할 수 있는 알고리즘들의 수많은 예시가 있습니다. 다음은 링크들은 그 가운데 몇몇 코드를 보여줍니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:31
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:70
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:111
+msgid "geometry"
+msgstr "도형"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:5
+msgid "handling"
+msgstr "다루기"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:31
+msgid "construction"
+msgstr "구성"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:70
+msgid "access to"
+msgstr "접근"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:111
+msgid "predicates and operations"
+msgstr "관계계산 및 연산"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:38
+msgid "from coordinates"
+msgstr "좌표로부터"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:56
+msgid "from well-known text (WKT)"
+msgstr "WKT(well-known text)로부터"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:62
+msgid "from well-known binary (WKB)"
+msgstr "WKB(well-known binary)로부터"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:75
+msgid ""
+"First, you should find out geometry type, :func:`wkbType` method is the one "
+"to use --- it returns a value from ``QGis.WkbType`` enumeration"
+msgstr "먼저 :func:`wkbType` 메소드 같은 방법을 써서 도형의 유형을 알아내야 합니다. 이 함수는 ``QGis.WkbType`` 열거 목록(enumeration) 값을 반환합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:89
+msgid ""
+"As an alternative, one can use :func:`type` method which returns a value "
+"from ``QGis.GeometryType`` enumeration. There is also a helper function "
+":func:`isMultipart` to find out whether a geometry is multipart or not."
+msgstr "다른 방법으로는 ``QGis.GeometryType`` 열거 목록 값을 반환하는 :func:`type` 함수 메소드를 사용할 수 있습니다. 도형이 다중 영역인지 아닌지 알아낼 수 있는 보조 함수인 :func:`isMultipart` 도 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:93
+msgid ""
+"To extract information from geometry there are accessor functions for every "
+"vector type. How to use accessors"
+msgstr "도형에서 정보를 추출하기 위해 모든 벡터 유형마다 사용가능한 접근자(accessor) 함수가 있습니다. 다음과 같이 사용하면 됩니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:122
+msgid ""
+"Here you have a small example that combines iterating over the features in a"
+" given layer and performing some geometric computations based on their "
+"geometries."
+msgstr "다음은 주어진 레이어 안에 있는 피처에 대해 반복 작업을 수행하고 도형을 기반으로 기하학적 계산을 하는 작업을 결합한 간단한 예시 코드입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:153
+msgid "Additional information can be found in following sources:"
+msgstr "다음 소스에서 추가적인 정보를 찾아볼 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:155
+msgid ""
+"Geometry transformation: `Reproject algorithm "
+"<https://raw.github.com/qgis/QGIS/release-"
+"2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
+msgstr "도형 투영 변환: `재투영 알고리즘 <https://raw.githubusercontent.com/qgis/QGIS/release-2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:156
+msgid ""
+"Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix"
+" algorithm <https://raw.github.com/qgis/QGIS/release-"
+"2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
+msgstr ":class:`QgsDistanceArea` 클래스를 통한 거리 및 면적 계산 : `거리 매트릭스 알고리즘 <https://raw.githubusercontent.com/qgis/QGIS/release-2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
+
+#: ../../source/docs/pyqgis_developer_cookbook/geometry.rst:157
+msgid ""
+"`Multi-part to single-part algorithm <https://raw.github.com/qgis/QGIS"
+"/release-"
+"2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
+msgstr "`다중 영역을 단일 영역으로 변환 알고리즘 <https://raw.githubusercontent.com/qgis/QGIS/release-2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
+
+#~ msgid "from coordinates::"
+#~ msgstr ""
+
+#~ msgid "from well-known text (WKT)::"
+#~ msgstr ""
+
+#~ msgid "from well-known binary (WKB)::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First, you should find out geometry type, :func:`wkbType` method is the one "
+#~ "to use --- it returns a value from QGis.WkbType enumeration::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As an alternative, one can use :func:`type` method which returns a value "
+#~ "from QGis.GeometryType enumeration. There is also a helper function "
+#~ ":func:`isMultipart` to find out whether a geometry is multipart or not."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To extract information from geometry there are accessor functions for every "
+#~ "vector type. How to use accessors::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here you have a small example that combines iterating over the features in a"
+#~ " given layer and perfoming some geometric computations based on their "
+#~ "geometries."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Geometry transformation: `Reproject algorithm <https://raw.github.com/qgis"
+#~ "/Quantum-GIS/release-"
+#~ "2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix"
+#~ " algorithm <https://raw.github.com/qgis/Quantum-GIS/release-"
+#~ "2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Multi-part to single-part algorithm <https://raw.github.com/qgis/Quantum-"
+#~ "GIS/release-"
+#~ "2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_"
+#~ msgstr ""

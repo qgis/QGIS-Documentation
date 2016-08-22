@@ -1,0 +1,66 @@
+# 
+# Translators:
+# BJ Jang <jangbi882@gmail.com>, 2015
+# Kwon.Yongchan <ruvyn@naver.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2016-07-18 09:38+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Korean (http://www.transifex.com/qgis/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:9
+msgid "Loading Projects"
+msgstr "프로젝트 불러오기"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:11
+msgid ""
+"Sometimes you need to load an existing project from a plugin or (more often)"
+" when developing a stand-alone QGIS Python application (see: "
+":ref:`pythonapplications`)."
+msgstr "때때로 플러그인에서, 그리고 (더 자주) 독립 설치형 QGIS 파이썬 응용 프로그램을 개발할 때, 기존 프로젝트를 불러와야 할 경우가 있습니다. ( :ref:`pythonapplications` 참조)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:18
+msgid ""
+"To load a project into the current QGIS application you need a "
+":class:`QgsProject` :func:`instance()` object and call its :func:`read()` "
+"method passing to it a :class:`QFileInfo` object that contains the path from"
+" where the project will be loaded::"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:38
+msgid ""
+"In case you need to make some modifications to the project (for example add "
+"or remove some layers) and save your changes, you can call the "
+":func:`write()` method of your project instance. The :func:`write()` method "
+"also accepts an optional :class:`QFileInfo` that allows you to specify a "
+"path where the project will be saved::"
+msgstr "프로젝트에 몇 가지 수정을 (예를 들어 레이어를 추가하거나 삭제) 하고 변경한 내용을 저장해야 할 경우, 프로젝트 인스턴트의 :func:`write()` 메소드를 호출할 수 있습니다. :func:`write()` 메소드는 사용자가 프로젝트를 저장할 경로를 설정할 수 있게 해주는 선택적인 :class:`QFileInfo` 클래스도 받을 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:48
+msgid ""
+"Both :func:`read()` and :func:`write()` funtions return a boolean value that"
+" you can use to check if the operation was successful."
+msgstr ":func:`read()` 및 :func:`write()` 두 함수 모두 작업 수행이 성공적이었는지 확인할 수 있는 불(boolean) 값을 반환합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:53
+msgid ""
+"If you are writing a QGIS standalone application, in order to synchronise "
+"the loaded project with the canvas you need to instanciate a "
+":class:`QgsLayerTreeMapCanvasBridge` as in the example below::"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:15
+msgid "projects"
+msgstr "프로젝트"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:15
+msgid "loading"
+msgstr "불러오기"

@@ -1,0 +1,206 @@
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2016\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:6
+msgid "lasgrid"
+msgstr "lasgrid"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:9
+msgid "Description"
+msgstr "Descriere"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:11
+msgid ""
+"This tool grids a selected attribute (e.g. elevation, intensity, "
+"classification, scan angle, ...) of a large point clouds with a user-defined"
+" step size onto raster using a particular method (e.g. min, max, average). "
+"For more info see the `lasgrid <http://rapidlasso.com/lasgrid>`_ page and "
+"its online `README <http://lastools.org/download/lasgrid_README.txt>`_ file."
+msgstr ""
+"Acest instrument inserează în grile un atribut selectat (cum ar fi elevația,"
+" intensitatea, clasificarea, unghiul de scanare, ...) al unui mare nor de "
+"puncte, cu o dimensiune de pas definită de utilizator, folosind o anumită "
+"metodă (ex.: min, max, media). Pentru mai multe informații parcurgeți pagina"
+" `lasgrid <http://rapidlasso.com/lasgrid>`_ și fișierul său online `README "
+"<http://lastools.org/download/lasgrid_README.txt>`_."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:14
+msgid "Parameters"
+msgstr "Parametri"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:19
+msgid "``verbose`` [boolean]"
+msgstr "``detaliere`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:17
+msgid "Generates more textual control output to the console."
+msgstr "Generează în consola de text o ieșire de control detaliată."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:19
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:24
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:52
+msgid "Default: *False*"
+msgstr "Implicit: *False*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:24
+msgid "``open LAStools GUI`` [boolean]"
+msgstr "``deschidere GUI LAStools`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:22
+msgid "Starts the GUI of LAStools with pre-populated input files."
+msgstr ""
+"Deschide interfața grafică LAStools cu fișiere de intrare pre-populate."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:27
+msgid "``input LAS/LAZ file`` [points]"
+msgstr "``Fişier de intrare LAS/LAZ`` [puncte]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:27
+msgid "The file containing the points to be rastered in LAS/LAZ format."
+msgstr ""
+"Fișierul care conține punctele care urmează să fie rasterizate în format "
+"LAS/LAZ."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:32
+msgid "``filter`` [string]"
+msgstr "``filtrul`` [șir]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:30
+msgid "Specifies which subset of points to use for subsequent gridding."
+msgstr ""
+"Specifică subset de puncte care va fi utilizat pentru grila care va fi "
+"adăugată ulterior."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:32
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:57
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:62
+msgid "Default: *---*"
+msgstr "Implicit: *---*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:37
+msgid "``step size / pixel size`` [number]"
+msgstr "``dimensiunea pasului / dimensiunea pixelului`` [numeric]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:35
+msgid "Specifies the size of the grid cells the points are binned into."
+msgstr ""
+"Specifică dimensiunea celulelor din grilă pe baza căreia vor fi reduse "
+"punctele."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:37
+msgid "Default: *1.0*"
+msgstr "Implicit: *1.0*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:42
+msgid "``Attribute`` [string]"
+msgstr "``Atributul`` [șir]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:40
+msgid "Specifies the attribute that is to be gridded into each cell."
+msgstr "Specifică atributul care va fi introdus în fiecare celulă."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:42
+msgid "Default: *elevation*"
+msgstr "Implicit: *elevație*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:47
+msgid "``Method`` [string]"
+msgstr "``Metoda`` [șir]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:45
+msgid ""
+"Specifies how the attributes falling into one cell are turned into a raster "
+"value."
+msgstr ""
+"Specifică modul în care atributele dintr-o celulă subt transformate în "
+"valori raster."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:47
+msgid "Default: *lowest*"
+msgstr "Implicit: *lowest*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:52
+msgid "``use tile bounding box`` [boolean]"
+msgstr "``folosește caseta de încadrare a plăcuței`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:50
+msgid ""
+"Specifies to limit the rastered area to the tile bounding box (only "
+"meaningful for input LAS/LAZ tiles that were created with lastile)."
+msgstr ""
+"Specifică limitarea ariei rasterizate la caseta de încadrare a plăcuței (are"
+" semnificație doar pentru plăcuțele LAS/LAZ de intrare, care au fost create "
+"cu lastile)."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:57
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:62
+msgid "``additional command line parameter(s)`` [string]"
+msgstr "``parametr(i) adiționali pentru linia de comandă`` [șir]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:55
+msgid ""
+"Specifies other command-line switches not available via this menu but known "
+"to the (advanced) LAStools user. A common thing to add here would be '-false"
+" or '-gray' to map all values to a color or a gray value (optionally with a "
+"specified range of '-set_min_max 40 90' and produce an image."
+msgstr ""
+"Specifică alți comutatori pentru linia de comandă, care nu sunt disponibili "
+"prin intermediul acestui meniu, dar cunoscuți de către utilizatorul LAStools"
+" (avansat). Un lucru de adăugat aici, de obicei, ar fi '-false or '-gray', "
+"pentru a mapa toate valorile la o culoare sau la o valoare de gri (în mod "
+"opțional, cu un interval specificat de '-set_min_max 40 90' și producând o "
+"imagine."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:60
+msgid ""
+"Specifies other command-line switches not available via this menu but known "
+"to the (advanced) LAStools user."
+msgstr ""
+"Specifică alți parametri pentru linia de comandă care nu sunt disponibili "
+"prin intermediul acestui meniu, dar sunt cunoscuți utilizatorului (avansat) "
+"de LAStools."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:65
+msgid "Outputs"
+msgstr "Rezultate"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:68
+msgid "``Output raster file`` [raster]"
+msgstr "``Fișierul raster de ieşire`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:68
+msgid ""
+"Specifies where the output raster is stored. Use image rasters like TIF, "
+"PNG, and JPG for false color or gray ramps. Use value rasters like TIF, BIL,"
+" IMG, ASC, DTM, FLT, XYZ, and CSV for actual values."
+msgstr ""
+"Specifică unde va fi stocat rasterul rezultat. Utilizați imagini raster, cum"
+" ar fi TIF, PNG și JPG pentru culori false sau intervale de culori. "
+"Utilizați rastere cu valori, cum ar fi TIF, BIL, IMG, ASC, DTM, FLT, XYZ, și"
+" CSV, pentru valorile curente."
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:71
+msgid "Console usage"
+msgstr "Utilizarea în consolă"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:77
+msgid ""
+"See also the `lasgrid <http://rapidlasso.com/lasgrid>`_ page and its online "
+"`README <http://lastools.org/download/lasgrid_README.txt>`_ file."
+msgstr ""
+"Vedeți, de asemenea, pagina `lasgrid <http://rapidlasso.com/lasgrid>`_ și "
+"fișierul său online `README "
+"<http://lastools.org/download/lasgrid_README.txt>`_."

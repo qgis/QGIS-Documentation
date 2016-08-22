@@ -1,0 +1,334 @@
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2016-07-22 05:43+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:6
+msgid "|LS| Network Analysis"
+msgstr "|LS| Analiza Rețelelor"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:8
+msgid ""
+"Calculating the shortest distance between two points is a commonly cited use"
+" for GIS. QGIS ships with this tool, but it's not visible by default. In "
+"this brief lesson, we'll show you what you need to get started."
+msgstr "Calcularea celei mai scurte distanțe dintre două puncte reprezintă o utilizare frecvent utilizată în GIS. QGIS este livrat împreună cu acest instrument, lucru care nu este vizibil, în mod implicit. În această scurtă lecție, vă vom arăta cum puteți începe."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:12
+msgid ""
+"**The goal for this lesson:** To activate, configure and use the "
+":guilabel:`Road Graph` plugin."
+msgstr "**Scopul acestei lecții:** De a activa, configura și utiliza pluginul :guilabel:`Road Graph`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:16
+msgid "|basic| |FA| Activate the Tool"
+msgstr "|basic| |FA| Activarea Instrumentului"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:18
+msgid ""
+"QGIS has many plugins that add to its basic functions. Many of these plugins"
+" are so useful that they ship along with the program straight out of the "
+"box. They're still hidden by default, though. So in order to use them, you "
+"need to activate them first."
+msgstr "QGIS are multe plugin-uri care se adaugă la funcțiile sale de bază. Multe dintre aceste plugin-uri sunt atât de utile încât se livrează împreună cu programul, fiind disponibile imediat după instalare. Ele sunt totuși ascunse, în mod implicit. Astfel, pentru a le putea folosi, trebuie mai întâi să le activați."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:23
+msgid "To activate the :guilabel:`Road Graph` plugin:"
+msgstr "Pentru a activa plugin-ul :guilabel:`Road Graph`:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:25
+msgid ""
+"Start the :guilabel:`Plugin Manager` by clicking on the QGIS main window's "
+"menu item :menuselection:`Plugins --> Manage and Install Plugins...`. A "
+"dialog appears."
+msgstr "Startați :guilabel:`Managerul de Plugin-uri` făcând clic pe elementul din meniul principal al ferestrei QGIS :menuselection:`Plugin-uri --> Gestionare și Instalare Plugin-uri...`. Va apărea un dialog."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:27
+msgid "Select the plugin like this:"
+msgstr "Selectați pluginul în felul următor:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:32
+msgid "Click :guilabel:`Close` on the :guilabel:`Plugin Manager` dialog."
+msgstr "Faceți clic pe :guilabel:`Close` din dialogul :guilabel:`Plugin Manager`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:34
+msgid ""
+"If you do not see the plugin in your interface, go to :menuselection:`View "
+"--> Panels` and ensure that :guilabel:`Shortest path` has a check mark next "
+"to it."
+msgstr "Dacă nu vedeți plugin-ul în interfața aplicației dvs., mergeți la :menuselection:`Vizualizare --> Panouri` și asigurați-vă că este bifată :guilabel:`Calea cea mai scurtă`. "
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:38
+msgid "This panel will appear in your interface:"
+msgstr "Acest panou va apărea în interfața dvs.:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:45
+msgid "|basic| |FA| Configure the Tool"
+msgstr "|basic| |FA| Configurarea Instrumentului"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:47
+msgid ""
+"To have a layer to calculate on, first save your current map. If you haven't"
+" already done so, save your :kbd:`roads_34S` layer to a shapefile by right-"
+"clicking the layer and selecting :guilabel:`Save as...`. Create a new map "
+"and load this layer into it."
+msgstr "Pentru a avea un strat pentru calculat, salvați mai întâi harta curentă. În cazul în care nu ați făcut deja acest lucru, salvați stratul dvs. :kbd:`roads_34S` într-un fișier shape, efectuând clic-dreapta pe strat și alegând :guilabel:`Salvare ca...`. Creați o hartă nouă și încărcați stratul în ea."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:52
+msgid ""
+"Since so many different configurations are possible when analyzing networks,"
+" the plugin doesn't assume anything before you've set it up. This means that"
+" it won't do anything at all if you don't set it up first."
+msgstr "Din moment ce atât de multe configurații diferite sunt posibile în analiza rețelelor, plugin-ul nu își asumă nimic în afara configurațiilor introduse de către dvs. Prin urmare, el nu va efectua nici o operațiune dacă nu-l configurați mai întâi."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:56
+msgid ""
+"Click on the menu item :menuselection:`Vector --> Road graph --> settings`. "
+"A dialog will appear."
+msgstr "Faceți clic pe elementul de meniu :menuselection:`Vector --> Road graph --> settings`. Va apărea un dialog."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:58
+msgid ""
+"Make sure it's set up like this (use defaults unless otherwise specified):"
+msgstr "Asigurați-vă că ați efectuat următoarele setări (folosiți valorile implicite dacă nu se specifică altfel):"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:63
+msgid ":guilabel:`Time unit`: :guilabel:`hour`"
+msgstr ":guilabel:`Unitatea de timp`: :guilabel:`ora`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:64
+msgid ":guilabel:`Distance unit`: :guilabel:`kilometer`"
+msgstr ":guilabel:`Unitatea de distanță`: :guilabel:`kilometru`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:65
+msgid ":guilabel:`Layer`: :guilabel:`roads_34S`"
+msgstr ":guilabel:`Stratul`: :guilabel:`roads_34S`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:66
+msgid ""
+":guilabel:`Speed field`: :guilabel:`Always use default` / :guilabel:`km/h`"
+msgstr ":guilabel:`Câmpul vitezei`: :guilabel:`Întotdeauna se folosește cel implicit` / :guilabel:`km/h`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:71
+msgid ":guilabel:`Direction`: :guilabel:`Two-way direction`"
+msgstr ":guilabel:`Direcția`: :guilabel:`O direcție cu două sensuri`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:72
+msgid ":guilabel:`Speed`: :guilabel:`60`"
+msgstr ":guilabel:`Viteza`: :guilabel:`60`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:76
+msgid "|basic| |FA| Use the Tool"
+msgstr "|basic| |FA| Utilizarea Instrumentului"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:78
+msgid ""
+"Find two points, on roads, on your map. They do not need to have any "
+"significance, but they should be connected by roads and separated by a "
+"reasonable distance:"
+msgstr "Găsiți două puncte pe drumurile din harta dvs. Ele nu trebuie să aibă nici o semnificație, dar acestea ar trebui să fie conectate prin drumuri și să fie separate de o distanță rezonabilă:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:85
+msgid ""
+"In the plugin panel, click on the :guilabel:`Capture Point` button next to "
+"the :guilabel:`Start` field:"
+msgstr "În panoul plugin-ului faceți clic pe butonul :guilabel:`Capture Point`, de lângă câmpul :guilabel:`Start`:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:91
+msgid "Click on your chosen start point."
+msgstr "Faceți clic pe punctul de pornire ales."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:92
+msgid ""
+"Use the :guilabel:`Capture Point` button next to the :guilabel:`Stop` field "
+"and capture your chosen end point."
+msgstr "Folosiți butonul :guilabel:`Captură Punct` de lângă câmpul :guilabel:`Stop` și capturați punctul final ales."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:94
+msgid "Click on the :guilabel:`Calculate` button to see the solution:"
+msgstr "Clic pe butonul :guilabel:`Calculate` pentru a vedea soluția:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:100
+msgid "|moderate| |FA| Using Criteria"
+msgstr "|moderate| |FA| Folosirea Criteriilor"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:102
+msgid ""
+"Section developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr "Secțiune dezvoltată de Linfiniti și S Motala (Cape Peninsula University of Technology)"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:105
+msgid ""
+"Add your :kbd:`restaurants_34S` layer to the map (extract it from your "
+":kbd:`analyis` map if necessary)."
+msgstr "Adăugați stratul :kbd:`restaurants_34S` la hartă (extrăgânfu-l din harta :kbd:`analyis`, dacă este cazul)."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:107
+msgid ""
+"Open the attribute table for the :guilabel:`roads_34S` layer and enter edit "
+"mode."
+msgstr "Deschideți tabela de atribute a stratului :guilabel:`roads_34S` și intrați în modul de intrare."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:109
+msgid ""
+"Add a new column with the name :kbd:`SPEED`, and give it the type "
+":guilabel:`Whole number (integer)` with a width of :kbd:`3`."
+msgstr "Adăugați o nouă coloană cu numele :kbd:`SPEED`, și atribuiți-i tipul :guilabel:`Whole number (integer)` cu o lungime de :kbd:`3`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:111
+msgid ""
+"In the main window, activate the :guilabel:`Select Features by Rectangle` "
+"tool:"
+msgstr "În fereastra principală, activați instrumentul :guilabel:`Select Features by Rectangle`:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:117
+msgid "Select any main roads in urban - but not residential - areas:"
+msgstr "Selectați drumurile principale din zonele urbane - dar nu și rezidențiale:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:122
+msgid ""
+"(To select more than one road, hold the :kbd:`ctrl` button and drag a box "
+"across any road that you want to include in the selection.)"
+msgstr "(Pentru a selecta mai mult de un drum, țineți butonul :kbd:`ctrl` și glisați caseta de-a lungul oricărui drum pe care doriți să-l includeți în selecție.)"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:125
+msgid "In the attribute table, select :guilabel:`Show selected features`."
+msgstr "În tabelade atribute, selectați :guilabel:`Arată entitățile selectate`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:130
+msgid "Set the :kbd:`SPEED` value for all the selected streets to :kbd:`60`:"
+msgstr "Setați valoarea :kbd:`SPEED`, pentru toate străzile selectate, la :kbd:`60`:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:135
+msgid ""
+"In context, this means that you're setting the speed limit on those roads to"
+" :kbd:`60 km/h`."
+msgstr "În context, aceasta înseamnă că ați stabilit limita de viteză de pe acele drumuri la :kbd:`60 km/h`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:138
+msgid "Select any highways or major roads outside urban areas:"
+msgstr "Selectați autostrăzile sau drumurile principale din afara zonelor urbane:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:143
+msgid "Set the :kbd:`SPEED` value for all the selected streets to :kbd:`120`."
+msgstr "Setați valoarea :kbd:`SPEED`, pentru toate străzile selectate, la :kbd:`120`:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:144
+msgid "Close the attribute table, save your edits, and exit edit mode."
+msgstr "Închideți tabela de atribute, salvați modificările și ieșiți din modul de editare."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:145
+msgid ""
+"Check the :menuselection:`Vector --> Road graph --> Road graph settings` to "
+"ensure that it's set up as explained previously in this lesson, but with the"
+" :guilabel:`Speed` value set to the :kbd:`SPEED` field you just created."
+msgstr "Bifați :menuselection:`Vector --> Graful Drumului --> Setările pentru stratul drumului` pentru a vă asigura că este configurat așa cum s-a explicat anterior în această lecție, dar având valoarea pentru :guilabel:`Speed` setată pentru câmpul :kbd:`SPEED`, pe care tocmai l-ați creat."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:148
+msgid ""
+"In the :guilabel:`Shortest path` panel, click the :guilabel:`Start point` "
+"button."
+msgstr "În panoul :guilabel:`Shortest path`, faceți clic pe butonul :guilabel:`Punctul de start`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:150
+msgid ""
+"Set the starting point on a minor road on one side of |majorUrbanName| and "
+"the end point on a major road on the other side of town:"
+msgstr "Setați punctul de plecare pe un drum secundar din |majorUrbanName|, iar punctul final pe un drum important din cealaltă parte a orașului:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:156
+msgid ""
+"In the :guilabel:`Criterion` drop-down list in the :guilabel:`Shortest path`"
+" panel, select :guilabel:`Length`."
+msgstr "În lista derulantă :guilabel:`Criterii` din panoul :guilabel:`Celei mai scurte căi`, selectați :guilabel:`Lungime`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:158
+msgid ""
+"Click :guilabel:`Calculate`. The route will be calculated for the shortest "
+"distance:"
+msgstr "Faceți clic pe :guilabel:`Calculate`. Se va calcula traseul cu distanța cea mai scurtă:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:164
+msgid ""
+"Notice the values of :guilabel:`Length` and :guilabel:`Time` in the "
+":guilabel:`Shortest path` panel."
+msgstr "Notați valorile pentru :guilabel:`Lungime` și :guilabel:`Timp` din panoul :guilabel:`Calea cea mai scurtă`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:167
+msgid "Set the :guilabel:`Criterion` to :guilabel:`Time`."
+msgstr "Schimbați :guilabel:`Criterion` pe :guilabel:`Timp`."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:168
+msgid ""
+"Click :guilabel:`Calculate` again. The route will be calculated for the "
+"shortest time:"
+msgstr "Faceți iarăși clic pe :guilabel:`Calculate`. Se va calcula traseul cu timpul cel mai scurt:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:174
+msgid ""
+"You can switch back and forth between these criteria, recalculating each "
+"time, and note the changes in the :guilabel:`Length` and :guilabel:`Time` "
+"taken. Remember that the assumption being made to arrive at the time taken "
+"to travel a route does not account for acceleration, and assumes that you "
+"will be traveling at the speed limit at all times. In a real situation, you "
+"may want to split roads into smaller sections and note the average or "
+"expected speed in each section, rather than the speed limit."
+msgstr "Puteți comuta înainte și înapoi între aceste criterii, să recalculați de fiecare dată, și să notați schimbările de :guilabel:`Lungime` și :guilabel:`Timp`. Amintiți-vă că ipoteza de a ajunge într-un timp dat pentru a parcurge un traseu nu ține cont de accelerație, presupunând că deplasarea se va face, în orice moment, la limita de viteză. Într-o situație reală, ați putea dori să împărțiți drumurile în secțiuni mai mici, notând mai degrabă viteza medie sau pe cea așteptată decât limita de viteză, pentru fiecare secțiune."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:182
+msgid ""
+"If, on clicking :guilabel:`Calculate`, you see an error stating that a path "
+"could not be found, make sure that the roads you digitized actually meet "
+"each other. If they're not quite touching, either fix them by modifying the "
+"features, or set the :guilabel:`Topology tolerance` in the plugin's "
+"settings. If they're passing over each other without intersecting, use the "
+":guilabel:`Split features` tool to \"split\" roads at their intersections:"
+msgstr "În cazul în care veți face clic pe :guilabel:`Calcul` și veți întâmpina o eroare care să indice faptul că o cale nu a putut fi găsită, asigurați-vă că drumurile pe care le-ați digitizat s-au întâlnit de fapt unul pe altul. În cazul în care acestea nu sunt destul de apropiate, puteți remedia acest lucru fie prin modificarea entităților, fie prin setarea :guilabel:`Toleranței topologiei` în setările pluginului. Dacă traseele vor trece unele peste altele, fără a se intersecta, folosiți instrumentul de :guilabel:`Divizare a entităților` pentru a \"tăia\" drumurile la intersecție:"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:189
+msgid "|splitFeatures|"
+msgstr "|splitFeatures|"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:191
+msgid ""
+"Remember that the :guilabel:`Split features` tool only works in edit mode on"
+" selected features, though!"
+msgstr "Amintiți-vă că instrumentul :guilabel:`Divizare entități` funcționează asupra entităților selectate numai în modul de editare!"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:194
+msgid ""
+"You might also find that the shortest route is also the quickest if this "
+"error is returned."
+msgstr "Ați putea afla, de asemenea, că cea mai scurtă rută este și cea mai rapidă, dacă este returnată această eroare."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:198
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:200
+msgid ""
+"Now you know how to use the :guilabel:`Road Graph` plugin to solve shortest-"
+"path problems."
+msgstr "Acum știți cum să utilizați pluginul :guilabel:`Road Graph`, pentru a rezolva problema  celei mai scurte căi."
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:204
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:206
+msgid ""
+"Next you'll see how to run spatial statistics algorithms on vector datasets."
+msgstr "Mai departe, veți vedea cum să rulați algoritmii statisticilor spațiale asupra seturilor de date vectoriale."

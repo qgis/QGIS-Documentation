@@ -1,0 +1,300 @@
+# Translators:
+# Dick Groskamp <dikgro@yahoo.co.uk>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Dick Groskamp <dikgro@yahoo.co.uk>, 2016\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:5
+msgid "|updatedisclaimer|"
+msgstr "|updatedisclaimer|"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:12
+msgid "Geometry Checker Plugin"
+msgstr "Plug-in Geometrieën controleren"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:14
+msgid ""
+"Geometry Checker is a powerful core plugin to check and fix the geometry "
+"validity of a layer. The :guilabel:`Geometry Checker` dialog show differents"
+" grouped settings in the first tab (:guilabel:`Settings`):"
+msgstr ""
+"Geometrieën controleren is een krachtige bronplug-in om de geldigheid van "
+"een geometrie op een laag te controleren en te repareren. Het dialoogvenster"
+" :guilabel:`Geometrieën controleren` geeft verschillende gegroepeerde "
+"instellingen weer op de eerste tab (:guilabel:`Instellingen`):"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:18
+msgid ""
+":guilabel:`Input vector layer`: to select the layer to check. A |checkbox| "
+":guilabel:`Only selected features` checkbox can filter the geometry to the "
+"one selected."
+msgstr ""
+":guilabel:`Invoer vectorlaag`: om de laag te selecteren die gecontroleerd "
+"moet worden. Het keuzevak |checkbox| :guilabel:`Alleen geselecteerde "
+"objecten` kan de geometrieën filteren tot de geselecteerde."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:21
+msgid ""
+":guilabel:`Geometry validity`: give to the user the choice between "
+":guilabel:`Self intersections`, :guilabel:`Duplicate nodes`, "
+":guilabel:`Polygon with less than 3 nodes`."
+msgstr ""
+":guilabel:`Geldigheid geometrie`: geeft de gebruiker de keuze uit "
+":guilabel:`Zelf kruisend`, :guilabel:`Duplicaat knopen`, :guilabel:`Polygoon"
+" met minder dan 3 knopen`."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:24
+msgid ""
+":guilabel:`Allowed geometry types`: to allow only some geometry types like "
+"point, multipoint, line, multiline, polygon and multipolygon."
+msgstr ""
+":guilabel:`Toegestane typen geometrie`: om alleen bepaalde typen geometrie "
+"toe te staan, zoals punt, multipunt, lijn, multilijn, polygoon en "
+"multipolygoon."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:26
+msgid ""
+":guilabel:`Geometry properties` displays |checkbox| `Polygons and "
+"multipolygons may not contain any holes` and |checkbox| :guilabel:`Multipart"
+" objects must consist of more than one part`."
+msgstr ""
+":guilabel:`Eigenschappen geometrieën` geeft |checkbox| `Polygonen en "
+"multipolygonen mogen geen gaten bevatten` en |checkbox| "
+":guilabel:`Meerdelige objecten moeten bestaan uit meer dan één deel` weer."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:29
+msgid ""
+":guilabel:`Geometry conditions`: user can add some condition to validate the"
+" geometries with a minimal segment length, a minimum angle between segment, "
+"a minimal polygon area and sliver polygons detection."
+msgstr ""
+":guilabel:`Voorwaarden geometrie`: gebruiker kan enkele voorwaarden "
+"toevoegen voor de geldigheid van de geometrieën met een minimale "
+"segmentlengte, een minimum hoek met het segment, een minimale oppervlakte "
+"van de polygoon en detectie van polygonen met splinters."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:32
+msgid ""
+":guilabel:`Topology checks`: checks for duplicates, for features within "
+"other features, overlaps smaller than a number, for gaps smaller than a "
+"number."
+msgstr ""
+":guilabel:`Controles topologie`: controleert op duplicaten, ob objecten "
+"binnen andere objecten, overlap kleiner dan een getal, op gaten kleiner dan "
+"een getal."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:34
+msgid ""
+":guilabel:`Tolerance`: you can define here the tolerance for the check."
+msgstr ""
+":guilabel:`Tolerantie`: u kunt hier de tolerantie voor de controle "
+"definiëren."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:35
+msgid ""
+":guilabel:`Output vector layer` gives the choice to the user how get the "
+"result between modifiy the current layer and create a new layer."
+msgstr ""
+":guilabel:`Uitvoer vectorlaag` geeft de gebruiker de keuze hoe het resultaat"
+" te verkrijgen, tussen aanpassen van de huidige laag en het maken van een "
+"nieuwe laag."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:38
+msgid ""
+"After you are happy with the configuration, you can click on the **[Run]** "
+"button."
+msgstr ""
+"Nadat u tevreden bent met de configuratie, kunt u op de knop **[Uitvoeren]**"
+" drukken."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:40
+msgid ""
+"The results appear in the second tab and as an overview layer of the errors "
+"in the canvas (its name is *checker*). A table list the :guilabel:`geometry "
+"check result` with one error by row: the first row is an ID, the second the "
+"reason of the error, then the coordinates of the error, a value (depending "
+"on the type of the error) and finally the resolution column which indicates "
+"the resolution of the error. At the bottom of this table, you can export the"
+" error into a shapefile. At the left, you have the number of the errors and "
+"the fixed errors."
+msgstr ""
+"De resultaten verschijnen op de tweede tab en als een overzichtslaag van de "
+"fouten in het kaartvenster (de naam is *controle*). Een tabel vermeld de "
+":guilabel:`Resultaat Geometrie controleren` met één fout per rij: de eerste "
+"rij is een ID, de tweede de reden van de fout, dan de coördinaten van de "
+"fout, een waarde (afhankelijk van het type fout) en tenslotte de kolom met "
+"de oplossing die de oplossing voor de fout aangeeft. Onderaan deze tabel "
+"kunt u de fout naar een shapefile exporteren. Aan de linkerkant staan het "
+"aantal fouten en de opgeloste fouten."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:57
+msgid "The Geometry Checker Plugin"
+msgstr "Plug-in Geometrieën controleren"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:59
+msgid "The *Geometry Checker Plugin* can find the following errors:"
+msgstr "De *plug-in Geometrieën controleren* kan de volgende fouten vinden:"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:61
+msgid "Self intersections: a polygon with a self intersection,"
+msgstr "Zelf kruisend: een polygoon die zichzelf kruist,"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:62
+msgid "Duplicate nodes: two duplicates nodes in a segment"
+msgstr "Duplicaat knopen: twee duplicaat knopen in een segment"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:63
+msgid "Holes: hole in a polygon,"
+msgstr "Gaten: gat in een polygoon,"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:64
+msgid "Segment length: a segment length lower than a threshold,"
+msgstr ""
+"Lengte segment: een lengte van het segment die kleiner is dan de "
+"drempelwaarde,"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:65
+msgid "Minimum angle: two segments with an angle lower than a threshold,"
+msgstr ""
+"Minimum hoek: twee segmenten met een hoek die kleiner is dan de "
+"drempelwaarde,"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:66
+msgid "Minimum area: polygon area lower than a treshold,"
+msgstr "Minimum gebied: gebied van polygoon is kleiner dan een drempelwaarde,"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:67
+msgid ""
+"Silver polygon: this error come from very small polygon (with small area) "
+"with a large perimeter,"
+msgstr ""
+"Splinter polygoon: deze fout komt uit bijzonder kleine polygonen (met een "
+"klein gebied) met een grote omtrek,"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:69
+msgid "Duplicates features,"
+msgstr "Duplicaten van objecten,"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:70
+msgid "Feature within feature,"
+msgstr "Object binnen object,"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:71
+msgid "Overlaps: polygon overlapping,"
+msgstr "Overlap: overlappende polygonen,"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:72
+msgid "Gaps: gaps between polygons"
+msgstr "Gten: gaten tussen polygonen"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:74
+msgid ""
+"You can select a row to see the localisation of the error. You can change "
+"this behaviour by selecting another action between :guilabel:`error` "
+"(default), :guilabel:`Feature`, :guilabel:`Don't move`, and |checkbox| "
+"`Highlight contour of selected features`."
+msgstr ""
+"U kunt een rij selecteren om de locatie van de fout te bekijken. U kunt dit "
+"gedrag wijzigen door een andere actie te selecteren uit :guilabel:`Fout` "
+"(standaard), :guilabel:`Object`, :guilabel:`Niet verplaatsen`, en |checkbox|"
+" `Contouren van geselecteerde objecten accentueren`."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:79
+msgid ""
+"Below the zoom action when clicking on the table row, you can "
+":guilabel:`Show the selected features in attribute table`, :guilabel:`Fix "
+"selected errors using default resolution` and :guilabel:`Fix selected "
+"errors, prompt for resolution method`. In the latter, you will see a window "
+"to choose the resolution's method among which:"
+msgstr ""
+"Onder de actie voor zoomen kunt u, bij het klikken op de tabelrij, "
+":guilabel:`Geselecteerde objecten in attributentabel weergeven`, "
+":guilabel:`Geselecteerde  fouten repareren, standaard oplossing` en "
+":guilabel:`Geselecteerde  fouten repareren, vraag naar methode voor "
+"oplossen`. In het laatste geval zult u een venster zien om de methode voor "
+"de oplossing te kiezen, waaronder:"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:85
+msgid "Merge with neighboring polygon with longest shared edge,"
+msgstr "Samenvoegen met naastgelegen polygoon met langste gedeelde rand,"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:86
+msgid "Merge with neighboring polygon with largest area,"
+msgstr "Samenvoegen met naastgelegen polygoon met grootste gebied,"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:87
+msgid ""
+"Merge with neighboring polygon identical attribute value,if any, or leave as"
+" it"
+msgstr ""
+"Samenvoegen met naastgelegen polygoon met identieke waarde voor attribuut, "
+"als die er is, of laat zoals het is"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:89
+msgid "Delete feature"
+msgstr "Object verwijderen"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:90
+msgid "No action"
+msgstr "Geen actie"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:92
+msgid "**Fix multiple errors**"
+msgstr "**Meerdere fouten repareren**"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:94
+msgid ""
+"You can fix multiple errors by selecting more than one row in the table with"
+" the *CTRL + click* action."
+msgstr ""
+"U kunt meerdere fouten repareren dor meer dan één rij te selecteren in de "
+"tabel met de actie *CTRL + klik*."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:97
+msgid ""
+"The default action could be changed with the last icon :guilabel:`Error "
+"resolution settings`. For some type of errors, you can change the default "
+"action between some specific action or :guilabel:`No action`."
+msgstr ""
+"De standaard actie kan worden gewijzigd met behulp van het laatste pictogram"
+" :guilabel:`Instellingen voor oplossingen van fouten`. Voor sommige typen "
+"fouten kunt u de standaard actie wijzigen naar enkele specifieke acties of "
+":guilabel:`Geen actie`."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:101
+msgid ""
+"Finally, you can choose which :guilabel:`attribute to use when merging "
+"features by attribute value`."
+msgstr ""
+"Tenslotte kunt u nog kiezen :guilabel:`Te gebruiken attribuut bij "
+"samenvoegen van objecten op waarde van een attribuut`."
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:7
+msgid "Digitizing"
+msgstr "Digitaliseren"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:7
+msgid "Geometry Checker"
+msgstr "Geometrieën controleren"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:7
+msgid "Topology"
+msgstr "Topologie"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:7
+msgid "Geometry validity"
+msgstr "Geldigheid geometrie:"
+
+#: ../../source/docs/user_manual/plugins/plugins_geometry_checker.rst:7
+msgid "Errors"
+msgstr "Fouten"

@@ -1,0 +1,2514 @@
+# 
+# Translators:
+# Ivan Cortez <cicat@hotmail.es>, 2016
+# YoViajo, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2016-08-22 01:21+0000\n"
+"Last-Translator: YoViajo\n"
+"Language-Team: Spanish (http://www.transifex.com/qgis/qgis-documentation/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:5
+msgid "|updatedisclaimer|"
+msgstr "|updatedisclaimer|"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:13
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:7
+msgid "Expressions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:20
+msgid ""
+"The :index:`Expressions` feature is available from many parts in QGIS. It "
+"can be accessed using the |expression| :sup:`Expression Builder`, the "
+"|expressionSelect| :sup:`Select By Expression...`, the :guilabel:`Geometry "
+"generator` symbol layer option, the |calculateField| :sup:`Field calculator`"
+" or the |dataDefined| :sup:`Data defined override` tool. Based on layer data"
+" and prebuilt or user defined functions, it offers a powerful way to "
+"manipulate attribute value, geometry and variables in order to dynamically "
+"change the geometry style, the content or position of the label, the value "
+"for diagram, the height of a composer item, select some features, create "
+"virtual field ..."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:31
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:165
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:553
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:587
+msgid "**Some examples:**"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:33
+msgid ""
+"From Field Calculator, calculate a \"pop_density\" field using existing "
+"\"total_pop\" and \"area_km2\" fields::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:38
+msgid ""
+"Update the field \"density_level\" with categories according to the "
+"\"pop_density\" values::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:45
+msgid ""
+"Apply a categorized style to all the features according to whether their "
+"average house price is smaller or higher than 10000€ per square metre::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:50
+msgid ""
+"Using the \"Select By Expression...\" tool, select all the features "
+"representing areas of “High population density” and whose average house "
+"price is higher than 10000€ per square metre::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:56
+msgid ""
+"Likewise, the previous expression could also be used to define which "
+"features should be labeled or shown in the map. Using expressions offers you"
+" a lot of possibilities."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:60
+msgid "The **Expressions** feature offers access to the:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:62
+msgid ":guilabel:`Expression` tab which lists functions to use"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:63
+msgid ""
+":guilabel:`Function Editor` tab which helps to create custom functions to "
+"use in the expressions."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:70
+msgid "Functions List"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:82
+msgid "The Expression tab"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:84
+msgid ""
+"The **Expression** tab contains functions as well as layer's fields and "
+"values. It contains widgets to:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:87
+msgid ""
+"type expressions using functions and/or fields. A preview of the "
+"expression's result is displayed at the bottom of the dialog."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:89
+msgid ""
+"select the appropriate function among a list. A search box is available to "
+"filter the list and quickly find a particular function or field. Double-"
+"clicking on the item's name adds it to the expression being written."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:92
+msgid ""
+"display help for each function selected. When a field is selected, this "
+"widget shows a sample of its values. Double-clicking a value adds it to the "
+"expression."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:96
+msgid ""
+"To help to quickly find a function, they are organized in groups. In "
+":guilabel:`Operators`, you find mathematical operators. Look in "
+":guilabel:`Math` for mathematical functions. The :guilabel:`Conversions` "
+"group contains functions that convert one data type to another. The "
+":guilabel:`String` group provides functions for data strings, such as "
+":guilabel:`Date and Time` handles date and time data. In the "
+":guilabel:`Geometry` group, you find functions for geometry objects. With "
+":guilabel:`Record` group functions, you can add a numeration to your data "
+"set while :guilabel:`Fields and Values` group helps view all attributes of "
+"the attribute table. The :guilabel:`Customs` group lists the functions "
+"created or imported by the user. There are many other groups, listed below."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:114
+msgid "Operators"
+msgstr "Operadores"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:116
+msgid ""
+"This group contains operators (e.g., +, -, \\*). Note that for most of the "
+"mathematical functions below, if one of the inputs is NULL then the result "
+"is NULL."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:122
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:182
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:207
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:251
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:286
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:312
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:369
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:390
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:409
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:569
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:606
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:669
+msgid "Function"
+msgstr "Función"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:122
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:182
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:207
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:251
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:286
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:312
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:369
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:390
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:409
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:569
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:606
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:669
+msgid "Description"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:124
+msgid "a + b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:124
+msgid "Addition of two values (a plus b)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:125
+msgid "a - b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:125
+msgid "Subtraction of two values (a minus b)."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:126
+msgid "a * b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:126
+msgid "Multiplication of two values (a multiplied by b)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:127
+msgid "a / b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:127
+msgid "Division of two values (a divided by b)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:128
+msgid "a % b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:128
+msgid ""
+"Remainder of division of a by b (eg, 7 % 2 = 1, or 2 fits into 7 three times"
+" with remainder 1)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:130
+msgid "a ^ b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:130
+msgid "Power of two values (for example, 2^2=4 or 2^3=8)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:131
+msgid "a < b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:131
+msgid ""
+"Compares two values and evaluates to 1 if the left value is less than the "
+"right value (a is smaller than b)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:133
+msgid "a <= b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:133
+msgid ""
+"Compares two values and evaluates to 1 if the left value is less than or "
+"equal to the right value"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:135
+msgid "a <> b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:135
+msgid "Compares two values and evaluates to 1 if they are not equal"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:136
+msgid "a = b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:136
+msgid "Compares two values and evaluates to 1 if they are equal"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:137
+msgid "a != b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:137
+msgid "a and b are not equal"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:138
+msgid "a > b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:138
+msgid ""
+"Compares two values and evaluates to 1 if the left value is greater than the"
+" right value (a is larger than b)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:140
+msgid "a >= b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:140
+msgid ""
+"Compares two values and evaluates to 1 if the left value is greater than or "
+"equal to the right value"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:142
+msgid "a ~ b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:142
+msgid "a matches the regular expression b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:143
+msgid "||"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:143
+msgid ""
+"Joins two values together into a string. If one of the values is NULL the "
+"result will be NULL"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:145
+msgid "'\\\\n'"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:145
+msgid "Inserts a new line in a string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:146
+msgid "LIKE"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:146
+msgid "Returns 1 if the first parameter matches the supplied pattern"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:147
+msgid "ILIKE"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:147
+msgid ""
+"Returns 1 if the first parameter matches case-insensitive the supplied "
+"pattern (ILIKE can be used instead of LIKE to make the match case-"
+"insensitive)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:150
+msgid "a IS b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:150
+msgid ""
+"Tests whether two values are identical. Returns 1 if a is the same as b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:151
+msgid "a OR b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:151
+msgid "Returns 1 when condition a or b is true"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:152
+msgid "a AND b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:152
+msgid "Returns 1 when condition a and b are true"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:153
+msgid "NOT"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:153
+msgid "Negates a condition"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:154
+msgid "column name \"column name\""
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:154
+msgid ""
+"Value of the field column name, take care to not be confused with simple "
+"quote, see below"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:156
+msgid "'string'"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:156
+msgid ""
+"a string value, take care to not be confused with double quote, see above"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:158
+msgid "NULL"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:158
+msgid "null value"
+msgstr "valor nulo"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:159
+msgid "a IS NULL"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:159
+msgid "a has no value"
+msgstr "a no tiene valor"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:160
+msgid "a IS NOT NULL"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:160
+msgid "a has a value"
+msgstr "a tiene valor"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:161
+msgid "a IN (value[,value])"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:161
+msgid "a is below the values listed"
+msgstr "a esta debajo de los valores listados"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:162
+msgid "a NOT IN (value[,value])"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:162
+msgid "a is not below the values listed"
+msgstr "a no está debajo de los valores listados"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:167
+msgid "Joins a string and a value from a column name::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:171
+msgid ""
+"Test if the \"description\" attribute field starts with the 'Hello' string "
+"in the value (note the position of the % character)::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:177
+msgid "Conditionals"
+msgstr "Condicionales"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:179
+msgid ""
+"This group contains functions to handle conditional checks in expressions."
+msgstr "Este grupo contiene funciones para menejar comprobaciones condicionales en expresiones."
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:184
+msgid "CASE WHEN ... THEN ... END"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:184
+msgid ""
+"Evaluates an expression and returns a result if true. You can test multiple "
+"conditions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:186
+msgid "CASE WHEN ... THEN ... ELSE ... END"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:186
+msgid ""
+"Evaluates an expression and returns a different result whether it's true or "
+"false. You can test multiple conditions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:188
+msgid "coalesce"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:188
+msgid "Returns the first non-NULL value from the expression list"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:189
+msgid "if"
+msgstr "si"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:189
+msgid ""
+"Tests a condition and returns a different result depending on the "
+"conditional check"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:191
+msgid "regexp_match"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:191
+msgid ""
+"Returns true if any part of a string matches the supplied regular expression"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:195
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:334
+msgid "**Some example:**"
+msgstr "**Algún ejemplo:**"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:197
+msgid "Send back a value if the first condition is true, else another value::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:202
+msgid "Mathematical Functions"
+msgstr "Funciones Matemáticas"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:204
+msgid "This group contains math functions (e.g., square root, sin and cos)."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:209
+msgid "abs"
+msgstr "abs"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:209
+msgid "Returns the absolute value of a number"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:210
+msgid "acos"
+msgstr "arcos"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:210
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:212
+msgid "Returns the inverse cosine of a value in radians"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:211
+msgid "asin"
+msgstr "arcsen"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:211
+msgid "Returns the inverse sine of a value in radians"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:212
+msgid "atan"
+msgstr "atan"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:213
+msgid "atan2(y,x)"
+msgstr "atan2(y,x)"
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:213
+msgid ""
+"Returns the inverse tangent of y/x by using the signs of the two arguments "
+"to determine the quadrant of the result"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:215
+msgid "azimuth(a,b)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:215
+msgid ""
+"Returns the north-based azimuth as the angle in radians measured clockwise "
+"from the vertical on point a to point b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:217
+msgid "ceil"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:217
+msgid "Rounds a number upwards"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:218
+msgid "clamp"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:218
+msgid "Restricts an input value to a specified range"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:219
+msgid "cos"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:219
+msgid "Returns the cosine of a value in radians"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:220
+msgid "degrees"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:220
+msgid "Converts from radians to degrees"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:221
+msgid "exp"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:221
+msgid "Returns exponential of a value"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:222
+msgid "floor"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:222
+msgid "Rounds a number downwards"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:223
+msgid "ln"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:223
+msgid "Returns the natural logarithm of the passed expression"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:224
+msgid "log"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:224
+msgid "Returns the value of the logarithm of the passed value and base"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:225
+msgid "log10"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:225
+msgid "Returns the value of the base 10 logarithm of the passed expression"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:226
+msgid "max"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:226
+msgid "Returns the largest value in a set of values"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:227
+msgid "min"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:227
+msgid "Returns the smallest value in a set of values"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:228
+msgid "pi"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:228
+msgid "Returns the value of pi for calculations"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:229
+msgid "radians"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:229
+msgid "Converts from degrees to radians"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:230
+msgid "rand"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:230
+msgid ""
+"Returns the random integer within the range specified by the minimum and "
+"maximum argument (inclusive)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:232
+msgid "randf"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:232
+msgid ""
+"Returns the random float within the range specified by the minimum and "
+"maximum argument (inclusive)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:234
+msgid "round"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:234
+msgid "Rounds to number of decimal places"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:235
+msgid "scale_exp"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:235
+msgid ""
+"Transforms a given value from an input domain to an output range using an "
+"exponential curve"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:237
+msgid "scale_linear"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:237
+msgid ""
+"Transforms a given value from an input domain to an output range using "
+"linear interpolation"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:239
+msgid "sin"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:239
+msgid "Returns the sine of an angle"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:240
+msgid "sqrt"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:240
+msgid "Returns the square root of a value"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:241
+msgid "tan"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:241
+msgid "Returns the tangent of an angle"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:246
+msgid "Color Functions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:248
+msgid "This group contains functions for manipulating colors."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:253
+msgid "color_cmyk"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:253
+msgid ""
+"Returns a string representation of a color based on its cyan, magenta, "
+"yellow and black components"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:255
+msgid "color_cmyka"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:255
+msgid ""
+"Returns a string representation of a color based on its cyan, magenta, "
+"yellow, black and alpha (transparency) components"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:257
+msgid "color_hsl"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:257
+msgid ""
+"Returns a string representation of a color based on its hue, saturation, and"
+" lightness attributes"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:259
+msgid "color_hsla"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:259
+msgid ""
+"Returns a string representation of a color based on its hue, saturation, "
+"lightness and alpha (transparency) attributes"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:261
+msgid "color_hsv"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:261
+msgid ""
+"Returns a string representation of a color based on its hue, saturation, and"
+" value attributes"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:263
+msgid "color_hsva"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:263
+msgid ""
+"Returns a string representation of a color based on its hue, saturation, "
+"value and alpha (transparency) attributes"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:265
+msgid "color_part"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:265
+msgid ""
+"Returns a specific component from a color string, eg the red component or "
+"alpha component"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:267
+msgid "color_rgb"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:267
+msgid ""
+"Returns a string representation of a color based on its red, green, and blue"
+" components"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:269
+msgid "color_rgba"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:269
+msgid ""
+"Returns a string representation of a color based on its red, green, blue, "
+"and alpha (transparency) components"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:271
+msgid "darker"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:271
+msgid "Returns a darker (or lighter) color string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:272
+msgid "lighter"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:272
+msgid "Returns a lighter (or darker) color string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:273
+msgid "project_color"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:273
+msgid "Returns a color from the project's color scheme"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:274
+msgid "ramp_color"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:274
+msgid "Returns a string representing a color from a color ramp"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:275
+msgid "set_color_part"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:275
+msgid ""
+"Sets a specific color component for a color string, eg the red component or "
+"alpha component"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:280
+msgid "Conversions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:282
+msgid ""
+"This group contains functions to convert one data type to another (e.g., "
+"string to integer, integer to string)."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:288
+msgid "to_date"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:288
+msgid "Converts a string into a date object"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:289
+msgid "to_datetime"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:289
+msgid "Converts a string into a datetime object"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:290
+msgid "to_int"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:290
+msgid "Converts a string to integer number"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:291
+msgid "to_interval"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:291
+msgid ""
+"Converts a string to an interval type (can be used to take days, hours, "
+"months, etc. of a date)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:293
+msgid "to_real"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:293
+msgid "Converts a string to a real number"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:294
+msgid "to_string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:294
+msgid "Converts number to string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:295
+msgid "to_time"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:295
+msgid "Converts a string into a time object"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:300
+msgid "Custom functions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:302
+msgid ""
+"This group contains functions created by the user. See function_editor_ for "
+"more details."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:307
+msgid "Date and Time Functions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:309
+msgid "This group contains functions for handling date and time data."
+msgstr "Este grupo contiene funciones para manipular datos de fecha y hora."
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:314
+msgid "age"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:314
+msgid "Returns as an interval the difference between two dates or datetimes"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:315
+msgid "day"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:315
+msgid ""
+"Extracts the day from a date or datetime, or the number of days from an "
+"interval"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:317
+msgid "day_of_week"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:317
+msgid ""
+"Returns a number corresponding to the day of the week for a specified date "
+"or datetime"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:319
+msgid "hour"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:319
+msgid ""
+"Extracts the hour from a datetime or time, or the number of hours from an "
+"interval"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:321
+msgid "minute"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:321
+msgid ""
+"Extracts the minute from a datetime or time, or the number of minutes from "
+"an interval"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:323
+msgid "month"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:323
+msgid ""
+"Extracts the month part from a date or datetime, or the number of months "
+"from an interval"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:325
+msgid "now()"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:325
+msgid "Returns current date and time"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:326
+msgid "second"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:326
+msgid ""
+"Extracts the second from a datetime or time, or the number of seconds from "
+"an interval"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:328
+msgid "week"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:328
+msgid ""
+"Extracts the week number from a date or datetime, or the number of weeks "
+"from an interval"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:330
+msgid "year"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:330
+msgid ""
+"Extracts the year part from a date or datetime, or the number of years from "
+"an interval"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:336
+msgid "Get the month and the year of today in the format \"10/2014\" ::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:341
+msgid "Fields and Values"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:343
+msgid "Contains a list of fields from the layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:345
+msgid ""
+"Generally, you can use the various fields, values and functions to construct"
+" the calculation expression, or you can just type it into the box."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:349
+msgid ""
+"To display the values of a field, you just click on the appropriate field "
+"and choose between :guilabel:`Load top 10 unique values` and :guilabel:`Load"
+" all unique values`. On the right side, the **Field Values** list opens with"
+" the unique values. At the top of the list, a search box helps filtering the"
+" values. To add a value to the expression you are writing, double click its "
+"name in the list."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:356
+msgid ""
+"Sample values can also be accessed via right-click. Select the field name "
+"from the list, then right-click to access a context menu with options to "
+"load sample values from the selected field."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:360
+msgid ""
+"Fields name should be double-quoted in the expression. Values or string "
+"should be simple-quoted."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:364
+msgid "Fuzzy Matching Functions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:366
+msgid "This group contains functions for fuzzy comparisons between values."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:371
+msgid "hamming_distance"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:371
+msgid ""
+"Returns the number of characters at corresponding positions within the input"
+" strings where the characters are different"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:374
+msgid "levensheim"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:374
+msgid ""
+"Returns the minimum number of character edits (insertions, deletions or "
+"substitutions) required to change one string to another. Measure the "
+"similarity between two strings"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:378
+msgid "longest_common_substring"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:378
+msgid "Returns the longest common substring between two strings"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:380
+msgid "soundex"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:380
+msgid "Returns the Soundex representation of a string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:385
+msgid "General Functions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:387
+msgid "This group  contains general assorted functions."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:392
+msgid "eval"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:392
+msgid ""
+"Evaluates an expression which is passed in a string. Useful to expand "
+"dynamic parameters passed as context variables or fields"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:395
+msgid "layer_property"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:395
+msgid ""
+"Returns a property of a layer or a value of its metadata. It can be layer "
+"name, crs, geometry type, feature count..."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:398
+msgid "var"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:398
+msgid ""
+"Returns the value stored within a specified variable. See variable functions"
+" below"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:404
+msgid "Geometry Functions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:406
+msgid ""
+"This group contains functions that operate on geometry objects (e.g., "
+"length, area)."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:411
+msgid "$area"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:411
+msgid "Returns the area size of the current feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:412
+msgid "$geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:412
+msgid ""
+"Returns the geometry of the current feature (can be used for processing with"
+" other functions)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:414
+msgid "$length"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:414
+msgid "Returns the length of the current line feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:415
+msgid "$perimeter"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:415
+msgid "Returns the perimeter of the current polygon feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:416
+msgid "$x"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:416
+msgid "Returns the x coordinate of the current feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:417
+msgid "$x_at(n)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:417
+msgid ""
+"Returns the x coordinate of the nth node of the current feature's geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:419
+msgid "$y"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:419
+msgid "Returns the y coordinate of the current feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:420
+msgid "$y_at(n)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:420
+msgid ""
+"Returns the y coordinate of the nth node of the current feature's geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:422
+msgid "area"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:422
+msgid ""
+"Returns the area of a geometry polygon feature. Calculations are in the "
+"Spatial Reference System of this geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:425
+msgid "bounds"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:425
+msgid ""
+"Returns a geometry which represents the bounding box of an input geometry. "
+"Calculations are in the Spatial Reference System of this Geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:428
+msgid "bounds_height"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:428
+msgid ""
+"Returns the height of the bounding box of a geometry. Calculations are in "
+"the Spatial Reference System of this Geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:431
+msgid "bounds_width"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:431
+msgid ""
+"Returns the width of the bounding box of a geometry. Calculations are in the"
+" Spatial Reference System of this Geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:434
+msgid "buffer"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:434
+msgid ""
+"Returns a geometry that represents all points whose distance from this "
+"geometry is less than or equal to distance. Calculations are in the Spatial "
+"Reference System of this geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:438
+msgid "centroid"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:438
+msgid "Returns the geometric center of a geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:439
+msgid "closest_point"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:439
+msgid "Returns the point on a geometry that is closest to a second geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:440
+msgid "combine"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:440
+msgid "Returns the combination of two geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:441
+msgid "contains(a,b)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:441
+msgid ""
+"Returns 1 (true) if and only if no points of b lie in the exterior of a, and"
+" at least one point of the interior of b lies in the interior of a"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:444
+msgid "convex_hull"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:444
+msgid ""
+"Returns the convex hull of a geometry (this represents the minimum convex "
+"geometry that encloses all geometries within the set)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:447
+msgid "crosses"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:447
+msgid ""
+"Returns 1 (true) if the supplied geometries have some, but not all, interior"
+" points in common"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:449
+msgid "difference(a,b)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:449
+msgid ""
+"Returns a geometry that represents that part of geometry a that does not "
+"intersect with geometry b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:451
+msgid "disjoint"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:451
+msgid "Returns 1 (true) if the geometries do not share any space together"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:453
+msgid "distance"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:453
+msgid ""
+"Returns the minimum distance (based on spatial ref) between two geometries "
+"in projected units"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:455
+msgid "end_point"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:455
+msgid "Returns the last node from a geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:456
+msgid "exterior_ring"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:456
+msgid ""
+"Returns a line string representing the exterior ring of a polygon geometry. "
+"If the geometry is not a polygon then the result will be null"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:459
+msgid "extrude(geom,x,y)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:459
+msgid ""
+"Returns an extruded version of the input (Multi-)Curve or (Multi-)Linestring"
+" geometry with an extension specified by x and y"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:462
+msgid "geom_from_gml"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:462
+msgid "Returns a geometry created from a GML representation of geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:464
+msgid "geom_from_wkt"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:464
+msgid "Returns a geometry created from a well-known text (WKT) representation"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:466
+msgid "geom_to_wkt"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:466
+msgid ""
+"Returns the well-known text (WKT) representation of the geometry without "
+"SRID metadata"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:468
+msgid "geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:468
+msgid "Returns a feature's geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:469
+msgid "geometry_n"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:469
+msgid ""
+"Returns the nth geometry from a geometry collection, or null if the input "
+"geometry is not a collection"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:471
+msgid "interior_ring_n"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:471
+msgid ""
+"Returns the geometry of the nth interior ring from a polygon geometry, or "
+"null if the geometry is not a polygon"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:474
+msgid "intersection"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:474
+msgid ""
+"Returns a geometry that represents the shared portion of two geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:476
+msgid "intersects"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:476
+msgid ""
+"Tests whether a geometry intersects another. Returns 1 (true) if the "
+"geometries spatially intersect (share any portion of space) and 0 if they "
+"don't"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:479
+msgid "intersects_bbox"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:479
+msgid ""
+"Tests whether a geometry's bounding box overlaps another geometry's bounding"
+" box. Returns 1 (true) if the geometries spatially intersect (share any "
+"portion of space) their bounding box and 0 if they don't"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:483
+msgid "is_closed"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:483
+msgid ""
+"Returns true if a line string is closed (start and end points are "
+"coincident), false if a line string is not closed and null if the geometry "
+"is not a line string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:486
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:616
+msgid "length"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:486
+msgid "Returns length of a line geometry feature (or length of a string)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:488
+msgid "m"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:488
+msgid "Returns the m value of a point geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:489
+msgid "make_line"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:489
+msgid "Creates a line geometry from a series of point geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:490
+msgid "make_point(x,y,z,m)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:490
+msgid ""
+"Returns a point geometry from x and y values (and optional z and m values)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:492
+msgid "make_point_m(x,y,m)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:492
+msgid "Returns a point geometry from x and y coordinates and m values"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:493
+msgid "make_polygon"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:493
+msgid ""
+"Creates a polygon geometry from an outer ring and optional series of inner "
+"ring geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:495
+msgid "nodes_to_points"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:495
+msgid ""
+"Returns a multipoint geometry consisting of every node in the input geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:497
+msgid "num_geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:497
+msgid ""
+"Returns the number of geometries in a geometry collection, or null if the "
+"input geometry is not a collection"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:500
+msgid "num_interior_rings"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:500
+msgid ""
+"Returns the number of interior rings in a polygon or geometry collection, or"
+" null if the input geometry is not a polygon or collection"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:503
+msgid "num_points"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:503
+msgid "Returns the number of vertices in a geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:504
+msgid "num_rings"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:504
+msgid ""
+"Returns the number of rings (including exterior rings) in a polygon or "
+"geometry collection, or null if the input geometry is not a polygon or "
+"collection"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:507
+msgid "order_parts"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:507
+msgid "Orders the parts of a MultiGeometry by a given criteria"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:508
+msgid "overlaps"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:508
+msgid ""
+"Tests whether a geometry overlaps another. Returns 1 (true) if the "
+"geometries share space, are of the same dimension, but are not completely "
+"contained by each other"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:511
+msgid "perimeter"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:511
+msgid ""
+"Returns the perimeter of a geometry polygon feature. Calculations are in the"
+" Spatial Reference System of this geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:513
+msgid "point_n"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:513
+msgid "Returns a specific node from a geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:514
+msgid "point_on_surface"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:514
+msgid "Returns a point guaranteed to lie on the surface of a geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:515
+msgid "relate"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:515
+msgid ""
+"Tests or returns the Dimensional Extended 9 Intersection Model (DE-9IM) "
+"representation of the relationship between two geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:518
+msgid "reverse"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:518
+msgid ""
+"Reverses the direction of a line string by reversing the order of its "
+"vertices"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:520
+msgid "segments_to_lines"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:520
+msgid ""
+"Returns a multi line geometry consisting of a line for every segment in the "
+"input geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:522
+msgid "shortest_line"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:522
+msgid ""
+"Returns the shortest line joining two geometries. The resultant line will "
+"start at geometry 1 and end at geometry 2"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:524
+msgid "start_point"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:524
+msgid "Returns the first node from a geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:525
+msgid "sym_difference"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:525
+msgid ""
+"Returns a geometry that represents the portions of two geometries that do "
+"not intersect"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:527
+msgid "touches"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:527
+msgid ""
+"Tests whether a geometry touches another. Returns 1 (true) if the geometries"
+" have at least one point in common, but their interiors do not intersect"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:530
+msgid "transform"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:530
+msgid ""
+"Returns the geometry transformed from the source CRS to the destination CRS"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:532
+msgid "translate"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:532
+msgid ""
+"Returns a translated version of a geometry. Calculations are in the Spatial "
+"Reference System of this geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:534
+msgid "union"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:534
+msgid ""
+"Returns a geometry that represents the point set union of the geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:536
+msgid "within (a,b)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:536
+msgid ""
+"Tests whether a geometry is within another. Returns 1 (true) if geometry a "
+"is completely inside geometry b"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:538
+msgid "x"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:538
+msgid ""
+"Returns the x coordinate of a point geometry, or the x coordinate of the "
+"centroid for a non-point geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:540
+msgid "x_min"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:540
+msgid ""
+"Returns the minimum x coordinate of a geometry. Calculations are in the "
+"Spatial Reference System of this geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:542
+msgid "x_max"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:542
+msgid ""
+"Returns the maximum x coordinate of a geometry. Calculations are in the "
+"Spatial Reference System of this geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:544
+msgid "y"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:544
+msgid ""
+"Returns the y coordinate of a point geometry, or the y coordinate of the "
+"centroid for a non-point geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:546
+msgid "y_min"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:546
+msgid ""
+"Returns the minimum y coordinate of a geometry. Calculations are in the "
+"Spatial Reference System of this geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:548
+msgid "y_max"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:548
+msgid ""
+"Returns the maximum y coordinate of a geometry. Calculations are in the "
+"Spatial Reference System of this geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:550
+msgid "z"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:550
+msgid "Returns the z coordinate of a point geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:555
+msgid "Return the x coordinate of the current feature's centroid::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:559
+msgid "Send back a value according to feature's area::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:564
+msgid "Record Functions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:566
+msgid "This group contains functions that operate on record identifiers."
+msgstr "Este grupo contiene funciones que operan sobre identificadores de registros."
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:571
+msgid "$currentfeature"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:571
+msgid ""
+"Returns the current feature being evaluated. This can be used with the "
+"'attribute' function to evaluate attribute values from the current feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:574
+msgid "$id"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:574
+msgid "Returns the feature id of the current row"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:575
+msgid "$map"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:575
+msgid ""
+"Returns the id of the current map item if the map is being drawn in a "
+"composition, or \"canvas\" if the map is being drawn within the main QGIS "
+"window"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:578
+msgid "$rownum"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:578
+msgid "Returns the number of the current row"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:579
+msgid "$scale"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:579
+msgid "Returns the current scale of the map canvas"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:580
+msgid "attribute"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:580
+msgid "Returns the value of a specified attribute from a feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:581
+msgid "get_feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:581
+msgid "Returns the first feature of a layer matching a given attribute value."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:583
+msgid "uuid"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:583
+msgid ""
+"Generates a Universally Unique Identifier (UUID) for each row. Each UUID is "
+"38 characters long"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:589
+msgid ""
+"Return the first feature in layer \"LayerA\" whose field \"id\" has the same"
+" value as the field \"name\" of the current feature (a kind of jointure)::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:594
+msgid "Calculate the area of the joined feature from the previous example::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:600
+msgid "String Functions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:602
+msgid ""
+"This group contains functions that operate on strings (e.g., that replace, "
+"convert to upper case)."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:608
+msgid "concat"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:608
+msgid "Concatenates several strings to one"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:609
+msgid "format"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:609
+msgid "Formats a string using supplied arguments"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:610
+msgid "format_date"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:610
+msgid "Formats a date type or string into a custom string format"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:611
+msgid "format_number"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:611
+msgid ""
+"Returns a number formatted with the locale separator for thousands (also "
+"truncates the number to the number of supplied places)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:614
+msgid "left(string, n)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:614
+msgid ""
+"Returns a substring that contains the n leftmost characters of the string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:616
+msgid "Returns length of a string (or length of a line geometry feature)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:618
+msgid "lower"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:618
+msgid "converts a string to lower case"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:619
+msgid "lpad"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:619
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:629
+msgid "Returns a string with supplied width padded using the fill character"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:621
+msgid "regexp_replace"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:621
+msgid "Returns a string with the supplied regular expression replaced"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:623
+msgid "regexp_substr"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:623
+msgid ""
+"Returns the portion of a string which matches a supplied regular expression"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:625
+msgid "replace"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:625
+msgid "Returns a string with the supplied string replaced"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:627
+msgid "right(string, n)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:627
+msgid ""
+"Returns a substring that contains the n rightmost characters of the string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:629
+msgid "rpad"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:631
+msgid "strpos"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:631
+msgid "Returns the index of a regular expression in a string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:633
+msgid "substr"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:633
+msgid "Returns a part of a string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:634
+msgid "title"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:634
+msgid ""
+"Converts all words of a string to title case (all words lower case with "
+"leading capital letter)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:637
+msgid "trim"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:637
+msgid ""
+"Removes all leading and trailing white space (spaces, tabs, etc.) from a "
+"string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:639
+msgid "upper"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:639
+msgid "Converts string a to upper case"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:640
+msgid "wordwrap"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:640
+msgid "Returns a string wrapped to a maximum/ minimum number of characters"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:646
+msgid "Recent Functions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:648
+msgid ""
+"This group contains recently used functions. Any expression used in the "
+"Expression dialog is added to the list, sorted from the more recent to the "
+"less one. This helps to quickly retrieve any previous expression."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:654
+msgid "Variables Functions"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:656
+msgid ""
+"This group contains dynamic variables related to the application, the "
+"project file and other settings. It means that some functions may not be "
+"available according to the context:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:660
+msgid "from the |expressionSelect| :sup:`Select by expression` dialog"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:661
+msgid "from the |calculateField| :sup:`Field calculator` dialog"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:662
+msgid "from the layer properties dialog"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:663
+msgid "from the print composer"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:665
+msgid ""
+"To use these functions in an expression, they should be preceded by @ "
+"character (e.g, @row_number). Are concerned:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:671
+msgid "atlas_feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:671
+msgid "Returns the current atlas feature (as feature object)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:673
+msgid "atlas_featureid"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:673
+msgid "Returns the current atlas feature ID"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:674
+msgid "atlas_featurenumber"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:674
+msgid "Returns the number of pages in composition"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:675
+msgid "atlas_filename"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:675
+msgid "Returns the current atlas file name"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:676
+msgid "atlas_geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:676
+msgid "Returns the current atlas feature geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:677
+msgid "atlas_pagename"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:677
+msgid "Returns the current atlas page name"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:678
+msgid "atlas_totalfeatures"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:678
+msgid "Returns the total number of features in atlas"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:679
+msgid "grid_axis"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:679
+msgid ""
+"Returns the current grid annotation axis (eg, 'x' for longitude, 'y' for "
+"latitude)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:681
+msgid "grid_number"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:681
+msgid "Returns the current grid annotation value"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:682
+msgid "item_id"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:682
+msgid "Returns the composer item user ID (not necessarily unique)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:684
+msgid "item_uuid"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:684
+msgid "Returns the composer item unique ID"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:685
+msgid "layer_id"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:685
+msgid "Returns the ID of current layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:686
+msgid "layer_name"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:686
+msgid "Returns the name of current layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:687
+msgid "layout_dpi"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:687
+msgid "Returns the composition resolution (DPI)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:688
+msgid "layout_numpages"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:688
+msgid "Returns the number of pages in the composition"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:689
+msgid "layout_pageheight"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:689
+msgid "Returns the composition height in mm"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:690
+msgid "layout_pagewidth"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:690
+msgid "Returns the composition width in mm"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:691
+msgid "map_id"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:691
+msgid ""
+"Returns the ID of current map destination. This will be 'canvas' for canvas "
+"renders, and the item ID for composer map renders"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:694
+msgid "map_extent_center"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:694
+msgid "Returns the point feature at the center of the map"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:695
+msgid "map_extent_height"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:695
+msgid "Returns the current height of the map"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:696
+msgid "map_exent_width"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:696
+msgid "Returns the current width of the map"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:697
+msgid "map_rotation"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:697
+msgid "Returns the current rotation of the map"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:698
+msgid "map_scale"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:698
+msgid "Returns the current scale of the map"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:699
+msgid "project_filename"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:699
+msgid "Returns the filename of current project"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:700
+msgid "project_folder"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:700
+msgid "Returns the folder for current project"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:701
+msgid "project_path"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:701
+msgid "Returns the full path (including file name) of current project"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:703
+msgid "project_title"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:703
+msgid "Returns the title of current project"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:704
+msgid "qgis_os_name"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:704
+msgid ""
+"Returns the current Operating system name, eg 'windows', 'linux' or 'osx'"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:706
+msgid "qgis_platform"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:706
+msgid "Returns the QGIS platform, eg 'desktop' or 'server'"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:707
+msgid "qgis_release_name"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:707
+msgid "Returns the current QGIS release name"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:708
+msgid "qgis_version"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:708
+msgid "Returns the current QGIS version string"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:709
+msgid "qgis_version_no"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:709
+msgid "Returns the current QGIS version number"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:710
+msgid "symbol_angle"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:710
+msgid ""
+"Returns the angle of the symbol used to render the feature (valid for marker"
+" symbols only)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:712
+msgid "symbol_color"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:712
+msgid "Returns the color of the symbol used to render the feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:713
+msgid "user_account_name"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:713
+msgid "Returns the current user's operating system account name"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:714
+msgid "user_full_name"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:714
+msgid "Returns the current user's operating system user name"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:715
+msgid "row_number"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:715
+msgid "Stores the number of the current row"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:722
+msgid "Function Editor"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:724
+msgid ""
+"With the Function Editor, you are able to define your own Python custom "
+"functions in a comfortable way."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:736
+msgid "The Function Editor tab"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:738
+msgid ""
+"The function editor will create new Python files in "
+":file:`.qgis2\\\\python\\\\expressions` folder and will auto load all "
+"functions defined when starting QGIS. Be aware that new functions are only "
+"saved in the :file:`expressions` folder and not in the project file. If you "
+"have a project that uses one of your custom functions you will need to also "
+"share the .py file in the expressions folder."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:744
+msgid "Here's a short example on how to create your own functions:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:752
+msgid ""
+"The short example creates a function 'myfunc' that will give you a function "
+"with two values. When using the args='auto' function argument the number of "
+"function arguments required will be calculated by the number of arguments "
+"the function has been defined with in Python (minus 2 - feature, and "
+"parent)."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:758
+msgid "This function then can be used with the following expression:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:764
+msgid ""
+"Your function will be implemented in the :guilabel:`Custom` functions group "
+"of the :guilabel:`Expression` tab after using the :guilabel:`Run Script` "
+"button."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:767
+msgid ""
+"Further information about creating Python code can be found in the :ref"
+":`PyQGIS-Developer-Cookbook`."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:770
+msgid ""
+"The function editor is not only limited to working with the field "
+"calculator, it can be found whenever you work with expressions."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/expression.rst:110
+msgid "Field_Calculator_Functions"
+msgstr ""

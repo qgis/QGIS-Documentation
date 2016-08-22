@@ -1,0 +1,191 @@
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2016-07-14 18:03+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:6
+msgid "|LS| Map Presentation"
+msgstr "|LS| Prezentarea Hărții"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:8
+msgid ""
+"In the previous lessons you have imported an old forest inventor as a GIS "
+"project, updated it to the current situation, designed a forest inventory, "
+"created maps for the field work and calculated forest parameters from the "
+"field measurements."
+msgstr "În lecțiile anterioare ați importat, sub formă de proiect GIS, un vechi inventar de pădure, l-ați actualizat, ați proiectat un inventar, ați creat hărți pentru munca de teren și ați calculat parametrii pădurii folosind măsurătorile din teren."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:10
+msgid ""
+"It is often important to create maps with the results of a GIS project. A "
+"map presenting the results of the forest inventory will make it easier for "
+"anyone to have a good idea of what the results are in a quick glance, "
+"without looking at the specific numbers."
+msgstr "Adesea, pentru a prezenta rezultatele, este importantă crearea de hărți, în cadrul unui proiect GIS. O hartă care prezintă inventarul forestier va facilita înțelegerea  acestuia dintr-o simplă privire, fără analiza detaliată a cifrelor."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:12
+msgid ""
+"**The goal for this lesson:** Create a map to present the inventory results "
+"using a hillshade raster as background."
+msgstr "**Scopul acestei lecții:** De a crea o hartă care să prezinte rezultatele inventarerii, folosind ca fundal un raster al reliefului umbrit."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:15
+msgid "|basic| |FA| Preparing the Map Data"
+msgstr "|basic| |FA| Pregătirea Datelor Hărții"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:17
+msgid ""
+"Open the QGIS project from the parameters calculations lesson, "
+":kbd:`forest_inventory.qgs`. Keep at least the following layers:"
+msgstr "Deschideți proiectul QGIS din lecția de calculare a parametrilor, :kbd:`forest_inventory.qgs`. Păstrați cel puțin următoarele straturi:"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:19
+msgid ":kbd:`forest_stands_2012_results`."
+msgstr ":kbd:`forest_stands_2012_results`."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:20
+msgid ":kbd:`basic_map`."
+msgstr ":kbd:`basic_map`."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:21
+msgid ":kbd:`rautjarvi_aerial`."
+msgstr ":kbd:`rautjarvi_aerial`."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:22
+msgid ""
+":kbd:`lakes` (if you don't have it, add it from the "
+":kbd:`exercise_data\\\\forestry\\\\` folder)."
+msgstr "kbd:`lakes` (dacă nu îl aveți, adăugați-l din :kbd:`exercise_data\\\\forestry\\\\` folder)."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:24
+msgid ""
+"You are going to present the average volumes of your forest stands in a map."
+" If you open the :guilabel:`Attribute table` for the "
+":kbd:`forest_stands_2012_results` layer, you can see the :kbd:`NULL` values "
+"for the stands without information. To be able to get also those stands into"
+" your styling you should change the :kbd:`NULL` values to, for example, "
+":kbd:`-999`, knowing that those negative numbers mean there is no data for "
+"those polygons."
+msgstr "Veți prezenta pe o hartă volumele medii ale pâlcurilor de pădure. Dacă deschideți :guilabel:`Tabela de atribute` pentru stratul :kbd:`forest_stands_2012_results`, veți vedea valorile :kbd:`NULL` în cazul pâlcurilor fără informații. Pentru a le putea include și pe acestea în stilul dvs. ar trebui să modificați valorile :kbd:`NULL` în, de exemplu, :kbd:`-999`, știind că numerele negative semnifică faptul că nu există date pentru acele poligoane."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:26
+msgid "For the :kbd:`forest_stands_2012_results` layer:"
+msgstr "Pentru stratul :kbd:`forest_stands_2012_results`:"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:28
+msgid "Open the :guilabel:`Attribute table` and enable editing."
+msgstr "Deschideți :guilabel:`Tabela sa de Atribute` și activați editarea."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:29
+msgid "Select the polygons with :kbd:`NULL` values."
+msgstr "Selectati poligoanele cu valoarea :kbd:`NULL`."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:30
+msgid ""
+"Use the calculator to update the values of the :kbd:`MEANVol` field to "
+":kbd:`-999` only for the selected features."
+msgstr "Utilizați calculatorul pentru a actualiza valorile din câmpul :kbd:`MEANVol` la :kbd:`-999`, doar pentru entitățile selectate."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:31
+msgid "Disable editing and save the changes."
+msgstr "Dezactivați editarea și salvați modificările."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:33
+msgid "Now you can use a saved style for this layer:"
+msgstr "Acum puteți un stil implicit pentru acest strat:"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:35
+msgid "Go to the :guilabel:`Style` tab."
+msgstr "Mergeți la fila :guilabel:`Stil` tab."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:36
+msgid "Click on :guilabel:`Load Style`."
+msgstr "Clic pe fila :guilabel:`Încărcare Stil`."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:37
+msgid ""
+"Select the :kbd:`forest_stands_2012_results.qml` from the "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
+msgstr "Selectați folderul :kbd:`forest_stands_2012_results.qml` from the :kbd:`exercise_data\\\\forestry\\\\results\\\\`."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:38
+msgid "Click :guilabel:`OK`."
+msgstr "Clic pe :guilabel:`OK`"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:43
+msgid "Your map will look something like this:"
+msgstr "Harta dvs. va arăta în felul următor:"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:50
+msgid "|basic| |TY| Try Different Blending Modes"
+msgstr "|basic| |TY| Încercați Diferite Moduri de Amestecare"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:52
+msgid "The style you loaded:"
+msgstr "Stilul pe care l-ați încărcat:"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:57
+msgid ""
+"is using the :kbd:`Hard light` mode for the :guilabel:`Layer blending mode`."
+" Note that the different modes apply different filters combining the "
+"underlying and overlying layers, in this case the hillshade raster and your "
+"forest stands are used. You can read about these modes in the `User Guide "
+"<http://docs.qgis.org/2.2/en/docs/user_manual/working_with_vector/vector_properties.html>`_."
+msgstr "utilizează :kbd:`Iluminarea puternică` pentru :guilabel:`Modul de îmbinare a stratului`. Rețineți că diversele moduri aplică filtre diferite pentru combinarea stratului din fundal cu cel de deasupra, în acest caz rasterul reliefului și stratul pâlcurilor forestiere. Puteți citi despre aceste moduri în `Ghidul utilizatorului <http://docs.qgis.org/2.2/en/docs/user_manual/working_with_vector/vector_properties.html>`_."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:59
+msgid ""
+"Try with different modes and see the differences in your map. Then choose "
+"the one you like better for your final map."
+msgstr "Încercați în diverse moduri și observați diferențele în hartă. Apoi, stabiliți unul care vă place cel mai mult pentru harta finală."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:63
+msgid "|basic| |TY| Using a Composer Template to Create the Map result"
+msgstr "|basic| |TY| Folosirea unui Șablon de Compozitor pentru Crearea Hărții rezultatelor"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:65
+msgid ""
+"Use a template prepared in advanced to present the results. The template "
+":kbd:`forest_map.qpt` is located in the "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder. Load it using the "
+":menuselection:`Project --> Composer Manager...` dialog."
+msgstr "Utilizați un șablon pregătit în avans, pentru a prezenta rezultatele. Șablonul :kbd:`forest_map.qpt` este localizat în dosarul :kbd:`exercise_data\\\\forestry\\\\results\\\\`. Încărcați-l, folosind dialogul :menuselection:`Proiect --> Managerul Compozițiilor...`."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:70
+msgid ""
+"Open the map composer and edit the final map to get a result you are happy "
+"with."
+msgstr "Deschideți compozitorul hărții și editați harta finală pentru a obține un rezultat mulțumitor."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:72
+msgid "The map template you are using will give a map similar to this one:"
+msgstr "Șablonul hărții pe care îl utilizați vă va oferi o hartă similară cu aceasta:"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:77
+msgid "Save your QGIS project for future references."
+msgstr "Salvați proiectul dumneavoastră QGIS ca referință pentru viitor."
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:80
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/forestry/results_map.rst:82
+msgid ""
+"Through this module you have seen how a basic forest inventory can be "
+"planned and presented with QGIS. Many more forest analysis are possible with"
+" the variety of tools that you can access, but hopefully this manual has "
+"given you a good starting point to explore how you could achieve the "
+"specific results you need."
+msgstr "Prin intermediul acestui modul ați văzut cum poate fi planificat și prezentat un inventar forestier de bază în QGIS. Mult mai multe analize forestiere sunt posibile în varietatea de instrumente pe care le puteți accesa, dar sperăm că acest manual va oferit un bun punct de plecare pentru a explora noi modalități de obținere a rezultatelor dorite."

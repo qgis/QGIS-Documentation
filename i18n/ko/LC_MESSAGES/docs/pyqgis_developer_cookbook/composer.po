@@ -1,0 +1,282 @@
+# 
+# Translators:
+# BJ Jang <jangbi882@gmail.com>, 2015
+# Kwon.Yongchan <ruvyn@naver.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2016-07-18 09:38+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Korean (http://www.transifex.com/qgis/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:11
+msgid "Map Rendering and Printing"
+msgstr "맵 렌더링 및 출력"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:16
+msgid ""
+"There are generally two approaches when input data should be rendered as a "
+"map: either do it quick way using :class:`QgsMapRenderer` or produce more "
+"fine-tuned output by composing the map with :class:`QgsComposition` class "
+"and friends."
+msgstr "입력 데이터를 렌더링해야 할 때 일반적으로 2가지 접근법을 사용합니다. :class:`QgsMapRenderer` 클래스를 이용하는 빠른 방법이 있고, 또는 :class:`QgsComposition` 클래스와 그 프렌드(friend) 클래스로 맵을 작성해서 좀 더 미세조정(fine-tuned)된 산출물을 생산하는 방법이 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:23
+msgid "Simple Rendering"
+msgstr "단순 렌더링"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:95
+msgid "Output using Map Composer"
+msgstr "맵 구성기를 이용한 출력"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:97
+msgid ""
+"Map composer is a very handy tool if you would like to do a more "
+"sophisticated output than the simple rendering shown above. Using the "
+"composer it is possible to create complex map layouts consisting of map "
+"views, labels, legend, tables and other elements that are usually present on"
+" paper maps. The layouts can be then exported to PDF, raster images or "
+"directly printed on a printer."
+msgstr "앞에서 본 단순 렌더링보다 더 복잡한 출력물을 생성하고자 할 경우 맵 구성기 도구가 유용합니다. 맵 구성기를 사용하면 맵 뷰, 라벨, 범례, 표 및 종이 지도 상에 흔히 나타나는 다른 요소들로 이루어진 복잡한 맵 레이아웃을 생성할 수 있습니다. 그 다음 해당 레이아웃을 PDF, 래스터 이미지로 내보내거나 바로 프린터로 인쇄할 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:120
+msgid ""
+"Note that the composition takes an instance of :class:`QgsMapRenderer`. In "
+"the code we expect we are running within QGIS application and thus use the "
+"map renderer from map canvas. The composition uses various parameters from "
+"the map renderer, most importantly the default set of map layers and the "
+"current extent. When using composer in a standalone application, you can "
+"create your own map renderer instance the same way as shown in the section "
+"above and pass it to the composition."
+msgstr "맵 구성에 :class:`QgsMapRenderer` 클래스 인스턴스가 필요하다는 사실을 주의하십시오. 이 예시 코드는 QGIS 응용 프로그램 내부에서 실행한다고 가정하고 있기에 맵 캔버스의 맵 렌더러를 사용합니다. 맵 구성 작업에서 맵 렌더러의 다양한 파라미터를 쓰게 되는데, 가장 중요한 것은 맵 레이어와 현재 범위의 기본 세트입니다. 독립형 응용 프로그램에서 맵 구성기를 사용할 때, 앞 장에서와 동일한 방법으로 사용자 지정 맵 렌더러를 구현해서 구성 작업에 넘겨줄 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:128
+msgid ""
+"It is possible to add various elements (map, label, ...) to the composition "
+"--- these elements have to be descendants of :class:`QgsComposerItem` class."
+" Currently supported items are:"
+msgstr "구성 작업에서 다양한 요소들(맵, 라벨 등)을 추가할 수도 있습니다. 이 요소들은 :class:`QgsComposerItem` 클래스에서 파생된 것이어야 합니다. 현재 버전에서 지원하는 아이템은 다음과 같습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:170
+msgid "arrow"
+msgstr "화살표"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:171
+msgid "picture"
+msgstr "그림"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:172
+msgid "shape"
+msgstr "도형"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:173
+msgid "table"
+msgstr "표"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:192
+msgid ""
+"Besides creating the composer items by hand, QGIS has support for composer "
+"templates which are essentially compositions with all their items saved to a"
+" .qpt file (with XML syntax). Unfortunately this functionality is not yet "
+"available in the API."
+msgstr "맵 구성기 아이템을 수동으로 생성하는 방법 외에도, QGIS는 근본적으로는 모든 구성기 아이템들로 구성될 수 있는 (XML 문법을 따르는) ``.qpt`` 파일의 형태로 저장되는 맵 구성기 템플릿을 지원합니다. 아쉽게도 아직 API에서 이 기능을 사용할 수는 없습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:197
+msgid ""
+"Once the composition is ready (the composer items have been created and "
+"added to the composition), we can proceed to produce a raster and/or vector "
+"output."
+msgstr "(맵 구성기 아이템을 생성하고 구성에 추가하는) 구성 작업이 완료되면, 래스터 및 벡터 출력물을 생성하는 다음 단계로 넘어갈 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:212
+msgid "Output to a raster image"
+msgstr "래스터 이미지로 출력"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:241
+msgid "Output to PDF"
+msgstr "PDF로 출력"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:20
+msgid "map rendering"
+msgstr "맵 렌더링"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:5
+msgid "map printing"
+msgstr "맵 출력"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:20
+msgid "simple"
+msgstr "단순"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:92
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:209
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:238
+msgid "output"
+msgstr "출력"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:92
+msgid "using Map Composer"
+msgstr "맵 구성기를 이용한"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:209
+msgid "raster image"
+msgstr "래스터 이미지"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:238
+msgid "PDF"
+msgstr "PDF"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:25
+msgid ""
+"Render some layers using :class:`QgsMapRenderer` --- create destination "
+"paint device (``QImage``, ``QPainter`` etc.), set up layer set, extent, "
+"output size and do the rendering"
+msgstr ":class:`QgsMapRenderer` 클래스를 써서 레이어 몇 개를 렌더링해봅시다. 최종 출력 디바이스(``QImage``, ``QPainter`` 등등)를 만들고, 레이어 셋, 범위, 출력물 크기를 지정한 다음 렌더링합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:68
+msgid "Rendering layers with different CRS"
+msgstr "서로 다른 좌표계를 가진 레이어들을 렌더링하기"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:70
+msgid ""
+"If you have more than one layer and they have a different CRS, the simple "
+"example above will probably not work: to get the right values from the "
+"extent calculations you have to explicitly set the destination CRS and "
+"enable OTF reprojection as in the example below (only the renderer "
+"configuration part is reported)"
+msgstr "레이어가 여러 개인데 서로 다른 좌표계를 가지고 있을 경우, 앞에서 본 단순 렌더링 예시는 작동 않을 것입니다. 범위 계산에서 올바른 값을 얻으려면 다음 예시 코드에서처럼 최종 CRS를 명확하게 지정하고 실시간(OTF, on the fly) 재투영을 활성화해야 합니다. (렌더러 설정 부분만 가져왔습니다.)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:103
+msgid ""
+"The composer consists of a bunch of classes. They all belong to the core "
+"library. QGIS application has a convenient GUI for placement of the "
+"elements, though it is not available in the GUI library. If you are not "
+"familiar with `Qt Graphics View framework "
+"<http://doc.qt.io/qt-4.8/qgraphicsview.html>`_, then you are encouraged to "
+"check the documentation now, because the composer is based on it. Also check"
+" the `Python documentation of the implementation of QGraphicView "
+"<http://pyqt.sourceforge.net/Docs/PyQt4/qgraphicsview.html>`_."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:111
+msgid ""
+"The central class of the composer is :class:`QgsComposition` which is "
+"derived from :class:`QGraphicsScene`. Let us create one"
+msgstr "맵 구성기의 중심 클래스는 :class:`QGraphicsScene` 클래스에서 파생된 :class:`QgsComposition` 클래스입니다. 이 클래스를 생성해봅시다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:132
+msgid ""
+"map --- this item tells the libraries where to put the map itself. Here we "
+"create a map and stretch it over the whole paper size"
+msgstr "맵 --- 이 아이템은 라이브러리에게 맵 자체를 어디에 놓을지 말해줍니다. 다음은 맵을 생성해서 종이 크기 전체로 늘리는 예시 코드입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:142
+msgid ""
+"label --- allows displaying labels. It is possible to modify its font, "
+"color, alignment and margin"
+msgstr "라벨 --- 라벨을 표출할 수 있도록 해줍니다. 폰트, 색상, 정렬 및 여백을 수정할 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:152
+msgid "legend"
+msgstr "범례"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:160
+msgid "scale bar"
+msgstr "축척막대(scale bar)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:175
+msgid ""
+"By default the newly created composer items have zero position (top left "
+"corner of the page) and zero size. The position and size are always measured"
+" in millimeters"
+msgstr "새로 생성된 맵 작성자 아이템의 위치 기본값은 (0,0), 즉 페이지의 좌상단이며 크기 기본값은 0입니다. 위치와 크기의 단위는 언제나 밀리미터입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:186
+msgid "A frame is drawn around each item by default. How to remove the frame"
+msgstr "기본적으로 모든 아이템 주위에 테두리(frame)가 그려집니다. 다음은 그 테두리를 없애는 방법입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:200
+msgid ""
+"The default output settings for composition are page size A4 and resolution "
+"300 DPI. You can change them if necessary. The paper size is specified in "
+"millimeters"
+msgstr "구성 작업의 출력 설정 기본값은 종이 크기 A4, 해상도 300dpi입니다. 필요하다면 설정을 변경할 수도 있습니다. 종이 크기는 밀리미터 단위로 설정됩니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:214
+msgid ""
+"The following code fragment shows how to render a composition to a raster "
+"image"
+msgstr "다음은 구성된 맵을 래스터 이미지로 렌더링하는 방법을 보여주는 예시 코드입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/composer.rst:243
+msgid "The following code fragment renders a composition to a PDF file"
+msgstr "다음은 구성된 맵을 PDF 파일로 렌더링하는 방법을 보여주는 예시 코드입니다."
+
+#~ msgid ""
+#~ "Render some layers using :class:`QgsMapRenderer` - create destination paint "
+#~ "device (``QImage``, ``QPainter`` etc.), set up layer set, extent, output "
+#~ "size and do the rendering::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The composer consists of a bunch of classes. They all belong to the core "
+#~ "library. QGIS application has a convenient GUI for placement of the "
+#~ "elements, though it is not available in the gui library. If you are not "
+#~ "familiar with `Qt Graphics View framework "
+#~ "<http://doc.qt.nokia.com/stable/graphicsview.html>`_, then you are "
+#~ "encouraged to check the documentation now, because the composer is based on "
+#~ "it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The central class of the composer is :class:`QgsComposition` which is "
+#~ "derived from :class:`QGraphicsScene`. Let us create one::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "map --- this item tells the libraries where to put the map itself. Here we "
+#~ "create a map and stretch it over the whole paper size::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "label --- allows displaying labels. It is possible to modify its font, "
+#~ "color, alignment and margin::"
+#~ msgstr ""
+
+#~ msgid "legend ::"
+#~ msgstr ""
+
+#~ msgid "scale bar ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default the newly created composer items have zero position (top left "
+#~ "corner of the page) and zero size. The position and size are always measured"
+#~ " in millimeters::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A frame is drawn around each item by default. How to remove the frame::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The default output settings for composition are page size A4 and resolution "
+#~ "300 DPI. You can change them if necessary. The paper size is specified in "
+#~ "millimeters::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following code fragment shows how to render a composition to a raster "
+#~ "image::"
+#~ msgstr ""
+
+#~ msgid "The following code fragment renders a composition to a PDF file::"
+#~ msgstr ""

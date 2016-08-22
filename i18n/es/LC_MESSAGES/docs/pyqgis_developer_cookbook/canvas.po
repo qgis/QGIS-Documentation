@@ -1,0 +1,411 @@
+# 
+# Translators:
+# Igor F. Davalos Rojas <idavalosr@gmail.com>, 2015
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2016-05-27 15:16+0000\n"
+"Last-Translator: Minerva Durán Martínez <mine_tod@yahoo.com.mx>\n"
+"Language-Team: Spanish (http://www.transifex.com/qgis/qgis-documentation/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:11
+msgid "Using Map Canvas"
+msgstr "Usando el Lienzo de Mapa"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:16
+msgid ""
+"The Map canvas widget is probably the most important widget within QGIS "
+"because it shows the map composed from overlaid map layers and allows "
+"interaction with the map and layers. The canvas shows always a part of the "
+"map defined by the current canvas extent. The interaction is done through "
+"the use of **map tools**: there are tools for panning, zooming, identifying "
+"layers, measuring, vector editing and others. Similar to other graphics "
+"programs, there is always one tool active and the user can switch between "
+"the available tools."
+msgstr "El widget del lienzo del mapa es probablemente el widget más importante dentro de QGIS porque muestra el mapa integrado de capas de mapas superpuestos y permite la interacción con el mapa y las capas. El lienzo muestra siempre una parte del mapa definido por el alcance del lienzo actual. La interacción se realiza mediante el uso de **herramientas de mapa**: hay herramientas para desplazamiento, zum, la identificación de las capas, de medida, para editar vectores y otros. Al igual que en otros programas de gráficos, siempre hay una herramienta activa y el usuario puede cambiar entre las herramientas disponibles."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:32
+msgid ""
+"Whenever the map has been panned, zoomed in/out (or some other action "
+"triggers a refresh), the map is rendered again within the current extent. "
+"The layers are rendered to an image (using :class:`QgsMapRenderer` class) "
+"and that image is then displayed in the canvas. The graphics item (in terms "
+"of the Qt graphics view framework) responsible for showing the map is "
+":class:`QgsMapCanvasMap` class. This class also controls refreshing of the "
+"rendered map. Besides this item which acts as a background, there may be "
+"more **map canvas items**. Typical map canvas items are rubber bands (used "
+"for measuring, vector editing etc.) or vertex markers. The canvas items are "
+"usually used to give some visual feedback for map tools, for example, when "
+"creating a new polygon, the map tool creates a rubber band canvas item that "
+"shows the current shape of the polygon. All map canvas items are subclasses "
+"of :class:`QgsMapCanvasItem` which adds some more functionality to the basic"
+" ``QGraphicsItem`` objects."
+msgstr "Cada vez que el mapa ha sido desplazado, zum para acercar /alejar (o algún otra acción que desencadene una actualización), el mapa se representa de nuevo dentro de la extensión actual. Las capas se presentan a una imagen (usando la clase :class:`QgsMapRenderer`) y esa imagen después se muestra en el lienzo. El elemento de gráficos (en términos del marco de vista de gráficos Qt) responsable de mostrar el mapa es la clase :class:`QgsMapCanvasMap`. Esta clase también controla la actualización del mapa. Además este elemento que actúa como un fondo, puede haber más **elementos de lienzo de mapas**. Los elementos de lienzo de mapas típico son bandas de goma (utilizadas para medir, edición vectorial, etc.) o marcadores de vértices. Los elementos de lienzo generalmente se utilizan para dar una retroalimentación visual para herramientas del mapa, por ejemplo, cuando se crea un nuevo polígono, la herramienta del mapa crea una banda borrador en el elemento de mapa que muestra la figura actual  del polígono. Todos los elementos de lienzo de mapa están en subclases de :class:`QgsMapCanvasItem` que añade más funciónalidad a los objetos básicos``QGraphicsItem``."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:48
+msgid "To summarize, the map canvas architecture consists of three concepts:"
+msgstr "Para resumir, la arquitectura del lienzo de mapa consiste en tres conceptos:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:50
+msgid "map canvas --- for viewing of the map"
+msgstr "lienzo de mapa --- para la visualización del mapa"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:51
+msgid ""
+"map canvas items --- additional items that can be displayed in map canvas"
+msgstr "Los elementos de lienzo de mapa --- los elementos adicionales que se pueden desplegar en un lienzo de mapa"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:52
+msgid "map tools --- for interaction with map canvas"
+msgstr "herramientas de mapa --- para interactuar con el lienzo del mapa"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:57
+msgid "Embedding Map Canvas"
+msgstr "Lienzo de mapa insertado"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:67
+msgid ""
+"This produces a standalone window with map canvas. It can be also embedded "
+"into an existing widget or window. When using .ui files and Qt Designer, "
+"place a ``QWidget`` on the form and promote it to a new class: set "
+"``QgsMapCanvas`` as class name and set ``qgis.gui`` as header file. The "
+"``pyuic4`` utility will take care of it. This is a very convenient way of "
+"embedding the canvas. The other possibility is to manually write the code to"
+" construct map canvas and other widgets (as children of a main window or "
+"dialog) and create a layout."
+msgstr "Esto produce una ventana independiente con el lienzo de mapa. Puede también ser incrustado en un widget existente o ventana. Al utilizar archivo ui y Qt Designer, coloque un ``QWidget`` sobre el formulario y promuévalo a una nueva clase: establezca ``QgsMapCanvas`` como nombre de clase y ``qgis.gui`` como archivo de encabezado. La utilidad ``pyuic4`` se hará cargo de ella. Esta es una forma conveniente de incrustar el lienzo. La otra posibilidad es escribir manualmente el código para construir el lienzo del mapa y otros widgets (como hijos de una ventana principal o diálogo) y crea un diseño."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:83
+msgid ""
+"(In case you are wondering, ``Qt`` comes from ``PyQt4.QtCore`` module and "
+"``Qt.white`` is one of the predefined ``QColor`` instances.)"
+msgstr "(En caso de que se esté preguntando, ``Qt`` viene del modulo ``PyQt4.QtCore`` y ``Qt.white`` es uno de lo que predefine las instancias ``QColor``.)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:105
+msgid ""
+"After executing these commands, the canvas should show the layer you have "
+"loaded."
+msgstr "Después de ejecutar estos comandos, el lienzo debe mostrar la capa que se ha cargado."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:111
+msgid "Using Map Tools with Canvas"
+msgstr "Utilizar las herramientas del mapa con el lienzo"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:195
+msgid "Rubber Bands and Vertex Markers"
+msgstr "Bandas elásticas y marcadores de vértices"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:221
+msgid ""
+"Note that points for polygon is not a plain list: in fact, it is a list of "
+"rings containing linear rings of the polygon: first ring is the outer "
+"border, further (optional) rings correspond to holes in the polygon."
+msgstr "Tenga en cuenta que los puntos de polígonos no es una lista simple: de hecho, es una lista de anillos que contienen lista de anillos del polígono: el primer anillo es el borde exterior, anillos adicionales (opcional) corresponden a los agujeros en el polígono."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:241
+msgid ""
+"(in C++ it's possible to just delete the item, however in Python ``del r`` "
+"would just delete the reference and the object will still exist as it is "
+"owned by the canvas)"
+msgstr "(en C++ es posible simplemente eliminar el elemento, sin embargo en Python ``del r`` sería simplemente suprimir la referencia y el objeto aún existirá ya que es propiedad del lienzo)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:265
+msgid ""
+"For temporary hiding of vertex markers and removing them from canvas, the "
+"same applies as for the rubber bands."
+msgstr "Para ocultar temporalmente de los marcadores de vértices y borrarlos del lienzo, lo mismo aplica para las bandas elásticas."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:271
+msgid "Writing Custom Map Tools"
+msgstr "Escribir herramientas de mapa personalizados"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:276
+msgid ""
+"Map tools should inherit from the :class:`QgsMapTool` class or any derived "
+"class, and selected as active tools in the canvas using the "
+":func:`setMapTool` method as we have already seen."
+msgstr "Las herramientas de mapa deben heredar de la clase  :class:`QgsMapTool` o cualquier clase derivada, y seleccione como herramienta activa en el lienzo utilizando el método :func:`setMapTool` como ya hemos visto."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:351
+msgid "Writing Custom Map Canvas Items"
+msgstr "Escribir elementos de lienzo de mapa personalizado"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:46
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:54
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:108
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:192
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:192
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:268
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:348
+msgid "map canvas"
+msgstr "lienzo del mapa"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:46
+msgid "architecture"
+msgstr "arquitectura"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:54
+msgid "embedding"
+msgstr "incrustar"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:108
+msgid "map tools"
+msgstr "herramientas del mapa"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:192
+msgid "rubber bands"
+msgstr "bandas elásticas"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:192
+msgid "vertex markers"
+msgstr "marcadores de vértices"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:268
+msgid "writing custom map tools"
+msgstr "escribir herramientas de mapa personalizado"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:348
+msgid "writing custom canvas items"
+msgstr "escribir elementos de lienzo personalizado"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:24
+msgid ""
+"Map canvas is implemented as :class:`QgsMapCanvas` class in :mod:`qgis.gui` "
+"module. The implementation is based on the Qt Graphics View framework. This "
+"framework generally provides a surface and a view where custom graphics "
+"items are placed and user can interact with them.  We will assume that you "
+"are familiar enough with Qt to understand the concepts of the graphics "
+"scene, view and items. If not, please make sure to read the `overview of the"
+" framework <http://qt-project.org/doc/qt-4.8/graphicsview.html>`_."
+msgstr "El lienzo de mapa esta implementado como clase  :class:`QgsMapCanvas` en el modulo :mod:`qgis.gui`. La implementación se basa en el marco Qt Graphics View. Este marco generalmente proporciona una superficie y una vista donde elementos gráficos personalizados se colocan y el usuario puede interacturar con ellos. Vamos a suponer que está lo suficientemente familiarizado con Qt para comprender los conceptos de la escena gráfica, visión y objetos. Si no es así, asegúrese de leer la `vista general del marco <http://qt-project.org/doc/qt-4.8/graphicsview.html>`_."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:59
+msgid ""
+"Map canvas is a widget like any other Qt widget, so using it is as simple as"
+" creating and showing it"
+msgstr "El lienzo de mapa es un widget como cualquier otro widget Qt, por lo que utilizarlo es tan sencillo como crearlo y mostrarlo"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:75
+msgid ""
+"By default, map canvas has black background and does not use anti-aliasing. "
+"To set white background and enable anti-aliasing for smooth rendering"
+msgstr "Por defecto, el lienzo de mapa tiene un fondo negro y no utiliza anti-aliasing. Para establecer el fondo blanco y habilitar el anti-aliasing para suavisar la presentación"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:86
+msgid ""
+"Now it is time to add some map layers. We will first open a layer and add it"
+" to the map layer registry. Then we will set the canvas extent and set the "
+"list of layers for canvas"
+msgstr "Ahora es tiempo de añadir algunas capas. Primero, abriremos una capa y lo añadiremos al registro capa de mapa. A continuación, vamos a establecer la extensión del lienzo y la lista de capas para el lienzo "
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:113
+msgid ""
+"The following example constructs a window that contains a map canvas and "
+"basic map tools for map panning and zooming. Actions are created for "
+"activation of each tool: panning is done with :class:`QgsMapToolPan`, "
+"zooming in/out with a pair of :class:`QgsMapToolZoom` instances. The actions"
+" are set as checkable and later assigned to the tools to allow automatic "
+"handling of checked/unchecked state of the actions -- when a map tool gets "
+"activated, its action is marked as selected and the action of the previous "
+"map tool is deselected. The map tools are activated using :func:`setMapTool`"
+" method."
+msgstr "El siguiente ejemplo construye una ventana que contiene un lienzo de mapa y herramientas de mapa básicos para desplazar y hacer zum. Las acciones se crean para la activación de cada herramienta: el desplazamiento se hace con :class:`QgsMapToolPan`, el zum acercar/alejar con un par de instancias :class:`QgsMapToolZoom`. Las acciones se establecen como comprobables y posteriormente asignados a las herramientas para permitir la manipulación automática de activar/desactivar el estado de las acciones -- cuando una herramienta de mapa se activa, su acción es marcada como seleccionada y la acción de la herramienta anterior es deseleccionable. Las herramientas de mapa se activan utilizando el método :func:`setMapTool`."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:177
+msgid ""
+"You can put the above code to a file, e.g. :file:`mywnd.py` and try it out "
+"in Python console within QGIS. This code will put the currently selected "
+"layer into newly created canvas"
+msgstr "Se puede colocar el código anterior a un archivo, por ejemplo :file:`mywnd.py` y probarlo en la consola de Python dentro de QGIS. Este código colocará la capa seleccionada actualmente dentro del lienzo recién creado."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:187
+msgid ""
+"Just make sure that the :file:`mywnd.py` file is located within Python "
+"search path (``sys.path``). If it isn't, you can simply add it: "
+"``sys.path.insert(0, '/my/path')`` --- otherwise the import statement will "
+"fail, not finding the module."
+msgstr "Sólo asegúrese que el archivo :file:`mywnd.py`  se encuentra dentro de la ruta de búsquedas de Python (``sys.path``). Si no es así, simplemente puede añadirlo: ``sys.path.insert(0, '/my/path')`` --- de lo contrario la declaración de la importación fallará, al no encontrar el modulo."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:197
+msgid ""
+"To show some additional data on top of the map in canvas, use map canvas "
+"items. It is possible to create custom canvas item classes (covered below), "
+"however there are two useful canvas item classes for convenience: "
+":class:`QgsRubberBand` for drawing polylines or polygons, and "
+":class:`QgsVertexMarker` for drawing points. They both work with map "
+"coordinates, so the shape is moved/scaled automatically when the canvas is "
+"being panned or zoomed."
+msgstr "Para mostrar algunos datos adicionales en la parte superior del mapa en el lienzo, utilice los elementos del lienzo de mapa. Es posible crear clases de elementos del lienzo personalizada (cubiertas más abajo), sin embargo, hay dos clases de elementos de lienzo útiles para mayor comodidad :class:`QgsRubberBand` para dibujar polilíneas o polígonos, y :class:`QgsVertexMarker` para dibujar puntos. Ambos trabajan con coordenadas de mapa, por lo que la figura se mueve/ se escala de forma automática cuando el lienzo está siendo desplazado o haciendo zum."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:205
+msgid "To show a polyline"
+msgstr "Para mostrar una polilínea"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:213
+msgid "To show a polygon"
+msgstr "Para mostrar un polígono"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:225
+msgid ""
+"Rubber bands allow some customization, namely to change their color and line"
+" width"
+msgstr "Las bandas elásticas permiten algún tipo de personalizacion, es decir, para cambiar su color o ancho de línea"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:233
+msgid ""
+"The canvas items are bound to the canvas scene. To temporarily hide them "
+"(and show again, use the :func:`hide` and :func:`show` combo. To completely "
+"remove the item, you have to remove it from the scene of the canvas"
+msgstr "Los elementos del lienzo están ligados a la escena del lienzo. Para ocultarlos temporalmente (y para mostrarlos de nuevo, utiliza el combo :func:`hide` y :func:`show`.  Para eliminar por completo el tema, hay que eliminarlo de la escena del lienzo"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:245
+msgid ""
+"Rubber band can be also used for drawing points, however "
+":class:`QgsVertexMarker` class is better suited for this "
+"(:class:`QgsRubberBand` would only draw a rectangle around the desired "
+"point). How to use the vertex marker"
+msgstr "La banda elástica puede también ser utilizado para dibujar puntos, sin embargo la clase :class:`QgsVertexMarker` es más adecuado para esto (:class:`QgsRubberBand` sólo dibuja un rectangulo alrededor del punto deseado). Cómo utilizar el marcador de vértices"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:255
+msgid ""
+"This will draw a red cross on position [0,0]. It is possible to customize "
+"the icon type, size, color and pen width"
+msgstr "Este dibujará una cruz roja en posición [0,0]. Es posible personalizar el tipo de icono, tamaño, color y ancho de pluma"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:273
+msgid ""
+"You can write your custom tools, to implement a custom behaviour to actions "
+"performed by users on the canvas."
+msgstr "Puede escribir sus herramientas personalizadas, para implementar un comportamiento personalizado a las acciones realizadas por los usuarios en el lienzo."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:280
+msgid ""
+"Here is an example of a map tool that allows to define a rectangular extent "
+"by clicking and dragging on the canvas. When the rectangle is defined, it "
+"prints its boundary coordinates in the console. It uses the rubber band "
+"elements described before to show the selected rectangle as it is being "
+"defined."
+msgstr "Aquí esta un ejemplo de una herramienta de mapa para definir una extensión rectangular haciendo clic y arrastrando en el lienzo. Cuando se define el rectángulo, imprime su limite de coordenadas en la consola. Utiliza los elementos de la banda elástica descrita antes para mostrar el rectángulo seleccionado ya que se esta definiendo."
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:355
+msgid "**TODO:**"
+msgstr "**PENDIENTE:**"
+
+#: ../../source/docs/pyqgis_developer_cookbook/canvas.rst:354
+msgid "how to create a map canvas item"
+msgstr "cómo crear un elemento de lienzo de mapa"
+
+#~ msgid ""
+#~ "Map canvas is implemented as :class:`QgsMapCanvas` class in :mod:`qgis.gui` "
+#~ "module.  The implementation is based on the Qt Graphics View framework. This"
+#~ " framework generally provides a surface and a view where custom graphics "
+#~ "items are placed and user can interact with them.  We will assume that you "
+#~ "are familiar enough with Qt to understand the concepts of the graphics "
+#~ "scene, view and items. If not, please make sure to read the `overview of the"
+#~ " framework <http://doc.qt.nokia.com/graphicsview.html>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Map canvas is a widget like any other Qt widget, so using it is as simple as"
+#~ " creating and showing it::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default, map canvas has black background and does not use anti-aliasing. "
+#~ "To set white background and enable anti-aliasing for smooth rendering::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now it is time to add some map layers. We will first open a layer and add it"
+#~ " to the map layer registry.  Then we will set the canvas extent and set the "
+#~ "list of layers for canvas::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following example constructs a window that contains a map canvas and "
+#~ "basic map tools for map panning and zooming.  Actions are created for "
+#~ "activation of each tool: panning is done with :class:`QgsMapToolPan`, "
+#~ "zooming in/out with a pair of :class:`QgsMapToolZoom` instances. The actions"
+#~ " are set as checkable and later assigned to the tools to allow automatic "
+#~ "handling of checked/unchecked state of the actions -- when a map tool gets "
+#~ "activated, its action is marked as selected and the action of the previous "
+#~ "map tool is deselected. The map tools are activated using :func:`setMapTool`"
+#~ " method."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can put the above code to a file, e.g. ``mywnd.py`` and try it out in "
+#~ "Python console within QGIS.  This code will put the currently selected layer"
+#~ " into newly created canvas::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Just make sure that the ``mywnd.py`` file is located within Python search "
+#~ "path (``sys.path``). If it isn't, you can simply add it: "
+#~ "``sys.path.insert(0, '/my/path')`` --- otherwise the import statement will "
+#~ "fail, not finding the module."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To show some additional data on top of the map in canvas, use map canvas "
+#~ "items. It is possible to create custom canvas item classes (covered below), "
+#~ "however there are two useful canvas item classes for convenience: "
+#~ ":class:`QgsRubberBand` for drawing polylines or polygons, and "
+#~ ":class:`QgsVertexMarker` for drawing points.  They both work with map "
+#~ "coordinates, so the shape is moved/scaled automatically when the canvas is "
+#~ "being panned or zoomed."
+#~ msgstr ""
+
+#~ msgid "To show a polyline::"
+#~ msgstr ""
+
+#~ msgid "To show a polygon::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Rubber bands allow some customization, namely to change their color and line"
+#~ " width::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The canvas items are bound to the canvas scene. To temporarily hide them "
+#~ "(and show again, use the :func:`hide` and :func:`show` combo. To completely "
+#~ "remove the item, you have to remove it from the scene of the canvas::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Rubber band can be also used for drawing points, however "
+#~ ":class:`QgsVertexMarker` class is better suited for this "
+#~ "(:class:`QgsRubberBand` would only draw a rectangle around the desired "
+#~ "point). How to use the vertex marker::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This will draw a red cross on position [0,0]. It is possible to customize "
+#~ "the icon type, size, color and pen width::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can write your custom tools, to implement a custom behaviour to actions "
+#~ "perfored by users on the canvas."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here is an example of a map tool that allows to define a rectangular extent "
+#~ "by clicking and draggin on the canvas. When the rectangle is defined, it "
+#~ "prints its boundary coordinates in the console. It uses the rubber band "
+#~ "elements described before to show the selected rectangle as it is being "
+#~ "defined."
+#~ msgstr ""
+
+#~ msgid "**TODO:** how to create a map canvas item"
+#~ msgstr ""

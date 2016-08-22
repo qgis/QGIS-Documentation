@@ -1,0 +1,521 @@
+# Translators:
+# Mariana Muniz Blank <mariblank_1@hotmail.com>, 2016
+# Robson Leo Pachaly <robsonleopachaly@yahoo.com.br>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Robson Leo Pachaly <robsonleopachaly@yahoo.com.br>, 2016\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:10
+msgid "A Step By Step Contribution"
+msgstr "Uma Contribuição Passo a Passo"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:15
+msgid ""
+"Though QGIS-Documentation is used to demonstrate the process, all commands "
+"and steps shown below also apply to QGIS-Website."
+msgstr ""
+"Embora a Documentação-QGIS seja usada para demonstrar os processos, todos os"
+" comandos e passos mostrados abaixo também se aplicam ao QGIS-Website."
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:18
+msgid ""
+"Now that you know the :ref:`rules <writing_doc_guidelines>` to follow to "
+"write a clean doc for QGIS, let's dive in the process of production of this "
+"documentation and how quickly and safely share your changes with the "
+"community."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:22
+msgid ""
+"Assuming you already have a `GitHub account <https://github.com/join>`_, you"
+" first need to clone the source files of the documentation in order to have "
+"your own copy you can work on: go to the `QGIS-Documentation repository "
+"<https://github.com/qgis/QGIS-Documentation>`_ page (for convenience, this "
+"repository is called below ``qgis/QGIS-Documentation``) and click on the "
+"**Fork** button in the upper right corner."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:29
+msgid ""
+"Few seconds later, in your GitHub account you find a QGIS-Documentation "
+"repository (``https://github.com/<YourName>/QGIS-Documentation``). This repo"
+" is a safe copy in which you have full write access and can push all your "
+"contributions without a risk to affect the official documentation. At the "
+"beginning, this repository contains the same branches as ``qgis/QGIS-"
+"Documentation`` and is defaulted to ``master`` branch. Branches are parallel"
+" lines of development containing different snapshots of the doc that may "
+"merge or diverge. Preferably create a branch for each issue you want to "
+"tackle and you can create as many branches as you want."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:39
+msgid "**Do your changes in an ad'hoc branch, never in** ``master``"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:41
+msgid ""
+"By convention, avoid making changes in your ``master`` branch except merging"
+" the modifications from the ``master`` branch of ``qgis/QGIS-Documentation``"
+" (called ``qgis:master``). And use it as model to create new branches for a "
+"lean history and snapshot."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:46
+msgid ""
+"There are different ways to contribute to QGIS documentation. Though we "
+"expose them below separately, they are not mutually exclusive, meaning that "
+"you can, at any moment, switch from one process to another without any harm "
+"because they follow this scheme:"
+msgstr ""
+"Há diferentes formas de contribuir com a documentação do QGIS. Embora eles "
+"sejam expostos separadamente abaixo, eles não são mutuamente exclusivos, o "
+"que significa que você pode a qualquer momento trocar de um processo a outro"
+" sem nenhum prejuízo, pois eles seguem este esquema:"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:51
+msgid "Do your modifications in an ad'hoc branch of your repository"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:52
+msgid ""
+"Publish your changes and ask for merging in the main doc through a pull "
+"request (PR)"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:53
+msgid ""
+"Others review, discuss and integrate your work in the main branch when "
+"everything seems ok."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:56
+msgid "Using GitHub web interface"
+msgstr "Usando a interface web GitHub"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:58
+msgid ""
+"From your cloned repository, you can now propose changes to the main "
+"documentation. Indeed, GitHub web interface offers you ways to easily:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:61
+msgid "edit files, preview and commit your changes"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:62
+msgid "make a pull request to have your changes inserted in the main repo"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:63
+msgid "create, update or delete branches"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:65
+msgid ""
+"Read the GitHub `Hello-world <https://guides.github.com/activities/hello-"
+"world/>`_ project to learn some basic vocabulary and actions that will be "
+"used below."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:69
+msgid "Make changes in your repo"
+msgstr "Faça mudanças em seu repositório"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:71
+msgid ""
+"Documentation can be improved by addressing issues reported at "
+"https://github.com/qgis/QGIS-Documentation/issues or issues you may have "
+"encountered while browsing the doc. They can be of different types: typo "
+"error, missing feature, wrong or out of date description..."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:77
+msgid "Alternative 1: Picking an issue in the list"
+msgstr "Alternativa 1: Escolhendo um problema na lista"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:79
+msgid ""
+"Select an `issue <https://github.com/qgis/QGIS-Documentation/issues>`_ you "
+"want to fix. To avoid many persons tackling the same issue, you can inform "
+"contributors about your choice by adding a comment to the issue report and "
+"get it assigned to you."
+msgstr ""
+"Escolha um problema em '<https://github.com/qgis/QGIS-Documentation/issues>'"
+" que você quer corrigir. Para evitar que muitas pessoas trabalhem em cima do"
+" mesmo problema, você pode informar os contribuidores adicionando um "
+"comentário ao relatório do problema e atribuindo-o a você."
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:83
+msgid ""
+"From your repository, create (and switch to) a branch with a name that helps"
+" you remind what it's about"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:85
+msgid "Browse the source files to the file that has to be changed"
+msgstr "Procure o arquivo fonte do arquivo que deve ser modificado"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:86
+msgid ""
+"Toggle the file into Edit mode using the pencil icon and do your "
+"modifications following :ref:`guidelines <QGIS-documentation-guidelines>`"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:88
+msgid ""
+"Validate your changes by filling the :guilabel:`Commit Changes` frame and "
+"commit directly to your branch."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:90
+msgid ""
+"Redo the previous steps for any other file that needs to be updated to fix "
+"fix the issue."
+msgstr ""
+"Refaça os passos anteriores para qualquer outro arquivo que precise ser "
+"atualizado para a correção de problemas."
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:95
+msgid "Alternative 2: Using the ``Fix Me`` shortcut"
+msgstr "Alternativa 2: Use o atalho \"Corrija-me\" "
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:97
+msgid ""
+"The QGIS project provides an easy way to reach source file from online "
+"documentation. Indeed, instead of browsing the source files in GitHub to "
+"find the one that suits the issue, or if you find an issue while reading the"
+" manuals, you simply have to click the \"Fix Me\" link at the bottom of the "
+"page to open its source file in Edit mode."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:102
+msgid ""
+"This will open the file in the ``qgis:master`` branch with a message at the "
+"top of the page telling you that you don't have write access to this repo "
+"and your changes will be applied in a new branch of your repository."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:105
+msgid ""
+"Do your changes following guidelines available at "
+"http://docs.qgis.org/testing/en/docs/documentation_guidelines/"
+msgstr ""
+"Faça suas modificações seguindo as orientações disponíveis em "
+"http://docs.qgis.org/testing/en/docs/documentation_guidelines/"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:107
+msgid ""
+"When you finish, at the bottom of the page, comment a bit what your changes "
+"are about and click on :guilabel:`Propose File change`. This will generate a"
+" new branch (``patch-xxx``) in your repo."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:111
+msgid ""
+"If your ``master`` branch is even with ``qgis:master``, you can safely "
+"replace in the link ``qgis`` by ``<YourName>``. In this case, once your "
+"changes are done, you need to check |radioButtonOn| :guilabel:`Create a new "
+"branch for this commit and start a pull request` and avoid modifying "
+"``master``."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:118
+msgid "Share your changes via Pull Request"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:120
+msgid ""
+"Now, you have a new branch in QGIS with a file that diverge from "
+"``qgis:master``. To integrate your changes in the official documentation, "
+"you need to do a pull request."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:124
+msgid ""
+"Actually, after you committed your changes, GitHub opens a new dialog "
+"comparing branches:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:127
+msgid ""
+"if you used the ``Fix Me`` without changing the url, then the comparison is "
+"between your ``patch-xxx`` branch and ``qgis:master`` (the base fork is "
+"``qgis/QGIS-Documentation`` and its branch ``master``)."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:130
+msgid ""
+"if you used a branch you had named yourself then the comparison is done "
+"between that branch and your own ``master`` branch (the base is simply "
+"``master``). You therefore need to leave that page and create a new pull "
+"request in which you should ensure the base fork is ``qgis/QGIS-"
+"Documentation`` with ``master`` branch and the head fork is ``<YourName"
+">/QGIS-Documentation`` with your modified branch along."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:137
+msgid ""
+"A green check along the compared branches shows that your changes can "
+"automatically be merged in the official doc. Click the :guilabel:`Create "
+"pull request` button."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:140
+msgid ""
+"Fill the form if needed and click again :guilabel:`Create pull request` "
+"button."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:141
+msgid ""
+"A new PR is added to https://github.com/qgis/QGIS-Documentation/pulls and "
+"everybody can look or comment it."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:143
+msgid ""
+"That will trigger a `travis build <https://travis-ci.org/qgis/QGIS-"
+"Documentation>`_ automatically checking if your contribution doesn't contain"
+" a build error."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:145
+msgid ""
+"Until your PR is merged with the main repo, you can add modifications to "
+"your proposal. Actually any new changes done to your branch is appended to "
+"your pull request. Do it if the change has to do with your initial pull "
+"request, otherwise create a new branch with those changes following steps "
+"above."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:149
+msgid ""
+"Once everything looks good to others, a committer can merge your branch with"
+" the main repo. Your contribution is validated."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:151
+msgid ""
+"If you want, you can now delete the branch you used, to avoid having too "
+"many (unused and outdated) branches crowding your repository."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:154
+msgid "Doing this little steps will make you learn the process easier."
+msgstr ""
+"Realizando esses pequenos passos farão o seu processo de aprendizado mais "
+"fácil."
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:156
+msgid ""
+"Be vigilant to pull request against ``qgis:master`` and not your own "
+"``master`` branch, otherwise nobody is aware of your changes and you may "
+"mistakenly merge your changes into your ``master`` branch, polluting its "
+"history."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:160
+msgid "**Automatically close issue report from pull request**"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:162
+msgid ""
+"To ease issue reports management, mention the number of the issue you are "
+"addressing in your pull-request. This can be done using ``#issue_number``. "
+"If preceded by terms like ``fix``, ``close``... the concerned issue is "
+"closed as soon as the pull request is merged."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:169
+msgid "Using Git command line tools"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:171
+msgid ""
+"GitHub web interface helps you update the repo with your contribution in an "
+"easier way but it doesn't offer tools to:"
+msgstr ""
+"A interface web GitHub ajuda você a atualizar o repositório com a sua "
+"contribuição de um modo mais fácil porém não oferece ferramentas para:"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:174
+msgid "group your commits and clean your changes history"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:175
+msgid "fix conflicts with the main repo if needed..."
+msgstr "corrija conflitos junto ao repositório principal se preciso..."
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:176
+msgid "build the documentation to test your changes"
+msgstr "construa a documentação para testar suas mudanças"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:178
+msgid ""
+"You then need to `install git <https://git-scm.com/downloads>`_ on your hard"
+" drive in order to get access to more advanced and powerful tools and have a"
+" local copy of the repository. Some basics you may often need are exposed "
+"below. You'll also find rules to care about even if you opt for the web "
+"interface."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:183
+msgid ""
+"In the code samples below, lines beginning with ``$`` show commands you "
+"should type while ``#`` are comments."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:187
+msgid "Local repository"
+msgstr "Repositório local"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:189
+msgid ""
+"Now you are ready to get a local clone of **your** QGIS-Documentation "
+"repository:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:196
+msgid ""
+"The former command line is simply an example. You should adapt both the path"
+" and the repository URL, replacing ``<YourName>`` with your real name."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:200
+msgid "Check it:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:211
+msgid ""
+"*origin* is the name of the remote repository of your QGIS-Documentation "
+"repository."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:213
+msgid ""
+"*master* is the default main branch. You should never use it to contribute! "
+"**Never!**"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:216
+msgid ""
+"You can start to work here but in the long terme process you will get a lot "
+"of issue when you will push your contribution (called Pull Request in github"
+" process) as the master branch of the QGIS-Documentation repository will "
+"diverge from your local/remote repository."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:222
+msgid "Add another remote repository"
+msgstr "Adicione um outro repositório remoto"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:224
+msgid ""
+"To be able to follow the work in the main project, add a new remote "
+"repository in your local repository. This new remote repository is the QGIS-"
+"Documentation repository from QGIS project:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:237
+msgid "So now you have the choice between two remote repository:"
+msgstr "Agora você tem a escolha entre dois repositórios remotos:"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:239
+msgid "*origin* to push your local branch in **your** remote repository"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:240
+msgid ""
+"*upstream* to merge (if you have right to do so) your contribution to the "
+"official one OR to update your master branch of local repository from the "
+"master branch of the official repository."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:244
+msgid ""
+"*upstream* is just a label, a kind of standard name but you can call it as "
+"you want."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:249
+msgid "Update your master branch"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:251
+msgid ""
+"Before working on a new contribution, you should always update your local "
+"master branch in your local repository. Just run this command line:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:267
+msgid ""
+"Now we have a local and remote repository which are both up to date with "
+"QGIS-Documentation from QGIS organisation. You can start to work on your "
+"contribution."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:272
+msgid "Contribute to QGIS"
+msgstr "Contribua para o QGIS"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:274
+msgid "Always work on a branch! Always!"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:295
+msgid "Few words about commit/push commands:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:297
+msgid ""
+"try to commit only one contribution (atomic change) i.e. address only one "
+"issue"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:298
+msgid ""
+"try to explain carefully what you change in the title of your commit and in "
+"the description. The first line is a title and should start by an upper case"
+" letter and have 80 characters length, don't end with a ``.``. Be concise. "
+"Your description can be longer, end with a ``.`` and you can give much more "
+"details."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:302
+msgid ""
+"use a ``#`` with a number to refer to an issue. Prefix with ``Fix`` if you "
+"fix the ticket: your commit will close the ticket."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:305
+msgid ""
+"Now you can go to your github repository and create a Pull Request. Check to"
+" create a PR from your branch to the master branch of the official QGIS-"
+"Documentation repository."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:310
+msgid "Clean-up your local and remote repository"
+msgstr "Limpe seu repositório local e remoto"
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:312
+msgid ""
+"After your PR has been merged into the official QGIS-Documentation, you can "
+"delete your branch. If you work a lot this way, in few weeks you will get a "
+"lot of unuseful branches. So keep your repository clean this way:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/first_contribution.rst:323
+msgid ""
+"And do not forget to update the ``master`` branch in your local repository!"
+msgstr ""
