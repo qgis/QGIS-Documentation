@@ -1439,6 +1439,21 @@ selected dataset can be manipulated. The buttons |newAttribute|
 :sup:`New Column` and |deleteAttribute| :sup:`Delete Column`
 can be used when the dataset is in |toggleEditing| :sup:`Editing mode`.
 
+You can rename fields by double-clicking in the fields name (note that you
+should switch to editing mode to edit the field name). This is only supported
+for data providers like PostgreSQL, Oracle, Memory layer and some OGR layer
+depending the OGR data format and version. 
+
+You can define some alias to display human readable fields in the form. In this
+case, you don't need to switch to editing mode. Alias are saved in project
+file.
+
+Comments can be added by clicking in the comment field of the column but if
+you are using a PostgreSQL layer, comment of the column could be the one in
+the PostgreSQL table if set. Comments are saved in the QGIS project file as for
+the alias.
+
+
 **Edit Widget**
 
 .. following is included to give some space between title and figure!
