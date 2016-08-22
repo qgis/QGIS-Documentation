@@ -1,7 +1,7 @@
 Introduction
 ============
 
-This guide describes how to use QGIS processing framework. It assumes no previous knowledge of the processign framework or any of the applications that it relies on. It assumes basic knowledge of QGIS. The chapters about scripting assume you have some basic knowledge of Python and maybe the QGIS Python API.
+This guide describes how to use QGIS processing framework. It assumes no previous knowledge of the processing framework or any of the applications that it relies on. It assumes basic knowledge of QGIS. The chapters about scripting assume you have some basic knowledge of Python and maybe the QGIS Python API.
 
 This guide is designed for self-study or to be used for running a processing workshop.
 
