@@ -2155,18 +2155,24 @@ To add a raster (a TIF image in this example), it becomes:
   qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif',
     '[% "layername" %]')
 
-
+.. index:: Map Tips
 .. _maptips:
 
 Display Menu
 ============
 
-|mapTips| This menu is specifically created for :index:`Map Tips`.
-It includes a nice feature: Map Tip display text in HTML.
-While you can still choose a |radioButtonOff| :guilabel:`Field` to be displayed
-when hovering over a feature on the map, it is also possible to insert HTML code
-that creates a complex display when hovering over a feature.
-To activate Map Tips, select the menu option :menuselection:`View --> Map Tips`.
+|mapTips| This menu is specifically created for map tips: display a message in
+the map canvas when hovering over a feature of the active layer.
+This message can either be the value of a |radioButtonOff| :guilabel:`Field`
+or a more complex and full |radioButtonOff| :guilabel:`HTML` text mixing fields,
+:ref:`expressions <vector_expressions>` and html tags (multiline, fonts, images,
+hyperlink ...).
+
+To activate Map Tips, select the menu option :menuselection:`View --> Map Tips`
+or click on the |mapTips| :sup:`Map Tips` icon. Map tip is a cross-session feature
+meaning that once activated, it stays on and apply to any set layer in any project,
+even in future QGIS sessions until it's toggled off.
+
 
 Figure Display 1 and 2 show an example of HTML code and how it behaves in map canvas.
 
