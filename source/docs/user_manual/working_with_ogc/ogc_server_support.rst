@@ -643,7 +643,11 @@ for humans than a name for machine-to-machine communication.
 QGIS Server supports:
 
 * short name line edits to layers properties
+  You can change this by right clicking on a layer, choose
+  :menuselection:`Properties --> Metadata tab --> Description --> Short name`.
+
 * WMS data dialog to layer tree group (short name, title, abstract)
+
   By right clicking on a layer group and selecting the :guilabel:`Set Group WMS data` option you will get:
 
   .. _set_group_wms_data:
@@ -654,16 +658,20 @@ QGIS Server supports:
 
   .. figure:: /static/user_manual/working_with_ogc/set_group_wms_data.png
      :align: center
-  
-  
-* short name line edits to project properties- add a regexp validator
+
+
+* short name line edits to project properties - add a regexp validator
   ``"^[A-Za-z][A-Za-z0-9\._-]*"`` to short name line edit accessible through a
   static method
 * add a regexp validator ``"^[A-Za-z][A-Za-z0-9\._-]*"`` to short name line
   edit accessible through a static method
+
+  You can choose a short name for the project root by going to :menuselection:`Project properties -->
+  OWS Server --> Service capabilities --> Short name`.
+
 * add a ``TreeName`` element in the ``fullProjectSettings``
 
-If a short name has been set for layers, groups and project it is used by
+If a short name has been set for layers, groups or project it is used by
 QGIS Sever as the layer name.
 
 Connection to service file
