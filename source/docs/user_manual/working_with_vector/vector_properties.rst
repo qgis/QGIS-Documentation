@@ -473,6 +473,17 @@ Like the proportional symbol, the size-related symbol is added to the layer tree
 at the top of the categorized or graduated classes symbols. And both representation
 are also available in the print composer legend item.
 
+.. _figure_symbology_5:
+
+.. only:: html
+
+   **Figure Symbology 5:**
+
+.. figure:: /static/user_manual/working_with_vector/multivariate_example.png
+   :align: center
+
+   Multivariate example
+
 .. Index:: Rule-based Rendering
 
 .. _rule_based_rendering:
@@ -507,11 +518,11 @@ appears showing the rule that is the background for the symbol in the tree.
 The example in figure_symbology_5_ shows the rule-based rendering dialog
 for the rivers layer of the QGIS sample dataset.
 
-.. _figure_symbology_5:
+.. _figure_symbology_6:
 
 .. only:: html
 
-   **Figure Symbology 5:**
+   **Figure Symbology 6:**
 
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
    :align: center
@@ -531,11 +542,11 @@ works to visualize all features of a point layer, even if they have the same loc
 To do this, the symbols of the points are placed on a :index:`displacement circle`
 around one center symbol or on several concentric circles.
 
-.. _figure_symbology_6:
+.. _figure_symbology_7:
 
 .. only:: html
 
-   **Figure Symbology 6:**
+   **Figure Symbology 7:**
 
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
    :align: center
@@ -558,11 +569,11 @@ to define a symbol to fill in
 outside of the layer's polygons. As above you can select subrenderers, namely
 Single symbol, Graduated, Categorized, Rule-Based or 2.5 D renderer.
 
-.. _figure_symbology_7:
+.. _figure_symbology_8:
 
 .. only:: html
 
-   **Figure Symbology 7:**
+   **Figure Symbology 8:**
 
 .. figure:: /static/user_manual/working_with_vector/inverted_polygon_symbol.png
    :align: center
@@ -584,11 +595,11 @@ between render speed and quality. You can also define a maximum value limit and 
 weight to points using a field or an expression. When adding or removing a feature
 the heatmap renderer updates the heatmap style automatically.
 
-.. _figure_symbology_8:
+.. _figure_symbology_9:
 
 .. only:: html
 
-     **Figure Symbology 8:**
+     **Figure Symbology 9:**
 
 .. figure:: /static/user_manual/working_with_vector/heatmap_symbol.png
    :align: center
@@ -614,11 +625,11 @@ to simulate solar radiation on the features walls, make sure to check the
 simulate a shadow by setting a :guilabel:`Color` and :guilabel:`Size` (in map
 units).
 
-.. _figure_symbology_9:
+.. _figure_symbology_10:
 
 .. only:: html
 
-     **Figure Symbology 9:**
+     **Figure Symbology 10:**
 
 .. figure:: /static/user_manual/working_with_vector/2_5dsymbol.png
    :align: center
