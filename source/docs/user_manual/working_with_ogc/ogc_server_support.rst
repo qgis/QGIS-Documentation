@@ -687,6 +687,42 @@ your :file:`*.conf` file look like::
      AllowOverride None
    .....
 
+.. _add_fonts:
+
+Add fonts to your linux server
+------------------------------
+
+Keep in mind that you may use QGIS projects that point to fonts that
+may not exist by default on other machines. This means that if you share the project,
+it may look different on other machines (if the fonts don't exist on the target machine).
+
+In order to ensure this does not happen you just need to install the missing fonts on the target machine.
+Doing this on desktop systems is usually trivial (double clicking the fonts).
+
+For linux, if you don't have a desktop environment installed (or you prefer the command line) you need to:
+
+* On Debian based systems::
+
+   sudo su
+   mkdir -p /usr/local/share/fonts/truetype/myfonts && cd /usr/local/share/fonts/truetype/myfonts
+
+   # copy the fonts from their location
+   cp /fonts_location/* .
+
+   chown root *
+   cd .. && fc-cache -f -v
+
+* On Fedora based systems::
+
+   sudo su
+   mkdir /usr/share/fonts/myfonts && cd /usr/share/fonts/myfonts
+
+   # copy the fonts from their location
+   cp /fonts_location/* .
+
+   chown root *
+   cd .. && fc-cache -f -v
+
 Environment variables
 ---------------------
 
