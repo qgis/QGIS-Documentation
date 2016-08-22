@@ -20,116 +20,6 @@ between Project Properties, Options and Customization.
 ..  FIXME: please add more introduction here
 
 
-Project Properties
-==================
-
-In the properties window for the project under |nix|
-:menuselection:`Settings --> Project Properties` (kde) or |nix| |osx| |win|
-:menuselection:`Project --> Project Properties` (Gnome, OS X or Windows), you
-can set project-specific options.
-
-* In the :guilabel:`General` tab, the **general settings** let you:
-
-  * give a title to the project beside the project file path
-  * choose the color to use for features when they are selected
-  * choose the background color: the color to use for the map canvas
-  * set whether the path to layers in the project should be saved as absolute
-    (full) or as relative to the project file location. You may prefer
-    relative path when both layers and project files can be moved or shared
-    or if the project is accessed from computers on different platforms.
-  * choose to avoid artifacts when project is rendered as map tiles. Note that
-    checking this option can lead to performance degradation.
-
-  Calculating areas and distances is a common need in GIS. However, these values
-  are really tied to the underlying projection settings. The **Measurements**
-  frame lets you control these parameters. You can indeed choose:
-
-  * the ellipsoid to use: it can be an existing one, a custom one
-    (you'll need to set values of the semi-major and semi-minor axis)
-    or None/Planimetric.
-  * the :guilabel:`units for distance measurements` for length and perimeter and
-    the :guilabel:`units for area measurements`. These settings, which default
-    to the units set in QGIS options but then overrides it for the current project,
-    are used in:
-
-    * Attribute table field update bar
-    * Field calculator calculations
-    * Identify tool derived length, perimeter and area values
-    * Default unit shown in measure dialog
-
-  The **Coordinate display** allows you to choose and customize the format of units
-  to use to display the mouse coordinate in the status bar and the derived coordinates
-  shown via the identify tool.
-
-  Finally, you can define a **project scale** list, which overrides the global
-  predefined scales.
-
-.. _figure_general_tab:
-
-.. only:: html
-
-   **Figure General Tab:**
-
-.. figure:: /static/user_manual/introduction/project_general.png
-   :align: center
-
-   General tab of Project Properties dialog
-
-* The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
-  System for this project, and to enable on-the-fly re-projection of raster and
-  vector layers when displaying layers from a different CRS.
-* With the :guilabel:`Identify layers` tab, you set (or disable) which
-  layers will respond to the :ref:`identify tool <identify>`. By default, layers
-  are set queryable.
-* The :guilabel:`Default Styles` tab lets you control how new layers will be
-  drawn when they do not have an existing :file:`.qml` style defined. You can
-  also set the default transparency level for new layers and whether symbols
-  should have random colors assigned to them.
-  There is also an additional section where you can define specific colors for the
-  running project. You can find the added colors in the drop down menu of the color dialog
-  window present in each renderer.
-* The tab :guilabel:`OWS Server` allows you to define information about the QGIS
-  Server WMS and WFS capabilities, extent and CRS restrictions.
-* The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
-  only three macros are available: ``openProject()``, ``saveProject()`` and
-  ``closeProject()``.
-
-.. _figure_macro_tab:
-
-.. only:: html
-
-   **Figure Macro Tab:**
-
-.. figure:: /static/user_manual/introduction/macro.png
-   :align: center
-
-   Macro settings in QGIS
-
-
-* The :guilabel:`Relations` tab is used to define 1:n relations. The relations
-  are defined in the project properties dialog. Once relations exist for a layer,
-  a new user interface element in the form view (e.g. when identifying a feature
-  and opening its form) will list the related entities. This provides a powerful
-  way to express e.g. the inspection history on a length of pipeline or road segment.
-  You can find out more about 1:n relations support in Section :ref:`vector_relations`.
-* In the :guilabel:`Data Sources` tab, you can:
-
-  * |checkbox| :guilabel:`Evaluate default values on provider side`: When adding
-    new features in a PostGreSQL table, fields with default value constraint are
-    evaluated and populated at the form opening, and not at the commit moment.
-    This means that instead of an expression like ``nextval('serial')``, the field
-    in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
-  * |checkbox| :guilabel:`Automatically create transaction groups where possible`:
-    When this mode is turned on, all
-    (postgres) layers from the same database are synchronised in their edit state,
-    i.e. when one layer is put into edit state, all are, when one layer is committed
-    or one layer is rolled back, so are the others. Also, instead of buffering edit
-    changes locally, they are directly sent to a transaction in the database which
-    gets committed when the user clicks save layer.
-    Note that you can (de)activate this option only if no layer is being edited
-    in the project.
-
-
 .. _gui_options:
 
 Options
@@ -272,7 +162,7 @@ Data Sources Tab
 
 
 **Hidden Browser Path**
-  
+
 This widget lists all the folder you chose to hide from the Browser panel.
 Removing a folder from the list will make it available in the Browser panel.
 
@@ -370,12 +260,13 @@ This tab offers some options regarding the behavior of the :guilabel:`Identify t
 * Define :guilabel:`Decimal places`
 * |checkbox| :guilabel:`Keep base unit` to not automatically convert large numbers
   (e.g., meters to kilometers)
-* :guilabel:`Preferred distance units` |radioButtonOn| ('Meters', 'Feet',
-  'Nautical Miles', 'Degrees' or 'Map Units' )
-* :guilabel:`Preferred area units` |radioButtonOn| ('Square meters', 'Square feet',
-  'Square yards', 'Hectares', 'Map Units' ...)
+* :guilabel:`Preferred distance units` |radioButtonOn| ('Meters', 'Kilometers', 'Feet',
+  'Yards', 'Miles', 'Nautical Miles', 'Degrees' or 'Map Units' )
+* :guilabel:`Preferred area units` |radioButtonOn| ('Square meters', 'Square
+   kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
+   'Acres', 'Square nautical miles', 'Square degrees" or 'Map Units')
 * :guilabel:`Preferred angle units` |radioButtonOn| ('Degrees', 'Radians', 'Gon/gradians',
-  'Minutes of arc' ...)
+  'Minutes of arc', 'Seconds of arc' or 'Turns/revolutions')
 
 **Panning and zooming**
 
@@ -565,6 +456,124 @@ require a restart of QGIS before they will be effective.
 * |osx| You can find your settings in: :file:`$HOME/Library/Preferences/org.qgis.qgis.plist`
 * |win| Settings are stored in the registry under: ``HKEY\CURRENT_USER\Software\QGIS\qgis``
 
+.. index::
+   Properties; project
+   Settings; project
+
+Project Properties
+==================
+
+In the properties window for the project under |nix|
+:menuselection:`Settings --> Project Properties` (kde) or |nix| |osx| |win|
+:menuselection:`Project --> Project Properties` (Gnome, OS X or Windows), you
+can set project-specific options.
+
+The project-specific options overwrite their equivalent in the options
+described above.
+
+* In the :guilabel:`General` tab, the **general settings** let you:
+
+  * give a title to the project beside the project file path
+  * choose the color to use for features when they are selected
+  * choose the background color: the color to use for the map canvas
+  * set whether the path to layers in the project should be saved as absolute
+    (full) or as relative to the project file location. You may prefer
+    relative path when both layers and project files can be moved or shared
+    or if the project is accessed from computers on different platforms.
+  * choose to avoid artifacts when project is rendered as map tiles. Note that
+    checking this option can lead to performance degradation.
+
+  Calculating areas and distances is a common need in GIS. However, these values
+  are really tied to the underlying projection settings. The **Measurements**
+  frame lets you control these parameters. You can indeed choose:
+
+  * the ellipsoid to use: it can be an existing one, a custom one
+    (you'll need to set values of the semi-major and semi-minor axis)
+    or None/Planimetric.
+  * the :guilabel:`units for distance measurements` for length and perimeter and
+    the :guilabel:`units for area measurements`. These settings, which default
+    to the units set in QGIS options but then overrides it for the current project,
+    are used in:
+
+    * Attribute table field update bar
+    * Field calculator calculations
+    * Identify tool derived length, perimeter and area values
+    * Default unit shown in measure dialog
+
+  The **Coordinate display** allows you to choose and customize the format of units
+  to use to display the mouse coordinate in the status bar and the derived coordinates
+  shown via the identify tool.
+
+  Finally, you can define a **project scale** list, which overrides the global
+  predefined scales.
+
+.. _figure_general_tab:
+
+.. only:: html
+
+   **Figure General Tab:**
+
+.. figure:: /static/user_manual/introduction/project_general.png
+   :align: center
+
+   General tab of Project Properties dialog
+
+* The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
+  System for this project, and to enable on-the-fly re-projection of raster and
+  vector layers when displaying layers from a different CRS.
+* With the :guilabel:`Identify layers` tab, you set (or disable) which
+  layers will respond to the :ref:`identify tool <identify>`. By default, layers
+  are set queryable.
+* The :guilabel:`Default Styles` tab lets you control how new layers will be
+  drawn when they do not have an existing :file:`.qml` style defined. You can
+  also set the default transparency level for new layers and whether symbols
+  should have random colors assigned to them.
+  There is also an additional section where you can define specific colors for the
+  running project. You can find the added colors in the drop down menu of the color dialog
+  window present in each renderer.
+* The tab :guilabel:`OWS Server` allows you to define information about the QGIS
+  Server WMS and WFS capabilities, extent and CRS restrictions.
+* The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
+  only three macros are available: ``openProject()``, ``saveProject()`` and
+  ``closeProject()``.
+
+.. _figure_macro_tab:
+
+.. only:: html
+
+   **Figure Macro Tab:**
+
+.. figure:: /static/user_manual/introduction/macro.png
+   :align: center
+
+   Macro settings in QGIS
+
+
+* The :guilabel:`Relations` tab is used to define 1:n relations. The relations
+  are defined in the project properties dialog. Once relations exist for a layer,
+  a new user interface element in the form view (e.g. when identifying a feature
+  and opening its form) will list the related entities. This provides a powerful
+  way to express e.g. the inspection history on a length of pipeline or road segment.
+  You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+* In the :guilabel:`Data Sources` tab, you can:
+
+  * |checkbox| :guilabel:`Evaluate default values on provider side`: When adding
+    new features in a PostGreSQL table, fields with default value constraint are
+    evaluated and populated at the form opening, and not at the commit moment.
+    This means that instead of an expression like ``nextval('serial')``, the field
+    in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
+  * |checkbox| :guilabel:`Automatically create transaction groups where possible`:
+    When this mode is turned on, all
+    (postgres) layers from the same database are synchronised in their edit state,
+    i.e. when one layer is put into edit state, all are, when one layer is committed
+    or one layer is rolled back, so are the others. Also, instead of buffering edit
+    changes locally, they are directly sent to a transaction in the database which
+    gets committed when the user clicks save layer.
+    Note that you can (de)activate this option only if no layer is being edited
+    in the project.
+
+
+
 .. _sec_customization:
 
 Customization
@@ -630,4 +639,4 @@ setups for different use cases as well.
      variable under :menuselection:`Settings --> Options` menu, :guilabel:`Advanced` tab.
 
    In most cases, you need to restart QGIS in order to have the change applied.
-     
+
