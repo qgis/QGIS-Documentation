@@ -163,7 +163,7 @@ request.
 #. That will trigger a `Travis CI build <https://travis-ci.org/qgis/QGIS-Documentation>`_
    automatically checking if your contribution doesn't contain a build error.
    In case of error, a red cross appears along your commit. Simply click on it
-   on or `Details` in the summary section at the bottom of the page to have
+   or on `Details` in the summary section at the bottom of the page to have
    details on the error. You'll need to fix any reported error or warning
    before your changes are committed in the repository.
 
