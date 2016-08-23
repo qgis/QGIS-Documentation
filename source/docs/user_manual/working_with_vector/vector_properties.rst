@@ -1915,6 +1915,9 @@ These tools allow to specifically work on each diagram to:
   then diagram(s) are hidden. When a diagram is hidden, you just have to click
   or drag an area around the feature's point to restore the chart.
 
+.. index:: Menu; Actions
+.. _actions_menu:
+
 Actions Menu
 ============
 
