@@ -80,11 +80,9 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |editPaste|             | Paste features from clipboard       | Insert new features from copied ones       | :kbd:`Ctrl+V`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |newAttribute|          | New field                           | Available for PostGIS layers and           | :kbd:`Ctrl+W`       |
-|                         |                                     | for OGR layers with GDAL version >= 1.9    |                     | 
+| |newAttribute|          | New field                           | Add a new field to the data source         | :kbd:`Ctrl+W`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |deleteAttribute|       | Delete field                        | Available for PostGIS layers and           | :kbd:`Ctrl+L`       |
-|                         |                                     | for OGR layers with GDAL version >= 1.9    |                     |
+| |deleteAttribute|       | Delete field                        | Remove a field from the data source        | :kbd:`Ctrl+L`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |calculateField|        | Open field calculator               | Update field for many features in a row    | :kbd:`Ctrl+I`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
@@ -92,6 +90,9 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 
 Table Attribute 1: Available Tools
+
+.. note:: Depending on the format of the data and the OGR library built with
+   your QGIS version, some tools may not be available.
 
 Below these buttons is the Field Calculator bar (enabled only in editing mode),
 which allows calculations to be quickly applied to either all or selected features
