@@ -761,7 +761,7 @@ reshape tool's line must cross the polygon's boundary at least twice. To draw
 the line, click on the map canvas to add vertexes. To finish it, just
 right-click. Like with the lines, only the segment between the first and the
 last intersections is considered. The reshape line's segments that are inside
-the polygon will result in croping, where the ones outside the polygon will
+the polygon will result in cropping it, where the ones outside the polygon will
 extend it.
 
 .. _figure_edit_6:
