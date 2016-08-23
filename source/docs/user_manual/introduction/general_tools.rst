@@ -780,6 +780,22 @@ tool:
 * |selectFreehand| :sup:`Select Features by Freehand`
 * |selectRadius| :sup:`Select Features by Radius`
 
+
+While using single-click selection tool, holding :kbd:`Shift` or :kbd:`Ctrl`
+toggles whether feature is selected (ie either adds to the current selection
+or remove from it).
+
+For the other tools, different behaviors can be performed holding:
+
+* :kbd:`Shift`: add feature to the current selection
+* :kbd:`Ctrl`: substract feature from the current selection
+* :kbd:`Ctrl + Shift`: intersect with current selection, ie only keep
+  overlapping features from the current selection
+* :kbd:`Alt`: select features that are totally within the selection shape.
+  Combined to :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract
+  features to/from the current selection.
+
+
 If you want to select from attribute table, you can choose one of these tools
 (note that attribute table and map canvas show the same information, so if you
 select one feature in attribute table, it will be selected in map canvas also):
