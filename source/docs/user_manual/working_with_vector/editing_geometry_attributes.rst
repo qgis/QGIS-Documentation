@@ -874,11 +874,11 @@ go into the 'SVG marker' and choose :guilabel:`Data defined properties ...`.
 Activate |checkbox| :guilabel:`Angle` and choose 'rotation' as field.
 Without these settings, the tool is inactive.
 
-.. _figure_edit_5:
+.. _figure_edit_7:
 
 .. only:: html
 
-   **Figure Edit 5:**
+   **Figure Edit 7:**
 
 .. figure:: /static/user_manual/working_with_vector/rotatepointsymbol.png
    :align: center
@@ -987,11 +987,11 @@ polygon) and the CRS (coordinate reference system).
 Note that QGIS does not yet support creation of 2.5D features (i.e., features
 with X,Y,Z coordinates).
 
-.. _figure_edit_6:
+.. _figure_edit_8:
 
 .. only:: html
 
-   **Figure Edit 6:**
+   **Figure Edit 8**
 
 .. figure:: /static/user_manual/working_with_vector/editNewVector.png
    :align: center
@@ -1022,11 +1022,11 @@ To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
 :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog will
 be displayed as shown in Figure_edit_7_.
 
-.. _figure_edit_7:
+.. _figure_edit_9:
 
 .. only:: html
 
-   **Figure Edit 7:**
+   **Figure Edit 9**
 
 .. figure:: /static/user_manual/working_with_vector/editNewSpatialite.png
    :align: center
