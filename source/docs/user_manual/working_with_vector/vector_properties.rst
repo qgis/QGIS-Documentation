@@ -983,7 +983,7 @@ the drop-down menus - see :ref:`data_defined_labeling` for an use-case.
 Text menu
 ---------
 
-You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_).
+iYou can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_).
 Use the :guilabel:`Type case` option to influence the text rendering.
 You have the possibility to render the text 'All uppercase', 'All lowercase'
 or 'Capitalize first letter'. Use the :ref:`blend-modes` to create effects
@@ -1088,6 +1088,7 @@ Choose the :guilabel:`Placement` menu for configuring :index:`label placement`
 and labeling priority. Note that the placement options differ according to the type of
 vector layer, namely point, line or polygon.
 
+
 .. _cartographic:
 
 Placement for point layers
@@ -1142,6 +1143,13 @@ In that case, QGIS will look for the optimal label position. For Parallel and
 curved placement you can also use the line orientation for the position of the label.
 Additionally, you can define a :guilabel:`Maximum angle between curved characters` when
 selecting the |radioButtonOff| :guilabel:`Curved` option (see Figure_labels_2_ ).
+
+.. only:: html
+
+.. figure:: /static/user_manual/working_with_vector/line_label_placement.png
+   :align: center
+
+   Label placement in lines
 
 For all three placement options you can set up a minimum distance for repeating
 labels. The distance can be in ``mm`` or in ``map units``.
