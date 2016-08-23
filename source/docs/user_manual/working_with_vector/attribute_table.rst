@@ -176,7 +176,7 @@ for more information.
 Table/form mode
 ===============
 
-QGIS provides two mode views to easily manipulate data in the attribute table:
+QGIS provides two view modes to easily manipulate data in the attribute table:
 the |openTable| Table view and the |formView| Form view. You can switch from
 one to other by clicking the convenient icon at the bottom right of the dialog.
 
