@@ -1,3 +1,6 @@
+.. Purpose: This chapter aims to describe generic tools that can be used even
+.. if the user is in another chapter.
+
 |updatedisclaimer|
 
 .. _general_tools:
@@ -57,6 +60,284 @@ When you need help on a specific topic, you can access context help via the
 **[Help]** button available in most dialogs --- please note that third-party
 plugins can point to dedicated web pages.
 
+.. index:: Panels
+
+Panels
+=======
+
+.. index:: Panels; Layers
+.. _`label_legend`:
+
+Layers Panel
+------------
+
+.. index::
+   single: Legend
+
+The layers panel lists all the layers in the project. The checkbox in each
+legend entry can be used to show or hide the layer. The toolbar in the layers
+panel allows you to:
+
+* |addGroup| Add new group
+* |showPresets| :sup:`Manage Visibility`: control visibility of layers and
+  preset layers combination
+* |filterMap| :sup:`Filter Legend by Map Content`: only the layers that are set
+  visible and whose features intersect the current map canvas have their style
+  rendered in the layers panel. Otherwise, a generic NULL symbol is applied to the
+  layer. Based on the layer symbology, this is a convenient way to identify which
+  kind of features from which layers cover your area of interest.
+* |expressionFilter| :sup:`Filter Legend by Expression`: helps you apply an
+  expression to remove from the selected layer tree styles that have no feature
+  satisfying the condition. This can be used for example to highlight features that are
+  within a given area/feature of another layer.
+  From the drop-down list, you can edit and clear the expression set.
+* |expandTree| :sup:`Expand All` or |collapseTree| :sup:`Collapse All`
+  layers and groups in the layers panel.
+* and |removeLayer| :sup:`Remove Layer/Group` currently selected.
+
+.. _figure_layer_toolbar:
+
+.. only:: html
+
+   **Figure Layer tools Bar:**
+
+   .. figure:: /static/user_manual/introduction/layer_toolbar.png
+      :align: center
+
+      Layer Toolbar in Layers Panel
+
+
+.. index::
+   single:Layer visibility
+
+The button |showPresets| allows you to add **Presets** views in the legend.
+Presets are a way to save and easily restore a combination of layers with their
+current style. To add a preset view, just set visible the layers you want, with
+their desired symbology, and click on |showPresets| button.
+Choose :menuselection:`Add Preset...` from the drop-down menu and give a name to the preset.
+The added preset is listed at the bottom of the drop-down menu and is recalled by
+clicking on it.
+
+The :menuselection:`Replace Preset -->` option helps you overwrite a preset content
+with the current map view while the :menuselection:`Remove Current Preset` button
+deletes the active preset.
+
+All the added presets are also present in the map composer in order to allow you
+to create a map layout based on your specific views (see :ref:`composer_main_properties`).
+
+.. note::
+   Tools to manage the layers panel are also available to layout the map
+   and legend items of the print composer
+
+A layer can be selected and dragged up or down in the legend to change the
+Z-ordering. Z-ordering means that layers listed nearer the top of the legend
+are drawn over layers listed lower down in the legend.
+
+.. note:: This behavior can be overridden by the :ref:`Layer Order <layer_order>` panel.
+
+Layers in the legend window can be organized into groups. There are two ways to
+do this:
+
+#. Press the |folder| icon to add a new group. Type in a name for
+   the group and press :kbd:`Enter`. Now click on an existing layer and
+   drag it onto the group.
+#. Select some layers, right click in the legend window and choose
+   :guilabel:`Group Selected`. The selected layers will automatically be placed
+   in a new group.
+
+To bring a layer out of a group, you can drag it out, or right click on it and
+choose :guilabel:`Make to toplevel item`. Groups can also be nested inside other
+groups.
+
+The checkbox for a group will show or hide all the layers in the group
+with one click.
+
+The content of the right mouse button context menu depends on whether the
+selected legend item is a raster or a vector layer. For GRASS vector layers,
+|toggleEditing| :sup:`Toggle editing` is not available. See section
+:ref:`grass_digitizing` for information on editing GRASS vector layers.
+
+Below are listed available options in context menu depending on the selected item.
+
+================================================================  =====================  ===================== ===============
+Option                                                            Vector Layer           Raster Layer          Group
+================================================================  =====================  ===================== ===============
+|zoomToLayer| :menuselection:`Zoom to Layer/Group`                |checkbox|             |checkbox|            |checkbox|
+|unchecked| :menuselection:`Show in Overview`                     |checkbox|             |checkbox|            \
+|zoomActual| :menuselection:`Zoom to Native Resolution (100%)`    \                      |checkbox|            \
+:menuselection:`Stretch Using Current Extent`                     \                      |checkbox|            \
+|removeLayer| :menuselection:`Remove`                             |checkbox|             |checkbox|            |checkbox|
+|duplicateLayer| :menuselection:`Duplicate`                       |checkbox|             |checkbox|            \
+:menuselection:`Set Layer Scale Visibility`                       |checkbox|             |checkbox|            \
+:menuselection:`Set Layer/Group CRS`                              |checkbox|             |checkbox|            |checkbox|
+:menuselection:`Set Project CRS from Layer`                       |checkbox|             |checkbox|            \
+:menuselection:`Styles -->`                                       |checkbox|             |checkbox|            \
+:menuselection:`Copy Style`                                       |checkbox|             |checkbox|            \
+:menuselection:`Paste Style`                                      |checkbox|             |checkbox|            |checkbox|
+|openTable| :menuselection:`Open Attribute Table`                 |checkbox|             \                     \
+|toggleEditing| :menuselection:`Toggle Editing`                   |checkbox|             \                     \
+|allEdits| :menuselection:`Current Edits -->`                     |checkbox|             \                     \
+                                                                  (in Edit mode)
+:menuselection:`Save As...`                                       |checkbox|             |checkbox|            \
+:menuselection:`Save As Layer Definition File...`                 |checkbox|             |checkbox|            |checkbox|
+:menuselection:`Filter`                                           |checkbox|             \                     \
+|unchecked| :menuselection:`Show Feature Count`                   |checkbox|             \                     \
+:menuselection:`Properties`                                       |checkbox|             |checkbox|            \
+:menuselection:`Move to Top-level`                                |checkbox|             |checkbox|            \
+:menuselection:`Rename`                                           |checkbox|             |checkbox|            |checkbox|
+:menuselection:`Group Selected`                                   |checkbox|             |checkbox|            \
+:menuselection:`Properties`                                       |checkbox|             |checkbox|            \
+:menuselection:`Set Group WMS Data`                               \                      \                     |checkbox|
+|unchecked| :menuselection:`Mutually Exclusive Group`             \                      \                     |checkbox|
+|addGroup| :menuselection:`Add Group`                             \                      \                     |checkbox|
+================================================================  =====================  ===================== ===============
+
+
+Enabling the **Mutually Exclusive Group** option you can make a group have only
+one layer visible at the same time.
+Whenever a layer within the group is set visible the others will be toggled not visible.
+
+It is possible to select more than one layer or group at the same time by
+holding down the :kbd:`Ctrl` key while selecting the layers with the left mouse
+button. You can then move all selected layers to a new group at the same time.
+
+You may also delete more than one layer or group at once by selecting
+several items with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
+This way, all selected layers or groups will be removed from the layers list.
+
+.. index:: Style
+
+.. _editing_style_layer:
+
+Editing vector layer style
+...........................
+
+From the Layers panel, you have shortcuts to easily and quickly edit the layer
+rendering.
+Right-click on a vector layer and select :guilabel:`Styles -->` in the list
+in order to:
+
+* see the currently applied :ref:`styles <manage_custom_style>` to the layer. In
+  case you defined many styles for the layer, you can switch from one to another
+  and have your layer rendering automatically updated in the map canvas.
+* copy the current style, and when applicable, paste a copied style from another layer
+* rename the current style, add a new one (which is actually a copy of the current
+  one) or delete the current style (when multiple styles available).
+
+.. note:: The previous options are also available for raster layer.
+
+Whether the features in the vector layer have all the same unique symbol or they are
+classified (in that case, the layer is displayed in a tree structure with each class
+as sub-item), the following options are available at layer level or class level:
+
+* a :guilabel:`Edit Symbol...` button to open the :ref:`symbol-selector` dialog and
+  update any property (symbol, size, color...) of the layer or feature symbol.
+  Double-clicking on a feature does also open the :guilabel:`Symbol Selector` dialog.
+* a :ref:`color-selector` widget with a **Color Wheel** from which you can click a
+  color and have it automatically update the symbol fill color. For convenience,
+  **Recent colors** are available at the bottom of the color wheel.
+* a |showAllLayers| :guilabel:`Show All Items` and |hideAllLayers| :guilabel:`Hide All
+  Items` to toggle on or off the visibility of all the classes of features. This avoids
+  (un)checking items one by one.
+
+.. tip:: **Quickly share a layer style**
+
+    From the context menu, copy the style of a layer and paste it to a group
+    or a selection of layers: the style is applied to all the layers that
+    are of the same type (vector vs raster) as the original layer and,
+    in case of vector, have the same geometry type (point, line or polygon).
+
+
+.. index:: Layers; Order
+
+.. _layer_order:
+
+Working with the Legend independent layer order
+------------------------------------------------
+
+There is a panel that allows you to define an independent drawing order for
+the layers panel. You can activate it in the menu
+:menuselection:`Settings --> Panels --> Layer Order Panel`. This feature allows you
+to, for instance, order your layers in order of importance, but still display
+them in the correct order (see figure_layer_order_). Checking the |checkbox|
+:guilabel:`Control rendering order` box underneath the list of layers will
+cause a revert to default behavior.
+
+.. _figure_layer_order:
+
+.. only:: html
+
+   **Figure Layer Order:**
+
+.. figure:: /static/user_manual/introduction/layer_order.png
+    :align: center
+
+    Define a legend independent layer order
+
+.. index::
+   single: Panels; Statistic
+   single: Statistic
+
+.. _`statistical_summary`:
+
+Statistical Summary Panel
+--------------------------
+
+This panel can show some statistics on a specific vector layers. The panel
+allows users to choose:
+
+* the vector layer;
+* the column or the expression;
+* filter statistics to selected features;
+* refresh the informations;
+* the statistics information to display with the bottom right button.
+
+.. note:: The list of shown statistics depends on the type of the values (numeric,
+   string or date) returned by the selected field or the entered expression.
+
+.. index::
+   single: Map; Overview
+   single: Panels; Overview
+
+.. _`overview_panels`:
+
+QGIS Overview Panel
+--------------------
+
+In QGIS, you can use an overview panel that provides a full extent view of
+layers added to it. Within the view is a rectangle showing the current map
+extent. This allows you to quickly determine which area of the map you are
+currently viewing. Note that labels are not rendered to the map overview even
+if the layers in the map overview have been set up for labelling. If you click
+and drag the red rectangle in the overview that shows your current extent, the
+main map view will update accordingly.
+
+
+.. index::
+   single:Log messages
+   single:Panels; Log messages
+
+.. _`log_message_panel`:
+
+Log Messages Panel
+------------------
+
+When loading or processing some operations, you can track and follow messages
+that appear in different tabs using the |messageLog| Log Messages Panel.
+It can be activated using the most right icon in the bottom status bar.
+
+
+.. index:: Undo, Redo, Panels; Undo, Panels; Redo
+
+.. _`undo_redo_panel`:
+
+Undo/Redo Panel
+---------------
+
+For each layer being edited, this panel shows the list of actions done, allowing
+to quickly undo a set of actions by simply selecting the action listed above.
+
+
 .. _`redraw_events`:
 
 Rendering
@@ -107,7 +388,7 @@ Map rendering can be controlled in various ways, as described below.
 Suspending Rendering
 ....................
 
-.. index::`rendering!suspending`
+.. index::`Rendering; Suspending`
 
 To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in the
 lower right corner of the status bar. When the |checkbox| :guilabel:`Render`
@@ -128,8 +409,7 @@ causes an immediate refresh of the map canvas.
 Setting Layer Add Option
 ........................
 
-.. index::`rendering!options`
-.. index::`layers!initial visibility`
+.. index::Rendering; Options, Layers; Initial visibility
 
 You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
@@ -143,7 +423,7 @@ Stopping Rendering
 ..................
 
 .. index::
-   single:Rendering halting
+   single:Rendering; Halting
 
 .. _label_stoprender:
 
@@ -161,12 +441,15 @@ Influence Rendering Quality
 ...........................
 
 .. index::
-   single:rendering quality
+   single: Rendering; Quality
 
 QGIS has an option to influence the rendering quality of the map. Choose menu
 option :menuselection:`Settings --> Options`, click on the :guilabel:`Rendering`
 tab and select or deselect |checkbox| :guilabel:`Make lines appear less jagged
 at the expense of some drawing performance`.
+
+.. index::
+   single: Rendering; Speed-up
 
 Speed-up rendering
 ..................
@@ -369,7 +652,7 @@ Measuring
 =========
 
 .. index::
-   single:measure
+   pair: Tools; Measure
 
 QGIS provides four means of measuring geometries:
 
@@ -411,11 +694,11 @@ To select a measuring tool, click on |measure| and select the tool you want
 to use.
 
 .. index::
-   single:measure;line length
+   single: Measure; Line length
 .. index::
-   single:measure;areas
+   single: Measure; Areas
 .. index::
-   single:measure;angles
+   single: Measure; Angles
 
 By default, |measure| :sup:`Measure Line`: QGIS measures real distances
 between given points according to a defined ellipsoid. You can define a rubberband
@@ -523,7 +806,7 @@ Users can save selected features into a **New Memory Vector Layer** or a
 About Select Features By Value
 -------------------------------
 
-This feature opens a window to allow the user to choose for each column of the 
+This feature opens a window to allow the user to choose for each column of the
 attribute table which value to look for, if the search should be case sensitive
 and the operation that should be used. Operation can be one of:
 
@@ -620,7 +903,7 @@ display three kinds of information:
   in the layer's properties dialog.
 * **Derived**: This information is calculated or derived from other information.
   This includes:
-  
+
   * general information about the feature and its geometry: feature id, length or perimeter
     and area in map units depending on its geometry, the count of spatial parts and
     the number of the clicked part in case of multi-geometry, the count of vertices in
@@ -629,7 +912,7 @@ display three kinds of information:
     clicked point, the feature closest vertex and its first and last vertices.
     In case you click on a curved line using the info tool, QGIS will also display the
     radius of that section in the panel result.
-    
+
 * **Data attributes**: This is the list of attribute fields and values for the feature that
   has been clicked.
 
@@ -698,7 +981,7 @@ example, from the context menu you can:
 .. _sec_annotations:
 
 .. index::
-   single: annotation
+   single: Annotation
 
 Annotation Tools
 ================
@@ -788,8 +1071,8 @@ Spatial Bookmarks
 
 Spatial Bookmarks allow you to "bookmark" a geographic location and return to
 it later. By default, bookmarks are saved on the computer, meaning that they are available
-from any project in the same computer. If you wish to store the bookmark in the project 
-file (:file:`.qgs`) then you can do this by selecting the :guilabel:`In Project` checkbox.  
+from any project in the same computer. If you wish to store the bookmark in the project
+file (:file:`.qgs`) then you can do this by selecting the :guilabel:`In Project` checkbox.
 
 Creating a Bookmark
 -------------------
