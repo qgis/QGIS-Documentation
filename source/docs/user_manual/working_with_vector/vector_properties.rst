@@ -1442,7 +1442,7 @@ can be used when the dataset is in |toggleEditing| :sup:`Editing mode`.
 You can rename fields by double-clicking in the fields name (note that you
 should switch to editing mode to edit the field name). This is only supported
 for data providers like PostgreSQL, Oracle, Memory layer and some OGR layer
-depending the OGR data format and version. 
+depending the OGR data format and version.
 
 You can define some alias to display human readable fields in the form. In this
 case, you don't need to switch to editing mode. Alias are saved in project
@@ -1518,6 +1518,17 @@ widgets. These widgets are:
   multiple selections and use of autocompleter. The forms will display either
   a drop-down list or a line edit field when completer checkbox is enabled.
 * **Webview**: Field contains a URL. The width and height of the field is variable.
+
+**Constraints:** Each widget allows to constrain the value filled in the
+field. First, you can enable the |checkbox| :guilabel:`Not null` checkbox to
+force the user to fill the value of the column.
+
+You can also setup a custom contraint using an expression, e.g.
+``regexp_match(col0,'A-Za-z')`` to be sure that the value of the column *col0*
+has only alphabetical letter. Finally, you can add a short description to explain
+the constraint that will be displayed in the top of the form as a warning
+message when the value of the field does not match the constraint.
+
 
 .. note::
 
