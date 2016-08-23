@@ -20,6 +20,11 @@ To access the :guilabel:`Layer Properties` dialog, double-click on a layer in
 the legend or right-click on the layer and select :menuselection:`Properties`
 from the pop-up menu.
 
+.. note:: Depending on the `external plugins <http://plugins.qgis.org/plugins/>`_
+   you have installed, new tabs may be added to the layer properties dialog.
+   Those are not presented below.
+
+
 .. tip:: **Switch quickly between different layer representations**
 
    Using the :menuselection:`Styles --> Add` combobox at the bottom of the
