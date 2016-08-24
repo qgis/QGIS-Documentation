@@ -522,10 +522,14 @@ current scale. There is a scale selector, which allows you to choose among
 :ref:`predefined and custom scales <predefinedscales>` to assign to the map view.
 
 On the right side of the scale display you can define a current
-:index:`magnification` level for your map view. The level is expressed as a percentage.
-If the :guilabel:`Magnifier` has a level of 100%, then the current map is not
-magnified. A default value for this level is available within
-:menuselection:`Settings --> Options --> Rendering --> Rendering behaviour`.
+:index:`magnification` level for your map view. This allows to zoom in to a map
+without altering the map scale, making it easier to accurately
+tweak the positions of labels and symbols. The magnification level is expressed as a
+percentage. If the :guilabel:`Magnifier` has a level of 100%, then the current
+map is not magnified. Additionally, a default magnification value can be defined
+within
+:menuselection:`Settings --> Options --> Rendering --> Rendering behaviour`,
+which is very useful for high resolution screen to avoid too small symbols.
 
 To the right of the magnifier tool you can define a current clockwise rotation for
 your map view in degrees.
