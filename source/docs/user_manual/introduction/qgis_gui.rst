@@ -521,7 +521,7 @@ It shows the scale of the map view. If you zoom in or out, QGIS shows you the
 current scale. There is a scale selector, which allows you to choose among
 :ref:`predefined and custom scales <predefinedscales>` to assign to the map view.
 
-On the right side of the scale display you can define a current clockwise
+On the right side of the scale display you can define a current
 :index:`magnification` level for your map view. The level is expressed as a percentage.
 If the :guilabel:`Magnifier` has a level of 100%, then the current map is not
 magnified. A default value for this level is available within
