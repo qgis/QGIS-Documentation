@@ -320,7 +320,7 @@ Python. A quick way of creating such a Python script is to create a model and
 then to export is as a Python file.
 
 To do so, click on the :guilabel:`Export as Python script` button. Select the
-output file in the file chooser dialog, and Prcoessing will write in it the
+output file in the file chooser dialog, and Processing will write in it the
 Python commands that perform the same operations defined in the current model.
 
 
