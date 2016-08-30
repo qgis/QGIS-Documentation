@@ -283,7 +283,7 @@ as part of the model.
    Model With Deactivated Algorithms
 
 When right-clicking on an algorithm that is not active, you will instead see a
-:guilabel:`Deactivate` menu option that you can use to activate it back.
+:guilabel:`Activate` menu option that you can use to activate it back.
 
 Editing model help files and meta-information
 ---------------------------------------------
