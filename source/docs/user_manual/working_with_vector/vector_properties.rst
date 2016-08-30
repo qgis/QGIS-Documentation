@@ -20,6 +20,11 @@ To access the :guilabel:`Layer Properties` dialog, double-click on a layer in
 the legend or right-click on the layer and select :menuselection:`Properties`
 from the pop-up menu.
 
+.. note:: Depending on the `external plugins <http://plugins.qgis.org/plugins/>`_
+   you have installed, new tabs may be added to the layer properties dialog.
+   Those are not presented below.
+
+
 .. tip:: **Switch quickly between different layer representations**
 
    Using the :menuselection:`Styles --> Add` combobox at the bottom of the
@@ -1466,7 +1471,7 @@ can be used when the dataset is in |toggleEditing| :sup:`Editing mode`.
 You can rename fields by double-clicking in the fields name (note that you
 should switch to editing mode to edit the field name). This is only supported
 for data providers like PostgreSQL, Oracle, Memory layer and some OGR layer
-depending the OGR data format and version. 
+depending the OGR data format and version.
 
 You can define some alias to display human readable fields in the form. In this
 case, you don't need to switch to editing mode. Alias are saved in project
@@ -1542,6 +1547,17 @@ widgets. These widgets are:
   multiple selections and use of autocompleter. The forms will display either
   a drop-down list or a line edit field when completer checkbox is enabled.
 * **Webview**: Field contains a URL. The width and height of the field is variable.
+
+**Constraints:** Each widget allows to constrain the value filled in the
+field. First, you can enable the |checkbox| :guilabel:`Not null` checkbox to
+force the user to fill the value of the column.
+
+You can also setup a custom contraint using an expression, e.g.
+``regexp_match(col0,'A-Za-z')`` to be sure that the value of the column *col0*
+has only alphabetical letter. Finally, you can add a short description to explain
+the constraint that will be displayed in the top of the form as a warning
+message when the value of the field does not match the constraint.
+
 
 .. note::
 
@@ -1922,6 +1938,9 @@ These tools allow to specifically work on each diagram to:
   data-defined visbility. If you click or drag an area holding :kbd:`Shift`,
   then diagram(s) are hidden. When a diagram is hidden, you just have to click
   or drag an area around the feature's point to restore the chart.
+
+.. index:: Menu; Actions
+.. _actions_menu:
 
 Actions Menu
 ============
