@@ -739,22 +739,41 @@ Reshape Features
 ----------------
 
 You can reshape line and polygon features using the |reshape|
-:sup:`Reshape Features` icon on the toolbar. For lines, it replaces the line
+:sup:`Reshape Features` tool on the toolbar. For lines, it replaces the line
 part from the first to the last intersection with the original line. The
 |reshape| :sup:`Reshape Features` tool also helps you extend linestring
 geometries: simply begin or end the reshape line at either the first or last
 point of the existing line.
 
+.. _figure_edit_5:
 
-You can also edit the boundary of a polygon with this tool. First,
-click in the inner area of the polygon next to the point where you want to
-add a new vertex. Then, cross the boundary and add the vertices outside the
-polygon. To finish, right-click in the inner area of the polygon. The tool
-will automatically add a node where the new line crosses the border. The area of
-the polygon is expanded with the area you draw.
-It is also possible to remove part of the area from the polygon, starting the new
-line outside the polygon, adding vertices inside, and ending the line outside
-the polygon with a right click.
+.. only:: html
+
+   **Figure Edit 5:**
+
+.. figure:: /static/user_manual/working_with_vector/reshape_lines.png
+   :align: center
+
+   Reshape line
+
+For polygons, it will reshape the polygon's boundary. For it to work, the
+reshape tool's line must cross the polygon's boundary at least twice. To draw
+the line, click on the map canvas to add vertexes. To finish it, just
+right-click. Like with the lines, only the segment between the first and the
+last intersections is considered. The reshape line's segments that are inside
+the polygon will result in cropping it, where the ones outside the polygon will
+extend it.
+
+.. _figure_edit_6:
+
+.. only:: html
+
+   **Figure Edit 6:**
+
+.. figure:: /static/user_manual/working_with_vector/reshape_polygon.png
+   :align: center
+
+   Reshape polygon
 
 With polygons, reshaping can sometimes lead to unintended results. It is mainly useful
 to replace smaller parts of a polygon, not for major overhauls, and the reshape
@@ -855,11 +874,11 @@ go into the 'SVG marker' and choose :guilabel:`Data defined properties ...`.
 Activate |checkbox| :guilabel:`Angle` and choose 'rotation' as field.
 Without these settings, the tool is inactive.
 
-.. _figure_edit_5:
+.. _figure_edit_7:
 
 .. only:: html
 
-   **Figure Edit 5:**
+   **Figure Edit 7:**
 
 .. figure:: /static/user_manual/working_with_vector/rotatepointsymbol.png
    :align: center
@@ -968,11 +987,11 @@ polygon) and the CRS (coordinate reference system).
 Note that QGIS does not yet support creation of 2.5D features (i.e., features
 with X,Y,Z coordinates).
 
-.. _figure_edit_6:
+.. _figure_edit_8:
 
 .. only:: html
 
-   **Figure Edit 6:**
+   **Figure Edit 8**
 
 .. figure:: /static/user_manual/working_with_vector/editNewVector.png
    :align: center
@@ -1003,11 +1022,11 @@ To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
 :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog will
 be displayed as shown in Figure_edit_7_.
 
-.. _figure_edit_7:
+.. _figure_edit_9:
 
 .. only:: html
 
-   **Figure Edit 7:**
+   **Figure Edit 9**
 
 .. figure:: /static/user_manual/working_with_vector/editNewSpatialite.png
    :align: center
