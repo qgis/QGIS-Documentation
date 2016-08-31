@@ -86,7 +86,7 @@ Condition for the selection. Array of one or more of the following predicates:
 * within
 * crosses
 
-For console usage the precicates must be defined as an array of Unicode strings, eg. [u'intersects',u'contains']
+For console usage the predicates must be defined as an array of Unicode strings, eg. [u'intersects',u'contains']
 
 Outputs
 .......
