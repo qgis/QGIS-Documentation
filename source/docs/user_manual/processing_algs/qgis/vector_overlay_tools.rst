@@ -169,7 +169,7 @@ See also
 ........
 
 Split lines with lines
-------------------
+----------------------
 
 Description
 ...........
