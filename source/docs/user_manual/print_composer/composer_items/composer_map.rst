@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. index:: composer_map
 

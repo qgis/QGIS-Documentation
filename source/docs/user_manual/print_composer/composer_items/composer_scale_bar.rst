@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. index::
    single: Scalebar; Map_Scalebar

@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _plugin_gps:
 

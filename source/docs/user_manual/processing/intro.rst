@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _sec_processing_intro:
 

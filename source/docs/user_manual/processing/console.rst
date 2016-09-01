@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 Using processing algorithms from the console
 ==============================================

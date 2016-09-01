@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. index::
    single:Printing; Export_Map

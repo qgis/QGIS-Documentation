@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _general_tools:
 

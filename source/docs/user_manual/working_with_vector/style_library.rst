@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _vector_symbol_library:
 

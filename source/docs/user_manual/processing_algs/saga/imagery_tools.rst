@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 Imagery tools
 =============

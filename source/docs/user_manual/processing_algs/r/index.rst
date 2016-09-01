@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 ********************
 R algorithm provider

@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. index:: Attribute_Table
 

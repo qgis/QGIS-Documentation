@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. index:: QGIS Server; WMS Server; WFS Server; WCS Server
 

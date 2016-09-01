@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 Grid analysis
 =============

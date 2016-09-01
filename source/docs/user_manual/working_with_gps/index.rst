@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 **********************
 Working with GPS Data

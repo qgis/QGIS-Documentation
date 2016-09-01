@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 Vector creation
 ===============

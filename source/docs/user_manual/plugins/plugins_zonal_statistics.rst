@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _zonal_statistics:
 

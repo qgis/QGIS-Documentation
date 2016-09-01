@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 *******************************
 OrfeoToolbox algorithm provider

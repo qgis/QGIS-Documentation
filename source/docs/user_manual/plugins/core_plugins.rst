@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. :index::
     single:core plugins

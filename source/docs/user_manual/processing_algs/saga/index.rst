@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 ***********************
 SAGA algorithm provider

@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _spatial_query:
 

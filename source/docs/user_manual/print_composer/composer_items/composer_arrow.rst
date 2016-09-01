@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _arrow_item:
 

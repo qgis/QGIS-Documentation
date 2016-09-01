@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. index:: Raster
 .. index:: Arc/Info_Binary_Grid, Arc/Info_ASCII_Grid, GeoTIFF
@@ -12,11 +11,6 @@ Working with Raster Data
 
    .. contents::
       :local:
-
-.. % when the revision of a section has been finalized,
-.. % comment out the following line:
-.. %\updatedisclaimer
-
 
 This section describes how to visualize and set raster layer properties.
 QGIS uses the :index:`GDAL` library to read and write raster data formats,

@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _oracle_raster:
 

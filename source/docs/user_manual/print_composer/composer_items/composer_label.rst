@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 The Label Item
 ===============

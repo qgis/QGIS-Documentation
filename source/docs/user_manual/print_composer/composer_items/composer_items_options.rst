@@ -1,5 +1,3 @@
-|updatedisclaimer|
-
 
 Composer Items Common Options
 ==============================

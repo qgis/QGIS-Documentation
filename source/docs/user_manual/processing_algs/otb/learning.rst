@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 Learning
 ========
