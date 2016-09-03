@@ -1,13 +1,13 @@
 # 
 # Translators:
-# Dick Groskamp, 2015
+# Dick Groskamp, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-07-18 09:37+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2016-08-31 15:22+0000\n"
+"Last-Translator: Dick Groskamp\n"
 "Language-Team: Dutch (http://www.transifex.com/qgis/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgid ""
 "The name of the algorithm (the one you will see in the toolbox) is created "
 "from the filename, removing its extension and replacing underscores with "
 "blank spaces."
-msgstr ""
+msgstr "De naam van het algoritme (die welke u zult zien in de Toolbox) wordt gemaakt uit de bestandsnaam, waarbij de extensie is verwijderd en de lage streepjes zijn vervangen door spaties."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:27
 msgid ""
@@ -51,7 +51,7 @@ msgid ""
 "last one of them calculates the TWI, but it needs a slope layer and a flow "
 "accumulation layer. We do not have these, but since we have the DEM, we can "
 "calculate them by calling the corresponding SAGA algorithms."
-msgstr ""
+msgstr "Zoals u kunt zien omvat het 3 algoritmen, alle drie afkomstig uit SAGA. De laatste berekent de TWI, maar het heeft een laag slope nodig en een laag flow accumulation. We hebben deze lagen niet, maar omdat we de DEM hebben, kunnen we ze berekenen door het aanroepen van de corresponderende algoritmen van SAGA."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:46
 msgid ""
@@ -72,7 +72,7 @@ msgstr "Deze regels beginnen met een dubbel symbool voor een opmerking in Python
 msgid ""
 "Here is a list of all the parameter types that are supported in processing "
 "scripts, their syntax and some examples."
-msgstr ""
+msgstr "Hier is een lijst met alle typen parameter die worden ondersteund in scripts voor Processing, hun syntaxis en enkele voorbeelden."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:62
 msgid "``raster``. A raster layer"
@@ -129,7 +129,7 @@ msgstr "``field``. Een veld in de attributentabel van een vectorlaag. De naam va
 
 #: ../../source/docs/user_manual/processing/scripts.rst:79
 msgid "``extent``. A spatial extent defined by xmin, xmax, ymin, ymax"
-msgstr ""
+msgstr "``extent``. Een ruimtelijk bereik gedefinieerd door xmin, xmax, ymin, ymax"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:80
 msgid "``folder``. A folder"
@@ -147,20 +147,20 @@ msgstr "``crs``. Een Coördinaten ReferentieSysteem"
 msgid ""
 "``selection``. A dropdown menu that allows the user to select from a pre-"
 "populated list. For example ``units=selection sq_km;sq_miles;sq_degrees``"
-msgstr ""
+msgstr "``selection``. Een keuzemenu dat de gebruiker in staat stelt uit ene vooraf gevulde lijst te kiezen. Bijvoorbeeld: ``units=selection sq_km;sq_miles;sq_degrees``"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:85
 msgid ""
 "``name``. Name of the script. This will be displayed as the algorithm name "
 "in the processing toolbox. For example ``My Algorithm Name=name``"
-msgstr ""
+msgstr "``name``. Naam van het script. Dit zal worden weergegeven als de naam van het algoritme in de Toolbox van Processing. Bijvoorbeeld: ``Mijn algoritme Name=naam``"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:87
 msgid ""
 "``group``. Folder name where the script will appear in the Processing "
 "Toolbox. For Example, adding ``Utils=groups`` will put the script within a "
 "``Utils`` folder within Scripts."
-msgstr ""
+msgstr "``group``. Naam van de map waar het script zal verschijnen in de Toolbox van Processing. Bijvoorbeeld: toevoegen van ``Utils=groups`` zal het script plaatsen in een map ``Utils`` binnen Scripts."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:91
 msgid ""
@@ -176,7 +176,7 @@ msgid ""
 "to improve its appearance, replacing underscores with spaces. So, for "
 "instance, if you want the user to see a parameter named ``A numerical "
 "value``, you can use the variable name ``A_numerical_value``."
-msgstr ""
+msgstr "Bij het tonen van de naam van de parameter aan de gebruiker, zal de naam worden bewerkt om zijn uiterlijk te verbeteren, waarbij lage streepjes worden vervangen door spaties. Dus, als u bijvoorbeeld wilt dat de gebruiker een parameter genaamd ``Een numerieke waarde`` ziet, kunt u als naam voor de variabele ``Een_numerieke_waarde`` gebruiken`."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:100
 msgid ""
@@ -185,7 +185,7 @@ msgid ""
 "``processing.getObjectFromUri()`` function. Multiple inputs also have a "
 "string value, which contains the filepaths to all selected objects, "
 "separated by semicolons (``;``)."
-msgstr ""
+msgstr "Lagen en tabelwaarden zijn tekenreeksen die het bestandspad van het corresponderende object bevatten.  U kunt de functie ``processing.getObjectFromUri()`` gebruiken om er een object voor QGIS van te maken. Meerdere invoer is ook een waarde van een tekenreeks, die de bestandspaden naar alle geselecteerde objecten bevat, gescheiden door puntkomma's (``;``)."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:105
 msgid "Outputs are defined in a similar manner, using the following tags:"
@@ -256,7 +256,7 @@ msgid ""
 "reason why, although the ``runalg()`` method does not load the layers it "
 "produces, the final *TWI* layer will be loaded, since it is saved to the "
 "file entered by the user, which is the value of the corresponding output."
-msgstr ""
+msgstr "Wanneer u een uitvoer declareert die een laag vertegenwoordigt (raster, vector of tabel), zal het algoritme proberen het aan QGIS toe te voegen als het is voltooid. Dat is de reden waarom, hoewel de methode ``runalg()`` niet de lagen laadt die het produceert, de uiteindelijke laag TWI zal worden geladen, omdat het is opgeslagen in het bestand dat is ingevoerd door de gebruiker, wat de waarde is van de overeenkomstige uitvoer."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:138
 msgid ""
@@ -319,7 +319,7 @@ msgid ""
 "dialog you will find a **[Edit script help]** button. Click on it and it "
 "will take you to the help editing dialog. Check the chapter about the "
 "graphical modeler to find out more about this dialog and how to use it."
-msgstr ""
+msgstr "Net als in het geval van modellen kunt u aanvullende documentatie voor uw scripts maken, om uit te leggen wat zij doen en hoe ze zijn te gebruiken. In het dialoogvenster Script editor vindt u een knop **[Help script bewerken]**. Klik er op en het brengt u naar het dialoogvenster Help editor. Bekijk het gedeelte over Grafische modellen bouwen om meer over dit dialoogvenster te weten te komen en hoe het te gebruiken."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:188
 msgid ""
@@ -329,7 +329,7 @@ msgid ""
 "script editing dialog without saving the script (i.e. you discard it), the "
 "help content you wrote will be lost. If your script was already saved and is"
 " associated with a filename, saving is done automatically."
-msgstr ""
+msgstr "Help-bestanden worden in dezelfde map opgeslagen als het script zelf, waarbij de extensie :file:`.help` aan de bestandsnaam wordt toegevoegd. Onthoud dat u uw Help voor uw script kunt bewerken vóórdat u het script voor de eerste keer opslaat. Als u later het dialoogvenster Script editor sluit zonder het script op te slaan (d.i. u verwerpt het), zal de inhoud voor de Help verloren gaan. Als uw script al was opgeslagen en is geassocieerd aan een bestandsnaam, wordt de inhoud voor de Help automatisch opgeslagen."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:197
 msgid "Example scripts"

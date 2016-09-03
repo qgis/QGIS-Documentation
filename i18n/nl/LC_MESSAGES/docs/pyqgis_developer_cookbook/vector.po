@@ -1,6 +1,6 @@
 # 
 # Translators:
-# Dick Groskamp, 2015
+# Dick Groskamp, 2015-2016
 # Milo van der Linden <milo@dogodigi.net>, 2014
 # Rodolfo_Jadon, 2014
 msgid ""
@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2016-07-18 09:38+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2016-08-31 16:40+0000\n"
+"Last-Translator: Dick Groskamp\n"
 "Language-Team: Dutch (http://www.transifex.com/qgis/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -554,19 +554,19 @@ msgstr "oud"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:20
 msgid "Retrieving information about attributes"
-msgstr ""
+msgstr "Informatie over attributen ophalen"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:22
 msgid ""
 "You can retrieve information about the fields associated with a vector layer"
 " by calling :func:`pendingFields` on a :class:`QgsVectorLayer` instance::"
-msgstr ""
+msgstr "U kunt informatie ophalen over de velden die zijn geassocieerd met een vectorlaag door :func:`pendingFields` aan te roepen op een instance van :class:`QgsVectorLayer`::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:30
 msgid ""
 "Starting from QGIS 2.12 there is also a :func:`fields()` in "
 ":class:`QgsVectorLayer` which is an alias to :func:`pendingFields`."
-msgstr ""
+msgstr "Vanaf QGIS 2.12 is er ook een :func:`fields()` in :class:`QgsVectorLayer` wat een alias is voor :func:`pendingFields`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:38
 msgid "Selecting features"
@@ -580,7 +580,7 @@ msgid ""
 "(default is yellow) to draw user's attention on the selection. Sometimes can"
 " be useful to programmatically select features or to change the default "
 "color."
-msgstr ""
+msgstr "In QGIS desktop kunnen objecten op verschillende manieren worden geselecteerd, de gebruiker kan klikken op een object, een rechthoek in het kaartvenster tekenen of een expressie-filter gebruiken. Geselecteerde objecten worden normaal gesproken geaccentueerd in een andere kleur (standaard is geel) om de aandacht van de gebruiker naar de selectie te trekken. Soms kan het nuttig zijn om programmatisch objecten te selecteren of om de standaard kleur te wijzigen."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:47
 msgid ""
@@ -649,7 +649,7 @@ msgstr "Als u in plaats daarvan een op attributen gebaseerd filter nodig heeft (
 msgid ""
 "See :ref:`expressions` for the details about the syntax supported by "
 ":class:`QgsExpression`."
-msgstr ""
+msgstr "Bekijk :ref:`expressions` voor de details over de door :class:`QgsExpression` ondersteunde syntaxis."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:186
 msgid ""
@@ -664,7 +664,7 @@ msgid ""
 "information, you can significantly increase the **speed** of the features "
 "request by using ``QgsFeatureRequest.NoGeometry`` flag or specifying a "
 "subset of attributes (possibly empty) like shown in the example above."
-msgstr ""
+msgstr "Als u slechts een subset van de attributen nodig heeft of u heeft de informatie over de geometrie niet nodig, kunt u de **snelheid** van het verzoek voor de objecten significant verhogen door de vlag ``QgsFeatureRequest.NoGeometry`` te gebruiken of een subset van attributen te specificeren (mogelijk leeg) zoals weergegeven in het bovenstaande voorbeeld."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:214
 msgid ""
@@ -679,13 +679,13 @@ msgid ""
 "For a list of all available capabilities, please refer to the `API "
 "Documentation of QgsVectorDataProvider "
 "<http://qgis.org/api/classQgsVectorDataProvider.html>`_"
-msgstr ""
+msgstr "Bekijk, voor een lijst van alle beschikbare capabilities, de `API Documentation of QgsVectorDataProvider <http://qgis.org/api/classQgsVectorDataProvider.html>`_"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:228
 msgid ""
 "To print layer's capabilities textual description in a comma separated list "
 "you can use :func:`capabilitiesString` as in the following example::"
-msgstr ""
+msgstr "U kunt, om de tekstuele beschrijving van de capabilities van de laag af te drukken naar een kommagescheiden lijst, :func:`capabilitiesString` gebruiken, zoals in het volgende voorbeeld::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:238
 msgid ""
@@ -708,14 +708,14 @@ msgid ""
 "Create some :class:`QgsFeature` instances and pass a list of them to "
 "provider's :func:`addFeatures` method. It will return two values: result "
 "(true/false) and list of added features (their ID is set by the data store)."
-msgstr ""
+msgstr "Maak enkele instances :class:`QgsFeature` en geef daar een lijst van door aan de methode :func:`addFeatures` van de provider. Het zal twee waarden teruggeven: resultaat (true/false) en een lijst van toegevoegde objecten (hun ID wordt ingesteld door de opslag van de gegevens)"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:266
 msgid ""
 "To set up the attributes you can either initialize the feature passing a "
 ":class:`QgsFields` instance or call :func:`initAttributes` passing the "
 "number of fields you want to be added."
-msgstr ""
+msgstr "U kunt, om de attributen in te stellen, ofwel het object initialiseren door een instantie :class:`QgsFields` door te geven of :func:`initAttributes` aan te roepen en het aantal velden op te geven die wilt hebben toegevoegd."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:285
 msgid "To delete some features, just provide a list of their feature IDs"
@@ -752,7 +752,7 @@ msgid ""
 "To find out whether a layer is in editing mode, use :func:`isEditable` --- "
 "the editing functions work only when the editing mode is turned on. Usage of"
 " editing functions"
-msgstr ""
+msgstr "Gebruik :func:`isEditable` om te zien of een laag in de modus Bewerken staat  --- de functies voor bewerken werken alleen als de modus Bewerken is ingeschakeld. Gebruiken van functies voor bewerken"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:377
 msgid ""
@@ -779,13 +779,13 @@ msgid ""
 "editing there are :func:`commitChanges()` and :func:`rollBack()` --- however"
 " normally you should not need these methods and leave this functionality to "
 "be triggered by the user."
-msgstr ""
+msgstr "Er is de methode :func:`startEditing()` om de modus Bewerken te starten, om te stoppen met bewerken zijn er :func:`commitChanges()` en :func:`rollBack()` --- echter, normaal gesproken zou u deze methoden niet nodig hebben en laat deze functionaliteit te worden geactiveerd door de gebruiker."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:408
 msgid ""
 "You can also use the :code:`with edit(layer)`-statement to wrap commit and "
 "rollback into a more semantic code block as shown in the example below:"
-msgstr ""
+msgstr "U kunt ook het argument :code:`with edit(layer)`-gebruiken om commit en rollback in een meer semantisch codeblok op te nemen zoals weergegeven in het voorbeeld hieronder:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:419
 msgid ""
@@ -793,7 +793,7 @@ msgid ""
 "exception occurs, it will :func:`rollBack()` all the changes. In case a "
 "problem is encountered within :func:`commitChanges()` (when the method "
 "returns False) a :class:`QgsEditError` exception will be raised."
-msgstr ""
+msgstr "Dit zal automatisch :func:`commitChanges()` aanroepen op het einde. Indien er ene uitzondering optreedt, zal het :func:`rollBack()` alle wijzigingen. In het geval dat een probleem wordt tegengekomen binnen :func:`commitChanges()` (als de methode False teruggeeft) zal een uitzondering :class:`QgsEditError` optreden."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:428
 msgid ""
@@ -821,7 +821,7 @@ msgstr "Denk aan een laag zonder ruimtelijke index als aan een telefoonboek waar
 msgid ""
 "Spatial indexes are not created by default for a QGIS vector layer, but you "
 "can create them easily. This is what you have to do:"
-msgstr ""
+msgstr "Ruimtelijke indexen worden niet standaard gemaakt voor een vectorlaag in QGIS, maar u kunt ze eenvoudig maken. Dit is wat u dan moet doen:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:446
 msgid "create spatial index --- the following code creates an empty index"
@@ -830,13 +830,13 @@ msgstr "ruimtelijke index maken --- de volgende code maakt een lege index"
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:454
 msgid ""
 "add features to index --- index takes :class:`QgsFeature` object and adds it"
-msgstr ""
+msgstr "objecten aan de index toevoegen --- index neemt het object :class:`QgsFeature` en voegt dat toe"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:453
 msgid ""
 "to the internal data structure. You can create the object manually or use "
 "one from previous call to provider's :func:`nextFeature()`"
-msgstr ""
+msgstr "aan de interne gegevensstructuur. U kunt het object handmatig maken of er een gebruiken uit een eerdere aanroep naar :func:`nextFeature()` van de provider"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:460
 msgid "once spatial index is filled with some values, you can do some queries"
@@ -906,7 +906,7 @@ msgid ""
 "For example you can replace the symbol used by a particular **point** layer "
 "by calling :func:`setSymbol()` passing an instance of a "
 ":class:`QgsMarkerSymbolV2` as in the following code example::"
-msgstr ""
+msgstr "U kunt bijvoorbeeld het gebruikte symbool voor een bepaalde **punt**-laag wijzigen door :func:`setSymbol()` aan te roepen die een instance doorgeeft van een :class:`QgsMarkerSymbolV2` zoals in het volgende voorbeeld van code::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:704
 msgid ""
@@ -923,7 +923,7 @@ msgstr "``square``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:708
 msgid "``cross``"
-msgstr ""
+msgstr "``cross``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:709
 msgid "``rectangle``"
@@ -963,17 +963,17 @@ msgstr "``filled_arrowhead``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:718
 msgid "``x``"
-msgstr ""
+msgstr "``x``"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:721
 msgid ""
 "To get the full list of properties for the first symbol layer of a simbol "
 "instance you can follow the example code::"
-msgstr ""
+msgstr "U kunt de voorbeeldcode volgen om een volledige lijst met eigenschappen te verkrijgen van de eerste symboollaag van een instance symbool ::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:744
 msgid "This can be useful if you want to alter some properties::"
-msgstr ""
+msgstr "Dit kan nuttig zijn als u enkele eigenschappen wilt wijzigen::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:759
 msgid "Categorized Symbol Renderer"

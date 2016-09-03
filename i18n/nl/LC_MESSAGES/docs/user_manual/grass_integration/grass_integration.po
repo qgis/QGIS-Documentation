@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-08-21 17:26+0000\n"
+"PO-Revision-Date: 2016-08-23 12:36+0000\n"
 "Last-Translator: Dick Groskamp\n"
 "Language-Team: Dutch (http://www.transifex.com/qgis/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -1227,14 +1227,14 @@ msgid ""
 "editable. The reason is, that other layers may have and usually have "
 "different set of fields while QGIS only supports one fixed set of fields per"
 " layer."
-msgstr ""
+msgstr "Alleen attributen van de momenteel bewerkte laag kunnen worden gewijzigd. Als de vectorkaart meer lagen bevat, zullen de objecten van alle andere lagen alle attributen hebben ingesteld op '<not editable (layer #)>' om u te waarschuwen dat een dergelijk attribuut niet te bewerken is. De reden hiervoor is, dat andere lagen verschillende sets velden zouden kunnen hebben en gewoonlijk ook hebben terwijl QGIS slechts één vaste set velden per laag ondersteunt."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:487
 msgid ""
 "If a geometry primitive does not have a category assigned, a new unique "
 "category is automatically assigned and new record in attribute table is "
 "created when an attribute of that geometry is changed."
-msgstr ""
+msgstr "Als een geometrie primitief geen toegewezen categorie heeft, wordt automatisch een nieuwe unieke categorie toegewezen en wordt een nieuw record in de attributentabel gemaakt wanneer een attribuut van die geometrie wordt gewijzigd."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:492
 msgid ""
@@ -1242,11 +1242,11 @@ msgid ""
 "'Field Calculator' (:ref:`vector_field_calculator`), and there are features "
 "without category which you don't want to update (typically boundaries), you "
 "can filter them out by setting 'Advanced Filter' to ``cat is not null``."
-msgstr ""
+msgstr "Als u een bulk update van attributen in de tabel wilt doen, bijvoorbeeld met behulp van 'Veldberekening' (:ref:`vector_field_calculator`), en er zijn objecten zonder categorie die u niet wilt bijwerken (gewoonlijk grenzen), kunt u die er uit filteren door 'Advanced Filter' in te stellen op ``cat is not null``."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:497
 msgid "**Editing style**"
-msgstr ""
+msgstr "**Stijl bewerken**"
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:502
 msgid ""
@@ -1257,30 +1257,30 @@ msgid ""
 "style can also be stored in project file or in separate file as any other "
 "style. If you customize the style, do not change its name, because it is "
 "used to reset the style when editing is started again."
-msgstr ""
+msgstr "De topologische symbologie is essentieel voor effectief bewerken van topologische gegevens. Wanneer het bewerken begint, wordt een speciale renderer 'GRASS Edit' automatisch op de laag ingesteld en de originele renderer wordt hersteld als het bewerken wordt afgesloten. De stijl kan worden aangepast in de laag-eigenschappen op de tab 'Stijl'. De stijl kan ook worden opgeslagen in het projectbestand of in een afzonderlijk bestand zoals elke andere stijl. Als u de stijl aanpast, wijzig dan niet de naam, omdat die wordt gebruikt om de stijl te herstellen als het bewerken weer opnieuw wordt gestart."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:509
 msgid ""
 "Do not save project file when the layer is edited, the layer would be stored"
 " with 'Edit Style' which has no meaning if layer is not edited."
-msgstr ""
+msgstr "Sla het projectbestand niet op wanneer de laag niet wordt bewerkt, de laag zou worden opgeslagen met 'Stijl bewerken' wat geen betekenis heeft als de laag niet wordt bewerkt."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:512
 msgid ""
 "The style is based on topological information which is temporarily added to "
 "attribute table as field 'topo_symbol'. The field is automatically removed "
 "when editing is closed."
-msgstr ""
+msgstr "De stijl is gebaseerd op topologische informatie die tijdelijk aan de attributentabel wordt toegevoegd als het veld 'topo_symbol'. Het veld wordt automatisch verwijderd als het bewerken wordt afgesloten."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:515
 msgid ""
 "Do not remove 'topo_symbol' field from attribute table, that would make "
 "features invisible because the renderer is based on that column."
-msgstr ""
+msgstr "Verwijder niet het veld 'topo_symbol' uit de attributentabel, dat zou objecten onzichtbaar maken omdat de renderer is gebaseerd op die kolom."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:519
 msgid "**Snapping**"
-msgstr ""
+msgstr "**Snappen**"
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:521
 msgid ""
@@ -1289,29 +1289,29 @@ msgid ""
 "and vector map have the same CRS. Otherwise, due conversion from map "
 "coordinates to canvas and back, the coordinate may become slightly different"
 " due to representation error and CRS transformations."
-msgstr ""
+msgstr "Hoekpunten van verbonden grenzen moeten **exact** dezelfde coördinaten hebben om een gebied te vormen. Dit kan alleen worden bereikt met behulp van het gereedschap Snappen als het kaartvenster en vectorkaart hetzelfde CRS hebben. Anders kunnen, vanwege de conversie van kaartcoördinaten naar kaart en terug, de coördinaten enigszins anders worden vanwege de fout in de weergave en transformaties van CRS."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:526
 msgid "Use layer's CRS also for canvas when editing."
-msgstr ""
+msgstr "CRS van lagen ook gebruiken bij bewerken van kaartvenster."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:529
 msgid "**Limitations**"
-msgstr ""
+msgstr "**Beperkingen**"
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:531
 msgid ""
 "Simultaneous editing of multiple layers within the same vector at the same "
 "time is not supported. This is mainly due to the impossibility of handling "
 "multiple undo stacks for a single data source."
-msgstr ""
+msgstr "Gelijktijdig bewerken van meerdere lagen in dezelfde vector op hetzelfde moment wordt niet ondersteund. Dat komt vooral door de onmogelijkheid van het afhandelen van meerdere stapels Ongedaan maken voor één enkele gegevensbron."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:535
 msgid ""
 "|nix| |osx| On Linux and Mac OSX only one GRASS layer can be edited at time."
 " This is due to a bug in GRASS which does not allow to close database "
 "drivers in random order. This is being solved with GRASS developers."
-msgstr ""
+msgstr "|nix| |osx| Op Linux en Mac OSX kan slechts één laag voor GRASS op enig moment worden bewerkt. Dit is vanwege een bug in GRASS die niet toestaat om besturingsprogramma's voor databases te sluiten in willekeurige volgorde. Dit wordt opgelost met ontwikkelaars van GRASS."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:542
 msgid ""
@@ -1337,7 +1337,7 @@ msgid ""
 "It is possible to switch on and off the visualization of the GRASS region in"
 " the QGIS canvas using the |grassRegion| :sup:`Display current GRASS region`"
 " button."
-msgstr ""
+msgstr "Het is mogelijk de visualisatie van de regio van GRASS in het kaartvenster van QGIS in of uit te schakelen met behulp van de knop |grassRegion| :sup:`Huidige GRASS-regio tonen`."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:568
 msgid ""
@@ -1346,7 +1346,7 @@ msgid ""
 "click on **[Select the extent by dragging on canvas]** you can select a new "
 "region interactively with your mouse on the QGIS canvas dragging a "
 "rectangle."
-msgstr ""
+msgstr "De regio kan worden aangepast op de tab 'Region' in 'GRASS Tools' dock widget. Typ de nieuwe grenzen voor de regio in en de resolutie, en klik op **[Apply]**. Als u klikt op **[Select the extent by dragging on canvas]** kunt u interactief ene nieuwe regio kiezen met uw muis op het kaartvenster van QGIS door ene rechthoek te slepen."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:576
 msgid ""
@@ -1369,7 +1369,7 @@ msgid ""
 "(usually granted, if you created the :file:`MAPSET`). This is necessary, "
 "because new raster or vector layers created during analysis need to be "
 "written to the currently selected :file:`LOCATION` and :file:`MAPSET`."
-msgstr ""
+msgstr "Het vak |grassTools| :sup:`GRASS-gereedschap openen` verschaft functionaliteiten voor modules van GRASS om met gegevens binnen een geselecteerde :file:`LOCATION`  en :file:`MAPSET` voor GRASS te werken. U dient een :file:`LOCATION` en :file:`MAPSET` te openen waarvoor u schrijfrechten heeft toegekend gekregen (gewoonlijk toegekend als u de :file:`MAPSET` zelf maakte) om de Toolbox voor GRASS te kunnen gebruiken. Dit is nodig omdat nieuwe raster- of vectorlagen die worden gemaakt gedurende analyses moeten worden weggeschreven naar de momenteel geselecteerde :file:`LOCATION` en :file:`MAPSET`."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:610
 msgid ""
@@ -1385,7 +1385,7 @@ msgid ""
 "A complete list of GRASS modules available in the graphical Toolbox in QGIS "
 "version |CURRENT| is available in the GRASS wiki at "
 "http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list."
-msgstr ""
+msgstr "Een volledige lijst van modules voor GRASS die beschikbaar zijn in de grafische Toolbox in QGIS versie |CURRENT| is beschikbaar op de wiki van GRASS op http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:618
 msgid ""
@@ -1412,14 +1412,14 @@ msgid ""
 "The :guilabel:`Options` tab provides a simplified module dialog where you "
 "can usually select a raster or vector layer visualized in the QGIS canvas "
 "and enter further module-specific parameters to run the module."
-msgstr ""
+msgstr "De tab :guilabel:`Opties`  verschaft een vereenvoudigd dialoogvenster voor de module waar u gewoonlijk een raster- of vectorlaag, die is gevisualiseerd in het kaartvenster van QGIS, kunt selecteren en meer module-specifieke parameters kunt invullen om de module uit te voeren."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:646
 msgid ""
 "The provided module parameters are often not complete to keep the dialog "
 "simple. If you want to use further module parameters and flags, you need to "
 "start the GRASS shell and run the module in the command line."
-msgstr ""
+msgstr "De verschafte parameters voor de module zijn vaak niet compleet om het dialoogvenster eenvoudig te houden. Als u meer parameters en vlaggen voor de module wilt gebruiken, dient u de GRASS-shell te starten en de module uit te voeren op de opdrachtregel."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:650
 msgid ""
@@ -1430,7 +1430,7 @@ msgid ""
 "more or all modules in the GRASS Toolbox in future versions of QGIS. This "
 "allows you to use the complete GRASS module options without the need to "
 "switch to the GRASS shell."
-msgstr ""
+msgstr "Een nieuwe mogelijkheid sinds QGIS 1.8 is de ondersteuning voor een knop :guilabel:`Geavanceerde opties tonen` onder het vereenvoudigde dialoogvenster voor de module op de tab :guilabel:`Opties`. Op dit moment is het alleen toegevoegd aan de module :file:`v.in.ascii` als gebruiksvoorbeeld, maar het zal waarschijnlijk deel gaan uitmaken van de meeste of alle modules in de Toolbox voor GRASS in toekomstige versies van QGIS. Dit stelt u in staat de volledige opties voor de module voor GRASS te gebruiken zonder dat u hoeft over te schakelen naar de GRASS-shell."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:688
 msgid ""
@@ -1453,12 +1453,12 @@ msgstr "Het eerste voorbeeld maakt een vector contourenkaart uit een hoogteraste
 msgid ""
 "First, open the location by clicking the |grassOpenMapset| :sup:`Open "
 "mapset` button and choosing the Alaska location."
-msgstr ""
+msgstr "Open eerst de locatie door te klikken op de knop |grassOpenMapset| :sup:`Mapset openen` en de locatie Alaska te kiezen."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:717
 msgid ""
 "Now open the Toolbox with the |grassTools| :sup:`Open GRASS tools` button."
-msgstr ""
+msgstr "Open nu de Toolbox met de knop |grassTools| :sup:`GRASS-gereedschap openen`."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:718
 msgid ""
@@ -1470,17 +1470,17 @@ msgstr "In de lijst met categorieën gereedschap, dubbelklik op :menuselection:`
 msgid ""
 "Now a single click on the tool **r.contour** will open the tool dialog as "
 "explained above (see :ref:`grass_modules`)."
-msgstr ""
+msgstr "Nu zal een enkele klik op het gereedschap **r.contour** het dialoogvenster voor het gereedschap openen zoals boven uitgelegd (zie :ref:`grass_modules`)."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:722
 msgid "In the :guilabel:`Name of input raster map` enter ``gtopo30``."
-msgstr ""
+msgstr "In het vak :guilabel:`Naam voor invoer rasterkaart` voer``gtopo30`` in."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:723
 msgid ""
 "Type into the :guilabel:`Increment between Contour levels` |selectNumber| "
 "the value 100. (This will create contour lines at intervals of 100 meters.)"
-msgstr ""
+msgstr "Typ in het vak :guilabel:`Increment between Contour levels` |selectNumber| de waarde 100. (Dit zal contourlijnen maken met een interval van 100 meter.)"
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:734
 msgid ""
@@ -1558,7 +1558,7 @@ msgstr "Begin dit voorbeeld met het laden van het hoogteraster ``gtopo30``. Star
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:806
 msgid "Change the :guilabel:`azimuth angle` |selectNumber| 270 to 315."
-msgstr ""
+msgstr "Wijzig :guilabel:`azimuth angle` |selectNumber| 270 naar 315."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:810
 msgid ""
@@ -1579,7 +1579,7 @@ msgid ""
 " some additional options to the modules that are in the Toolbox with the "
 "simplest default parameters. This example demonstrates the use of an "
 "additional option in the **r.shaded.relief** module that was shown above."
-msgstr ""
+msgstr "De plug-in GRASS in QGIS is ontworpen voor gebruikers voor wie GRASS nieuw is en die niet bekend zijn met alle modules en opties. Daarom geven sommige modules in de Toolbox niet alle beschikbare opties weer, en sommige modules verschijnen in het geheel niet. De GRASS-shell (of console) geeft de gebruiker toegang tot deze aanvullende modules van GRASS die niet in de boom van Toolbox verschijnen en ook tot enkele aanvullende opties voor de modules die in de Toolbox staan met de eenvoudigste standaard parameters. Dit voorbeeld demonstreert het gebruiken van een aanvullende optie in de module **r.shaded.relief** die hierboven werd weergegeven."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:842
 msgid ""
@@ -1600,7 +1600,7 @@ msgstr "Laad het hoogteraster ``gtopo30`` zoals hierboven en start dan de Toolbo
 msgid ""
 "After the process finishes, shift to the :guilabel:`Browse` tab and double-"
 "click on the new ``gtopo30_shade2`` raster to display it in QGIS."
-msgstr ""
+msgstr "Schakel, nadat het proces is voltooid, over naar de tab :guilabel:`Browser` en dubbelklik op het nieuwe raster ``gtopo30_shade2`` om het weer te geven in QGIS."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:852
 msgid ""
@@ -1631,7 +1631,7 @@ msgid ""
 ":guilabel:`Legend type` |selectString| 'Unique value' and set the "
 ":guilabel:`Classification field` to 'VEGDESC'. (Refer to the explanation of "
 "the symbology tab in :ref:`vector_style_menu` of the vector section.)"
-msgstr ""
+msgstr "Laad vervolgens de laag ``forest_areas`` en visualiseer de karakteristieken - naaldbos (evergreen), loofbos (deciduous) of gemengd (mixed) - in verschillende kleuren. Selecteer in het venster van de laag :guilabel:`Eigenschappen`, de tab :guilabel:`Symbologie` en selecteer uit :guilabel:`Legenda type` |selectString| 'Unieke waarde'  en vervolgens het :guilabel:`Classificatie veld` 'VEGDESC'. (Bekijk voor de uitleg over de tab Symbologie :ref:`vector_style_menu` in het gedeelte vector.)"
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:890
 msgid ""
@@ -1673,11 +1673,11 @@ msgid ""
 "modules, changing a module's group, etc., can be found on the QGIS wiki at "
 "http://hub.qgis.org/projects/quantum-"
 "gis/wiki/Adding_New_Tools_to_the_GRASS_Toolbox."
-msgstr ""
+msgstr "De parser leest deze definitie en maakt een nieuwe tab binnen de Toolbox wanneer u de module selecteert. Een meer gedetailleerde beschrijving voor het toevoegen van nieuwe modules, wijzigen van een groep van een module, etc., is te vinden op de wiki van QGIS op http://hub.qgis.org/projects/quantum-gis/wiki/Adding_New_Tools_to_the_GRASS_Toolbox."
 
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:499
 msgid "style"
-msgstr ""
+msgstr "stijl"
 
 #~ msgid ""
 #~ "In this Section we'll introduce the plugin functionalities and give some "

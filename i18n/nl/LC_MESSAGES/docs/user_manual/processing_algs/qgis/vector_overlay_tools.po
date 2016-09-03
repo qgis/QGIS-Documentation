@@ -1,13 +1,13 @@
 # 
 # Translators:
-# Dick Groskamp, 2015
+# Dick Groskamp, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-07-18 09:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2016-08-23 14:24+0000\n"
+"Last-Translator: Dick Groskamp\n"
 "Language-Team: Dutch (http://www.transifex.com/qgis/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,7 +45,7 @@ msgid ""
 "the Input and Clip Layers, then only those features are used in the clip "
 "operation. If no features are selected then the clip operation is performed "
 "using all features. The clip function is also known as the cookie-cutter."
-msgstr ""
+msgstr "Dit algoritme neemt objecten uit de invoerlaag die vallen binnen, of gedeeltelijk binnen, de grenzen van de objecten op de Clip-laag. Objecten van de invoerlaag die gedeeltelijk vallen binnen object(en) van de cliplaag worden gesplitst langs de grenzen van de object(en) op de cliplaag. Indien objecten zijn geselecteerd in de lagen Invoer en Clip, dan worden alleen die objecten gebruikt voor de bewerking clippen. Indien er geen objecten zijn geselecteerd dan wordt de bewerking clippen uitgevoerd met behulp van alle objecten. De functie clippen is ook bekend als de cookie-cutter."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:25
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:70
@@ -66,7 +66,7 @@ msgstr "``Invoerlaag`` [vector: elke]"
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:28
 msgid "The layer containing the features to be clipped."
-msgstr ""
+msgstr "De laag die de objecten bevat die moeten worden geclipt."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:32
 msgid "``Clip layer`` [vector: any]"
@@ -76,17 +76,17 @@ msgstr "``Laag om te clippen`` [vector: elke]"
 msgid ""
 "The layer containing the features that are used to clip the features in the "
 "input layer."
-msgstr ""
+msgstr "De laag die de objecten bevat die worden gebruikt om de objecten in de invoerlaag te clippen."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:36
 msgid "``Open output file after running algorithm``"
-msgstr ""
+msgstr "``Uitvoerbestand openen na uitvoeren van algoritme``"
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:35
 msgid ""
 "Choose whether to load the clipped layer to the map canvas once the clip "
 "operation has been completed."
-msgstr ""
+msgstr "Kies of de geclipte laag moet worden geladen in het kaartvenster als de bewerking clippen is voltooid."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:39
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:79
@@ -105,7 +105,7 @@ msgstr "``Geclipt`` [vector]"
 msgid ""
 "Where to save the clipped layer. Can be saved to file, a temporary file or a"
 " memory layer."
-msgstr ""
+msgstr "Waar de geclipte laag moet worden opgeslagen. Kan worden opgeslagen in een bestand, een tijdelijk bestand of een geheugenlaag."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:46
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:86
@@ -137,11 +137,11 @@ msgid ""
 " the clip layer feature(s). If any features are selected in the Input and "
 "Difference Layers, then only those features are used in the operation. If no"
 " features are selected, then the operation is performed using all features."
-msgstr ""
+msgstr "Dit algoritme neemt objecten uit de invoerlaag die niet vallen binnen de grenzen van de objecten op de Difference-laag. Objecten van de invoerlaag die gedeeltelijk vallen binnen object(en) van de Difference-laag worden gesplitst langs de grenzen van de object(en) op de cliplaag. Indien objecten zijn geselecteerd in de lagen Invoer en Difference, dan worden alleen die objecten gebruikt voor de bewerking. Indien er geen objecten zijn geselecteerd dan wordt de bewerking uitgevoerd met behulp van alle objecten."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:73
 msgid "The layer containing the features that will be reduced."
-msgstr ""
+msgstr "De laag die de objecten bevat die zullen worden gereduceerd."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:76
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:194
@@ -150,7 +150,7 @@ msgstr "``Laag voor verschil`` [vector: elke]"
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:76
 msgid "The layer containing the features used to reduce the Input Layer."
-msgstr ""
+msgstr "De laag die de objecten bevat die worden gebruikt om de invoerlaag te reduceren."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:83
 msgid "``Difference`` [vector]"
@@ -160,7 +160,7 @@ msgstr "``Verschil`` [vector]"
 msgid ""
 "Where to save the difference layer. Can be saved to file, a temporary file "
 "or a memory layer."
-msgstr ""
+msgstr "Waar de laag van Difference moet worden opgeslagen. Kan worden opgeslagen in een bestand, een tijdelijk bestand of een geheugenlaag."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:96
 msgid "Intersection"
@@ -175,11 +175,11 @@ msgid ""
 "are selected in the Input and Intersect Layers, then only those features are"
 " used in the operation. If no features are selected then the operation is "
 "performed using all features."
-msgstr ""
+msgstr "Dit algoritme combineert objecten van de invoerlaag en de Intersectie van laag wat resulteert in objecten die de objecten op beide lagen bedekken. Object(en) van de invoerlaag die alleen gedeeltelijk vallen binnen object(en) van de andere laag worden gesplitst langs de grenzen van de object(en) op de andere laag. Indien objecten zijn geselecteerd in de lagen Invoer en Intersectie van laag, dan worden alleen die objecten gebruikt voor de bewerking. Indien er geen objecten zijn geselecteerd dan wordt de bewerking uitgevoerd met behulp van alle objecten."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:113
 msgid "One layer containing feature(s) to be combined."
-msgstr ""
+msgstr "Een laag die object(en) bevat die moeten worden gecombineerd."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:116
 msgid "``Intersect layer`` [vector: any]"
@@ -187,7 +187,7 @@ msgstr "``Laag voor kruisen`` [vector: elke]"
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:116
 msgid "Second layer containing the feature(s) to be combined."
-msgstr ""
+msgstr "Tweede laag die object(en) bevat die moeten worden gecombineerd."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:123
 msgid "``Intersection`` [vector]"
@@ -197,7 +197,7 @@ msgstr "``Kruising`` [vector]"
 msgid ""
 "Where to save the intersection layer. Can be saved to file, a temporary file"
 " or a memory layer."
-msgstr ""
+msgstr "Waar de laag van Intersectie moet worden opgeslagen. Kan worden opgeslagen in een bestand, een tijdelijk bestand of een geheugenlaag."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:136
 msgid "Line intersections"
@@ -238,11 +238,11 @@ msgstr "``Uitvoerlaag`` [vector]"
 msgid ""
 "Where to save the line intersection layer. Can be saved to file, a temporary"
 " file or a memory layer."
-msgstr ""
+msgstr "Waar de laag van Lijn-intersectie moet worden opgeslagen. Kan worden opgeslagen in een bestand, een tijdelijk bestand of een geheugenlaag."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:176
 msgid "Symmetrical difference"
-msgstr ""
+msgstr "Symmetrisch verschil"
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:180
 msgid ""
@@ -252,25 +252,25 @@ msgid ""
 "feature(s). If any features are selected in the Input and Difference Layers,"
 " then only those features are used in the operation. If no features are "
 "selected then the operation is performed using all features."
-msgstr ""
+msgstr "Dit algoritme maakt een laag die alle object(en) bevat die zijn opgenomen in slechts één van de twee invoerlagen. Object(en) van de invoerlaag die alleen gedeeltelijk vallen binnen object(en) van de andere laag worden gesplitst langs de grenzen van de object(en) op de andere laag. Indien objecten zijn geselecteerd in de lagen Invoer en Verschil, dan worden alleen die objecten gebruikt voor de bewerking. Indien er geen objecten zijn geselecteerd dan wordt de bewerking uitgevoerd met behulp van alle objecten."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:191
 msgid "One layer containing feature(s) to be compared."
-msgstr ""
+msgstr "Een laag die object(en) bevat die moeten worden vergeleken."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:194
 msgid "Second layer containing feature(s) to be compared."
-msgstr ""
+msgstr "Tweede laag die object(en) bevat die moeten worden vergeleken."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:201
 msgid "``Symmetrical difference`` [vector]"
-msgstr ""
+msgstr "``Symmetrisch verschil`` [vector]"
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:200
 msgid ""
 "Where to save the symmetrical difference layer. Can be saved to file, a "
 "temporary file or a memory layer."
-msgstr ""
+msgstr "Waar de laag van Symmetrisch verschil moet worden opgeslagen. Kan worden opgeslagen in een bestand, een tijdelijk bestand of een geheugenlaag."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:214
 msgid "Union"
@@ -284,11 +284,11 @@ msgid ""
 "selected in either of the layers, then only those features are used in the "
 "operation. If no features are selected then the operation is performed using"
 " all features."
-msgstr ""
+msgstr "Dit algoritme combineert de object(en) van de beide lagen. Objecten die gedeeltelijk vallen binnen objecten van de andere laag worden gesplitst. Gebieden die in beide lagen liggen zullen worden toegevoegd als nieuwe objecten. Indien objecten zijn geselecteerd in een van beide de lagen, dan worden alleen die objecten gebruikt voor de bewerking. Indien er geen objecten zijn geselecteerd dan wordt de bewerking uitgevoerd met behulp van alle objecten."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:229
 msgid "One layer containing feature(s) to be unioned."
-msgstr ""
+msgstr "Een laag die object(en) bevat die moeten worden verenigd."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:232
 msgid "``Input layer 2`` [vector: any]"
@@ -296,7 +296,7 @@ msgstr "``Invoerlaag 2`` [vector: elke]"
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:232
 msgid "Second layer containing feature(s) to be unioned."
-msgstr ""
+msgstr "Tweede laag die object(en) bevat die moeten worden verenigd."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:239
 msgid "``Union`` [vector]"
@@ -306,4 +306,4 @@ msgstr "``Verenigd`` [vector]"
 msgid ""
 "Where to save the union layer. Can be saved to file, a temporary file or a "
 "memory layer."
-msgstr ""
+msgstr "Waar de laag van Union moet worden opgeslagen. Kan worden opgeslagen in een bestand, een tijdelijk bestand of een geheugenlaag."

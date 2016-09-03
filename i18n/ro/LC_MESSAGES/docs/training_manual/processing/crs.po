@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-07-13 18:57+0000\n"
+"PO-Revision-Date: 2016-08-26 14:18+0000\n"
 "Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgid ""
 "CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS "
 "is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
 "actually the same layer."
-msgstr ""
+msgstr "Deschideți proiectul corespunzător acestei lecții, și veți vedea două straturi denumite 23030 și 4326. Ambele conțin același număr de puncte, dar aflate în diferite CRS-uri (EPSG:23030 și EPSG:4326). Ele apar în același loc, deoarece QGIS este reproiectat \"din zbor\" în CRS-ul proiectului (EPSG:4326), ele nefiind, de fapt, unul și același strat."
 
 #: ../../source/docs/training_manual/processing/crs.rst:22
 msgid "Open the *Export/Add geometry columns* algorithm."
@@ -67,7 +67,7 @@ msgid ""
 "The content of the columns depend on the type of geometry of the layer. In "
 "the case of points, it adds new columns with the X and Y coordinates of each"
 " point."
-msgstr ""
+msgstr "Acest algoritm adaugă coloane noi în tabela de atribute a unui strat vectorial. Conținutul coloanelor depinde de tipul geometriei stratului. În cazul punctelor, se vor adăuga coloane noi, conținând coordonatele X și Y ale fiecărui punct."
 
 #: ../../source/docs/training_manual/processing/crs.rst:28
 msgid ""
@@ -75,7 +75,7 @@ msgid ""
 " you will see each one with its corresponding CRS. That means that, although"
 " they appear in the same place in your canvas, they will be treated "
 "differently. Select the 4326 layer."
-msgstr ""
+msgstr "În lista de straturi disponibile, pe care le veți găsi în câmpul stratului de intrare, le veți vedea pe fiecare, alături de CRS-ul corespunzător. Astfel, deși apar în același loc pe canevas, ele vor fi tratate în mod diferit. Selectați stratul 4326."
 
 #: ../../source/docs/training_manual/processing/crs.rst:30
 msgid ""
@@ -84,7 +84,7 @@ msgid ""
 "layers. Most algorithms do not have an option like that, and just use the "
 "coordinates directly. Select the *Layer CRS* option to just use coordinates "
 "as they are. This is how almost all geoalgorithms work."
-msgstr ""
+msgstr "Celălalt parametru al algoritmului permite setarea modului în care algoritmul folosește coordonatele, pentru a calcula noua valoare care se va adăuga la straturile rezultate. Cei mai mulți algoritmi nu au o opțiune de acest gen, și vor folosi în mod direct coordonatele. Selectați opțiunea *CRS-ul Stratului* pentru a folosi coordonatele așa cum sunt. Acesta este modul în care lucrează  aproape toți geo-algoritmii."
 
 #: ../../source/docs/training_manual/processing/crs.rst:32
 msgid ""
@@ -93,13 +93,13 @@ msgid ""
 " you will see that it shares the same CRS of the input layer, that is, "
 "EPSG:4326. When the layer is loaded into QGIS, you will not be asked to "
 "enter the CRS of the layer, since QGIS already knows about it."
-msgstr ""
+msgstr "Ar trebui să obțineți un nou strat, cu exact aceleași puncte ca și celelalte două. Dacă faceți clic dreapta pe numele stratului și îi deschideți proprietățile, veți vedea că folosește CRS-ul stratului de intrare, adică, EPSG:4326. Atunci când stratul este încărcat în QGIS, nu vi se va cere să introduceți CRS-ul stratului, atât timp cât QGIS îl cunoaște."
 
 #: ../../source/docs/training_manual/processing/crs.rst:34
 msgid ""
 "If you open the attributes table of the new layer you will see that it "
 "contains two new fields with the X and Y coordinates of each point."
-msgstr ""
+msgstr "Dacă deschideți tabelul de atribute a noului strat, veți vedea că ea conține două noi câmpuri, cu coordonatele X și Y ale fiecărui punct."
 
 #: ../../source/docs/training_manual/processing/crs.rst:38
 msgid ""
@@ -109,14 +109,14 @@ msgid ""
 "of the output layer. Choosing another option will cause the values to be "
 "different, but not the resulting point to change or the CRS of the ouput "
 "layer to be different to the CRS of the input one."
-msgstr ""
+msgstr "Aceste valori ale coordonatelor sunt date în CRS-ul stratului, din moment ce am ales această opțiune. Totuși, chiar dacă alegeți o altă opțiune, CRS-ul de ieșire al stratului ar fi fost același, deoarece CRS-ul de intrare este folosit pentru a seta CRS-ul stratului de ieșire. Alegerea unei alte opțiuni va produce valori diferite, dar neurmată de schimbarea punctului rezultat, sau de modificarea CRS-ul stratului de ieșire, comparativ cu CRS-ul stratului de intrare."
 
 #: ../../source/docs/training_manual/processing/crs.rst:41
 msgid ""
 "Now do the same calculation using the other layer. You should find the "
 "resulting layer rendered exactly in the same place as the other ones, and it"
 " will have the EPSG:23030 CRS, since that was the one of the input layer."
-msgstr ""
+msgstr "Acum, efectuați același calcul, utilizând celălalt strat. Ar trebui să găsiți stratul rezultat, randat exact în același loc ca și celelalte, având același CRS, EPSG:23030, acesta fiind CRS-ul stratului de intrare."
 
 #: ../../source/docs/training_manual/processing/crs.rst:43
 msgid ""
@@ -141,21 +141,21 @@ msgid ""
 "but in an algorithm that needs several of them (such as a clip algorithm), "
 "layers that appear to match or overlay might be very far one from each "
 "other, since they might have different CRSs."
-msgstr ""
+msgstr "Ce ar trebui să învățați din asta? Ideea principală din spatele acestor exemple este aceea că geoalgoritmii folosesc stratul așa cum se află în sursa sa de date originală, ignorând complet reproiectările pe care QGIS le-ar putea efectua înainte de randare. Cu alte cuvinte, nu aveți încredere în ceea ce vedeți pe pânză, dar aveți întotdeauna în vedere faptul că vor fi utilizate datele originale. Acest lucru nu este atât de important în acest caz, din moment ce folosim doar un singur strat la un moment dat, dar într-un algoritm care are nevoie de mai multe (cum ar fi un algoritm de decupare), straturile care par să se potrivească sau să se suprapună, ar putea fi foarte departe unul față de celălalt, atât timp cât pot avea diferite CRS-uri."
 
 #: ../../source/docs/training_manual/processing/crs.rst:51
 msgid ""
 "Algorithms performs no reprojection (except in the reprojection algorithm "
 "that we will see next), so it is up to you to make sure that layers have "
 "matching CRS's."
-msgstr ""
+msgstr "Algoritmii nu realizează nici o reproiectare (cu excepția algoritmului de reproiectare pe care îl vom vedea în continuare), de aceea, trebuie ca dvs. să vă asigurați că straturile au același CRS."
 
 #: ../../source/docs/training_manual/processing/crs.rst:53
 msgid ""
 "An interesting module that deals with CRS's is the reprojection one. It "
 "represents a particular case, since it has an input layer (the one to "
 "reproject), but it will not use its CRS for the output one."
-msgstr ""
+msgstr "Un modul interesant, care are de-a face cu CRS-ul, este cel de reproiectare. Acesta reprezintă un caz particular, deoarece are un strat de intrare (cel de reproiectat), însă nu îi va folosi CRS-ul pentru stratul de ieșire."
 
 #: ../../source/docs/training_manual/processing/crs.rst:55
 msgid "Open the *Reproject layer* algorithm."
@@ -171,4 +171,4 @@ msgid ""
 "*Export/Add geometry columns* algorithm using this new layer as input, and "
 "veryfing that the added coordinates are different to the ones in the "
 "attribute tables of both of the two layers that we had computed before."
-msgstr ""
+msgstr "Selectați oricare dintre straturile ca intrare, și alegeți EPSG:23029 ca CRS destinație. Rulați algoritmul și veți obține un nou strat, identic cu cel de intrare, dar cu un alt CRS. Acesta va apărea în aceeași regiune a canevasului, ca și celelalte, din moment ce QGIS îl va reproiecta din zbor, dar coordonatele sale originale sunt diferite. Puteți vedea acest lucru, prin rularea algoritmului de *Exportare/Adăugare coloane de geometrie* asupra acestui nou strat de intrare,  și prin verificarea diferențelor dintre coordonatele adăugate și cele din tabelele de atribute ale ambelor straturi, calculate anterior."

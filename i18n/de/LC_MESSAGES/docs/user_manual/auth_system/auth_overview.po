@@ -82,6 +82,18 @@ msgid ""
 "authentication configuration, or applying a configuration to a server "
 "configuration (such as when adding a WMS layer)."
 msgstr ""
+"Um sensible Informationen zu speichern oder auf diese zuzugreifen, muss der "
+"Benutzer ein `Hauptpasswort` festlegen. Ein neues Hauptpasswort wird "
+"angefordert und überprüft, wenn erstmals Daten verschlüsselt in der "
+"Datenbank gespeichert werden. Der Benutzer wird nur dann nach dem "
+"Hauptpasswort gefragt, wenn auf sensible Informationen zugegriffen wird. "
+"Dies wird dann für den Rest der Sitzung (bis die Anwendung verlassen wird) "
+"zwischengespeichert, es sei denn, der Benutzer wählt eine Aktion aus, seine "
+"zwischengespeicherten Werte zu löschen. Einige Fälle bei der Benutzung des "
+"Authentifizierungssystems benötigen keine Eingabe des Hauptpassworts , so "
+"wie die Auswahl der existierenden Authentifizierungseinstellungen oder eine "
+"Konfiguration einer Serverkonfiguration Anwendung (wie beim Hinzufügen eines"
+" WMS-Layers)."
 
 #: ../../source/docs/user_manual/auth_system/auth_overview.rst:65
 msgid "Input new master password"
@@ -92,6 +104,8 @@ msgid ""
 "A path to a file containing the master password can be set using the "
 "following environment variable, ``QGIS_AUTH_PASSWORD_FILE``."
 msgstr ""
+"Ein Pfad zu einer Datei, die das Hauptpasswort beinhalet, kann mit Hilfe der"
+" Umgebungsvariablen eingestellt werden ``QGIS_AUTH_PASSWORD_FILE``."
 
 #: ../../source/docs/user_manual/auth_system/auth_overview.rst:73
 msgid "Managing the master password"
@@ -103,6 +117,10 @@ msgid ""
 " be needed prior to resetting. During this process, there is an option to "
 "generate a complete backup of the current database."
 msgstr ""
+"Einmal eingestellt, kann das Hauptpasswort zurückgesetzt werden, das "
+"aktuelle Hauptpasswort wird vor dem Zurücksetzen jedoch benötigt werden. "
+"Während dieses Prozesses ist es eine Option, eine vollständige Sicherung der"
+" aktuellen Datenbank vorzunehmen."
 
 #: ../../source/docs/user_manual/auth_system/auth_overview.rst:88
 msgid "Resetting master password"
@@ -114,6 +132,9 @@ msgid ""
 "override it. There is also no means of retrieving encrypted information "
 "without knowing the master password."
 msgstr ""
+"Wenn der Benutzer das Hauptpasswort vergisst, gibt es keine Möglichkeit es "
+"abzurufen oder außer Kraft setzen. Es gibt auch keine Mittel die "
+"verschlüsselten Informationen abzurufen ohne das Master-Passwort zu kennen."
 
 #: ../../source/docs/user_manual/auth_system/auth_overview.rst:94
 msgid ""
@@ -137,10 +158,13 @@ msgid ""
 " in the :guilabel:`Authentication` tab of the QGIS Options dialog "
 "(:menuselection:`Settings --> Options`)."
 msgstr ""
+"Sie können Authentifizierungseinstellungen über :guilabel:`Konfigurationen` "
+"in dem :guilabel:`Authentifizierung` Reiter des QGIS Optionen Dialog "
+"(:menuselection:`Einstellungen--> Optionen`) vornehmen."
 
 #: ../../source/docs/user_manual/auth_system/auth_overview.rst:124
 msgid "Configurations editor"
-msgstr ""
+msgstr "Konfigurationen Editor"
 
 #: ../../source/docs/user_manual/auth_system/auth_overview.rst:126
 msgid ""
@@ -148,6 +172,9 @@ msgid ""
 " to remove configurations, and the |symbologyEdit| button to modify existing"
 " ones."
 msgstr ""
+"Nutzen Sie den |signPlus| Knopf, um neue Konfigurationen hinzuzufügen, den "
+"|signMinus| Knopf um Sie zu entfernen und den |symbologyEdit| Knopf um "
+"bestehende zu bearbeiten."
 
 #: ../../source/docs/user_manual/auth_system/auth_overview.rst:138
 msgid "Adding config from within Configuration editor"
@@ -181,7 +208,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/auth_system/auth_overview.rst:168
 msgid "Authentication Methods"
-msgstr ""
+msgstr "Authentifizierungsmethoden"
 
 #: ../../source/docs/user_manual/auth_system/auth_overview.rst:170
 msgid ""

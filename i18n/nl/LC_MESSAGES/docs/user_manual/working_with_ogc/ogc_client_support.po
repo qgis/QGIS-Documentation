@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# Dick Groskamp, 2014-2015
+# Dick Groskamp, 2014-2016
 # Milo van der Linden <milo@dogodigi.net>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-07-18 09:31+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2016-08-30 13:12+0000\n"
+"Last-Translator: Dick Groskamp\n"
 "Language-Team: Dutch (http://www.transifex.com/qgis/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -493,21 +493,21 @@ msgid ""
 "when drawing the map. QGIS supports whatever formats the underlying Qt "
 "libraries were built with, which is typically at least ``image/png`` and "
 "``image/jpeg``."
-msgstr ""
+msgstr "**Indelingen voor afbeeldingen** --- De lijst van MIME-types waarmee de server kan antwoorden bij het tekenen van de kaart. QGIS ondersteunt alle indelingen waarmee de onderliggende bibliotheken van Qt werden gebouwd, wat over het algemeen tenminste ``image/png`` en ``image/jpeg`` zijn."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:499
 msgid ""
 "**Can Zoom In** --- Whether or not this layer can be zoomed in by the "
 "server. This version of QGIS assumes all WMS layers have this set to "
 "``Yes``. Deficient layers may be rendered strangely."
-msgstr ""
+msgstr "**Kan inzoomen** --- Of op deze laag al dan niet kan worden ingezoomd door de server. Deze versie van QGIS neemt aan dat WMS-lagen dit hebben ingesteld op ``Ja``. Afwijkende lagen zouden vreemd gerenderd kunnen worden."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:505
 msgid ""
 "**Fixed Width, Fixed Height** --- Whether or not this layer has fixed source"
 " pixel dimensions. This version of QGIS assumes all WMS layers have this set"
 " to nothing. Deficient layers may be rendered strangely."
-msgstr ""
+msgstr "**vaste breedte, vaste hoogte** --- Of deze laag al dan niet vaste dimensies voor de bronpixels heeft. Deze versie van QGIS neemt an dat alle WMS-lagen dit hebben ingesteld op niets. Afwijkende lagen zouden vreemd gerenderd kunnen worden."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:575
 msgid "**QGIS WMS Mapserver**"
@@ -515,7 +515,7 @@ msgstr "**QGIS WMS Mapserver**"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:11
 msgid "QGIS as OGC Data Client"
-msgstr ""
+msgstr "QGIS als cliënt voor OGC-gegevens"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:21
 msgid ""
@@ -535,7 +535,7 @@ msgstr "Beschrijven van een basis gegevensmodel voor geografische objecten, een 
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:33
 msgid "Important OGC specifications supported by QGIS are:"
-msgstr ""
+msgstr "Belangrijke specificaties voor OGC die worden ondersteund door QGIS zijn:"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:43
 msgid ""
@@ -543,14 +543,14 @@ msgid ""
 " different GIS implementations and data stores. QGIS can deal with the above"
 " specifications as a client, being **SFS** (through support of the "
 "PostgreSQL / PostGIS data provider, see section :ref:`label_postgis`)."
-msgstr ""
+msgstr "OGC-diensten worden steeds meer gebruikt om georuimtelijke gegevens uit te wisselen tussen verschillende implementaties van GIS en gegevensopslag. QGIS kan als een cliënt bovenvermelde specificaties afhandelen, door **SFS** te zijn (door ondersteuning van de gegevensprovider PostgreSQL / PostGIS, zie het gedeelte :ref:`label_postgis`)."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:61
 msgid ""
 "QGIS currently can act as a WMS client that understands WMS 1.1, 1.1.1 and "
 "1.3 servers. In particular, it has been tested against publicly accessible "
 "servers such as DEMIS."
-msgstr ""
+msgstr "QGIS kan momenteel dienen als een WMS-cliënt die servers met WMS 1.1, 1.1.1 en 1.3 begrijpt. In het bijzonder is het getest met publiek toegankelijke servers, zoals DEMIS."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:65
 msgid ""
@@ -559,7 +559,7 @@ msgid ""
 "The WMS server then consults its local data sources, rasterizes the map, and"
 " sends it back to the client in a raster format. For QGIS, this format would"
 " typically be JPEG or PNG."
-msgstr ""
+msgstr "Een WMS-server acteert op verzoeken van de cliënt (bijv. QGIS) voor een rasterkaart met een opgegeven bereik, set van lagen, stijl voor symbologie en transparantie. De WMS-server consulteert dan zijn lokale gegevensbronnen, rasteriseert de kaart en stuurt het terug naar de cliënt in de indeling van een raster. Voor QGIS zou deze indeling gewoonlijk JPEG of PNG zijn."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:71
 msgid ""
@@ -569,7 +569,7 @@ msgid ""
 "that QGIS uses internally. This can be useful for troubleshooting, as there "
 "are several brands of WMS server on the market and they all have their own "
 "interpretation of the WMS standard."
-msgstr ""
+msgstr "WMS is in het algemeen een REST (Representational State Transfer)-service in plaats van een volledige webservice. Als zodanig kunt u in feite de URL's gebruiken die worden gegenereerd door QGIS en die gebruiken in een webbrowser om dezelfde afbeeldingen op te halen als die welke QGIS intern gebruikt. Dit kan handig zijn bij het oplossen van problemen, omdat er verschillende merken WMS-server op de markt zijn en zij allemaal hun eigen integratie van de WMS-standaard hebben."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:82
 msgid ""
@@ -581,7 +581,7 @@ msgid ""
 " time. If a project is saved with a WMS layer, the corresponding WMS tiles "
 "will be loaded from the cache the next time the project is opened as long as"
 " they are no older than 24H."
-msgstr ""
+msgstr "Aanvullend zal QGIS uw antwoorden van WMS opslaan in een cache (bijv. afbeeldingen) voor 24u zolang het verzoek GetCapabilities niet wordt geactiveerd. Het verzoek GetCapabilities wordt elke keer geactiveerd als de knop **[Verbinden]** in het dialoogvenster **[La(a)gen toevoegen van een WMS(T)S Server]** wordt gebruikt om de capabilities van de WMS server op te halen. Dit is een automatische mogelijkheid die is bedoeld om de tijd voor het laden te optimaliseren. Als een project wordt opgeslagen met laag van WMS, worden de corresponderende tegels van WMS geladen vanuit de cache, de volgende keer dat het project wordt geopend, zolang zij niet ouder zijn dan 24 uur."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:93
 msgid ""
@@ -592,21 +592,21 @@ msgid ""
 "their production. A WMS request typically involves both the generation and "
 "transmission of the data. A well-known example of a non-OGC standard for "
 "viewing tiled geospatial data is Google Maps."
-msgstr ""
+msgstr "QGIS kan ook optreden als een WMTS-cliënt. WMTS is een OGC-standaard voor het distribueren van tegelsets van georuimtelijke gegevens. Dit is een snellere en meer efficiënte manier voor het distribueren van gegevens dan WMS omdat met WMTS de tegelsets vooraf worden gegenereerd en de cliënt alleen de verzending van de tegels verzoekt, niet hun productie. Een verzoek aan WMS omvat gewoonlijk zowel het genereren als het verzenden van de gegevens. Een zeer bekend voorbeeld van een niet-OGC-standaard voor het bekijken van getegelde georuimtelijke gegevens is Google Maps."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:118
 msgid ""
 "The two types of WMTS interfaces that QGIS supports are via Key-Value-Pairs "
 "(KVP) and RESTful. These two interfaces are different, and you need to "
 "specify them to QGIS differently."
-msgstr ""
+msgstr "De twee typen interfaces voor WMTS die QGIS ondersteunt zijn die via Key-Value-Pairs (KVP) en RESTful. Deze twee interfaces verschillen van elkaar en u moet ze voor QGIS verschillend specificeren."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:122
 msgid ""
 "In order to access a **WMTS KVP** service, a QGIS user must open the "
 "WMS/WMTS interface and add the following string to the URL of the WMTS tile "
 "service:"
-msgstr ""
+msgstr "Een gebruiker van QGIS moet, om toegang te krijgen tot een **WMTS KVP**-service, de interface voor WMS/WMTS openen en de volgende tekenreeks toevoegen aan de URL van de WMTS-tegelservice:"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:136
 msgid ""
@@ -627,7 +627,7 @@ msgid ""
 "the URL field of the form. An example of this type of address for the case "
 "of an Austrian basemap is "
 "http://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml."
-msgstr ""
+msgstr "Deze indeling helpt u te herkennen dat het een adres voor RESTful is. Een RESTful WMTS is in QGIS toegankelijk door eenvoudigweg het adres toe te voegen aan de instelling van de WMS in het veld URL van het formulier. Een voorbeeld van dit type adres voor een Oostenrijkse basiskaart is http://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:151
 msgid ""
@@ -637,7 +637,7 @@ msgid ""
 "``?tiled=true`` at the end of the url. See "
 "http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification for more "
 "information about this specification."
-msgstr ""
+msgstr "U kunt nog steeds enkele oudere services vinden, genaamd WMS-C. Deze services komen vrijwel overeen met WMTS (d.i. hetzelfde doel maar werken iets anders). U kunt ze op dezelfde wijze beheren als u met WMTS-services doet. Voeg gewoon ?tiled=true toe aan het einde van de URL. Zie http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification voor meer informatie over deze specificatie."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:157
 msgid "When you read WMTS, you can often think WMS-C also."
@@ -647,13 +647,13 @@ msgstr "Wanneer u WMTS leest, mag u ook WMS-C denken."
 msgid ""
 "The first time you use the WMS feature in QGIS, there are no servers "
 "defined."
-msgstr ""
+msgstr "De eerste keer dat u de mogelijkheid WMS in QGIS gebruikt, zijn er geen servers gedefinieerd."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:166
 msgid ""
 "Begin by clicking the |wms| :sup:`Add WMS layer` button on the toolbar, or "
 "selecting :menuselection:`Layer --> Add WMS Layer...`."
-msgstr ""
+msgstr "Begin door te klikken op de knop |addWmsLayer| :sup:`WMS/WMTS-laag toevoegen` op de werkbalk, of selecteer :menuselection:`Kaartlagen --> Laag toevoegen --> WMS/WMTS-laag toevoegen...`."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:169
 msgid ""
@@ -710,13 +710,13 @@ msgid ""
 "setting |checkbox| :guilabel:`Use proxy for web access`. Make sure that you "
 "select the correct proxy type from the :guilabel:`Proxy type` |selectString|"
 " drop-down menu."
-msgstr ""
+msgstr "Als u een proxyserver moet opzetten om in staat te zijn WMS-services vanaf het internet te ontvangen, kunt u uw proxyserver toevoegen in de opties. Kies :menuselection:`Extra --> Opties` en klik op de tab :guilabel:`Netwerk`. daar kunt u uw instellingen voor de proxy toevoegen en ze inschakelen door |checkbox| :guilabel:`Gebruik een proxy voor internettoegang` te selecteren. Zorg er voor dat u het juiste type proxy selecteert uit de keuzelijst :guilabel:`Proxy type` |selectString|."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:213
 msgid ""
 "Once the new WMS server connection has been created, it will be preserved "
 "for future QGIS sessions."
-msgstr ""
+msgstr "Als de nieuwe verbinding voor de WMS-server eenmaal is gemaakt, zal die worden behouden voor toekomstige sessies in QGIS."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:218
 msgid ""
@@ -735,7 +735,7 @@ msgid ""
 "file with someone. Therefore, it's advisable to save your credentials in a "
 "*Authentication configuration* instead (:guilabel:`configurations` tab). See"
 " ref:`authentication_index` for more details."
-msgstr ""
+msgstr "Invoeren van  **gebruikersnaam** en **wachtwoord** op de tab :guilabel:`Authenticatie` zal het opslaan van niet beveiligde inloggegevens behouden in de configuratie van de verbinding. Deze **inloggegevens zullen zichtbaar zijn** als u, bijvoorbeeld, het projectbestand deelt met iemand. Daarom wordt geadviseerd om uw inloggegevens in plaats daarvan op te slaan in een *configuratie voor Authenticatie* (tab  :guilabel:`configurations`). Bekijk ook ref:`authentication_index` voor meer details."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:236
 msgid ""
@@ -756,7 +756,7 @@ msgstr "Uw scherm zou er nu een beetje uit moeten zien zoals figure_OGR_1_, wat 
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:257
 msgid "Dialog for adding a WMS server, showing its available layers"
-msgstr ""
+msgstr "Dialoogvenster voor het toevoegen van een WMS-server, geeft zijn beschikbare lagen weer"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:261
 msgid ""
@@ -821,7 +821,7 @@ msgid ""
 "You can select several layers at once, but only one image style per layer. "
 "When several layers are selected, they will be combined at the WMS server "
 "and transmitted to QGIS in one go."
-msgstr ""
+msgstr "U kunt verscheidene lagen in één keer selecteren, maar slechts één stijl voor een afbeelding per laag. Wanneer verscheidene lagen zijn geselecteerd, zullen zij op de WMS-server worden gecombineerd en in één keer naar QGIS worden verzonden."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:312
 msgid ""
@@ -835,13 +835,13 @@ msgid ""
 "In this version of QGIS, the :guilabel:`Global transparency` setting from "
 "the :guilabel:`Layer Properties` is hard coded to be always on, where "
 "available."
-msgstr ""
+msgstr "In deze versie van QGIS is de instelling :guilabel:`Globale transparantie` uit de :guilabel:`Laageigenschappen` hard gecodeerd om altijd aan te staan, indien beschikbaar."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:335
 msgid ""
 "A coordinate reference system (CRS) is the OGC terminology for a QGIS "
 "projection."
-msgstr ""
+msgstr "Een coördinaten referentiesysteem (CRS) is de terminologie van OGC voor een projectie in QGIS."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:337
 msgid ""
@@ -862,11 +862,11 @@ msgid ""
 "Within QGIS, you can search for WMS servers. Figure_OGC_2_ shows the "
 ":guilabel:`Server Search` tab with the :guilabel:`Add Layer(s) from a "
 "Server` dialog."
-msgstr ""
+msgstr "Binnen QGIS kunt u zoeken naar WMS-servers. Figure_OGC_2_ geeft de tab :guilabel:`Servers zoeken` weer met het dialoogvenster :guilabel:`Lagen toevoegen van een WM(T)S-server`."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:361
 msgid "Dialog for searching WMS servers after some keywords"
-msgstr ""
+msgstr "Dialoogvenster voor het zoeken naar servers van WMS na enkele sleutelwoorden"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:363
 msgid ""
@@ -881,7 +881,7 @@ msgid ""
 "need to request the list of layers by clicking the **[Connect]** button. "
 "This option is quite handy when you want to search maps by specific "
 "keywords."
-msgstr ""
+msgstr "Zoals u kunt zien is het mogelijk om een zoekvraag in het tekstveld in te voeren en te drukken op de knop **[Zoeken]**. Na korte tijd zal het resultaat worden weergegeven in de lijst onder het tekstveld. Blader naar de lijst met resultaten en inspecteer uw zoekresultaten in de tabel. Selecteer, om de resultaten te visualiseren, een item uit de tabel, druk op de knop **[Geselecteerde regel aan  lijst met WMS-en toevoegen]** en ga terug naar de tab :guilabel:`Lagen`. QGIS heeft automatisch uw lijst met servers bijgewerkt en het geselecteerde zoekresultaat is al ingeschakeld in de lijst van opgeslagen WMS-servers in de tab :guilabel:`Lagen`. U hoeft alleen de lijst met lagen nog maar op te vragen door te klikken op de knop **[Verbinden]**. Deze optie is zeer handig als u kaarten wilt zoeken met bepaalde sleutelwoorden."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:374
 msgid ""
@@ -901,7 +901,7 @@ msgid ""
 " :menuselection:`View --> Panels` (Gnome, Windows and MacOSX), then choosing"
 " `Tile Scale Panel`. This gives you the available scales from the tile "
 "server with a nice slider docked in."
-msgstr ""
+msgstr "bent u in staat te bladeren door de tab :guilabel:`Tilesets` die wordt gevuld door de server. Aanvullende informatie zoals de grootte van de tegels, indelingen en ondersteunde CRS-en worden in deze tabel vermeld. In combinatie met deze mogelijkheid kunt u de schuif voor de schaal van de tegel gebruiken door te selecteren :menuselection:`Beeld --> Panelen` (KDE) of :menuselection:`Beeld --> Panelen` (Gnome en MacOSX), en dan te kiezen `Tile schaal`. Dat geeft u de beschikbare schalen vanaf de tileserver met een leuke schuifbalk daarin."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:404
 msgid ""
@@ -910,7 +910,7 @@ msgid ""
 "pixel on the map canvas. A query is made to the WMS server for each "
 "selection made. The results of the query are returned in plain text. The "
 "formatting of this text is dependent on the particular WMS server used."
-msgstr ""
+msgstr "Als u eenmaal een WMS-server hebt toegevoegd en als een laag van een WMS-server is te bevragen, dan kunt u het gereedschap |identify| :sup:`Objecten identificeren` gebruiken om een pixel in het kaartvenster te selecteren. Een query naar de WMS-server wordt verstuurd voor elke gemaakte selectie. De resultaten van de bevraging worden teruggegeven in platte tekst. De opmaak van die tekst is afhankelijk van de gebruikte WMS-server."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:414
 msgid ""
@@ -929,7 +929,7 @@ msgid ""
 "the map and it can be copied to the clipboard and pasted to another vector "
 "layer. See the example setup of the UMN Mapserver below to support "
 "GetFeatureInfo in GML format."
-msgstr ""
+msgstr "Het gereedschap |identify| :sup:`Objecten identificeren` ondersteunt antwoorden van WMS-server (GetFeatureInfo) in de indeling GML (het wordt in de QGIS GUI in deze context Object genoemd). Als de indeling \"Object\" wordt ondersteund door de server en geselecteerd, zijn de resultaten van het gereedschap Objecten identificeren vectorobjecten, als uit een gewone vectorlaag. Wanneer één enkel object is geselecteerd in de boom, wordt het geaccentueerd in de kaart en kan het naar het klembord worden gekopieerd en geplakt op een andere vectorlaag. Bekijk de voorbeeld instelling van de UMN Mapserver hieronder voor ondersteuning van GetFeatureInfo in de indeling GML."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:462
 msgid ""
@@ -951,20 +951,20 @@ msgid ""
 "**Identity Formats** --- The list of MIME-types the server can respond with "
 "when you use the Identify tool. Currently, QGIS supports the ``text-plain`` "
 "type."
-msgstr ""
+msgstr "**Indelingen voor identificeren** --- De lijst van MIME-types waarin de server kan antwoorden wanneer u het gereedschap Objecten identificeren gebruikt. Momenteel ondersteunt, QGIS het type ``text-plain``."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:492
 msgid ""
 "**Visible** --- Whether or not this layer is selected as visible in the "
 "legend (not yet used in this version of QGIS)."
-msgstr ""
+msgstr "**Zichtbaar** --- Of deze laag al dan niet is geselecteerd als zichtbaar in de legenda (nog niet gebruikt in deze versie van QGIS)."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:496
 msgid ""
 "**Can be Transparent** --- Whether or not this layer can be rendered with "
 "transparency. This version of QGIS will always use transparency if this is "
 "``Yes`` and the image encoding supports transparency."
-msgstr ""
+msgstr "**Kan transparant zijn** --- Of de laag al dan niet kan worden gerenderd met transparantie. Deze versie van QGIS zal altijd transparantie gebruiken als dit ``Yes`` is en de codering voor de afbeelding transparantie ondersteunt."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:508
 msgid ""
@@ -975,7 +975,7 @@ msgid ""
 " WMS webmaster should be informed of this error, which they may know as the "
 "WMS XML elements ``LatLonBoundingBox``, ``EX_GeographicBoundingBox`` or the "
 "CRS:84 ``BoundingBox``."
-msgstr ""
+msgstr "**WGS 84-begrenzing** --- De begrenzing van de laag, in coördinaten voor WGS 84. Sommige WMS-servers stellen dit niet juist in (bijv. worden in plaats daarvan coördinaten voor UTM gebruikt). Als dit het geval is dan zou de initiële weergave van deze laag kunnen worden gerenderd met een zeer 'uitgezoomd' uiterlijk door QGIS. De webbeheerder van WMS zou over deze fout moeten worden geïnformeerd, wat zij zouden kunnen kennen als de WMS XML-elementen ``LatLonBoundingBox``, ``EX_GeographicBoundingBox`` of de CRS:84 ``BoundingBox``."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:522
 msgid "Show WMS legend graphic in table of contents and composer"
@@ -988,7 +988,7 @@ msgid ""
 "shown only if the WMS server has GetLegendGraphic capability and the layer "
 "has getCapability url specified, so you additionally have to select a "
 "styling for the layer."
-msgstr ""
+msgstr "De QGIS WMS-gegevensprovider is in staat om een afbeelding van de legenda weer te geven in de inhoudsopgave van de lijst met lagen en in de printvormgeving van de kaart. De legenda voor WMS zal alleen worden weergegeven als de WMS-server de mogelijkheid GetLegendGraphic heeft en de laag getCapability heeft gespecificeerd in de URL, dus moet u aanvullend een opmaak voor de laag selecteren."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:530
 msgid ""
@@ -1004,7 +1004,7 @@ msgid ""
 "(downloaded) dimension. Resolution of the legend graphic can be set in the "
 "item properties under :guilabel:`Legend --> WMS LegendGraphic` to match your"
 " printing requirements"
-msgstr ""
+msgstr "In de Printvormgeving zal de legenda worden geïntegreerd in zijn originele (gedownloade) afmeting. Resolutie van de afbeelding van de legenda kan worden ingesteld in de Item-eigenschappen onder :guilabel:`Legenda -> WMS LegendGraphic` om overeen te komen met uw wensen voor afdrukken."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:539
 msgid ""
@@ -1018,14 +1018,14 @@ msgstr "De legenda zal contextuele informatie weergeven gebaseerd op uw huidige 
 msgid ""
 "Not all possible WMS client functionality had been included in this version "
 "of QGIS. Some of the more noteworthy exceptions follow."
-msgstr ""
+msgstr "Niet alle mogelijke functionaliteit voor WMS-cliënt is opgenomen in deze versie van QGIS. Enkele van de meest vermeldenswaardige uitzonderingen volgen."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:553
 msgid ""
 "Once you've completed the |wms| :sup:`Add WMS layer` procedure, there is no "
 "way to change the settings. A work-around is to delete the layer completely "
 "and start again."
-msgstr ""
+msgstr "Als u eenmaal de procedure |wms| :sup:`WMS/WMTS-laag toevoegen` heeft voltooid, is er geen manier om de instellingen te wijzigen. Een manier om dat op te lossen is door de laag te verwijderen en opnieuw te beginnen."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:559
 msgid ""
@@ -1047,7 +1047,7 @@ msgstr "Als u beveiligde lagen dient te benaderen met beveiligde methoden anders
 msgid ""
 "Since Version 1.7.0, QGIS has its own implementation of a WMS 1.3.0 "
 "Mapserver. Read more about this in chapter :ref:`label_qgisserver`."
-msgstr ""
+msgstr "Vanaf versie 1.7.0 heeft QGIS zijn eigen implementatie van een WMS 1.3.0 Mapserver. Lees er meer over in dit hoofdstuk :ref:`label_qgisserver`."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:593
 msgid ""
@@ -1055,7 +1055,7 @@ msgid ""
 "are significantly different), but currently it prefers 1.0, because 1.1 has "
 "many issues (i.e., each server implements it in a different way with various"
 " particularities)."
-msgstr ""
+msgstr "QGIS heeft een eigen WCS-provider en ondersteunt zowel versie 1.0 als 1.1 (die significant van elkaar verschillen), maar heeft momenteel een voorkeur voor 1.0, omdat 1.1 nog vele problemen heeft (d.i., elke server implementeert het op een andere manier met verschillende eigenaardigheden)."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:597
 msgid ""
@@ -1064,14 +1064,14 @@ msgid ""
 "cache mode ('always cache', 'prefer cache', 'prefer network', 'always "
 "network'), and the provider also supports selection of time position, if "
 "temporal domain is offered by the server."
-msgstr ""
+msgstr "De eigen WCS-provider behandelt alle netwerkverzoeken en gebruikt alle standaard netwerkinstellingen van QGIS (proxy in het bijzonder). Het is ook mogelijk modus cache te selecteren ('always cache', 'prefer cache', 'prefer network', 'always network'), en de provider ondersteunt ook het selecteren van de tijdpositie, indien een tijdelijk domein wordt aangeboden door de server."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:618
 msgid ""
 "In QGIS, a WFS layer behaves pretty much like any other vector layer. You "
 "can identify and select features, and view the attribute table. Since QGIS "
 "1.6, editing WFS-T is also supported."
-msgstr ""
+msgstr "In QGIS gedraagt een WFS-laag zich nagenoeg hetzelfde als elke andere vectorlaag. U kunt objecten identificeren en selecteren en de attributentabel bekijken. Vanaf QGIS 1.6 wordt ook bewerken van WFS-T ondersteund."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:622
 msgid ""
@@ -1112,7 +1112,7 @@ msgstr "Klik op **[OK]**."
 msgid ""
 "Choose 'DM Solutions' from the :guilabel:`Server Connections` |selectString|"
 " drop-down list."
-msgstr ""
+msgstr "Kies 'DM Solutions' uit de keuzelijst :guilabel:`Serververbindingen` |selectString|."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:638
 msgid "Click **[Connect]**."
@@ -1138,14 +1138,14 @@ msgstr "Onthoud dat instellingen voor een proxy die u kan hebben ingesteld in uw
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:663
 msgid "Adding a WFS layer"
-msgstr ""
+msgstr "Een laag voor WFS toevoegen "
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:680
 msgid ""
 "You'll notice the download progress is visualized in the lower left of the "
 "QGIS main window. Once the layer is loaded, you can identify and select a "
 "province or two and view the attribute table."
-msgstr ""
+msgstr "De voortgang van de download is links onder in de hoek van het hoofdvenster van QGIS zichtbaar. Wanneer de laag klaar is met laden dan kunnen provincies worden aangeklikt om attribuutinformatie te tonen."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:684
 msgid ""
@@ -1161,7 +1161,7 @@ msgid ""
 "You can find additional WFS servers by using Google or your favourite search"
 " engine. There are a number of lists with public URLs, some of them "
 "maintained and some not."
-msgstr ""
+msgstr "U kunt zoeken naar aanvullende WFS-servers met behulp van Google of uw favoriete zoekmachine. Er zijn een aantal lijsten met publieke URL's, sommige daarvan worden onderhouden, andere niet."
 
 #~ msgid ""
 #~ "The Open Geospatial Consortium (OGC), is an international organization with "

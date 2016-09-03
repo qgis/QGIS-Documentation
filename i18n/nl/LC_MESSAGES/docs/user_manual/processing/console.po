@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# Dick Groskamp, 2014-2015
+# Dick Groskamp, 2014-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-07-18 09:37+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2016-08-31 17:09+0000\n"
+"Last-Translator: Dick Groskamp\n"
 "Language-Team: Dutch (http://www.transifex.com/qgis/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -265,7 +265,7 @@ msgid ""
 "usually with a less complex syntax. These functions should be used when "
 "developing new algorithms, as they make it easier to operate with input "
 "data."
-msgstr ""
+msgstr "Naast de functies die worden gebruikt om algoritmen aan te roepen, zal het importeren van het pakket ``processing`` ook enkele aanvullende functies importeren die het gemakkelijke maken om met gegevens te werken, in het bijzonder vectorgegevens. Het zijn slechts functies voor het gemak die enige functionaliteit vanuit de API van QGIS binden, gewoonlijk met een minder complexe syntaxis. Deze functies zouden moeten worden gebruikt bij het ontwikkelen van nieuwe algoritmen, omdat zij het eenvoudiger maken om te werken met invoergegevens."
 
 #: ../../source/docs/user_manual/processing/console.rst:5
 msgid "|updatedisclaimer|"
@@ -288,13 +288,13 @@ msgid ""
 " can incorporate those commands into your console work and connect "
 "processing algorithms to all the other features (including methods from the "
 "QGIS API) available from there."
-msgstr ""
+msgstr "Er is geen console voor Processing in QGIS, maar alle opdrachten voor Processing zijn in plaats daarvan beschikbaar vanuit de in QGIS ingebouwde console voor Python. Dat betekent dat u die opdrachten in uw werk op de console kunt inpassen en algoritmen van Processing kunt verbinden aan alle andere mogelijkheden (inclusief methoden uit de API van QGIS) die van daaruit beschikbaar zijn."
 
 #: ../../source/docs/user_manual/processing/console.rst:32
 msgid ""
 "In this section, we will see how to use processing algorithms from the QGIS "
 "Python console, and also how to write algorithms using Python."
-msgstr ""
+msgstr "In dit gedeelte zullen we zien hoe we algoritmen van Processing gebruiken vanuit de console voor Python in QGIS, en ook hoe we algoritmen schrijven met behulp van Python."
 
 #: ../../source/docs/user_manual/processing/console.rst:45
 msgid ""
@@ -351,7 +351,7 @@ msgid ""
 "QGIS object representing the layer, you can also pass it as parameter. If "
 "the input is optional and you do not want to use any data object, use "
 "``None``."
-msgstr ""
+msgstr "Raster Layer, Vector Layer of Table. Gebruik eenvoudigweg een tekenreeks met de naam die het te gebruiken gegevensobject identificeert (de naam die het heeft in de inhoudsopgave van QGIS) of een bestandsnaam (als de betreffende laag niet is geopend, hij zal worden geopend, maar niet worden toegevoegd aan het kaartvenster). Als u een instantie van een object van QGIS heeft dat de laag vertegenwoordigt, kunt u die ook doorgeven als parameter. Als de invoer optioneel is en u wilt geen gegevensobject gebruiken, gebruik dan ``None``."
 
 #: ../../source/docs/user_manual/processing/console.rst:166
 msgid ""
@@ -398,7 +398,7 @@ msgid ""
 "yourself after running the algorithm. To do so, you can use QGIS API "
 "commands, or, even easier, use one of the handy methods provided for such "
 "tasks."
-msgstr ""
+msgstr "Anders dan wanneer een algoritme wordt uitgevoerd vanuit de Toolbox, wordt uitvoer niet toegevoegd aan het kaartvenster als u datzelfde algoritme uitvoert vanaf de console voor Python. Als u een uitvoer wilt toevoegen aan het kaartvenster dient u dat zelf te doen na het uitvoeren van het algoritme. U kunt opdrachten voor de API van QGIS gebruiken om dat te doen, maar, zelfs eenvoudiger, ook een van de handige methoden gebruiken die zijn verschaft voor dergelijke taken."
 
 #: ../../source/docs/user_manual/processing/console.rst:199
 msgid ""
@@ -413,14 +413,14 @@ msgid ""
 "Below is a list of some of these commands. More information can be found in "
 "the classes under the ``processing/tools`` package, and also in the example "
 "scripts provided with QGIS."
-msgstr ""
+msgstr "Hieronder staat een lijst van enkele van die opdrachten. Meer informatie kan worden gevonden in de klassen onder het pakket ``processing/tools``, en ook in de voorbeeldscripts die worden verschaft met QGIS."
 
 #: ../../source/docs/user_manual/processing/console.rst:218
 msgid ""
 "``getObject(obj)``: Returns a QGIS object (a layer or table) from the passed"
 " object, which can be a filename or the name of the object in the QGIS "
 "Layers List"
-msgstr ""
+msgstr "``getObject(obj)``: Geeft een object van QGIS (een laag of tabel) terug uit het doorgegeven object, wat een bestandsnaam of de naam van een object in de lagenlijst van QGIS kan zijn."
 
 #: ../../source/docs/user_manual/processing/console.rst:220
 msgid ""
@@ -536,7 +536,7 @@ msgid ""
 "``processing.getObjectFromUri()`` function. Multiple inputs also have a "
 "string value, which contains the file paths to all selected object, "
 "separated by semicolons (``;``)."
-msgstr ""
+msgstr "Lagen en tabelwaarden zijn tekenreeksen die het bestandspad van het corresponderende object bevatten.  U kunt de functie ``processing.getObjectFromUri()`` gebruiken om er een object voor QGIS van te maken. Meerdere invoer is ook een waarde van een tekenreeks, die de bestandspaden naar alle geselecteerde objecten bevat, gescheiden door puntkomma's (``;``)."
 
 #: ../../source/docs/user_manual/processing/console.rst:322
 msgid ""
@@ -552,7 +552,7 @@ msgid ""
 "the layers it produces, the final TWI layer will be loaded (using the case "
 "of our previous example), since it is saved to the file entered by the user,"
 " which is the value of the corresponding output."
-msgstr ""
+msgstr "Wanneer u een uitvoer declareert, zal het algoritme proberen het aan QGIS toe te voegen als het is voltooid. Dat is waarom, hoewel de methode ``runalg()`` niet de lagen laadt die het produceert, de uiteindelijke laag TWI zal worden geladen (in het geval van ons vorige voorbeeld), omdat het is opgeslagen in het bestand dat is ingevoerd door de gebruiker, wat de waarde is van de de corresponderende uitvoer."
 
 #: ../../source/docs/user_manual/processing/console.rst:332
 msgid ""

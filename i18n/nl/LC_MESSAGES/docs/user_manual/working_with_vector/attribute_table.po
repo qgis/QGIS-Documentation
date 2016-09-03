@@ -752,53 +752,58 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:340
 msgid "the name of the rule,"
-msgstr ""
+msgstr "de naam van de regel,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:341
 msgid "a condition from expression window,"
-msgstr ""
+msgstr "een voorwaarde uit het venster Expressie,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:342
 msgid "a preset formatting"
-msgstr ""
+msgstr "een voorkeuze opmaak"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:343
 msgid "some other parameters to improve, change or setup the formatting:"
 msgstr ""
+"enkele andere parameters om de opmaak te verbeteren, te wijzigen of in te "
+"stellen:"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:345
 msgid "background and text colors,"
-msgstr ""
+msgstr "achtergrond- en tekstkleuren"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:346
 msgid "use of icon,"
-msgstr ""
+msgstr "gebruik van pictogram,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:347
 msgid "bold, italic underline, or strikeout,"
-msgstr ""
+msgstr "vet, cursief onderstreept, of doorgehaald,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:348
 msgid "text field,"
-msgstr ""
+msgstr "tekstveld,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:349
 msgid "font."
-msgstr ""
+msgstr "lettertype."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:360
 msgid "Conditional Formatting of an attribute table"
-msgstr ""
+msgstr "Voorwaardelijke opmaak van een attributentabel"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:367
 msgid "Creating one to many relations"
-msgstr ""
+msgstr "Een tot veel-relaties maken"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:369
 msgid ""
 "Relations are a technique often used in databases. The concept is, that "
 "features (rows) of different layers (tables) can belong to each other."
 msgstr ""
+"Relaties zijn een techniek die veel gebruikt wordt in databases. Het concept"
+" is, dat objecten (rijen) van verschillende lagen (tabellen) aan elkaar "
+"kunnen behoren."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:372
 msgid ""
@@ -806,10 +811,13 @@ msgid ""
 "provides some attributes about its name and region type and a unique id "
 "(which acts as primary key)."
 msgstr ""
+"Als voorbeeld heeft u een laag met alle regio's van Alaska (polygoon) die "
+"verschillende attributen verschaft over de naam ervan en het regiotype en "
+"een unieke id (die dient als primaire sleutel)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:377
 msgid "Foreign keys"
-msgstr ""
+msgstr "Secundaire sleutels"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:379
 msgid ""
@@ -819,10 +827,15 @@ msgid ""
 "relation using foreign keys, because there are several airports in most "
 "regions."
 msgstr ""
+"Dan krijgt u een andere laag met punten of tabel met informatie over "
+"vliegvelden die in de regio's liggen en u wilt ook deze bijhouden. Als u ze "
+"wilt toevoegen aan de laag van de regio's, dient u een één tot veel-relatie "
+"te maken met behulp van secundaire sleutels, omdat er meerdere vliegvelden "
+"in de meeste regio's liggen."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:393
 msgid "Alaska region with airports"
-msgstr ""
+msgstr "Regio Alaska met vliegvelden"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:395
 msgid ""
@@ -830,6 +843,10 @@ msgid ""
 "table another field fk_region which acts as a foreign key (if you have a "
 "database, you will probably want to define a constraint on it)."
 msgstr ""
+"Maak in aanvulling op de reeds bestaande attributen in de attributentabel "
+"van de vliegvelden een ander veld fk_region dat optreedt als een secundaire "
+"sleutel (als u een database heeft, wilt u er waarschijnlijk een voorwaarde "
+"aan verbinden)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:399
 msgid ""
@@ -839,10 +856,16 @@ msgid ""
 "different providers (so you can also use it with shape and csv files) and "
 "all you have to do is to tell QGIS the relations between your tables."
 msgstr ""
+"Dit veld fk_region zal altijd een ID van een regio bevatten. Het kan worden "
+"gezien als een verwijzing naar de regio waartoe het behoort. En u kunt een "
+"aangepaste vorm voor het bewerken ontwerpen en QGIS zorgt dan voor de "
+"instellingen. Het werkt voor verschillende providers (dus u kunt het ook "
+"gebruiken met shape- en CSVbestanden) en alles wat u hoeft te doen is QGIS "
+"de relaties tussen uw tabellen te vertellen."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:406
 msgid "Layers"
-msgstr ""
+msgstr "Lagen"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:408
 msgid ""
@@ -854,10 +877,17 @@ msgid ""
 "exactly one region while each region can have any number of airports (a "
 "typical one to many relation)."
 msgstr ""
+"QGIS maakt geen verschil tussen een tabel en een vectorlaag. In feite is een"
+" vectorlaag een tabel met een geometrie. Dus kunt u uw laag tabel als een "
+"vectorlaag toevoegen. U kunt, om het te demonstreren, het shapefile 'region'"
+" laden (met geometrieën) en de csv-tabel 'airport'  (zonder geometrieën) en "
+"een secundaire sleutel (fk_region) aan de laag region. Dit betekent dat elk "
+"vliegveld tot precies één regio behoort terwijl elke regio een onbepaald "
+"aantal vliegvelden kan hebben (een typische een tot veel-relatie)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:417
 msgid "Definition (Relation Manager)"
-msgstr ""
+msgstr "Definitie (Relatiebeheer)"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:419
 msgid ""
@@ -866,6 +896,10 @@ msgid ""
 "Properties`. Open the :guilabel:`Relations` menu and click on "
 ":guilabel:`Add`."
 msgstr ""
+"Het eerste dat gaan we doen is om QGIS in kennis te stellen van de relaties "
+"tussen de lagen. Dit wordt gedaan in :menuselection:`Project -->` "
+":menuselection:`Projecteigenschappen`. Open het menu :guilabel:`Relaties` en"
+" klik op :guilabel:`Relatie toevoegen`."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:423
 msgid ""
@@ -873,29 +907,40 @@ msgid ""
 "string, describing, what the relation is used for. We will just call say "
 "\"Airports\" in this case."
 msgstr ""
+"**Naam** zal worden gebruikt als de titel. Het zou een door mensen te lezen "
+"tekenreeks moeten zijn, die beschrijft waar de relatie voor wordt gebruikt. "
+"We zullen het in dit geval eenvoudigweg \"Vliegvelden\" noemen."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:425
 msgid ""
 "**referencing layer** is the one with the foreign key field on it. In our "
 "case this is the airports layer"
 msgstr ""
+"**Referentielaag (Child)** is die met het veld voor de secundaire sleutel "
+"erin. In ons geval is dat de laag airports"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:427
 msgid ""
 "**referencing field** will say, which field points to the other layer so "
 "this is fk_region in this case"
 msgstr ""
+"**Referentieveld** wil zeggen welk veld naar de andere laag verwijst dus dat"
+" is in dit geval fk_region"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:429
 msgid ""
 "**referenced layer** is the one with the primary key, pointed to, so here it"
 " is the regions layer"
 msgstr ""
+"**Referentielaag (Parent)** is die waarnaar de primaire sleutel verwijst, "
+"dus hier is het de laag regions"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:431
 msgid ""
 "**referenced field** is the primary key of the referenced layer so it is ID"
 msgstr ""
+"**Referentieveld** is de primaire sleutel van de laag waarnaar verwezen "
+"wordt, dus dit is ID"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:432
 msgid ""
@@ -904,14 +949,18 @@ msgid ""
 " will be generated for you but you can assign one yourself to get one that "
 "is easier to handle."
 msgstr ""
+"**id** zal worden gebruikt voor interne doeleinden en moet uniek zijn. U zou"
+" mogelijk een aangepaste formulier willen maken als het eenmaal ondersteund "
+"wordt. Als u het leeg laat zal er een voor u worden gegenereerd maar u kunt "
+"er zelf een toewijzen als dat voor u eenvoudiger is."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:446
 msgid "Relation Manager"
-msgstr ""
+msgstr "Relatiebeheer"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:450
 msgid "Forms"
-msgstr ""
+msgstr "Formulieren"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:452
 msgid ""
@@ -922,10 +971,18 @@ msgid ""
 "form might open directly or you will have to choose to open it in the "
 "identification dialog under actions."
 msgstr ""
+"Nu QGIS van de relatie weet zal het worden gebruikt om de formulieren te "
+"verbeteren die het genereert. Als we de standaard methode voor het formulier"
+" niet wijzigden (autogenerated) zal het eenvoudigweg een nieuw widget in ons"
+" formulier maken. Dus laten we de laag regions selecteren in de legenda en "
+"het gereedschap Objecten identificeren gebruiken. Afhankelijk van uw "
+"instellingen zou het formulier direct kunnen openen of u moet het kiezen om "
+"het openen in het dialoogvenster Identificatieresultaten onder Acties."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:468
 msgid "Identification dialog regions with relation to airports"
 msgstr ""
+"Dialoogvenster Identificatieresultaten regions met relatie naar vliegvelden"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:470
 msgid ""
@@ -933,6 +990,9 @@ msgid ""
 "shown in a table. And there are also some buttons available. Let's review "
 "them shortly"
 msgstr ""
+"Zoals u kunt zien worden de vliegvelden die tot deze bepaalde regio zijn "
+"toegewezen weergegeven in een tabel. En er zijn ook enkele knoppen "
+"beschikbaar. Laten we die even kort bekijken"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:473
 msgid ""
@@ -941,16 +1001,23 @@ msgid ""
 "form of a feature from the region layer. But the table is representing "
 "features of the airport layer."
 msgstr ""
+"De knop |toggleEditing| is voor het aan of uitzetten van het bewerken. "
+"Onthoud dat het de modus Bewerken voor de laag airports schakelt, hoewel we "
+"in het objectformulier van een object uit de laag regions staan. maar de "
+"tabel geeft objecten weer uit de laag airports."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:477
 msgid ""
 "The |signPlus| button will add a new feature to the airport layer. And it "
 "will assign the new airport to the current region by default."
 msgstr ""
+"De knop |signPlus| zal een nieuw object aan de laag airports toevoegen. En "
+"het zal standaard het nieuwe vliegveld toevoegen aan de huidige regio."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:479
 msgid "The |remove| button will delete the selected airport permanently."
 msgstr ""
+"De knop |remove| zal het geselecteerde vliegveld permanent verwijderen."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:480
 msgid ""
@@ -958,6 +1025,10 @@ msgid ""
 "airport which will then be assigned to the current region. This may be handy"
 " if you created the airport on the wrong region by accident."
 msgstr ""
+"Het symbool |link| zal een nieuw dialoogvenster openen waar u een bestaand "
+"vliegveld kunt selecteren dat dan zal worden toegevoegd aan de huidige "
+"regio. Dit kan handig zijn als u per ongeluk eerder het vliegveld in de "
+"verkeerde regio maakte."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:483
 msgid ""
@@ -965,12 +1036,18 @@ msgid ""
 "region, leaving them unassigned (the foreign key is set to NULL) "
 "effectively."
 msgstr ""
+"Het symbool |unlink| zal het geselecteerde vliegveld loskoppelen van de "
+"huidige regio en het daarna als niet toegewezen beschouwen (de secundaire "
+"sleutel wordt op NULL gezet)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:485
 msgid ""
 "The two buttons to the right switch between table view and form view where "
 "the later let's you view all the airports in their respective form."
 msgstr ""
+"De twee knoppen aan de rechterkant schakelen tussen de tabelweergave en de "
+"formulierweergave waarbij de laatste u de vliegvelden laat zien in hun "
+"respectievelijke formulier."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:488
 msgid ""
@@ -980,6 +1057,12 @@ msgid ""
 "airports table, switch to the :menuselection:`Fields` menu and change the "
 "widget type of the foreign key field 'fk_region' to Relation Reference."
 msgstr ""
+"Als u werkt aan de tabel airports, wordt een nieuw type widget beschikbaar "
+"dat u het objectfomulier van de regio waarnaar verwezen wordt laat inbedden "
+"in het objectformulier van de vliegvelden. Het kan worden gebruikt als u de "
+"laageigenschappen van de tabel airports opent, schakelt naar het menu "
+":menuselection:`Velden` en het type widget van het veld van de secundaire "
+"sleutel 'fk_region' wijzigt naar Relatieverwijzing."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:494
 msgid ""
@@ -987,39 +1070,44 @@ msgid ""
 "region is embedded inside the airports form and will even have a combobox, "
 "which allows you to assign the current airport to another region."
 msgstr ""
+"Als u nu kijkt naar het dialoogvenster van het object, zult u zien dat het "
+"formulier van de regio nu is ingebed in het formulier van de vliegvelden en "
+"zelfs een combinatievak zal hebben, wat u in staat stelt het huidige "
+"vliegveld aan een andere regio toe te wijzen."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:507
 msgid "Identification dialog airport with relation to regions"
 msgstr ""
+"Dialoogvenster Identificatieresultaten airports met relatie naar regio's"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:5
 msgid "Work_with_Attribute_Table"
-msgstr ""
+msgstr "Werken_met_Attributen_Tabel"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:87
 msgid "Attribute_Table_Selection"
-msgstr ""
+msgstr "Attributen_Tabel_Selectie"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:218
 msgid "Calculator Field"
-msgstr ""
+msgstr "Veldberekening"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:218
 msgid "Derived Fields"
-msgstr ""
+msgstr "Afgeleide velden"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:218
 msgid "Virtual Fields"
-msgstr ""
+msgstr "Virtuele velden"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:309
 msgid "Non_Spatial_Attribute_Tables"
-msgstr ""
+msgstr "Niet_Ruimtelijke_Attributen_Tabellen"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:327
 msgid "conditional_formatting"
-msgstr ""
+msgstr "voorwaardelijke_opmaak"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:363
 msgid "Relations"
-msgstr ""
+msgstr "Relaties"

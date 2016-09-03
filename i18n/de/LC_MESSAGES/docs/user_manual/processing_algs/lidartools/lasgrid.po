@@ -1,0 +1,172 @@
+# Translators:
+# Kevin M <km.acker@gmx.de>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kevin M <km.acker@gmx.de>, 2016\n"
+"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:6
+msgid "lasgrid"
+msgstr "lasgrid"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:9
+msgid "Description"
+msgstr "Beschreibung"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:11
+msgid ""
+"This tool grids a selected attribute (e.g. elevation, intensity, "
+"classification, scan angle, ...) of a large point clouds with a user-defined"
+" step size onto raster using a particular method (e.g. min, max, average). "
+"For more info see the `lasgrid <http://rapidlasso.com/lasgrid>`_ page and "
+"its online `README <http://lastools.org/download/lasgrid_README.txt>`_ file."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:14
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:19
+msgid "``verbose`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:17
+msgid "Generates more textual control output to the console."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:19
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:24
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:52
+msgid "Default: *False*"
+msgstr "Vorgabe: *False*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:24
+msgid "``open LAStools GUI`` [boolean]"
+msgstr "``LAStools-GUI öffnen`` [boolean]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:22
+msgid "Starts the GUI of LAStools with pre-populated input files."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:27
+msgid "``input LAS/LAZ file`` [points]"
+msgstr "``LAS/LAZ-Eingabedatei`` [points]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:27
+msgid "The file containing the points to be rastered in LAS/LAZ format."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:32
+msgid "``filter`` [string]"
+msgstr "``Filter`` [string]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:30
+msgid "Specifies which subset of points to use for subsequent gridding."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:32
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:57
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:62
+msgid "Default: *---*"
+msgstr "Vorgabe: *---*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:37
+msgid "``step size / pixel size`` [number]"
+msgstr "``Schrittweite/Pixelgröße`` [number]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:35
+msgid "Specifies the size of the grid cells the points are binned into."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:37
+msgid "Default: *1.0*"
+msgstr "Vorgabe: *1.0*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:42
+msgid "``Attribute`` [string]"
+msgstr "``Attribute`` [string]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:40
+msgid "Specifies the attribute that is to be gridded into each cell."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:42
+msgid "Default: *elevation*"
+msgstr "Vorgabe: *elevation*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:47
+msgid "``Method`` [string]"
+msgstr "``Methode`` [string]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:45
+msgid ""
+"Specifies how the attributes falling into one cell are turned into a raster "
+"value."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:47
+msgid "Default: *lowest*"
+msgstr "Vorgabe: *lowest*"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:52
+msgid "``use tile bounding box`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:50
+msgid ""
+"Specifies to limit the rastered area to the tile bounding box (only "
+"meaningful for input LAS/LAZ tiles that were created with lastile)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:57
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:62
+msgid "``additional command line parameter(s)`` [string]"
+msgstr "``Weitere(r) Kommandozeilenparameter`` [string]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:55
+msgid ""
+"Specifies other command-line switches not available via this menu but known "
+"to the (advanced) LAStools user. A common thing to add here would be '-false"
+" or '-gray' to map all values to a color or a gray value (optionally with a "
+"specified range of '-set_min_max 40 90' and produce an image."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:60
+msgid ""
+"Specifies other command-line switches not available via this menu but known "
+"to the (advanced) LAStools user."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:65
+msgid "Outputs"
+msgstr "Ausgaben"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:68
+msgid "``Output raster file`` [raster]"
+msgstr "``Ausgaberasterdatei`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:68
+msgid ""
+"Specifies where the output raster is stored. Use image rasters like TIF, "
+"PNG, and JPG for false color or gray ramps. Use value rasters like TIF, BIL,"
+" IMG, ASC, DTM, FLT, XYZ, and CSV for actual values."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:71
+msgid "Console usage"
+msgstr "Verwendung der Konsole"
+
+#: ../../source/docs/user_manual/processing_algs/lidartools/lasgrid.rst:77
+msgid ""
+"See also the `lasgrid <http://rapidlasso.com/lasgrid>`_ page and its online "
+"`README <http://lastools.org/download/lasgrid_README.txt>`_ file."
+msgstr ""
