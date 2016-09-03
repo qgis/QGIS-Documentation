@@ -433,6 +433,7 @@ OCG WMS 1.3.0 specification:
     xml output.
 
 * **SELECTION** parameter: (Available in QGIS 1.8 and above)
+    The **SELECTION** parameter can highlight features from one or more layers.
     Vector features can be selected by passing comma separated lists with
     feature ids in GetMap and GetPrint.
 
@@ -440,6 +441,16 @@ OCG WMS 1.3.0 specification:
 
         http://myserver.com/cgi/qgis_mapserv.fcgi?REQUEST=GetMap&LAYERS=mylayer1,mylayer2&SELECTION=mylayer1:3,6,9;mylayer2:1,5,6&...
 
+    The following image presents the response from a GetMap request using the **SELECTION** option e.g.
+    ``http://myserver.com/...&SELECTION=countries:171,65``.
+    As those feature id's corespond in the source dataset to **France** and **Romania** they're highlighted in yellow.
+
+    .. only:: html
+
+       **Figure presenting the Server SELECTION parameter:**
+  
+    .. figure:: /static/user_manual/working_with_ogc/server_selection_parameter.jpg
+       :align: center
 
 Extra parameters supported by the WMS GetFeatureInfo request
 ------------------------------------------------------------
