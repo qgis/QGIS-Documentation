@@ -1,13 +1,13 @@
 # 
 # Translators:
-# Dick Groskamp, 2015
+# Dick Groskamp, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-07-18 09:33+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2016-09-02 16:16+0000\n"
+"Last-Translator: Dick Groskamp\n"
 "Language-Team: Dutch (http://www.transifex.com/qgis/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,7 +54,7 @@ msgid ""
 " from 0°-90°), while the southern side receives more solar radiation (higher"
 " azimuth from 180°-270°). The algorithm is derived from the `GDAL DEM "
 "utility <http://www.gdal.org/gdaldem.html>`_ ."
-msgstr ""
+msgstr "Genereert een kaart voor het aspect vanuit elk door GDAL ondersteund hoogteraster. Aspect is de kompasrichting waarnaar de helling kijkt. De pixels zullen een waarde hebben van 0-360°, gemeten in graden vanaf Noord, wat de azimut aangeeft. In de Noordelijke hemisfeer ligt de noordzijde van hellingen vaak in de schaduw (kleine azimut van 0°-90°), terwijl de zuidelijke zijde meer zonnestraling ontvangt (grotere azimut van 180°-270°). Het algoritme is afgeleid van de `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ ."
 
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:24
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:85
@@ -278,7 +278,7 @@ msgid ""
 "elevation values are blended smoothly and the result is a nice colorized "
 "elevation raster. The algorithm is derived from the `GDAL DEM utility "
 "<http://www.gdal.org/gdaldem.html>`__ ."
-msgstr ""
+msgstr "Genereert een kaart met kleurreliëf uit elk door GDAL ondersteund hoogteraster. Kleurreliëfen kunnen in het bijzonder worden gebruikt om hoogten weer te geven. Het algoritme voert een 4-bands raster uit met waarden die zijn berekend uit de hoogte en een op tekst gebaseerd configuratiebestand voor kleur. Standaard worden de kleuren tussen de opgegeven waarden voor de hoogte naadloos gemengd en het resultaat is een leuk gekleurd hoogteraster. Het algoritme is afgeleid van de `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ ."
 
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:101
 msgid "``Color configuration file`` [file]"
@@ -352,7 +352,7 @@ msgid ""
 "interpolating a raster from sparse point data. The algorithm is derived from"
 " the `GDAL fillnodata utility <http://www.gdal.org/gdal_fillnodata.html>`__ "
 "."
-msgstr ""
+msgstr "Vult regio's in het raster met waarden 'Geen gegevens' door interpolatie vanaf de randen. De waarden voor de regio's met 'Geen gegevens' worden berekend door de omringende pixelwaarden met behulp van gewogen inverse afstand. Na het interpoleren worden de resultaten gladder gemaakt. Invoer kan elke door GDAL ondersteund rasterlaag zijn. Dit algoritme is in het algemeen geschikt voor het interpoleren van ontbrekende regio's van nagenoeg doorlopend variërende rasters (zoals bijvoorbeeld hoogtemodellen). Het is ook geschikt voor het vullen van kleine gaten en scheuren in meer onregelmatig variërende afbeeldingen (zoals luchtfoto's). Het is in het algemeen niet zo geschikt voor interpoleren van een raster met schaarse gegevens voor punten. Het algoritme is afgeleid van de `GDAL fillnodata utility <http://www.gdal.org/gdal_fillnodata.html>`__ ."
 
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:153
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:829
@@ -680,7 +680,7 @@ msgstr "Grid (Data metrics)"
 msgid ""
 "This algorithm computes some data metrics using the specified window and "
 "output grid geometry."
-msgstr ""
+msgstr "Dit algoritme berekent enkele metrieken voor gegevens met behulp van het gespecificeerde venster en uitvoer geometrie voor het grid."
 
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:313
 msgid "``Metrics`` [selection]"
@@ -863,7 +863,7 @@ msgid ""
 " account for differences between vertical and horizontal units. The "
 "algorithm is derived from the `GDAL DEM utility "
 "<http://www.gdal.org/gdaldem.html>`__ ."
-msgstr ""
+msgstr "Voert een raster uit met een keurig  effect van een reliëf van schaduwen. Het is zeer nuttig voor het visualiseren van het terrein. U kunt optioneel de azimut en hoogte van de lichtbron specificeren, een verticale factor voor vergroten en een schaalfactor om rekening te houden met verschillen tussen verticale en horizontale eenheden. Het algoritme is afgeleid van de `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ ."
 
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:578
 msgid "Band containing the elevation information."
@@ -1086,7 +1086,7 @@ msgid ""
 "morphology, in climatology and physical geography in general. The algorithm "
 "is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ "
 "."
-msgstr ""
+msgstr "Voert een enkelbands raster uit met berekende waarden uit de hoogte. Ruwheid is de mate van onregelmatigheid van het oppervlak. Het wordt berekend door het grootste verschil tussen cellen van een centrale pixel en de omringende cellen. De bepaling van de ruwheid speelt een rol bij de analyse van terreinhoogte-gegevens, het is nuttig bij berekeningen van de morfologie van rivieren, in klimatologie en fysische geografie in het algemeen. Het algoritme is afgeleid van de `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ ."
 
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:802
 msgid ""
@@ -1151,7 +1151,7 @@ msgid ""
 "angle of inclination to the horizontal. You have the option of specifying "
 "the type of slope value you want: degrees or percent slope. The algorithm is"
 " derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ ."
-msgstr ""
+msgstr "Genereert een hellingskaart uit elk door GDAL ondersteund hoogteraster. Helling is de stijgingshoek ten opzichte van horizontaal. U heeft de optie om te specificeren welk type waarde u voor de helling wilt: graden of percentage helling. Het algoritme is afgeleid van de `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ ."
 
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:897
 msgid "``Slope expressed as percent (instead of degrees)`` [boolean]"
@@ -1197,7 +1197,7 @@ msgstr "TPI-raster voor uitvoer"
 
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:961
 msgid "`GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TPI>`__"
-msgstr ""
+msgstr "`GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TPI>`__"
 
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:965
 msgid "TRI (Terrain Ruggedness Index)"
@@ -1216,4 +1216,4 @@ msgstr "TRI-rasterbestand"
 
 #: ../../source/docs/user_manual/processing_algs/gdalogr/gdal_analysis.rst:1005
 msgid "`GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TRI>`__"
-msgstr ""
+msgstr "`GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TRI>`__"
