@@ -1156,7 +1156,7 @@ For the |radioButtonOn| :guilabel:`Parallel` and |radioButtonOff|
 :guilabel:`Above line`, |checkbox| :guilabel:`On line` and |checkbox|
 :guilabel:`Below line`. It's possible to select several options at once. In
 that case, QGIS will look for the optimal label position. For Parallel and
-curved placements options, you can also use the line orientation for the
+curved placement options, you can also use the line orientation for the
 position of the label. Additionally, you can define a :guilabel:`Maximum
 angle between curved characters` when selecting the |radioButtonOff|
 :guilabel:`Curved` option (see Figure_labels_2_).
@@ -1172,7 +1172,7 @@ angle between curved characters` when selecting the |radioButtonOff|
 
    Label placement examples in lines
 
-For all three placement options, in :guilabel`Repeat`, you can set up a
+For all three placement options, in :guilabel:`Repeat`, you can set up a
 minimum distance for repeating labels. The distance can be in ``mm`` or in
 ``map units``.
 
