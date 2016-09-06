@@ -836,12 +836,10 @@ Data defined override setup
 Beside many options in the vector layer properties dialog or settings in the print
 composer, you can find a |dataDefined| :sup:`Data defined override` icon.
 Thanks to :ref:`expressions <vector_expressions>` based on layer attributes or item
-settings, prebuild or custom functions and variables, this tool allows you to set
-dynamic value for the concerned parameter. When enabled, the value returned by
-this widget is applied to the parameter regardless its normal value (checkbox,
-textbox, slider...).
-
-.. ToDo: Add above a hyperlink to variables section once written
+settings, prebuild or custom functions and :ref:`variables <general_tools_variables>`,
+this tool allows you to set dynamic value for the concerned parameter. When enabled,
+the value returned by this widget is applied to the parameter regardless its normal
+value (checkbox, textbox, slider...).
 
 Clicking the |dataDefined| :sup:`Data defined override` icon shows:
 
@@ -853,9 +851,9 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows:
 * :guilabel:`Paste` and :guilabel:`Copy` buttons,
 * :guilabel:`Clear` button to remove the setup.
 
-When the :index:`data-defined override` option is setup correctly the icon is yellow
-|dataDefineOn| or |dataDefineExpressionOn|; if it is broken, the icon is red
-|dataDefineError| or |dataDefineExpressionError|.
+.. tip:: When the :index:`data-defined override` option is setup correctly the
+   icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
+   the icon is red |dataDefineError| or |dataDefineExpressionError|.
 
 
 Parameters that can be used with data-defined tools are:
