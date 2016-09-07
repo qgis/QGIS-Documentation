@@ -1338,7 +1338,7 @@ Let's have a look at some examples:
 
    "name" || ', ' || "place"
 
-   Returns:
+   Returns::
 
       John Smith, Paris
 
@@ -1350,7 +1350,7 @@ Let's have a look at some examples:
       'My name is ' || "name" || 'and I live in ' || "place"
       concat('My name is ', name, ' and I live in ', "place")
 
-   Returns:
+   Returns::
 
       My name is John Smith and I live in Paris
 
@@ -1361,11 +1361,11 @@ Let's have a look at some examples:
 
       concat('My name is ', name, ' and I live in ' || place)
 
-   Returns:
+   Returns::
 
       My name is John Smith and I live in Paris
 
-   Or, if the field 'place' is NULL, returns:
+   Or, if the field 'place' is NULL, returns::
 
       My name is John Smith
 
@@ -1376,7 +1376,7 @@ Let's have a look at some examples:
 
       concat('My name is ', "name", '\n' , 'I live in ' , "place")
 
-   Returns:
+   Returns::
 
       My name is John Smith
       I live in Paris
@@ -1389,7 +1389,7 @@ Let's have a look at some examples:
       'The area of ' || "place" || ' has a size of '
       || round($area/10000) || ' ha'
 
-   Returns:
+   Returns::
 
       The area of Paris has a size of 10500 ha
 
@@ -1401,7 +1401,7 @@ Let's have a look at some examples:
       concat('This place is a ',
       CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END)
 
-   Returns:
+   Returns::
 
        This place is a town
 
