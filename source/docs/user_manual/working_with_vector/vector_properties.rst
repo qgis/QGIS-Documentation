@@ -12,9 +12,9 @@ The Vector Properties Dialog
       :local:
 
 The :guilabel:`Layer Properties` dialog for a vector layer provides general
-settings to manage appearance of layer features in the map (symbology, labeling,
-diagrams), interaction with the mouse (actions, map tips, form design). It also
-provides information about the layer.
+settings to manage appearance of layer features in the map (symbology,
+labeling, diagrams), interaction with the mouse (actions, map tips, form
+design). It also provides information about the layer.
 
 To access the :guilabel:`Layer Properties` dialog, double-click on a layer in
 the legend or right-click on the layer and select :menuselection:`Properties`
@@ -29,9 +29,9 @@ from the pop-up menu.
 
    Using the :menuselection:`Styles --> Add` combobox at the bottom of the
    :guilabel:`Layer Properties` dialog, you can save as many combinations of
-   layer properties settings (symbology, labeling, diagram, fields form, actions...)
-   as you want. Then, simply switch between styles from the context menu of
-   the layer in :guilabel:`Layers Panel` to automatically get different
+   layer properties settings (symbology, labeling, diagram, fields form,n
+   actions...) as you want. Then, simply switch between styles from the context
+   menu of the layer in :guilabel:`Layers Panel` to automatically get different
    representations of your data.
 
 
@@ -48,8 +48,8 @@ Layer Info
 
 * Change the display name of the layer in :guilabel:`displayed as`
 * Define the :guilabel:`Layer source` of the vector layer
-* Define the :guilabel:`Data source encoding` to define provider-specific options
-  and to be able to read the file
+* Define the :guilabel:`Data source encoding` to define
+  provider-specific options and to be able to read the file
 
 Coordinate Reference System
 ---------------------------
@@ -64,11 +64,11 @@ Coordinate Reference System
 Scale dependent visibility
 --------------------------
 
-You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)`
-scale, defining a range of scale in which features will be visible.
-Out of this range, they are hidden.
-The |mapIdentification| :sup:`Set to current canvas scale` button helps
-you use the current map canvas scale as boundary of the range visibility.
+You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
+(exclusive)` scale, defining a range of scale in which features will be
+visible. Out of this range, they are hidden. The |mapIdentification|
+:sup:`Set to current canvas scale` button helps you use the current map
+canvas scale as boundary of the range visibility.
 
 .. do not change the order of reference-tag and only-tag, this figure has
    an external reference.
@@ -90,22 +90,21 @@ you use the current map canvas scale as boundary of the range visibility.
 Query Builder
 -------------
 
-Under the **Provider Feature Filter** frame,
-the :index:`Query Builder` allows you to define a subset of the features in the
-layer using a SQL-like WHERE clause and to display the result in the main window.
-As long as the query is active, only the features corresponding to its result
-are available in the project. The query result can be saved as a new vector layer.
+Under the **Provider Feature Filter** frame, the :index:`Query Builder` allows
+you to define a subset of the features in the layer using a SQL-like WHERE
+clause and to display the result in the main window. As long as the query is
+active, only the features corresponding to its result are available in the
+project. The query result can be saved as a new vector layer.
 
-The **Query Builder** is accessible through the eponym term at the bottom of the
-:guilabel:`General` menu in the Layer Properties.
-Under :guilabel:`Feature subset`, click on the **[Query Builder]** button
-to open the :guilabel:`Query builder`.
-For example, if you have a ``regions`` layer with a ``TYPE_2`` field, you could
-select only regions that are ``borough`` in the :guilabel:`Provider specific filter expression`
-box of the Query Builder. Figure_vector_general_2_ shows an example of the Query Builder
-populated with the :file:`regions.shp` layer from the QGIS sample data.
-The Fields, Values and Operators sections help you to construct the SQL-like
-query.
+The **Query Builder** is accessible through the eponym term at the bottom of
+the :guilabel:`General` menu in the Layer Properties. Under :guilabel:`Feature
+subset`, click on the **[Query Builder]** button to open the :guilabel:`Query
+builder`. For example, if you have a ``regions`` layer with a ``TYPE_2``
+field, you could select only regions that are ``borough`` in the
+:guilabel:`Provider specific filter expression` box of the Query Builder.
+Figure_vector_general_2_ shows an example of the Query Builder populated with
+the :file:`regions.shp` layer from the QGIS sample data. The Fields, Values
+and Operators sections help you to construct the SQL-like query.
 
 .. _figure_vector_general_2:
 
@@ -119,36 +118,37 @@ query.
    Query Builder
 
 The **Fields list** contains all attribute columns of the attribute table to be
-searched. To add an attribute column to the SQL WHERE clause field, double click
-its name in the Fields list. Generally, you can use the various fields, values and
-operators to construct the query, or you can just type it into the SQL box.
+searched. To add an attribute column to the SQL WHERE clause field, double
+click its name in the Fields list. Generally, you can use the various fields,
+values and operators to construct the query, or you can just type it into the
+SQL box.
 
-The **Values list** lists the values of an attribute table. To list all possible
-values of an attribute, select the attribute in the Fields list and click
-the **[all]** button. To list the first 25 unique values of an attribute column,
-select the attribute column in the Fields list and click the
-**[Sample]** button. To add a value to the SQL WHERE clause field, double
-click its name in the Values list.
+The **Values list** lists the values of an attribute table. To list all
+possible values of an attribute, select the attribute in the Fields list and
+click the **[all]** button. To list the first 25 unique values of an attribute
+column, select the attribute column in the Fields list and click the
+**[Sample]** button. To add a value to the SQL WHERE clause field, double click
+its name in the Values list.
 
-The **Operators section** contains all usable operators. To add an operator
-to the SQL WHERE clause field, click the appropriate button. Relational
-operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), and logical
+The **Operators section** contains all usable operators. To add an operator to
+the SQL WHERE clause field, click the appropriate button. Relational operators
+( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), and logical
 operators (``AND``, ``OR``, ...) are available.
 
 The **[Test]** button shows a message box with the number of features
 satisfying the current query, which is useful in the process of query
-construction. The **[Clear]** button clears the text in the SQL WHERE
-clause text field. The **[OK]** button closes the window and selects
-the features satisfying the query. The **[Cancel]** button closes the
-window without changing the current selection.
+construction. The **[Clear]** button clears the text in the SQL WHERE clause
+text field. The **[OK]** button closes the window and selects the features
+satisfying the query. The **[Cancel]** button closes the window without
+changing the current selection.
 
-QGIS treats the resulting subset acts as if it where the entire layer.
-For example if you applied the filter above for 'Borough', you can not
-display, query, save or edit Anchorage, because that is a 'Municipality'
-and therefore not part of the subset.
+QGIS treats the resulting subset acts as if it where the entire layer. For
+example if you applied the filter above for 'Borough', you can not display,
+query, save or edit Anchorage, because that is a 'Municipality' and therefore
+not part of the subset.
 
-The only exception is that unless your layer is part of a database, using
-a subset will prevent you from editing the layer.
+The only exception is that unless your layer is part of a database, using a
+subset will prevent you from editing the layer.
 
 
 
@@ -160,24 +160,23 @@ a subset will prevent you from editing the layer.
 Style Menu
 ==========
 
-The :index:`Style` menu provides you with a comprehensive tool for rendering and
-symbolizing your vector data.
-You can use tools that are common to all vector data, as well as special symbolizing
-tools that were designed for the different kinds of vector data. However all types share
-the following dialog structure: in the upper part, you have a widget that helps you
-prepare the classification and the symbol to use for features
-and at the bottom the :ref:`layer_rendering` widget.
+The :index:`Style` menu provides you with a comprehensive tool for rendering
+and symbolizing your vector data. You can use tools that are common to all
+vector data, as well as special symbolizing tools that were designed for the
+different kinds of vector data. However all types share the following dialog
+structure: in the upper part, you have a widget that helps you prepare the
+classification and the symbol to use for features and at the bottom the
+:ref:`layer_rendering` widget.
 
 .. tip:: **Export vector symbology**
 
    You have the option to export vector symbology from QGIS into Google \*.kml,
    \*.dxf and MapInfo \*.tab files. Just open the right mouse menu of the layer
-   and click on :menuselection:`Save As...` to specify the name
-   of the output file and its format.
-   In the dialog, use the :menuselection:`Symbology export` menu to save the symbology
-   either as :menuselection:`Feature symbology -->` or as :menuselection:`Symbol
-   layer symbology -->`.
-   If you have used symbol layers, it is recommended to use the second setting.
+   and click on :menuselection:`Save As...` to specify the name of the output file
+   and its format. In the dialog, use the :menuselection:`Symbology export` menu
+   to save the symbology either as :menuselection:`Feature symbology -->` or as
+   :menuselection:`Symbol layer symbology -->`. If you have used symbol layers,
+   it is recommended to use the second setting.
 
 .. ToDo: add information about the export options
 
@@ -185,17 +184,17 @@ Features rendering
 ------------------
 
 The renderer is responsible for drawing a feature together with the correct
-symbol. Regardless layer geometry type, there are four common types of renderers:
-single symbol, categorized, graduated and rule-based. For point layers, there are
-a point displacement and a heatmap renderers available while polygon layers can
-also be rendered with the inverted renderer.
+symbol. Regardless layer geometry type, there are four common types of
+renderers: single symbol, categorized, graduated and rule-based. For point
+layers, there are a point displacement and a heatmap renderers available while
+polygon layers can also be rendered with the inverted renderer.
 
-There is no continuous color renderer, because it is in fact only a special case
-of the graduated renderer. The categorized and graduated renderers can be created
-by specifying a symbol and a color ramp - they will set the colors for symbols
-appropriately.
-For each data type (points, lines and polygons), vector symbol layer types are available.
-Depending on the chosen renderer, the dialog provides different additional sections.
+There is no continuous color renderer, because it is in fact only a special
+case of the graduated renderer. The categorized and graduated renderers can be
+created by specifying a symbol and a color ramp - they will set the colors for
+symbols appropriately. For each data type (points, lines and polygons), vector
+symbol layer types are available. Depending on the chosen renderer, the dialog
+provides different additional sections.
 
 .. note::
 
@@ -264,9 +263,9 @@ symbols with totally transparent fill/border to achieve this.
 Categorized Renderer
 ....................
 
-The |categorizedSymbol| :guilabel:`Categorized Renderer` is used to render
-all features from a layer, using an user-defined symbol whose aspect reflects
-the value of a selected feature's attribute. The :index:`Categorized` menu allows
+The |categorizedSymbol| :guilabel:`Categorized Renderer` is used to render all
+features from a layer, using an user-defined symbol whose aspect reflects the
+value of a selected feature's attribute. The :index:`Categorized` menu allows
 you to select:
 
 * The attribute (using the Column listbox or the |expressionEditorOpen|
@@ -276,9 +275,9 @@ you to select:
 * The range of colors (using the Color ramp listbox) from which color applied
   to the symbol is selected
 
-Then click on Classify button to create :index:`classes` from the distinct value of
-the attribute column. Each class can be disabled unchecking the checkbox at
-the left of the class name.
+Then click on Classify button to create :index:`classes` from the distinct
+value of the attribute column. Each class can be disabled unchecking the
+checkbox at the left of the class name.
 
 To change symbol, value and/or label of the class, just double click
 on the item you want to change.
@@ -634,7 +633,7 @@ units).
 
 .. only:: html
 
-     **Figure Symbology 10:**
+   **Figure Symbology 10:**
 
 .. figure:: /static/user_manual/working_with_vector/2_5dsymbol.png
    :align: center
@@ -985,62 +984,73 @@ The following steps describe simple labeling without using the
 :guilabel:`Data defined override` functions, which are situated next to
 the drop-down menus - see :ref:`data_defined_labeling` for an use-case.
 
-Text menu
----------
-
-You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_).
-Use the :guilabel:`Type case` option to influence the text rendering.
-You have the possibility to render the text 'All uppercase', 'All lowercase'
-or 'Capitalize first letter'. Use the :ref:`blend-modes` to create effects
-known from graphics programs.
-
-
 .. _figure_labels_1:
 
 .. only:: html
 
    **Figure Labels 1:**
 
-.. figure:: /static/user_manual/working_with_vector/label_points.png
+.. figure:: /static/user_manual/working_with_vector/label_menu_text.png
    :align: center
 
-   Smart labeling of vector point layers
+   Layer labeling settings - Text tab
 
-Formatting menu
----------------
+Text tab
+--------
 
-In the :guilabel:`Formatting` menu, you can define a character for a line break
-in the labels with the 'Wrap on character' function. You can format the
-:guilabel:`Line Height` and the alignment. For the latter typical values are
-available plus *Follow label placement*. When set to this mode, text alignment
-for labels will be dependent on the final placement of the label relative to the
-point. E.g., if the label is placed to the left of the point then the label will
-be right aligned, and if it is placed to the right of the point then the label
+In the :guilabel:`Text` tab, you can define the :guilabel:`Font`,
+:guilabel:`Style`, and :guilabel:`Size` of your labels' text (see
+Figure_labels_1_). There are options available to set the labels'
+:guilabel:`Color` and :guilabel:`Transparency`. Use the :guilabel:`Type
+case` option to change the capitalization style of the text. You have
+the possibility to render the text as 'All uppercase', 'All lowercase'
+or 'Capitalize first letter'. In :guilabel:`Spacing`, you can change the space
+between words and between individual letters. Finally, use the
+:guilabel:`Blend mode` option to determine how your labels will mix with the
+map features below them (see more about it in :ref:`blend-modes`).
+
+Formatting tab
+--------------
+
+In the :guilabel:`Formatting` tab, you can define a character for a line break
+in the labels with the :guilabel:`Wrap on character` option. You can also
+format the :guilabel:`Line Height` and the :guilabel:`alignment`. For the
+latter, typical values are available (left, right, and center), plus
+*Follow label placement* for point layers. When set to this mode, text
+alignment for labels will be dependent on the final placement of the label
+relative to the point. E.g., if the label is placed to the left of the point,
+then the label will be right aligned, while if it is placed to the right, it
 will be left aligned.
 
-For line vector layers you can include line directions symbols. There are options
-specifying the type of symbol and the symbol placement.
+For line vector layers you can include :guilabel:`Line directions symbols`
+to help determine the lines directions. They work particularly well when
+used with the *curved* or *Parallel* placement options from the
+:guilabel:`Placement` tab. There are options to set the symbols position, and
+to :guilabel:`reverse direction`.
 
-Use the |checkbox| :guilabel:`Formatted numbers` option to format the numbers in
-an attribute table. Here, decimal places may be inserted.
-If you enable this option, three decimal places are initially set by default.
+Use the |checkbox| :guilabel:`Formatted numbers` option to format numeric
+labels. You can set the number of :guilabel:`Decimal places`. By default, 3
+decimal places will be used. Use the |checkbox| :guilabel:`Show plus sign` if
+you want to show the plus sign in positive numbers.
 
-Buffer menu
------------
+Buffer tab
+----------
 
-To create a buffer, just activate the |checkbox| :guilabel:`Draw text buffer`
-checkbox in the :guilabel:`Buffer` menu.
-The buffer color is variable. Here, you can also use blend modes.
-If the |checkbox| :guilabel:`color buffer's fill` checkbox is activated, it will
-interact with partially transparent text and give mixed color transparency
-results. Turning off the buffer fill fixes that issue (except where the interior
-aspect of the buffer's stroke intersects with the text's fill) and also allows
-you to make outlined text.
+To create a buffer around the labels, activate the |checkbox|
+:guilabel:`Draw text buffer` checkbox in the :guilabel:`Buffer` tab. You can
+set the buffer's :guilabel:`Size`, :guilabel:`color`, and
+:guilabel:`Transparency`. The buffer expands from the label's outline
+, so, if the |checkbox| :guilabel:`color buffer's fill` checkbox is
+activated, the buffer interior is filled. This may be relevant when
+using partially transparent labels or with non-normal blending
+modes, which will allow seeing behind the label's text. Deactivating
+|checkbox| :guilabel:`color buffer's fill` checkbox (while using totally
+transparent labels) will allow you to create outlined text labels.
 
-Background menu
----------------
+Background tab
+--------------
 
-In the :guilabel:`Background` menu, you can define with :guilabel:`Size X` and
+In the :guilabel:`Background` tab, you can define with :guilabel:`Size X` and
 :guilabel:`Size Y` the shape of your background.
 Use :guilabel:`Size type` to insert an additional 'Buffer' into your background.
 The buffer size is set by default here.
@@ -1099,9 +1109,9 @@ Placement for point layers
 ..........................
 
 With the |radioButtonOn| :guilabel:`Cartographic` placement mode,
-point labels are generated with best visual relationship with the point feature,
-following ideal cartographic placement rules. Labels can be placed
-at a set :guilabel:`Distance` either from the point feature itself
+point labels are generated with a better visual relationship with the
+point feature, following ideal cartographic placement rules. Labels can be
+placed at a set :guilabel:`Distance` either from the point feature itself
 or from the bounds of the symbol used to represent the feature.
 The latter option is especially useful when the symbol size isn't fixed,
 e.g. if it's set by a data defined size or when using different symbols
@@ -1118,38 +1128,38 @@ By default, placements are prioritised in the following order:
 #. top, slightly right
 #. bottom, slightly left.
 
-Placement priority can however be customized or set for an individual
+Placement priority can, however, be customized or set for an individual
 feature using a data defined list of prioritised positions.
 This also allows only certain placements to be used, so e.g.
 for coastal features you can prevent labels being placed over the land.
 
-The |radioButtonOn| :guilabel:`Around point` setting places the label in an equal
-radius (set in :guilabel:`Distance`) circle around the feature. The placement of
-the label can even be constrained using the :guilabel:`Quadrant` option.
+The |radioButtonOn| :guilabel:`Around point` setting places the label in an
+equal radius (set in :guilabel:`Distance`) circle around the feature. The
+placement of the label can even be constrained using the :guilabel:`Quadrant`
+option.
 
-In the |radioButtonOn| :guilabel:`Offset from point` placement, labels are placed
-at a fixed offset from the point feature.
-You can select the :guilabel:`Quadrant` in which to place your label. You are also
-able to set the X and Y offset distances between the points and their labels
-and can alter the angle of the label placement with the :guilabel:`Rotation` setting.
-Thus, placement in a selected quadrant with a defined rotation is possible.
+With the |radioButtonOn| :guilabel:`Offset from point`, labels are
+placed at a fixed offset from the point feature. You can select the
+:guilabel:`Quadrant` in which to place your label. You are also able to set
+the :guilabel:`Offset X,Y` distances between the points and their labels and
+can alter the angle of the label placement with the :guilabel:`Rotation`
+setting. Thus, placement in a selected quadrant with a defined rotation is
+possible.
 
 Placement for line layers
 .........................
 
 Label options for line layers include |radioButtonOn| :guilabel:`Parallel`,
 |radioButtonOff| :guilabel:`Curved` or |radioButtonOff| :guilabel:`Horizontal`.
-For the |radioButtonOn| :guilabel:`Parallel` and
-|radioButtonOff| :guilabel:`Curved` options, you can set the position to
-|checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line` and
-|checkbox| :guilabel:`Below line`. It's possible to select several options at once.
-In that case, QGIS will look for the optimal label position. For Parallel and
-curved placement you can also use the line orientation for the position of the label.
-Additionally, you can define a :guilabel:`Maximum angle between curved characters` when
-selecting the |radioButtonOff| :guilabel:`Curved` option (see Figure_labels_2_ ).
-
-For all three placement options you can set up a minimum distance for repeating
-labels. The distance can be in ``mm`` or in ``map units``.
+For the |radioButtonOn| :guilabel:`Parallel` and |radioButtonOff|
+:guilabel:`Curved` options, you can set the position to |checkbox|
+:guilabel:`Above line`, |checkbox| :guilabel:`On line` and |checkbox|
+:guilabel:`Below line`. It's possible to select several options at once. In
+that case, QGIS will look for the optimal label position. For Parallel and
+curved placement options, you can also use the line orientation for the
+position of the label. Additionally, you can define a :guilabel:`Maximum
+angle between curved characters` when selecting the |radioButtonOff|
+:guilabel:`Curved` option (see Figure_labels_2_).
 
 .. _figure_labels_2:
 
@@ -1157,37 +1167,44 @@ labels. The distance can be in ``mm`` or in ``map units``.
 
    **Figure Labels 2:**
 
-.. figure:: /static/user_manual/working_with_vector/label_line.png
+.. figure:: /static/user_manual/working_with_vector/line_label_placement.png
    :align: center
 
-   Smart labeling of vector line layers
+   Label placement examples in lines
+
+For all three placement options, in :guilabel:`Repeat`, you can set up a
+minimum distance for repeating labels. The distance can be in ``mm`` or in
+``map units``.
 
 Placement for polygon layers
 ............................
 
 You can choose one of the following options for placing labels in polygons:
-|radioButtonOn| :guilabel:`Offset from centroid`, |radioButtonOff| :guilabel:`Horizontal
-(slow)`, |radioButtonOff| :guilabel:`Around centroid`,
-|radioButtonOff| :guilabel:`Free` and
-|radioButtonOff| :guilabel:`Using perimeter`.
+|radioButtonOn| :guilabel:`Offset from centroid`, |radioButtonOff|
+:guilabel:`Horizontal (slow)`, |radioButtonOff| :guilabel:`Around centroid`,
+|radioButtonOff| :guilabel:`Free (slow)` and |radioButtonOff|
+:guilabel:`Using perimeter`.
 
-In the |radioButtonOn| :guilabel:`Offset from centroid` settings you can specify
-if the centroid is of the |radioButtonOn| :guilabel:`visible polygon` or
-|radioButtonOff| :guilabel:`whole polygon`. That means that either the centroid
-is used for the polygon you can see on the map or the centroid is determined for
-the whole polygon, no matter if you can see the whole feature on the map.
-You can place your label within a specific quadrant, and define offset and rotation.
-The |radioButtonOff| :guilabel:`Around centroid` setting places the label at a
-specified distance around the centroid. Again, you can define
-|radioButtonOn| :guilabel:`visible polygon`
-or |radioButtonOff| :guilabel:`whole polygon` for the centroid.
+In the |radioButtonOn| :guilabel:`Offset from centroid` settings you can
+specify if the centroid is of the |radioButtonOn| :guilabel:`visible
+polygon` or |radioButtonOff| :guilabel:`whole polygon`. That means that
+either the centroid is used for the polygon you can see on the map or the
+centroid is determined for the whole polygon, no matter if you can see the
+whole feature on the map. You can place your label within a specific
+quadrant, and define offset and rotation. The |radioButtonOff|
+:guilabel:`Around centroid` setting places the label at a specified distance
+around the centroid. Again, you can define |radioButtonOn|
+:guilabel:`visible polygon` or |radioButtonOff| :guilabel:`whole polygon`
+for the centroid.
 
-With the |radioButtonOff| :guilabel:`Using perimeter` settings, you can define a
-position and a distance for the label. For the position,
-|checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
-|checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation
-dependent position` are possible. You can specify the distance between the label
-and the polygon outline, as well as the repeat interval for the label.
+With the |radioButtonOff| :guilabel:`Using perimeter` option, the label
+will be drawn next to the polygon boundary. The label will behave like the
+parallel option for lines. You can define a position and a distance for the
+label. For the position, |checkbox| :guilabel:`Above line`, |checkbox|
+:guilabel:`On line`, |checkbox| :guilabel:`Below line` and |checkbox|
+:guilabel:`Line orientation dependent position` are possible. You can
+specify the distance between the label and the polygon outline, as well as
+the repeat interval for the label.
 
 .. _figure_labels_3:
 
@@ -1195,16 +1212,17 @@ and the polygon outline, as well as the repeat interval for the label.
 
    **Figure Labels 3:**
 
-.. figure:: /static/user_manual/working_with_vector/label_area.png
+.. figure:: /static/user_manual/working_with_vector/polygon_label_placement.png
    :align: center
 
-   Smart labeling of vector polygon layers
+   Label placement examples in polygons
 
-In the :guilabel:`priority` section you can define the priority with which labels
-are rendered for all three vector layer types (point, line, polygon). This
-placement option interact with labels of the other vector layers in the map
-canvas. If there are labels from different layers in the same location, the
-label with the higher priority will be displayed and the others will be left out.
+In the :guilabel:`priority` section you can define the priority with which
+labels are rendered for all three vector layer types (point, line, polygon).
+This placement option interacts with the labels from other vector layers in
+the map canvas. If there are labels from different layers in the same
+location, the label with the higher priority will be displayed and the
+others will be left out.
 
 Rendering menu
 --------------
@@ -1269,13 +1287,15 @@ certain features are more likely to be covered than others.
 For polygon layers, you can choose the type of obstacle features could be
 by minimising the labels placement:
 
-* **over the feature's interior**: avoids placing labels over interior of polygon
-  (prefers placing labels totally outside or just slightly inside polygon)
-* or **over the feature's boundary**: avoids placing labels over boundary of polygon
-  (prefers placing labels outside or completely inside the polygon). It can be e.g.
-  useful for regional boundary layers, where the features cover an entire area.
-  In this case it's impossible to avoid placing labels within these features,
-  and it looks much better to avoid placing them over the boundaries between features.
+* **over the feature's interior**: avoids placing labels over the interior of
+  the polygon (prefers placing labels totally outside or just slightly inside
+  the polygon)
+* or **over the feature's boundary**: avoids placing labels over boundary of
+  the polygon (prefers placing labels outside or completely inside the
+  polygon). E.g., it can be useful for regional boundary layers, where the
+  features cover an entire area. In this case, it's impossible to avoid
+  placing labels within these features, and it looks much better to avoid
+  placing them over the boundaries between features.
 
 
 .. _labeling_with_expressions:
@@ -1284,11 +1304,11 @@ by minimising the labels placement:
 Define labels based on expressions
 ----------------------------------
 
-QGIS allows to use expressions to label features. Just click the
-|expressionEditorOpen| icon in the |labeling| :sup:`Labels`
-menu of the properties dialog. In figure_labels_4_ you see a sample expression
-to label the alaska regions with name and area size, based on the field 'NAME_2',
-some descriptive text and the function ``$area`` in combination with
+QGIS allows using expressions to label features. Just click the
+|expressionEditorOpen| icon in the |labeling| :sup:`Labels` menu of the
+properties dialog. In figure_labels_4_, you see a sample expression to label
+the alaska regions with name and area size, based on the field 'NAME_2',
+some descriptive text, and the function ``$area`` in combination with
 ``format_number()`` to make it look nicer.
 
 .. _figure_labels_4:
@@ -1299,59 +1319,91 @@ some descriptive text and the function ``$area`` in combination with
 
 .. figure:: /static/user_manual/working_with_vector/label_expression.png
    :align: center
-   :width: 30em
 
    Using expressions for labeling
 
 :index:`Expression based labeling` is easy to work with. All you have to take
 care of is that:
 
-* you need to combine all elements (strings, fields and functions)
+* You need to combine all elements (strings, fields, and functions)
   with a string concatenation function such as ``concat``, ``+`` or ``||``. Be
-  aware that in some situations (null or numeric value involved) not all of
-  these tools will fit your need
-* strings are written in 'single quotes'
-* fields are written in "double quotes" or without any quote.
+  aware that in some situations (when null or numeric value are involved) not
+  all of these tools will fit your need.
+* Strings are written in 'single quotes'.
+* Fields are written in "double quotes" or without any quote.
 
 Let's have a look at some examples:
 
-::
+#. Label based on two fields 'name' and 'place' with a comma as separator::
 
-   # label based on two fields 'name' and 'place' with a comma as separator
    "name" || ', ' || "place"
 
-   -> John Smith, Paris
+   Returns::
 
-   # label based on two fields 'name' and 'place' with other texts
-   'My name is ' + "name" + 'and I live in ' + "place"
-   'My name is ' || "name" || 'and I live in ' || "place"
-   concat('My name is ', name, ' and I live in ', "place")
+      John Smith, Paris
 
-   -> My name is John Smith and I live in Paris
+#. Label based on two fields 'name' and 'place' with other texts:
 
-   # label based on two fields 'name' and 'place' with other texts
-   # combining different concatenation functions
-   concat('My name is ', name, ' and I live in ' || place)
+   .. code-block:: none
 
-   -> My name is John Smith and I live in Paris
-   -> My name is John Smith     # if the field 'place' is NULL
+      'My name is ' + "name" + 'and I live in ' + "place"
+      'My name is ' || "name" || 'and I live in ' || "place"
+      concat('My name is ', name, ' and I live in ', "place")
 
-   # multi-line label based on two fields 'name' and 'place' with a descriptive text
-   concat('My name is ', "name", '\n' , 'I live in ' , "place")
-   -> My name is John Smith
+   Returns::
+
+      My name is John Smith and I live in Paris
+
+#. Label based on two fields 'name' and 'place' with other texts combining
+   different concatenation functions:
+
+   .. code-block:: none
+
+      concat('My name is ', name, ' and I live in ' || place)
+
+   Returns::
+
+      My name is John Smith and I live in Paris
+
+   Or, if the field 'place' is NULL, returns::
+
+      My name is John Smith
+
+#. Multi-line label based on two fields 'name' and 'place' with a
+   descriptive text:
+
+   .. code-block:: none
+
+      concat('My name is ', "name", '\n' , 'I live in ' , "place")
+
+   Returns::
+
+      My name is John Smith
       I live in Paris
 
-   # label based on a field and the $area function
-   # to show the place name and its rounded area size in a converted unit.
-   'The area of ' || "place" || ' has a size of ' || round($area/10000) || ' ha'
+#. Label based on a field and the $area function to show the place's name
+   and its rounded area size in a converted unit:
 
-   -> The area of Paris has a size of 10500 ha
+   .. code-block:: none
 
-   # create a CASE ELSE condition. If the population value in field
-   # population is <= 50000 it is a town, otherwise a city.
-   concat('This place is a ', CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END)
+      'The area of ' || "place" || ' has a size of '
+      || round($area/10000) || ' ha'
 
-  -> This place is a town
+   Returns::
+
+      The area of Paris has a size of 10500 ha
+
+#. Create a CASE ELSE condition. If the population value in field
+   `population` is <= 50000 it is a town, otherwise it is a city:
+
+   .. code-block:: none
+
+      concat('This place is a ',
+      CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END)
+
+   Returns::
+
+       This place is a town
 
 As you can see in the expression builder, you have hundreds of functions available
 to create simple and very complex expressions to label your data in QGIS. See
@@ -1515,7 +1567,7 @@ widgets. These widgets are:
 * **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
 * **Relation Reference**: This widget lets you embed the feature form of the
-  referenced layer on the feature form   of the actual layer.
+  referenced layer on the feature form of the actual layer.
   See :ref:`vector_relations`.
 * **Text edit** (default): This opens a text edit field that allows simple
   text or multiple lines to be used. If you choose multiple lines you
@@ -1784,9 +1836,9 @@ Placement
 :guilabel:`Placement` helps to define diagram position.
 According to the layer geometry type, it offers different options for the placement:
 
-* 'Over the point' or 'Around  the point' for point geometry.
+* 'Over the point' or 'Around the point' for point geometry.
   The latter variable requires a radius to follow.
-* 'Over the line' or 'Around  the line' for line geometry. Like point feature,
+* 'Over the line' or 'Around the line' for line geometry. Like point feature,
   the last variable requires a distance to respect and user can specify the
   diagram placement relative to the feature ('above', 'on' and/or 'below' the line)
   It's possible to select several options at once.
