@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _composer_items:
 

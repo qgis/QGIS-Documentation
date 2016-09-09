@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _`label.getstarted`:
 

@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _qgis.documentation.features:
 

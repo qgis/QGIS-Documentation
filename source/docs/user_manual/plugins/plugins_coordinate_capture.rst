@@ -1,6 +1,3 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not up to date with release
 
 .. _coordcapt:
 

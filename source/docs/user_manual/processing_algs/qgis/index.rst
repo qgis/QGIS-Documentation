@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 ***********************
 QGIS algorithm provider

@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _processing_algs:
 

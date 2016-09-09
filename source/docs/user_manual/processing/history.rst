@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _`processing.history`:
 

@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _overview_composer:
 

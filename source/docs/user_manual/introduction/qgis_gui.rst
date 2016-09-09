@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _`label_qgismainwindow`:
 

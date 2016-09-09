@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _sec_raster_analysis:
 

@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 Basic Grid Analysis
 ===================

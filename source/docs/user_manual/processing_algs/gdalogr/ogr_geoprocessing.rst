@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 OGR geoprocessing
 =================

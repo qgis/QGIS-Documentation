@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. index:: Virtual_Layers
 

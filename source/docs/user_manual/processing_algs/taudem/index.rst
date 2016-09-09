@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 *************************
 TauDEM algorithm provider

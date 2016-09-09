@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 Raster Properties Dialog
 ========================

@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 Specialized Grid Analysis
 =========================

@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _`sec_gpstracking`:
 

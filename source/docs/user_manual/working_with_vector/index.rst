@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _label_workingvector:
 

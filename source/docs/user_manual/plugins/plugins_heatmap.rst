@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _heatmap_plugin:
 

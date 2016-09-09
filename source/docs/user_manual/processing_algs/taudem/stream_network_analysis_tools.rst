@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 Stream Network Analysis
 =======================

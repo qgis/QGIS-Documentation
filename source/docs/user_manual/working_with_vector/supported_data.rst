@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. _supported_format:
 

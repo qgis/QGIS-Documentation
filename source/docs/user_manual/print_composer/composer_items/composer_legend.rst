@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. index::
    single: legend_composer; Map_Legend

@@ -1,5 +1,3 @@
-|updatedisclaimer|
-
 
 The Basic Shape Items
 =====================
