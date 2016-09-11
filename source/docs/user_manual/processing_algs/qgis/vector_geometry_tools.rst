@@ -31,10 +31,10 @@ Outputs
 .......
 
 ``Valid output`` [vector]
-  Ouput valid features, unchanged.
+  Output valid features, unchanged.
 
 ``Invalid output`` [vector]
-  Output invalid features, with an additionnal *_errors* field describing the validity problems.
+  Output invalid features, with an additional *_errors* field describing the validity problems.
 
 ``Error output`` [vector]
   Output exact position on the validity problems as a point layer with a *message* field.
