@@ -1,11 +1,12 @@
+|updatedisclaimer|
+
+Writing new Processing algorithms as python scripts
+---------------------------------------------------
 
 .. only:: html
 
    .. contents::
       :local:
-
-Writing new Processing algorithms as python scripts
----------------------------------------------------
 
 You can create your own algorithms by writing the corresponding Python code and
 adding a few extra lines to supply additional information needed to define the

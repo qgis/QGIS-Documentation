@@ -1,3 +1,5 @@
+|updatedisclaimer|
+
 .. index:: Attribute table
 .. _sec_attribute_table:
 
