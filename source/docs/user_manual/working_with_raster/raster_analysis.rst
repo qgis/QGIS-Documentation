@@ -76,7 +76,7 @@ and apply the result to a raster in one step.
 
   ("elevation@1" >= 0) * "elevation@1"
 
-In other words, for every cell greater than or equal to 0, set its value to 1. Otherwise set
+In other words, for every cell greater than or equal to 0, keep its original value by multiplying it by 1. Otherwise set
 it to 0. This creates the mask on the fly.
 
 
