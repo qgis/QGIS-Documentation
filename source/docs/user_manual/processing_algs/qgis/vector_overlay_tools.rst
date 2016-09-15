@@ -168,6 +168,40 @@ Console usage
 See also
 ........
 
+Split lines with lines
+----------------------
+
+Description
+...........
+
+This algorithm splits the lines in a line layer using the lines in another line layer to define the breaking points.
+Intersection between geometries in both layers are considered as split points.
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  Line layer containing the lines to be split.
+
+``Split layer`` [vector: line]
+  Line layer whose lines are used to define the breaking points.
+
+Outputs
+.......
+
+``Splitted`` [vector]
+  Output layer with split lines from input layer.
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:splitlineswithlines', input_layer, split_layer, splitted)
+
+See also
+........
+
 Symmetrical difference
 -----------------------
 

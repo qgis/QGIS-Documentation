@@ -334,29 +334,38 @@ Dissolve
 Description
 ...........
 
-<put algorithm description here>
+This algorithm combines the geometries of a polygon or line layer. It either combines
+all geometries in the layer or combines the geometries based on a common value in
+a certain field. If the geometries to be combined are spatially separated from each
+other the output will be multi geometries. In case the input is a polygon layer, common
+boundaries of adjacent polygons being combined are erased.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: polygon, line]
-  <put parameter description here>
+  Line or polygon layer to be dissolved.
 
 ``Dissolve all (do not use field)`` [boolean]
-  <put parameter description here>
+  Dissolve all geometries; values in the output layer's fields are the ones of
+  the first input feature that happens to be processed. Returns one feature whose geometry represents
+  all geometries of the input layer.
 
   Default: *True*
 
 ``Unique ID field`` [tablefield: any]
   Optional.
 
-  <put parameter description here>
+  If features share a common value in this field their geometries will be combined.
+  Values in the output layer's fields are the ones of the first input feature that happens to be processed.
+  Returns one feature for each unique value in the field. The feature's
+  geometry represents all input geometries with this value.
 
 Outputs
 .......
 
 ``Dissolved`` [vector]
-  <put output description here>
+  output layer, either (multi) line or (multi) polygon
 
 Console usage
 .............
@@ -374,24 +383,31 @@ Eliminate sliver polygons
 Description
 ...........
 
-<put algorithm description here>
+This algorithm combines selected polygons of the input layer with certain adjacent polygons
+by erasing their common boundary. Eliminate can either use an
+existing selection or a logical query based on one of the layer's fields to make the selection itself.
+The adjacent polygon can be either the one with the largest or smallest area or the one sharing the
+largest common boundary with the polygon to be eliminated.
+Eliminate is normally used to get rid of sliver polygons, i.e. tiny
+polygons that are a result of polygon intersection processes where boundaries of the inputs
+are similar but not identical.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: polygon]
-  <put parameter description here>
+  Polygon layer in which polygons should be eliminated.
 
 ``Use current selection in input layer (works only if called from toolbox)`` [boolean]
-  <put parameter description here>
+  Check this if you want the currently selected polygons to be eliminated.
 
   Default: *False*
 
 ``Selection attribute`` [tablefield: any]
-  <put parameter description here>
+  Field to be used for the logical selection.
 
 ``Comparison`` [selection]
-  <put parameter description here>
+  Comparison parameter to be used for the logical selection.
 
   Options:
 
@@ -407,12 +423,12 @@ Parameters
   Default: *0*
 
 ``Value`` [string]
-  <put parameter description here>
+  Value to be used for the logical selection.
 
   Default: *0*
 
 ``Merge selection with the neighbouring polygon with the`` [selection]
-  <put parameter description here>
+  Determines which adjacent polygon the polygon to be eliminated will be combined with.
 
   Options:
 
@@ -426,7 +442,7 @@ Outputs
 .......
 
 ``Cleaned layer`` [vector]
-  <put output description here>
+  output layer
 
 Console usage
 .............
