@@ -149,39 +149,40 @@ You will see that QGIS also provides further command line options.
 
 QGIS supports a number of options when started from the command line. To
 get a list of the options, enter ``qgis --help`` on the command line. The usage
-statement for QGIS is:
-
-::
+statement for QGIS is::
 
   qgis --help
-  QGIS - 2.6.0-Brighton 'Brighton' (exported)
+
+Returns::
+
+  QGIS - 2.16.1-Nødebo 'Nødebo' (8545b3b)
   QGIS is a user friendly Open Source Geographic Information System.
   Usage: /usr/bin/qgis.bin [OPTION] [FILE]
   OPTION:
-    [--snapshot filename]   emit snapshot of loaded datasets to given file
-    [--width width] width of snapshot to emit
-    [--height height]       height of snapshot to emit
-    [--lang language]       use language for interface text
-    [--project projectfile] load the given QGIS project
-    [--extent xmin,ymin,xmax,ymax]  set initial map extent
-    [--nologo]      hide splash screen
-    [--noversioncheck]      don't check for new version of QGIS at startup
-    [--noplugins]   don't restore plugins on startup
-    [--nocustomization]     don't apply GUI customization
-    [--customizationfile]   use the given ini file as GUI customization
-    [--optionspath path]    use the given QSettings path
-    [--configpath path]     use the given path for all user configuration
+    [--snapshot filename]	emit snapshot of loaded datasets to given file
+    [--width width]	width of snapshot to emit
+    [--height height]	height of snapshot to emit
+    [--lang language]	use language for interface text
+    [--project projectfile]	load the given QGIS project
+    [--extent xmin,ymin,xmax,ymax]	set initial map extent
+    [--nologo]	hide splash screen
+    [--noversioncheck]	don't check for new version of QGIS at startup
+    [--noplugins]	don't restore plugins on startup
+    [--nocustomization]	don't apply GUI customization
+    [--customizationfile]	use the given ini file as GUI customization
+    [--optionspath path]	use the given QSettings path
+    [--configpath path]	use the given path for all user configuration
     [--authdbdirectory path] use the given directory for authentication database
-    [--code path]   run the given python file on load
-    [--defaultui]   start by resetting user ui settings to default
-    [--dxf-export filename.dxf]     emit dxf output of loaded datasets to given file
-    [--dxf-extent xmin,ymin,xmax,ymax]      set extent to export to dxf
-    [--dxf-symbology-mode none|symbollayer|feature] symbology mode for dxf output
-    [--dxf-scale-denom scale]       scale for dxf output
-    [--dxf-encoding encoding]       encoding to use for dxf output
-    [--dxf-preset visiblity-preset] layer visibility preset to use for dxf output
-    [--help]                this text
-    [--]            treat all following arguments as FILEs
+    [--code path]	run the given python file on load
+    [--defaultui]	start by resetting user ui settings to default
+    [--dxf-export filename.dxf]	emit dxf output of loaded datasets to given file
+    [--dxf-extent xmin,ymin,xmax,ymax]	set extent to export to dxf
+    [--dxf-symbology-mode none|symbollayer|feature]	symbology mode for dxf output
+    [--dxf-scale-denom scale]	scale for dxf output
+    [--dxf-encoding encoding]	encoding to use for dxf output
+    [--dxf-preset visiblity-preset]	layer visibility preset to use for dxf output
+    [--help]		this text
+    [--]		treat all following arguments as FILEs
 
   FILE:
     Files specified on the command line can include rasters,
