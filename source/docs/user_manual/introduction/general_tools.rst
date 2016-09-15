@@ -770,19 +770,47 @@ is displayed in a pop-up dialog.
 Select and deselect features
 ============================
 
-The QGIS toolbar provides several tools to select features in the map canvas.
-To select one or several features, just click on |select| and select your
-tool:
+QGIS provides several tools to select features in the map canvas. Selection
+tools are available in :menuselection:`View --> Select` menu or in the
+:guilabel:`Attributes toolbar`.
 
-* |selectRectangle| :sup:`Select Features by area or single click` to
-  select feature(s) either by simple click or by rectangle
+Selecting manually in the map canvas
+-------------------------------------
+
+To select one or several features with the mouse, you can use one of the following
+tools:
+
+* |selectRectangle| :sup:`Select Features by area or single click`
 * |selectPolygon| :sup:`Select Features by Polygon`
 * |selectFreehand| :sup:`Select Features by Freehand`
 * |selectRadius| :sup:`Select Features by Radius`
 
-If you want to select from attribute table, you can choose one of these tools
-(note that attribute table and map canvas show the same information, so if you
-select one feature in attribute table, it will be selected in map canvas also):
+.. note:: Except the |selectPolygon| :sup:`Select Features by Polygon` tool, these 
+   manual selection tools allow you to select feature(s) in the map canvas with a
+   single click.
+
+While using the |selectRectangle| :guilabel:`Select Feature(s)` tool,
+holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether feature is selected
+(ie either adds to the current selection or remove from it).
+
+For the other tools, different behaviors can be performed holding:
+
+* :kbd:`Shift`: add features to the current selection
+* :kbd:`Ctrl`: substract features from the current selection
+* :kbd:`Ctrl + Shift`: intersect with current selection, ie only keep
+  overlapping features from the current selection
+* :kbd:`Alt`: select features that are totally within the selection shape.
+  Combined to :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract
+  features to/from the current selection.
+
+Automatic selection
+--------------------
+
+The other selection tools, also available from the :ref:`Attribute table 
+<sec_attribute_table>`, perform a selection based on feature's attribute
+or its selection state (note that attribute table and map canvas show the
+same information, so if you select one feature in attribute table, it will
+be selected in map canvas also):
 
 * |expressionSelect| :sup:`Select By Expression...` allows user to select
   features using expression dialog. See :ref:`vector_expressions` chapter for
@@ -795,11 +823,11 @@ select one feature in attribute table, it will be selected in map canvas also):
 * |invertSelection| :sup:`Invert Feature Selection` to invert the selection in
   the current layer.
 
-.. note:: The :menuselection:`View --> Select` menu list the same possibilities.
-
-Users can save selected features into a **New Memory Vector Layer** or a
-**New Vector Layer** using :menuselection:`Edit --> Copy Features` and
-:menuselection:`Edit --> Paste Features as` in the wanted format.
+.. tip:: **Save your selection into a new file**
+   
+   Users can save selected features into a **New Temporary Scratch Layer** or a
+   **New Vector Layer** using :menuselection:`Edit --> Copy Features` and
+   :menuselection:`Edit --> Paste Features as` in the wanted format.
 
 .. index:: Select; By Value
 
