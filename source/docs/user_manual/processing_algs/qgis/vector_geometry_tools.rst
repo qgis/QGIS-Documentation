@@ -385,11 +385,11 @@ Description
 
 This algorithm combines selected polygons of the input layer with certain adjacent polygons
 by erasing their common boundary. Eliminate can either use an
-exisiting selection or a logical query based on one of the layer's fields to make the selection itself.
+existing selection or a logical query based on one of the layer's fields to make the selection itself.
 The adjacent polygon can be either the one with the largest or smallest area or the one sharing the
 largest common boundary with the polygon to be eliminated.
 Eliminate is normally used to get rid of sliver polygons, i.e. tiny
-polygons that are a result of polygon instersection processes where boundaries of the inputs
+polygons that are a result of polygon intersection processes where boundaries of the inputs
 are similar but not identical.
 
 Parameters
