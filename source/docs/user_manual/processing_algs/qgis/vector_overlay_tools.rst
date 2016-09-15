@@ -189,7 +189,7 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
+``Splitted`` [vector]
   Output layer with split lines from input layer.
 
 Console usage
@@ -197,7 +197,7 @@ Console usage
 
 ::
 
-  processing.runalg('qgis:splitlineswithlines', input_layer, split_layer, output)
+  processing.runalg('qgis:splitlineswithlines', input_layer, split_layer, splitted)
 
 See also
 ........
