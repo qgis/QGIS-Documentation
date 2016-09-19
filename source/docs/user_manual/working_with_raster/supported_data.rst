@@ -1,4 +1,6 @@
-|updatedisclaimer|
+.. only:: html
+
+   |updatedisclaimer|
 
 .. index:: Raster
 .. index:: Arc/Info_Binary_Grid, Arc/Info_ASCII_Grid, GeoTIFF

@@ -1,7 +1,9 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. Purpose: This chapter aims to describe only the interface of the default
 .. QGIS interface. Details should be written in other parts with a link toward it.
-
-|updatedisclaimer|
 
 .. _`label_qgismainwindow`:
 

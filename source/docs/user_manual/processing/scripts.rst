@@ -1,4 +1,6 @@
-|updatedisclaimer|
+.. only:: html
+
+   |updatedisclaimer|
 
 Writing new Processing algorithms as python scripts
 ---------------------------------------------------

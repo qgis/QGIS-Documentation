@@ -1,5 +1,6 @@
-|updatedisclaimer|
+.. only:: html
 
+   |updatedisclaimer|
 
 Composer Items Common Options
 ==============================

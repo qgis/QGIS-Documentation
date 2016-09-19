@@ -1,7 +1,9 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. Purpose: This chapter aims to describe generic tools that can be used even
 .. if the user is in another chapter.
-
-|updatedisclaimer|
 
 .. _general_tools:
 
