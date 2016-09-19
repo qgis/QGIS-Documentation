@@ -48,7 +48,9 @@ resampled with the nearest neighbor algorithm.
 The **Operators** section contains all available operators. To add an operator
 to the raster calculator expression box, click the appropriate button. Mathematical
 calculations (``+``, ``-``, ``*``, ... ) and trigonometric functions (``sin``,
-``cos``, ``tan``, ... ) are available. Stay tuned for more operators to come!
+``cos``, ``tan``, ... ) are available. Conditional expressions (``=``, ``!=``,
+``<``, ``>=``, ... ) return either 0 for false or 1 for true, and therefore can be
+used with other operators and functions. Stay tuned for more operators to come!
 
 With the |checkbox| :guilabel:`Add result to project` checkbox, the result layer
 will automatically be added to the legend area and can be visualized.
@@ -76,8 +78,9 @@ and apply the result to a raster in one step.
 
   ("elevation@1" >= 0) * "elevation@1"
 
-In other words, for every cell greater than or equal to 0, keep its original value by multiplying it by 1. Otherwise set
-it to 0. This creates the mask on the fly.
+In other words, for every cell greater than or equal to 0 the conditional expression evaluates to
+1, which keeps the original value by multiplying it by 1. Otherwise the conditional expression 
+evaluates to 0, which sets the raster value to 0. This creates the mask on the fly.
 
 
 If you want to classify a raster -- say, for instance into two elevation classes, you can
