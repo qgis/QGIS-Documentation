@@ -551,6 +551,7 @@ and the system file, the user file takes precedence.
     Advanced system settings --> Environment Variables` adding ``PGSERVICEFILE`` and
     the path of the type :file:`C:\Users\John\pg_service.conf`
   * After adding an environment variable you may also need to restart the computer.
+  
 
 .. _sec_postgis_details:
 
