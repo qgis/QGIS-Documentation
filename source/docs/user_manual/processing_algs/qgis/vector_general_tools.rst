@@ -48,23 +48,23 @@ Parameters
   <put parameter description here>
 
 ``Additional data sources`` [vector] 
-  data sources that have to be loaded for reference in the SQL query.
+  Data sources that have to be loaded for reference in the SQL query.
   Any layer already loaded in QGIS is available in the query through its name or id. But for use of this
   algorithm in a script, input sources should be set here. Each input data source can be referred to as
   input1 ... inputN as layer names in the query.
 
 ``Query`` [string]
-  the SQL query. SQLite, Spatialite and QGIS expression functions can be used here.
+  The SQL query. SQLite, Spatialite and QGIS expression functions can be used here.
 
 ``Unique identifier field`` [string]
-  optional parameter to specify which field of the query should be used as a unique id.
+  Optional parameter to specify which field of the query should be used as a unique id.
 
 ``Geometry field`` [string]
-  optional parameter to specify which field should be considered as the geometry
+  Optional parameter to specify which field should be considered as the geometry
   field, if one wants to avoid possibly slow autodetection.
 
 ``Geometry type`` [selection]
-  optional parameter to specify the type of the geometry if one wants to avoid possibly slow autodetection.
+  Optional parameter to specify the type of the geometry if one wants to avoid possibly slow autodetection.
 
 Geometry types:
 
@@ -78,7 +78,7 @@ Geometry types:
 * 7 --- MultiPolygon
 
 ``Geometry CRS`` [crs]
-  optional parameter to specify the coordinate system of the geometry
+  Optional parameter to specify the coordinate system of the geometry
   if one wants to avoid possibly slow autodetection.
 
 Outputs
