@@ -277,6 +277,35 @@ cause a revert to default behavior.
     Define a legend independent layer order
 
 .. index::
+   single: Layer properties
+   single: Panels; Style
+   
+.. _layer_styling_panel:
+
+Layer Styling Panel
+--------------------
+
+This panel is somehow a shortcut to some of the features of the layer properties
+dialog. It indeed offers you a quick and handy way to define the rendering and the
+behavior of a layer, and to visualize its effects without opening the layer
+properties dialog.
+
+From a drop-down list of current layers in the layer panel, select an item and:
+
+* set its symbology, transparency, and histogram in case of raster layer. These
+  options are the same available in :ref:`raster_properties_dialog`
+* set its symbology, and labels. These options are the same available in
+  :ref:`vector_properties_dialog`
+* manage the associated style(s) as described in :ref:`manage_custom_style`
+* follow the whole history of changes you applied to the layer style in the
+  current project; you can therefore cancel or restore to any state by selecting
+  it in the list and hit **[Apply]** button.
+
+Another powerful feature of this panel is the :guilabel:`Live update` checkbox.
+Tick it and your changes are automatically rendered in the map canvas as you go on.
+You no longer need to hit the **[Apply]** button.
+
+.. index::
    single: Panels; Statistic
    single: Statistic
 
