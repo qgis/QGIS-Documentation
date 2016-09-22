@@ -439,18 +439,18 @@ OCG WMS 1.3.0 specification:
 
     http://myserver.com/cgi/qgis_mapserv.fcgi?REQUEST=GetMap&LAYERS=mylayer1,mylayer2&SELECTION=mylayer1:3,6,9;mylayer2:1,5,6&...
 
-    The following image presents the response from a GetMap request using the **SELECTION** option e.g.
-    ``http://myserver.com/...&SELECTION=countries:171,65``.
-    As those features id's correspond in the source dataset to **France** and **Romania** they're highlighted in yellow.
+  The following image presents the response from a GetMap request using the **SELECTION** option e.g.
+  ``http://myserver.com/...&SELECTION=countries:171,65``.
+  As those features id's correspond in the source dataset to **France** and **Romania** they're highlighted in yellow.
 
-    .. only:: html
+  .. only:: html
 
-      **Figure presenting the Server SELECTION parameter:**
+    **Figure presenting the Server SELECTION parameter:**
   
-    .. figure:: /static/user_manual/working_with_ogc/server_selection_parameter.jpg
-       :align: center
+  .. figure:: /static/user_manual/working_with_ogc/server_selection_parameter.jpg
+     :align: center
 
-       Server response to a GetMap request with SELECTION parameter
+     Server response to a GetMap request with SELECTION parameter
 
 REDLINING
 ---------
