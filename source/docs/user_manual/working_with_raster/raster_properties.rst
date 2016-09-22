@@ -2,6 +2,9 @@
 
    |updatedisclaimer|
 
+.. index:: Raster, Layer properties
+.. _raster_properties_dialog:
+
 Raster Properties Dialog
 ========================
 
@@ -34,6 +37,15 @@ There are several menus in the dialog:
    :align: center
 
    Raster Layers Properties Dialog
+
+
+.. tip:: **Live update rendering**
+
+   The :ref:`layer_styling_panel` provides you with some of the common features
+   of the Layer properties dialog and is a good modeless widget that
+   you can use to speed up the configuration of the layer styles and automatically
+   view your changes in the map canvas.
+
 
 .. _label_generaltab:
 
