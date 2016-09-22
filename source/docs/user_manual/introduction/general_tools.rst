@@ -472,7 +472,7 @@ tab and select or deselect the following checkboxes:
   Be aware that you can also face rendering inconsistencies.
 
 
-.. index:: Save properties, Save style, QML
+.. index:: Save properties, Save style, QML, SLD
 .. _save_layer_property:
 
 Save and Share Layer Properties
@@ -485,7 +485,7 @@ Managing Custom Styles
 
 When a layer is added to map canvas, QGIS uses by default a random symbol/color
 to render its features. You can however set a default symbol in
-:menuselection:`Project --> Properties --> Default styles` that will be applied
+:menuselection:`Project --> Project Properties --> Default styles` that will be applied
 to each newly added layer according to its geometry type.
 
 But, most of the time, you'd prefer to have a custom and more complex style
@@ -496,13 +496,14 @@ load and manage styles.
 
 A style stores any information set in the layer properties dialog to render
 or interact with the features (including symbology, labeling, action, diagram...
-settings).
+settings) for vector layer or the pixels (band or color rendering, transparency,
+pyramids, histogram ...) for raster.
 
 .. only:: html
 
-   **Figure Vector Properties 10:**
+   **Figure Manage Style:**
 
-.. _figure_vector_properties_10:
+.. _figure_manage_style:
 
 .. figure:: /static/user_manual/working_with_vector/style_combobox.png
    :align: center
@@ -556,8 +557,9 @@ If the datasource of the layer is a database (PostGIS, MSSQL, Oracle or Spatiali
 you can also save your layer style inside a table (named `layer_styles`) of the
 database. Just click on :menuselection:`Save Style` combobox and choose **Save
 in database** item then fill in the dialog to define a style name, add a
-description, an ui file if applicable and check if the style is the default style.
-You can add several style in the database. However each table can have only one
+description, an :file:`.ui` file if applicable and check if the style should be the
+default style.
+You can add several styles in the database. However each table can have only one
 default style.
 
 .. note:: You can only save your style in database if the layer come from such
@@ -588,9 +590,9 @@ or **Restore Default** style if you're not satisfied.
 
 .. only:: html
 
-   **Figure Vector Properties 2:**
+   **Figure Save Style:**
 
-.. _figure_vector_properties_2:
+.. _figure_save_style_database:
 
 .. figure:: /static/user_manual/working_with_vector/save_style_database.png
    :align: center
