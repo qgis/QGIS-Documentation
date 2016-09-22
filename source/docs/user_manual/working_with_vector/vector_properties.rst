@@ -2385,15 +2385,6 @@ of the image. Currently png, jpg and jpeg image formats are supported.
    Metadata menu in vector layers properties dialog
 
 
-.. _variable-layer:
-
-.. Variables Menu
-   To write this chapter, informations are available at
-   http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/
-   http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/
-   http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/
-
-
 .. index:: Save properties, Save style, QML
 .. _save_layer_property:
 
