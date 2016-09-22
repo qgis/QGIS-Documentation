@@ -472,152 +472,208 @@ Geometry Functions
 
 This group contains functions that operate on geometry objects (e.g., length, area).
 
-====================  =========================================================
- Function             Description
-====================  =========================================================
- $area                Returns the area size of the current feature
- $geometry            Returns the geometry of the current feature (can be
-                      used for processing with other functions)
- $length              Returns the length of the current line feature
- $perimeter           Returns the perimeter of the current polygon feature
- $x                   Returns the x coordinate of the current feature
- $x_at(n)             Returns the x coordinate of the nth node of the current
-                      feature's geometry
- $y                   Returns the y coordinate of the current feature
- $y_at(n)             Returns the y coordinate of the nth node
-                      of the current feature's geometry
- area                 Returns the area of a geometry polygon feature.
-                      Calculations are in the Spatial
-                      Reference System of this geometry
- bounds               Returns a geometry which represents the bounding box of
-                      an input geometry. Calculations are in the Spatial
-                      Reference System of this Geometry
- bounds_height        Returns the height of the bounding box of a geometry.
-                      Calculations are in the Spatial Reference System of
-                      this Geometry
- bounds_width         Returns the width of the bounding box of a geometry.
-                      Calculations are in the Spatial Reference System of
-                      this Geometry
- buffer               Returns a geometry that represents all points whose
-                      distance from this geometry is less than or equal to
-                      distance. Calculations are in the Spatial Reference
-                      System of this geometry
- centroid             Returns the geometric center of a geometry
- closest_point        Returns the point on a geometry that is closest to a second geometry
- combine              Returns the combination of two geometries
- contains(a,b)        Returns 1 (true) if and only if no points of b lie in the
-                      exterior of a, and at least one point of the interior
-                      of b lies in the interior of a
- convex_hull          Returns the convex hull of a geometry (this represents
-                      the minimum convex geometry that encloses all geometries
-                      within the set)
- crosses              Returns 1 (true) if the supplied geometries have some,
-                      but not all, interior points in common
- difference(a,b)      Returns a geometry that represents that part of geometry
-                      a that does not intersect with geometry b
- disjoint             Returns 1 (true) if the geometries do not share any space
-                      together
- distance             Returns the minimum distance (based on spatial ref)
-                      between two geometries in projected units
- end_point            Returns the last node from a geometry
- exterior_ring        Returns a line string representing the exterior ring
-                      of a polygon geometry. If the geometry is not a polygon
-                      then the result will be null
- extrude(geom,x,y)    Returns an extruded version of the input (Multi-)Curve
-                      or (Multi-)Linestring geometry with an extension
-                      specified by x and y
- geom_from_gml        Returns a geometry created from a GML representation of
-                      geometry
- geom_from_wkt        Returns a geometry created from a well-known text (WKT)
-                      representation
- geom_to_wkt          Returns the well-known text (WKT) representation of the
-                      geometry without SRID metadata
- geometry             Returns a feature's geometry
- geometry_n           Returns the nth geometry from a geometry collection,
-                      or null if the input geometry is not a collection
- interior_ring_n      Returns the geometry of the nth interior ring from a
-                      polygon geometry, or null if the geometry is not a
-                      polygon
- intersection         Returns a geometry that represents the shared portion
-                      of two geometries
- intersects           Tests whether a geometry intersects another.
-                      Returns 1 (true) if the geometries spatially intersect
-                      (share any portion of space) and 0 if they don't
- intersects_bbox      Tests whether a geometry's bounding box overlaps another
-                      geometry's bounding box. Returns 1 (true) if the
-                      geometries spatially intersect (share any portion of
-                      space) their bounding box and 0 if they don't
- is_closed            Returns true if a line string is closed (start and end
-                      points are coincident), false if a line string is not
-                      closed and null if the geometry is not a line string
- length               Returns length of a line geometry feature
-                      (or length of a string)
- m                    Returns the m value of a point geometry
- make_line            Creates a line geometry from a series of point geometries
- make_point(x,y,z,m)  Returns a point geometry from x and y values
-                      (and optional z and m values)
- make_point_m(x,y,m)  Returns a point geometry from x and y coordinates and m values
- make_polygon         Creates a polygon geometry from an outer ring
-                      and optional series of inner ring geometries
- nodes_to_points      Returns a multipoint geometry consisting of every node
-                      in the input geometry
- num_geometries       Returns the number of geometries in a geometry
-                      collection, or null if the input geometry is not a
-                      collection
- num_interior_rings   Returns the number of interior rings in a polygon
-                      or geometry collection, or null if the input geometry
-                      is not a polygon or collection
- num_points           Returns the number of vertices in a geometry
- num_rings            Returns the number of rings (including exterior rings)
-                      in a polygon or geometry collection, or null if the input
-                      geometry is not a polygon or collection
- order_parts          Orders the parts of a MultiGeometry by a given criteria
- overlaps             Tests whether a geometry overlaps another. Returns 1 (true)
-                      if the geometries share space, are of the same dimension,
-                      but are not completely contained by each other
- perimeter            Returns the perimeter of a geometry polygon feature.
-                      Calculations are in the Spatial Reference System of this geometry
- point_n              Returns a specific node from a geometry
- point_on_surface     Returns a point guaranteed to lie on the surface of a geometry
- project              Returns a point projected from a start point using a distance
-                      and bearing (azimuth) in radians.
- relate               Tests or returns the Dimensional Extended 9 Intersection
-                      Model (DE-9IM) representation of the relationship between
-                      two geometries
- reverse              Reverses the direction of a line string by reversing
-                      the order of its vertices
- segments_to_lines    Returns a multi line geometry consisting of a line
-                      for every segment in the input geometry
- shortest_line        Returns the shortest line joining two geometries.
-                      The resultant line will start at geometry 1 and end at geometry 2
- start_point          Returns the first node from a geometry
- sym_difference       Returns a geometry that represents the portions of two geometries
-                      that do not intersect
- touches              Tests whether a geometry touches another.
-                      Returns 1 (true) if the geometries have at least one
-                      point in common, but their interiors do not intersect
- transform            Returns the geometry transformed from the source CRS to
-                      the destination CRS
- translate            Returns a translated version of a geometry. Calculations
-                      are in the Spatial Reference System of this geometry
- union                Returns a geometry that represents the point set union of
-                      the geometries
- within (a,b)         Tests whether a geometry is within another. Returns 1 (true)
-                      if geometry a is completely inside geometry b
- x                    Returns the x coordinate of a point geometry, or the
-                      x coordinate of the centroid for a non-point geometry
- x_min                Returns the minimum x coordinate of a geometry. Calculations
-                      are in the Spatial Reference System of this geometry
- x_max                Returns the maximum x coordinate of a geometry. Calculations
-                      are in the Spatial Reference System of this geometry
- y                    Returns the y coordinate of a point geometry, or the
-                      y coordinate of the centroid for a non-point geometry
- y_min                Returns the minimum y coordinate of a geometry. Calculations
-                      are in the Spatial Reference System of this geometry
- y_max                Returns the maximum y coordinate of a geometry. Calculations
-                      are in the Spatial Reference System of this geometry
- z                    Returns the z coordinate of a point geometry
-====================  =========================================================
++-------------------------+--------------------------------------------------------------------+
+| Function                |Description                                                         |
++=========================+====================================================================+
+| $area                   | Returns the area size of the current feature                       |
++-------------------------+--------------------------------------------------------------------+
+|$geometry                | Returns the geometry of the current feature (can be used for       |
+|                         | processing with other functions)                                   |
++-------------------------+--------------------------------------------------------------------+
+| $length                 | Returns the length of the current line feature                     |
++-------------------------+--------------------------------------------------------------------+
+| $perimeter              | Returns the perimeter of the current polygon feature               |
++-------------------------+--------------------------------------------------------------------+
+| $x                      | Returns the x coordinate of the current feature                    |
++-------------------------+--------------------------------------------------------------------+
+| $x_at(n)                | Returns the x coordinate of the nth node of the current feature's  |
+|                         | geometry                                                           |
++-------------------------+--------------------------------------------------------------------+
+| $y                      | Returns the y coordinate of the current feature                    |
++-------------------------+--------------------------------------------------------------------+
+| $y_at(n)                | Returns the y coordinate of the nth node of the current feature's  |
+|                         | geometry                                                           |
++-------------------------+--------------------------------------------------------------------+
+| area                    | Returns the area of a geometry polygon feature.                    |
+|                         | Calculations are in the Spatial Reference System of this geometry  |
++-------------------------+--------------------------------------------------------------------+
+| bounds                  | Returns a geometry which represents the bounding box of an input   |
+|                         | geometry.                                                          |
+|                         | Calculations are in the Spatial Reference System of this geometry  |
++-------------------------+--------------------------------------------------------------------+
+| bounds_height           | Returns the height of the bounding box of a geometry.              |
+|                         | Calculations are in the Spatial Reference System of this geometry  |
++-------------------------+--------------------------------------------------------------------+
+| bounds_width            | Returns the width of the bounding box of a geometry.               |
+|                         | Calculations are in the Spatial Reference System of this geometry  |
++-------------------------+--------------------------------------------------------------------+
+| buffer                  | Returns a geometry that represents all points whose distance from  |
+|                         | this geometry is less than or equal to distance.                   |
+|                         | Calculations are in the Spatial Reference System of this geometry  |
++-------------------------+--------------------------------------------------------------------+
+| centroid                | Returns the geometric center of a geometry                         |
++-------------------------+--------------------------------------------------------------------+
+| closest_point           | Returns the point on a geometry that is closest to a second        |
+|                         | geometry                                                           |
++-------------------------+--------------------------------------------------------------------+
+| combine                 | Returns the combination of two geometries                          |
++-------------------------+--------------------------------------------------------------------+
+| contains(a,b)           | Returns 1 (true) if and only if no points of b lie in the exterior |
+|                         | of a, and at least one point of the interior of b lies in the      |
+|                         | interior of a                                                      |
++-------------------------+--------------------------------------------------------------------+
+| convex_hull             | Returns the convex hull of a geometry (this represents the minimum |
+|                         | convex geometry that encloses all geometries within the set)       |
++-------------------------+--------------------------------------------------------------------+
+| crosses                 | Returns 1 (true) if the supplied geometries have some, but not     |
+|                         | all, interior points in common                                     |
++-------------------------+--------------------------------------------------------------------+
+| difference(a,b)         | Returns a geometry that represents that part of geometry a that    |
+|                         | does not intersect with geometry b                                 |
++-------------------------+--------------------------------------------------------------------+
+| disjoint                | Returns 1 (true) if the geometries do not share any space together |
++-------------------------+--------------------------------------------------------------------+
+| distance                | Returns the minimum distance (based on Spatial Reference System)   |
+|                         | between two geometries in projected units                          |
++-------------------------+--------------------------------------------------------------------+
+| end_point               | Returns the last node from a geometry                              |
++-------------------------+--------------------------------------------------------------------+
+| exterior_ring           | Returns a line string representing the exterior ring of a polygon  |
+|                         | geometry, or null if the geometry is not a polygon                 |
++-------------------------+--------------------------------------------------------------------+
+| extrude(geom,x,y)       | Returns an extruded version of the input (Multi-)Curve or (Multi-) |
+|                         | Linestring geometry with an extension specified by x and y         |
++-------------------------+--------------------------------------------------------------------+
+| geom_from_gml           | Returns a geometry created from a GML representation of geometry   |
++-------------------------+--------------------------------------------------------------------+
+| geom_from_wkt           | Returns a geometry created from a well-known text (WKT)            |
+|                         | representation                                                     |
++-------------------------+--------------------------------------------------------------------+
+| geom_to_wkt             | Returns the well-known text (WKT) representation of the geometry   |
+|                         | without SRID metadata                                              |
++-------------------------+--------------------------------------------------------------------+
+| geometry                | Returns a feature's geometry                                       |
++-------------------------+--------------------------------------------------------------------+
+| geometry_n              | Returns the nth geometry from a geometry collection, or null if    |
+|                         | the input geometry is not a collection                             |
++-------------------------+--------------------------------------------------------------------+
+| interior_ring_n         | Returns the geometry of the nth interior ring from a polygon       |
+|                         | geometry, or null if the geometry is not a polygon                 |
++-------------------------+--------------------------------------------------------------------+
+| intersection            | Returns a geometry that represents the shared portion of two       |
+|                         | geometries                                                         |
++-------------------------+--------------------------------------------------------------------+
+| intersects              | Tests whether a geometry intersects another.                       |
+|                         | Returns 1 (true) if the geometries spatially intersect (share any  |
+|                         | portion of space) and 0 if they don't                              |
++-------------------------+--------------------------------------------------------------------+
+| intersects_bbox         | Tests whether a geometry's bounding box overlaps another           |
+|                         | geometry's bounding box. Returns 1 (true) if the geometries        |
+|                         | spatially intersect (share any portion of space) their bounding    |
+|                         | box, or 0 if they don't                                            |
++-------------------------+--------------------------------------------------------------------+
+| is_closed               | Returns true if a line string is closed (start and end points are  |
+|                         | coincident), false if a line string is not closed, or null if the  |
+|                         | geometry is not a line string                                      |
++-------------------------+--------------------------------------------------------------------+
+| length                  | Returns length of a line geometry feature (or length of a string)  |
++-------------------------+--------------------------------------------------------------------+
+| m                       | Returns the m value of a point geometry                            |
++-------------------------+--------------------------------------------------------------------+
+| make_line               | Creates a line geometry from a series of point geometries          |
++-------------------------+--------------------------------------------------------------------+
+| make_point(x,y,z,m)     | Returns a point geometry from x and y (and optional z or m) values |
++-------------------------+--------------------------------------------------------------------+
+| make_point_m(x,y,m)     | Returns a point geometry from x and y coordinates and m values     |
++-------------------------+--------------------------------------------------------------------+
+| make_polygon            | Creates a polygon geometry from an outer ring and optional series  |
+|                         | of inner ring geometries                                           |
++-------------------------+--------------------------------------------------------------------+
+| nodes_to_points         | Returns a multipoint geometry consisting of every node in the      |
+|                         | input geometry                                                     |
++-------------------------+--------------------------------------------------------------------+
+| num_geometries          | Returns the number of geometries in a geometry collection, or null |
+|                         | if the input geometry is not a collection                          |
++-------------------------+--------------------------------------------------------------------+
+| num_interior_rings      | Returns the number of interior rings in a polygon or geometry      |
+|                         | collection, or null if the input geometry is not a polygon or      |
+|                         | collection                                                         |
++-------------------------+--------------------------------------------------------------------+
+| num_points              | Returns the number of vertices in a geometry                       |
++-------------------------+--------------------------------------------------------------------+
+| num_rings               | Returns the number of rings (including exterior rings) in a        |
+|                         | polygon or geometry collection, or null if the input geometry is   |
+|                         | not a polygon or collection                                        |
++-------------------------+--------------------------------------------------------------------+
+| order_parts             | Orders the parts of a MultiGeometry by a given criteria            |
++-------------------------+--------------------------------------------------------------------+
+| overlaps                | Tests whether a geometry overlaps another.                         |
+|                         | Returns 1 (true) if the geometries share space, are of the same    |
+|                         | dimension, but are not completely contained by each other          |
++-------------------------+--------------------------------------------------------------------+
+| perimeter               | Returns the perimeter of a geometry polygon feature.               |
+|                         | Calculations are in the Spatial Reference System of this geometry  |
++-------------------------+--------------------------------------------------------------------+
+| point_n                 | Returns a specific node from a geometry                            |
++-------------------------+--------------------------------------------------------------------+
+| point_on_surface        | Returns a point guaranteed to lie on the surface of a geometry     |
++-------------------------+--------------------------------------------------------------------+
+| project                 | Returns a point projected from a start point using a distance and  |
+|                         | bearing (azimuth) in radians.                                      |
++-------------------------+--------------------------------------------------------------------+
+| relate                  | Tests or returns the Dimensional Extended 9 Intersection Model     |
+|                         | (DE-9IM) representation of the relationship between two geometries |
++-------------------------+--------------------------------------------------------------------+
+| reverse                 | Reverses the direction of a line string by reversing the order of  |
+|                         | its vertices                                                       |
++-------------------------+--------------------------------------------------------------------+
+| segments_to_lines       | Returns a multi line geometry consisting of a line for every       |
+|                         | segment in the input geometry                                      |
++-------------------------+--------------------------------------------------------------------+
+| shortest_line           | Returns the shortest line joining two geometries.                  |
+|                         | The resultant line will start at geometry 1 and end at geometry 2  |
++-------------------------+--------------------------------------------------------------------+
+| start_point             | Returns the first node from a geometry                             |
++-------------------------+--------------------------------------------------------------------+
+| sym_difference          | Returns a geometry that represents the portions of two geometries  |
+|                         | that do not intersect                                              |
++-------------------------+--------------------------------------------------------------------+
+| touches                 | Tests whether a geometry touches another.                          |
+|                         | Returns 1 (true) if the geometries have at least one point in      | 
+|                         | common, but their interiors do not intersect                       |
++-------------------------+--------------------------------------------------------------------+
+| transform               | Returns the geometry transformed from the source CRS to the        |
+|                         | destination CRS                                                    |
++-------------------------+--------------------------------------------------------------------+
+| translate               | Returns a translated version of a geometry. Calculations are in    |
+|                         | the Spatial Reference System of this geometry                      |
++-------------------------+--------------------------------------------------------------------+
+| union                   | Returns a geometry that represents the point set union of the      |
+|                         | geometries                                                         |
++-------------------------+--------------------------------------------------------------------+
+| within (a,b)            | Tests whether a geometry is within another. Returns 1 (true) if    |
+|                         | geometry a is completely inside geometry b                         |
++-------------------------+--------------------------------------------------------------------+
+| x                       | Returns the x coordinate of a point geometry, or the x coordinate  |
+|                         | of the centroid for a non-point geometry                           |
++-------------------------+--------------------------------------------------------------------+
+| x_min                   | Returns the minimum x coordinate of a geometry.                    |
+|                         | Calculations are in the Spatial Reference System of this geometry  |
++-------------------------+--------------------------------------------------------------------+
+| x_max                   | Returns the maximum x coordinate of a geometry.                    |
+|                         | Calculations are in the Spatial Reference System of this geometry  |
++-------------------------+--------------------------------------------------------------------+
+| y                       | Returns the y coordinate of a point geometry, or the y coordinate  |
+|                         | of the centroid for a non-point geometry                           |
++-------------------------+--------------------------------------------------------------------+
+| y_min                   | Returns the minimum y coordinate of a geometry.                    |
+|                         | Calculations are in the Spatial Reference System of this geometry  |
++-------------------------+--------------------------------------------------------------------+
+| y_max                   | Returns the maximum y coordinate of a geometry.                    |
+|                         | Calculations are in the Spatial Reference System of this geometry  |
++-------------------------+--------------------------------------------------------------------+
+| z                       | Returns the z coordinate of a point geometry                       |
++-------------------------+--------------------------------------------------------------------+
 
 **Some examples:**
 
