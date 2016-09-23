@@ -66,6 +66,10 @@ plugins can point to dedicated web pages.
 
 Panels
 =======
+QGIS provides by default many panels to work with.
+Some of these panels are described below while others may be found in different
+parts of the document. A complete list of default panels provided by QGIS is
+available at :ref:`panels_tools`.
 
 .. index:: Panels; Layers
 .. _`label_legend`:
@@ -85,13 +89,13 @@ panel allows you to:
   preset layers combination
 * |filterMap| :sup:`Filter Legend by Map Content`: only the layers that are set
   visible and whose features intersect the current map canvas have their style
-  rendered in the layers panel. Otherwise, a generic NULL symbol is applied to the
-  layer. Based on the layer symbology, this is a convenient way to identify which
-  kind of features from which layers cover your area of interest.
+  rendered in the layers panel. Otherwise, a generic NULL symbol is applied to
+  the layer. Based on the layer symbology, this is a convenient way to identify
+  which kind of features from which layers cover your area of interest.
 * |expressionFilter| :sup:`Filter Legend by Expression`: helps you apply an
   expression to remove from the selected layer tree styles that have no feature
-  satisfying the condition. This can be used for example to highlight features that are
-  within a given area/feature of another layer.
+  satisfying the condition. This can be used for example to highlight features
+  that are within a given area/feature of another layer.
   From the drop-down list, you can edit and clear the expression set.
 * |expandTree| :sup:`Expand All` or |collapseTree| :sup:`Collapse All`
   layers and groups in the layers panel.
