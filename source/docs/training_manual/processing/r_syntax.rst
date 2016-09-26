@@ -32,7 +32,7 @@ parameters. You can have different inputs:
 7. boolean, ``##Bol = boolean``
 
 you can also have a dropdown menu with all the parameters you want; the items
-must be separated with semi columns ``;``:
+must be separated with semicolons ``;``:
 
 8. ``##type=selection point;lines;point+lines``
 
