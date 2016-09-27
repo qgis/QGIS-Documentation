@@ -595,7 +595,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | (WKT) representation                              |
 +------------------------+---------------------------------------------------+
 | geom_to_wkt            | Returns the well-known text (WKT) representation  |
-|                        |  of the geometry without SRID metadata            |
+|                        | of the geometry without SRID metadata             |
 +------------------------+---------------------------------------------------+
 | geometry               | Returns a feature's geometry                      |
 +------------------------+---------------------------------------------------+
