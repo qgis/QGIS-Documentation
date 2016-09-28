@@ -25,15 +25,16 @@ parameters. You can have different inputs:
 
 1. vector, ``##Layer = vector``
 2. vector Field, ``##F = Field Layer`` (where Layer is the name of the input Layer)
-3. table, ``##Layer = raster``
-4. number, ``##Num = number``
-5. string, ``##Str = string``
-6. boolean, ``##Bol = boolean``
+3. raster, ``##r = raster``
+4. table, ``##t = table``
+5. number, ``##Num = number``
+6. string, ``##Str = string``
+7. boolean, ``##Bol = boolean``
 
 you can also have a dropdown menu with all the parameters you want; the items
-must be separated with semi columns ``;``:
+must be separated with semicolons ``;``:
 
-7. ``##type=selection point;lines;point+lines``
+8. ``##type=selection point;lines;point+lines``
 
 Outputs
 =======
