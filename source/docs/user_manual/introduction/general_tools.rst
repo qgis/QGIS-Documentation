@@ -483,20 +483,22 @@ Save and Share Layer Properties
 Managing Custom Styles
 -----------------------
 
-When a layer is added to map canvas, QGIS uses by default a random symbol/color
-to render its features. You can however set a default symbol in
-:menuselection:`Project --> Project Properties --> Default styles` that will be applied
-to each newly added layer according to its geometry type.
+When a vector layer is added to map canvas, QGIS uses by default a random
+symbol/color to render its features. You can however set a default symbol in
+:menuselection:`Project --> Project Properties --> Default styles` that will be
+applied to each newly added layer according to its geometry type.
+
+.. any idea on how it works for raster?
 
 But, most of the time, you'd prefer to have a custom and more complex style
 that can be applied automatically or manually (with less efforts) to the layers.
-You can achieve this goal using the :menuselection:`Style` combobox at the bottom of
-the Layer Properties dialog. This combobox provides you with functions to create,
-load and manage styles.
+You can achieve this goal using the :menuselection:`Style` combobox at the bottom
+of the Layer Properties dialog. This combobox provides you with functions to
+create, load and manage styles.
 
 A style stores any information set in the layer properties dialog to render
 or interact with the features (including symbology, labeling, action, diagram...
-settings) for vector layer or the pixels (band or color rendering, transparency,
+settings) for vector layer, or the pixels (band or color rendering, transparency,
 pyramids, histogram ...) for raster.
 
 .. only:: html
@@ -508,43 +510,51 @@ pyramids, histogram ...) for raster.
 .. figure:: /static/user_manual/working_with_vector/style_combobox.png
    :align: center
 
-   Style combobox options
+   Vector layer style combobox options
 
 By default, the style applied to a loaded layer is named ``default``. Once you
 have got the ideal and appropriate rendering for your layer, you can save it by
 clicking the |selectString| :menuselection:`Style` combobox and choose:
 
-* **Rename Current**: The active style gets renamed and updated with the current options
-* **Add**: A new style is created using the current options. By default, it will be saved
-  in the QGIS project file. See below to save the style in a database.
+* **Rename Current**: The active style gets renamed and updated with the current
+  options
+* **Add**: A new style is created using the current options. By default, it will
+  be saved in the QGIS project file. See below to save the style in another file
+  or a database
+* **Remove**: delete unwanted style, in case you have more than one style defined
+  for the layer.
 
 At the bottom of the Style drop-down list, you see the styles set for the layer
-and the active one is checked. Once you have more than one style defined for a
-layer, a **Remove Current** option can help you delete those you no longer want.
+and the active one is checked.
 
 Note that each time you validate the layer properties dialog, the active style
 is updated with the changes you've done.
 
 You can create as many styles as you wish for a layer but only one can be active
 at a time. Combined to layer visibility preset, this offers a quick and powerful
-way to manage complex projects with few layers (no need to duplicate any layer in
-the map legend).
+way to manage complex projects with few layers (no need to duplicate any layer
+in the map legend).
 
 .. tip:: **Manage styles from layer context menu**
 
    Right-click on the layer in :guilabel:`Layers Panel` to add, rename
-   or remove layer style. You can also edit feature symbols.
+   or remove layer style.
+
 
 .. _store_style:
 
 Storing Style in a File or a Database
 --------------------------------------
 
-While these styles are saved inside the project and can be copied and pasted from
-layer to layer in the project, it's also possible to save them outside the project
-so that they can be loaded in another project.
-Clicking the |selectString| :menuselection:`Style --> Save Style`
-saves the symbol as a QGIS layer style file (``.qml``) or SLD file (``.sld``).
+While created styles from the :guilabel:`Style` combobox are by default saved
+inside the project and can be copied and pasted from layer to layer in the project,
+it's also possible to save them outside the project so that they can be loaded
+in another project.
+
+Clicking the |selectString| :menuselection:`Style --> Save Style`, you can
+save the style as a QGIS layer style file (``.qml``) or SLD file (``.sld``, for
+vector layers).
+
 SLDs can be exported from any type of renderer -- single symbol,
 categorized, graduated or rule-based -- but when importing an SLD, either a
 single symbol or rule-based renderer is created.
@@ -557,8 +567,8 @@ If the datasource of the layer is a database (PostGIS, MSSQL, Oracle or Spatiali
 you can also save your layer style inside a table (named `layer_styles`) of the
 database. Just click on :menuselection:`Save Style` combobox and choose **Save
 in database** item then fill in the dialog to define a style name, add a
-description, an :file:`.ui` file if applicable and check if the style should be the
-default style.
+description, an :file:`.ui` file if applicable and check if the style should be
+the default style.
 You can add several styles in the database. However each table can have only one
 default style.
 
@@ -594,7 +604,7 @@ or **Restore Default** style if you're not satisfied.
 
 .. _figure_save_style_database:
 
-.. figure:: /static/user_manual/working_with_vector/save_style_database.png
+.. figure:: /static/user_manual/introduction/save_style_database.png
    :align: center
 
    Save Style in database Dialog
