@@ -507,7 +507,7 @@ pyramids, histogram ...) for raster.
 
 .. _figure_manage_style:
 
-.. figure:: /static/user_manual/working_with_vector/style_combobox.png
+.. figure:: /static/user_manual/introduction/style_combobox.png
    :align: center
 
    Vector layer style combobox options
