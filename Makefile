@@ -228,7 +228,7 @@ gettext:
 
 fasthtml:
 	# This build is just for fast previewing changes in EN documentation
-	# Instead of fully copy the english images to static folder, it sync it
-	# No internationalization is preformed
+	# Instead of fully copy the english images to static folder, it syncs it
+	# No internationalization is performed
 	rsync -uthvr --delete $(RESOURCEDIR)/en/docs/ $(SOURCEDIR)/static
 	$(SPHINXBUILD) -n -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG)
