@@ -504,7 +504,7 @@ you just tweaked into a color slot button.
 
    **Figure color selector 1:**
 
-.. figure:: /static/user_manual/working_with_vector/color_selector_ramp.png
+.. figure:: /static/user_manual/introduction/color_selector_ramp.png
    :align: center
 
    Color selector ramp tab
@@ -533,7 +533,7 @@ populated with one of three methods:
 
    **Figure color selector 2:**
 
-.. figure:: /static/user_manual/working_with_vector/color_selector_recent_colors.png
+.. figure:: /static/user_manual/introduction/color_selector_recent_colors.png
    :align: center
 
    Color selector switcher tab
@@ -557,7 +557,7 @@ that the color picker is OS dependent and is currently not supported by OSX.
 
    **Figure color selector 3:**
 
-.. figure:: /static/user_manual/working_with_vector/quick_color_selector.png
+.. figure:: /static/user_manual/introduction/quick_color_selector.png
    :align: center
 
    Quick color selector menu
