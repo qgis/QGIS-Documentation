@@ -1048,15 +1048,15 @@ set. You can use these variables to build text strings or other custom
 expressions using @ character before the variable name. For example in composer
 creating a label with this content::
 
-  This map was made using QGIS [% @qgis_version %]. The project file for this map
-  is:  [% @project_path %]
+  This map was made using QGIS [% @qgis_version %]. The project file for this
+  map is: [% @project_path %]
 
 Will render the label like this::
 
-  This map was made using QGIS |CURRENT|. The project file for this map is:
+  This map was made using QGIS 2.14. The project file for this map is:
   /gis/qgis-user-conference-2015.qgs
 
-You can manage global variables from the :menuselection:`Settings -> Options` menu,
+You can manage global variables from the :menuselection:`Settings --> Options` menu,
 and project level variables from Project properties (including adding your own
 custom variables).
 
