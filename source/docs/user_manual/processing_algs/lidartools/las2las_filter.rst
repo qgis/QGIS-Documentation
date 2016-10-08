@@ -1,4 +1,6 @@
-|updatedisclaimer|
+.. only:: html
+
+   |updatedisclaimer|
 
 las2las_filter
 --------------

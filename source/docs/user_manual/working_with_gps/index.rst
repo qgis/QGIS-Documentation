@@ -1,4 +1,6 @@
-|updatedisclaimer|
+.. only:: html
+
+   |updatedisclaimer|
 
 **********************
 Working with GPS Data

@@ -1,4 +1,6 @@
-|updatedisclaimer|
+.. only:: html
+
+   |updatedisclaimer|
 
 .. index:: Digitizing, Geometry Checker, Topology, Geometry validity, Errors
 

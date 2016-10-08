@@ -1,4 +1,6 @@
-|updatedisclaimer|
+.. only:: html
+
+   |updatedisclaimer|
 
 .. index:: Geometry, Topology, Snapping, Plugin, Geometry snapper plugin
 

@@ -1,7 +1,9 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. Purpose: This chapter aims to describe how the user starts to use QGIS. It
 .. should be kept short with only few steps to get QGIS working with two layers.
-
-|updatedisclaimer|
 
 .. _`label.getstarted`:
 
