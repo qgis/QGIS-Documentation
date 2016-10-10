@@ -33,6 +33,7 @@ QGIS User Guide
     print_composer/index
     plugins/plugins_index
     preamble/help_and_support
+    preamble/contributors
     appendices/appendices
     literature_web/literature_and_web_references
 
