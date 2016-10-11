@@ -31,7 +31,7 @@ PDF via http://www.qgis.org/en/docs/. Translated versions of this
 document can be downloaded in several formats via the documentation
 area of the QGIS project as well. For more information about
 contributing to this document and about translating it, please visit
-http://www.qgis.org/wiki/.
+http://qgis.org/en/site/getinvolved/index.html.
 
 **Links in this Document**
 
