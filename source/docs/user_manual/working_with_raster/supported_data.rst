@@ -2,8 +2,8 @@
 
    |updatedisclaimer|
 
-.. index:: Raster
-.. index:: Arc/Info_Binary_Grid, Arc/Info_ASCII_Grid, GeoTIFF
+.. index:: Raster, GDAL
+.. index:: ArcInfo Binary Grid, ArcInfo ASCII Grid, GeoTIFF
 .. index:: Erdas Imagine
 
 *************************
@@ -14,10 +14,6 @@ Working with Raster Data
 
    .. contents::
       :local:
-
-.. % when the revision of a section has been finalized,
-.. % comment out the following line:
-.. %\updatedisclaimer
 
 
 This section describes how to visualize and set raster layer properties.
@@ -60,7 +56,7 @@ the data correctly in the map canvas.
 QGIS makes use of georeference information inside the raster layer (e.g., :index:`GeoTiff`)
 or in an appropriate world file to properly display the data.
 
-.. index:: loading_raster
+.. index:: Loading raster
 
 .. _load_raster:
 

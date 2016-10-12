@@ -25,24 +25,16 @@ that will appear.
 
 .. _figure_processing_batch_start:
 
-.. only:: html
-
-   **Figure Processing 26:**
-
 .. figure:: /static/user_manual/processing/batch_processing_right_click.png
    :align: center
 
-   Batch Processing Right Click
+   Batch Processing From Right Click
 
 If you have the execution dialog of the algorithm open, you can also start the
 batch processing interface from there, clicking on the :guilabel:`Run as batch
 process...` button.
 
 .. _figure_processing_batch_start2:
-
-.. only:: html
-
-   **Figure Processing 27:**
 
 .. figure:: /static/user_manual/processing/batch_processing_params_dialog.png
    :align: center
@@ -59,10 +51,6 @@ the algorithm has to be executed. Values are introduced using a table like the
 one shown next.
 
 .. _figure_processing_bath_parameters:
-
-.. only:: html
-
-   **Figure Processing 28:**
 
 .. figure:: /static/user_manual/processing/batch_processing.png
    :align: center
@@ -111,11 +99,7 @@ on the accompanying button.
 Once you select the file, a new dialog is shown to allow for autocompletion of
 other cells in the same column (same parameter).
 
-.. _figure_processing_3:
-
-.. only:: html
-
-   **Figure Processing 29:**
+.. _figure_processing_save:
 
 .. figure:: /static/user_manual/processing/batch_processing_save.png
    :align: center
@@ -132,11 +116,7 @@ Automatic filling can be done by simply adding correlative numbers to the select
 file path, or by appending the value of another field at the same row. This is
 particularly useful for naming output data objects according to input ones.
 
-.. _figure_processing_4:
-
-.. only:: html
-
-   **Figure Processing 30:**
+.. _figure_processing_file:
 
 .. figure:: /static/user_manual/processing/batch_processing_filepath.png
    :align: center

@@ -26,16 +26,12 @@ The history manager is a set of registry entries grouped according to
 their date of execution, making it easier to find information about an algorithm
 executed at any particular moment.
 
-.. _figure_history_1:
-
-.. only:: html
-
-   **Figure Processing 31:**
+.. _figure_history:
 
 .. figure:: /static/user_manual/processing/history.png
    :align: center
 
-   History |win|
+   History
 
 Process information is kept as a command-line expression, even if the algorithm
 was launched from the toolbox. This makes it also useful for those learning how
@@ -49,11 +45,16 @@ simply double-clicking on the corresponding entry.
 The processing log
 -------------------
 
-The history dialog only contains the execution calls, but not the information produced by the algorithm when executed. That information is written to the QGIS log, in a :guilabel:`Processing` tab.
+The history dialog only contains the execution calls, but not the information
+produced by the algorithm when executed. That information is written to the QGIS
+log, in a :guilabel:`Processing` tab.
 
 Third-party algorithms are usually executed by calling their
 command-line interfaces, which communicate with the user via the console.
-Although that console is not shown, a full dump of it is written to the log each time you run one of those algorithms. To avoid cluttering the log with that information, you can disable it for each provider, looking for the corresponding option in the provider entry of the settings dialog.
+Although that console is not shown, a full dump of it is written to the log each
+time you run one of those algorithms. To avoid cluttering the log with that
+information, you can disable it for each provider, looking for the corresponding
+option in the provider entry of the settings dialog.
 
 Some algorithms, even if they can produce a result with the given input data,
 might add comments or additional information to log if

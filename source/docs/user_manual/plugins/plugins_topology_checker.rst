@@ -2,16 +2,14 @@
 
    |updatedisclaimer|
 
+.. index:: Topology
+.. single: Plugins; Topology Checker
 .. _`topology`:
 
 Topology Checker Plugin
 =======================
 
-.. _figure_topology_checker_1:
-
-.. only:: html
-
-   **Figure Topology Checker:**
+.. _figure_topology_checker:
 
 .. figure:: /static/user_manual/plugins/topology_checker.png
    :align: center

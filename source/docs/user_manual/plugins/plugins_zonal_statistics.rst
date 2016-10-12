@@ -2,6 +2,8 @@
 
    |updatedisclaimer|
 
+.. index:: Raster Statistics
+   single: Plugins; Zonal statistics
 .. _zonal_statistics:
 
 Zonal Statistics Plugin
@@ -28,10 +30,6 @@ The available statistics are :
 - **Variety**: to count the number of distinct pixel values
 
 .. _figure_zonal_statistics:
-
-.. only:: html
-
-   **Figure Zonal Statistics**
 
 .. figure:: /static/user_manual/plugins/zonal_statistics.png
    :align: center

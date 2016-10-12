@@ -24,10 +24,6 @@ numbers 1 through 5 in yellow circles are discussed below).
 
 .. _fig_startup:
 
-.. only:: html
-
-   **Figure QGIS GUI 1:**
-
 .. figure:: /static/user_manual/introduction/startup.png
    :align: center
 
@@ -54,8 +50,7 @@ context help.
 Menu Bar
 ========
 
-.. index::
-   single:menus
+.. index:: Menus
 
 The menu bar provides access to various QGIS features using a standard
 hierarchical menu. The top-level menus and a summary of some of the menu
@@ -75,6 +70,8 @@ and toolbars, see section :ref:`label_toolbars`.
    with the same tools, they may be placed in different menus according to the
    operating system specification. The lists below show the most common location
    and precise when there is a variation.
+
+.. index:: Project
 
 Project
 -------
@@ -371,13 +368,12 @@ within QGIS interface.
 The list can also be extended with the activation of :ref:`Core or external
 plugins <plugins>`.
 
+
+.. index:: Toolbars
 .. _`label_toolbars`:
 
 Toolbars
 --------
-
-.. index::
-   single:toolbar
 
 The toolbar provides access to most of the same functions as the menus, plus
 additional tools for interacting with the map. Each toolbar item has pop-up help
@@ -389,10 +385,6 @@ they can be switched off using the right mouse button context menu, or by
 holding the mouse over the toolbars.
 
 .. _figure_toolbars:
-
-.. only:: html
-
-   **Figure Toolbars:**
 
 .. figure:: /static/user_manual/introduction/toolbars.png
    :align: center
@@ -424,10 +416,6 @@ filling values...) in order to perform a more complex task.
 
 .. _figure_panels:
 
-.. only:: html
-
-   **Figure Panels:**
-
 .. figure:: /static/user_manual/introduction/panels.png
    :align: center
 
@@ -451,12 +439,12 @@ Below are listed default panels provided by QGIS:
 * the :ref:`undo_redo_panel`
 * the :ref:`Processing Toolbox <label_processing>`
 
+
+.. index:: Map view
 .. _`label_mapview`:
 
 Map View
 ========
-
-.. index::`map view`
 
 Also called **Map canvas**, this is the "business end" of QGIS ---
 maps are displayed in this area. The map displayed in this window
@@ -468,8 +456,7 @@ performed on the map as described in the label_toolbars_ description above. The 
 view and the legend are tightly bound to each other --- the maps in view reflect
 changes you make in the legend area.
 
-.. index::
-   single:zoom mouse wheel
+.. index:: Zoom, Mouse wheel
 
 .. tip::
    **Zooming the Map with the Mouse Wheel**
@@ -484,8 +471,7 @@ changes you make in the legend area.
 .. tip::
    **Panning the Map with the Arrow Keys and Space Bar**
 
-   .. index::
-      single: pan arrow keys
+   .. index:: Pan, Arrow keys
 
    You can use the arrow keys to pan the map. Place the mouse cursor inside
    the map area and click on the right arrow key to pan east, left arrow key to

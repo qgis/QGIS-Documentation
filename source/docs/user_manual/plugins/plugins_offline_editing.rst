@@ -2,6 +2,7 @@
 
    |updatedisclaimer|
 
+.. index:: Plugins; Offline editing
 .. _`offlinedit`:
 
 Offline Editing Plugin
@@ -13,7 +14,7 @@ be synchronized with the master datasource (e.g., a PostGIS database). If severa
 persons are working simultaneously on the same datasets, it is difficult to
 merge the edits by hand, even if people don’t change the same features.
 
-The |offlineEditingCopy|:sup:`Offline Editing` Plugin automates the
+The |offlineEditingCopy| :sup:`Offline Editing` Plugin automates the
 synchronisation by copying the content of a datasource (usually PostGIS or
 WFS-T) to a SpatiaLite database and storing the offline edits to dedicated
 tables. After being connected to the network again, it is possible to apply the
@@ -24,19 +25,14 @@ Using the plugin
 
 * Open some vector layers (e.g., from a PostGIS or WFS-T datasource).
 * Save it as a project.
-* Go to :menuselection:`Database --> Offline Editing -->` |offlineEditingCopy|:guilabel:`Convert to offline project`
-  and select the layers to save. The content of the layers is saved to SpatiaLite
-  tables.
+* Go to :menuselection:`Database --> Offline Editing -->` |offlineEditingCopy|
+  :guilabel:`Convert to offline project` and select the layers to save.
+  The content of the layers is saved to SpatiaLite tables.
 * Edit the layers offline.
-* After being connected again, upload the changes using :menuselection:`Database --> Offline Editing -->` |offlineEditingSync|
-  :guilabel:`Synchronize`.
+* After being connected again, upload the changes using :menuselection:`Database
+  --> Offline Editing -->` |offlineEditingSync| :guilabel:`Synchronize`.
 
-.. _figure_offline_editing_1:
-
-.. only:: html
-
-   **Figure Offline Editing 1:**
-
+.. _figure_offline_editing:
 
 .. figure:: /static/user_manual/plugins/create_offline_project.png
    :align: center

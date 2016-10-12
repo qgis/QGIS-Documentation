@@ -2,6 +2,7 @@
 
    |updatedisclaimer|
 
+.. index:: GPS tracking
 .. _`sec_gpstracking`:
 
 Live GPS tracking
@@ -45,10 +46,6 @@ attributes.
 
 .. _figure_gps_position:
 
-.. only:: html
-
-   **Figure GPS Position:**
-
 .. figure:: /static/user_manual/working_with_gps/gpstrack_main.png
    :align: center
 
@@ -61,10 +58,6 @@ GPS signal strength
 are receiving signals from.
 
 .. _figure_gps_strength:
-
-.. only:: html
-
-   **Figure GPS Strength:**
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_stren.png
    :align: center
@@ -80,10 +73,6 @@ satellites are, you have to switch to the polar screen. You can also see the
 ID numbers of the satellites you are receiving signals from.
 
 .. _figure_gps_polar:
-
-.. only:: html
-
-   **Figure GPS polar window:**
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_polar.png
    :align: center
@@ -104,10 +93,6 @@ GPS options
 A click on **[Connect]** again initiates the connection to the GPS receiver.
 
 .. _figure_gps_options:
-
-.. only:: html
-
-   **Figure GPS Tracking 2:**
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_options.png
    :align: center

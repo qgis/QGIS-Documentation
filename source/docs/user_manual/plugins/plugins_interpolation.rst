@@ -2,6 +2,7 @@
 
    |updatedisclaimer|
 
+.. index:: Interpolation, TIN (Triangulated Irregular Network), IDW (Inverse Distance Weighted)
 .. _`interpol`:
 
 Interpolation Plugin
@@ -9,7 +10,7 @@ Interpolation Plugin
 
 The Interpolation plugin can be used to generate a TIN or IDW interpolation of a
 point vector layer. It is very simple to handle and provides an intuitive graphical
-user interface for creating interpolated raster layers (see Figure_interpolation_1_).
+user interface for creating interpolated raster layers (see Figure_interpolation_).
 The plugin requires the following parameters to be specified before running:
 
 * Input **Vector layers**: Specify the input point vector layer(s) from a list of
@@ -41,18 +42,14 @@ The plugin requires the following parameters to be specified before running:
 * **Output file**: Specify a name for the output raster file.
 * |checkbox| :guilabel:`Add result to project` to load the result into the map canvas.
 
-Note that using lines as constraints for the interpolation the triangulation (TIN method) you can
-either use 'structure lines' or 'break lines'. When using 'break lines' you produce sharp breaks
-in the surface while using 'structure lines' you produce continuous breaks.
-The triangulation is modified by both methods such that no edge crosses a breakline or structure
-line.
+Note that using lines as constraints for the interpolation the triangulation
+(TIN method) you can either use 'structure lines' or 'break lines'. When using
+'break lines' you produce sharp breaks in the surface while using 'structure lines'
+you produce continuous breaks. The triangulation is modified by both methods such
+that no edge crosses a breakline or structure line.
 
 
-.. _figure_interpolation_1:
-
-.. only:: html
-
-   **Figure Interpolation 1:**
+.. _figure_interpolation:
 
 .. figure:: /static/user_manual/plugins/interpolate_dialog.png
    :align: center
@@ -70,7 +67,7 @@ Using the plugin
    :ref:`managing_plugins`) and click on the :menuselection:`Raster -->
    Interpolation -->` |rasterInterpolate| :guilabel:`Interpolation`
    menu, which appears in the QGIS menu bar. The Interpolation plugin dialog
-   appears as shown in Figure_interpolation_1_.
+   appears as shown in Figure_interpolation_.
 #. Select an input layer (e.g., :guilabel:`elevp` |selectString|) and column
    (e.g., ``ELEV``) for interpolation.
 #. Select an interpolation method (e.g., 'Triangulated Irregular Network (TIN)'),

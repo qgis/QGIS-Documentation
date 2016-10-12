@@ -12,13 +12,9 @@ Composer Items Common Options
 
 Composer items have a set of common properties you will find on the bottom of
 the :guilabel:`Item Properties` tab: Position and size, Rotation, Frame,
-Background, Item ID and Rendering (See figure_composer_common_1_).
+Background, Item ID and Rendering (See figure_composer_common_).
 
-.. _Figure_composer_common_1:
-
-.. only:: html
-
-   **Figure Composer Common 1:**
+.. _Figure_composer_common:
 
 .. figure:: /static/user_manual/print_composer/common_properties.png
    :align: center
@@ -58,8 +54,7 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
      (See :ref:`atlas_data_defined_override`).
 
 
-.. index:: Rendering_Mode
-
+.. index:: Rendering mode
 .. _Composer_Rendering_Mode:
 
 Rendering mode
@@ -67,11 +62,7 @@ Rendering mode
 
 QGIS now allows advanced rendering for Composer items just like vector and raster layers.
 
-.. _figure_composer_common_2:
-
-.. only:: html
-
-   **Figure Composer common 2:**
+.. _figure_composer_common_rendering:
 
 .. figure:: /static/user_manual/print_composer/rendering_mode.png
    :align: center
@@ -132,7 +123,7 @@ Inside the :menuselection:`Edit` menu, you can find actions to select all the it
 to clear all selections or to invert the current selection.
 
 
-.. index:: Items_Alignment
+.. index:: Items alignment
 
 Alignment
 ----------
@@ -145,11 +136,7 @@ shown in the :menuselection:`Items` tab. You can also raise or lower objects
 in the :menuselection:`Items` tab by clicking and dragging an object's label
 in this list.
 
-.. _figure_composer_common_3:
-
-.. only:: html
-
-   **Figure Composer Common 3:**
+.. _figure_composer_common_align:
 
 .. figure:: /static/user_manual/print_composer/alignment_lines.png
    :align: center
@@ -157,7 +144,7 @@ in this list.
    Alignment helper lines in the Print Composer
 
 There are several alignment options available within the |alignLeft|
-:sup:`Align selected items` pull-down menu (see figure_composer_common_3_). To use an
+:sup:`Align selected items` pull-down menu (see figure_composer_common_align_). To use an
 alignment function, you first select the elements then click on the
 matching alignment icon. All selected elements will then be aligned to their common bounding box.
 When moving items on the Composer canvas, alignment helper lines appear when borders, centers or

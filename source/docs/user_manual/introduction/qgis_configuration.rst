@@ -21,7 +21,7 @@ between Options, Project Properties and Customization.
 
 ..  FIXME: please add more introduction here
 
-
+.. index:: Options, Configuration
 .. _gui_options:
 
 Options
@@ -79,6 +79,7 @@ General Tab
   choose between 'Never', 'Ask', 'For this session only' and
   'Always (not recommended)'.
 
+.. index:: Environment variables
 .. _`env_options`:
 
 System Tab
@@ -118,10 +119,6 @@ source code.
   |checkbox| :guilabel:`Show only QGIS-specific variables`.
 
 .. _figure_environment_variables:
-
-.. only:: html
-
-   **Figure System Environment:**
 
 .. figure:: /static/user_manual/introduction/sys-env-options.png
    :align: center
@@ -180,15 +177,14 @@ Data Sources Tab
 This widget lists all the folder you chose to hide from the Browser panel.
 Removing a folder from the list will make it available in the Browser panel.
 
+.. index:: Rendering
 
 Rendering Tab
 --------------
 
+\
+
 .. _figure_rendering_menu:
-
-.. only:: html
-
-   **Figure Rendering Menu:**
 
 .. figure:: /static/user_manual/introduction/rendering_menu.png
    :align: center
@@ -254,6 +250,8 @@ Rendering Tab
 
 * |checkbox| :guilabel:`Map canvas refresh`
 
+..index:: Colors
+
 Colors Tab
 ------------
 
@@ -284,6 +282,8 @@ Canvas and Legend Tab
   * |checkbox| :guilabel:`Display classification attribute names`
   * |checkbox| :guilabel:`Create raster icons (may be slow)`
   * you can also set the :guilabel:`WMS getLegendGraphic Resolution`
+
+.. index:: Map tools
 
 Map tools Tab
 --------------
@@ -475,10 +475,6 @@ Network Tab
 
 .. _figure_network_tab:
 
-.. only:: html
-
-   **Figure Network Tab:**
-
 .. figure:: /static/user_manual/introduction/proxy-settings.png
    :align: center
 
@@ -598,10 +594,6 @@ described above.
 
 .. _figure_general_tab:
 
-.. only:: html
-
-   **Figure General Tab:**
-
 .. figure:: /static/user_manual/introduction/project_general.png
    :align: center
 
@@ -627,10 +619,6 @@ described above.
   ``closeProject()``.
 
 .. _figure_macro_tab:
-
-.. only:: html
-
-   **Figure Macro Tab:**
 
 .. figure:: /static/user_manual/introduction/macro.png
    :align: center
@@ -665,12 +653,14 @@ described above.
   lists and helps you create project-level variables.
   More information about variables at section :ref:`general_tools_variables`.
 
+
+.. index:: Customization
 .. _sec_customization:
 
 Customization
 =============
 
-The :index:`customization` dialog lets you (de)activate almost every element in the QGIS
+The customization dialog lets you (de)activate almost every element in the QGIS
 user interface. This can be very useful if you want to provide your end-users with a
 'light' version of QGIS, containing only the icons, menus or panels they need.
 
@@ -678,10 +668,6 @@ user interface. This can be very useful if you want to provide your end-users wi
    Before your changes are applied, you need to restart QGIS.
 
 .. _figure_customization:
-
-.. only:: html
-
-   **Figure Customization 1:**
 
 .. figure:: /static/user_manual/introduction/customization.png
    :align: center

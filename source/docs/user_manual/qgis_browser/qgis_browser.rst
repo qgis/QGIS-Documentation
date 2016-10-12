@@ -2,6 +2,7 @@
 
    |updatedisclaimer|
 
+.. index:: Browsing data
 .. _`label_qgis_browser`:
 
 *************
@@ -73,10 +74,6 @@ drag-and-drop from one panel to the other.
 
 .. _figure_browser_panels:
 
-.. only:: html
-
-   **Figure browser 1:**
-
 .. figure:: /static/user_manual/qgis_browser/browser_panels.png
    :align: center
 
@@ -102,10 +99,6 @@ and open them in a QGIS project by drag-and-drop.
 .. index:: Browse_Maps, Import_Maps
 
 .. _figure_browser_standalone_metadata:
-
-.. only:: html
-
-   **Figure browser 2:**
 
 .. figure:: /static/user_manual/qgis_browser/browser_standalone_metadata.png
    :align: center

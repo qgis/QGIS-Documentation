@@ -2,6 +2,7 @@
 
    |updatedisclaimer|
 
+.. index:: Plugins; Terrain analysis
 .. _`rasterrain`:
 
 Raster Terrain Analysis Plugin
@@ -10,7 +11,7 @@ Raster Terrain Analysis Plugin
 |demAnalysis| The Raster Terrain Analysis Plugin can be used to calculate the
 slope, aspect, hillshade, ruggedness index and relief for digital elevation
 models (DEM). It is very simple to handle and provides an intuitive graphical
-user interface for creating new raster layers (see Figure_raster_terrain_1_).
+user interface for creating new raster layers (see Figure_raster_terrain_).
 
 Description of the analysis:
 
@@ -29,11 +30,7 @@ Description of the analysis:
   distribution. The output map is a multiband color with three bands reflecting the
   RGB values of the shaded relief.
 
-.. _figure_raster_terrain_1:
-
-.. only:: html
-
-   **Figure Raster Terrain 1:**
+.. _figure_raster_terrain:
 
 .. figure:: /static/user_manual/plugins/raster_terrain_dialog.png
    :align: center
@@ -50,6 +47,6 @@ Using the plugin
 #. Load the Raster Terrain Analysis plugin in the Plugin Manager (see
    :ref:`managing_plugins`).
 #. Select an analysis method from the menu (e.g., :menuselection:`Raster --> Terrain Analysis -->
-   Slope`). The :guilabel:`Slope` dialog appears as shown in Figure_raster_terrain_1_.
+   Slope`). The :guilabel:`Slope` dialog appears as shown in Figure_raster_terrain_.
 #. Specify an output file path, and an output file type.
 #. Click **[OK]**.

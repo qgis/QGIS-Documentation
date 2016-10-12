@@ -11,18 +11,12 @@ To add an image, click the |addImage| :sup:`Add image` icon and drag a rectangle
 canvas with the left mouse button. You can then position and customize
 its appearance in the image :guilabel:`Item Properties` tab.
 
-.. index::
-   single:Picture_database
-.. index::
-   single:Rotated_North_Arrow
+.. index:: Picture database, Rotated north arrow
 
-The image :guilabel:`Item Properties` tab provides the following functionalities (see figure_composer_image_1_):
+The image :guilabel:`Item Properties` tab provides the following functionalities
+(see figure_composer_image_):
 
-.. _Figure_composer_image_1:
-
-.. only:: html
-
-   **Figure Composer image 1:**
+.. _Figure_composer_image:
 
 .. figure:: /static/user_manual/print_composer/image_mainproperties.png
    :align: center
@@ -85,18 +79,14 @@ the selected map item.
 
 It is also possible to select a north arrow directly. If you first select a north arrow image from
 **Search directories** and then use the browse button |browseButton| of the field :guilabel:`Image source`,
-you can now select one of the north arrow from the list as displayed in figure_composer_image_2_.
+you can now select one of the north arrow from the list as displayed in figure_composer_image_north_.
 
 .. note::
 
    Many of the north arrows do not have an 'N' added in the north arrow, this is done on
    purpose for languages that do not use an 'N' for North, so they can use another letter.
 
-.. _Figure_composer_image_2:
-
-.. only:: html
-
-   **Figure Composer Image 2:**
+.. _Figure_composer_image_north:
 
 .. figure:: /static/user_manual/print_composer/north_arrows.png
    :align: center

@@ -7,11 +7,11 @@
 User Authentication Workflows
 =============================
 
-.. _figure_authusage_1:
+\
 
-.. only:: html
+\
 
-   **Figure Authentication usage 1**
+.. _figure_authusage:
 
 .. figure:: /static/user_manual/auth_system/auth-user-usage.png
    :align: center
@@ -29,11 +29,7 @@ of internet-based authentication. When connecting via HTTP(S) using the standard
 username/password authentication method will attempt HTTP BASIC authentication
 upon connection.
 
-.. _figure_auth_https_1:
-
-.. only:: html
-
-   **Figure HTTP(S) authentication 1**
+.. _figure_auth_https:
 
 .. figure:: /static/user_manual/auth_system/auth-http-basic-wms.png
    :align: center
@@ -49,11 +45,7 @@ authentication configuration. When configuring with the new auth system, the
 key=value will be an abstracted representation of the credentials, e.g.
 `authfg=81t21b9`
 
-.. _figure_auth_database_1:
-
-.. only:: html
-
-   **Figure Database Authentication 1**
+.. _figure_auth_database:
 
 .. figure:: /static/user_manual/auth_system/auth-db-ssl-pki.png
    :align: center
@@ -70,11 +62,7 @@ frequently, or where the components will be replaced by a system administrator.
 In either instance you will need to store any passphrase needed to access
 private keys within the database.
 
-.. _figure_auth_pki_1:
-
-.. only:: html
-
-   **Figure PKI authentication 1**
+.. _figure_auth_pki_config:
 
 .. figure:: /static/user_manual/auth_system/auth-pki-config.png
    :align: center
@@ -86,11 +74,7 @@ Manager**, which can be accessed in the :guilabel:`Authentication` tab in QGIS
 `Options` dialog (:menuselection:`Settings --> Options`) by clicking the
 **[Manage certificates]** button.
 
-.. _figure_auth_pki_2:
-
-.. only:: html
-
-   **Figure PKI authentication 2**
+.. _figure_auth_pki_certif:
 
 .. figure:: /static/user_manual/auth_system/auth-open-Certificate-manager.png
    :align: center
@@ -100,7 +84,7 @@ Manager**, which can be accessed in the :guilabel:`Authentication` tab in QGIS
 In the **Certificate manager**, there are editors for **Identities**,
 **Servers** and **Authorities**. Each of these are contained in their own tabs,
 and are described below in the order they are encountered in the workflow chart
-above.  The tab order is relative to frequently accessed editors once you are
+above. The tab order is relative to frequently accessed editors once you are
 accustomed to the workflow.
 
 .. note::
@@ -125,11 +109,7 @@ authenticating root CA is not in the OS's trusted root CAs, it will need to be
 imported or have its file system path referenced. (Contact your system
 administrator if unsure.)
 
-.. _figure_auth_pki_3:
-
-.. only:: html
-
-   **Figure PKI authentication 3**
+.. _figure_auth_pki_editor:
 
 .. figure:: /static/user_manual/auth_system/auth-editor-authorities.png
    :align: center
@@ -144,11 +124,7 @@ secure server connections, unless you specifically override its trust policy. To
 see the QGIS-discoverable trust chain for any certificate, select it and click
 the |propertiesWidget| :sup:`Show information for certificate`.
 
-.. _figure_auth_pki_4:
-
-.. only:: html
-
-   **Figure PKI authentication 4**
+.. _figure_auth_pki_info:
 
 .. figure:: /static/user_manual/auth_system/auth-authority-imported_cert-info-chain.png
    :align: center
@@ -156,17 +132,13 @@ the |propertiesWidget| :sup:`Show information for certificate`.
    Certificate info dialog
 
 You can edit the :guilabel:`trust policy` |selectString| for any selected
-certificate within the chain. Any change in trust policy to a selected 
-certificate will not be saved to the database unless the |fileSave| 
+certificate within the chain. Any change in trust policy to a selected
+certificate will not be saved to the database unless the |fileSave|
 :sup:`Save certificate trust policy change to database` button is clicked
 *per* selected certification. Closing the dialog will **not** apply the
 policy changes.
 
-.. _figure_auth_pki_5:
-
-.. only:: html
-
-   **Figure PKI authentication 5**
+.. _figure_auth_pki_policy:
 
 .. figure:: /static/user_manual/auth_system/auth-authority-edit-trust_save-not-close.png
    :align: center
@@ -181,11 +153,7 @@ clicking the |transformSettings| **Options** button.
    Changing the default trust policy may result in problems with secure
    connections.
 
-.. _figure_auth_pki_6:
-
-.. only:: html
-
-   **Figure PKI authentication 6**
+.. _figure_auth_pki_options:
 
 .. figure:: /static/user_manual/auth_system/auth-editor-authorities_utilities-menu.png
    :align: center
@@ -204,11 +172,7 @@ considered invalid (in case you want to override their trust policy). You can
 override the trust policy upon import, or do so later within the **Authorities**
 editor.
 
-.. _figure_auth_pki_7:
-
-.. only:: html
-
-   **Figure PKI authentication 7**
+.. _figure_auth_pki_import:
 
 .. figure:: /static/user_manual/auth_system/auth-authority-import.png
    :align: center
@@ -234,11 +198,7 @@ import any identity bundles into the authentication database. If you do not wish
 to store the identities, you can reference their component file system paths
 within an individual authentication configuration.
 
-.. _figure_auth_pki_Identities_1:
-
-.. only:: html
-
-   **Figure PKI identities authentication 1**
+.. _figure_auth_pki_identities:
 
 .. figure:: /static/user_manual/auth_system/auth-editor-identities.png
    :align: center
@@ -262,22 +222,14 @@ prior to import. Likewise, if the client certificate in the bundle is invalid
 (for example, its effective date has not yet started or has elapsed) the bundle
 can not be imported.
 
-.. _figure_auth_pki_Identities_2:
-
-.. only:: html
-
-   **Figure PKI identities authentication 2**
+.. _figure_auth_pki_identities_import:
 
 .. figure:: /static/user_manual/auth_system/auth-identity-import_paths.png
    :align: center
 
    PEM/DER identity import
 
-.. _figure_auth_pki_Identities_3:
-
-.. only:: html
-
-   **Figure PKI identities authentication 3**
+.. _figure_auth_pki_identities_import_2:
 
 .. figure:: /static/user_manual/auth_system/auth-identity-import_bundle-valid.png
    :align: center
@@ -293,11 +245,7 @@ is different than when the project was last saved, or due to a credentials
 mismatch. In such cases the :guilabel:`Handle bad layers` dialog will be
 presented upon QGIS launch.
 
-.. _figure_auth_pki_badlayers_1:
-
-.. only:: html
-
-   **Figure PKI authentication Bad layers 1**
+.. _figure_auth_pki_badlayers:
 
 .. figure:: /static/user_manual/auth_system/auth-handle-bad-layers.png
    :align: center
@@ -309,11 +257,7 @@ with it, you will be able to edit it. Doing so will automatically edit the data
 source string, much in the same way as opening the project file in a text editor
 and editing the string.
 
-.. _figure_auth_pki_badlayers_2:
-
-.. only:: html
-
-   **Figure PKI authentication Bad layers 2**
+.. _figure_auth_pki_badlayers_edit:
 
 .. figure:: /static/user_manual/auth_system/auth-handle-bad-layers-edit.png
    :align: center
@@ -337,11 +281,7 @@ useful:
   their credentials of the resource. When the project is opened, the ID is found
   in the authentication database, but the credentials are different per user.
 
-.. _figure_auth_id_1:
-
-.. only:: html
-
-   **Figure Authentication ID 1**
+.. _figure_auth_id:
 
 .. figure:: /static/user_manual/auth_system/auth-change-config-id.png
    :align: center
@@ -386,11 +326,10 @@ web-accessible directories.
 SSL server exceptions
 ---------------------
 
-.. _figure_auth_server_1:
+\
 
-.. only:: html
-
-   **Figure Server authentication 1**
+\
+.. _figure_auth_server:
 
 .. figure:: /static/user_manual/auth_system/auth-ssl-config.png
    :align: center
@@ -418,26 +357,18 @@ allow you to override SSL errors, but with more granular control.
    only your client identity's issuer or server administrator can fix the issue.
 
 You can pre-configure an SSL server configuration by clicking the |signPlus|
-button.  Alternatively, you can add a configuration when an SSL error occurs
+button. Alternatively, you can add a configuration when an SSL error occurs
 during a connection and you are presented with an **SSL Error** dialog (where
 the error can be ignored temporarily or saved to the database and ignored):
 
-.. _figure_auth_server_2:
-
-.. only:: html
-
-   **Figure Server authentication 2**
+.. _figure_auth_server_config:
 
 .. figure:: /static/user_manual/auth_system/auth-server-exception.png
    :align: center
 
    Manually adding configuration
 
-.. _figure_auth_server_3:
-
-.. only:: html
-
-   **Figure Server authentication 3**
+.. _figure_auth_server_error:
 
 .. figure:: /static/user_manual/auth_system/auth-server-error-add-exception.png
    :align: center
@@ -446,22 +377,14 @@ the error can be ignored temporarily or saved to the database and ignored):
 
 Once an SSL configuration is saved to the database, it can be edited or deleted.
 
-.. _figure_auth_server_4:
-
-.. only:: html
-
-   **Figure Server authentication 4**
+.. _figure_auth_server_ssl:
 
 .. figure:: /static/user_manual/auth_system/auth-editor-servers.png
    :align: center
 
    Existing SSL configuration
 
-.. _figure_auth_server_5:
-
-.. only:: html
-
-   **Figure Server authentication 5**
+.. _figure_auth_server_ssledit:
 
 .. figure:: /static/user_manual/auth_system/auth-server-edit.png
    :align: center

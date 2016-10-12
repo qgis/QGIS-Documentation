@@ -31,10 +31,6 @@ keyboard shortcuts and add new keyboard shortcuts to QGIS features.
 
 .. _figure_shortcuts:
 
-.. only:: html
-
-   **Figure Shortcuts 1:**
-
 .. figure:: /static/user_manual/introduction/shortcuts.png
    :align: center
 
@@ -103,14 +99,10 @@ panel allows you to:
 
 .. _figure_layer_toolbar:
 
-.. only:: html
+.. figure:: /static/user_manual/introduction/layer_toolbar.png
+   :align: center
 
-   **Figure Layer tools Bar:**
-
-   .. figure:: /static/user_manual/introduction/layer_toolbar.png
-      :align: center
-
-      Layer Toolbar in Layers Panel
+   Layer Toolbar in Layers Panel
 
 
 .. index::
@@ -270,10 +262,6 @@ them in the correct order (see figure_layer_order_). Checking the |checkbox|
 cause a revert to default behavior.
 
 .. _figure_layer_order:
-
-.. only:: html
-
-   **Figure Layer Order:**
 
 .. figure:: /static/user_manual/introduction/layer_order.png
     :align: center
@@ -554,9 +542,6 @@ or interact with the features (including symbology, labeling, action, diagram...
 settings) for vector layer, or the pixels (band or color rendering, transparency,
 pyramids, histogram ...) for raster.
 
-.. only:: html
-
-   **Figure Manage Style:**
 
 .. _figure_manage_style:
 
@@ -651,9 +636,6 @@ QGIS will load the layer and its style. After you modified the layer style,
 you can **Save as Default**, creating a new style that becomes the default one
 or **Restore Default** style if you're not satisfied.
 
-.. only:: html
-
-   **Figure Save Style:**
 
 .. _figure_save_style_database:
 
@@ -696,11 +678,7 @@ On the lower left part of the dialog you can see a comparison between the
 selecting and on the lower right part you have the option to add the color
 you just tweaked into a color slot button.
 
-.. _figure_color_selector_1:
-
-.. only:: html
-
-   **Figure color selector 1:**
+.. _figure_color_selector_ramp:
 
 .. figure:: /static/user_manual/introduction/color_selector_ramp.png
    :align: center
@@ -725,11 +703,7 @@ populated with one of three methods:
 * or :guilabel:`Project colors`, a user-defined list of colors set under :menuselection:`Project
   --> Project Properties --> Default Styles`.
 
-.. _figure_color_selector_2:
-
-.. only:: html
-
-   **Figure color selector 2:**
+.. _figure_color_selector_switcher:
 
 .. figure:: /static/user_manual/introduction/color_selector_recent_colors.png
    :align: center
@@ -749,11 +723,7 @@ that the color picker is OS dependent and is currently not supported by OSX.
    or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking
    the drop-down arrow that follows the |selectColor| color box.
 
-.. _figure_color_selector_3:
-
-.. only:: html
-
-   **Figure color selector 3:**
+.. _figure_color_selector:
 
 .. figure:: /static/user_manual/introduction/quick_color_selector.png
    :align: center
@@ -932,10 +902,6 @@ according to CRS settings available.
 
 .. _figure_measure_length:
 
-.. only:: html
-
-   **Figure Measure Length:**
-
 .. figure:: /static/user_manual/introduction/measure_line.png
    :align: center
 
@@ -948,10 +914,6 @@ different area units.
 
 .. _figure_measure_area:
 
-.. only:: html
-
-   **Figure Measure Area:**
-
 .. figure:: /static/user_manual/introduction/measure_area.png
    :align: center
 
@@ -963,10 +925,6 @@ wish to measure, then move the cursor to draw the desired angle. The measure
 is displayed in a pop-up dialog.
 
 .. _figure_measure_angle:
-
-.. only:: html
-
-   **Figure Measure Angle:**
 
 .. figure:: /static/user_manual/introduction/measure_angle.png
    :align: center
@@ -1158,10 +1116,6 @@ display three kinds of information:
 
 .. _figure_identify:
 
-.. only:: html
-
-   **Figure Identify 1:**
-
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
 
@@ -1230,11 +1184,7 @@ toolbar provides the possibility to place formatted text in a balloon on the
 QGIS map canvas. Use the :guilabel:`Text Annotation` tool and click into the
 map canvas.
 
-.. _annotation:
-
-.. only:: html
-
-   **Figure annotation 1:**
+.. _figure_annotation:
 
 .. figure:: /static/user_manual/introduction/annotation.png
    :align: center
@@ -1283,10 +1233,6 @@ Also see this video https://youtu.be/0pDBuSbQ02o?t=2m25s from
 Tim Sutton for more information.
 
 .. _figure_custom_annotation:
-
-.. only:: html
-
-   **Figure annotation 2:**
 
 .. figure:: /static/user_manual/introduction/custom_annotation.png
    :align: center
@@ -1368,10 +1314,6 @@ small example:
 
 .. _figure_embed_dialog:
 
-.. only:: html
-
-   **Figure Nesting 1:**
-
 .. figure:: /static/user_manual/introduction/embed_dialog.png
    :align: center
 
@@ -1401,11 +1343,7 @@ Grid
 |transformed| :sup:`Grid` allows you to add a coordinate grid and coordinate
 annotations to the map canvas.
 
-.. _figure_decorations_1:
-
-.. only:: html
-
-   **Figure Decorations 1:**
+.. _figure_decorations_grid:
 
 .. figure:: /static/user_manual/introduction/grid_dialog.png
    :align: center
@@ -1413,7 +1351,7 @@ annotations to the map canvas.
    The Grid Dialog
 
 #. Select from menu :menuselection:`View --> Decorations --> Grid`.
-   The dialog starts (see figure_decorations_1_).
+   The dialog starts (see figure_decorations_grid_).
 #. Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid
    definitions according to the layers loaded in the map canvas.
 #. Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
@@ -1426,11 +1364,7 @@ Copyright Label
 |copyrightLabel| :sup:`Copyright label` adds a copyright label using the text
 you prefer to the map.
 
-.. _figure_decorations_2:
-
-.. only:: html
-
-   **Figure Decorations 2:**
+.. _figure_decorations_copyright:
 
 .. figure:: /static/user_manual/introduction/copyright.png
    :align: center
@@ -1438,7 +1372,7 @@ you prefer to the map.
    The Copyright Dialog
 
 #. Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
-   The dialog starts (see figure_decorations_2_).
+   The dialog starts (see figure_decorations_copyright_).
 #. Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is
    checked.
 #. Enter the text you want to place on the map. You can use HTML as
@@ -1468,11 +1402,7 @@ You can refine the placement of the arrow by setting a Horizontal and/or Vertica
 `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
 **Pixels** or set as **Percentage** of the width or height of the map canvas.
 
-.. _figure_decorations_3:
-
-.. only:: html
-
-   **Figure Decorations 3:**
+.. _figure_decorations_north:
 
 .. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
@@ -1486,11 +1416,7 @@ Scale Bar
 |scaleBar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
 can control the style and placement, as well as the labelling of the bar.
 
-.. _figure_decorations_4:
-
-.. only:: html
-
-   **Figure Decorations 4:**
+.. _figure_decorations_scale:
 
 .. figure:: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
@@ -1505,7 +1431,7 @@ bar to display distance in meters.
 To add a scale bar:
 
 #. Select from menu :menuselection:`View --> Decorations --> Scale Bar`.
-   The dialog starts (see figure_decorations_4_).
+   The dialog starts (see figure_decorations_scale_).
 #. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
 #. Choose the style from the :guilabel:`Scale bar style` |selectString|
    combo box.
@@ -1643,10 +1569,6 @@ and project level variables from Project properties (including adding your own
 custom variables).
 
 .. _figure_variables_dialog:
-
-.. only:: html
-
-   **Figure Variables dialog 2:**
 
 .. figure:: /static/user_manual/introduction/options_variables.png
    :align: center

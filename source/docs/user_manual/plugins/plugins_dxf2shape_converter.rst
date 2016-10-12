@@ -2,6 +2,7 @@
 
    |updatedisclaimer|
 
+.. index:: DXF
 .. _dxf2shape:
 
 Dxf2Shp Converter Plugin
@@ -11,11 +12,7 @@ The dxf2shape converter plugin can be used to convert vector data from DXF to
 shapefile format. It requires the following parameters to be specified before
 running:
 
-.. _figure_dxf2shape_1:
-
-.. only:: html
-
-   **Figure Dxf2Shape 1:**
+.. _figure_dxf2shape:
 
 .. figure:: /static/user_manual/plugins/dxf2shape_dialog.png
    :align: center
@@ -37,7 +34,7 @@ Using the Plugin
 #. Start QGIS, load the Dxf2Shape plugin in the Plugin Manager (see
    :ref:`managing_plugins`) and click on the |dxf2shpConverter| :sup:`Dxf2Shape
    Converter` icon, which appears in the QGIS toolbar menu. The Dxf2Shape plugin
-   dialog appears, as shown in Figure_dxf2shape_1_.
+   dialog appears, as shown in Figure_dxf2shape_.
 #. Enter the input DXF file, a name for the output shapefile and the shapefile type.
 #. Enable the |checkbox| :guilabel:`Export text labels` checkbox if you want
    to create an extra point layer with labels.

@@ -2,6 +2,7 @@
 
    |updatedisclaimer|
 
+..index:: GDAL
 .. _label_plugingdaltools:
 
 GDAL Tools Plugin
@@ -37,11 +38,7 @@ options.
 List of GDAL tools
 ------------------
 
-.. _figure_GDAL_Tools_1:
-
-.. only:: html
-
-   **Figure GDAL Tools 1:**
+.. _figure_GDAL_Tools:
 
 .. figure:: /static/user_manual/plugins/raster_menu.png
    :align: center

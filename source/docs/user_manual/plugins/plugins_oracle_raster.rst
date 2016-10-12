@@ -2,6 +2,8 @@
 
    |updatedisclaimer|
 
+.. index:: Oracle database
+   single: Plugins; Spatial Georaster
 .. _oracle_raster:
 
 Oracle Spatial GeoRaster Plugin
@@ -36,7 +38,7 @@ QGIS, you must create a connection to the Oracle database that contains the data
 To do this, begin by clicking on the |oracleRaster| :sup:`Add Oracle GeoRaster Layer`
 toolbar button -- this will open the :guilabel:`Select Oracle Spatial GeoRaster`
 dialog window. Click on **[New]** to open the dialog window, and specify
-the connection parameters (See Figure_oracle_raster_1_):
+the connection parameters (See Figure_oracle_raster_connection_):
 
 * **Name**: Enter a name for the database connection.
 * **Database instance**: Enter the name of the database that you will connect to.
@@ -44,11 +46,7 @@ the connection parameters (See Figure_oracle_raster_1_):
 * **Password**: Provide the password associated with your username that is required to
   access the database.
 
-.. _Figure_oracle_raster_1:
-
-.. only:: html
-
-   **Figure Oracle Raster 1:**
+.. _Figure_oracle_raster_connection:
 
 .. figure:: /static/user_manual/plugins/oracle_create_dialog.png
    :align: center
@@ -56,7 +54,7 @@ the connection parameters (See Figure_oracle_raster_1_):
    Create Oracle connection dialog
 
 Now, back on the main :guilabel:`Oracle Spatial GeoRaster` dialog window
-(see Figure_oracle_raster_2_), use the drop-down list to choose one connection,
+(see Figure_oracle_raster_selection_), use the drop-down list to choose one connection,
 and use the **[Connect]** button to establish a connection. You may also
 **[Edit]** the connection by opening the previous dialog and making changes to
 the connection information, or use the **[Delete]** button to remove the
@@ -82,11 +80,7 @@ Raster Data Table and Raster Id pairs.
 At any time, the selection entry can be edited in order to go directly to a known
 GeoRaster or to go back to the beginning and select another table name.
 
-.. _Figure_oracle_raster_2:
-
-.. only:: html
-
-   **Figure Oracle Raster 2:**
+.. _Figure_oracle_raster_selection:
 
 .. figure:: /static/user_manual/plugins/oracle_select_dialog.png
    :align: center

@@ -2,7 +2,7 @@
 
    |updatedisclaimer|
 
-.. index:: Attribute_Table
+.. index:: Attribute table
 
 
 The Attribute Table Item
@@ -19,92 +19,74 @@ with the left mouse button on the Print Composer canvas to place and size the it
 You can better position and customize its appearance in the :guilabel:`Item Properties` tab.
 
 The :guilabel:`Item properties` tab of an attribute table provides the following
-functionalities (see figure_composer_table_1_):
+functionalities (see figure_composer_table_):
 
-.. _Figure_composer_table_1:
-
-.. only:: html
-
-   **Figure Composer Attribute Table 1:**
+.. _Figure_composer_table:
 
 .. figure:: /static/user_manual/print_composer/attribute_properties.png
    :align: center
 
-   Attribute table Item properties Tab |nix|
+   Attribute table Item properties Tab
 
 
 Main properties
 ---------------
 
 The :guilabel:`Main properties` dialog of the attribute table` provides the
-following functionalities (see figure_composer_table_2_):
+following functionalities (see figure_composer_table_ppt_):
 
-.. _Figure_composer_table_2:
-
-.. only:: html
-
-   **Figure Composer Attribute Table 2:**
+.. _Figure_composer_table_ppt:
 
 .. figure:: /static/user_manual/print_composer/attribute_mainproperties.png
    :align: center
 
-   Attribute table Main properties Dialog |nix|
+   Attribute table Main properties Dialog
 
 * For :guilabel:`Source` you can normally select only 'Layer features'.
 * With :guilabel:`Layer` you can choose from the vector layers loaded in the project.
 * In case you activated the |checkbox|:guilabel:`Generate an atlas` option in the
   :guilabel:`Atlas generation` tab, there are two additional :guilabel:`Source` possible:
-  'Current atlas feature' (see figure_composer_table_2b_) and 'Relation children'
-  (see figure_composer_table_2c_). Choosing the 'Current atlas feature'
+  'Current atlas feature' (see figure_composer_table_atlas_) and 'Relation children'
+  (see figure_composer_table_relation_). Choosing the 'Current atlas feature'
   you won't see any option to choose the layer, and the table item will only
   show a row with the attributes from the current feature of the atlas coverage layer.
   Choosing 'Relation children', an option with the relation names will show up.
   The 'Relation children' option can only be used if you have defined a relation using
   your atlas coverage layer as parent, and the table will show the children rows of
-  the atlas coverage layer's current feature (for further information about the atlas generation, see :ref:`atlas_generation`).
+  the atlas coverage layer's current feature (for further information about the
+  atlas generation, see :ref:`atlas_generation`).
 * The button **[Refresh table data]** can be used to refresh the table when the actual
   contents of the table has changed.
 
 
-.. _Figure_composer_table_2b:
-
-.. only:: html
-
-   **Figure Composer Attribute Table 2b:**
+.. _Figure_composer_table_atlas:
 
 .. figure:: /static/user_manual/print_composer/attribute_mainatlas.png
    :align: center
 
-   Attribute table Main properties for 'Current atlas feature' |nix|
+   Attribute table Main properties for 'Current atlas feature'
 
 
-.. _Figure_composer_table_2c:
-
-.. only:: html
-
-   **Figure Composer Attribute Table 2c:**
+.. _Figure_composer_table_relation:
 
 .. figure:: /static/user_manual/print_composer/attribute_mainrelation.png
    :align: center
 
-   Attribute table Main properties for 'Relation children' |nix|
+   Attribute table Main properties for 'Relation children'
 
 
-* The button **[Attributes...]** starts the :guilabel:`Select attributes` menu, see
-  figure_composer_table_3_, that can be used to change the visible contents of the table.
-  After making changes use the **[OK]** button to apply changes to the table. The upper part of
-  the window shows the list of the attributes to display and the lower part helps to set the way the data is sorted.
+* The button **[Attributes...]** starts the :guilabel:`Select attributes` menu,
+  see figure_composer_table_select_, that can be used to change the visible
+  contents of the table. After making changes use the **[OK]** button to apply
+  changes to the table. The upper part of the window shows the list of the
+  attributes to display and the lower part helps to set the way the data is sorted.
 
-  .. _Figure_composer_table_3:
-
-  .. only:: html
-
-     **Figure Composer Attribute Table 3:**
+  .. _Figure_composer_table_select:
 
   .. figure:: /static/user_manual/print_composer/attribute_select.png
      :align: center
 
-     Attribute table Select attributes Dialog |nix|
+     Attribute table Select attributes Dialog
 
   In the :guilabel:`Columns` section you can:
 
@@ -135,18 +117,14 @@ Feature filtering
 -----------------
 
 The :guilabel:`Feature filtering` dialog of the attribute table provides
-the following functionalities (see figure_composer_table_4_):
+the following functionalities (see figure_composer_table_filter_):
 
-.. _Figure_composer_table_4:
-
-.. only:: html
-
-   **Figure Composer Attribute Table 4:**
+.. _Figure_composer_table_filter:
 
 .. figure:: /static/user_manual/print_composer/attribute_filter.png
    :align: center
 
-   Attribute table Feature filtering Dialog |nix|
+   Attribute table Feature filtering Dialog
 
 You can:
 
@@ -175,18 +153,14 @@ Appearance
 ----------
 
 The :guilabel:`Appearance` dialog of the attribute table provides
-the following functionalities  (see figure_composer_table_5_):
+the following functionalities  (see figure_composer_table_appearance_):
 
-.. _Figure_composer_table_5:
-
-.. only:: html
-
-   **Figure Composer Attribute Table 5:**
+.. _Figure_composer_table_appearance:
 
 .. figure:: /static/user_manual/print_composer/attribute_appearance.png
    :align: center
 
-   Attribute table appearance Dialog |nix|
+   Attribute table appearance Dialog
 
 * Click |checkbox| :guilabel:`Show empty rows` to fill the attribute table with empty cells.
   This option can also be used to provide additional empty cells when you have a result to show!
@@ -195,7 +169,8 @@ the following functionalities  (see figure_composer_table_5_):
   'On all frames' default option, or 'No header'.
 * The option :guilabel:`Empty table` controls what will be displayed when the result selection is empty.
 
-  * **Draw headers only**, will only draw the header except if you have chosen 'No header' for :guilabel:`Display header`.
+  * **Draw headers only**, will only draw the header except if you have chosen
+    'No header' for :guilabel:`Display header`.
   * **Hide entire table**, will only draw the background of the table. You can
     activate |checkbox| :guilabel:`Don't draw background if frame is empty` in :guilabel:`Frames`
     to completely hide the table.
@@ -207,18 +182,14 @@ the following functionalities  (see figure_composer_table_5_):
   the table in the first row, when the result is an empty table.
 * With :guilabel:`Background color` you can set the background color of the table.
   The :guilabel:`Advanced customization` option helps you define different background colors
-  for each cell (see figure_composer_table_6_)
+  for each cell (see figure_composer_table_background_)
 
-   .. _Figure_composer_table_6:
-
-.. only:: html
-
-   **Figure Composer Attribute Table 6:**
+.. _Figure_composer_table_background:
 
 .. figure:: /static/user_manual/print_composer/attribute_background.png
    :align: center
 
-   Attribute table Advanced Background Dialog |nix|
+   Attribute table Advanced Background Dialog
 
 * With the :guilabel:`Wrap text on` option, you can define a character on which
   the cell content will be wraped each time it is met
@@ -230,20 +201,17 @@ Show grid
 ---------
 
 The :guilabel:`Show grid` dialog of the attribute table provides
-the following functionalities (see figure_composer_table_7_):
+the following functionalities (see figure_composer_table_grid_):
 
-   .. _Figure_composer_table_7:
-
-.. only:: html
-
-   **Figure Composer Attribute Table 7:**
+.. _Figure_composer_table_grid:
 
 .. figure:: /static/user_manual/print_composer/attribute_grid.png
    :align: center
 
-   Attribute table Show grid Dialog |nix|
+   Attribute table Show grid Dialog
 
-* Activate |checkbox| :guilabel:`Show grid` when you want to display the grid, the outlines of the table cells.
+* Activate |checkbox| :guilabel:`Show grid` when you want to display the grid,
+  the outlines of the table cells.
 * With :guilabel:`Line width` you can set the thickness of the lines used in the grid.
 * The :guilabel:`Color` of the grid can be set using the color selection dialog.
 
@@ -252,58 +220,54 @@ Fonts and text styling
 ----------------------
 
 The :guilabel:`Fonts and text styling` dialog of the attribute table
-provides the following functionalities (see figure_composer_table_8_):
+provides the following functionalities (see figure_composer_table_fonts_):
 
-   .. _Figure_composer_table_8:
-
-.. only:: html
-
-   **Figure Composer Attribute Table 8:**
+.. _Figure_composer_table_fonts:
 
 .. figure:: /static/user_manual/print_composer/attribute_fonts.png
    :align: center
 
-   Attribute table Fonts and text styling Dialog |nix|
+   Attribute table Fonts and text styling Dialog
 
-* You can define :guilabel:`Font` and :guilabel:`Color` for :guilabel:`Table heading` and :guilabel:`Table contents`.
-* For :guilabel:`Table heading` you can additionally set the :guilabel:`Alignment` to
-  `Follow column alignment` or override this setting by choosing `Left`, `Center` or `Right`.
-  The column alignment is set using the :guilabel:`Select Attributes` dialog (see Figure_composer_table_3_ ).
+* You can define :guilabel:`Font` and :guilabel:`Color` for :guilabel:`Table
+  heading` and :guilabel:`Table contents`.
+* For :guilabel:`Table heading` you can additionally set the :guilabel:`Alignment`
+  to `Follow column alignment` or override this setting by choosing `Left`,
+  `Center` or `Right`. The column alignment is set using the :guilabel:`Select
+  Attributes` dialog (see Figure_composer_table_select_ ).
 
 
 Frames
 -------
 
 The :guilabel:`Frames` dialog of the attribute table provides
-the following functionalities (see figure_composer_table_9_):
+the following functionalities (see figure_composer_table_frames_):
 
-   .. _Figure_composer_table_9:
-
-.. only:: html
-
-   **Figure Composer Attribute Table 9:**
+.. _Figure_composer_table_frames:
 
 .. figure:: /static/user_manual/print_composer/attribute_frame.png
    :align: center
 
-   Attribute table Frames Dialog |nix|
+   Attribute table Frames Dialog
 
-* With :guilabel:`Resize mode` you can select how to render the attribute table contents:
+* With :guilabel:`Resize mode` you can select how to render the attribute table
+  contents:
 
   * `Use existing frames` displays the result in the first frame and added frames only.
-  * `Extend to next page` will create as many frames (and corresponding pages) as necessary
-    to display the full selection of attribute table. Each frame can be moved around on the layout.
-    If you resize a frame, the resulting table will be divided up between the other frames.
-    The last frame will be trimmed to fit the table.
-  * `Repeat until finished` will also create as many frames as the `Extend to next page` option,
-    except all frames will have the same size.
+  * `Extend to next page` will create as many frames (and corresponding pages)
+    as necessary to display the full selection of attribute table. Each frame
+    can be moved around on the layout. If you resize a frame, the resulting table
+    will be divided up between the other frames. The last frame will be trimmed
+    to fit the table.
+  * `Repeat until finished` will also create as many frames as the `Extend to
+    next page` option, except all frames will have the same size.
 
-* Use the **[Add Frame]** button to add another frame with the same size as selected frame.
-  The result of the table that will not fit in the first frame will continue in the next frame
-  when you use the Resize mode `Use existing frames`.
-* Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents the page
-  to be exported when the table frame has no contents. This means all other composer items,
-  maps, scalebars, legends etc. will not be visible in the result.
-* Activate |checkbox| :guilabel:`Don't draw background if frame is empty` prevents the background
-  to be drawn when the table frame has no contents.
+* Use the **[Add Frame]** button to add another frame with the same size as
+  selected frame. The result of the table that will not fit in the first frame
+  will continue in the next frame when you use the Resize mode `Use existing frames`.
+* Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents
+  the page to be exported when the table frame has no contents. This means all
+  other composer items, maps, scalebars, legends etc. will not be visible in the result.
+* Activate |checkbox| :guilabel:`Don't draw background if frame is empty`
+  prevents the background to be drawn when the table frame has no contents.
 

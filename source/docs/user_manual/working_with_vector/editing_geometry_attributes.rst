@@ -66,7 +66,7 @@ The snapping tolerance setting affects all tools that work with tolerance.
 #. A layer-based snapping tolerance that overrides the global snapping options
    can be defined by choosing :menuselection:`Settings --> Snapping options`.
    It enables and adjusts snapping mode
-   and tolerance on a layer basis (see figure_edit_1_ ). This dialog offers
+   and tolerance on a layer basis (see figure_edit_snapping_ ). This dialog offers
    three different modes to select the layer(s) to snap to:
 
    * :guilabel:`Current layer`: only the active layer is used, a convenient way
@@ -82,11 +82,7 @@ The snapping tolerance setting affects all tools that work with tolerance.
      you need to snap to.
 
 
-.. _figure_edit_1:
-
-.. only:: html
-
-   **Figure Edit 1:**
+.. _figure_edit_snapping:
 
 .. figure:: /static/user_manual/working_with_vector/editProjectSnapping.png
    :align: center
@@ -301,7 +297,7 @@ that feature.
    update rubber band during node editing`.
 
 The attribute window will appear, allowing you to enter the information for
-the new feature. Figure_edit_2_ shows setting attributes for a fictitious new
+the new feature. Figure_edit_values_ shows setting attributes for a fictitious new
 river in Alaska. However, in the :guilabel:`Digitizing` menu under the
 :menuselection:`Settings --> Options` menu, you can also activate:
 
@@ -310,11 +306,7 @@ river in Alaska. However, in the :guilabel:`Digitizing` menu under the
 * or |checkbox| :guilabel:`Reuse last entered attribute values` to have fields
   automatically filled at the opening of the form and just have to type changing values.
 
-.. _figure_edit_2:
-
-.. only:: html
-
-   **Figure Edit 2:**
+.. _figure_edit_values:
 
 .. figure:: /static/user_manual/working_with_vector/editDigitizing.png
    :align: center
@@ -411,11 +403,7 @@ vertex in the map canvas, and vice versa. Simply change a coordinate in the tabl
 and your vertex position is updated. You can also select multiple rows and delete
 them altogether.
 
-.. _figure_edit_3:
-
-.. only:: html
-
-   **Figure Edit 3:**
+.. _figure_edit_vertex:
 
 .. figure:: /static/user_manual/working_with_vector/vertex_editor_panel.png
    :align: center
@@ -599,22 +587,18 @@ Undo and Redo
 The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you
 to undo or redo vector editing operations. There is also a dockable
 widget, which shows all operations in the undo/redo history (see
-Figure_edit_4_). This widget is not displayed by default; it can be
+Figure_edit_undo_). This widget is not displayed by default; it can be
 displayed by right clicking on the toolbar and activating the Undo/Redo
 checkbox. Undo/Redo is however active, even if the widget is not displayed.
 
-.. _figure_edit_4:
-
-.. only:: html
-
-   **Figure Edit 4:**
+.. _figure_edit_undo:
 
 .. figure:: /static/user_manual/working_with_vector/redo_undo.png
    :align: center
 
    Redo and Undo digitizing steps
 
-When Undo is hit or :kbd:`Ctrl+z` (or :kbd:`Cmd+z`) pressed, the state of all
+When Undo is hit or :kbd:`Ctrl+Z` (or :kbd:`Cmd+Z`) pressed, the state of all
 features and attributes are reverted to
 the state before the reverted operation happened. Changes other than normal
 vector editing operations (for example, changes done by a plugin) may or may
@@ -760,11 +744,7 @@ part from the first to the last intersection with the original line. The
 geometries: simply begin or end the reshape line at either the first or last
 point of the existing line.
 
-.. _figure_edit_5:
-
-.. only:: html
-
-   **Figure Edit 5:**
+.. _figure_reshape_line:
 
 .. figure:: /static/user_manual/working_with_vector/reshape_lines.png
    :align: center
@@ -779,11 +759,7 @@ last intersections is considered. The reshape line's segments that are inside
 the polygon will result in cropping it, where the ones outside the polygon will
 extend it.
 
-.. _figure_edit_6:
-
-.. only:: html
-
-   **Figure Edit 6:**
+.. _figure_reshape_polygon:
 
 .. figure:: /static/user_manual/working_with_vector/reshape_polygon.png
    :align: center
@@ -893,11 +869,7 @@ field are hence used to rotate each feature's symbol accordingly.
    rotate only this symbol layer (unless you have a single symbol layer).
 
 
-.. _figure_edit_7:
-
-.. only:: html
-
-   **Figure Edit 7:**
+.. _figure_rotate_point:
 
 .. figure:: /static/user_manual/working_with_vector/rotatepointsymbol.png
    :align: center
@@ -907,7 +879,7 @@ field are hence used to rotate each feature's symbol accordingly.
 To change the rotation of a symbol, click on a point feature in the map canvas
 with the |rotatePointSymbols| :sup:`Rotate Point Symbols` and move the mouse around,
 holding the left button pressed. A red arrow with the rotation value
-will be visualized (see Figure_edit_7_). When you release the left mouse
+will be visualized (see Figure_rotate_point_). When you release the left mouse
 button again, the symbol is defined with this new rotation and the rotation
 field is updated in the layer's attribute table.
 
@@ -986,16 +958,12 @@ otherwise QGIS is unable to connect them and thus traces a single straight line.
 The Advanced Digitizing panel
 =============================
 
-When capturing new geometries or geometry parts you also have the possibility to use
-the Advanced Digitizing panel. You can digitize lines exactly parallel or at a specific angle
-or lock lines to specific angles. Furthermore you can enter coordinates directly so that you can
-make a precise definition for your new geometry.
+When capturing new geometries or geometry parts you also have the possibility
+to use the Advanced Digitizing panel. You can digitize lines exactly parallel or
+at a specific angle or lock lines to specific angles. Furthermore you can enter
+coordinates directly so that you can make a precise definition for your new geometry.
 
-.. _figure_advanced_edit 1:
-
-.. only:: html
-
-   **Figure Advanced Edit 1:**
+.. _figure_advanced_digitizing:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing.png
    :align: center
@@ -1005,7 +973,7 @@ make a precise definition for your new geometry.
 .. note:: The tools are not enabled if the map view is in geographic coordinates.
 
 
-.. index:: Create_New_Layers, New_Shapefile_Layer, New_SpatiaLite_Layer, New_GPX_Layer
+.. index:: Create new layers; New Shapefile Layer, Create new layers; New SpatiaLite Layer, Create new layers; New GPX Layer
 
 .. _sec_create_vector:
 
@@ -1024,17 +992,13 @@ Creating a new Shapefile layer
 To create a new shape layer for editing, choose :menuselection:`New -->`
 |newVectorLayer| :menuselection:`New Shapefile Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New Vector Layer` dialog will be
-displayed as shown in Figure_edit_6_. Choose the type of layer (point, line or
-polygon) and the CRS (coordinate reference system).
+displayed as shown in figure_new_shapefile_. Choose the type of layer
+(point, line or polygon) and the CRS (coordinate reference system).
 
 Note that QGIS does not yet support creation of 2.5D features (i.e., features
 with X,Y,Z coordinates).
 
-.. _figure_edit_8:
-
-.. only:: html
-
-   **Figure Edit 8**
+.. _figure_new_shapefile:
 
 .. figure:: /static/user_manual/working_with_vector/editNewVector.png
    :align: center
@@ -1063,13 +1027,9 @@ Creating a new SpatiaLite layer
 To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
 |newSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog will
-be displayed as shown in Figure_edit_7_.
+be displayed as shown in Figure_new_spatialite_.
 
-.. _figure_edit_9:
-
-.. only:: html
-
-   **Figure Edit 9**
+.. _figure_new_spatialite:
 
 .. figure:: /static/user_manual/working_with_vector/editNewSpatialite.png
    :align: center

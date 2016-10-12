@@ -2,8 +2,7 @@
 
    |updatedisclaimer|
 
-.. index::
-   single: legend_composer; Map_Legend
+.. index:: Legend composer, Map legend
 
 The Legend Item
 ================
@@ -19,13 +18,9 @@ position and customize the appearance in the legend :guilabel:`Item Properties`
 tab.
 
 The :guilabel:`Item properties` of a legend item tab provides the following
-functionalities (see figure_composer_legend_1_):
+functionalities (see figure_composer_legend_):
 
-.. _Figure_composer_legend_1:
-
-.. only:: html
-
-   **Figure Composer Legend 1:**
+.. _Figure_composer_legend:
 
 .. figure:: /static/user_manual/print_composer/legend_properties.png
    :align: center
@@ -35,14 +30,10 @@ functionalities (see figure_composer_legend_1_):
 Main properties
 ---------------
 
-The :guilabel:`Main properties` dialog of the legend :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_legend_2_):
+The :guilabel:`Main properties` dialog of the legend :guilabel:`Item Properties`
+tab provides the following functionalities (see figure_composer_legend_ppt_):
 
-.. _Figure_composer_legend_2:
-
-.. only:: html
-
-   **Figure Composer Legend 2:**
+.. _Figure_composer_legend_ppt:
 
 .. figure:: /static/user_manual/print_composer/legend_mainproperties.png
    :align: center
@@ -62,27 +53,25 @@ Legend items
 ------------
 
 The :guilabel:`Legend items` dialog of the legend :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_legend_3_):
+provides the following functionalities (see figure_composer_legend_items_):
 
-.. _Figure_composer_legend_3:
-
-.. only:: html
-
-   **Figure Composer Legend 3:**
+.. _Figure_composer_legend_items:
 
 .. figure:: /static/user_manual/print_composer/legend_items.png
    :align: center
 
-   Legend Legend Items Dialog
+   Legend Items Dialog
 
-* The legend will be updated automatically if |checkbox| :guilabel:`Auto-update` is checked.
-  When :guilabel:`Auto-update` is unchecked this will give you more control over the legend items.
-  The icons below the legend items list will be activated.
-* The legend items window lists all legend items and allows you to change item order,
-  group layers, remove and restore items in the list, edit layer names and add a filter.
+* The legend will be updated automatically if |checkbox| :guilabel:`Auto-update`
+  is checked. When :guilabel:`Auto-update` is unchecked this will give you more
+  control over the legend items. The icons below the legend items list will be activated.
+* The legend items window lists all legend items and allows you to change item
+  order, group layers, remove and restore items in the list, edit layer names
+  and add a filter.
 
-  * The item order can be changed using the **[Up]** and **[Down]** buttons or with 'drag-and-drop'
-    functionality. The order can not be changed for WMS legend graphics.
+  * The item order can be changed using the **[Up]** and **[Down]** buttons or
+    with 'drag-and-drop' functionality. The order can not be changed for WMS
+    legend graphics.
   * Use the **[Add group]** button to add a legend group.
   * Use the **[plus]** and **[minus]** button to add or remove layers.
   * The **[Edit]** button is used to edit the layer, groupname or title.
@@ -91,33 +80,30 @@ provides the following functionalities (see figure_composer_legend_3_):
   * Use the **[filter]** button to filter the legend by map content, only the
     legend items visible in the map will be listed in the legend.
 
-  After changing the symbology in the QGIS main window, you can click on **[Update All]** to
-  adapt the changes in the legend element of the Print Composer.
+  After changing the symbology in the QGIS main window, you can click on
+  **[Update All]** to adapt the changes in the legend element of the Print Composer.
 
 
 
 Fonts, Columns, Symbol
 ----------------------
 
-The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the legend
-:guilabel:`Item Properties` tab provide the following functionalities
-(see figure_composer_legend_4_):
+The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
+legend :guilabel:`Item Properties` tab provide the following functionalities
+(see figure_composer_legend_fonts_):
 
-.. _Figure_composer_legend_4:
-
-.. only:: html
-
-   **Figure Composer Legend 4:**
+.. _Figure_composer_legend_fonts:
 
 .. figure:: /static/user_manual/print_composer/legend_fonts.png
    :align: center
 
    Legend Fonts, Columns and Symbol Dialogs
 
-* You can change the font of the legend title, group, subgroup and item (layer) in the legend item.
+* You can change the font of the legend title, group, subgroup and item (layer)
+  in the legend item.
   Click on a category button to open a **Select font** dialog.
-* You provide the labels with a **Color** using the advanced color picker, however the selected
-  color will be given to all font items in the legend..
+* You provide the labels with a **Color** using the advanced color picker,
+  however the selected color will be given to all font items in the legend..
 * Legend items can be arranged over several columns. Set the number of columns in
   the :guilabel:`Count` |selectNumber| field.
 
@@ -134,13 +120,9 @@ WMS LegendGraphic and Spacing
 
 The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` dialogs of the legend
 :guilabel:`Item Properties` tab provide the following functionalities (see
-figure_composer_legend_5_):
+figure_composer_legend_wms_):
 
-.. _Figure_composer_legend_5:
-
-.. only:: html
-
-   **Figure Composer Legend 5:**
+.. _Figure_composer_legend_wms:
 
 .. figure:: /static/user_manual/print_composer/legend_wms.png
    :align: center
@@ -152,8 +134,8 @@ will be sent to the WMS server to provide a WMS legend. This Legend will only be
 shown if the WMS server provides the GetLegendGraphic capability.
 The WMS legend content will be provided as a raster image.
 
-:guilabel:`WMS LegendGraphic` is used to be able to adjust the :guilabel:`Legend width`
-and the :guilabel:`Legend height` of the WMS legend raster image.
+:guilabel:`WMS LegendGraphic` is used to be able to adjust the :guilabel:`Legend
+width` and the :guilabel:`Legend height` of the WMS legend raster image.
 
 Spacing around title, group, subgroup, symbol, icon label, box space
 or column space can be customized through this dialog.

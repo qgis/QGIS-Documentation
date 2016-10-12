@@ -2,6 +2,8 @@
 
    |updatedisclaimer|
 
+.. index:: Catalogue services, Metadata
+   single: Plugins; Metasearch
 .. _metasearch:
 
 MetaSearch Catalogue Client
@@ -22,8 +24,12 @@ supporting the OGC Catalogue Service for the Web (CSW) standard.
 MetaSearch provides an easy and intuitive approach and user-friendly interface
 to searching metadata catalogues within QGIS.
 
+.. _figure_metasearch_results:
+
 .. figure:: /static/user_manual/plugins/metasearch-splash.png
    :align: center
+
+   Search and results of Services in Metasearch
 
 Installation
 ------------
@@ -55,6 +61,8 @@ appear.  The main GUI consists of three tabs: :guilabel:`Services`,
 
 Managing Catalogue Services
 ...........................
+
+.. _figure_metasearch_catalogue:
 
 .. figure:: /static/user_manual/plugins/metasearch-services.png
    :align: center
@@ -113,6 +121,8 @@ Capabilities XML.
 Searching Catalogue Services
 ............................
 
+.. _figure_metasearch_search:
+
 .. figure:: /static/user_manual/plugins/metasearch-search.png
    :align: center
 
@@ -148,6 +158,8 @@ Clicking a result will provides the following options:
   OWS.  The OWS will then be added to the appropriate QGIS connection list, and
   the appropriate WMS/WMTS|WFS|WCS connection dialogue will then appear
 
+.. _figure_metasearch_metadata:
+
 .. figure:: /static/user_manual/plugins/metasearch-record-metadata.png
   :align: center
 
@@ -155,6 +167,8 @@ Clicking a result will provides the following options:
 
 Settings
 ........
+
+.. _figure_metasearch_setting:
 
 .. figure:: /static/user_manual/plugins/metasearch-settings.png
    :align: center

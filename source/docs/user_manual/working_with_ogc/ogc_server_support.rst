@@ -26,7 +26,7 @@ The original development of QGIS Server was funded by the EU projects Orchestra,
 Sany and the city of Uster in Switzerland.
 
 .. index:: SLD, SLD/SE
-.. index:: QGIS_Server, FastCGI, CGI, Common_Gateway_Interface
+.. index:: QGIS Server, FastCGI, CGI (Common Gateway Interface)
 
 QGIS Server uses QGIS as back end for the GIS logic and for map rendering.
 Furthermore, the Qt library is used for graphics and for platform-independent
@@ -46,7 +46,7 @@ distributions, we recommend reading one of the following URLs:
 * http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/
 * http://www.itopen.it/qgis-server-python-plugins-ubuntu-setup/
 
-.. index:: apache, apache2, Debian_Squeeze
+.. index:: apache, apache2, Debian Squeeze
 
 
 QGIS Server installation on Debian/Ubuntu
@@ -172,7 +172,7 @@ You can have a look at the default GetCapabilities of the QGIS server at:
      FcgidConnectTimeout 60
      </IfModule>
 
-.. _`Creating a WMS from a QGIS project`:
+.. _`Creatingwmsfromproject`:
 
 Creating a WMS/WFS/WCS server from a QGIS project
 ===================================================
@@ -182,11 +182,7 @@ file with some data. Here, we use the 'Alaska' shapefile from the QGIS sample
 dataset. Define the colors and styles of the layers in QGIS and the project CRS,
 if not already defined.
 
-.. _figure_server_2:
-
-.. only:: html
-
-   **Figure Server 2:**
+.. _figure_server_definitions:
 
 .. figure:: /static/user_manual/working_with_ogc/ows_server_definition.png
    :align: center
@@ -320,10 +316,12 @@ QGIS supports the following requests for WCS service:
 GetCapabilities Caching
 -----------------------
 
-In order to improve response time, QGIS Server caches the responses to the ``GetCapabilities`` requests.
-When such a request comes, QGIS Server is caching the response and marking the cache valid.
+In order to improve response time, QGIS Server caches the responses to the
+``GetCapabilities`` requests. When such a request comes, QGIS Server is caching
+the response and marking the cache valid.
 At the same time, it watches if the project file changes.
-If the project is changed then the cache is marked as invalid and QGIS Server waits for a new request in order to recreate the cache.
+If the project is changed then the cache is marked as invalid and QGIS Server
+waits for a new request in order to recreate the cache.
 
 
 Fine tuning your OWS
@@ -445,9 +443,7 @@ OGC WMS 1.3.0 specification:
   ``http://myserver.com/...&SELECTION=countries:171,65``.
   As those features id's correspond in the source dataset to **France** and **Romania** they're highlighted in yellow.
 
-  .. only:: html
-
-    **Figure presenting the Server SELECTION parameter:**
+  .. _figure_server_selection:
   
   .. figure:: /static/user_manual/working_with_ogc/server_selection_parameter.jpg
      :align: center
@@ -480,9 +476,7 @@ The request is in the format::
 Here is the image outputed by the above request in which a polygon and a label
 are drawn on top of the normal map:
 
-.. only:: html
-
-   **Figure presenting the Server Redlining feature:**
+.. _figure_server_redlining:
 
 .. figure:: /static/user_manual/working_with_ogc/server_redlining.jpg
    :align: center
@@ -660,7 +654,7 @@ specification:
   the first feature, skipping none.
 
 .. index::
-    pair: logging; QGIS Server
+    pair: Logging; QGIS Server
 
 .. _qgis-server-logging:
 
@@ -691,7 +685,7 @@ To log requests sent to the server, set the following environment variables:
 
 
 .. index::
-    pair: environment; QGIS Server
+    pair: Environment; QGIS Server
 
 Short name for layers, groups and project
 -----------------------------------------
@@ -717,11 +711,7 @@ QGIS Server supports:
 
   By right clicking on a layer group and selecting the :guilabel:`Set Group WMS data` option you will get:
 
-  .. _set_group_wms_data:
-
-  .. only:: html
-
-     **Figure set group wms data:**
+  .. _figure_group_wms_data:
 
   .. figure:: /static/user_manual/working_with_ogc/set_group_wms_data.png
      :align: center

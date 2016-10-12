@@ -68,27 +68,21 @@ visible. Out of this range, they are hidden. The |mapIdentification|
 :sup:`Set to current canvas scale` button helps you use the current map
 canvas scale as boundary of the range visibility.
 
-.. do not change the order of reference-tag and only-tag, this figure has
-   an external reference.
 
-.. only:: html
-
-   **Figure Vector General 1:**
-
-.. _figure_vector_general_1:
+.. _figure_vector_general:
 
 .. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
    :align: center
 
    General menu in vector layers properties dialog
 
-
+.. index:: Query Builder
 .. _vector_query_builder:
 
 Query Builder
 -------------
 
-Under the **Provider Feature Filter** frame, the :index:`Query Builder` allows
+Under the **Provider Feature Filter** frame, the Query Builder allows
 you to define a subset of the features in the layer using a SQL-like WHERE
 clause and to display the result in the main window. As long as the query is
 active, only the features corresponding to its result are available in the
@@ -100,15 +94,11 @@ subset`, click on the **[Query Builder]** button to open the :guilabel:`Query
 builder`. For example, if you have a ``regions`` layer with a ``TYPE_2``
 field, you could select only regions that are ``borough`` in the
 :guilabel:`Provider specific filter expression` box of the Query Builder.
-Figure_vector_general_2_ shows an example of the Query Builder populated with
+Figure_vector_querybuilder_ shows an example of the Query Builder populated with
 the :file:`regions.shp` layer from the QGIS sample data. The Fields, Values
 and Operators sections help you to construct the SQL-like query.
 
-.. _figure_vector_general_2:
-
-.. only:: html
-
-   **Figure Vector General 2:**
+.. _figure_vector_querybuilder:
 
 .. figure:: /static/user_manual/working_with_vector/queryBuilder.png
    :align: center
@@ -150,15 +140,14 @@ subset will prevent you from editing the layer.
 
 
 
-.. index:: Symbology
-
+.. index:: Style, Symbology
 .. _vector_style_menu:
 
 
 Style Menu
 ==========
 
-The :index:`Style` menu provides you with a comprehensive tool for rendering
+The Style menu provides you with a comprehensive tool for rendering
 and symbolizing your vector data. You can use tools that are common to all
 vector data, as well as special symbolizing tools that were designed for the
 different kinds of vector data. However all types share the following dialog
@@ -202,7 +191,6 @@ provides different additional sections.
    will get lost.
 
 .. index:: Single Symbol Renderer
-
 .. _single_symbol_renderer:
 
 Single Symbol Renderer
@@ -213,11 +201,7 @@ all features of the layer using a single user-defined symbol.
 See :ref:`symbol-selector` for further information about symbol representation.
 
 
-.. _figure_symbology_1:
-
-.. only:: html
-
-   **Figure Symbology 1:**
+.. _figure_single_symbol:
 
 .. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png
    :align: center
@@ -254,7 +238,7 @@ to show labels or diagrams for, and avoids the need to render
 symbols with totally transparent fill/border to achieve this.
 
 
-.. index:: Categorized Renderer
+.. index:: Categorized Renderer, Classes
 
 .. _categorized_rendered:
 
@@ -263,7 +247,7 @@ Categorized Renderer
 
 The |categorizedSymbol| :guilabel:`Categorized Renderer` is used to render all
 features from a layer, using an user-defined symbol whose aspect reflects the
-value of a selected feature's attribute. The :index:`Categorized` menu allows
+value of a selected feature's attribute. The Categorized menu allows
 you to select:
 
 * The attribute (using the Column listbox or the |expressionEditorOpen|
@@ -273,7 +257,7 @@ you to select:
 * The range of colors (using the Color ramp listbox) from which color applied
   to the symbol is selected
 
-Then click on Classify button to create :index:`classes` from the distinct
+Then click on Classify button to create classes from the distinct
 value of the attribute column. Each class can be disabled unchecking the
 checkbox at the left of the class name.
 
@@ -283,14 +267,10 @@ on the item you want to change.
 Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Change
 transparency**, **Change output unit**, **Change symbol width**.
 
-The example in figure_symbology_2_ shows the category rendering dialog used
+The example in figure_categorized_symbol_ shows the category rendering dialog used
 for the rivers layer of the QGIS sample dataset.
 
-.. _figure_symbology_2:
-
-.. only:: html
-
-   **Figure Symbology 2:**
+.. _figure_categorized_symbol:
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
    :align: center
@@ -314,7 +294,7 @@ for the rivers layer of the QGIS sample dataset.
    symbol name from an external file.
 
 .. index:: Graduated Renderer
-.. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile
+.. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
 
 .. _graduated_renderer:
 
@@ -325,7 +305,7 @@ The |graduatedSymbol| :guilabel:`Graduated Renderer` is used to render
 all the features from a layer, using an user-defined symbol whose color or size
 reflects the assignment of a selected feature's attribute to a class.
 
-Like the Categorized Renderer, the :index:`Graduated Renderer` allows you
+Like the Categorized Renderer, the Graduated Renderer allows you
 to define rotation and size scale from specified columns.
 
 Also, analogous to the Categorized Renderer, it allows you to select:
@@ -338,7 +318,7 @@ Also, analogous to the Categorized Renderer, it allows you to select:
 * The colors (using the color Ramp list) if the color method is selected
 * The size (using the size domain and its unit
 
-Then you can use the :index:`Histogram` tab which shows an interactive histogram of the
+Then you can use the Histogram tab which shows an interactive histogram of the
 values from the assigned field or expression. Class breaks can be moved or
 added using the histogram widget.
 
@@ -376,14 +356,10 @@ on the item you want to change.
 Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Change
 transparency**, **Change output unit**, **Change symbol width**.
 
-The example in figure_symbology_3_ shows the graduated rendering dialog for
+The example in figure_graduated_symbol_ shows the graduated rendering dialog for
 the rivers layer of the QGIS sample dataset.
 
-.. _figure_symbology_3:
-
-.. only:: html
-
-   **Figure Symbology 3:**
+.. _figure_graduated_symbol:
 
 .. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
    :align: center
@@ -425,11 +401,7 @@ respectively) provides tool to create proportional symbology for the layer.
 An assistant is moreover accessible through the |dataDefined| menu
 to help you define size expression.
 
-.. _figure_symbology_4:
-
-.. only:: html
-
-   **Figure Symbology 4:**
+.. _figure_symbology_size_assistant:
 
 .. figure:: /static/user_manual/working_with_vector/varying_size_assistant.png
    :align: center
@@ -475,18 +447,14 @@ Like the proportional symbol, the size-related symbol is added to the layer tree
 at the top of the categorized or graduated classes symbols. And both representation
 are also available in the print composer legend item.
 
-.. _figure_symbology_5:
-
-.. only:: html
-
-   **Figure Symbology 5:**
+.. _figure_symbology_multivariate:
 
 .. figure:: /static/user_manual/working_with_vector/multivariate_example.png
    :align: center
 
    Multivariate example
 
-.. Index:: Rule-based Rendering
+.. Index:: Rule-based Rendering, Rule-based Rendering; Create a rule
 
 .. _rule_based_rendering:
 
@@ -495,12 +463,12 @@ Rule-based rendering
 
 The |ruleBasedSymbol| :guilabel:`Rule-based Renderer` is used to render
 all the features from a layer,
-using :index:`rule-based` symbols whose aspect reflects the assignment of a selected
+using rule-based symbols whose aspect reflects the assignment of a selected
 feature's attribute to a class. The rules are based on SQL statements.
 The dialog allows rule grouping by filter or scale, and you can decide
 if you want to enable symbol levels or use only the first-matched rule.
 
-To :index:`create a rule`, activate an existing row by double-clicking on it, or
+To create a rule, activate an existing row by double-clicking on it, or
 click on '+' and click on the new rule. In the :guilabel:`Rule properties` dialog,
 you can define a label for the rule. Press the |browseButton| button to open the
 expression string builder.
@@ -517,14 +485,10 @@ Since QGIS 2.8 the rules appear in a tree hierarchy in the map legend. Just
 double-click the rules in the map legend and the Style menu of the layer properties
 appears showing the rule that is the background for the symbol in the tree.
 
-The example in figure_symbology_5_ shows the rule-based rendering dialog
-for the rivers layer of the QGIS sample dataset.
+The example in figure_symbology_rule_based_symbol shows the rule-based rendering
+dialog for the rivers layer of the QGIS sample dataset.
 
-.. _figure_symbology_6:
-
-.. only:: html
-
-   **Figure Symbology 6:**
+.. _figure_rule_based_symbol:
 
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
    :align: center
@@ -544,11 +508,7 @@ works to visualize all features of a point layer, even if they have the same loc
 To do this, the symbols of the points are placed on a :index:`displacement circle`
 around one center symbol or on several concentric circles.
 
-.. _figure_symbology_7:
-
-.. only:: html
-
-   **Figure Symbology 7:**
+.. _figure_displacement_symbol:
 
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
    :align: center
@@ -571,11 +531,7 @@ to define a symbol to fill in
 outside of the layer's polygons. As above you can select subrenderers, namely
 Single symbol, Graduated, Categorized, Rule-Based or 2.5 D renderer.
 
-.. _figure_symbology_8:
-
-.. only:: html
-
-   **Figure Symbology 8:**
+.. _figure_inverted_symbol:
 
 .. figure:: /static/user_manual/working_with_vector/inverted_polygon_symbol.png
    :align: center
@@ -597,11 +553,7 @@ between render speed and quality. You can also define a maximum value limit and 
 weight to points using a field or an expression. When adding or removing a feature
 the heatmap renderer updates the heatmap style automatically.
 
-.. _figure_symbology_9:
-
-.. only:: html
-
-     **Figure Symbology 9:**
+.. _figure_heatmap_symbol:
 
 .. figure:: /static/user_manual/working_with_vector/heatmap_symbol.png
    :align: center
@@ -627,11 +579,7 @@ to simulate solar radiation on the features walls, make sure to check the
 simulate a shadow by setting a :guilabel:`Color` and :guilabel:`Size` (in map
 units).
 
-.. _figure_symbology_10:
-
-.. only:: html
-
-   **Figure Symbology 10:**
+.. _figure_25d_symbol:
 
 .. figure:: /static/user_manual/working_with_vector/2_5dsymbol.png
    :align: center
@@ -694,11 +642,7 @@ features of the layer:
   used to control the :index:`layer rendering` is retranscribed in the textbox
   beside |checkbox| :guilabel:`Control feature rendering order` option.
 
-.. _figure_layer_rendering_1:
-
-.. only:: html
-
-   **Figure Layer Rendering 1:**
+.. _figure_layer_rendering:
 
 .. figure:: /static/user_manual/working_with_vector/layer_rendering_options.png
    :align: center
@@ -732,11 +676,7 @@ The numbers represent the rendering order level in which the symbol layer
 will be drawn. Lower values levels are drawn first, staying at the bottom, while
 higher values are drawn last, on top of the others.
 
-.. _figure_symbol_levels_1:
-
-.. only:: html
-
-     **Figure Symbols levels 1:**
+.. _figure_symbol_levels:
 
 .. figure:: /static/user_manual/working_with_vector/symbol_levels.png
    :align: center
@@ -750,11 +690,7 @@ higher values are drawn last, on top of the others.
    simply obfuscate to other below. Besides, similar symbols won't "merge" with
    each other.
 
-.. _figure_symbol_levels_2:
-
-.. only:: html
-
-     **Figure Symbols levels 2:**
+.. _figure_symbol_levels_example:
 
 .. figure:: /static/user_manual/working_with_vector/symbol_levels_examples.png
    :align: center
@@ -779,32 +715,24 @@ to corresponding features). You can combine both usage.
 
 Paint effects can be activated by checking the |checkbox| :guilabel:`Draw effects` option
 and clicking the |paintEffects| :sup:`Customize effects` button, that will open
-the :guilabel:`Effect Properties` Dialog (see figure_effects_1_). The following
+the :guilabel:`Effect Properties` Dialog (see figure_effects_source_). The following
 effect types, with custom options are available:
 
-* **Source:** Draws the feature's original style according to the
-  configuration of the layer's properties. The transparency of its style can be adjusted.
+* **Source:** Draws the feature's original style according to the configuration
+  of the layer's properties. The transparency of its style can be adjusted.
 
-  .. _figure_effects_1:
-
-  .. only:: html
-
-     **Figure Effects 1:**
+  .. _figure_effects_source:
 
   .. figure:: /static/user_manual/working_with_vector/source.png
      :align: center
 
      Draw Effects: Source dialog
 
-* **Blur:** Adds a blur effect on the vector layer. The options that someone can change are the
-  :menuselection:`Blur type` (:menuselection:`Stack` or :menuselection:`Gaussian blur`),
-  the strength and transparency of the blur effect.
+* **Blur:** Adds a blur effect on the vector layer. The options that someone can
+  change are the :menuselection:`Blur type` (:menuselection:`Stack` or
+  :menuselection:`Gaussian blur`), the strength and transparency of the blur effect.
 
-  .. _figure_effects_2:
-
-  .. only:: html
-
-     **Figure Effects 2:**
+  .. _figure_effects_blur:
 
   .. figure:: /static/user_manual/working_with_vector/blur.png
      :align: center
@@ -820,74 +748,58 @@ effect types, with custom options are available:
   :guilabel:`Brightness`, :guilabel:`contrast` and
   :guilabel:`saturation` levels of the resulting symbol.
 
-  .. _figure_effects_3:
-
-  .. only:: html
-
-     **Figure Effects 3:**
+  .. _figure_effects_colorize:
 
   .. figure:: /static/user_manual/working_with_vector/colorise.png
      :align: center
 
      Draw Effects: Colorize dialog
 
-* **Drop Shadow:** Using this effect adds a shadow on the feature, which looks like adding an
-  extra dimension. This effect can be customized by changing the :menuselection:`offset`
-  degrees and radius, determining where the shadow shifts towards to and the proximity to
-  the source object. :menuselection:`Drop Shadow` also has the option to change the blur radius,
-  the transparency and the color of the effect.
+* **Drop Shadow:** Using this effect adds a shadow on the feature, which looks
+  like adding an extra dimension. This effect can be customized by changing the
+  :menuselection:`offset` degrees and radius, determining where the shadow shifts
+  towards to and the proximity to the source object. :menuselection:`Drop Shadow`
+  also has the option to change the blur radius, the transparency and the color
+  of the effect.
 
-  .. _figure_effects_4:
-
-  .. only:: html
-
-     **Figure Effects 4:**
+  .. _figure_effects_drop_shadow:
 
   .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
      :align: center
 
      Draw Effects: Drop Shadow dialog
 
-* **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow` effect, but it adds
-  the shadow effect on the inside of the edges of the feature. The available options for customization
-  are the same as the :menuselection:`Drop Shadow` effect.
+* **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow`
+  effect, but it adds the shadow effect on the inside of the edges of the feature.
+  The available options for customization are the same as the :menuselection:`Drop
+  Shadow` effect.
 
-  .. _figure_effects_5:
-
-  .. only:: html
-
-     **Figure Effects 5:**
+  .. _figure_effects_inner_shadow:
 
   .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
      :align: center
 
      Draw Effects: Inner Shadow dialog
 
-* **Inner Glow:** Adds a glow effect inside the feature. This effect can be customized by adjusting
-  the :menuselection:`spread` (width) of the glow, or the :menuselection:`Blur radius`.
-  The latter specifies the proximity from the edge of the feature where you want any blurring to happen.
-  Additionally, there are options to customize the color of the glow, with a single color or a color ramp.
+* **Inner Glow:** Adds a glow effect inside the feature. This effect can be
+  customized by adjusting the :menuselection:`spread` (width) of the glow, or
+  the :menuselection:`Blur radius`. The latter specifies the proximity from the
+  edge of the feature where you want any blurring to happen. Additionally, there
+  are options to customize the color of the glow, with a single color or a color ramp.
 
-  .. _figure_effects_6:
-
-  .. only:: html
-
-     **Figure Effects 6:**
+  .. _figure_effects_inner_glow:
 
   .. figure:: /static/user_manual/working_with_vector/inner_glow.png
      :align: center
 
      Draw Effects: Inner Glow dialog
 
-* **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect, but it adds
-  the glow effect on the outside of the edges of the feature. The available options for customization
-  are the same as the :menuselection:`Inner Glow` effect.
+* **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect,
+  but it adds the glow effect on the outside of the edges of the feature.
+  The available options for customization are the same as the :menuselection:`Inner
+  Glow` effect.
 
-  .. _figure_effects_7:
-
-  .. only:: html
-
-     **Figure Effects 7:**
+  .. _figure_effects_outer_glow:
 
   .. figure:: /static/user_manual/working_with_vector/outer_glow.png
      :align: center
@@ -906,11 +818,7 @@ effect types, with custom options are available:
   * and :menuselection:`Translate` changes the position of the item based on a distance
     given on the x and/or the y axis.
 
-  .. _figure_effects_8:
-
-  .. only:: html
-
-     **Figure Effects 8:**
+  .. _figure_effects_transform:
 
   .. figure:: /static/user_manual/working_with_vector/transform.png
      :align: center
@@ -982,11 +890,7 @@ The following steps describe simple labeling without using the
 :guilabel:`Data defined override` functions, which are situated next to
 the drop-down menus - see :ref:`data_defined_labeling` for an use-case.
 
-.. _figure_labels_1:
-
-.. only:: html
-
-   **Figure Labels 1:**
+.. _figure_labels:
 
 .. figure:: /static/user_manual/working_with_vector/label_menu_text.png
    :align: center
@@ -998,7 +902,7 @@ Text tab
 
 In the :guilabel:`Text` tab, you can define the :guilabel:`Font`,
 :guilabel:`Style`, and :guilabel:`Size` of your labels' text (see
-Figure_labels_1_). There are options available to set the labels'
+Figure_labels_). There are options available to set the labels'
 :guilabel:`Color` and :guilabel:`Transparency`. Use the :guilabel:`Type
 case` option to change the capitalization style of the text. You have
 the possibility to render the text as 'All uppercase', 'All lowercase'
@@ -1097,7 +1001,7 @@ can also be altered by choosing a blend mode.
 Placement menu
 --------------
 
-Choose the :guilabel:`Placement` menu for configuring :index:`label placement`
+Choose the :guilabel:`Placement` menu for configuring label placement
 and labeling priority. Note that the placement options differ according to the type of
 vector layer, namely point, line or polygon.
 
@@ -1157,13 +1061,9 @@ that case, QGIS will look for the optimal label position. For Parallel and
 curved placement options, you can also use the line orientation for the
 position of the label. Additionally, you can define a :guilabel:`Maximum
 angle between curved characters` when selecting the |radioButtonOff|
-:guilabel:`Curved` option (see Figure_labels_2_).
+:guilabel:`Curved` option (see Figure_labels_placement_line).
 
-.. _figure_labels_2:
-
-.. only:: html
-
-   **Figure Labels 2:**
+.. _figure_labels_placement_line:
 
 .. figure:: /static/user_manual/working_with_vector/line_label_placement.png
    :align: center
@@ -1204,11 +1104,7 @@ label. For the position, |checkbox| :guilabel:`Above line`, |checkbox|
 specify the distance between the label and the polygon outline, as well as
 the repeat interval for the label.
 
-.. _figure_labels_3:
-
-.. only:: html
-
-   **Figure Labels 3:**
+.. _figure_labels_placement_polygon:
 
 .. figure:: /static/user_manual/working_with_vector/polygon_label_placement.png
    :align: center
@@ -1304,23 +1200,19 @@ Define labels based on expressions
 
 QGIS allows using expressions to label features. Just click the
 |expressionEditorOpen| icon in the |labeling| :sup:`Labels` menu of the
-properties dialog. In figure_labels_4_, you see a sample expression to label
-the alaska regions with name and area size, based on the field 'NAME_2',
+properties dialog. In figure_labels_expression_, you see a sample expression to
+label the alaska regions with name and area size, based on the field 'NAME_2',
 some descriptive text, and the function ``$area`` in combination with
 ``format_number()`` to make it look nicer.
 
-.. _figure_labels_4:
-
-.. only:: html
-
-   **Figure Labels 4:**
+.. _figure_labels_expression:
 
 .. figure:: /static/user_manual/working_with_vector/label_expression.png
    :align: center
 
    Using expressions for labeling
 
-:index:`Expression based labeling` is easy to work with. All you have to take
+Expression based labeling is easy to work with. All you have to take
 care of is that:
 
 * You need to combine all elements (strings, fields, and functions)
@@ -1412,13 +1304,13 @@ to create simple and very complex expressions to label your data in QGIS. See
 Using data-defined override for labeling
 -----------------------------------------
 
-With the :index:`data-defined override` functions, the settings for the labeling
+With the data-defined override functions, the settings for the labeling
 are overridden by entries in the attribute table.
 You can activate and deactivate the function with the right-mouse button.
 Hover over the symbol and you see the information about the data-defined override,
 including the current definition field.
 We now describe an example using the data-defined override function for the
-|moveLabel|:sup:`Move label` function (see figure_labels_5_ ).
+|moveLabel|:sup:`Move label` function (see figure_labels_data_defined_ ).
 
 #. Import :file:`lakes.shp` from the QGIS sample dataset.
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
@@ -1428,15 +1320,11 @@ We now describe an example using the data-defined override function for the
    and 'ylabel' for Y. The icons are now highlighted in yellow.
 #. Zoom into a lake.
 #. Go to the Label toolbar and click the |moveLabel| icon.
-   Now you can shift the label manually to another position (see figure_labels_6_).
+   Now you can shift the label manually to another position (see figure_labels_move_).
    The new position of the label is saved in the 'xlabel' and 'ylabel' columns
    of the attribute table.
 
-.. _figure_labels_5:
-
-.. only:: html
-
-   **Figure Labels 5:**
+.. _figure_labels_data_defined:
 
 .. figure:: /static/user_manual/working_with_vector/label_data_defined.png
    :align: center
@@ -1444,11 +1332,7 @@ We now describe an example using the data-defined override function for the
    Labeling of vector polygon layers with data-defined override
 
 
-.. _figure_labels_6:
-
-.. only:: html
-
-   **Figure Labels 6:**
+.. _figure_labels_move:
 
 .. figure:: /static/user_manual/working_with_vector/move_label.png
    :align: center
@@ -1460,18 +1344,14 @@ We now describe an example using the data-defined override function for the
 Rule-based labeling
 -------------------
 
-With :index:`Rule-based labeling` multiple label configurations can be defined
+With rule-based labeling multiple label configurations can be defined
 and applied selectively on the base of expression filters, as in
 :ref:`Rule-based rendering <rule_based_rendering>`.
 
 Rules can be set selecting the corresponding option at the top of the
-Labels panel (see figure_labels_7_ ).
+Labels panel (see figure_labels_rule_based_).
 
-.. _figure_labels_7:
-
-.. only:: html
-
-   **Figure Labels 7:**
+.. _figure_labels_rule_based:
 
 .. figure:: /static/user_manual/working_with_vector/label_rules_panel.png
    :align: center
@@ -1483,11 +1363,7 @@ or click on ‘+’ and click on the new rule.
 Within the panel you can set the filter expression and the related label
 configurations.
 
-.. _figure_labels_8:
-
-.. only:: html
-
-   **Figure Labels 8:**
+.. _figure_labels_rule_settings:
 
 .. figure:: /static/user_manual/working_with_vector/label_rule_settings.png
    :align: center
@@ -1528,11 +1404,7 @@ the alias.
 
 \
 
-.. _figure_fields_1:
-
-.. only:: html
-
-   **Figure Fields 1:**
+.. _figure_fields_widget:
 
 .. figure:: /static/user_manual/working_with_vector/editwidgetsdialog.png
    :align: center
@@ -1615,14 +1487,14 @@ message when the value of the field does not match the constraint.
    This is enabled only for File Name, Photo and Web View at this
    moment.
 
-With the **Attribute editor layout**, you can now define :index:`built-in forms`
-(see figure_fields_2_). This is useful for data entry jobs or to identify
+With the **Attribute editor layout**, you can now define built-in forms
+(see figure_fields_layout_). This is useful for data entry jobs or to identify
 objects using the option auto open form when you have objects with many attributes.
 You can create an editor with several tabs and named groups to present
 the attribute fields.
 
 Choose 'Drag and drop designer' and an attribute column. Use the |signPlus|
-icon to create a category to insert a tab or a named group (see figure_fields_3_).
+icon to create a category to insert a tab or a named group (see figure_fields_form_).
 When creating a new category, QGIS will insert a new tab or named group for the
 category in the built-in form.
 The next step will be to assign the relevant fields to a selected category
@@ -1662,38 +1534,30 @@ An example is (in module MyForms.py):
 Reference in Python Init Function like so: `open`
 
 
-.. _figure_fields_2:
-
-.. only:: html
-
-   **Figure Fields 2:**
+.. _figure_fields_layout:
 
 .. figure:: /static/user_manual/working_with_vector/attribute_editor_layout.png
    :align: center
 
    Dialog to create categories with the **Attribute editor layout**
 
-.. _figure_fields_3:
-
-.. only:: html
-
-   **Figure Fields 3:**
+.. _figure_fields_form:
 
 .. figure:: /static/user_manual/working_with_vector/resulting_feature_form.png
    :align: center
 
    Resulting built-in form with tabs and named groups
 
-
+.. index:: Jointure, Join layers
 .. _`sec_joins`:
 
 Joins Menu
 ==========
 
-|join| The :guilabel:`Joins` menu allows you to :index:`join` a loaded attribute
+|join| The :guilabel:`Joins` menu allows you to join a loaded attribute
 table to a loaded vector layer. After clicking |signPlus|, the
 :guilabel:`Add vector join` dialog appears. As key columns, you have to define a
-:index:`join layer` you want to connect with the target vector layer.
+join layer you want to connect with the target vector layer.
 Then, you have to specify the join field that is common to both the join layer
 and the target layer. Now you can also specify a subset of fields from the joined
 layer based on the checkbox |checkbox| :guilabel:`Choose which fields are joined`.
@@ -1706,13 +1570,9 @@ table of the target layer.
 
 QGIS currently has support for joining non-spatial table formats supported by OGR
 (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL provider
-(see figure_joins_1_).
+(see figure_joins_).
 
-.. _figure_joins_1:
-
-.. only:: html
-
-   **Figure Joins 1:**
+.. _figure_joins:
 
 .. figure:: /static/user_manual/working_with_vector/join_attributes.png
    :align: center
@@ -1726,14 +1586,14 @@ Additionally, the add vector join dialog allows you to:
 * |checkbox| :guilabel:`Choose which fields are joined`
 * Create a |checkbox| :guilabel:`Custom field name prefix`
 
-
+.. index:: Diagrams
 .. _`sec_diagram`:
 
 Diagrams Menu
 =============
 
 |diagram| The :guilabel:`Diagrams` menu allows you to add a graphic overlay to
-a vector layer (see figure_diagrams_1_).
+a vector layer (see figure_diagrams_attributes_).
 
 The current core implementation of diagrams provides support for:
 
@@ -1749,7 +1609,7 @@ The current core implementation of diagrams provides support for:
    diagram, when designing your diagram, you can easily change the diagram type
    and check which one is more appropriate to your data without any loss.
 
-For each type of :index:`diagram`, the menu is divided into five tabs:
+For each type of diagram, the menu is divided into five tabs:
 
 Attributes
 ----------
@@ -1766,11 +1626,7 @@ or the attibute color by double-clicking the item.
 This label is the default text displayed in the legend of the print composer
 or of the layer tree.
 
-.. _figure_diagrams_1:
-
-.. only:: html
-
-   **Figure Diagrams 1:**
+.. _figure_diagrams_attributes:
 
 .. figure:: /static/user_manual/working_with_vector/diagram_tab.png
    :align: center
@@ -1797,11 +1653,7 @@ In this menu, you can also manage the diagram visibility:
   tune which diagrams should be rendered
 * by setting the :ref:`scale visibility <label_scaledepend>`
 
-.. _figure_diagrams_2:
-
-.. only:: html
-
-   **Figure Diagrams 2:**
+.. _figure_diagrams_appearance:
 
 .. figure:: /static/user_manual/working_with_vector/diagram_tab_appearance.png
    :align: center
@@ -1822,11 +1674,7 @@ You can use :
 
 .. ToDo: better explain the scale behaviour of the different diagram types
 
-.. _figure_diagrams_3:
-
-.. only:: html
-
-   **Figure Diagrams 3:**
+.. _figure_diagrams_size:
 
 .. figure:: /static/user_manual/working_with_vector/diagram_tab_size.png
    :align: center
@@ -1858,11 +1706,7 @@ The placement of the diagrams can interact with the labeling, so you can
 detect and solve position conflicts between diagrams and labels by setting
 the **Priority** slider or the **z-index** value.
 
-.. _figure_diagrams_4:
-
-.. only:: html
-
-   **Figure Diagrams 4:**
+.. _figure_diagrams_placement:
 
 .. figure:: /static/user_manual/working_with_vector/diagram_tab_placement.png
    :align: center
@@ -1924,14 +1768,10 @@ Both vector layers are part of the QGIS sample dataset (see section
    the minimum size of the diagrams.
 #. Change the attribute colors by double clicking on the color values in the
    :guilabel:`Assigned attributes` field.
-   Figure_diagrams_5_ gives an idea of the result.
+   Figure_diagrams_mapped_ gives an idea of the result.
 #. Finally, click **[Ok]**.
 
-.. _figure_diagrams_5:
-
-.. only:: html
-
-   **Figure Diagrams 5:**
+.. _figure_diagrams_mapped:
 
 .. figure:: /static/user_manual/working_with_vector/climate_diagram.png
    :align: center
@@ -1961,11 +1801,7 @@ Some tools to manipulate these notions are available through the label toolbar,
 but only if the corresponding data-defined is indicated (otherwise, buttons are
 disabled).
 
-.. _figure_diagrams_6:
-
-.. only:: html
-
-   **Figure Diagrams 6:**
+.. _figure_diagrams_tools:
 
 .. figure:: /static/user_manual/working_with_vector/diagram_toolbar.png
    :align: center
@@ -2000,11 +1836,7 @@ of a feature. This can be used to perform any number of actions, for example,
 running a program with arguments built from the attributes of a feature or
 passing parameters to a web reporting tool.
 
-.. _figure_actions_1:
-
-.. only:: html
-
-   **Figure Actions 1:**
+.. _figure_actions:
 
 .. figure:: /static/user_manual/working_with_vector/action_dialog.png
    :align: center
@@ -2027,12 +1859,13 @@ on **[Add default actions]**. One example is performing a search based on an
 attribute value. This concept is used in the following discussion.
 
 .. index:: Actions, Attribute Actions
+   :single: Actions; Define an action
 
 Defining Actions
 ----------------
 
 Attribute actions are defined from the vector :guilabel:`Layer Properties`
-dialog. To :index:`define an action`, open the vector :guilabel:`Layer Properties`
+dialog. To define an action, open the vector :guilabel:`Layer Properties`
 dialog and click on the :guilabel:`Actions` menu. Go to the :guilabel:`Action properties`.
 Select 'Generic' as type and provide a descriptive name for the action.
 The action itself must contain
@@ -2063,7 +1896,9 @@ values of these fields can be used in the action with ``%(Derived).X`` and
 ``%(Derived).Y``. The derived attributes are only available from the
 :guilabel:`Identify Results` dialog box, not the :guilabel:`Attribute Table` dialog box.
 
-Two :index:`example actions` are shown below:
+.. index:: Actions; Examples
+
+Two example actions are shown below:
 
 * ``konqueror http://www.google.com/search?q=%nam``
 * ``konqueror http://www.google.com/search?q=%%``
@@ -2081,6 +1916,7 @@ The second example uses the \%\% notation, which does not rely on a particular
 field for its value. When the action is invoked, the \%\% will be replaced by
 the value of the selected field in the identify results or attribute table.
 
+.. index:: Actions; Using actions
 .. _using_actions:
 
 Using Actions
@@ -2167,11 +2003,7 @@ We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and
 identify a lake. In the result box you'll now see that our action is visible:
 
-.. _figure_actions_2:
-
-.. only:: html
-
-   **Figure Actions 2:**
+.. _figure_actions_selection:
 
 .. figure:: /static/user_manual/working_with_vector/action_identifyaction.png
    :align: center
@@ -2282,13 +2114,10 @@ meaning that once activated, it stays on and apply to any set layer in any proje
 even in future QGIS sessions until it's toggled off.
 
 
-Figure Display 1 and 2 show an example of HTML code and how it behaves in map canvas.
+Figures Display Code and Mapped show an example of HTML code and how it behaves
+in map canvas.
 
-.. _figure_display_1:
-
-.. only:: html
-
-   **Figure Display 1:**
+.. _figure_display_code:
 
 .. figure:: /static/user_manual/working_with_vector/display_html.png
    :align: center
@@ -2296,34 +2125,26 @@ Figure Display 1 and 2 show an example of HTML code and how it behaves in map ca
    HTML code for map tip
 
 
-.. _figure_display_2:
-
-.. only:: html
-
-   **Figure Display 2:**
+.. _figure_display_mapped:
 
 .. figure:: /static/user_manual/working_with_vector/map_tip.png
    :align: center
 
    Map tip made with HTML code
 
-
+.. index:: Generalisation, Simplification
 
 Rendering Menu
 ==============
 
-QGIS offers support for on-the-fly feature :index:`generalisation`. This can
+QGIS offers support for on-the-fly feature generalisation. This can
 improve rendering times when drawing many complex features at small scales.
 This feature can be enabled or disabled in the layer settings using the
 |checkbox| :guilabel:`Simplify geometry` option. There is also a global
 setting that enables generalisation by default for newly added layers (see
 section :ref:`gui_options`).
 
-.. _figure_rendering_10:
-
-.. only:: html
-
-   **Figure Rendering 1:**
+.. _figure_rendering:
 
 .. figure:: /static/user_manual/working_with_vector/simplify_rendering.png
    :align: center
@@ -2350,7 +2171,7 @@ You can also do this by forcing the composer to export as a raster,
 but that is an all-or-nothing solution, given that the rasterisation
 is applied to all layers.
 
-.. index:: Metadata
+.. index:: Metadata, Keyword
 
 .. _vectormetadatamenu:
 
@@ -2370,7 +2191,7 @@ of the layer. This can provide a quick way to get useful information about the l
 
 Additionally, you can add or edit a title and abstract for the layer in the
 :guilabel:`Description` section. It's also possible to define a
-:guilabel:`Keyword list` here. These :index:`keyword lists` can be used in a
+:guilabel:`Keyword list` here. These keyword lists can be used in a
 metadata catalogue. If you want to use a title from an XML metadata file,
 you have to fill in a link in the :guilabel:`DataUrl` field.
 
@@ -2384,11 +2205,7 @@ In the :guilabel:`LegendUrl` section, you can provide the url of a legend image 
 field. You can use the Format drop-down option to apply the appropriate format
 of the image. Currently png, jpg and jpeg image formats are supported.
 
-.. _figure_metadata_vect:
-
-.. only:: html
-
-   **Figure Metadata 1:**
+.. _figure_metadata_vector:
 
 .. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
    :align: center

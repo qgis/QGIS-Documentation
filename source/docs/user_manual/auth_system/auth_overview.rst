@@ -7,11 +7,11 @@
 Authentication System Overview
 ==============================
 
-.. _figure_authsystem_1:
+\
 
-.. only:: html
+\
 
-   **Figure Authentication System 1**
+.. _figure_authsystem:
 
 .. figure:: /static/user_manual/auth_system/auth-system-overview.png
    :align: center
@@ -53,11 +53,7 @@ using the authentication system do not require input of the master password,
 such as when selecting an existing authentication configuration, or applying a
 configuration to a server configuration (such as when adding a WMS layer).
 
-.. _figure_masterpass_1:
-
-.. only:: html
-
-   **Figure Master password 1**
+.. _figure_masterpass:
 
 .. figure:: /static/user_manual/auth_system/auth-password-new_enter.png
    :align: center
@@ -76,11 +72,7 @@ Once set, the master password can be reset; the current master password will be
 needed prior to resetting. During this process, there is an option to generate a
 complete backup of the current database.
 
-.. _figure_masterpass_2:
-
-.. only:: html
-
-   **Figure Master password 2**
+.. _figure_masterpass_reset:
 
 .. figure:: /static/user_manual/auth_system/auth-password-reset.png
    :align: center
@@ -94,11 +86,7 @@ the master password.
 If a user inputs their existing password incorrectly three times, the dialog
 will offer to erase the database.
 
-.. _figure_masterpass_3:
-
-.. only:: html
-
-   **Figure Master password 3**
+.. _figure_masterpass_pwd:
 
 .. figure:: /static/user_manual/auth_system/auth-password-invalid-3times.png
    :align: center
@@ -112,11 +100,7 @@ You can manage authentication configurations from :guilabel:`Configurations` in
 the :guilabel:`Authentication` tab of the QGIS Options dialog
 (:menuselection:`Settings --> Options`).
 
-.. _figure_authconfigeditor_1:
-
-.. only:: html
-
-   **Figure Configuration editor 1**
+.. _figure_authconfigeditor:
 
 .. figure:: /static/user_manual/auth_system/auth-editor-configs2.png
    :align: center
@@ -126,11 +110,7 @@ the :guilabel:`Authentication` tab of the QGIS Options dialog
 Use the |signPlus| button to add a new configuration, the |signMinus| button
 to remove configurations, and the |symbologyEdit| button to modify existing ones.
 
-.. _figure_authconfigeditor_2:
-
-.. only:: html
-
-   **Figure Configuration editor 2**
+.. _figure_authconfigeditor_add:
 
 .. figure:: /static/user_manual/auth_system/auth-config-create_authcfg-id.png
    :align: center
@@ -145,11 +125,7 @@ within the authentication database. In this case, there is no need to go to the
 :guilabel:`configurations` in :guilabel:`Authentication` tab of QGIS options
 unless you need to do more comprehensive configuration management.
 
-.. _figure_authconfigeditor_3:
-
-.. only:: html
-
-   **Figure Configuration editor 3**
+.. _figure_authconfigeditor_wms:
 
 .. figure:: /static/user_manual/auth_system/auth-selector-wms-connection.png
    :align: center
@@ -178,11 +154,7 @@ can be accessed going to :menuselection:`Settings -- > Option` and, in the
 :guilabel:`Authentication` tab, click the |options| **Installed plugins**
 button.
 
-.. _figure_authmethod_1:
-
-.. only:: html
-
-   **Figure Authentication methods 1**
+.. _figure_authmethod:
 
 .. figure:: /static/user_manual/auth_system/auth-method-listing.png
    :align: center
@@ -195,44 +167,28 @@ C++-only, QGIS will need to be restarted for the new dropped-in plugin to become
 available to the user. Ensure your plugin is compiled against the same target
 version of QGIS if you intend to add it to an existing target install.
 
-.. _figure_authmethod_2:
-
-.. only:: html
-
-   **Figure Authentication methods 2**
+.. _figure_authmethod_http:
 
 .. figure:: /static/user_manual/auth_system/auth-config-create_basic-auth.png
    :align: center
 
    Basic HTTP authentication configs
 
-.. _figure_authmethod_3:
-
-.. only:: html
-
-   **Figure Authentication methods 3**
+.. _figure_authmethod_pki:
 
 .. figure:: /static/user_manual/auth_system/auth-config-create_pem-der-paths.png
    :align: center
 
    PKI paths authentication configs
 
-.. _figure_authmethod_4:
-
-.. only:: html
-
-   **Figure Authentication methods 4**
+.. _figure_authmethod_pkcs:
 
 .. figure:: /static/user_manual/auth_system/auth-config-create_pkcs12-paths.png
    :align: center
 
    PKI PKCS#12 file paths authentication configs
 
-.. _figure_authmethod_5:
-
-.. only:: html
-
-   **Figure Authentication methods 5**
+.. _figure_authmethod_stored:
 
 .. figure:: /static/user_manual/auth_system/auth-config-create_stored-identity2.png
    :align: center
@@ -252,11 +208,7 @@ Under the Options menu (:menuselection:`Settings --> Options`) in the
 :guilabel:`Authentication` tab, there are several utility actions to manage the
 authentication database and configurations:
 
-.. _figure_authconfiutils_1:
-
-.. only:: html
-
-   **Figure configuration utilities 1**
+.. _figure_authconfiutils:
 
 .. figure:: /static/user_manual/auth_system/auth-editor-configs_utilities-menu.png
    :align: center
@@ -286,11 +238,7 @@ authentication database and configurations:
   loading do not interrupt the operation or cause errors due to a temporarily
   missing database.
 
-  .. _figure_authconfiutils_2:
-
-  .. only:: html
-
-     **Figure configuration utilities 2**
+  .. _figure_authconfiutilsdb:
 
   .. figure:: /static/user_manual/auth_system/auth-db-erase.png
      :align: center
@@ -312,22 +260,14 @@ found in the database. The :guilabel:`Type` and :guilabel:`Id` fields are
 read-only and provide a description of the authentication method and the
 config’s ID respectively.
 
-.. _figure_authconfigselector_1:
-
-.. only:: html
-
-   **Figure Authentication configurations 1**
+.. _figure_authconfigselector:
 
 .. figure:: /static/user_manual/auth_system/auth-selector-no-authentication.png
    :align: center
 
    Auth config selector with no autentication
 
-.. _figure_authconfigselector_2:
-
-.. only:: html
-
-   **Figure Authentication configurations 2**
+.. _figure_authconfigselector_pkcs:
 
 .. figure:: /static/user_manual/auth_system/auth-selector-pkcs12-authentication.png
    :align: center

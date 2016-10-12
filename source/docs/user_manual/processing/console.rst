@@ -57,24 +57,24 @@ You will see something like this.
 
 ::
 
-    Accumulated Cost (Anisotropic)---------------->saga:accumulatedcost(anisotropic)
-    Accumulated Cost (Isotropic)------------------>saga:accumulatedcost(isotropic)
-    Add Coordinates to points--------------------->saga:addcoordinatestopoints
-    Add Grid Values to Points--------------------->saga:addgridvaluestopoints
-    Add Grid Values to Shapes--------------------->saga:addgridvaluestoshapes
-    Add Polygon Attributes to Points-------------->saga:addpolygonattributestopoints
-    Aggregate------------------------------------->saga:aggregate
-    Aggregate Point Observations------------------>saga:aggregatepointobservations
-    Aggregation Index----------------------------->saga:aggregationindex
-    Analytical Hierarchy Process------------------>saga:analyticalhierarchyprocess
-    Analytical Hillshading------------------------>saga:analyticalhillshading
-    Average With Mask 1--------------------------->saga:averagewithmask1
-    Average With Mask 2--------------------------->saga:averagewithmask2
-    Average With Thereshold 1--------------------->saga:averagewiththereshold1
-    Average With Thereshold 2--------------------->saga:averagewiththereshold2
-    Average With Thereshold 3--------------------->saga:averagewiththereshold3
-    B-Spline Approximation------------------------>saga:b-splineapproximation
-    ...
+   Accumulated Cost (Anisotropic)-------->saga:accumulatedcost(anisotropic)
+   Accumulated Cost (Isotropic)---------->saga:accumulatedcost(isotropic)
+   Add Coordinates to points------------->saga:addcoordinatestopoints
+   Add Grid Values to Points------------->saga:addgridvaluestopoints
+   Add Grid Values to Shapes------------->saga:addgridvaluestoshapes
+   Add Polygon Attributes to Points------>saga:addpolygonattributestopoints
+   Aggregate----------------------------->saga:aggregate
+   Aggregate Point Observations---------->saga:aggregatepointobservations
+   Aggregation Index--------------------->saga:aggregationindex
+   Analytical Hierarchy Process---------->saga:analyticalhierarchyprocess
+   Analytical Hillshading---------------->saga:analyticalhillshading
+   Average With Mask 1------------------->saga:averagewithmask1
+   Average With Mask 2------------------->saga:averagewithmask2
+   Average With Thereshold 1------------->saga:averagewiththereshold1
+   Average With Thereshold 2------------->saga:averagewiththereshold2
+   Average With Thereshold 3------------->saga:averagewiththereshold3
+   B-Spline Approximation---------------->saga:b-splineapproximation
+   ...
 
 That's a list of all the available algorithms, alphabetically ordered, along with
 their corresponding command-line names.
@@ -82,17 +82,17 @@ their corresponding command-line names.
 You can use a string as a parameter for this method. Instead of returning the
 full list of algorithms, it will only display those that include that string. If,
 for instance, you are looking for an algorithm to calculate slope from a DEM, type
-``alglist("slope")`` to get the following result:
+``alglist("slope")`` to get the following result::
 
-::
 
-    DTM Filter (slope-based)---------------------->saga:dtmfilter(slope-based)
-    Downslope Distance Gradient------------------->saga:downslopedistancegradient
-    Relative Heights and Slope Positions---------->saga:relativeheightsandslopepositions
-    Slope Length---------------------------------->saga:slopelength
-    Slope, Aspect, Curvature---------------------->saga:slopeaspectcurvature
-    Upslope Area---------------------------------->saga:upslopearea
-    Vegetation Index[slope based]----------------->saga:vegetationindex[slopebased]
+
+ DTM Filter (slope-based)-------------->saga:dtmfilter(slope-based)
+ Downslope Distance Gradient----------->saga:downslopedistancegradient
+ Relative Heights and Slope Positions-->saga:relativeheightsandslopepositions
+ Slope Length-------------------------->saga:slopelength
+ Slope, Aspect, Curvature-------------->saga:slopeaspectcurvature
+ Upslope Area-------------------------->saga:upslopearea
+ Vegetation Index[slope based]--------->saga:vegetationindex[slopebased]
 
 This result might change depending on the algorithms you have available.
 
@@ -229,7 +229,8 @@ Creating scripts and running them from the toolbox
 --------------------------------------------------
 
 You can create your own algorithms by writing the corresponding Python code and
-adding a few extra lines to supply additional information needed to define the semantics of the algorithm.
+adding a few extra lines to supply additional information needed to define the
+semantics of the algorithm.
 You can find a :guilabel:`Create new script` menu under the :guilabel:`Tools`
 group in the :guilabel:`Script` algorithms block of the toolbox. Double-click on
 it to open the script editing dialog. That's where you should type your code.

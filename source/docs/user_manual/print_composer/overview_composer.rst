@@ -74,7 +74,7 @@ its own extent. If you want to remove any elements from the Composer canvas you
 can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 
 
-.. index:: Composer_Manager
+.. index:: Composer manager
 
 .. _composer_manager:
 
@@ -90,10 +90,6 @@ To open the composer manager dialog, click on the |composerManager|
 
 
 .. _figure_composer_manager:
-
-.. only:: html
-
-   **Figure Composer Manager:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_manager.png
    :align: center
@@ -143,10 +139,6 @@ any elements are added.
 
 .. _Figure_composer_overview:
 
-.. only:: html
-
-   **Figure Composer Overview:**
-
 .. figure:: /static/user_manual/print_composer/print_composer_blank.png
    :align: center
 
@@ -183,7 +175,7 @@ the number of features.
 
 In the upper part of the Print composer window, you can find menus and other toolbars.
 All Print Composer tools are available in menus and as icons in a toolbar.
-See a list of tools in table_composer_1_.
+See a list of tools in table_composer_tools_.
 
 The toolbars and the tabs can be switched off and on using the right mouse button
 over any toolbar or through :menuselection:`View --> Toolbars` or
@@ -198,7 +190,7 @@ over any toolbar or through :menuselection:`View --> Toolbars` or
 Tools
 -----
 
-.. _table_composer_1:
+.. _table_composer_tools:
 
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
 | Icon                  | Purpose                               | Icon                | Purpose                                  |
@@ -384,11 +376,7 @@ In the :guilabel:`Composition` tab, you can define the global settings of the
 current composition.
 
 
-.. _figure_composition_1:
-
-.. only:: html
-
-   **Figure Composition 1:**
+.. _figure_composition:
 
 .. figure:: /static/user_manual/print_composer/composition_settings.png
    :align: center
@@ -426,11 +414,7 @@ by checking |checkbox| :guilabel:`World file on` and select a map item.
 The world file is created beside the exported map, has same name and contains
 information to easily georeference it.
 
-.. _figure_composition_2:
-
-.. only:: html
-
-   **Figure Composition 2:**
+.. _figure_composition_export:
 
 .. figure:: /static/user_manual/print_composer/composition_export.png
    :align: center
@@ -457,11 +441,7 @@ There, you can also decide if they might be used to snap composer items. The
 to your need. The tolerance is the maximum distance below which an item is snapped
 to a grid or a guide.
 
-.. _figure_composition_3:
-
-.. only:: html
-
-   **Figure Composition 3:**
+.. _figure_composition_grid:
 
 .. figure:: /static/user_manual/print_composer/composition_guides.png
    :align: center
@@ -485,15 +465,11 @@ This can be done with the revert and restore tools:
 * |redo| :sup:`Restore last change`
 
 This can also be done by mouse click within the :guilabel:`Command history` tab
-(see figure_composer_1_). The History tab lists the last actions done within the composer.
+(see figure_composer_). The History tab lists the last actions done within the composer.
 Just select the point you want to revert to and once you do new action all
 the actions done after the selected one will be removed.
 
-.. _figure_composer_1:
-
-.. only:: html
-
-   **Figure Composer 1:**
+.. _figure_composer:
 
 .. figure:: /static/user_manual/print_composer/command_hist.png
    :align: center

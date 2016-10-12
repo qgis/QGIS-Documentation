@@ -26,16 +26,12 @@ and to click on the |openTable| :guilabel:`Open Attribute Table` button
 in the Attributes toolbar.
 
 This will open a new window that displays the feature attributes for the
-layer (figure_attributes_1_). The number of features and the number of
+layer (figure_attributes_table_). The number of features and the number of
 selected features are shown in the attribute table title. Columm widths can be
 changed by dragging the boundary on the right of the column heading, resized column
 widths are maintained for a layer, and restored when next opening the attribute table.
 
-.. _figure_attributes_1:
-
-.. only:: html
-
-   **Figure Attributes 1:**
+.. _figure_attributes_table:
 
 .. figure:: /static/user_manual/working_with_vector/vectorAttributeTable.png
    :align: center
@@ -156,8 +152,8 @@ Select the field (column) on which the search should be
 performed from the drop-down menu, and hit the **[Apply]** button. Then, only
 the matching features are shown in the attribute table.
 
-To make a selection, you have to use the |expressionSelect| :sup:`Select features using an Expression`
-icon on top of the attribute table.
+To make a selection, you have to use the |expressionSelect| :sup:`Select features
+using an Expression` icon on top of the attribute table.
 |expressionSelect| :sup:`Select features using an Expression` allows you
 to define a subset of a table using a :guilabel:`Function List` like in the
 |calculateField| :sup:`Field Calculator` (see :ref:`vector_field_calculator`).
@@ -192,7 +188,7 @@ with the expression
 
  ID+5
 
-as shown in figure_attributes_1_ .
+as shown in figure_attributes_table_ .
 
 Filter features
 ===============
@@ -239,11 +235,7 @@ Copy cell content
 To copy the content of a cell in the clipboard, right-click on the feature within
 the attribute table and select :guilabel:`Copy cell content`.
 
-.. _figure_attributes_2:
-
-.. only:: html
-
-   **Figure Attributes 2:**
+.. _figure_copy_cell:
 
 .. figure:: /static/user_manual/working_with_vector/copyCellContent.png
     :align: center
@@ -267,8 +259,8 @@ Paste into new layer
 =====================
 
 Features that are on the clipboard may be pasted into a new
-layer.  To do this, first make a layer editable.  Select some features, copy them to the
-clipboard, and then paste them into a new layer using
+layer.  To do this, first make a layer editable.  Select some features, copy
+them to the clipboard, and then paste them into a new layer using
 :menuselection:`Edit --> Paste Features as` and choosing
 :menuselection:`New vector layer` or :menuselection:`New memory
 layer`.
@@ -295,15 +287,15 @@ Editing attribute values can be done by:
 Field Calculator
 ----------------
 
-The |calculateField| :sup:`Field Calculator` button in the attribute
-table allows you to perform calculations on the basis of existing attribute values or
-defined functions, for instance, to calculate length or area of geometry features. The
-results can be written to a new attribute field, a virtual field, or
+The |calculateField| :sup:`Field Calculator` button in the attribute table
+allows you to perform calculations on the basis of existing attribute values or
+defined functions, for instance, to calculate length or area of geometry features.
+The results can be written to a new attribute field, a virtual field, or
 they can be used to update values in an existing field.
 
 The :index:`field calculator` is available on any layer that supports edit.
 When you click on the field calculator icon the dialog opens (see
-figure_attributes_3_). If the layer is not in edit mode, a warning is
+figure_field_calculator_). If the layer is not in edit mode, a warning is
 displayed and using the field calculator will cause the layer to be put in
 edit mode before the calculation is made.
 
@@ -314,11 +306,7 @@ To use the field calculator dialog, you first must select whether you want to on
 update selected features, create a new attribute field where the results of the
 calculation will be added or update an existing field.
 
-.. _figure_attributes_3:
-
-.. only:: html
-
-   **Figure Attributes 3:**
+.. _figure_field_calculator:
 
 .. figure:: /static/user_manual/working_with_vector/fieldcalculator.png
    :align: center
@@ -412,7 +400,7 @@ layer during digitizing. Have a closer look at the edit widget in section
 Conditional formatting of Table Cells
 =====================================
 
-You can enable the :index:`conditional formatting` panel clicking on
+You can enable the conditional formatting panel clicking on
 |conditionalFormatting| at the top right of the attributes window in table
 view (not available in form view).
 
@@ -431,11 +419,7 @@ to define:
   * text field,
   * font.
 
-.. _figure_attributes_4:
-
-.. only:: html
-
-   **Figure Attributes 4:**
+.. _figure_conditional_format:
 
 .. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
    :align: center
@@ -464,11 +448,7 @@ that are located in the regions and you also want to keep track of these. If
 you want to add them to the region layer, you need to create a one to many
 relation using foreign keys, because there are several airports in most regions.
 
-.. _figure_relations_1:
-
-.. only:: html
-
-   **Figure Relations 1:**
+.. _figure_relations_map:
 
 .. figure:: /static/user_manual/working_with_vector/relations1.png
    :align: center
@@ -517,11 +497,7 @@ Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
   will be generated for you but you can assign one yourself to get one that is
   easier to handle.
 
-.. _figure_relations_2:
-
-.. only:: html
-
-   **Figure Relations 2:**
+.. _figure_relations_manager:
 
 .. figure:: /static/user_manual/working_with_vector/relations2.png
    :align: center
@@ -539,11 +515,7 @@ the legend and use the identify tool. Depending on your settings, the form might
 open directly or you will have to choose to open it in the identification dialog
 under actions.
 
-.. _figure_relations_3:
-
-.. only:: html
-
-   **Figure Relations 3:**
+.. _figure_embedded_form:
 
 .. figure:: /static/user_manual/working_with_vector/relations3.png
    :align: center
@@ -578,11 +550,7 @@ If you look at the feature dialog now, you will see, that the form of the region
 is embedded inside the airports form and will even have a combobox, which allows you
 to assign the current airport to another region.
 
-.. _figure_relations_4:
-
-.. only:: html
-
-   **Figure Relations 4:**
+.. _figure_linked_forms:
 
 .. figure:: /static/user_manual/working_with_vector/relations4.png
    :align: center
