@@ -549,6 +549,13 @@ for Selected Layer(s)` is an easy way.
 
 The same functions are available for editing all layers of the project.
 
+.. tip:: **Use transaction group to edit, save or rollback multiple layers changes at once** 
+
+   When working with layers from the same PostGreSQL database, activate the
+   :guilabel:`Automatically create transaction groups where possible` option in
+   :menuselection:`Project --> Project Properties --> Data Sources` to sync their
+   behavior (enter or exit the edit mode, save or rollback changes at the same time). 
+
 .. _sec_advanced_edit:
 
 Advanced digitizing
@@ -852,11 +859,21 @@ the |splitParts| :sup:`Split Parts` icon.
 Merge selected features
 -----------------------
 
-The |mergeFeatures| :sup:`Merge Selected Features` tool allows you to merge
-features. A new dialog will allow you to choose which value to choose between each
-selected features or select a function (Minimum, Maximum, Median, Sum, Skip
-Attribute) to use for each column. If features don't have a common boundaries,
-a multipolygon will be created.
+The |mergeFeatures| :sup:`Merge Selected Features` tool allows you to create
+a new feature by merging existing ones: their geometries are merged to generate
+a new one. If features don't have common boundaries,
+a multipolygon/multipolyline/multipoint feature is created.
+
+First, select several features. Then press the |mergeFeatures| :sup:`Merge Selected
+Features` button. In the new dialog, you can select at the top of the dialog which value to
+apply to each field of the new feature. That value can be:
+
+* picked from the attributes of the initial features,
+* an aggregation of the initial features attributes (Minimum, Maximum, Median, Sum, Count
+  Concatenation... depending on the type of the field. see :ref:`statistical_summary`
+  for the full list of functions),
+* skipped, meaning that the field will be empty,
+* or manually entered, at the bottom of the rows.
 
 
 .. index::
@@ -867,10 +884,9 @@ Merge attributes of selected features
 
 The |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` tool
 allows you to apply same attributes to features without merging their boundaries.
-First, select several features. Then
-press the |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` button.
-Now QGIS asks you which attributes are to be applied to all selected objects.
-As a result, all selected objects have the same attribute entries.
+The dialog is the same as the ``Merge Selected Features`` tool's except that
+unlike that tool, selected objects are kept with their geometry while some of their
+attributes are made identical.
 
 
 .. index::
