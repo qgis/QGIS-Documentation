@@ -651,7 +651,7 @@ setups for different use cases as well.
      :menuselection:`Settings --> Options` menu, :guilabel:`System` tab
    * launching QGIS at a command prompt with the following command line
      ``qgis --nocustomization``
-   * setting to ``false`` the value of :guilabel:`UI --> Customization --> Enabled`
+   * setting to ``false`` the value of :menuselection:`UI --> Customization --> Enabled`
      variable under :menuselection:`Settings --> Options` menu, :guilabel:`Advanced` tab.
 
    In most cases, you need to restart QGIS in order to have the change applied.
