@@ -54,7 +54,7 @@ Outputs
 ``Output Image`` [raster]
   <put output description here>
 
-`` Inverse Output Image`` [raster]
+``Inverse Output Image`` [raster]
   <put output description here>
 
 ``Transformation matrix output`` [file]
@@ -226,7 +226,7 @@ Outputs
 ``Output Image`` [raster]
   <put output description here>
 
-`` Inverse Output Image`` [raster]
+``Inverse Output Image`` [raster]
   <put output description here>
 
 ``Transformation matrix output`` [file]
