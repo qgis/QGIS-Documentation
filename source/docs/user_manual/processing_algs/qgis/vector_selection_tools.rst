@@ -74,18 +74,19 @@ Parameters
   <put parameter description here>
 
 ``Predicate`` [array of Unicode strings]
-Condition for the selection. Array of one or more of the following predicates:
+  Condition for the selection. Array of one or more of the following predicates:
 
-* disjoint
-* intersects
-* contains
-* equals
-* touches
-* overlaps
-* within
-* crosses
+  * disjoint
+  * intersects
+  * contains
+  * equals
+  * touches
+  * overlaps
+  * within
+  * crosses
 
-For console usage the predicates must be defined as an array of Unicode strings, eg. [u'intersects',u'contains']
+  For console usage the predicates must be defined as an array of Unicode
+  strings, eg. [u'intersects',u'contains']
 
 Outputs
 .......
@@ -410,18 +411,19 @@ Parameters
   <put parameter description here>
 
 ``Predicate`` [array of Unicode strings]
-Condition for the selection. Array of one or more of the following predicates:
+  Condition for the selection. Array of one or more of the following predicates:
 
-* disjoint
-* intersects
-* contains
-* equals
-* touches
-* overlaps
-* within
-* crosses
+  * disjoint
+  * intersects
+  * contains
+  * equals
+  * touches
+  * overlaps
+  * within
+  * crosses
 
-For console usage the precicates must be defined as an array of Unicode strings, eg. [u'intersects',u'contains']
+  For console usage the precicates must be defined as an array of Unicode strings,
+  eg. [u'intersects',u'contains']
 
 
 ``Modify current selection by`` [selection]
