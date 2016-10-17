@@ -1747,6 +1747,12 @@ The current core implementation of diagrams provides support for:
 * **text diagrams**, a horizontaly divided circle showing statistics values inside
 * and **histograms**.
 
+.. tip:: **Switch quickly between types of diagrams**
+
+   Given that the settings are almost common to the different types of
+   diagram, when designing your diagram, you can easily change the diagram type
+   and check which one is more appropriate to your data without any loss.
+
 For each type of :index:`diagram`, the menu is divided into five tabs:
 
 Attributes
@@ -1876,11 +1882,18 @@ choose whether the bar orientation should be 'Up', 'Down', 'Right' and 'Left'.
 
 .. ToDo: explain the behaviour of this option
 
-.. tip:: **Switch quickly between diagrams**
+Legend
+-------
 
-   Given that almost all the settings above are common to the different types of
-   diagram, when designing your diagram, you can easily change the diagram type
-   and check which one is more appropriate to your data without any loss.
+From the :guilabel:`Legend` tab, you can choose to display items of the diagram
+in the :ref:`label_legend`, besides the layer symbology. It can be:
+
+* the represented attributes: color and legend text set in :guilabel:`Attributes` tab
+* and if applicable, the diagram size, whose symbol you can customize.
+
+When set, the diagram legend items are also available in the print composer legend,
+besides the layer symbology.
+
 
 Case Study
 ----------
