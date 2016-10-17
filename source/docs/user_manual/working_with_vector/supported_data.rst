@@ -233,6 +233,7 @@ first check that the file meets the following requirements:
    can have any name.
 #. The X and Y coordinates (if geometry is defined by coordinates) must be
    specified as numbers. The coordinate system is not important.
+#. If you have any data that is not a string (text) and the file is a CSV file, you must have a CSVT file (see section :ref:`csvt_files`).  
 
 As an example of a valid text file, we import the elevation point data file
 :file:`elevp.csv` that comes with the QGIS sample dataset (see section
@@ -255,23 +256,6 @@ Some items to note about the text file:
 #. No quotes (``"``) are used to delimit text fields.
 #. The X coordinates are contained in the ``X`` field.
 #. The Y coordinates are contained in the ``Y`` field.
-
-Others valuable informations for advanced users
-...............................................
-
-Features with curved geometries (CircularString, CurvePolygon and CompoundCurve) are
-supported. Here are three examples of such geometry types as a delimited text
-with WKT geometries::
-
-  Label;WKT_geom
-  CircularString;CIRCULARSTRING(268 415,227 505,227 406)
-  CurvePolygon;CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))
-  CompoundCurve;COMPOUNDCURVE((5 3, 5 13), CIRCULARSTRING(5 13, 7 15,
-    9 13), (9 13, 9 3), CIRCULARSTRING(9 3, 7 1, 5 3))
-
-Delimited Text supports also Z and M coordinates in geometries::
-
-   LINESTRINGM(10.0 20.0 30.0, 11.0 21.0 31.0)
 
 
 .. _vector_loading_csv:
@@ -333,6 +317,56 @@ Additionally, you can enable:
 * |checkbox| :guilabel:`Use subset index`.
 * |checkbox| :guilabel:`Watch file` to watch for changes to the file by other
   applications while QGIS is running.
+
+.. _csvt_files:
+
+CSVT Files
+..........
+
+When loading CSV files, the OGR driver assumes all fields are strings (i.e. text)
+unless it is told otherwise. You can create a CSVT file to tell OGR (and QGIS)
+what data type the different columns are:
+
+
+.. csv-table:: 
+    :header: "Type", "Name", "Example"
+    
+    "Whole number", "Integer", 4
+    "Decimal number", "Real", 3.456
+    "Date", "Date (YYYY-MM-DD)", 2016-07-28
+    "Time", "Time (HH:MM:SS+nn)", 18:33:12+00
+    "Date & Time", "DateTime (YYYY-MM-DD HH:MM:SS+nn)", 2016-07-28 18:33:12+00
+
+The CSVT file is a **ONE line** plain text file with the data types in quotes
+and separated by commas, e.g.:: 
+
+"Integer","Real","String"
+
+You can even specify width and precision of each column, e.g.::
+
+"Integer(6)","Real(5.5)","String(22)"
+
+This file is saved in the same folder as the :file:`.csv` file, with the same
+name, but :file:`.csvt` as the extension.
+
+*You can find more information at* `GDAL CSV Driver <http://www.gdal.org/drv_csv.html>`_.
+
+Others valuable informations for advanced users
+...............................................
+
+Features with curved geometries (CircularString, CurvePolygon and CompoundCurve) are
+supported. Here are three examples of such geometry types as a delimited text
+with WKT geometries::
+
+  Label;WKT_geom
+  CircularString;CIRCULARSTRING(268 415,227 505,227 406)
+  CurvePolygon;CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))
+  CompoundCurve;COMPOUNDCURVE((5 3, 5 13), CIRCULARSTRING(5 13, 7 15,
+    9 13), (9 13, 9 3), CIRCULARSTRING(9 3, 7 1, 5 3))
+
+Delimited Text supports also Z and M coordinates in geometries::
+
+   LINESTRINGM(10.0 20.0 30.0, 11.0 21.0 31.0)
 
 .. index:: OSM, OpenStreetMap
 
