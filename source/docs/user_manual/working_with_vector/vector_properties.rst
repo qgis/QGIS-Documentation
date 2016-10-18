@@ -26,16 +26,12 @@ from the pop-up menu.
    you have installed, new tabs may be added to the layer properties dialog.
    Those are not presented below.
 
+.. tip:: **Live update rendering**
 
-.. tip:: **Switch quickly between different layer representations**
-
-   Using the :menuselection:`Styles --> Add` combobox at the bottom of the
-   :guilabel:`Layer Properties` dialog, you can save as many combinations of
-   layer properties settings (symbology, labeling, diagram, fields form,n
-   actions...) as you want. Then, simply switch between styles from the context
-   menu of the layer in :guilabel:`Layers Panel` to automatically get different
-   representations of your data.
-
+   The :ref:`layer_styling_panel` provides you with some of the common features
+   of the Layer properties dialog and is a good modeless widget that
+   you can use to speed up the configuration of the layer styles and
+   automatically view your changes in the map canvas.
 
 .. _vectorgeneralmenu:
 
@@ -2398,4 +2394,14 @@ of the image. Currently png, jpg and jpeg image formats are supported.
    :align: center
 
    Metadata menu in vector layers properties dialog
+
+
+.. tip:: **Switch quickly between different layer representations**
+
+   Using the :menuselection:`Styles --> Add` combobox at the bottom of the
+   :guilabel:`Layer Properties` dialog, you can save as many combinations of
+   layer properties settings (symbology, labeling, diagram, fields form,
+   actions...) as you want. Then, simply switch between styles from the context
+   menu of the layer in :guilabel:`Layers Panel` to automatically get different
+   representations of your data.
 
