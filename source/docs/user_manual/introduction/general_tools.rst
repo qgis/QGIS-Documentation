@@ -292,7 +292,7 @@ allows users to choose:
 * refresh the informations;
 * the statistics information to display with the bottom right button.
 
-Statistic information available are (in regards of the field type):
+Statistic information available are (depending on the field's type):
 
 * Sum (float or integer)
 * Mean (float or integer)
@@ -301,7 +301,7 @@ Statistic information available are (in regards of the field type):
 * Standard Deviation on Sample (float or integer)
 * Minimal value (date, string, float or integer)
 * Maximal value (date, string, float or integer)
-* Range (date)
+* Range (date, float or integer)
 * Minority (float or integer)
 * Majority (float or integer)
 * Variety (float or integer)
@@ -312,9 +312,6 @@ Statistic information available are (in regards of the field type):
 * Count number of Missing Value (date or string)
 * Minimum Length (string)
 * Maximum Length (string)
-
-.. note:: The list of shown statistics depends on the type of the values (numeric,
-   string or date) returned by the selected field or the entered expression.
 
 .. index::
    single: Map; Overview
