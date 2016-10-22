@@ -43,24 +43,10 @@ form, the browser displays and handles both identically.
 
 **User, Installation and Coding Guide Authors and Editors:**
 
-+--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Tara Athan         | Radim Blazek        | Godofredo Contreras  | Otto Dassau          | Martin Dobias        | 
-+--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Peter Ersts        | Anne Ghisla         | Stephan Holl         | N\. Horning          | Magnus Homann        | 
-+--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Werner Macho       | Carson J.Q. Farmer  | Tyler Mitchell       | K\. Koy              | Lars Luthman         | 
-+--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Claudia A. Engel   | Brendan Morely      | David Willis         | Jürgen E. Fischer    | Marco Hugentobler    | 
-+--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Larissa Junek      | Diethard Jansen     | Paolo Corti          | Gavin Macaulay       | Gary E. Sherman      | 
-+--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Tim Sutton         | Alex Bruy           | Raymond Nijssen      | Richard Duivenvoorde | Andreas Neumann      | 
-+--------------------+---------------------+----------------------+----------------------+----------------------+ 
-| Astrid Emde        | Yves Jacolin        | Alexandre Neto       | Andy Schmid          | Hien Tran-Quang      | 
-+--------------------+---------------------+----------------------+----------------------+----------------------+
+The list of the persons who contribute on writing, reviewing and translating
+the following documentation is available at :ref:`doc_contributors`.
 
-
-Copyright (c) 2004 - 2014 QGIS Development Team
+Copyright (c) 2004 - 2016 QGIS Development Team
 
 **Internet:** http://www.qgis.org
 
