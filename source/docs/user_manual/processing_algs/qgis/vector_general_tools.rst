@@ -268,7 +268,7 @@ Outputs
   VRT output filename
 
 ``Output vrt string`` [string]
-  VRT content retured as string
+  VRT content returned as string
 
 Console usage
 ..............
