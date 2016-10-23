@@ -274,7 +274,7 @@ Console usage
 See also
 ........
 
- `GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
+`GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
 
 Grid (Data metrics)
 -------------------
@@ -515,7 +515,6 @@ Parameters
   Default: *0.0*
 
 ``Output raster type`` [selection]
-
   Raster file type
 
   Options:
@@ -668,7 +667,7 @@ Console usage
 See also
 ........
 
- `GDAL nearblack <http://www.gdal.org/nearblack.html>`_
+`GDAL nearblack <http://www.gdal.org/nearblack.html>`_
 
 Proximity (raster distance)
 ---------------------------
