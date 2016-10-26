@@ -871,18 +871,20 @@ if you choose the ellipsoidal measure.
 Measure length, areas and angles interactive
 ----------------------------------------------
    
-To select a measuring tool, click on |measure| and select the tool you want to use.
+Click the |measure| icon in the Attribute toolbar to begin measurements.
+The downward arrow near the icon helps you switch to the convenient tool to measure
+|measure| length, |measureArea| area or |measureAngle| angle.
 The default unit used in the dialog is the one set in :menuselection:`Project -->
 Project Properties --> General` menu.
 
-.. note::
+.. note:: **Configuring the measure tool**
+
    While measuring length or area, clicking the :guilabel:`Configuration` button
-   at the bottom of the widget helps you define the rubberband color, the precision
-   of the measurements and the unit behavior. You can also choose your preferred
-   measurement or angle units in the menu option :menuselection:`Settings -->
-   Options --> Map Tools` but keep in mind that those values are superseded in the 
-   current project by options made in :menuselection:`Project --> Project
-   Properties --> General` menu.
+   at the bottom of the widget helps you define in menu :menuselection:`Settings -->
+   Options --> Map Tools` the rubberband color, the precision of the measurements
+   and the unit behavior. You can also choose your preferred measurement or angle
+   units but keep in mind that those values are superseded in the current project
+   by options made in :menuselection:`Project --> Project Properties --> General` menu.
 
 All measuring modules use the snapping settings from the digitizing module (see
 section :ref:`snapping_tolerance`). So, if you want
@@ -899,9 +901,11 @@ The tool then allows you to click points on the map. Each segment length,
 as well as the total, shows up in the measure window.
 To stop measuring, click your right mouse button.
 
-Note that you can interactively change the measurement units in the measurement
-dialog. This unit is kept for the widget until a new or another project is opened.
-There is an info section in the dialog that explains how calculations are made
+Note that you can use the drop-down list near the total to interactively change
+the measurement units while measuring. This unit is kept for the widget until
+a new or another project is opened.
+
+The :guilabel:`Info` section in the dialog explains how calculations are made
 according to CRS settings available.
 
 .. %FixMe: currently, validating the Settings --> Options dialog revert any change
