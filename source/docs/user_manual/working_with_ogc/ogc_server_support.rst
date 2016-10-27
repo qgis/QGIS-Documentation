@@ -578,14 +578,14 @@ Extra parameters supported by the WFS GetFeature request
 ---------------------------------------------------------
 
 In the WFS GetFeature request, QGIS Server accepts two extra parameters in
-addition to the standard parameters according to the OCG WFS 1.1.0
+addition to the standard parameters according to the OCG WFS 1.0.0
 specification:
 
 * **GeometryName** parameter: this parameter can be used to get the *extent*
   or the *centroid* as the geometry or no geometry if *none* if used (ie
   attribute only). Allowed values are *extent*, *centroid* or *none*.
 * **StartIndex** parameter: STARTINDEX is standard in WFS 2.0, but it's an
-  extension for WFS 1.0 which is the only version implemented in QGIS Server.
+  extension for WFS 1.0.0 which is the only version implemented in QGIS Server.
   STARTINDEX can be used to skip some features in the result set and in
   combination with MAXFEATURES will provide for the ability to use WFS
   GetFeature to page through results. Note that STARTINDEX=0 means start with
