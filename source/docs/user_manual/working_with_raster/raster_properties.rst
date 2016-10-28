@@ -63,12 +63,15 @@ Here, you find the coordinate reference system (CRS) information printed as a
 PROJ.4 string. If this setting is not correct, it can be modified by clicking
 the **[Specify]** button.
 
-Scale Dependent visibility
-..........................
+Scale dependent visibility
+--------------------------
 
-Additionally scale-dependent visibility can be set in this tab. You will need to
-check the checkbox and set an appropriate scale where your data will be
-displayed in the map canvas.
+You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
+(exclusive)` scale, defining a range of scale in which the layer will be
+visible. Out of this range, it's hidden. The |mapIdentification|
+:sup:`Set to current canvas scale` button helps you use the current map
+canvas scale as boundary of the range visibility.
+See :ref:`label_scaledepend` for more information.
 
 At the bottom, you can see a thumbnail of the layer, its legend symbol, and the palette.
 
