@@ -2224,3 +2224,16 @@ of the image. Currently png, jpg and jpeg image formats are supported.
    menu of the layer in :guilabel:`Layers Panel` to automatically get different
    representations of your data.
 
+.. index:: Legend, Embedded widget
+.. _vectorlegend_menu:
+
+Legend Menu
+-------------
+
+The :guilabel:`Legend` menu provides you with a list of widgets you can embed within
+the layer tree in the Layers panel. The idea is to have a way to quickly access some
+actions that are often used with the layer (setup transparency, filtering, selection,
+style or other stuff...).
+
+By default, QGIS provides transparency widget but this can be extended by plugins
+registering their own widgets and assign custom actions to layers they manage.

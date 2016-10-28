@@ -26,7 +26,7 @@ There are several menus in the dialog:
 * :guilabel:`Pyramids`
 * :guilabel:`Histogram`
 * :guilabel:`Metadata`
-
+* :guilabel:`Legend`
 
 .. _figure_raster_properties:
 
@@ -70,7 +70,6 @@ Additionally scale-dependent visibility can be set in this tab. You will need to
 check the checkbox and set an appropriate scale where your data will be
 displayed in the map canvas.
 
-At the bottom, you can see a thumbnail of the layer, its legend symbol, and the palette.
 
 .. index:: Symbology, Single Band Raster, Three Band Color Raster, Multi Band Raster
 
@@ -202,6 +201,8 @@ within the standard deviation or within multiple standard deviations.
 This is useful when you have one or two cells with abnormally high values in
 a raster grid that are having a negative impact on the rendering of the raster.
 
+.. index:: Color map, Color interpolation, Discrete
+.. _label_colormaptab:
 
 **Singleband pseudocolor**
 
@@ -215,9 +216,6 @@ You can also create individual color maps for the single bands here.
 
    Raster Renderer - Singleband pseudocolor
 
-.. _label_colormaptab:
-
-.. index:: Color map, Color interpolation, Discrete
 
 Three types of color interpolation are available:
 
@@ -262,14 +260,13 @@ standard deviation x` |selectNumber|.
 Then, only the values within the standard deviation or within multiple standard deviations
 are considered for the color table.
 
-
 Color rendering
 ...............
 
 For every :guilabel:`Band rendering`, a :guilabel:`Color rendering` is possible.
 
 You can also achieve special rendering effects for your raster file(s) using one
-of the blending modes (see :ref:`vector_properties_dialog`).
+of the blending modes (see :ref:`blend-modes`).
 
 Further settings can be made in modifying the :guilabel:`Brightness`, the
 :guilabel:`Saturation` and the :guilabel:`Contrast`. You can also use a :guilabel:`Grayscale`
@@ -295,6 +292,9 @@ When applying the 'Nearest neighbour' method, the map can have a pixelated struc
 when zooming in. This appearance can be improved by using the 'Bilinear' or 'Cubic' method, which cause sharp features
 to be blurred. The effect is a smoother image. This method can be applied, for instance, to digital
 topographic raster maps.
+
+At the bottom of the :guilabel:`Style` tab, you can see a thumbnail of the layer,
+its legend symbol, and the palette.
 
 .. index:: Transparency
 
@@ -418,3 +418,16 @@ basis, so it may well be that a given layer's statistics have not yet been colle
    :align: center
 
    Raster Metadata
+
+.. index:: Legend, Embedded widget
+
+Legend Menu
+-------------
+
+The :guilabel:`Legend` menu provides you with a list of widgets you can embed within
+the layer tree in the Layers panel. The idea is to have a way to quickly access some
+actions that are often used with the layer (setup transparency, filtering, selection,
+style or other stuff...).
+
+By default, QGIS provides transparency widget but this can be extended by plugins
+registering their own widgets and assign custom actions to layers they manage.
