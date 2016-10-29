@@ -2,6 +2,8 @@
 
    |updatedisclaimer|
 
+.. _editingvector:
+
 *********
  Editing
 *********

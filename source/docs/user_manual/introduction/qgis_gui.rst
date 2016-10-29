@@ -526,6 +526,8 @@ It shows the scale of the map view. If you zoom in or out, QGIS shows you the
 current scale. There is a scale selector, which allows you to choose among
 :ref:`predefined and custom scales <predefinedscales>` to assign to the map view.
 
+.. _magnifier:
+
 On the right side of the scale display you can define a current
 :index:`magnification` level for your map view. This allows to zoom in to a map
 without altering the map scale, making it easier to accurately

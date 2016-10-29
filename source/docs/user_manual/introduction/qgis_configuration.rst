@@ -29,8 +29,11 @@ Options
 
 |options| Some basic options for QGIS can be selected using the
 :guilabel:`Options` dialog. Select the menu option :menuselection:`Settings -->`
-|options| :menuselection:`Options`. The tabs where you can customize your
-options are described below.
+|options| :menuselection:`Options`.
+You can modify the options according to your needs. Some of the changes may
+require a restart of QGIS before they will be effective.
+
+The tabs where you can customize your options are described below.
 
 General Tab
 -------------
@@ -38,27 +41,27 @@ General Tab
 **Application**
 
 * Select the :guilabel:`Style (QGIS restart required)` |selectString| and choose
-  between 'Oxygen','Windows','Motif','CDE', 'Plastique' and  'Cleanlooks' (|nix|).
-* Define the :guilabel:`Icon theme` |selectString|. Currently only 'default' is
-  possible.
+  between 'Oxygen', 'Windows', 'Motif', 'CDE', 'Plastique' and 'Cleanlooks'.
+* Define the :guilabel:`Icon theme` |selectString|. It can be 'default' or 'Night Mapping'.
 * Define the :guilabel:`Icon size` |selectString|.
-* Define the :guilabel:`Font`. Choose between |radioButtonOn|
-  :guilabel:`Qt default` and a user-defined font.
+* Define the :guilabel:`Font` and its :guilabel:`Size`. The font can be
+  |radioButtonOn| :guilabel:`Qt default` or a user-defined one.
 * Change the :guilabel:`Timeout for timed messages or dialogs` |selectString|.
 * |checkbox| :guilabel:`Hide splash screen at startup`
 * |checkbox| :guilabel:`Show tips at startup`
-* |checkbox| :guilabel:`Bold group box titles`
+* |checkbox| :guilabel:`Check QGIS version at startup` to keep you informed
+  if a newer version is released
 * |checkbox| :guilabel:`QGIS-styled group boxes`
-* |checkbox| :guilabel:`Use native color chooser dialogs`
-* |checkbox| :guilabel:`Use live-updating color chooser dialogs`
-* |checkbox| :guilabel:`Custom side bar style`
-* |checkbox| :guilabel:`Experimental canvas rotation support (restart required)`
+* |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`)
+* |checkbox| :guilabel:`Use live-updating color chooser dialogs` (see :ref:`color-selector`)
+* |checkbox| :guilabel:`Canvas rotation support (restart required)`
 
 **Project files**
 
 * :guilabel:`Open project on launch` |selectString| (choose between 'New',
-  'Most recent' and 'Specific'). When choosing 'Specific' use the |browseButton|
-  to define a project.
+  'Most recent', 'Welcome Page', and 'Specific'). When choosing 'Specific' use
+  the |browseButton| to define the project to use by default. The 'Welcome Page'
+  displays a list of recent projects with screenshot.
 * |checkbox| :guilabel:`Create new project from default project`. You have the
   possibility to press on :guilabel:`Set current project as default` or on
   :guilabel:`Reset default`. You can browse through your files and define a
@@ -80,6 +83,23 @@ General Tab
 
 System Tab
 -----------
+
+**SVG paths**
+
+Add or Remove :guilabel:`Path(s) to search for Scalable Vector Graphic (SVG)
+symbols`. These SVG files are then available to symbolize features or
+decorate your map composition.
+ 
+
+**Plugin paths**
+
+Add or Remove :guilabel:`Path(s) to search for additional C++
+plugin libraries`
+
+**QSettings**
+
+It helps you :guilabel:`Reset user interface to default settings (restart required)`
+if you made any :ref:`customization <sec_customization>`.
 
 **Environment**
 
@@ -109,24 +129,14 @@ source code.
    System environment variables in QGIS
 
 
-**Plugin paths**
-
-**[Add]** or **[Remove]** :guilabel:`Path(s) to search for additional C++
-plugin libraries`
-
-
 Data Sources Tab
 -----------------
 
 **Feature attributes and table**
 
-* |checkbox| :guilabel:`Open attribute table in a dock window (QGIS restart
-  required)`
-* |checkbox| :guilabel:`Copy geometry in WKT representation from attribute
-  table`. When using |copySelected| :sup:`Copy selected rows to
-  clipboard` from the :guilabel:`Attribute table` dialog, this has the
-  result that the coordinates of points or vertices are also copied to the
-  clipboard.
+* |checkbox| :guilabel:`Open attribute table in a dock window`
+* :guilabel:`Copy features as` 'Plain text, no geometry', 'Plain text, WKT geometry',
+  or 'GeoJSON' when pasting features in other applications.
 * :guilabel:`Attribute table behavior` |selectString|. There are three
   possibilities: 'Show all features', 'Show selected features' and 'Show
   features visible on map'.
@@ -194,16 +204,26 @@ Rendering Tab
 * :guilabel:`Map update interval (default to 250 ms)`
 * |checkbox| :guilabel:`Enable feature simplification by default for newly added layers`
 * :guilabel:`Simplification threshold`
+* :guilabel:`Simplification algorithm`. It can be 'Distance', SnapToGrid' or
+  'Visvalingam'
+  
+  .. fixme: it could be nice to explain the differences between these options.
+
 * |checkbox| :guilabel:`Simplify on provider side if possible`
 * :guilabel:`Maximum scale at which the layer should be simplified`
-* |doublespinbox| :guilabel:`Magnification level`
+* |doublespinbox| :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
 
 **Rendering quality**
 
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some
   drawing performance`
 
-**Rasters**
+**Curve segmentation**
+
+* :guilabel:`Segmentation tolerance`
+* :guilabel:`Tolerance type`: it can be 'Maximum angle' and 'Maximum distance'
+
+  **Rasters**
 
 * With :guilabel:`RGB band selection`, you can define the number for the Red,
   Green and Blue band.
@@ -246,7 +266,8 @@ Canvas and Legend Tab
 **Layer legend**
 
 * :guilabel:`Double click action in legend` |selectString|. You can either
-  'Open layer properties' or 'Open attribute table' with the double click.
+  'Open layer properties', 'Open attribute table' or 'Open layer styling dock'
+  with the double click.
 * The following :guilabel:`Legend item styles` are possible:
 
   * |checkbox| :guilabel:`Capitalise layer names`
@@ -254,17 +275,18 @@ Canvas and Legend Tab
   * |checkbox| :guilabel:`Bold group names`
   * |checkbox| :guilabel:`Display classification attribute names`
   * |checkbox| :guilabel:`Create raster icons (may be slow)`
+  * you can also set the :guilabel:`WMS getLegendGraphic Resolution`
 
 Map tools Tab
 --------------
 
-This tab offers some options regarding the behavior of the :guilabel:`Identify tool`.
+This tab offers some options regarding the behavior of the :ref:`Identify tool <identify>`.
 
-* :guilabel:`Search radius for identifying and displaying map tips` is a tolerance factor
-  expressed as a percentage of the map width. This means the identify tool will depict results
+* :guilabel:`Search radius for identifying and displaying map tips` is a tolerance
+  distance within which the identify tool will depict results
   as long as you click within this tolerance.
 * :guilabel:`Highlight color` allows you to choose with which color should features being
-  identified are to be highlighted.
+  identified be highlighted.
 * :guilabel:`Buffer` determines a buffer distance
   to be rendered from the outline of the identify highlight.
 * :guilabel:`Minimum width` determines how thick should
@@ -286,9 +308,7 @@ This tab offers some options regarding the behavior of the :guilabel:`Identify t
 
 **Panning and zooming**
 
-* Define :guilabel:`Mouse wheel action` |selectString| ('Zoom', 'Zoom and recenter',
-  'Zoom to mouse cursor', 'Nothing')
-* Define :guilabel:`Zoom factor` for wheel mouse
+* Define a :guilabel:`Zoom factor` for zoom tools or wheel mouse
 
 .. _predefinedscales:
 
@@ -304,7 +324,8 @@ Composer Tab
 
 **Composition defaults**
 
-You can define the :guilabel:`Default font` here.
+You can define the :guilabel:`Default font` used within the :ref:`print composer
+<label_printcomposer>`.
 
 **Grid appearance**
 
@@ -317,13 +338,20 @@ You can define the :guilabel:`Default font` here.
 * Define the :guilabel:`Grid offset` |selectNumber| for x and y
 * Define the :guilabel:`Snap tolerance` |selectNumber|
 
+**Composer Paths**
+
+* Define :guilabel:`Paths(s) to search for extra print templates`: a list of folders
+  with custom composer templates to use while creating new one.
 
 Digitizing Tab
 ---------------
 
+This tab helps you configure general settings when :ref:`editing vector layer
+<editingvector>` (attributes and geometry).
+
 **Feature creation**
 
-* |checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`
+* |checkbox| :guilabel:`Suppress attribute form pop-up after feature creation`
 * |checkbox| :guilabel:`Reuse last entered attribute values`
 * :guilabel:`Validate geometries`. Editing complex lines and polygons with many
   nodes can result in very slow rendering. This is because the default
@@ -334,7 +362,9 @@ Digitizing Tab
 
 **Rubberband**
 
-* Define Rubberband :guilabel:`Line width` and :guilabel:`Line color`
+* Define Rubberband :guilabel:`Line width`, :guilabel:`Line color`
+  and :guilabel:`Fill color`
+* :guilabel:`Don't update rubberband during node editing`
 
 **Snapping**
 
@@ -357,7 +387,7 @@ The next 3 options refer to the |offsetCurve| :sup:`Offset Curve` tool
 in :ref:`sec_advanced_edit`. Through the various settings, it is possible to
 influence the shape of the line offset. These options are possible starting from GEOS 3.3.
 
-* :guilabel:`Join style`
+* :guilabel:`Join style`: 'Round', 'Mitre' or 'Bevel'
 * :guilabel:`Quadrant segments`
 * :guilabel:`Miter limit`
 
@@ -366,7 +396,7 @@ GDAL Tab
 
 GDAL is a data exchange library for raster files. In this tab, you can
 :guilabel:`Edit create options` and :guilabel:`Edit Pyramids Options` of the
-raster formats. Define which GDAL driver is to be used for a raster format, as in
+raster formats. You can define which GDAL driver is to be used for a raster format, as in
 some cases more than one GDAL driver is available.
 
 CRS Tab
@@ -392,14 +422,25 @@ a layer without a CRS is loaded.
 **Default datum transformations**
 
 * |checkbox| :guilabel:`Ask for datum transformation when no default is defined`
-* If you have worked with the 'on-the-fly' CRS transformation you can see the result
-  of the transformation in the window below. You can find information about 'Source CRS'
-  and 'Destination CRS' as well as 'Source datum transform' and 'Destination datum transform'.
+* With the 'on-the-fly' CRS transformation enabled and the above option checked,
+  adding layers of different crs opens the :guilabel:`Select datum transformations`
+  dialog. This offers you to select the most appropriate transformation settings.
+  Validating this dialog with the 'Remember selection' option checked populates
+  the table under :menuselection:`CRS --> Default datum transformations` with
+  information about 'Source CRS' and 'Destination CRS' as well as 'Source datum
+  transform' and 'Destination datum transform'. From now, QGIS automatically
+  uses the selected datum transformation for further transformation between
+  these two CRSs until you |signMinus| remove it from the list.
+
+  You can use the |signPlus| button to add the datum transformations if you know
+  its parameters (source and destination ellipsoids and the numbers from the
+  transformation table). You then need to manually enter each setting.
+
 
 Locale Tab
 -----------
 
-* |checkbox| :guilabel:`Overwrite system locale` and :guilabel:`Locale to use instead`
+* |checkbox| :guilabel:`Override system locale` and :guilabel:`Locale to use instead`
 * Information about active system locale
 
 Authentication Tab
@@ -417,8 +458,9 @@ Network Tab
 * Define :guilabel:`WMS search address`, default is
   ``http://geopole.org/wms/search?search=\%1\&type=rss``
 * Define :guilabel:`Timeout for network requests (ms)` - default is 60000
+* Define :guilabel:`Default expiration period for WMS Capabilities (hours)` - default is 24
 * Define :guilabel:`Default expiration period for WMSC/WMTS tiles (hours)` - default is 24
-* Define :guilabel:`Max retry in case of tile request errors`
+* Define :guilabel:`Max retry in case of tile or feature request errors`
 * Define :guilabel:`User-Agent`
 
 
@@ -457,20 +499,44 @@ Figure_Network_Tab_).
 
 If you need more detailed information about the different proxy settings,
 please refer to the manual of the underlying QT library documentation at
-http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum.
+http://doc.qt.io/qt-4.8/qnetworkproxy.html#ProxyType-enum
 
 .. tip::
    **Using Proxies**
 
    Using proxies can sometimes be tricky. It is useful to proceed by 'trial and
-   error' with the above proxy types, to check to see if they succeed in your case.
+   error' with the above proxy types, to check if they succeed in your case.
 
-You can modify the options according to your needs. Some of the changes may
-require a restart of QGIS before they will be effective.
 
-* |nix| Settings are saved in a text file: :file:`$HOME/.config/QGIS/QGIS2.conf`
-* |osx| You can find your settings in: :file:`$HOME/Library/Preferences/org.qgis.qgis.plist`
-* |win| Settings are stored in the registry under: ``HKEY\CURRENT_USER\Software\QGIS\qgis``
+Variables Tab
+--------------
+
+The :guilabel:`Variables` tab lists and helps you create global-level variables.
+More information about variables at section :ref:`general_tools_variables`.
+
+.. _optionsadvanced:
+
+Advanced Tab
+------------
+
+Depending on your OS, all the settings related to QGIS (UI, tools, data providers,
+default values, plugins options...) are saved:
+
+* |nix| in a text file: :file:`$HOME/.config/QGIS/QGIS2.conf`
+* |osx| in the properties list file: :file:`$HOME/Library/Preferences/org.qgis.qgis.plist`
+* |win| in the registry under: ``HKEY\CURRENT_USER\Software\QGIS\qgis``
+
+The :guilabel:`Advanced` tab offers you in a single place, regardless your OS,
+means to manage these settings through the :guilabel:`Advanced Settings Editor`.
+After you promise to be careful,
+the widget is populated with a tree of all QGIS settings, which you can directly edit.
+
+.. warning:: **Avoid using the Advanced tab settings blindly**
+
+   Be careful while modifying items in this dialog given that changes are
+   automatically applied. Doing changes without knowledge can break your
+   QGIS installation in various ways.
+
 
 .. index::
    Properties; project
@@ -588,7 +654,9 @@ described above.
     Note that you can (de)activate this option only if no layer is being edited
     in the project.
 
-
+* Besides the list of global-level variables, The :guilabel:`Variables` tab
+  lists and helps you create project-level variables.
+  More information about variables at section :ref:`general_tools_variables`.
 
 .. _sec_customization:
 
@@ -651,8 +719,9 @@ setups for different use cases as well.
      :menuselection:`Settings --> Options` menu, :guilabel:`System` tab
    * launching QGIS at a command prompt with the following command line
      ``qgis --nocustomization``
-   * setting to ``false`` the value of :menuselection:`UI --> Customization --> Enabled`
-     variable under :menuselection:`Settings --> Options` menu, :guilabel:`Advanced` tab.
+   * setting to ``false`` the value of :menuselection:`UI --> Customization -->
+     Enabled` variable under :menuselection:`Settings --> Options` menu,
+     :guilabel:`Advanced` tab (see the :ref:`warning <optionsadvanced>`).
 
    In most cases, you need to restart QGIS in order to have the change applied.
 
