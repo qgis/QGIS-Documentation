@@ -81,7 +81,11 @@ providers:
     # subset (WHERE clause)
     uri.setDataSource("public", "roads", "the_geom", "cityid = 2643")
 
-    vlayer = QgsVectorLayer(uri.uri(), "layer name you like", "postgres")
+    vlayer = QgsVectorLayer(uri.uri(False), "layer name you like", "postgres")
+    
+  Note: the `False` argument passed to `uri.uri(False)` prevents the expansion of 
+  the authentication configuration parameters, if you are not using any 
+  authentication configuration this argument does not make any difference.
 
 .. index::
   pair: loading; delimited text layers

@@ -366,7 +366,7 @@ switch on and off QGIS widgets (:menuselection:`Panels -->`) or toolbars
 (:menuselection:`Toolbars -->`). You can (de)activate any of them by
 right-clicking the menu bar or a toolbar and choose the item you want.
 Each panel or toolbar can be moved and placed wherever you feel comfortable
-with in QGIS interface.
+within QGIS interface.
 The list can also be extended with the activation of :ref:`Core or external
 plugins <plugins>`.
 
@@ -411,11 +411,14 @@ holding the mouse over the toolbars.
    initial GUI <tip_restoring_configuration>`.
 
 .. index:: Panels
+.. _panels_tools:
 
 Panels
 ------
 
-QGIS provides by default many panels to work with.
+Besides toolbars, QGIS provides by default many panels to work with. Panels are
+special widgets that you can interact with (selecting options, checking boxes,
+filling values...) in order to perform a more complex task.
 
 
 .. _figure_panels:
@@ -429,9 +432,9 @@ QGIS provides by default many panels to work with.
 
    The Panels menu
 
-Some of these panels are described
-below while others may be found in different parts of the document, namely:
+Below are listed default panels provided by QGIS:
 
+* the :ref:`label_legend`
 * the :ref:`Browser Panel <label_qgis_browser>`
 * the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
 * the :ref:`Spatial Bookmarks Panel <sec_bookmarks>`
@@ -439,13 +442,13 @@ below while others may be found in different parts of the document, namely:
 * the :ref:`Tile Scale Panel <tilesets>`
 * the :ref:`Identify Panel <identify>`
 * the :ref:`User Input Panel <rotate_feature>`
-* the :ref:`layer_order`
+* the :ref:`Layer Order Panel <layer_order>`
+* the :ref:`layer_styling_panel` 
 * the :ref:`statistical_summary`
 * the :ref:`overview_panels`
 * the :ref:`log_message_panel`
 * the :ref:`undo_redo_panel`
-* the :ref:`label_processing`
-
+* the :ref:`Processing Toolbox <label_processing>`
 
 .. _`label_mapview`:
 
