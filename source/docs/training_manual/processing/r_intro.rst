@@ -184,7 +184,14 @@ Now you can add the body of the function:
 
     Output=SpatialPointsDataFrame(pts, as.data.frame(pts))
 
-The final script should look like:
+The final script looks like this::
+
+    ##Point pattern analysis=group
+    ##Layer=vector
+    ##Size=number 10
+    ##Output= output vector
+    pts=spsample(Layer,Size,type="random")
+    Output=SpatialPointsDataFrame(pts, as.data.frame(pts))
 
 .. image:: img/r_intro/r_intro_8.png
 
