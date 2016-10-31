@@ -35,4 +35,4 @@ Various methods to draw contour lines [always step= 10] on the *stddev* raster:
 
 - :menuselection:`GRASS --> r.contour.step`
 - :menuselection:`GDAL --> Contour`
-- :menuselection:`SAGA --> Contour lines from grid` [**NB:** output shp is not valid, known bug]
+- :menuselection:`SAGA --> Contour lines from grid` [**NB:** in some older SAGA versions, output shp is not valid, known bug]

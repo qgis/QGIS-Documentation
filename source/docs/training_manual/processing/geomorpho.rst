@@ -18,4 +18,4 @@ Then we create a model of predicted rainfall, based on the interpolation of rain
 The probability of a landslide will be very roughly related to both rainfall and slope (of course a real model will use more layers, and appropriate parameters), let's say ``(rainfall * slope )/100``:
 
 - :menuselection:`SAGA --> Raster calculator` rain, slope: ``(a*b)/100`` (or: :menuselection:`GRASS --> r.mapcalc`)
-- then let's calculate what are the municipalities with the greates predicted risk of rainfall: :menuselection:`SAGA --> Raster statistics with polygons` (the parameters of interest are *Maximum* and *Mean*)
+- then let's calculate what are the municipalities with the greatest predicted risk of rainfall: :menuselection:`SAGA --> Raster statistics with polygons` (the parameters of interest are *Maximum* and *Mean*)
