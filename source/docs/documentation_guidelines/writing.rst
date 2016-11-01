@@ -340,18 +340,42 @@ You can reference to it like this my_drawn_table_1_.
 Index
 -----
 
-Several index tag exists in RST. To be able to translate the index, it is necessary to
-integrate it into the normal text. In this case use this syntax:
+
+An index is a handy way to help the reader easily find an information in a doc.
+QGIS documentation provides some essential indices.
+There are few rules to follow in order to keep a set of indices that are really 
+useful (coherent, consistent and really connected to each other):
+
+* Index should be human readable, understandable and translatable; an index can
+  be made from many words but you should avoid any unneeded ``_``, ``-``...
+  characters to link them i.e., ``Loading layers`` instead of ``loading_layers``
+  or ``loadingLayers``. 
+* Always capitalize only the first letter of the index unless the word has a
+  particular spelling, in which case keep using its spelling e.g., ``Loading layers``,
+  ``Atlas generation``, ``WMS``, ``pgsql2shp``
+* Keep an eye on the existing `Index list <http://docs.qgis.org/testing/en/genindex.html>`_
+  in order to reuse the most convenient expression with the right spelling
+  and avoid wrong duplicates.
+ 
+Several index tags exist in RST. You can either use the inline ``:index:`` tag
+within the normal text.
 
 ::
 
    QGIS allows to load several :index:`Vector formats` supported by GDAL/OGR ...
 
-If the term does not have to be translated, please use this syntax:
+Or you can use the ``.. index::`` block-level markup which links to the
+beginning of the next paragraph. Because of the rules mentioned above, it's
+advised to use this latter tag as it's easier to fulfill them.
 
 ::
 
-   .. index:: WMS, WFS, WCS, CAT, SFS, GML, ...
+   .. index:: WMS, WFS, Loading layers
+
+It's also recommanded to use index parameters such as ``single``, ``pair``, ``see``...
+in order to build a more structured and interconnected table of index. See
+http://www.sphinx-doc.org/en/stable/markup/misc.html#index-generating-markup
+for more information on index creation.
 
 Footnotes
 ---------
