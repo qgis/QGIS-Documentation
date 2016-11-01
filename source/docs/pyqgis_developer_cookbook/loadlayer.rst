@@ -12,7 +12,7 @@ Additionally, custom layer types are available, but we are not going to discuss
 them here.
 
 .. index::
-  pair: vector layers; loading
+  pair: Vector layers; Loading
 
 Vector Layers
 =============
@@ -48,7 +48,7 @@ The following list shows how to access various data sources using vector data
 providers:
 
 .. index::
-  pair: loading; OGR layers
+  pair: Loading; OGR layers
 
 * OGR library (shapefiles and many other file formats) --- data source is the
   path to the file:
@@ -65,7 +65,7 @@ providers:
 
 
 .. index::
-  pair: loading; PostGIS layers
+  pair: Loading; PostGIS layers
 
 * PostGIS database --- data source is a string with all information needed to
   create a connection to PostgreSQL database. :class:`QgsDataSourceURI` class
@@ -82,16 +82,16 @@ providers:
     uri.setDataSource("public", "roads", "the_geom", "cityid = 2643")
 
     vlayer = QgsVectorLayer(uri.uri(False), "layer name you like", "postgres")
-    
-  Note: the `False` argument passed to `uri.uri(False)` prevents the expansion of 
-  the authentication configuration parameters, if you are not using any 
-  authentication configuration this argument does not make any difference.
+
+  .. note:: The ``False`` argument passed to ``uri.uri(False)`` prevents the
+     expansion of the authentication configuration parameters, if you are not using
+     any authentication configuration this argument does not make any difference.
 
 .. index::
-  pair: loading; delimited text layers
+  pair: Loading; Delimited text layers
 
 * CSV or other delimited text files --- to open a file with a semicolon as a
-  delimiter, with field "x" for x-coordinate and field "y" with y-coordinate
+  delimiter, with field "x" for x-coordinate and field "y" for y-coordinate
   you would use something like this:
 
   ::
@@ -99,17 +99,17 @@ providers:
     uri = "/some/path/file.csv?delimiter=%s&xField=%s&yField=%s" % (";", "x", "y")
     vlayer = QgsVectorLayer(uri, "layer name you like", "delimitedtext")
 
-  Note: from QGIS version 1.7 the provider string is structured as a URL, so
-  the path must be prefixed with *file://*. Also it allows WKT (well known
-  text) formatted geometries as an alternative to "x" and "y" fields, and allows
-  the coordinate reference system to be specified. For example:
+  .. note:: The provider string is structured as a URL, so
+     the path must be prefixed with ``file://``. Also it allows WKT (well known
+     text) formatted geometries as an alternative to ``x`` and ``y`` fields,
+     and allows the coordinate reference system to be specified. For example:
 
   ::
 
     uri = "file:///some/path/file.csv?delimiter=%s&crs=epsg:4723&wktField=%s" % (";", "shape")
 
 .. index::
-  pair: loading; GPX files
+  pair: Loading; GPX files
 
 * GPX files --- the "gpx" data provider reads tracks, routes and waypoints from
   gpx files. To open a file, the type (track/route/waypoint) needs to be
@@ -121,10 +121,10 @@ providers:
     vlayer = QgsVectorLayer(uri, "layer name you like", "gpx")
 
 .. index::
-  pair: loading; SpatiaLite layers
+  pair: Loading; SpatiaLite layers
 
-* SpatiaLite database --- supported from QGIS v1.1. Similarly to PostGIS
-  databases, :class:`QgsDataSourceURI` can be used for generation of data
+* SpatiaLite database --- Similarly to PostGIS databases,
+  :class:`QgsDataSourceURI` can be used for generation of data
   source identifier:
 
   ::
@@ -140,7 +140,7 @@ providers:
     vlayer = QgsVectorLayer(uri.uri(), display_name, 'spatialite')
 
 .. index::
-  pair: loading; MySQL geometries
+  pair: Loading; MySQL geometries
 
 * MySQL WKB-based geometries, through OGR --- data source is the connection
   string to the table:
@@ -151,7 +151,7 @@ providers:
     vlayer = QgsVectorLayer( uri, "my table", "ogr" )
 
 .. index::
-  pair: raster layers; loading
+  pair: WFS vector; Loading
 
 * WFS connection:. the connection is defined with a URI and using the ``WFS`` provider:
 
@@ -176,11 +176,15 @@ providers:
 
 .. note::
 
-    You can change the data source of an existing layer by calling :func:`setDataSource()`
-    on a :class:`QgsVectorLayer` instance, as in the following example: ::
+   You can change the data source of an existing layer by calling :func:`setDataSource()`
+   on a :class:`QgsVectorLayer` instance, as in the following example::
 
-      # layer is a vector layer, uri is a QgsDataSourceURI instance
-      layer.setDataSource(uri.uri(), "layer name you like", "postgres")
+    # layer is a vector layer, uri is a QgsDataSourceURI instance
+    layer.setDataSource(uri.uri(), "layer name you like", "postgres")
+
+
+.. index::
+  pair: Raster layers; Loading
 
 
 Raster Layers
@@ -200,8 +204,6 @@ by default). To load a raster from a file, specify its file name and base name:
   if not rlayer.isValid():
     print "Layer failed to load!"
 
-.. index::
-  pair: loading; WMS raster
 
 Similarly to vector layers, raster layers can be loaded using the addRasterLayer
 function of the :class:`QgisInterface`:
@@ -226,6 +228,9 @@ Raster layers can also be created from a WCS service:
 detailed URI settings can be found in `provider
 documentation <https://github.com/qgis/QGIS/blob/master/src/providers/wcs/URI>`_
 
+.. index::
+  pair: Loading; WMS raster
+
 Alternatively you can load a raster layer from WMS server. However currently
 it's not possible to access GetCapabilities response from API --- you have to
 know what layers you want:
@@ -237,7 +242,7 @@ know what layers you want:
     if not rlayer.isValid():
       print "Layer failed to load!"
 
-.. index:: map layer registry
+.. index:: Map layer registry
 
 Map Layer Registry
 ==================
@@ -247,7 +252,7 @@ them to map layer registry. The map layer registry takes ownership of layers
 and they can be later accessed from any part of the application by their unique
 ID. When the layer is removed from map layer registry, it gets deleted, too.
 
-.. index:: map layer registry; adding a layer
+.. index:: Map layer registry; Adding a layer
 
 Adding a layer to the registry:
 
