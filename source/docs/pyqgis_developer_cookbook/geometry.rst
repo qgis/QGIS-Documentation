@@ -132,12 +132,12 @@ Areas and perimeters don't take CRS into account when computed using these
 methods from the :class:`QgsGeometry` class. For a more powerful area and
 distance calculation, the :class:`QgsDistanceArea` class can be used. If
 projections are turned off, calculations will be planar, otherwise they'll be
-done on the ellipsoid. When an ellipsoid is not set explicitly, WGS84
-parameters are used for calculations.
+done on the ellipsoid. 
 
 ::
 
   d = QgsDistanceArea()
+  d.setEllipsoid('WGS84')
   d.setEllipsoidalMode(True)
 
   print "distance in meters: ", d.measureLine(QgsPoint(10,10),QgsPoint(11,11))
