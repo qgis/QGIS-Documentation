@@ -852,6 +852,12 @@ In QGIS it is possible to split the parts of a multi part feature so that the
 number of parts is increased. Just draw a line across the part you want to split using
 the |splitParts| :sup:`Split Parts` icon.
 
+.. tip:: **Split a polyline feature in one-click**
+
+   A single click on a **snapped vertex** of a line feature with the |splitFeatures| 
+   :sup:`Split Features` or |splitParts| :sup:`Split Parts` tool is enough to have it
+   split into new features or parts.
+
 
 .. index::
    single: Digitizing; Merge Selected Features
