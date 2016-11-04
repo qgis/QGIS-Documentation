@@ -753,11 +753,5 @@ This is a list of the variables supported by QGIS server:
   Unix-like systems).
 * **QGIS_PLUGINPATH**: Useful if you are using Python plugins for the server,
   this sets the folder that is searched for Python plugins.
-* **DEFAULT_DATUM_TRANSFORM**: Define datum transformations between two projections,
-  e.g. EPSG:21781/EPSG:2056/100001/-1;EPSG:2056/EPSG:21781/-1/100001 sets the
-  transformation between CH1903 LV03 (EPSG:21781) and CH1903 LV95 (EPSG:2056) and
-  vice versa. You also need to place grid shift .gsb files in the directory where
-  proj4 stores the grid shift files, e.g. in /usr/shar/proj. You need to run "crssync"
-  after you added new .gsb files and look up the ID in the srs.db. Look at attribute
-  coord_op_code of table tbl_datum_transform in srs.db to find the correct entry.
+
 
