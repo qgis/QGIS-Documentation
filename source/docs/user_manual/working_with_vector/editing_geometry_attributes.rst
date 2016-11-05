@@ -678,10 +678,10 @@ So you can go back to the same tolerance the next time when simplifying a featur
 To abort feature simplification, you need to click on |simplifyFeatures|
 :sup:`Simplify Feature` icon.
 
-.. note:: unlike the feature simplification option in :menuselection:`Settings -->
+.. note:: Unlike the feature simplification option in :menuselection:`Settings -->
    Options --> Rendering` menu which simplifies the geometry just for rendering,
-   the |simplifyFeatures| :sup:`Simplify Feature` tool really modifies feature's
-   geometry in data source.
+   the |simplifyFeatures| :sup:`Simplify Feature` tool permanently modifies
+   feature's geometry in data source.
 
 
 .. index::
