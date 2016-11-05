@@ -220,8 +220,12 @@ Rendering Tab
 
 **Curve segmentation**
 
-* :guilabel:`Segmentation tolerance`
-* :guilabel:`Tolerance type`: it can be 'Maximum angle' and 'Maximum distance'
+* :guilabel:`Segmentation tolerance`: this setting controls the way circular arcs
+  are rendered. **The smaller** maximum angle (between the two consecutive vertices
+  and the curve center, in degrees) or maximum difference (distance between the
+  segment of the two vertices and the curve line, in map units), the **more
+  straight line** segments will be used during rendering.
+* :guilabel:`Tolerance type`: it can be 'Maximum angle' or 'Maximum distance'
 
   **Rasters**
 
