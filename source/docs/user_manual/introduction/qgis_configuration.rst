@@ -204,11 +204,11 @@ Rendering Tab
 * :guilabel:`Map update interval (default to 250 ms)`
 * |checkbox| :guilabel:`Enable feature simplification by default for newly added layers`
 * :guilabel:`Simplification threshold`
-* :guilabel:`Simplification algorithm`. It can be 'Distance', SnapToGrid' or
-  'Visvalingam'
-  
-  .. fixme: it could be nice to explain the differences between these options.
-
+* :guilabel:`Simplification algorithm`. It can be 'Distance', 'SnapToGrid' or
+  'Visvalingam' (area based). Feature simplification by default applies local
+  "on-the-fly" changes on geometry for rendering purposes; the original geometry
+  from the provider is kept used for geometry-based calculations and expressions
+  in QGIS.
 * |checkbox| :guilabel:`Simplify on provider side if possible`
 * :guilabel:`Maximum scale at which the layer should be simplified`
 * |doublespinbox| :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
