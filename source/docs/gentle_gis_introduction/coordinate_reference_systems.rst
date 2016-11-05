@@ -65,10 +65,6 @@ figure_projection_families_)
 
 .. _figure_projection_families:
 
-.. only:: html
-
-   **Figure Projection Families 1:**
-
 .. figure:: /static/gentle_gis_introduction/projections/projection_families.png
    :align: center
    :width: 30em
@@ -93,10 +89,6 @@ projection** (see figure_robinson_projection_), which are often used for world
 maps.
 
 .. _figure_robinson_projection:
-
-.. only:: html
-
-   **Figure Robinson Projection 1:**
 
 .. figure:: /static/gentle_gis_introduction/projections/robinson_projection.png
    :align: center
@@ -135,10 +127,6 @@ many of its topographic maps.
 
 .. _figure_mercator_projection:
 
-.. only:: html
-
-   **Figure Mercator Projection 1:**
-
 .. figure:: /static/gentle_gis_introduction/projections/mercator_projection.png
    :align: center
    :width: 30em
@@ -164,10 +152,6 @@ figure_azimuthal_equidistant_projection_).
 
 .. _figure_plate_caree_projection:
 
-.. only:: html
-
-   **Figure Plate Carree Projection 1:**
-
 .. figure:: /static/gentle_gis_introduction/projections/plate_carree_projection.png
    :align: center
    :width: 30em
@@ -176,10 +160,6 @@ figure_azimuthal_equidistant_projection_).
    accurate distance measurement is important.
 
 .. _figure_azimuthal_equidistant_projection:
-
-.. only:: html
-
-   **Figure Azimuthal Equidistant Projection 1:**
 
 .. figure:: /static/gentle_gis_introduction/projections/azimuthal_equidistant_projection.png
    :align: center
@@ -208,10 +188,6 @@ figure_mollweide_equal_area_projection_) are types of equal area projections tha
 are often encountered in GIS work.
 
 .. _figure_mollweide_equal_area_projection:
-
-.. only:: html
-
-   **Figure Mollweide Equal Area Projection 1:**
 
 .. figure:: /static/gentle_gis_introduction/projections/mollweide_equal_area_projection.png
    :align: center
@@ -256,10 +232,6 @@ the lines of latitude is the same (60 nautical miles). See figure_geographic_crs
 for a pictorial view.
 
 .. _figure_geographic_crs:
-
-.. only:: html
-
-   **Figure Geographic CRS 1:**
 
 .. figure:: /static/gentle_gis_introduction/projections/geographic_crs.png
    :align: center
@@ -309,10 +281,6 @@ coordinate.
 
 .. _figure_projected_crs:
 
-.. only:: html
-
-   **Figure Projected CRS 1:**
-
 .. figure:: /static/gentle_gis_introduction/projections/projected_crs.png
    :align: center
    :width: 30em
@@ -346,10 +314,6 @@ in figure_utm_zones_.
 
 .. _figure_utm_zones:
 
-.. only:: html
-
-   **Figure UTM Zones 1:**
-
 .. figure:: /static/gentle_gis_introduction/projections/utm_zones.png
    :align: center
    :width: 30em
@@ -363,10 +327,6 @@ covered by four **UTM zones** to minimize distortion. The **zones** are called
 means that the UTM zones are located **south of the equator**.
 
 .. _figure_utm_for_sa:
-
-.. only:: html
-
-   **Figure UTM for South Africa 1:**
 
 .. figure:: /static/gentle_gis_introduction/projections/utm_for_sa.png
    :align: center

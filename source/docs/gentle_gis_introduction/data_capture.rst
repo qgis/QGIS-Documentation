@@ -60,10 +60,6 @@ you would need to give the person :file:`trees.shp`, :file:`trees.shx`,
 
 .. _figure_shapefile:
 
-.. only:: html
-
-   **Figure Shapefile 1:**
-
 .. figure:: /static/gentle_gis_introduction/data_capture/shapefile_on_disk.png
    :align: center
    :width: 30em
@@ -111,10 +107,6 @@ represent narrow stretches of river. In figure_tourism_ we can see how our touri
 layers might look on a map if we used all three geometry types.
 
 .. _figure_tourism:
-
-.. only:: html
-
-   **Figure Tourism 1:**
 
 .. figure:: /static/gentle_gis_introduction/data_capture/tourism_map.png
    :align: center
@@ -174,10 +166,6 @@ polygon for the geometry.
 
 .. _figure_new_shapefile:
 
-.. only:: html
-
-   **Figure New Shapefile 1:**
-
 .. figure:: /static/gentle_gis_introduction/data_capture/new_shapefile.png
    :align: center
    :width: 30em
@@ -207,10 +195,6 @@ created. Once again it is a good idea to give the shapefile a short and meaningf
 name. Good examples are 'rivers', 'watersamples' and so on.
 
 .. _figure_save_shapefile:
-
-.. only:: html
-
-   **Figure New Shapefile 2:**
 
 .. figure:: /static/gentle_gis_introduction/data_capture/save_shapefile.png
    :align: center
@@ -251,10 +235,6 @@ useful map from your data!
 
 .. _figure_attribute_dialog:
 
-.. only:: html
-
-   **Figure Attribute Dialog 1:**
-
 .. figure:: /static/gentle_gis_introduction/data_capture/attribute_dialog.png
    :align: center
    :width: 30em
@@ -275,10 +255,6 @@ you click with the **left mouse button**, a new vertex will be added to the map.
 This process is shown in figure_capture_polyline_.
 
 .. _figure_capture_polyline:
-
-.. only:: html
-
-   **Figure Capture Polyline 1:**
 
 .. figure:: /static/gentle_gis_introduction/data_capture/capture_polyline.png
    :align: center
@@ -321,10 +297,6 @@ shown in figure_headsup_digitizing_.
 
 .. _figure_headsup_digitizing:
 
-.. only:: html
-
-   **Figure Digitizing 1:**
-
 .. figure:: /static/gentle_gis_introduction/data_capture/headsup_digitizing.png
    :align: center
    :width: 30em
@@ -346,10 +318,6 @@ using the puck gets stored in the computer's memory. You can see what a digitisi
 puck looks like in figure_digitizing_table_.
 
 .. _figure_digitizing_table:
-
-.. only:: html
-
-   **Figure Digitizing 2:**
 
 .. figure:: /static/gentle_gis_introduction/data_capture/digitizing_table.jpg
    :align: center
@@ -377,10 +345,6 @@ Earth. We can see the effect of a poorly georeferenced image in
 figure_georeference_issue_.
 
 .. _figure_georeference_issue:
-
-.. only:: html
-
-   **Figure Digitizing 2:**
 
 .. figure:: /static/gentle_gis_introduction/data_capture/georeferencing_issue.png
    :align: center

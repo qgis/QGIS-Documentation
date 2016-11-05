@@ -30,10 +30,6 @@ by circles that show connectivity.
 
 .. _figure_topology_london:
 
-.. only:: html
-
-   **Figure London Underground Network 1:**
-
 .. figure:: /static/gentle_gis_introduction/topology/london_underground.png
    :align: center
    :width: 30em
@@ -53,10 +49,6 @@ an **overshoot** if a line ends beyond the line it should connect to (see
 figure_topology_errors_).
 
 .. _figure_topology_errors:
-
-.. only:: html
-
-   **Figure Topology Errors 1:**
 
 .. figure:: /static/gentle_gis_introduction/topology/topology_errors.png
    :align: center
@@ -124,10 +116,6 @@ boundary.
 
 .. _figure_topological_tools:
 
-.. only:: html
-
-   **Figure Topological Tools 1:**
-
 .. figure:: /static/gentle_gis_introduction/topology/topological_tools.png
    :align: center
    :width: 30em
@@ -148,10 +136,6 @@ where you release the mouse button, instead of snapping it to an existing vertex
 and / or segment (see figure_snapping_distance_).
 
 .. _figure_snapping_distance:
-
-.. only:: html
-
-   **Figure Snapping Distance 1:**
 
 .. figure:: /static/gentle_gis_introduction/topology/snapping_distance.png
    :align: center
