@@ -455,6 +455,8 @@ rst_epilog = """
    :width: 1.5em
 .. |diagram| image:: /static/common/diagram.png
    :width: 2em
+.. |diagramNone| image:: /static/common/diagramNone.png
+   :width: 1.5em
 .. |diagramProperties| image:: /static/common/mActionDiagramProperties.png
    :width: 1.5em
 .. |dial| image:: /static/common/dial.png
@@ -671,11 +673,15 @@ rst_epilog = """
    :width: 1.5em
 .. |histogram|  image:: /static/common/histogram.png
    :width: 1.5em
+.. |history|  image:: /static/common/mActionHistory.png
+   :width: 1.5em
 .. |hScrollBar|  image:: /static/common/hscrollbar.png
    :width: 1.5em
 .. |hSlider|  image:: /static/common/hslider.png
    :width: 1.5em
 .. |hSplit|  image:: /static/common/hsplit.png
+   :width: 1.5em
+.. |htmlAnnotation| image:: /static/common/mActionHtmlAnnotation.png
    :width: 1.5em
 .. |iconAboutConsole|  image:: /static/common/iconAboutConsole.png
    :width: 1.5em
@@ -759,6 +765,8 @@ rst_epilog = """
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |labelingNone| image:: /static/common/labelingNone.png
    :width: 1.5em
 .. |labelingObstacle| image:: /static/common/labelingObstacle.png
    :width: 1.5em
@@ -855,6 +863,8 @@ rst_epilog = """
    :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
    :width: 1.5em
+.. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
+   :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
@@ -916,6 +926,8 @@ rst_epilog = """
 .. |pluginInstaller| image:: /static/common/plugin_installer.png
    :width: 1.5em
 .. |pluginUpgrade| image:: /static/common/plugin-upgrade.png
+   :width: 1.5em
+.. |pointClusterSymbol| image:: /static/common/rendererPointClusterSymbol.png
    :width: 1.5em
 .. |pointDisplacementSymbol| image:: /static/common/rendererPointDisplacementSymbol.png
    :width: 1.5em
@@ -1075,6 +1087,8 @@ rst_epilog = """
    :width: 1.5em
 .. |startGeoref| image:: /static/common/mActionStartGeoref.png
    :width: 1.5em
+.. |stylePreset| image:: /static/common/stylepreset.png
+   :width: 1.5em
 .. |subSelection| image:: /static/common/sub_selection.png
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
@@ -1083,6 +1097,8 @@ rst_epilog = """
    :width: 1.5em
 .. |sumPoints| image:: /static/common/sum_points.png
    :width: 1.5em
+.. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
+   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
@@ -1090,6 +1106,8 @@ rst_epilog = """
 .. |symDifference| image:: /static/common/sym_difference.png
    :width: 1.5em
 .. |tab| image:: /static/common/tab.png
+   :width: 1.5em
+.. |text| image:: /static/common/text.png
    :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em

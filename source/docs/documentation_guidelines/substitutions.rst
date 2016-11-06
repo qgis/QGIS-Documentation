@@ -161,7 +161,8 @@ Icon                          Substitution                       Icon           
 |deleteRing|                  ``|deleteRing|``                   |deletePart|                   ``|deletePart|``
 |mergeFeatures|               ``|mergeFeatures|``                |mergeFeatAttributes|          ``|mergeFeatAttributes|``
 |splitFeatures|               ``|splitFeatures|``                |splitParts|                   ``|splitParts|``
-|offsetCurve|                 ``|offsetCurve|``                  |rotatePointSymbols|           ``|rotatePointSymbols|``
+|offsetPointSymbols|          ``|offsetPointSymbols|``           |rotatePointSymbols|           ``|rotatePointSymbols|``
+|offsetCurve|                 ``|offsetCurve|``                  \                              \
 ============================  =================================  =============================  ================================
 
 
@@ -208,9 +209,13 @@ Labels and Diagrams
 =======================  ===========================  =======================  ===========================
 Icon                     Substitution                 Icon                     Substitution
 =======================  ===========================  =======================  ===========================
-|labeling|               ``|labeling|``               |textAnnotation|         ``|textAnnotation|``
-|annotation|             ``|annotation|``             |formAnnotation|         ``|formAnnotation|``
-|diagramProperties|      ``|diagramProperties|``      \                        \
+|labeling|               ``|labeling|``               |labelingNone|           ``|labelingNone|``
+|labelingRuleBased|      ``|labelingRuleBased|``      |labelingObstacle|       ``|labelingObstacle|``
+|diagramProperties|      ``|diagramProperties|``      |diagramNone|            ``|diagramNone|``
+|text|                   ``|text|``                   |histogram|              ``|histogram|``
+|annotation|             ``|annotation|``             |textAnnotation|         ``|textAnnotation|``
+|formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
+|svgAnnotation|          ``|svgAnnotation|``          \                        \
 =======================  ===========================  =======================  ===========================
 
 Help
@@ -250,7 +255,7 @@ Icon                            Substitution                        Icon        
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
 |gpsTrackPolarChart|            ``|gpsTrackPolarChart|``            |tracking|                      ``|tracking|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
-|sum|                           ``|sum|``
+|sum|                           ``|sum|``                           |mapIdentification|             ``|mapIdentification|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -328,11 +333,12 @@ Icon                                Substitution                            Icon
 |attributes|                        ``|attributes|``                        |general|                      ``|general|``
 |metadata|                          ``|metadata|``                          |action|                       ``|action|``
 |join|                              ``|join|``                              |diagram|                      ``|diagram|``
-|25dSymbol|                         ``|25dSymbol|``                         |categorizedSymbol|            ``|categorizedSymbol|``
-|graduatedSymbol|                   ``|graduatedSymbol|``                   |heatmapSymbol|                ``|heatmapSymbol|``
-|invertedSymbol|                    ``|invertedSymbol|``                    |nullSymbol|                   ``|nullSymbol|``
-|pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |ruleBasedSymbol|              ``|ruleBasedSymbol|``
-|singleSymbol|                      ``|singleSymbol|``                      \                              \
+|history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
+|singleSymbol|                      ``|singleSymbol|``                      |nullSymbol|                   ``|nullSymbol|``
+|graduatedSymbol|                   ``|graduatedSymbol|``                   |categorizedSymbol|            ``|categorizedSymbol|``
+|25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
+|invertedSymbol|                    ``|invertedSymbol|``                    |heatmapSymbol|                ``|heatmapSymbol|``
+|pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
 ==================================  ======================================  =============================  ================================
 
 
