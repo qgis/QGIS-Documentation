@@ -389,7 +389,7 @@ Extra parameters supported by the WMS GetMap request
 
 In the WMS GetMap request, QGIS Server accepts a couple of extra
 parameters in addition to the standard parameters according to the
-OCG WMS 1.3.0 specification:
+OGC WMS 1.3.0 specification:
 
 
 * **DPI** parameter: The ``DPI`` parameter can be used to specify the requested
@@ -578,7 +578,7 @@ Extra parameters supported by the WFS GetFeature request
 ---------------------------------------------------------
 
 In the WFS GetFeature request, QGIS Server accepts two extra parameters in
-addition to the standard parameters according to the OCG WFS 1.0.0
+addition to the standard parameters according to the OGC WFS 1.0.0
 specification:
 
 * **GeometryName** parameter: this parameter can be used to get the *extent*
