@@ -562,15 +562,17 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |addRing|                 | Add Ring                                | |addPart|              | Add Part                |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |fillRing|                | Fill Ring                               | |deleteRing|           | Delete Ring             |
+| |fillRing|                | Fill Ring                               |                        |                         |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |deletePart|              | Delete Part                             | |reshape|              | Reshape Features        |
+| |deleteRing|              | Delete Ring                             | |deletePart|           | Delete Part             |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |offsetCurve|             | Offset Curve                            | |splitFeatures|        | Split Features          |
+| |offsetCurve|             | Offset Curve                            | |reshape|              | Reshape Features        |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |splitParts|              | Split Parts                             | |mergeFeatures|        | Merge Selected Features |
+| |splitParts|              | Split Parts                             | |splitFeatures|        | Split Features          |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |mergeFeatAttributes|     | Merge Attributes of Selected Features   | |rotatePointSymbols|   | Rotate Point Symbols    |
+| |mergeFeatAttributes|     | Merge Attributes of Selected Features   | |mergeFeatures|        | Merge Selected Features |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |rotatePointSymbols|      | Rotate Point Symbols                    | |offsetPointSymbols|   | Offset Point Symbols    |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 
 Table Advanced Editing: Vector layer advanced editing toolbar
@@ -866,15 +868,19 @@ As a result, all selected objects have the same attribute entries.
 Rotate Point Symbols
 --------------------
 
-.. % FIXME change, if support in new symbology is available, too
+The |rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to change the rotation
+of point symbols in the map canvas. First of all, you must apply to the symbol a
+data-defined rotation: in the :menuselection:`Layer Properties --> Style` dialog,
+click the |dataDefined| :guilabel:`Data-defined override` widget near the
+:guilabel:`Rotation` option of the highest level (preferably) of the symbol
+layers and choose a field in the :guilabel:`Field Type` combobox. Values of this
+field are hence used to rotate each feature's symbol accordingly.
 
-|rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to change the rotation
-of point symbols in the map canvas. You must first define a rotation column
-from the attribute table of the point layer in the :guilabel:`Advanced` menu of the
-:guilabel:`Style` menu of the :guilabel:`Layer Properties`. Also, you will need to
-go into the 'SVG marker' and choose :guilabel:`Data defined properties ...`.
-Activate |checkbox| :guilabel:`Angle` and choose 'rotation' as field.
-Without these settings, the tool is inactive.
+.. note:: 
+   As a global option, setting the rotation field at the first level of the symbol
+   applies it to all the underlying levels while setting it at a lower level will
+   rotate only this symbol layer (unless you have a single symbol layer).
+
 
 .. _figure_edit_7:
 
@@ -887,15 +893,39 @@ Without these settings, the tool is inactive.
 
    Rotate Point Symbols
 
-To change the rotation, select a point feature in the map canvas and rotate
-it, holding the left mouse button pressed. A red arrow with the rotation value
-will be visualized (see Figure_edit_5_). When you release the left mouse
-button again, the value will be updated in the attribute table.
+To change the rotation of a symbol, click on a point feature in the map canvas
+with the |rotatePointSymbols| :sup:`Rotate Point Symbols` and move the mouse around,
+holding the left button pressed. A red arrow with the rotation value
+will be visualized (see Figure_edit_7_). When you release the left mouse
+button again, the symbol is defined with this new rotation and the rotation
+field is updated in the layer's attribute table.
 
-.. note::
+.. tip::
    If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15
    degree steps.
 
+.. index::
+   single: Digitizing; Offset Point Symbols
+
+Offset Point Symbols
+--------------------
+
+The |offsetPointSymbols| :sup:`Offset Point Symbols` allows you to interactively
+change the rendered position of point symbols in the map canvas. This tool behaves
+like the |rotatePointSymbols| :sup:`Rotate Point Symbols` tool except that it
+requires you to connect a field to the data-defined :guilabel:`Offset (X,Y)`
+property of the symbol, field which will then be populated with the offset
+coordinates while moving the symbol in the map canvas.
+
+.. note:: The |offsetPointSymbols| :sup:`Offset Point Symbols` tool doesn't
+   move the point feature itself; you should use the |nodeTool| :sup:`Node Tool`
+   or |moveFeature| :sup:`Move Feature` tool for this purpose.
+
+.. warning: **Ensure to assign the same field to all symbol layers**
+
+   If at least two layers of the symbol have different fields assigned to their
+   data-defined property (e.g. rotation), the corresponding tool will consider
+   that no field is assigned to the symbol property and won't perform the action.
 
 .. index::
    single: Digitizing; Automatic tracing
