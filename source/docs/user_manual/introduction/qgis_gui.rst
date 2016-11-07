@@ -130,6 +130,7 @@ Menu Option                                                           Shortcut  
 |mergeFeatAttributes| :guilabel:`Merge Attr. of Selected Features`    \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |nodeTool| :guilabel:`Node Tool`                                      \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |rotatePointSymbols| :guilabel:`Rotate Point Symbols`                 \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|offsetPointSymbols| :guilabel:`Offset Point Symbols`                 \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 ====================================================================  ====================  ==========================================  ===============================
 
 After activating |toggleEditing| :sup:`Toggle editing` mode for a layer,
