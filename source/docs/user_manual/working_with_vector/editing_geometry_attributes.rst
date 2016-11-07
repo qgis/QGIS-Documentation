@@ -870,9 +870,9 @@ Rotate Point Symbols
 
 The |rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to change the rotation
 of point symbols in the map canvas. First of all, you must apply to the symbol a
-data-defined rotation: in the :menuselection:`Layer Properties --> Style` dialog,
-click the |dataDefined| :guilabel:`Data-defined override` widget near the
-:guilabel:`Rotation` option of the highest level (preferably) of the symbol
+:ref:`data-defined <data_defined>` rotation: in the :menuselection:`Layer Properties
+--> Style` dialog, click the |dataDefined| :guilabel:`Data-defined override` widget
+near the :guilabel:`Rotation` option of the highest level (preferably) of the symbol
 layers and choose a field in the :guilabel:`Field Type` combobox. Values of this
 field are hence used to rotate each feature's symbol accordingly.
 
@@ -921,7 +921,7 @@ coordinates while moving the symbol in the map canvas.
    move the point feature itself; you should use the |nodeTool| :sup:`Node Tool`
    or |moveFeature| :sup:`Move Feature` tool for this purpose.
 
-.. warning: **Ensure to assign the same field to all symbol layers**
+.. warning:: **Ensure to assign the same field to all symbol layers**
 
    If at least two layers of the symbol have different fields assigned to their
    data-defined property (e.g. rotation), the corresponding tool will consider
