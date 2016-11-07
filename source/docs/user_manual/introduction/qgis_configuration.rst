@@ -12,7 +12,7 @@ QGIS Configuration
       :local:
 
 QGIS is highly configurable through the :menuselection:`Settings` menu. Choose
-between Project Properties, Options and Customization.
+between Options, Project Properties and Customization.
 
 .. note:: QGIS follows desktop guidelines for the location of options and project
    properties item. Consequently related to the OS you are using, location of some
@@ -89,7 +89,7 @@ System Tab
 Add or Remove :guilabel:`Path(s) to search for Scalable Vector Graphic (SVG)
 symbols`. These SVG files are then available to symbolize features or
 decorate your map composition.
- 
+
 
 **Plugin paths**
 
@@ -204,12 +204,16 @@ Rendering Tab
 * :guilabel:`Map update interval (default to 250 ms)`
 * |checkbox| :guilabel:`Enable feature simplification by default for newly added layers`
 * :guilabel:`Simplification threshold`
-* :guilabel:`Simplification algorithm`. It can be 'Distance', 'SnapToGrid' or
-  'Visvalingam' (area based). Feature simplification by default applies local
-  "on-the-fly" changes on geometry for rendering purposes; the original geometry
-  from the provider is kept used for geometry-based calculations and expressions
-  in QGIS.
-* |checkbox| :guilabel:`Simplify on provider side if possible`
+* :guilabel:`Simplification algorithm`: This option performs a local
+  "on-the-fly" simplification on feature's and speeds up geometry rendering. It
+  doesn't change the geometry fetched from the data providers. This is important
+  when you have expressions that use the feature geometry (e.g. calculation of
+  area) - it ensures that these calculations are done on the original geometry,
+  not on the simplified one. For this purpose, QGIS provides three algorithms:
+  'Distance' (default), 'SnapToGrid' and 'Visvalingam'.
+* |checkbox| :guilabel:`Simplify on provider side if possible`: the geometries
+  are simplified by the provider (PostGIS, Oracle...) and unlike the
+  local-side simplification, geometry-based calculations may be affected
 * :guilabel:`Maximum scale at which the layer should be simplified`
 * |doublespinbox| :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
 
@@ -344,7 +348,7 @@ You can define the :guilabel:`Default font` used within the :ref:`print composer
 
 **Composer Paths**
 
-* Define :guilabel:`Paths(s) to search for extra print templates`: a list of folders
+* Define :guilabel:`Path(s) to search for extra print templates`: a list of folders
   with custom composer templates to use while creating new one.
 
 Digitizing Tab
@@ -387,9 +391,10 @@ This tab helps you configure general settings when :ref:`editing vector layer
 
 **Curve offset tool**
 
-The next 3 options refer to the |offsetCurve| :sup:`Offset Curve` tool
-in :ref:`sec_advanced_edit`. Through the various settings, it is possible to
-influence the shape of the line offset. These options are possible starting from GEOS 3.3.
+The next 3 options refer to the |offsetCurve| :sup:`Offset Curve` tool in
+:ref:`sec_advanced_edit`. Through the various settings, it is possible to
+influence the shape of the line offset. These options are possible starting
+from GEOS 3.3.
 
 * :guilabel:`Join style`: 'Round', 'Mitre' or 'Bevel'
 * :guilabel:`Quadrant segments`
@@ -400,8 +405,8 @@ GDAL Tab
 
 GDAL is a data exchange library for raster files. In this tab, you can
 :guilabel:`Edit create options` and :guilabel:`Edit Pyramids Options` of the
-raster formats. You can define which GDAL driver is to be used for a raster format, as in
-some cases more than one GDAL driver is available.
+raster formats. You can define which GDAL driver is to be used for a raster
+format, as in some cases more than one GDAL driver is available.
 
 CRS Tab
 --------
@@ -416,8 +421,8 @@ CRS Tab
 
 **CRS for new layers**
 
-This area allows you to define the action to take when a new layer is created, or when
-a layer without a CRS is loaded.
+This area allows you to define the action to take when a new layer is created,
+or when a layer without a CRS is loaded.
 
 * |radioButtonOn| :guilabel:`Prompt for CRS`
 * |radioButtonOff| :guilabel:`Use project CRS`
@@ -427,7 +432,7 @@ a layer without a CRS is loaded.
 
 * |checkbox| :guilabel:`Ask for datum transformation when no default is defined`
 * With the 'on-the-fly' CRS transformation enabled and the above option checked,
-  adding layers of different crs opens the :guilabel:`Select datum transformations`
+  adding layers of different CRS opens the :guilabel:`Select datum transformations`
   dialog. This offers you to select the most appropriate transformation settings.
   Validating this dialog with the 'Remember selection' option checked populates
   the table under :menuselection:`CRS --> Default datum transformations` with
@@ -436,7 +441,7 @@ a layer without a CRS is loaded.
   uses the selected datum transformation for further transformation between
   these two CRSs until you |signMinus| remove it from the list.
 
-  You can use the |signPlus| button to add the datum transformations if you know
+  You can use the |signPlus| button to add a datum transformation if you know
   its parameters (source and destination ellipsoids and the numbers from the
   transformation table). You then need to manually enter each setting.
 
@@ -542,9 +547,7 @@ the widget is populated with a tree of all QGIS settings, which you can directly
    QGIS installation in various ways.
 
 
-.. index::
-   Properties; project
-   Settings; project
+.. index:: Properties; Project, Settings; Project
 
 Project Properties
 ==================
