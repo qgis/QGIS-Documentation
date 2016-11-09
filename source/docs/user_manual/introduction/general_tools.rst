@@ -828,13 +828,15 @@ This is enabled for the map tools which are not selection tools (since they
 use :kbd:`Shift` for adding to selection) nor edit tools.
 
 
+.. index::
+   pair: Tools; Measure
 .. _`sec_measure`:
 
 Measuring
 =========
 
-.. index::
-   pair: Tools; Measure
+General information
+--------------------
 
 QGIS provides four means of measuring geometries:
 
@@ -868,38 +870,53 @@ if you choose the ellipsoidal measure.
 
 Measure length, areas and angles interactive
 ----------------------------------------------
+   
+Click the |measure| icon in the Attribute toolbar to begin measurements.
+The downward arrow near the icon helps you switch to the convenient tool to measure
+|measure| length, |measureArea| area or |measureAngle| angle.
+The default unit used in the dialog is the one set in :menuselection:`Project -->
+Project Properties --> General` menu.
 
-All measuring modules use the snapping settings from the digitizing module.
-This is useful, if you want to measure along lines or areas in vector layers.
+.. note:: **Configuring the measure tool**
 
-To select a measuring tool, click on |measure| and select the tool you want
-to use.
+   While measuring length or area, clicking the :guilabel:`Configuration` button
+   at the bottom of the widget helps you define in menu :menuselection:`Settings -->
+   Options --> Map Tools` the rubberband color, the precision of the measurements
+   and the unit behavior. You can also choose your preferred measurement or angle
+   units but keep in mind that those values are superseded in the current project
+   by options made in :menuselection:`Project --> Project Properties --> General` menu.
+
+All measuring modules use the snapping settings from the digitizing module (see
+section :ref:`snapping_tolerance`). So, if you want
+to measure exactly along a line feature, or around a polygon feature, first set
+its layer snapping tolerance. Now, when using the measuring
+tools, each mouse click (within the tolerance setting) will snap to that layer.
 
 .. index::
-   single: Measure; Line length
-.. index::
-   single: Measure; Areas
-.. index::
-   single: Measure; Angles
+   single: Measure; Distances, Measure; Areas, Measure; Angles
 
 By default, |measure| :sup:`Measure Line`: QGIS measures real distances
-between given points according to a defined ellipsoid. You can define a rubberband
-color and your preferred measurement units (meters or feet) and angle units
-(degrees, radians and gon) in the menu option
-:menuselection:`Settings --> Options --> Map Tools`.
+between given points according to a defined ellipsoid.
 The tool then allows you to click points on the map. Each segment length,
 as well as the total, shows up in the measure window.
 To stop measuring, click your right mouse button.
-Note that you can interactively change the measurement units in the measurement
-dialog. It overrides the :guilabel:`Preferred measurement units` in the options.
-There is an info section in the dialog that shows which CRS settings are being
-used during measurement calculations.
+
+Note that you can use the drop-down list near the total to interactively change
+the measurement units while measuring. This unit is kept for the widget until
+a new or another project is opened.
+
+The :guilabel:`Info` section in the dialog explains how calculations are made
+according to CRS settings available.
+
+.. %FixMe: currently, validating the Settings --> Options dialog revert any change
+   made on units in the measurement dialog (see http://hub.qgis.org/issues/15436
+   bug or not? should it be documented?)
 
 .. _figure_measure_length:
 
 .. only:: html
 
-   **Figure Measure 1:**
+   **Figure Measure Length:**
 
 .. figure:: /static/user_manual/introduction/measure_line.png
    :align: center
@@ -907,18 +924,15 @@ used during measurement calculations.
    Measure Distance
 
 |measureArea| :sup:`Measure Area`: Areas can also be measured. In the
-measure window, the accumulated area size appears. In addition, the measuring
-tool will snap to the currently selected layer, provided that layer has its
-snapping tolerance set (see section :ref:`snapping_tolerance`). So, if you want
-to measure exactly along a line feature, or around a polygon feature, first set
-its snapping tolerance, then select the layer. Now, when using the measuring
-tools, each mouse click (within the tolerance setting) will snap to that layer.
+measure window, the accumulated area size appears. Right-click to stop drawing.
+The Info section is also available as well as the ability to switch between
+different area units.
 
 .. _figure_measure_area:
 
 .. only:: html
 
-   **Figure Measure 2:**
+   **Figure Measure Area:**
 
 .. figure:: /static/user_manual/introduction/measure_area.png
    :align: center
@@ -934,7 +948,7 @@ is displayed in a pop-up dialog.
 
 .. only:: html
 
-   **Figure Measure 3:**
+   **Figure Measure Angle:**
 
 .. figure:: /static/user_manual/introduction/measure_angle.png
    :align: center
