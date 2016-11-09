@@ -1078,24 +1078,32 @@ Placement for polygon layers
 ............................
 
 You can choose one of the following options for placing labels in polygons:
-|radioButtonOn| :guilabel:`Offset from centroid`, |radioButtonOff|
-:guilabel:`Horizontal (slow)`, |radioButtonOff| :guilabel:`Around centroid`,
-|radioButtonOff| :guilabel:`Free (slow)` and |radioButtonOff|
-:guilabel:`Using perimeter`.
 
-In the |radioButtonOn| :guilabel:`Offset from centroid` settings you can
+* |radioButtonOn| :guilabel:`Offset from centroid`,
+* |radioButtonOff| :guilabel:`Horizontal (slow)`,
+* |radioButtonOff| :guilabel:`Around centroid`,
+* |radioButtonOff| :guilabel:`Free (slow)`,
+* |radioButtonOff| :guilabel:`Using perimeter`,
+* and |radioButtonOff| :guilabel:`Using perimeter (curved)`.
+
+In the :guilabel:`Offset from centroid` settings you can
 specify if the centroid is of the |radioButtonOn| :guilabel:`visible
 polygon` or |radioButtonOff| :guilabel:`whole polygon`. That means that
 either the centroid is used for the polygon you can see on the map or the
 centroid is determined for the whole polygon, no matter if you can see the
 whole feature on the map. You can place your label within a specific
-quadrant, and define offset and rotation. The |radioButtonOff|
-:guilabel:`Around centroid` setting places the label at a specified distance
-around the centroid. Again, you can define |radioButtonOn|
+quadrant, and define offset and rotation.
+
+The :guilabel:`Around centroid` setting places the label at a specified
+distance around the centroid. Again, you can define |radioButtonOn|
 :guilabel:`visible polygon` or |radioButtonOff| :guilabel:`whole polygon`
 for the centroid.
 
-With the |radioButtonOff| :guilabel:`Using perimeter` option, the label
+With the :guilabel:`Horizontal (slow)` or :guilabel:`Free (slow)` options,
+QGIS places at the best position either a horizontal or a rotated label inside
+the polygon.
+
+With the :guilabel:`Using perimeter` option, the label
 will be drawn next to the polygon boundary. The label will behave like the
 parallel option for lines. You can define a position and a distance for the
 label. For the position, |checkbox| :guilabel:`Above line`, |checkbox|
@@ -1104,7 +1112,21 @@ label. For the position, |checkbox| :guilabel:`Above line`, |checkbox|
 specify the distance between the label and the polygon outline, as well as
 the repeat interval for the label.
 
+<<<<<<< 9fccea2696cace9ebd73720eb4a37f43efbd350a
 .. _figure_labels_placement_polygon:
+=======
+The :guilabel:`Using perimeter (curved)` option helps you draw the label along
+the polygon boundary, using a curved labeling. In addition to the parameters
+available with :guilabel:`Using perimeter` setting, you can set the
+:guilabel:`Maximum angle between curved characters polygon`, either inside
+or outside.
+
+.. _figure_labels_3:
+
+.. only:: html
+
+   **Figure Labels 3:**
+>>>>>>> Add labels with curved perimeter
 
 .. figure:: /static/user_manual/working_with_vector/polygon_label_placement.png
    :align: center
