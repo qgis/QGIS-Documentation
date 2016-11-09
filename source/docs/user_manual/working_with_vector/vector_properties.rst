@@ -1374,9 +1374,10 @@ configurations.
 Fields Menu
 ===========
 
-|attributes| Within the :guilabel:`Fields` menu, the field attributes of the
-selected dataset can be manipulated. The buttons |newAttribute|
-:sup:`New Column` and |deleteAttribute| :sup:`Delete Column`
+|attributes| The :guilabel:`Fields` menu helps you organize the fields of
+the selected dataset and organize the way user interacts with
+the feature's attributes. The buttons |newAttribute|
+:sup:`New field` and |deleteAttribute| :sup:`Delete field`
 can be used when the dataset is in |toggleEditing| :sup:`Editing mode`.
 
 You can rename fields by double-clicking in the fields name (note that you
@@ -1394,13 +1395,16 @@ the PostgreSQL table if set. Comments are saved in the QGIS project file as for
 the alias.
 
 
-**Edit Widget**
+Configure the field behavior
+-----------------------------
 
-.. following is included to give some space between title and figure!
 
-\
+Within the :guilabel:`Fields` menu, you also find an **edit widget** column.
+This column can be used to define values or a range of values that are allowed
+to be added to the specific attribute table column. If you click on the
+**[edit widget]** button, a dialog opens, where you can define different
+widgets.
 
-\
 
 .. _figure_fields_widget:
 
@@ -1409,11 +1413,8 @@ the alias.
 
    Dialog to select an edit widget for an attribute column
 
-Within the :guilabel:`Fields` menu, you also find an **edit widget** column.
-This column can be used to define values or a range of values that are allowed
-to be added to the specific attribute table column. If you click on the
-**[edit widget]** button, a dialog opens, where you can define different
-widgets. These widgets are:
+
+These widgets are:
 
 * **Checkbox**: Displays a checkbox, and you can define what attribute is
   added to the column when the checkbox is activated or not.
@@ -1485,28 +1486,67 @@ message when the value of the field does not match the constraint.
    This is enabled only for File Name, Photo and Web View at this
    moment.
 
-With the **Attribute editor layout**, you can now define built-in forms
+
+.. index:: Form, Built-in form, Custom form
+
+Customize a form for your data
+-------------------------------
+
+By default, when clicking on a feature with the |signPlus| :sup:`Identify
+Features` tool or switching the attribute table to the `form` view mode,
+QGIS displays a form with tabulated fields (one per row). This is due to
+the default 'Autogenerate' value of the :guilabel:`Attribute editor layout`
+set in the :guilabel:`Fields` tab.
+
+You can however define built-in forms
 (see figure_fields_layout_). This is useful for data entry jobs or to identify
 objects using the option auto open form when you have objects with many attributes.
 You can create an editor with several tabs and named groups to present
 the attribute fields.
 
-Choose 'Drag and drop designer' and an attribute column. Use the |signPlus|
-icon to create a category to insert a tab or a named group (see figure_fields_form_).
+Using the drag and drop designer
+.................................
+
+Choose 'Drag and drop designer' from the :guilabel:`Attribute editor layout`
+combobox. Use the |signPlus| icon to create a category to insert a tab in which
+fields and groups will be displayed.
+named group (see figure_fields_form_).
+
 When creating a new category, QGIS will insert a new tab or named group for the
 category in the built-in form.
 The next step will be to assign the relevant fields to a selected category
 with the |arrowRight| icon. You can create more categories and use the
 same fields again.
 
-Other options in the dialog are 'Autogenerate' and 'Provide ui-file'.
+You can configure categories (tabs or groups) with a double-click. QGIS opens a form
+in which you can:
 
-* 'Autogenerate' just creates editors for all fields and tabulates them.
+* choose to hide or show the item label
+* rename the label
+* set over how many columns fields under the category should be distributed
+* enter an expression to control the category visibility. The expression will be
+  re-evaluated everytime values in the form change and the tab or groupbox shown/hidden
+  accordingly.
+* show the category as a group box (only available for tabs)
 
-* The 'Provide ui-file' option allows you to use complex dialogs made with the Qt-Designer.
-  Using a UI-file allows a great deal of freedom in creating a dialog.
-  For detailed information, see
-  http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+With a double-click on a field label, you can also specify whether the label of its widget
+should be visible or not in the form.
+
+Provide an ui-file
+....................
+
+The 'Provide ui-file' option allows you to use complex dialogs made with the Qt-Designer.
+Using a UI-file allows a great deal of freedom in creating a dialog. Note that, in order
+to link the graphical objects (textbox, combobox...) to your layer's fields, you need
+to give them the same name. 
+
+Use the :guilabel:`Edit UI` to define the path to the file to use.
+
+For detailed information, see
+http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+
+Enhance your form with custom functions
+........................................
 
 QGIS dialogs can have a Python function that is called when the dialog is opened.
 Use this function to add extra logic to your dialogs. The form code can be specified
@@ -1519,7 +1559,7 @@ in three different ways:
   type your form code
 
 In all cases you must enter the name of the function that will be called
-(`open` in the example below).
+(``open`` in the example below).
 
 An example is (in module MyForms.py):
 
@@ -1529,7 +1569,7 @@ An example is (in module MyForms.py):
       geom = feature.geometry()
       control = dialog.findChild(QWidged,"My line edit")
 
-Reference in Python Init Function like so: `open`
+Reference in Python Init Function like so: ``open``
 
 
 .. _figure_fields_layout:
