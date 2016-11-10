@@ -34,7 +34,7 @@ You can set a duration to show it for a limited time
 
 ::
 
-    iface.messageBar().pushMessage("Error", ""Ooops, the plugin is not working as it should", level=QgsMessageBar.CRITICAL, duration=3)
+    iface.messageBar().pushMessage("Error", "Ooops, the plugin is not working as it should", level=QgsMessageBar.CRITICAL, duration=3)
 
 
 .. figure:: /static/pyqgis_developer_cookbook/errorbar-timed.png
