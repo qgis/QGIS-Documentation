@@ -148,7 +148,7 @@ ESRI Shapefiles
 The ESRI shapefile is still one of the most used vector file format in QGIS.
 However, this file format has some limitation that some other file format have
 not (like Geopackage, spatialite). Support is provided by the
-:index:`OGR Simple Feature Library` (http://www.gdal.org/ogr/).
+`OGR Simple Feature Library <http://www.gdal.org/ogr/>`_.
 
 A shapefile actually consists of several files. The following three are
 required:
@@ -245,7 +245,7 @@ Some items to note about the text file:
 #. The X coordinates are contained in the ``X`` field.
 #. The Y coordinates are contained in the ``Y`` field.
 
-
+.. index:: Delimited text file
 .. _vector_loading_csv:
 
 Loading a delimited text file
@@ -352,7 +352,7 @@ Delimited Text supports also Z and M coordinates in geometries::
 
    LINESTRINGM(10.0 20.0 30.0, 11.0 21.0 31.0)
 
-.. index:: OSM, OpenStreetMap
+.. index:: OSM (OpenStreetMap)
 
 .. _vector_osm:
 
@@ -624,7 +624,8 @@ possible (Experimental)` checkbox to do so. Only supported expressions will be
 sent to the database. Expressions using unsupported operators or functions will
 gracefully fallback to local evaluation.
 
-.. index:: PostGIS; shp2pgsql
+.. index:: shp2pgsql
+   single: PostGIS; shp2pgsql
 .. _vector_import_data_in_postgis:
 
 Importing Data into PostgreSQL
@@ -668,7 +669,8 @@ reference systems and projections.
    your PostGIS distribution.
 
 .. index:: ogr2ogr
-
+   single: PostGIS; ogr2ogr
+   
 ogr2ogr
 .......
 
@@ -704,6 +706,8 @@ need to create them manually, using the normal SQL command **CREATE INDEX**
 afterwards as an extra step (as described in the next section
 :ref:`vector_improving_performance`).
 
+.. index:: Spatial index; GiST index
+   single: PostGIS; Spatial index
 .. _vector_improving_performance:
 
 Improving Performance
@@ -711,9 +715,9 @@ Improving Performance
 
 Retrieving features from a PostgreSQL database can be time-consuming, especially
 over a network. You can improve the drawing performance of PostgreSQL layers by
-ensuring that a :index:`PostGIS spatial index` exists on each layer in the
-database. PostGIS supports creation of a :index:`GiST (Generalized Search Tree)
-index` to speed up spatial searches of the data (GiST index information is taken
+ensuring that a PostGIS spatial index exists on each layer in the
+database. PostGIS supports creation of a GiST (Generalized Search Tree)
+index to speed up spatial searches of the data (GiST index information is taken
 from the PostGIS documentation available at http://postgis.net).
 
 .. tip:: You can use the DBManager to create an index to your layer. You should
@@ -831,7 +835,7 @@ Creating a new SpatiaLite layer
 If you want to create a new SpatiaLite layer, please refer to section
 :ref:`vector_create_spatialite`.
 
-.. index:: QSpatiaLite, Spatialite_Manager, DB_Manager
+.. index:: QSpatiaLite, Spatialite manager, DB manager
 
 .. _tip_spatialite_management_plugin:
 
@@ -853,8 +857,8 @@ time you load MSSQL Spatial data, begin by clicking on the
 selecting the |addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer...`
 option from the :menuselection:`Layer` menu, or by typing :kbd:`Ctrl+Shift+M`.
 
-.. _label_oracle_spatial:
 .. index:: Oracle Spatial
+.. _label_oracle_spatial:
 
 Oracle Spatial Layers
 ---------------------
@@ -960,15 +964,15 @@ To load a layer from Oracle Spatial, perform the following steps:
    Query Builder to further define the layer.
 *  Click on the **[Add]** button to add the layer to the map.
 
-.. _tip_ORACLE Spatial_layers:
+.. _tip_ORACLE_Spatial_layers:
 
 .. tip:: **Oracle Spatial Layers**
 
    Normally, an Oracle Spatial layer is defined by an entry in the
    **USER_SDO_METADATA** table.
 
-.. _label_db2_spatial:
 .. index:: DB2 Spatial
+.. _label_db2_spatial:
 
 DB2 Spatial Layers
 ---------------------

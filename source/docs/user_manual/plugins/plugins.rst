@@ -53,8 +53,8 @@ When a plugin needs to be updated, and if plugins settings have been set up
 accordingly, QGIS main interface will display a blue link in the status bar
 to inform you that there are updates for your plugins waiting to be applied.
 
-.. :index::
-    single: Plugins; Plugin manager
+.. index::
+   single: Plugins; Plugin manager
 
 .. _managing_plugins:
 

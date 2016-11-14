@@ -13,7 +13,6 @@ QGIS as OGC Data Client
    .. contents::
       :local:
 
-
 .. index:: OGC (Open Geospatial Consortium)
 
 The Open Geospatial Consortium (OGC) is an international organization with membership of more
@@ -50,8 +49,8 @@ specifications as a client, being **SFS** (through support of the PostgreSQL
 WMS/WMTS Client
 ===============
 
-.. index:: WMS_client
-.. index:: WMTS_client
+.. index:: WMS; Client
+   see: WMTS; WMS
 
 .. _`ogc-wms-about`:
 
@@ -197,7 +196,7 @@ the parameters to connect to your desired WMS server, as listed in table_OGC_wms
 
 Table OGC 1: WMS Connection Parameters
 
-.. index:: Proxy, Proxy-server
+.. index:: Proxy, Proxy server
 
 If you need to set up a proxy server to be able to receive WMS services from the
 internet, you can add your proxy server in the options. Choose
@@ -312,7 +311,8 @@ and transmitted to QGIS in one go.
 In this version of QGIS, the :guilabel:`Global transparency` setting from the
 :guilabel:`Layer Properties` is hard coded to be always on, where available.
 
-.. index:: WMS layer transparency
+.. index:: 
+   single: WMS; Layer transparency
 
 .. tip:: **WMS Layer Transparency**
 
@@ -322,7 +322,7 @@ In this version of QGIS, the :guilabel:`Global transparency` setting from the
 **Coordinate Reference System**
 
 
-.. index:: Coordinate_Reference_System, SRS, CRS
+.. index:: SRS (Spatial Reference System), CRS (Coordinate Reference System)
 
 A coordinate reference system (CRS) is the OGC terminology for a QGIS projection.
 
@@ -387,7 +387,7 @@ available scales from the tile server with a nice slider docked in.
 Using the Identify Tool
 -----------------------
 
-.. index:: WMS_identify
+.. index:: WMS; Identify
 
 Once you have added a WMS server, and if any layer from a WMS server is queryable,
 you can then use the |identify| :sup:`Identify` tool to select a pixel on
@@ -445,7 +445,8 @@ UMN Mapserver below to support GetFeatureInfo in GML format.
 
 **Viewing Properties**
 
-.. index:: WMS_properties
+.. index:: 
+   single: WMS; Properties
 
 Once you have added a WMS server, you can view its properties by right-clicking
 on it in the legend and selecting :menuselection:`Properties`.
@@ -454,7 +455,8 @@ on it in the legend and selecting :menuselection:`Properties`.
 
 **Metadata Tab**
 
-.. index:: WMS_metadata
+.. index:: 
+   pair: WMS; Metadata
 
 The tab :guilabel:`Metadata` displays a wealth of information about the WMS
 server, generally collected from the capabilities statement returned from
@@ -558,7 +560,7 @@ details.
    support several authentication methods. More information can be found in the
    InteProxy manual at http://inteproxy.wald.intevation.org.
 
-.. index:: QGIS_mapserver, WMS_1.3.0
+.. index:: Mapserver
 
 .. tip:: **QGIS WMS Mapserver**
 
@@ -570,7 +572,7 @@ details.
 WCS Client
 ==========
 
-.. index:: WCS, Web Coverage Service
+.. index:: WCS (Web Coverage Service)
 
 |wcs| A Web Coverage Service (WCS) provides access to raster data in forms that are useful
 for client-side rendering, as input into scientific models, and for other clients.
@@ -601,7 +603,7 @@ supports selection of time position, if temporal domain is offered by the server
 WFS and WFS-T Client
 ====================
 
-.. index:: WFS, WFS-T, WFS_Transactional
+.. index:: WFS, WFS-T (WFS Transactional)
 
 In QGIS, a WFS layer behaves pretty much like any other vector layer. You can
 identify and select features, and view the attribute table. Since QGIS 1.6, editing

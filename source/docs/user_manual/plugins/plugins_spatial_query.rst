@@ -2,7 +2,8 @@
 
    |updatedisclaimer|
 
-.. index:: Plugins; Spatial query
+.. index:: 
+   single: Plugins; Spatial query
 .. _spatial_query:
 
 Spatial Query Plugin

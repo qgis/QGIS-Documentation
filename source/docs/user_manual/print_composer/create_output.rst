@@ -126,7 +126,7 @@ as raster` in the Rendering tab of Layer Properties is a layer-level alternative
 that avoids global composition rasterization.
 
 
-.. index:: Atlas_Generation
+.. index:: Atlas generation
 
 .. _atlas_generation:
 
@@ -228,7 +228,7 @@ is an expression used inside the label. Both expressions would result in the gen
 
   The area of PARIS,75001 is 1.94 km2
 
-.. index:: Generate an atlas
+
 .. _atlas_data_defined_override:
 
 Data Defined Override Buttons

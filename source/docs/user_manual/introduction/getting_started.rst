@@ -433,8 +433,8 @@ extension ``.qgs~``.
 Output
 ======
 
-.. index::
-   single: Output; Save as image, Print composer quick print
+.. index:: Print composer, Quick print, World file
+   single: Output; Save as image
 
 There are several ways to generate output from your QGIS session. We have
 discussed one already in section :ref:`sec_projects`, saving as a project file.

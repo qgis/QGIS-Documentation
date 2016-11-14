@@ -10,7 +10,7 @@ Using Vector Layers
 This section summarizes various actions that can be done with vector layers.
 
 .. index::
-  triple: vector layers; features; attributes
+  single: PyQGIS; Vector layers
 
 Retrieving information about attributes
 ========================================
@@ -27,8 +27,7 @@ by calling :func:`pendingFields` on a :class:`QgsVectorLayer` instance::
   :class:`QgsVectorLayer` which is an alias to :func:`pendingFields`.
 
 
-.. index::
-  triple: vector layers; selection; features
+.. index:: Selecting features
 
 Selecting features
 ==================
@@ -61,9 +60,7 @@ To clear the selection, just pass an empty list::
     layer.setSelectedFeatures([])
 
 
-
-.. index::
-  triple: vector layers; iterating; features
+.. index:: Iterating features
 
 Iterating over Vector Layer
 ===========================
@@ -200,7 +197,7 @@ iterator returns all features, but returns partial data for each of them.
     of attributes (possibly empty) like shown in the example above.
 
 
-.. index:: vector layers; editing
+.. index:: Vector layers; Editing
 
 .. _editing:
 
@@ -414,9 +411,10 @@ a more semantic code block as shown in the example below:
 
 This will automatically call :func:`commitChanges()` in the end.
 If any exception occurs, it will :func:`rollBack()` all the changes.
-In case a problem is encountered within :func:`commitChanges()` (when the method returns False) a :class:`QgsEditError` exception will be raised.
+In case a problem is encountered within :func:`commitChanges()` (when the method
+returns False) a :class:`QgsEditError` exception will be raised.
 
-.. index:: spatial index; using
+.. index:: Spatial index
 
 Using Spatial Index
 ===================
@@ -464,7 +462,7 @@ create them easily. This is what you have to do:
     intersect = index.intersects(QgsRectangle(22.5, 15.3, 23.1, 17.2))
 
 
-.. index:: vector layers; writing
+.. index:: Vector layers; Creating
 
 Writing Vector Layers
 =====================
@@ -533,7 +531,7 @@ There are two possibilities how to export a vector layer:
     # delete the writer to flush features to disk
     del writer
 
-.. index:: memory provider
+.. index:: Memory layer
 
 Memory Provider
 ===============

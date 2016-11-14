@@ -2,7 +2,7 @@
 
    |updatedisclaimer|
 
-..index:: GDAL
+.. index:: GDAL
 .. _label_plugingdaltools:
 
 GDAL Tools Plugin

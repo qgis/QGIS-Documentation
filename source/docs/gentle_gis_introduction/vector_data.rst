@@ -16,12 +16,12 @@ Overview
 **Vector** data provide a way to represent real world **features** within the GIS
 environment. A feature is anything you can see on the landscape. Imagine you are
 standing on the top of a hill. Looking down you can see houses, roads, trees,
-rivers, and so on (see figure_landscape_). Each one of these things would be a
+rivers, and so on (see figure_vector_landscape_). Each one of these things would be a
 **feature** when we represent them in a GIS Application. Vector features have
 **attributes**, which consist of text or numerical information that **describe**
 the features.
 
-.. _figure_landscape:
+.. _figure_vector_landscape:
 
 .. figure:: /static/gentle_gis_introduction/landscape.jpg
    :align: center

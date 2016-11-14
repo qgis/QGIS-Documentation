@@ -354,7 +354,9 @@ used as the link to one key column in the database table.
    books and tutorials in several languages.
 
 .. index::
-      see: GRASS; Creating new vectors, GRASS; Editing, GRASS; Creating a new layer
+      seealso: Creating new layer; GRASS
+      seealso: Editing; GRASS
+
 
 .. _creating_new_grass_vectors:
 
@@ -570,7 +572,7 @@ these parameters with the GRASS Toolbox, described in section :ref:`subsec_grass
 The GRASS Toolbox
 =================
 .. index::
-   single:GRASS toolbox
+   single: GRASS toolbox
 
 The |grassTools| :sup:`Open GRASS Tools` box provides GRASS module functionalities
 to work with data inside a selected GRASS :file:`LOCATION` and :file:`MAPSET`.
@@ -711,9 +713,6 @@ uses several different algorithms with different purposes. Some of the algorithm
 the vertices. The resulting vector will load faster. This process is useful
 when you have a highly detailed vector, but you are creating a very small-scale
 map, so the detail is unnecessary.
-
-.. index::
-   single: GRASS; Display results
 
 .. tip:: **The simplify tool**
 

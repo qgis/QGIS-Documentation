@@ -147,7 +147,8 @@ instructions.
 
 
 .. index::
-  pair: Python; custom applications; standalone scripts
+  pair: Python; Custom applications
+  pair: Python; Standalone scripts
 
 .. _pythonapplications:
 
@@ -258,7 +259,7 @@ up a GUI with a map canvas. The possibilities are endless :-)
 
 
 .. index::
-  pair: custom applications; running
+  pair: Custom applications; Running
 
 Running Custom Applications
 ---------------------------

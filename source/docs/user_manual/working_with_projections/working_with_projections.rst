@@ -21,7 +21,7 @@ to define custom coordinate reference systems and supports on-the-fly (OTF)
 projection of vector and raster layers. All of these features allow the user to
 display layers with different CRSs and have them overlay properly.
 
-.. index:: EPSG; European Petroleum Search Group, IGNF; Institut Geographique National de France
+.. index:: EPSG (European Petroleum Search Group), IGNF (Institut Geographique National de France)
 
 Overview of Projection Support
 ==============================
@@ -101,6 +101,8 @@ defined, it will be displayed as shown in :ref:`figure_vector_general`.
    :guilabel:`Set project CRS from Layer` redefines the project CRS using
    the layer's CRS.
 
+.. index:: On-the-fly reprojection
+
 Define On The Fly (OTF) Reprojection
 ====================================
 
@@ -169,7 +171,7 @@ five important components, as shown in Figure_projection_project_ and described 
    automatically bring the :guilabel:`CRS` tab to the front.
 
 .. index:: CRS
-   :single: CRS; Custom CRS
+   single: CRS; Custom CRS
 
 .. _sec_custom_projections:
 
@@ -217,10 +219,11 @@ enter known WGS 84 latitude and longitude values in :guilabel:`North` and
 :guilabel:`East` fields, respectively. Click on **[Calculate]**, and compare the
 results with the known values in your coordinate reference system.
 
-Default datum transformations
-=============================
 
 .. index:: Datum transformation
+
+Default datum transformations
+=============================
 
 OTF depends on being able to transform data into a 'default CRS', and
 QGIS uses WGS84. For some CRS there are a number of transforms

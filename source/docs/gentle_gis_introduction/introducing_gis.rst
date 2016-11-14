@@ -174,6 +174,7 @@ Application window. By changing the layer order, the way that layers are drawn
 can be adjusted –-- in this case so that rivers are drawn over the roads instead
 of below them.
 
+.. _figure_map_symbology:
 
 .. figure:: /static/gentle_gis_introduction/introducing_gis/symbology.png
    :align: center

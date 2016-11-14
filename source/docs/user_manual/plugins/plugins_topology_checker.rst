@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 .. index:: Topology
-.. single: Plugins; Topology Checker
+   single: Plugins; Topology Checker
 .. _`topology`:
 
 Topology Checker Plugin

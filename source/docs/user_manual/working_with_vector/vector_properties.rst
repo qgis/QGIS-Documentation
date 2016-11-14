@@ -201,7 +201,7 @@ all features of the layer using a single user-defined symbol.
 See :ref:`symbol-selector` for further information about symbol representation.
 
 
-.. _figure_single_symbol:
+.. _figure_single_symbology:
 
 .. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png
    :align: center
@@ -267,10 +267,10 @@ on the item you want to change.
 Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Change
 transparency**, **Change output unit**, **Change symbol width**.
 
-The example in figure_categorized_symbol_ shows the category rendering dialog used
+The example in figure_categorized_symbology_ shows the category rendering dialog used
 for the rivers layer of the QGIS sample dataset.
 
-.. _figure_categorized_symbol:
+.. _figure_categorized_symbology:
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
    :align: center
@@ -356,10 +356,10 @@ on the item you want to change.
 Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Change
 transparency**, **Change output unit**, **Change symbol width**.
 
-The example in figure_graduated_symbol_ shows the graduated rendering dialog for
+The example in figure_graduated_symbology_ shows the graduated rendering dialog for
 the rivers layer of the QGIS sample dataset.
 
-.. _figure_graduated_symbol:
+.. _figure_graduated_symbology:
 
 .. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
    :align: center
@@ -454,7 +454,8 @@ are also available in the print composer legend item.
 
    Multivariate example
 
-.. Index:: Rule-based Rendering, Rule-based Rendering; Create a rule
+.. Index:: Rule-based Rendering
+   single: Rule-based Rendering; Create a rule
 
 .. _rule_based_rendering:
 
@@ -485,17 +486,17 @@ Since QGIS 2.8 the rules appear in a tree hierarchy in the map legend. Just
 double-click the rules in the map legend and the Style menu of the layer properties
 appears showing the rule that is the background for the symbol in the tree.
 
-The example in figure_symbology_rule_based_symbol shows the rule-based rendering
+The example in figure_rule_based_symbology_ shows the rule-based rendering
 dialog for the rivers layer of the QGIS sample dataset.
 
-.. _figure_rule_based_symbol:
+.. _figure_rule_based_symbology:
 
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
    :align: center
 
    Rule-based Symbolizing options
 
-.. index:: Point Displacement Renderer
+.. index:: Point Displacement Renderer, Displacement circle
 .. index:: Displacement plugin
 
 .. _point_displacement:
@@ -505,10 +506,10 @@ Point displacement
 
 The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
 works to visualize all features of a point layer, even if they have the same location.
-To do this, the symbols of the points are placed on a :index:`displacement circle`
+To do this, the symbols of the points are placed on a displacement circle
 around one center symbol or on several concentric circles.
 
-.. _figure_displacement_symbol:
+.. _figure_displacement_symbology:
 
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
    :align: center
@@ -531,14 +532,14 @@ to define a symbol to fill in
 outside of the layer's polygons. As above you can select subrenderers, namely
 Single symbol, Graduated, Categorized, Rule-Based or 2.5 D renderer.
 
-.. _figure_inverted_symbol:
+.. _figure_inverted_symbology:
 
 .. figure:: /static/user_manual/working_with_vector/inverted_polygon_symbol.png
    :align: center
 
    Inverted Polygon dialog
 
-.. index:: Heatmap Renderer
+.. index:: Heatmap, Heatmap Renderer
 
 .. _heatmap:
 
@@ -547,13 +548,13 @@ Heatmap
 
 With the |heatmapSymbol| :guilabel:`Heatmap` renderer you can create live
 dynamic heatmaps for (multi)point layers.
-You can specify the :index:`heatmap` radius in pixels, mm or map units, choose and
+You can specify the heatmap radius in pixels, mm or map units, choose and
 edit a color ramp for the heatmap style and use a slider for selecting a trade-off
 between render speed and quality. You can also define a maximum value limit and give a
 weight to points using a field or an expression. When adding or removing a feature
 the heatmap renderer updates the heatmap style automatically.
 
-.. _figure_heatmap_symbol:
+.. _figure_heatmap_symbology:
 
 .. figure:: /static/user_manual/working_with_vector/heatmap_symbol.png
    :align: center
@@ -561,14 +562,13 @@ the heatmap renderer updates the heatmap style automatically.
    Heatmap dialog
 
 .. index:: 2.5 D Rendering
-
 .. _2.5_D_rendering:
 
 2.5 D
 .....
 
 Using the |25dSymbol| :guilabel:`2.5 D` renderer it's possible to create
-a :index:`2.5 D` effect on your layer's features.
+a 2.5 D effect on your layer's features.
 You start by choosing a :guilabel:`Height` value (in map units). For that
 you can use a fixed value, one of your layer's fields, or an expression. You also
 need to choose an :guilabel:`Angle` (in degrees) to recreate the viewer position
@@ -579,7 +579,7 @@ to simulate solar radiation on the features walls, make sure to check the
 simulate a shadow by setting a :guilabel:`Color` and :guilabel:`Size` (in map
 units).
 
-.. _figure_25d_symbol:
+.. _figure_25d_symbology:
 
 .. figure:: /static/user_manual/working_with_vector/2_5dsymbol.png
    :align: center
@@ -1859,7 +1859,7 @@ on **[Add default actions]**. One example is performing a search based on an
 attribute value. This concept is used in the following discussion.
 
 .. index:: Actions, Attribute Actions
-   :single: Actions; Define an action
+   single: Actions; Define an action
 
 Defining Actions
 ----------------
@@ -1896,7 +1896,8 @@ values of these fields can be used in the action with ``%(Derived).X`` and
 ``%(Derived).Y``. The derived attributes are only available from the
 :guilabel:`Identify Results` dialog box, not the :guilabel:`Attribute Table` dialog box.
 
-.. index:: Actions; Examples
+.. index::
+   single: Actions; Examples
 
 Two example actions are shown below:
 
@@ -1916,7 +1917,8 @@ The second example uses the \%\% notation, which does not rely on a particular
 field for its value. When the action is invoked, the \%\% will be replaced by
 the value of the selected field in the identify results or attribute table.
 
-.. index:: Actions; Using actions
+.. index::
+   single: Actions; Using actions
 .. _using_actions:
 
 Using Actions

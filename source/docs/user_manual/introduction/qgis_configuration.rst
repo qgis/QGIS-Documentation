@@ -250,7 +250,7 @@ Rendering Tab
 
 * |checkbox| :guilabel:`Map canvas refresh`
 
-..index:: Colors
+.. index:: Colors
 
 Colors Tab
 ------------
@@ -346,10 +346,13 @@ You can define the :guilabel:`Default font` used within the :ref:`print composer
 * Define the :guilabel:`Grid offset` |selectNumber| for x and y
 * Define the :guilabel:`Snap tolerance` |selectNumber|
 
+
 **Composer Paths**
 
 * Define :guilabel:`Path(s) to search for extra print templates`: a list of folders
   with custom composer templates to use while creating new one.
+
+.. index:: Digitizing configuration
 
 Digitizing Tab
 ---------------
@@ -408,6 +411,8 @@ GDAL is a data exchange library for raster files. In this tab, you can
 raster formats. You can define which GDAL driver is to be used for a raster
 format, as in some cases more than one GDAL driver is available.
 
+.. index:: CRS, Datum transformation, On-the-fly reprojection
+
 CRS Tab
 --------
 
@@ -446,6 +451,8 @@ or when a layer without a CRS is loaded.
   transformation table). You then need to manually enter each setting.
 
 
+.. index:: Overwrite language
+
 Locale Tab
 -----------
 
@@ -459,6 +466,8 @@ In the :guilabel:`Authentication` tab you can set authentication configurations
 and manage PKI certificates. See :ref:`authentication_index` for more
 details.
 
+.. index:: Proxy, Network
+
 Network Tab
 ------------
 
@@ -471,7 +480,6 @@ Network Tab
 * Define :guilabel:`Default expiration period for WMSC/WMTS tiles (hours)` - default is 24
 * Define :guilabel:`Max retry in case of tile or feature request errors`
 * Define :guilabel:`User-Agent`
-
 
 .. _figure_network_tab:
 
@@ -506,8 +514,7 @@ If you need more detailed information about the different proxy settings,
 please refer to the manual of the underlying QT library documentation at
 http://doc.qt.io/qt-4.8/qnetworkproxy.html#ProxyType-enum
 
-.. tip::
-   **Using Proxies**
+.. tip:: **Using Proxies**
 
    Using proxies can sometimes be tricky. It is useful to proceed by 'trial and
    error' with the above proxy types, to check if they succeed in your case.
@@ -543,7 +550,9 @@ the widget is populated with a tree of all QGIS settings, which you can directly
    QGIS installation in various ways.
 
 
-.. index:: Properties; Project, Settings; Project
+.. index:: Project properties
+   single: Project; Properties
+   single: Settings; Project
 
 Project Properties
 ==================

@@ -17,7 +17,7 @@ QGIS GUI
       :local:
 
 .. index::
-   single:main window
+   single: Main window
 
 When QGIS starts, you are presented with the GUI as shown in the figure (the
 numbers 1 through 5 in yellow circles are discussed below).
@@ -45,12 +45,11 @@ These five components of the QGIS interface are described in more detail in
 the following sections. Two more sections present keyboard shortcuts and
 context help.
 
+.. index:: Menu
 .. _label_menubar:
 
 Menu Bar
 ========
-
-.. index:: Menus
 
 The menu bar provides access to various QGIS features using a standard
 hierarchical menu. The top-level menus and a summary of some of the menu
@@ -392,7 +391,7 @@ holding the mouse over the toolbars.
    The Toolbars menu
 
 .. index::
-   single: Layout toolbars, Toolbars; Layout
+   single: Toolbars; Layout
 
 .. tip:: **Restoring toolbars**
 
@@ -456,6 +455,7 @@ performed on the map as described in the label_toolbars_ description above. The 
 view and the legend are tightly bound to each other --- the maps in view reflect
 changes you make in the legend area.
 
+
 .. index:: Zoom, Mouse wheel
 
 .. tip::
@@ -468,10 +468,11 @@ changes you make in the legend area.
    mouse wheel zoom using the :guilabel:`Map tools` tab under the
    :menuselection:`Settings --> Options` menu.
 
+
+.. index:: Pan, Arrow 
+
 .. tip::
    **Panning the Map with the Arrow Keys and Space Bar**
-
-   .. index:: Pan, Arrow keys
 
    You can use the arrow keys to pan the map. Place the mouse cursor inside
    the map area and click on the right arrow key to pan east, left arrow key to
@@ -547,7 +548,7 @@ loading, processing tools...)
    **Calculating the Correct Scale of Your Map Canvas**
 
    .. index::
-      single:scale calculate
+      single: Scale calculate
 
    When you start QGIS, the default CRS is ``WGS 84 (epsg 4326)`` and
    units are degrees. This means that QGIS will interpret any
