@@ -327,8 +327,26 @@ allows users to choose:
 * refresh the informations;
 * the statistics information to display with the bottom right button.
 
-.. note:: The list of shown statistics depends on the type of the values (numeric,
-   string or date) returned by the selected field or the entered expression.
+Statistic information available are (depending on the field's type):
+
+* Sum (float or integer)
+* Mean (float or integer)
+* Median (float or integer)
+* Standard Deviation (float or integer)
+* Standard Deviation on Sample (float or integer)
+* Minimal value (date, string, float or integer)
+* Maximal value (date, string, float or integer)
+* Range (date, float or integer)
+* Minority (float or integer)
+* Majority (float or integer)
+* Variety (float or integer)
+* First Quartile (float or integer)
+* Third Quartile (float or integer)
+* Inter Quartile Range (float or integer)
+* Count Distinct Value (date or string)
+* Count number of Missing Value (date or string)
+* Minimum Length (string)
+* Maximum Length (string)
 
 .. index::
    single: Map; Overview
