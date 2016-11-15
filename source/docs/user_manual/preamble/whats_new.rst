@@ -18,4 +18,4 @@ that will be described in this manual. You may also
 review the visual changelog at:
 
 * http://qgis.org/en/site/forusers/visualchangelog216/index.html
-
+* http://qgis.org/en/site/forusers/visualchangelog218/index.html
