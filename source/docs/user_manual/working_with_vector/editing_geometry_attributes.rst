@@ -11,7 +11,7 @@
    .. contents::
       :local:
 
-QGIS supports various capabilities for :index:`editing` OGR,
+QGIS supports various capabilities for editing OGR,
 SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
 
 .. note::
@@ -195,8 +195,17 @@ Digitizing an existing layer
 By default, QGIS loads layers read-only. This is a safeguard to avoid
 accidentally editing a layer if there is a slip of the mouse.
 However, you can choose to edit any layer as long as the data provider
-supports it, and the underlying data source is writable (i.e., its files are
-not read-only).
+supports it (see :ref:`supported_format`), and the underlying data source is writable
+(i.e., its files are not read-only). 
+
+.. tip:: **Restrict edit permission on layers within a project**
+   
+   From the :menuselection:`Project --> Project properties --> Identify` tab,
+   You can choose to set any layer read-only regardless the provider permission.
+   This can be a handy way, in a multi-users environment to avoid unauthorized users
+   to mistakenly edit layers (e.g., shapefile), hence potentially corrupt data.
+   Note that this setting only applies inside the current project.
+
 
 In general, tools for editing vector layers are divided into a digitizing and an advanced
 digitizing toolbar, described in section :ref:`sec_advanced_edit`. You can
