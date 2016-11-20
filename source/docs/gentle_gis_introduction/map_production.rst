@@ -198,8 +198,8 @@ A graticule is a network of lines overlain on a map to make spatial orientation
 easier for the reader. The lines can be used as a reference. As an example, the
 lines of a graticule can represent the earth's parallels of latitude and meridians
 of longitude. When you want to refer to a special area on a map during your
-presentation or in a report you could say: 'the houses close to latitude 26.04 /
-longitude -32.11 are often exposed to flooding during January and February' (see
+presentation or in a report you could say: 'the houses close to latitude -32.11 /
+longitude 26.04 are often exposed to flooding during January and February' (see
 figure_map_graticule_).
 
 .. _figure_map_graticule:
