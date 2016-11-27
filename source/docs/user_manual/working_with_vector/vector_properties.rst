@@ -2134,7 +2134,8 @@ in map canvas.
 
    Map tip made with HTML code
 
-.. index:: Generalisation, Simplification
+
+.. index:: Generalisation, Feature simplification, Rasterisation
 
 Rendering Menu
 ==============
@@ -2144,7 +2145,7 @@ improve rendering times when drawing many complex features at small scales.
 This feature can be enabled or disabled in the layer settings using the
 |checkbox| :guilabel:`Simplify geometry` option. There is also a global
 setting that enables generalisation by default for newly added layers (see
-section :ref:`gui_options`).
+:ref:`global simplification <global_simplification>` for more information).
 
 .. _figure_rendering:
 
