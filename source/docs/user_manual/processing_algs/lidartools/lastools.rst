@@ -24,7 +24,7 @@ Description
 This tool can turn billions of points with via seamless Delaunay triangulation
 implemented using streaming into large elevation, intensity, or RGB rasters.
 For more info see the `blast2dem <http://rapidlasso.com/blast2dem>`_ page and 
-its online `README <http://lastools.org/download/blast2dem_README.txt>`_ file.
+its online `README <http://lastools.org/download/blast2dem_README.txt>`__ file.
 
 Parameters
 ..........
@@ -93,7 +93,7 @@ See also
 ........
 
 See also the `blast2dem <http://rapidlasso.com/blast2dem>`_ page and its online
-`README <http://lastools.org/download/blast2dem_README.txt>`_ file.
+`README <http://lastools.org/download/blast2dem_README.txt>`__ file.
 
 blast2iso
 ---------
@@ -104,7 +104,7 @@ Description
 This tool can turn billions of points with via seamless Delaunay triangulation
 implemented using streaming into large iso-contour lines (optionally tiled).
 For more info see the `blast2iso <http://rapidlasso.com/blast2iso>`_ page and
-its online `README <http://lastools.org/download/blast2iso_README.txt>`_ file.
+its online `README <http://lastools.org/download/blast2iso_README.txt>`__ file.
 
 Parameters
 ..........
@@ -174,7 +174,7 @@ See also
 .........
 
 See also the `blast2iso <http://rapidlasso.com/blast2iso>`_ page and its online
-`README <http://lastools.org/download/blast2iso_README.txt>`_ file.
+`README <http://lastools.org/download/blast2iso_README.txt>`__ file.
 
 las2dem
 -------
@@ -185,7 +185,7 @@ Description
 This tool turns points (up to 20 million) via a temporary Delaunay triangulation
 that is rastered with a user-defined step size into an elevation, intensity, or
 RGB raster. For more info see the `las2dem <http://rapidlasso.com/las2dem>`_ page
-and its online `README <http://lastools.org/download/las2dem_README.txt>`_ file.
+and its online `README <http://lastools.org/download/las2dem_README.txt>`__ file.
 
 Parameters
 ..........
@@ -254,7 +254,7 @@ See also
 ........
 
 See also the `las2dem <http://rapidlasso.com/las2dem>`_ page and its online
-`README <http://lastools.org/download/las2dem_README.txt>`_ file.
+`README <http://lastools.org/download/las2dem_README.txt>`__ file.
 
 las2iso
 -------
@@ -265,7 +265,7 @@ Description
 This tool turns point clouds (up to 20 million per file) into iso-contour lines
 by creating a temporary Delaunay triangulation on which the contours are then traced.
 For more info see the `las2iso <http://rapidlasso.com/las2iso>`_ page and its
-online `README <http://lastools.org/download/las2iso_README.txt>`_ file.
+online `README <http://lastools.org/download/las2iso_README.txt>`__ file.
 
 Parameters
 ..........
@@ -335,7 +335,7 @@ See also
 ........
 
 See also the `las2iso <http://rapidlasso.com/las2iso>`_ page and its online
-`README <http://lastools.org/download/las2iso_README.txt>`_ file.
+`README <http://lastools.org/download/las2iso_README.txt>`__ file.
 
 las2las_filter
 --------------
@@ -346,7 +346,7 @@ Description
 This tool uses las2las to filter LiDAR points based on different attributes and
 to write the surviving subset of points to a new LAZ or LAS file. For more info
 see the `las2las <http://rapidlasso.com/las2las>`_ page and its online
-`README <http://lastools.org/download/las2las_README.txt>`_ file.
+`README <http://lastools.org/download/las2las_README.txt>`__ file.
 
 Parameters
 ..........
@@ -509,8 +509,8 @@ Console usage
 See also
 ........
 
-See also the `las2las <http://rapidlasso.com/las2las>`_ page and its online
-`README <http://lastools.org/download/las2las_README.txt>`_ file.
+See also the `las2las <http://rapidlasso.com/las2las>`__ page and its online
+`README <http://lastools.org/download/las2las_README.txt>`__ file.
 
 las2las_project
 ---------------
@@ -1116,7 +1116,7 @@ Description
 This tool uses las2las to filter LiDAR points based on different attributes and
 to write the surviving subset of points to a new LAZ or LAS file. For more info
 see the `las2las <http://rapidlasso.com/las2las>`_ page and its online
-`README <http://lastools.org/download/las2las_README.txt>`_ file.
+`README <http://lastools.org/download/las2las_README.txt>`__ file.
 
 Parameters
 ..........
@@ -1290,7 +1290,7 @@ See also
 ........
 
 See also the `las2las <http://rapidlasso.com/las2las>`_ page and its online
-`README <http://lastools.org/download/las2las_README.txt>`_ file.
+`README <http://lastools.org/download/las2las_README.txt>`__ file.
 
 las2txt
 -------
@@ -1383,7 +1383,7 @@ This tool grids a selected attribute (e.g. elevation, intensity, classification,
 scan angle, ...) of a large point clouds with a user-defined step size onto raster
 using a particular method (e.g. min, max, average). For more info see the
 `lasgrid <http://rapidlasso.com/lasgrid>`_ page and its online
-`README <http://lastools.org/download/lasgrid_README.txt>`_ file.
+`README <http://lastools.org/download/lasgrid_README.txt>`__ file.
 
 Parameters
 ..........
@@ -1460,7 +1460,7 @@ See also
 ........
 
 See also the `lasgrid <http://rapidlasso.com/lasgrid>`_ page and its online
-`README <http://lastools.org/download/lasgrid_README.txt>`_ file.
+`README <http://lastools.org/download/lasgrid_README.txt>`__ file.
 
 lasinfo
 -------
