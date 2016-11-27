@@ -1077,7 +1077,8 @@ minimum distance for repeating labels. The distance can be in ``mm`` or in
 Placement for polygon layers
 ............................
 
-You can choose one of the following options for placing labels in polygons:
+You can choose one of the following options for placing labels in polygons
+(see figure_labels_placement_polygon_):
 
 * |radioButtonOn| :guilabel:`Offset from centroid`,
 * |radioButtonOff| :guilabel:`Horizontal (slow)`,
@@ -1112,21 +1113,13 @@ label. For the position, |checkbox| :guilabel:`Above line`, |checkbox|
 specify the distance between the label and the polygon outline, as well as
 the repeat interval for the label.
 
-<<<<<<< 9fccea2696cace9ebd73720eb4a37f43efbd350a
-.. _figure_labels_placement_polygon:
-=======
 The :guilabel:`Using perimeter (curved)` option helps you draw the label along
 the polygon boundary, using a curved labeling. In addition to the parameters
 available with :guilabel:`Using perimeter` setting, you can set the
 :guilabel:`Maximum angle between curved characters polygon`, either inside
 or outside.
 
-.. _figure_labels_3:
-
-.. only:: html
-
-   **Figure Labels 3:**
->>>>>>> Add labels with curved perimeter
+.. _figure_labels_placement_polygon:
 
 .. figure:: /static/user_manual/working_with_vector/polygon_label_placement.png
    :align: center
