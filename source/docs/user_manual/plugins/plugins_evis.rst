@@ -2,6 +2,7 @@
 
    |updatedisclaimer|
 
+.. index:: Geocoding photo, eVis
 .. _`evis`:
 
 eVis Plugin
@@ -73,11 +74,7 @@ To see the :guilabel:`Display` window, click on the :guilabel:`Display` tab in t
 :guilabel:`Event Browser` window. The :guilabel:`Display` window is used
 to view geocoded photographs and their associated attribute data.
 
-.. _figure_eVis_1:
-
-.. only:: html
-
-   **Figure eVis 1:**
+.. _figure_eVis:
 
 .. figure:: /static/user_manual/plugins/evisdisplay.png
    :align: center
@@ -106,11 +103,7 @@ F. **Navigation buttons**: Use the Previous and Next buttons to load the previou
 Understanding the Options window
 ................................
 
-.. _figure_eVis_2:
-
-.. only:: html
-
-   **Figure eVis 2:**
+.. _figure_eVis_options:
 
 .. figure:: /static/user_manual/plugins/evisoptions.png
    :align: center
@@ -136,7 +129,7 @@ C. **Compass offset**: Compass offsets can be used to compensate for
    be entered using positive values, and west declinations should use negative
    values.
 D. **Directory base path**: The base path onto which the relative path defined
-   in Figure_eVis_2_ (A) will be appended.
+   in Figure_eVis_options_ (A) will be appended.
 E. **Replace path**: If this checkbox is checked, only the file name from A
    will be appended to the base path.
 F. **Apply rule to all documents**: If checked, the same path rules that are
@@ -157,11 +150,7 @@ J. **Save**: This will save the settings without closing the :guilabel:`Options`
 Understanding the Configure External Applications window
 ........................................................
 
-.. _figure_eVis_3:
-
-.. only:: html
-
-   **Figure eVis 3:**
+.. _figure_eVis_app:
 
 .. figure:: /static/user_manual/plugins/evisexternal.png
    :align: center
@@ -334,11 +323,7 @@ Console` window stating that the connection was established. If a connection was
 not established, you will need to check that the correct parameters were entered
 above.
 
-.. _figure_eVis_4:
-
-.. only:: html
-
-   **Figure eVis 4:**
+.. _figure_eVis_db:
 
 .. figure:: /static/user_manual/plugins/evisdatabase.png
    :align: center
@@ -386,11 +371,7 @@ In the :guilabel:`Database File Selection` window, enter the name of the layer
 that will be created from the results of the query in the :guilabel:`Name of New
 Layer` textbox.
 
-.. _figure_eVis_5:
-
-.. only:: html
-
-   **Figure eVis 5:**
+.. _figure_eVis_sql:
 
 .. figure:: /static/user_manual/plugins/evissql_query.png
    :align: center
@@ -455,11 +436,7 @@ the command. If the query is successful, a :guilabel:`Database File Selection`
 window will be displayed. If the query is not successful, an error message will
 appear in the :guilabel:`Output Console` window.
 
-.. _figure_eVis_6:
-
-.. only:: html
-
-   **Figure eVis 6:**
+.. _figure_eVis_queries:
 
 .. figure:: /static/user_manual/plugins/evispredefined.png
    :align: center

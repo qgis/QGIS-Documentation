@@ -31,10 +31,6 @@ an image item with a map so it can rotate automatically with the map (see :ref:`
 
 .. _figure_composer_arrow:
 
-.. only:: html
-
-   **Figure Composer Arrow:**
-
 .. figure:: /static/user_manual/print_composer/arrow_properties.png
    :align: center
 
@@ -72,7 +68,7 @@ predefined SVG images can be changed using the corresponding options. Custom SVG
 may require some tags following this :ref:`instruction <parameterized_svg>`.
 
 .. index:: 
-   single: Composer Item; Basic Shape
+   single: Composer Item; Basic shape
 .. _basic_shape_item:
 
 The Basic Shape Items
@@ -82,14 +78,10 @@ To add a basic shape (ellipse, rectangle, triangle), click the |addBasicShape|
 :sup:`Add basic shape` icon,  place the element holding down the left mouse.
 Customize the appearance in the :guilabel:`Item Properties` tab.
 
-When you also hold down the :kbd:`Shift` key while placing the basic shape you can create a perfect square,
-circle or triangle.
+When you also hold down the :kbd:`Shift` key while placing the basic shape
+you can create a perfect square, circle or triangle.
 
 .. _figure_composer_basic_shape:
-
-.. only:: html
-
-   **Figure Composer Basic Shape:**
 
 .. figure:: /static/user_manual/print_composer/shape_properties.png
    :align: center
@@ -108,7 +100,7 @@ For the rectangle shape, you can set the value of the corner radius to round of 
    Unlike other items, you can not style the frame or the background color of the frame.
 
 .. index:: 
-   single: Composer Item; Node-Based Shape
+   single: Composer Item; Node-based shape
 .. _node_based_shape_item:
 
 The Node-Based Shape Items
@@ -126,10 +118,6 @@ terminates the shape. Customize the appearance in the :guilabel:`Item Properties
 tab.
 
 .. _figure_composer_nodes_shape:
-
-.. only:: html
-
-   **Figure Composer Nodes Shape:**
 
 .. figure:: /static/user_manual/print_composer/shape_nodes_properties.png
    :align: center

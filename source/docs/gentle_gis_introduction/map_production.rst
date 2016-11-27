@@ -21,10 +21,6 @@ north arrow, scale bar, acknowledgement, and map border (see figure_map_elements
 
 .. _figure_map_elements:
 
-.. only:: html
-
-   **Figure Map Elements 1:**
-
 .. figure:: /static/gentle_gis_introduction/map_production/map_elements.png
    :align: center
    :width: 30em
@@ -68,10 +64,6 @@ represent a type of feature. For example, a *house* icon will show you how to
 identify houses on the map (see figure_map_legend_).
 
 .. _figure_map_legend:
-
-.. only:: html
-
-   **Figure Map Legend 1:**
 
 .. figure:: /static/gentle_gis_introduction/map_production/map_legend.png
    :align: center
@@ -131,10 +123,6 @@ distance in the real world is placed above as you can see in figure_map_scale_ (
 
 .. _figure_map_scale:
 
-.. only:: html
-
-   **Figure Map Scale 1:**
-
 .. figure:: /static/gentle_gis_introduction/map_production/map_scale.png
    :align: center
    :width: 30em
@@ -166,10 +154,6 @@ separate squares. In the image on the right you can only see a black clump of
 rectangles and you are not able to see each house clearly.
 
 .. _figure_map_scale_compare:
-
-.. only:: html
-
-   **Figure Map Scale 2:**
 
 .. figure:: /static/gentle_gis_introduction/map_production/map_scale_compare.png
    :align: center
@@ -204,10 +188,6 @@ figure_map_graticule_).
 
 .. _figure_map_graticule:
 
-.. only:: html
-
-   **Figure Map Graticule 1:**
-
 .. figure:: /static/gentle_gis_introduction/map_production/map_graticule.png
    :align: center
    :width: 30em
@@ -231,10 +211,6 @@ has developed its own map projection with the goal of improving the map accuracy
 for their territorial area (see figure_map_projection_).
 
 .. _figure_map_projection:
-
-.. only:: html
-
-   **Figure Map Projection 1:**
 
 .. figure:: /static/gentle_gis_introduction/map_production/map_projection.png
    :align: center

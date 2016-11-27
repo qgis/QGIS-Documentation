@@ -22,10 +22,6 @@ makes more sense to use vector data.
 
 .. _figure_raster:
 
-.. only:: html
-
-   **Figure Raster 1:**
-
 .. figure:: /static/gentle_gis_introduction/raster_data/raster_dataset.png
    :align: center
    :width: 30em
@@ -57,10 +53,6 @@ vector dataset.
 
 .. _figure_landscape:
 
-.. only:: html
-
-   **Figure Landscape 1:**
-
 .. figure:: /static/gentle_gis_introduction/landscape.jpg
    :align: center
    :width: 30em
@@ -87,10 +79,6 @@ An example that shows the difference between an image obtained from a satellite
 and one that shows calculated values can be seen in figure_raster_types_.
 
 .. _figure_raster_types:
-
-.. only:: html
-
-   **Figure Raster Types 1:**
 
 .. figure:: /static/gentle_gis_introduction/raster_data/raster_types.png
    :align: center
@@ -132,10 +120,6 @@ an aeroplane or satellite is called **remote sensing**.
 
 .. _figure_csir_station:
 
-.. only:: html
-
-   **Figure CSIR Station 1:**
-
 .. figure:: /static/gentle_gis_introduction/raster_data/csir_station.jpg
    :align: center
    :width: 30em
@@ -173,10 +157,6 @@ figure_raster_large_scale_).
 
 .. _figure_raster_small_scale:
 
-.. only:: html
-
-   **Figure Raster Scale 1:**
-
 .. figure:: /static/gentle_gis_introduction/raster_data/raster_small_scale.png
    :align: center
    :width: 30em
@@ -184,10 +164,6 @@ figure_raster_large_scale_).
    This satellite image looks good when using a small scale...
 
 .. _figure_raster_large_scale:
-
-.. only:: html
-
-   **Figure Raster Scale 2:**
 
 .. figure:: /static/gentle_gis_introduction/raster_data/raster_large_scale.png
    :align: center

@@ -2,7 +2,8 @@
 
    |updatedisclaimer|
 
-.. index:: Geometry, Topology, Snapping, Plugin, Geometry snapper plugin
+.. index:: Geometry, Topology, Snapping
+   single: Plugin; Geometry snapper
 
 .. _geometry_snapper:
 
@@ -24,11 +25,7 @@ selected features`.
 :guilabel:`Output vector layer` allows you to choose between
 :guilabel:`Modifying input layer` or :guilabel:`Create a new layer`.
 
-.. _figure_geometry_snapper_1:
-
-.. only:: html
-
-   **Figure Geometry Snapper:**
+.. _figure_geometry_snapper:
 
 .. figure:: /static/user_manual/plugins/snap_geometries.png
    :align: center

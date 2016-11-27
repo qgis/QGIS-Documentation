@@ -20,13 +20,12 @@ This chapter gives a quick overview of installing QGIS, some sample data from
 the QGIS web page, and running a first and simple session visualizing raster
 and vector layers.
 
+
+.. index:: Installation
 .. _`label_installation`:
 
 Installation
 ============
-
-.. :index::
-    single:installation
 
 Installation of QGIS is very simple. Standard installer packages are available
 for MS Windows and Mac OS X. For many flavors of GNU/Linux, binary packages (rpm
@@ -51,13 +50,12 @@ path for user configuration (e.g., :file:`~/.qgis2` under Linux) and forces
 QGIS installation on a flash drive together with all plugins and settings.
 See section :ref:`env_options` for additional information.
 
+
+.. index:: Data sample
 .. _label_sampledata:
 
 Sample Data
 -----------
-
-.. :index::
-    single:data sample
 
 The user guide contains examples based on the QGIS sample dataset.
 
@@ -112,6 +110,8 @@ If you intend to use QGIS as a graphical front end for GRASS, you can find a
 selection of sample locations (e.g., Spearfish or South Dakota) at the
 official GRASS GIS website, http://grass.osgeo.org/download/sample-data/.
 
+.. index:: Start QGIS, Stop QGIS
+
 Launching QGIS
 ==============
 
@@ -138,13 +138,12 @@ To stop QGIS, click:
 * |osx| :menuselection:`QGIS --> Quit QGIS`, or use the shortcut :kbd:`Cmd+Q`
 * or use the red cross at the right top corner of the main interface of the application.
 
+
+.. index:: Command line options
 .. _`label_commandline`:
 
 Command Line Options
 --------------------
-
-.. index::
-   single:command line options
 
 In previous section you learned how to start QGIS.
 You will see that QGIS also provides further command line options.
@@ -365,6 +364,7 @@ You can see how easy it is to visualize raster and vector layers in QGIS. Let's
 move on to the sections that follow to learn more about the available
 functionality, features and settings, and how to use them.
 
+.. index:: Projects
 .. _sec_projects:
 
 Projects
@@ -433,10 +433,8 @@ extension ``.qgs~``.
 Output
 ======
 
-.. index::
-   single:output save as image
-.. index::
-   single:print composer quick print
+.. index:: Print composer, Quick print, World file
+   single: Output; Save as image
 
 There are several ways to generate output from your QGIS session. We have
 discussed one already in section :ref:`sec_projects`, saving as a project file.

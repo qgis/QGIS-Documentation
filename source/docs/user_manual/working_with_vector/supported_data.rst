@@ -57,13 +57,9 @@ Loading a layer from a file
 |addOgrLayer| To load a layer from a file (like a Shapefile, a Mapinfo or a dxf
 layer), click on the |addOgrLayer| :sup:`Add Vector Layer` toolbar button; or
 type :kbd:`Ctrl+Shift+V`. This will bring up a new window (see
-figure_vector_1_).
+figure_vector_add_).
 
-.. _figure_vector_1:
-
-.. only:: html
-
-   **Figure Vector 1:**
+.. _figure_vector_add:
 
 .. figure:: /static/user_manual/working_with_vector/addvectorlayerdialog.png
    :align: center
@@ -72,17 +68,13 @@ figure_vector_1_).
 
 From the available options check |radioButtonOn| :guilabel:`File`. Click on
 **[Browse]**. That will bring up a standard open file dialog
-(see figure_vector_2_), which allows you to navigate the file system and load a
+(see figure_vector_open_), which allows you to navigate the file system and load a
 shapefile or other supported data source. The selection box :guilabel:`Filter`
 |selectString| allows you to preselect some OGR-supported file formats.
 
 You can also select the encoding for the file if desired.
 
-.. _figure_vector_2:
-
-.. only:: html
-
-   **Figure Vector 2:**
+.. _figure_vector_open:
 
 .. figure:: /static/user_manual/working_with_vector/shapefileopendialog.png
    :align: center
@@ -90,13 +82,9 @@ You can also select the encoding for the file if desired.
    Open an OGR Supported Vector Layer Dialog
 
 Selecting a file from the list and clicking **[Open]** loads it into QGIS.
-Figure_vector_3_ shows QGIS after loading the :file:`alaska.shp` file.
+Figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 
-.. _figure_vector_3:
-
-.. only:: html
-
-   **Figure Vector 3:**
+.. _figure_vector_loaded:
 
 .. figure:: /static/user_manual/working_with_vector/shapefileloaded.png
    :align: center
@@ -160,7 +148,7 @@ ESRI Shapefiles
 The ESRI shapefile is still one of the most used vector file format in QGIS.
 However, this file format has some limitation that some other file format have
 not (like Geopackage, spatialite). Support is provided by the
-:index:`OGR Simple Feature Library` (http://www.gdal.org/ogr/).
+`OGR Simple Feature Library <http://www.gdal.org/ogr/>`_.
 
 A shapefile actually consists of several files. The following three are
 required:
@@ -257,7 +245,7 @@ Some items to note about the text file:
 #. The X coordinates are contained in the ``X`` field.
 #. The Y coordinates are contained in the ``Y`` field.
 
-
+.. index:: Delimited text file
 .. _vector_loading_csv:
 
 Loading a delimited text file
@@ -265,13 +253,9 @@ Loading a delimited text file
 
 Click the toolbar icon |delimitedText| :sup:`Add Delimited Text Layer` in the
 :guilabel:`Manage layers` toolbar to open the :guilabel:`Create a Layer from a
-Delimited Text File` dialog, as shown in figure_delimited_text_1_.
+Delimited Text File` dialog, as shown in figure_delimited_text_.
 
-.. _figure_delimited_text_1:
-
-.. only:: html
-
-   **Figure Delimited Text 1:**
+.. _figure_delimited_text:
 
 .. figure:: /static/user_manual/introduction/delimited_text_dialog.png
    :align: center
@@ -295,7 +279,7 @@ degrees/minutes/seconds, activate the |checkbox| :guilabel:`DMS coordinates`
 checkbox.
 
 Finally, enter a layer name (e.g., :file:`elevp`), as shown in
-figure_delimited_text_1_. To add the layer to the map, click **[OK]**. The
+figure_delimited_text_. To add the layer to the map, click **[OK]**. The
 delimited text file now behaves as any other map layer in QGIS.
 
 There is also a helper option that allows you to trim leading and trailing
@@ -368,7 +352,7 @@ Delimited Text supports also Z and M coordinates in geometries::
 
    LINESTRINGM(10.0 20.0 30.0, 11.0 21.0 31.0)
 
-.. index:: OSM, OpenStreetMap
+.. index:: OSM (OpenStreetMap)
 
 .. _vector_osm:
 
@@ -549,7 +533,8 @@ The service file looks like::
   If you want to use the service with ``psql`` you need to do something
   like ``export PGSERVICE=water_service`` before doing your psql commands.
 
-.. note:: You can find all the parameters `here <https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
+.. note:: You can find all the parameters `here
+   <https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
 
 .. note:: If you don't want to save the passwords in the service file you can
   use the `.pg_pass <https://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
@@ -640,6 +625,7 @@ sent to the database. Expressions using unsupported operators or functions will
 gracefully fallback to local evaluation.
 
 .. index:: shp2pgsql
+   single: PostGIS; shp2pgsql
 .. _vector_import_data_in_postgis:
 
 Importing Data into PostgreSQL
@@ -683,7 +669,8 @@ reference systems and projections.
    your PostGIS distribution.
 
 .. index:: ogr2ogr
-
+   single: PostGIS; ogr2ogr
+   
 ogr2ogr
 .......
 
@@ -719,6 +706,8 @@ need to create them manually, using the normal SQL command **CREATE INDEX**
 afterwards as an extra step (as described in the next section
 :ref:`vector_improving_performance`).
 
+.. index:: Spatial index; GiST index
+   single: PostGIS; Spatial index
 .. _vector_improving_performance:
 
 Improving Performance
@@ -726,9 +715,9 @@ Improving Performance
 
 Retrieving features from a PostgreSQL database can be time-consuming, especially
 over a network. You can improve the drawing performance of PostgreSQL layers by
-ensuring that a :index:`PostGIS spatial index` exists on each layer in the
-database. PostGIS supports creation of a :index:`GiST (Generalized Search Tree)
-index` to speed up spatial searches of the data (GiST index information is taken
+ensuring that a PostGIS spatial index exists on each layer in the
+database. PostGIS supports creation of a GiST (Generalized Search Tree)
+index to speed up spatial searches of the data (GiST index information is taken
 from the PostGIS documentation available at http://postgis.net).
 
 .. tip:: You can use the DBManager to create an index to your layer. You should
@@ -767,7 +756,7 @@ The following is an example of creating a GiST index:
   gis_data=# \q
   gsherman@madison:~/current$
 
-.. index:: ST_Shift_Longitude
+.. index:: PostGIS; ST_Shift_Longitude
 
 Vector layers crossing 180 |degrees| longitude
 ----------------------------------------------
@@ -776,15 +765,11 @@ Many GIS packages don't wrap vector maps with a geographic reference system
 (lat/lon) :index:`crossing the 180 degrees longitude line`
 (http://postgis.refractions.net/documentation/manual-2.0/ST\_Shift\_Longitude.html).
 As result, if we open such a map in QGIS, we will see two far, distinct locations,
-that should appear near each other. In Figure_vector_4_, the tiny point on the far
+that should appear near each other. In Figure_vector_crossing_, the tiny point on the far
 left of the map canvas (Chatham Islands) should be within the grid, to the right of the
 New Zealand main islands.
 
-.. _figure_vector_4:
-
-.. only:: html
-
-   **Figure Vector 4:**
+.. _figure_vector_crossing:
 
 .. figure:: /static/user_manual/working_with_vector/vectorNotWrapping.png
    :align: center
@@ -797,11 +782,7 @@ component of every feature in a geometry, and if the longitude coordinate is
 < 0 |degrees|, it adds 360 |degrees| to it. The result is a 0 |degrees| - 360 |degrees|
 version of the data to be plotted in a 180 |degrees|-centric map.
 
-.. _figure_vector_5:
-
-.. only:: html
-
-   **Figure Vector 5:**
+.. _figure_vector_crossing_map:
 
 .. figure:: /static/user_manual/working_with_vector/vectorWrapping.png
    :align: center
@@ -820,7 +801,7 @@ Usage
    ``gis_data=# update TABLE set the_geom=ST_Shift_Longitude(the_geom);``
 *  If everything went well, you should receive a confirmation about the
    number of features that were updated. Then you'll be able to load the
-   map and see the difference (Figure_vector_5_).
+   map and see the difference (Figure_vector_crossing_map_).
 
 .. index:: Spatialite, SQLite
 .. _label_spatialite:
@@ -854,7 +835,7 @@ Creating a new SpatiaLite layer
 If you want to create a new SpatiaLite layer, please refer to section
 :ref:`vector_create_spatialite`.
 
-.. index:: QSpatiaLite, Spatialite_Manager, DB_Manager
+.. index:: QSpatiaLite, Spatialite manager, DB manager
 
 .. _tip_spatialite_management_plugin:
 
@@ -876,8 +857,8 @@ time you load MSSQL Spatial data, begin by clicking on the
 selecting the |addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer...`
 option from the :menuselection:`Layer` menu, or by typing :kbd:`Ctrl+Shift+M`.
 
-.. _label_oracle_spatial:
 .. index:: Oracle Spatial
+.. _label_oracle_spatial:
 
 Oracle Spatial Layers
 ---------------------
@@ -983,15 +964,15 @@ To load a layer from Oracle Spatial, perform the following steps:
    Query Builder to further define the layer.
 *  Click on the **[Add]** button to add the layer to the map.
 
-.. _tip_ORACLE Spatial_layers:
+.. _tip_ORACLE_Spatial_layers:
 
 .. tip:: **Oracle Spatial Layers**
 
    Normally, an Oracle Spatial layer is defined by an entry in the
    **USER_SDO_METADATA** table.
 
-.. _label_db2_spatial:
 .. index:: DB2 Spatial
+.. _label_db2_spatial:
 
 DB2 Spatial Layers
 ---------------------

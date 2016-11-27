@@ -2,6 +2,9 @@
 
    |updatedisclaimer|
 
+.. index:: 
+   pair: Plugins; Heatmap
+   
 .. _heatmap_plugin:
 
 Heatmap Plugin
@@ -33,7 +36,7 @@ Using the Heatmap plugin
 ------------------------
 
 Clicking the |heatmap| `Heatmap` tool button opens the Heatmap plugin dialog
-(see figure_heatmap_2_).
+(see figure_heatmap_settings_).
 
 The dialog has the following options:
 
@@ -99,13 +102,9 @@ the QGIS sample dataset (see :ref:`label_sampledata`). Another excellent QGIS
 tutorial on making heatmaps can be found at `http://qgis.spatialthoughts.com
 <http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_.
 
-In Figure_Heatmap_1_, the airports of Alaska are shown.
+In Figure_Heatmap_data_, the airports of Alaska are shown.
 
-.. _figure_heatmap_1:
-
-.. only:: html
-
-   **Figure Heatmap 1:**
+.. _figure_heatmap_data:
 
 .. figure:: /static/user_manual/plugins/heatmap_start.png
    :align: center
@@ -114,7 +113,7 @@ In Figure_Heatmap_1_, the airports of Alaska are shown.
 
 
 #. Select the |heatmap| `Heatmap` tool button to open the Heatmap dialog
-   (see Figure_Heatmap_2_).
+   (see Figure_Heatmap_settings_).
 #. In the :guilabel:`Input point layer` |selectString| field, select ``airports``
    from the list of point layers loaded in the current project.
 #. Specify an output filename by clicking the |browseButton| button next to the
@@ -122,13 +121,9 @@ In Figure_Heatmap_1_, the airports of Alaska are shown.
    file extension is necessary).
 #. Leave the :guilabel:`Output format` as the default format, ``GeoTIFF``.
 #. Change the :guilabel:`Radius` to ``1000000`` meters.
-#. Click on **[OK]**  to create and load the airports heatmap (see Figure_Heatmap_3_).
+#. Click on **[OK]**  to create and load the airports heatmap (see Figure_Heatmap_created_).
 
-.. _figure_heatmap_2:
-
-.. only:: html
-
-   **Figure Heatmap 2:**
+.. _figure_heatmap_settings:
 
 .. figure:: /static/user_manual/plugins/heatmap_dialog.png
    :align: center
@@ -139,11 +134,7 @@ QGIS will generate the heatmap and add the results to your map window. By defaul
 is shaded in greyscale, with lighter areas showing higher concentrations of airports. The heatmap
 can now be styled in QGIS to improve its appearance.
 
-.. _figure_heatmap_3:
-
-.. only:: html
-
-   **Figure Heatmap 3:**
+.. _figure_heatmap_created:
 
 .. figure:: /static/user_manual/plugins/heatmap_loaded_grey.png
    :align: center
@@ -161,13 +152,9 @@ can now be styled in QGIS to improve its appearance.
    then click the **[Classify]** button.
 #. Press **[OK]** to update the layer.
 
-The final result is shown in Figure_Heatmap_4_.
+The final result is shown in Figure_Heatmap_styled_.
 
-.. _figure_heatmap_4:
-
-.. only:: html
-
-   **Figure Heatmap 4:**
+.. _figure_heatmap_styled:
 
 .. figure:: /static/user_manual/plugins/heatmap_loaded_colour.png
    :align: center

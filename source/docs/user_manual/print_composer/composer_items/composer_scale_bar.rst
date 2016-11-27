@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 .. index::
-   single: Scalebar; Map_Scalebar
+   single: Scalebar; Map scalebar
 
 The Scale Bar Item
 ==================
@@ -18,35 +18,27 @@ the element with the left mouse button on the Print Composer canvas and position
 and customize the appearance in the scale bar :guilabel:`Item Properties` tab.
 
 The :guilabel:`Item properties` of a scale bar item tab provides the following
-functionalities (see figure_composer_scalebar_1_):
+functionalities (see figure_composer_scalebar_):
 
-.. _Figure_composer_scalebar_1:
-
-.. only:: html
-
-   **Figure Composer Scalebar 1:**
+.. _Figure_composer_scalebar:
 
 .. figure:: /static/user_manual/print_composer/scalebar_properties.png
    :align: center
 
-   Scale Bar Item properties Tab |nix|
+   Scale Bar Item properties Tab
 
 Main properties
 ---------------
 
 The :guilabel:`Main properties` dialog of the scale bar :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_scalebar_2_):
+provides the following functionalities (see figure_composer_scalebar_ppt_):
 
-.. _Figure_composer_scalebar_2:
-
-.. only:: html
-
-   **Figure Composer Scalebar 2:**
+.. _Figure_composer_scalebar_ppt:
 
 .. figure:: /static/user_manual/print_composer/scalebar_mainproperties.png
    :align: center
 
-   Scale Bar Main properties Dialog |nix|
+   Scale Bar Main properties Dialog
 
 * First, choose the map the scale bar will be attached to.
 * Then, choose the style of the scale bar. Six styles are available:
@@ -60,18 +52,14 @@ Units and Segments
 
 The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar
 :guilabel:`Item Properties` tab provide the following functionalities
-(see figure_composer_scalebar_3_):
+(see figure_composer_scalebar_units_):
 
-.. _Figure_composer_scalebar_3:
-
-.. only:: html
-
-   **Figure Composer scalebar 3:**
+.. _Figure_composer_scalebar_units:
 
 .. figure:: /static/user_manual/print_composer/scalebar_units.png
    :align: center
 
-   Scale Bar Units and Segments Dialogs |nix|
+   Scale Bar Units and Segments Dialogs
 
 In these two dialogs, you can set how the scale bar will be represented.
 
@@ -93,18 +81,14 @@ Display
 --------
 
 The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties` tab provide
-the following functionalities (see figure_composer_scalebar_4_):
+the following functionalities (see figure_composer_scalebar_display_):
 
-.. _Figure_composer_scalebar_4:
-
-.. only:: html
-
-   **Figure Composer Scalebar 4:**
+.. _Figure_composer_scalebar_display:
 
 .. figure:: /static/user_manual/print_composer/scalebar_display.png
    :align: center
 
-   Scale Bar Display |nix|
+   Scale Bar Display
 
 You can define how the scale bar will be displayed in its frame.
 
@@ -122,18 +106,14 @@ Fonts and colors
 -----------------
 
 The :guilabel:`Fonts and colors` dialog of the scale bar :guilabel:`Item Properties` tab
-provide the following functionalities (see figure_composer_scalebar_5_):
+provide the following functionalities (see figure_composer_scalebar_fonts_):
 
-.. _Figure_composer_scalebar_5:
-
-.. only:: html
-
-   **Figure Composer Scalebar 5:**
+.. _Figure_composer_scalebar_fonts:
 
 .. figure:: /static/user_manual/print_composer/scalebar_fonts.png
    :align: center
 
-   Scale Bar Fonts and colors Dialogs |nix|
+   Scale Bar Fonts and colors Dialogs
 
 You can define the fonts and colors used for the scale bar.
 

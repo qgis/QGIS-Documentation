@@ -14,19 +14,15 @@ To add a label, click the |label| :sup:`Add label` icon, place the element
 with the left mouse button on the Print Composer canvas and position and customize
 its appearance in the label :guilabel:`Item Properties` tab.
 
-The :guilabel:`Item Properties` tab of a label item provides the following functionality
-for the label item (see Figure_composer_label_):
+The :guilabel:`Item Properties` tab of a label item provides the following
+functionality for the label item (see Figure_composer_label_):
 
 .. _Figure_composer_label:
-
-.. only:: html
-
-   **Figure Composer Label:**
 
 .. figure:: /static/user_manual/print_composer/label_mainproperties.png
    :align: center
 
-   Label Item properties Tab |nix|
+   Label Item properties Tab
 
 Main properties
 ----------------

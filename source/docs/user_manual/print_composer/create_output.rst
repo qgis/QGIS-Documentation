@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 .. index::
-   single:Printing; Export_Map
+   single: Printing; Export map
 
 .. _create-output:
 
@@ -16,14 +16,10 @@
    .. contents::
       :local:
 
-Figure_composer_output_1_ shows the Print Composer with an example print layout,
+Figure_composer_output_ shows the Print Composer with an example print layout,
 including each type of map item described in the previous section.
 
-.. _figure_composer_output_1:
-
-.. only:: html
-
-   **Figure Composer Output 1:**
+.. _figure_composer_output:
 
 .. figure:: /static/user_manual/print_composer/print_composer_complete.png
    :align: center
@@ -31,7 +27,7 @@ including each type of map item described in the previous section.
    Print Composer with map view, legend, image, scale bar, coordinates, text and
    HTML frame added
 
-.. index:: Export_as_image, Export_as_PDF, Export_as_SVG
+.. index:: Export as image, Export as PDF, Export as SVG
 
 Before printing a layout you have the possibility to view your composition
 without bounding boxes. This can be enabled by deactivating :guilabel:`View -->`
@@ -72,11 +68,7 @@ be sized to include EVERYTHING on the composition. If it's a
 multi-page composition, then each page will be cropped to only
 include the area of that page with items.
 
-.. _figure_composer_output_2:
-
-.. only:: html
-
-   **Figure Composer Output 2:**
+.. _figure_composer_output_image:
 
 .. figure:: /static/user_manual/print_composer/image_export_options.png
    :align: center
@@ -106,11 +98,7 @@ The SVG export options dialog allows also to :
 * :guilabel:`export map layers as svg groups`:
 * render map labels as outlines
 
-.. _figure_composer_output_3:
-
-.. only:: html
-
-   **Figure Composer Output 3:**
+.. _figure_composer_output_svg:
 
 .. figure:: /static/user_manual/print_composer/svg_export_options.png
    :align: center
@@ -138,7 +126,7 @@ as raster` in the Rendering tab of Layer Properties is a layer-level alternative
 that avoids global composition rasterization.
 
 
-.. index:: Atlas_Generation
+.. index:: Atlas generation
 
 .. _atlas_generation:
 
@@ -154,13 +142,9 @@ labels.
 
 Every page will be generated with each feature. To enable the generation
 of an atlas and access generation parameters, refer to the `Atlas generation` tab.
-This tab contains the following widgets (see  figure_composer_atlas_1_):
+This tab contains the following widgets (see figure_composer_atlas_):
 
-.. _figure_composer_atlas_1:
-
-.. only:: html
-
-   **Figure Composer Atlas 1:**
+.. _figure_composer_atlas:
 
 .. figure:: /static/user_manual/print_composer/atlas_properties.png
    :align: center
@@ -221,10 +205,11 @@ Once checked, you can set:
 Labels
 ------
 
-In order to adapt labels to the feature the atlas plugin iterates over, you can include expressions.
-What you should take care of is to place expression part (including functions, fields or variables)
-between ``[%`` and ``%]``.
-For example, for a city layer with fields CITY_NAME and ZIPCODE, you could insert this:
+In order to adapt labels to the feature the atlas plugin iterates over, you can
+include expressions. What you should take care of is to place expression part
+(including functions, fields or variables) between ``[%`` and ``%]``.
+For example, for a city layer with fields CITY_NAME and ZIPCODE, you could
+insert this:
 
 .. code::
 
@@ -239,7 +224,7 @@ or, another combination:
    [%format_number($area/1000000,2) %] km2
 
 The information ``[% upper(CITY_NAME) || ',' || ZIPCODE || ' is ' format_number($area/1000000,2) %]``
-is an expression used inside the label. both expressions would result in the generated atlas as::
+is an expression used inside the label. Both expressions would result in the generated atlas as::
 
   The area of PARIS,75001 is 1.94 km2
 
@@ -318,11 +303,7 @@ This is just one example of how you can use the Data Defined Override option.
 Preview and generate
 --------------------
 
-.. _figure_composer_atlas_2:
-
-.. only:: html
-
-   **Figure Composer Atlas 2:**
+.. _figure_composer_atlas_preview:
 
 .. figure:: /static/user_manual/print_composer/atlas_preview.png
    :align: center

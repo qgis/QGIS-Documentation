@@ -2,7 +2,7 @@
 
    |updatedisclaimer|
 
-.. index:: HTML_Frame
+.. index:: HTML frame
 
 The HTML Frame Item
 ====================
@@ -12,24 +12,20 @@ The HTML Frame Item
    .. contents::
       :local:
 
-It is possible to add a frame that displays the contents of a website or even create and style
-your own HTML page and display it!
+It is possible to add a frame that displays the contents of a website or even
+create and style your own HTML page and display it!
 
 Click the |addHtml| :sup:`Add HTML frame` icon, place the element by dragging a
 rectangle holding down the left mouse button on the Print Composer canvas and position
 and customize the appearance in the :guilabel:`Item Properties` tab
-(see figure_composer_html_1_).
+(see figure_composer_html_).
 
-.. _Figure_composer_html_1:
-
-.. only:: html
-
-   **Figure Composer HTML 1:**
+.. _Figure_composer_html:
 
 .. figure:: /static/user_manual/print_composer/html_properties.png
    :align: center
 
-   HTML frame, the item properties Tab |nix|
+   HTML frame, the item properties Tab
 
 
 HTML Source
@@ -39,18 +35,14 @@ As an HTML source, you can either set a URL and activate the URL radiobutton or
 enter the HTML source directly in the textbox provided and activate the Source radiobutton.
 
 The :guilabel:`HTML Source` dialog of the HTML frame :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_html_2_):
+provides the following functionalities (see figure_composer_html_ppt_):
 
-.. _Figure_composer_html_2:
-
-.. only:: html
-
-   **Figure Composer HTML 2:**
+.. _Figure_composer_html_ppt:
 
 .. figure:: /static/user_manual/print_composer/html_source.png
    :align: center
 
-   HTML frame, the HTML Source properties |nix|
+   HTML frame, the HTML Source properties
 
 * In :guilabel:`URL` you can enter the URL of a webpage you copied from your internet
   browser or select an HTML file using the browse button |browseButton|. There is also the
@@ -73,18 +65,14 @@ Frames
 -------
 
 The :guilabel:`Frames` dialog of the HTML frame :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_html_3_):
+provides the following functionalities (see figure_composer_html_frames_):
 
-.. _Figure_composer_html_3:
-
-.. only:: html
-
-   **Figure Composer HTML 3:**
+.. _Figure_composer_html_frames:
 
 .. figure:: /static/user_manual/print_composer/html_frame.png
    :align: center
 
-   HTML frame, the Frames properties |nix|
+   HTML frame, the Frames properties
 
 * With :guilabel:`Resize mode` you can select how to render the HTML contents:
 
@@ -115,18 +103,14 @@ Use smart page breaks and User style sheet
 
 The :guilabel:`Use smart page breaks` dialog and :guilabel:`Use style sheet` dialog of
 the HTML frame :guilabel:`Item Properties` tab provides the following functionalities
-(see figure_composer_html_4_):
+(see figure_composer_html_breaks_):
 
-.. _Figure_composer_html_4:
-
-.. only:: html
-
-   **Figure Composer HTML 4:**
+.. _Figure_composer_html_breaks:
 
 .. figure:: /static/user_manual/print_composer/html_breaks.png
    :align: center
 
-   HTML frame, Use smart page breaks and User stylesheet properties |nix|
+   HTML frame, Use smart page breaks and User stylesheet properties
 
 * Activate |checkbox| :guilabel:`Use smart page breaks` to prevent the html frame contents
   from breaking mid-way a line of text so it continues nice and smooth in the next frame.

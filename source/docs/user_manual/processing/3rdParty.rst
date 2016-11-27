@@ -65,8 +65,8 @@ You should, however, find no problems at all with vector layers, since QGIS
 automatically converts from the original file format to one accepted by the
 external application before passing the layer to it. This adds extra processing
 time, which might be significant if the layer has a large size, so do not be
-surprised if it takes more time to process a layer from a DB connection than it does to process one of a
-similar size stored in a shapefile.
+surprised if it takes more time to process a layer from a DB connection than it
+does to process one of a similar size stored in a shapefile.
 
 Providers not using external applications can process any layer that you can open
 in QGIS, since they open it for analysis through QGIS.
@@ -221,8 +221,8 @@ typing ``R`` in a console, then you are ready to go.
 
 To add a new algorithm that calls an R function (or a more complex R script that
 you have developed and you would like to have available from QGIS), you have
-to create a script file that tells the processing framework how to perform that operation and the
-corresponding R commands to do so.
+to create a script file that tells the processing framework how to perform that
+operation and the corresponding R commands to do so.
 
 R script files have the extension :file:`.rsx`, and creating them is pretty easy
 if you just have a basic knowledge of R syntax and R scripting. They should be

@@ -41,10 +41,6 @@ pollution protection zones along rivers.
 
 .. _figure_buffer_zone:
 
-.. only:: html
-
-   **Figure Buffer Zone 1:**
-
 .. figure:: /static/gentle_gis_introduction/buffers/buffer_zone.png
    :align: center
    :width: 30em
@@ -58,10 +54,6 @@ figure_point_buffer_, figure_line_buffer_, ).
 
 .. _figure_point_buffer:
 
-.. only:: html
-
-   **Figure Point Buffer 1:**
-
 .. figure:: /static/gentle_gis_introduction/buffers/point_buffer.png
    :align: center
    :width: 30em
@@ -70,10 +62,6 @@ figure_point_buffer_, figure_line_buffer_, ).
 
 .. _figure_line_buffer:
 
-.. only:: html
-
-   **Figure Line Buffer 1:**
-
 .. figure:: /static/gentle_gis_introduction/buffers/line_buffer.png
    :align: center
    :width: 30em
@@ -81,10 +69,6 @@ figure_point_buffer_, figure_line_buffer_, ).
    A buffer zone around vector polylines.
 
 .. _figure_polygon_buffer:
-
-.. only:: html
-
-   **Figure Polygon Buffer 1:**
 
 .. figure:: /static/gentle_gis_introduction/buffers/polygon_buffer.png
    :align: center
@@ -105,10 +89,6 @@ may be bigger than for organic farming (see Figure figure_variable_buffer_ and
 Table table_buffer_attributes_).
 
 .. _figure_variable_buffer:
-
-.. only:: html
-
-   **Figure Variable Buffer 1:**
 
 .. figure:: /static/gentle_gis_introduction/buffers/variable_buffer.png
    :align: center
@@ -147,10 +127,6 @@ around the plant as part of an evacuation plan (see figure_multiple_buffers_).
 
 .. _figure_multiple_buffers:
 
-.. only:: html
-
-   **Figure Multiple Buffers 1:**
-
 .. figure:: /static/gentle_gis_introduction/buffers/multiple_buffers.png
    :align: center
    :width: 30em
@@ -167,10 +143,6 @@ separate polygon and you can identify the overlapping areas (see
 Figure figure_buffer_dissolve_).
 
 .. _figure_buffer_dissolve:
-
-.. only:: html
-
-   **Figure Dissolve Buffers 1:**
 
 .. figure:: /static/gentle_gis_introduction/buffers/buffer_dissolve.png
    :align: center
@@ -214,10 +186,6 @@ vector layer is a combination of the input features information (see
 figure_overlay_operations_).
 
 .. _figure_overlay_operations:
-
-.. only:: html
-
-   **Figure Overlay Operations 1:**
 
 .. figure:: /static/gentle_gis_introduction/buffers/overlay_operations.png
    :align: center
@@ -273,10 +241,6 @@ Here are some ideas for you to try with your learners:
   stores too close to your school.
 
 .. _figure_buffer_road:
-
-.. only:: html
-
-   **Figure Buffer Road 1:**
 
 .. figure:: /static/gentle_gis_introduction/buffers/buffer_road.png
    :align: center

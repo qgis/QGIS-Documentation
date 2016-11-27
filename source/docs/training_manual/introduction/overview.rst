@@ -11,6 +11,8 @@ interface.
 |basic| |TY|: The Basics
 -------------------------------------------------------------------------------
 
+.. _figure_gui_numbered:
+
 .. image:: /static/training_manual/interface/gui_numbered.png
    :align: center
 

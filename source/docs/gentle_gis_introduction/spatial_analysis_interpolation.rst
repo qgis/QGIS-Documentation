@@ -40,10 +40,6 @@ be computed using interpolation.
 
 .. _figure_temperature_map:
 
-.. only:: html
-
-   **Figure Tempareature Map 1:**
-
 .. figure:: /static/gentle_gis_introduction/interpolation/temperature_map.png
    :align: center
    :width: 30em
@@ -77,10 +73,6 @@ figure_idw_interpolation_).
 
 .. _figure_idw_interpolation:
 
-.. only:: html
-
-   **Figure IDW Interpolation 1:**
-
 .. figure:: /static/gentle_gis_introduction/interpolation/idw_interpolation.png
    :align: center
    :width: 30em
@@ -109,10 +101,6 @@ elevation sample points collected in the field with a GPS device.
 
 .. _figure_idw_result:
 
-.. only:: html
-
-   **Figure IDW Interpolation 2:**
-
 .. figure:: /static/gentle_gis_introduction/interpolation/idw_result.png
    :align: center
    :width: 30em
@@ -131,10 +119,6 @@ and as compact as possible triangles (see figure_tin_interpolation_).
 
 .. _figure_tin_interpolation:
 
-.. only:: html
-
-   **Figure TIN Interpolation 1:**
-
 .. figure:: /static/gentle_gis_introduction/interpolation/tin_interpolation.png
    :align: center
    :width: 30em
@@ -147,13 +131,9 @@ The main disadvantage of the TIN interpolation is that the surfaces are not smoo
 and may give a jagged appearance. This is caused by discontinuous slopes at the
 triangle edges and sample data points. In addition, triangulation is generally
 not suitable for extrapolation beyond the area with collected sample data points
-(see  ).
+(see figure_tin_result_ ).
 
 .. _figure_tin_result:
-
-.. only:: html
-
-   **Figure TIN Interpolation 2:**
 
 .. figure:: /static/gentle_gis_introduction/interpolation/tin_result.png
    :align: center

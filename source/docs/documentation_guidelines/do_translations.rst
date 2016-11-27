@@ -137,30 +137,22 @@ With Qt Linguist, you need to manually grab the ``.po`` file.
 When you open the file in Qt Linguist for the first time you will see the
 following dialog:
 
-.. _figure_translation_1:
-
-.. only:: html
-
-   **Figure Translation 1:**
+.. _figure_translation_language:
 
 .. figure:: /static/documentation_guidelines/linguist_choose_language.png
    :align: center
 
-   Select language for translation in linguist menu |osx|
+   Select language for translation in linguist menu
 
 
 The Target language should be filled correctly. The Source language can be left
 as is with language POSIX and Country/Region on Any Country.
 
 When you press the **[OK]** button Qt Linguist is filled with sentences and
-you can start translating, see Figure_translation_2_.
+you can start translating, see Figure_translation_menu_.
 
 
-.. _figure_translation_2:
-
-.. only:: html
-
-   **Figure Translation 2:**
+.. _figure_translation_menu:
 
 .. figure:: /static/documentation_guidelines/linguist_menu.png
    :align: center
@@ -269,14 +261,14 @@ A bit further we meet the following tricky translation item:
 ::
 
    The |heatmap| :sup:`Heatmap` tool button starts the Dialog of the Heatmap
-   plugin (see figure_heatmap_2_).
+   plugin (see figure_heatmap_settings_).
 
-It holds a reference to a figure ``figure_heatmap_2_``, and like a reference
+It holds a reference to a figure ``figure_heatmap_settings_``, and like a reference
 to section this reference should not be changed!! The reference definition
 itself from the rst-document is not included in the ``.po`` file and can therefore
 not be changed. This means the reference to figures can not be translated. When
-HTML is created you will see ``figure_heatmap_2``. When a PDF document is
-created ``figure_heatmap_2_`` is replaced with a figure number.
+HTML is created you will see ``figure_heatmap_settings``. When a PDF document is
+created ``figure_heatmap_settings_`` is replaced with a figure number.
 
 The next translation item with rst attributes is the following item:
 

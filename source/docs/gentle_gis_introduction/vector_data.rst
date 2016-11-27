@@ -16,16 +16,12 @@ Overview
 **Vector** data provide a way to represent real world **features** within the GIS
 environment. A feature is anything you can see on the landscape. Imagine you are
 standing on the top of a hill. Looking down you can see houses, roads, trees,
-rivers, and so on (see figure_landscape_). Each one of these things would be a
+rivers, and so on (see figure_vector_landscape_). Each one of these things would be a
 **feature** when we represent them in a GIS Application. Vector features have
 **attributes**, which consist of text or numerical information that **describe**
 the features.
 
-.. _figure_landscape:
-
-.. only:: html
-
-   **Figure Landscape 1:**
+.. _figure_vector_landscape:
 
 .. figure:: /static/gentle_gis_introduction/landscape.jpg
    :align: center
@@ -49,10 +45,6 @@ enclosed **polygon** feature is formed (see illustration figure_geometry_polygon
 
 .. _figure_geometry_point:
 
-.. only:: html
-
-   **Figure Vector Geometries 1:**
-
 .. figure:: /static/gentle_gis_introduction/vector_data/point_feature.png
    :align: center
    :width: 30em
@@ -62,10 +54,6 @@ enclosed **polygon** feature is formed (see illustration figure_geometry_polygon
 
 .. _figure_geometry_polyline:
 
-.. only:: html
-
-   **Figure Vector Geometries 2:**
-
 .. figure:: /static/gentle_gis_introduction/vector_data/polyline_feature.png
    :align: center
    :width: 30em
@@ -74,10 +62,6 @@ enclosed **polygon** feature is formed (see illustration figure_geometry_polygon
    optionally Z) coordinate. Attributes describe the polyline.
 
 .. _figure_geometry_polygon:
-
-.. only:: html
-
-   **Figure Vector Geometries 3:**
 
 .. figure:: /static/gentle_gis_introduction/vector_data/polygon_feature.png
    :align: center
@@ -91,10 +75,6 @@ be able to see the different types of features in the way that a GIS represents
 them now (see illustration figure_geometry_landscape_).
 
 .. _figure_geometry_landscape:
-
-.. only:: html
-
-   **Figure Landscape 2:**
 
 .. figure:: /static/gentle_gis_introduction/vector_data/landscape_geometry.jpg
    :align: center
@@ -158,10 +138,6 @@ digitised (captured into the computer) with distances between vertices that are
 small enough for the scale at which you want to use the data.
 
 .. _figure_polyline_jagged:
-
-.. only:: html
-
-   **Figure Polyline 1:**
 
 .. figure:: /static/gentle_gis_introduction/vector_data/jagged_polyline.png
    :align: center
@@ -249,10 +225,6 @@ time and effort capturing the data.
 
 .. _figure_vector_small_scale:
 
-.. only:: html
-
-   **Figure Vector Scale 1:**
-
 .. figure:: /static/gentle_gis_introduction/vector_data/small_scale.png
    :align: center
    :width: 30em
@@ -260,10 +232,6 @@ time and effort capturing the data.
    Vector data (red lines) that was digitised from a small scale (1:1000 000) map.
 
 .. _figure_vector_large_scale:
-
-.. only:: html
-
-   **Figure Vector Scale 2:**
 
 .. figure:: /static/gentle_gis_introduction/vector_data/large_scale.png
    :align: center
@@ -286,10 +254,6 @@ figure_generic_symbology_ and figure_custom_symbology_).
 
 .. _figure_vector_symbology:
 
-.. only:: html
-
-   **Figure Vector Symbology 1:**
-
 .. figure:: /static/gentle_gis_introduction/vector_data/symbology_settings.png
    :align: center
    :width: 30em
@@ -299,10 +263,6 @@ figure_generic_symbology_ and figure_custom_symbology_).
 
 .. _figure_generic_symbology:
 
-.. only:: html
-
-   **Figure Vector Symbology 2:**
-
 .. figure:: /static/gentle_gis_introduction/vector_data/symbology_generic.png
    :align: center
    :width: 30em
@@ -311,10 +271,6 @@ figure_generic_symbology_ and figure_custom_symbology_).
    application will give it a generic symbol.
 
 .. _figure_custom_symbology:
-
-.. only:: html
-
-   **Figure Vector Symbology 3:**
 
 .. figure:: /static/gentle_gis_introduction/vector_data/symbology_custom.png
    :align: center
@@ -358,10 +314,6 @@ areas don't meet properly (see figure_vector_slivers_).
 
 .. _figure_vector_slivers:
 
-.. only:: html
-
-   **Figure Vector Issues 1:**
-
 .. figure:: /static/gentle_gis_introduction/vector_data/vector_slivers.png
    :align: center
    :width: 30em
@@ -374,14 +326,10 @@ areas don't meet properly (see figure_vector_slivers_).
 **Overshoots** can occur when a line feature such as a road does not meet another
 road exactly at an intersection. **Undershoots** can occur when a line feature
 (e.g. a river) does not exactly meet another feature to which it should be
-connected. Figure figure_vector_overshoots_ demonstrates what undershoots and
+connected. Figure figure_vector_shoots_ demonstrates what undershoots and
 overshoots look like.
 
-.. _figure_vector_overshoots:
-
-.. only:: html
-
-   **Figure Vector Issues 2:**
+.. _figure_vector_shoots:
 
 .. figure:: /static/gentle_gis_introduction/vector_data/vector_overshoots.png
    :align: center
@@ -425,10 +373,6 @@ We have summarised the GIS Vector Data concept in Figure figure_vector_summary_.
 
 .. _figure_vector_summary:
 
-.. only:: html
-
-   **Figure Vector Summary 1:**
-
 .. figure:: /static/gentle_gis_introduction/vector_data/vector_summary.png
    :align: center
    :width: 30em
@@ -450,10 +394,6 @@ Here are some ideas for you to try with your learners:
   for an example.
 
 .. _figure_sample_map:
-
-.. only:: html
-
-   **Figure Sample Map 1:**
 
 .. figure:: /static/gentle_gis_introduction/vector_data/sample_map.png
    :align: center

@@ -2,7 +2,7 @@
 
    |updatedisclaimer|
 
-.. index:: composer_map
+.. index:: composer map
 
 The Map Item
 =============
@@ -51,14 +51,10 @@ the map item frame with the left mouse button.
 Main properties
 ---------------
 
-The :guilabel:`Main properties` dialog of the map :guilabel:`Item Properties` tab provides the
-following functionalities (see figure_composer_map_1_):
+The :guilabel:`Main properties` dialog of the map :guilabel:`Item Properties`
+tab provides the following functionalities (see figure_composer_map_):
 
-.. _Figure_composer_map_1:
-
-.. only:: html
-
-   **Figure Composer Map 1:**
+.. _Figure_composer_map:
 
 .. figure:: /static/user_manual/print_composer/map_mainproperties.png
    :align: center
@@ -105,13 +101,9 @@ Extents
 -------
 
 The :guilabel:`Extents` dialog of the map item tab provides the following
-functionalities (see figure_composer_map_2_):
+functionalities (see figure_composer_map_extents_):
 
-.. _Figure_composer_map_2:
-
-.. only:: html
-
-   **Figure Composer Map 2:**
+.. _Figure_composer_map_extents:
 
 .. figure:: /static/user_manual/print_composer/map_extents.png
    :align: center
@@ -128,10 +120,9 @@ functionalities (see figure_composer_map_2_):
 If you change the view on the QGIS map canvas by changing
 vector or raster properties, you can update the Print Composer view by selecting
 the map element in the Print Composer and clicking the **[Update preview]** button
-in the map :guilabel:`Item Properties` tab (see figure_composer_map_1_).
+in the map :guilabel:`Item Properties` tab (see figure_composer_map_).
 
-.. index::
-   single: Grid;Grids;Map_Grid
+.. index:: Grids, Map grid
 
 Grids
 -----
@@ -144,11 +135,7 @@ possibility to add several grids to a map item.
 
 When you double click on the added grid you can give it another name.
 
-.. _Figure_composer_map_3:
-
-.. only:: html
-
-   **Figure Composer Map 3:**
+.. _Figure_composer_map_grid:
 
 .. figure:: /static/user_manual/print_composer/map_grids.png
    :align: center
@@ -157,62 +144,53 @@ When you double click on the added grid you can give it another name.
 
 After you have added a grid, you can activate the checkbox |checkbox|
 :guilabel:`Draw grid` to overlay a grid onto the map element. Expand this option to provide
-a lot of configuration options, see Figure_composer_map_4_.
+a lot of configuration options, see Figure_composer_map_grid_draw_.
 
-.. _Figure_composer_map_4:
-
-.. only:: html
-
-   **Figure Composer Map 4:**
+.. _Figure_composer_map_grid_draw:
 
 .. figure:: /static/user_manual/print_composer/map_draw_grid.png
    :align: center
 
    Draw Grid Dialog
 
-As grid type, you can specify to use a 'Solid', 'Cross', 'Markers' or 'Frame and annotations only'.
-'Frame and annotations only' is especially useful when working with rotated maps or reprojected
-grids. In the divisions section of the Grid Frame Dialog mentioned below you then have a corresponding setting.
-Symbology of the grid and its rendering mode can be chosen. See :ref:`Composer_Rendering_Mode`.
-Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
+As grid type, you can specify to use a 'Solid', 'Cross', 'Markers' or 'Frame and
+annotations only'.
+'Frame and annotations only' is especially useful when working with rotated maps
+or reprojected grids. In the divisions section of the Grid Frame Dialog mentioned
+below you then have a corresponding setting. Symbology of the grid and its
+rendering mode can be chosen. See :ref:`Composer_Rendering_Mode`. Furthermore,
+you can define an interval in the X and Y directions, an X and Y offset,
 and the width used for the cross or line grid type.
 
-.. _Figure_composer_map_5:
-
-.. only:: html
-
-   **Figure Composer Map 5:**
+.. _Figure_composer_map_frame:
 
 .. figure:: /static/user_manual/print_composer/map_grid_frame.png
    :align: center
 
    Grid Frame Dialog
 
-* There are different options to style the frame that holds the map. Following options are
-  available: No Frame, Zebra, Interior ticks, Exterior ticks, Interior and Exterior ticks and Lineborder.
+* There are different options to style the frame that holds the map.
+  Following options are available: No Frame, Zebra, Interior ticks, Exterior
+  ticks, Interior and Exterior ticks and Lineborder.
 
-* With 'Latitude/Y only' and 'Longitude/X only' setting in the divisions section you have the possibility
-  to prevent a mix of latitude/y and longitude/x coordinates showing on a side when working with
-  rotated maps or reprojected grids.
+* With 'Latitude/Y only' and 'Longitude/X only' setting in the divisions section
+  you have the possibility to prevent a mix of latitude/y and longitude/x
+  coordinates showing on a side when working with rotated maps or reprojected grids.
 
 * Advanced rendering mode is also available for grids.
 
 * The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add coordinates
-  to the map frame. You can choose the annotation numeric format, the options range from decimal
-  to degrees, minute and seconds, with or without suffix, aligned or not and a
-  custom format using the expression dialog.
-  You can choose which annotation to show. The options are: show all, latitude only, longitude only,
-  or disable(none). This is useful when the map is rotated. The annotation can be drawn inside or
-  outside the map frame. The annotation direction can be defined as horizontal,
-  vertical ascending or vertical descending.
+  to the map frame. You can choose the annotation numeric format, the options
+  range from decimal to degrees, minute and seconds, with or without suffix,
+  aligned or not and a custom format using the expression dialog.
+  You can choose which annotation to show. The options are: show all, latitude
+  only, longitude only, or disable(none). This is useful when the map is rotated.
+  The annotation can be drawn inside or outside the map frame. The annotation
+  direction can be defined as horizontal, vertical ascending or vertical descending.
   Finally, you can define the annotation font, the annotation font color, the annotation
   distance from the map frame and the precision of the drawn coordinates.
 
-.. _Figure_composer_map_6:
-
-.. only:: html
-
-   **Figure Composer map 6:**
+.. _Figure_composer_map_coord:
 
 .. figure:: /static/user_manual/print_composer/map_grid_draw_coordinates.png
    :align: center
@@ -223,46 +201,44 @@ and the width used for the cross or line grid type.
 Overviews
 ---------
 
-The :guilabel:`Overviews` dialog of the map :guilabel:`Item Properties` tab provides the
-following functionalities:
+The :guilabel:`Overviews` dialog of the map :guilabel:`Item Properties` tab
+provides the following functionalities:
 
-.. _Figure_composer_map_7:
-
-.. only:: html
-
-   **Figure Composer Map 7:**
+.. _Figure_composer_map_overview:
 
 .. figure:: /static/user_manual/print_composer/map_overview.png
    :align: center
 
    Map Overviews Dialog
 
-You can choose to create an overview map, which shows the extents of the other map(s)
-that are available in the composer. First you need to create the map(s) you want to
-include in the overview map and the map you want to use as the overview
-map, just like a normal map.
+You can choose to create an overview map, which shows the extents of the other
+map(s) that are available in the composer. First you need to create the map(s)
+you want to include in the overview map and the map you want to use as the
+overview map, just like a normal map.
 
-Then expand :guilabel:`Overviews` option and press the green plus icon-button to add an overview.
-Initially this overview is named 'Overview 1' (see Figure_composer_map_7_).
+Then expand :guilabel:`Overviews` option and press the green plus icon-button to
+add an overview.
+Initially this overview is named 'Overview 1' (see Figure_composer_map_overview_).
 You can change the name when you double-click on the overview item in the list
 named 'Overview 1' and change it to another name.
 
 * With the plus and minus button you can add or remove an overview.
-* With the up and down button you can move an overview in the list and set the drawing priority.
+* With the up and down button you can move an overview in the list and set the
+  drawing priority.
 
 
 When you select the overview item in the list you can customize it.
 
-* The |checkbox| :guilabel:`Draw "<name_overview>" overview` needs to be activated to
-  draw the extent of selected map frame.
-* The :guilabel:`Map frame` combo list can be used to select the map item whose extents
-  will be drawn on the present map item.
+* The |checkbox| :guilabel:`Draw "<name_overview>" overview` needs to be activated
+  to draw the extent of selected map frame.
+* The :guilabel:`Map frame` combo list can be used to select the map item whose
+  extents will be drawn on the present map item.
 * The :guilabel:`Frame Style` allows you to change the style of the overview frame.
 * The :guilabel:`Blending mode` allows you to set different transparency blend modes.
 * The |checkbox| :guilabel:`Invert overview` creates a mask around the extents when
   activated: the referenced map extents are shown clearly, whereas everything else
   is blended with the frame color.
-* The |checkbox| :guilabel:`Center on overview` puts the extent of the overview frame in
-  the center of the overview map. You can only activate one overview item to center, when
-  you have added several overviews.
+* The |checkbox| :guilabel:`Center on overview` puts the extent of the overview
+  frame in the center of the overview map. You can only activate one overview
+  item to center, when you have added several overviews.
 

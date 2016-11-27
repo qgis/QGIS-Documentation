@@ -2,7 +2,8 @@
 
    |updatedisclaimer|
 
-.. index:: Digitizing, Geometry Checker, Topology, Geometry validity, Errors
+.. index:: Digitizing, Topology, Geometry validity, Errors
+   single: Plugins; Geometry checker
 
 .. _geometry_checker:
 
@@ -43,11 +44,7 @@ the error) and finally the resolution column which indicates the resolution of
 the error. At the bottom of this table, you can export the error into a
 shapefile. At the left, you have the number of the errors and the fixed errors.
 
-.. _figure_geometry_checker_1:
-
-.. only:: html
-
-   **Figure Geometry Checker:**
+.. _figure_geometry_checker:
 
 .. figure:: /static/user_manual/plugins/check_geometries.png
    :align: center
@@ -71,11 +68,7 @@ The *Geometry Checker Plugin* can find the following errors:
 
 The following figure shows the different checks made by the plugin.
 
-.. _figure_geometry_checker_2:
-
-.. only:: html
-
-   **Figure The Differents checks supported by the plugin**
+.. _figure_geometry_checker_options:
 
 .. figure:: /static/user_manual/plugins/geometry_checker_scheme.png
    :align: center

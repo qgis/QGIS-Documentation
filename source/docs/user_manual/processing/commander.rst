@@ -19,8 +19,7 @@ run.
 This tool is known as the *QGIS commander*, and it is just a simple text
 box with autocompletion where you type the command you want to run.
 
-.. _figure_commander_1:
-
+.. _figure_commander:
 
 .. figure:: /static/user_manual/processing/commander.png
    :align: center

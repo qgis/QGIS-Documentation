@@ -12,23 +12,19 @@ Raster Analysis
    .. contents::
       :local:
 
+.. index:: Raster calculator
+
 .. _label_raster_calc:
 
 Raster Calculator
 *****************
 
-.. index:: Raster_Calculator
-
 The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu
 allows you to perform calculations on the basis of existing
-raster pixel values (see figure_raster_10_).
+raster pixel values (see figure_raster_calculator_).
 The results are written to a new raster layer with a GDAL-supported format.
 
-.. _figure_raster_10:
-
-.. only:: html
-
-   **Figure Raster 10:**
+.. _figure_raster_calculator:
 
 .. figure:: /static/user_manual/working_with_raster/raster_calculator.png
    :align: center
@@ -72,28 +68,30 @@ conversion factor for meters to feet: 3.28. The expression is:
 
 **Using a mask**
 
-If you want to mask out parts of a raster -- say, for instance, because you are only interested in
-elevations above 0 meters -- you can use the following expression to create a mask
-and apply the result to a raster in one step.
+If you want to mask out parts of a raster -- say, for instance, because you are
+only interested in elevations above 0 meters -- you can use the following expression
+to create a mask and apply the result to a raster in one step.
 
 ::
 
   ("elevation@1" >= 0) * "elevation@1"
 
-In other words, for every cell greater than or equal to 0 the conditional expression evaluates to
-1, which keeps the original value by multiplying it by 1. Otherwise the conditional expression 
-evaluates to 0, which sets the raster value to 0. This creates the mask on the fly.
+In other words, for every cell greater than or equal to 0 the conditional expression
+evaluates to 1, which keeps the original value by multiplying it by 1.
+Otherwise the conditional expression evaluates to 0, which sets the raster value to 0.
+This creates the mask on the fly.
 
 
-If you want to classify a raster -- say, for instance into two elevation classes, you can
-use the following expression to create a raster with two values 1 and 2 in one step.
+If you want to classify a raster -- say, for instance into two elevation classes,
+you can use the following expression to create a raster with two values 1 and 2
+in one step.
 
 ::
 
   ("elevation@1" < 50) * 1 + ("elevation@1" >= 50) * 2
 
-In other words, for every cell less than 50 set its value to 1. For every cell greater than or
-equal 50 set its value to 2.
+In other words, for every cell less than 50 set its value to 1. For every cell
+greater than or equal 50 set its value to 2.
 
 .. _label_raster_align:
 

@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 .. index::
-   single:plugins
+   single: Plugins
 
 .. _plugins:
 
@@ -47,14 +47,14 @@ Paths to Custom C++ plugins libraries can also be added under
 :menuselection:`Settings --> Options --> System`.
 
 You can manage your plugins in the plugin dialog which can be opened with
-:guilabel:`Plugins > Manage and install plugins ...`.
+:menuselection:`Plugins --> Manage and install plugins ...`.
 
 When a plugin needs to be updated, and if plugins settings have been set up
 accordingly, QGIS main interface will display a blue link in the status bar
 to inform you that there are updates for your plugins waiting to be applied.
 
-.. :index::
-    single:plugins;managing
+.. index::
+   single: Plugins; Plugin manager
 
 .. _managing_plugins:
 
@@ -82,11 +82,7 @@ you can use **[Install plugin]** if a plugin is listed but not installed,
 **[Uninstall plugin]** as well as **[Reinstall plugin]** if a plugin is installed.
 An installed plugin can be temporarily de/activated using the checkbox.
 
-.. _figure_plugins_1:
-
-.. only:: html
-
-   **Figure Plugins 1:**
+.. _figure_plugins_all:
 
 .. figure:: /static/user_manual/plugins/plugins_all.png
    :align: center
@@ -100,11 +96,7 @@ In this menu, you can find only the installed plugins. The external plugins
 can be uninstalled and reinstalled using the **[Uninstall plugin]** and
 **[Reinstall plugin]** buttons. You can **[Upgrade all]** here as well.
 
-.. _figure_plugins_2:
-
-.. only:: html
-
-   **Figure Plugins 2:**
+.. _figure_plugins_installed:
 
 .. figure:: /static/user_manual/plugins/plugins_installed.png
    :align: center
@@ -117,11 +109,7 @@ can be uninstalled and reinstalled using the **[Uninstall plugin]** and
 This menu lists all plugins available that are not installed.
 You can use the **[Install plugin]** button to implement a plugin into QGIS.
 
-.. _figure_plugins_3:
-
-.. only:: html
-
-   **Figure Plugins 3:**
+.. _figure_plugins_not_installed:
 
 .. figure:: /static/user_manual/plugins/plugins_not_installed.png
    :align: center
@@ -136,11 +124,7 @@ If you activated |checkbox| :guilabel:`Show also experimental plugins` in the
 to look for more recent plugin versions. This can be done with the **[Upgrade plugin]** or
 **[Upgrade all]** buttons.
 
-.. _figure_plugins_4:
-
-.. only:: html
-
-   **Figure Plugins 4:**
+.. _figure_plugins_upgradeable:
 
 .. figure:: /static/user_manual/plugins/plugins_upgradeable.png
    :align: center
@@ -173,11 +157,7 @@ you don't need any authentication. You should deploy your own plugin
 repository. You can get more information on QGIS authentication support in
 :ref:`authentication` chapter.
 
-.. _figure_plugins_5:
-
-.. only:: html
-
-   **Figure Plugins 5:**
+.. _figure_plugins_settings:
 
 .. figure:: /static/user_manual/plugins/plugins_settings.png
    :align: center

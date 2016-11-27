@@ -13,7 +13,7 @@ The Symbol Library
       :local:
 
 .. index::
-    single:Style
+    single: Style
 
 .. _vector_style_manager:
 
@@ -29,11 +29,7 @@ to be used in several QGIS projects. You can open it with the :menuselection:`Se
 * organize symbols in custom groups
 * export and import symbols.
 
-.. _figure_symbol_1:
-
-.. only:: html
-
-   **Figure Symbol 1:**
+.. _figure_style_manager:
 
 .. figure:: /static/user_manual/working_with_vector/stylemanager.png
    :align: center
@@ -47,7 +43,7 @@ Groups and smart groups
 You can organize symbols into different categories. These categories, listed in
 the panel at the left, can be static (called **Group**) or dynamic (named
 **Smart Group**). A group is smart when its symbols are dynamically fetched
-according to conditions set. See figure_symbol_2_:
+according to conditions set. See figure_smart_group_:
 
 To create a group, right click on an existing group or on the main **Groups**
 directory in the left of the dialog.
@@ -60,11 +56,7 @@ select symbols in order to appear in the smart group (contains some tags,
 member of a group, have a string in its name, etc.). Any symbol that satisfies
 the entered condition(s) is automatically added to the smart group.
 
-.. _figure_symbol_2:
-
-.. only:: html
-
-   **Figure Symbol 2:**
+.. _figure_smart_group:
 
 .. figure:: /static/user_manual/working_with_vector/create_smartgroup.png
    :align: center
@@ -138,11 +130,7 @@ In the new dialog, you'll need to :
 
 Note that import and export options are also available through right-click.
 
-.. _figure_symbol_3:
-
-.. only:: html
-
-   **Figure Symbol 3:**
+.. _figure_symbol_import:
 
 .. figure:: /static/user_manual/working_with_vector/import_styles.png
    :align: center
@@ -166,15 +154,11 @@ choose the ramp type: Gradient, Random, colorBrewer, or cpt-city.
 
 The first three have options for number of steps and/or multiple stops in
 the color ramp. You can use the |checkbox| :guilabel:`Invert` option while
-classifying the data with a color ramp. See figure_symbol_4_ for an
-example of custom color ramp and figure_symbol_4a_ for the cpt-city dialog.
+classifying the data with a color ramp. See figure_color_custom_ramp_ for an
+example of a custom color ramp and figure_color_cpt_city_ for the cpt-city Colors dialog.
 
 
-.. _figure_symbol_4:
-
-.. only:: html
-
-   **Figure Symbol 4:**
+.. _figure_color_custom_ramp:
 
 .. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
    :align: center
@@ -183,11 +167,7 @@ example of custom color ramp and figure_symbol_4a_ for the cpt-city dialog.
 
 The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.
 
-.. _figure_symbol_4a:
-
-.. only:: html
-
-   **Figure Symbol 4a:**
+.. _figure_color_cpt_city:
 
 .. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
    :align: center
@@ -203,11 +183,7 @@ The symbol Selector
 The Symbol selector is the main dialog to design a symbol.
 You can create or edit Marker, Line or Fill Symbols.
 
-.. _figure_symbol_5:
-
-.. only:: html
-
-   **Figure Symbol 5:**
+.. _figure_symbol_marker:
 
 .. figure:: /static/user_manual/working_with_vector/symbolselector.png
    :align: center

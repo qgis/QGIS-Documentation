@@ -13,8 +13,7 @@ QGIS as OGC Data Client
    .. contents::
       :local:
 
-
-.. index:: Open_Geospatial_Consortium, OGC
+.. index:: OGC (Open Geospatial Consortium)
 
 The Open Geospatial Consortium (OGC) is an international organization with membership of more
 than 300 commercial, governmental, nonprofit and research organizations worldwide.
@@ -50,8 +49,8 @@ specifications as a client, being **SFS** (through support of the PostgreSQL
 WMS/WMTS Client
 ===============
 
-.. index:: WMS_client
-.. index:: WMTS_client
+.. index:: WMS; Client
+   see: WMTS; WMS
 
 .. _`ogc-wms-about`:
 
@@ -104,11 +103,7 @@ and are made available for the GIS client to request them.
 
 This diagram illustrates the concept of tile sets:
 
-.. _figure_wmts_1:
-
-.. only:: html
-
-   **Figure WMTS 1:**
+.. _figure_wmts_tiles:
 
 .. figure:: /static/user_manual/working_with_ogc/concept_wmts.png
    :align: center
@@ -171,9 +166,9 @@ the WMS server appears. You can add some servers to play with by clicking the
 **[Add default servers]** button. This will add two WMS demo servers for you to
 use: the WMS servers of the DM Solutions Group and Lizardtech. To define a new
 WMS server in the :guilabel:`Layers` tab, select the **[New]** button. Then enter
-the parameters to connect to your desired WMS server, as listed in table_OGC_1_:
+the parameters to connect to your desired WMS server, as listed in table_OGC_wms_:
 
-.. _table_OGC_1:
+.. _table_OGC_wms:
 
 +--------------------------------------+------------------------------------------------------------------+
 | Name                                 | A name for this connection.  This name will be used in the       |
@@ -201,7 +196,7 @@ the parameters to connect to your desired WMS server, as listed in table_OGC_1_:
 
 Table OGC 1: WMS Connection Parameters
 
-.. index:: Proxy, proxy-server
+.. index:: Proxy, Proxy server
 
 If you need to set up a proxy server to be able to receive WMS services from the
 internet, you can add your proxy server in the options. Choose
@@ -242,14 +237,10 @@ the download progress is visualized in the lower left of the WMS dialog.
 
 .. following should be replaced in 1.8 with the response of de DM Solutions Group
 
-Your screen should now look a bit like figure_OGR_1_, which shows the response
+Your screen should now look a bit like figure_OGC_add_wms_, which shows the response
 provided by the European Soil Portal WMS server.
 
-.. _figure_OGR_1:
-
-.. only:: html
-
-   **Figure OGR 1:**
+.. _figure_OGC_add_wms:
 
 .. figure:: /static/user_manual/working_with_ogc/connection_wms.png
    :align: center
@@ -320,7 +311,8 @@ and transmitted to QGIS in one go.
 In this version of QGIS, the :guilabel:`Global transparency` setting from the
 :guilabel:`Layer Properties` is hard coded to be always on, where available.
 
-.. index:: WMS_layer_transparency
+.. index:: 
+   single: WMS; Layer transparency
 
 .. tip:: **WMS Layer Transparency**
 
@@ -330,15 +322,15 @@ In this version of QGIS, the :guilabel:`Global transparency` setting from the
 **Coordinate Reference System**
 
 
-.. index:: Coordinate_Reference_System, SRS, CRS
+.. index:: SRS (Spatial Reference System), CRS (Coordinate Reference System)
 
 A coordinate reference system (CRS) is the OGC terminology for a QGIS projection.
 
 Each WMS layer can be presented in multiple CRSs, depending on the capability of
 the WMS server.
 
-To choose a CRS, select **[Change...]** and a dialog similar to Figure Projection 3
-in :ref:`label_projections` will appear. The main difference with the WMS version
+To choose a CRS, select **[Change...]** and a dialog similar to :ref:`figure_projection_custom`
+will appear. The main difference with the WMS version
 of the dialog is that only those CRSs supported by the WMS server will be shown.
 
 .. _`serversearch`:
@@ -346,14 +338,10 @@ of the dialog is that only those CRSs supported by the WMS server will be shown.
 Server search
 -------------
 
-Within QGIS, you can search for WMS servers. Figure_OGC_2_ shows the
+Within QGIS, you can search for WMS servers. Figure_OGC_search_ shows the
 :guilabel:`Server Search` tab with the :guilabel:`Add Layer(s) from a Server` dialog.
 
-.. _Figure_OGC_2:
-
-.. only:: html
-
-   **Figure OGR 2:**
+.. _Figure_OGC_search:
 
 .. figure:: /static/user_manual/working_with_ogc/wms_server_search.png
    :align: center
@@ -378,7 +366,7 @@ Basically, this option is a front end to the API of http://geopole.org.
 Tilesets
 --------
 
-.. index:: WMS_tiles, WMS-C, WMTS
+.. index:: WMS tiles, WMS-C, WMTS
 
 When using WMTS (Cached WMS) services like
 
@@ -399,7 +387,7 @@ available scales from the tile server with a nice slider docked in.
 Using the Identify Tool
 -----------------------
 
-.. index:: WMS_identify
+.. index:: WMS; Identify
 
 Once you have added a WMS server, and if any layer from a WMS server is queryable,
 you can then use the |identify| :sup:`Identify` tool to select a pixel on
@@ -457,7 +445,8 @@ UMN Mapserver below to support GetFeatureInfo in GML format.
 
 **Viewing Properties**
 
-.. index:: WMS_properties
+.. index:: 
+   single: WMS; Properties
 
 Once you have added a WMS server, you can view its properties by right-clicking
 on it in the legend and selecting :menuselection:`Properties`.
@@ -466,7 +455,8 @@ on it in the legend and selecting :menuselection:`Properties`.
 
 **Metadata Tab**
 
-.. index:: WMS_metadata
+.. index:: 
+   pair: WMS; Metadata
 
 The tab :guilabel:`Metadata` displays a wealth of information about the WMS
 server, generally collected from the capabilities statement returned from
@@ -561,7 +551,7 @@ WMS servers can be accessed by public authentication. You can add the (optional)
 credentials when you add a WMS server. See section :ref:`ogc-wms-servers` for
 details.
 
-.. index:: InteProxy, Secured_OGC_Authentication
+.. index:: InteProxy, Secured OGC Authentication
 
 .. tip:: **Accessing secured OGC-layers**
 
@@ -570,7 +560,7 @@ details.
    support several authentication methods. More information can be found in the
    InteProxy manual at http://inteproxy.wald.intevation.org.
 
-.. index:: QGIS_mapserver, WMS_1.3.0
+.. index:: Mapserver
 
 .. tip:: **QGIS WMS Mapserver**
 
@@ -582,7 +572,7 @@ details.
 WCS Client
 ==========
 
-.. index:: WCS, Web Coverage Service
+.. index:: WCS (Web Coverage Service)
 
 |wcs| A Web Coverage Service (WCS) provides access to raster data in forms that are useful
 for client-side rendering, as input into scientific models, and for other clients.
@@ -613,7 +603,7 @@ supports selection of time position, if temporal domain is offered by the server
 WFS and WFS-T Client
 ====================
 
-.. index:: WFS, WFS-T, WFS_Transactional
+.. index:: WFS, WFS-T (WFS Transactional)
 
 In QGIS, a WFS layer behaves pretty much like any other vector layer. You can
 identify and select features, and view the attribute table. Since QGIS 1.6, editing
@@ -651,11 +641,7 @@ Note that any proxy settings you may have set in your preferences are also recog
    *Authentication configuration* instead (:guilabel:`configurations` tab). 
    See ref:`authentication_index` for more details.
 
-.. _figure_OGC_3:
-
-.. only:: html
-
-   **Figure OGR 3:**
+.. _figure_OGC_add_wfs:
 
 .. figure:: /static/user_manual/working_with_ogc/connection_wfs.png
    :align: center

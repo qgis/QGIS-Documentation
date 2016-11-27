@@ -146,11 +146,7 @@ you can create read-only links to external GDAL/OGR-supported datasets without
 importing them. This is not the usual way for beginners to work with GRASS, therefore
 this functionality will not be described here.)
 
-.. _figure_grass_location_1:
-
-.. only:: html
-
-   **Figure GRASS location 1:**
+.. _figure_grass_location:
 
 .. figure:: /static/user_manual/grass_integration/grass_location.png
    :align: center
@@ -228,7 +224,7 @@ install the dataset on your computer (see :ref:`label_sampledata`).
 #. We can use this wizard to create a new :file:`MAPSET` within an existing
    :file:`LOCATION` (see section :ref:`sec_add_mapset`) or to create a new
    :file:`LOCATION` altogether. Select |radioButtonOn| :guilabel:`Create new
-   location` (see figure_grass_location_2_).
+   location` (see figure_grass_new_location_).
 #. Enter a name for the :file:`LOCATION` -- we used 'alaska' -- and click **[Next]**.
 #. Define the projection by clicking on the radio button |radioButtonOn|
    :guilabel:`Projection` to enable the projection list.
@@ -258,11 +254,7 @@ install the dataset on your computer (see :ref:`label_sampledata`).
    enabled.
 
 
-.. _figure_grass_location_2:
-
-.. only:: html
-
-   **Figure GRASS location 2:**
+.. _figure_grass_new_location:
 
 .. figure:: /static/user_manual/grass_integration/create_grass_location.png
    :align: center
@@ -300,7 +292,7 @@ coordinate values and the currently selected raster resolution (see Neteler & Mi
 #. We can use this wizard to create a new :file:`MAPSET` within an existing
    :file:`LOCATION` or to create a new :file:`LOCATION` altogether. Click on the
    radio button |radioButtonOn| :guilabel:`Select location`
-   (see figure_grass_location_2_) and click **[Next]**.
+   (see figure_grass_new_location_) and click **[Next]**.
 #. Enter the name :file:`text` for the new :file:`MAPSET`. Below in the wizard, you
    see a list of existing :file:`MAPSETs` and corresponding owners.
 #. Click **[Next]**, check out the summary to make sure it's all correct and
@@ -343,13 +335,13 @@ Attributes can be stored inside the GRASS :file:`LOCATION` as dBase,  SQLite3 or
 in external database tables, for example, PostgreSQL, MySQL, Oracle, etc.
 
 .. index::
-   single:GRASS;attribute storage
+   single: GRASS; Attribute storage
 
 Attributes in database tables are linked to geometry elements using a 'category'
 value.
 
 .. index::
-   single:GRASS;attribute linkage
+   single: GRASS; Attribute linkage
 
 'Category' (key, ID) is an integer attached to geometry primitives, and it is
 used as the link to one key column in the database table.
@@ -362,7 +354,9 @@ used as the link to one key column in the database table.
    books and tutorials in several languages.
 
 .. index::
-      see:GRASS;Creating new vectors;editing;creating a new layer
+      seealso: Creating new layer; GRASS
+      seealso: Editing; GRASS
+
 
 .. _creating_new_grass_vectors:
 
@@ -397,7 +391,7 @@ Digitizing and editing a GRASS vector layer
 ===========================================
 
 .. index::
-   single:GRASS;digitizing tools
+   pair: GRASS; Digitizing tools
 
 GRASS vector layers can be digitized using the standard QGIS digitizing tools.
 There are however some particularities, which you should know about, due to
@@ -432,7 +426,7 @@ There are two main reasons for this behaviour:
 
 The 'Digitizing Toolbar' has some specific tools when a GRASS layer is edited:
 
-.. _table_grass_digitizing_1:
+.. _table_grass_digitizing:
 
 +-------------------------+------------------------+---------------------------------------------+
 | Icon                    | Tool                   | Purpose                                     |
@@ -449,7 +443,7 @@ The 'Digitizing Toolbar' has some specific tools when a GRASS layer is edited:
 +-------------------------+------------------------+---------------------------------------------+
 
 
-Table GRASS Digitizing 1: GRASS Digitizing Tools
+Table GRASS Digitizing: GRASS Digitizing Tools
 
 .. tip:: **Digitizing polygons in GRASS**
 
@@ -495,7 +489,7 @@ assigned and new record in attribute table is created when an attribute of that 
 **Editing style**
 
 .. index::
-   single:GRASS;style
+   single: GRASS; Style
 
 The topological symbology is essential for effective editing of topological data. When editing
 starts, a specialized 'GRASS Edit' renderer is set on the layer automatically and original renderer
@@ -547,7 +541,7 @@ This is being solved with GRASS developers.
 The GRASS region tool
 =====================
 .. index::
-   single:GRASS;region
+   single: GRASS; Region
 
 The region definition (setting a spatial working window) in GRASS is important
 for working with raster layers. Vector analysis is by default not limited to any
@@ -561,15 +555,13 @@ It is possible to switch on and off the visualization of the GRASS region in the
 canvas using the |grassRegion| :sup:`Display current GRASS region` button.
 
 .. index::
-   single:GRASS;region display
+   single: GRASS; Region editing
 
 The region can be modified in 'Region' tab in 'GRASS Tolls' dock widget.
 Type in the new region bounds and resolution, and click **[Apply]**.
 If you click on **[Select the extent by dragging on canvas]** you can select
 a new region interactively with your mouse on the QGIS canvas dragging a rectangle.
 
-.. index::
-   single:GRASS;region editing
 
 The GRASS module :file:`g.region` provides a lot more parameters to define an
 appropriate region extent and resolution for your raster analysis. You can use
@@ -580,7 +572,7 @@ these parameters with the GRASS Toolbox, described in section :ref:`subsec_grass
 The GRASS Toolbox
 =================
 .. index::
-   single:GRASS toolbox
+   single: GRASS toolbox
 
 The |grassTools| :sup:`Open GRASS Tools` box provides GRASS module functionalities
 to work with data inside a selected GRASS :file:`LOCATION` and :file:`MAPSET`.
@@ -589,11 +581,7 @@ that you have write permission for (usually granted, if you created the :file:`M
 This is necessary, because new raster or vector layers created during analysis
 need to be written to the currently selected :file:`LOCATION` and :file:`MAPSET`.
 
-.. _figure_grass_toolbox_1:
-
-.. only:: html
-
-   **Figure GRASS Toolbox 1:**
+.. _figure_grass_toolbox:
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_moduletree.png
    :align: center
@@ -616,7 +604,7 @@ version |CURRENT| is available in the GRASS wiki at http://grass.osgeo.org/wiki/
 It is also possible to customize the GRASS Toolbox content. This procedure is
 described in section :ref:`sec_toolbox-customizing`.
 
-As shown in figure_grass_toolbox_1_, you can look for the appropriate GRASS
+As shown in figure_grass_toolbox_, you can look for the appropriate GRASS
 module using the thematically grouped :guilabel:`Modules Tree` or the searchable
 :guilabel:`Modules List` tab.
 
@@ -630,11 +618,7 @@ The :guilabel:`Options` tab provides a simplified module dialog where you can
 usually select a raster or vector layer visualized in the QGIS canvas and enter
 further module-specific parameters to run the module.
 
-.. _figure_grass_module_1:
-
-.. only:: html
-
-   **Figure GRASS module 1:**
+.. _figure_grass_module:
 
 .. figure:: /static/user_manual/grass_integration/grass_module_option.png
    :align: center
@@ -654,11 +638,7 @@ to switch to the GRASS shell.
 
 **Output**
 
-.. _figure_grass_module_2:
-
-.. only:: html
-
-   **Figure GRASS module 2:**
+.. _figure_grass_module_output:
 
 .. figure:: /static/user_manual/grass_integration/grass_module_output.png
    :align: center
@@ -672,11 +652,7 @@ all works well, you will finally see a ``Successfully finished`` message.
 
 **Manual**
 
-.. _figure_grass_module_3:
-
-.. only:: html
-
-   **Figure GRASS module 3:**
+.. _figure_grass_module_manual:
 
 .. figure:: /static/user_manual/grass_integration/grass_module_manual.png
    :align: center
@@ -691,7 +667,7 @@ further links to the :file:`Main Help index`, the :file:`Thematic index` and the
 module :file:`g.manual`.
 
 .. index::
-   single:GRASS;display results
+   single: GRASS; Display results
 
 .. tip:: **Display results immediately**
 
@@ -707,8 +683,8 @@ Creating contour lines
 ......................
 
 The first example creates a vector contour map from an elevation raster (DEM).
-Here, it is assumed that you have the Alaska :file:`LOCATION` set up as explained in section
-:ref:`sec_import_loc_data`.
+Here, it is assumed that you have the Alaska :file:`LOCATION` set up as explained
+in section :ref:`sec_import_loc_data`.
 
 * First, open the location by clicking the
   |grassOpenMapset| :sup:`Open mapset` button and choosing the Alaska location.
@@ -738,9 +714,6 @@ the vertices. The resulting vector will load faster. This process is useful
 when you have a highly detailed vector, but you are creating a very small-scale
 map, so the detail is unnecessary.
 
-.. index::
-   single:GRASS;display results
-
 .. tip:: **The simplify tool**
 
    Note that the QGIS fTools plugin has a :menuselection:`Simplify geometries -->`
@@ -766,11 +739,7 @@ causing it to load even more slowly.
   that the new contour lines have smoother corners than the original while staying
   faithful to the original overall shape.
 
-.. _figure_grass_module_4:
-
-.. only:: html
-
-   **Figure GRASS module 4:**
+.. _figure_grass_module_generalize:
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_vgeneralize.png
    :align: center
@@ -779,7 +748,7 @@ causing it to load even more slowly.
    GRASS module v.generalize to smooth a vector map
 
 .. index::
-   single:GRASS;toolbox
+   single: GRASS; Toolbox
 .. tip:: **Other uses for r.contour**
 
    The procedure described above can be used in other equivalent situations. If
@@ -798,8 +767,8 @@ and giving a reflectance value to each cell. Thus, you get sun-facing slopes
 lighted; the slopes facing away from the sun (in shadow) are darkened.
 
 * Begin this example by loading the ``gtopo30`` elevation raster. Start the GRASS
-  Toolbox, and under the Raster category, double-click to open :menuselection:`Spatial analysis
-  --> Terrain analysis`.
+  Toolbox, and under the Raster category, double-click to open :menuselection:`Spatial
+  analysis --> Terrain analysis`.
 * Then click **r.shaded.relief** to open the module.
 * Change the :guilabel:`azimuth angle` |selectNumber| 270 to 315.
 * Enter ``gtopo30_shade`` for the new hillshade raster, and click **[Run**].
@@ -826,11 +795,7 @@ options to the modules that are in the Toolbox with the simplest default
 parameters. This example demonstrates the use of an additional option in the
 **r.shaded.relief** module that was shown above.
 
-.. figure_grass_module_5:
-
-.. only:: html
-
-   **Figure GRASS module 5:**
+.. _figure_grass_module_shell:
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shell.png
    :align: center
@@ -852,11 +817,7 @@ effect is even more pronounced.
   You should see that the 3-D effect stands out more strongly compared with the
   first shaded relief map.
 
-.. figure_grass_module_6:
-
-.. only:: html
-
-   **Figure GRASS module 6:**
+.. _figure_grass_module_display:
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shadedrelief.png
    :align: center
@@ -900,7 +861,7 @@ of statistics for each polygon in a vector map.
 Customizing the GRASS Toolbox
 ------------------------------
 .. index::
-   single:GRASS toolbox;customize
+   single: GRASS toolbox; Customize
 
 Nearly all GRASS modules can be added to the GRASS Toolbox. An XML interface is
 provided to parse the pretty simple XML files that configure the modules'

@@ -2,8 +2,9 @@
 
    |updatedisclaimer|
 
-.. :index::
-    single:core plugins
+.. index::
+   single: Core plugins
+   seealso: Core plugins; Plugins
 
 .. _core_plugins:
 

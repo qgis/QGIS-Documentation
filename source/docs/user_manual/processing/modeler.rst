@@ -29,10 +29,6 @@ be used to add new elements to the model.
 
 .. _figure_modeler:
 
-.. only:: html
-
-   **Figure Processing 17:**
-
 .. figure:: /static/user_manual/processing/modeler_canvas.png
    :align: center
 
@@ -74,27 +70,19 @@ default value and a range of valid values.
 
 .. _figure_model_parameter:
 
-.. only:: html
-
-   **Figure Processing 18:**
-
 .. figure:: /static/user_manual/processing/models_parameters.png
    :align: center
 
-   Model Parameters
+   Model Parameters Definition
 
 For each added input, a new element is added to the modeler canvas.
 
-.. _figure_model_parameter_2:
-
-.. only:: html
-
-   **Figure Processing 19:**
+.. _figure_model_parameter_canvas:
 
 .. figure:: /static/user_manual/processing/models_parameters2.png
    :align: center
 
-   Model Parameters
+   Model Parameters in canvas
 
 You can also add inputs by dragging the input type from the list and dropping
 it in the modeler canvas, in the position where you want to place it.
@@ -106,16 +94,12 @@ Once the inputs have been defined, it is time to define the algorithms to apply
 on them. Algorithms can be found in the :guilabel:`Algorithms` tab, grouped much
 in the same way as they are in the toolbox.
 
-.. _figure_model_parameter_3:
-
-.. only:: html
-
-   **Figure Processing 20:**
+.. _figure_model_parameter_inputs:
 
 .. figure:: /static/user_manual/processing/models_parameters3.png
    :align: center
 
-   Model Parameters
+   Model Inputs
 
 
 To add an algorithm to a model, double-click on its name or drag and drop it,
@@ -124,16 +108,12 @@ will appear, with a content similar to the one found in the execution panel that
 is shown when executing the algorithm from the toolbox. The one shown next
 corresponds to the SAGA 'Convergence index' algorithm.
 
-.. _figure_model_parameter_4:
-
-.. only:: html
-
-   **Figure Processing 21:**
+.. _figure_model_parameter_alg:
 
 .. figure:: /static/user_manual/processing/models_parameters4.png
    :align: center
 
-   Model Parameters
+   Model Algorithm parameters
 
 As you can see, some differences exist. Instead of the file output box that was
 used to set the file path for output layers and tables, a simple text box is used here. If
@@ -166,8 +146,8 @@ Let's see how to introduce the values for each type of parameter.
 In all cases, you will find an additional parameter named *Parent algorithms*
 that is not available when calling the algorithm from the toolbox. This parameter
 allows you to define the order in which algorithms are executed by explicitly
-defining one algorithm as a parent of the current one, which will force the parent algorithm to be
-executed before the current one.
+defining one algorithm as a parent of the current one, which will force the parent
+algorithm to be executed before the current one.
 
 When you use the output of a previous algorithm as the input of your algorithm,
 that implicitly sets the previous algorithm as parent of the current one (and places the
@@ -230,10 +210,6 @@ see a context menu like the one shown next:
 
 .. _figure_model_right_click:
 
-.. only:: html
-
-   **Figure Processing 22:**
-
 .. figure:: /static/user_manual/processing/modeler_right_click.png
    :align: center
 
@@ -246,10 +222,6 @@ one as input. If you try to remove an algorithm that has others depending on it,
 a warning message like the one you can see below will be shown:
 
 .. _figure_cannot_delete_alg:
-
-.. only:: html
-
-   **Figure Processing 23:**
 
 .. figure:: /static/user_manual/processing/cannot_delete_alg.png
    :align: center
@@ -275,10 +247,6 @@ as part of the model.
 
 .. _figure_cannot_model_deactivate:
 
-.. only:: html
-
-   **Figure Processing 24:**
-
 .. figure:: /static/user_manual/processing/deactivated.png
    :align: center
 
@@ -294,10 +262,6 @@ You can document your models from the modeler itself. Just click on the **[Edit 
 button and a dialog like the one shown next will appear.
 
 .. _figure_help_edition:
-
-.. only:: html
-
-   **Figure Processing 25:**
 
 .. figure:: /static/user_manual/processing/help_edition.png
    :align: center

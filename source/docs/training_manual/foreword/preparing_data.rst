@@ -39,7 +39,7 @@ water, such as streams and rivers.
   to set the co-ordinates.
 * Choose a location to save the resulting .osm file and click :guilabel:`Ok`:
 
-.. _set_osm_region:
+.. _figure_set_osm_region:
 
 .. image:: /static/training_manual/foreword/set_osm_region.png
    :align: center
@@ -50,11 +50,15 @@ water, such as streams and rivers.
 * In the dialog which opens, select all the layers, *except* the
   :kbd:`other_relations` and :kbd:`multilinestrings` layer:
 
+.. _figure_select_osm_layers:
+
 .. image:: /static/training_manual/foreword/select_osm_layers.png
    :align: center
 
 This will load three layers into your map which relate to OSM's naming
 conventions (you may need to zoom in/out to see the vector data).
+
+.. _figure_osm_data_loaded:
 
 .. image:: /static/training_manual/foreword/osm_data_loaded.png
    :align: center
@@ -162,7 +166,7 @@ from http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp.
 
 You'll need images which cover the entire region you have chosen to use.
 If you kept same data as the training manual, you can use the extent shown
-in the set_osm_region_ figure above, otherwise adapt your extent.
+in the figure_set_osm_region_ figure above, otherwise adapt your extent.
 Keep the :file:`GeoTiff` format. Once the form is filled, click on the
 :guilabel:`Click here to Begin Search >>` button and download the file(s).
 

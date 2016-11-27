@@ -231,11 +231,7 @@ Figure
 
 ::
 
-   .. _figure_readme_1:
-
-   .. only:: html
-
-      **Figure Readme 1:**
+   .. _figure_readme:
 
    .. figure:: /static/common/qgislogo.png
       :width: 20 em
@@ -246,11 +242,7 @@ Figure
 
 The result looks like this:
 
-.. _figure_readme_1:
-
-.. only:: html
-
-   **Figure Readme 1:**
+.. _figure_readme:
 
 .. figure:: /static/common/qgislogo.png
    :width: 20 em
@@ -258,7 +250,7 @@ The result looks like this:
 
    A caption: A logo I like
 
-Use ``.. only:: html`` to make the number to the figure (**Figure Readme 1**)
+Use ``.. only:: html`` to make the number to the figure (**Figure Readme**)
 visible only in the html files.
 The scripts will insert an automatical generated number before the caption of
 the figure in pdf.
@@ -270,19 +262,19 @@ Referencing to the figure can be done using the reference label like this
 
 ::
 
-   (see Figure_Readme_1_).
+   (see Figure_readme_).
 
 
-It will show the anchor Figure_Readme_1_. You can use uppercase if you want.
+It will show the anchor Figure_readme_. You can use uppercase if you want.
 It can be used in the same :file:`.rst` document but not in other .rst
 documents.
 
 You can not use the ``:ref:`` role for reference anymore, because in html the reference
-to the caption is lost (it now refers to the place before **Figure Readme 1:**)
+to the caption is lost (it now refers to the place before **Figure Readme:**)
 
 ::
 
-   see :ref:`figure_readme_1`, does not work due to the lost reference to
+   see :ref:`figure_readme`, does not work due to the lost reference to
    the caption of the figure, this is not a 'bug' but a choice we made!
 
 
@@ -306,7 +298,7 @@ You can also use more complicated tables by drawing them using references and al
 
 ::
 
-   .. _my_drawn_table_1:
+   .. _my_drawn_table:
 
    +---------------+--------------------+
    | Windows       | Mac OSX            |
@@ -318,11 +310,11 @@ You can also use more complicated tables by drawing them using references and al
 
    My drawn table, mind you this is unfortunately not regarded a caption
 
-   You can reference to it like this my_drawn_table_1_.
+   You can reference to it like this my_drawn_table_.
 
 The result:
 
-.. _my_drawn_table_1:
+.. _my_drawn_table:
 
 +---------------+--------------------+
 | Windows       | Mac OSX            |
@@ -334,7 +326,7 @@ The result:
 
 My drawn table, mind you this is unfortunately not regarded a caption
 
-You can reference to it like this my_drawn_table_1_.
+You can reference to it like this my_drawn_table_.
 
 
 Index

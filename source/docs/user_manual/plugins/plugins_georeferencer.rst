@@ -2,6 +2,8 @@
 
    |updatedisclaimer|
 
+.. index:: Georeferencing images
+   single: Raster; Georeference
 .. _`georef`:
 
 Georeferencer Plugin
@@ -21,9 +23,9 @@ you can accurately determine coordinates.
 **Features**
 
 .. index::
-   single:Georeferencer tools
+   single: Tools; Georeferencer tools
 
-.. _table_georeferencer_1:
+.. _table_georeferencer_tools:
 
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | Icon                           | Purpose                      | Icon                          | Purpose                    |
@@ -49,7 +51,7 @@ you can accurately determine coordinates.
 | |localHistogramStretch|        | Local histogram stretch      |                               |                            |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 
-Table Georeferencer 1: Georeferencer Tools
+Table Georeferencer: Georeferencer Tools
 
 Usual procedure
 ---------------
@@ -75,23 +77,19 @@ the result will be.
 The first step is to start QGIS, load the Georeferencer Plugin (see
 :ref:`managing_plugins`) and click on :menuselection:`Raster --> Georeferencer`
 , which appears in the QGIS menu bar. The Georeferencer Plugin dialog
-appears as shown in figure_georeferencer_1_.
+appears as shown in figure_georeferencer_dialog_.
 
 For this example, we are using a topo sheet of South Dakota from SDGS. It can
 later be visualized together with the data from the GRASS :file:`spearfish60`
 location. You can download the topo sheet here:
 http://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz.
 
-.. _figure_georeferencer_1:
-
-.. only:: html
-
-   **Figure Georeferencer 1:**
+.. _figure_georeferencer_dialog:
 
 .. figure:: /static/user_manual/plugins/georefplugin.png
    :align: center
 
-   Georeferencer Plugin Dialog |nix|
+   Georeferencer Plugin Dialog
 
 
 .. _`georeferencer_entering`:
@@ -104,7 +102,7 @@ Entering ground control points (GCPs)
    area of the dialog. Once the raster is loaded, we can start to enter reference
    points.
 #. Using the |addGCPPoint| :sup:`Add Point` button, add points to the
-   main working area and enter their coordinates (see Figure figure_georeferencer_2_).
+   main working area and enter their coordinates (see Figure figure_georeferencer_add_points_).
    For this procedure you have three options:
 
    - Click on a point in the raster image and enter the X and Y coordinates
@@ -120,16 +118,12 @@ Entering ground control points (GCPs)
    additional tools on the plugin dialog to zoom and pan the working area in
    order to locate a relevant set of GCP points.
 
-.. _figure_georeferencer_2:
-
-.. only:: html
-
-   **Figure Georeferencer 2:**
+.. _figure_georeferencer_add_points:
 
 .. figure:: /static/user_manual/plugins/choose_points.png
    :align: center
 
-   Add points to the raster image |nix|
+   Add points to the raster image
 
 
 The points that are added to the map will be stored in a separate text file
@@ -148,16 +142,12 @@ Defining the transformation settings
 After you have added your GCPs to the raster image, you need to define the
 transformation settings for the georeferencing process.
 
-.. _figure_georeferencer_3:
-
-.. only:: html
-
-   **Figure Georeferencer 3:**
+.. _figure_georeferencer_transform:
 
 .. figure:: /static/user_manual/plugins/transformation_settings.png
    :align: center
 
-   Defining the georeferencer transformation settings |nix|
+   Defining the georeferencer transformation settings
 
 
 Available Transformation algorithms

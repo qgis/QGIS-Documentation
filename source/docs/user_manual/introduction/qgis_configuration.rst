@@ -21,7 +21,7 @@ between Options, Project Properties and Customization.
 
 ..  FIXME: please add more introduction here
 
-
+.. index:: Options, Configuration
 .. _gui_options:
 
 Options
@@ -79,6 +79,7 @@ General Tab
   choose between 'Never', 'Ask', 'For this session only' and
   'Always (not recommended)'.
 
+.. index:: Environment variables
 .. _`env_options`:
 
 System Tab
@@ -118,10 +119,6 @@ source code.
   |checkbox| :guilabel:`Show only QGIS-specific variables`.
 
 .. _figure_environment_variables:
-
-.. only:: html
-
-   **Figure System Environment:**
 
 .. figure:: /static/user_manual/introduction/sys-env-options.png
    :align: center
@@ -180,15 +177,14 @@ Data Sources Tab
 This widget lists all the folder you chose to hide from the Browser panel.
 Removing a folder from the list will make it available in the Browser panel.
 
+.. index:: Rendering
 
 Rendering Tab
 --------------
 
+\
+
 .. _figure_rendering_menu:
-
-.. only:: html
-
-   **Figure Rendering Menu:**
 
 .. figure:: /static/user_manual/introduction/rendering_menu.png
    :align: center
@@ -254,6 +250,8 @@ Rendering Tab
 
 * |checkbox| :guilabel:`Map canvas refresh`
 
+.. index:: Colors
+
 Colors Tab
 ------------
 
@@ -284,6 +282,8 @@ Canvas and Legend Tab
   * |checkbox| :guilabel:`Display classification attribute names`
   * |checkbox| :guilabel:`Create raster icons (may be slow)`
   * you can also set the :guilabel:`WMS getLegendGraphic Resolution`
+
+.. index:: Map tools
 
 Map tools Tab
 --------------
@@ -346,10 +346,13 @@ You can define the :guilabel:`Default font` used within the :ref:`print composer
 * Define the :guilabel:`Grid offset` |selectNumber| for x and y
 * Define the :guilabel:`Snap tolerance` |selectNumber|
 
+
 **Composer Paths**
 
 * Define :guilabel:`Path(s) to search for extra print templates`: a list of folders
   with custom composer templates to use while creating new one.
+
+.. index:: Digitizing configuration
 
 Digitizing Tab
 ---------------
@@ -408,6 +411,8 @@ GDAL is a data exchange library for raster files. In this tab, you can
 raster formats. You can define which GDAL driver is to be used for a raster
 format, as in some cases more than one GDAL driver is available.
 
+.. index:: CRS, Datum transformation, On-the-fly reprojection
+
 CRS Tab
 --------
 
@@ -446,6 +451,8 @@ or when a layer without a CRS is loaded.
   transformation table). You then need to manually enter each setting.
 
 
+.. index:: Overwrite language
+
 Locale Tab
 -----------
 
@@ -458,6 +465,8 @@ Authentication Tab
 In the :guilabel:`Authentication` tab you can set authentication configurations
 and manage PKI certificates. See :ref:`authentication_index` for more
 details.
+
+.. index:: Proxy, Network
 
 Network Tab
 ------------
@@ -472,12 +481,7 @@ Network Tab
 * Define :guilabel:`Max retry in case of tile or feature request errors`
 * Define :guilabel:`User-Agent`
 
-
 .. _figure_network_tab:
-
-.. only:: html
-
-   **Figure Network Tab:**
 
 .. figure:: /static/user_manual/introduction/proxy-settings.png
    :align: center
@@ -510,8 +514,7 @@ If you need more detailed information about the different proxy settings,
 please refer to the manual of the underlying QT library documentation at
 http://doc.qt.io/qt-4.8/qnetworkproxy.html#ProxyType-enum
 
-.. tip::
-   **Using Proxies**
+.. tip:: **Using Proxies**
 
    Using proxies can sometimes be tricky. It is useful to proceed by 'trial and
    error' with the above proxy types, to check if they succeed in your case.
@@ -547,7 +550,9 @@ the widget is populated with a tree of all QGIS settings, which you can directly
    QGIS installation in various ways.
 
 
-.. index:: Properties; Project, Settings; Project
+.. index:: Project properties
+   single: Project; Properties
+   single: Settings; Project
 
 Project Properties
 ==================
@@ -598,10 +603,6 @@ described above.
 
 .. _figure_general_tab:
 
-.. only:: html
-
-   **Figure General Tab:**
-
 .. figure:: /static/user_manual/introduction/project_general.png
    :align: center
 
@@ -627,10 +628,6 @@ described above.
   ``closeProject()``.
 
 .. _figure_macro_tab:
-
-.. only:: html
-
-   **Figure Macro Tab:**
 
 .. figure:: /static/user_manual/introduction/macro.png
    :align: center
@@ -665,12 +662,14 @@ described above.
   lists and helps you create project-level variables.
   More information about variables at section :ref:`general_tools_variables`.
 
+
+.. index:: Customization
 .. _sec_customization:
 
 Customization
 =============
 
-The :index:`customization` dialog lets you (de)activate almost every element in the QGIS
+The customization dialog lets you (de)activate almost every element in the QGIS
 user interface. This can be very useful if you want to provide your end-users with a
 'light' version of QGIS, containing only the icons, menus or panels they need.
 
@@ -678,10 +677,6 @@ user interface. This can be very useful if you want to provide your end-users wi
    Before your changes are applied, you need to restart QGIS.
 
 .. _figure_customization:
-
-.. only:: html
-
-   **Figure Customization 1:**
 
 .. figure:: /static/user_manual/introduction/customization.png
    :align: center

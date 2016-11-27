@@ -40,7 +40,7 @@ For an optimal and accurate edit of the vector layer geometries, we need to set
 an appropriate value of snapping tolerance and search radius for features vertices.
 
 
-.. index:: Snapping Tolerance
+.. index:: Snapping tolerance
 
 Snapping tolerance
 ------------------
@@ -66,7 +66,7 @@ The snapping tolerance setting affects all tools that work with tolerance.
 #. A layer-based snapping tolerance that overrides the global snapping options
    can be defined by choosing :menuselection:`Settings --> Snapping options`.
    It enables and adjusts snapping mode
-   and tolerance on a layer basis (see figure_edit_1_ ). This dialog offers
+   and tolerance on a layer basis (see figure_edit_snapping_ ). This dialog offers
    three different modes to select the layer(s) to snap to:
 
    * :guilabel:`Current layer`: only the active layer is used, a convenient way
@@ -82,11 +82,7 @@ The snapping tolerance setting affects all tools that work with tolerance.
      you need to snap to.
 
 
-.. _figure_edit_1:
-
-.. only:: html
-
-   **Figure Edit 1:**
+.. _figure_edit_snapping:
 
 .. figure:: /static/user_manual/working_with_vector/editProjectSnapping.png
    :align: center
@@ -106,12 +102,12 @@ a snapping tolerance that refers to ``layer units``, the units of the reprojecte
 layer when 'on-the-fly' CRS transformation is on.
 
 
-.. index:: Search Radius
+.. index:: Search radius
 
 Search radius
 --------------
 
-:index:`Search radius` is the distance QGIS uses to ``search`` for the closest vertex
+Search radius is the distance QGIS uses to ``search`` for the closest vertex
 you are trying to select when you click on the map. If you aren't within the
 search radius, QGIS won't find and select any vertex for editing.
 Snap tolerance and search radius are set in map units or pixels, so you may
@@ -126,7 +122,8 @@ The search radius for vertex edits in layer units can be defined in the
 project-wide snapping tolerance.
 
 
-.. Index:: Topological Editing
+.. index:: Topological editing
+   single: Digitizing; Topology
 
 Topological editing
 ===================
@@ -138,8 +135,9 @@ define |checkbox| :guilabel:`Enable topological editing`, and/or for polygon
 layers, activate the |checkbox| :guilabel:`Avoid Intersections` option.
 
 
-.. index:: Shared Polygon Boundaries
-
+.. index:: Shared polygon boundaries
+   seealso: Shared polygon boundaries; Topology
+   
 Enable topological editing
 --------------------------
 
@@ -148,7 +146,8 @@ and maintaining common boundaries in features mosaics. QGIS 'detects'
 shared boundary by the features, so you only have to move a common vertex/segment
 once, and QGIS will take care of updating the neighboring features.
 
-.. Index:: Avoid Intersections
+.. index:: Avoid intersections
+   seealso: Avoid intersections; Topology
 
 Avoid intersections of new polygons
 -----------------------------------
@@ -172,7 +171,7 @@ don't have to digitize all vertices of the common boundary.
    need it otherwise, you can get unexpected geometries.
 
 
-.. Index:: Snapping On Intersections
+.. index:: Snapping on intersections
 
 Enable snapping on intersections
 ---------------------------------
@@ -187,7 +186,9 @@ Geometry Checker
 A core plugin can help the user to find the geometry invalidity. You can find
 more information on this plugin at :ref:`geometry_checker`.
 
-.. index:: Digitizing
+.. index:: Digitizing, Digitizing tools
+   see: Editing; Digitizing
+   seealso: Digitizing; Attribute table
 
 .. _sec_edit_existing_layer:
 
@@ -212,7 +213,7 @@ supports it (see :ref:`supported_format`), and the underlying data source is wri
 In general, tools for editing vector layers are divided into a digitizing and an advanced
 digitizing toolbar, described in section :ref:`sec_advanced_edit`. You can
 select and unselect both under :menuselection:`View --> Toolbars -->`.
-Using the basic :index:`digitizing tools`, you can perform the following functions:
+Using the basic digitizing tools, you can perform the following functions:
 
 
 .. _table_editing:
@@ -240,7 +241,7 @@ Table Editing: Vector layer basic editing toolbar
 Note that while using any of the digitizing tools, you can still :ref:`zoom or pan
 <zoom_pan>` in the map canvas without losing the focus on the tool.
 
-All :index:`editing` sessions start by choosing the |toggleEditing| :sup:`Toggle editing`
+All editing sessions start by choosing the |toggleEditing| :sup:`Toggle editing`
 option found in the context menu of a given layer, from the attribute table dialog, the
 digitizing toolbar or the :menuselection:`Edit` menu.
 
@@ -256,6 +257,8 @@ unless :guilabel:`Show markers only for selected features` option under
    Remember to |saveEdits| :sup:`Save Layer Edits` regularly. This will also
    check that your data source can accept all the changes.
 
+.. index:: Adding features
+
 Adding Features
 ---------------
 
@@ -268,7 +271,7 @@ The next buttons |circularStringCurvePoint| :sup:`Add circular string` or
 |circularStringRadius| :sup:`Add circular string by radius` allow users to add
 line or polygon features with a circular geometry.
 
-To :index:`create features` with these tools, you first digitize the geometry
+To create features with these tools, you first digitize the geometry
 then enter its attributes.
 To digitize the geometry, left-click on the map area to create the first
 point of your new feature.
@@ -301,7 +304,7 @@ that feature.
    update rubber band during node editing`.
 
 The attribute window will appear, allowing you to enter the information for
-the new feature. Figure_edit_2_ shows setting attributes for a fictitious new
+the new feature. Figure_edit_values_ shows setting attributes for a fictitious new
 river in Alaska. However, in the :guilabel:`Digitizing` menu under the
 :menuselection:`Settings --> Options` menu, you can also activate:
 
@@ -310,11 +313,7 @@ river in Alaska. However, in the :guilabel:`Digitizing` menu under the
 * or |checkbox| :guilabel:`Reuse last entered attribute values` to have fields
   automatically filled at the opening of the form and just have to type changing values.
 
-.. _figure_edit_2:
-
-.. only:: html
-
-   **Figure Edit 2:**
+.. _figure_edit_values:
 
 .. figure:: /static/user_manual/working_with_vector/editDigitizing.png
    :align: center
@@ -325,7 +324,7 @@ With the |moveFeature| :sup:`Move Feature(s)` icon on the toolbar, you can
 move existing features.
 
 
-.. index:: Node_Tool
+.. index:: Node tool
 
 Node Tool
 ---------
@@ -400,6 +399,8 @@ tool provides tooltips to identify a vertex by hovering the pointer over it.
    the vertices of the feature, click a vertex, drag and snap it to a target vertex:
    the whole feature is moved and snapped to the other feature.
 
+.. index:: Vertex editor
+
 The Vertex Editor
 ..................
 
@@ -411,11 +412,7 @@ vertex in the map canvas, and vice versa. Simply change a coordinate in the tabl
 and your vertex position is updated. You can also select multiple rows and delete
 them altogether.
 
-.. _figure_edit_3:
-
-.. only:: html
-
-   **Figure Edit 3:**
+.. _figure_edit_vertex:
 
 .. figure:: /static/user_manual/working_with_vector/vertex_editor_panel.png
    :align: center
@@ -430,7 +427,7 @@ Selected features can be cut, copied and pasted between layers in the same
 QGIS project, as long as destination layers are set to |toggleEditing|
 :sup:`Toggle editing` beforehand.
 
-.. index:: polygon_to_line; line_to_polygon
+.. index:: Polygon to line, Line to polygon
 
 .. _tip_polygon_to_line:
 
@@ -534,7 +531,7 @@ you to adjust your edits and try again.
    editing. While the authors of QGIS have made every effort to preserve the
    integrity of your data, we offer no warranty in this regard.
 
-.. index:: Current_Edits
+.. index:: Current edits
 
 Saving multiple layers at once
 ...............................
@@ -590,8 +587,8 @@ Table Advanced Editing: Vector layer advanced editing toolbar
 
 
 .. index::
-   single: Digitizing; Undo
-   single: Digitizing; Redo
+   single: Digitizing tools; Undo
+   single: Digitizing tools; Redo
 
 Undo and Redo
 -------------
@@ -599,22 +596,18 @@ Undo and Redo
 The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you
 to undo or redo vector editing operations. There is also a dockable
 widget, which shows all operations in the undo/redo history (see
-Figure_edit_4_). This widget is not displayed by default; it can be
+Figure_edit_undo_). This widget is not displayed by default; it can be
 displayed by right clicking on the toolbar and activating the Undo/Redo
 checkbox. Undo/Redo is however active, even if the widget is not displayed.
 
-.. _figure_edit_4:
-
-.. only:: html
-
-   **Figure Edit 4:**
+.. _figure_edit_undo:
 
 .. figure:: /static/user_manual/working_with_vector/redo_undo.png
    :align: center
 
    Redo and Undo digitizing steps
 
-When Undo is hit or :kbd:`Ctrl+z` (or :kbd:`Cmd+z`) pressed, the state of all
+When Undo is hit or :kbd:`Ctrl+Z` (or :kbd:`Cmd+Z`) pressed, the state of all
 features and attributes are reverted to
 the state before the reverted operation happened. Changes other than normal
 vector editing operations (for example, changes done by a plugin) may or may
@@ -626,7 +619,7 @@ after the selected operation.
 
 
 .. index::
-   single: Digitizing; Rotate Feature
+   single: Digitizing tools; Rotate Feature
 .. _rotate_feature:
 
 Rotate Feature(s)
@@ -649,7 +642,7 @@ To abort feature rotation, you need to click on |rotateFeature| :sup:`Rotate
 Feature(s)` icon.
 
 .. index::
-   single: Digitizing; Simplify Feature
+   single: Digitizing tools; Simplify Feature
 
 Simplify Feature
 ----------------
@@ -678,7 +671,7 @@ To abort feature simplification, you need to click on |simplifyFeatures|
 
 
 .. index::
-   single: Digitizing; Add Part
+   single: Digitizing tools; Add Part
 
 Add Part
 --------
@@ -694,7 +687,7 @@ with the :index:`Add Part` tool.
 
 
 .. index::
-   single: Digitizing; Delete Part
+   single: Digitizing tools; Delete Part
 
 Delete Part
 -----------
@@ -707,7 +700,7 @@ To delete a part, simply click within the target part.
 
 
 .. index::
-   single: Digitizing; Add Ring
+   single: Digitizing tools; Add Ring
 
 Add Ring
 --------
@@ -724,7 +717,7 @@ as a ring polygon.
 
 
 .. index::
-   single: Digitizing; Fill Ring
+   single: Digitizing tools; Fill Ring
 
 Fill Ring
 ---------
@@ -737,7 +730,7 @@ first use the |addRing| :sup:`Add Ring` icon and then the
 
 
 .. index::
-   single: Digitizing; Delete Ring
+   single: Digitizing tools; Delete Ring
 
 Delete Ring
 -----------
@@ -748,7 +741,8 @@ polygon and multi-polygon features. It doesn't
 change anything when it is used on the outer ring of the polygon.
 
 .. index::
-   single: Digitizing; Reshape Feature, Digitizing; Extend lines
+   single: Digitizing tools; Reshape Feature
+   single: Digitizing tools; Extend lines
 
 Reshape Features
 ----------------
@@ -760,11 +754,7 @@ part from the first to the last intersection with the original line. The
 geometries: simply begin or end the reshape line at either the first or last
 point of the existing line.
 
-.. _figure_edit_5:
-
-.. only:: html
-
-   **Figure Edit 5:**
+.. _figure_reshape_line:
 
 .. figure:: /static/user_manual/working_with_vector/reshape_lines.png
    :align: center
@@ -779,11 +769,7 @@ last intersections is considered. The reshape line's segments that are inside
 the polygon will result in cropping it, where the ones outside the polygon will
 extend it.
 
-.. _figure_edit_6:
-
-.. only:: html
-
-   **Figure Edit 6:**
+.. _figure_reshape_polygon:
 
 .. figure:: /static/user_manual/working_with_vector/reshape_polygon.png
    :align: center
@@ -803,7 +789,7 @@ invalid polygon.
 
 
 .. index::
-   single: Digitizing; Offset Curves
+   single: Digitizing tools; Offset Curves
 
 Offset Curves
 -------------
@@ -826,7 +812,7 @@ you to configure some parameters like **Join style**, **Quadrant segments**,
 
 
 .. index::
-   single: Digitizing; Split Features
+   single: Digitizing tools; Split Features
 
 Split Features
 --------------
@@ -836,7 +822,7 @@ icon on the toolbar. Just draw a line across the feature you want to split.
 
 
 .. index::
-   single: Digitizing; Split Parts
+   single: Digitizing tools; Split Parts
 
 Split parts
 -----------
@@ -847,7 +833,7 @@ the |splitParts| :sup:`Split Parts` icon.
 
 
 .. index::
-   single: Digitizing; Merge Selected Features
+   single: Digitizing tools; Merge Selected Features
 
 Merge selected features
 -----------------------
@@ -860,7 +846,7 @@ a multipolygon will be created.
 
 
 .. index::
-   single: Digitizing; Merge Attributes
+   single: Digitizing tools; Merge Attributes
 
 Merge attributes of selected features
 -------------------------------------
@@ -874,7 +860,7 @@ As a result, all selected objects have the same attribute entries.
 
 
 .. index::
-   single: Digitizing; Rotate Point Symbols
+   single: Digitizing tools; Rotate Point Symbols
 
 Rotate Point Symbols
 --------------------
@@ -893,11 +879,7 @@ field are hence used to rotate each feature's symbol accordingly.
    rotate only this symbol layer (unless you have a single symbol layer).
 
 
-.. _figure_edit_7:
-
-.. only:: html
-
-   **Figure Edit 7:**
+.. _figure_rotate_point:
 
 .. figure:: /static/user_manual/working_with_vector/rotatepointsymbol.png
    :align: center
@@ -907,7 +889,7 @@ field are hence used to rotate each feature's symbol accordingly.
 To change the rotation of a symbol, click on a point feature in the map canvas
 with the |rotatePointSymbols| :sup:`Rotate Point Symbols` and move the mouse around,
 holding the left button pressed. A red arrow with the rotation value
-will be visualized (see Figure_edit_7_). When you release the left mouse
+will be visualized (see Figure_rotate_point_). When you release the left mouse
 button again, the symbol is defined with this new rotation and the rotation
 field is updated in the layer's attribute table.
 
@@ -916,7 +898,7 @@ field is updated in the layer's attribute table.
    degree steps.
 
 .. index::
-   single: Digitizing; Offset Point Symbols
+   single: Digitizing tools; Offset Point Symbols
 
 Offset Point Symbols
 --------------------
@@ -939,7 +921,7 @@ coordinates while moving the symbol in the map canvas.
    that no field is assigned to the symbol property and won't perform the action.
 
 .. index::
-   single: Digitizing; Automatic tracing
+   single: Digitizing tools; Automatic tracing
 
 .. _tracing:
 
@@ -980,22 +962,18 @@ otherwise QGIS is unable to connect them and thus traces a single straight line.
 
 
 .. index::
-   single: Digitizing; Advanced panel
+   single: Digitizing tools; Advanced panel
 .. _advanced_digitizing_panel:
 
 The Advanced Digitizing panel
 =============================
 
-When capturing new geometries or geometry parts you also have the possibility to use
-the Advanced Digitizing panel. You can digitize lines exactly parallel or at a specific angle
-or lock lines to specific angles. Furthermore you can enter coordinates directly so that you can
-make a precise definition for your new geometry.
+When capturing new geometries or geometry parts you also have the possibility
+to use the Advanced Digitizing panel. You can digitize lines exactly parallel or
+at a specific angle or lock lines to specific angles. Furthermore you can enter
+coordinates directly so that you can make a precise definition for your new geometry.
 
-.. _figure_advanced_edit 1:
-
-.. only:: html
-
-   **Figure Advanced Edit 1:**
+.. _figure_advanced_digitizing:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing.png
    :align: center
@@ -1005,7 +983,8 @@ make a precise definition for your new geometry.
 .. note:: The tools are not enabled if the map view is in geographic coordinates.
 
 
-.. index:: Create_New_Layers, New_Shapefile_Layer, New_SpatiaLite_Layer, New_GPX_Layer
+.. index:: Create new layers
+.. index:: Shapefile, SpatiaLite, GPX
 
 .. _sec_create_vector:
 
@@ -1024,22 +1003,18 @@ Creating a new Shapefile layer
 To create a new shape layer for editing, choose :menuselection:`New -->`
 |newVectorLayer| :menuselection:`New Shapefile Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New Vector Layer` dialog will be
-displayed as shown in Figure_edit_6_. Choose the type of layer (point, line or
-polygon) and the CRS (coordinate reference system).
+displayed as shown in figure_create_shapefile_. Choose the type of layer
+(point, line or polygon) and the CRS (coordinate reference system).
 
 Note that QGIS does not yet support creation of 2.5D features (i.e., features
 with X,Y,Z coordinates).
 
-.. _figure_edit_8:
-
-.. only:: html
-
-   **Figure Edit 8**
+.. _figure_create_shapefile:
 
 .. figure:: /static/user_manual/working_with_vector/editNewVector.png
    :align: center
 
-   Creating a new Shapefile layer Dialog
+   Creating a new Shapefile layer dialog
 
 To complete the creation of the new shapefile layer, add the desired attributes
 by clicking on the **[Add to attributes list]** button and specifying a name and type for the
@@ -1053,7 +1028,7 @@ automatically add a :file:`.shp` extension to the name you specify. Once the
 layer has been created, it will be added to the map, and you can edit it in the
 same way as described in section :ref:`sec_edit_existing_layer` above.
 
-.. index:: New_Spatialite_Layer
+.. index:: New SpatiaLite layer
 
 .. _vector_create_spatialite:
 
@@ -1063,18 +1038,14 @@ Creating a new SpatiaLite layer
 To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
 |newSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog will
-be displayed as shown in Figure_edit_7_.
+be displayed as shown in Figure_create_spatialite_.
 
-.. _figure_edit_9:
-
-.. only:: html
-
-   **Figure Edit 9**
+.. _figure_create_spatialite:
 
 .. figure:: /static/user_manual/working_with_vector/editNewSpatialite.png
    :align: center
 
-   Creating a New SpatiaLite layer Dialog
+   Creating a New SpatiaLite layer dialog
 
 The first step is to select an existing SpatiaLite database or to create a new
 SpatiaLite database. This can be done with the browse button |browseButton| to
@@ -1092,7 +1063,7 @@ legend, and you can edit it in the same way as described in section
 Further management of SpatiaLite layers can be done with the DB Manager. See
 :ref:`dbmanager`.
 
-.. index:: New_GPX_Layer
+.. index:: New GPX layer
 .. _vector_create_gpx:
 
 Creating a new GPX layer
@@ -1107,7 +1078,7 @@ When this plugin is loaded, choose :menuselection:`New -->` |createGPX|
 In the :guilabel:`Save new GPX file as` dialog, you can choose where to save the
 new GPX layer.
 
-.. index:: New_Temporary_Scratch_Layer
+.. index:: New Temporary Scratch layer
 .. _vector_new_scratch_layer:
 
 Creating a new Temporary Scratch Layer

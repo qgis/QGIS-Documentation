@@ -2,6 +2,8 @@
 
    |updatedisclaimer|
 
+.. index:: 
+   single: Plugins; Spatial query
 .. _spatial_query:
 
 Spatial Query Plugin
@@ -40,7 +42,7 @@ The following steps are necessary:
 #. Select 'Contains' as the operator and click **[Apply]**.
 
 Now you get a list of feature IDs from the query and you have several options, as
-shown in figure_spatial_query_1_.
+shown in figure_spatial_query_.
 
 * Click on |selectSubsetLayer| :sup:`Create layer with list of items`.
 * Select an ID from the list and click on |selectCreateLayer|
@@ -53,11 +55,7 @@ shown in figure_spatial_query_1_.
   and 'Invalid reference' you can have a look at features with geometry errors.
   These features aren't used for the query.
 
-.. _figure_spatial_query_1:
-
-.. only:: html
-
-   **Figure Spatial Query 1:**
+.. _figure_spatial_query:
 
 .. figure:: /static/user_manual/plugins/spatial_query_sample.png
    :align: center

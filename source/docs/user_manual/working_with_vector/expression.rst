@@ -79,11 +79,7 @@ Functions List
 ===============
 
 
-.. _figure_expression_1:
-
-.. only:: html
-
-   **Figure Expression 1:**
+.. _figure_expression_tab:
 
 .. figure:: /static/user_manual/working_with_vector/function_list.png
    :align: center
@@ -927,11 +923,7 @@ Function Editor
 With the Function Editor, you are able to define your own Python custom
 functions in a comfortable way.
 
-.. _figure_expression_2:
-
-.. only:: html
-
-   **Figure Expression 2:**
+.. _figure_expression_function:
 
 .. figure:: /static/user_manual/working_with_vector/function_editor.png
    :align: center

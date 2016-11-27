@@ -27,11 +27,7 @@ this chapter.)
 * The toolbox. The main element of the GUI, it is used to
   execute a single algorithm or run a batch process based on that algorithm.
 
-.. only:: html
-
-   **Figure Processing 1:**
-
-.. _figure_toolbox_1:
+.. _figure_toolbox_dialog:
 
 .. figure:: /static/user_manual/processing/toolbox.png
    :align: center
@@ -42,11 +38,8 @@ this chapter.)
   using the modeler to define a workflow, creating a single process that involves
   several subprocesses.
 
-.. only:: html
 
-   **Figure Processing 2:**
-
-.. _figure_model:
+.. _figure_model_dialog:
 
 .. figure:: /static/user_manual/processing/models.png
    :align: center
@@ -57,11 +50,7 @@ this chapter.)
   aforementioned elements are stored in a history file and can be later easily
   reproduced using the history manager.
 
-.. only:: html
-
-   **Figure Processing 3:**
-
-.. _figure_history:
+.. _figure_history_dialog:
 
 .. figure:: /static/user_manual/processing/history.png
    :align: center
@@ -73,11 +62,7 @@ this chapter.)
   multiple datasets.
 
 
-.. only:: html
-
-   **Figure Processing 4:**
-
-.. _figure_batchprocess:
+.. _figure_batchprocess_dialog:
 
 .. figure:: /static/user_manual/processing/batch_processing.png
    :align: center

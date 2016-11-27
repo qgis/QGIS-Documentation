@@ -2,6 +2,7 @@
 
    |updatedisclaimer|
 
+.. index:: fTools
 .. _ftools:
 
 fTools Plugin
@@ -27,9 +28,9 @@ Data Management Tools.
 .. _`ftools_function`:
 
 .. index::
-   single:Analysis tools
+   single: Analysis tools
 
-.. _table_ftools_1:
+.. _table_ftools_analysis:
 
 Analysis tools
 ..............
@@ -76,8 +77,8 @@ Analysis tools
 Table Ftools 1: fTools Analysis tools
 
 .. index::
-   single:Research tools
-
+   single: Research tools
+.. _table_ftools_research:
 
 Research tools
 ..............
@@ -111,6 +112,10 @@ Research tools
 +---------------------+-----------------+--------------------------------------+
 
 Table Ftools 2: fTools Research tools
+
+.. index::
+   single: Geoprocessing tools
+.. _table_ftools_geoproc:
 
 Geoprocessing tools
 ...................
@@ -156,6 +161,10 @@ Geoprocessing tools
 +---------------------+-----------------+--------------------------------------+
 
 Table Ftools 3: fTools Geoprocessing tools
+
+.. index::
+   single: Geometry tools
+.. _table_ftools_geometry:
 
 Geometry tools
 ..............
@@ -224,7 +233,11 @@ Table Ftools 4: fTools Geometry tools
    polygon geometries. Just set the *Simplify tolerance* parameter to 0 and this
    will do the trick.
 
-.. _table_ftools_5:
+.. index::
+   single: Data Management tools
+
+
+.. _table_ftools_data:
 
 Data management tools
 .....................

@@ -22,7 +22,7 @@ Keyboard shortcuts
 ==================
 
 .. index::
-   single:Keyboard shortcuts
+   single: Keyboard shortcuts
 
 QGIS provides default keyboard shortcuts for many features. You can find them in
 section :ref:`label_menubar`. Additionally, the menu option
@@ -30,10 +30,6 @@ section :ref:`label_menubar`. Additionally, the menu option
 keyboard shortcuts and add new keyboard shortcuts to QGIS features.
 
 .. _figure_shortcuts:
-
-.. only:: html
-
-   **Figure Shortcuts 1:**
 
 .. figure:: /static/user_manual/introduction/shortcuts.png
    :align: center
@@ -56,7 +52,7 @@ Context help
 ============
 
 .. index::
-   single:Context help
+   single: Context help
 
 When you need help on a specific topic, you can access context help via the
 **[Help]** button available in most dialogs --- please note that third-party
@@ -103,18 +99,14 @@ panel allows you to:
 
 .. _figure_layer_toolbar:
 
-.. only:: html
+.. figure:: /static/user_manual/introduction/layer_toolbar.png
+   :align: center
 
-   **Figure Layer tools Bar:**
-
-   .. figure:: /static/user_manual/introduction/layer_toolbar.png
-      :align: center
-
-      Layer Toolbar in Layers Panel
+   Layer Toolbar in Layers Panel
 
 
 .. index::
-   single:Layer visibility
+   single: Layer visibility
 
 The button |showPresets| allows you to add **Presets** views in the legend.
 Presets are a way to save and easily restore a combination of layers with their
@@ -271,10 +263,6 @@ cause a revert to default behavior.
 
 .. _figure_layer_order:
 
-.. only:: html
-
-   **Figure Layer Order:**
-
 .. figure:: /static/user_manual/introduction/layer_order.png
     :align: center
 
@@ -367,8 +355,8 @@ main map view will update accordingly.
 
 
 .. index::
-   single:Log messages
-   single:Panels; Log messages
+   single: Log messages
+   single: Panels; Log messages
 
 .. _`log_message_panel`:
 
@@ -380,7 +368,9 @@ that appear in different tabs using the |messageLog| Log Messages Panel.
 It can be activated using the most right icon in the bottom status bar.
 
 
-.. index:: Undo, Redo, Panels; Undo, Panels; Redo
+.. index:: Undo, Redo
+   single: Panels; Undo
+   single: Panels; Redo
 
 .. _`undo_redo_panel`:
 
@@ -391,13 +381,11 @@ For each layer being edited, this panel shows the list of actions done, allowing
 to quickly undo a set of actions by simply selecting the action listed above.
 
 
+.. index:: Rendering
 .. _`redraw_events`:
 
 Rendering
 =========
-
-.. index::
-   single:Rendering
 
 By default, QGIS renders all visible layers whenever the map canvas is
 refreshed. The events that trigger a refresh of the map canvas include:
@@ -409,12 +397,11 @@ refreshed. The events that trigger a refresh of the map canvas include:
 
 QGIS allows you to control the rendering process in a number of ways.
 
+.. index:: Rendering scale dependent
 .. _`label_scaledepend`:
 
 Scale Dependent Rendering
 -------------------------
-.. index::
-   single:Rendering scale dependent
 
 Scale-dependent rendering allows you to specify the minimum and maximum scales
 at which a layer will be visible. To set scale-dependent rendering, open the
@@ -426,8 +413,7 @@ maximum scale values.
 You can determine the scale values by first zooming to the level you want to
 use and noting the scale value in the QGIS status bar.
 
-.. index::
-   single:Scale
+.. index:: Scale
 
 .. _`label_controlmap`:
 
@@ -436,12 +422,12 @@ Controlling Map Rendering
 
 Map rendering can be controlled in various ways, as described below.
 
+.. index:: 
+   single: Rendering; Suspending
 .. _`label_suspendrender`:
 
 Suspending Rendering
 ....................
-
-.. index::`Rendering; Suspending`
 
 To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in the
 lower right corner of the status bar. When the |checkbox| :guilabel:`Render`
@@ -457,12 +443,14 @@ might want to suspend rendering include:
 Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and
 causes an immediate refresh of the map canvas.
 
+
+.. index::
+   single: Rendering; Options
+   single: Layers; Initial visibility
 .. _`label_settinglayer`:
 
 Setting Layer Add Option
 ........................
-
-.. index::Rendering; Options, Layers; Initial visibility
 
 You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
@@ -472,13 +460,13 @@ tab. Uncheck the |checkbox| :guilabel:`By default new layers added to the map
 should be displayed` checkbox. Any layer subsequently added to the map will be off
 (invisible) by default.
 
-Stopping Rendering
-..................
 
 .. index::
-   single:Rendering; Halting
-
+   single: Rendering; Halting
 .. _label_stoprender:
+
+Stopping Rendering
+..................
 
 To stop the map drawing, press the :kbd:`ESC` key. This will halt the refresh of
 the map canvas and leave the map partially drawn. It may take a bit of time
@@ -488,13 +476,13 @@ between pressing :kbd:`ESC` and the time the map drawing is halted.
    It is currently not possible to stop rendering --- this was disabled in the Qt4
    port because of User Interface (UI) problems and crashes.
 
+
+.. index::
+   single: Rendering; Quality
 .. _`label_renderquality`:
 
 Influence Rendering Quality
 ...........................
-
-.. index::
-   single: Rendering; Quality
 
 QGIS has an option to influence the rendering quality of the map. Choose menu
 option :menuselection:`Settings --> Options`, click on the :guilabel:`Rendering`
@@ -554,9 +542,6 @@ or interact with the features (including symbology, labeling, action, diagram...
 settings) for vector layer, or the pixels (band or color rendering, transparency,
 pyramids, histogram ...) for raster.
 
-.. only:: html
-
-   **Figure Manage Style:**
 
 .. _figure_manage_style:
 
@@ -651,9 +636,6 @@ QGIS will load the layer and its style. After you modified the layer style,
 you can **Save as Default**, creating a new style that becomes the default one
 or **Restore Default** style if you're not satisfied.
 
-.. only:: html
-
-   **Figure Save Style:**
 
 .. _figure_save_style_database:
 
@@ -671,13 +653,14 @@ or **Restore Default** style if you're not satisfied.
    that are of the same type (vector vs raster) as the original layer and, in
    case of vector, have the same geometry type (point, line or polygon).
 
+.. index:: Colors
 .. _color-selector:
 
 Color Selector
 ==============
 
 The :guilabel:`select color` dialog will appear whenever you push
-the |selectColor| icon to choose a :index:`color`. The features of this dialog
+the |selectColor| icon to choose a color. The features of this dialog
 depends on the state of the :guilabel:`Use native color chooser dialogs` parameter
 checkbox in :menuselection:`Settings --> Options --> General` menu.
 When checked, the color dialog used is the one of the OS being used. Otherwise,
@@ -689,18 +672,14 @@ This dialog has four different tabs which allow you to select colors by
 (not available under |osx|).
 
 Whatever method you use, the selected color is always described through color
-sliders for HSV  (Hue, Saturation, Value) and RGB (Red, Green, Blue) values.
+sliders for HSV (Hue, Saturation, Value) and RGB (Red, Green, Blue) values.
 There is also an :guilabel:`opacity` slider to set transparency level.
 On the lower left part of the dialog you can see a comparison between the
 :guilabel:`current` and the :guilabel:`new` color you are presently
 selecting and on the lower right part you have the option to add the color
 you just tweaked into a color slot button.
 
-.. _figure_color_selector_1:
-
-.. only:: html
-
-   **Figure color selector 1:**
+.. _figure_color_selector_ramp:
 
 .. figure:: /static/user_manual/introduction/color_selector_ramp.png
    :align: center
@@ -722,14 +701,10 @@ populated with one of three methods:
 * :guilabel:`Recent colors`,
 * :guilabel:`Standard colors`, a user-defined list of colors set under
   :menuselection:`Settings --> Options --> Colors` menu
-* or :guilabel:`Project colors`, a user-defined list of colors set under :menuselection:`Project
-  --> Project Properties --> Default Styles`.
+* or :guilabel:`Project colors`, a user-defined list of colors set under
+  :menuselection:`Project --> Project Properties --> Default Styles`.
 
-.. _figure_color_selector_2:
-
-.. only:: html
-
-   **Figure color selector 2:**
+.. _figure_color_selector_switcher:
 
 .. figure:: /static/user_manual/introduction/color_selector_recent_colors.png
    :align: center
@@ -749,24 +724,22 @@ that the color picker is OS dependent and is currently not supported by OSX.
    or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking
    the drop-down arrow that follows the |selectColor| color box.
 
-.. _figure_color_selector_3:
-
-.. only:: html
-
-   **Figure color selector 3:**
+.. _figure_color_selector:
 
 .. figure:: /static/user_manual/introduction/quick_color_selector.png
    :align: center
 
    Quick color selector menu
 
+.. index:: 
+   single: Rendering effects; Blending modes
 .. _blend-modes:
 
 Blending Modes
 ===============
 
-QGIS offers different options for special :index:`rendering effects` with these tools that
-you may previously only know from graphics programs. :index:`Blending modes` can be applied
+QGIS offers different options for special rendering effects with these tools that
+you may previously only know from graphics programs. Blending modes can be applied
 on layers, on features but also on print composer items:
 
 * **Normal**: This is the standard blend mode, which uses the alpha channel of the top
@@ -801,8 +774,7 @@ on layers, on features but also on print composer items:
 * **Subtract**: This blend mode simply subtracts pixel values of one item from the other.
   In case of negative values, black is displayed.
 
-.. index:: Zoom_In Zoom_Out, Pan, Map_Navigation
-
+.. index:: Zoom, Pan, Map navigation
 .. _zoom_pan:
 
 Zooming and Panning
@@ -911,7 +883,9 @@ its layer snapping tolerance. Now, when using the measuring
 tools, each mouse click (within the tolerance setting) will snap to that layer.
 
 .. index::
-   single: Measure; Distances, Measure; Areas, Measure; Angles
+   single: Measure; Distances
+   single: Measure; Areas
+   single: Measure; Angles
 
 By default, |measure| :sup:`Measure Line`: QGIS measures real distances
 between given points according to a defined ellipsoid.
@@ -932,10 +906,6 @@ according to CRS settings available.
 
 .. _figure_measure_length:
 
-.. only:: html
-
-   **Figure Measure Length:**
-
 .. figure:: /static/user_manual/introduction/measure_line.png
    :align: center
 
@@ -947,10 +917,6 @@ The Info section is also available as well as the ability to switch between
 different area units.
 
 .. _figure_measure_area:
-
-.. only:: html
-
-   **Figure Measure Area:**
 
 .. figure:: /static/user_manual/introduction/measure_area.png
    :align: center
@@ -964,19 +930,21 @@ is displayed in a pop-up dialog.
 
 .. _figure_measure_angle:
 
-.. only:: html
-
-   **Figure Measure Angle:**
-
 .. figure:: /static/user_manual/introduction/measure_angle.png
    :align: center
 
    Measure Angle
 
 .. index::
-   single: Select
-   single: Select; All, Select; Invert, Select; Expression, Select; Form
-   single: Select; Polygon, Select; Freehand, Select; Rectangle, Select; Radius
+   see: Select; Selection tools
+   single: Selection tools; Select all
+   single: Selection tools; Invert selection
+   single: Selection tools; Select by expression
+   single: Selection tools; Select by form
+   single: Selection tools; Select by polygon
+   single: Selection tools; Select by freehand
+   single: Selection tools; Select by rectangle
+   single: Selection tools; Select by radius
    pair: Select; Deselect
 
 .. _`sec_selection`:
@@ -1043,7 +1011,8 @@ be selected in map canvas also):
    **New Vector Layer** using :menuselection:`Edit --> Copy Features` and
    :menuselection:`Edit --> Paste Features as` in the wanted format.
 
-.. index:: Select; By Value
+.. index::
+   single: Selection tools; Select by value
 
 About Select Features By Value
 -------------------------------
@@ -1070,6 +1039,7 @@ The window allows user to :guilabel:`Reset form` or to :guilabel:`Select
 features`, :guilabel:`Add to current selection`, :guilabel:`Filter current
 selection`, :guilabel:`Remove from current selection`.
 
+.. index:: Data-defined override
 .. _data_defined:
 
 Data defined override setup
@@ -1105,13 +1075,12 @@ Parameters that can be used with data-defined tools are:
 * Composer parameters
 
 
+.. index::
+   single: Identify features
 .. _`identify`:
 
 Identify features
 =================
-
-.. index::
-   single:Identify features
 
 The Identify tool allows you to interact with the map canvas and get information
 on features in a pop-up window. To identify features, use :menuselection:`View --> Identify
@@ -1137,7 +1106,9 @@ Then follows all the other information about the feature.
 This window can be customized to display custom fields, but by default it will
 display three kinds of information:
 
-* **Actions**: :index:`Actions` can be added to the identify feature windows.
+.. index:: Actions
+
+* **Actions**: Actions can be added to the identify feature windows.
   The action is run by clicking on the action label. By default, only one action
   is added, namely ``view feature form`` for editing. You can define more actions
   in the layer's properties dialog.
@@ -1157,10 +1128,6 @@ display three kinds of information:
   has been clicked.
 
 .. _figure_identify:
-
-.. only:: html
-
-   **Figure Identify 1:**
 
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
@@ -1230,11 +1197,7 @@ toolbar provides the possibility to place formatted text in a balloon on the
 QGIS map canvas. Use the :guilabel:`Text Annotation` tool and click into the
 map canvas.
 
-.. _annotation:
-
-.. only:: html
-
-   **Figure annotation 1:**
+.. _figure_annotation:
 
 .. figure:: /static/user_manual/introduction/annotation.png
    :align: center
@@ -1284,10 +1247,6 @@ Tim Sutton for more information.
 
 .. _figure_custom_annotation:
 
-.. only:: html
-
-   **Figure annotation 2:**
-
 .. figure:: /static/user_manual/introduction/custom_annotation.png
    :align: center
 
@@ -1298,15 +1257,14 @@ Tim Sutton for more information.
    (move annotation, text annotation, form annotation), the visibility states
    of the items are inverted.
 
+
+.. index::
+   single: Bookmarks
+   see: Spatial bookmarks; Bookmarks
 .. _`sec_bookmarks`:
 
 Spatial Bookmarks
 =================
-
-.. index::
-   single:bookmarks
-.. index::
-   single:spatial bookmarks;see bookmarks
 
 Spatial Bookmarks allow you to "bookmark" a geographic location and return to
 it later. By default, bookmarks are saved on the computer, meaning that they are available
@@ -1343,12 +1301,12 @@ panel allows you to:
   computers you can use the :guilabel:`Import/Export Bookmarks` pull down menu
   in the :guilabel:`Spatial Bookmarks` dialog. All the bookmarks are transferred.
 
+
+.. index:: Nesting projects
 .. _nesting_projects:
 
 Nesting Projects
 ================
-
-.. index:: nesting projects
 
 If you want to embed content from other project files into your project, you can
 choose :menuselection:`Layer --> Embed Layers and Groups`.
@@ -1368,10 +1326,6 @@ small example:
 
 .. _figure_embed_dialog:
 
-.. only:: html
-
-   **Figure Nesting 1:**
-
 .. figure:: /static/user_manual/introduction/embed_dialog.png
    :align: center
 
@@ -1385,7 +1339,7 @@ Removing embedded layers
 
 Right-click on the embedded layer and choose |removeLayer| :sup:`Remove`.
 
-
+.. index:: Decorations
 .. _decorations:
 
 Decorations
@@ -1401,11 +1355,7 @@ Grid
 |transformed| :sup:`Grid` allows you to add a coordinate grid and coordinate
 annotations to the map canvas.
 
-.. _figure_decorations_1:
-
-.. only:: html
-
-   **Figure Decorations 1:**
+.. _figure_decorations_grid:
 
 .. figure:: /static/user_manual/introduction/grid_dialog.png
    :align: center
@@ -1413,7 +1363,7 @@ annotations to the map canvas.
    The Grid Dialog
 
 #. Select from menu :menuselection:`View --> Decorations --> Grid`.
-   The dialog starts (see figure_decorations_1_).
+   The dialog starts (see figure_decorations_grid_).
 #. Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid
    definitions according to the layers loaded in the map canvas.
 #. Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
@@ -1426,11 +1376,7 @@ Copyright Label
 |copyrightLabel| :sup:`Copyright label` adds a copyright label using the text
 you prefer to the map.
 
-.. _figure_decorations_2:
-
-.. only:: html
-
-   **Figure Decorations 2:**
+.. _figure_decorations_copyright:
 
 .. figure:: /static/user_manual/introduction/copyright.png
    :align: center
@@ -1438,7 +1384,7 @@ you prefer to the map.
    The Copyright Dialog
 
 #. Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
-   The dialog starts (see figure_decorations_2_).
+   The dialog starts (see figure_decorations_copyright_).
 #. Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is
    checked.
 #. Enter the text you want to place on the map. You can use HTML as
@@ -1454,6 +1400,8 @@ you prefer to the map.
 In the example above, which is the default, QGIS places a copyright symbol
 followed by the date in the lower right-hand corner of the map canvas.
 
+.. index:: North arrow
+
 North Arrow
 -----------
 
@@ -1468,17 +1416,14 @@ You can refine the placement of the arrow by setting a Horizontal and/or Vertica
 `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
 **Pixels** or set as **Percentage** of the width or height of the map canvas.
 
-.. _figure_decorations_3:
-
-.. only:: html
-
-   **Figure Decorations 3:**
+.. _figure_decorations_north:
 
 .. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
 
    The North Arrow Dialog
 
+.. index:: Scale bar
 
 Scale Bar
 ---------
@@ -1486,11 +1431,7 @@ Scale Bar
 |scaleBar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
 can control the style and placement, as well as the labelling of the bar.
 
-.. _figure_decorations_4:
-
-.. only:: html
-
-   **Figure Decorations 4:**
+.. _figure_decorations_scale:
 
 .. figure:: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
@@ -1505,7 +1446,7 @@ bar to display distance in meters.
 To add a scale bar:
 
 #. Select from menu :menuselection:`View --> Decorations --> Scale Bar`.
-   The dialog starts (see figure_decorations_4_).
+   The dialog starts (see figure_decorations_scale_).
 #. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
 #. Choose the style from the :guilabel:`Scale bar style` |selectString|
    combo box.
@@ -1543,6 +1484,7 @@ files. For more information see :ref:`authentication_index`.
 A master password needs to be set up when initializing the authentication
 system and its portable database.
 
+.. index:: Save layer
 .. _general_saveas:
 
 Save layer into file
@@ -1615,7 +1557,7 @@ However, some parameters are specific to raster and vector formats:
    As an option, you can |checkbox| :guilabel:`Use the layer title as name if
    set` or :guilabel:`Export features intersecting the current map extent`.
 
-.. index:: variable, variables
+.. index:: Variables
 
 .. _`general_tools_variables`:
 
@@ -1643,10 +1585,6 @@ and project level variables from Project properties (including adding your own
 custom variables).
 
 .. _figure_variables_dialog:
-
-.. only:: html
-
-   **Figure Variables dialog 2:**
 
 .. figure:: /static/user_manual/introduction/options_variables.png
    :align: center
