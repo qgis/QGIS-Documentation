@@ -1218,10 +1218,9 @@ example, from the context menu you can:
 * Expand all
 * Collapse all
 
-.. _sec_annotations:
-
 .. index::
    single: Annotation
+.. _sec_annotations:
 
 Annotation Tools
 ================
