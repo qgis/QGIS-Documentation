@@ -186,10 +186,10 @@ provides different additional sections.
 
 .. note::
 
-   If you change the renderer type when setting the style of a vector layer the settings
-   you made for the symbol will be maintained. Be aware that this procedure only works
-   for one change. If you repeat changing the renderer type the settings for the symbol
-   will get lost.
+   If you change the renderer type when setting the style of a vector layer the
+   settings you made for the symbol will be maintained. Be aware that this
+   procedure only works for one change. If you repeat changing the renderer type
+   the settings for the symbol will get lost.
 
 .. index:: Single Symbol Renderer
 .. _single_symbol_renderer:
@@ -253,8 +253,8 @@ you to select:
 
 * The attribute (using the Column listbox or the |expressionEditorOpen|
   :guilabel:`Set column expression` function, see :ref:`vector_expressions` chapter)
-* The symbol (using the :ref:`symbol-selector` dialog) which will be used as default
-  for each class
+* The symbol (using the :ref:`symbol-selector` dialog) which will be used as
+  default for each class
 * The range of colors (using the Color ramp listbox) from which color applied
   to the symbol is selected
 
@@ -328,8 +328,8 @@ added using the histogram widget.
    You can use Statistical Summary panel to get more information on your vector
    layer. See :ref:`statistical_summary`.
 
-Back to the Classes tab, you can specify the number of classes and also the mode for
-classifying features within the classes (using the Mode list). The available
+Back to the Classes tab, you can specify the number of classes and also the mode
+for classifying features within the classes (using the Mode list). The available
 modes are:
 
 * Equal Interval: each class has the same size (e.g. values from 0 to 16 and
@@ -421,8 +421,8 @@ The assistant lets you define:
 * An unique size to represent NULL values.
 
 To the right side of the dialog, you can preview the features representation
-within a live-update widget. This representation is added to the layer tree in the
-layer legend and is also used to shape the layer representation in the
+within a live-update widget. This representation is added to the layer tree in
+the layer legend and is also used to shape the layer representation in the
 print composer legend item.
 
 The values presented in the varying size assistant above will set the size
@@ -434,8 +434,8 @@ The values presented in the varying size assistant above will set the size
 **Creating multivariate analysis**
 
 A multivariate analysis rendering helps you evaluate the relationship between
-two or more variables e.g., one can be represented by a color ramp while the other is
-represented by a size.
+two or more variables e.g., one can be represented by a color ramp while the
+other is represented by a size.
 
 The simplest way to create multivariate analysis in QGIS is to first apply
 a categorized or graduated rendering on a layer, using the same type of symbol
@@ -517,9 +517,9 @@ around one center symbol or on several concentric circles.
 
    Point displacement dialog
 
-.. note:: You can still render features with other renderer like Single symbol, Graduated,
-   Categorized or Rule-Based renderer using the :guilabel:`Renderer` drop-down
-   list then the :guilabel:`Renderer Settings...` button.
+.. note:: You can still render features with other renderer like Single symbol,
+   Graduated, Categorized or Rule-Based renderer using the :guilabel:`Renderer`
+   drop-down list then the :guilabel:`Renderer Settings...` button.
 
 .. index:: Inverted Polygon Renderer
 
@@ -781,9 +781,10 @@ effect types, with custom options are available:
 
 * **Inner Glow:** Adds a glow effect inside the feature. This effect can be
   customized by adjusting the :menuselection:`spread` (width) of the glow, or
-  the :menuselection:`Blur radius`. The latter specifies the proximity from the
-  edge of the feature where you want any blurring to happen. Additionally, there
-  are options to customize the color of the glow, with a single color or a color ramp.
+  the :menuselection:`Blur radius`. The latter specifies the proximity from
+  the edge of the feature where you want any blurring to happen. Additionally,
+  there are options to customize the color of the glow, with a single color or
+  a color ramp.
 
   .. _figure_effects_inner_glow:
 
@@ -805,16 +806,16 @@ effect types, with custom options are available:
      Draw Effects: Outer Glow dialog
 
 * **Transform:** Adds the possibility of transforming the shape of the symbol.
-  The first options available for customization are the :menuselection:`Reflect horizontal`
-  and :menuselection:`Reflect vertical`, which actually create a reflection on the
-  horizontal and/or vertical axes. The 4 other options are:
+  The first options available for customization are the :menuselection:`Reflect
+  horizontal` and :menuselection:`Reflect vertical`, which actually create a
+  reflection on the horizontal and/or vertical axes. The 4 other options are:
 
   * :menuselection:`Shear`: slants the feature along the x and/or y axis
-  * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or y axis
-    by the given percentage
+  * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or
+    y axis by the given percentage
   * :menuselection:`Rotation`: turns the feature around its center point
-  * and :menuselection:`Translate` changes the position of the item based on a distance
-    given on the x and/or the y axis.
+  * and :menuselection:`Translate` changes the position of the item based on a
+    distance given on the x and/or the y axis.
 
   .. _figure_effects_transform:
 
@@ -1000,8 +1001,8 @@ Placement menu
 --------------
 
 Choose the :guilabel:`Placement` menu for configuring label placement
-and labeling priority. Note that the placement options differ according to the type of
-vector layer, namely point, line or polygon.
+and labeling priority. Note that the placement options differ according to the
+type of vector layer, namely point, line or polygon.
 
 .. _cartographic:
 
@@ -1126,9 +1127,9 @@ Under :guilabel:`Label options`, you find the :ref:`scale-based <label_scaledepe
 and the :guilabel:`Pixel size-based` visibility settings.
 
 The :guilabel:`Label z-index` determines the order in which labels are rendered,
-as well in relation with other feature labels in the layer (using data-defined override
-expression), as with labels from other layers.
-Labels with a higher z-index are rendered on top of labels (from any layer) with lower z-index.
+as well in relation with other feature labels in the layer (using data-defined
+override expression), as with labels from other layers. Labels with a higher
+z-index are rendered on top of labels (from any layer) with lower z-index.
 
 Additionally, the logic has been tweaked so that if 2 labels have
 matching z-indexes, then:
@@ -1144,18 +1145,19 @@ labels are drawn on top of all the layer's features.
 While rendering labels and in order to display readable labels,
 QGIS automatically evaluates the position of the labels and can hide some of them
 in case of collision. You can however choose to |checkbox| :guilabel:`Show all
-labels for this layer (including colliding labels)` in order to manually fix their placement.
+labels for this layer (including colliding labels)` in order to manually fix
+their placement.
 
 With data-defined expressions in :guilabel:`Show label` and :guilabel:`Always Show`
 you can fine tune which labels should be rendered.
 
 
 Under :guilabel:`Feature options`, you can choose to :guilabel:`label every
-part of a multi-part feature` and :guilabel:`limit the number of features to be labeled`.
-Both line and polygon layers offer the option to set a minimum size for the
+part of a multi-part feature` and :guilabel:`limit the number of features to be
+labeled`. Both line and polygon layers offer the option to set a minimum size for the
 features to be labeled, using :guilabel:`Suppress labeling of features smaller than`.
-For polygon features, you can also filter the labels to show according to whether they
-completely fit within the feature or not.
+For polygon features, you can also filter the labels to show according to whether
+they completely fit within the feature or not.
 For line features, you can choose to :guilabel:`Merge connected lines
 to avoid duplicate labels`, rendering a quite airy map in conjunction with
 the :guilabel:`Distance` or :guilabel:`Repeat` options in Placement tab.
@@ -2242,9 +2244,9 @@ In :guilabel:`MetadataUrl`, you can define the general path to the XML metadata
 catalogue. This information will be saved in the QGIS project file for subsequent
 sessions and will be used for QGIS server.
 
-In the :guilabel:`LegendUrl` section, you can provide the url of a legend image in the url
-field. You can use the Format drop-down option to apply the appropriate format
-of the image. Currently png, jpg and jpeg image formats are supported.
+In the :guilabel:`LegendUrl` section, you can provide the url of a legend image
+in the url field. You can use the Format drop-down option to apply the appropriate
+format of the image. Currently png, jpg and jpeg image formats are supported.
 
 .. _figure_metadata_vector:
 
