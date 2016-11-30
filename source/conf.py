@@ -1076,6 +1076,8 @@ rst_epilog = """
 .. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
+.. |sort| image:: /static/common/sort.png
+   :width: 1.5em
 .. |spatialQuery| image:: /static/common/spatialquery.png
    :width: 1.5em
 .. |spit| image:: /static/common/spiticon.png
