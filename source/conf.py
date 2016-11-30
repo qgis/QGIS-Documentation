@@ -774,6 +774,8 @@ rst_epilog = """
    :width: 1.5em
 .. |layerExtent| image:: /static/common/layer_extent.png
    :width: 1.5em
+.. |legend| image:: /static/common/legend.png
+   :width: 1.5em
 .. |locale| image:: /static/common/locale.png
    :width: 2em
 .. |locked| image:: /static/common/locked.png
@@ -1102,7 +1104,7 @@ rst_epilog = """
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
-   :width: 1.5em
+   :width: 2em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
 .. |symDifference| image:: /static/common/sym_difference.png
