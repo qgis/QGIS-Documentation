@@ -198,6 +198,9 @@ Rendering Tab
 * |checkbox| :guilabel:`Render layers in parallel using many CPU cores`
 * |checkbox| :guilabel:`Max cores to use`
 * :guilabel:`Map update interval (default to 250 ms)`
+
+.. _global_simplification:
+
 * |checkbox| :guilabel:`Enable feature simplification by default for newly added layers`
 * :guilabel:`Simplification threshold`
 * :guilabel:`Simplification algorithm`: This option performs a local
@@ -212,6 +215,9 @@ Rendering Tab
   local-side simplification, geometry-based calculations may be affected
 * :guilabel:`Maximum scale at which the layer should be simplified`
 * |doublespinbox| :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
+
+.. note:: Besides the global setting, feature simplification can be set for any
+   specific layer from its :menuselection:`Layer properties --> Rendering` menu.
 
 **Rendering quality**
 
