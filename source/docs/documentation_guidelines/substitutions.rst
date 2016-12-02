@@ -255,7 +255,6 @@ Icon                            Substitution                        Icon        
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
 |gpsTrackPolarChart|            ``|gpsTrackPolarChart|``            |tracking|                      ``|tracking|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
-|sum|                           ``|sum|``                           |mapIdentification|             ``|mapIdentification|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -290,7 +289,6 @@ Icon                            Substitution                        Icon        
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
 |coordinateCapture|             ``|coordinateCapture|``             |startGeoref|                   ``|startGeoref|``
 ==============================  ==================================  ==============================  ==================================
-
 
 
 Composer Icons
@@ -332,13 +330,17 @@ Icon                                Substitution                            Icon
 |symbology|                         ``|symbology|``                         |labeling|                     ``|labeling|``
 |attributes|                        ``|attributes|``                        |general|                      ``|general|``
 |metadata|                          ``|metadata|``                          |action|                       ``|action|``
+|mapTips|                           ``|mapTips|``                           |rendering|                    ``|rendering|``
 |join|                              ``|join|``                              |diagram|                      ``|diagram|``
+|legend|                            ``|legend|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
 |singleSymbol|                      ``|singleSymbol|``                      |nullSymbol|                   ``|nullSymbol|``
 |graduatedSymbol|                   ``|graduatedSymbol|``                   |categorizedSymbol|            ``|categorizedSymbol|``
 |25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
 |invertedSymbol|                    ``|invertedSymbol|``                    |heatmapSymbol|                ``|heatmapSymbol|``
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
+|sum|                               ``|sum|``                               |sort|                         ``|sort|``
+|paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
 ==================================  ======================================  =============================  ================================
 
 

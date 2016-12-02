@@ -600,6 +600,7 @@ units).
    The 2.5 D height and angle values are saved in the layer's variables,
    so you can edit it afterwards in the variables tab of the layer's properties dialog.
 
+.. index:: Layer rendering, Sort features, Z-level
 .. _layer_rendering:
 
 Layer rendering
@@ -622,8 +623,8 @@ features of the layer:
   :guilabel:`Draw Effects` button.
 
 * :guilabel:`Control feature rendering order` allows you, using features
-  attributes, to define the :index:`z-order` in which they shall be rendered.
-  Activate the checkbox and click on the |browseButton| button beside.
+  attributes, to define the z-order in which they shall be rendered.
+  Activate the checkbox and click on the |sort| button beside.
   You then get the :guilabel:`Define Order` dialog in which you:
 
   * choose a field or build an expression to apply to the layer features
@@ -632,16 +633,12 @@ features of the layer:
     with upper value.
   * define when features returning NULL value should be rendered: **first** or **last**.
 
-  You can add several :index:`rules of ordering`. The first rule is applied
+  You can add several rules of ordering. The first rule is applied
   to all the features in the layer, z-ordering them according to the value returned.
   Then, for each group of features with the same value (including those with
   NULL value) and thus same z-level, the next rule is applied to sort its items
   among them.
   And so on...
-
-  Once the :guilabel:`Define Order` dialog is applied, a summary of the expression(s)
-  used to control the :index:`layer rendering` is retranscribed in the textbox
-  beside |checkbox| :guilabel:`Control feature rendering order` option.
 
 .. _figure_layer_rendering:
 

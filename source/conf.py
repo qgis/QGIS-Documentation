@@ -774,6 +774,8 @@ rst_epilog = """
    :width: 1.5em
 .. |layerExtent| image:: /static/common/layer_extent.png
    :width: 1.5em
+.. |legend| image:: /static/common/legend.png
+   :width: 1.5em
 .. |locale| image:: /static/common/locale.png
    :width: 2em
 .. |locked| image:: /static/common/locked.png
@@ -1076,6 +1078,8 @@ rst_epilog = """
 .. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
+.. |sort| image:: /static/common/sort.png
+   :width: 1.5em
 .. |spatialQuery| image:: /static/common/spatialquery.png
    :width: 1.5em
 .. |spit| image:: /static/common/spiticon.png
@@ -1100,7 +1104,7 @@ rst_epilog = """
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
-   :width: 1.5em
+   :width: 2em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
 .. |symDifference| image:: /static/common/sym_difference.png
