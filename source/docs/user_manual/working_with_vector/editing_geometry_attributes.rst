@@ -546,6 +546,13 @@ for Selected Layer(s)` is an easy way.
 
 The same functions are available for editing all layers of the project.
 
+.. tip:: **Use transaction group to edit, save or rollback multiple layers changes at once** 
+
+   When working with layers from the same PostGreSQL database, activate the
+   :guilabel:`Automatically create transaction groups where possible` option in
+   :menuselection:`Project --> Project Properties --> Data Sources` to sync their
+   behavior (enter or exit the edit mode, save or rollback changes at the same time). 
+
 .. _sec_advanced_edit:
 
 Advanced digitizing
@@ -664,10 +671,10 @@ So you can go back to the same tolerance the next time when simplifying a featur
 To abort feature simplification, you need to click on |simplifyFeatures|
 :sup:`Simplify Feature` icon.
 
-.. note:: unlike the feature simplification option in :menuselection:`Settings -->
+.. note:: Unlike the feature simplification option in :menuselection:`Settings -->
    Options --> Rendering` menu which simplifies the geometry just for rendering,
-   the |simplifyFeatures| :sup:`Simplify Feature` tool really modifies feature's
-   geometry in data source.
+   the |simplifyFeatures| :sup:`Simplify Feature` tool permanently modifies
+   feature's geometry in data source.
 
 
 .. index::
@@ -831,6 +838,12 @@ In QGIS it is possible to split the parts of a multi part feature so that the
 number of parts is increased. Just draw a line across the part you want to split using
 the |splitParts| :sup:`Split Parts` icon.
 
+.. tip:: **Split a polyline feature in one-click**
+
+   A single click on a **snapped vertex** of a line feature with the |splitFeatures| 
+   :sup:`Split Features` or |splitParts| :sup:`Split Parts` tool is enough to have it
+   split into new features or parts.
+
 
 .. index::
    single: Digitizing tools; Merge Selected Features
@@ -838,11 +851,21 @@ the |splitParts| :sup:`Split Parts` icon.
 Merge selected features
 -----------------------
 
-The |mergeFeatures| :sup:`Merge Selected Features` tool allows you to merge
-features. A new dialog will allow you to choose which value to choose between each
-selected features or select a function (Minimum, Maximum, Median, Sum, Skip
-Attribute) to use for each column. If features don't have a common boundaries,
-a multipolygon will be created.
+The |mergeFeatures| :sup:`Merge Selected Features` tool allows you to create
+a new feature by merging existing ones: their geometries are merged to generate
+a new one. If features don't have common boundaries,
+a multipolygon/multipolyline/multipoint feature is created.
+
+First, select several features. Then press the |mergeFeatures| :sup:`Merge Selected
+Features` button. In the new dialog, you can select at the top of the dialog which value to
+apply to each field of the new feature. That value can be:
+
+* picked from the attributes of the initial features,
+* an aggregation of the initial features attributes (Minimum, Maximum, Median, Sum, Count
+  Concatenation... depending on the type of the field. see :ref:`statistical_summary`
+  for the full list of functions),
+* skipped, meaning that the field will be empty,
+* or manually entered, at the bottom of the rows.
 
 
 .. index::
@@ -853,10 +876,9 @@ Merge attributes of selected features
 
 The |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` tool
 allows you to apply same attributes to features without merging their boundaries.
-First, select several features. Then
-press the |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` button.
-Now QGIS asks you which attributes are to be applied to all selected objects.
-As a result, all selected objects have the same attribute entries.
+The dialog is the same as the ``Merge Selected Features`` tool's except that
+unlike that tool, selected objects are kept with their geometry while some of their
+attributes are made identical.
 
 
 .. index::
