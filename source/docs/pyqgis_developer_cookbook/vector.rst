@@ -317,6 +317,8 @@ For deletion of fields just provide a list of field indexes.
 
 ::
 
+  from PyQt4.QtCore import QVariant
+
   if caps & QgsVectorDataProvider.AddAttributes:
       res = layer.dataProvider().addAttributes([QgsField("mytext", QVariant.String), QgsField("myint", QVariant.Int)])
 
@@ -351,6 +353,8 @@ editing functions work only when the editing mode is turned on. Usage of
 editing functions
 
 ::
+
+  from PyQt4.QtCore import QVariant
 
   # add two features (QgsFeature instances)
   layer.addFeatures([feat1,feat2])
@@ -503,6 +507,8 @@ There are two possibilities how to export a vector layer:
 
 ::
 
+    from PyQt4.QtCore import QVariant
+
     # define fields for feature attributes. A QgsFields object is needed
     fields = QgsFields()
     fields.append(QgsField("first", QVariant.Int))
@@ -579,6 +585,8 @@ The following example of a URI incorporates all these options
 The following example code illustrates creating and populating a memory provider
 
 ::
+
+  from PyQt4.QtCore import QVariant
 
   # create layer
   vl = QgsVectorLayer("Point", "temporary_points", "memory")
