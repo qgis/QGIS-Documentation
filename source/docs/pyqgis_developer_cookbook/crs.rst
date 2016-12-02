@@ -69,7 +69,7 @@ Accessing spatial reference system information
   print "Description:", crs.description()
   print "Projection Acronym:", crs.projectionAcronym()
   print "Ellipsoid Acronym:", crs.ellipsoidAcronym()
-  print "Proj4 String:", crs.proj4String()
+  print "Proj4 String:", crs.toProj4()
   # check whether it's geographic or projected coordinate system
   print "Is geographic:", crs.geographicFlag()
   # check type of map units in this CRS (values defined in QGis::units enum)
