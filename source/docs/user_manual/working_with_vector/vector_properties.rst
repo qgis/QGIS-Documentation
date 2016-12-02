@@ -67,6 +67,7 @@ You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
 visible. Out of this range, they are hidden. The |mapIdentification|
 :sup:`Set to current canvas scale` button helps you use the current map
 canvas scale as boundary of the range visibility.
+See :ref:`label_scaledepend` for more information.
 
 
 .. _figure_vector_general:

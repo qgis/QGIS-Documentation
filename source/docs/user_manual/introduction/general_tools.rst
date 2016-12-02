@@ -167,6 +167,7 @@ Option                                                            Vector Layer  
 |removeLayer| :menuselection:`Remove`                             |checkbox|             |checkbox|            |checkbox|
 |duplicateLayer| :menuselection:`Duplicate`                       |checkbox|             |checkbox|            \
 :menuselection:`Set Layer Scale Visibility`                       |checkbox|             |checkbox|            \
+:menuselection:`Zoom to Visible Scale`                            |checkbox|             |checkbox|            \
 :menuselection:`Set Layer/Group CRS`                              |checkbox|             |checkbox|            |checkbox|
 :menuselection:`Set Project CRS from Layer`                       |checkbox|             |checkbox|            \
 :menuselection:`Styles -->`                                       |checkbox|             |checkbox|            \
@@ -397,23 +398,32 @@ refreshed. The events that trigger a refresh of the map canvas include:
 
 QGIS allows you to control the rendering process in a number of ways.
 
-.. index:: Rendering scale dependent
+.. index:: Rendering scale dependent, Scale
 .. _`label_scaledepend`:
 
 Scale Dependent Rendering
 -------------------------
 
 Scale-dependent rendering allows you to specify the minimum and maximum scales
-at which a layer will be visible. To set scale-dependent rendering, open the
-:guilabel:`Properties` dialog by double-clicking on the layer in the legend. On
-the :guilabel:`General` tab, click on the |checkbox| :guilabel:`Scale
-dependent visibility` checkbox to activate the feature, then set the minimum and
-maximum scale values.
+at which a layer (raster or vector) will be visible. To set scale-dependent rendering,
+open the :guilabel:`Properties` dialog by double-clicking on the layer in the legend.
+On the :guilabel:`General` tab, tick the |checkbox| :guilabel:`Scale
+dependent visibility` checkbox and enter the :guilabel:`Minimum (exclusive)` and
+:guilabel:`Maximum (inclusive)` scale values.
 
-You can determine the scale values by first zooming to the level you want to
-use and noting the scale value in the QGIS status bar.
+You can also activate the scale dependent visibility on a layer from the Layers panel.
+Right-click on the layer and in the context menu, select :guilabel:`Set Layer Scale Visibility`.
 
-.. index:: Scale
+The |mapIdentification| :sup:`Set to current canvas scale` button helps you use
+the current map canvas scale as boundary of the range visibility.
+
+
+.. note::
+   When a layer is not rendered in the map canvas due to the map scale out of
+   its visibility scale range, the layer is greyed in the Layers panel and
+   a new option :guilabel:`Zoom to Visible Scale` appears in the layer context menu.
+   Select it and the map is zoomed to the layer's nearest visibility scale.
+
 
 .. _`label_controlmap`:
 
