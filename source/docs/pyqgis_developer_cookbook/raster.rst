@@ -153,6 +153,10 @@ QGIS 1.4, in previous versions this function does not exist --- to make sure
 that the code works with all versions of QGIS, we first check whether the
 method exists.
 
+.. note::
+    This method is deprecated as of QGIS 2.18.0 and will produce a warning.
+    Simply calling triggerRepaint() is sufficient.
+
 The second call emits signal that will force any map canvas containing the
 layer to issue a refresh.
 
