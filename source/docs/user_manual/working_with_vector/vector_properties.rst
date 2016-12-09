@@ -330,9 +330,9 @@ added using the histogram widget.
    You can use Statistical Summary panel to get more information on your vector
    layer. See :ref:`statistical_summary`.
 
-Back to the Classes tab, you can specify the number of classes and also the mode
-for classifying features within the classes (using the Mode list). The available
-modes are:
+Back to the Classes tab, you can specify the number of classes and also the
+mode for classifying features within the classes (using the Mode list). The
+available modes are:
 
 * Equal Interval: each class has the same size (e.g. values from 0 to 16 and
   4 classes, each class has a size of 4);
@@ -813,11 +813,11 @@ effect types, with custom options are available:
   reflection on the horizontal and/or vertical axes. The 4 other options are:
 
   * :menuselection:`Shear`: slants the feature along the x and/or y axis
-  * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or
-    y axis by the given percentage
+  * :menuselection:`Scale`: enlarges or minimizes the feature along the x
+    and/or y axis by the given percentage
   * :menuselection:`Rotation`: turns the feature around its center point
-  * and :menuselection:`Translate` changes the position of the item based on a
-    distance given on the x and/or the y axis.
+  * and :menuselection:`Translate` changes the position of the item based on
+    a distance given on the x and/or the y axis.
 
   .. _figure_effects_transform:
 
@@ -1155,10 +1155,11 @@ you can fine tune which labels should be rendered.
 
 Under :guilabel:`Feature options`, you can choose to :guilabel:`label every
 part of a multi-part feature` and :guilabel:`limit the number of features to be
-labeled`. Both line and polygon layers offer the option to set a minimum size for the
-features to be labeled, using :guilabel:`Suppress labeling of features smaller than`.
-For polygon features, you can also filter the labels to show according to whether
-they completely fit within the feature or not.
+labeled`. Both line and polygon layers offer the option to set a minimum size
+for the features to be labeled, using :guilabel:`Suppress labeling of features
+smaller than`.
+For polygon features, you can also filter the labels to show according to
+whether they completely fit within the feature or not.
 For line features, you can choose to :guilabel:`Merge connected lines
 to avoid duplicate labels`, rendering a quite airy map in conjunction with
 the :guilabel:`Distance` or :guilabel:`Repeat` options in Placement tab.
@@ -1396,10 +1397,10 @@ Comments can be added by clicking in the comment field of the column but if
 you are using a PostgreSQL layer, comment of the column could be the one in
 the PostgreSQL table if set. Comments are saved in the QGIS project file as for
 the alias.
-
-The dialog also lists read-only characteristics of the field such as its ``type``,
-``type name``, ``length`` and ``precision``. When serving the layer as ``WMS``
-or ``WFS``, you can also check here which fields could be retrieved.
+    
+The dialog also lists read-only characteristics of the field such as
+its ``type``, ``type name``, ``length`` and ``precision``. When serving the
+layer as ``WMS`` or ``WFS``, you can also check here which fields could be retrieved.
 
 
 .. index:: Edit widget, Field configuration
@@ -1432,15 +1433,15 @@ Common settings
 Regardless the type of widget applied to the field, there are some common
 properties you can set:
 
-* **Editable**: uncheck this to set the field read-only (not manually modifiable)
-  when the layer is in edit mode. Note that setting the field editable doesn't
-  override any edit limitation from the provider.
+* **Editable**: uncheck this to set the field read-only (not manually
+  modifiable) when the layer is in edit mode. Note that setting the field
+  editable doesn't override any edit limitation from the provider.
 * **Label on top**: places the field name above or beside the widget in the
   feature form
-* **Default value**: for new features, populates by default the field with the same
-  value or an expression-based one. For example, you can use ``maximum("field")+1``
-  to generate a field that increments by 1 for each feature.
-  A preview of the default value is displayed
+* **Default value**: for new features, populates by default the field with the
+  same value or an expression-based one. For example, you can use
+  ``maximum("field")+1`` to generate a field that increments by 1 for each
+  new feature. A preview of the default value is displayed
 * **Constraints**: you can constrain the value filled in the field.
   First, you can enable the |checkbox| :guilabel:`Not null` checkbox to
   force the user to fill the value of the column.
@@ -1525,16 +1526,15 @@ Customize a form for your data
 
 By default, when you click on a feature with the |identify| :sup:`Identify
 Features` tool or switch the attribute table to the *form view* mode, QGIS
-displays a form with tabulated textboxes (one per field). This rendering is the
-result of the default ``Autogenerate`` value of the :menuselection:`Layer
+displays a form with tabulated textboxes (one per field). This rendering is
+the result of the default ``Autogenerate`` value of the :menuselection:`Layer
 properties --> Fields --> Attribute editor layout` setting. Thanks to the
-:ref:`widget setting <configure_widget>`, you can improve this dialog. 
+:ref:`widget setting <configure_field>`, you can improve this dialog.
 
-You can furthermore define built-in forms
-(see figure_fields_form_). This is useful for data entry jobs or to identify
-objects using the option ``auto open form`` when you have objects with many
-attributes. You can create an editor with several tabs and named groups to
-present the attribute fields.
+You can furthermore define built-in forms (see figure_fields_form_).
+This is useful for data entry jobs or to identify features using the option
+``auto open form``. When you have objects with many attributes, you can create
+an editor with several tabs and named groups to present the attribute fields.
 
 
 .. _figure_fields_form:
@@ -1545,12 +1545,22 @@ present the attribute fields.
    Resulting built-in form with tabs and named groups
 
 
-Using the drag and drop designer
-.................................
+The drag and drop designer
+..........................
 
 Choose ``Drag and drop designer`` from the :guilabel:`Attribute editor layout`
-combobox. Use the |signPlus| icon to create a category to insert a tab (or group)
-in which fields and groups will be displayed (see figure_fields_layout_).
+combobox to layout the features form within QGIS. Then, drag and drop rows
+from the :guilabel:`Fields` frame to the :guilabel:`Label` panel to have fields
+added to your custom form.
+
+You can also use categories (tab or group frames) to better structure the form.
+The first step is to use the |signPlus| icon to create a tab in which fields
+and groups will be displayed (see figure_fields_layout_). You can create as many
+categories as you want.
+The next step will be to assign to each category the relevant fields, using the
+|arrowRight| icon. You'd need to select the targeted category beforehand.
+You can use the same fields many times.
+
 
 .. _figure_fields_layout:
 
@@ -1559,18 +1569,13 @@ in which fields and groups will be displayed (see figure_fields_layout_).
 
    Dialog to create categories with the **Attribute editor layout**
 
-When creating a new category, QGIS will insert a new tab or named group for the
-category in the built-in form.
-The next step will be to assign the fields to the relevant category
-with the |arrowRight| icon. You can create more categories and use the
-same fields many times.
 
-You can configure categories (tabs or groups) with a double-click. QGIS opens a
-form in which you can:
+You can configure tabs or groups with a double-click. QGIS opens a form in which
+you can:
 
 * choose to hide or show the item label
-* rename the label
-* set over how many columns fields under the category should be distributed
+* rename the category
+* set over how many columns the fields under the category should be distributed
 * enter an expression to control the category visibility. The expression will be
   re-evaluated everytime values in the form change and the tab or groupbox
   shown/hidden accordingly.
@@ -1579,13 +1584,22 @@ form in which you can:
 With a double-click on a field label, you can also specify whether the label of
 its widget should be visible or not in the form.
 
+In case the layer is involved in ``one to many relations`` (see :ref:`vector_relations`),
+referencing layers are listed in the :guilabel:`Relations` frame and their form
+can be embedded in the current layer form by drag-and-drop. Like the other
+items, double-click the relation label to configure some options:
+
+* choose to hide or show the item label
+* show the link button
+* show the unlink button
+
 Provide an ui-file
 ....................
 
 The ``Provide ui-file`` option allows you to use complex dialogs made with
-Qt-Designer. Using a UI-file allows a great deal of freedom in creating a dialog.
-Note that, in order to link the graphical objects (textbox, combobox...) to your
-layer's fields, you need to give them the same name. 
+Qt-Designer. Using a UI-file allows a great deal of freedom in creating a
+dialog. Note that, in order to link the graphical objects (textbox,
+combobox...) to the layer's fields, you need to give them the same name.
 
 Use the :guilabel:`Edit UI` to define the path to the file to use.
 
@@ -1595,15 +1609,16 @@ http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
 Enhance your form with custom functions
 ........................................
 
-QGIS dialogs can have a Python function that is called when the dialog is opened.
-Use this function to add extra logic to your dialogs. The form code can be specified
-in three different ways:
+QGIS forms can have a Python function that is called when the dialog is opened.
+Use this function to add extra logic to your dialogs. The form code can be
+specified in three different ways:
 
-* load from the environment (for example in :file:`startup.py` or from a plugin)
-* load from an external file, a file chooser will appear in that case to allow
-  you to select a Python file from your filesystem
-* load from inline code, a Python editor will appear where you can directly
-  type your form code
+* ``load from the environment``: use a function, for example in
+  :file:`startup.py` or from an installed plugin)
+* ``load from an external file``: a file chooser will appear in that case to
+  allow you to select a Python file from your filesystem
+* ``provide code in this dialog``: a Python editor will appear where you can
+  directly type the function to use.
 
 In all cases you must enter the name of the function that will be called
 (``open`` in the example below).
