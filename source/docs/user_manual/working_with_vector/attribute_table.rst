@@ -128,13 +128,17 @@ calculations to all or part of the features in the layer. This bar uses the same
 :ref:`expressions <vector_expressions>` as the |calculateField| :sup:`Field
 Calculator` (see :ref:`calculate_fields_values`).
 
-.. tip:: **Skip WKT geometry**
+.. tip:: **Copy-Paste feature(s)**
 
-   If you want to use attribute data in external programs (such as Excel), use the
-   |copySelected| :sup:`Copy selected rows to clipboard` button.
-   You can copy the information without vector geometries if you deactivate the
-   |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
-   option in :menuselection:`Settings --> Options --> Data Sources` menu.
+   If you want to use attribute data in external programs (such as Excel),
+   select a row and use the |copySelected| :sup:`Copy selected rows to clipboard`
+   button or press :kbd:`ctrl+C`.
+   In :menuselection:`Settings --> Options --> Data Sources` menu you can
+   define the format to paste to with :guilabel:`Copy features as` dropdown
+   list:
+   * Plain text, no geometry,
+   * Plain text, WKT geometry,
+   * GeoJSON
 
 Table view vs Form view
 -----------------------
