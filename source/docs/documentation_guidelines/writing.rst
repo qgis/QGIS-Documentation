@@ -231,7 +231,7 @@ Figure
 
 ::
 
-   .. _figure_readme:
+   .. _figure_logo:
 
    .. figure:: /static/common/qgislogo.png
       :width: 20 em
@@ -242,7 +242,7 @@ Figure
 
 The result looks like this:
 
-.. _figure_readme:
+.. _figure_logo:
 
 .. figure:: /static/common/qgislogo.png
    :width: 20 em
@@ -250,32 +250,36 @@ The result looks like this:
 
    A caption: A logo I like
 
-Use ``.. only:: html`` to make the number to the figure (**Figure Readme**)
-visible only in the html files.
+To avoid possible conflict with another references, always begin figures
+anchor with ``_figure_`` and prefer using terms that can easily refer to the
+figure caption. While only the centered alignment is mandatory for the image,
+feel free to use any other options for figure (such as ``width``,
+``height``, ``scale``...) if needed.
+
 The scripts will insert an automatical generated number before the caption of
 the figure in pdf.
 
-To use a caption (see My caption) just insert indented text after a blank line
+To use a caption (*see My caption*) just insert indented text after a blank line
 in the figure block.
 
 Referencing to the figure can be done using the reference label like this
 
 ::
 
-   (see Figure_readme_).
+   (see Figure_logo_).
 
-
-It will show the anchor Figure_readme_. You can use uppercase if you want.
-It can be used in the same :file:`.rst` document but not in other .rst
-documents.
-
-You can not use the ``:ref:`` role for reference anymore, because in html the reference
-to the caption is lost (it now refers to the place before **Figure Readme:**)
+It will show the anchor Figure_logo_. You can use uppercase if you want.
+It can be used in the same :file:`.rst` document but not in others.
+You can still use the ``:ref:`` role for reference from other files, but
+keep in mind that this returns the full caption of the image.
 
 ::
 
-   see :ref:`figure_readme`, does not work due to the lost reference to
-   the caption of the figure, this is not a 'bug' but a choice we made!
+   see :ref:`figure_logo`
+   
+returns:
+
+see :ref:`figure_logo`
 
 
 Tables
