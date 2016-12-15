@@ -77,7 +77,7 @@ See :ref:`label_scaledepend` for more information.
 
    General menu in vector layers properties dialog
 
-.. index:: Query Builder
+.. index:: Query builder
 .. _vector_query_builder:
 
 Query Builder
@@ -141,14 +141,14 @@ subset will prevent you from editing the layer.
 
 
 
-.. index:: Style, Symbology
+.. index:: Style, Symbology, Renderer
 .. _vector_style_menu:
 
 
 Style Menu
 ==========
 
-The Style menu provides you with a comprehensive tool for rendering
+|symbology| The Style menu provides you with a comprehensive tool for rendering
 and symbolizing your vector data. You can use tools that are common to all
 vector data, as well as special symbolizing tools that were designed for the
 different kinds of vector data. However all types share the following dialog
@@ -186,12 +186,13 @@ provides different additional sections.
 
 .. note::
 
-   If you change the renderer type when setting the style of a vector layer the settings
-   you made for the symbol will be maintained. Be aware that this procedure only works
-   for one change. If you repeat changing the renderer type the settings for the symbol
-   will get lost.
+   If you change the renderer type when setting the style of a vector layer the
+   settings you made for the symbol will be maintained. Be aware that this
+   procedure only works for one change. If you repeat changing the renderer type
+   the settings for the symbol will get lost.
 
-.. index:: Single Symbol Renderer
+.. index::
+   single: Symbology; Single symbol renderer
 .. _single_symbol_renderer:
 
 Single Symbol Renderer
@@ -209,17 +210,18 @@ See :ref:`symbol-selector` for further information about symbol representation.
 
    Single symbol line properties
 
-.. tip:: **edit symbol directly from layer panel**
+.. tip:: **Edit symbol directly from layer panel**
 
    If in your **Layers Panel** you have layers with categories defined through
    categorized, graduated or rule-based style mode, you can quickly change the
    fill color of the symbol of the categories by right-clicking on a category
    and choose the color you prefer from a |colorWheel| :sup:`color wheel` menu.
    Right-clicking on a category will also give you access to the options **Hide
-   all items**, **Show all items** **and Edit symbol**.
+   all items**, **Show all items** and **Edit symbol**.
 
-.. index:: No Symbols Renderer
 
+.. index::
+   single: Symbology; No symbols renderer
 .. _no_symbol_renderer:
 
 No Symbols Renderer
@@ -239,8 +241,8 @@ to show labels or diagrams for, and avoids the need to render
 symbols with totally transparent fill/border to achieve this.
 
 
-.. index:: Categorized Renderer, Classes
-
+.. index:: Classes
+   single: Symbology; Categorized renderer
 .. _categorized_rendered:
 
 Categorized Renderer
@@ -253,8 +255,8 @@ you to select:
 
 * The attribute (using the Column listbox or the |expressionEditorOpen|
   :guilabel:`Set column expression` function, see :ref:`vector_expressions` chapter)
-* The symbol (using the :ref:`symbol-selector` dialog) which will be used as default
-  for each class
+* The symbol (using the :ref:`symbol-selector` dialog) which will be used as
+  default for each class
 * The range of colors (using the Color ramp listbox) from which color applied
   to the symbol is selected
 
@@ -294,9 +296,9 @@ for the rivers layer of the QGIS sample dataset.
    *Style Manager*. *Match to symbols from file* match category name to a
    symbol name from an external file.
 
-.. index:: Graduated Renderer
-.. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
 
+.. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
+   single: Symbology; Graduated renderer
 .. _graduated_renderer:
 
 Graduated Renderer
@@ -328,9 +330,9 @@ added using the histogram widget.
    You can use Statistical Summary panel to get more information on your vector
    layer. See :ref:`statistical_summary`.
 
-Back to the Classes tab, you can specify the number of classes and also the mode for
-classifying features within the classes (using the Mode list). The available
-modes are:
+Back to the Classes tab, you can specify the number of classes and also the
+mode for classifying features within the classes (using the Mode list). The
+available modes are:
 
 * Equal Interval: each class has the same size (e.g. values from 0 to 16 and
   4 classes, each class has a size of 4);
@@ -378,7 +380,6 @@ the rivers layer of the QGIS sample dataset.
    attribute to be a composite of multiple fields, or a formula of some sort.
 
 .. index:: Proportional symbol, Multivariate analysis, Size assistant
-
 .. _proportional_symbols:
 
 Proportional Symbol and Multivariate Analysis
@@ -421,8 +422,8 @@ The assistant lets you define:
 * An unique size to represent NULL values.
 
 To the right side of the dialog, you can preview the features representation
-within a live-update widget. This representation is added to the layer tree in the
-layer legend and is also used to shape the layer representation in the
+within a live-update widget. This representation is added to the layer tree in
+the layer legend and is also used to shape the layer representation in the
 print composer legend item.
 
 The values presented in the varying size assistant above will set the size
@@ -434,8 +435,9 @@ The values presented in the varying size assistant above will set the size
 **Creating multivariate analysis**
 
 A multivariate analysis rendering helps you evaluate the relationship between
-two or more variables e.g., one can be represented by a color ramp while the other is
-represented by a size.
+two or more variables e.g., one can be represented by a color ramp while the
+other is represented by a size.
+
 
 The simplest way to create multivariate analysis in QGIS is to first apply
 a categorized or graduated rendering on a layer, using the same type of symbol
@@ -455,9 +457,9 @@ are also available in the print composer legend item.
 
    Multivariate example
 
-.. Index:: Rule-based Rendering
-   single: Rule-based Rendering; Create a rule
-
+.. Index::
+   single: Symbology; Rule-based renderer
+   single: Rule-based renderer; Create a rule
 .. _rule_based_rendering:
 
 Rule-based rendering
@@ -497,9 +499,8 @@ dialog for the rivers layer of the QGIS sample dataset.
 
    Rule-based Symbolizing options
 
-.. index:: Point Displacement Renderer, Displacement circle
-.. index:: Displacement plugin
-
+.. index:: Displacement plugin, Displacement circle
+   single: Symbology; Point displacement renderer
 .. _point_displacement:
 
 Point displacement
@@ -517,12 +518,13 @@ around one center symbol or on several concentric circles.
 
    Point displacement dialog
 
-.. note:: You can still render features with other renderer like Single symbol, Graduated,
-   Categorized or Rule-Based renderer using the :guilabel:`Renderer` drop-down
-   list then the :guilabel:`Renderer Settings...` button.
+.. note:: You can still render features with other renderer like Single symbol,
+   Graduated, Categorized or Rule-Based renderer using the :guilabel:`Renderer`
+   drop-down list then the :guilabel:`Renderer Settings...` button.
 
-.. index:: Inverted Polygon Renderer
 
+.. index::
+   single: Symbology; Inverted polygon renderer
 .. _inverted_polygon_renderer:
 
 Inverted Polygon
@@ -540,8 +542,8 @@ Single symbol, Graduated, Categorized, Rule-Based or 2.5 D renderer.
 
    Inverted Polygon dialog
 
-.. index:: Heatmap, Heatmap Renderer
-
+.. index:: Heatmap
+   single: Symbology; Heatmap renderer
 .. _heatmap:
 
 Heatmap
@@ -562,7 +564,8 @@ the heatmap renderer updates the heatmap style automatically.
 
    Heatmap dialog
 
-.. index:: 2.5 D Rendering
+.. index:: 2.5 D
+   single: Symbology; 2.5 D renderer
 .. _2.5_D_rendering:
 
 2.5 D
@@ -651,7 +654,6 @@ Other Settings
 --------------
 
 .. index:: Symbols levels
-
 .. _Symbols_levels:
 
 Symbols levels
@@ -781,9 +783,10 @@ effect types, with custom options are available:
 
 * **Inner Glow:** Adds a glow effect inside the feature. This effect can be
   customized by adjusting the :menuselection:`spread` (width) of the glow, or
-  the :menuselection:`Blur radius`. The latter specifies the proximity from the
-  edge of the feature where you want any blurring to happen. Additionally, there
-  are options to customize the color of the glow, with a single color or a color ramp.
+  the :menuselection:`Blur radius`. The latter specifies the proximity from
+  the edge of the feature where you want any blurring to happen. Additionally,
+  there are options to customize the color of the glow, with a single color or
+  a color ramp.
 
   .. _figure_effects_inner_glow:
 
@@ -805,16 +808,16 @@ effect types, with custom options are available:
      Draw Effects: Outer Glow dialog
 
 * **Transform:** Adds the possibility of transforming the shape of the symbol.
-  The first options available for customization are the :menuselection:`Reflect horizontal`
-  and :menuselection:`Reflect vertical`, which actually create a reflection on the
-  horizontal and/or vertical axes. The 4 other options are:
+  The first options available for customization are the :menuselection:`Reflect
+  horizontal` and :menuselection:`Reflect vertical`, which actually create a
+  reflection on the horizontal and/or vertical axes. The 4 other options are:
 
   * :menuselection:`Shear`: slants the feature along the x and/or y axis
-  * :menuselection:`Scale`: enlarges or minimizes the feature along the x and/or y axis
-    by the given percentage
+  * :menuselection:`Scale`: enlarges or minimizes the feature along the x
+    and/or y axis by the given percentage
   * :menuselection:`Rotation`: turns the feature around its center point
-  * and :menuselection:`Translate` changes the position of the item based on a distance
-    given on the x and/or the y axis.
+  * and :menuselection:`Translate` changes the position of the item based on
+    a distance given on the x and/or the y axis.
 
   .. _figure_effects_transform:
 
@@ -852,7 +855,7 @@ Labels Menu
 ===========
 
 The |labeling| :sup:`Labels` core application provides smart
-:index:`labeling` for vector point, line and polygon layers, and only requires a
+labeling for vector point, line and polygon layers, and only requires a
 few parameters. This application also supports on-the-fly transformed layers.
 The following menus are used to configure the labeling of vector layers:
 
@@ -875,9 +878,8 @@ are four options available:
 * **No labels**
 * **Show labels for this layer**
 * :ref:`Rule-based labeling <rule_based_labeling>`
-* and **Discourage other labels from covering features in this layer**: allows to
-  set a layer as just an obstacle for other layer's labels without rendering any
-  labels of its own.
+* and **Blocking**: allows to set a layer as just an obstacle for other layer's
+  labels without rendering any labels of its own.
 
 Select the **Show labels for this layer** option and then select an attribute
 column to use for labeling from the **Label with** drop-down list. Click
@@ -1000,8 +1002,8 @@ Placement menu
 --------------
 
 Choose the :guilabel:`Placement` menu for configuring label placement
-and labeling priority. Note that the placement options differ according to the type of
-vector layer, namely point, line or polygon.
+and labeling priority. Note that the placement options differ according to the
+type of vector layer, namely point, line or polygon.
 
 .. _cartographic:
 
@@ -1126,9 +1128,9 @@ Under :guilabel:`Label options`, you find the :ref:`scale-based <label_scaledepe
 and the :guilabel:`Pixel size-based` visibility settings.
 
 The :guilabel:`Label z-index` determines the order in which labels are rendered,
-as well in relation with other feature labels in the layer (using data-defined override
-expression), as with labels from other layers.
-Labels with a higher z-index are rendered on top of labels (from any layer) with lower z-index.
+as well in relation with other feature labels in the layer (using data-defined
+override expression), as with labels from other layers. Labels with a higher
+z-index are rendered on top of labels (from any layer) with lower z-index.
 
 Additionally, the logic has been tweaked so that if 2 labels have
 matching z-indexes, then:
@@ -1144,18 +1146,20 @@ labels are drawn on top of all the layer's features.
 While rendering labels and in order to display readable labels,
 QGIS automatically evaluates the position of the labels and can hide some of them
 in case of collision. You can however choose to |checkbox| :guilabel:`Show all
-labels for this layer (including colliding labels)` in order to manually fix their placement.
+labels for this layer (including colliding labels)` in order to manually fix
+their placement.
 
 With data-defined expressions in :guilabel:`Show label` and :guilabel:`Always Show`
 you can fine tune which labels should be rendered.
 
 
 Under :guilabel:`Feature options`, you can choose to :guilabel:`label every
-part of a multi-part feature` and :guilabel:`limit the number of features to be labeled`.
-Both line and polygon layers offer the option to set a minimum size for the
-features to be labeled, using :guilabel:`Suppress labeling of features smaller than`.
-For polygon features, you can also filter the labels to show according to whether they
-completely fit within the feature or not.
+part of a multi-part feature` and :guilabel:`limit the number of features to be
+labeled`. Both line and polygon layers offer the option to set a minimum size
+for the features to be labeled, using :guilabel:`Suppress labeling of features
+smaller than`.
+For polygon features, you can also filter the labels to show according to
+whether they completely fit within the feature or not.
 For line features, you can choose to :guilabel:`Merge connected lines
 to avoid duplicate labels`, rendering a quite airy map in conjunction with
 the :guilabel:`Distance` or :guilabel:`Repeat` options in Placement tab.
@@ -1368,15 +1372,16 @@ configurations.
 
    Rule settings
 
-
+.. index:: Fields, Forms
 .. _vector_attributes_menu:
 
 Fields Menu
 ===========
 
-|attributes| Within the :guilabel:`Fields` menu, the field attributes of the
-selected dataset can be manipulated. The buttons |newAttribute|
-:sup:`New Column` and |deleteAttribute| :sup:`Delete Column`
+|attributes| The :guilabel:`Fields` menu helps you organize the fields of
+the selected dataset and the way you can interact with
+the feature's attributes. The buttons |newAttribute|
+:sup:`New field` and |deleteAttribute| :sup:`Delete field`
 can be used when the dataset is in |toggleEditing| :sup:`Editing mode`.
 
 You can rename fields by double-clicking in the fields name (note that you
@@ -1384,23 +1389,33 @@ should switch to editing mode to edit the field name). This is only supported
 for data providers like PostgreSQL, Oracle, Memory layer and some OGR layer
 depending the OGR data format and version.
 
-You can define some alias to display human readable fields in the form. In this
-case, you don't need to switch to editing mode. Alias are saved in project
-file.
+You can define some alias to display human readable fields in the feature form
+or the attribute table. In this case, you don't need to switch to editing mode.
+Alias are saved in project file.
 
 Comments can be added by clicking in the comment field of the column but if
 you are using a PostgreSQL layer, comment of the column could be the one in
 the PostgreSQL table if set. Comments are saved in the QGIS project file as for
 the alias.
+    
+The dialog also lists read-only characteristics of the field such as
+its ``type``, ``type name``, ``length`` and ``precision``. When serving the
+layer as ``WMS`` or ``WFS``, you can also check here which fields could be retrieved.
 
 
-**Edit Widget**
+.. index:: Edit widget, Field configuration
+.. _configure_field:
 
-.. following is included to give some space between title and figure!
+Configure the field behavior
+-----------------------------
 
-\
+Within the :guilabel:`Fields` menu, you also find an **Edit widget** column.
+This column can be used to define values or a range of values that are allowed
+to be added to the specific attribute table column. It also helps to set the
+type of widget used to fill or display values of the field, in the attribute
+table or the feature form. If you click on the **[Edit widget]** button, a dialog
+opens, where you can define different widgets.
 
-\
 
 .. _figure_fields_widget:
 
@@ -1409,11 +1424,40 @@ the alias.
 
    Dialog to select an edit widget for an attribute column
 
-Within the :guilabel:`Fields` menu, you also find an **edit widget** column.
-This column can be used to define values or a range of values that are allowed
-to be added to the specific attribute table column. If you click on the
-**[edit widget]** button, a dialog opens, where you can define different
-widgets. These widgets are:
+
+.. index:: Default values, Fields constraints
+
+Common settings
+...............
+
+Regardless the type of widget applied to the field, there are some common
+properties you can set to control whether and how a field can be edited:
+
+* **Editable**: uncheck this to set the field read-only (not manually
+  modifiable) when the layer is in edit mode. Note that checking this setting
+  doesn't override any edit limitation from the provider.
+* **Label on top**: places the field name above or beside the widget in the
+  feature form
+* **Default value**: for new features, populates by default the field with the
+  same value or an expression-based one. For example, you can use
+  ``maximum("field")+1`` to generate a field that increments by 1 for each
+  new feature. A preview of the default value is displayed
+* **Constraints**: you can constrain the value in the field. This constraint
+  can be:
+  
+  * |checkbox| :guilabel:`Not null`: force the user to provide a value
+  * based on a custom expression: e.g. ``regexp_match(col0,'A-Za-z')`` to ensure
+    that the value of the field *col0* has only alphabetical letter.
+    
+    A short description of the constraint can be added and will be displayed at
+    the top of the form as a warning message when the value supplied does not
+    match the constraint.
+
+
+Edit widgets
+.............
+
+The available widgets are:
 
 * **Checkbox**: Displays a checkbox, and you can define what attribute is
   added to the column when the checkbox is activated or not.
@@ -1455,16 +1499,6 @@ widgets. These widgets are:
   a drop-down list or a line edit field when completer checkbox is enabled.
 * **Webview**: Field contains a URL. The width and height of the field is variable.
 
-**Constraints:** Each widget allows to constrain the value filled in the
-field. First, you can enable the |checkbox| :guilabel:`Not null` checkbox to
-force the user to fill the value of the column.
-
-You can also setup a custom contraint using an expression, e.g.
-``regexp_match(col0,'A-Za-z')`` to be sure that the value of the column *col0*
-has only alphabetical letter. Finally, you can add a short description to explain
-the constraint that will be displayed in the top of the form as a warning
-message when the value of the field does not match the constraint.
-
 
 .. note::
 
@@ -1478,58 +1512,52 @@ message when the value of the field does not match the constraint.
 .. tip:: **Relative Path in widgets**
 
    If the path which is selected with the file browser is located in the same
-   directory as the .qgs project file or below, paths are converted to
-   relative
-   paths. This increases portability of a qgs project with multimedia
-   information attached.
-   This is enabled only for File Name, Photo and Web View at this
-   moment.
+   directory as the :file:`.qgs` project file or below, paths are converted to
+   relative paths. This increases portability of a :file:`.qgs` project with
+   multimedia information attached.
+   This is enabled only for File Name, Photo and Web View at this moment.
 
-With the **Attribute editor layout**, you can now define built-in forms
-(see figure_fields_layout_). This is useful for data entry jobs or to identify
-objects using the option auto open form when you have objects with many attributes.
-You can create an editor with several tabs and named groups to present
-the attribute fields.
 
-Choose 'Drag and drop designer' and an attribute column. Use the |signPlus|
-icon to create a category to insert a tab or a named group (see figure_fields_form_).
-When creating a new category, QGIS will insert a new tab or named group for the
-category in the built-in form.
-The next step will be to assign the relevant fields to a selected category
-with the |arrowRight| icon. You can create more categories and use the
-same fields again.
+.. index:: Form, Built-in form, Custom form
 
-Other options in the dialog are 'Autogenerate' and 'Provide ui-file'.
+Customize a form for your data
+-------------------------------
 
-* 'Autogenerate' just creates editors for all fields and tabulates them.
+By default, when you click on a feature with the |identify| :sup:`Identify
+Features` tool or switch the attribute table to the *form view* mode, QGIS
+displays a form with tabulated textboxes (one per field). This rendering is
+the result of the default ``Autogenerate`` value of the :menuselection:`Layer
+properties --> Fields --> Attribute editor layout` setting. Thanks to the
+:ref:`widget setting <configure_field>`, you can improve this dialog.
 
-* The 'Provide ui-file' option allows you to use complex dialogs made with the Qt-Designer.
-  Using a UI-file allows a great deal of freedom in creating a dialog.
-  For detailed information, see
-  http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+You can furthermore define built-in forms (see figure_fields_form_),
+e.g. when you have objects with many attributes, you can create
+an editor with several tabs and named groups to present the attribute fields.
 
-QGIS dialogs can have a Python function that is called when the dialog is opened.
-Use this function to add extra logic to your dialogs. The form code can be specified
-in three different ways:
 
-* load from the environment (for example in :file:`startup.py` or from a plugin)
-* load from an external file, a file chooser will appear in that case to allow
-  you to select a Python file from your filesystem
-* load from inline code, a Python editor will appear where you can directly
-  type your form code
+.. _figure_fields_form:
 
-In all cases you must enter the name of the function that will be called
-(`open` in the example below).
+.. figure:: /static/user_manual/working_with_vector/resulting_feature_form.png
+   :align: center
 
-An example is (in module MyForms.py):
+   Resulting built-in form with tabs and named groups
 
-::
 
-  def open(dialog,layer,feature):
-      geom = feature.geometry()
-      control = dialog.findChild(QWidged,"My line edit")
+The drag and drop designer
+..........................
 
-Reference in Python Init Function like so: `open`
+Choose ``Drag and drop designer`` from the :guilabel:`Attribute editor layout`
+combobox to layout the features form within QGIS. Then, drag and drop rows
+from the :guilabel:`Fields` frame to the :guilabel:`Label` panel to have fields
+added to your custom form.
+
+You can also use categories (tab or group frames) to better structure the form.
+The first step is to use the |signPlus| icon to create a tab in which fields
+and groups will be displayed (see figure_fields_layout_). You can create as many
+categories as you want.
+The next step will be to assign to each category the relevant fields, using the
+|arrowRight| icon. You'd need to select the targeted category beforehand.
+You can use the same fields many times.
 
 
 .. _figure_fields_layout:
@@ -1539,12 +1567,70 @@ Reference in Python Init Function like so: `open`
 
    Dialog to create categories with the **Attribute editor layout**
 
-.. _figure_fields_form:
 
-.. figure:: /static/user_manual/working_with_vector/resulting_feature_form.png
-   :align: center
+You can configure tabs or groups with a double-click. QGIS opens a form in which
+you can:
 
-   Resulting built-in form with tabs and named groups
+* choose to hide or show the item label
+* rename the category
+* set over how many columns the fields under the category should be distributed
+* enter an expression to control the category visibility. The expression will be
+  re-evaluated everytime values in the form change and the tab or groupbox
+  shown/hidden accordingly.
+* show the category as a group box (only available for tabs)
+
+With a double-click on a field label, you can also specify whether the label of
+its widget should be visible or not in the form.
+
+In case the layer is involved in ``one to many relations`` (see :ref:`vector_relations`),
+referencing layers are listed in the :guilabel:`Relations` frame and their form
+can be embedded in the current layer form by drag-and-drop. Like the other
+items, double-click the relation label to configure some options:
+
+* choose to hide or show the item label
+* show the link button
+* show the unlink button
+
+Provide an ui-file
+....................
+
+The ``Provide ui-file`` option allows you to use complex dialogs made with
+Qt-Designer. Using a UI-file allows a great deal of freedom in creating a
+dialog. Note that, in order to link the graphical objects (textbox,
+combobox...) to the layer's fields, you need to give them the same name.
+
+Use the :guilabel:`Edit UI` to define the path to the file to use.
+
+For detailed information, see
+http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+
+Enhance your form with custom functions
+........................................
+
+QGIS forms can have a Python function that is called when the dialog is opened.
+Use this function to add extra logic to your dialogs. The form code can be
+specified in three different ways:
+
+* ``load from the environment``: use a function, for example in
+  :file:`startup.py` or from an installed plugin)
+* ``load from an external file``: a file chooser will appear in that case to
+  allow you to select a Python file from your filesystem
+* ``provide code in this dialog``: a Python editor will appear where you can
+  directly type the function to use.
+
+In all cases you must enter the name of the function that will be called
+(``open`` in the example below).
+
+An example is (in module MyForms.py):
+
+::
+
+  def open(dialog,layer,feature):
+      geom = feature.geometry()
+      control = dialog.findChild(QWidged,"My line edit")
+
+Reference in Python Init Function like so: ``open``
+
 
 .. index:: Jointure, Join layers
 .. _`sec_joins`:
@@ -2138,7 +2224,7 @@ in map canvas.
 Rendering Menu
 ==============
 
-QGIS offers support for on-the-fly feature generalisation. This can
+|rendering| QGIS offers support for on-the-fly feature generalisation. This can
 improve rendering times when drawing many complex features at small scales.
 This feature can be enabled or disabled in the layer settings using the
 |checkbox| :guilabel:`Simplify geometry` option. There is also a global
@@ -2202,9 +2288,9 @@ In :guilabel:`MetadataUrl`, you can define the general path to the XML metadata
 catalogue. This information will be saved in the QGIS project file for subsequent
 sessions and will be used for QGIS server.
 
-In the :guilabel:`LegendUrl` section, you can provide the url of a legend image in the url
-field. You can use the Format drop-down option to apply the appropriate format
-of the image. Currently png, jpg and jpeg image formats are supported.
+In the :guilabel:`LegendUrl` section, you can provide the url of a legend image
+in the url field. You can use the Format drop-down option to apply the appropriate
+format of the image. Currently png, jpg and jpeg image formats are supported.
 
 .. _figure_metadata_vector:
 
@@ -2229,7 +2315,7 @@ of the image. Currently png, jpg and jpeg image formats are supported.
 Legend Menu
 -------------
 
-The :guilabel:`Legend` menu provides you with a list of widgets you can embed within
+|legend| The :guilabel:`Legend` menu provides you with a list of widgets you can embed within
 the layer tree in the Layers panel. The idea is to have a way to quickly access some
 actions that are often used with the layer (setup transparency, filtering, selection,
 style or other stuff...).
