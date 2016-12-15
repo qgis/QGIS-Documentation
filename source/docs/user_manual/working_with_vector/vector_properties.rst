@@ -1431,32 +1431,33 @@ Common settings
 ...............
 
 Regardless the type of widget applied to the field, there are some common
-properties you can set:
+properties you can set to control whether and how a field can be edited:
 
 * **Editable**: uncheck this to set the field read-only (not manually
-  modifiable) when the layer is in edit mode. Note that setting the field
-  editable doesn't override any edit limitation from the provider.
+  modifiable) when the layer is in edit mode. Note that checking this setting
+  doesn't override any edit limitation from the provider.
 * **Label on top**: places the field name above or beside the widget in the
   feature form
 * **Default value**: for new features, populates by default the field with the
   same value or an expression-based one. For example, you can use
   ``maximum("field")+1`` to generate a field that increments by 1 for each
   new feature. A preview of the default value is displayed
-* **Constraints**: you can constrain the value filled in the field.
-  First, you can enable the |checkbox| :guilabel:`Not null` checkbox to
-  force the user to fill the value of the column.
+* **Constraints**: you can constrain the value in the field. This constraint
+  can be:
+  
+  * |checkbox| :guilabel:`Not null`: force the user to provide a value
+  * based on a custom expression: e.g. ``regexp_match(col0,'A-Za-z')`` to ensure
+    that the value of the field *col0* has only alphabetical letter.
+    
+    A short description of the constraint can be added and will be displayed at
+    the top of the form as a warning message when the value supplied does not
+    match the constraint.
 
-  You can also setup a custom contraint using an expression, e.g.
-  ``regexp_match(col0,'A-Za-z')`` to be sure that the value of the column *col0*
-  has only alphabetical letter. Finally, you can add a short description to explain
-  the constraint that will be displayed in the top of the form as a warning
-  message when the value of the field does not match the constraint.
 
+Edit widgets
+.............
 
-Edit widget
-............
-
-These widgets are:
+The available widgets are:
 
 * **Checkbox**: Displays a checkbox, and you can define what attribute is
   added to the column when the checkbox is activated or not.
@@ -1511,12 +1512,10 @@ These widgets are:
 .. tip:: **Relative Path in widgets**
 
    If the path which is selected with the file browser is located in the same
-   directory as the .qgs project file or below, paths are converted to
-   relative
-   paths. This increases portability of a qgs project with multimedia
-   information attached.
-   This is enabled only for File Name, Photo and Web View at this
-   moment.
+   directory as the :file:`.qgs` project file or below, paths are converted to
+   relative paths. This increases portability of a :file:`.qgs` project with
+   multimedia information attached.
+   This is enabled only for File Name, Photo and Web View at this moment.
 
 
 .. index:: Form, Built-in form, Custom form
@@ -1531,9 +1530,8 @@ the result of the default ``Autogenerate`` value of the :menuselection:`Layer
 properties --> Fields --> Attribute editor layout` setting. Thanks to the
 :ref:`widget setting <configure_field>`, you can improve this dialog.
 
-You can furthermore define built-in forms (see figure_fields_form_).
-This is useful for data entry jobs or to identify features using the option
-``auto open form``. When you have objects with many attributes, you can create
+You can furthermore define built-in forms (see figure_fields_form_),
+e.g. when you have objects with many attributes, you can create
 an editor with several tabs and named groups to present the attribute fields.
 
 
