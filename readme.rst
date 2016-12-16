@@ -57,6 +57,8 @@ Uncomment the lines for the modules that you NOT want to build in this part of s
  #exclude_patterns += ['docs/user_manual/*']                                      
  # uncomment to exclude training manual from build                                
  #exclude_patterns += ['docs/training_manual/*']                                  
+ # uncomment to exclude dev guides from build                                     
+ #exclude_patterns += ['docs/developers_guide/*']  
  # uncomment to exclude doc guides from build                                     
  #exclude_patterns += ['docs/documentation_guidelines/*']                         
  # uncomment to exclude gentle intro  from build                                  

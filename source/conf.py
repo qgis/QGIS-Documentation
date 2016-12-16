@@ -73,6 +73,8 @@ exclude_patterns = ['../output', "../i18n", "../resources", "../scripts"]
 #exclude_patterns += ['docs/user_manual/*']
 # uncomment to exclude training manual from build
 #exclude_patterns += ['docs/training_manual/*']
+# uncomment to exclude developer guides from build
+#exclude_patterns += ['docs/developers_guide/*']
 # uncomment to exclude doc guides from build
 #exclude_patterns += ['docs/documentation_guidelines/*']
 # uncomment to exclude gentle intro  from build
@@ -1216,6 +1218,7 @@ latex_documents = [
   ('docs/user_manual/index', 'QGISUserGuide.tex', u'QGIS User Guide', u'QGIS Project', 'manual'),
   ('docs/pyqgis_developer_cookbook/index', 'PyQGISDeveloperCookbook.tex', u'PyQGIS developer cookbook', u'QGIS Project', 'manual'),
   ('docs/training_manual/index', 'QGISTrainingManual.tex', u'QGIS Training Manual', u'QGIS Project', 'manual'),
+  ('docs/developers_guide/index', 'QGISDevelopersGuide.tex', u'QGIS Developers Guide', u'QGIS Project', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
