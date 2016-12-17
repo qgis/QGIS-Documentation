@@ -1,6 +1,7 @@
 
-HIG (Human Interface Guidelines)
-=================================
+**********************************
+ HIG (Human Interface Guidelines)
+**********************************
 
 In order for all graphical user interface elements to appear consistant and to
 all the user to instinctively use dialogs, it is important that the following

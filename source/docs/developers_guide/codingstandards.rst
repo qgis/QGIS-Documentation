@@ -1,17 +1,20 @@
 .. _coding_standards:
 
-QGIS Coding Standards
-=====================
+***********************
+ QGIS Coding Standards
+***********************
 
+.. contents::
+   :local:
 
 These standards should be followed by all QGIS developers.
 
 Classes
--------
+=======
 
 
 Names
-.....
+-----
 
 Class in QGIS begin with Qgs and are formed using camel case.
 
@@ -23,7 +26,7 @@ Examples:
 
 
 Members
-.......
+-------
 
 
 Class member names begin with a lower case m and are formed using mixed
@@ -37,7 +40,7 @@ Public class members are STRONGLY discouraged
 
 
 Accessor Functions
-..................
+------------------
 
 
 Class member values should be obtained through accesssor functions. The
@@ -49,7 +52,7 @@ two private members above would be:
 
 
 Functions
-.........
+---------
 
 
 Function names begin with a lowercase letter and are formed using mixed case.
@@ -59,10 +62,10 @@ The function name should convey something about the purpose of the function.
 * ``setUserOptions()``
 
 Qt Designer
------------
+===========
 
 Generated Classes
-.................
+-----------------
 
 QGIS classes that are generated from Qt Designer (ui) files should have a
 Base suffix. This identifies the class as a generated base class.
@@ -74,7 +77,7 @@ Examples:
 
 
 Dialogs
-.......
+-------
 
 All dialogs should implement the following:
 
@@ -85,10 +88,10 @@ All dialogs should implement the following:
    browser
 
 C++ Files
----------
+=========
 
 Names
-.....
+-----
 
 C++ implementation and header files should have a .cpp and .h extension
 respectively. Filename should be all lowercase and, in the case of classes,
@@ -105,7 +108,7 @@ Class ``QgsFeatureAttribute`` source files are
 
 
 Standard Header and License
-...........................
+----------------------------
 
 Each source file should contain a header section patterned after the following
 example:
@@ -134,7 +137,7 @@ example:
 
 
 Variable Names
---------------
+===============
 
 Local variable names begin with a lower case letter and are formed using mixed case.
 
@@ -145,7 +148,7 @@ Examples:
 
 
 Enumerated Types
-----------------
+=================
 
 Enumerated types should be named in CamelCase with a leading capital e.g.:
 
@@ -163,7 +166,7 @@ Do not use generic type names that will conflict with other types. e.g. use
 ``UnkownUnit`` rather than ``Unknown``
 
 Global Constants & Macros
---------------------------
+==========================
 
 Global constants and macros should be written in upper case underscore separated e.g.:
 
@@ -172,13 +175,13 @@ Global constants and macros should be written in upper case underscore separated
   const long GEOCRS_ID = 3344;
 
 Editing
--------
+=======
 
 Any text editor/IDE can be used to edit QGIS code, providing the following
 requirements are met.
 
 Tabs
-....
+----
 
 Set your editor to emulate tabs with spaces. Tab spacing should be set to 2
 spaces.
@@ -186,7 +189,7 @@ spaces.
 .. note:: In vim this is done with ``set expandtab ts=2``
 
 Indentation
-...........
+-----------
 
 Source code should be indented to improve readability. There is a
 ``scripts/prepare-commit.sh`` that looks up the changed files and reindents them
@@ -199,7 +202,7 @@ that we include in our repository (enable WITH_ASTYLE in cmake to include it in
 the build).
 
 Braces
-......
+------
 
 Braces should start on the line following the expression:
 
@@ -217,7 +220,7 @@ Braces should start on the line following the expression:
   }
 
 API Compatibility
------------------
+==================
 
 There is `API documentation <http://qgis.org/api/>`_ for C++.
 
@@ -257,7 +260,7 @@ should be done in a manner similar to the Qt sourcecode e.g.
   }
 
 Coding Style
-------------
+=============
 
 
 Here are described some programming hints and tips that will hopefully reduce
@@ -265,7 +268,7 @@ errors, development time and maintenance.
 
 
 Where-ever Possible Generalize Code
-...................................
+------------------------------------
 
 
 If you are cut-n-pasting code, or otherwise writing the same thing more than
@@ -280,7 +283,7 @@ This will:
 
 
 Prefer Having Constants First in Predicates
-...........................................
+--------------------------------------------
 
 Prefer to put constants first in predicates.
 
@@ -292,7 +295,7 @@ generate an error if you accidentally use ``=`` instead of ``==`` for comparison
 since constants inherently cannot be assigned values.
 
 Whitespace Can Be Your Friend
-.............................
+------------------------------
 
 Adding spaces between operators, statements, and functions makes it easier for
 humans to parse code.
@@ -313,7 +316,7 @@ or this:
 
 
 Put commands on separate lines
-..............................
+-------------------------------
 
 When reading code it's easy to miss commands, if they are not at the beginning
 of the line. When quickly reading through code, it's common to skip lines
@@ -340,7 +343,7 @@ Instead use
   bar();
 
 Indent access modifiers
-.......................
+------------------------
 
 Access modifiers structure a class into sections of public API, protected API and
 private API. Access modifiers themselves group the code into this structure.
@@ -359,7 +362,7 @@ Indent the access modifier and declarations.
 
 
 Book recommendations
-....................
+---------------------
 
 
 - `Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, Scott Meyers
@@ -372,7 +375,7 @@ You should also really read this article from Qt Quarterly on
 
 
 Credits for contributions
--------------------------
+==========================
 
 Contributors of new functions are encouraged to let people know about their contribution by:
 

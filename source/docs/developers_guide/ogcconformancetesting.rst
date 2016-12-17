@@ -1,16 +1,20 @@
 
 .. index:: OGC Conformance Testing
 
-OGC Conformance Testing
-=======================
+*************************
+ OGC Conformance Testing
+*************************
 
+.. contents::
+   :local:
 
-The Open Geospatial Consortium (OGC) provides tests which can be run free of charge to make sure a server is compliant with a
-certain specification. This chapter provides a quick tutorial to setup the WMS tests on an Ubuntu system. A detailed
-documentation can be found at the `OGC website <http://www.opengeospatial.org/compliance>`_.
+The Open Geospatial Consortium (OGC) provides tests which can be run free of
+charge to make sure a server is compliant with a certain specification.
+This chapter provides a quick tutorial to setup the WMS tests on an Ubuntu system.
+A detailed documentation can be found at the `OGC website <http://www.opengeospatial.org/compliance>`_.
 
 Setup of WMS 1.3 and WMS 1.1.1 conformance tests
-------------------------------------------------
+=================================================
 
 .. code-block:: bash
 
@@ -46,7 +50,7 @@ Download and install WMS 1.1.1 test
 
 
 Test project
-------------
+=============
 
 For the WMS tests, data can be downloaded and loaded into a QGIS project:
 
@@ -55,11 +59,13 @@ For the WMS tests, data can be downloaded and loaded into a QGIS project:
   wget http://cite.opengeospatial.org/teamengine/about/wms/1.3.0/site/data-wms-1.3.0.zip
   unzip data-wms-1.3.0.zip
 
-Then create a QGIS project according to the description in http://cite.opengeospatial.org/teamengine/about/wms/1.3.0/site/. To run the tests, we need to provide the GetCapabilities URL of the service later.
+Then create a QGIS project according to the description in
+http://cite.opengeospatial.org/teamengine/about/wms/1.3.0/site/. To run the tests,
+we need to provide the GetCapabilities URL of the service later.
 
 
 Running the WMS 1.3.0 test
---------------------------
+===========================
 
 .. code-block:: bash
 
@@ -71,7 +77,7 @@ Running the WMS 1.3.0 test
 
 
 Running the WMS 1.1.1 test
---------------------------
+===========================
 
 .. code-block:: bash
 

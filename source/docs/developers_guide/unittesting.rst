@@ -1,6 +1,10 @@
 
-Unit Testing
-============
+**************
+ Unit Testing
+**************
+
+.. contents::
+   :local:
 
 As of November 2007 we require all new features going into master to be
 accompanied with a unit test. Initially we have limited this requirement to
@@ -10,7 +14,7 @@ sections that follow.
 
 
 The QGIS testing framework - an overview
-----------------------------------------
+=========================================
 
 Unit testing is carried out using a combination of QTestLib (the Qt testing
 library) and CTest (a framework for compiling and running tests as part of the
@@ -349,7 +353,7 @@ line is the include for the MOC generated sources. You should replace
 
 
 Adding your unit test to CMakeLists.txt
----------------------------------------
+=======================================
 
 
 Adding your unit test to the build system is simply a matter of editing the
@@ -363,7 +367,7 @@ and then replacing your test class name into it. For example:
 
 
 The ADD_QGIS_TEST macro explained
----------------------------------
+==================================
 
 
 I'll run through these lines briefly to explain what they do, but if you are
@@ -480,7 +484,7 @@ integrate running tests into the build process, the CTest is what we use.
 
 
 Building your unit test
------------------------
+========================
 
 To build the unit test you need only to make sure that ``ENABLE_TESTS=true``
 in the cmake configuration. There are two ways to do this:
@@ -493,7 +497,7 @@ Other than that, just build QGIS as per normal and the tests should build too.
 
 
 Run your tests
---------------
+===============
 
 
 The simplest way to run the tests is as part of your normal build process:

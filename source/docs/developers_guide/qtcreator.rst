@@ -1,6 +1,10 @@
 
-Getting up and running with QtCreator and QGIS
-===============================================
+************************************************
+ Getting up and running with QtCreator and QGIS
+************************************************
+
+.. contents::
+   :local:
 
 
 QtCreator is a newish IDE from the makers of the Qt library. With QtCreator you
@@ -10,7 +14,7 @@ assumes you are running Ubuntu 11.04 'Natty'.
 
 
 Installing QtCreator
---------------------
+=====================
 
 
 This part is easy:
@@ -23,7 +27,7 @@ After installing you should find it in your gnome menu.
 
 
 Setting up your project
------------------------
+========================
 
 I'm assuming you have already got a local QGIS clone containing the
 source code, and have installed all needed build dependencies etc. There are
@@ -75,7 +79,7 @@ start to build though.
 
 
 Setting up your build environment
----------------------------------
+==================================
 
 Click on the 'Projects' icon on the left of the QtCreator window.
 
@@ -116,7 +120,7 @@ window.
 
 
 Setting your run environment
-----------------------------
+=============================
 
 As mentioned above, we cannot run QGIS from directly in the build directly, so
 we need to create a custom run target to tell QtCreator to run QGIS from the
@@ -159,7 +163,7 @@ name e.g. 'Installed QGIS'
 .. image:: images/image12.jpeg
 
 Running and debugging
----------------------
+======================
 
 Now you are ready to run and debug QGIS. To set a break point, simply open a
 source file and click in the left column.

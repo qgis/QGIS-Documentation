@@ -1,17 +1,20 @@
 .. _git_access:
 
-GIT Access
-===========
+*************
+ GIT Access
+*************
 
+.. contents::
+   :local:
 
 This section describes how to get started using the QGIS GIT repository. Before you can do this, you need to first have a git client installed on your system.
 
 
 Installation
-------------
+=============
 
 Install git for GNU/Linux
-.........................
+--------------------------
 
 Debian based distro users can do:
 
@@ -21,13 +24,13 @@ Debian based distro users can do:
 
 
 Install git for Windows
-.......................
+------------------------
 
 Windows users can obtain `msys git <http://code.google.com/p/msysgit/>`_ or use git distributed with `cygwin <http://cygwin.com>`_.
 
 
 Install git for OSX
-...................
+-------------------
 
 The `git project <http://git-scm.com/>`_ has a downloadable build of git.
 Make sure to get the package matching your processor (x86_64 most likely, only the first Intel Macs need the i386 package).
@@ -56,7 +59,7 @@ If you don't need any of the extras, Perl, Python or TclTk (GUI), you can disabl
 
 
 Accessing the Repository
-------------------------
+=========================
 
 
 To clone QGIS master:
@@ -67,7 +70,7 @@ To clone QGIS master:
 
 
 Check out a branch
-------------------
+===================
 
 To check out a branch, for example the release 2.6.1 branch do:
 
@@ -95,7 +98,7 @@ To check out the master branch:
 
 
 QGIS documentation sources
---------------------------
+===========================
 
 If you're interested in checking out QGIS documentation sources:
 
@@ -107,7 +110,7 @@ You can also take a look at the readme included with the documentation repo for 
 
 
 QGIS website sources
---------------------------
+=====================
 
 If you're interested in checking out QGIS website sources:
 
@@ -119,7 +122,7 @@ You can also take a look at the readme included with the website repo for more i
 
 
 GIT Documentation
------------------
+==================
 
 
 See the following sites for information on becoming a GIT master.
@@ -130,10 +133,10 @@ See the following sites for information on becoming a GIT master.
 
 
 Development in branches
------------------------
+========================
 
 Purpose
-.......
+-------
 
 The complexity of the QGIS source code has increased considerably during the
 last years. Therefore it is hard to anticipate the side effects that the
@@ -147,7 +150,7 @@ project.
 
 
 Procedure
-.........
+---------
 
 - Initial announcement on mailing list:
     Before starting, make an announcement on the developer mailing list to see if
@@ -187,13 +190,13 @@ upstream repo, you can push your repo up to the QGIS official repo by doing:
 
 
 Documentation on wiki
-.....................
+----------------------
 
 It is also recommended to document the intended changes and the current status
 of the work on a wiki page.
 
 Testing before merging back to master
-.....................................
+--------------------------------------
 
 When you are finished with the new feature and happy with the stability, make
 an announcement on the developer list. Before merging back, the changes will
@@ -202,7 +205,7 @@ be tested by developers and users.
 .. _submit_patch:
 
 Submitting Patches and Pull Requests
-------------------------------------
+====================================
 
 
 There are a few guidelines that will help you to get your patches and pull
@@ -211,7 +214,7 @@ use easily.
 
 
 Pull Requests
-.............
+--------------
 
 
 In general it is easier for developers if you submit GitHub pull
@@ -244,7 +247,7 @@ deserves your options to accelerate it should be (in order of priority):
 
 
 Best practice for creating a pull request
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..........................................
 
 
 * Always start a feature branch from current master.
@@ -261,7 +264,7 @@ Best practice for creating a pull request
   **CORE DEVS: DO NOT DO THIS ON THE QGIS PUBLIC REPOSITORY!**
 
 Special labels to notify documentors
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.....................................
 
 Besides common tags you can add to classify your PR, there are special ones
 you can use to automatically generate issue reports in QGIS-Documentation
@@ -277,7 +280,7 @@ work on and have an overview of things to do. BUT please also take time to add
 some text: either in the commit OR in the docs itself.
 
 For merging a pull request
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+...........................
 
 Option A:
 
@@ -294,7 +297,7 @@ Option B:
 
 
 Patch file naming
------------------
+==================
 
 If the patch is a fix for a specific bug, please name the file with the bug
 number in it e.g. bug777fix.patch, and attach it to the `original bug report in trac 
@@ -306,7 +309,7 @@ first and then attach your patch.
 
 
 Create your patch in the top level QGIS source dir
---------------------------------------------------
+===================================================
 
 This makes it easier for us to apply the patches since we don't need to
 navigate to a specific place in the source tree to apply the patch. Also when I
@@ -329,7 +332,7 @@ and what is in the master branch.
 
 
 Getting your patch noticed
-..........................
+---------------------------
 
 QGIS developers are busy folk. We do scan the incoming patches on bug reports
 but sometimes we miss things. Don't be offended or alarmed. Try to identify a
@@ -342,7 +345,7 @@ can escalate your query to one of the Project Steering Committee members
 
 
 Due Diligence
-.............
+--------------
 
 QGIS is licensed under the GPL. You should make every effort to ensure you only
 submit patches which are unencumbered by conflicting intellectual property
@@ -351,7 +354,7 @@ under the GPL.
 
 
 Obtaining GIT Write Access
---------------------------
+===========================
 
 Write access to QGIS source tree is by invitation. Typically when a person
 submits several (there is no fixed number here) substantial patches that
