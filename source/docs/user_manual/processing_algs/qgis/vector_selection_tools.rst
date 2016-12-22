@@ -48,7 +48,7 @@ Parameters
 Outputs
 .......
 
-``Output`` [vector]
+``Extracted (attribute)`` [vector]
   <put output description here>
 
 Console usage
@@ -101,7 +101,7 @@ Parameters
 Outputs
 .......
 
-``Selection`` [vector]
+``Extracted (location)``
   <put output description here>
 
 Console usage
@@ -147,7 +147,7 @@ Parameters
 Outputs
 .......
 
-``Selection`` [vector]
+``Extracted (random)`` [vector]
   <put output description here>
 
 Console usage
@@ -198,7 +198,7 @@ Parameters
 Outputs
 .......
 
-``Selection`` [vector]
+````Extracted (random stratified)`` [vector]
   <put output description here>
 
 Console usage
@@ -245,8 +245,7 @@ Parameters
 Outputs
 .......
 
-``Selection`` [vector]
-  <put output description here>
+Same vector input layer with selected features
 
 Console usage
 .............
@@ -296,8 +295,7 @@ Parameters
 Outputs
 .......
 
-``Selection`` [vector]
-  <put output description here>
+Same vector input layer with selected features
 
 Console usage
 .............
@@ -382,8 +380,7 @@ Parameters
 Outputs
 .......
 
-``Output`` [vector]
-  <put parameter description here>
+Same vector input layer with selected features
 
 Console usage
 .............
@@ -469,8 +466,7 @@ Parameters
 Outputs
 .......
 
-``Output`` [vector]
-  <put output description here>
+Same vector input layer with selected features
 
 Console usage
 .............
@@ -513,7 +509,7 @@ Parameters
   * within
   * crosses
 
-  For console usage the precicates must be defined as an array of Unicode strings,
+  For console usage the predicates must be defined as an array of Unicode strings,
   eg. [u'intersects',u'contains']
 
 
@@ -531,8 +527,7 @@ Parameters
 Outputs
 .......
 
-``Selection`` [vector]
-  <put output description here>
+Same vector input layer with selected features
 
 Console usage
 .............
