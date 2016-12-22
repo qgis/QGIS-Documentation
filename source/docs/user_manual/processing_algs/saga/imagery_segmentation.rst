@@ -5,6 +5,12 @@
 Imagery segmentation
 ====================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Grid skeletonization
 --------------------
 

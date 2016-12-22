@@ -5,6 +5,12 @@
 Database
 ========
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Import into PostGIS
 -------------------
 

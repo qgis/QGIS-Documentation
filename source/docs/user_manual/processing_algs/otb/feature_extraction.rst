@@ -5,6 +5,12 @@
 Feature extraction
 ==================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 BinaryMorphologicalOperation (closing)
 --------------------------------------
 

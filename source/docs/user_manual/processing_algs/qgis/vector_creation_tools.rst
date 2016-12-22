@@ -5,6 +5,12 @@
 Vector creation
 ===============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Create grid
 -----------
 

@@ -5,6 +5,12 @@
 Table calculus
 ==============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Fill gaps in records
 --------------------
 

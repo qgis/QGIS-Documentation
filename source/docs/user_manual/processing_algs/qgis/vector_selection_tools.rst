@@ -5,6 +5,12 @@
 Vector selection
 ================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Extract by attribute
 --------------------
 

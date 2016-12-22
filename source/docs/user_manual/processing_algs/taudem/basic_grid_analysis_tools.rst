@@ -5,6 +5,12 @@
 Basic Grid Analysis
 ===================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 D8 Contributing Area
 --------------------
 

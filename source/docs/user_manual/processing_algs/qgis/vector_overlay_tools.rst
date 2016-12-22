@@ -5,6 +5,12 @@
 Vector overlay
 ==============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Clip
 ----
 

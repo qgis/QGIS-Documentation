@@ -5,6 +5,12 @@
 Kriging
 =======
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Ordinary kriging (global)
 -------------------------
 

@@ -5,6 +5,12 @@
 Raster
 ======
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Hypsometric curves
 ------------------
 

@@ -5,6 +5,12 @@
 Miscellaneous
 =============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Band Math
 ---------
 

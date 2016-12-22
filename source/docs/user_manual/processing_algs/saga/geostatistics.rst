@@ -5,6 +5,12 @@
 Geostatistics
 =============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Directional statistics for single grid
 --------------------------------------
 

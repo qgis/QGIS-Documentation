@@ -5,6 +5,12 @@
 Terrain morphometry
 ===================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Convergence index
 -----------------
 

@@ -5,6 +5,12 @@
 Simulation fire
 ===============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Fire risk analysis
 ------------------
 

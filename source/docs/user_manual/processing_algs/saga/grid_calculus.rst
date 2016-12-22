@@ -5,6 +5,12 @@
 Grid calculus
 =============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Function
 --------
 
