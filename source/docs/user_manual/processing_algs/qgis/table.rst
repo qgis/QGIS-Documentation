@@ -5,6 +5,12 @@
 Table
 =====
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Frequency analysis
 ------------------
 

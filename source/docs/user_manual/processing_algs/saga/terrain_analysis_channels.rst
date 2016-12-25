@@ -5,6 +5,12 @@
 Terrain channels
 ================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Channel network and drainage basins
 -----------------------------------
 

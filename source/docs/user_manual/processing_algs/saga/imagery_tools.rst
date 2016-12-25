@@ -5,6 +5,12 @@
 Imagery tools
 =============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Vegetation index[distance based]
 --------------------------------
 

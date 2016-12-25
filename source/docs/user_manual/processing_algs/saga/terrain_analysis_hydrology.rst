@@ -5,6 +5,12 @@
 Terrain hydrology
 =================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Burn stream network into dem
 ----------------------------
 

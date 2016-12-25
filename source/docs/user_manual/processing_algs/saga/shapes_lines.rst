@@ -5,6 +5,12 @@
 Shapes lines
 ============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Convert points to line(s)
 -------------------------
 

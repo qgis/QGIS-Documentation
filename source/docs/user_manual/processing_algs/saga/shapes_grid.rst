@@ -5,6 +5,12 @@
 Shapes grid
 ===========
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Add grid values to points
 -------------------------
 

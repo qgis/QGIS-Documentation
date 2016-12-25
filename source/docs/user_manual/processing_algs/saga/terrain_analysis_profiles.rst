@@ -5,6 +5,12 @@
 Terrain profiles
 ================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Cross profiles
 --------------
 

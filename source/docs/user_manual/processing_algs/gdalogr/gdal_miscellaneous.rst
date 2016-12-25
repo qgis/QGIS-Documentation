@@ -5,6 +5,12 @@
 GDAL miscellaneous
 ==================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Build Virtual Raster
 --------------------
 

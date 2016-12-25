@@ -5,6 +5,12 @@
 Point pattern
 =============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 F function
 ----------
 

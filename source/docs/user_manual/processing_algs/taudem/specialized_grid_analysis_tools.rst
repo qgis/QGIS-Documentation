@@ -5,6 +5,12 @@
 Specialized Grid Analysis
 =========================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 D8 Distance To Streams
 ----------------------
 

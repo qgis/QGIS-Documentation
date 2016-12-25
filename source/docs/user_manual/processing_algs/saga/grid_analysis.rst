@@ -5,6 +5,12 @@
 Grid analysis
 =============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Accumulated cost (anisotropic)
 ------------------------------
 

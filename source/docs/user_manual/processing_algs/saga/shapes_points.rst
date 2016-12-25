@@ -5,6 +5,12 @@
 Shapes points
 =============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Add coordinates to points
 -------------------------
 

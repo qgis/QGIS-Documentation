@@ -5,6 +5,12 @@
 Raster processing
 =================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Advanced raster histogram
 -------------------------
 

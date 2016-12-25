@@ -5,6 +5,12 @@
 Simulation hydrology
 ====================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Overland flow - kinematic wave d8
 ---------------------------------
 

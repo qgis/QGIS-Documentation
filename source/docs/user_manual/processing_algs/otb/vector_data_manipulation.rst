@@ -5,6 +5,12 @@
 Vector
 ======
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Concatenate
 -----------
 

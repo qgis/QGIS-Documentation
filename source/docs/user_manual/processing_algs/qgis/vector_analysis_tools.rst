@@ -5,6 +5,12 @@
 Vector analysis
 ===============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Count points in polygon
 -----------------------
 

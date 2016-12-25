@@ -5,6 +5,12 @@
 Vector table
 ============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Add autoincremental field
 -------------------------
 

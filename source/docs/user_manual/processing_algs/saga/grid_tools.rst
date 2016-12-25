@@ -5,6 +5,12 @@
 Grid tools
 ==========
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Aggregate
 ---------
 

@@ -5,6 +5,12 @@
 Grid filter
 ===========
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Dtm filter (slope-based)
 ------------------------
 

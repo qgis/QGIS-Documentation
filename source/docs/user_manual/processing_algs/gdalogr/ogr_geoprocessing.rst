@@ -5,6 +5,12 @@
 OGR geoprocessing
 =================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Clip vectors by extent
 ----------------------
 

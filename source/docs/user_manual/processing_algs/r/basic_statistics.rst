@@ -5,6 +5,12 @@
 Basic statistics
 ================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Frequency table
 ---------------
 

@@ -6,6 +6,12 @@
 Modeler Tools
 *************
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Calculator
 ----------
 

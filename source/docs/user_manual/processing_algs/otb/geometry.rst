@@ -5,6 +5,12 @@
 Geometry
 ========
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Image Envelope
 --------------
 

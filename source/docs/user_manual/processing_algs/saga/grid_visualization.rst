@@ -5,6 +5,12 @@
 Grid visualization
 ==================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Histogram surface
 -----------------
 

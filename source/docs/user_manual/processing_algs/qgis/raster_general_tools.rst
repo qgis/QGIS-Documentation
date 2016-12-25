@@ -5,6 +5,12 @@
 Raster general
 ==============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Set style for raster layer
 --------------------------
 
