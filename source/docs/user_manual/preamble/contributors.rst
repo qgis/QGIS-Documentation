@@ -75,10 +75,6 @@ and update the whole QGIS documentation.
 | Ramon              | embelding           |                      |                       |                      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 
-Despite our efforts to release a full featured and up-to-date documentation,
-if you find any error or miss some feature, feel free to report that or propose
-a fix at `QGIS Documentation repository <http://www.github.com/qgis/QGIS-Documentation/>`_.
-
 
 .. index:: 
    :single: Contributors; Translators
@@ -87,7 +83,60 @@ a fix at `QGIS Documentation repository <http://www.github.com/qgis/QGIS-Documen
 Translators
 ===========
 
-QGIS is a multi-language application and as is, also provides a documentation
-translated into several languages. This is possible thanks to:
+QGIS is a multi-language application and as is, also publishes a documentation
+translated into several languages. Many other languages are being translated
+and would be released as soon as they reach a reasonable percentage of
+translation. If you wish to help improving a language or request a new one,
+please see http://qgis.org/en/site/getinvolved/index.html.
 
+The current translations are made possible thanks to:
+
+===================== ========================================================
+ Language              Contributors
+===================== ========================================================
+Bahasian Indonesian   Emir Hartato, I Made Anombawa, Januar V. Simarmata, Muhammad
+                      Iqnaul Haq Siregar, Trias Aditya
+Chinese (Traditional) Calvin Ngei, Zhang Jun, Richard Xie
+Dutch                 Carlo van Rijswijk, Dick Groskamp, Diethard Jansen,
+                      Raymond Nijssen, Richard Duivenvoorde, Willem Hoffman
+Finnish               Matti Mäntynen, Kari Mikkonen
+French                Arnaud Morvan, Augustin Roche, Didier Vanden Berghe,
+                      Dofabien, Etienne Trimaille, Harrissou Sant-anna,
+                      Jean-Roc Morreale, Jérémy Garniaux, Loïc Buscoz, Lsam,
+                      Marc-André Saia, Marie Silvestre, Mathieu Bossaert,
+                      Mathieu Lattes, Mayeul Kauffmann, Médéric Ribreux,
+                      Mehdi Semchaoui, Michael Douchin, Nicolas Boisteault,
+                      Nicolas Rochard, Pascal Obstetar, Robin Prest, Rod Bera,
+                      Stéphane Henriod, Stéphane Possamai, sylther, Sylvain Badey,
+                      Sylvain Maillard, Vincent Picavet, Xavier Tardieu,
+                      Yann Leveille-Menez, yoda89
+Galician              Xan Vieiro
+German                Jürgen E. Fischer, Otto Dassau, Stephan Holl,
+                      Werner Macho
+Hindi                 Harish Kumar Solanki
+Italian               Alessandro Fanna, Anne Ghisla, Flavio Rigolon, Giuliano
+                      Curti, Luca Casagrande, Luca Delucchi, Marco Braida,
+                      Matteo Ghetta, Maurizio Napolitano, Michele Beneventi,
+                      Michele Ferretti, Roberto Angeletti, Paolo Cavallini,
+                      Stefano Campus
+Japanese              Baba Yoshihiko, Minoru Akagi, Norihiro Yamate,
+                      Takayuki Mizutani, Takayuki Nuimura, Yoichi Kayama
+Korean                OSGeo Korean Chapter
+Polish                Andrzej Świąder, Borys Jurgiel, Ewelina Krawczak, Jakub
+                      Bobrowski, Mateusz Łoskot, Michał Kułach, Michał Smoczyk,
+                      Milena Nowotarska, Radosław Pasiok, Robert Szczepanek,
+                      Tomasz Paul
+Portuguese            Alexandre Neto, Duarte Carreira, Giovanni Manghi, João Gaspar,
+                      Joana Simões, Leandro Infantini, Nelson Silva, Pedro Palheiro,
+                      Pedro Pereira, Ricardo Sena
+Portuguese (Brasil)   Arthur Nanni, Felipe Sodré Barros, Leônidas Descovi Filho,
+                      Marcelo Soares Souza, Narcélio de Sá Pereira Filho,
+                      Sidney Schaberle Goveia
+Romanian              Alex Bădescu, Bogdan Pacurar, Georgiana Ioanovici, Lonut
+                      Losifescu-Enescu, Sorin Călinică, Tudor Bărăscu
+Russian               Alexander Bruy, Artem Popov
+Spanish               Carlos Dávila, Diana Galindo, Edwin Amado, Gabriela Awad,
+                      Javier César Aldariz, Mayeul Kauffmann
+Ukrainian             Alexander Bruy
+===================== ========================================================
 
