@@ -4,9 +4,9 @@
 
 .. _`label_helpsupport`:
 
-****************
-Help and Support
-****************
+******************
+ Help and Support
+******************
 
 .. only:: html
 
@@ -21,7 +21,7 @@ you expect it to. The preferred way to get help is by joining the
 qgis-users mailing list. Your questions will reach a broader audience
 and answers will benefit others.
 
-qgis-users
+QGIS Users
 ----------
 
 This mailing list is used for discussion of QGIS in general, as well
@@ -29,47 +29,16 @@ as specific questions regarding its installation and use. You can
 subscribe to the qgis-users mailing list by visiting the following
 URL: http://lists.osgeo.org/mailman/listinfo/qgis-user
 
-fossgis-talk-liste
-------------------
-
-For the German-speaking audience, the German FOSSGIS e.V. provides the
-fossgis-talk-liste mailing list. This mailing list is used for
-discussion of open-source GIS in general, including QGIS. You can
-subscribe to the fossgis-talk-liste mailing list by visiting the
-following URL:
-https://lists.fossgis.de/mailman/listinfo/fossgis-talk-liste
-
-qgis-developer
---------------
+QGIS Developers
+---------------
 
 If you are a developer facing problems of a more technical nature, you
-may want to join the qgis-developer mailing list here:
+may want to join the qgis-developer mailing list. This list is also a
+place where people can chime in and collect and discuss QGIS
+related UX (User Experience) / usability issues. It's here:
 http://lists.osgeo.org/mailman/listinfo/qgis-developer
 
-qgis-ux
--------
-
-A dedicated mailing list where people can chime in and collect and discuss QGIS
-related UX (User Experience) / usability issues.
-
-http://lists.osgeo.org/mailman/listinfo/qgis-ux
-
-qgis-commit
------------
-
-Each time a commit is made to the QGIS code repository, an email is
-posted to this list. If you want to be up-to-date with every change to
-the current code base, you can subscribe to this list at:
-http://lists.osgeo.org/mailman/listinfo/qgis-commit
-
-qgis-trac
----------
-
-This list provides email notification related to project management,
-including bug reports, tasks, and feature requests. You can subscribe
-to this list at: http://lists.osgeo.org/mailman/listinfo/qgis-trac
-
-qgis-community-team
+QGIS Community Team
 -------------------
 
 This list deals with topics like documentation, context help, user
@@ -79,16 +48,8 @@ list is a good starting point to ask your questions. You can subscribe
 to this list at:
 http://lists.osgeo.org/mailman/listinfo/qgis-community-team
 
-qgis-release-team
+QGIS Translations
 -----------------
-
-This list deals with topics like the release process, packaging
-binaries for various OSs and announcing new releases to the world at
-large. You can subscribe to this list at:
-http://lists.osgeo.org/mailman/listinfo/qgis-release-team
-
-qgis-tr
--------
 
 This list deals with the translation efforts. If you like to work on
 the translation of the website, manuals or the graphical user interface (GUI),
@@ -96,25 +57,26 @@ this list is a good starting point to ask your questions. You can
 subscribe to this list at:
 http://lists.osgeo.org/mailman/listinfo/qgis-tr
 
-qgis-edu
---------
-
-This list deals with QGIS education efforts. If you would like to work
-on QGIS education materials, this list is a good starting point to ask
-your questions. You can subscribe to this list at:
-http://lists.osgeo.org/mailman/listinfo/qgis-edu
-
-qgis-psc
---------
+QGIS Project Steering Committee (PSC)
+-------------------------------------
 
 This list is used to discuss Steering Committee issues related to
 overall management and direction of QGIS. You can subscribe to this
 list at: http://lists.osgeo.org/mailman/listinfo/qgis-psc
 
+QGIS User groups
+----------------
+
+In order to locally promote QGIS and contribute to its development, some QGIS
+communities are organized into QGIS User Groups. These groups are places to
+discuss local topics, organize regional or national user meetings, organize
+sponsoring of features... The list of current user groups is available at
+http://qgis.org/en/site/forusers/usergroups.html
+
+
 You are welcome to subscribe to any of the lists. Please remember to
 contribute to the list by answering questions and sharing your
-experiences. Note that the qgis-commit and qgis-trac lists are
-designed for notification only and are not meant for user postings.
+experiences.
 
 IRC
 ===
