@@ -329,7 +329,7 @@ Menu Option                                              Shortcut              R
 =======================================================  ====================  ===========================  ========================
 
 QGIS
-....
+-----
 
 This menu is only available under |osx| Mac OS X and contains some OS related
 commands.
