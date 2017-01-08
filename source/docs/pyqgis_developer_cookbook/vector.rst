@@ -455,6 +455,12 @@ create them easily. This is what you have to do:
 
    index.insertFeature(feat)
 
+* alternatively, you can load all features of a layer at once using bulk loading
+
+::
+
+   index = QgsSpatialIndex(layer.getFeatures())
+
 * once spatial index is filled with some values, you can do some queries
 
 ::
