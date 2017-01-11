@@ -463,9 +463,9 @@ An example of the pro file is::
 This is how it would look like following the structure of our example plugin at 13.1.1.
 
 Your plugin might follow a more complex structure, and it might be distributed across several files.
-If this is the case, keep in mind that `pylupdate4`, the program we use to read the ``.pro`` file 
+If this is the case, keep in mind that ``pylupdate4``, the program we use to read the ``.pro`` file 
 and update the translatable string, does not
-expand wild card characters, so you need to place every file explicitly in the ``.pro`` file.
+expand wild card characters, so you need to place every file explicitly in the ``.pro`` file::
 
   FORMS = ../ui/about.ui ../ui/feedback.ui ../ui/main_dialog.ui
   SOURCES = ../your_plugin.py ../computation.py ../utils.py
