@@ -454,13 +454,11 @@ managed by **Qt Linguist**.
 
 In this ``.pro`` file you have to specify all the files and forms you want to
 translate. This file is used to set up the localization files and variables.
-An example of the pro file is::
+A possible project file, matching the structure of our example plugin at 13.1.1::
 
   FORMS = ../form.ui
   SOURCES = ../your_plugin.py
   TRANSLATIONS = your_plugin_it.ts
-
-This is how it would look like following the structure of our example plugin at 13.1.1.
 
 Your plugin might follow a more complex structure, and it might be distributed across several files.
 If this is the case, keep in mind that ``pylupdate4``, the program we use to read the ``.pro`` file 
