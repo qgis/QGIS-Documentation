@@ -432,7 +432,7 @@ Software requirements
 ---------------------
 
 The easiest way to create and manage all the translation files is to install
-`**Qt Linguist** <http://doc.qt.io/qt-4.8/linguist-manual.html>`_.
+**`Qt Linguist <http://doc.qt.io/qt-4.8/linguist-manual.html>`_**.
 In a Debian-based GNU/Linux environment you can install it typing::
 
   sudo apt-get install qt4-dev-tools
