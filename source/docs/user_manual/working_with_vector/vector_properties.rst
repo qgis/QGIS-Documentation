@@ -1339,6 +1339,7 @@ We now describe an example using the data-defined override function for the
    to define the field type for the :guilabel:`Coordinate`. Choose 'xlabel' for X
    and 'ylabel' for Y. The icons are now highlighted in yellow.
 #. Zoom into a lake.
+#. Set editable the layer using the |toggleEditing| :sup:`Toggle Editing` button.
 #. Go to the Label toolbar and click the |moveLabel| icon.
    Now you can shift the label manually to another position (see figure_labels_6_).
    The new position of the label is saved in the 'xlabel' and 'ylabel' columns
