@@ -432,8 +432,8 @@ Software requirements
 ---------------------
 
 The easiest way to create and manage all the translation files is to install
-`Qt Linguist <http://doc.qt.io/qt-4.8/linguist-manual.html>`_.
-In a Linux like environment you can install it typing::
+`**Qt Linguist** <http://doc.qt.io/qt-4.8/linguist-manual.html>`_.
+In a Debian-based GNU/Linux environment you can install it typing::
 
   sudo apt-get install qt4-dev-tools
 
@@ -450,20 +450,25 @@ plugin directory.
 .........
 
 First you should create a ``.pro`` file, that is a *project* file that can be
-managed by Qt Linguist.
+managed by **Qt Linguist**.
 
 In this ``.pro`` file you have to specify all the files and forms you want to
 translate. This file is used to set up the localization files and variables.
 An example of the pro file is::
 
-  FORMS = ../ui/*
-
+  FORMS = ../form.ui
   SOURCES = ../your_plugin.py
-
   TRANSLATIONS = your_plugin_it.ts
 
-In this particular case all your UIs are placed in the ``../ui`` folder and you
-want to translate all of them.
+This is how it would look like following the structure of our example plugin at 13.1.1.
+
+Your plugin might follow a more complex structure, and it might be distributed across several files.
+If this is the case, keep in mind that `pylupdate4`, the program we use to read the ``.pro`` file 
+and update the translatable string, does not
+expand wild card characters, so you need to place every file explicitly in the ``.pro`` file.
+
+  FORMS = ../ui/about.ui ../ui/feedback.ui ../ui/main_dialog.ui
+  SOURCES = ../your_plugin.py ../computation.py ../utils.py
 
 Furthermore, the ``your_plugin.py`` file is the file that *calls* all the menu
 and sub-menus of your plugin in the QGIS toolbar and you want to translate them
@@ -486,7 +491,7 @@ of the language(s) of your plugin.
 
 Open a terminal, go to ``your_plugin/i18n`` directory and type::
 
-  lupdate your_plugin.pro
+  pylupdate4 your_plugin.pro
 
 you should see the ``your_plugin_language.ts`` file(s).
 
