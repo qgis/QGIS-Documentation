@@ -530,7 +530,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | angle_at_vertex        | Returns the bisector angle (average angle) to the |
 |                        | geometry for a specified vertex on a linestring   |
 |                        | geometry. Angles are in degrees clockwise from    |
-|                        | north                                             | +------------------------+---------------------------------------------------+
+|                        | north                                             |
++------------------------+---------------------------------------------------+
 | area                   | Returns the area of a geometry polygon feature.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
