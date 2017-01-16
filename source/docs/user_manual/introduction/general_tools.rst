@@ -1540,6 +1540,12 @@ However, some parameters are specific to raster and vector formats:
       export the same geometry multiple times if there are multiple symbology
       symbol layers used
 
+    .. note:: *OGR Feature Styles* are a way to store style directly in
+       the data as a hidden attribute. Only some format can handle this kind of
+       information. KML, DXF and TAB files format are such format. For advanced
+       user, you can read the `OGR Feature Styles specification
+       <http://www.gdal.org/ogr_feature_style.html>`_ document.
+   
   * Geometry:
 
     * force to multi-geometry,
@@ -1549,12 +1555,16 @@ However, some parameters are specific to raster and vector formats:
       geometry column to an attribute table, remove the geometry column of
       a spatial layer.
 
-.. note:: *OGR Feature Styles* are a way to store style directly in
-   the data as a hidden attribute. Only some format can handle this kind of
-   information. KML, DXF and TAB files format are such format. For advanced
-   user, you can read the `OGR Feature Styles specification
-   <http://www.gdal.org/ogr_feature_style.html>`_ document.
+When saving a vector layer into an existing file, depending on the capabilities
+of the output format (Geopackage, SpatiaLite, FileGDB...), the user can
+decide whether:
 
+* to overwrite the whole file
+* to overwrite only the target layer (the layer name is configurable)
+* to append features to the existing target layer
+* to append features, add new fields if there are any.
+
+For formats like Shapefile, MapInfo .tab, feature append is also available.
 
 .. note:: **About DXF files**
 
