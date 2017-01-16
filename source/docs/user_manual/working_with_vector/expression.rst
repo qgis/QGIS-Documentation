@@ -509,13 +509,13 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +========================+===================================================+
 | $area                  | Returns the area size of the current feature      |
 +------------------------+---------------------------------------------------+
-|$geometry               | Returns the geometry of the current feature (can  |
+| $geometry              | Returns the geometry of the current feature (can  |
 |                        | be used for processing with other functions)      |
 +------------------------+---------------------------------------------------+
 | $length                | Returns the length of the current line feature    |
 +------------------------+---------------------------------------------------+
 | $perimeter             | Returns the perimeter of the current polygon      |
-| feature                |                                                   |
+|                        | feature                                           |
 +------------------------+---------------------------------------------------+
 | $x                     | Returns the x coordinate of the current feature   |
 +------------------------+---------------------------------------------------+
@@ -527,9 +527,18 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | $y_at(n)               | Returns the y coordinate of the nth node of the   |
 |                        | current feature's geometry                        |
 +------------------------+---------------------------------------------------+
+| angle_at_vertex        | Returns the bisector angle (average angle) to the |
+|                        | geometry for a specified vertex on a linestring   |
+|                        | geometry. Angles are in degrees clockwise from    |
+|                        | north                                             |
++------------------------+---------------------------------------------------+
 | area                   | Returns the area of a geometry polygon feature.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
++------------------------+---------------------------------------------------+
+| boundary               | Returns the closure of the combinatorial boundary |
+|                        | of the geometry (ie the topological boundary of   |
+|                        | the geometry).                                    |
 +------------------------+---------------------------------------------------+
 | bounds                 | Returns a geometry which represents the bounding  |
 |                        | box of an input geometry. Calculations are in     |
@@ -575,6 +584,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | distance               | Returns the minimum distance (based on Spatial    |
 |                        | Reference System) between two geometries in       |
 |                        | projected units                                   |
++------------------------+---------------------------------------------------+
+| distance_to_vertex     | Returns the distance along the geometry to a      |
+|                        | specified vertex                                  |
 +------------------------+---------------------------------------------------+
 | end_point              | Returns the last node from a geometry             |
 +------------------------+---------------------------------------------------+
@@ -626,6 +638,21 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | length                 | Returns length of a line geometry feature         |
 |                        | (or length of a string)                           |
++------------------------+---------------------------------------------------+
+| line_interpolate_angle | Returns the angle parallel to the geometry at a   |
+|                        | specified distance along a linestring geometry.   |
+|                        | Angles are in degrees clockwise from north.       |
++------------------------+---------------------------------------------------+
+| line_interpolate_point | Returns the point interpolated by a specified     |
+|                        | distance along a linestring geometry.             |
++------------------------+---------------------------------------------------+
+| line_locate_point      | Returns the distance along a linestring           |
+|                        | corresponding to the closest position the         |
+|                        | linestring comes to a specified point geometry.   |
++------------------------+---------------------------------------------------+
+| line_merge             | Returns a (Multi-)LineString geometry, where any  |
+|                        | connected LineStrings from the input geometry     |
+|                        | have been merged into a single linestring.        |
 +------------------------+---------------------------------------------------+
 | m                      | Returns the m value of a point geometry           |
 +------------------------+---------------------------------------------------+
