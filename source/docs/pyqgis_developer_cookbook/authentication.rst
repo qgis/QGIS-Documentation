@@ -32,7 +32,7 @@ a developer perspective.
 
 Most of the following snippets are derived from the code of Geoserver Explorer
 plugin and its tests. This is the first plugin that used Authentication
-infrastructure. The plugin code and its tests can be found `at <https://github.com/boundlessgeo/qgis-geoserver-plugin>`_
+infrastructure. The plugin code and its tests can be found at this `link <https://github.com/boundlessgeo/qgis-geoserver-plugin>`_.
 Other good code reference can be read from the authentication infrastructure
 `tests code <https://github.com/qgis/QGIS/blob/master/tests/src/python/test_qgsauthsystem.py>`_
 
