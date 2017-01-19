@@ -1442,7 +1442,9 @@ properties you can set to control whether and how a field can be edited:
 * **Default value**: for new features, populates by default the field with the
   same value or an expression-based one. For example, you can use
   ``maximum("field")+1`` to generate a field that increments by 1 for each
-  new feature. A preview of the default value is displayed
+  new feature. Variables can also be used in default value expressions, making
+  it easier to e.g. insert a user's name, current datetime, project path...
+  A preview of the default value is displayed
 * **Constraints**: you can constrain the value in the field. This constraint
   can be:
   
