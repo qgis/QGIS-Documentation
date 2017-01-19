@@ -32,9 +32,9 @@ a developer perspective.
 
 Most of the following snippets are derived from the code of Geoserver Explorer
 plugin and its tests. This is the first plugin that used Authentication
-infrastructure. The plugin code and its tests can be found `here <https://github.com/boundlessgeo/qgis-geoserver-plugin>`_
+infrastructure. The plugin code and its tests can be found `at <https://github.com/boundlessgeo/qgis-geoserver-plugin>`_
 Other good code reference can be read from the authentication infrastructure
-tests `code <https://github.com/qgis/QGIS/blob/master/tests/src/python/test_qgsauthsystem.py>`_
+`tests code <https://github.com/qgis/QGIS/blob/master/tests/src/python/test_qgsauthsystem.py>`_
 
 
 .. _Authentication_manager_glossary:
@@ -352,7 +352,7 @@ and can be used as in the following snippet:
   # GUI has to be integrated
   tabGui.insertTab( 1, gui, "Configurations" )
 
-The above example is get from the QGIS source code `here <https://github.com/qgis/QGIS/blob/master/src/providers/postgres/qgspgnewconnection.cpp#L42>`_
+The above example is get from the QGIS source `code <https://github.com/qgis/QGIS/blob/master/src/providers/postgres/qgspgnewconnection.cpp#L42>`_
 The second parameter of the GUI constructor refers to data provider type. The
 parameter is used to restrict the compatible :term:`Authentication Method`\s with
 the specified provider.
@@ -377,7 +377,7 @@ and can be used as in the following snippet:
  gui = QgsAuthConfigSelect( parent )
  gui.show()
 
-an integrated example can be found in the related test `code <https://github.com/qgis/QGIS/blob/master/tests/src/python/test_qgsauthsystem.py#L80>`_
+an integrated example can be found in the related `test <https://github.com/qgis/QGIS/blob/master/tests/src/python/test_qgsauthsystem.py#L80>`_
 
 .. _Authorities_Editor_GUI:
 
