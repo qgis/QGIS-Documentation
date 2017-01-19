@@ -911,6 +911,12 @@ between words and between individual letters. Finally, use the
 :guilabel:`Blend mode` option to determine how your labels will mix with the
 map features below them (see more about it in :ref:`blend-modes`).
 
+The :guilabel:`Apply label text substitutes` option gives you ability to specify
+a list of texts to substitute to texts in feature labels (e.g., abbreviating street
+types). Replacement texts are thus used to display labels in the map canvas.
+Users can also export and import lists of substitutes to make reuse and
+sharing easier.
+
 Formatting tab
 --------------
 
