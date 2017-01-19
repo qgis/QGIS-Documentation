@@ -16,7 +16,7 @@ Authentication infrastructure
 Introduction
 ============
 User reference of the Authentication infrastructure can be read
-in the `User Manual Authentication overview </static/user_manual/auth_overview>`_
+in the `User Manual Authentication overview <:ref:authentication_overview>`_
 
 This chapter describes the best practices to use the Authentication system from
 a developer perspective.
