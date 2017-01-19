@@ -159,7 +159,7 @@ credentials for an hypothetic alice user:
 .. _Available_Auth_methods:
 
 Available Authentication methods
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 :term:`Authentication Method`\s are loaded dynamically during authentication
 manager init. The list of Authentication method can vary with QGIS evolution,
 but the original list of available methods is:
@@ -306,7 +306,7 @@ https://github.com/qgis/QGIS/blob/master/tests/src/python/test_authmanager_pki_p
 .. _Adapt_plugins_to_use_Auth_infrastructure:
 
 Adapt plugins to use Authentication infrastructure
-========================================
+==================================================
 Many third party plugins are using httplib2 to create HTTP connections instead
 of integrating with ``QgsNetworkAccessManager`` and its related Authentication
 Infrastructure integration.
@@ -335,8 +335,8 @@ authentication infrastructure in custom interfaces.
 
 GUI to select credentials
 -------------------------
-If it's necessary to select a :term:`Autentication Configuration` from the set
-stored in the :term:`Configuration DB` it is available in the GUI class `QgsAuthConfigSelect <https://qgis.org/api/classQgsAuthConfigSelect.html>`_
+If it's necessary to select a :term:`Authentication Configuration` from the set
+stored in the :term:`Authentication DB` it is available in the GUI class `QgsAuthConfigSelect <https://qgis.org/api/classQgsAuthConfigSelect.html>`_
 
 .. figure:: /static/pyqgis_developer_cookbook/QgsAuthConfigSelect.png
    :align: center
