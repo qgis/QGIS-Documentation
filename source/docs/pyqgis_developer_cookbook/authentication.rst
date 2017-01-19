@@ -81,7 +81,7 @@ DB`::
 
   <user home>/.qgis2/qgis-auth.db
 
-This class takes care of the user interaction: by asking to set master the
+This class takes care of the user interaction: by asking to set master 
 password or by transparently using it to access crypted stored info.
 
 .. _Init_manager_and_set_master_password:
