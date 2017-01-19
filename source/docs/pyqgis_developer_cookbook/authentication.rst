@@ -16,7 +16,7 @@ Authentication infrastructure
 Introduction
 ============
 User reference of the Authentication infrastructure can be read
-in the `User Manual Authentication overview <:ref:authentication_overview>`_
+in the  User Manual in the :ref:`authentication_overview` paragraph.
 
 This chapter describes the best practices to use the Authentication system from
 a developer perspective.
@@ -81,7 +81,7 @@ DB`::
 
   <user home>/.qgis2/qgis-auth.db
 
-This class takes care of the user interaction: by asking to set master 
+This class takes care of the user interaction: by asking to set master
 password or by transparently using it to access crypted stored info.
 
 .. _Init_manager_and_set_master_password:
