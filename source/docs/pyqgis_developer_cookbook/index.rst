@@ -20,6 +20,7 @@ PyQGIS Developer Cookbook
    settings
    communicating
    plugins
+   authentication
    ide_debugging
    pluginlayer
    compatibility
@@ -28,4 +29,3 @@ PyQGIS Developer Cookbook
    processing
    network_analysis
    server
-
