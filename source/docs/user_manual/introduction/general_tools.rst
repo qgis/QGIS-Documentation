@@ -723,17 +723,26 @@ you just tweaked into a color slot button.
    the General Settings to have the color applied to your items as you change
    color parameters in the QGIS custom color chooser dialog.
 
-With |colorBox| :sup:`color ramp` or with |colorWheel| :sup:`color wheel`,
-you can browse to all possible color combinations.
-There are other possibilities though. By using |colorSwatches| :sup:`color swatches`
-you can choose from a preselected list. This selected list is
-populated with one of three methods:
+With |colorBox| :sup:`color ramp` or |colorWheel| :sup:`color wheel` tab,
+you can browse to all possible color combinations and apply it to the item.
+In the |colorSwatches| :sup:`color swatches` tab, you can choose from a
+preselected list of color palettes:
 
 * :guilabel:`Recent colors`,
 * :guilabel:`Standard colors`, a user-defined list of colors set under
   :menuselection:`Settings --> Options --> Colors` menu
 * or :guilabel:`Project colors`, a user-defined list of colors set under
   :menuselection:`Project --> Project Properties --> Default Styles`.
+
+The latest palettes can be modified thanks to the |signPlus| and |signMinus|
+buttons at the bottom of the frame.
+The :guilabel:`...` button nearby the palette combobox also offers several
+options to:
+
+* copy, paste, import or export colors
+* create, import or remove color palettes. Check the :guilabel:`Show in Color
+  Buttons` option to add the custom palette to the color selector widget (see
+  figure_color_selector_).
 
 .. _figure_color_selector_switcher:
 
@@ -751,7 +760,7 @@ that the color picker is OS dependent and is currently not supported by macOS.
 
 .. tip:: **quick color picker + copy/paste colors**
 
-   You can quickly choose from :guilabel:`Recent colors`, from :guilabel:`Standard colors`
+   You can quickly choose from :guilabel:`Recent colors`, :guilabel:`Standard colors`
    or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking
    the drop-down arrow that follows the |selectColor| color box.
 
