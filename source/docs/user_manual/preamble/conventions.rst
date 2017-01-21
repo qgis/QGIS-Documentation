@@ -88,7 +88,7 @@ Larger amounts of text may be formatted as a list:
 
 * |nix| Do this
 * |win| Do that
-* |osx| Do something else
+* |osx| Or do that
 
 or as paragraphs:
 
@@ -96,8 +96,7 @@ or as paragraphs:
 and this and this and this, and this and this and this.
 
 |win| Do that. Then do that and that and that, and that and that and
-that, and that and that and that, and that and that and that, and that
-and that and that.
+that, and that and that and that, and that and that.
 
 Screenshots that appear throughout the user guide have been created on
 different platforms; the platform is indicated by the
