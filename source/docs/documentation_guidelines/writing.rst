@@ -11,7 +11,7 @@ Introduction
 ============
 
 QGIS Documentation will
-be built automatically on the server at 0, 8am, 4pm PDT (Pacific Daylight Time).
+be built automatically on the server at 0, 8am, 4pm US/Pacific (Pacific Time).
 The current status is available at http://docs.qgis.org.
 
 QGIS Documentation is mainly written using the reStructuredText (reST) format syntax,
@@ -390,7 +390,7 @@ Which will point to:
 
  .. [1] Updates of core plugins
 
-Managing Screnshots
+Managing Screenshots
 ===================
 
 Add new Screenshots
