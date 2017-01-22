@@ -18,7 +18,7 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
    Coordinate Capture Plugin
 
 #. Start QGIS, select |options| :guilabel:`Project Properties` from the
-   :guilabel:`Settings` (KDE, Windows) or :guilabel:`File` (Gnome, OSX) menu
+   :guilabel:`Settings` (KDE, Windows) or :guilabel:`File` (Gnome, macOS) menu
    and click on the :guilabel:`Projection` tab. As an alternative, you can also
    click on the |projectionEnabled| :sup:`CRS status` icon in the lower
    right-hand corner of the status bar.

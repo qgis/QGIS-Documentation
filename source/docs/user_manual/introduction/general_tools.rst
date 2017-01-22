@@ -724,7 +724,7 @@ populated with one of three methods:
 Another option is to use the |colorPicker| :sup:`color picker` which allows
 you to sample a color from under your mouse pointer at any part of
 QGIS or even from another application by pressing the space bar. Please note
-that the color picker is OS dependent and is currently not supported by OSX.
+that the color picker is OS dependent and is currently not supported by macOS.
 
 .. _tip_quick_color_picker_+_copy/paste_colors:
 

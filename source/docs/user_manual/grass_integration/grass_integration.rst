@@ -524,7 +524,7 @@ Simultaneous editing of multiple layers within the same vector at the same time 
 supported. This is mainly due to the impossibility of handling multiple undo stacks for
 a single data source.
 
-|nix| |osx| On Linux and Mac OSX only one GRASS layer can be edited at time. This is
+|nix| |osx| On Linux and macOS only one GRASS layer can be edited at time. This is
 due to a bug in GRASS which does not allow to close database drivers in random order.
 This is being solved with GRASS developers.
 

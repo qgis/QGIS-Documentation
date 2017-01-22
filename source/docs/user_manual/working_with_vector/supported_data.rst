@@ -105,11 +105,11 @@ vector layers.
 
 .. _tip_load_from_external_drive_OSX:
 
-.. tip:: **Load layer and project from mounted external drives on OS X**
+.. tip:: **Load layer and project from mounted external drives on macOS**
 
-   On OS X, portable drives that are mounted beside the primary hard drive
+   On macOS, portable drives that are mounted beside the primary hard drive
    do not show up as expected under :menuselection:`File --> Open Project`.
-   We are working on a more OSX-native open/save dialog to fix this.
+   We are working on a more macOS-native open/save dialog to fix this.
    As a workaround, you can type ``/Volumes`` in the :guilabel:`File name` box
    and press :kbd:`Enter`. Then you can navigate to external drives and network
    mounts.

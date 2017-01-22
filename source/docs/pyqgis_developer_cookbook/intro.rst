@@ -308,5 +308,5 @@ usually two possibilities:
   of software.
 
 The two deployment models can be mixed - deploy standalone application on
-Windows and Mac OS X, for Linux leave the installation of QGIS up to user
+Windows and macOS, for Linux leave the installation of QGIS up to user
 and his package manager.

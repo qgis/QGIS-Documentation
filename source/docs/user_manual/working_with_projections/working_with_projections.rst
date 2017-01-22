@@ -53,7 +53,7 @@ shapefile and a :file:`.prj` extension. For example, a shapefile named
 Whenever you select a new CRS, the layer units will automatically be
 changed in the :guilabel:`General` tab of the |options|
 :guilabel:`Project Properties` dialog under the :guilabel:`Project` (Gnome,
-OS X) or :guilabel:`Settings` (KDE, Windows) menu.
+macOS) or :guilabel:`Settings` (KDE, Windows) menu.
 
 .. index:: CRS
    :single: CRS; Default CRS
@@ -115,7 +115,7 @@ Properties` dialog.
 **There are three ways to do this:**
 
 #. Select |options| :menuselection:`Project Properties` from the
-   :menuselection:`Project` (Gnome, OSX) or :menuselection:`Settings` (KDE,
+   :menuselection:`Project` (Gnome, macOS) or :menuselection:`Settings` (KDE,
    Windows) menu.
 #. Click on the |geographic| :sup:`CRS status` icon in the lower right-hand
    corner of the status bar.

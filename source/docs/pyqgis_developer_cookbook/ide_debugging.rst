@@ -235,7 +235,7 @@ On Linux do::
 
  $ ./Qgis
 
-On Mac OS X do::
+On macOS do::
 
  $ /Applications/Qgis.app/Contents/MacOS/Qgis
 
