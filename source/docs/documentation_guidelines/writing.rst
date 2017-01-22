@@ -390,7 +390,7 @@ Which will point to:
 
  .. [1] Updates of core plugins
 
-Managing Screnshots
+Managing Screenshots
 ===================
 
 Add new Screenshots
