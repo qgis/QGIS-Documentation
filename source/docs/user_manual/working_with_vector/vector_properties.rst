@@ -131,7 +131,7 @@ text field. The **[OK]** button closes the window and selects the features
 satisfying the query. The **[Cancel]** button closes the window without
 changing the current selection.
 
-QGIS treats the resulting subset acts as if it where the entire layer. For
+QGIS treats the resulting subset acts as if it were the entire layer. For
 example if you applied the filter above for 'Borough', you can not display,
 query, save or edit Anchorage, because that is a 'Municipality' and therefore
 not part of the subset.
@@ -533,7 +533,7 @@ Inverted Polygon
 The |invertedSymbol| :guilabel:`Inverted Polygon` renderer allows user
 to define a symbol to fill in
 outside of the layer's polygons. As above you can select subrenderers, namely
-Single symbol, Graduated, Categorized, Rule-Based or 2.5 D renderer.
+Single symbol, Graduated, Categorized, Rule-Based or 2.5D renderer.
 
 .. _figure_inverted_symbology:
 
@@ -564,15 +564,15 @@ the heatmap renderer updates the heatmap style automatically.
 
    Heatmap dialog
 
-.. index:: 2.5 D
-   single: Symbology; 2.5 D renderer
+.. index:: 2.5D
+   single: Symbology; 2.5D renderer
 .. _2.5_D_rendering:
 
-2.5 D
+2.5D
 .....
 
-Using the |25dSymbol| :guilabel:`2.5 D` renderer it's possible to create
-a 2.5 D effect on your layer's features.
+Using the |25dSymbol| :guilabel:`2.5D` renderer it's possible to create
+a 2.5D effect on your layer's features.
 You start by choosing a :guilabel:`Height` value (in map units). For that
 you can use a fixed value, one of your layer's fields, or an expression. You also
 need to choose an :guilabel:`Angle` (in degrees) to recreate the viewer position
@@ -588,19 +588,19 @@ units).
 .. figure:: /static/user_manual/working_with_vector/2_5dsymbol.png
    :align: center
 
-   2.5 D dialog
+   2.5D dialog
 
-.. tip:: **Using 2.5 D effect with other renderers**
+.. tip:: **Using 2.5D effect with other renderers**
 
-   Once you have finished setting the basic style on the 2.5 D renderer, you can
-   convert this to another renderer (single, categorized, graduated). The 2.5 D
+   Once you have finished setting the basic style on the 2.5D renderer, you can
+   convert this to another renderer (single, categorized, graduated). The 2.5D
    effects will be kept and all other renderer specific options will be
    available for you to fine tune them (this way you can have for example categorized
-   symbols with a nice 2.5 D representation or add some extra styling to your 2.5 D
+   symbols with a nice 2.5D representation or add some extra styling to your 2.5D
    symbols). To make sure that the shadow and the "building" itself do not interfere
    with other nearby features, you may need to enable Symbols Levels (
    :menuselection:`Advanced --> Symbol levels...`).
-   The 2.5 D height and angle values are saved in the layer's variables,
+   The 2.5D height and angle values are saved in the layer's variables,
    so you can edit it afterwards in the variables tab of the layer's properties dialog.
 
 .. index:: Layer rendering, Sort features, Z-level

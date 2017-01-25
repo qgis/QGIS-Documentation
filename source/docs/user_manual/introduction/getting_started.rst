@@ -28,7 +28,7 @@ Installation
 ============
 
 Installation of QGIS is very simple. Standard installer packages are available
-for MS Windows and Mac OS X. For many flavors of GNU/Linux, binary packages (rpm
+for MS Windows and macOS. For many flavors of GNU/Linux, binary packages (rpm
 and deb) or software repositories are provided to add to your installation manager.
 Get the latest information on binary packages at the QGIS website at
 http://download.qgis.org.
@@ -72,7 +72,7 @@ you may do one of the following:
 * Uninstall QGIS and reinstall with the data download option checked (only recommended if
   the above solutions are unsuccessful)
 
-|nix| |osx| For GNU/Linux and Mac OS X, there are not yet dataset installation
+|nix| |osx| For GNU/Linux and macOS, there are not yet dataset installation
 packages available as rpm, deb or dmg. To use the sample dataset, download the
 file :file:`qgis_sample_data` as a ZIP archive from
 http://qgis.org/downloads/data/ and unzip the archive

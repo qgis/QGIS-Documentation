@@ -93,7 +93,7 @@ Menu Option                                              Shortcut              R
 |fileExit| :guilabel:`Exit QGIS`                         :kbd:`Ctrl+Q`         \                                           \
 =======================================================  ====================  ==========================================  ===============================
 
-Under |osx| Mac OSX, the :guilabel:`Exit QGIS` command corresponds to
+Under |osx| macOS, the :guilabel:`Exit QGIS` command corresponds to
 :menuselection:`QGIS --> Quit QGIS` (:kbd:`Cmd+Q`).
 
 Edit
@@ -178,7 +178,7 @@ Menu Option                                              Shortcut              R
 Under |nix| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
 and :guilabel:`Toggle Full Screen Mode` are rather placed in :menuselection:`Settings`
 menu.
-:menuselection:`Preview mode -->` is not available under |osx| Mac OS X.
+:menuselection:`Preview mode -->` is not available under |osx| macOS.
 
 Layer
 -----
@@ -334,7 +334,7 @@ Menu Option                                              Shortcut              R
 QGIS
 -----
 
-This menu is only available under |osx| Mac OS X and contains some OS related
+This menu is only available under |osx| macOS and contains some OS related
 commands.
 
 ================================  ====================  =========================

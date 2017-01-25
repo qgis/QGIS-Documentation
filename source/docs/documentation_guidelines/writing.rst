@@ -305,7 +305,7 @@ You can also use more complicated tables by drawing them using references and al
    .. _my_drawn_table:
 
    +---------------+--------------------+
-   | Windows       | Mac OSX            |
+   | Windows       | macOS              |
    +---------------+--------------------+
    | |win|         | |osx|              |
    +---------------+--------------------+
@@ -321,7 +321,7 @@ The result:
 .. _my_drawn_table:
 
 +---------------+--------------------+
-| Windows       | Mac OSX            |
+| Windows       | macOS              |
 +---------------+--------------------+
 | |win|         | |osx|              |
 +---------------+--------------------+

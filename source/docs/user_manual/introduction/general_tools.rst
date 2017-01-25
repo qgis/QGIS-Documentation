@@ -724,7 +724,7 @@ populated with one of three methods:
 Another option is to use the |colorPicker| :sup:`color picker` which allows
 you to sample a color from under your mouse pointer at any part of
 QGIS or even from another application by pressing the space bar. Please note
-that the color picker is OS dependent and is currently not supported by OSX.
+that the color picker is OS dependent and is currently not supported by macOS.
 
 .. _tip_quick_color_picker_+_copy/paste_colors:
 
@@ -774,7 +774,7 @@ on layers, on features but also on print composer items:
   Burn can be used to tweak and colorise underlying layers.
 * **Overlay**: This mode combines the multiply and screen blending modes.
   In the resulting picture, light parts become lighter and dark parts become darker.
-* Soft light: This is very similar to overlay, but instead of using multiply/screen
+* **Soft light**: This is very similar to overlay, but instead of using multiply/screen
   it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
 * **Hard light**: Hard light is also very similar to the overlay mode. It's supposed
   to emulate projecting a very intense light onto an image.

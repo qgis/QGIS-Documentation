@@ -23,7 +23,7 @@ We can make difference between several types of settings:
   default snapping tolerance. This functionality is provided directly by Qt
   framework by the means of :class:`QSettings` class. By default, this class stores
   settings in system's "native" way of storing settings, that is --- registry
-  (on Windows), .plist file (on Mac OS X) or .ini file (on Unix). The
+  (on Windows), .plist file (on macOS) or .ini file (on Unix). The
   `QSettings documentation <http://doc.qt.io/qt-4.8/qsettings.html>`_
   is comprehensive, so we will provide just a simple example
 
