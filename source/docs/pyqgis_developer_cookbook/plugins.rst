@@ -63,6 +63,8 @@ Ready to create a plugin but no idea what to do? `Python Plugin Ideas wiki
 page <http://www.qgis.org/wiki/Python_Plugin_Ideas>`_ lists wishes from the
 community!
 
+.. _plugin_files_architecture:
+
 Plugin files
 ------------
 
