@@ -191,6 +191,7 @@ Option                                                            Vector Layer  
 |addGroup| :menuselection:`Add Group`                             \                      \                     |checkbox|
 ================================================================  =====================  ===================== ===============
 
+Table: Context menu from Layers Panel items
 
 Enabling the **Mutually Exclusive Group** option you can make a group have only
 one layer visible at the same time.
@@ -298,6 +299,13 @@ Another powerful feature of this panel is the :guilabel:`Live update` checkbox.
 Tick it and your changes are automatically rendered in the map canvas as you go on.
 You no longer need to hit the **[Apply]** button.
 
+.. _figure_layer_styling:
+
+.. figure:: /static/user_manual/introduction/layer_styling.png
+    :align: center
+
+    Defining a layer symbology from the layer styling panel
+
 .. index::
    single: Panels; Statistic
    single: Statistic
@@ -318,24 +326,37 @@ allows users to choose:
 
 Statistic information available are (depending on the field's type):
 
-* Sum (float or integer)
-* Mean (float or integer)
-* Median (float or integer)
-* Standard Deviation (float or integer)
-* Standard Deviation on Sample (float or integer)
-* Minimal value (date, string, float or integer)
-* Maximal value (date, string, float or integer)
-* Range (date, float or integer)
-* Minority (float or integer)
-* Majority (float or integer)
-* Variety (float or integer)
-* First Quartile (float or integer)
-* Third Quartile (float or integer)
-* Inter Quartile Range (float or integer)
-* Count Distinct Value (date or string)
-* Count number of Missing Value (date or string)
-* Minimum Length (string)
-* Maximum Length (string)
+================================== ============ ============  ============  ============
+ Statistics                         String       Integer       Float         Date
+================================== ============ ============  ============  ============
+Count                               |checkbox|   |checkbox|    |checkbox|    |checkbox|
+Count Distinct Value                |checkbox|                               |checkbox|
+Count Missing value                 |checkbox|                               |checkbox|
+Sum                                              |checkbox|    |checkbox|
+Mean                                             |checkbox|    |checkbox|    |checkbox|
+Standard Deviation                               |checkbox|    |checkbox|
+Standard Deviation on Sample                     |checkbox|    |checkbox|
+Minimal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
+Maximal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
+Range                                            |checkbox|    |checkbox|    |checkbox|
+Minority                                         |checkbox|    |checkbox|
+Majority                                         |checkbox|    |checkbox|
+Variety                                          |checkbox|    |checkbox|
+First Quartile                                   |checkbox|    |checkbox|
+Third Quartile                                   |checkbox|    |checkbox|
+Inter Quartile Range                             |checkbox|    |checkbox|
+Minimum Length                      |checkbox|
+Maximum Length                      |checkbox|
+================================== ============ ============  ============  ============
+
+Table: Statistics available for each field type
+
+.. _figure_statistical_summary:
+
+.. figure:: /static/user_manual/introduction/statistical_summary.png
+    :align: center
+
+    Show statistics on a field
 
 .. index::
    single: Map; Overview
