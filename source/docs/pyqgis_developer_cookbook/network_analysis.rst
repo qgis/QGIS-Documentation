@@ -1,4 +1,4 @@
-﻿.. _network-analysis:
+.. _network-analysis:
 
 ************************
 Network analysis library

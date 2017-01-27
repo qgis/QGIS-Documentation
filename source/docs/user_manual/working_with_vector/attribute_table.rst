@@ -268,7 +268,7 @@ layer`.
 This applies to features selected and copied within QGIS and
 also to features from another source defined using well-known text (WKT).
 
-.. index:: Field Calculator, Derived Fields, Virtual Fields
+.. index:: Field Calculator, Derived Fields
 .. _calculate_fields_values:
 
 Editing attribute values
@@ -293,7 +293,7 @@ defined functions, for instance, to calculate length or area of geometry feature
 The results can be written to a new attribute field, a virtual field, or
 they can be used to update values in an existing field.
 
-The :index:`field calculator` is available on any layer that supports edit.
+The field calculator is available on any layer that supports edit.
 When you click on the field calculator icon the dialog opens (see
 figure_field_calculator_). If the layer is not in edit mode, a warning is
 displayed and using the field calculator will cause the layer to be put in
@@ -337,6 +337,7 @@ A short example illustrates how field calculator works when using the
    expression box and click **[Ok]**.
 #. You can now find a new field ``length`` in the attribute table.
 
+.. index:: Field calculation bar
 .. _quick_field_calculation_bar:
 
 The Quick Field Calculation Bar
@@ -346,7 +347,7 @@ While Field calculator is always available, the quick field calculation bar on t
 of the attribute table is only visible if the layer is in edit mode. Thanks to the
 expression engine, it offers a quicker access to edit an already existing field.
 
-In quick field :index:`calculation bar`, you simply need to:
+In quick field calculation bar, you simply need to:
 
 * select the existing field name in the drop-down list
 * fill the textbox with an expression you directly write or build using the |expression|
@@ -354,12 +355,13 @@ In quick field :index:`calculation bar`, you simply need to:
 * and click on **[Update All]**, **[Update Selected]** or **[Update Filtered]** button
   according to your need.
 
+.. index:: Virtual Fields
 .. _virtual_field:
 
 Create a Virtual Field
 -----------------------
 
-A :index:`virtual field` is a field based on an expression calculated on the fly,
+A virtual field is a field based on an expression calculated on the fly,
 meaning that its value is automatically updated as soon as the underlying parameter
 changes. The expression is set once; you no longer need to recalculate the field
 each time underlying values change.
@@ -394,7 +396,7 @@ layer during digitizing. Have a closer look at the edit widget in section
 :ref:`vector_attributes_menu` to find out more.
 
 
-.. index:: Conditional Formatting
+.. index:: Conditional formatting
 .. _conditional_formatting:
 
 Conditional formatting of Table Cells
@@ -427,7 +429,7 @@ to define:
    Conditional Formatting of an attribute table
 
 
-.. index:: Relations
+.. index:: Relations, Foreign key
 .. _vector_relations:
 
 Creating one to many relations
@@ -504,6 +506,7 @@ Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
 
    Relation Manager
 
+.. index:: Feature form, Linked forms, Embedded form
 
 Forms
 -----

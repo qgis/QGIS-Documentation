@@ -630,7 +630,7 @@ Finally, let's check whether everything went well
   for f in features:
       print "F:", f.id(), f.attributes(), f.geometry().asPoint()
 
-.. index:: vector layers; symbology
+.. index:: Vector layers; Symbology
 
 Appearance (Symbology) of Vector Layers
 =======================================
@@ -683,7 +683,7 @@ useful for debugging
 
   print rendererV2.dump()
 
-.. index:: single symbol renderer, symbology; single symbol renderer
+.. index:: Single symbol renderer, Symbology; Single symbol renderer
 
 Single Symbol Renderer
 ----------------------
@@ -761,7 +761,7 @@ This can be useful if you want to alter some properties::
     layer.rendererV2().setSymbol(QgsMarkerSymbolV2.createSimple(props))
 
 
-.. index:: categorized symbology renderer, symbology; categorized symbol renderer
+.. index:: Categorized symbology renderer, Symbology; Categorized symbol renderer
 
 Categorized Symbol Renderer
 ---------------------------
@@ -783,7 +783,7 @@ returns assigned symbol.
 The renderer usually stores also original symbol and color ramp which were used
 for the classification: :func:`sourceColorRamp` and :func:`sourceSymbol` methods.
 
-.. index:: symbology; graduated symbol renderer, graduated symbol renderer
+.. index:: Symbology; Graduated symbol renderer, Graduated symbol renderer
 
 Graduated Symbol Renderer
 -------------------------
@@ -850,7 +850,7 @@ arrangement)
   QgsMapLayerRegistry.instance().addMapLayer(myVectorLayer)
 
 
-.. index:: symbols; working with
+.. index:: Symbols; Working with
 
 Working with Symbols
 --------------------
@@ -884,7 +884,7 @@ there is :func:`width` method returning line width.
 
 Size and width are in millimeters by default, angles are in degrees.
 
-.. index:: symbol layers; working with
+.. index:: Symbol layers; Working with
 
 Working with Symbol Layers
 ..........................
@@ -927,7 +927,7 @@ are generic methods :func:`color`, :func:`size`, :func:`angle`, :func:`width`
 with their setter counterparts. Of course size and angle is available only for
 marker symbol layers and width for line symbol layers.
 
-.. index:: symbol layers; creating custom types
+.. index:: Symbol layers; Creating custom types
 
 Creating Custom Symbol Layer Types
 ..................................
@@ -1064,7 +1064,7 @@ settings widget for this symbol layer type.
 The last step is to add this symbol layer to the registry --- and we are done.
 
 .. index::
-  pair: custom; renderers
+  pair: Custom; Renderer
 
 Creating Custom Renderers
 -------------------------
@@ -1204,6 +1204,5 @@ Further Topics
    rule-based renderer (see `this blogpost <http://snorf.net/blog/2014/03/04/symbology-of-vector-layers-in-qgis-python-plugins>`_)
    exploring symbol layer and renderer registries
 
-.. index:: symbology; old
 
 .. _supported formats by OGR: http://www.gdal.org/ogr/ogr_formats.html

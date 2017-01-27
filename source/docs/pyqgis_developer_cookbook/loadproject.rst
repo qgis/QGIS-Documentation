@@ -1,4 +1,4 @@
-.. loadproject:
+.. _loadproject:
 
 ****************
 Loading Projects
@@ -9,7 +9,7 @@ when developing a stand-alone QGIS Python application (see: :ref:`pythonapplicat
 
 
 .. index::
-  pair: projects; loading
+  pair: Projects; Loading
 
 To load a project into the current QGIS application you need a :class:`QgsProject`
 :func:`instance()` object and call its :func:`read()` method passing to it a

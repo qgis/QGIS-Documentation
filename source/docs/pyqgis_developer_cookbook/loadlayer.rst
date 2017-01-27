@@ -1,4 +1,4 @@
-.. loadlayer:
+.. _loadlayer:
 
 **************
 Loading Layers

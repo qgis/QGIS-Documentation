@@ -55,7 +55,7 @@ Run Python code when QGIS starts
 There are two distinct methods to run Python code every time QGIS starts.
 
 .. index::
-  pair: environment; PYQGIS_STARTUP
+  pair: Environment; PYQGIS_STARTUP
 
 PYQGIS_STARTUP environment variable
 -----------------------------------
@@ -72,7 +72,7 @@ homebrew or MacPorts installs on Mac.
 
 
 .. index::
-  pair: Python; startup.py
+  single: Python; startup.py
 
 The :file:`startup.py` file
 ----------------------------
@@ -83,7 +83,7 @@ it is executed by the embedded Python interpreter.
 
 
 .. index::
-  pair: Python; console
+  pair: Python; Console
 
 .. _pythonconsole:
 
@@ -120,7 +120,7 @@ For those which use the console often, it may be useful to set a shortcut
 for triggering the console (within menu :menuselection:`Settings --> Configure
 shortcuts...`)
 
-.. index:: Python; plugins
+.. index:: Python; Plugins
 
 Python Plugins
 ==============

@@ -24,12 +24,7 @@ You can save the layout as a template and load it again in another session. Fina
 generating several maps based on a template can be done through the atlas generator.
 
 
-.. index::
-   single:Composer_Template
-.. index::
-   single:Map_Template
-
-
+.. index:: Composer template, Map template
 
 Sample Session
 ==============
@@ -75,7 +70,6 @@ can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 
 
 .. index:: Composer manager
-
 .. _composer_manager:
 
 The Composer Manager
@@ -120,7 +114,7 @@ You can also save composer templates in another folder.
 Choosing *specific* in the template list offers the ability to select such
 template and use it to create a new print composer.
 
-.. print_composer_menus:
+.. _print_composer_menus:
 
 Menus, tools and panels of the print composer
 =============================================
@@ -183,7 +177,7 @@ over any toolbar or through :menuselection:`View --> Toolbars` or
 
 
 .. index::
-   single: print_composer;tools
+   single: Print composer; Tools
 
 .. _composer_tools:
 
@@ -453,7 +447,7 @@ also set the spacing, offset and snap tolerance of the grid as much as its style
 and color. These options are applied by default to any new print composer.
 
 
-.. index:: Revert_Layout_Actions
+.. index:: Revert layout actions
 
 Command History Tab: Revert and Restore actions
 -----------------------------------------------

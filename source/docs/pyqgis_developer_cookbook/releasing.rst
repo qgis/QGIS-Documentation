@@ -1,6 +1,9 @@
-*********************
-Releasing your plugin
-*********************
+
+.. index:: Plugins; Releasing
+
+***********************
+ Releasing your plugin
+***********************
 
 .. contents::
    :local:
@@ -12,8 +15,6 @@ plugin to work well with the plugin installer. Or in case you would like
 to set up your own plugin repository, create a simple XML file that will
 list the plugins and their metadata, for examples see other
 `plugin repositories <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_.
-
-.. index:: plugins;
 
 Please take special care to the following suggestions:
 
@@ -53,7 +54,7 @@ you will be notified.
 **TODO:**
    Insert a link to the governance document
 
-.. index:: plugins; official python plugin repository
+.. index:: Plugins; Official python plugin repository
 
 
 Permissions

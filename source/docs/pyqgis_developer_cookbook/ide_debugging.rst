@@ -1,3 +1,5 @@
+.. index:: Plugins; Debugging
+
 **********************************************
 IDE settings for writing and debugging plugins
 **********************************************

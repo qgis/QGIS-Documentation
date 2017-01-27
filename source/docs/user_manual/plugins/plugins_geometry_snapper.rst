@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 .. index:: Geometry, Topology, Snapping
-   single: Plugin; Geometry snapper
+   single: Plugins; Geometry snapper
 
 .. _geometry_snapper:
 

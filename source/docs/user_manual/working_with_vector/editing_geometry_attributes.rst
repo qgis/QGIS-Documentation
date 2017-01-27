@@ -357,7 +357,7 @@ not be able to tell which vertex is being edited and will display a warning.
 Basic operations
 ................
 
-.. index:: Nodes, Vertices, Vertex
+.. index:: Nodes, Vertices, Vertex, Geometryless feature
 
 Start by activating the |nodeTool| :sup:`Node Tool` and selecting a
 feature by clicking on it. Red boxes will appear at each vertex of this feature.
@@ -377,7 +377,7 @@ feature by clicking on it. Red boxes will appear at each vertex of this feature.
   should be moved if necessary.
 * **Deleting vertices**: Select the vertices and click the
   :kbd:`Delete` key. Deleting all the vertices of a feature generates, if
-  compatible with the datasource, a :index:`geometryless feature`. Note that
+  compatible with the datasource, a geometryless feature. Note that
   this doesn't delete the complete feature, just the geometry part;
   To delete a complete feature use the |deleteSelected| :sup:`Delete Selected` tool.
 * **Moving vertices**: Select all the vertices you want to move, click on
@@ -677,7 +677,7 @@ To abort feature simplification, you need to click on |simplifyFeatures|
    feature's geometry in data source.
 
 
-.. index::
+.. index:: Geometryless feature
    single: Digitizing tools; Add Part
 
 Add Part
@@ -688,8 +688,8 @@ You can |addPart| :sup:`Add Part` to a selected feature generating a
 new part must be digitized outside the existing one which should be selected
 beforehand.
 
-The |addPart| :sup:`Add Part` can also be used to add a geometry to a :index:`geometryless
-feature`. First, select the feature in the attribute table and digitize the new geometry
+The |addPart| :sup:`Add Part` can also be used to add a geometry to a geometryless
+feature. First, select the feature in the attribute table and digitize the new geometry
 with the :index:`Add Part` tool.
 
 
@@ -712,7 +712,7 @@ To delete a part, simply click within the target part.
 Add Ring
 --------
 
-You can create :index:`ring polygons` using the |addRing|
+You can create ring polygons using the |addRing|
 :sup:`Add Ring` icon in the toolbar. This means that inside an existing area, it
 is possible to digitize further polygons that will occur as a 'hole', so
 only the area between the boundaries of the outer and inner polygons remains

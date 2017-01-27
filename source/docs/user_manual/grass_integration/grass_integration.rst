@@ -356,8 +356,6 @@ used as the link to one key column in the database table.
 .. index::
       seealso: Creating new layer; GRASS
       seealso: Editing; GRASS
-
-
 .. _creating_new_grass_vectors:
 
 Creating a new GRASS vector layer
@@ -385,13 +383,12 @@ need to select the geometry type when creating a new GRASS vector. This is
 different from shapefile creation with QGIS, because shapefiles use the Simple
 Feature vector model (see section :ref:`sec_create_vector`).
 
+.. index::
+   pair: GRASS; Digitizing tools
 .. _grass_digitizing:
 
 Digitizing and editing a GRASS vector layer
 ===========================================
-
-.. index::
-   pair: GRASS; Digitizing tools
 
 GRASS vector layers can be digitized using the standard QGIS digitizing tools.
 There are however some particularities, which you should know about, due to
@@ -536,12 +533,13 @@ This is being solved with GRASS developers.
    if you have write permission.
 
 
+.. index::
+   single: GRASS; Region
 .. _sec_grass_region:
 
 The GRASS region tool
 =====================
-.. index::
-   single: GRASS; Region
+
 
 The region definition (setting a spatial working window) in GRASS is important
 for working with raster layers. Vector analysis is by default not limited to any
@@ -567,12 +565,12 @@ The GRASS module :file:`g.region` provides a lot more parameters to define an
 appropriate region extent and resolution for your raster analysis. You can use
 these parameters with the GRASS Toolbox, described in section :ref:`subsec_grass_toolbox`.
 
+.. index::
+   single: GRASS; Toolbox
 .. _subsec_grass_toolbox:
 
 The GRASS Toolbox
 =================
-.. index::
-   single: GRASS toolbox
 
 The |grassTools| :sup:`Open GRASS Tools` box provides GRASS module functionalities
 to work with data inside a selected GRASS :file:`LOCATION` and :file:`MAPSET`.
@@ -747,8 +745,6 @@ causing it to load even more slowly.
 
    GRASS module v.generalize to smooth a vector map
 
-.. index::
-   single: GRASS; Toolbox
 .. tip:: **Other uses for r.contour**
 
    The procedure described above can be used in other equivalent situations. If
@@ -856,12 +852,12 @@ of statistics for each polygon in a vector map.
   columns have been added, including ``elev_min``, ``elev_max``, ``elev_mean``,
   etc., for each forest polygon.
 
+.. index::
+   single: GRASS; Customize toolbox
 .. _sec_toolbox-customizing:
 
 Customizing the GRASS Toolbox
 ------------------------------
-.. index::
-   single: GRASS toolbox; Customize
 
 Nearly all GRASS modules can be added to the GRASS Toolbox. An XML interface is
 provided to parse the pretty simple XML files that configure the modules'

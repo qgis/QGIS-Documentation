@@ -1,4 +1,4 @@
-.. index:: settings; reading, settings; storing
+.. index:: Settings; Reading, Settings; Storing
 
 .. settings:
 
@@ -16,7 +16,7 @@ meaningful string. It is recommended to give some structure to naming of keys.
 
 We can make difference between several types of settings:
 
-.. index:: settings; global
+.. index:: Settings; Global
 
 * **global settings** --- they are bound to the user at particular machine.
   QGIS itself stores a lot of global settings, for example, main window size or
@@ -46,7 +46,7 @@ We can make difference between several types of settings:
   the default value if there is no previous value set for the passed setting
   name.
 
-.. index:: settings; project
+.. index:: Settings; Project
 
 * **project settings** --- vary between different projects and therefore they
   are connected with a project file. Map canvas background color or destination
@@ -72,7 +72,7 @@ We can make difference between several types of settings:
   several methods exist for reading the setting value back, and the
   corresponding one has to be selected for each data type.
 
-.. index:: settings; map layer
+.. index:: Settings; Map layer
 
 * **map layer settings** --- these settings are related to a particular
   instance of a map layer with a project. They are *not* connected with
