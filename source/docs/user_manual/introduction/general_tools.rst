@@ -1577,14 +1577,14 @@ For formats like Shapefile, MapInfo .tab, feature append is also available.
    As an option, you can |checkbox| :guilabel:`Use the layer title as name if
    set` or :guilabel:`Export features intersecting the current map extent`.
 
-.. index:: Variables
+.. index:: Variables, Expressions
 
 .. _`general_tools_variables`:
 
 Use of variables for dynamic content
 ====================================
 
-You can define custom variables for use in :index:`expressions`. Variables can
+You can define custom variables for use in expressions. Variables can
 be defined at the application global level, project level, layer level and
 composition level. Just like CSS cascading rules, variables can be overwritten
 - eg, a project level variable will overwrite any application level variables

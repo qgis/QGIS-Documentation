@@ -1,3 +1,5 @@
+.. index:: Plugins; User interaction
+
 ***************************
 Communicating with the user
 ***************************

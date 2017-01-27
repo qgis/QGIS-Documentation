@@ -1,4 +1,4 @@
-.. index:: geometry; handling
+.. index:: Geometry; Handling
 
 .. _geometry:
 
@@ -24,7 +24,7 @@ The coordinates of geometries can be in any coordinate reference system (CRS).
 When fetching features from a layer, associated geometries will have
 coordinates in CRS of the layer.
 
-.. index:: geometry; construction
+.. index:: Geometry; Construction
 
 Geometry Construction
 =====================
@@ -63,7 +63,7 @@ There are several options for creating a geometry:
     g.setWkbAndOwnership(wkb, len(wkb))
 
 
-.. index:: geometry; access to
+.. index:: Geometry; Access to
 
 Access to Geometry
 ==================
@@ -104,7 +104,7 @@ the values are accessible with :func:`x` and :func:`y` methods.
 For multipart geometries there are similar accessor functions:
 :func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`.
 
-.. index:: geometry; predicates and operations
+.. index:: Geometry; Predicates and operations
 
 Geometry Predicates and Operations
 ==================================

@@ -1,4 +1,4 @@
-.. index:: map canvas
+.. index:: Map canvas
 
 .. _canvas:
 
@@ -47,7 +47,7 @@ To summarize, the map canvas architecture consists of three concepts:
 * map canvas items --- additional items that can be displayed in map canvas
 * map tools --- for interaction with map canvas
 
-.. index:: map canvas; embedding
+.. index:: Map canvas; Embedding
 
 Embedding Map Canvas
 ====================
@@ -101,7 +101,7 @@ layers for canvas
 After executing these commands, the canvas should show the layer you have
 loaded.
 
-.. index:: map canvas; map tools
+.. index:: Map canvas; Map tools
 
 Using Map Tools with Canvas
 ===========================
@@ -185,7 +185,7 @@ path (``sys.path``). If it isn't, you can simply add it: ``sys.path.insert(0,
 '/my/path')`` --- otherwise the import statement will fail, not finding the
 module.
 
-.. index:: map canvas; rubber bands, map canvas; vertex markers
+.. index:: Map canvas; Rubber bands, Map canvas; Vertex markers
 
 Rubber Bands and Vertex Markers
 ===============================
@@ -261,7 +261,7 @@ icon type, size, color and pen width
 For temporary hiding of vertex markers and removing them from canvas, the same
 applies as for the rubber bands.
 
-.. index:: map canvas; writing custom map tools
+.. index:: Map canvas; Custom map tools
 
 Writing Custom Map Tools
 ========================
@@ -341,7 +341,7 @@ described before to show the selected rectangle as it is being defined.
         super(RectangleMapTool, self).deactivate()
         self.emit(SIGNAL("deactivated()"))
 
-.. index:: map canvas; writing custom canvas items
+.. index:: Map canvas; Custom canvas items
 
 Writing Custom Map Canvas Items
 ===============================
