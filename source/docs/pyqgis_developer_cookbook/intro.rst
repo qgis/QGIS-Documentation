@@ -30,9 +30,10 @@ in detail in the following sections:
 
 Python bindings are also available for QGIS Server:
 
-* starting from 2.8 release, Python plugins are also available on QGIS Server (see: `Server Python Plugins <server_plugins>`_)
-* starting from 2.11 version (Master at 2015-08-11), QGIS Server library has Python bindings that can be used to embed QGIS Server into a Python application.
-
+* starting from 2.8 release, Python plugins are also available on QGIS Server
+  (see :ref:`Server Python Plugins <server_plugins>`)
+* starting from 2.11 version (Master at 2015-08-11), QGIS Server library has
+  Python bindings that can be used to embed QGIS Server into a Python application.
 
 .. index:: API
 
