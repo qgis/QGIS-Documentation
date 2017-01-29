@@ -9,8 +9,8 @@ extension to PostgreSQL, to learn how to setup a spatial database, import data
 from shapefiles into the database and make use of the geographic functions that
 PostGIS offers.
 
-While working through this section, you may want to keep a copy of the `PostGIS
-cheat sheet </static/training_manual/postgis/postgis_cheatsheet.pdf>`_ available
+While working through this section, you may want to keep a copy of the **PostGIS
+cheat sheet**  available
 from `Boston GIS user group <http://www.bostongis.com/postgis_quickguide.bqg>`_.
 Another useful resource is the `online <http://postgis.net/docs/>`_ PostGIS
 documentation.
