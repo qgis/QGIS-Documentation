@@ -45,7 +45,7 @@ an appropriate value of snapping tolerance and search radius for features vertic
 Snapping tolerance
 ------------------
 
-:index:`Snapping tolerance` is the distance QGIS uses to ``search`` for the closest
+Snapping tolerance is the distance QGIS uses to ``search`` for the closest
 vertex and/or segment you are trying to connect to when you set a new vertex or
 move an existing vertex. If you aren't within the snapping tolerance, QGIS
 will leave the vertex where you release the mouse button, instead of snapping
@@ -677,20 +677,19 @@ To abort feature simplification, you need to click on |simplifyFeatures|
    feature's geometry in data source.
 
 
-.. index:: Geometryless feature
+.. index:: Geometryless feature, Multipoint, Multiline, Multipolygon
    single: Digitizing tools; Add Part
 
 Add Part
 --------
 
 You can |addPart| :sup:`Add Part` to a selected feature generating a
-:index:`multipoint`, :index:`multiline` or :index:`multipolygon` feature. The
-new part must be digitized outside the existing one which should be selected
-beforehand.
+multipoint, multiline or multipolygon feature. The new part must be digitized
+outside the existing one which should be selected beforehand.
 
 The |addPart| :sup:`Add Part` can also be used to add a geometry to a geometryless
-feature. First, select the feature in the attribute table and digitize the new geometry
-with the :index:`Add Part` tool.
+feature. First, select the feature in the attribute table and digitize the new
+geometry with the |addPart| :sup:`Add Part` tool.
 
 
 .. index::
@@ -699,7 +698,7 @@ with the :index:`Add Part` tool.
 Delete Part
 -----------
 
-The |deletePart| :sup:`Delete Part` tool allows you to :index:`delete parts` from
+The |deletePart| :sup:`Delete Part` tool allows you to delete parts from
 multifeatures (e.g., to delete polygons from a multi-polygon feature). This
 tool works with all multi-part geometries: point, line and polygon. Furthermore,
 it can be used to totally remove the geometric component of a feature.

@@ -15,7 +15,7 @@ Expressions
    .. contents::
       :local:
 
-The :index:`Expressions` feature is available from many parts in QGIS. It can be
+The **Expressions** feature is available from many parts in QGIS. It can be
 accessed using the |expression| :sup:`Expression Builder`, the
 |expressionSelect| :sup:`Select By Expression...`, the :guilabel:`Geometry generator`
 symbol layer option, the |calculateField| :sup:`Field calculator` or the
