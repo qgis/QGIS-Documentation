@@ -1172,9 +1172,12 @@ default it will display three kinds of information:
     In case you click on a curved line using the info tool, QGIS will also display the
     radius of that section in the panel result.
 
-* **Data attributes**: This is the list of attribute fields and values for the feature that
-  has been clicked.
+* **Data attributes**: This is the list of attribute fields and values for the
+  feature that has been clicked.
 
+.. note:: Links in feature's attributes are clickable from the :guilabel:`Identify
+   Results` panel and will open in your default web browser.
+   
 .. _figure_identify:
 
 .. figure:: /static/user_manual/introduction/identify_features.png
