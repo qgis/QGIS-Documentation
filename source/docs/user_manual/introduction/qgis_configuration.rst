@@ -620,6 +620,11 @@ described above.
 * With the :guilabel:`Identify layers` tab, you set (or disable) which
   layers will respond to the :ref:`identify tool <identify>`. By default, layers
   are set queryable.
+  
+  You can also set whether a layer should appear as ``read-only``, meaning that
+  layer can not be edited by the user, regardless of the data provider's
+  capabilities. This can be a handy configuration to avoid end-users modifying data
+  when working with file-based layers.
 * The :guilabel:`Default Styles` tab lets you control how new layers will be
   drawn when they do not have an existing :file:`.qml` style defined. You can
   also set the default transparency level for new layers and whether symbols
