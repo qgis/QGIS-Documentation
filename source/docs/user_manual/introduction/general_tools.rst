@@ -1110,39 +1110,56 @@ Parameters that can be used with data-defined tools are:
    single: Identify features
 .. _`identify`:
 
-Identify features
+Identify Features
 =================
 
 The Identify tool allows you to interact with the map canvas and get information
-on features in a pop-up window. To identify features, use :menuselection:`View --> Identify
-features` or press :kbd:`Ctrl + Shift + I`, or click the |identify|
-:sup:`Identify features` icon on the Attributes toolbar.
+on features in a pop-up window. To identify features, use:
+
+* :menuselection:`View --> Identify Features` menu,
+* or press :kbd:`Ctrl + Shift + I` (or |osx| :kbd:`Cmd + Shift + I`),
+* or click the |identify| :sup:`Identify Features` icon on the Attributes toolbar.
+
+Using the Identify Features tool
+---------------------------------
 
 QGIS offers two ways to identify features with the |identify|
-:sup:`Identify features` tool:
+:sup:`Identify Features` tool:
 
 * **left click** will identify features according to the mode set in the
-  :guilabel:`Identify results` panel
+  :guilabel:`Identify Results` panel
 * **right click** will fetch all the snapped features from all the visible layers.
   This will open a context menu, allowing the user to choose more precisely the
   features to identify.
 
-If you click on feature(s), the :guilabel:`Identify results` dialog will list
+.. tip:: **Filter the layers to query with the Identify Features tool**
+
+   Uncheck the :guilabel:`Identifiable` column in :menuselection:`Project -->`
+   (or |nix| :menuselection:`Settings -->` (kde)), :menuselection:`Project
+   Properties --> Identify layers` menu in front of a layer to avoid it
+   being queried when using the |identify| :sup:`Identify Features` in a mode
+   other than **Current Layer**. This is a handy way to return features from only
+   layers that are of interest for you.
+
+If you click on feature(s), the :guilabel:`Identify Results` dialog will list
 information about the clicked feature(s). The default view is a tree view where
 the first item is the name of the layer and its children are its identified feature(s).
 Each feature is described by the name of a field along with its value.
-This field is the one set in :menuselection:`Properties --> Display`.
+This field is the one set in :menuselection:`Layer Properties --> Display`.
 Then follows all the other information about the feature.
 
-This window can be customized to display custom fields, but by default it will
-display three kinds of information:
+Feature informations
+---------------------
+
+The Identify Results dialog can be customized to display custom fields, but by
+default it will display three kinds of information:
 
 .. index:: Actions
 
 * **Actions**: Actions can be added to the identify feature windows.
   The action is run by clicking on the action label. By default, only one action
-  is added, namely ``view feature form`` for editing. You can define more actions
-  in the layer's properties dialog.
+  is added, namely ``View feature form`` for editing. You can define more actions
+  in the layer's properties dialog (see :ref:`actions_menu`).
 * **Derived**: This information is calculated or derived from other information.
   This includes:
 
@@ -1155,15 +1172,21 @@ display three kinds of information:
     In case you click on a curved line using the info tool, QGIS will also display the
     radius of that section in the panel result.
 
-* **Data attributes**: This is the list of attribute fields and values for the feature that
-  has been clicked.
+* **Data attributes**: This is the list of attribute fields and values for the
+  feature that has been clicked.
 
+.. note:: Links in feature's attributes are clickable from the :guilabel:`Identify
+   Results` panel and will open in your default web browser.
+   
 .. _figure_identify:
 
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
 
-   Identify features dialog
+   Identify Results dialog
+
+The Identify Results dialog
+----------------------------
 
 At the top of the window, you have seven icons:
 
@@ -1181,19 +1204,19 @@ comboboxes.
 With the :guilabel:`Mode` combobox you can define from which layers features
 should be identified:
 
-* 'Current layer' : only features from the selected layer are identified. The
+* **Current layer** : only features from the selected layer are identified. The
   layer may not be visible in the canvas.
-* 'Top down, stop at first': for only features from the upper visible layer.
-* 'Top down': for all features from the visible layers. The results are shown in
+* **Top down, stop at first**: for only features from the upper visible layer.
+* **Top down**: for all features from the visible layers. The results are shown in
   the panel.
-* and 'Layer selection': opens a context menu where the user selects the layer to
+* and **Layer selection**: opens a context menu where the user selects the layer to
   identify features from. Operates like a right-click. Only the chosen features
   will be shown in the result panel.
 
-The :guilabel:`View` can be set as 'Tree', 'Table' or 'Graph'.
+The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
-The identify tool allows you to |checkbox|:guilabel:`auto open a form`.
+The identify tool allows you to |checkbox|:guilabel:`Auto open a form`.
 If checked, each time a single feature is identified QGIS will open a form
 showing its attributes. This is a handy way to quickly edit a feature's attributes.
 
