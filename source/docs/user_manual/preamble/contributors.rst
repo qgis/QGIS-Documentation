@@ -19,7 +19,7 @@ gender and walks of life.
 At any moment, you can `get involved <http://qgis.org/en/site/getinvolved/index.html>`_.
 
 .. index::
-   :single: Contributors; Authors
+   single: Contributors; Authors
 .. _doc_authors:
 
 Authors
@@ -77,7 +77,7 @@ and update the whole QGIS documentation.
 
 
 .. index:: 
-   :single: Contributors; Translators
+   single: Contributors; Translators
 .. _doc_translators:
 
 Translators
