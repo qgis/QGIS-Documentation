@@ -28,7 +28,7 @@ QGIS Browser widget
 
 To activate QGIS Browser, right-click on QGIS toolbar and check |checkbox|
 :guilabel:`Browser Panel` or select it from :menuselection:`View --> Panels`
-or :menuselection:`Settings --> Panels` (kde).
+(or |kde| :menuselection:`Settings --> Panels`).
 In the :guilabel:`Browser` panel, you can now browse in your filesystem,
 databases and web services and get your data into the map view with a
 simple drag-and-drop or double-click.

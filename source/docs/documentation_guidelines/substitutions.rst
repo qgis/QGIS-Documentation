@@ -47,6 +47,7 @@ Platform Icons
 ==========  ===============
 Icon        Substitution
 ==========  ===============
+|kde|       ``|kde|``
 |nix|       ``|nix|``
 |osx|       ``|osx|``
 |win|       ``|win|``

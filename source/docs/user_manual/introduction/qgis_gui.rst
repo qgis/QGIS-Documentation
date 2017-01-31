@@ -175,7 +175,7 @@ Menu Option                                              Shortcut              R
 :guilabel:`Toggle Full Screen Mode`                      :kbd:`F11`            \                                           \
 =======================================================  ====================  ==========================================  ===============================
 
-Under |nix| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
+Under |kde| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
 and :guilabel:`Toggle Full Screen Mode` are rather placed in :menuselection:`Settings`
 menu.
 :menuselection:`Preview mode -->` is not available under |osx| macOS.
@@ -229,7 +229,7 @@ Menu Option                                              Shortcut              R
 :guilabel:`Snapping Options...`                          \                     see :ref:`snapping_tolerance`               \
 =======================================================  ====================  ==========================================  ===============================
 
-Under |nix| Linux KDE, you'll find more tools in :menuselection:`Settings`
+Under |kde| Linux KDE, you'll find more tools in :menuselection:`Settings`
 menu such as :guilabel:`Project Properties`, :menuselection:`Panels -->`,
 :menuselection:`Toolbars -->` and :guilabel:`Toggle Full Screen Mode`.
 
@@ -358,7 +358,7 @@ under the other platforms.
 Panels and Toolbars
 ===================
 
-From the :menuselection:`View` menu (:menuselection:`Settings` under KDE), you can
+From the :menuselection:`View` menu (or |kde| :menuselection:`Settings`), you can
 switch on and off QGIS widgets (:menuselection:`Panels -->`) or toolbars
 (:menuselection:`Toolbars -->`). You can (de)activate any of them by
 right-clicking the menu bar or a toolbar and choose the item you want.
@@ -397,7 +397,7 @@ holding the mouse over the toolbars.
 
    If you have accidentally hidden a toolbar, you can get it
    back by choosing menu option :menuselection:`View --> Toolbars -->`
-   (or :menuselection:`Settings --> Toolbars -->` under Linux KDE).
+   (or |kde| :menuselection:`Settings --> Toolbars -->`).
    If for some reason a toolbar (or any other widget) totally disappears
    from the interface, you'll find tips to get it back at :ref:`restoring
    initial GUI <tip_restoring_configuration>`.
