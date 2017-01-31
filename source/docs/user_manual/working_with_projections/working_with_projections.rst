@@ -56,7 +56,7 @@ changed in the :guilabel:`General` tab of the |options|
 macOS) or :guilabel:`Settings` (KDE, Windows) menu.
 
 .. index:: CRS
-   :single: CRS; Default CRS
+   single: CRS; Default CRS
 
 Global Projection Specification
 ===============================
