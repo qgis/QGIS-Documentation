@@ -762,7 +762,7 @@ Vector layers crossing 180 |degrees| longitude
 ----------------------------------------------
 
 Many GIS packages don't wrap vector maps with a geographic reference system
-(lat/lon) :index:`crossing the 180 degrees longitude line`
+(lat/lon) crossing the 180 degrees longitude line
 (http://postgis.refractions.net/documentation/manual-2.0/ST\_Shift\_Longitude.html).
 As result, if we open such a map in QGIS, we will see two far, distinct locations,
 that should appear near each other. In Figure_vector_crossing_, the tiny point on the far

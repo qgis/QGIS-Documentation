@@ -1966,7 +1966,7 @@ the name of the application that will be executed when the action is invoked.
 You can add one or more attribute field values as arguments to the application.
 When the action is invoked, any set of characters that start with a ``%``
 followed by the name of a field will be replaced by the value of that field.
-The special characters :index:`%%` will be replaced by the value of the field
+The special characters ``%%`` will be replaced by the value of the field
 that was selected from the identify results or attribute table (see using_actions_
 below). Double quote marks can be used to group text into a single argument to
 the program, script or command. Double quotes will be ignored if preceded by a

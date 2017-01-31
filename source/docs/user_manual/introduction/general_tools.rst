@@ -1094,7 +1094,7 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows:
 * :guilabel:`Paste` and :guilabel:`Copy` buttons,
 * :guilabel:`Clear` button to remove the setup.
 
-.. tip:: When the :index:`data-defined override` option is setup correctly the
+.. tip:: When the data-defined override option is setup correctly the
    icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
    the icon is red |dataDefineError| or |dataDefineExpressionError|.
 
