@@ -168,6 +168,8 @@ use: the WMS servers of the DM Solutions Group and Lizardtech. To define a new
 WMS server in the :guilabel:`Layers` tab, select the **[New]** button. Then enter
 the parameters to connect to your desired WMS server, as listed in table_OGC_wms_:
 
+\
+
 .. _table_OGC_wms:
 
 +--------------------------------------+------------------------------------------------------------------+

@@ -445,7 +445,7 @@ OGC WMS 1.3.0 specification:
 
   .. _figure_server_selection:
   
-  .. figure:: /static/user_manual/working_with_ogc/server_selection_parameter.jpg
+  .. figure:: /static/user_manual/working_with_ogc/server_selection_parameter.png
      :align: center
 
      Server response to a GetMap request with SELECTION parameter
@@ -478,7 +478,7 @@ are drawn on top of the normal map:
 
 .. _figure_server_redlining:
 
-.. figure:: /static/user_manual/working_with_ogc/server_redlining.jpg
+.. figure:: /static/user_manual/working_with_ogc/server_redlining.png
    :align: center
 
    Server response to a GetMap request with redlining parameters
