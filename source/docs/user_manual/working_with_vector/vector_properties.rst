@@ -1480,7 +1480,10 @@ The available widgets are:
   format, pop-up a calendar, etc.
 * **Enumeration**: Opens a combo box with values that can be used within
   the columns type. This is currently only supported by the PostgreSQL provider.
-* **File name**: Simplifies the selection by adding a file chooser dialog.
+* **External Resource**: Uses a "Open file" dialog to store file path in a
+  relative or absolute mode. It can also be used to display a hyperlink (to
+  document path), a picture or a web page.
+* **File Name**: Simplifies the selection by adding a file chooser dialog.
 * **Hidden**: A hidden attribute column is invisible. The user is not able
   to see its contents.
 * **Photo**: Field contains a filename for a picture. The width and height of
@@ -1490,15 +1493,15 @@ The available widgets are:
 * **Relation Reference**: This widget lets you embed the feature form of the
   referenced layer on the feature form of the actual layer.
   See :ref:`vector_relations`.
-* **Text edit** (default): This opens a text edit field that allows simple
+* **Text Edit** (default): This opens a text edit field that allows simple
   text or multiple lines to be used. If you choose multiple lines you
   can also choose html content.
-* **Unique values**: You can select one of the values already used in
+* **Unique Values**: You can select one of the values already used in
   the attribute table. If 'Editable' is activated, a line edit is shown with
   autocompletion support, otherwise a combo box is used.
 * **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers)
   field, if empty.
-* **Value map**: A combo box with predefined items. The value is stored in
+* **Value Map**: A combo box with predefined items. The value is stored in
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
 * **Value Relation**: Offers values from a related table in a combobox. You can
@@ -1506,7 +1509,7 @@ The available widgets are:
   change the standard behaviours: allow null value, order by value, allow
   multiple selections and use of autocompleter. The forms will display either
   a drop-down list or a line edit field when completer checkbox is enabled.
-* **Webview**: Field contains a URL. The width and height of the field is variable.
+* **Web View**: Field contains a URL. The width and height of the field is variable.
 
 
 .. note::
