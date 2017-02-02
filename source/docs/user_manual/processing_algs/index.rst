@@ -18,5 +18,3 @@ Processing providers and algorithms
      qgis/index
      r/index
      saga/index
-     taudem/index
-
