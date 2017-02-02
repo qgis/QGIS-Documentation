@@ -563,10 +563,9 @@ the widget is populated with a tree of all QGIS settings, which you can directly
 Project Properties
 ==================
 
-In the properties window for the project under |nix|
-:menuselection:`Settings --> Project Properties` (kde) or |nix| |osx| |win|
-:menuselection:`Project --> Project Properties` (Gnome, macOS or Windows), you
-can set project-specific options.
+In the properties window for the project under :menuselection:`Project -->
+Project Properties` (or |kde| :menuselection:`Settings --> Project Properties`),
+you can set project-specific options.
 
 The project-specific options overwrite their equivalent in the options
 described above.

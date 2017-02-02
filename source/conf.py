@@ -227,6 +227,8 @@ rst_prolog = """
 rst_epilog = """
 .. |nix| image:: /static/common/nix.png
    :width: 1em
+.. |kde| image:: /static/common/kde.png
+   :width: 1.5em
 .. |win| image:: /static/common/win.png
    :width: 1em
 .. |osx| image:: /static/common/osx.png
