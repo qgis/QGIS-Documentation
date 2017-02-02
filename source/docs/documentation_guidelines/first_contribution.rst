@@ -98,6 +98,10 @@ click the "Fix Me" link at the bottom of the page to open its source file in Edi
 #. This will open the file in the ``qgis:master`` branch with a message at the
    top of the page telling you that you don't have write access to this repo and
    your changes will be applied in a new branch of your repository.
+   
+   Note that if you have commit rights to QGIS-Documentation repository, then
+   no message will show and you'll directly modify ``qgis:master`` branch itself
+   unless you save your changes in another branch.
 #. Do your changes following guidelines available at
    http://docs.qgis.org/testing/en/docs/documentation_guidelines/
 #. When you finish, at the bottom of the page, comment a bit what your changes
