@@ -2,10 +2,12 @@
 
    |updatedisclaimer|
 
+.. index:: Raster analysis
 .. _sec_raster_analysis:
 
-Raster Analysis
-================
+******************
+ Raster Analysis
+******************
 
 .. only:: html
 
@@ -17,7 +19,7 @@ Raster Analysis
 .. _label_raster_calc:
 
 Raster Calculator
-*****************
+==================
 
 The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu
 allows you to perform calculations on the basis of existing
@@ -93,10 +95,12 @@ in one step.
 In other words, for every cell less than 50 set its value to 1. For every cell
 greater than or equal 50 set its value to 2.
 
+.. index::
+   single: Raster; Align Raster
 .. _label_raster_align:
 
 Raster Alignment
-*****************
+=================
 
 This tool is able to take several rasters as input and to align them perfectly,
 that means:
@@ -111,20 +115,34 @@ All rasters will be saved in another files.
 First, open the tools from :menuselection:`Raster --> Align Raster...` and click
 on the |signPlus| :sup:`Add new raster` button to choose one existing raster in
 QGIS. Select an output file to save the raster after the alignment, the
-resampling method and if the tools need to `Rescale values according to the
-cell size`. You can |symbologyEdit| :sup:`Edit file settings` and |signMinus|
-:sup:`Remove an existing file` from the list.
+resampling method and if the tools need to :guilabel:`Rescale values according to the
+cell size`. The resampling method can be:
+
+* **Nearest Neighbor**
+* **Bilinear (2x2 kernel)**
+* **Cubic (4x4 kernel)**: Cubic Convolution Approximation
+* **Cubic B-Spline (4x4 kernel)**: Cubic B-Spline Approximation
+* **Lanczos (6x6 kernel)**: Lanczos windowed sinc interpolation
+* **Average**: computes the average of all non-NODATA contributing pixels
+* **Mode**: selects the value which appears most often of all the sampled points
+* **Maximum**, **Minimum**, **Mediane**, **First Quartile (Q1)** or
+  **Third Quartile (Q3)** of all non-NODATA contributing pixels
+
+.. note:: Methods like maximum, minimum, mediane, first and third quartiles are
+   available only if QGIS is built with GDAL >= 2.0.
 
 .. todo: add screenshot
 
-Then in the main `Align raster` window, you can choose one or more options:
+In the main :guilabel:`Align raster` dialog, you can still |symbologyEdit| :sup:`Edit
+file settings` or |signMinus| :sup:`Remove an existing file` from the list of raster
+layers. You can also choose one or more other options:
 
-* Select the `Reference Layer`,
-* Transform into a new `CRS`,
-* Setup a different `Cell size`,
-* Setup a different `Grid Offset`,
-* `Clip to Extent`,
-* `Output Size`,
-* `Add aligned raster to the map canvas`.
+* Select the :guilabel:`Reference Layer`,
+* Transform into a new :guilabel:`CRS`,
+* Setup a different :guilabel:`Cell size`,
+* Setup a different :guilabel:`Grid Offset`,
+* :guilabel:`Clip to Extent`: it can be user-defined or based on a layer or the map view
+* :guilabel:`Output Size`,
+* :guilabel:`Add aligned raster to the map canvas`.
 
 .. todo: add screenshot
