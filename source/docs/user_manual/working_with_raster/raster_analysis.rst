@@ -115,8 +115,8 @@ All rasters will be saved in another files.
 First, open the tools from :menuselection:`Raster --> Align Raster...` and click
 on the |signPlus| :sup:`Add new raster` button to choose one existing raster in
 QGIS. Select an output file to save the raster after the alignment, the
-resampling method and if the tools need to :guilabel:`Rescale values according to the
-cell size`. The resampling method can be:
+resampling method and if the tools need to :guilabel:`Rescale values according
+to the cell size`. The resampling method can be (see figure_raster_align_edit_):
 
 * **Nearest Neighbor**
 * **Bilinear (2x2 kernel)**
@@ -131,11 +131,16 @@ cell size`. The resampling method can be:
 .. note:: Methods like maximum, minimum, mediane, first and third quartiles are
    available only if QGIS is built with GDAL >= 2.0.
 
-.. todo: add screenshot
+.. _figure_raster_align_edit:
+
+.. figure:: /static/user_manual/working_with_raster/raster_align_edit.png
+   :align: center
+
+   Select Raster Resampling Options
 
 In the main :guilabel:`Align raster` dialog, you can still |symbologyEdit| :sup:`Edit
 file settings` or |signMinus| :sup:`Remove an existing file` from the list of raster
-layers. You can also choose one or more other options:
+layers. You can also choose one or more other options (see figure_raster_align_):
 
 * Select the :guilabel:`Reference Layer`,
 * Transform into a new :guilabel:`CRS`,
@@ -145,4 +150,9 @@ layers. You can also choose one or more other options:
 * :guilabel:`Output Size`,
 * :guilabel:`Add aligned raster to the map canvas`.
 
-.. todo: add screenshot
+.. _figure_raster_align:
+
+.. figure:: /static/user_manual/working_with_raster/raster_align.png
+   :align: center
+
+   Raster Alignment
