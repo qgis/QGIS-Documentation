@@ -13,12 +13,9 @@ Configuring external applications
       :local:
 
 The processing framework can be extended using additional applications.
-Currently, SAGA, GRASS, OTB (Orfeo Toolbox) and R are supported, along
-with some other command-line applications that provide spatial data analysis
-functionalities. Algorithms relying on an external applications are managed by
-their own algorithm provider.
+Currently, SAGA, GRASS and R are supported. Algorithms relying on an external applications are managed by their own algorithm provider. Additional providers can be found as separate plugins, and installed using the QGIS Plugin Manager
 
-This section will show you how to configure the processing framework to include these additional
+This section will show you how to configure the Processing framework to include these additional
 applications, and it will explain some particular features of the algorithms based
 on them. Once you have correctly configured the system, you will be able to
 execute external algorithms from any component like the toolbox or the
@@ -35,15 +32,11 @@ A note for Windows users
 If you are not an advanced user and you are running QGIS on Windows, you might
 not be interested in reading the rest of this chapter. Make sure you install
 QGIS in your system using the standalone installer. That will automatically
-install SAGA, GRASS and OTB in your system and configure them so they can be
+install SAGA and GRASS in your system and configure them so they can be
 run from QGIS. All the algorithms from these providers will
 be ready to be run without needing any further configuration. If installing
-through OSGeo4W application, make sure you select for installation SAGA, GRASS and
-OTB as well.
+through OSGeo4W application, make sure you select for installation SAGA and GRASS as well.
 
-If you want to know more about how these providers work, or if you want to use some
-algorithms not included in the simplified toolbox (such as R scripts), keep on
-reading.
 
 A note on file formats
 ----------------------
@@ -363,15 +356,12 @@ GRASS
 
 Configuring GRASS is not much different from configuring SAGA. First, the path
 to the GRASS folder has to be defined, but only if you are running Windows.
-Additionally, a shell interpreter (usually :file:`msys.exe`, which can be found
-in most GRASS for Windows distributions) has to be defined and its path set up
-as well.
 
-By default, the processing framework tries to configure its GRASS connector to use the GRASS
+By default, the Processing framework tries to configure its GRASS connector to use the GRASS
 distribution that ships along with QGIS. This should work without problems in
 most systems, but if you experience problems, you might have to configure the GRASS connector manually.
 Also, if you want to use a different GRASS installation, you can change that setting
-and point to the folder where the other version is installed. GRASS 6.4 is needed
+and point to the folder where the other version is installed. GRASS 7 is needed
 for algorithms to work correctly.
 
 If you are running Linux, you just have to make sure that GRASS is correctly
@@ -384,201 +374,3 @@ to execute the algorithm each time. If the latter approach is the behavior you p
 check the :guilabel:`Use min covering region` option in the GRASS configuration
 parameters.
 
-GDAL
-----
-
-No additional configuration is needed to run GDAL algorithms. Since they are already
-incorporated into QGIS, the algorithms can infer their configuration from it.
-
-Orfeo Toolbox
--------------
-
-Orfeo Toolbox (OTB) algorithms can be run from QGIS if you have OTB installed
-in your system and you have configured QGIS properly, so it can find all
-necessary files (command-line tools and libraries).
-
-As in the case of SAGA, OTB binaries are included in the stand-alone installer for
-Windows, but they are not included if you are running Linux, so you have to download
-and install the software yourself. Please check the OTB website for more
-information.
-
-Once OTB is installed, start QGIS, open the processing configuration dialog and
-configure the OTB algorithm provider. In the :guilabel:`Orfeo Toolbox (image analysis)`
-block, you will find all settings related to OTB. First, ensure that algorithms are
-enabled.
-
-Then, configure the path to the folder where OTB command-line tools and libraries
-are installed:
-
-* |nix| Usually :guilabel:`OTB applications folder` points to ``/usr/lib/otb/applications``
-  and :guilabel:`OTB command line tools folder` is ``/usr/bin``.
-* |win| If you use any of the installers that include OTB, such as OSGeo4W,
-  there is no need for further configuration. Processing will detect the path
-  automatically and will not show the corresponding configuration entries.
-  Otherwise, fill the :guilabel:`OTB applications folder` and :guilabel:`OTB
-  command line tools folder` parameters with the to the corresponding values for
-  your installation.
-
-TauDEM
-------
-
-TauDEM (Terrain Analysis Using Digital Elevation Models) is a tools for the
-extraction and analysis of hydrological information from Digital Elevation Models
-(DEM). TauDEM can be used from QGIS if you have it installed in your system and
-configured QGIS properly, so it can find all necessary files.
-
-There are two versions of TauDEM tools: singlefile (TauDEM 5.0.6 or 5.1.2) and
-multifile (TauDEM 5.2.0). The difference between these versions in the supported
-inputs/outputs. Single files version accepts only single raster file and write
-single file as output. Multifile version accepts a directory with rasters and
-writes directory with rasters as output. Such directory should contain rasters
-that will be treated as a single DEM grid.
-
-TauDEM Processing provider supports both single- and multifile versions of TauDEM
-and even allows to use them simultaneously.
-
-.. note::
-   While TauDEM Processing provider supports TauDEM 5.0.6, 5.1.2 and 5.2.0 we
-   recommend to use 5.1.2 and/or 5.2.0 as this versions have some new tools
-   available, like Gage Watershed and TWI.
-
-
-Installing TauDEM under Windows
-...............................
-
-Please visit the `TauDEM homepage <http://hydrology.usu.edu/taudem/taudem5/downloads.html>`_
-and download desired version of the precompiled binaries for your platform
-(32-bit or 64-bit), usually this is "Command Line Executables". Also you need
-to download `Microsoft HPC Pack 2012 MS-MPI <http://www.microsoft.com/en-us/download/details.aspx?id=36045>`_.
-First install Microsoft HPC Pack 2012 MS-MPI by runing :file:`mpi_x64.Msi` for
-64-bit platforms and :file:`mpi_x86.Msi` for 32-bit platforms.
-
-.. note::
-   If you want to use TauDEM 5.0.6
-
-
-Installing TauDEM under Linux
-.............................
-
-Unfortunately there are no packages for most Linux distributions, so you should
-compile TauDEM by yourself. As TauDEM uses MPI it is necessary to install first
-any MPI implementation e.g MPICH or OpenMPI. Use your favorite package manager
-to install MPICH or OpenMPI.
-
-Download TauDEM 5.2.0 source code package from `GitHub repository <https://github.com/dtarb/TauDEM/releases>`_
-and extract archive contents. Open terminal and cd into :file:`src` directory inside
-extracted folder. Create build directory and cd into it
-
-::
-
-    mkdir build
-    cd build
-
-Configure your build (change install prefix if necessary) and compile
-
-::
-
-   CXX=mpicxx cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
-   make
-
-When compilation finished install TauDEM tools by running
-
-::
-
-    sudo make install
-
-.. note::
-   Executable files will be installed into :file:`bin` subdirectory inside
-   prefix you specified at the configure stage. For example if you specified
-   prefix :file:`/opt/taudem5.2` than binaries will be installed into
-   :file:`/opt/taudem5.2/bin`.
-
-To use singlefile version --- download source package `here <http://hydrology.usu.edu/taudem/taudem5/TauDEM5PCsrc_512.zip>`_
-and perform above mentioned steps to compile and install it.
-
-Old TauDEM 5.0.6 also `available <http://hydrology.usu.edu/taudem/taudem5/downloads5.0.html>`_.
-But before compiling this version it is necessary to edit some source files.
-
-Open the :file:`linearpart.h` file, and after line
-
-::
-
-   #include "mpi.h"
-
-add a new line with
-
-::
-
-   #include <stdint.h>
-
-so you'll get
-
-::
-
-   #include "mpi.h"
-   #include <stdint.h>
-
-Save the changes and close the file. Now open :file:`tiffIO.h`, find line ``#include "stdint.h"``
-and replace quotes (``""``) with ``<>``, so you'll get
-
-::
-
-   #include <stdint.h>
-
-Save the changes and close the file.
-
-Now configure, compile and install TauDEM 5.0.6 using same commands as described
-above.
-
-Configuring TauDEM provider
-...........................
-
-Once TauDEM is installed, start QGIS, open the Processing options dialog from
-:menuselection:`Processing --> Options...` and configure the TauDEM algorithm
-provider. In the :guilabel:`Providers` group find :guilabel:`TauDEM (hydrologic analysis)`
-block, and expand it. Here you will see all settings related to TauDEM.
-
-First, ensure that algorithms are enabled, and activate provider if necessary.
-
-Next step is to configure MPI. The :guilabel:`MPICH/OpenMPI bin directory`
-setting used to define location of the :file:`mpiexec` program. In most Linux
-distributions you can safely leave this empty, as :file:`mpiexec` available in
-your ``PATH``.
-
-The :guilabel:`Number of MPI parallel processes to use` is a second setting
-related to MPI. It defines number of processes that will be used to execute
-TauDEM commands. If you don't know which value to use, it is better to leave
-this value unchanged.
-
-Now we need to configure the path to the folder(s) where TauDEM command-line
-tools are installed. As we already mention TauDEM provider supports both single-
-and multifile TauDEM, so there are two settings for TauDEM folders:
-
-* :guilabel:`TauDEM command line tools folder` used to set location of the
-  singlefile tools
-* :guilabel:`TauDEM multifile command line tools folder` used to set location
-  of the multifile tools
-
-If you have both TauDEM versions installed in different directories it is possible
-to specify both options.
-
-The last step is to define which TauDEM version to use:
-
-* with :guilabel:`Enable multifile TauDEM tools` option checked you will use
-  multifile TauDEM tools from directory, specified in the
-  :guilabel:`TauDEM multifile command line tools folder`. Multifile tools have
-  same name as singlefile with "(multifile)" suffix added
-* with :guilabel:`Enable single TauDEM tools` option checked you will use
-  multifile TauDEM tools from directory, specified in the
-  :guilabel:`TauDEM command line tools folder`.
-
-It is possible to enable both tools simultaneously. In this case you will have
-two instances of each tool in toolbox and can use them in your analysis.
-
-.. note:: **Be careful with developing Processing models using TauDEM!**
-
-   As single- and multifile versions have different inputs, model created with
-   singlefile algorithms will not work if only multifile algorithms are available.
-   If you plan to share your model please specify which TauDEM version should be
-   used or, better, provide two versions of your model: for single- and multifile
-   TauDEM.
