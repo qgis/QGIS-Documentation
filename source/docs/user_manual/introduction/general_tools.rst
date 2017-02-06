@@ -1135,7 +1135,7 @@ QGIS offers two ways to identify features with the |identify|
 .. tip:: **Filter the layers to query with the Identify Features tool**
 
    Uncheck the :guilabel:`Identifiable` column in :menuselection:`Project -->`
-   (or |nix| :menuselection:`Settings -->` (kde)), :menuselection:`Project
+   (or |kde| :menuselection:`Settings -->`), :menuselection:`Project
    Properties --> Identify layers` menu in front of a layer to avoid it
    being queried when using the |identify| :sup:`Identify Features` in a mode
    other than **Current Layer**. This is a handy way to return features from only
