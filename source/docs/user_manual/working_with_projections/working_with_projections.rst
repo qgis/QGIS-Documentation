@@ -52,8 +52,8 @@ shapefile and a :file:`.prj` extension. For example, a shapefile named
 
 Whenever you select a new CRS, the layer units will automatically be
 changed in the :guilabel:`General` tab of the |options|
-:guilabel:`Project Properties` dialog under the :guilabel:`Project` (Gnome,
-macOS) or :guilabel:`Settings` (KDE, Windows) menu.
+:guilabel:`Project Properties` dialog under the :guilabel:`Project`
+(or |kde| :guilabel:`Settings`) menu.
 
 .. index:: CRS
    single: CRS; Default CRS
@@ -63,8 +63,8 @@ Global Projection Specification
 
 QGIS starts each new project using the global default projection. The global
 default CRS is EPSG:4326 - WGS 84 (``proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs``),
-and it comes predefined in QGIS. This default can be changed via the
-**[Select...]** button in the first section, which is used to define the default
+and it comes predefined in QGIS. This default can be changed via the |setProjection|
+:sup:`Select CRS` button in the first section, which is used to define the default
 coordinate reference system for new projects, as shown in
 figure_projection_options_. This choice will be saved for use in subsequent QGIS
 sessions.
@@ -93,41 +93,42 @@ of the raster and vector properties dialog (see :ref:`label_generaltab` for
 rasters and :ref:`vectorgeneralmenu` for vectors). If your layer already has a CRS
 defined, it will be displayed as shown in :ref:`figure_vector_general`.
 
-.. tip:: **CRS in the Map Legend**
+.. tip:: **CRS in the Layers Panel**
 
-   Right-clicking on a layer in the Map Legend (section :ref:`label_legend`)
+   Right-clicking on a layer in the Layers Panel (section :ref:`label_legend`)
    provides two CRS shortcuts. :guilabel:`Set layer CRS` takes you directly
    to the Coordinate Reference System Selector dialog (see figure_projection_project_).
    :guilabel:`Set project CRS from Layer` redefines the project CRS using
    the layer's CRS.
 
-.. index:: On-the-fly reprojection
+.. index:: CRS; On-the-fly reprojection
+.. _otf_reprojection:
 
 Define On The Fly (OTF) Reprojection
 ====================================
 
 QGIS supports OTF reprojection for both raster and vector data. However, OTF is
-not activated by default. To use OTF projection, you must activate the
-|checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox in the
-:guilabel:`CRS` tab of the |projectProperties| :menuselection:`Project
-Properties` dialog.
+not activated by default. When OTF is off, each layer is drawn using the
+coordinates as read from the data source. When on, the coordinates in each
+layer are projected to the coordinate reference system defined for the map canvas.
 
-**There are three ways to do this:**
+There are three ways to enable On The Fly Reprojection:
 
-#. Select |options| :menuselection:`Project Properties` from the
-   :menuselection:`Project` (Gnome, macOS) or :menuselection:`Settings` (KDE,
-   Windows) menu.
-#. Click on the |geographic| :sup:`CRS status` icon in the lower right-hand
-   corner of the status bar.
-#. Turn OTF on by default in the :guilabel:`CRS` tab of the
-   :guilabel:`Options` dialog by selecting |checkbox|
-   :guilabel:`Enable 'on the fly' reprojection by default` or :guilabel:`Automatically
-   enable 'on the fly' reprojection if layers have different CRS`.
+* Select |projectProperties| :menuselection:`Project Properties --> CRS` from the
+  :menuselection:`Project` ( or |kde| :menuselection:`Settings`) menu. You can then
+  activate the |checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox
+  in the |crs| :guilabel:`CRS` tab and select the CRS to use (see :ref:`crs_selector`)
+* Click on the |geographic| :sup:`CRS status` icon in the lower right-hand
+  corner of the status bar, leading you to the previous dialog.
+* Turn OTF on by default in the |crs| :guilabel:`CRS` tab of the
+  :menuselection:`Settings --> Options` dialog by selecting |checkbox|
+  :guilabel:`Enable 'on the fly' reprojection by default` or :guilabel:`Automatically
+  enable 'on the fly' reprojection if layers have different CRS`.
 
 If you have already loaded a layer and you want to enable OTF projection, the
-best practice is to open the :guilabel:`CRS` tab of the :guilabel:`Project
-Properties` dialog, select a CRS, and activate the |checkbox|
-:guilabel:`Enable 'on the fly' CRS transformation` checkbox.
+best practice is to open the |crs| :guilabel:`CRS` tab of the :guilabel:`Project
+Properties` dialog, activate the |checkbox| :guilabel:`Enable 'on the fly'
+CRS transformation` checkbox, and select a CRS.
 The |geographic| :sup:`CRS status` icon will no longer be greyed out, and all
 layers will be OTF projected to the CRS shown next to the icon.
 
@@ -140,26 +141,27 @@ layers will be OTF projected to the CRS shown next to the icon.
 
    Project Properties Dialog
 
-The :guilabel:`CRS` tab of the :guilabel:`Project Properties` dialog contains
-five important components, as shown in Figure_projection_project_ and described below:
+.. index:: CRS Selection
+.. _crs_selector:
 
-#. **Enable 'on the fly' CRS transformation** --- This checkbox is used to
-   enable or disable OTF projection. When off, each layer is drawn using the
-   coordinates as read from the data source, and the components described below
-   are inactive. When on, the coordinates in each layer are projected to the
-   coordinate reference system defined for the map canvas.
-#. **Filter** --- If you know the EPSG code, the identifier, or the name for a
-   coordinate reference system, you can use the search feature to find it.
-   Enter the EPSG code, the identifier or the name.
-#. **Recently used coordinate reference systems** --- If you have certain CRSs
-   that you frequently use in your everyday GIS work, these will be displayed
-   in this list. Click on one of these items to select the associated CRS.
-#. **Coordinate reference systems of the world** --- This is a list of all CRSs
-   supported by QGIS, including Geographic, Projected and Custom coordinate
-   reference systems. To define a CRS, select it from the list by expanding
-   the appropriate node and selecting the CRS. The active CRS is preselected.
-#. **PROJ.4 text** --- This is the CRS string used by the PROJ.4 projection
-   engine. This text is read-only and provided for informational purposes.
+Coordinate Reference System Selector
+=====================================
+
+This dialog helps you assign a Coordinate Reference System to a project or a
+layer, provided a set of projection databases. Items in the dialog are:
+
+* **Filter**: If you know the EPSG code, the identifier, or the name for a
+  coordinate reference system, you can use the search feature to find it.
+  Enter the EPSG code, the identifier or the name.
+* **Recently used coordinate reference systems**: If you have certain CRSs
+  that you frequently use in your everyday GIS work, these will be displayed
+  in this list. Click on one of these items to select the associated CRS.
+* **Coordinate reference systems of the world**: This is a list of all CRSs
+  supported by QGIS, including Geographic, Projected and Custom coordinate
+  reference systems. To define a CRS, select it from the list by expanding
+  the appropriate node and selecting the CRS. The active CRS is preselected.
+* **PROJ.4 text**: This is the CRS string used by the PROJ.4 projection
+  engine. This text is read-only and provided for informational purposes.
 
 .. tip:: **Project Properties Dialog**
 
@@ -219,8 +221,8 @@ enter known WGS 84 latitude and longitude values in :guilabel:`North` and
 :guilabel:`East` fields, respectively. Click on **[Calculate]**, and compare the
 results with the known values in your coordinate reference system.
 
-
 .. index:: Datum transformation
+.. _datum_transformation:
 
 Default datum transformations
 =============================
