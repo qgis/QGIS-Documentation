@@ -867,6 +867,8 @@ The spatial features in Oracle Spatial aid users in managing geographic and
 location data in a native type within an Oracle database. QGIS now has
 support for such layers.
 
+.. _create_oracle_connection:
+
 Creating a stored Connection
 ............................
 
@@ -939,6 +941,7 @@ clicking on the **[Test Connect]** button.
    * |nix| The settings are stored in your home directory in :file:`~/.qgis2`.
    * |win| The settings are stored in the registry.
 
+.. _load_oracle_layer:
 
 Loading an Oracle Spatial Layer
 ................................
@@ -1023,6 +1026,8 @@ This can be done by creating a batch file like the following with the name **db2
 	SET gskpath=C:\Program Files (x86)\ibm\gsk8
 	SET Path=%db2path%\BIN;%db2path%\FUNCTION;%gskpath%\lib64;%gskpath%\lib;%path%
 
+.. _create_db2_connection:
+
 Creating a stored Connection
 ............................
 
@@ -1076,6 +1081,8 @@ A driver / host / host connection requires in addition:
 
 Once all parameters and options are set, you can test the connection by
 clicking on the **[Test connection]** button.
+
+.. _load_db2_layer:
 
 Loading a DB2 Spatial Layer
 ................................
