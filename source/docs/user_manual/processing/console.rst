@@ -44,7 +44,7 @@ and then a variable number of additional parameters depending on the requirement
 of the algorithm. So the first thing you need to know is the name of the algorithm
 to execute. That is not the name you see in the toolbox, but rather a unique
 command–line name. To find the right name for your algorithm, you can use the
-``algslist()`` method. Type the following line in your console:
+``alglist()`` method. Type the following line in your console:
 
 ::
 
