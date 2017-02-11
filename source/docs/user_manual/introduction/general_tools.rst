@@ -711,10 +711,14 @@ select colors by |colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
 Whatever method you use, the selected color is always described through color
 sliders for HSV (Hue, Saturation, Value) and RGB (Red, Green, Blue) values.
 There is also an :guilabel:`opacity` slider to set transparency level.
-On the lower left part of the dialog you can see a comparison between the
-:guilabel:`current` and the :guilabel:`new` color you are presently
-selecting and on the lower right part you have the option to add the color
-you just tweaked into a color slot button.
+Modifying a color is as simple as clicking in the color wheel or ramp or in any
+of the color parameters sliders. You can adjust such parameters with the spinbox
+beside or, handy, scrolling the mouse wheel over the corresponding slider.
+
+The dialog also provides a visual comparison between the
+:guilabel:`current` (applied to widget) and the :guilabel:`new` (being selected)
+colors. Thanks to drag-and-drop, any of these colors can be saved in a slot for
+an easy access.
 
 .. _figure_color_selector_ramp:
 
