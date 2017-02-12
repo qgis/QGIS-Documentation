@@ -163,14 +163,14 @@ layer, provided a set of projection databases. Items in the dialog are:
 * **PROJ.4 text**: This is the CRS string used by the PROJ.4 projection
   engine. This text is read-only and provided for informational purposes.
 
-.. tip:: **Project Properties Dialog**
+.. tip:: **Looking for a layer CRS? Use the CRS selector.**
 
-   If you open the :guilabel:`Project Properties` dialog from the
-   :menuselection:`Project` menu, you must click on the :guilabel:`CRS`
-   tab to view the CRS settings.
-
-   Opening the dialog from the |geographic| :sup:`CRS status` icon will
-   automatically bring the :guilabel:`CRS` tab to the front.
+   Sometimes, you receive a layer and you don't know its projection. Assuming that you
+   have another layer with a valid crs that should overlaps with it, enable the
+   OTF reprojection and, in the :guilabel:`General` tab of the Layer properties
+   dialog, use the Coordinate Reference System selector to assign a projection.
+   Your layer position is then moved accordingly. You may have to do some trial
+   and error in order to find the right position, hence its original CRS.
 
 .. index:: CRS
    single: CRS; Custom CRS
