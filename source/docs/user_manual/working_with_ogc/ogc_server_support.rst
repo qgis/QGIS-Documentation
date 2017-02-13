@@ -2,7 +2,7 @@
 
    |updatedisclaimer|
 
-.. index:: QGIS Server; WMS Server; WFS Server; WCS Server
+.. index:: QGIS Server, WMS Server, WFS Server, WCS Server
 
 .. _`label_qgisserver`:
 
@@ -26,7 +26,7 @@ The original development of QGIS Server was funded by the EU projects Orchestra,
 Sany and the city of Uster in Switzerland.
 
 .. index:: SLD, SLD/SE
-.. index:: QGIS Server, FastCGI, CGI (Common Gateway Interface)
+.. index:: FastCGI, CGI (Common Gateway Interface)
 
 QGIS Server uses QGIS as back end for the GIS logic and for map rendering.
 Furthermore, the Qt library is used for graphics and for platform-independent
@@ -46,8 +46,7 @@ distributions, we recommend reading one of the following URLs:
 * http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/
 * http://www.itopen.it/qgis-server-python-plugins-ubuntu-setup/
 
-.. index:: apache, apache2, Debian Squeeze
-
+.. index:: Apache, Debian Squeeze
 
 QGIS Server installation on Debian/Ubuntu
 ===========================================

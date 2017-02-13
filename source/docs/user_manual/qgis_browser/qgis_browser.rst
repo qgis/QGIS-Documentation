@@ -2,7 +2,7 @@
 
    |updatedisclaimer|
 
-.. index:: Browsing data
+.. index:: Browse data
 .. _`label_qgis_browser`:
 
 *************
@@ -21,7 +21,7 @@ OWS/WCS|WMS|WFS connections.
 You can also view your GRASS data (to get the data into QGIS, see :ref:`sec_grass`).
 
 
-.. browser_panel:
+.. _browser_panel:
 
 QGIS Browser widget
 ===================
@@ -71,7 +71,6 @@ to another one with a simple drag-and-drop. There is a second browser panel
 available to avoid long scrolling while dragging. Just select the file and
 drag-and-drop from one panel to the other.
 
-
 .. _figure_browser_panels:
 
 .. figure:: /static/user_manual/qgis_browser/browser_panels.png
@@ -80,7 +79,8 @@ drag-and-drop from one panel to the other.
    QGIS Browser panels side-by-side
 
 
-.. browser_standalone:
+.. index:: Preview data
+.. _browser_standalone:
 
 QGIS Browser as a standalone application
 ==========================================
@@ -96,7 +96,6 @@ and open them in a QGIS project by drag-and-drop.
 * |win| Start the QGIS Browser using the Start menu or desktop shortcut.
 * |osx| The QGIS Browser is available from your Applications folder.
 
-.. index:: Browse_Maps, Import_Maps
 
 .. _figure_browser_standalone_metadata:
 
