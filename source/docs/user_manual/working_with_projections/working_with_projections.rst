@@ -172,6 +172,14 @@ layer, provided a set of projection databases. Items in the dialog are:
    Your layer position is then moved accordingly. You may have to do some trial
    and error in order to find the right position, hence its original CRS.
 
+.. note::
+
+   When operating across layers, for example, computing intersections between two
+   layers, it is important that both layers have the same CRS. To change the
+   projection of an existing layer, it is **insufficient** to simply change the
+   CRS in that layer's properties. Instead you must save the layer as a new layer,
+   and choose the desired CRS for the new layer. 
+
 .. index:: CRS
    single: CRS; Custom CRS
 
