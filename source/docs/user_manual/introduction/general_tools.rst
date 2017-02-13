@@ -1549,77 +1549,107 @@ Layers (raster or vector) can be saved in another format with the
 in the layer in the layer tree) or in the :menuselection:`Layer --> Save As...`
 menu.
 
-The :guilabel:`Save As` dialog shows several parameters to change the behaviour
+Common parameters
+-----------------
+
+The :guilabel:`Save As` dialog shows several parameters to change the behavior
 when saving the layer. Common parameters (raster and vector) are:
 
-* Format
-* Filename
-* CRS
-* Add save file to map to add the new layer to the canvas
-* Extent (possible values are layer, Map view or custom extent)
-* Create (for raster), Layer or Custom (for vector) Options which allow you to
-  change some advanced options. Advanced user can see the driver documentation
-  in `gdal-ogr <http://gdal.org>`_ documentation.
+* :guilabel:`Format`
+* :guilabel:`File name`
+* :guilabel:`CRS`
+* :guilabel:`Add saved file to map` to add the new layer to the canvas
+* :guilabel:`Extent` (possible values are **layer**, **Map view** or **user-defined**
+  extent)
 
 However, some parameters are specific to raster and vector formats:
 
-* Raster specific parameters:
+Raster specific parameters
+--------------------------
 
-  * Resolution (horizontal and vertical)
-  * Pyramid creation
-  * Output mode (raw data or rendered image)
+* :guilabel:`Output mode` (it can be **raw data** or **rendered image**)
+* :guilabel:`Resolution`
+* :guilabel:`Create Options`: advanced options (file compression, block sizes, colorimetry...)
+  to fine tune the output file. See the `gdal-ogr <http://gdal.org>`_ driver documentation.
+* :guilabel:`Pyramids` creation
+* :guilabel:`VRT Tiles`
+* :guilabel:`No data values`
 
-* Vector specific parameters:
 
-  * Encoding
-  * Save only selected features
-  * Skip attribute creation
-  * Symbology export: can be used mainly for DXF export and for all file
-    formats who manage OGR feature styles (see note below) as DXF, KML, tab
-    file formats:
+Vector specific parameters
+--------------------------
 
-    * No symbology: default style of the application that reads the data
-    * Feature symbology: save style with OGR Feature Styles (see note below)
-    * Symbol Layer symbology: save with OGR Feature Styles (see note below) but
-      export the same geometry multiple times if there are multiple symbology
-      symbol layers used
+Depending on the format of export, some of these options are available or not:
 
-    .. note:: *OGR Feature Styles* are a way to store style directly in
-       the data as a hidden attribute. Only some format can handle this kind of
-       information. KML, DXF and TAB files format are such format. For advanced
-       user, you can read the `OGR Feature Styles specification
-       <http://www.gdal.org/ogr_feature_style.html>`_ document.
-   
-  * Geometry:
+* :guilabel:`Encoding`
+* :guilabel:`Save only selected features`
+* :guilabel:`Select fields to export and their export options`. In case you set your
+  fields behavior with some :ref:`Edit widgets <configure_field>`, e.g. ``value
+  map``, you can keep the displayed values in the layer by checking |checkbox|
+  :guilabel:`Replace all selected raw fields values by displayed values`.
+* :guilabel:`Symbology export`: can be used mainly for DXF export and for all file
+  formats who manage OGR feature styles (see note below) as DXF, KML, tab
+  file formats:
 
-    * force to multi-geometry,
-    * add z-dimension,
-    * add or remove a geometry column with the drop-down list. This is not
-      linked with the current geometry type of the layer. You can add an empty
-      geometry column to an attribute table, remove the geometry column of
-      a spatial layer.
+  * **No symbology**: default style of the application that reads the data
+  * **Feature symbology**: save style with OGR Feature Styles (see note below)
+  * **Symbol Layer symbology**: save with OGR Feature Styles (see note below)
+    but export the same geometry multiple times if there are multiple symbology
+    symbol layers used
+  * A **Scale** value can be applied to the latest options.
+  
+.. _ogr_features_note:
+
+.. note:: *OGR Feature Styles* are a way to store style directly in
+     the data as a hidden attribute. Only some formats can handle this kind of
+     information. KML, DXF and TAB file formats are such formats. For advanced
+     users, you can read the `OGR Feature Styles specification
+     <http://www.gdal.org/ogr_feature_style.html>`_ document.
+
+* :guilabel:`Geometry`: you can configure the geometry capabilities of the output layer
+
+  * :guilabel:`geometry type`: keep the original geometry of the features when set to 
+    **Automatic**, otherwise removes or overrides it with any type. You can add
+    an empty geometry column to an attribute table, remove the geometry column
+    of a spatial layer.
+  * :guilabel:`Force multi-type`: force creation of multi-geometry features in the layer
+  * :guilabel:`Include z-dimension` to geometries.
+
+.. tip::
+
+  Overriding layer geometry type makes it possible to do things like save a
+  geometryless table (e.g. :file:`.csv` file) into a shapefile WITH any type of
+  geometry (point, line, polygon), so that geometries can then be manually added
+  to rows with the |addPart| :sup:`Add Part` tool .
+
+* :guilabel:`Datasources Options`, :guilabel:`Layer Options` or :guilabel:`Custom Options`
+  which allow you to configure some advanced parameters. See the `gdal-ogr <http://gdal.org>`_
+  driver documentation.
+
+.. index:: Overwrite file, Append features
 
 When saving a vector layer into an existing file, depending on the capabilities
 of the output format (Geopackage, SpatiaLite, FileGDB...), the user can
-decide whether:
+decide whether to:
 
-* to overwrite the whole file
-* to overwrite only the target layer (the layer name is configurable)
-* to append features to the existing target layer
-* to append features, add new fields if there are any.
+* overwrite the whole file
+* overwrite only the target layer (the layer name is configurable)
+* append features to the existing target layer
+* append features, add new fields if there are any.
 
 For formats like Shapefile, MapInfo .tab, feature append is also available.
 
 .. note:: **About DXF files**
 
    Vector layers can be exported to DXF files using another tool, the
-   :guilabel:`DXF Export ...` in :menuselection:`Project`. The windows allow the
-   user to choose the layer file, the symbology mode (see the note above), the
-   symbology scale, the encoding, the visibility preset and the layers to include
-   in the DXF file.
+   :guilabel:`DXF Export...` in :menuselection:`Project`. The windows allow the
+   user to choose the layer file, the symbology mode (see the `OGR Feature Styles
+   <ogr_features_note>`_ note), the symbology scale, the encoding, the visibility
+   preset and the layers to include in the DXF file.
+  
 
-   As an option, you can |checkbox| :guilabel:`Use the layer title as name if
-   set` or :guilabel:`Export features intersecting the current map extent`.
+   As an option, you can |checkbox| :guilabel:`Use the layer title as name if set`
+   or :guilabel:`Export features intersecting the current map extent`.
 
 .. index:: Variables, Expressions
 
