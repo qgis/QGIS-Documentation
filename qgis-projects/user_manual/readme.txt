@@ -8,14 +8,26 @@ for the map layers.
 
 Introduction
 ------------
- * introduction_qgis_gui_map_legend.qgs
+
+  * introduction_qgis_general_tools_annotation.qgs
+  * introduction_qgis_gui_map_legend.qgs
+  * introduction_qgis_gui_start_up.qgs
 
 Working with Vector Chapter
 ---------------------------
 
+ * label_examples.qgs
+ * multivariate_examples.qgs
  * working_with_vector_supported_data.qgs
- * working_with_vector_02
+ * working_with_vector_02.qgs
+ * working_with_vector_relations.qgs
  
+
+Working with Raster Chapter
+---------------------------
+
+ * working_with_rasters.qgs
+
 Print Composer Chapter
 ----------------------
 

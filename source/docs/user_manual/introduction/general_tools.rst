@@ -697,18 +697,28 @@ checkbox in :menuselection:`Settings --> Options --> General` menu.
 When checked, the color dialog used is the one of the OS being used. Otherwise,
 QGIS custom color chooser is used.
 
-This dialog has four different tabs which allow you to select colors by
-|colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
+.. tip:: **Dynamically change the color with the live-updating option**
+
+   Check the :guilabel:`Use live-updating color chooser dialogs` option in
+   the :menuselection:`Settings --> Options --> General` menu to have the
+   color applied to your items as soon as you pick it in the color chooser dialog.
+ 
+The custom color chooser dialog has four different tabs which allow you to
+select colors by |colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
 |colorSwatches| :sup:`color swatches` or |colorPicker| :sup:`color picker`
 (not available under |osx|).
 
 Whatever method you use, the selected color is always described through color
 sliders for HSV (Hue, Saturation, Value) and RGB (Red, Green, Blue) values.
 There is also an :guilabel:`opacity` slider to set transparency level.
-On the lower left part of the dialog you can see a comparison between the
-:guilabel:`current` and the :guilabel:`new` color you are presently
-selecting and on the lower right part you have the option to add the color
-you just tweaked into a color slot button.
+Modifying a color is as simple as clicking in the color wheel or ramp or in any
+of the color parameters sliders. You can adjust such parameters with the spinbox
+beside or, handy, scrolling the mouse wheel over the corresponding slider.
+
+The dialog also provides a visual comparison between the
+:guilabel:`current` (applied to widget) and the :guilabel:`new` (being selected)
+colors. Thanks to drag-and-drop, any of these colors can be saved in a slot for
+an easy access.
 
 .. _figure_color_selector_ramp:
 
@@ -717,23 +727,26 @@ you just tweaked into a color slot button.
 
    Color selector ramp tab
 
-.. tip:: **Dynamically change the color with the live-updating option**
-
-   Check the :guilabel:`Use live-updating color chooser dialogs` option in
-   the General Settings to have the color applied to your items as you change
-   color parameters in the QGIS custom color chooser dialog.
-
-With |colorBox| :sup:`color ramp` or with |colorWheel| :sup:`color wheel`,
-you can browse to all possible color combinations.
-There are other possibilities though. By using |colorSwatches| :sup:`color swatches`
-you can choose from a preselected list. This selected list is
-populated with one of three methods:
+With |colorBox| :sup:`color ramp` or |colorWheel| :sup:`color wheel` tab,
+you can browse to all possible color combinations and apply it to the item.
+In the |colorSwatches| :sup:`color swatches` tab, you can choose from a
+preselected list of color palettes:
 
 * :guilabel:`Recent colors`,
 * :guilabel:`Standard colors`, a user-defined list of colors set under
   :menuselection:`Settings --> Options --> Colors` menu
 * or :guilabel:`Project colors`, a user-defined list of colors set under
   :menuselection:`Project --> Project Properties --> Default Styles`.
+
+The latest palettes can be modified thanks to the |signPlus| and |signMinus|
+buttons at the bottom of the frame.
+The :guilabel:`...` button nearby the palette combobox also offers several
+options to:
+
+* copy, paste, import or export colors
+* create, import or remove color palettes. Check the :guilabel:`Show in Color
+  Buttons` option to add the custom palette to the color selector widget (see
+  figure_color_selector_).
 
 .. _figure_color_selector_switcher:
 
@@ -747,13 +760,14 @@ you to sample a color from under your mouse pointer at any part of
 QGIS or even from another application by pressing the space bar. Please note
 that the color picker is OS dependent and is currently not supported by macOS.
 
-.. _tip_quick_color_picker_+_copy/paste_colors:
+.. _quick_color_modification:
 
-.. tip:: **quick color picker + copy/paste colors**
+.. tip:: **Quick color modification**
 
-   You can quickly choose from :guilabel:`Recent colors`, from :guilabel:`Standard colors`
-   or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking
-   the drop-down arrow that follows the |selectColor| color box.
+   Click the drop-down arrow at the right of the |selectColor| color box button
+   to display a widget for a quick color selection, either in the color wheel or
+   from existing color palettes. You can also use it to :guilabel:`copy` or
+   :guilabel:`paste` a color.
 
 .. _figure_color_selector:
 
