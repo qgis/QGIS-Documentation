@@ -2340,7 +2340,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. _vectorlegend_menu:
 
 Legend Menu
--------------
+============
 
 |legend| The :guilabel:`Legend` menu provides you with a list of widgets you can embed within
 the layer tree in the Layers panel. The idea is to have a way to quickly access some
