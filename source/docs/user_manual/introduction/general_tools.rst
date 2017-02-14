@@ -620,9 +620,14 @@ inside the project and can be copied and pasted from layer to layer in the proje
 it's also possible to save them outside the project so that they can be loaded
 in another project.
 
+Save in plain text file
+........................
+
 Clicking the |selectString| :menuselection:`Style --> Save Style`, you can
-save the style as a QGIS layer style file (``.qml``) or SLD file (``.sld``, for
-vector layers).
+save the style as a:
+
+* QGIS layer style file (:file:`.qml`)
+* or SLD file (:file:`.sld`), only available for vector layers.
 
 SLDs can be exported from any type of renderer -- single symbol,
 categorized, graduated or rule-based -- but when importing an SLD, either a
@@ -632,14 +637,18 @@ If you want to preserve those renderers, you have to stick to the QML format.
 On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
 
-If the datasource of the layer is a database (PostGIS, MSSQL, Oracle or Spatialite),
-you can also save your layer style inside a table (named `layer_styles`) of the
-database. Just click on :menuselection:`Save Style` combobox and choose **Save
-in database** item then fill in the dialog to define a style name, add a
+Save in database
+.................
+
+Layer style can also be stored in a database if the layer datasource is a 
+database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MSSQL
+and Oracle. The layer style is saved inside a table (named :file:`layer_styles`) of the
+database. Just click on :menuselection:`Save Style --> Save in database`
+item then fill in the dialog to define a style name, add a
 description, an :file:`.ui` file if applicable and check if the style should be
 the default style.
-You can add several styles in the database. However each table can have only one
-default style.
+You can add several styles for a single table in the database. However each table
+can have only one default style.
 
 .. note:: You can only save your style in database if the layer come from such
    database. You can't mix databases (layer in Oracle and style in MSSQL for
