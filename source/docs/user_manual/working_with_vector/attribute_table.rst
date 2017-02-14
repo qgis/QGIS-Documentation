@@ -141,10 +141,6 @@ Moving the cursor position in the attribute table, by clicking a cell in the
 table, does not change the row selection. Changing the selection in the main
 canvas does not move the cursor position in the attribute table.
 
-The table can be sorted by any column, by clicking on the column header. A
-small arrow indicates the sort order (downward pointing means descending
-values from the top row down, upward pointing means ascending values from
-the top row down).
 
 For a **simple search by attributes** on only one column, choose the
 :menuselection:`Column filter -->` from the menu in the bottom left corner.
@@ -209,18 +205,6 @@ the right of the drop-down list to filter with a *like* expression parameter.
 This filter will create an expression filter as an :guilabel:`Advanced filter`.
 The last kind of filter will open an expression window, see :ref:`vector_expressions`
 for more information.
-
-
-Table/form mode
-===============
-
-QGIS provides two view modes to easily manipulate data in the attribute table:
-the |openTable| Table view and the |formView| Form view. You can switch from
-one to other by clicking the convenient icon at the bottom right of the dialog.
-
-You can also specify the default mode view at the opening of the attribute table
-in :menuselection:`Settings --> Options --> Data Sources` menu, :guilabel:`Default
-view` option. It can be 'Remember last view', 'Table view' or 'Form view'.
 
 
 Zoom to feature
