@@ -157,9 +157,8 @@ To create a custom color ramp, activate the Color ramp tab and click the
 choose the ramp type:
 
 * :guilabel:`Gradient`: given a start and end colors, generate a color ramp which
-  can be **continuous** or **discrete**. With double-clicking the ramp preview,
-  you can add as many intermediate colors as you want and each color can be tweaked
-  using the :ref:`color-selector` widget or plotting each of its parameters.
+  can be **continuous** or **discrete**. With double-clicking the ramp preview, you
+  can add as many intermediate color stops as you want.
 * :guilabel:`Random`: creates a random set of colors based on range of values for
   hue, saturation, value and opacity and a number of colors (classes)
 * :guilabel:`ColorBrewer`: a set of predefined discrete color gradients you can
@@ -167,8 +166,16 @@ choose the ramp type:
 * or :guilabel:`cpt-city`: an access to a whole catalog of color gradients to
   locally :guilabel:`save as gradient color`.
 
-The first three have options for number of steps and/or multiple stops in
-the color ramp. You can use the |checkbox| :guilabel:`Invert` option while
+.. tip:: **Easily custom the color stops of the gradient color ramp**
+
+ Double-clicking the ramp preview or drag-and-drop a color from the color spot onto
+ the ramp preview adds a new color stop. Each color stop can be tweaked using the
+ :ref:`color-selector` widgets or by plotting each of its parameters. You can also 
+ reposition it using the mouse, the arrow keys (combine with :kbd:`Shift` key for
+ a larger move) or the :guilabel:`Relative position` spinbox. Pressing :guilabel:`Delete
+ stop` as well as :kbd:`DEL` key removes the selected color stop. 
+
+You can use the |checkbox| :guilabel:`Invert` option while
 classifying the data with a color ramp. See figure_color_custom_ramp_ for an
 example of a custom color ramp and figure_color_cpt_city_ for the cpt-city Colors dialog.
 
