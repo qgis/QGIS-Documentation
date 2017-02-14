@@ -268,7 +268,8 @@ layer`.
 This applies to features selected and copied within QGIS and
 also to features from another source defined using well-known text (WKT).
 
-.. index:: Field Calculator, Derived Fields
+
+.. index:: Field Calculator, Derived Fields, Virtual Fields, Fields edit
 .. _calculate_fields_values:
 
 Editing attribute values
@@ -279,8 +280,9 @@ Editing attribute values can be done by:
 * typing the new value directly in the cell, whether the attribute table is in
   table or form view. Changes can hence be done cell by cell, feature by feature;
 * using the field calculator: update in a row a field that may already exist or to be
-  created but for multiple features;
-* or using the quick field calculation bar: same as above but for only existing field.
+  created but for multiple features; it can be used to create virtual fields.
+* using the quick field calculation bar: same as above but for only existing field
+* or using the multi edit mode: update in a row multiple fields for multiple features.
 
 .. _vector_field_calculator:
 
@@ -376,6 +378,28 @@ that may change (e.g., using ``now()`` function).
    * A field can be set virtual only at its creation and the expression used
      can't be changed later: you'll need to delete and recreate that field.
 
+.. index:: Multi edit
+.. _multi_edit_fields:
+
+Edit multiple fields
+---------------------
+
+Unlike the previous tools, the |multiEdit| :sup:`Toggle multi edit mode` button
+allows the attributes of multiple features to be edited simultaneously.
+It is available when the layer is in edit mode and it toggles the attribute
+table dialog into form view.
+
+In this mode, unless selected features have the same attribute value, the
+corresponding widget is shown empty. Unchanged field keep its original value.
+New widgets appear next to each editor widget allowing for display of the current
+multi edit state and for rolling back changes on a field-by-field basis.
+
+Changes will apply to **all selected features** and are made as a single edit
+command. So pressing |undo| :sup:`Undo` will rollback the attribute changes for
+all selected features at once.
+
+Multi edit mode is only available for auto generated and drag and drop forms 
+(see :ref:`customize_form`); it is not supported by custom ui forms.
 
 .. index:: Non Spatial Attribute Tables, Geometryless Data
 .. _non_spatial_attribute_tables:
