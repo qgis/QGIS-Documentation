@@ -188,6 +188,38 @@ using multiple columns you can write ``concat(col0, col1)``.
 In form view, features identifier can be sorted using the |sort| :guilabel:`Sort
 by preview expression` option.
 
+.. index:: Conditional formatting
+.. _conditional_formatting:
+
+Conditional formatting of Table Cells
+--------------------------------------
+
+You can enable the conditional formatting panel clicking on
+|conditionalFormatting| at the top right of the attributes window in table
+view (not available in form view).
+
+The new panel allows user to add new rules for conditional formatting of field
+or full row in regard of the expression on field. Adding new rule open a form
+to define:
+
+* the name of the rule,
+* a condition from expression window,
+* a preset formatting
+* some other parameters to improve, change or setup the formatting:
+
+  * background and text colors,
+  * use of icon,
+  * bold, italic underline, or strikeout,
+  * text field,
+  * font.
+
+.. _figure_conditional_format:
+
+.. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
+   :align: center
+
+   Conditional Formatting of an attribute table
+
 
 .. index::
    pair: Attributes; Selection
@@ -469,39 +501,6 @@ As an example, you can use columns of the non-spatial table to define attribute
 values, or a range of values that are allowed, to be added to a specific vector
 layer during digitizing. Have a closer look at the edit widget in section
 :ref:`vector_attributes_menu` to find out more.
-
-
-.. index:: Conditional formatting
-.. _conditional_formatting:
-
-Conditional formatting of Table Cells
-=====================================
-
-You can enable the conditional formatting panel clicking on
-|conditionalFormatting| at the top right of the attributes window in table
-view (not available in form view).
-
-The new panel allows user to add new rules for conditional formatting of field
-or full row in regard of the expression on field. Adding new rule open a form
-to define:
-
-* the name of the rule,
-* a condition from expression window,
-* a preset formatting
-* some other parameters to improve, change or setup the formatting:
-
-  * background and text colors,
-  * use of icon,
-  * bold, italic underline, or strikeout,
-  * text field,
-  * font.
-
-.. _figure_conditional_format:
-
-.. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
-   :align: center
-
-   Conditional Formatting of an attribute table
 
 
 .. index:: Relations, Foreign key
