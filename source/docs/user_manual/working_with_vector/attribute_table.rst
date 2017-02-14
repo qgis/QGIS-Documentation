@@ -339,25 +339,6 @@ A short example illustrates how field calculator works when using the
    expression box and click **[Ok]**.
 #. You can now find a new field ``length`` in the attribute table.
 
-.. index:: Field calculation bar
-.. _quick_field_calculation_bar:
-
-The Quick Field Calculation Bar
--------------------------------
-
-While Field calculator is always available, the quick field calculation bar on top
-of the attribute table is only visible if the layer is in edit mode. Thanks to the
-expression engine, it offers a quicker access to edit an already existing field.
-
-In quick field calculation bar, you simply need to:
-
-* select the existing field name in the drop-down list
-* fill the textbox with an expression you directly write or build using the |expression|
-  expression button
-* and click on **[Update All]**, **[Update Selected]** or **[Update Filtered]** button
-  according to your need.
-
-.. index:: Virtual Fields
 .. _virtual_field:
 
 Create a Virtual Field
@@ -377,6 +358,23 @@ that may change (e.g., using ``now()`` function).
      they're only saved and available in the project file they've been created.
    * A field can be set virtual only at its creation and the expression used
      can't be changed later: you'll need to delete and recreate that field.
+
+.. _quick_field_calculation_bar:
+
+The Quick Field Calculation Bar
+-------------------------------
+
+While Field calculator is always available, the quick field calculation bar on top
+of the attribute table is only visible if the layer is in edit mode. Thanks to the
+expression engine, it offers a quicker access to edit an already existing field.
+
+In quick field calculation bar, you simply need to:
+
+* select the existing field name in the drop-down list
+* fill the textbox with an expression you directly write or build using the |expression|
+  expression button
+* and click on **[Update All]**, **[Update Selected]** or **[Update Filtered]** button
+  according to your need.
 
 .. index:: Multi edit
 .. _multi_edit_fields:
