@@ -278,7 +278,7 @@ Notice its effects:
    back later when you've covered the requisite materials.
 
 * Open the Attribute Table for :guilabel:`places`.
-* Enter edit mode by clicking this button: |edit|
+* Enter edit mode by clicking this button: |toggleEditing|
 
 * Add a new column:
 
