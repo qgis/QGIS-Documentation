@@ -650,6 +650,13 @@ the default style.
 You can add several styles for a single table in the database. However each table
 can have only one default style.
 
+.. _figure_save_style_database:
+
+.. figure:: /static/user_manual/introduction/save_style_database.png
+   :align: center
+
+   Save Style in database Dialog
+
 .. note:: You can only save your style in database if the layer comes from such a
    database. You can't mix databases (layer in Oracle and style in MSSQL for
    instance).
@@ -689,13 +696,6 @@ by the default saved one.
 See also the tip in :ref:`sec_postgis_details` for more information on backup
 of PostGIS database with layers and styles saved by QGIS.
 
-
-.. _figure_save_style_database:
-
-.. figure:: /static/user_manual/introduction/save_style_database.png
-   :align: center
-
-   Save Style in database Dialog
 
 .. tip:: **Quickly share a layer style within the project**
 
