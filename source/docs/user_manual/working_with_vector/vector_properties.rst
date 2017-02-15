@@ -1477,6 +1477,7 @@ properties you can set to control whether and how a field can be edited:
     the top of the form as a warning message when the value supplied does not
     match the constraint.
 
+.. _edit_widgets:
 
 Edit widgets
 .............
@@ -1544,8 +1545,8 @@ The available widgets are:
    multimedia information attached.
    This is enabled only for File Name, Photo and Web View at this moment.
 
-
 .. index:: Form, Built-in form, Custom form
+.. _customize_form:
 
 Customize a form for your data
 -------------------------------
@@ -1569,6 +1570,7 @@ an editor with several tabs and named groups to present the attribute fields.
 
    Resulting built-in form with tabs and named groups
 
+.. _drag_drop_designer:
 
 The drag and drop designer
 ..........................
@@ -1585,7 +1587,6 @@ categories as you want.
 The next step will be to assign to each category the relevant fields, using the
 |arrowRight| icon. You'd need to select the targeted category beforehand.
 You can use the same fields many times.
-
 
 .. _figure_fields_layout:
 

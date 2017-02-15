@@ -48,7 +48,7 @@ identify, select, labelling and attributes functions.
    types like CircularString, CompoundCurve, CurvePolygon, MultiCurve,
    MultiSurface feature type. QGIS will convert them to (multi)polygon feature.
 
-.. index:: MapInfo, vector file, load a shapefile, Shapefile
+.. index:: MapInfo, Vector file, Load a shapefile, Shapefile
 .. _vector_loading_file:
 
 Loading a layer from a file
@@ -123,7 +123,7 @@ vector layers.
    contains several geometry types, a new windows will ask you to select the
    sublayer. This often occurs with GPX, Mapinfo or DXF files format.
 
-.. index:: ArcInfo Binary Coverage, Tiger Format, UK_National Transfer Format, US Census Bureau
+.. index:: ArcInfo Binary Coverage, Tiger Format, UK National Transfer Format, US Census Bureau
 .. _vector_loading_directory_based_layer:
 
 Loading specific directory based layer
@@ -194,7 +194,8 @@ parameters, compatible with ESRI software, and a :file:`.qpj` file, providing
 the complete parameters of the used CRS. Whenever QGIS finds a :file:`.qpj`
 file, it will be used instead of the :file:`.prj`.
 
-.. index:: CSV, Comma Separated Values
+.. index:: CSV, Delimited text files
+   see: Comma Separated Values; CSV
 .. _vector_csv:
 
 Delimited Text Files
@@ -215,13 +216,14 @@ Such data files can also contain positional information in two main forms:
 QGIS allows you to load a delimited text file as a layer or ordinal table. But
 first check that the file meets the following requirements:
 
-#. The file must have a delimited header row of field names. This must be the first line in the
-   text file.
+#. The file must have a delimited header row of field names. This must be the
+   first line in the text file.
 #. The header row must contain field(s) with geometry definition. These field(s)
    can have any name.
 #. The X and Y coordinates (if geometry is defined by coordinates) must be
    specified as numbers. The coordinate system is not important.
-#. If you have any data that is not a string (text) and the file is a CSV file, you must have a CSVT file (see section :ref:`csvt_files`).  
+#. If you have any data that is not a string (text) and the file is a CSV file,
+   you must have a CSVT file (see section :ref:`csvt_files`).  
 
 As an example of a valid text file, we import the elevation point data file
 :file:`elevp.csv` that comes with the QGIS sample dataset (see section
@@ -245,7 +247,6 @@ Some items to note about the text file:
 #. The X coordinates are contained in the ``X`` field.
 #. The Y coordinates are contained in the ``Y`` field.
 
-.. index:: Delimited text file
 .. _vector_loading_csv:
 
 Loading a delimited text file
@@ -302,6 +303,7 @@ Additionally, you can enable:
 * |checkbox| :guilabel:`Watch file` to watch for changes to the file by other
   applications while QGIS is running.
 
+.. index:: CSV, CSVT
 .. _csvt_files:
 
 CSVT Files
@@ -353,7 +355,6 @@ Delimited Text supports also Z and M coordinates in geometries::
    LINESTRINGM(10.0 20.0 30.0, 11.0 21.0 31.0)
 
 .. index:: OSM (OpenStreetMap)
-
 .. _vector_osm:
 
 OpenStreetMap data
@@ -721,7 +722,7 @@ index to speed up spatial searches of the data (GiST index information is taken
 from the PostGIS documentation available at http://postgis.net).
 
 .. tip:: You can use the DBManager to create an index to your layer. You should
-   first select the layer and click on :menuselection:`Table > Edit table`, go to
+   first select the layer and click on :menuselection:`Table --> Edit table`, go to
    :menuselection:`Indexes` tab and click on **[Add spatial index]**.
 
 The syntax for creating a GiST index is:
@@ -835,7 +836,7 @@ Creating a new SpatiaLite layer
 If you want to create a new SpatiaLite layer, please refer to section
 :ref:`vector_create_spatialite`.
 
-.. index:: QSpatiaLite, Spatialite manager, DB manager
+.. index:: QSpatiaLite, Spatialite manager, DB Manager
 
 .. _tip_spatialite_management_plugin:
 
@@ -866,6 +867,8 @@ Oracle Spatial Layers
 The spatial features in Oracle Spatial aid users in managing geographic and
 location data in a native type within an Oracle database. QGIS now has
 support for such layers.
+
+.. _create_oracle_connection:
 
 Creating a stored Connection
 ............................
@@ -939,6 +942,7 @@ clicking on the **[Test Connect]** button.
    * |nix| The settings are stored in your home directory in :file:`~/.qgis2`.
    * |win| The settings are stored in the registry.
 
+.. _load_oracle_layer:
 
 Loading an Oracle Spatial Layer
 ................................
@@ -975,7 +979,7 @@ To load a layer from Oracle Spatial, perform the following steps:
 .. _label_db2_spatial:
 
 DB2 Spatial Layers
----------------------
+-------------------
 
 IBM DB2 for Linux, Unix and Windows (DB2 LUW), IBM DB2 for z/OS (mainframe) 
 and IBM DashDB products allow
@@ -989,17 +993,14 @@ and manipulation of spatial data in these databases.
 .. _DB2 Spatial Tutorial: https://www.ibm.com/developerworks/data/tutorials/dm-1202db2spatialdata1/
 
 User documentation on these capabilities can be found at the
-`DB2 z/OS KnowledgeCenter`_
-,
-`DB2 LUW KnowledgeCenter`_ 
-and
+`DB2 z/OS KnowledgeCenter`_, `DB2 LUW KnowledgeCenter`_ and
 `DB2 DashDB KnowledgeCenter`_.
 
 For more information about working with the DB2 spatial capabilities, check out
 the `DB2 Spatial Tutorial`_ on IBM DeveloperWorks.
 
 Configuring QGIS for DB2
-............................
+.........................
 
 The DB2 provider currently only supports the Windows environment through the Windows ODBC driver.
 
@@ -1009,10 +1010,10 @@ The client running QGIS needs to have one of the following installed:
 * IBM Data Server Driver Package
 * IBM Data Server Client
 
-If you are accessing a DB2 LUW database on the same machine or using DB2 LUW as a client, 
+If you are accessing a DB2 LUW database on the same machine or using DB2 LUW as a client,
 the DB2 executables and supporting files need to be included in the Windows path.
-This can be done by creating a batch file like the following with the name **db2.bat** and including it in the directory 
-**%OSGEO4W_ROOT%/etc/ini**.
+This can be done by creating a batch file like the following with the name **db2.bat** and
+including it in the directory :file:`%OSGEO4W_ROOT%/etc/ini`.
 
 ::
 
@@ -1022,6 +1023,8 @@ This can be done by creating a batch file like the following with the name **db2
 	REM This should usually be ok - modify if necessary
 	SET gskpath=C:\Program Files (x86)\ibm\gsk8
 	SET Path=%db2path%\BIN;%db2path%\FUNCTION;%gskpath%\lib64;%gskpath%\lib;%path%
+
+.. _create_db2_connection:
 
 Creating a stored Connection
 ............................
@@ -1033,7 +1036,7 @@ The first time you use an DB2 Spatial data source,
 you must create a connection to the database that contains the data. 
 A connection can be created by:
 
-* Right-clicking on  |db2| :menuselection:`DB2` in the QGIS Browser panel 
+* Right-clicking on |db2| :menuselection:`DB2` in the QGIS Browser panel 
   and selecting :menuselection:`New connection`
   
 or  
@@ -1077,8 +1080,10 @@ A driver / host / host connection requires in addition:
 Once all parameters and options are set, you can test the connection by
 clicking on the **[Test connection]** button.
 
+.. _load_db2_layer:
+
 Loading a DB2 Spatial Layer
-................................
+.............................
 
 |addDb2Layer| Once you have one or more connections defined, you can
 load layers from the DB2 database. A DB2 Spatial layer is defined by a row in the

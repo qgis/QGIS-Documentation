@@ -61,12 +61,13 @@ The **Expressions** feature offers access to the:
 * :guilabel:`Function Editor` tab which helps to create custom functions
   to use in the expressions.
 
-.. index:: 
-   single: Expression; Named parameters, Function; Named parameters
+.. index:: Named parameters
+   single: Expressions; Named parameters
+   single: Functions; Named parameters
 
 .. tip:: **Use named parameters to improve the expression reading**
 
-  Some functions requiere many parameters to be set. The expression engine supports the
+  Some functions require many parameters to be set. The expression engine supports the
   use of named parameters. This means that instead of writing the cryptic expression
   ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, value:=2, max:=9)``. This also allows
   arguments to be switched, e.g. ``clamp( value:=2, max:=9, min:=1)``. Using named parameters
@@ -112,8 +113,7 @@ The :guilabel:`Customs` group lists the functions created or imported by the use
 There are many other groups, listed below.
 
 
-.. index:: Field Calculator Functions
-
+.. index:: Field calculator functions
 
 Operators
 ----------
@@ -873,6 +873,7 @@ This group contains recently used functions. Any expression used in the
 Expression dialog is added to the list, sorted from the more recent to
 the less one. This helps to quickly retrieve any previous expression.
 
+.. _variables_functions:
 
 Variables Functions
 --------------------
@@ -942,6 +943,7 @@ To use these functions in an expression, they should be preceded by @ character
 ======================= =======================================================
 
 
+.. index:: Functions
 .. _function_editor:
 
 Function Editor

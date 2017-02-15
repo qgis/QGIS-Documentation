@@ -13,7 +13,7 @@ The Symbol Library
       :local:
 
 .. index::
-    single: Style
+    single: Style Manager
 
 .. _vector_style_manager:
 
@@ -99,7 +99,7 @@ The symbol will be deleted from the local symbols database.
 The symbol list can be modified by adding new symbols with |signPlus|
 :sup:`Add item` button or modifying existing ones with |symbologyEdit|
 :sup:`Edit item`.
-See `The Symbol Selector`_ for further information.
+See `symbol-selector`_ for further information.
 
 Share symbols
 .............
@@ -143,7 +143,11 @@ Note that import and export options are also available through right-click.
 Color Ramp
 ..........
 
-.. index:: color_Ramp, Gradient_color_Ramp, colorBrewer, Custom_color_Ramp
+.. index:: Colors
+   single: Colors; Color ramp
+   single: Colors; Gradient color ramp
+   single: Colors; Color brewer
+   single: Colors; Custom color ramp
 
 The Color ramp tab in the Style Manager presents different types of
 color ramps you can use to style layers.
