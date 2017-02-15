@@ -650,31 +650,44 @@ the default style.
 You can add several styles for a single table in the database. However each table
 can have only one default style.
 
-.. note:: You can only save your style in database if the layer come from such
+.. note:: You can only save your style in database if the layer comes from such a
    database. You can't mix databases (layer in Oracle and style in MSSQL for
    instance).
 
+Load style
+...........
+
+The :menuselection:`Style --> Load Style` helps you apply a saved style to a layer.
+While plain text file style (:file:`.sld` or :file:`.qml`) can be loaded on any layer
+regardless its format, you can also load style from database when it comes to
+tables from the same datasource database.
+
+The :guilabel:`Load Style from Database` dialog displays a list of related
+styles to the layer found in the database and all the other styles saved in it,
+with name and description.
+
+Use **Restore Default** style option to replace the current style of the layer
+by the default saved one.
+
 .. note:: **Restore and Save default style**
 
-   You can save the current style as the default style for the layer or
-   overwrite the current style by the default one for current layer.
-
-   Interface could ask you from which (or to which) database you want to take
-   (or save) the default style in case a database is used. For
-   instance, if layer comes from PostgreSQL database, you can save the style
-   in this database. You can restore the default style either from this
-   database or from the local database.
+   When loading a layer in QGIS, if a default style already exists for this layer,
+   QGIS will load the layer with this style.
+   Used on file based format layers (:file:`.shp`, :file:`.tab`...), :guilabel:`Save
+   as Default` generates a :file:`.qml` file along the layer (with the same name),
+   and :guilabel:`Restore Default` looks for and loads that file when pressed.
+   
+   When saving or loading a default style for a database layer,
+   QGIS would ask you from which (or to which) database you want to take
+   (or save) the style. For
+   instance, if layer comes from PostgreSQL database, you can save the default
+   style only in the same datasource database or in a local database.
 
    Local database is a SQLite database in the :file:`~/.qgis2/` directory
    (where QGIS stores its local settings).
 
 See also the tip in :ref:`sec_postgis_details` for more information on backup
 of PostGIS database with layers and styles saved by QGIS.
-
-When loading a layer in QGIS, if a default style already exists for this layer,
-QGIS will load the layer and its style. After you modified the layer style,
-you can **Save as Default**, creating a new style that becomes the default one
-or **Restore Default** style if you're not satisfied.
 
 
 .. _figure_save_style_database:
