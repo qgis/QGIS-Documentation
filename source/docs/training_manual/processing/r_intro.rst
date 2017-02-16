@@ -40,7 +40,7 @@ Creating plots
 
 In this tutorial we are going to create a **boxplot** of a vector layer field.
 
-Open the :file:`r_intro.qgs` QGIS project.
+Open the :file:`r_intro.qgs` QGIS project under the :file:`exercise_data/processing/r_intro/` folder.
 
 
 Script parameters
