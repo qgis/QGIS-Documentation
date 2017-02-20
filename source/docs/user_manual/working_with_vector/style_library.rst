@@ -154,7 +154,18 @@ color ramps you can use to style layers.
 
 To create a custom color ramp, activate the Color ramp tab and click the
 |signPlus| :sup:`Add item` button. The button reveals a drop-down list to
-choose the ramp type: Gradient, Random, colorBrewer, or cpt-city.
+choose the ramp type:
+
+* :guilabel:`Gradient`: given a start and end colors, generate a color ramp which
+  can be **continuous** or **discrete**. With double-clicking the ramp preview,
+  you can add as many intermediate colors as you want and each color can be tweaked
+  using the :ref:`color-selector` widget or plotting each of its parameters.
+* :guilabel:`Random`: creates a random set of colors based on range of values for
+  hue, saturation, value and opacity and a number of colors (classes)
+* :guilabel:`ColorBrewer`: a set of predefined discrete color gradients you can
+  custom the number of colors in the ramp
+* or :guilabel:`cpt-city`: an access to a whole catalog of color gradients to
+  locally :guilabel:`save as gradient color`.
 
 The first three have options for number of steps and/or multiple stops in
 the color ramp. You can use the |checkbox| :guilabel:`Invert` option while
