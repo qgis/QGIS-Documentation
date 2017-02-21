@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 Composer Items Common Options
-==============================
+=============================
 
 .. only:: html
 
@@ -84,7 +84,7 @@ QGIS now allows advanced rendering for Composer items just like vector and raste
 
 
 Size and position
-------------------
+-----------------
 
 Each item inside the Composer can be moved and resized to create a perfect layout.
 For both operations the first step is to activate the |select| :sup:`Select/Move item` tool
@@ -126,7 +126,7 @@ to clear all selections or to invert the current selection.
 .. index:: Items alignment
 
 Alignment
-----------
+---------
 
 Raising or lowering the visual hierarchy for elements are inside the |raiseItems|
 :sup:`Raise selected items` pull-down menu. Choose an element on the Print Composer
