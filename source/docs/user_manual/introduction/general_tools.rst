@@ -1708,7 +1708,7 @@ variables overwritten by lower level ones are strike through.
 .. figure:: /static/user_manual/introduction/options_variables.png
    :align: center
 
-   Editable variables at the project's level
+   Variables editor at the project's level
 
 .. note:: You can read more about variables and find some examples
    in Nyall Dawson's `Exploring variables in QGIS 2.12, part 1

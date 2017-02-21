@@ -457,9 +457,9 @@ The :guilabel:`Variables` lists all the variables available at
 the composition's level (which includes all global and project's variables).
 
 It also allows the user to manage composition-level variables. Click the
-|signplus| button to add a new custom composition-level variable. Likewise,
+|signPlus| button to add a new custom composition-level variable. Likewise,
 select a custom composition-level variable from the list and click the
-|signminus| button to remove it.
+|signMinus| button to remove it.
 
 More information on variables usage in the General Tools
 :ref:`general_tools_variables` section.

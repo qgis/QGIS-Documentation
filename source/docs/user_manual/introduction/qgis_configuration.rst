@@ -683,9 +683,9 @@ described above.
 
 * The :guilabel:`Variables` tab lists all the variables available at
   the project's level (which includes all global variables). Besides, it
-  also allows the user to manage project-level variables. Click the |signplus|
+  also allows the user to manage project-level variables. Click the |signPlus|
   button to add a new custom project-level variable. Likewise, select a custom
-  project-level variable from the list and click the |signminus| button to
+  project-level variable from the list and click the |signMinus| button to
   remove it.
   More information on variables usage in the General Tools
   :ref:`general_tools_variables` section.

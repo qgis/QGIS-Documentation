@@ -1200,6 +1200,8 @@ rst_epilog = """
 .. |largeLandUseArea| replace:: Bontebok National Park
 .. |srtmFileName| replace:: :kbd:`srtm_41_19.tif`
 .. |localCRS| replace:: :kbd:`WGS 84 / UTM 34S`
+.. |variables| image:: /static/common/mIconExpression.png
+   :width: 1.5em
 """
 
 # -- Options for LaTeX output --------------------------------------------------
