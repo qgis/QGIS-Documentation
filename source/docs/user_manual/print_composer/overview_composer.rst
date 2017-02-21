@@ -448,8 +448,6 @@ also set the spacing, offset and snap tolerance of the grid as much as its style
 and color. These options are applied by default to any new print composer.
 
 
-.. index:: Revert layout actions
-
 Variables
 .........
 
@@ -471,6 +469,7 @@ More information on variables usage in the General Tools
 
    Variables editor in the Print Composer
 
+.. index:: Revert layout actions
 
 Command History Tab: Revert and Restore actions
 -----------------------------------------------
@@ -493,6 +492,7 @@ the actions done after the selected one will be removed.
 
    Command history in the Print Composer
 
+.. _composer_items_tab:
 
 Items Tab
 ---------

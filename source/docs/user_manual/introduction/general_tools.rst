@@ -1675,12 +1675,12 @@ Variables
 In QGIS, you can use variables to store useful recurrent values (e.g. the
 project's title, or the user's full name) that can be used in expressions.
 Variables can be defined at the application's global level, project level,
-layer level and composition level. Just like CSS cascading rules, variables
-can be overwritten - e.g., a project level variable will overwrite any
-application's global level variables set with the same name. You can use these
-variables to build text strings or other custom expressions using the @
-character before the variable name. For example in composer creating a label
-with this content::
+layer level, composition level, and composer's item level. Just like CSS
+cascading rules, variables can be overwritten - e.g., a project level
+variable will overwrite any application's global level variables set with
+the same name. You can use these variables to build text strings or other
+custom expressions using the @ character before the variable name. For
+example in composer creating a label with this content::
 
   This map was made using QGIS [% @qgis_version %]. The project file for this
   map is: [% @project_path %]
@@ -1691,13 +1691,17 @@ Will render the label like this::
   /gis/qgis-user-conference-2015.qgs
 
 Besides the preset read-only variables, you can define your own
-custom variables for any of the levels mentioned above. You can manage
-global variables from the :menuselection:`Settings --> Options` menu, the
-project's variables from :guilabel:`Project properties` (see
-:ref:`project_properties`), vector layer's variables from the
-:guilabel:`Layer Properties` dialog (see :ref:`vector_properties_dialog`),
-and composition's variables from the :guilabel:`Composition` tab in the
-:guilabel:`Map composer` (see :ref:`composer_composition_tab`).
+custom variables for any of the levels mentioned above. You can manage:
+
+* **global variables** from the :menuselection:`Settings --> Options` menu;
+* **project's variables** from :guilabel:`Project properties` (see
+  :ref:`project_properties`);
+* **vector layer's variables** from the :guilabel:`Layer Properties` dialog
+  (see :ref:`vector_properties_dialog`);
+* **composition's variables** from the :guilabel:`Composition` tab in the
+  :guilabel:`Map composer` (see :ref:`composer_composition_tab`);
+* and **composer item's variables** from the :guilabel:`Item` tab in the
+  :guilabel:`Map composer` (see :ref:`composer_items_tab`).
 
 To differentiate from editable variables, read-only variable's names and
 values are emphasized in italic. On the other hand, higher level
@@ -1717,4 +1721,3 @@ variables overwritten by lower level ones are strike through.
    and `part 3 <http://nyalldawson
    .net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_
    blog posts.
-

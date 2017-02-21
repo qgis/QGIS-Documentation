@@ -241,4 +241,3 @@ When you select the overview item in the list you can customize it.
 * The |checkbox| :guilabel:`Center on overview` puts the extent of the overview
   frame in the center of the overview map. You can only activate one overview
   item to center, when you have added several overviews.
-
