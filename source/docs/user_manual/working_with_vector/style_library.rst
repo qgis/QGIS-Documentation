@@ -4,8 +4,9 @@
 
 .. _vector_symbol_library:
 
-The Symbol Library
-==================
+********************
+ The Symbol Library
+********************
 
 .. only:: html
 
@@ -18,9 +19,9 @@ The Symbol Library
 .. _vector_style_manager:
 
 The Style Manager
------------------
+==================
 
-The Symbol Library is the place where users can manage and create generic symbols
+The Style Manager is the place where users can manage and create generic symbols
 to be used in several QGIS projects. You can open it with the :menuselection:`Settings
 --> Style Manager` or from the **Style** tab in the vector layer's
 :menuselection:`Properties`. It allows users to:
@@ -38,7 +39,7 @@ to be used in several QGIS projects. You can open it with the :menuselection:`Se
 
 
 Groups and smart groups
-.......................
+------------------------
 
 You can organize symbols into different categories. These categories, listed in
 the panel at the left, can be static (called **Group**) or dynamic (named
@@ -81,7 +82,7 @@ All the symbols that are not placed under a custom group belong
 to a default group named **Ungrouped**.
 
 Add, Edit, Remove Symbol
-........................
+-------------------------
 
 Selecting a group returns in the right panel, if applicable, the list of symbols
 of the group (including its subgroups). These symbols are organized in four
@@ -102,7 +103,7 @@ The symbol list can be modified by adding new symbols with |signPlus|
 See `symbol-selector`_ for further information.
 
 Share symbols
-.............
+--------------
 
 The |sharing| :sup:`Share item` tool, at the right bottom of the Style
 Library dialog, offers options to easily share symbols with others: users can
@@ -141,7 +142,7 @@ Note that import and export options are also available through right-click.
 .. _color-ramp:
 
 Color Ramp
-..........
+-----------
 
 .. index:: Colors
    single: Colors; Color ramp
@@ -199,8 +200,8 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
 
 .. _symbol-selector:
 
-The symbol Selector
--------------------
+The Symbol Selector
+====================
 
 The Symbol selector is the main dialog to design a symbol.
 You can create or edit Marker, Line or Fill Symbols.
@@ -213,46 +214,75 @@ You can create or edit Marker, Line or Fill Symbols.
    Designing a Marker symbol
 
 
-For each kind of symbols, you will find always the same dialog structure:
+Two main components structure the symbol selector dialog:
 
-* at the top left side a dynamic symbol representation, updated as soon as
-  symbol properties evolve
-* under the symbol representation, the symbol tree shows symbol layers that
-  are combined afterwards to shape a new global symbol. A symbol can consist of
-  several :guilabel:`Symbol layers`.
-  Settings will be shown later in this chapter.
-* at the right you can setup some parameters that apply to the global symbol:
+* the symbol tree, showing symbol layers that are combined afterwards to shape a
+  new global symbol
+* and settings to configure the selected symbol layer in the tree.
 
-  * **unit**: it can be millimeter, pixel or map unit
-  * **transparency**
-  * **color**: when this parameter is changed by the user, its value is echoed to all
-    unlocked sub-symbols color
-  * **size** and **rotation** for marker symbol
-  * **width** for line symbol
+.. _symbol_tree:
 
-  Note that the :guilabel:`Data-defined override` button beside the last layer-related
-  parameters is inactive until the symbol is applied to a layer.
-  Once the symbol is connected to a layer, this button offers access to the
-  :ref:`size assistant <size_assistant>` dialog which helps to create proportional
-  or multivariate analysis rendering.
+The symbol layer tree
+----------------------
 
-* under these parameters are displayed items of the symbols library you can choose from.
-  This list of symbols can be filtered by selecting a group in the drop-down list
-  just above.
+A symbol can consist of several :guilabel:`Symbol layers`. The symbol tree shows
+the overlay of these symbol layers that are combined afterwards to shape a
+new global symbol. Besides, a dynamic symbol representation is updated as soon as
+symbol properties change.
 
-According to the level selected in the symbol tree,
-you'll get enabled different tools at the bottom of the dialog to :
+A set of tools is available to manage the symbol tree items and according to the
+level selected, you'll get enabled different tools at the bottom of the dialog to:
 
-* |signPlus| add new symbol layer: you can imbricate as many symbols as you want
+* |signPlus| add new symbol layer: you can stack as many symbols as you want
 * |signMinus| remove the selected symbol layer
 * lock colors of symbol layer: a |locked| locked color stays unchanged when
   user changes the color at the global (or upper) symbol level
 * |duplicateLayer| duplicate a (group of) symbol layer(s)
 * move up or down the symbol layer
-* apply :ref:`special effects <draw_effects>` to the symbol layer
-* save the designed symbol into your symbol library
-* or choose in the :guilabel:`Advanced` |selectString| drop-down list, to
-  **clip features to canvas extent**.
+
+.. _edit_symbol:
+
+Configuring a symbol
+---------------------
+
+In QGIS, configuring a symbol is done in two steps: the symbol and then the
+symbol layer.
+
+The symbol
+..........
+
+At the top level of the tree, it depends on the layer geometry and can be of
+**Marker**, **Line** or **Fill** type. Each symbol can embed one or
+more symbols (including, of any other type) or symbol layers.
+
+You can setup some parameters that apply to the global symbol:
+
+* :guilabel:`Unit`: it can be **Millimeter**, **Pixels** or **Map unit**
+* :guilabel:`Transparency`
+* :guilabel:`Color`: when this parameter is changed by the user, its value is
+  echoed to all unlocked sub-symbols color
+* :guilabel:`Size` and :guilabel:`Rotation` for marker symbols
+* :guilabel:`Width` for line symbols
+
+.. note::
+
+  The :ref:`Data-defined override <data-defined>` button beside the last layer-related
+  parameters is inactive when setting the symbol from the Style manager dialog.
+  When the symbol is connected to a map layer, this button offers access to the
+  :ref:`size assistant <size_assistant>` dialog which helps to create proportional
+  or multivariate analysis rendering.
+
+The symbols used at this level are items you can pick from the :ref:`symbols
+library <vector_style_manager>`. A list of available symbols of the same type
+from your symbol library is shown and can be filtered by selecting a group in
+the drop-down list just above. Click the :guilabel:`Save` button to add the
+designed symbol to your symbol library.
+
+With the :guilabel:`Advanced` |selectString| option, you can:
+
+* set the **symbol levels**: defining the way symbol layers are connected to
+  each other in the map canvas (see :ref:`Symbols_levels` for more information)
+* and for line and fill symbols, **clip features to canvas extent**.
 
 .. Fix Me: What does advanced "clip features to canvas" option mean for the symbol?
 
@@ -260,15 +290,25 @@ you'll get enabled different tools at the bottom of the dialog to :
 
    Note that once you have set the size in the lower levels of the
    :guilabel:`Symbol layers` dialog, the size of the whole symbol can be changed
-   with the :guilabel:`Size` (for marker symbol) or the :guilabel:`Width` (for line
-   symbol) menu in the first level again. The size of the lower levels changes
-   accordingly, while the size ratio is maintained.
+   with the :guilabel:`Size` (for marker symbols) or the :guilabel:`Width` (for
+   line symbols) menu in the first level again. The size of the lower levels
+   changes accordingly, while the size ratio is maintained.
 
-More detailed settings can be made when clicking on the lower level in the
-Symbol tree. You can change each :guilabel:`Symbol layers` properties and according
-to the symbol type, you get different settings.
+The symbol layer
+................
 
-.. TODO: Better describe each of the options...
+At a lower level of the tree, you can customize the symbol layers. The available
+symbol layer types depend on the upper symbol type. Regardless the symbol layer
+type, some common parameters can be applied such as |paintEffects|
+:ref:`special effects <draw_effects>`.
+
+Because describing all the options of all the symbol layer types would not be
+possible, only particular and significative ones are mentioned below.
+
+.. note:: Almost all the parameters of the symbol layer type can be set using
+ the |dataDefined| :sup:`Data-defined override` settings, extending
+ capabilities of customizing each symbol (see :ref:`data_defined` for more
+ information).
 
 .. _vector_marker_symbols:
 
