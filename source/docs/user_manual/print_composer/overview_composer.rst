@@ -359,6 +359,7 @@ To maximise the space available to interact with a composition you can use
    interact by pressing :kbd:`F11` or using :menuselection:`View -->` |checkbox|
    :guilabel:`Toggle full screen`.
 
+.. _composer_composition_tab:
 
 Composition Tab
 ---------------
@@ -448,6 +449,28 @@ and color. These options are applied by default to any new print composer.
 
 
 .. index:: Revert layout actions
+
+Variables
+.........
+
+The :guilabel:`Variables` lists all the variables available at
+the composition's level (which includes all global and project's variables).
+
+It also allows the user to manage composition-level variables. Click the
+|signplus| button to add a new custom composition-level variable. Likewise,
+select a custom composition-level variable from the list and click the
+|signminus| button to remove it.
+
+More information on variables usage in the General Tools
+:ref:`general_tools_variables` section.
+
+.. _figure_composition_variables:
+
+.. figure:: /static/user_manual/print_composer/composition_variables.png
+   :align: center
+
+   Variables editor in the Print Composer
+
 
 Command History Tab: Revert and Restore actions
 -----------------------------------------------

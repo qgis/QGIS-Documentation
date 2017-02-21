@@ -2344,8 +2344,16 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 Variables Properties
 ====================
 
-.. todo: Describe variables options
+The :guilabel:`Variables` tab lists all the variables available at
+the layer's level (which includes all global and project's variables).
 
+It also allows the user to manage layer-level variables. Click the |signplus|
+button to add a new custom layer-level variable. Likewise, select a custom
+layer-level variable from the list and click the |signminus| button to remove
+it.
+
+More information on variables usage in the General Tools
+:ref:`general_tools_variables` section.
 
 .. index:: Legend, Embedded widget
 .. _vectorlegend_menu:

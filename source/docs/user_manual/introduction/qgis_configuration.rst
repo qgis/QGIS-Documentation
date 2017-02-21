@@ -36,7 +36,7 @@ require a restart of QGIS before they will be effective.
 The tabs where you can customize your options are described below.
 
 General Tab
--------------
+-----------
 
 **Application**
 
@@ -83,7 +83,7 @@ General Tab
 .. _`env_options`:
 
 System Tab
------------
+----------
 
 **SVG paths**
 
@@ -127,7 +127,7 @@ source code.
 
 
 Data Sources Tab
------------------
+----------------
 
 **Feature attributes and table**
 
@@ -180,9 +180,7 @@ Removing a folder from the list will make it available in the Browser panel.
 .. index:: Rendering
 
 Rendering Tab
---------------
-
-\
+-------------
 
 .. _figure_rendering_menu:
 
@@ -259,7 +257,7 @@ Rendering Tab
 .. index:: Colors
 
 Colors Tab
-------------
+----------
 
 This menu allows you to add some custom color that you can find in each color dialog
 window of the renderers. You will see a set of predefined colors in the tab: you can
@@ -269,7 +267,7 @@ them.
 
 
 Canvas and Legend Tab
-----------------------
+---------------------
 
 **Default map appearance (overridden by project properties)**
 
@@ -292,7 +290,7 @@ Canvas and Legend Tab
 .. index:: Map tools
 
 Map tools Tab
---------------
+-------------
 
 This tab offers some options regarding the behavior of the :ref:`Identify tool <identify>`.
 
@@ -334,7 +332,7 @@ You can also import or export scales from/to a ``.XML`` file. Note that you stil
 the possibility to remove your changes and reset to the predefined list.
 
 Composer Tab
--------------
+------------
 
 **Composition defaults**
 
@@ -361,7 +359,7 @@ You can define the :guilabel:`Default font` used within the :ref:`print composer
 .. index:: Digitizing configuration
 
 Digitizing Tab
----------------
+--------------
 
 This tab helps you configure general settings when :ref:`editing vector layer
 <editingvector>` (attributes and geometry).
@@ -410,7 +408,7 @@ from GEOS 3.3.
 * :guilabel:`Miter limit`
 
 GDAL Tab
----------
+--------
 
 GDAL is a data exchange library for raster files. In this tab, you can
 :guilabel:`Edit create options` and :guilabel:`Edit Pyramids Options` of the
@@ -420,7 +418,7 @@ format, as in some cases more than one GDAL driver is available.
 .. index:: CRS, Datum transformation, On-the-fly reprojection
 
 CRS Tab
---------
+-------
 
 **Default CRS for new projects**
 
@@ -460,13 +458,13 @@ or when a layer without a CRS is loaded.
 .. index:: Overwrite language
 
 Locale Tab
------------
+----------
 
 * |checkbox| :guilabel:`Override system locale` and :guilabel:`Locale to use instead`
 * Information about active system locale
 
 Authentication Tab
--------------------
+------------------
 
 In the :guilabel:`Authentication` tab you can set authentication configurations
 and manage PKI certificates. See :ref:`authentication_index` for more
@@ -475,7 +473,7 @@ details.
 .. index:: Proxy, Network
 
 Network Tab
-------------
+-----------
 
 **General**
 
@@ -525,12 +523,21 @@ http://doc.qt.io/qt-4.8/qnetworkproxy.html#ProxyType-enum
    Using proxies can sometimes be tricky. It is useful to proceed by 'trial and
    error' with the above proxy types, to check if they succeed in your case.
 
+.. index:: Variables
 
 Variables Tab
---------------
+-------------
 
-The :guilabel:`Variables` tab lists and helps you create global-level variables.
-More information about variables at section :ref:`general_tools_variables`.
+The :guilabel:`Variables` tab lists all the variables available at the
+global-level.
+
+It also allows the user to manage global-level variables. Click the |signplus|
+button to add a new custom global-level variable. Likewise, select a custom
+global-level variable from the list and click the |signminus| button to remove
+it.
+
+More information about variables in the :ref:`general_tools_variables`
+section.
 
 .. _optionsadvanced:
 
@@ -559,6 +566,8 @@ the widget is populated with a tree of all QGIS settings, which you can directly
 .. index:: Project properties
    single: Project; Properties
    single: Settings; Project
+
+.. _project_properties:
 
 Project Properties
 ==================
@@ -672,6 +681,14 @@ described above.
   lists and helps you create project-level variables.
   More information about variables at section :ref:`general_tools_variables`.
 
+* The :guilabel:`Variables` tab lists all the variables available at
+  the project's level (which includes all global variables). Besides, it
+  also allows the user to manage project-level variables. Click the |signplus|
+  button to add a new custom project-level variable. Likewise, select a custom
+  project-level variable from the list and click the |signminus| button to
+  remove it.
+  More information on variables usage in the General Tools
+  :ref:`general_tools_variables` section.
 
 .. index:: Customization
 .. _sec_customization:
