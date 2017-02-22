@@ -28,9 +28,11 @@ where you should go to look.
 Solution Outline
 -------------------------------------------------------------------------------
 
-In order to solve this problem, you will have to use the available data
-(available in :kbd:`exercise_data/more_analysis`) to find the candidate area
-that is closest to your house.  If you don't live in Cape Town (where this
+In order to solve this problem, you will have to download data from 
+https://www.dropbox.com/s/q5evvkizuunrcs0/more_analysis.zip?dl=0 and place it
+under :file:`exercise_data/more_analysis` folder.
+You will use it to find the candidate area
+that is closest to your house. If you don't live in Cape Town (where this
 problem is based) you can choose any house in the Cape Town region. The
 solution will involve:
 
