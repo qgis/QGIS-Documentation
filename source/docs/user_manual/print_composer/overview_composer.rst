@@ -161,7 +161,7 @@ and :guilabel:`Atlas generation`.
   settings).
 * The :guilabel:`Atlas generation` tab allows you to enable the generation of an
   atlas for the current Composer and gives access to its parameters
-  (see :ref:`atlas_generation` for detail information on atlas
+  (see :ref:`atlas_generation` for detailed information on atlas
   generation usage).
 
 
