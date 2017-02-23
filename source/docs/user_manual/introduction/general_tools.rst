@@ -1698,10 +1698,10 @@ custom variables for any of the levels mentioned above. You can manage:
   :ref:`project_properties`);
 * **vector layer's variables** from the :guilabel:`Layer Properties` dialog
   (see :ref:`vector_properties_dialog`);
-* **composition's variables** from the :guilabel:`Composition` tab in the
-  :guilabel:`Map composer` (see :ref:`composer_composition_tab`);
-* and **composer item's variables** from the :guilabel:`Item` tab in the
-  :guilabel:`Map composer` (see :ref:`composer_items_tab`).
+* **composition's variables** from the :guilabel:`Composition` panel in the
+  Print composer (see :ref:`composer_composition_tab`);
+* and **composer item's variables** from the :guilabel:`Item properties`
+  panel in the Print composer (see :ref:`composer_item_options`).
 
 To differentiate from editable variables, read-only variable's names and
 values are emphasized in italic. On the other hand, higher level

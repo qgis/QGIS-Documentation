@@ -531,9 +531,9 @@ Variables Tab
 The :guilabel:`Variables` tab lists all the variables available at the
 global-level.
 
-It also allows the user to manage global-level variables. Click the |signplus|
+It also allows the user to manage global-level variables. Click the |signPlus|
 button to add a new custom global-level variable. Likewise, select a custom
-global-level variable from the list and click the |signminus| button to remove
+global-level variable from the list and click the |signMinus| button to remove
 it.
 
 More information about variables in the :ref:`general_tools_variables`

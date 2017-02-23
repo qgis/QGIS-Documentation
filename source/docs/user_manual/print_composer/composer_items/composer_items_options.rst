@@ -2,6 +2,8 @@
 
    |updatedisclaimer|
 
+.. _composer_item_options:
+
 Composer Items Common Options
 =============================
 
@@ -155,8 +157,8 @@ Variables
 
 The :guilabel:`Variables` lists all the variables available at
 the composer item's level (which includes all global, project and
-composition's variables). Map items also includes Map settings variables that
-provide easy access to values like the map's scale, extension, and so on.
+composition's variables). Map items also include Map settings variables that
+provide easy access to values like the map's scale, extent, and so on.
 
 The :guilabel:`Variables` also allows the user to manage composition-level
 variables. Click the |signPlus| button to add a new custom composition-level

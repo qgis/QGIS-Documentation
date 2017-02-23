@@ -157,9 +157,12 @@ and :guilabel:`Atlas generation`.
   item. Click the |select| :sup:`Select/Move item` icon to select
   an item (e.g., legend, scale bar or label) on the canvas. Then click the
   :guilabel:`Item Properties` tab and customize the settings for the selected
-  item.
+  item (see :ref:`composer_items` for detailed information on each item
+  settings).
 * The :guilabel:`Atlas generation` tab allows you to enable the generation of an
-  atlas for the current Composer and gives access to its parameters.
+  atlas for the current Composer and gives access to its parameters
+  (see :ref:`atlas_generation` for detail information on atlas
+  generation usage).
 
 
 In the bottom part of the Print Composer window, you can find a status bar with
@@ -497,7 +500,7 @@ the actions done after the selected one will be removed.
 Items Tab
 ---------
 
-The :menuselection:`Items` tab offers some options to manage selection and
+The :guilabel:`Items` tab offers some options to manage selection and
 visibility of items.
 All the items added to the print composer canvas are shown in a list and
 selecting an item makes the corresponding row selected in the list as well as
@@ -519,4 +522,3 @@ Once you have found the correct position for an item, you can lock it by ticking
 the box in |locked| column. Locked items are **not** selectable on the canvas.
 Locked items can be unlocked by selecting the item in the :menuselection:`Items`
 tab and unchecking the tickbox or you can use the icons on the toolbar.
-

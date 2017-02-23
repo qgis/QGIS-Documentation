@@ -2344,7 +2344,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 Variables Properties
 ====================
 
-|variables| The :guilabel:`Variables` tab lists all the variables available at
+|expression| The :guilabel:`Variables` tab lists all the variables available at
 the layer's level (which includes all global and project's variables).
 
 It also allows the user to manage layer-level variables. Click the |signPlus|
