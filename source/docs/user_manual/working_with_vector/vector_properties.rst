@@ -4,9 +4,9 @@
 
 .. _vector_properties_dialog:
 
-*****************************
+****************************
 The Vector Properties Dialog
-*****************************
+****************************
 
 .. only:: html
 
@@ -35,10 +35,10 @@ from the pop-up menu.
 
 .. _vectorgeneralmenu:
 
-General Menu
-============
+General Properties
+==================
 
-|general| Use this menu to make general settings for the vector layer.
+|general| Use this tab to make general settings for the vector layer.
 There are several options available:
 
 Layer Info
@@ -75,7 +75,7 @@ See :ref:`label_scaledepend` for more information.
 .. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
    :align: center
 
-   General menu in vector layers properties dialog
+   General tab in vector layers properties dialog
 
 .. index:: Query builder
 .. _vector_query_builder:
@@ -90,7 +90,7 @@ active, only the features corresponding to its result are available in the
 project. The query result can be saved as a new vector layer.
 
 The **Query Builder** is accessible through the eponym term at the bottom of
-the :guilabel:`General` menu in the Layer Properties. Under :guilabel:`Feature
+the :guilabel:`General` tab in the Layer Properties. Under :guilabel:`Feature
 subset`, click on the **[Query Builder]** button to open the :guilabel:`Query
 builder`. For example, if you have a ``regions`` layer with a ``TYPE_2``
 field, you could select only regions that are ``borough`` in the
@@ -145,16 +145,16 @@ subset will prevent you from editing the layer.
 .. _vector_style_menu:
 
 
-Style Menu
-==========
+Style Properties
+================
 
-|symbology| The Style menu provides you with a comprehensive tool for rendering
-and symbolizing your vector data. You can use tools that are common to all
-vector data, as well as special symbolizing tools that were designed for the
-different kinds of vector data. However all types share the following dialog
-structure: in the upper part, you have a widget that helps you prepare the
-classification and the symbol to use for features and at the bottom the
-:ref:`layer_rendering` widget.
+|symbology| The Style tab provides you with a comprehensive tool for
+rendering and symbolizing your vector data. You can use tools that are
+common to all vector data, as well as special symbolizing tools that were
+designed for the different kinds of vector data. However all types share the
+following dialog structure: in the upper part, you have a widget that helps
+you prepare the classification and the symbol to use for features and at
+the bottom the:ref:`layer_rendering` widget.
 
 .. tip:: **Export vector symbology**
 
@@ -188,8 +188,8 @@ provides different additional sections.
 
    If you change the renderer type when setting the style of a vector layer the
    settings you made for the symbol will be maintained. Be aware that this
-   procedure only works for one change. If you repeat changing the renderer type
-   the settings for the symbol will get lost.
+   procedure only works for one change. If you repeat changing the renderer
+   type the settings for the symbol will get lost.
 
 .. index::
    single: Symbology; Single symbol renderer
@@ -225,7 +225,7 @@ See :ref:`symbol-selector` for further information about symbol representation.
 .. _no_symbol_renderer:
 
 No Symbols Renderer
-......................
+...................
 
 The |nullSymbol| :guilabel:`No Symbols` renderer is a special use case of the
 Single Symbol renderer as it applies the same rendering to all features.
@@ -347,7 +347,7 @@ available modes are:
   are 1, 2 or 5 times a power of 10. (based on pretty from the R statistical
   environment http://astrostatistics.psu.edu/datasets/R/html/base/html/pretty.html)
 
-The listbox in the center part of the :guilabel:`Style` menu lists the classes
+The listbox in the center part of the :guilabel:`Style` tab lists the classes
 together with their ranges, labels and symbols that will be rendered.
 
 Click on **Classify** button to create classes using the chosen mode. Each
@@ -486,8 +486,9 @@ You can create a new rule by copying and pasting an existing rule with the right
 mouse button. You can also use the 'ELSE' rule that will be run if none of the other
 rules on that level matches.
 Since QGIS 2.8 the rules appear in a tree hierarchy in the map legend. Just
-double-click the rules in the map legend and the Style menu of the layer properties
-appears showing the rule that is the background for the symbol in the tree.
+double-click the rules in the map legend and the Style tab of the layer
+properties appears showing the rule that is the background for the symbol in
+the tree.
 
 The example in figure_rule_based_symbology_ shows the rule-based rendering
 dialog for the rivers layer of the QGIS sample dataset.
@@ -569,7 +570,7 @@ the heatmap renderer updates the heatmap style automatically.
 .. _2.5_D_rendering:
 
 2.5D
-.....
+....
 
 Using the |25dSymbol| :guilabel:`2.5D` renderer it's possible to create
 a 2.5D effect on your layer's features.
@@ -851,13 +852,13 @@ mode, then it will use the original source symbol from the layers properties
 
 .. _vector_labels_tab:
 
-Labels Menu
-===========
+Labels Properties
+=================
 
 The |labeling| :sup:`Labels` core application provides smart
 labeling for vector point, line and polygon layers, and only requires a
 few parameters. This application also supports on-the-fly transformed layers.
-The following menus are used to configure the labeling of vector layers:
+The following tabs are used to configure the labeling of vector layers:
 
 * Text
 * Formatting
@@ -972,10 +973,10 @@ rounded corners.
 Again, it is possible to mix the background with the underlying layers in the
 map canvas using the :guilabel:`Blend mode` (see :ref:`blend-modes`).
 
-Shadow menu
------------
+Shadow tab
+----------
 
-Use the :guilabel:`Shadow` menu for a user-defined :guilabel:`Drop shadow`.
+Use the :guilabel:`Shadow` tab for a user-defined :guilabel:`Drop shadow`.
 The drawing of the background is very variable.
 Choose between 'Lowest label component', 'Text', 'Buffer' and 'Background'.
 The :guilabel:`Offset` angle depends on the orientation
@@ -1004,10 +1005,10 @@ can also be altered by choosing a blend mode.
    top of the shadow (depending upon the shadow's color), when that setting is
    used.
 
-Placement menu
---------------
+Placement tab
+-------------
 
-Choose the :guilabel:`Placement` menu for configuring label placement
+Choose the :guilabel:`Placement` tab for configuring label placement
 and labeling priority. Note that the placement options differ according to the
 type of vector layer, namely point, line or polygon.
 
@@ -1139,10 +1140,10 @@ the map canvas. If there are labels from different layers in the same
 location, the label with the higher priority will be displayed and the
 others will be left out.
 
-Rendering menu
---------------
+Rendering tab
+-------------
 
-In the :guilabel:`Rendering` menu, you can tune when the labels can be rendered
+In the :guilabel:`Rendering` tab, you can tune when the labels can be rendered
 and their interaction with other labels and features.
 
 Under :guilabel:`Label options`, you find the :ref:`scale-based <label_scaledepend>`
@@ -1222,7 +1223,7 @@ Define labels based on expressions
 ----------------------------------
 
 QGIS allows using expressions to label features. Just click the
-|expressionEditorOpen| icon in the |labeling| :sup:`Labels` menu of the
+|expressionEditorOpen| icon in the |labeling| :sup:`Labels` tab of the
 properties dialog. In figure_labels_expression_, you see a sample expression to
 label the alaska regions with name and area size, based on the field 'NAME_2',
 some descriptive text, and the function ``$area`` in combination with
@@ -1325,7 +1326,7 @@ to create simple and very complex expressions to label your data in QGIS. See
 .. _data_defined_labeling:
 
 Using data-defined override for labeling
------------------------------------------
+----------------------------------------
 
 With the data-defined override functions, the settings for the labeling
 are overridden by entries in the attribute table.
@@ -1397,10 +1398,10 @@ configurations.
 .. index:: Fields, Forms
 .. _vector_attributes_menu:
 
-Fields Menu
-===========
+Fields Properties
+=================
 
-|attributes| The :guilabel:`Fields` menu helps you organize the fields of
+|attributes| The :guilabel:`Fields` tab helps you organize the fields of
 the selected dataset and the way you can interact with
 the feature's attributes. The buttons |newAttribute|
 :sup:`New field` and |deleteAttribute| :sup:`Delete field`
@@ -1419,7 +1420,7 @@ Comments can be added by clicking in the comment field of the column but if
 you are using a PostgreSQL layer, comment of the column could be the one in
 the PostgreSQL table if set. Comments are saved in the QGIS project file as for
 the alias.
-    
+
 The dialog also lists read-only characteristics of the field such as
 its ``type``, ``type name``, ``length`` and ``precision``. When serving the
 layer as ``WMS`` or ``WFS``, you can also check here which fields could be retrieved.
@@ -1429,9 +1430,9 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
 .. _configure_field:
 
 Configure the field behavior
------------------------------
+----------------------------
 
-Within the :guilabel:`Fields` menu, you also find an **Edit widget** column.
+Within the :guilabel:`Fields` tab, you also find an **Edit widget** column.
 This column can be used to define values or a range of values that are allowed
 to be added to the specific attribute table column. It also helps to set the
 type of widget used to fill or display values of the field, in the attribute
@@ -1468,11 +1469,11 @@ properties you can set to control whether and how a field can be edited:
   A preview of the default value is displayed
 * **Constraints**: you can constrain the value in the field. This constraint
   can be:
-  
+
   * |checkbox| :guilabel:`Not null`: force the user to provide a value
   * based on a custom expression: e.g. ``regexp_match(col0,'A-Za-z')`` to ensure
     that the value of the field *col0* has only alphabetical letter.
-    
+
     A short description of the constraint can be added and will be displayed at
     the top of the form as a warning message when the value supplied does not
     match the constraint.
@@ -1480,7 +1481,7 @@ properties you can set to control whether and how a field can be edited:
 .. _edit_widgets:
 
 Edit widgets
-.............
+............
 
 The available widgets are:
 
@@ -1488,7 +1489,7 @@ The available widgets are:
   added to the column when the checkbox is activated or not.
 * **Classification**: Displays a combo box with the values used for
   classification, if you have chosen 'unique value' as legend type in
-  the :guilabel:`Style` menu of the properties dialog.
+  the :guilabel:`Style` tab of the properties dialog.
 * **Color**: Displays a color button allowing user to choose a color from the
   color dialog window.
 * **Date/Time**: Displays a line field which can open a calendar widget to enter
@@ -1549,7 +1550,7 @@ The available widgets are:
 .. _customize_form:
 
 Customize a form for your data
--------------------------------
+------------------------------
 
 By default, when you click on a feature with the |identify| :sup:`Identify
 Features` tool or switch the attribute table to the *form view* mode, QGIS
@@ -1620,7 +1621,7 @@ items, double-click the relation label to configure some options:
 * show the unlink button
 
 Provide an ui-file
-....................
+..................
 
 The ``Provide ui-file`` option allows you to use complex dialogs made with
 Qt-Designer. Using a UI-file allows a great deal of freedom in creating a
@@ -1633,7 +1634,7 @@ For detailed information, see
 http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
 
 Enhance your form with custom functions
-........................................
+.......................................
 
 QGIS forms can have a Python function that is called when the dialog is opened.
 Use this function to add extra logic to your dialogs. The form code can be
@@ -1663,10 +1664,10 @@ Reference in Python Init Function like so: ``open``
 .. index:: Jointure, Join layers
 .. _`sec_joins`:
 
-Joins Menu
-==========
+Joins Properties
+================
 
-|join| The :guilabel:`Joins` menu allows you to join a loaded attribute
+|join| The :guilabel:`Joins` tab allows you to join a loaded attribute
 table to a loaded vector layer. After clicking |signPlus|, the
 :guilabel:`Add vector join` dialog appears. As key columns, you have to define a
 join layer you want to connect with the target vector layer.
@@ -1701,10 +1702,10 @@ Additionally, the add vector join dialog allows you to:
 .. index:: Diagrams
 .. _`sec_diagram`:
 
-Diagrams Menu
-=============
+Diagrams Properties
+===================
 
-|diagram| The :guilabel:`Diagrams` menu allows you to add a graphic overlay to
+|diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to
 a vector layer (see figure_diagrams_attributes_).
 
 The current core implementation of diagrams provides support for:
@@ -1721,7 +1722,8 @@ The current core implementation of diagrams provides support for:
    diagram, when designing your diagram, you can easily change the diagram type
    and check which one is more appropriate to your data without any loss.
 
-For each type of diagram, the menu is divided into five tabs:
+For each type of diagram, the Diagram properties are divided into five
+tabs:
 
 Attributes
 ----------
@@ -1743,7 +1745,7 @@ or of the layer tree.
 .. figure:: /static/user_manual/working_with_vector/diagram_tab.png
    :align: center
 
-   Vector properties dialog with diagram menu
+   Vector properties dialog with diagram tab
 
 Appearance
 ----------
@@ -1757,7 +1759,7 @@ general settings that do not interfere with the statistic values such as:
 * the orientation of the left line of the first slice represented in pie chart.
   Note that slices are displayed clockwise.
 
-In this menu, you can also manage the diagram visibility:
+In this tab, you can also manage the diagram visibility:
 
 * by removing diagrams that overlap others or :guilabel:`Show all diagrams`
   even if they overlap each other
@@ -1770,8 +1772,7 @@ In this menu, you can also manage the diagram visibility:
 .. figure:: /static/user_manual/working_with_vector/diagram_tab_appearance.png
    :align: center
 
-   Vector properties dialog with diagram menu, Appearance tab
-
+   Vector properties dialog with diagram properties, Appearance tab
 
 Size
 ----
@@ -1791,7 +1792,7 @@ You can use :
 .. figure:: /static/user_manual/working_with_vector/diagram_tab_size.png
    :align: center
 
-   Vector properties dialog with diagram menu, Size tab
+   Vector properties dialog with diagram properties, Size tab
 
 
 Placement
@@ -1823,7 +1824,7 @@ the **Priority** slider or the **z-index** value.
 .. figure:: /static/user_manual/working_with_vector/diagram_tab_placement.png
    :align: center
 
-   Vector properties dialog with diagram menu, Placement tab
+   Vector properties dialog with diagram properties, Placement tab
 
 
 Options
@@ -1860,7 +1861,7 @@ Both vector layers are part of the QGIS sample dataset (see section
    :file:`alaska.shp` and :file:`climate.shp`.
 #. Double click the ``climate`` layer in the map legend to open the
    :guilabel:`Layer Properties` dialog.
-#. Click on the :guilabel:`Diagrams` menu, activate |checkbox| :guilabel:`Show
+#. Click on the :guilabel:`Diagrams` tab, activate |checkbox| :guilabel:`Show
    diagrams for this layer`, and from the :guilabel:`Diagram type` |selectString|
    combo box, select 'Text diagram'.
 #. In the :guilabel:`Appearance` tab, we choose a light blue as background color,
@@ -1937,11 +1938,11 @@ These tools allow to specifically work on each diagram to:
   then diagram(s) are hidden. When a diagram is hidden, you just have to click
   or drag an area around the feature's point to restore the chart.
 
-.. index:: Menu; Actions
+.. index:: Tab; Actions
 .. _actions_menu:
 
-Actions Menu
-============
+Actions Properties
+==================
 
 |action| QGIS provides the ability to perform an action based on the attributes
 of a feature. This can be used to perform any number of actions, for example,
@@ -1978,7 +1979,7 @@ Defining Actions
 
 Attribute actions are defined from the vector :guilabel:`Layer Properties`
 dialog. To define an action, open the vector :guilabel:`Layer Properties`
-dialog and click on the :guilabel:`Actions` menu. Go to the :guilabel:`Action properties`.
+dialog and click on the :guilabel:`Actions` tab. Go to the :guilabel:`Action properties`.
 Select 'Generic' as type and provide a descriptive name for the action.
 The action itself must contain
 the name of the application that will be executed when the action is invoked.
@@ -2087,7 +2088,7 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
 #. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
    layer in the legend, or right-click and choose :menuselection:`Properties`
    from the pop-up menu.
-#. Click on the :guilabel:`Actions` menu.
+#. Click on the :guilabel:`Actions` tab.
 #. Enter a name for the action, for example ``Google Search``.
 #. For the action, we need to provide the name of the external program to run.
    In this case, we can use Firefox. If the program is not in your path, you
@@ -2212,10 +2213,10 @@ To add a raster (a TIF image in this example), it becomes:
 .. index:: Map Tips
 .. _maptips:
 
-Display Menu
-============
+Display Properties
+==================
 
-|mapTips| This menu is specifically created for map tips: display a message in
+|mapTips| This tab is specifically created for map tips: display a message in
 the map canvas when hovering over a feature of the active layer.
 This message can either be the value of a |radioButtonOff| :guilabel:`Field`
 or a more complex and full |radioButtonOff| :guilabel:`HTML` text mixing fields,
@@ -2249,8 +2250,8 @@ in map canvas.
 
 .. index:: Generalisation, Feature simplification, Rasterisation
 
-Rendering Menu
-==============
+Rendering Properties
+====================
 
 |rendering| QGIS offers support for on-the-fly feature generalisation. This can
 improve rendering times when drawing many complex features at small scales.
@@ -2290,10 +2291,10 @@ is applied to all layers.
 
 .. _vectormetadatamenu:
 
-Metadata Menu
-=============
+Metadata Properties
+===================
 
-|metadata| The :guilabel:`Metadata` menu consists of :guilabel:`Description`,
+|metadata| The :guilabel:`Metadata` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`MetadataURL`, :guilabel:`LegendUrl`
 and :guilabel:`Properties` sections.
 
@@ -2325,7 +2326,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
    :align: center
 
-   Metadata menu in vector layers properties dialog
+   Metadata tab in vector layers properties dialog
 
 
 .. tip:: **Switch quickly between different layer representations**
@@ -2337,16 +2338,26 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    menu of the layer in :guilabel:`Layers Panel` to automatically get different
    representations of your data.
 
+.. index:: Variables
+.. _vectorvariables_menu:
+
+Variables Properties
+====================
+
+.. todo: Describe variables options
+
+
 .. index:: Legend, Embedded widget
 .. _vectorlegend_menu:
 
-Legend Menu
-============
+Legend Properties
+=================
 
-|legend| The :guilabel:`Legend` menu provides you with a list of widgets you can embed within
-the layer tree in the Layers panel. The idea is to have a way to quickly access some
-actions that are often used with the layer (setup transparency, filtering, selection,
-style or other stuff...).
+|legend| The :guilabel:`Legend` tab provides you with a list of widgets you
+can embed within the layer tree in the Layers panel. The idea is to have a
+way to quickly access some actions that are often used with the layer (setup
+transparency, filtering, selection, style or other stuff...).
 
-By default, QGIS provides transparency widget but this can be extended by plugins
-registering their own widgets and assign custom actions to layers they manage.
+By default, QGIS provides transparency widget but this can be extended by
+plugins registering their own widgets and assign custom actions to layers
+they manage.
