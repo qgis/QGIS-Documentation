@@ -346,6 +346,21 @@ Appropriate for point geometry features, marker symbols have several
 
 .. Fixme: add some notes on what the vector field marker does/is
 
+
+.. note:: Requirements for a customizable SVG marker symbol
+
+ To have the possibility to change the colors of a :guilabel:`SVG marker`, you have
+ to add the placeholders ``param(fill)`` for fill color, ``param(outline)`` for
+ outline color and ``param(outline-width)`` for stroke width.
+ These placeholders can optionally be followed by a default value, e.g.:
+ 
+ .. code-block:: xml
+  
+  <svg width="100%" height="100%">
+  <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(stroke-width) 10" width="100" height="100">
+  </rect>
+  </svg>
+ 
 For each marker symbol layer type, you can set some of the following properties:
 
 * :guilabel:`Color`, using all the capabilities of the :ref:`color-selector` widget
@@ -455,10 +470,25 @@ The following settings are available:
 The Geometry generator
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Available with all type of symbols, the :guilabel:`geometry generator`symbol
+Available with all type of symbols, the :guilabel:`geometry generator` symbol
 layer allows to use expression syntax to generate a geometry on the fly during
 the rendering process. The resulting geometry does not have to match with the
 original geometry type and you can add several differently modified symbol
 layers on top of each other.
 
-.. todo: add some examples
+Some examples:
+
+.. code-block:: sql
+
+  -- render the centroid of a feature
+  centroid( $geometry, 100 ) 
+  -- visually overlap features within a 100 map units distance from a point
+  -- feature, i.e generate a 100m buffer around the point
+  buffer( $geometry, 100 )
+  -- Given polygon layer1( id1, layer2_id, ...) and layer2( id2, fieldn...)
+  -- render layer1 with a line joining centroids of both where layer2_id = id2
+  make_line( centroid( $geometry ),
+             centroid( geometry( get_feature( 'layer2', 'id2', attribute(
+                 $currentfeature, 'layer2_id') ) )
+           ) 
+
