@@ -26,7 +26,7 @@ the filename, removing its extension and replacing underscores with blank spaces
 Let's have the following code, which calculates the Topographic Wetness Index
 (TWI) directly from a DEM
 
-::
+.. code-block:: python
 
     ##dem=raster
     ##twi=output raster

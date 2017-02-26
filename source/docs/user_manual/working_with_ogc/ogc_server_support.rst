@@ -59,22 +59,22 @@ all from source, please refer to the URLs above.
 
 Firstly, add the following debian GIS repository:
 
-::
+.. code-block:: bash
 
   $ cat /etc/apt/sources.list.d/debian-gis.list
   deb http://qgis.org/debian trusty main
   deb-src http://qgis.org/debian trusty main
 
-  $ # Add keys
+  # Add keys
   $ sudo gpg --keyserver keyserver.ubuntu.com --recv-key 3FF5FFCAD71472C4
   $ sudo gpg --export --armor 3FF5FFCAD71472C4 | sudo apt-key add -
 
-  $ # Update package list
+  # Update package list
   $ sudo apt-get update && sudo apt-get upgrade
 
 Now, install QGIS Server:
 
-::
+.. code-block:: bash
 
   $ sudo apt-get install qgis-server python-qgis
 
@@ -82,12 +82,12 @@ Installation of a HelloWorld example plugin for testing the servers. You create
 a directory to hold server plugins. This will be specified in the virtual host
 configuration and passed on to the server through an environment variable:
 
-::
+.. code-block:: bash
 
   $ sudo mkdir -p /opt/qgis-server/plugins
   $ cd /opt/qgis-server/plugins
   $ sudo wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
-  $ # In case unzip was not installed before:
+  # In case unzip was not installed before:
   $ sudo apt-get install unzip
   $ sudo unzip master.zip
   $ sudo mv qgis-helloserver-master HelloServer
@@ -95,7 +95,7 @@ configuration and passed on to the server through an environment variable:
 Install the Apache server in a separate virtual host listening on port 80.
 Enable the rewrite module to pass HTTP BASIC auth headers:
 
-::
+.. code-block:: bash
 
   $ sudo a2enmod rewrite
   $ cat /etc/apache2/conf-available/qgis-server-port.conf
@@ -103,11 +103,11 @@ Enable the rewrite module to pass HTTP BASIC auth headers:
   $ sudo a2enconf qgis-server-port
 
 This is the virtual host configuration, stored in
-:file:`/etc/apache2/sites-available/001-qgis-server.conf` :
+:file:`/etc/apache2/sites-available/001-qgis-server.conf`:
 
-::
+.. code-block:: apache
 
-  <VirtualHost *:80>
+   <VirtualHost *:80>
     ServerAdmin webmaster@localhost
     DocumentRoot /var/www/html
 
@@ -143,14 +143,14 @@ This is the virtual host configuration, stored in
 
 Now enable the virtual host and restart Apache:
 
-::
+.. code-block:: bash
 
   $ sudo a2ensite 001-qgis-server
   $ sudo service apache2 restart
 
 Test the server with the HelloWorld plugin:
 
-::
+.. code-block:: bash
 
   $ wget -q -O - "http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=HELLO"
   HelloServer!
@@ -164,7 +164,8 @@ You can have a look at the default GetCapabilities of the QGIS server at:
    If you work with a feature that has many nodes then modifying and adding a
    new feature will fail. In this case it is possible to insert the following
    code into the :file:`001-qgis-server.conf` file:
-   ::
+   
+   .. code-block:: apache
 
      <IfModule mod_fcgid.c>
      FcgidMaxRequestLen 26214400
@@ -527,7 +528,9 @@ of the contained composer maps and labels.
 Example:
 
 The published project has two composer maps. In the `GetProjectSettings` response,
-they are listed as possible print templates::
+they are listed as possible print templates:
+
+.. code-block:: xml
 
     <WMS_Capabilities>
     ...
@@ -672,7 +675,9 @@ To log requests sent to the server, set the following environment variables:
   * 1 WARNING,
   * 2 CRITICAL (log just critical errors, suitable for production purposes).
 
-  Example::
+  Example:
+  
+  .. code-block:: apache
 
     SetEnv QGIS_SERVER_LOG_FILE /var/tmp/qgislog.txt
     SetEnv QGIS_SERVER_LOG_LEVEL 0
@@ -736,7 +741,9 @@ Connection to service file
 
 In order to make apache aware of the PostgreSQL service file (see the
 :ref:`pg-service-file` section) you need to make
-your :file:`*.conf` file look like::
+your :file:`*.conf` file look like:
+
+.. code-block:: apache
 
    SetEnv PGSERVICEFILE /home/web/.pg_service.conf
 
@@ -758,27 +765,31 @@ Doing this on desktop systems is usually trivial (double clicking the fonts).
 
 For linux, if you don't have a desktop environment installed (or you prefer the command line) you need to:
 
-* On Debian based systems::
+* On Debian based systems:
 
-   sudo su
-   mkdir -p /usr/local/share/fonts/truetype/myfonts && cd /usr/local/share/fonts/truetype/myfonts
+  .. code-block:: bash
 
-   # copy the fonts from their location
-   cp /fonts_location/* .
-
-   chown root *
-   cd .. && fc-cache -f -v
-
-* On Fedora based systems::
-
-   sudo su
-   mkdir /usr/share/fonts/myfonts && cd /usr/share/fonts/myfonts
+   $ sudo su
+   $ mkdir -p /usr/local/share/fonts/truetype/myfonts && cd /usr/local/share/fonts/truetype/myfonts
 
    # copy the fonts from their location
-   cp /fonts_location/* .
+   $ cp /fonts_location/* .
 
-   chown root *
-   cd .. && fc-cache -f -v
+   $ chown root *
+   $ cd .. && fc-cache -f -v
+
+* On Fedora based systems:
+
+  .. code-block:: bash
+
+   $ sudo su
+   $ mkdir /usr/share/fonts/myfonts && cd /usr/share/fonts/myfonts
+
+   # copy the fonts from their location
+   $ cp /fonts_location/* .
+
+   $ chown root *
+   $ cd .. && fc-cache -f -v
 
 Environment variables
 ---------------------
@@ -787,13 +798,13 @@ You can configure some aspects of QGIS server by setting **environment
 variables**. For example, to set QGIS server on Apache to use
 /path/to/config/QGIS/QGIS2.ini settings file, add to Apache config:
 
-::
+.. code-block:: apache
 
   SetEnv QGIS_OPTIONS_PATH "/path/to/config/"
 
 or, if using fcgi:
 
-::
+.. code-block:: apache
 
   FcgidInitialEnv QGIS_OPTIONS_PATH "/path/to/config/"
 

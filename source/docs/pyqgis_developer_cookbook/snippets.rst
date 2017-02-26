@@ -55,7 +55,7 @@ active layer
 How to access attribute table of selected features
 --------------------------------------------------
 
-::
+.. code-block:: python
 
   def changeValue(self, value):
     layer = self.iface.activeLayer()
@@ -63,16 +63,17 @@ How to access attribute table of selected features
       nF = layer.selectedFeatureCount()
       if (nF > 0):
         layer.startEditing()
-      ob = layer.selectedFeaturesIds()
-      b = QVariant(value)
-      if (nF > 1):
-        for i in ob:
-        layer.changeAttributeValue(int(i), 1, b) # 1 being the second column
+        ob = layer.selectedFeaturesIds()
+        b = QVariant(value)
+        if (nF > 1):
+          for i in ob:
+          layer.changeAttributeValue(int(i), 1, b) # 1 being the second column
+        else:
+          layer.changeAttributeValue(int(ob[0]), 1, b) # 1 being the second column
+        layer.commitChanges()
       else:
-        layer.changeAttributeValue(int(ob[0]), 1, b) # 1 being the second column
-      layer.commitChanges()
-      else:
-        QMessageBox.critical(self.iface.mainWindow(), "Error", "Please select at least one feature from current layer")
+        QMessageBox.critical(self.iface.mainWindow(), "Error",
+          "Please select at least one feature from current layer")
     else:
       QMessageBox.critical(self.iface.mainWindow(), "Error", "Please select a layer")
 
