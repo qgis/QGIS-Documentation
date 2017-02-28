@@ -22,7 +22,7 @@ QGIS GUI
 When QGIS starts, you are presented with the GUI as shown in the figure (the
 numbers 1 through 5 in yellow circles are discussed below).
 
-.. _fig_startup:
+.. _figure_startup:
 
 .. figure:: /static/user_manual/introduction/startup.png
    :align: center
@@ -111,6 +111,7 @@ Menu Option                                                           Shortcut  
 |capturePoint| :guilabel:`Add Feature`                                :kbd:`Ctrl+.`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |moveFeature| :guilabel:`Move Feature(s)`                             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |deleteSelected| :guilabel:`Delete Selected`                          \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|multiEdit| :guilabel:`Modify Attributes of Selected Features`        \                     see :ref:`calculate_fields_values`          :guilabel:`Digitizing`
 |rotateFeature| :guilabel:`Rotate Feature(s)`                         \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |simplifyFeatures| :guilabel:`Simplify Feature`                       \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |addRing| :guilabel:`Add Ring`                                        \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
