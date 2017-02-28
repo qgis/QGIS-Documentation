@@ -284,6 +284,13 @@ dialog. It indeed offers you a quick and handy way to define the rendering and t
 behavior of a layer, and to visualize its effects without opening the layer
 properties dialog.
 
+Besides avoiding you dealing with the modal and blocking dialog of the layer
+properties, it also avoids you cluttering the screen with features dialogs given
+that it embeds most of them (color selector, effects properties, rule edit,
+label substitution...): e.g., clicking color buttons inside the layer style panel
+causes the color selector dialog to be opened inside the layer style panel itself
+rather than as a separate dialog. 
+
 From a drop-down list of current layers in the layer panel, select an item and:
 
 * set its symbology, transparency, and histogram in case of raster layer. These
