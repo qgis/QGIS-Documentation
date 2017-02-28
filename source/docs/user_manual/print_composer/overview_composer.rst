@@ -157,9 +157,12 @@ and :guilabel:`Atlas generation`.
   item. Click the |select| :sup:`Select/Move item` icon to select
   an item (e.g., legend, scale bar or label) on the canvas. Then click the
   :guilabel:`Item Properties` tab and customize the settings for the selected
-  item.
+  item (see :ref:`composer_items` for detailed information on each item
+  settings).
 * The :guilabel:`Atlas generation` tab allows you to enable the generation of an
-  atlas for the current Composer and gives access to its parameters.
+  atlas for the current Composer and gives access to its parameters
+  (see :ref:`atlas_generation` for detailed information on atlas
+  generation usage).
 
 
 In the bottom part of the Print Composer window, you can find a status bar with
@@ -359,6 +362,7 @@ To maximise the space available to interact with a composition you can use
    interact by pressing :kbd:`F11` or using :menuselection:`View -->` |checkbox|
    :guilabel:`Toggle full screen`.
 
+.. _composer_composition_tab:
 
 Composition Tab
 ---------------
@@ -447,6 +451,27 @@ also set the spacing, offset and snap tolerance of the grid as much as its style
 and color. These options are applied by default to any new print composer.
 
 
+Variables
+.........
+
+The :guilabel:`Variables` lists all the variables available at
+the composition's level (which includes all global and project's variables).
+
+It also allows the user to manage composition-level variables. Click the
+|signPlus| button to add a new custom composition-level variable. Likewise,
+select a custom composition-level variable from the list and click the
+|signMinus| button to remove it.
+
+More information on variables usage in the General Tools
+:ref:`general_tools_variables` section.
+
+.. _figure_composition_variables:
+
+.. figure:: /static/user_manual/print_composer/composition_variables.png
+   :align: center
+
+   Variables editor in the Print Composer
+
 .. index:: Revert layout actions
 
 Command History Tab: Revert and Restore actions
@@ -470,11 +495,12 @@ the actions done after the selected one will be removed.
 
    Command history in the Print Composer
 
+.. _composer_items_tab:
 
 Items Tab
 ---------
 
-The :menuselection:`Items` tab offers some options to manage selection and
+The :guilabel:`Items` tab offers some options to manage selection and
 visibility of items.
 All the items added to the print composer canvas are shown in a list and
 selecting an item makes the corresponding row selected in the list as well as
@@ -496,4 +522,3 @@ Once you have found the correct position for an item, you can lock it by ticking
 the box in |locked| column. Locked items are **not** selectable on the canvas.
 Locked items can be unlocked by selecting the item in the :menuselection:`Items`
 tab and unchecking the tickbox or you can use the icons on the toolbar.
-
