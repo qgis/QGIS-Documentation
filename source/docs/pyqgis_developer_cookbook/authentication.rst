@@ -33,7 +33,8 @@ a developer perspective.
 
 Most of the following snippets are derived from the code of Geoserver Explorer
 plugin and its tests. This is the first plugin that used Authentication
-infrastructure. The plugin code and its tests can be found at this `link <https://github.com/boundlessgeo/qgis-geoserver-plugin>`_.
+infrastructure. The plugin code and its tests can be found at this
+`link <https://github.com/boundlessgeo/qgis-geoserver-plugin>`_.
 Other good code reference can be read from the authentication infrastructure
 `tests code <https://github.com/qgis/QGIS/blob/master/tests/src/python/test_qgsauthsystem.py>`_
 
@@ -79,8 +80,8 @@ QgsAuthManager the entry point
 ==============================
 
 The `QgsAuthManager <https://qgis.org/api/classQgsAuthManager.html>`_ singleton
-is the entry point to use the credentials stored in the QGIS encrypted :term:`Authentication
-DB`::
+is the entry point to use the credentials stored in the QGIS encrypted
+:term:`Authentication DB`::
 
   <user home>/.qgis2/qgis-auth.db
 
@@ -110,8 +111,8 @@ understand the snippet.
           assert authMgr.masterPasswordSame( "your master password" ), msg
       else:
           msg = 'Master password could not be set'
-          # The verify parameter check if the hash of the password was already
-          # saved in the authentication db
+          # The verify parameter check if the hash of the password was
+          # already saved in the authentication db
           assert authMgr.setMasterPassword( "your master password",
                                             verify=True), msg
   else:
@@ -309,9 +310,13 @@ QGIS data source in the following way:
 PKI examples with other data providers
 ......................................
 
-Other example can be read directly in the QGIS tests upstream as in:
-https://github.com/qgis/QGIS/blob/master/tests/src/python/test_authmanager_pki_ows.py
-https://github.com/qgis/QGIS/blob/master/tests/src/python/test_authmanager_pki_postgres.py
+Other example can be read directly in the QGIS tests upstream as in
+test_authmanager_pki_ows_ or test_authmanager_pki_postgres_.
+
+.. _test_authmanager_pki_ows: https://github.com/qgis/QGIS/blob/master/tests/src/python/test_authmanager_pki_ows.py
+.. _test_authmanager_pki_postgres: https://github.com/qgis/QGIS/blob/master/tests/src/python/test_authmanager_pki_postgres.py
+
+
 
 .. _Adapt_plugins_to_use_Auth_infrastructure:
 

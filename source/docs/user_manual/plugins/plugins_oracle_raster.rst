@@ -21,7 +21,7 @@ database product being installed and working on your machine. While Oracle is
 proprietary software, they provide their software free for development and testing
 purposes. Here is one simple example of how to load raster images to GeoRaster:
 
-::
+.. code-block:: bash
 
   $ gdal_translate -of georaster input_file.tif geor:scott/tiger@orcl
 
@@ -110,15 +110,15 @@ context.
 
 The following is an example using ``gdaladdo``:
 
-::
+.. code-block:: bash
 
-   gdaladdo georaster:scott/tiger@orcl,georaster\_table,georaster,georid=6 -r
+   $ gdaladdo georaster:scott/tiger@orcl,georaster\_table,georaster,georid=6 -r
    nearest 2 4 6 8 16 32
 
 
 This is an example using PL/SQL:
 
-::
+.. code-block:: plpgsql
 
    $ sqlplus scott/tiger
    SQL> DECLARE

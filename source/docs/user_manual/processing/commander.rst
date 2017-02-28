@@ -104,7 +104,9 @@ the filename of the layer to load.
   def load(*args):
     processing.load(args[0])
 
-If you want to load the layer in ``/home/myuser/points.shp``, type in the Commander
-text box::
+If you want to load the layer in ;file:`/home/myuser/points.shp`, type in the
+Commander text box:
 
-  ``load /home/myuser/points.shp``
+::
+
+  load /home/myuser/points.shp

@@ -33,11 +33,12 @@ There are several options for creating a geometry:
 
 * from coordinates
 
-  ::
+  .. code-block:: python
 
     gPnt = QgsGeometry.fromPoint(QgsPoint(1,1))
     gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])
-    gPolygon = QgsGeometry.fromPolygon([[QgsPoint(1, 1), QgsPoint(2, 2), QgsPoint(2, 1)]])
+    gPolygon = QgsGeometry.fromPolygon([[QgsPoint(1, 1), QgsPoint(2, 2),
+                                        QgsPoint(2, 1)]])
 
   Coordinates are given using :class:`QgsPoint` class.
 
@@ -98,8 +99,8 @@ vector type. How to use accessors
   >>> gPolygon.asPolygon()
   [[(1, 1), (2, 2), (2, 1), (1, 1)]]
 
-Note: the tuples (x,y) are not real tuples, they are :class:`QgsPoint` objects,
-the values are accessible with :func:`x` and :func:`y` methods.
+.. note:: The tuples (x,y) are not real tuples, they are :class:`QgsPoint`
+   objects, the values are accessible with :func:`x` and :func:`y` methods.
 
 For multipart geometries there are similar accessor functions:
 :func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`.
@@ -119,7 +120,7 @@ Here you have a small example that combines iterating over the features in a
 given layer and performing some geometric computations based on their
 geometries.
 
-::
+.. code-block:: python
 
   # we assume that 'layer' is a polygon layer
   features = layer.getFeatures()
@@ -134,7 +135,7 @@ distance calculation, the :class:`QgsDistanceArea` class can be used. If
 projections are turned off, calculations will be planar, otherwise they'll be
 done on the ellipsoid. 
 
-::
+.. code-block:: python
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')

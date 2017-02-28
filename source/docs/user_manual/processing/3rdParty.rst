@@ -230,7 +230,7 @@ all the algorithms that you might like to incorporate into QGIS will use or
 generate spatial data, knowledge of spatial packages like ``maptools`` and,
 especially, ``sp``, is mandatory.
 
-::
+.. code-block:: python
 
     ##polyg=vector
     ##numpoints=number 10
@@ -278,7 +278,7 @@ to open the file before performing any operation on the data it contains.
 With the above information, we can now understand the first line of our first
 example script (the first line not starting with a Python comment).
 
-::
+.. code-block:: python
 
     pts=spsample(polyg,numpoints,type="random")
 
@@ -313,7 +313,7 @@ lines will not be shown. For instance, here is the description file of an
 algorithm that performs a normality test on a given field (column) of the
 attributes of a vector layer:
 
-::
+.. code-block:: python
 
     ##layer=vector
     ##field=field layer
@@ -324,10 +324,10 @@ attributes of a vector layer:
 The output of the last line is printed, but the output of the first is not (and
 neither are the outputs from other command lines added automatically by QGIS).
 
-If your algorithm creates any kind of graphics (using the ``plot()`` method), add
-the following line:
+If your algorithm creates any kind of graphics (using the ``plot()`` method),
+add the following line:
 
-::
+.. code-block:: python
 
     ##showplots
 

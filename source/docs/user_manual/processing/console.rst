@@ -232,39 +232,39 @@ You can create your own algorithms by writing the corresponding Python code and
 adding a few extra lines to supply additional information needed to define the
 semantics of the algorithm.
 You can find a :guilabel:`Create new script` menu under the :guilabel:`Tools`
-group in the :guilabel:`Script` algorithms block of the toolbox. Double-click on
-it to open the script editing dialog. That's where you should type your code.
-Saving the script from there in the :file:`scripts` folder (the default folder when
-you open the save file dialog) with :file:`.py` extension will automatically
-create the corresponding algorithm.
+group in the :guilabel:`Script` algorithms block of the toolbox. Double-click
+on it to open the script editing dialog. That's where you should type your code.
+Saving the script from there in the :file:`scripts` folder (the default folder
+when you open the save file dialog) with :file:`.py` extension will
+automatically create the corresponding algorithm.
 
 The name of the algorithm (the one you will see in the toolbox) is created from
 the filename, removing its extension and replacing low hyphens with blank spaces.
 
-Let's have a look at the following code, which calculates the Topographic Wetness Index
-(TWI) directly from a DEM.
+Let's have a look at the following code, which calculates the Topographic
+Wetness Index (TWI) directly from a DEM.
 
-::
+.. code-block:: python
 
-    ##dem=raster
-    ##twi=output
-    ret_slope = processing.runalg("saga:slopeaspectcurvature", dem, 0, None,
-                    None, None, None, None)
-    ret_area = processing.runalg("saga:catchmentarea(mass-fluxmethod)", dem,
-                    0, False, False, False, False, None, None, None, None, None)
-    processing.runalg("saga:topographicwetnessindex(twi), ret_slope['SLOPE'],
-                    ret_area['AREA'], None, 1, 0, twi)
+   ##dem=raster
+   ##twi=output
+   ret_slope = processing.runalg("saga:slopeaspectcurvature", dem, 0, None,
+                   None, None, None, None)
+   ret_area = processing.runalg("saga:catchmentarea(mass-fluxmethod)", dem,
+                   0, False, False, False, False, None, None, None, None, None)
+   processing.runalg("saga:topographicwetnessindex(twi), ret_slope['SLOPE'],
+                   ret_area['AREA'], None, 1, 0, twi)
 
-As you can see, the calculation involves three algorithms, all of them coming from SAGA. The last
-one calculates the TWI, but it needs a slope layer and a flow accumulation
-layer. We do not have these layers, but since we have the DEM, we can calculate them by
-calling the corresponding SAGA algorithms.
+As you can see, the calculation involves three algorithms, all of them coming
+from SAGA. The last one calculates the TWI, but it needs a slope layer and a
+flow accumulation layer. We do not have these layers, but since we have the DEM,
+we can calculate them by calling the corresponding SAGA algorithms.
 
 The part of the code where this processing takes place is not difficult to
 understand if you have read the previous sections in this chapter. The first
 lines, however, need some additional explanation. They provide the
-information that is needed to turn your code into an algorithm that can be run from any
-of the GUI components, like the toolbox or the graphical modeler.
+information that is needed to turn your code into an algorithm that can be run
+from any of the GUI components, like the toolbox or the graphical modeler.
 
 These lines start with a double Python comment symbol (``##``) and have the
 following structure:
@@ -273,8 +273,8 @@ following structure:
 
     [parameter_name]=[parameter_type] [optional_values]
 
-Here is a list of all the parameter types that are supported in processing scripts,
-their syntax and some examples.
+Here is a list of all the parameter types that are supported in processing
+scripts, their syntax and some examples.
 
 * ``raster``. A raster layer.
 * ``vector``. A vector layer.
@@ -304,9 +304,10 @@ if you want the user to see a parameter named ``A numerical value``, you can use
 the variable name ``A_numerical_value``.
 
 Layers and table values are strings containing the file path of the corresponding
-object. To turn them into a QGIS object, you can use the ``processing.getObjectFromUri()``
-function. Multiple inputs also have a string value, which contains the file paths
-to all selected object, separated by semicolons (``;``).
+object. To turn them into a QGIS object, you can use the
+``processing.getObjectFromUri()`` function. Multiple inputs also have a string
+value, which contains the file paths to all selected object, separated by
+semicolons (``;``).
 
 Outputs are defined in a similar manner, using the following tags:
 

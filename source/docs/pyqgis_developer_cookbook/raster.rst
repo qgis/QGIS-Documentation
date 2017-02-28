@@ -23,7 +23,9 @@ values. Usual color image (e.g. aerial photo) is a raster consisting of red,
 blue and green band. Single band layers typically represent either continuous
 variables (e.g. elevation) or discrete variables (e.g. land use). In some
 cases, a raster layer comes with a palette and raster values refer to colors
-stored in the palette::
+stored in the palette:
+
+.. code-block:: python
 
   rlayer.width(), rlayer.height()
   (812, 301)
