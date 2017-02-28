@@ -313,8 +313,8 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 * :guilabel:`Preferred distance units` |radioButtonOn| ('Meters', 'Kilometers', 'Feet',
   'Yards', 'Miles', 'Nautical Miles', 'Degrees' or 'Map Units' )
 * :guilabel:`Preferred area units` |radioButtonOn| ('Square meters', 'Square
-   kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
-   'Acres', 'Square nautical miles', 'Square degrees" or 'Map Units')
+  kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
+  'Acres', 'Square nautical miles', 'Square degrees" or 'Map Units')
 * :guilabel:`Preferred angle units` |radioButtonOn| ('Degrees', 'Radians', 'Gon/gradians',
   'Minutes of arc', 'Seconds of arc' or 'Turns/revolutions')
 
