@@ -684,7 +684,7 @@ To log requests sent to the server, set the following environment variables:
 
 .. note::
 
-    * When using Fcgid module use FcgidInitialEnv instead of SetEnv!
+    * When using Fcgid module use ``FcgidInitialEnv`` instead of ``SetEnv``!
     * Server logging is also enabled if executable is compiled in release mode.
 
 
