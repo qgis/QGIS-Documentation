@@ -41,7 +41,8 @@ documentation is not included in this manual.
 Installed external python plugins are placed under :file:`~/.qgis2/python/plugins`
 folder. Home directory (denoted by above ``~``) on Windows is usually something
 like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
-or :file:`C:\\Users\\(user)`.
+or :file:`C:\\Users\\(user)`. On some platforms (e.g., macOS), the :file:`.qgis2`
+folder is hidden by default.
 
 Paths to Custom C++ plugins libraries can also be added under
 :menuselection:`Settings --> Options --> System`.
