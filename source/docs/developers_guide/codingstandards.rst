@@ -83,9 +83,8 @@ All dialogs should implement the following:
 
 * Tooltip help for all toolbar icons and other relevant widgets
 * WhatsThis help for all widgets on the dialog
-* An optional (though highly recommended) context sensitive Help button
-   that directs the user to the appropriate help page by launching their web
-   browser
+* An optional (though highly recommended) context sensitive Help button that
+  directs the user to the appropriate help page by launching their web browser
 
 C++ Files
 =========
@@ -131,9 +130,9 @@ example:
    ***************************************************************************/
 
 .. note:: There is a template for Qt Creator in git. To use it, copy it from
-  ``doc/qt_creator_license_template`` to a local location, adjust the
+  :file:`doc/qt_creator_license_template` to a local location, adjust the
   mail address and - if required - the name and configure QtCreator to use it:
-  ``Tools`` -> ``Options`` -> ``C++`` -> ``File Naming``.
+  :menuselection:`Tools --> Options --> C++ --> File Naming`.
 
 
 Variable Names
@@ -290,7 +289,7 @@ Prefer to put constants first in predicates.
 ``0 == value`` instead of ``value == 0``
 
 This will help prevent programmers from accidentally using ``=`` when they meant
-to use ``==``, which can introduce very subtle logic bugs.The compiler will
+to use ``==``, which can introduce very subtle logic bugs. The compiler will
 generate an error if you accidentally use ``=`` instead of ``==`` for comparisons
 since constants inherently cannot be assigned values.
 
