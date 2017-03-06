@@ -51,7 +51,7 @@ log, in a :guilabel:`Processing` tab.
 
 Third-party algorithms are usually executed by calling their
 command-line interfaces, which communicate with the user via the console.
-Although that console is not shown, usually a full dump of it is written to the log each
+Although that console is not shown, a full dump of it is written to the log each
 time you run one of those algorithms. To avoid cluttering the log with that
 information, you can disable it for each provider, looking for the corresponding
 option in the provider entry of the settings dialog.
