@@ -96,7 +96,7 @@ example of the XML file format.
 
   <?xml version="1.0" encoding="UTF-8"?>
   <qgsCSWConnections version="1.0">
-      <csw name="Data.gov CSW" url="http://catalog.data.gov/csw-all"/>
+      <csw name="Data.gov CSW" url="https://catalog.data.gov/csw-all"/>
       <csw name="Geonorge - National CSW service for Norway" url="http://www.geonorge.no/geonetwork/srv/eng/csw"/>
       <csw name="Geoportale Nazionale - Servizio di ricerca Italiano" url="http://www.pcn.minambiente.it/geoportal/csw"/>
       <csw name="LINZ Data Service" url="http://data.linz.govt.nz/feeds/csw"/>
