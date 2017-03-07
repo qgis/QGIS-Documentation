@@ -409,14 +409,15 @@ For the user guide they go into :file:`./resources/en/user_manual/`
 * don't resize them in an image editor, the size will be set into the rst files if necessary
   (downscaling the dimensions without properly upping the resolution > ugly)
 * cut the background
-* Set print size resolution to 135 dpi, eg in Gimp set the print resolution
-  (image > print size) and save. This way, if no size is set in the rst files,
-  images will be at original size in html and at a good print resolution in the PDF.
-  You can use ImageMagick convert command to do a batch of images:
+* make the top corners transparent if the background is not white
+* Set print size resolution to 135 dpi (e.g. in Gimp set the print resolution
+  :menuselection:`image --> print size` and save). This way, images will be at
+  original size in html and at a good print resolution in the PDF.
+  You can also use ImageMagick convert command to do a batch of images
 
 ::
 
- convert -units PixelsPerInch input.png -density 135 output.png
+  convert -units PixelsPerInch input.png -density 135 output.png
 
 * save them in png (no jpeg artifacts)
 * the screenshot should show the content according to what is described in the text
