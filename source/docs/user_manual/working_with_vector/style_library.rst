@@ -342,10 +342,7 @@ Appropriate for point geometry features, marker symbols have several
 * **SVG marker**: provides you with images from your SVG paths (set in
   :menuselection:`Settings --> Options --> System` menu) to render as marker symbol.
   Each SVG file colors and outline can be adapted.
-* **Vector Field marker**
-
-.. Fixme: add some notes on what the vector field marker does/is
-
+* **Vector Field marker** (see vector_field_marker_)
 
 .. note:: Requirements for a customizable SVG marker symbol
 
@@ -492,3 +489,27 @@ Some examples:
                  $currentfeature, 'layer2_id') ) )
            ) 
 
+.. _vector_field_marker:
+
+The Vector Field Marker
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The vector field marker is used to display vector field data such as earth
+deformation, tidal flows, and the like. It displays the vectors as lines
+(preferably arrows) that are scaled and oriented according to selected
+attributes of data points. It can only be used to render point data - line and
+polygon layers are not drawn by this symbology.
+
+The vector field is defined by attributes in the data, which can represent the
+field either by:
+
+* **cartesian** components (``x`` and ``y`` components of the field),
+* or **polar** coordinates: In this case, attributes define ``Length`` and
+  ``Angle``. The angle may be measured either clockwise from north, or
+  Counterclockwise from east, and may be either in degrees or radians.
+* or as **height only** data, which displays a vertical arrow scaled using an
+  attribute of the data. This is appropriate for displaying the vertical
+  component of deformation, for example.
+
+The magnitude of field can be scaled up or down to an appropriate size for
+viewing the field.
