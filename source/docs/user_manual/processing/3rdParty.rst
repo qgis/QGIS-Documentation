@@ -13,17 +13,22 @@ Configuring external applications
       :local:
 
 The processing framework can be extended using additional applications.
-Currently, SAGA, GRASS and R are supported. Algorithms relying on an external applications are managed by their own algorithm provider. Additional providers can be found as separate plugins, and installed using the QGIS Plugin Manager
+Currently, SAGA, GRASS and R are supported. Algorithms relying on an
+external applications are managed by their own algorithm provider.
+Additional providers can be found as separate plugins, and installed using
+the QGIS Plugin Manager.
 
-This section will show you how to configure the Processing framework to include these additional
-applications, and it will explain some particular features of the algorithms based
-on them. Once you have correctly configured the system, you will be able to
-execute external algorithms from any component like the toolbox or the
-graphical modeler, just like you do with any other geoalgorithm.
+This section will show you how to configure the Processing framework to
+include these additional applications, and it will explain some particular
+features of the algorithms based on them. Once you have correctly configured
+the system, you will be able to execute external algorithms from any
+component like the toolbox or the graphical modeler, just like you do with
+any other geoalgorithm.
 
-By default, all algorithms that rely on an external application not shipped with
-QGIS are not enabled. You can enable them in the settings dialog.
-Make sure that the corresponding application is already installed in your system.
+By default, all algorithms that rely on an external application not shipped
+with QGIS are not enabled. You can enable them in the settings dialog.
+Make sure that the corresponding application is already installed in your
+system.
 
 
 A note for Windows users
@@ -35,16 +40,18 @@ QGIS in your system using the standalone installer. That will automatically
 install SAGA and GRASS in your system and configure them so they can be
 run from QGIS. All the algorithms from these providers will
 be ready to be run without needing any further configuration. If installing
-through OSGeo4W application, make sure you select for installation SAGA and GRASS as well.
+through OSGeo4W application, make sure you select for installation SAGA and
+GRASS as well.
 
 
 A note on file formats
 ----------------------
 
-When using an external software, opening a file in QGIS does not mean that it can
-be opened and processed as well in that other software. In most cases, other software can read
-what you have opened in QGIS, but in some cases, that might not be true. When
-using databases or uncommon file formats, whether for raster or vector layers,
+When using an external software, opening a file in QGIS does not mean that
+it can be opened and processed as well in that other software. In most
+cases, other software can read what you have opened in QGIS, but in some
+cases, that might not be true. When using databases or uncommon file
+formats, whether for raster or vector layers,
 problems might arise. If that happens, try to use well-known file formats that
 you are sure are understood by both programs, and check the console output
 (in the history and log dialog) to know more about what is going wrong.
@@ -61,12 +68,12 @@ time, which might be significant if the layer has a large size, so do not be
 surprised if it takes more time to process a layer from a DB connection than it
 does to process one of a similar size stored in a shapefile.
 
-Providers not using external applications can process any layer that you can open
-in QGIS, since they open it for analysis through QGIS.
+Providers not using external applications can process any layer that you can
+open in QGIS, since they open it for analysis through QGIS.
 
 Regarding output formats, all formats supported by QGIS as output can be used,
-both for raster and vector layers. Some providers do not support certain formats,
-but all can export to common  formats that can later be transformed
+both for raster and vector layers. Some providers do not support certain
+formats, but all can export to common  formats that can later be transformed
 by QGIS automatically. As in the case of input layers, if this conversion is
 needed, that might increase the processing time.
 
@@ -74,62 +81,64 @@ needed, that might increase the processing time.
 A note on vector layer selections
 ---------------------------------
 
-External applications may also be made aware of the selections that exist in vector layers
-within QGIS. However, that requires rewriting all input vector layers, just as
-if they were originally in a format not supported by the external application.
-Only when no selection exists, or the *Use only selected features* option is not
-enabled in the processing general configuration, can a layer be directly passed to
-an external application.
+External applications may also be made aware of the selections that exist in
+vector layers within QGIS. However, that requires rewriting all input vector
+layers, just as if they were originally in a format not supported by the
+external application. Only when no selection exists, or the *Use only
+selected features* option is not enabled in the processing general
+configuration, can a layer be directly passed to an external application.
 
-In other cases, exporting only selected features is needed, which causes execution
-times to be longer.
+In other cases, exporting only selected features is needed, which causes
+execution times to be longer.
 
 SAGA
 ----
 
 SAGA algorithms can be run from QGIS if you have SAGA installed in your system
-and you configure the processing framework properly so it can find SAGA executables. In particular,
-the SAGA command-line executable is needed to run SAGA algorithms.
+and you configure the processing framework properly so it can find SAGA
+executables. In particular, the SAGA command-line executable is needed to
+run SAGA algorithms.
 
 
-If you are running Windows, both the stand-alone installer and the OSGeo4W installer
-include SAGA along with QGIS, and the path is automatically configured, so there is
-no need to do anything else.
+If you are running Windows, both the stand-alone installer and the OSGeo4W
+installer include SAGA along with QGIS, and the path is automatically
+configured, so there is no need to do anything else.
 
-If you have installed SAGA yourself and your QGIS installer did not include it, the path to the
-SAGA executable must be configured. To do this, open the
-configuration dialog. In the :guilabel:`SAGA` block, you will find a setting named
-:guilabel:`SAGA Folder`. Enter the path to the folder where SAGA is installed.
-Close the configuration dialog, and now you are ready to run SAGA algorithms from
-QGIS.
+If you have installed SAGA yourself and your QGIS installer did not include
+it, the path to the SAGA executable must be configured. To do this, open the
+configuration dialog. In the :guilabel:`SAGA` block, you will find a setting
+named :guilabel:`SAGA Folder`. Enter the path to the folder where SAGA is
+installed. Close the configuration dialog, and now you are ready to run SAGA
+algorithms from QGIS.
 
-If you are running Linux, SAGA binaries
-are not included with Processing, so you have to download and install the software
-yourself. Please check the SAGA website for more information.
+If you are running Linux, SAGA binaries are not included with Processing, so
+you have to download and install the software yourself. Please check the
+SAGA website for more information.
 
-In this case, there is no need to configure the path to the SAGA executable, and you will not
-see those folder entries. Instead, you must make sure that SAGA is properly installed
-and its folder is added to the PATH environment variable. Just open a console and
-type ``saga_cmd`` to check that the system can find where the SAGA binaries are
-located.
+In this case, there is no need to configure the path to the SAGA
+executable, and you will not see those folder entries. Instead, you must
+make sure that SAGA is properly installed and its folder is added to the
+PATH environment variable. Just open a console and type ``saga_cmd`` to
+check that the system can find where the SAGA binaries are located.
 
 About SAGA grid system limitations
 ..................................
 
 Most SAGA algorithms that require several input raster layers require them to
-have the same grid system. That is, they must cover the same geographic area and have
-the same cell size, so their corresponding grids match. When calling SAGA
-algorithms from QGIS, you can use any layer, regardless of its cell size and
-extent. When multiple raster layers are used as input for a SAGA algorithm,
-QGIS resamples them to a common grid system and then passes them to SAGA
-(unless the SAGA algorithm can operate with layers from different grid systems).
+have the same grid system. That is, they must cover the same geographic
+area and have the same cell size, so their corresponding grids match. When
+calling SAGA algorithms from QGIS, you can use any layer, regardless of its
+cell size and extent. When multiple raster layers are used as input for a
+SAGA algorithm, QGIS resamples them to a common grid system and then passes
+them to SAGA (unless the SAGA algorithm can operate with layers from
+different grid systems).
 
-The definition of that common grid system is controlled by the user, and you will
-find several parameters in the SAGA group of the settings window to do so. There
-are two ways of setting the target grid system:
+The definition of that common grid system is controlled by the user, and you
+will find several parameters in the SAGA group of the settings window to do
+so. There are two ways of setting the target grid system:
 
-* Setting it manually. You define the extent by setting the values of the following
-  parameters:
+* Setting it manually. You define the extent by setting the values of the
+  following parameters:
 
   - :guilabel:`Resampling min X`
   - :guilabel:`Resampling max X`
@@ -159,7 +168,7 @@ RGB image' algorithm (which creates three images from an RGB image) or the 'SAGA
 - Tools/Extract band' algorithm (to extract a single band).
 
 Limitations in cell size
-.........................
+........................
 
 SAGA assumes that raster layers have the same cell size in the X and Y axis. If
 you are working with a layer with different values for horizontal and vertical
@@ -357,12 +366,13 @@ GRASS
 Configuring GRASS is not much different from configuring SAGA. First, the path
 to the GRASS folder has to be defined, but only if you are running Windows.
 
-By default, the Processing framework tries to configure its GRASS connector to use the GRASS
-distribution that ships along with QGIS. This should work without problems in
-most systems, but if you experience problems, you might have to configure the GRASS connector manually.
-Also, if you want to use a different GRASS installation, you can change that setting
-and point to the folder where the other version is installed. GRASS 7 is needed
-for algorithms to work correctly.
+By default, the Processing framework tries to configure its GRASS connector
+to use the GRASS distribution that ships along with QGIS. This should work
+without problems in most systems, but if you experience problems, you might
+have to configure the GRASS connector manually.
+Also, if you want to use a different GRASS installation, you can change that
+setting and point to the folder where the other version is installed. GRASS
+7 is needed for algorithms to work correctly.
 
 If you are running Linux, you just have to make sure that GRASS is correctly
 installed, and that it can be run without problem from a console.
@@ -370,7 +380,6 @@ installed, and that it can be run without problem from a console.
 GRASS algorithms use a region for calculations. This region can be defined
 manually using values similar to the ones found in the SAGA configuration, or
 automatically, taking the minimum extent that covers all the input layers used
-to execute the algorithm each time. If the latter approach is the behavior you prefer, just
-check the :guilabel:`Use min covering region` option in the GRASS configuration
-parameters.
-
+to execute the algorithm each time. If the latter approach is the behavior
+you prefer, just check the :guilabel:`Use min covering region` option in the
+GRASS configuration parameters.
