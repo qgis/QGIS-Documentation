@@ -78,7 +78,9 @@ To all listed Catalogue Service entries, click the dropdown select box.
 To add a Catalogue Service entry, click the **[New]** button, and enter a
 :guilabel:`Name` for the service, as well as the :guilabel:`URL` (endpoint).
 Note that only the base URL is required (not a full GetCapabilities URL).
-Clicking **[OK]** will add the service to the list of entries.
+If the CSW requires authentication, enter the appropriate :guilabel:`User name`
+and :guilabel:`Password` credentials. Clicking **[OK]** will add the service to
+the list of entries.
 
 To edit an existing Catalogue Service entry, select the entry you would like to
 edit and click the **[Edit]** button, and modify the :guilabel:`Name` or
