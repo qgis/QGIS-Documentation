@@ -257,7 +257,7 @@ rst_epilog = """
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
 .. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
-   :width: 1.5em    
+   :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
 .. |addGCPPoint| image:: /static/common/mActionAddGCPPoint.png
@@ -341,6 +341,12 @@ rst_epilog = """
 .. |buffer| image:: /static/common/buffer.png
    :width: 1.5em
 .. |cad| image:: /static/common/cad.png
+   :width: 1.5em
+.. |cadConstruction| image:: /static/common/cad_construction.png
+   :width: 1.5em
+.. |cadParallel| image:: /static/common/cad_parallel.png
+   :width: 1.5em
+.. |cadPerpendicular| image:: /static/common/cad_perpendicular.png
    :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
@@ -432,7 +438,7 @@ rst_epilog = """
 .. |dateTimeEdit|  image:: /static/common/datetimeedit.png
    :width: 1.5em
 .. |db2| image:: /static/common/mIconDb2.png
-   :width: 1.5em   
+   :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |defineProjection| image:: /static/common/define_projection.png

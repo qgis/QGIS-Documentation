@@ -1002,8 +1002,7 @@ geometry.
 
    The Advanced Digitizing panel
 
-.. note:: The tools are not enabled if the map view is in geographic
-coordinates.
+.. note:: The tools are not enabled if the map view is in geographic coordinates.
 
 The Advanced Digitizing panel can be open either with a right-click on the
 toolbar and choose Advanced Digitizing panel or in :menuselection:`View -> Panel ->
@@ -1099,7 +1098,7 @@ All the tools described above can be combined with the *perpendicular* and
 *parallel* tools. These two tools allow to draw a feature perfectly perpendicular
 and parallel to another feature.
 
-During the editing click on the *perpendicular* (keyboard shortcut :kbd:`p`) tool
+During the editing click on the |cadPerpendicular| icon (keyboard shortcut :kbd:`p`)
 to activate it and click on the line you want to draw the perpendicular feature:
 you should see a blue dotted line where you feature will be snapped:
 
@@ -1109,7 +1108,7 @@ you should see a blue dotted line where you feature will be snapped:
    Perpendicular digitizing
 
 To draw a *parallel* feature the steps are exactly the same: click on the
-*parallel* button (keyboard shortcut :kbd:`p`), click on the line you want to be
+|cadParallel| icon (keyboard shortcut :kbd:`p`), click on the line you want to be
 parallel and start drawing your feature:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_parallel.png
@@ -1121,6 +1120,39 @@ parallel and start drawing your feature:
 Actually these two tools just find the right angle of the perpendicular and
 parallel angle and lock this parameter during your editing.
 
+
+Draw points at given distances
+------------------------------
+The Advanced Digitizing Tool can be used also for points layer, for example to
+draw some points at exact distances among them.
+
+As for the polygon layers described above, remember to activate the snapping
+options.
+
+With an existing point in the canvas and the snapping mode correctly activated,
+you can easily draw other points at given distances and angles from it.
+
+In addition to the |cad| button, you have to activate also the *construction*
+mode by clicking on the |cadConstruction| icon or with the :kbd:`c` keyboard
+shortcut.
+
+Click next to the point from which you want to calculate the distance and click on
+the *d* box (:kbd:`d` shortcut) enter the desired distance and hit Enter to lock
+the mouse position in the canvas:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point.png
+   :align: center
+
+   Parallel digitizing
+
+Before to add the new point, you have to exit the construction mode, just click
+:kbd:`c`. Now you can click in the canvas and the point will be placed at the
+given distance entered:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point_final.png
+   :align: center
+
+   Points at given distance
 
 
 .. index:: Create new layers
