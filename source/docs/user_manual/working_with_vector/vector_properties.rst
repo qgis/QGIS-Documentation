@@ -52,10 +52,11 @@ Layer Info
 Coordinate Reference System
 ---------------------------
 
-* Display the current coordinate reference system of the layer as a PROJ.4 string. You
-  can change the projection, selecting a recently used one in the drop-down list or
-  clicking on |setProjection| :sup:`Select CRS` button (see :ref:`crs_selector`).
-  Use this process only if the CRS applied to the layer is a wrong one or if none was applied.
+* Displays the layer's Coordinate Reference System (CRS) as a PROJ.4 string.
+  You can change the layer's CRS, selecting a recently used one
+  in the drop-down list or clicking on |setProjection| :sup:`Select CRS` button
+  (see :ref:`crs_selector`). Use this process only if the CRS applied to the
+  layer is a wrong one or if none was applied.
   If you wish to reproject your data into another CRS, rather use layer reprojection
   algorithms from Processing or :ref:`Save it into another layer <general_saveas>`.
 * Create a :guilabel:`Spatial Index` (only for OGR-supported formats)

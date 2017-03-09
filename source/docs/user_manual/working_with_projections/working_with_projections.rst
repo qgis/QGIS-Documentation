@@ -101,31 +101,33 @@ defined, it will be displayed as shown in :ref:`figure_vector_general`.
    :guilabel:`Set project CRS from Layer` redefines the project CRS using
    the layer's CRS.
 
-.. index:: CRS; On-the-fly reprojection
-.. _otf_reprojection:
+.. index:: CRS; On-the-fly transformation
+.. _otf_transformation:
 
-Define On The Fly (OTF) Reprojection
-====================================
+Define On The Fly (OTF) CRS Transformation
+==========================================
 
-QGIS supports OTF reprojection for both raster and vector data. However, OTF is
-not activated by default. When OTF is off, each layer is drawn using the
-coordinates as read from the data source. When on, the coordinates in each
-layer are projected to the coordinate reference system defined for the map canvas.
+QGIS supports on the fly CRS transformation for both raster and vector data.
+However, OTF is not activated by default. When OTF is off, each layer is drawn
+using the coordinates as read from the data source. When OTF is on, each layer's
+coordinates are transformed to the CRS of the project.
 
-There are three ways to enable On The Fly Reprojection:
+There are three ways to enable On The Fly CRS Transformation:
 
-* Select |projectProperties| :menuselection:`Project Properties --> CRS` from the
-  :menuselection:`Project` ( or |kde| :menuselection:`Settings`) menu. You can then
-  activate the |checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox
-  in the |crs| :guilabel:`CRS` tab and select the CRS to use (see :ref:`crs_selector`)
+* Select |projectProperties| :menuselection:`Project Properties --> CRS` from
+  the :menuselection:`Project` ( or |kde| :menuselection:`Settings`) menu. You
+  can then  activate the |checkbox| :guilabel:`Enable on the fly CRS
+  transformation (OTF)` checkbox in the |crs| :guilabel:`CRS` tab and select
+  the CRS to use (see :ref:`crs_selector`)
 * Click on the |geographic| :sup:`CRS status` icon in the lower right-hand
   corner of the status bar, leading you to the previous dialog.
 * Turn OTF on by default in the |crs| :guilabel:`CRS` tab of the
   :menuselection:`Settings --> Options` dialog by selecting |checkbox|
-  :guilabel:`Enable 'on the fly' reprojection by default` or :guilabel:`Automatically
-  enable 'on the fly' reprojection if layers have different CRS`.
+  :guilabel:`Enable 'on the fly' reprojection by default` or
+  :guilabel:`Automatically enable 'on the fly' reprojection if layers have
+  different CRS`.
 
-If you have already loaded a layer and you want to enable OTF projection, the
+If you have already loaded a layer and you want to enable OTF reprojection, the
 best practice is to open the |crs| :guilabel:`CRS` tab of the :guilabel:`Project
 Properties` dialog, activate the |checkbox| :guilabel:`Enable 'on the fly'
 CRS transformation` checkbox, and select a CRS.
