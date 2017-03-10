@@ -266,7 +266,8 @@ You can setup some parameters that apply to the global symbol:
 
 .. note::
 
-  The :ref:`Data-defined override <data-defined>` button beside the last layer-related
+  The :ref:`Data-defined override <data_defined>` button beside the last
+  layer-related
   parameters is inactive when setting the symbol from the Style manager dialog.
   When the symbol is connected to a map layer, this button offers access to the
   :ref:`size assistant <size_assistant>` dialog which helps to create proportional
