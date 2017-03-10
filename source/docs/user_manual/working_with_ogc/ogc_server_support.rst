@@ -383,7 +383,7 @@ Extra parameters supported by all request types
     defined it will use the MAP parameter in the request and finally look at
     the server executable directory.
 
-
+.. _`extra-getmap-parameters`:
 
 Extra parameters supported by the WMS GetMap request
 -----------------------------------------------------
@@ -449,6 +449,8 @@ OGC WMS 1.3.0 specification:
      :align: center
 
      Server response to a GetMap request with SELECTION parameter
+
+.. _`qgisserver-redlining`:
 
 REDLINING
 ---------
