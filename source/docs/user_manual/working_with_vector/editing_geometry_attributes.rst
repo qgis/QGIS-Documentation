@@ -989,11 +989,11 @@ otherwise QGIS is unable to connect them and thus traces a single straight line.
 The Advanced Digitizing panel
 =============================
 
-When capturing new geometries or geometry parts you also have the possibility to
-use the Advanced Digitizing panel. You can digitize lines exactly parallel or at
-a specific angle or lock lines to specific angles. Furthermore you can enter
-coordinates directly so that you can make a precise definition for your new
-geometry.
+When capturing, reshaping, splitting new or existing geometries you also have the
+possibility to use the Advanced Digitizing panel. You can digitize lines exactly
+parallel or at a specific angle or lock lines to specific angles. Furthermore you
+can enter coordinates directly so that you can make a precise definition for your
+new geometry.
 
 .. _figure_advanced_digitizing:
 
@@ -1005,17 +1005,16 @@ geometry.
 .. note:: The tools are not enabled if the map view is in geographic coordinates.
 
 The Advanced Digitizing panel can be open either with a right-click on the
-toolbar and choose Advanced Digitizing panel or in :menuselection:`View -> Panel ->
+toolbar and choose Advanced Digitizing panel or in :menuselection:`View --> Panel -->
 Advanced Digitizing Panel`.
-
-To start it, enable the panel from the Advanced Digitizing toolbar and click on
-the |cad| icon.
+Once the panel is visible in the toolbar, to activate the Advanced Digitizing
+tool just click on the the |cad| icon.
 
 Concepts
 --------
-The aim advanced digitizing tool is to lock coordinates,
-lengths and angles to lock the position of the mouse during the adding of new
-features to the layer.
+
+The aim of the Advanced Digitizing tool is to lock coordinates, lengths and angles
+when moving the mouse during the digitalization in the canvas.
 
 You can also create constraints with relative or absolute reference. Relative
 reference means that the next vertex constraint will be relative to the previous
@@ -1023,6 +1022,7 @@ vertex or segment.
 
 Absolute coordinates digitizing
 -------------------------------
+
 When drawing a new layer from scratch it is very useful to have the possibility
 to start the digitalization of the vertexes to given coordinates.
 
@@ -1074,6 +1074,7 @@ in this way the segment will follow the desired angle.
 
 Relative angular coordinates digitizing
 ---------------------------------------
+
 If you want to have distances and angles relative to an existing feature you can
 easily do this by combining the snapping option and the *d* (distance) and *a*
 (angle) boxes.
@@ -1094,13 +1095,16 @@ start at an existing vertex and will have a precise length and angle:
 
 Parallel and perpendiculars line
 --------------------------------
+
 All the tools described above can be combined with the *perpendicular* and
 *parallel* tools. These two tools allow to draw a feature perfectly perpendicular
 and parallel to another feature.
 
 During the editing click on the |cadPerpendicular| icon (keyboard shortcut :kbd:`p`)
-to activate it and click on the line you want to draw the perpendicular feature:
-you should see a blue dotted line where you feature will be snapped:
+to activate it and, **before drawing the perpendicular line, click on the line
+of the existing feature you want to be perpendicular** (the line of the existing
+feature will be colored in light orange): you should see a blue dotted line where
+you feature will be snapped:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_perpendicular.png
    :align: center
@@ -1123,6 +1127,7 @@ parallel angle and lock this parameter during your editing.
 
 Draw points at given distances
 ------------------------------
+
 The Advanced Digitizing Tool can be used also for points layer, for example to
 draw some points at exact distances among them.
 
