@@ -7,9 +7,9 @@
 
 .. _create-output:
 
-********************
+*******************
  Creating an Output
-********************
+*******************
 
 .. only:: html
 
@@ -47,20 +47,21 @@ to define the resolution (print quality) and paper size:
   canvas directly as a PDF.
 
 Export as Image
-================
+===============
 
 Clicking the |saveMapAsImage| :sup:`Export as image` icon will ask you to
-enter the filename to use to export composition: in case of multi-page composition,
-each page will be exported to a file with the given name appended with the page
-number.
+enter the filename to use to export composition: in the case of multi-page
+composition, each page will be exported to a file with the given name
+appended with the page number.
 
 You can then override the print resolution (set in Composition tab) and resize
 exported image dimensions.
 
 .. _crop_to_content:
 
-By checking |checkbox| :guilabel:`Crop to content` option, the images output by
-composer will include only the area of the composition with content.
+By checking |checkbox| :guilabel:`Crop to content` option, the images
+outputted by the composer will include only the area of the composition with
+content.
 There's also an option for margins to add around the item bounds if required.
 
 If the composition includes a single page, then the output will
@@ -76,24 +77,30 @@ include the area of that page with items.
    Image Export Options
 
 If you need to export your layout as a **georeferenced image** (e.g., to share
-with other projects), you need to enable this feature under the Composition tab.
-Check |checkbox| :guilabel:`World file on` and choose the map item to use.
+with other projects), you need to enable this feature under the
+:ref:`composer_composition_tab`.
+
+If the output format is a TIFF format, all you need to do is make sure to
+select the correct map item to use in |selectString|
+:guilabel:`Reference map`, and the output will always be a GeoTIFF. For other
+image formats, you also need to check the |checkbox| :guilabel:`Save world
+file` option.
 With this option, the 'Export as image' action will create a world file along
-the exported image.
+with the exported image.
 
 .. note::
 
-   Exporting big rasters can sometimes fail, even if there seems to be
+   Exporting large rasters can sometimes fail, even if there seems to be
    enough memory. This is a problem with the underlying Qt management of rasters.
 
 Export as SVG
-==============
+=============
 
 With |saveAsSVG| :sup:`Export as SVG`, you also need to fill the filename
 (used as a basename for all files in case of multi_page composition) and then
 can apply |checkbox| :guilabel:`Crop to content` :ref:`option <crop_to_content>`.
 
-The SVG export options dialog allows also to :
+The SVG export options dialog also allows to:
 
 * :guilabel:`export map layers as svg groups`:
 * render map labels as outlines
@@ -112,18 +119,22 @@ The SVG export options dialog allows also to :
    in future versions.
 
 Export as PDF
-==============
+=============
 
 The |saveAsPDF| :sup:`Export as PDF` exports all the composition into a
 single PDF file.
 
 If you applied to your composition or any shown layer an advanced effect such as
 blend modes, transparency or symbol effects, these cannot be printed
-as vectors and your effects may be lost.
-Checking :guilabel:`Print as a raster` in Composition tab helps to keep the effects
-but rasterize the composition. Note that the :guilabel:`Force layer to render
-as raster` in the Rendering tab of Layer Properties is a layer-level alternative
-that avoids global composition rasterization.
+as vectors, and the effects may be lost. Checking :guilabel:`Print as a
+raster` in the :ref:`composer_composition_tab` helps to keep the effects but
+rasterize the composition. Note that the :guilabel:`Force layer to render as
+raster` in the Rendering tab of Layer Properties is a layer-level alternative that
+avoids global composition rasterization.
+
+If you need to export your layout as a **georeferenced PDF**, in the
+:ref:`composer_composition_tab`, make sure to select the correct map item to
+use in |selectString| :guilabel:`Reference map`.
 
 
 .. index:: Atlas generation
@@ -131,7 +142,7 @@ that avoids global composition rasterization.
 .. _atlas_generation:
 
 Generate an Atlas
-==================
+=================
 
 The Print Composer includes generation functions that allow you to create map
 books in an automated way. The concept is to use a coverage layer, which contains

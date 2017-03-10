@@ -403,14 +403,16 @@ Export settings
 ...............
 
 You can define a resolution to use for all exported maps in :guilabel:`Export
-resolution`. This setting can however be overridden each time you are exporting a map.
+resolution`. This setting can, however, be overridden each time you are
+   exporting a map.
 When checked, |checkbox| :guilabel:`print as raster` means all elements will be
 rasterized before printing or saving as PostScript or PDF.
 
 While exporting to an image file format, you can choose to generate a world file
-by checking |checkbox| :guilabel:`World file on` and select a map item.
-The world file is created beside the exported map, has same name and contains
-information to easily georeference it.
+by checking |checkbox| :guilabel:`Save world file` and select a map item in
+|selectString| :guilabel:`Reference map`. The world file is created beside
+the exported map, has the same name and contains information to georeference
+it easily.
 
 .. _figure_composition_export:
 
