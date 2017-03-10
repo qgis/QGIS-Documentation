@@ -2,10 +2,9 @@
 |MOD| QGIS Server
 *******************************************************************************
 
-Bla bla bla introducere in QGIS Server
+In this module, we'll cover how to install and use QGIS Server.
 
-In this module, we'll cover two kinds of web-based GIS services: Web Mapping
-Services (WMS) and Web Feature Services (WFS).
+For a introduction to what QGIS Server is (see the :ref:`label_qgisserver` section)
 
 .. toctree::
    :maxdepth: 2
