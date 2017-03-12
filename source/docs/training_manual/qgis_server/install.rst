@@ -132,3 +132,147 @@ which should output something like::
  </ServiceExceptionReport>
 
 This is a good thing, it tells you we're on the right track.
+
+HTTP Server Configuration
+-------------------------
+
+In order to access on the WEB the installed QGIS server we need to use a http
+server.
+
+In this lesson we're going to use the
+`Apache HTTP server <http://httpd.apache.org>`_, colloquially called Apache.
+
+First we need to install Apache by doing
+``sudo apt-get install apache2 libapache2-mod-fcgid`` in a terminal.
+
+Let's create a file called :file:`qgisplatform.demo.conf` in that directory
+with this content::
+
+ <VirtualHost *:80>
+   ServerAdmin webmaster@localhost
+   ServerName qgisplatform.demo
+
+   DocumentRoot /var/www/html
+
+   # Apache logs (different than QGIS Server log)
+   ErrorLog ${APACHE_LOG_DIR}/qgisplatform.demo.error.log
+   CustomLog ${APACHE_LOG_DIR}/qgisplatform.demo.access.log combined
+
+   # Longer timeout for WPS... default = 40
+   FcgidIOTimeout 120
+
+   FcgidInitialEnv LC_ALL "en_US.UTF-8"
+   FcgidInitialEnv PYTHONIOENCODING UTF-8
+   FcgidInitialEnv LANG "en_US.UTF-8"
+
+   # QGIS log (different from apache logs) see http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html#qgis-server-logging
+   FcgidInitialEnv QGIS_SERVER_LOG_FILE /logs/qgisserver.log
+   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
+
+   FcgidInitialEnv QGIS_DEBUG 1
+
+   # QGIS_AUTH_DB_DIR_PATH must lead to a directory writeable by the Server's FCGI process user
+   FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgiscustomserver/"
+   FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/qgis/qgiscustomserver/qgis-auth.db"
+
+   # See http://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/supported_data.html#pg-service-file
+   SetEnv PGSERVICEFILE /home/qgis/.pg_service.conf
+   FcgidInitialEnv PGPASSFILE "/home/qgis/.pgpass"
+
+   # Tell QGIS Server instances to use a specific display number
+   FcgidInitialEnv DISPLAY ":99"
+
+   # if qgis-server is installed from packages in debian based distros this is usually /usr/lib/cgi-bin/
+   # run "locate qgis_mapserv.fcgi" if you don't know where qgis_mapserv.fcgi is
+   ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+   <Directory "/usr/lib/cgi-bin/">
+     AllowOverride None
+     Options +ExecCGI -MultiViews -SymLinksIfOwnerMatch
+     Order allow,deny
+     Allow from all
+     Require all granted
+   </Directory>
+
+  <IfModule mod_fcgid.c>
+  FcgidMaxRequestLen 26214400
+  FcgidConnectTimeout 60
+  </IfModule>
+
+ </VirtualHost>
+
+You can do the above in a linux Desktop system by pasting and saving the above
+configuration after doing ``sudo gedit /etc/apache2/sites-available/qgisplatform.demo.conf``.
+
+Let's now create the directories that will store the QGIS Server logs and
+the authentication database::
+
+ sudo mkdir /logs
+ sudo chown www-data:www-data /logs
+ 
+ mkdir /home/qgis/qgiscustomserver
+ sudo chown www-data:www-data /home/qgis/qgiscustomserver
+
+We can now enable the `virtual host <https://httpd.apache.org/docs/2.4/vhosts>`_,
+enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.service``::
+
+ sudo a2enmod fcgid
+ sudo a2ensite qgisplatform.demo.conf
+ sudo systemctl restart apache2.service
+
+.. note::
+
+ If you installed QGIS Server without running an X Server (included in Linux
+ Desktop) and if you also want to use the ``GetPrint`` command then you should
+ install a fake X Server and tell QGIS Server to use it. You can do that by
+ running the following commands.
+ 
+ Install xvfb with ``sudo apt-get install xvfb -y``
+
+ Create the service file::
+
+  sudo sh -c \
+  "echo \
+  '[Unit]
+  Description=X Virtual Frame Buffer Service
+  After=network.target
+
+  [Service]
+  ExecStart=/usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
+
+  [Install]
+  WantedBy=multi-user.target' \
+  > /etc/systemd/system/xvfb.service"
+ 
+ Enable, start and check the status of the ``xvfb.service``::
+
+  sudo systemctl enable xvfb.service
+  sudo systemctl start xvfb.service
+  sudo systemctl status xvfb.service
+
+ In the above configuration file there's a ``FcgidInitialEnv DISPLAY ":99"``
+ that tells QGIS Server instances to use display no. 99. If you're running the
+ Server in Desktop then there's no need to install xvfb and you should simply
+ comment with ``#`` this specific setting in the configuration file.
+ More info at http://www.itopen.it/qgis-server-setup-notes/.
+
+Now that Apache knows that he should answer requests to http://qgisplatform.demo
+we also need to setup the linux system so that it knows who ``qgisplatform.demo``
+is. We do that by adding ``127.0.0.1 qgisplatform.demo` in the
+`hosts <https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file. We can do it by::
+
+ sudo sh -c \
+ "echo '127.0.0.1 qgisplatform.demo' >> /etc/hosts"
+
+We can test one of the installed qgis servers with a http request from command
+line with ``curl http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi`` which
+should output::
+
+ <ServiceExceptionReport version="1.3.0" xmlns="http://www.opengis.net/ogc">
+ <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
+ </ServiceExceptionReport>
+
+.. note::
+
+ curl can be installed with ``sudo apt-get install curl -y``.
+
+Apache is now configured.
