@@ -374,6 +374,8 @@ This group contains functions for manipulating colors.
                     eg the red component or alpha component
 ================== ==========================================================
 
+.. _conversion_functions:
+
 Conversions
 ------------
 
@@ -415,8 +417,6 @@ This group contains functions for handling date and time data.
                  of days from an interval
  day_of_week     Returns a number corresponding to the day of the week
                  for a specified date or datetime
- format_date     Format a date type or string into a custom string format.
-                 Uses Qt date/time format strings
  hour            Extracts the hour from a datetime or time,
                  or the number of hours from an interval
  minute          Extracts the minute from a datetime or time,
@@ -426,17 +426,15 @@ This group contains functions for handling date and time data.
  now             Returns current date and time
  second          Extracts the second from a datetime or time,
                  or the number of seconds from an interval
- to_date         Extract the seconds part from a datetime or time, or the
-                 number of seconds from an interval
- to_datetime     Convert a string into a datetime object
- to_interval     Converts a string to a interval type. Can be used to take
-                 days, hours, month, etc of a date
- to_time         Convert a string into a time object
  week            Extracts the week number from a date or datetime,
                  or the number of weeks from an interval
  year            Extracts the year part from a date or datetime,
                  or the number of years from an interval
 ==============  ==============================================================
+
+This group also shares several functions with the :ref:`conversion_functions` (
+to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
+(format_date) groups.
 
 **Some examples:**
 
@@ -447,7 +445,7 @@ This group contains functions for handling date and time data.
      format_date(now(),'MM/yyyy')
      -- Returns '03/2017'
 
-Besides this functions, subtracting dates, datetimes or times using the
+Besides these functions, subtracting dates, datetimes or times using the
 ``-`` (minus) operator will return an interval.
 
 Adding or subtracting an interval to dates, datetimes or times, using the
@@ -857,6 +855,8 @@ This group contains functions that operate on record identifiers.
     area( geometry( get_feature( 'layerA', 'id', attribute( $currentfeature, 'name') ) ) )
 
 
+.. _string_functions:
+
 String Functions
 -----------------
 
@@ -1032,4 +1032,3 @@ Further information about creating Python code can be found in the
 
 The function editor is not only limited to working with the field calculator,
 it can be found whenever you work with expressions.
-
