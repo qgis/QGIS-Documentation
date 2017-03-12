@@ -294,6 +294,8 @@ With the :guilabel:`Advanced` |selectString| option, you can:
    line symbols) menu in the first level again. The size of the lower levels
    changes accordingly, while the size ratio is maintained.
 
+.. _symbol_layer:
+
 The symbol layer
 ................
 
@@ -316,11 +318,13 @@ regardless it's of marker, line or fill sub-type:
   extending capabilities of customizing each symbol (see :ref:`data_defined` for
   more information)
 
-.. note:: While the description below assumes that the symbol layer type is
-   bound to the feature geometry, keep in mind that you can embed symbol layers
-   in each others. In that case, the lower level symbol layer parameter
-   (placement, offset...) might be bound to the upper-level symbol,
-   and not to the feature geometry itself.
+.. note::
+
+ While the description below assumes that the symbol layer type is bound to the
+ feature geometry, keep in mind that you can embed symbol layers in each others.
+ In that case, the lower level symbol layer parameter (placement, offset...)
+ might be bound to the upper-level symbol, and not to the feature geometry
+ itself.
 
 .. _vector_marker_symbols:
 
@@ -330,19 +334,19 @@ Marker Symbols
 Appropriate for point geometry features, marker symbols have several
 :guilabel:`Symbol layer types`:
 
-* **Simple marker** (default)
+* **Simple marker** (default);
 * **Ellipse marker**: a simple marker symbol layer, with customizable width and
-  height
+  height;
 * **Filled marker**: similar to the simple marker symbol layer, except that it
   uses a :ref:`fill sub symbol <vector_fill_symbols>` to render the marker.
   This allows use of all the existing QGIS fill (and outline) styles for
-  rendering markers, e.g. gradient or shapeburst fills.
-* **Font marker**: use installed fonts as marker symbols
-* **Geometry generator** (see geometry_generator_symbol_)
+  rendering markers, e.g. gradient or shapeburst fills;
+* **Font marker**: use installed fonts as marker symbols;
+* **Geometry generator** (see :ref:`geometry_generator_symbol`);
 * **SVG marker**: provides you with images from your SVG paths (set in
   :menuselection:`Settings --> Options --> System` menu) to render as marker symbol.
-  Each SVG file colors and outline can be adapted.
-* **Vector Field marker** (see vector_field_marker_)
+  Each SVG file colors and outline can be adapted;
+* **Vector Field marker** (see :ref:`vector_field_marker`).
 
 .. note:: Requirements for a customizable SVG marker symbol
 
@@ -360,15 +364,18 @@ Appropriate for point geometry features, marker symbols have several
  
 For each marker symbol layer type, you can set some of the following properties:
 
-* :guilabel:`Color`, using all the capabilities of the :ref:`color-selector` widget
+* :guilabel:`Color`, using all the capabilities of the :ref:`color-selector`
+  widget;
 * :guilabel:`Size`
 * :guilabel:`Outline style`
 * :guilabel:`Outline width`
 * :guilabel:`Join Style`
 * :guilabel:`Rotation`
-* :guilabel:`Offset X,Y`: You can shift the symbol in the x- or y-direction.
-* :guilabel:`Anchor point`
-* a preview of predefined symbols to choose from
+* :guilabel:`Offset X,Y`: You can shift the symbol in the x- or y-direction;
+* :guilabel:`Anchor point`.
+
+In most of the marker symbols dialog, you also have a frame with previews of
+predefined symbols you can choose from.
 
 .. _vector_line_symbols:
 
@@ -387,18 +394,17 @@ layer types:
   * :guilabel:`Cap style`
   * :guilabel:`Offset`
   * |checkbox| :guilabel:`Use custom dash pattern`: overrides the :guilabel:`Pen
-    style` setting with a custom dash
+    style` setting with a custom dash.
 
 .. _arrow_symbol:
 
-* **Arrow**: draw lines as curved (or not) arrows with a single or a double
+* **Arrow**: draws lines as curved (or not) arrows with a single or a double
   head with configurable width, length and thickness. It also uses a
   :ref:`fill sub symbol <vector_fill_symbols>` such as gradients or shapeburst
-  to render the arrow body.
-  Combined with the geometry generator, this type of layer symbol helps you
-  representing flow maps.
-* **Geometry generator** (see geometry_generator_symbol_)
-* **Marker line**: display a marker symbol along the line. It can be at
+  to render the arrow body. Combined with the geometry generator, this type of
+  layer symbol helps you representing flow maps;
+* **Geometry generator** (see :ref:`geometry_generator_symbol`);
+* **Marker line**: displays a marker symbol along the line. It can be at
   a regular distance or based on its geometry: first, last or each vertex, on
   central point or on every curve point. You can set an offset along the line
   for the marker symbol, or offset the line itself. The :guilabel:`Rotate
@@ -413,35 +419,35 @@ Fill Symbols
 Appropriate for polygon geometry features, fill symbols have also several
 symbol layer types:
 
-* **Simple fill** (default)
-* **Centroid fill**: places a marker symbol at the centroid of the visible feature.
-  The marker can be placed on every part of a multi-part feature or only on its
-  biggest part, and forced to be inside the polygon.
-* **Geometry generator** (see geometry_generator_symbol_)
+* **Simple fill** (default);
+* **Centroid fill**: places a marker symbol at the centroid of the visible
+  feature. The marker can be placed on every part of a multi-part feature or
+  only on its biggest part, and forced to be inside the polygon;
+* **Geometry generator** (see geometry_generator_symbol_);
 * **Gradient fill**: uses a radial, linear or conical gradient, based on either
   simple two color gradients or a predefined :ref:`gradient color ramp
   <color-ramp>` to fill polygon layers. Gradient can be rotated and applied on
   a single feature basis or across the whole map extent. Also start and end
-  points can be set via coordinates or using the centroid (of feature or map).
-* **Line pattern fill**: fill the polygon with a hatching pattern of line symbol
-  layer. You can set the spacing between lines and an offset from the feature
-  boundary.
-* **Point pattern fill**: fill the polygon with a hatching pattern of marker
+  points can be set via coordinates or using the centroid (of feature or map);
+* **Line pattern fill**: fills the polygon with a hatching pattern of line
   symbol layer. You can set the spacing between lines and an offset from the
-  feature boundary 
+  feature boundary;
+* **Point pattern fill**: fills the polygon with a hatching pattern of marker
+  symbol layer. You can set the spacing between lines and an offset from the
+  feature boundary; 
 * **Raster image fill**: you can fill polygons with a tiled raster image.
   Options include (data defined) file name, opacity, image size (in pixels, mm
-  or map units), coordinate mode (feature or view) and rotation.
-* **SVG fill**: Fill the polygon using SVG markers.
+  or map units), coordinate mode (feature or view) and rotation;
+* **SVG fill**: fills the polygon using SVG markers;
 * **Shapeburst fill**: this option buffered a gradient fill, where a gradient
   is drawn from the boundary of a polygon towards the polygon's centre.
   Configurable parameters include distance from the boundary to shade, use of
   color ramps or simple two color gradients, optional blurring of the fill and
-  offsets.
+  offsets;
 * **Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to
-  represent the polygon boundary
+  represent the polygon boundary;
 * **Outline: Marker line**: uses a marker line symbol layer to represent the
-  polygon boundary
+  polygon boundary;
 * **Outline: simple line**: uses a simple line symbol layer to represent the
   polygon boundary. The :guilabel:`Draw line only inside polygon` option helps
   polygon borders inside the polygon and can be useful to clearly represent
@@ -449,18 +455,19 @@ symbol layer types:
 
 The following settings are available:
 
-* :guilabel:`Color` for the symbol stroke and fill.
+* :guilabel:`Color` for the symbol stroke and fill
 * :guilabel:`Fill style`
 * :guilabel:`Outline style`
 * :guilabel:`Outline width`
 * :guilabel:`Offset X,Y`
 * :guilabel:`Data defined properties ...`
 
-.. note:: When geometry type is polygon, you can choose to disable the
- automatic clipping of lines/polygons to the canvas extent. In
- some cases this clipping results in unfavourable symbology (eg
- centroid fills where the centroid must always be the actual
- feature's centroid).
+.. note::
+
+ When geometry type is polygon, you can choose to disable the automatic
+ clipping of lines/polygons to the canvas extent. In some cases this clipping
+ results in unfavourable symbology (e.g. centroid fills where the centroid must
+ always be the actual feature's centroid).
 
 .. _geometry_generator_symbol: 
  
