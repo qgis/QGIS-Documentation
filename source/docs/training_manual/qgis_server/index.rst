@@ -10,4 +10,5 @@ For a introduction to what QGIS Server is (see the :ref:`label_qgisserver` secti
    :maxdepth: 2
 
    install
+   wms
    

@@ -108,8 +108,8 @@ we're going to install it in this tutorial as it's easier for the audience::
 
  sudo apt-get install qgis
 
-QGIS Server Test
-----------------
+QGIS Server Executable
+----------------------
 
 The QGIS Server executable is ``qgis_mapserv.fcgi``. You can check where it has
 been installed by running ``sudo find / -name 'qgis_mapserv.fcgi'`` which
@@ -171,9 +171,12 @@ with this content::
 
    FcgidInitialEnv QGIS_DEBUG 1
 
+   # default QGIS project
+   SetEnv QGIS_PROJECT_FILE /home/qgis/projects/world.qgs
+
    # QGIS_AUTH_DB_DIR_PATH must lead to a directory writeable by the Server's FCGI process user
-   FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgiscustomserver/"
-   FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/qgis/qgiscustomserver/qgis-auth.db"
+   FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgisserverdb/"
+   FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/qgis/qgisserverdb/qgis-auth.db"
 
    # See http://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/supported_data.html#pg-service-file
    SetEnv PGSERVICEFILE /home/qgis/.pg_service.conf
@@ -209,8 +212,8 @@ the authentication database::
  sudo mkdir /logs
  sudo chown www-data:www-data /logs
  
- mkdir /home/qgis/qgiscustomserver
- sudo chown www-data:www-data /home/qgis/qgiscustomserver
+ mkdir /home/qgis/qgisserverdb
+ sudo chown www-data:www-data /home/qgis/qgisserverdb
 
 We can now enable the `virtual host <https://httpd.apache.org/docs/2.4/vhosts>`_,
 enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.service``::
@@ -258,10 +261,8 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.s
 Now that Apache knows that he should answer requests to http://qgisplatform.demo
 we also need to setup the linux system so that it knows who ``qgisplatform.demo``
 is. We do that by adding ``127.0.0.1 qgisplatform.demo` in the
-`hosts <https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file. We can do it by::
-
- sudo sh -c \
- "echo '127.0.0.1 qgisplatform.demo' >> /etc/hosts"
+`hosts <https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file. We can do it
+with ``sudo sh -c "echo '127.0.0.1 qgisplatform.demo' >> /etc/hosts"``.
 
 We can test one of the installed qgis servers with a http request from command
 line with ``curl http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi`` which
