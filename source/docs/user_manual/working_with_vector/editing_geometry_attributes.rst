@@ -1023,11 +1023,11 @@ vertex or segment.
 Absolute coordinates digitizing
 -------------------------------
 
-When drawing a new layer from scratch it is very useful to have the possibility
-to start the digitalization of the vertexes to given coordinates.
+When drawing a new layer or a new geometry from scratch it is very useful to have
+the possibility to start the digitalization of the vertexes to given coordinates.
 
-To do that, just create a new layer (or a new feature of an existing layer) and
-click on the |capturePolygon| button.
+For example, to add a new feature to a polygonal layer, just click on the
+|capturePolygon| button.
 
 You can choose the X and Y coordinates where you want to start editing the
 feature. Just click on the *x* (keyboard shortcut :kbd:`x`) and *y* (keyboard
@@ -1048,8 +1048,8 @@ You can continue digitizing by free hand or you can enter the segment **length**
 
 If you want to draw a segment of a given length, just click on the *d* box
 (keyboard shortcut :kbd:`d`), enter the distance (be aware that the input is in
-map unit, so **meters**) and hit Enter to lock the mouse in the canvas and so
-the length of the segment:
+map unit) and hit Enter to lock the mouse in the canvas hence the length of the
+segment:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance.png
    :align: center
@@ -1057,19 +1057,18 @@ the length of the segment:
    Fixed length segment
 
 
-in the canvas the clicked point is surrounded by a circle that has as radius the
+in the canvas the clicked point is surrounded by a circle whose radius is the
 value entered in the distance box.
 
 Finally you can also choose the angle of the segment. As the steps before
 described, just click on the *a* box (keyboard shortcut :kbd:`a`) and type the
-angle you want:
+angle you want. In this way the segment will follow the desired angle:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_angle.png
    :align: center
 
    Fixed angle segment
 
-in this way the segment will follow the desired angle.
 
 
 Relative angular coordinates digitizing
@@ -1079,12 +1078,13 @@ If you want to have distances and angles relative to an existing feature you can
 easily do this by combining the snapping option and the *d* (distance) and *a*
 (angle) boxes.
 
-Before to start be your to have activated the snapping option see :ref:`snapping_tolerance`.
+Before to start be sure to have activated the snapping option see :ref:`snapping_tolerance`.
 
-Start editing a new feature and click on a vertex on the existing feature. Click
-on the *d* (keyboard shortcut :kbd:`d`) and *a* (keyboard shortcut :kbd:`a`) box
-and add the desired values. You can now see in the canvas that your feature will
-start at an existing vertex and will have a precise length and angle:
+If you want to add a new feature (remember, the tool allows to work with all the
+digitizing tool like reshaping, splitting, etc.) click on a vertex on the existing
+feature. Click on the *d* (keyboard shortcut :kbd:`d`) and *a* (keyboard shortcut
+:kbd:`a`) boxes and add the desired values. You can now see in the canvas that your
+feature will start at an existing vertex and will have a precise length and angle:
 
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_relative.png
@@ -1096,15 +1096,16 @@ start at an existing vertex and will have a precise length and angle:
 Parallel and perpendiculars line
 --------------------------------
 
-All the tools described above can be combined with the *perpendicular* and
-*parallel* tools. These two tools allow to draw a feature perfectly perpendicular
-and parallel to another feature.
+All the tools described above can be combined with the |cadPerpendicular| :sup: `Perpendicular`
+and |cadParallel| :sup:`parallel` tools. These two tools allow to draw segments
+perfectly perpendicular and parallel to another segment.
 
-During the editing click on the |cadPerpendicular| icon (keyboard shortcut :kbd:`p`)
-to activate it and, **before drawing the perpendicular line, click on the line
-of the existing feature you want to be perpendicular** (the line of the existing
-feature will be colored in light orange): you should see a blue dotted line where
-you feature will be snapped:
+During the editing click on the |cadPerpendicular| :sup: `Perpendicular` icon
+(keyboard shortcut :kbd:`p`) to activate it and snap to the segment, **before
+drawing the perpendicular line, click on the line of the existing feature you
+want to be perpendicular to** (the line of the existing feature will be colored
+in light orange): you should see a blue dotted line where your feature will be
+snapped:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_perpendicular.png
    :align: center
@@ -1138,8 +1139,8 @@ With an existing point in the canvas and the snapping mode correctly activated,
 you can easily draw other points at given distances and angles from it.
 
 In addition to the |cad| button, you have to activate also the *construction*
-mode by clicking on the |cadConstruction| icon or with the :kbd:`c` keyboard
-shortcut.
+mode by clicking on the |cadConstruction| :sup:`Construction` icon or with the
+:kbd:`c` keyboard shortcut.
 
 Click next to the point from which you want to calculate the distance and click on
 the *d* box (:kbd:`d` shortcut) enter the desired distance and hit Enter to lock
@@ -1148,9 +1149,9 @@ the mouse position in the canvas:
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point.png
    :align: center
 
-   Parallel digitizing
+   Distance from point
 
-Before to add the new point, you have to exit the construction mode, just click
+Before adding the new point, you have to exit the construction mode, just click
 :kbd:`c`. Now you can click in the canvas and the point will be placed at the
 given distance entered:
 
