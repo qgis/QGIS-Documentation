@@ -36,7 +36,15 @@ case.
 * ``mCurrentExtent``
 
 All class members should be private.
-Public class members are STRONGLY discouraged
+Public class members are STRONGLY discouraged. Protected members should
+be avoided when the member may need to be accessed from Python subclasses,
+since protected members cannot be used from the Python bindings.
+
+Mutable static class member names should begin with a lower case s,
+but constant static class member names should be all caps:
+
+* ``sRefCounter``
+* ``DEFAULT_QUEUE_SIZE``
 
 
 Accessor Functions
@@ -50,6 +58,9 @@ two private members above would be:
 * ``mapCanvas()``
 * ``currentExtent()``
 
+Ensure that accessors are correctly marked with ``const``. Where appropriate,
+this may require that cached value type member variables are marked with
+``mutable``.
 
 Functions
 ---------
@@ -60,6 +71,44 @@ The function name should convey something about the purpose of the function.
 
 * ``updateMapExtent()``
 * ``setUserOptions()``
+
+For consistency with the existing QGIS API and with the Qt API, abbreviations
+should be avoided. E.g. ``setDestinationSize`` instead of ``setDestSize``,
+``setMaximumValue`` instead of ``setMaxVal``.
+
+Acronyms should also be camel cased for consistency. E.g. ``setXml`` instead
+of ``setXML``.
+
+
+Function Arguments
+------------------
+
+
+Function arguments should use descriptive names. Do not use single letter
+argments (e.g. ``setColor( const QColor& color )`` instead of
+``setColor( const QColor& c )``).
+
+Pay careful attention to when arguments should be passed by reference.
+Unless argument objects are small and trivially copied (such as QPoint
+objects), they should be passed by const reference. For consistency
+with the Qt API, even implicitly shared objects are passed by const
+reference (e.g. ``setTitle( const QString& title )`` instead of
+``setTitle( QString title )``.
+
+
+Function Return Values
+----------------------
+
+Return small and trivially copied objects as values. Larger objects
+should be returned by const reference. The one exception to this
+is implicitly shared objects, which are always returned by value.
+
+* ``int maximumValue() const``
+* ``const LayerSet& layers() const``
+* ``QString title() const`` (QString is implicitly shared)
+* ``QList< QgsMapLayer* > layers() const`` (QList is implicitly shared)
+
+
 
 Qt Designer
 ===========
@@ -79,12 +128,13 @@ Examples:
 Dialogs
 -------
 
-All dialogs should implement the following:
+All dialogs should implement tooltip help for all toolbar icons and other
+relevant widgets. Tooltips add greatly to feature discoverability
+for both new and experienced users.
 
-* Tooltip help for all toolbar icons and other relevant widgets
-* WhatsThis help for all widgets on the dialog
-* An optional (though highly recommended) context sensitive Help button that
-  directs the user to the appropriate help page by launching their web browser
+Ensure that the tab order for widgets is updated whenever the layout
+of a dialog changes.
+
 
 C++ Files
 =========
@@ -139,6 +189,7 @@ Variable Names
 ===============
 
 Local variable names begin with a lower case letter and are formed using mixed case.
+Do not use prefixes like ``my`` or ``the``.
 
 Examples:
 
@@ -172,6 +223,19 @@ Global constants and macros should be written in upper case underscore separated
 .. code-block:: cpp
 
   const long GEOCRS_ID = 3344;
+
+
+Qt Signals and Slots
+====================
+
+All signal/slot connects should be made using the "new style" connects available
+in Qt5. Futher information on this requirement is available in
+`QEP #77 <https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_.
+
+Avoid use of Qt auto connect slots (i.e. those named
+``void on_mSpinBox_valueChanged``). Auto connect slots are fragile and
+prone to breakage without warning if dialogs are refactored.
+
 
 Editing
 =======
