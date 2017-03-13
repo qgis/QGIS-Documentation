@@ -84,7 +84,7 @@ It will give you a new dialog. In this dialog:
   :guilabel:`landuse.sqlite`. Select it and click :guilabel:`Open`.
 
 You will now see the first dialog again. Notice that the dropdown select above
-the three buttons now reads "land_use.db@...", followed by the path of the
+the three buttons now reads "landuse.sqlite@...", followed by the path of the
 database file on your computer.
 
 * Click the :guilabel:`Connect` button. You should see this in the previously
