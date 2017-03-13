@@ -58,6 +58,9 @@ two private members above would be:
 * ``mapCanvas()``
 * ``currentExtent()``
 
+Ensure that accessors are correctly marked with ``const``. Where appropriate,
+this may require that cached value type member variables are marked with
+``mutable``.
 
 Functions
 ---------
