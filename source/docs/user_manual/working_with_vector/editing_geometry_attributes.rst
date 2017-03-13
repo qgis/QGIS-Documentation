@@ -1096,11 +1096,11 @@ feature will start at an existing vertex and will have a precise length and angl
 Parallel and perpendiculars line
 --------------------------------
 
-All the tools described above can be combined with the |cadPerpendicular| :sup: `Perpendicular`
-and |cadParallel| :sup:`parallel` tools. These two tools allow to draw segments
+All the tools described above can be combined with the |cadPerpendicular| :sup:`Perpendicular`
+and |cadParallel| :sup:`Parallel` tools. These two tools allow to draw segments
 perfectly perpendicular and parallel to another segment.
 
-During the editing click on the |cadPerpendicular| :sup: `Perpendicular` icon
+During the editing click on the |cadPerpendicular| :sup:`Perpendicular` icon
 (keyboard shortcut :kbd:`p`) to activate it and snap to the segment, **before
 drawing the perpendicular line, click on the line of the existing feature you
 want to be perpendicular to** (the line of the existing feature will be colored
@@ -1113,8 +1113,8 @@ snapped:
    Perpendicular digitizing
 
 To draw a *parallel* feature the steps are exactly the same: click on the
-|cadParallel| icon (keyboard shortcut :kbd:`p`), click on the line you want to be
-parallel and start drawing your feature:
+|cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`p`), click on the
+line you want to be parallel and start drawing your feature:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_parallel.png
    :align: center
