@@ -404,7 +404,7 @@ Export settings
 
 You can define a resolution to use for all exported maps in :guilabel:`Export
 resolution`. This setting can, however, be overridden each time you are
-   exporting a map.
+exporting a map.
 When checked, |checkbox| :guilabel:`print as raster` means all elements will be
 rasterized before printing or saving as PostScript or PDF.
 

@@ -80,7 +80,7 @@ If you need to export your layout as a **georeferenced image** (e.g., to share
 with other projects), you need to enable this feature under the
 :ref:`composer_composition_tab`.
 
-If the output format is a TIFF format, all you need to do is make sure to
+If the output format is a TIFF format, all you need to do is making sure to
 select the correct map item to use in |selectString|
 :guilabel:`Reference map`, and the output will always be a GeoTIFF. For other
 image formats, you also need to check the |checkbox| :guilabel:`Save world
