@@ -224,6 +224,19 @@ Global constants and macros should be written in upper case underscore separated
 
   const long GEOCRS_ID = 3344;
 
+
+Qt Signals and Slots
+====================
+
+All signal/slot connects should be made using the "new style" connects available
+in Qt5. Futher information on this requirement is available in
+`QEP #77 <https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_.
+
+Avoid use of Qt auto connect slots (i.e. those named
+``void on_mSpinBox_valueChanged``). Auto connect slots are fragile and
+prone to breakage without warning if dialogs are refactored.
+
+
 Editing
 =======
 
