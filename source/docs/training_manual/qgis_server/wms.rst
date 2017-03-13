@@ -63,3 +63,109 @@ like the one below:
  the countries layer. QGIS Server is also aware of this and you can choose
  the style you want in your request.  The ``classified_by_population`` style
  was chosen in the above image.
+
+GetMap requests
+---------------
+
+In order to display the ``countries`` layer, QGIS Desktop, like any other WMS client, is using
+``GetMap`` requests.
+
+A simple request looks like::
+
+ http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
+ ?MAP=/home/qgis/projects/world.qgs
+ &SERVICE=WMS
+ &VERSION=1.3.0
+ &REQUEST=GetMap
+ &BBOX=-432786,4372992,3358959,7513746
+ &SRS=EPSG:3857
+ &WIDTH=665
+ &HEIGHT=551
+ &LAYERS=countries
+ &FORMAT=image/jpg
+
+The above request should output the following image:
+
+.. only:: html
+
+  **Figure: simple GetMap request to QGIS Server**
+
+.. figure:: /static/training_manual/qgis_server/getmap_simple_request.jpg
+   :align: center
+
+   A simple GetMap WMS request for QGIS Server
+
+Let's do another request that adds another layer, some of the
+:ref:`extra-getmap-parameters`, **FILTER** and **OPACITIES**, but also
+uses the standard STYLES parameter.
+
+::
+
+ http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
+ ?MAP=/home/qgis/projects/world.qgs
+ &SERVICE=WMS
+ &VERSION=1.3.0
+ &REQUEST=GetMap
+ &BBOX=-432786,4372992,3358959,7513746
+ &SRS=EPSG:3857
+ &WIDTH=665
+ &HEIGHT=551
+ &FORMAT=image/jpg
+ &LAYERS=countries,countries_shapeburst
+ &STYLES=classified_by_name,default
+ &OPACITIES=255,30
+ &FILTER=countries:"name" IN ( 'Germany' , 'Italy' )
+
+The above request should output the following image:
+
+.. only:: html
+
+  **Figure: GetMap response to request with FILTER and OPACITIES parameters**
+
+.. figure:: /static/training_manual/qgis_server/getmap_filter_opacities.jpg
+   :align: center
+
+   Response to a GetMap request with FILTER and OPACITIES parameters
+
+As you can see from the above image, among other things, we told QGIS Server
+to render only **Germany** and **Italy** from the countries layer.
+
+Let's do another GetMap request that makes use of the :ref:`qgisserver-redlining`
+feature and of the **SELECTION** parameter detailed in the
+:ref:`extra-getmap-parameters` section::
+
+ http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
+ ?MAP=/home/qgis/projects/world.qgs
+ &SERVICE=WMS
+ &VERSION=1.3.0
+ &REQUEST=GetMap
+ &BBOX=-432786,4372992,3358959,7513746
+ &SRS=EPSG:3857
+ &WIDTH=665
+ &HEIGHT=551
+ &LAYERS=countries,countries_shapeburst
+ &FORMAT=image/jpg
+ &HIGHLIGHT_GEOM=POLYGON((590000 6900000, 590000 7363000, 2500000 7363000, 2500000 6900000, 590000 6900000))
+ &HIGHLIGHT_SYMBOL=<StyledLayerDescriptor><UserStyle><Name>Highlight</Name><FeatureTypeStyle><Rule><Name>Symbol</Name><LineSymbolizer><Stroke><SvgParameter name="stroke">%233a093a</SvgParameter><SvgParameter name="stroke-opacity">1</SvgParameter><SvgParameter name="stroke-width">1.6</SvgParameter></Stroke></LineSymbolizer></Rule></FeatureTypeStyle></UserStyle></StyledLayerDescriptor>
+ &HIGHLIGHT_LABELSTRING=QGIS Tutorial
+ &HIGHLIGHT_LABELSIZE=30
+ &HIGHLIGHT_LABELCOLOR=%23000000
+ &HIGHLIGHT_LABELBUFFERCOLOR=%23FFFFFF
+ &HIGHLIGHT_LABELBUFFERSIZE=3
+ &SELECTION=countries:171,6
+
+Pasting the above request in your web browser should output the following image:
+
+.. only:: html
+
+  **Figure:  Response to a GetMap request with REDLINING and SELECTION**
+
+.. figure:: /static/training_manual/qgis_server/getmap_redlining_selection.jpg
+   :align: center
+
+   Response to a request with the REDLINING feature and SELECTION parameter
+
+You can see from the above image that the countries with the 171 and 65 ids were
+highlighted in yellow (Romania and France) by using the **SELECTION** parameter
+and we used the **REDLINING** feature to overlay a rectangle with the
+**QGIS Tutorial** label.
