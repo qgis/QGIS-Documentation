@@ -738,11 +738,14 @@ select colors by |colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
 (not available under |osx|).
 
 Whatever method you use, the selected color is always described through color
-sliders for HSV (Hue, Saturation, Value) and RGB (Red, Green, Blue) values.
-There is also an :guilabel:`opacity` slider to set transparency level.
+sliders for ``HSV`` (Hue, Saturation, Value) and ``RGB`` (Red, Green, Blue)
+values. The color is also identifiable as a :guilabel:`HTML notation`. 
+Finally, there is an :guilabel:`opacity` slider to set transparency level.
+
 Modifying a color is as simple as clicking in the color wheel or ramp or in any
 of the color parameters sliders. You can adjust such parameters with the spinbox
-beside or, handy, scrolling the mouse wheel over the corresponding slider.
+beside or, handy, scrolling the mouse wheel over the corresponding slider. You
+can also typeset the color html notation.
 
 The dialog also provides a visual comparison between the
 :guilabel:`current` (applied to widget) and the :guilabel:`new` (being selected)
