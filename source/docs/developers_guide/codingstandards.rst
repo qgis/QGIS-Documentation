@@ -36,7 +36,15 @@ case.
 * ``mCurrentExtent``
 
 All class members should be private.
-Public class members are STRONGLY discouraged
+Public class members are STRONGLY discouraged. Protected members should
+be avoided when the member may need to be accessed from Python subclasses,
+since protected members cannot be used from the Python bindings.
+
+Mutable static class member names should begin with a lower case s,
+but constant static class member names should be all caps:
+
+* ``sRefCounter``
+* ``DEFAULT_QUEUE_SIZE``
 
 
 Accessor Functions
@@ -139,6 +147,7 @@ Variable Names
 ===============
 
 Local variable names begin with a lower case letter and are formed using mixed case.
+Do not use prefixes like ``my`` or ``the``.
 
 Examples:
 
