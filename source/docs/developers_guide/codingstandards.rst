@@ -128,12 +128,13 @@ Examples:
 Dialogs
 -------
 
-All dialogs should implement the following:
+All dialogs should implement tooltip help for all toolbar icons and other
+relevant widgets. Tooltips add greatly to feature discoverability
+for both new and experienced users.
 
-* Tooltip help for all toolbar icons and other relevant widgets
-* WhatsThis help for all widgets on the dialog
-* An optional (though highly recommended) context sensitive Help button that
-  directs the user to the appropriate help page by launching their web browser
+Ensure that the tab order for widgets is updated whenever the layout
+of a dialog changes.
+
 
 C++ Files
 =========
