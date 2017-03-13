@@ -72,6 +72,44 @@ The function name should convey something about the purpose of the function.
 * ``updateMapExtent()``
 * ``setUserOptions()``
 
+For consistency with the existing QGIS API and with the Qt API, abbreviations
+should be avoided. E.g. ``setDestinationSize`` instead of ``setDestSize``,
+``setMaximumValue`` instead of ``setMaxVal``.
+
+Acronyms should also be camel cased for consistency. E.g. ``setXml`` instead
+of ``setXML``.
+
+
+Function Arguments
+------------------
+
+
+Function arguments should use descriptive names. Do not use single letter
+argments (e.g. ``setColor( const QColor& color )`` instead of
+``setColor( const QColor& c )``).
+
+Pay careful attention to when arguments should be passed by reference.
+Unless argument objects are small and trivially copied (such as QPoint
+objects), they should be passed by const reference. For consistency
+with the Qt API, even implicitly shared objects are passed by const
+reference (e.g. ``setTitle( const QString& title )`` instead of
+``setTitle( QString title )``.
+
+
+Function Return Values
+----------------------
+
+Return small and trivially copied objects as values. Larger objects
+should be returned by const reference. The one exception to this
+is implicitly shared objects, which are always returned by value.
+
+* ``int maximumValue() const``
+* ``const LayerSet& layers() const``
+* ``QString title() const`` (QString is implicitly shared)
+* ``QList< QgsMapLayer* > layers() const`` (QList is implicitly shared)
+
+
+
 Qt Designer
 ===========
 
