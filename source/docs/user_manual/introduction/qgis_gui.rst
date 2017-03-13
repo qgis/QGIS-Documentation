@@ -448,8 +448,19 @@ Map View
 
 Also called **Map canvas**, this is the "business end" of QGIS ---
 maps are displayed in this area. The map displayed in this window
-will depend on the vector and raster layers you have chosen to load
-(see sections that follow for more information on how to load layers).
+will depend on the vector and raster layers you have chosen to load.
+
+When you add a layer (see e.g. :ref:`vector_loading_file`), QGIS automatically
+looks for its Coordinate Reference System (CRS) and zooms to its extent if you
+work in a blank QGIS project. The layer's CRS is then applied to the project.
+If there are already layers in the project, and in the case the new layer has
+the same CRS as the project, its features falling in the current map canvas
+extent will be visualized. If the new layer is in a different CRS from the
+project's, you must :guilabel:`Enable on-the-fly CRS transformation` from the
+:menuselection:`Project --> Project Properties --> CRS`
+(see :ref:`otf_transformation`). The added layer should now be visible if data
+are available in the current view extent.
+
 The map view can be panned, shifting the focus of the map display to
 another region, and it can be zoomed in and out. Various other operations can be
 performed on the map as described in the label_toolbars_ description above. The map
