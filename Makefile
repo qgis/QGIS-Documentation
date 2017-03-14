@@ -84,7 +84,7 @@ html: localizeresources
 	# ONLY in the english version run in nit-picky mode, so source errors/warnings will fail in Travis
 	#  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
 	#  -W   Turn warnings into errors. This means that the build stops at the first warning and sphinx-build exits with exit status 1.
-	@-if [ $(LANG) != "en" ]; then \
+	@if [ $(LANG) != "en" ]; then \
 		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG); \
 	else \
 		$(SPHINXBUILD) -n -W -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG); \
@@ -98,7 +98,7 @@ pdf: html
 	# NOTE: this exclusion line will be removed in docker-world.sh via a git checkout!
 	@echo "exclude_patterns += ['docs/user_manual/processing_algs/*']" >> $(SOURCEDIR)/conf.py;
 
-	@-if [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
+	@if [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
 		cp -f $(SOURCEDIR)/conf.py $(SOURCEDIR)/i18n/$(LANG)/; \
 		cat $(SOURCEDIR)/i18n/$(LANG)/conf.py.diff >> $(SOURCEDIR)/i18n/$(LANG)/conf.py; \
 		$(SPHINXBUILD) -b latex -c $(SOURCEDIR)/i18n/$(LANG) $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$(LANG); \
