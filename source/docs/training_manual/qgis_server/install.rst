@@ -43,8 +43,8 @@ GNU/Linux are the following:
   to the code or you want to test some code from others or go to a certain
   code version, building from source is the way to go.
 
-Install from packages
----------------------
+|moderate| |FA| Install from packages
+-------------------------------------------------------------------------------
 
 In this lesson we're going to do only the install from packages as building
 from source is outside the scope of this module.
@@ -92,6 +92,36 @@ Install QGIS Server with::
 
  sudo apt-get install qgis-server python-qgis
 
+Although QGIS Server works without QGIS Desktop (with the accompagning X Server)
+we're going to install it in this tutorial as it's easier for the audience::
+
+ sudo apt-get install qgis
+
+|moderate| |TY|
+-------------------------------------------------------------------------------
+
+Let's install QGIS Server master repository.
+
+* Open a terminal
+* Edit the file pointing to the QGIS packages with
+  ``sudo gedit /etc/apt/sources.list.d/debian-qgis.list`` so that you comment
+  the ``stable`` repo lines and enable the master (``debian-nightly``) ones::
+
+   # latest stable
+   #deb http://qgis.org/debian stretch main
+   #deb-src http://qgis.org/debian stretch main
+
+   # latest ltr
+   #deb http://qgis.org/debian-ltr stretch main
+   #deb-src http://qgis.org/debian-ltr stretch main
+
+   # master
+   deb http://qgis.org/debian-nightly stretch main
+   deb-src http://qgis.org/debian-nightly stretch main
+
+* Update the package list with ``sudo apt-get update``
+* Update the packages with ``sudo apt-get dist-upgrade -y``
+
 .. note::
 
  If you play around and change different versions of QGIS you may end up in the
@@ -101,15 +131,41 @@ Install QGIS Server with::
  won't work as the package manager may encounter dependencies problems when
  installing older versions of a package if there's a newer one already installed.
  So, you need to uninstall the existing one before installing the older one.
- Something like ``sudo apt-get uninstall qgis-server python-qgis`` should do it.
+ Something like ``sudo apt-get remove qgis-server python-qgis`` should do it.
 
-Although QGIS Server works without QGIS Desktop (with the accompagning X Server)
-we're going to install it in this tutorial as it's easier for the audience::
+Now that we want to downgrade, let's see if that's the case for us.
 
- sudo apt-get install qgis
+* Enable the stable repo and disable the master one in the
+  ``/etc/apt/sources.list.d/debian-qgis.list`` file. It should again look like::
 
-QGIS Server Executable
-----------------------
+   # latest stable
+   deb http://qgis.org/debian stretch main
+   deb-src http://qgis.org/debian stretch main
+
+   # latest ltr
+   #deb http://qgis.org/debian-ltr stretch main
+   #deb-src http://qgis.org/debian-ltr stretch main
+
+   # master
+   #deb http://qgis.org/debian-nightly stretch main
+   #deb-src http://qgis.org/debian-nightly stretch main
+
+* Update the package list with ``sudo apt-get update``.
+* If you try to install the stable version of QGIS Server with the
+  ``sudo apt-get install qgis-server`` command you **shouldn't be able to** and
+  you will probably get the message: ``qgis-server is already the newest version``.
+* Remove the installed Master version ``sudo apt-get remove qgis-server python-qgis``
+* Remove all the packages that were installed as QGIS Master dependencies with
+  ``sudo apt-get autoremove``.
+* Install QGIS stable again with ``sudo apt-get install qgis-server python-qgis qgis -y``
+
+  .. note::
+
+   The ``-y`` parameter means that you accept from command line the install of all
+   the enumerated packages, bypassing the prompt you usually get.
+
+|FA| QGIS Server Executable
+-------------------------------------------------------------------------------
 
 The QGIS Server executable is ``qgis_mapserv.fcgi``. You can check where it has
 been installed by running ``sudo find / -name 'qgis_mapserv.fcgi'`` which
@@ -133,17 +189,17 @@ which should output something like::
 
 This is a good thing, it tells you we're on the right track.
 
-HTTP Server Configuration
--------------------------
+|FA| HTTP Server Configuration
+-------------------------------------------------------------------------------
 
-In order to access on the WEB the installed QGIS server we need to use a http
-server.
+In order to access on the installed QGIS server from an Internet Browser we
+need to use a HTTP server.
 
 In this lesson we're going to use the
 `Apache HTTP server <http://httpd.apache.org>`_, colloquially called Apache.
 
-First we need to install Apache by doing
-``sudo apt-get install apache2 libapache2-mod-fcgid`` in a terminal.
+First we need to install Apache by running the following command in a terminal:
+``sudo apt-get install apache2 libapache2-mod-fcgid``.
 
 Let's create a file called :file:`qgisplatform.demo.conf` in that directory
 with this content::
@@ -215,6 +271,13 @@ the authentication database::
  mkdir /home/qgis/qgisserverdb
  sudo chown www-data:www-data /home/qgis/qgisserverdb
 
+.. note::
+
+ ``www-data`` is the Apache user on Debian based systems and we need Apache to have access to
+ those locations or files.
+ The ``chown www-data..`` commands changes the owner of the respective directories/files
+ to ``www-data``.
+
 We can now enable the `virtual host <https://httpd.apache.org/docs/2.4/vhosts>`_,
 enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.service``::
 
@@ -277,3 +340,71 @@ should output::
  curl can be installed with ``sudo apt-get install curl -y``.
 
 Apache is now configured.
+
+|moderate| |TY|
+-------------------------------------------------------------------------------
+
+Let's create another Apache virtual host pointing to QGIS Server. You can
+choose whatever name you like (``coco.bango``, ``super.duper.training``,
+``example.com``, etc.) but for simpliciy sake we're going to use a letter from
+the alphabet, let's say ``x``.
+
+* Let's first point the ``x`` name to answer to the localhost IP. We can do that
+  by adding ``127.0.0.1 x`` to the :file:`/etc/hosts`` with the following
+  command: ``sudo sh -c "echo '127.0.0.1 x' >> /etc/hosts"`` or by manually
+  editing the file with ``sudo gedit /etc/hosts``.
+* We can check that ``x`` points to the localhost by running in the terminal
+  the  ``ping x`` command which should output::
+
+   qgis@qgis:~$ ping x
+   PING x (127.0.0.1) 56(84) bytes of data.
+   64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.024 ms
+   64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.029 ms
+   ..
+
+* Let's try if we can access QGIS Server from the ``x`` site by doing:
+  ``curl http://x/cgi-bin/qgis_mapserv.fcgi`` or by accessing the url from
+  your Debian box browser. You will probably get::
+
+   <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+   <html><head>
+   <title>404 Not Found</title>
+   </head><body>
+   <h1>Not Found</h1>
+   <p>The requested URL /cgi-bin/qgis_mapserv.fcgi was not found on this server.</p>
+   <hr>
+   <address>Apache/2.4.25 (Debian) Server at x Port 80</address>
+   </body></html>
+
+* Apache doesn't know that he's supposed to answer requests pointing to the server
+  named ``x`. In order to setup the virtual host the simplest way would be to make
+  a ``x.conf`` file in the :file:`/etc/apache/sites-available` directory that
+  has the same content as file:`qgisplatform.demo.conf` except for the
+  ``ServerName`` line that should be ``ServerName x``.
+* Let's now enable the virtual host with ``sudo apt-get a2ensite x.conf`` and the
+  reloading the Apache service with ``sudo systemctl reload apache2``.
+* If you try again to access the http://x/cgi-bin/qgis_mapserv.fcgi url you'll
+  notice everything is working now!.
+
+  .. note::
+
+   Remember that both the :file:`x.conf` and :file:`/etc/hosts` files should
+   be configured for our setup to work.
+   You can also test the access to your QGIS Server from other clients on the
+   network (e.g. Windows or Macos machines) by going to their :file:`/etc/hosts`
+   file and point the ``x`` name to whatever IP the server machine has on the
+   network. You can be sure that that specific IP is not ``127.0.0.1`` as that's
+   the local IP, only accessible from the local machine.
+
+|IC|
+-------------------------------------------------------------------------------
+
+You learned how to install different QGIS Server versions from packages,
+how to configure Apache with QGIS Server, on Debian based Linux distros.
+
+|WN|
+-------------------------------------------------------------------------------
+
+Now that you've installed QGIS Server and it's accesible through the HTTP
+protocol, we need to learn how to access some of the services it can offer.
+The topic of the next lesson is to learn how to access QGIS Server WMS services.
