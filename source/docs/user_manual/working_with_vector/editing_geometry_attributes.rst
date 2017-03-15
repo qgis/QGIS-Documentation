@@ -1008,7 +1008,7 @@ The Advanced Digitizing panel can be open either with a right-click on the
 toolbar and choose Advanced Digitizing panel or in :menuselection:`View --> Panel -->
 Advanced Digitizing Panel`.
 Once the panel is visible in the toolbar, to activate the Advanced Digitizing
-tool just click on the the |cad| icon.
+tool just click on the |cad| icon.
 
 Concepts
 --------
@@ -1057,7 +1057,7 @@ segment:
    Fixed length segment
 
 
-in the canvas the clicked point is surrounded by a circle whose radius is the
+In the canvas the clicked point is surrounded by a circle whose radius is the
 value entered in the distance box.
 
 Finally you can also choose the angle of the segment. As the steps before
@@ -1153,7 +1153,7 @@ the mouse position in the canvas:
 
 Before adding the new point, you have to exit the construction mode, just click
 :kbd:`c`. Now you can click in the canvas and the point will be placed at the
-given distance entered:
+provided distance entered:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point_final.png
    :align: center
