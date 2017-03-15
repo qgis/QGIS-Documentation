@@ -150,19 +150,22 @@ Digitizing and Advanced Digitizing
 Icon                          Substitution                       Icon                           Substitution
 ============================  =================================  =============================  ================================
 |cad|                         ``|cad|``                          |tracing|                      ``|tracing|``
-|toggleEditing|               ``|toggleEditing|``                |allEdits|                     ``|allEdits|``
-|capturePoint|                ``|capturePoint|``                 |capturePolygon|               ``|capturePolygon|``
-|captureLine|                 ``|captureLine|``
-|circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
-|nodeTool|                    ``|nodeTool|``                     |deleteSelected|               ``|deleteSelected|``
-|moveFeature|                 ``|moveFeature|``                  |rotateFeature|                ``|rotateFeature|``
-|simplifyFeatures|            ``|simplifyFeatures|``             |reshape|                      ``|reshape|``
-|addRing|                     ``|addRing|``                      |addPart|                      ``|addPart|``
-|fillRing|                    ``|fillRing|``
-|deleteRing|                  ``|deleteRing|``                   |deletePart|                   ``|deletePart|``
-|mergeFeatures|               ``|mergeFeatures|``                |mergeFeatAttributes|          ``|mergeFeatAttributes|``
-|splitFeatures|               ``|splitFeatures|``                |splitParts|                   ``|splitParts|``
-|offsetPointSymbols|          ``|offsetPointSymbols|``           |rotatePointSymbols|           ``|rotatePointSymbols|``
+|cadConstruction|             ``|cadConstruction|``              |allEdits|                     ``|allEdits|``
+|cadParallel|                 ``|cadParallel|``                  |capturePolygon|               ``|capturePolygon|``
+|cadPerpendicular|            ``|cadPerpendicular|``
+|toggleEditing|               ``|toggleEditing|``                |circularStringRadius|         ``|circularStringRadius|``
+|capturePoint|                ``|capturePoint|``                 |deleteSelected|               ``|deleteSelected|``
+|captureLine|                 ``|captureLine|``                  |rotateFeature|                ``|rotateFeature|``
+|circularStringCurvePoint|    ``|circularStringCurvePoint|``     |reshape|                      ``|reshape|``
+|nodeTool|                    ``|nodeTool|``                     |addPart|                      ``|addPart|``
+|moveFeature|                 ``|moveFeature|``
+|simplifyFeatures|            ``|simplifyFeatures|``             |deletePart|                   ``|deletePart|``
+|addRing|                     ``|addRing|``                      |mergeFeatAttributes|          ``|mergeFeatAttributes|``
+|fillRing|                    ``|fillRing|``                     |splitParts|                   ``|splitParts|``
+|deleteRing|                  ``|deleteRing|``                   |rotatePointSymbols|           ``|rotatePointSymbols|``
+|mergeFeatures|               ``|mergeFeatures|``
+|splitFeatures|               ``|splitFeatures|``
+|offsetPointSymbols|          ``|offsetPointSymbols|``
 |offsetCurve|                 ``|offsetCurve|``                  \                              \
 ============================  =================================  =============================  ================================
 

@@ -137,7 +137,7 @@ layers, activate the |checkbox| :guilabel:`Avoid Intersections` option.
 
 .. index:: Shared polygon boundaries
    seealso: Shared polygon boundaries; Topology
-   
+
 Enable topological editing
 --------------------------
 
@@ -199,10 +199,10 @@ By default, QGIS loads layers read-only. This is a safeguard to avoid
 accidentally editing a layer if there is a slip of the mouse.
 However, you can choose to edit any layer as long as the data provider
 supports it (see :ref:`supported_format`), and the underlying data source is writable
-(i.e., its files are not read-only). 
+(i.e., its files are not read-only).
 
 .. tip:: **Restrict edit permission on layers within a project**
-   
+
    From the :menuselection:`Project --> Project properties --> Identify` tab,
    You can choose to set any layer read-only regardless the provider permission.
    This can be a handy way, in a multi-users environment to avoid unauthorized users
@@ -546,12 +546,12 @@ for Selected Layer(s)` is an easy way.
 
 The same functions are available for editing all layers of the project.
 
-.. tip:: **Use transaction group to edit, save or rollback multiple layers changes at once** 
+.. tip:: **Use transaction group to edit, save or rollback multiple layers changes at once**
 
    When working with layers from the same PostGreSQL database, activate the
    :guilabel:`Automatically create transaction groups where possible` option in
    :menuselection:`Project --> Project Properties --> Data Sources` to sync their
-   behavior (enter or exit the edit mode, save or rollback changes at the same time). 
+   behavior (enter or exit the edit mode, save or rollback changes at the same time).
 
 .. _sec_advanced_edit:
 
@@ -839,7 +839,7 @@ the |splitParts| :sup:`Split Parts` icon.
 
 .. tip:: **Split a polyline feature in one-click**
 
-   A single click on a **snapped vertex** of a line feature with the |splitFeatures| 
+   A single click on a **snapped vertex** of a line feature with the |splitFeatures|
    :sup:`Split Features` or |splitParts| :sup:`Split Parts` tool is enough to have it
    split into new features or parts.
 
@@ -894,7 +894,7 @@ near the :guilabel:`Rotation` option of the highest level (preferably) of the sy
 layers and choose a field in the :guilabel:`Field Type` combobox. Values of this
 field are hence used to rotate each feature's symbol accordingly.
 
-.. note:: 
+.. note::
    As a global option, setting the rotation field at the first level of the symbol
    applies it to all the underlying levels while setting it at a lower level will
    rotate only this symbol layer (unless you have a single symbol layer).
@@ -989,10 +989,11 @@ otherwise QGIS is unable to connect them and thus traces a single straight line.
 The Advanced Digitizing panel
 =============================
 
-When capturing new geometries or geometry parts you also have the possibility
-to use the Advanced Digitizing panel. You can digitize lines exactly parallel or
-at a specific angle or lock lines to specific angles. Furthermore you can enter
-coordinates directly so that you can make a precise definition for your new geometry.
+When capturing, reshaping, splitting new or existing geometries you also have the
+possibility to use the Advanced Digitizing panel. You can digitize lines exactly
+parallel or at a specific angle or lock lines to specific angles. Furthermore you
+can enter coordinates directly so that you can make a precise definition for your
+new geometry.
 
 .. _figure_advanced_digitizing:
 
@@ -1002,6 +1003,162 @@ coordinates directly so that you can make a precise definition for your new geom
    The Advanced Digitizing panel
 
 .. note:: The tools are not enabled if the map view is in geographic coordinates.
+
+The Advanced Digitizing panel can be open either with a right-click on the
+toolbar and choose Advanced Digitizing panel or in :menuselection:`View --> Panel -->
+Advanced Digitizing Panel`.
+Once the panel is visible in the toolbar, to activate the Advanced Digitizing
+tool just click on the |cad| icon.
+
+Concepts
+--------
+
+The aim of the Advanced Digitizing tool is to lock coordinates, lengths and angles
+when moving the mouse during the digitalization in the canvas.
+
+You can also create constraints with relative or absolute reference. Relative
+reference means that the next vertex constraint will be relative to the previous
+vertex or segment.
+
+Absolute coordinates digitizing
+-------------------------------
+
+When drawing a new layer or a new geometry from scratch it is very useful to have
+the possibility to start the digitalization of the vertexes to given coordinates.
+
+For example, to add a new feature to a polygonal layer, just click on the
+|capturePolygon| button.
+
+You can choose the X and Y coordinates where you want to start editing the
+feature. Just click on the *x* (keyboard shortcut :kbd:`x`) and *y* (keyboard
+shortcut :kbd:`y`) boxes, enter the coordinates you want and hit Enter or click
+on the small locker on the right to lock the mouse position on the canvas:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_coordinates.png
+   :align: center
+
+   Start drawing at given coordinates
+
+Two blue dotted lines and a green cross identify the exact coordinates you
+entered. Start digitizing by clicking on the canvas, the mouse position is
+locked at the green cross.
+
+You can continue digitizing by free hand or you can enter the segment **length**
+(distance) and the **angle** of the segment.
+
+If you want to draw a segment of a given length, just click on the *d* box
+(keyboard shortcut :kbd:`d`), enter the distance (be aware that the input is in
+map unit) and hit Enter to lock the mouse in the canvas hence the length of the
+segment:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance.png
+   :align: center
+
+   Fixed length segment
+
+
+In the canvas the clicked point is surrounded by a circle whose radius is the
+value entered in the distance box.
+
+Finally you can also choose the angle of the segment. As the steps before
+described, just click on the *a* box (keyboard shortcut :kbd:`a`) and type the
+angle you want. In this way the segment will follow the desired angle:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_angle.png
+   :align: center
+
+   Fixed angle segment
+
+
+
+Relative angular coordinates digitizing
+---------------------------------------
+
+If you want to have distances and angles relative to an existing feature you can
+easily do this by combining the snapping option and the *d* (distance) and *a*
+(angle) boxes.
+
+Before to start be sure to have activated the snapping option see :ref:`snapping_tolerance`.
+
+If you want to add a new feature (remember, the tool allows to work with all the
+digitizing tool like reshaping, splitting, etc.) click on a vertex on the existing
+feature. Click on the *d* (keyboard shortcut :kbd:`d`) and *a* (keyboard shortcut
+:kbd:`a`) boxes and add the desired values. You can now see in the canvas that your
+feature will start at an existing vertex and will have a precise length and angle:
+
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_relative.png
+   :align: center
+
+   Relative length and angle digitizing
+
+
+Parallel and perpendiculars line
+--------------------------------
+
+All the tools described above can be combined with the |cadPerpendicular| :sup:`Perpendicular`
+and |cadParallel| :sup:`Parallel` tools. These two tools allow to draw segments
+perfectly perpendicular and parallel to another segment.
+
+During the editing click on the |cadPerpendicular| :sup:`Perpendicular` icon
+(keyboard shortcut :kbd:`p`) to activate it and snap to the segment, **before
+drawing the perpendicular line, click on the line of the existing feature you
+want to be perpendicular to** (the line of the existing feature will be colored
+in light orange): you should see a blue dotted line where your feature will be
+snapped:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_perpendicular.png
+   :align: center
+
+   Perpendicular digitizing
+
+To draw a *parallel* feature the steps are exactly the same: click on the
+|cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`p`), click on the
+line you want to be parallel and start drawing your feature:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_parallel.png
+   :align: center
+
+   Parallel digitizing
+
+
+Actually these two tools just find the right angle of the perpendicular and
+parallel angle and lock this parameter during your editing.
+
+
+Draw points at given distances
+------------------------------
+
+The Advanced Digitizing Tool can be used also for points layer, for example to
+draw some points at exact distances among them.
+
+As for the polygon layers described above, remember to activate the snapping
+options.
+
+With an existing point in the canvas and the snapping mode correctly activated,
+you can easily draw other points at given distances and angles from it.
+
+In addition to the |cad| button, you have to activate also the *construction*
+mode by clicking on the |cadConstruction| :sup:`Construction` icon or with the
+:kbd:`c` keyboard shortcut.
+
+Click next to the point from which you want to calculate the distance and click on
+the *d* box (:kbd:`d` shortcut) enter the desired distance and hit Enter to lock
+the mouse position in the canvas:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point.png
+   :align: center
+
+   Distance from point
+
+Before adding the new point, you have to exit the construction mode, just click
+:kbd:`c`. Now you can click in the canvas and the point will be placed at the
+provided distance entered:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point_final.png
+   :align: center
+
+   Points at given distance
 
 
 .. index:: Create new layers
@@ -1112,4 +1269,3 @@ and |radioButtonOff|:guilabel:`Multipolygon` Layers beneath |radioButtonOn|:guil
 |radioButtonOff|:guilabel:`Line` and |radioButtonOff|:guilabel:`Polygon` Layers.
 Temporary Scratch Layers are not saved and will be discarded when QGIS is closed.
 See also :ref:`paste_into_layer`.
-
