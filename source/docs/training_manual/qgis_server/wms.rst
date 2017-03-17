@@ -1,18 +1,17 @@
 |LS| Serving WMS
 ===============================================================================
 
-Let's download the `demo data <https://github.com/tudorbarascu/qgis-server-tutorial-data/archive/master.zip>`_
-and unzip the files to any directory, e.g. :file:`/home/qgis/projects`.
+Let's download the `demo data <https://github.com/qgis/QGIS-Training-Data/archive/master.zip>`_
+and unzip the files in the :file:`qgis-server-tutorial-data` subdirectory to
+any directory. We recommend that you simply create a :file:`/home/qgis/projects`
+directory and put your files there in order to avoid possible permissions problems.
 
-Let's make a WMS GetCapabilities request in the web browser or with curl::
+The demo data contains a QGIS project named :file:`world.qgs` that is already
+prepared to be served with QGIS Server.
+If you want to use your own project or you want to learn how a project
+is prepared see the :ref:`Creatingwmsfromproject` section.
 
- http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
- ?SERVICE=WMS
- &VERSION=1.3.0
- &REQUEST=GetCapabilities
- &map=/home/qgis/projects/world.qgs
-
-.. warning::
+.. note::
 
  This module presents the URLs so that the audience can easily distinguish
  the parameters and parameters values. While the normal format is::
@@ -28,7 +27,15 @@ Let's make a WMS GetCapabilities request in the web browser or with curl::
  Pasting them into Mozilla Firefox works properly but other web browsers
  like Chrome may add unwanted spaces between the ``field:parameter`` pairs.
  So, if you encounter this issue you can either use Firefox or modify
- the URLs so that they're in a one line format.
+ the URLs so that they're in one line format.
+
+Let's make a WMS GetCapabilities request in the web browser or with curl::
+
+ http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
+ ?SERVICE=WMS
+ &VERSION=1.3.0
+ &REQUEST=GetCapabilities
+ &map=/home/qgis/projects/world.qgs
 
 .. note::
 
@@ -78,9 +85,8 @@ you what's going on. We have setup in the ``*.conf`` file the following logs:
 * ``qgisplatform.demo`` Apache error log at :file:`qgisplatform.demo.error.log`
 
 The log files are simply text files so you can use a text editor to check them
-out. You can also use the `tail` command in a terminal like so::
-
- sudo tail -f /logs/qgisserver.log
+out. You can also use the ``tail`` command in a terminal:
+``sudo tail -f /logs/qgisserver.log``.
 
 This will continuously output in the terminal what's written in that log file.
 You can also have three terminals opened for each of the log files like so:
@@ -102,8 +108,8 @@ of QGIS Server in the QGIS Server log etc.
 
  * If you look at the logs in the following sections you should get a better
    understanding on what's happening.
- * It would be interresting for you to restart Apache and look in the QGIS
-   Server log.
+ * By restarting Apache while looking in the QGIS Server log you can find
+   some extra pointers on how things work.
 
 GetMap requests
 -------------------------------------------------------------------------------
@@ -142,8 +148,8 @@ The above request should output the following image:
 * Based on the request above, let's replace the ``countries`` layer with another.
 * In order to see what other layers are available you could open up the
   :file:`world.qgs` project in QGIS and see. Keep in mind though that the WMS
-  clients don't have access to the QGIS project, they just see the capabilities
-  document. Also, there's a configuration option so that some of the layers
+  clients don't have access to the QGIS project, they just look at the capabilities
+  document contents. Also, there's a configuration option so that some of the layers
   existing in the QGIS project are ignored by QGIS when serving the WMS service.
 * So, you could look at the layer list when you point QGIS Desktop to the
   ``GetCapabilities`` URL or you could try yourself finding other layer names
@@ -238,8 +244,8 @@ and we used the **REDLINING** feature to overlay a rectangle with the
 GetPrint requests
 -----------------
 
-One very nice feature of QGIS Server is that it make use of the QGIS Desktop
-print composers.
+One very nice feature of QGIS Server is that it makes use of the QGIS Desktop
+print composers. You can learn about it in the :ref:`server_getprint` section.
 
 If you open the :file:`world.qgs` project with QGIS Desktop you will find a
 print composer named ``Population distribution``. A simplified ``GetPrint``
@@ -266,3 +272,46 @@ request that exemplifies this amazing feature is::
    :align: center
 
    Show the pdf resulted from a GetPrint QGIS Server request
+
+Naturally, it's hard to write your ``GetMap``, ``GetPrint`` etc. requests.
+
+`QGIS Web Client <https://github.com/qgis/qgis-web-client>`_ or QWC is a Web
+client project that can work alongside QGIS Server so that you can publish
+your projects on the Web or help you create QGIS Server requests for a better
+understanding about the possibilities.
+
+You can install it like this:
+
+* As user ``qgis`` go to the home directory with ``cd /home/qgis``.
+* Download the QWC project with ``git clone git://github.com/qgis/QGIS-Web-Client.git``.
+  If you don't have ``git`` installed you can install it with ``sudo apt-get install -y git``.
+* Make a symbolic link to the ``/var/www/html`` directory as it's the ``DocumentRoot`` that
+  we've setup in the virtual host configuration. We can do that with
+  ``sudo ln -s /home/qgis/QGIS-Web-Client /var/www/html/``.
+* Access http://qgisplatform.demo/QGIS-Web-Client/site/qgiswebclient.html?map=/home/qgis/projects/world.qgs
+  from your Web browser.
+
+Now you should be able to see the Map as in the following figure:
+
+.. only:: html
+
+  **Figure QGIS Web Client in action:**
+
+.. figure:: /static/training_manual/qgis_server/qwc.jpg
+   :align: center
+
+   QGIS Web Client consuming the world.qgs project
+
+If you click the Print button in QWC you can interactively create ``GetPrint``
+requests. You can also click the ``?`` icon in the QWC to access the available
+help so that you can better discover the QWC possibilities.
+
+|IC|
+-------------------------------------------------------------------------------
+
+You learned how use QGIS Server to provide WMS Services.
+
+|WN|
+-------------------------------------------------------------------------------
+
+Next, you'll see how to use QGIS as a frontend for the famous GRASS GIS.
