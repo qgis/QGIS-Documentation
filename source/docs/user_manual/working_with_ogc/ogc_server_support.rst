@@ -517,6 +517,7 @@ define the tolerance for point, line and polygon layers:
 * **FI_POLYGON_TOLERANCE** parameter: Tolerance for polygon layers
   *GetFeatureInfo* request, in pixels.
 
+.. _server_getprint:
 
 GetPrint request
 -----------------
