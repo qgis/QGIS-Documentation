@@ -793,6 +793,8 @@ For linux, if you don't have a desktop environment installed (or you prefer the 
    $ chown root *
    $ cd .. && fc-cache -f -v
 
+.. _server_env_variables:
+
 Environment variables
 ---------------------
 

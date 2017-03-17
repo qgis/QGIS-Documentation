@@ -2,6 +2,8 @@
 |MOD| QGIS Server
 *******************************************************************************
 
+Module contributed by Tudor Bărăscu.
+
 In this module, we'll cover how to install and use QGIS Server.
 
 For a introduction to what QGIS Server is (see the :ref:`label_qgisserver` section)
@@ -11,4 +13,4 @@ For a introduction to what QGIS Server is (see the :ref:`label_qgisserver` secti
 
    install
    wms
-   
+
