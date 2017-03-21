@@ -35,6 +35,16 @@ require a restart of QGIS before they will be effective.
 
 The tabs where you can customize your options are described below.
 
+.. note:: **Plugins can embed their settings within the Options dialog**
+
+ While only Core settings are presented below, note that this list can be extended
+ by :ref:`installed plugins <plugins>` implementing their own options into the
+ standard Options dialog. This avoids each plugin having their own config dialog
+ with extra menu items just for them...
+ 
+ .. comment: Would be nice to link in the future to a place in the PyQGIS Cookbook
+   showing the code to use to implement plugin options in standard dialog 
+
 General Settings
 ----------------
 
@@ -538,6 +548,18 @@ it.
 
 More information about variables in the :ref:`general_tools_variables`
 section.
+
+Processing
+----------
+
+The |processing| :guilabel:`Processing` tab provides you with general settings
+of tools and data providers that are used in the QGIS Processing framework.
+More information at :ref:`label_processing`.
+
+.. comment for writers:
+ Actually, there seems to not be a real section describing the Processing options
+ dialog. So the link above should be redirected if ever such a section is
+ created, preferably in Processing chapter.
 
 .. _optionsadvanced:
 
