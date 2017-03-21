@@ -343,6 +343,9 @@ Appropriate for point geometry features, marker symbols have several
   rendering markers, e.g. gradient or shapeburst fills;
 * **Font marker**: use installed fonts as marker symbols;
 * **Geometry generator** (see :ref:`geometry_generator_symbol`);
+
+.. _svg_marker:
+
 * **SVG marker**: provides you with images from your SVG paths (set in
   :menuselection:`Settings --> Options --> System` menu) to render as marker symbol.
   Each SVG file colors and outline can be adapted;
@@ -364,8 +367,8 @@ Appropriate for point geometry features, marker symbols have several
  
 For each marker symbol layer type, you can set some of the following properties:
 
-* :guilabel:`Color`, using all the capabilities of the :ref:`color-selector`
-  widget;
+* :guilabel:`Color` for the fill and/or stroke, using all the capabilities of the
+  :ref:`color-selector` widget;
 * :guilabel:`Size`
 * :guilabel:`Outline style`
 * :guilabel:`Outline width`
@@ -419,7 +422,16 @@ Fill Symbols
 Appropriate for polygon geometry features, fill symbols have also several
 symbol layer types:
 
-* **Simple fill** (default);
+* **Simple fill** (default): the following settings are available:
+
+* :guilabel:`Fill` color
+* :guilabel:`Outline` color
+* :guilabel:`Fill style`
+* :guilabel:`Outline style`
+* :guilabel:`Outline width`
+* :guilabel:`Join Style`
+* :guilabel:`Offset X,Y`
+
 * **Centroid fill**: places a marker symbol at the centroid of the visible
   feature. The marker can be placed on every part of a multi-part feature or
   only on its biggest part, and forced to be inside the polygon;
@@ -438,7 +450,7 @@ symbol layer types:
 * **Raster image fill**: you can fill polygons with a tiled raster image.
   Options include (data defined) file name, opacity, image size (in pixels, mm
   or map units), coordinate mode (feature or view) and rotation;
-* **SVG fill**: fills the polygon using SVG markers;
+* **SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`;
 * **Shapeburst fill**: this option buffered a gradient fill, where a gradient
   is drawn from the boundary of a polygon towards the polygon's centre.
   Configurable parameters include distance from the boundary to shade, use of
@@ -452,15 +464,6 @@ symbol layer types:
   polygon boundary. The :guilabel:`Draw line only inside polygon` option helps
   polygon borders inside the polygon and can be useful to clearly represent
   adjacent polygon boundaries.
-
-The following settings are available:
-
-* :guilabel:`Color` for the symbol stroke and fill
-* :guilabel:`Fill style`
-* :guilabel:`Outline style`
-* :guilabel:`Outline width`
-* :guilabel:`Offset X,Y`
-* :guilabel:`Data defined properties ...`
 
 .. note::
 
