@@ -64,10 +64,10 @@ The snapping tolerance setting affects all tools that work with tolerance.
    snapping units in feet. Your results may vary, but something on the order
    of 300 ft at a scale of 1:10000 should be a reasonable setting.
 #. A layer-based snapping tolerance that overrides the global snapping options
-   can be defined by choosing :menuselection:`Settings --> Snapping options`.
-   It enables and adjusts snapping mode
-   and tolerance on a layer basis (see figure_edit_snapping_ ). This dialog offers
-   three different modes to select the layer(s) to snap to:
+   can be defined by choosing :menuselection:`Project --> Snapping options`.
+   It helps to enable and adjust snapping mode and tolerance on a layer basis
+   (see figure_edit_snapping_). This dialog offers three different modes to
+   select the layer(s) to snap to:
 
    * :guilabel:`Current layer`: only the active layer is used, a convenient way
      to ensure topology within the layer being edited
