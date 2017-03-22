@@ -424,7 +424,7 @@ filling values...) in order to perform a more complex task.
 Below are listed default panels provided by QGIS:
 
 * the :ref:`label_legend`
-* the :ref:`Browser Panel <label_qgis_browser>`
+* the :ref:`Browser Panel <browser_panel>`
 * the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
 * the :ref:`Spatial Bookmarks Panel <sec_bookmarks>`
 * the :ref:`GPS Information Panel <sec_gpstracking>`
