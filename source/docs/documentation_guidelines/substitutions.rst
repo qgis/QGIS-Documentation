@@ -385,7 +385,6 @@ Icon                            Substitution                        Icon        
 |installPluginFromZip|          ``|installPluginFromZip|``          \                               \
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
-|mapserverExport|               ``|mapserverExport|``               |exportMapServer|               ``|exportMapServer|``
 |delimitedText|                 ``|delimitedText|``                 \                               \
 |gdalScript|                    ``|gdalScript|``                    |dxf2shpConverter|              ``|dxf2shpConverter|``
 |spatialQuery|                  ``|spatialQuery|``                  |selectSubsetLayer|             ``|selectSubsetLayer|``

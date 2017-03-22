@@ -126,9 +126,9 @@ Core plugins include:
 #.  Metasearch Catalogue Client
 #.  Offline Editing (Allow offline editing and synchronizing with databases)
 #.  Oracle Spatial GeoRaster
-#.  Processing (formerly SEXTANTE)
 #.  Raster Terrain Analysis (Analyze raster-based terrain)
 #.  Road Graph Plugin (Analyze a shortest-path network)
+#.  Processing
 #.  Spatial Query Plugin
 #.  Topology Checker (Find topological errors in vector layers)
 #.  Zonal Statistics Plugin (Calculate count, sum, and mean of a raster for each
