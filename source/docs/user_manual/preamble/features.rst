@@ -125,8 +125,6 @@ Core plugins include:
 #.  Processing
 #.  Spatial Query Plugin
 #.  Topology Checker (Find topological errors in vector layers)
-#.  Zonal Statistics Plugin (Calculate count, sum, and mean of a raster for each
-    polygon of a vector layer)
 
 
 External Python Plugins

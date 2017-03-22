@@ -35,5 +35,4 @@ Icon                    Plugin                        Description               
 |geoprocessing|         Processing                    Spatial data processing framework                       :ref:`label_processing`
 |spatialQuery|          Spatial Query                 Spatial queries on vectors                              :ref:`spatial_query`
 |topologychecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
-|rasterStats|           Zonal Statistics              Calculate raster statistics for vector polygons         :ref:`zonal_statistics`
 ======================  ============================  ======================================================  ===============================

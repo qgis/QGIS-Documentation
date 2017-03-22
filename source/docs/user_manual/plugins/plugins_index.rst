@@ -24,4 +24,3 @@ Plugins
    plugins_offline_editing
    plugins_spatial_query
    plugins_topology_checker
-   plugins_zonal_statistics
