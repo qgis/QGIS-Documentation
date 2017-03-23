@@ -130,7 +130,7 @@ Keep in mind that different options of the ``make`` command (presented down the 
 You should also be aware that the ``make ..`` commands are made for production purposes which translates that
 the build will stop at the first inconsitency because of the ``sphinx-build -nW ..`` command. You should drop
 the ``-W`` option if you want your build to fully complete (with warnings of course)
-(e.g. sphinx-build -n -b html -d output/doctrees  -D language=en -A language=en source output/html/en``).
+(e.g. ``sphinx-build -n -b html -d output/doctrees  -D language=en -A language=en source output/html/en``).
 
 
 If you want add the QGIS-Documentation docs into the build, you either need

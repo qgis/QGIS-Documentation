@@ -44,20 +44,24 @@ There are several options available:
 Layer Info
 ----------
 
-* Change the display name of the layer in :guilabel:`displayed as`
-* Define the :guilabel:`Layer source` of the vector layer
+* Set the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`
+* Display the :guilabel:`Layer source` of the vector layer
 * Define the :guilabel:`Data source encoding` to define
   provider-specific options and to be able to read the file
 
 Coordinate Reference System
 ---------------------------
 
-* :guilabel:`Specify` the coordinate reference system. Here, you
-  can view or change the projection of the specific vector layer.
+* Displays the layer's Coordinate Reference System (CRS) as a PROJ.4 string.
+  You can change the layer's CRS, selecting a recently used one
+  in the drop-down list or clicking on |setProjection| :sup:`Select CRS` button
+  (see :ref:`crs_selector`). Use this process only if the CRS applied to the
+  layer is a wrong one or if none was applied.
+  If you wish to reproject your data into another CRS, rather use layer reprojection
+  algorithms from Processing or :ref:`Save it into another layer <general_saveas>`.
 * Create a :guilabel:`Spatial Index` (only for OGR-supported formats)
 * :guilabel:`Update Extents` information for a layer
-* View or change the projection of the specific vector layer, clicking on
-  :guilabel:`Specify ...`
+
 
 Scale dependent visibility
 --------------------------

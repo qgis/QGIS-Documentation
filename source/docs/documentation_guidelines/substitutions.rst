@@ -149,16 +149,17 @@ Digitizing and Advanced Digitizing
 ============================  =================================  =============================  ================================
 Icon                          Substitution                       Icon                           Substitution
 ============================  =================================  =============================  ================================
-|cad|                         ``|cad|``                          |tracing|                      ``|tracing|``
+|cad|                         ``|cad|``                          |cadConstruction|              ``|cadConstruction|``
+|cadParallel|                 ``|cadParallel|``                  |cadPerpendicular|             ``|cadPerpendicular|``
 |toggleEditing|               ``|toggleEditing|``                |allEdits|                     ``|allEdits|``
-|capturePoint|                ``|capturePoint|``                 |capturePolygon|               ``|capturePolygon|``
-|captureLine|                 ``|captureLine|``
+|tracing|                     ``|tracing|``                      |capturePoint|                 ``|capturePoint|``                 
+|captureLine|                 ``|captureLine|``                  |capturePolygon|               ``|capturePolygon|``
 |circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
 |nodeTool|                    ``|nodeTool|``                     |deleteSelected|               ``|deleteSelected|``
 |moveFeature|                 ``|moveFeature|``                  |rotateFeature|                ``|rotateFeature|``
 |simplifyFeatures|            ``|simplifyFeatures|``             |reshape|                      ``|reshape|``
 |addRing|                     ``|addRing|``                      |addPart|                      ``|addPart|``
-|fillRing|                    ``|fillRing|``
+|fillRing|                    ``|fillRing|``                     \                              \
 |deleteRing|                  ``|deleteRing|``                   |deletePart|                   ``|deletePart|``
 |mergeFeatures|               ``|mergeFeatures|``                |mergeFeatAttributes|          ``|mergeFeatAttributes|``
 |splitFeatures|               ``|splitFeatures|``                |splitParts|                   ``|splitParts|``
@@ -284,7 +285,7 @@ Projections and Georeferencer
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |geographic|                    ``|geographic|``                    |crs|                           ``|crs|``
-|customProjection|              ``|customProjection|``              \                               \
+|customProjection|              ``|customProjection|``              |setProjection|                 ``|setProjection|``
 |projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
 |georeferencer|                 ``|georeferencer|``                 |pencil|                        ``|pencil|``
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``

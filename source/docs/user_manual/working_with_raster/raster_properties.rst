@@ -57,12 +57,16 @@ raster, including the layer source path, the display name in the legend
 (which can be modified), and the number of columns, rows and no-data values
 of the raster.
 
-Coordinate reference system
+Coordinate Reference System
 ...........................
 
-Here, you find the coordinate reference system (CRS) information printed as a
-PROJ.4 string. If this setting is not correct, it can be modified by clicking
-the **[Specify]** button.
+Displays the layer's Coordinate Reference System (CRS) as a PROJ.4 string. You
+can change the layer's CRS, selecting a recently used one in the drop-down list
+or clicking on |setProjection| :sup:`Select CRS` button (see :ref:`crs_selector`).
+Use this process only if the CRS applied to the layer is a wrong one or if none
+was applied. If you wish to reproject your data into another CRS, rather use
+layer reprojection algorithms from Processing or :ref:`Save it into another
+layer <general_saveas>`.
 
 Scale dependent visibility
 --------------------------
