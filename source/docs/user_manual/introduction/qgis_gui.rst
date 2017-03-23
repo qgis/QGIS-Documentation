@@ -472,11 +472,11 @@ project's, you must :guilabel:`Enable on-the-fly CRS transformation` from the
 (see :ref:`otf_transformation`). The added layer should now be visible if data
 are available in the current view extent.
 
-The map view can be panned, shifting the focus of the map display to
-another region, and it can be zoomed in and out. Various other operations can be
-performed on the map as described in the label_toolbars_ description above. The map
-view and the legend are tightly bound to each other --- the maps in view reflect
-changes you make in the legend area.
+The map view can be panned, shifting the focus of the map display to another
+region, and it can be zoomed in and out. Various other operations can be
+performed on the map as described in the :ref:`label_toolbars` description.
+The map view and the legend are tightly bound to each other --- the maps in
+view reflect changes you make in the legend area.
 
 
 .. index:: Zoom, Mouse wheel
@@ -502,9 +502,6 @@ changes you make in the legend area.
    pan west, up arrow key to pan north and down arrow key to pan south. You can
    also pan the map using the space bar or the click on mouse wheel: just move
    the mouse while holding down space bar or click on mouse wheel.
-
-.. _`label_mapoverview`:
-
 
 .. _`label_statusbar`:
 
