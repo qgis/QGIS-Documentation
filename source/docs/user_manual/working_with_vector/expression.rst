@@ -472,6 +472,20 @@ Adding or subtracting an interval to dates, datetimes or times, using the
      now() + to_interval('100 days')
      -- Returns <datetime: 2017-06-18 01:00:00>
 
+.. note:: **Storing date and datetime and intervals on fields**
+
+   The ability to store *date*, *time* and *datetime* values directly on
+   fields may depend on the data source's provider (e.g., shapefiles accept
+   *date* format, but not *datetime* or *time* format). The following are some
+   suggestions to overcame this limitation.
+
+   *date*, *Datetime* and *time* can be stored in text type fields after
+   using the ``to_format()`` function.
+
+   *Intervals* can be stored in integer or decimal type fields after using
+   one of the date extraction functions (e.g., ``day()`` to get the interval
+   expressed in days)
+
 
 Fields and Values
 ------------------
