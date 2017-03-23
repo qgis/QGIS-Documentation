@@ -79,11 +79,17 @@ Layers Panel
 .. index::
    single: Legend
 
-The layers panel lists all the layers in the project. The checkbox in each
-legend entry can be used to show or hide the layer. The toolbar in the layers
-panel allows you to:
+The :guilabel:`layers Panel` lists all the layers in the project and helps you
+manage their visibility. A layer can be selected and dragged up or down in the
+legend to change the Z-ordering. Z-ordering means that layers listed nearer the
+top of the legend are drawn over layers listed lower down in the legend.
 
-* |addGroup| Add new group
+.. note:: The Z-ordering behavior can be overridden by the
+   :ref:`Layer Order <layer_order>` panel.
+
+At the top of the Layers panel, a toolbar allows you to:
+
+* |addGroup| :sup:`Add new group`
 * |showPresets| :sup:`Manage Visibility`: control visibility of layers and
   preset layers combination
 * |filterMap| :sup:`Filter Legend by Map Content`: only the layers that are set
@@ -107,9 +113,15 @@ panel allows you to:
 
    Layer Toolbar in Layers Panel
 
+.. note::
+   Tools to manage the layers panel are also available to layout the map
+   and legend items of the print composer
 
-.. index::
-   single: Layer visibility
+.. index:: Preset visibility
+.. _preset_visibility:
+
+Preset the layers visibility
+............................
 
 The button |showPresets| allows you to add **Presets** views in the legend.
 Presets are a way to save and easily restore a combination of layers with their
@@ -126,39 +138,13 @@ deletes the active preset.
 All the added presets are also present in the map composer in order to allow you
 to create a map layout based on your specific views (see :ref:`composer_main_properties`).
 
-.. note::
-   Tools to manage the layers panel are also available to layout the map
-   and legend items of the print composer
+Overview of the context menu of the Layers panel
+................................................
 
-A layer can be selected and dragged up or down in the legend to change the
-Z-ordering. Z-ordering means that layers listed nearer the top of the legend
-are drawn over layers listed lower down in the legend.
-
-.. note:: This behavior can be overridden by the :ref:`Layer Order <layer_order>` panel.
-
-Layers in the legend window can be organized into groups. There are two ways to
-do this:
-
-#. Press the |folder| icon to add a new group. Type in a name for
-   the group and press :kbd:`Enter`. Now click on an existing layer and
-   drag it onto the group.
-#. Select some layers, right click in the legend window and choose
-   :guilabel:`Group Selected`. The selected layers will automatically be placed
-   in a new group.
-
-To bring a layer out of a group, you can drag it out, or right click on it and
-choose :guilabel:`Make to toplevel item`. Groups can also be nested inside other
-groups.
-
-The checkbox for a group will show or hide all the layers in the group
-with one click.
-
-The content of the right mouse button context menu depends on whether the
-selected legend item is a raster or a vector layer. For GRASS vector layers,
-|toggleEditing| :sup:`Toggle editing` is not available. See section
-:ref:`grass_digitizing` for information on editing GRASS vector layers.
-
-Below are listed available options in context menu depending on the selected item.
+At the bottom of the toolbar, the main component of the Layers panel is the
+frame listing vector or raster layers added to the project and, those layers
+can be organized in groups. Depending on the item selected in the panel, a
+right-click shows a dedicated set of options presented below.
 
 ================================================================  =====================  ===================== ===============
 Option                                                            Vector Layer           Raster Layer          Group
@@ -182,19 +168,45 @@ Option                                                            Vector Layer  
                                                                   (in Edit mode)
 :menuselection:`Save As...`                                       |checkbox|             |checkbox|            \
 :menuselection:`Save As Layer Definition File...`                 |checkbox|             |checkbox|            |checkbox|
-:menuselection:`Filter`                                           |checkbox|             \                     \
+:menuselection:`Filter...`                                        |checkbox|             \                     \
 |unchecked| :menuselection:`Show Feature Count`                   |checkbox|             \                     \
 :menuselection:`Properties`                                       |checkbox|             |checkbox|            \
 :menuselection:`Move to Top-level`                                |checkbox|             |checkbox|            \
 :menuselection:`Rename`                                           |checkbox|             |checkbox|            |checkbox|
 :menuselection:`Group Selected`                                   |checkbox|             |checkbox|            \
-:menuselection:`Properties`                                       |checkbox|             |checkbox|            \
 :menuselection:`Set Group WMS Data`                               \                      \                     |checkbox|
 |unchecked| :menuselection:`Mutually Exclusive Group`             \                      \                     |checkbox|
 |addGroup| :menuselection:`Add Group`                             \                      \                     |checkbox|
 ================================================================  =====================  ===================== ===============
 
 Table: Context menu from Layers Panel items
+
+For GRASS vector layers, |toggleEditing| :sup:`Toggle editing` is not available.
+See section :ref:`grass_digitizing` for information on editing GRASS vector
+layers.
+
+.. index:: Group, Layer
+.. _group_layers_interact:
+
+Interact with Groups and layers
+...............................
+
+Layers in the legend window can be organized into groups. There are two ways to
+do this:
+
+#. Press the |folder| icon to add a new group. Type in a name for
+   the group and press :kbd:`Enter`. Now click on an existing layer and
+   drag it onto the group.
+#. Select some layers, right click in the legend window and choose
+   :guilabel:`Group Selected`. The selected layers will automatically be placed
+   in a new group.
+
+To bring a layer out of a group, you can drag it out, or right click on it and
+choose :guilabel:`Move to top-level`; the layer is placed at the same level than
+the group it was inside. Groups can also be nested inside other groups.
+
+The checkbox for a group will show or hide all the layers in the group
+with one click.
 
 Enabling the **Mutually Exclusive Group** option you can make a group have only
 one layer visible at the same time.
@@ -259,12 +271,14 @@ Working with the Legend independent layer order
 ------------------------------------------------
 
 There is a panel that allows you to define an independent drawing order for
-the layers panel. You can activate it in the menu
-:menuselection:`Settings --> Panels --> Layer Order Panel`. This feature allows you
-to, for instance, order your layers in order of importance, but still display
-them in the correct order (see figure_layer_order_). Checking the |checkbox|
-:guilabel:`Control rendering order` box underneath the list of layers will
-cause a revert to default behavior.
+the layers panel. You can activate it in the menu :menuselection:`Settings
+--> Panels --> Layer Order Panel`. This feature allows you to, for instance,
+order your layers in order of importance, but still display them in the
+correct order (see figure_layer_order_; you can notice that the ``airports``
+features are displayed over the ``alaska`` polygon despite their layers
+placement in the Layers panel).
+Unchecking the |checkbox| :guilabel:`Control rendering order` box underneath
+the list of layers will cause a revert to default behavior.
 
 .. _figure_layer_order:
 
