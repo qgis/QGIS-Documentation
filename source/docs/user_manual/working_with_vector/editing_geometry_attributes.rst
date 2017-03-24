@@ -1020,6 +1020,23 @@ You can also create constraints with relative or absolute reference. Relative
 reference means that the next vertex constraint will be relative to the previous
 vertex or segment.
 
+Snapping Settings
+-----------------
+
+Click the |settings| button to set the Advanced Digitizing Tool snapping settings.
+You can make the tool snap to common angles. The options are:
+
+- :guilabel:`Do not snap to common angles`
+- :guilabel:`Snap to 30º angles`
+- :guilabel:`Snap to 45º angles`
+- :guilabel:`Snap to 90º angles`
+
+You can also control the snapping to features. The options are:
+
+- :guilabel:`Do not snap to vertices or segments`
+- :guilabel:`Snap according to project configuration`
+- :guilabel:`Snap to all layers`
+
 Absolute coordinates digitizing
 -------------------------------
 

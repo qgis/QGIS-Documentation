@@ -1059,6 +1059,8 @@ rst_epilog = """
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
+.. |settings| image:: /static/common/settings.png
+   :width: 1.5em
 .. |sharing| image:: /static/common/mActionSharing.png
    :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
