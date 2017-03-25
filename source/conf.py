@@ -459,6 +459,8 @@ rst_epilog = """
    :width: 1.5em
 .. |delimitedText| image:: /static/common/delimited_text.png
    :width: 1.5em
+.. |delta| image:: /static/common/delta.png
+   :width: 1.5em
 .. |demAnalysis| image:: /static/common/dem.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png

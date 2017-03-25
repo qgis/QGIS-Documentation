@@ -1105,6 +1105,22 @@ angle you want. In this way the segment will follow the desired angle:
    Fixed angle segment
 
 
+Relative reference digitizing
+-----------------------------
+
+Instead of using absolute values of angles or coordinates, you can also use
+values relative to the last digitized vertex or segment.
+
+For angles, you can click the |delta| button on the left of the :guilabel:`a`
+text box (or press :kbd:`Shift + a`) to toggle relative angles to the previous
+segment. With that option on, angles are measured between the last segment
+and the mouse pointer.
+
+For coordinates, click the |delta| buttons to the left of the :guilabel:`x` or
+:guilabel:`y` text boxes (or press :kbd:`Shift + x` or :kbd:`Shift + y`) to
+toggle relative coordinates to the previous vertex. With theses option on,
+coordinates measurement will consider the last vertex to be the x and y axes
+origin.
 
 Relative angular coordinates digitizing
 ---------------------------------------
