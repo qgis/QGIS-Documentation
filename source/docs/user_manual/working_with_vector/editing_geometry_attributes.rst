@@ -1037,10 +1037,28 @@ You can also control the snapping to features. The options are:
 - :guilabel:`Snap according to project configuration`
 - :guilabel:`Snap to all layers`
 
-Absolute coordinates digitizing
--------------------------------
+Keyboard shortcuts
+------------------
 
-When drawing a new layer or a new geometry from scratch it is very useful to have
+To speed up the use of Advanced Digitizing Panel, there are a couple of keyboard shorcuts
+available:
+
++----------+-------------------+-------------------------------+---------------------------------------+
+| Key      | simple            | :kbd:`Ctrl +` or :kbd:`Alt +` | :kbd:`Shift +`                        |
++==========+===================+===============================+=======================================+
+| :kbd:`d` | set distance      | lock distance                 | \                                     |
++----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`a` | set angle         | lock angle                    | toggle relative angle to last segment |
++----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`x` | set x coordinate  | lock x coordinate             | toggle relative x to last vertex      |
++----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`y` | set y coordinate  | lock y coordinate             | toggle relative y to last vertex      |
++----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`c` | toggle construction mode                                                                  |
++----------+-------------------------------------------------------------------------------------------+
+| :kbd:`p` | toggle perpendicular and parallel modes                                                   |
++----------+-------------------------------------------------------------------------------------------+
+
 the possibility to start the digitalization of the vertexes to given coordinates.
 
 For example, to add a new feature to a polygonal layer, just click on the
