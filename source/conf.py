@@ -461,13 +461,13 @@ rst_epilog = """
    :width: 1.5em
 .. |demAnalysis| image:: /static/common/dem.png
    :width: 1.5em
+.. |dependencies| image:: /static/common/dependencies.png
+   :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
 .. |diagram| image:: /static/common/diagram.png
    :width: 2em
 .. |diagramNone| image:: /static/common/diagramNone.png
-   :width: 1.5em
-.. |diagramProperties| image:: /static/common/mActionDiagramProperties.png
    :width: 1.5em
 .. |dial| image:: /static/common/dial.png
    :width: 1.5em
@@ -681,6 +681,10 @@ rst_epilog = """
    :width: 1.5em
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
+.. |hideDeselectedLayers| image:: /static/common/mActionHideDeselectedLayers.png
+   :width: 1.5em
+.. |hideSelectedLayers| image:: /static/common/mActionHideSelectedLayers.png
+   :width: 1.5em
 .. |histogram|  image:: /static/common/histogram.png
    :width: 1.5em
 .. |history|  image:: /static/common/mActionHistory.png
@@ -758,7 +762,11 @@ rst_epilog = """
 .. |inOverview| image:: /static/common/mActionInOverview.png
    :width: 1.5em
 .. |inputText| image:: /static/common/inputtext.png
+.. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
+   :width: 1.5em
 .. |interpolation| image:: /static/common/interpolation.png
+   :width: 1.5em
+.. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
 .. |intersect| image:: /static/common/intersect.png
    :width: 1.5em
@@ -771,6 +779,8 @@ rst_epilog = """
 .. |join| image:: /static/common/join.png
    :width: 2em
 .. |joinLocation| image:: /static/common/join_location.png
+   :width: 1.5em
+.. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
@@ -857,6 +867,8 @@ rst_epilog = """
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
+.. |newMap| image:: /static/common/mActionNewMap.png
+   :width: 1.5em
 .. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
@@ -927,6 +939,8 @@ rst_epilog = """
    :width: 1.5em
 .. |pencil| image:: /static/common/pencil.png
    :width: 1.5em
+.. |piechart| image:: /static/common/pie-chart.png
+   :width: 1.5em
 .. |pinLabels| image:: /static/common/mActionPinLabels.png
    :width: 1.5em
 .. |plugin| image:: /static/common/plugin.png
@@ -943,17 +957,15 @@ rst_epilog = """
    :width: 1.5em
 .. |pointDisplacementSymbol| image:: /static/common/rendererPointDisplacementSymbol.png
    :width: 1.5em
+.. |processing| image:: /static/common/processingAlgorithm.png
+   :width: 1.5em
 .. |processingCommander| image:: /static/common/commander.png
    :width: 1.5em
 .. |processingHistory| image:: /static/common/history.png
    :width: 2em
-.. |processingModel| image:: /static/common/model.png
+.. |processingModel| image:: /static/common/processingModel.png
    :width: 1.5em
-.. |processingOption| image:: /static/common/config.png
-   :width: 1.5em
-.. |processingResult| image:: /static/common/results.png
-   :width: 1.5em
-.. |processingToolbox| image:: /static/common/alg.png
+.. |processingResult| image:: /static/common/processingResult.png
    :width: 1.5em
 .. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
@@ -1063,6 +1075,8 @@ rst_epilog = """
    :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
+.. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
+   :width: 1.5em
 .. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
    :width: 1.5em
 .. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
@@ -1089,6 +1103,8 @@ rst_epilog = """
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
 .. |sort| image:: /static/common/sort.png
+   :width: 1.5em
+.. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
 .. |spatialQuery| image:: /static/common/spatialquery.png
    :width: 1.5em
