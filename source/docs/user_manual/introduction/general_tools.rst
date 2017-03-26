@@ -43,8 +43,10 @@ on :
 * **[Set none]** to clear any assigned shortcut
 * or **[Set default]** to backup the shortcut to its original and default value.
 
-Once you have finished your configuration, you can save it as an XML file
-and load it to another QGIS installation.
+Proceed as above for any other tools you wish to customize. Once you have
+finished your configuration, simply **[Close]** the dialog to have your changes
+applied. You can also **[Save]** the changes as an :file:`.XML` file
+and **[Load]** them into another QGIS installation.
 
 .. _`context_help`:
 
