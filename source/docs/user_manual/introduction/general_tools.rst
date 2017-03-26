@@ -26,8 +26,9 @@ Keyboard shortcuts
 
 QGIS provides default keyboard shortcuts for many features. You can find them in
 section :ref:`label_menubar`. Additionally, the menu option
-:menuselection:`Settings --> Configure Shortcuts...` allows you to change the default
-keyboard shortcuts and add new keyboard shortcuts to QGIS features.
+:menuselection:`Settings -->` |keyboardShortcuts| :menuselection:`Keyboard
+Shortcuts...` allows you to change the default keyboard shortcuts and add new
+ones to QGIS features.
 
 .. _figure_shortcuts:
 
@@ -36,8 +37,8 @@ keyboard shortcuts and add new keyboard shortcuts to QGIS features.
 
    Define shortcut options
 
-Configuration is very simple. Just select a feature from the list and click
-on :
+Configuration is very simple. Use the search box at the top of the dialog
+to find a particular action, select it from the list and click on :
 
 * **[Change]** and press the new combination you want to assign as new shortcut
 * **[Set none]** to clear any assigned shortcut
