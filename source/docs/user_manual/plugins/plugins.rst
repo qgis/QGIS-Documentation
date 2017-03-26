@@ -38,8 +38,12 @@ repository. For other external repositories, documentation might be available
 with the external plugins themselves. External plugins documentation is not
 included in this manual.
 
-To install or activate a plugin, go to :menuselection:`Plugins ---> Manage and
-install plugins...`.
+To install or activate a plugin, go to :menuselection:`Plugins` menu and select:
+
+* |showPluginManager| :menuselection:`Manage and install plugins...` using
+  online repositories;
+* or |installPluginFromZip| :menuselection:`Install plugin from ZIP...` using a
+  local compressed file.
 
 Installed external python plugins are placed under :file:`~/.qgis2/python/plugins`
 folder. Home directory (denoted by above ``~``) on Windows is usually something
