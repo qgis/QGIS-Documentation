@@ -321,6 +321,56 @@ should be done in a manner similar to the Qt sourcecode e.g.
        */
       bool somethingHappenedBetter();
   }
+  
+SIP Bindings
+============
+
+Some of the SIP files are automatically generated using a dedicated script.
+
+
+Header pre-processing
+---------------------
+
+
+All the information to properly build the SIP file must be found in the C++ header file. 
+Some macros are available for such definition:
+
+* Use ``#ifdef SIP_RUN`` to generate code only in SIP files or ``#ifndef SIP_RUN`` for C++ code only. ``#else`` statements are handled in both cases.
+* Use ``SIP_SKIP`` to discard a line
+* The following annotations are handled:
+
+  * ``SIP_FACTORY``: ``/Factory/``
+  * ``SIP_OUT``: ``/Out/``
+  * ``SIP_INOUT``: ``/In,Out/``
+  * ``SIP_TRANSFER``: ``/Transfer/``
+  * ``SIP_PYNAME(name)``: ``/PyName=name/``
+  * ``SIP_KEEPREFERENCE``: ``/KeepReference/``
+  * ``SIP_TRANSFERTHIS``: ``/TransferThis/``
+  * ``SIP_TRANSFERBACK``: ``/TransferBack/``
+  
+* ``private`` sections are not displayed, except if you use a ``#ifdef SIP_RUN`` statement in this block.
+* ``SIP_PYDEFAULTVALUE(value)`` can be used to define an alternative default value of the python method. If the default value contains a comma ``,``, the value should be surrounded by single quotes ``'``
+* ``SIP_PYTYPE(type)`` can be used to define an alternative type for an argument of the python method. If the type contains a comma ``,``, the type should be surrounded by single quotes ``'``
+
+A demo file can be found in ``tests/scripts/sipifyheader.h``.
+
+Generating the SIP file
+-----------------------
+
+The SIP file can be generated using a dedicated script. For instance:
+
+    scripts/sipify.pl src/core/qgsvectorlayer.h > python/core/qgsvectorlayer.sip
+    
+    
+As soon as a SIP file is added to one of the source file (`python/core/core.sip`, `python/gui/gui.sip` or `python/analysis/analysis.sip`), it will be considered as generated automatically. A test on Travis will ensure that this file is up to date with its corresponding header.
+
+Older files for which the automatic creation is not enabled yet are listed in ``python/auto_sip.blacklist``.
+
+Improving sipify script
+-----------------------
+
+If some improvments are requited for sipify script, please add the missing bits to the demo file ``tests/scripts/sipifyheader.h`` and create the expected header ``tests/scripts/sipifyheader.expected.si``. This will also be automatically tested on Travis as a unit test of the script itself.
+
 
 Coding Style
 =============
