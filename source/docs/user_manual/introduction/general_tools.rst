@@ -1402,27 +1402,38 @@ panel allows you to:
   in the :guilabel:`Spatial Bookmarks` dialog. All the bookmarks are transferred.
 
 
-.. index:: Nesting projects
+.. index:: Nesting projects, Embed layers and groups
 .. _nesting_projects:
 
 Nesting Projects
 ================
 
-If you want to embed content from other project files into your project, you can
-choose :menuselection:`Layer --> Embed Layers and Groups`.
+Sometimes, you'd like to keep in different projects a bunch of layers with the
+same style. You can either create a :ref:`default style <store_style>` for
+these layers or embed them from another project to save you tons of work.
 
-Embedding layers
-----------------
+Embed layers and groups from an existing project has some advantages over
+styling:
 
-The following dialog allows you to embed layers from other projects. Here is a
-small example:
+* all types of layers (vector or raster, local or online...) can be added
+* fetching groups and layers, you can keep the same tree structure of the
+  "background" layers in your different projects
+* While the embedded layers are editable, you can't change their properties
+  such as symbology, labels, forms, default values, actions... This ensures
+  homogeneity throughout the projects
+* modify the items in the original project and changes are propagated to all
+  the other projects.
 
-#. Press |browseButton| to look for a project from the Alaska dataset.
-#. Select the project file :file:`relations.qgs`. You can see the content of the
+If you want to embed content from other project files into your project, select
+:menuselection:`Layer --> Embed Layers and Groups` and:
+
+#. Press |browseButton| to look for a project; you can see the content of the
    project (see figure_embed_dialog_).
-#. Press :kbd:`Ctrl` and click on the layers :file:`airports` and
-   :file:`regions`. Press **[OK]**. The selected layers are embedded in the map
-   legend and the map view now.
+#. Press :kbd:`Ctrl` ( or |macos| :kbd:`Cmd`) and click on the layers and
+   groups you wish to retrieve.
+#. Press **[OK]**. The selected layers and groups are embedded in the Layer
+   panel and can be visualized in the map canvas now. Names of embedded items
+   appear in italic to distinguish them from regular layers and groups.
 
 .. _figure_embed_dialog:
 
@@ -1431,13 +1442,16 @@ small example:
 
    Select layers and groups to embed
 
-While the embedded layers are editable, you can't change their properties like
-style and labeling.
+Like any other layer, an embedded layer can be removed from the project by
+right-click on the layer and choose |removeLayer| :sup:`Remove`.
 
-Removing embedded layers
-------------------------
+.. tip:: **Change rendering of an embedded layer**
 
-Right-click on the embedded layer and choose |removeLayer| :sup:`Remove`.
+ It's not possible to change rendering of an embedded layer, unless you make
+ the changes in the original project file. However, right-click on a layer and
+ select :guilabel:`Duplicate` creates a layer which is fully-featured and not
+ dependent to the original project. You can then safely remove the linked
+ layer.
 
 .. index:: Decorations
 .. _decorations:

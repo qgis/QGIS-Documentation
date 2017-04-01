@@ -40,9 +40,15 @@ There are several tabs in the dialog:
 
    The :ref:`layer_styling_panel` provides you with some of the common features
    of the Layer properties dialog and is a good modeless widget that
-   you can use to speed up the configuration of the layer styles and automatically
-   view your changes in the map canvas.
+   you can use to speed up the configuration of the layer styles and
+   automatically view your changes in the map canvas.
 
+.. note::
+
+   Because properties (symbology, label, actions, default values, forms...) of
+   embedded layers (see :ref:`nesting_projects`) are pulled from the original
+   project file and to avoid changes that may break this behavior, the layer
+   properties dialog is made unavailable for these layers.
 
 .. _label_generaltab:
 
