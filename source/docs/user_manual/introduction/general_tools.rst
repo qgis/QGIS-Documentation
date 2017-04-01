@@ -1429,7 +1429,7 @@ If you want to embed content from other project files into your project, select
 
 #. Press |browseButton| to look for a project; you can see the content of the
    project (see figure_embed_dialog_).
-#. Press :kbd:`Ctrl` ( or |macos| :kbd:`Cmd`) and click on the layers and
+#. Press :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and
    groups you wish to retrieve.
 #. Press **[OK]**. The selected layers and groups are embedded in the Layer
    panel and can be visualized in the map canvas now. Names of embedded items
