@@ -305,10 +305,10 @@ Processing
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-|processingToolbox| :guilabel:`Toolbox`                         \                     see :ref:`processing.toolbox`               \
+|processing| :guilabel:`Toolbox`                                \                     see :ref:`processing.toolbox`               \
 |processingModel| :guilabel:`Graphical Modeler...`              \                     see :ref:`processing.modeler`               \
 |processingHistory| :guilabel:`History and log...`              \                     see :ref:`processing.history`               \
-|processingOption| :guilabel:`Options...`                       \                     see :ref:`processing.options`               \
+|processing| :guilabel:`Options...`                             \                     see :ref:`processing.options`               \
 |processingResult| :guilabel:`Results viewer...`                \                     see :ref:`processing.results`               \
 |processingCommander| :guilabel:`Commander`                     :kbd:`Ctrl+Alt+M`     see :ref:`processing.commander`             \
 ==============================================================  ====================  ==========================================  ===============================
