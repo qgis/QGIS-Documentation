@@ -195,8 +195,7 @@ Importing Data into a Database with DB Manager
 -------------------------------------------------------------------------------
 
 We have already looked at how to import data into a spatial database using 
-command line tools and also looked at how to use the SPIT plugin, so now lets
-learn how to use DB Manager to do imports.
+command line tools, so now let's learn how to use DB Manager to do imports.
 
 * Click the :guilabel:`Import layer/file` button on the toolbar in the DB
   Manager dialog.
