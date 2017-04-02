@@ -339,7 +339,7 @@ Appropriate for point geometry features, marker symbols have several
   height;
 * **Filled marker**: similar to the simple marker symbol layer, except that it
   uses a :ref:`fill sub symbol <vector_fill_symbols>` to render the marker.
-  This allows use of all the existing QGIS fill (and outline) styles for
+  This allows use of all the existing QGIS fill (and stroke) styles for
   rendering markers, e.g. gradient or shapeburst fills;
 * **Font marker**: use installed fonts as marker symbols;
 * **Geometry generator** (see :ref:`geometry_generator_symbol`);
@@ -348,14 +348,14 @@ Appropriate for point geometry features, marker symbols have several
 
 * **SVG marker**: provides you with images from your SVG paths (set in
   :menuselection:`Settings --> Options --> System` menu) to render as marker symbol.
-  Each SVG file colors and outline can be adapted;
+  Each SVG file colors and stroke can be adapted;
 * **Vector Field marker** (see :ref:`vector_field_marker`).
 
 .. note:: Requirements for a customizable SVG marker symbol
 
  To have the possibility to change the colors of a :guilabel:`SVG marker`, you have
  to add the placeholders ``param(fill)`` for fill color, ``param(outline)`` for
- outline color and ``param(outline-width)`` for stroke width.
+ stroke color and ``param(outline-width)`` for stroke width.
  These placeholders can optionally be followed by a default value, e.g.:
  
  .. code-block:: xml
@@ -370,8 +370,8 @@ For each marker symbol layer type, you can set some of the following properties:
 * :guilabel:`Color` for the fill and/or stroke, using all the capabilities of the
   :ref:`color-selector` widget;
 * :guilabel:`Size`
-* :guilabel:`Outline style`
-* :guilabel:`Outline width`
+* :guilabel:`Stroke style`
+* :guilabel:`Stroke width`
 * :guilabel:`Join Style`
 * :guilabel:`Rotation`
 * :guilabel:`Offset X,Y`: You can shift the symbol in the x- or y-direction;
@@ -391,12 +391,12 @@ layer types:
 * **Simple line** (default): available settings are:
 
   * :guilabel:`Color`
-  * :guilabel:`Pen width`
-  * :guilabel:`Pen style`
+  * :guilabel:`Stroke width`
+  * :guilabel:`Stroke style`
   * :guilabel:`Join style`
   * :guilabel:`Cap style`
   * :guilabel:`Offset`
-  * |checkbox| :guilabel:`Use custom dash pattern`: overrides the :guilabel:`Pen
+  * |checkbox| :guilabel:`Use custom dash pattern`: overrides the :guilabel:`Stroke
     style` setting with a custom dash.
 
 .. _arrow_symbol:
@@ -425,10 +425,10 @@ symbol layer types:
 * **Simple fill** (default): the following settings are available:
 
 * :guilabel:`Fill` color
-* :guilabel:`Outline` color
+* :guilabel:`Stroke` color
 * :guilabel:`Fill style`
-* :guilabel:`Outline style`
-* :guilabel:`Outline width`
+* :guilabel:`Stroke style`
+* :guilabel:`Stroke width`
 * :guilabel:`Join Style`
 * :guilabel:`Offset X,Y`
 
