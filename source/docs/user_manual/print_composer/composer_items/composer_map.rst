@@ -69,9 +69,7 @@ tab provides the following functionalities (see figure_composer_map_):
 * The field :guilabel:`Scale` |selectNumber| manually sets the map item scale.
 * The field :guilabel:`Map rotation` |selectNumber| allows you to rotate the
   map element content clockwise in degrees. The rotation of the map
-  canvas can be imitated here. Note that a correct coordinate frame can only be
-  added with the default value 0 and that once you defined a :guilabel:`Map
-  rotation` it currently cannot be changed.
+  canvas can be imitated here.
 * |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that
   may be placed on the map canvas in the main QGIS window.
 
