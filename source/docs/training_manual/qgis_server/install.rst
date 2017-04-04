@@ -90,8 +90,9 @@ Install QGIS Server with:
 
  sudo apt-get install qgis-server python-qgis
 
-Although QGIS Server works without QGIS Desktop (with the accompagning X Server)
-we're going to install it in this tutorial as it's easier for the audience:
+Although QGIS Server should be used in production without QGIS Desktop (with
+the accompagning X Server) installed on the same machine, we're going to
+install it in this tutorial as it's easier for the audience:
 
 .. code-block:: bash
 
