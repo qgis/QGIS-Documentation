@@ -14,22 +14,28 @@ is prepared see the :ref:`Creatingwmsfromproject` section.
 .. note::
 
  This module presents the URLs so that the audience can easily distinguish
- the parameters and parameters values. While the normal format is::
+ the parameters and parameters values. While the normal format is:
 
-  ...&field1=value1&field2=value2&field3=value3
+ ::
 
- this tutorial uses::
+   ...&field1=value1&field2=value2&field3=value3
 
-  &field1=value1
-  &field2=value2
-  &field3=value3
+ this tutorial uses:
+
+ ::
+
+   &field1=value1
+   &field2=value2
+   &field3=value3
 
  Pasting them into Mozilla Firefox works properly but other web browsers
  like Chrome may add unwanted spaces between the ``field:parameter`` pairs.
  So, if you encounter this issue you can either use Firefox or modify
  the URLs so that they're in one line format.
 
-Let's make a WMS GetCapabilities request in the web browser or with curl::
+Let's make a WMS GetCapabilities request in the web browser or with curl:
+
+.. code-block:: guess
 
  http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
  ?SERVICE=WMS
@@ -117,7 +123,9 @@ GetMap requests
 In order to display the ``countries`` layer, QGIS Desktop, like any other WMS
 client, is using ``GetMap`` requests.
 
-A simple request looks like::
+A simple request looks like:
+
+.. code-block:: guess
 
  http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
  ?MAP=/home/qgis/projects/world.qgs
@@ -168,7 +176,7 @@ Let's do another request that adds another layer, some of the
 :ref:`extra-getmap-parameters`, **FILTER** and **OPACITIES**, but also
 uses the standard STYLES parameter.
 
-::
+.. code-block:: guess
 
  http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
  ?MAP=/home/qgis/projects/world.qgs
@@ -204,7 +212,9 @@ to render only **Germany** and **Italy** from the countries layer.
 
 Let's do another GetMap request that makes use of the :ref:`qgisserver-redlining`
 feature and of the **SELECTION** parameter detailed in the
-:ref:`extra-getmap-parameters` section::
+:ref:`extra-getmap-parameters` section:
+
+.. code-block:: guess
 
  http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
  ?MAP=/home/qgis/projects/world.qgs
@@ -250,7 +260,9 @@ print composers. You can learn about it in the :ref:`server_getprint` section.
 
 If you open the :file:`world.qgs` project with QGIS Desktop you will find a
 print composer named ``Population distribution``. A simplified ``GetPrint``
-request that exemplifies this amazing feature is::
+request that exemplifies this amazing feature is:
+
+.. code-block:: guess
 
  http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
  ?map=/home/qgis/projects/world.qgs

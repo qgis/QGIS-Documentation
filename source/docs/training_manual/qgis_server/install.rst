@@ -51,7 +51,9 @@ from source is outside the scope of this module.
 
 First add the QGIS repository by creating the
 :file:`/etc/apt/sources.list.d/debian-qgis.list` file with the following
-content::
+content:
+
+.. code-block:: sourceslist
 
  # latest stable
  deb http://qgis.org/debian stretch main
@@ -106,7 +108,9 @@ Let's install QGIS Server master repository.
 * Open a terminal
 * Edit the file pointing to the QGIS packages with
   ``sudo gedit /etc/apt/sources.list.d/debian-qgis.list`` so that you comment
-  the `stable` repo lines and enable the master (``debian-nightly``) ones::
+  the `stable` repo lines and enable the master (``debian-nightly``) ones:
+
+  .. code-block:: sourceslist
 
    # latest stable
    #deb http://qgis.org/debian stretch main
@@ -137,7 +141,9 @@ Let's install QGIS Server master repository.
 Now that we want to downgrade, let's see if that's the case for us.
 
 * Enable the stable repo and disable the master one in the
-  ``/etc/apt/sources.list.d/debian-qgis.list`` file. It should again look like::
+  ``/etc/apt/sources.list.d/debian-qgis.list`` file. It should again look like:
+
+  .. code-block:: sourceslist
 
    # latest stable
    deb http://qgis.org/debian stretch main
@@ -169,7 +175,9 @@ should output something like ``/usr/lib/cgi-bin/qgis_mapserv.fcgi``.
 
 Optionally, if you want to do a command line test at this time you can run the
 ``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` command which should output something
-like::
+like:
+
+.. code-block:: guess
 
  QFSFileEngine::open: No file name specified
  Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
@@ -201,7 +209,9 @@ First we need to install Apache by running the following command in a terminal:
 ``sudo apt-get install apache2 libapache2-mod-fcgid``.
 
 Let's create a file called :file:`qgisplatform.demo.conf` in that directory
-with this content::
+with this content:
+
+.. code-block:: apacheconf
 
  <VirtualHost *:80>
    ServerAdmin webmaster@localhost
@@ -267,7 +277,9 @@ configuration after doing ``sudo gedit /etc/apache2/sites-available/qgisplatform
  :ref:`server_env_variables` section.
 
 Let's now create the directories that will store the QGIS Server logs and
-the authentication database::
+the authentication database:
+
+.. code-block:: bash
 
  sudo mkdir /logs
  sudo chown www-data:www-data /logs
@@ -339,11 +351,13 @@ with ``sudo sh -c "echo '127.0.0.1 qgisplatform.demo' >> /etc/hosts"``.
 
 We can test one of the installed qgis servers with a http request from command
 line with ``curl http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi`` which
-should output::
+should output:
 
- <ServiceExceptionReport version="1.3.0" xmlns="http://www.opengis.net/ogc">
- <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
- </ServiceExceptionReport>
+.. code-block:: xml
+
+  <ServiceExceptionReport version="1.3.0" xmlns="http://www.opengis.net/ogc">
+  <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
+  </ServiceExceptionReport>
 
 .. note::
 
@@ -364,7 +378,9 @@ the alphabet, let's say ``x``.
   command: ``sudo sh -c "echo '127.0.0.1 x' >> /etc/hosts"`` or by manually
   editing the file with ``sudo gedit /etc/hosts``.
 * We can check that ``x`` points to the localhost by running in the terminal
-  the  ``ping x`` command which should output::
+  the  ``ping x`` command which should output:
+
+  .. code-block:: guess
 
    qgis@qgis:~$ ping x
    PING x (127.0.0.1) 56(84) bytes of data.
@@ -374,7 +390,9 @@ the alphabet, let's say ``x``.
 
 * Let's try if we can access QGIS Server from the ``x`` site by doing:
   ``curl http://x/cgi-bin/qgis_mapserv.fcgi`` or by accessing the url from
-  your Debian box browser. You will probably get::
+  your Debian box browser. You will probably get:
+
+  .. code-block:: html
 
    <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
    <html><head>
