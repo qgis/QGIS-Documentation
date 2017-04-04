@@ -67,12 +67,6 @@ content::
 
 .. note::
 
- One way of creating the above file is to run a terminal, then type in it
- ``sudo gedit /etc/apt/sources.list.d/debian-qgis.list``, which opens the
- gedit text editor. Add the content in the editor window and save.
-
-.. note::
-
  In the above example the latest QGIS stable repository is active, while the
  others are disabled (commented out with ``#``).
  This is for exemplification purposes. Depending on which QGIS version you want you can
@@ -171,8 +165,9 @@ The QGIS Server executable is ``qgis_mapserv.fcgi``. You can check where it has
 been installed by running ``sudo find / -name 'qgis_mapserv.fcgi'`` which
 should output something like ``/usr/lib/cgi-bin/qgis_mapserv.fcgi``.
 
-Optionally, if you want to do a command line test at this time you can run
-``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` which should output something like::
+Optionally, if you want to do a command line test at this time you can run the
+``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` command which should output something
+like::
 
  QFSFileEngine::open: No file name specified
  Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
@@ -187,7 +182,9 @@ Optionally, if you want to do a command line test at this time you can run
   <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
  </ServiceExceptionReport>
 
-This is a good thing, it tells you we're on the right track.
+This is a good thing, it tells you we're on the right track as the server is
+saying that we haven't asked for a supported service. We'll see later on
+how to make WMS requests.
 
 |FA| HTTP Server Configuration
 -------------------------------------------------------------------------------

@@ -147,10 +147,11 @@ The above request should output the following image:
 
 * Based on the request above, let's replace the ``countries`` layer with another.
 * In order to see what other layers are available you could open up the
-  :file:`world.qgs` project in QGIS and see. Keep in mind though that the WMS
-  clients don't have access to the QGIS project, they just look at the capabilities
-  document contents. Also, there's a configuration option so that some of the layers
-  existing in the QGIS project are ignored by QGIS when serving the WMS service.
+  :file:`world.qgs` project in QGIS and look at its contents. Keep in mind
+  though that the WMS clients don't have access to the QGIS project, they just
+  look at the capabilities document contents. Also, there's a configuration
+  option so that some of the layers existing in the QGIS project are ignored by
+  QGIS when serving the WMS service.
 * So, you could look at the layer list when you point QGIS Desktop to the
   ``GetCapabilities`` URL or you could try yourself finding other layer names
   in the ``GetCapabilities`` XML response.
