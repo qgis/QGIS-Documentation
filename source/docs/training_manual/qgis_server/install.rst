@@ -153,11 +153,6 @@ Now that we want to downgrade, let's see if that's the case for us.
   ``sudo apt-get autoremove``.
 * Install QGIS stable again with ``sudo apt-get install qgis-server python-qgis qgis -y``
 
-  .. note::
-
-   The ``-y`` parameter means that you accept from command line the install of all
-   the enumerated packages, bypassing the prompt you usually get.
-
 |moderate| |FA| QGIS Server Executable
 -------------------------------------------------------------------------------
 
