@@ -75,19 +75,25 @@ content::
  If you're using Debian Jessie then you could simply replace ``stretch`` with ``jessie``
  in the above file.
 
-Run these commands to add the qgis.org repository public key to your apt keyring::
+Run these commands to add the qgis.org repository public key to your apt keyring:
+
+.. code-block:: bash
 
  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 073D307A618E5811
 
 You can now run the ``sudo apt-get update`` command to refresh the packages list and
 ``sudo apt-get dist-upgrade`` to upgrade the packages.
 
-Install QGIS Server with::
+Install QGIS Server with:
+
+.. code-block:: bash
 
  sudo apt-get install qgis-server python-qgis
 
 Although QGIS Server works without QGIS Desktop (with the accompagning X Server)
-we're going to install it in this tutorial as it's easier for the audience::
+we're going to install it in this tutorial as it's easier for the audience:
+
+.. code-block:: bash
 
  sudo apt-get install qgis
 
@@ -276,7 +282,9 @@ the authentication database::
  to ``www-data``.
 
 We can now enable the `virtual host <https://httpd.apache.org/docs/2.4/vhosts>`_,
-enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.service``::
+enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.service``:
+
+.. code-block:: bash
 
  sudo a2enmod fcgid
  sudo a2ensite qgisplatform.demo.conf
@@ -291,7 +299,9 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.s
 
  Install xvfb with ``sudo apt-get install xvfb -y``
 
- Create the service file::
+ Create the service file:
+
+ .. code-block:: bash
 
   sudo sh -c \
   "echo \
@@ -306,11 +316,13 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.s
   WantedBy=multi-user.target' \
   > /etc/systemd/system/xvfb.service"
 
- Enable, start and check the status of the ``xvfb.service``::
+ Enable, start and check the status of the ``xvfb.service``:
 
-  sudo systemctl enable xvfb.service
-  sudo systemctl start xvfb.service
-  sudo systemctl status xvfb.service
+ .. code-block:: bash
+
+   sudo systemctl enable xvfb.service
+   sudo systemctl start xvfb.service
+   sudo systemctl status xvfb.service
 
  In the above configuration file there's a ``FcgidInitialEnv DISPLAY ":99"``
  that tells QGIS Server instances to use display no. 99. If you're running the
