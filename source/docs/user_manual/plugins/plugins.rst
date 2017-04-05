@@ -2,8 +2,7 @@
 
    |updatedisclaimer|
 
-.. index::
-   single: Plugins
+.. index:: Plugins
 
 .. _plugins:
 
@@ -55,7 +54,7 @@ Paths to Custom C++ plugins libraries can also be added under
 :menuselection:`Settings --> Options --> System`.
 
 .. note::
- 
+
  According to the :ref:`plugin manager settings <setting_plugins>`, QGIS main
  interface can display a blue link in the status bar to inform you that there
  are updates for your installed plugins or new plugins available.
@@ -80,15 +79,19 @@ panel:
 * author(s)
 * version available
 
-You can use the filter to find a specific plugin.
+At the top of the dialog, a :guilabel:`Search` function helps you find any
+plugin using metadata information (author, name, description...). It is
+available in nearly every menu (except |transformSettings| :guilabel:`Settings`).
 
-|showPluginManager| :guilabel:`All`
+The All tab
+-----------
 
-Here, all the available plugins are listed, including both core and external
+In the |showPluginManager| :guilabel:`All` tab,
+all the available plugins are listed, including both core and external
 plugins. Use **[Upgrade all]** to look for new versions of the plugins.
 Furthermore, you can use **[Install plugin]** if a plugin is listed but not
 installed, **[Uninstall plugin]** as well as **[Reinstall plugin]** if a plugin
-s installed. An installed plugin can be temporarily de/activated using the
+is installed. An installed plugin can be temporarily de/activated using the
 checkbox.
 
 .. _figure_plugins_all:
@@ -96,12 +99,14 @@ checkbox.
 .. figure:: /static/user_manual/plugins/plugins_all.png
    :align: center
 
-   The |showPluginManager| :guilabel:`All` menu
+   The |showPluginManager| :guilabel:`All` tab
 
 
-|pluginInstalled| :guilabel:`Installed`
+The Installed tab
+-----------------
 
-In this menu, you can find only the installed plugins. The external plugins
+In |pluginInstalled| :guilabel:`Installed` tab,
+you can find only the installed plugins. The external plugins
 can be uninstalled and reinstalled using the **[Uninstall plugin]** and
 **[Reinstall plugin]** buttons. You can **[Upgrade all]** here as well.
 
@@ -110,12 +115,13 @@ can be uninstalled and reinstalled using the **[Uninstall plugin]** and
 .. figure:: /static/user_manual/plugins/plugins_installed.png
    :align: center
 
-   The |pluginInstalled| :guilabel:`Installed` menu
+   The |pluginInstalled| :guilabel:`Installed` tab
 
+The Not installed tab
+---------------------
 
-|plugin| :guilabel:`Not installed`
-
-This menu lists all plugins available that are not installed.
+The |plugin| :guilabel:`Not installed` tab lists all plugins available that
+are not installed.
 You can use the **[Install plugin]** button to implement a plugin into QGIS.
 
 .. _figure_plugins_not_installed:
@@ -123,28 +129,52 @@ You can use the **[Install plugin]** button to implement a plugin into QGIS.
 .. figure:: /static/user_manual/plugins/plugins_not_installed.png
    :align: center
 
-   The |plugin| :guilabel:`Not installed` menu
+   The |plugin| :guilabel:`Not installed` tab
 
+The Upgradeable and New tabs
+----------------------------
 
-|pluginUpgrade| :guilabel:`Upgradeable`
-
+The |pluginUpgrade| :guilabel:`Upgradeable` and |pluginNew| :guilabel:`New` tabs
+are enabled when new plugins are added to the repository or a new
+version of an installed plugin is released.
 If you activated |checkbox| :guilabel:`Show also experimental plugins` in the
-|transformSettings| :guilabel:`Settings` menu, you can use this menu
-to look for more recent plugin versions. This can be done with the **[Upgrade
-plugin]** or **[Upgrade all]** buttons.
+|transformSettings| :guilabel:`Settings` menu, those also appear in the list
+giving you opportunity to early test upcoming tools.
+
+Installation can be done with the **[Install plugin]**, **[Upgrade plugin]** or
+**[Upgrade all]** buttons.
 
 .. _figure_plugins_upgradeable:
 
 .. figure:: /static/user_manual/plugins/plugins_upgradeable.png
    :align: center
 
-   The |pluginUpgrade| :guilabel:`Upgradeable` menu
+   The |pluginUpgrade| :guilabel:`Upgradeable` tab
+
+The Invalid tab
+---------------
+
+The |pluginInvalid| :guilabel:`Invalid` tab lists all installed plugins that are
+currently broken for any reason (missing dependency, errors while loading,
+incompatible functions with QGIS version...). 
+You can try the **[Reinstall plugin]** button to fix an invalidated plugin but
+most of the times the fix will be elsewhere (install some libraries, look for
+another compatible plugin or help to upgrade the broken one).
+
+.. _figure_plugins_invalid:
+
+.. figure:: /static/user_manual/plugins/plugins_invalid.png
+   :align: center
+
+   The |pluginInvalid| :guilabel:`Invalid` tab
 
 .. _setting_plugins:
 
-|transformSettings| :guilabel:`Settings`
+The Settings tab
+----------------
 
-In this menu, you can use the following options:
+In the |transformSettings| :guilabel:`Settings` tab, you can use the following
+options:
 
 * |checkbox| :guilabel:`Check for updates on startup`. Whenever a new plugin or
   a plugin update is available, QGIS will inform you 'every time QGIS starts',
@@ -152,29 +182,25 @@ In this menu, you can use the following options:
 * |checkbox| :guilabel:`Show also experimental plugins`. QGIS will show you
   plugins in early stages of development, which are generally unsuitable for
   production use.
-* |checkbox| :guilabel:`Show also deprecated plugins`. These plugins are
-  deprecated and generally unsuitable for production use.
+* |checkbox| :guilabel:`Show also deprecated plugins`. Because they use
+  functions that are no longer available in QGIS, these plugins are set
+  deprecated and generally unsuitable for production use. They appear among
+  invalid plugins list.
 
 To add external author repositories, click **[Add...]** in the :guilabel:`Plugin
 repositories` section.
 If you do not want one or more of the added repositories, they can be disabled
 via the **[Edit...]** button, or completely removed with the **[Delete]** button.
 
-Note that you can use an authentication (basic authentication, PKI) to access
-to a plugin repository. The default QGIS repository is an open repository and
-you don't need any authentication. You should deploy your own plugin
-repository. You can get more information on QGIS authentication support in
-:ref:`authentication` chapter.
+The default QGIS repository is an open repository and you don't need any
+authentication to access it. You can however deploy your own plugin repository
+and require an authentication (basic authentication, PKI). You can get more
+information on QGIS authentication support in :ref:`authentication` chapter.
 
 .. _figure_plugins_settings:
 
 .. figure:: /static/user_manual/plugins/plugins_settings.png
    :align: center
 
-   The |transformSettings| :guilabel:`Settings` menu
-
-The :guilabel:`Search` function is available in nearly every menu
-(except |transformSettings| :guilabel:`Settings`).
-Here, you can look for specific plugins.
-
+   The |transformSettings| :guilabel:`Settings` tab
 

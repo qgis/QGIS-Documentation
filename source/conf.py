@@ -955,6 +955,10 @@ rst_epilog = """
    :width: 1.5em
 .. |pluginInstaller| image:: /static/common/plugin_installer.png
    :width: 1.5em
+.. |pluginInvalid| image:: /static/common/plugin-incompatible.png
+   :width: 1.5em
+.. |pluginNew| image:: /static/common/plugin-new.png
+   :width: 1.5em
 .. |pluginUpgrade| image:: /static/common/plugin-upgrade.png
    :width: 1.5em
 .. |pointClusterSymbol| image:: /static/common/rendererPointClusterSymbol.png
