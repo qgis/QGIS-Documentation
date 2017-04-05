@@ -93,8 +93,8 @@ Tutorial: Creating a Heatmap
 
 For the following example, we will use the ``airports`` vector point layer from
 the QGIS sample dataset (see :ref:`label_sampledata`). Another excellent QGIS
-tutorial on making heatmaps can be found at `http://qgis.spatialthoughts.com
-<http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_.
+tutorial on making heatmaps can be found at `http://www.qgistutorials.com
+<http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_.
 
 In Figure_Heatmap_1_, the airports of Alaska are shown.
 
