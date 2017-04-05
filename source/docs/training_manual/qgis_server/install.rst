@@ -9,45 +9,11 @@
 Stretch. With negligible variations you can also follow it for any Debian based
 distribution like Ubuntu and its derivatives.
 
-Install Options
--------------------------------------------------------------------------------
-
-As on other systems, among the main methods to install **QGIS Server** on
-GNU/Linux are the following:
-
-* **install from packages**
-
-  The greatest advantage installing from packages is easyness. Another derived
-  advantage is that is far easier to keep deployment consistency. By having the
-  same GNU/Linux flavor pointing to the same software repositories users have
-  obvious advantages: they can share workflows, narrow down problems etc. far
-  easier than otherwise.
-
-  There are also disadvantages. You may have a GNU/linux distribution that
-  doesn't provide QGIS in its software repositories. Also, due to licensing
-  purposes some proprietary third party libraries cannot be provided with the
-  other QGIS packages so you're stuck with building from source.
-
-* **build from source**
-
-  This provides the most flexible way of installing QGIS. Although it has the
-  disadvantage of being a little harder once you get used to the process you
-  have multiple advantages. For example, if you want to connect to Oracle,
-  ECW or MrSid data sources on your GNU/Linux box you need to build from source
-  as the software repositories don't provide binaries for these proprietary
-  third party libraries. Another advantage would be that you can install and
-  run multiple versions of QGIS (consequently QGIS Server) at the same time.
-  Also, you can build QGIS on top of other components versions (e.g. newer
-  GDAL, GEOS etc.) which could get you new features or help you narrow down
-  bugs. Furthermore, if you're a developper and you want to do some changes
-  to the code or you want to test some code from others or go to a certain
-  code version, building from source is the way to go.
-
 |moderate| |FA| Install from packages
 -------------------------------------------------------------------------------
 
-In this lesson we're going to do only the install from packages as building
-from source is outside the scope of this module.
+In this lesson we're going to do only the install from packages as shown
+`here <http://qgis.org/en/site/forusers/alldownloads.html#linux>`_ .
 
 First add the QGIS repository by creating the
 :file:`/etc/apt/sources.list.d/debian-qgis.list` file with the following
@@ -58,24 +24,6 @@ content:
  # latest stable
  deb http://qgis.org/debian stretch main
  deb-src http://qgis.org/debian stretch main
-
- # latest ltr
- #deb http://qgis.org/debian-ltr stretch main
- #deb-src http://qgis.org/debian-ltr stretch main
-
- # master
- #deb http://qgis.org/debian-nightly stretch main
- #deb-src http://qgis.org/debian-nightly stretch main
-
-.. note::
-
- In the above example the latest QGIS stable repository is active, while the
- others are disabled (commented out with ``#``).
- This is for exemplification purposes. Depending on which QGIS version you want you can
- comment out the latest stable repo and enable another one. You can find more on the
- available options `here <http://qgis.org/en/site/forusers/alldownloads.html#linux>`_ .
- If you're using Debian Jessie then you could simply replace ``stretch`` with ``jessie``
- in the above file.
 
 Run these commands to add the qgis.org repository public key to your apt keyring:
 
@@ -99,72 +47,6 @@ install it in this tutorial as it's easier for the audience:
 .. code-block:: bash
 
  sudo apt-get install qgis
-
-|moderate| |TY| Switch the installed version
--------------------------------------------------------------------------------
-
-Let's install QGIS Server master repository.
-
-* Open a terminal
-* Edit the file pointing to the QGIS packages with
-  ``sudo gedit /etc/apt/sources.list.d/debian-qgis.list`` so that you comment
-  the `stable` repo lines and enable the master (``debian-nightly``) ones:
-
-  .. code-block:: sourceslist
-
-   # latest stable
-   #deb http://qgis.org/debian stretch main
-   #deb-src http://qgis.org/debian stretch main
-
-   # latest ltr
-   #deb http://qgis.org/debian-ltr stretch main
-   #deb-src http://qgis.org/debian-ltr stretch main
-
-   # master
-   deb http://qgis.org/debian-nightly stretch main
-   deb-src http://qgis.org/debian-nightly stretch main
-
-* Update the package list with ``sudo apt-get update``
-* Update the packages with ``sudo apt-get dist-upgrade -y``
-
-.. note::
-
- If you play around and change different versions of QGIS you may end up in the
- situation where the QGIS version is newer than the one you want to install.
- For example, you tested the ``2.18`` version but you want the ``2.14`` version.
- In this case, simply doing a ``sudo apt-get install qgis-server python-qgis``
- won't work as the package manager may encounter dependencies problems when
- installing older versions of a package if there's a newer one already installed.
- So, you need to uninstall the existing one before installing the older one.
- Something like ``sudo apt-get remove qgis-server python-qgis`` should do it.
-
-Now that we want to downgrade, let's see if that's the case for us.
-
-* Enable the stable repo and disable the master one in the
-  ``/etc/apt/sources.list.d/debian-qgis.list`` file. It should again look like:
-
-  .. code-block:: sourceslist
-
-   # latest stable
-   deb http://qgis.org/debian stretch main
-   deb-src http://qgis.org/debian stretch main
-
-   # latest ltr
-   #deb http://qgis.org/debian-ltr stretch main
-   #deb-src http://qgis.org/debian-ltr stretch main
-
-   # master
-   #deb http://qgis.org/debian-nightly stretch main
-   #deb-src http://qgis.org/debian-nightly stretch main
-
-* Update the package list with ``sudo apt-get update``.
-* If you try to install the stable version of QGIS Server with the
-  ``sudo apt-get install qgis-server`` command you **shouldn't be able to** and
-  you will probably get the message: ``qgis-server is already the newest version``.
-* Remove the installed Master version ``sudo apt-get remove qgis-server python-qgis``
-* Remove all the packages that were installed as QGIS Master dependencies with
-  ``sudo apt-get autoremove``.
-* Install QGIS stable again with ``sudo apt-get install qgis-server python-qgis qgis -y``
 
 |moderate| |FA| QGIS Server Executable
 -------------------------------------------------------------------------------
