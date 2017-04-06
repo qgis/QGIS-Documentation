@@ -7,29 +7,37 @@
  Working with the Attribute Table
 **********************************
 
+The attribute table displays information on features of a selected layer. Each
+row in the table represents a feature (with geometry or not), and each column
+contains a particular piece of information about the feature.
+Features in the table can be searched, selected, moved or even edited.
+
 .. only:: html
 
    .. contents::
       :local:
 
-The attribute table displays information on features of a selected layer. Each row
-in the table represents one map feature, and each column contains a particular
-piece of information about the feature. Features in the table can be searched,
-selected, moved or even edited.
+Manipulate the Attribute table interface
+=========================================
+
+Dialog overview
+----------------
 
 To open the attribute table for a vector layer, make the layer active by
-clicking on it in the map legend area. Then, from the main
+clicking on it in the :ref:`label_legend`. Then, from the main
 :menuselection:`Layer` menu, choose |openTable| :menuselection:`Open Attribute
-Table`. It is also possible to right click on the layer and choose
+Table`. It is also possible to right-click on the layer and choose
 |openTable| :menuselection:`Open Attribute Table` from the drop-down menu,
-and to click on the |openTable| :guilabel:`Open Attribute Table` button
+or to click on the |openTable| :guilabel:`Open Attribute Table` button
 in the Attributes toolbar.
 
 This will open a new window that displays the feature attributes for the
-layer (figure_attributes_table_). The number of features and the number of
-selected features are shown in the attribute table title. Columm widths can be
-changed by dragging the boundary on the right of the column heading, resized column
-widths are maintained for a layer, and restored when next opening the attribute table.
+layer (figure_attributes_table_). According to the setting in
+:menuselection:`Settings --> Options --> Data sources` menu, the attribute table
+will open in a docked window or not. The total number of features in the layer
+and the number of currently selected/filtered features are shown in the
+attribute table title.
+
 
 .. _figure_attributes_table:
 
@@ -106,19 +114,112 @@ Calculator` (see :ref:`calculate_fields_values`).
    |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
    option in :menuselection:`Settings --> Options --> Data Sources` menu.
 
+Table view vs Form view
+-----------------------
 
-.. index::
+QGIS provides two view modes to easily manipulate data in the attribute table:
+the |openTable| Table view and the |formView| Form view which uses the layer
+fields configuration (see :ref:`vector_attributes_menu`). You can switch from
+one to the other by clicking the convenient icon at the bottom right of the
+dialog.
+
+You can also specify the :guilabel:`Default view` mode at the opening of the
+attribute table in :menuselection:`Settings --> Options --> Data Sources` menu.
+It can be 'Remember last view', 'Table view' or 'Form view'.
+
+.. _figure_attribute_table_views:
+
+.. figure:: /static/user_manual/working_with_vector/attribute_table_views.png
+   :align: center
+
+   Attribute table in form view (top) vs table view (bottom)
+
+
+.. index:: Sort columns, Add actions
    pair: Attributes; Columns
 
-You can hide columns or change their width (either setting the width or with
-the :guilabel:`Autosize` setting) by right-clicking in the table header. To
-change several columns behavior at once, unhide a column or change the order of
-the columns, choose :guilabel:`Organize columns ...`. In this dialog, you can
-also add a new :guilabel:`Actions` column that adds a dropdown or button list of
-actions for each row, see :ref:`actions_menu` for more information about actions.
-Finally, one can choose to sort the rows with the :guilabel:`sort` and write an
-expression, e.g. to sort the row in regards of multi-column you can write
-`concat(col0, col1)`.
+Configure the columns
+----------------------
+
+Right-click in a column header when in table view to have access to tools that
+help you configure what can be displayed in the attribute table and how.
+
+Hide, organize columns and enable actions
+.........................................
+
+By right-clicking in a column header, you can choose to hide it from the
+attribute table. To change several columns behavior at once, unhide a column or
+change the order of the columns, choose :guilabel:`Organize columns ...`.
+In the new dialog, you can:
+
+* check/uncheck columns you want to show or hide
+* drag-and-drop items to reorder the columns in the attribute table. Note that
+  this change is for the table rendering and does not alter the fields order in
+  the layer datasource
+* enable a new virtual :guilabel:`Actions` column that displays in each row a
+  drop-down box or button list of actions for each row, see :ref:`actions_menu`
+  for more information about actions.
+
+Resize columns width
+.....................
+
+Columns width can be set through a right-click on the column header and
+select either:
+
+* :guilabel:`Set width...` to enter the desired value. By default, the current
+  value is displayed in the widget
+* :guilabel:`Autosize` to resize at the best fit the column.
+
+It can also be changed by dragging the boundary on the right of the column
+heading. The new size of the column is maintained for the layer, and restored at
+the next opening of the attribute table.
+
+Sort columns
+.............
+
+The table can be sorted by any column, by clicking on the column header. A
+small arrow indicates the sort order (downward pointing means descending
+values from the top row down, upward pointing means ascending values from
+the top row down).
+You can also choose to sort the rows with the :guilabel:`sort` option of the
+column header context menu and write an expression, e.g. to sort the row
+using multiple columns you can write ``concat(col0, col1)``.
+
+In form view, features identifier can be sorted using the |sort| :guilabel:`Sort
+by preview expression` option.
+
+.. index:: Conditional formatting
+.. _conditional_formatting:
+
+Conditional formatting of Table Cells
+--------------------------------------
+
+You can enable the conditional formatting panel clicking on
+|conditionalFormatting| at the top right of the attributes window in table
+view (not available in form view).
+
+The new panel allows user to add new rules for conditional formatting of field
+or full row in regard of the expression on field. Adding new rule open a form
+to define:
+
+* the name of the rule,
+* a condition from expression window,
+* a preset formatting
+* some other parameters to improve, change or setup the formatting:
+
+  * background and text colors,
+  * use of icon,
+  * bold, italic underline, or strikeout,
+  * text field,
+  * font.
+
+.. _figure_conditional_format:
+
+.. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
+   :align: center
+
+   Conditional Formatting of an attribute table
+
 
 .. index::
    pair: Attributes; Selection
@@ -141,10 +242,6 @@ Moving the cursor position in the attribute table, by clicking a cell in the
 table, does not change the row selection. Changing the selection in the main
 canvas does not move the cursor position in the attribute table.
 
-The table can be sorted by any column, by clicking on the column header. A
-small arrow indicates the sort order (downward pointing means descending
-values from the top row down, upward pointing means ascending values from
-the top row down).
 
 For a **simple search by attributes** on only one column, choose the
 :menuselection:`Column filter -->` from the menu in the bottom left corner.
@@ -209,18 +306,6 @@ the right of the drop-down list to filter with a *like* expression parameter.
 This filter will create an expression filter as an :guilabel:`Advanced filter`.
 The last kind of filter will open an expression window, see :ref:`vector_expressions`
 for more information.
-
-
-Table/form mode
-===============
-
-QGIS provides two view modes to easily manipulate data in the attribute table:
-the |openTable| Table view and the |formView| Form view. You can switch from
-one to other by clicking the convenient icon at the bottom right of the dialog.
-
-You can also specify the default mode view at the opening of the attribute table
-in :menuselection:`Settings --> Options --> Data Sources` menu, :guilabel:`Default
-view` option. It can be 'Remember last view', 'Table view' or 'Form view'.
 
 
 Zoom to feature
@@ -416,39 +501,6 @@ As an example, you can use columns of the non-spatial table to define attribute
 values, or a range of values that are allowed, to be added to a specific vector
 layer during digitizing. Have a closer look at the edit widget in section
 :ref:`vector_attributes_menu` to find out more.
-
-
-.. index:: Conditional formatting
-.. _conditional_formatting:
-
-Conditional formatting of Table Cells
-=====================================
-
-You can enable the conditional formatting panel clicking on
-|conditionalFormatting| at the top right of the attributes window in table
-view (not available in form view).
-
-The new panel allows user to add new rules for conditional formatting of field
-or full row in regard of the expression on field. Adding new rule open a form
-to define:
-
-* the name of the rule,
-* a condition from expression window,
-* a preset formatting
-* some other parameters to improve, change or setup the formatting:
-
-  * background and text colors,
-  * use of icon,
-  * bold, italic underline, or strikeout,
-  * text field,
-  * font.
-
-.. _figure_conditional_format:
-
-.. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
-   :align: center
-
-   Conditional Formatting of an attribute table
 
 
 .. index:: Relations, Foreign key
