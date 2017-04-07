@@ -56,8 +56,8 @@ hierarchical menu. The top-level menus and a summary of some of the menu
 options are listed below, together with the associated icons as
 they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in
 this section are the defaults; however, keyboard shortcuts can also be configured
-manually using the :guilabel:`Configure shortcuts` dialog, opened from
-:menuselection:`Settings --> Configure Shortcuts...`.
+manually using the :guilabel:`Keyboard Shortcuts` dialog, opened from
+:menuselection:`Settings -->` menu.
 
 Although most menu options have a corresponding tool and vice-versa, the menus
 are not organized exactly like the toolbars. The toolbar containing the tool is
