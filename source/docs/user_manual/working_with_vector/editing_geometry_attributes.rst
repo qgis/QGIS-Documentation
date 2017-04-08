@@ -1176,19 +1176,20 @@ line you want to be parallel and start drawing your feature:
 Actually these two tools just find the right angle of the perpendicular and
 parallel angle and lock this parameter during your editing.
 
+Construction mode
+-----------------
 
-Draw points at given distances
-------------------------------
+You can enable and disable *construction* mode by clicking on the
+|cadConstruction| :sup:`Construction` icon or with the :kbd:`c` keyboard
+shortcut. While in construction mode, clicking the canvas won't add new
+vertexes, but will capture the clicks' positions so that you can use them as
+reference points to then lock distance, angle or x and y relative values.
 
-The Advanced Digitizing Tool can be used also for points layer, for example to
-draw some points at exact distances among them.
-
-As for the polygon layers described above, remember to activate the snapping
-options.
+As an example, the construction mode can be used to draw some point
+at an exact distance from a existing point.
 
 With an existing point in the canvas and the snapping mode correctly activated,
 you can easily draw other points at given distances and angles from it.
-
 In addition to the |cad| button, you have to activate also the *construction*
 mode by clicking on the |cadConstruction| :sup:`Construction` icon or with the
 :kbd:`c` keyboard shortcut.
