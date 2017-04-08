@@ -319,7 +319,7 @@ Icon                     Substitution                 Icon                     S
 |alignHCenter|           ``|alignHCenter|``           |alignVCenter|           ``|alignVCenter|``
 |alignTop|               ``|alignTop|``               |alignBottom|            ``|alignBottom|``
 |locked|                 ``|locked|``                 |unlocked|               ``|unlocked|``
-|groupItems|             ``|groupItems|``
+|lockedRepeat|           ``|lockedRepeat|``           |groupItems|             ``|groupItems|``
 =======================  ===========================  =======================  ===========================
 
 Properties

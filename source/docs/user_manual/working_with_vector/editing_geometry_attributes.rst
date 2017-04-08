@@ -1122,6 +1122,14 @@ toggle relative coordinates to the previous vertex. With theses option on,
 coordinates measurement will consider the last vertex to be the x and y axes
 origin.
 
+Continuous lock
+---------------
+
+Both in absolute or relative reference digitizing, angle, distance, x and y
+constraints can be locked continuously by clicking the |lockRepeat|
+:guilabel:`Continuous lock` buttons. Using continuous lock allow you to digitize
+several points or vertexes using the same constraints.
+
 Relative angular coordinates digitizing
 ---------------------------------------
 

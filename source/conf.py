@@ -792,6 +792,8 @@ rst_epilog = """
    :width: 2em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
+.. |lockedRepeat| image:: /static/common/lock_repeating.png
+   :width: 1.5em
 .. |link| image:: /static/common/mActionLink.png
    :width: 1.5em
 .. |linkGeorefToQGis| image:: /static/common/mActionLinkGeorefToQGis.png
