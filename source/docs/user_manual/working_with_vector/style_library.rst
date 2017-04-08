@@ -488,7 +488,7 @@ Some examples:
 .. code-block:: sql
 
   -- render the centroid of a feature
-  centroid( $geometry, 100 ) 
+  centroid( $geometry ) 
   -- visually overlap features within a 100 map units distance from a point
   -- feature, i.e generate a 100m buffer around the point
   buffer( $geometry, 100 )
