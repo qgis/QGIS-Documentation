@@ -25,14 +25,10 @@ content:
  deb http://qgis.org/debian stretch main
  deb-src http://qgis.org/debian stretch main
 
-Run these commands to add the qgis.org repository public key to your apt keyring:
-
-.. code-block:: bash
-
- sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 073D307A618E5811
-
-You can now run the ``sudo apt-get update`` command to refresh the packages list and
-``sudo apt-get dist-upgrade`` to upgrade the packages.
+After you add the qgis.org repository public key to your apt keyring (follow
+the above link on how to do it) you can run the ``sudo apt-get update`` command
+to refresh the packages list and ``sudo apt-get dist-upgrade`` to upgrade the
+packages.
 
 Install QGIS Server with:
 
@@ -155,7 +151,7 @@ configuration after doing ``sudo gedit /etc/apache2/sites-available/qgisplatform
 
 .. note::
 
- See what some of the configuration options in the Server
+ See some of the configuration options in the Server
  :ref:`server_env_variables` section.
 
 Let's now create the directories that will store the QGIS Server logs and
@@ -252,26 +248,25 @@ Apache is now configured.
 
 Let's create another Apache virtual host pointing to QGIS Server. You can
 choose whatever name you like (``coco.bango``, ``super.duper.training``,
-``example.com``, etc.) but for simplicity sake we're going to use a letter from
-the alphabet, let's say ``x``.
+``example.com``, etc.) but for simplicity sake we're going to use ``myhost``.
 
-* Let's first point the ``x`` name to answer to the localhost IP. We can do that
-  by adding ``127.0.0.1 x`` to the :file:`/etc/hosts` with the following
-  command: ``sudo sh -c "echo '127.0.0.1 x' >> /etc/hosts"`` or by manually
+* Let's set up the ``myhost`` name to point to the localhost IP by adding
+  ``127.0.0.1 x`` to the :file:`/etc/hosts` with the following command:
+  ``sudo sh -c "echo '127.0.0.1 myhost' >> /etc/hosts"`` or by manually
   editing the file with ``sudo gedit /etc/hosts``.
-* We can check that ``x`` points to the localhost by running in the terminal
-  the  ``ping x`` command which should output:
+* We can check that ``myhost`` points to the localhost by running in the terminal
+  the  ``ping myhost`` command which should output:
 
   .. code-block:: guess
 
-   qgis@qgis:~$ ping x
-   PING x (127.0.0.1) 56(84) bytes of data.
+   qgis@qgis:~$ ping myhost
+   PING myhost (127.0.0.1) 56(84) bytes of data.
    64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.024 ms
    64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.029 ms
    ..
 
-* Let's try if we can access QGIS Server from the ``x`` site by doing:
-  ``curl http://x/cgi-bin/qgis_mapserv.fcgi`` or by accessing the url from
+* Let's try if we can access QGIS Server from the ``myhost`` site by doing:
+  ``curl http://myhost/cgi-bin/qgis_mapserv.fcgi`` or by accessing the url from
   your Debian box browser. You will probably get:
 
   .. code-block:: html
@@ -283,28 +278,28 @@ the alphabet, let's say ``x``.
    <h1>Not Found</h1>
    <p>The requested URL /cgi-bin/qgis_mapserv.fcgi was not found on this server.</p>
    <hr>
-   <address>Apache/2.4.25 (Debian) Server at x Port 80</address>
+   <address>Apache/2.4.25 (Debian) Server at myhost Port 80</address>
    </body></html>
 
 * Apache doesn't know that he's supposed to answer requests pointing to the server
-  named ``x``. In order to setup the virtual host the simplest way would be to make
-  a ``x.conf`` file in the :file:`/etc/apache/sites-available` directory that
-  has the same content as file:`qgisplatform.demo.conf` except for the
-  ``ServerName`` line that should be ``ServerName x``. You could also change where the
-  logs go as otherwise the logs for the two virtual hosts would be shared but this is
-  optional.
-* Let's now enable the virtual host with ``sudo apt-get a2ensite x.conf`` and the
-  reloading the Apache service with ``sudo systemctl reload apache2``.
-* If you try again to access the http://x/cgi-bin/qgis_mapserv.fcgi url you'll
-  notice everything is working now!.
+  named ``myhost``. In order to setup the virtual host the simplest way would
+  be to make a ``myhost.conf`` file in the :file:`/etc/apache/sites-available`
+  directory that has the same content as file:`qgisplatform.demo.conf` except
+  for the ``ServerName`` line that should be ``ServerName myhost``. You could
+  also change where the logs go as otherwise the logs for the two virtual hosts
+  would be shared but this is optional.
+* Let's now enable the virtual host with ``sudo apt-get a2ensite myhost.conf``
+  and then reload the Apache service with ``sudo systemctl reload apache2``.
+* If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url
+  you'll notice everything is working now!
 
   .. note::
 
-   Remember that both the :file:`x.conf` and :file:`/etc/hosts` files should
+   Remember that both the :file:`myhost.conf` and :file:`/etc/hosts` files should
    be configured for our setup to work.
    You can also test the access to your QGIS Server from other clients on the
    network (e.g. Windows or Macos machines) by going to their :file:`/etc/hosts`
-   file and point the `x` name to whatever IP the server machine has on the
+   file and point the `myhost` name to whatever IP the server machine has on the
    network. You can be sure that that specific IP is not ``127.0.0.1`` as that's
    the local IP, only accessible from the local machine.
 
