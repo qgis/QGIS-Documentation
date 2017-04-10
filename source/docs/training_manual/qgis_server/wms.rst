@@ -61,10 +61,6 @@ or the  :ref:`ogc-wms-servers` section on how to do it.
 By adding the ``countries`` WMS layer to your QGIS project you should get an image
 like the one below:
 
-.. only:: html
-
-  **Figure countries WMS layer from QGIS Desktop:**
-
 .. figure:: /static/training_manual/qgis_server/qgis_getmap_request.png
    :align: center
 
@@ -75,14 +71,14 @@ like the one below:
  QGIS Server serves layers that are defined in the :file:`world.qgs` project.
  By opening the project with QGIS you can see there are multiple styles for
  the countries layer. QGIS Server is also aware of this and you can choose
- the style you want in your request.  The `classified_by_population` style
+ the style you want in your request.  The ``classified_by_population`` style
  was chosen in the above image.
 
 Logging
 -------
 
 When you're setting up a server, the logs are always important as they show
-you what's going on. We have setup in the ``*.conf`` file the following logs:
+you what's going on. We have setup in the :file:`*.conf` file the following logs:
 
 * QGIS Server log at :file:`/logs/qgisserver.log`
 * ``qgisplatform.demo`` Apache access log at :file:`qgisplatform.demo.access.log`
@@ -94,10 +90,6 @@ out. You can also use the ``tail`` command in a terminal:
 
 This will continuously output in the terminal what's written in that log file.
 You can also have three terminals opened for each of the log files like so:
-
-.. only:: html
-
-  **Figure monitoring QGIS Server logs with tail:**
 
 .. figure:: /static/training_manual/qgis_server/terminal_tail_log.jpg
    :align: center
@@ -139,33 +131,36 @@ A simple request looks like:
 
 The above request should output the following image:
 
-.. only:: html
-
-  **Figure: simple GetMap request to QGIS Server**
+**Figure: simple GetMap request to QGIS Server**
 
 .. figure:: /static/training_manual/qgis_server/getmap_simple_request.jpg
    :align: center
 
-   A simple GetMap WMS request for QGIS Server
+   Qgis Server response after a simple GetMap request
 
 |moderate| |TY| Change the Image and Layers parameters
 -------------------------------------------------------------------------------
 
-* Based on the request above, let's replace the ``countries`` layer with another.
-* In order to see what other layers are available you could open up the
-  :file:`world.qgs` project in QGIS and look at its contents. Keep in mind
-  though that the WMS clients don't have access to the QGIS project, they just
-  look at the capabilities document contents. Also, there's a configuration
-  option so that some of the layers existing in the QGIS project are ignored by
-  QGIS when serving the WMS service.
-* So, you could look at the layer list when you point QGIS Desktop to the
-  ``GetCapabilities`` URL or you could try yourself finding other layer names
-  in the ``GetCapabilities`` XML response.
-* One of the layer names that you could find and works is ``countries_shapeburst``.
-  You may find others but keep in mind some may not be visible at such a small
-  scall so you yould get a blank image as response.
-* You can also play around with others parameters from above, like changing the
-  returned image type to ``image/png``.
+Based on the request above, let's replace the ``countries`` layer with another.
+
+In order to see what other layers are available you could open up the
+:file:`world.qgs` project in QGIS and look at its contents. Keep in mind
+though that the WMS clients don't have access to the QGIS project, they just
+look at the capabilities document contents.
+
+Also, there's a configuration option so that some of the layers existing in the
+QGIS project are ignored by QGIS when serving the WMS service.
+
+So, you could look at the layer list when you point QGIS Desktop to the
+``GetCapabilities`` URL or you could try yourself finding other layer names
+in the ``GetCapabilities`` XML response.
+
+One of the layer names that you could find and works is ``countries_shapeburst``.
+You may find others but keep in mind some may not be visible at such a small
+scale so you could get a blank image as response.
+
+You can also play around with others parameters from above, like changing the
+returned image type to ``image/png``.
 
 |moderate| |FA| Use Filter, Opacities and Filter parameters
 -------------------------------------------------------------------------------
@@ -192,10 +187,6 @@ uses the standard STYLES parameter.
  &FILTER=countries:"name" IN ( 'Germany' , 'Italy' )
 
 The above request should output the following image:
-
-.. only:: html
-
-  **Figure: GetMap response to request with FILTER and OPACITIES parameters**
 
 .. figure:: /static/training_manual/qgis_server/getmap_filter_opacities.jpg
    :align: center
@@ -236,10 +227,6 @@ feature and of the **SELECTION** parameter detailed in the
 
 Pasting the above request in your web browser should output the following image:
 
-.. only:: html
-
-  **Figure:  Response to a GetMap request with REDLINING and SELECTION**
-
 .. figure:: /static/training_manual/qgis_server/getmap_redlining_selection.jpg
    :align: center
 
@@ -275,14 +262,10 @@ request that exemplifies this amazing feature is:
  &map0:extent=-432786,4372992,3358959,7513746
  &LAYERS=countries
 
-.. only:: html
-
-  **Figure output of the above QGIS Server GetPrint request:**
-
 .. figure:: /static/training_manual/qgis_server/getprint.jpg
    :align: center
 
-   Show the pdf resulted from a GetPrint QGIS Server request
+   Shows the pdf resulted from the above GetPrint request
 
 Naturally, it's hard to write your ``GetMap``, ``GetPrint`` etc. requests.
 
@@ -303,10 +286,6 @@ You can install it like this:
   from your Web browser.
 
 Now you should be able to see the Map as in the following figure:
-
-.. only:: html
-
-  **Figure QGIS Web Client in action:**
 
 .. figure:: /static/training_manual/qgis_server/qwc.jpg
    :align: center
