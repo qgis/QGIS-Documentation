@@ -43,13 +43,11 @@ Let's make a WMS GetCapabilities request in the web browser or with curl:
  &REQUEST=GetCapabilities
  &map=/home/qgis/projects/world.qgs
 
-.. note::
-
- In the Apache config from the previous lesson the ``QGIS_PROJECT_FILE`` variable
- sets the default project to :file:`/home/qgis/projects/world.qgs`. However, we
- made use of the **map** parameter to be explicit and to show it can be used to
- point at any project. In the above request, QGIS Server outputs the same
- response if you don't use the **map** parameter.
+In the Apache config from the previous lesson the ``QGIS_PROJECT_FILE`` variable
+sets the default project to :file:`/home/qgis/projects/world.qgs`. However, in
+the above request we made use of the **map** parameter to be explicit and to
+show it can be used to point at any project. If you delete the **map** parameter
+from the above request QGIS Server will output the same response.
 
 By pointing any WMS client to the ``GetCapabilities`` URL, the client gets in
 response an XML document with metadata of the Web Map Server’s information,
