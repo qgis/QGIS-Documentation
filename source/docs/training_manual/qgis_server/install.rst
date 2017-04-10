@@ -243,7 +243,7 @@ should output:
 
 Apache is now configured.
 
-|moderate| |TY| Create another virtual host
+|moderate| |FA| Create another virtual host
 -------------------------------------------------------------------------------
 
 Let's create another Apache virtual host pointing to QGIS Server. You can
