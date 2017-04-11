@@ -231,7 +231,7 @@ control the order in which the different symbol layers are rendered.
 
 To change the order of the symbol layers, select the :guilabel:`Line` layer in
 the :guilabel:`Symbol layers` panel, then click
-:guilabel:`Advanced --> Symbol levels...` in the
+:menuselection:`Advanced --> Symbol levels...` in the
 bottom right-hand corner of the window. This will open a dialog like this:
 
 .. image:: /static/training_manual/symbology/symbol_levels_dialog.png
@@ -372,8 +372,8 @@ To see the various options available for line data:
 
 
 * Ensure that the symbol levels are correct (via the
-  :guilabel:`Advanced --> Symbol levels` dialog we used earlier) before applying
-  the style.
+  :menuselection:`Advanced --> Symbol levels` dialog we used earlier) before
+  applying the style.
 
 
 Once you have applied the style, take a look at its results on the map. As you

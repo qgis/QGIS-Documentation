@@ -32,7 +32,7 @@ any tables to this database. Let's go ahead and do that.
 
 * Find the button to create a new layer and use the dropdown to create a new 
   new Spatialite layer, or select
-  :guilabel:`Layer --> New --> New Spatialite Layer`.
+  :menuselection:`Layer --> New --> New Spatialite Layer`.
 
   |newSpatiaLiteLayer|
 

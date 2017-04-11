@@ -290,7 +290,7 @@ Activating the :guilabel:`Raster Terrain Analysis` plugin
 This plugin is included by default in QGIS 1.8. However, it may not be
 immediately visible. To check if it is accessible on your system:
 
-* Click on the menu item :guilabel:`Plugins --> Manage Plugins...`.
+* Click on the menu item :menuselection:`Plugins --> Manage Plugins...`.
 * Ensure that the box next to :guilabel:`Raster Terrain Analysis plugin` is
   selected.
 * Click :guilabel:`OK`.
@@ -500,7 +500,7 @@ rasters.
 Creating a bounding box vector
 -------------------------------------------------------------------------------
 
-* Click on the menu item :guilabel:`Layer --> New --> New Shapefile Layer...`.
+* Click on the menu item :menuselection:`Layer --> New --> New Shapefile Layer...`.
 * Under the :guilabel:`Type` heading, select the :guilabel:`Polygon` button.
 * Click :guilabel:`Specify CRS` and set the coordinate reference system
   :kbd:`WGS 84 / UTM zone 33S : EPSG:32733`.
@@ -735,7 +735,7 @@ Calculate polygon centroids
 Calculate which centroid is closest to your house
 -------------------------------------------------------------------------------
 
-* Click on the menu item :guilabel:`Vector --> Analysis Tools --> Distance
+* Click on the menu item :menuselection:`Vector --> Analysis Tools --> Distance
   matrix`.
 * The input layer should be your house, and the target layer
   :guilabel:`solution_centroids`. Both of these should use the :kbd:`id` field
