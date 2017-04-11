@@ -265,56 +265,82 @@ The coverage layer you are using does not yet have useful information that you c
 * Use the |calculateField| calculator to create and populate the following two fields.
 * Create a field named :kbd:`Zone` and type :kbd:`Whole number (integer)`.
 * In the :guilabel:`Expression` box write/copy/construct :kbd:`$rownum`.
-* Create another field named :kbd:`Remarks`, of type :kbd:`Text (string)` and a width of :kbd:`255`.
-* In the :guilabel:`Expression` box write :kbd:`'No remarks.'`. This will set all the default value for all the polygons.
+* Create another field named :kbd:`Remarks`, of type :kbd:`Text (string)` and
+  a width of :kbd:`255`.
+* In the :guilabel:`Expression` box write :kbd:`'No remarks.'`. This will set
+  all the default value for all the polygons.
 
-The forest manager will have some information about the area that might be useful when visiting the area. For example, the existence of a bridge, a swamp or the location of a protected species. The :kbd:`atlas_coverage` layer is probably in edit mode still, add the following text in the :kbd:`Remarks` field to the corresponding polygons (double click the cell to edit it):
+The forest manager will have some information about the area that might be useful
+when visiting the area. For example, the existence of a bridge, a swamp or the
+location of a protected species. The :kbd:`atlas_coverage` layer is probably in
+edit mode still, add the following text in the :kbd:`Remarks` field to the
+corresponding polygons (double click the cell to edit it):
 
 * For the :kbd:`Zone` 2: :kbd:`Bridge to the North of plot 19. Siberian squirrel between p_13 and p_14.`.
 * For the :kbd:`Zone` 6: :kbd:`Difficult to transit in swamp to the North of the lake.`.
 * For the :kbd:`Zone` 7: :kbd:`Siberian squirrel to the South East of p_94.`.
 * Disable editing and save your edits.
 
-Almost ready, now you have to tell the Atlas tool that you want some of the text labels to use the information from the :kbd:`atlas_coverage` layer's attribute table.
+Almost ready, now you have to tell the Atlas tool that you want some of the text
+labels to use the information from the :kbd:`atlas_coverage` layer's attribute table.
 
 * Go back to the :guilabel:`Print Composer`.
 * Select the text label containing :kbd:`Detailed map...`.
 * Set the :guilabel:`Font` size to :kbd:`12`.
 * Set the cursor at the end of the text in the label.
-* In  the :guilabel:`Item properties` tab, inside the :guilabel:`Main properties` click on :guilabel:`Insert an expression`.
-* In the :guilabel:`Function list` double click on the field :kbd:`Zone` under :guilabel:`Field and Values`.
+* In  the :guilabel:`Item properties` tab, inside the :guilabel:`Main properties`
+  click on :guilabel:`Insert an expression`.
+* In the :guilabel:`Function list` double click on the field :kbd:`Zone` under
+  :guilabel:`Field and Values`.
 * Click :guilabel:`OK`.
-* The text inside the box in the :guilabel:`Item properties` should show :kbd:`Detail map inventory zone: [% "Zone" %]`. Note that the :kbd:`[% "Zone" %]` will be substituted by the value of the field :kbd:`Zone` for the corresponding feature from the layer :kbd:`atlas_coverage`.
+* The text inside the box in the :guilabel:`Item properties` should show
+  :kbd:`Detail map inventory zone: [% "Zone" %]`. Note that the :kbd:`[% "Zone" %]`
+  will be substituted by the value of the field :kbd:`Zone` for the corresponding
+  feature from the layer :kbd:`atlas_coverage`.
 
 Test the contents of the label by looking at the different Atlas preview maps.
 
-Do the same for the labels with the text :kbd:`Remarks:` using the field whit the zone information. You can leave a break line before you enter the expression. You can see the result for the preview of zone 2 in the image below:
+Do the same for the labels with the text :kbd:`Remarks:` using the field with
+the zone information. You can leave a break line before you enter the expression.
+You can see the result for the preview of zone 2 in the image below:
 
 .. image:: /static/training_manual/forestry/preview_zone2.png
    :align: center
 
-Use the Atlas preview to browse through all the maps you will be creating soon and enjoy!
+Use the Atlas preview to browse through all the maps you will be creating soon
+and enjoy!
 
 |basic| |FA| Printing the Maps
 -------------------------------------------------------------------------------
 
-Last but not least, printing or exporting your maps to image files or PDF files. You can use the :menuselection:`Atlas --> Export Atlas as Images...` or :menuselection:`Atlas --> Export Atlas as PDF...`. Currently the SVG export format is not working properly and will give a poor result.
+Last but not least, printing or exporting your maps to image files or PDF files.
+You can use the :menuselection:`Atlas --> Export Atlas as Images...` or
+:menuselection:`Atlas --> Export Atlas as PDF...`. Currently the SVG export
+format is not working properly and will give a poor result.
 
 Lets print the maps as a single PDF that you can send to the field office for printing:
 
 * Go to the :guilabel:`Atlas generation` tab on the right panel.
-* Under the :guilabel:`Output` check the :guilabel:`Single file export when possible`. This will put all the maps together into a PDF file, if this option is not checked you will get one file for every map.
+* Under the :guilabel:`Output` check the :guilabel:`Single file export when
+  possible`. This will put all the maps together into a PDF file, if this option
+  is not checked you will get one file for every map.
 * Open :menuselection:`Composer --> Export as PDF...`. 
-* Save the PDF file as :kbd:`inventory_2012_maps.pdf` in your :kbd:`exercise_data\\forestry\\samplig\\map_creation\\` folder.
+* Save the PDF file as :kbd:`inventory_2012_maps.pdf` in your
+  :kbd:`exercise_data\\forestry\\samplig\\map_creation\\` folder.
 
 Open the PDF file to check that everything went as expected.
 
-You could just as easily create separate images for every map (remember to uncheck the single file creation), here you can see the thumbnails of the images that would be created:
+You could just as easily create separate images for every map (remember to
+uncheck the single file creation), here you can see the thumbnails of the
+images that would be created:
 
 .. image:: /static/training_manual/forestry/maps_as_images.png
    :align: center
 
-In the :guilabel:`Print Composer`, save your map as a composer template as :kbd:`forestry_atlas.qpt` in your :kbd:`exercise_data\\forestry\\map_creation\\` folder. Use :menuselection:`Composer --> Save as Template`. You will be able to use this template again and again.
+In the :guilabel:`Print Composer`, save your map as a composer template as
+:kbd:`forestry_atlas.qpt` in your :kbd:`exercise_data\\forestry\\map_creation\\`
+folder. Use :menuselection:`Composer --> Save as Template`. You will be able to
+use this template again and again.
 
 Close the :guilabel:`Print Composer` and save your QGIS project.
 
@@ -322,10 +348,15 @@ Close the :guilabel:`Print Composer` and save your QGIS project.
 |IC|
 -------------------------------------------------------------------------------
 
-You have managed to create a template map that can be used to automatically generate detail maps to be used in the field to help navigate to the different plots. As you noticed, this was not an easy task but the benefit will come when you need to create similar maps for other regions and you can use the template you just saved.
+You have managed to create a template map that can be used to automatically
+generate detail maps to be used in the field to help navigate to the different
+plots. As you noticed, this was not an easy task but the benefit will come when
+you need to create similar maps for other regions and you can use the template
+you just saved.
 
 |WN|
 -------------------------------------------------------------------------------
 
-In the next lesson, you will see how you can use LiDAR data to create a DEM and then use it to your enhance your data and maps visibility.
+In the next lesson, you will see how you can use LiDAR data to create a DEM and
+then use it to your enhance your data and maps visibility.
 

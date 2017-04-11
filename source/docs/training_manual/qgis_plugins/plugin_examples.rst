@@ -15,7 +15,7 @@ and get acquainted with some useful plugins.
 
 From the lesson on raster analysis, you're already familiar with raster
 analysis functions. You used GDAL tools (accessible via
-:guilabel:`Raster --> Analysis`) for this. However, you should also know about
+:menuselection:`Raster --> Analysis`) for this. However, you should also know about
 the Raster Terrain Analysis plugin. This ships standard with newer versions of
 QGIS, and so you don't need to install it separately.
 
@@ -125,8 +125,8 @@ layer, with our own vector road layer as overlay:
 
 * Close the :guilabel:`Plugin Manager`.
 * You can now use the GeoSearch plugin to search for placenames. Click on 
-  :guilabel:`Plugins --> GeoSearch Plugin --> GeoSearch` to open the GeoSearch
-  dialog.
+  :menuselection:`Plugins --> GeoSearch Plugin --> GeoSearch` to open the
+  GeoSearch dialog.
 
   .. image:: /static/training_manual/qgis_plugins/geosearch_menu.png
      :align: center

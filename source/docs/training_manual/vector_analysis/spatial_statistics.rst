@@ -64,8 +64,8 @@ Sampling the data
 * To create a sample dataset from the raster, you'll need to use the
   :guilabel:`Point sampling tool` plugin.
 * Refer ahead to the module on plugins if necessary.
-* Search for the phrase :kbd:`point sampling` in the :guilabel:`Plugin --> Manage
-  and Install Plugins...` and you will find the plugin.
+* Search for the phrase :kbd:`point sampling` in the :menuselection:`Plugin -->
+  Manage and Install Plugins...` and you will find the plugin.
 * As soon as it has been activated with the :guilabel:`Plugin Manager`, you
   will find the tool under :menuselection:`Plugins --> Analyses --> Point
   sampling tool`:
