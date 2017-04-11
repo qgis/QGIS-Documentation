@@ -86,20 +86,35 @@ functionality (see figure_composer_map_layers_):
 
    Map Layers Dialog
 
-* To lock the layers shown on a map item to the current map canvas. Check
+* If you want to keep the map item constantly updated
+  with a visibility preset, use the |selectString| :guilabel:`Follow
+  visibility preset` and set the preset you want. Any changes applied to the
+  preset in QGIS's main window (using the replace preset) will also show in the
+  map item. In this case, the :guilabel:`Lock styles for layers` option will
+  be disabled because :guilabel:`Follow visibility preset` also updates the
+  style (symbology, label, diagram) of the visibility preset layers.
+
+* To lock the layers shown on a map item to the current map canvas check
   |checkbox| :guilabel:`Lock layers`. After this option is enabled, any
-  changes on the layers visibility on the main QGIS window won't affect the map
-  item of the Composer. Nevertheless, style and labels of locked layers
-  are still refreshed according to QGIS's main window.
+  changes on the layers visibility in the QGIS's main window won't affect
+  the Composer's map item. Nevertheless, style and labels of locked
+  layers are still refreshed according to QGIS's main window.
   You can prevent this by using :guilabel:`Lock styles for layers`.
-* Using the |showPresets| button you can lock the map item's layers to one of
+
+  Using the |showPresets| button, you can lock the map item's layers to one of
   the visibility presets you have prepared in QGIS (see :ref:`label_legend` to
   find out how to create visibility presets).
   Clicking the |showPresets| button will show the list of all the preset
   views. Select the preset you want to display. The map canvas will lock the
   preset layers automatically by enabling the |checkbox| :guilabel:`Lock
-  layers`. You can deselect the preset by unchecking the  |checkbox| and
-  press the |draw| button.
+  layers`. You can release the preset by unchecking the |checkbox|
+  :guilabel:`Lock layers` and press the |draw| button in the
+  map composer's :guilabel:`Navigation` toolbar.
+
+  Note that, unlike the :guilabel:`Follow visibility preset`, using the
+  :guilabel:`Lock layers` option enabled and set to a preset, the map item
+  layers won't be updated if the preset is changed (using the replace preset
+  option) in QGIS's main window.
 
   Locked layers in the map can also be :ref:`data-defined <data_defined>`, using
   the |dataDefined| icon beside the option. When used, this overrides the
@@ -110,15 +125,6 @@ functionality (see figure_composer_map_layers_):
 
     concat ('layer 1', '|', 'layer 2')
 
-* With the :guilabel:`Lock layers` option enabled and set to a preset, the
-  map item layers won't be updated if the preset is changed in QGIS's main
-  window. So, if you want to keep the map item constantly updated
-  with a visibility preset, use the |selectString| :guilabel:`Follow
-  visibility preset` and set the preset you want. Any changes applied to the
-  preset in QGIS's main window will also show in the map item. In this
-  case, the :guilabel:`Lock styles for layers` option will be disabled because
-  :guilabel:`Follow visibility preset` also updates the style and labels of
-  the visibility preset layers.
 
 Extents
 -------
