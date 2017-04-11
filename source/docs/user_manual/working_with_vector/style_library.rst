@@ -91,7 +91,7 @@ different tabs:
 * **Marker** for point symbols
 * **Line** for linear symbols
 * **Fill** for surface symbols
-* and `Color Ramp`_
+* and :ref:`color-ramp`.
 
 To delete a symbol you no longer need, just select it and click |signMinus|
 :sup:`Remove item` (also available through right-click).
@@ -100,7 +100,7 @@ The symbol will be deleted from the local symbols database.
 The symbol list can be modified by adding new symbols with |signPlus|
 :sup:`Add item` button or modifying existing ones with |symbologyEdit|
 :sup:`Edit item`.
-See `symbol-selector`_ for further information.
+See :ref:`symbol-selector` for further information.
 
 Share symbols
 --------------
@@ -343,38 +343,38 @@ Appropriate for point geometry features, marker symbols have several
   rendering markers, e.g. gradient or shapeburst fills;
 * **Font marker**: use installed fonts as marker symbols;
 * **Geometry generator** (see :ref:`geometry_generator_symbol`);
+* **Vector Field marker** (see :ref:`vector_field_marker`);
 
 .. _svg_marker:
 
 * **SVG marker**: provides you with images from your SVG paths (set in
-  :menuselection:`Settings --> Options --> System` menu) to render as marker symbol.
-  Each SVG file colors and stroke can be adapted;
-* **Vector Field marker** (see :ref:`vector_field_marker`).
+  :menuselection:`Settings --> Options --> System` menu) to render as marker
+  symbol. Each SVG file colors and stroke can be adapted.
 
-.. note:: Requirements for a customizable SVG marker symbol
+  .. note:: Requirements for a customizable SVG marker symbol
 
- To have the possibility to change the colors of a :guilabel:`SVG marker`, you have
- to add the placeholders ``param(fill)`` for fill color, ``param(outline)`` for
- stroke color and ``param(outline-width)`` for stroke width.
- These placeholders can optionally be followed by a default value, e.g.:
+   To have the possibility to change the colors of a :guilabel:`SVG marker`,
+   you have to add the placeholders ``param(fill)`` for fill color,
+   ``param(outline)`` for stroke color and ``param(outline-width)`` for stroke
+   width. These placeholders can optionally be followed by a default value, e.g.:
  
- .. code-block:: xml
+   .. code-block:: xml
   
-  <svg width="100%" height="100%">
-  <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(stroke-width) 10" width="100" height="100">
-  </rect>
-  </svg>
+    <svg width="100%" height="100%">
+    <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(stroke-width) 10" width="100" height="100">
+    </rect>
+    </svg>
  
 For each marker symbol layer type, you can set some of the following properties:
 
-* :guilabel:`Color` for the fill and/or stroke, using all the capabilities of the
-  :ref:`color-selector` widget;
+* :guilabel:`Color` for the fill and/or stroke, using all the capabilities of
+  the :ref:`color-selector` widget;
 * :guilabel:`Size`
 * :guilabel:`Stroke style`
 * :guilabel:`Stroke width`
-* :guilabel:`Join Style`
+* :guilabel:`Join style`
 * :guilabel:`Rotation`
-* :guilabel:`Offset X,Y`: You can shift the symbol in the x- or y-direction;
+* :guilabel:`Offset X,Y`: You can shift the symbol in the x- or y- direction;
 * :guilabel:`Anchor point`.
 
 In most of the marker symbols dialog, you also have a frame with previews of
@@ -402,8 +402,9 @@ layer types:
 .. _arrow_symbol:
 
 * **Arrow**: draws lines as curved (or not) arrows with a single or a double
-  head with configurable width, length and thickness. It also uses a
-  :ref:`fill sub symbol <vector_fill_symbols>` such as gradients or shapeburst
+  head with configurable width, length and thickness. To create a curved arrow
+  the line feature must have at least three vertices. It also uses a
+  :ref:`fill symbol <vector_fill_symbols>` such as gradients or shapeburst
   to render the arrow body. Combined with the geometry generator, this type of
   layer symbol helps you representing flow maps;
 * **Geometry generator** (see :ref:`geometry_generator_symbol`);
@@ -424,13 +425,13 @@ symbol layer types:
 
 * **Simple fill** (default): the following settings are available:
 
-* :guilabel:`Fill` color
-* :guilabel:`Stroke` color
-* :guilabel:`Fill style`
-* :guilabel:`Stroke style`
-* :guilabel:`Stroke width`
-* :guilabel:`Join Style`
-* :guilabel:`Offset X,Y`
+  * :guilabel:`Fill` color
+  * :guilabel:`Stroke` color
+  * :guilabel:`Fill style`
+  * :guilabel:`Stroke style`
+  * :guilabel:`Stroke width`
+  * :guilabel:`Join style`
+  * :guilabel:`Offset X,Y`
 
 * **Centroid fill**: places a marker symbol at the centroid of the visible
   feature. The marker can be placed on every part of a multi-part feature or
@@ -477,21 +478,23 @@ symbol layer types:
 The Geometry generator
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Available with all type of symbols, the :guilabel:`geometry generator` symbol
-layer allows to use expression syntax to generate a geometry on the fly during
-the rendering process. The resulting geometry does not have to match with the
-original geometry type and you can add several differently modified symbol
-layers on top of each other.
+Available with all types of symbols, the :guilabel:`geometry generator` symbol
+layer allows to use :ref:`expression syntax <functions_list>` to generate a
+geometry on the fly during the rendering process. The resulting geometry does
+not have to match with the original geometry type and you can add several
+differently modified symbol layers on top of each other.
 
 Some examples:
 
-.. code-block:: sql
+::
 
   -- render the centroid of a feature
   centroid( $geometry ) 
+
   -- visually overlap features within a 100 map units distance from a point
   -- feature, i.e generate a 100m buffer around the point
   buffer( $geometry, 100 )
+
   -- Given polygon layer1( id1, layer2_id, ...) and layer2( id2, fieldn...)
   -- render layer1 with a line joining centroids of both where layer2_id = id2
   make_line( centroid( $geometry ),
