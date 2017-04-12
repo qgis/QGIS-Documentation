@@ -1108,7 +1108,6 @@ rst_epilog = """
    :width: 1.5em
 .. |spatialQuery| image:: /static/common/spatialquery.png
    :width: 1.5em
-.. |spit| image:: /static/common/spiticon.png
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
 .. |splitLayer| image:: /static/common/split_layer.png
