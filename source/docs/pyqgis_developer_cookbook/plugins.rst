@@ -458,17 +458,23 @@ managed by **Qt Linguist**.
 
 In this ``.pro`` file you have to specify all the files and forms you want to
 translate. This file is used to set up the localization files and variables.
-A possible project file, matching the structure of our example plugin at 13.1.1::
+A possible project file, matching the structure of our
+:ref:`example plugin <plugin_files_architecture>`:
+
+::
 
   FORMS = ../form.ui
   SOURCES = ../your_plugin.py
   TRANSLATIONS = your_plugin_it.ts
 
-Your plugin might follow a more complex structure, and it might be distributed across several files.
-If this is the case, keep in mind that ``pylupdate4``, the program we use to read the ``.pro`` file 
-and update the translatable string, does not
-expand wild card characters, so you need to place every file explicitly in the ``.pro`` file.
-Your project file might then look like something like this::
+Your plugin might follow a more complex structure, and it might be distributed
+across several files. If this is the case, keep in mind that ``pylupdate4``,
+the program we use to read the ``.pro`` file and update the translatable string,
+does not expand wild card characters, so you need to place every file explicitly
+in the ``.pro`` file.
+Your project file might then look like something like this:
+
+::
 
   FORMS = ../ui/about.ui ../ui/feedback.ui \
           ../ui/main_dialog.ui
@@ -479,8 +485,8 @@ Furthermore, the ``your_plugin.py`` file is the file that *calls* all the menu
 and sub-menus of your plugin in the QGIS toolbar and you want to translate them
 all.
 
-Finally with the *TRANSLATIONS* variable you can specify the translation languages
-you want.
+Finally with the *TRANSLATIONS* variable you can specify the translation
+languages you want.
 
 .. warning::
 
