@@ -447,8 +447,8 @@ First, we'll change the canvas to a size appropriate for a small texture.
 * Right-click on the circle you just created and open its :guilabel:`Fill and
   Stroke`:
 
-* Change the :guilabel:`Stroke paint` to a pale grey-blue and the
-  :guilabel:`Stroke style` to a darker color with thin stroke:
+* Change the :guilabel:`Fill` to a pale grey-blue, the :guilabel:`Stroke paint`
+  to a darker color and the :guilabel:`Stroke style` to a thinner thickness:
 
 .. image:: /static/training_manual/symbology/inkscape_stroke_fill.png
    :align: center
