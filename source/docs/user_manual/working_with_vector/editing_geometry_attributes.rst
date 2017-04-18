@@ -1093,15 +1093,14 @@ you can enter the segment's **length** (distance) and **angle**.
 If you want to draw a segment of a given length, click the :guilabel:`d
 (distance)` text box (keyboard shortcut :kbd:`d`), enter the distance value (in
 map units) and press :kbd:`Enter` or click the |locked| button on the right to
-lock the mouse in the map canvas to the length of the segment:
+lock the mouse in the map canvas to the length of the segment.
+In the map canvas, the clicked point is surrounded by a circle whose radius is
+the value entered in the distance text box.
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance.png
    :align: center
 
    Fixed length segment
-
-In the map canvas, the clicked point is surrounded by a circle whose radius is
-the value entered in the distance text box.
 
 Finally, you can also choose the angle of the segment. As described before ,
 click the :guilabel:`a (angle)` text box (keyboard shortcut :kbd:`a`), type the
@@ -1180,32 +1179,52 @@ vertexes, but will capture the clicks' positions so that you can use them as
 reference points to then lock distance, angle or x and y relative values.
 
 As an example, the construction mode can be used to draw some point
-at an exact distance from a existing point.
+at an exact distance from an existing point.
 
 With an existing point in the map canvas and the snapping mode correctly
-   activated,
-you can easily draw other points at given distances and angles from it.
-In addition to the |cad| button, you have to activate also the *construction*
-mode by clicking on the |cadConstruction| :sup:`Construction` icon or with the
-:kbd:`c` keyboard shortcut.
+activated, you can easily draw other points at given distances and angles from
+it. In addition to the |cad| button, you have to activate also the
+*construction* mode by clicking the |cadConstruction| :sup:`Construction`
+icon or with the :kbd:`c` keyboard shortcut.
 
 Click next to the point from which you want to calculate the distance and click
-on the *d* box (:kbd:`d` shortcut) enter the desired distance and hit Enter to
-lock the mouse position in the map canvas:
+on the :guilabel:`d` box (:kbd:`d` shortcut) enter the desired distance and hit
+Enter to lock the mouse position in the map canvas:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point.png
    :align: center
 
    Distance from point
 
-Before adding the new point, you have to exit the construction mode, just click
-:kbd:`c`. Now you can click on the map canvas and the point will be placed at
-the distance entered:
+Before adding the new point, press :kbd:`c` to exit the construction mode.
+Now, you can click on the map canvas, and the point will be placed at
+the distance entered.
+
+You can also use the angle constraint to, for example, create another point at
+the same distance of the original one, but at a particular angle from the newly
+added point. Click the |cadConstruction| :sup:`Construction` icon or with the
+:kbd:`c` keyboard shortcut to enter construction mode. Click the recently added
+point, and then the first one to set a direction segment. Then, click on the
+:guilabel:`d` text box (:kbd:`d` shortcut) enter the desired distance and hit
+Enter. Click the :guilabel:`a` text box (:kbd:`a` shortcut) enter the angle you
+want and hit Enter. The mouse position will be locked both in distance and
+angle.
+
+.. only:: html
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_angle_point.png
+   :align: center
+
+   Distance and angle from points
+
+Before adding the new point, press :kbd:`c` to exit the construction mode. Now,
+you can click on the map canvas, and the point will be placed at the distance
+and angle entered. Repeating the process, several points can be added.
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point_final.png
    :align: center
 
-   Points at given distance
+   Points at given distance and angle
 
 
 .. index:: Create new layers
