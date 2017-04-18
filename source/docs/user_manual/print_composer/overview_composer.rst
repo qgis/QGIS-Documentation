@@ -367,12 +367,8 @@ To maximise the space available to interact with a composition you can use
 Composition Tab
 ---------------
 
-Page size and settings
-......................
-
 In the :guilabel:`Composition` tab, you can define the global settings of the
 current composition.
-
 
 .. _figure_composition:
 
@@ -381,18 +377,31 @@ current composition.
 
    Composition settings in the Print Composer
 
-You can choose one of the :guilabel:`Presets` formats for your paper sheet,
-or enter your custom :guilabel:`width`, :guilabel:`height` and :guilabel:`units`.
-You can also choose the page :guilabel:`Orientation` to use.
+General settings
+................
 
 Composition can be divided into several pages. For instance, a first page can show
 a map canvas, and a second page can show the attribute table associated with a
 layer, while a third one shows an HTML frame linking to your organization website.
-Set the :guilabel:`Number of pages` to the desired value. you can also custom the
-:guilabel:`Page Background` with the color or the symbol you want.
+Set the :guilabel:`Number of pages` to the desired value. You can also
+custom the :guilabel:`Page Background` with the color or the symbol you want.
 
-The Page size options apply to all the pages in the composition. However, you can
-modify the values using the data defined override options (see :ref:`atlas_data_defined_override`).
+The :guilabel:`reference map` select the map item to be used as the
+composition's master map. The map composer will use this map in any
+properties and variable calculating units or scale. This includes exporting
+the composition to georeferenced formats.
+
+Page size and resize
+....................
+
+In the :guilabel:`Page size` group, you can choose one of the
+:guilabel:`Presets` formats for your paper sheet, or enter your custom
+:guilabel:`width`, :guilabel:`height` and :guilabel:`units`.
+You can also choose the page :guilabel:`Orientation` to use.
+
+The Page size options apply to all the pages in the composition. However,
+you can modify the values using the data defined override options (see
+:ref:`atlas_data_defined_override`).
 
 A custom page size can also be set, using the :guilabel:`Resize page` tool.
 This creates an unique page composition, resizes the page to fit the current
@@ -405,14 +414,15 @@ Export settings
 You can define a resolution to use for all exported maps in :guilabel:`Export
 resolution`. This setting can, however, be overridden each time you are
 exporting a map.
+
 When checked, |checkbox| :guilabel:`print as raster` means all elements will be
 rasterized before printing or saving as PostScript or PDF.
 
 While exporting to an image file format, you can choose to generate a world file
-by checking |checkbox| :guilabel:`Save world file` and select a map item in
-|selectString| :guilabel:`Reference map`. The world file is created beside
-the exported map, has the same name and contains information to georeference
-it easily.
+by checking |checkbox| :guilabel:`Save world file` using the map selected in
+|selectString| :guilabel:`Reference map` in the :guilabel:`general settings`
+group. The world file is created beside the exported map, has the same name
+and contains information to georeference it easily.
 
 .. _figure_composition_export:
 
