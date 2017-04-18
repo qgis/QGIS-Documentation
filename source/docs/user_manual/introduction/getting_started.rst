@@ -31,7 +31,7 @@ Installation of QGIS is very simple. Standard installer packages are available
 for MS Windows and macOS. For many flavors of GNU/Linux, binary packages (rpm
 and deb) or software repositories are provided to add to your installation manager.
 Get the latest information on binary packages at the QGIS website at
-http://download.qgis.org.
+http://download.qgis.org. testtest
 
 Installation from source
 ------------------------
