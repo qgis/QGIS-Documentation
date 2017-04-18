@@ -1006,8 +1006,8 @@ definition of your new geometry.
 
 The Advanced Digitizing panel can be open either with a right-click on the
 toolbar and choose Advanced Digitizing panel or in :menuselection:`View -->
-Panel --> Advanced Digitizing Panel`. Once the panel is visible, click the |cad|
-:sup:`enable advanced digitizing tool` button to activate the Advanced
+Panels --> Advanced Digitizing Panel`. Once the panel is visible, click the
+|cad| :sup:`enable advanced digitizing tool` button to activate the Advanced
 Digitizing tool.
 
 Concepts
@@ -1040,71 +1040,73 @@ You can also control the snapping to features. The options are:
 Keyboard shortcuts
 ------------------
 
-To speed up the use of Advanced Digitizing Panel, there are a couple of keyboard shorcuts
-available:
+To speed up the use of Advanced Digitizing Panel, there are a couple of keyboard
+shorcuts available:
 
 +----------+-------------------+-------------------------------+---------------------------------------+
-| Key      | simple            | :kbd:`Ctrl +` or :kbd:`Alt +` | :kbd:`Shift +`                        |
+| Key      | Simple            | :kbd:`Ctrl +` or :kbd:`Alt +` | :kbd:`Shift +`                        |
 +==========+===================+===============================+=======================================+
-| :kbd:`d` | set distance      | lock distance                 | \                                     |
+| :kbd:`d` | Set distance      | Lock distance                 | \                                     |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`a` | set angle         | lock angle                    | toggle relative angle to last segment |
+| :kbd:`a` | Set angle         | Lock angle                    | Toggle relative angle to last segment |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`x` | set x coordinate  | lock x coordinate             | toggle relative x to last vertex      |
+| :kbd:`x` | Set x coordinate  | Lock x coordinate             | Toggle relative x to last vertex      |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`y` | set y coordinate  | lock y coordinate             | toggle relative y to last vertex      |
+| :kbd:`y` | Set y coordinate  | Lock y coordinate             | Toggle relative y to last vertex      |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`c` | toggle construction mode                                                                  |
+| :kbd:`c` | Toggle construction mode                                                                  |
 +----------+-------------------------------------------------------------------------------------------+
-| :kbd:`p` | toggle perpendicular and parallel modes                                                   |
+| :kbd:`p` | Toggle perpendicular and parallel modes                                                   |
 +----------+-------------------------------------------------------------------------------------------+
 
 Absolute reference digitizing
 -----------------------------
 
-When drawing a new layer or a new geometry from scratch, it is very useful to
-have the possibility to start the digitalization of the vertexes to given
-coordinates.
+When drawing a new geometry from scratch, it is very useful to have the
+possibility to start digitizing vertexes at given coordinates.
 
-For example, to add a new feature to a polygonal layer, just click on the
-|capturePolygon| button.
+For example, to add a new feature to a polygonal layer, click the
+|capturePolygon| button. You can choose the X and Y coordinates where you want
+to start editing the feature, then:
 
-You can choose the X and Y coordinates where you want to start editing the
-feature. Just click the :guilabel:`x` and :guilabel:`y` text boxes (or use the
-:kbd:`x` and :kbd:`y` keyboard shortcuts), enter the coordinates values you want
-and press :kbd:`Enter` or click the |locked| buttons to their right to lock the
-mouse position on the canvas:
+- Click the :guilabel:`x` text box (or use the :kbd:`x` keyboard shortcuts).
+- Enter the X coordinates values you want and press :kbd:`Enter` or click the
+  |locked| button to their right to lock the mouse to the X axis on the map
+  canvas.
+- Click the :guilabel:`y` text box (or use the :kbd:`y` keyboard shortcuts).
+- Enter the Y coordinates values you want and press :kbd:`Enter` or click the
+  |locked| button to their right to lock the mouse to the Y axis on the map
+  canvas.
+
+Two blue dotted lines and a green cross identify the exact coordinates you
+entered. Start digitizing by clicking on the map canvas; the mouse position is
+locked at the green cross.
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_coordinates.png
    :align: center
 
    Start drawing at given coordinates
 
-Two blue dotted lines and a green cross identify the exact coordinates you
-entered. Start digitizing by clicking on the canvas; the mouse position is
-locked at the green cross.
-
 You can continue digitizing by free hand, adding a new pair of coordinates, or
 you can enter the segment's **length** (distance) and **angle**.
 
 If you want to draw a segment of a given length, click the :guilabel:`d
 (distance)` text box (keyboard shortcut :kbd:`d`), enter the distance value (in
-map units) and press :kbd:`Enter` or click the |locked| buttons on the right to
-lock the mouse in the canvas to the length of the segment:
+map units) and press :kbd:`Enter` or click the |locked| button on the right to
+lock the mouse in the map canvas to the length of the segment:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance.png
    :align: center
 
    Fixed length segment
 
-In the canvas, the clicked point is surrounded by a circle whose radius is
+In the map canvas, the clicked point is surrounded by a circle whose radius is
 the value entered in the distance text box.
 
-Finally, you can also choose the angle of the segment. As the steps before
-described, just click on the :guilabel:`a (angle)` text box (keyboard shortcut
-:kbd:`a`), type the angle value (in degrees), and press :kbd:`Enter` or click
-the |locked| buttons on the right to lock it. In this way the segment will
-follow the desired angle:
+Finally, you can also choose the angle of the segment. As described before ,
+click the :guilabel:`a (angle)` text box (keyboard shortcut :kbd:`a`), type the
+angle value (in degrees), and press :kbd:`Enter` or click the |locked| buttons
+on the right to lock it. In this way the segment will follow the desired angle:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_angle.png
    :align: center
@@ -1124,7 +1126,7 @@ and the mouse pointer.
 
 For coordinates, click the |delta| buttons to the left of the :guilabel:`x` or
 :guilabel:`y` text boxes (or press :kbd:`Shift + x` or :kbd:`Shift + y`) to
-toggle relative coordinates to the previous vertex. With theses option on,
+toggle relative coordinates to the previous vertex. With these options on,
 coordinates measurement will consider the last vertex to be the x and y axes
 origin.
 
@@ -1133,8 +1135,8 @@ Continuous lock
 
 Both in absolute or relative reference digitizing, angle, distance, x and y
 constraints can be locked continuously by clicking the |lockedRepeat|
-:guilabel:`Continuous lock` buttons. Using continuous lock allow you to digitize
-several points or vertexes using the same constraints.
+:guilabel:`Continuous lock` buttons. Using continuous lock allows you to
+digitize several points or vertexes using the same constraints.
 
 Relative angular coordinates digitizing
 ---------------------------------------
@@ -1148,11 +1150,11 @@ Before starting, be sure to activate the snapping options
 Tool settings and enable :guilabel:`Snapping according to project configuration`.
 
 If you want to add a new feature (remember, the tool allows to work with all the
-digitizing tool like reshaping, splitting, etc.) click on a vertex of an existing
-feature. Click on the *d* (keyboard shortcut :kbd:`d`) and *a* (keyboard shortcut
-:kbd:`a`) text boxes and add the desired values. You can now see in the canvas
-that your feature will start at an existing vertex and will have a precise
-length and angle:
+digitizing tool like reshaping, splitting, etc.) click on a vertex of an
+existing feature. Click on the *d* (keyboard shortcut :kbd:`d`) and *a*
+(keyboard shortcut :kbd:`a`) text boxes and add the desired values. You can now
+see in the map canvas that your feature will start at an existing vertex and
+will have a precise length and angle:
 
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_relative.png
@@ -1170,9 +1172,9 @@ allow drawing segments perfectly perpendicular or parallel to another segment.
 
 To draw a *perpendicular* segment, during the editing click the
 |cadPerpendicular| :sup:`Perpendicular` icon (keyboard shortcut :kbd:`p`) to
-activate it. **Before drawing the perpendicular line,
+activate it. Before drawing the perpendicular line,
 click on the segment of an existing feature that you want to be perpendicular
-to** (the line of the existing feature will be colored in light orange); you
+to (the line of the existing feature will be colored in light orange); you
 should see a blue dotted line where your feature will be snapped:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_perpendicular.png
@@ -1197,14 +1199,15 @@ Construction mode
 
 You can enable and disable *construction* mode by clicking on the
 |cadConstruction| :sup:`Construction` icon or with the :kbd:`c` keyboard
-shortcut. While in construction mode, clicking the canvas won't add new
+shortcut. While in construction mode, clicking the map canvas won't add new
 vertexes, but will capture the clicks' positions so that you can use them as
 reference points to then lock distance, angle or x and y relative values.
 
 As an example, the construction mode can be used to draw some point
 at an exact distance from a existing point.
 
-With an existing point in the canvas and the snapping mode correctly activated,
+With an existing point in the map canvas and the snapping mode correctly
+   activated,
 you can easily draw other points at given distances and angles from it.
 In addition to the |cad| button, you have to activate also the *construction*
 mode by clicking on the |cadConstruction| :sup:`Construction` icon or with the
@@ -1212,7 +1215,7 @@ mode by clicking on the |cadConstruction| :sup:`Construction` icon or with the
 
 Click next to the point from which you want to calculate the distance and click
 on the *d* box (:kbd:`d` shortcut) enter the desired distance and hit Enter to
-lock the mouse position in the canvas:
+lock the mouse position in the map canvas:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point.png
    :align: center
@@ -1220,8 +1223,8 @@ lock the mouse position in the canvas:
    Distance from point
 
 Before adding the new point, you have to exit the construction mode, just click
-:kbd:`c`. Now you can click on the canvas and the point will be placed at the
-distance entered:
+:kbd:`c`. Now you can click on the map canvas and the point will be placed at
+the distance entered:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point_final.png
    :align: center
