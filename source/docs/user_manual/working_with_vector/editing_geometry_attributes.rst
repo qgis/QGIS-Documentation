@@ -1138,30 +1138,6 @@ constraints can be locked continuously by clicking the |lockedRepeat|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
 digitize several points or vertexes using the same constraints.
 
-Relative angular coordinates digitizing
----------------------------------------
-
-If you want to have distances and angles relative to an existing feature you can
-easily do this by combining the snapping option and the :guilabel:`d` (distance)
-and :guilabel:`a` (angle) boxes.
-
-Before starting, be sure to activate the snapping options
-(see :ref:`snapping_tolerance`). Also, click the Advanced Digitizing
-Tool settings and enable :guilabel:`Snapping according to project configuration`.
-
-If you want to add a new feature (remember, the tool allows to work with all the
-digitizing tool like reshaping, splitting, etc.) click on a vertex of an
-existing feature. Click on the *d* (keyboard shortcut :kbd:`d`) and *a*
-(keyboard shortcut :kbd:`a`) text boxes and add the desired values. You can now
-see in the map canvas that your feature will start at an existing vertex and
-will have a precise length and angle:
-
-
-.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_relative.png
-   :align: center
-
-   Relative length and angle digitizing
-
 
 Parallel and perpendiculars line
 --------------------------------
