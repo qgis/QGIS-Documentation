@@ -459,6 +459,8 @@ rst_epilog = """
    :width: 1.5em
 .. |delimitedText| image:: /static/common/delimited_text.png
    :width: 1.5em
+.. |delta| image:: /static/common/delta.png
+   :width: 1.5em
 .. |demAnalysis| image:: /static/common/dem.png
    :width: 1.5em
 .. |dependencies| image:: /static/common/dependencies.png
@@ -800,6 +802,8 @@ rst_epilog = """
    :width: 2em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
+.. |lockedRepeat| image:: /static/common/lock_repeating.png
+   :width: 1.5em
 .. |link| image:: /static/common/mActionLink.png
    :width: 1.5em
 .. |linkGeorefToQGis| image:: /static/common/mActionLinkGeorefToQGis.png
@@ -1070,6 +1074,8 @@ rst_epilog = """
 .. |selectSubsetLayer| image:: /static/common/selectsubsetlayer.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |settings| image:: /static/common/settings.png
    :width: 1.5em
 .. |sharing| image:: /static/common/mActionSharing.png
    :width: 1.5em
