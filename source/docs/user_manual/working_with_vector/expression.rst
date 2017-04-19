@@ -42,7 +42,7 @@ select some features, create virtual field ...
 
 * Apply a categorized style to all the features according to whether their average house
   price is smaller or higher than 10000€ per square metre::
-  
+
     "price_m2" > 10000
 
 * Using the "Select By Expression..." tool, select all the features representing
@@ -266,8 +266,8 @@ This group contains math functions (e.g., square root, sin and cos).
 =================  ==========================================================
 
 
-Aggregates
-----------
+Aggregates Functions
+--------------------
 
 This group contains functions which aggregate values over layers and fields.
 
@@ -317,9 +317,9 @@ This group contains functions which aggregate values over layers and fields.
 
 * Return the maximum of the "passengers" field from features in the layer
   grouped by "station_class" field::
- 
+
    maximum("passengers", group_by:="station_class")
-    
+
 * Calculate the total number of passengers for the stations inside the current
   atlas feature::
 
@@ -332,7 +332,7 @@ This group contains functions which aggregate values over layers and fields.
    aggregate_relation('my_relation', 'mean', "field_from_related_table")
 
   or::
-  
+
    aggregate_relation(relation:='my_relation', calculation := 'mean',
      expression := "field_from_related_table")
 
@@ -376,8 +376,8 @@ This group contains functions for manipulating colors.
 
 .. _conversion_functions:
 
-Conversions
-------------
+Conversions Functions
+---------------------
 
 This group contains functions to convert one data type to another
 (e.g., string to integer, integer to string).
@@ -396,7 +396,7 @@ This group contains functions to convert one data type to another
 ==================  ========================================================
 
 
-Custom functions
+Custom Functions
 -----------------
 
 This group contains functions created by the user.
@@ -586,6 +586,10 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | area                   | Returns the area of a geometry polygon feature.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
++------------------------+---------------------------------------------------+
+| azimuth                | Returns the north-based azimuth as the angle in   |
+|                        | radians measured clockwise from the vertical on   |
+|                        | point_a to point_b                                |
 +------------------------+---------------------------------------------------+
 | boundary               | Returns the closure of the combinatorial boundary |
 |                        | of the geometry (ie the topological boundary of   |
@@ -854,7 +858,7 @@ This group contains functions that operate on record identifiers.
  get_feature          Returns the first feature of a layer matching a
                       given attribute value
  uuid                 Generates a Universally Unique Identifier (UUID)
-                      for each row. Each UUID is 38 characters long
+                      for each row. Each UUID is 38 characters long.
 ==================== =========================================================
 
 **Some examples:**
@@ -965,12 +969,12 @@ To use these functions in an expression, they should be preceded by @ character
  layout_numpages         Returns the number of pages in the composition
  layout_pageheight       Returns the composition height in mm
  layout_pagewidth        Returns the composition width in mm
- map_id                  Returns the ID of current map destination.
-                         This will be 'canvas' for canvas renders, and
-                         the item ID for composer map renders
  map_extent_center       Returns the point feature at the center of the map
  map_extent_height       Returns the current height of the map
  map_extent_width        Returns the current width of the map
+ map_id                  Returns the ID of current map destination.
+                         This will be 'canvas' for canvas renders, and
+                         the item ID for composer map renders
  map_rotation            Returns the current rotation of the map
  map_scale               Returns the current scale of the map
  project_filename        Returns the filename of current project
@@ -980,10 +984,10 @@ To use these functions in an expression, they should be preceded by @ character
  project_title           Returns the title of current project
  qgis_os_name            Returns the current Operating system name,
                          eg 'windows', 'linux' or 'osx'
- qgis_platform           Returns the QGIS platform, eg 'desktop' or 'server'
- qgis_release_name       Returns the current QGIS release name
- qgis_version            Returns the current QGIS version string
- qgis_version_no         Returns the current QGIS version number
+ qgis_platform           Returns QGIS platform, eg 'desktop' or 'server'
+ qgis_release_name       Returns current QGIS release name
+ qgis_version            Returns current QGIS version string
+ qgis_version_no         Returns current QGIS version number
  symbol_angle            Returns the angle of the symbol used to render
                          the feature (valid for marker symbols only)
  symbol_color            Returns the color of the symbol used to render
@@ -993,6 +997,7 @@ To use these functions in an expression, they should be preceded by @ character
  user_full_name          Returns the current user's operating system
                          user name
  row_number              Stores the number of the current row
+ value                   Returns the current value
 ======================= =======================================================
 
 
