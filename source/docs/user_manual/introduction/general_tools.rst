@@ -1035,6 +1035,10 @@ QGIS provides several tools to select features in the map canvas. Selection
 tools are available in :menuselection:`View --> Select` menu or in the
 :guilabel:`Attributes toolbar`.
 
+.. note::
+
+   Selection tools work with the currently active layer.
+
 Selecting manually in the map canvas
 -------------------------------------
 
@@ -1093,30 +1097,57 @@ be selected in map canvas also):
 .. index::
    single: Selection tools; Select by value
 
-About Select Features By Value
--------------------------------
+.. _select_by_value:
 
-This feature opens a window to allow the user to choose for each column of the
-attribute table which value to look for, if the search should be case sensitive
-and the operation that should be used. Operation can be one of:
+Select Features By Value
+------------------------
 
-* :guilabel:`Exclude field`,
-* :guilabel:`Equal to (=)`,
-* :guilabel:`Not equal to`,
-* :guilabel:`Greater than (>)` (only for fields of integer or decimal type),
-* :guilabel:`Less than (<)` (only for fields of integer or decimal type),
-* :guilabel:`Greater than or equal to (>=)` (only for fields of integer
-  or decimal type),
-* :guilabel:`Less than or equal to (<=)` (only for fields of integer or
-  decimal type),
-* :guilabel:`Contains` (only for fields of type string),
-* :guilabel:`Not contains` (only for fields of type string),
-* :guilabel:`is missing (null)`,
-* :guilabel:`is not missing (null)`
+This selection tool opens the layer's feature form allowing the user to choose,
+for each field, which value to look for, if the search should be case sensitive,
+and the operation that should be used.
 
-The window allows user to :guilabel:`Reset form` or to :guilabel:`Select
-features`, :guilabel:`Add to current selection`, :guilabel:`Filter current
-selection`, :guilabel:`Remove from current selection`.
+.. _figure_filter_form:
+
+.. figure:: /static/user_manual/introduction/select_by_value.png
+   :align: center
+
+   Filter/Select features using form dialog
+
+Alongside each field, there is a drop-down list with the operation options to
+control the search behaviour. The common options are:
+
+* :guilabel:`Exclude Field` - The field will not be used for searching
+* :guilabel:`Equal to (=)`
+* :guilabel:`Not equal to`
+* :guilabel:`Is missing (null)`
+* :guilabel:`Is not missing (not null)`
+
+For numeric and datetime fields, the additional options are:
+
+* :guilabel:`Greater than (>)`
+* :guilabel:`Less than (<)`
+* :guilabel:`Greater than or equal to (>=)`
+* :guilabel:`Less than or equal to (<=)`
+* :guilabel:`Between (inclusive)`
+* :guilabel:`Is not between (inclusive)`
+
+For text fields, the additional options are:
+
+* :guilabel:`Contains`
+* :guilabel:`Does not contain`
+
+For the text options above, it is also possible to use the |checkbox|
+:guilabel:`Case sensitive` option.
+
+After setting all search options, you can use the :guilabel:`Select features`
+button to select the matching features. The drop-down options are:
+
+* :guilabel:`Select features`
+* :guilabel:`Add to current selection`
+* :guilabel:`Filter current selection`
+* :guilabel:`Remove from current current selection`
+
+You can also clean all search options using the :guilabel:`Reset form` button.
 
 .. index:: Data-defined override
 .. _data_defined:

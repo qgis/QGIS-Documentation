@@ -92,7 +92,7 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |calculateField|        | Open field calculator               | Update field for many features in a row    | :kbd:`Ctrl+I`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |conditionalFormatting| | conditional formatting              | Enable table formatting                    |                     |
+| |conditionalFormatting| | Conditional formatting              | Enable table formatting                    |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 
 Table Attribute 1: Available Tools
@@ -225,7 +225,7 @@ to define:
    pair: Attributes; Selection
 
 Selecting features in an attribute table
-=========================================
+========================================
 
 **Each selected row** in the attribute table displays the attributes of a
 selected feature in the layer. If the set of features selected in the main
@@ -278,19 +278,19 @@ To show selected records only, use :guilabel:`Show Selected Features` from the m
 at the bottom left. See next section for more information on filter feature.
 
 The field calculator bar allows you to make calculations on the selected rows only.
-For example, you can alter the number of the ID field of the layer :file:`regions.shp`
-with the expression
+For example, as shown in figure_attributes_table_, you can alter the number
+of the ID field of the layer :file:`regions.shp` with the expression:
 
 ::
 
- ID+5
+ ID + 5
 
-as shown in figure_attributes_table_ .
+It is also possible to select features using the :ref:`filter_select_form`.
 
 Filter features
 ===============
 
-At the bottom of the attribute table, you have a dropdown list of different
+At the bottom of the attribute table, you have a drop-down list of different
 filter:
 
 * Show All Features;
@@ -300,13 +300,39 @@ filter:
 * Field Filter;
 * Advanced filter (Expression);
 
-The first four are self explanatory, the two last are expression filters. Field
-Filter allows user to choose a column name in the list and add a simple form to
-the right of the drop-down list to filter with a *like* expression parameter.
-This filter will create an expression filter as an :guilabel:`Advanced filter`.
-The last kind of filter will open an expression window, see :ref:`vector_expressions`
-for more information.
+The first four filters are self-explanatory, the two last are expression
+filters.
+:guilabel:`Field Filter` allows the user to choose a column name
+from a list and adds a simple form to the right of the drop-down list to
+filter with a *like* expression parameter. Type a value and press
+:kbd:`Enter`, and this filter will create an expression filter as an
+:guilabel:`Advanced filter`.
+The :guilabel:`Advanced filter (Expression)` will open an expression builder
+window, see :ref:`vector_expressions` for more information.
 
+It is also possible to filter features using the :ref:`filter_select_form`.
+
+
+.. _filter_select_form:
+
+Filter/Select features using form
+=================================
+
+Clicking the |filterMap| :sup:`Filter/Select features using form` or
+pressing :kbd:`CTRL+F` the attribute table dialog will switch to form view and
+all widgets are replaced with their search variant.
+
+From this point onwards, this tool functionality is similar to the
+one described in the :ref:`general_tools`. See :ref:`select_by_value` for a
+description of all operators and selecting modes.
+
+Moreover, in the attribute table case, there is also a :guilabel:`Filter
+features` button that allows filtering features instead of selecting them. If
+there are already filtered features, you can refine the filtering using the
+drop-down options:
+
+* :guilabel:`Filter within ("AND")`
+* :guilabel:`Extend filter ("OR")`
 
 Zoom to feature
 ===============
