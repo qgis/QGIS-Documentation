@@ -374,6 +374,8 @@ This group contains functions for manipulating colors.
                     eg the red component or alpha component
 ================== ==========================================================
 
+.. _conversion_functions:
+
 Conversions
 ------------
 
@@ -421,7 +423,7 @@ This group contains functions for handling date and time data.
                  or the number of minutes from an interval
  month           Extracts the month part from a date or datetime, or the
                  number of months from an interval
- now()           Returns current date and time
+ now             Returns current date and time
  second          Extracts the second from a datetime or time,
                  or the number of seconds from an interval
  week            Extracts the week number from a date or datetime,
@@ -430,11 +432,60 @@ This group contains functions for handling date and time data.
                  or the number of years from an interval
 ==============  ==============================================================
 
-**Some example:**
+This group also shares several functions with the :ref:`conversion_functions` (
+to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
+(format_date) groups.
 
-* Get the month and the year of today in the format "10/2014"::
+**Some examples:**
 
-    month(now()) || '/' || year(now())
+* Get today's month and year in the "month_number/year" format:
+
+  .. code-block:: sql
+
+     format_date(now(),'MM/yyyy')
+     -- Returns '03/2017'
+
+Besides these functions, subtracting dates, datetimes or times using the
+``-`` (minus) operator will return an interval.
+
+Adding or subtracting an interval to dates, datetimes or times, using the
+``+`` (plus) and ``-`` (minus) operators, will return a datetime.
+
+* Get the number of days until QGIS 3.0 release:
+
+  .. code-block:: sql
+
+     to_date('2017-09-29') - to_date(now())
+     -- Returns <interval: 203 days>
+
+* The same with time:
+
+  .. code-block:: sql
+
+     to_datetime('2017-09-29 12:00:00') - to_datetime(now())
+     -- Returns <interval: 202.49 days>
+
+* Get the datetime of 100 days from now:
+
+  .. code-block:: sql
+
+     now() + to_interval('100 days')
+     -- Returns <datetime: 2017-06-18 01:00:00>
+
+.. note:: **Storing date and datetime and intervals on fields**
+
+   The ability to store *date*, *time* and *datetime* values directly on
+   fields may depend on the data source's provider (e.g., shapefiles accept
+   *date* format, but not *datetime* or *time* format). The following are some
+   suggestions to overcame this limitation.
+
+   *date*, *Datetime* and *time* can be stored in text type fields after
+   using the ``to_format()`` function.
+
+   *Intervals* can be stored in integer or decimal type fields after using
+   one of the date extraction functions (e.g., ``day()`` to get the interval
+   expressed in days)
+
 
 Fields and Values
 ------------------
@@ -818,6 +869,8 @@ This group contains functions that operate on record identifiers.
     area( geometry( get_feature( 'layerA', 'id', attribute( $currentfeature, 'name') ) ) )
 
 
+.. _string_functions:
+
 String Functions
 -----------------
 
@@ -993,4 +1046,3 @@ Further information about creating Python code can be found in the
 
 The function editor is not only limited to working with the field calculator,
 it can be found whenever you work with expressions.
-
