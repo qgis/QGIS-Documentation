@@ -1070,11 +1070,11 @@ For example, to add a new feature to a polygonal layer, click the
 to start editing the feature, then:
 
 - Click the :guilabel:`x` text box (or use the :kbd:`x` keyboard shortcuts).
-- Enter the X coordinates values you want and press :kbd:`Enter` or click the
+- Type the X coordinates values you want and press :kbd:`Enter` or click the
   |locked| button to their right to lock the mouse to the X axis on the map
   canvas.
 - Click the :guilabel:`y` text box (or use the :kbd:`y` keyboard shortcuts).
-- Enter the Y coordinates values you want and press :kbd:`Enter` or click the
+- Type the Y coordinates values you want and press :kbd:`Enter` or click the
   |locked| button to their right to lock the mouse to the Y axis on the map
   canvas.
 
@@ -1088,10 +1088,10 @@ locked at the green cross.
    Start drawing at given coordinates
 
 You can continue digitizing by free hand, adding a new pair of coordinates, or
-you can enter the segment's **length** (distance) and **angle**.
+you can type the segment's **length** (distance) and **angle**.
 
 If you want to draw a segment of a given length, click the :guilabel:`d
-(distance)` text box (keyboard shortcut :kbd:`d`), enter the distance value (in
+(distance)` text box (keyboard shortcut :kbd:`d`), type the distance value (in
 map units) and press :kbd:`Enter` or click the |locked| button on the right to
 lock the mouse in the map canvas to the length of the segment.
 In the map canvas, the clicked point is surrounded by a circle whose radius is
@@ -1188,8 +1188,8 @@ it. In addition to the |cad| button, you have to activate also the
 icon or with the :kbd:`c` keyboard shortcut.
 
 Click next to the point from which you want to calculate the distance and click
-on the :guilabel:`d` box (:kbd:`d` shortcut) enter the desired distance and hit
-Enter to lock the mouse position in the map canvas:
+on the :guilabel:`d` box (:kbd:`d` shortcut) type the desired distance and press
+:kbd:`Enter` to lock the mouse position in the map canvas:
 
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point.png
    :align: center
@@ -1204,11 +1204,11 @@ You can also use the angle constraint to, for example, create another point at
 the same distance of the original one, but at a particular angle from the newly
 added point. Click the |cadConstruction| :sup:`Construction` icon or with the
 :kbd:`c` keyboard shortcut to enter construction mode. Click the recently added
-point, and then the first one to set a direction segment. Then, click on the
-:guilabel:`d` text box (:kbd:`d` shortcut) enter the desired distance and hit
-Enter. Click the :guilabel:`a` text box (:kbd:`a` shortcut) enter the angle you
-want and hit Enter. The mouse position will be locked both in distance and
-angle.
+point, and then the other one to set a direction segment. Then, click on the
+:guilabel:`d` text box (:kbd:`d` shortcut) type the desired distance and press
+:kbd:`Enter`. Click the :guilabel:`a` text box (:kbd:`a` shortcut) type the
+angle you want and press :kbd:`Enter`. The mouse position will be locked both in
+distance and angle.
 
 .. only:: html
 
