@@ -1070,11 +1070,11 @@ For example, to add a new feature to a polygonal layer, click the
 to start editing the feature, then:
 
 - Click the :guilabel:`x` text box (or use the :kbd:`x` keyboard shortcuts).
-- Type the X coordinates values you want and press :kbd:`Enter` or click the
+- Type the X coordinate value you want and press :kbd:`Enter` or click the
   |locked| button to their right to lock the mouse to the X axis on the map
   canvas.
 - Click the :guilabel:`y` text box (or use the :kbd:`y` keyboard shortcuts).
-- Type the Y coordinates values you want and press :kbd:`Enter` or click the
+- Type the Y coordinate value you want and press :kbd:`Enter` or click the
   |locked| button to their right to lock the mouse to the Y axis on the map
   canvas.
 
