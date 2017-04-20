@@ -287,28 +287,24 @@ of the ID field of the layer :file:`regions.shp` with the expression:
 
 It is also possible to select features using the :ref:`filter_select_form`.
 
+..filter_features:
+
 Filter features
 ===============
 
-At the bottom of the attribute table, you have a drop-down list of different
-filter:
+At the bottom of the attribute table, there is a drop-down list of different
+filters:
 
-* Show All Features;
-* Show Selected Features;
-* Show Features visible on map;
-* Show Edited and New Features;
-* Field Filter;
-* Advanced filter (Expression);
-
-The first four filters are self-explanatory, the two last are expression
-filters.
-:guilabel:`Field Filter` allows the user to choose a column name
-from a list and adds a simple form to the right of the drop-down list to
-filter with a *like* expression parameter. Type a value and press
-:kbd:`Enter`, and this filter will create an expression filter as an
-:guilabel:`Advanced filter`.
-The :guilabel:`Advanced filter (Expression)` will open an expression builder
-window, see :ref:`vector_expressions` for more information.
+* :guilabel:`Show All Features`
+* :guilabel:`Show Selected Features`
+* :guilabel:`Show Features visible on map`
+* :guilabel:`Show Edited and New Features`
+* :guilabel:`Field Filter` - allows the user to choose a column from a
+  list. Then, type a value and press :kbd:`Enter` to filter.
+* :guilabel:`Advanced filter (Expression)` - Opens the expression builder
+  dialog. Within it, you can create complex expressions to match table rows.
+  For example, you can filter the table using more that one field.
+  See :ref:`vector_expressions` for more information.
 
 It is also possible to filter features using the :ref:`filter_select_form`.
 
@@ -319,26 +315,40 @@ Filter/Select features using form
 =================================
 
 Clicking the |filterMap| :sup:`Filter/Select features using form` or
-pressing :kbd:`CTRL+F` the attribute table dialog will switch to form view and
-all widgets are replaced with their search variant.
+pressing :kbd:`Ctrl+F` the attribute table dialog will switch to form view
+and all widgets are replaced with their search variant.
 
-From this point onwards, this tool functionality is similar to the
-one described in the :ref:`general_tools`. See :ref:`select_by_value` for a
-description of all operators and selecting modes.
+From this point onwards, this tool functionality is similar to the one described
+in the :ref:`select_by_value`, where you can find descriptions of all operators
+and selecting modes.
 
 Moreover, in the attribute table case, there is also a :guilabel:`Filter
-features` button that allows filtering features instead of selecting them. If
-there are already filtered features, you can refine the filtering using the
-drop-down options:
+features` button that allows filtering features instead of selecting them (by
+creating an Advanced Filter (Expression) for the user).
+
+.. _figure_filter_select_form:
+
+.. figure:: /static/user_manual/working_with_vector/tableFilteredForm.png
+    :align: center
+
+    Attribute table filtered by the filter form
+
+If there are already filtered features, you can refine the filter using the
+drop-down list next to the :guilabel:`Filter features` button. The options are:
 
 * :guilabel:`Filter within ("AND")`
 * :guilabel:`Extend filter ("OR")`
+
+To clear the filter, either select :guilabel:`Show all features` option
+mentioned in :ref:`filter_features`, or click the clear the expression and
+click **[Apply]**.
 
 Zoom to feature
 ===============
 
 To zoom into a feature, without having to select it, right-click on the feature
-you want to zoom in, within the attribute table, and select :guilabel:`Zoom to feature`.
+you want to zoom in, within the attribute table, and select :guilabel:`Zoom to
+feature`.
 
 Copy cell content
 =================
