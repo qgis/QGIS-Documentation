@@ -287,7 +287,7 @@ of the ID field of the layer :file:`regions.shp` with the expression:
 
 It is also possible to select features using the :ref:`filter_select_form`.
 
-..filter_features:
+.. _filter_features:
 
 Filter features
 ===============
