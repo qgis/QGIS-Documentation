@@ -61,36 +61,65 @@ tab provides the following functionalities (see figure_composer_map_):
 
    Map Item properties Tab
 
-* The **Preview** area allows you to define the preview modes 'Rectangle', 'Cache'
-  and 'Render', as described above. If you change the view on the QGIS map canvas by changing
-  vector or raster properties, you can update the Print Composer view by selecting the
-  map element in the Print Composer and clicking the **[Update preview]** button.
-* The field :guilabel:`Scale` |selectNumber| sets a manual scale.
-* The field :guilabel:`Map rotation` |selectNumber| allows you to
-  rotate the map element content clockwise in degrees. The rotation of the map view can be imitated
-  here. Note that a correct coordinate frame can only be added with the default value 0 and that
-  once you defined a :guilabel:`Map rotation` it currently cannot be changed.
-* |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed
-  on the map canvas in the main QGIS window.
-* You can choose to lock the layers shown on a map item. Check |checkbox|
-  :guilabel:`Lock layers for map item`.
-  After this is checked, any layer that would be displayed or hidden in the main QGIS window
-  will not appear or be hidden in the map item of the Composer. But style and labels of a
-  locked layer are still refreshed according to the main QGIS interface.
-  You can prevent this by using :guilabel:`Lock layer styles for map item`.
-* The |showPresets| button allows you to add quickly all the presets views you
-  have prepared in QGIS.
-  Clicking on the |showPresets| button you will see the list of all the preset views:
-  just select the preset you want to display.
-  The map canvas will automatically lock the preset layers by enabling the |checkbox|
-  :guilabel:`Lock layers for map item`: if you want to unselect the preset, just uncheck the
-  |checkbox| and press the |draw| button. See :ref:`label_legend` to find out how to
-  create presets views.
+* The **Preview** drop-down menu allows you to select one of the preview modes
+  'Rectangle', 'Cache' and 'Render', as described above. If you change the
+  view on the QGIS map canvas by changing vector or raster properties, you can
+  update the Print Composer view by selecting the map element and clicking
+  the **[Update preview]** button.
+* The field :guilabel:`Scale` |selectNumber| manually sets the map item scale.
+* The field :guilabel:`Map rotation` |selectNumber| allows you to rotate the
+  map element content clockwise in degrees. The rotation of the map
+  canvas can be imitated here.
+* |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that
+  may be placed on the map canvas in the main QGIS window.
+
+Layers
+------
+
+The :guilabel:`Layers` dialog of the map item tab provides the following
+functionality (see figure_composer_map_layers_):
+
+.. _Figure_composer_map_layers:
+
+.. figure:: /static/user_manual/print_composer/map_layers.png
+   :align: center
+
+   Map Layers Dialog
+
+* If you want to keep the map item constantly updated
+  with a visibility preset, use the |selectString| :guilabel:`Follow
+  visibility preset` and set the preset you want. Any changes applied to the
+  preset in QGIS's main window (using the replace preset) will also show in the
+  map item. In this case, the :guilabel:`Lock styles for layers` option will
+  be disabled because :guilabel:`Follow visibility preset` also updates the
+  style (symbology, label, diagram) of the visibility preset layers.
+
+* To lock the layers shown on a map item to the current map canvas check
+  |checkbox| :guilabel:`Lock layers`. After this option is enabled, any
+  changes on the layers visibility in the QGIS's main window won't affect
+  the Composer's map item. Nevertheless, style and labels of locked
+  layers are still refreshed according to QGIS's main window.
+  You can prevent this by using :guilabel:`Lock styles for layers`.
+
+  Using the |showPresets| button, you can lock the map item's layers to one of
+  the visibility presets you have prepared in QGIS (see :ref:`label_legend` to
+  find out how to create visibility presets).
+  Clicking the |showPresets| button will show the list of all the preset
+  views. Select the preset you want to display. The map canvas will lock the
+  preset layers automatically by enabling the |checkbox| :guilabel:`Lock
+  layers`. You can release the preset by unchecking the |checkbox|
+  :guilabel:`Lock layers` and press the |draw| button in the
+  map composer's :guilabel:`Navigation` toolbar.
+
+  Note that, unlike the :guilabel:`Follow visibility preset`, using the
+  :guilabel:`Lock layers` option enabled and set to a preset, the map item
+  layers won't be updated if the preset is changed (using the replace preset
+  option) in QGIS's main window.
 
   Locked layers in the map can also be :ref:`data-defined <data_defined>`, using
   the |dataDefined| icon beside the option. When used, this overrides the
-  selection set in the drop-down list. You need to pass a list of layers separated
-  by ``|`` character.
+  selection set in the drop-down list. You need to pass a list of layers
+  separated by ``|`` character.
   The following example locks the map item to use only layers ``layer 1`` and
   ``layer 2``::
 
