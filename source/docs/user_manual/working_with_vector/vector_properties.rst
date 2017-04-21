@@ -1391,14 +1391,20 @@ We now describe an example using the data-defined override function for the
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
    and :guilabel:`Placement`. Select |radioButtonOn| :guilabel:`Offset from centroid`.
 #. Look for the :guilabel:`Data defined` entries. Click the |dataDefined| icon
-   to define the field type for the :guilabel:`Coordinate`. Choose 'xlabel' for X
-   and 'ylabel' for Y. The icons are now highlighted in yellow.
+   to define the field type for the :guilabel:`Coordinate`. Choose ``xlabel``
+   for X and ``ylabel`` for Y. The icons are now highlighted in yellow.
 #. Zoom into a lake.
 #. Set editable the layer using the |toggleEditing| :sup:`Toggle Editing` button.
 #. Go to the Label toolbar and click the |moveLabel| icon.
    Now you can shift the label manually to another position (see figure_labels_move_).
-   The new position of the label is saved in the 'xlabel' and 'ylabel' columns
+   The new position of the label is saved in the ``xlabel`` and ``ylabel`` columns
    of the attribute table.
+#. Using :ref:`geometry_generator_symbol` with the expression below, you can
+   also add a linestring symbol layer to connect each lake to its moved label:
+   
+   ::
+   
+      make_line( centroid( $geometry ), make_point( "xlabel", "ylabel" ) )
 
 .. _figure_labels_data_defined:
 
