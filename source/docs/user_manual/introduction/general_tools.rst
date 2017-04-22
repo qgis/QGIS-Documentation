@@ -1738,8 +1738,9 @@ Will render the label like this::
   This map was made using QGIS 2.14. The project file for this map is:
   /gis/qgis-user-conference-2015.qgs
 
-Besides the preset read-only variables, you can define your own
-custom variables for any of the levels mentioned above. You can manage:
+Besides the :ref:`preset read-only variables <variables_functions>`, you can
+define your own custom variables for any of the levels mentioned above. You can
+manage:
 
 * **global variables** from the :menuselection:`Settings --> Options` menu;
 * **project's variables** from :guilabel:`Project properties` (see
