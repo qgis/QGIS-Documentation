@@ -61,7 +61,7 @@ There are several options for creating a geometry:
   ::
 
     g = QgsGeometry()
-    g.setWkbAndOwnership(wkb, len(wkb))
+    g.fromWkb(wkb)
 
 
 .. index:: Geometry; Access to
