@@ -40,7 +40,7 @@ Public class members are STRONGLY discouraged. Protected members should
 be avoided when the member may need to be accessed from Python subclasses,
 since protected members cannot be used from the Python bindings.
 
-Mutable static class member names should begin with a lower case s,
+Mutable static class member names should begin with a lower case ``s``,
 but constant static class member names should be all caps:
 
 * ``sRefCounter``
@@ -85,7 +85,7 @@ Function Arguments
 
 
 Function arguments should use descriptive names. Do not use single letter
-argments (e.g. ``setColor( const QColor& color )`` instead of
+arguments (e.g. ``setColor( const QColor& color )`` instead of
 ``setColor( const QColor& c )``).
 
 Pay careful attention to when arguments should be passed by reference.
@@ -148,7 +148,7 @@ match the class name.
 
 Example:
 Class ``QgsFeatureAttribute`` source files are
-``qgsfeatureattribute.cpp`` and ``qgsfeatureattribute.h``
+:file:`qgsfeatureattribute.cpp` and :file:`qgsfeatureattribute.h`
 
 .. note:: In case it is not clear from the statement above, for a filename
   to match a class name it implicitly means that each class should be declared
@@ -188,8 +188,8 @@ example:
 Variable Names
 ===============
 
-Local variable names begin with a lower case letter and are formed using mixed case.
-Do not use prefixes like ``my`` or ``the``.
+Local variable names begin with a lower case letter and are formed using mixed
+case. Do not use prefixes like ``my`` or ``the``.
 
 Examples:
 
@@ -218,7 +218,8 @@ Do not use generic type names that will conflict with other types. e.g. use
 Global Constants & Macros
 ==========================
 
-Global constants and macros should be written in upper case underscore separated e.g.:
+Global constants and macros should be written in upper case underscore separated
+e.g.:
 
 .. code-block:: cpp
 
@@ -255,14 +256,14 @@ Indentation
 -----------
 
 Source code should be indented to improve readability. There is a
-``scripts/prepare-commit.sh`` that looks up the changed files and reindents them
-using astyle. This should be run before committing. You can also use
-``scripts/astyle.sh`` to indent individual files.
+:file:`scripts/prepare-commit.sh` that looks up the changed files and reindents
+them using astyle. This should be run before committing. You can also use
+:file:`scripts/astyle.sh` to indent individual files.
 
 As newer versions of astyle indent differently than the version used to do a
 complete reindentation of the source, the script uses an old astyle version,
-that we include in our repository (enable WITH_ASTYLE in cmake to include it in
-the build).
+that we include in our repository (enable ``WITH_ASTYLE`` in cmake to include
+it in the build).
 
 Braces
 ------
@@ -321,6 +322,73 @@ should be done in a manner similar to the Qt sourcecode e.g.
        */
       bool somethingHappenedBetter();
   }
+  
+SIP Bindings
+============
+
+Some of the SIP files are automatically generated using a dedicated script.
+
+
+Header pre-processing
+---------------------
+
+
+All the information to properly build the SIP file must be found in the C++
+header file. Some macros are available for such definition:
+
+* Use ``#ifdef SIP_RUN`` to generate code only in SIP files or
+  ``#ifndef SIP_RUN`` for C++ code only. ``#else`` statements are handled in
+  both cases.
+* Use ``SIP_SKIP`` to discard a line
+* The following annotations are handled:
+
+  * ``SIP_FACTORY``: ``/Factory/``
+  * ``SIP_OUT``: ``/Out/``
+  * ``SIP_INOUT``: ``/In,Out/``
+  * ``SIP_TRANSFER``: ``/Transfer/``
+  * ``SIP_PYNAME(name)``: ``/PyName=name/``
+  * ``SIP_KEEPREFERENCE``: ``/KeepReference/``
+  * ``SIP_TRANSFERTHIS``: ``/TransferThis/``
+  * ``SIP_TRANSFERBACK``: ``/TransferBack/``
+  
+* ``private`` sections are not displayed, except if you use a ``#ifdef SIP_RUN``
+  statement in this block.
+* ``SIP_PYDEFAULTVALUE(value)`` can be used to define an alternative default
+  value of the python method. If the default value contains a comma ``,``,
+  the value should be surrounded by single quotes ``'``
+* ``SIP_PYTYPE(type)`` can be used to define an alternative type for an argument
+  of the python method. If the type contains a comma ``,``, the type should be
+  surrounded by single quotes ``'``
+
+A demo file can be found in :file:`tests/scripts/sipifyheader.h`.
+
+Generating the SIP file
+-----------------------
+
+The SIP file can be generated using a dedicated script. For instance:
+
+::
+
+    scripts/sipify.pl src/core/qgsvectorlayer.h > python/core/qgsvectorlayer.sip
+    
+    
+As soon as a SIP file is added to one of the source file
+(:file:`python/core/core.sip`, :file:`python/gui/gui.sip` or
+:file:`python/analysis/analysis.sip`), it will be considered as generated
+automatically. A test on Travis will ensure that this file is up to date with
+its corresponding header.
+
+Older files for which the automatic creation is not enabled yet are listed in
+:file:`python/auto_sip.blacklist`.
+
+Improving sipify script
+-----------------------
+
+If some improvements are required for sipify script, please add the missing bits
+to the demo file :file:`tests/scripts/sipifyheader.h` and create the expected
+header :file:`tests/scripts/sipifyheader.expected.si`. This will also be
+automatically tested on Travis as a unit test of the script itself.
+
 
 Coding Style
 =============
@@ -375,7 +443,7 @@ or this:
 
   if ( ! a && b )
 
-.. note:: ``scripts/prepare-commit.sh`` will take care of this.
+.. note:: :file:`scripts/prepare-commit.sh` will take care of this.
 
 
 Put commands on separate lines
@@ -408,8 +476,8 @@ Instead use
 Indent access modifiers
 ------------------------
 
-Access modifiers structure a class into sections of public API, protected API and
-private API. Access modifiers themselves group the code into this structure.
+Access modifiers structure a class into sections of public API, protected API
+and private API. Access modifiers themselves group the code into this structure.
 Indent the access modifier and declarations.
 
 .. code-block:: cpp
@@ -440,7 +508,8 @@ You should also really read this article from Qt Quarterly on
 Credits for contributions
 ==========================
 
-Contributors of new functions are encouraged to let people know about their contribution by:
+Contributors of new functions are encouraged to let people know about their
+contribution by:
 
 * adding a note to the changelog for the first version where 
   the code has been incorporated, of the type::
