@@ -638,6 +638,8 @@ save the style as a:
 * QGIS layer style file (:file:`.qml`)
 * or SLD file (:file:`.sld`), only available for vector layers.
 
+Used on file based format layers (:file:`.shp`, :file:`.tab`...), :guilabel:`Save
+as Default` generates a :file:`.qml` file along the layer (with the same name).
 SLDs can be exported from any type of renderer -- single symbol,
 categorized, graduated or rule-based -- but when importing an SLD, either a
 single symbol or rule-based renderer is created.
@@ -651,13 +653,15 @@ Save in database
 
 Layer style can also be stored in a database if the layer datasource is a 
 database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MSSQL
-and Oracle. The layer style is saved inside a table (named :file:`layer_styles`) of the
-database. Just click on :menuselection:`Save Style --> Save in database`
-item then fill in the dialog to define a style name, add a
-description, an :file:`.ui` file if applicable and check if the style should be
-the default style.
-You can add several styles for a single table in the database. However each table
-can have only one default style.
+and Oracle. The layer style is saved inside a table (named :file:`layer_styles`)
+of the database. Click on :menuselection:`Save Style --> Save in database` item
+then fill in the dialog to define a style name, add a description, a :file:`.ui`
+file if applicable and check if the style should be the default style.
+
+You can save several styles for a single table in the database. However each
+table can have only one default style. Default style can be saved in the layer
+database or in the QGIS local database, a SQLite database in the :file:`~/.qgis2/`
+directory (where QGIS stores its local settings).
 
 .. _figure_save_style_database:
 
@@ -666,45 +670,34 @@ can have only one default style.
 
    Save Style in database Dialog
 
-.. note:: You can only save your style in database if the layer comes from such a
-   database. You can't mix databases (layer in Oracle and style in MSSQL for
-   instance).
+.. tip:: **Sharing style files between databases**
+
+  You can only save your style in a database if the layer comes from such a
+  database. You can't mix databases (layer in Oracle and style in MSSQL for
+  instance). Use instead a plain text file if you want the style to be shared
+  among databases.
+
+.. note::
+
+  You may encounter issues to restore the :file:`layer_styles` table from a
+  PostgreSQL database backup. Follow :ref:`layer_style_backup` to fix that.
 
 Load style
 ...........
 
-The :menuselection:`Style --> Load Style` helps you apply a saved style to a layer.
-While plain text file style (:file:`.sld` or :file:`.qml`) can be loaded on any layer
-regardless its format, you can also load style from database when it comes to
-tables from the same datasource database.
+When loading a layer in QGIS, if a default style already exists for this layer,
+QGIS loads the layer with this style. Also :menuselection:`Style --> Restore Default`
+looks for and loads that file when pressed, replacing current style of the layer.
+
+The :menuselection:`Style --> Load Style` helps you apply any saved style to a
+layer. While plain text file style (:file:`.sld` or :file:`.qml`) can be applied
+to any layer whatever its format is, loading styles stored in database is only
+possible if the layer is from the same database or the style is stored in the
+QGIS local database.
 
 The :guilabel:`Load Style from Database` dialog displays a list of related
 styles to the layer found in the database and all the other styles saved in it,
 with name and description.
-
-Use **Restore Default** style option to replace the current style of the layer
-by the default saved one.
-
-.. note:: **Restore and Save default style**
-
-   When loading a layer in QGIS, if a default style already exists for this layer,
-   QGIS will load the layer with this style.
-   Used on file based format layers (:file:`.shp`, :file:`.tab`...), :guilabel:`Save
-   as Default` generates a :file:`.qml` file along the layer (with the same name),
-   and :guilabel:`Restore Default` looks for and loads that file when pressed.
-   
-   When saving or loading a default style for a database layer,
-   QGIS would ask you from which (or to which) database you want to take
-   (or save) the style. For
-   instance, if layer comes from PostgreSQL database, you can save the default
-   style only in the same datasource database or in a local database.
-
-   Local database is a SQLite database in the :file:`~/.qgis2/` directory
-   (where QGIS stores its local settings).
-
-See also the tip in :ref:`sec_postgis_details` for more information on backup
-of PostGIS database with layers and styles saved by QGIS.
-
 
 .. tip:: **Quickly share a layer style within the project**
 
