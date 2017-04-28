@@ -2054,7 +2054,7 @@ an :guilabel:`Attribute Table` dialog or from :guilabel:`Run Feature Action`
 :sup:`Identify Features` or |openTable| :sup:`Open Attribute Table` or
 |actionRun| :sup:`Run Feature Action`). To invoke an action, right
 click on the feature and choose the action from the pop-up menu (they should
-have been enabled to be displayed in the attribut table). Actions are
+have been enabled to be displayed in the attribute table). Actions are
 listed in the popup menu by the name you assigned when defining the action.
 Click on the action you wish to invoke.
 

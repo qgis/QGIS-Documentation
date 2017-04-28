@@ -232,7 +232,6 @@ actions for each row, see :ref:`actions_menu` for more information about actions
 Finally, one can choose to sort the rows with the :guilabel:`sort` and write an
 expression, e.g. to sort the row in regards of multi-column you can write
 `concat(col0, col1)`.
->>>>>>> b27cb68... New configuration options for attribute table
 
 .. index::
    pair: Attributes; Selection
@@ -360,11 +359,13 @@ Action on cells
 ===============
 
 Users have several possibilities to manipulate feature with the contextual menu
-like zoom to feature, copy cell content, etc. They are explain below:
+like:
 
-* Select all or :kbd:`Ctrl+A`
-* To copy the content of a cell in the clipboard, right-click on the feature within
-  the attribute table and select :guilabel:`Copy cell content`.
+* Select all (:kbd:`Ctrl+A`) the features
+* Copy the content of a cell in the clipboard with :guilabel:`Copy cell content`.
+* Zoom into a feature, without having to select it with :guilabel:`Zoom to feature`.
+* Open form. It toggles attribute table into form view with a focus on the
+  clicked feature
 
 .. _figure_copy_cell:
 
@@ -373,22 +374,19 @@ like zoom to feature, copy cell content, etc. They are explain below:
 
     Copy cell content button
 
-* To zoom into a feature, without having to select it, right-click on the feature
-  you want to zoom in, within the attribute table, and select :guilabel:`Zoom to feature`.
-* Open form
 
 You can also display a list of actions in this contextual menu. This is enabled in the
-:guilabel:`Actions` tab in the layer properties. See :ref:`actions_menu` for
-more informations on actions.
+:guilabel:`Actions` tab in the :menuselection:`Layer properties --> Actions tab`.
+See :ref:`actions_menu` for more information on actions.
 
 Save selected features as new layer
 ===================================
 
 The selected features can be saved as any OGR-supported vector format and
-also transformed into another coordinate reference system (CRS). Just open
-the contextual menu of the layer in the layer list in the main interface
-and click on :menuselection:`Save as` to define the name of the output file, its
-format and CRS (see section :ref:`label_legend`). To save the selection ensure
+also transformed into another coordinate reference system (CRS). In the
+contextual menu of the layer, from the :guilabel:`Layers Panel`, click on
+:menuselection:`Save as` to define the name of the output file, its format
+and CRS (see section :ref:`label_legend`). To save the selection ensure
 that the |checkbox| :menuselection:`Save only selected features` is selected.
 It is also possible to specify OGR creation options within the dialog.
 
