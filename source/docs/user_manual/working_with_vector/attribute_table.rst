@@ -138,7 +138,6 @@ It can be 'Remember last view', 'Table view' or 'Form view'.
 .. index:: Sort columns, Add actions
    pair: Attributes; Columns
 
-<<<<<<< HEAD
 Configure the columns
 ----------------------
 
@@ -221,7 +220,6 @@ to define:
 
    Conditional Formatting of an attribute table
 
-=======
 Managing columns
 =================
 
