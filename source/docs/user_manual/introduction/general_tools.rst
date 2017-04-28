@@ -1293,14 +1293,15 @@ should be identified:
   identify features from. Operates like a right-click. Only the chosen features
   will be shown in the result panel.
 
-.. note:: **Identify configuration**
+.. note:: **Identify tool configuration**
+
    You can configure the identify feature in :menuselection:`Project -->
-   Project Properties` in the :guilabel:`Identify layers` tab. The table allow
-   user to select layer that can be used by this tools to find features
+   Project Properties` in the :guilabel:`Identify layers` tab. The table allows
+   user to select layer(s) that can be used by this tool to identify features
    (column :guilabel:`Identifiable`). You can also put this layer in read-only
    mode with the checkbox in the last column.
 
-    The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
+The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
 The identify tool allows you to |checkbox|:guilabel:`Auto open a form`.
