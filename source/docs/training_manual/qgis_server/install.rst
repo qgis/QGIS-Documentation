@@ -30,11 +30,15 @@ the above link on how to do it) you can run the ``sudo apt-get update`` command
 to refresh the packages list and ``sudo apt-get dist-upgrade`` to upgrade the
 packages.
 
+.. note:: Currently Debian stable has LTR qgis packages, so the above steps are not necessary.
+
 Install QGIS Server with:
 
 .. code-block:: bash
 
- sudo apt-get install qgis-server python-qgis
+ sudo apt-get install qgis-server
+ # optionally also:
+ sudo apt-get install python-qgis
 
 QGIS Server should be used in production without QGIS Desktop (with
 the accompagning X Server) installed on the same machine.
@@ -183,7 +187,9 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.s
  install a fake X Server and tell QGIS Server to use it. You can do that by
  running the following commands.
 
- Install xvfb with ``sudo apt-get install xvfb -y``
+ Install xvfb with ``sudo apt-get install xvfb``
+
+.. note:: adding `` -y`` at the end of the above command will run it straight away, without requiring confirmation.
 
  Create the service file:
 
