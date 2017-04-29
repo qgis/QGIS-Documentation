@@ -246,7 +246,7 @@ should output:
 
 .. note::
 
- curl can be installed with ``sudo apt-get install curl -y``.
+ curl can be installed with ``sudo apt-get install curl``.
 
 Apache is now configured.
 
@@ -264,7 +264,7 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
 * We can check that ``myhost`` points to the localhost by running in the terminal
   the  ``ping myhost`` command which should output:
 
-  .. code-block:: guess
+.. code-block:: guess
 
    qgis@qgis:~$ ping myhost
    PING myhost (127.0.0.1) 56(84) bytes of data.
@@ -276,7 +276,7 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
   ``curl http://myhost/cgi-bin/qgis_mapserv.fcgi`` or by accessing the url from
   your Debian box browser. You will probably get:
 
-  .. code-block:: html
+.. code-block:: html
 
    <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
    <html><head>
@@ -300,7 +300,7 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
 * If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url
   you'll notice everything is working now!
 
-  .. note::
+.. note::
 
    Remember that both the :file:`myhost.conf` and :file:`/etc/hosts` files should
    be configured for our setup to work.
