@@ -437,12 +437,12 @@ QGIS project, as long as destination layers are set to |toggleEditing|
    layer a polygon whose boundary corresponds to the closed geometry of the line
    feature. This is a quick way to generate different geometries of the same data.
 
-.. index:: CSV, WKT
+.. index:: CSV, WKT, GeoJSON
 
 Features can also be pasted to external applications as text. That is, the
 features are represented in CSV format, with the geometry data appearing in
-the OGC Well-Known Text (WKT) format. WKT features from outside QGIS can also be
-pasted to a layer within QGIS.
+the OGC Well-Known Text (WKT) format. WKT and GeoJSON features from outside QGIS
+can also be pasted to a layer within QGIS.
 
 When would the copy and paste function come
 in handy? Well, it turns out that you can edit more than one layer at a time
