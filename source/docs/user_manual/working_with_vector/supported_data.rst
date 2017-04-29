@@ -1011,8 +1011,8 @@ The client running QGIS needs to have one of the following installed:
 
 If you are accessing a DB2 LUW database on the same machine or using DB2 LUW as a client,
 the DB2 executables and supporting files need to be included in the Windows path.
-This can be done by creating a batch file like the following with the name **db2.bat** and including it in the directory
-**%OSGEO4W_ROOT%/etc/ini**.
+This can be done by creating a batch file like the following with the name **db2.bat**
+and including it in the directory **%OSGEO4W_ROOT%/etc/ini**.
 
 ::
 
